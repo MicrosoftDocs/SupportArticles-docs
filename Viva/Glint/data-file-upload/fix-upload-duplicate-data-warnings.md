@@ -33,7 +33,7 @@ To fix the issue, follow these steps:
 1. Open the errors file, identify the users who are assigned the email address that's mentioned in the warning message.
 1. Open the employee attribute data file. Use the appropriate method depending on the file type:
 
-    - If the data file has an *.xls* or a *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has an *.xlsx* extension, open it in Microsoft Excel.
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. For each user that's identified in step 3, enter a unique email address.
 
@@ -60,11 +60,29 @@ To fix the issue, follow these steps:
     **Note**: If the user status is **INACTIVE** and your organization recycles email addresses for employees who have left, we recommend that you change their email address to their Employee ID so that the email address can be assigned to a new employee. This action is also recommended when you deactivate a user in Viva Glint.
 1. Open the employee attribute data file. Use the appropriate method depending on the file type:
 
-    - If the data file has an *.xls* or a *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has an *.xlsx* extension, open it in Microsoft Excel.
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Identify all users that are assigned the email address that's mentioned in the warning message in the data file.
 1. For each user that's identified in step 4, compare their Employee ID to the Employee ID of the user that's found in step 2. If the Employee ID is different, enter a unique email address for the user in the data file.
 1. Save the employee attribute data file, and then upload it again to Viva Glint.
+
+**Note:** If user emails listed in the warning don't appear in Viva Glint People searches, go to [this section](#duplicated_email:-deleted-user).
+
+## DUPLICATED_EMAIL: Deleted user
+
+Warning message:
+
+> DUPLICATED_EMAIL: The Email Address <Email address, such as user@contoso.com> in the user file is already assigned to a different user in your Viva Glint People Database.
+
+This issue occurs because one or more users in the uploaded file are assigned an email address that's already associated with a user in Viva Glint whose record is in a [soft-deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees). 
+
+### Resolution
+
+1. In the admin dashboard, select the **Configuration** icon, then select **Activity Audit Log** in the **Service Configuration** section.
+2. Filter Events to "User Deleted" activity.
+3. Confirm that the email or emails listed in the warning message are connected to users that were deleted in Viva Glint within the last 30 days.
+4. If users should remain deleted from Viva Glint, remove their records from the file and upload again.
+5. If users should be reinstated in Viva Glint, wait until 30 days pass from the deletion date for the user to be fully deleted. Upload their records again as new users in Viva Glint.
 
 ## DUPLICATED_EXTERNAL_USER_ID
 
