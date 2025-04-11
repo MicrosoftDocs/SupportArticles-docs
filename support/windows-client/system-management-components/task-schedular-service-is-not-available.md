@@ -2,7 +2,7 @@
 title: Scheduled Tasks Fail with Error Task Schedular Service Is Not Available
 description: Helps resolve the error Task schedular service is not available in which scheduled tasks fail.
 manager: dcscontentpm
-ms.date: 04/10/2025
+ms.date: 04/11/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, v-lianna
 ms.custom:
@@ -108,7 +108,7 @@ To resolve this issue, clean up the legacy tasks by using the following steps:
 
 ## Step 2: Delete corrupted tasks and then create them again if needed
 
-If you have cleaned up the `at` tasks or you don't have `at` tasks, you might have corrupted tasks that cause this issue. Find the corrupted tasks, delete them, and then create them again if needed.
+If you clean up the `at` tasks or you don't have `at` tasks, you might have corrupted tasks that cause this issue. Find the corrupted tasks, delete them, and then create them again if needed.
 
 1. Find the corrupted tasks:
 
@@ -119,7 +119,7 @@ If you have cleaned up the `at` tasks or you don't have `at` tasks, you might ha
         > The selected task "{0}" no longer exists. To see the current tasks, click Refresh.
 
     4. Take a note of each task that produces this error message.
-    5. Once you've gone through all folders and subfolders within Task Scheduler, you're ready to delete the corrupted tasks.
+    5. Once you go through all folders and subfolders within Task Scheduler, you're ready to delete the corrupted tasks.
 
 2. Delete the corrupted tasks:
 
