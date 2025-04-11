@@ -138,7 +138,7 @@ We recommend the following exclusions.
 
 **On the Microsoft Dynamics GP client**  
 Exclude the Dynamics\GP folder. By default, this folder is in the following location:  
-`C:\Program Files\Microsoft Dynamics\GP`
+`C:\Program Files (x86)\Microsoft Dynamics\GP`
 
 The following file name extensions should be excluded:
 
@@ -172,7 +172,7 @@ Exclude the `*.ldf` database files, and the `*.mdf` database files.
 On any computer that is running Integration Manager  
 Exclude the .MDB or .IMD files and the Integration Manager code folder which default, this folder is in the following location:
 
-`C:\Program Files\Microsoft Dynamics\Integration Manager`
+`C:\Program Files (x86)\Microsoft Dynamics\Integration Manager`
 
 ### Performance problems that occur on the home page in Microsoft Dynamics GP
 
