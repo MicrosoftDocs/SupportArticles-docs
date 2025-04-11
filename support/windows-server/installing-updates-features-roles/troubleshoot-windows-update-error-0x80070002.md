@@ -85,7 +85,12 @@ Info CBS Failed to find file: x86_microsoft-windows-directwrite_31bf3856ad364e35
    ```console
    takeown /f c:\windows\winsxs
    icacls c:\windows\winsxs /grant administrators:F
-   cd c:\windows\winsxs
+   cd c:\windows\winsxs   
+   ```
+
+   Then, run the `mkdir` command to create a folder for the missing DLL file. For example, if the file x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_c67f532e01cd149d.dll is missing, run the following command:
+
+   ```console
    mkdir x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_c67f532e01cd149d
    ```
 
@@ -101,6 +106,22 @@ Info CBS Failed to find file: x86_microsoft-windows-directwrite_31bf3856ad364e35
 
 If a cumulative update on Windows Server rolls back after a restart, check the Event Viewer for error 0x80070002 and review the CBS logs for driver update issues.
 
+Here is a sample of the event log:
+
+> Log Name: System  
+> Source: Microsoft-Windows-WindowsUpdateClient  
+> Date: DD/MM/yyyy hh:ss:ff  
+> Event ID: 20  
+> Task Category: Windows Update Agent  
+> Level: Error  
+> Keywords: Installation,Installation  
+> User: SYSTEM  
+> Computer: XXXXXXXXXXXXXXXXXXXXX  
+> Description:  
+> Installation Failure: Windows failed to install the following update with error 0x80070002: Security Update for Windows (KB4586793).
+
+The failure is caused by an issue during update drivers operation. For example, the following CBS.log indicates the driver flpydisk.inf is the cause:
+
 ```output
 Info CBS INSTALL index: 55, phase: 2, result 2, inf: flpydisk.inf
 Info CBS Doqe: Failed installing driver updates [HRESULT = 0x80070002 - ERROR_FILE_NOT_FOUND]
@@ -108,12 +129,12 @@ Info CBS Doqe: Failed installing driver updates [HRESULT = 0x80070002 - ERROR_FI
 
 ### Resolution: Import registry keys
 
-Export and import the following registry keys from a working machine:
+To fix the issue, you need to export the registry keys for the driver on a working computer, and then import them on the computer that have the issue.
 
-```bash
-1. HKLM\System\CurrentControlSet\Services\flpydisk 
-2. HKLM\System\CurrentControlSet\Services\sfloppy 
-```
+The resolution depends on what is missing. For example, to fix the issue with flpydisk.inf, which we listed as an example in the symptom section, export and import the following two registry keys.
+
+1. `HKLM\System\CurrentControlSet\Services\flpydisk`
+2. `HKLM\System\CurrentControlSet\Services\sfloppy`
 
 ## Symptom 5: Windows upgrade failure
 
@@ -126,7 +147,7 @@ Error SP CMountWIM::DoExecute: Failed to mount WIM file C:\$WINDOWS.~BT\Sources\
 
 ### Resolution: Restore WIMMOUNT.sys
 
-Export `WIMMOUNT.sys` from the registry of a working server and merge it on the affected server.
+Export `WIMMOUNT.sys` from the location `%SystemRoot%\system32\drivers\wimmount.sys` and the registry: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wimmount` on a working server. Then, merge them on the affected server.
 
 ## Next steps
 
