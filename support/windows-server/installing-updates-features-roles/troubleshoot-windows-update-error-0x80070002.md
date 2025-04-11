@@ -147,7 +147,7 @@ Error SP CMountWIM::DoExecute: Failed to mount WIM file C:\$WINDOWS.~BT\Sources\
 
 ### Resolution: Restore WIMMOUNT.sys
 
-Export `WIMMOUNT.sys` from the location `%SystemRoot%\system32\drivers\wimmount.sys` and the registry: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wimmount` on a working server. Then, merge them on the affected server.
+Export `WIMMOUNT.sys` from the location `%SystemRoot%\system32\drivers\wimmount.sys` and the registry `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wimmount` on a working server. Then, merge them on the affected server.
 
 ## Next steps
 
