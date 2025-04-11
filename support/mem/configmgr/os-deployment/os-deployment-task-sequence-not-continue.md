@@ -36,7 +36,7 @@ These issues usually occur when you deploy a nonenterprise edition of Windows, s
 
 ## Cause
 
-These issues occur because an OEM product key is used during Windows deployment. When an OEM product key is used, **Setupcomplete.cmd** is disabled. This behavior occurs in both Windows 10 and Windows 11. See the following information from [Windows Deployment Issues](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825613(v=win.10)#windows-deployment-issues):
+These issues occur because an OEM product key is used during Windows deployment. When an OEM product key is used, **Setupcomplete.cmd** is disabled. This behavior occurs in all [currently supported versions of Windows](/windows/release-health/supported-versions-windows-client). For more information, see [Windows Deployment Issues](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825613(v=win.10)#windows-deployment-issues):
 
 - [September 2012] Changes in Out-Of-Box (OOBE) Experience
 
