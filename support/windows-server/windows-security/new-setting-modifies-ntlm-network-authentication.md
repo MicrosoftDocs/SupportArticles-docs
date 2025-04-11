@@ -1,11 +1,11 @@
 ---
 title: NTLM network authentication changes
 description: Describes new behavior in Windows Server 2003 SP1 that affects NTLM password changes. After you install the service pack, domain users can change a password and still use their old password to authenticate. This setting can be changed in the registry.
-ms.date: 01/15/2025
+ms.date: 04/11/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, maotori
 ms.custom:
 - sap:windows security technologies\legacy authentication (ntlm)
 - pcy:WinComm Directory Services
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 906305
 
 ## Introduction
 
-Beginning with Microsoft Windows Server 2003 Service Pack 1 (SP1), there is a change to NTLM network authentication behavior. Domain users can use their old password to access the network for 5 minutes after the password is changed. Existing components that are designed to use Kerberos for authentication are not affected by this change.
+Beginning with Microsoft Windows Server 2003 Service Pack 1 (SP1), there is a change to NTLM network authentication behavior. Domain users can use their old password to access the network for five minutes after the password is changed. Existing components that are designed to use Kerberos for authentication are not affected by this change.
 
 The goal of this change is to allow background processes such as services to continue running for some time until an administrator has the opportunity to update the credentials for the new password.
 
@@ -52,7 +52,7 @@ To do this, follow these steps:
 6. In the **Value data** box, type the value in minutes that you want to use, and then click **OK**.
 
     > [!NOTE]
-    > The lifetime period is set in minutes. If this registry value is not set, the default lifetime period for an old password is 5 minutes.
+    > The lifetime period is set in minutes. If this registry value is not set, the default lifetime period for an old password is five minutes.
 
 7. Quit Registry Editor.
 
