@@ -20,7 +20,7 @@ Ensure you have administrative access to the server to modify system settings an
 
 ## How to identify the issue
 
-To identify the issue, check the CBS.log for entries similar to the following:
+To identify the issue, check the CBS.log or the CbsPersist_XXXXXXXXXXXXXX.log or CbsPersist_XXXXXXXXXXXXXX.cab for entries similar to the following:
 
 ```output
 {8F8EA247-1586-48E4-A5F6-1D19A9343341} 2024-04-17 05:14:55:630-0400 1 148 [AGENT_DETECTION_FAILED] 101 {00000000-0000-0000-0000-000000000000} 0
@@ -46,7 +46,7 @@ The error code 0x8024002E occurs when the Windows Update Client service is disab
 1. Open the **Run** dialog by pressing `Win + R`, type `services.msc`, and press **Enter**.
 2. In the **Services** window, locate **Windows Update**.
 3. Right-click **Windows Update** and select **Properties**.
-4. Set the **Startup type** to **Automatic** and select **Start**.
+4. Set the **Startup type** to **Manual** and select **Start**.
 5. Select **OK** to apply the changes.
 
 ### Modify registry key
