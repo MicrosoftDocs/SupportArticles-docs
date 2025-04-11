@@ -1,6 +1,6 @@
 ---
 title: Resolve Teams Client Crash Issues
-description: Lists all possible causes for Teams client crash issues and provides resolutions for them.
+description: Lists all possible causes for Teams client crash issues, and provides resolutions for them.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,14 +13,14 @@ search.appverid:
   - MET150
 ms.date: 03/27/2025
 ---
-# Resolve Teams client crash issues
+# Resolve Teams "client crash" issues
 
 > [!IMPORTANT]
-> This article describes a Microsoft Teams feature that hasn't yet been released. It's been announced, and it's coming soon. If you're an admin, you can find out when this feature will be released in the Message Center (in the [Microsoft 365 admin center](https://portal.office.com/adminportal/home)). For more information, see [Teams client health](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478610) and [Monitor Teams client updates](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478609).
+> This article describes a Microsoft Teams feature that has been announced but hasn't yet been released. If you're an admin, you can check the release announcement in the Message Center (in the [Microsoft 365 admin center](https://portal.office.com/adminportal/home)). For more information, see [Teams client health](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478610) and [Monitor Teams client updates](https://www.microsoft.com/microsoft-365/roadmap?filters=&searchterms=478609).
 
 When a user in your organization uses the Teams app on their device, the app exits unexpectedly. This issue is categorized as a **Client crash** in the [Teams client health dashboard](/microsoftteams/teams-client-health).
 
-As an administrator, you can check the **Insight** column on the **Issues** tab to find potential reasons why the Teams app crashes. This article lists all the insights for Teams client crash issues and provides resolutions for them. If the issue persists after you perform the resolution, contact [Microsoft Support](https://support.microsoft.com/contactus) for more assistance.
+As an administrator, you can check the **Insight** column on the **Issues** tab to find potential reasons why the Teams app stopped responding. This article lists all the insights for Teams "client crash" issues and provides resolutions for them. If the issue persists after you perform the resolution, contact [Microsoft Support](https://support.microsoft.com/contactus) for more assistance.
 
 If your organization uses non-Microsoft antivirus or data loss prevention (DLP) applications, make sure that you include or approve the Teams desktop client, the executable that automatically starts the Teams app, and Microsoft Edge WebView2. For more information, see [Prevent antivirus and DLP tools from blocking or crashing Microsoft Teams](include-exclude-teams-from-antivirus-dlp.md)
 
@@ -34,7 +34,7 @@ We also recommend that you keep your audio and video drivers updated to ensure o
 
 ## WebView2 failure
 
-To fix issues that are caused by WebView2 process failures, check the WebView2 process exit or error codes for more information. These codes indicate various problems such as:
+To fix issues that are caused by WebView2 process failures, check the WebView2 process exit or error codes for more information. These codes indicate various problems, such as:
 
 - External termination
 - Invalid parameters
@@ -42,7 +42,7 @@ To fix issues that are caused by WebView2 process failures, check the WebView2 p
 - Sandbox or GPU issues
 - System faults
 
-The following sections list the WebView2 process exit or error codes, their symbolic names and descriptions.
+The following sections list the WebView2 process exit and error codes, their symbolic names, and descriptions.
 
 <details>
 
@@ -106,7 +106,7 @@ The following sections list the WebView2 process exit or error codes, their symb
 
 <details>
 
-<summary><b>Sandbox, crashpad, and timeout errors</b></summary>
+<summary><b>Sandbox, crashpad, and time-out errors</b></summary>
 
 | Error code | Symbolic name | Description |
 | --- | --- | --- |
