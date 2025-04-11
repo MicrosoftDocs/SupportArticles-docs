@@ -12,11 +12,12 @@ ms.custom:
   - CSSTroubleshoot
   - CI 187189
   - CI 1020
+  - CI 5362
 ms.reviewer: mburuiana, shanefe, meshel, erichart, ninob, meerak, v-trisshores
 appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 04/10/2025
+ms.date: 04/11/2025
 ---
 
 # Get Calendar diagnostic logs for Exchange Online mailboxes
@@ -119,7 +120,7 @@ Follow these steps:
 > - If more than one meeting matches the subject of the meeting, the script generates an Excel file for each meeting.
 > - Each meeting is uniquely identified by a meeting ID (GUID) in the timeline worksheet for the meeting. You can rerun the script for a specific meeting by using the meeting ID from the timeline worksheet.
 > - You can't specify multiple meeting participants if you run the script by using the subject of the meeting. To get the CDLs for another participant, rerun the script and pass in the identity of that user, or [get CDLs by using the meeting ID](#get-cdls-by-using-the-meeting-id).
-> - The **Subject** parameter doesn't support wildcards. Therefore, search terms like `*lunch*` or `project-202?` won't return the expected results. However, the script automatically performs a partial match search on your search term. Therefore, the search term `lunch` matches a meeting that has the subject `Sales lunch meeting`. Subject searches aren't case sensitive.
+> - The **Subject** parameter doesn't support wildcards. Therefore, search terms like `*lunch*` or `project-202?` won't return the expected results. However, the script automatically performs a partial match search on your search term. So, the search term `lunch` matches a meeting that has the subject `Sales lunch meeting`. Subject searches aren't case sensitive.
 
 ## Use the Get-CalendarDiagnosticObjects cmdlet
 
@@ -128,7 +129,7 @@ Run the [Get-CalendarDiagnosticObjects](/powershell/module/exchange/get-calendar
 > [!NOTE]
 > - The Get-CalendarDiagnosticObjects cmdlet doesn't generate enhanced CDLs or a meeting timeline.
 > - If multiple meetings have the same subject, use the meeting ID to uniquely identify a meeting.
-> - The **Subject** parameter doesn't support wildcards. Therefore, search terms like `*lunch*` or `project-202?` won't return the expected results. However, by default, the cmdlet performs a partial match search on your search term. Therefore, the search term `lunch` matches a meeting that has the subject `Sales lunch meeting`. To perform an exact match search, set the value of the [ExactMatch](/powershell/module/exchange/get-calendardiagnosticobjects#-exactmatch) parameter to `$true`. Subject searches aren't case sensitive.
+> - The **Subject** parameter doesn't support wildcards. Therefore, search terms like `*lunch*` or `project-202?` won't return the expected results. However, by default, the cmdlet performs a partial match search on your search term. So, the search term `lunch` matches a meeting that has the subject `Sales lunch meeting`. To perform an exact match search, set the value of the [ExactMatch](/powershell/module/exchange/get-calendardiagnosticobjects#-exactmatch) parameter to `$true`. Subject searches aren't case sensitive.
 
 ### Example 1
 
@@ -170,4 +171,4 @@ Follow these steps to download raw CDLs:
 
 > [!NOTE]
 > - The EAC doesn't generate enhanced CDLs or a meeting timeline.
-> - The **Meeting Subject** field doesn't support wildcards. Therefore, search terms like `*lunch*` or `project-202?` won't return the expected results. However, the EAC automatically performs a partial match search on your search term. Therefore, the search term `lunch` matches a meeting that has the subject `Sales lunch meeting`. Subject searches aren't case sensitive.
+> - The **Meeting Subject** field doesn't support wildcards. Therefore, search terms like `*lunch*` or `project-202?` won't return the expected results. However, the EAC automatically performs a partial match search on your search term. So, the search term `lunch` matches a meeting that has the subject `Sales lunch meeting`. Subject searches aren't case sensitive.
