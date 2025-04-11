@@ -169,6 +169,5 @@ Follow these steps to download raw CDLs:
 4. Select **Start**. Exchange Online downloads the raw CDLs to your browser's download folder.
 
 > [!NOTE]
-> - The EAC **Troubleshoot** menu is being rolled out gradually and might not be available in your organization yet.
 > - The EAC doesn't generate enhanced CDLs or a meeting timeline.
 > - The **Meeting Subject** field doesn't support wildcards. Therefore, search terms like `*lunch*` or `project-202?` won't return the expected results. However, the EAC automatically performs a partial match search on your search term. Therefore, the search term `lunch` matches a meeting that has the subject `Sales lunch meeting`. Subject searches aren't case sensitive.
