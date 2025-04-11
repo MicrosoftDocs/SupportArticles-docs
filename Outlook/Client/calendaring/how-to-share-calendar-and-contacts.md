@@ -39,7 +39,7 @@ We'll begin by asking you the task you want to do. Then we'll take you through a
 
 ## Welcome to the guide
 
-Select the scenario that you are trying to configure for your users. After you select the scenario, follow the step-by-step instructions.
+Select the scenario that you're trying to configure for your users. After you select the scenario, follow the step-by-step instructions.
 
 - [Set up a shared calendar or contacts list for my entire organization or large group of users](#which-microsoft-365-plan-do-you-use)
 - [Share calendar or contacts with specific users](#what-do-you-want-to-share)
@@ -48,17 +48,17 @@ Select the scenario that you are trying to configure for your users. After you s
 
 Select the plan that your organization subscribes to in Microsoft 365.
 
-Not sure which Microsoft 365 plan your organization uses? Go to [https://portal.microsoftonline.com](https://portal.microsoftonline.com) and login using your Microsoft 365 administrator credentials.) and login using your Microsoft 365 administrator credentials.
+Not sure which Microsoft 365 plan your organization uses? Go to [https://portal.microsoftonline.com](https://portal.microsoftonline.com) and login using your Microsoft 365 administrator credentials.
 
 **Small Business:**
 
-If you see the below administrative interface, then you are using the Small Business plan.
+If you see the below administrative interface, then you're using the Small Business plan.
 
 :::image type="content" source="media/how-to-share-calendar-and-contacts/small-business-admin-interface.png" alt-text="Screenshot that shows the administrative interface of Small Business plan." border="false":::
 
 **Enterprise | Midsize | Education:**
 
-If you see the below administrative interface, then you are using the Enterprise/Midsize or Education plan.
+If you see the below administrative interface, then you're using the Enterprise/Midsize or Education plan.
 
  :::image type="content" source="media/how-to-share-calendar-and-contacts/enterprise-midsize-edu-plan-admin-interface.png" alt-text="Screenshot that shows the administrative interface of Enterprise, Midsize or Education plan.":::
 
@@ -70,7 +70,7 @@ If you see the below administrative interface, then you are using the Enterprise
 To set up a common, shared calendar or contacts list that people in your organization can access and edit, you simply need to create a shared mailbox. After you create the shared mailbox, users that are members of the shared mailbox will be able to access the shared calendar and contacts.
 
 > [!NOTE]
-> Because, creating a mailbox to be used for shared calendar or contacts list involves creating a shared mailbox, the people that can access the shared calendar or contacts list can also access and respond to email sent to the shared mailbox.
+> Because creating a mailbox to be used for shared calendar or contacts list involves creating a shared mailbox, the people that can access the shared calendar or contacts list can also access and respond to email sent to the shared mailbox.
 
 Before you begin, sign in to the Microsoft 365 portal, and then select **Admin** in the top navigation.
 
@@ -115,7 +115,7 @@ If you have permissions to a shared mailbox, the contacts folder from the shared
 ##### Outlook Web App
 
 > [!NOTE]
-> You cannot access shared contacts list for a shared mailbox from Outlook Web App.
+> You can't access shared contacts list for a shared mailbox from Outlook Web App.
 
 **Open a shared calendar using Outlook Web App**
 
@@ -135,7 +135,7 @@ If you have permissions to a shared mailbox, the contacts folder from the shared
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [The issue was not resolved](#the-issue-was-not-resolved).
+- If no, see [The issue wasn't resolved](#the-issue-wasnt-resolved).
 
 ### Create a security group for your organization or group of users
 
@@ -144,7 +144,7 @@ To set up a shared calendar or contacts list that people in your organization ca
 > [!NOTE]
 > If you already have a security group that contains the people that you want to be able to access the shared calendar or contacts, you can skip to this section.
 
-Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook.office365.com/ecp/](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 Enterprises, Midsize, or Education admin, you can also access EAC by clicking **Admin** > **Exchange** in the Microsoft Online Portal.
+Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook.office365.com/ecp/](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 Enterprises, Midsize, or Education admin, you can also access EAC by selecting **Admin** > **Exchange** in the Microsoft Online Portal.
 
 1. In the EAC, navigate to **Recipients** > **Groups**.
 2. Select **New**![New icon](./media/how-to-share-calendar-and-contacts/new-icon.gif) > **Security group**.
@@ -160,9 +160,9 @@ After you have a security group that includes the people that you want to be abl
 After you set up the shared mailbox, users that are members of the security group will be able to access the shared calendar and contacts list.
 
 > [!NOTE]
-> Because, creating a mailbox to be used for shared calendar or contacts list involves creating a shared mailbox, the people that can access the shared calendar or contacts list will also be able to access and respond to email sent to the shared mailbox.
+> Because creating a mailbox to be used for shared calendar or contacts list involves creating a shared mailbox, the people that can access the shared calendar or contacts list will also be able to access and respond to email sent to the shared mailbox.
 
-Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook.office365.com/ecp/](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 Enterprises, Midsize, or Education admin, you can also access EAC by clicking Admin > Exchange in the Microsoft Online Portal.) using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 Enterprises, Midsize, or Education admin, you can also access EAC by clicking **Admin** > **Exchange** in the Microsoft Online Portal.
+Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook.office365.com/ecp/](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 Enterprises, Midsize, or Education admin, you can also access EAC by selecting **Admin** > **Exchange** in the Microsoft Online Portal.
 
 ##### Step 1: Create the shared mailbox
 
@@ -170,14 +170,14 @@ Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook
 2. Type values in the required Display name and Email address fields.
 
    > [!NOTE]
-   > The **Send As** permission field is not required to let your users access the shared calendar and shared contacts list. To provide the members of the security group access to the shared calendar and contacts list, you need to assign them **Full Access** permission to the shared mailbox by editing the shared mailbox after you have created it.
+   > The **Send As** permission field isn't required to let your users access the shared calendar and shared contacts list. To provide the members of the security group access to the shared calendar and contacts list, you need to assign them **Full Access** permission to the shared mailbox by editing the shared mailbox after you have created it.
 3. Select **Save**, select **Yes** in the **No permission granted** warning dialog box.
 
 ##### Step 2: Assign the security group Full Access permission to the shared mailbox
 
 1. In EAC, under **Recipients** > **Shared**, double-click the shared mailbox that you created in the previous step, and then select **Mailbox delegation**. Under **Full Access**, select **Add**![Add icon](./media/how-to-share-calendar-and-contacts/add-icon.png), and then select the security group that you want to be able to access the shared calendar and contacts list for the shared mailbox.
 
-2. Select **Save** to save your changes and create the shared mailbox. These steps will allow the members of the security group to access the shared calendar and contact list.
+2. Select **Save** to save your changes and create the shared mailbox. These steps let the members of the security group access the shared calendar and contact list.
 
 #### How do I access a shared mailbox
 
@@ -206,7 +206,7 @@ If you have permissions to a shared mailbox, the contacts folder from the shared
 ##### Outlook Web App
 
 > [!NOTE]
-> You cannot access shared contacts list for a shared mailbox from Outlook Web App.
+> You can't access shared contacts list for a shared mailbox from Outlook Web App.
 
 **Open a shared calendar using Outlook Web App**
 
@@ -226,7 +226,7 @@ If you have permissions to a shared mailbox, the contacts folder from the shared
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [The issue was not resolved](#the-issue-was-not-resolved).
+- If no, see [The issue wasn't resolved](#the-issue-wasnt-resolved).
 
 ### What do you want to share
 
@@ -242,10 +242,10 @@ Specify if you would like to share either your calendar or contacts with specifi
 
 Individual users can share calendar with specific users using either Microsoft Office Outlook client or Outlook Web App. Specify which client you would like to use to start sharing.
 
-- [Microsoft Outlook](#what-is-the-organizational-location-of-the-user-you-are-sharing-your-calendar-with-in-outlook)
-- [Outlook Web App](#what-is-the-organizational-location-of-the-user-you-are-sharing-your-calendar-with-in-outlook-web-app)
+- [Microsoft Outlook](#what-is-the-organizational-location-of-the-user-youre-sharing-your-calendar-with-in-outlook)
+- [Outlook Web App](#what-is-the-organizational-location-of-the-user-youre-sharing-your-calendar-with-in-outlook-web-app)
 
-### What is the organizational location of the user you are sharing your calendar with in Outlook
+### What is the organizational location of the user you're sharing your calendar with in Outlook
 
 You can share your calendar with specific users who can be located both within your organization or any external organization (such as an outside partner, vendor etc.)
 
@@ -293,7 +293,7 @@ You can share your calendar with specific users who can be located both within y
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [The issue was not resolved](#the-issue-was-not-resolved).
+- If no, see [The issue wasn't resolved](#the-issue-wasnt-resolved).
 
 ### Share calendar outside the organization using Microsoft Outlook
 
@@ -307,15 +307,15 @@ You can share your calendar with specific users who can be located both within y
 
     :::image type="content" source="media/how-to-share-calendar-and-contacts/share-calendar.png" alt-text="Screenshot that shows the Sharing Calendar tab selected.":::
 
-3. In the email that opens, type the name of the person outside of your organization that you want to share your calendar with in the **To** box. In **Details**, specify the level of details that you want to share with the person outside of your organization, and then click **Send**.
+3. In the email that opens, type the name of the person outside of your organization that you want to share your calendar with in the **To** box. In **Details**, specify the level of details that you want to share with the person outside of your organization, and then select **Send**.
 
     :::image type="content" source="media/how-to-share-calendar-and-contacts/send-shared-calendar.png" alt-text="Screenshot of an opening email sending a shared calendar.":::
 
    If the following error displays when you try to send your sharing invitation, you have tried to share more details than is supported by the settings in your organization. If this occurs, under Details, choose to share a different level of details. Only an admin in your organization can change the sharing policy settings for your organization. For more information, see the end of this section.
 
-    :::image type="content" source="media/how-to-share-calendar-and-contacts/error-when-sending-sharing-invitation.png" alt-text="Screenshot of an  error message when sending a shared calendar.":::
+    :::image type="content" source="media/how-to-share-calendar-and-contacts/error-when-sending-sharing-invitation.png" alt-text="Screenshot of an error message when sending a shared calendar.":::
 
-4. The person outside of your organization receives the sharing invitation in email, and then clicks Open this calendar.
+4. The person outside of your organization receives the sharing invitation in email, and then selects **Open this calendar**.
 
     :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-calendar.png" alt-text="Screenshot that shows the Open this Calendar tab selected.":::
 
@@ -342,7 +342,7 @@ You can share your calendar with specific users who can be located both within y
 - If yes, see [Share calendar and contacts outside the organization using Microsoft Outlook](#share-calendar-and-contacts-outside-the-organization-using-microsoft-outlook).
 - If no, see [Complete sharing calendar outside the organization](#complete-sharing-calendar-outside-the-organization).
 
-### What is the organizational location of the user you are sharing your calendar with in Outlook Web App
+### What is the organizational location of the user you're sharing your calendar with in Outlook Web App
 
 You can share your calendar with specific users who can be located both within your organization or any external organization (such as an outside partner, vendor etc.)
 
@@ -385,7 +385,7 @@ The calendar will display under PEOPLE'S CALENDARS.
 
 2. Do one of the following, and then select **Save**:
 
-   - Use the drop-down menu to change the level of details that you are sharing with a person.
+   - Use the drop-down menu to change the level of details that you're sharing with a person.
    - Select the delete icon![delete icon](./media/how-to-share-calendar-and-contacts/delete-icon.png) to stop sharing your calendar with a person.
 
         :::image type="content" source="media/how-to-share-calendar-and-contacts/stop-sharing-calendar.png" alt-text="The calendar displayed under PEOPLE'S CALENDARS 3" border="false":::
@@ -393,7 +393,7 @@ The calendar will display under PEOPLE'S CALENDARS.
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [The issue was not resolved](#the-issue-was-not-resolved).
+- If no, see [The issue wasn't resolved](#the-issue-wasnt-resolved).
 
 ### Share calendar outside the organization using Outlook Web App (OWA)
 
@@ -415,11 +415,11 @@ The calendar will display under PEOPLE'S CALENDARS.
 
 6. After you've finished adding people to share with, setting their access levels, and choosing which calendar to share with them, select **Send**. If you decide not to share your calendar right now, select **Discard**.
 
-If your organization and the organization of the person you are sharing your calendar with are federated through Microsoft 365 or Exchange, the invitation will also have two buttons - one to add your calendar to their calendar view, and another to share their calendar with you.
+If your organization and the organization of the person you're sharing your calendar with are federated through Microsoft 365 or Exchange, the invitation will also have two buttons - one to add your calendar to their calendar view, and another to share their calendar with you.
 
 :::image type="content" source="media/how-to-share-calendar-and-contacts/add-calendar-button.png" alt-text="the ADD CALENDAR button":::
 
-If the external user's organization and your organization are federated through Microsoft 365 or Exchange, the person will see your calendar under PEOPLE's CALENDARS. However, if the external user's organization and your organization are not federated through Microsoft 365 or Exchange, the user will need to access your mailbox by clicking the URL in the body of the message.
+If the external user's organization and your organization are federated through Microsoft 365 or Exchange, the person will see your calendar under PEOPLE's CALENDARS. However, if the external user's organization and your organization aren't federated through Microsoft 365 or Exchange, the user will need to access your mailbox by clicking the URL in the body of the message.
 
 :::image type="content" source="media/how-to-share-calendar-and-contacts/calendar-shown-under-peoples-calendars.png" alt-text="Screenshot that shows the calendar displayed under PEOPLE'S CALENDARS list.":::
 
@@ -431,7 +431,7 @@ If the external user's organization and your organization are federated through 
 
 2. Do one of the following, and then select **Save**:
 
-   - Use the drop-down menu to change the level of details that you are sharing with a person.
+   - Use the drop-down menu to change the level of details that you're sharing with a person.
    - Select the delete icon :::image type="icon" source="./media/how-to-share-calendar-and-contacts/delete-icon.png" alt-text="Screenshot of the delete icon."::: to stop sharing your calendar with a person.
 
         :::image type="content" source="media/how-to-share-calendar-and-contacts/stop-sharing-calendar.png" alt-text="Screenshot that shows the save option to save the permission setting.":::
@@ -439,18 +439,18 @@ If the external user's organization and your organization are federated through 
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [The issue was not resolved](#the-issue-was-not-resolved).
+- If no, see [The issue wasn't resolved](#the-issue-wasnt-resolved).
 
 ### Which email client is in use (if you want to share contact)
 
 You can share contacts with specific users using only Microsoft Office Outlook client.
 
 > [!NOTE]
-> Outlook Web App (OWA) does not currently support sharing a contacts folder with other people.
+> Outlook Web App (OWA) doesn't currently support sharing a contacts folder with other people.
 
-#### What is the organizational location of the user you are sharing your contacts with
+#### What is the organizational location of the user you're sharing your contacts with
 
-You can share a contacts folder with people that are located in your organization or outside of your organization by using Microsoft Outlook. For example, you may want to share a contacts folder with a partner or vendor.
+You can share a contacts folder with people that are located in your organization or outside of your organization by using Microsoft Outlook. For example, you might want to share a contacts folder with a partner or vendor.
 
 - [Same organization as me](#share-contacts-within-your-organization-using-microsoft-outlook)
 - [External organization](#share-contacts-outside-your-organization-using-microsoft-outlook)
@@ -496,7 +496,7 @@ You can share a contacts folder with people that are located in your organizatio
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [The issue was not resolved](#the-issue-was-not-resolved).
+- If no, see [The issue wasn't resolved](#the-issue-wasnt-resolved).
 
 ### Share contacts outside your organization using Microsoft Outlook
 
@@ -519,11 +519,11 @@ You can share a contacts folder with people that are located in your organizatio
 
 5. In the message body, type any information that you want to include, and then select **Send**. Review the confirmation dialog box, and then if correct, select **OK**.
 
-   If the following error displays when you try to send the sharing invitation, sharing contacts with people outside of your organization is not supported by the sharing policy for your organization. Only an admin in your organization can change the sharing policy for your organization. For more information, see the end of this section.
+   If the following error displays when you try to send the sharing invitation, sharing contacts with people outside of your organization isn't supported by the sharing policy for your organization. Only an admin in your organization can change the sharing policy for your organization. For more information, see the end of this section.
 
    :::image type="content" source="media/how-to-share-calendar-and-contacts/folder-sharing-is-not-available-error.png" alt-text="Screenshot that shows an error displays when sending the sharing invitation.":::
 
-6. The person in your organization receives the sharing invitation in email, and clicks **Open this Contacts folder.
+6. The person in your organization receives the sharing invitation in email, and selects **Open this Contacts folder.
 
    :::image type="content" source="media/how-to-share-calendar-and-contacts/open-this-calendar.png" alt-text="Screenshot that shows the Open this Calendar tab selected.":::
 
@@ -547,7 +547,7 @@ You can share a contacts folder with people that are located in your organizatio
 - If yes, see [Share calendar and contacts outside the organization using Microsoft Outlook](#share-calendar-and-contacts-outside-the-organization-using-microsoft-outlook).
 - If no, see [Complete sharing calendar outside the organization](#complete-sharing-calendar-outside-the-organization).
 
-### The issue was not resolved
+### The issue wasn't resolved
 
 Sorry, we couldn't resolve your issue with this guide. Provide feedback on this walkthrough, and then use the resources below to continue troubleshooting.
 
@@ -559,29 +559,29 @@ Visit the [Microsoft 365 Community](https://go.microsoft.com/fwlink/?linkid=2003
 
 ### Share calendar and contacts outside the organization using Microsoft Outlook
 
-If you receive sharing policy errors when you try to send calendar or contact folder sharing requests to people outside of your organization, the required sharing policy settings are not configured in your organizations sharing policy. Sharing contact and calendar information with people outside of your organization must be enabled by a Microsoft 365 administrator in your organization.
+If you receive sharing policy errors when you try to send calendar or contact folder sharing requests to people outside of your organization, the required sharing policy settings aren't configured in your organizations sharing policy. Sharing contact and calendar information with people outside of your organization must be enabled by a Microsoft 365 administrator in your organization.
 
-Select the role you are in your organization to continue.
+Select the role you're in your organization to continue.
 
 - [End User](#share-calendar-outside-the-organization-using-microsoft-outlook-end-user)
 - [Microsoft 365 administrator](#change-the-default-sharing-policy-in-microsoft-365)
 
 ### Share calendar outside the organization using Microsoft Outlook (End user)
 
-If you are an end user and not a Microsoft 365 administrator, contact your Microsoft 365 administrator and let them know you receive an error when trying to share your calendar or contacts with people outside of your organization. After external sharing has been enabled, you'll be able to share your calendar and contacts with people outside of your organization.
+If you're an end user and not a Microsoft 365 administrator, contact your Microsoft 365 administrator and let them know you receive an error when trying to share your calendar or contacts with people outside of your organization. After external sharing has been enabled, you'll be able to share your calendar and contacts with people outside of your organization.
 
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [The issue was not resolved](#the-issue-was-not-resolved).
+- If no, see [The issue wasn't resolved](#the-issue-wasnt-resolved).
 
 ### Change the default sharing policy in Microsoft 365
 
-If you are a Microsoft 365 administrator, you can change the default sharing policy for your organization if you want to allow people in your organization to share full calendar details with people outside of your organization. You can also allow people in your organization to share a contacts folder with people outside of your organization. Select the plan that your organization subscribes to in Microsoft 365.
+If you're a Microsoft 365 administrator, you can change the default sharing policy for your organization if you want to allow people in your organization to share full calendar details with people outside of your organization. You can also allow people in your organization to share a contacts folder with people outside of your organization. Select the plan that your organization subscribes to in Microsoft 365.
 
 #### Microsoft 365 Small Business Plan
 
-Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook.office365.com/ecp/](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 Small Business admin, you need to access EAC by using the direct URL. The Microsoft 365 Small Business Microsoft Online Portal does not have an option to access EAC.  As a Microsoft 365 Small Business admin, you need to access EAC by using the direct URL. The Microsoft 365 Small Business Microsoft Online Portal does not have an option to access EAC.
+Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook.office365.com/ecp/](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 Small Business admin, you need to access EAC by using the direct URL. The Microsoft 365 Small Business Microsoft Online Portal doesn't have an option to access EAC.  As a Microsoft 365 Small Business admin, you need to access EAC by using the direct URL. The Microsoft 365 Small Business Microsoft Online Portal doesn't have an option to access EAC.
 
 1. Navigate to **Organization** > **Sharing**.
 2. In the list view, under **Individual Sharing**, select the **Default Sharing Policy**, and then select **Edit**![Edit icon](./media/how-to-share-calendar-and-contacts/edit-icon.gif).
@@ -595,7 +595,7 @@ Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook
 
 #### Microsoft 365 Enterprise | Midsize | Education plan
 
-Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook.office365.com/ecp/](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 admin for Enterprises, Midsize, or Education, you can also access EAC by clicking **Admin > Exchange** in the Microsoft Online Portal.
+Before you begin, sign in to the Exchange admin center (EAC) at [https://outlook.office365.com/ecp/](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials. As a Microsoft 365 admin for Enterprises, Midsize, or Education, you can also access EAC by selecting **Admin** > **Exchange** in the Microsoft Online Portal.
 
 1. Navigate to **Organization** > **Sharing**.
 2. In the list view, under **Individual Sharing**, select the **Default Sharing** **Policy**, and then select **Edit**![Edit icon](./media/how-to-share-calendar-and-contacts/edit-icon.gif).
@@ -613,7 +613,7 @@ After you change the sharing policy, people in your organization will be able to
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [The issue was not resolved](#the-issue-was-not-resolved).
+- If no, see [The issue wasn't resolved](#the-issue-wasnt-resolved).
 
 ### Complete sharing calendar outside the organization
 
@@ -622,4 +622,4 @@ If you didn't receive an error when you sent the sharing invitation to a person 
 **Did this solve your problem?**
 
 - If yes, congratulations! Your scenario is complete.
-- If no, see [The issue was not resolved](#the-issue-was-not-resolved).
+- If no, see [The issue wasn't resolved](#the-issue-wasnt-resolved).
