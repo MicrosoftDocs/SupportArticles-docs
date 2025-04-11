@@ -48,7 +48,7 @@ Info CBS Perf: InstallUninstallChain complete.
 2. Set the trusted installer to automatic state using the command:
 
    ```console
-   sc config trustedinstaller start= auto
+   sc config trustedinstaller start=demand
    ```
 
 3. Try install the updates again.
