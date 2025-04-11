@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Setting in NTLM network authentication behavior allows use of previous password
 
-This article describes new behavior that affects NTLM password changes and how to change this behavior by using a registry.
+This article describes a behavior that affects NTLM password changes and how to change this behavior by using a registry.
 
 _Original KB number:_ &nbsp; 906305
 
