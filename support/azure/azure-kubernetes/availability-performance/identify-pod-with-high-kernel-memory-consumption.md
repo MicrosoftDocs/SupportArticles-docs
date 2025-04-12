@@ -27,7 +27,7 @@ The following table outlines the common symptoms of memory saturation.
 
 ## Step 1: Inspect pod Working Set
 
-If you don't already know which `pod` is consuming much memory refer to the documentation: [https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/availability-performance/identify-memory-saturation-aks](https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/availability-performance/identify-memory-saturation-aks?tabs=browser).
+If you don't already know which `pod` is consuming much memory refer to the guide: [Troubleshoot memory saturation in AKS clusters](https://learn.microsoft.com/troubleshoot/azure/azure-kubernetes/availability-performance/identify-memory-saturation-aks?tabs=browser).
 
 The [kubectl top pods](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_top/) command shows the actual [Working_Set](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory) reported by the  [Kubernetes metrics API](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server).
 
