@@ -37,7 +37,7 @@ The primary audience of this document is administrators managing Windows Server 
 We recommend you read through this document for informational purposes even if you have already disabled STS in your deployments.
 
 This article gives high-level overview of:
-- The Secure Time Seeding (STS) feature in Windows OS
+- Secure Time Seeding (STS) feature in Windows OS
 - STS-related timekeeping issues in some Windows Server OS SKUs reported to us
 - Disabling STS Feature on Windows Server OS
 - Critical aspects of timekeeping, time synchronization, and dissemination
@@ -134,7 +134,7 @@ Handling issues on Windows SKUs outside the scope of the current for general rec
 
 This part of the note is included for completeness only. There are no current trends of this scenario occurring on non-Windows Server OS SKUs and there is no current general guidance to disabling STS in non- Windows Server OS SKUs.
 
-There is a small but distinct possibility that machines in a deployment running non-Windows Server OS SKUs (various non-Server editions and releases of Windows OS 1511 or newer – for example: Windows 10 Client SKUs, Windows 10 IoT, Windows11 Client SKUs and Windows 11 IoT etc.) may also experience STS-related time issues based on unique circumstances in that deployment and incidence of such issues can be mitigated only by disabling the STS feature on the affected machines.
+There is a small but distinct possibility that machines in a deployment running non-Windows Server OS SKUs (various non-Server editions and releases of Windows OS 1511 or newer – for example: Windows 10 Client SKUs, Windows 10 IoT, Windows11 Client SKUs, and Windows 11 IoT etc.) may also experience STS-related time issues based on unique circumstances in that deployment and incidence of such issues can be mitigated only by disabling the STS feature on the affected machines.
 
 Certain machines (for example: portable devices relying solely on aged rechargeable batteries as a power source and experience complete power drain before the next battery recharge) running Windows OS may be relying on STS to automatically correct gross time errors. These machines may require alternate intervention to correct the time if STS feature is disabled.
 
