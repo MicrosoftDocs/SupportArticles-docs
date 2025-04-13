@@ -173,7 +173,7 @@ The reason is that there might be a change to the flow in the target environment
    > [!NOTE]
    > There can be no unmanaged layers on either the flow or the app because this can cause issues in connection to the flow.
 
-## Error code "NotAllowedConnectionReferenceon" on Flow run
+## Error code "NotAllowedConnectionReference" on Flow run
 
 ```output
     {
@@ -196,6 +196,7 @@ This error means that the app has flow metadata that specifies that a SQL connec
 > Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
 
 #### Mitigation option 1
+Resetting the flows in the app:
 
 1. In the source environment, edit the app. Remove and then re-add the flows to the app. Save and publish the changes.
 2. In the target environment, remove all unmanaged layers on the app and flow.
@@ -205,13 +206,13 @@ This error means that the app has flow metadata that specifies that a SQL connec
    > There can be no unmanaged layers on either the flow or the app because this can cause issues in connection to the flow.
 
 #### Mitigation option 2
+Change the connection from **Embedded** to **Invoker**:
 
-1. Change the connection from **Embedded** to **Invoker**.
-2. Navigate to the flow portal to edit and update the flow settings.
-3. On the flow details page, in the **Run only users** section, select **Edit**.
-4. To update the flow connection source to **Invoker**, select **Provided by run-only user** and save.
-5. To update the flow connection source to **Embedded**, select **Use this connection** and save.
-6. Verify by triggering the flow. You see that the "install flow network" calls now are succeeding.
+1. Navigate to the flow portal to edit and update the flow settings.
+2. On the flow details page, in the **Run only users** section, select **Edit**.
+3. To update the flow connection source to **Invoker**, select **Provided by run-only user** and save.
+4. To update the flow connection source to **Embedded**, select **Use this connection** and save.
+5. Verify by triggering the flow. You see that the "install flow network" calls now are succeeding.
 
 ## Other symptoms
 
