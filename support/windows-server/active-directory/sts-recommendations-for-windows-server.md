@@ -168,11 +168,7 @@ Timekeeping and time synchronization are complex topics that are subjects of sev
   - Public networks commonly use publicly accessible NTP servers to synchronize time (for example: time.windows.com).  
   - An NTP server on your private network may be more accommodating to your needs than a public NTP server, but the latter may be readily accessible. 
   - NTP protocol used in most of these scenarios is NTP (Plaintext) defined in RFC 1305 and its advanced variations. This protocol is widely used across various OS platforms and across the internet for time synchronization. W32time service requires an admin to specify an NTP server name or IP address in the settings for it to be used as a time source. The common (Plaintext) NTP source used in W32time settings is "time.windows.com".
-- Active Directory Domain Services (ADDS) uses NTP augmented with ADDS security extensions within the AD Domain/Forest and it is typically bridged outside the AD Forest though standard plaintext NTP. Time distribution within ADDS uses available Domain Controllers as primary or intermediate time servers. Most ADDS machines dynamically discover their time server, except the DCs marked 
-
-
-
-"Good Time Server" (Forest Root Primary Domain Controller defaults to this role) that are either accurate sources of time or are explicitly configured to synchronize from an external time source.
+- Active Directory Domain Services (ADDS) uses NTP augmented with ADDS security extensions within the AD Domain/Forest and it is typically bridged outside the AD Forest though standard plaintext NTP. Time distribution within ADDS uses available Domain Controllers as primary or intermediate time servers. Most ADDS machines dynamically discover their time server, except the DCs marked "Good Time Server" (Forest Root Primary Domain Controller defaults to this role) that are either accurate sources of time or are explicitly configured to synchronize from an external time source.
 - Customers must first determine whether their Windows OS Server machine is deployed in a private network or a public network and then make choices about the specific Windows timekeeping settings they are going to use in that deployment. 
 - Some deployments may need redundancy of time servers to avoid any loss of availability. Relying on an odd number of comparable time servers (>1) can help meet this goal. 
 - Customers hosting time sensitive workloads should ensure their time distribution and monitoring in those environments meet their needs.  
