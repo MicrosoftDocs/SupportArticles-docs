@@ -14,7 +14,7 @@ ms.custom:
 
 # Resolve file upload warnings related to duplicate data
 
-When you upload employee attribute data to Microsoft Viva Glint, you might receive one of the following warning messages that are caused by duplicate data. Select the relevant warning, and follow the appropriate resolution to fix the issue.
+When you upload employee attribute data to Microsoft Viva Glint, you might receive one of the following warning messages that are caused by duplicate data. To fix the issue, select the relevant warning, and follow the appropriate resolution.
 
 ## INVALID_EMPLOYEE_DATA: Email is assigned to multiple users
 
@@ -57,10 +57,10 @@ To fix the issue, follow these steps:
 1. In the admin dashboard, select the **Configuration** icon, and then select **People** in the **Employees** section.
 1. Locate the user that's associated with the email address that's mentioned in the warning message, and then select the user to view their profile.
 
-    **Note**: If the user status is **INACTIVE** and your organization recycles email addresses for employees who have left, we recommend that you change their email address to their Employee ID so that the email address can be assigned to a new employee. This action is also recommended when you deactivate a user in Viva Glint.
+    **Note**: If the user status is **INACTIVE**, and your organization recycles email addresses for employees who left the organization, we recommend that you change their email address to their Employee ID so that the email address can be assigned to a new employee. This action is also recommended when you deactivate a user in Viva Glint.
 
     If you can't find the email address that's mentioned in the warning message, see the [DUPLICATED_EMAIL: Deleted user](#duplicated_email-deleted-user) section.
-1. Open the employee attribute data file, and use the appropriate method depending on the file type:
+1. Open the employee attribute data file, and use the appropriate method, depending on the file type:
 
     - If the data file has an *.xlsx* extension, open it in Microsoft Excel.
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in its original format.
@@ -80,10 +80,10 @@ This issue occurs because one or more users in the uploaded file are assigned an
 
 1. In the admin dashboard, select the **Configuration** icon, and then select **Activity Audit Log** in the **Service Configuration** section.
 1. Set the filter to **User Deleted** activity.
-1. Verify that the email address that's mentioned in the warning message corresponds to a user that's deleted in Viva Glint within the last 30 days. Then, perform one of the following actions:
+1. Verify that the email address that's mentioned in the warning message corresponds to a user who was deleted in Viva Glint within the last 30 days. Then, perform one of the following actions:
 
      - If the user should remain deleted from Viva Glint, remove their records from the file. Then, upload the file again.
-     - If the user should be restored in Viva Glint, wait 30 days after the deletion date to allow the user to be completely deleted. Then, upload their records to Viva Glint as a new user.
+     - If the user should be restored in Viva Glint, wait 30 days after the deletion date to allow the user to become completely deleted. Then, upload their records to Viva Glint as a new user.
 
 ## DUPLICATED_EXTERNAL_USER_ID
 
