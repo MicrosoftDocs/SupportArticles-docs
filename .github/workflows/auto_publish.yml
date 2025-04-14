@@ -12,7 +12,9 @@ on:
 jobs:
   run-python-script:
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'MicrosoftDocs'    
+    if: github.repository_owner == 'MicrosoftDocs'
+    permissions:
+      pull-requests: write
 
     steps:
       # Checkout the automation branch
