@@ -368,7 +368,37 @@
       href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
     - name: VMExtensionError_VHDFileNotFound error
       href: error-codes/vmextensionerror-vhdfilenotfound.md
+    - name: VMExtensionError_ProvisioningTimeout error
+      href: error-codes/vmextensionerror-provisioningtimeout.md
   - name: UnsatisfiablePDB error
     href: error-codes/unsatisfiablepdb-error.md
   - name: AksCapacityHeavyUsage error
     href: error-codes/akscapacityheavyusage-error.md
+  - name: InvalidParameter error
+    href: error-codes/invalidparameter-error.md
+  - name: InvalidResourceReference error
+    href: error-codes/invalidresourcereference-error.md
+  - name: LinkedAuthorizationFailed error
+    href: error-codes/linkedauthorizationfailed-error.md
+  - name: MissingSubscriptionRegistration error
+    href: error-codes/missingsubscriptionregistration-error.md
+  - name: OperationNotAllowed or PublicIPCountLimitReached error
+    href: error-codes/operationnotallowed-publicipcountlimitreached-error.md
+  - name: AKSOperationPreempted error
+    href: error-codes/aksoperationpreempted-error.md
+  - name: RequestDisallowedByPolicy error
+    href: error-codes/requestdisallowedbypolicy-error.md
+  - name: ServicePrincipalValidationClientError error
+    href: error-codes/serviceprincipalvalidationclienterror-error.md
+  - name: SubscriptionRequestsThrottled error
+    href: error-codes/subscriptionrequeststhrottled-error.md
+  - name: Throttled error
+    href: error-codes/throttled-error.md
+  - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources
+    href: error-codes/subnetwithexternalresourcescannotbeusedbyotherresources-error.md 
+  - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error
+    href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
+  - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
+    href: error-codes/zonalallocationfailed-allocationfailed-error.md
+  - name: QuotaExceeded or InsufficientVCPUQuota error
+    href: error-codes/quota-exceeded-error.md
