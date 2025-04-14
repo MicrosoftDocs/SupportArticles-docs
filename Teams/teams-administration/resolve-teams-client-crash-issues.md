@@ -8,10 +8,10 @@ ms.custom:
   - sap:Teams Admin\TAC (Teams Admin Center)
   - CI 3647
   - CSSTroubleshoot
-ms.reviewer: shals
+ms.reviewer: shals, dpollicino
 search.appverid: 
   - MET150
-ms.date: 03/27/2025
+ms.date: 04/14/2025
 ---
 # Resolve Teams "client crash" issues
 
