@@ -22,7 +22,7 @@ You might encounter the following issues when working with [Copilot Studio bots]
 
 ## Cause
 
-The issue can occur if the `iscustomizable` flag is enabled for the bot skill. When this flag is enabled, any changes made to one bot or workstream can inadvertently affect other bots or workstreams.
+The issue can occur when the `iscustomizable` flag is enabled for the bot skill. When this flag is enabled, any changes made to one bot or workstream could inadvertently affect other bots or workstreams.
 
 ## Resolution
 
