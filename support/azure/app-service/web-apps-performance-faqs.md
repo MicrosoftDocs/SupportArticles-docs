@@ -4,7 +4,7 @@ description: Get answers to frequently asked questions about availability, perfo
 author: genlin
 ms.author: genli
 ms.service: azure-app-service
-ms.date: 04/10/2025
+ms.date: 04/14/2025
 ms.reviewer: toan, shrahman
 ---
 # Application performance FAQs for Web Apps in Azure
@@ -14,7 +14,7 @@ ms.reviewer: toan, shrahman
 
 This article has answers to frequently asked questions (FAQs) about application performance issues for the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
 
-[!INCLUDE [support-disclaimer](../../includes/support-disclaimer]
+[!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
 
 ## Why is my App Service Plan displaying CPU/Memory usage even when all Web Apps are stopped?
 
@@ -29,12 +29,8 @@ The platform processes will consume a minimum amount of resources (such as CPU, 
 Multiple factors might contribute to slow app performance. For detailed troubleshooting steps, see [Troubleshoot slow web app performance](/azure/app-service/troubleshoot-performance-degradation).
 
 > [!TIP]
-> Enable the **Always On** setting under *Configuration > General settings* to keep your app warm and prevent cold starts. This helps reduce delay after idle time, especially in Basic and higher plans.
-
-> [!TIP]
-> Configure a **Health Check** path to monitor app health and automatically replace unresponsive instances. This helps maintain availability and performance.  
-> [Learn more](/azure/app-service/monitor-instances-health-check)
-
+> - Enable the **Always On** setting under **Configuration** > **General settings** to keep your app warm and avoid cold starts. This helps reduce delay after idle time, especially in Basic and higher plans.
+> - Configure a Health check path to monitor app health and automatically replace unresponsive instances. This helps maintain availability and performance. For more information, see [Monitor App Service instances by using Health check](/azure/app-service/monitor-instances-health-check).
 
 ## How do I troubleshoot a high CPU-consumption scenario?
 
@@ -49,8 +45,7 @@ In some high memory-consumption scenarios, your app might truly require more com
 You can use PowerShell cmdlets to manage and maintain App Service web apps. In our blog post [Automate web apps hosted in Azure App Service by using PowerShell](/archive/blogs/puneetgupta/automating-webapps-hosted-in-azure-app-service-through-powershell-arm-way), we describe how to use Azure Resource Manager-based PowerShell cmdlets to automate common tasks.
 
 > [!NOTE]
-> For current automation scripts, use the latest **Az.Websites** module. The older `AzureRM` module is deprecated.  
-> [Reference: Az.Websites](/powershell/module/az.websites)
+> For current automation scripts, use the latest [Az.Websites](/powershell/module/az.websites) module. The older `AzureRM` module is deprecated.
 
 ## How do I view my web app's event logs?
 
@@ -195,16 +190,10 @@ For a detailed walkthrough that shows you how to debug your web app by using Vis
 
 ## Additional recommendations for performance and resiliency
 
-> [!TIP]
-> Use **Application Insights** and **Azure Monitor** for full-stack observability of your App Service app, including telemetry, dependency tracing, and live metrics.
+- Use Application Insights and Azure Monitor for full-stack observability of your App Service app, including telemetry, dependency tracing, and live metrics.
 
-> [!TIP]
-> If you are deploying in regions that support **Availability Zones**, consider enabling zone redundancy for added resiliency during regional outages.  
-> [Learn more](/azure/reliability/reliability-app-service)
+- If you're deploying in regions that support availability zones, consider enabling zone redundancy to enhance resiliency during regional outages. For more information, see [Reliability in Azure App Service](/azure/reliability/reliability-app-service).
 
-> [!TIP]
-> App Service undergoes **routine maintenance** for platform reliability. For more control over update behavior, especially in App Service Environment v3, configure **Upgrade Preference** settings.  
-> [Learn more](/azure/app-service/routine-maintenance)
-
+- App Service undergoes routine maintenance to ensure platform reliability. For more control over update behavior, especially in App Service Environment v3, configure upgrade preference.  For more information, see [Routine (planned) maintenance for Azure App Service](/azure/app-service/routine-maintenance).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
