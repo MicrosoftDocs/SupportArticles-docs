@@ -16,7 +16,7 @@ contributors:
 ---
 # Common issues and resolutions for Power Apps
 
-This article lists common issues you might encounter while using Power Apps. We group issues by area and provide summary-level workarounds where applicable. Pointers to primary documentation locations are also provided.
+This article lists common issues you might encounter while using Power Apps. It groups issues by area and provides summary-level workarounds where applicable. Pointers to primary documentation locations are also provided.
 
 Refer to the introductory article [Power Apps troubleshooting strategies](isolate-common-issues.md) for guidance on narrowing down the source of your issue. That article outlines key principles for debugging both functional and performance issues.
 
@@ -62,11 +62,11 @@ End users might encounter this issue in two situations:
 
 1. **Custom connectors and Microsoft Dataverse**
 
-    You need to make adjustments if you built your app with Power Apps:
+    You need to make adjustments if you built your app with Power Apps that:
 
-    1. Version 2.0.540 or earlier,
-    2. Relies on a Dataverse database,
-    3. And uses at least one custom connector from a separate environment.
+    1. Is version 2.0.540 or earlier.
+    2. Relies on a Dataverse database.
+    3. Uses at least one custom connector from a separate environment.
 
     First, deploy the custom connector to the same environment as the database. Then, update the app to use the newly deployed connector. Otherwise, a dialog notifies users that the API wasn't found. For more information, see [Environments overview](/power-platform/admin/environments-overview).
 
@@ -102,7 +102,7 @@ End users might encounter this issue in two situations:
 
    Power Automate flows that are added using an older version of the Power Apps panel might be orphaned and removed. To fix this issue, readd the flows manually.
 
-1. **Power Apps custom pages (in a model-driven app) are out of synchronization with embedded Power Automate flow metadata**
+1. **Power Apps custom pages (in a model-driven app) are out of synchronization with embedded Power Automate flow metadata.**
 
     The metadata for a Power Automate flow might be out of synchronization with a model-driven app's custom page if the flow is updated after being embedded. To update, follow these steps for each embedded flow:
 
@@ -154,7 +154,7 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
 1. **Changing a flow in a shared app**
 
-    If you add a flow to an app and share the app, then make changes to the flow such as adding a service or modifying a connection, more steps are required. You must also first remove the flow from the shared app. Next, readd the flow to the app. And finally, reshare the app.
+    If you add a flow to an app and share the app, and then make changes to the flow, such as adding a service or modifying a connection, more steps are required. You must also first remove the flow from the shared app. Next, readd the flow to the app. Finally, reshare the app.
 
 1. **Changing a "Title" field in a table**
 
