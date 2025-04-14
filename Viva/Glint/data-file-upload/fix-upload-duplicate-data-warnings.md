@@ -68,8 +68,6 @@ To fix the issue, follow these steps:
 1. For each user that's identified in step 4, compare their Employee ID to the Employee ID of the user that's found in step 2. If the Employee ID is different, enter a unique email address for the user in the data file.
 1. Save the employee attribute data file, and then upload it again to Viva Glint.
 
-**Note:** If user emails listed in the warning don't appear in Viva Glint People searches, go to [this section](#duplicated_email-deleted-user).
-
 ## DUPLICATED_EMAIL: Deleted user
 
 Warning message:
