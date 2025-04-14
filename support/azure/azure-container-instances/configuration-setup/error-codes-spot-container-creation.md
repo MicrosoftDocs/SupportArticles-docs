@@ -1,11 +1,11 @@
 ---
 title: Error codes for Spot container creation in Container Instances
 description: Provides a solution to common Spot container errors.
-ms.date: 01/30/2024
+ms.date: 04/14/2025
 author: tysonfms
 ms.author: tysonfreeman
 editor: v-jsitser
-ms.reviewer: v-weizhu, v-leedennis
+ms.reviewer: edneto, v-weizhu, v-leedennis
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
 #customer intent: As a user of Azure Container Instances, I want find details and solutions to common user errors that involve Spot containers so that I can create Spot containers successfully.
