@@ -38,7 +38,7 @@ jobs:
       # Run the Python script
       - name: Run script
         env:
-            GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GITHUB_ACCESS_TOKEN: ${{ secrets.DELAND_PAT }}
         run: |
             ls scripts
             python scripts/auto_push2live.py
