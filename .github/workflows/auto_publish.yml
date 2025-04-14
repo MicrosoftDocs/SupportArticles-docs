@@ -38,5 +38,5 @@ jobs:
         env:
             GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-            ls
-            python scripts/auto_push.py
+            ls scripts
+            python scripts/auto_push2live.py
