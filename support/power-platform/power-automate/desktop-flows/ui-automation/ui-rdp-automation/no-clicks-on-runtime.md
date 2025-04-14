@@ -13,7 +13,7 @@ This article helps you resolve an issue you might encounter when trying to click
 
 ## Symptoms
 
-When you hover the mouse cursor over a UI or web element of an application or webpage inside a Citrix virtual app with [UI element picker](/power-automate/desktop-flows/ui-elements#ui-elements-types) the elements are highlighted and captured. However when used in an action (like 'Click Element in Window'), the interaction isn't happening and no error is shown. Test selector works fine.
+When you use the [UI element picker](/power-automate/desktop-flows/ui-elements#ui-elements-types) on Citrix Virtual apps, you're able to highlight and capture elements. However when these elements are used in an action (like 'Click Element in Window'), the interaction isn't happening and no error is shown. Test selector works fine.
 
 ## Cause
 

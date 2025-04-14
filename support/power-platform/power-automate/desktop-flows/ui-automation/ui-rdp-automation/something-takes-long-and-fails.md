@@ -14,7 +14,7 @@ When trying to highlight, capture, test an element or interacting with elements 
 
 The reson for this is that there might be cases where interacting with RDP/Citrix applications might timeout and require more time to work. These time-outs can be configured like the rest of Power Automate time-outs like in [time-out configuration for UI and browser automation](/power-automate/desktop-flows/how-to/ui-automation-change-timeout-cofiguration). Use this guide to configure the following values as needed.
 
-The specific configrations that need to be changed in this case are the following:
+The specific configrations that need to be changed in this case are the following keys:
 
 - **Java.Bridge.Client.ReadWriteTimeout**: In case the target application is JAVA based, this time-out additionally increases time waiting for responses. In remote JAVA applications (RDP/Citrix), this time-out needs to be changed on the remote machine.
 - **BrowserNativeMessageHost.MessageTimeout** and **WebExtensionsMessageProxy.SendTimeout**: In case web automation is used, this time-out increases the max time that waits for webpages to respond. In remote webpages (RDP/Citrix), this time-out needs to be changed on the remote machine.

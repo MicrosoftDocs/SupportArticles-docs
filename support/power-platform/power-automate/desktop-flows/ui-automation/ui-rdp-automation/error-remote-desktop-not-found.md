@@ -1,19 +1,19 @@
 ---
-title: Error "The remote desktop was not found"
-description: Solves an issue that occurs when on runtime the flow fails with 'The remote desktop was not found'
+title: Error "The remote desktop wasn't found"
+description: Solves an issue that occurs when on runtime the flow fails with 'The remote desktop wasn't found'
 ms.reviewer: amitrou
 ms.author: iopanag
 author: iopanag
 ms.custom: sap:Desktop flows\UI or browser automation
 ms.date: 03/28/2025
 ---
-# Error "The remote desktop was not found"
+# Error "The remote desktop wasn't found"
 
-This article helps you resolve an issue you might encounter when a flow fails with error 'The remote desktop was not found'.
+This article helps you resolve an issue you might encounter when a flow fails with error 'The remote desktop wasn't found'.
 
 ## Symptoms
 
-A flow using RDP/Citrix automation used to run successfully but it started failing with error 'The remote desktop was not found'. It might even never run successfully. This issue is more common in Citrix Virtual Apps.
+A flow using RDP/Citrix automation used to run successfully but it started failing with error 'The remote desktop wasn't found'. It might even never run successfully. This issue is more common in Citrix Virtual Apps.
 
 ## Cause 1
 
