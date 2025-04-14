@@ -1,11 +1,11 @@
 ---
 title: Error message when you select Roles in Server Manager on Windows Server
 description: Resolves the Windows Server problem in which selecting Roles in Server Manager generates an error message and Event 1601.
-ms.date: 01/15/2025
+ms.date: 04/14/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, warrenw
 ms.custom:
 - sap:system management components\server manager
 - pcy:WinComm User Experience
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 971509
 
 ## Symptoms
 
-When you click **Install** **Roles** in **Server Manager** on a Windows Server computer, your profile doesn't load correctly and you receive an error message. If you select **Error Details**, you see the following message:
+When you install roles in **Server Manager** on a Windows Server computer, your profile doesn't load correctly and you receive an error message. If you select **Error Details**, you see the following message:
 
 > **Server Manager:**  
 Unexpected error refreshing Server Manager; cannot open an anonymous level security token. (Exception from HRESULT: 0x80070543)
