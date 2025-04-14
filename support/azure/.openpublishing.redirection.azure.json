@@ -6307,6 +6307,10 @@
       {
         "source_path": "azure-kubernetes/create-upgrade-delete/error-using-feature-requiring-virtual-machine-scale-set.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes"
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/akscapacityerror.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/akscapacityheavyusage-error"
       }
   ]
 }
