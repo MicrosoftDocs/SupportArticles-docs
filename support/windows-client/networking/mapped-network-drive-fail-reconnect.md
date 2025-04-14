@@ -101,7 +101,7 @@ All workarounds should be executed in standard user security context. Executing 
 #### Workaround 3: Create a scheduled task for Microsoft VPN client Event ID 20225
 
 > [!NOTE]
-> Event ID 20225 indicates that a VPN connection is successfully established.
+> Event ID 20225 indicates that a virtual private network (VPN) connection is successfully established.
 
 1. Copy the script file **MapDrives.ps1** to the following location:  
    **%SystemDrive%\\Scripts\\**  
