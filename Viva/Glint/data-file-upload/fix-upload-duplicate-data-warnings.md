@@ -3,7 +3,7 @@ title: Resolve file upload warnings related to duplicate data
 description: Fix warnings that occur when you upload employee attribute data to Microsoft Viva Glint. These warnings are caused by duplicate data.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 06/21/2024
+ms.date: 04/14/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -58,6 +58,8 @@ To fix the issue, follow these steps:
 1. Locate the user that's associated with the email address that's mentioned in the warning message, and then select the user to view their profile.
 
     **Note**: If the user status is **INACTIVE** and your organization recycles email addresses for employees who have left, we recommend that you change their email address to their Employee ID so that the email address can be assigned to a new employee. This action is also recommended when you deactivate a user in Viva Glint.
+
+    If you can't find the email address that's mentioned in the warning message, see the [DUPLICATED_EMAIL: Deleted user](#duplicated_email-deleted-user) section.
 1. Open the employee attribute data file. Use the appropriate method depending on the file type:
 
     - If the data file has an *.xlsx* extension, open it in Microsoft Excel.
@@ -72,17 +74,18 @@ To fix the issue, follow these steps:
 
 Warning message:
 
-> DUPLICATED_EMAIL: The Email Address <Email address, such as user@contoso.com> in the user file is already assigned to a different user in your Viva Glint People Database.
+> DUPLICATED_EMAIL: The Email Address \<Email address, such as user@contoso.com\> in the user file is already assigned to a different user in your Viva Glint People Database.
 
-This issue occurs because one or more users in the uploaded file are assigned an email address that's already associated with a user in Viva Glint whose record is in a [soft-deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees). 
+This issue occurs because one or more users in the uploaded file are assigned an email address that's already associated with a user whose record is in a [soft-deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) in Viva Glint. 
 
 ### Resolution
 
 1. In the admin dashboard, select the **Configuration** icon, then select **Activity Audit Log** in the **Service Configuration** section.
-2. Filter Events to "User Deleted" activity.
-3. Confirm that the email or emails listed in the warning message are connected to users that were deleted in Viva Glint within the last 30 days.
-4. If users should remain deleted from Viva Glint, remove their records from the file and upload again.
-5. If users should be reinstated in Viva Glint, wait until 30 days pass from the deletion date for the user to be fully deleted. Upload their records again as new users in Viva Glint.
+1. Set the filter to **User Deleted** activity.
+1. Verify that the email address that's mentioned in the warning message corresponds to a user that's deleted in Viva Glint within the last 30 days. Then, perform one of the following actions:
+
+     - If the user should remain deleted from Viva Glint, remove their records from the file. Then, upload the file again.
+     - If the user should be restored in Viva Glint, wait 30 days after the deletion date to allow the user to be completely deleted. Then, upload their records to Viva Glint as a new user.
 
 ## DUPLICATED_EXTERNAL_USER_ID
 
