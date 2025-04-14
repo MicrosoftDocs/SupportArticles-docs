@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-python-script:
+  auto-push-to-live:
     runs-on: ubuntu-latest
     if: github.repository_owner == 'MicrosoftDocs'
     permissions:
