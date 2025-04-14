@@ -42,10 +42,6 @@
       href: connections/troubleshooting-flow-custom-connectors.md
     - name: User doesn't have service plan adequate for non-Standard connection
       href: connections/user-does-not-have-a-service-plan-error.md
-- name: Dataverse (CDS)
-  items:
-    - name: CDS user role can't access flows
-      href: dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
 - name: Desktop flows
   items:
     - name: Browser automation
@@ -66,6 +62,14 @@
           href: desktop-flows/browser-automation/web-extensions-policies.md
         - name: Web automation fails when machine runtime and MSIX versions are different
           href: desktop-flows/browser-automation/machine-runtime-msix-errors.md
+        - name: Press button or click link on web page doesn't work on file uploader
+          href: desktop-flows/browser-automation/file-uploader-click-issues.md
+        - name: Run JavaScript function on web page action doesn't execute
+          href: desktop-flows/browser-automation/js-not-executed.md
+        - name: Web automation fails in unattended mode
+          href: desktop-flows/browser-automation/web-automation-unattended-failures.md
+        - name: Issues when using Internet Explorer for web automation
+          href: desktop-flows/browser-automation/web-automation-ie-issue.md
     - name: Office automation
       items:
         - name: Excel
@@ -90,7 +94,7 @@
           href: desktop-flows/ui-automation/focus-window-action-not-working.md
         - name: Failed to get UI element
           href: desktop-flows/ui-automation/failed-get-ui-element.md
-        - name: Failed to get element/window or Element/Window wasn't found error
+        - name: Failed to get element/window or Element/Window wasn't found errors
           href: desktop-flows/ui-automation/ui-automation-action-fails-errors.md
         - name: SAP UI element click issue
           href: desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md
@@ -104,6 +108,8 @@
           href: desktop-flows/ui-automation/ui-rdp-automation/error-remote-desktop-not-found.md
         - name: Something takes long time and fails afterwards
           href: desktop-flows/ui-automation/ui-rdp-automation/something-takes-long-and-fails.md
+        - name: UIPI issues with UI and web automation actions
+          href: desktop-flows/ui-automation/uipi-issues.md
     - name: '"Could not read the application certificate" error when creating a connection'
       href: desktop-flows/application-certificate-error.md
     - name: Agent-related errors when running attended or unattended desktop flows

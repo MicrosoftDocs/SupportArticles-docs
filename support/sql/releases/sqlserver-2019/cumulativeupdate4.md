@@ -29,7 +29,7 @@ There's a known uninstallation issue that affects this SQL Server 2019 CU4 under
 
 To mitigate this issue, enable Trace Flag - T902 to bring SQL Server online. You don't have to uninstall the program again. To upgrade to a new CU, you must first remove this flag.
 
-SQL Server 2019 CU5 or any later CU release contains the fix.
+This issue is fixed in [SQL Server 2019 CU5](cumulativeupdate5.md#13543133).
 
 ## Improvements and fixes included in this update
 

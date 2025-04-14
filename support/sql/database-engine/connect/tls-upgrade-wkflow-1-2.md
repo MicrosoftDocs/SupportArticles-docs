@@ -1,7 +1,7 @@
 ---
 title: TLS 1.2 upgrade workflow
 description: This article discusses the procedure about how to upgrade SQL Server client and servers to the TLS 1.2 protocol for SQL Server.
-ms.date: 01/29/2024
+ms.date: 04/08/2025
 ms.custom: sap:Database Connectivity and Authentication
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ---

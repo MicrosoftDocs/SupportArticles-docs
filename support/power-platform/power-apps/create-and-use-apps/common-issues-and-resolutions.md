@@ -4,7 +4,7 @@ description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 ms.custom: sap:App Creation (Canvas App)
 ms.reviewer: tapanm, lanced, tahoon 
-ms.date: 04/04/2024
+ms.date: 03/26/2025
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ contributors:
 ---
 # Common issues and resolutions for Power Apps
 
-This article lists common issues you might encounter while using Power Apps. Issues are grouped by area, and summary-level workarounds are provided where applicable, with pointers to primary documentation locations where you might find more details.
+This article lists common issues you might encounter while using Power Apps. Issues are grouped by area, and summary-level workarounds are provided where applicable. Pointers to primary documentation locations are also provided.
 
 Refer to the introductory article [Power Apps troubleshooting strategies](isolate-common-issues.md) for guidance on narrowing down the source of your issue. That article outlines key principles for debugging both functional and performance issues.
 
@@ -38,6 +38,14 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 - See [Understanding delegation in a canvas app](/power-apps/maker/canvas-apps/delegation-overview) for details about delegation.
 - See [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps) for a description of how to monitor the data being sent and returned.
 
+**You don't have the correct permissions to use a connection.**
+
+End users might encounter this issue in two situations:
+
+1. The application might have a shared implicit connection that isn't a secure implicit connection. Sharing the connection with the end user can resolve the issue but isn't recommended. All connections should be converted to secure implicit connections by the author.
+
+2. If the connection is already a secure implicit connection, republishing the app might resolve the issue. If not, a product bug should be filed.
+
 ### Common issues
 
 1. **Automatic Next links for galleries and grids don't work for action-based connectors.**
@@ -54,7 +62,7 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 1. **Custom connectors and Microsoft Dataverse**
 
-    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Dataverse and at least one custom connector in a different environment, you'll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog will notify users that the API wasn't found. For more information, see [Environments overview](/power-platform/admin/environments-overview).
+    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Dataverse and at least one custom connector in a different environment, you need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog notifies users that the API wasn't found. For more information, see [Environments overview](/power-platform/admin/environments-overview).
 
 1. **Column names with spaces**
 
@@ -62,7 +70,7 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 1. **Apps that connect to on-premises SharePoint**
 
-    If you share an app that relies on connections that aren't automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser will see a dialog box with no text when they select or tap **Sign in**. To close the dialog box, select or tap the close (X) icon in the upper-right corner. The dialog box doesn't appear if you open the app in [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) or [Power Apps mobile](/power-apps/mobile/run-powerapps-on-mobile). For more information about shared connections, see [Share app resources](/power-apps/maker/canvas-apps/share-app-resources).
+    If you share an app that relies on connections that aren't automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser see a dialog box with no text when they select or tap **Sign in**. To close the dialog box, select or tap the close (X) icon in the upper-right corner. The dialog box doesn't appear if you open the app in [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) or [Power Apps mobile](/power-apps/mobile/run-powerapps-on-mobile). For more information about shared connections, see [Share app resources](/power-apps/maker/canvas-apps/share-app-resources).
 
 1. **For apps that are created from data, only the first 500 records of a data source can be accessed.**
 
@@ -86,7 +94,7 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 **Power Automate flows are orphaned in Power Apps.**
 
-Power Automate flows that are added using an older version of the Power Apps panel might be orphaned and removed. To fix this issue, re-add the flows manually.
+Power Automate flows that are added using an older version of the Power Apps panel might be orphaned and removed. To fix this issue, readd the flows manually.
 
 ## Power Fx
 
@@ -126,7 +134,7 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
 1. **Changing a flow in a shared app**
 
-    If you add a flow to an app, share it, and then add a service or change a connection in the flow, you must remove the flow from the shared app, re-add the flow, and then reshare the app. Otherwise, users who trigger the flow receive an authentication failure.
+    If you add a flow to an app, share it, and then add a service or change a connection in the flow, you must remove the flow from the shared app, readd the flow, and then reshare the app. Otherwise, users who trigger the flow receive an authentication failure.
 
 1. **Changing a "Title" field in a table**
 

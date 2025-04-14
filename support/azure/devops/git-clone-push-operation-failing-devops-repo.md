@@ -3,9 +3,9 @@ title: Git clone or Git push fails to an Azure DevOps repository
 description: This article discusses problems that might occur when you try to perform Git clone or Git push function to an Azure DevOps repository.
 author: HaiyingYu
 ms.author: haiyingyu
-ms.reviewer: kirt
+ms.reviewer: kirt, dmittal
 ms.topic: troubleshooting 
-ms.date: 05/19/2023
+ms.date: 03/24/2025
 ms.service: azure-devops
 ms.custom: sap:Repos
 ---
@@ -42,7 +42,7 @@ To learn more about Git environment variables, see [Git Internals - Environment 
 
 If you're using a proxy server but the Git configuration isn't set to connect through the proxy server, you might see the 407 or 502 error messages. This issue also occurs when the connection can't establish through the proxy server, and you see the errors similar to "unable to access <`your github url`\>:" or "couldn't resolve host `github.com`".
 
-### Solution: Configure Git to use the proxy server
+### Recommendation: Configure Git to use the proxy server
 
 Run `git config --list` to get a list of all the Git configuration on the system, and check whether the proxy server is in use.
 
@@ -65,13 +65,13 @@ For more information on Git configuration, see [Git Config Documentation](https:
 
 If Git is using a local self-signed certificate, you might see the error "SSL certificate problem: unable to get local issuer certificate."
 
-### Solution 1: Disable the TLS/SSL verification
+### Recommendation 1: Disable the TLS/SSL verification
 
 If you've installed a local Team Foundation Server (TFS) and if you want to disable the TLS/SSL verification that Git performs, run the following command:
 
 `git config --global http.sslVerify false`
 
-### Solution 2: Configure the self-signed certificates in Git
+### Recommendation 2: Configure the self-signed certificates in Git
 
 If you want to continue the TLS/SSL verification that Git does, follow these steps to add the root certificate in the local Git:
 
@@ -122,20 +122,44 @@ If you want to continue the TLS/SSL verification that Git does, follow these ste
 
 If your account name or domain password has changed, or you're getting an authentication error, there could be authentication and credential cache issues.
 
-### Solution: Reset the Git credentials manager (GCM)
+### Recommendation: Reset the Git credentials manager (GCM)
 
 To resolve the authentication error or credentials cache issues, begin by following the [Troubleshooting checklist](#troubleshooting-checklist) to get the error information, and then follow these steps:
 
-1. Run the `git config --list` command, and then check if you're using Git Credentials Manager (GCM). If the `credential.helper` is set to manager, then GCM is in use.
-1. Reset the GCM by following these steps:
+1. Run the `git config --list` command, and then check if you're using Git Credentials Manager (GCM). If the `credential.helper` is set to manager, GCM is in use.
+1. Follow these steps to reset the GCM:
     1. Run the `git config --global --unset credential.helper` command to unset the GCM.
-    1. Run the `git config credential.helper manager` command to set the GCM back. Alternatively, follow these steps to delete the credentials cache first:
-        1. When unset, search for **Credentials Manager** in Windows search, select **Open**, and then remove any credential that is for a Git repo.
-        1. Go to _%localappdata%/GitCredentialManager_ path, and then delete the _tenant.cache_ file.
-        1. Set the GCM back by running the `git config credential.helper manager` command.
+    1. Run the `git config --global credential.helper manager` command to set the GCM back.
+    
+   Alternatively, you can follow these steps to remove cached credentials:
+   - On Windows, Git credentials are stored in the Windows Credential Manager. You can access it in the following ways:
+
+     - Using GUI (Windows Credential Manager):
+
+       1. Open Control Panel and select **User Accounts** > **Credential Manager**.
+       1. Select **Windows Credentials**.
+       1. Look for entries related to `git:https://dev.azure.com/<orgname>` or your Git provider and manage them. For github, it's like `git:https://github.com/`.
+       
+     - Using command line:
+
+       1. Run `cmdkey /list | findstr "git"` to list Git credentials.
+       1. Run `cmdkey /delete:https://dev.azure.com/<orgname>` to delete the credentials.
+       1. If you need to reset credentials and re-enter them, run `git credential reject https://dev.azure.com/<orgname>`.
+
+    - On MacOS:
+    
+      - `git credential reject https://dev.azure.com/<orgname>` 
+    
+        When you run this command, you're instructing Git to invalidate or remove the stored credentials for the specified URL. This means that the next time you try to access the repository at that URL, Git will prompt you to enter your credentials again. This is useful if you need to reset your credentials. 
+
+      - `git credential approve https://dev.azure.com/<orgname>` to approve the credentials.
+
+        This command is used to manually store and approve credentials for future use, which ensures that you won't be prompted for credentials each time.
+
 1. Perform the cloning operation to verify if the issue is resolved.
 
-**Note:** Depending on the version of Git for Windows, the `credential.helper` value would be different. See the following table for details:
+> [!NOTE]
+> Depending on the version of Git for Windows, the `credential.helper` value is different. See the following table for details:
 
 |Versions of Git for Windows|Git Credential Manager for Windows|Git Credential Manager Core|Git Credential Manager (Renamed from GCM Core)|
 |--|--|--|--|

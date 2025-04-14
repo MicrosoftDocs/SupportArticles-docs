@@ -1,7 +1,7 @@
 ---
 title: Support for the leap second
 description: Summarizes Microsoft support for the leap second.
-ms.date: 01/15/2025
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,6 +14,7 @@ ms.custom:
 
 This article provides information about Microsoft support for the leap second.
 
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 2722715
 
 ## Summary

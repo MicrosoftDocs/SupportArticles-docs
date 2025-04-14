@@ -1,7 +1,7 @@
 ---
 title: SQL Server backup and restore operation issues
 description: This article troubleshoots SQL Server backup and restore operation issues, such as the operation taking a long time, issues between different SQL Server versions.
-ms.date: 09/10/2021
+ms.date: 03/21/2025
 ms.custom: sap:Database Backup and Restore
 ms.reviewer: ramakoni
 editor: v-jesits
@@ -23,7 +23,7 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
     RESTORE DATABASE successfully processed 315 pages in 0.372 seconds (6.604 MB/sec)
     ```
 
-- In SQL Server 2016 and later versions, you can use XEvent [backup_restore_progress_trace](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases) to track the progress of backup and restore operations.
+- In SQL Server 2016 and later versions, you can use XEvent [backup_restore_progress_trace](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases#monitor-progress-with-xevent) to track the progress of backup and restore operations.
 
 - You can use the `percent_complete` column of [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) to track the progress of in-flight backup and restore operations.
 
@@ -37,16 +37,15 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
 
 1. Check whether you're experiencing any of the known issues that are listed in the following table. Consider whether you should implement the changes or apply the fixes and best practices that are discussed in the corresponding articles.
 
-    |Knowledge Base or Books Online link|Explanation and recommended actions|
+    |Knowledge Base link|Explanation and recommended actions|
     |---|---|
-    | [Optimizing Backup and Restore Performance in SQL Server](https://technet.microsoft.com/library/ms190954%28v=sql.105%29.aspx)|The Books Online topic covers various best practices that you can use to improve the performance of Backup/Restore operations. For example, you can assign the `SE_MANAGE_VOLUME_NAME` special privilege to the Windows account that's running SQL Server to enable instant initialization of data files. This can produce significant performance gains.|
+    | [Optimizing Backup and Restore Performance in SQL Server](https://technet.microsoft.com/library/ms190954%28v=sql.105%29.aspx)|This article covers various best practices that you can use to improve the performance of Backup/Restore operations. For example, you can assign the `SE_MANAGE_VOLUME_NAME` special privilege to the Windows account that's running SQL Server to enable instant initialization of data files. This can produce significant performance gains.|
     | [2920151 Recommended hotfixes and updates for Windows Server 2012 R2-based failover clusters](https://support.microsoft.com/help/2920151) <br/><br/> [2822241 Windows 8 and Windows Server 2012 update rollup: April 2013](https://support.microsoft.com/help/2822241)|Current system rollups can include fixes for known issues at the system level that can degrade the performance of programs such as SQL Server. Installing these updates can help prevent such issues.|
     | [2878182 FIX: User mode processes in an application are unresponsive on servers that are running Windows Server 2012](https://support.microsoft.com/help/2878182) <br/><br/>|Backup operations are I/O intensive and can be affected by this bug. Apply this fix to help prevent these issues.|
     | [Configure antivirus software to work with SQL Server](../security/antivirus-and-sql-server.md)|Antivirus software may hold locks on .bak files. This can affect the performance of backup and restore operations. Follow the guidance in this article to exclude backup files from virus scans.|
     | [2820470 Delayed error message when you try to access a shared folder that no longer exists in Windows](https://support.microsoft.com/help/2820470)|Discusses an issue that occurs when you try to access a shared folder that no longer exists in Windows 2012 and later versions.|
     | [967351 A heavily fragmented file in an NTFS volume may not grow beyond a certain size](https://support.microsoft.com/help/967351)|Discusses an issue that occurs when an NTFS file system is heavily fragmented.|
     | [304101 Backup program is unsuccessful when you back up a large system volume](https://support.microsoft.com/help/304101)||
-    | [2455009 FIX: Slow performance when you recover a database if there are many VLFs inside the transaction log in SQL Server 2005, in SQL Server 2008 or in SQL Server 2008 R2](https://support.microsoft.com/help/2455009)|The presence of many virtual log files could affect the required time to restore a database. This is especially true during the recovery phase of the restore operation. For information about other possible issues that can be caused by the presence of many VLFs, see [Database operations take a long time to complete, or they trigger errors when the transaction log has numerous virtual log files](https://support.microsoft.com/help/2028436).|
     |A backup or restore operation to a network location is slow|Isolate the issue to the network by trying to copy a similarly sized file to the network location from the server that's running SQL Server. Verify the performance.|
 
 2. Check for error messages in the SQL Server error log and Windows event log for more pointers about the cause of the problem.
@@ -57,9 +56,13 @@ Backup and restore operations are I/O intensive. Backup/Restore throughput depen
 
 ## Issues that affect database restoration between different SQL Server versions
 
+**Symptoms**
+
 A SQL Server backup can't be restored to an earlier version of SQL Server than the version at which the backup was created. For example, you can't restore a backup that's taken on a SQL Server 2019 instance to a SQL Server 2017 instance. Otherwise, the following error message appears:
 
 > Error 3169: The database was backed up on a server running version %ls. That version is incompatible with this server, which is running version %ls. Either restore the database on a server that supports the backup, or use a backup that is compatible with this server.
+
+**Resolution**
 
 Use the following method to copy a database that's hosted on a later version of SQL Server to an earlier version of SQL Server.
 
@@ -83,39 +86,48 @@ For more information about how to generate scripts for your database, see [Scrip
 
 ## Backup job issues in Always On environments
 
-If you encounter problems that affect backup jobs or maintenance plans in Always On environments, note the following:
+**Symptoms**
+
+You encounter problems that affect backup jobs or maintenance plans in Always On environments.
+
+**Resolution**
 
 - By default, the automatic backup preference is set to **Prefer Secondary**. This specifies that backups should occur on a secondary replica - except if the primary replica is the only replica online. You can't take differential backups of your database by using this setting. To change this setting, use SSMS on your current primary replica, and navigate to **Backup Preferences** page under **Properties** of your availability group.
 - If you're using a maintenance plan or scheduled jobs to generate backups of your databases, make sure to create the jobs for each availability database on every server instance that hosts an availability replica for the availability group.
 
-For more information about backups in an Always On environment, see the following topics:
+For more information about backups in an Always On environment, see the following articles:
 
 - [Configure backups on secondary replicas of an Always On availability group](/sql/database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server)
 - [Offload supported backups to secondary replicas of an availability group](/sql/database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups)
 
 ## Media-related errors when you restore a database from a backup
 
+**Symptoms**
+
 If you receive error messages that indicate a file issue, this is symptomatic of a corrupted backup file. The following are some examples of errors that you could get if a backup set is corrupted:
 
-- > 3241: The media family on device '%ls' is incorrectly formed. SQL Server cannot process this media family.
-- > 3242: The file on device '%ls' is not a valid Microsoft Tape Format backup set.
-- > 3243: The media family on device '%ls' was created using Microsoft Tape Format version %d.%d. SQL Server supports version %d.%d.
+ > 3241: The media family on device '%ls' is incorrectly formed. SQL Server cannot process this media family.
+ 
+ > 3242: The file on device '%ls' is not a valid Microsoft Tape Format backup set.
 
-> [!NOTE]
-> You can use the [Restore Header](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) statement to check your backups.
+ > 3243: The media family on device '%ls' was created using Microsoft Tape Format version %d.%d. SQL Server supports version %d.%d.
+
+
+**Cause**
 
 These issues can occur because of issues that affect the underlying hardware (hard disks, network storage, and so on) or that are related to a virus or malware. Review Windows System event logs and hardware logs for reported errors, and take appropriate action (for example, upgrade firmware or fix networking issues).
 
-To prevent these errors, enable the **Backup CHECKSUM** option when you run a backup to avoid backing up a corrupted database. For more information, see [Possible Media Errors During Backup and Restore (SQL Server)](/sql/relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server).
+**Resolution**
 
-You can also enable trace flag 3023 to enable a checksum when you run backups by using backup tools. For more information, see [How to enable the CHECKSUM option if backup utilities don't expose the option](https://support.microsoft.com/topic/how-to-enable-the-checksum-option-if-backup-utilities-do-not-expose-the-option-0d5efb4c-5dfc-0122-c7e3-312a5dd5af3b).
-
-To fix these issues, you have to either locate another usable backup file or create a new backup set. Microsoft doesn't offer any solutions that can help retrieve data from a corrupted backup set.
-
-> [!NOTE]
-> If a backup file restores successfully on one server but not on another, try different ways to copy the file between the servers. For example, try [robocopy](/windows-server/administration/windows-commands/robocopy) instead of a regular copy operation.
+- You can use the [Restore Header](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) statement to check your backup.
+- To reduce the occurrence of these restore errors, enable the **Backup CHECKSUM** option when you run a backup to avoid backing up a corrupted database. For more information, see [Possible Media Errors During Backup and Restore (SQL Server)](/sql/relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server).
+- You can also enable trace flag 3023 to enable a checksum when you run backups by using backup tools. For more information, see [How to enable the CHECKSUM option if backup utilities don't expose the option](https://support.microsoft.com/topic/how-to-enable-the-checksum-option-if-backup-utilities-do-not-expose-the-option-0d5efb4c-5dfc-0122-c7e3-312a5dd5af3b).
+- To fix these issues, you have to either locate another usable backup file or create a new backup set. Microsoft doesn't offer any solutions that can help retrieve data from a corrupted backup set.
+- If a backup file restores successfully on one server but not on another, try different ways to copy the file between the servers. For example, try [robocopy](/windows-server/administration/windows-commands/robocopy) instead of a regular copy operation. Investigate whether the file is being modified during the copy operation on the network or the destination storage device. 
 
 ## Backups fail because of permissions issues
+
+**Symptoms**
 
 When you try to run database backup operations, one of the following errors occurs.
 
@@ -135,12 +147,14 @@ When you try to run database backup operations, one of the following errors occu
     Possible failure reasons: Problems with the query, "ResultSet" property not set correctly, parameters not set correctly, or connection not established correctly.
     ```
 
+**Cause**
+
 Either of these scenarios can occur if the SQL Server service account doesn't have Read and Write permissions to the folder that backups are being written to. Backup statements can be run either as part of a job step or manually from SQL Server Management Studio. In either case, they always run under the context of the SQL Server Service startup account. Therefore, if the service account doesn't have the necessary privileges, you receive the error messages that were noted earlier.
 
-For more information, see [Backup Devices](/sql/relational-databases/backup-restore/backup-devices-sql-server).
+**Resolution**
 
-> [!NOTE]
-> You can check the current permissions of SQL Service account on a folder by navigating to the **Security** tab in the properties of the corresponding folder, selecting the **Advanced** button, and then using the **Effective Access** tab.
+You can check the current permissions of the SQL Server Service account on a folder by navigating to the **Security** tab in the properties of the corresponding folder, selecting the **Advanced** button, and then using the **Effective Access** tab. For more information, see [Backup Devices](/sql/relational-databases/backup-restore/backup-devices-sql-server).
+
 
 ## Backup or restore operations that use third-party backup applications fail
 
@@ -161,19 +175,46 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
   |Backups of case-sensitive databases failing| [2987610 FIX: Error when you back up a database that has case-sensitive collation by using VSS in SQL Server 2012 SP2](https://support.microsoft.com/help/2987610) |
   |Third-party backups that are made by using VSS writer may fail and return 8229 errors.| [2987610 FIX: Error when you back up a database that has case-sensitive collation by using VSS in SQL Server 2012 SP2](https://support.microsoft.com/help/2987610) |
   | Understanding how VDI backup works |[How It Works: SQL Server - VDI (VSS) Backup Resources](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-vdi-vss-backup-resources/ba-p/315695) |
-  |Azure Site recovery agent reports failure | [ASR Agent or other non-component VSS backup fails for a server hosting SQL Server 2008 R2](https://support.microsoft.com/help/4504103) |
 
 ### More resources
 
 [How It Works: How many databases can be backed up simultaneously?](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-how-many-databases-can-be-backed-up-simultaneously/ba-p/315874)
 
-## Miscellaneous issues
+## Backups might fail if change tracking is enabled
 
-|Symptom/scenario|Remedial actions or additional information|
-|---|---|
-|Backups might fail if change tracking is enabled on the databases and returns errors that resemble the following:<br/><br/>"Error: 3999, Severity: 17, State: 1. <br/><br/>\<Time Stamp\> spid \<spid\> Failed to flush the commit table to disk in dbid 8 due to error 2601. Check the error log for more information."<br/><br/><br/>|See the following Microsoft Knowledge Base articles:<ul><li> [2682488 FIX: Backup operation fails in a SQL Server 2008, in a SQL Server 2008 R2 or in a SQL Server 2012 database after you enable change tracking](https://support.microsoft.com/help/2682488)</li><li> [2603910 FIX: Backup fails in SQL Server 2008, in SQL Server 2008 R2 or in SQL Server 2012 if you enable change tracking on the database](https://support.microsoft.com/help/2603910) </li><li> [2522893 FIX: A backup operation on a SQL Server 2008 or SQL Server 2008 R2 database fails if you enable change tracking on this database](https://support.microsoft.com/help/2522893)</li><ul> |
-|Issues restoring backups of encrypted databases| [Move a TDE Protected Database to Another SQL Server](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server) |
-|Trying to restore a CRM backup from the Enterprise edition fails on a Standard edition| [2567984 "Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database](https://support.microsoft.com/help/2567984) |
+**Symptoms**
+
+Backups might fail if change tracking is enabled on the databases and return errors that resemble the following one:
+
+> Error: 3999, Severity: 17, State: 1.  
+> \<Time Stamp\> spid \<spid\> Failed to flush the commit table to disk in dbid 8 due to error 2601. Check the error log for more information.
+
+**Resolution**
+
+To solve the issue, see the following articles:
+
+- [2682488 FIX: Backup operation fails in a SQL Server 2008, in a SQL Server 2008 R2 or in a SQL Server 2012 database after you enable change tracking](https://support.microsoft.com/help/2682488)
+- [2603910 FIX: Backup fails in SQL Server 2008, in SQL Server 2008 R2 or in SQL Server 2012 if you enable change tracking on the database](https://support.microsoft.com/help/2603910)
+
+## Issues restoring backups of encrypted databases
+
+**Symptoms**
+
+You encounter issues when restoring backups of encrypted databases.
+
+**Resolution**
+
+To solve the issue, see [Move a TDE Protected Database to Another SQL Server](/sql/relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server).
+
+## Fail to restore a CRM backup from the Enterprise edition
+
+**Symptoms**
+
+You fail to restore a CRM backup from the Enterprise edition on a Standard edition.
+
+**Resolution**
+
+To solve the issue, see [2567984 "Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database](https://support.microsoft.com/help/2567984).
   
 ## FAQ about SQL Server backup and restore operations
 
@@ -213,9 +254,9 @@ SQL Server provides a Virtual Backup Device Interface (VDI) tool. This API enabl
 
 ## Reference topics for SQL Server backup and restore operations
 
-- For more information about backup and restore operations, see the following topics in Books Online:
+- For more information about backup and restore operations, see the following article:
 
-   ["Back Up and Restore of SQL Server Databases"](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases): This topic covers the concepts of the backup and restore operations for SQL Server databases, provides links to additional topics, and provides detailed procedures to run various backups or restore tasks (such as verifying backups, and backing up by using T-SQL or SSMS). This is the parent topic about this subject in SQL Server documentation.
+   ["Back Up and Restore of SQL Server Databases"](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases): This article covers the concepts of the backup and restore operations for SQL Server databases, provides links to additional topics, and provides detailed procedures to run various backups or restore tasks (such as verifying backups, and backing up by using T-SQL or SSMS). This is the parent topic about this subject in SQL Server documentation.
 - The following table lists additional topics that you might want to review for specific tasks that are related to backup and restore operations.
 
     |Reference|Description|

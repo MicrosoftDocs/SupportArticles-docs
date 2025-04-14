@@ -49,16 +49,21 @@
   items:
   - name: Developing or registering apps
     items:
+      - name: Cookies are disabled error in MSAL.Net XBAP application
+        href: app-integration/script-errors-running-msal-net-xbap-app.md
       - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
         href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
       - name: Authentication fails after Android app is published to Google Play Store
         href: app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
       - name: WIF10201 No valid key mapping found
         href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
-      - name: Get signed-in user groups from a group overage claim
-        href: app-integration/get-signed-in-users-groups-in-access-token.md
+      - name: Package Inspector for MSAL Android Native
+        href: app-integration/package-inspector-msal-android-native.md
       - name: Enable MSAL4J logging in a Spring Boot web application
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
+      - name: Repeated login prompts in iOS MSAL implementation
+        href: app-integration/repeat-login-prompts-in-msal-ios-app.md
+
 
   - name: Troubleshoot adding apps
     href: app-integration/troubleshoot-adding-apps.md
@@ -92,8 +97,7 @@
       - name: Error AADSTS50057 - user account is disabled
         href: app-integration/error-code-aadsts50057-user-account-is-disabled.md
       - name: AADSTS500011 - Resource Principal Not Found
-        href: ./app-integration/error-code-aadsts500011-resource-principal-not-found.md
-        displayName: AADSTS500011
+        href: app-integration/error-code-aadsts500011-resource-principal-not-found.md
       - name: Error AADSTS500571 - guest user account is disabled
         href: app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md
       - name: Error AADSTS50105 - user not assigned a role
@@ -114,6 +118,10 @@
         href: app-integration/error-code-aadsts7000110-request-is-ambiguous.md
       - name: Error AADSTS7000112 - application is disabled
         href: app-integration/error-code-aadsts7000112-application-is-disabled.md
+      - name: Error AADSTS900439 - USGClientNotSupportedOnPublicEndpoint
+        href: app-integration/error-aadsts900439-usgclientnotsupportedonpublicendpoint.md
+      - name: Error AADSTS50000 - issuing a token or an issue with our sign-in service
+        href: app-integration/error-code-aadsts50000-issuing-token-sign-in-service.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
         href: app-integration/troubleshoot-sign-in-saml-based-apps.md
       - name: Troubleshooting infinite redirection between OIDC app and Entra ID
@@ -271,6 +279,17 @@
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
    - name: Use managed identities to call Graph APIs in VB.Net and C#
      href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
+   - name: The memberOf API returns null values for properties
+     href: users-groups-entra-apis/memberof-api-returns-null-properties.md
+   - name: Getting access denied errors (Authorization)
+     items:
+      - name: Can't modify user mail or phone number attributes
+        href: users-groups-entra-apis/cannot-modify-user-mail-phone-attributes.md
+      - name: Error "The identity of the calling application could not be established"
+        href: users-groups-entra-apis/identity-of-calling-application-not-established.md
+      - name: Add an owner to an application
+        href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
+
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems
@@ -408,3 +427,11 @@
     - name: Yellow exclamation mark in Office 2013
       href: user-prov-sync/yellow-exclamation-mark-office2013.md
 
+- name: Capture SSL traffic
+  items:
+  - name: Capture HTTPS traffic with Fiddler
+    href: app-integration/capture-https-traffic-fiddler-entra-id-app.md
+  - name: Capture Python web app HTTPS traffic with Fiddler
+    href: app-integration/capture-https-traffic-fiddler-python-app.md
+  - name: Filter Fiddler traffic using domain names and client processes
+    href: app-integration/filter-fiddler-traffic-using-domain-name-client-process.md

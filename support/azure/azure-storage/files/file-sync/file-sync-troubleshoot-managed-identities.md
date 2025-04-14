@@ -3,7 +3,7 @@ title: Troubleshoot Azure File Sync managed identity issues
 description: Troubleshoot common issues when your Azure File Sync deployment is configured to use managed identities.
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 11/04/2024
+ms.date: 04/02/2025
 author: khdownie
 ms.author: kendownie
 ---
@@ -32,13 +32,13 @@ Get-AzStorageSyncServer -ResourceGroupName <string> -StorageSyncServiceName <str
 Verify the `ApplicationId` property has a GUID which indicates that the server is configured to use a system-assigned managed identity. Once the server uses a system-assigned managed identity, the value of the `ActiveAuthType` property is updated to `ManagedIdentity`. If the value is `Certificate`, the server uses shared keys to authenticate to Azure file shares. 
 
 > [!NOTE]
-> Once a server is configured to use a system-assigned managed identity, it can take up to one hour before the server uses the system-assigned managed identity to authenticate to the Storage Sync Service and Azure file shares.
+> Once a server is configured to use a system-assigned managed identity, it can take up to 15 minutes before the server uses the system-assigned managed identity to authenticate to the Storage Sync Service and Azure file shares.
 
 ## Set-AzStorageSyncServiceIdentity cmdlet doesn't configure a server to use a system-assigned managed identity
 
 If running the `Set-AzStorageSyncServiceIdentity` cmdlet doesn't configure a registered server to use a system-assigned managed identity, it's likely because the server doesn't have a system-assigned managed identity.
 
-To enable a system-assigned managed identity on a registered server that has the Azure File Sync v19 agent installed, perform the following steps:
+To enable a system-assigned managed identity on a registered server that has the Azure File Sync v20 agent installed, perform the following steps:
 
 - If the server is hosted outside of Azure, it must be an Azure Arc-enabled server to have a system-assigned managed identity. For more information about Azure Arc-enabled servers and how to install the Azure Connected Machine agent, see [Azure Arc-enabled servers Overview](/azure/azure-arc/servers/overview).
 
