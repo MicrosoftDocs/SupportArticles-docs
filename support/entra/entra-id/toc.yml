@@ -136,6 +136,8 @@
         href: app-integration/application-delegated-permission-access-tokens-identity-platform.md
       - name: Troubleshoot consent issues
         href: app-integration/troubleshoot-consent-issues.md
+- name: Use NetLog as an alternative to Fiddler and HAR captures
+  href: app-integration/use-netlog-capture-network-traffic.md
 - name: Business To Consumer (B2C) Tenants
   items:
   - name: Problem with app or API integration
