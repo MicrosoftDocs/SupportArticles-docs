@@ -43,3 +43,7 @@ After [publishing an inspection](/dynamics365/field-service/inspections#create-i
 |---------|---------|
 |Deserialization of Inspection Definition Flow (the [msfp_question](/dynamics365/developer/reference/entities/msfp_question) table)     |- Deserialization of Inspection Definition Flow<br/>- Deserialization of Inspection Definition - Matrix Dynamics Child Flow |
 |Deserialization of Inspection Response Flow (the [msfp_surveyresponse](/dynamics365/developer/reference/entities/msfp_surveyresponse) table)     |- Deserialization of Inspection Response<br/>- Deserialization of Inspection Response - Matrix Dynamics<br/>- Deserialization of Inspection Response - Recurrent |
+
+## More information
+
+[View the status of the out-of-the-box inspection flows](/dynamics365/field-service/inspections-reporting)
