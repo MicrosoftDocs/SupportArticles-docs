@@ -4,7 +4,7 @@ description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 ms.custom: sap:App Creation (Canvas App)
 ms.reviewer: tapanm, lanced, tahoon 
-ms.date: 03/26/2025
+ms.date: 04/14/2025
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -50,7 +50,7 @@ End users might encounter this issue in two situations:
 
 1. **Automatic Next links for galleries and grids don't work for action-based connectors.**
 
-    Action-based connectors don't support next links. Next links are properties on query results that allow a gallery or grid to automatically load the next set of results. For a discussion of this article, see the [Overview of connectors for canvas apps](/power-apps/maker/canvas-apps/connections-list#actions).
+    Action-based connectors don't support next links. Next links are properties on query results that allow a gallery or grid to automatically load the next set of results. For more information, see [Overview of connectors for canvas apps](/power-apps/maker/canvas-apps/connections-list#actions).
 
 1. **Sharing a Canvas app using SharePoint connector**
 
@@ -62,11 +62,12 @@ End users might encounter this issue in two situations:
 
 1. **Custom connectors and Microsoft Dataverse**
 
-  You need to make adjustments if you built your app with Power Apps 
-    1. Version 2.0.540 or earlier, 
-    2. Relies on a Dataverse database, 
-    3. And uses at least one custom connector from a separate environment. 
-    
+    You need to make adjustments if you built your app with Power Apps:
+
+    1. Version 2.0.540 or earlier,
+    2. Relies on a Dataverse database,
+    3. And uses at least one custom connector from a separate environment.
+
     First, deploy the custom connector to the same environment as the database. Then, update the app to use the newly deployed connector. Otherwise, a dialog notifies users that the API wasn't found. For more information, see [Environments overview](/power-platform/admin/environments-overview).
 
 1. **Column names with spaces**
@@ -99,20 +100,21 @@ End users might encounter this issue in two situations:
 
 1. **Power Automate flows are orphaned in Power Apps.**
 
-Power Automate flows that are added using an older version of the Power Apps panel might be orphaned and removed. To fix this issue, readd the flows manually.
+   Power Automate flows that are added using an older version of the Power Apps panel might be orphaned and removed. To fix this issue, readd the flows manually.
 
-1. **Power Apps Custom pages (in a model driven app) are out of sync with embedded Power Automate flow metadata**
-The metadata for a Power Automate flow might get out of sync with information that a Model Driven App's custom page (Power Apps) has about it. This issue might happen if the flow is updated after it is embedded in the custom page. To update your flow and your model driven app, repeat the corrective steps for each of the embedded flows if it was updated after it was embedded in Power App.  If you don't know which flow was updated after it was embedded, repeat the step for all of the embedded flows.
+1. **Power Apps custom pages (in a model-driven app) are out of synchronization with embedded Power Automate flow metadata**
 
-* Edit the custom pages that use the flow
-* Open the Power Automate pane and refresh the flow.
-* Save and republish the custom page
-    
-    Once complete, then follow these steps.
+    The metadata for a Power Automate flow might be out of synchronization with a model-driven app's custom page if the flow is updated after being embedded. To update, follow these steps for each embedded flow:
 
-* Edit the Model driven app 
-* Make a minor change. (Enough to trigger the save option)
-* Save and publish the Model driven app.
+    1. Edit the custom pages that use the flow.
+    2. Open the Power Automate pane and refresh the flow.
+    3. Save and republish the custom page.
+
+    Once complete, follow these steps:
+
+    1. Edit the model-driven app.
+    2. Make a minor change to trigger the save option.
+    3. Save and publish the model-driven app.
 
 ## Power Fx
 
@@ -152,7 +154,7 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
 1. **Changing a flow in a shared app**
 
-    If you add a flow to an app and share the app, then make changes to the flow such as adding a service or modifying a connection. More steps are required. You must also first remove the flow from the shared app. Next, readd the flow to the app. And finally, reshare the app. 
+    If you add a flow to an app and share the app, then make changes to the flow such as adding a service or modifying a connection, more steps are required. You must also first remove the flow from the shared app. Next, readd the flow to the app. And finally, reshare the app.
 
 1. **Changing a "Title" field in a table**
 
