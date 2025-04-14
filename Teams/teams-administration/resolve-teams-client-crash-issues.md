@@ -53,13 +53,13 @@ The following sections list the WebView2 process exit and error codes, their sym
 | 1 | RESULT_CODE_KILLED | The process was forcibly terminated by the system or an external controller. |
 | 2 | RESULT_CODE_HUNG | The process was unresponsive and was terminated to prevent further issues. |
 | 3 | RESULT_CODE_KILLED_BAD_MESSAGE | The process was terminated because it received a malformed or unexpected interprocess communication (IPC) message. |
-| 4 | RESULT_CODE_GPU_DEAD_ON_ARRIVAL | The GPU process failed immediately upon startup, usually due to driver issues or hardware incompatibility. |
+| 4 | RESULT_CODE_GPU_DEAD_ON_ARRIVAL | The GPU process failed immediately upon startup, usually because of driver issues or hardware incompatibility. |
 | 5 | RESULT_CODE_INVALID_CMDLINE_URL | An invalid URL was passed on the command line, causing the process to fail. |
-| 6 | RESULT_CODE_BAD_PROCESS_TYPE | The process was started with an incorrect or unsupported process type. |
+| 6 | RESULT_CODE_BAD_PROCESS_TYPE | The process was started by using an incorrect or unsupported process type. |
 | 7 | RESULT_CODE_MISSING_DATA | Required startup or configuration data was missing, causing the process to exit. |
 | 8 | RESULT_CODE_SHELL_INTEGRATION_FAILED | Integration with the system shell failed, possibly affecting features such as file associations or protocol handling. |
-| 9 | RESULT_CODE_MACHINE_LEVEL_INSTALL_EXISTS | A conflicting machine-level installation was detected, it might prevent a per-user instance from running. |
-| 10 | RESULT_CODE_UNINSTALL_CHROME_ALIVE | An uninstallation was attempted while the related browser (such as Chrome) was still running. |
+| 9 | RESULT_CODE_MACHINE_LEVEL_INSTALL_EXISTS | A conflicting machine-level installation was detected. This installation  might prevent a per-user instance from running. |
+| 10 | RESULT_CODE_UNINSTALL_CHROME_ALIVE | An uninstallation was tried while the related browser (such as Chrome) was still running. |
 | 11 | RESULT_CODE_UNINSTALL_USER_CANCEL | The user canceled the uninstall process. |
 | 12 | RESULT_CODE_UNINSTALL_DELETE_PROFILE | The uninstall process included deletion of the user profile. |
 | 13 | RESULT_CODE_UNSUPPORTED_PARAM | An unsupported parameter was provided to the process at startup. |
@@ -79,7 +79,7 @@ The following sections list the WebView2 process exit and error codes, their sym
 | 29 | RESULT_CODE_SXS_MIGRATION_FAILED_NOT_USED | A side-by-side migration failed. <br/><br/>**Note**: This code isn't currently in active use. |
 | 30 | RESULT_CODE_ACTION_DISALLOWED_BY_POLICY | A policy restriction blocked the attempted action. |
 | 31 | RESULT_CODE_INVALID_SANDBOX_STATE | The sandbox environment was in an invalid state, preventing secure execution. |
-| 32 | RESULT_CODE_CLOUD_POLICY_ENROLLMENT_FAILED | Enrollment into cloud policy management failed. |
+| 32 | RESULT_CODE_CLOUD_POLICY_ENROLLMENT_FAILED | Enrollment in cloud policy management failed. |
 | 33 | RESULT_CODE_DOWNGRADE_AND_RELAUNCH | A version downgrade was detected, causing the process to restart. |
 | 34 | RESULT_CODE_GPU_EXIT_ON_CONTEXT_LOST | The GPU process exited after losing the rendering context. |
 
@@ -91,16 +91,16 @@ The following sections list the WebView2 process exit and error codes, their sym
 
 | Error code | Symbolic name | Description |
 | --- | --- | --- |
-| 131 | SIGQUIT | The process received a quit signal, which was usually initiated by the user. For example, the user pressed Ctrl+C. |
+| 131 | SIGQUIT | The process received a quit signal. This signal is usually initiated by the user. For example, the user pressed Ctrl+C. |
 | 132 | SIGILL | The process encountered an illegal instruction. |
-| 133 | SIGTRAP | A trace trap occurred, it's usually used for debugging purposes. |
+| 133 | SIGTRAP | A trace trap occurred. This signal is usually used for debugging purposes. |
 | 134 | SIGABRT | The process aborted itself (such as by calling the abort() function), usually indicating a fatal error. |
-| 135 | SIGBUS (7) | A bus error occurred, usually due to an unaligned memory access or an invalid address reference. |
+| 135 | SIGBUS (7) | A bus error occurred, usually because of an unaligned memory access or an invalid address reference. |
 | 136 | SIGFPE | A floating-point exception occurred. For example, division by zero in a floating-point operation. |
-| 137 | SIGKILL | The process was forcibly killed with no chance to clean up. |
+| 137 | SIGKILL | The process was forcibly terminated and had no chance to clean up. |
 | 138 | SIGBUS (10) | A bus error occurred, usually indicating a memory access problem. |
-| 139 | SIGSEGV | A segmentation fault occurred, it's usually caused by an illegal memory access. |
-| 140 | SIGSYS | An invalid system call was attempted. |
+| 139 | SIGSEGV | A segmentation fault occurred, usually caused by an illegal memory access. |
+| 140 | SIGSYS | An invalid system call was tried. |
 
 </details>
 
@@ -132,33 +132,33 @@ The following sections list the WebView2 process exit and error codes, their sym
 
 | Error code | Symbolic name | Description |
 | --- | --- | --- |
-| -529697949 | CPP_EH_EXCEPTION | A C++ exception was thrown and caught by the exception handling framework. |
-| -533692099 | STATUS_GUARD_PAGE_VIOLATION | A protected page was violated. It usually indicates a buffer overrun or memory corruption. |
+| -529697949 | CPP_EH_EXCEPTION | A C++ exception was thrown and caught by the exception-handling framework. |
+| -533692099 | STATUS_GUARD_PAGE_VIOLATION | A protected page was violated, usually indicating a buffer overrun or memory corruption. |
 | -536870904 | Out of Memory | The process ran out of available memory during execution. |
 | 1066598273 | FACILITY_VISUALCPP/ERROR_PROC_NOT_FOUND | The required process wasn't found as reported by the Visual C++ runtime facility. |
 | -1066598274 | FACILITY_VISUALCPP/ERROR_MOD_NOT_FOUND | The required module (DLL) wasn't found. |
 | -1072103400 | STATUS_CURRENT_TRANSACTION_NOT_VALID | The status of the current transaction is invalid, preventing normal operations. |
 | -1072365548 | STATUS_SXS_CORRUPT_ACTIVATION_STACK | The activation stack for the side-by-side assembly is corrupted. |
-| -1072365552 | STATUS_SXS_INVALID_DEACTIVATION | An invalid deactivation of the side-by-side assembly was attempted. |
+| -1072365552 | STATUS_SXS_INVALID_DEACTIVATION | An invalid deactivation of the side-by-side assembly was tried. |
 | -1072365566 | STATUS_SXS_CANT_GEN_ACTCTX | Unable to generate activation context for side-by-side assembly. |
 | -1073739514 | STATUS_VIRUS_INFECTED | The process was terminated because a virus or malware was detected. |
 | -1073740004 | STATUS_INVALID_THREAD | An attempt was made to operate on an invalid thread. |
-| -1073740016 | STATUS_CALLBACK_RETURNED_WHILE_IMPERSONATING | A callback function returned when the process was impersonating another user. It's a security violation. |
+| -1073740016 | STATUS_CALLBACK_RETURNED_WHILE_IMPERSONATING | A callback function returned when the process was impersonating another user. This action is considered to be a security violation. |
 | -1073740022 | STATUS_THREADPOOL_HANDLE_EXCEPTION | An exception occurred in a thread pool callback. |
-| -1073740760 | STATUS_INVALID_IMAGE_HASH | The hash value of the loaded executable or DLL didn't match the expected value. It indicates possible corruption or tampering. |
+| -1073740760 | STATUS_INVALID_IMAGE_HASH | The hash value of the loaded executable or DLL didn't match the expected value, indicating possible corruption or tampering. |
 | -1073740767 | STATUS_VERIFIER_STOP | The application verifier detected a problem and forced a stop to protect system integrity. |
-| -1073740768 | STATUS_ASSERTION_FAILURE | An internal assertion failed. It indicates a programming logic error. |
+| -1073740768 | STATUS_ASSERTION_FAILURE | An internal assertion failed, indicating a programming logic error. |
 | -1073740771 | STATUS_FATAL_USER_CALLBACK_EXCEPTION | A fatal exception was thrown inside a user callback function. |
 | -1073740777 | STATUS_INVALID_CRUNTIME_PARAMETER | An invalid parameter was passed to a C runtime function. |
-| -1073740782 | STATUS_DELAY_LOAD_FAILED | A delay-loaded DLL failed to load when its functionality was first required. |
+| -1073740782 | STATUS_DELAY_LOAD_FAILED | A delay-loaded DLL didn't load when its functionality was first required. |
 | -1073740791 | STATUS_STACK_BUFFER_OVERRUN | A stack buffer overrun was detected. It's often a precursor to a memory corruption vulnerability. |
-| -1073740940 | STATUS_HEAP_CORRUPTION | The structure of the heap is corrupted, which can cause unpredictable behavior. |
+| -1073740940 | STATUS_HEAP_CORRUPTION | The structure of the heap is corrupted. This condition can cause unpredictable behavior. |
 | -1073740959 | STATUS_ACCESS_DISABLED_BY_POLICY_DEFAULT | The default policy setting blocks access to the resource. |
 | -1073741131 | STATUS_FLOAT_MULTIPLE_TRAPS | Multiple floating-point traps occurred simultaneously. |
 | -1073741132 | STATUS_FLOAT_MULTIPLE_FAULTS | Multiple floating-point faults were detected. |
 | -1073741205 | STATUS_DLL_INIT_FAILED_LOGOFF | DLL initialization failed during logoff. |
 | -1073741212 | STATUS_RESOURCE_NOT_OWNED | The process tried to release a resource that it didn't own. |
-| -1073741431 | STATUS_TOO_LATE | An operation was attempted too late in the process lifecycle. |
+| -1073741431 | STATUS_TOO_LATE | An operation was tried too late in the process lifecycle. |
 | -1073741502 | STATUS_DLL_INIT_FAILED | DLL initialization failed at startup. |
 | -1073741510 | STATUS_CONTROL_C_EXIT | The process exited in response to the Control-C (interrupt) signal. |
 | -1073741511 | STATUS_ENTRYPOINT_NOT_FOUND | A required function entry point was missing from the DLL. |
@@ -169,10 +169,10 @@ The following sections list the WebView2 process exit and error codes, their sym
 | -1073741571 | STATUS_STACK_OVERFLOW | The process's stack exceeded its allocated limit. |
 | -1073741581 | STATUS_INVALID_PARAMETER_5 | The fifth parameter provided to the function is invalid. |
 | -1073741595 | STATUS_INTERNAL_ERROR | A general internal error occurred within the process. |
-| -1073741659 | STATUS_BAD_IMPERSONATION_LEVEL | An operation was attempted by using an incorrect impersonation level. |
+| -1073741659 | STATUS_BAD_IMPERSONATION_LEVEL | An operation was tried by using an incorrect impersonation level. |
 | -1073741662 | STATUS_MEDIA_WRITE_PROTECTED | The *write* operation failed because the media is write-protected. |
 | -1073741670 | STATUS_INSUFFICIENT_RESOURCES | The system didn't have sufficient resources (such as memory and handles) to continue. |
-| -1073741674 | STATUS_PRIVILEGED_INSTRUCTION | The process tried to execute an instruction that's reserved for the operating system. |
+| -1073741674 | STATUS_PRIVILEGED_INSTRUCTION | The process tried to run an instruction that's reserved for the operating system. |
 | -1073741675 | STATUS_INTEGER_OVERFLOW | An arithmetic operation caused an integer overflow. |
 | -1073741676 | STATUS_INTEGER_DIVIDE_BY_ZERO | An attempt was made to divide an integer by zero. |
 | -1073741677 | STATUS_FLOAT_UNDERFLOW | A floating-point underflow occurred during computation. |
@@ -182,7 +182,7 @@ The following sections list the WebView2 process exit and error codes, their sym
 | -1073741681 | STATUS_FLOAT_INEXACT_RESULT | A floating-point operation produced an inexact result that's acceptable but was noticed by the runtime. |
 | -1073741682 | STATUS_FLOAT_DIVIDE_BY_ZERO | A floating-point division by zero occurred. |
 | -1073741683 | STATUS_FLOAT_DENORMAL_OPERAND | A denormalized operand was encountered in a floating-point operation. |
-| -1073741684 | STATUS_ARRAY_BOUNDS_EXCEEDED | An array bounds check failed. It indicates an attempt to access memory outside the allocated range. |
+| -1073741684 | STATUS_ARRAY_BOUNDS_EXCEEDED | An array bounds check failed, indicating an attempt to access memory outside the allocated range. |
 | -1073741701 | STATUS_INVALID_IMAGE_FORMAT | The executable or DLL image is invalid or corrupted. |
 | -1073741738 | STATUS_DELETE_PENDING | An attempt was made to perform an operation on a resource that's pending deletion. |
 | -1073741744 | STATUS_EA_TOO_LARGE | The extended attributes of the file were too large to handle. |
@@ -205,7 +205,7 @@ The following sections list the WebView2 process exit and error codes, their sym
 | -1073741801 | STATUS_NO_MEMORY | The system couldn't allocate the required memory resources. |
 | -1073741811 | STATUS_INVALID_PARAMETER | An invalid parameter was passed to a system call or function. |
 | -1073741816 | STATUS_INVALID_HANDLE | An attempt was made to perform an operation by using an invalid or closed handle. |
-| -1073741818 | STATUS_IN_PAGE_ERROR | A page-in operation failed, possibly due to an I/O error or data corrucption on disk. |
+| -1073741818 | STATUS_IN_PAGE_ERROR | A page-in operation failed, possibly because of an I/O error or data corruption on disk. |
 | -1073741819 | STATUS_ACCESS_VIOLATION | A memory access violation occurred, causing a crash. |
 | -1073741820 | STATUS_INFO_LENGTH_MISMATCH | The length of the information provided didn't match the expected size. |
 | -1073741822 | STATUS_NOT_IMPLEMENTED | The requested functionality wasn't implemented on the current platform. |
