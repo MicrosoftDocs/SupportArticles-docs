@@ -1,7 +1,7 @@
 ---
 title: NTLM network authentication changes
-description: Describes new behavior in Windows Server 2003 SP1 that affects NTLM password changes. After you install the service pack, domain users can change a password and still use their old password to authenticate. This setting can be changed in the registry.
-ms.date: 04/11/2025
+description: Describes a new behavior in Windows Server 2003 SP1 that affects NTLM password changes and how to use a registry to change the behavior.
+ms.date: 04/14/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ ms.custom:
 - sap:windows security technologies\legacy authentication (ntlm)
 - pcy:WinComm Directory Services
 ---
-# Setting in NTLM network authentication behavior allows use of previous password
+# Setting in NTLM network authentication behavior allows the use of the previous password
 
 This article describes a behavior that affects NTLM password changes and how to change this behavior by using a registry.
 
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 906305
 
 ## Introduction
 
-There is an option in NTLM network authentication when a user password was changed. Domain users can use their old password to access the network for five minutes after the password is changed. Existing components that are designed to use Kerberos for authentication are not affected by this change.
+There is an option in NTLM network authentication when a user password is changed. Domain users can use their old password to access the network for five minutes after the password is changed. Existing components that are designed to use Kerberos for authentication are not affected by this change.
 
 The goal of this change is to allow background processes such as services to continue running for some time until an administrator has the opportunity to update the credentials for the new password.
 
