@@ -1,0 +1,12 @@
+name: Run on Branch Creation
+
+on:
+  create
+
+jobs:
+  run-on-branch-create:
+    if: startsWith(github.ref, 'refs/heads/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Announce branch creation
+        run: echo "Branch '${{ github.ref_name }}' was created by ${{ github.actor }}"
