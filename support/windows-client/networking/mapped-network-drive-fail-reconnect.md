@@ -98,7 +98,7 @@ All workarounds should be executed in standard user security context. Executing 
 10. On the **Conditions** tab, select the **Start only if the following network connection is available** option, select **Any connection**, and then select **OK**.
 11. Log off, and then log back on to the device to run the scheduled task.
 
-#### Workaround 3: Create a scheduled task for Microsoft VPN client Event ID 20225
+#### Workaround 3: Create a scheduled task for VPN connection Event ID 20225
 
 > [!NOTE]
 > Event ID 20225 indicates that a virtual private network (VPN) connection is successfully established.
