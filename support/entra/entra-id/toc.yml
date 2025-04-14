@@ -61,8 +61,8 @@
         href: app-integration/package-inspector-msal-android-native.md
       - name: Enable MSAL4J logging in a Spring Boot web application
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
-      - name: Role-based access control issues in WebAssembly app
-        href: app-integration/troubleshoot-rabc-issues-webassembly-auth-apps.md
+      - name: Repeated login prompts in iOS MSAL implementation
+        href: app-integration/repeat-login-prompts-in-msal-ios-app.md
 
 
   - name: Troubleshoot adding apps
@@ -136,6 +136,8 @@
         href: app-integration/application-delegated-permission-access-tokens-identity-platform.md
       - name: Troubleshoot consent issues
         href: app-integration/troubleshoot-consent-issues.md
+- name: Use NetLog as an alternative to Fiddler and HAR captures
+  href: app-integration/use-netlog-capture-network-traffic.md
 - name: Business To Consumer (B2C) Tenants
   items:
   - name: Problem with app or API integration
@@ -279,6 +281,17 @@
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
    - name: Use managed identities to call Graph APIs in VB.Net and C#
      href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
+   - name: The memberOf API returns null values for properties
+     href: users-groups-entra-apis/memberof-api-returns-null-properties.md
+   - name: Getting access denied errors (Authorization)
+     items:
+      - name: Can't modify user mail or phone number attributes
+        href: users-groups-entra-apis/cannot-modify-user-mail-phone-attributes.md
+      - name: Error "The identity of the calling application could not be established"
+        href: users-groups-entra-apis/identity-of-calling-application-not-established.md
+      - name: Add an owner to an application
+        href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
+
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems
@@ -422,3 +435,5 @@
     href: app-integration/capture-https-traffic-fiddler-entra-id-app.md
   - name: Capture Python web app HTTPS traffic with Fiddler
     href: app-integration/capture-https-traffic-fiddler-python-app.md
+  - name: Filter Fiddler traffic using domain names and client processes
+    href: app-integration/filter-fiddler-traffic-using-domain-name-client-process.md

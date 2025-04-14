@@ -9,55 +9,44 @@ metadata:
   ms.topic: landing-page # Required
   author: ChristySu #Required; your GitHub user alias, with correct capitalization.
   ms.author: christys #Required; microsoft alias of author; optional team alias.
-  ms.date: 10/18/2024
+  ms.date: 04/07/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
  # Card
-  - title: Access issues
+  - title: Customization and Enterprise Marketing
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Resolve the errors when signing in to Dynamics 365 (online)
-            url: error-when-signing-dynamics-365.md
+          - text: Button in command bar doesn't appear after grid item selection
+            url: button-in-command-bar-not-appear-after-grid-item-selection.md
+          - text: Troubleshoot issues with in-app marketing
+            url: troubleshoot-in-app-marketing-issues.md
 
  # Card
-  - title: Customization and Solutions
+  - title: Forecasting
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Can't import a solution with the same field name but a different Data Type
-            url: the-import-of-solution-failed-error-when-importing-solution.md
-          - text: Resolve an input string was not in a correct format error
-            url: input-string-was-not-in-a-correct-format-error.md
-          - text: Resolve an import file is too large to upload error
-            url: the-import-file-is-too-large-upload.md
-          - text: Resolve an error code 80040203 (Invalid Argument)
-            url: error-code-80040203-invalid-argument-error.md
+          - text: Troubleshoot issues with forecasting
+            url: troubleshoot-forecast-issues.md
+          - text: Troubleshoot issues with the Sales Pipeline chart and its phases
+            url: troubleshoot-sales-pipeline-issues.md
+
 
  # Card
-  - title: Dynamics 365 client for Outlook
+  - title: Lead
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Dynamics 365 App for Outlook doesn't show within Outlook
-            url: app-does-not-appear-within-outlook.md
-          - text: Resolve a something went wrong during sign-in error
-            url: something-went-wrong-during-sign.md
-
- # Card
-  - title: Email and Office Integration
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Resolve an email can't be received because license is invalid error
-            url: email-cannot-be-received-because-license-is-invalid-error.md
-          - text: Resolve a you don't have required privilege (prvReadOrganization) error
-            url: privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md
-          - text: Resolve an account does not have permission to impersonate requested user error
-            url: the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
+          - text: Troubleshoot issues with automatic generation of contact or company-related fields
+            url: troubleshoot-lead-form-auto-generated-contact-company-fields.md
+          - text: Troubleshoot issues with lead qualification issues for salespeople
+            url: troubleshoot-lead-qualification-issues-for-salespeople.md
+          - text: Troubleshoot issues with lead qualification for system administrators
+            url: troubleshoot-lead-qualification-issues-for-system-admin.md
 
  # Card
   - title: LinkedIn Sales Navigator
@@ -76,19 +65,54 @@ landingContent:
             url: lisn-solution-not-available-configure-lisn.md    
 
  # Card
-  - title: Sales Hub
+  - title: Opportunity
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot issues with products
-            url: troubleshoot-products-issues.md
-          - text: Troubleshoot issues with automatic generation of contact or company-related fields
-            url: troubleshoot-lead-form-auto-generated-contact-company-fields.md
+          - text: Troubleshoot common issues with multiple tables
+            url: troubleshoot-multiple-tables-issues.md
+          - text: Troubleshoot issues with opportunities
+            url: troubleshoot-opportunities-issues.md
           - text: Troubleshoot issues with table views
             url: troubleshoot-table-views-issues.md
 
  # Card
-  - title: Teams Integration
+  - title: Order, Price List, or Product
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot issues with orders
+            url: troubleshoot-orders-issues.md
+          - text: Troubleshoot issues with currency and price lists
+            url: troubleshoot-currency-and-price-lists-issues.md
+          - text: Troubleshoot issues with products
+            url: troubleshoot-products-issues.md
+
+
+ # Card
+  - title: Sales App
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot issues with Dynamics 365 Sales Professional
+            url: troubleshoot-sales-professional-issues.md
+          - text: Troubleshoot issues with Unified Interface
+            url: troubleshoot-unified-interface-issues.md
+
+# Card
+  - title: Sales Insights
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot issues with emails
+            url: troubleshoot-emails-issues.md
+          - text: Troubleshoot issues with the Sales Premium features
+            url: troubleshoot-sales-premium-issues.md
+          - text: Troubleshoot issues with relationship intelligence
+            url: troubleshoot-relationship-intelligence.md
+
+ # Card
+  - title: Teams Dialer
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -104,8 +128,6 @@ landingContent:
             url: cannot-hear-other-customer.md
           - text: Seller can't make phone calls to PSTN
             url: cannot-make-phone-calls-to-pstn.md
-          - text: Troubleshoot Microsoft Teams chat integration with Dynamics 365
-            url: troubleshoot-dynamics365-embedcollab-issues.md
           - text: Teams dialer basic troubleshooting
             url: dialer-basic-troubleshooting.md
           - text: Teams dialer isn't visible in custom app

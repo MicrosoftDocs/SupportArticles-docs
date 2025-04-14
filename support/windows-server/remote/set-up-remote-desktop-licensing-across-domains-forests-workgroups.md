@@ -1,11 +1,11 @@
 ---
 title: Set up RD licensing across domains forests or workgroups
 description: This article talks about the questions around the supportability (or recommended approach) of setting up Remote Desktop (RD) licensing across domain, forest, or work groups.
-ms.date: 04/01/2025
+ms.date: 04/02/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, akhleshs, sabinn, warrenw, timnewton
+ms.reviewer: kaushika, akhleshs, sabinn, warrenw, timnewton, rafx
 ms.custom:
 - sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
 - pcy:WinComm User Experience
@@ -73,7 +73,7 @@ Here is more information on these scenarios:
 
   - To restrict the issuance of RDS CALs, you can add RD Session Host servers into Terminal Server Computers group on RD licensing servers.
 
-  - Configure RD licensing server on all RD Session Host servers in each domain/forest. You can do it through RD Session Host configuration snap-in or through a group policy.
+  - Configure RD licensing server on all RD Session Host servers in each domain/forest. You can do it through a group policy.
 
   - Add administrators group of each domain/forest in the local administrators of RD licensing server. This way, you'll not get a prompt to enter your credentials when you'll open RD Session Host configuration snap-ins in trusted domains/forests.
 

@@ -349,6 +349,10 @@ items:
       href: ./active-directory/cannot-connect-internet-domain.md
     - name: Default limit to workstation numbers
       href: ./active-directory/default-workstation-numbers-join-domain.md
+    - name: 'Error 0x6D9 "No more endpoints available from the endpoint mapper"'
+      href: ./active-directory/domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md
+    - name: Failure when you use an existing computer account to join a domain
+      href: ./active-directory/failure-when-you-use-an-existing-computer-account-to-join-a-domain.md
     - name: Error 0x5 Access Denied when you rename a computer
       href: ./active-directory/error-0x5-access-denied-rename-computer.md
     - name: Error code 0x569
@@ -1983,6 +1987,8 @@ items:
       href: ./printing/add-print-directory-feature-for-folders.md
     - name: How to Print to File without user intervention
       href: ./printing/print-to-file-without-user-intervention.md
+    - name: Printer not responding
+      href: ./printing/printer-not-responding.md
     - name: Servers can't be used as print servers
       href: ./printing/servers-cant-be-used-print-servers.md
     - name: Standard port monitor for TCP/IP
@@ -3035,6 +3041,8 @@ items:
       href: ./installing-updates-features-roles/block-user-access-windows-update.md
     - name: Re-register Windows client/server in WSUS
       href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
+    - name: Unexpected automatic update when it's disabled by Group Policy
+      href: installing-updates-features-roles/unexpected-automatic-update-when-disabled-by-group-policy.md
     - name: Why you may be prompted to restart your computer
       href: ./installing-updates-features-roles/why-prompted-restart-computer.md
     - name: WSUS 3.0 SP2 Dynamic Install for Server Manager

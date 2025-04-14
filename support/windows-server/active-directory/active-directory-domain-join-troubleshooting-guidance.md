@@ -16,7 +16,7 @@ This guide provides the fundamental concepts used when troubleshooting Active Di
 
 ## Troubleshooting checklist
 
-- Domain Name System (DNS): Anytime you have an issue joining a domain, one of the first things to check is DNS. DNS is the heart of Active Directory and makes things work correctly, including domain join. Make sure of the following items:
+- Domain Name System (DNS): Anytime you have an issue joining a domain, one of the first things to check is DNS. DNS is the heart of Active Directory (AD) and makes things work correctly, including domain join. Make sure of the following items:
 
   - DNS server addresses are correct.
   - DNS suffix search order is correct if multiple DNS domains are in play.
@@ -55,27 +55,6 @@ The following table lists the ports required to be open between the client compu
 
 For more information, see [Error code 0x569: The user has not been granted the requested logon type at this computer](error-0x569-not-granted-logon-type.md).
 
-### Error code 0x534
-
-> No mapping between account names and security IDs was done.
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpCreateComputerObjectInDs: NetpGetComputerObjectDn failed: 0x534
-mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: LDAP creation failed: 0x534
-mm/dd/yyyy hh:mm:ss:ms ldap_unbind status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x534
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<DC name>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x534
-```
-  
-The domain join graphical user interface (GUI) can call the `NetJoinDomain` API twice to join a computer to a domain. The first call is made without the "create" flag being specified to locate a pre-created computer account in the target domain. If no account is found, a second `NetJoinDomain` API call may be made with the "create" flag specified.
-  
-In another scenario, the 0x534 error code is logged when you attempt to change the password for a machine account. However, the account can't be found on the targeted DC, likely because the account was not created or due to replication latency or a replication failure.
-
-The 0x534 error code is commonly logged as a transient error when domain join searches the target domain. The search determines whether a matching computer account was pre-created or the join operation needs to dynamically create a computer account on the target domain. Check the bit flags in the join options to see if the type of join being performed is relying on a pre-created or newly created computer account.
-
 ### Error code 0x6BF or 0xC002001C
 
 > The remote procedure call failed and did not execute.
@@ -100,40 +79,7 @@ Make sure of the following items:
 
 ### Error code 0x6D9
 
-> There are no more endpoints available from the endpoint mapper.
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpGetDnsHostName: Read NV Hostname: <hostname>
-mm/dd/yyyy hh:mm:ss:ms NetpGetDnsHostName: PrimaryDnsSuffix defaulted to DNS domain name: <DNS domain>.<TLD>
-mm/dd/yyyy hh:mm:ss:ms NetpLsaOpenSecret: status: 0xc0000034
-mm/dd/yyyy hh:mm:ss:ms NetpGetLsaPrimaryDomain: status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpLsaOpenSecret: status: 0xc0000034
-mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: NetUserAdd on \\<hostname>.<domain> for <computername>$ failed: 0x8b0
-mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: status of attempting to set password on \\<DC name>.<domain>.<tld> for <hostname>$: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of creating account: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpGetComputerObjectDn: Unable to bind to DS on \\<DC name>.<domain>.<tld>: 0x6d9
-mm/dd/yyyy hh:mm:ss:ms NetpSetDnsHostNameAndSpn: NetpGetComputerObjectDn failed: 0x6d9
-mm/dd/yyyy hh:mm:ss:ms ldap_unbind status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of setting DnsHostName and SPN: 0x6d9
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: initiaing a rollback due to earlier errors
-mm/dd/yyyy hh:mm:ss:ms NetpGetLsaPrimaryDomain: status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: status of disabling account <hostname>$ on \\<DC name>.<domain>.<tld>: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: rollback: status of deleting computer account: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpLsaOpenSecret: status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: rollback: status of deleting secret: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of disconnecting from \\<DC name>.<domain>.<tld>: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x6d9
-```
-  
-Error 0x6D9 is logged when network connectivity is blocked between the joining client and the helper DC. The network connectivity services the domain join operation over port 135 or a port in the ephemeral range between 1025 to 5000 or 49152 to 65535. For more information, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).  
-
-To resolve this error, follow these steps:
-
-1. On the joining client, open the *%systemroot%\\debug\\NETSETUP.LOG* file and determine the name of the helper DC selected by the joining client to perform the join operation.
-2. Verify that the joining client has network connectivity to the DC over the required ports and protocols used by the applicable operating system (OS) versions. Domain join clients connect a helper DC over TCP port 135 by the dynamically assigned port in the range between 49152 and 65535.
-3. Ensure that the OS, software and hardware routers, firewalls, and switches allow connectivity over the required ports and protocols.
+See [Domain join error 0x6D9 "There are no more endpoints available from the endpoint mapper"](./domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md) for troubleshooting guide. 
 
 ### Error code 0xa8b
 
@@ -344,3 +290,61 @@ For more information, see:
 
 - Troubleshoot [Networking error messages and resolutions](troubleshoot-errors-join-computer-to-domain.md#networking-error-messages-and-resolutions)
 - Troubleshoot [Authentication error messages and resolutions](troubleshoot-errors-join-computer-to-domain.md#authentication-error-messages-and-resolutions)
+
+## Data collections for domain join issues
+
+To troubleshoot domain join issues, the following logs could help:
+
+- Netsetup log  
+  This log file contains most information about domain join activities. The file is located on the client machine at `%windir%\debug\netsetup.log`.  
+  This log file is enabled by default. No need to explicitly enable it.
+
+- Network trace  
+  The network trace contains the communication between the client computer and relative servers, such as DNS servers and domain controllers over the network. It should be collected at the client computer. Multiple tools can collect network traces, such as Wireshark, netsh.exe which is included in all Windows editions.
+
+You can collect each log separately. Alternatively, you can use some tools provided by Microsoft to collect them all together. To do so, follow the steps in the following sections.
+
+### Collect manually
+
+1. Download and install Wireshark on the client computer that is to join the AD domain.
+2. Start the application with administrator privileges, and then start capturing.
+3. Try to join the AD domain to reproduce the error. Record the error message.
+4. Stop capturing in the app and save the network trace to a file.
+5. Collect the netsetup.log file that is located at *%windir%\debug\netsetup.log*.
+
+### Use Auth Scripts
+
+Auth Scripts is a lightweight PowerShell script developed by Microsoft to ease log collection for troubleshooting authentication-related issues. To use it, follow these steps:
+
+1. Download [Auth Scripts](https://aka.ms/authscripts) on the client computer. Extract the files to a folder.
+2. Start a PowerShell window with administrator privileges. Switch to the folder containing those extracted files.
+3. Run *start-auth.ps1*, accept the EULA if prompted, and allow execution if warned about an untrusted publisher.
+
+   > [!NOTE]
+   > If the scripts aren't allowed to run due to execution policies, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+
+4. After the command completed successfully, try to join the AD domain to reproduce the error. Record the error message.
+5. Run *stop-auth.ps1*, and allow execution if warned about an untrusted publisher.
+6. Log files are saved in the *authlogs* subfolder, which includes the *Netsetup.log* log and the network trace file (Nettrace.etl).
+
+### Use TSS Tool
+
+TSS tool is another tool developed by Microsoft to ease log collection. To use it, follow these steps:
+
+1. Download [TSS tool](https://aka.ms/gettss) on the client computer. Extract the files to a folder.
+2. Start a PowerShell window with administrator privileges. Switch to the folder containing those extracted files.
+3. Run the following command:
+
+   ```console
+   TSS.ps1 -scenario ADS_AUTH -noSDP -norecording -noxray -noupdate -accepteula -startnowait
+   ```
+
+   Accept the EULA if prompted, and allow execution if warned about an untrusted publisher.
+
+   > [!NOTE]
+   > If the scripts aren't allowed to run due to execution policies, see [about_Execution_Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+
+4. The command takes a few minutes to complete. After the command completes successfully, try to join the AD domain to reproduce the error. Record the error message.
+5. Run `TSS.ps1 -stop`, and allow execution if warned about an untrusted publisher.
+6. Log files are saved in the *C:\MS_DATA* subfolder, and are zipped already. The ZIP filename follows the format of *TSS_\<hostname\>_\<date\>-\<time\>-ADS_AUTH.zip*.
+7. The zip file includes the *Netsetup.log*, and the network trace. The network trace file is named *\<hostname\>_\<date\>-\<time\>-Netsh_packetcapture.etl*.

@@ -68,7 +68,7 @@
       href: d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
 - name: Environment and app access issues
   items:
-    - name: Error when accessing an app module
+    - name: Error code 2147812097 Invalid License when accessing an app module
       href: environment-app-access/error-when-accessing-app-module.md
     - name: Troubleshoot user access issues for different environments
       href: environment-app-access/troubleshooting-user-needs-read-write-access-organization.md
@@ -170,6 +170,8 @@
   items:
     - name: Data export option isn't available in Azure Application Insights
       href: import-export-data/data-export-option-not-available-in-application-insights.md
+    - name: Troubleshoot Synapse Link profile creation issues
+      href: import-export-data/troubleshoot-synapse-link-profile-creation-issues.md
 - name: Microsoft Teams
   items:
     - name: Troubleshoot Microsoft Teams chat integration with Dynamics 365
