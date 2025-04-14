@@ -63,6 +63,8 @@
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
       - name: Repeated login prompts in iOS MSAL implementation
         href: app-integration/repeat-login-prompts-in-msal-ios-app.md
+      - name: Infinite sign-in loop issue with ASP.NET applications
+        href: app-integration/repeat-login-prompts-in-msal-ios-app.md
 
 
   - name: Troubleshoot adding apps
