@@ -351,7 +351,8 @@
       href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
       href: extensions/changes-in-kubernetes-event-driven-autoscaling-add-on-214-215.md
-  
+  - name: Troubleshoot network isolated cluster
+    href: extensions/troubleshoot-network-isolated-cluster.md
 - name: Troubleshoot error codes
   items:
   - name: VMExtension error codes
