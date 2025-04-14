@@ -1,6 +1,6 @@
 ---
-title: Cases Are Auto-created Even If ARC Rule is Deactivated or Deleted
-description: Resolves an issue where cases continue to be auto-created from emails even if the ARC rule has been deactivated or deleted in Microsoft Dynamics 365 Customer Service.
+title: Cases Are Autocreated Even If ARC Rule is Deactivated or Deleted
+description: Resolves an issue where cases continue to be autocreated from emails even if the ARC rule has been deactivated or deleted in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: ghoshsoham
 author: Yerragovula
 ms.author: srreddy
@@ -8,13 +8,13 @@ ai-usage: ai-assisted
 ms.date: 04/14/2025
 ms.custom: sap:Automatic Record Creation (ARC), DFM
 ---
-# Cases are auto-created even if the automatic record creation rule is deactivated
+# Cases are autocreated even if the automatic record creation rule is deactivated
 
 This article addresses an issue where cases are automatically created from emails even after the Automatic Record Creation (ARC) rule has been deactivated or deleted in Dynamics 365 Customer Service.
 
 ## Symptoms
 
-Cases continue to be auto-created from emails even if the ARC rule has been deactivated or deleted.
+Cases continue to be autocreated from emails even if the ARC rule has been deactivated or deleted.
 
 ## Cause
 
@@ -28,7 +28,7 @@ To stop the automatic case creation, follow these steps:
 
    - Go to **Customer Service Admin Center** > **Case settings** > **Automatic record creation and update rules**.
      - Locate the ARC rule that was previously deactivated or deleted.
-     - Check for any associated child flows that may still be active.
+     - Check for any associated child flows that might still be active.
    - If the flow was created as part of a Dynamics 365 solution, navigate to **Power Automate** > **Solutions**. Review all flows related to record creation.
 
 2. Deactivate the associated child flow:

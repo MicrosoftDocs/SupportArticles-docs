@@ -27,7 +27,7 @@ The appearance of "# SSSAdminProd" as the user modifying cases or owning newly c
 
 The ARC rule or Power Automate flow may be configured to run under the context of a specific user account, usually a [system-provided application user](/power-platform/admin/system-application-users#application-users), such as "# SSSAdminProd."
 
-For example, when a case record is created through a ARC rule, and the rule owner is a team, the owner of the case record will be the team's administrator user. In this case, "# SSSAdminProd" is likely the administrator user for the team that owns the rule. If "# SSSAdminProd" is the owner of the ARC rule or associated flow, the account will appear as the user performing actions such as:
+For example, when a case record is created through an ARC rule, and the rule owner is a team, the owner of the case record will be the team's administrator user. In this case, "# SSSAdminProd" is likely the administrator user for the team that owns the rule. If "# SSSAdminProd" is the owner of the ARC rule or associated flow, the account will appear as the user performing actions such as:
 
 - Creating new contact records when unknown senders send emails.
 - Creating cases as part of the email-to-case process.

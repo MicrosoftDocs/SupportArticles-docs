@@ -43,7 +43,7 @@ To identify the cause:
    - Verify if rules are configured to trigger account creation under specific conditions (for example, incoming emails, forms, or external data.)
    - Check if any rules are inadvertently targeting the accounts entity instead of other entities like leads or contacts.
 
-3. Temporarily deactivate ARC rules one by one to identify if they are responsible for the issue.
+3. Temporarily deactivate ARC rules one by one to identify if they're responsible for the issue.
 
 ## Step 2: Inspect Power Automate flows
 
@@ -79,5 +79,5 @@ To identify the cause:
 ## Step 5: Review third-party integrations
 
 1. Check for external apps connected to your environment via Dataverse APIs or custom connectors.
-2. Temporarily disable these integrations to determine if they are causing the problem.
+2. Temporarily disable these integrations to determine if they're causing the problem.
 3. Check the logs for unauthorized or unintended API requests related to account creation.
