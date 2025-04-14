@@ -2,8 +2,10 @@
 title: Dismiss All Doesn't Work in Notifications
 description: Helps resolve an issue where notifications are cleared temporarily but reappear after a short time in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: srreddy
+author: Yerragovula
+ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 04/10/2025
+ms.date: 04/14/2025
 ms.custom: sap:Cases or Incidents, DFM
 ---
 # The Dismiss All button doesn't work in the notifications in Dynamics 365 Customer Service
@@ -16,7 +18,7 @@ When you select the **Dismiss All** button in the notifications area of Dynamics
 
 ## Cause
 
-This issue occurs due to insufficient user privileges on specific entities related to the notification system. Non-system administrators might lack the necessary permissions on the following entities:
+This issue can occur due to insufficient user privileges on specific entities related to the notification system. Non-system administrators might lack the necessary permissions on the following entities:
 
 - Model-driven app user setting
 - Setting definition

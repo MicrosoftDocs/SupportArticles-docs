@@ -1,7 +1,9 @@
 ---
 title: Chatbot Workstream Fails To Detect User's Location
 description: Helps resolve an issue where the chatbot workstream fails to detect the user's location even after proper configuration in Microsoft Dynamics 365 Customer Service.
-ms.reviewer: Courtney
+ms.reviewer: courtser
+author: Yerragovula
+ms.author: srreddy
 ai-usage: ai-assisted
 ms.date: 04/10/2025
 ms.custom: sap:Cases or Incidents, DFM
@@ -16,7 +18,7 @@ After you [set up visitor location detection](/dynamics365/customer-service/admi
 
 ## Cause
 
-This issue occurs because the Bing Map API key used for location detection is created in a different tenant than the one used by the Dynamics 365 Customer Service application. As a result, the chatbot fail to detect the user's location.
+This issue can occur if the Bing Map API key used for location detection was created in a different tenant than the one used by the Dynamics 365 Customer Service application. As a result, the chatbot fails to detect the user's location.
 
 ## Resolution
 

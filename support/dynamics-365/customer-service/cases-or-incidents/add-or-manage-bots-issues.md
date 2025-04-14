@@ -1,9 +1,11 @@
 ---
 title: Copilot Studio Bots Affect Workstreams And Agent Transfers
 description: Helps resolve issues related to bot management and prevent disruptions in chat queues and agent transfers in Microsoft Dynamics 365 Customer Service.
-ms.reviewer: Soham
+ms.reviewer: ghoshsoham
+author: Yerragovula
+ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 04/10/2025
+ms.date: 04/14/2025
 ms.custom: sap:Cases or Incidents, DFM
 ---
 # Workstreams and agents are affected by changes made to other Copilot Studio bots
@@ -20,7 +22,7 @@ You might encounter the following issues when working with [Copilot Studio bots]
 
 ## Cause
 
-The issue occurs because the `iscustomizable` flag is enabled for the bot skill. When this flag is enabled, any changes made to one bot or workstream can inadvertently affect other bots or workstreams.
+The issue can occur if the `iscustomizable` flag is enabled for the bot skill. When this flag is enabled, any changes made to one bot or workstream can inadvertently affect other bots or workstreams.
 
 ## Resolution
 
@@ -29,8 +31,6 @@ To prevent a bot from affecting other workstreams, follow these steps to disable
 1. Navigate to **Settings** > **Solutions** in Dynamics 365 Customer Service, and locate the solution that contains the bot and skills.
 
 2. Verify that the `iscustomizable` flag isn't enabled for the skill in question.
-
-3. If the flag is enabled, proceed to manually edit the solution's XML file.
 
 For more information, see [Use managed properties](/power-platform/alm/use-managed-properties).
 

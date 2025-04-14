@@ -1,9 +1,11 @@
 ---
 title: You Don't Have Access To The Data Used For Case Summaries Error
 description: Resolves the issues related to the Copilot case summary feature in Microsoft Dynamics 365 Customer Service.
-ms.reviewer: Soham
+ms.reviewer: ghoshsoham
+author: Yerragovula
+ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 04/10/2025
+ms.date: 04/14/2025
 ms.custom: sap:Cases or Incidents, DFM
 ---
 # "It looks like you don't have access to the data that's used for case summaries" error
@@ -16,11 +18,11 @@ When you try to use the [Copilot case summary](/dynamics365/contact-center/admin
 
 > It looks like you don't have access to the data that's used for case summaries.
 
-Additionally, the feature fails to display properly for non-administrators who try to use a custom product table instead of the OOB product table.
+Additionally, the feature fails to display properly for non-administrators who try to use a custom product table instead of the out-of-box (OOB) product table.
 
 ## Cause
 
-The issue occurs because Copilot case summaries rely on a relationship between the custom table and the OOB "case" table.
+Copilot case summaries rely on a relationship between the custom table and the OOB "case" table.
 
 - Copilot uses data from tables related to the "case" table to generate summaries.
 - Custom tables that lack a relationship with the "case" table are ineligible for use in generating case summaries.
