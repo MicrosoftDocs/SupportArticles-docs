@@ -36,11 +36,20 @@ You want to manage objects in Office 365, Azure, or Intune and you no longer wan
 
 [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
-1. If you're not running Windows 10, install the 64-bit version of the Microsoft Online Services Sign-in Assistant: [Microsoft Online Services Sign-in Assistant for IT Professionals RTW](https://download.microsoft.com/download/7/1/E/71EF1D05-A42C-4A1F-8162-96494B5E615C/msoidcli_32bit.msi).
-1. Install the Microsoft Azure Active Directory module for Windows PowerShell:
+1. If you're not running Windows 10, install the 64-bit version of the Microsoft Online Services Sign-in Assistant: [Microsoft Online Services Sign-in Assistant for IT Professionals RTW](https://download.microsoft.com/download/7/1/E/71EF1D05-A42C-4A1F-8162-96494B5E615C/msoidcli_64bit.msi).
 
-    1. Open an elevated Windows PowerShell command prompt (run Windows PowerShell as an administrator).
-    2. Run the `Install-Module MSOnline` command.
+1. Install the Microsoft Azure Active Directory module for Windows PowerShell:
+    1. Open an elevated Windows PowerShell command prompt (run Windows PowerShell as an administrator)
+    2. Run the following command:
+    ```powershell
+     Install-Module MSOnline
+    ```
+
+1. Connect to Microsoft cloud service running the following command:
+
+    ```powershell
+     Connect-MsolService
+    ```
 
 1. Disable directory synchronization by running the following command:
 
