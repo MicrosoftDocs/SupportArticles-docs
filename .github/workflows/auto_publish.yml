@@ -1,0 +1,74 @@
+name: Run Python Script
+
+on:
+  schedule:
+    # Run at 10:00 a.m., 6:00 p.m., and 2:00 a.m. UTC
+    - cron: "0 10 * * *"
+    - cron: "0 18 * * *"
+    - cron: "0 2 * * *"
+
+  workflow_dispatch:
+
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+    if: github.repository_owner == 'MicrosoftDocs'    
+
+    steps:
+      # Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      # Install dependencies (if any)
+      - name: Install dependencies
+        run: |          
+          python -m pip install PyGithub
+
+      # Run the Python script
+      - name: Run script
+        env:
+            GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+            from datetime import datetime
+            import os
+            import sys
+            import time
+
+            from github import Github
+            from github.GithubException import GithubException
+
+            # Create a Github instance
+            # Access the secret
+            access_token = os.getenv("GITHUB_ACCESS_TOKEN")
+            github = Github(access_token)
+            # Support private
+            repo = github.get_repo("MicrosoftDocs/SupportArticles-docs-pr")
+            # Get the current date and time
+            current_date_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            # Pull request content
+            title = f"Auto push to live {current_date_time}"
+            body = "Daily auto push to live."
+            head = "main"  # Format: "username:branch"
+            base = "live"  # The branch you want to merge your changes into
+            finish_commit = (f'Successfully push to live at {current_date_time}.')
+            # Start process
+            try:
+                # Check if a PR from 'main' to 'live' already exists
+                existing_prs = repo.get_pulls(state='open', head=head, base=base)
+                if existing_prs.totalCount > 0:
+                    print(f'Found existing PR(s) from "{head}" to "{base}".\n  {'\n  '.join(pr.html_url for pr in existing_prs)}')
+                    sys.exit(1)
+                print(f'Start creating pull request.')
+                pull_request = repo.create_pull(title=title, body=body, head=head, base=base)
+                print(f"PR created: {pull_request.html_url}. Start merging.")
+                # Merge
+                time.sleep(5)
+                pull_request.merge()
+                print('Success push to live.')
+                sys.exit(0)
+            except GithubException as e:    
+                print(f"Error: {str(e)}")
+                sys.exit(1)
+
