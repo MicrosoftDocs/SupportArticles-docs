@@ -2,7 +2,7 @@
 title: Troubleshoot Node Not Ready state when certificates have expired
 description: Troubleshoot scenarios in which Node Not Ready failures occur in an Azure Kubernetes Service (AKS) cluster node if there are expired certificates.
 ms.date: 04/10/2025
-ms.reviewer: rissing, chiragpa, momajed, v-leedennis, addobres
+ms.reviewer: rissing, chiragpa, momajed, v-leedennis, addobres, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to fix expired certificates so that they don't cause Node Not Ready failures within an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Node/node pool availability and performance
