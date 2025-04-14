@@ -2,7 +2,7 @@
 title: Use NetLog to Capture Network Activity
 description: Provides guidance about using the Network Logs (NetLog) tool as an alternative to Fiddler and HTTP Archive (HAR) captures.
 ms.reviewer: bachoang, v-weizhu
-ms.date: 04/11/2025
+ms.date: 04/14/2025
 ms.service: entra-id
 ms.topic: how-to
 ms.custom: sap:Enterprise Applications
