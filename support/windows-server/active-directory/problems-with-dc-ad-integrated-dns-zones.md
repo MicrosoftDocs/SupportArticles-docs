@@ -226,7 +226,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 ## More information
 
-Every DNS server that is authoritative for an Active Directory-integrated DNS zone adds an NS record. By default, every DC in a domain registers an SRV record for a set of non-site-specific names such as "_ldap._tcp.\<domain_name>" and A record(s) that map(s) the Active Directory DNS domain name to the TCP/IP address(es) of the DC. When a DNS server tries to write a record with many values for the same shared name, Local Security Authority Subsystem Service (LSASS) runs at 100% CPU usage for approximately 10 seconds and the registration doesn't succeed. Netlogon retries this registration every hour; the 100% CPU usage spike reappears at least once an hour and the attempted registrations don't succeed.
+Every DNS server that is authoritative for an Active Directory-integrated DNS zone adds an NS record. By default, every DC in a domain registers an SRV record for a set of non-site-specific names such as "_ldap._tcp.\<domain_name>" and A record(s) that map(s) the Active Directory DNS domain name to the TCP/IP address(es) of the DC. When a DNS server tries to write a record with many values for the same shared name, Local Security Authority Subsystem Service (LSASS) runs at 100% CPU usage for approximately 10 seconds and the registration doesn't succeed. Netlogon retries this registration every hour; the 100% CPU usage spike reappears at least once an hour, and the attempted registrations don't succeed.
 
 ## References
 
