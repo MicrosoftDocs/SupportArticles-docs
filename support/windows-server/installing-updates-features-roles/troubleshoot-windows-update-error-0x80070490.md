@@ -76,13 +76,13 @@ Error CBS Failed to process single phase execution. [HRESULT = 0x80070490 - ERRO
 Feature updates might fail with error code 0x80070490. This behavior can be observed through **Check for updates** and in the Software Center (WSUS). Review the **WindowsUpdate.log** file for entries like:
 
 ```output
-hh:mm:ss.fffff tt 1092 10968 downloadmanager_cpp16907 [DownloadManager] Preparing update for install, updateId = {0FFD49D9-5418-4D5E-9AA3-0163C0CCF57B}.202.
+hh:mm:ss.fffff tt 1092 10968 downloadmanager_cpp16907 [DownloadManager] Preparing update for install, updateId = {UpdateID}.202.
 hh:mm:ss.fffff tt 11736 12104 uhwinsetup_cpp739 [Handler] * START * Windows Setup Install
 hh:mm:ss.fffff tt 11736 12104 uhwinsetup_cpp741 [Handler] Updates to install = 1
 hh:mm:ss.fffff tt 11736 12104 uhwinsetuppersisteddata_cpp233 [Handler] Loaded state. m_dwState now: Setup360_CompatToolPhase1(5)
-hh:mm:ss.fffff tt 11736 12104 uhwinsetupsession_cpp322 [Handler] Starting Windows Setup with command line = "C:\Windows\SoftwareDistribution\Download\4222e87ece5856088671b07affd003c5\WindowsUpdateBox.exe" /ClassId c8bd477b-2805-4b28-94fd-f99d02b19ed2 /ReportId {0FFD49D9-5418-4D5E-9AA3-0163C0CCF57B}.202 /PreDownload /Update /ClientId ce729943-30ea-47ab-8f3b-24890a4c3e14 /CorrelationVector cFZ4O8G6gEWSekro.2.1.2
-hh:mm:ss.fffff tt 11736 12104 uhwinsetupsession_cpp1655 [Handler] Registering WinSetup COM server as CLSID {C8BD477B-2805-4B28-94FD-F99D02B19ED2} and APPID {71ABC735-F46A-46BC-95B3-7E435F84FC19}
-hh:mm:ss.fffff tt 11736 12104 uhwinsetupsession_cpp1673 [Handler] Successfully registered WinSetup COM server as CLSID {C8BD477B-2805-4B28-94FD-F99D02B19ED2}
+hh:mm:ss.fffff tt 11736 12104 uhwinsetupsession_cpp322 [Handler] Starting Windows Setup with command line = "C:\Windows\SoftwareDistribution\Download\4222e87ece5856088671b07affd003c5\WindowsUpdateBox.exe" /ClassId <ClassID> /ReportId {ReportID}.202 /PreDownload /Update /ClientId <ClientID> /CorrelationVector cFZ4O8G6gEWSekro.2.1.2
+hh:mm:ss.fffff tt 11736 12104 uhwinsetupsession_cpp1655 [Handler] Registering WinSetup COM server as CLSID {CLSID} and APPID {APPID}
+hh:mm:ss.fffff tt 11736 12104 uhwinsetupsession_cpp1673 [Handler] Successfully registered WinSetup COM server as CLSID {CLSID}
 hh:mm:ss.fffff tt 11736 12104 uhwinsetupsession_cpp458 [Handler] Installer completed. Process return code = 0x80070490, result = 0x80070490, callback pending = False
 hh:mm:ss.fffff tt 11736 12104 setup360installer_cpp490 [Handler] Handler: Setup360 returned unknown error 80070490 for state 5, resetting state to Unknown
 hh:mm:ss.fffff tt 11736 12104 uhwinsetuppersisteddata_cpp155 [Handler] State changed. was: Setup360_CompatToolPhase1(5), now: <invalid>(0)
