@@ -10,7 +10,7 @@ ms.custom: sap:Automatic Record Creation (ARC), DFM
 ---
 # Accounts are created without known triggers in Dynamics 365
 
-This article addresses the issue where accounts are automatically created in Dynamics 365 without any known user actions or triggers. This issue occurs in Dynamics 365 Customer Service, Dynamics 365 Sales, or other model-driven apps where accounts are used.
+This article addresses the issue where accounts are automatically created in Dynamics 365 without any known user actions or triggers. This can apply to Dynamics 365 Customer Service, Dynamics 365 Sales, or other model-driven apps where accounts are used.
 
 ## Symptoms
 
@@ -34,7 +34,9 @@ To identify the cause:
 
 ## Resolution
 
-## Step 1: Review ARC rules
+Follow these steps to help you identify and address the root cause of the issue resulting in unintended account creation.
+
+### Step 1: Review ARC rules
 
 1. Navigate to **Customer Service admin center** > **Case settings** > **Automatic record creation and update rules**.
 
@@ -45,29 +47,29 @@ To identify the cause:
 
 3. Temporarily deactivate ARC rules one by one to identify if they're responsible for the issue.
 
-## Step 2: Inspect Power Automate flows
+### Step 2: Inspect Power Automate flows
 
 1. Go to **Power Automate** > **Solutions** (if applicable) or **My Flows/Team Flows**.
 
 2. Look for any flows with triggers related to account creation, such as:
 
    - The "When a record is created" flow.
-   - The "When an email is received" flow.
 
 3. Review the configurations and connections of each flow to ensure security and proper setup.
 4. Temporarily turn off flows to see if the automatic account creation ceases.
 
-## Step 3: Check plugins and custom scripts
+### Step 3: Check plugins and custom scripts
 
 1. Navigate to **Advanced settings** > **Customization** > **Customize the System**.
 2. Under **Plugins**, review all plugins targeting the account entity:
 
-   - Confirm if any plugins are set to create accounts automatically based on specific conditions.
+   - Check if any plugins are set to create accounts automatically based on specific conditions.
+
    - Identify and assess outdated or suspicious plugins.
 
 3. Disable plugins temporarily to test if the issue persists.
 
-## Step 4: Review security and access logs
+### Step 4: Review security and access logs
 
 1. Review the [audit logs](/dynamics365/customer-service/administer/enable-audit-tables#activities-available-for-audit) to identify:
 
@@ -76,7 +78,7 @@ To identify the cause:
 
 1. If API calls are enabled, verify whether external applications are making unexpected account creation requests.
 
-## Step 5: Review third-party integrations
+### Step 5: Review third-party integrations
 
 1. Check for external apps connected to your environment via Dataverse APIs or custom connectors.
 2. Temporarily disable these integrations to determine if they're causing the problem.
