@@ -3,7 +3,7 @@ title: Experience slow performance
 description: Provides information that you can use to troubleshoot performance problems. Also contains a list of questions that you should answer before you contact a support professional.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/15/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # You experience slow performance when you do specific processes in Microsoft Dynamics GP
@@ -138,7 +138,7 @@ We recommend the following exclusions.
 
 **On the Microsoft Dynamics GP client**  
 Exclude the Dynamics\GP folder. By default, this folder is in the following location:  
-`C:\Program Files\Microsoft Dynamics\GP`
+`C:\Program Files (x86)\Microsoft Dynamics\GP`
 
 The following file name extensions should be excluded:
 
@@ -172,7 +172,7 @@ Exclude the `*.ldf` database files, and the `*.mdf` database files.
 On any computer that is running Integration Manager  
 Exclude the .MDB or .IMD files and the Integration Manager code folder which default, this folder is in the following location:
 
-`C:\Program Files\Microsoft Dynamics\Integration Manager`
+`C:\Program Files (x86)\Microsoft Dynamics\Integration Manager`
 
 ### Performance problems that occur on the home page in Microsoft Dynamics GP
 
