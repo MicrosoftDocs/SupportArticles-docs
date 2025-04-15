@@ -5,11 +5,11 @@ ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 03/28/2025
+ms.date: 04/15/2025
 ---
 # UI element isn't highlighted or an error occurs when hovering over a UI or web element
 
-This article helps you resolve issues you might encounter when using the UI element picker in virtual desktops, such as Citrix or Remote Desktop Protocol (RDP) environments.
+This article helps you resolve issues you might encounter when using the UI element picker in virtual desktops, such as Citrix or Microsoft Remote Desktop Protocol (RDP) environments.
 
 ## Symptoms
 
@@ -37,9 +37,10 @@ The communication with the remote agent components doesn't work.
       > The troubleshooter can be manually opened via the console and the flow designer, through the dedicated menu under **Help** > **Troubleshooter**. It can also be opened via the process file **PAD.Troubleshooter.exe**, which can be found in the installation folder of Power Automate for desktop.
 
    1. Run **Troubleshoot UI/Web automation issues** to view the diagnostics for the communication. If an error appears in the Citrix or RDP section, expand it for more details and solutions.
-   1. If the details indicate "Access is Denied", then policies in the remote machine prohibit to run a specific agent component from the user profile folder. Contact your administrator to allow the executables to run from these directories.
 
-   :::image type="content" source="media/rdp-no-highlight/rdp-access-denied.png" alt-text="Screenshot of the Power Automate troubleshooter with highlighted the RDP/Citrix issue details.":::
+   1. If the error details indicate "Access is denied," then policies in the remote machine prohibit to run a specific agent component from the user profile folder. Contact your administrator to allow the executables to run from these directories.
+
+      :::image type="content" source="media/rdp-no-highlight/rdp-access-denied.png" alt-text="Screenshot of the Power Automate troubleshooter that shows the Access is denied error details.":::
 
 2. If the troubleshooter indicates that the remote agent isn't running, check if the agent is running in the Citrix or RDP session.
 

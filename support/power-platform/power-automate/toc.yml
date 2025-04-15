@@ -90,24 +90,24 @@
           href: desktop-flows/ui-automation/desktop-application-crashes-ui-automation.md
         - name: Can't access the elements of a Java application
           href: desktop-flows/ui-automation/cannot-access-java-application-elements.md
+        - name: Clicking the elements don't work during runtime
+          href: desktop-flows/ui-automation/ui-rdp-automation/no-clicks-on-runtime.md
         - name: Focus window action can't bring a window to focus
           href: desktop-flows/ui-automation/focus-window-action-not-working.md
         - name: Failed to get UI element
           href: desktop-flows/ui-automation/failed-get-ui-element.md
         - name: Failed to get element/window or Element/Window wasn't found errors
           href: desktop-flows/ui-automation/ui-automation-action-fails-errors.md
+        - name: Operation takes a long time and fails during runtime 
+          href: desktop-flows/ui-automation/ui-rdp-automation/something-takes-long-and-fails.md
         - name: SAP UI element click issue
           href: desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md
         - name: Set drop-down list value in window/on web page action fails
           href: desktop-flows/ui-automation/set-drop-down-list-value-fails.md
         - name: UI element highlighting or hovering issues in virtual desktops
           href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
-        - name: Elements are highlighted but on runtime clicks are not happening on Citrix Virtual apps
-          href: desktop-flows/ui-automation/ui-rdp-automation/no-clicks-on-runtime.md
-        - name: Error "The remote desktop was not found"
+        - name: '"The remote desktop was not found" error'
           href: desktop-flows/ui-automation/ui-rdp-automation/error-remote-desktop-not-found.md
-        - name: Something takes long time and fails afterwards
-          href: desktop-flows/ui-automation/ui-rdp-automation/something-takes-long-and-fails.md
         - name: UIPI issues with UI and web automation actions
           href: desktop-flows/ui-automation/uipi-issues.md
     - name: '"Could not read the application certificate" error when creating a connection'
