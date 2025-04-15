@@ -4,16 +4,11 @@ on:
   create
 
 jobs:
-  on-branch-create:
+  validate-branch-name:
     if: startsWith(github.ref, 'refs/heads/')
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
+    strategy:
+      fail-fast: true # Prevent retries on failure
     steps:
-      - name: Validate name
-        run: |
-            INVALID_CHARS='[<>:"/\\|?*]'
-            if [[ "${{ github.ref_name }}" =~ $INVALID_CHARS ]]; then
-                echo "Error: Branch name '${{ github.ref_name }}' created by ${{ github.actor }} contains invalid characters."
-                exit 1
-            else
-                echo "Branch name '${{ github.ref_name }}' is valid."
-            fi
+      - name: Try checkout
+        uses: actions/checkout@v3        
