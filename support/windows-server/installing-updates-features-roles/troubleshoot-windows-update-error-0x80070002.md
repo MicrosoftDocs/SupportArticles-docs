@@ -152,7 +152,3 @@ Export `WIMMOUNT.sys` from the location `%SystemRoot%\system32\drivers\wimmount.
 ## Next steps
 
 After resolving the issue, ensure that your system is up to date with the latest updates and patches. Regularly check for updates to prevent similar issues in the future.
-
-**Partial Use of AI disclaimer**
-
-Certain sections of this document have been generated or enhanced using artificial intelligence (AI) technology.
