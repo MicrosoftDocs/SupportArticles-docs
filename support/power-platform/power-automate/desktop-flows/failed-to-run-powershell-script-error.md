@@ -1,25 +1,22 @@
 ---
-title: Issue while running the action 'Run PowerShell script'
-description: Resolves an error that occurs in the action 'Run PowerShell script', when you run a desktop flow in Microsoft Power Automate for desktop.
-ms.author: yiannismavridis
-ms.reviewer: 
+title: Failed To Run PowerShell Script Error
+description: Solves an error that occurs when you run the Run PowerShell script action in a desktop flow in Microsoft Power Automate for desktop.
+ms.author: iomavrid
+author: yiannismavridis
 ms.custom: sap:Desktop flows
-ms.date: 04/03/2025
-
+ms.date: 04/15/2025
 ---
-# Issue while running the action 'Run PowerShell script'
+# "Failed to run PowerShell script" error when running the Run PowerShell script action
 
-This article provides a resolution for an error that occurs in the action 'Run PowerShell script', when you run a desktop flow in Microsoft Power Automate for desktop.
+This article provides a resolution for an error that occurs when running the [Run PowerShell script](/power-automate/desktop-flows/actions-reference/scripting#runpowershellscript) action in Microsoft Power Automate for desktop.
 
 ## Symptoms
 
-During a flow run, an error occurs while running the action 'Run PowerShell script'. This can also occur due to a Windows update.
+During the execution of a desktop flow in Power Automate for desktop, an error occurs message when running the **Run PowerShell script** action. This issue might also occur after a recent Windows update.
 
-## Detection
+The error message appears as follows:
 
-The error message contains the following:
-
-```
+```output
 Microsoft.Flow.RPA.Desktop.Modules.SDK.ActionException: Failed to run PowerShell script. ---> System.ComponentModel.Win32Exception: The system cannot find the file specified
    at System.Diagnostics.Process.StartWithCreateProcess(ProcessStartInfo startInfo)
    at Microsoft.Flow.RPA.Desktop.Modules.System.Actions.SystemActions.RunPowershellScript(Variant powershellCode, Variant& scriptStandardOutput, Variant& scriptErrorOutput)
@@ -30,19 +27,35 @@ Microsoft.Flow.RPA.Desktop.Modules.SDK.ActionException: Failed to run PowerShell
 
 ## Cause
 
-The `Run Powershell script` action internally starts an instance of `powershell.exe` while also providing the specified script of the action's input as an argument to the process.
+The **Run PowerShell script** action internally starts an instance of `powershell.exe` and provides the script specified in the action's input as an argument to the process. If the system fails to find `powershell.exe`, you might receive the error message.
 
-If the system is not able to find `powershell.exe`, it will throw the mentioned runtime error to the user.
+The most likely cause of this issue is that the **Path** environment variable doesn't include the directory containing the `powershell.exe` executable. To confirm this as the root cause, follow these steps:
 
-The most probable cause for this is the PATH environment variable not including the folder of the `powershell.exe` executable.
+1. Open a Command Prompt (CMD) window.
+1. Run `powershell.exe` by typing the command and pressing Enter.
 
-To ensure that this is the cause for this problem, users can launch a Command Prompt (CMD) window and try to launch `powershell.exe` from there. If the message 
-`'powershell.exe' is not recognized as an internal or external command, operable program or batch file.` 
-is shown as a result, this is the root cause of the error.
+If the following message occurs, then the issue lies in the missing path to `powershell.exe` in the **Path** environment variable.
+
+> 'powershell.exe' is not recognized as an internal or external command, operable program or batch file.
 
 ## Resolution
 
-Edit the `PATH` environment variable and add the missing path, the folder of the executable `powershell.exe`.
+To resolve this issue, follow these steps to update the **Path** environment variable to include the directory of the `powershell.exe` executable:
 
-On most occasions, the missing path will be `"C:\WINDOWS\System32\WindowsPowerShell\v1.0\"` but to get the actual path, you could launch a PowerShell terminal and run `$PsHome`.
+1. Open the Start menu and search for "Environment Variables." Select **Edit the system environment variables**.
 
+1. In the **System Properties** window, select **Environment Variables**.
+
+1. Under the **System variables** section, locate and select the **Path** variable, then select **Edit**.
+
+1. Add the directory path of `powershell.exe` to the list of paths. In most cases, the missing path is:
+
+   **C:\WINDOWS\System32\WindowsPowerShell\v1.0\\**
+
+1. To confirm the correct path, open a PowerShell terminal and run the following command:
+
+   `$PsHome`
+
+   Use the displayed path as the value to add to the **Path** variable if it differs.
+
+1. Select **OK** to save changes and close all dialogs.

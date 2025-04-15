@@ -154,6 +154,10 @@
       href: desktop-flows/troubleshoot-excel-errors.md
     - name: Errors when running attended or unattended desktop flows
       href: desktop-flows/troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
+    - name: '"Failed to run PowerShell script" error'
+      href: desktop-flows/failed-to-run-powershell-script-error.md
+    - name: '"Failed to take screenshot" error in unattended desktop flow run'
+      href: desktop-flows/take-screenshot-action-fails-in-unattended-mode.md
     - name: Failed connection between Power Automate components
       href: desktop-flows/failed-connection-between-power-automate-components.md
     - name: Failed license check on a desktop flow run
@@ -164,8 +168,6 @@
       href: desktop-flows/invalid-credentials-errors-running-desktop-flows.md
     - name: Invalid credentials error using Microsoft Entra account
       href: desktop-flows/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
-    - name: Issue while running the action 'Run PowerShell script'
-      href: desktop-flows/issue-while-running-action-Run-PowerShell-script.md
     - name: '"Logon type not granted" error when creating connection or running desktop flow'
       href: desktop-flows/logon-type-has-not-been-granted.md
     - name: Machine registration failure
@@ -210,8 +212,6 @@
       href: desktop-flows/machine-not-shown-in-list.md
     - name: Unattended desktop flow fails with MSEntraMachineAlwaysPromptingForPassword
       href: desktop-flows/msentramachinealwayspromptingforpassword-error.md
-    - name: Unattended desktop flow run fails with an error in the action 'Take screenshot'
-      href: desktop-flows/take-screenshot-action-fails-in-unattended-mode.md
 - name: Flow creation
   items:
     - name: Can't find Excel Online table in Microsoft Flow
