@@ -2,7 +2,7 @@
 title: Error codes on Flow run
 description: Describes best practices and steps to mitigate common errors when running Microsoft flows in Power Apps.
 ms.reviewer: mlalavat
-ms.date: 03/01/2024
+ms.date: 04/15/2025
 ms.custom: sap:Connections\Creating or updating connections
 ---
 # Best practices when updating a flow used by a Power App
@@ -196,7 +196,8 @@ This error means that the app has flow metadata that specifies that a SQL connec
 > Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
 
 #### Mitigation option 1
-Resetting the flows in the app:
+
+Reset the flows in the app:
 
 1. In the source environment, edit the app. Remove and then re-add the flows to the app. Save and publish the changes.
 2. In the target environment, remove all unmanaged layers on the app and flow.
@@ -206,13 +207,13 @@ Resetting the flows in the app:
    > There can be no unmanaged layers on either the flow or the app because this can cause issues in connection to the flow.
 
 #### Mitigation option 2
+
 Change the connection from **Embedded** to **Invoker**:
 
 1. Navigate to the flow portal to edit and update the flow settings.
 2. On the flow details page, in the **Run only users** section, select **Edit**.
 3. To update the flow connection source to **Invoker**, select **Provided by run-only user** and save.
-4. To update the flow connection source to **Embedded**, select **Use this connection** and save.
-5. Verify by triggering the flow. You see that the "install flow network" calls now are succeeding.
+4. Verify by triggering the flow. You see that the "install flow network" calls now are succeeding.
 
 ## Other symptoms
 
