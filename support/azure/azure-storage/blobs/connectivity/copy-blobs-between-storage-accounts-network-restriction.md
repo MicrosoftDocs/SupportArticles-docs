@@ -81,7 +81,7 @@ Another option is to place the VM within the same VNet as the source storage acc
 
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-2.png" alt-text="Diagram that shows the process of copying blobs between storage accounts in Workaround 2.":::
 
-More information on virtual network peering can be found here, [Virtual network peering FAQ](azure/virtual-network/virtual-networks-faq#virtual-network-peering).
+More information, see [Virtual network peering FAQ](azure/virtual-network/virtual-networks-faq#virtual-network-peering).
 
 ### Workaround 3: Use a temporary staging account to copy the data
 If you're unable to implement the previously mentioned workarounds or are restricted from changing the existing network configuration of the storage account or VNet, you can use a temporary staging account to copy the data:
