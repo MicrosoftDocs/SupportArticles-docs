@@ -72,3 +72,6 @@ The error code 0x8024002E occurs when the Windows Update Client service is disab
 2. Try to manually patch the server through the Updates applet.
 3. If manual patching fails, collaborate with the Devices and Deployment team for further assistance.
 
+## Next steps
+
+If the issue persists after following these steps, contact Microsoft support for further assistance.
