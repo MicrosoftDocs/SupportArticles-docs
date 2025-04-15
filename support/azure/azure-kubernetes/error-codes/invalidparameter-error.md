@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the InvalidParameter error
-description: Learn how to troubleshoot the InvalidParameter error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+description: Learn how to troubleshoot InvalidParameter error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 11/19/2024
 editor: v-gsitser
 ms.reviewer: rissing, chiragpa, erbookbi, jaewonpark, v-leedennis
@@ -77,6 +77,6 @@ In the following table, follow the link for the appropriate troubleshooting step
 
 ## More information
 
-- [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+- [General troubleshooting of AKS cluster creation issues](./create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

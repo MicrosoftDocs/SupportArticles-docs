@@ -52,6 +52,6 @@ To resolve this issue, use one of the following methods. Once there are no opera
 
 ## More information
 
-[General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+[General troubleshooting of AKS cluster creation issues](./create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot the InvalidResourceReference error code
-description: Learn how to troubleshoot the InvalidResourceReference errors when you try to create and deploy an Azure Kubernetes Service (AKS) cluster or update an AKS cluster.
+title: Troubleshoot the InvalidResourceReference error
+description: Learn how to troubleshoot the InvalidResourceReference error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster or update an AKS cluster.
 ms.date: 01/11/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, v-weizhu
@@ -8,9 +8,9 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the InvalidResourceReference error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the InvalidResourceReference error code
+# Troubleshoot the InvalidResourceReference error
 
-This article discusses how to identify and resolve the `InvalidResourceReference` errors that may occur when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster or update an AKS cluster.
+This article discusses how to identify and resolve the `InvalidResourceReference` error that may occur when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster or update an AKS cluster.
 
 ## Symptom 1
 

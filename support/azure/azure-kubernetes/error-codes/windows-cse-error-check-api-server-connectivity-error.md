@@ -53,7 +53,7 @@ Your cluster nodes can't connect to the cluster API server pod.
 
 ## References
 
-[General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+[General troubleshooting of AKS cluster creation issues](./create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
