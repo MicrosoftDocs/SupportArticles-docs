@@ -1,8 +1,8 @@
 ---
-title: Capture SSL traffic with Fiddler
+title: Capture SSL Traffic with Fiddler
 description: Introduces how to make Fiddler to capture SSL traffic in two specific scenarios.
 ms.service: entra-id
-ms.date: 04/07/2025
+ms.date: 04/15/2025
 ms.reviewer: bachoang, v-weizhu
 ms.topic: how-to
 ms.custom: sap:Enterprise Applications
@@ -22,11 +22,11 @@ set NODE_TLS_REJECT_UNAUTHORIZED=0
 ```
 
 > [!NOTE]
-> To find out what port Fiddler is listening to, select **Tools** > **Options** > **Connections** from the Fiddler menu.
+> To find out which port Fiddler is listening on, select **Tools** > **Options** > **Connections** from the Fiddler menu.
 
 ## Scenario 2: Capture the Azure Key Vault secrets client (from Azure SDK for .NET) with Fiddler
 
-To capture Azure Key Vault traffic using Fiddler, set up the Fiddler as proxy through setting `http_proxy` and `https_proxy` environment variables in the application code, as follows:
+To capture Azure Key Vault traffic using Fiddler, set Fiddler as a proxy by setting the `http_proxy` and `https_proxy` environment variables in the application code as follows:
 
 ```csharp
 
