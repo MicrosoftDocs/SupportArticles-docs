@@ -3,8 +3,6 @@
   items:
     - name: Administration
       items:
-        - name: 401 Access denied error when you run Test-OAuthConnectivity
-          href: ../administration/401-access-denied-error-when-running-test-oauthconnectivity.md
         - name: 554 5.4.14 Hop Count exceeded
           href: ../administration/hop-count-exceeded-ndr.md
         - name: A certificate error when releasing a message
@@ -13,8 +11,6 @@
           href: ../administration/remote-mailbox-created-in-ad-ds-not-aclable.md
         - name: Access denied when using remote Windows PowerShell
           href: ../administration/access-denied-connect-powershell.md
-        - name: Microsoft Entra Connect workflow in Microsoft 365
-          href: ../administration/azure-ad-connect-workflow.md
         - name: Bad Request when connecting to Exchange Online PowerShell
           href: ../administration/bad-request-error-when-connecting-to-exchange-online-powershell.md
         - name: Can't connect to Exchange Online
