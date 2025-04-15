@@ -156,7 +156,3 @@ Info CBS Progress: UI message updated. Operation type: Update. Stage: 1 out of 1
 ## Next steps
 
 If the issue persists, consider engaging with the WSUS team for further assistance. You can also explore additional resources on Windows Update troubleshooting on [Guidance for troubleshooting Windows Server update](troubleshoot-windows-server-update-guidance.md).
-
-**Partial Use of AI disclaimer**
-
-Certain sections of this document was generated or enhanced using artificial intelligence (AI) technology.
