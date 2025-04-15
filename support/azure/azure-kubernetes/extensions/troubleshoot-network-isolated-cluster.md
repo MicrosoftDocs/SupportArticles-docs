@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot network isolated AKS clusters
+title: Troubleshoot Network Isolated AKS Clusters
 description: Learn how to troubleshoot network isolated cluster issues on Azure Kubernetes Service (AKS).
 ms.service: azure-kubernetes-service
 ms.date: 04/15/2025
