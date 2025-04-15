@@ -77,7 +77,7 @@ A possible workaround is to create a private endpoint for the destination storag
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-1.png" alt-text="Diagram that shows the process of copying blobs between storage accounts in Workaround 1.":::
 
 ### Workaround 2: Place the VM in the same VNet as the source storage account and configure VNet peering between the source and destination VNets
-Another option is to place the VM within the same VNet as the source storage account while also establishing [virtual network peering](azure/virtual-network/virtual-network-peering-overview) between this VNet and the destination VNet. This peering needs to be directly between the two VNets and cannot be done through the hub VNet. The following architecture diagram shows the process of copying blobs between storage accounts in Workaround 2.
+Another option is to place the VM within the same VNet as the source storage account and set up [virtual network peering](azure/virtual-network/virtual-network-peering-overview) between this VNet and the destination VNet. This peering needs to be directly between the two VNets and cannot be done through the hub VNet. The following architecture diagram shows the process of copying blobs between storage accounts in Workaround 2.
 
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-2.png" alt-text="Diagram that shows the process of copying blobs between storage accounts in Workaround 2.":::
 
