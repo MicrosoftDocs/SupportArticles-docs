@@ -59,7 +59,7 @@ If you're experiencing performance degradation due to misaligned I/O operations 
 
 To enable Trace Flag 1800 as a startup parameter, follow these steps:
 
-1. On the system where SQL Server is installed and there is a physical sector size mismatch, open [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager). 
+1. On the system where SQL Server is installed and there's a physical sector size mismatch, open [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager). 
 1. Expand **SQL Server Configuration Manager (Local**) and select **SQL Server Services**. 
 1. Right-click the SQL Server instance you want to configure and select **Properties**: 
 
@@ -75,7 +75,8 @@ To enable Trace Flag 1800 as a startup parameter, follow these steps:
 
 1. Restart the SQL Server service to enable the trace flag when your instance starts. 
 
-**Note:** Trace Flag 1800 can also be enabled on systems with a 4K sector size without any adverse performance impact.
+> [!NOTE]
+> Trace Flag 1800 can also be enabled on systems with a 4-KB sector size without any adverse performance impact.
 
 ## References
 
