@@ -17,15 +17,25 @@ This article discusses how to troubleshoot issues in [network isolated Azure Kub
 
 ## Network isolated cluster support
 
-The network isolated cluster follows a similar support model to other [AKS add-ons](/azure/aks/integrations). There are two options available for the private Azure Container Registry (ACR) used with a network isolated cluster: Bring your own (BYO) ACR and AKS-managed ACR. If you use BYO ACR, you're responsible for properly configuring your ACR and associated resources.
+The network isolated cluster follows a similar support model to other [AKS add-ons](/azure/aks/integrations). When using a network isolated cluster with Azure Container Registry (ACR), you have two options:
+
+- Bring Your Own (BYO) ACR
+- AKS-managed ACR
+
+If you choose BYO ACR, you will be responsible for configuring your ACR and its associated resources properly.
 
 ## Issue 1: Cluster image pull fails due to network isolation
 
-Network isolated clusters use ACR cache rules for image pull. When an image pull faiure occurs due to network isolation:
+Network isolated clusters use ACR cache rules for image pull. If an image pull fails due to network isolation, follow these steps:
 
-- If you're using Bring your own (BYO) ACR, check and verify the private ACR resources are configured, including the cache rule and private endpoints. For more information about how to configure them, see Step 3 and Step 4 under the [Deploy a network isolated cluster with bring your own ACR](/azure/aks/network-isolated?pivots=byo-acr#deploy-a-network-isolated-cluster-with-bring-your-own-acr) section.
-- If you're using AKS-managed ACR, only Microsoft Container Registry (MCR) images are supported by default. If the image pull failure occurs on images from other registries, go to the private ACR to create extra cache rules for those images. If the image pull failure occurs on MCR images, check if the associated ACR and private endpoint resource named with keyword `bootstrap` exist. If they don't exist, reconcile the cluster.
+- For Bring your own (BYO) ACR:
 
+    Verify the private ACR resources are configured, including the cache rule and private endpoints. For more information about how to configure them, see Step 3 and Step 4 under the [Deploy a network isolated cluster with bring your own ACR](/azure/aks/network-isolated?pivots=byo-acr#deploy-a-network-isolated-cluster-with-bring-your-own-acr) section.
+- For AKS-managed ACR:
+
+  - By default, only Microsoft Container Registry (MCR) images are supported. If the image pull failure occurs with MCR images, check if the associated ACR and private endpoint resource named with keyword `bootstrap` exist. If they don't exist, reconcile the cluster.
+  - If the image pull failure occurs with images from other registries, create extra cache rules in the private ACR for those images.
+  
 ## Issue 2: Cluster image pull fails after updating the existed cluster to network isolated cluster or updating the private ACR resource ID
 
 The failure is an intended behavior. To resolve this issue, reimage the node to update the kubelet configuration in Container Service Extension (CSE) following the update actions in [Update your ACR ID](/azure/aks/network-isolated?pivots=byo-acr#update-your-acr-id).
