@@ -345,13 +345,15 @@
     href: extensions/troubleshoot-dapr-extension-installation-errors.md
   - name: Troubleshoot deployment failures of Azure Marketplace offers
     href: extensions/troubleshoot-failed-kubernetes-deployment-offer.md
+  - name: Troubleshoot network isolated clusters
+    href: extensions/troubleshoot-network-isolated-cluster.md
   - name: KEDA add-on
     items:
     - name: Troubleshoot KEDA add-on
       href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
       href: extensions/changes-in-kubernetes-event-driven-autoscaling-add-on-214-215.md
-  
+
 - name: Troubleshoot error codes
   items:
   - name: VMExtension error codes
