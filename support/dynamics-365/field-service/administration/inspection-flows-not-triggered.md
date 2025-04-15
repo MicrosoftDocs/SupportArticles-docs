@@ -35,14 +35,14 @@ After [publishing an inspection](/dynamics365/field-service/inspections#create-i
 
    1. Sign in to [Power Automate](https://make.powerautomate.com/) for your environment.
    2. Locate the flows associated with the error.
-   3. Disable the flows, wait a moment, and then re-enable them.
+   3. Disable the flows listed in the following table, wait a moment, and then re-enable them.
+
+   |Flow with error  |Related flows to disable and enable  |
+   |---------|---------|
+   |Deserialization of Inspection Definition Flow (the [msfp_question](/dynamics365/developer/reference/entities/msfp_question) table)     |- Deserialization of Inspection Definition Flow<br/>- Deserialization of Inspection Definition - Matrix Dynamics Child Flow |
+   |Deserialization of Inspection Response Flow (the [msfp_surveyresponse](/dynamics365/developer/reference/entities/msfp_surveyresponse) table)     |- Deserialization of Inspection Response<br/>- Deserialization of Inspection Response - Matrix Dynamics<br/>- Deserialization of Inspection Response - Recurrent |
 
    For more information, see [Flow isn't valid for ExecuteWorkflow error](../../customer-service/service-level-agreements/sla-modern-flow-not-valid.md).
-
-|Flow with error  |Related flows to disable and enable  |
-|---------|---------|
-|Deserialization of Inspection Definition Flow (the [msfp_question](/dynamics365/developer/reference/entities/msfp_question) table)     |- Deserialization of Inspection Definition Flow<br/>- Deserialization of Inspection Definition - Matrix Dynamics Child Flow |
-|Deserialization of Inspection Response Flow (the [msfp_surveyresponse](/dynamics365/developer/reference/entities/msfp_surveyresponse) table)     |- Deserialization of Inspection Response<br/>- Deserialization of Inspection Response - Matrix Dynamics<br/>- Deserialization of Inspection Response - Recurrent |
 
 ## More information
 
