@@ -1,4 +1,4 @@
-name: Manage Stale Branches
+name: Manage stale branches
 
 permissions:
   contents: write
@@ -17,6 +17,6 @@ jobs:
         RepoBranchSkipList: '[
                               "automation"
                              ]'
-        ReportOnly: true
+        ReportOnly: false
     secrets:
         AccessToken: ${{ secrets.GITHUB_TOKEN }}
