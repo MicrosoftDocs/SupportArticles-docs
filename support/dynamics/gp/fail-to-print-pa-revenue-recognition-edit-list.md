@@ -3,7 +3,7 @@ title: Errors when you print PA Revenue Recognition Edit List
 description: Provides a solution to errors that occurs when you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/14/2025
 ms.custom: sap:Project Accounting
 ---
 # Errors when you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP: "Total Revenues Earned is incorrect" and "Total Recognized Project Revenues is incorrect"
@@ -43,7 +43,7 @@ To resolve this problem, follow these steps.
 
 2. If a cost category ID is listed two times in the budget, run the following statement in SQL Query Analyzer or in SQL Server Management Studio. To do this, follow these steps:
 
-    1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Query Analyzer**. If you are using SQL Server 2005, click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2005**, and then click **SQL Server Management Studio**.
+    1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Management Studio**.
 
     2. Run the following select statement against the company database.
 
