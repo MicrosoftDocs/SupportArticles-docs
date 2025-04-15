@@ -1,22 +1,26 @@
 --- 
-title: Infinite loop detected when performing warehouse mobile app operation
-description: Provides steps to resolve infinite loop exception.
+title: Infinite Loop During Warehouse Mobile App Operation
+description: Solves an "Infinite loop detected" error that occurs during specific operations in the Warehouse Management mobile app in Microsoft Dynamics 365 Supply Chain Management.
 author: Koalena 
-ms.date: 04/04/2025 
+ms.date: 04/15/2025
+ms.custom: sap:Warehouse management
 --- 
- 
+# "Infinite loop detected" error occurs when performing warehouse mobile app operation
 
-# Infinite loop detected when performing warehouse mobile app operation
+This article addresses an "Infinite loop detected" error that occurs during specific operations in the [Warehouse Management mobile app](/dynamics365/supply-chain/warehousing/install-configure-warehouse-management-app).
 
 ## Symptoms
 
-When you perform warehouse mobile app operation, you may encounter error messages such as:
-"Infinite loop detected during Movement by template.", "Infinite loop detected during Report as Finished and put away", or similar.
+When you perform operations in the Warehouse Management mobile app, you might receive an error message that resembles the following:
+
+- > Infinite loop detected during Movement by template.
+
+- > Infinite loop detected during Report as Finished and put away.
 
 ## Cause
 
-This error occurs when the call stack depth exceeds a predefined limit to prevent an infinite loop. It typically happens when a large number of work lines are created or processed in a single scan.
+This issue occurs when the call stack depth exceeds a predefined limit, triggering a safeguard to prevent infinite loops. The error typically occurs when a large number of work lines are created or processed in a single scan.
 
 ## Resolution
 
-To resolve this issue, reduce the number of work lines processed in a single operation, for example [split a work](/dynamics365/supply-chain/warehousing/work-split) into several smaller ones.
+To resolve this issue, reduce the number of work lines processed in a single operation. You can achieve this by [splitting a large work](/dynamics365/supply-chain/warehousing/work-split) into several smaller ones.
