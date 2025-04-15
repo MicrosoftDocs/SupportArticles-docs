@@ -1,11 +1,11 @@
 ---
 title: NTLM network authentication changes
 description: Describes a new behavior in Windows Server 2003 SP1 that affects NTLM password changes and how to use a registry to change the behavior.
-ms.date: 04/14/2025
+ms.date: 04/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, maotori
+ms.reviewer: kaushika, maotori，herbertm
 ms.custom:
 - sap:windows security technologies\legacy authentication (ntlm)
 - pcy:WinComm Directory Services
