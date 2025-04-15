@@ -4,7 +4,7 @@ description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 ms.custom: sap:App Creation (Canvas App)
 ms.reviewer: tapanm, lanced, tahoon 
-ms.date: 04/14/2025
+ms.date: 04/15/2025
 ms.author: kvivek
 search.audienceType: 
   - maker
