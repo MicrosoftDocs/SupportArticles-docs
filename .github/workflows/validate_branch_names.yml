@@ -4,7 +4,7 @@ on:
   create
 
 jobs:
-  on-branch-create:
+  validate-branch-name:
     if: startsWith(github.ref, 'refs/heads/')
     runs-on: windows-latest
     steps:
