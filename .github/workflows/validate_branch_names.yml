@@ -1,0 +1,19 @@
+name: Validate branch names
+
+on:
+  create
+
+jobs:
+  on-branch-create:
+    if: startsWith(github.ref, 'refs/heads/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate name
+        run: |
+            INVALID_CHARS='[<>:"/\\|?*]'
+            if [[ "${{ github.ref_name }}" =~ $INVALID_CHARS ]]; then
+                echo "Error: Branch name '${{ github.ref_name }}' created by ${{ github.actor }} contains invalid characters."
+                exit 1
+            else
+                echo "Branch name '${{ github.ref_name }}' is valid."
+            fi

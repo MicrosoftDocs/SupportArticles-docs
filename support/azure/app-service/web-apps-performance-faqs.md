@@ -4,13 +4,13 @@ description: Get answers to frequently asked questions about availability, perfo
 author: genlin
 ms.author: genli
 ms.service: azure-app-service
-ms.date: 03/05/2024
+ms.date: 04/15/2025
 ms.reviewer: toan, shrahman
 ---
 # Application performance FAQs for Web Apps in Azure
 
 > [!NOTE]
-> Some of the below guidelines might only work on Windows or Linux App Services. For example, Linux App Services run in 64-bit mode by default.
+> Some of the following guidelines might only work on Windows or Linux App Services. For example, Linux App Services run in 64-bit mode by default.
 
 This article has answers to frequently asked questions (FAQs) about application performance issues for the [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
 
@@ -28,18 +28,24 @@ The platform processes will consume a minimum amount of resources (such as CPU, 
 
 Multiple factors might contribute to slow app performance. For detailed troubleshooting steps, see [Troubleshoot slow web app performance](/azure/app-service/troubleshoot-performance-degradation).
 
+> [!TIP]
+> - Enable the **Always On** setting under **Configuration** > **General settings** to keep your app warm and avoid cold starts. This helps reduce delay after idle time, especially in Basic and higher plans.
+> - Configure a Health check path to monitor app health and automatically replace unresponsive instances. This helps maintain availability and performance. For more information, see [Monitor App Service instances by using Health check](/azure/app-service/monitor-instances-health-check).
+
 ## How do I troubleshoot a high CPU-consumption scenario?
 
 In some high CPU-consumption scenarios, your app might truly require more computing resources. In that case, consider scaling to a higher service tier so the application gets all the resources it needs. Other times, high CPU consumption might be caused by a bad loop or by a coding practice. Getting insight into what's triggering increased CPU consumption is a two-part process. First, create a process dump, and then analyze the process dump. For more information, see [Capture and analyze a dump file for high CPU consumption for Web Apps](/archive/blogs/asiatech/how-to-capture-dump-when-intermittent-high-cpu-happens-on-azure-web-app).
 
 ## How do I troubleshoot a high memory-consumption scenario?
 
-In some high memory-consumption scenarios, your app might truly require more computing resources. In that case, consider scaling to a higher service tier so the application gets all the resources it needs. Other times, a bug in the code might cause a memory leak. A coding practice also might increase memory consumption. Getting insight into what's triggering high memory consumption is a two-part process. First, create a process dump, and then analyze the process dump. Crash Diagnoser from the Azure Site Extension Gallery can efficiently perform both these steps. For more information, see [Capture and analyze a dump file for intermittent high memory for Web Apps](/archive/blogs/asiatech/how-to-capture-and-analyze-dump-for-intermittent-high-memory-on-azure-web-app).
+In some high memory-consumption scenarios, your app might truly require more computing resources. In that case, consider scaling to a higher service tier so the application gets all the resources it needs. Other times, a bug in the code might cause a memory leak. A coding practice might also increase memory consumption. Getting insight into what's triggering high memory consumption is a two-part process. First, create a process dump, and then analyze the process dump. Crash Diagnoser from the Azure Site Extension Gallery can efficiently perform both these steps. For more information, see [Capture and analyze a dump file for intermittent high memory for Web Apps](/archive/blogs/asiatech/how-to-capture-and-analyze-dump-for-intermittent-high-memory-on-azure-web-app).
 
 ## How do I automate App Service web apps by using PowerShell?
 
-You can use PowerShell cmdlets to manage and maintain App Service web apps. In our blog post [Automate web apps hosted in Azure App Service by using PowerShell](/archive/blogs/puneetgupta/automating-webapps-hosted-in-azure-app-service-through-powershell-arm-way), we describe how to use Azure Resource Manager-based PowerShell cmdlets to automate common tasks. The blog post also has sample code for various web apps management tasks.
-For descriptions and syntax for all App Service web apps cmdlets, see [Az.Websites](/powershell/module/az.websites).
+You can use PowerShell cmdlets to manage and maintain App Service web apps. In our blog post [Automate web apps hosted in Azure App Service by using PowerShell](/archive/blogs/puneetgupta/automating-webapps-hosted-in-azure-app-service-through-powershell-arm-way), we describe how to use Azure Resource Manager-based PowerShell cmdlets to automate common tasks.
+
+> [!NOTE]
+> For current automation scripts, use the latest [Az.Websites](/powershell/module/az.websites) module. The older `AzureRM` module is deprecated.
 
 ## How do I view my web app's event logs?
 
@@ -85,15 +91,6 @@ To see what is causing the error and to resolve the issue, follow the steps in [
 ## Where can I learn more about quotas and limits for various App Service plans?
 
 For information about quotas and limits, see [App Service limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits).
-
-## How do I decrease the response time for the first request after idle time?
-
-By default, web apps are unloaded if they're idle for a set period of time. This way, the system can conserve resources. The downside is that the response to the first request after the web app is unloaded is longer, to allow the web app to load and start serving responses. In Basic and Standard service plans, you can turn on the **Always On** setting to keep the app always loaded. This eliminates longer load times after the app is idle. To change the **Always On** setting:
-
-1. In the Azure portal, go to your web app.
-2. Select **Configuration**
-3. Select **General settings**.
-4. For **Always On**, select **On**.
 
 ## How do I turn on failed request tracing?
 
@@ -161,13 +158,13 @@ For more information, see [Configure web apps in App Service](/azure/app-service
 
 ## Why does my request time out after 230 seconds?
 
-Azure Load Balancer has a default idle timeout setting of four minutes. This setting is generally a reasonable response time limit for a web request. so, App Service returns a timeout to the client if your application does not return a response within approximately 240 seconds (230 seconds on Windows app, 240 seconds on Linux app).　If your web app requires background processing, we recommend using Azure WebJobs. The Azure web app can call WebJobs and be notified when background processing is finished. You can choose from multiple methods for using WebJobs, including queues and triggers.
+Azure Load Balancer has a default idle timeout setting of four minutes. This setting is generally a reasonable response time limit for a web request. Therefore, App Service returns a timeout to the client if your application does not return a response within approximately 240 seconds (230 seconds on Windows app, 240 seconds on Linux app).　If your web app requires background processing, we recommend using Azure WebJobs. The Azure web app can call WebJobs and be notified when background processing is finished. You can choose from multiple methods for using WebJobs, including queues and triggers.
 
 WebJobs is designed for background processing. You can do as much background processing as you want in a WebJob. For more information about WebJobs, see [Run background tasks with WebJobs](/azure/app-service/webjobs-create).
 
 ## ASP.NET Core applications that are hosted in App Service sometimes stop responding. How do I fix this issue?
 
-A known issue with an earlier [Kestrel version](https://github.com/aspnet/KestrelHttpServer/issues/1182) might cause an ASP.NET Core 1.0 app that's hosted in App Service to intermittently stop responding. You also might see this message: "The specified CGI Application encountered an error and the server terminated the process."
+A known issue with an earlier [Kestrel version](https://github.com/aspnet/KestrelHttpServer/issues/1182) might cause an ASP.NET Core 1.0 app that's hosted in App Service to intermittently stop responding. You might also see this message: "The specified CGI Application encountered an error and the server terminated the process."
 
 This issue is fixed in Kestrel version 1.0.2. This version is included in the ASP.NET Core 1.0.3 update. To resolve this issue, make sure you update your app dependencies to use Kestrel 1.0.2. Alternatively, you can use one of two workarounds that are described in the blog post [ASP.NET Core 1.0 slow perf issues in App Service web apps](/archive/blogs/waws/asp-net-core-slow-perf-issues-on-azure-websites).
 
@@ -183,12 +180,20 @@ If you aren't using Local Cache and are experiencing this issue, submit a suppor
 
 This error typically occurs if the outbound TCP connections on the VM instance are exhausted. In App Service, limits are enforced for the maximum number of outbound connections that can be made for each VM instance. For more information, see [Cross-VM numerical limits](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#cross-vm-numerical-limits).
 
-This error also might occur if you try to access a local address from your application. For more information, see [Local address requests](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#local-address-requests).
+This error might also occur if you try to access a local address from your application. For more information, see [Local address requests](https://github.com/projectkudu/kudu/wiki/Azure-Web-App-sandbox#local-address-requests).
 
 For more information about outbound connections in your web app, see the blog post about [outgoing connections to Azure websites](https://www.freekpaans.nl/2015/08/starving-outgoing-connections-on-windows-azure-web-sites/).
 
 ## How do I use Visual Studio to remote debug my App Service web app?
 
 For a detailed walkthrough that shows you how to debug your web app by using Visual Studio, see [Remote debug your App Service web app](/archive/blogs/benjaminperkins/remote-debug-your-azure-app-service-web-app).
+
+## Additional recommendations for performance and resiliency
+
+- Use Application Insights and Azure Monitor for full-stack observability of your App Service app, including telemetry, dependency tracing, and live metrics.
+
+- If you're deploying in regions that support availability zones, consider enabling zone redundancy to enhance resiliency during regional outages. For more information, see [Reliability in Azure App Service](/azure/reliability/reliability-app-service).
+
+- App Service undergoes routine maintenance to ensure platform reliability. For more control over update behavior, especially in App Service Environment v3, configure upgrade preference.  For more information, see [Routine (planned) maintenance for Azure App Service](/azure/app-service/routine-maintenance).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
