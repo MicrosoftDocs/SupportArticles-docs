@@ -10,7 +10,7 @@ ms.custom:
 - sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
 - pcy:WinComm Devices Deploy
 ---
-# Troubleshoot Windows update error 0x80070490
+# Troubleshoot Windows Update error 0x80070490
 
 Windows Update error 0x80070490 typically occurs due to driver failures when users or administrators try to install updates. This document provides a comprehensive guide to identifying and resolving this error, which can manifest in various symptoms such as pending updates, failed servicing stack updates, and feature update installation failures.
 
