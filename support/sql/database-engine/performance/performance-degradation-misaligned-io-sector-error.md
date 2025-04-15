@@ -3,8 +3,8 @@ title: Performance Degradation from Misaligned I/O Sector Size Error
 description: This article describes how to resolve misaligned I/O operations due to sector size mismatches in SQL Server.
 ms.author: dpless
 author: dplessMSFT
-ms.reviewer: mathoma, v-sidong
-ms.date: 03/21/2025
+ms.reviewer: mathoma, dpless, v-sidong
+ms.date: 04/15/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ---
 # Performance degradation caused by misaligned I/O sector size errors in SQL Server
