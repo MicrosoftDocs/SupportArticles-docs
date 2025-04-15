@@ -3047,7 +3047,7 @@ items:
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
   - name: Windows Update fails - installation stops with error
     items:
-    - name: Troubleshoot Windows Update Error Code 0x8024002E
+    - name: Troubleshoot Windows Update error 0x8024002E
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
