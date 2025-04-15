@@ -1,21 +1,21 @@
 ---
 title: Errors when you print PA Revenue Recognition Edit List
-description: Provides a solution to errors that occurs when you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP.
+description: Provides a solution to errors that occur when you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 04/14/2025
+ms.date: 04/15/2025
 ms.custom: sap:Project Accounting
 ---
-# Errors when you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP: "Total Revenues Earned is incorrect" and "Total Recognized Project Revenues is incorrect"
+# "Total Revenues Earned is incorrect" and "Total Recognized Project Revenues is incorrect" errors when you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP
 
-This article provides a solution to errors that occurs when you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP.
+This article provides a solution to errors that occur when you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 926399
 
 ## Symptoms
 
-When you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP, you receive the following error messages.
+When you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP, you might receive the following error messages:
 
 - Error message 1
 
@@ -37,13 +37,13 @@ To resolve this problem, follow these steps.
 
 1. Determine whether the cost category ID is listed two times in the budget for the project. To do this, follow these steps:
 
-    1. On the **Cards** menu, point to **Project**, and then click **Project**.
-    2. In the Project Maintenance window, select the project, and then click **Budget**.
+    1. On the **Cards** menu, point to **Project**, and then select **Project**.
+    2. In the Project Maintenance window, select the project, and then select **Budget**.
     3. In the Budget Maintenance window, determine whether a cost category ID is listed two times in the budget. The duplicate cost category IDs in the Budget Maintenance window have a sequence number of 0 in the **Seq** column. If a cost category ID has a sequence number of 0, a duplicate record exists for this project cost category combination in the PA Budget Master table (PA01301).
 
 2. If a cost category ID is listed two times in the budget, run the following statement in SQL Query Analyzer or in SQL Server Management Studio. To do this, follow these steps:
 
-    1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **SQL Server Management Studio**.
+    1. Select **Start**, point to **All Programs** > **Microsoft SQL Server**, and then select **SQL Server Management Studio**.
 
     2. Run the following select statement against the company database.
 
