@@ -59,4 +59,4 @@ To solve this issue,
 
 4. Select **Test** to verify the new selector. For more information, see [Test a selector](/power-automate/desktop-flows/test-selectors).
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../../includes/third-party-disclaimer.md)]

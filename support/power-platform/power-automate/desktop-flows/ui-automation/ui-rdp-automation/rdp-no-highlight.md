@@ -78,4 +78,4 @@ The communication with the remote agent components doesn't work.
 
 [Automate on virtual desktops](/power-automate/desktop-flows/virtual-desktops)
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../../includes/third-party-disclaimer.md)]

@@ -50,4 +50,4 @@ Depending on whether the issue occurs during design time or runtime, the followi
 
   - **AutomationServerEndpoint.Runtime.CallTimeout**: This setting increases the maximum waiting time during runtime for an action to be executed.
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../../includes/third-party-disclaimer.md)]
