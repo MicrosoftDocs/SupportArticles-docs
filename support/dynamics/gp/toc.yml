@@ -214,8 +214,6 @@
     href: upgrade-apps-to-use-gpconndll-gpconnnetdll-file.md
   - name: Use a VBA script to connect to a SQL database
     href: use-vba-script-connect-sql-database.md
-  - name: Use Default field option is unavailable for GL Account Description
-    href: use-default-field-option-is-unavailable-for-gl-account-description.md
   - name: Use Dexterity Script Debugger to trace bugs and performance issues
     href: use-dexterity-script-debugger-trace-bug.md
   - name: Use the Table Import feature to import data
@@ -344,8 +342,6 @@
       href: difference-between-void-and-delete-in-purchase-order-entry-windows.md
     - name: Different types of purchase order statuses
       href: different-types-purchase-order-statuses.md
-    - name: Display transfer number in the Purchase Order Processing Document Inquiry window
-      href: display-transfer-number-in-purchase-order-processing-document-inquiry.md
     - name: Error when printing imported purchase order
       href: fail-to-print-imported-purchase-order.md
     - name: Error when selecting an existing purchase order
@@ -388,8 +384,6 @@
       href: modify-pop-purchase-order-blank-form-report.md
     - name: Modify the Purchase Order Blank Form
       href: change-purchase-order-blank-form-display-brackets.md
-    - name: MRP is suggesting to create a Purchase Order
-      href: mrp-suggests-to-create-purchase-order.md
     - name: One or more purchase order items can't be received
       href: one-more-po-items-cannot-be-received.md
     - name: POP Back Ordered Items Received report in Dynamics GP
@@ -434,8 +428,6 @@
       href: add-internet-information-for-item-to-sop-blank-invoice-form.md
     - name: Add SOP information to POP Purchase Order forms
       href: add-sop-information-to-pop-purchase-order-blank-form.md
-    - name: Add tax details to SOP Blank Invoice Form report
-      href: add-tax-details-to-sop-blank-invoice-form-report.md
     - name: Add the Additional Information field from Internet Information window
       href: add-the-additional-information-field.md
     - name: Add the Additional Information field from the Internet Information window
@@ -450,8 +442,6 @@
       href: you-cannot-inactivate-a-customer-record.md
     - name: Can't transfer encumbrances for XXXX when there are encumbrance amounts
       href: cannot-transfer-encumbrances-for-xxxx.md
-    - name: Close the Sales Kit Options window before modifying the transaction
-      href: close-the-sales-kit-options-window-before-modifying-the-transaction.md
     - name: Commission data isn't imported when running a Sales Order Processing integration
       href: commission-data-not-imported-when-running-sales-order-processing-integration.md
     - name: Error when you try to bill a cost category
@@ -532,8 +522,6 @@
       href: process-bacs-payments-when-you-use-european-eft-module.md
     - name: Sample BAI file for Microsoft Dynamics GP
       href: sample-bai-file-for-microsoft-dynamics-gp.md
-    - name: Save/Delete buttons and Tax Detail ID Lookup button are grayed out
-      href: save-delete-tax-detail-id-lookup-button-grayed-out.md
     - name: Set up tax-free import creditors for Australian GST
       href: set-up-tax-free-import-creditors.md
     - name: Set up VAT Daybook reports in Microsoft Dynamics GP
@@ -1316,8 +1304,6 @@
       href: void-a-scheduled-payment.md
     - name: Send E-mail Statements checkbox/section grayed out
       href: send-e-mail-statements-checkbox-grayed-out.md
-    - name: The field that's used to print outstanding document amounts
-      href: description-of-the-field-that-is-used-to-print-outstanding-document-amounts.md
     - name: The Purchasing purchase option for an item does not exist
       href: purchase-order-failure-error-when-transferring-requisition-to-purchase-order.md
     - name: The status of a purchase order is set to unapproved
@@ -1446,8 +1432,6 @@
       href: add-display-calc-work-records-shortcut-in-canadian-payroll.md
     - name: Add the "Pay Code YTD" column to payroll checks
       href: add-pay-code-ytd-column-to-payroll-checks.md
-    - name: An incorrect RECON batch is created in Payroll
-      href: an-incorrect-recon-batch-is-created.md
     - name: Assign an employee and allocate the wages to different departments
       href: assign-an-employee-allocate-the-wages.md
     - name: Calculations for the Quarterly 941 report in US Payroll
@@ -1466,14 +1450,10 @@
       href: create-test-historical-company-payroll.md
     - name: Create a tiered percent 401(k) deduction with a matching benefit
       href: create-a-tiered-percent-401-parentheses-k-deduction.md
-    - name: CSST Setup for Canadian Payroll in Dynamics GP
-      href: csst-setup-canadian-payroll.md
     - name: CSST/WCB functionality isn't working in Canadian Payroll
       href: csst-wcb-functionality-is-not-working.md
     - name: Description of the errors on the Payroll Validation report
       href: errors-the-payroll-validation-report.md
-    - name: Error during Canadian Payroll Employee Import
-      href: error-during-canadian-payroll-employee-import.md
     - name: Error message when you print the FUTA or SUTA report
       href: could-not-find-stored-procedure.md
     - name: Error packing batch entry file -1
@@ -1490,8 +1470,6 @@
       href: get-the-shift-code-work-payroll.md
     - name: How to process and track an advance pay run
       href: process-track-an-advance-pay-run.md
-    - name: How to set up Quebec QHIP tax in Canadian Payroll
-      href: set-up-quebec-qhip-tax-canadian-payroll.md
     - name: How to accrue vacation by units in Canadian Payroll
       href: how-to-accrue-vacation-by-units-in-canadian-payroll.md
     - name: How to correct over-withholding of employee payroll taxes
@@ -1546,12 +1524,8 @@
       href: vac-sick-tab-is-grayed-out-or-missing-on-employee-maintenance-card.md
     - name: Turn off Garnishment Detail/Summary reports in Payroll
       href: turn-off-garnishment-detail-summary-report.md
-    - name: Undefined Symbol FOO764DO5774DD or FOO764DO1098 or Report not found
-      href: undefined-symbol-foo764do5774dd-or-foo764do1098-or-report-not-found.md
     - name: Use Report Writer to create calculated field to mask the social security number
       href: use-report-writer-to-create-calculated-field.md
-    - name: Vacation paycode not distributing in Canadian Payroll
-      href: vacation-paycode-not-distributing-in-canadian-payroll.md
     - name: Vacation pay hours exceed employee vacation available warning
       href: vacation-pay-hours-exceed-employee-vacation-available-error.md
     - name: Verify the tax tables are installed correctly
@@ -1628,8 +1602,6 @@
       href: optional-year-end-closing-procedures-for-project-accounting.md
     - name: PA History Receivings Report doesn't order by project number
       href: pa-history-receivings-report-not-order-by-project-number.md
-    - name: Please enter the renewal date when saving a service fee as a renewable fee
-      href: enter-the-renewal-date-error-when-saving-service-fee-as-renewable-fee.md
     - name: Printing Project Accounting Billing Invoices in the Customers Currency
       href: how-to-print-project-accounting-billing-invoices.md
     - name: Problems occur when you approve a document
@@ -1638,8 +1610,6 @@
       href: re-create-project-accounting-reports-dictionary.md
     - name: Revenue recognition calculation for service fees in Project Accounting
       href: revenue-recognition-calculation-for-service-fees.md
-    - name: Tax calculations in Project Accounting
-      href: tax-calculations-in-project-accounting.md
     - name: The multicurrency billing feature
       href: multicurrency-billing-feature.md
     - name: The Project button is missing from Maintenance window
@@ -1852,8 +1822,6 @@
       href: table-hierarchy-inconsistency-errors-in-dexterity.md
     - name: The approval email isn't routed to the correct manager
       href: approval-email-is-routed-to-wrong-manager.md
-    - name: The Save button is unavailable when  creating a user in User Setup
-      href: the-save-button-is-unavailable-when-creating-user-in-user-setup.md
     - name: The selected database exists when installing Web Services
       href: selected-database-exists-error-when-installing-web-services.md
     - name: There was a problem ascertaining product
