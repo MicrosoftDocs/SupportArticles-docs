@@ -18,6 +18,13 @@ Power Automate for desktop can't access the UI elements of a Java desktop applic
 
 ## Troubleshooting steps
 
+ 1. Run the **Power Automate Desktop** **Troubleshooter**. Open **Power Automate Desktop** and navigate to **Help** > **Troubleshooter**.
+ 2. On the **Troubleshooter** window, click **Run** on the **Troubleshoot UI/Web automation issues** panel.
+ 3. If an issue is found for **Java Automation**, expand the panel to see the details.
+ 4. If there is a **Fix** button available, click on it in order to apply the fix. It is advised that you close all running **Java** applications first.
+
+## Manual Troubleshooting steps
+
 1. Ensure that you have Java installed on your machine:
 
    - Open the Command Line tool (cmd) and run the following command:
