@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot high data ingestion in Application Insights
 description: Provides a step-by-step guide to troubleshoot high data ingestion scenarios and provides methods to reduce costs.
-ms.date: 03/31/2025
+ms.date: 04/16/2025
 ms.service: azure-monitor
 ms.reviewer: jeanbisutti, toddfous, aaronmax, v-weizhu
 ms.custom: sap:Application Insights
@@ -202,7 +202,7 @@ dependencies
     | project-away TotalBilledSize
     ```
 
-    :::image type="content" source="media/troubleshoot-high-data-ingestion/application-driving-costs-for-traces.png" alt-text="A screenshot thst shows the specific application driving the costs for traces.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/specific-application-driving-costs-for-traces.png" alt-text="A screenshot thst shows the specific application driving the costs for traces.":::
 
 3. Run the following query specific to that application and look further into the specific logger categories sending telemetry to the `AppTraces` table:
 
