@@ -13271,6 +13271,70 @@
     {
       "source_path": "support/power-platform/power-automate/dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/cloud-flows/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows"
+    },
+    {
+      "source_path": "support/dynamics/gp/add-tax-details-to-sop-blank-invoice-form-report.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/vacation-paycode-not-distributing-in-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/an-incorrect-recon-batch-is-created.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/the-save-button-is-unavailable-when-creating-user-in-user-setup.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/close-the-sales-kit-options-window-before-modifying-the-transaction.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/csst-setup-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/display-transfer-number-in-purchase-order-processing-document-inquiry.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/error-during-canadian-payroll-employee-import.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/description-of-the-field-that-is-used-to-print-outstanding-document-amounts.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/mrp-suggests-to-create-purchase-order.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/enter-the-renewal-date-error-when-saving-service-fee-as-renewable-fee.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/save-delete-tax-detail-id-lookup-button-grayed-out.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/set-up-quebec-qhip-tax-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/tax-calculations-in-project-accounting.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/undefined-symbol-foo764do5774dd-or-foo764do1098-or-report-not-found.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/use-default-field-option-is-unavailable-for-gl-account-description.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
     }
   ]
 }
