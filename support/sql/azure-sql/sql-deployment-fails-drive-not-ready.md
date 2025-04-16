@@ -1,18 +1,18 @@
 ---
-title: SQL Server VMs Failing to Deploy or SQL Server Instance Not Coming Online
-description: Learn how to address a failure when you try to deploy a SQL Server on Azure VM image in Azure Marketplace, or when a manually installed SQL Server instance fails to come online after an Azure VM is restarted or deallocated.
-ms.date: 04/14/2025
+title: SQL Server VMs Fails to Deploy or SQL Server Instance Not Come Online
+description: Addresses a failure when you deploy a SQL Server on Azure VM image in Azure Marketplace or when a manually installed SQL Server instance fails to come online after an Azure VM is restarted or deallocated.
+ms.date: 04/16/2025
 ms.author: mathoma
 author: MashaMSFT
 ms.reviewer: mathoma, v-sidong
 ms.custom: sap:SQL Licensing, Installation and Patching
 ---
-# SQL Server on Azure VM failing to deploy or SQL Server instance not coming online
+# SQL Server on Azure VM fails to deploy or SQL Server instance fails to come online
 
 This article helps you resolve the following scenarios:
 
-- A SQL Server on Azure Virtual Machine (VM) Azure Marketplace image failing to deploy.
-- A SQL Server instance failing to come online after an Azure VM is restarted or deallocated.
+- A SQL Server on Azure virtual machine (VM) Azure Marketplace image fails to deploy.
+- A SQL Server instance fails to come online after an Azure VM is restarted or deallocated.
 
 _Applies to:_ &nbsp;SQL Server on Azure VMs
 
@@ -67,7 +67,7 @@ tempdb files could not be initialized.
 
 ## Cause
 
-Some of the newest Azure VM sizes present a RAW local SSD volume for ephemeral storage configured with the Non-Volatile Memory Express (NVMe) interface. This configuration results in failure because SQL Server attempts to place the `tempdb` database on the ephemeral storage and fails as the local SSD volume isn't available. Additionally, the ephemeral storage shows as RAW after the machine is deallocated. 
+Some of the newest Azure VM sizes present a RAW local SSD volume for ephemeral storage configured with the Non-Volatile Memory Express (NVMe) interface. This configuration results in failures because SQL Server attempts to place the `tempdb` database on the ephemeral storage and fails as the local SSD volume isn't available. Additionally, the ephemeral storage shows as RAW after the machine is deallocated. 
 
 The RAW local SSD volume causes the SQL VM deployment to fail, and prevents manually installed SQL Server instances from coming online after the VM is restarted. In both cases, SQL Server is trying to initialize the `tempdb` database on the ephemeral storage, which isn't available. The deployment fails because SQL Server is installed during the deployment of the Azure VM, and the ephemeral storage isn't available. Likewise, manually installed instances of SQL Server fail to come online after the VM is restarted because the ephemeral storage isn't available when SQL Server tries to create the `tempdb` database.
 
