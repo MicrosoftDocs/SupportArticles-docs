@@ -4,7 +4,7 @@ description: Resolves an error that occurs in the action 'Take screenshot', when
 ms.author: iomavrid
 author: yiannismavridis
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
-ms.date: 04/15/2025
+ms.date: 04/16/2025
 ---
 # Unattended desktop flow run fails with the "Failed to take screenshot" error
 
@@ -30,9 +30,15 @@ The issue occurs due to a specific security policy that impacts how a User Accou
 
 ## Resolution 1: Locate and allow binaries except for non-Windows ones to run without elevation prompt
 
-Configure the [User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-behavior-of-the-elevation-prompt-for-administrators-in-admin-approval-mode) security policy setting.
+To solve this issue,
 
-:::image type="content" source="media/take-screenshot-action-fails-in-unattended-mode/local-security-policy.png" alt-text="Screenshot of the User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode setting in the Local Security Policy window." lightbox="media/take-screenshot-action-fails-in-unattended-mode/local-security-policy.png":::
+1. In Local Group Policy Editor, go to **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies** > **Security Options**.
+1. Locate the **User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode** security policy setting.
+1. Set the value to **Prompt for consent for non-Windows binaries**.
+
+   :::image type="content" source="media/take-screenshot-action-fails-in-unattended-mode/local-security-policy.png" alt-text="Screenshot of the User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode setting in the Local Security Policy window." lightbox="media/take-screenshot-action-fails-in-unattended-mode/local-security-policy.png":::
+
+For more information about the best practices, location, values, policy management and security considerations for the security policy setting, see [User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-behavior-of-the-elevation-prompt-for-administrators-in-admin-approval-mode).
 
 ## Resolution 2: Change the registry key below
 

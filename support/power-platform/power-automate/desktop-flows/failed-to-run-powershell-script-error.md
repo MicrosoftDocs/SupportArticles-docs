@@ -4,7 +4,7 @@ description: Solves an error that occurs when you run the Run PowerShell script 
 ms.author: iomavrid
 author: yiannismavridis
 ms.custom: sap:Desktop flows
-ms.date: 04/15/2025
+ms.date: 04/16/2025
 ---
 # "Failed to run PowerShell script" error when running the Run PowerShell script action
 
@@ -48,14 +48,14 @@ To resolve this issue, follow these steps to update the **Path** environment var
 
 1. Under the **System variables** section, locate and select the **Path** variable, then select **Edit**.
 
-1. Add the directory path of `powershell.exe` to the list of paths. In most cases, the missing path is:
+1. Add the directory path of `powershell.exe` to the list of paths.
 
-   **C:\WINDOWS\System32\WindowsPowerShell\v1.0\\**
+   In most cases, the missing path is: **C:\WINDOWS\System32\WindowsPowerShell\v1.0\\**
 
-1. To confirm the correct path, open a PowerShell terminal and run the following command:
+   To confirm the correct path, open a PowerShell terminal and run the following command:
 
    `$PsHome`
 
-   Use the displayed path as the value to add to the **Path** variable if it differs.
+   Use the displayed path as the value to add to the **Path** variable.
 
 1. Select **OK** to save changes and close all dialogs.
