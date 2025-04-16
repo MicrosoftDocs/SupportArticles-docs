@@ -74,7 +74,7 @@ Warning message:
 
 > DUPLICATED_EMAIL: The Email Address \<Email address, such as user@contoso.com\> in the user file is already assigned to a different user in your Viva Glint People Database.
 
-This issue occurs because one or more users in the uploaded file are assigned an email address that's already associated with a user whose record is in a [soft-deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) in Viva Glint. 
+This issue occurs because one or more users in the uploaded file are assigned an email address that's already associated with a user whose record is in a [soft-deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) in Viva Glint, but the uploaded Employee ID doesn't match. 
 
 ### Resolution
 
@@ -84,7 +84,7 @@ This issue occurs because one or more users in the uploaded file are assigned an
 
      - If the user should remain deleted from Viva Glint, remove their records from the file. Then, upload the file again.
      - If the user should be restored in Viva Glint and 30 days have passed since the deletion date, upload their record to Viva Glint as a new user.
-     - If the user should be restored from their soft-deleted state before 30 days pass, upload their record to Viva Glint with the **same email address and employee ID** that are tied to their soft-deleted record. Employee ID information isn't available in Viva Glint for soft-deleted users, but admins can verify the user's employee ID in Entra.
+     - If the user should be restored from their soft-deleted state before 30 days pass, upload their record to Viva Glint with the **same email address and Employee ID** that are tied to their soft-deleted record. Employee ID information isn't available in Viva Glint for soft-deleted users, but admins can verify the user's Employee ID in Entra.
 
 ## DUPLICATED_EXTERNAL_USER_ID
 
