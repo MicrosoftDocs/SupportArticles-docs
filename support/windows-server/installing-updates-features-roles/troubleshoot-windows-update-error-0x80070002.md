@@ -120,6 +120,7 @@ User: SYSTEM
 Computer: <ComputerName>  
 Description:  
 Installation Failure: Windows failed to install the following update with error 0x80070002: Security Update for Windows (KB4586793).
+```
 
 The failure is caused by an issue during update drivers operation. For example, the following **CBS.log** file indicates the `flpydisk.inf` driver is the cause:
 
@@ -130,7 +131,7 @@ Info CBS Doqe: Failed installing driver updates [HRESULT = 0x80070002 - ERROR_FI
 
 ### Resolution: Import registry keys
 
-To fix the issue, you need to export the registry keys for the driver on a working computer, and then import them on the computer that has the issue.
+To fix the issue, you need to export the registry keys for the driver on a working computer, and then import them on the computer with the issue.
 
 The resolution depends on what is missing. For example, to fix the issue with `flpydisk.inf`, which is listed as an example in the symptom section, export and import the following two registry keys.
 
