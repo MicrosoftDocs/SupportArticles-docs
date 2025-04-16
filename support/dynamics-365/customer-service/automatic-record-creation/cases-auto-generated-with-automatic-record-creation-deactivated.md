@@ -27,20 +27,22 @@ To stop the automatic case creation, follow these steps to identify and deactiva
 1. Identify the associated child flow:
 
    - Go to **Customer Service Admin Center** > **Case settings** > **Automatic record creation and update rules**.
-     - Locate the ARC rule that was previously deactivated or deleted.
-     - Check for any associated child flows that might still be active.
+
+     1. Locate the ARC rule that was previously deactivated or deleted.
+     1. Check for any associated child flows that might still be active.
+
    - If the flow was created as part of a Dynamics 365 solution, navigate to **Power Automate** > **Solutions**. Review all flows related to record creation.
 
 2. Deactivate the associated child flow:
 
-   - Open the identified flow in Power Automate.
-   - Select **Edit** to inspect the flow structure.
-   - Turn off the flow by selecting the toggle button at the top of the flow editor or from the flow list.
+   1. Open the identified flow in Power Automate.
+   1. Select **Edit** to inspect the flow structure.
+   1. Turn off the flow by selecting the toggle button at the top of the flow editor or from the flow list.
 
 3. Verify the fix:
 
-   - Send a test email or trigger the condition that previously generated cases.
-   - Confirm that cases are no longer being automatically created.
+   1. Send a test email or trigger the condition that previously generated cases.
+   1. Confirm that cases are no longer being automatically created.
 
 ## More information
 
