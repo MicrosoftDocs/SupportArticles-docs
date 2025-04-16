@@ -254,7 +254,7 @@ sections:
           
           To change from the default behavior, you can customize the warmup endpoint path and status codes that consider the site to be warmed up. To do this, set the [WEBSITE_WARMUP_PATH](/azure/app-service/reference-app-settings?tabs=kudu%2Cdotnet#app-environment) and [WEBSITE_WARMUP_STATUSES](/azure/app-service/reference-app-settings?tabs=kudu%2Cdotnet#app-environment) application settings.
 
-          The warmup request also might fail because of port misconfiguration. 
+          The warmup request also might fail because of port misconfiguration.
           
           To make sure that the port is correctly configured on Azure App Services, see the question, *How do I specify the port in my Linux container?*
       - question: |
