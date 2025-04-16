@@ -98,8 +98,8 @@
           href: desktop-flows/ui-automation/failed-get-ui-element.md
         - name: Failed to get element/window or Element/Window wasn't found errors
           href: desktop-flows/ui-automation/ui-automation-action-fails-errors.md
-        - name: Operation takes a long time and fails during runtime 
-          href: desktop-flows/ui-automation/ui-rdp-automation/something-takes-long-and-fails.md
+        - name: Interactions with RDP or Citrix applications take a long time and fail
+          href: desktop-flows/ui-automation/ui-rdp-automation/interactions-with-rdp-citrix-takes-long-and-fails.md
         - name: SAP UI element click issue
           href: desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md
         - name: Set drop-down list value in window/on web page action fails
