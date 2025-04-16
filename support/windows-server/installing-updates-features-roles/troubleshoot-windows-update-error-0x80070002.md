@@ -14,7 +14,7 @@ ms.custom:
 
 The Windows Update error 0x80070002 typically occurs because of missing or corrupt files necessary for the update or incomplete previous updates. Understanding the root causes and following the appropriate troubleshooting steps can help resolve this issue effectively.
 
-:::image type="content" source="./media/troubleshoot-windows-update-error-0x80070002/updateerror0x80070002-wusaerror.png" alt-text="Windows Update error 0x80070002 message":::
+:::image type="content" source="./media/troubleshoot-windows-update-error-0x80070002/wusa-error-0x80070002.png" alt-text="Screenshot showing the Windows Update error 0x80070002.":::
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ Error CSI 000000fd (F) 80070002 [Warning,Facility=FACILITY_NTWIN32,Code=ERROR_FI
 
 Check the directory `C:\Windows\Microsoft.NET\Framework\v4.0.30319` to confirm if it's empty.
 
-:::image type="content" source="./media/troubleshoot-windows-update-error-0x80070002/updateerror0x80070002-fileexplorer.png" alt-text="Empty directory in Windows Explorer":::
+:::image type="content" source="./media/troubleshoot-windows-update-error-0x80070002/empty-directory-explorer.png" alt-text="Screenshot showing the empty directory in Windows Explorer." lightbox="./media/troubleshoot-windows-update-error-0x80070002/empty-directory-explorer.png":::
 
 ### Resolution: Registry key deletion
 
@@ -50,7 +50,7 @@ Check the directory `C:\Windows\Microsoft.NET\Framework\v4.0.30319` to confirm i
    - `HKLM\System\CurrentControlSet\services\clr_optimization_v4.0.30319_32`
    - `HKLM\System\CurrentControlSet\services\clr_optimization_v4.0.30319_64`
 
-   :::image type="content" source="./media/troubleshoot-windows-update-error-0x80070002/updateerror0x80070002-registryhklm.png" alt-text="Registry keys for clr_optimization":::
+   :::image type="content" source="./media/troubleshoot-windows-update-error-0x80070002/registry-keys-hklm.png" alt-text="Screenshot showing Registry keys for clr_optimization." lightbox="./media/troubleshoot-windows-update-error-0x80070002/registry-keys-hklm.png":::
 
 2. Back up and delete these registry keys.
 3. Attempt to install the update again.
@@ -108,17 +108,18 @@ If a cumulative update on Windows Server rolls back after a restart, check the E
 
 Here's a sample of the event log:
 
-> Log Name: System  
-> Source: Microsoft-Windows-WindowsUpdateClient  
-> Date: DD/MM/yyyy hh:ss:ff  
-> Event ID: 20  
-> Task Category: Windows Update Agent  
-> Level: Error  
-> Keywords: Installation,Installation  
-> User: SYSTEM  
-> Computer: XXXXXXXXXXXXXXXXXXXXX  
-> Description:  
-> Installation Failure: Windows failed to install the following update with error 0x80070002: Security Update for Windows (KB4586793).
+```output
+Log Name: System  
+Source: Microsoft-Windows-WindowsUpdateClient  
+Date: DD/MM/yyyy hh:ss:ff  
+Event ID: 20  
+Task Category: Windows Update Agent  
+Level: Error  
+Keywords: Installation,Installation  
+User: SYSTEM  
+Computer: <ComputerName>  
+Description:  
+Installation Failure: Windows failed to install the following update with error 0x80070002: Security Update for Windows (KB4586793).
 
 The failure is caused by an issue during update drivers operation. For example, the following **CBS.log** file indicates the `flpydisk.inf` driver is the cause:
 
