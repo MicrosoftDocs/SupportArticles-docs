@@ -12,15 +12,11 @@ ms.author: wiassaf
 
 This article provides solutions for troubleshooting errors during installation or starting an instance of SQL Server on Windows. This article is valid for all released versions of SQL Server.
 
-The errors discussed in this article are related to system disk sector size greater than 4 KB.
+This article discusses errors related to system disk sector size greater than 4 KB. When you try to install a SQL Server instance on a machine with system disk sector size greater than 4 KB, you might encounter the following scenarios:
 
 _Applies to_: &nbsp; SQL Server all versions
 
-## Symptoms
-
-When you try to install a SQL Server instance on a machine with system disk sector size greater than 4 KB, you might encounter the following scenarios:
-
-### Scenario 1
+## Scenario 1: Move the file to a volume with a compatible sector size
 
 If you try to use sector size higher than 4 KB, you see the following error message:
 
@@ -29,7 +25,7 @@ Error: 5179, Severity: 16, State: 1.
 Cannot use file 'data file path', because it is on a volume with sector size 8192. SQL Server supports a maximum sector size of 4096 bytes. Move the file to a volume with a compatible sector size.
 ```
 
-### Scenario 2
+## Scenario 2: Could not find the Database Engine startup handle
 
 When you try to install a SQL Server instance on an Azure virtual machine (VM) running Windows, the installation fails, and you receive the following error message in the SQL Server error log when the engine tries to start during the installation:
 
@@ -50,7 +46,7 @@ Detailed results:
 
 For more information, see [SQL Server installation fails with sector size error on a Windows Server 2022 Azure virtual machine](../../azure-sql/sql-installation-fails-sector-size-error-azure-vm.md).
 
-### Scenario 3
+## Scenario 3: Wait on the Database Engine recovery handle failed
 
 When you install any version of SQL Server, you see errors similar to the following message for the Database Engine Services component of SQL Server:
 
@@ -72,7 +68,7 @@ Or, you see the following errors in the SQL Server Error Log:
 2025-02-26 20:01:16.80 spid14s     Cannot use file 'C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\master.mdf' because it was originally formatted with sector size 4096 and is now on a volume with sector size 8192. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.
 ```
 
-### Scenario 4
+## Scenario 4: There have been 256 misaligned log IOs which required falling back to synchronous IO
 
 You install any version of SQL Server on a Windows 10 device. Then, you upgrade the operating system (OS) on the device to Windows 11. When you try to start SQL Server on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice the following entries:
 
@@ -80,7 +76,7 @@ You install any version of SQL Server on a Windows 10 device. Then, you upgrade 
 2021-11-05 23:42:47.14 spid9s There have been 256 misaligned log IOs which required falling back to synchronous IO. The current IO is on file C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf. 
 ```
 
-### Scenario 5
+## Scenario 5
 
 You install any version of SQL Server on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice the following entries:
 
@@ -95,7 +91,7 @@ Faulting application path: C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSE
 Faulting module path: C:\Windows\SYSTEM32\ntdll.dll 
 ```
 
-### Scenario 6
+## Scenario 6: Move the file to a volume with a sector size that is the same as or smaller than the original sector size
 
 You install LocalDB on a Windows 11 device. The setup fails. In the SQL Server error log, you notice the following entries:
 
@@ -144,7 +140,9 @@ Additionally, be aware of the Windows support policy for file system and storage
 
 ## Resolutions
 
-- Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server when using modern storage platforms, such as NVMe, that provide a sector size larger than 4 KB. This Windows operating system registry key forces the sector size to be emulated as 4 KB. To add the `ForcedPhysicalSectorSizeInBytes` registry key, use **Registry Editor** or run commands as described in the **Command Prompt** or **PowerShell** section. You must reboot the device after adding the registry key for this change to take effect. There is no need to add Trace Flag 1800 for this scenario.
+- Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server when using modern storage platforms, such as NVMe, that provide a sector size larger than 4 KB. This Windows operating system registry key forces the sector size to be emulated as 4 KB.
+
+  To add the `ForcedPhysicalSectorSizeInBytes` registry key, use **Registry Editor** or run commands as described in the **Command Prompt** or **PowerShell** section. There is no need to add Trace Flag 1800 for this scenario.
   
   > [!IMPORTANT]
   > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) article.
@@ -156,6 +154,8 @@ Additionally, be aware of the Windows support policy for file system and storage
   1. Select **Edit** > **New** > **Multi-String value** and name it as `ForcedPhysicalSectorSizeInBytes`.
   1. Right-click the name, select **Modify**, and type `* 4095` in the **Value data** field.
   1. Select **OK** and close Registry Editor.
+
+  You must reboot the device after adding the registry key for this change to take effect. 
 
   ### [Command Prompt](#tab/command-prompt)
 
@@ -190,6 +190,9 @@ Additionally, be aware of the Windows support policy for file system and storage
   ---
 
 - If you don't add the registry key and you have multiple drives on this system, you can specify a different location for the database files after the installation of SQL Server is complete. Make sure that the drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4,096 bytes.
+
+> [!CAUTION]
+> If you've already created a storage pool with disks that have a sector size greater than 4 kb to host SQL Server files, you must first remove the storage pool, apply one of the troubleshooting methods mentioned in this article, and then rebuild the storage pool before attempting to install SQL Server on the storage pool or pools.
 
 ## More information
 
