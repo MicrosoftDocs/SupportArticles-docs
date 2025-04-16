@@ -234,3 +234,7 @@
       items:
         - name: '"Resource not found" error when configuring WhatsApp channel'
           href: omnichannel-for-customer-service/resource-not-found-error-when-configuring-whatsapp-channel.md
+- name: Other
+  items:
+    - name: '"String or binary data would be truncated" error when deleting records from a custom table'
+      href: other/string-or-binary-data-would-be-truncated-error.md
