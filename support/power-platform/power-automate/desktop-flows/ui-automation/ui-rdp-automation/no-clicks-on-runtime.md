@@ -35,4 +35,4 @@ To solve this issue, follow these steps:
 
 1. (Optional) Adjust the desktop scaling of the machine running Power Automate for desktop to 100%. For unattended machines, see [Set screen resolution on unattended mode](/power-automate/desktop-flows/how-to/set-screen-resolution-unattended-mode).
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../../includes/third-party-disclaimer.md)]
