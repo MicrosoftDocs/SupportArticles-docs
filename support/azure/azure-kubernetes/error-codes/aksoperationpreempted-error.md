@@ -1,13 +1,13 @@
 ---
-title: Error AKSOperationPreempted when performing a new operation
-description: Helps you resolve the AKSOperationPreempted or AKSOperationPreemptedByDelete error when you perform a new operation on an Azure Kubernetes Service (AKS) cluster.
+title: AKSOperationPreempted error when performing a new operation
+description: Helps resolve the AKSOperationPreempted or AKSOperationPreemptedByDelete error when you perform a new operation on an Azure Kubernetes Service (AKS) cluster.
 ms.date: 10/28/2024
 ms.reviewer: rissing, chiragpa, erbookbi, jopalhei, dorinalecu, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OperationPreempted error code so that I can successfully perform a new operation an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Error AKSOperationPreempted or AKSOperationPreemptedByDelete when performing a new operation
+# AKSOperationPreempted or AKSOperationPreemptedByDelete error when performing a new operation
 
 This article discusses how to identify and resolve the `AKSOperationPreempted` or `AKSOperationPreemptedByDelete` error that might occur when you try to perform a new operation but it has been preempted by another operation on a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -52,6 +52,6 @@ To resolve this issue, use one of the following methods. Once there are no opera
 
 ## More information
 
-[General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+[General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
-description: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error when you create, deploy, or update an AKS cluster.
+title: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
+description: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error when you create, deploy, or update a Kubernetes cluster.
 ms.date: 09/05/2024
 author: axelgMS
 ms.author: axelg
@@ -9,7 +9,7 @@ ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
+# Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
 
 This article describes how to identify and resolve the `ZonalAllocationFailed`, `AllocationFailed`, or `OverconstrainedAllocationRequest` error that might occur when you try to create, deploy, or update a Microsoft Azure Kubernetes Service (AKS) cluster.
 
@@ -95,7 +95,7 @@ We have identified several methods to improve how we load-balance under a high-r
 
 ## References
 
-- [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+- [General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
 - [Virtual Machine Scale Sets - What to expect when using proximity placement groups](/azure/virtual-machine-scale-sets/proximity-placement-groups#what-to-expect-when-using-proximity-placement-groups)
 
