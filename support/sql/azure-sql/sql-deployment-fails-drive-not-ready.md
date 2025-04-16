@@ -77,7 +77,7 @@ This issue occurs because of the selected Azure VM size. To solve the issue, use
 
 - If possible, use another VM SKU, such as those listed in the [VM size best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size#checklist). 
 - If you want to use a particular VM that is on the [impacted VMs](#impacted-vms) list, use a machine without the lowercase `d` in the name, which places `tempdb` on the same storage as the SQL Server data files. For example, use the `FXmsv2` VM size instead of `FXmdsv2`. The latter has uninitialized ephemeral storage, as indicated by `d` in the name.
-- If you can't use another VM SKU without a RAW local SSD, deploy the VM using a Windows Server-only image, [format and initialize the temporary NVMe drive](/azure/virtual-machines/enable-nvme-temp-faqs#how-can-i-format-and-initialize-temp-nvme-disks-in-windows-when-i-create-a-vm-), and then manually install SQL Server. **You must reinitialize the disk before starting SQL Server every time the VM is restarted, or deallocated.**
+- If you can't use another VM SKU without a RAW local SSD, deploy the VM using a Windows Server-only image, [format and initialize the temporary NVMe drive](/azure/virtual-machines/enable-nvme-temp-faqs#how-can-i-format-and-initialize-temp-nvme-disks-in-windows-when-i-create-a-vm-), and then manually install SQL Server. *You must reinitialize the disk before starting SQL Server every time the VM is restarted or deallocated.*
 
 > [!NOTE]
 > Make sure the VM isn't configured using a [sector size greater than 4 KB](sql-installation-fails-sector-size-error-azure-vm.md#resolution) before installing SQL Server. 
