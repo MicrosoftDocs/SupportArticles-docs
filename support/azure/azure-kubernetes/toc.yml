@@ -391,7 +391,7 @@
   - name: ServicePrincipalValidationClientError error
     href: error-codes/serviceprincipalvalidationclienterror-error.md
   - name: SubscriptionRequestsThrottled error
-    href: error-codes/subscriptionrequeststhrottled-error.md
+    href: error-codes/subscriptionrequeststhrottled.md
   - name: Throttled error
     href: error-codes/throttled-error.md
   - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources
@@ -399,6 +399,6 @@
   - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error
     href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
-    href: error-codes/zonalallocationfailed-allocationfailed-error.md
+    href: error-codes/zonalallocation-allocatonfailed-error.md
   - name: QuotaExceeded or InsufficientVCPUQuota error
     href: error-codes/quota-exceeded-error.md

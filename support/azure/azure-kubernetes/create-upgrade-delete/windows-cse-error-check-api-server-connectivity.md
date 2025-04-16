@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
-description: Learn how to troubleshoot the WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5) when you try to add Windows node pools in an AKS cluster.
+title: Troubleshoot the WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
+description: Introduces how to troubleshoot the WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5) when you try to add Windows node pools in an AKS cluster.
 ms.date: 04/14/2025
 ms.reviewer: shtao, abelch, junjiezhang, v-weizhu, addobres
 ms.service: azure-kubernetes-service

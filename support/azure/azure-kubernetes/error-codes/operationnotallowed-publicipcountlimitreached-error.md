@@ -74,6 +74,6 @@ Alternatively, you can reprovision the cluster in a different region or SKU that
 
 ## More information
 
-- [General troubleshooting of AKS cluster creation issues](./create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
+- [General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

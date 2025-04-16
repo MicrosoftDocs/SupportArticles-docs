@@ -46,6 +46,6 @@ For more information about how to grant permissions to the service principal, se
 
 ## More information
 
-- [General troubleshooting of AKS cluster creation issues](./create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
+- [General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -32,7 +32,7 @@ AKSTeam: NodeProvisioning,
 Retriable: true
 ```
 
-You also can [view the error details in the Azure portal](troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal).
+You also can [view the error details in the Azure portal](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal).
 
 ## Cause
 
@@ -63,6 +63,6 @@ Follow these steps:
 
 ## More information
 
-- [General troubleshooting of AKS cluster creation issues](./create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
+- [General troubleshooting of AKS cluster creation issues](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
