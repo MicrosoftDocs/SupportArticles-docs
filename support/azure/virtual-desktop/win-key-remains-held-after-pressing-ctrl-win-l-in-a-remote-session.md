@@ -19,17 +19,20 @@ This article addresses a problem with Azure Virtual Desktop (AVD). After you pre
 Consider the following scenario:
 
 * You connect to a Windows 11 based remote computer by using either MSRDC or Windows App.
-* You enter the full screen mode in the Remote Desktop Protocol (RDP) session.
+* You enter the full screen mode in the remote session.
 * You press Ctrl + Win + L to start Live Caption.
 * You release Ctrl and L first, and then finally release the Win key.
-* You minimize or exit full screen mode of the RDP session and return to the local desktop.
+* You minimize or exit full screen mode of the remote session and return to the local desktop.
 
-In this scenario, the Win key is still held in the local session.
+In this scenario, the Win key is still held in the local session. If you press another key, Windows interprets it as if you are pressing the Win key along with that key. For example, if you press "I" at that moment, the Settings app will open.
 
 ## Cause
 
-This behavior is by designed because of security. When you use the Win key, there are certain key combos locked to prevent malicious use.
+This behavior is due to known limitation related to Windows protection against the attempts to override Win + L combination. When you use the Win key, there are certain key combos locked to prevent malicious use.
 
 ## Workaround
 
-We recommend changing the order in which the three keys are released. That is, after pressing Ctrl + Win + L, release the L or Win key before Ctrl.
+We recommend using one of the following workaround:
+
+* Change the order in which the three keys are released. That is, after pressing Ctrl + Win + L, release the L or Win key before Ctrl.
+* Start Live Caption from start menu. You can just press and release Win button to open the start menu.
