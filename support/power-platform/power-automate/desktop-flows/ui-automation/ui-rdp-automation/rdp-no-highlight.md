@@ -5,7 +5,7 @@ ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 04/15/2025
+ms.date: 04/16/2025
 ---
 # UI element isn't highlighted or an error occurs when hovering over a UI or web element
 
@@ -77,3 +77,5 @@ The communication with the remote agent components doesn't work.
 ## More information
 
 [Automate on virtual desktops](/power-automate/desktop-flows/virtual-desktops)
+
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

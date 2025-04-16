@@ -5,15 +5,15 @@ ms.reviewer: amitrou
 ms.author: iopanag
 author: iopanag
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 04/15/2025
+ms.date: 04/16/2025
 ---
 # Elements are highlighted in Citrix Virtual Apps but runtime clicks on the elements don't work 
 
-This article provides steps to resolve an issue where UI element interactions don't occur when running actions in Citrix Virtual Apps, despite the elements being properly highlighted and captured.
+This article provides steps to resolve an issue where UI element interactions don't occur when running actions in Citrix Virtual Apps, despite the UI elements being properly highlighted and captured.
 
 ## Symptoms
 
-When you use the [UI element picker](/power-automate/desktop-flows/ui-elements#ui-elements-types) to interact with Citrix Virtual Apps, you can highlight and capture elements successfully. However when these captured elements are used in an action (for example, **Click Element in Window**), the interaction doesn't execute, and no error message is displayed. The [Test Selector](/power-automate/desktop-flows/test-selectors) functionality works as expected.
+When you use the [UI element picker](/power-automate/desktop-flows/ui-elements#ui-elements-types) to interact with Citrix Virtual Apps, you can highlight and capture elements successfully. However, when these captured elements are used in an action (for example, **Click Element in Window**), the interaction doesn't execute, and no error message is displayed. The [Test Selector](/power-automate/desktop-flows/test-selectors) functionality works as expected.
 
 ## Cause
 
@@ -34,3 +34,5 @@ To solve this issue, follow these steps:
 1. Restart the Citrix Desktops or Virtual Apps.
 
 1. (Optional) Adjust the desktop scaling of the machine running Power Automate for desktop to 100%. For unattended machines, see [Set screen resolution on unattended mode](/power-automate/desktop-flows/how-to/set-screen-resolution-unattended-mode).
+
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
