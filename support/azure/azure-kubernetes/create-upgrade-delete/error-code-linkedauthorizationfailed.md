@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot the LinkedAuthorizationFailed error code
-description: Learn how to troubleshoot the LinkedAuthorizationFailed error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+title: Troubleshoot the LinkedAuthorizationFailed error
+description: Describes how to troubleshoot the LinkedAuthorizationFailed error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 08/28/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
@@ -8,7 +8,7 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the LinkedAuthorizationFailed error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the LinkedAuthorizationFailed error code
+# Troubleshoot the LinkedAuthorizationFailed error
 
 This article discusses how to identify and resolve the `LinkedAuthorizationFailed` error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 

@@ -1,0 +1,14 @@
+name: Validate branch names
+
+on:
+  create
+
+jobs:
+  validate-branch-name:
+    if: startsWith(github.ref, 'refs/heads/')
+    runs-on: windows-latest
+    strategy:
+      fail-fast: true # Prevent retries on failure
+    steps:
+      - name: Try checkout
+        uses: actions/checkout@v3        
