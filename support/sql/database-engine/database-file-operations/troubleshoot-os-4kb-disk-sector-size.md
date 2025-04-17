@@ -117,7 +117,7 @@ During service startup, SQL Server begins the database recovery process to ensur
 
 Some new storage devices and device drivers expose a disk sector size greater than the supported 4-KB sector size.
   
-When this occurs, SQL Server will be unable to start due to the unsupported file system as SQL Server currently supports sector storage sizes of 512 bytes and 4 KB.
+When this issue occurs, SQL Server is unable to start due to the unsupported file system as SQL Server currently supports sector storage sizes of 512 bytes and 4 KB.
 
 You can confirm that you encounter this specific issue by running the command:
 
@@ -142,7 +142,7 @@ Additionally, be aware of the Windows support policy for file system and storage
 
 - Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server when using modern storage platforms, such as NVMe, that provide a sector size larger than 4 KB. This Windows operating system registry key forces the sector size to be emulated as 4 KB.
 
-  To add the `ForcedPhysicalSectorSizeInBytes` registry key, use **Registry Editor** or run commands as described in the **Command Prompt** or **PowerShell** section. There is no need to add Trace Flag 1800 for this scenario.
+  To add the `ForcedPhysicalSectorSizeInBytes` registry key, use **Registry Editor** or run commands as described in the **Command Prompt** or **PowerShell** section. There's no need to add Trace Flag 1800 for this scenario.
   
   > [!IMPORTANT]
   > This section contains steps that tell you how to modify the Windows registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see the [How to back up and restore the registry in Windows](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) article.
