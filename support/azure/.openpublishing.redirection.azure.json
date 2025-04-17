@@ -6313,7 +6313,7 @@
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/akscapacityheavyusage-error"
       },
       {
-        "source_path": "error-codes/zonalallocation-allocatonfailed-error.md",
+        "source_path": "azure-kubernetes/error-codes/zonalallocation-allocatonfailed-error.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/zonalallocation-allocationfailed-error"
       }
   ]
