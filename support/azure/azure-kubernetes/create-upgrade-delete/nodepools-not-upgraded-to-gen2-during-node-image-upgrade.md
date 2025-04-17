@@ -1,13 +1,14 @@
 ---
 title: Windows nodepools not upgraded to Gen2 during cluster node image upgrade
 description: Troubleshoot why Windows Server nodepools don't get upgraded automatically from Gen1 to Gen2 when a cluster node image is upgraded in Azure Kubernetes Service.
-ms.date: 11/20/2024
-editor: v-jsitser
-ms.reviewer: chiragpa, cssakscic, v-leedennis
+ms.date: 04/17/2025
+editor: v-jsitser,momajed
+ms.reviewer: chiragpa, cssakscic, v-leedennis,momajed
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot why Windows Server nodepools don't get upgraded automatically from Gen1 to Gen2 virtual machines (VMs) when a cluster node image is upgraded in Azure Kubernetes Service (AKS).
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
+
 # Windows Server nodepools not upgraded to Gen2 during cluster node image upgrade
 
 This article discusses how to troubleshoot a scenario in which Windows Server nodepools don't get upgraded automatically from Gen1 to Gen2 virtual machines (VMs) when a cluster node image is upgraded in Microsoft Azure Kubernetes Service (AKS).
@@ -17,7 +18,8 @@ This article discusses how to troubleshoot a scenario in which Windows Server no
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli)
+<!-- Updated: Specify Azure CLI version -->
+- Azure CLI version 2.0.81 or later. See [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) for installation instructions.
 
 ## Symptoms
 
@@ -51,10 +53,12 @@ When you upgrade the default OS from Windows Server 2019 (`Windows2019`) to Wind
 
 Upgrade the cluster, and then create a new Windows Server nodepool that supports [Gen2 VM sizes](/azure/virtual-machines/generation-2) on that cluster according to the following guidelines.
 
+
 | Kubernetes cluster upgrade version | Cluster creation guidelines |
 |---|---|
 | 1.25 or a later version | When you run the [az aks create](/cli/azure/aks#az-aks-create) command to create a cluster, set the `--node-vm-size` parameter to a [Gen2 VM size](/azure/virtual-machines/generation-2). |
 | Earlier version than 1.25 | When you run the [az aks create](/cli/azure/aks#az-aks-create) command to create a cluster, set the `--os-sku` parameter value to `Windows2022`, and set the `--node-vm-size` parameter value to a [Gen2 VM size](/azure/virtual-machines/generation-2). |
+
 
 > [!NOTE]  
 > If you specify a Gen2 VM size and the operating system as Windows Server 2019, you receive an `ErrorCode_Windows2019NotSupportedWithGen2VM` error code that's accompanied by the following error message:
@@ -66,5 +70,11 @@ Upgrade the cluster, and then create a new Windows Server nodepool that supports
 > - Pick a Gen1 VM size to use together with Windows Server 2019.
 >
 > - Set the operating system SKU to **Windows Server 2022** to use together with your Gen2 VM.
+>
+> <!-- Added: Verify VM size compatibility -->
+> - Before creating a new nodepool, verify that the VM size supports Gen2 VMs in your region by running `az vm list-sizes --location <region> --query "[?contains(name, 'v2')].name" --output table`.
+>
+> <!-- Added: Check node image versions -->
+> - To confirm the current and available node image versions, run `az aks nodepool show --resource-group <resource-group> --cluster-name <cluster-name> --name <nodepool-name> --query nodeImageVersion` to check the current version, and `az aks nodepool get-upgrades --resource-group <resource-group> --cluster-name <cluster-name> --nodepool-name <nodepool-name> --query latestNodeImageVersion` to check the latest available version.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
