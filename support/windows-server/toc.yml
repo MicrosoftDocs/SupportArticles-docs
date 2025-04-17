@@ -3047,7 +3047,7 @@ items:
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
   - name: Windows Update fails - installation stops with error
     items:
-    - name: Troubleshoot Windows Update Error 0x80070002
+    - name: Troubleshoot Windows Update error 0x80070002
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
