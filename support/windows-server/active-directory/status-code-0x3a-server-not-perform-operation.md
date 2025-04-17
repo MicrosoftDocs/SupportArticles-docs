@@ -61,7 +61,7 @@ To troubleshoot this issue, use the following steps:
 
     The output indicates that the Lightweight Directory Access Protocol (LDAP) port TCP 389 is open between the client and the DC.
 
-2. Collect the network trace to verify the TCP 389 connection to the DC. For example, on the client machine, you might see TCP retransmissions which indicate there's no response received from DC's TCP 389 port.
+2. Collect the network trace to verify the TCP 389 connection to the DC. For example, on the client machine, you might see TCP retransmissions which indicate there's no response received from the DC's TCP 389 port.
 
     ```output
     CLIENT 	DC	TCP	TCP:Flags=CE....S., SrcPort=49300, DstPort=LDAP(389), PayloadLen=0, Seq=3537217409, Ack=0, Win=8192 ( Negotiating scale factor 0x8 ) = 8192 {TCP:58, IPv4:4}
