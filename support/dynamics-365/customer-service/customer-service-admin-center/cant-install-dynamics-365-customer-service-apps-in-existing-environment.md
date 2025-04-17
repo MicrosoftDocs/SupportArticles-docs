@@ -32,7 +32,7 @@ This issue occurs due to one or more of the following reasons:
 
 ## Cause 2: Missing or incorrect licensing
 
-Users trying to install or access Dynamics 365 applications must have the [appropriate license](/dynamics-365/products/customer-service/pricing) assigned.
+Users trying to install or access Dynamics 365 applications must have the [appropriate license](https://www.microsoft.com/dynamics-365/products/customer-service/pricing) assigned.
 
 ### Resolution
 
