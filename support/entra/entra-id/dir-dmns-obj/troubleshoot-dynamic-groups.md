@@ -72,7 +72,7 @@ You receive an error when deleting a group.
 
 You restored a deleted group but didn't see any update.
 
-- When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process might take up to 24 hours.
+- When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. 
 
 ## Evaluate whether a group is a dynamic group<a id="1"></a>
 
@@ -184,9 +184,9 @@ You've created a dynamic group and configured a rule, but encountered one of the
       - Allow a guest user addition by following the **Manage guest user** setting for groups in a tenant.
       - Change the group rule to exclude a guest user by adding: `(user.userType -eq "member")`.
 
-5. If everything looks correct, allow some time for the group to populate. Depending on the size of your tenant, the group may take up to 24 hours to populate the first time, or after a rule change.
+5. If everything looks correct, allow some time for the group to populate. Depending on the size of your tenant, the group may take some time to populate the first time, or after a rule change. We recommend waiting a minimum of 24 hours to allow group processing to complete.
 
-6. If problem still exists after 24 hours and the processing status shows as complete, you can [reset the processing for the group](#18) to resolve any transient system issue.
+6. If the processing status shows as complete and the issue persists, you can [reset the processing for the group](#18) to resolve any transient system issue.
 
    If the processing status shows as **in processing**, continue to wait.
 
@@ -260,7 +260,7 @@ Before attempting to delete a group in Microsoft Entra ID, ensure you have [dele
 
 ### You restored a deleted dynamic group, but didn't see any update
 
-When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process might take up to 24 hours.
+When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule.
 
 ## Related articles
 
