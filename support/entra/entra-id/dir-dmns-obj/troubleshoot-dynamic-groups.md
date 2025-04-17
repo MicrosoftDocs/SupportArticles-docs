@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot dynamic groups
 description: This article helps you diagnose and resolve issues with dynamic groups.
-ms.date: 03/04/2025
+ms.date: 04/17/2025
 ms.service: entra-id
 ms.custom: sap:Groups, has-azure-ad-ps-ref
 ms.reviewer: mimart, v-weizhu, v-loeide, mbhargav, yuhko, barclayn
@@ -11,7 +11,7 @@ ms.reviewer: mimart, v-weizhu, v-loeide, mbhargav, yuhko, barclayn
 This troubleshooting guide helps you diagnose and solve issues with dynamic groups in Microsoft Entra ID.
 
 > [!IMPORTANT]
-> Dynamic membership group changes are usually processed within a few hours. However, processing may take more than 24 hours depending on factors such as tenant size, group size, number of attribute changes, rule complexity, and operator choice (such as using `CONTAINS`, `MATCH`, or `MemberOf`).
+> Dynamic membership groups changes are usually processed within a few hours. However, processing can take more than 24 hours depending on factors such as the number of groups, the number of changes, and the complexity of the rules. For more information, see [Understanding and Managing Dynamic Group Processing in Microsoft Entra ID](/entra/identity/users/manage-dynamic-group).
 
 ## Dynamic groups identification and management
 
@@ -133,7 +133,7 @@ To create any new Dynamic groups, you'll first need to delete some existing Dyna
 
    - The list of Microsoft Entra ID **license plans** can be accessed at [Microsoft Entra pricing](https://www.microsoft.com/cloud-platform/azure-active-directory-pricing).
 
-   - Enterprise Mobility + Security licensing plans can be accessed at [Enterprise Mobility+Security pricing options](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing).
+   - Enterprise Mobility + Security licensing plans can be accessed at [Enterprise Mobility+Security pricing options](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing).
 
 2. If you cannot find the built-in **User Attributes**, ensure that the attribute is in the [list of supported properties](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#supported-properties). If it's not in the list, it's not currently supported.
 

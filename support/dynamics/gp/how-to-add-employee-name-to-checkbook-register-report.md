@@ -3,7 +3,7 @@ title: How to add employee name to Checkbook Register Report
 description: Introduces how to add the employee name to the Checkbook Register Report in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Bank Reconciliation
 ---
 # How to add the employee name to the Checkbook Register Report in Microsoft Dynamics GP

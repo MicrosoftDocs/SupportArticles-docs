@@ -3,7 +3,7 @@ title: Error if you change password when you log on to Dynamics GP
 description: Explains that you may receive an error message when you use the Enforce Password Change feature in Microsoft Dynamics GP 9.0 and then you try to change the password when you log on to Microsoft Dynamics GP.
 ms.topic: troubleshooting
 ms.reviewer: theley, jayneb, kyouells
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message if you try to change the password when you log on to Microsoft Dynamics GP 9.0: "The password change failed for an unknown reason. Enter a different password or contact your system administrator"

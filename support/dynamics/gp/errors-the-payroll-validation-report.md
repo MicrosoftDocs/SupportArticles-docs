@@ -2,7 +2,7 @@
 title: Errors on the Payroll Validation report
 description: Describes the different errors or warnings that you may see on the Payroll Validation Error report when you complete the Payroll year-end close process in Microsoft Dynamics GP.
 ms.reviewer: theley, dbader
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Payroll
 ---
 # Description of the errors or warnings that may appear on the Payroll Validation report in Payroll in Microsoft Dynamics GP

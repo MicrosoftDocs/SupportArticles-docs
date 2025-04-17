@@ -4,7 +4,7 @@ description: Provides resolutions for the issues that may occur when you work wi
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/28/2022
+ms.date: 04/17/2025
 ms.custom: sap:Forecasting
 ---
 # Troubleshoot issues with the Sales Pipeline chart and its phases in Dynamics 365 Sales

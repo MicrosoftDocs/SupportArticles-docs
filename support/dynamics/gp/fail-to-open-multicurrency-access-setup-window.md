@@ -3,7 +3,7 @@ title: Error when you open the Multicurrency Access Setup window in Microsoft Dy
 description: Provides a solution to an error that occurs when you open the Multicurrency Access Setup window in Microsoft Dynamics GP.
 ms.topic: troubleshooting
 ms.reviewer: theley, kyouells
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - General Ledger
 ---
 # Error when you try to open the Multicurrency Access Setup window in Microsoft Dynamics GP: "You cannot open the Multicurrency Access Setup window because another user is working in Microsoft Dynamics GP"

@@ -2,7 +2,7 @@
 title: Set up development environment when you use Dexterity in Microsoft Dynamics GP
 description: Describes how to set up the development environment for multiple versions of Dexterity.
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.reviewer: theley
 ms.custom: sap:Developer - Customization and Integration Tools
 ---

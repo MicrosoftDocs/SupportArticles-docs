@@ -3,7 +3,7 @@ title: Error when you import or delete solution
 description: Provides a solution to an error that occurs when importing or deleting solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 04/17/2025
 ms.custom: sap:Working with Solutions
 ---
 # Permission error "80040220" when importing or deleting solution in Microsoft Dynamics 365
