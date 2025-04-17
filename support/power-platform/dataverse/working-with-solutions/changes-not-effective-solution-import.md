@@ -3,7 +3,7 @@ title: Changes aren't effective after solution import in Power Apps
 description: Works around an issue where importing a solution succeeds but the component runtime behavior isn't consistent with the new solution in Microsoft Power Apps.
 ms.reviewer: jdaly
 ms.custom: sap:Working with Solutions\Solution import - Changes don't take effect
-ms.date: 08/30/2023
+ms.date: 04/17/2025
 author: swatimadhukargit
 ms.author: swatim
 ---
