@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
-description: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error when you create, deploy, or update a Kubernetes cluster.
+title: Troubleshoot ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
+description: Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error when you create, deploy, or update an AKS cluster.
 ms.date: 09/05/2024
 author: axelgMS
 ms.author: axelg
@@ -9,7 +9,7 @@ ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
+# Troubleshoot ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code
 
 This article describes how to identify and resolve the `ZonalAllocationFailed`, `AllocationFailed`, or `OverconstrainedAllocationRequest` error that might occur when you try to create, deploy, or update a Microsoft Azure Kubernetes Service (AKS) cluster.
 

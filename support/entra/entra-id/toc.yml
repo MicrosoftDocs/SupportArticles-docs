@@ -138,6 +138,8 @@
         href: app-integration/application-delegated-permission-access-tokens-identity-platform.md
       - name: Troubleshoot consent issues
         href: app-integration/troubleshoot-consent-issues.md
+- name: Use NetLog as an alternative to Fiddler and HAR captures
+  href: app-integration/use-netlog-capture-network-traffic.md
 - name: Business To Consumer (B2C) Tenants
   items:
   - name: Problem with app or API integration
@@ -438,5 +440,7 @@
     href: app-integration/capture-https-traffic-fiddler-entra-id-app.md
   - name: Capture Python web app HTTPS traffic with Fiddler
     href: app-integration/capture-https-traffic-fiddler-python-app.md
+  - name: Capture SSL traffic with Fiddler
+    href: app-integration/fiddler-capture-ssl-traffic.md
   - name: Filter Fiddler traffic using domain names and client processes
     href: app-integration/filter-fiddler-traffic-using-domain-name-client-process.md

@@ -1,6 +1,6 @@
 ---
-title: RequestDisallowedByPolicy Error When Deploying an AKS Cluster
-description: Learn how to fix the RequestDisallowedByPolicy error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+title: Error RequestDisallowedByPolicy When Deploying an AKS Cluster
+description: Introduces how to fix the RequestDisallowedByPolicy error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 03/13/2025
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, albarqaw, jacobbaek, v-leedennis, v-weizhu
@@ -8,7 +8,7 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the RequestDisallowedByPolicy error so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# RequestDisallowedByPolicy error when deploying an AKS cluster
+# Error RequestDisallowedByPolicy when deploying an AKS cluster
 
 This article discusses how to identify and resolve the `RequestDisallowedByPolicy` error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
