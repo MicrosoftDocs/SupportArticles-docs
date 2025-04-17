@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the invalid viewstate issues
 description: This article describes techniques for debugging and resolving problems with viewstate. Viewstate is a feature of ASP.NET that allows pages to automatically preserve state without relying on server state.
-ms.date: 06/20/2023
+ms.date: 04/17/2025
 ms.reviewer: johnhart, weyao, v-jayaramanp
 ms.topic: troubleshooting
 ms.custom: sap:Performance

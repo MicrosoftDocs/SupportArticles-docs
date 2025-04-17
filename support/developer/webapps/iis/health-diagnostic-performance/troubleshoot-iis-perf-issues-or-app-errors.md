@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot IIS performance issues or application errors using LogParser
 description: Describes the troubleshooting steps to identify performance issues by using Microsoft LogParser to analyze IIS logs.
-ms.date: 12/18/2012
+ms.date: 04/17/2025
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande, benperk
