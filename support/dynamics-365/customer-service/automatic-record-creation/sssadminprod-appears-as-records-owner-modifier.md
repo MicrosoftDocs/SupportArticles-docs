@@ -1,47 +1,32 @@
 ---
-title: SSSAdminProd Appears as Owner or Modifier of Records
-
-description: Resolves an issue where the # SSSAdminProd system account appears as the owner or Modified By user of records in Microsoft Dynamics 365 Customer Service.
-
+title: SSSAdminProd Appears as Owner or Modifier of Records
 description: Resolves an issue where the # SSSAdminProd system account appears as the owner or Modified By user of records in Microsoft Dynamics 365 Customer Service.
-
 ms.reviewer: ghoshsoham
 author: Yerragovula
-ms.date: 04/17/2025
-
 ai-usage: ai-assisted
 ms.date: 04/17/2025
-
 ms.custom: sap:Automatic Record Creation (ARC), DFM
 ---
 # Undesired ownership of records caused by "# SSSAdminProd"
-## Symptoms
+
 This article addresses an issue where the "# SSSAdminProd" system account appears as the **Owner** or **Modified By** user of records in Dynamics 365 Customer Service.
 
-## Symptom
-- The "# SSSAdminProd" system account is listed as the user who modifies cases in queues.
-
+## Symptoms
+
 You might encounter the following issues in Dynamics 365 Customer Service:
 
 - The "# SSSAdminProd" system account is listed as the user who modifies cases in queues.
-
 - The "# SSSAdminProd" system account is assigned as the owner of newly created records, such as cases or contacts.
 
-The "# SSSAdminProd" account appears as the user who modifies cases or owns newly created records, which is typically linked to the use of an Automatic Record Creation (ARC) rule.
+As a result, some users can't view records created or modified by the "# SSSAdminProd" account.
 
+## Cause
 
-The ARC rule or Power Automate flow might be configured to run in the context of a specific user account, usually a [system-provided application user](/power-platform/admin/system-application-users#application-users), such as "# SSSAdminProd."
-
-
-For example, when a case record is created through an ARC rule and the rule owner is a team, the owner of the case record is the team's administrator user. In this case, "# SSSAdminProd" might be the administrator user for the team that owns the rule. If "# SSSAdminProd" is the owner of the ARC rule or associated flow, the account appears as the user performing actions such as:
-
-
+The "# SSSAdminProd" account appears as the user who modifies cases or owns newly created records, which is typically linked to the use of an Automatic Record Creation (ARC) rule.
 
 The ARC rule or Power Automate flow might be configured to run in the context of a specific user account, usually a [system-provided application user](/power-platform/admin/system-application-users#application-users), such as "# SSSAdminProd."
 
-
-For example, when a case record is created through an ARC rule and the rule owner is a team, the owner of the case record will be the team's administrator user. In this case, "# SSSAdminProd" might be the administrator user for the team that owns the rule. If "# SSSAdminProd" is the owner of the ARC rule or associated flow, the account appears as the user performing actions such as:
-
+For example, when a case record is created through an ARC rule and the rule owner is a team, the owner of the case record is the team's administrator user. In this case, "# SSSAdminProd" might be the administrator user for the team that owns the rule. If "# SSSAdminProd" is the owner of the ARC rule or associated flow, the account appears as the user performing actions such as:
 
 - Creating new contact records when unknown senders send emails.
 - Creating cases as part of the email-to-case process.
