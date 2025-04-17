@@ -3,8 +3,8 @@ title: Cluster autoscaler fails to scale with cannot scale cluster autoscaler en
 description: Learn how to troubleshoot the cannot scale cluster autoscaler enabled node pool error when your autoscaler isn't scaling up or down.
 author: sgeannina
 ms.author: ninasegares
-ms.date: 10/17/2023
-ms.reviewer: aritraghosh, chiragpa
+ms.date: 04/17/2025
+ms.reviewer: aritraghosh, chiragpa.momajed
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
