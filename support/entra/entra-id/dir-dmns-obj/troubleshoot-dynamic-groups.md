@@ -133,7 +133,7 @@ To create any new Dynamic groups, you'll first need to delete some existing Dyna
 
    - The list of Microsoft Entra ID **license plans** can be accessed at [Microsoft Entra pricing](https://www.microsoft.com/cloud-platform/azure-active-directory-pricing).
 
-   - Enterprise Mobility + Security licensing plans can be accessed at [Enterprise Mobility+Security pricing options](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing).
+   - Enterprise Mobility + Security licensing plans can be accessed at [Enterprise Mobility+Security pricing options](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/compare-plans-and-pricing).
 
 2. If you cannot find the built-in **User Attributes**, ensure that the attribute is in the [list of supported properties](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#supported-properties). If it's not in the list, it's not currently supported.
 
