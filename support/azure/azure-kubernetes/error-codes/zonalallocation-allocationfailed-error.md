@@ -5,7 +5,7 @@ ms.date: 09/05/2024
 author: axelgMS
 ms.author: axelg
 editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, v-weizhu
+ms.reviewer: rissing, chiragpa, erbookbi, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
