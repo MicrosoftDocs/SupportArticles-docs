@@ -2,7 +2,7 @@
 title: Features for job costing and revenue codes and expense codes
 description: Discusses the features and options that you can use to set up job costing to help categorize transactions by job, by revenue code, or by expense code in Microsoft Dynamics GP. Provides an example job costing setup.
 ms.reviewer: theley, aeckman
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Manufacturing Series
 ---
 # Features that you can use to set up job costing, revenue codes, and expense codes for Manufacturing

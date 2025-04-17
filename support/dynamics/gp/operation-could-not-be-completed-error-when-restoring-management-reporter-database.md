@@ -3,7 +3,7 @@ title: The operation could not be completed error when restoring Microsoft Manag
 description: Describes an error message that you may receive if you restore or move the Management Reporter 2012 database to a new server. Provides a resolution.
 ms.reviewer: theley, jopankow, kevogt
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Management Reporter
 ---
 # "The operation could not be completed" error when you restore a Microsoft Management Reporter 2012 database

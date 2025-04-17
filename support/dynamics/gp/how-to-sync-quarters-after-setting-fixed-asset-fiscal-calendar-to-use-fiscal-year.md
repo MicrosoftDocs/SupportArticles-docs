@@ -3,7 +3,7 @@ title: Sync calendar quarters after setting Fixed Assets fiscal calendar to use 
 description: How to synchronize calendar quarters after you configure the Fixed Assets fiscal calendar to use a fiscal year in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Fixed Assets
 ---
 # How to synchronize calendar quarters after you configure the Fixed Assets fiscal calendar to use a fiscal year
