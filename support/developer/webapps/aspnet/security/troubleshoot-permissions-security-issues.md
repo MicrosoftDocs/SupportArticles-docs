@@ -28,7 +28,7 @@ For more information about RegMon, see [Windows Sysinternals](/sysinternals/).
 - Is the issue reproducible while browsing locally on the Web server, or is it reproducible for only a few clients?
 - If you are using impersonation, then does the impersonated user have the necessary access to the resource?
 
-The above questions are useful in order to diagnose a problem. If you are posting your issue on any of the ASP.NET forums, and if you already have the answers to most of these questions, then it's likely that you will get a quick pointer or solution to your problem. The key is to post the whole ASP.NET stack trace error, if applicable, instead of saying "I am getting an Access Denied error while trying to run my ASP.NET application. Can anyone help?" It's much easier for someone to look at the stack trace and give you pointers when they can see a complete error message. So you need to ask yourself...
+The above questions are useful in order to diagnose a problem. If you're posting your issue on any of the ASP.NET forums, and if you already have the answers to most of these questions, then it's likely that you'll get a quick pointer or solution to your problem. The key is to post the whole ASP.NET stack trace error, if applicable, instead of saying "I'm getting an Access Denied error while trying to run my ASP.NET application. Can anyone help?" It's easier for someone to look at the stack trace and give you pointers when they can see a complete error message. So you need to ask yourself...
 
 ## What is the exact error message?
 
@@ -49,11 +49,11 @@ The first question we ask customers is, "What is the exact error message?" If yo
 Once you get the actual error message, read it to determine if the error is caused by missing permissions on a local resource or on a remote resource that your ASP.NET application is trying to access.
 
 > [!TIP]
-> You can contact your developer to find out how to see the actual error message. It's possible that your developer may be logging it to a file or getting e-mail notifications. Always remember to make a backup of any file that you are going to change. With a backup available, you can always roll back any changes.
+> You can contact your developer to find out how to see the actual error message. It's possible that your developer may be logging it to a file or getting e-mail notifications. Always remember to make a backup of any file that you're going to change. With a backup available, you can always roll back any changes.
 
 ## Issue occurs because of missing permissions on a local resource that the ASP.NET application tries to access
 
-If you are unable to get a clear description of the problem because of a custom error message, run FileMon and reproduce the problem. Stop and save the capture as FileMon.xls and open the file in Microsoft Excel. On the **Data** menu, click **Filter**, and then click **AutoFilter** to use the filtering capabilities of Excel. Now select the drop-down list in column `F` and look for "ACCESS DENIED" errors.
+If you're unable to get a clear description of the problem because of a custom error message, run FileMon and reproduce the problem. Stop and save the capture as FileMon.xls and open the file in Microsoft Excel. On the **Data** menu, select **Filter**, and then select **AutoFilter** to use the filtering capabilities of Excel. Now select the drop-down list in column `F` and look for "ACCESS DENIED" errors.
 
 A sample FileMon output is shown below.
 
@@ -69,20 +69,20 @@ As you can see from the filtered results, we have narrowed down the cause of the
 > A good step would be to change the ASP.NET process account to an Admin account to see if it fixes the problem. In IIS 6.0 and later versions you would change the IIS AppPool identity to "Local System" to see if the application works.
 
 > [!NOTE]
-> This should not be used as a solution, but only as a troubleshooting step.
+> This shouldn't be used as a solution, but only as a troubleshooting step.
 
-Most people would tend to reinstall the Microsoft .NET Framework or even go to the extent of reinstalling the operating system. This is not a recommended troubleshooting step and does not guarantee that the issue will not reoccur. I will provide one such example. Intermittent issues are often hard to isolate and troubleshoot. In this scenario the customer's application would work fine for a few hours, and then all of a sudden it would fail with the error below. The customer had already tried reinstalling the .NET Framework as well as the operating system. This seemed to fix the problem for a few days, but then it reappeared.
+Most people would tend to reinstall the Microsoft .NET Framework or even go to the extent of reinstalling the operating system. This isn't a recommended troubleshooting step and doesn't guarantee that the issue won't reoccur. I'll provide one such example. Intermittent issues are often hard to isolate and troubleshoot. In this scenario the customer's application would work fine for a few hours, and then all of a sudden it would fail with the error below. The customer had already tried reinstalling the .NET Framework and the operating system. This seemed to fix the problem for a few days, but then it reappeared.
 
-Running FileMon did not show any **ACCESS DENIED** errors. All the necessary permissions for the ASPNET account were in place. The only way to recover from the problem is to reboot the box. Even an IIS reset would not help. You are thinking "Ah, Microsoft Software always needs a reboot to recover?" Well, you are wrong!
+Running FileMon didn't show any **ACCESS DENIED** errors. All the necessary permissions for the ASPNET account were in place. The only way to recover from the problem is to reboot the box. Even an IIS reset wouldn't help. You're thinking "Ah, Microsoft Software always needs a reboot to recover?" Well, you're wrong!
 
-The key here is to look closely at the error message. The error clearly says "cannot open a file for writing," and not the usual **ACCESS DENIED** error, so I am thinking that it's some other process that is holding a lock on a file or folder and not allowing ASP.NET to write to it. It makes sense that a reboot was killing the other process and the ASP.NET application starts working again until the rogue process locks the file again. The logical thing to do would be to turn off all antivirus programs, third-party spyware, or any other file monitoring software that runs on the server. I do not want to point out any specific third-party software. But, in general, antivirus software is known to cause much grief for IIS and ASP.NET applications. Another known issue caused by antivirus software is session loss due to AppDomain recycles when the Bin folder or the .config files are touched.
+The key here's to look closely at the error message. The error clearly says "cannot open a file for writing," and not the usual **ACCESS DENIED** error, so I'm thinking that it's some other process that is holding a lock on a file or folder and not allowing ASP.NET to write to it. It makes sense that a reboot was killing the other process and the ASP.NET application starts working again until the rogue process locks the file again. The logical thing to do would be to turn off all antivirus programs, third-party spyware, or any other file monitoring software that runs on the server. I do not want to point out any specific third-party software. But, in general, antivirus software is known to cause much grief for IIS and ASP.NET applications. Another known issue caused by antivirus software is session loss due to AppDomain recycles when the Bin folder or the .config files are touched.
 
 > [!TIP]
 > The easiest way to turn off third-party services is to:
-> 1. Click **Start**, click **Run**, and then type *msconfig*.
+> 1. Select **Start**, select **Run**, and then type *msconfig*.
 > 2. Select **Services** and check **Hide All Microsoft Services**.
-> 3. Click **Disable All** to stop the third-party services.
-> 4. Click **Start**, click **Run**, and then type iisreset to reload the CLR into the worker process.
+> 3. Select **Disable All** to stop the third-party services.
+> 4. Select **Start**, select **Run**, and then type iisreset to reload the CLR into the worker process.
 
 Monitor your application to see if the issue reoccurs. If you run multiple antivirus programs, use the trial-and-error method to determine which particular program is causing the issue.
 
@@ -92,7 +92,7 @@ Monitor your application to see if the issue reoccurs. If you run multiple antiv
 See [ASP.NET Required Access Control Lists (ACLs)](/previous-versions/kwzs111e(v=vs.140)).
 
 > [!TIP]
-> The `%SystemRoot%\Assembly` folder is the global assembly cache. You cannot directly use Windows Explorer to edit ACLs for this folder.
+> The `%SystemRoot%\Assembly` folder is the global assembly cache. You can't directly use Windows Explorer to edit ACLs for this folder.
 
 Instead, use a command prompt and run the following command:
 
@@ -108,15 +108,15 @@ After setting permissions with Windows Explorer, re-register Shfusion.dll with t
 
 ## Issue occurs because of missing permissions on a remote resource that the ASP.NET application is trying to access
 
-When your ASP.NET application is accessing a remote resource like Microsoft SQL Server or a Universal Naming Convention (UNC) share, there are many things that can go wrong. Also, many things may be incorrectly set up on the remote resource. You'll need to troubleshoot those issues in order to get the resource working.
+When your ASP.NET application is accessing a remote resource like Microsoft SQL Server or a Universal Naming Convention (UNC) share, there are many things that can go wrong. Also, many things may be incorrectly set up on the remote resource. You need to troubleshoot those issues in order to get the resource working.
 
 Your first step would be to see if you can connect to the remote server through Windows Explorer.
 
 1. On the remote server, create a folder called Test. On the **Sharing** and **Security** tabs of the Test folder, add your domain/account, and also the process account that is used by your ASP.NET application, and give them both Full Control.
 
-2. On the IIS server, log in with your domain/account, click **Start**, click **Run**, and then type the UNC share path of the remote server: `\\RemoteServerName*\Test`.
+2. On the IIS server, log in with your domain/account, select **Start**, select **Run**, and then type the UNC share path of the remote server: `\\RemoteServerName*\Test`.
 
-    If you are unable to get to this folder, then contact your Network Administrator to fix this issue. Only then can your ASP.NET application access the share.
+    If you're unable to get to this folder, then contact your Network Administrator to fix this issue. Only then can your ASP.NET application access the share.
 
 3. Create a file called *CreateUNCFile.aspx* with the code below and save the file in your application directory.
 
@@ -158,16 +158,16 @@ Your first step would be to see if you can connect to the remote server through 
     So that it reflects the name of your remote server.
 5. Open Windows Internet Explorer and browse to `http://**IISServerName**/**AppName**/CreateUNCFile.aspx` from a client computer other than the IIS server.
 6. If the Test.txt file creates successfully, then your ASP.NET application can authenticate to the remote resource.
-7. If file creation fails from an Internet Explorer client browser but works if you browse to the same page from the IIS server itself, then it's likely that you are running into a "Double Hop" scenario. If you are using custom built Web Parts to access remote resources that require user authentication and authorization, you will probably run into the "Double Hop" problem. In order to access your remote resource, you may need to supply the end user's credentials to the resource so that the output from the resource is limited to the data that the end user has permission to access.
+7. If file creation fails from an Internet Explorer client browser but works if you browse to the same page from the IIS server itself, then it's likely that you're running into a "Double Hop" scenario. If you're using custom built Web Parts to access remote resources that require user authentication and authorization, you'll probably run into the "Double Hop" problem. In order to access your remote resource, you may need to supply the end user's credentials to the resource so that the output from the resource is limited to the data that the end user has permission to access.
 
-The above steps assume that you have NTLM Authentication turned on in IIS. Basic Authentication does not use Kerberos.
+The above steps assume that you have NTLM Authentication turned on in IIS. Basic Authentication doesn't use Kerberos.
 
 For more information, see [Troubleshoot Kerberos failures in Internet Explorer](../../iis/www-authentication-authorization/troubleshoot-kerberos-failures-ie.md).
 
 For more information on IIS authentication methods, see [Visual Studio 2003 Retired Technical documentation](https://www.microsoft.com/download/details.aspx?id=55979).
 
 > [!TIP]
-> If you can connect to the remote UNC share but you can not connect to the remote server that is running SQL Server from the ASP.NET application, then you might have to check or set the Service Principal Names (SPNs) for SQL Server. Try enabling only Basic Authentication for your application in IIS and see if you are able to connect to the remote server that is running SQL Server.
+> If you can connect to the remote UNC share but you can’t connect to the remote server that is running SQL Server from the ASP.NET application, then you might have to check or set the Service Principal Names (SPNs) for SQL Server. Try enabling only Basic Authentication for your application in IIS and see if you're able to connect to the remote server that is running SQL Server.
 
 There are numerous other causes for the "Server Application Unavailable" error message. The event log is your best bet to get more details on the cause of your issue.
 
@@ -185,12 +185,12 @@ MyDomain\UserID_91 65.52.22.58 Mozilla/4.0+
 
 We see a 401 with the substatus 3, which indicates "Unauthorized due to ACL on resource."
 
-This indicates missing NTFS permissions on a file or folder. This error may occur even if the permissions are correct for the file that you are trying to access, but the default permissions and user rights may be missing on other SYSTEM and IIS folders. For example, you may see this error if the IUSR_ComputerName account does not have access to the C:\Winnt\System32\Inetsrv directory.
+This indicates missing NTFS permissions on a file or folder. This error may occur even if the permissions are correct for the file that you're trying to access, but the default permissions and user rights may be missing on other SYSTEM and IIS folders. For example, you may see this error if the IUSR_ComputerName account doesn't have access to the C:\Winnt\System32\Inetsrv directory.
 
 > [!TIP]
-> Click **Start**, click **Run**, and then type logfiles to open the folder that contains the IIS logs. Alternatively, on the properties page for your Website in IIS, click the **WebSiteName** tab, and under **Active log format**, click **Properties** to see the Log file directory and name.
+> Select **Start**, select **Run**, and then type logfiles to open the folder that contains the IIS logs. Alternatively, on the properties page for your Website in IIS, select the **WebSiteName** tab, and under **Active log format**, select **Properties** to see the Log file directory and name.
 
-The other thing of interest here is the status code 5. You can use the net helpmsg command to get more info on this status code:
+The other thing of interest here's the status code 5. You can use the net helpmsg command to get more info on this status code:
 
 `C:\Documents and Settings\User> net helpmsg 5`
 
