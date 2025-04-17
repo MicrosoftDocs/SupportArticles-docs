@@ -1,11 +1,11 @@
 ---
 title: Container group deployment remains in Waiting state
 description: Learn how to resolve an issue in which a container group deployment never progresses from the Waiting state in Azure Container Instances.
-ms.date: 01/26/2024
+ms.date: 04/17/2025
 author: tysonfms
 ms.author: tysonfreeman
 editor: v-jsitser
-ms.reviewer: v-leedennis
+ms.reviewer: edneto, v-leedennis
 ms.service: azure-container-instances
 ms.custom: sap:Configuration and Setup
 #Customer intent: As an Azure administrator, I want to learn how to resolve a container group deployment that's stuck in the "Waiting" state so that I can successfully deploy an image onto a container instance.
@@ -25,6 +25,8 @@ Your firewall blocks access to port 19390. When container groups are deployed in
 ## Solution
 
 Expand the Classless Inter-Domain Routing (CIDR) address range of the subnet by specifying a network mask of `/24` or smaller.
+
+Make sure to check the [reserved ports for ACI service functionality](/azure/container-instances/container-instances-faq#does-the-aci-service-reserve-ports-for-service-functionality-) and [other limitations](/azure/container-instances/container-instances-virtual-network-concepts#other-limitations).
 
 > [!NOTE]
 > We don't recommend using small subnets to work around unsupported scenarios (such as simulating a fixed IP address for a private container instance by restricting DHCP to only a few IPs).
