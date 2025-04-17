@@ -16,6 +16,14 @@
   items:
     - name: Troubleshoot issues using Solution Health Hub
       href: customer-service-insights/troubleshoot-cs-oc-solution-health.md 
+- name: Core Service Scheduling
+  items:
+    - name: Service activity not visible and missing the Book button
+      href: core-service-scheduling/book-button-not-available-for-service-activity.md
+- name: Customer Service Admin Center (CSAC)
+  items:
+    - name: Can't install applications in an existing environment
+      href: customer-service-admin-center/cant-install-dynamics-365-customer-service-apps-in-existing-environment.md
 - name: Email
   items: 
     - name: '"Case is missing customer" error'
@@ -47,7 +55,9 @@
 - name: Queues
   items:  
     - name: Personal view queue filters aren't working properly
-      href: queues/queue-filter-error.md                  
+      href: queues/queue-filter-error.md 
+    - name: Queue email address isn't resolved correctly
+      href: queues/queue-email-address-not-resolving-correctly.md               
 - name: Service Level Agreements (SLAs)
   items:
     - name: Import, export, or upgrade SLA
@@ -176,6 +186,8 @@
           href: omnichannel-for-customer-service/error-create-chat-widget-social-channel.md
     - name: Live Chat Widget (LCW)
       items:
+        - name: Agents don't receive desktop notifications for new session messages
+          href: omnichannel-for-customer-service/agents-dont-receive-desktop-notifications-for-new-messages.md
         - name: Chat widget icon doesn't load on portal
           href: omnichannel-for-customer-service/chat-widget-icon-does-not-load-portal.md
         - name: Chat widget doesn't load on the portal
