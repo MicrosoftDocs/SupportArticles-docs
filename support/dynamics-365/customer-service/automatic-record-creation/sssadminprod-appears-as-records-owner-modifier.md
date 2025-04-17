@@ -3,6 +3,7 @@ title: SSSAdminProd Appears as Owner or Modifier of Records
 description: Resolves an issue where the # SSSAdminProd system account appears as the owner or Modified By user of records in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: ghoshsoham
 author: Yerragovula
+ms.author: srreddy
 ai-usage: ai-assisted
 ms.date: 04/17/2025
 ms.custom: sap:Automatic Record Creation (ARC), DFM
