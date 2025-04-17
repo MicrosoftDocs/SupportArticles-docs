@@ -291,6 +291,10 @@
         href: users-groups-entra-apis/identity-of-calling-application-not-established.md
       - name: Add an owner to an application
         href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
+   - name: Problem with using the Graph SDK - libraries
+     items:
+      - name: Python scripts making requests are detected as web crawlers
+        href: users-groups-entra-apis/python-scripts-microsoft-graph-requests-detected-as-web-crawler.md
 
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
