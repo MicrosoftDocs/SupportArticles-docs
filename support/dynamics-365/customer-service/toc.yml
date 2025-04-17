@@ -4,7 +4,7 @@
   items:
     - name: Accounts are created without known triggers
       href: automatic-record-creation/accounts-created-without-known-triggers-dynamics-365.md
-    - name: Cases are auto-created when the automatic record creation rule is deactivated
+    - name: Cases are auto-created when the ARC rule is deactivated
       href: automatic-record-creation/cases-auto-generated-with-automatic-record-creation-deactivated.md
     - name: 'Undesired ownership of records caused by "# SSSAdminProd"'
       href: automatic-record-creation/sssadminprod-appears-as-records-owner-modifier.md
