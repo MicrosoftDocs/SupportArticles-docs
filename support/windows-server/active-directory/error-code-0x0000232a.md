@@ -21,6 +21,7 @@ When you join a workgroup computer to a domain, you receive the following error 
 > **Error code 0x0000232A**
 >
 > Computer Name/Domain Changes
+>
 > An Active Directory Domain Controller (AD DC) for the domain "\<NetBIOS\_name>" could not be contacted.
 >
 > Ensure that the domain name is typed correctly.
