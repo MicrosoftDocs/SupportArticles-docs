@@ -84,6 +84,7 @@ Check the network connectivity between the client and the Domain controller
   InterfaceAlias: Ethernet 2
   SourceAddress: <source_address>
   TcpTestSucceeded : True
+  ```
 
   It indicates that the LDAP Port TCP 389 is open between the client and the DC.
 
@@ -133,6 +134,7 @@ Check the network connectivity between the client and the Domain controller
     querying...
 
     TCP port 389 (ldap service): LISTENING
+    ```
 
 * Collect network monitor trace when reproducing the issue to confirm if there's any network connectivity issue if necessary.
 
