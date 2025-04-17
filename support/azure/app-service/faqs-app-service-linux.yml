@@ -142,7 +142,7 @@ sections:
       - question: |
           What is the format for the private registry server URL?
         answer: |
-          Provide the full registry URL, including `http://` or `https://`.
+          Provide the full registry URL, including `https://`.
           
       - question: |
           What is the format for the image name in the private registry option?
