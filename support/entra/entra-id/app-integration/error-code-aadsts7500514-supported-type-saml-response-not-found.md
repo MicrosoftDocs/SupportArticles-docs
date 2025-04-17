@@ -27,7 +27,7 @@ When a federated account tries to authenticate with Microsoft Entra ID from a Mi
 
 The error typically occurs in the following environment:
 
-- A federated account that uses [PingFederate](https://www.pingidentity.com/software/pingfederate.html) as the identity provider.  
+- A federated account that uses [PingFederate](https://www.pingidentity.com/) as the identity provider.  
 - The identity provider is configured to issue a SAML 1.1 token by using the WS-Trust protocol.
 - The application uses one of the following APIs for authentication:
     - MSAL `AcquireTokenByUserNamePassword` method.  
