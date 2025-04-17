@@ -48,9 +48,9 @@ When you join a workgroup computer to a domain, you receive the following error 
 Here's an example from the *netsetup.log* file:
 
 ```output
-mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if '<NetBIOS\_name>' is valid as type 3 name
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for <NetBIOS\_name> returned 0x54b, last error is 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<NetBIOS\_name>' returned 0x54b
+mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if '<NetBIOS_name>' is valid as type 3 name
+mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for <NetBIOS_name> returned 0x54b, last error is 0x0
+mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<NetBIOS_name>' returned 0x54b
 ```
 
 ## Cause
