@@ -2,7 +2,7 @@
 title: Concurrent solution operation failures in Power Apps
 description: Works around the Cannot start the requested operation because there is another running error that occurs when you perform multiple solution operations at a time in Microsoft Power Apps.
 ms.reviewer: jdaly
-ms.date: 08/21/2023
+ms.date: 04/17/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Solution import - Other errors

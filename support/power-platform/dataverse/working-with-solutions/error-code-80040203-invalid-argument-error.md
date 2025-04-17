@@ -2,7 +2,7 @@
 title: Error Code 80040203 Invalid Argument
 description: Provides a solution to an error that occurs when you try to import a solution into Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 04/07/2025
+ms.date: 04/17/2025
 ms.custom: sap:Working with Solutions
 ---
 # Error code 80040203 (Invalid Argument) error when importing a solution into Dynamics 365

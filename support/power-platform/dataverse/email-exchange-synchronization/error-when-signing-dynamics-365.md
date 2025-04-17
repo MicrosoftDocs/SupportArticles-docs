@@ -2,7 +2,7 @@
 title: Can't sign in to Dynamics 365 or use Dynamics 365 App for Outlook
 description: Solves an error that occurs when you try to sign in to Microsoft Dynamics 365 or use Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.date: 12/11/2024
+ms.date: 04/17/2025
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # An error occurs when you sign in to Dynamics 365 customer engagement apps or use Dynamics 365 App for Outlook

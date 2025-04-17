@@ -2,7 +2,7 @@
 title: Failed deleting solution error due to circular dependencies between two solutions
 description: Works around an issue where you can't delete a solution due to circular dependencies between two solutions in Power Apps.
 ms.reviewer: jdaly
-ms.date: 10/16/2023
+ms.date: 04/17/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Dependencies prevent a solution uninstall
