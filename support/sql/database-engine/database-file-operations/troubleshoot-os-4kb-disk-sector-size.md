@@ -18,7 +18,7 @@ _Applies to_: &nbsp; SQL Server all versions
 
 ## Scenario 1: Move the file to a volume with a compatible sector size
 
-If you try to use sector size higher than 4 KB, you see the following error message:
+If you try to use sector size greater than 4 KB, you see the following error message:
 
 ```output
 Error: 5179, Severity: 16, State: 1.
@@ -48,7 +48,7 @@ For more information, see [SQL Server installation fails with sector size error 
 
 ## Scenario 3: Wait on the Database Engine recovery handle failed
 
-When you install any version of SQL Server, you see errors similar to the following message for the Database Engine Services component of SQL Server:
+When you install any version of SQL Server, you see errors that resemble the following message for the Database Engine Services component of SQL Server:
 
 ```output
 Feature: Database Engine Services 
@@ -60,7 +60,7 @@ Component error code: 0x851A001A
 Error description: Wait on the Database Engine recovery handle failed. Check the SQL Server error log for potential causes. 
 ```
 
-Or, you see the following errors in the SQL Server Error Log:
+Or, you see the following errors in the SQL Server error Log:
 
 ```output
 2025-02-26 20:01:16.79 spid14s     Starting up database 'master'.
@@ -93,7 +93,7 @@ Faulting module path: C:\Windows\SYSTEM32\ntdll.dll
 
 ## Scenario 6: Move the file to a volume with a sector size that is the same as or smaller than the original sector size
 
-You install LocalDB on a Windows 11 device. The setup fails. In the SQL Server error log, you notice the following entries:
+You install LocalDB on a Windows 11 device and the setup fails. In the SQL Server error log, you notice the following entries:
 
 ```output
 2021-12-15 23:25:04.28 spid5s      Cannot use file 'C:\Users\Administrator\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\TestInstance\master.mdf' because it was originally formatted with sector size 4096 and is now on a volume with sector size 16384. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.
@@ -192,7 +192,7 @@ Additionally, be aware of the Windows support policy for file system and storage
 - If you don't add the registry key and you have multiple drives on this system, you can specify a different location for the database files after the installation of SQL Server is complete. Make sure that the drive reflects a supported sector size when querying the `fsutil` commands. SQL Server currently supports sector storage sizes of 512 bytes and 4,096 bytes.
 
 > [!CAUTION]
-> If you've already created a storage pool with disks that have a sector size greater than 4 kb to host SQL Server files, you must first remove the storage pool, apply one of the troubleshooting methods mentioned in this article, and then rebuild the storage pool before attempting to install SQL Server on the storage pool or pools.
+> If you've already created a storage pool with disks that have a sector size greater than 4 KB to host SQL Server files, you must first remove the storage pool, apply one of the troubleshooting methods mentioned in this article, and then rebuild the storage pool before attempting to install SQL Server on the storage pool or pools.
 
 ## More information
 
