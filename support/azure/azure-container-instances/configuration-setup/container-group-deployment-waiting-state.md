@@ -1,7 +1,7 @@
 ---
 title: Container group deployment remains in Waiting state
 description: Learn how to resolve an issue in which a container group deployment never progresses from the Waiting state in Azure Container Instances.
-ms.date: 04/16/2025
+ms.date: 04/17/2025
 author: tysonfms
 ms.author: tysonfreeman
 editor: v-jsitser
