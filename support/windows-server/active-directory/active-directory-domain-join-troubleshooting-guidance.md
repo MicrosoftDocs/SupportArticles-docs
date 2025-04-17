@@ -129,50 +129,7 @@ The output indicates that the Kerberos Port TCP 88 is open between the client an
 
 ### Error code 0x54b
 
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x54b-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x54b.":::
-
-Here's an example of the error message:
-
-> Note: This information is intended for a network administrator.  If you are not your network's administrator, notify the administrator that you received this information, which has been recorded in the file C:\WINDOWS\debug\dcdiag.txt.
->
-> The following error occurred when DNS was queried for the service location (SRV) resource record used to locate an Active Directory Domain Controller (AD DC) for domain "<domain_name>":
->
-> The error was: "This operation returned because the timeout period expired."
-> (error code 0x000005B4 ERROR_TIMEOUT)
->
-> The query was for the SRV record for <srv_record>
->
-> The DNS servers used by this computer for name resolution are not responding. This computer is configured to use DNS servers with the following IP addresses:
->
-> <ip_address>
->
-> Verify that this computer is connected to the network, that these are the correct DNS server IP addresses, and that at least one of the DNS servers is running.
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if '<domain_name>' is valid as type 3 name
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for <domain_name> returned 0x54b, last error is 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<domain_name>' returned 0x54b
-```
-
-To resolve the 0x54b error, follow these steps:
-
-- Check the network connectivity between the client and the Domain controller.
-- Verify if the Preferred DNS Server is the correct DNS Server.
-- Run `nltest /dsgetdc` (DC Discovery) to verify if you can discover a DC.
-  
-  For example:
-
-  ```console
-  nltest /dsgetdc:<domain_name> /force
-  ```
-
-  Expected Output:
-
-  :::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/nltest-output.png" alt-text="Screenshot that shows the nltest command output.":::
-
-- Run `DCDiag /v` on the closest domain controller and verify if SRV records are registered. For example: `_ldap._tcp.dc._msdcs.<domain_name>.com`.
+For more information, see [Domain join error code 0x54b](error-code-0x54b.md).
 
 ### Error code 0x0000232A
 
