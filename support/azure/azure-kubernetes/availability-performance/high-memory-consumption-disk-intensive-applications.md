@@ -10,37 +10,40 @@ ms.custom: sap:Node/node pool availability and performance
 
 Disk input and output operations are costly, and most operating systems implement caching strategies for reading and writing data to the filesystem. [Linux kernel](https://www.kernel.org/doc) usually uses strategies such as the [page cache](https://www.kernel.org/doc/gorman/html/understand/understand013.html) to improve the overall performance. The primary goal of the page cache is to store data that's read from the filesystem in cache, making it available in memory for future read operations.
 
-When disk-intensive applications perform frequent filesystem operations, high memory consumption might occur. This article helps you to identity and resolve this issue due to Linux kernel behaviors on Kubernetes pods.
+This article helps you to identity and avoid high memory consumed by disk-intensive applications due to Linux kernel behaviors on Kubernetes pods.
 
 ## Prerequisites
 
-- A tool to connect to the Kubernetes cluster, such as the kubectl tool. To install kubectl using the [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+- A tool to connect to the Kubernetes cluster, such as the `kubectl` tool. To install `kubectl` using the [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 ## Symptoms
+
+When an disk-intensive application running on a pod perform frequent filesystem operations, high memory consumption might occur.
 
 The following table outlines the common symptoms of memory saturation:
 
 | Symptom | Description |
 | --- | --- |
-| [Working set](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory) metric too high | This issue occurs when there is a significant difference between the working_set metric reported by the [Kubernetes Metrics API](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server) and the actual memory consumed by an application. |
+| The [working set](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory) metric too high | This issue occurs when there is a significant difference between the [working set](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory) metric reported by the [Kubernetes Metrics API](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server) and the actual memory consumed by an application. |
 | Out-of-memory (OOM) kill | This issue indicates memory issues exist on your pod. |
 
 ## Troubleshooting checklist
 
 ### Step 1: Inspect pod working set
 
-1. Identify which pod is consuming excessive memory by following the guide[Troubleshoot memory saturation in AKS clusters](identify-memory-saturation-aks.md).
-2. Use the following [kubectl top pods](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_top/) command to show the actual [Working_Set](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory) reported by the [Kubernetes metrics API](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server):
+To inspect the working set of pods reported by the Kubernetes Metrics API, run the following [kubectl top pods](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_top/) command:
 
-    ```console
-    $ kubectl top pods -A | grep -i "<DEPLOYMENT_NAME>"
-    NAME                            CPU(cores)   MEMORY(bytes)
-    my-deployment-fc94b7f98-m9z2l   1m           344Mi
-    ```
+```console
+$ kubectl top pods -A | grep -i "<DEPLOYMENT_NAME>"
+NAME                            CPU(cores)   MEMORY(bytes)
+my-deployment-fc94b7f98-m9z2l   1m           344Mi
+```
+
+For detailed steps about how to identify which pod is consuming excessive memory, see [Troubleshoot memory saturation in AKS clusters](identify-memory-saturation-aks.md#step-1-identify-nodes-that-have-memory-saturation).
 
 ### Step 2: Inspect pod memory statistics
 
-Inspect the memory statistics of the [cgroup](https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html) of the pod by following these steps:
+To inspect the memory statistics of the [cgroup](https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html) on the pod that's consuming excessive memory, follow these steps:
 
 1. Connect to the pod:
 
@@ -48,17 +51,19 @@ Inspect the memory statistics of the [cgroup](https://www.kernel.org/doc/html/la
     $ kubectl exec <POD_NAME> -it -- bash
     ```
 
-2. Navigate to the cgroup statistics directory and list memory-related files:
+2. Navigate to the `cgroup` statistics directory and list memory-related files:
 
     ```console
     $ ls /sys/fs/cgroup | grep -e memory.stat -e memory.current
     memory.current memory.stat
     ```
 
-    - `memory.current`: Total memory currently used by the cgroup and its descendants.
-    - `memory.stat`: This breaks down the cgroup's memory footprint into different types of memory, type-specific details, and other information on the state and past events of the memory management system.
+    - `memory.current`: Total memory currently used by the `cgroup` and its descendants.
+    - `memory.stat`: This breaks down the cgroup's memory footprint into different types of memory, type-specific details, and other information about the state and past events of the memory management system.
 
-3. All the values listed on those files are in bytes. Get an overview of how the memory consumption is distributed on the `pod`:
+    All the values listed on those files are in bytes.
+
+3. Get an overview about how the memory consumption is distributed on the pod:
 
     ```console
     $ cat /sys/fs/cgroup/memory.current
@@ -78,29 +83,25 @@ Inspect the memory statistics of the [cgroup](https://www.kernel.org/doc/html/la
     ...
     ```
 
-`cAdvisor` uses `memory.current` and `inactive_file` to compute the working set metric. You can replicate the calculation using the following formula:
+    `cAdvisor` uses `memory.current` and `inactive_file` to compute the working set metric. You can replicate the calculation using the following formula:
 
-```sh
-working_set = (memory.current - inactive_file) / 1048576
-            = (10645012480 - 10256207872) / 1048576
-            = 370 MB
-```
+    working_set = (memory.current - inactive_file) / 1048576
+                = (10645012480 - 10256207872) / 1048576
+                = 370 MB
 
-### Step 3: Determine kernel vs. application memory consumption
+### Step 3: Determine kernel and application memory consumption
 
 The following table describes some memory segments:
 
 | Segment | Description |
 |---|---|
-| anon | Amount of memory used in anonymous mappings. The majority languages use this segment to allocate memory. |
+| `anon` | Amount of memory used in anonymous mappings. The majority languages use this segment to allocate memory. |
 | file | Amount of memory used to cache filesystem data, including tmpfs and shared memory. |
-| slab  | Amount of memory used for storing in-kernel data structures. |
+| `slab`  | Amount of memory used for storing data structures in the Linux kernel. |
 
-The majority of languages use the anon memory segment to allocate resources. In this case, the `anon` represents 5197824 bytes which is not even close to the total amount reported by the working set metric.
+In this case, the `anon` represents 5197824 bytes which is not even close to the total amount reported by the working set metric. The `slab` memory segment used by the Linux kernel represents 354682456 bytes, which is almost all the memory reported by working set metric on the pod.
 
-On the other hand, there is one of the segments that Kernel uses the `slab` representing 354682456 bytes, which is almost all the memory reported by working set metric on this pod.
-
-### Step 4: Run a node drop cache
+### Step 4: Drop the kernel cache on a debugger pod
 
 > [!NOTE]
 > This step might lead to availability and performance issues. Avoid running it in a production environment.
@@ -126,7 +127,7 @@ On the other hand, there is one of the segments that Kernel uses the `slab` repr
     echo 1 > /proc/sys/vm/drop_caches
     ```
 
-4. Verify if the command in the previous step causes the effect by repeating [Step 1](#step-1-inspect-pod-working-set) and [Step 2](#step-2-inspect-pod-memory-statistics):
+4. Verify if the command in the previous step causes any effect by repeating [Step 1](#step-1-inspect-pod-working-set) and [Step 2](#step-2-inspect-pod-memory-statistics):
 
     ```console
     $ kubectl top pods -A | grep -i "<DEPLOYMENT_NAME>"
@@ -142,9 +143,9 @@ On the other hand, there is one of the segments that Kernel uses the `slab` repr
     slab 392768
     ```
 
-If you observe a significant decrease in both working set and slab memory segment, you are experiencing the issue where a great amount of pod's memory is used by the Kernel.
+If you observe a significant decrease in both working set and `slab` memory segment, you are experiencing the issue where a great amount of memory is used by the Linux kernel on the pod.
 
-## Workaround: Set appropriate memory limits and requests
+## Workaround: Configure appropriate memory limits and requests
 
 The only effective workaround for high memory consumption on Kubernetes pods is to set realistic resource [limits and requests](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits). For example:
 
@@ -158,8 +159,8 @@ resources:
 
 By configuring appropriate memory limits and requests in the Kubernetes or specification, you can ensure that Kubernetes manages memory allocation more efficiently, mitigating the impact of excessive kernel-level caching on pod memory usage.
 
-> [!NOTE]
-> Misconfigured pod memory limits can lead to problems such as OOM-Killed errors.
+> [!CAUTION]
+> Misconfigured pod memory limits can lead to problems such as OOMKilled errors.
 
 ## References
 

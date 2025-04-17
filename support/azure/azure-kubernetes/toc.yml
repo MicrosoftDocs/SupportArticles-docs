@@ -168,7 +168,7 @@
     href: availability-performance/identify-high-cpu-consuming-containers-aks.md
   - name: Identify memory saturation in AKS clusters
     href: availability-performance/identify-memory-saturation-aks.md
-  - name: Troubleshoot high memory consumption in disk-intensive applications
+  - name: Troubleshoot high memory consumption due to Linux kernel behaviors
     href: availability-performance/high-memory-consumption-disk-intensive-applications.md
   - name: Troubleshoot cluster service health probe mode issues
     href: availability-performance/cluster-service-health-probe-mode-issues.md
