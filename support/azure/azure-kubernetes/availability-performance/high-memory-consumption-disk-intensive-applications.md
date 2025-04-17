@@ -94,10 +94,10 @@ The following table describes some memory segments:
 | Segment | Description |
 |---|---|
 | `anon` | Amount of memory used in anonymous mappings. The majority languages use this segment to allocate memory. |
-| file | Amount of memory used to cache filesystem data, including tmpfs and shared memory. |
+| `file` | Amount of memory used to cache filesystem data, including tmpfs and shared memory. |
 | `slab`  | Amount of memory used for storing data structures in the Linux kernel. |
 
-In the [Step 2](#step-2-inspect-pod-memory-statistics), the `anon` represents 5197824 bytes which is not even close to the total amount reported by the working set metric. The `slab` memory segment used by the Linux kernel represents 354682456 bytes, which is almost all the memory reported by working set metric on the pod.
+Combined with the [Step 2](#step-2-inspect-pod-memory-statistics), the `anon` represents 5197824 bytes which isn't close to the total amount reported by the working set metric. The `slab` memory segment used by the Linux kernel represents 354682456 bytes, which is almost all the memory reported by working set metric on the pod.
 
 ### Step 4: Drop the kernel cache on a debugger pod
 
