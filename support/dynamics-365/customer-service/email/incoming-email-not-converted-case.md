@@ -3,7 +3,7 @@ title: Incoming email isn't converted to a case
 description: Provides a resolution for the issue where an incoming email isn't converted to a case in Dynamics 365 Customer Service.
 ms.reviewer: sdas, ghoshsoham
 ms.author: shchaur
-ms.date: 04/14/2025
+ms.date: 04/17/2025
 ms.custom: sap:E-Mail\Case isn't getting created with record creation rule
 ---
 # Incoming email isn't converted to a case
@@ -83,14 +83,14 @@ As a result, the ARC rule fails to create cases from emails.
 
 ### Cause
 
-This issue occurs when the account under which the ARC rules are running has been deleted or disabled. This causes the associated Power Automate flow to become disconnected.
+This issue occurs when the account under which the ARC rules are running is deleted or disabled. This causes the associated Power Automate flow to become disconnected.
 
 ### Resolution
 
 To resolve this issue, follow these steps:
 
 1. Go to **Customer Service admin center** > **Case Settings** > **Automatic Record Creation and Update Rules**.
-2. Verify the account under which the ARC rules are running. Ensure that the account is active and hasn't been deleted or disabled.
+2. Verify the account under which the ARC rules are running. Ensure that the account is active and isn't deleted or disabled.
 3. Disable the affected ARC rule.
 4. Re-enable the ARC rule to re-establish the connection with the associated Power Automate flow.
 
