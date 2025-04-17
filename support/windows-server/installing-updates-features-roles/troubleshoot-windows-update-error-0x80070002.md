@@ -91,7 +91,7 @@ Info CBS Failed to find file: x86_microsoft-windows-directwrite_31bf3856ad364e35
    Then, run the `mkdir` command to create a folder for the missing DLL file. For example, if the file x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_229deeb1ba2a85d3DWrite.dll is missing, run the following command:
 
    ```console
-   mkdir x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_229deeb1ba2a85d3
+   mkdir x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_c67f532e01cd149d
    ```
 
 3. Run the following command to check for corruptions:
@@ -147,7 +147,7 @@ Error SP CMountWIM::DoExecute: Failed to mount WIM file C:\$WINDOWS.~BT\Sources\
 
 ### Resolution: Restore WIMMOUNT.sys
 
-Export `WIMMOUNT.sys` from the location `%SystemRoot%\system32\drivers\wimmount.sys` and the registry `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Wimmount` on a working server. Then, merge them on the affected server.
+Export WIMMOUNT.sys from registry: `HKLM\System\CCS\Services\Wimmount.sys` from the working server and merge it on the affected server. Then, merge them on the affected server.
 
 ## Next steps
 
