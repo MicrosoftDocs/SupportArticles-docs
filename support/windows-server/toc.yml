@@ -363,6 +363,8 @@ items:
       href: ./active-directory/netlogon-service-not-start-automatically.md
     - name: Status code 0x32 and you can't join a domain
       href: ./active-directory/status-code-0x32-cannot-join-domain.md
+    - name: Status code 0x3a
+      href: ./active-directory/status-code-0x3a-server-not-perform-operation.md
     - name: Support boundaries for Active Directory over NAT
       href: ./active-directory/support-for-active-directory-over-nat.md
     - name: '"The account is not authorized to login from this station" error'
