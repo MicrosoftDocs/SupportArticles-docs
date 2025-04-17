@@ -20,7 +20,7 @@ This article helps you to identity and avoid high memory consumed by disk-intens
 
 When an disk-intensive application running on a pod perform frequent filesystem operations, high memory consumption might occur.
 
-The following table outlines the common symptoms of memory saturation:
+The following table outlines the common symptoms of high memory consumption:
 
 | Symptom | Description |
 | --- | --- |
@@ -85,9 +85,7 @@ To inspect the memory statistics of the [cgroup](https://www.kernel.org/doc/html
 
     `cAdvisor` uses `memory.current` and `inactive_file` to compute the working set metric. You can replicate the calculation using the following formula:
 
-    working_set = (memory.current - inactive_file) / 1048576
-                = (10645012480 - 10256207872) / 1048576
-                = 370 MB
+    `working_set = (memory.current - inactive_file) / 1048576 = (10645012480 - 10256207872) / 1048576 = 370 MB`
 
 ### Step 3: Determine kernel and application memory consumption
 
@@ -99,7 +97,7 @@ The following table describes some memory segments:
 | file | Amount of memory used to cache filesystem data, including tmpfs and shared memory. |
 | `slab`  | Amount of memory used for storing data structures in the Linux kernel. |
 
-In this case, the `anon` represents 5197824 bytes which is not even close to the total amount reported by the working set metric. The `slab` memory segment used by the Linux kernel represents 354682456 bytes, which is almost all the memory reported by working set metric on the pod.
+In the [Step 2](#step-2-inspect-pod-memory-statistics), the `anon` represents 5197824 bytes which is not even close to the total amount reported by the working set metric. The `slab` memory segment used by the Linux kernel represents 354682456 bytes, which is almost all the memory reported by working set metric on the pod.
 
 ### Step 4: Drop the kernel cache on a debugger pod
 
