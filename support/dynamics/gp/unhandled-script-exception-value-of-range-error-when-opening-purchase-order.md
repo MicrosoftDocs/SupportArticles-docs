@@ -3,7 +3,7 @@ title: Unhandled script exception Value of range error when opening purchase ord
 description: When you open a purchase order in the Purchase Order Entry window in Microsoft Dynamics GP, you receive an Unhandled script exception. Provides a resolution.
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # "Unhandled script exception: Value of range" error when you open a purchase order in the Purchase Order Entry window

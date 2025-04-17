@@ -3,7 +3,7 @@ title: Reconcile FA to verify balances are right
 description: Describes how to reconcile Fixed Assets to verify that the balances are correct in General Ledger in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Fixed Assets
 ---
 # How to reconcile Fixed Assets to verify that the balances are correct in General Ledger in Microsoft Dynamics GP

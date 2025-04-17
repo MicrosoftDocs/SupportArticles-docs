@@ -3,7 +3,7 @@ title: How to use Contract Billing Reversal utility in Contract Administration
 description: Introduces how to use the Contract Billing Reversal utility in Contract Administration in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Receivables Management
 ---
 # How to use the Contract Billing Reversal utility in Contract Administration in Microsoft Dynamics GP

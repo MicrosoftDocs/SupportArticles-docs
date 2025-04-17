@@ -3,7 +3,7 @@ title: Remove named printers from the current installation in Microsoft Dynamics
 description: How to remove named printers from the current installation in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to remove named printers from the current installation in Microsoft Dynamics GP
