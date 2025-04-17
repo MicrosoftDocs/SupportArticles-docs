@@ -32,7 +32,7 @@ This issue occurs due to one or more of the following reasons:
 
 ## Cause 2: Missing or incorrect licensing
 
-Users trying to install or access Dynamics 365 applications must have the appropriate license assigned. For more information, see [Customer Service Pricing](/dynamics-365/products/customer-service/pricing).
+Users trying to install or access Dynamics 365 applications must have the [appropriate license](/dynamics-365/products/customer-service/pricing) assigned.
 
 ### Resolution
 
@@ -61,4 +61,4 @@ If the current environment isn't configured to support Dynamics 365 applications
 
 Once the environment is successfully set up, the [Customer Service Hub](/dynamics365/customer-service/implement/customer-service-hub-user-guide-basics) and Copilot Service admin center applications will be available in the app list for users with the appropriate licenses.
 
-For more detailed guidance on creating and managing environments, see [Create and manage environments in the Power Platform admin center](https://learn.microsoft.com/en-us/power-platform/admin/create-environment).
+For more detailed guidance on creating and managing environments, see [Create and manage environments in the Power Platform admin center](/power-platform/admin/create-environment).
