@@ -2,7 +2,7 @@
 title: IncomingEmailS2SApprovalNeeded or IncomingEmailRejected when installing Dynamics 365 App for Outlook
 description: Solves errors that occur when you try to install Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.date: 03/12/2025
+ms.date: 04/17/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # IncomingEmailS2SApprovalNeeded or IncomingEmailRejected error when you install Dynamics 365 App for Outlook
