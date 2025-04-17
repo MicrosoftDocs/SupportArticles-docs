@@ -61,7 +61,7 @@ When you try to install the RD Connection Broker role, the installation fails wi
 
 > Unable to install RD Connection Broker role service on server \<ServerName\> - Failed.
 
-This is commonly due to the fact that the object "NT SERVICE\ALL SERVICES" has been removed from the **Logon as a service** security policy, or there's another policy denying the **Logon as a service** privilege to the corresponding service account.
+This is commonly because the object "NT SERVICE\ALL SERVICES" has been removed from the **Logon as a service** security policy, or there's another policy denying the **Logon as a service** privilege to the corresponding service account.
 
 You might also see the following error event in the System event log:
 
@@ -143,7 +143,7 @@ This behavior can be caused by different reasons. Here are some possible causes:
   The error message might vary. Commonly, the error message can be "Unable to configure the RD Session Host Server \<ServerName\>. Invalid Operation."
 
   > [!NOTE]
-  > Here's a list of common GPOS that might cause this behavior, but we recommend removing any RDS-related GPOs and testing:
+  > Here's a list of common GPOs that might cause this behavior, but we recommend removing any RDS-related GPOs and testing:
   >
   > * **Require user authentication for remote connections by using Network Level Authentication**
   > * **Set client connection encryption level**
