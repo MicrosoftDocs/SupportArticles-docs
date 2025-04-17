@@ -38,7 +38,7 @@ This authorization error indicates that a privilege check passed, but the subseq
 
 This SQL error occurs when a request violates a key constraint in the database. Make sure the records in your payload follow any existing key constraints. For example, a `CreateMultiple` request where one of the records in the payload uses a primary key value that is already used by an existing record will violate a key constraint and cause this error.
 
-## Error: "Contact With Ids = \<guid> Do Not Exist"
+## Error: "Contact With IDs = \<guid> Do Not Exist"
 
 > Error Code: -2147220969
 
