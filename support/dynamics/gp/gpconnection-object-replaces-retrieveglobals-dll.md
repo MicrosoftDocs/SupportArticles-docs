@@ -75,4 +75,4 @@ The Open method in the GPConnection object is **GPConnection.Open**. This method
 
 For more information about the RetrieveGlobals.dll and RetrieveGlobals9.dll files, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[913341](https://support.microsoft.com/help/913341) How to use the new RetrieveGlobals9.dll file in Integration Manager and in Microsoft Dynamics GP 9.0
+[How to use the new RetrieveGlobals9.dll file in Integration Manager and in Microsoft Dynamics GP 9.0](upgrade-apps-to-use-gpconndll-gpconnnetdll-file.md)

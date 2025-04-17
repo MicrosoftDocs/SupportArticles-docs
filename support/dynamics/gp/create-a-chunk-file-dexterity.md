@@ -31,7 +31,7 @@ Before you create the chunk file, follow these steps in Dexterity:
 
 - Compile your development dictionary. To open the development dictionary, select **Open Source Dictionary** on the **File** menu. With your development dictionary open, select **Compile All** on the **Explorer** menu.
 - If you're using Dexterity Source Code Control, make sure that all resources are checked in. On the **Explorer** menu, select **Source Code**, and then select **Check In**.
-- Make sure that the **Resource IDs** that are assigned to the resources you created don't change values between builds. For more information, see [How to use an index file and the Microsoft Dynamics GP Dexterity source code control functionality to make sure that the resources that you create maintain the same resource ID in different builds and versions of your code](https://support.microsoft.com/help/894699).
+- Make sure that the **Resource IDs** that are assigned to the resources you created don't change values between builds. For more information, see [How to use an index file and the Microsoft Dynamics GP Dexterity source code control functionality to make sure that the resources that you create maintain the same resource ID in different builds and versions of your code](how-to-use-index-file-with-dexterity-to-maintain-resource-ids-in-new-builds-and-versions.md).
 
 > [!NOTE]
 > You can create a macro to record the following steps. You can then replay the macro later to re-create the chunk file or to modify the macro in a text editor to change the build number and any other details.

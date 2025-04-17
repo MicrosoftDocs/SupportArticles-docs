@@ -32,6 +32,6 @@ Microsoft Sales Operations assigns a unique product ID to every product. If two 
 
 If you develop a custom product for a specific customer, you can obtain a single product ID. If you later decide to distribute the custom product to other customers, you can reuse this product ID for each customer. Although you use a single product ID, a different dictionary is used for each customer. When a different dictionary is used for each customer, the product ID remains unique at that customer site.
 
-If you want to include a functionality from one custom product in another custom product, copy the code to the dictionary for the new custom product. Or, create a separate dictionary for that functionality, and then obtain a new product ID for the functionality. For more information about how to create a chunk file, see [How to create a chunk file in Dexterity in Microsoft Dynamics GP](https://support.microsoft.com/help/894700)
+If you want to include a functionality from one custom product in another custom product, copy the code to the dictionary for the new custom product. Or, create a separate dictionary for that functionality, and then obtain a new product ID for the functionality. For more information about how to create a chunk file, see [How to create a chunk file in Dexterity in Microsoft Dynamics GP](create-a-chunk-file-dexterity.md)
 
 For more information, see [How to request a new Dexterity Product ID for my product](https://support.microsoft.com/help/867102)
