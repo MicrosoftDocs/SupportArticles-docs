@@ -1,7 +1,7 @@
 ---
 title: Azure container group intermittently restarts
 description: Provides a solution to an issue where an Azure container group is unexpectedly stopped and restarted due to killing event interruptions.
-ms.date: 06/26/2024
+ms.date: 04/17/2025
 ms.reviewer: tysonfreeman, v-weizhu
 ms.service: azure-container-instances
 ms.custom: sap:Management
