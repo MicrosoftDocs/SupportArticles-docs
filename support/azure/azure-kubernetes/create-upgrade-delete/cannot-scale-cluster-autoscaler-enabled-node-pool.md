@@ -63,4 +63,25 @@ To resolve this issue, you can run the following command to recover the deleted 
 az aks update --resource-group <resource-group-name> --name <aks-cluster-name>
 ```
 
+
+## Additional Information
+
+### Common Scenarios
+
+- **Scenario 1**: If the cluster virtual machine scale set is accidentally deleted, provide steps to recreate it.
+- **Scenario 2**: If tags or properties are modified, detail how to revert these changes.
+
+### Detailed Commands
+
+Include more detailed Azure CLI commands for verifying the existence of the virtual machine scale set and node resource group:
+
+```bash
+az vmss list --resource-group <resource-group-name>
+az group show --name <node-resource-group-name>
+```
+
+### Additional Troubleshooting Tips
+
+- Check the Azure Activity Log for any recent changes or deletions.
+
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
