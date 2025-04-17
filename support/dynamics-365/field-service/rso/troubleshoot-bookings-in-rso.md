@@ -4,7 +4,7 @@ description: Resolves issues with bookings in the Resource Scheduling Optimizati
 ms.author: AnilMur
 author: anilmur
 ms.reviewer: mhart
-ms.date: 12/19/2024
+ms.date: 04/17/2025
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # Troubleshoot issues with bookings in Resource Scheduling Optimization
@@ -50,8 +50,8 @@ To block changes to past bookings, consider the following options:
 
 If an exception or error occurs during an optimization schedule run, you might see some overlap on the [Schedule Board](/dynamics365/field-service/schedule-board-tab-settings#board-view-settings). Some bookings are created or updated from the latest run, while other bookings from the previous run failed to be deleted due to an issue. To avoid this issue, the optimization process uses transactional bookings in the *Simulation* status.
 
-During the optimization process, the create, update, and delete operations are visible. All new, updated, and to-be-deleted bookings are simulated. If the optimization run completes successfully, these simulated bookings become real bookings. During the optimization run, simulation status bookings are transparent and move around the schedule board. When the run completes, simulation bookings change to real bookings with a solid color.
+During the optimization process, the create, update, and delete operations are visible. If a booking has to get updated, the system tries to make that change to the booking. If that update fails because the booking has changed after the optimization run starts, Resource Scheduling Optimization creates a simulated booking instead.
 
-If an exception occurs and the optimization request fails, these simulation bookings remain in simulation status for troubleshooting purposes unless you manually delete them. Otherwise, a system job deletes them automatically every two weeks.
+If an exception occurs and the optimization request fails, simulation bookings remain in simulation status for troubleshooting purposes unless you manually delete them. Otherwise, a system job deletes them automatically every two weeks.
 
 You can hide simulation bookings by changing the [schedule board settings](/dynamics365/field-service/schedule-board-tab-settings#board-view-settings). Select the gear icon on the top right to open the **Scheduler settings**, and then disable the **Show canceled** option.
