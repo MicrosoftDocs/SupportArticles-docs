@@ -29,6 +29,12 @@ The primary cause of error 0x80070490 is driver failure during Windows Update in
 - Corrupted or malformed SetupConfig.ini files.
 - Missing driver files or hard links in the system directories.
 
+## CBS logs
+
+When troubleshooting Windows Update issues, CBS logs are helpful for identifying the root cause.
+
+The CBS logs locates at the `C:\Windows\Logs\CBS\CBS.log`. The log can roll over from CBS.log to the CBSpersisttXXXXXXXXXXXXX.log or CBSpersisttXXXXXXXXXXXXX.cab.
+
 ## Symptom 1: Pending update state
 
 When an update is in an Install Pending state, the driver operation might fail due to an inability to read the identity for driver operation sequence ID 1. Check the CBS logs at `C:\Windows\Logs\CBS\CBS.log` for entries like:
@@ -139,7 +145,7 @@ Error XXXX.corp. 3 Microsoft-Windows-WUSA N/A CORP\xxa790741it5 Windows update "
 
 ## Symptom 5: Monthly rollup update failure
 
-Monthly rollup updates might fail with error code 0x80070490. Check the CBS log for entries like:
+Monthly rollup updates might fail with error code 0x80070490. Check the CBS logs for entries like:
 
 ```output
 Error CBS Shtd: Failed while processing non-critical driver operationsqueue. [HRESULT = 0x80070490 – ERROR_NOT_FOUND]
