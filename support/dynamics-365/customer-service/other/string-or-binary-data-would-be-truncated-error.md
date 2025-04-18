@@ -1,11 +1,11 @@
 ---
-title: String Or Binary Data Would Be Truncated Error
+title: String or Binary Data Would Be Truncated Error
 description: Solves an issue where you can't delete records from a custom table in Microsoft Dynamics 365 Customer Service.
 author: Yerragovula
 ms.author: srreddy
 ms.reviewer: courtser
 ai-usage: ai-assisted
-ms.date: 04/16/2025
+ms.date: 04/18/2025
 ms.custom: sap:Other, DFM
 ---
 # "String or binary data would be truncated" error when deleting records from a custom table
@@ -34,7 +34,7 @@ To resolve this issue, follow these steps:
 4. Expand **Advanced options** for the selected column.
 
    > [!TIP]
-   > You also can find the **Advanced options** in the [table designer](/power-apps/maker/data-platform/create-edit-entities-portal?tabs=excel#table-designer).
+   > You can also find the **Advanced options** in the [table designer](/power-apps/maker/data-platform/create-edit-entities-portal?tabs=excel#table-designer).
 
 5. Increase the **Maximum character count** to accommodate the data length.
 6. Save and publish the changes.
