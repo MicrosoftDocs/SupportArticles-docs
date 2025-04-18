@@ -1,10 +1,10 @@
 ---
-title: Failed To Run PowerShell Script Error
+title: Failed to Run PowerShell Script Error
 description: Solves an error that occurs when you run the Run PowerShell script action in a desktop flow in Microsoft Power Automate for desktop.
 ms.author: iomavrid
 author: yiannismavridis
 ms.custom: sap:Desktop flows
-ms.date: 04/16/2025
+ms.date: 04/18/2025
 ---
 # "Failed to run PowerShell script" error when running the Run PowerShell script action
 
@@ -12,7 +12,7 @@ This article provides a resolution for an error that occurs when running the [Ru
 
 ## Symptoms
 
-During the execution of a desktop flow in Power Automate for desktop, an error occurs message when running the **Run PowerShell script** action. This issue might also occur after a recent Windows update.
+During the execution of a desktop flow in Power Automate for desktop, an error occurs when running the **Run PowerShell script** action. This issue might also occur after a recent Windows update.
 
 The error message appears as follows:
 
@@ -27,12 +27,12 @@ Microsoft.Flow.RPA.Desktop.Modules.SDK.ActionException: Failed to run PowerShell
 
 ## Cause
 
-The **Run PowerShell script** action internally starts an instance of `powershell.exe` and provides the script specified in the action's input as an argument to the process. If the system fails to find `powershell.exe`, you might receive the error message.
+The **Run PowerShell script** action internally starts an instance of `powershell.exe` and provides the script specified in the action's input as an argument for the process. If the system fails to find `powershell.exe`, you might receive the error message.
 
 The most likely cause of this issue is that the **Path** environment variable doesn't include the directory containing the `powershell.exe` executable. To confirm this as the root cause, follow these steps:
 
 1. Open a Command Prompt (CMD) window.
-1. Run `powershell.exe` by typing the command and pressing Enter.
+1. Run `powershell.exe` by typing the command and pressing **Enter**.
 
 If the following message occurs, then the issue lies in the missing path to `powershell.exe` in the **Path** environment variable.
 
@@ -42,19 +42,17 @@ If the following message occurs, then the issue lies in the missing path to `pow
 
 To resolve this issue, follow these steps to update the **Path** environment variable to include the directory of the `powershell.exe` executable:
 
-1. Open the Start menu and search for "Environment Variables." Select **Edit the system environment variables**.
+1. Open the Start menu, search for **Environment Variables**, and then select **Edit the system environment variables**.
 
 1. In the **System Properties** window, select **Environment Variables**.
 
-1. Under the **System variables** section, locate and select the **Path** variable, then select **Edit**.
+1. Under the **System variables** section, locate and select the **Path** variable, and then select **Edit**.
 
 1. Add the directory path of `powershell.exe` to the list of paths.
 
-   In most cases, the missing path is: **C:\WINDOWS\System32\WindowsPowerShell\v1.0\\**
+   In most cases, the missing path is **C:\WINDOWS\System32\WindowsPowerShell\v1.0\\**.
 
-   To confirm the correct path, open a PowerShell terminal and run the following command:
-
-   `$PsHome`
+   To confirm the correct path, open a PowerShell terminal and run the `$PsHome` command
 
    Use the displayed path as the value to add to the **Path** variable.
 
