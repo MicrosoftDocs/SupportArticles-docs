@@ -24,7 +24,7 @@ These issues can be caused by:
 This article provides sample Entra ID PowerShell scripts to pause and resume dynamic group updates. Pausing dynamic group processing can stop rule processing and prevent unintended membership updates. Resuming dynamic group processing can restore normal group functionality.
 
 > [!IMPORTANT]
-> Dynamic membership group changes are usually processed within a few hours. However, processing may take more than 24 hours depending on factors such as tenant size, group size, number of attribute changes, rule complexity, and operator choice (such as using `CONTAINS`, `MATCH`, or `MemberOf`).
+> Dynamic membership group changes are usually processed within a few hours. However, processing may take more than 24 hours depending on factors such as tenant size, group size, number of attribute changes, rule complexity, and operator choice (such as using `CONTAINS`, `MATCH`, or `MemberOf`). For more information,see [Understanding and Managing Dynamic Group Processing in Microsoft Entra ID](/entra/identity/users/manage-dynamic-group).
 
 ## Download pause and resume dynamic group processing scripts
 
