@@ -14,7 +14,7 @@ This article discusses an issue in which you receive a `NoPermissionsInAccessTok
 
 When you try to call the `/me` endpoint from your Microsoft Entra ID-based application that uses [client credentials grant flow](/entra/identity-platform/v2-oauth2-client-creds-grant-flow), you receive the following error message:
 
-·```output
+```output
 {
 "error": {
 "code": "NoPermissionsInAccessToken",
@@ -28,7 +28,7 @@ When you try to call the `/me` endpoint from your Microsoft Entra ID-based appli
 }
 }
 }
-·```
+```
 
 ## Cause
 
