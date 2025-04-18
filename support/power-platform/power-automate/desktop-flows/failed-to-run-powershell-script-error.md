@@ -29,7 +29,7 @@ Microsoft.Flow.RPA.Desktop.Modules.SDK.ActionException: Failed to run PowerShell
 
 The **Run PowerShell script** action internally starts an instance of `powershell.exe` and provides the script specified in the action's input as an argument for the process. If the system fails to find `powershell.exe`, you might receive the error message.
 
-The most likely cause of this issue is that the **Path** environment variable doesn't include the directory containing the `powershell.exe` executable. To confirm this as the root cause, follow these steps:
+The most likely cause of this issue is that the **Path** environment variable doesn't include the directory containing the `powershell.exe` executable. To confirm this is the root cause, follow these steps:
 
 1. Open a Command Prompt (CMD) window.
 1. Run `powershell.exe` by typing the command and pressing **Enter**.
