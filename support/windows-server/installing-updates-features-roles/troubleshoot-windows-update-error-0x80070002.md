@@ -28,9 +28,15 @@ The error 0x80070002 is primarily caused by missing or corrupt files that are ne
 - Missing DLLs or system files in critical directories.
 - Registry entries pointing to nonexistent services or files.
 
+## CBS logs
+
+When troubleshooting Windows Update issues, CBS logs are helpful for identifying the root cause.
+
+The CBS logs locates at the `C:\Windows\Logs\CBS\CBS.log`. The log can roll over from CBS.log to the CBSpersisttXXXXXXXXXXXXX.log or CBSpersisttXXXXXXXXXXXXX.cab.
+
 ## Symptom 1: Security monthly rollup installation failure
 
-If the Security Monthly Rollup fails to install with error 0x80070002, check the **CBS.log** file located at `C:\Windows\Logs\CBS\CBS.log`. You might find entries indicating missing files or services that failed to start.
+If the Security Monthly Rollup fails to install with error 0x80070002, check the CBS logs. You might find entries indicating missing files or services that failed to start.
 
 ```output
 Info CSI 000000fb Begin executing advanced installer phase 50 (0x00000032) index 0 (sequence 0)
@@ -57,7 +63,7 @@ Check the directory `C:\Windows\Microsoft.NET\Framework\v4.0.30319` to confirm i
 
 ## Symptom 2: Update installation failure
 
-If you encounter error 0x80070002 during update installation, review the **CBS.log** file for entries like the following:
+If you encounter error 0x80070002 during update installation, review the CBS logs for entries like the following:
 
 ```output
 Error CSI 00000e47 (F) STATUS_OBJECT_NAME_NOT_FOUND #13367681# from Windows::Rtl::SystemImplementation::DirectFileSystemProvider::SysCreateFile(flags = (AllowSharingViolation), handle = {provider=NULL, handle=0, name= ("null")}, da = (SYNCHRONIZE|FILE_READ_ATTRIBUTES), oa = @0xa130e9e088->OBJECT_ATTRIBUTES {s:48; rd:NULL; on:[69]"\??\C:\ProgramData\Microsoft\Windows\Start Menu\Programs\System Tools"; a:(OBJ_CASE_INSENSITIVE)}, iosb = @0xa130e9e068, as = (null), fa = 0, sa = (FILE_SHARE_READ|FILE_SHARE_WRITE|FILE_SHARE_DELETE), cd = FILE_OPEN, co = (FILE_SYNCHRONOUS_IO_NONALERT|0x00004000), eab = NULL, eal = 0, disp = Invalid)
@@ -71,7 +77,7 @@ Copy the **System Tools** folder from a working machine to the affected machine,
 
 ## Symptom 3: Missing DLLs in C:\Windows\WinSxS
 
-Monthly rollups might fail with error 0x80070002 due to missing DLLs in the Side-by-Side store. Check the **WindowsUpdate.log** and **CBS.log** for missing files like `DWrite.dll` and `FntCache.dll`.
+Monthly rollups might fail with error 0x80070002 due to missing DLLs in the Side-by-Side store. Check the **WindowsUpdate.log** and CBS logs for missing files like `DWrite.dll` and `FntCache.dll`.
 
 ```output
 Info CBS Failed to find file: x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_229deeb1ba2a85d3DWrite.dll [HRESULT = 0x80070002 - ERROR_FILE_NOT_FOUND]
@@ -79,7 +85,7 @@ Info CBS Failed to find file: x86_microsoft-windows-directwrite_31bf3856ad364e35
 
 ### Resolution: Restore missing DLLs
 
-1. Identify missing DLLs from the **CBS logs** file.
+1. Identify missing DLLs from the CBS logs.
 2. Source these files from a working server and place them in the correct directories. To do so, run the following commands:
 
    ```console
@@ -122,7 +128,7 @@ Description:
 Installation Failure: Windows failed to install the following update with error 0x80070002: Security Update for Windows (KB4586793).
 ```
 
-The failure is caused by an issue during update drivers operation. For example, the following **CBS.log** file indicates the `flpydisk.inf` driver is the cause:
+The failure is caused by an issue during update drivers operation. For example, the following entries in the CBS logs indicates the `flpydisk.inf` driver is the cause:
 
 ```output
 Info CBS INSTALL index: 55, phase: 2, result 2, inf: flpydisk.inf
