@@ -26,7 +26,7 @@ Here's more information about the error code:
 |---------|---------|---------|---------|
 |0x6ba     |1722         |RPC_S_SERVER_UNAVAILABLE         |The RPC server is unavailable.         |
 
-When you check the NetSetup.log file, you see the following entries. For example: 
+When you check the **NetSetup.log** file, you see the following entries. For example: 
 
 ```output
 NetpGetComputerObjectDn: Unable to bind to DS on '\\DCNAME': 0x6ba
@@ -65,7 +65,7 @@ To troubleshoot this issue, use the following steps:
 
     Refer to the list of required ports in [How to configure a firewall for Active Directory domains and trusts](config-firewall-for-ad-domains-and-trusts.md).
 
-3. Identify if a port is blocked on a DC by using the [PortQry](https://www.microsoft.com/download/details.aspx?id=17148) command-line tool. For more information, see [Using the PortQry command-line tool](../networking/portqry-command-line-port-scanner-v2.md)
+3. Identify if a port is blocked on a DC by using the [PortQry](https://www.microsoft.com/download/details.aspx?id=17148) command-line tool. For more information, see [Using the PortQry command-line tool](../networking/portqry-command-line-port-scanner-v2.md).
 
     Here are some example syntaxes:
 
