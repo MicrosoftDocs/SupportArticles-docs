@@ -1,5 +1,5 @@
 ---
-title: Scripts: Check and cleanup the AGPM archive that might lead to GPO operation issues
+title: Scripts to check and cleanup the AGPM archive that might lead to GPO operation issues
 description: Introduces a script to check and cleanup the AGPM archive that might lead to GPO operation issues.
 ms.date: 04/18/2025
 manager: dcscontentpm
