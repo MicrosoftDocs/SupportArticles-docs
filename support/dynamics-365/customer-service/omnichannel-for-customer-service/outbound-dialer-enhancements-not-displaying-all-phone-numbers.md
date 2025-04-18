@@ -1,6 +1,6 @@
 ---
 title: Outbound Dialer Enhancements Not Displaying All Phone Numbers
-description: Resolves an issue where only the business phone number is displayed for contacts or accounts when you using the enhanced outbound dialer in Microsoft Dynamics 365 Customer Service.
+description: Resolves an issue where only the business phone number is displayed for contacts or accounts when you use the enhanced outbound dialer in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: srubinstein
 author: Yerragovula
 ms.author: srreddy
@@ -8,13 +8,13 @@ ai-usage: ai-assisted
 ms.date: 04/18/2025
 ms.custom: sap:Voice channel, DFM
 ---
-# Outbound dialer enhancements doesn't display all phone numbers
+# Enhanced outbound dialer doesn't display all phone numbers
 
 This article addresses an issue where the enhanced outbound dialer experience doesn't display all available phone numbers associated with contacts or accounts in Dynamics 365 Customer Service.
 
 ## Symptoms
 
-When you use the [enhanced outbound dialer](/dynamics365/release-plan/2023wave2/service/dynamics365-customer-service/improvements-call-dialer) in Dynamics 365 Customer Service, only the business phone number is displayed for contacts or accounts. Other phone numbers, such as those entered in the mobile phone field, aren't shown, even if they are available in the system.
+When you use the [enhanced outbound dialer](/dynamics365/release-plan/2023wave2/service/dynamics365-customer-service/improvements-call-dialer) in Dynamics 365 Customer Service, only the business phone number is displayed for contacts or accounts. Other phone numbers, such as those entered in the mobile phone field, aren't shown, even if they're available in the system.
 
 ## Cause
 

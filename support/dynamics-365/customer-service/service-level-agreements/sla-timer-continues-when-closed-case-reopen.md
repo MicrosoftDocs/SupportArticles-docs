@@ -14,11 +14,11 @@ This article provides guidance on how to restart the SLA timer when a closed cas
 
 ## Symptoms
 
-When a case is closed and subsequently reopened in Dynamics 365 Customer Service, the [SLA timer](/dynamics365/customer-service/administer/add-timer-control-case-form-track-time-against-sla) continues from the previous time instead of restarting from the beginning. You expect the SLA timer to reset and start anew upon reopening the case.
+When a case is closed and then reopened in Dynamics 365 Customer Service, the [SLA timer](/dynamics365/customer-service/administer/add-timer-control-case-form-track-time-against-sla) continues from the previous time instead of restarting from the beginning. You expect the SLA timer to reset and start anew upon reopening the case.
 
 ## Cause
 
-The SLA timer doesn't automatically restart upon reopening a closed case. By default, it continues to run, accounting for holiday hours, non-business hours, and pause time, while projecting SLA warning or failure time.
+The SLA timer doesn't automatically restart upon reopening a closed case. By default, it continues to run, accounting for holiday hours, nonbusiness hours, and pause time, while projecting SLA warning or failure time.
 
 ## Resolution
 

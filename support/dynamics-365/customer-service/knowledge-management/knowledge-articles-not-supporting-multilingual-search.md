@@ -10,14 +10,14 @@ ms.custom: sap:Knowledge Management, DFM
 ---
 # Knowledge articles not supporting multilingual search
 
-This article provides troublshooting steps for the issues where knowledge articles originally authored in English are sometimes not discoverable using search terms in other languages, such as Chinese.
+This article provides troubleshooting steps for the issues where knowledge articles originally authored in English are sometimes not discoverable using search terms in other languages, such as Chinese.
 
 ## Symptoms
 
 You might encounter the following issues when searching knowledge articles in Dynamics 365 Customer Service:
 
 - Knowledge articles authored in English aren't consistently discoverable using search terms in other languages (for example, Chinese.)
-- Some articles are successfully retrieved using multilingual search terms, while others are not.
+- Some articles are successfully retrieved using multilingual search terms, while others aren't.
 
 ## Cause
 

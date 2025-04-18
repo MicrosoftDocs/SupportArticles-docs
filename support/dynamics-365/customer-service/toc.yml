@@ -240,10 +240,10 @@
           href: omnichannel-for-customer-service/social-data-sync.md
     - name: Voice channel
       items:
+        - name: Enhanced outbound dialer doesn't display all phone numbers
+          href: omnichannel-for-customer-service/outbound-dialer-enhancements-not-displaying-all-phone-numbers.md
         - name: Incoming voice calls with long greeting messages cause connection delays
           href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md
-        - name: Outbound dialer enhancements doesn't display all phone numbers
-          href: omnichannel-for-customer-service/outbound-dialer-enhancements-not-displaying-all-phone-numbers.md
         - name: Use diagnostic messages to troubleshoot call issues
           href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md
     - name: WhatsApp via Twilio

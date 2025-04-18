@@ -30,7 +30,7 @@ To restore the missing icons and colors in Dynamics 365 case views, follow these
 4. Select **Switch to classic** to access the classic interface.
 5. In the classic interface, go to **Entities** > **Case**.
 6. On the **Case** page, find and open the **Controls** section.
-7. Ensure that you are using the **Power Apps grid control** for the Case entity.
+7. Ensure that you're using the **Power Apps grid control** for the Case entity.
 8. Verify that the **Customizer Control** field is set to the following value:
 
    - **MscrmControls.CustomCellControl.CustomCellControl**
