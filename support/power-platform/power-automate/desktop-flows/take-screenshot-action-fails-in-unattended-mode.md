@@ -1,10 +1,10 @@
 ---
-title: Take screenshot action fails in unattended mode
-description: Resolves an error that occurs in the action 'Take screenshot', when you run an unattended desktop flow in Microsoft Power Automate for desktop.
+title: Take Screenshot Action Fails in Unattended Mode
+description: Resolves an error that occurs in the Take screenshot action when you run an unattended desktop flow in Microsoft Power Automate for desktop.
 ms.author: iomavrid
 author: yiannismavridis
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
-ms.date: 04/16/2025
+ms.date: 04/18/2025
 ---
 # Unattended desktop flow run fails with the "Failed to take screenshot" error
 
@@ -30,7 +30,7 @@ The issue occurs due to a specific security policy that impacts how a User Accou
 
 ## Resolution 1: Locate and allow binaries except for non-Windows ones to run without elevation prompt
 
-To solve this issue,
+To solve this issue:
 
 1. In Local Group Policy Editor, go to **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies** > **Security Options**.
 1. Locate the **User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode** security policy setting.
@@ -40,7 +40,7 @@ To solve this issue,
 
 For more information about the best practices, location, values, policy management and security considerations for the security policy setting, see [User Account Control: Behavior of the elevation prompt for administrators in Admin Approval Mode](/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-account-control-behavior-of-the-elevation-prompt-for-administrators-in-admin-approval-mode).
 
-## Resolution 2: Change the registry key below
+## Resolution 2: Change the registry key
 
 Modify the registry key to adjust the UAC behavior:
 
