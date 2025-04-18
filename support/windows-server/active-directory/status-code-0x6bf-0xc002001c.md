@@ -1,6 +1,6 @@
 ---
 title: Status Code 0x6bf or 0xc002001c
-description: Helps resolve an issue in which you can't join a domain with status code 0x32. This issue is related to the failure to establish an SMB session to a DC.
+description: Provides troubleshooting steps for resolving the remote procedure call (RPC) status code 0x6bf or 0xc002001c when you join a workgroup computer to a domain.
 ms.date: 04/18/2025
 manager: dcscontentpm
 audience: itpro
