@@ -72,7 +72,7 @@ You receive an error when deleting a group.
 
 You restored a deleted group but didn't see any update.
 
-- When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. 
+- When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process may take some time to complete depending on factors such as tenant size.
 
 ## Evaluate whether a group is a dynamic group<a id="1"></a>
 
@@ -256,11 +256,11 @@ Before attempting to delete a group in Microsoft Entra ID, ensure you have [dele
 
 - If an Office 365 group is deleted, it can only be restored up to 30 days before permanent deletion occurs. Once permanently deleted, the group can no longer be restored. To learn more about restoring groups, see [Restore a deleted Microsoft 365 group in Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-groups-restore-azure-portal).
 - This functionality isn't supported for security groups and distribution groups.
-- Verify that you're authorized to restore an Office 365 group. Only Global administrators, User account administrators, Intune service administrators, , or the owner of the group can restore a group.
+- Verify that you're authorized to restore an Office 365 group. Only Global administrators, User account administrators, Intune service administrators, or the owner of the group can restore a group.
 
 ### You restored a deleted dynamic group, but didn't see any update
 
-When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process may take more than 24 hours depending on factors such as tenant size, group size, number of attribute changes.
+When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process may take some time to complete depending on factors such as tenant size, group size, number of attribute changes.
 
 ## Related articles
 
