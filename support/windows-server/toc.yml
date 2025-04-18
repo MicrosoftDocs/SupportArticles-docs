@@ -349,7 +349,7 @@ items:
       href: ./active-directory/cannot-connect-internet-domain.md
     - name: Default limit to workstation numbers
       href: ./active-directory/default-workstation-numbers-join-domain.md
-    - name: 'Error 0x6D9 "No more endpoints available from the endpoint mapper"'
+    - name: Error 0x6D9 "No more endpoints available from the endpoint mapper"
       href: ./active-directory/domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md
     - name: Failure when you use an existing computer account to join a domain
       href: ./active-directory/failure-when-you-use-an-existing-computer-account-to-join-a-domain.md
@@ -3125,6 +3125,8 @@ items:
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
     - name: Scripts to view the certificate information in the msDS-KeyCredentialLink attribute
       href: ./support-tools/script-to-view-msds-keycredentiallink-attribute-value.md
+    - name: 'Scripts to check and cleanup the AGPM archive'
+      href: support-tools/scripts-check-and-cleanup-the-agpm-archive.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
