@@ -3,7 +3,7 @@ title: Resolve File Upload Warnings Related to Duplicate Data
 description: Fix duplicate data warnings that occur when you upload employee attribute data to Microsoft Viva Glint.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 04/14/2025
+ms.date: 04/17/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -74,7 +74,7 @@ Warning message:
 
 > DUPLICATED_EMAIL: The Email Address \<Email address, such as user@contoso.com\> in the user file is already assigned to a different user in your Viva Glint People Database.
 
-This issue occurs because one or more users in the uploaded file are assigned an email address that's already associated with a user whose record is in a [soft-deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) in Viva Glint, but the uploaded Employee ID doesn't match. 
+This issue occurs when one or more users in the uploaded file are assigned an email address that's already associated with a user whose record is in a [soft-deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) in Viva Glint, but the uploaded Employee ID doesn't match. 
 
 ### Resolution
 
