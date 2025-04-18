@@ -3,7 +3,7 @@ title: Incoming email isn't converted to a case
 description: Provides a resolution for the issue where an incoming email isn't converted to a case in Dynamics 365 Customer Service.
 ms.reviewer: sdas, ghoshsoham
 ms.author: shchaur
-ms.date: 04/17/2025
+ms.date: 04/18/2025
 ms.custom: sap:E-Mail\Case isn't getting created with record creation rule
 ---
 # Incoming email isn't converted to a case

@@ -5,7 +5,7 @@ ms.reviewer: ghoshsoham
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 04/17/2025
+ms.date: 04/18/2025
 ms.custom: sap:Automatic Record Creation (ARC), DFM
 ---
 # Cases are auto-created even if the automatic record creation rule is deactivated

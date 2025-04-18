@@ -1,20 +1,20 @@
 ---
 title: SSSAdminProd Appears as Owner or Modifier of Records
-description: Resolves an issue where the # SSSAdminProd system account appears as the owner or Modified By user of records in Microsoft Dynamics 365 Customer Service.
+description: Explains why "# SSSAdminProd" appears as the owner or Modified By user of records in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: ghoshsoham
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 04/17/2025
+ms.date: 04/18/2025
 ms.custom: sap:Automatic Record Creation (ARC), DFM
 ---
-# Undesired ownership of records caused by "# SSSAdminProd"
+# Record owner unexpectedly set to "# SSSAdminProd"
 
-This article addresses an issue where the "# SSSAdminProd" system account appears as the **Owner** or **Modified By** user of records in Dynamics 365 Customer Service.
+This article explains why the "# SSSAdminProd" system account may appear as the **Owner** or **Modified By** user of records in Dynamics 365 Customer Service, and steps to change the ownership.
 
 ## Symptoms
 
-You might encounter the following issues in Dynamics 365 Customer Service:
+You might encounter the following behavior in Dynamics 365 Customer Service:
 
 - The "# SSSAdminProd" system account is listed as the user who modifies cases in queues.
 - The "# SSSAdminProd" system account is assigned as the owner of newly created records, such as cases or contacts.
