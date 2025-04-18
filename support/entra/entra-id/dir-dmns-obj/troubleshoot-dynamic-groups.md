@@ -258,10 +258,6 @@ Before attempting to delete a group in Microsoft Entra ID, ensure you have [dele
 - This functionality isn't supported for security groups and distribution groups.
 - Verify that you're authorized to restore an Office 365 group. Only Global administrators, User account administrators, Intune service administrators, or the owner of the group can restore a group.
 
-### You restored a deleted dynamic group, but didn't see any update
-
-When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process may take some time to complete depending on factors such as tenant size, group size, number of attribute changes.
-
 ## Related articles
 
 - [Creating Dynamic Membership Rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#other-properties-and-common-rules).
