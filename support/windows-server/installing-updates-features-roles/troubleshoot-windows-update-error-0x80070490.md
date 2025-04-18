@@ -33,7 +33,7 @@ The primary cause of error 0x80070490 is driver failures during Windows Update i
 
 When troubleshooting Windows Update issues, CBS logs are helpful for identifying the root cause.
 
-The CBS logs locates at the `C:\Windows\Logs\CBS\CBS.log`. The log can roll over from CBS.log to the CBSpersisttXXXXXXXXXXXXX.log or CBSpersisttXXXXXXXXXXXXX.cab.
+The CBS log is located at `C:\Windows\Logs\CBS\CBS.log`. The log can roll over from CBS.log to CBSpersisttXXXXXXXXXXXXX.log or CBSpersisttXXXXXXXXXXXXX.cab within the same folder.
 
 ## Symptom 1: Pending update state
 
