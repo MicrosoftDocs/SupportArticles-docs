@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where you can't migrate SLAs to 
 ms.reviewer: sdas
 ms.author: ghoshsoham
 author: soham-msft
-ms.date: 08/18/2023
+ms.date: 04/18/2025
 ms.custom: sap:Service Level Agreements\Facing errors during SLA migration
 ---
 # Troubleshoot issues with SLA migration to Unified Interface
@@ -138,3 +138,44 @@ To enable the `msdyn_ConditionXmlConversion` custom action for the condition con
 :::image type="content" source="media/sla-migration-issues/convert-legacy-xml-to-fetchxml-format-and-vice-versa.png" alt-text="Screenshot that shows the Convert legacy xml to fetchxml format and vice versa process that's in Activated status.":::
 
 :::image type="content" source="media/sla-migration-issues/msdyn-condition-xml-conversion.png" alt-text="Screenshot that shows the unique name of the Convert legacy xml to fetchxml format and vice versa process.":::
+
+## Scenario 7: SLA migration is stuck
+
+When you migrate SLAs in Dynamics 365 Customer Service, you may experience the following issues:
+
+- SLA items fail to reflect correctly after migration.
+- The SLA timer grid does not display the timer as expected.
+- Some SLA items appear to be stuck or incomplete in the migration process.
+
+#### Cause
+
+This issue may occur due to one or more of the following reasons:
+
+1. Some SLA items may not have migrated successfully and could be stuck in the migration process.
+2. Certain conditions configured within the SLA items aren't supported, causing them to malfunction.
+
+#### Resolution
+
+Follow these steps to troubleshoot and resolve the SLA migration issue:
+
+1. Navigate to **Settings** > **Service Management** > **SLAs** to review the list of migrated SLAs.
+
+2. Verify that all SLA items have been migrated successfully:
+
+    - Check if any SLA items are stuck in the migration process.
+    - If certain SLA items are stuck, try to publish or reactivate them manually.
+
+3. Review the criteria configured in the SLA items and ensure the following:
+
+    - All conditions are compatible with the Unified Client Interface (UCI).
+    - Deprecated triggers or actions are removed or replaced.
+    - The "Applicable When" and "Success Conditions" criteria are configured correctly.
+
+4. If the issue persists, create a simple SLA item for testing purposes:
+
+   - Define straightforward criteria, such as "Case Priority = High."
+   - Verify if the SLA timer displays correctly for the test case.
+
+5. If the simple SLA item works as expected, incrementally add complexity to the SLA to identify any incompatible conditions.
+
+6. After making necessary adjustments, test the SLAs in a sandbox environment. Confirm that the SLA timer grid displays correctly and functions as expected.
