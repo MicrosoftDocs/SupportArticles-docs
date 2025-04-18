@@ -117,7 +117,7 @@
         - name: SLA Timer keeps running or expires before the Timer failure time 
           href: service-level-agreements/sla-timer-keep-running-or-expired.md
         - name: SLA timer continues instead of restarting when a closed case is reopened
-          name: service-level-agreements/sla-timer-continues-when-closed-case-reopen.md
+          href: service-level-agreements/sla-timer-continues-when-closed-case-reopen.md
         - name: Warning appears on SLA KPI instances
           href: service-level-agreements/warning-slakpiinstances.md
     - name: SLA flow
