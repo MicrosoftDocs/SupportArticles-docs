@@ -34,9 +34,9 @@ NetpDoDomainJoin: status: 0x3a
 
 ## The client computer lacks network connectivity on TCP 389 port
 
-Status code 0x3a is logged when the client computer lacks network connectivity on Transmission Control Protocol (TCP) 389 port between the client computer and the domain controller (DC).
+Status code 0x3a is logged when the client computer lacks reliable network connectivity on Transmission Control Protocol (TCP) 389 port between the client computer and the domain controller (DC).
 
-For example, incorrect maximum transmission unit (MTU) sizes on some network devices can lead to packet loss during the domain join process.
+In addition to the port being blocked on a firewall, incorrect maximum transmission unit (MTU) sizes on some network devices can lead to packet loss during the domain join process and cause the domain join to fail.
 
 ## Test and verify the connection
 
