@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 02/24/2025
+ms.date: 04/17/2025
 ---
 # Known issues with Teams Rooms on Android
 
@@ -66,6 +66,7 @@ ms.date: 02/24/2025
 - If your organization has configured policies to block legacy authentication for the Teams Rooms app, then Teams Rooms on Android devices, Teams displays, Teams panels, and Teams phones can't join Teams meetings.
 - The meeting details that you export in the Microsoft Teams admin center includes the link speed of the Ethernet network interface that's used during the meeting. This display always shows the default value of 10 Mbps. However, this might not be accurate because Teams Rooms for Android devices can't fetch the exact value. The actual link speed might be faster than the default value.
 - Incoming videos in large gallery view on Teams Rooms on Android devices are duplicated and might be blurry at times.
+- After the dual display mode is disabled for a Teams Rooms on Android device which is attached to two external displays, the extended display continues to be active. This is because the updated settings take effect only after the device restarts.
 
 ## Support for third-party Teams devices
 
