@@ -16,8 +16,9 @@ This article provides troubleshooting steps for resolving the remote procedure c
 
 When you join a workgroup computer to a domain, you receive the following error message:
 
-> Changing the Primary Domain DNS name of this computer to "" failed. The name will remain "\<DomainName\>".
+> Changing the Primary Domain DNS name of this computer to "" failed. The name will remain "\<DomainName\>".  
 > The error was:
+>
 > The RPC service is unavailable.
 
 Here's more information about the error code:
