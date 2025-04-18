@@ -2,7 +2,7 @@
 title: Error codes on Flow run
 description: Describes best practices and steps to mitigate common errors when running Microsoft flows in Power Apps.
 ms.reviewer: mlalavat
-ms.date: 04/15/2025
+ms.date: 04/18/2025
 ms.custom: sap:Connections\Creating or updating connections
 ---
 # Best practices when updating a flow used by a Power App
@@ -213,7 +213,7 @@ Change the connection from **Embedded** to **Invoker**:
 1. Navigate to the flow portal to edit and update the flow settings.
 2. On the flow details page, in the **Run only users** section, select **Edit**.
 3. To update the flow connection source to **Invoker**, select **Provided by run-only user** and save.
-4. Verify by triggering the flow. You see that the "install flow network" calls now are succeeding.
+4. Verify by triggering the flow. You see that the "install flow network" calls are now successful.
 
 ## Other symptoms
 
