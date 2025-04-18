@@ -52,7 +52,7 @@ To resolve this issue, follow these steps to update the **Path** environment var
 
    In most cases, the missing path is **C:\WINDOWS\System32\WindowsPowerShell\v1.0\\**.
 
-   To confirm the correct path, open a PowerShell terminal and run the `$PsHome` command
+   To confirm the correct path, open a PowerShell terminal and run the `$PsHome` command.
 
    Use the displayed path as the value to add to the **Path** variable.
 
