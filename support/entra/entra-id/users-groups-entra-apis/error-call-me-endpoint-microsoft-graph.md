@@ -3,8 +3,9 @@ title: NoPermissionsInAccessToken when calling me endpoint in Microsoft Graph
 description: Describes an issue in which you receive `NoPermissionsInAccessToken` error when you call `/me` endpoint in Microsoft Graph.
 ms.date: 04/03/2025
 ms.service: entra-id
+ms.author: bhvootla
 ms.custom: sap:Getting access denied errors (Authorization)
-ms.reviewer: willfid, v-weizhu
+ms.reviewer: nualex,vganga,adoyle,custorod
 ---
 # NoPermissionsInAccessToken when calling /me endpoint
 
@@ -59,7 +60,7 @@ For example, if you want to call `GET https://graph.microsoft.com/v1.0/me/member
 1. Obtain an application token by using the client credentials grant flow.
 2. Make sure that the application has the **User.Read.All** permission to query user information.
 3. Use the **users** endpoint to query specific user details. Replace {upn} with the User Principal Name (UPN) or User Object ID of the user.
-    ```
+    ```HTTP
     GET https://graph.microsoft.com/v1.0/users/{upn or userID}/memberOf
     ```
 
