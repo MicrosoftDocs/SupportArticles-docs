@@ -135,6 +135,20 @@ Revert the `LmCompatibilityLevel` value to the default value of 3 in the followi
 
 `HKLM\SYSTEM\CurrentControlSet\Control\Lsa`  
 
+### <a id="error-64"></a> Error 64 when you mount an Azure file share
+
+When you try to mount a file share from on-premises or a different datacenter, you might receive the following error:
+
+- System error 64 has occurred. The specified network name is no longer available.
+
+#### Cause
+
+This most likely has to do with a proxy server or any other kind of NAT device in the datapath that is blocking the connection to map the Azure file share. Using the PowerShell cmdlet ```test-netconnection``` to test for connectivity on port 445 may still be successful.
+
+#### Solution
+
+A network trace taken during a reproduction of the issue will show more information on where the error is originating from. In most cases you will need to work with your network/firewall administrators to allow this content to pass through the network device.
+
 ### <a id="error-0x800704b3"></a> Failed with error code 0x800704b3
 
 When you try to mount an Azure file share, you receive the following error:
