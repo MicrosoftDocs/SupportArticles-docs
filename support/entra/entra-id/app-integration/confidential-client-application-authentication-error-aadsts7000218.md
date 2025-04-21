@@ -22,6 +22,7 @@ When a confidential client application authenticates to Microsoft Entra ID to ge
     "error_codes": [7000218],
     ...
 }
+```
 
 ## Cause
 
