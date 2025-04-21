@@ -1,11 +1,11 @@
 ---
-title: Secure Time Seeding Recommendation for Windows Server
+title: Secure Time Seeding Recommendations for Windows Server
 description: Recommendations for Secure Time Seeding feature on Windows Server along with general good time synchronization practices.
-ms.date: 04/14/2025
-manager: 
+ms.date: 04/21/2025
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: 
+ms.reviewer: kaushika, adpatang, v-lianna
 ms.custom:
 - sap:active directory\windows time service configuration,accuracy,and synchronization
 - pcy:WinComm Directory Services
