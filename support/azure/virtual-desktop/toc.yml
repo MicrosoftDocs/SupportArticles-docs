@@ -35,5 +35,5 @@ items:
   href: ./troubleshoot-session-host-configuration-update.md
 - name: Troubleshoot session host virtual machine configuration
   href: ./troubleshoot-vm-configuration.md
-- name: Win key remains held after pressing Ctrl + Win + L in a remote session
+- name: Win key remains held after pressing Ctrl+Win+L in a remote session
   href: win-key-remains-held-after-pressing-ctrl-win-l-in-a-remote-session.md
