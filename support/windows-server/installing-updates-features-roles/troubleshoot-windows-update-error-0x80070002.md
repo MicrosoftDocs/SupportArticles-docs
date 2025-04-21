@@ -77,7 +77,7 @@ Copy the **System Tools** folder from a working machine to the affected machine,
 
 ## Symptom 3: Missing DLLs in C:\Windows\WinSxS
 
-Monthly rollups might fail with error 0x80070002 due to missing DLLs in the Side-by-Side store. Check the **WindowsUpdate.log** and CBS logs for missing files like `DWrite.dll` and `FntCache.dll`.
+Monthly rollups might fail with error 0x80070002 due to missing DLLs in the Side-by-Side store. Check the **WindowsUpdate.log** and CBS logs for missing files like `DWrite.dll`.
 
 ```output
 Info CBS Failed to find file: x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_229deeb1ba2a85d3DWrite.dll [HRESULT = 0x80070002 - ERROR_FILE_NOT_FOUND]
@@ -98,6 +98,7 @@ Info CBS Failed to find file: x86_microsoft-windows-directwrite_31bf3856ad364e35
 
    ```console
    mkdir x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_c67f532e01cd149d
+   copy c:\windows\temp\dwrite.dll c:\windows\winsxs\x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_c67f532e01cd149d
    ```
 
 3. Run the following command to check for corruptions:
