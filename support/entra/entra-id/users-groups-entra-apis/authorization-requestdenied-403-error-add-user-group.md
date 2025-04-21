@@ -81,7 +81,7 @@ For detailed permission requirements, see [Add members documentation](/graph/api
 
 ### Step 3: Check if the group is a role-assignable group
 
-1. Role-assignable groups require extra permissions to manage their members. You can confirm if the group is role-assignable using Azure Portal or Microsoft Graph Explorer:
+1. Role-assignable groups require extra permissions to manage their members. You can confirm if the group is role-assignable by using Azure portal or Microsoft Graph Explorer:
 
     **Azure portal**
     
