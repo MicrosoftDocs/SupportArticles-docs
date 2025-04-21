@@ -18,7 +18,7 @@ When you try to add a user to a group using Microsoft Graph API, you receive the
 ```output
 {
 "error": {
-"code": "Authorization\_RequestDenied",
+"code": "Authorization_RequestDenied",
 "message": "Insufficient privileges to complete the operation.",
 "innerError": {
 "date": "2024-05-07T15:39:39",
@@ -33,13 +33,13 @@ When you try to add a user to a group using Microsoft Graph API, you receive the
 
 This issue might occur if the group you tried to add the user to can't be managed by Microsoft Graph. Microsoft Graph only supports Microsoft 365 groups and Security groups.
 
-For the Microsoft Graph supported group types, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview?view=graph-rest-1.0&tabs=http#group-types-in-microsoft-entra-id-and-microsoft-graph)
+For the Microsoft Graph supported group types, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview?view=graph-rest-1.0&tabs=http#group-types-in-microsoft-entra-id-and-microsoft-graph).
 
 ## Solution
 
 ### Step 1: Check the group type
 
-Make sure that the group you're working is supported by Microsoft Graph.
+Make sure that the group you trying to modify is supported by Microsoft Graph.
 
 1. In Microsoft Graph, the type of group can be identified by the settings of its `groupTypes`, `mailEnabled`, and `securityEnabled` properties. Use the [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) tool to check the group's attributes:
 
@@ -60,13 +60,13 @@ Make sure that the group you're working is supported by Microsoft Graph.
     
    ```
 
-2. Review the following table to verify if the group type is supported by Microsoft Graph API. In the example response, the "Test group A" group is a security group.  For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview?view=graph-rest-1.0&tabs=http#group-types-in-microsoft-entra-id-and-microsoft-graph).
+2. Review the following table to verify if the group type is supported by Microsoft Graph API. In the example response, the "Test group A" group is a security group.  For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 
     | Type |groupTypes | mailEnabled | securityEnabled | Can be managed by using Microsoft Graph APIs |
     |--|--|--|--|--|
-    | [Microsoft 365 groups](#microsoft-365-groups) | `["Unified"]` | `true` | `true` or `false` | Yes |
-    | [Security groups](#security-groups-and-mail-enabled-security-groups) | `[]` | `false` | `true` | Yes |
-    | [Mail-enabled security groups](#security-groups-and-mail-enabled-security-groups) | `[]` | `true` | `true` | No; read-only through Microsoft Graph |
+    | [Microsoft 365 groups](/graph/api/resources/groups-overview#microsoft-365-groups) | `["Unified"]` | `true` | `true` or `false` | Yes |
+    | [Security groups](/graph/api/resources/groups-overview#security-groups-and-mail-enabled-security-groups) | `[]` | `false` | `true` | Yes |
+    | [Mail-enabled security groups](/graph/api/resources/groups-overview#security-groups-and-mail-enabled-security-groups) | `[]` | `true` | `true` | No; read-only through Microsoft Graph |
     | Distribution groups | `[]` | `true` | `false` | No; read-only through Microsoft Graph |
 
 > [!NOTE]
@@ -86,7 +86,7 @@ For detailed permission requirements, see [Add members documentation](https://le
     **Azure portal**
     
     1. In the [Azure portal](https://portal.azure.com), go to **Microsoft Entra ID**, select **Groups**, and then select **All groups**.
-    1. Locate the group that you're working on, select **Properties**. Review the  **Microsoft Entra role can be assigned to the group** option.
+    1. Locate the target group, select **Properties**. Review the  **Microsoft Entra role can be assigned to the group** option.
      
     **Microsoft Graph Explorer:**
     
