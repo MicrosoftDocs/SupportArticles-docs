@@ -1,6 +1,6 @@
 ---
 title: SSSAdminProd Appears as Owner or Modifier of Records
-description: Explains why "# SSSAdminProd" appears as the owner or Modified By user of records in Microsoft Dynamics 365 Customer Service.
+description: Explains why SSSAdminProd appears as the owner or Modified By user of records in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: ghoshsoham
 author: Yerragovula
 ms.author: srreddy

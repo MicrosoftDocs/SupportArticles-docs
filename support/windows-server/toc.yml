@@ -2575,6 +2575,8 @@ items:
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
     - name: Troubleshoot issues with scheduled tasks not running
       href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md
+    - name: Troubleshoot issues with the Task Scheduler service not starting
+      href: ../windows-client/system-management-components/task-scheduler-service-not-start.md?context=/troubleshoot/windows-server/context/context
     - name: Resolve Task Scheduler "Access Denied" error
       href: ./system-management-components/troubleshooting-task-scheduler-access-denied-error.md
   - name: WinRM
