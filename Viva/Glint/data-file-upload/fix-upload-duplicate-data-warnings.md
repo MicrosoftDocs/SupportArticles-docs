@@ -74,7 +74,7 @@ Warning message:
 
 > DUPLICATED_EMAIL: The Email Address \<Email address, such as user@contoso.com\> in the user file is already assigned to a different user in your Viva Glint People Database.
 
-This issue occurs when one or more users in the uploaded file are assigned an email address that's already associated with a user whose record is in a [soft-deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) in Viva Glint, but the uploaded Employee ID doesn't match. 
+This issue occurs because one or more users in the uploaded file are assigned an email address that's already associated with a user whose record is in a [soft-deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) in Viva Glint, but the uploaded Employee ID doesn't match the employee ID of the soft-deleted user. 
 
 ### Resolution
 
