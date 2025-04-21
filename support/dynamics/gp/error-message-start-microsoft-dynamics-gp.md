@@ -3,7 +3,7 @@ title: Your attempt to log into the server failed because of an unknown error
 description: This article provides a resolution for the problem that occurs when you start Microsoft Dynamics GP.
 ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
-ms.date: 04/17/2025
+ms.date: 04/21/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Your attempt to log into the server failed because of an unknown error" when you start Microsoft Dynamics GP
