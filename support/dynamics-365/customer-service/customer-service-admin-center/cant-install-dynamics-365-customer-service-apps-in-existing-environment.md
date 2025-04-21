@@ -1,16 +1,16 @@
 ---
-title: Can't Install Customer Service Apps In Existing Environment
+title: Can't Install Customer Service Apps in Existing Environment
 description: Solves an issue where users can't install Dynamics 365 Customer Service applications in an existing Power Platform environment.
 ms.reviewer: ghoshsoham
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 04/17/2025
+ms.date: 04/21/2025
 ms.custom: sap:Core Service Scheduling, DFM
 ---
 # Can't install Dynamics 365 Customer Service applications in an existing Power Platform environment
 
-This article provides guidance for users encountering issues while trying to install Dynamics 365 Customer Service applications, such as the Customer Service workspace and Customer Service admin center model-driven apps, in an existing Power Platform environment.
+This article provides guidance for users who encounter issues when trying to install Dynamics 365 Customer Service applications, such as the Customer Service workspace and Customer Service admin center model-driven apps, in an existing Power Platform environment.
 
 ## Symptoms
 
@@ -28,7 +28,7 @@ This issue occurs due to one or more of the following reasons:
 
 1. Navigate to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 2. Select the environment where you are trying to install the applications.
-3. Go to **Settings** > **Overview**, verify whether the environment is listed as **Dataverse-only** or if Dynamics 365 apps are enabled.
+3. Go to **Settings** > **Overview**, and verify whether the environment is listed as **Dataverse-only** or if Dynamics 365 apps are enabled.
 
 ## Cause 2: Missing or incorrect licensing
 
@@ -59,6 +59,6 @@ If the current environment isn't configured to support Dynamics 365 applications
 6. Enable Dynamics 365 apps by selecting the **Enable Dynamics 365 apps** checkbox.
 7. Select **Save** and wait for the provisioning process to complete.
 
-Once the environment is successfully set up, the [Customer Service Hub](/dynamics365/customer-service/implement/customer-service-hub-user-guide-basics) and Copilot Service admin center applications will be available in the app list for users with the appropriate licenses.
+Once the environment is successfully set up, the [Customer Service Hub](/dynamics365/customer-service/implement/customer-service-hub-user-guide-basics) and Copilot Service admin center applications are available in the app list for users with the appropriate licenses.
 
 For more detailed guidance on creating and managing environments, see [Create and manage environments in the Power Platform admin center](/power-platform/admin/create-environment).
