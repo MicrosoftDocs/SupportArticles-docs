@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot high data ingestion in Application Insights
+title: Troubleshoot High Data Ingestion in Application Insights
 description: Provides a step-by-step guide to troubleshoot high data ingestion scenarios and provides methods to reduce costs.
-ms.date: 04/16/2025
+ms.date: 04/21/2025
 ms.service: azure-monitor
 ms.reviewer: jeanbisutti, toddfous, aaronmax, v-weizhu
 ms.custom: sap:Application Insights
 ---
 # Troubleshoot high data ingestion in Application Insights
 
-An increase in billing charges for Application Insights or Log Analytics often occur due to high data ingestion. This article helps you troubleshoot this issue and provides methods to reduce data ingestion costs.
+An increase in billing charges for Application Insights or Log Analytics often occurs due to high data ingestion. This article helps you troubleshoot this issue and provides methods to reduce data ingestion costs.
 
 ## General troubleshooting steps
 
@@ -16,7 +16,7 @@ An increase in billing charges for Application Insights or Log Analytics often o
 
 In the Azure portal, navigate to your subscription and select **Cost Management** > **Cost analysis**. This blade offers cost analysis views to chart costs per resource, as follows:
 
- :::image type="content" source="media/troubleshoot-high-data-ingestion/cost-analysis.png" alt-text="A screenshot thst shows the 'cost analysis' blade." border="false":::
+ :::image type="content" source="media/troubleshoot-high-data-ingestion/cost-analysis.png" alt-text="Screenshot that shows the 'cost analysis' blade.":::
 
 
 ### Step 2: Identify costly tables with high data ingestion
@@ -52,19 +52,19 @@ Once you've identified an Application Insights resource or a Log Analytics works
     | project-away BillingTelemetrySizeInBytes
     ```
 
-    Similar to the record count queries, these queries above can assist in identifying the most active tables, allowing you to pinpoint specific tables for further investigation.
+    Similar to the record count queries, the preceding queries can help identify the most active tables, allowing you to pinpoint specific tables for further investigation.
 
 - Using Log Analytics workspace Workbooks
 
     In the Azure portal, navigate to your Log Analytics workspace, select **Monitoring** > **Workbooks**, and then select **Usage** under **Log Analytics Workspace Insights**.
 
-    :::image type="content" source="media/troubleshoot-high-data-ingestion/log-analytics-usage-workbook.png" alt-text="A screenshot thst shows the Log Analytics workbook pane." lightbox="media/troubleshoot-high-data-ingestion/log-analytics-usage-workbook.png" border="false":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/log-analytics-usage-workbook.png" alt-text="Screenshot that shows the Log Analytics workbook pane." lightbox="media/troubleshoot-high-data-ingestion/log-analytics-usage-workbook.png":::
 
     This workbook provides valuable insights, such as the percentage of data ingestion for each table and detailed ingestion statistics for each resource reporting to the same workspace.
 
 ### Step 3: Determine factors contributing to high data ingestion
 
-After identifying the tables with high data ingestion, focus on the table with the highest activity and determine factors contributing to high data ingestion. This could be a specific application that generates more data than the others, an exception message that gets logged too frequently, or a new logger category that emits too information.
+After identifying the tables with high data ingestion, focus on the table with the highest activity and determine factors contributing to high data ingestion. This might be a specific application that generates more data than the others, an exception message that is logged too frequently, or a new logger category that emits too much information.
 
 Here are some sample queries you can use for this identification:
 
@@ -111,7 +111,7 @@ exceptions
 ```
 
 
-You can try out different telemetry fields. For example, perhaps you first run the following query and observe there is no obvious cause for the excessive telemetry:
+You can try different telemetry fields. For example, perhaps you first run the following query and observe there's no obvious cause for the excessive telemetry:
 
 ```Kusto
 dependencies
@@ -147,11 +147,11 @@ exceptions
 | sort by count_ desc
 ```
 
-### Step 4: Investigate evolution of ingestion over time
+### Step 4: Investigate the evolution of ingestion over time
 
 Examine the evolution of ingestion over time based on the factors identified previously. This way can determine whether this behavior has been consistent or if changes occurred at a specific point. By analyzing data in this way, you can pinpoint when the change happened and provide a clearer understanding of the causes behind the high data ingestion. This insight will be important for addressing the issue and implementing effective solutions.
 
-In the following queries, the [bin()](/kusto/query/bin-function) Kusto Query Language (KQL) scalar function is used to segment data into 1-day intervals. This approach facilitates trend analysis as you can see how data has changed or not changed over time.
+In the following queries, the [bin()](/kusto/query/bin-function) Kusto Query Language (KQL) scalar function is used to segment data into ome-day intervals. This approach facilitates trend analysis as you can see how data has changed or not changed over time.
 
 ```Kusto
 dependencies
@@ -174,7 +174,7 @@ dependencies
 
 ### Scenario 1: High data ingestion in Log Analytics
 
-1. Query all tables within a Log Analytics workspace.
+1. Query all tables within a Log Analytics workspace:
 
     ```Kusto
     search *
@@ -186,9 +186,9 @@ dependencies
     | project-away TotalBilledSize
     ```
     
-    You can get what table is the biggest contributor to costs. Here's an exmaple of `AppTraces`:
+    You can know which table is the biggest contributor to costs. Here's an example of `AppTraces`:
 
-    :::image type="content" source="media/troubleshoot-high-data-ingestion/apptraces-table.png" alt-text="A screenshot thst shows that the AppTraces table is the biggest contributor to costs.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/apptraces-table.png" alt-text="Screenshot that shows that the AppTraces table is the biggest contributor to costs.":::
 
 2. Query the specific application driving the costs for traces:
 
@@ -202,7 +202,7 @@ dependencies
     | project-away TotalBilledSize
     ```
 
-    :::image type="content" source="media/troubleshoot-high-data-ingestion/specific-application-driving-costs-for-traces.png" alt-text="A screenshot thst shows the specific application driving the costs for traces.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/specific-application-driving-costs-for-traces.png" alt-text="Screenshot that shows the specific application driving the costs for traces.":::
 
 3. Run the following query specific to that application and look further into the specific logger categories sending telemetry to the `AppTraces` table:
 
@@ -220,7 +220,7 @@ dependencies
 
     The result shows two main categories responsible for the costs:
 
-    :::image type="content" source="media/troubleshoot-high-data-ingestion/logger-categories-sending-telemetry-to-apptraces.png" alt-text="A screenshot thst shows the specific logger categories sending telemetry to the AppTraces table.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/logger-categories-sending-telemetry-to-apptraces.png" alt-text="Screenshot that shows the specific logger categories sending telemetry to the AppTraces table.":::
 
 ### Scenario 2: High data ingestion in Application Insight
 
@@ -235,9 +235,9 @@ To determine the factors contributing to the costs, follow these steps:
     | sort by count_ desc
     ```
 
-    Here's an exmaple that shows Azure Functions is generating lots of trace and exception telemetry:
+    The following exmaple shows Azure Functions is generating lots of trace and exception telemetry:
     
-    :::image type="content" source="media/troubleshoot-high-data-ingestion/table-sdkversion-count.png" alt-text="A screenshot thst shows what table and SDK is generating most Trace and Exception telemetry.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/table-sdkversion-count.png" alt-text="Screenshot that shows which table and SDK is generating the most Trace and Exception telemetry.":::
     
 
 2. Run the following query to get the specific app generating more traces than the others:
@@ -251,7 +251,7 @@ To determine the factors contributing to the costs, follow these steps:
     ```
 
 
-    :::image type="content" source="media/troubleshoot-high-data-ingestion/app-generating-more-traces.png" alt-text="A screenshot thst shows what app is generating most traces.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/app-generating-more-traces.png" alt-text="Screenshot that shows which app is generating the most traces.":::
 
 3. Refine the query to include that specific app and generate a count of records per each individual message:
 
@@ -266,11 +266,11 @@ To determine the factors contributing to the costs, follow these steps:
 
     The result can show the specific message increasing ingestion costs:
 
-    :::image type="content" source="media/troubleshoot-high-data-ingestion/app-message-count.png" alt-text="A screenshot thst shows a count of records per each individual message.":::
+    :::image type="content" source="media/troubleshoot-high-data-ingestion/app-message-count.png" alt-text="Screenshot that shows a count of records per each message.":::
 
 ### Scenario 3: Reach daily cap unexpectedly
 
-Assume you reached daily cap unexpected on September 4th. Use the following query to obtain a count of custom events and identify the most recent timestamp associated with each event:
+Assume you reached the daily cap unexpectedly on September 4th. Use the following query to obtain a count of custom events and identify the most recent timestamp associated with each event:
 
 ```Kusto
 customEvents
@@ -278,33 +278,33 @@ customEvents
 | summarize count(), min(timestamp) by name
 ```
 
-This analysis indicates that certain events started ingested on September 4th and subsequently became noisy very quickly.
+This analysis indicates that certain events started being ingested on September 4th and subsequently became noisy very quickly.
 
-:::image type="content" source="media/troubleshoot-high-data-ingestion/custom-events.png" alt-text="A screenshot thst shows a count of custom events.":::
+:::image type="content" source="media/troubleshoot-high-data-ingestion/custom-events.png" alt-text="Screenshot that shows a count of custom events.":::
 
 ## Reduce data ingestion costs
 
 After identifying the factors in the Azure Monitor tables responsible for unexpected data ingestion, reduce data ingestion costs using the following methods per your scenarios:
 
-### Method 1: Update daily cap configuration
+### Method 1: Update the daily cap configuration
 
-Adjust the daily cap to prevent excess telemetry ingestion.
+Adjust the daily cap to prevent excessive telemetry ingestion.
 
-### Method 2: Switch table plan
+### Method 2: Switch the table plan
 
-Switch to another supported table plan for Application Insights. Billing for data ingestion depends on the table plan and the region of the Log Analytics workspace. See [Table plans](/azure/azure-monitor/logs/data-platform-logs) and [Tables that support the Basic table plan in Azure Monitor Logs](/azure/azure-monitor/logs/basic-logs-azure-tables).
+Switch to another supported table plan for Application Insights. Billing for data ingestion depends on the table plan and the region of the Log Analytics workspace. See [Table plans](/azure/azure-monitor/logs/data-platform-logs#table-plans) and [Tables that support the Basic table plan in Azure Monitor Logs](/azure/azure-monitor/logs/basic-logs-azure-tables).
 
-### Method 3: Use telemetry SDK features for Java agent
+### Method 3: Use telemetry SDK features for the Java agent
 
 The default recommended solution is using [sampling overrides](/azure/azure-monitor/app/java-standalone-sampling-overrides). The Application Insights Java agent provides [two types of sampling](/azure/azure-monitor/app/java-standalone-config#sampling). A common use case is [suppressing collecting telemetry for health checks](/azure/azure-monitor/app/java-standalone-sampling-overrides#suppress-collecting-telemetry-for-health-checks).
 
-There are some supplemental methods to sampling overrides:
+There are some supplemental methods for sampling overrides:
 
-- Reduce cost from the `traces` table:
+- Reduce the cost from the `traces` table:
 
-    - [Reduce the telemetry log level](/azure/azure-monitor/app/java-standalone-config#autocollected-logging)
-    - [Remove application (not frameworks/libs) logs with MDC attribute and sampling override](/azure/azure-monitor/app/java-standalone-sampling-overrides#suppress-collecting-telemetry-for-log)
-    - Disable log instrumentation by updating the *applicationinsights.json* file:
+    - [Reduce the telemetry log level](/azure/azure-monitor/app/java-standalone-config#autocollected-logging).
+    - [Remove application (not frameworks/libs) logs with the MDC attribute and sampling override](/azure/azure-monitor/app/java-standalone-sampling-overrides#suppress-collecting-telemetry-for-log).
+    - Disable log instrumentation by updating the **applicationinsights.json** file:
 
         ```JSON
         {
@@ -316,32 +316,32 @@ There are some supplemental methods to sampling overrides:
         }
         ```
 
-- Reduce cost from the `dependencies` table:
+- Reduce the cost from the `dependencies` table:
 
     - [Suppress collecting telemetry for the Java method producing the dependency telemetry](/azure/azure-monitor/app/java-standalone-sampling-overrides#suppress-collecting-telemetry-for-a-java-method).
     - [Disable the instrumentation](/azure/azure-monitor/app/java-standalone-config#suppress-specific-autocollected-telemetry) producing the dependency telemetry data. 
     
-        If the dependency is a database call, you then won't see the database on the application map. If you remove the dependency instrumentation of an HTTP call or a message (for example a Kafka message), all the downstream telemetry data are dropped.
+        If the dependency is a database call, you won't see the database on the application map. If you remove the dependency instrumentation of an HTTP call or a message (for example, a Kafka message), all the downstream telemetry data are dropped.
 
-- Reduce cost from the `customMetrics` table:
+- Reduce the cost from the `customMetrics` table:
 
-    - [Increase the metrics interval](/azure/azure-monitor/app/java-standalone-config#metric-interval)
-    - [Exclude a metric with a telemetry processor](/azure/azure-monitor/app/java-standalone-telemetry-processors#metric-filter)
-    - [Increase the heartbeat interval](/azure/azure-monitor/app/java-standalone-config#heartbeat)
+    - [Increase the metrics interval](/azure/azure-monitor/app/java-standalone-config#metric-interval).
+    - [Exclude a metric with a telemetry processor](/azure/azure-monitor/app/java-standalone-telemetry-processors#metric-filter).
+    - [Increase the heartbeat interval](/azure/azure-monitor/app/java-standalone-config#heartbeat).
 
-- Reduce OpenTelemetry attributes cost:
+- Reduce the cost of OpenTelemetry attributes:
 
-    OpenTelemetry attributes are added to the **customDimensions** column. They are represented as properties in Application Insights. You can remove attributes by using [an attribute telemetry processor](/azure/azure-monitor/app/java-standalone-telemetry-processors#attribute-processor). For more information, see [Telemetry processor examples - Delete](/azure/azure-monitor/app/java-standalone-telemetry-processors-examples#delete).
+    OpenTelemetry attributes are added to the **customDimensions** column. They're represented as properties in Application Insights. You can remove attributes by using [an attribute telemetry processor](/azure/azure-monitor/app/java-standalone-telemetry-processors#attribute-processor). For more information, see [Telemetry processor examples - Delete](/azure/azure-monitor/app/java-standalone-telemetry-processors-examples#delete).
 
-### Method 4: Update application code (log levels or exceptions)
+### Method 4: Update the application code (log levels or exceptions)
 
-In some scenarios, updating the application code directly might help reduce the amount of telemetry being generated and consumed by the Application Insights backend service. A common example might be a noisy exception surfaced by the application.
+In some scenarios, updating the application code directly might help reduce the amount of telemetry generated and consumed by the Application Insights backend service. A common example might be a noisy exception surfaced by the application.
 
 ## References
 
-- [Azure Monitor Pricing](https://azure.microsoft.com/pricing/details/monitor/)
+- [Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/)
 - [Change pricing tier for Log Analytics workspace](/azure/azure-monitor/logs/change-pricing-tier)
-- [Table plans in Azure Monitor](/azure/azure-monitor/logs/data-platform-logs)
+- [Table plans in Azure Monitor](/azure/azure-monitor/logs/data-platform-logs#table-plans)
 - [Azure Monitor cost and usage](/azure/azure-monitor/cost-usage)
 - [Analyze usage in a Log Analytics workspace](/azure/azure-monitor/logs/analyze-usage)
 - [Cost optimization in Azure Monitor](/azure/azure-monitor/fundamentals/best-practices-cost)
