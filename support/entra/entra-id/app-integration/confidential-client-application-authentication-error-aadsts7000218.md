@@ -30,9 +30,9 @@ This issue occurs because the application doesn't provide its credential (a clie
 
 ## Resolution
 
-To resolve this issue, include the client secret or client assertion in the token request. If you're not sure if the application is a credential client, go to the Verify if the application is a credential client section.
+To resolve this issue, include the client secret or client assertion in the token request.
 
-In some authentication flow scenarios such as [OAuth 2 Resource Owner Password Credentials (ROPC)](/entra/identity-platform/v2-oauth-ropc) grant flow or [OAuth 2 device authorization grant flow](/entra/identity-platform/v2-oauth2-device-code) where you don't expect the client application to be confidential, change the default client type to public in the App Registration:
+In some authentication flow scenarios such as [OAuth 2 Resource Owner Password Credentials (ROPC)](/entra/identity-platform/v2-oauth-ropc) grant flow or [OAuth 2 device authorization grant flow](/entra/identity-platform/v2-oauth2-device-code) where you don't expect the client application to be confidential, change the default client type to public in the **App registrations**:
 
 1. In the [Azure portal](https://portal.azure.com/), in **App registrations**, select your application, and then select **Authentication**.
 2. Select **Advanced settings** > **Default client type**.
@@ -40,9 +40,7 @@ In some authentication flow scenarios such as [OAuth 2 Resource Owner Password C
 
 Changing the default client type from confidential to public causes security implications. For more information, see [What’s the security implication of changing the default client type from confidential to public in Azure AD?](https://blogs.aaddevsup.xyz/2020/09/whats-the-security-implication-of-changing-the-default-client-type-from-confidential-to-public-in-azure-ad/)
 
-## Verify if the application is a credential client
-
-### Understand client types in Microsoft Entra ID
+## Understand client types in Microsoft Entra ID
 
 As defined in the [OAuth 2.0 specifications](https://tools.ietf.org/html/rfc6749), client applications are categorized into two types:
 
@@ -55,7 +53,7 @@ As defined in the [OAuth 2.0 specifications](https://tools.ietf.org/html/rfc6749
 
 In the Microsoft Entra App Registration model, a registered application can be both a public client and a confidential client, depending on the context the application is used in. This is because an application might have part of it used as a public client while some other parts are designed to be used as a confidential client.  Depending on workflows, the application developer must decide if the application should act as a public or confidential client. A confidential client is expected in certain OAuth2 grant flows such as Client Credentials flow, Authorization Code flow, or On-Behalf-Of flow. It uses a flow to request a token.
 
-### How Microsoft Entra ID determines the client type
+## How Microsoft Entra ID determines the client type
 
 - Based on the type of the redirect URI (reply URL):
 
@@ -70,7 +68,7 @@ In the Microsoft Entra App Registration model, a registered application can be b
     - If **Default client type** is set to **Yes**, the client is public.
     - If it's set to **No**, the client is confidential.
 
-#### How to identify the grant type and redirect URI used by an application
+### How to identify the grant type and redirect URI used by an application
 
 Review the application code or capture a [Fiddler](https://blogs.aaddevsup.xyz/2018/09/capture-https-traffic-with-http-fiddler/) trace to inspect the grant_type and redirect_uri parameters sent in the POST request to Microsoft Entra ID's token endpoint:
 
