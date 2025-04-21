@@ -124,7 +124,8 @@ Here are explanations for the parameters in the commands above:
 
 ## Limitation
 
-Classic VMs aren't supported.
+1. Classic VMs aren't supported.
+2. The ALAR scripts cannot run with only VM Contributor role access as it requires read, write, delete operations at resource group level.
 
 ## Next steps
 
