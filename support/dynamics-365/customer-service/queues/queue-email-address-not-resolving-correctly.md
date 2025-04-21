@@ -46,4 +46,4 @@ To resolve this issue, follow these steps:
     3. Set the setting to **No** to ensure the system correctly resolves email addresses when there's only one matching record.
 
    > [!IMPORTANT]
-   > If the setting is set to **Yes**, the system doesn;t resolve email addresses that have multiple matches. These email addresses appear marked in red, requiring you to manually resolve them to a specific record.
+   > If the setting is set to **Yes**, the system doesn't resolve email addresses that have multiple matches. These email addresses appear marked in red, requiring you to manually resolve them to a specific record.
