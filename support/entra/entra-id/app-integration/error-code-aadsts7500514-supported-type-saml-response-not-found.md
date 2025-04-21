@@ -38,7 +38,7 @@ The error typically occurs in the following environment:
 
 Since [ADAL has been deprecated](/entra/identity/monitoring-health/recommendation-migrate-from-adal-to-msal), this article focuses on the MSAL.
 
-This issue occurs if the SAML response from PingFederate does not contain the SAML version or uses a format that MSAL cannot recognize. This typically results from a misconfiguration on the PingFederate side for Microsoft Entra ID.
+This issue occurs if the SAML response from PingFederate doesn't contain the SAML version or uses a format that MSAL can't recognize. This typically results from a misconfiguration on the PingFederate side for Microsoft Entra ID.
 
 ### Root cause analysis: SAML token version detection
 
@@ -67,7 +67,7 @@ Example of PingFederate SAML response (SAML Assertion Grant flow step 1):
 
 :::image type="content" source="media/error-code-aadsts7500514-supported-type-saml-response-not-found/pingid-saml-response.png" alt-text="A screenshot of PingFederate SAML Response for SAML Assertion Grant flow step 1" lightbox="media/error-code-aadsts7500514-supported-type-saml-response-not-found/pingid-saml-response.png":::
 
-After you compare these two responses, you will find PingFederate returns a different TokenType value: `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1` for the same SAML 1.1 token. However, MSAL does not support any TokenType value other than `urn:oasis:names:tc:SAML:1.0:assertion`.
+After you compare these two responses, you will find PingFederate returns a different TokenType value: `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1` for the same SAML 1.1 token. However, MSAL doesn't support any TokenType value other than `urn:oasis:names:tc:SAML:1.0:assertion`.
 
 When the identity provider returns a different or unexpected value in the SAML response, MSAL may incorrectly interpret the token as SAML 2.0. As a result, it uses the corresponding `grant_type` value during step 2 of the SAML Assertion Grant flow.
 
@@ -79,12 +79,12 @@ Example of the request sent from MSAL application with AD FS :
 
 :::image type="content" source="media/error-code-aadsts7500514-supported-type-saml-response-not-found/pingid-saml-response-3.png" alt-text="A screenshot of request sent from MSAL application with AD FS in SAML Assertion Grant flow step 2." lightbox="media/error-code-aadsts7500514-supported-type-saml-response-not-found/pingid-saml-response-3.png":::
 
-In this step, the value of the `grant_type` parameter must align with the actual version of the SAML token. The following values are used:
+In this step, the value of the `grant_type` parameter must align with the actual version of the SAML token. One of the following values are used by MSAL application:
 
 - urn:ietf:params:oauth:grant-type:saml2-bearer - for SAML 2.0 tokens
 - urn:ietf:params:oauth:grant-type:saml1_1-bearer - for SAML 1.1 tokens
 
-In the case of a PingFederate account, MSAL uses the `saml2-bearer` as the `grant_type` based on its misinterpretation of the SAML version. This results in a version mismatch between the `grant_type` parameter and the SAML token included in the assertion that causes the authentication error.
+In the PingFederate example, MSAL uses the `saml2-bearer` as the `grant_type` based on its misinterpretation of the SAML version. This results in a version mismatch between the `grant_type` parameter and the SAML token included in the assertion that causes the authentication error.
 
 ## Solution
 
