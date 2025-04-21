@@ -2,7 +2,7 @@
 title: Error code 80048539 when importing solution patch
 description: Solves the error code 80048539 that occurs when you try to import a solution patch in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 04/07/2025
+ms.date: 04/17/2025
 ms.custom: sap:Working with Solutions
 ---
 # Error code 80048539 occurs when trying to import a solution patch in Dynamics 365

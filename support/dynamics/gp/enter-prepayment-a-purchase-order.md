@@ -3,7 +3,7 @@ title: Enter a prepayment for a purchase order
 description: Describes how to enter a prepayment for a purchase order that isn't yet an invoice in Payables Management in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # How to enter a prepayment for a purchase order that isn't yet an invoice in Payables Management in Microsoft Dynamics GP

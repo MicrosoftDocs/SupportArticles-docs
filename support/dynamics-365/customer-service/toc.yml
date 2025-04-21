@@ -1,9 +1,25 @@
 - name: Dynamics 365 Customer Service
   href: welcome-customer-service.yml
+- name: Automatic Record Creation (ARC)
+  items:
+    - name: Accounts are created without known triggers
+      href: automatic-record-creation/accounts-created-without-known-triggers-dynamics-365.md
+    - name: Cases are auto-created when the ARC rule is deactivated
+      href: automatic-record-creation/cases-auto-generated-with-automatic-record-creation-deactivated.md
+    - name: 'Record owner set to "# SSSAdminProd"'
+      href: automatic-record-creation/sssadminprod-appears-as-records-owner-modifier.md
 - name: Cases or Incidents
   items:
     - name: Can't switch between different Teams organizations in the Dynamics 365 app
       href: cases-or-incidents/cannot-switch-teams-organizations-dynamics-365-app.md
+    - name: Chatbot workstream fails to detect user's location
+      href: cases-or-incidents/user-location-not-captured-displayed-to-agent.md
+    - name: You don't have access to the data used for case summaries error
+      href: cases-or-incidents/you-dont-have-access-to-data-for-case-summaries-error.md
+    - name: The Dismiss All button doesn't work in the notifications
+      href: cases-or-incidents/dismiss-all-not-working-in-notifications.md
+    - name: Workstreams and agents are affected by changes made to other Copilot Studio bots
+      href: cases-or-incidents/add-or-manage-bots-issues.md
 - name: Customer Service Insights
   items:
     - name: Troubleshoot issues using Solution Health Hub
@@ -12,6 +28,14 @@
   items: 
     - name: '"Case is missing customer" error'
       href: email/case-creation-queue-address-issue.md
+    - name: Email preview text shows an error or unintended formatting
+      href: email/email-preview-text-showing-error-when-not-configured.md
+    - name: Email template context loads out of order
+      href: email/email-template-context-loading-out-of-order.md
+    - name: Formatting is lost when copying Word template content to an email message
+      href: email/formatting-lost-when-copying-word-template-text-to-email-message.md
+    - name: Issues with email templates and formatting
+      href: email/email-templates-and-formatting-issues.md  
     - name: Incoming email isn't converted to a case
       href: email/incoming-email-not-converted-case.md
     - name: Troubleshoot configuration issues with automatic record creation and update rules

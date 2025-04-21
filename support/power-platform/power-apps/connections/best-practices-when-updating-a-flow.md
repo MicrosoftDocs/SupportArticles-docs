@@ -2,7 +2,7 @@
 title: Error codes on Flow run
 description: Describes best practices and steps to mitigate common errors when running Microsoft flows in Power Apps.
 ms.reviewer: mlalavat
-ms.date: 03/01/2024
+ms.date: 04/18/2025
 ms.custom: sap:Connections\Creating or updating connections
 ---
 # Best practices when updating a flow used by a Power App
@@ -173,7 +173,7 @@ The reason is that there might be a change to the flow in the target environment
    > [!NOTE]
    > There can be no unmanaged layers on either the flow or the app because this can cause issues in connection to the flow.
 
-## Error code "NotAllowedConnectionReferenceon" on Flow run
+## Error code "NotAllowedConnectionReference" on Flow run
 
 ```output
     {
@@ -197,6 +197,8 @@ This error means that the app has flow metadata that specifies that a SQL connec
 
 #### Mitigation option 1
 
+Reset the flows in the app:
+
 1. In the source environment, edit the app. Remove and then re-add the flows to the app. Save and publish the changes.
 2. In the target environment, remove all unmanaged layers on the app and flow.
 3. Export the solution and import it into the target environment.
@@ -206,12 +208,12 @@ This error means that the app has flow metadata that specifies that a SQL connec
 
 #### Mitigation option 2
 
-1. Change the connection from **Embedded** to **Invoker**.
-2. Navigate to the flow portal to edit and update the flow settings.
-3. On the flow details page, in the **Run only users** section, select **Edit**.
-4. To update the flow connection source to **Invoker**, select **Provided by run-only user** and save.
-5. To update the flow connection source to **Embedded**, select **Use this connection** and save.
-6. Verify by triggering the flow. You see that the "install flow network" calls now are succeeding.
+Change the connection from **Embedded** to **Invoker**:
+
+1. Navigate to the flow portal to edit and update the flow settings.
+2. On the flow details page, in the **Run only users** section, select **Edit**.
+3. To update the flow connection source to **Invoker**, select **Provided by run-only user** and save.
+4. Verify by triggering the flow. You see that the "install flow network" calls are now successful.
 
 ## Other symptoms
 

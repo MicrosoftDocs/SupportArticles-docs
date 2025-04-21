@@ -2,7 +2,7 @@
 title: Troubleshoot issues in Power Automate browser extensions
 description: Provides a resolution for the Failed to assume control of browser (Internal error or communication failure) error or Get Extension message.
 ms.reviewer: nimoutzo, gtrantzas
-ms.date: 06/03/2024
+ms.date: 04/09/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Troubleshoot issues in Power Automate browser extensions
@@ -55,15 +55,14 @@ Follow these steps:
 
    1. Check whether the Power Automate web extension is installed and enabled. If it isn’t installed, see the [Prerequisites](#prerequisites) section.
 
-   1. If the extension is installed, run the [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter).
+   1. If the extension is installed, run the **Troubleshoot UI/Web automation issues** diagnostic in [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter).
 
    1. Follow the steps that are suggested in the troubleshooter.
-
 
 ### Look for errors in the background script
 
 > [!NOTE]
-> This step is valid only for Microsoft Edge and Google Chrome. 
+> This step is valid only for Microsoft Edge and Google Chrome.
 
 Follow these steps:
 
@@ -266,6 +265,15 @@ Check whether the `ComSpec` variable exists in **Environment variable** under **
 
     > [!NOTE]
     > The system variables should include the `ComSpec` variable. The expected value for `ComSpec` is `C:\WINDOWS\system32\cmd.exe`.
+
+### Check if more than one browser profile exists
+
+To check if more than one profile exists, select the profile icon in the browser. A menu displaying the profiles should appear. The profile icon is usually located either on the top or right side of the browser window.
+
+If more than one browser profile exists:
+
+1. Uninstall the Power Automate web extension from each existing browser profile.
+1. Close the browser and [install the extension](/power-automate/desktop-flows/install-browser-extensions) only in the browser profile that will be used by the automation.
 
 ### Check for errors in Windows Event Viewer
 

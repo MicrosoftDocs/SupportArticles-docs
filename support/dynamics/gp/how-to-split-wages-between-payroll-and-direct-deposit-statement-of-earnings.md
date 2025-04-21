@@ -3,7 +3,7 @@ title: How to set up to split wages between payroll check and direct deposit sta
 description: Provides more information about how to set up an employee to split wages between a payroll check and a direct deposit statement of earnings in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Payroll
 ---
 # How to set up an employee to split wages between a payroll check and a direct deposit statement of earnings
