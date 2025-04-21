@@ -33,7 +33,7 @@ When you try to add a user to a group using Microsoft Graph API, you receive the
 
 This issue might occur if the group you tried to add the user to can't be managed by Microsoft Graph. Microsoft Graph only supports Microsoft 365 groups and Security groups.
 
-For the Microsoft Graph supported group types, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview?view=graph-rest-1.0&tabs=http#group-types-in-microsoft-entra-id-and-microsoft-graph).
+For the Microsoft Graph supported group types, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview#group-types-in-microsoft-entra-id-and-microsoft-graph).
 
 ## Solution
 
@@ -77,7 +77,7 @@ Make sure that the group you trying to modify is supported by Microsoft Graph.
 
 Different group member types require specific permissions. For user-type membership, ensure that the application or account performing the operation has the `GroupMember.ReadWrite.All` permission.
 
-For detailed permission requirements, see [Add members documentation](https://learn.microsoft.com/en-us/graph/api/group-post-members?view=graph-rest-1.0&amp;tabs=http) 
+For detailed permission requirements, see [Add members documentation](/graph/api/group-post-members) 
 
 ### Step 3: Check if the group is a role-assignable group
 
@@ -108,6 +108,6 @@ For detailed permission requirements, see [Add members documentation](https://le
         }
     ```
   
-2. If the group is role-assignable, you need the `RoleManagement.ReadWrite.Directory` permission in addition to `GroupMember.ReadWrite.All`. For more information, see [Add members documentation](/graph/api/group-post-members?view=graph-rest-1.0&amp;tabs=http#permissions).
+2. If the group is role-assignable, you need the `RoleManagement.ReadWrite.Directory` permission in addition to `GroupMember.ReadWrite.All`. For more information, see [Add members documentation](/graph/api/group-post-members).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
