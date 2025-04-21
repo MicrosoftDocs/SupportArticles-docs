@@ -3055,14 +3055,16 @@ items:
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
   - name: Windows Update fails - installation stops with error
     items:
-    - name: Troubleshoot Windows Update error 0x80070490
-      href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
     - name: CBS.log file contains entries that some files aren't repaired
       href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
     - name: Description of System File Checker (Sfc.exe)
       href: ./installing-updates-features-roles/system-file-checker.md
+    - name: Troubleshoot Windows Update error 0x8024002E
+      href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
+    - name: Troubleshoot Windows Update error 0x80070490
+      href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
     - name: Error 0x800f0831 when installing Windows updates
