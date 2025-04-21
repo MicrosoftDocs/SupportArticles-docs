@@ -55,13 +55,15 @@ In the Microsoft Entra App Registration model, a registered application can be b
 
 ## How Microsoft Entra ID determines the client type
 
-- Based on the type of the redirect URI (reply URL):
+To determines the client type, use one of the following methods:
+
+- Use the type of the redirect URI (reply URL):
 
     Microsoft Entra ID checks the redirect URI (reply URL) provided in the request and cross-checks it with the redirect URI registered in the App Registrations.
     - A **Web** type redirect URI classifies the application as a confidential client.
     - A **Public client (mobile & desktop)** type redirect URI classifies the application as a **public client**.
 
-- Based on default client type (when no reply URL is provided):
+- Use the default client type (when no reply URL is provided):
 
     In some OAuth 2.0 flows, such as the [OAuth 2 Resource Owner Password Credentials (ROPC)](/azure/active-directory/develop/v2-oauth-ropc) grant flow, [OAuth 2 device authorization grant flow](/entra/identity-platform/v2-oauth2-device-code) and Integrated Windows Authentication, there is no reply URL provided in the token request. In these cases, Microsoft Entra ID uses the app registration's default client type to determine whether the client is confidential or public.
 
