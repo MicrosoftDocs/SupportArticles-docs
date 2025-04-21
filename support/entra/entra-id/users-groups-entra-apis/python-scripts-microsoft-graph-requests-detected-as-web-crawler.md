@@ -28,7 +28,7 @@ The issue occurs because some Python scripts might not structure their requests 
 
 ## Solution
 
-To resolve this issue, use the [Microsoft Graph SDK for Python](https://github.com/microsoftgraph/msgraph-sdk-python-core). If you don't want to use it, structure your requests similarly to how the SDK handles them by using Python's Session object to send requests.
+To resolve this issue, use the [Microsoft Graph SDK for Python](https://github.com/microsoftgraph/msgraph-sdk-python-core). If you don't want to use it, structure your requests similarly to how the SDK handles them by using Python's `Session` object to send requests.
 
 Here's an example of how you can structure your requests manually:
 
