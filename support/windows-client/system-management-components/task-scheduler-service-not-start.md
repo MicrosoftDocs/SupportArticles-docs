@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Task Scheduler Service Startup Failure
 description: Helps troubleshoot the failure to start the Task Scheduler service in Windows computers.
-ms.date: 04/11/2025
+ms.date: 04/21/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
