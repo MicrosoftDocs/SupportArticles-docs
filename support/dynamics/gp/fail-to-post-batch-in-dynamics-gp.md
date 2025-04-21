@@ -3,7 +3,7 @@ title: Error when you post a batch in Dynamics GP
 description: Describes that you receive an error message when you try to post a batch in Microsoft Dynamics GP, or in Microsoft Business Solutions - Great Plains 8.0. Provides a resolution.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # Error when you try to post a batch in Microsoft Dynamics GP: "The stored procedure glpPostBatch returned the following results: DBMS: 0, Great Plains: 20286"

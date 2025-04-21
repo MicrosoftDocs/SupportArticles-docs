@@ -1,5 +1,5 @@
 ---
-title: SQL Server VMs Fails to Deploy or SQL Server Instance Not Come Online
+title: SQL VM Fails to Deploy or SQL Server Instance Can't Come Online
 description: Addresses a failure when you deploy a SQL Server on Azure VM image in Azure Marketplace or when a manually installed SQL Server instance fails to come online after an Azure VM is restarted or deallocated.
 ms.date: 04/16/2025
 ms.author: mathoma

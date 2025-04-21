@@ -3,7 +3,7 @@ title: How to set up the VAT Daybook reports
 description: The VAT Daybook reports are used by European customers for tax reporting. VAT Daybook generates separate VAT Daybook reports for the sales modules and for the purchasing modules.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # How to set up the VAT Daybook reports in Microsoft Dynamics GP

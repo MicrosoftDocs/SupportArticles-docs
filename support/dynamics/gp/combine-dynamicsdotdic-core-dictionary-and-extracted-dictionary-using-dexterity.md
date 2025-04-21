@@ -2,7 +2,7 @@
 title: How to combine Dynamics.dic core dictionary and an extracted dictionary by using Dexterity Utilities in Microsoft Dynamics GP
 description: Discusses how to combine a Dynamics.dic file and an extracted dictionary by using Dexterity Utilities in Microsoft Dynamics GP.
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.reviewer: theley
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
@@ -81,6 +81,6 @@ If you combine an extracted source dictionary and a core dictionary, you create 
 |source dictionary|A source dictionary is any Dexterity dictionary that is opened in Dexterity Utilities when you click **File** and then click **Open Source Dictionary**.|
 |third-party dictionary|Within the context of Dexterity, a third-party dictionary is an extracted dictionary that is from a product other than Microsoft Dynamics GP. Therefore, a third-party dictionary can be an extracted dictionary from another Microsoft product or from an independent software vendor.|
   
-For more information about how to create a chunk file from a Development Dictionary, see [How to create a chunk file in Great Plains 8.0 Dexterity](https://support.microsoft.com/help/894700).
+For more information about how to create a chunk file from a Development Dictionary, see [How to create a chunk file in Great Plains 8.0 Dexterity](create-a-chunk-file-dexterity.md).
 
 For more information about how to use Source Code Control to upgrade a Development Dictionary, see [How to upgrade a Dexterity-based application in Microsoft Dynamics GP or in Microsoft Great Plains by using the Dexterity Source Code Control Service](https://support.microsoft.com/help/910527).

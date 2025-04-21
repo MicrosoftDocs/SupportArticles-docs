@@ -1,5 +1,13 @@
 - name: Dynamics 365 Customer Service
   href: welcome-customer-service.yml
+- name: Automatic Record Creation (ARC)
+  items:
+    - name: Accounts are created without known triggers
+      href: automatic-record-creation/accounts-created-without-known-triggers-dynamics-365.md
+    - name: Cases are auto-created when the ARC rule is deactivated
+      href: automatic-record-creation/cases-auto-generated-with-automatic-record-creation-deactivated.md
+    - name: 'Record owner set to "# SSSAdminProd"'
+      href: automatic-record-creation/sssadminprod-appears-as-records-owner-modifier.md
 - name: Cases or Incidents
   items:
     - name: Can't switch between different Teams organizations in the Dynamics 365 app
