@@ -1,11 +1,11 @@
 ---
-title: Agents Don't Receive Desktop Notifications For New Messages
+title: Agents Don't Receive Desktop Notifications for New Messages
 description: Solves an issue where agents don't receive desktop notifications for new session messages when the browser isn't active in Microsoft Dynamics 365 Contact Center and Dynamics 365 Customer Service.
 author: Yerragovula
 ms.author: srreddy
 ms.reviewer: courtser
 ai-usage: ai-assisted
-ms.date: 04/17/2025
+ms.date: 04/21/2025
 ms.custom: sap:Live chat Widget (LCW), DFM
 ---
 # Agents don't receive desktop notifications for new session messages when the browser isn't active
