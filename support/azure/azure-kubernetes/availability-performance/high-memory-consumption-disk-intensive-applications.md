@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot High Memory Consumption in Disk-Intensive Applications
 description: Helps identify and resolve excessive memory usage due to Linux kernel behaviors on Kubernetes pods.
-ms.date: 04/16/2025
+ms.date: 04/21/2025
 ms.reviewer: claudiogodoy, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
@@ -18,7 +18,7 @@ This article helps you to identity and avoid high memory consumed by disk-intens
 
 ## Symptoms
 
-When an disk-intensive application running on a pod perform frequent filesystem operations, high memory consumption might occur.
+When a disk-intensive application running on a pod perform frequent filesystem operations, high memory consumption might occur.
 
 The following table outlines the common symptoms of high memory consumption:
 
