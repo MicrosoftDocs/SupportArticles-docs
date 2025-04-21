@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot broken references
 description: Learn how to troubleshoot broken references that might be caused by something other than your application's inability to find the referred component.
-ms.date: 07/01/2022
+ms.date: 04/17/2025
 ms.reviewer: tglee, v-jayaramanp
 ms.custom: sap:Project - Build System\Build Issues
 ---

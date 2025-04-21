@@ -2091,6 +2091,8 @@ items:
       href: ./remote/terminal-server-startup-connection-application.md
     - name: The connection settings stored in the Default.rdp file
       href: ./remote/remote-desktop-protocol-settings.md
+    - name: Unable to install RDS deployment or add RDS roles
+      href: remote/unable-to-install-rds-deployment-or-add-rds-roles.md
     - name: Updates for Remote Desktop Services
       href: ./remote/remote-desktop-services-updates.md
   - name: Application compatibility
@@ -2575,6 +2577,8 @@ items:
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
     - name: Troubleshoot issues with scheduled tasks not running
       href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md
+    - name: Troubleshoot issues with the Task Scheduler service not starting
+      href: ../windows-client/system-management-components/task-scheduler-service-not-start.md?context=/troubleshoot/windows-server/context/context
     - name: Resolve Task Scheduler "Access Denied" error
       href: ./system-management-components/troubleshooting-task-scheduler-access-denied-error.md
   - name: WinRM
@@ -3057,6 +3061,10 @@ items:
       href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
     - name: Description of System File Checker (Sfc.exe)
       href: ./installing-updates-features-roles/system-file-checker.md
+    - name: Troubleshoot Windows Update error 0x8024002E
+      href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
+    - name: Troubleshoot Windows Update error 0x80070490
+      href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
     - name: Error 0x800f0831 when installing Windows updates

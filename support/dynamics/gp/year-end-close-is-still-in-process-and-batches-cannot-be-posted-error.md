@@ -3,7 +3,7 @@ title: Year End Close is still in process and batches cannot be posted error whe
 description: When you try to post a transaction in General Ledger in Microsoft Dynamics GP after the year is closed, you receive the error message that states Year End Close is still in process and batches cannot be posted. Provides a resolution.
 ms.reviewer: theley, ryanklev
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - General Ledger
 ---
 # "Year End Close is still in process and batches cannot be posted" error when posting a transaction in General Ledger after the year is closed

@@ -2,7 +2,7 @@
 title: The calculation of inventory item costs
 description: Describes the calculation of inventory item costs in Inventory in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle, Adonat
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Distribution - Inventory
 ---
 # Information about the calculation of inventory item costs and the maintenance of these costs in Inventory in Microsoft Dynamics GP

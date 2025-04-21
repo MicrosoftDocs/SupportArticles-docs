@@ -1,7 +1,7 @@
 ---
 title: Some shortcut names still indicate preview
 description: Provides a resolution for an issue where some shortcut names still indicate preview version after a newer version is installed.
-ms.date: 05/09/2022
+ms.date: 04/17/2025
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
 # Some shortcut names still indicate Preview after a newer version is installed

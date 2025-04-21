@@ -1,7 +1,7 @@
 ---
 title: HTTP Error 500.19 on Internet Information Services (IIS) webpages
 description: Resolves the HTTP 500.19 error that occurs when you visit a website that is hosted on IIS 7.0 and later versions.
-ms.date: 11/09/2020
+ms.date: 04/17/2025
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ms.reviewer: mlaing
 ---

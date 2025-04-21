@@ -3,7 +3,7 @@ title: Can't import solutions or publish changes
 description: Describes an issue in which import solutions or publish changes fail in Power Platform. Provides workarounds.
 ms.reviewer: matp
 ms.custom: sap:Working with Solutions\Solution import - Other errors
-ms.date: 06/18/2021
+ms.date: 04/17/2025
 author: nhelgren
 ms.author: risquass
 ---

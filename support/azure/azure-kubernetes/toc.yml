@@ -399,6 +399,6 @@
   - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error
     href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
-    href: error-codes/zonalallocation-allocatonfailed-error.md
+    href: error-codes/zonalallocation-allocationfailed-error.md
   - name: QuotaExceeded or InsufficientVCPUQuota error
     href: error-codes/quota-exceeded-error.md

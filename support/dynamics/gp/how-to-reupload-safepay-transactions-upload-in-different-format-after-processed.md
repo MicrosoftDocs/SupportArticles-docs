@@ -3,7 +3,7 @@ title: Reupload SafePay Transactions Upload in different format
 description: Provides the steps to reupload a SafePay Transactions file in a different format after it has already been processed in Microsoft Dynamics GP.
 ms.reviewer: theley, dbader
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # How to reupload a SafePay Transactions Upload file in a different format after it was processed in Microsoft Dynamics GP
