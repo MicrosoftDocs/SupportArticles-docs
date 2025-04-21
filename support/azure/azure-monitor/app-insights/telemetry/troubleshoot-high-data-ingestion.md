@@ -151,7 +151,7 @@ exceptions
 
 Examine the evolution of ingestion over time based on the factors identified previously. This way can determine whether this behavior has been consistent or if changes occurred at a specific point. By analyzing data in this way, you can pinpoint when the change happened and provide a clearer understanding of the causes behind the high data ingestion. This insight will be important for addressing the issue and implementing effective solutions.
 
-In the following queries, the [bin()](/kusto/query/bin-function) Kusto Query Language (KQL) scalar function is used to segment data into ome-day intervals. This approach facilitates trend analysis as you can see how data has changed or not changed over time.
+In the following queries, the [bin()](/kusto/query/bin-function) Kusto Query Language (KQL) scalar function is used to segment data into one-day intervals. This approach facilitates trend analysis as you can see how data has changed or not changed over time.
 
 ```Kusto
 dependencies
@@ -270,7 +270,7 @@ To determine the factors contributing to the costs, follow these steps:
 
 ### Scenario 3: Reach daily cap unexpectedly
 
-Assume you reached the daily cap unexpectedly on September 4th. Use the following query to obtain a count of custom events and identify the most recent timestamp associated with each event:
+Assume you reached the daily cap unexpectedly on September 4. Use the following query to obtain a count of custom events and identify the most recent timestamp associated with each event:
 
 ```Kusto
 customEvents
@@ -278,13 +278,13 @@ customEvents
 | summarize count(), min(timestamp) by name
 ```
 
-This analysis indicates that certain events started being ingested on September 4th and subsequently became noisy very quickly.
+This analysis indicates that certain events started being ingested on September 4 and subsequently became noisy very quickly.
 
 :::image type="content" source="media/troubleshoot-high-data-ingestion/custom-events.png" alt-text="Screenshot that shows a count of custom events.":::
 
 ## Reduce data ingestion costs
 
-After identifying the factors in the Azure Monitor tables responsible for unexpected data ingestion, reduce data ingestion costs using the following methods per your scenarios:
+After identifying the factors in the Azure Monitor tables responsible for unexpected data ingestion, reduce data ingestion costs using the following methods per your scenarios.
 
 ### Method 1: Update the daily cap configuration
 
