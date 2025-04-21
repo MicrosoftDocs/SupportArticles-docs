@@ -33,15 +33,13 @@ When you try to add a user to a group using Microsoft Graph API, you receive the
 
 This issue might occur if the group you tried to add the user to can't be managed by Microsoft Graph. Microsoft Graph only supports Microsoft 365 groups and Security groups.
 
-For the Microsoft Graph supported group types, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview#group-types-in-microsoft-entra-id-and-microsoft-graph).
-
 ## Solution
 
 ### Step 1: Check the group type
 
 Make sure that the group you trying to modify is supported by Microsoft Graph.
 
-1. In Microsoft Graph, the type of group can be identified by the settings of its `groupTypes`, `mailEnabled`, and `securityEnabled` properties. Use the [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) tool to check the group's attributes:
+1. In Microsoft Graph, the type of group can be identified by the settings of its `groupTypes`, `mailEnabled`, and `securityEnabled` properties. Use the [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) to check the group's attributes:
 
     ```http
     https://graph.microsoft.com/v1.0/groups/<Group Object ID>?$select=displayName,groupTypes,mailEnabled,securityEnable
@@ -60,7 +58,7 @@ Make sure that the group you trying to modify is supported by Microsoft Graph.
     
    ```
 
-2. Review the following table to verify if the group type is supported by Microsoft Graph API. In the example response, the "Test group A" group is a security group.  For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
+2. Review the following table to verify if the group type is supported by Microsoft Graph API. In the example response, the "Test group A" group is a Distribution group that cannot be supported by Microsoft Graph.  For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 
     | Type |groupTypes | mailEnabled | securityEnabled | Can be managed by using Microsoft Graph APIs |
     |--|--|--|--|--|
@@ -69,15 +67,15 @@ Make sure that the group you trying to modify is supported by Microsoft Graph.
     | [Mail-enabled security groups](/graph/api/resources/groups-overview#security-groups-and-mail-enabled-security-groups) | `[]` | `true` | `true` | No; read-only through Microsoft Graph |
     | Distribution groups | `[]` | `true` | `false` | No; read-only through Microsoft Graph |
 
-> [!NOTE]
-> - Group type can't be changed after creation. For more information, see [Edit group settings](/entra/fundamentals/how-to-manage-groups#edit-group-settings).
-> - Dynamic groups (groupTypes contains "DynamicMembership") can't  have their membership managed via Microsoft Graph.
+    > [!NOTE]
+    > - Group type can't be changed after creation. For more information, see [Edit group settings](/entra/fundamentals/how-to-manage-groups#edit-group-settings).
+    > - Dynamic groups (groupTypes contains "DynamicMembership") can't  have their membership managed via Microsoft Graph.
 
 ### Step 2: Verify required permissions
 
 Different group member types require specific permissions. For user-type membership, ensure that the application or account performing the operation has the `GroupMember.ReadWrite.All` permission.
 
-For detailed permission requirements, see [Add members documentation](/graph/api/group-post-members) 
+For detailed permission requirements, see [Add members documentation](/graph/api/group-post-members).
 
 ### Step 3: Check if the group is a role-assignable group
 
@@ -86,11 +84,11 @@ For detailed permission requirements, see [Add members documentation](/graph/api
     **Azure portal**
     
     1. In the [Azure portal](https://portal.azure.com), go to **Microsoft Entra ID**, select **Groups**, and then select **All groups**.
-    1. Locate the target group, select **Properties**. Review the  **Microsoft Entra role can be assigned to the group** option.
+    1. Locate the target group, select **Properties**. Check if the **Microsoft Entra role can be assigned to the group** setting is set to **Yes**,
      
-    **Microsoft Graph Explorer:**
+    **Microsoft Graph Explorer**
     
-    Perform the following query and check the `isAssignableToRoles` value.
+    Run the following request and check the `isAssignableToRoles` value.
     
     ```http
     GET https://graph.microsoft.com/v1.0/groups/<group object="" id="">?$select=displayName,groupTypes,mailEnabled,securityEnabled,isAssignableToRole
