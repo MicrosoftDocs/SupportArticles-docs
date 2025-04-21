@@ -94,7 +94,9 @@ Info CBS Failed to find file: x86_microsoft-windows-directwrite_31bf3856ad364e35
    cd c:\windows\winsxs   
    ```
 
-   Then, run the `mkdir` command to create a folder for the missing DLL file. For example, if the file **x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_229deeb1ba2a85d3DWrite.dll** is missing, run the following command:
+   Run the `mkdir` command to create a folder for the missing DLL file, and then copy the missing files to the folder.
+
+   For example, The file **x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_229deeb1ba2a85d3DWrite.dll** is missing. Assume that you copy the file from a working server and save it to `c:\windows\temp\dwrite.dll`. Run the following command:
 
    ```console
    mkdir x86_microsoft-windows-directwrite_31bf3856ad364e35_7.1.7601.23545_none_c67f532e01cd149d
