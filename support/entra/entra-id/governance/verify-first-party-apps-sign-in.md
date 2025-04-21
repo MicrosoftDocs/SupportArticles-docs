@@ -4,7 +4,7 @@ description: Describes how to verify first-party Microsoft applications in sign-
 ms.date: 03/08/2024
 ms.reviewer: bernaw, domooney, grtaylor, v-six, v-weizhu
 ms.service: entra-id
-ms.custom: sap:Sign-In Activity Reports, has-azure-ad-ps-ref
+ms.custom: sap:Sign-In Activity Reports, no-azure-ad-ps-ref
 ---
 # Verify first-party Microsoft applications in sign-in reports
 

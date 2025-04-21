@@ -10,7 +10,7 @@ on:
 jobs:
 
   stale-branch:
-    if: github.repository_owner == 'MicrosoftDocs'
+    if: github.repository == 'MicrosoftDocs/SupportArticles-docs-pr'
     uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-StaleBranch.yml@workflows-prod
     with:
         PayloadJson: ${{ toJSON(github) }}
