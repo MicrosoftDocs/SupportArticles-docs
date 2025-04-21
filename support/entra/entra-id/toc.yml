@@ -78,6 +78,9 @@
         href: app-integration/send-notification-details.md
   - name: Troubleshoot sign-in to apps
     items:
+      - name: AADSTS7500514 - A supported type of SAML response was not found
+        href: app-integration/error-code-aadsts7500514-supported-type-saml-response-not-found.md
+      - name: Error AADSTS220501 - Unable to download Certificate Revocation List
       - name: Error code AADSTS50173 - The provided grant has expired due to it being revoked
         href: app-integration/error-code-aadsts50173-grant-expired-revoked.md
       - name: Error AADSTS220501 - Unable to download Certificate Revocation List
@@ -291,7 +294,8 @@
         href: users-groups-entra-apis/identity-of-calling-application-not-established.md
       - name: Add an owner to an application
         href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
-
+      - name: 403 error when adding a user to a group
+        href: users-groups-entra-apis/authorization-requestdenied-403-error-add-user-group.md
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems
