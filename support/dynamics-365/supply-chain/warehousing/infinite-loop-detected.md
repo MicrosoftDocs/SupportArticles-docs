@@ -2,7 +2,7 @@
 title: Infinite Loop During Warehouse Mobile App Operations
 description: Solves an Infinite loop detected error that occurs during specific operations in the Warehouse Management mobile app in Microsoft Dynamics 365 Supply Chain Management.
 author: Koalena 
-ms.date: 04/18/2025
+ms.date: 04/21/2025
 ms.custom: sap:Warehouse management
 --- 
 # "Infinite loop detected" error occurs when performing warehouse mobile app operations
