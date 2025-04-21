@@ -12,7 +12,7 @@ on:
 jobs:
   auto-push-to-live:
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'MicrosoftDocs'
+    if: github.repository == 'MicrosoftDocs/SupportArticles-docs-pr'
     permissions:
       contents: write
       pull-requests: write
