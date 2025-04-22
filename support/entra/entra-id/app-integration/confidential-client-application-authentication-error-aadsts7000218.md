@@ -61,7 +61,11 @@ To determines the client type, use one of the following methods:
 
     Microsoft Entra ID checks the redirect URI (reply URL) provided in the request and cross-checks it with the redirect URI registered in the App Registrations.
     - A **Web** type redirect URI classifies the application as a confidential client.
-    - A **Public client (mobile & desktop)** type redirect URI classifies the application as a **public client**.
+    
+        :::image type="content" source="media/confidential-client-application-authentication-error-aadsts7000218/web-client-type.png" alt-text="Screenshot that shows a Web type redirect URI" lightbox="media/confidential-client-application-authentication-error-aadsts7000218/web-client-type.png":::
+    - A **Mobile and desktop applications** type redirect URI classifies the application as a public client.
+    
+       :::image type="content" source="media/confidential-client-application-authentication-error-aadsts7000218/public-client-type.png" alt-text="Screenshot that shows a public type redirect URI" lightbox="media/confidential-client-application-authentication-error-aadsts7000218/public-client-type.png":::
 
 - Use the default client type (when no reply URL is provided):
 
@@ -79,7 +83,7 @@ Review the application code or capture a [Fiddler](https://blogs.aaddevsup.xyz/2
 
 Here's an example of Fiddler trace:
 
-:::image type="content" source="media/confidential-client-application-authentication-error-aadsts7000218/grant-type.png" alt-text="Screenshot hat shwos a Fiddler trace example" lightbox="media/confidential-client-application-authentication-error-aadsts7000218/grant-type.png":::
+:::image type="content" source="media/confidential-client-application-authentication-error-aadsts7000218/grant-type.png" alt-text="Screenshot that shows a Fiddler trace example" lightbox="media/confidential-client-application-authentication-error-aadsts7000218/grant-type.png":::
 
 Common OAuth 2.0 flows and their associated `grant_type` values are listed below:
 
