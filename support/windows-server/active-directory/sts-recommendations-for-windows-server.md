@@ -14,17 +14,17 @@ keywords: Windows Time service, w32time, clock skew, NTP, STS, Secure Time Seedi
 
 # Secure Time Seeding recommendations for Windows Server
 
-This article provides recommendations for the Secure Time Seeding (STS) feature in Windows Server along with general good time synchronization practices.
+This article provides recommendations for the [Secure Time Seeding (STS)](/archive/blogs/w32time/secure-time-seeding-improving-time-keeping-in-windows) feature in Windows Server along with general good time synchronization practices.
 
 ## Brief summary
 
-Customers have reported timekeeping issues in Windows Server 2016 and later Windows Server operating system (OS) deployments linked to the [Secure Time Seeding (STS)](/archive/blogs/w32time/secure-time-seeding-improving-time-keeping-in-windows) feature, due to its incompatibility with the affected deployments.
+Customers have reported timekeeping issues in Windows Server 2016 and later Windows Server operating system (OS) deployments linked to the Secure Time Seeding (STS) feature, due to its incompatibility with the affected deployments.
 
-Based on customer reports and the associated feedback, we recommend the Secure Time Seeding (STS) feature to be disabled in your Windows Server 2016 and later Windows Server machines hosting time-sensitive workloads. This includes any Active Directory Domain Services (ADDS) domain controllers, virtual machine (VM) hosts, servers that use time for critical functionality or providing connectivity or as part of data processing in your deployments.
+Based on customer reports and the associated feedback, we recommend the Secure Time Seeding (STS) feature to be disabled in Windows Server 2016 and later Windows Server machines hosting time-sensitive workloads. This includes any Active Directory Domain Services (ADDS) domain controllers, virtual machine (VM) hosts, servers that use time for critical functionality or providing connectivity or as part of data processing in your deployments.
 
-We recommend you consider disabling the STS feature in all your Windows Server 2016 and later Windows Server machines hosting generic/non-time-sensitive workloads to avoid unforeseen timekeeping-related incompatibility issues arising from STS.
+We recommend you consider disabling the STS feature in all Windows Server 2016 and later Windows Server machines hosting generic/non-time-sensitive workloads to avoid unforeseen timekeeping-related incompatibility issues arising from STS.
 
-We recommend you review the timekeeping requirements for your Windows Server 2016 and later Windows Server OS deployments and ensure suitable time dissemination/synchronization and time monitoring are in place for Windows machines hosting time-sensitive workloads in your deployments, including any ADDS domain controllers and other potentially critical machines in your deployments.
+We recommend you review the timekeeping requirements for Windows Server 2016 and later Windows Server OS deployments and ensure suitable time dissemination/synchronization and time monitoring are in place for Windows machines hosting time-sensitive workloads in your deployments, including any ADDS domain controllers and other potentially critical machines in your deployments.
 
 ## Article overview
 
@@ -218,9 +218,9 @@ Timekeeping and time synchronization are complex topics that are subjects of sev
 
 - There's a large variety of customer networks and deployments, ranging from public internet access points, home networks to advanced private networks. We can generalize these into two broad categories - private/intra networks and public/inter networks - and examine possible time synchronization solutions for each category. This is a high-level abstract view of these deployments and readers are encouraged to treat the details presented here as such.
 
-  - Private networks often deploy local NTP time servers and distribute the time within the network.  
+  - Private networks often deploy local NTP time servers and distribute the time within the network.
 
-  - Public networks commonly use publicly accessible NTP servers to synchronize time (for example, `time.windows.com`).  
+  - Public networks commonly use publicly accessible NTP servers to synchronize time (for example, `time.windows.com`).
 
   - An NTP server on your private network may be more accommodating to your needs than a public NTP server, but the latter may be readily accessible.
 
@@ -232,7 +232,7 @@ Timekeeping and time synchronization are complex topics that are subjects of sev
 
 - Some deployments may need redundancy of time servers to avoid any loss of availability. Relying on an odd number of comparable time servers (>1) can help meet this goal.
 
-- Customers hosting time sensitive workloads should ensure their time distribution and monitoring in those environments meet their needs.  
+- Customers hosting time sensitive workloads should ensure their time distribution and monitoring in those environments meet their needs.
 
 - Once you have sufficient information about machines that host time sensitive workloads, time distribution topology and monitoring (including time monitoring) in your deployment, we suggest you gradually roll out disabling STS on Windows Server OS SKUs (various versions/editions), starting with the least significant machine to the most significant machine.
 
@@ -240,11 +240,11 @@ With this background on timekeeping and time synchronization, below is a set of 
 
 - Review the time distribution/synchronization mechanisms you're using for timekeeping on your Windows Server OS machines.
 
-- Determine if your deployment has time-sensitive workloads and determine the margin of acceptable time error. In general, larger time errors are easier to detect than smaller time errors.  
+- Determine if your deployment has time-sensitive workloads and determine the margin of acceptable time error. In general, larger time errors are easier to detect than smaller time errors.
 
 - Determine if you have a time monitoring mechanism in place on these machines to meet your timekeeping requirements. This could be an exclusive time monitoring system or a general monitoring solution that is deployed on each machine in this deployment.
 
-- We suggest deploying time monitoring mechanisms if they're running time-sensitive workloads. Monitoring the System Event logs on a target machine for Kernel-General Event #1 is one possible way to sudden/large time changes (>1 second) or corrections. There are other ways of monitoring time, all of which are beyond the scope of this document. The higher the time accuracy your deployment needs, the more acute the need to deploy a monitoring solution.  
+- We suggest deploying time monitoring mechanisms if they're running time-sensitive workloads. Monitoring the System Event logs on a target machine for Kernel-General Event #1 is one possible way to sudden/large time changes (>1 second) or corrections. There are other ways of monitoring time, all of which are beyond the scope of this document. The higher the time accuracy your deployment needs, the more acute the need to deploy a monitoring solution.
 
 - Familiarize yourself with the STS feature and the recommendations in this document to disable STS.
 
