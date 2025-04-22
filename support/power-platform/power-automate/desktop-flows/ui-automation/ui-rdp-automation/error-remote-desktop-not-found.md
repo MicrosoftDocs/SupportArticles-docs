@@ -5,7 +5,7 @@ ms.reviewer: amitrou
 ms.author: iopanag
 author: iopanag
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 04/16/2025
+ms.date: 04/22/2025
 ---
 # A desktop flow fails with the "The remote desktop wasn't found" error
 
@@ -21,11 +21,11 @@ This issue is more common in Citrix Virtual Apps.
 
 ## Cause 1
 
-The names of the RDP window, Citrix Desktop, or Citrix Virtual Apps may have changed since the original [UI elements](/power-automate/desktop-flows/virtual-desktops#distinguish-ui-elements-captured-on-virtual-desktops) were captured. Tracking these elements with the old name can fail.
+The names of the RDP window, Citrix Desktop, or Citrix Virtual Apps might have changed since the original [UI elements](/power-automate/desktop-flows/virtual-desktops#distinguish-ui-elements-captured-on-virtual-desktops) were captured. Tracking these elements with the old name can fail.
 
 ### Resolution
 
-To solve this issue,
+To solve this issue:
 
 1. Ensure the affected RDP window, Citrix Desktop, or Citrix Virtual Apps is active.
 2. Locate the desktop element causing the issue in the [UI elements](/power-automate/desktop-flows/ui-elements#ui-elements) pane in the flow designer. Double-click it to open the selector editor.
@@ -38,15 +38,15 @@ To solve this issue,
 
 4. After accepting the changes, select **Test** to verify the new selector. For more information, see [Test a selector](/power-automate/desktop-flows/test-selectors).
 
-5. (Optionally) Use the **New** button to add more fallback selectors for the desktop.
+5. (Optional) Use the **New** button to add more fallback selectors for the desktop.
 
 ## Cause 2
 
-When you use Citrix Virtual Apps with certain applications, especially when interacting with combo box lists, an incorrect target desktop selector may be created using an ordinal value (for example, **eq**) instead of a more robust selection method.
+When you use Citrix Virtual Apps with certain applications, especially when interacting with combo box lists, an incorrect target desktop selector might be created using an ordinal value (for example, **eq**) instead of a more robust selection method.
 
 ### Resolution
 
-To solve this issue,
+To solve this issue:
 
 1. Ensure the affected RDP window, Citrix Desktop, or Citrix Virtual Apps is active.
 2. Locate the desktop element causing the issue in the [UI elements](/power-automate/desktop-flows/ui-elements#ui-elements) pane in the flow designer. Double-click it to open the selector editor.
