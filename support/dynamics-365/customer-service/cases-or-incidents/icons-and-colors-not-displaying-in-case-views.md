@@ -37,7 +37,7 @@ To restore the missing icons and colors in Dynamics 365 case views, follow these
 
    If the field isn't set to the value, update it accordingly.
 
-11. Ensure that the **Enable OptionSet Colors** property is set to **Yes**.
+9. Ensure that the **Enable OptionSet Colors** property is set to **Yes**.
 
 ### Modifying option set colors
 
