@@ -32,11 +32,13 @@ This issue occurs because the application doesn't provide its credential (a clie
 
 To resolve this issue, include the client secret or client assertion in the token request.
 
-In some authentication flow scenarios such as [OAuth 2 Resource Owner Password Credentials (ROPC)](/entra/identity-platform/v2-oauth-ropc) grant flow or [OAuth 2 device authorization grant flow](/entra/identity-platform/v2-oauth2-device-code) where you don't expect the client application to be confidential, change the default client type to public in the **App registrations**:
+In some authentication flow scenarios such as [OAuth 2 Resource Owner Password Credentials (ROPC)](/entra/identity-platform/v2-oauth-ropc) grant flow or [OAuth 2 device authorization grant flow](/entra/identity-platform/v2-oauth2-device-code) where you don't expect the client application to be confidential, allow public client flows in the **App registrations**:
 
 1. In the [Azure portal](https://portal.azure.com/), in **App registrations**, select your application, and then select **Authentication**.
-2. Select **Advanced settings** > **Default client type**.
-3. For **Treat application as a public client**, select **Yes**.
+2. Select **Advanced settings** > **Allow public client flows**.
+3. For **Enable the following mobile and desktop flows**, select **Yes**.
+
+    :::image type="content" source="media/confidential-client-application-authentication-error-aadsts7000218/allow-public-client-flows.png" alt-text="Screenshot that shows the 'Enable the following mobile and desktop flows' option" lightbox="media/confidential-client-application-authentication-error-aadsts7000218/allow-public-client-flows.png":::
 
 Changing the default client type from confidential to public causes security implications. For more information, see [What’s the security implication of changing the default client type from confidential to public in Azure AD?](https://blogs.aaddevsup.xyz/2020/09/whats-the-security-implication-of-changing-the-default-client-type-from-confidential-to-public-in-azure-ad/)
 
