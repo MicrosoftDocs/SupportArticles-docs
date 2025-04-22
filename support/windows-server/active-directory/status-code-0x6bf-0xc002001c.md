@@ -32,6 +32,10 @@ NetpDoDomainJoin: status: 0x6bf
 
 This error occurs when a network device (router, firewall, or virtual private network (VPN) device) rejects network packets between the client being joined and the domain controller (DC).
 
+The difference to error 0x6BA (RPC_S_SERVER_UNAVAILABLE) is that with 0x6BA, the device can't create the TCP session to the server port. With error 0x6bf, the TCP session can be created, but the RPC request message can't be delivered successfully, and the TCP session is reset.
+
+Another variation of an RPC network session problem is error 0x6BE (RPC_S_CALL_FAILED). In this case, the RPC request message can be delivered, but the TCP session is reset before the response is received.
+
 ## Verify and test the connection
 
 To troubleshoot this issue, use the following steps:
