@@ -3,7 +3,7 @@ title: Troubleshoot non-boot scenarios after enabling Azure Disk Encryption in t
 description: Resolve issues when a Linux VM is not booting after enabling Azure Disk Encryption
 author: elicorme
 ms.author: elcorral
-ms.date: 04/01/2025
+ms.date: 04/22/2025
 ms.reviewer: divargas
 ms.service: azure-virtual-machines
 ms.custom: linux-related-content
