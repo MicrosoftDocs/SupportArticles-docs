@@ -1,11 +1,11 @@
 ---
 title: Outbound Dialer Enhancements Not Displaying All Phone Numbers
-description: Resolves an issue where only the business phone number is displayed for contacts or accounts when you use the enhanced outbound dialer in Microsoft Dynamics 365 Customer Service.
+description: Fixes an issue where only the business phone number is displayed for contacts or accounts when you use the enhanced outbound dialer in Dynamics 365 Customer Service.
 ms.reviewer: srubinstein
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 04/18/2025
+ms.date: 04/22/2025
 ms.custom: sap:Voice channel, DFM
 ---
 # Enhanced outbound dialer doesn't display all phone numbers
@@ -18,7 +18,7 @@ When you use the [enhanced outbound dialer](/dynamics365/release-plan/2023wave2/
 
 ## Cause
 
-This issue could be caused due to customizations on the **Contact** form. Specifically, if a custom mobile phone field has been created, it may not be populating the standard `mobilephone` attribute of the `contacts` entity. As a result, the enhanced outbound dialer retrieves and displays only the business phone number.
+This issue might be caused by customizations on the **Contact** form. Specifically, if a custom mobile phone field has been created, it might not populate the standard `mobilephone` attribute of the `contacts` entity. As a result, the enhanced outbound dialer retrieves and displays only the business phone number.
 
 ## Resolution
 
@@ -31,4 +31,4 @@ To resolve this issue, follow these steps:
 5. Save and publish the changes to the **Contact** form.
 6. Test the enhanced outbound dialer to confirm that it now retrieves and displays all available phone numbers, including mobile numbers.
 
-For more information on the Contact entity and attributes, see [Contact table/entity reference (Microsoft Dataverse)](/power-apps/developer/data-platform/reference/entities/contact).
+For more information on the `contacts` entity and attributes, see [Contact table/entity reference (Microsoft Dataverse)](/power-apps/developer/data-platform/reference/entities/contact).
