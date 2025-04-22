@@ -105,7 +105,7 @@ To troubleshoot this issue, use the following steps:
     TCP port 389 <ldap service>: LISTENING
     ```
 
-4. Collect a network trace when reproducing the issue to double check the network connectivity. You can use `netsh trace` to generate an ETL file, and [convert ETL files to PCAP files](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/converting-etl-files-to-pcap-files/1133297), which Wireshark can read.
+4. Collect a network trace when reproducing the issue to double check the network connectivity. You can use `netsh trace` to generate an ETL file, and [convert the ETL file to a PCAP file](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/converting-etl-files-to-pcap-files/1133297), which Wireshark can read.
 
     For example, the following network trace collected by the PortQry command-line tool might indicate there's a network connectivity issue from the client machine to the DC's TCP 135 port (RPC).
 
