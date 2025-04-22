@@ -79,18 +79,20 @@ Here's an example of a network trace:
 1564 DC1.ADATUM.COM         CLIENT1  TCP        TCP:Flags=...A.R.., SrcPort=Kerberos(88), DstPort=59259, PayloadLen=0, Seq=2785284136, Ack=1299632507, Win=0 (scale factor 0x0) = 0           {TCP:267, IPv4:5}
 ```
 
-Here is the analysis of the network traffic:
+From the trace, you can find the DC doesn't respond to the Ticket Granting Service (TGS) request from the client for the Service Principal Name (SPN) `CIFS/DC1.ADATUM.COM`. It sends back a TCP acknowledgment, which suggests the DC received the TGS request. However, it doesn't reply with a valid TGS response. Finally, the client terminates the TCP connection.
+
+Here is an analysis of the network traffic:
 
 > [!NOTE]
-> A full understanding of the behavior needs a trace from the DC network, it may also clarify why the client does not reset the session earlier. The following is what we can tell about the failure:
+> A full understanding of the behavior needs a trace from the DC network, it might also clarify why the client does not reset the session earlier. The following analysis is based on the failure in the trace.
 
-In frames 1541, 1542 and 1545 the client first retransmits the TCP segment and then lowers the size of the frame. The data in frame 1545 is acknowledged in frame 1546.
+In frames 1541, 1542, and 1545, the client first retransmits the TCP segment and then reduces the size of the frame. The data in frame 1545 is acknowledged in frame 1546.
 
-The client continues to send data until the last segment in 1550 with Push bit and last byte 1299631114. This is acknowledged by the server in frame 1555.
+The client continues to send data until the last segment in frame 1550, which includes the Push bit and ends with the last byte 1299631114. This segment is acknowledged by the server in frame 1555.
 
-In the meantime, the client sends another request to the serve in frames 1552 and 1556, last byte 1299632506. This is acknowledged by the server in frame 1558.
+Meanwhile, the client sends another request to the server in frames 1552 and 1556, with the last byte 1299632506. This request is acknowledged by the server in frame 1558.
 
-But until the client decides to terminate the session, there is just a single message from the server (frame 1553). The sequence number that make it to the client indicate the server does send other data, from the sequence numbers:
+However, until the client decides to terminate the session, there is only a single message from the server (frame 1553). The sequence numbers that reach the client indicate that the server does send other data, as evidenced by the sequence numbers:
 
 ```output
 2785282676 first in frame 1540
@@ -98,6 +100,4 @@ But until the client decides to terminate the session, there is just a single me
 2785284136 first in frame 1563
 ```
 
-The last sequence number is lower than the one the server sends in frame 1555. The client never saw this data and thus acknowledges 2785282676 throughout the network trace. This is a direct indication of problems with the correct flow of network traffic.
-
-From the trace, you can find the DC doesn't respond to the Ticket Granting Service (TGS) request from the client for the Service Principal Name (SPN) `CIFS/DC1.ADATUM.COM`. It sends back a TCP acknowledgment, which suggests the DC received the TGS request. However, it doesn't reply with a valid TGS response. Finally, the client terminates the TCP connection.
+The last sequence number is lower than the one the server sends in frame 1555. The client never sees this data and thus acknowledge 2785282676 throughout the network trace. This discrepancy directly indicates issues with the correct flow of network traffic.
