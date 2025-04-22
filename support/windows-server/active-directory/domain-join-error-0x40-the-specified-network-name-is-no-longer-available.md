@@ -81,7 +81,7 @@ Here's an example of a network trace:
 
 From the trace, you can find the DC doesn't respond to the Ticket Granting Service (TGS) request from the client for the Service Principal Name (SPN) `CIFS/DC1.ADATUM.COM`. It sends back a TCP acknowledgment, which suggests the DC received the TGS request. However, it doesn't reply with a valid TGS response. Finally, the client terminates the TCP connection.
 
-Here is an analysis of the network traffic:
+#### Analysis of the network traffic
 
 > [!NOTE]
 > A full understanding of the behavior needs a trace from the DC network, it might also clarify why the client does not reset the session earlier. The following analysis is based on the failure in the trace.
