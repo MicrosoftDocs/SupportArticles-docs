@@ -280,7 +280,7 @@ customEvents
 
 This analysis indicates that certain events started being ingested on September 4 and subsequently became noisy very quickly.
 
-:::image type="content" source="media/troubleshoot-high-data-ingestion/custom-events.png" alt-text="Screenshot that shows a count of custom events.":::
+:::image type="content" source="media/troubleshoot-high-data-ingestion/custom-events.png" alt-text="Screenshot that shows a count of custom events." lightbox="media/troubleshoot-high-data-ingestion/custom-events.png":::
 
 ## Reduce data ingestion costs
 
