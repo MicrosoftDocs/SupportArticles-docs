@@ -114,7 +114,7 @@ Disabling (or enabling) STS requires administrators to modify settings either in
 
 | Group Policy setting | Local setting |
 |----------------------|---------------|
-| Path: Computer Configuration\\Administrative Templates\\System\\Windows Time Service<br><br>Group Policy: **Global Configuration Settings**<br>Setting: **UtilizeSslTimeData**<br>Value:<br>**0** = STS disabled<br>**1** = STS enabled<br>(Reboot required)<br><br>For more information, see [Windows Time service tools and settings](/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config#using-local-group-policy-editor) | Back up existing settings before making any registry changes.<br><br>Registry key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config`<br>Value Name: `UtilizeSslTimeData`<br>Value Type: `REG_DWORD`<br>Value:<br>`0` = STS disabled<br>`1` = STS enabled<br>(Reboot required)<br><br>For more information, see [Windows Time service tools and settings](/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config#windows-time-registry-reference)<br><br>Command to disable STS local setting in registry:<br>`reg.exe add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config" /v "UtilizeSslTimeData" /t REG_DWORD /d 0 /f` |
+| Path: **Computer Configuration\\Administrative Templates\\System\\Windows Time Service**<br><br>Group Policy: **Global Configuration Settings**<br>Setting: **UtilizeSslTimeData**<br>Values (Reboot required):<br><br>**0** = STS disabled<br>**1** = STS enabled<br><br>For more information, see [Windows Time service tools and settings](/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config#using-local-group-policy-editor) | Back up existing settings before making any registry changes.<br><br>Registry key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config`<br>Value Name: `UtilizeSslTimeData`<br>Value Type: `REG_DWORD`<br>Values (Reboot required):<br><br>`0` = STS disabled<br>`1` = STS enabled<br><br>For more information, see [Windows Time service tools and settings](/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config#windows-time-registry-reference)<br><br>Command to disable STS local setting in registry:<br>`reg.exe add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config" /v "UtilizeSslTimeData" /t REG_DWORD /d 0 /f` |
 
 Determine the STS setting used by the W32time service:
 
@@ -128,7 +128,7 @@ Determine the STS setting used by the W32time service:
 
     - **UtilizeSslTimeData: 0** indicates the STS feature is disabled
 
-    - **UtilizeSslTimeData: X** (X is a nonzero number) indicates the STS feature is enabled
+    - **UtilizeSslTimeData: X** (**X** is a nonzero number) indicates the STS feature is enabled
 
 - Through W32time debug log (available on all editions and releases):
 
@@ -176,7 +176,7 @@ Administrators should take their deployment requirements and operational data in
 
 Timekeeping and time synchronization are complex topics that are subjects of several papers and books. We have attempted to summarize some relevant aspects of this here to help our customers review their own time distribution mechanisms and gain operational insight into their deployment.
 
-- Timekeeping on a machine can be influenced by software such as the OS itself, inbox services like the W32time service, admin tools, third party applications with sufficient privileges or by the underlying timekeeping firmware or hardware, backup complementary metal-oxide-semiconductor (CMOS) clock, or battery, runtime conditions on the central processing unit (CPU) or memory or even environmental conditions. Various timekeeping and time synchronization features in Windows aim to bring order to this seemingly chaotic process of timekeeping and attempt to keep a machine's time within acceptable limits for a given use case.
+- Timekeeping on a machine can be influenced by software such as the OS itself, inbox services like the W32time service, admin tools, non-Microsoft applications with sufficient privileges or by the underlying timekeeping firmware or hardware, backup complementary metal-oxide-semiconductor (CMOS) clock, or battery, runtime conditions on the central processing unit (CPU) or memory or even environmental conditions. Various timekeeping and time synchronization features in Windows aim to bring order to this seemingly chaotic process of timekeeping and attempt to keep a machine's time within acceptable limits for a given use case.
 
 - Commodity computing equipment typically needs time corrections, and this applies to devices running various Windows OS SKUs also. In-market Windows OS SKUs (Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025, Windows 10, Windows 11, Windows 10 IoT, Windows 11 IoT, inclusive of multiple intermediate releases and various other Windows OS SKUs) each has a default W32Time service configuration to maintain and synchronize time on a generic device.
 
