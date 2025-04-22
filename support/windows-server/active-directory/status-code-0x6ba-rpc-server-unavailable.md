@@ -40,7 +40,7 @@ NetpJoinDomainOnDs: status of disconnecting from '\\DCNAME': 0x0
 NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'DOMAINNAME' returned 0x0
 NetpJoinDomainOnDs: NetpResetIDNEncoding on 'DOMAINNAME': 0x0
 NetpDoDomainJoin: status: 0x6ba
-``` 
+```
 
 ## Troubleshoot the connection issue
 
@@ -92,6 +92,7 @@ To troubleshoot this issue, use the following steps:
     querying...
     TCP port 135 <epmap service>: FILTERED
     ```
+
     If the connection to TCP 389 port on the DC is successful, you see the following output:
 
     ```output
@@ -104,7 +105,7 @@ To troubleshoot this issue, use the following steps:
     TCP port 389 <ldap service>: LISTENING
     ```
 
-4. Collect [network monitor](https://www.microsoft.com/download/details.aspx?id=4865) trace when reproducing the issue to double check the network connectivity.
+4. Collect a network trace when reproducing the issue to double check the network connectivity. You can use `netsh trace` to generate an ETL file, and [convert ETL files to PCAP files](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/converting-etl-files-to-pcap-files/1133297), which Wireshark can read.
 
     For example, the following network trace collected by the PortQry command-line tool might indicate there's a network connectivity issue from the client machine to the DC's TCP 135 port (RPC).
 
