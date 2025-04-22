@@ -5,7 +5,7 @@ ms.reviewer: agarwalneha
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 04/18/2025
+ms.date: 04/22/2025
 ms.custom: sap:Cases or Incidents, DFM
 ---
 # Icons and colors aren't displayed in Dynamics 365 case views
@@ -14,11 +14,11 @@ This article addresses an issue where the default color-coded icons for options 
 
 ## Symptoms
 
-When you view cases or incidents in Dynamics 365 Customer Service, you can't see the default color-coded icons for fields such as **Priority** and **Status**. This issue may occur after recent updates or modifications to the system.
+When you view cases or incidents in Dynamics 365 Customer Service, you can't see the default color-coded icons for fields such as **Priority** and **Status**. This issue might occur after recent updates or modifications to the system.
 
 ## Cause
 
-This issue could be caused due to incorrect or incomplete configuration settings related to the [Power Apps grid control and option set colors](/dynamics365/customer-service/administer/enable-case-grids).
+This issue might be caused by incorrect or incomplete configuration settings related to the [Power Apps grid control and option set colors](/dynamics365/customer-service/administer/enable-case-grids).
 
 ## Resolution
 
@@ -30,18 +30,18 @@ To restore the missing icons and colors in Dynamics 365 case views, follow these
 4. Select **Switch to classic** to access the classic interface.
 5. In the classic interface, go to **Entities** > **Case**.
 6. On the **Case** page, find and open the **Controls** section.
-7. Ensure that you're using the **Power Apps grid control** for the Case entity.
+7. Ensure that you're using the **Power Apps grid control** for the **Case** entity.
 8. Verify that the **Customizer Control** field is set to the following value:
-
-   - **MscrmControls.CustomCellControl.CustomCellControl**
+   
+    **MscrmControls.CustomCellControl.CustomCellControl**
 
    If the field isn't set to the value, update it accordingly.
 
-9. Ensure that the **Enable OptionSet Colors** property is set to **Yes**.
+11. Ensure that the **Enable OptionSet Colors** property is set to **Yes**.
 
 ### Modifying option set colors
 
-If you need to adjust option set colors, follow these steps:
+If you need to adjust the option set colors, follow these steps:
 
 1. Select the desired option set from the field list.
 2. Scroll down to the **Options** section in the pop-up window.
@@ -52,5 +52,5 @@ If you need to adjust option set colors, follow these steps:
 
 If the issue persists, check if the **Case** entity has an active layer in its solution:
 
-1. Navigate to **Settings** > **Customizations**, select the **Solution Layers** button for the **Case** entity.
-2. Verify if an active layer is present. If an active layer exists, additional investigation or adjustments may be required.
+1. Navigate to **Settings** > **Customizations** and select the **Solution Layers** button for the **Case** entity.
+2. Verify if an active layer is present. If an active layer exists, additional investigation or adjustments might be required.
