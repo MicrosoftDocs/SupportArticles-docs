@@ -54,7 +54,7 @@
   items:  
     - name: Data isn't updated on Insights for integrated search providers
       href: knowledge-management/data-not-updated-integrated-search-providers.md  
-    - name: Knowledge articles not supporting multilingual search
+    - name: Knowledge articles don't support multilingual search
       href: knowledge-management/knowledge-articles-not-supporting-multilingual-search.md  
 - name: Queues
   items:  
