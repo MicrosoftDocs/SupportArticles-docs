@@ -320,6 +320,8 @@
       href: windows-boot-failure.md
     - name: Azure VM login hangs at "Applying Group Policy Environment"
       href: applying-group-policy-environment-policy.md
+    - name: Azure VM Startup hangs at "Applying Group Policy Scheduled Tasks policy"
+      href: applying-group-policy-scheduled-tasks-policy.md
     - name: Troubleshoot Windows VM OS with missing boot manager
       href: os-bootmgr-missing.md
     - name: OS isn't found
