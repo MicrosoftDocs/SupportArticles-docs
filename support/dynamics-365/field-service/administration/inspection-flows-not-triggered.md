@@ -1,10 +1,10 @@
 ---
-title: Inspection flows aren't triggered
+title: Inspection Flows Aren't Triggered
 description: Resolves an issue where an inspection flow isn't triggered in a Microsoft Dynamics 365 Field Service environment.
 author: josephshum-msft
 ms.author: jshum
 ms.reviewer: v-wendysmith
-ms.date: 04/14/2025
+ms.date: 04/22/2025
 ms.custom: sap:Administration
 ---
 # Inspection flows aren't triggered in Dynamics 365 Field Service
@@ -31,7 +31,7 @@ After [publishing an inspection](/dynamics365/field-service/inspections#create-i
    2. Change the **Analytics frequency** to **Immediately**.
    3. Check if the issue persists. If it does, proceed to the next step.
 
-1. If the "Modern flow {flow ID} isn't valid for ExecuteWorkflow" error message occurs when you enable analytics in Dynamics 365 Field Service, it indicates that the related Power Automate flows may not be properly registered. To resolve this issue:
+1. If the "Modern flow {flow ID} isn't valid for ExecuteWorkflow" error message occurs when you enable analytics in Dynamics 365 Field Service, it indicates that the related Power Automate flows might not be properly registered. To resolve this issue:
 
    1. Sign in to [Power Automate](https://make.powerautomate.com/) for your environment.
    2. Locate the flows associated with the error.
@@ -46,4 +46,4 @@ After [publishing an inspection](/dynamics365/field-service/inspections#create-i
 
 ## More information
 
-[View the status of the out-of-the-box inspection flows](/dynamics365/field-service/inspections-reporting)
+[View the status of the out-of-the-box inspection flows](/dynamics365/field-service/inspections-reporting#view-the-status-of-the-out-of-the-box-inspection-flows)
