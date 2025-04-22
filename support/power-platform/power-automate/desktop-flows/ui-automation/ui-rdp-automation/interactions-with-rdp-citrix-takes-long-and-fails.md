@@ -5,7 +5,7 @@ ms.reviewer: amitrou
 ms.author: iopanag
 author: iopanag
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 04/16/2025
+ms.date: 04/22/2025
 ---
 # Interactions with RDP or Citrix applications take a long time and fail
 
@@ -30,7 +30,7 @@ To resolve the issue, modify the following keys as needed. For more information 
   - For remote Java applications (for example, on RDP or Citrix), configure this time-out on the remote machine.
 
 - **BrowserNativeMessageHost.MessageTimeout** and **WebExtensionsMessageProxy.SendTimeout**
-  - Use these settings if web automation is being used.
+  - Use these settings if web automation is used.
   - These time-outs increase the maximum waiting time for webpages to respond.
   - For webpages in remote environments (for example, RDP or Citrix), configure these time-outs on the remote machine.
 
@@ -44,7 +44,7 @@ Depending on whether the issue occurs during design time or runtime, the followi
 
 - For design-time issues (for example, failing to capture an element from the designer), adjust the following setting:
 
-  - **AutomationServerEndpoint.DesignTime.CallTimeout**: This setting increases the time the Power Automate Designer waits for response.
+  - **AutomationServerEndpoint.DesignTime.CallTimeout**: This setting increases the time the Power Automate Designer waits for a response.
 
 - For runtime issues (for example, failing during the execution of a flow), adjust the following setting:
 
