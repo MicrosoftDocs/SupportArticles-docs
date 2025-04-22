@@ -78,7 +78,7 @@ We received several customer incident reports of large and erroneous transient t
 
 Since these incidents occurred only when the STS feature was enabled, they may have been caused due to matching anomalous time metadata presented to STS feature from outbound SSL/TLS connections to different services on each of the affected machines. Such incidents indicate a potential incompatibility between STS feature and the applications/services deployed on the specific machines and/or in specific deployment environments.
 
-We also received reports of customer incidents that involved large persistent time errors occurring on Windows Server OS machines with the STS feature enabled. In those timekeeping incidents, the time errors didn't self-correct within a reasonable time, and were resolved after disabling the STS feature on the affected machines. This led to those customers discovering the incompatibility between the STS feature on the affected machines with applications running on the machine or with the specific deployment environment, and aided their decision to disable STS feature in the affected deployments.
+We also received reports of customer incidents that involved large persistent time errors occurring on Windows Server machines with the STS feature enabled. In those timekeeping incidents, the time errors didn't self-correct within a reasonable time, and were resolved after disabling the STS feature on the affected machines. This led to those customers discovering the incompatibility between the STS feature on the affected machines with applications running on the machine or with the specific deployment environment, and aided their decision to disable STS feature in the affected deployments.
 
 STS was designed to function with the SSL/TLS metadata available in generic Windows OS deployments. All the customer reports about STS indicate to us that certain customer deployments of Windows Server OS may be incompatible with STS design heuristics, and the feature may not perform as expected in such scenarios.
 
@@ -104,9 +104,9 @@ We're advising all enterprise customers who have deployed Windows Server OS (Win
 
   - VM hosts
 
-- We recommend you consider disabling the STS feature by default in Windows Server OS machines in your deployment, even if these machines don't host time-sensitive workloads and even if you never experienced STS related time issues on these machines.
+- We recommend you consider disabling the STS feature by default in Windows Server machines in your deployment, even if these machines don't host time-sensitive workloads and even if you never experienced STS related time issues on these machines.
 
-- If you have never experienced STS issues in Windows Server OS machines in your environment and/or choose to continue using STS on those machines, be advised of the issues in timekeeping potentially caused by this feature. We recommend that you take note of the STS issues in Windows Server OS and the guidance discussed in this article and plan for eventually disabling the STS feature on those machines in your deployment.
+- If you have never experienced STS issues in Windows Server machines in your environment and/or choose to continue using STS on those machines, be advised of the issues in timekeeping potentially caused by this feature. We recommend that you take note of the STS issues in Windows Server OS and the guidance discussed in this article and plan for eventually disabling the STS feature on those machines in your deployment.
 
 Settings to disable Secure Time Seeding:
 
@@ -228,9 +228,9 @@ Timekeeping and time synchronization are complex topics that are subjects of sev
 
 - Active Directory Domain Services (ADDS) uses NTP augmented with ADDS security extensions within the AD domain/forest and it's typically bridged outside the AD forest though standard plaintext NTP. Time distribution within ADDS uses available domain controllers as primary or intermediate time servers. Most ADDS machines dynamically discover their time server, except the DCs marked "Good Time Server" (forest root primary domain controller defaults to this role) that are either accurate sources of time or are explicitly configured to synchronize from an external time source.
 
-- Customers must first determine whether their Windows Server OS machine is deployed in a private network or a public network and then make choices about the specific Windows timekeeping settings they're going to use in that deployment.
+- Customers must first determine whether their Windows Server machines are deployed in a private network or a public network and then make choices about the specific Windows timekeeping settings they're going to use in that deployment.
 
-- Some deployments may need redundancy of time servers to avoid any loss of availability. Relying on an odd number of comparable time servers (>1) can help meet this goal.
+- Some deployments may need redundancy of time servers to avoid any loss of availability. Relying on an odd number of comparable time servers (more than one) can help meet this goal.
 
 - Customers hosting time sensitive workloads should ensure their time distribution and monitoring in those environments meet their needs.
 
@@ -238,18 +238,18 @@ Timekeeping and time synchronization are complex topics that are subjects of sev
 
 With this background on timekeeping and time synchronization, below is a set of suggested actions to review your deployment and change it, including disabling STS as previously recommended. This sample list must be tailored to suit your specific deployments.
 
-- Review the time distribution/synchronization mechanisms you're using for timekeeping on your Windows Server OS machines.
+- Review the time distribution/synchronization mechanisms you're using for timekeeping on your Windows Server machines.
 
 - Determine if your deployment has time-sensitive workloads and determine the margin of acceptable time error. In general, larger time errors are easier to detect than smaller time errors.
 
 - Determine if you have a time monitoring mechanism in place on these machines to meet your timekeeping requirements. This could be an exclusive time monitoring system or a general monitoring solution that is deployed on each machine in this deployment.
 
-- We suggest deploying time monitoring mechanisms if they're running time-sensitive workloads. Monitoring the System Event logs on a target machine for Kernel-General Event #1 is one possible way to sudden/large time changes (>1 second) or corrections. There are other ways of monitoring time, all of which are beyond the scope of this document. The higher the time accuracy your deployment needs, the more acute the need to deploy a monitoring solution.
+- We suggest deploying time monitoring mechanisms if they're running time-sensitive workloads. Monitoring the System Event logs on a target machine for Kernel-General Event #1 is one possible way to sudden/large time changes (more than one second) or corrections. There are other ways of monitoring time, all of which are beyond the scope of this document. The higher the time accuracy your deployment needs, the more acute the need to deploy a monitoring solution.
 
 - Familiarize yourself with the STS feature and the recommendations in this document to disable STS.
 
 - If you have a test environment available, test your new settings with STS disabled in that environment to ensure they work as intended. We also recommend you test your time monitoring solution in this test environment as well.
 
-- Gradually disable STS feature on Windows Server OS machines either via a registry setting change or via the Group Policy setting on ADDS-joined machines and schedule a restart to fully apply the change.
+- Gradually disable STS feature on Windows Server machines either via a registry setting change or via the Group Policy setting on ADDS-joined machines and schedule a restart to fully apply the change.
 
 - Validate that the W32time service is now running with STS disabled.
