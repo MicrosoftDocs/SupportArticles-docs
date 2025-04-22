@@ -1,7 +1,7 @@
 ---
 title: Python Scripts Making Microsoft Graph Requests Are Detected as Web Crawlers
 description: Provides solutions to an issue where Python Scripts might be detected as web crawlers when making Microsoft Graph requests.
-ms.date: 04/21/2025
+ms.date: 04/22/2025
 ms.service: entra-id
 ms.custom: sap:Problem with using the Graph SDK - libraries
 ms.reviewer: daga, v-weizhu
