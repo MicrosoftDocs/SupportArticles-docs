@@ -38,33 +38,33 @@ If the OS disk is using LVM and you see a message like this:
  dracut:/# 
  ```
 
-chances are that the required modules were not added to the initial ram disk image, then try to:
+Chances are that the required modules were not added to the initial ram disk image, then try to:
 
 1. [Restore from backup](/azure/backup/restore-azure-encrypted-virtual-machines) and attempt the encryption again.
 2. If a restore is not feasible then use either the Azure CLI extension [az vm repair](/azure/virtual-machines/linux/unlock-encrypted-linux-disk-offline-repair#method1) or the [manual method](/azure/virtual-machines/linux/unlock-encrypted-linux-disk-offline-repair#method2) to  create a rescue VM, attach and unlock the OS disk of the failed Linux machine to that rescue VM
-  * Once you are in [chroot](/azure/virtual-machines/linux/chroot-environment-linux), execute the following commands. Replace the kernel and extension version accordingly
+3. Once you are in [chroot](/azure/virtual-machines/linux/chroot-environment-linux), execute the following commands. Replace the kernel and extension version accordingly
 
     ### [RHEL 8,9](#tab/redhat)
-    1. Copy the following files from the extension configuration directory to the initramfs scripts directory:
+    a. Copy the following files from the extension configuration directory to the initramfs scripts directory:
        
     ```bash
     sudo cp /var/lib/waagent/Microsoft.Azure.Security.AzureDiskEncryptionForLinux-X.X.X.X/main/oscrypto/91adeOnline /usr/lib/dracut/modules.d/
     ```
     
-    2. Regenerate the initramfs image
+    b. Regenerate the initramfs image
 
     ```bash
     sudo dracut -f -v /boot/initramfs-X.XX.X-XXX.XX.X.x86_64.img <KERNEL VERSION>
     ```
     
-    3. Test the modified kernel by booting the VM from it, if everything works fine, regenerate the rest of the `initramfs` files if there are more.
+    c. Test the modified kernel by booting the VM from it, if everything works fine, regenerate the rest of the `initramfs` files if there are more.
 
-    ### [Ubuntu 20](#tab/ubuntu)
+    ### [Ubuntu](#tab/ubuntu)
 
     > [!NOTE]
     > This procedure could apply to non-boot scenarios after upgrading from Ubuntu 18 to Ubuntu 20. Review the scenario to confirm if it applies.
 
-    1. Copy the following files from the extension configuration directory to the initramfs scripts directory:
+    a. Copy the following files from the extension configuration directory to the initramfs scripts directory:
 
     ```bash
     sudo cd /var/lib/waagent/Microsoft.Azure.Security.AzureDiskEncryptionForLinux-X.x.x.xx/main/oscrypto/ubuntu_2004/encryptscripts
@@ -72,7 +72,7 @@ chances are that the required modules were not added to the initial ram disk ima
     sudo cp crypt-ade-hook /usr/share/initramfs-tools/hooks/
     ```
 
-    2. Once the file `crypt-ade-boot` is copied, replace `ROOTPARTUUID` variable in the line below with the OS partition path from `/dev/disk/by-partuuid/`.
+    b. Once the file `crypt-ade-boot` is copied, replace `ROOTPARTUUID` variable in the line below with the OS partition path from `/dev/disk/by-partuuid/`.
 
     ```bash
     Example:
@@ -80,19 +80,19 @@ chances are that the required modules were not added to the initial ram disk ima
     lrwxrwxrwx 1 root root  10 May 18 17:33 ef61c3c3-50bb-40f0-8124-4cbe8cb2a380 -> ../../sda1
     ```
 
-    3. Replace the `ROOTPARTUUID` variable below with the one obtained in the step above. Remember to replace the UUID according to your environment
+    c. Replace the `ROOTPARTUUID` variable below with the one obtained in the step above. Remember to replace the UUID according to your environment
 
     ```bash
     cryptsetup luksOpen /dev/disk/by-partuuid/ROOTPARTUUID osencrypt --header /boot/luks/osluksheader -d /mnt/azure_bek_disk/LinuxPassPhraseFileName
     ```
 
-    4. Regenerate the initramfs image
+    d. Regenerate the initramfs image
 
     ```bash
     update-initramfs -u -k all
     ```
 
-    5. An output similar to the one below is expected:
+    e. An output similar to the one below is expected:
 
     ```output
     update-initramfs: Generating /boot/initrd.img-5.15.0-1038-azure
@@ -104,8 +104,8 @@ chances are that the required modules were not added to the initial ram disk ima
     + exit 0
     ```
 
-3. Swap the failed OS disk with the one containing the fix.
-4. Review the extension and console logs to ensure the encryption process has finished successfully. Example:
+4. Swap the failed OS disk with the one containing the fix.
+5. Review the extension and console logs to ensure the encryption process has finished successfully. Example:
    ```output
    [AzureDiskEncryption] 3670: [Info] ======= MACHINE STATE: completed =======
    [AzureDiskEncryption] 3670: [Info] Encryption succeeded for all volumes
@@ -117,9 +117,9 @@ chances are that the required modules were not added to the initial ram disk ima
    [AzureDiskEncryption] 3670: [Info] Executing: pvs
    [AzureDiskEncryption] 3670: [Info] Found OS block device: /dev/mapper/osencrypt
    ```
-5. Review the `initramfs` files to ensure that the Azure Disk Encryption modules were propely added
+6. Review the `initramfs` files to ensure that the Azure Disk Encryption modules were propely added
    
-   ### [RHEL 8,9](#tab/redhat)
+   **RHEL 8,9:**
    A similar output to the one below is expected. Replace the `initramfs` file name accordingly.
    
    ```output
@@ -129,7 +129,7 @@ chances are that the required modules were not added to the initial ram disk ima
    -rwxr--r--   1 root     root          681 Jan 15  2024 usr/sbin/crypt-run-generator-ade
    ```
 
-   ### [Ubuntu 20](#tab/ubuntu)
+   **Ubuntu:**
    ```output
     lsinitramfs /boot/initrd.img-5.15.0-1082-azure | egrep -i ade
     boot/luks/osluksheader
@@ -181,7 +181,7 @@ Exception: Encryption failed for name:korn-fromme type:lvm fstype:ext4 mountpoin
 ## Not enough space in the boot partition (Ubuntu)
 
 > [!NOTE]
-> [Ubuntu 24](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.ubuntu-24_04-lts?tab=Overview) images now come with a separate `/boot` partition with 1GB size.
+> [Ubuntu 24](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.ubuntu-24_04-lts?tab=Overview) and higher images now come with a separate `/boot` partition with at least 1GB size.
 
 ADE needs a separate partition for `/boot`, for that reason during the extension deployment it creates `/boot` as a separate partition and restore the original files back. At the end of the process a new initial ram disk file is created, if there is not enough space, this step is going to fail. This scenario is particularly complex since there are many variants and as for now [resizing the OS disk](/azure/virtual-machines/linux/how-to-resize-encrypted-lvm#scenarios) is not supported when the OS disk is using ADE.
 At the time of writing, only Ubuntu images may fall under this process of boot split.
@@ -212,6 +212,7 @@ In order to identify the cause for packages not being installed review the exten
 2. Then, ensure all the packages were successfully installed. Visit [Package management](/azure/virtual-machines/linux/disk-encryption-isolated-network#package-management) for a full list of the required packages based on the Linux distro.
 3. If there are errors related to package installation, identify which package failed and why it failed. 
 4. Ensure the VM has access to the package repositories. Go to [Azure Disk Encryption on an isolated network](/azure/virtual-machines/linux/disk-encryption-isolated-network) in case the VM is under special network requirements.
+5. For more information about troubleshooting repository issues see [Troubleshoot common issues in the yum and dnf package management tools for Linux](/azure/virtual-machines/linux/yum-dnf-common-issues?tabs=rhel7%2Crhel) and [Troubleshoot common issues with APT on Ubuntu](/azure/virtual-machines/linux/apt-common-issues-in-ubuntu)
 
 ## Missing parameters in the GRUB configuration
 
@@ -220,6 +221,7 @@ During the encryption process the extension will add a couple of parameters to t
 `rd.luks.ade.partuuid` and `rd.luks.ade.bootuuid`
 
 These parameters must be present and properly set to the `UUIDs` accordingly. If this is not case, [offline troubleshooting](/azure/virtual-machines/linux/unlock-encrypted-linux-disk-offline-repair) will be required in order to add the parameter manually. The UUIDs can be obtained in a `chroot` environment by running the command `blkid`.
+For more information about regenerating the grub file see [Reinstall GRUB and regenerate the GRUB configuration file manually](/azure/virtual-machines/linux/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file)
 
 ## Missing or corrupted osluksheader file
 
