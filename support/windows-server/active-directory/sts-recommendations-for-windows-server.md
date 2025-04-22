@@ -47,7 +47,7 @@ This article gives a high-level overview of:
 
 STS is a heuristic-based timekeeping mechanism in Windows OS that determines the approximate current time using time metadata from outbound Secure Sockets Layer (SSL)/Transport Layer Security (TLS) connections on a machine and uses that time information to detect and correct any large errors in the system clock on that machine.
 
-The approximate time determined by STS depends on the time metadata available to the feature. This time metadata originates from the SSL/TLS servers that a machine connects to. For more details on the STS feature, refer to [Secure Time Seeding——improving time keeping in Windows](/archive/blogs/w32time/secure-time-seeding-improving-time-keeping-in-windows) (originally published in 2016).
+The approximate time determined by STS depends on the time metadata available to the feature. This time metadata originates from the SSL/TLS servers that a machine connects to. For more details on the STS feature, refer to [Secure Time Seeding—improving time keeping in Windows](/archive/blogs/w32time/secure-time-seeding-improving-time-keeping-in-windows) (originally published in 2016).
 
 The primary goal of the STS feature is to correct system time when environmental factors such as hardware malfunctions or other sources introduce time errors large enough to prevent SSL/TLS from functioning as expected. The incidence rate of such environment-induced time errors depends on the specific deployment environment.
 
@@ -155,7 +155,7 @@ Additionally, we recommend that you ensure appropriate time dissemination/synchr
 
 ## Scope for the general recommendations in this article
 
-Recommendations on disabling the STS feature in this article are applicable to deployments running Windows Server OS SKUs (Windows Server 2016 and later releases) only, based on customer feedback. Similar feedback on the STS feature hasn't been received on non-Windows Server OS SKUs. Hence, the recommendations aren't extended to non-Windows Server OS SKUs (various non-server editions and releases of Windows 10, version 1511 or later——for example, various editions and releases of Windows 10 client SKUs, Windows 10 IoT, Windows 11 client SKUs, and Windows 11 IoT).
+Recommendations on disabling the STS feature in this article are applicable to deployments running Windows Server OS SKUs (Windows Server 2016 and later releases) only, based on customer feedback. Similar feedback on the STS feature hasn't been received on non-Windows Server OS SKUs. Hence, the recommendations aren't extended to non-Windows Server OS SKUs (various non-server editions and releases of Windows 10, version 1511 or later—for example, various editions and releases of Windows 10 client SKUs, Windows 10 IoT, Windows 11 client SKUs, and Windows 11 IoT).
 
 Different Windows OS SKUs host different components and workloads. They're deployed in various environments, impacting the available SSL/TLS time metadata, the heuristic outcome of STS, and any downstream effects of STS issues. These factors, along with customer feedback received mainly regarding the STS feature in Windows Server OS SKUs, lead us to believe that such issues don't impact all Windows OS SKUs uniformly.
 
@@ -165,7 +165,7 @@ Handling issues on Windows SKUs outside the scope of the current for general rec
 
 This part of the note is included for completeness only. There are no current trends of this scenario occurring on non-Windows Server OS SKUs, and there's no current general guidance on disabling STS in non-Windows Server OS SKUs.
 
-There's a small but distinct possibility that machines in a deployment running non-Windows Server OS SKUs (various non-server editions and releases of Windows 10, version 1511 or later——for example, Windows 10 client SKUs, Windows 10 IoT, Windows 11 client SKUs, and Windows 11 IoT) might also experience STS-related time issues based on unique circumstances in that deployment and incidence of such issues can be mitigated only by disabling the STS feature on the affected machines.
+There's a small but distinct possibility that machines in a deployment running non-Windows Server OS SKUs (various non-server editions and releases of Windows 10, version 1511 or later—for example, Windows 10 client SKUs, Windows 10 IoT, Windows 11 client SKUs, and Windows 11 IoT) might also experience STS-related time issues based on unique circumstances in that deployment and incidence of such issues can be mitigated only by disabling the STS feature on the affected machines.
 
 Certain machines (for example, portable devices relying solely on aged rechargeable batteries as a power source and experiencing complete power drain before the next battery recharge) running Windows OS might rely on STS to automatically correct gross time errors. If STS feature is disabled, these machines might require alternate intervention to correct the time.
 
