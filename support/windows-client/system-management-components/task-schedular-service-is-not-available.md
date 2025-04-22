@@ -2,7 +2,7 @@
 title: Scheduled Tasks Fail with Error Task Schedular Service Is Not Available
 description: Helps resolve the error Task schedular service is not available in which scheduled tasks fail.
 manager: dcscontentpm
-ms.date: 04/21/2025
+ms.date: 04/22/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, mamash, v-lianna
 ms.custom:
