@@ -1,7 +1,7 @@
 ---
 title: Knowledge Articles Not Supporting Multilingual Search
 description: Provide troubleshooting steps to ensure knowledge articles are properly configured to support multilingual search in Microsoft Dynamics 365 Customer Service.
-ms.reviewer:
+ms.reviewer: atrinassa
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted

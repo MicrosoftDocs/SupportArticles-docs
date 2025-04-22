@@ -139,7 +139,7 @@ To enable the `msdyn_ConditionXmlConversion` custom action for the condition con
 
 :::image type="content" source="media/sla-migration-issues/msdyn-condition-xml-conversion.png" alt-text="Screenshot that shows the unique name of the Convert legacy xml to fetchxml format and vice versa process." lightbox="media/sla-migration-issues/msdyn-condition-xml-conversion.png":::
 
-## Scenario 7: SLA migration is stuck
+## Scenario 7: SLA items don't function as expected
 
 When you migrate SLAs in Dynamics 365 Customer Service, you might experience the following issues:
 
