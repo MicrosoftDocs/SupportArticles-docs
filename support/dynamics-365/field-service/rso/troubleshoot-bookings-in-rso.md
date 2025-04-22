@@ -4,7 +4,7 @@ description: Resolves issues with bookings in the Resource Scheduling Optimizati
 ms.author: AnilMur
 author: anilmur
 ms.reviewer: mhart
-ms.date: 04/17/2025
+ms.date: 04/22/2025
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # Troubleshoot issues with bookings in Resource Scheduling Optimization
@@ -50,7 +50,7 @@ To block changes to past bookings, consider the following options:
 
 If an exception or error occurs during an optimization schedule run, you might see some overlap on the [Schedule Board](/dynamics365/field-service/schedule-board-tab-settings#board-view-settings). Some bookings are created or updated from the latest run, while other bookings from the previous run failed to be deleted due to an issue. To avoid this issue, the optimization process uses transactional bookings in the *Simulation* status.
 
-During the optimization process, the create, update, and delete operations are visible. If a booking has to get updated, the system tries to make that change to the booking. If that update fails because the booking has changed after the optimization run starts, Resource Scheduling Optimization creates a simulated booking instead.
+During the optimization process, the create, update, and delete operations are visible. If a booking needs to be updated, the system tries to make that change. If the update fails because the booking has changed after the optimization run starts, Resource Scheduling Optimization creates a simulated booking instead.
 
 If an exception occurs and the optimization request fails, simulation bookings remain in simulation status for troubleshooting purposes unless you manually delete them. Otherwise, a system job deletes them automatically every two weeks.
 
