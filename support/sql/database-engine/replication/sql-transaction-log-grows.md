@@ -78,7 +78,7 @@ SELECT log_reuse_wait_desc FROM sys.databases WHERE name = '<your_cdc_database>'
     DBCC execution completed. If DBCC printed error messages, contact your system administrator.
     ```
 
-4. To make sure that the transaction log can be reused, confirm that there is no other reuse reason indicated on the database:
+4. To make sure that the transaction log can be reused, confirm that there's no other reuse reason indicated on the database:
   
     ```sql
     SELECT log_reuse_wait_desc, NAME FROM sys.databases WHERE NAME = '<your_cdc_database>'
