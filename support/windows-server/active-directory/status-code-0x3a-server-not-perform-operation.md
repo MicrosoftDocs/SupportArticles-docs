@@ -1,7 +1,7 @@
 ---
 title: Status Code 0x3a
 description: Provides troubleshooting steps for resolving the status code 0x3a when you join a workgroup computer to a domain.
-ms.date: 04/17/2025
+ms.date: 04/23/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
