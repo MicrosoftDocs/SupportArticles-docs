@@ -218,35 +218,7 @@ When you enter the domain name, make sure you enter the DNS Domain Name rather t
 
 ### Error code 0x3a
 
-The following error occurred when attempting to join the domain:
-
-> The specified server cannot perform the requested operation.
-
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x3a-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x3a.":::
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpLdapBind: ldap_bind failed on <dc_fqdn>: 81: Server Down
-mm/dd/yyyy hh:mm:ss:ms NetpJoinCreatePackagePart: status:0x3a.
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x3a
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<dc_fqdn>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on '<domain_name>' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x3a
-```
-
-Error 0x3a is logged when the client computer lacks network connectivity on TCP port 389 between the client computer and the DC. To troubleshoot this issue, use the following command to test the connection:
-
-```PowerShell
-Test-NetConnection <IP_address_of_the_DC> -Port 389
-```
-
-Expected Output:
-
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-389.png" alt-text="Screenshot that shows the Test-NetConnection command for TCP port 389 output.":::
-
-It indicates that the LDAP Port TCP 389 is open between the client and the DC.
+For more information, see [Status code 0x3a: The specified server cannot perform the requested operation](status-code-0x3a-server-not-perform-operation.md).
 
 ### Error code 0x216d
 
