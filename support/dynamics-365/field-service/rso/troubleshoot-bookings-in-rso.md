@@ -4,7 +4,7 @@ description: Resolves issues with bookings in the Resource Scheduling Optimizati
 ms.author: AnilMur
 author: anilmur
 ms.reviewer: mhart
-ms.date: 04/22/2025
+ms.date: 04/23/2025
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # Troubleshoot issues with bookings in Resource Scheduling Optimization
