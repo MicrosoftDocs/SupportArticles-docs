@@ -1,7 +1,7 @@
 ---
 title: Windows boot issues troubleshooting
 description: Learn to troubleshoot when Windows can't boot. This article includes advanced troubleshooting techniques intended for use by support agents and IT professionals.
-ms.date: 01/15/2025
+ms.date: 04/23/2025
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
@@ -31,7 +31,7 @@ There are several reasons why a Windows-based computer may have problems during 
 |     3     |  Windows OS Loader   | %SystemRoot%\system32\winload.exe  | %SystemRoot%\system32\winload.efi |
 |     4     | Windows NT OS Kernel | %SystemRoot%\system32\ntoskrnl.exe |                                   |
 
-1. PreBoot: The PC's firmware initiates a power-on self test (POST) and loads firmware settings. This pre-boot process ends when a valid system disk is detected. Firmware reads the master boot record (MBR), and then starts Windows Boot Manager.
+1. PreBoot: The PC's firmware initiates a power-on self test (POST) and loads firmware settings. This pre-boot process ends when a valid system disk is detected. In case of a BIOS boot, the firmware loads the master boot record (MBR) into memory, and then starts Windows Boot Manager. In case of a UEFI boot, the firmware loads and starts the Windows Boot Manager EFI executable.
 2. Windows Boot Manager: Windows Boot Manager finds and starts the Windows loader (Winload.exe) on the Windows boot partition.
 3. Windows operating system loader: Essential drivers required to start the Windows kernel are loaded and the kernel starts to run.
 4. Windows NT OS Kernel: The kernel loads into memory the system registry hive and other drivers that are marked as BOOT_START.
