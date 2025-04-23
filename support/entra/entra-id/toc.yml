@@ -290,7 +290,7 @@
       - name: Error "The identity of the calling application could not be established"
         href: users-groups-entra-apis/identity-of-calling-application-not-established.md
       - name: Can't look up users using the /users endpoint
-        href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
+        href: users-groups-entra-apis/cannot-look-up-users-using-microsoft-graph-users-endpoint.md
       - name: Add an owner to an application
         href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
    - name: Problem with using the Graph SDK - libraries
