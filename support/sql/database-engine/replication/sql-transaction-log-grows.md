@@ -81,20 +81,20 @@ SELECT log_reuse_wait_desc FROM sys.databases WHERE name = '<your_cdc_database>'
 4. To make sure that the transaction log can be reused, confirm that there is no other reuse reason indicated on the database:
   
     ```sql
-    SELECT log_reuse_wait_desc, NAME FROM sys.databases WHERE NAME = 'your_cdc_database'
+    SELECT log_reuse_wait_desc, NAME FROM sys.databases WHERE NAME = '<your_cdc_database>'
     ```
 
     This returns output that resembles the following:
 
     ```output
     log_reuse_wait_desc name
-    NOTHING your_cdc_database
+    NOTHING <your_cdc_database>
     ```
 
 5. Now you should be able to truncate the Transaction log by using log backups. You should also be able to shrink the transaction log file to reduce the disk space that's consumed. For example, run the following:
 
     ```sql
-    BACKUP LOG your_cdc_database TO DISK='c:\folder\logbackup.trn'
+    BACKUP LOG <your_cdc_database> TO DISK='c:\folder\logbackup.trn'
     DBCC SHRINKFILE (yourcdcdatabase_log, 1024)
     ```
 
