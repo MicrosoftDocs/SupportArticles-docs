@@ -57,25 +57,7 @@ For more information, see [Error code 0x569: The user has not been granted the r
 
 ### Error code 0x6BF or 0xC002001C
 
-> The remote procedure call failed and did not execute.
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpGetLsaHandle: LsaOpenPolicy on \\<DC name>.<domain>.<tld> failed: 0xc002001c
-mm/dd/yyyy hh:mm:ss:ms NetpGetLsaPrimaryDomain: status: 0xc002001c
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: initiaing a rollback due to earlier errors
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomain: status of disconnecting from '\\<DC name>.<domain>.<tld>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x6bf
-```
-
-This error occurs when a network device (router, firewall, or VPN device) rejects network packets between the client being joined and the DC.
-
-Make sure of the following items:
-
-- Verify the connectivity between the client being joined and the target DC over the required ports and protocols.
-- Disable bind time feature negotiation.
-- Disable TCP Chimney Offload and IP offload.
+For more information, see [Status code 0x6bf or 0xc002001c: The remote procedure call failed and did not execute](status-code-0x6bf-0xc002001c.md).
 
 ### Error code 0x6D9
 
