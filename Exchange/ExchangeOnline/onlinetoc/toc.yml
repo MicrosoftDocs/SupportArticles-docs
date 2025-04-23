@@ -681,8 +681,6 @@
           href: ../user-and-shared-mailboxes/private-items-not-display.md
         - name: REST API is not yet supported for this mailbox error
           href: ../user-and-shared-mailboxes/rest-api-is-not-yet-supported-for-this-mailbox-error.md
-        - name: Restore user mailboxes by using cmdlets
-          href: ../user-and-shared-mailboxes/mailbox-recovery-in-exchange-online.md
         - name: Sent items aren't saved
           href: ../user-and-shared-mailboxes/sent-mail-is-not-saved.md
         - name: Set automatic replies
