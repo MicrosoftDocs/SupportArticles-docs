@@ -4,7 +4,7 @@ description: Provides resolutions for issues that prevent you from migrating SLA
 ms.reviewer: sdas
 ms.author: ghoshsoham
 author: soham-msft
-ms.date: 04/22/2025
+ms.date: 04/23/2025
 ms.custom: sap:Service Level Agreements\Facing errors during SLA migration
 ---
 # Troubleshoot issues with SLA migration to Unified Interface
@@ -45,7 +45,7 @@ You should receive a warning email after a few minutes. You might find that the 
 
 Manually update the dynamic expression to the `FormattedValue` option field.
 
-1. In the Customer Service admin center, go to **Service level agreements** under **Service Terms**.
+1. In the [Copilot Service admin center (previously known as Customer Service admin center)](/dynamics365/customer-service/implement/cs-admin-center), go to **Service level agreements** under **Service Terms**.
 2. Select and expand the migrated SLA from the grid.
 3. Select **SLA item** from the **SLA Items** grid and expand it. A Power Automate flow opens.
 4. Expand each step until the email template's message appears.
@@ -67,7 +67,7 @@ This issue occurs if the SLA migration code uses the **Status** field instead of
 
 To solve this issue, take the following steps:
 
-1. In the Customer Service admin center, go to **Service level agreements** under **Service Terms**.
+1. In the [Copilot Service admin center (previously known as Customer Service admin center)](/dynamics365/customer-service/implement/cs-admin-center), go to **Service level agreements** under **Service Terms**.
 2. Select and expand the migrated SLA from the grid.
 3. Select the SLA item from the **SLA Items** grid and expand it. A Power Automate flow opens.
 4. Expand each step until you reach the **Is Succeeded** step.
@@ -96,7 +96,7 @@ This issue occurs when a subject like "Hello,{Case Number(Case);Case Title(Case)
 
 To solve this issue, take the following steps:
 
-1. In the Customer Service admin center, go to **Service level agreements** under **Service Terms**.
+1. In the [Copilot Service admin center (previously known as Customer Service admin center)](/dynamics365/customer-service/implement/cs-admin-center), go to **Service level agreements** under **Service Terms**.
 2. Select and expand the migrated SLA from the grid.
 3. Select the SLA item from the **SLA Items** grid and expand it. A Power Automate flow opens.
 4. Expand each step until you reach the **Is Succeeded** step.
@@ -158,7 +158,7 @@ These issues might occur due to one or more of the following reasons:
 
 Follow these steps to troubleshoot and resolve the SLA migration issues:
 
-1. Navigate to **Settings** > **Service Management** > **SLAs** to review the list of migrated SLAs.
+1. In the [Copilot Service admin center (previously known as Customer Service admin center)](/dynamics365/customer-service/implement/cs-admin-center), navigate to **Service terms** > **SLAs** to review the list of migrated SLAs.
 
 2. Verify that all SLA items have been migrated successfully:
 

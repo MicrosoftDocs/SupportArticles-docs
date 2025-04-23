@@ -5,7 +5,7 @@ ms.reviewer: agarwalneha
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 04/22/2025
+ms.date: 04/23/2025
 ms.custom: sap:Cases or Incidents, DFM
 ---
 # Icons and colors aren't displayed in Dynamics 365 case views
@@ -32,7 +32,7 @@ To restore the missing icons and colors in Dynamics 365 case views, follow these
 6. On the **Case** page, find and open the **Controls** section.
 7. Ensure that you're using the **Power Apps grid control** for the **Case** entity.
 8. Verify that the **Customizer Control** field is set to the following value:
-   
+
     **MscrmControls.CustomCellControl.CustomCellControl**
 
    If the field isn't set to the value, update it accordingly.

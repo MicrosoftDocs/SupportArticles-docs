@@ -5,7 +5,7 @@ ms.reviewer: atrinassa
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 04/22/2025
+ms.date: 04/23/2025
 ms.custom: sap:Knowledge Management, DFM
 ---
 # Knowledge articles don't support multilingual search
