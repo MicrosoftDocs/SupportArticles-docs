@@ -87,45 +87,7 @@ For more information, see [Error code 0xa8b: An attempt to resolve the DNS name 
 
 ### Error code 0x40
 
-The following error messages occur when you try to join the computer to the domain:
-
-> The specified network name is no longer available
-
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/domain-join-error-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x40.":::
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if '<domain_name>' is valid as type 3 name
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<domain_name>' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpValidateName: name '<domain_name>' is valid for type 3
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: trying to find DC in domain '<domain_name>', flags: 0x40001010
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: failed to find a DC having account 'CLIENT1$': 0x525, last error is 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: status of verifying DNS A record name resolution for 'DCA.<domain_name>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: found DC '\\<dc_fqdn>' in the specified domain
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: using FQDN <domain_name> from dcinfo
-mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: DnsDisableIdnEncoding(UNTILREBOOT) on '<domain_name>' succeeded
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDisableIDNEncoding returned: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\<dc_fqdn>\IPC$ returned 64
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of connecting to dc '\\<dc_fqdn>': 0x40
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x40
-mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on '<domain_name>' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x40
-```
-
-This error is logged when the client computer lacks network connectivity on TCP port 88 between the client machine and the DC. To troubleshoot this issue, you can run the following command to test the connection:
-
-```PowerShell
-Test-NetConnection <IP_address_of_the_DC> -Port 88
-```
-
-Expected Output:
-
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-88.png" alt-text="Screenshot that shows the Test-NetConnection command for TCP port 88 output.":::
-
-The output indicates that the Kerberos Port TCP 88 is open between the client and the DC.
+For more information, see [Domain join error 0x40 "The specified network name is no longer available"](domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md).
 
 ### Error code 0x54b
 
