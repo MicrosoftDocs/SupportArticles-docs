@@ -41,12 +41,12 @@ NetpDoDomainJoin: status: 0x216d
 
 Status code 0x216d is logged in one of the following conditions:
 
-- The user account trying to join the computer to the domain has exceeded the limit of 10 computers joined to the domain.
+- The user account trying to join the computer to the domain has exceeded the limit of 10 computers that can be joined to the domain.
 - There's a Group Policy Object (GPO) restriction to block authenticated users from joining a computer to the domain.
 
 To resolve the issue, verify the following items:
 
-- The [default limit to the number of workstations a user can join to the domain](default-workstation-numbers-join-domain.md).
+- The [default limit on the number of workstations a user can join to the domain](default-workstation-numbers-join-domain.md).
 - The user account is a member of the group mentioned in the **Add workstations to domain** policy of the **Default Domain Controllers Policy** GPO or the **Winning GPO**.
 
     The GPO setting is located at **Computer Configuration** > **Windows Settings** > **Security Settings** > **Local Policies** > **User Rights Assignment** > **Add workstations to domain**.
