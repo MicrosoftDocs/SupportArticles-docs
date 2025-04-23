@@ -1,7 +1,7 @@
 ---
 title: SQL Transaction log grows continuously
 description: This article helps you resolve the problem where you notice continuous transaction log growth for a CDC enabled database.
-ms.date: 03/16/2020
+ms.date: 04/23/2025
 ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ---
 # SQL Transaction log grows when you use Change Data Capture for Oracle by Attunity
