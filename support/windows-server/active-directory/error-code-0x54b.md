@@ -1,7 +1,7 @@
 ---
-title: Domain join error code 0x54b
-description: Provides troubleshooting steps for resolving the error code 0x54b when you join a workgroup computer to a domain.
-ms.date: 04/17/2025
+title: Domain Join Error Code 0x54b
+description: Provides troubleshooting steps for resolving error code 0x54b when you join a workgroup computer to a domain.
+ms.date: 04/23/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,13 +12,13 @@ ms.custom:
 ---
 # Domain join error code 0x54b
 
-This article provides troubleshooting steps for resolving the error code 0x54b when you join a workgroup computer to a domain.
+This article provides troubleshooting steps for resolving error code 0x54b when you join a workgroup computer to a domain.
 
-## Symptom
+## Symptoms
 
 When you join a workgroup computer to a domain, you receive the following error message:
 
-> **Error code 0x0000232A**
+> **Error code 0x54b**
 >
 > Computer Name/Domain Changes
 >
@@ -41,7 +41,7 @@ When you join a workgroup computer to a domain, you receive the following error 
 >
 > Verify that this computer is connected to the network, that these are the correct DNS server IP addresses, and that at least one of the DNS servers is running.
 
-Here's an example from the *netsetup.log* file:
+Here's an example from the **netsetup.log** file:
 
 ```output
 mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if '<domain_name>' is valid as type 3 name
@@ -51,29 +51,27 @@ mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<domain_name>'
 
 ## Cause
 
-Error code 0x54b means "ERROR\_NO\_SUCH\_DOMAIN". This error code indicates the specified domain couldn't be contacted, pointing to issues in locating domain controllers.
+Error code 0x54b means "ERROR\_NO\_SUCH\_DOMAIN." This error code indicates the specified domain can't be contacted, pointing to issues locating domain controllers (DCs).
 
-* Domain Name System (DNS) time-outs and resolution failures when attempting to reach domain controllers.
-* Network connectivity to DC is blocked on TCP port 135,389,445, or RPC dynamic ports.
+* Domain Name System (DNS) times out and resolution fails when attempting to reach DCs.
+* Network connectivity to DCs is blocked on TCP port 135, 389, 445, or RPC dynamic ports.
 
 ## Troubleshooting steps
 
 To resolve the 0x54b error, follow these steps:
 
-### Step 1
+### Step 1: Check the network connectivity between the client and the DC
 
-Check the network connectivity between the client and the Domain controller
-
-| Server Port     | Service             |
+| Server port     | Service             |
 | --------------- | ------------------- |
 | TCP 135         | RPC Endpoint Mapper |
 | TCP 49152-65535 | RPC Dynamic Ports   |
 | TCP 445         | SMB                 |
 | UDP/TCP 389     | LDAP                |
 
-* Refer to the list of required ports in [How to configure a firewall for Active Directory domains and trusts](config-firewall-for-ad-domains-and-trusts.md) .
+* Refer to the list of required ports in [How to configure a firewall for Active Directory domains and trusts](config-firewall-for-ad-domains-and-trusts.md).
 
-* Use Test-NetConnection command to test connection between DC.
+* Use the `Test-NetConnection` command to test the connection between DCs:
 
   ```powershell
   Test-NetConnection <IP\_address\_of\_the\_DC> -Port 389
@@ -86,9 +84,9 @@ Check the network connectivity between the client and the Domain controller
   TcpTestSucceeded : True
   ```
 
-  It indicates that the LDAP Port TCP 389 is open between the client and the DC.
+  It indicates that the LDAP port TCP 389 is open between the client and the DC.
 
-* [PortQry Command Line Port Scanner Version 2.0](https://www.microsoft.com/download/details.aspx?id=17148) can also be used to identify if a port(TCP/UDP) is blocked on DC. Example syntax:
+* [PortQry Command Line Port Scanner Version 2.0](https://www.microsoft.com/download/details.aspx?id=17148) can also be used to identify if a port (TCP/UDP) is blocked on DCs. Here's an example syntax:
 
   ```console
   portqry -n <problem_server> -e 135
@@ -100,7 +98,7 @@ Check the network connectivity between the client and the Domain controller
 
   Port query output examples:
 
-  * On connection to TCP Port 135 on DC is blocked, the following message is displayed:
+  * When the connection to TCP port 135 on a DC is blocked, the following message is displayed:
 
     ```console
     portqry -n <dc_name> -e 135
@@ -118,7 +116,7 @@ Check the network connectivity between the client and the Domain controller
     TCP port 135 (epmap service):FILTERED
     ```
 
-  * On successful connection to TCP port 389 on DC, the following message is displayed:
+  * When the connection to TCP port 389 on a DC is successful, the following message is displayed:
 
     ```console
     portqry -n <dc_name> -e 389
@@ -136,13 +134,11 @@ Check the network connectivity between the client and the Domain controller
     TCP port 389 (ldap service): LISTENING
     ```
 
-* Collect network monitor trace when reproducing the issue to confirm if there's any network connectivity issue if necessary.
+* Collect network monitor traces when reproducing the issue to confirm if there's any network connectivity issue, if necessary.
 
-### Step 2
+### Step 2: Verify if the preferred DNS server is the correct DNS server
 
-Verify if the Preferred DNS Server is the correct DNS Server.
-
-### Step 3
+### Step 3: Verify if the DC can be discovered
 
 Run `nltest /dsgetdc` (DC Discovery) to verify if you can discover a DC. For example:
 
@@ -160,6 +156,8 @@ Our Site Name: Default-First-site-Name
 The command completed successfully
 ```
 
-### Step 4
+### Step 4: Verify if SRV records are registered
 
-Run `DCDiag /v` on the closest domain controller and verify if SRV records are registered. For example: **\_ldap.\_tcp.dc.\_msdcs.\<domain\_name>.com.**
+Run `DCDiag /v` on the closest DC and verify if SRV records are registered. For example:
+
+`_ldap._tcp.dc._msdcs.<domain_name>.com.`
