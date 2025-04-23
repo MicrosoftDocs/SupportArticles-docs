@@ -145,4 +145,4 @@ You can open this file by using Notepad and filter for the ID found in the event
 
 ## See Also
 
-- [Troubleshoot TCP/IP packet loss](tcp-ip-packet-loss-troubleshooting)
+- [Troubleshoot TCP/IP packet loss](./tcp-ip-packet-loss-troubleshooting.md)

@@ -102,7 +102,7 @@ In another scenario, a previously sent TCP segment has not been acknowledged by 
 
 ## See Also
 
-- [Troubleshoot TCP/IP connectivity](tcp-ip-connectivity-issues-troubleshooting)
+- [Troubleshoot TCP/IP connectivity](./tcp-ip-connectivity-issues-troubleshooting.md)
 
 - [https://www.chromium.org/for-testers/providing-network-details/](https://www.chromium.org/for-testers/providing-network-details/ "https://www.chromium.org/for-testers/providing-network-details/")
 
