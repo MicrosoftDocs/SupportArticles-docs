@@ -1,6 +1,6 @@
 ---
-title: Domain join error code 0x0000232A
-description: Provides troubleshooting steps for resolving error code 0x0000232A when you join a workgroup computer to a domain
+title: Domain Join Error Code 0x0000232A
+description: Provides troubleshooting steps for resolving error code 0x0000232A when you join a workgroup computer to a domain.
 ms.date: 04/25/2025
 manager: dcscontentpm
 audience: itpro
@@ -46,7 +46,7 @@ When you join a workgroup computer to a domain, you receive the following error 
 > * One or more of the following zones contains incorrect delegation:
  <NetBIOS\_name> . (the root zone)
 
-Here's an example from the *netsetup.log* file:
+Here's an example from the **netsetup.log** file:
 
 ```output
 mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if '<NetBIOS_name>' is valid as type 3 name
@@ -56,26 +56,26 @@ mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<NetBIOS_name>
 
 ## Cause
 
-Error 0x0000232A indicates that the Domain Name System (DNS) name can't be resolved. The error code can appear with error codes such as RCODE\_NAME\_ERROR and RCODE\_SERVER\_FAILURE, which indicate potential misconfigurations in DNS settings or root hints. Error 0x0000232A might also occur if the client computer lacks NetBIOS name resolution to the domain.
+Error 0x0000232A indicates that the Domain Name System (DNS) name can't be resolved. The error code can appear with error codes such as RCODE\_NAME\_ERROR and RCODE\_SERVER\_FAILURE, which indicate potential misconfigurations in the DNS settings or root hints. Error 0x0000232A might also occur if the client computer lacks NetBIOS name resolution to the domain.
 
 ## Troubleshooting steps
 
-1. When you enter the domain name, ensure that you enter the DNS Domain Name rather than the NetBIOS name. For example, if the DNS name of the domain is contoso.com, make sure you enter that name instead of contoso.
-2. Verified the DNS server settings on the client to ensure they're pointing to the correct DNS server.
-3. In DNS management console, confirm that SRV records are correctly registered in DNS for the Active Directory Domain Controller.
-4. Conducted tests to ensure that DNS queries from the client to the AD DS server are successful after adjustments are made.
+1. When you enter the domain name, ensure that you enter the DNS domain name rather than the NetBIOS name. For example, if the DNS name of the domain is `contoso.com`, make sure you enter that name instead of `contoso`.
+2. Verify the DNS server settings on the client to ensure they point to the correct DNS server.
+3. In the DNS management console, confirm that the SRV records are correctly registered in DNS for the Active Directory domain controller (DC).
+4. Conduct tests to ensure that DNS queries from the client to the Active Directory Domain Services (AD DS) server are successful after adjustments are made:
 
    ```console
    nltest /dsgetdc:
    ```
 
-   The expected output should have the DC name as following.
+   The expected output should have the DC name as follows:
 
    ```output
    nltest /dsgetdc:
               DC: \\DC.contoso.com
          Address: \\<ip_address>
-        Dom Guid: ceb4e2e5-df9b-4b34-ab6f-82777445806b
+        Dom Guid: <Dom_Guid>
         Dom Name: contoso.com
      Forest Name: contoso.com
     Dc Site Name: Default-First-Site-Name
