@@ -361,6 +361,8 @@ items:
       href: ./active-directory/error-0xa8b-resolve-dns-fail.md
     - name: Netlogon service doesn't keep settings after in-place upgrade
       href: ./active-directory/netlogon-service-not-start-automatically.md
+    - name: Status code 0x216d
+      href: ./active-directory/status-code-0x216d-not-joined-domain.md
     - name: Status code 0x32 and you can't join a domain
       href: ./active-directory/status-code-0x32-cannot-join-domain.md
     - name: Support boundaries for Active Directory over NAT
