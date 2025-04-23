@@ -250,39 +250,7 @@ It indicates that the LDAP Port TCP 389 is open between the client and the DC.
 
 ### Error code 0x216d
 
-The following error occurred when attempting to join the domain:
-
-> Your computer could not be joined to the domain. You have exceeded the maximum number of computer accounts you are allowed to create in this domain. Contact your system administrator to have this limit reset or increased.
-
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x216d-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x216d.":::
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpMapGetLdapExtendedError: Parsed [0x216d] from server extended error string: 0000216D: SvcErr: DSID-031A124C, problem 5003 (WILL_NOT_PERFORM), data 0
-mm/dd/yyyy hh:mm:ss:ms NetpModifyComputerObjectInDs: ldap_add_s failed: 0x35 0x216d
-mm/dd/yyyy hh:mm:ss:ms NetpCreateComputerObjectInDs: NetpModifyComputerObjectInDs failed: 0x216d
-mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: LDAP creation failed: 0x216d
-mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: Retrying downlevel per options
-mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: NetUserAdd on '<dc_fqdn>' for 'CLIENT1$' failed: 0x216d
-mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: retry status of creating account: 0x216d
-mm/dd/yyyy hh:mm:ss:ms ldap_unbind status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinCreatePackagePart: status:0x216d.
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x216d
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<dc_fqdn>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on '<domain_name>' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x216d
-```
-
-Error 0x216d is logged in one of these conditions:
-
-- The user account trying to join the machine to the domain has exceeded the limit of 10 machines joined to the domain.
-- There is a GPO restriction to block authenticated users from joining a machine to the domain.
-
-Verify that the user account is a member of the group mentioned in the **Add Workstations to domain** policy of the **Default Domain Controller Policy** GPO or the **Winning** GPO.
-
-The GPO setting is located at **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies User Rights Assignment** > **Add workstations to domain**.
-
-To verify the default limit to the number of workstations a user can join to the domain, see [Default limit to number of workstations a user can join to the domain](default-workstation-numbers-join-domain.md).
+For more information, see [Status code 0x216d: Your computer could not be joined to the domain](status-code-0x216d-not-joined-domain.md).
 
 ### Other errors that occur when you join Windows-based computers to a domain
 

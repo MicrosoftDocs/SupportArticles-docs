@@ -1,7 +1,7 @@
 ---
 title: Status Code 0x216d and Your Computer Can't Be Joined to the Domain
 description: Helps resolve an issue in which you can't join a domain with status code 0x216d.
-ms.date: 04/17/2025
+ms.date: 04/23/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
