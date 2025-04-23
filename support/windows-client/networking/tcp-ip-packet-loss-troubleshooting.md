@@ -1,3 +1,11 @@
+---
+title: Diagnosing Packet Loss on Windows
+description: Learn how to troubleshoot TCP/IP packet loss.
+ms.date: 04/23/2025
+ms.topic: troubleshooting
+audience: itpro
+---
+
 # Diagnosing Packet Loss on Windows
 
 ## Overview
@@ -6,11 +14,11 @@ Packet loss occurs whenever a network packet does not reach its intended destina
 
 ## Capturing Packet Loss Diagnostics
 
-The first step when conducting a packet loss investigation is to capture [pktmon](https://learn.microsoft.com/en-us/windows-server/networking/technologies/pktmon/pktmon) traces, typically by using the pktmon command-line workflow. Pktmon is capable of capturing packet traces, attributing local packet loss to specific reasons and code locations, and collecting packet loss statistics. When combined with [Wireshark](https://www.wireshark.org/) analysis of protocol-level behavior, pktmon traces are sufficient to root cause many cases of packet loss. Pktmon will also be capable of collecting packet loss statistics within network cards, but as of early 2025, this feature is not available.
+The first step when conducting a packet loss investigation is to capture [pktmon](https://learn.microsoft.com/windows-server/networking/technologies/pktmon/pktmon) traces, typically by using the pktmon command-line workflow. Pktmon is capable of capturing packet traces, attributing local packet loss to specific reasons and code locations, and collecting packet loss statistics. When combined with [Wireshark](https://www.wireshark.org/) analysis of protocol-level behavior, pktmon traces are sufficient to root cause many cases of packet loss. Pktmon will also be capable of collecting packet loss statistics within network cards, but as of early 2025, this feature is not available.
 
-If pktmon diagnostics are inconclusive, more exhaustive component-level traces may be captured using netsh.exe trace start scenario=InternetClient or netsh.exe trace start scenario=InternetServer for client and server scenarios respectively, followed by netsh.exe trace stop after the events have been captured. These component-level traces are relatively noisy and opaque, but often contain additional context before or after a local packet is dropped, or for remote loss, an indication the local system has inferred packet loss has occurred. The traces can be converted to text using netsh.exe trace convert nettrace.etl, opened in [Windows Performance Analyzer](https://learn.microsoft.com/en-us/windows-hardware/test/wpt/windows-performance-analyzer), or used with any other ETW tool.
+If pktmon diagnostics are inconclusive, more exhaustive component-level traces may be captured using netsh.exe trace start scenario=InternetClient or netsh.exe trace start scenario=InternetServer for client and server scenarios respectively, followed by netsh.exe trace stop after the events have been captured. These component-level traces are relatively noisy and opaque, but often contain additional context before or after a local packet is dropped, or for remote loss, an indication the local system has inferred packet loss has occurred. The traces can be converted to text using netsh.exe trace convert nettrace.etl, opened in [Windows Performance Analyzer](https://learn.microsoft.com/windows-hardware/test/wpt/windows-performance-analyzer), or used with any other ETW tool.
 
-If the network interface (NIC) is suspected as a cause of packet loss, its discard counters can be monitored through any [Performance Counters](https://learn.microsoft.com/en-us/windows-server/networking/technologies/network-subsystem/net-sub-performance-counters) interface or the [Get-NetAdapterStatistics](https://learn.microsoft.com/en-us/powershell/module/netadapter/get-netadapterstatistics?view=windowsserver2025-ps) cmdlet.
+If the network interface (NIC) is suspected as a cause of packet loss, its discard counters can be monitored through any [Performance Counters](https://learn.microsoft.com/windows-server/networking/technologies/network-subsystem/net-sub-performance-counters) interface or the [Get-NetAdapterStatistics](https://learn.microsoft.com/powershell/module/netadapter/get-netadapterstatistics?view=windowsserver2025-ps) cmdlet.
 
 ## Common Causes of Packet Loss
 
@@ -79,7 +87,7 @@ The resulting NetTrace.txt file contains lines such as:
 [30]0000.0000::2025/03/27-16:12:13.966003800 [Microsoft-Windows-TCPIP]TCPIP: Network layer (Protocol 1(ICMP), AddressFamily = 2(IPV4)) dropped 1 packet(s) on interface 13. SourceAddress = 192.168.5.68. DestAddress = 192.168.5.88. Reason = 9(Inspection drop). Direction = 0(Send). NBL = 0xFFFFE189BEAF3AC0.
 ```
 
-This indicates the outbound ICMP packet was dropped due to WFP inspection. The next step for WFP is to follow the [WFP live drops troubleshooting steps](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/troubleshooting-uwp-firewall#debugging-live-drops).
+This indicates the outbound ICMP packet was dropped due to WFP inspection. The next step for WFP is to follow the [WFP live drops troubleshooting steps](https://learn.microsoft.com/windows/security/operating-system-security/network-security/windows-firewall/troubleshooting-uwp-firewall#debugging-live-drops).
 
 In another scenario, a previously sent TCP segment has not been acknowledged by the remote endpoint, and eventually a local retransmit timer fires, causing TCP to re-send some of the potentially lost data:
 
@@ -98,8 +106,8 @@ In another scenario, a previously sent TCP segment has not been acknowledged by 
 
 - [https://www.chromium.org/for-testers/providing-network-details/](https://www.chromium.org/for-testers/providing-network-details/ "https://www.chromium.org/for-testers/providing-network-details/")
 
-- [https://learn.microsoft.com/en-us/azure/azure-web-pubsub/howto-troubleshoot-network-trace](https://learn.microsoft.com/en-us/azure/azure-web-pubsub/howto-troubleshoot-network-trace "https://learn.microsoft.com/en-us/azure/azure-web-pubsub/howto-troubleshoot-network-trace")
+- [https://learn.microsoft.com/azure/azure-web-pubsub/howto-troubleshoot-network-trace](https://learn.microsoft.com/azure/azure-web-pubsub/howto-troubleshoot-network-trace "https://learn.microsoft.com/azure/azure-web-pubsub/howto-troubleshoot-network-trace")
 
-- [https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/network/](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/network/ "https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/network/")
+- [https://learn.microsoft.com/microsoft-edge/devtools-guide-chromium/network/](https://learn.microsoft.com/microsoft-edge/devtools-guide-chromium/network/ "https://learn.microsoft.com/microsoft-edge/devtools-guide-chromium/network/")
 
 - [https://github.com/microsoft/msquic/blob/main/docs/TSG.md](https://github.com/microsoft/msquic/blob/main/docs/TSG.md)
