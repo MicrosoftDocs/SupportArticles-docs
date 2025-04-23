@@ -1,7 +1,7 @@
 ---
 title: SQL Transaction log grows continuously
 description: This article helps you resolve the problem where you notice continuous transaction log growth for a CDC enabled database.
-ms.date: 03/16/2020
+ms.date: 04/23/2025
 ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ---
 # SQL Transaction log grows when you use Change Data Capture for Oracle by Attunity
@@ -37,10 +37,10 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 You may have a non-distributed LSN because CDC for Oracle uses CDC for SQL stored procedures, and that, in turn, uses the replication log reader. This non-distributed LSN corresponds to the log entries to add the mirrored table in the Attunity CDC database.
 
-If you run this query, the `log_reuse_wait_desc` option returns a value of `REPLICATION`, indicating the cause. Select the `log_reuse_wait_desc` name from `sys.databases`, where the name is \<your_cdc_database\>:
+If you run this query, the `log_reuse_wait_desc` option returns a value of `REPLICATION`, indicating the cause.
 
 ```sql
-REPLICATION <your_cdc_database>
+SELECT log_reuse_wait_desc FROM sys.databases WHERE name = '<your_cdc_database>'
 ```
 
 ## Resolution
