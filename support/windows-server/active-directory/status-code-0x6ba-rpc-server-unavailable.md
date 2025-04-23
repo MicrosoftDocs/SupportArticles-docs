@@ -1,7 +1,7 @@
 ---
 title: Status Code 0x6ba And The RPC Server Is Unavailable
 description: Provides troubleshooting steps for resolving the remote procedure call (RPC) status code 0x6ba when you join a workgroup computer to a domain.
-ms.date: 04/18/2025
+ms.date: 04/23/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
