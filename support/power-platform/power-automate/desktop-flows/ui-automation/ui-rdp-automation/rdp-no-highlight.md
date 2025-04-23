@@ -5,7 +5,7 @@ ms.reviewer: amitrou
 ms.author: nimoutzo
 author: NikosMoutzourakis
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 04/16/2025
+ms.date: 04/23/2025
 ---
 # UI element isn't highlighted or an error occurs when hovering over a UI or web element
 
@@ -38,7 +38,7 @@ The communication with the remote agent components doesn't work.
 
    1. Run **Troubleshoot UI/Web automation issues** to view the diagnostics for the communication. If an error appears in the Citrix or RDP section, expand it for more details and solutions.
 
-   1. If the error details indicate "Access is denied," then policies in the remote machine prohibit to run a specific agent component from the user profile folder. Contact your administrator to allow the executables to run from these directories.
+   1. If the error details indicate "Access is denied," policies on the remote machine prohibit running a specific agent component from the user profile folder. Contact your administrator to allow the executables to run from these directories.
 
       :::image type="content" source="media/rdp-no-highlight/rdp-access-denied.png" alt-text="Screenshot of the Power Automate troubleshooter that shows the Access is denied error details.":::
 

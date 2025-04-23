@@ -90,7 +90,7 @@
           href: desktop-flows/ui-automation/desktop-application-crashes-ui-automation.md
         - name: Can't access the elements of a Java application
           href: desktop-flows/ui-automation/cannot-access-java-application-elements.md
-        - name: Clicking the elements don't work during runtime
+        - name: Clicking elements doesn't work during runtime
           href: desktop-flows/ui-automation/ui-rdp-automation/no-clicks-on-runtime.md
         - name: Focus window action can't bring a window to focus
           href: desktop-flows/ui-automation/focus-window-action-not-working.md

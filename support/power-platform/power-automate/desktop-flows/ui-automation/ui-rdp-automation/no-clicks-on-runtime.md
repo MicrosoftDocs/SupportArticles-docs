@@ -1,15 +1,15 @@
 ---
-title: Can't Click Elements In Citrix Virtual Apps
-description: Solves an issue where hovering over elements in Citrix Virtual Apps works but clicking the elements during runtime don't work.
+title: Can't Click Elements in Citrix Virtual Apps
+description: Solves an issue where hovering over elements in Citrix Virtual Apps works, but clicking the elements during runtime doesn't work.
 ms.reviewer: amitrou
 ms.author: iopanag
 author: iopanag
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 04/16/2025
+ms.date: 04/23/2025
 ---
-# Elements are highlighted in Citrix Virtual Apps but runtime clicks on the elements don't work 
+# Elements are highlighted in Citrix Virtual Apps, but clicking them at runtime doesn't work 
 
-This article provides steps to resolve an issue where UI element interactions don't occur when running actions in Citrix Virtual Apps, despite the UI elements being properly highlighted and captured.
+This article provides steps to resolve an issue where UI element interactions don't work when running actions in Citrix Virtual Apps, even though the UI elements are properly highlighted and captured.
 
 ## Symptoms
 
@@ -17,7 +17,7 @@ When you use the [UI element picker](/power-automate/desktop-flows/ui-elements#u
 
 ## Cause
 
-The Citrix Workspace High DPI (HIDPI) settings may interfere with Power Automate for desktop interactions. This issue is commonly observed in setups involving multiple monitors.
+The Citrix Workspace High DPI (HIDPI) settings might interfere with Power Automate for desktop interactions. This issue is commonly observed in setups involving multiple monitors.
 
 ## Resolution
 
