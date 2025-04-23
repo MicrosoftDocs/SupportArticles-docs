@@ -8,7 +8,7 @@ ms.reviewer: daga, v-weizhu
 ---
 # 401 HTTP response when looking up users using Microsoft Graph /users endpoint
 
-You can use the Microsoft Graph endpoint to interact programmatically with your tenant data. A common scenario is a Microsoft Graph `/users` endpoint to look up users in the tenant. In this scenario, if you use delegated permissions in your access token, the `User.Read.All` permission is necessary. There are ways to prevent you from looking up other users, for example, using an [authorizationPolicy](https://learn.microsoft.com/en-us/graph/api/resources/authorizationpolicy) that can control Microsoft Entra authorization settings, unless you are a tenant administrator.
+You can use the Microsoft Graph endpoint to interact programmatically with your tenant data. A common scenario is a Microsoft Graph `/users` endpoint to look up users in the tenant. In this scenario, if you use delegated permissions in your access token, the `User.Read.All` permission is necessary. There are ways to prevent you from looking up other users, for example, using an [authorizationPolicy](/graph/api/resources/authorizationpolicy) that can control Microsoft Entra authorization settings, unless you are a tenant administrator.
 
 This article provides a solution to an issue where you can't look up other users using the Microsoft Graph `users` endpoint after a tenant policy configuration restricts access to other users.
 
@@ -33,5 +33,6 @@ PATCH https://graph.microsoft.com/v1.0/policies/authorizationPolicy
     "allowedToReadOtherUsers": true
     }
 }
+```
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
