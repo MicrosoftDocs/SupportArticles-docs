@@ -3,7 +3,7 @@ title: Use a VBA script to connect to a SQL database
 description: This article describes how to use a VBA script to connect to a Microsoft SQL database that is used by Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Use a VBA script to connect to a SQL database that is used by Microsoft Dynamics GP

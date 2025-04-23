@@ -3,7 +3,7 @@ title: This document number already exists error when selecting invoices
 description: When you try to select an invoice in the Sales Transaction Entry window in Sales Order Processing in Microsoft Dynamics GP, you receive an error that states the document number already exists. 
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Receivables Management
 ---
 # "This document number already exists" error when selecting an invoice in the Sales Transaction Entry window

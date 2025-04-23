@@ -2,7 +2,7 @@
 title: Can't import a solution or install an application due to missing privileges
 description: Provides a workaround for an issue where solution import or application installation in Power Platform admin center fails due to missing privileges in Microsoft Power Apps.
 ms.reviewer: jdaly
-ms.date: 09/22/2023
+ms.date: 04/17/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Solution import - Other errors
@@ -31,4 +31,4 @@ This error occurs for the following reasons:
 To work around this issue, use the following methods:
 
 - If the access mode of the user performing the import or installation is **Administrative**, update it to [**Read-Write**](/power-platform/admin/create-users#create-a-read-write-user-account) and [assign the user a valid license](/power-platform/admin/assign-licenses).
-- Review the security roles for the user, and check if the user has **Create** and **Update** privileges for all the tables used by the components included in the solution. If not, [assign the user a security role](/power-platform/admin/assign-security-roles) that contains these privileges. The **System Administrator**, **System Customizer**, and **Environment Maker** security roles have these privileges. 
+- Review the security roles for the user, and check if the user has **Create** and **Update** privileges for all the tables used by the components included in the solution. If not, [assign the user a security role](/power-platform/admin/assign-security-roles) that contains these privileges. The **System Administrator**, **System Customizer**, and **Environment Maker** security roles have these privileges.

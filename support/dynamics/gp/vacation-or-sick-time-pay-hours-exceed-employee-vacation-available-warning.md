@@ -3,7 +3,7 @@ title: Vacation or Sick time pay hours exceed employee vacation or sick time ava
 description: The Check File Report from the build checks process may show a warning message that the employee does not have enough vacation or sick time available in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Human Resources
 ---
 # "Vacation/Sick Time pay hours exceed employee vacation/sick time available" warning when employee has sufficient time available in Human Resources

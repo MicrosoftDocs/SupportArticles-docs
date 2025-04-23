@@ -3,7 +3,7 @@ title: Error when you click Web Services for Microsoft Dynamics GP or expand Pol
 description: Provides a solution to an error that occurs when you click "Web Services for Microsoft Dynamics GP" or when you try to expand Policy in the Dynamics Security Console.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # You may receive an error message when you try to click "Web Services for Microsoft Dynamics GP" or when you try to expand Policy in the Dynamics Security Console

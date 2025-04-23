@@ -2,7 +2,7 @@
 title: Error Code 2147812097 Invalid License When Accessing App Module
 description: Provides a solution to an error that occurs when you try to access an app module in a Microsoft Dynamics 365 business application.
 ms.reviewer: 
-ms.date: 04/07/2025
+ms.date: 04/17/2025
 ms.custom: sap:Microsoft Dataverse\Environment and app access issues
 ---
 # "Error Code 2147812097 Invalid License: This application requires a license" error when accessing an app module

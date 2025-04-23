@@ -3,7 +3,7 @@ title: Initialization errors when you remove or install Integration Manager
 description: Troubleshoot the Initialization errors when you remove or install Integration Manager. Provides resolutions.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Troubleshooting Initialization errors when you remove or install Integration Manager

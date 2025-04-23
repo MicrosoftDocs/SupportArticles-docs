@@ -2,7 +2,7 @@
 title: Mailbox location not determined error when testing a mailbox
 description: Provides a solution to an error that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/30/2024
+ms.date: 04/17/2025
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "The mailbox location could not be determined" error when testing and enabling a mailbox in Dynamics 365

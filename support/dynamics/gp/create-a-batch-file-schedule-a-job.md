@@ -3,7 +3,7 @@ title: Create a batch file to schedule a job
 description: Describes how to create a batch file to schedule a job by using Windows Task Scheduler.
 ms.reviewer: theley, kyouells
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to create a batch file to schedule a job by using Windows Task Scheduler when you use Microsoft Dynamics GP on a computer that is running SQL Server Express Edition
