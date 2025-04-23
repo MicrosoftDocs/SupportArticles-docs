@@ -1,7 +1,7 @@
 ---
 title: Invalid client error (AADSTS7000218) when authenticating to Microsoft Entra ID
 description: Provides a solution to the AADSTS7000218 error when a confidential client application authenticates to Microsoft Entra ID.
-ms.date: 04/21/2025
+ms.date: 04/23/2025
 ms.reviewer: bachoang, v-weizhu
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
@@ -83,7 +83,9 @@ Review the application code or capture a [Fiddler](https://blogs.aaddevsup.xyz/2
 
 Here's an example of Fiddler trace:
 
-:::image type="content" source="media/confidential-client-application-authentication-error-aadsts7000218/grant-type.png" alt-text="Screenshot that shows a Fiddler trace example" lightbox="media/confidential-client-application-authentication-error-aadsts7000218/grant-type.png":::
+:::image type="content" source="media/confidential-client-application-authentication-error-aadsts7000218/post-request.png" alt-text="Screenshot hat shwos a POST request in Fiddler" lightbox="media/confidential-client-application-authentication-error-aadsts7000218/post-request.png":::
+
+:::image type="content" source="media/confidential-client-application-authentication-error-aadsts7000218/grant-type.png" alt-text="Screenshot that shows a grant type" lightbox="media/confidential-client-application-authentication-error-aadsts7000218/grant-type.png":::
 
 Common OAuth 2.0 flows and their associated `grant_type` values are listed below:
 
