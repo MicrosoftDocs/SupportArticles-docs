@@ -4,7 +4,7 @@ description: Resolves an issue where an inspection flow isn't triggered in a Mic
 author: josephshum-msft
 ms.author: jshum
 ms.reviewer: v-wendysmith
-ms.date: 04/22/2025
+ms.date: 04/23/2025
 ms.custom: sap:Administration
 ---
 # Inspection flows aren't triggered in Dynamics 365 Field Service
