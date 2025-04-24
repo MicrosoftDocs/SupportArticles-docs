@@ -1,129 +1,132 @@
 ---
-title: Target mailbox doesn't have an smtp proxy matching in a mailbox migration
-description: Describes an issue that returns a The target mailbox doesn't have an smtp proxy matching '<domain>.mail.onmicrosoft.com error message when you try to move mailboxes from your on-premises Exchange environment to Exchange Online in a hybrid deployment.
+title: Target-Mailbox-Doesn't-Have-an-SMTP-Proxy-Matching Error During a Mailbox Migration
+description: Resolves an issue in which you receive a target-mailbox-doesn't-have-an-smtp-proxy-matching error when moving on-premises mailboxes to Exchange Online in a hybrid environment.
 author: cloud-writer
 ms.author: meerak
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-manager: dcscontentpm
-ms.custom: 
+ms.custom:
   - sap:Migration
   - Exchange Online
   - CSSTroubleshoot
-  - has-azure-ad-ps-ref
-search.appverid: 
-  - MET150
-appliesto: 
+  - CI 3938
+  - no-azure-ad-ps-ref
+ms.reviewer: apascual, meerak, v-shorestris
+appliesto:
   - Exchange Online
-ms.date: 01/24/2024
-ms.reviewer: v-six
+search.appverid: MET150
+ms.date: 04/24/2025
 ---
-# Target mailbox doesn't have an smtp proxy matching in a mailbox migration
 
-## Problem
+# "Target mailbox doesn't have an SMTP proxy matching" error during a mailbox migration
 
-Assume that you have a hybrid deployment of on-premises Microsoft Exchange Server and Exchange Online in Microsoft 365. When you try to move mailboxes from your on-premises environment to Exchange Online, you receive the following error message:  
+## Symptoms
 
-> The target mailbox doesn't have an smtp proxy matching '\<domain>.mail.onmicrosoft.com'
+When you try to migrate on-premises mailboxes to Microsoft Exchange Online in a hybrid environment, you receive the following error message:
 
-## Cause
+> The target mailbox doesn't have an smtp proxy matching '\<domain\>.mail.onmicrosoft.com'
 
-This issue may occur if one of the following conditions is true:
+## Cause 1
 
-- The source mailbox isn't stamped to have a \<domain>.mail.onmicrosoft.com smtp address.
-- The proxy address \<domain>.mail.onmicrosoft.com is not synced to Microsoft 365 on the corresponding cloud mail-user object.
+The on-premises mailbox doesn't have an SMTP address that matches `<user>@<domain>.mail.onmicrosoft.com`.
 
-## Solution
+To check the SMTP addresses for an on-premises mailbox, run the following cmdlet in Exchange Management Shell (EMS):
 
-To find the cause of the issue and determine from which mailbox the \<domain>.mail.onmicrosoft.com email address is missing, run the following commands in the Exchange Management Shell and Exchange Online PowerShell:
-
-- In [Exchange Management Shell on-premises](/powershell/exchange/open-the-exchange-management-shell):
-
-    ```powershell
-    Get-Mailbox <AffectedUser> | FL EmailAddresses, EmailAddressPolicyEnabled
-    ```
-
-- In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
-
-    ```powershell
-    Get-MailUser <AffectedUser> | Select -ExpandProperty emailaddresses
-    ```
-
-### Scenario 1: \<domain>.mail.onmicrosoft.com email address is missing from on-premises source mailbox (Exchange Management Shell)
-
-To resolve this issue, add the \<domain>.mail.onmicrosoft.com email address to the on-premises source mailbox.
-
-If the on-premises mailbox has an email address policy applied (that is, the **EmailAddressPolicyEnabled** parameter value is **True** or the **Automatically update email addresses based on the email address policy applied to this recipient** checkbox is selected for the user in Exchange Admin Center or Exchange Management Console), this means that the email address policy doesn't contain the secondary SMTP \<domain>.mail.onmicrosoft.com domain in the email address policy template. You can double-check this policy by running the following command in Exchange Management Shell:
-
-```powershell
-Get-EmailAddressPolicy | FL Identity, EnabledEmailAddressTemplates  
+```PowerShell
+Get-Mailbox -Identity <user ID> | FL EmailAddresses
 ```
 
-In this case, add \<domain>.mail.onmicrosoft.com to the email address policy. To do this, follow these steps:
+## Cause 2
 
-1. Open the Exchange Admin Center on the on-premises Exchange server.
-2. Click **Mail flow**, and then click **Email address policies**.
-3. Select the email address policy that you want to change, and then click **Edit**.
-4. In **email address format**, add the domain (\<domain>.mail.onmicrosoft.com) to the policy, click **Save**, and then click **apply to** to apply the change to the recipients.
-5. You should now see that the \<domain>.mail.onmicrosoft.com SMTP address is stamped on the on-premises mailbox when you run the following command:  
+The source mailbox has an SMTP address that matches `<user>@<domain>.mail.onmicrosoft.com`. However, the SMTP address isn't synced to the corresponding mail-user object in Exchange Online.
 
-    ```powershell
-    Get-Mailbox <AffectedUser> | FL EmailAddresses, EmailAddressPolicyEnabled
-    ```
+To check the SMTP addresses for the mail-user object in Exchange Online, run the following cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
-6. Wait for directory synchronization to run. Or, force a delta directory synchronization. For more information about how to do this, see [Start the Scheduler](/azure/active-directory/hybrid/how-to-connect-sync-feature-scheduler#start-the-scheduler).
-
-If the on-premises mailbox doesn't have an email address policy applied (that is, the **EmailAddressPolicyEnabled** parameter value is **False** or the **Automatically update email addresses based on the email address policy applied to this recipient** checkbox isn't selected for the user in Exchange Admin Center or Exchange Management Console), or if, for whatever reason, the email address policy doesn't stamp or apply the user@domain.mail.onmicrosoft.com smtp address on the recipient, you have to manually add the \<domain>.mail.onmicrosoft.com email address on the user, and then synchronize the change to Microsoft Entra ID. To do this, follow these steps:
-
-1. Open the Exchange Admin Center on the on-premises Exchange server.
-2. Click **recipients**, and then click **mailboxes**.
-3. Select and double-click the on-premises mailbox that you want to change.
-4. In **email addresses**, click the add icon () to add *user@domain.mail.onmicrosoft.com* email address to the user's email addresses.
-5. Click **OK**, and then **Save**.
-6. You should now see the \<domain>.mail.onmicrosoft.com stamped on the on-premises mailbox when you run the following command:
-
-    ```powershell
-    Get-Mailbox <AffectedUser> | FL EmailAddresses
-    ```
-
-7. Wait for directory synchronization to run. Or, force a delta directory synchronization. For more information about how to do this, see [Start the Scheduler](/azure/active-directory/hybrid/how-to-connect-sync-feature-scheduler#start-the-scheduler).
-
-### Scenario 2: \<domain>.mail.onmicrosoft.com email address is stamped on the on-premises source mailbox but is missing from the cloud mail-user object (Exchange Online PowerShell)
-
-In this case, you probably have a synchronization issue. Determine whether the directory synchronization works and whether you have any synchronization errors that are reported in the Microsoft Entra Connect tool or Microsoft 365 admin center. For more information about how to do this, see [View directory synchronization errors in Microsoft 365](/office365/enterprise/identify-directory-synchronization-errors).  
-
-You may also have a user validation error, if you already have a cloud user object on which the user@domain.mail.onmicrosoft.com email address is stamped.
-
-To see this error, you have to connect to [Microsoft 365 PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell) and then run one of the following commands, depending whether you connect to MSOnline (MSOL) service or Microsoft Entra ID for Windows PowerShell:
-
-```powershell
-(Get-MsolUser -UserPrincipalName <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription
-(Get-AzureADUser -ObjectId <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription
+```PowerShell
+Get-MailUser -Identity <user ID> | Select -ExpandProperty EmailAddresses
 ```
 
-[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
+## Resolution for Cause 1
 
-For more information, refer to [You see validation errors for users in the Microsoft 365 portal or in the Azure Active Directory module for Windows PowerShell](https://support.microsoft.com/help/2741233/you-see-validation-errors-for-users-in-the-office-365-portal-or-in-the).  
+Use the following steps to add a secondary SMTP address that matches`<user>@<domain>.mail.onmicrosoft.com` to the on-premises mailbox:
 
-Then, in Microsoft 365 PowerShell, check whether the proxy addresses in Microsoft Entra ID contain the email address user@domain.mail.onmicrosoft.com. To do this, run one of the following commands:
+1. Run the following PowerShell cmdlet in EMS to check whether the on-premises mailbox has an [email address policy](/exchange/email-addresses-and-address-books/email-address-policies/email-address-policies):
 
-```powershell
-(Get-MsolUser -UserPrincipalName <AffectedUserUPN>).ProxyAddresses
-(Get-AzureADUser -ObjectId <AffectedUserUPN>).ProxyAddresses
-```
+   ```PowerShell
+   Get-Mailbox <user ID> | FL EmailAddressPolicyEnabled
+   ```
 
-If you find the user@domain.mail.onmicrosoft.com smtp address for the user in the command result, but you still don't have this email address in Exchange Online PowerShell by using the `Get-MailUser` command, this means that the Directory Synchronization tool brought the address successfully into Microsoft Entra ID, and you probably have a synchronization issue between Microsoft Entra ID and Exchange Online.
+   If the on-premises mailbox has an email address policy, the value of the **EmailAddressPolicyEnabled** parameter is `True`. 
 
-Another cause may be if the domain.mail.onmicrosoft.com smtp domain  that is stamped on the on-premises user is incorrect. For example, the domain doesn't exist in your Microsoft 365 tenant or Exchange Online accepted domains. For more information about accepted domains, see [View accepted domains](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains#view-accepted-domains).  
+   You can also use the Exchange admin center (EAC) to check whether an on-premises mailbox has an email address policy. A policy exists if the option **Automatically update email addresses based on the email address policy applied to this recipient** is selected for the user.
 
-If you cannot determine the cause of the issue, open a support case with Microsoft Support team to investigate further.  
+   > [!NOTE]
+   > To check the email address templates for the policy, run the following PowerShell cmdlet in EMS:
+   > `Get-EmailAddressPolicy | FL Identity, EnabledEmailAddressTemplates`
 
-## More information
+2. If the on-premises mailbox has an email address policy, follow these steps:
 
-For more info about email address policies and Exchange hybrid deployments, see the "Email address policy" section of the [The cloud on your terms (PART I): deploying hybrid](https://techcommunity.microsoft.com/t5/exchange-team-blog/the-cloud-on-your-terms-part-i-deploying-hybrid/ba-p/598977) blog post.
+   - In the EAC for Exchange Server, select **Mail flow**, and then select **Email address policies**.
+   - Select the email address policy that you want to change, and then click **Edit**.
+   - In **Email address format**, add the `<domain>.mail.onmicrosoft.com` domain to the policy, select **Save**, and then select **Apply** to apply the change to the recipients.
+   - Run the following PowerShell cmdlet in EMS to verify that the on-premises mailbox now has an SMTP address that matches`<user>@<domain>.mail.onmicrosoft.com`:
 
-For more info about how to edit an email address policy, see [Edit an email address policy](/exchange/edit-an-email-address-policy-exchange-2013-help).
+      ```PowerShell
+      Get-Mailbox <user ID> | FL EmailAddresses
+      ```
 
-For more info about the coexistence domain that's added by the Hybrid Configuration wizard, see the "Domains" entry at [Hybrid Configuration wizard](/exchange/hybrid-configuration-wizard).
+   > [!NOTE]
+   > For more information, see [Email address policies in Exchange Server](/exchange/email-addresses-and-address-books/email-address-policies/email-address-policies).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet forums](/answers/topics/office-exchange-server-itpro.html).
+3. If the on-premises mailbox doesn't have an email address policy, or step 2 fails, follow these steps:
+
+   - In the EAC for Exchange Server, select **Recipients**, and then select **Mailboxes**.
+   
+   - Select and double-click the on-premises mailbox that you want to change.
+   
+   - In **Email addresses**, select the add icon, and then add an SMTP address that matches`<user>@<domain>.mail.onmicrosoft.com`.
+   
+   - Select **OK**, and then select **Save**.
+   
+   - Run the following PowerShell cmdlet in EMS to verify that the on-premises mailbox now has an SMTP address that matches`<user>@<domain>.mail.onmicrosoft.com`:
+
+      ```PowerShell
+      Get-Mailbox <user ID> | FL EmailAddresses, EmailAddressPolicyEnabled
+      ```
+
+4. Wait for directory sync to run, or [force a delta directory sync](/azure/active-directory/hybrid/how-to-connect-sync-feature-scheduler#start-the-scheduler), to push the change to Microsoft Entra ID.
+
+## Resolution for Cause 2
+
+Check for directory sync errors in Microsoft Entra Connect or the Microsoft 365 admin center. For information about how to identify and fix directory sync errors, see [Monitor Microsoft Entra Connect Sync with Microsoft Entra Connect Health](/entra/identity/hybrid/connect/how-to-connect-health-sync) and [View directory synchronization errors in Microsoft 365](/microsoft-365/enterprise/identify-directory-synchronization-errors).
+
+If you don't find directory sync errors, perform the following checks:
+
+1. Run the following PowerShell cmdlet to check whether the user object in Microsoft Entra ID has a validation error:
+
+   ```PowerShell
+   Install-Module -Name Microsoft.Entra 
+   Connect-Entra -Scopes 'User.Read.All'
+   (Get-EntraUser -Filter "startsWith(DisplayName, '<user display name>')").serviceProvisioningErrors.errorDetail
+   ```
+
+   [Identify and resolve any user validation errors](https://support.microsoft.com/help/2741233/you-see-validation-errors-for-users-in-the-office-365-portal-or-in-the).
+
+2. Run the following PowerShell cmdlet to check whether the user object in Microsoft Entra ID has an SMTP address that matches`<user>@<domain>.mail.onmicrosoft.com`:
+
+   ```PowerShell
+   (Get-EntraUser -Filter "startsWith(DisplayName, '<user display name>')").ProxyAddresses
+   ```
+
+3. Run the following PowerShell cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to check whether the user object in Exchange Online has an SMTP address that matches`<user>@<domain>.mail.onmicrosoft.com`:
+
+   ```PowerShell
+   Get-MailUser -Identity <user ID> | Select -ExpandProperty EmailAddresses
+   ```
+
+4. If you find that the user object in Exchange Online doesn't have a SMTP address that matches`<user>@<domain>.mail.onmicrosoft.com` but the user object in Microsoft Entra ID does, there might be a sync issue between Microsoft Entra ID and Exchange Online.
+
+5. Verify that the `<domain>.mail.onmicrosoft.com` domain is an [accepted domain](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains#view-accepted-domains) in Exchange Online. For more information about the coexistence domain that's added by the Hybrid Configuration Wizard, see [Hybrid configuration options](/exchange/hybrid-configuration-wizard#hybrid-configuration-options).
+
+If you're still unable to fix the issue, contact [Microsoft Support](https://support.microsoft.com/contactus/) for assistance.
