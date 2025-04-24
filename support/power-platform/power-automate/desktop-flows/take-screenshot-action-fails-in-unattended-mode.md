@@ -4,7 +4,7 @@ description: Resolves an error that occurs in the Take screenshot action when yo
 ms.author: iomavrid
 author: yiannismavridis
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
-ms.date: 04/18/2025
+ms.date: 04/24/2025
 ---
 # Unattended desktop flow run fails with the "Failed to take screenshot" error
 

@@ -4,7 +4,7 @@ description: Solves an error that occurs when you run the Run PowerShell script 
 ms.author: iomavrid
 author: yiannismavridis
 ms.custom: sap:Desktop flows
-ms.date: 04/18/2025
+ms.date: 04/24/2025
 ---
 # "Failed to run PowerShell script" error when running the Run PowerShell script action
 
