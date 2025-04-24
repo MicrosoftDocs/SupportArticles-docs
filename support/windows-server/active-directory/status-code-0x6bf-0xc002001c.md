@@ -1,7 +1,7 @@
 ---
 title: Status Code 0x6bf or 0xc002001c
 description: Provides troubleshooting steps for resolving the remote procedure call (RPC) status code 0x6bf or 0xc002001c when you join a workgroup computer to a domain.
-ms.date: 04/18/2025
+ms.date: 04/24/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -32,7 +32,7 @@ NetpDoDomainJoin: status: 0x6bf
 
 This error occurs when a network device (router, firewall, or virtual private network (VPN) device) rejects network packets between the client being joined and the domain controller (DC).
 
-The difference to error 0x6ba (RPC_S_SERVER_UNAVAILABLE) is that with 0x6ba, the device can't create the TCP session to the server port. With error 0x6bf, the TCP session can be created, but the RPC request message can't be delivered successfully, and the TCP session is reset.
+Error 0x6ba (RPC_S_SERVER_UNAVAILABLE) is different. When error 0x6ba occurs, the device can't create the TCP session to the server port. Error 0x6bf indicates that the TCP session can be created, but the RPC request message can't be delivered successfully, and the TCP session is reset.
 
 Another variation of an RPC network session problem is error 0x6be (RPC_S_CALL_FAILED). In this case, the RPC request message can be delivered, but the TCP session is reset before the response is received.
 
@@ -57,7 +57,7 @@ To troubleshoot this issue, use the following steps:
     Test-NetConnection <IP_address_of_the_DC> -Port 389
     ```
 
-    The expected output is:
+    The expected output is shown as follows:
 
     ```output
     ComputerName            : <ComputerName>
@@ -106,4 +106,4 @@ To troubleshoot this issue, use the following steps:
     TCP port 389 <ldap service>: LISTENING
     ```
 
-To determine if there're any further network connectivity problems, collect a network trace if necessary when reproducing the issue. You can use `netsh trace` to generate an ETL file, and [convert the ETL file to a PCAP file](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/converting-etl-files-to-pcap-files/1133297), which Wireshark can read.
+To determine if there are any further network connectivity problems, collect a network trace if necessary when reproducing the issue. You can use `netsh trace` to generate an ETL file, and [convert the ETL file to a PCAP file](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/converting-etl-files-to-pcap-files/1133297), which Wireshark can read.
