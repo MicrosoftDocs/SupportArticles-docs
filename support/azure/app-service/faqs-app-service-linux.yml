@@ -6,7 +6,7 @@ metadata:
   author: genlin
   ms.topic: article
   ms.service: azure-app-service
-  ms.date: 04/16/2024
+  ms.date: 04/24/2025
   ms.author: genli
 title: Azure App Service on Linux FAQ
 summary: |
@@ -82,14 +82,14 @@ sections:
              curl -X POST -u <user> --data-binary @<zipfile> https://{your-sitename}.scm.azurewebsites.net/api/zipdeploy
              ```
           
-             If you get an error that the `curl` command is not found, make sure you install curl by using `apt-get install curl` before you run the previous `curl` command.
+             If you get an error that the `curl` command isn't found, make sure you install curl by using `apt-get install curl` before you run the previous `curl` command.
           
   - name: Language support
     questions:
       - question: |
           I want to use web sockets in my Node.js application, any special settings, or configurations to set?
         answer: |
-          Yes, disable `perMessageDeflate` in your server-side Node.js code. For example, if you are using socket.io, use the following code:
+          Yes, disable `perMessageDeflate` in your server-side Node.js code. For example, if you're using socket.io, use the following code:
           
           ```nodejs
           const io = require('socket.io')(server,{
@@ -126,7 +126,7 @@ sections:
           - File system storage: The file system storage is included in the App Service plan quota. It's used when files are saved to the persistent storage that's rooted in the `/home` directory. 
           - Host disk space: The host disk space is used to store container images. It's managed by the platform through the docker storage driver.
           
-          The host disk space is separate from the file system storage quota. It's not expandable and there is a 15 GB limit for each instance. It's used to store any custom images on the worker. You might be able to use larger than 15 GBs depending on the exact availability of host disk space, but this isn't guaranteed. 
+          The host disk space is separate from the file system storage quota. It's not expandable and there is a 15-GB limit for each instance. It's used to store any custom images on the worker. You might be able to use larger than 15 GBs depending on the exact availability of host disk space, but this isn't guaranteed. 
           
           If the container's writable layer saves data outside of the `/home` directory or a [mounted azure storage path](/azure/app-service/configure-connect-to-azure-storage?tabs=portal&pivots=container-linux), the host disk space will also be consumed.
           
@@ -147,7 +147,7 @@ sections:
       - question: |
           What is the format for the image name in the private registry option?
         answer: |
-          Add the full image name, including the private registry URL (for example, myacr.azurecr.io/dotnet:latest). Image names that use a custom port [cannot be entered through the portal](https://feedback.azure.com/d365community/). To set `docker-custom-image-name`, use the [`az` command-line tool](/cli/azure/webapp/config/container#az_webapp_config_container_set).
+          Add the full image name, including the private registry URL (for example, myacr.azurecr.io/dotnet:latest). Image names that use a custom port [can't be entered through the portal](https://feedback.azure.com/d365community/). To set `docker-custom-image-name`, use the [`az` command-line tool](/cli/azure/webapp/config/container#az_webapp_config_container_set).
           
       - question: |
           Can I expose more than one port on my custom container image?
@@ -174,7 +174,7 @@ sections:
           Can I use ASPNETCORE_URLS in the Docker image?
         answer: |
           Yes, overwrite the environmental variable before .NET core app starts.
-          E.g. In the init.sh script: export ASPNETCORE_URLS={Your value}
+          E.g., In the init.sh script: export ASPNETCORE_URLS={Your value}
           
   - name: Multi-container with Docker Compose
     questions:
@@ -209,7 +209,7 @@ sections:
       - question: |
           How do I use depends_on?
         answer: |
-          The `depends_on` option is *unsupported* on App Service and it'll be ignored. Just as the [control startup and shutdown recommendation from Docker](https://docs.docker.com/compose/startup-order/), App Service Multi-container apps should check dependencies through application code - both at startup and disconnection.
+          The `depends_on` option is *unsupported* on App Service and is ignored. Just as the [control startup and shutdown recommendation from Docker](https://docs.docker.com/compose/startup-order/), App Service Multi-container apps should check dependencies through application code - both at startup and disconnection.
           The example code below shows a Python app checking to see if a Redis container is running.
           ```python
           import time
@@ -235,7 +235,7 @@ sections:
               app.run(host="0.0.0.0", port=80, debug=True)
           ```
           ## Web Sockets
-          Web Sockets are supported on Linux apps. The `webSocketsEnabled` ARM setting does not apply to Linux apps since Web Sockets are always enabled for Linux.
+          Web Sockets are supported on Linux apps. The `webSocketsEnabled` ARM setting doesn't apply to Linux apps since Web Sockets are always enabled for Linux.
           > [!IMPORTANT]
           > Web Sockets are now supported for Linux apps on Free App Service plans. We support up to five web socket connections on Free App Service plans. Exceeding this limit results in an HTTP 429 (Too Many Requests) response.
   - name: Pricing and SLA
@@ -267,7 +267,7 @@ sections:
           | Container type | Description | How to set/use port |
           |----------------|-------------|---------------------|
           | Built-in containers | If you select a language/framework version for a Linux app, a predefined container is selected for you. | To point your app code to the right port, use the PORT environment variable. |
-          | Custom containers | You have full control over the container. | App Service has no control about which port your container listens on. What it does need is to know which port to forward requests to. If your container listens to port 80 or 8080, App Service is able to automatically detect it. If it listens to any other port, you need to set the WEBSITES_PORT app setting to the port number, and App Service forwards requests to that port in the container. The WEBSITES_PORT app setting does not have any effect within the container, and you can’t access it as an environment variable within the container. |
+          | Custom containers | You have full control over the container. | App Service has no control about which port your container listens on. What it does need is to know which port to forward requests to. If your container listens to port 80 or 8080, App Service is able to automatically detect it. If it listens to any other port, you need to set the WEBSITES_PORT app setting to the port number, and App Service forwards requests to that port in the container. The WEBSITES_PORT app setting doesn't have any effect within the container, and you can’t access it as an environment variable within the container. |
       - question: |
           Can I use a file based database (like SQLite) with my Linux Webapp?
         answer: |
