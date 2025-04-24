@@ -61,7 +61,7 @@ For more information, see [Status code 0x6bf or 0xc002001c: The remote procedure
 
 ### Error code 0x6D9
 
-See [Domain join error 0x6D9 "There are no more endpoints available from the endpoint mapper"](./domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md) for troubleshooting guide. 
+See [Domain join error 0x6D9 "There are no more endpoints available from the endpoint mapper"](./domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md) for troubleshooting guide.
 
 ### Error code 0xa8b
 
@@ -120,45 +120,7 @@ To resolve the 0x54b error, follow these steps:
 
 ### Error code 0x0000232A
 
-Error 0x0000232A is logged when the client computer lacks NetBIOS name resolution to the domain.
-
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x0000232a-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x0000232A.":::
-
-Here's an example of the error message:
-
-> Note: This information is intended for a network administrator.  If you are not your network's administrator, notify the administrator that you received this information, which has been recorded in the file C:\WINDOWS\debug\dcdiag.txt.
->
-> The domain name "\<NetBIOS_name\>" might be a NetBIOS domain name.  If this is the case, verify that the domain name is properly registered with WINS.
->
-> If you are certain that the name is not a NetBIOS domain name, then the following information can help you troubleshoot your DNS configuration.
->
-> The following error occurred when DNS was queried for the service location (SRV) resource record used to locate an Active Directory Domain Controller (AD DC) for domain "\<NetBIOS_name\>":
->
-> The error was: "DNS server failure."
-> (error code 0x0000232A RCODE_SERVER_FAILURE)
->
-> The query was for the SRV record for _ldap._tcp.dc._msdcs.\<NetBIOS_name\>
->
-> Common causes of this error include the following:
->
-> - The DNS servers used by this computer contain incorrect root hints. This computer is configured to use DNS servers with the following IP addresses:
->
-> \<ip_address\>
->
-> - One or more of the following zones contains incorrect delegation:
->
-> \<NetBIOS_name\>
-> . (the root zone)
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if '<NetBIOS_name>' is valid as type 3 name
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for <NetBIOS_name> returned 0x54b, last error is 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<NetBIOS_name>' returned 0x54b
-```
-
-When you enter the domain name, make sure you enter the DNS Domain Name rather than the NetBIOS name. For example, if the DNS name of the domain is contoso.com, make sure you enter that name instead of just contoso.
+See [Domain join error code 0x0000232A](error-code-0x0000232a.md) for troubleshooting guide.
 
 ### Error code 0x3a
 

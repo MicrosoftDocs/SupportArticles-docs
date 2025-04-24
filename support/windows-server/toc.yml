@@ -349,7 +349,7 @@ items:
       href: ./active-directory/cannot-connect-internet-domain.md
     - name: Default limit to workstation numbers
       href: ./active-directory/default-workstation-numbers-join-domain.md
-    - name: 'Error 0x6D9 "No more endpoints available from the endpoint mapper"'
+    - name: Error 0x6D9 "No more endpoints available from the endpoint mapper"
       href: ./active-directory/domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md
     - name: 'Error 0x40 "The specified network name is no longer available"'
       href: ./active-directory/domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md
@@ -357,6 +357,8 @@ items:
       href: ./active-directory/failure-when-you-use-an-existing-computer-account-to-join-a-domain.md
     - name: Error 0x5 Access Denied when you rename a computer
       href: ./active-directory/error-0x5-access-denied-rename-computer.md
+    - name: Error code 0x0000232A
+      href: active-directory/error-code-0x0000232a.md
     - name: Error code 0x569
       href: ./active-directory/error-0x569-not-granted-logon-type.md
     - name: Error code 0xa8b
