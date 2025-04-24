@@ -72,4 +72,4 @@ To reset a user's password, follow these steps:
 5. Click to select the **User must change password at next logon** check box, and then click **OK**.
 
 > [!NOTE]
-> The behavior that is described in this article occurs only if the effective password policy on the domain controllers has **Enforce Password History** set to a value that specifies that two or more passwords will be remembered. The password policy should be set at the domain level. You can determine whether the policy has taken effect on the domain controllers by using the Secpol.msc snap-in.
+> The behavior that is described in this article occurs only if the effective password policy on the domain controllers has **Enforce Password History** set to a value that specifies that two or more passwords will be remembered. The password policy should be set at the domain level. You can determine whether the policy has taken effect on the domain controllers by using the Secpol.msc snap-in. Domain user password history can also be set using a [fine grained password policy](/windows-server/identity/ad-ds/get-started/adac/fine-grained-password-policies).

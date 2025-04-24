@@ -69,45 +69,7 @@ For more information, see [Error code 0xa8b: An attempt to resolve the DNS name 
 
 ### Error code 0x40
 
-The following error messages occur when you try to join the computer to the domain:
-
-> The specified network name is no longer available
-
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/domain-join-error-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x40.":::
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if '<domain_name>' is valid as type 3 name
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<domain_name>' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpValidateName: name '<domain_name>' is valid for type 3
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: trying to find DC in domain '<domain_name>', flags: 0x40001010
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: failed to find a DC having account 'CLIENT1$': 0x525, last error is 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: status of verifying DNS A record name resolution for 'DCA.<domain_name>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDsGetDcName: found DC '\\<dc_fqdn>' in the specified domain
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: using FQDN <domain_name> from dcinfo
-mm/dd/yyyy hh:mm:ss:ms NetpDisableIDNEncoding: DnsDisableIdnEncoding(UNTILREBOOT) on '<domain_name>' succeeded
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpDisableIDNEncoding returned: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetUseAdd to \\<dc_fqdn>\IPC$ returned 64
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of connecting to dc '\\<dc_fqdn>': 0x40
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x40
-mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on '<domain_name>' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x40
-```
-
-This error is logged when the client computer lacks network connectivity on TCP port 88 between the client machine and the DC. To troubleshoot this issue, you can run the following command to test the connection:
-
-```PowerShell
-Test-NetConnection <IP_address_of_the_DC> -Port 88
-```
-
-Expected Output:
-
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-88.png" alt-text="Screenshot that shows the Test-NetConnection command for TCP port 88 output.":::
-
-The output indicates that the Kerberos Port TCP 88 is open between the client and the DC.
+For more information, see [Domain join error 0x40 "The specified network name is no longer available"](domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md).
 
 ### Error code 0x54b
 
@@ -200,71 +162,11 @@ When you enter the domain name, make sure you enter the DNS Domain Name rather t
 
 ### Error code 0x3a
 
-The following error occurred when attempting to join the domain:
-
-> The specified server cannot perform the requested operation.
-
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x3a-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x3a.":::
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpLdapBind: ldap_bind failed on <dc_fqdn>: 81: Server Down
-mm/dd/yyyy hh:mm:ss:ms NetpJoinCreatePackagePart: status:0x3a.
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x3a
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<dc_fqdn>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on '<domain_name>' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x3a
-```
-
-Error 0x3a is logged when the client computer lacks network connectivity on TCP port 389 between the client computer and the DC. To troubleshoot this issue, use the following command to test the connection:
-
-```PowerShell
-Test-NetConnection <IP_address_of_the_DC> -Port 389
-```
-
-Expected Output:
-
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/test-netconnection-output-389.png" alt-text="Screenshot that shows the Test-NetConnection command for TCP port 389 output.":::
-
-It indicates that the LDAP Port TCP 389 is open between the client and the DC.
+For more information, see [Status code 0x3a: The specified server cannot perform the requested operation](status-code-0x3a-server-not-perform-operation.md).
 
 ### Error code 0x216d
 
-The following error occurred when attempting to join the domain:
-
-> Your computer could not be joined to the domain. You have exceeded the maximum number of computer accounts you are allowed to create in this domain. Contact your system administrator to have this limit reset or increased.
-
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x216d-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x216d.":::
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpMapGetLdapExtendedError: Parsed [0x216d] from server extended error string: 0000216D: SvcErr: DSID-031A124C, problem 5003 (WILL_NOT_PERFORM), data 0
-mm/dd/yyyy hh:mm:ss:ms NetpModifyComputerObjectInDs: ldap_add_s failed: 0x35 0x216d
-mm/dd/yyyy hh:mm:ss:ms NetpCreateComputerObjectInDs: NetpModifyComputerObjectInDs failed: 0x216d
-mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: LDAP creation failed: 0x216d
-mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: Retrying downlevel per options
-mm/dd/yyyy hh:mm:ss:ms NetpManageMachineAccountWithSid: NetUserAdd on '<dc_fqdn>' for 'CLIENT1$' failed: 0x216d
-mm/dd/yyyy hh:mm:ss:ms NetpProvisionComputerAccount: retry status of creating account: 0x216d
-mm/dd/yyyy hh:mm:ss:ms ldap_unbind status: 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinCreatePackagePart: status:0x216d.
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: Function exits with status of: 0x216d
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: status of disconnecting from '\\<dc_fqdn>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on '<domain_name>' returned 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpJoinDomainOnDs: NetpResetIDNEncoding on '<domain_name>': 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpDoDomainJoin: status: 0x216d
-```
-
-Error 0x216d is logged in one of these conditions:
-
-- The user account trying to join the machine to the domain has exceeded the limit of 10 machines joined to the domain.
-- There is a GPO restriction to block authenticated users from joining a machine to the domain.
-
-Verify that the user account is a member of the group mentioned in the **Add Workstations to domain** policy of the **Default Domain Controller Policy** GPO or the **Winning** GPO.
-
-The GPO setting is located at **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies User Rights Assignment** > **Add workstations to domain**.
-
-To verify the default limit to the number of workstations a user can join to the domain, see [Default limit to number of workstations a user can join to the domain](default-workstation-numbers-join-domain.md).
+For more information, see [Status code 0x216d: Your computer could not be joined to the domain](status-code-0x216d-not-joined-domain.md).
 
 ### Other errors that occur when you join Windows-based computers to a domain
 

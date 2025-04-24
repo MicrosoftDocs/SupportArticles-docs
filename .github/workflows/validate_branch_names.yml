@@ -5,7 +5,7 @@ on:
 
 jobs:
   validate-branch-name:
-    if: startsWith(github.ref, 'refs/heads/')
+    if: github.repository == 'MicrosoftDocs/SupportArticles-docs-pr' && startsWith(github.ref, 'refs/heads/')
     runs-on: windows-latest
     strategy:
       fail-fast: true # Prevent retries on failure
