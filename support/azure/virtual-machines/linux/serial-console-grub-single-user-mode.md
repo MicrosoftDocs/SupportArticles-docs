@@ -22,7 +22,7 @@ ms.author: genli
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
-GRand Unified Bootloader (GRUB) is likely the first thing you see when you boot a virtual machine (VM). Because it's displayed before the operating system has started, GRUB isn't accessible via SSH. In GRUB, you can modify your boot configuration to boot into single-user mode, among other things.
+GRand Unified Bootloader (GRUB) is likely the first thing you see when you boot a virtual machine (VM). When displayed before, the operating system is running, GRUB isn't accessible via SSH. In GRUB, you can modify your boot configuration to boot into single-user mode, among other things.
 
 Single-user mode is a minimal environment with minimal functionality. It can be useful for investigating boot issues, file system issues, or network issues. Fewer services can run in the background and, depending on the runlevel, a file system might not even be automatically mounted.
 
@@ -31,7 +31,7 @@ Single-user mode is also useful in situations where your VM might be configured 
 > [!NOTE]
 > The Serial Console service allows only users with *contributor* level or higher permissions to access the serial console of a VM.
 
-To enter single-user mode, enter GRUB when your VM is booting, and modify the boot configuration in GRUB. See detailed instructions for entering GRUB in the next section. In general, if your VM has been configured to display GRUB, you can use the restart button within your VM's serial console to restart the VM and display GRUB.
+To enter single-user mode, enter GRUB when your VM is booting, and modify the boot configuration in GRUB. See detailed instructions for entering GRUB in the next section. If your VM is setup to display GRUB, you can use the restart button within your VM's serial console to restart the VM and display GRUB.
 
 :::image type="content" source="media/serial-console-grub-single-user-mode/restart-vm-button.png" alt-text="Screenshot of the Restart VM button displayed in the tool bar." border="false":::
 
@@ -51,7 +51,7 @@ You can also restart your VM by running a SysRq "b" command if [SysRq](./serial-
 
 ## General single-user mode access
 
-You might need manual access to single-user mode when you haven't configured an account with password authentication. Modify the GRUB configuration to manually enter single-user mode. After you've done this, see the "Use single-user mode to reset or add a password" section for further instructions.
+You might need manual access to single-user mode when you haven't configured an account with password authentication. Modify the GRUB configuration to manually enter single-user mode. After doing this, see the "Use single-user mode to reset or add a password" section for further instructions.
 
 If the VM is unable to boot, distributions often automatically drop you into single-user mode or emergency mode. Other distributions, however, require additional setup, such as setting up a root password, before they can drop you into single-user or emergency mode automatically.
 
