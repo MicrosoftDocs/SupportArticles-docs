@@ -157,7 +157,7 @@ Or
 DownloadManager [0]12F4.1FE8::09/29/2017-13:45:08.530 [agent]DO job {C6E2F6DC-5B78-4608-B6F1-0678C23614BD} hit a transient error, updateId = 5537BD35-BB74-40B2-A8C3-B696D3C97CBA.201 <NULL>, error = 0x80D0000A 
 ```
 
-Go to **Services.msc** and ensure that the Windows Defender Firewall service is enabled. Stopping the service associated with Windows Firewall with Advanced Security isn't supported by Microsoft. For more information, see [I need to disable Windows Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766337(v=ws.10)).
+Go to **Services.msc** and ensure that the **Windows Defender Firewall** service is enabled. Stopping the service associated with Windows Firewall with Advanced Security isn't supported by Microsoft. For more information, see [I need to disable Windows Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766337(v=ws.10)).
 
 ## Issues arising from configuration of conflicting policies
 
