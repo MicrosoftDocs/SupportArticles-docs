@@ -63,10 +63,6 @@ After you're in single-user mode, add a new user with sudo privileges by doing t
 1. Run `sudo usermod -a -G sudo <username>` to grant the new user root privileges.
 1. Use `passwd <username>` to set the password for the new user. You can then sign in as the new user.
 
-## Access for Red Hat Enterprise Linux (RHEL)
-
-If RHEL can't boot normally, it drops you into single-user mode automatically. However, if you haven't set up root access for single-user mode, you don't have a root password and can't sign in. There is a workaround (see the "Manually enter single-user mode in RHEL" section), but we suggest that you set up root access initially.
-
 ### GRUB access in RHEL
 
 RHEL comes with GRUB enabled out of the box. To enter GRUB, reboot your VM by running `sudo reboot`, and then press any key. The GRUB pane should be displayed. If it isn't, ensure that the following lines are present in your GRUB file (`/etc/default/grub`):
@@ -93,21 +89,9 @@ GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0,115200n8 earlyprintk=ttyS0,115200
 > [!NOTE]
 > Red Hat also provides documentation for booting into Rescue Mode, Emergency Mode, or Debug Mode, and for resetting the root password. For instructions, see [Terminal menu editing during boot](https://aka.ms/rhel7grubterminal).
 
-### Set up root access for single-user mode in RHEL
+### Single-User mode in RHEL 6.9+ and 7.4+
 
-The root user is disabled by default. Single-user mode in RHEL requires the root user to be enabled. If you need to enable single-user mode, use the following instructions:
-
-1. Sign in to the Red Hat system via SSH.
-1. Switch to root.
-1. Enable the password for the root user by doing the following:
-    * Run `passwd root` (set a strong root password).
-1. Ensure that the root user can sign in only via ttyS0 by doing the following:
-    a. Run `vi /etc/ssh/sshd_config`, and ensure that PermitRootLogIn is set to `no`.
-    b. Run `vi /etc/securetty file` to allow sign-in only via ttyS0.
-
-Now, if the system boots into single-user mode, you can sign in with the root password.
-
-Alternatively, for RHEL 7.4+ or 6.9+, to enable single-user mode in the GRUB prompts, see [Booting into single-user mode](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-rescuemode-booting-single).
+For RHEL 7.4+ or 6.9+, to enable single-user mode in the GRUB prompts, see [Booting into single-user mode](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-rescuemode-booting-single).
 
 ### Manually enter single-user mode in RHEL
 
