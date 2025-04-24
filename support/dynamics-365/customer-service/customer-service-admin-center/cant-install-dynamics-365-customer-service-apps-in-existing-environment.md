@@ -32,7 +32,7 @@ This issue occurs due to one or more of the following reasons:
 
 3. Go to **Settings** > **Overview**, and verify whether the environment is listed as **Dataverse-only** or if Dynamics 365 apps are enabled.
 
-4. If the **Enable Dynamics 365 apps** option isn't enabled, that means the database was provisioned as **Dataverse-only** and you won't be able to install Dynamics 365 apps in this environment.
+4. If the **Enable Dynamics 365 apps** option isn't enabled, it means that the database is provisioned as **Dataverse-only** and you can't install Dynamics 365 apps in this environment.
 
 5. In this case, follow these steps to create a new environment with Dynamics 365 apps enabled:
 
