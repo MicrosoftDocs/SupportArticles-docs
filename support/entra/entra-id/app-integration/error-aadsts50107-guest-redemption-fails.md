@@ -3,14 +3,14 @@
 # For more information, see https://learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata
 # For valid values of ms.service, ms.prod, and ms.topic, see https://learn.microsoft.com/en-us/help/platform/metadata-taxonomies
 
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
+title: 'error AADSTS50107 invitation redemption fails '
+description: Error AADSTS50107  When Guest User Attempts to Redeem Invitation via SAML External Trust
 author:      Laks1 # GitHub alias
 ms.author:   laks # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
+ms.service: entra-id
+ms.topic: troubleshooting-problem-resolution
 ms.date:     04/24/2025
+ms.subservice: authentication
 ---
 # Error AADSTS50107 Guest Invitation Redemption fails via SAML external Trust
 
