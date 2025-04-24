@@ -1,7 +1,7 @@
 ---
-title: Status Code 0x6ba And The RPC Server Is Unavailable
+title: Status Code 0x6ba and The RPC Server Is Unavailable
 description: Provides troubleshooting steps for resolving the remote procedure call (RPC) status code 0x6ba when you join a workgroup computer to a domain.
-ms.date: 04/23/2025
+ms.date: 04/24/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -53,7 +53,7 @@ To troubleshoot this issue, use the following steps:
     NetpGetComputerObjectDn: Unable to bind to DS on '\\DCNAME': 0x6ba
     ```
 
-2. Make sure the network ports aren't blocked by a firewall or third-party application which is listening on the required ports of the DC (identified in step 1).
+2. Make sure the network ports aren't blocked by a firewall or third-party application that is listening on the required ports of the DC (identified in step 1).
 
     The endpoint mapper (listening on port 135) tells the client which randomly assigned port a service is listening on. Check the following ports:
 
