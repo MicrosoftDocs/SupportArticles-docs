@@ -138,7 +138,7 @@ sections:
       - question: |
           My custom container takes a long time to start, and the platform restarts the container before it finishes starting up.
         answer: |
-          You can configure the amount of time the platform waits before restartting the container. To do so, set the `WEBSITES_CONTAINER_START_TIME_LIMIT` app setting to the value you want. The default value is 230 seconds, and the maximum value is 1800 seconds.
+          You can configure the amount of time the platform waits before restarting the container. To do so, set the `WEBSITES_CONTAINER_START_TIME_LIMIT` app setting to the value you want. The default value is 230 seconds, and the maximum value is 1800 seconds.
       - question: |
           What is the format for the private registry server URL?
         answer: |
