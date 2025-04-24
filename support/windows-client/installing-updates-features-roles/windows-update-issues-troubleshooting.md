@@ -139,6 +139,8 @@ The most common reasons for this error are described in the following table:
 
 ## Error 0x800706D9 if the Windows Defender Firewall service is disabled
 
+You observe that the download for updates is stuck at 0%, especially in Windows Server 2016, where the Background Intelligent Transfer Service (BITS) service is the default Download Manager.
+
 Error that you might see in Windows Update logs:
 
 ```output
