@@ -127,4 +127,9 @@ For more information about how to configure your computer to generate a dump fil
 
 ## Maximum paging file size
 
+> [!NOTE]
+> On WS2025, you may see inaccurate free disk space due to the 32-bit integer overflow. You can use the PowerShell command to see the accurate number.
+> This may further block the ability to set the desired paging file size. As the workaround, you can set the pagefile by registry key `HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PagingFiles`.
+
+
 For more information, see [How to determine the appropriate page file size for 64-bit versions of Windows](../../windows-client/performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows.md).
