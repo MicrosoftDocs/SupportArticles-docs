@@ -1,11 +1,11 @@
 ---
 title: Error AADSTS50020 - User account from identity provider does not exist in tenant
-description: Troubleshoot scenarios in which a guest user unsuccessfully tries to sign in to the resource tenant and error code AADSTS50020 is returned.
+description: Troubleshoot scenarios in which a guest user unsuccessfully tries to sign in to the resource tenant and error code AADSTS50020 is returned
 ms.date: 11/23/2023
 ms.editor: v-jsitser
 ms.reviewer: rrajan, haelshab, sungow, v-leedennis
 ms.service: entra-id
-ms.custom: sap:Issues Signing In to Applications, has-azure-ad-ps-ref
+ms.custom: sap:Issues Signing In to Applications, no-azure-ad-ps-ref
 keywords: AADSTS50020
 #Customer intent: As a Microsoft Entra administrator, I want to figure out why error code AADSTS50020 occurs so that I can make sure that my guest users from an identity provider can sign in to a resource tenant.
 ---
