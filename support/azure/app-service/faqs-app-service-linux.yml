@@ -258,9 +258,9 @@ sections:
           
           To make sure that the port is correctly configured on Azure App Services, see the question, *How do I specify the port in my Linux container?*
       - question: |
-          Is it possible to increase the container warmup request timeout?
+          Is it possible to increase the container warmup request time-out?
         answer:
-          The warmup request by default fails after waiting 240 seconds for a reply from the container. You may increase the container warmup request timeout by adding the application setting `WEBSITES_CONTAINER_START_TIME_LIMIT` with a value between 240 and 1800 seconds.
+          The warmup request by default fails after waiting 240 seconds for a reply from the container. You may increase the container warmup request time-out by adding the application setting `WEBSITES_CONTAINER_START_TIME_LIMIT` with a value between 240 and 1800 seconds.
       - question: |    
           How do I specify the port in my Linux container?
         answer: |
