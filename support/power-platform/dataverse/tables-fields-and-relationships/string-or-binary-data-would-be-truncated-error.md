@@ -5,8 +5,8 @@ author: Yerragovula
 ms.author: srreddy
 ms.reviewer: courtser
 ai-usage: ai-assisted
-ms.date: 04/18/2025
-ms.custom: sap:Other, DFM
+ms.date: 04/24/2025
+ms.custom: sap:Tables, Fields and Relationships, DFM
 ---
 # "String or binary data would be truncated" error when deleting records from a custom table
 

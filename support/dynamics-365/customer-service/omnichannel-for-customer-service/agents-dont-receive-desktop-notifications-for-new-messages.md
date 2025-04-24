@@ -5,7 +5,7 @@ author: Yerragovula
 ms.author: srreddy
 ms.reviewer: courtser
 ai-usage: ai-assisted
-ms.date: 04/21/2025
+ms.date: 04/24/2025
 ms.custom: sap:Live chat Widget (LCW), DFM
 ---
 # Agents don't receive desktop notifications for new session messages when the browser isn't active
@@ -18,11 +18,11 @@ Agents don't receive [notifications](/dynamics365/customer-service/administer/no
 
 ## Cause
 
-This issue occurs because the system is configured to use default notification templates, which don't support desktop notifications when the application isn't actively in use.
+This is the expected behavior when the system is configured to use default notification templates, which don't support desktop notifications when the application isn't actively in use.
 
 ## Resolution
 
-To resolve this issue and enable desktop notifications for agents when the browser isn't active, follow these steps:
+To enable desktop notifications for agents when the browser isn't active, follow these steps:
 
 1. Create a new notification template:
 

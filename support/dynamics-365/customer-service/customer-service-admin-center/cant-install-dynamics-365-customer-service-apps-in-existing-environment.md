@@ -5,7 +5,7 @@ ms.reviewer: ghoshsoham
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 04/21/2025
+ms.date: 04/24/2025
 ms.custom: sap:Core Service Scheduling, DFM
 ---
 # Can't install Dynamics 365 Customer Service applications in an existing Power Platform environment
@@ -27,8 +27,24 @@ This issue occurs due to one or more of the following reasons:
 ### Resolution
 
 1. Navigate to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+
 2. Select the environment where you are trying to install the applications.
+
 3. Go to **Settings** > **Overview**, and verify whether the environment is listed as **Dataverse-only** or if Dynamics 365 apps are enabled.
+
+4. If the **Enable Dynamics 365 apps** option isn't enabled, that means the database was provisioned as **Dataverse-only** and you won't be able to install Dynamics 365 apps in this environment.
+
+5. In this case, follow these steps to create a new environment with Dynamics 365 apps enabled:
+
+   1. Navigate to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+   2. Select **+ New environment**.
+   3. Provide a name and select a region for the new environment.
+   4. Under **Type**, select **Production** or **Sandbox** as required.
+   5. Enable Dataverse by selecting the appropriate box.
+   6. Enable Dynamics 365 apps by selecting the **Enable Dynamics 365 apps** checkbox.
+   7. Select **Save** and wait for the provisioning process to complete.
+
+Once the environment is successfully set up, the [Customer Service Hub](/dynamics365/customer-service/implement/customer-service-hub-user-guide-basics) and Copilot Service admin center applications are available in the app list for users with the appropriate licenses.
 
 ## Cause 2: Missing or incorrect licensing
 
@@ -39,6 +55,7 @@ Users trying to install or access Dynamics 365 applications must have the [appro
 1. Go to the [Microsoft 365 admin center](https://admin.microsoft.com/).
 2. Select **Users** > **Active users**.
 3. Locate and select the user who needs access to the Customer Service applications.
+
 4. Select **Licenses and apps**, and ensure the user has one of the following licenses assigned:
 
     - Customer Service Professional
@@ -48,17 +65,5 @@ Users trying to install or access Dynamics 365 applications must have the [appro
 5. Save the changes.
 
 ## More information
-
-If the current environment isn't configured to support Dynamics 365 applications, follow these steps to create a new environment:
-
-1. Navigate to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
-2. Select **+ New environment**.
-3. Provide a name and select a region for the new environment.
-4. Under **Type**, select **Production** or **Sandbox** as required.
-5. Enable Dataverse by selecting the appropriate box.
-6. Enable Dynamics 365 apps by selecting the **Enable Dynamics 365 apps** checkbox.
-7. Select **Save** and wait for the provisioning process to complete.
-
-Once the environment is successfully set up, the [Customer Service Hub](/dynamics365/customer-service/implement/customer-service-hub-user-guide-basics) and Copilot Service admin center applications are available in the app list for users with the appropriate licenses.
 
 For more detailed guidance on creating and managing environments, see [Create and manage environments in the Power Platform admin center](/power-platform/admin/create-environment).

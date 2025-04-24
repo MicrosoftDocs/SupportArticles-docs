@@ -5,19 +5,19 @@ ms.reviewer: ghoshsoham
 author: Yerragovula
 ms.author: srreddy
 ai-usage: ai-assisted
-ms.date: 04/21/2025
+ms.date: 04/24/2025
 ms.custom: sap:Core Service Scheduling, DFM
 ---
 # Book button isn't available for service activity and Unscheduled Service Activities doesn't show service activities
 
-This article provides guidance on resolving the issue where the **Book** button isn't available for service activities, and service activities don't appear under the **Unscheduled Service Activities** view in the [schedule board](/dynamics365/customer-service/use/use-schedule-board-configure-service-activity)  in Dynamics 365 Customer Service.
+This article provides guidance on resolving the issue where the **Book** button isn't available for service activities, and service activities don't appear under the **Unscheduled Service Activities** view in the schedule board in Dynamics 365 Customer Service.
 
 ## Symptoms
 
 You might encounter the following issues in Dynamics 365 Customer Service:
 
-- The **Book** button is missing for service activities.
-- Service activities aren't visible under the **Unscheduled Service Activities** view in the schedule board.
+- The **Book** button is missing for [service activities](/dynamics365/customer-service/use/schedule-service-activity-csh).
+- Service activities aren't visible under the **Unscheduled Service Activities** view in the [schedule board](/dynamics365/customer-service/use/use-schedule-board-configure-service-activity).
 
 ## Cause
 

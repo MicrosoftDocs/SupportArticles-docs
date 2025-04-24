@@ -5,16 +5,16 @@ author: Yerragovula
 ms.author: srreddy
 ms.reviewer: courtser
 ai-usage: ai-assisted
-ms.date: 04/21/2025
+ms.date: 04/24/2025
 ms.custom: sap:Queues, DFM
 ---
 # Queue email address isn't resolved correctly in Dynamics 365
 
-This article addresses an issue where emails sent to a queue show the queue email address as unresolved or unrecognized in the **To** field in Dynamics 365.
+This article addresses an issue in Dynamics 365 where emails sent to a queue show the queue email address as unresolved or unrecognized in the **To** field.
 
 ## Symptoms
 
-When emails are sent to a [queue](/dynamics365/customer-service/administer/set-up-queues-manage-activities-cases) in Dynamics 365, the queue email address appears as unresolved or unrecognized in the **To** field within Dynamics 365. However, the system still processes the email and generates cases as expected.
+When emails are sent to a [queue](/dynamics365/customer-service/administer/set-up-queues-manage-activities-cases) in Dynamics 365, the queue email address appears as unresolved or unrecognized in the **To** field. However, the system still processes the email and generates cases as expected.
 
 ## Cause
 
@@ -35,15 +35,17 @@ To resolve this issue, follow these steps:
 
    1. Change the email addresses on duplicate records to ensure each email address is unique across all records.
 
-   2. After updating the email addresses, verify the query results to ensure duplicates no longer appear.
+   2. After updating the email addresses, re-run the query and verify that duplicates no longer appear in the query result.
 
       If duplicates persist in the query results, there might be a delay in the email search table refresh. Currently, there's no method to force an immediate refresh of the email search table.
 
 3. Adjust Dynamics 365 system settings:
 
-    1. Navigate to **Advanced Settings** > **Settings** > **Administration** > **Email** in Dynamics 365.
-    2. Locate the **Set To, cc, bcc fields as unresolved values if multiple matches are found in Incoming Emails** setting.
-    3. Set the setting to **No** to ensure the system correctly resolves email addresses when there's only one matching record.
+   1. Navigate to **Advanced Settings** > **Settings** > **Administration** > **Email** in Dynamics 365.
+
+   2. Locate the **Set To, cc, bcc fields as unresolved values if multiple matches are found in Incoming Emails** setting.
+
+   3. Set the setting to **No** to ensure the system correctly resolves email addresses when there's only one matching record.
 
    > [!IMPORTANT]
    > If the setting is set to **Yes**, the system doesn't resolve email addresses that have multiple matches. These email addresses appear marked in red, requiring you to manually resolve them to a specific record.
