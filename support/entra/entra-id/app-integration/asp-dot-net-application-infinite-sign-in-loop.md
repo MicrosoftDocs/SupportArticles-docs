@@ -1,7 +1,7 @@
 ---
 title: Infinite sign-in loop between ASP.NET application and Microsoft Entra ID
 description: Helps you resolve an infinite sign-in loop issue between an ASP.NET application and with Microsoft Entra ID when performing sign in.
-ms.date: 04/14/2025
+ms.date: 04/23/2025
 ms.author: bachoang
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
