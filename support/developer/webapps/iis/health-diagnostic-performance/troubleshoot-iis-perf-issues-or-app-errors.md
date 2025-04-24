@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot IIS performance issues or application errors using LogParser
 description: Describes the troubleshooting steps to identify performance issues by using Microsoft LogParser to analyze IIS logs.
-ms.date: 12/18/2012
+ms.date: 04/17/2025
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande, benperk
@@ -22,17 +22,17 @@ This article describes the troubleshooting steps to identify performance issues 
 
 ## Overview
 
-This article helps you analyze IIS log files in an effort to determine the cause when an application that is hosted on IIS is failing or experiencing performance issues. Before you start, it's important to note that all the fields IIS can log are not enabled by default. For example, **Bytes Sent** and **Bytes Received** are not enabled by default, but they are very useful when troubleshooting a performance problem. Therefore, the best time to include these additional fields is before you are experiencing system problems. So, make sure that you have enabled these additional fields. They will help you find solutions when problems happen. For more information about how to enable these fields, see [Modifying IIS 7 log data in Windows 2008](https://www.thebestcsharpprogrammerintheworld.com/2012/05/25/modifying-iis-7-log-data-in-windows-2008/).
+This article helps you analyze IIS log files in an effort to determine the cause when an application that is hosted on IIS is failing or experiencing performance issues. Before you start, it's important to note that all the fields IIS can log aren't enabled by default. For example, **Bytes Sent** and **Bytes Received** aren't enabled by default, but they're very useful when troubleshooting a performance problem. Therefore, the best time to include these additional fields is before you're experiencing system problems. So, make sure that you have enabled these additional fields. They'll help you find solutions when problems happen. For more information about how to enable these fields, see [Modifying IIS 7 log data in Windows 2008](https://www.thebestcsharpprogrammerintheworld.com/2012/05/25/modifying-iis-7-log-data-in-windows-2008/).
 
 ## Scenario
 
-As a system administrator you begin to hear reports from users of your system hosted on IIS that the responses are slow. Some of them mention that Web browsers simply time out or stop responding completely when they are accessing your website.
+As a system administrator you begin to hear reports from users of your system hosted on IIS that the responses are slow. Some of them mention that Web browsers simply time out or stop responding completely when they're accessing your website.
 
 You jump into action and recycle the worker process. All appears to be working again, as normal.
 
-However, you can't accept that as a solution and need to know why it happened, but don't know where to start. You have no details from the users, such as error codes, screen shots and worse, you have no performance data to compare what just happened to normal performance. In many cases, other new issues take you away from any serious root cause analysis.
+However, you can't accept that as a solution and need to know why it happened, but don't know where to start. You have no details from the users, such as error codes, screenshots and worse, you have no performance data to compare what just happened to normal performance. In many cases, other new issues take you away from any serious root cause analysis.
 
-Microsoft LogParser is a good tool that is quick and easy to use. In many situations, the tool will help you quickly get to a deeper understanding of what happened on the server and may help you identify problems. You can take the information you gather with LogParser and pass it along to your database team, your network team or to your developers for more analysis.
+Microsoft LogParser is a good tool that is quick and easy to use. In many situations, the tool helps you quickly get to a deeper understanding of what happened on the server and may help you identify problems. You can take the information you gather with LogParser and pass it along to your database team, your network team or to your developers for more analysis.
 
 ## Data collection
 
@@ -41,7 +41,7 @@ By default, IIS log files are located in the following directories:
 - IIS 7 and later: _%SystemDrive%\inetpub\logs\LogFiles_
 - IIS 6 and earlier: _%WinDir%\System32\LogFiles_
 
-In this troubleshooter, I will be using IIS 8. Open IIS Manager and select **Sites**, as shown in _Figure 1_. This will show you the ID of each website hosted on your server. You will need this ID to determine which _W3SVC\*_ directory to analyze.
+In this troubleshooter, I'll be using IIS 8. Open IIS Manager and select **Sites**, as shown in _Figure 1_. This shows you the ID of each website hosted on your server. You need this ID to determine which _W3SVC\*_ directory to analyze.
 
 :::image type="content" source="media/troubleshoot-iis-perf-issues-or-app-errors/iis-manager-sites-main-pane.png" alt-text="Screenshot of the I I S Manager window showing Sites in the main pane.":::  
 **Figure 1: Getting the ID of your website**
@@ -51,7 +51,7 @@ Open Windows Explorer and navigate to the directory that contains the IIS log fi
 :::image type="content" source="media/troubleshoot-iis-perf-issues-or-app-errors/windows-explorer-file-location.png" alt-text="Screenshot of Windows Explorer showing file locations.":::  
 **Figure 2: IIS Log file location**
 
-IIS log files can be quite large; for example, in _Figure 2_, the log file _u\_ex12101858.log_ is nearly 100MB in size. Because these log files may be huge and contain hundreds of thousands of individual log file entries, manually looking through each of these files for an error is not a good approach, and returns few results for the time that you invest.
+IIS log files can be quite large; for example, in _Figure 2_, the log file _u\_ex12101858.log_ is nearly 100MB in size. Because these log files may be huge and contain hundreds of thousands of individual log file entries, manually looking through each of these files for an error isn't a good approach, and returns few results for the time that you invest.
 
 This is when LogParser becomes an indispensable tool in your troubleshooting arsenal.
 
@@ -61,25 +61,25 @@ Your first step is to determine which log files may contain errors. For example,
 
 - `12` is the abbreviated year for 2012
 - `06` refers to the sixth month (June)
-- `03` is the 3rd day of the month
+- `03` is the third day of the month
 
 Note: The above example assumes that IIS logging is configured to rotate log files on a daily basis, which is the default. If you have changed the settings for IIS to rotate log files on a different time interval, such as weekly or hourly, then the log files names would be different. For more information about the syntax for IIS log file names, see [IIS Log File Formats](/previous-versions/iis/6.0-sdk/ms525807(v=vs.90)).
 
 > [!NOTE]
-> By default, the date and time in IIS logs are stored using GMT; you will need to take this into account when you are determining which logs contain errors. That being said, you can adjust the dates/times by using LogParser's `TO_LOCALTIME()` function, as illustrated in the following example:
+> By default, the date and time in IIS logs are stored using GMT; you'll need to take this into account when you're determining which logs contain errors. That being said, you can adjust the dates/times by using LogParser's `TO_LOCALTIME()` function, as illustrated in the following example:
 >
 > ```cmd
 > logparser.exe "SELECT TO_STRING(TO_LOCALTIME(TO_TIMESTAMP(date,time)),'yyyy-MM-dd hh:mm:ss') AS LocalTime, COUNT(*) AS Hits FROM *.log WHERE date='2012-10-18' GROUP BY LocalTime ORDER BY LocalTime" -i:w3c
 > ```
 
-Once you have identified the IIS log files that contain errors, you should copy them to a location where they can be analyzed. This step is optional, but it is not recommended that you analyze your logs on your IIS server since your LogParser queries may take a long time to run, and if your log files are large then Log Parser may compete for system resources.
+Once you have identified the IIS log files that contain errors, you should copy them to a location where they can be analyzed. This step is optional, but it isn't recommended that you analyze your logs on your IIS server since your LogParser queries may take a long time to run, and if your log files are large then Log Parser may compete for system resources.
 
 For example, you might copy your IIS logs to a folder on your personal computer where you have already copied the LogParser files, which is how I typically analyze my log files. _Figure 3_ shows an example of where I stored them to create this article.
 
 :::image type="content" source="media/troubleshoot-iis-perf-issues-or-app-errors/location-of-logparser-executable.png" alt-text="Screenshot of Windows Explorer showing the location of the log parser executable.":::  
 **Figure 3: IIS Logs files locally hosted for analysis using LogParser**
 
-After you have downloaded LogParser, you are ready to begin the analysis. The first query I run is shown in _Figure 4_. The results give you an overview of how IIS has been responding to the requests.
+After you have downloaded LogParser, you're ready to begin the analysis. The first query I run is shown in _Figure 4_. The results give you an overview of how IIS has been responding to the requests.
 
 ```console
 logparser.exe "SELECT sc-status, sc-substatus, COUNT(*) FROM *.log GROUP BY sc-status, sc-substatus ORDER BY sc-status" -i:w3c
@@ -205,7 +205,7 @@ Execution time:     6.36 seconds
 
 **Figure 7: LogParser Query (MAX and AVG _time-taken_)**
 
-I know you are asking yourself already the next question that needs to be answered. Which request is taking so much time? _Figure 8_ shows the answer to that question. As you will notice, I have gone ahead and included the sc-bytes field in the LogParser query. Remember, sc-bytes represents the size of the file sent from the server back to the client.
+I know you're asking yourself already the next question that needs to be answered. Which request is taking so much time? _Figure 8_ shows the answer to that question. As you will notice, I have gone ahead and included the sc-bytes field in the LogParser query. Remember, sc-bytes represents the size of the file sent from the server back to the client.
 
 ```console
 logparser.exe "SELECT cs-uri-stem, time-taken, sc-bytes FROM *.log WHERE time-taken > 250000 ORDER BY time-taken DESC" -i:w3c
@@ -233,14 +233,14 @@ We would likely all agree that the time-taken for the requests exceeds a normal 
 
 The conclusion is that the _GetDetailsView.aspx_ file has been throwing a number of 500 HTTP Status codes and has at some point taken a long time to complete, even though it was a relatively small file. You may want to look at the date and time when problems where occurring for this file, and examine the code in the file with any issues that occurred. (For example, the IIS logs contain a list of variables that were passed in the query string; you could check those values for bad data.)
 
-The examples provided in figures 4 - 8 help gain an understanding around where the root cause of an issue may exist. It is likely, however, that this analysis has only rendered a better view of the situation which will lead to more questions and deeper analysis. If that's the case you may want to create a representation of this data in a more presentable manner. The following section covers this in detail.
+The examples provided in figures 4 - 8 help gain an understanding around where the root cause of an issue may exist. It's likely, however, that this analysis has only rendered a better view of the situation which will lead to more questions and deeper analysis. If that's the case you may want to create a representation of this data in a more presentable manner. The following section covers this in detail.
 
 ## Reporting
 
 Screenshots of a command window containing LogParser queries and their results may be fine during the analysis phase of a performance problem; however, if you need to go in front of managers or directors to explain what happened, it may not meet the mark.
 
 > [!NOTE]
-> In order to get charting to work via LogParser, you will need to install the Office Web Components. The following articles explain how to do this:
+> In order to get charting to work via LogParser, you'll need to install the Office Web Components. The following articles explain how to do this:
 >
 > - [Advanced Log Parser Charts Part 3 - Missing Office Web Components for Charting](https://iis-blogs.azurewebsites.net/robert_mcmurray/advanced-log-parser-charts-part-3-missing-office-web-components-for-charting)
 > - [Charting with LogParser](https://www.cloudnotes.io/charting-with-logparser/)
@@ -261,7 +261,7 @@ Execution time:     6.20 seconds
 
 **Figure 9: LogParser Query (Create a 3D pie chart)**
 
-The result of the query is illustrated in _Figure 10_. There are a number of additional parameters which you can pass to LogParser that affect the image. For example, legend, groupSize, config, etc... To get a complete list enter: `LogParser -h -o:CHART` for a list of all parameters. This command will also provide a list of the different chart types.
+The result of the query is illustrated in _Figure 10_. There are many additional parameters which you can pass to LogParser that affect the image. For example, legend, groupSize, config, etc. To get a complete list enter: `LogParser -h -o:CHART` for a list of all parameters. This command will also provide a list of the different chart types.
 
 :::image type="content" source="media/troubleshoot-iis-perf-issues-or-app-errors/pie-chart-request-status-allocations.png" alt-text="Diagram of a three-dimensional pie chart showing request status allocations.":::  
 **Figure 10: LogParser 3D pie chart**
@@ -287,7 +287,7 @@ Although the difference between HTTP Status code 200 and 304 are clearly visible
 :::image type="content" source="media/troubleshoot-iis-perf-issues-or-app-errors/pie-chart-cache-allocation.png" alt-text="Diagram of a three-dimensional pie chart showing the allocation of cache.":::  
 **Figure 12: LogParser 3D pie chart**
 
-I think you are getting the picture now about how charting the IIS Logs using LogParser can help convey what is happening much better than a table of data. But before I stop, I want to show you one more example using the Column chart type. The LogParser query shown in _Figure 13_ produces a 3D Column chart showing the count of 500 HTTPS Status codes per hour.
+I think you're getting the picture now about how charting the IIS Logs using LogParser can help convey what is happening much better than a table of data. But before I stop, I want to show you one more example using the Column chart type. The LogParser query shown in _Figure 13_ produces a 3D Column chart showing the count of 500 HTTPS Status codes per hour.
 
 ```console
 logparser.exe "SELECT to_string(to_timestamp(date, time), 'yyyy-MM-dd hh') AS Hour, COUNT(*) AS Count INTO 500.gif FROM *.log WHERE sc-status=500 GROUP BY Hour ORDER BY Hour" -i:w3c -o:CHART -chartType:Column3D -ChartTitle:"500 Errors by Hour"
@@ -312,7 +312,7 @@ The resulting chart is illustrated in _Figure 14_.
 
 At the beginning of this section I mentioned that the installation of the Office Web Component (OWC) is a requirement if you want to use the LogParser charting capabilities. In your organization, there may be restrictions that prohibit this or you simply might not want to install it. If either is the case, then consider exporting the LogParser query result to a CSV file and import it into Excel.
 
-_Figure 15_ shows the LogParser query that extracts the HTTP Status codes for all request which are not 200 to a CSV file.
+_Figure 15_ shows the LogParser query that extracts the HTTP Status codes for all request which aren't 200 to a CSV file.
 
 ```console
 logparser.exe "SELECT sc-status AS Status, COUNT(*) AS Count INTO status.csv FROM *.log WHERE sc-status > 200 GROUP BY Status ORDER BY Status" -i:w3c -o:csv
@@ -335,27 +335,27 @@ To import the CSV file into Excel so that a chart can be created from it, open E
 :::image type="content" source="media/troubleshoot-iis-perf-issues-or-app-errors/excel-data-tab.png" alt-text="Screenshot showing the Excel Data tab menu options.":::  
 **Figure 16: Import CSV file created by LogParser into Excel**
 
-Select the _status.csv_ file created by the LogParser query and navigate through the import wizard. Import the comma-delimited CSV file and you will end up with the Status in column A and the number of occurrences for each status in column B. This assumes you executed the LogParser query shown in _Figure 15_. Lastly, select all the data from column A and B, including the headers and choose the type of Pie chart to create. _Figure 17_, illustrates how this may look.
+Select the _status.csv_ file created by the LogParser query and navigate through the import wizard. Import the comma-delimited CSV file and you'll end up with the Status in column A and the number of occurrences for each status in column B. This assumes you executed the LogParser query shown in _Figure 15_. Lastly, select all the data from column A and B, including the headers and choose the type of Pie chart to create. _Figure 17_, illustrates how this may look.
 
 :::image type="content" source="media/troubleshoot-iis-perf-issues-or-app-errors/excel-insert-tab.png" alt-text="Screenshot showing the Excel Insert tab options. The data in columns A and B are selected.":::  
 **Figure 17: Create a Pie chart using a CSV file**
 
-The end result is a Pie chart, _Figure 18_ that is similar to that shown previously in _Figure 10_. There are many options in regards to color, chart type, labels, etc. With a click of a button you can change the chart type from Pie to Bar or to Line. There are a lot of options for creating professional looking charts within Excel.
+The end result is a Pie chart, _Figure 18_ that is similar to that shown previously in _Figure 10_. There are many options in regards to color, chart type, labels, etc. With a select of a button you can change the chart type from Pie to Bar or to Line. There are a lot of options for creating professional looking charts within Excel.
 
 :::image type="content" source="media/troubleshoot-iis-perf-issues-or-app-errors/pie-chart-request-status.png" alt-text="Screenshot of a three-dimensional pie chart showing request status.":::  
 **Figure 18: A Pie chart using a CSV file similar to Figure 10**
 
-There are so many options and possibilities for analyzing and presenting the results of that analysis using LogParser. For some additional tips and examples, check out the [blogs about LogParser](https://iis-blogs.azurewebsites.net/robert_mcmurray/Tags/LogParser) written by Robert McMurray. There is also a very useful help file and many pre-written scripts provided within the installation package of LogParser. The next section will discuss this and other topics in more detail.
+There are so many options and possibilities for analyzing and presenting the results of that analysis using LogParser. For some additional tips and examples, check out the [blogs about LogParser](https://iis-blogs.azurewebsites.net/robert_mcmurray/Tags/LogParser) written by Robert McMurray. There's also a very useful help file and many pre-written scripts provided within the installation package of LogParser. The next section will discuss this and other topics in more detail.
 
 ## Help
 
 When you install LogParser 2.2 on your machine, it installs into the _C:\Program Files (x86)\Log Parser 2.2_ directory by default. Navigate to that location and review the _Samples\Queries_ and _Samples\Scripts_ directories for an abundant supply of pre-written code that will get you moving fast.
 
-You will also realize a great benefit by reading through the contents within the _LogParser.chm_ file.
+You'll also realize a great benefit by reading through the contents within the _LogParser.chm_ file.
 
 ### Reducing the size of or splitting IIS log files
 
-You may encounter a situation where the IIS log file is too big for LogParser to query. This is most likely on a 32-bit machine, but can happen on a 64-bit machine too. Nonetheless, if you experience "out of memory" errors when running a LogParser query, consider executing the command shown in _Figure 19_. The query extracts some essential fields from a large IIS log file and places them into another, which results in a smaller log file.
+You may encounter a situation where the IIS log file is too large for LogParser to query. This is most likely on a 32-bit machine, but can happen on a 64-bit machine too. Nonetheless, if you experience "out of memory" errors when running a LogParser query, consider executing the command shown in _Figure 19_. The query extracts some essential fields from a large IIS log file and places them into another, which results in a smaller log file.
 
 ```console
 logparser.exe "SELECT date, time, c-ip, cs-uri-stem, cs-uri-query, sc-status, sc-substatus, sc-win32-status, sc-bytes, cs-bytes, time-taken INTO u_exJUSTRIGHT.log FROM u_exTOOBIG.log" -i:w3c -o:w3c
@@ -387,10 +387,10 @@ Execution time:     0.45 seconds
 
 **Figure 20: Further reducing the size of an IIS log file by adding a WHERE clause**
 
-This is a valuable technique for reducing the file size, but it is also useful to remove unwanted entries from the IIS Log. For example, when beginning to troubleshoot an issue you realize that `time-take`, `sc-bytes` and `cs-bytes` were not being logged. You enabled them in IIS and want the query to only analyze those entries with the recently enabled fields. Use the where statement to extract the data from the IIS log file from the time in which those fields have been enabled. This is important when you use the `AVG`, `MIN` and `MAX` aggregates.
+This is a valuable technique for reducing the file size, but it's also useful to remove unwanted entries from the IIS Log. For example, when beginning to troubleshoot an issue you realize that `time-take`, `sc-bytes` and `cs-bytes` weren't being logged. You enabled them in IIS and want the query to only analyze those entries with the recently enabled fields. Use the where statement to extract the data from the IIS log file from the time in which those fields have been enabled. This is important when you use the `AVG`, `MIN` and `MAX` aggregates.
 
 ## Conclusion
 
-LogParser is a small but powerful tool to analyze a number of different system log types. This article focused on queries applicable to IIS Logs. When performance problems or errors are experienced in your IIS environment, it is sometimes difficult to know where to start.
+LogParser is a small but powerful tool to analyze many different system log types. This article focused on queries applicable to IIS Logs. When performance problems or errors are experienced in your IIS environment, it's sometimes difficult to know where to start.
 
 LogParser can be used as a starting point, because a system administrator who has some SQL skills can quickly build some very sophisticated LogParser queries. These queries can be used to further the root cause analysis of the problem.
