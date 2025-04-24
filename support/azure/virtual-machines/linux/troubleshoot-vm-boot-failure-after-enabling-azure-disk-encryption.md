@@ -3,7 +3,7 @@ title: Troubleshoot Linux VM boot failure after enabling Azure Disk Encryption
 description: Provides troubleshooting steps to an issue where an Azure Linux virtual machine fails to boot after deploying Azure Disk Encryption fails.
 ms.date: 04/24/2025
 ms.service: azure-virtual-machines
-ms.custom: linux-related-content
+ms.custom: sap:Azure Disk Encryption (ADE) for Linux, linux-related-content
 ms.reviewer: divargas, elcorral, v-weizhu
 ---
 # Troubleshoot Linux VM boot failure after enabling Azure Disk Encryption
