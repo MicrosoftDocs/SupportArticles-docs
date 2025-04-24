@@ -3,7 +3,7 @@ title: Session creation error codes in unattended desktop flow runs
 description: Solves error codes related to session creation during unattended desktop flow runs in Power Automate.
 author: johndund 
 ms.author: johndund 
-ms.date: 02/11/2025
+ms.date: 04/24/2025
 ms.reviewer: madiazor, guco, fredg 
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
@@ -36,7 +36,7 @@ You can find the full list of credential providers (many of which are built-in) 
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers`
 
-Each subkey represents an installed credential provider. The following table lists the credential providers that Power Automate currently doesn't support. If you have the following registry key, work with your system administrator to uninstall the corresponding software.
+Each subkey represents an installed credential provider. The following table lists the credential providers that Power Automate currently doesn't support. If you have any of the following subkeys, work with your system administrator to uninstall the corresponding software.
 
 | Name | Subkey name |
 | :------------------------ | ---------------- |
