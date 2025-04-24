@@ -116,7 +116,7 @@ sections:
       - question: |
           I'm using my own custom container. I want the platform to mount an SMB share to the `/home/` directory.
         answer: |
-          If `WEBSITES_ENABLE_APP_SERVICE_STORAGE` setting is **unspecified** or set to *false*, the `/home/` directory **will not be shared** across scale instances, and files written **will not persist** across restarts. Explicitly setting `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to *true* will enable the mount. Once this is set to true, if you wish to disable the mount, you need to explicitly set `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to *false*.
+          If `WEBSITES_ENABLE_APP_SERVICE_STORAGE` setting is **unspecified** or set to *false*, the `/home/` directory **won't be shared** across scale instances, and files written **won't persist** across restarts. Explicitly setting `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to *true* enables the mount. Once this is set to true, if you wish to disable the mount, you need to explicitly set `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to *false*.
 
       - question: |
           My container fails to start with "no space left on device". What does this error mean?
@@ -130,7 +130,7 @@ sections:
           
           If the container's writable layer saves data outside of the `/home` directory or a [mounted azure storage path](/azure/app-service/configure-connect-to-azure-storage?tabs=portal&pivots=container-linux), the host disk space will also be consumed.
           
-          The platform routinely cleans the host disk space to remove unused containers. If the container writes a large quantity of data outside of the `/home` directory or Bring Your Own Storage (BYOS), it will result in startup failures or runtime exceptions once the host disk space limit is exceeded.
+          The platform routinely cleans the host disk space to remove unused containers. If the container writes a large quantity of data outside of the `/home` directory or Bring Your Own Storage (BYOS), it results in startup failures or runtime exceptions once the host disk space limit is exceeded.
           
           We recommend that you keep your container images as small as possible and write data to the persistent storage or BYOS when running on Linux App Service. If not possible, you have to split the App Service plan because the host disk space is fixed and shared between all containers in the App Service Plan.
 
@@ -138,7 +138,7 @@ sections:
       - question: |
           My custom container takes a long time to start, and the platform restarts the container before it finishes starting up.
         answer: |
-          You can configure the amount of time the platform will wait before it restarts your container. To do so, set the `WEBSITES_CONTAINER_START_TIME_LIMIT` app setting to the value you want. The default value is 230 seconds, and the maximum value is 1800 seconds.
+          You can configure the amount of time the platform waits before restartting the container. To do so, set the `WEBSITES_CONTAINER_START_TIME_LIMIT` app setting to the value you want. The default value is 230 seconds, and the maximum value is 1800 seconds.
       - question: |
           What is the format for the private registry server URL?
         answer: |
@@ -181,7 +181,7 @@ sections:
       - question: |
           How do I configure Azure Container Registry (ACR) to use with multi-container?
         answer: |
-          In order to use ACR with multi-container, **all container images** need to be hosted on the same ACR registry server. Once they are on the same registry server, you will need to create application settings and then update the Docker Compose configuration file to include the ACR image name.
+          In order to use ACR with multi-container, **all container images** need to be hosted on the same ACR registry server. Once they are on the same registry server, you'll need to create application settings and then update the Docker Compose configuration file to include the ACR image name.
           
           Create the following application settings:
           
