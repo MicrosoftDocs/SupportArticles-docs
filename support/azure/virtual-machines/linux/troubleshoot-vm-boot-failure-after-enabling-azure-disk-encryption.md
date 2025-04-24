@@ -37,7 +37,7 @@ To resolve this issue, follow these steps:
 
 1. [Restore the VM from a backup](/azure/backup/restore-azure-encrypted-virtual-machines) and attempt the encryption again.
 2. If a restore isn't feasible, use the Azure CLI extension [az vm repair](unlock-encrypted-linux-disk-offline-repair.md#method1) to create a repair VM, or use the [manual method](unlock-encrypted-linux-disk-offline-repair.md#method2) to create a rescue VM, then attach and unlock the OS disk of the faulty VM to that repait/rescue VM.
-3. Once you are in [chroot](/azure/virtual-machines/linux/chroot-environment-linux), execute the following commands:
+3. Once you are in [chroot](chroot-environment-linux.md), execute the following commands:
 
     > [!NOTE]
     > Replace the kernel and extension version accordingly in the following commands.
