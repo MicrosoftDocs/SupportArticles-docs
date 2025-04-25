@@ -1,6 +1,6 @@
 ---
 title: Tenant doesn't have premium license when querying user sign-in activities using Microsoft Graph
-description: Provides solutions to the identity of the calling application could not be established error when using Microsoft Graph.
+description: Provides solutions to the identity of the calling application couldn't be established error when using Microsoft Graph.
 ms.date: 04/25/2025
 ms.service: entra-id
 ms.author: bachoang
@@ -40,14 +40,14 @@ Example response
 
 ### Scenario 1: Query user sign-in activities
 
-1. Make sure the target tenant has an Entra ID Premium P1 or P2 license. In the Azure portal, go to **Micosoft Entra ID**, select Overview, and then check the **License**.  For more information, see [Sign up for Microsoft Entra ID P1 or P2 editions](/entra/fundamentals/get-started-premium).
+1. Make sure the target tenant has an Entra ID Premium P1 or P2 license. In the Azure portal, go to **Microsoft Entra ID**, select Overview, and then check the **License**.  For more information, see [Sign up for Microsoft Entra ID P1 or P2 editions](/entra/fundamentals/get-started-premium).
 1. Verify that the Microsoft Graph Access Token has been granted the `AuditLog.Read.All` and `Directory.Read.All` permissions.
 
 ### Scenario 2: Query credential user registration details
 
 1. Make sure the target tenant has an Entra ID Premium P1 or P2 license.
 1. Verify that the Microsoft Graph Access Token has been granted the `Reports.Read.All` permission.
-1. The authenticating user or the service principle of the application must to be in one of these Administrative roles:
+1. The authenticating user or the service principle of the application must be in one of these Administrative roles:
     - Reports Reader
     - Security Reader
     - Security Administrator
@@ -56,4 +56,4 @@ Example response
 
 ## More information
 
-If an application is configured with only the **AuditLog.Read.All** permission, this error may occur intermittently. This is expected behavior, as the **Directory.Read.All** permission is required to retrieve tenant licensing information when it is not already cached. Ensure both permissions are included to avoid this issue.
+If an application is configured with only the **AuditLog.Read.All** permission, this error may occur intermittently. This is expected behavior, as the **Directory.Read.All** permission is required to retrieve tenant licensing information when it isn't already cached. Ensure both permissions are included to avoid this issue.
