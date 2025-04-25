@@ -13,7 +13,7 @@ This article provides solutions to an issue where an ASP.NET application experie
 
 ## Symptoms
 
-An ASP.NET application running an earlier version of Open Web Interface for .NET (OWIN) middleware fails to recognize an authenticated request from Microsoft Entra ID.  It keeps sending the request back to Microsoft Entra ID for signing in, leading to the infinite loop issue. The following error message might be displayed in the browser:
+An ASP.NET application running an earlier version of Open Web Interface for .NET (OWIN) middleware fails to recognize an authenticated request from Microsoft Entra ID. It keeps sending the request back to Microsoft Entra ID for signing in, leading to the infinite loop issue. The following error message might be displayed in the browser:
 
 > We couldn't sign you in. Please try again.
 
