@@ -63,6 +63,8 @@
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
       - name: Repeated login prompts in iOS MSAL implementation
         href: app-integration/repeat-login-prompts-in-msal-ios-app.md
+      - name: Infinite sign-in loop issue with ASP.NET applications
+        href: app-integration/asp-dot-net-application-infinite-sign-in-loop.md
 
 
   - name: Troubleshoot adding apps
@@ -295,7 +297,6 @@
      items:
       - name: Python scripts making requests are detected as web crawlers
         href: users-groups-entra-apis/python-scripts-microsoft-graph-requests-detected-as-web-crawler.md
-
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems
