@@ -22,7 +22,7 @@ ms.author: genli
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
-GRand Unified Bootloader (GRUB) is likely the first thing you see when you boot a virtual machine (VM). When displayed before, the operating system is running, GRUB isn't accessible via SSH. In GRUB, you can modify your boot configuration to boot into single-user mode, among other things.
+GRand Unified Bootloader (GRUB) is likely the first thing you see when you boot a virtual machine (VM). When displayed before the operating system is running, GRUB isn't accessible via SSH. In GRUB, you can modify your boot configuration to boot into single-user mode, among other things.
 
 Single-user mode is a minimal environment with minimal functionality. It can be useful for investigating boot issues, file system issues, or network issues. Fewer services can run in the background and, depending on the runlevel, a file system might not even be automatically mounted.
 
@@ -31,7 +31,7 @@ Single-user mode is also useful in situations where your VM might be configured 
 > [!NOTE]
 > The Serial Console service allows only users with *contributor* level or higher permissions to access the serial console of a VM.
 
-To enter single-user mode, enter GRUB when your VM is booting, and modify the boot configuration in GRUB. See detailed instructions for entering GRUB in the next section. If your VM is setup to display GRUB, you can use the restart button within your VM's serial console to restart the VM and display GRUB.
+To enter single-user mode, enter GRUB when your VM is booting, and modify the boot configuration in GRUB. See detailed instructions for entering GRUB in the next section. If your VM is set up to display GRUB, you can use the restart button within your VM's serial console to restart the VM and display GRUB.
 
 :::image type="content" source="media/serial-console-grub-single-user-mode/restart-vm-button.png" alt-text="Screenshot of the Restart VM button displayed in the tool bar." border="false":::
 
