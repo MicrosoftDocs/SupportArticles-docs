@@ -1,7 +1,7 @@
 ---
-title: Infinite sign-in loop between ASP.NET application and Microsoft Entra ID
+title: Infinite Sign-in Loop Between ASP.NET Application and Microsoft Entra ID
 description: Helps you resolve an infinite sign-in loop issue between an ASP.NET application and with Microsoft Entra ID when performing sign in.
-ms.date: 04/23/2025
+ms.date: 04/25/2025
 ms.author: bachoang
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
@@ -13,27 +13,27 @@ This article provides solutions to an issue where an ASP.NET application experie
 
 ## Symptoms
 
-An ASP.NET application running an old version of OWIN middleware fails to recognize an authenticated request from Microsoft Entra ID.  It keeps sending the request back to Microsoft Entra ID for signing in, leading to the infinite loop issue. The following error message might be displayed in the browser:
+An ASP.NET application running an earlier version of Open Web Interface for .NET (OWIN) middleware fails to recognize an authenticated request from Microsoft Entra ID.  It keeps sending the request back to Microsoft Entra ID for signing in, leading to the infinite loop issue. The following error message might be displayed in the browser:
 
 > We couldn't sign you in. Please try again.
 
 ## Cause
 
-This issue occurs due to a cookie mismanagement issue (a [known Katana bug](https://github.com/aspnet/AspNetKatana/wiki/System.Web-response-cookie-integration-issues)) in the old version of OWIN.
+This issue occurs due to a cookie mismanagement issue (a [known Katana bug](https://github.com/aspnet/AspNetKatana/wiki/System.Web-response-cookie-integration-issues)) in the earlier version of OWIN.
 
 ### How to recognize the Katana bug
 
-Capture a Fiddler trace and examine one of the later redirect frames back to the web application. Note in the following screenshot, the request in frame 58 contains multiple OpenIdConnect.nonce cookies (red-circled). In a working scenario, you should only have one OpenIdConnect.nonce cookie set at the beginning before authentication. After the request is successfully authenticated, this nonce cookie is destroyed and ASP.NET sets its own session cookie. Because of this bug, you see there is a build up of these nonce cookies.
+Capture a Fiddler trace and examine one of the later redirect frames back to the web application. Note in the following screenshot, the request in frame 58 contains multiple OpenIdConnect.nonce cookies (red-circled). In a working scenario, you should only have one OpenIdConnect.nonce cookie set at the beginning before authentication. After the request is successfully authenticated, this nonce cookie is destroyed and ASP.NET sets its own session cookie. Because of this bug, you see a buildup of these nonce cookies.
 
 :::image type="content" source="media/asp-dot-net-application-infinite-sign-in-loop/openidconnet-nonce-cookies.png" alt-text="Screenshot that shows multiple OpenIdConnect nonce cookies." lightbox="media/asp-dot-net-application-infinite-sign-in-loop/openidconnet-nonce-cookies.png":::
 
 ## Solution 1: Upgrade to ASP.NET Core
 
-The issue has been resolved in ASP.NET Core and a newer version of Katana OWIN for ASP.NET. To resolve this issue, upgrade your application to use ASP.NET Core.
+The issue is resolved in ASP.NET Core and a later version of Katana OWIN for ASP.NET. To resolve this issue, upgrade your application to use ASP.NET Core.
 
-If you must continue to use ASP.NET, perform the following things:
+If you must continue to use ASP.NET, perform the following actions:
 
-- Update your application's Microsoft.Owin.Host.SystemWeb package to be at least version 3.1.0.0.
+- Update your application's Microsoft.Owin.Host.SystemWeb package to version 3.1.0.0 or later.
 - Modify your code to use one of the new cookie manager classes, for example:
 
     ```csharp
@@ -44,8 +44,6 @@ If you must continue to use ASP.NET, perform the following things:
     });
     ```
     
-    Or
-    
     ```csharp
     app.UseCookieAuthentication(new CookieAuthenticationOptions() 
     { 
@@ -55,13 +53,13 @@ If you must continue to use ASP.NET, perform the following things:
 
 ## Solution 2: Correct the redirect URL
 
-In some cases where the application is hosted under a virtual directory or an application instead of the root of the web site, the [solution 1](#solution-1-upgrade-to-aspnet-core) might not work. For more information, see [Infinite re-direct loop after AAD Authentication when redirect is specified](https://stackoverflow.com/questions/44397715/infinite-re-direct-loop-after-aad-authentication-when-redirect-is-specified) and [Microsoft Account OAuth2 sign-on fails when redirect URL is not under the website root](https://github.com/aspnet/AspNetKatana/issues/203).
+In some cases where the application is hosted under a virtual directory or an application instead of the root of the web site, [solution 1](#solution-1-upgrade-to-aspnet-core) might not work. For more information, see [Infinite re-direct loop after AAD Authentication when redirect is specified](https://stackoverflow.com/questions/44397715/infinite-re-direct-loop-after-aad-authentication-when-redirect-is-specified) and [Microsoft Account OAuth2 sign-on fails when redirect URL is not under the website root](https://github.com/aspnet/AspNetKatana/issues/203).
 
 For example, suppose you have the following environment:
 
 - The root of a web site: `https://mysite` – This site runs under *Application Pool 1*.
 - An application *test2* under the root: `https://mysite/test2` – This application runs under *Application Pool 2*.
-- Your ASP.NET application runs under the *tes2* application with the following code:
+- Your ASP.NET application runs under the *test2* application with the following code:
 
     ```csharp
     public void Configuration(IAppBuilder app)
@@ -97,7 +95,7 @@ For example, suppose you have the following environment:
             }
     ```
 
-    And you are using the following code for triggering the sign in flow:
+    You use the following code to trigger the sign-in flow:
     
     ```csharp
     public void SignIn()
@@ -111,7 +109,7 @@ For example, suppose you have the following environment:
             }
     ```
 
-This scenario can result in an authentication infinite loop with a build-up of multiple OpenIdConnect.nonce cookies. The difference is that ASP.NET doesn't appear to set its authenticated session cookies. To resolve the issue in such scenario, set the redirect URLs in the OpenID Connect initialization code and the `Challenge` method (note the trailing slash in the redirect URL):
+This scenario can result in an authentication infinite loop with a buildup of multiple OpenIdConnect.nonce cookies. The difference is that ASP.NET doesn't appear to set its authenticated session cookies. To resolve the issue in such scenario, set the redirect URLs in the OpenID Connect initialization code and the `Challenge` method (note the trailing slash in the redirect URL):
 
 ```csharp
 app.UseOpenIdConnectAuthentication(
