@@ -21,11 +21,11 @@ The Istio add-on egress gateway takes a hard dependency on the [Static Egress Ga
 
 You can create multiple Istio add-on egress gateways across different namespaces with a Deployment/Service `name` of your choice, with a max of `2000` egress gateways per cluster.
 
-## Prerequisites
+## Troubleshooting Checklist
+
+Before proceeding with the troubleshooting checklist, ensure that you have met the following prerequisites:
 - Install Azure CLI `aks-preview` version `14.0.0b2` or later to enable an Istio add-on egress gateway.
 - Enable the [Static Egress Gateway feature](/azure/aks/configure-static-egress-gateway) on your cluster, create an agent pool of mode `gateway`, and configure a `StaticGatewayConfiguration` custom resource.
-
-## Troubleshooting Checklist
 
 ### Networking and Firewall Errors
 
@@ -56,7 +56,7 @@ If the Istio egress gateway Pods are stuck in `containerCreating`, see [Step 2](
 Ensure that the `StaticGatewayConfiguration` for the Istio add-on egress gateway has a valid configuration and hasn't been deleted. To find the name of the `StaticGatewayConfiguration` for an Istio add-on egress gateway, check the `gatewayConfigurationName` for that egress gateway:
 
 ```bash
-az aks show -g $RESOURCE_GROUP -n $CLUSTER_NAME -o json | jq '.serviceMeshProfile.istio.components.egressGateways' | grep $ISITO_EGRESS_NAME -B1
+az aks show -g $RESOURCE_GROUP -n $CLUSTER_NAME -o json | jq '.serviceMeshProfile.istio.components.egressGateways' | grep $ISTIO_EGRESS_NAME -B1
 ```
 
 Verify that the Istio add-on egress gateway pod spec has the `kubernetes.azure.com/static-gateway-configuration` annotation set to the `gatewayConfigurationName` for that Istio add-on egress gateway.
@@ -74,7 +74,7 @@ kubectl get staticgatewayconfiguration $ISTIO_SGC_NAME -n $ISTIO_EGRESS_NAMESPAC
 kubectl describe staticgatewayconfiguration $ISTIO_SGC_NAME -n $ISTIO_EGRESS_NAMESPACE
 ```
 
-You can also check the logs of the `kube-egress-gateway-cni-manager` pod running on the node of the failing Istio egress pod. If there are issues with `egressIpPrefix` provisioning or an IP prefix still hasn't been assigned after ~5 minutes, you may need to [debug the Static Egress Gateway](#step-6-debug-the-static-egress-gateway) further.
+You can also check the logs of the `kube-egress-gateway-cni-manager` pod running on the node of the failing Istio egress pod. If there are issues with `egressIpPrefix` provisioning or an IP prefix still hasn't been assigned after ~5 minutes, you may need to debug the Static Egress Gateway further as outlines [below](#step-6-debug-the-static-egress-gateway)
 
 #### Step 3: Make sure that the Istio egress gateway `StaticGatewayConfiguration` references a valid `gateway` agent pool
 
@@ -82,7 +82,7 @@ Verify that the `spec.gatewayNodepoolName` for the `StaticGatewayConfiguration` 
 
 #### Step 4: Try sending an external request from the Istio egress gateway
 
-To validate that requests from the Istio egress gateway are being routed correctly via the Static Egress Gateway nodepool, you can use `kubectl debug` to create a Kubernetes ephemeral container and verify the source IP of requests from the Istio egress pod. Make sure that you temporarily set `outboundTrafficPolicy.mode` to `ALLOW_ANY` so that the egress gateway can access `ifconfig.me`.
+To validate that requests from the Istio egress gateway are being routed correctly via the Static Egress Gateway nodepool, you can use `kubectl debug` to create a Kubernetes ephemeral container and verify the source IP of requests from the Istio egress pod. Make sure that you temporarily set `outboundTrafficPolicy.mode` to `ALLOW_ANY` so that the egress gateway can access `ifconfig.me`. As a security best-practice, it's recommended to set `outboundTrafficPolicy.mode` back to `REGISTRY_ONLY` after debugging.
 
 ```bash
 kubectl debug -it --image curlimages/curl $ISTIO_EGRESS_POD_NAME -n $ISTIO_EGRESS_NAMESPACE -- curl ifconfig.me
@@ -100,7 +100,7 @@ kubectl rollout restart deployment $ISTIO_EGRESS_DEPLOYMENT_NAME -n $ISTIO_EGRES
 
 #### Step 6: Debug the Static Egress Gateway
 
-If errors with egress routing through the Istio add-on egress gateway persist, even after verifying that [Istio egress routing is configured correctly](#istio-egress-configuration-and-custom-resources), then it's possible that there is an underlying networking or infrastructure issue with the Static Egress Gateway. See the [Static Egress Gateway documentation](/azure/aks/configure-static-egress-gateway) for more information.
+If errors with egress routing through the Istio add-on egress gateway persist even after verifying that [Istio egress routing is configured correctly](#istio-egress-configuration-and-custom-resources), then it's possible that there is an underlying networking or infrastructure issue with the Static Egress Gateway. See the [Static Egress Gateway documentation](/azure/aks/configure-static-egress-gateway) for more information.
 
 ### Istio Egress Configuration and Custom Resources
 
@@ -114,7 +114,7 @@ You can enable Envoy access logging via the [Istio MeshConfig](/azure/aks/istio-
 
 Ensure that the `selector` in the `Gateway` custom resource is properly set. For instance, if your `Gateway` object for the Istio egress gateway uses the `istio:` selector, then it must match the value of the `istio` label in the Kubernetes service spec for that egress gateway. 
 
-For instance - for an egress gateway with the following Kubernetes service spec: 
+For instance, for an egress gateway with the following Kubernetes service spec: 
 
 ```bash
 apiVersion: v1
