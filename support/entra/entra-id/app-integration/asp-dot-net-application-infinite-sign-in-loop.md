@@ -2,7 +2,7 @@
 title: Infinite Sign-in Loop Between ASP.NET Application and Microsoft Entra ID
 description: Helps you resolve an infinite sign-in loop issue between an ASP.NET application and with Microsoft Entra ID when performing sign in.
 ms.date: 04/25/2025
-ms.author: bachoang
+ms.author: bachoang, v-weizhu
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
@@ -43,6 +43,7 @@ If you must continue to use ASP.NET, perform the following actions:
         CookieManager = new Microsoft.Owin.Host.SystemWeb.SystemWebChunkingCookieManager() 
     });
     ```
+    or
     
     ```csharp
     app.UseCookieAuthentication(new CookieAuthenticationOptions() 
@@ -77,7 +78,7 @@ For example, suppose you have the following environment:
                         // PostLogoutRedirectUri is the page that users will be redirected to after sign-out. In this case, it is using the home page
                         PostLogoutRedirectUri = redirectUri,
                         Scope = OpenIdConnectScope.OpenIdProfile,
-                        // ResponseType is set to request the id\_token - which contains basic information about the signed-in user
+                        // ResponseType is set to request the id_token - which contains basic information about the signed-in user
                         ResponseType = OpenIdConnectResponseType.IdToken,
                         // ValidateIssuer set to false to allow personal and work accounts from any organization to sign in to your application
                         // To only allow users from a single organizations, set ValidateIssuer to true and 'tenant' setting in web.config to the tenant name
@@ -95,7 +96,7 @@ For example, suppose you have the following environment:
             }
     ```
 
-    You use the following code to trigger the sign-in flow:
+- You use the following code to trigger the sign-in flow:
     
     ```csharp
     public void SignIn()
@@ -139,6 +140,6 @@ app.UseOpenIdConnectAuthentication(
 
 ## References
 
-[Infinite redirects with ASP.NET OWIN and OpenID Connect](https://varnerin.info/infinite-redirects-with-aspnet-owin-and-openid-connect/)
+- [Infinite redirects with ASP.NET OWIN and OpenID Connect](https://varnerin.info/infinite-redirects-with-aspnet-owin-and-openid-connect/)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
