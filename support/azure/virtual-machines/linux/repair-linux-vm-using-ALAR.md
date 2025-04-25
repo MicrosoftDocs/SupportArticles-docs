@@ -125,7 +125,7 @@ Here are explanations for the parameters in the commands above:
 ## Limitation
 
 1. Classic VMs aren't supported.
-2. The ALAR scripts cannot run with only the VM Contributor role, as they also require read, write, and delete permissions (Contributor or Owner role) at the resource group level. For more information, [Azure built-in roles](/azure/role-based-access-control/built-in-roles#privileged).
+2. The ALAR scripts cannot run with only the VM Contributor role, as they also require read, write, and delete permissions at the resource group level. For more information, [Azure built-in roles](/azure/role-based-access-control/built-in-roles#privileged).
 
 ## Next steps
 
