@@ -19,7 +19,7 @@ This article discusses an issue that causes a Microsoft Azure virtual machine (V
 
 A Windows VM doesn't start. When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you see that the Windows operating system displays the message, **Applying Group Policy Power Options policy**.
 
-:::image type="content" source="media/applying-group-policy-power-options-policy/applying-group-policy-power-options.png" alt-text="Screenshot of Windows operating system displaying the message 'Applying Group Policy Power Options policy'.":::
+:::image type="content" source="media/applying-group-policy-power-options-policy/applying-group-policy-power-options-screen.png" alt-text="Screenshot of Windows operating system displaying the message 'Applying Group Policy Power Options policy'.":::
 ## Cause
 
 Further investigation is required to determine the specific cause of this issue.
