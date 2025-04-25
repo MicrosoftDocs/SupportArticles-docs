@@ -1,7 +1,7 @@
 ---
 title: Improve the performance of full-text queries
 description: This article describes a method to improve the performance of queries that use full-text predicates in SQL Server.
-ms.date: 09/19/2022
+ms.date: 04/25/2025
 ms.custom: sap:Full-Text Search, Semantic Search
 ms.topic: how-to
 ---
@@ -9,7 +9,7 @@ ms.topic: how-to
 
 This article provides a method to improve the performance of queries that use full-text predicates in SQL Server.
 
-_Original product version:_ &nbsp; SQL Server 2008 Developer, SQL Server 2008 Enterprise, SQL Server 2008 R2 Datacenter, SQL Server 2008 R2 Developer, SQL Server 2008 R2 Enterprise, SQL Server 2008 R2 Standard, SQL Server 2012 Developer, SQL Server 2012 Standard, SQL Server 2012 Web, SQL Server 2012 Enterprise  
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2549443
 
 ## Summary
@@ -26,7 +26,7 @@ This method lets you design the query, table schema, and full-text index in such
 
 When you create a full-text search query, the principle factor that affects the performance of the query is the quantity of data that the full-text search engine must process before the remaining data is sent to the relational engine. In SQL Server, you can improve the performance of the query by filtering out rows early to reduce the number of rows that must be processed later.
 
-In versions of SQL Server that were released before SQL Server 2008, the full-text search engine returns all the rows that match a search term, and then the relational engine applies any filters. Improvements to this behavior were made in SQL Server 2008, in SQL Server 2008 R2, and in SQL Server 2012. However, it's difficult to use these improvements because full-text search indexes are organized differently from database indexes. Additionally, the full-text search engine and the relational engine work differently. Therefore, the method that this article describes uses the Table-Valued Function (TVF) to filter out rows early and to reduce the number of rows that must be processed later.
+The method that this article describes uses the Table-Valued Function (TVF) to filter out rows early and to reduce the number of rows that must be processed later.
 
 For example, the following query plan returns 131051 rows that match a `CONTAINS` search string. Additionally, a join operator in the plan performs additional filtering by using an index seek.
 

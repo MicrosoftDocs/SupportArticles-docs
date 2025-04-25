@@ -1,7 +1,7 @@
 ---
 title: Listener connection times out
 description: This article provides resolutions for the timeout error that occurs when you connect to a SQL Server Always On availability group listener in a multi-subnet environment.
-ms.date: 08/04/2020
+ms.date: 04/25/2025
 ms.custom: sap:Always On Availability Groups (AG)
 ms.reviewer: ramakoni
 ---
@@ -10,12 +10,12 @@ ms.reviewer: ramakoni
 
 This article helps you resolve the problem that occurs when you connect to a SQL Server Always On availability group listener in a multi-subnet environment.
 
-_Original product version:_ &nbsp; SQL Server 2012 Developer, SQL Server 2012 Enterprise, SQL Server 2012 Express, SQL Server 2012 Standard, SQL Server 2012 Web, SQL Server 2012 Enterprise Core  
+_Original product version:_ &nbsp; SQL Server 2012 and later versions  
 _Original KB number:_ &nbsp; 2792139
 
 ## Symptoms
 
-After you configure the availability group listener for an Always On Availability Group in Microsoft SQL Server 2012, you may be unable to ping the listener or connect to it from an application.
+After you configure the availability group listener for an Always On Availability Group in Microsoft SQL Server, you may be unable to ping the listener or connect to it from an application.
 
 For example, when you try to connect to a listener of SQL Server by using `SQLCMD`, the connection times out. Additionally, you receive an error message that resembles the following:
 

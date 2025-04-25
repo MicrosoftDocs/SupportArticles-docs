@@ -1,7 +1,7 @@
 ---
 title: Can't update cluster if Setup program checks rule
 description: This article provides a resolution for the problem that occurs when the Setup program checks the Cluster_IsOnlineIfClustered rule.
-ms.date: 10/23/2020
+ms.date: 04/25/2025
 ms.custom: sap:Always On Failover Cluster Instance (FCI)
 ms.reviewer: ramakoni, clivec
 ---
@@ -10,14 +10,14 @@ ms.reviewer: ramakoni, clivec
 
 This article helps you resolve the problem that occurs when the Setup program checks the `Cluster_IsOnlineIfClustered` rule.
 
-_Original product version:_ &nbsp; SQL Server 2012  
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2817733
 
 ## Symptoms
 
 Consider the following scenario:
 
-- In a cluster environment, you install an instance of Microsoft SQL Server 2012.
+- In a cluster environment, you install an instance of Microsoft SQL Server.
 
 - You try to install SQL Server service packs or cumulative updates on the server that contains this instance.
 
@@ -78,12 +78,3 @@ To identify that this issue is caused by the WMI namespace for the cluster, foll
    >  ```
    >
    > If the issue isn't caused by an invalid MSCluster namespace, the expected result is that the cluster network name is returned.
-
-## Applies to
-
-- SQL Server 2012 Developer
-- SQL Server 2012 Enterprise
-- SQL Server 2012 Express
-- SQL Server 2012 Standard
-- SQL Server 2012 Web
-- SQL Server 2012 Enterprise Core
