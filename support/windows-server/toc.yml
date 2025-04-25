@@ -3145,6 +3145,8 @@ items:
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
     - name: Scripts to view the certificate information in the msDS-KeyCredentialLink attribute
       href: ./support-tools/script-to-view-msds-keycredentiallink-attribute-value.md
+    - name: 'Scripts to check and clean up the AGPM archive'
+      href: support-tools/scripts-check-and-cleanup-the-agpm-archive.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
