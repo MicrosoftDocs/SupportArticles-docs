@@ -1,6 +1,6 @@
 ---
 title: Tenant doesn't have premium license when querying user sign-in activities using Microsoft Graph
-description: Provides solutions to the identity of the calling application couldn't be established error when using Microsoft Graph.
+description: Provides solutions to the "either tenant is B2C or tenant doesn't have premium license" error when you query user sign-in activities using Microsoft Graph
 ms.date: 04/25/2025
 ms.service: entra-id
 ms.author: bachoang
