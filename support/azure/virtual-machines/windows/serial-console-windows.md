@@ -11,7 +11,7 @@ ms.collection: windows
 ms.topic: article
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
-ms.date: 03/11/2025
+ms.date: 04/25/2025
 ms.author: mbifeld
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
@@ -33,17 +33,11 @@ For serial console documentation for Linux, see [Azure Serial Console for Linux]
 > [!NOTE]
 > Serial Console is compatible with a managed boot diagnostics storage account.
 
+[Prerequisites to access the Azure Serial Console](serial-console-overview.md#prerequisites-to-access-the-azure-serial-console)
+
 ## Prerequisites
 
-* Your VM or virtual machine scale set instance must use the resource management deployment model. Classic deployments aren't supported.
-
-* Your account that uses serial console must have the [Virtual Machine Contributor role](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) for the VM and the [boot diagnostics](boot-diagnostics.md) storage account
-
-* Your VM or virtual machine scale set instance must have a password-based user. You can create one with the [reset password](/azure/virtual-machines/extensions/vmaccess#reset-password) function of the VM access extension. Select **Reset password** from the **Help** section.
-
-* The VM for virtual machine scale set instance must have [boot diagnostics](boot-diagnostics.md) enabled.
-
-    :::image type="content" source="media/serial-console-windows/diagnostics-settings.png" alt-text="Screenshot of the Boot diagnostics option under the Diagnostics settings.":::
+The prerequisites to access the Azure Serial Console can be found [here](serial-console-overview.md#prerequisites-to-access-the-azure-serial-console).
 
 ## Enable Serial Console functionality for Windows Server
 
