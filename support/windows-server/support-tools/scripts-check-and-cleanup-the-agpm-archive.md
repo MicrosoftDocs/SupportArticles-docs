@@ -1,7 +1,7 @@
 ---
-title: Scripts to check and cleanup the AGPM archive that might lead to GPO operation issues
-description: Introduces a script to check and cleanup the AGPM archive that might lead to GPO operation issues.
-ms.date: 04/18/2025
+title: Scripts to Check and Clean the AGPM Archive That Causes GPO Operation Issues
+description: Introduces a script to check and clean up the AGPM archive that might lead to GPO operation issues.
+ms.date: 04/25/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -10,13 +10,13 @@ ms.custom:
 - sap:group policy\group policy management (gpmc or gpedit)
 - pcy:WinComm Directory Services
 ---
-# Scripts: Check and cleanup the AGPM archive that might lead to GPO operation issues
+# Scripts: Check and clean up the AGPM archive that might lead to GPO operation issues
 
 _Applies to:_ &nbsp; Advanced Group Policy Manager 4.0 SP3
 
-The sample script included in this article can assist with archive inconsistencies that lead to errors managing Group Policy Objects (GPOs) within the tool.
+The sample script included in this article can assist with archive inconsistencies that lead to errors in managing Group Policy Objects (GPOs) within the tool.
 
-Examples of errors that can occur if there's inconsistent information in the gpostate.xml file.
+Examples of errors that can occur if there's inconsistent information in the **gpostate.xml** file:
 
 ```output
 Create GPO: Test...Failed.
@@ -30,8 +30,8 @@ Create GPO: Test...Failed.
 Here's what the script does:
 
 1. Stops the Advanced Group Policy Management (AGPM) service.
-2. Scans the gpostate.xml file and removes references (if any) to archive GUID folders that don't exist or are incomplete.
-3. If there are any changes detected, the gpostate.xml is renamed with a time stamp and saves a new gpostate.xml file.
+2. Scans the **gpostate.xml** file and removes references (if any) to archive nonexistent or incomplete GUID folders.
+3. Renames the **gpostate.xml** file with a timestamp if any changes are detected and saves a new **gpostate.xml** file.
 4. Starts the AGPM service.
 
 [!INCLUDE [Script disclaimer](../../includes/script-disclaimer.md)]
