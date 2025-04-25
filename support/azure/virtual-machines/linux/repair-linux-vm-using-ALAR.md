@@ -90,6 +90,9 @@ If your VM shuts down immediately upon startup due to the audit daemon configura
 
 The ALAR scripts use the repair extension `run` command and its `--run-id` option. The value of the `--run-id` option for the automated recovery is `linux-alar2`. To fix a Linux VM by using an ALAR script, follow these steps:
 
+> [!IMPORTANT]
+> The scripts can't run with only the VM Contributor role, as they need to perform read, write, and delete operations at the resource group that includes the target VM. Therefore roles such as Contributor or Owner at that resource group level are also required.
+
 1. Create a rescue VM:
 
     ```azurecli-interactive
@@ -117,15 +120,11 @@ Here are explanations for the parameters in the commands above:
 - `RESCUE-PASS`: The password for `RESCUE-UID`, enclosed in single quotes. For example: `'password!234'`.
 - `DISK-COPY`: The name of the OS disk copy that will be created from the broken VM.
 - `ACTION`: A scripted task to run, such as `initrd` or `fstab`.
-
-  > [!NOTE]
-  >  You can pass over single or multiple recovery operations. For multiple operations, delineate them using commas without spaces, such as `fstab,initrd`.
-
+    You can pass over single or multiple recovery operations. For multiple operations, delineate them using commas without spaces, such as `fstab,initrd`.
 
 ## Limitation
 
-1. Classic VMs aren't supported.
-2. The ALAR scripts cannot run with only the VM Contributor role permission, as they also require read, write, and delete permissions at the resource group level.
+Classic VMs aren't supported.
 
 ## Next steps
 
