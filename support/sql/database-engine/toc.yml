@@ -7,10 +7,6 @@ items:
 
 - name: Database Mirroring (DBM)
   items:
-  - name: Assertion when you execute Bulk Insert or BCP
-    href: database-mirroring/assertion-execute-bulk-insert-bcp.md
-  - name: Assertion failure on partner servers when using mirroring
-    href: database-mirroring/assertion-partner-servers-using-mirroring.md
   - name: Mirrored databases are disconnected
     href: database-mirroring/mirrored-databases-disconnected.md
 

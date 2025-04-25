@@ -1,7 +1,7 @@
 ---
 title: SQL Transaction log grows continuously
 description: This article helps you resolve the problem where you notice continuous transaction log growth for a CDC enabled database.
-ms.date: 03/16/2020
+ms.date: 04/23/2025
 ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ---
 # SQL Transaction log grows when you use Change Data Capture for Oracle by Attunity
@@ -37,10 +37,10 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 You may have a non-distributed LSN because CDC for Oracle uses CDC for SQL stored procedures, and that, in turn, uses the replication log reader. This non-distributed LSN corresponds to the log entries to add the mirrored table in the Attunity CDC database.
 
-If you run this query, the `log_reuse_wait_desc` option returns a value of `REPLICATION`, indicating the cause. Select the `log_reuse_wait_desc` name from `sys.databases`, where the name is \<your_cdc_database\>:
+If you run this query, the `log_reuse_wait_desc` option returns a value of `REPLICATION`, indicating the cause.
 
 ```sql
-REPLICATION <your_cdc_database>
+SELECT log_reuse_wait_desc FROM sys.databases WHERE name = '<your_cdc_database>'
 ```
 
 ## Resolution
@@ -78,23 +78,23 @@ REPLICATION <your_cdc_database>
     DBCC execution completed. If DBCC printed error messages, contact your system administrator.
     ```
 
-4. To make sure that the transaction log can be reused, confirm that there is no other reuse reason indicated on the database:
+4. To make sure that the transaction log can be reused, confirm that there's no other reuse reason indicated on the database:
   
     ```sql
-    SELECT log_reuse_wait_desc, NAME FROM sys.databases WHERE NAME = 'your_cdc_database'
+    SELECT log_reuse_wait_desc, NAME FROM sys.databases WHERE NAME = '<your_cdc_database>'
     ```
 
     This returns output that resembles the following:
 
     ```output
     log_reuse_wait_desc name
-    NOTHING your_cdc_database
+    NOTHING <your_cdc_database>
     ```
 
 5. Now you should be able to truncate the Transaction log by using log backups. You should also be able to shrink the transaction log file to reduce the disk space that's consumed. For example, run the following:
 
     ```sql
-    BACKUP LOG your_cdc_database TO DISK='c:\folder\logbackup.trn'
+    BACKUP LOG <your_cdc_database> TO DISK='c:\folder\logbackup.trn'
     DBCC SHRINKFILE (yourcdcdatabase_log, 1024)
     ```
 
