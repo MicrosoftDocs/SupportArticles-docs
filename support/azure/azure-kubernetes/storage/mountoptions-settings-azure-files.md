@@ -59,7 +59,7 @@ The following `mountOptions` settings are recommended for Server Message Block (
     ```
 
 > [!NOTE]
-> The location for configuring mount options (`mountOptions`) depends on whether you're provisioning dynamic or static persistent volumes. If you're [dynamically provisioning a volume](/azure/aks/azure-csi-files-storage-provision#dynamically-provision-a-volume) with a storage class, specify the mount options on the storage class object (`kind: StorageClass`). If you're [statically provisioning a volume](/azure/aks/azure-csi-files-storage-provision#statically-provision-a-volume), specify the mount options on the `PersistentVolume` object (`kind: PersistentVolume`). If you're [mounting the file share as an inline volume](/azure/aks/azure-csi-files-storage-provision#mount-file-share-as-an-inline-volume), specify the mount options on the `Pod` object (`kind: Pod`).
+> The location for configuring mount options (`mountOptions`) depends on whether you provision dynamic or static persistent volumes. If you [dynamically provision a volume](/azure/aks/azure-csi-files-storage-provision#dynamically-provision-a-volume) with a storage class, specify the mount options on the storage class object (`kind: StorageClass`). If you [statically provision a volume](/azure/aks/azure-csi-files-storage-provision#statically-provision-a-volume), specify the mount options on the `PersistentVolume` object (`kind: PersistentVolume`). If you [mount the file share as an inline volume](/azure/aks/azure-csi-files-storage-provision#mount-file-share-as-an-inline-volume), specify the mount options on the `Pod` object (`kind: Pod`).
 
 ## More information
 
