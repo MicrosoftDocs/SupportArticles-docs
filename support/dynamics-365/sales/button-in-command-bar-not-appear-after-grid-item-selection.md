@@ -2,7 +2,7 @@
 title: Button in Command Bar Not Showing After Grid Item Selection
 description: Resolving the issue where a button in the command bar doesn't appear after selecting grid items in Microsoft Dynamics 365 apps.
 ms.reviewer: 
-ms.date: 04/07/2025
+ms.date: 04/17/2025
 ms.custom: sap:Opportunity
 ---
 # Button in command bar doesn't appear after grid item selection

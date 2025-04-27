@@ -2,7 +2,7 @@
 title: An active unmanaged layer is created after importing a managed solution
 description: Provides a workaround for an issue where an active unmanaged layer is created after importing a managed solution.
 ms.reviewer: matp
-ms.date: 07/26/2023
+ms.date: 04/17/2025
 author: nhelgren
 ms.author: nhelgren
 ms.custom: sap:Working with Solutions\Solution layers

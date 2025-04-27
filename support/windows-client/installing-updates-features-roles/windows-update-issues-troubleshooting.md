@@ -1,14 +1,14 @@
 ---
 title: Windows Update issues troubleshooting
 description: Learn about troubleshooting Windows Update, issues related to HTTP/Proxy, and why some features are offered and others aren't.
-ms.date: 01/15/2025
+ms.date: 04/25/2025
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.custom:
 - sap:windows servicing,updates and features on demand\windows update fails - installation rolls back
 - pcy:WinComm Devices Deploy
 ms.collection: highpri
-ms.reviewer: dougeby,aaroncz
+ms.reviewer: dougeby, aaroncz, warrenw, astoica
 audience: itpro
 ---
 # Windows Update issues troubleshooting
@@ -137,7 +137,9 @@ The most common reasons for this error are described in the following table:
 |Wrong update for architecture|Updates are published by CPU architecture. If the update that you're trying to install doesn't match the architecture for your CPU, you may encounter this error message. |Verify that the package that you're trying to install matches the Windows version that you're using. The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2012-only updates can't be installed on Windows Server 2012 R2-based computers. <br>Also, verify that the package that you're installing matches the processor architecture of the Windows version that you're using. For example, an x86-based update can't be installed on x64-based installations of Windows. |
 |Missing prerequisite update|Some updates require a prerequisite update before they can be applied to a system. If you're missing a prerequisite update, you may encounter this error message. For example, KB 2919355 must be installed on Windows 8.1 and Windows Server 2012 R2 computers before many of the updates that were released after April 2014 can be installed.|Check the related articles about the package in the Microsoft Knowledge Base (KB) to make sure that you have the prerequisite updates installed. For example, if you encounter the error message on Windows 8.1 or Windows Server 2012 R2, you may have to install the April 2014 update 2919355 as a prerequisite and one or more pre-requisite servicing updates (KB 2919442 and KB 3173424). <br>To determine if these prerequisite updates are installed, run the following PowerShell command: <br>`get-hotfix KB3173424,KB2919355, KB2919442`. <br>If the updates are installed, the command will return the installed date in the `InstalledOn` section of the output.
 
-## Issues related to firewall configuration
+## Error 0x800706D9 if the Windows Defender Firewall service is disabled
+
+You observe that the download for updates is stuck at 0%, especially in Windows Server 2016, where the Background Intelligent Transfer Service (BITS) service is the default Download Manager.
 
 Error that you might see in Windows Update logs:
 
@@ -157,7 +159,7 @@ Or
 DownloadManager [0]12F4.1FE8::09/29/2017-13:45:08.530 [agent]DO job {C6E2F6DC-5B78-4608-B6F1-0678C23614BD} hit a transient error, updateId = 5537BD35-BB74-40B2-A8C3-B696D3C97CBA.201 <NULL>, error = 0x80D0000A 
 ```
 
-Go to Services.msc and ensure that Windows Firewall Service is enabled. Stopping the service associated with Windows Firewall with Advanced Security isn't supported by Microsoft. For more information, see [I need to disable Windows Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766337(v=ws.10)).
+Go to **Services.msc** and ensure that the **Windows Defender Firewall** service is enabled. Stopping the service associated with Windows Firewall with Advanced Security isn't supported by Microsoft. For more information, see [I need to disable Windows Firewall](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766337(v=ws.10)).
 
 ## Issues arising from configuration of conflicting policies
 

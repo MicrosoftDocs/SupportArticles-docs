@@ -2,7 +2,7 @@
 title: Steps to add Prospect BILL TO address on SOP Blank Quote
 description: Introduces the steps to add Prospect BILL TO address on the SOP Blank Quote form in Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Distribution - Sales Order Processing
 ---
 # Steps to add Prospect BILL TO address on the SOP Blank Quote form in Microsoft Dynamics GP

@@ -2,7 +2,7 @@
 title: Email message cannot be sent MailboxDisabled error
 description: Provides a solution to a MailboxDisabled error that occurs when you try to test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/30/2024
+ms.date: 04/17/2025
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # MailboxDisabled error when you test and enable a mailbox in Dynamics 365

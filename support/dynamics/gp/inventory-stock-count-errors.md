@@ -3,7 +3,7 @@ title: Inventory Stock count errors
 description: Inventory Stock count errors in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: theley, Aeckman
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Distribution - Inventory
 ---
 # Inventory Stock count errors in Microsoft Dynamics GP

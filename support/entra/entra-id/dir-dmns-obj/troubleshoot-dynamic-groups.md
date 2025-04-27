@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot dynamic groups
 description: This article helps you diagnose and resolve issues with dynamic groups.
-ms.date: 03/04/2025
+ms.date: 04/17/2025
 ms.service: entra-id
 ms.custom: sap:Groups, has-azure-ad-ps-ref
 ms.reviewer: mimart, v-weizhu, v-loeide, mbhargav, yuhko, barclayn
@@ -11,7 +11,7 @@ ms.reviewer: mimart, v-weizhu, v-loeide, mbhargav, yuhko, barclayn
 This troubleshooting guide helps you diagnose and solve issues with dynamic groups in Microsoft Entra ID.
 
 > [!IMPORTANT]
-> Dynamic membership group changes are usually processed within a few hours. However, processing may take more than 24 hours depending on factors such as tenant size, group size, number of attribute changes, rule complexity, and operator choice (such as using `CONTAINS`, `MATCH`, or `MemberOf`).
+> Dynamic membership groups changes are usually processed within a few hours. However, processing can take more than 24 hours depending on factors such as the number of groups, the number of changes, and the complexity of the rules. For more information, see [Understanding and Managing Dynamic Group Processing in Microsoft Entra ID](/entra/identity/users/manage-dynamic-group).
 
 ## Dynamic groups identification and management
 
@@ -72,7 +72,7 @@ You receive an error when deleting a group.
 
 You restored a deleted group but didn't see any update.
 
-- When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process might take up to 24 hours.
+- When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process may take some time to complete depending on factors such as tenant size.
 
 ## Evaluate whether a group is a dynamic group<a id="1"></a>
 
@@ -184,9 +184,9 @@ You've created a dynamic group and configured a rule, but encountered one of the
       - Allow a guest user addition by following the **Manage guest user** setting for groups in a tenant.
       - Change the group rule to exclude a guest user by adding: `(user.userType -eq "member")`.
 
-5. If everything looks correct, allow some time for the group to populate. Depending on the size of your tenant, the group may take up to 24 hours to populate the first time, or after a rule change.
+5. If everything looks correct, wait for the group to populate. Depending on the size of your tenant, the group may take some time to populate the first time, or after a rule change. We recommend waiting a minimum of 24 hours to allow group processing to complete.
 
-6. If problem still exists after 24 hours and the processing status shows as complete, you can [reset the processing for the group](#18) to resolve any transient system issue.
+6. If the processing status shows as complete and the issue persists, you can [reset the processing for the group](#18) to resolve any transient system issue.
 
    If the processing status shows as **in processing**, continue to wait.
 
@@ -256,11 +256,7 @@ Before attempting to delete a group in Microsoft Entra ID, ensure you have [dele
 
 - If an Office 365 group is deleted, it can only be restored up to 30 days before permanent deletion occurs. Once permanently deleted, the group can no longer be restored. To learn more about restoring groups, see [Restore a deleted Microsoft 365 group in Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-groups-restore-azure-portal).
 - This functionality isn't supported for security groups and distribution groups.
-- Verify that you're authorized to restore an Office 365 group. Only Global administrators, User account administrators, Intune service administrators, , or the owner of the group can restore a group.
-
-### You restored a deleted dynamic group, but didn't see any update
-
-When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process might take up to 24 hours.
+- Verify that you're authorized to restore an Office 365 group. Only Global administrators, User account administrators, Intune service administrators, or the owner of the group can restore a group.
 
 ## Related articles
 
