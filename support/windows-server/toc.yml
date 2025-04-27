@@ -359,6 +359,8 @@ items:
       href: ./active-directory/error-0x5-access-denied-rename-computer.md
     - name: Error code 0x54b
       href: active-directory/error-code-0x54b.md
+    - name: Error code 0x0000232A
+      href: active-directory/error-code-0x0000232a.md
     - name: Error code 0x569
       href: ./active-directory/error-0x569-not-granted-logon-type.md
     - name: Error code 0xa8b
