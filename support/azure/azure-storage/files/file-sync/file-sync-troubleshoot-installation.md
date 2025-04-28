@@ -182,7 +182,7 @@ This issue occurs due to a known issue that has been fixed in File Sync Agent v1
 This error occurs when the required version of the .NET Framework is missing on the server. Azure File Sync's server registration requires **.NET Framework 4.7.2. or higher** to function properly. 
 
 To resolve the issue:
-1. Downland and install .NET Framework 4.7.2. or higher
+1. Downland and install .NET Framework 4.7.2. or higher.
 2. Restart the server after installation.
 3. Retry the server registration using the Server Registration UI or PowerShell.
 
