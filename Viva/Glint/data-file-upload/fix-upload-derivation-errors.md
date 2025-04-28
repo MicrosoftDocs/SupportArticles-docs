@@ -42,6 +42,9 @@ To fix the issue, follow these steps:
 
       =TEXT(A1,"mm/dd/yyyy")
    1. [Fill the formula](https://support.microsoft.com/office/fill-a-formula-down-into-adjacent-cells-041edfe2-05bc-40e6-b933-ef48c3f308c6) into the cells in the new column (column B).
+  
+      **Note:** This formula translates blank date cells into "01/01/1900" or "01/00/1900." To prevent upload errors, remove these invalid dates before uploading the file.
+      
    1. Copy the date values from the new column (column B), and then paste the values into the original date column (column A) by using the **Paste** > **Paste Special** > **Values** [option](https://support.microsoft.com/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad).
    1. Delete the new column that contains the formula.
 1. Save the file, and then upload it again to Viva Glint.
