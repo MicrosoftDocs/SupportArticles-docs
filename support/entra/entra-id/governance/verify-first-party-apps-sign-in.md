@@ -4,7 +4,7 @@ description: Describes how to verify first-party Microsoft applications in sign-
 ms.date: 03/08/2024
 ms.reviewer: bernaw, domooney, grtaylor, v-six, v-weizhu
 ms.service: entra-id
-ms.custom: sap:Sign-In Activity Reports, has-azure-ad-ps-ref
+ms.custom: sap:Sign-In Activity Reports, no-azure-ad-ps-ref
 ---
 # Verify first-party Microsoft applications in sign-in reports
 
@@ -49,22 +49,51 @@ Although the apps that are listed in sign-in reports are owned by Microsoft and 
 
 ## Verify a first-party Microsoft service principal through PowerShell
 
-1. Open the Azure Active Directory module in PowerShell.
+### Using Microsoft Graph PowerShell SDK
 
-2. In the PowerShell module, enter the following cmdlet:
+1. Open PowerShell, import Microsoft Graph PowerShell SDK and then connect to Microsoft Entra ID:
 
    ```cmd
-   Get-AzureADServicePrincipal -Filter "DisplayName eq '<display-name>'" | fl *
+   Import-Module Microsoft.Graph.Applications
+   Connect-MgGraph
    ```
 
-   Replace `<display name>` with the app's actual display name.
+2. In the PowerShell command-line, enter the display name of the application and run the following cmdlet:
 
-   [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-3. Review the result's `AppOwnerTenantId`.
+   ```cmd
+   $appDisplayName = '<display name>'
+   Get-MgServicePrincipal -Filter "DisplayName eq '$appDisplayName'" | Select-Object Id, DisplayName, SignInAudience, AppOwnerOrganizationId
+   ```
+   
+3. Review the `AppOwnerTenantId` value in the output.
 
-    :::image type="content" source="media/verify-first-party-apps-sign-in/review-the-app-owner-tenant-id.png" alt-text="Screenshot of the output of a request to show the Microsoft Entra service principal.":::
+    :::image type="content" source="media/verify-first-party-apps-sign-in/review-the-app-owner-tenant-id-microsoft-graph.png" alt-text="Screenshot of the output of a request to show the Microsoft Entra service principal via Microsoft Graph PowerShell SDK.":::
 
    In the screenshot, `f8cdef31-a31e-4b4a-93e4-5f571e91255a` is the Microsoft Service's Microsoft Entra tenant ID.
+
+### Using Microsoft Entra PowerShell
+
+1. Open PowerShell, import Microsoft Graph PowerShell SDK and connect to Microsoft Entra ID:
+
+   ```cmd
+   Import-Module Microsoft.Entra
+   Connect-Entra
+   ```
+
+2. In the PowerShell command-line, enter the display name of the application and run the following cmdlet:
+
+   ```cmd
+   $appDisplayName = '<display name>'
+   Get-EntraServicePrincipal -SearchString $appDisplayName | Select-Object Id, DisplayName, SignInAudience, AppOwnerOrganizationId
+   ```
+   
+3. Review the result's `AppOwnerTenantId`.
+
+    :::image type="content" source="media/verify-first-party-apps-sign-in/review-the-app-owner-tenant-id-microsoft-entra.png" alt-text="Screenshot of the output of a request to show the Microsoft Entra service principal via Microsoft Entra PowerShell.":::
+
+   In the screenshot, `f8cdef31-a31e-4b4a-93e4-5f571e91255a` is the Microsoft Service's Microsoft Entra tenant ID.
+
+
 
 ## Application IDs of commonly used Microsoft applications
 

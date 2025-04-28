@@ -3,7 +3,7 @@ title: Unable to add entity because it already exists error when you transfer a 
 description: Describes a problem where you receive the error message - Unable to add entity because it already exists.
 ms.reviewer: theley, steves, ppeterso
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Receivables Management
 ---
 # Error message when you transfer a requisition to a purchase order in Microsoft Dynamics GP: "Unable to add entity because it already exists"

@@ -1,10 +1,11 @@
 ---
-title: Exception when you execute a query
+title: OutOfMemoryException Error When You Execute a Query
 description: This article provides workarounds for the problem that occurs when you use SQL Server Management Studio (SSMS) to run a SQL query that returns a large amount of data.
-ms.date: 10/29/2020
+ms.date: 04/08/2025
 ms.custom: sap:SQL Server Management, Query and Data Tools
+ms.reviewer: jopilov
 ---
-# Exception when you execute a query in SQL Server Management Studio
+# OutOfMemoryException error when you execute a query in SQL Server Management Studio (SSMS)
 
 This article helps you resolve the problem that occurs when you use SQL Server Management Studio (SSMS) to run a SQL query that returns a large amount of data.
 
@@ -13,16 +14,13 @@ _Original KB number:_ &nbsp; 2874903
 
 ## Symptoms
 
-When you use SSMS to run a SQL query that returns a large amount of data, you receive an error message that resembles the following:
+When you use SSMS to run a SQL query that returns a very large amount of data, you receive an error message that resembles the following:
 
 > An error occurred while executing batch. Error message is: Exception of type 'System.OutOfMemoryException' was thrown
 
 ## Cause
 
-This issue occurs because SSMS has insufficient memory to allocate for large results.
-
-> [!NOTE]
-> SSMS is a 32-bit process. Therefore, it is limited to 2 GB of memory. SSMS imposes an artificial limit on how much text that can be displayed per database field in the results window. This limit is 64 KB in "Grid" mode and 8 KB in Text mode. If the result set is too large, the memory that is required to display the query results may surpass the 2 GB limit of the SSMS process. Therefore, a large result set can cause the error that is mentioned in the [Symptoms](#symptoms) section.
+This issue occurs because SSMS has insufficient memory to allocate for large results. SSMS is a 32-bit process. Therefore, it's limited to 2 GB of user-mode virtual memory. SSMS imposes an artificial limit on how much text can be displayed per database field in the results window. This limit is 64 KB in Grid mode and 8 KB in Text mode. If the result set is too large, the memory that is required to display the query results may surpass the 2 GB limit of the SSMS process. Therefore, a large result set can cause the error that is mentioned in the [Symptoms](#symptoms) section.
 
 ## Workaround
 
@@ -47,31 +45,4 @@ Configure the query window to output the query results to a file. A file output 
 
 ## Method 3: Use sqlcmd
 
-Use [sqlcmd Utility](/sql/tools/sqlcmd-utility?redirectedfrom=MSDN&view=sql-server-ver15&preserve-view=true)  instead of SSMS to run the SQL queries. This method enables queries to be run without the resources that are required by the SSMS UI. Additionally, you can use the 64-bit version of Sqlcmd.exe to avoid the memory restriction that affects the 32-bit SSMS process.
-
-## Applies to
-
-- SQL Server 2012 Express
-- SQL Server 2012 Developer
-- SQL Server 2012 Enterprise
-- SQL Server 2012 Standard
-- SQL Server 2012 Web
-- SQL Server 2008 R2 Datacenter
-- SQL Server 2008 R2 Developer
-- SQL Server 2008 R2 Enterprise
-- SQL Server 2008 R2 Express
-- SQL Server 2008 R2 Standard
-- SQL Server 2008 R2 Web
-- SQL Server 2008 R2 Workgroup
-- SQL Server 2008 Developer
-- SQL Server 2008 Enterprise
-- SQL Server 2008 Express
-- SQL Server 2008 Standard
-- SQL Server 2008 Web
-- SQL Server 2008 Workgroup
-- SQL Server 2005 Developer Edition
-- SQL Server 2005 Enterprise Edition
-- SQL Server 2005 Evaluation Edition
-- SQL Server 2005 Express Edition
-- SQL Server 2005 Standard Edition
-- SQL Server 2005 Workgroup Edition
+Use [sqlcmd Utility](/sql/tools/sqlcmd/sqlcmd-utility) instead of SSMS to run the SQL queries. This method enables queries to be run without the resources that are required by the SSMS UI. Additionally, you can use the 64-bit version of Sqlcmd.exe to avoid the memory restriction that affects the 32-bit SSMS process.

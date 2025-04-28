@@ -25,8 +25,6 @@ items:
     href: oledb-driver-install-check.md
 - name: Error code 1642 though update is applied
   href: error-code-1642-update-applied.md
-- name: Error if you change shared component directory
-  href: error-change-path-shared-component-directory.md
 - name: Evaluation period has expired when you use SSMS
   href: evaluation-period-has-expired.md
 - name: Fusion ATL rule check fails
@@ -61,8 +59,6 @@ items:
   href: sqlserver-patching-issues.md
 - name: Update or Slipstream installation for SQL Server 2008
   href: update-or-slipstream-installation.md
-- name: Upgrade failures on Windows Server 2012
-  href: error-upgrade-cluster-node.md
 - name: Visual C++ Redistributable installed with SQL Server alerts end of life or obsolete
   href: visual-c-redistributable-installed-sql-server-flagged-end-of-life-obsolete.md
 - name: Wait on the Database Engine recovery handle failed

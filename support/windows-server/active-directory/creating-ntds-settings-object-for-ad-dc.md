@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, nedpyle
 ms.custom:
-- sap:active directory\on-premises active directory domain join
+- sap:active directory\active directory replication and topology
 - pcy:WinComm Directory Services
 ---
 # Active Directory installation stalls at the Creating the NTDS settings object stage

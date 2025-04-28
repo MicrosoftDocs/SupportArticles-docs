@@ -335,6 +335,8 @@ items:
       href: ./networking/move-client-side-caching-folder.md
     - name: Offline file synchronization issues
       href: ./networking/offline-file-synchronization-issue.md
+    - name: Sync Center syncs offline files very slow
+      href: ./networking/sync-center-slow-syncing-of-offline-files.md
   - name: IP Address Management (IPAM)
     items:
     - name: Intranet site is identified as Internet site
@@ -837,6 +839,8 @@ items:
       href: ./setup-upgrade-and-drivers/updates-not-install-with-fast-startup.md
   - name: User state migration tool
     items:
+    - name: Error "Invalid store path" during the LoadState process
+      href: setup-upgrade-and-drivers/error-invalid-store-path-loadstate-user-state-migration-tool.md
     - name: USMT common issues
       href: ./setup-upgrade-and-drivers/usmt-common-issues.md
     - name: USMT return codes
@@ -935,7 +939,7 @@ items:
       href: ./shell-experience/recycle-bin-corrupted.md
     - name: Renaming a network folder fails
       href: ./shell-experience/renaming-a-network-folder-fails.md
-    - name: "Scenario guide: Black screen after you sign in to the system"
+    - name: 'Scenario guide: Black screen after you sign in to the system'
       href: ./shell-experience/scenario-guide-black-screen-after-sign-in.md
     - name: Support of whitespace characters in file and folder names
       href: ./shell-experience/file-folder-name-whitespace-characters.md
@@ -1029,8 +1033,12 @@ items:
       href: ./system-management-components/0x80041323-running-scheduled-tasks.md
     - name: Run programs automatically when a user logs on
       href: ./system-management-components/run-programs-automatically.md
+    - name: Scheduled tasks fail with "Task schedular service is not available"
+      href: ./system-management-components/task-schedular-service-is-not-available.md
     - name: Task scheduler runs tasks as background processes
       href: ./system-management-components/task-scheduler-task-only-runs-in-background.md
+    - name: Task Scheduler service can't start
+      href: ./system-management-components/task-scheduler-service-not-start.md
     - name: Use the at command to schedule tasks
       href: ./system-management-components/use-at-command-to-schedule-tasks.md
   - name: WER
@@ -1101,20 +1109,12 @@ items:
       href: ./user-profiles-and-logon/cached-user-logon-fails-lsasrv-event-45058.md
   - name: User profiles
     items:
-    - name: Can't set a convenience PIN
-      href: ./user-profiles-and-logon/cannot-configure-a-convenience-pin.md
     - name: Create a new profile if the profile is damaged
       href: ./user-profiles-and-logon/create-new-user-profile.md
-    - name: Error "Invalid store path" during the LoadState process
-      href: ./user-profiles-and-logon/error-invalid-store-path-loadstate-user-state-migration-tool.md
-    - name: Logon or logoff delays when you use roaming user profiles
-      href: ./user-profiles-and-logon/roaming-profile-was-not-completely-synchronized-error.md
-    - name: Renaming user account doesn't change profile path
-      href: ./user-profiles-and-logon/renaming-user-account-not-change-profile-path.md
   - name: Windows Hello for Business
     items:
-    - name: Event ID 300 - Windows Hello successfully created in Windows 10
-      href: ./user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md
+    - name: Can't set a convenience PIN
+      href: user-profiles-and-logon/cannot-configure-a-convenience-pin.md
     - name: Windows Hello errors during PIN creation in Windows 10
       href: ./user-profiles-and-logon/windows-hello-errors-during-pin-creation-in-windows-10.md
     - name: Retrieve certificate to troubleshoot Windows Hello for Business logon failures

@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot an availability group database in reverting state
 description: This article helps you troubleshoot an availability group database in reverting state where Not Synchronizing is reported on the primary.
-ms.date: 02/06/2024
+ms.date: 04/08/2025
 ms.custom: sap:Always On Availability Groups (AG)
-ms.reviewer: cmathews, v-sidong
+ms.reviewer: cmathews, jopilov, v-sidong
 ---
 
 # Troubleshoot an Availability Group database in reverting state

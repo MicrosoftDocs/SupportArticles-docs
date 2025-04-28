@@ -71,7 +71,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2017](..
 
 ## <a id="AzureConnectFeaturePack"></a> Azure Connect Pack (March 2025)
 
-This is the Azure Connect Pack for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3490.10. For information about the fixes and improvements in this release, see the [Support article](https://learn.microsoft.com/troubleshoot/sql/releases/sqlserver-2017/azureconnect).
+This is the Azure Connect Pack for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3490.10. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2017/azureconnect.md).
 
 > [!IMPORTANT]  
 > This is the Azure Connect Pack, which includes CU 31 for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)].

@@ -36,6 +36,10 @@ To view ADMX spreadsheets of the new settings that are available in later operat
 
 Administrative Templates files are divided into .admx files and language-specific .adml files for use by Group Policy administrators. The changes that are implemented in these files let administrators configure the same set of policies by using two languages. Administrators can configure policies by using the language-specific .adml files and the language-neutral .admx files.
 
+## New policy for Windows 11 in January 2025 servicing update
+
+A new policy **AllowedNonAdminPackageFamilyNameRules** is added to the AppxPackageManager.admx for Windows 11 version 24H2 and Windows 11, version 23H2 in January 2025 servicing update. The policy is used to configure allow list rules for package installation, and the policy overrides the **BlockNonAdminUser** policy.
+
 ## Administrative Templates file storage
 
 Windows uses a Central Store to store Administrative Templates files. The ADM folder is not created in a Group Policy Object (GPO) as it is done in earlier versions of Windows. Therefore, Windows domain controllers do not store or replicate redundant copies of .adm files.

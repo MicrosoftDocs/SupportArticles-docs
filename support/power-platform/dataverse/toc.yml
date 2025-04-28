@@ -2,7 +2,7 @@
   href: welcome-dataverse.yml
 - name: Auditing
   items:
-    - name: Troubleshooting sync problems in audit logs
+    - name: Troubleshoot synchronization issues in audit logs
       href: auditing/setup-auditlog-troubleshooting.md  
 - name: Bulk deleting data
   items:
@@ -20,6 +20,8 @@
       href: dataverse-web-api-and-sdk/web-api-client-errors.md
 - name: Dynamics 365 App for Outlook
   items:
+    - name: A user doesn't appear in the All Eligible Users list
+      href: d365-app-outlook/a-user-disappears-all-eligible-users.md
     - name: App for Outlook didn't load completely
       href: d365-app-outlook/dynamics-365-app-outlook-did-not-load.md
     - name: App for Outlook doesn't appear within Outlook
@@ -32,31 +34,25 @@
       href: d365-app-outlook/trying-to-access-dynamics-365-app-for-outlook-from-email-do-not-recognize-error.md
     - name: Can't connect to Exchange message
       href: d365-app-outlook/cannot-connect-to-exchange-message-when-using-dynamics-365-app-for-outlook.md
-    - name: Can't load this app because email account isn't configured
-      href: d365-app-outlook/we-cannot-load-this-app.md
+    - name: Can't connect to the Dynamics 365 server
+      href: d365-app-outlook/cannot-connect-your-dynamics-365-server.md
     - name: Dynamics 365 App for Outlook is missing from the navigation pane
       href: d365-app-outlook/dynamics-365-app-for-outlook-is-missing.md
     - name: Email or appointment tracked by App for Outlook shows as Track pending
       href: d365-app-outlook/emails-tracked-by-dynamics-365-app-for-outlook-show-track-pending.md
-    - name: Error in App for Outlook
-      href: d365-app-outlook/error-when-opening-365-app-outlook.md
-    - name: Errors when opening App for Outlook
+    - name: Errors when opening Dynamics 365 App for Outlook
       href: d365-app-outlook/errors-when-opening-365-app-outlook.md
-    - name: Experience without Server-Side Synchronization
+    - name: '"Track and Set Regarding are currently disabled" notification'
       href: d365-app-outlook/experience-without-server-side-synchronization.md
-    - name: IncomingEmailRejected error when installing App for Outlook
-      href: d365-app-outlook/error-incomingemailrejected-install-dynamics-365-app-outlook.md
-    - name: IncomingEmailS2SApprovalNeeded error when installing App for Outlook
+    - name: IncomingEmailS2SApprovalNeeded or IncomingEmailRejected error during installation
       href: d365-app-outlook/error-install-dynamics-365-app-outlook.md
     - name: Item level Server-Side Synchronization issues
       href: d365-app-outlook/troubleshoot-item-level-server-side-synchronization-issues.md
     - name: Privilege or permission error when using Dynamics 365 App for Outlook
       href: d365-app-outlook/privilege-error-occurs-when-using-dynamics-365-app-for-outlook.md
-    - name: Something went wrong during sign-in when accessing App for Outlook
+    - name: '"Something went wrong during sign-in" error when accessing App for Outlook'
       href: d365-app-outlook/something-went-wrong-during-sign.md
-    - name: Something went wrong during sign-in when using App for Outlook
-      href: d365-app-outlook/something-went-wrong-during-sign-in.md
-    - name: The authentication was not successful
+    - name: '"The authentication was not successful error"'
       href: d365-app-outlook/the-authentication-was-not-successful.md
     - name: The view is not available when opening an email
       href: d365-app-outlook/the-view-is-not-available-error-when-opening-emails.md
@@ -66,16 +62,20 @@
       href: d365-app-outlook/buttons-such-as-track-and-set-regarding-are-missing.md
     - name: We're unable to connect to your server
       href: d365-app-outlook/we-are-unable-to-connect-to-your-dynamics-365-app-for-outlook-error.md
-    - name: You don't have required role or privilege
-      href: d365-app-outlook/you-do-not-have-required-role-privilege.md
+    - name: We can't load this app error when opening Dynamics 365 App for Outlook
+      href: d365-app-outlook/error-when-opening-365-app-outlook.md
     - name: You don't have the required role or privilege to complete this action
       href: d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md
 - name: Environment and app access issues
   items:
+    - name: Error code 2147812097 Invalid License when accessing an app module
+      href: environment-app-access/error-when-accessing-app-module.md
     - name: Troubleshoot user access issues for different environments
       href: environment-app-access/troubleshooting-user-needs-read-write-access-organization.md
     - name: Troubleshoot missing environments
-      href: environment-app-access/troubleshoot-missing-environments.md  
+      href: environment-app-access/troubleshoot-missing-environments.md
+    - name: We can't find any apps for your role
+      href: environment-app-access/we-cannot-find-any-apps-your-role.md
 - name: Email and Exchange Synchronization
   items:
     - name: 401 Unauthorized exception when using Server-Side Synchronization
@@ -166,10 +166,24 @@
       href: email-exchange-synchronization/exception-appears-server-side-sync.md
     - name: '"You cannot send email as the selected user" error'
       href: email-exchange-synchronization/cannot-send-email-as-another-user.md
+- name: Importing and exporting data
+  items:
+    - name: Data export option isn't available in Azure Application Insights
+      href: import-export-data/data-export-option-not-available-in-application-insights.md
+    - name: Troubleshoot Synapse Link profile creation issues
+      href: import-export-data/troubleshoot-synapse-link-profile-creation-issues.md
+- name: Microsoft Teams
+  items:
+    - name: Troubleshoot Microsoft Teams chat integration with Dynamics 365
+      href: microsoft-teams/troubleshoot-dynamics365-embedcollab-issues.md
 - name: Plug-in execution
   items:
     - name: Dataverse plug-ins
       href: plug-in-execution/dataverse-plug-ins-errors.md
+- name: Tables, Fields and Relationships
+  items:
+    - name: '"String or binary data would be truncated" error'
+      href: tables-fields-and-relationships/string-or-binary-data-would-be-truncated-error.md
 - name: User permissions
   items:
     - name: Clean up inherited access
@@ -178,50 +192,94 @@
       href: user-permissions/client-errors.md
 - name: Working with solutions
   items:
-    - name: Active unmanaged layer after importing a managed solution
-      href: working-with-solutions/unmanaged-active-layer-created-after-solution-import.md
     - name: '"An entitykey with the selected attributes already exists" error'
       href: working-with-solutions/entitykey-selected-attributes-already-exists.md
+    - name: '"Failed deleting solution" error due to circular dependencies between solutions'
+      href: working-with-solutions/circular-dependencies-between-solutions.md
+    - name: '"Full formXml is expected to create a form" error'
+      href: working-with-solutions/full-formxml-expected-to-create-form-error.md
+    - name: '"PrimaryName attribute not found for entity" error'
+      href: working-with-solutions/primaryname-attribute-not-found.md
+    - name: '"Solution cannot be deleted due to dependencies" error'
+      href: working-with-solutions/solution-cannot-be-deleted-due-to-dependencies.md
+    - name: '"You cannot delete this form because it is the only fallback form" error'
+      href: working-with-solutions/you-cannot-delete-this-form-only-fallback.md
+    - name: Active unmanaged layer after importing a managed solution
+      href: working-with-solutions/unmanaged-active-layer-created-after-solution-import.md
+    - name: Assembly version error when importing a solution
+      href: working-with-solutions/assembly-version-error-importing-dynamics-365-solution.md
+    - name: Can't import a solution or install an app
+      href: working-with-solutions/unable-import-dynamics-365-solution.md
     - name: Can't import solutions or publish changes
       href: working-with-solutions/cannot-import-solutions-publish-changes.md
     - name: Can't install managed solution previously deployed as unmanaged
-      href: working-with-solutions/failure-converting-to-managed-solution.md          
+      href: working-with-solutions/failure-converting-to-managed-solution.md
+    - name: Can't Uninstall Solution when removing solutions
+      href: working-with-solutions/cannot-uninstall-solution-error-when-deleting-solution.md
     - name: Changes not effective after solution import
       href: working-with-solutions/changes-not-effective-solution-import.md
     - name: Concurrent solution operation failures
       href: working-with-solutions/concurrent-solution-operation-failures.md
-    - name: Duplicate security roles after solution import
-      href: working-with-solutions/duplicate-security-roles.md
     - name: Data source references not updated after solution import
       href: working-with-solutions/dataverse-environment-variables.md
-    - name: '"Failed deleting solution" error due to circular dependencies between solutions'
-      href: working-with-solutions/circular-dependencies-between-solutions.md
-    - name: Form doesn't appear in target environment after import
-      href: working-with-solutions/form-not-appear-after-import.md
-    - name: '"Full formXml is expected to create a form" error'
-      href: working-with-solutions/full-formxml-expected-to-create-form-error.md
+    - name: Dependency error when uninstalling Portals solutions
+      href: working-with-solutions/error-when-uninstalling-portals-solutions.md
+    - name: Duplicate security roles after solution import
+      href: working-with-solutions/duplicate-security-roles.md
+    - name: Environment schema type mismatch warning during solution import
+      href: working-with-solutions/schemaType-mismatch-on-solution-import.md
+    - name: Error 80040203 (Invalid Argument)
+      href: working-with-solutions/error-code-80040203-invalid-argument-error.md
+    - name: Error 80048539 when importing a solution patch
+      href: working-with-solutions/error-code-80048539-when-importing-solution-patch.md
+    - name: Error 8004F042 when importing solution patch
+      href: working-with-solutions/error-code-8004f042-occurs.md
+    - name: working-with-solutions/Error when importing SavedQuery
+      href: working-with-solutions/error-importing-savedquery-in-dynamics-365.md
+    - name: Environment version mismatch warning during solution import
+      href: working-with-solutions/version-mismatch-on-solution-import.md
     - name: Failure when multiple publishers have shared components
       href: working-with-solutions/multiple-publisher-shared-component-failure.md
+    - name: Form doesn't appear in target environment after import
+      href: working-with-solutions/form-not-appear-after-import.md
+    - name: InvalidPluginAssemblyContent when importing a solution
+      href: working-with-solutions/invalidpluginassemblycontent-error-when-importing-solution.md
     - name: Label text doesn't display in other languages
       href: working-with-solutions/label-text-not-displayed.md
     - name: Maximum row size exceeds the allowed maximum
       href: working-with-solutions/maximum-row-size-exceeds.md
     - name: Missing dependencies during solution import
       href: working-with-solutions/missing-dependency-on-solution-import.md
+    - name: My Apps area is missing from navigation
+      href: working-with-solutions/my-apps-area-is-missing.md
     - name: New components don't appear in the app
       href: working-with-solutions/newly-added-components-dont-appear.md
-    - name: '"PrimaryName attribute not found for entity" error'
-      href: working-with-solutions/primaryname-attribute-not-found.md
-    - name: Solution import or app installation fails due to missing privileges
-      href: working-with-solutions/install-failure-priviledge-not-assigned.md
+    - name: Permission error 80040220 when importing or deleting solution
+      href: working-with-solutions/error-when-you-import-delete-solution.md
+    - name: Resources to help troubleshoot solution import errors
+      href: working-with-solutions/troubleshoot-solution-import-errors-in-dynamics-365.md
+    - name: Solution can't be deleted due to dependencies
+      href: working-with-solutions/solution-cannot-be-deleted.md
     - name: Solution checker enforcement in Managed Environments blocks or warns on import
       href: working-with-solutions/solution-checker-enforcement-import-issues.md
-    - name: '"Solution cannot be deleted due to dependencies" error'
-      href: working-with-solutions/solution-cannot-be-deleted-due-to-dependencies.md
+    - name: Solution import or app installation fails due to missing privileges
+      href: working-with-solutions/install-failure-priviledge-not-assigned.md
     - name: Solution upgrade fails due to a pending upgrade
       href: working-with-solutions/upgrade-fails-pending-upgrade.md
-    - name: '"You cannot delete this form because it is the only fallback form" error'
-      href: working-with-solutions/you-cannot-delete-this-form-only-fallback.md
+    - name: The import file is too large to upload
+      href: working-with-solutions/the-import-file-is-too-large-upload.md
+    - name: The import of solution failed when importing solution
+      href: working-with-solutions/the-import-of-solution-failed-error-when-importing-solution.md
+    - name: The record could not be deleted because of an association
+      href: working-with-solutions/the-record-could-not-be-deleted.md
+    - name: The solution file is invalid
+      href: working-with-solutions/the-solution-file-is-invalid.md
+    - name: The solution is already installed as a managed solution
+      href: working-with-solutions/the-solution-is-installed-a-managed-one.md
+    - name: There was an error calculating dependencies for this component
+      href: working-with-solutions/an-error-calculating-dependencies.md
+    - name: This solution package can't be imported
+      href: working-with-solutions/this-solution-package-cannot-be-imported.md
 - name: Support resources
   items:
     - name: Microsoft Dataverse forum

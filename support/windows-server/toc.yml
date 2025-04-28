@@ -13,8 +13,6 @@ items:
       href: ./active-directory/detect-and-recover-from-usn-rollback.md
     - name: Event 2089 if you don't back up a domain controller
       href: ./active-directory/ntds-replication-event-2089-backup-latency-interval.md
-    - name: How to remove orphaned domains
-      href: ./active-directory/remove-orphaned-domains.md
     - name: How to restore deleted user accounts and their groups
       href: ./active-directory/retore-deleted-accounts-and-groups-in-ad.md
     - name: No logon servers are available
@@ -23,12 +21,8 @@ items:
       href: ./active-directory/ad-database-offline-defragmentation.md
     - name: Relocate a SYSVOL tree
       href: ./active-directory/relocate-sysvol-tree-frs-for-replication.md
-    - name: RODC replicates passwords
-      href: ./active-directory/rodc-replicates-passwords-grant-incorrect-permissions.md
     - name: Syskey.exe utility is no longer supported
       href: ./active-directory/syskey-exe-utility-is-no-longer-supported.md
-    - name: SYSVOL folder isn't replicated between domain controllers
-      href: ./active-directory/file-replication-service-event-13552-13555.md
   - name: Active Directory database issues and domain controller boot failures
     items:
     - name: '"access is denied" error when replicating AD directory service'
@@ -87,10 +81,6 @@ items:
       href: ./active-directory/disable-and-replace-tls-1dot0.md
     - name: Error 0x80072EE7 when you perform Workplace Join
       href: ./active-directory/workplace-join-fail-error-0x80072ee7.md
-    - name: Fail to connect ADFS service
-      href: ./active-directory/connection-adfs-failed-set-msoladfscontex.md
-    - name: Fail to convert domain to Standard
-      href: ./active-directory/convert-domain-federated.md
     - name: Restore IIS and clean up Active Directory
       href: ./active-directory/restore-iis-clean-up-active-directory.md
     - name: Troubleshoot AD FS 2.0 error
@@ -159,14 +149,62 @@ items:
     items:
     - name: 'Troubleshooting guidance: Active Directory replication'
       href: ./active-directory/troubleshoot-adreplication-guidance.md
+    - name: Troubleshoot common Active Directory replication errors
+      href: ./active-directory/common-active-directory-replication-errors.md
     - name: Active Directory changes don't replicate
       href: ./active-directory/active-directory-changes-not-replicate.md
-    - name: Active Directory replication error 1256
-      href: ./active-directory/active-directory-replication-error-1256.md
+    - name: Active Directory installation fails
+      href: active-directory/creating-ntds-settings-object-for-ad-dc.md
     - name: Active Directory replication error 8304
       href: ./active-directory/active-directory-replication-error-8304.md
-    - name: Active Directory Replication Error 8451
+    - name: Active Directory replication error 1256
+      href: ./active-directory/active-directory-replication-error-1256.md
+    - name: Active Directory replication error 1396
+      href: ./active-directory/active-directory-replication-error-1396.md
+    - name: Active Directory replication error 1722
+      href: ./active-directory/replication-error-1722-rpc-server-unavailable.md
+    - name: Active Directory replication error 1818
+      href: ./active-directory/replication-error-1818.md
+    - name: Active Directory replication error 1908
+      href: active-directory/ad-replication-error-1908-not-find-domain-controller.md
+    - name: Active Directory replication error 2146893022
+      href: ./active-directory/replication-error-2146893022.md
+    - name: Active Directory replication error 5
+      href: ./active-directory/replications-fail-with-error-5.md
+    - name: Active Directory replication error 8333
+      href: ./active-directory/replication-error-8333.md
+    - name: Active Directory replication error 8409
+      href: ./active-directory/ad-replication-fails-error-8409.md
+    - name: Active Directory replication error 8418
+      href: ./active-directory/replication-error-8418.md
+    - name: Active Directory replication error 8446
+      href: ./active-directory/replication-error-8446.md
+    - name: Active Directory replication error 8451
       href: ./active-directory/active-directory-replication-error-8451.md
+    - name: Active Directory replication error 8452
+      href: ./active-directory/replication-error-8452.md
+    - name: Active Directory replication error 8453
+      href: ./active-directory/replication-error-8453.md
+    - name: Active Directory replication error 8456 or 8457
+      href: ./active-directory/replication-error-8456-8457.md
+    - name: Active Directory replication error 8461
+      href: ./active-directory/adrepl-troubleshoot-replication-error-8461.md
+    - name: Active Directory replication error 8464
+      href: ./active-directory/replication-error-8464.md
+    - name: Active Directory replication error 8477
+      href: ./active-directory/replication-error-8477.md
+    - name: Active Directory replication error 8545
+      href: ./active-directory/active-directory-replication-error-8545.md
+    - name: Active Directory replication error 8606
+      href: ./active-directory/replication-error-8606.md
+    - name: Active Directory replication error 8614
+      href: ./active-directory/replication-error-8614.md
+    - name: Active Directory replication Event ID 1311
+      href: ./active-directory/troubleshoot-event-id-1311-messages.md
+    - name: Active Directory replication Event ID 1388 or 1988
+      href: ./active-directory/active-directory-replication-event-id-1388-1988.md
+    - name: Active Directory replication Event ID 1865
+      href: ./active-directory/active-directory-replication-not-work-event-1865.md
     - name: Active Directory replication Event ID 1925
       href: ./active-directory/active-directory-replication-event-id-1925-dns-lookup.md
     - name: Active Directory replication Event ID 2042
@@ -175,24 +213,10 @@ items:
       href: ./active-directory/active-directory-replication-event-id-2087.md
     - name: Active Directory replication Event ID 2108 and 1084
       href: ./active-directory/replication-event-id-2108-1084.md
-    - name: Active Directory replication Event ID 1388 or 1988
-      href: ./active-directory/active-directory-replication-event-id-1388-1988.md
     - name: AD operations fail with Win32 error 1127
       href: ./active-directory/replication-error-1127.md
     - name: AD operations fail with Win32 error 8240
       href: ./active-directory/active-directory-replication-error-8240.md
-    - name: AD replication fails with error 8409
-      href: ./active-directory/ad-replication-fails-error-8409.md
-    - name: AD replication isn't working and event 1865
-      href: ./active-directory/active-directory-replication-not-work-event-1865.md
-    - name: AD replications fail with error 1818
-      href: ./active-directory/replication-error-1818.md
-    - name: AD replications fail with error 5
-      href: ./active-directory/replications-fail-with-error-5.md
-    - name: AD replications fail with error 8333
-      href: ./active-directory/replication-error-8333.md
-    - name: AD replications fail with error 8477
-      href: ./active-directory/replication-error-8477.md
     - name: Can't change replication scope of AD-integrated zone
       href: ./active-directory/change-integrated-dns-zone-replication-scope.md
     - name: Can't delete AD objects with many links
@@ -227,40 +251,12 @@ items:
       href: ./active-directory/replication-error-8524.md
     - name: Orphaned child domain controller is not replicated
       href: ./active-directory/orphaned-child-domain-isnt-replicated.md
-    - name: Replication error 1722
-      href: ./active-directory/replication-error-1722-rpc-server-unavailable.md
-    - name: Replication error 2146893022
-      href: ./active-directory/replication-error-2146893022.md
-    - name: Replication error 8452
-      href: ./active-directory/replication-error-8452.md
-    - name: Replication error 8453
-      href: ./active-directory/replication-error-8453.md
-    - name: Replication error 8614
-      href: ./active-directory/replication-error-8614.md
-    - name: Troubleshoot Active Directory replication error 1396
-      href: ./active-directory/active-directory-replication-error-1396.md
-    - name: Troubleshoot AD replication error 8446
-      href: ./active-directory/replication-error-8446.md
-    - name: Troubleshoot AD replication error 8464
-      href: ./active-directory/replication-error-8464.md
-    - name: Troubleshoot AD replication error 8545
-      href: ./active-directory/active-directory-replication-error-8545.md
-    - name: Troubleshoot common Active Directory replication errors
-      href: ./active-directory/common-active-directory-replication-errors.md
+    - name: RODC replicates passwords
+      href: active-directory/rodc-replicates-passwords-grant-incorrect-permissions.md
     - name: Troubleshoot domain controller replication error 1727
       href: ./active-directory/remote-procedure-call-failed-and-did-not-execute-error.md
-    - name: Troubleshoot Event ID 1311 messages
-      href: ./active-directory/troubleshoot-event-id-1311-messages.md
     - name: Troubleshoot Jet database errors and recovery steps
       href: ./active-directory/jet-database-errors-recovery-steps.md
-    - name: Troubleshoot replication error 8418
-      href: ./active-directory/replication-error-8418.md
-    - name: Troubleshoot replication error 8461
-      href: ./active-directory/adrepl-troubleshoot-replication-error-8461.md
-    - name: Troubleshoot replication error 8606
-      href: ./active-directory/replication-error-8606.md
-    - name: Troubleshoot replication error 8456 or 8457
-      href: ./active-directory/replication-error-8456-8457.md
     - name: Use Ntdsutil to find and clean up duplicate security identifiers
       href: ./active-directory/ntdsutil-find-clean-duplicate-security-identifiers.md
   - name: Active Directory Rights Management Services
@@ -349,34 +345,46 @@ items:
     items:
     - name: 'Troubleshooting guidance: Active Directory domain join'
       href: ./active-directory/active-directory-domain-join-troubleshooting-guidance.md
-    - name: Active Directory installation fails
-      href: ./active-directory/creating-ntds-settings-object-for-ad-dc.md
     - name: Cannot contect to the Internet or the domain
       href: ./active-directory/cannot-connect-internet-domain.md
     - name: Default limit to workstation numbers
       href: ./active-directory/default-workstation-numbers-join-domain.md
+    - name: Error 0x6D9 "No more endpoints available from the endpoint mapper"
+      href: ./active-directory/domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md
+    - name: Error 0x40 "The specified network name is no longer available"
+      href: ./active-directory/domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md
+    - name: Failure when you use an existing computer account to join a domain
+      href: ./active-directory/failure-when-you-use-an-existing-computer-account-to-join-a-domain.md
+    - name: Error 0x5 Access Denied when you rename a computer
+      href: ./active-directory/error-0x5-access-denied-rename-computer.md
+    - name: Error code 0x54b
+      href: active-directory/error-code-0x54b.md
+    - name: Error code 0x0000232A
+      href: active-directory/error-code-0x0000232a.md
+    - name: Error code 0x569
+      href: ./active-directory/error-0x569-not-granted-logon-type.md
+    - name: Error code 0xa8b
+      href: ./active-directory/error-0xa8b-resolve-dns-fail.md
     - name: Netlogon service doesn't keep settings after in-place upgrade
       href: ./active-directory/netlogon-service-not-start-automatically.md
+    - name: Status code 0x216d
+      href: ./active-directory/status-code-0x216d-not-joined-domain.md
+    - name: Status code 0x32 and you can't join a domain
+      href: ./active-directory/status-code-0x32-cannot-join-domain.md
+    - name: Status code 0x3a
+      href: ./active-directory/status-code-0x3a-server-not-perform-operation.md
+    - name: 'Status code 0x6ba: The RPC server is unavailable'
+      href: ./active-directory/status-code-0x6ba-rpc-server-unavailable.md
+    - name: Status code 0x6bf or 0xc002001c
+      href: ./active-directory/status-code-0x6bf-0xc002001c.md
     - name: Support boundaries for Active Directory over NAT
       href: ./active-directory/support-for-active-directory-over-nat.md
-    - name: Sync Center syncs offline files very slow
-      href: ./active-directory/sync-center-slow-syncing-of-offline-files.md
     - name: '"The account is not authorized to login from this station" error'
       href: ./active-directory/account-not-authorized-login-from-this-station.md
-    - name: Troubleshoot domain controller location issues
-      href: ./active-directory/troubleshoot-domain-controller-location-issues.md
     - name: Troubleshoot errors when joining computers to a domain
       href: ./active-directory/troubleshoot-errors-join-computer-to-domain.md
-    - name: Troubleshooting AD Replication error 1908
-      href: ./active-directory/ad-replication-error-1908-not-find-domain-controller.md
-    - name: Unable to join computers to a domain
-      href: ./active-directory/cannot-join-computer-to-domain.md
-    - name: Using domain join UI to join a computer to AD domain fails
-      href: ./active-directory/fail-to-join-computer-to-ad-domain.md
   - name: LDAP configuration and interoperability
     items:
-    - name: DCs can't be located and high-rate outbound sessions
-      href: ./active-directory/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Enable LDAP over SSL
       href: ./active-directory/enable-ldap-over-ssl-3rd-certification-authority.md
     - name: How to disable TLS 1.3 for AD and LDAP
@@ -421,6 +429,8 @@ items:
       href: ./active-directory/access-denied-when-joining-computers.md
     - name: Account-identifier allocator fails to initialize
       href: ./active-directory/event-16650-account-identifier-allocator-not-initialize.md
+    - name: Accounts have the lastLogonTimestamp value set to future
+      href: ./active-directory/accounts-lastlogontimestamp-future-time.md
     - name: Add special groups to built-in groups
       href: ./active-directory/add-special-groups-to-built-in-groups.md
     - name: All members of a group may not be returned
@@ -431,6 +441,8 @@ items:
       href: ./active-directory/fail-to-access-data-from-source-control-explorer.md
     - name: Can't add user or object to directory service
       href: ./active-directory/cannot-add-user-object-differ-by-diacritic-mark-character.md
+    - name: Can't edit or delete an AD object
+      href: ./active-directory/cannot-edit-delete-ad-object-error-sam.md
     - name: Can't start Active Directory Users and Computers Tool
       href: ./active-directory/cannot-start-active-directory-users-and-computers-tool.md
     - name: Compatibility with user accounts ending with the dollar sign
@@ -525,6 +537,8 @@ items:
       href: ./active-directory/configure-authoritative-time-server.md
     - name: How Windows Time service treats leap second
       href: ./active-directory/time-service-treats-leap-second.md
+    - name: Secure Time Seeding recommendations for Windows Server
+      href: ./active-directory/sts-recommendations-for-windows-server.md
     - name: Support boundary for high-accuracy time
       href: ./active-directory/support-boundary-high-accuracy-time.md
     - name: Support for the leap second
@@ -1503,6 +1517,8 @@ items:
       href: ./networking/ntfrs-error-event-13559-replication-stops.md
     - name: Recovering missing FRS objects and attributes in AD
       href: ./networking/recovering-missing-frs-objects-attributes-ad.md
+    - name: SYSVOL folder isn't replicated between domain controllers
+      href: networking/file-replication-service-event-13552-13555.md
     - name: Troubleshoot the File Replication Service
       href: ./networking/troubleshoot-file-replication-service-ditributed-file-system.md
     - name: Use BurFlags to reinitialize FRS
@@ -1779,16 +1795,10 @@ items:
     items:
     - name: 'Troubleshooting guidance: stop errors and unexpected restart'
       href: ./performance/troubleshoot-stop-errors-guidance.md
-    - name: Disable or enable Dr. Watson program
-      href: ./performance/disable-enable-dr-watson-program.md
     - name: Error 0x00000007B after you reconfigure hardware devices
       href: ./performance/inaccessible-boot-device-stop-error.md
     - name: Error 0x000000D1 when you enabled storage controller
       href: ./performance/bugcheck-run-stop-error-0x000000d1.md
-    - name: Error 0x00000019 when NTFS creates 8.3 formatted name
-      href: ./performance/stop-error-code-0x00000019.md
-    - name: Fail to access shared folder from applications
-      href: ./performance/accessing-shared-folder-from-application-fails.md
     - name: How to use Driver Verifier to identify issues
       href: ./performance/use-driver-verifier-to-identify-issues.md
     - name: Memory dump file options
@@ -1797,20 +1807,10 @@ items:
       href: ./performance/stop-code-driver-verifier-dma-violation.md
     - name: Stop error code 0x0000007F
       href: ./performance/stop-error-code-0x0000007F.md
-    - name: Stop Error "DRIVER_IRQL_NOT_LESS_OR_EQUAL"
-      href: ./performance/stop-error-driver-irql-not-less-or-equal.md
     - name: Stop error 7E on a server running NFS
       href: ./performance/stop-error-7e-nfs.md
-    - name: Stop error 0x109 on a VMWare virtual machine
-      href: ./performance/stop-error-0x109-on-VMWare-virtual-machine.md
     - name: Stop 7F, 0x00000008 (double-fault) error
       href: ./performance/stop-7f-0x00000008-double-fault-error.md
-    - name: '"Stop 0x0000000A" error for processor resumes from C1 idle state'
-      href: ./performance/stop-0x0000000a-error-processor-c1-idle-state.md
-    - name: Toggle Terminal Services to Application Server mode
-      href: ./performance/toggle-terminal-services-application-server-mode.md
-    - name: Troubleshoot the "STOP 0xC000021A" error
-      href: ./performance/troubleshoot-stop-0xc000021a-error.md
     - name: 'Troubleshoot stop errors: Best practices and dump configuration recommendations'
       href: ./performance/troubleshoot-stop-errors-best-practices-dump-configuration-recommendations.md
     - name: Troubleshoot unexpected reboots using system event logs
@@ -2001,6 +2001,8 @@ items:
       href: ./printing/add-print-directory-feature-for-folders.md
     - name: How to Print to File without user intervention
       href: ./printing/print-to-file-without-user-intervention.md
+    - name: Printer not responding
+      href: ./printing/printer-not-responding.md
     - name: Servers can't be used as print servers
       href: ./printing/servers-cant-be-used-print-servers.md
     - name: Standard port monitor for TCP/IP
@@ -2035,6 +2037,8 @@ items:
     items:
     - name: Troubleshoot printing and best practices
       href: ./printing/troubleshoot-printing-and-best-practices.md
+    - name: Troubleshoot printing issues caused by Print Spooler service not running
+      href: ./printing/print-spooler-service-not-running.md
     - name: Troubleshoot printing known issues
       href: ./printing/troubleshoot-printing-known-issues.md
     - name: Troubleshoot printing scenarios
@@ -2101,6 +2105,8 @@ items:
       href: ./remote/terminal-server-startup-connection-application.md
     - name: The connection settings stored in the Default.rdp file
       href: ./remote/remote-desktop-protocol-settings.md
+    - name: Unable to install RDS deployment or add RDS roles
+      href: remote/unable-to-install-rds-deployment-or-add-rds-roles.md
     - name: Updates for Remote Desktop Services
       href: ./remote/remote-desktop-services-updates.md
   - name: Application compatibility
@@ -2119,8 +2125,6 @@ items:
       href: ./remote/0xc000035b-when-you-use-lmcompatibility.md
   - name: Certificate management
     items:
-    - name: Error messages when connecting to a Terminal server
-      href: ./remote/error-when-connecting-terminal-server.md
     - name: RDS Connection Broker or RDMS fails
       href: ./remote/rds-connection-broker-or-rdms-fails-caused-by-disabled-tls-10.md
     - name: Use custom server authentication certificate for TLS over RDS
@@ -2148,7 +2152,7 @@ items:
     - name: Local Policy not permit to Log On Interactively
       href: ./remote/local-policy-not-permit-log-on-interactively.md
     - name: New user fails to log on through RDP
-      href: ./remote/not-enough-storage-available-to-process-command.md    
+      href: ./remote/not-enough-storage-available-to-process-command.md
     - name: Registry Size Limit (RSL) functionality is still be honored
       href: ./remote/honors-registry-size-limit-functionality-key-set.md
     - name: Remote Control prompts for user permission
@@ -2317,6 +2321,8 @@ items:
       href: ./remote/terminal-server-commands-msg.md
     - name: Terminal Server User's Home Directory is not set correctly
       href: ./remote/terminal-server-users-home-directory-not-set-correctly.md
+    - name: Troubleshoot unexpected RDS session locks or disconnections
+      href: ./remote/troubleshoot-unexpected-rds-session-locks-or-disconnections.md
     - name: User can't authenticate or must authenticate twice
       href: ./remote/cannot-authenticate-must-authenticate-twice.md
     - name: '"Remote Desktop Service is currently busy" message'
@@ -2409,8 +2415,6 @@ items:
       href: ./setup-upgrade-and-drivers/event-307-and-304-logged-for-deploying.md
     - name: Fail to run applications on Windows Server Core
       href: ./setup-upgrade-and-drivers/subsystem-needed-support-image-type-not-present.md
-    - name: How to perform an in-place/repair upgrade
-      href: ./setup-upgrade-and-drivers/repair-or-in-place-upgrade.md
     - name: In-place upgrade hangs at black screen
       href: ./setup-upgrade-and-drivers/in-place-upgrade-hangs-black-screen.md
     - name: Integrate Windows Server Update Services (WSUS) 3.0 into Server Manager
@@ -2583,10 +2587,16 @@ items:
       href: ./system-management-components/schedule-server-process.md
     - name: Scheduled task may not run upon reboot
       href: ./system-management-components/scheduled-task-not-run-upon-reboot-machine-off.md
+    - name: Scheduled tasks fail with "Task schedular service is not available"
+      href: ../windows-client/system-management-components/task-schedular-service-is-not-available.md?context=/troubleshoot/windows-server/context/context
     - name: Scheduled tasks reference incorrect user profile paths
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
     - name: Troubleshoot issues with scheduled tasks not running
-      href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md      
+      href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md
+    - name: Troubleshoot issues with the Task Scheduler service not starting
+      href: ../windows-client/system-management-components/task-scheduler-service-not-start.md?context=/troubleshoot/windows-server/context/context
+    - name: Resolve Task Scheduler "Access Denied" error
+      href: ./system-management-components/troubleshooting-task-scheduler-access-denied-error.md
   - name: WinRM
     items:
     - name: Error 0x80090322 when connecting PowerShell to remote server via WinRM
@@ -2641,6 +2651,8 @@ items:
       href: ./user-profiles-and-logon/interactive-logon-isnt-allowed.md
     - name: Turn on automatic logon
       href: ./user-profiles-and-logon/turn-on-automatic-logon.md
+    - name: User may not be able to Change Their Password
+      href: user-profiles-and-logon/user-must-change-password-at-next-logon-setting.md
     - name: User profiles may fail to load
       href: ./user-profiles-and-logon/user-profiles-may-fail-load.md
     - name: Windows logs on and logs off immediately
@@ -2669,8 +2681,6 @@ items:
       href: ./user-profiles-and-logon/user-profile-cannot-loaded-event-1509.md
     - name: Troubleshoot user profiles with events
       href: ./user-profiles-and-logon/troubleshoot-user-profiles-events.md
-    - name: User may not be able to Change Their Password
-      href: ./user-profiles-and-logon/user-must-change-password-at-next-logon-setting.md
 - name: Virtualization
   items:
   - name: Virtualization
@@ -2861,6 +2871,8 @@ items:
       href: ./windows-security/trust-between-windows-ad-domain-not-work-correctly.md
     - name: How to recover from a Golden gMSA attack
       href: ./windows-security/recover-from-golden-gmsa-attack.md
+    - name: How to remove orphaned domains
+      href: windows-security/remove-orphaned-domains.md
     - name: Overlapping Forest Names cause problems
       href: ./windows-security/overlapping-forest-names-problem-forest-trust-established.md
     - name: Security identifier could not be resolved
@@ -2941,6 +2953,10 @@ items:
       href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md
   - name: Netlogon, secure channel, DC Locator
     items:
+    - name: DCs can't be located and high-rate outbound sessions
+      href: user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md
+    - name: Troubleshoot domain controller location issues
+      href: windows-security/troubleshoot-domain-controller-location-issues.md
     - name: 'Troubleshooting guidance: Secure channel'
       href: ./windows-security/broken-trust-relationship-domain-joined-device-its-domain-secure-channel-issues.md
     - name: Gather information for secure channel issues
@@ -3047,6 +3063,8 @@ items:
       href: ./installing-updates-features-roles/block-user-access-windows-update.md
     - name: Re-register Windows client/server in WSUS
       href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
+    - name: Unexpected automatic update when it's disabled by Group Policy
+      href: installing-updates-features-roles/unexpected-automatic-update-when-disabled-by-group-policy.md
     - name: Why you may be prompted to restart your computer
       href: ./installing-updates-features-roles/why-prompted-restart-computer.md
     - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
@@ -3055,12 +3073,18 @@ items:
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
   - name: Windows Update fails - installation stops with error
     items:
+    - name: Troubleshoot Windows Update error 0x80070002
+      href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
     - name: CBS.log file contains entries that some files aren't repaired
       href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
     - name: Description of System File Checker (Sfc.exe)
       href: ./installing-updates-features-roles/system-file-checker.md
+    - name: Troubleshoot Windows Update error 0x8024002E
+      href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
+    - name: Troubleshoot Windows Update error 0x80070490
+      href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
     - name: Error 0x800f0831 when installing Windows updates
@@ -3127,6 +3151,8 @@ items:
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
     - name: Scripts to view the certificate information in the msDS-KeyCredentialLink attribute
       href: ./support-tools/script-to-view-msds-keycredentiallink-attribute-value.md
+    - name: 'Scripts to check and clean up the AGPM archive'
+      href: support-tools/scripts-check-and-cleanup-the-agpm-archive.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)

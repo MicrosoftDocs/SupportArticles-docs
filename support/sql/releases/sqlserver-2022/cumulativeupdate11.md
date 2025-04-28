@@ -26,7 +26,7 @@ This article describes Cumulative Update package 11 (CU11) for Microsoft SQL Ser
 
 SQL Server 2022 CU10 introduced [fix 2714261](cumulativeupdate10.md#2714261), which causes an issue with `sys.dm_hadr_database_replica_cluster_states` for read-scale availability groups that results in the **Availability Databases** folder in SQL Server Management Studio (SSMS) not showing the databases in the availability group (AG). To mitigate this issue, roll back the patch to CU9.
 
-Microsoft is working on a fix for this issue and it will be available in a future CU.
+This issue is fixed in [SQL Server 2022 CU12](cumulativeupdate12.md#2923126).
 
 ## Improvements and fixes included in this update
 

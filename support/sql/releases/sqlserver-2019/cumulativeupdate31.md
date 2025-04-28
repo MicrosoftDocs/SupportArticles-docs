@@ -25,11 +25,7 @@ This article describes Cumulative Update package 31 (CU31) for Microsoft SQL Ser
 
 ### Issue one: Access violation when session is reset
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
-
-- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
-
-- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
 
 ### Issue two: Patching a read-scale availability group (Windows or Linux) causes the availability group on the patched replica to be removed
 
@@ -46,6 +42,8 @@ When the AG is dropped after patching, you'll see the error message in the [SQL 
 ```
 
 After the patch is installed, the metadata is removed and you must re-create the AG on the patched replica. If the AG replicas have mismatched SQL Server versions (for example, the primary replica is running SQL Server 2019 CU30 and the secondary replica is running SQL Server 2019 CU31), you can't re-create the AG on the replica with the missing metadata (the secondary replica). In order to add the AG again, you must uninstall the patch on the secondary replica first and then add the AG again.
+
+This issue is fixed in [SQL Server 2019 CU32](cumulativeupdate32.md#3907024).
 
 #### Example
 

@@ -1,7 +1,7 @@
 ---
 title: Error code 8005E276 when you test and enable a mailbox
 description: Provides a resolution for error code 8005E276 that occurs when you test and enable a mailbox for server-side synchronization.
-ms.date: 05/13/2024
+ms.date: 04/17/2025
 ms.custom: sap:Email and Exchange Synchronization\Set up and configuration of server-side synchronization
 author: rahulmital
 ms.author: rahulmital
@@ -45,4 +45,3 @@ As an administrator, follow these steps to make sure the user has a valid Exchan
    1. Open the mailbox record if it isn't already open.
    2. Select the **Test & Enable Mailbox** button.
    3. Wait for the "Test & Enable" process to complete. If the test results aren't **Success**, review the **Alerts** area within the mailbox record.
-

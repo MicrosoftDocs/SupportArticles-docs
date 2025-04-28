@@ -37,6 +37,8 @@ If you try to create a new external table, you receive the following error messa
 
 To work around this issue, you can uninstall this cumulative update or add the Driver keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
 
+This issue is fixed in [SQL Server 2022 CU5](cumulativeupdate5.md#2398344).
+
 ### Issue two
 
 After you install this cumulative update, you may receive incorrect results from queries that meet all of the following conditions:
@@ -60,6 +62,8 @@ After you install this cumulative update, you may receive incorrect results from
     > The `IN` clause that has a single value doesn't have this issue.
 
 To work around this issue, you can either uninstall this cumulative update or enable trace flag (TF) 13166 and then run `DBCC FREEPROCCACHE`.
+
+This issue is fixed in [SQL Server 2022 CU5](cumulativeupdate5.md#2417020).
 
 ## Improvements and fixes included in this update
 

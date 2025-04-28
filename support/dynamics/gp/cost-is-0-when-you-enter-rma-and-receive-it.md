@@ -3,7 +3,7 @@ title: Cost is 0 in Returns Management if enter and receive RMA
 description: Describes steps to resolve the issue where the cost is $0.00 on a received RMA in Returns Management in Microsoft Dynamics GP.
 ms.reviewer: theley, beckyber
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Receivables Management
 ---
 # Cost is $0.00 in Returns Management when you enter an RMA and receive it in Microsoft Dynamics GP
