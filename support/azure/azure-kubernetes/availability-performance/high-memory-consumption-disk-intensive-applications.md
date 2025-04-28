@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot High Memory Consumption in Disk-Intensive Applications
 description: Helps identify and resolve excessive memory usage due to Linux kernel behaviors on Kubernetes pods.
-ms.date: 04/21/2025
+ms.date: 04/28/2025
 ms.reviewer: claudiogodoy, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
@@ -26,6 +26,8 @@ The following table outlines the common symptoms of high memory consumption:
 | --- | --- |
 | The [working set](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory) metric too high | This issue occurs when there is a significant difference between the [working set](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory) metric reported by the [Kubernetes Metrics API](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server) and the actual memory consumed by an application. |
 | Out-of-memory (OOM) kill | This issue indicates memory issues exist on your pod. |
+| Increased memory usage after heavy disk activity | After operations such as backups, large file reads/writes, or data imports, memory consumption rises. |
+| Memory usage grows indefinitely | The pod's memory consumption increases over time without reducing, like a memory leak, even if the application itself isn’t leaking memory.|
 
 ## Troubleshooting checklist
 
