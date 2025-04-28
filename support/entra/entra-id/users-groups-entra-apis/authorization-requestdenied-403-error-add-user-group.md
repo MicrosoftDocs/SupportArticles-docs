@@ -69,7 +69,7 @@ Make sure that the group you trying to modify is supported by Microsoft Graph.
 
     > [!NOTE]
     > - Group type can't be changed after creation. For more information, see [Edit group settings](/entra/fundamentals/how-to-manage-groups#edit-group-settings).
-    > - The membership of a dynamic group (groupTypes contains "DynamicMembership") can't be managed through Microsoft Graph.
+    > - The membership of a dynamic group (**groupTypes** contains "DynamicMembership") can't be managed through Microsoft Graph.
 
 ### Step 2: Verify required permissions
 
