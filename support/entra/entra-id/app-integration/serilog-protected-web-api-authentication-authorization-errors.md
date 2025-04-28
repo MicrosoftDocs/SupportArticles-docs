@@ -12,7 +12,7 @@ When a web API application calls a web API that's protected with Microsoft Entra
 
 ## Net6WebAPILogging sample application
 
-This sample web API application assumes you already have a web API application registered in Microsoft Entra ID. It uses Microsoft .NET 6 Framework and [Microsoft Identity Web](/entra/msal/dotnet/microsoft-identity-web/) NuGet package. For more information about how to protect an ASP.NET Core Web API application with Microsoft Entra ID, see [Tutorial: Build and secure an ASP.NET Core web API with the Microsoft identity platform](/entra/identity-platform/tutorial-web-api-dotnet-core-build-app).
+This sample web API application assumes you already have a web API registered in Microsoft Entra ID. It uses Microsoft .NET 6 Framework and [Microsoft Identity Web](/entra/msal/dotnet/microsoft-identity-web/) NuGet package.
 
 It uses the following methods to set and collect logs for JwtBearer events:
 
@@ -171,6 +171,10 @@ finally
     Log.CloseAndFlush();
 }
 ```
+
+## References
+
+[Tutorial: Build and secure an ASP.NET Core web API with the Microsoft identity platform](/entra/identity-platform/tutorial-web-api-dotnet-core-build-app)
 
 [!INCLUDE [Azure Help Support](../../../includes/third-party-disclaimer.md)]
 
