@@ -38,6 +38,6 @@ The IBM Personal Communications terminal emulator requires access to HLLAPI DLLs
 
 To resolve this issue, download and install the [64-bit version of IBM Personal Communications](https://www.ibm.com/docs/personal-communications) that includes the required HLLAPI DLLs. Ensure that you select the appropriate DLL file in the **Open terminal session** action.
 
-For more information, see [Terminal emulation](/power-automate/desktop-flows/actions-reference/terminalemulation).
+For more information, see [Terminal emulation actions](/power-automate/desktop-flows/actions-reference/terminalemulation).
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
