@@ -45,7 +45,7 @@ Local packet loss is fully observable and can be caused by various internal and 
 
 ## Common causes of remote packet loss
 
-Remote packet loss isn't directly observable to the local machine when the packet is dropped. The IP (Internet Protocol) protocol and most layers below it are "best effort" and not reliable. The [end-to-end principle](https://en.wikipedia.org/wiki/End-to-end_principle) requires endpoints to implement reliability within their protocols if resilience to packet loss is required. In some scenarios, the network or remote endpoint sends a protocol-specific error message indicating the reason for the loss. However, in many cases, the only indication of packet loss is a lack of response.
+Remote packet loss isn't directly observable to the local machine when the packet is dropped. Internet Protocol (IP) and most layers below it are "best effort" and not reliable. The [end-to-end principle](https://en.wikipedia.org/wiki/End-to-end_principle) requires endpoints to implement reliability within their protocols if resilience to packet loss is required. In some scenarios, the network or remote endpoint sends a protocol-specific error message indicating the reason for the loss. However, in many cases, the only indication of packet loss is a lack of response.
 
 - Congestion
 
