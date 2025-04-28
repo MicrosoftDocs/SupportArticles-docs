@@ -294,7 +294,7 @@
       - name: Add an owner to an application
         href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
       - name: NoPermissionsInAccessToken when calling me endpoint
-        href: error-call-me-endpoint-microsoft-graph.md
+        href: users-groups-entra-apis/error-call-me-endpoint-microsoft-graph.md
    - name: Problem with using the Graph SDK - libraries
      items:
       - name: Python scripts making requests are detected as web crawlers
