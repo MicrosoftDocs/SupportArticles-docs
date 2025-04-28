@@ -32,7 +32,7 @@ Exception of type 'Microsoft.Flow.RPA.Desktop.Modules.TerminalEmulation.Common.T
 
 ## Cause
 
-The IBM Personal Communications terminal emulator requires access to HLLAPI DLLs for proper operation. However, the DLLs aren't supported, leading to communication issues with the emulator.
+The IBM Personal Communications terminal emulator requires access to HLLAPI DLLs for proper operation. However, the HLLAPI implementation in IBM PComm v14 32-bit may produce an error. This issue appears to stem from a problem with their implementation.
 
 ## Resolution
 
