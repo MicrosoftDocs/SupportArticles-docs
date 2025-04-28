@@ -226,6 +226,8 @@
     href: vm-cannot-upgrade-64-vcpu.md
   - name: Known errors and issues
     items:
+    - name: Error code 0x80070002
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x8024002E
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070490

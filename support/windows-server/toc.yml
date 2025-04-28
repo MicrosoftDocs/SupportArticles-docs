@@ -359,6 +359,8 @@ items:
       href: ./active-directory/error-0x5-access-denied-rename-computer.md
     - name: Error code 0x54b
       href: active-directory/error-code-0x54b.md
+    - name: Error code 0x0000232A
+      href: active-directory/error-code-0x0000232a.md
     - name: Error code 0x569
       href: ./active-directory/error-0x569-not-granted-logon-type.md
     - name: Error code 0xa8b
@@ -537,6 +539,8 @@ items:
       href: ./active-directory/configure-authoritative-time-server.md
     - name: How Windows Time service treats leap second
       href: ./active-directory/time-service-treats-leap-second.md
+    - name: Secure Time Seeding recommendations for Windows Server
+      href: ./active-directory/sts-recommendations-for-windows-server.md
     - name: Support boundary for high-accuracy time
       href: ./active-directory/support-boundary-high-accuracy-time.md
     - name: Support for the leap second
@@ -3069,6 +3073,8 @@ items:
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
   - name: Windows Update fails - installation stops with error
     items:
+    - name: Troubleshoot Windows Update error 0x80070002
+      href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
     - name: CBS.log file contains entries that some files aren't repaired
