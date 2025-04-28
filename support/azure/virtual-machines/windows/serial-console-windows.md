@@ -33,17 +33,18 @@ For serial console documentation for Linux, see [Azure Serial Console for Linux]
 > [!NOTE]
 > Serial Console is compatible with a managed boot diagnostics storage account.
 
-## Prerequisites
+## Prerequisites to access the Azure Serial Console
 
-* Your VM or virtual machine scale set instance must use the resource management deployment model. Classic deployments aren't supported.
+To access the Serial Console on your VM or virtual machine scale set instance, you will need the following:
 
-* Your account that uses serial console must have the [Virtual Machine Contributor role](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) for the VM and the [boot diagnostics](boot-diagnostics.md) storage account
+- Boot diagnostics must be enabled for the VM
+- A user account that uses password authentication must exist within the VM. You can create a password-based user with the [reset password](/azure/virtual-machines/extensions/vmaccess#reset-password) function of the VM access extension. Select **Reset password** from the **Help** section.
+- The Azure account accessing Serial Console must have [Virtual Machine Contributor role](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) for both the VM and the [boot diagnostics](boot-diagnostics.md) storage account
+- Classic deployments aren't supported. Your VM or virtual machine scale set instance must use the Azure Resource Manager deployment model.
+- Serial Console is not supported when the storage account has **Allow storage account key access** disabled.
 
-* Your VM or virtual machine scale set instance must have a password-based user. You can create one with the [reset password](/azure/virtual-machines/extensions/vmaccess#reset-password) function of the VM access extension. Select **Reset password** from the **Help** section.
-
-* The VM for virtual machine scale set instance must have [boot diagnostics](boot-diagnostics.md) enabled.
-
-    :::image type="content" source="media/serial-console-windows/diagnostics-settings.png" alt-text="Screenshot of the Boot diagnostics option under the Diagnostics settings.":::
+> [!IMPORTANT]
+> Serial Console is now compatible with [managed boot diagnostics storage accounts](boot-diagnostics.md) and custom storage account firewalls.
 
 ## Enable Serial Console functionality for Windows Server
 
