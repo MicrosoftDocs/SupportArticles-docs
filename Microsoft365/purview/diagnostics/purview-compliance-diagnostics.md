@@ -1,5 +1,5 @@
 ---
-title: Self-Help Diagnostics for Issues in Microsoft Purview
+title: Self-Help Diagnostics for Microsoft Purview
 description: Describes how to run self-help diagnostics to find and resolve issues that affect compliance solutions.
 author: cloud-writer
 ms.author: meerak
@@ -10,17 +10,17 @@ ms.custom:
   - sap:Microsoft Purview Compliance
   - Microsoft Purview
   - CSSTroubleshoot
-  - CI 2772, 1283
+  - CI 2772, 1283, 5607
 ms.reviewer: shadans, sathyana, meerak, v-shorestris
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 04/04/2025
+ms.date: 04/28/2025
 ---
 
 # Self-help diagnostics for Microsoft Purview
 
-<!-- This article has been reviewed and approved for the specific use of global admin perms.  -->
+<!-- This article has been reviewed and approved for the specific use of global admin perms. -->
 
 You can run diagnostics to identify and resolve issues in Microsoft Purview. The diagnostics offer insights into known issues and provide instructions to fix them. Although the diagnostics can fix some configuration issues, they don't make changes to your tenant without your consent.
 
@@ -53,7 +53,7 @@ You can find these diagnostics on the following portal pages:
 
 ### Available diagnostics
 
-The following table lists the available diagnostics. You can access diagnostics by selecting the associated link in the third column. When you're prompted, sign in to the Microsoft Purview portal.
+The following table lists the available diagnostics on **Solutions** pages. You can access the diagnostics by selecting the associated link in the third column. When you're prompted, sign in to the Microsoft Purview portal.
 
 **Note**: To run these diagnostics, you must be a Microsoft 365 global administrator.
 
@@ -92,7 +92,7 @@ You can search for diagnostics by using the **Help** menu in the Microsoft Purvi
 
 4. Select one of the listed options that are generated based on the issue that you described.
 
-5. If the selected option has an associated diagnostic, enter any requested information, and then select **Run Tests**.
+5. If the selected option has an associated diagnostic, enter any requested information, and then select **Run Tests** to start the diagnostic.
 
 #### Microsoft Purview portal
 
@@ -106,19 +106,20 @@ You can search for diagnostics by using the **Help** menu in the Microsoft Purvi
 
 5. Select one of the listed options that are generated based on the issue that you described.
 
-6. If the selected option has an associated diagnostic, enter any requested information, and then select **Run Tests**.
+6. If the selected option has an associated diagnostic, enter any requested information, and then select **Run Tests** to start the diagnostic.
 
 ### Available diagnostics
 
-The following table lists the available diagnostics. You can access each diagnostic by selecting the associated link in the first column. When you're prompted, sign in to the Microsoft 365 admin center as an administrator.
+The following table lists the available diagnostics on the **Help** pane. You can access each diagnostic by selecting the associated link in the first column. When you're prompted, sign in to the Microsoft 365 admin center as an administrator.
 
-**Note**: To run these diagnostics, you must meet the minimum role requirement.
+**Note**: To run these diagnostics, you must meet the minimum role requirement that's listed in the table.
 
 | **Diagnostics** | **Checks performed** | **Minimum role** | **Support article** |
 |-|-|-|-|
 | [Archive mailbox](https://aka.ms/PillarArchiveMailbox) | Checks for issues that are related to archive mailboxes. | Any Microsoft 365 admin role | [Enable archive mailboxes for Microsoft 365](/microsoft-365/compliance/enable-archive-mailboxes) |
 | [Retention policy for a user mailbox](https://aka.ms/PillarRetentionPolicy) | Checks the retention policy settings for a user mailbox. | Any Microsoft 365 admin role | [Retention tags and retention policies in Exchange Online](/exchange/security-and-compliance/messaging-records-management/retention-tags-and-policies) |
-| [Invalid retention policy or grace eDiscovery hold](https://aka.ms/PillarInvalidRetention) | Checks for and removes any invalid retention policy or grace eDiscovery hold that prevents an administrator from deleting a site. | Any Microsoft 365 admin role to check holds. Compliance admin role to remove a hold. | [Can't delete a site because of a retention policy or eDiscovery hold](/sharepoint/troubleshoot/sites/compliance-policy-blocking-site-deletion) |
+| [Mailbox holds](https://aka.ms/PillarMailboxHoldsDiag) | List all holds that are applied to a mailbox. Hold types include: retention, eDiscovery, app retention, delay, and delay release. | Compliance admin | [How to identify the type of hold placed on an Exchange Online mailbox](/purview/ediscovery-identify-a-hold-on-an-exchange-online-mailbox) |
+| [Grace eDiscovery hold or invalid retention policy](https://aka.ms/PillarInvalidRetention) | Identifies items that prevent site deletion, specifically active holds, compliance tags ([retention labels](/purview/retention)), and invalid retention policies. Provides an option to remove any grace eDiscovery hold or invalid retention policy that's found. | Any Microsoft 365 admin role to check holds. Compliance admin role to remove a hold. | [Can't delete a site because of a retention policy or eDiscovery hold](/sharepoint/troubleshoot/sites/compliance-policy-blocking-site-deletion) |
 | [Compromised account](https://aka.ms/diagca) | Identifies suspicious account activities, and provides information about how to recover a compromised account. | Any Microsoft 365 admin role | [Respond to a compromised email account](/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account) |
 | [eDiscovery RBAC](https://aka.ms/PillareDisRBACDiag) | Checks eDiscovery role-based access control (RBAC) to determine whether the Search, Export, or Preview roles are assigned to the designated administrator account. | Any Microsoft 365 admin role | [Resolve search errors in eDiscovery (Standard)](/microsoft-365/troubleshoot/ediscovery/resolve-ediscovery-issues) |
 | [DLP policy and rule configuration](https://aka.ms/PillarDLPPolicyConfig)<br> | Troubleshoots common issues that affect a DLP policy and rule configuration. Checks whether a DLP policy and rule are correctly configured for use in the following workloads:<ul><li>Exchange Online</li><li>Endpoint devices</li><li>SharePoint</li><li>OneDrive for work or school</li></ul> | Global admin | [Scenario-based troubleshooting guide for DLP issues](https://techcommunity.microsoft.com/blog/microsoft-security-blog/scenario-based-troubleshooting-guide---dlp-issues/3445489)<br> |
