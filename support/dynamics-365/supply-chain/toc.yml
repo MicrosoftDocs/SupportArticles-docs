@@ -240,6 +240,8 @@
   items:
     - name: Warehouse mobile app
       items:
+        - name: '"Infinite loop detected" error during warehouse mobile app operations'
+          href: warehousing/infinite-loop-detected.md
         - name: Trust anchor for certification path not found when setting up app connection
           href: warehousing/certification-path-app-connection-error.md
         - name: Trust anchor for certification path not found when updating and migrating to WMS

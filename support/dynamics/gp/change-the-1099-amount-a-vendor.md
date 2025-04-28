@@ -3,7 +3,7 @@ title: Change the 1099 amount for a vendor
 description: Describes how to change the 1099 amount for a vendor who wasn't marked as a 1099 vendor in the year that the transactions were posted in Payables Management in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # How to change the 1099 amount for a vendor who wasn't marked as a 1099 vendor in the year that the transactions were posted in Payables Management in Microsoft Dynamics GP

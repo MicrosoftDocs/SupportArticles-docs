@@ -3,7 +3,7 @@ title: Set up a company in Management
 description: Describes how to set up a company in Multicurrency Management.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - General Ledger
 ---
 # How to set up a company in Multicurrency Management in Microsoft Dynamics GP

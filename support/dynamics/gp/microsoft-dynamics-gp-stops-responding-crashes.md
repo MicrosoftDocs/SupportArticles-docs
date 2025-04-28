@@ -2,7 +2,7 @@
 title: Microsoft Dynamics GP stops responding or crashes
 description: Introduces how to use the System Configuration Utility tool (Msconfig.exe) to solve issues that cause Microsoft Dynamics GP to stop responding or crash.
 ms.reviewer: theley
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Microsoft Dynamics GP stops responding or crashes

@@ -3,7 +3,7 @@ title: Print Check Number on Receivables Statement in Dynamics GP
 description: Describes how to print the Check Number on a Receivables Statement in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Receivables Management
 ---
 # How to print the Check Number on a Receivables Statement in Microsoft Dynamics GP

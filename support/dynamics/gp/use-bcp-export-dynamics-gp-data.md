@@ -3,7 +3,7 @@ title: Use BCP to export Dynamics GP data
 description: Discusses how to use the Bulk Copy Process (BCP) to export Microsoft Dynamics GP data from one database and import data into a new database.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to use the Bulk Copy Process (BCP) to export Microsoft Dynamics GP data from one database and import data into a new database

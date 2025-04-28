@@ -3,7 +3,7 @@ title: Check Printing when you choose process later in Payables Management
 description: Describes an issue where you receive the Check Printing status when choosing process later in Payables Management.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # "Check Printing" status when choosing process later in Payables Management

@@ -3,7 +3,7 @@ title: Error when you print checks in Payables Management in Microsoft Dynamics 
 description: Provides a solution to an error that occurs when you print checks in Payables Management in Microsoft Dynamics GP.
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # Error when you print checks in Payables Management in Microsoft Dynamics GP: A Get/Change Operation on Table PM_Key_Mstr Could Not Find A Record

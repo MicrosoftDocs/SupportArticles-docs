@@ -1,7 +1,7 @@
 ---
 title: How to clean up inherited access
 description: Introduces how to remove inherited access to records when the cascade configuration of a table changes in Microsoft Dataverse.
-ms.date: 01/07/2025
+ms.date: 04/17/2025
 author: paulliew
 ms.author: paulliew
 ms.reviewer: jdaly

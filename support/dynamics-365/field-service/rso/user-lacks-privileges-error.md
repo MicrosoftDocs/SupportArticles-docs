@@ -4,7 +4,7 @@ description: Resolves errors with privileges in the Resource Scheduling Optimiza
 ms.author: AnilMur
 author: anilmur
 ms.reviewer: mhart
-ms.date: 10/19/2023
+ms.date: 04/23/2025
 ms.custom: sap:Resource Scheduling Optimization
 ---
 # "User lacks privileges" error occurs in Resource Scheduling Optimization

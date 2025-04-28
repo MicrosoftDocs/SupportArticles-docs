@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot PHP errors with Failed Request Tracing
 description: Describes how to troubleshoot PHP errors with Failed Request Tracing
-ms.date: 11/15/2009
+ms.date: 04/17/2025
 ms.author: haiyingyu
 author: HaiyingYu
 ms.reviewer: johnhart, riande
