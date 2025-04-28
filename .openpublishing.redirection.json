@@ -13681,7 +13681,7 @@
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
     },
     {
-      "source_path": "support/windows-server/user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md",
+      "source_path": "support/windows-server/active-directory/dcs-cannot-be-located-high-rate-outbound-sessions.md",
       "redirect_url": "/troubleshoot/windows-server/user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions"
     }
   ]
