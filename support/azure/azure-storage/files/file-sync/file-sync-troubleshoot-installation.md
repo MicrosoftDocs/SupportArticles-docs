@@ -175,6 +175,38 @@ When registering a server using *ServerRegistration.exe*, some resource groups a
 
 This issue occurs due to a known issue that has been fixed in File Sync Agent v19.1. To resolve this issue, install the latest version of the agent.
 
+
+
+**Server Registration displays the following message: "System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=..."**
+
+This error occurs when the required version of the .Net Framework is missing on the server. Azure File Sync's Server registration requires **.NET Framework 4.7.2. or higher** to function properly. 
+
+To resolve the issue:
+1. Downland and install .NET Framework 4.7.2. or higher
+2. Restart the server after installation
+3. Retry the server registration using the Server Registration UI or PowerShell
+
+
+
+**Server registration fails with error: operation returned an invalid status code 'Unauthorized'**
+
+During server registration, if you encounter the following error:
+`Operation returned an invalid status code 'Unauthorized'`
+
+This issue occurs when authentication with Azure fails during the registration process. To resolve this issue: 
+
+Manually register the server using PowerShell:
+
+```powershell
+Connect-AzAccount -Subscription "<your-subscription-guid>" -Tenant "<your-tenant-guid>"
+Register-AzStorageSyncServer -ResourceGroupName "<your-resource-group-name>" -StorageSyncServiceName "<your-storage-sync-service-name>"
+```
+
+Replace the placeholder values with your subscription ID, tenant ID, resource group name, and Storage Sync Service name.
+
+After completing the manual registration, verify that the server appears under Registered servers in the Azure portal.
+
+
 <a id="server-already-registered"></a>**Server Registration displays the following message: "This server is already registered"**
 
 :::image type="content" source="media/file-sync-troubleshoot-installation/server-already-registered-error.png" alt-text="Screenshot that shows the Server Registration dialog box with the 'server is already registered' error message.":::
