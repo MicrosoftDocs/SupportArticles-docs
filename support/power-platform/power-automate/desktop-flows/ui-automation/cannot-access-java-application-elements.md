@@ -2,7 +2,7 @@
 title: Can't access elements of a Java application
 description: Troubleshoot the issue that Power Automate for desktop can't access the elements of a Java desktop application.
 ms.reviewer: pefelesk
-ms.date: 10/29/2024
+ms.date: 04/28/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Can't access the elements of a Java application
@@ -18,12 +18,17 @@ Power Automate for desktop can't access the UI elements of a Java desktop applic
 
 ## Troubleshooting steps
 
- 1. Run the **Power Automate Desktop** [Troubleshooter](/power-automate/desktop-flows/troubleshooter). Open **Power Automate Desktop** and navigate to **Help** > **Troubleshooter**.
- 2. On the **Troubleshooter** window, click **Run** on the **Troubleshoot UI/Web automation issues** panel.
- 3. If an issue is found for **Java Automation**, expand the panel to see the details.
- 4. If there is a **Fix** button available, click on it in order to apply the fix. It is advised that you close all running **Java** applications first.
+To solve this issue, try the [troubleshooter](/power-automate/desktop-flows/troubleshooter) first.
 
-## Manual Troubleshooting steps
+1. In Power Automate for desktop, navigate to **Help** > **Troubleshooter**, and run the [troubleshooter](/power-automate/desktop-flows/troubleshooter).
+
+2. In the **Troubleshooter** window, select **Run** on the **Troubleshot UI/Web automation issues** panel.
+
+3. If an issue is found for **Java Automation**, expand the panel to see the details.
+
+4. If a **Fix** button is available, select it to apply the fix. Ensure all running **Java** applications are closed before applying the fix.
+
+If the issue persists after using the troubleshooter, follow these steps to manually troubleshoot the issue:
 
 1. Ensure that you have Java installed on your machine:
 
