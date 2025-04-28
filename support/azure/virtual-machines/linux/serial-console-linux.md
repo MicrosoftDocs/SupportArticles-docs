@@ -44,7 +44,7 @@ To access the Serial Console on your VM or virtual machine scale set instance, y
 - Serial Console is not supported when the storage account has **Allow storage account key access** disabled.
 
 > [!IMPORTANT]
-> Serial Console is now compatible with [managed boot diagnostics storage accounts](../windows/boot-diagnostics.md) and custom storage account firewalls
+> Serial Console is now compatible with [managed boot diagnostics storage accounts](../windows/boot-diagnostics.md) and custom storage account firewalls.
 
 ## Serial Console Linux distribution availability
 
