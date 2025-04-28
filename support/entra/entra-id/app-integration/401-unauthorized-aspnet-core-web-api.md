@@ -13,7 +13,7 @@ This article provides guidance on troubleshooting and resolving 401 Unauthorized
 
 ## Symptoms
 
-You use the `[Authorize]` attribute to secure your ASP.NET Core Web API as the following. When you call the web API, a 401 Unauthorized response is returned without any error details.
+You use the `[Authorize]` attribute to [secure your ASP.NET Core Web API](/entra/identity-platform/tutorial-web-api-dotnet-core-build-app?tabs=workforce-tenant) as the following. When you call the web API, a 401 Unauthorized response is returned without any error details.
 
 ```csharp
 [Authorize]
