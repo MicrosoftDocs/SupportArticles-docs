@@ -54,9 +54,9 @@ To debug and resolve 401 Unauthorized errors, you can use the `JwtBearerEvents` 
 
 The `JwtBearerEvents` class has the following callback properties (invoked in the following order) that can help us debug these 401 Access Denied or UnAuthorization issues:
 
-- [`OnMessageRecieved`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onmessagereceived?view=aspnetcore-2.2#Microsoft_AspNetCore_Authentication_JwtBearer_JwtBearerEvents_OnMessageReceived) is called first for every request.
-- [`OnAuthenticationFailed`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onauthenticationfailed?view=aspnetcore-2.2) is called when the token doesn't pass the application's token validation criteria.
-- [`OnChallenge`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onchallenge?view=aspnetcore-2.2) is called last before a 401 response is returned.
+- [`OnMessageRecieved`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onmessagereceived#Microsoft_AspNetCore_Authentication_JwtBearer_JwtBearerEvents_OnMessageReceived) is called first for every request.
+- [`OnAuthenticationFailed`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onauthenticationfailed) is called when the token doesn't pass the application's token validation criteria.
+- [`OnChallenge`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onchallenge) is called last before a 401 response is returned.
 
 ### Step 1: Enable PII logging
 
@@ -174,7 +174,7 @@ Authorization Header sent: no Bearer token sent.
 
 If you use API development tool to debug the request, you should receive the detail errors such as the following:
 
-:::image type="content" source="media/401-unauthorized-aspnet-core-web-api/wrong-token.png" alt-text="Screenshot of detail error in API development tool." lightbox="media/troubleshoot-validation-context-nonce-null-mvc/wrong-token.png":::
+:::image type="content" source="media/401-unauthorized-aspnet-core-web-api/wrong-token.png" alt-text="Screenshot of detail error in API development tool." lightbox="media/401-unauthorized-aspnet-core-web-api/wrong-token.png":::
 
 
 
