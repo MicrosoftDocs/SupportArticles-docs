@@ -48,7 +48,7 @@ Change the following information in the `AzureAd` section in the **appsettings.j
   },
 ```
 
-## Step 3: Change the sample application code
+### Step 3: Change the sample application code
 
 Change the `ValidAudiences` and `ValidIssuers` properties of the [TokenValidationParameters](/dotnet/api/microsoft.identitymodel.tokens.tokenvalidationparameters) class in the **Program.cs** file.
 
