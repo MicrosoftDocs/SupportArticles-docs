@@ -1,14 +1,14 @@
 ---
 title: TCP/IP connectivity issues troubleshooting
 description: Learn how to troubleshoot TCP/IP connectivity and what you should do if you come across TCP reset in a network capture.
-ms.date: 01/15/2025
+ms.date: 04/28/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom:
 - sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
 - pcy:WinComm Networking
-ms.reviewer: dansimp
+ms.reviewer: dansimp, mifriese, guhetier
 audience: itpro
 ---
 # Troubleshoot TCP/IP connectivity
@@ -52,6 +52,8 @@ The following sections outline scenarios in which a RESET could occur.
 When a TCP peer sends packets without receiving a response, the peer retransmits the data. If there's still no response, the session ends with an ACK RESET, indicating that the application acknowledges the exchanged data but closes the connection due to packet loss.
 
 Simultaneous network traces at both the source and destination can verify this behavior. On the source side, you can see the retransmitted packets. On the destination side, these packets don't be present. This scenario indicates that a network device between the source and destination is dropping the packets.
+
+For more information about diagnosing packet loss issues, see [Diagnose packet loss](diagnose-packet-loss.md).
 
 ### Scenario 1: Packet loss during initial TCP handshake
 
