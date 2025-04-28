@@ -41,12 +41,12 @@ public class MyController : ControllerBase
 
 ## Cause
 
- the API might return 401 Unauthorized responses in the following scenarios:
+ The API might return 401 Unauthorized responses in the following scenarios:
 
-- The request does not include a valid Authorization: Bearer token header.
+- The request doesn't include a valid Authorization: Bearer token header.
 - Token is expired or incorrect.
     - The token being issued for a different resource.
-    - Token claims not meeting the application's application's token validation criteria as defined in the [JwtBearerOptions.TokenValidationParameters](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbeareroptions.tokenvalidationparameters) class.
+    - Token claims not meeting the application's token validation criteria as defined in the [JwtBearerOptions.TokenValidationParameters](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbeareroptions.tokenvalidationparameters) class.
 
 ## Solution
 
@@ -55,7 +55,7 @@ To debug and resolve 401 Unauthorized errors, you can use the `JwtBearerEvents` 
 The `JwtBearerEvents` class has the following callback properties (invoked in the following order) that can help us debug these 401 Access Denied or UnAuthorization issues:
 
 - [`OnMessageRecieved`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onmessagereceived?view=aspnetcore-2.2#Microsoft_AspNetCore_Authentication_JwtBearer_JwtBearerEvents_OnMessageReceived) is called first for every request.
-- [`OnAuthenticationFailed`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onauthenticationfailed?view=aspnetcore-2.2) is called when the token does not pass the application's token validation criteria.
+- [`OnAuthenticationFailed`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onauthenticationfailed?view=aspnetcore-2.2) is called when the token doesn't pass the application's token validation criteria.
 - [`OnChallenge`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onchallenge?view=aspnetcore-2.2) is called last before a 401 response is returned.
 
 ### Step 1: Enable PII logging
@@ -164,7 +164,7 @@ public void ConfigureServices(IServiceCollection services)
 ```
 ### Sample results
 
-With the above implementation, when a 401 Unauthorized error occurs, the response output should include detailed error messages, such as:
+With the implementation, when a 401 Unauthorized error occurs, the response output should include detailed error messages, such as:
 
 ```Output
 OnMessageRecieved:
