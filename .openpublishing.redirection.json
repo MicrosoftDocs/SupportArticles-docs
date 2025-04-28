@@ -13679,6 +13679,10 @@
     {
       "source_path": "support/dynamics/gp/suta-futa-taxable-wages-are-off.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/windows-server/user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md",
+      "redirect_url": "/troubleshoot/windows-server/user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions"
     }
   ]
 }
