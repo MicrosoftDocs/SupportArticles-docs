@@ -184,7 +184,7 @@ This error occurs when the required version of the .NET Framework is missing on 
 To resolve the issue:
 1. Downland and install .NET Framework 4.7.2. or higher
 2. Restart the server after installation.
-3. Retry the server registration using the Server Registration UI or PowerShell
+3. Retry the server registration using the Server Registration UI or PowerShell.
 
 
 
