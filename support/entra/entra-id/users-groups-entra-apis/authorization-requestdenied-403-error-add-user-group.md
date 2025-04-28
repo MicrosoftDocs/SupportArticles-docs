@@ -1,19 +1,19 @@
 ---
-title: Troubleshoot 403 error when adding a user to a group using Microsoft Graph API
-description: Provides solutions to 403 Authorization_RequestDenied error that occurs when you add a user to a group using Microsoft Graph API.
+title: Troubleshoot Error 403 When Adding a User to a Group By Using Microsoft Graph API
+description: Provides solutions for the 403 Authorization_RequestDenied error that occurs when you add a user to a group by using Microsoft Graph API.
 ms.date: 04/21/2025
 ms.service: entra-id
 ms.author: bachoang
 ms.custom: sap:Getting access denied errors (Authorization)
 ---
 
-# Troubleshoot 403 error when adding a user to a group using Microsoft Graph API
+# Troubleshoot 403 error when adding a user to a group by using Microsoft Graph API
 
-This article provides guidance on troubleshooting a 403 Authorization_RequestDenied error when you try to add a user to a group using the Microsoft Graph API.
+This article provides guidance for troubleshooting a "403 Authorization_RequestDenied" error that occurs when you try to add a user to a group by using the Microsoft Graph API.
 
 ## Symptoms
 
-When you try to add a user to a group using Microsoft Graph API, you receive the 403 error with the following error message:
+When you try to add a user to a group by using Microsoft Graph API, you receive the following "403" error message:
 
 ```output
 {
@@ -31,7 +31,7 @@ When you try to add a user to a group using Microsoft Graph API, you receive the
 
 ## Cause
 
-This issue might occur if the group you tried to add the user to can't be managed by Microsoft Graph. Microsoft Graph only supports Microsoft 365 groups and Security groups.
+This issue occurs if the group that you tried to add the user to can't be managed by Microsoft Graph. Microsoft Graph supports only Microsoft 365 groups and Security groups.
 
 ## Solution
 
@@ -39,7 +39,7 @@ This issue might occur if the group you tried to add the user to can't be manage
 
 Make sure that the group you trying to modify is supported by Microsoft Graph.
 
-1. In Microsoft Graph, the type of group can be identified by the settings of its `groupTypes`, `mailEnabled`, and `securityEnabled` properties. Use the [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) to check the group's attributes:
+1. In Microsoft Graph, the group type can be determined by the settings of its `groupTypes`, `mailEnabled`, and `securityEnabled` properties. Use the [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) to check the group's attributes:
 
     ```http
     https://graph.microsoft.com/v1.0/groups/<Group Object ID>?$select=displayName,groupTypes,mailEnabled,securityEnable
@@ -58,7 +58,7 @@ Make sure that the group you trying to modify is supported by Microsoft Graph.
     
    ```
 
-2. Review the following table to verify if the group type is supported by Microsoft Graph API. In the example response, the "Test group A" group is a Distribution group that cannot be supported by Microsoft Graph.  For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
+2. Review the following table to verify that the group type is supported by Microsoft Graph API. In the example response, the "Test group A" group is a Distribution group that can't be supported by Microsoft Graph. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 
     | Type |groupTypes | mailEnabled | securityEnabled | Can be managed by using Microsoft Graph APIs |
     |--|--|--|--|--|
@@ -69,26 +69,26 @@ Make sure that the group you trying to modify is supported by Microsoft Graph.
 
     > [!NOTE]
     > - Group type can't be changed after creation. For more information, see [Edit group settings](/entra/fundamentals/how-to-manage-groups#edit-group-settings).
-    > - Dynamic groups (groupTypes contains "DynamicMembership") can't  have their membership managed via Microsoft Graph.
+    > - The membership of a dynamic group (groupTypes contains "DynamicMembership") can't be managed through Microsoft Graph.
 
 ### Step 2: Verify required permissions
 
-Different group member types require specific permissions. For user-type membership, ensure that the application or account performing the operation has the `GroupMember.ReadWrite.All` permission.
+Different group member types require specific permissions. For user-type membership, make sure that the application or account that performs the operation has the `GroupMember.ReadWrite.All` permission.
 
 For detailed permission requirements, see [Add members documentation](/graph/api/group-post-members).
 
-### Step 3: Check if the group is a role-assignable group
+### Step 3: Check whether the group is a role-assignable group
 
-1. Role-assignable groups require extra permissions to manage their members. You can confirm if the group is role-assignable by using Azure portal or Microsoft Graph Explorer:
+1. Role-assignable groups require extra permissions to manage their members. You can verify that the group is role-assignable by using Azure portal or Microsoft Graph Explorer:
 
     **Azure portal**
     
     1. In the [Azure portal](https://portal.azure.com), go to **Microsoft Entra ID**, select **Groups**, and then select **All groups**.
-    1. Locate the target group, select **Properties**. Check if the **Microsoft Entra role can be assigned to the group** setting is set to **Yes**,
+    1. Locate the target group, select **Properties**, and then check whether **Microsoft Entra role can be assigned to the group** is set to **Yes**.
      
     **Microsoft Graph Explorer**
     
-    Run the following request and check the `isAssignableToRoles` value.
+    To check the `isAssignableToRoles` value, run the following request:
     
     ```http
     GET https://graph.microsoft.com/v1.0/groups/<group object="" id="">?$select=displayName,groupTypes,mailEnabled,securityEnabled,isAssignableToRole
