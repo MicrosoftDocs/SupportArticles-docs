@@ -1,7 +1,7 @@
 ---
 title: TCP/IP connectivity issues troubleshooting
 description: Learn how to troubleshoot TCP/IP connectivity and what you should do if you come across TCP reset in a network capture.
-ms.date: 04/28/2025
+ms.date: 04/29/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
@@ -41,7 +41,7 @@ TCP is characterized as a connection-oriented and reliable protocol. It ensures 
 
 - A four-way closure, where both the sender and receiver agree to close the session, is known as a graceful closure. This is identified by the FIN flag in the TCP header being set to 1.
 - After the four-way closure, the machine waits for 4 minutes (by default) before releasing the port. This is termed as TIME_WAIT state. During this TIME_WAIT state, any pending packets for the TCP connection can be processed. Once the TIME_WAIT state completes, all resources allocated for the connection are released.  
-- A TCP reset is an abrupt session closure, causing the immediate release of allocated resources and erasure of all connection information. This is identified by the RESET flag in the TCP header being set to 1.
+- A TCP reset is an abrupt session closure, causing the immediate release of allocated resources and erasure of all connection information. This is identified by setting the RESET flag in the TCP header to 1.
 
 A network trace collected simultaneously on the source and the destination helps you to determine the flow of the traffic and identify the point of failure.
 
@@ -70,7 +70,7 @@ The same TCP conversation seen in the network trace collected on the destination
 
 :::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/destination-side-same-filter.png" alt-text="Screenshot of frame summary with filter in Network Monitor.":::
 
-If the TCP SYN packets are reaching the destination, but the destination doesn't response, verify whether the TCP port being connected to on destination machine is in the LISTENING state. This can be checked in the output of the command `netstat -anob`.
+If the TCP SYN packets reach the destination, but the destination doesn't respond, verify whether the connected TCP port on destination machine is in the LISTENING state. This can be checked in the output of the command `netstat -anob`.
 
 If the port is listening and there's still no response, there could be a drop at the Windows Filtering Platform (WFP).
 
@@ -119,7 +119,7 @@ An ACK+RST flagged TCP packet can also occur when a TCP SYN packet is sent out. 
 :::image type="content" source="media/tcp-ip-connectivity-issues-troubleshooting/ack-rst-flag-packet.png" alt-text="Screenshot of packet with ACK RSK flag.":::In such cases, it's essential to investigate the application causing the reset (identified by port numbers) to understand why the connection is being reset.
 
 > [!NOTE]
-> The above information pertains to resets from a TCP perspective and not UDP. UDP is a connectionless protocol, and packets are sent unreliably. So, retransmissions or resets aren't observed when using UDP as a transport protocol. However, UDP utilizes ICMP as an error reporting protocol. When a UDP packet is sent to a port that isn't listed at the destination, the destination will immediately respond with an ICMP "**Destination Host Unreachable: Port Unreachable**" message.
+> The preceding information pertains to resets from a TCP perspective and not UDP. UDP is a connectionless protocol, and packets are sent unreliably. Therefore, retransmissions or resets aren't observed when using UDP as a transport protocol. However, UDP utilizes ICMP as an error reporting protocol. When a UDP packet is sent to a port that isn't listed at the destination, the destination immediately responds with an ICMP "**Destination Host Unreachable: Port Unreachable**" message.
 
 ```output
 10.10.10.1  10.10.10.2  UDP UDP:SrcPort=49875,DstPort=3343
@@ -127,7 +127,7 @@ An ACK+RST flagged TCP packet can also occur when a TCP SYN packet is sent out. 
 10.10.10.2  10.10.10.1  ICMP    ICMP:Destination Unreachable Message, Port Unreachable,10.10.10.2:3343
 ```
 
-During the troubleshooting of TCP/IP connectivity issues, you might observe in the network trace that a machine receives packets but doesn't respond to them. This could indicate a drop at the destination server's network stack.
+During the troubleshooting of TCP/IP connectivity issues, you might observe in the network trace that a machine receives packets but doesn't respond to them. This might indicate a drop at the destination server's network stack.
 
 To determine whether the local Windows Firewall is dropping the packet, enable auditing for the Windows Filtering Platform (WFP) on the machine using the following command.
 
