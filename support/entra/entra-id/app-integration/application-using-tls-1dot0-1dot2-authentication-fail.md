@@ -24,7 +24,7 @@ Applications using an older version of the .NET Framework might encounter authen
 
 - > IDX20807: Unable to retrieve document from: 'System.String'
 
-- > System.Net.Http.Headers.HttpResponseHeaders RequestMessage {Method: POST, RequestUri: 'https://xxx.b2clogin.com/xxx.onmicrosoft.com/B2C_1_xxx_Signin/oauth2/v2.0/token', Version: 1.1, Content: System.Net.Http.FormUrlEncodedContent, Headers: { Content-Type: application/x-www-form-urlencoded Content-Length: 970 }} System.Net.Http.HttpRequestMessage StatusCode UpgradeRequired This service requires use of the TLS-1.2 protocol
+- > System.Net.Http.Headers.HttpResponseHeaders RequestMessage {Method: POST, RequestUri: '\<request-uri>', Version: 1.1, Content: System.Net.Http.FormUrlEncodedContent, Headers: { Content-Type: application/x-www-form-urlencoded Content-Length: 970 }} System.Net.Http.HttpRequestMessage StatusCode UpgradeRequired This service requires use of the TLS-1.2 protocol
 
 ## Cause
 
