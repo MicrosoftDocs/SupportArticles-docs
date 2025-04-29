@@ -193,9 +193,7 @@ To resolve the issue:
 During server registration, if you encounter the following error:
 `Operation returned an invalid status code 'Unauthorized'`
 
-This issue occurs due to a bug in the Azure File Sync v20 agent, which will be fixed in a future agent release. 
-To work around this issue, manually register the server using PowerShell:
-
+This issue occurs due to a bug in the Azure File Sync v20 agent. To work around this issue, manually register the server using PowerShell:
 
 ```powershell
 Connect-AzAccount -Subscription "<your-subscription-guid>" -Tenant "<your-tenant-guid>"
