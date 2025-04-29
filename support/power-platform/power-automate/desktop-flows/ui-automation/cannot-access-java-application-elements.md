@@ -2,7 +2,7 @@
 title: Can't access elements of a Java application
 description: Troubleshoot the issue that Power Automate for desktop can't access the elements of a Java desktop application.
 ms.reviewer: pefelesk
-ms.date: 04/28/2025
+ms.date: 04/29/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Can't access the elements of a Java application
