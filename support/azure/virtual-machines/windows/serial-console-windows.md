@@ -11,7 +11,7 @@ ms.collection: windows
 ms.topic: article
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
-ms.date: 04/25/2025
+ms.date: 04/29/2025
 ms.author: mbifeld
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
