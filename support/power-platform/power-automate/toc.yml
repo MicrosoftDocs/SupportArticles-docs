@@ -90,24 +90,32 @@
           href: desktop-flows/ui-automation/desktop-application-crashes-ui-automation.md
         - name: Can't access the elements of a Java application
           href: desktop-flows/ui-automation/cannot-access-java-application-elements.md
+        - name: Clicking elements doesn't work during runtime
+          href: desktop-flows/ui-automation/ui-rdp-automation/no-clicks-on-runtime.md
         - name: Focus window action can't bring a window to focus
           href: desktop-flows/ui-automation/focus-window-action-not-working.md
         - name: Failed to get UI element
           href: desktop-flows/ui-automation/failed-get-ui-element.md
         - name: Failed to get element/window or Element/Window wasn't found errors
           href: desktop-flows/ui-automation/ui-automation-action-fails-errors.md
+        - name: Interactions with RDP or Citrix applications take a long time and fail
+          href: desktop-flows/ui-automation/ui-rdp-automation/interactions-with-rdp-citrix-takes-long-and-fails.md
         - name: SAP UI element click issue
           href: desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md
         - name: Set drop-down list value in window/on web page action fails
           href: desktop-flows/ui-automation/set-drop-down-list-value-fails.md
         - name: UI element highlighting or hovering issues in virtual desktops
           href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
+        - name: '"The remote desktop was not found" error'
+          href: desktop-flows/ui-automation/ui-rdp-automation/error-remote-desktop-not-found.md
         - name: UIPI issues with UI and web automation actions
           href: desktop-flows/ui-automation/uipi-issues.md
     - name: '"Could not read the application certificate" error when creating a connection'
       href: desktop-flows/application-certificate-error.md
     - name: Agent-related errors when running attended or unattended desktop flows
       href: desktop-flows/agent-connectivity-issues-pad.md
+    - name: Can't connect to an IBM Personal Communications session
+      href: desktop-flows/cannot-connect-to-ibm-personal-communications.md 
     - name: Can't silently join a machine group
       href: desktop-flows/silent-join-machine-group-troubleshoot.md
     - name: Can't create a connection from a shared canvas app
