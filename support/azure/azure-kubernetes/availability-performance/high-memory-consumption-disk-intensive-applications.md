@@ -127,7 +127,7 @@ Combined with [Step 2](#step-2-inspect-pod-memory-statistics), `anon` represents
     echo 1 > /proc/sys/vm/drop_caches
     ```
 
-4. Verify if the command in the previous step causes any effect by repeating [Step 1](#step-1-inspect-pod-working-set) and [Step 2](#step-2-inspect-pod-memory-statistics):
+4. Verify if the command in the previous step causes any effect by repeating [Step 1](#step-1-inspect-the-pod-working-set) and [Step 2](#step-2-inspect-pod-memory-statistics):
 
     ```console
     $ kubectl top pods -A | grep -i "<DEPLOYMENT_NAME>"
