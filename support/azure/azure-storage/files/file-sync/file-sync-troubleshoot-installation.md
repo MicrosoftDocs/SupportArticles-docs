@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 01/13/2025
+ms.date: 04/29/2025
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -193,9 +193,9 @@ To resolve the issue:
 During server registration, if you encounter the following error:
 `Operation returned an invalid status code 'Unauthorized'`
 
-This issue occurs when authentication with Azure fails during the registration process. To resolve this issue: 
+This issue occurs due to a bug in the Azure File Sync v20 agent, which will be fixed in a future agent release. 
+To work around this issue, manually register the server using PowerShell:
 
-Manually register the server using PowerShell:
 
 ```powershell
 Connect-AzAccount -Subscription "<your-subscription-guid>" -Tenant "<your-tenant-guid>"
