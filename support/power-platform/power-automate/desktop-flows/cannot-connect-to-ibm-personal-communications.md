@@ -2,7 +2,7 @@
 title: Unable to Connect to IBM Personal Communications Session
 description: Solves an issue where you can't connect to an IBM Personal Communications session using the Open terminal session action with the HLLAPI provider.
 ms.custom: sap:Desktop flows
-ms.date: 04/28/2025
+ms.date: 04/29/2025
 ms.author: nimoutzo 
 author: NikosMoutzourakis
 ---
@@ -24,7 +24,7 @@ Exception of type 'Microsoft.Flow.RPA.Desktop.Modules.TerminalEmulation.Common.T
    at Microsoft.Flow.RPA.Desktop.Robin.Engine.Execution.ActionRunner.Run(IActionStatement statement, Dictionary`2 inputArguments, Dictionary`2 outputArguments)
 ```
 
-## Desktop flow run modes
+This issue can occur in the following desktop flow modes:
 
 - Unattended
 - Attended
@@ -32,7 +32,7 @@ Exception of type 'Microsoft.Flow.RPA.Desktop.Modules.TerminalEmulation.Common.T
 
 ## Cause
 
-The IBM Personal Communications terminal emulator requires access to HLLAPI DLLs for proper operation. However, the HLLAPI implementation for IBM Personal Communications version 14 (32-bit) might produce an error. This issue appears to stem from a problem with their implementation.
+The IBM Personal Communications terminal emulator requires access to HLLAPI DLLs for proper operation. However, the HLLAPI implementation in IBM Personal Communications version 14 (32-bit) might result in the error.
 
 ## Resolution
 
