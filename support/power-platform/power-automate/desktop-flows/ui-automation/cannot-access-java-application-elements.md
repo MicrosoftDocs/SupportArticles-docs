@@ -20,7 +20,7 @@ Power Automate for desktop can't access the UI elements of a Java desktop applic
 
 To solve this issue, try the [troubleshooter](/power-automate/desktop-flows/troubleshooter) first.
 
-1. In Power Automate for desktop, navigate to **Help** > **Troubleshooter**, and run the [troubleshooter](/power-automate/desktop-flows/troubleshooter).
+1. In Power Automate for desktop, navigate to **Help** > **Troubleshooter**, and then run the [troubleshooter](/power-automate/desktop-flows/troubleshooter).
 
 2. In the **Troubleshooter** window, select **Run** on the **Troubleshot UI/Web automation issues** panel.
 
@@ -46,7 +46,7 @@ If the issue persists after using the troubleshooter, follow these steps to manu
 
    Go to **Control Panel** > **Ease of Access** > **Optimize visual display** > **Java Access Bridge from Oracle, Inc. Providing Assistive Technology access to Java applications**, and then disable the **Enable Java Access Bridge** option.
 
-   :::image type="content" source="media/cannot-access-java-application-elements/enable-java-access-bridge-option.png" alt-text="Screenshot of the Enable Java Access Bridge option in the Windows Control Panel.":::
+   :::image type="content" source="media/cannot-access-java-application-elements/enable-java-access-bridge-option.png" alt-text="Screenshot of the Enable Java Access Bridge option in the Windows Control Panel." lightbox="media/cannot-access-java-application-elements/enable-java-access-bridge-option.png":::
 
 3. Ensure that specific files exist in one or more Java folders of the machine after the Power Automate for desktop installation.
 
