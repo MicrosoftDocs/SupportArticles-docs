@@ -114,6 +114,8 @@
       href: desktop-flows/application-certificate-error.md
     - name: Agent-related errors when running attended or unattended desktop flows
       href: desktop-flows/agent-connectivity-issues-pad.md
+    - name: Can't connect to an IBM Personal Communications session
+      href: desktop-flows/cannot-connect-to-ibm-personal-communications.md 
     - name: Can't silently join a machine group
       href: desktop-flows/silent-join-machine-group-troubleshoot.md
     - name: Can't create a connection from a shared canvas app
