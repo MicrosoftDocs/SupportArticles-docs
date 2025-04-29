@@ -10,7 +10,7 @@ ms.custom: sap:Node/node pool availability and performance
 
 Disk input and output operations are costly, and most operating systems implement caching strategies for reading and writing data to the filesystem. The [Linux kernel](https://www.kernel.org/doc) usually uses strategies such as the [page cache](https://www.kernel.org/doc/gorman/html/understand/understand013.html) to improve overall performance. The primary goal of the page cache is to store data read from the filesystem in the cache, making it available in memory for future read operations.
 
-This article helps you identity and avoid the high memory consumption caused by disk-intensive applications due to Linux kernel behaviors on Kubernetes pods.
+This article helps you identity and avoid high memory consumption in disk-intensive applications due to Linux kernel behaviors on Kubernetes pods.
 
 ## Prerequisites
 
