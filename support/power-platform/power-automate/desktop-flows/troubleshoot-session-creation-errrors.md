@@ -3,7 +3,7 @@ title: Session creation error codes in unattended desktop flow runs
 description: Solves error codes related to session creation during unattended desktop flow runs in Power Automate.
 author: johndund 
 ms.author: johndund 
-ms.date: 02/11/2025
+ms.date: 04/29/2025
 ms.reviewer: madiazor, guco, fredg 
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
@@ -36,11 +36,13 @@ You can find the full list of credential providers (many of which are built-in) 
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers`
 
-Each subkey represents an installed credential provider. The following table lists the credential providers that Power Automate currently doesn't support. If you have the following registry key, work with your system administrator to uninstall the corresponding software.
+Each subkey represents an installed credential provider. The following table lists the credential providers that Power Automate currently doesn't support. If you have any of the following subkeys, work with your system administrator to uninstall the corresponding software.
 
 | Name | Subkey name |
 | :------------------------ | ---------------- |
 | SailPoint Technologies Desktop Password Reset | 0094A34B-0BF0-4789-8B2D-8339E469D756 |
+| SIDCredentialProvider | 36ED98C6-02FF-47e8-B7FE-957A411CEA16 |
+| CGWinLogon | BDA6DA5B-7E7E-482C-9B3E-67AFF0C838C0 |
 
 ## SessionCreationError
 
