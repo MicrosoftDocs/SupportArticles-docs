@@ -27,7 +27,7 @@ Tighter accuracy requirements were outside of the design specification of the Wi
 
 ## Windows 10 and Windows Server 2016
 
-Time accuracy in Windows 10 and Windows Server 2016 has been substantially improved, while maintaining full backwards NTP compatibility with older Windows versions. Under the right operating conditions, systems running Windows 10, Windows Server 2016, and newer releases can deliver 1 second, 50 ms (milliseconds), or 1 ms accuracy.
+Time accuracy in Windows 10 and Windows Server 2016 has been substantially improved, while maintaining full backwards NTP compatibility with older Windows versions. Under the right operating conditions, systems running Windows 10, Windows Server 2016, and newer releases can deliver 1 second (s), 50 milliseconds (ms), or 1 ms accuracy.
 
 > [!IMPORTANT]
 >
@@ -50,7 +50,7 @@ To achieve 1 s accuracy for a specific target machine when compared to a highly 
 - The target system must run Windows 10, Windows Server 2016, or a newer version.
 - The target system must synchronize time from an NTP hierarchy of time servers, culminating in a highly accurate, Windows compatible NTP time source.
 - All Windows operating systems in the NTP hierarchy mentioned above must be configured as documented in [Configuring Systems for High Accuracy](/windows-server/networking/windows-time-service/configuring-systems-for-high-accuracy).
-- The cumulative one-way network latency between the target and source must not exceed 100 ms. The cumulative network delay is measured by adding the individual one-way delays between pairs of NTP client-server nodes in the hierarchy starting with the target and ending at the source. For more information, please review the high accuracy time sync document.
+- The cumulative one-way network latency between the target and source must not exceed 100 ms. The cumulative network delay is measured by adding the individual one-way delays between pairs of NTP client-server nodes in the hierarchy starting with the target and ending at the source. For more information, review the high accuracy time sync document.
 
 ### Target accuracy: 50 milliseconds
 
@@ -64,7 +64,7 @@ The other requirements to achieve 50 ms accuracy for a specific target system ar
     > [!NOTE]
     > Run `w32tm /query /status` from the command line to see the stratum.
 
-- The target system must be within 6 or fewer network hops from the highly accurate time source.
+- The target system must be within six or fewer network hops from the highly accurate time source.
 - The one-day average CPU utilization on all stratums must not exceed 90%.
 - For virtualized systems, the one-day average CPU utilization of the host must not exceed 90%.
 
@@ -80,6 +80,6 @@ The other requirements to achieve 1 ms accuracy for a specific target system are
     > [!NOTE]
     > Run `w32tm /query /status` from the command line to see the stratum.
 
-- The target system must be within 4 or fewer network hops from the highly accurate time source.
+- The target system must be within four or fewer network hops from the highly accurate time source.
 - The one-day average CPU utilization across each stratum must not exceed 80%.
 - For virtualized systems, the one-day average CPU utilization of the host must not exceed 80%.
