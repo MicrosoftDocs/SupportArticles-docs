@@ -31,6 +31,8 @@ items:
   href: ./troubleshoot-windows-365-app.md
 - name: Troubleshoot Windows 365 Boot
   href: ./troubleshoot-windows-365-boot.md
+- name: Troubleshooting Windows 365 GPU drivers
+  href: troubleshooting-windows-365-gpu-drivers.md
 - name: Windows 365 Boot known issues
   href: ./windows-365-boot-known-issues.md
 - name: Troubleshoot Windows 365 Enterprise Cloud PC grace period issues
