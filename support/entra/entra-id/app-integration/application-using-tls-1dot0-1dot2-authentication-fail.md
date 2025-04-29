@@ -12,7 +12,7 @@ This article provides solutions to authentication errors that occur with Microso
 
 ## Symptoms
 
-Applications using an older version of the .NET Framework might encounter authentication failures with one of the following error messages:<o:p></o:p>
+Applications using an older version of the .NET Framework might encounter authentication failures with one of the following error messages:
 
 - > AADSTS1002016: You are using TLS version 1.0, 1.1 and/or 3DES cipher which are deprecated to improve the security posture of Azure AD
 
@@ -38,9 +38,7 @@ Upgrade the application to use .NET Framework 4.7 or later where TLS 1.2 is enab
 
 ## Solution 2: Enable TLS 1.2 programmatically
 
-If upgrading the .NET Framework is not feasible, you can enable TLS 1.2 in your application code:
-
-Modify the **Global.asax.cs** file in your application:
+If upgrading the .NET Framework is not feasible, you can enable TLS 1.2 through adding the following code in the **Global.asax.cs** file in your application:
 
 ```csharp
 using System.Net;
@@ -52,7 +50,7 @@ ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProt
 }
 ```
 
-## Solution 3: Use web.config to enable TLS 1.2
+## Solution 3: Change web.config to enable TLS 1.2
 
 If .NET 4.7.2 is available, you can enable TLS 1.2 through adding the following configuration in the **web.config** file:
 
