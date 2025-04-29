@@ -185,29 +185,46 @@ The steps below remove the external user's ability to access SharePoint Online. 
 
 Next, you have to remove the account from Microsoft Entra ID:
 
-1. Download and install the Azure Active Directory PowerShell Module and its prerequisites. To this, go to [Manage Microsoft Entra ID using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
+1. Download and install the Microsoft Graph PowerShell SDK. 
 
-2. Open the Azure Active Directory PowerShell Module, and then run the following commands:
+
+```powershell
+Install-Module Microsoft.Graph -Scope CurrentUser -Repository PSGallery 
+```
+
+1. Open PowerShell and connect to Microsoft Graph
 
    ```powershell
-   Connect-MSOLService
+   Connect-MgGraph -Scopes "User.ReadWrite.All","Directory.ReadWrite.All"
    ```
-
+   
    Enter your administrator credentials in the dialog box:
+   
+1. Locate the external (guest) user
 
    ```powershell
-   Get-MsolUser -ReturnDeletedUsers -UnlicensedUsersOnly | ft -a
+   $guestUpn = 'jondoe_contoso.com#EXT#@yourdomain.onmicrosoft.com'
+   Get-MgUser -Filter "UserPrincipalName eq '$guestUpn'" -Property Id,UserPrincipalName,UserType | Format-Table -AutoSize
    ```
-
-3. Locate the external user who you just deleted, and then confirm they're listed.
+   
+   This filters for the guest account by its UPN and displays its Id, UPN, and UserType.
+   
+1. Remove (soft-delete) the guest user
 
    ```powershell
-   Remove-MsolUser -RemoveFromRecycleBin -UserPrincipalName 'jondoe_contoso.com#EXT#@yourdomaint.onmicrosoft.com'
+   Remove-MgUser -UserId <user-id> -Confirm:$false
    ```
+   
+1. (Optional) Permanently delete from the recycle bin
 
+   ```powershell
+   $deleted = Get-MgDirectoryDeletedItem -Filter "Id eq '<user-id>'" -All
+   Remove-MgDirectoryDeletedItem -DirectoryObjectId $deleted.Id -Confirm:$false
+   ```
+   
    > [!NOTE]
-   > Replace **jondoe_contoso.com#EXT#\@yourdomain.onmicrosoft.com** with the specific user in your scenario.
-
+   > Replace **jondoe_contoso.com#EXT#@yourdomain.onmicrosoft.com** with the specific user in your scenario.
+   
 ### Clear the browser cache
 
 SharePoint Online uses browser caching in several scenarios, including the People Picker. Even though a user was fully removed from the system, the user may still remain in the browser cache. Clearing the browser cache resolves this issue. To do so for Internet Explorer, follow the steps given in [Viewing and deleting your browsing history](https://support.microsoft.com/help/17438).
