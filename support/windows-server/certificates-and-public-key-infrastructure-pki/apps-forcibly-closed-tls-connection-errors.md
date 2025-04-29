@@ -35,7 +35,7 @@ If you enabled [SChannel logging](/previous-versions/windows/it-pro/windows-serv
 
 ## Cause
 
-Windows 10, version 1511 and later versions of Windows, including Window Server 2016 or Windows 10, version 1607 that has updates released on Feb. 25th or later updates installed, contains a leading zero update. Meanwhile, all Windows versions that released before that don't contain the leading zero updates.  
+Windows 10, version 1511 and later versions of Windows, including Window Server 2016 or Windows 10, version 1607 that has updates released on February 25, 2020, or later updates installed, contains a leading zero update. Meanwhile, all Windows versions that released before that don't contain the leading zero updates.  
 
 The TLS client and server need to calculate keys exactly the same way, otherwise they get different results. TLS connections randomly fail if leading zeros are computed differently by the TLS client and TLS Servers.  
 
