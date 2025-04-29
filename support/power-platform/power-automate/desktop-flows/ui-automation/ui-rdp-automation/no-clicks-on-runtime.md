@@ -5,7 +5,7 @@ ms.reviewer: amitrou
 ms.author: iopanag
 author: iopanag
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.date: 04/23/2025
+ms.date: 04/29/2025
 ---
 # Elements are highlighted in Citrix Virtual Apps, but clicking them at runtime doesn't work 
 
