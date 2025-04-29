@@ -28,7 +28,7 @@ Applications using an older version of the .NET Framework might encounter authen
 
 ## Cause
 
-Starting January 31, 2022, Microsoft enforced the use of the TLS 1.2 protocol for client applications connecting to Microsoft Entra services on Microsoft Identity Platform for security and industry standards compliance reasons. For more information about this change, see [Enable support for TLS 1.2 in your environment for Microsoft Entra TLS 1.1 and 1.0 deprecation](../ad-dmn-services/enable-support-tls-environment.md) and [Act fast to secure your infrastructure by moving to TLS 1.2!](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/act-fast-to-secure-your-infrastructure-by-moving-to-tls-1-2/2967457)
+Starting January 31, 2022, Microsoft enforced the use of the TLS 1.2 protocol for client applications connecting to Microsoft Entra services on Microsoft Identity Platform, to ensure security and industry standards compliance. For more information about this change, see [Enable support for TLS 1.2 in your environment for Microsoft Entra TLS 1.1 and 1.0 deprecation](../ad-dmn-services/enable-support-tls-environment.md) and [Act fast to secure your infrastructure by moving to TLS 1.2!](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/act-fast-to-secure-your-infrastructure-by-moving-to-tls-1-2/2967457)
 
 Applications running on older platforms or using older .NET Framework versions might not have TLS 1.2 enabled, therefore they fail to retrieve the OpenID Connect metadata document resulting in failed authentication.
 
@@ -52,7 +52,7 @@ ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProt
 
 ## Solution 3: Change web.config to enable TLS 1.2
 
-If .NET 4.7.2 is available, you can enable TLS 1.2 through adding the following configuration in the **web.config** file:
+If .NET Framework 4.7.2 is available, you can enable TLS 1.2 through adding the following configuration in the **web.config** file:
 
 ```json
 <system.web>
@@ -61,11 +61,11 @@ If .NET 4.7.2 is available, you can enable TLS 1.2 through adding the following 
 ```
 
 > [!NOTE]
-> If using the 4.7.2 runtime causes breaking changes to your app, this solution might not work.
+> If using .NET Framework 4.7.2 causes breaking changes to your app, this solution might not work.
 
 ## Solution 4: Enable TLS 1.2 for running PowerShell commands
 
-If you encounter the AADSTS1002016 error while running PowerShell commands (Connect-MSolService, Connect-AzureAD, or Connect-MSGraph) from the Microsoft Intune PowerShell SDK module, set the security protocol to TLS 1.2 before executing the commands:
+If you encounter the AADSTS1002016 error while running PowerShell command `Connect-MSolService`, `Connect-AzureAD`, or `Connect-MSGraph` (from the Microsoft Intune PowerShell SDK module), set the security protocol to TLS 1.2 before executing the commands:
 
 ```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
