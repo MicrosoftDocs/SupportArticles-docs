@@ -32,7 +32,7 @@ If your Linux virtual machine (VM) in Azure encounters a boot or disk error, you
 > * The maximum time a script can run is 90 minutes, after which it will time out.
 > * Do not modify the tags that are created on the repair VM. The tags are neccessary for the restore command to function correctly.
 > * For VMs using Azure Disk Encryption, only managed disks encrypted with single pass encryption (with or without KEK) are supported.
-> *  The scripts can't run with only the VM Contributor role, as they need to perform read, write, and delete operations at the resource group that includes the target VM. Therefore roles such as Contributor or Owner at that resource group level are also required.
+> * The VM Contributor role doesn't provide enough permissions to run the scripts, as they require permissions to read, write, and delete resources in the resource group that includes the target VM. Therefore roles such as Contributor or Owner at that resource group level are also required.
 
 ## Repair process overview
 
