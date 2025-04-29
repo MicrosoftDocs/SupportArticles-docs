@@ -11,7 +11,7 @@ ms.author: luche
 ms.custom: 
   - sap:Sharing\Sharing with external
   - CSSTroubleshoot
-  - has-azure-ad-ps-ref
+  - no-azure-ad-ps-ref
 appliesto: 
   - SharePoint Online
 ms.date: 04/29/2025
