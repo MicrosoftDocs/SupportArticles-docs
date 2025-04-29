@@ -53,13 +53,13 @@ The SAML Assertion Grant flow has two steps:
 
 The authentication error typically occurs in step 1, in which the client application has to parse the SAML response from the identity provider to determine the version of the SAML token. MSAL looks for the following attributes in the identity provider's SAML response:
 
-- `<saml:Assertion>` node  
-- `<TokenType>` node
+- `saml:Assertion` 
+- `TokenType`
 
 The following is an example AD FS SAML response from the `/UserNameMixed` endpoint:
 
-- **SAML Assertion**: major version = 1, minor version = 1  
-- **TokenType**: `urn:oasis:names:tc:SAML:1.0:assertion`
+- `saml:Assertion`: major version = 1, minor version = 1  
+- `TokenType`: `urn:oasis:names:tc:SAML:1.0:assertion`
 
 :::image type="content" source="media/error-code-aadsts7500514-supported-type-saml-response-not-found/adfs-saml-response.png" alt-text="Screenshot of ADFS SAML Response." lightbox="media/error-code-aadsts7500514-supported-type-saml-response-not-found/adfs-saml-response.png":::
 
