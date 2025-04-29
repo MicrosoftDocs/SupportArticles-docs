@@ -1,5 +1,5 @@
 ---
-title: Error message when an external user accepts a SharePoint Online invitation by using another account
+title: Error when an external user accepts a SharePoint Online invitation by using another account
 description: Describes an issue in which you receive an error message when an external user accepts a SharePoint Online invitation by using another account.
 author: helenclu
 manager: dcscontentpm
@@ -14,12 +14,13 @@ ms.custom:
   - has-azure-ad-ps-ref
 appliesto: 
   - SharePoint Online
-ms.date: 12/17/2023
+ms.date: 04/29/2025
+ms.reviewer: salarson, prbalusu
 ---
 
 # Error when an external user accepts a SharePoint Online invitation by using another account
 
-## Problem
+## Symptoms
 
 You receive one of the following error messages when trying to access an externally shared resource:
 
@@ -28,7 +29,7 @@ You receive one of the following error messages when trying to access an externa
 - User is not found in the directory
 - You need permission to access this site.
 
-## Solution
+## Resolution
 
 To resolve this issue, follow these steps:
 
@@ -36,7 +37,7 @@ To resolve this issue, follow these steps:
 1. Remove the incorrect account and the correct account.
 1. Reinvite the user to the resource.
 
-> [!NOTE]
+> **Note**:
 > Many examples in this article use \<contoso\> as a placeholder. In your scenario, replace \<contoso\> with the domain that you use for your organization.
 
 ### Determine which account has access as an external user
@@ -49,7 +50,7 @@ If you can access the site as the incorrect external user, follow these steps:
 
 3. In the Account field, review the email address. For example, i:0#.f|membership|JonDoe@contoso.com.
 
-   > [!NOTE]
+   > **Note**:
    > In this example, JonDoe@contoso.com is the email account that accepted the user invitation.
 
 4. If the address is incorrect, go to the "Remove the incorrect external user account" section.
@@ -70,7 +71,7 @@ If you can't access the site as the incorrect external user, follow these steps:
 
 7. In the **Account** field, review the email address. For example, **i:0#.f|membership|JonDoe\@contoso.com**.
 
-   > [!NOTE]
+   > **Note**:
    > In this example, **JonDoe\@contoso.com** is the email account that accepted the user invitation.
 
 8. If the address is incorrect, go to the "Remove the incorrect external user account" section.
@@ -150,9 +151,9 @@ The steps below remove the external user's ability to access SharePoint Online. 
    > [!NOTE]
    > This option doesn't apply to Small Business subscriptions.
 
-   1. Start the SharePoint Online Management Shell.
+   1. Start SharePoint Online Management Shell.
 
-   2. Type the following cmdlet:
+   2. Run the following cmdlet:
  
       ```powershell
       $cred = Get-Credential
@@ -160,19 +161,21 @@ The steps below remove the external user's ability to access SharePoint Online. 
 
       In the Windows PowerShell Credential required window, type your admin account and password, then click OK.
 
-   3. Connect to SharePoint Online, and then type the following cmdlet:
+   3. Connect to SharePoint Online, and then run the following cmdlet:
 
       ```powershell
       Connect-SPOService -Url https://<contoso>-admin.sharepoint.com -Credential $cred
       ```
 
-   4. Remove the user from each site collection by typing the following cmdlet:
+   4. Remove the user from each site collection.
+
+      Run the following cmdlet:
   
       ```powershell
       Get-SPOUser -Site https://<contoso>.sharepoint.com | FT –a
       ```
 
-    Notice the external user's Login Name in the returned results. As an external user, it might have a "live.com#" prefix if it's a Microsoft Account.
+    Notice the external user's Login Name in the returned results. As an external user, it might have a "live.com#" prefix if it's a Microsoft account.
 
     Type the following cmdlet:
 
@@ -181,50 +184,45 @@ The steps below remove the external user's ability to access SharePoint Online. 
      ```
 
    > [!NOTE]
-   > Replace live.com#jondoe@company.com with the user in your scenario.
+   > Replace live.com#jondoe@company.com with the user's login name in your scenario.
 
 Next, you have to remove the account from Microsoft Entra ID:
 
-1. Download and install the Microsoft Graph PowerShell SDK. 
+ 1. Download and install the Microsoft Graph PowerShell SDK by running the following command:
 
+    ```powershell
+    Install-Module Microsoft.Graph -Scope CurrentUser -Repository PSGallery 
+    ```
 
-```powershell
-Install-Module Microsoft.Graph -Scope CurrentUser -Repository PSGallery 
-```
-
-1. Open PowerShell and connect to Microsoft Graph
+1. Open PowerShell and connect to Microsoft Graph by running the following command:
 
    ```powershell
    Connect-MgGraph -Scopes "User.ReadWrite.All","Directory.ReadWrite.All"
    ```
+
+1. Enter your administrator credentials in the dialog box.
    
-   Enter your administrator credentials in the dialog box:
-   
-1. Locate the external (guest) user
+1. Locate the external (guest) user by running the following command. This command filters for the guest account by UPN and displays the ID, UPN, and UserType of the account. 
+   Replace `jondoe_contoso.com#EXT#@yourdomain.onmicrosoft.com` with the specific user in your scenario.
 
    ```powershell
    $guestUpn = 'jondoe_contoso.com#EXT#@yourdomain.onmicrosoft.com'
    Get-MgUser -Filter "UserPrincipalName eq '$guestUpn'" -Property Id,UserPrincipalName,UserType | Format-Table -AutoSize
    ```
    
-   This filters for the guest account by its UPN and displays its Id, UPN, and UserType.
-   
-1. Remove (soft-delete) the guest user
+1. Remove (soft-delete) the guest user by running the following command:
 
    ```powershell
    Remove-MgUser -UserId <user-id> -Confirm:$false
    ```
    
-1. (Optional) Permanently delete from the recycle bin
+1. (Optional) Delete the guest user from the recycle bin permanenetly by running the following command:
 
    ```powershell
    $deleted = Get-MgDirectoryDeletedItem -Filter "Id eq '<user-id>'" -All
    Remove-MgDirectoryDeletedItem -DirectoryObjectId $deleted.Id -Confirm:$false
    ```
-   
-   > [!NOTE]
-   > Replace **jondoe_contoso.com#EXT#@yourdomain.onmicrosoft.com** with the specific user in your scenario.
-   
+      
 ### Clear the browser cache
 
 SharePoint Online uses browser caching in several scenarios, including the People Picker. Even though a user was fully removed from the system, the user may still remain in the browser cache. Clearing the browser cache resolves this issue. To do so for Internet Explorer, follow the steps given in [Viewing and deleting your browsing history](https://support.microsoft.com/help/17438).
@@ -237,7 +235,7 @@ After you follow these steps, reinvite the external user to the site by using th
 
 ## More information
 
-An external user invitation doesn't require to be accepted by the email address to which it was first sent. It's a one-time invitation. If another user accepts the invitation, or if the user who accepts the invitation signs up by using an account other than the email address to which the invitation was sent, you may encounter an access denied message.
+An external user invitation isn't required to be accepted by the email address to which it was first sent. It's a one-time invitation. If another user accepts the invitation, or if the user who accepts the invitation signs up by using an account other than the email address to which the invitation was sent, you may encounter an access denied message.
 
 For example, a user is signed in through a browser by using a Microsoft account, and the user receives an email invitation to the user's external user account in the user's email application. Then, the user selects the link to accept the invite. However, based on the user's browser cookies, the user accidentally accepts the invite by using the incorrect identity.
 
