@@ -22,11 +22,12 @@ ms.date: 08/09/2024
 
 In this article:
 
-- Understanding SharePoint storage
-
-- Over quota experience
-
-- Managing an over quota tenant 
+> Understanding SharePoint storage
+> 
+> Over quota experience
+> 
+> Managing an over quota tenant 
+> References
 
 ### Understanding SharePoint storage
 
@@ -39,7 +40,7 @@ The amount of Microsoft SharePoint storage for your organization is based on the
 
 Your organization has a total storage of 1 TB plus 10 GB per license of eligible plan purchased, plus any Microsoft 365 Extra File Storage add-on purchased.
 
-If you suspect you should have more storage than is displayed in the Microsoft 365 admin center, Microsoft 365 admins can run the following diagnostic tool. It identifies any issues with your SharePoint tenant storage quota, and shows how the quota is allocated.
+If you suspect you should have more storage than is displayed in the Microsoft 365 admin center, Microsoft 365 admins can run the following diagnostic tool. It identifies any issues with your SharePoint tenant storage quota and shows how the quota is allocated.
 
 > [!NOTE]
 > This feature requires a Microsoft 365 administrator account. This diagnostic isn't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
@@ -56,33 +57,33 @@ The over quota experience differs depending on the type of licenses in your tena
 1. For developer tenants with only Microsoft 365 E3 or E5 Developer SKU:
 
    1. During the first 30 days of being over quota, banner and email notifications will be sent.  
-   
+      
    1. After 30 days of being over quota, the tenant will go into read-only.  
-   
+      
    1. After 60 days of being over quota, the tenant data will be deleted.  
-   
+      
    1. After 90 days of being over quota, tenant admin loses access to tenant. The tenant admin is blocked from rejoining or creating a new account. 
-   
-   1. After 120 days of being over quota, the subscription is de-activated.  
-   
+      
+   1. After 120 days of being over quota, the subscription is deactivated.  
+      
 1. For education tenants that are subject to pooled storage policy:  
 
    1. After the 30-day grace period, all OneDrive accounts and SharePoint sites will go into read-only. Learn more: [pooled storage management](/microsoft-365/education/deploy/pooled-storage-management). 
-   
-1. For commercial tenants (non-developer and non-education):  
+      
+1. For commercial tenants (not developer and not education):  
 
-   1. New sites cannot be created through PowerShell Over quota experience 
-   
+   1. New sites can't be created through PowerShell.
+      
 > [!NOTE]
-> It is a violation of the [Product Terms](https://www.microsoft.com/licensing/terms/en-US/productoffering/SharePointOnline/MCA?msockid=24d26293f5aa60550ff1771bf487610c) to remain over quota.
+> It's a violation of the [Product Terms](https://www.microsoft.com/licensing/terms/en-US/productoffering/SharePointOnline/MCA?msockid=24d26293f5aa60550ff1771bf487610c) to remain over quota.
 
 ### Managing an over quota tenant 
 
 When the SharePoint storage quota is exceeded, here are some options to consider: 
 
-1. Purchase add-on storage or additional licenses
+1. Purchase add-on storage or extra licenses
 
-1. Archive inactive content that needs be retained
+1. Archive inactive content that should be retained
 
 1. Delete content that is no longer needed 
 
