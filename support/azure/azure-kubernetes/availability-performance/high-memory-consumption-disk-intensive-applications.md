@@ -1,37 +1,37 @@
 ---
 title: Troubleshoot High Memory Consumption in Disk-Intensive Applications
 description: Helps identify and resolve excessive memory usage due to Linux kernel behaviors on Kubernetes pods.
-ms.date: 04/28/2025
+ms.date: 04/29/2025
 ms.reviewer: claudiogodoy, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot high memory consumption in disk-intensive applications
 
-Disk input and output operations are costly, and most operating systems implement caching strategies for reading and writing data to the filesystem. [Linux kernel](https://www.kernel.org/doc) usually uses strategies such as the [page cache](https://www.kernel.org/doc/gorman/html/understand/understand013.html) to improve the overall performance. The primary goal of the page cache is to store data that's read from the filesystem in cache, making it available in memory for future read operations.
+Disk input and output operations are costly, and most operating systems implement caching strategies for reading and writing data to the filesystem. The [Linux kernel](https://www.kernel.org/doc) usually uses strategies such as the [page cache](https://www.kernel.org/doc/gorman/html/understand/understand013.html) to improve overall performance. The primary goal of the page cache is to store data read from the filesystem in the cache, making it available in memory for future read operations.
 
-This article helps you to identity and avoid high memory consumed by disk-intensive applications due to Linux kernel behaviors on Kubernetes pods.
+This article helps you identity and avoid the high memory consumption caused by disk-intensive applications due to Linux kernel behaviors on Kubernetes pods.
 
 ## Prerequisites
 
-- A tool to connect to the Kubernetes cluster, such as the `kubectl` tool. To install `kubectl` using the [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+A tool to connect to the Kubernetes cluster, such as the `kubectl` tool. To install `kubectl` using the [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 ## Symptoms
 
-When a disk-intensive application running on a pod perform frequent filesystem operations, high memory consumption might occur.
+When a disk-intensive application running on a pod performs frequent filesystem operations, high memory consumption might occur.
 
-The following table outlines the common symptoms of high memory consumption:
+The following table outlines common symptoms of high memory consumption:
 
 | Symptom | Description |
 | --- | --- |
-| The [working set](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory) metric too high | This issue occurs when there is a significant difference between the [working set](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory) metric reported by the [Kubernetes Metrics API](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server) and the actual memory consumed by an application. |
-| Out-of-memory (OOM) kill | This issue indicates memory issues exist on your pod. |
-| Increased memory usage after heavy disk activity | After operations such as backups, large file reads/writes, or data imports, memory consumption rises. |
-| Memory usage grows indefinitely | The pod's memory consumption increases over time without reducing, like a memory leak, even if the application itself isn’t leaking memory.|
+| The [working set](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory) metric is too high. | This issue occurs when there's a significant difference between the [working set](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory) metric reported by the [Kubernetes Metrics API](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#metrics-server) and the actual memory consumed by an application. |
+| Out-of-memory (OOM) kill. | This issue indicates memory issues exist on your pod. |
+| Increased memory usage after heavy disk activity. | After operations such as backups, large file reads/writes, or data imports, memory consumption rises. |
+| Memory usage grows indefinitely. | The pod's memory consumption increases over time without reducing, like a memory leak, even if the application itself isn't leaking memory.|
 
 ## Troubleshooting checklist
 
-### Step 1: Inspect pod working set
+### Step 1: Inspect the pod working set
 
 To inspect the working set of pods reported by the Kubernetes Metrics API, run the following [kubectl top pods](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_top/) command:
 
@@ -53,7 +53,7 @@ To inspect the memory statistics of the [cgroup](https://www.kernel.org/doc/html
     $ kubectl exec <POD_NAME> -it -- bash
     ```
 
-2. Navigate to the `cgroup` statistics directory and list memory-related files:
+2. Navigate to the `cgroup` statistics directory and list the memory-related files:
 
     ```console
     $ ls /sys/fs/cgroup | grep -e memory.stat -e memory.current
@@ -63,9 +63,9 @@ To inspect the memory statistics of the [cgroup](https://www.kernel.org/doc/html
     - `memory.current`: Total memory currently used by the `cgroup` and its descendants.
     - `memory.stat`: This breaks down the cgroup's memory footprint into different types of memory, type-specific details, and other information about the state and past events of the memory management system.
 
-    All the values listed on those files are in bytes.
+    All the values listed in those files are in bytes.
 
-3. Get an overview about how the memory consumption is distributed on the pod:
+3. Get an overview of how memory consumption is distributed on the pod:
 
     ```console
     $ cat /sys/fs/cgroup/memory.current
@@ -95,11 +95,11 @@ The following table describes some memory segments:
 
 | Segment | Description |
 |---|---|
-| `anon` | Amount of memory used in anonymous mappings. The majority languages use this segment to allocate memory. |
-| `file` | Amount of memory used to cache filesystem data, including tmpfs and shared memory. |
-| `slab`  | Amount of memory used for storing data structures in the Linux kernel. |
+| `anon` | The amount of memory used in anonymous mappings. Most languages use this segment to allocate memory. |
+| `file` | The amount of memory used to cache filesystem data, including tmpfs and shared memory. |
+| `slab`  | The amount of memory used to store data structures in the Linux kernel. |
 
-Combined with the [Step 2](#step-2-inspect-pod-memory-statistics), the `anon` represents 5197824 bytes which isn't close to the total amount reported by the working set metric. The `slab` memory segment used by the Linux kernel represents 354682456 bytes, which is almost all the memory reported by working set metric on the pod.
+Combined with [Step 2](#step-2-inspect-pod-memory-statistics), `anon` represents 5,197,824 bytes, which isn't close to the total amount reported by the working set metric. The `slab` memory segment used by the Linux kernel represents 354,682,456 bytes, which is almost all the memory reported by the working set metric on the pod.
 
 ### Step 4: Drop the kernel cache on a debugger pod
 
@@ -143,13 +143,13 @@ Combined with the [Step 2](#step-2-inspect-pod-memory-statistics), the `anon` re
     slab 392768
     ```
 
-If you observe a significant decrease in both working set and `slab` memory segment, you are experiencing the issue where a great amount of memory is used by the Linux kernel on the pod.
+If you observe a significant decrease in both the working set and the `slab` memory segment, you're experiencing an issue with the Linux kernel using a great amount of memory on the pod.
 
 ## Workaround: Configure appropriate memory limits and requests
 
 The only effective workaround for high memory consumption on Kubernetes pods is to set realistic resource [limits and requests](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits). For example:
 
-```ymal
+```yaml
 resources:
     requests:
         memory: 30Mi
@@ -157,7 +157,7 @@ resources:
         memory: 60Mi
 ```
 
-By configuring appropriate memory limits and requests in the Kubernetes or specification, you can ensure that Kubernetes manages memory allocation more efficiently, mitigating the impact of excessive kernel-level caching on pod memory usage.
+By configuring appropriate memory limits and requests in Kubernetes or the specification, you can ensure that Kubernetes manages memory allocation more efficiently, mitigating the impact of excessive kernel-level caching on pod memory usage.
 
 > [!CAUTION]
 > Misconfigured pod memory limits can lead to problems such as OOMKilled errors.
