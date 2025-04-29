@@ -1,6 +1,6 @@
 ---
-title: Error when an external user accepts a SharePoint Online invitation by using another account
-description: Describes an issue in which you receive an error message when an external user accepts a SharePoint Online invitation by using another account.
+title: Error when a guest user accepts a SharePoint Online invitation by using another account
+description: Describes an issue in which you receive an error message when a guest user accepts a SharePoint Online invitation by using another account.
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
@@ -18,11 +18,11 @@ ms.date: 04/29/2025
 ms.reviewer: salarson, prbalusu
 ---
 
-# Error when an external user accepts a SharePoint Online invitation by using another account
+# Error when a guest user accepts a SharePoint Online invitation by using another account
 
 ## Symptoms
 
-You receive one of the following error messages when trying to access an externally shared resource:
+You receive one of the following error messages when trying to access a shared resource by using a guest account:
 
 - `Access Denied`
 - `Let us know why you need access to this site.`
@@ -40,7 +40,7 @@ To resolve this issue, follow these steps:
 > **Note**:
 > Many examples in this article use \<contoso\> as a placeholder. In your scenario, replace \<contoso\> with the domain that you use for your organization.
 
-### Determine which account has access as an external user
+### Determine which account has access as a guest user
 
 If you can access the site as the incorrect external user, follow these steps:
 
@@ -90,7 +90,7 @@ For Microsoft 365 for Business subscriptions, use the SharePoint Online UI:
 
 4. Select the external user to be removed, and then select the **Delete** icon.
 
-For all other subscriptions,use SharePoint Online Management Shell by using the following steps:
+For all other subscriptions, use SharePoint Online Management Shell by using the following steps:
 
 > [!NOTE]
 > This option doesn't apply to Office Small Business (P) organizations.
@@ -126,7 +126,8 @@ For all other subscriptions,use SharePoint Online Management Shell by using the 
    Remove-SPOExternalUser -UniqueIDs @($ExtUser.UniqueId)
    ```
 
-Use the following steps to remove the external user's ability to access SharePoint Online. However, the user will still appear in search results and within the SharePoint Online Management Shell `Get-SPOUser` cmdlet. To remove the user from SharePoint Online completely, you must remove the user from the UserInfo list by using one of the following methods. 
+Use the following steps to remove the external user's ability to access SharePoint Online. However, the user might still appear in search results and within the SharePoint Online Management Shell `Get-SPOUser` cmdlet. 
+To remove the user from SharePoint Online completely, remove the user from the UserInfo list by using one of the following methods. 
 
 1. Use the SharePoint Online UI. Browse to each site collection that the user previously had access to, and then follow these steps:
 
@@ -136,7 +137,7 @@ Use the following steps to remove the external user's ability to access SharePoi
       _layouts/15/people.aspx/membershipGroupId=0
       ```
 
-      For example, the full URL will resemble the following:
+      For example, the full URL resembles the following example:
 
       ```powershell
       https://<contoso>.sharepoint.com/_layouts/15/people.aspx/membershipGroupId=0
@@ -169,13 +170,13 @@ Use the following steps to remove the external user's ability to access SharePoi
 
    4. Remove the user from each site collection.
 
-      Run the following command to identify the affectred external user account:
+      Run the following command to identify the affected guest user account:
   
       ```powershell
       Get-SPOUser -Site https://<contoso>.sharepoint.com | FT –a
       ```
 
-    Notice the external user's Login Name in the returned results. As an external user, it might have a "live.com#" prefix if it's a Microsoft account.
+    Notice the guest user's Login Name in the returned results. For a guest user, it might have a "live.com#" prefix if it's a Microsoft account.
 
     Run the following command to remove the external user account:
 
@@ -216,7 +217,7 @@ Next, you have to remove the account from Microsoft Entra ID:
    Remove-MgUser -UserId <user-id> -Confirm:$false
    ```
    
-1. (Optional) Delete the guest user from the recycle bin permanenetly by running the following command:
+1. (Optional) Delete the guest user from the recycle bin permanently by running the following command:
 
    ```powershell
    $deleted = Get-MgDirectoryDeletedItem -Filter "Id eq '<user-id>'" -All
@@ -225,7 +226,7 @@ Next, you have to remove the account from Microsoft Entra ID:
       
 ### Clear the browser cache
 
-SharePoint Online uses browser caching in several scenarios, including the People Picker feature. Even though a user was fully removed from the system, the user might still remain in the browser cache. Clearing the browser cache resolves this issue. When you clear the cache, make sure that you also select the **Cookies and website data** option.
+SharePoint Online uses browser caching in several scenarios, including the People Picker feature. Even after a user is fully removed from the system, the user might still remain in the browser cache. Clearing the browser cache resolves this issue. When you clear the cache, make sure that you also select the **Cookies and website data** option.
 
 ### Reinvite the external user
 
@@ -233,7 +234,7 @@ After you delete the external user account, reinvite the external user to the si
 
 ## More information
 
-An external user invitation isn't required to be accepted by the email address to which it was first sent. It's a one-time invitation. If another user accepts the invitation, or if the user who accepts the invitation signs in to the resource by using an account other than the email address to which the invitation was sent, they might see an `Access denied` message.
+It isn't a requirement for a guest user invitation to be accepted by using the email address to which it was sent. It's a one-time invitation. If the user accepts the invitation by using a different account, or if the user who accepts the invitation signs in to the resource by using an account other than the email address to which the invitation was sent, they might see an `Access denied` message.
 
 For example, consider this scenario. A user is signed in through a browser by using a Microsoft account, and the user receives an email invitation to their external user account in their email application. Then the user selects the link to accept the invitation. However, based on the user's browser cookies, the user accepts the invite by using the incorrect identity. So when the user signs in to the resource by using their external user account, they  receive the error that the user isn't found in the directory.
 
