@@ -47,7 +47,7 @@ To fix this issue, use either of the following methods:
 
    If the affected application uses a known set of IP addresses when it connects to Microsoft Exchange Server, you can configure a dedicated receive connector on the Exchange server to disable the SMTPUTF8 extension for connections that originate from those IP addresses.
 
-   To [configure a receive connector](/powershell/module/exchange/set-receiveconnector#-remoteipranges), run the following PowerShell cmdlet in Exchange Management Shell (EMS):
+   To [configure a receive connector](/powershell/module/exchange/set-receiveconnector), run the following PowerShell cmdlet in Exchange Management Shell (EMS):
 
    ```PowerShell
    Set-ReceiveConnector -Identity "<connector name or ID>" -SmtpUtf8Enabled $false -RemoteIPRanges <remote IP ranges>
