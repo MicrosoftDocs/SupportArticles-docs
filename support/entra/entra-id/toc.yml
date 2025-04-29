@@ -65,7 +65,8 @@
         href: app-integration/repeat-login-prompts-in-msal-ios-app.md
       - name: Infinite sign-in loop issue with ASP.NET applications
         href: app-integration/asp-dot-net-application-infinite-sign-in-loop.md
-
+      - name: Applications using TLS 1.0/1.1 fail to authenticate
+        href: app-integration/application-using-tls-1dot0-1dot2-authentication-fail.md
 
   - name: Troubleshoot adding apps
     href: app-integration/troubleshoot-adding-apps.md
