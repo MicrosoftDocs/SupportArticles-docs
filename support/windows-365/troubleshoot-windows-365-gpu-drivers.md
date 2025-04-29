@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Windows 365 GPU drivers
+title: Troubleshoot Windows 365 GPU drivers
 description: Provides a solution to a known issue with graphic card drivers on Windows 365 GPU Enabled Cloud PC.
 ms.date: 04/29/2025
 manager: dcscontentpm
@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 ms.reviewer: feadebay,erikje
 ms.custom: intune-azure, get-started
 ---
-# Troubleshooting Windows 365 GPU drivers
+# Troubleshoot Windows 365 GPU drivers
 
 This article provides a solution to a known issue with graphic card drivers on Windows 365 GPU Enabled Cloud PC.
 
@@ -18,7 +18,7 @@ When you use Windows 365 GPU Enabled Cloud PCs, you might encounter a driver err
 
 The error message resembles the following screenshot. You can see an error dialog on the **Nvidia A10-24Q** driver in Device Manager.
 
-:::image type="content" source="media/troubleshooting-windows-365-gpu-drivers/error-in-device-manager.png" alt-text="Error in Device Manager.":::
+:::image type="content" source="media/troubleshoot-windows-365-gpu-drivers/error-in-device-manager.png" alt-text="Error in Device Manager.":::
 
 > [!NOTE]
 > The actual dialog error number version might be different.
