@@ -26,9 +26,9 @@ You can grant users one or more of the following access rights to event logs:
 - Clear
 
 > [!IMPORTANT]
-> You can configure the security log in the same way. However, you can change only Read and Clear access permissions. Write access to the security log is reserved only for the Windows Local Security Authority (LSA) and identities having the “Manage auditing and security log” privilege enabled.
+> You can configure the security log in the same way. However, you can change only Read and Clear access permissions. Write access to the security log is reserved only for the Windows Local Security Authority (LSA) and identities that have the **Manage auditing and security log** privilege enabled.
 
-You can use an Administrative Template Policy for the purpose. The path for the System Eventlog, for example, is:
+You can use an Administrative Template Policy for the purpose. For example, the path for the System Eventlog is:
 
 > Computer Configuration\Administrative Templates\Windows Components\Event log Service\System
 
@@ -65,8 +65,8 @@ For example, the first ACE denies Anonymous Users read, write, and clear access 
 
 1. Select **Start**, select **Run**, type *gpedit.msc*, and then select **OK**.
 2. In the Group Policy Editor, expand the following folder tree under **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Event log Service**.
-3. For the example of application eventlog in the subfolder "Application" double-click **"Configure Log Access", "Enable"** the policy setting, type the SDDL string that you want for the log security, and then select **OK**.
-4. Setting the **"Configure Log Access (Legacy)"** is not needed, that is for operating systems older than Windows Vista.
+3. For the example of application eventlog, in the subfolder **Application**, double-click **Configure log access**, select **Enable**, type the SDDL string that you want for the log security, and then select **OK**.
+4. It's not necessary to set **Configure Log Access (Legacy)**. The option is for operating systems older than Windows Vista.
 
 ## Use group policy to set your application and system log security
 
