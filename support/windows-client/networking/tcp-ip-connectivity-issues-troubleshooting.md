@@ -1,7 +1,7 @@
 ---
 title: TCP/IP connectivity issues troubleshooting
 description: Learn how to troubleshoot TCP/IP connectivity and what you should do if you come across TCP reset in a network capture.
-ms.date: 04/29/2025
+ms.date: 04/30/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
