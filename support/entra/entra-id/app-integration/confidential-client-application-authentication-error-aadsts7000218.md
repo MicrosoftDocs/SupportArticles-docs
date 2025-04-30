@@ -1,7 +1,7 @@
 ---
 title: Invalid Client Error AADSTS7000218 When Authenticating to Microsoft Entra ID
 description: Provides a solution to the AADSTS7000218 error when a confidential client application authenticates to Microsoft Entra ID.
-ms.date: 04/27/2025
+ms.date: 04/30/2025
 ms.reviewer: bachoang, v-weizhu
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
