@@ -322,6 +322,8 @@
       href: windows-boot-failure.md
     - name: Azure VM login hangs at "Applying Group Policy Environment"
       href: applying-group-policy-environment-policy.md
+    - name: Azure VM startup hangs at "Applying Group Policy Power Options policy"
+      href: applying-group-policy-power-options.md
     - name: Troubleshoot Windows VM OS with missing boot manager
       href: os-bootmgr-missing.md
     - name: OS isn't found
