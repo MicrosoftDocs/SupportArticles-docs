@@ -1,13 +1,7 @@
 ---
-<<<<<<< HEAD
-title: Windows VM Startup is Stuck On "Applying Group Policy Power Options" in Azure
-description: Provides troubleshooting steps for an Azure virtual machine (VM) that is stuck in startup with the message "Applying Group Policy Power Options."
-ms.date: 04/25/2025
-=======
 title: Windows VM Startup is Stuck on "Applying Group Policy Power Options" in Microsoft Azure
 description: Provides troubleshooting steps for an Azure virtual machine (VM) that is stuck in startup and displays "Applying Group Policy Power Options."
 ms.date: 03/03/2025
->>>>>>> upstream/main
 author: cwhitley-MSFT 
 ms.author: cwhitley
 ms.service: azure-virtual-machines
