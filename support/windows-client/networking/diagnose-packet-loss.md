@@ -33,7 +33,7 @@ Local packet loss is fully observable and can be caused by various internal and 
 - Low resources
 
     If the system or socket runs out of resources to handle the packet, the packet is dropped. Examples of resource limits include physical memory on the system and socket send or receive buffers. Depending on the resource limit, these events might last only microseconds, for example, when the system's CPU can't react quickly enough to a full receive buffer.
-- ARP/ND failure
+- ARP or ND failure
 
     If the next hop for an outbound packet doesn't respond to Address Resolution Protocol (ARP) or neighbor discovery (ND) requests, then packets sent to that next hop are dropped on the local system. Packets might also be dropped during ARP or ND processes if the ARP or ND packet queue limit is exceeded. The ARP or ND packets themselves are typically not dropped locally and belong to the remote packet loss category.
 - No route
