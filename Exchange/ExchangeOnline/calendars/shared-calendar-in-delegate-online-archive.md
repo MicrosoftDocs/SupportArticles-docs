@@ -96,9 +96,9 @@ To work around this issue, choose from the following options:
   8. In the right pane, open the **Property Editor** window by double-clicking the **PR_ATTR_HIDDEN** property.
   
   9. Select the **Boolean** checkbox, and then select **OK**.
-
-     **Note:** If you need to hide additional calendars, repeat steps 9 to 11 for each calendar.
-
+ 
+      **Note:** If you need to hide additional calendars, repeat steps 9 to 11 for each calendar.
+       
   10. Exit the application by closing all MFCMAPI windows.
   
   11. Start Outlook and verify that the delegate's Online Archive folder no longer displays the shared calendar.
