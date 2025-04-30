@@ -176,11 +176,11 @@ This issue occurs due to a known issue that has been fixed in File Sync Agent v1
 
 **Server Registration displays the message: "System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=..."**
 
-This error occurs when the server lacks the required .NET Framework version. Azure File Sync's server registration requires .NET Framework 4.7.2. or a later version to function properly.
+This error occurs when the server lacks the required .NET Framework version. Azure File Sync's server registration requires .NET Framework 4.7.2 or a later version to function properly.
 
 To resolve the issue, follow these steps:
 
-1. Downland and install .NET Framework 4.7.2. or a later version.
+1. Downland and install .NET Framework 4.7.2 or a later version.
 2. Restart the server after the installation.
 3. Retry the server registration using the server registration UI or PowerShell.
 
