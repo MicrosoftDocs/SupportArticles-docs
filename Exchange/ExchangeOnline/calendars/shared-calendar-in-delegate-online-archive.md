@@ -102,3 +102,4 @@ To work around this issue, choose from the following options:
   10. Exit the application by closing all MFCMAPI windows.
   
   11. Start Outlook and verify that the delegate's Online Archive folder no longer displays the shared calendar.
+  
