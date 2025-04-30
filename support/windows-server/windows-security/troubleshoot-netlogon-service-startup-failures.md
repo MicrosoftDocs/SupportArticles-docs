@@ -187,54 +187,53 @@ Validate the service permissions within the registry are set to appropriate valu
 
 ## Additional symptoms
 
-Other services, such as the Windows Time Service or the Group Policy Service might report failed operations due to the Netlogon service not being started:
+1. Other services, such as the Windows Time Service or the Group Policy Service might report failed operations due to the Netlogon service not being started:
 
-> Log Name: System  
-> Source: Microsoft-Windows-Time-Service  
-> Event ID: 159  
-> Level: Warning  
-> Description: W32time is unable to communicate with Netlogon Service. This failure prevents NTPClient from discovering and using domain peers, besides causing problems with correct W32time service state being advertised by Netlogon. This could be a temporary condition that resolves itself shortly. If this warning repeats over a considerable period of time, ensure the Netlogon service is running and is responsive and restart W32time service to reintiaize the overall state. The error was 0x80070700: An attempt was made to logon, but the network logon service was not started.
+   > Log Name: System  
+   > Source: Microsoft-Windows-Time-Service  
+   > Event ID: 159  
+   > Level: Warning  
+   > Description: W32time is unable to communicate with Netlogon Service. This failure prevents NTPClient from discovering and using domain peers, besides causing problems with correct W32time service state being advertised by Netlogon. This could be a temporary condition that resolves itself shortly. If this warning repeats over a considerable period of time, ensure the Netlogon service is running and is responsive and restart W32time service to reintiaize the overall state. The error was 0x80070700: An attempt was made to logon, but the network logon service was not started.
 
-> Log Name: System  
-> Source: Microsoft-Windows-Time-Service  
-> Event ID: 130  
-> Level: Warning  
-> Description: NtpClient was unable to set a domain peer to use as a time source because of failure in establishing a trust relationship between this computer and the 'litware.com' domain in order to securely synchronize time. NtpClient will try again in 15 minutes and double the reattempt interval thereafter. The error was: The RPC server is unavailable. (0x800706BA)
+   > Log Name: System  
+   > Source: Microsoft-Windows-Time-Service  
+   > Event ID: 130  
+   > Level: Warning  
+   > Description: NtpClient was unable to set a domain peer to use as a time source because of failure in establishing a trust relationship between this computer and the 'litware.com' domain in order to securely synchronize time. NtpClient will try again in 15 minutes and double the reattempt interval thereafter. The error was: The RPC server is unavailable. (0x800706BA)
 
-> Log Name: System  
-> Source: Microsoft-Windows-GroupPolicy  
-> Event ID: 1110  
-> Level: Error  
-> Description: The processing of Group Policy failed. Windows could not determine if the user and computer accounts are in the same forest. Ensure the user domain name matches the name of a trusted domain that resides in the same forest as the computer account.
+   > Log Name: System  
+   > Source: Microsoft-Windows-GroupPolicy  
+   > Event ID: 1110  
+   > Level: Error  
+   > Description: The processing of Group Policy failed. Windows could not determine if the user and computer accounts are in the same forest. Ensure the user domain name matches the name of a trusted domain that resides in the same forest as the computer account.
 
-Management or other operations relying on the Netlogon service also fail:
+2. Management or other operations relying on the Netlogon service also fail when the Netlogon service not being started:
 
-```console
-nltest /sc_query:litware.com
+   ```console
+   nltest /sc_query:litware.com
 
-I_NetLogonControl failed: Status = 1722 0x6ba RPC_S_SERVER_UNAVAILABLE
-```
+   I_NetLogonControl failed: Status = 1722 0x6ba RPC_S_SERVER_UNAVAILABLE
+   ```
 
-```console
-net use \\192.168.1.11 /user:litware\administrator
+   ```console
+   net use \\192.168.1.11 /user:litware\administrator
 
-System error 1792 has occurred.
+   System error 1792 has occurred.
 
-An attempt was made to logon, but the network logon service was not started.
-```
+   An attempt was made to logon, but the network logon service was not started.
+   ```
 
-Domain controller locator fails to locate a domain controller with error 1355 or "The specified domain either doesn't exist or couldn't be contacted".
+3. Domain controller locator fails to locate a domain controller with error 1355 or "The specified domain either doesn't exist or couldn't be contacted".
 
-Domain trust relationships might fail if all reachable domain controllers have their Netlogon services stopped:
+4. Domain trust relationships might fail if all reachable domain controllers have their Netlogon services stopped:
 
-> Log Name: System  
-> Source: NETLOGON  
-> Event ID: 5719  
-> Level: Error  
-> Description: This computer was not able to set up a secure session with a domain controller in domain \<DOMAIN\> due to the following:  
-> We can't sign you in with this credential because your domain isn't available. Make sure your device is connected to your organization's network and try again. If you previously signed in on this device with another credential, you can sign in with that credential.  
-> This may lead to authentication problems. Make sure that this computer is connected to the network. If the problem persists, please contact your domain administrator.
+   > Log Name: System  
+   > Source: NETLOGON  
+   > Event ID: 5719  
+   > Level: Error  
+   > Description: This computer was not able to set up a secure session with a domain controller in domain \<DOMAIN\> due to the following:  
+   > We can't sign you in with this credential because your domain isn't available. Make sure your device is connected to your organization's network and try again. If you previously signed in on this device with another credential, you can sign in with that credential.  
+   > This may lead to authentication problems. Make sure that this computer is connected to the network. If the problem persists, please contact your domain administrator.
 
-## More information
-
-If this computer is a domain controller for the specified domain, it sets up the secure session to the primary domain controller emulator in the specified domain. Otherwise, this computer sets up the secure session to any domain controller in the specified domain.
+   > [!NOTE]
+   > If this computer is a domain controller for the specified domain, it sets up the secure session to the primary domain controller emulator in the specified domain. Otherwise, this computer sets up the secure session to any domain controller in the specified domain.
