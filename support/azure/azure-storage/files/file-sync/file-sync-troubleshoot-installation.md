@@ -180,7 +180,7 @@ This error occurs when the server lacks the required .NET Framework version. Azu
 
 To resolve the issue, follow these steps:
 
-1. Downland and install .NET Framework 4.7.2 or a later version.
+1. Download and install .NET Framework 4.7.2 or a later version.
 2. Restart the server after the installation.
 3. Retry the server registration using the server registration UI or PowerShell.
 
