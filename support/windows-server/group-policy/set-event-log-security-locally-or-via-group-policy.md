@@ -55,7 +55,7 @@ To construct an SDDL string, note that there are three distinct rights that pert
 - 2 = Write
 - 4 = Clear
 
-The following is a sample SDDL that shows the default SDDL string for the Application log. The access rights (in hexadecimal) are bold-faced for illustration:
+The following is a sample SDDL that shows the default SDDL string for the System log. The access rights (in hexadecimal) are bold-faced for illustration:
 
 > O:BAG:SYD:(A;;**0xf0007**;;;SY)(A;;**0x7**;;;BA)(A;;**0x3**;;;BO)(A;;**0x5**;;;SO)(A;;**0x1**;;;IU)(A;;**0x3**;;;SU)(A;;**0x1**;;;S-1-5-3)(A;;**0x2**;;;S-1-5-33)(A;;**0x1**;;;S-1-5-32-573)
 
