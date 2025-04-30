@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot High Memory Consumption in Disk-Intensive Applications
 description: Helps identify and resolve excessive memory usage due to Linux kernel behaviors on Kubernetes pods.
-ms.date: 04/29/2025
+ms.date: 04/30/2025
 ms.reviewer: claudiogodoy, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
@@ -45,7 +45,10 @@ For detailed steps about how to identify which pod is consuming excessive memory
 
 ### Step 2: Inspect pod memory statistics
 
-To inspect the memory statistics of the [cgroup](https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html) on the pod that's consuming excessive memory, follow these steps:
+To inspect the memory statistics of the [cgroups](https://kubernetes.io/docs/concepts/architecture/cgroups/) on the pod that's consuming excessive memory, follow these steps:
+
+> [!NOTE]
+> [Cgroups](https://kubernetes.io/docs/concepts/architecture/cgroups/) help enforce resource management for pods and containers, including CPU/memory requests and limits for containerized workloads.
 
 1. Connect to the pod:
 
