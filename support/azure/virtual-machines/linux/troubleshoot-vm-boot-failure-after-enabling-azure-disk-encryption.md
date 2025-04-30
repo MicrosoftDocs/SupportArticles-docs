@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Linux VM boot failure after enabling Azure Disk Encryption
 description: Provides troubleshooting steps to an issue where an Azure Linux virtual machine fails to boot after deploying Azure Disk Encryption fails.
-ms.date: 04/24/2025
+ms.date: 04/30/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:Azure Disk Encryption (ADE) for Linux, linux-related-content
 ms.reviewer: divargas, elcorral, v-weizhu
@@ -71,20 +71,20 @@ To resolve this issue, follow these steps:
         sudo cp crypt-ade-hook /usr/share/initramfs-tools/hooks/
         ```
 
-    2. Once the file `crypt-ade-boot` is copied, replace the `ROOTPARTUUID` variable in the following line with the OS partition path from `/dev/disk/by-partuuid/`:
+    2. Once the file `crypt-ade-boot` is copied, list the OS partition from `/dev/disk/by-partuuid/` by Universally Unique Identifier (UUID):
 
         ```bash
         sudo ls -l /dev/disk/by-partuuid/ | grep -w <partition containing the OS>
         lrwxrwxrwx 1 root root  10 May 18 17:33 ef61c3c3-50bb-40f0-8124-4cbe8cb2a380 -> ../../sda1
         ```
 
-    3. Replace the `ROOTPARTUUID` variable with the one obtained in the preceding step. Replace the Universally Unique Identifier (UUID) of the partition according to your environment.
+    4. Unlock the root partition by running the following command. Replace the `ROOTPARTUUID` variable with the one obtained in the preceding step.
 
         ```bash
         cryptsetup luksOpen /dev/disk/by-partuuid/ROOTPARTUUID osencrypt --header /boot/luks/osluksheader -d /mnt/azure_bek_disk/LinuxPassPhraseFileName
         ```
 
-    4. Regenerate the initramfs image:
+    5. Regenerate the initramfs image:
 
         ```bash
         update-initramfs -u -k all
