@@ -1,7 +1,7 @@
 ---
 title: Diagnose Packet Loss
 description: Learn how to troubleshoot TCP/IP packet loss.
-ms.date: 04/28/2025
+ms.date: 04/30/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
@@ -19,7 +19,7 @@ Packet loss occurs whenever a network packet doesn't reach its intended destinat
 
 The first step when conducting a packet loss investigation is to capture [Packet Monitor (Pktmon)](/windows-server/networking/technologies/pktmon/pktmon) traces, typically by using the pktmon command-line workflow. Pktmon can capture packet traces, attribute local packet loss to specific reasons and code locations, and collect packet loss statistics. When combined with [Wireshark](https://www.wireshark.org/) analysis of protocol-level behavior, pktmon traces are sufficient to identify the root causes of many cases of packet loss.
 
-If pktmon diagnostics are inconclusive, more exhaustive component-level traces can be captured using the `netsh.exe trace start scenario=InternetClient` or `netsh.exe trace start scenario=InternetServer` command for client and server scenarios respectively. After the events are captured, stop the trace by using the `netsh.exe trace stop` command. These component-level traces are noisy and not clear, but often contain additional context before or after a local packet is dropped. For remote loss, they might indicate that the local system has inferred the occurrence of packet loss. The traces can be converted to text using `netsh.exe trace convert nettrace.etl`, opened in [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer), or used with any other Event Tracing for Windows (ETW) tool.
+If pktmon diagnostics are inconclusive, more exhaustive component-level traces can be captured using the `netsh.exe trace start scenario=InternetClient` or `netsh.exe trace start scenario=InternetServer` command for client and server scenarios respectively. After the events are captured, stop the trace by using the `netsh.exe trace stop` command. These component-level traces are noisy and not clear, but often contain additional context before or after a local packet is dropped. For remote loss, they might indicate that the local system infers the occurrence of packet loss. The traces can be converted to text using `netsh.exe trace convert nettrace.etl`, opened in [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer), or used with any other Event Tracing for Windows (ETW) tool.
 
 If the network interface card (NIC) is suspected as a cause of the packet loss, you can monitor its discard counters through any [performance counters](/windows-server/networking/technologies/network-subsystem/net-sub-performance-counters) interface or the [Get-NetAdapterStatistics](/powershell/module/netadapter/get-netadapterstatistics) cmdlet.
 
@@ -29,13 +29,13 @@ Local packet loss is fully observable and can be caused by various internal and 
 
 - Local policy
 
-    Inspection software might cause packets from remote machines to be dropped by default, such as when the Windows Firewall rejects inbound connection attempts. Cybersecurity or anti-malware software on the system can also cause these issues.
+    Inspection software might cause packets from remote machines to be dropped by default, for example, when the Windows Firewall rejects inbound connection attempts. Cybersecurity or anti-malware software on the system can also cause these issues.
 - Low resources
 
-    If the system or socket has run out of resources to handle the packet, the packet will be dropped. Examples of resource limits include physical memory on the system and socket send or receive buffers. Depending on the resource limit, these events might last only microseconds, such as when the system's CPU can't react quickly enough to a full receive buffer.
+    If the system or socket runs out of resources to handle the packet, the packet is dropped. Examples of resource limits include physical memory on the system and socket send or receive buffers. Depending on the resource limit, these events might last only microseconds, for example, when the system's CPU can't react quickly enough to a full receive buffer.
 - ARP/ND failure
 
-    If the next hop for an outbound packet doesn't respond to Address Resolution Protocol (ARP) or neighbor discovery (ND) requests, then packets sent to that next hop will be dropped on the local system. Packets might also be dropped during ARP/ND processes if the ARP/ND packet queue limit is exceeded. The ARP/ND packets themselves are typically not dropped locally and belong to the remote packet loss category.
+    If the next hop for an outbound packet doesn't respond to Address Resolution Protocol (ARP) or neighbor discovery (ND) requests, then packets sent to that next hop are dropped on the local system. Packets might also be dropped during ARP or ND processes if the ARP or ND packet queue limit is exceeded. The ARP or ND packets themselves are typically not dropped locally and belong to the remote packet loss category.
 - No route
 
     If the network layer can't find a valid route to the destination, packets might be dropped.
@@ -58,14 +58,14 @@ Remote packet loss isn't directly observable to the local machine when the packe
     This can occur if the remote machine doesn't have a socket bound to the remote port, remote machine is offline, or the network can't find a path to the remote machine.
 - Session loss
 
-    If the network (including stateful Network Address Translation (NAT), firewalls, load balancers, and so on) or the remote machine is reset or hasn't received a packet recently, its session context might expire, and subsequent packets are dropped.
+    If the network (including stateful Network Address Translation (NAT), firewalls, and load balancers) or the remote machine is reset or doesn't receive a packet recently, its session context might expire, and subsequent packets are dropped.
 - Maximum Transmission Unit (MTU) drops
 
-    This might produce an Internet Control Message Protocol (ICMP) fragmentation required or packet too big error if the size of the packet exceeds the maximum transmission size of a network link along the path to the remote machine.
+    If the size of the packet exceeds the maximum transmission size of a network link along the path to the remote machine, MTU drops might produce an error: Internet Control Message Protocol (ICMP) fragmentation required or packet too big.
 
 ## Example of Packet Monitor traces
 
-Running the following commands:
+Run the following commands:
 
 ```console
 pktmon.exe start -c
@@ -73,18 +73,18 @@ pktmon.exe stop
 pktmon.exe etl2txt PktMon.etl
 ```
 
-The resulting **PktMon.txt** file contains lines such as:
+The resulting **PktMon.txt** file contains lines that resemble the following:
 
 ```output
 [30]0000.0000::<DateTime> [Microsoft-Windows-PktMon] Drop: PktGroupId 8444249301423149, PktNumber 1, Appearance 0, Direction Rx , Type IP , Component 49, Filter 1, DropReason INET: transport endpoint was not found , DropLocation 0xE000460A, OriginalSize 402, LoggedSize 148
        Drop: ip: 192.168.5.88.50005 > 192.168.5.68.50005: UDP, length 374
 ```
 
-This information indicates the inbound UDP packet destined to port 50005 was dropped because there was no local socket bound to the port.
+This information indicates the inbound UDP packet destined to port 50005 is dropped because no local socket is bound to the port.
 
 ## Example of Network Shell traces
 
-Running the following commands:
+Run the following commands:
 
 ```console
 netsh.exe trace start scenario=InternetClient
@@ -92,15 +92,15 @@ netsh.exe trace stop
 netsh.exe trace convert NetTrace.etl
 ```
 
-The resulting **NetTrace.txt** file contains lines such as:
+The resulting **NetTrace.txt** file contains lines that resemble the following:
 
 ```output
 [30]0000.0000::<DateTime> [Microsoft-Windows-TCPIP]TCPIP: Network layer (Protocol 1(ICMP), AddressFamily = 2(IPV4)) dropped 1 packet(s) on interface 13. SourceAddress = 192.168.5.68. DestAddress = 192.168.5.88. Reason = 9(Inspection drop). Direction = 0(Send). NBL = 0xFFFFE189BEAF3AC0.
 ```
 
-This information indicates the outbound ICMP packet was dropped due to Windows Filtering Platform (WFP) inspection. The next step for WFP is to follow the [WFP live drops troubleshooting steps](/windows/security/operating-system-security/network-security/windows-firewall/troubleshooting-uwp-firewall#debugging-live-drops).
+This information indicates the outbound ICMP packet is dropped due to Windows Filtering Platform (WFP) inspection. The next step for WFP is to follow the [WFP live drops troubleshooting steps](/windows/security/operating-system-security/network-security/windows-firewall/troubleshooting-uwp-firewall#debugging-live-drops).
 
-In another scenario, a previously sent TCP segment hasn't been acknowledged by the remote endpoint, and eventually a local retransmit timer fires, causing TCP to resend some of the potentially lost data:
+In another scenario, a previously sent TCP segment isn't acknowledged by the remote endpoint, and eventually a local retransmit timer fires, causing TCP to resend some of the potentially lost data:
 
 ```output
 [31]0000.0000::<DateTime> [Microsoft-Windows-TCPIP]TCP: Connection 0xFFFFE189BD811AA0 0(RetransmitTimer) timer has expired.
