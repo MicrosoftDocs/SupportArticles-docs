@@ -8,9 +8,9 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OrasPullNetworkTimeoutVMExtensionError error code (OrasPullNetworkTimeoutVMExtensionError (211)) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# NetworkIsolatedClusterContainerRegistryTimeout error code (211) when deploying an AKS cluster
+# OrasPullNetworkTimeoutVMExtensionError error code (211) when deploying an AKS cluster
 
-This article discusses how to identify and resolve the `NetworkIsolatedClusterContainerRegistryTimeout` error code (error code number 211) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `OrasPullNetworkTimeoutVMExtensionError` error code (error code number 211) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
@@ -19,6 +19,8 @@ When you try to create an AKS cluster with outbound type `none` or `block`, you 
 > VMExtensionProvisioningError: VM has reported a failure when processing extension 'vmssCSE'.
 >
 > Error message: "Enable failed: failed to execute command: command terminated with exit status=211
+>
+> Bootstrap Container Registry is not reachable. Please check the network configuration and try again.
 
 ## Cause
 

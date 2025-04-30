@@ -8,9 +8,9 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OrasPullUnauthorizedVMExtensionError error code (OrasPullUnauthorizedVMExtensionError (212)) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# NetworkIsolatedClusterContainerRegistryAuthorizationFailed error code (212) when deploying an AKS cluster
+# OrasPullUnauthorizedVMExtensionError error code (212) when deploying an AKS cluster
 
-This article discusses how to identify and resolve the `NetworkIsolatedClusterContainerRegistryAuthorizationFailed` error code (error code number 212) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `OrasPullUnauthorizedVMExtensionError` error code (error code number 212) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
@@ -19,6 +19,8 @@ When you try to create an AKS cluster with outbound type `none` or `block`, you 
 > VMExtensionProvisioningError: VM has reported a failure when processing extension 'vmssCSE'.
 >
 > Error message: "Enable failed: failed to execute command: command terminated with exit status=212
+>
+> Bootstrap Container Registry authorization failed. Please ensure kubelet identity has pull access to the registry.
 
 ## Cause
 
