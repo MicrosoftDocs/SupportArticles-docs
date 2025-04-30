@@ -1,5 +1,5 @@
 ---
-title: Resolve file upload errors related to derived attributes
+title: Resolve File Upload Errors Related to Derived Attributes
 description: Fix errors that occur when you upload employee attribute data to Microsoft Viva Glint. These errors are related to derived attributes.
 manager: dcscontentpm
 ms.reviewer: aweixelman
@@ -181,14 +181,14 @@ This error occurs if the employee attribute data shows that one or more managers
 
 To fix the issue, follow these steps:
 
-1. In the admin dashboard, select the **Configuration** icon, then select **Activity Audit Log** in the **Client Settings** section.
+1. In the admin dashboard, select the **Configuration** icon, and then select **Activity Audit Log** in the **Client Settings** section.
 1. In the log, locate the file that didn't upload, and then select **Download errors file** in the **Details** column. The rows in the downloaded errors file represent both direct and indirect reports for each manager.
 1. [Find and remove duplicate data](https://support.microsoft.com/office/find-and-remove-duplicates-00e35bea-b46a-4d5d-b28e-66a552dc138d) from the **Description** column of the errors file.
 1. Identify the distinct manager email addresses that are noted in the errors file as problematic.
 1. For each manager email address that's identified in step 4, review the employee attribute data to determine whether the following circular reporting relationships appear to exist:
 
-   - A manager reports to themselves. Therefore, their employee ID and manager ID are the same.
-   - Two or more managers report to each other and create a reporting loop. For example, manager A reports to manager B, and manager B reports to manager A.
+   - A manager reports to themself. Therefore, their employee ID and manager ID are the same.
+   - Two or more managers report to each other and create a reporting loop. For example, Manager A reports to Manager B, and Manager B reports to Manager A.
 1. Correct all apparent circular reporting relationships.
 
    > [!NOTE]
