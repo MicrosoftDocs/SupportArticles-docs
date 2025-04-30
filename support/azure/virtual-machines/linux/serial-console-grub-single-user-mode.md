@@ -22,7 +22,7 @@ ms.author: genli
 
 [!INCLUDE [CentOS End Of Life](../../../includes/centos-end-of-life-note.md)]
 
-GRand Unified Bootloader (GRUB) is likely the first thing you see when you boot a virtual machine (VM). Because it's displayed before the operating system has started, GRUB isn't accessible via SSH. In GRUB, you can modify your boot configuration to boot into single-user mode, among other things.
+Grand Unified Bootloader (GRUB) operates at an early stage in a Linux virtual machine (VM) boot process. It operates before the Linux kernel is loaded and before any system services (such as networking or SSH) are started, so GRUB isn't accessible via SSH. You must use the Serial Console to access GRUB. In GRUB, you can modify your boot configuration to boot into single-user mode, among other things.
 
 Single-user mode is a minimal environment with minimal functionality. It can be useful for investigating boot issues, file system issues, or network issues. Fewer services can run in the background and, depending on the runlevel, a file system might not even be automatically mounted.
 
@@ -31,7 +31,7 @@ Single-user mode is also useful in situations where your VM might be configured 
 > [!NOTE]
 > The Serial Console service allows only users with *contributor* level or higher permissions to access the serial console of a VM.
 
-To enter single-user mode, enter GRUB when your VM is booting, and modify the boot configuration in GRUB. See detailed instructions for entering GRUB in the next section. In general, if your VM has been configured to display GRUB, you can use the restart button within your VM's serial console to restart the VM and display GRUB.
+To enter single-user mode, enter GRUB when your VM is booting, and modify the boot configuration in GRUB. See detailed instructions for entering GRUB in the next section. If your VM is set up to display GRUB, you can use the restart button within your VM's serial console to restart the VM and display GRUB.
 
 :::image type="content" source="media/serial-console-grub-single-user-mode/restart-vm-button.png" alt-text="Screenshot of the Restart VM button displayed in the tool bar." border="false":::
 
@@ -51,7 +51,7 @@ You can also restart your VM by running a SysRq "b" command if [SysRq](./serial-
 
 ## General single-user mode access
 
-You might need manual access to single-user mode when you haven't configured an account with password authentication. Modify the GRUB configuration to manually enter single-user mode. After you've done this, see the "Use single-user mode to reset or add a password" section for further instructions.
+You might need manual access to single-user mode when you haven't configured an account with password authentication. Modify the GRUB configuration to manually enter single-user mode. After doing this, see the "Use single-user mode to reset or add a password" section for further instructions.
 
 If the VM is unable to boot, distributions often automatically drop you into single-user mode or emergency mode. Other distributions, however, require additional setup, such as setting up a root password, before they can drop you into single-user or emergency mode automatically.
 
@@ -62,10 +62,6 @@ After you're in single-user mode, add a new user with sudo privileges by doing t
 1. Run `useradd <username>` to add a user.
 1. Run `sudo usermod -a -G sudo <username>` to grant the new user root privileges.
 1. Use `passwd <username>` to set the password for the new user. You can then sign in as the new user.
-
-## Access for Red Hat Enterprise Linux (RHEL)
-
-If RHEL can't boot normally, it drops you into single-user mode automatically. However, if you haven't set up root access for single-user mode, you don't have a root password and can't sign in. There is a workaround (see the "Manually enter single-user mode in RHEL" section), but we suggest that you set up root access initially.
 
 ### GRUB access in RHEL
 
@@ -93,21 +89,9 @@ GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0,115200n8 earlyprintk=ttyS0,115200
 > [!NOTE]
 > Red Hat also provides documentation for booting into Rescue Mode, Emergency Mode, or Debug Mode, and for resetting the root password. For instructions, see [Terminal menu editing during boot](https://aka.ms/rhel7grubterminal).
 
-### Set up root access for single-user mode in RHEL
+### Single-User mode in RHEL 6.9+ and 7.4+
 
-The root user is disabled by default. Single-user mode in RHEL requires the root user to be enabled. If you need to enable single-user mode, use the following instructions:
-
-1. Sign in to the Red Hat system via SSH.
-1. Switch to root.
-1. Enable the password for the root user by doing the following:
-    * Run `passwd root` (set a strong root password).
-1. Ensure that the root user can sign in only via ttyS0 by doing the following:
-    a. Run `vi /etc/ssh/sshd_config`, and ensure that PermitRootLogIn is set to `no`.
-    b. Run `vi /etc/securetty file` to allow sign-in only via ttyS0.
-
-Now, if the system boots into single-user mode, you can sign in with the root password.
-
-Alternatively, for RHEL 7.4+ or 6.9+, to enable single-user mode in the GRUB prompts, see [Booting into single-user mode](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-rescuemode-booting-single).
+For RHEL 7.4+ or 6.9+, to enable single-user mode in the GRUB prompts, see [Booting into single-user mode](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-rescuemode-booting-single).
 
 ### Manually enter single-user mode in RHEL
 
@@ -274,7 +258,6 @@ To enable single-user mode in Oracle Linux, follow the earlier instructions for 
 To learn more about Serial Console, see:
 
 * [Linux Serial Console documentation](serial-console-linux.md)
-* [Use Serial Console to enable GRUB in various distributions](https://linuxonazure.azurewebsites.net/why-proactively-ensuring-you-have-access-to-grub-and-sysrq-in-your-linux-vm-could-save-you-lots-of-down-time/)
 * [Use Serial Console for NMI and SysRq calls](serial-console-nmi-sysrq.md)
 * [Serial Console for Windows VMs](../windows/serial-console-windows.md)
 * [Boot diagnostics](../windows/boot-diagnostics.md)

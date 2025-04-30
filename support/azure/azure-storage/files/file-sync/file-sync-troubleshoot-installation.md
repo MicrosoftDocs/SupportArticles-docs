@@ -3,8 +3,7 @@ title: Troubleshoot Azure File Sync agent installation and server registration
 description: Troubleshoot common issues with installing the Azure File Sync agent and registering Windows Server with the Storage Sync Service. 
 author: khdownie
 ms.service: azure-file-storage
-ms.topic: troubleshooting
-ms.date: 01/13/2025
+ms.date: 04/30/2025
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -174,6 +173,34 @@ Register-AzStorageSyncServer -ResourceGroupName "<your-resource-group-name>" -St
 When registering a server using *ServerRegistration.exe*, some resource groups are missing when you select the **Resource Group** drop-down.
 
 This issue occurs due to a known issue that has been fixed in File Sync Agent v19.1. To resolve this issue, install the latest version of the agent.
+
+**Server Registration displays the message: "System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=..."**
+
+This error occurs when the server lacks the required .NET Framework version. Azure File Sync's server registration requires .NET Framework 4.7.2 or a later version to function properly.
+
+To resolve the issue, follow these steps:
+
+1. Downland and install .NET Framework 4.7.2 or a later version.
+2. Restart the server after the installation.
+3. Retry the server registration using the server registration UI or PowerShell.
+
+**Server registration fails with error: operation returned an invalid status code 'Unauthorized'**
+
+During server registration, you might encounter the following error:
+
+> Operation returned an invalid status code 'Unauthorized'
+
+This issue occurs due to a bug in the Azure File Sync v20 agent. To work around this issue, manually register the server by running the following PowerShell commands:
+
+```powershell
+Connect-AzAccount -Subscription "<your-subscription-guid>" -Tenant "<your-tenant-guid>"
+Register-AzStorageSyncServer -ResourceGroupName "<your-resource-group-name>" -StorageSyncServiceName "<your-storage-sync-service-name>"
+```
+
+> [!NOTE]
+> Replace the placeholder values with your subscription ID, tenant ID, resource group name, and Storage Sync Service name.
+
+After completing the manual registration, verify that the server appears under **Registered servers** in the Azure portal.
 
 <a id="server-already-registered"></a>**Server Registration displays the following message: "This server is already registered"**
 

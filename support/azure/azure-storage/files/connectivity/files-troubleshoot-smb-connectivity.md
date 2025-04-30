@@ -4,8 +4,8 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 02/04/2025
-ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
+ms.date: 04/24/2025
+ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal, justingross
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
 
@@ -134,6 +134,20 @@ For more information, see the [LmCompatibilityLevel](/previous-versions/windows/
 Revert the `LmCompatibilityLevel` value to the default value of 3 in the following registry subkey:
 
 `HKLM\SYSTEM\CurrentControlSet\Control\Lsa`  
+
+### <a id="error-64"></a> Error 64 when you mount an Azure file share
+
+When mounting a file share from on-premises or another datacenter, you might see the following error:
+
+> System error 64 has occurred. The specified network name is no longer available.
+
+#### Cause
+
+This issue is likely caused by a proxy server or another type of Network Address Translation (NAT) device in the datapath that blocks the connection to map the Azure file share. In this case, the PowerShell cmdlet `Test-NetConnection` still might test connectivity on port 445 successfully.
+
+#### Solution
+
+To resolve this issue, reproduce it and collect a network trace to get more information about the error's origin. In most cases, you must work with your network/firewall administrator to allow the content to pass through the network device.
 
 ### <a id="error-0x800704b3"></a> Failed with error code 0x800704b3
 
