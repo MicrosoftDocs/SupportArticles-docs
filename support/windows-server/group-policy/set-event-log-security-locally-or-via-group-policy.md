@@ -59,7 +59,7 @@ The following is a sample SDDL that shows the default SDDL string for the System
 
 > O:BAG:SYD:(A;;**0xf0007**;;;SY)(A;;**0x7**;;;BA)(A;;**0x3**;;;BO)(A;;**0x5**;;;SO)(A;;**0x1**;;;IU)(A;;**0x3**;;;SU)(A;;**0x1**;;;S-1-5-3)(A;;**0x2**;;;S-1-5-33)(A;;**0x1**;;;S-1-5-32-573)
 
-For example, the first ACE denies Anonymous Users read, write, and clear access to the log. The sixth ACE permits Interactive Users to read and write to the log.
+For example, the first ACE allows System full control access to the log. The fifth ACE permits Interactive Users to read access to the log.
 
 ## Use the computer's local group policy to set your application and system log security
 
