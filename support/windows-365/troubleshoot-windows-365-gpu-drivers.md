@@ -12,7 +12,7 @@ ms.custom: intune-azure, get-started
 
 This article provides a solution to a known issue with graphic card drivers on Windows 365 GPU Enabled Cloud PC.
 
-## NVIDIA A10 GPU driver version
+## NVIDIA GPU driver version
 
 When you use Windows 365 GPU Enabled Cloud PCs, you might encounter a driver error issue if the Nvidia driver is outdated. This issue can occur due to mismatch in the underlying graphics card driver versions. 
 
@@ -25,13 +25,13 @@ The error message resembles the following screenshot. You can see an error dialo
 
 ## Resolution
 
-To fix this issue, you need to download a new Nvidia A10 driver to fix the issue. Follow these troubleshooting steps:
+To fix this issue, you need to download a new Nvidia driver to fix the issue. Follow these troubleshooting steps:
 
-1. Verify if you're using the NVIDIA A10 GPU:
+1. Verify if you're using the NVIDIA GPU:
 
    * Open **Device Manager** on your Cloud PC.
    * Expand **Display Adapters**.
-   * If **NVIDIA A10** appears, continue with the next steps. If not, the update isn't necessary for this Cloud PC.
+   * If **NVIDIA \*\*\*** appears, continue with the next steps. If not, the update isn't necessary for this Cloud PC.
 
 2. Download and install the latest driver:
 
