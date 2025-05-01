@@ -52,4 +52,4 @@ If you're using any of the NVIDIA driver series such as NV, NVv3 and NVads A10V5
 
 [GPU Cloud PCs in Windows 365 | Microsoft Learn](/windows-365/enterprise/gpu-cloud-pc)
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../includes/third-party-disclaimer.md)]
