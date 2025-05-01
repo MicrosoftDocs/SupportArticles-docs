@@ -14,9 +14,9 @@ This article provides a solution to a known issue with graphic card drivers on W
 
 ## NVIDIA A10 GPU driver version
 
-When you use Windows 365 GPU Enabled Cloud PCs, you might encounter a driver error issue if the Nvidia A10 driver is outdated. This issue can occur due to mismatch in the underlying graphics card driver versions. 
+When you use Windows 365 GPU Enabled Cloud PCs, you might encounter a driver error issue if the Nvidia driver is outdated. This issue can occur due to mismatch in the underlying graphics card driver versions. 
 
-The error message resembles the following screenshot. You can see an error dialog on the **Nvidia A10-24Q** driver in Device Manager.
+The error message resembles the following screenshot. You can see an error dialog on the **Nvidia \*\*\*-24Q** driver in Device Manager.
 
 :::image type="content" source="media/troubleshoot-windows-365-gpu-drivers/error-in-device-manager.png" alt-text="Error in Device Manager.":::
 
@@ -46,7 +46,10 @@ To fix this issue, you need to download a new Nvidia A10 driver to fix the issue
 
 Expand **Display Adapters** and confirm that the error is disappeared.
 
-## More information
+If you're using any of the NVIDIA driver series such as NV, NVv3 and NVads A10V5 series or NCas_T4_V3 VM series, visit [Azure N-series NVIDIA GPU driver setup for Windows](/azure/virtual-machines/windows/n-series-driver-setup#nvidia-gridvgpu-drivers) to download the latest drivers.
 
-* [Azure N-series NVIDIA GPU driver setup for Windows - Azure Virtual Machines | Microsoft Learn](/azure/virtual-machines/windows/n-series-driver-setup#nvidia-gridvgpu-drivers)
-* [GPU Cloud PCs in Windows 365 | Microsoft Learn](/windows-365/enterprise/gpu-cloud-pc)
+## Reference
+
+[GPU Cloud PCs in Windows 365 | Microsoft Learn](/windows-365/enterprise/gpu-cloud-pc)
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
