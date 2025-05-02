@@ -1,7 +1,7 @@
 ---
 title: Memory saturation occurs after upgrade to Kubernetes 1.25
 description: Resolve pod failures caused by memory saturation and out-of-memory errors after you upgrade an Azure Kubernetes Service (AKS) cluster to Kubernetes 1.25.x.
-ms.date: 04/17/2025
+ms.date: 05/02/2025
 editor: v-jsitser,momajed
 ms.reviewer: aritraghosh, cssakscic, v-leedennis,momajed
 ms.service: azure-kubernetes-service
@@ -34,6 +34,9 @@ Performance degradation can occur in apps that run in the following environments
 
 ## Solution
 
+> [!NOTE]  
+> If you only experience increased memory usage and no other symptoms that are mentioned in the [Symptoms](#symptoms) section, no action is needed.
+
 Beginning in the release of Kubernetes 1.25, the [cgroup version 2 API](https://kubernetes.io/blog/2022/08/31/cgroupv2-ga-1-25/) has reached general availability (GA). AKS now uses Ubuntu Linux version 22.04. By default, version 22.04 uses cgroup version 2 API. To make sure the cgroup version 2 API is available for use in other environments to prevent the memory saturation issue, follow this guidance:
 
 - If you run Java applications, [upgrade to a Java version that supports cgroup version 2](https://kubernetes.io/blog/2022/08/31/cgroupv2-ga-1-25/#migrate-to-cgroup-v2) and follow the guidance in [Containerize your Java applications](/azure/developer/java/containers/overview). You might be able to update the base image in certain versions in which the fix has been backported. Use a version or framework that natively supports cgroup version 2. For Azure customers, Microsoft officially supports [Eclipse Temurin](https://adoptium.net/) binaries (Java 8) and [Microsoft Build of OpenJDK](https://www.microsoft.com/openjdk) binaries (Java 11+).
@@ -60,18 +63,14 @@ Beginning in the release of Kubernetes 1.25, the [cgroup version 2 API](https://
 
 - An alternative temporary solution is to revert the `cgroup` version on your nodes by using the DaemonSet. For more information, see [Revert to cgroup v1 DaemonSet](https://github.com/Azure/AKS/blob/master/examples/cgroups/revert-cgroup-v1.yaml).
 
-> [!IMPORTANT]
-> - Use the DaemonSet cautiously. Test it in a lower environment before applying to production to ensure compatibility and prevent disruptions.
-> - By default, the DaemonSet applies to all nodes in the cluster and reboots them to implement the `cgroup` change.  
-> - To control how the DaemonSet is applied, configure a `nodeSelector` to target specific nodes.
-
-
-> [!NOTE]  
-> If you experience only an increase in memory use without any of the other symptoms that are mentioned in the "Symptoms" section, you don't have to take any action.
+  > [!IMPORTANT]
+  > - Use the DaemonSet cautiously. Test it in a lower environment before applying to production to ensure compatibility and avoid disruptions.
+  > - The DaemonSet applies to all nodes in the cluster by default and reboots them to implement the `cgroup` change.  
+  > - To control how the DaemonSet is applied, configure a `nodeSelector` to target specific nodes.
 
 ## Status
 
-We're actively working with the Kubernetes community to resolve the underlying issue. Progress on this effort can be tracked at [Azure/AKS Issue #3443](https://github.com/kubernetes/kubernetes/issues/118916). 
+We are working with the Kubernetes community to resolve the issue. Track progress at [Azure/AKS Issue #3443](https://github.com/kubernetes/kubernetes/issues/118916).
 
 As part of the resolution, we plan to adjust the eviction thresholds or update [resource reservations](/azure/aks/concepts-clusters-workloads#resource-reservations), depending on the outcome of the fix.
 
