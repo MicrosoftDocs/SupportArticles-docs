@@ -372,6 +372,10 @@
       href: error-codes/vmextensionerror-vhdfilenotfound.md
     - name: VMExtensionError_ProvisioningTimeout error
       href: error-codes/vmextensionerror-provisioningtimeout.md
+    - name: OrasPullNetworkTimeoutVMExtensionError
+      href: error-codes/vmextensionerror-oraspullnetworktimeout.md
+    - name: OrasPullUnauthorizedVMExtensionError
+      href: error-codes/vmextensionerror-oraspullunauthorized.md
   - name: UnsatisfiablePDB error
     href: error-codes/unsatisfiablepdb-error.md
   - name: AksCapacityHeavyUsage error
