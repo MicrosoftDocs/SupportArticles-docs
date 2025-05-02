@@ -12,7 +12,7 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 12/04/2024
+ms.date: 05/02/2025
 ms.author: genli
 ---
 # Troubleshoot Linux virtual machine performance issues with Performance Diagnostics (PerfInsights)
@@ -24,7 +24,7 @@ ms.author: genli
 If you are experiencing performance problems with virtual machines, before contacting support, run this tool.
 
 > [!NOTE]
-> [Continuous diagnostics (preview)](../windows/performance-diagnostics.md) is currently supported only on Windows. 
+> [Continuous diagnostics](../windows/performance-diagnostics.md) is currently supported only on Windows. 
 
 ## Supported troubleshooting scenarios
 
