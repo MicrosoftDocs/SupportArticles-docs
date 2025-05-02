@@ -4,14 +4,14 @@ description: Learn how to create a troubleshooting workflow to fix DNS resolutio
 author: sturrent
 ms.author: seturren
 ms.date: 08/09/2024
-ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu
+ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu, qasimsarfraz
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity
 ms.topic: troubleshooting-general
 #Customer intent: As an Azure Kubernetes user, I want to learn how to create a troubleshooting workflow so that I can fix DNS resolution problems in Azure Kubernetes Service (AKS).
 ---
-# Basic troubleshooting of DNS resolution problems in AKS
+# Troubleshoot DNS resolution problems in AKS
 
 This article discusses how to create a troubleshooting workflow to fix Domain Name System (DNS) resolution problems in Microsoft Azure Kubernetes Service (AKS).
 
@@ -82,9 +82,9 @@ To start the process, run tests from a test pod against each layer.
    spec:
      containers:
      - name: aks-test
-       image: contoso/debian-ssh
+       image: debian:stable
        command: ["/bin/sh"]
-       args: ["-c", "while true; do sleep 1000; done"]
+       args: ["-c", "apt-get update && apt-get install -y dnsutils && while true; do sleep 1000; done"]
    EOF
    ```
 
@@ -94,7 +94,7 @@ To start the process, run tests from a test pod against each layer.
    kubectl get pod --namespace kube-system --selector k8s-app=kube-dns --output wide
    ```
 
-1. Connect to the test pod and test the DNS resolution against each CoreDNS pod IP address by running the following commands:
+1. Connect to the test pod (using `kubectl exec -it aks-test -- bash`) and test the DNS resolution against each CoreDNS pod IP address by running the following commands:
 
    ```bash
    # Placeholder values
@@ -108,6 +108,8 @@ To start the process, run tests from a test pod against each layer.
        sleep 1
    done
    ```
+
+For more information about troubleshooting DNS resolution problems from the pod level, see [Troubleshoot DNS resolution failures from inside the pod](troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md).
 
 ##### Test the DNS resolution at CoreDNS service level
 
@@ -161,7 +163,50 @@ To start the process, run tests from a test pod against each layer.
 
 Examine the DNS server configuration of the virtual network, and determine whether the servers can resolve the record in question.
 
-#### Part 2: Review the health and performance of nodes
+#### Part 2: Review the health and performance of CoreDNS pods and nodes
+
+##### Review the health and performance of CoreDNS pods
+
+You can use kubectl commands to check the health and performance of CoreDNS pods. Start by verifying that the CoreDNS pods are running:
+
+```bash
+kubectl get pods -l k8s-app=kube-dns -n kube-system
+```
+
+Check whether the CoreDNS pods are overused:
+
+```bash
+kubectl top pods -n kube-system -l k8s-app=kube-dns
+```
+
+```output
+NAME                      CPU(cores)   MEMORY(bytes)
+coredns-dc97c5f55-424f7   3m           23Mi
+coredns-dc97c5f55-wbh4q   3m           25Mi
+```
+
+Verify that the nodes that host the CoreDNS pods aren't overused. Also, get the nodes that are hosting the CoreDNS pods:
+
+```bash
+kubectl get pods -n kube-system -l k8s-app=kube-dns -o jsonpath='{.items[*].spec.nodeName}'
+```
+
+Check the usage of these nodes:
+
+```bash
+kubectl top nodes
+```
+
+Verify the logs for the CoreDNS pods:
+
+```bash
+kubectl logs -l k8s-app=kube-dns -n kube-system
+```
+
+> [!NOTE]
+> To see more debugging information, enable verbose logs in CoreDNS. To enable verbose logging in CoreDNS, see [Troubleshooting CoreDNS customizations in AKS](/azure/aks/coredns-custom#troubleshooting).
+
+##### Review the health and performance of nodes
 
 You might first notice DNS resolution performance problems as intermittent errors, such as time-outs. The main causes of this problem include resource exhaustion and I/O throttling within nodes that host the CoreDNS pods or the client pod.
 
@@ -213,21 +258,57 @@ Allocated resources:
 
 To get a better picture of resource usage at the pod and node level, you can also use Container insights and other cloud-native tools in Azure. For more information, see [Monitor Kubernetes clusters using Azure services and cloud native tools](/azure/azure-monitor/containers/monitor-kubernetes).
 
-#### Part 3: Capture DNS traffic and review DNS resolution performance
+#### Part 3: Analyze DNS traffic and review DNS resolution performance
 
-A network traffic capture can help you understand how your AKS cluster is handling the DNS queries. Ideally, you want to reproduce the problem on a test pod while you capture the traffic from this test pod and on each of the CoreDNS pods.
+Analyzing DNS traffic can help you understand how your AKS cluster is handling the DNS queries. Ideally, you want to reproduce the problem on a test pod while you capture the traffic from this test pod and on each of the CoreDNS pods.
 
-Many traffic-capturing tools are available to assist this process, including the following tools:
+There are two main ways to analyze DNS traffic:
 
-- [Retina Capture](https://retina.sh/docs/Troubleshooting/capture)
+- Using real-time DNS analysis tools (e.g. [Inspektor Gadget](../../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget)) to analyze the DNS traffic in real time.
+- Using traffic capture tools (e.g. [Retina Capture](https://retina.sh/docs/Troubleshooting/capture), [Dumpy](https://github.com/larryTheSlap/dumpy)) to collect the DNS traffic and analyze the traffic in a network packet analyzer tool, such as Wireshark. 
 
-- [Dumpy](https://github.com/larryTheSlap/dumpy) - an open source traffic capture plug-in for Kubernetes
+In both the approaches the goal would be to understand the health and performance of DNS responses using DNS response codes, response times, and other metrics. You are free to choose the approach that best fits your needs.
 
-- [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) - allows checking DNS problems in real time. For more information, see [Troubleshoot DNS failures across an AKS cluster in real time](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md).
+##### Real-time DNS traffic analysis
 
-In this article, we use Dumpy as an example of how to collect DNS traffic captures from each CoreDNS pod and a client DNS pod (in this case, the `aks-test` pod).
+In this section, we will use [Inspektor Gadget](../../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget) to analyze the DNS traffic in real time. Follow this [guide](../../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster) to install Inspektor Gadget to your cluster.
+We can use the following command to trace DNS traffic across all namespaces
 
-##### Network traffic capture commands
+```bash
+# Get the version of Gadget
+GADGET_VERSION=$(kubectl gadget version | grep Server | awk '{print $3}')
+# Run the trace_dns gadget
+kubectl gadget run trace_dns:$GADGET_VERSION --all-namespaces --fields "src,dst,name,qr,qtype,id,rcode,latency_ns"
+```
+
+Where `--fields` is a comma-separated list of fields to be displayed. The following table describes the fields that are used in the command:
+- `src`: The source of the request with Kubernetes information (`<kind>/<namespace>/<name>:<port>`).
+- `dst`: The destination of the request with Kubernetes information (`<kind>/<namespace>/<name>:<port>`).
+- `name`: The name of the DNS request.
+- `qr`: The query/response flag.
+- `qtype`: The type of the DNS request.
+- `id`: The ID of the DNS request, which is used to match the request and response.
+- `rcode`: The response code of the DNS request.
+- `latency_ns`: The latency of the DNS request.
+
+The output of the command will look like the following:
+
+```output
+SRC                                  DST                                  NAME                        QR QTYPE          ID             RCODE           LATENCY_NS
+p/default/aks-test:33141             p/kube-system/coredns-57d886c994-r2… db.contoso.com.             Q  A              c215                                  0ns
+p/kube-system/coredns-57d886c994-r2… 168.63.129.16:53                     db.contoso.com.             Q  A              323c                                  0ns
+168.63.129.16:53                     p/kube-system/coredns-57d886c994-r2… db.contoso.com.             R  A              323c           NameErr…           13.64ms
+p/kube-system/coredns-57d886c994-r2… p/default/aks-test:33141             db.contoso.com.             R  A              c215           NameErr…               0ns
+p/default/aks-test:56921             p/kube-system/coredns-57d886c994-r2… db.contoso.com.             Q  A              6574                                  0ns
+p/kube-system/coredns-57d886c994-r2… p/default/aks-test:56921             db.contoso.com.             R  A              6574           NameErr…               0ns
+```
+
+Here you can use `ID` to identify if a query has a response or not. The `RCODE` field will show you the response code of the DNS request. The `LATENCY_NS` field will show you the latency of the DNS request in nanoseconds. Together, these fields can help you understand the health and performance of DNS responses.
+For more information about real-time DNS analysis, see [Troubleshoot DNS failures across an AKS cluster in real time](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md)
+
+##### Capture DNS traffic
+
+In this section, we use Dumpy as an example of how to collect DNS traffic captures from each CoreDNS pod and a client DNS pod (in this case, the `aks-test` pod).
 
 To collect the captures from the test client pod, run the following Dumpy command:
 
@@ -511,9 +592,9 @@ Observe the results of implementing your action plan. At this point, your action
 
 If these troubleshooting steps don't resolve the problem, repeat the troubleshooting steps as necessary.
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
 

@@ -230,10 +230,6 @@
         href: connectivity/troubleshoot-connections-endpoints-same-virtual-network.md
       - name: Can't connect to endpoints outside virtual network (public internet)
         href: connectivity/troubleshoot-connections-endpoints-outside-virtual-network.md
-      - name: DNS resolution failure from within pod but not from worker node
-        href: connectivity/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md
-      - name: Troubleshoot DNS failures across an AKS cluster in real-time
-        href: connectivity/troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md
       - name: Traffic between node pools is blocked by custom NSG
         href: connectivity/traffic-between-node-pools-is-blocked.md
       - name: Can't view resources in Kubernetes resource viewer on Azure portal
@@ -248,8 +244,14 @@
         href: connectivity/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
       - name: TCP times out when kubectl or other third-party tools connect
         href: connectivity/tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
-  - name: Basic troubleshooting of DNS resolution problems in AKS
-    href: connectivity/basic-troubleshooting-dns-resolution-problems.md
+  - name: Troubleshoot DNS resolution problems in AKS
+    items:
+    - name: Basic troubleshooting
+      href: connectivity/dns/basic-troubleshooting-dns-resolution-problems.md
+    - name: DNS Traffic analysis in real-time
+      href: connectivity/dns/troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md
+    - name: Troubleshoot DNS from inside a pod
+      href: connectivity/dns/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md
 
 - name: Data collection guide
   items:
