@@ -51,41 +51,17 @@ The following table lists the ports required to be open between the client compu
 
 ## Common issues and solutions
 
-### Error code 0x569
-
-For more information, see [Error code 0x569: The user has not been granted the requested logon type at this computer](error-0x569-not-granted-logon-type.md).
-
-### Error code 0x6BF or 0xC002001C
-
-For more information, see [Status code 0x6bf or 0xc002001c: The remote procedure call failed and did not execute](status-code-0x6bf-0xc002001c.md).
-
-### Error code 0x6D9
-
-See [Domain join error 0x6D9 "There are no more endpoints available from the endpoint mapper"](./domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md) for troubleshooting guide.
-
-### Error code 0xa8b
-
-For more information, see [Error code 0xa8b: An attempt to resolve the DNS name of a DC in the domain being joined has failed](error-0xa8b-resolve-dns-fail.md).
-
-### Error code 0x40
-
-For more information, see [Domain join error 0x40 "The specified network name is no longer available"](domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md).
-
-### Error code 0x54b
-
-For more information, see [Domain join error code 0x54b](error-code-0x54b.md).
-
-### Error code 0x0000232A
-
-See [Domain join error code 0x0000232A](error-code-0x0000232a.md) for troubleshooting guide.
-
-### Error code 0x3a
-
-For more information, see [Status code 0x3a: The specified server cannot perform the requested operation](status-code-0x3a-server-not-perform-operation.md).
-
-### Error code 0x216d
-
-For more information, see [Status code 0x216d: Your computer could not be joined to the domain](status-code-0x216d-not-joined-domain.md).
+|Domain Join error code|Cause|Related article|
+|---|---|---|
+|0x569|This error occurs because the domain join user account lacks the Access this computer from the network user right at the domain controller (DC) servicing the domain join operation.|[Troubleshooting error code 0x569: The user has not been granted the requested logon type at this computer](error-0x569-not-granted-logon-type.md) |
+|0x6BF or 0xC002001C|This error occurs when a network device (router, firewall, or virtual private network (VPN) device) rejects network packets between the client being joined and the domain controller (DC).|[Troubleshooting status code 0x6bf or 0xc002001c: The remote procedure call failed and did not execute](status-code-0x6bf-0xc002001c.md) |
+|0x6D9|This error occurs when network connectivity is blocked between the joining client and the Domain Controller (DC).|[Troubleshooting error code 0x6D9 "There are no more endpoints available from the endpoint mapper"](./domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md) |
+|0xa8b|This error occurs when you join a workgroup computer to a domain.|[Troubleshooting error code 0xa8b: An attempt to resolve the DNS name of a DC in the domain being joined has failed](error-0xa8b-resolve-dns-fail.md) |
+|0x40|The issue is related to getting Kerberos Tickets for a Server Message Block (SMB) session.|[Troubleshooting error code 0x40 "The specified network name is no longer available"](domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md) |
+|0x54b|This error occurs because the specified domain can't be contacted, pointing to issues locating domain controllers (DCs).|[Troubleshooting error code 0x54b](error-code-0x54b.md) |
+|0x0000232A|This error indicates that the Domain Name System (DNS) name can't be resolved.|[Troubleshooting error code 0x0000232A](error-code-0x0000232a.md) |
+|0x3a|This error occurs when the client computer lacks reliable network connectivity on Transmission Control Protocol (TCP) 389 port between the client computer and the domain controller (DC).|[Troubleshooting status code 0x3a: The specified server cannot perform the requested operation](status-code-0x3a-server-not-perform-operation.md) |
+|0x216d|The user account trying to join the computer to the domain has exceeded the limit of 10 computers that can be joined to the domain OR There's a Group Policy Object (GPO) restriction to block authenticated users from joining a computer to the domain.|[Troubleshooting status code 0x216d: Your computer could not be joined to the domain](status-code-0x216d-not-joined-domain.md) |
 
 ### Other errors that occur when you join Windows-based computers to a domain
 
