@@ -41,6 +41,8 @@ sections:
           - AKS node pool names must be all lowercase. The names must be 1-12 characters in length for Linux node pools and 1-6 characters for Windows node pools. A name must start with a letter, and the only allowed characters are letters and numbers.
 
           - The *admin-username*, which sets the administrator user name for Linux nodes, must start with a letter. This user name may only contain letters, numbers, hyphens, and underscores. It has a maximum length of 32 characters.
+
+          - 'aksmanagedap' is blocked as a reserved name for AKS system components. 'aksmanagedap' cannot be used for nodepools. 
           
           For more information about naming convention. see the following resources:
            - [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules#microsoftcontainerservice)
