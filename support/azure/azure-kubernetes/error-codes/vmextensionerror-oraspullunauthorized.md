@@ -9,7 +9,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # OrasPullUnauthorizedVMExtensionError error code (212) when deploying an AKS cluster
 
-This article discusses how to identify and resolve the `OrasPullUnauthorizedVMExtensionError` error code (error code number 212) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `OrasPullUnauthorizedVMExtensionError` error (error code 212) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 

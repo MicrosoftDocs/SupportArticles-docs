@@ -9,7 +9,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # OrasPullNetworkTimeoutVMExtensionError error code (211) when deploying an AKS cluster
 
-This article discusses how to identify and resolve the `OrasPullNetworkTimeoutVMExtensionError` error code (error code number 211) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `OrasPullNetworkTimeoutVMExtensionError` error (error code 211) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
@@ -23,7 +23,7 @@ When you try to create an AKS cluster with the outbound type `none` or `block`, 
 
 ## Cause
 
-For [network isolated cluster]( /azure/aks/concepts-network-isolated), egress traffic is limited. Private ACR cache acts as a proxy to download necessary binaries/images from MAR for AKS bootstrapping. VM instances connect to the private ACR via private link. Incorrect configuration of the private link will cause VM bootstrap CSE to fail.
+For [network isolated cluster](/azure/aks/concepts-network-isolated), egress traffic is limited. The feature introduces private ACR cache acts as a proxy to download necessary binaries/images from MAR for AKS bootstrapping. VM instances connect to the private ACR via private link. Incorrect configuration of the private link will cause VM bootstrap CSE to fail.
 
 ## Solution
 
