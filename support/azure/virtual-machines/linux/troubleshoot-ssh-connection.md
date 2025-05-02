@@ -81,7 +81,7 @@ Use Network Watcher's [Next hop](/azure/network-watcher/diagnose-vm-network-rout
 
 ## Use the Azure VM Serial Console
 
-The [Azure VM Serial Console](./serial-console-linux.md) provides access to a text-based console for Linux virtual machines. You can use the console to troubleshoot your SSH connection in an interactive shell. Ensure you have met the [prerequisites](./serial-console-linux.md#prerequisites) for using Serial Console and try the commands below to further troubleshoot your SSH connectivity.
+The [Azure VM Serial Console](./serial-console-linux.md) provides access to a text-based console for Linux virtual machines. You can use the console to troubleshoot your SSH connection in an interactive shell. Ensure you have met the [prerequisites](./serial-console-linux.md#prerequisites-to-access-the-azure-serial-console) for using Serial Console and try the commands below to further troubleshoot your SSH connectivity.
 
 ### Check that SSH service is running
 
