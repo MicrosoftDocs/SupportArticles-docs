@@ -14,7 +14,7 @@ ms.reviewer: wesmils
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 # "Mailbox is full" warning even if the mailbox hasn't reached the storage limit
 

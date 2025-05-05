@@ -15,7 +15,7 @@ appliesto:
   - Outlook for Mac 2011
   - Outlook 2016 for Mac
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 # Can't set up Outlook for Mac 2011 to use the archive mailbox feature in Exchange Online
 
