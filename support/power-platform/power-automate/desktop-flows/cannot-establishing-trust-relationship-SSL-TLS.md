@@ -20,7 +20,11 @@ _Applies to:_ &nbsp; Power Automate
 PAD v2.35 or higher
 
 ## Cause
-Power Automate for desktop (PAD) checks whether "https" certificates are revoked or invalid. If a certificate in the chain is revoked or invalid, an error message appears. Companies that use package inspection to audit their network infrastructure may not allow users to sign in, as their Certificate Revocation List (CRL) may not have been defined or is unreachable. If Fiddler or a similar tool is installed, it may also install a self-signed certificate whose revocation status is "Unknown". Therefore, the error message is displayed if the relevant registry key is set to "Comprehensive".
+Power Automate for desktop (PAD) checks whether "https" certificates are revoked or invalid. If a certificate in the chain is revoked or invalid, an error message appears. 
+
+Companies that use package inspection to audit their network infrastructure may not allow users to sign in, as their Certificate Revocation List (CRL) may not have been defined or is unreachable. 
+
+If Fiddler or a similar tool is installed, it may also install a self-signed certificate whose revocation status is "Unknown". Therefore, the error message is displayed if the relevant registry key is set to "Comprehensive".
 
 ## Workaround
 To allow users with invalid certificates to use that action, follow the instructions here: https://learn.microsoft.com/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-check-for-revoked-certificates
