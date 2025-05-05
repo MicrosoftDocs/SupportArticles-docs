@@ -27,4 +27,4 @@ Companies that use package inspection to audit their network infrastructure may 
 If Fiddler or a similar tool is installed, it may also install a self-signed certificate whose revocation status is "Unknown". Therefore, the error message is displayed if the relevant registry key is set to "Comprehensive".
 
 ## Workaround
-To allow users with invalid certificates to use that action, follow the instructions here: https://learn.microsoft.com/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-check-for-revoked-certificates
+To allow users with invalid certificates to use that action, follow the instructions [here.](https://learn.microsoft.com/power-automate/desktop-flows/governance#configure-power-automate-for-desktop-to-check-for-revoked-certificates)
