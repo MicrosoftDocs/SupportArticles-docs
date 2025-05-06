@@ -63,9 +63,10 @@
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
       - name: Repeated login prompts in iOS MSAL implementation
         href: app-integration/repeat-login-prompts-in-msal-ios-app.md
+      - name: Error AADSTS7000218 - Invalid client
+        href: app-integration/confidential-client-application-authentication-error-aadsts7000218.md
       - name: Infinite sign-in loop issue with ASP.NET applications
         href: app-integration/asp-dot-net-application-infinite-sign-in-loop.md
-
 
   - name: Troubleshoot adding apps
     href: app-integration/troubleshoot-adding-apps.md
@@ -80,6 +81,9 @@
         href: app-integration/send-notification-details.md
   - name: Troubleshoot sign-in to apps
     items:
+      - name: AADSTS7500514 - A supported type of SAML response was not found
+        href: app-integration/error-code-aadsts7500514-supported-type-saml-response-not-found.md
+      - name: Error AADSTS220501 - Unable to download Certificate Revocation List
       - name: Error code AADSTS50173 - The provided grant has expired due to it being revoked
         href: app-integration/error-code-aadsts50173-grant-expired-revoked.md
       - name: Error AADSTS220501 - Unable to download Certificate Revocation List
@@ -279,6 +283,8 @@
      href: app-integration/graph-api-error-handling-invoke-restmethod.md
    - name: Troubleshoot Authorization RequestDenied error
      href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
+   - name: 403 error when adding a user to a group
+     href: users-groups-entra-apis/authorization-requestdenied-403-error-add-user-group.md
    - name: 404 error when managing objects
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
    - name: Use managed identities to call Graph APIs in VB.Net and C#
@@ -293,9 +299,12 @@
         href: users-groups-entra-apis/cannot-modify-user-mail-phone-attributes.md
       - name: Error "The identity of the calling application could not be established"
         href: users-groups-entra-apis/identity-of-calling-application-not-established.md
-      - name: Tenant doesn't have premium license error when query sign-in activities
-        href: users-groups-entra-apis/b2c-or-tenant-premium-license-sign-in-activities.md
-
+      - name: Can't look up users using the /users endpoint
+        href: users-groups-entra-apis/cannot-look-up-users-using-microsoft-graph-users-endpoint.md
+      - name: Add an owner to an application
+        href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
+      - name: NoPermissionsInAccessToken when calling me endpoint
+        href: users-groups-entra-apis/error-call-me-endpoint-microsoft-graph.md
    - name: Problem with using the Graph SDK - libraries
      items:
       - name: Python scripts making requests are detected as web crawlers

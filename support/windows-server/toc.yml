@@ -351,7 +351,7 @@ items:
       href: ./active-directory/default-workstation-numbers-join-domain.md
     - name: Error 0x6D9 "No more endpoints available from the endpoint mapper"
       href: ./active-directory/domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md
-    - name: 'Error 0x40 "The specified network name is no longer available"'
+    - name: Error 0x40 "The specified network name is no longer available"
       href: ./active-directory/domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md
     - name: Failure when you use an existing computer account to join a domain
       href: ./active-directory/failure-when-you-use-an-existing-computer-account-to-join-a-domain.md
@@ -359,6 +359,8 @@ items:
       href: ./active-directory/error-0x5-access-denied-rename-computer.md
     - name: Error code 0x54b
       href: active-directory/error-code-0x54b.md
+    - name: Error code 0x0000232A
+      href: active-directory/error-code-0x0000232a.md
     - name: Error code 0x569
       href: ./active-directory/error-0x569-not-granted-logon-type.md
     - name: Error code 0xa8b
@@ -383,8 +385,6 @@ items:
       href: ./active-directory/troubleshoot-errors-join-computer-to-domain.md
   - name: LDAP configuration and interoperability
     items:
-    - name: DCs can't be located and high-rate outbound sessions
-      href: ./active-directory/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Enable LDAP over SSL
       href: ./active-directory/enable-ldap-over-ssl-3rd-certification-authority.md
     - name: How to disable TLS 1.3 for AD and LDAP
@@ -537,6 +537,8 @@ items:
       href: ./active-directory/configure-authoritative-time-server.md
     - name: How Windows Time service treats leap second
       href: ./active-directory/time-service-treats-leap-second.md
+    - name: Secure Time Seeding recommendations for Windows Server
+      href: ./active-directory/sts-recommendations-for-windows-server.md
     - name: Support boundary for high-accuracy time
       href: ./active-directory/support-boundary-high-accuracy-time.md
     - name: Support for the leap second
@@ -2649,6 +2651,8 @@ items:
       href: ./user-profiles-and-logon/interactive-logon-isnt-allowed.md
     - name: Turn on automatic logon
       href: ./user-profiles-and-logon/turn-on-automatic-logon.md
+    - name: User may not be able to Change Their Password
+      href: user-profiles-and-logon/user-must-change-password-at-next-logon-setting.md
     - name: User profiles may fail to load
       href: ./user-profiles-and-logon/user-profiles-may-fail-load.md
     - name: Windows logs on and logs off immediately
@@ -2677,8 +2681,6 @@ items:
       href: ./user-profiles-and-logon/user-profile-cannot-loaded-event-1509.md
     - name: Troubleshoot user profiles with events
       href: ./user-profiles-and-logon/troubleshoot-user-profiles-events.md
-    - name: User may not be able to Change Their Password
-      href: ./user-profiles-and-logon/user-must-change-password-at-next-logon-setting.md
 - name: Virtualization
   items:
   - name: Virtualization
@@ -2951,6 +2953,8 @@ items:
       href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md
   - name: Netlogon, secure channel, DC Locator
     items:
+    - name: DCs can't be located and high-rate outbound sessions
+      href: user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Troubleshoot domain controller location issues
       href: windows-security/troubleshoot-domain-controller-location-issues.md
     - name: 'Troubleshooting guidance: Secure channel'
@@ -3069,6 +3073,8 @@ items:
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
   - name: Windows Update fails - installation stops with error
     items:
+    - name: Troubleshoot Windows Update error 0x80070002
+      href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
     - name: CBS.log file contains entries that some files aren't repaired

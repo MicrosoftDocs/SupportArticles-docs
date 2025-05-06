@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 28 for SQL Server 2019 (KB5039747)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 28 (KB5039747).
-ms.date: 01/29/2025
+ms.date: 04/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5039747
 ms.reviewer: v-qianli2
 appliesto:
@@ -27,7 +27,7 @@ This article describes Cumulative Update package 28 (CU28) for Microsoft SQL Ser
 
 [!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
 
-### Issue two: Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
+### Issue two: Patching error for secondary replicas in an availability group with databases enabled replication or CDC
 
 [!INCLUDE [patching-error-2019](../includes/patching-error-2019.md)]
 
