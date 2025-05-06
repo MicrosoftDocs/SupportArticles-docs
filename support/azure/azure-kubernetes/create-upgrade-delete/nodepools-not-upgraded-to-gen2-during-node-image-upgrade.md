@@ -18,7 +18,6 @@ This article discusses how to troubleshoot a scenario in which Windows Server no
 
 ## Prerequisites
 
-<!-- Updated: Specify Azure CLI version -->
 - Azure CLI version 2.0.81 or later. See [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) for installation instructions.
 
 ## Symptoms
@@ -71,10 +70,8 @@ Upgrade the cluster, and then create a new Windows Server nodepool that supports
 >
 > - Set the operating system SKU to **Windows Server 2022** to use together with your Gen2 VM.
 >
-> <!-- Added: Verify VM size compatibility -->
-> - Before creating a new nodepool, verify that the VM size supports Gen2 VMs in your region by running `az vm list-sizes --location <region> --query "[?contains(name, 'v2')].name" --output table`.
+> - Before you create a new nodepool, verify that the VM size supports Gen2 VMs in your region by running `az vm list-sizes --location <region> --query "[?contains(name, 'v2')].name" --output table`.
 >
-> <!-- Added: Check node image versions -->
 > - To confirm the current and available node image versions, run `az aks nodepool show --resource-group <resource-group> --cluster-name <cluster-name> --name <nodepool-name> --query nodeImageVersion` to check the current version, and `az aks nodepool get-upgrades --resource-group <resource-group> --cluster-name <cluster-name> --nodepool-name <nodepool-name> --query latestNodeImageVersion` to check the latest available version.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
