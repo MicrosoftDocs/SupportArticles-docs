@@ -46,7 +46,7 @@ The `gpu-provisioner` controller may have failed to create the GPU node(s), in t
 
 1. Requesting an [increase in the subscription quota](/azure/quotas/quickstart-increase-quota-portal) for the required GPU VM family for your deployment.
 
-2. Checking [GPU instance availability](https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/table?msockid=182ea2d5e1ff6eb61ccbb1b8e5ff608a) in the specific region of your AKS cluster; you may need to switch region or GPU VM size if not available.
+2. Checking [GPU instance availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/table?msockid=182ea2d5e1ff6eb61ccbb1b8e5ff608a) in the specific region of your AKS cluster; you may need to switch region or GPU VM size if not available.
 
 ## Cause 3: Long image pull time
 
