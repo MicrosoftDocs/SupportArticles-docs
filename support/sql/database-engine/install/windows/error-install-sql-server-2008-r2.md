@@ -1,7 +1,7 @@
 ---
 title: Error when you install SQL Server
 description: This article provides a resolution for various errors that occur when you try to install SQL Server.
-ms.date: 04/25/2025
+ms.date: 05/06/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ---
 # Error message when you try to install SQL Server

@@ -1,7 +1,7 @@
 ---
 title: Error when you run the DBCC CHECKDB statement
 description: This article describes a problem where you receive an error message when you try to run the DBCC CHECKDB statement on a database that contains a large table in SQL Server.
-ms.date: 04/25/2025
+ms.date: 05/06/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: keithelm
 ---

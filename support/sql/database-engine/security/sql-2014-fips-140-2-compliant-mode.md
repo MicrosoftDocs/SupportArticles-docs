@@ -1,7 +1,7 @@
 ---
 title: Use SQL 2014 in FIPS 140-2-compliant mode
 description: Discusses Federal Information Processing Standard Publication 140-2 (FIPS 140-2) instructions and how to use Microsoft SQL Server 2014 in the FIPS 140-2-compliant mode.
-ms.date: 04/25/2025
+ms.date: 05/06/2025
 ms.custom: sap:Security, Encryption, Auditing, Authorization
 ---
 # Instructions for using SQL Server 2014 in the FIPS 140-2-compliant mode
@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 3141890
 
 > [!NOTE]
 >
-> - The terms "FIPS 140-2-compliant," "FIPS 140-2 compliance," and "FIPS 140-2-compliant mode" are defined here for use and clarity. These terms are not recognized or defined government terms. The United States and Canadian governments recognize the validation of cryptographic modules against standards such as FIPS 140-2 but not the use of cryptographic modules in a specified or conformant manner. In this article, we use "FIPS 140-2-compliant," "FIPS 140-2 compliance," and "FIPS 140-2-compliant mode" in the sense that SQL Server 2014 uses only FIPS 140-2-validated instances of algorithms and hashing functions in all instances in which encrypted or hashed data is imported to or exported from SQL Server 2014. Additionally, this means that SQL Server 2014 manages keys in a secure manner, as required of FIPS 140-2-validated cryptographic modules. The key-management process also includes both key generation and key storage.
+> - The terms "FIPS 140-2-compliant," "FIPS 140-2 compliance," and "FIPS 140-2-compliant mode" are defined here for use and clarity. These terms aren't recognized or defined government terms. The United States and Canadian governments recognize the validation of cryptographic modules against standards such as FIPS 140-2 but not the use of cryptographic modules in a specified or conformant manner. In this article, we use "FIPS 140-2-compliant," "FIPS 140-2 compliance," and "FIPS 140-2-compliant mode" in the sense that SQL Server 2014 uses only FIPS 140-2-validated instances of algorithms and hashing functions in all instances in which encrypted or hashed data is imported to or exported from SQL Server 2014. Additionally, this means that SQL Server 2014 manages keys in a secure manner, as required of FIPS 140-2-validated cryptographic modules. The key-management process also includes both key generation and key storage.
 >
 > - We use "certified" here to mean that the instance of the algorithm is FIPS 140-2-validated or that the operating system contains FIPS 140-2-validated instances of algorithms.
 
@@ -34,7 +34,7 @@ FIPS 140-2 is a statement that is titled "Security Requirements for Cryptographi
 
 SQL Server 2014 can be configured and run in a manner that is compliant with FIPS 140-2. To configure SQL Server 2014 in this manner, SQL Server 2014 must run on an operating system that is FIPS 140-2 certified or on an operating system that provides cryptographic modules that are certified.
 
-The difference between compliance and certification is not subtle. Algorithms can be certified. It is insufficient to use an algorithm just because it is listed on the approved lists in FIPS 140-2. Instead, you have to use an instance of such an algorithm that is certified. This means that the instance is government validated. Certification requires testing and verification by a United States or Canadian government-approved evaluation lab. Windows Server 2012 and later versions and also Windows 8 and later versions contain the certified instance of each allowed algorithms. Most important, a call to each of these algorithms provides only the certified instance.
+The difference between compliance and certification isn't subtle. Algorithms can be certified. It's insufficient to use an algorithm just because it's listed on the approved lists in FIPS 140-2. Instead, you have to use an instance of such an algorithm that is certified. This means that the instance is government validated. Certification requires testing and verification by a United States or Canadian government-approved evaluation lab. Windows Server 2012 and later versions and also Windows 8 and later versions contain the certified instance of each allowed algorithm. Most important, a call to each of these algorithms provides only the certified instance.
 
 ## Which application products can be FIPS 140-2-compliant?
 
@@ -66,14 +66,14 @@ Install SQL Server 2014 on a server that is based on one of the following operat
 The FIPS mode must be set before SQL Server 2014 is started. SQL Server reads the setting at startup. To set the FIPS mode, follow these steps:
 
 1. Log on to Windows as a Windows system administrator.
-2. Click **Start**.
-3. Click **Control Panel**.
-4. Click **Administrative Tools**. (You may have to switch toLarge Icons for the next step.)
-5. Click **Local Security Policy**. TheLocal Security Settings window appears.
-6. In the navigation pane, click**Local Policies**, and then click **Security Options**.
+2. Select **Start**.
+3. Select **Control Panel**.
+4. Select **Administrative Tools**. (You may have to switch toLarge Icons for the next step.)
+5. Select **Local Security Policy**. TheLocal Security Settings window appears.
+6. In the navigation pane, select **Local Policies**, and then select **Security Options**.
 7. In the right-side pane, double-click **System cryptography: Use FIPS-compliant algorithms for encryption, hashing, and signing**.
-8. In the dialog box that appears, click **Enabled**, and then click **Apply**.
-9. Click **OK**.
+8. In the dialog box that appears, select **Enabled**, and then select **Apply**.
+9. Select **OK**.
 10. Close the Local Security Settings window.
 
 ### SQL Server administrator requirement
@@ -104,9 +104,9 @@ You can verify that the server is running in the FIPS mode by looking for these 
 
 - The use of stronger encryption may have a small effect on performance for those processes for which less strong encryption is allowed when the process is not operating as FIPS 140-2-compliant.
 
-- The selection of encryption for SSIS (UseEncryption=True) will generate an error message that states that the available encryption is incompatible with FIPS compliance and are not allowed. In other words, no encryption of the message process is performed.
+- The selection of encryption for SSIS (UseEncryption=True) will generate an error message that states that the available encryption is incompatible with FIPS compliance and aren't allowed. In other words, no encryption of the message process is performed.
 
-- The use of encryption together with legacy DTS isn't compliant with FIPS 140-2. For DTS, the FIPS mode in Windows is not checked. Therefore, it's the responsibility of the user to select no encryption to remain compliant.
+- The use of encryption together with legacy DTS isn't compliant with FIPS 140-2. For DTS, the FIPS mode in Windows isn't checked. Therefore, it's the responsibility of the user to select no encryption to remain compliant.
 
 - Because most SQL Server 2014 encryption and hashing processes are already FIPS 140-2-compliant, running at full compliance (that is, with the FIPS mode in Windows turned on) will have little or no effect on the use or performance of the product.
 

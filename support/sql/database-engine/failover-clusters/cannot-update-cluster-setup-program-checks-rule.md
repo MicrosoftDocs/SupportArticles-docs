@@ -1,12 +1,12 @@
 ---
 title: Can't update cluster if Setup program checks rule
 description: This article provides a resolution for the problem that occurs when the Setup program checks the Cluster_IsOnlineIfClustered rule.
-ms.date: 04/25/2025
+ms.date: 05/06/2025
 ms.custom: sap:Always On Failover Cluster Instance (FCI)
 ms.reviewer: ramakoni, clivec
 ---
 
-# You can't update a SQL Server 2012 cluster when the Setup program checks the Cluster_IsOnlineIfClustered rule
+# You can't update a SQL Server cluster when the Setup program checks the Cluster_IsOnlineIfClustered rule
 
 This article helps you resolve the problem that occurs when the Setup program checks the `Cluster_IsOnlineIfClustered` rule.
 

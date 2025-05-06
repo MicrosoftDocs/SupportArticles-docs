@@ -1,7 +1,7 @@
 ---
 title: Error when you run the DBCC CHECKDB command
 description: This article provides a workaround for the problem that occurs when you run the DBCC CHECKDB command on a SQL Server database.
-ms.date: 04/25/2025
+ms.date: 05/06/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: sureshka, ryanston, sunila, davco
 ---
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 960791
 
 Consider the following scenario:
 
-- You restore a Microsoft SQL Server 2008 or SQL Server 2005 database from a backup.
+- You restore a Microsoft SQL Server database from a backup.
 
 - You receive errors during the restore process that prevent you from restoring the database.
 
