@@ -24,7 +24,7 @@ public class MyController : ControllerBase
 
 ```
 
-or
+Or
 
 ```csharp
 
