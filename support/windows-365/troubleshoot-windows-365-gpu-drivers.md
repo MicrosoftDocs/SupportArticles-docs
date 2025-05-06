@@ -16,7 +16,7 @@ This article provides a solution to a known issue with graphic card drivers on W
 
 When you use Windows 365 GPU Enabled Cloud PCs, you might encounter a driver error issue if the Nvidia driver is outdated. This issue can occur due to mismatch in the underlying graphics card driver versions. 
 
-The error message resembles the following screenshot. You can see an error dialog on the **Nvidia \*\*\*-24Q** driver in Device Manager.
+The error message resembles the following screenshot. You can see an error dialog on the **Nvidia \*\*\*** driver in Device Manager.
 
 :::image type="content" source="media/troubleshoot-windows-365-gpu-drivers/error-in-device-manager.png" alt-text="Error in Device Manager.":::
 
@@ -35,7 +35,7 @@ To fix this issue, you need to download a new Nvidia driver to fix the issue. Fo
 
 2. Download and install the latest driver:
 
-   * Visit the Microsoft certified **NVIDIA GRID/vGPU driver** download [page](/azure/virtual-machines/windows/n-series-driver-setup#nvidia-gridvgpu-drivers)
+   * Visit the Microsoft approved **NVIDIA GRID/vGPU driver** download [page](/azure/virtual-machines/windows/n-series-driver-setup#nvidia-gridvgpu-drivers)
    * Download the latest driver for your Windows operating system.
    * Extract the files and run the installer (no need to uninstall your current driver).
    * Restart your Cloud PC once the installation is complete.
