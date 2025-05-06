@@ -70,7 +70,7 @@ Beginning in the release of Kubernetes 1.25, the [cgroup version 2 API](https://
 
 ## Status
 
-We're working with the Kubernetes community to resolve the issue. Track progress at [Azure/AKS Issue #3443](https://github.com/kubernetes/kubernetes/issues/118916).
+Microsoft is working with the Kubernetes community to resolve the issue. Track progress at [Azure/AKS Issue #3443](https://github.com/kubernetes/kubernetes/issues/118916).
 
 As part of the resolution, we plan to adjust the eviction thresholds or update [resource reservations](/azure/aks/concepts-clusters-workloads#resource-reservations), depending on the outcome of the fix.
 
