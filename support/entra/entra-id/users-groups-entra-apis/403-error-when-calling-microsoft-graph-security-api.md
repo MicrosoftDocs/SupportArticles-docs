@@ -1,16 +1,18 @@
 ---
-title: HTTP 403 authorization error when calling Microsoft Graph Security API
-description: Provides a soltion to an HTTP 403 error that occurs when you call Microsoft Graph Security API.
+title: HTTP 403 authorization error when calling the Microsoft Graph Security API
+description: Provides soltions to an HTTP 403 error that occurs when you call the Microsoft Graph Security API.
 ms.date: 05/06/2025
 ms.service: entra-id
 ms.custom: sap:Getting access denied errors (Authorization)
 ms.reviewer: bachoang, v-weizhu
 ---
-# HTTP 403 authorization error when calling Microsoft Graph Security API
+# HTTP 403 authorization error when calling the Microsoft Graph Security API
+
+This article provides soltions to an HTTP 403 error that occurs when you call the Microsoft Graph Security API.
 
 ## Symptoms
 
-When using Microsoft Graph Security API to call endpoints such as `https://graph.microsoft.com/v1.0/security/alert` and `https://graph.microsoft.com/beta/security/secoreScores`, you might get an 403 error with the following message:
+When using the Microsoft Graph Security API to call endpoints such as `https://graph.microsoft.com/v1.0/security/alert` and `https://graph.microsoft.com/beta/security/secoreScores`, you might get an 403 error with the following message:
 
 > Auth token does not contain valid permissions or user does not have valid roles
 
@@ -21,9 +23,7 @@ The error occurs due to one of the following reasons:
 - The access token lacks the necessary Microsoft Graph permission for the security endpoints.
 - The authenticating user that obtains the access token isn't in a required Azure AD admin role for delegated permission type token.
 
-## Solution
-
-### Microsoft Graph permission
+## Solution 1: Use valid Microsoft Graph permission
 
 There are two types of tokens: application and delegated permission token. For more information, see [Application and delegated permissions for access tokens in the Microsoft identity platform](../app-integration/application-delegated-permission-access-tokens-identity-platform.md).
 
@@ -39,7 +39,7 @@ For delegated permission token, Microsoft Graph permission is in the `scp` claim
 
 For more information, see [Use the Microsoft Graph security API](/graph/api/resources/security-api-overview) and [Microsoft Graph permissions reference](/graph/permissions-reference).
 
-### Microsoft Entra admin roles
+## Solution 2: Use valid Microsoft Entra admin roles
 
 For delegated permission token, the authenticating user needs to be in one of the following admin roles:
 
