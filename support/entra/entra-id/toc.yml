@@ -81,6 +81,9 @@
         href: app-integration/send-notification-details.md
   - name: Troubleshoot sign-in to apps
     items:
+      - name: AADSTS7500514 - A supported type of SAML response was not found
+        href: app-integration/error-code-aadsts7500514-supported-type-saml-response-not-found.md
+      - name: Error AADSTS220501 - Unable to download Certificate Revocation List
       - name: Error code AADSTS50173 - The provided grant has expired due to it being revoked
         href: app-integration/error-code-aadsts50173-grant-expired-revoked.md
       - name: Error AADSTS220501 - Unable to download Certificate Revocation List
