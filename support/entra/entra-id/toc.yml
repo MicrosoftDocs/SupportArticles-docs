@@ -142,7 +142,7 @@
   href: app-integration/use-netlog-capture-network-traffic.md
 - name: Business To Consumer (B2C) Tenants
   items:
-  - name: Problem with app or  integration
+  - name: Problem with app or API integration
     items:
     - name: An exception occurs in application
       href: b2c/server-error-application-exception.md
