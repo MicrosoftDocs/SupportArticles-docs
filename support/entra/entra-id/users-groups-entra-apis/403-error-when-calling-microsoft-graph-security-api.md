@@ -33,8 +33,8 @@ For delegated permission token, Microsoft Graph permission is in the `scp` claim
 |:----------|:-------|:-------------------|
 |SecurityActions.Read.All| &bull; [securityActions](/graph/api/resources/securityaction) (preview) | GET |
 |SecurityActions.ReadWrite.All| &bull; [securityActions](/graph/api/resources/securityaction) (preview) | GET, POST |
-|SecurityEvents.Read.All | &bull; [alerts](/graph/api/resources/alert)</br> &bull; [secureScores](/graph/api/resources/securescores) </br> &bull; [secureScoreControlProfiles](/graph/api/resources/securescorecontrolprofiles) | GET |
-|SecurityEvents.ReadWrite.All | &bull; [alerts](/graph/api/resources/alert)</br> &bull; [secureScores](/graph/api/resources/securescores) </br> &bull; [secureScoreControlProfiles](/graph/api/resources/securescorecontrolprofiles) | GET, POST, PATCH |
+|SecurityEvents.Read.All | &bull; [alerts](/graph/api/resources/alert)</br> &bull; [secureScores](/graph/api/resources/securescore) </br> &bull; [secureScoreControlProfiles](/graph/api/resources/securescorecontrolprofiles) | GET |
+|SecurityEvents.ReadWrite.All | &bull; [alerts](/graph/api/resources/alert)</br> &bull; [secureScores](/graph/api/resources/securescore) </br> &bull; [secureScoreControlProfiles](/graph/api/resources/securescorecontrolprofiles) | GET, POST, PATCH |
 |ThreatIndicators.ReadWrite.OwnedBy | &bull; [tiIndicator](/graph/api/resources/tiindicator) (preview) | GET, POST, PATCH, DELETE|
 
 For more information, see [Use the Microsoft Graph security API](/graph/api/resources/security-api-overview) and [Microsoft Graph permissions reference](/graph/permissions-reference).
