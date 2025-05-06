@@ -335,6 +335,8 @@
         href: extensions/istio-add-on-plug-in-ca-certificate.md
   - name: AKS Cost Analysis add-on issues
     href: extensions/aks-cost-analysis-add-on-issues.md
+  - name: Troubleshoot AI toolchain operator add-on issues
+    href: extensions/troubleshoot-ai-toolchain-operator-addon-issues.md
   - name: Can't pull images from container registry to cluster
     href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
   - name: Troubleshoot installation errors in the Azure App Configuration extension
