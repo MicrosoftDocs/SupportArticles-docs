@@ -12,23 +12,42 @@ ms.custom:
 ---
 # Troubleshoot Netlogon service startup failures
 
-This article describes the symptoms, causes, and solutions for the scenarios that lead to Netlogon service startup failures.
+This article describes the symptoms, causes, and solutions for the scenarios that lead to Netlogon service startup failures. The Netlogon service only runs when the computer is joined to Active Directory. When the computer is joined to Entra ID only, the Netlogon service doesn't run.
+
+## Introduction of the Netlogon service
+
+The Netlogon service on domain members provides supports for the following functionalities:
+
+- New Technology LAN Manager (NTLM) sign-in requests
+- Kerberos Privilege Attribute Certificate (PAC) verifications
+- Domain controller (DC) discovery
+- Managing the host ServicePrincipalNames
+- Managing the system's computer account password
+
+On DCs, the Netlogon services also handles these tasks:
+
+- Sharing out the SYSVOL and NETLOGON shares after startup.
+- Domain Name System (DNS) registration of NTDS records (A, AAAA, and SRV)
+- Managing the DC function ServicePrincipalNames
+- Maintaining trust passwords
+- Reading and building the subnet/site mappings the server side of DC locator needs to tell the clients about their site
+- Maintaining a list of known trusted domains for security checking (trust scanner)
 
 ## Service dependencies
 
-The Netlogon service provides support for New Technology LAN Manager (NTLM) sign-in requests, Kerberos Privilege Attribute Certificate (PAC) verifications, domain controller discovery, Domain Name System (DNS) registration of SRV records, managing the system's computer account password, and maintaining trust passwords on domain controllers. To accomplish these operations, Netlogon requires facilities of other components and services within the operating system. Known as Service Dependencies, Netlogon depends on the services noted in the following diagram:
+To accomplish these operations, Netlogon requires facilities of other components and services within the operating system. Known as Service Dependencies, Netlogon depends on the services noted in the following diagram:
 
 :::image type="content" source="media/troubleshoot-netlogon-service-startup-failures/diagram-of-the-netlogon-service-dependencies.png" alt-text="A diagram of the Netlogon service dependencies.":::
 
-The Netlogon service depends on the Workstation service. The Workstation service depends on the Browser, MrxSMB20, and NSI services, and so on. On domain controllers, the Netlogon service has additional dependencies on the Server service, and the Server service depends on the SAMSS and SRV2 services, with the SRV2 service depending on the SRVNET service, and so on.
+The Netlogon service depends on the Workstation service. The Workstation service depends on the Browser, MrxSMB20, and NSI services, and so on. On DCs, the Netlogon service has additional dependencies on the Server service, and the Server service depends on the SAMSS and SRV2 services, with the SRV2 service depending on the SRVNET service, and so on.
 
-These dependency relationships are detailed by the Services MMC snap-in (Services.msc) within the properties of the service's **Dependencies** tab. This dependency configuration is stored within the registry for each services' key under the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services` registry key. Contained within each service key is a value **DependsOnService** that defines the specific, direct dependencies of that service. For example, the Netlogon service registry key of a domain controller defines the DependOnService value containing the data **LanmanWorkstation LanmanServer**.
+These dependency relationships are detailed by the Services MMC snap-in (Services.msc) within the properties of the service's **Dependencies** tab. This dependency configuration is stored within the registry for each services' key under the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services` registry key. Contained within each service key is a value **DependsOnService** that defines the specific, direct dependencies of that service. For example, the Netlogon service registry key of a DC defines the DependOnService value containing the data **LanmanWorkstation LanmanServer**.
 
 To view the dependencies of the Netlogon service, use the Services MMC and inspect the service properties:
 
 :::image type="content" source="media/troubleshoot-netlogon-service-startup-failures/screenshot-of-the-netlogon-service-properties.png" alt-text="A screenshot of the Netlogon service properties.":::
 
-Another method of querying dependencies is to use the Service Control Manager Configuration Tool (sc.exe) command line utility. The following is the output of the `QC` command to query the configuration for the Netlogon service dependencies of a domain controller:
+Another method of querying dependencies is to use the Service Control Manager Configuration Tool (sc.exe) command line utility. The following is the output of the `QC` command to query the configuration for the Netlogon service dependencies of a DC:
 
 ```console
 C:\Windows\System32>sc qc netlogon
@@ -183,7 +202,7 @@ The Netlogon service reports that the service entered the stopped state during s
 
 #### Resolution
 
-Validate the service permissions within the registry are set to appropriate values. Permissions vary based on the role of the system. For example, domain controllers as compared to workstations or member servers. Ensure that no entries are specifying a **Deny** permission for **SYSTEM** or **Administrators**. By default, the registry permissions are inherited from the parent registry key and the owner is configured as **SYSTEM**.
+Validate the service permissions within the registry are set to appropriate values. Permissions vary based on the role of the system. For example, DCs as compared to workstations or member servers. Ensure that no entries are specifying a **Deny** permission for **SYSTEM** or **Administrators**. By default, the registry permissions are inherited from the parent registry key and the owner is configured as **SYSTEM**.
 
 ## Additional symptoms
 
@@ -223,9 +242,9 @@ Validate the service permissions within the registry are set to appropriate valu
    An attempt was made to logon, but the network logon service was not started.
    ```
 
-3. Domain controller locator fails to locate a domain controller with error 1355 or "The specified domain either doesn't exist or couldn't be contacted".
+3. DC locator fails to locate a DC with error 1355 or "The specified domain either doesn't exist or couldn't be contacted".
 
-4. Domain trust relationships might fail if all reachable domain controllers have their Netlogon services stopped:
+4. Domain trust relationships might fail if all reachable DCs have their Netlogon services stopped:
 
    > Log Name: System  
    > Source: NETLOGON  
