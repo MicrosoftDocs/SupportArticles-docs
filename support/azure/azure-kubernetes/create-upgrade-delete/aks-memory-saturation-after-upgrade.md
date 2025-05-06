@@ -1,7 +1,7 @@
 ---
 title: Memory saturation occurs after upgrade to Kubernetes 1.25
 description: Resolve pod failures caused by memory saturation and out-of-memory errors after you upgrade an Azure Kubernetes Service (AKS) cluster to Kubernetes 1.25.x.
-ms.date: 05/02/2025
+ms.date: 05/06/2025
 editor: v-jsitser,momajed
 ms.reviewer: aritraghosh, cssakscic, v-leedennis,momajed
 ms.service: azure-kubernetes-service
@@ -43,7 +43,7 @@ Beginning in the release of Kubernetes 1.25, the [cgroup version 2 API](https://
 
 - Similarly, if you're using .NET, upgrade to [.NET version 5.0](https://devblogs.microsoft.com/dotnet/announcing-net-5-0/#containers) or a later version.
 
-- If you see a higher eviction rate on the pods, [use higher limits and requests for pods](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits).
+- If you see a higher eviction rate on the pods, [use higher limits and requests for the pods](/azure/aks/developer-best-practices-resource-management#define-pod-resource-requests-and-limits).
 
 - `cgroup` v2 uses a different API than `cgroup` v1. If there are any applications that directly access the `cgroup` file system, update them to later versions that support `cgroup` v2. For example:
 
@@ -65,12 +65,12 @@ Beginning in the release of Kubernetes 1.25, the [cgroup version 2 API](https://
 
   > [!IMPORTANT]
   > - Use the DaemonSet cautiously. Test it in a lower environment before applying to production to ensure compatibility and avoid disruptions.
-  > - The DaemonSet applies to all nodes in the cluster by default and reboots them to implement the `cgroup` change.  
+  > - By default, the DaemonSet applies to all nodes in the cluster and reboots them to implement the `cgroup` change.  
   > - To control how the DaemonSet is applied, configure a `nodeSelector` to target specific nodes.
 
 ## Status
 
-We are working with the Kubernetes community to resolve the issue. Track progress at [Azure/AKS Issue #3443](https://github.com/kubernetes/kubernetes/issues/118916).
+We're working with the Kubernetes community to resolve the issue. Track progress at [Azure/AKS Issue #3443](https://github.com/kubernetes/kubernetes/issues/118916).
 
 As part of the resolution, we plan to adjust the eviction thresholds or update [resource reservations](/azure/aks/concepts-clusters-workloads#resource-reservations), depending on the outcome of the fix.
 
