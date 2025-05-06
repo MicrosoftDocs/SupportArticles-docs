@@ -9,7 +9,7 @@ ms.reviewer: sureshka, ryanston, sunila, davco
 
 This article hepls you work around the problem that occurs when you run the `DBCC CHECKDB` command on a computer that contains a SQL Server database.
 
-_Original product version:_ &nbsp; SQL Server  
+_Original product version:_ &nbsp; SQL Server 2005 and later versions
 _Original KB number:_ &nbsp; 960791
 
 ## Symptoms
