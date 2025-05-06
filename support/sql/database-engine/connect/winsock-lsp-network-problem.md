@@ -1,7 +1,7 @@
 ---
 title: Winsock LSP may result in network problems
 description: This article helps you resolve the problem that occurs when Winsock Layered Service Providers (LSP) are loaded into SQL Server address space.
-ms.date: 09/25/2020
+ms.date: 05/06/2025
 ms.custom: sap:Database Connectivity and Authentication
 ms.reviewer: SureshKa
 ---
@@ -9,7 +9,7 @@ ms.reviewer: SureshKa
 
 This article helps you resolve the problem that occurs when Winsock Layered Service Providers (LSP) are loaded into SQL Server address space.
 
-_Original product version:_ &nbsp; Microsoft SQL Server 2005, SQL Server 2008  
+_Original product version:_ &nbsp; Microsoft SQL Server  
 _Original KB number:_ &nbsp; 2033448
 
 ## Symptoms
@@ -42,4 +42,3 @@ If you have a business requirement to use these providers, ensure that you have 
 
 - [Winsock architecture](/previous-versions/windows/embedded/ms885821(v=msdn.10))
 - [Transport Service Providers](/windows/win32/winsock/transport-service-providers-2)
-
