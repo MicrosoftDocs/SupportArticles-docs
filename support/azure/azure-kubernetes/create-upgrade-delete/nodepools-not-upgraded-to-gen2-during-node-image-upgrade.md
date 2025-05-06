@@ -1,20 +1,20 @@
 ---
-title: Windows nodepools not upgraded to Gen2 during cluster node image upgrade
-description: Troubleshoot why Windows Server nodepools don't get upgraded automatically from Gen1 to Gen2 when a cluster node image is upgraded in Azure Kubernetes Service.
+title: Windows node pools not upgraded to Gen2 during cluster node image upgrade
+description: Troubleshoot why Windows Server node pools don't get upgraded automatically from Gen1 to Gen2 when a cluster node image is upgraded in Azure Kubernetes Service.
 ms.date: 04/17/2025
 editor: v-jsitser
 ms.reviewer: chiragpa, cssakscic, momajed
 ms.service: azure-kubernetes-service
-#Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot why Windows Server nodepools don't get upgraded automatically from Gen1 to Gen2 virtual machines (VMs) when a cluster node image is upgraded in Azure Kubernetes Service (AKS).
+#Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot why Windows Server node pools don't get upgraded automatically from Gen1 to Gen2 virtual machines (VMs) when a cluster node image is upgraded in Azure Kubernetes Service (AKS).
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 
-# Windows Server nodepools not upgraded to Gen2 during cluster node image upgrade
+# Windows Server node pools not upgraded to Gen2 during cluster node image upgrade
 
-This article discusses how to troubleshoot a scenario in which Windows Server nodepools don't get upgraded automatically from Gen1 to Gen2 virtual machines (VMs) when a cluster node image is upgraded in Microsoft Azure Kubernetes Service (AKS).
+This article discusses how to troubleshoot a scenario in which Windows Server node pools don't get upgraded automatically from Gen1 to Gen2 virtual machines (VMs) when a cluster node image is upgraded in Microsoft Azure Kubernetes Service (AKS).
 
 > [!NOTE]  
-> This scenario doesn't apply to Gen2 VMs on Linux nodepools.
+> This scenario doesn't apply to Gen2 VMs on Linux node pools.
 
 ## Prerequisites
 
@@ -22,21 +22,21 @@ This article discusses how to troubleshoot a scenario in which Windows Server no
 
 ## Symptoms
 
-Existing Windows Server nodepools don't get upgraded from Gen1 to Gen2 when you [upgrade the node image](/azure/aks/node-image-upgrade) by using one of the following methods in Azure CLI:
+Existing Windows Server node pools don't get upgraded from Gen1 to Gen2 when you [upgrade the node image](/azure/aks/node-image-upgrade) by using one of the following methods in Azure CLI:
 
-- An entire cluster upgrade (by using the [az aks upgrade](/cli/azure/aks#az-aks-upgrade) command)
+- An entire cluster upgrade (by using the [`az aks upgrade`](/cli/azure/aks#az-aks-upgrade) command)
 
-- A specific nodepool upgrade (by using the [az aks nodepool upgrade](/cli/azure/aks/nodepool#az-aks-nodepool-upgrade) command)
+- A specific nodepool upgrade (by using the [`az aks nodepool upgrade`](/cli/azure/aks/nodepool#az-aks-nodepool-upgrade) command)
 
 ## Cause
 
-### Cause 1: Existing nodepools aren't automatically upgraded to Gen2 VMs
+### Cause 1: Existing node pools aren't automatically upgraded to Gen2 VMs
 
-By design, a node image upgrade doesn't support updating or upgrading existing nodepools. The `az aks upgrade` and `az aks nodepool upgrade` commands upgrade only the node image (to a later node image version). Those commands don't upgrade the corresponding VM generation.
+By design, a node image upgrade doesn't support updating or upgrading existing node pools. The `az aks upgrade` and `az aks nodepool upgrade` commands upgrade only the node image (to a later node image version). Those commands don't upgrade the corresponding VM generation.
 
 ### Cause 2: Cluster upgrade to Kubernetes version 1.25 or a later version upgrades only the OS
 
-When you upgrade your cluster to Kubernetes version 1.25 or a later version, only the operating system (OS) is upgraded (to Windows Server 2022). Existing nodepools aren't affected. The associated VM scale set will contain VMs that have the same Gen1 VM.
+When you upgrade your cluster to Kubernetes version 1.25 or a later version, only the operating system (OS) is upgraded (to Windows Server 2022). Existing node pools aren't affected. The associated Azure Virtual Machine Scale Sets will contain VMs that have the same Gen1 VM.
 
 ### Cause 3: Cluster upgraded and new nodepool created by using Windows Server 2022 without specifying a valid VM size
 
@@ -46,7 +46,7 @@ After you upgrade the cluster to Kubernetes version 1.25 or a later version, you
 
 - You specify a Gen1-only VM size.
 
-When you upgrade the default OS from Windows Server 2019 (`Windows2019`) to Windows Server 2022 (`Windows2022`), the existing nodepools aren't automatically upgraded to a different VM generation.
+When you upgrade the default OS from Windows Server 2019 (`Windows2019`) to Windows Server 2022 (`Windows2022`), the existing node pools aren't automatically upgraded to a different VM generation.
 
 ## Solution
 
@@ -55,8 +55,8 @@ Upgrade the cluster, and then create a new Windows Server nodepool that supports
 
 | Kubernetes cluster upgrade version | Cluster creation guidelines |
 |---|---|
-| 1.25 or a later version | When you run the [az aks create](/cli/azure/aks#az-aks-create) command to create a cluster, set the `--node-vm-size` parameter to a [Gen2 VM size](/azure/virtual-machines/generation-2). |
-| Earlier version than 1.25 | When you run the [az aks create](/cli/azure/aks#az-aks-create) command to create a cluster, set the `--os-sku` parameter value to `Windows2022`, and set the `--node-vm-size` parameter value to a [Gen2 VM size](/azure/virtual-machines/generation-2). |
+| 1.25 or a later version | When you run the [`az aks create`](/cli/azure/aks#az-aks-create) command to create a cluster, set the `--node-vm-size` parameter to a [Gen2 VM size](/azure/virtual-machines/generation-2). |
+| Earlier version than 1.25 | When you run the [`az aks create`](/cli/azure/aks#az-aks-create) command to create a cluster, set the `--os-sku` parameter value to `Windows2022`, and set the `--node-vm-size` parameter value to a [Gen2 VM size](/azure/virtual-machines/generation-2). |
 
 
 > [!NOTE]  
