@@ -10,7 +10,7 @@ ms.reviewer: ramakoni, clivec
 
 This article helps you resolve the problem that occurs when the Setup program checks the `Cluster_IsOnlineIfClustered` rule.
 
-_Original product version:_ &nbsp; SQL Server  
+_Original product version:_ &nbsp; SQL Server 2012 and later versions
 _Original KB number:_ &nbsp; 2817733
 
 ## Symptoms
