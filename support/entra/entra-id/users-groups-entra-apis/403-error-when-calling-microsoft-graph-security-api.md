@@ -25,7 +25,7 @@ The error occurs due to one of the following reasons:
 
 ### Microsoft Graph permission
 
-There are two types of tokens: application and delegated permission token. For more information, see [Application and delegated permissions for access tokens in the Microsoft identity platform](app-integration/application-delegated-permission-access-tokens-identity-platform.md).
+There are two types of tokens: application and delegated permission token. For more information, see [Application and delegated permissions for access tokens in the Microsoft identity platform](../app-integration/application-delegated-permission-access-tokens-identity-platform.md).
 
 For delegated permission token, Microsoft Graph permission is in the `scp` claim. For application permission token, the permission is in the `roles` claim. To get the required Microsoft Graph permissoin, you can refer to the following table that listed in [Authorization and the Microsoft Graph Security API](/graph/security-authorization#register-an-application-with-the-microsoft-identity-platform-endpoint):
 
