@@ -37,7 +37,7 @@ On DCs, the Netlogon services also handles these tasks:
 
 To accomplish these operations, Netlogon requires facilities of other components and services within the operating system. Known as Service Dependencies, Netlogon depends on the services noted in the following diagram:
 
-:::image type="content" source="media/troubleshoot-netlogon-service-startup-failures/diagram-of-the-netlogon-service-dependencies.png" alt-text="A diagram of the Netlogon service dependencies.":::
+:::image type="content" source="media/troubleshoot-netlogon-service-startup-failures/diagram-of-the-netlogon-service-dependencies.svg" alt-text="A diagram of the Netlogon service dependencies.":::
 
 The Netlogon service depends on the Workstation service. The Workstation service depends on the Browser, MrxSMB20, and NSI services, and so on. On DCs, the Netlogon service has additional dependencies on the Server service, and the Server service depends on the SAMSS and SRV2 services, with the SRV2 service depending on the SRVNET service, and so on.
 
