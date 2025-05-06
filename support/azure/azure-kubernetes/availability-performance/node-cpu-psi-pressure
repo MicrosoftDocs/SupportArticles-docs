@@ -1,0 +1,137 @@
+---
+title: Monitor CPU pressure in AKS clusters using PSI metrics
+description: Troubleshoot CPU pressure using PSI metrics in an AKS cluster.
+ms.date: 04/29/2025
+ms.reviewer: aritraghosh, dafell,alvinli
+ms.service: azure-kubernetes-service
+ms.custom: sap:Node/node pool availability and performance
+---
+# Troubleshoot CPU pressure in AKS clusters using PSI metrics
+
+CPU pressure is a more accurate indicator of resource contention than traditional CPU utilization metrics. While high CPU usage shows resource consumption, it doesn't necessarily indicate performance problems. In an Azure Kubernetes Service (AKS) cluster, understanding CPU pressure through Pressure Stall Information (PSI) metrics helps identify true resource contention issues.
+
+When a node in an Azure Kubernetes Service (AKS) cluster experiences CPU pressure, applications may suffer from poor performance even when CPU utilization appears moderate. PSI metrics provide insight into actual resource contention by measuring task delays rather than just resource consumption.
+
+This article helps you monitor CPU pressure using PSI metrics and provides best practices to resolve resource contention issues.
+
+## Symptoms
+
+The following table outlines the common symptoms of CPU pressure:
+
+|Symptom | Description |
+|---|---|
+|Increased application latency|Services respond slower even when CPU utilization appears moderate.|
+|Throttled containers|Containers experience delays in processing despite having CPU resources available on the node|
+|Degraded performance|Applications experience unpredictable performance variations that don't correlate with CPU usage percentages|
+
+## Troubleshooting checklist
+
+To identify and resolve CPU pressure issues, follow these steps:
+
+### Step 1: Enable and monitor PSI metrics
+
+Use either of the following methods to access PSI metrics:
+
+- In a web browser, use Azure Managed Prometheus/monitoring solution to query PSI metrics.
+- In a console, use the Kubernetes command-line tool (kubectl).
+
+### [Browser](#tab/browser)
+
+Azure Managed Prometheus provides a way to monitor PSI metrics:
+
+1. Enable Azure Managed Prometheus for your AKS cluster by following the [documentation](/azure/azure-monitor/essentials/prometheus-metrics-enable).
+
+2. Navigate to the Azure Monitor workspace associated with the AKS cluster from the [Azure portal](https://portal.azure.com)
+
+3. Under **Monitoring**, select **Metrics**.
+
+4. Select **Prometheus metrics** as the data source. Note that the metrics need to be enabled in Azure Managed Prometheus for it to be available. These metrics are exposed by node exporter/ cadvisor
+
+5. Query specific PSI metrics:
+
+   - For node-level CPU pressure:
+     ```
+     node_pressure_cpu_waiting_seconds_total
+     ```
+     
+   - For pod-level CPU pressure:
+     ```
+     container_cpu_cfs_throttled_seconds_total
+     ```
+   -
+   Calculate the PSI-some percentage (percentage of time at least one task is stalled on CPU):
+   ```
+    rate(node_pressure_cpu_waiting_seconds_total[5m]) * 100  
+   ``` 
+>[!NOTE]
+> Some of the container level metrics such as `container_pressure_cpu_waiting_seconds_total` and `container_pressure_cpu_stalled_seconds_total` are not available in AKS as they are part of the KubeletPSI feature gate which is in alpha state
+
+
+### [Command Line](#tab/command-line)
+
+Access PSI metrics safely using kubectl without requiring SSH access:
+
+1. Use kubernetes proxy and node metrics:
+
+   ```bash
+   # Start the kubernetes proxy in a separate terminal
+   kubectl proxy
+   
+   # Access node metrics API
+   kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes
+   ```
+
+2. For more detailed PSI metrics, use the kubectl debug feature to create a temporary debug pod:
+
+   ```bash
+   # Create a debug pod that mounts the host filesystem
+   kubectl debug node/<node_name> -it --image=busybox
+   
+   # Once inside the debug pod, check PSI metrics
+   cat /host/proc/pressure/cpu
+   ```
+   
+   Example output:
+   ```
+   some avg10=0.00 avg60=0.00 avg300=0.00 total=0
+   full avg10=0.00 avg60=0.00 avg300=0.00 total=0
+   ```
+   
+   The "some" line indicates the percentage of time at least one task is stalled on CPU.
+   The "full" line indicates the percentage of time all tasks are stalled on CPU.
+   ```
+
+---
+
+### Step 2: Review best practices to prevent CPU pressure
+
+Review the following table to learn how to implement best practices for avoiding CPU pressure:
+
+| Best practice | Description |
+|---|---|
+|[Focus on PSI metrics instead of utilization](https://docs.kernel.org/accounting/psi.html)|Use PSI metrics as your primary indicator of resource contention rather than CPU utilization percentages.|
+|[Minimize CPU limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)|Consider removing CPU limits and rely on Linux's Completely Fair Scheduler with CPU shares based on requests.|
+|[Use appropriate QoS classes](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)|Set the right Quality of Service class for each pod based on its importance and contention sensitivity.|
+|[Optimize pod placement](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)|Use pod anti-affinity rules to avoid placing CPU-intensive workloads on the same nodes.|
+|[Monitor for brief pressure spikes](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/)|Short pressure spikes can indicate issues even when average utilization appears acceptable.|
+
+## Key PSI metrics to monitor
+
+### Node-level PSI metrics
+- `node_pressure_cpu_waiting_seconds_total`: Cumulative time tasks have been waiting for CPU.
+- `node_cpu_seconds_total`: Traditional CPU utilization for comparison.
+
+### Pod-level PSI indicators
+- `container_cpu_cfs_throttled_periods_total`: The number of periods a container has been throttled.
+- `container_cpu_cfs_throttled_seconds_total`: Total time a container has been throttled.
+- Throttling percentage: `rate(container_cpu_cfs_throttled_periods_total[5m]) / rate(container_cpu_cfs_periods_total[5m]) * 100`
+
+## References
+
+- [Linux PSI documentation](https://docs.kernel.org/accounting/psi.html)
+- [Kubernetes resource management](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
+- [AKS performance best practices](/azure/aks/concepts-clusters-workloads)
+- [Azure Managed Prometheus](/azure/azure-monitor/essentials/prometheus-metrics-enable)
+- [Quality of Service in Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
