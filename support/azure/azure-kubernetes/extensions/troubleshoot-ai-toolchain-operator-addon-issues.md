@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service AI toolchain operator add-on issues
 description: Learn how to resolve issues that occur when you try to enable the Azure Kubernetes Service (AKS) AI toolchain operator add-on.
-ms.date: 05/06/5025
+ms.date: 05/06/2025
 author: sachidesai
 ms.author: sachidesai
 ms.service: azure-kubernetes-service
