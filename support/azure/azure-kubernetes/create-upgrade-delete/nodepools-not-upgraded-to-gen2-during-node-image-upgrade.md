@@ -6,7 +6,7 @@ editor: v-jsitser
 ms.reviewer: chiragpa, cssakscic, momajed
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot why Windows Server node pools don't get upgraded automatically from Gen1 to Gen2 virtual machines (VMs) when a cluster node image is upgraded in Azure Kubernetes Service (AKS).
-ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or node pool)
 ---
 
 # Windows Server node pools not upgraded to Gen2 during cluster node image upgrade
@@ -26,7 +26,7 @@ Existing Windows Server node pools don't get upgraded from Gen1 to Gen2 when you
 
 - An entire cluster upgrade (by using the [`az aks upgrade`](/cli/azure/aks#az-aks-upgrade) command)
 
-- A specific nodepool upgrade (by using the [`az aks nodepool upgrade`](/cli/azure/aks/nodepool#az-aks-nodepool-upgrade) command)
+- A specific node pool upgrade (by using the [`az aks nodepool upgrade`](/cli/azure/aks/nodepool#az-aks-nodepool-upgrade) command)
 
 ## Cause
 
@@ -38,9 +38,9 @@ By design, a node image upgrade doesn't support updating or upgrading existing n
 
 When you upgrade your cluster to Kubernetes version 1.25 or a later version, only the operating system (OS) is upgraded (to Windows Server 2022). Existing node pools aren't affected. The associated Azure Virtual Machine Scale Sets will contain VMs that have the same Gen1 VM.
 
-### Cause 3: Cluster upgraded and new nodepool created by using Windows Server 2022 without specifying a valid VM size
+### Cause 3: Cluster upgraded and new node pool created by using Windows Server 2022 without specifying a valid VM size
 
-After you upgrade the cluster to Kubernetes version 1.25 or a later version, you specify Windows Server 2022 as the OS to use on the nodepool's VMs. However, the VMs don't use a Gen2 node image reference because of one of the following reasons:
+After you upgrade the cluster to Kubernetes version 1.25 or a later version, you specify Windows Server 2022 as the OS to use on the node pool's VMs. However, the VMs don't use a Gen2 node image reference because of one of the following reasons:
 
 - You don't specify a VM size, and the default VM size in the region doesn't support Gen2 VMs.
 
@@ -50,7 +50,7 @@ When you upgrade the default OS from Windows Server 2019 (`Windows2019`) to Wind
 
 ## Solution
 
-Upgrade the cluster, and then create a new Windows Server nodepool that supports [Gen2 VM sizes](/azure/virtual-machines/generation-2) on that cluster according to the following guidelines.
+Upgrade the cluster, and then create a new Windows Server node pool that supports [Gen2 VM sizes](/azure/virtual-machines/generation-2) on that cluster according to the following guidelines.
 
 
 | Kubernetes cluster upgrade version | Cluster creation guidelines |
@@ -70,7 +70,7 @@ Upgrade the cluster, and then create a new Windows Server nodepool that supports
 >
 > - Set the operating system SKU to **Windows Server 2022** to use together with your Gen2 VM.
 >
-> - Before you create a new nodepool, verify that the VM size supports Gen2 VMs in your region by running `az vm list-sizes --location <region> --query "[?contains(name, 'v2')].name" --output table`.
+> - Before you create a new node pool, verify that the VM size supports Gen2 VMs in your region by running `az vm list-sizes --location <region> --query "[?contains(name, 'v2')].name" --output table`.
 >
 > - To confirm the current and available node image versions, run `az aks nodepool show --resource-group <resource-group> --cluster-name <cluster-name> --name <nodepool-name> --query nodeImageVersion` to check the current version, and `az aks nodepool get-upgrades --resource-group <resource-group> --cluster-name <cluster-name> --nodepool-name <nodepool-name> --query latestNodeImageVersion` to check the latest available version.
 
