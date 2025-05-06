@@ -9,7 +9,7 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 
 # 401 Unauthorized errors in ASP.NET Core Web API with Microsoft Entra ID 
 
-This article provides guidance on troubleshooting and resolving 401 Unauthorized errors when you call an ASP.NET Core Web API that is secured by using Microsoft Entra ID authentication. It explains how to use the `JwtBearerEvents` callbacks to capture and log detailed error information.
+When you call an ASP.NET Core Web API secured with Microsoft Entra ID authentication, you might encounter a 401 Unauthorized error. This article provides guidance on using `JwtBearerEvents to capture detailed logs for troubleshooting these errors.
 
 ## Symptoms
 
