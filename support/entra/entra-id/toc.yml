@@ -81,6 +81,9 @@
         href: app-integration/send-notification-details.md
   - name: Troubleshoot sign-in to apps
     items:
+      - name: AADSTS7500514 - A supported type of SAML response was not found
+        href: app-integration/error-code-aadsts7500514-supported-type-saml-response-not-found.md
+      - name: Error AADSTS220501 - Unable to download Certificate Revocation List
       - name: Error code AADSTS50173 - The provided grant has expired due to it being revoked
         href: app-integration/error-code-aadsts50173-grant-expired-revoked.md
       - name: Error AADSTS220501 - Unable to download Certificate Revocation List
@@ -280,6 +283,8 @@
      href: app-integration/graph-api-error-handling-invoke-restmethod.md
    - name: Troubleshoot Authorization RequestDenied error
      href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
+   - name: 403 error when adding a user to a group
+     href: users-groups-entra-apis/authorization-requestdenied-403-error-add-user-group.md
    - name: 404 error when managing objects
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
    - name: Use managed identities to call Graph APIs in VB.Net and C#
@@ -288,6 +293,8 @@
      href: users-groups-entra-apis/memberof-api-returns-null-properties.md
    - name: Getting access denied errors (Authorization)
      items:
+      - name: Add an owner to an application
+        href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
       - name: Can't modify user mail or phone number attributes
         href: users-groups-entra-apis/cannot-modify-user-mail-phone-attributes.md
       - name: Error "The identity of the calling application could not be established"
@@ -300,6 +307,8 @@
         href: users-groups-entra-apis/error-call-me-endpoint-microsoft-graph.md
       - name: HTTP 403 authorization error when calling Microsoft Graph Security API
         href: users-groups-entra-apis/403-error-when-calling-microsoft-graph-security-api.md
+      - name: Tenant doesn't have premium license error when query sign-in activities
+        href: users-groups-entra-apis/b2c-or-tenant-premium-license-sign-in-activities.md
    - name: Problem with using the Graph SDK - libraries
      items:
       - name: Python scripts making requests are detected as web crawlers
