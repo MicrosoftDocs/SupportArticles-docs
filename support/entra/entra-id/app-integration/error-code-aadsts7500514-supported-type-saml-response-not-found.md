@@ -1,5 +1,5 @@
 ---
-title: AADSTS7500514 - A supported type of SAML response was not found with PingFederate 
+title: AADSTS7500514 - A Supported Type of SAML Response was not Found with PingFederate
 description: Describes error code `AADSTS7500514` that's returned if a federated account tries to authenticate by using Microsoft Entra ID.
 ms.date: 04/17/2025
 ms.author: bachoang
@@ -105,4 +105,5 @@ To resolve this issue, make sure that PingFederate is configured to align with M
 
     When you configure WS-Trust STS, make sure that you select **SAML 1.1 for Office 365** as the Default Token Type.
 
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
