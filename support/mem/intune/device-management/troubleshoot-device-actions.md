@@ -2,7 +2,7 @@
 title: Troubleshoot device actions in Microsoft Intune
 description: Get answers to common questions and troubleshooting guidance for device action issues in Intune.
 ms.date: 02/11/2025
-ms.reviewer: kaushika, coferro
+ms.reviewer: kaushika, coferro, caher
 search.appverid: MET150
 ms.custom: sap:Device Actions\Advisory
 ---
@@ -77,9 +77,9 @@ This issue can be caused if you choose the **Wipe device, and continue to wipe e
 
 To resolve this issue, use bootable media to reinstall Windows 10 on the device.
 
-### Why do wipes or Retire sometimes show as Pending indefinitely?
+### Why do Wipe or Retire sometimes show as Pending indefinitely?
 
-Devices don't always report their status back to the Intune service before the reset (or Remove in case of a Retire action) was started. So, the action shows as Pending. If you've confirmed the action was successful, delete the device from the service.
+Devices don't always report their status back to the Intune service before the reset or removal was started. So, the action shows as Pending. If you've confirmed the action was successful, delete the device from the service.
 
 ## Reset Passcode action
 
