@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 15 for SQL Server 2022 (KB5041321)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 15 (KB5041321).
-ms.date: 09/25/2024
+ms.date: 04/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5041321
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,7 +23,7 @@ This article describes Cumulative Update package 15 (CU15) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
+### Patching error for secondary replicas in an availability group with databases enabled replication or CDC
 
 [!INCLUDE [patching-error-2022](../includes/patching-error-2022.md)]
 

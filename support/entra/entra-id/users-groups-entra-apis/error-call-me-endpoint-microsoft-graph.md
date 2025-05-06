@@ -1,6 +1,6 @@
 ---
-title: NoPermissionsInAccessToken when calling me endpoint in Microsoft Graph
-description: Describes an issue in which you receive `NoPermissionsInAccessToken` error when you call `/me` endpoint in Microsoft Graph.
+title: NoPermissionsInAccessToken When Calling Me Endpoint in Microsoft Graph
+description: Describes an issue in which you receive NoPermissionsInAccessToken error when you call /me endpoint in Microsoft Graph.
 ms.date: 04/03/2025
 ms.service: entra-id
 ms.author: bhvootla

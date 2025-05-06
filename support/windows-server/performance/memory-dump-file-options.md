@@ -1,11 +1,11 @@
 ---
 title: Memory dump file options
 description: This article describes an overview of memory dump file options for Windows.
-ms.date: 03/13/2025
+ms.date: 04/30/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw, khirschb
+ms.reviewer: kaushika, warrenw, khirschb, xinpli
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
@@ -126,5 +126,8 @@ Additional registry values for CrashControl:
 For more information about how to configure your computer to generate a dump file for testing purposes, see [Windows feature lets you generate a memory dump file by using the keyboard](https://support.microsoft.com/help/244139).
 
 ## Maximum paging file size
+
+> [!NOTE]
+> In Windows Server 2025, you might see inaccurate free disk space due to the 32-bit integer overflow. You can use the [Get-WmiObject](/powershell/module/microsoft.powershell.management/get-wmiobject) PowerShell cmdlet to see the accurate number. This might further block the ability to set the desired paging file size. As a workaround, you can set the paging file by the registry value `HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PagingFiles`.
 
 For more information, see [How to determine the appropriate page file size for 64-bit versions of Windows](../../windows-client/performance/how-to-determine-the-appropriate-page-file-size-for-64-bit-versions-of-windows.md).

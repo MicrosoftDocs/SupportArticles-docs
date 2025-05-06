@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.
-  ms.date: 06/01/2023
+  ms.date: 04/30/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -159,4 +159,4 @@ landingContent:
         - text: Database Engine events and errors
           url: /sql/relational-databases/errors-events/database-engine-events-and-errors   
         - text: SQL Server product documentation
-          url: /sql 
+          url: /sql

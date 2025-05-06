@@ -180,6 +180,10 @@
   items:
     - name: Dataverse plug-ins
       href: plug-in-execution/dataverse-plug-ins-errors.md
+- name: Tables, Fields and Relationships
+  items:
+    - name: '"String or binary data would be truncated" error'
+      href: tables-fields-and-relationships/string-or-binary-data-would-be-truncated-error.md
 - name: User permissions
   items:
     - name: Clean up inherited access

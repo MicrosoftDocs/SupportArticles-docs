@@ -383,6 +383,8 @@ items:
       href: ./networking/collect-data-using-network-monitor.md
     - name: Device can't connect to mobile broadband
       href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
+    - name: Diagnose packet loss
+      href: ./networking/diagnose-packet-loss.md
     - name: Domain-joined machines can't detect the domain profile
       href: ./networking/domain-joined-machines-cannot-detect-domain-profile.md
     - name: Enterprise APN lost after SIM change or MBN adapter error
@@ -1033,6 +1035,8 @@ items:
       href: ./system-management-components/0x80041323-running-scheduled-tasks.md
     - name: Run programs automatically when a user logs on
       href: ./system-management-components/run-programs-automatically.md
+    - name: Scheduled tasks fail with "Task schedular service is not available"
+      href: ./system-management-components/task-schedular-service-is-not-available.md
     - name: Task scheduler runs tasks as background processes
       href: ./system-management-components/task-scheduler-task-only-runs-in-background.md
     - name: Task Scheduler service can't start
