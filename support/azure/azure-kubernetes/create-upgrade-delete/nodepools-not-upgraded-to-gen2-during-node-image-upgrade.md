@@ -18,7 +18,7 @@ This article discusses how to troubleshoot a scenario in which Windows Server no
 
 ## Prerequisites
 
-- Azure CLI version 2.0.81 or later. See [Install Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) for installation instructions.
+- Azure CLI version 2.0.81 or later. See [Install Azure CLI](/cli/azure/install-azure-cli) for installation instructions.
 
 ## Symptoms
 
