@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook 2016
-ms.date: 01/30/2024
+ms.date: 03/19/2025
 ---
 
 # Plan and configure Cached Exchange Mode in Outlook 2016 for Windows
@@ -76,7 +76,7 @@ The maximum size for `.ost` files are configurable. The default is 50 GB of data
 
 ### Upgrading existing Cached Exchange Mode users to Outlook 2016
 
-When upgrading, if you do not change Cached Exchange Mode settings, the same settings are kept for Outlook 2016.
+When upgrading, if you do not change Cached Exchange Mode settings, the [same settings are kept for Outlook 2016](/outlook/troubleshoot/installation/plan-outlook-2016-deployment#upgrading-to-office-with-cached-exchange-mode-enabled).
   
 However, by default, when Outlook 2016 is installed and Cached Exchange Mode is enabled, a new compressed version of the Outlook data file (`.ost`) is created. The earlier version of the `.ost` file is kept and, if it is necessary, can be opened by Outlook 2016. If you must keep Outlook 2016 from creating a new compressed Outlook data file (`.ost`), use the Group Policy template for Outlook (Outlk16.admx) to enable the **Do not create new OST file on upgrade** policy setting.
 
@@ -226,7 +226,3 @@ The following table shows some additional settings that you can configure for Ex
 |Do not allow an OST file to be created  |Enable it to prevent offline folder use.   |
 |Do not create new OST file on upgrade  |Enable it to force Outlook 2016 to use the existing `.ost` file that was created by an earlier version of Outlook. If you disable or do not configure this setting (recommended), a new `.ost` file is created when you upgrade to Outlook 2016.  |
 |Synchronizing data in shared folders  |Enable it to control the number of days that elapses without a user accessing an Outlook folder before Outlook stops synchronizing the folder with Exchange.  |
-
-## Related topics
-
-[Planning considerations for deploying Outlook 2016 for Windows](plan-outlook-2016-deployment.md)

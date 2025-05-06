@@ -1,8 +1,6 @@
 ---
 title: Fix Teams sign-in errors
 description: Provides troubleshooting steps for errors that you encounter when trying to sign in to Microsoft Teams.
-author: v-charloz
-ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,7 +14,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/17/2024
+ms.date: 02/25/2025
 ---
 # Resolve sign-in errors in Teams
 
@@ -45,17 +43,19 @@ If your users encounter errors when they try to sign in to Microsoft Teams, use 
 
 This test verifies that the user account meets the requirements to sign in to Teams.
 
-## Use Microsoft Support and Recovery Assistant
+## Run the classic Teams sign-in troubleshooter
 
-[!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
+[!INCLUDE [Get Help troubleshooter note](../../includes/sara-note-new-teams.md)]
 
-If the diagnostic doesn't detect any issue, but you still can't sign in to Teams, or you don't have a Microsoft 365 administrator account, select the following button to download the Assistant and automatically start the tests. For more information about the tool, see [About Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
+The [classic Teams sign-in troubleshooter](https://aka.ms/SaRA-TeamsSignIn-sarahome) helps you resolve classic Teams sign-in issues.
 
-> [!NOTE]
-> By downloading this app, you agree to the terms of the [Microsoft Services Agreement and Privacy Statement](https://www.microsoft.com/servicesagreement).
+To run the troubleshooter, follow these steps:
 
-> [!div class="nextstepaction"]
-> [Resolve the issue with SaRA](https://aka.ms/SaRA-TeamsSignInScenarioDocs)
+1. Start the Get Help app.
+1. In the **Search** bar, enter *Unable to sign-in to Microsoft Teams*.
+1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
 
 ## Fix the issue manually
 
@@ -68,7 +68,6 @@ If you want to perform the checks and fix the issue manually, follow these steps
 1. If you use a federated sign-in provider such as Active Directory Federation Services (AD FS), verify the AD FS sign-in configuration by using the [Microsoft 365 Single Sign-on Test](https://testconnectivity.microsoft.com/tests/SingleSignOn/input) in the Microsoft Remote Connectivity Analyzer.
 
 1. Check the error code on the Teams sign-in screen. If the code is listed here, follow the provided guidance to fix the error. If the code isn't listed here, see [Why am I having trouble signing in to Microsoft Teams?](https://support.microsoft.com/topic/a02f683b-61a3-4008-9447-ee60c5593b0f)
-
 
     - **0xCAA82EE7** or **0xCAA82EE2**  
         Make sure that the user has Internet access. Then, use the [Network assessment tool](https://www.microsoft.com/download/details.aspx?id=53885) to verify that the network and network elements between the user location and the Microsoft network are configured correctly. This is necessary to enable communication to the IP addresses and ports that are required for Teams calls.

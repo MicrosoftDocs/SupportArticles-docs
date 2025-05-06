@@ -48,11 +48,13 @@
     - name: Check OneDrive site eligibility for increased storage
       href: ../storage/check-storage-increase-eligibility.md
   - name: Sites
-    items:  
+    items:
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive
       href: ../../SharePointOnline/sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Troubleshooting guide stops at provisioning stage
       href: ../../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: You can't edit your files because your license to use OneDrive ended
+      href: ../sites/cannot-edit-files-onedrive-license-end.md      
   - name: Sync
     items:
     - name: Can't connect to the specified SharePoint site

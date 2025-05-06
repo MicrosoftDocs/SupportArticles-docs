@@ -17,7 +17,7 @@ appliesto:
   - Outlook for Microsoft 365
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/19/2025
 ---
 # How to remove the Get and set up Outlook mobile app on my phone option from Outlook and Outlook on the web
 

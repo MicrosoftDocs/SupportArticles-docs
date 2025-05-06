@@ -1,9 +1,9 @@
 ---
-title: Resolve file upload errors related to derived attributes
+title: Resolve File Upload Errors Related to Derived Attributes
 description: Fix errors that occur when you upload employee attribute data to Microsoft Viva Glint. These errors are related to derived attributes.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 06/21/2024
+ms.date: 04/30/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -28,7 +28,10 @@ This issue occurs because the date format in the file that you upload doesn't ma
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
+1. Open the employee attribute data file. Use the appropriate method depending on the file type:
+
+    - If the data file has an *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. For each date format column that's listed in the error message, follow these steps:
    1. To the right of the column (for example column A), insert a new column (column B) that's formatted as **General**.
    1. Select the first cell of the new column (cell B1), enter the following formula, and then select Enter:
@@ -39,6 +42,9 @@ To fix the issue, follow these steps:
 
       =TEXT(A1,"mm/dd/yyyy")
    1. [Fill the formula](https://support.microsoft.com/office/fill-a-formula-down-into-adjacent-cells-041edfe2-05bc-40e6-b933-ef48c3f308c6) into the cells in the new column (column B).
+  
+      **Note:** This formula translates blank date cells into "01/01/1900" or "01/00/1900." To prevent upload errors, remove these invalid dates before you upload the file.
+      
    1. Copy the date values from the new column (column B), and then paste the values into the original date column (column A) by using the **Paste** > **Paste Special** > **Values** [option](https://support.microsoft.com/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad).
    1. Delete the new column that contains the formula.
 1. Save the file, and then upload it again to Viva Glint.
@@ -49,16 +55,19 @@ Error message:
 
 > DERIVATION_ERROR: Attribute headers in the uploaded file don't match your Viva Glint configuration. Ensure that all attribute header names match and are included in your file. Include columns Hire Date and Birth Year. These columns are used for deriving attributes Tenure, Age Group.
 
-This issue is caused by a mismatch between the attribute header in the uploaded file and the attribute names that are specified in Viva Glint. Attribute headers must match the attribute names in Viva Glint exactly, including the case and spaces.
+This issue is caused by a mismatch between the attribute header in the uploaded file and the attribute names that are specified in Viva Glint. Attribute headers must match the attribute names in Viva Glint exactly, including the case and space characters.
 
 ### Resolution
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Microsoft Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
+1. Open the employee attribute data file. Use the appropriate method depending on the file type:
+
+    - If the data file has an *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Review attribute names that are specified in Viva Glint:
 
-    1. In the admin dashboard, select the **Configure** icon, then select **People** in the **Employees** section.
+    1. In the admin dashboard, select the **Configuration** icon, then select **People** in the **Employees** section.
     1. Select **Actions** > **Manage User Attributes**.
     1. Review the attributes in the following sections:
        - Active Attributes
@@ -72,36 +81,9 @@ To fix the issue, follow these steps:
     - There are no extra spaces. For example, **" Status"** and **"Status"** don't match.
     - There are no spelling errors.
     - There are no extra characters. For example, **Email_Address** and **EmailAddress** don't match.
-    - There are no characters that are added by UTF-8 by using BOM encoding, such as \<BOM\>.
 
     To fix mismatches, [rename attributes in Viva Glint](/viva/glint/setup/update-attributes#edit-attribute-names) or update the attribute headers in the file.
 1. Save the file, and then upload it again to Viva Glint.
-
-## File isn't UTF-8 encoded
-
-Error message:
-
-> DERIVATION_ERROR: File isn't UTF-8 encoded. Error found near lines \<x-y\>. Format the file with UTF-8 encoding and then reupload.
-
-This issue occurs because the .csv file that you upload isn't saved by using UTF-8 encoding.
-
-### Resolution
-
-To fix the issue, follow these steps in Microsoft Excel or a text editor to resave the file by using UTF-8 encoding:
-
-- In Microsoft Excel:
-
-    1. [Import the .csv file in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
-    1. Select **File** > **Save As**.
-    1. In the **Save As** dialog box, select **CSV UTF-8 (Comma delimited)** from the **Save as type** list, and then select **Save**.
-- In a text editor, such as Notepad or Notepad++:
-    1. Open the .csv file.
-    1. Select **File** > **Save as**.
-    1. In the **Save as** dialog box, enter a file name in the **File name** box,  select **All files** from the **Save as type** dropdown box, select **UTF-8** from the **Encoding** dropdown box, and then select **Save**.
-
-Then, upload the file again to Viva Glint.
-
-**Note**: To avoid this issue in the future, work with your Human Resources Information System (HRIS) team to make sure that all files that are automatically sent to Viva Glint are encoded using UTF-8 rather than **UTF-8 with BOM**.
 
 ## File is in an unexpected format
 
@@ -117,7 +99,7 @@ This issue occurs because the file that you upload isn't in the format that's sp
 To fix the issue, resave the file in the expected format, and upload it again to Viva Glint.
 
 - If the expected format is CSV:
-  - Resave the file as a CSV file by using UTF-8 encoding, not **UTF-8 and BOM**.
+  - Resave the file as a CSV file by using UTF-8 encoding (with or without BOM).
   - Separate values by using commas. If any values contain commas, enclose them in double quotation marks (for example, "Manager, Customer Success").
 - If the expected format is XLSX:
   - Resave the file as an XLSX file.
@@ -142,7 +124,10 @@ This issue occurs because the file you that upload contains invalid data, such a
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
+1. Open the employee attribute data file. Use the appropriate method depending on the file type:
+
+    - If the data file has an *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. For the attribute that's listed in the error message, check the values, and identify any invalid data.
 1. Correct or remove invalid data.
 1. Save the file, and then upload it again to Viva Glint.
@@ -157,7 +142,10 @@ Error message:
 
 To fix the issue, follow these steps:
 
-1. Open the employee attribute data file in Excel. If the file is in .csv format, [import it in Excel](https://support.microsoft.com/office/import-or-export-text-txt-or-csv-files-5250ac4c-663c-47ce-937b-339e391393ba) to preserve the data in the expected format.
+1. Open the employee attribute data file. Use the appropriate method depending on the file type:
+
+    - If the data file has an *.xlsx* extension, open it in Microsoft Excel.
+    - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Review the row that's specified in the error message.
 1. Update the data that's in that row to match the number of columns in the header row.
 1. Save the file, and then upload it again to Viva Glint.
@@ -193,14 +181,14 @@ This error occurs if the employee attribute data shows that one or more managers
 
 To fix the issue, follow these steps:
 
-1. In the admin dashboard, select the **Configure** icon, then select **Activity Audit Log** in the **Client Settings** section.
+1. In the admin dashboard, select the **Configuration** icon, and then select **Activity Audit Log** in the **Client Settings** section.
 1. In the log, locate the file that didn't upload, and then select **Download errors file** in the **Details** column. The rows in the downloaded errors file represent both direct and indirect reports for each manager.
 1. [Find and remove duplicate data](https://support.microsoft.com/office/find-and-remove-duplicates-00e35bea-b46a-4d5d-b28e-66a552dc138d) from the **Description** column of the errors file.
 1. Identify the distinct manager email addresses that are noted in the errors file as problematic.
 1. For each manager email address that's identified in step 4, review the employee attribute data to determine whether the following circular reporting relationships appear to exist:
 
-   - A manager reports to themselves. Therefore, their employee ID and manager ID are the same.
-   - Two or more managers report to each other and create a reporting loop. For example, manager A reports to manager B, and manager B reports to manager A.
+   - A manager reports to themself. Therefore, their employee ID and manager ID are the same.
+   - Two or more managers report to each other and create a reporting loop. For example, Manager A reports to Manager B, and Manager B reports to Manager A.
 1. Correct all apparent circular reporting relationships.
 
    > [!NOTE]

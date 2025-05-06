@@ -8,7 +8,7 @@ search.appverid: MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Errors\Error Codes
   - sap:office-experts
   - CSSTroubleshoot
@@ -18,7 +18,7 @@ ms.custom:
 ms.reviewer: mattphil
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 06/06/2024
+ms.date: 02/11/2025
 ---
 
 # Reset activation state for Microsoft 365 Apps for enterprise
@@ -34,21 +34,35 @@ You might need to perform tasks such as the following for your organization:
 To complete these tasks, you need to clear prior activations of Microsoft 365 apps for enterprise to remove their related licenses and cached Office account information. This removal will reset the applications to a clean state. You can then activate them with a different Office account or change to a different license mode. To reset the activation state, close all Office applications and use one of the following methods.
 
 > [!NOTE]
-> - The steps below apply to Microsoft Project and Microsoft Visio also.
+>
+> - The steps also apply to Microsoft Project and Microsoft Visio.
 > - The steps and scripts in this article apply to Windows installations of Office apps. For Office for Mac installations, see [How to remove Office license files on a Mac](https://support.microsoft.com/office/how-to-remove-office-license-files-on-a-mac-b032c0f6-a431-4dad-83a9-6b727c03b193).
 
-## Method: Use Microsoft Support and Recovery Assistant
+## Method: Use the Enterprise version of Microsoft Support and Recovery Assistant
 
-The Assistant fully automates all the steps required to reset Office activation, and is available in two versions. Use the version that's appropriate for your requirement.
+The [Enterprise version of the Assistant](https://aka.ms/SaRA_EnterpriseVersion) is a command-line version that can be scripted and is recommended to reset Office activation on multiple devices and on devices that you can't access immediately.
 
-- **The Enterprise (command-line) version of the Assistant**<br/>
-  The [Enterprise version of the Assistant](https://aka.ms/SaRA_EnterpriseVersion) is a command-line version that can be scripted and is recommended to reset Office activation on multiple devices and on devices that you can't access immediately.
-  > [!div class="nextstepaction"]
-  > [Download Enterprise version](https://aka.ms/SaRA_EnterpriseVersionFiles)
-- **UI version**<br/>
-  The [UI version of the Assistant](https://aka.ms/SaRA_Home) is recommended if you need to reset Office activation on a single device, or on a small number of individual devices. 
-  > [!div class="nextstepaction"]
-  > [Download UI version](https://aka.ms/SaRA-OfficeActivation-Reset)
+> [!div class="nextstepaction"]
+> [Download th Enterprise version](https://aka.ms/SaRA_EnterpriseVersionFiles)
+
+## Method: Run the Microsoft 365 activation troubleshooter in Get Help
+
+The [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome) helps you to resolve Microsoft 365 subscription activation issues.
+
+> [!NOTE]
+> To run the Microsoft 365 activation troubleshooter, make sure that you're using the same Windows device that Microsoft 365 is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
+
+To run the troubleshooter, follow these steps:
+
+1. Select the following button to start the troubleshooter.
+
+   > [!div class="nextstepaction"]
+   > [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome)
+
+   If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
+1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
 
 <h2 id="method2">Method: Use scripts to automate the cleanup process</h2>
 

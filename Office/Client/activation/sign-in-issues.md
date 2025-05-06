@@ -8,7 +8,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\SignIn\Password Prompts
   - CSSTroubleshoot
   - CI 157601
@@ -18,7 +18,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 06/06/2024
+ms.date: 02/25/2025
 ---
 
 # Sign in issues when activating Microsoft 365 Apps
@@ -62,9 +62,9 @@ Microsoft 365 Apps fails to activate when opened from published apps on a Citrix
 </details>
 
 <details>
-<summary><b>Sign out of Office and sign back in</b></summary>
+<summary><b>Sign out of Microsoft 365 and sign back in</b></summary>
 
-1.	Open an Office app, such as Word.
+1.	Open a Microsoft 365 app, such as Word.
 1.	Select your name and profile picture or icon at the top.
 1.	Select **Sign out**.
 1.	Select **Sign in**.
@@ -76,7 +76,7 @@ Microsoft 365 Apps fails to activate when opened from published apps on a Citrix
 <details>
 <summary><b>Make sure Azure Active Directory Authentication Library (ADAL) and Web Account Manager (WAM) are enabled</b></summary>
 
-For more information, see [Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues](/microsoft-365/troubleshoot/administration/disabling-adal-wam-not-recommended).
+For more information, see [Disabling ADAL or WAM not recommended for fixing Microsoft 365 sign-in or activation issues](/microsoft-365/troubleshoot/administration/disabling-adal-wam-not-recommended).
 <br/><br/>
 </details>
 
@@ -155,9 +155,9 @@ If the process isn’t blocked, but you still can’t activate Microsoft 365, de
 `%LOCALAPPDATA%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\TokenBroker\Accounts`
 1.	Select all files and delete them.
 1.	Restart the device.
-1.	Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
+1.	Run the [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome).
 
-For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
+For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Microsoft 365 applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
 <br/><br/>
 </details>
 
@@ -192,9 +192,9 @@ If you are using non-persistent VDI, set up Seamless Single Sign On (SSO). For m
 <details>
 <summary><b>Enable Office Protection Policy</b></summary>
 
-1.	Open an Office app, such as Word.
+1.	Open a Microsoft 365 app, such as Word.
 1.	Select your name and profile picture at the top, then select **Sign out**.
-1.	Close the Office app.
+1.	Close the app.
 1.	From Start, select **Settings** (the gear icon) > **Accounts** > **Access work or school**.
 1.	Select the account you use to sign in to office.com is listed there, and then select **Disconnect**.
 1.	From Start, type *regedit*, and then select **Registry Editor** from the search results.

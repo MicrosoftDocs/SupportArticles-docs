@@ -6,23 +6,35 @@
     - name: '"FAILED_TO_AUTO_DISCOVER_DOMAIN" error in admin center'
       href: ./teams-administration/failed-to-auto-discover-domain-error-teams-admin-center.md
     - name: "\"We couldn't add member\" error when adding users"
-      href: ./teams-administration/couldnt-add-member-error.md 
+      href: ./teams-administration/couldnt-add-member-error.md
+    - name: Can't access Teams Premium features
+      href: ./teams-administration/cannot-access-teams-premium-features.md
     - name: Clear the Teams client cache
       href: ./teams-administration/clear-teams-cache.md
     - name: Disable SharePoint News notifications in Teams
       href: ./teams-administration/disable-sharepoint-news-notifications.md
     - name: Error switching a tenant to Teams Only mode
       href: ./teams-administration/cannot-switch-to-teams-only-mode.md
-    - name: Include or exclude Teams from antivirus or DLP applications
-      href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Issues receiving messages and calls
       href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
+    - name: Prevent antivirus and DLP tools from blocking or crashing Microsoft Teams
+      href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Resolve issues when starting the new Teams app
       href: ./teams-sign-in/resolve-new-teams-launch-issues.md
     - name: Resolve new Teams installation issues
-      href: ./teams-administration/fix-new-teams-installation-issues.md
+      href: ./teams-administration/fix-new-teams-installation-issues.md     
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
+    - name: Teams Client Health
+      items:
+      - name: Resolve Teams client crash issues
+        href: ./teams-administration/resolve-teams-client-crash-issues.md
+      - name: Resolve Teams client launch failures
+        href: ./teams-administration/resolve-teams-client-launch-failures.md
+      - name: Resolve Teams client update failures
+        href: ./teams-administration/resolve-teams-client-update-failures.md
+      - name: '"Root cause undetermined" for Teams client update failure'
+        href: ./teams-administration/root-cause-undetermined-teams-update-failure.md
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
       href: ./teams-administration/following-application-instance-not-present-error.md
     - name: Troubleshoot connectivity issues
@@ -161,10 +173,12 @@
         href: ./phone-system/dial-plans/errors-managing-dial-plans.md
     - name: Direct Routing
       items:
-      - name: Diagnose issues with Direct Routing
+      - name: Diagnose issues that affect Direct Routing
         href: ./phone-system/direct-routing/diagnose-direct-routing-issues.md
       - name: Issues with call transfers
         href: ./phone-system/direct-routing/issues-with-call-transfers.md
+      - name: Issues with inbound calls
+        href: ./phone-system/direct-routing/issues-with-inbound-calls.md
       - name: Issues with LMO
         href: ./phone-system/direct-routing/issues-with-lmo.md
       - name: Issues with outbound calls
@@ -175,6 +189,10 @@
         items:
         - name: Microsoft and SIP response codes
           href: ./phone-system/direct-routing/microsoft-sip-response-codes.md
+        - name: SIP response code 400
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-400.md
+        - name: SIP response code 402
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-402.md
         - name: SIP response code 403
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-403.md
         - name: SIP response code 404
@@ -185,6 +203,8 @@
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-410.md
         - name: SIP response code 412
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-412.md
+        - name: SIP response code 420
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-420.md
         - name: SIP response code 480
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-480.md
         - name: SIP response code 484
@@ -297,8 +317,12 @@
     items:
     - name: Audio issues when using Teams on macOS
       href: ./teams-on-mac/teams-audio-issue-mac.md
+    - name: Can't sign in to Teams for Mac after macOS upgrade
+      href: ./teams-on-mac/teams-sign-in-issues-after-os-upgrade.md
     - name: Incorrect presence status in Teams for Mac
-      href: ./teams-on-mac/incorrect-presence-status-teams-for-mac.md  
+      href: ./teams-on-mac/incorrect-presence-status-teams-for-mac.md
+    - name: Teams-specific notification sound reverts to macOS notification sound
+      href: ./teams-on-mac/teams-notification-sound-reverts-to-default.md
   - name: Teams on Windows
     items:
     - name: Error when calling from a contact card

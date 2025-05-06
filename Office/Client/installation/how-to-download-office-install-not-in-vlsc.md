@@ -12,7 +12,7 @@ search.appverid:
 appliesto: 
   - Office
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - DownloadInstall\SxS\SxSOrPerpetual
   - CI 157620
   - CI 113921

@@ -13,7 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
-  - sap:Teams Compatible Devices and Peripherals\
+  - sap:Teams Compatible Devices and Peripherals
   - CI163313
   - CI188846
 ms.reviewer: kponnus

@@ -59,6 +59,8 @@
       href: ../administration/profile-picture-not-showing.md
     - name: Remove assembly reference from Sandbox solution
       href: ../../SharePointServer/administration/change-sandbox-solution.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: SharePoint Online PowerShell command doesn't work correctly
+      href: ../administration/sharepoint-online-powershell-command-does-not-work-correctly.md
     - name: SharePoint Online out of storage space
       href: ../administration/out-of-storage.md
     - name: Third-party tools changes support
@@ -261,6 +263,8 @@
       href: ../sharing-and-permissions/access-denied-shared-folder.md
     - name: App permission error when updating user profile properties
       href: ../sharing-and-permissions/app-permission-error-update-user-profile-property.md
+    - name: Email notifications from sharing events aren't delivered to recipients
+      href: ../sharing-and-permissions/sharing-email-not-delivered.md
     - name: '"Error 403 Forbidden" in OneDrive or SharePoint'
       href: ../sharing-and-permissions/error-403-forbidden.md
     - name: Error ResponseStatusNotOK when sharing a site
@@ -339,6 +343,8 @@
       href: ../Sites/customizations-revert-to-default-settings.md
     - name: Error "Site is protected by Microsoft 365 Backup and cannot be deleted"
       href: ../sites/cannot-delete-sites-protected-by-microsoft365-backup.md
+    - name: Error "This page has been blocked as it violates the Acceptable Use Policy"
+      href: ../sites/page-blocked-violates-acceptable-use-policy.md
     - name: Error when trying to change site logo on Microsoft 365 group SharePoint site
       href: ../sites/error-when-changing-o365-site-logo.md
     - name: Error when trying to delete a SharePoint site

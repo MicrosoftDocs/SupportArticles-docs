@@ -20,13 +20,11 @@ appliesto:
   - Microsoft Office Outlook 2003
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/19/2025
 ---
 # How to configure the default message class for new items in an Outlook folder
 
 _Original KB number:_ &nbsp; 2697986
-
-## Summary
 
 Some custom or third-party solutions change the default message class that is used when new items are created in a Microsoft Outlook folder. The message class is associated with each item in a folder. Additionally, it defines which form to display when the item is opened. If a custom solution changes the default message class for an Outlook folder, uninstalling that solution may not reset the folder's new-item message class to the default configuration. In this situation, various issues can occur in Outlook, because the default new-item message class for a folder was changed from the default value. For example, if you select the **New** button to open a new item for the folder, the form does not seem to be the original default form that was installed by Outlook.
 
@@ -35,8 +33,6 @@ If you are not using a custom Outlook solution that requires a custom message cl
 - Calendar
 - Contacts
 - Tasks
-
-## More information
 
 The following table lists the main default folders in Outlook in which custom messages classes are sometimes found. The second column in the table provides the default message class that is used for the folder.
 

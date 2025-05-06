@@ -21,7 +21,7 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 412
 
-This article provides troubleshooting information for various combinations of the SIP 412 error and Microsoft response codes.
+This article provides troubleshooting information for the combination of the SIP 412 error and Microsoft response code 510412.
 
 ## 510412 412 Get Flighting - wrong callee MRI
 

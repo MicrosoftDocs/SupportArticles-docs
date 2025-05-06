@@ -1,5 +1,5 @@
 ---
-title: Issues with meeting recordings
+title: Issues that affect meeting recordings
 description: Provides guides to troubleshoot meeting recording issues, such as a missing recording button or recording link.
 author: helenclu
 ms.author: luche
@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/19/2024
+ms.date: 01/13/2025
 ---
 # Issues that affect meeting recordings
 
@@ -25,6 +25,8 @@ Users experience one of the following issues in Microsoft Teams:
 - The meeting recording link isn't included or visible in a chat window.
 
 To determine whether these issues are caused by the user account, run the [Teams Meeting Recording Test](https://aka.ms/MRCA-TMR). This diagnostic checks whether the account meets all requirements to record a meeting in Teams. If the issue persists, try the following troubleshooting methods.
+
+If you see a Lock icon on the recording button, hover over the icon to see a tooltip that explains [why the button is unavailable](https://support.microsoft.com/en-us/office/i-can-t-record-a-meeting-in-microsoft-teams-f35329c2-57b1-487f-b5e3-70a7efb0945b).
 
 Administrators can run the [Meeting Recording Support Diagnostic](https://techcommunity.microsoft.com/t5/microsoft-teams-support/new-diagnostic-for-teams-meeting-recording/ba-p/1918982) that's available in the Microsoft 365 admin center.
 

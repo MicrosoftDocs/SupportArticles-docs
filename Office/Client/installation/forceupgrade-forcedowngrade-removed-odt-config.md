@@ -13,7 +13,7 @@ appliesto:
   - Microsoft Office 365 ProPlus 2016
   - Microsoft Office 365 ProPlus 2013
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - DownloadInstall\AdvancedConfiguration\OfficeDeploymentTool
   - CI 121610
   - CSSTroubleshoot

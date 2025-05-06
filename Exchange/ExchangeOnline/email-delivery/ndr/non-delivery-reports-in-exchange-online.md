@@ -213,7 +213,7 @@ Although the **Original message headers** are omitted from this example because 
 
 ## Additional email help
 
-- [Get help when email messages won't send](https://support.office.com/article/97748418-bbd5-4743-a05b-581f22a466dd.aspx)
+- [Get help when email messages won't send](https://support.office.com/article/97748418-bbd5-4743-a05b-581f22a466dd)
 
 - [Find and fix email delivery issues as a Microsoft 365 for business admin](/Exchange/fix-outlook-connection-problems-in-office-365/fix-outlook-connection-problems-in-office-365/find-and-fix-email-delivery-issues-as-an-office-365-for-business-admin)
 
@@ -221,7 +221,7 @@ Although the **Original message headers** are omitted from this example because 
 
 - [Recover deleted items in a user mailbox - Admin Help](/office365/enterprise/recover-deleted-items-in-a-mailbox)
 
-- [My messages won't send](https://support.office.com/article/97748418-bbd5-4743-a05b-581f22a466dd.aspx)
+- [My messages won't send](https://support.office.com/article/97748418-bbd5-4743-a05b-581f22a466dd)
 
 - [Message trace in the Security & Compliance Center](/office365/securitycompliance/message-trace-scc)
 

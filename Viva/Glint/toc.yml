@@ -3,7 +3,7 @@
   items:
     - name: Accessing the platform
       items:
-        - name: Resolve issues when accessing survey results as a manager
+        - name: Resolve issues when accessing survey results
           href: ./access/manager-access-issues.md
     - name: Contact support
       href: ./contact-support/get-support-viva-glint.md
@@ -21,6 +21,8 @@
           href: ./data-file-upload/fix-upload-invalid-unexpected-values-warnings.md
         - name: Resolve upload warnings related to manager hierarchy
           href: ./data-file-upload/fix-upload-manager-hierarchy-warnings.md
+        - name: Resolve upload errors and warnings related to employee ID updates
+          href: ./data-file-upload/fix-employee-id-updates-errors-warnings.md
     - name: Historical imports
       items:
         - name: Error "Duplicate entry"

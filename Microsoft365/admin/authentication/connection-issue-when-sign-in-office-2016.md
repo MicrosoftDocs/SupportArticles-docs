@@ -1,6 +1,6 @@
 ---
 title: Connection issues in sign-in after update to Office 2016 build 16.0.7967
-description: Office Web Account Manager (WAM) sign-in issues after you update to Office 2016 build 16.0.7967 or later on Windows 10.
+description: Web Account Manager (WAM) sign-in issues after you update to Office 2016 build 16.0.7967 or later on Windows 10.
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
@@ -13,25 +13,25 @@ ms.custom:
 appliesto: 
   - Microsoft 365 Apps for enterprise
   - Office 2016
-ms.date: 03/31/2022
+ms.date: 02/25/2025
 ---
 
 # Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10
 
 > [!TIP]
-> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeSignInScenario).
+> To diagnose and automatically fix common Office sign-in issues, run the [Microsoft 365 Sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome).
 
 ## Overview
 
 This article contains information about a new authentication framework for Microsoft Office 2016.
 
-By default, Microsoft Microsoft 365 Apps for enterprise (2016 version) uses Azure Active Directory Authentication Library (ADAL) framework-based authentication. Starting in build 16.0.7967, Office uses Web Account Manager (WAM) for sign-in workflows on Windows builds that are later than 15000 (Windows 10, version 1703, build 15063.138).
+By default, Microsoft 365 Apps for enterprise (2016 version) uses Azure Active Directory Authentication Library (ADAL) framework-based authentication. Starting in build 16.0.7967, Office uses Web Account Manager (WAM) for sign-in workflows on Windows builds that are later than 15000 (Windows 10, version 1703, build 15063.138).
 
 ### General guidance
 
 If you experience authentication issues in Office application on Windows 10, we recommend to do the following actions:
 
-- Update Office products to the latest build for your channel according to [Update history for Microsoft 365 Apps for enterprise (listed by date)](/officeupdates/update-history-office365-proplus-by-date).
+- Update to the latest build for your channel according to [Update history for Microsoft 365 Apps for enterprise (listed by date)](/officeupdates/update-history-office365-proplus-by-date).
 - Make sure that you are running any of the following Windows builds:
   - Any build for Windows 10, version 1809 or a later version
   - 17134.677 or later builds for Windows 10, version 1803

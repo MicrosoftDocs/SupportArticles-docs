@@ -9,12 +9,13 @@ ms.custom:
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 167385
-ms.reviewer: meerak, batre, v-trisshores
+ms.reviewer: meerak, batre, v-shorestris
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 08/13/2024
+ms.date: 03/19/2025
 ---
+
 # Access public folders in Outlook for Windows
 
 The steps to access public folders is different in new Outlook for Windows and classic Outlook for Windows. Use the information that's appropriate for your version of Outlook for Windows.

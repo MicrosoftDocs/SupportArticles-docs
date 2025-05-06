@@ -3,9 +3,7 @@ title: Fix Teams Rooms resource account sign-in issues
 description: Troubleshoot common sign-in issues that occur when Microsoft Teams Rooms signs in to Exchange, and Microsoft Teams or Skype for Business.
 ms.reviewer: matart
 ms.topic: troubleshooting
-ms.date: 10/30/2023
-author: helenclu
-ms.author: luche
+ms.date: 11/19/2024
 manager: dcscontentpm
 audience: Admin
 search.appverid: 
@@ -14,8 +12,9 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
-  - sap:MTR Pro\
+  - sap:MTR Pro
   - CI167672
+  - CI2522
 ---
 # Fix Teams Rooms resource account sign-in issues
 
@@ -43,9 +42,31 @@ Additionally, Event ID 2001 is logged under **Applications and Services Logs** >
 
 ## Resolution
 
-Sign-in issues can occur for different reasons. The following options can help you fix common issues that cause a sign-in failure.
+Sign-in issues can occur for different reasons. Identify the specific cause of the issue by checking multiple details about the resource account. To perform the required checks, you can use an automated option or run the checks manually.
 
-### Check whether multi-factor authentication (MFA) is enabled
+### Automated checks
+
+To automate the process, run the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Microsoft Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
+
+> [!NOTE]
+>
+> - A Global Administrator account is required to run the Microsoft Teams Rooms sign-in connectivity test.
+> - The Microsoft Remote Connectivity Analyzer tool isn't available for the GCC and GCC High Microsoft 365 Government environments.
+
+To run the connectivity test, follow these steps:
+
+1. Open a web browser and navigate to the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test.
+1. Sign in by using the credentials of a Global Administrator account.
+1. Specify the username for the resource account.
+1. In the **Device Selection** field, select a type for the affected device.
+1. Enter the verification code that's displayed, and then select **Verify**.
+1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**.
+
+After the test finishes, the screen displays details about all the checks that were performed and whether the test succeeded, failed, or was successful but displayed a few warnings. Select the provided link for more information about the warnings and failures, and about how to resolve them.
+
+### Manual checks
+
+#### Check whether multi-factor authentication (MFA) is enabled
 
 [Teams Rooms resource accounts shouldn't be configured to use MFA](/microsoftteams/rooms/rooms-authentication#modern-authentication). To check whether MFA is enabled, use one of the following options:
 
@@ -58,7 +79,7 @@ Sign-in issues can occur for different reasons. The following options can help y
 
 To fix this issue, contact your identity management team or see [Set up multi-factor authentication for Microsoft 365](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication) for more information.
 
-### Check Conditional Access policies
+#### Check Conditional Access policies
 
 To check whether sign-in is blocked by Conditional Access policies, use one of the following options:
 
@@ -71,7 +92,7 @@ To check whether sign-in is blocked by Conditional Access policies, use one of t
 
 For more information about supported Conditional Access assignments for Teams Rooms resource accounts, see [Conditional Access and Intune compliance for Microsoft Teams Rooms](/microsoftteams/rooms/conditional-access-and-compliance-for-devices). To fix the issue, contact your identity management team or see [Configure Microsoft Entra Conditional Access](/appcenter/general/configuring-aad-conditional-access) for more information.
 
-### Check whether the resource account's password has expired
+#### Check whether the resource account's password has expired
 
 If a Teams Rooms resource account's password is set to expire after some time, it may cause sign-in failures.
 
@@ -93,7 +114,7 @@ To fix this issue, reset the password by using one of the following methods, the
 
 To avoid having to reset the resource account password and then sign in to each Teams Rooms device again, you can [turn off password expiration](/microsoftteams/rooms/with-office-365#turn-off-password-expiration) for the account.
 
-### Verify that you use the correct credentials
+#### Verify that you use the correct credentials
 
 An incorrect username or password can also cause sign-in failures.
 
@@ -110,7 +131,7 @@ To check whether an incorrect username or password is used, use one the followin
 
 To fix this issue, make sure that you use the correct credentials. You can also [reset the password](/microsoft-365/admin/add-users/reset-passwords), and then update the password in **Settings** on the device.
 
-### Check network connectivity
+#### Check network connectivity
 
 Teams Rooms must have access to all [standard Microsoft 365 endpoints](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true) and meet the [network requirements](/microsoftteams/rooms/rooms-prep#check-network-availability). Teams Rooms doesn't support proxy authentication.
 
@@ -123,7 +144,7 @@ If you see successful sign-in in [sign-in logs on the Azure portal](/azure/activ
 
 To troubleshoot network connectivity issues, you can use [Network Monitor](/windows/client-management/troubleshoot-tcpip-netmon) or a similar tool to collect network captures (you must [switch to Admin mode](/MicrosoftTeams/rooms/rooms-operations#switching-to-admin-mode-and-back-when-the-microsoft-teams-rooms-app-is-running) to start the tool, then switch to the *Skype* user). Then, work with your network team to identify and fix the issues.
 
-### Check whether the room mailbox exists
+#### Check whether the room mailbox exists
 
 Teams Rooms resource accounts must have a mailbox that's hosted on Exchange Online or Exchange Server. Otherwise, the Exchange service reports that no mailbox exists for the user during discovery.
 
@@ -140,7 +161,7 @@ To fix this issue, follow these steps:
 - Verify that the account being used is the [resource account](/microsoftteams/rooms/with-office-365?tabs=m365-admin-center%2Cazure-active-directory2-password%2Cactive-directory2-license) and is password enabled.
 - If an Exchange hybrid deployment is used, make sure that the on-premises mailbox is synchronized so that redirection works correctly. For more information, see [Exchange Server hybrid deployments](/exchange/exchange-hybrid).
 
-### Verify that the resource account has a Teams license assigned
+#### Verify that the resource account has a Teams license assigned
 
 Teams Rooms devices must have a [Teams Rooms Pro or Teams Rooms Basic license](/microsoftteams/rooms/rooms-licensing) assigned. To check whether a Teams license is assigned, use one of the following options:
 

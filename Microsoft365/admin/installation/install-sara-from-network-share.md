@@ -108,6 +108,7 @@ A new build of the Assistant is released every 90 days. The following table prov
 
 |Release date|Version of the Assistant|
 |--------|--------|
+|Nov 12, 2024|17.01.2465.000|
 |Oct 8, 2024|17.01.2352.000|
 |Sep 10, 2024|17.01.2276.000|
 |Aug 13, 2024|17.01.2176.000|

@@ -8,7 +8,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Errors\Error Codes
   - CSSTroubleshoot
   - CI 157595
@@ -16,7 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 09/13/2024
+ms.date: 02/25/2025
 ---
 
 # Microsoft 365 Apps activation error 0xCAA50021
@@ -33,9 +33,7 @@ Try the following troubleshooting methods to solve the problem.
 <details>
 <summary><b>Reset Microsoft 365 activation state</b></summary>
 
-Run the [Microsoft Support and Recovery Assistant (SaRA) to reset the Microsoft 365 activation state](https://aka.ms/SaRA-OfficeActivation-Reset).
-
-For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
+See [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 <br/><br/>
 </details>
 
@@ -55,7 +53,7 @@ For manual steps or more information, see [Reset Microsoft 365 Apps for enterpri
 <details>
 <summary><b>Perform a manual recovery</b></summary>
 
-See the [“Manual recovery” section of Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10](/microsoft-365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016#manualrecovery).
+See the ["Manual recovery" section of Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10](/microsoft-365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016#manualrecovery).
 
 <br/><br/>
 </details>
@@ -79,7 +77,7 @@ If the process isn’t blocked, but you still can’t activate Microsoft 365, de
 `%LOCALAPPDATA%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\TokenBroker\Accounts`
 1.	Select all files and delete them.
 1.	Restart the device.
-1.	Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
+1.	Run the [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome) in Get Help.
 
 For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
 <br/><br/>

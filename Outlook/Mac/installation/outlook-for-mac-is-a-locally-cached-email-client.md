@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Install, Update, Activate, and Deploy\
+  - sap:Install, Update, Activate, and Deploy
   - Outlook for Mac
   - CSSTroubleshoot
 ms.reviewer: tsimon, tasitae

@@ -37,7 +37,7 @@ ms.date: 01/24/2024
 If you're using Outlook to access your Microsoft 365 email account or another Exchange-based email account, and you're having problems, we want to get you back to sending and receiving email as quickly as possible.
 
 > [!NOTE]
-> If you're looking for help with Outlook.com, check [Get help with Outlook.com](https://go.microsoft.com/fwlink/p/?LinkID=328913). If you're looking for help with Outlook for Mac, check [Outlook for Mac Help](https://support.office.com/article/6dd15f3c-b096-436f-95dc-6f4ad08e1980.aspx).
+> If you're looking for help with Outlook.com, check [Get help with Outlook.com](https://go.microsoft.com/fwlink/p/?LinkID=328913). If you're looking for help with Outlook for Mac, check [Outlook for Mac Help](https://support.office.com/article/6dd15f3c-b096-436f-95dc-6f4ad08e1980).
 
 ## Let us fix your Outlook connection problems for you
 

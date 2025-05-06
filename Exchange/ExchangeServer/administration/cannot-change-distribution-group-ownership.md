@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Recipients\Issues with Mailbox, DG, MEU\MEC Management
+  - sap:Recipients\Issues with Mailbox, DG, MEU/MEC Management
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

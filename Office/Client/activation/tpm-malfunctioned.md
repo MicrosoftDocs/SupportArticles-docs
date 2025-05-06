@@ -8,7 +8,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Errors\Trusted Platform Module malfunctioned
   - CSSTroubleshoot
   - CI 157590
@@ -16,7 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 06/06/2024
+ms.date: 02/27/2025
 ---
 
 # Microsoft 365 Apps activation error: “Trusted Platform Module malfunctioned”
@@ -33,9 +33,7 @@ Try the following troubleshooting methods to solve the problem.
 <details>
 <summary><b>Reset Microsoft 365 activation state</b></summary>
 
-Run the [Microsoft Support and Recovery Assistant (SaRA) to reset the Microsoft 365 activation state](https://aka.ms/SaRA-OfficeActivation-Reset).
-
-For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
+See [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 <br/>
 <br/>
 </details>
@@ -72,9 +70,9 @@ If the process isn’t blocked, but you still can’t activate Microsoft 365, de
 `%LOCALAPPDATA%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\TokenBroker\Accounts`
 1.	Select all files and delete them.
 1.	Restart the device.
-1.	Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
+1.	Run the [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome).
 
-For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
+For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Microsoft 365 applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
 <br/><br/>
 </details>
 
@@ -105,9 +103,9 @@ If error code 0x801c001d is present, [configure a service connection point](/azu
 <details>
 <summary><b>Enable Office Protection Policy</b></summary>
 
-1.	Open an Office app, such as Word.
+1.	Open a Microsoft 365 app, such as Word.
 1.	Select your name and profile picture at the top, then select **Sign out**.
-1.	Close the Office app.
+1.	Close the app.
 1.	From Start, select **Settings** (the gear icon) > **Accounts** > **Access work or school**.
 1.	Select the account you use to sign in to office.com is listed there, and then select **Disconnect**.
 1.	From Start, type *regedit*, and then select **Registry Editor** from the search results.

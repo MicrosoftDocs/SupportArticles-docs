@@ -39,6 +39,8 @@
           href: ../calendaring/outlook-calendar-displays-working-hours-as-grey.md
         - name: Can't delete calendar items
           href: ../calendaring/cannot-delete-calendar-items.md
+        - name: Can't globally disable the birthday calendar
+          href: ../calendaring/cannot-globally-disable-birthday-calendar.md
         - name: Can't send a response to a meeting request
           href: ../calendaring/cannot-send-response-to-meeting-request.md
         - name: Can't add an Internet calendar
@@ -61,14 +63,8 @@
           href: ../calendaring/hashed-lines-shown-in-scheduling-assistant.md
         - name: How to share calendar and contacts
           href: ../calendaring/how-to-share-calendar-and-contacts.md
-        - name: How to control Outlook recurrence patterns by using Group Policy
-          href: ../calendaring/how-to-control-recurrence-patterns-via-group-policy.md
-        - name: How to reset location list for appointments or meetings
-          href: ../calendaring/how-to-reset-location-list-for-appointments-or-meetings.md
         - name: How to use the Internet Free/Busy feature
           href: ../calendaring/how-to-use-internet-freebusy-feature.md
-        - name: How to use vCalendar in Outlook
-          href: ../calendaring/how-to-use-vcalendar-in-outlook.md
         - name: Multiple time zones show an incorrect time difference
           href: ../calendaring/additional-time-zone-shows-one-hour-offset-on-dst.md
         - name: Information about the Calendar Checking Tool for Outlook (CalCheck)
@@ -99,16 +95,12 @@
           href: ../calendaring/room-finder-is-not-available-shared-calendars-outlook.md
         - name: Room Finder doesn't show conference rooms
           href: ../calendaring/outlook-room-finder-not-show-conference-room.md
-        - name: Scan calendar by using SaRA
-          href: ../calendaring/scan-outlook-calendar-using-sara.md
         - name: Share a calendar or open a shared calendar
           href: ../calendaring/how-to-open-shared-calendar.md          
         - name: Shared calendar in delegate's Online Archive
           href: /exchange/troubleshoot/calendars/shared-calendar-in-delegate-online-archive?context=/outlook/troubleshoot/context/client-context
         - name: Specific users can't receive meeting requests
           href: ../calendaring/specific-users-not-receive-meeting-requests.md
-        - name: The Delegate feature in mixed versions of Outlook
-          href: ../calendaring/delegate-feature-in-mixed-versions-of-outlook.md
         - name: The From field in a meeting request doesn't list all accounts
           href: ../calendaring/from-field-in-meeting-request-not-list-all-accounts.md
         - name: Time zones that do not observe daylight saving time
@@ -183,8 +175,6 @@
           href: ../data-files/delete-corrupted-public-folder-rule.md
         - name: Can't change the location of .ost file
           href: ../data-files/cannot-change-the-location-of-ost-file.md
-        - name: Description of the AutoArchive feature
-          href: ../data-files/description-of-the-autoarchive-feature.md
         - name: Error 0x8000ffff when adding data file in Mail applet
           href: ../data-files/error-0x8000ffff-adding-data-file-in-mail-applet.md
         - name: Errors have been detected in .ost file
@@ -223,20 +213,6 @@
           href: ../deployment/settings-unexpectedly-change-deleting-group-policy-settings.md
         - name: Unable to publish a form
           href: ../deployment/cannot-publish-form.md
-    - name: Development
-      items:
-        - name: Collaboration Data Objects 1.2.1 isn't supported
-          href: ../development/collaboration-data-objects-1-2-1-not-supported-in-outlook-2010-and-later.md
-        - name: How to save message to .msg file
-          href: ../development/save-message-to-msg-file.md
-        - name: How to use Cdosys.dll to send emails with attachments via Visual C#
-          href: ../development/how-to-use-cdosys-dll-library-to-send-email-with-attachments.md
-        - name: Use Automation to send an Outlook message using Access 2000
-          href: ../development/how-to-use-automation-to-send-messages-using-access-2000.md
-        - name: Use Outlook Object Library to retrieve appointment by using Visual C#
-          href: ../development/how-to-use-object-library-get-appointment-by-using-csharp.md
-        - name: VBA macro that uses data from Word and Excel to send messages from Outlook
-          href: ../development/vba-macro-that-uses-data-from-word-and-excel-to-send-messages.md
     - name: Email Management
       items:
         - name: Create or modify Outlook client-only rule
@@ -283,14 +259,10 @@
           href: ../installation/outlook-is-unable-to-start-in-windows-7-or-8.md
         - name: DisablePST and PSTDisableGrow policies are ignored
           href: ../installation/disablepst-and-pstdisablegrow-policies-are-ignored.md
-        - name: How to update Outlook to solve  connection issues
-          href: ../installation/fix-outlook-connection-problems-by-upgrading.md
         - name: Install Calendar Printing Assistant fails
           href: ../installation/installing-calendar-printing-assistant-fails.md
-        - name: Install Outlook latest applicable updates
-          href: ../installation/install-outlook-latest-updates.md
-        - name: Leave a copy of the message on the server is missing
-          href: ../installation/enable-leave-a-copy-of-the-message-on-the-server-outlook.md
+        - name: Map classic Outlook policies to new Outlook
+          href: ../installation/map-classic-outlook-policies-to-new-outlook.md
         - name: Planning considerations
           href: ../installation/plan-outlook-2016-deployment.md
         - name: Remove the Get and set up Outlook Mobile app on my phone option
@@ -319,6 +291,8 @@
           href: ../message-body/attachment-size-exceeds-the-allowable-limit-error.md
         - name: Embed and play back videos in Outlook and Loop
           href: ../message-body/embed-playback-videos-in-outlook-and-loop.md
+        - name: How message format affects email messages
+          href: ../message-body/how-tnef-affects-email-messages.md
         - name: HTTPS linked images in HTML emails display the red X
           href: ../message-body/https-linked-images-in-html-emails-show-red-x.md
         - name: Hyperlinks aren't working
@@ -329,7 +303,7 @@
           href: ../message-body/url-multiple-slashes-become-single-slash.md
         - name: No subject or content in automatic emails
           href: ../message-body/no-subject-content-in-automatically-email.md
-        - name: Record videos in Loop
+        - name: Record videos in Outlook and Loop
           href: ../message-body/record-videos-in-outlook-and-loop.md
         - name: Strange characters in message body
           href: ../message-body/strange-characters-display-message-body.md
@@ -461,6 +435,8 @@
           href: ../security/results-for-advanced-diagnostic-indicate-offline-scan-was-forced.md
         - name: Can't add sender's domain to Blocked Senders list
           href: ../security/no-shortcut-menu-command-to-add-senders-domain-to-blocked.md
+        - name: '"Conflicting or unsupported encryption" warning when sending an encrypted message'
+          href: ../security/outlook-warning-dialog-when-sending-smime-messages.md
         - name: DLP Policy Tip notifications are not displayed
           href: ../security/can't-display-dlp-policytip.md
         - name: DLP policy tips for PDF attachments aren't shown
@@ -619,8 +595,6 @@
           href: ../user-interface/reminders-in-outlook-do-not-show.md
         - name: Remove duration from retention tags
           href: ../user-interface/remove-duration-retention-policy-tag.md
-        - name: Resources for the top Outlook issues in Microsoft 365
-          href: ../user-interface/resources-for-the-top-outlook-issues-in-microsoft-365.md
         - name: Search folders aren't populated in Online mode
           href: ../user-interface/outlook-search-folders-issue-online-mode.md
         - name: Search Folders don't appear in OWA

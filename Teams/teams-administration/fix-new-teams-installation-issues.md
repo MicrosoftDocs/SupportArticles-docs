@@ -13,11 +13,13 @@ appliesto:
   - New Microsoft Teams
 search.appverid:
   - MET150
-ms.date: 03/06/2024
+ms.date: 01/14/2025
 ---
 # Resolve the new Teams client installation issues
 
-This article helps you resolve issues that occur when you try to download and install the new Microsoft Teams client. 
+This article helps you resolve issues that occur when you try to download and install the new Microsoft Teams client.
+
+Run the [pre-installation check script](/microsoftteams/new-teams-preinstallation-script) to identify potential issues and follow the suggested resoutions to fix them.
 
 ## Policy settings prevent download and installation
 

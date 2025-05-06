@@ -8,7 +8,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Deploying Office using Shared Computer Activation
   - CSSTroubleshoot
   - CI 157761
@@ -16,7 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 06/06/2024
+ms.date: 02/25/2025
 ---
 
 # Troubleshoot issues with shared computer activation for Microsoft 365 Apps
@@ -35,7 +35,7 @@ Otherwise, start with the <a href=#general>General troubleshooting section</a>.
 
 **Tip**
 
-You can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_TshootOfficeSCA_Docs) to install Microsoft 365 Apps in shared computer activation mode.
+You can use the [Microsoft 365 shared computer activation (SCA) troubleshooter](https://aka.ms/SaRA-OfficeSCA-sarahome) to enable shared computer activation for Microsoft 365 applications.
 
 <h2 id="general"> General troubleshooting</h2>
 <br/>
@@ -78,7 +78,7 @@ To use shared computer activation, you must have a Microsoft 365 plan that inclu
 
 Here are two ways that you can check whether shared computer activation is enabled on the computer that has Microsoft 365 Apps installed.
 
-- Open any Office program, such as Word. Go to **File** > **Account** > **About Word** (or "About" whichever app you opened). On the second line from the top, underneath the MSO version number, you should see **Shared Computer Activation**, instead of a Product ID, like in the following screenshot.
+- Open any Microsoft 365 application, such as Word. Go to **File** > **Account** > **About Word** (or "About" whichever app you opened). On the second line from the top, underneath the MSO version number, you should see **Shared Computer Activation**, instead of a Product ID, like in the following screenshot.
 
 - Use Registry Editor, and go to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration`. There should be a value for **SharedComputerLicensing** with a setting of 1.
 <br/><br/>
@@ -98,7 +98,7 @@ For more information, see the following articles:
 <details>
 <summary><b>Verify that activation for Microsoft 365 Apps succeeded</b></summary>
 
-On the shared computer, after you open any Office program, go to the following folder:
+On the shared computer, after you open any Microsoft 365 application, go to the following folder:
 
 `%localappdata%\Microsoft\Office\16.0\Licensing`
 
@@ -111,9 +111,7 @@ If you've configured the licensing token to roam, these text files will appear i
 <details>
 <summary><b>Reset Microsoft 365 activation state</b></summary>
 
-Run the [Microsoft Support and Recovery Assistant (SaRA) to reset the Microsoft 365 activation state](https://aka.ms/SaRA-OfficeActivation-Reset).
-
-For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
+See [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 <br/><br/>
 </details>
 
@@ -170,9 +168,9 @@ If the process isn’t blocked, but you still can’t activate Microsoft 365, de
 `%LOCALAPPDATA%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\TokenBroker\Accounts`
 1.	Select all files and delete them.
 1.	Restart the device.
-1.	Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
+1.	Run the [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome) in Get Help.
 
-For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
+For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Microsoft 365 applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
 <br/><br/>
 </details>
 
@@ -224,7 +222,7 @@ You can try these steps to fix this problem:
 
 - [Check that the users are assigned a license](/microsoft-365/admin/manage/assign-licenses-to-users) for Microsoft 365 Apps.
 
-- Check that the users sign in with their user account for Microsoft 365 if the **Activate Office** dialog box appears when they open an Office program.
+- Check that the users sign in with their user account for Microsoft 365 if the **Activate Office** dialog box appears when they open a Microsoft 365 application.
 
 - Check that there is connectivity between the shared computer and the internet.
 <br/><br/>
@@ -242,14 +240,14 @@ This error means that Office has a problem with the users' licensing token on th
 
 This error means that Office tried to renew the licensing token automatically, but there was a problem. One possible cause for this is that the shared computer wasn't connected to the internet when Office tried to renew the licensing token with the Office Licensing Service.
 
-The licensing token is valid until the date listed in the error message. The user can continue to use Office apps to create, edit, and print documents. The user can choose **Renew** to try to renew the license before the license token expires.
+The licensing token is valid until the date listed in the error message. The user can continue to use Microsoft 365 apps to create, edit, and print documents. The user can choose **Renew** to try to renew the license before the license token expires.
 <br/><br/>
 </details>
 
 <details>
 <summary><b>Sorry, this Microsoft 365 account has recently been used to activate too many computers.</b></summary>
 
-Microsoft places a limit on the number of shared computers that a user can activate Office on in a given time period. This error means that the user exceeded that limit. 
+Microsoft places a limit on the number of shared computers that a user can activate Microsoft 365 on in a given time period. This error means that the user exceeded that limit.
 <br/><br/>
 </details>
 

@@ -8,7 +8,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Errors\We are having some temporary server issues
   - CSSTroubleshoot
   - CI 157597
@@ -17,7 +17,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 06/06/2024
+ms.date: 02/27/2025
 ---
 
 # Microsoft 365 Apps activation error: "Sorry, we are having some temporary server issues"
@@ -47,9 +47,9 @@ To activate Microsoft 365 Apps, TLS 1.2 must be enabled on the operating system.
 </details>
 
 <details>
-<summary><b>Sign out of Office and sign back in</b></summary>
+<summary><b>Sign out of Microsoft 365 and sign back in</b></summary>
 
-1. Open an Office app, such as Word.
+1. Open a Microsoft 365 app, such as Word.
 1. Select your name and profile picture or icon at the top.
 1. Select **Sign out**.
 1. Select **Sign in**.
@@ -70,9 +70,7 @@ To activate Microsoft 365 Apps, TLS 1.2 must be enabled on the operating system.
 <details>
 <summary><b>Reset Microsoft 365 activation state</b></summary>
 
-Run the [Microsoft Support and Recovery Assistant (SaRA) to reset the Microsoft 365 activation state](https://aka.ms/SaRA-OfficeActivation-Reset).
-
-For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state]( /office/troubleshoot/activation/reset-office-365-proplus-activation-state).
+See [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 <br/><br/>
 </details>
 
@@ -148,9 +146,24 @@ To restore Edge’s default settings, use the following steps:
 </details>
 
 <details>
-<summary><b>Uninstall Office apps and then reinstall</b></summary>
+<summary><b>Uninstall and reinstall Microsoft 365 apps</b></summary>
 
-[Run the SaRA package to uninstall Office](https://aka.ms/SaRA-OfficeUninstallFromPC). Restart the device, and install from https://portal.office.com/account to get the correct version.
+1. Run the [Microsoft 365 Uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstall-sarahome) to uninstall Microsoft 365 or Office.
+
+   > [!NOTE]
+   > To run the Microsoft 365 Uninstall troubleshooter, make sure that you're using the same Windows device that Microsoft 365 or the Office product is installed on. Additionally, make sure that your device is running Windows 10 or a later version.
+
+   To run the troubleshooter, follow these steps:
+
+   1. Select the following button to start the troubleshooter.
+
+      > [!div class="nextstepaction"]
+      > [Microsoft 365 Uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstall-sarahome)
+
+      If you receive a pop-up window that displays "This site is trying to open Get Help.", select **Open**.
+   1. Follow the instructions in the Get Help app to run the troubleshooter.
+1. Restart the device.
+1. Install from https://portal.office.com/account to get the correct version.
 <br/><br/>
 </details>
 

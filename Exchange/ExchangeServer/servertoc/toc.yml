@@ -409,6 +409,8 @@
           href: ../mailflow/front-end-microsoft-exchange-transport-service-stops.md
         - name: TLS negotiation failed with error NoCredentials error
           href: ../mailflow/tls-negotiation-failed-with-error-nocredentials-error.md
+        - name: Unreadable characters in the subject line
+          href: ../mailflow/unreadable-characters-in-subject-line.md
         - name: Use nslookup to get MX records for SMTP domain
           href: ../mailflow/get-internet-mx-record-smtp-domain-with-nslookup.md
     - name: Migration

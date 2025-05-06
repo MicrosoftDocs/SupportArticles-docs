@@ -8,89 +8,57 @@ ms.custom:
   - sap:Product Stability, startup or Shutdown and perform\Add-in error
   - CSSTroubleshoot
 appliesto:
-- Outlook
+  - Outlook for Microsoft 365
+  - Outlook 2021
+  - Outlook 2019
+  - Outlook 2016
 search.appverid: MET150
-ms.reviewer: aruiz, gregmans, v-six
+ms.reviewer: gbratton, v-shorestris
 author: cloud-writer
 ms.author: meerak
-ms.date: 01/30/2024
+ms.date: 03/25/2025
 ---
-# Using Process Explorer to list dlls running under the Outlook.exe process
 
-## Summary
+# Determine which third-party DLLs are currently running under the Outlook.exe process
 
-Process Explorer is a utility that provides information about which handles and dlls each process has open. In the context of Outlook troubleshooting, Process Explorer is commonly used to determine if you have any third-party dlls running under the Outlook.exe process. This is an important step as it raises a possibility that add-ins or other software on your computer may be causing problems in Outlook.
-
-This article provides details on how you can use Process Explorer to output all dll files running under the Outlook.exe process.
-
-## Obtaining Process Explorer
-
-The first thing to do is to obtain the latest version of Process Explorer. It can be downloaded from [Process Explorer v16.43](/sysinternals/downloads/process-explorer).
-
-Make sure to read the information on this page to introduce yourself to this tool.
-
-## Running Process Explorer
-
-After you download and extract Process Explorer, use the following steps to gather the list of dlls running under the Outlook.exe process.
+Third-party add-ins or other software on your computer can potentially cause problems in Microsoft Outlook. To determine which third-party DLLs are currently running under the Outlook.exe process, follow these steps:
 
 1. Start Outlook.
-2. Double-click Procexp.exe to start Process Explorer.
-3. On the **View** menu, make sure **Show Lower Pane** is checked.
-4. Press CTRL+D or select **View** > **Lower Pane View** > **DLLs** to enable DLL view mode.
-5. In the Process Explorer top pane, scroll down the list of the files and then select Outlook.exe.
-6. After the list of dlls running under Outlook.exe are listed in the bottom pane, select **Save As** on the **File** menu.
-7. Save the file as Outlook.exe.txt.
 
-## Analyzing the Process Explorer Output
+2. Run Sysinternals [Process Explorer](/sysinternals/downloads/process-explorer) (procexp.exe). In Process Explorer:
 
-The output text file is a tab-delimited text file that is best opened in Microsoft Excel so you can use the Filter function to quickly locate all non-Microsoft dlls loaded.
+   1. Enter "outlook.exe" in the top-right search box.
 
-1. Start Microsoft Office Excel and open Outlook.exe.txt.
-2. In the Text Import Wizard use the following options:
+   2. Select the **OUTLOOK.EXE** process.
 
-    - Delimited
-    - Tab delimiter
-    - General column data format
-3. Scroll down the worksheet and locate the following line:
+   3. Select **View** \> **Show Lower Pane** to show the lower pane.
 
-   Name Description Company Name Version
+   4. Select **View** \> **Lower Pane View** \> **DLLs** to list the DLL files that run under the Outlook.exe process.
 
-   This is the list of all dlls (Microsoft and third party) running under the Outlook.exe process.
+   5. In the lower-pane, right-click on any column header, select the **Select Columns** \> **DLL** \> **Version** checkbox, and then select **OK**.
 
-4. Select the cell with "Name" just above the list of dlls and then turn on the Filter feature.
+   6. Select **File** \> **Save As** \> **Save** to save the lower-pane data to a tab-delimited text file.
 
-5. Select the filter drop-down in the Name field and then configure a Text Filter with the following parameters:
+3. In Microsoft Excel:
 
-   Name - Contains - .dll
+   1. Select **File** \> **Open**, and then select the tab-delimited text file to open the **Text Import Wizard**.
 
-6. Select the filter drop-down in the**Company Name** field and then clear the check boxes containing "Microsoft".
+   2. In the Text Import Wizard, accept the default options, and then select **Finish**.
 
-## Identifying Microsoft and third-Party dlls
+   3. On the row that contains the **Name**, **Description**, **Company**, **Path**, and **Version** column headers:
 
-The filtered list of dlls displayed using the above steps will contain third party dlls running under Outlook. You can examine the **Company Name** column to determine the vendor responsible for the dll file.
+   4. Right-click the **Name** cell and add a [filter](https://support.microsoft.com/office/filter-data-in-a-range-or-table-01832226-31b5-4568-8806-38c37dcc180e) to only show values that contain ".dll". The filtered list contains all Microsoft and third-party DLLs that run under the Outlook.exe process.
 
-In the filter list of dlls, there is also some dlls that ship with Outlook that do not display "Microsoft" in the **Company Name** column. To identify these Microsoft dlls, use the following steps:
+   5. Right-click the **Company Name** cell and add a filter to exclude values that contain "Microsoft". The filtered list now only contains third-party DLLs and possibly some DLLs that have an empty value in the **Company Name** column.
 
-- Outlook 2010
+4. In Outlook:
 
-  1. Start Outlook 2010.
-  2. Select the **File** tab on the ribbon, then select the **Options** button.
-  3. In the **Outlook Options** dialog box, select **Add-Ins**.
-  4. To examine COM add-ins, select **COM Add-ins** in the **Manage** drop-down and then select **Go**.
-  5. Select each add-in in the **COM Add-ins** dialog box and then examine the .dll file name in the Location: information in the bottom of the dialog box. The name of the add-in should tell you if the dll file is made by Microsoft.
+   1. Select **File** \> **Options** \> **Add-ins** to display a list of add-ins.
 
-- Outlook 2007
+   2. For each active add-in in the list:
 
-  1. Start Outlook 2007.
-  2. On the **Tools** menu, select **Trust Center**.
-  3. In the **Trust Center**, select Add-ins.
-  4. To examine COM add-ins, select **COM Add-ins** in the **Manage** drop-down and then select **Go**.
-  5. Select each add-in in the **COM Add-ins** dialog box and then examine the .dll file name in the Location: information in the bottom of the dialog box. The name of the add-in should tell you if the dll file is made by Microsoft.
+      1. Select the add-in. This displays the add-in **Publisher** and **Location** values under the list.
 
-- Outlook 2003 and earlier
+      2. Compare the add-in file name (specified in the **Location** value) to the name of each DLL that has an empty **Company Name** value in your filtered list from step 3e. If you find a match, enter the **Publisher** value as the **Company Name** value. If you enter "Microsoft", reapply the filter from step 3e to exclude the Microsoft DLL from the filtered list.
 
-  1. Start Outlook 2003.
-  2. On the **Tools** menu, select **Options**.
-  3. On the **Other** tab, select **Advanced Options**.
-  4. Select **COM Add-ins**.
-  5. Select each add-in in the **COM Add-ins** dialog box and then examine the .dll file name in the Location: information in the bottom of the dialog box. The name of the add-in should tell you if the dll file is made by Microsoft.
+      The filtered list now contains only the third-party DLLs that are currently running under the Outlook.exe process.

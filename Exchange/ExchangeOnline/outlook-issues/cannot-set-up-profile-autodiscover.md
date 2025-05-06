@@ -1,5 +1,5 @@
 ---
-title: Can't set up a new profile by using Exchange Autodiscover for Online mailbox
+title: Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365
 description: Describes an issue that blocks Outlook from setting up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365. Resolutions are provided.
 author: cloud-writer
 ms.author: meerak
@@ -15,18 +15,18 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 03/14/2024
-ms.reviewer: v-six
+ms.date: 02/27/2025
+ms.reviewer: gbratton
 ---
 # Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365
 
-## Problem
+## Symptoms
 
 When you try to set up a new mail account for Microsoft 365 by using the Add New Account Wizard in Microsoft Outlook, your Outlook profile isn't automatically set up. Additionally, you receive the following error message when Outlook tries to set up the server settings for your profile:  
 
 > An encrypted connection to your mail services is not available
 
-When you test by using the Microsoft Remote Connectivity Analyzer, the following error message may be returned:  
+When you test by using the Microsoft Remote Connectivity Analyzer, the following error message might be returned:  
 
 > Autodiscover cannot process the given e-mail address. Only mailboxes and contacts are allowed.
 
@@ -37,24 +37,34 @@ This problem occurs for one of the following reasons:
 - The wrong email address was entered on the **Auto Account Setup** page of the Add New Account Wizard in Outlook.
 - The required updates for Outlook to automatically connect to Exchange Online aren't installed for the version of Outlook that you're running.
 - The Autodiscover CNAME record for your domain doesn't exist or isn't set up correctly.
-- In organizations that use Active Directory synchronization, the **mail**, **mailNickname**, **displayName** , and **proxyAddresses** attributes are not set up correctly for the synced user in the on-premises Active Directory.
+- In organizations that use Active Directory synchronization, the **mail**, **mailNickname**, **displayName** , and **proxyAddresses** attributes aren't set up correctly for the synced user in the on-premises Active Directory.
 
 > [!NOTE]
-> This article discusses Outlook 2016, Outlook 2013, and Exchange Online. For help in connecting to Exchange Online from a mobile device, see [Set up and use Microsoft 365 on your phone or tablet](https://office.microsoft.com/redir/ha102818686.aspx). For help in connecting Outlook to a third-party service, contact your third-party mail provider.
+> This article discusses Outlook 2016, Outlook 2013, and Exchange Online. For help with connecting to Exchange Online from a mobile device, see [Set up and use Microsoft 365 on your phone or tablet](https://office.microsoft.com/redir/ha102818686.aspx). For help with connecting Outlook to a third-party service, contact your third-party mail provider.
 
-## Solution
+## Resolution
 
 ### Recommended method
 
-#### Method 1: Run Microsoft 365 Support and Recovery Assistant
+#### Method 1: Run the Classic Outlook Profile Setup troubleshooter in Get Help
 
-[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
+[!INCLUDE [Get Help troubleshooter note](../../../includes/sara-note-new-outlook.md)]
 
-Use the [I need help setting up my Microsoft 365 email in Outlook](https://aka.ms/SaRA-OutlookSetupProfile) **diagnostic** in the Support and Recovery Assistant (SaRA). Click **Run** when you are prompted by your browser.
+The [Classic Outlook Profile Setup troubleshooter](https://aka.ms/SaRA-OutlookSetupProfile-sarahome) helps you configure your Microsoft 365 email in classic Outlook.
 
-This diagnostic does automated checks and returns possible solutions for you to use to try to fix any detected issues.
+To run the troubleshooter, follow these steps:
 
-### Additional methods
+1. Select the following button to start the troubleshooter.
+
+   > [!div class="nextstepaction"]
+   > [Classic Outlook Profile Setup troubleshooter](https://aka.ms/SaRA-OutlookSetupProfile-sarahome)
+
+   If you receive a pop-up window that displays "This site is trying to open Get Help", select **Open**.
+1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
+
+### Other methods
 
 ### If you're using a custom domain
 
@@ -71,20 +81,19 @@ For more information about how to set up Outlook for Microsoft 365, see the foll
 - [Set up email in Outlook (for Windows)](https://support.office.com/article/set-up-email-in-outlook-for-windows-6e27792a-9267-4aa4-8bb6-c84ef146101b?correlationid=623124d7-72bd-424b-9797-c596ad4d18bf)
 - [Set up an email account in Outlook 2016 for Mac](https://support.office.com/article/set-up-an-email-account-in-outlook-2016-for-mac-86bd232e-0422-49b5-9b60-d1c5f1109f40)
 
-> [!NOTE]
-> If this method doesn't resolve the problem, go to Method 3.
+If this method doesn't resolve the problem, go to Method 3.
 
 #### Method 3: Make sure that the Autodiscover CNAME record is set up correctly
 
-The Autodiscover CNAME record must exist and must be set up correctly. We strongly recommend that you set up Exchange Autodiscover when you are using Outlook to connect to Exchange Online mailboxes. Setting up Autodiscover and other related DNS records is required for Outlook connectivity in Exchange Online. Administrators can use the Domain Troubleshooting Wizard in Microsoft 365 or Microsoft Remote Connectivity Analyzer to confirm that the records are set up correctly.
+The Autodiscover CNAME record must exist and must be set up correctly. We strongly recommend that you set up Exchange Autodiscover when you're using Outlook to connect to Exchange Online mailboxes. Setting up Autodiscover and other related DNS records is required for Outlook connectivity in Exchange Online. Administrators can use the Domain Troubleshooting Wizard in Microsoft 365 or Microsoft Remote Connectivity Analyzer to confirm that the records are set up correctly.
 
 **Use the Domain Troubleshooting Wizard in Microsoft 365**
 
 To use the Domain Troubleshooting Wizard in Microsoft 365, follow these steps.
 
 1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com)) by using an administrator account.
-2. Click **Admin** to open the Microsoft 365 admin center.
-3. In the left navigation pane, click **Domains**, select the domain name that's used by the affected user, and then click **Troubleshoot** to start the wizard.
+2. Select **Admin** to open the Microsoft 365 admin center.
+3. In the left navigation pane, select **Domains**, then the domain name that's used by the affected user, and then select **Troubleshoot** to start the wizard.
 
 **Use Microsoft Remote Connectivity Analyzer**
 
@@ -93,9 +102,9 @@ To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is wor
 1. In a web browser, browse to the Microsoft Remote Connectivity Analyzer tool at the following website:
 
     [Remote Connectivity Analyzer Outlook Autodiscover test](https://testconnectivity.microsoft.com/tests/O365Ola/input)
-2. Complete all the required fields on the form, and then click **Perform Test**.
+2. Complete all the required fields on the form, and then select **Perform Test**.
 
-    :::image type="content" source="media/cannot-set-up-profile-autodiscover/outlook-connectivity-required-fields.png" alt-text="Screenshot of the Outlook Connectivity form, showing required fields of email address, authentication type and credentials.":::
+    :::image type="content" source="media/cannot-set-up-profile-autodiscover/outlook-connectivity-required-fields.png" alt-text="Screenshot of the Outlook Connectivity form, showing required fields of email address, authentication type, and credentials.":::
 
 3. When the test is finished, determine whether it's successful.
 
@@ -108,7 +117,7 @@ To use Remote Connectivity Analyzer to test whether Exchange Autodiscover is wor
 
 #### Method 4: Make sure that the user's attributes in Active Directory are set correctly
 
-If you have an Exchange hybrid deployment, you can use the [Get-RemoteMailbox](/powershell/module/exchange/get-remotemailbox) cmdlet to determine whether the following attributes are set correctly for the user. Common issues occur when a value isn't set for one or more of these attributes. The following is an example of the correct attributes.
+If you have an Exchange hybrid deployment, you can use the [Get-RemoteMailbox](/powershell/module/exchange/get-remotemailbox) cmdlet to determine whether the correct attributes are set for the affected user. Common issues occur when a value isn't set for one or more of these attributes. The following example displays the correct attributes to set for the user.
 
 |Attribute| Example |
 |-|-|
@@ -126,20 +135,12 @@ After the correct values are set for these attributes, [force directory synchron
 
 #### Method 2: Use the Add New Account Wizard in Outlook
 
-If Method 1 doesn't resolve the problem, and you're not using a custom domain together with Microsoft 365, you can use the Add New Account Wizard in Outlook to set up your Outlook profile by using the default "onmicrosoft.com"-based email address that's associated with users' Exchange Online mailboxes when you signed up for Microsoft 365. When you use the Add New Account Wizard to set up a new mail profile, you specify your Microsoft 365 password and your default Microsoft 365 email address in the form of \<user\>@\<domain\>.onmicrosoft.com (for example, kim@contoso.onmicrosoft.com).
+If Method 1 doesn't resolve the problem, and you're not using a custom domain together with Microsoft 365, you can use the Add New Account Wizard in Outlook to set up your Outlook profile by using the default "onmicrosoft.com"-based email address that's associated Exchange Online mailboxes for users when you signed up for Microsoft 365. When you use the Add New Account Wizard to set up a new mail profile, you specify your Microsoft 365 password and your default Microsoft 365 email address in the form of \<user\>@\<domain\>.onmicrosoft.com (for example, kim@contoso.onmicrosoft.com).
 
-This method is supported and works for customers who may not plan to have their own vanity or custom domain. This method also supports Autodiscover. If your mailbox server location changes, Outlook is updated accordingly by using the new location of your mailbox server.
+This method is supported and works for customers who might not plan to have their own vanity or custom domain. This method also supports Autodiscover. If your mailbox server location changes, Outlook is updated accordingly by using the new location of your mailbox server.
 
 ## More information
 
-Microsoft doesn't support manually setting up a profile in Outlook for connectivity to mailboxes in Exchange Online in Microsoft 365. However, we can help you complete other tasks, such as setting up DNS and Autodiscover records (as discussed in Method 2). This lets you set up your account through the supported methods.
-
-## References
-
-Go to [Microsoft Support and Recovery Assistant for Microsoft 365](https://aka.ms/outlookconnectivity) to solve this problem.
-
-For more information, see the following Microsoft Knowledge Base articles:
-
-- [2555008](https://support.microsoft.com/help/2555008) How to troubleshoot free/busy issues in a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365
+Microsoft doesn't support manually setting up a profile in Outlook for connectivity to mailboxes in Exchange Online in Microsoft 365. However, we can help you complete other tasks, such as setting up DNS and Autodiscover records as discussed in Method 2. This method lets you set up your account through the supported methods.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

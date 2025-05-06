@@ -17,7 +17,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 04/27/2023
+ms.date: 02/25/2025
 ---
 
 # Microsoft 365 apps activation error "Another account from your organization is already signed in on this computer"
@@ -38,7 +38,7 @@ If this error occurs when only one account is used, follow the steps that are ap
      ```bash
      defaults write com.microsoft.Word ResetOneAuthCreds -bool YES
      ```
-     
+
   1. Open the Microsoft Word app and continue with the activation steps.
   1. If the issue persists, try the steps in [Can't sign in to an Office 2016 for Mac app](/microsoft-365/troubleshoot/sign-in/sign-in-to-office-2016-for-mac-fail).
 - For Windows devices, follow these steps:
@@ -76,25 +76,33 @@ If this error occurs when only one account is used, follow the steps that are ap
 <details>
 <summary><b>Update Microsoft 365</b></summary>
 
-It is recommended that Microsoft 365 be configured to install updates automatically. To check for updates, open an Office app (such as Word), select **File**, and then select **Account**.
+It's recommended that Microsoft 365 be configured to install updates automatically. To check for updates, open a Microsoft 365 app (such as Word), select **File**, and then select **Account**.
 Select **Update options**, and then select **Update now**.
 
 </details>
 
 <details>
-<summary><b>Run the Microsoft Support and Recovery Assistant (SaRA) Sign in troubleshooter</b></summary>
+<summary><b>Run the Microsoft 365 sign-in troubleshooter in Get Help</b></summary>
 
-Run [the SaRA Office sign in issue troubleshooter](https://aka.ms/SaRA-OfficeSignInScenario).
+The [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome) helps you to resolve Microsoft 365 sign-in issues.
 
+To run the troubleshooter, follow these steps:
+
+1. Select the following button to start the troubleshooter.
+
+   > [!div class="nextstepaction"]
+   > [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome)
+
+   If you receive a pop-up window that displays "This site is trying to open Get Help", select **Open**.
+1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
 </details>
 
 <details>
 <summary><b>Reset Microsoft 365 activation state</b></summary>
 
-Run [Microsoft Support and Recovery Assistant to reset the Microsoft 365 activation state](https://aka.ms/SaRA-OfficeActivation-Reset).
-
-For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
-
+See [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 </details>
 
 <details>
@@ -136,7 +144,7 @@ If the process isn't blocked, but you still can't activate Microsoft 365, delete
 `%LOCALAPPDATA%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\TokenBroker\Accounts`
 1. Select all files and delete them.
 1. Restart the device.
-1. Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
+1. Run the [Microsoft 365 sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome) in Get Help.
 
 For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
 

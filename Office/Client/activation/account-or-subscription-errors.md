@@ -8,7 +8,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Errors\Couldn't verify account or subscription or license
   - CSSTroubleshoot
   - CI 157752
@@ -17,7 +17,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 06/06/2024
+ms.date: 02/27/2025
 ---
 
 # Account or subscription verification errors activating Microsoft 365 Apps
@@ -28,11 +28,11 @@ When you try to activate Microsoft 365 Apps, you encounter one of the following 
 
 > Error: Unable to verify the account  
 
-> Couldn’t verify account. We are having trouble verifying your Microsoft 365 account on this computer. Most features will be turned off on (date).
+> Couldn't verify account. We are having trouble verifying your Microsoft 365 account on this computer. Most features will be turned off on (date).
 
 Try the following troubleshooting methods to solve the problem.
 
-**Note** Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren’t an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
+**Note** Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren't an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
 <br/><br/>
 
 <details>
@@ -42,18 +42,18 @@ To activate Microsoft 365 Apps, TLS 1.2 must be enabled on the operating system.
 
 **Important** Running Microsoft 365 Apps on these older operating systems isn't supported. For more information, see [End of support resources for Office](/deployoffice/endofsupport/resources).
 
-1.	If you are running Windows 7 or Windows Server 2008, make sure that [Service Pack 1]( https://support.microsoft.com/topic/information-about-service-pack-1-for-windows-7-and-for-windows-server-2008-r2-df044624-55b8-3a97-de80-5d99cb689063) is installed.
-1.	Enable TLS 1.2 as the default protocol by using [this easy fix]( https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi), and then restart the device.
-1.	From Start, select **Control Panel** > **Internet options** > **Advanced settings**.
-1.	If **TLS 1.2** isn’t checked, check it, then select **Apply** and **OK**.
-1.	Restart the device, and then try activating Microsoft 365 again.
+1. If you're running Windows 7 or Windows Server 2008, make sure that [Service Pack 1]( https://support.microsoft.com/topic/information-about-service-pack-1-for-windows-7-and-for-windows-server-2008-r2-df044624-55b8-3a97-de80-5d99cb689063) is installed.
+1. Enable TLS 1.2 as the default protocol by using [this easy fix]( https://download.microsoft.com/download/0/6/5/0658B1A7-6D2E-474F-BC2C-D69E5B9E9A68/MicrosoftEasyFix51044.msi), and then restart the device.
+1. From Start, select **Control Panel** > **Internet options** > **Advanced settings**.
+1. If **TLS 1.2** isn't checked, check it, then select **Apply** and **OK**.
+1. Restart the device, and then try activating Microsoft 365 again.
 <br/><br/>
 </details>
 
 <details>
 <summary><b>Update Microsoft 365</b></summary>
 
-It is recommended that Microsoft 365 be configured to install updates automatically. To check for updates, open an Office app (such as Word), select **File**, and then select **Account**.
+It is recommended that Microsoft 365 be configured to install updates automatically. To check for updates, open a Microsoft 365 app (such as Word), select **File**, and then select **Account**.
 Select **Update options**, and then select **Update now**.
 <br/><br/>
 </details>
@@ -61,9 +61,7 @@ Select **Update options**, and then select **Update now**.
 <details>
 <summary><b>Reset Microsoft 365 activation state</b></summary>
 
-Run the [Microsoft Support and Recovery Assistant (SaRA) to reset the Microsoft 365 activation state](https://aka.ms/SaRA-OfficeActivation-Reset).
-
-For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state]( /office/troubleshoot/activation/reset-office-365-proplus-activation-state).
+See [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 <br/><br/>
 </details>
 
@@ -75,9 +73,9 @@ Go to https://portal.office.com/account and select **Security & privacy**. Reset
 </details>
 
 <details>
-<summary><b>Sign out of Office and sign back in</b></summary>
+<summary><b>Sign out of Microsoft 365 and sign back in</b></summary>
 
-1.	Open an Office app, such as Word.
+1.	Open a Microsoft 365 app, such as Word.
 1.	Select your name and profile picture or icon at the top.
 1.	Select **Sign out**.
 1.	Select **Sign in**.
@@ -91,13 +89,13 @@ Go to https://portal.office.com/account and select **Security & privacy**. Reset
 
 Go to https://portal.office.com/account to check which Office version and edition you have available.  
 
-If no Office version is shown, you don’t have an Office license assigned to the account you are signed in with. If you are signed in with your Work or School account, and don’t have a license assigned, contact your Microsoft 365 Administrator to get a license assigned. [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)  
+If no Office version is shown, you don't have an Office license assigned to the account you are signed in with. If you are signed in with your Work or School account, and don't have a license assigned, contact your Microsoft 365 Administrator to get a license assigned. [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)  
 
-If you have Microsoft 365 for Business Basic, you won’t have any Office applications to install. You can use Office Online apps at https://office.com.
+If you have Microsoft 365 for Business Basic, you won't have any Office applications to install. You can use Office Online apps at https://office.com.
 
 Make sure that the version listed (32-bit or 64-bit) matches your version of Windows. To check what version of Windows you have installed, go to **Start** > **Settings** (gear icon) > **System** > **About**, and check the **System type**.  
 
-If you have a different edition or version installed on your device, run the [SaRA package to uninstall Office](https://aka.ms/SaRA-officeUninstallFromPC). Restart the device, and install from https://portal.office.com/account to get the correct version.  
+If you have a different edition or version installed on your device, run the [Microsoft 365 Uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstall-sarahome) to uninstall Microsoft 365 or Office. Restart the device, and install from https://portal.office.com/account to get the correct version.  
 <br/><br/>
 </details>
 
@@ -160,8 +158,8 @@ Are you behind a firewall? If you're not sure, ask your administrator. If you're
 -	`aadcdn.msauthimages.net`
 -	`enterpriseregistration.windows.net`
 
-Each firewall will have a different method to enable access to these URIs. Check your software's documentation for instructions or ask your administrator to do this for you.
+Each firewall has a different method to enable access to these URIs. Check your software's documentation for instructions or ask your administrator to do this for you.
 
-For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Microsoft 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
+For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see [Microsoft 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
 <br/><br/>
 </details>

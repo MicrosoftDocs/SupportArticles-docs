@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Calendar\
+  - sap:Calendar
   - Outlook for Mac
   - CI 142018
   - CSSTroubleshoot

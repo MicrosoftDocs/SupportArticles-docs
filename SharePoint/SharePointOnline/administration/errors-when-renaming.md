@@ -5,7 +5,7 @@ author: helenclu
 ms.reviewer: PramodBalusu
 ms.author: luche
 manager: dcscontentpm
-ms.date: 06/12/2024
+ms.date: 02/14/2025
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -55,7 +55,8 @@ This article lists common error messages that you might receive when you change 
 |-1082|The site is locked. Please unlock the site and try again.|A rename can't be done on a locked site. |[Unlock the site](/sharepoint/manage-lock-status).|
 |-1080|The specified site does not exist. Please check the URL and try again.| The specified site doesn't exist. |Check whether the site exists, or whether there are any typos in the URL. |
 |-15|This site URL is invalid. Please double-check your site URL.|The specified URL has an invalid format.|Check the format of the specified URL. |
-|1095| The rename cannot be scheduled currently since alternate URLs exist in the tenant.| The tenant has alternate URLs configured for which renames aren't supported. These likely remain from earlier SharePoint on-premises implementations.| The alternate URLs must be removed before you try again to schedule a rename. Submit a support request by selecting [Rename a SharePoint Tenant with Alternate URLs](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20with%20Alternate%20URLs).
+|1095|The rename cannot be scheduled currently since alternate URLs exist in the tenant.| The tenant has alternate URLs configured for which renames aren't supported. These likely remain from earlier SharePoint on-premises implementations.| The alternate URLs must be removed before you try again to schedule a rename. Submit a support request by selecting [Rename a SharePoint Tenant with Alternate URLs](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20with%20Alternate%20URLs).
+|1089|Max no. of allowed sites exceeded.|During a tenant rename, the maximum number of sites allowed by the standard rename has been exceeded.|For larger organizations, use [Advanced Tenant Rename](https://aka.ms/AdvancedTenantRename).|
 
 **Note:** You might encounter different errors about individual site renaming if the actions fail as part of the domain renaming. For more information, see [Errors when you rename a SharePoint site address](https://support.microsoft.com/office/errors-when-you-rename-a-sharepoint-site-address-165b7c11-1325-4813-b160-ecbe87bc1a86).
 

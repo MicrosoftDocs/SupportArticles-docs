@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:High Availability, Health, Performance, Content Indexing\Exchange Service or Server Crashed\Stopped, Cluster service issues
+  - sap:High Availability, Health, Performance, Content Indexing\Exchange Service or Server Crashed/Stopped, Cluster service issues
   - Exchange Server
   - CSSTroubleshoot
   - CI 122417

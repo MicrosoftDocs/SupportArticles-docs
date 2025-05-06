@@ -1,2 +1,2 @@
 > [!NOTE]
-> Microsoft Support and Recovery Assistant scenarios aren't available for new Teams.
+> The Get Help troubleshooters aren't available for new Teams.

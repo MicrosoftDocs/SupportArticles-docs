@@ -1,9 +1,7 @@
 ---
 title: Self-help diagnostics for Teams administrators
-ms.author: luche
-author: helenclu
 manager: dcscontentpm
-ms.date: 07/23/2024
+ms.date: 02/27/2025
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 search.appverid:
@@ -63,15 +61,21 @@ The following tables list the diagnostics that are currently available in the Mi
 |---|---|---|---|
 |Checks whether a user can sign in to the Teams app.|[Run Tests: Teams Sign-In](https://aka.ms/TeamsSignInDiag)|[Teams Sign in](https://testconnectivity.microsoft.com/tests/TeamsSignin/input)|[Resolve sign-in errors in Teams](../teams-sign-in/resolve-sign-in-errors.md)|
 |Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Teams Android desk phone.||[Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsAndroidDeskPhone/input)|[Certified Android devices get signed out of Teams](../teams-rooms-and-devices/signed-out-of-teams-android-devices.md)|
-|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Microsoft Teams Rooms device.||[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)|
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Microsoft Teams Rooms device.||[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)<br/><br/>[Fix Teams Rooms resource account sign-in issues](../teams-rooms-and-devices/teams-rooms-resource-account-sign-in-issues.md)|
 |Checks whether the Teams user can communicate with a federated Teams user.|[Run Tests: Teams Federation](https://aka.ms/TeamsFederationDiag)|[Teams Federation and Interoperability](https://testconnectivity.microsoft.com/tests/TeamsFederation/input)|[Manage external access (federation)](/microsoftteams/manage-external-access#federation-diagnostic-tool)<br/><br/>[External federated contacts don't appear in Teams search](../exchange-integration/external-contacts-not-in-search.md)|
+
+### Exchange integration
+
+| Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
+|---|---|---|---|
+|Determines the ability of Teams to interact with Microsoft Exchange Server. For Exchange Hybrid, run the test two times by using a Microsoft 365 mailbox and an on-premises mailbox. This is useful for IT administrators who want to troubleshoot Teams and Exchange integration.||[Teams Exchange Integration](https://testconnectivity.microsoft.com/tests/TeamsExchangeIntegration/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
 
 ### Devices
 
 | Description |  Diagnostic shortcut | Connectivity test shortcut | Support article |
 |---|---|---|---|
-|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Teams Android desk phone.||[Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input)||
-|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to the following Microsoft Teams Rooms devices: <ul><li>Teams Rooms on Android</li><li>Teams Rooms on Windows</li><li>Teams panels</li></ul>||[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)|
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to a Teams Android desk phone.|[Run Tests: Teams Android Desk Phone Sign in](https://aka.ms/TeamsAndroidDeskPhoneDiag)|[Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input)|[Certified Android devices get signed out of Teams](../teams-rooms-and-devices/signed-out-of-teams-android-devices.md)|
+|Checks whether a user account meets the requirements for a Microsoft Teams user to be able to sign in to the following Microsoft Teams Rooms devices: <ul><li>Teams Rooms on Android</li><li>Teams Rooms on Windows</li><li>Teams panels</li></ul>|<ul><li>[Run Tests: Teams Rooms Android Sign in](https://aka.ms/TeamsRoomsAndroidDiag)</li><li>[Run Tests: Teams Rooms Windows Sign in](https://aka.ms/TeamsRoomsWindowsDiag)</li><li>[Run Tests: Teams Panel Sign in](https://aka.ms/TeamsPanelDiag)</li></ul>|[Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input)|[Fix Conditional Access-related issues for Teams Android devices](../teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md)<br/><br/>[Fix Teams Rooms resource account sign-in issues](../teams-rooms-and-devices/teams-rooms-resource-account-sign-in-issues.md)|
 
 ### Files
 
@@ -91,6 +95,8 @@ The following tables list the diagnostics that are currently available in the Mi
 |Checks a user's policy for 1:1 Call Recording capability|[Run Tests: Teams 1:1 Call Recording](https://aka.ms/Teams11CallRecDiag)||[Issues with meeting recordings](../meetings/troubleshoot-meeting-recording-issues.md)|
 |Checks whether a user has the correct policies to enable the Teams Outlook add-in.|[Run Tests: Teams Add-in Missing in Outlook](https://aka.ms/TeamsAdd-inDiag)||[Resolve issues with Teams Meeting add-in for Outlook](../meetings/resolve-teams-meeting-add-in-issues.md)|
 |Checks whether the user is correctly configured to record a meeting in Teams.|[Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag)|[Teams Meeting Recording](https://testconnectivity.microsoft.com/tests/TeamsRecording/input)|[Teams cloud meeting recording](/microsoftteams/cloud-recording#meeting-recording-diagnostic-tools)<br/><br/>[Issues with meeting recordings](../meetings/troubleshoot-meeting-recording-issues.md)|
+|Checks whether a user account meets the requirements to schedule a Teams Meeting on behalf of a delegator.||[Teams Meeting Delegation](https://testconnectivity.microsoft.com/tests/TeamsMeetingDelegation/input)|[Resolve interaction issues between Teams and Exchange Server](../exchange-integration/teams-exchange-interaction-issue.md)|
+|Checks whether a user account meets the requirements to transcribe a Teams meeting.|[Run Tests: Unable to transcribe a meeting in Teams](https://aka.ms/MeetingTranscribeDiag)||[Admins- Manage transcription and captions for Teams meetings](/microsoftteams/meeting-transcription-captions)|
 
 ### Presence
 

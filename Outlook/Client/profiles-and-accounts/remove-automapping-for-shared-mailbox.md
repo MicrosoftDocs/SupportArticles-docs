@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.reviewer: eileenor, jhayes
+ms.reviewer: gbratton
 ms.custom: 
   - sap:Exchange Mailbox Accounts\Shared mailboxes
   - Outlook for Windows
@@ -15,12 +15,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook for Microsoft 365
-ms.date: 01/30/2024
+ms.date: 03/25/2025
 ---
 
 # How to remove automapping for a shared mailbox in Outlook for Microsoft 365
-
-## Introduction
 
 This article discusses how to remove automapping for shared mailboxes in Microsoft Outlook for Microsoft 365.
 
@@ -29,7 +27,7 @@ In Microsoft Outlook, Autodiscover automatically maps to any mailbox for which a
 - An admin grants full access permissions for a user to access another user's mailbox.
 - The user has full access permissions to a shared mailbox.
 
-If the user has full access permission to many mailboxes, automapping may cause performance issues when Outlook starts. For example, in some organizations, admins have full access to all user mailboxes in their organization. If this is the case, Outlook tries to open all mailboxes in the organization.
+If the user has full access permission to many mailboxes, automapping might cause performance issues when Outlook starts. For example, in some organizations, admins have full access to all user mailboxes in their organization. If this is the case, Outlook tries to open all mailboxes in the organization.
 
 ## Procedure
 
@@ -80,8 +78,4 @@ To disable automapping on a mailbox, use Exchange Online PowerShell to remove th
 
 4. Repeat the previous steps for every mailbox where the user has full access permission and you want to disable automapping for the mailbox.
 
-## More Information
-
-For more information, see [Disable Outlook Auto-Mapping with Full Access Mailboxes](/previous-versions/office/exchange-server-2010/hh529943(v=exchg.141)).
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+For more information, see [Disable Outlook auto-mapping with full access mailboxes](/previous-versions/office/exchange-server-2010/hh529943(v=exchg.141)).

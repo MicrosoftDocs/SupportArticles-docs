@@ -3,8 +3,6 @@
   items:
     - name: Administration
       items:
-        - name: 401 Access denied error when you run Test-OAuthConnectivity
-          href: ../administration/401-access-denied-error-when-running-test-oauthconnectivity.md
         - name: 554 5.4.14 Hop Count exceeded
           href: ../administration/hop-count-exceeded-ndr.md
         - name: A certificate error when releasing a message
@@ -13,12 +11,8 @@
           href: ../administration/remote-mailbox-created-in-ad-ds-not-aclable.md
         - name: Access denied when using remote Windows PowerShell
           href: ../administration/access-denied-connect-powershell.md
-        - name: Microsoft Entra Connect workflow in Microsoft 365
-          href: ../administration/azure-ad-connect-workflow.md
         - name: Bad Request when connecting to Exchange Online PowerShell
           href: ../administration/bad-request-error-when-connecting-to-exchange-online-powershell.md
-        - name: Can't add Exchange license in Microsoft Entra Connect
-          href: ../administration/cannot-add-exchange-license-in-azure-ad-connect.md
         - name: Can't connect to Exchange Online
           href: ../administration/incorrect-settings.md
         - name: Can't connect to Outlook using POP/IMAP
@@ -83,8 +77,6 @@
           href: ../administration/how-to-use-powershell-to-grant-admin-access-to-all-mailboxes.md
         - name: Imported PST file content hidden in archive mailbox
           href: ../administration/imported-pst-file-content-hidden-in-archive-mailbox.md
-        - name: Inactive mailbox doesn't reconnect automatically to AD 
-          href: ../administration/reconnect-inactive-or-soft-deleted-mailboxes-to-ad.md
         - name: InvalidShellID error in Remote PowerShell
           href: ../administration/invalidshellid-error-in-rps.md
         - name: Mailbox quotas for qualifying license types not automatically increased
@@ -377,8 +369,8 @@
           href: ../groups-and-distribution-lists/inconsistent-performance-with-contacts.md
         - name: Mail-enabled groups aren't synced to O365
           href: ../groups-and-distribution-lists/mail-enabled-groups-not-synchronized.md
-        - name: Ownerless group policy questions
-          href: ../groups-and-distribution-lists/ownerless-group-policy.md
+        - name: Microsoft 365 group doesn't appear in Outlook
+          href: ../groups-and-distribution-lists/microsoft-365-group-does-not-appear-in-outlook.md
         - name: Prevent users from creating and managing group
           href: ../groups-and-distribution-lists/prevent-users-create-manage-dg.md
         - name: Problem adding a guest user to a Microsoft 365 group
@@ -469,8 +461,6 @@
           href: ../outlook-issues/cannot-set-up-profile-autodiscover.md
         - name: Can't add public folder permissions
           href: ../outlook-issues/one-or-more-users-cannot-be-added-to-the-folder-access-list-error.md
-        - name: Can't create a new user without Exchange Online license
-          href: ../outlook-issues/to-assign-a-license-that-contains-outlook-customer-manager-error.md
         - name: Can't find a user in the offline address book
           href: ../outlook-issues/cannot-find-user-in-offline-address-book.md
         - name: Can't view Outlook Delegates page
@@ -479,8 +469,6 @@
           href: ../outlook-issues/connection-to-microsoft-exchange-is-unavailable-error.md
         - name: Control PST use and creation
           href: ../outlook-issues/control-pst-use.md
-        - name: Create and book a workspace
-          href: ../outlook-issues/create-book-workspace-outlook.md
         - name: Emails sent to wrong account if profile has many accounts
           href: ../outlook-issues/emails-sent-to-wrong-account-if-has-many-accounts.md
         - name: Encrypted connection unavailable
@@ -613,7 +601,7 @@
           href: ../public-folders/pf-migration-fails-sourcepfprimarymailboxguid.md
         - name: '"Number of public folder mailboxes cannot exceed more than 100" error'
           href: ../public-folders/migration-batch-error-too-many-public-folders.md
-        - name: Permissions and settings don't propagate in EAC
+        - name: Permissions and settings don't propagate to all subfolders
           href: ../public-folders/permissions-settings-not-propagate-eac.md
         - name: Public folder couldn't be mail-enabled
           href: ../public-folders/public-folder-not-be-mail-enabled.md
@@ -669,6 +657,8 @@
           href: ../user-and-shared-mailboxes/could-not-find-database-running-cmdlets-for-different-region-mailbox.md
         - name: Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync
           href: ../user-and-shared-mailboxes/pop3-imap-owa-activesync-office-365.md
+        - name: Errors after unassigning a user license
+          href: ../user-and-shared-mailboxes/litigation-hold-mailbox-not-turn-into-inactive.md
         - name: How to access other user's mailboxes
           href: ../user-and-shared-mailboxes/how-to-access-other-mailboxes.md
         - name: How to create and manage resource mailboxes
@@ -691,8 +681,6 @@
           href: ../user-and-shared-mailboxes/private-items-not-display.md
         - name: REST API is not yet supported for this mailbox error
           href: ../user-and-shared-mailboxes/rest-api-is-not-yet-supported-for-this-mailbox-error.md
-        - name: Restore user mailboxes by using cmdlets
-          href: ../user-and-shared-mailboxes/mailbox-recovery-in-exchange-online.md
         - name: Sent items aren't saved
           href: ../user-and-shared-mailboxes/sent-mail-is-not-saved.md
         - name: Set automatic replies

@@ -15,7 +15,7 @@ appliesto:
   - Outlook for Microsoft 365
   - New Outlook for Windows
 search.appverid: MET150
-ms.date: 07/24/2024
+ms.date: 03/19/2025
 ---
 
 # Web links from Outlook and Teams open in Microsoft Edge in side-by-side view

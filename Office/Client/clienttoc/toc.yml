@@ -591,6 +591,10 @@
           href: ../excel/vba-writes-to-cells-slowly.md
         - name: Wrap text doesn't adjust row height
           href: ../excel/wrap-text-not-adjust-row-height.md
+    - name: Forms
+      items:
+        - name: Resolve file upload errors in Microsoft Forms
+          href: ../forms/resolve-file-upload-errors-microsoft-forms.md
     - name: InfoPath
       items:
         - name: Disable code-behind prompt for InfoPath forms

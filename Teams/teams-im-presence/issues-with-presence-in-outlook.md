@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:Teams People & Presence\Presence from Outlook (Free-Busy)
+  - sap:Teams People & Presence\Presence from Outlook (Free/Busy)
   - CI 126269
   - CSSTroubleshoot
 ms.reviewer: sylviebo, premgan
@@ -16,7 +16,7 @@ appliesto:
   - Outlook
 search.appverid: 
   - MET150
-ms.date: 03/14/2024
+ms.date: 02/27/2025
 ---
 # User presence status issues in Outlook
 
@@ -30,14 +30,19 @@ You see any of the following issues when you check the presence status for a use
 
 ## Resolution
 
-### Use Microsoft Support and Recovery Assistant
+### Run the Classic Teams User Presence troubleshooter in Get Help
 
-[!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
+[!INCLUDE [Get Help troubleshooter note](../../includes/sara-note-new-teams.md)]
 
-To fix these issues, download and run the Assistant for automated troubleshooting steps and fixes.
+The [Classic Teams User Presence troubleshooter](https://aka.ms/SaRA-TeamsPresence-sarahome) helps you resolve inaccurate user presence status information that's displayed in classic Outlook.
 
-> [!div class="nextstepaction"]
-> [Download the Assistant](https://aka.ms/SaRA-TeamsPresenceScenario)
+To run the troubleshooter, follow these steps:
+
+1. Start the Get Help app.
+1. On the **Search** bar, enter *Issues with Teams user presence in Outlook*.
+1. Follow the instructions in the Get Help app to run the troubleshooter.
+
+After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
 
 ### Fix the issue manually
 
@@ -104,7 +109,6 @@ Follow these manual steps and check whether the issue is resolved after each ste
       |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0\0\Win32`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`|
       |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0\FLAGS`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: 0|
       |Subkey: `HKEY_CURRENT_USER\Software\Classes\TypeLib\{B9AA1F11-F480-4054-A84E-B5D9277E40A8}\1.0\HELPDIR`<br>**Name**: (Default)<br>**Type**: REG_SZ<br>**Data**: `C:\Users\<username>\AppData\Local\Microsoft\TeamsPresenceAddin\Uc.win32.tlb`|
-
 
 7. If the issue persists, uninstall and re-install Teams. For more information about how to uninstall the Teams app, see [Uninstall or remove apps and programs in Windows 10](https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98). To re-install Teams, see [How do I get Microsoft Teams](https://support.microsoft.com/office/how-do-i-get-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b)
 

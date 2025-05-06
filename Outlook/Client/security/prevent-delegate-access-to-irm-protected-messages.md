@@ -1,5 +1,5 @@
 ---
-title: Prevent mailbox delegates from reading protected messages
+title: Prevent Mailbox Delegates from Reading Protected Messages
 description: Discusses how to prevent delegates from reading IRM-protected email messages in a user or shared mailbox.
 author: cloud-writer
 ms.author: meerak
@@ -12,39 +12,42 @@ ms.custom:
   - Outlook for iOS and Android
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: thomno, gbratton, meerak, v-trisshores
+  - CI 91080
+  - CI 4496
+ms.reviewer: thomno, jinhan, pawankap, gbratton, meerak, v-shorestris
 appliesto: 
   - Outlook for Microsoft 365
-  - Outlook 2021
-  - Outlook 2019
-  - Outlook 2016
+  - Outlook for Windows
   - Outlook on the web
   - Outlook for Android
   - Outlook for iOS
+  - Outlook for Mac
+  - Outlook for Mac for Microsoft 365
+  - Legacy Outlook for Mac
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 06/19/2024
+ms.date: 04/10/2025
 ---
 
 # Prevent mailbox delegates from reading protected messages
 
-By default for a user mailbox, Information Rights Management (IRM)-protected email messages can be read by any delegate who has Full Access permission on the mailbox.
+By default, for a _user_ mailbox, Information Rights Management (IRM)-protected email messages can be read by any delegate who has **Full Access** permission on the mailbox.
 
-By default for a shared mailbox, if either of the following conditions are true, IRM-protected email messages can be read by any delegate who has Full Access permission on the mailbox:
+By default, for a _shared_ mailbox, IRM-protected email messages can be read by any delegate who has **Full Access** permission on the mailbox, if either of the following conditions are true:
 
-- The delegate opens the message in the new Outlook, Outlook on the web, Outlook for Android, or Outlook for iOS.
-- The delegate opens the message in the classic Outlook, and [automapping](/powershell/module/exchange/add-mailboxpermission#-automapping) is enabled on the shared mailbox.
+- The delegate opens the message in new Outlook for Windows, Outlook on the web, Outlook for Android, Outlook for iOS, Outlook for Mac, or legacy Outlook for Mac.
+- The delegate opens the message in classic Outlook for Windows, and [automapping](/powershell/module/exchange/add-mailboxpermission#-automapping) is enabled on the shared mailbox.
 
-## Block delegate access to protected messages
+## Block delegate access to protected messages that are received in the mailbox
 
-In some scenarios, a delegate who has the Full Access permission on a mailbox can be prevented from reading IRM-protected email messages that are received in the mailbox. Use the following table to determine the appropriate prevention method for each scenario. For more information, see the method descriptions that follow the table.
+In some scenarios, delegates who have **Full Access** permission on a mailbox can be prevented from reading IRM-protected email messages that are received in the mailbox. Use the following table to determine the appropriate prevention method for each scenario. Prevention method descriptions follow the table.
 
-||Delegate uses the classic Outlook|Delegate uses the new Outlook|Delegate uses Outlook on the web, Outlook for Android, or Outlook for iOS|
-|---|---|---|---|
-|**User mailbox in Exchange Online**|Methods A or B|Method C|Method C|
-|**Shared mailbox in Exchange Online**|No prevention possible|Method C|Method C|
-|**User mailbox in Exchange Server**|Methods A or B|Invalid scenario|No prevention possible|
-|**Shared mailbox in Exchange Server**|No prevention possible|Invalid scenario|No prevention possible|
+| | **Delegate uses classic Outlook for Windows** | **Delegate uses new Outlook for Windows** | **Delegate uses Outlook on the web, Outlook for Android, Outlook for iOS, or Outlook for Mac** | **Delegate uses legacy Outlook for Mac** |
+|-|-|-|-|-|
+| **User mailbox in Exchange Online**  | Method A or B | Method C | Method C | No prevention possible |
+| **Shared mailbox in Exchange Online** | No prevention possible | Method C | Method C | No prevention possible |
+| **User mailbox in Exchange Server** | Method A or B | Invalid scenario | No prevention possible | No prevention possible |
+| **Shared mailbox in Exchange Server** | No prevention possible | Invalid scenario | No prevention possible | No prevention possible |
 
 ### Method A
 

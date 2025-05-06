@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 02/25/2025
 ---
 
 # "Access Denied", or user is repeatedly prompted for credentials when connecting to Microsoft 365
@@ -27,9 +27,9 @@ When users try to access a Microsoft 365 resource from a rich client application
 ## Solution
 
 > [!TIP]
-> To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeSignInScenario).
+> To diagnose and automatically fix common Microsoft 365 sign-in issues, run the [Microsoft 365 Sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome).
 
-To fix this problem, reset the user's password. To do this, follow these steps:
+To fix this problem, reset the user's password:
 
 1. Open a web browser, browse to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com/)), and then sign in by using the user's expired credentials.
 2. When you're prompted, enter a new Microsoft 365 password for the user. Make sure that the password meets the criteria for Microsoft 365.

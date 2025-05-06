@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
   - Outlook
 search.appverid: MET150
-ms.date: 09/03/2024
+ms.date: 01/23/2025
 ---
 # Self-help diagnostics for issues in Exchange Online and Outlook
 
@@ -59,6 +59,7 @@ Several diagnostics currently cover the various areas within Exchange Online and
 |DomainKeys Identified Mail (DKIM) diagnostics|Validate that DKIM signing is configured correctly and the correct DNS entries have been published.|[Run Tests: DKIM](https://aka.ms/diagdkim)|[Use DKIM to validate outbound email sent from your custom domain](/microsoft-365/security/office-365-security/use-dkim-to-validate-outbound-email)|
 |Compromised Account diagnostics|Identify suspicious activities against an account and return information that can be used to recover the account if compromised.|[Run Tests: Compromised Account](https://aka.ms/diagca)|[Responding to a compromised email account](/microsoft-365/security/office-365-security/responding-to-a-compromised-email-account)|
 |Email threat policies diagnostics for a recipient|List EOP/MDO threat policies and the inbound connector used for a received message.|[Run Tests: Email Threat Policies](https://aka.ms/diagmdopolicy)|[Order and precedence of email protection](/defender-office-365/how-policies-and-protections-are-combined)|
-| Proxy address conflict diagnostics | Find the Exchange recipient that uses an email address. Helpful if you receive an "Email/proxy address is in use" or similar error message when you try to create an Exchange Online mailbox. | [Run Tests: Proxy address in use](https://aka.ms/PillarProxyInUse) | [Proxy address conflict when adding an email address in Exchange Online](/exchange/troubleshoot/email-alias/proxy-address-being-used) |
+|Proxy address conflict diagnostics|Find the Exchange recipient that uses an email address. Helpful if you receive an "Email/proxy address is in use" or similar error message when you try to create an Exchange Online mailbox. | [Run Tests: Proxy address in use](https://aka.ms/PillarProxyInUse) | [Proxy address conflict when adding an email address in Exchange Online](/exchange/troubleshoot/email-alias/proxy-address-being-used) |
+|Mailbox safe/blocked sender list diagnostics|Check and identify issues with the mailbox's safe senders and domains, blocked sender and domains in junk email settings.|[Run Tests: Mailbox Safe Blocked Sender List](https://aka.ms/safeblockdiag)| [Configure junk email settings on Exchange Online mailboxes](/defender-office-365/configure-junk-email-settings-on-exo-mailboxes)|
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

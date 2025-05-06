@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: vikkarti, viwoods, libbyu
 ms.custom: 
-  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment, ?Activation
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Errors\We're having trouble activating Office
   - CSSTroubleshoot
   - CI 155558
@@ -59,7 +59,7 @@ For more information and troubleshooting guidance, see the following articles:
 - [Update to enable TLS 1.1 and TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392)
 - [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
 - [Unlicensed Product and activation errors in Office](https://support.microsoft.com/office/unlicensed-product-and-activation-errors-in-office-0d23d3c0-c19c-4b2f-9845-5344fedc4380)
-- [Reset Microsoft 365 Apps activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state)
+- [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state)
 
 ## References
 

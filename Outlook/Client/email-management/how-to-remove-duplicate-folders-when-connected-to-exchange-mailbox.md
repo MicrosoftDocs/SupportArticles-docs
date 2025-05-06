@@ -14,7 +14,7 @@ search.appverid: MET150
 ms.reviewer: meshel, benjak, aruiz, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 01/30/2024
+ms.date: 03/19/2025
 ---
 # How to remove duplicate folders in Outlook when connected to an Exchange Server mailbox
 
@@ -80,6 +80,4 @@ To delete the duplicate items, follow these steps:
 
        _Outlook.exe /resetfolders_
 
-## More information
-
-For more information about command-line switches in Outlook, see [Command-line switches for Microsoft Office products](https://support.microsoft.com/office/command-line-switches-for-microsoft-office-products-079164cd-4ef5-4178-b235-441737deb3a6?ocmsassetid=hp001218589&ctt=1&correlationid=2d283ed6-cf6f-4d1b-a807-09046452228c)
+       For more information about command-line switches in Outlook, see [Command-line switches for Microsoft Office products](https://support.microsoft.com/office/command-line-switches-for-microsoft-office-products-079164cd-4ef5-4178-b235-441737deb3a6?ocmsassetid=hp001218589&ctt=1&correlationid=2d283ed6-cf6f-4d1b-a807-09046452228c)

@@ -1,29 +1,38 @@
 ---
-title: Record videos in Loop
-description: Provides an overview of a new feature to record videos in Loop pages.
+title: Record videos in Outlook and Loop
+description: Provides an overview of a new feature to record videos in Outlook email messages and Loop pages.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Loop in Outlook
   - CSSTroubleshoot
   - CI 185299
-ms.reviewer: sbahrini, ommehen, lusassl, meerak, v-trisshores
+  - CI 2360
+ms.reviewer: ommehen, lusassl, meerak, v-trisshores
 appliesto: 
   - Loop
+  - Outlook on the web
+  - New Outlook for Windows
+  - Outlook for Android
 search.appverid: MET150
-ms.date: 03/26/2024
+ms.date: 03/19/2025
 ---
 
-# Record videos in Loop
+# Record videos in Outlook and Loop
 
-Enterprise users can now record videos in [Microsoft Loop](https://support.microsoft.com/office/get-started-with-microsoft-loop-9f4d8d4f-dfc6-4518-9ef6-069408c21f0c). If a user records a video in a Loop page, the recording will transform into an [embedded video player](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop).
+Enterprise users can now [record videos](https://support.microsoft.com/office/how-to-create-stream-video-recordings-in-loop-f21e7422-fc05-417a-ae4d-3be19bbc2580#ID0EDJ) in Microsoft Outlook and [Microsoft Loop](https://support.microsoft.com/office/get-started-with-microsoft-loop-9f4d8d4f-dfc6-4518-9ef6-069408c21f0c). If a user records a video in an email message or a Loop page, the recording will transform into an [embedded video player](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop).
 
 > [!NOTE]
 > This feature is being rolled out gradually and might not yet be available in your organization.
 
+For information about how you can insert video links that transform into embedded video players, see [Embed and play back videos in Outlook and Loop](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop).
+
 ## Who can use the new feature
 
 Only enterprise users can use the new feature.
+
+If an enterprise user records a video in an email message, recipients within the organization can watch the video in the video player that's embedded in the message. External recipients will see a link instead of the embedded video player.
 
 If an enterprise user records a video in a Loop page, users within the organization can watch the video in the embedded video player that's embedded in the page. Loop doesn't currently support guest or external user access to Loop pages.
 
@@ -33,33 +42,42 @@ By default, all enterprise users can use the new feature. However, as an admin, 
 
 - To restrict usage to only some enterprise users, configure [Microsoft 365 Groups for Cloud Policy](/microsoft-365/loop/loop-components-configuration#microsoft-365-groups-for-cloud-policy).
 
+   > [!NOTE]
+   > You can't restrict video recording in Outlook for Android.
+
 - To turn off the feature for all enterprise users, disable the following policy in the [Cloud Policy service for Microsoft 365](/deployoffice/admincenter/overview-cloud-policy): **Record a Stream video from within supported Microsoft 365 applications**.
 
-  > [!NOTE]
-  > When the policy is disabled, users won't be able to record videos in Loop. You can't disable video recording in [Microsoft Stream](https://support.microsoft.com/office/learn-more-about-stream-on-sharepoint-cf4c10c8-5ed3-4229-9e2a-60d31b31575d).
+   > [!NOTE]
+   > When the policy is disabled, users won't be able to record videos in Loop or most Outlook versions. You can't disable video recording in Outlook for Android or [Microsoft Stream](https://support.microsoft.com/office/learn-more-about-stream-on-sharepoint-cf4c10c8-5ed3-4229-9e2a-60d31b31575d).
 
-## Location of recorded videos
+## Location of recorded videos 
 
-Loop stores recorded videos in the user folder in OneDrive for work or school. The folder path is **My files** \> **Recordings** \> **Video Clips**.
+Outlook and Loop store recorded videos in the user folder in OneDrive for work or school. The folder path is **My files** \> **Recordings** \> **Video Clips**.
 
 ## Access to recorded videos
 
-The default permissions policy for your work or school organization applies to videos that are recorded in Loop. For more information about access permissions, see [Access to embedded videos](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop#access-to-embedded-videos).
+The default permissions policy for your work or school organization applies to videos that are recorded in Outlook or Loop. For more information about access permissions, see [Access to embedded videos](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop#access-to-embedded-videos).
 
-## Duration of recorded videos
+## Duration of recorded videos 
 
-Videos that are recorded in Loop have a maximum duration of five minutes. Users can record longer videos in Stream or [Microsoft Clipchamp](https://support.microsoft.com/topic/what-is-clipchamp-750e8940-cd76-4abf-9767-b34d3d3285d7).
+Videos that are recorded in Outlook or Loop have a maximum duration of five minutes. Users can record longer videos in Stream or [Microsoft Clipchamp](https://support.microsoft.com/topic/what-is-clipchamp-750e8940-cd76-4abf-9767-b34d3d3285d7).
 
-Users can embed an unlimited number of recorded videos in a Loop page.
+Users can embed an unlimited number of recorded videos in a Loop page or an email message in Outlook for Android.
+
+Other versions of Outlook use Loop components to embed recorded videos in email messages. The existing limit of five Loop components per email message applies. Recorded videos that are added after the fifth video in an email message won't transform into embedded video players.
 
 ## Deleting a video recording
 
-If a user records a video in a Loop page, but later removes the embedded player from the page, the source video file isn't deleted. To delete the recording, the user should delete the source video file.
+If a user records a video in an email message or Loop page, but later removes the embedded player from the message or page, the source video file isn't deleted. To delete the recording, the user should delete the source video file.
+
+## Email message size
+
+When a user records a video in an email message, the video file is automatically saved to the user's OneDrive folder and doesn't affect the size of the email message. Embedded video players link to video files and don't create copies of the files or add them as email attachments.
 
 ## Send feedback
 
-To report issues or provide feedback about the new feature, see [Want to give feedback?](https://support.microsoft.com/office/get-started-with-microsoft-loop-9f4d8d4f-dfc6-4518-9ef6-069408c21f0c#ID0EDR)
+To report issues or provide feedback about the new feature, select the applicable option for your product:
 
-## More information
-
-For information about how you can insert video links that transform into embedded video players, see [Embed and play back videos in Outlook and Loop](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop).
+- In Outlook versions except Outlook for Android, select **Feedback** from the **Help** menu.
+- In Outlook for Android, see [Get in-app help for Outlook for iOS and Android](https://support.microsoft.com/office/get-in-app-help-for-outlook-for-ios-and-android-218a22d1-9fa5-4889-b689-de1c63493243).
+- In Loop, see [Want to give feedback?](https://support.microsoft.com/office/get-started-with-microsoft-loop-9f4d8d4f-dfc6-4518-9ef6-069408c21f0c#ID0EDR)

@@ -1,10 +1,6 @@
 - name: Outlook for Mac Troubleshooting
   href: ../outlook-mac-welcome.yml
   items:
-    - name: Account
-      items:
-        - name: Outlook for Mac compatibility with Apple iCloud
-          href: ../account/outlook-for-mac-compatibility-with-apple-icloud.md
     - name: Attachments
       items:
         - name: Can't save a JPEG attachment with a .jpg extension
@@ -47,8 +43,6 @@
           href: ../calendars/cannot-open-another-calendar-with-freebusy-permission.md
     - name: Connectivity
       items:
-        - name: Add Exchange Server mailboxes in the new Outlook for Mac
-          href: ../connectivity/add-exchange-server-mailboxes-in-outlook.md
         - name: How to suppress Microsoft 365 AutoDiscover redirect warning
           href: ../connectivity/how-to-suppress-microsoft-365-autodiscover-redirect-warning.md
         - name: Outlook 2016 for Mac crashes when a Proxy Auto Configuration file is used
@@ -79,8 +73,6 @@
           href: ../import-and-export/cannot-import-olm-file-into-outlook-for-windows.md
         - name: Can't import an ANSI .pst file
           href: ../import-and-export/cannot-import-ansi-pst-file.md
-        - name: How to export contacts by using OWA
-          href: ../import-and-export/how-to-export-contacts-via-owa.md
         - name: Permissions error when importing Outlook 2011 identity
           href: ../import-and-export/permissions-error-when-importing-outlook-2011-identity.md
     - name: Installation
@@ -107,9 +99,5 @@
           href: ../send-receive-emails/prompted-for-credentials-modern-authentication.md
     - name: Sign-in
       items:
-        - name: Kerberos authentication for Mac
-          href: ../sign-in/kerberos-authentication-outlook-2016-for-mac.md
         - name: Repeated authentication prompts
           href: ../sign-in/repeated-prompts-authentication.md
-        - name: Set delay and renew a Kerberos ticket
-          href: ../sign-in/set-delay-renew-kerberos-ticket.md
