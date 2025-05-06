@@ -298,6 +298,8 @@
         href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
       - name: NoPermissionsInAccessToken when calling me endpoint
         href: users-groups-entra-apis/error-call-me-endpoint-microsoft-graph.md
+      - name: HTTP 403 authorization error when calling Microsoft Graph Security API
+        href: users-groups-entra-apis/403-error-when-calling-microsoft-graph-security-api.md
    - name: Problem with using the Graph SDK - libraries
      items:
       - name: Python scripts making requests are detected as web crawlers
