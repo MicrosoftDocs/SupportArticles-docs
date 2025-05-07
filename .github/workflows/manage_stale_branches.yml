@@ -2,6 +2,7 @@ name: Manage stale branches
 
 permissions:
   contents: write
+  pull-requests: read
       
 on:
   workflow_dispatch:

@@ -39,8 +39,6 @@
       href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
     - name: Throttled error (429)
       href: create-upgrade-delete/error-code-aksrequeststhrottled.md
-    - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
-      href: create-upgrade-delete/subnet-with-external-resources-cannot-be-used-by-other-resources.md
     - name: Troubleshoot the AKSCapacityError error code
       href: create-upgrade-delete/akscapacityerror.md
     - name: VMExtensionProvisioningTimeout error
@@ -168,6 +166,8 @@
     href: availability-performance/identify-high-cpu-consuming-containers-aks.md
   - name: Identify memory saturation in AKS clusters
     href: availability-performance/identify-memory-saturation-aks.md
+  - name: Troubleshoot high memory consumption due to Linux kernel behaviors
+    href: availability-performance/high-memory-consumption-disk-intensive-applications.md
   - name: Troubleshoot cluster service health probe mode issues
     href: availability-performance/cluster-service-health-probe-mode-issues.md
   - name: Troubleshoot node not ready
