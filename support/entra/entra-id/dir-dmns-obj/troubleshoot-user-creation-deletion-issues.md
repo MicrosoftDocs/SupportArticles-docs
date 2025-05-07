@@ -150,7 +150,7 @@ Remove-MgUser -UserId '5c442efb-5e66-484a-936a-91b6810bed14'
 To delete a user in Azure CLI, run the [az ad user delete](/cli/azure/ad/user#az-ad-user-delete) command:
 
 ```azurecli-interactive
-Connect-MgGraph -Scopes "`User.DeleteRestore.All"
+Connect-MgGraph -Scopes "User.DeleteRestore.All"
 az ad user delete --id "<NewUser@contoso.onmicrosoft.com>"
 ```
 
