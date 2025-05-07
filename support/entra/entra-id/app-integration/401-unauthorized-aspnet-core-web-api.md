@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting 401 Unauthorized errors in ASP.NET Core Web API with Microsoft Entra ID Authentication
-description: Provides guidance on troubleshooting and resolving 401 Unauthorized errors in an ASP.NET Core Web API using Microsoft Entra ID authentication.
+title: Troubleshooting 401 Unauthorized Errors in ASP.NET Core Web API with Microsoft Entra ID Authentication
+description: Provides guidance for troubleshooting and resolving 401 Unauthorized errors in an ASP.NET Core Web API that uses Microsoft Entra ID authentication.
 ms.date: 04/28/2025
 ms.author: bachoang
 ms.service: entra-id
@@ -9,11 +9,11 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 
 # 401 Unauthorized errors in ASP.NET Core Web API with Microsoft Entra ID 
 
-When you call an ASP.NET Core Web API secured with Microsoft Entra ID authentication, you might encounter a 401 Unauthorized error. This article provides guidance on using `JwtBearerEvents to capture detailed logs for troubleshooting these errors.
+When you call an ASP.NET Core Web API that's secured by using Microsoft Entra ID authentication, you might encounter a "401 Unauthorized" error. This article provides guidance for using `JwtBearerEvents` to capture detailed logs to troubleshoot these errors.
 
 ## Symptoms
 
-You use the `[Authorize]` attribute to [secure your ASP.NET Core Web API](/entra/identity-platform/tutorial-web-api-dotnet-core-build-app?tabs=workforce-tenant) as the following. When you call the web API, a 401 Unauthorized response is returned without any error details.
+You use the `[Authorize]` attribute to [secure your ASP.NET Core Web API](/entra/identity-platform/tutorial-web-api-dotnet-core-build-app?tabs=workforce-tenant), as follows:
 
 ```csharp
 [Authorize]
@@ -39,31 +39,33 @@ public class MyController : ControllerBase
 }
 ```
 
+When you call the web API, a "401 Unauthorized" response is returned, but the message contains no error details.
+
 ## Cause
 
- The API might return 401 Unauthorized responses in the following scenarios:
+The API might return a "401 Unauthorized" response in the following scenarios:
 
-- The request doesn't include a valid Authorization: Bearer token header.
-- Token is expired or incorrect.
-    - The token being issued for a different resource.
-    - Token claims not meeting the application's token validation criteria as defined in the [JwtBearerOptions.TokenValidationParameters](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbeareroptions.tokenvalidationparameters) class.
+- The request doesn't include a valid "Authorization: Bearer" token header.
+- The token is expired or incorrect:
+    - The token is issued for a different resource.
+    - The token claims don't meet the application's token validation criteria, as defined in the [JwtBearerOptions.TokenValidationParameters](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbeareroptions.tokenvalidationparameters) class.
 
 ## Solution
 
-To debug and resolve 401 Unauthorized errors, you can use the `JwtBearerEvents` callbacks to capture and log detailed error information. Follow these steps to implement a custom error handling mechanism.
+To debug and resolve "401 Unauthorized" errors, use the `JwtBearerEvents` callbacks to capture and log detailed error information. Follow these steps to implement a custom error-handling mechanism.
 
-The `JwtBearerEvents` class has the following callback properties (invoked in the following order) that can help us debug these 401 Access Denied or UnAuthorization issues:
+The `JwtBearerEvents` class has the following callback properties (invoked in the following order) that can help you to debug these "401 Access Denied" or "UnAuthorization" issues:
 
 - [`OnMessageRecieved`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onmessagereceived#Microsoft_AspNetCore_Authentication_JwtBearer_JwtBearerEvents_OnMessageReceived) is called first for every request.
-- [`OnAuthenticationFailed`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onauthenticationfailed) is called when the token doesn't pass the application's token validation criteria.
-- [`OnChallenge`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onchallenge) is called last before a 401 response is returned.
+- [`OnAuthenticationFailed`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onauthenticationfailed) is called if the token doesn't pass the application's token validation criteria.
+- [`OnChallenge`](/dotnet/api/microsoft.aspnetcore.authentication.jwtbearer.jwtbearerevents.onchallenge) is called last before a "401" response is returned.
 
 ### Step 1: Enable PII logging
 
-By default, personally identifiable information (PII) logging is disabled. Enable it in the Configure method of the Startup.cs file for debugging purposes.
+By default, personally identifiable information (PII) logging is disabled. Enable it in the **Configure** method of the Startup.cs file for debugging.
 
 > [!Caution]
-> Uses 'Microsoft.IdentityModel.Logging.IdentityModelEventSource.ShowPII = true' only in development environment for debugging purposes. Do not use it in a production environment.
+> Use 'Microsoft.IdentityModel.Logging.IdentityModelEventSource.ShowPII = true' only in a development environment for debugging. Do not use it in a production environment.
 
 ```csharp
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -74,7 +76,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     }
     else
     {
-        // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+        // The default HSTS value is 30 days. You might want to change this value for production scenarios. See https://aka.ms/aspnetcore-hsts.
         app.UseHsts();
     }
     // turn on PII logging
@@ -88,7 +90,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 ### Step 2: Create a utility method to format exception messages
 
-Add a method to format and flatten exception messages for better readability.
+Add a method to format, and flatten any exception messages for better readability:
 
 ```csharp
 public static string FlattenException(Exception exception)
@@ -103,9 +105,10 @@ public static string FlattenException(Exception exception)
     return stringBuilder.ToString();
 }
 ```
+
 ### Step 3: Implement JwtBearerEvents callbacks
 
-Configure the `JwtBearerEvents` callbacks in the `ConfigureServices` method of *Startup.cs* to handle authentication events and log error details.
+Configure the `JwtBearerEvents` callbacks in the `ConfigureServices` method of *Startup.cs* to handle authentication events and log error details:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -162,9 +165,10 @@ public void ConfigureServices(IServiceCollection services)
 ...
 }
 ```
+
 ### Sample results
 
-With the implementation, when a 401 Unauthorized error occurs, the response output should include detailed error messages, such as:
+With the implementation, when a "401 Unauthorized" error occurs, the response output should include detailed error messages, such as the following:
 
 ```Output
 OnMessageRecieved:
@@ -172,11 +176,8 @@ OnMessageRecieved:
 Authorization Header sent: no Bearer token sent.
 ```
 
-If you use API development tool to debug the request, you should receive the detail errors such as the following:
+If you use the API development tool to debug the request, you should receive error details, as shown in the following screenshot.
 
-:::image type="content" source="media/401-unauthorized-aspnet-core-web-api/wrong-token.png" alt-text="Screenshot of detail error in API development tool." lightbox="media/401-unauthorized-aspnet-core-web-api/wrong-token.png":::
-
-
+:::image type="content" source="media/401-unauthorized-aspnet-core-web-api/wrong-token.png" alt-text="Screenshot of error details in the API development tool." lightbox="media/401-unauthorized-aspnet-core-web-api/wrong-token.png":::
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
-
