@@ -79,7 +79,7 @@ To resolve this issue, use bootable media to reinstall Windows 10 on the device.
 
 ### Why do Wipe or Retire sometimes show as Pending indefinitely?
 
-Devices don't always report their status back to the Intune service before the reset or removal was started. So, the action shows as Pending. If you've confirmed the action was successful, delete the device from the service.
+Devices don't always report their status back to the Intune service before a reset or removal is started. So, the action shows as Pending. If you've confirmed the action was successful, delete the device from the service.
 
 ## Reset Passcode action
 
