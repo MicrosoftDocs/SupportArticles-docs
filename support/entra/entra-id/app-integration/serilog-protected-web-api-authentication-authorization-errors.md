@@ -1,7 +1,7 @@
 ---
 title: Use Serilog to troubleshoot protected Web API authentication or authorization errors
 description: Provides a sample web API application to troubleshoot Microsoft Entra protected Web API authentication or authorization errors using Serilog logs.
-ms.date: 04/28/2025
+ms.date: 05/07/2025
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ms.reviewer: bachoang, v-weizhu
@@ -51,6 +51,21 @@ Change the following information in the `AzureAd` section in the **appsettings.j
 ### Step 3: Change the sample application code
 
 Change the `ValidAudiences` and `ValidIssuers` properties of the [TokenValidationParameters](/dotnet/api/microsoft.identitymodel.tokens.tokenvalidationparameters) class in the **Program.cs** file.
+
+### Step 4: Configure Serilog
+
+Configure Serilog in the `Serilog` section in the **appsettings.json** file as follows:
+
+```json
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Debug",
+        "Microsoft.Hosting.Lifetime": "Information"
+      }
+    },
+```
 
 ## Set up logging for JwtBearer events
 
