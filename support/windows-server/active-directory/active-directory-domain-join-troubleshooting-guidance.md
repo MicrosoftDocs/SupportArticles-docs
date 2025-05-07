@@ -1,7 +1,7 @@
 ---
 title: Active Directory domain join troubleshooting guidance
 description: Provides guidance to troubleshoot domain join issues.
-ms.date: 01/15/2025
+ms.date: 05/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -51,79 +51,17 @@ The following table lists the ports required to be open between the client compu
 
 ## Common issues and solutions
 
-### Error code 0x569
-
-For more information, see [Error code 0x569: The user has not been granted the requested logon type at this computer](error-0x569-not-granted-logon-type.md).
-
-### Error code 0x6BF or 0xC002001C
-
-For more information, see [Status code 0x6bf or 0xc002001c: The remote procedure call failed and did not execute](status-code-0x6bf-0xc002001c.md).
-
-### Error code 0x6D9
-
-See [Domain join error 0x6D9 "There are no more endpoints available from the endpoint mapper"](./domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md) for troubleshooting guide.
-
-### Error code 0xa8b
-
-For more information, see [Error code 0xa8b: An attempt to resolve the DNS name of a DC in the domain being joined has failed](error-0xa8b-resolve-dns-fail.md).
-
-### Error code 0x40
-
-For more information, see [Domain join error 0x40 "The specified network name is no longer available"](domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md).
-
-### Error code 0x54b
-
-For more information, see [Domain join error code 0x54b](error-code-0x54b.md).
-
-### Error code 0x0000232A
-
-Error 0x0000232A is logged when the client computer lacks NetBIOS name resolution to the domain.
-
-:::image type="content" source="media/active-directory-domain-join-troubleshooting-guidance/error-0x0000232a-message.png" alt-text="Screenshot of the dialog box showing the error message for error code 0x0000232A.":::
-
-Here's an example of the error message:
-
-> Note: This information is intended for a network administrator.  If you are not your network's administrator, notify the administrator that you received this information, which has been recorded in the file C:\WINDOWS\debug\dcdiag.txt.
->
-> The domain name "\<NetBIOS_name\>" might be a NetBIOS domain name.  If this is the case, verify that the domain name is properly registered with WINS.
->
-> If you are certain that the name is not a NetBIOS domain name, then the following information can help you troubleshoot your DNS configuration.
->
-> The following error occurred when DNS was queried for the service location (SRV) resource record used to locate an Active Directory Domain Controller (AD DC) for domain "\<NetBIOS_name\>":
->
-> The error was: "DNS server failure."
-> (error code 0x0000232A RCODE_SERVER_FAILURE)
->
-> The query was for the SRV record for _ldap._tcp.dc._msdcs.\<NetBIOS_name\>
->
-> Common causes of this error include the following:
->
-> - The DNS servers used by this computer contain incorrect root hints. This computer is configured to use DNS servers with the following IP addresses:
->
-> \<ip_address\>
->
-> - One or more of the following zones contains incorrect delegation:
->
-> \<NetBIOS_name\>
-> . (the root zone)
-
-Here's an example from the *netsetup.log* file:
-
-```output
-mm/dd/yyyy hh:mm:ss:ms NetpValidateName: checking to see if '<NetBIOS_name>' is valid as type 3 name
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid for <NetBIOS_name> returned 0x54b, last error is 0x0
-mm/dd/yyyy hh:mm:ss:ms NetpCheckDomainNameIsValid [ Exists ] for '<NetBIOS_name>' returned 0x54b
-```
-
-When you enter the domain name, make sure you enter the DNS Domain Name rather than the NetBIOS name. For example, if the DNS name of the domain is contoso.com, make sure you enter that name instead of just contoso.
-
-### Error code 0x3a
-
-For more information, see [Status code 0x3a: The specified server cannot perform the requested operation](status-code-0x3a-server-not-perform-operation.md).
-
-### Error code 0x216d
-
-For more information, see [Status code 0x216d: Your computer could not be joined to the domain](status-code-0x216d-not-joined-domain.md).
+|Domain join error code|Cause|Related article|
+|---|---|---|
+|0x569|This error occurs because the domain join user account lacks the **Access this computer from the network** user right at the domain controller (DC) servicing the domain join operation.|[Troubleshooting error code 0x569: The user has not been granted the requested logon type at this computer](error-0x569-not-granted-logon-type.md) |
+|0x6BF or 0xC002001C|This error occurs when a network device (router, firewall, or virtual private network (VPN) device) rejects network packets between the client being joined and the domain controller (DC).|[Troubleshooting status code 0x6bf or 0xc002001c: The remote procedure call failed and did not execute](status-code-0x6bf-0xc002001c.md) |
+|0x6D9|This error occurs when network connectivity is blocked between the joining client and the Domain Controller (DC).|[Troubleshooting error code 0x6D9 "There are no more endpoints available from the endpoint mapper"](./domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md) |
+|0xa8b|This error occurs when you join a workgroup computer to a domain.|[Troubleshooting error code 0xa8b: An attempt to resolve the DNS name of a DC in the domain being joined has failed](error-0xa8b-resolve-dns-fail.md) |
+|0x40|The issue is related to getting Kerberos Tickets for a Server Message Block (SMB) session.|[Troubleshooting error code 0x40 "The specified network name is no longer available"](domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md) |
+|0x54b|This error occurs because the specified domain can't be contacted, pointing to issues locating domain controllers (DCs).|[Troubleshooting error code 0x54b](error-code-0x54b.md) |
+|0x0000232A|This error indicates that the Domain Name System (DNS) name can't be resolved.|[Troubleshooting error code 0x0000232A](error-code-0x0000232a.md) |
+|0x3a|This error occurs when the client computer lacks reliable network connectivity on Transmission Control Protocol (TCP) 389 port between the client computer and the domain controller (DC).|[Troubleshooting status code 0x3a: The specified server cannot perform the requested operation](status-code-0x3a-server-not-perform-operation.md) |
+|0x216d|This error occurs when the user account has exceeded the limit of 10 computers that can be joined to the domain, or when a Group Policy restricts users from joining computers to the domain.|[Troubleshooting status code 0x216d: Your computer could not be joined to the domain](status-code-0x216d-not-joined-domain.md) |
 
 ### Other errors that occur when you join Windows-based computers to a domain
 

@@ -1,19 +1,19 @@
 ---
-title: Error when you install SQL Server 2008 R2
-description: This article provides a resolution for various errors that occur when you try to install SQL Server 2008 R2.
-ms.date: 10/22/2020
+title: Error when you install SQL Server
+description: This article provides a resolution for various errors that occur when you try to install SQL Server.
+ms.date: 05/06/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ---
-# Error message when you try to install SQL Server 2008 R2
+# Error message when you try to install SQL Server
 
-This article helps you resolve various errors that occurs when you try to install SQL Server 2008 R2.
+This article helps you resolve various errors that occurs when you try to install SQL Server.
 
-_Original product version:_ &nbsp; SQL Server 2008 R2
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2449398
 
 ## Symptoms
 
-When you try to install Microsoft SQL Server 2008 R2, you receive one or more of the following error messages or experience one or more of the following symptoms. Additionally, you cannot continue with the setup.
+When you try to install Microsoft SQL Server, you receive one or more of the following error messages or experience one or more of the following symptoms. Additionally, you cannot continue with the setup.
 
 Setup error messages or symptoms
 
@@ -105,7 +105,7 @@ To resolve the problem, use one of the following methods:
 
     1. Open Windows Explorer. To do this, click **Start**, click **All Programs**, click **Accessories**, and then click **Windows Explorer**.
 
-    2. Locate and then click the folder: `C:\Program Files\Microsoft SQL Server\100\Setup Bootstrap\SQLServer2008R2\resources\1033`.
+    2. Locate and then click the folder: `C:\Program Files\Microsoft SQL Server\1XX\Setup Bootstrap\SQLXXX\resources\1033`.
 
     3. Right-click Setup.rll, and then click **Rename**.
 
@@ -126,18 +126,4 @@ To resolve the problem, use one of the following methods:
 
 The error messages that are mentioned in the [Symptoms](#symptoms) section may have other causes. If the steps in the [Resolution](#resolution) section do not resolve the problem, you may be experiencing a different problem.
 
-- For more information about how to install SQL Server 2008 R2, see [How to: Install SQL Server 2008 R2 (Setup)](/previous-versions/sql/sql-server-2008-r2/ms143219(v=sql.105)).
-
-- For more information about known issues when you install SQL Server on Windows 7 or on Windows Server 2008 R2, see [Known issues installing SQL Server on Windows 7 or Windows Server 2008 R2](https://support.microsoft.com/help/955725).
-
-## Applies to
-
-- SQL Server 2008 R2 Datacenter
-- SQL Server 2008 R2 Developer
-- SQL Server 2008 R2 Enterprise
-- SQL Server 2008 R2 Express
-- SQL Server 2008 R2 Express with Advanced Services
-- SQL Server 2008 R2 Standard
-- SQL Server 2008 R2 Standard Edition for Small Business
-- SQL Server 2008 R2 Web
-- SQL Server 2008 R2 Workgroup
+[SQL Server installation guide](/sql/database-engine/install-windows/install-sql-server)
