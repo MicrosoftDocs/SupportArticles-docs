@@ -184,7 +184,7 @@ The steps for troubleshooting an interrupted encryption depend on where the proc
 3. If necessary, work on a rescue VM and analyze the failed disk. For the OS disk, ensure the following things:
      - The required partitions are in place, and the data is healthy.
      - The [OS LUKS header file](unlock-encrypted-linux-disk-offline-repair.md#identify-the-header-file), `osluksheader`, is stored separately under the boot partition. If the disk is encrypted and this file is missing or corrupted, you can't recover the VM without a working backup.
-     - The initramfs contains the required ADE modules. If the required modules are missing, follow the steps in the [ADE modules missing from the initram image](#initram-miss) section.
+     - The initramfs contains the required ADE modules. If the required modules are missing, follow the steps in the [ADE modules are missing from the initram image](#initram-miss) section.
      - The BEK volume contains the [ADE key file](unlock-encrypted-linux-disk-offline-repair.md#identify-the-ade-key-file).
 
 4. If the ADE key file is missing, create a test VM and encrypt it (volume type data) using the original encryption settings that encrypt the faulty VM. Once encrypted, follow these steps:
