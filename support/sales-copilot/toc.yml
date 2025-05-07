@@ -2,8 +2,10 @@
   href: welcome-sales-copilot.yml
 - name: CRM permissions and configurations
   items:
+    - name: '"Access denied for this user" error'
+      href: crm-permissions-and-configurations/access-denied-sf-ss.md
     - name: '"Align missing fields" error'
-      href: crm-permissions-and-configurations/align-missing-fields-error.md        
+      href: crm-permissions-and-configurations/align-missing-fields-error.md      
     - name: Can't update records due to missing record access in Salesforce CRM
       href: crm-permissions-and-configurations/missing-record-update-edit-access.md
     - name: Can't update records due to missing object access in Salesforce CRM
@@ -24,8 +26,12 @@
       href: crm-permissions-and-configurations/no-column-error.md
     - name: Salesforce CRM users can't view, edit, or save data in Copilot for Sales
       href: crm-permissions-and-configurations/salesforce-permission-error.md
+    - name: '"Server-to-server authorization failed" error'
+      href: crm-permissions-and-configurations/auth-failed-sf-ss.md
     - name: '"This contact already exists" error when creating a CRM record'
       href: crm-permissions-and-configurations/duplicate-record-error.md
+    - name: '"Trouble connecting to Salesforce" error'
+      href: crm-permissions-and-configurations/trouble-connect-sf-ss.md
     - name: You don't have permission for this error
       href: crm-permissions-and-configurations/no-admin-exists-error.md
 - name: Outlook side panel
