@@ -219,7 +219,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
 3. Download the following packages:
 
     ```bash
-    sudo zypper --pkg-cache-dir /root/packages/ download cloud-regionsrv-client cloud-regionsrv-client-plugin-azure regionServiceClientConfigAzure python3-azuremetadata SUSEConnect python3-cssselect python3-toml python3-lxml python3-M2Crypto python3-zypp-plugin libsuseconnect suseconnect-ruby-bindings docker libcontainers-common
+    sudo zypper --pkg-cache-dir /root/packages/ download cloud-regionsrv-client cloud-regionsrv-client-plugin-azure regionServiceClientConfigAzure python3-azuremetadata SUSEConnect python3-cssselect python3-toml python3-lxml python3-M2Crypto python3-zypp-plugin libsuseconnect suseconnect-ruby-bindings docker libcontainers-common containerd libcontainers-sles-mounts runc
     ```
 4. Run the following commands:
 
