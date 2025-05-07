@@ -6266,6 +6266,11 @@
         "redirect_document_id": false
       },
       {
+        "source_path": "azure-kubernetes/create-upgrade-delete/subnet-with-external-resources-cannot-be-used-by-other-resources.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
         "source_path": "azure-kubernetes/create-upgrade-delete/error-code-requestdisallowedbypolicy-delete.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
         "redirect_document_id": false
