@@ -5,10 +5,6 @@
       items:
         - name: Can't save a JPEG attachment with a .jpg extension
           href: ../attachments/you-cannot-save-this-document-with-extension-jpg-error.md
-    - name: Authentication
-      items:
-        - name: Manage the Google sign-in prompt
-          href: ../authentication/manage-the-google-sign-in-prompt-in-outlook-2016.md
     - name: Calendars
       items:
         - name: Access Denied changing shared calendar permissions
