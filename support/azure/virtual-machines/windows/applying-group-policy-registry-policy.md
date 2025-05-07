@@ -1,7 +1,7 @@
 ---
-title: Windows VM Startup is Stuck On "Applying Group Policy Registry policy" in Azure
-description: Provides troubleshooting steps for an Azure virtual machine (VM) that is stuck in startup with the message "Applying Group Policy Registry policy"
-ms.date: 05/02/2025
+title: Azure Windows VM Startup Is Stuck On Applying Group Policy Registry Policy
+description: Provides troubleshooting steps for an Azure virtual machine (VM) that is stuck in startup with the message Applying Group Policy Registry policy.
+ms.date: 05/07/2025
 author: cwhitley-MSFT 
 ms.author: cwhitley
 ms.service: azure-virtual-machines
@@ -27,8 +27,6 @@ Further investigation is required to determine the specific cause of this issue.
 
 ## Collect memory dump for troubleshooting
 
-For this scenario, Azure Support requires a memory dump in order to be able to troubleshoot and diagnose the issue.
-
-Follow the steps in [this article](./collect-os-memory-dump-file.md) to collect a memory dump. Then, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
+If you experience this error, [collect an OS memory dump file](./collect-os-memory-dump-file.md) and then [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) for Azure support to troubleshoot and diagnose the issue.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
