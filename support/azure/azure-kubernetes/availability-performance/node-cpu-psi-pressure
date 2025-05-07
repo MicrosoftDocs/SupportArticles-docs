@@ -121,10 +121,13 @@ Review the following table to learn how to implement best practices for avoiding
 - `node_pressure_cpu_waiting_seconds_total`: Cumulative time tasks have been waiting for CPU.
 - `node_cpu_seconds_total`: Traditional CPU utilization for comparison.
 
-### Pod-level PSI indicators
+### Container-level PSI indicators
 - `container_cpu_cfs_throttled_periods_total`: The number of periods a container has been throttled.
 - `container_cpu_cfs_throttled_seconds_total`: Total time a container has been throttled.
 - Throttling percentage: `rate(container_cpu_cfs_throttled_periods_total[5m]) / rate(container_cpu_cfs_periods_total[5m]) * 100`
+
+>[!NOTE]
+> If a node's CPU usage is moderate, but the containers on the node are experiencing CFS throttling, consider increasing the resource limits.
 
 ## References
 
