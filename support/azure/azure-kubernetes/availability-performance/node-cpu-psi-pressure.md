@@ -110,6 +110,7 @@ Review the following table to learn how to implement best practices for avoiding
 | Best practice | Description |
 |---|---|
 |[Focus on PSI metrics instead of utilization](https://docs.kernel.org/accounting/psi.html)|Use PSI metrics as your primary indicator of resource contention rather than CPU utilization percentages.|
+|[Identify pods utilizing the most CPU](./identify-high-cpu-consuming-containers-aks.md)|Isolate the pods that are utilizing the most CPU and identify solutions to reduce pressure.|
 |[Minimize CPU limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)|Consider removing CPU limits and rely on [Linux's Completely Fair Scheduler](https://docs.kernel.org/scheduler/sched-design-CFS.html) with CPU shares based on requests.|
 |[Use appropriate QoS classes](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)|Set the right Quality of Service class for each pod based on its importance and contention sensitivity.|
 |[Optimize pod placement](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)|Use pod anti-affinity rules to avoid placing CPU-intensive workloads on the same nodes.|
