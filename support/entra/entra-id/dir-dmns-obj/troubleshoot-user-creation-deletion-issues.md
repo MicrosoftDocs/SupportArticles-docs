@@ -74,7 +74,7 @@ Content-type: application/json {
 }
 ```
 
-## [Microsoft Graph PowerShell](#tab/azure-powershell)
+## [Microsoft Graph PowerShell](#tab/microsoft-graph-powerShell)
 
 To add a user in Microsoft Graph PowerShell, run the [New-MgUser](/powershell/module/microsoft.graph.users/new-mguser?view=graph-powershell-1.0&preserve-view=true) cmdlet. To run this command, you must connect to Microsoft Graph with at least the `User.ReadWrite.All` permission.
 
@@ -137,7 +137,7 @@ For example, if you want to delete a user who has a principal name of `NewUser@c
 DELETE https://graph.microsoft.com/v1.0/users/NewUser@contoso.onmicrosoft.com
 ```
 
-## 【Microsoft Graph PowerShell](#tab/azure-powershell)
+## 【Microsoft Graph PowerShell](#tab/microsoft-graph-powerShell)
 
 To delete a user in Azure PowerShell, run the [Remove-MgUser](/powershell/module/microsoft.graph.users/remove-mguser?view=graph-powershell-1.0&preserve-view=true) cmdlet. To run this command, you must connect to Microsoft Graph with at least the `User.DeleteRestore.All` permission.
 
