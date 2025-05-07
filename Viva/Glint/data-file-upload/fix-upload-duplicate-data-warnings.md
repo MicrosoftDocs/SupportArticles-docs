@@ -3,7 +3,7 @@ title: Resolve File Upload Warnings Related to Duplicate Data
 description: Fix duplicate data warnings that occur when you upload employee attribute data to Microsoft Viva Glint.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 04/14/2025
+ms.date: 04/17/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -74,7 +74,7 @@ Warning message:
 
 > DUPLICATED_EMAIL: The Email Address \<Email address, such as user@contoso.com\> in the user file is already assigned to a different user in your Viva Glint People Database.
 
-This issue occurs because one or more users in the uploaded file are assigned an email address that's already associated with a user whose record is in a [soft-deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) in Viva Glint. 
+This issue occurs because one or more users in the uploaded file are assigned an email address that's already associated with a user whose record is in a [soft-deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) in Viva Glint, but the uploaded Employee ID doesn't match the employee ID of the soft-deleted user. 
 
 ### Resolution
 
@@ -83,7 +83,8 @@ This issue occurs because one or more users in the uploaded file are assigned an
 1. Verify that the email address that's mentioned in the warning message corresponds to a user who was deleted in Viva Glint within the last 30 days. Then, perform one of the following actions:
 
      - If the user should remain deleted from Viva Glint, remove their records from the file. Then, upload the file again.
-     - If the user should be restored in Viva Glint, wait 30 days after the deletion date to allow the user to become completely deleted. Then, upload their records to Viva Glint as a new user.
+     - If the user should be restored in Viva Glint, and 30 days have passed since the deletion date, upload their record to Viva Glint as a new user.
+     - If the user should be restored from their soft-deleted state before 30 days pass, upload their record to Viva Glint by using the same email address and Employee ID values that are tied to their soft-deleted record. Employee ID information isn't available in Viva Glint for soft-deleted users. However, admins can verify the user's Employee ID in Entra.
 
 ## DUPLICATED_EXTERNAL_USER_ID
 

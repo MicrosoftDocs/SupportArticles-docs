@@ -27,8 +27,6 @@
       href: ../access-management/set-language-and-region.md
     - name: This feature has been disabled by your administrator
       href: ../access-management/office-feature-disabled.md
-    - name: User name or password is incorrect
-      href: ../access-management/connect-msolservice-office-365-azure.md
     - name: Users properties revert to original values
       href: ../access-management/properties-revert-to-original-values.md
     - name: Your account has been blocked
@@ -49,14 +47,10 @@
       href: ../active-directory/cant-change-phone-number-with-mfa.md
     - name: Can't set up security verification settings
       href: ../active-directory/sorry-we-cant-process-your-request-error.md
-    - name: '"Connect-MsolService: Exception of type was thrown"'
-      href: ../active-directory/connect-msoservice-throw-exception.md
     - name: Directory Sync tool stops syncing objects
       href: ../active-directory/directory-sync-tool-not-sync-object.md
     - name: Email address contains an underscore character
       href: ../active-directory/email-address-contain-underscore.md
-    - name: Error when connecting with Entra ID module
-      href: ../active-directory/connect-error-0x800488ee.md
     - name: Error when you run IdFix tool
       href: ../active-directory/idfix-tool-running-error.md
     - name: Error when you run the IdFix tool in AD DS
@@ -65,14 +59,6 @@
       href: ../active-directory/errors-using-azure-ad-custom-apps.md
     - name: Exception Error when you run Directory Sync Configuration wizard
       href: ../active-directory/exception-with-azure-ad-sync.md
-    - name: How to restore deleted user accounts
-      href: ../active-directory/restore-deleted-user-accounts.md
-    - name: Invalid attributes prevent directory synchronization
-      href: ../active-directory/duplicate-attributes-prevent-dirsync.md
-    - name: Pending state issue with directory synchronization
-      href: ../active-directory/pending-state-issue-with-directory-synchronization.md
-    - name: Set up AD FS for Microsoft 365 for single sign-on
-      href: ../active-directory/set-up-adfs-for-single-sign-on.md
     - name: Set up single sign-on
       href: ../active-directory/set-up-single-sign-on.md
     - name: Signing in to Microsoft 365 fails
@@ -83,14 +69,10 @@
       href: ../active-directory/support-options-of-set-single-sign-on.md
     - name: Troubleshoot single sign-on issues
       href: ../active-directory/single-sign-on-issues.md
-    - name: Update or repair federated domain settings
-      href: ../active-directory/update-federated-domain-office-365.md
     - name: User passwords not synced from AD DS
       href: ../active-directory/password-synchronization-not-activated.md
   - name: Authentication
     items:
-    - name: 80041317 or 80043431 during sign-in
-      href: ../authentication/office-365-sign-in-error-80041317-80043431.md
     - name: 8004789A when signing in to Microsoft 365
       href: ../authentication/federated-user-sign-in-to-office-365.md
     - name: 80048163 when federated user tries to sign in
@@ -103,16 +85,12 @@
       href: ../authentication/cannot-sign-in-microsoft-365-desktop-apps.md  
     - name: Certificate-based authentication fails on iOS
       href: ../authentication/certificate-based-authentication-fails-on-ios.md
-    - name: Certificate warning from AD FS
-      href: ../authentication/certificate-warning-from-ad-fs.md
     - name: Connection issues when signing in Office 2016
       href: ../authentication/connection-issue-when-sign-in-office-2016.md
     - name: Deleted app passwords still work
       href: ../authentication/deleted-authentication-passwords-still-work.md
     - name: Disabling ADAL or WAM not recommended for fixing Microsoft 365 sign-in or activation issues
       href: ../administration/disabling-adal-wam-not-recommended.md
-    - name: Error when federated users sign out
-      href: ../authentication/problem-with-websites-security-error.md
     - name: Federated users account issues
       href: ../authentication/account-issues-for-federated-users.md
     - name: Federation Service certificates are expiring
@@ -141,10 +119,6 @@
       href: ../administration/add-domain-option-missing.md
     - name: '"Cannot continue" error when starting Desktop Setup Tool'
       href: ../administration/error-when-start-desktop-setup-tool.md
-    - name: '"Remove" link is unavailable'
-      href: ../administration/remove-domain-link-unavailable.md
-    - name: A user with this name couldn't be found
-      href: ../administration/user-found-error-fails-resetting-password.md
     - name: Application can't be started
       href: ../administration/office-365-application-cannot-be-started.md
     - name: Can't add a domain
@@ -161,20 +135,12 @@
       href: ../administration/child-domain-fails-inherit-parent-domain-changes.md
     - name: Click-to-Run compatibility with add-ins
       href: ../administration/click-to-run-compatibility-with-add-in.md
-    - name: Domain errors in the Microsoft 365 portal
-      href: ../administration/domain-errors-in-office-365-portal.md
-    - name: Domain has associated subdomains
-      href: ../administration/fails-removing-domain.md
-    - name: Domain removal fails
-      href: ../domain-management/domain-removal-fails.md
     - name: Domain shows "Setup in progress"
       href: ../administration/setup-in-progress-office-365-portal.md
     - name: Enable or disable hyperlink warning messages
       href: ../administration/enable-disable-hyperlink-warning.md
     - name: Issue when removing a domain
       href: ../administration/error-remove-domain-from-office-365.md
-    - name: SupportMultipleDomain switch when managing SSO
-      href: ../administration/supportmultipledomain-switch-when-manage-sso.md
   - name: Group Policy
     items:
     - name: Block OneDrive use from Office
@@ -243,8 +209,6 @@
       href: ../licensing/subscription-automatic-license-renew-fails.md
     - name: Microsoft 365 subscription automatic license renewal fails
       href: ../licensing/subscription-license-renewal-fail.md
-    - name: Use Microsoft 365 PowerShell to manage Microsoft Planner licenses
-      href: ../licensing/how-to-use-office-365-powershell-to-manage-microsoft-planner-licenses.md
   - name: Miscellaneous
     items:
     - name: Can't connect to the Azure Information Protection service
@@ -267,8 +231,6 @@
       href: ../miscellaneous/web-sites-lose-ssl-certificate-bindings.md
   - name: Sign-in
     items:
-    - name: AD FS sign-in webpage not displayed
-      href: ../sign-in/ad-fs-sign-in-page-not-display.md
     - name: Can't sign in to an Office 2016 for Mac app
       href: ../sign-in/sign-in-to-office-2016-for-mac-fail.md
     - name: Can't sign in to Microsoft cloud service
@@ -279,10 +241,6 @@
       href: ../sign-in/sign-in-to-office-365-azure-intune.md
     - name: Can't sign out of Microsoft 365, Azure, or Intune
       href: ../sign-in/cannot-sign-out-cloud-service.md
-    - name: Can't remove this domain
-      href: ../sign-in/unable-remove-domain-office-365.md
-    - name: Can't reset this user's password
-      href: ../sign-in/unable-reset-user-password-sso.md
     - name: Error when federated users sign in to Microsoft 365
       href: ../sign-in/federated-users-sign-in-error-ad-fs.md
     - name: Error when you access emails in Microsoft 365
@@ -291,8 +249,6 @@
       href: ../sign-in/federated-user-repeatedly-prompted-for-credentials.md
     - name: Forgot sign-in password to Microsoft 365, Azure, or Intune
       href: ../sign-in/forgot-sign-in-password.md
-    - name: Issue when sign in Microsoft 365
-      href: ../sign-in/exchange-online-application-service-principal-disabled.md
     - name: Issue with activate or sign in to Office Mobile
       href: ../sign-in/permission-error-activating-office-mobile.md
     - name: Microsoft 365 users aren't automatically signed into Office

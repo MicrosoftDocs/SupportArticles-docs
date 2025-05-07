@@ -10,20 +10,20 @@ ms.author: luche
 ms.custom: 
   - CI 115151
   - CSSTroubleshoot
-  - has-azure-ad-ps-ref
+  - no-azure-ad-ps-ref 
 ms.reviewer: timball
 search.appverid: 
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 06/06/2024
+ms.date: 04/18/2025
 ---
 
 # "Invalid user name" when you try to create a user name that contains a special character in Microsoft 365
 
 ## Problem
 
-When you create a user name that contains a special character in Microsoft 365, you receive one of the following error messages: 
+When you create a user name that contains a special character in Microsoft 365, you receive one of the following error messages:
 
 Within the Microsoft 365 portal
 
@@ -32,20 +32,11 @@ Invalid user name
 Only letters and numbers are allowed. No spaces.
 ```
 
-Within Microsoft Azure Active Directory module for Windows PowerShell
-
-```output
-New-MsolUser : Invalid value for parameter. Parameter Name: UserPrincipalName.
-At line:1 char:13
-```
-
 Within Exchange Online Windows PowerShell
 
 ```output
 A Windows Live error occurred while provisioning for "user+invalid_characters@contoso.com". The e-mail name contains invalid characters.
 ```
-
-[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ## Cause
 

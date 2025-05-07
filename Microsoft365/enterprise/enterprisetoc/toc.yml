@@ -37,8 +37,6 @@
     items:
     - name: '"Invalid provider specified" with using Office 2016'
       href: ../authentication/invalid-provider-specified-error.md
-    - name: Can't sign in Microsoft 365 from multiple federated domains
-      href: ../authentication//cant-sign-in-office-365-multiple-domain-federation.md
   - name: Miscellaneous
     items:
     - name: Can't find or insert any clip art
