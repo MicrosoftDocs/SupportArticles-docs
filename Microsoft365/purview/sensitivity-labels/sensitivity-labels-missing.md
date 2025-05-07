@@ -15,16 +15,16 @@ ms.reviewer: sathyana, lindabr, gbratton, meerak, v-shorestris
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 08/01/2024
+ms.date: 05/07/2025
 ---
 
 # Sensitivity labels are missing in Outlook, Outlook on the web, and other Office apps
 
-<!-- This article has been reviewed and approved for the specific use of global admin perms.  -->
+<!-- This article has been reviewed and approved for the specific use of global admin perms. -->
 
 ## Symptoms
 
-You have configured sensitivity labels in the [Microsoft Purview compliance portal](https://compliance.microsoft.com/) to classify and protect user documents and email messages in your organization. When your users try to [apply the sensitivity labels](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in Outlook, Outlook on the web, or other Office apps, the sensitivity labels are missing, or the **Sensitivity** button isn't available. 
+You have configured sensitivity labels in the [Microsoft Purview portal](https://purview.microsoft.com/) to classify and protect user documents and email messages in your organization. When your users try to [apply the sensitivity labels](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in Outlook, Outlook on the web, or other Office apps, the sensitivity labels are missing, or the **Sensitivity** button isn't available. 
 
 For issues related to sensitivity labels, [run an automated diagnostic for sensitivity labels](#run-the-diagnostic-for-sensitivity-labels) in the Microsoft 365 admin center. The diagnostic analyzes the sensitivity labels, identifies any issues, and provides resolutions.
 
@@ -54,7 +54,7 @@ If you ran the diagnostic but your issue isn't resolved, check the following art
 This issue occurs for one or more of the following reasons:
 
 - The user account that's signed in to Outlook isn't a Microsoft 365 subscriber.
-- The security labels aren't [published](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do) in the Microsoft Purview compliance portal.
+- The security labels aren't [published](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do) in the Microsoft Purview portal.
 - [The Outlook version](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-outlook) doesn't support the built-in labeling.
 - The label policy distribution process isn't successful.
 
@@ -63,7 +63,7 @@ This issue occurs for one or more of the following reasons:
 To resolve this issue, use one or more of the following methods:
 
 - Verify that the user account that's signed in to Outlook is a Microsoft 365 subscriber.
-- Verify that the [sensitivity labels are published](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) in the Microsoft Purview compliance portal.
+- Verify that the [sensitivity labels are published](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) in the Microsoft Purview portal.
 - Verify that the Outlook version meets the requirements that are listed in [Sensitivity label capabilities in Outlook](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-outlook).
 - Verify that the label policy distribution is successful. To do this, run the following PowerShell cmdlet:
 
@@ -88,7 +88,7 @@ To resolve this issue, use one or more of the following methods:
     1. Exit Outlook and all other Office apps.
     1. Navigate to the *%localappdata%\Microsoft\Office\CLP* directory. In this directory, the *\<domain.com>.policy.xml* file contains the information about the sensitivity labels that are assigned to the user profile.
     1. Rename the **CLP** folder. For example, rename it as *CLP_old*.
-    1. Restart Outlook. Then, Outlook will connect or authenticate to the Microsoft Information Protection services and download the labels or policies.
+    1. Restart Outlook. Then, Outlook will connect or authenticate to the Microsoft Purview Information Protection services and download the labels or policies.
 
 ## Outlook on the web
 
@@ -133,7 +133,7 @@ If the sensitivity labels are configured incorrectly, you can reconfigure them b
 This issue occurs for one or more of the following reasons:
 
 - The user account that's signed in to the Office apps isn't a Microsoft 365 subscriber.
-- The security labels aren't [published](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do) in the Microsoft Purview compliance portal.
+- The security labels aren't [published](/microsoft-365/compliance/sensitivity-labels#what-label-policies-can-do) in the Microsoft Purview portal.
 - There's no valid subscription to the Office edition.
 - Office file types aren't supported.
 - Office built-in labeling is turned off through Group Policy.
@@ -144,7 +144,7 @@ This issue occurs for one or more of the following reasons:
 To resolve this issue, use one or more of the following methods:
 
 - Verify that the user account that's signed in to the Office apps is a Microsoft 365 subscriber.
-- Verify that the [sensitivity labels are published](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) in the Microsoft Purview compliance portal.
+- Verify that the [sensitivity labels are published](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) in the Microsoft Purview portal.
 - Verify that the Office app version meets the requirements that are listed in [Sensitivity label capabilities in Word, Excel, and PowerPoint](/microsoft-365/compliance/sensitivity-labels-office-apps#sensitivity-label-capabilities-in-word-excel-and-powerpoint).
 - Verify that Office file types are supported for built-in labeling.
 - Verify that the Office apps are using built-in labeling by checking the following registry subkeys:
