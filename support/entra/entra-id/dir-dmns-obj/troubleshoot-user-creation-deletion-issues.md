@@ -76,12 +76,13 @@ Content-type: application/json {
 
 ## [Microsoft Graph PowerShell](#tab/azure-powershell)
 
-To add a user in Microsoft Graph PowerShell, run the [New-MgUser](/powershell/module/microsoft.graph.users/new-mguser?view=graph-powershell-1.0)) cmdlet:
+To add a user in Microsoft Graph PowerShell, run the [New-MgUser](/powershell/module/microsoft.graph.users/new-mguser?view=graph-powershell-1.0)) cmdlet. To run this command, you must connect to Microsoft Graph with at least the `User.ReadWrite.All` permission.
 
 ```powershell
 $PasswordProfile = @{
   Password = 'xWwvJ]6NMw+bWH-d'
   }
+Connect-MgGraph -Scopes "User.ReadWrite.All"
 New-MgUser -DisplayName 'Rene Magi' -PasswordProfile $PasswordProfile -AccountEnabled -MailNickName 'ReneMagi' -UserPrincipalName 'ReneMagi@contoso.com'
 ```
 
