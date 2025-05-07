@@ -47,11 +47,11 @@ You can capture screenshots immediately before and after a failing step in unatt
 
 1. Set the **Save screenshot to:** field to **File** and specify a file path and name for the image, ensuring "before" is included in the file name. Select **Save**.
 
-   :::image type="content" source="media/troubleshoot-unattended-runs-with-screenshots/screenshot-parameters-before.png" alt-text="Screenshot of specifying a file name that includes "before" in the name.":::
+   :::image type="content" source="media/troubleshoot-unattended-runs-with-screenshots/screenshot-parameters-before.png" alt-text="Screenshot of specifying a file name that includes before in the name.":::
 
 1. Add another **Take screenshot** action and specify a file path and name for the image, ensuring "after" is included in the file name. Select **Save**.
 
-   :::image type="content" source="media/troubleshoot-unattended-runs-with-screenshots/screenshot-parameters-after.png" alt-text="Screenshot of specifying a file name that includes "after" in the name.":::
+   :::image type="content" source="media/troubleshoot-unattended-runs-with-screenshots/screenshot-parameters-after.png" alt-text="Screenshot of specifying a file name that includes after in the name.":::
 
 1. Surround the failing action with the screenshot actions.
 
