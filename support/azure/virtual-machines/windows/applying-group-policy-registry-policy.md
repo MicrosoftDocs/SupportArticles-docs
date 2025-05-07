@@ -1,5 +1,5 @@
 ---
-title: Azure Windows VM Startup Is Stuck On Applying Group Policy Registry Policy
+title: Azure Windows VM Startup Is Stuck on Applying Group Policy Registry Policy
 description: Provides troubleshooting steps for an Azure virtual machine (VM) that is stuck in startup with the message Applying Group Policy Registry policy.
 ms.date: 05/07/2025
 author: cwhitley-MSFT 
