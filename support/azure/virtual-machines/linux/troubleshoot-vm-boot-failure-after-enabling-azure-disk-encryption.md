@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot Linux VM boot failure after enabling Azure Disk Encryption
-description: Provides troubleshooting steps to an issue where an Azure Linux virtual machine fails to boot after deploying Azure Disk Encryption fails.
-ms.date: 04/30/2025
+title: Troubleshoot Linux VM Boot Failure After Enabling Azure Disk Encryption
+description: Provides troubleshooting steps for an issue where an Azure Linux virtual machine fails to boot after deploying Azure Disk Encryption.
+ms.date: 05/07/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:Azure Disk Encryption (ADE) for Linux, linux-related-content
 ms.reviewer: divargas, elcorral, v-weizhu
@@ -10,7 +10,7 @@ ms.reviewer: divargas, elcorral, v-weizhu
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-When you deploy Azure Disk Encryption (ADE) for an Azure Linux virtual machine (VM), various essential settings related to the boot process and system components are modified by editing files. If the ADE deployment fails or is interrupted, the VM might become stuck in emergency mode or unusable, especially when the operating system (OS) disk is encrypted.
+When you deploy Azure Disk Encryption (ADE) for an Azure Linux virtual machine (VM), various essential settings related to the boot process and system components are modified by editing files. If the ADE deployment fails or is interrupted, the VM might be stuck in emergency mode or unusable, especially when the operating system (OS) disk is encrypted.
 
 This article lists common scenarios where a Linux VM fails to boot after an ADE deployment and provides steps to troubleshoot the issue.
 
@@ -22,9 +22,9 @@ In all scenarios, you should [take a snapshot](/azure/virtual-machines/linux/sna
 
 To troubleshoot Linux VM boot issues, check the extension logs in the Azure serial console or the extension log file `/var/log/azure/Microsoft.Azure.Security.AzureDiskEncryptionForLinux/extension.log`.
 
-## <a id="initram-miss"> </a> Scenario 1: ADE modules are missing in the initramfs image
+## <a id="initram-miss"> </a> Scenario 1: ADE modules are missing from the initramfs image
 
-If the OS disk uses Logical Volume Manager (LVM) and you see a warning message like the following text, the required modules aren't included in the initial ram disk image:
+If the OS disk uses Logical Volume Manager (LVM) and you see a warning message like the following text, the required modules aren't included in the initial RAM disk image:
 
  ```output
  Warning: /dev/mapper/rootvg-rootlv does not exist 
@@ -36,8 +36,8 @@ If the OS disk uses Logical Volume Manager (LVM) and you see a warning message l
 To resolve this issue, follow these steps:
 
 1. [Restore the VM from a backup](/azure/backup/restore-azure-encrypted-virtual-machines) and attempt the encryption again.
-2. If a restore isn't feasible, use the Azure CLI extension [az vm repair](unlock-encrypted-linux-disk-offline-repair.md#method1) to create a repair VM, or use the [manual method](unlock-encrypted-linux-disk-offline-repair.md#method2) to create a rescue VM, then attach and unlock the OS disk of the faulty VM to that repait/rescue VM.
-3. Once you are in [chroot](chroot-environment-linux.md), execute the following commands:
+2. If a restore isn't feasible, use the Azure CLI extension [az vm repair](unlock-encrypted-linux-disk-offline-repair.md#method1) to create a repair VM, or use the [manual method](unlock-encrypted-linux-disk-offline-repair.md#method2) to create a rescue VM. Then, attach and unlock the OS disk of the faulty VM to that repair/rescue VM.
+3. Once you're in [chroot](chroot-environment-linux.md), execute the following commands:
 
     > [!NOTE]
     > Replace the kernel and extension version accordingly in the following commands.
@@ -53,7 +53,7 @@ To resolve this issue, follow these steps:
     2. Regenerate the initramfs image:
 
         ```bash
-        sudo dracut -f -v /boot/initramfs-X.XX.X-XXX.XX.X.x86_64.img <kernal version>
+        sudo dracut -f -v /boot/initramfs-X.XX.X-XXX.XX.X.x86_64.img <kernel version>
         ```
 
     3. Test the modified kernel by booting the VM from it. If it works, regenerate any remaining initramfs files.
@@ -61,7 +61,7 @@ To resolve this issue, follow these steps:
     ### [Ubuntu](#tab/ubuntu)
 
     > [!NOTE]
-    > This procedure might also apply to boot issues that occur after a VM upgrades from Ubuntu 18 to Ubuntu 20.
+    > This procedure might also apply to boot issues that occur after a VM is upgraded from Ubuntu 18 to Ubuntu 20.
 
     1. Copy the following files from the extension configuration directory to the initramfs scripts directory:
 
@@ -71,7 +71,7 @@ To resolve this issue, follow these steps:
         sudo cp crypt-ade-hook /usr/share/initramfs-tools/hooks/
         ```
 
-    2. Once the file `crypt-ade-boot` is copied, list the OS partition from `/dev/disk/by-partuuid/` by Universally Unique Identifier (UUID):
+    2. Once the `crypt-ade-boot` file is copied, list the OS partition from `/dev/disk/by-partuuid/` by Universally Unique Identifier (UUID):
 
         ```bash
         sudo ls -l /dev/disk/by-partuuid/ | grep -w <partition containing the OS>
@@ -156,7 +156,7 @@ To resolve this issue, follow these steps:
 
 ## Scenario 2: The encryption is interrupted
 
-The steps for troubleshooting an interrupted encryption depend on where the process is interrupted. In some scenarios, [restoring from backup](/azure/backup/restore-azure-encrypted-virtual-machines) might be the only option.
+The steps for troubleshooting an interrupted encryption depend on where the process is interrupted. In some scenarios, [restoring from a backup](/azure/backup/restore-azure-encrypted-virtual-machines) might be the only option.
 
 1. Check the serial console logs for any error messages.
 
@@ -182,16 +182,16 @@ The steps for troubleshooting an interrupted encryption depend on where the proc
 2. Ensure all the [extension prerequisites](/azure/virtual-machines/linux/disk-encryption-overview#additional-vm-requirements) are met.
 
 3. If necessary, work on a rescue VM and analyze the failed disk. For the OS disk, ensure the following things:
-     - The required partitions are in place and the data is healthy.
-     - The [OS LUKS header file](unlock-encrypted-linux-disk-offline-repair.md#identify-the-header-file) is called `osluksheader` and stored separately under the boot partition. If the disk is encrypted and this file is missing or corrupted, there's no way to recover the VM unless you have a working backup.
-     - The initramfs contains the required ADE modules. If the required modules are missing, follow the steps in the [ADE modules missing in the initram image](#initram-miss) section.
+     - The required partitions are in place, and the data is healthy.
+     - The [OS LUKS header file](unlock-encrypted-linux-disk-offline-repair.md#identify-the-header-file), `osluksheader`, is stored separately under the boot partition. If the disk is encrypted and this file is missing or corrupted, you can't recover the VM without a working backup.
+     - The initramfs contains the required ADE modules. If the required modules are missing, follow the steps in the [ADE modules missing from the initram image](#initram-miss) section.
      - The BEK volume contains the [ADE key file](unlock-encrypted-linux-disk-offline-repair.md#identify-the-ade-key-file).
 
 4. If the ADE key file is missing, create a test VM and encrypt it (volume type data) using the original encryption settings that encrypt the faulty VM. Once encrypted, follow these steps:
      1. Copy the ADE key file in the BEK volume on the test VM.
      2. Start the faulty VM.
-     3. While in the emergency mode, [identify the ADE key file](unlock-encrypted-linux-disk-offline-repair.md#identify-the-ade-key-file) and then [identify the header file](unlock-encrypted-linux-disk-offline-repair.md#identify-the-header-file).
-     4. Based on the disk layout LVM or raw, [open the disk from encryption manually](unlock-encrypted-linux-disk-offline-repair.md#unlock-by-files).
+     3. In the emergency mode, [identify the ADE key file](unlock-encrypted-linux-disk-offline-repair.md#identify-the-ade-key-file) and [the header file](unlock-encrypted-linux-disk-offline-repair.md#identify-the-header-file).
+     4. Based on the disk layout (LVM or raw), [open the disk from encryption manually](unlock-encrypted-linux-disk-offline-repair.md#unlock-by-files).
      5. Boot the VM.
      6. If the ADE key file is still missing and the BEK volume is mounted, manually create a file called `/mnt/azure_bek_disk/LinuxPassPhraseFileName` with the ADE key file contents.
      7. Reboot the VM.
@@ -200,20 +200,20 @@ The steps for troubleshooting an interrupted encryption depend on where the proc
 ## Scenario 3: There isn't enough space in the boot partition (Ubuntu)
 
 > [!NOTE]
-> Starting with [Ubuntu 24](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.ubuntu-24_04-lts?tab=Overview), images come with a separate boot partition with at least 1 GB size.
+> Starting with [Ubuntu 24](https://azuremarketplace.microsoft.com/marketplace/apps/canonical.ubuntu-24_04-lts?tab=Overview), images come with a separate boot partition of at least 1 GB.
 
-ADE requires a separate boot partition. During an extension deployment, it creates `/boot` as a separate partition and restores the original files. At the end of this process, a new initial ram disk file is created. If there's insufficient space, this step fails. This scenario is complex due to many variants. When the OS disk uses ADE, [resizing the OS disk](/azure/virtual-machines/linux/how-to-resize-encrypted-lvm#scenarios) isn't supported. Currently, only Ubuntu images might fall under this process of boot split.
+ADE requires a separate boot partition. During an extension deployment, it creates `/boot` as a separate partition and restores the original files. At the end of this process, a new initial RAM disk file is created. If there's insufficient space, this step fails. This scenario is complex due to many variants. When the OS disk uses ADE, [resizing the OS disk](/azure/virtual-machines/linux/how-to-resize-encrypted-lvm#scenarios) isn't supported. Currently, only Ubuntu images might fall under this boot split process.
 
 To prevent this issue, perform the following actions:
 
-1. Delete old kernels not in use.
+1. Delete unused old kernels.
 2. Ensure only the necessary files are under `/boot`.
 
-## Scenario 3: The VFAT kernel module is disabled
+## Scenario 4: The VFAT kernel module is disabled
 
-The VFAT kernel module must be enabled to mount the BEK volume. If not, the ADE key file isn't available, which causes that the disk can't be unlocked. To proceed with the encryption, [enable the VFAT module](vfat-disabled-boot-issues.md#ade-encrypted-vm-is-unable-to-access-root-volume).
+The VFAT kernel module must be enabled to mount the BEK volume. If not, the ADE key file isn't available, which prevents the disk from being unlocked. To proceed with the encryption, [enable the VFAT module](vfat-disabled-boot-issues.md#ade-encrypted-vm-is-unable-to-access-root-volume).
 
-## Scenario 4: Required packages fail to install
+## Scenario 5: Required packages fail to install
 
 The ADE extension installs required packages if they aren't installed by default. If this package installation fails, the encryption fails.
 
@@ -237,19 +237,19 @@ To determine the cause of package installation failures, follow these steps:
 
     For more information about troubleshooting repository issues, see [Troubleshoot common issues in the yum and dnf package management tools for Linux](yum-dnf-common-issues.md) and [Troubleshoot common issues with APT on Ubuntu](apt-common-issues-in-ubuntu.md).
 
-## Scenario 5: Missing parameters in the GRUB configuration
+## Scenario 6: Missing parameters in the GRUB configuration
 
-During the encryption process, the extension adds several parameters to the kernel options in the file `/etc/default/grub`. These parameters are related to the UUID of the boot and root partitions: `rd.luks.ade.partuuid` and `rd.luks.ade.bootuuid`.
+During the encryption process, the extension adds several parameters to the kernel options in the `/etc/default/grub` file. These parameters are related to the UUIDs of the boot and root partitions: `rd.luks.ade.partuuid` and `rd.luks.ade.bootuuid`.
 
-The parameters must be correctly set to the UUIDs. If not, use [offline troubleshooting](unlock-encrypted-linux-disk-offline-repair.md) method to add the parameters manually. You can obtain the UUIDs in a `chroot` environment using the `blkid` command.
+The parameters must be correctly set to the UUIDs. If not, use an [offline troubleshooting](unlock-encrypted-linux-disk-offline-repair.md) method to add the parameters manually. You can obtain the UUIDs in the `chroot` environment using the `blkid` command.
 
-For more information about regenerating the grub file, see [Reinstall GRUB and regenerate the GRUB configuration file manually](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
+For more information about regenerating the GRUB file, see [Reinstall GRUB and regenerate the GRUB configuration file manually](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
 
-## Scenario 6: Missing or corrupted osluksheader file
+## Scenario 7: Missing or corrupted osluksheader file
 
 LUKS stores its encryption metadata in the LUKS header at the beginning of the encrypted partition. This header includes crucial information such as the cipher, mode, hash function, and key slots. The partition is encrypted using a master key.
 
-When ADE is used in the OS disk, the header is stored in a file located in the boot partition named `osluksheader`. If this file is corrupted or missing, it can only be restored from a backup. Use the [offline troubleshooting](unlock-encrypted-linux-disk-offline-repair.md) method to mount the boot partition of the affected disk and place the `osluksheader` file from backup respectively.
+When ADE is used in the OS disk, the header is stored in a file named `osluksheader`, located in the boot partition. If this file is corrupted or missing, it can only be restored from a backup. Use an [offline troubleshooting](unlock-encrypted-linux-disk-offline-repair.md) method to mount the boot partition of the affected disk and place the `osluksheader` file from the backup.
 
 ## Resources
 
