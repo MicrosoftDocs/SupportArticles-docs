@@ -145,7 +145,9 @@
       href: create-upgrade-delete/error-code-customprivatednszonemissingpermissionerror.md
     - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
       href: create-upgrade-delete/error-code-invalidloadbalancerprofileallocatedoutboundports.md
-
+    - name: Troubleshoot seccomp profiles on AKS
+      href: create-upgrade-delete/troubleshoot-seccomp-profile-issues.md
+      
 - name: Load balancer and Ingress controller
   items:
   - name: Create an unmanaged ingress controller
