@@ -168,7 +168,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ### Sample results
 
-With the implementation, when a "401 Unauthorized" error occurs, the response output should include detailed error messages, such as the following:
+When you implement `JwtBearerEvents` callbacks, if a "401 Unauthorized" error occurs, the response output should include such details as the following example:
 
 ```Output
 OnMessageRecieved:
