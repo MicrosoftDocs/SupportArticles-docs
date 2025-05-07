@@ -1,7 +1,7 @@
 ---
 title: Name computers, domains, sites, and OUs
 description: Describes how to name computers, domains, sites, and organizational units in Active Directory.
-ms.date: 01/15/2025
+ms.date: 05/07/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -51,6 +51,7 @@ In that article, this naming convention applies to computer names, OU names, and
   - less than sign (<)
   - greater than sign (>)
   - vertical bar (|)
+  - comma (,)
   - Computers that are members of an Active Directory domain can't have names that contain only numerals. This is a DNS restriction.
 
   For more information about the NetBIOS name syntax, see [NetBIOS name syntax](/openspecs/windows_protocols/ms-nbte/6f06fa0e-1dc4-4c41-accb-355aaf20546d).
