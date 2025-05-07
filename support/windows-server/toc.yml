@@ -381,6 +381,10 @@ items:
       href: ./active-directory/support-for-active-directory-over-nat.md
     - name: '"The account is not authorized to login from this station" error'
       href: ./active-directory/account-not-authorized-login-from-this-station.md
+    - name: Troubleshoot authentication errors when joining computers to a domain
+      href: ./active-directory/domain-join-authentication-errors.md
+    - name: Troubleshoot networking errors when joining computers to a domain
+      href: ./active-directory/domain-join-networking-errors.md
     - name: Troubleshoot errors when joining computers to a domain
       href: ./active-directory/troubleshoot-errors-join-computer-to-domain.md
   - name: LDAP configuration and interoperability
