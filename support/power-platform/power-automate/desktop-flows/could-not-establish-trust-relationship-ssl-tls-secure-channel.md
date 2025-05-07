@@ -15,7 +15,7 @@ _Applies to:_ &nbsp; Power Automate for desktop version 2.35 or later
 
 Actions in Power Automate for desktop, like [Invoke web service](/power-automate/desktop-flows/actions-reference/web#invokewebservicebase), or [Get password from CyberArk](/power-automate/desktop-flows/actions-reference/cyberark#getpasswordbase), might fail during runtime with the following error:
 
-  > System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel.
+> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel.
 
 In certain cases, a network traffic inspection tool, such as Fiddler, might be installed on the computer.
 
