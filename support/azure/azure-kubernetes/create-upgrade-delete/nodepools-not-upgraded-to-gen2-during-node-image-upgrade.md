@@ -1,6 +1,6 @@
 ---
 title: Windows Node Pools Not Upgraded to Gen2 During Cluster Node Image Upgrade
-description: Troubleshoot an issue that prevents Windows Server node pools from upgrading automatically from Gen1 to Gen2 when a cluster node image is upgraded in Azure Kubernetes Service.
+description: Troubleshoot an issue that prevents Windows Server node pools from upgrading automatically to Gen2 when a cluster node image is upgraded in Azure Kubernetes Service.
 ms.date: 04/17/2025
 editor: v-jsitser
 ms.reviewer: chiragpa, cssakscic, momajed
@@ -11,7 +11,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or node poo
 
 # Windows Server node pools not upgraded to Gen2 during cluster node image upgrade
 
-This article discusses how to troubleshoot a scenario in which Gen1 Windows Server node pools don't get upgraded automatically to Gen2 virtual machines (VMs) when a cluster node image is upgraded in Microsoft Azure Kubernetes Service (AKS).
+This article discusses how to troubleshoot a scenario in which Windows Server node pools don't get upgraded automatically from Gen1 to Gen2 virtual machines (VMs) when a cluster node image is upgraded in Microsoft Azure Kubernetes Service (AKS).
 
 > [!NOTE]  
 > This scenario doesn't apply to Gen2 VMs on Linux node pools.
