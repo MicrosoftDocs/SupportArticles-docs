@@ -137,12 +137,12 @@ For example, if you want to delete a user who has a principal name of `NewUser@c
 DELETE https://graph.microsoft.com/v1.0/users/NewUser@contoso.onmicrosoft.com
 ```
 
-## [Azure PowerShell](#tab/azure-powershell)
+## 【Microsoft Graph PowerShell](#tab/azure-powershell)
 
-To delete a user in Azure PowerShell, run the [Remove-AzureADUser](/powershell/module/azuread/remove-azureaduser) cmdlet:
+To delete a user in Azure PowerShell, run the [Remove-MgUser](/powershell/module/microsoft.graph.users/remove-mguser?view=graph-powershell-1.0&preserve-view=true) cmdlet. To run this command, you must connect to Microsoft Graph with at least the `User.DeleteRestore.All` permission.
 
 ```powershell-interactive
-Remove-AzureADUser -ObjectId "<NewUser@contoso.onmicrosoft.com>" 
+Remove-MgUser -UserId '5c442efb-5e66-484a-936a-91b6810bed14'
 ```
 
 ## [Azure CLI](#tab/azure-cli)
@@ -150,6 +150,7 @@ Remove-AzureADUser -ObjectId "<NewUser@contoso.onmicrosoft.com>"
 To delete a user in Azure CLI, run the [az ad user delete](/cli/azure/ad/user#az-ad-user-delete) command:
 
 ```azurecli-interactive
+Connect-MgGraph -Scopes "`User.DeleteRestore.All"
 az ad user delete --id "<NewUser@contoso.onmicrosoft.com>"
 ```
 
