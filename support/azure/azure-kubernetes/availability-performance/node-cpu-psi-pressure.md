@@ -64,7 +64,7 @@ Azure Managed Prometheus provides a way to monitor PSI metrics:
     rate(node_pressure_cpu_waiting_seconds_total[5m]) * 100  
    ``` 
 >[!NOTE]
-> Some of the container level metrics such as `container_pressure_cpu_waiting_seconds_total` and `container_pressure_cpu_stalled_seconds_total` are not available in AKS as they are part of the KubeletPSI feature gate which is in alpha state
+> Some of the container level metrics such as `container_pressure_cpu_waiting_seconds_total` and `container_pressure_cpu_stalled_seconds_total` are not available in AKS as they are part of the KubeletPSI feature gate which is in alpha state. AKS will begin supporting the use of the feature when it reachs beta stage.
 
 
 ### [Command Line](#tab/command-line)
@@ -110,12 +110,15 @@ Review the following table to learn how to implement best practices for avoiding
 | Best practice | Description |
 |---|---|
 |[Focus on PSI metrics instead of utilization](https://docs.kernel.org/accounting/psi.html)|Use PSI metrics as your primary indicator of resource contention rather than CPU utilization percentages.|
-|[Minimize CPU limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)|Consider removing CPU limits and rely on Linux's Completely Fair Scheduler with CPU shares based on requests.|
+|[Minimize CPU limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)|Consider removing CPU limits and rely on [Linux's Completely Fair Scheduler](https://docs.kernel.org/scheduler/sched-design-CFS.html) with CPU shares based on requests.|
 |[Use appropriate QoS classes](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)|Set the right Quality of Service class for each pod based on its importance and contention sensitivity.|
 |[Optimize pod placement](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)|Use pod anti-affinity rules to avoid placing CPU-intensive workloads on the same nodes.|
 |[Monitor for brief pressure spikes](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/)|Short pressure spikes can indicate issues even when average utilization appears acceptable.|
 
 ## Key PSI metrics to monitor
+
+>[!NOTE]
+> If a node's CPU usage is moderate, but the containers on the node are experiencing CFS throttling, consider increasing the resource limits or removing them and following [Linux's Completely Fair Scheduler (CFS)](https://docs.kernel.org/scheduler/sched-design-CFS.html) algorithm.
 
 ### Node-level PSI metrics
 - `node_pressure_cpu_waiting_seconds_total`: Cumulative time tasks have been waiting for CPU.
@@ -126,9 +129,6 @@ Review the following table to learn how to implement best practices for avoiding
 - `container_cpu_cfs_throttled_seconds_total`: Total time a container has been throttled.
 - Throttling percentage: `rate(container_cpu_cfs_throttled_periods_total[5m]) / rate(container_cpu_cfs_periods_total[5m]) * 100`
 
->[!NOTE]
-> If a node's CPU usage is moderate, but the containers on the node are experiencing CFS throttling, consider increasing the resource limits.
-
 ## References
 
 - [Linux PSI documentation](https://docs.kernel.org/accounting/psi.html)
@@ -136,5 +136,6 @@ Review the following table to learn how to implement best practices for avoiding
 - [AKS performance best practices](/azure/aks/concepts-clusters-workloads)
 - [Azure Managed Prometheus](/azure/azure-monitor/essentials/prometheus-metrics-enable)
 - [Quality of Service in Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
+- [Linux Completely Fair Scheduler](https://docs.kernel.org/scheduler/sched-design-CFS.html)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
