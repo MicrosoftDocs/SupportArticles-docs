@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Purview
   - Azure Information Protection 
 search.appverid: MET150
-ms.date: 09/09/2022
+ms.date: 05/07/2025
 ---
 # "Too many users" error when adding many recipients to encrypted email
 
@@ -39,7 +39,7 @@ When you try to send this encrypted email message to many recipients, you rece
 
 This issue is caused by the size limit of the protection policy that’s applied to the email.  
 
-In Microsoft Purview Information Protection, this fixed size limit is 4 megabytes (MB). The protection policy includes permissions that are granted to each recipient who is authorized to access the email message. If you add too many recipients, the size of the protection policy may exceed the 4 MB limit and cause the error.  
+In Microsoft Purview Information Protection, this fixed size limit is 4 megabytes (MB). The protection policy includes permissions that are granted to each recipient who is authorized to access the email message. If you add too many recipients, the size of the protection policy might exceed the 4 MB limit and cause the error.  
 
 ## Workaround
 
