@@ -1,7 +1,7 @@
 ---
 title: OrasPullNetworkTimeoutVMExtensionError when creating AKS clusters
-description: Learn how to troubleshoot the OrasPullNetworkTimeoutVMExtensionError error (211) and when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 05/02/2025
+description: Learn how to troubleshoot the OrasPullNetworkTimeoutVMExtensionError error (211) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+ms.date: 05/07/2025
 ms.reviewer: xinhl, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OrasPullNetworkTimeoutVMExtensionError error code (OrasPullNetworkTimeoutVMExtensionError (211)) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
@@ -23,23 +23,23 @@ When you try to create an AKS cluster with the outbound type `none` or `block`, 
 
 ## Cause
 
-For [network isolated cluster](/azure/aks/concepts-network-isolated), egress traffic is limited. The feature introduces private ACR cache acts as a proxy to download necessary binaries/images from MAR for AKS bootstrapping. VM instances connect to the private ACR via private link. Incorrect configuration of the private link will cause VM bootstrap CSE to fail.
+For [network isolated cluster](/azure/aks/concepts-network-isolated), egress traffic is limited. The feature introduces private Azure Container Registry (ACR) cache that acts as a proxy to download necessary binaries or images from Microsoft Artifact Registry (MAR) for AKS bootstrap. VM instances connect to the private ACR via a private link. Incorrect configuration of the private link causes VM bootstrap Custom Script Extension (CSE) to fail.
 
 ## Solution
 
 To resolve this issue, follow these steps:
 
-1. Retrieve the ACR resource ID that AKS uses as the bootstrap ACR by running the folllowing command:
+1. Retrieve the ACR resource ID that AKS uses as the bootstrap ACR by running the following command:
 
     ```console
     az aks show -g ${RESOURCE_GROUP} -n ${CLUSTER_NAME} --query 'bootstrapProfile.containerRegistryResourceId
     ```
 
-2. Verify the ACR cache rule. It should include `aks-managed-rule` with source repo `mcr.microsoft.com/*` and target repo `aks-managed-reposity/*`. Ensure no other cache rule exists with source or target repo as `*`, which would override `aks-managed-rule`.
+2. Verify the ACR cache rule. It should include `aks-managed-rule` with source repo `mcr.microsoft.com/*` and target repo `aks-managed-reposity/*`. Ensure no other cache rule exists with source or target repo as `*`, which override `aks-managed-rule`.
 
-3. Review the [container registry private link](/azure/container-registry/container-registry-private-link) to ensure that the connection configuration is correct, including the private DNS zone and private link.
+3. Review the [container registry private link](/azure/container-registry/container-registry-private-link) to ensure that the connection configuration is correct, including the private Domain Name System (DNS) zone and private link.
 
-4. Access any failed VM instance using SSH and run curl on the ACR host. If successful, reconcile the cluster. If it still fails, return to step 3.
+4. Access any failed VM instance using Secure Shell (SSH) and run curl on the ACR host. If successful, reconcile the cluster. If it still fails, return to step 3.
 
 ## References
 
