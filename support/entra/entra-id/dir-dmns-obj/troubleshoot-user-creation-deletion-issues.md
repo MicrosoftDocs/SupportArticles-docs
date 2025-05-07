@@ -58,7 +58,7 @@ For more information, see [Add or delete users - Microsoft Entra ID](/azure/acti
 
 ## [Microsoft Graph](#tab/microsoft-graph)
 
-To add a user in Microsoft Graph, use the [Create user API](/graph/api/user-post-users):
+To add a user in Microsoft Graph, use the [Create User API](/graph/api/user-post-users):
 
 ```http
 POST https://graph.microsoft.com/v1.0/users 
