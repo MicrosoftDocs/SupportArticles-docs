@@ -74,20 +74,15 @@ Content-type: application/json {
 }
 ```
 
-## [Azure PowerShell](#tab/azure-powershell)
+## [Microsoft Graph PowerShell](#tab/azure-powershell)
 
-To add a user in Azure PowerShell, run the [New-AzureADUser](/powershell/module/azuread/new-azureaduser) cmdlet:
+To add a user in Microsoft Graph PowerShell, run the [New-MgUser](/powershell/module/microsoft.graph.users/new-mguser?view=graph-powershell-1.0)) cmdlet:
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
-```powershell-interactive
-$PasswordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
-$PasswordProfile.Password = "<Password>"
-New-AzureADUser -AccountEnabled $true `
-    -DisplayName "<New User>" `
-    -MailNickName "<Newuser>" `
-    -PasswordProfile $PasswordProfile `
-    -UserPrincipalName "<NewUser@contoso.onmicrosoft.com>"
+```powershell
+$PasswordProfile = @{
+  Password = 'xWwvJ]6NMw+bWH-d'
+  }
+New-MgUser -DisplayName 'Rene Magi' -PasswordProfile $PasswordProfile -AccountEnabled -MailNickName 'ReneMagi' -UserPrincipalName 'ReneMagi@contoso.com'
 ```
 
 ## [Azure CLI](#tab/azure-cli)
