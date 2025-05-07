@@ -46,13 +46,15 @@ The operation returns a `Not Found` status because the `command-<ID>` pod can't 
 
 - Resource constraints
 - Nodes that have a `NotReady` or `SchedulingDisabled` state
-- Nodes that have taints that the pod can't tolerate ,most likely you will get ```KubernetesPerformanceError``` or ```KubernetesOperationError```.
+- Nodes that have taints that the pod can't tolerate 
+- Other causes
+  
+Sample Errors ```KubernetesPerformanceError``` or ```KubernetesOperationError```:
 ```
 (KubernetesPerformanceError) Failed to run command due to cluster perf issue, container command-357ebsdfsd342869 in aks-command namespace did not start within 30s on your cluster, retry may helps. If issue persist, you may need to tune your cluster with better performance (larger node/paid tier).
 Code: KubernetesPerformanceError
 Message: Failed to run command due to cluster perf issue, container command-357ebc50d40c47a4a247ab6e067d2869 in aks-command namespace did not start within 30s on your cluster, retry may helps. If issue persist, you may need to tune your cluster with better performance (larger node/paid tier).
 ```
-- Other causes
 
 #### Solution 1: Change the configuration so that you can schedule and run the pod
 
