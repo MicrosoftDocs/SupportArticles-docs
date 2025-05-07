@@ -81,7 +81,7 @@ In some cases, such as when using a virtual machine (VM) or Hyper-V, the display
 
 1. Copy and paste the following code snippet into the [Power Automate desktop flow designer](/power-automate/desktop-flows/flow-designer).
 
-    ```c#
+    ```csharp
     DateTime.GetCurrentDateTime.Local DateTimeFormat: DateTime.DateTimeFormat.DateAndTime CurrentDateTime=> CurrentDateTime
     Text.ConvertDateTimeToText.FromCustomDateTime DateTime: CurrentDateTime CustomFormat: $'''yyyy_MM_dd_hh_mm_ss''' Result=> FormattedDateTime
     Workstation.GetScreenResolution MonitorNumber: 1 MonitorWidth=> MonitorWidth MonitorHeight=> MonitorHeight MonitorBitCount=> MonitorBitCount MonitorFrequency=> MonitorFrequency
