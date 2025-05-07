@@ -141,7 +141,7 @@ DELETE https://graph.microsoft.com/v1.0/users/NewUser@contoso.onmicrosoft.com
 
 To delete a user in Azure PowerShell, run the [Remove-MgUser](/powershell/module/microsoft.graph.users/remove-mguser?view=graph-powershell-1.0&preserve-view=true) cmdlet. To run this command, you must connect to Microsoft Graph with at least the `User.DeleteRestore.All` permission.
 
-```powershell-interactive
+```powershell
 Remove-MgUser -UserId '5c442efb-5e66-484a-936a-91b6810bed14'
 ```
 
