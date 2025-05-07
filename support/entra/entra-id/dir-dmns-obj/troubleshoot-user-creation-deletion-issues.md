@@ -4,7 +4,7 @@ description: Troubleshoot user creation and deletion issues in Microsoft Entra I
 ms.date: 12/15/2021
 ms.reviewer: tovascon, anhorta, v-leedennis
 ms.service: entra-id
-ms.custom: sap:Users, devx-track-azurecli, has-azure-ad-ps-ref
+ms.custom: sap:Users, devx-track-azurecli, no-azure-ad-ps-ref
 keywords:
 #Customer intent: As a Microsoft Entra Global Administrator or User Administrator, I want create and delete users so that I can manage the current user list and let users access Azure services.
 ---
