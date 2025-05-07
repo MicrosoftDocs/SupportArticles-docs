@@ -24,7 +24,7 @@ ms.date: 05/07/2025
 
 ## Symptoms
 
-You have configured sensitivity labels in the [Microsoft Purview portal](https://compliance.microsoft.com/) to classify and protect user documents and email messages in your organization. When your users try to [apply the sensitivity labels](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in Outlook, Outlook on the web, or other Office apps, the sensitivity labels are missing, or the **Sensitivity** button isn't available. 
+You have configured sensitivity labels in the [Microsoft Purview portal](https://purview.microsoft.com/) to classify and protect user documents and email messages in your organization. When your users try to [apply the sensitivity labels](https://support.microsoft.com/office/apply-sensitivity-labels-to-your-files-and-email-in-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in Outlook, Outlook on the web, or other Office apps, the sensitivity labels are missing, or the **Sensitivity** button isn't available. 
 
 For issues related to sensitivity labels, [run an automated diagnostic for sensitivity labels](#run-the-diagnostic-for-sensitivity-labels) in the Microsoft 365 admin center. The diagnostic analyzes the sensitivity labels, identifies any issues, and provides resolutions.
 
