@@ -1,7 +1,7 @@
 ---
 title: Azure Windows VM Startup Is Stuck on Applying Group Policy Shortcuts Policy
 description: Provides troubleshooting steps for an Azure virtual machine (VM) that is stuck in startup with the message Applying Group Policy Shortcuts policy.
-ms.date: 05/07/2025
+ms.date: 05/08/2025
 author: cwhitley-MSFT 
 ms.author: cwhitley
 ms.service: azure-virtual-machines
