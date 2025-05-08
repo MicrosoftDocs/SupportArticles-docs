@@ -53,6 +53,8 @@ This article explains how to use Performance Diagnostics and what the continuous
 
 For detailed information about built-in roles for Azure Storage, refer to [Azure built-in roles for Storage](/azure/role-based-access-control/built-in-roles/storage).
 
+For more information about storage account settings, see [view and manage storage account and stored data](performance-diagnostics.md#view-and-manage-storage-account-and-stored-data).
+
 ### Known issue
 
 Some users who previously ran Performance Diagnostics successfully are encountering the following error when attempting to run it again:
@@ -69,9 +71,7 @@ A fix is being deployed.
 
 #### Workaround
 
-If users still encounter this issue, grant the `Microsoft.Authorization/roleAssignments/write` permission to the storage account with the **Role Based Access Control Administrator** or **User Access Administrator** role. The former role can grant higher permissions.
-
-For more information about storage account settings, see [view and manage storage account and stored data](performance-diagnostics.md#view-and-manage-storage-account-and-stored-data).
+If users still encounter this issue, grant the `Microsoft.Authorization/roleAssignments/write` permission to the storage account with the **Role Based Access Control Administrator** or **User Access Administrator** role. The latter role can grant higher permissions.
 
 ## Supported operating systems
 
