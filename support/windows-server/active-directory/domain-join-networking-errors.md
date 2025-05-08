@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Troubleshoot networking errors that occur when you join Windows-based computers to a domain
 
-This article describes several networking related error messages that occur when you join client computers that are running Windows to a domain. This article also provides troubleshooting suggestions for these errors. For authentication related error messages, see [Troubleshoot authentication errors that occur when you join Windows-based computers to a domain](authentication-errors-join-computer-domain.md).
+This article describes several networking related error messages that occur when you join client computers that are running Windows to a domain. This article also provides troubleshooting suggestions for these errors. For authentication related error messages, see [Troubleshoot authentication errors that occur when you join Windows-based computers to a domain](domain-join-authentication-errors.md).
 
 _Original KB number:_ &nbsp; 4341920
 
