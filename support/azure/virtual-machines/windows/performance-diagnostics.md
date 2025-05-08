@@ -10,7 +10,7 @@ tags: ''
 ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.topic: troubleshooting
-ms.date: 05/02/2025
+ms.date: 05/08/2025
 ms.custom: sap:VM Performance
 ms.reviewer: guywild, poharjan
 ms.author: anandh
@@ -52,6 +52,26 @@ This article explains how to use Performance Diagnostics and what the continuous
 | Download Performance Diagnostics reports | An Azure role that includes the **Storage Table Data Reader** and the **Storage Blob Data Reader** role on the storage account.           |
 
 For detailed information about built-in roles for Azure Storage, refer to [Azure built-in roles for Storage](/azure/role-based-access-control/built-in-roles/storage).
+
+For more information about storage account settings, see [view and manage storage account and stored data](performance-diagnostics.md#view-and-manage-storage-account-and-stored-data).
+
+### Known issue
+
+Some users who previously ran Performance Diagnostics successfully encounter the following error when attempting to run it again:
+
+> 'Authorization failed for template resource '\<resource>' of type 'Microsoft.Storage/storageAccounts/providers/roleAssignments'. The client '\<client>' with object id '\<ID>' does not have permission to perform action 'Microsoft.Authorization/roleAssignments/write' at scope '\<scope>'.
+
+#### Cause
+
+A recent rollout has a bug that tries to grant the write permission to the storage account for the current user when initiating a run from the Azure portal. An Azure role that includes the `Microsoft.Storage/storageAccounts/listkeys/action` permission isn't enough to grant this permission, causing the run to fail.
+
+#### Status
+
+A fix is being deployed.
+
+#### Workaround
+
+If users still encounter this issue, grant the `Microsoft.Authorization/roleAssignments/write` permission to the storage account with the **Role Based Access Control Administrator** or **User Access Administrator** role. The latter role can grant higher permissions.
 
 ## Supported operating systems
 
