@@ -1,21 +1,22 @@
 ---
 title: MDS Validate Version command fails
-description: This article provides resolutions for the problem where MDS Validate Version command fails with a server error in SQL Server 2012 and SQL Server 2014.
-ms.date: 02/22/2021
+description: This article provides resolutions for the problem where MDS Validate Version command fails with a server error in SQL Server.
+ms.date: 05/09/2025
 ms.custom: sap:Master Data Services
+ms.reviewer: jopilov
 ---
-# MDS Validate Version command fails with a server error in SQL Server 2012 and SQL Server 2014
+# MDS Validate Version command fails with a server error in SQL Server
 
-This article helps you resolve the problem where Master Data Services (MDS) Validate Version command fails with a server error in SQL Server 2012 and SQL Server 2014.
+This article helps you resolve the problem where Master Data Services (MDS) Validate Version command fails with a server error in SQL Server.
 
-_Original product version:_ &nbsp; SQL Server 2012, SQL Server 2014  
+_Original product version:_ &nbsp; SQL Server    
 _Original KB number:_ &nbsp; 2711671
 
 ## Symptoms
 
 Consider the following scenario:
 
-- An administrator installs Microsoft SQL Server 2012 or SQL Server 2014 MDS and then deploys the MDS website by using a new application pool account.
+- An administrator installs Microsoft SQL Server and then deploys the MDS website by using a new application pool account.
 
 - Later, you browse to the MDS website and then follow these steps:
 

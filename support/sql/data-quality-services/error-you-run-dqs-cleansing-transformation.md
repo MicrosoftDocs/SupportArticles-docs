@@ -1,23 +1,22 @@
 ---
 title: Error when you run the DQS Cleansing transformation
-description: This article provides two workarounds for the problem where an error is logged in the SSIS log on SQL Server 2012.
-ms.date: 01/14/2021
+description: This article provides two workarounds for the problem where an error is logged in the SSIS log on SQL Server.
+ms.date: 05/09/2025
 ms.custom: sap:Data Quality Services
-ms.reviewer: smat
-ms.topic: troubleshooting 
+ms.reviewer: smat, jopilov
 ---
-# Error (DQS Cleansing failed the pre-execute phase) when you run the DQS Cleansing transformation in SQL Server 2012
+# Error (DQS Cleansing failed the pre-execute phase) when you run the DQS Cleansing transformation in SQL Server
 
-This article helps you to work around the problem where an error is logged in the SSIS log on SQL Server 2012.
+This article helps you to work around the problem where an error is logged in the SSIS log on SQL Server.
 
-_Applies to:_ &nbsp; SQL Server 2012 Developer, SQL Server 2012 Enterprise, SQL Server 2012 Standard  
+_Applies to:_ &nbsp; SQL Server    
 _Original KB number:_ &nbsp; 2715968
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You use the Data Quality Services (DQS) Cleansing transformation in a SQL Server-Integrated Service (SSIS) Data Flow to cleanse your data in Microsoft SQL Server 2012.
+- You use the Data Quality Services (DQS) Cleansing transformation in a SQL Server-Integrated Service (SSIS) Data Flow to cleanse your data in Microsoft SQL Server.
 - You set the "Configure error output" setting of the DQS Cleansing transformation to "Redirect row." However, you do not specify a location to save the error output.
 - You execute the SSIS package.
 
@@ -33,9 +32,9 @@ at Microsoft.SqlServer.Dts.Pipeline.ManagedComponentHost.HostPreExecute(IDTSMana
 
 This problem occurs because a destination is not set for the error output that is generated for rows that do not meet the DQS domain criteria and rules.
 
-## Workaround
+## Resolution
 
-To resolve this issue, use one of the following methods.
+To resolve this issue, use one of the following methods:
 
 - Method 1
 

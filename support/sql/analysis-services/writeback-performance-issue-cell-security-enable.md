@@ -1,15 +1,15 @@
 ---
 title: Writeback performance issue
 description: This article provides workarounds for the writeback performance problem that occurs when cell security is enabled in SQL Server Analysis Services.
-ms.date: 07/22/2020
+ms.date: 05/09/2025
 ms.custom: sap:Analysis Services
-ms.reviewer: haidongh, heidist
+ms.reviewer: haidongh, heidist, gasadas
 ---
 # Writeback performance problem when cell security is enabled in SQL Server Analysis Services
 
 This article helps you work around the writeback performance problem that occurs when cell security is enabled in SQL Server Analysis Services.
 
-_Original product version:_ &nbsp; SQL Server 2012 Analysis Services  
+_Original product version:_ &nbsp; SQL Server 2012 Analysis Services and later versions  
 _Original KB number:_ &nbsp; 2747616
 
 ## Symptoms

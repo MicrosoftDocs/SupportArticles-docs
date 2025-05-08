@@ -1,15 +1,16 @@
 ---
 title: Detect skew on distribution key values
 description: This article describes how to detect skew on the distribution key of a distributed table in a Parallel Data Warehouse appliance.
-ms.date: 07/22/2020
+ms.date: 05/09/2025
 ms.custom: sap:Parallel Data Warehouse (APS)
 ms.topic: how-to
+ms.reviewer: jopilov, ccaldera
 ---
 # Detect data skew on the distribution key values
 
 This article shows how to detect skew on the distribution key of a distributed table in a Parallel Data Warehouse appliance.
 
-_Original product version:_ &nbsp; SQL Server 2008 R2 Parallel Data Warehouse  
+_Original product version:_ &nbsp; SQL Server Parallel Data Warehouse  
 _Original KB number:_ &nbsp; 3046863
 
 ## Summary
