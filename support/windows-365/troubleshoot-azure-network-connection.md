@@ -27,7 +27,7 @@ When a Cloud PC is provisioned, it's automatically joined to the provided domain
 - You troubleshoot domain join failures like any physical computer in your organization.
 - If you have a domain name that can be resolved on the internet (like `contoso.com`), make sure that your Domain Name System (DNS) servers are configured as internal. Also, make sure that they can resolve Active Directory domain DNS records, not your public domain name.
 
-If you encounter the following errors in your ANC health checks, consider the following suggestions to ensure your Azure and on-premises configurations can successfully reach the required Windows 365 endpoints:
+If you encounter the following errors in your ANC health checks, consider the suggestions in the following two sections to ensure your Azure and on-premises configurations can successfully reach the required Windows 365 endpoints:
 
 > Internal Server Error
 
