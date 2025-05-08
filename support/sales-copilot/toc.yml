@@ -27,7 +27,7 @@
     - name: Salesforce CRM users can't view, edit, or save data in Copilot for Sales
       href: crm-permissions-and-configurations/salesforce-permission-error.md
     - name: '"Server-to-server authentication failed" error'
-      href: crm-permissions-and-configurations/authtentication-failed-sf-ss.md
+      href: crm-permissions-and-configurations/authentication-failed-sf-ss.md
     - name: '"Server-to-server authorization failed" error'
       href: crm-permissions-and-configurations/authorization-failed-sf-ss.md
     - name: '"This contact already exists" error when creating a CRM record'
