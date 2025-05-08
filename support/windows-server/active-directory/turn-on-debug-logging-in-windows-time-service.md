@@ -1,7 +1,7 @@
 ---
 title: Turn on debug logging in Windows Time Service
 description: Describes how to turn on debug logging for the Windows Time service
-ms.date: 01/15/2025
+ms.date: 05/08/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -54,15 +54,13 @@ To turn on debug logging in the Windows Time service:
 
 4. Restart the Windows Time service (W32Time) for the change to take effect.
 
-# Gather information by using TSS for Windows Time related issues
+## Gather information by using TSS for Windows Time related issues
 
-This article introduces how to gather information by using the TroubleShootingScript (TSS) toolset for WIndows Time related issues.
+If you need to contact Microsoft support, we recommend using the TroubleShootingScript (TSS) toolset to gather information about your issue.
 
-Before contacting Microsoft support, you can gather information about your issue.
+### Prerequisites
 
-## Prerequisites
-
-Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-troubleshootingscript-toolset-tss.md#prerequisites) for prerequisites for the toolset to run properly.
+Refer to [Introduction to TroubleShootingScript toolset (TSS)](../..//windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md#prerequisites) for prerequisites for the toolset to run properly.
 
 ## Gather key information before contacting Microsoft support
 
@@ -86,5 +84,3 @@ Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-t
 >
 > - The traces are stored in a compressed file in the *C:\\MS_DATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
 > - If you've downloaded this tool previously, we recommend downloading the latest version. It doesn't automatically update when running `-Collectlog ADS_W32Time`.
-
-
