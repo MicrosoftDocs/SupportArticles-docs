@@ -385,8 +385,6 @@ items:
       href: ./active-directory/domain-join-authentication-errors.md
     - name: Troubleshoot networking errors when joining computers to a domain
       href: ./active-directory/domain-join-networking-errors.md
-    - name: Troubleshoot errors when joining computers to a domain
-      href: ./active-directory/troubleshoot-errors-join-computer-to-domain.md
   - name: LDAP configuration and interoperability
     items:
     - name: Enable LDAP over SSL

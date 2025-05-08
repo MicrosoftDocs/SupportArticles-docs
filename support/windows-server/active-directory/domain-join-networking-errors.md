@@ -130,4 +130,4 @@ This problem can also be caused by one of the following conditions:
 
 ## Changing the Primary Domain DNS name of this computer to "" failed. The name will remain ".". The specified server cannot perform the operation
 
-This error occurs when you use the domain join UI to join a Windows 7 or Windows Server 2008 R2 workgroup computer to an Active Directory domain by specifying the target DNS domain. To fix this error, see [2018583 Windows 7 or Windows Server 2008 R2 domain join displays error "Changing the Primary Domain DNS name of this computer to "" failed...."](https://support.microsoft.com/help/2018583/windows-7-or-windows-server-2008-r2-domain-join-displays-error-changin).
+This error occurs when you use the domain join UI to join a Windows 7 or Windows Server 2008 R2 workgroup computer to an Active Directory domain by specifying the target DNS domain. To fix this error, see [Windows 7 or Windows Server 2008 R2 domain join displays error "Changing the Primary Domain DNS name of this computer to "" failed...."](https://support.microsoft.com/help/2018583/windows-7-or-windows-server-2008-r2-domain-join-displays-error-changin).
