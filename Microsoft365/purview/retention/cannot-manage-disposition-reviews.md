@@ -12,7 +12,7 @@ ms.reviewer: subansal; lindabr; meerak
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 
 # "(401) Rbac check failed" error when trying to manage disposition reviews
