@@ -13,7 +13,7 @@ ms.reviewer: alinastr, ninob
 appliesto: 
   - Exchange Online Archiving
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 
 # Can't see the Calendar folder of an online archive mailbox by using Microsoft Outlook Web App

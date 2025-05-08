@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2016
 search.appverid: 
   - MET150
-ms.date: 06/25/2024
+ms.date: 05/05/2025
 ---
 
 # Can't run In-Place eDiscovery search for Exchange Online mailbox in Exchange Server 2019 or 2016 by using EAC

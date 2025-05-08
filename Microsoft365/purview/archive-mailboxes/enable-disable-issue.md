@@ -14,7 +14,7 @@ ms.reviewer: bradhugh
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 06/25/2024
+ms.date: 05/05/2025
 ---
 
 # Error when you try to enable or disable an archive mailbox for an Exchange Online user or move a mailbox to an on-premises environment
