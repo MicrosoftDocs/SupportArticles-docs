@@ -62,7 +62,7 @@ If you need to contact Microsoft support, we recommend using the TroubleShooting
 
 Refer to [Introduction to TroubleShootingScript toolset (TSS)](../..//windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md#prerequisites) for prerequisites for the toolset to run properly.
 
-## Gather key information before contacting Microsoft support
+### Gather key information before contacting Microsoft support
 
 1. Download [TSS](https://aka.ms/getTSS) and extract it in the *C:\\tss* folder.
 2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.  
