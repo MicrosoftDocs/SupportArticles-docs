@@ -4,7 +4,7 @@ metadata:
   description: Review a list of frequently asked questions (FAQ) about common issues when you're working with an Azure Kubernetes Service (AKS) cluster.
   ms.topic: faq
   ms.date: 05/08/2025
-  ms.reviewer: chiragpa, nickoman, jotavar, v-leedennis, v-weizhu
+  ms.reviewer: chiragpa, nickoman, jotavar, wilsondarko, v-leedennis, v-weizhu
   ms.service: azure-kubernetes-service
   ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 
