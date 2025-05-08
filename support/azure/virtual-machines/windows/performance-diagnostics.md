@@ -57,13 +57,13 @@ For more information about storage account settings, see [view and manage storag
 
 ### Known issue
 
-Some users who previously ran Performance Diagnostics successfully are encountering the following error when attempting to run it again:
+Some users who previously ran Performance Diagnostics successfully encounter the following error when attempting to run it again:
 
 > 'Authorization failed for template resource '\<resource>' of type 'Microsoft.Storage/storageAccounts/providers/roleAssignments'. The client '\<client>' with object id '\<ID>' does not have permission to perform action 'Microsoft.Authorization/roleAssignments/write' at scope '\<scope>'.
 
 #### Cause
 
-A recent rollout has a bug which tries to grant write permissions to the storage account for the current user while initiating a run from the Azure portal. The `Microsoft.Storage/storageAccounts/listkeys/action` permission isn't enough to grant this permission, causing the run to fail.
+A recent rollout has a bug that tries to grant write permissions to the storage account for the current user when initiating a run from the Azure portal. An Azure role that includes the `Microsoft.Storage/storageAccounts/listkeys/action` permission isn't enough to grant this permission, causing the run to fail.
 
 #### Status
 
