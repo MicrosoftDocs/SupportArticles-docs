@@ -125,8 +125,8 @@ This problem can also be caused by one of the following conditions:
 > [!NOTE]
 > The following articles contain port requirement information:  
 >
-> - [832017 Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md)  
-> - [179442 How to configure a firewall for domains and trusts](config-firewall-for-ad-domains-and-trusts.md)  
+> - [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md)  
+> - [How to configure a firewall for domains and trusts](config-firewall-for-ad-domains-and-trusts.md)  
 
 ## Changing the Primary Domain DNS name of this computer to "" failed. The name will remain ".". The specified server cannot perform the operation
 
