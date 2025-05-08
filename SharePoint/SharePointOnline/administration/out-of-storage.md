@@ -45,7 +45,7 @@ If you suspect you should have more storage than is displayed in the Microsoft 3
 
 To troubleshoot any issues with your storage limits, see [Manage site storage limits](/sharepoint/manage-site-collection-storage-limits).
 
-When the SharePoint storage quota is exceeded, consider one or more of the following options: 
+When the SharePoint storage quota is exceeded, consider the following options: 
 
 - Purchase [add-on storage](/microsoft-365/commerce/add-storage-space) or extra licenses.
 - Archive inactive content that should be retained.
