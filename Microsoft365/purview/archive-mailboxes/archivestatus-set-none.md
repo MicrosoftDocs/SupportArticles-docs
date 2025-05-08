@@ -14,7 +14,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Archiving
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 
 # ArchiveStatus is set to "None" for an active archive mailbox in Microsoft 365

@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot eDiscovery hold errors
-description: Troubleshoot errors related to legal holds applied to custodians and non-custodial data sources in Core eDiscovery.
-ms.date: 06/24/2024
+title: Resolve eDiscovery hold errors
+description: Resolve errors related to legal holds applied to custodial and noncustodial data sources in eDiscovery.
+ms.date: 05/05/2025
 f1.keywords: 
   - NOCSH
 ms.author: v-six
@@ -21,7 +21,7 @@ ms.custom:
 ---
 # Resolve eDiscovery hold errors
 
-This article discusses common issues that may occur with eDiscovery holds and how to resolve them. The article also includes recommended practices to help you mitigate or avoid these issues.
+This article discusses common issues that might occur with eDiscovery holds and how to resolve them. The article also includes recommended practices to help you mitigate or avoid these issues.
 
 For eDiscovery search issues, see [Resolve search errors in eDiscovery (Standard)](resolve-ediscovery-issues.md).
 
@@ -44,7 +44,7 @@ To reduce the number of errors related to eDiscovery holds, we recommend the fol
     }
    ```
 
-- Merge your updates to an eDiscovery hold in a single bulk request rather than updating the hold policy repeatedly for each transaction. For example, to add multiple user mailboxes to an existing hold policy using the [Set-CaseHoldPolicy](/powershell/module/exchange/set-caseholdpolicy) cmdlet from [Security & Compliance PowerShell](/powershell/exchange/scc-powershell?view=exchange-ps&preserve-view=true), run the command (or add as a code block to a script) so that it runs only once to add multiple users.
+- Merge your updates to an eDiscovery hold in a single bulk request rather than updating the hold policy repeatedly for each transaction. For example, to add multiple user mailboxes to an existing hold policy using the [Set-CaseHoldPolicy](/powershell/module/exchange/set-caseholdpolicy) cmdlet from [Security & Compliance PowerShell](/powershell/exchange/scc-powershell?view=exchange-ps&preserve-view=true), run the command, or add as a code block to a script, so that it runs only once to add multiple users.
 
   **Correct**
 
@@ -74,21 +74,21 @@ To reduce the number of errors related to eDiscovery holds, we recommend the fol
 
 ## Error: PolicySyncTimeout
 
-If you see this error in the **ResultCode: PolicySyncTimeout** and the following error message, check the LastResultTime to see if it has been longer than two hours since the sync has reached the timeout.
+If you see this error in the **ResultCode: PolicySyncTimeout** and the following error message, check the LastResultTime to see if it is longer than two hours since the sync reached the time-out.
 
 > It's taking longer than expected to deploy the policy. It might take an additional 2 hours to update the final deployment status, so check back in a couple hours.
 
 ### Resolution
 
-Running the `Set-CaseHoldPolicy -Identity "policyname" -RetryDistribution` will resolve the issue.
+Run the `Set-CaseHoldPolicy -Identity "policyname" -RetryDistribution` to resolve the issue.
 
    ```powershell
    Set-CaseHoldPolicy "policyname" -RetryDistribution
    ```
 
-Also in the case hold page in the Microsoft Purview compliance portal, you can redeploy the policy by clicking **Retry**.
+Also in the case hold page in the Microsoft Purview portal, select **Retry** to redeploy the policy.
 
-:::image type="content" source="media/resolve-ediscovery-hold-issues/retry-case-hold.png" alt-text="Screenshot to click Retry option in the case hold page.":::
+:::image type="content" source="media/resolve-ediscovery-hold-issues/retry-case-hold.png" alt-text="Screenshot to select the Retry option in the case hold page.":::
 
 ## Error: PolicyNotifyError
 
@@ -98,19 +98,19 @@ If you see this error in the **ResultCode: PolicyNotifyError** and the following
 
 ### Resolution
 
-Running the `Set-CaseHoldPolicy -Identity "policyname" -RetryDistribution` will resolve the issue.
+Run the `Set-CaseHoldPolicy -Identity "policyname" -RetryDistribution` to resolve the issue.
 
    ```powershell
    Set-CaseHoldPolicy "policyname" -RetryDistribution
    ```
 
-Also in the case hold page in the Microsoft Purview compliance portal, you can redeploy the policy by clicking **Retry**.
+Also in the case hold page in the Microsoft Purview portal, select **Retry** to redeploy the policy.
 
 :::image type="content" source="./media/resolve-ediscovery-hold-issues/retry-case-hold.png" alt-text="Screenshot to retry a case hold.":::
 
 ## Error: InternalError
 
-If you see this error in the **ResultCode: InternalError** and the following error message, this issue has to be resolved by Microsoft.
+If you see this error in the **ResultCode: InternalError** and the following error message, this issue needs to be resolved by Microsoft.
 
 > Policy deployment has been interrupted by an unexpected Microsoft 365 datacenter issue. Please contact Microsoft support to fix the deployment issue.
 
@@ -122,23 +122,23 @@ Contact Microsoft Support with the following information:
 - Microsoft 365 service or feature
 - Result code
 - Result message
-- Additional diagnostics
+- Diagnostics
 
 ## Error: FailedToOpenContainer
 
-If you see this error in the **ResultCode: FailedToOpenContainer** and the following error message when putting custodians and data sources on hold, use the resolution steps to troubleshoot the issue.
+If you see this error in the **ResultCode: FailedToOpenContainer** and the following error message when putting custodians and data sources on hold, use the following steps to resolve the issue.
 
 > The mailbox or SharePoint site may not exist.  If this is incorrect, please contact Microsoft support.  Otherwise, please remove it from this policy.
 
 ### Resolution
 
-- Run the [Get-Mailbox](/powershell/module/exchange/get-mailbox) in Exchange Online PowerShell to check if the user mailbox exists in your organization.
+- To check whether the user mailbox exists in your organization, run the [Get-Mailbox](/powershell/module/exchange/get-mailbox) command in Exchange Online PowerShell.
 
-- Run the [Get-SPOSite](/powershell/module/sharepoint-online/get-sposite) cmdlet in SharePoint Online PowerShell to check if the site exists in your organization.
+- To check whether the site exists in your organization, run the [Get-SPOSite](/powershell/module/sharepoint-online/get-sposite) command in SharePoint Online PowerShell.
 
-- Check to see if the site URL has changed.
+- Check whether the site URL changed.
 
-- Remove the mailbox or site from the policy, if the object doesn't exist.
+- Remove the mailbox or site from the policy if the object doesn't exist.
 
 ## Error: SiteInReadonlyOrNotAccessible
 
@@ -152,21 +152,21 @@ Unlock the site (or ask an admin to unlock it) to resolve this issue. To learn m
 
 ## Error: SiteOutOfQuota
 
-If you see this error in the **ResultCode: SiteOutOfQuota** and the following error message, the SharePoint site has reached its storage quota.
+If you see this error in the **ResultCode: SiteOutOfQuota** and the following error message, then the SharePoint site reached its storage quota.
 
 > The SharePoint site does not have enough quota. Please allocate more quota to the site collection, and then redeploy this policy.
 
 ### Resolution
 
-Add more storage to the site (or ask an admin to add more storage) to the site collection. To learn more about how to manage the storage quotas for a site, see [Manage site collection storage limits](/sharepoint/manage-site-collection-storage-limits).
+Add more storage to the site, or ask an admin to add more storage to the site collection. To learn how to manage the storage quotas for a site, see [Manage site collection storage limits](/sharepoint/manage-site-collection-storage-limits).
 
-After more storage quota has been added to the site the policy will need to be redeployed.
+After more storage quota is added to the site, the policy must be redeployed.
 
    ```powershell
    Set-CaseHoldPolicy "policyname" -RetryDistribution
    ```
 
-Also in the case hold page in the Microsoft Purview compliance portal, you can redeploy the policy by clicking **Retry**.
+Also, in the case hold page in the Microsoft Purview portal, select **Retry** to redeploy the policy.
 
 :::image type="content" source="./media/resolve-ediscovery-hold-issues/retry-case-hold.png" alt-text="Screenshot to retry a case hold.":::
 
@@ -178,9 +178,9 @@ If you see this error in the **ResultCode: RecipientTypeNotAllowed** and the fol
 
 ### Resolution
 
-Run the [Get-Recipient](/powershell/module/exchange/get-recipient) in Exchange Online PowerShell to check if the address in the Endpoint is a valid mailbox.
+To check whether the address for the endpoint is a valid mailbox, run the [Get-Recipient](/powershell/module/exchange/get-recipient) command in Exchange Online PowerShell.
 
-If the above cmdlet shows the SMTP address is not a valid mailbox, remove it from the policy.
+If the cmdlet determines that the SMTP address isn't a valid mailbox, remove it from the policy.
 
 ```powershell
 Set-CaseHoldPolicy "policyname" -RemoveExchangeLocation "non-mailbox user"
@@ -188,10 +188,12 @@ Set-CaseHoldPolicy "policyname" -RemoveExchangeLocation "non-mailbox user"
 
 ## More information
 
-The guidance about updating hold policies for multiple users in the "Recommended practices" section results from the fact that the system blocks simultaneous updates to a hold policy. That means when an updated hold policy is applied to new content locations and the hold policy is in a pending state, additional content locations can't be added to the hold policy. Here are some things to keep in mind to help you mitigate this issue:
+The guidance about updating hold policies for multiple users in the "Recommended practices" section results from the fact that the system blocks simultaneous updates to a hold policy. When an updated hold policy is applied to new content locations and the hold policy is in a pending state, you can't add more content locations to the hold policy.
+
+Here are some things to keep in mind to help you mitigate this issue:
   
 - Every time a hold updated is updated, it immediately goes into a pending state. The pending state status means the hold is being applied to content locations.
   
-- If you have a script that runs a loop and adds locations to policy one by one (similar to the incorrect example shown in the "Recommended practices" section), the first content location (for example, a user mailbox) initiates the sync process that triggers the pending state. That means the other users that are added to the policy in subsequent loops result in an error.
+- If you have a script that runs a loop and adds locations to policy one by one, the first content location such as a user mailbox initiates the sync process that triggers the pending state. That means you will see an error for the other users who are added to the policy in subsequent loops.
   
-- If your organization is using a script that runs a loop to update the content locations for a hold policy, you must update the script so that it updates locations in a single bulk operation (as shown in the correct example in the "Recommended practices" section).
+- If your organization is using a script that runs a loop to update the content locations for a hold policy, you must update the script so that it updates locations in a single bulk operation.

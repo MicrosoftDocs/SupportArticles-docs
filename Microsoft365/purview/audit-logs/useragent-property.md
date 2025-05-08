@@ -13,7 +13,7 @@ ms.reviewer: munatara, ioana
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 
 # UserAgent property value in the unified audit log from the Security & Compliance Center

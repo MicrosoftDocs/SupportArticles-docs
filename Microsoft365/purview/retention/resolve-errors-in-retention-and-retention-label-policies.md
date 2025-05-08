@@ -12,12 +12,12 @@ ms.custom:
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 
 # Resolve errors in Microsoft 365 retention and retention label policies
 
-If you encounter an error that's related to Microsoft 365 retention or retention label policies, select the applicable error description from the following list:
+If you encounter an error about Microsoft 365 retention or retention label policies, select the applicable error description from the following list:
 
 - [Settings not found](#error-settings-not-found)
 - [Something went wrong](#error-something-went-wrong)
@@ -42,7 +42,7 @@ For information about how to identify retention policy errors, see [Identify err
 
 ### Symptoms
 
-When you check the details pane for a retention policy in the Microsoft Purview compliance portal, you see the error message, "Settings not found."
+When you check the details pane for a retention policy in the Microsoft Purview portal, you see the error message, "Settings not found."
 
 ### Cause
 
@@ -52,9 +52,9 @@ Your retention policy has no retention rules.
 
 To resolve this issue, use either of the following methods.
 
-#### Method 1: Use the Microsoft Purview compliance portal
+#### Method 1: Use the Microsoft Purview portal
 
-1. In the [Microsoft Purview compliance portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
+1. In the [Microsoft Purview portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
 
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Retention policies**
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Label policies**
@@ -105,9 +105,9 @@ To resolve this issue, use either of the following methods.
 
 ### Symptoms
 
-When you check the details pane for a policy in the Microsoft Purview compliance portal, you see the error message, "Something went wrong."
+When you check the details pane for a policy in the Microsoft Purview portal, you see the error message, "Something went wrong."
 
-If you run the following command, you see `PolicyNotifyError` in the value that's returned by the `DistributionResults` property:
+If you run the following command, you see `PolicyNotifyError` in the value returned by the `DistributionResults` property:
 
 ```powershell
 Get-RetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Select -ExpandProperty DistributionResults
@@ -119,17 +119,17 @@ An unspecified error occurred in the notification pipeline of the policy sync an
 
 ### Resolution
 
-To resolve this issue, use either of the following methods. If you use method 1, check for additional resolution options in the policy details pane.
+To resolve this issue, use either of the following methods. If you use method 1, check for other resolution options in the policy details pane.
 
-#### Method 1: Use the Microsoft Purview compliance portal
+#### Method 1: Use the Microsoft Purview portal
 
-1. In the [Microsoft Purview compliance portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
+1. In the [Microsoft Purview portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
 
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Retention policies**
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Label policies**
    - **Records Management** \> **Label policies**
 
-2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
+2. To open the policy details pane, select the policy. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane doesn't open.
 
 3. In the policy details pane, select **Retry**. The policy enters a pending state until policy sync and distribution finishes.
 
@@ -149,9 +149,9 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 ### Symptoms
 
-When you check the details pane for a policy in the Microsoft Purview compliance portal, you see the error message, "The location is ambiguous."
+When you check the details pane for a policy in the Microsoft Purview portal, you see the error message, "The location is ambiguous."
 
-If you run the following command, you see `MultipleInactiveRecipientsError` in the value that's returned by the `DistributionResults` property:
+If you run the following command, you see `MultipleInactiveRecipientsError` in the value returned by the `DistributionResults` property:
 
 ```powershell
 Get-RetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Select -ExpandProperty DistributionResults
@@ -163,11 +163,11 @@ The system returned more than one result for the specified location. For the sys
 
 ### Resolution
 
-To resolve this issue, use either of the following methods. If you use method 1, check for additional resolution options in the policy details pane that opens when you select the policy name.
+To resolve this issue, use either of the following methods. If you use method 1, check for other resolution options in the policy details pane that opens when you select the policy name.
 
-#### Method 1: Use the Microsoft Purview compliance portal
+#### Method 1: Use the Microsoft Purview portal
 
-1. In the [Microsoft Purview compliance portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
+1. In the [Microsoft Purview portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
 
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Retention policies**
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Label policies**
@@ -195,9 +195,9 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 ### Symptoms
 
-When you try to create or update a policy in the Microsoft Purview compliance portal, the operation fails. In the details pane for the policy, you see the error message, "The location is out of storage."
+When you try to create or update a policy in the Microsoft Purview portal, the operation fails. In the details pane for the policy, you see the error message, "The location is out of storage."
 
-If you run the following command, you see `SiteOutOfQuota` in the value that's returned by the `DistributionResults` property:
+If you run the following command, you see `SiteOutOfQuota` in the value returned by the `DistributionResults` property:
 
 ```powershell
 Get-RetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Select -ExpandProperty DistributionResults
@@ -209,19 +209,19 @@ The location doesn't have enough available storage for the system to apply your 
 
 ### Resolution
 
-To resolve this issue, use either of the following methods. If you use method 1, check for additional resolution options in the policy details pane.
+To resolve this issue, use either of the following methods. If you use method 1, check for other resolution options in the policy details pane.
 
-#### Method 1: Use the Microsoft Purview compliance portal
+#### Method 1: Use the Microsoft Purview portal
 
 1. Increase the storage quota for the specified location. Contact the site administrator or global SharePoint administrator to manage the quota for the location. You can also delete unnecessary items to increase available storage.
 
-2. In the [Microsoft Purview compliance portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
+2. In the [Microsoft Purview portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
 
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Retention policies**
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Label policies**
    - **Records Management** \> **Label policies**
 
-3. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
+3. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane doesn't open.
 
 4. In the policy details pane, select **Retry**. The policy enters a pending state until policy sync and distribution finishes.
 
@@ -243,9 +243,9 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 ### Symptoms
 
-When you check the details pane for a policy in the Microsoft Purview compliance portal, you see the error message, "The site is locked."
+When you check the details pane for a policy in the Microsoft Purview portal, you see the error message, "The site is locked."
 
-If you run the following command, you see `SiteInReadOnlyOrNotAccessible` in the value that's returned by the `DistributionResults` property:
+If you run the following command, you see `SiteInReadOnlyOrNotAccessible` in the value returned by the `DistributionResults` property:
 
 ```powershell
 Get-RetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Select -ExpandProperty DistributionResults
@@ -257,19 +257,19 @@ An administrator locked the site, or the system temporarily locked the site duri
 
 ### Resolution
 
-To resolve this issue, use either of the following methods. If you use method 1, check for additional resolution options in the policy details pane.
+To resolve this issue, use either of the following methods. If you use method 1, check for other resolution options in the policy details pane.
 
-#### Method 1: Use the Microsoft Purview compliance portal
+#### Method 1: Use the Microsoft Purview portal
 
-1. Contact the site administrator or global SharePoint administrator to [unlock the site](/sharepoint/manage-lock-status), and then redeploy this policy.
+1. Contact the site administrator or Global SharePoint administrator to [unlock the site](/sharepoint/manage-lock-status), and then redeploy this policy.
 
-2. In the [Microsoft Purview compliance portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
+2. In the [Microsoft Purview portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
 
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Retention policies**
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Label policies**
    - **Records Management** \> **Label policies**
 
-3. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
+3. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane doesn't open.
 
 4. In the policy details pane, select **Retry**. The policy enters a pending state until policy sync and distribution finishes.
 
@@ -291,9 +291,9 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 ### Symptoms
 
-When you check the details pane for a policy in the Microsoft Purview compliance portal, you see the error message, "We're still processing your policy."
+When you check the details pane for a policy in the Microsoft Purview portal, you see the error message, "We're still processing your policy."
 
-If you run the following command, you see `PolicySyncTimeout` in the value that's returned by the `DistributionResults` property:
+If you run the following command, you see `PolicySyncTimeout` in the value returned by the `DistributionResults` property:
 
 ```powershell
 Get-RetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Select -ExpandProperty DistributionResults
@@ -305,17 +305,17 @@ The policy sync didn't finish within the expected timeframe.
 
 ### Resolution
 
-To resolve this issue, use either of the following methods. If you use method 1, check for additional resolution options in the policy details pane.
+To resolve this issue, use either of the following methods. If you use method 1, check for extra resolution options in the policy details pane.
 
-#### Method 1: Use the Microsoft Purview compliance portal
+#### Method 1: Use the Microsoft Purview portal
 
-1. In the [Microsoft Purview compliance portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
+1. In the [Microsoft Purview portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
 
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Retention policies**
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Label policies**
    - **Records Management** \> **Label policies**
 
-2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
+2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane doesn't open.
 
 3. In the policy details pane, select **Retry**. The policy enters a pending state until policy sync and distribution finishes.
 
@@ -335,9 +335,9 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 ### Symptoms
 
-When you check the details pane for a policy in the Microsoft Purview compliance portal, you see the error message, "We can't process your policy."
+When you check the details pane for a policy in the Microsoft Purview portal, you see the error message, "We can't process your policy."
 
-If you run the following command, you see `ActiveDirectorySyncError` in the value that's returned by the `DistributionResults` property:
+If you run the following command, you see `ActiveDirectorySyncError` in the value returned by the `DistributionResults` property:
 
 ```powershell
 Get-RetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Select -ExpandProperty DistributionResults
@@ -349,17 +349,17 @@ The policy didn't sync with Microsoft Entra ID.
 
 ### Resolution
 
-To resolve this issue, use either of the following methods. If you use method 1, check for additional resolution options in the policy details pane.
+To resolve this issue, use either of the following methods. If you use method 1, check for other resolution options in the policy details pane.
 
-#### Method 1: Use the Microsoft Purview compliance portal
+#### Method 1: Use the Microsoft Purview portal
 
-1. In the [Microsoft Purview compliance portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
+1. In the [Microsoft Purview portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
 
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Retention policies**
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Label policies**
    - **Records Management** \> **Label policies**
 
-2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
+2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane doesn't open.
 
 3. In the policy details pane, select **Retry**. The policy enters a pending state until policy sync and distribution finishes.
 
@@ -379,9 +379,9 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 ### Symptoms
 
-When you check the details pane for a policy in the Microsoft Purview compliance portal, you see the error message, "We couldn't find this location."
+When you check the details pane for a policy in the Microsoft Purview portal, you see the error message, "We couldn't find this location."
 
-If you run the following command, you see `FailedToOpenContainer` in the value that's returned by the `DistributionResults` property:
+If you run the following command, you see `FailedToOpenContainer` in the value returned by the `DistributionResults` property:
 
 ```powershell
 Get-RetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Select -ExpandProperty DistributionResults
@@ -396,17 +396,17 @@ The policy can't sync to a location because the location doesn't exist. The loca
 
 ### Resolution
 
-To resolve this issue, use either of the following methods. If you use method 1, check for additional resolution options in the policy details pane.
+To resolve this issue, use either of the following methods. If you use method 1, check for other resolution options in the policy details pane.
 
-#### Method 1: Use the Microsoft Purview compliance portal
+#### Method 1: Use the Microsoft Purview portal
 
-1. In the [Microsoft Purview compliance portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
+1. In the [Microsoft Purview portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
 
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Retention policies**
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Label policies**
    - **Records Management** \> **Label policies**
 
-2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
+2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane doesn't open.
 
 3. Remove the problematic locations from the policy.
 
@@ -428,9 +428,9 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 ### Symptoms
 
-When you check the details pane for a policy in the Microsoft Purview compliance portal, you see the error message, "We ran into a problem."
+When you check the details pane for a policy in the Microsoft Purview portal, you see the error message, "We ran into a problem."
 
-If you run the following command, you see `InternalError` in the value that's returned by the `DistributionResults` property:
+If you run the following command, you see `InternalError` in the value returned by the `DistributionResults` property:
 
 ```powershell
 Get-RetentionCompliancePolicy -Identity "<policy name>" -DistributionDetail | Select -ExpandProperty DistributionResults
@@ -442,17 +442,17 @@ An unspecified error occurred in the policy sync and distribution process.
 
 ### Resolution
 
-To resolve this issue, use either of the following methods. If you use method 1, check for additional resolution options in the policy details pane.
+To resolve this issue, use either of the following methods. If you use method 1, check for other resolution options in the policy details pane.
 
-#### Method 1: Use the Microsoft Purview compliance portal
+#### Method 1: Use the Microsoft Purview portal
 
-1. In the [Microsoft Purview compliance portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
+1. In the [Microsoft Purview portal](https://compliance.microsoft.com/), search for the policy on the following tabs:
 
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Retention policies**
    - **Data Lifecycle Management** \> **Microsoft 365** \> **Label policies**
    - **Records Management** \> **Label policies**
 
-2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane won't open.
+2. Select the policy to open the policy details pane. Make sure that you select the policy name and not the corresponding checkbox. Otherwise, the details pane doesn't open.
 
 3. In the policy details pane, select **Retry**. The policy enters a pending state until policy sync and distribution finishes.
 
@@ -472,7 +472,7 @@ To resolve this issue, use either of the following methods. If you use method 1,
 
 ### Symptoms
 
-When you try to add a location to a policy in the Microsoft Purview compliance portal, the operation fails and you see the error message, "You can't apply a hold here."
+When you try to add a location to a policy in the Microsoft Purview portal, the operation fails and you see the error message, "You can't apply a hold here."
 
 If you try to add a location to a policy by using PowerShell, you receive the `RecipientTypeNotAllowed` error message.
 
@@ -484,7 +484,7 @@ You tried to add a mailbox location to a policy, but the policy doesn't support 
 
 To resolve this issue, use either of the following methods.
 
-#### Method 1: Use the Microsoft Purview compliance portal
+#### Method 1: Use the Microsoft Purview portal
 
 1. Go back to the step in which you specified the policy locations, and then remove the problematic locations from the policy.
 

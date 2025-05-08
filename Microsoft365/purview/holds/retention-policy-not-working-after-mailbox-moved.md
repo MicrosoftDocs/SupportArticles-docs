@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 # Retention policy no longer works after a mailbox is moved from the on-premises environment to Exchange Online
 

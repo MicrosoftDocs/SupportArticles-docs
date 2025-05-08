@@ -14,7 +14,7 @@ ms.reviewer: subansal
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 # Microsoft 365 Import job fails with MailboxAmbiguous error in the Import job log file
 

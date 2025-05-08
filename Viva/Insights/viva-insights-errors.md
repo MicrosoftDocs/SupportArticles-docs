@@ -10,7 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
 ms.custom: 
-  - CSSTroubleshoot  
+  - CSSTroubleshoot
+  - sap:Advanced Insights - Data Sources & Organizational Data Upload
 ---
 
 # Resolve errors when you work with Viva Insights
