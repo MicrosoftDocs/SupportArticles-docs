@@ -14,14 +14,14 @@ _Original KB number:_ &nbsp; 2747616
 
 ## Symptoms
 
-Assume that you are running Microsoft SQL Server Analysis Services (SSAS) under a role for which cell security is enabled. When you try to execute an UPDATE CUBE Multidimensional Expressions (MDX) statement, the statement execution may take longer to execute than for a role for which cell security is not enabled.
+Assume that you're running Microsoft SQL Server Analysis Services (SSAS) under a role for which cell security is enabled. When you try to execute an UPDATE CUBE Multidimensional Expressions (MDX) statement, the statement execution may take longer to execute than for a role for which cell security isn't enabled.
 
 ## Cause
 
 This behavior is by design. When cell security is enabled, the Analysis Services engine executes the queries in cell-by-cell mode. If the writeback operation performs allocation at a high level, the space of leaf level cells will be large.
 
 > [!NOTE]
-> The space is not the number of rows in the fact table. The space is the full cross join space of all dimension granularity attributes. It takes a long time to enumerate those cells one-by-one in order to check the cell security.
+> The space isn't the number of rows in the fact table. The space is the full cross join space of all dimension granularity attributes. It takes a long time to enumerate those cells one-by-one in order to check the cell security.
 
 ## Workaround
 
@@ -36,7 +36,7 @@ To work around this issue, use one of the following methods.
 
 - Method 2  
 
-    Perform the writeback operation at the lowest granularity level of a certain member. You cannot allocate for many detailed granularity members.
+    Perform the writeback operation at the lowest granularity level of a certain member. You can't allocate for many detailed granularity members.
 
     > [!NOTE]
     > You may have to create dummy members in dimension tables that are marked as adjustment members in each dimension, to support the writeback operation.

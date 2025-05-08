@@ -31,16 +31,16 @@ To work around this issue, try one of the following methods.
 Configure the query window to output the query results as text. A text output uses less memory than the grid, and it may be sufficient to display the query results. To make this change, follow these steps:
 
 1. Right-click the query window.
-2. Click **Results to**.
-3. Click **Results to Text**.
+2. Select **Results to**.
+3. Select **Results to Text**.
 
 ## Method 2: Output the results to a file
 
 Configure the query window to output the query results to a file. A file output uses a minimal amount of memory. This reserves more memory for storing the results set. To make this change, follow these steps:
 
 1. Right-click the query window.
-2. Click **Results to**.
-3. Click **Results To File**.
+2. Select **Results to**.
+3. Select **Results To File**.
 4. Run the query, and then select the location in which to save the results file.
 
 ## Method 3: Use sqlcmd

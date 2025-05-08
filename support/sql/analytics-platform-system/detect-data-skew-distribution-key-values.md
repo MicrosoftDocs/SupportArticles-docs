@@ -30,9 +30,9 @@ order by count(distribtuion_key) desc
 ```
 
 > [!NOTE]
-> The `having` clause is commented out. However, if you want to perform a quick check of whether there is significant skew, this clause may tell you. You may have to adjust the having value to something that makes sense for your result set. For example, if all values have 5,000 records, we recommend that you set this value to 7,500 or 10,000 to indicate an issue.
+> The `having` clause is commented out. However, if you want to perform a quick check of whether there's significant skew, this clause may tell you. You may have to adjust the having value to something that makes sense for your result set. For example, if all values have 5,000 records, we recommend that you set this value to 7,500 or 10,000 to indicate an issue.
 
-The question of when skew becomes a problem does not have a deterministic answer. Skew becomes a problem when performance of skewed distributions becomes noticeable and the application cannot tolerate the situation. The rule of thumb is that the appliance can tolerate a skew of 10 to 20 percent across all the tables. Within this threshold, the skewed distributions should even out under concurrency. Above this threshold, you may start to see some long-running distributions when the data is processed. Some implementations may be able to tolerate greater skew, and some implementations may be unable to tolerate this much. Testing is required to determine the actual threshold for your implementation.
+The question of when skew becomes a problem doesn't have a deterministic answer. Skew becomes a problem when performance of skewed distributions becomes noticeable and the application can't tolerate the situation. The rule of thumb is that the appliance can tolerate a skew of 10 to 20 percent across all the tables. Within this threshold, the skewed distributions should even out under concurrency. Above this threshold, you may start to see some long-running distributions when the data is processed. Some implementations may be able to tolerate greater skew, and some implementations may be unable to tolerate this much. Testing is required to determine the actual threshold for your implementation.
 
 ## More information
 
