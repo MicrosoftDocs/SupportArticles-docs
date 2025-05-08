@@ -42,6 +42,9 @@ If provisioning fails, make sure that:
 - Microsoft Entra Connect is running correctly, and there are no issues with the sync server.
 - You manually perform an `Add-Computer` into the OU provided for Cloud PCs. Time how long it takes for that computer object to appear in Microsoft Entra ID.
 
+> [!NOTE]
+> If you receive the following warning after confirming that the recommended configuration is correctly set and are not experiencing provisioning failures, no further action is required. This warning can occur if the check is performed directly after a sync has been completed.
+
 ## Azure subnet IP address range usage
 
 As part of the ANC setup, you're required to provide a subnet to which the Cloud PC connects. For each Cloud PC, provisioning creates a virtual NIC and consumes an IP address from this subnet.
