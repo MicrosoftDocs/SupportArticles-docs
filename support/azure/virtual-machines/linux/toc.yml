@@ -357,6 +357,8 @@
     href: how-to-display-encryption-settings-with-azure-resource-explorer.md
   - name: FAQ
     href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Troubleshoot boot failure after enabling Azure Disk Encryption
+    href: troubleshoot-vm-boot-failure-after-enabling-azure-disk-encryption.md
 
 - name: Repair a VM with Nested Hyper-V
   items:
