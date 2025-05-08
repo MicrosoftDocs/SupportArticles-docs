@@ -12,11 +12,13 @@ ms.custom:
 ---
 # Troubleshoot authentication errors that occur when you join Windows-based computers to a domain
 
-This article describes several authentication related error messages that can occur when you join client computers that are running Windows to a domain. This article also provides troubleshooting suggestions for these errors.
+This article describes several authentication related error messages that can occur when you join client computers that are running Windows to a domain. This article also provides troubleshooting suggestions for these errors. For networking related error messages, see [Troubleshoot networking errors that occur when you join Windows-based computers to a domain](networking-errors-join-computer-domain.md).
+
+_Original KB number:_ &nbsp; 4341920
 
 ## Where to find the NetSetup.log file
 
-The **NetSetup.log** file contains most information about domain join activities. The file is located on the client machine at **%windir%\\debug\\Netsetup.log**. This log file is enabled by default. No need to explicitly enable it.
+The **NetSetup.log** file contains most information about domain join activities. The file is located on the client machine at **%windir%\\debug\\NetSetup.log**. This log file is enabled by default. No need to explicitly enable it.
 
 ## You have exceeded the maximum number of computer accounts you are allowed to create in this domain
 

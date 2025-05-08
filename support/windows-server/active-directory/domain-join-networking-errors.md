@@ -12,7 +12,9 @@ ms.custom:
 ---
 # Troubleshoot networking errors that occur when you join Windows-based computers to a domain
 
-This article describes several networking related error messages that occur when you join client computers that are running Windows to a domain. This article also provides troubleshooting suggestions for these errors.
+This article describes several networking related error messages that occur when you join client computers that are running Windows to a domain. This article also provides troubleshooting suggestions for these errors. For authentication related error messages, see [Troubleshoot authentication errors that occur when you join Windows-based computers to a domain](authentication-errors-join-computer-domain.md).
+
+_Original KB number:_ &nbsp; 4341920
 
 ## Where to find the NetSetup.log file
 
@@ -126,6 +128,6 @@ This problem can also be caused by one of the following conditions:
 > - [832017 Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md)  
 > - [179442 How to configure a firewall for domains and trusts](config-firewall-for-ad-domains-and-trusts.md)  
 
-## Changing the Primary Domain DNS name of this computer to "" failed. The name will remain ".".The specified server cannot perform the operation
+## Changing the Primary Domain DNS name of this computer to "" failed. The name will remain ".". The specified server cannot perform the operation
 
 This error occurs when you use the domain join UI to join a Windows 7 or Windows Server 2008 R2 workgroup computer to an Active Directory domain by specifying the target DNS domain. To fix this error, see [2018583 Windows 7 or Windows Server 2008 R2 domain join displays error "Changing the Primary Domain DNS name of this computer to "" failed...."](https://support.microsoft.com/help/2018583/windows-7-or-windows-server-2008-r2-domain-join-displays-error-changin).
