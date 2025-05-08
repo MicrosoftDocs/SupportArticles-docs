@@ -3,7 +3,7 @@ metadata:
   title: Azure Kubernetes Service (AKS) common issues FAQ
   description: Review a list of frequently asked questions (FAQ) about common issues when you're working with an Azure Kubernetes Service (AKS) cluster.
   ms.topic: faq
-  ms.date: 03/06/2025
+  ms.date: 05/08/2025
   ms.reviewer: chiragpa, nickoman, jotavar, v-leedennis, v-weizhu
   ms.service: azure-kubernetes-service
   ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
@@ -42,7 +42,7 @@ sections:
 
           - The *admin-username*, which sets the administrator user name for Linux nodes, must start with a letter. This user name may only contain letters, numbers, hyphens, and underscores. It has a maximum length of 32 characters.
 
-          - 'aksmanagedap' is blocked as a reserved name for AKS system components. 'aksmanagedap' cannot be used for nodepools. 
+          - The *aksmanagedap* is blocked as a reserved name for AKS system components. It can't be used for nodepools. 
           
           For more information about naming convention. see the following resources:
            - [Naming rules and restrictions for Azure resources](/azure/azure-resource-manager/management/resource-name-rules#microsoftcontainerservice)
