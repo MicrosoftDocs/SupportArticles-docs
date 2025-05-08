@@ -14,7 +14,7 @@ ms.reviewer: lindabr, andreza
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 # Issues that affect PST import jobs
 
