@@ -14,7 +14,7 @@ appliesto:
   - Microsoft Purview
   - Exchange Online
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 
 # Resolve search errors in eDiscovery (Standard)

@@ -17,7 +17,7 @@ appliesto:
   - Exchange Online Protection
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 08/13/2024
+ms.date: 05/05/2025
 ---
 
 # Collect Microsoft Purview compliance diagnostics

@@ -14,7 +14,7 @@ appliesto:
   - Exchange Online
   - Microsoft Exchange Hosted Archive
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 
 # "Error occurred during validation in agent 'Windows LiveId Agent'" when you try to enable archiving for a mailbox in an Exchange hybrid deployment

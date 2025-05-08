@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Lync Server 2013
 search.appverid: MET150
-ms.date: 06/25/2024
+ms.date: 05/05/2025
 ---
 # How to restore In-Place Hold and Litigation Hold settings in an Exchange hybrid deployment
 

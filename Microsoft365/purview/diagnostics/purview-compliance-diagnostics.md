@@ -15,7 +15,7 @@ ms.reviewer: shadans, sathyana, meerak, v-shorestris
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 04/28/2025
+ms.date: 05/05/2025
 ---
 
 # Self-help diagnostics for Microsoft Purview

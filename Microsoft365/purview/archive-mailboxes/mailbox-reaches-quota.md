@@ -14,7 +14,7 @@ ms.reviewer: wesmils
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 # Your mailbox reaches its quota even if the Archive feature is enabled
 
