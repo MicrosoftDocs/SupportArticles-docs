@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Linux VM Boot Failure After Enabling Azure Disk Encryption
 description: Provides troubleshooting steps for an issue where an Azure Linux virtual machine fails to boot after deploying Azure Disk Encryption.
-ms.date: 05/07/2025
+ms.date: 05/08/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:Azure Disk Encryption (ADE) for Linux, linux-related-content
 ms.reviewer: divargas, elcorral, v-weizhu
@@ -75,16 +75,16 @@ To resolve this issue, follow these steps:
 
         ```bash
         sudo ls -l /dev/disk/by-partuuid/ | grep -w <partition containing the OS>
-        lrwxrwxrwx 1 root root  10 May 18 17:33 ef61c3c3-50bb-40f0-8124-4cbe8cb2a380 -> ../../sda1
+        lrwxrwxrwx 1 root root  10 May 18 17:33 <ROOTPARTUUID> -> ../../sda1
         ```
 
-    4. Unlock the root partition by running the following command. Replace the `ROOTPARTUUID` variable with the one obtained in the preceding step.
+    3. Unlock the root partition by running the following command. Replace the `ROOTPARTUUID` variable with the one obtained in the preceding step.
 
         ```bash
         cryptsetup luksOpen /dev/disk/by-partuuid/ROOTPARTUUID osencrypt --header /boot/luks/osluksheader -d /mnt/azure_bek_disk/LinuxPassPhraseFileName
         ```
 
-    5. Regenerate the initramfs image:
+    4. Regenerate the initramfs image:
 
         ```bash
         update-initramfs -u -k all
@@ -97,7 +97,7 @@ To resolve this issue, follow these steps:
         cryptsetup: WARNING: target 'osencrypt' not found in /etc/crypttab
         + PREREQS=udev
         + mount -a
-        + cryptsetup luksOpen /dev/disk/by-partuuid/ef61c3c3-50bb-40f0-8124-4cbe8cb2a380 osencrypt --header /boot/luks/osluksheader -d /mnt/azure_bek_disk/LinuxPassPhraseFileName
+        + cryptsetup luksOpen /dev/disk/by-partuuid/<ROOTPARTUUID> osencrypt --header /boot/luks/osluksheader -d /mnt/azure_bek_disk/LinuxPassPhraseFileName
         Device osencrypt already exists.
         + exit 0
         ```
@@ -113,9 +113,9 @@ To resolve this issue, follow these steps:
    [AzureDiskEncryption] 3670: [Info] Encryption succeeded for all volumes
    [AzureDiskEncryption] 3670: [Info] Executing: lvs --noheadings --nameprefixes --unquoted -o lv_name,vg_name,lv_kernel_major,lv_kernel_minor
    [AzureDiskEncryption] 3670: [Info] OS PV is encrypted
-   [AzureDiskEncryption] 3670: [Info] found one ide with vmbus: 00000000-0000-8899-0000-000000000000 and the sdx path is: sda
-   [AzureDiskEncryption] 3670: [Info] found one ide with vmbus: 00000000-0001-8899-0000-000000000000 and the sdx path is: sdb
-   [AzureDiskEncryption] 3670: [Info] found one ide with vmbus: 00000001-0001-8899-0000-000000000000 and the sdx path is: sdc
+   [AzureDiskEncryption] 3670: [Info] found one ide with vmbus: <GUID> and the sdx path is: sda
+   [AzureDiskEncryption] 3670: [Info] found one ide with vmbus: <GUID> and the sdx path is: sdb
+   [AzureDiskEncryption] 3670: [Info] found one ide with vmbus: <GUID> and the sdx path is: sdc
    [AzureDiskEncryption] 3670: [Info] Executing: pvs
    [AzureDiskEncryption] 3670: [Info] Found OS block device: /dev/mapper/osencrypt
    ```
