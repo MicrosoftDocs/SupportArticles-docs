@@ -63,7 +63,7 @@ Some users who previously ran Performance Diagnostics successfully encounter the
 
 #### Cause
 
-A recent rollout has a bug that tries to grant write permissions to the storage account for the current user when initiating a run from the Azure portal. An Azure role that includes the `Microsoft.Storage/storageAccounts/listkeys/action` permission isn't enough to grant this permission, causing the run to fail.
+A recent rollout has a bug that tries to grant the write permission to the storage account for the current user when initiating a run from the Azure portal. An Azure role that includes the `Microsoft.Storage/storageAccounts/listkeys/action` permission isn't enough to grant this permission, causing the run to fail.
 
 #### Status
 
