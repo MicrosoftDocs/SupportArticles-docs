@@ -21,7 +21,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: How to open a shared calendar
-            url: ./calendaring/how-to-open-shared-calendar.md
+            url: /microsoft-365-apps/outlook/calendaring/open-shared-calendar
           - text: How to share calendar and contacts
             url: ./calendaring/how-to-share-calendar-and-contacts.md
           - text: Manage Room Finder

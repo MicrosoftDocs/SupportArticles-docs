@@ -264,9 +264,9 @@
         - name: Map classic Outlook policies to new Outlook
           href: ../installation/map-classic-outlook-policies-to-new-outlook.md
         - name: Planning considerations
-          href: ../installation/plan-outlook-2016-deployment.md
+          href: /microsoft-365-apps/outlook/configuration/plan-outlook-deployment
         - name: Remove the Get and set up Outlook Mobile app on my phone option
-          href: ../installation/how-to-remove-get-and-set-up-outlook-mobile-app-on-my-phone-option.md
+          href: /microsoft-365-apps/outlook/configuration/remove-get-and-set-up-outlook-mobile-app-option
         - name: Upgrade to Office 2016 fails
           href: ../installation/upgrade-errors-office-2016.md
     - name: Junk Email
@@ -290,7 +290,7 @@
         - name: Attachment size exceeds the allowable limit error
           href: ../message-body/attachment-size-exceeds-the-allowable-limit-error.md
         - name: Embed and play back videos in Outlook and Loop
-          href: ../message-body/embed-playback-videos-in-outlook-and-loop.md
+          href: /microsoft-365-apps/outlook/message-body/embed-playback-videos-in-outlook-and-loop
         - name: How message format affects email messages
           href: ../message-body/how-tnef-affects-email-messages.md
         - name: HTTPS linked images in HTML emails display the red X
@@ -304,7 +304,7 @@
         - name: No subject or content in automatic emails
           href: ../message-body/no-subject-content-in-automatically-email.md
         - name: Record videos in Outlook and Loop
-          href: ../message-body/record-videos-in-outlook-and-loop.md
+          href: /microsoft-365-apps/outlook/message-body/record-videos-in-outlook-and-loop
         - name: Strange characters in message body
           href: ../message-body/strange-characters-display-message-body.md
         - name: Specified Message Identity is Invalid error when opening delivery reports
@@ -314,7 +314,7 @@
         - name: User info in @mentions doesn't resolve
           href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/outlook/troubleshoot/context/client-context
         - name: View emails and web links side-by-side with Outlook and Microsoft Edge
-          href: ../message-body/view-emails-and-web-links-in-browser.md
+          href: /microsoft-365-apps/outlook/message-body/view-emails-and-web-links-in-browser
     - name: Performance
       items:
         - name: '"The time limit for logging on was reached" error'
@@ -324,7 +324,7 @@
         - name: An OLE registration error occurred message occurs
           href: ../performance/an-ole-registration-error-occurred-message.md
         - name: Application event log entries for add-in load time
-          href: ../performance/event-log-entries-for-add-in-load-time.md
+          href: /microsoft-365-apps/outlook/performance/log-entries-for-add-ins
         - name: Application pauses if having large data file
           href: ../performance/application-pauses-if-you-have-large-data-file.md
         - name: Cannot preview .msg files in Windows File Explorer
@@ -336,7 +336,7 @@
         - name: Crashes after installing language packs
           href: ../performance/outlook-2016-crash-event-1000.md
         - name: Enable transport logging
-          href: ../performance/enable-transport-logging.md
+          href: /microsoft-365-apps/outlook/performance/enable-transport-logging
         - name: Error when you copy MSG email message files in Outlook containing multiple attachments or recipients
           href: ../performance/error-when-copying-msg-with-many-attachments-or-recipients.md
         - name: ErrorItemNotFound when add-ins make REST calls
@@ -384,7 +384,7 @@
         - name: Terminated in error found in Sync Issues log files
           href: ../performance/terminated-in-error-found-in-sync-issues-log-files.md
         - name: Using Process Explorer to list dlls running under Outlook.exe
-          href: ../performance/using-process-explorer-to-list-dlls-running-under-outlook-exe.md
+          href: /microsoft-365-apps/outlook/performance/dlls-running-under-process-exe
     - name: Profiles and Accounts
       items:
         - name: 0x800ccc80 when sending email by using POP3 or IMAP account
@@ -392,7 +392,7 @@
         - name: '"The operation failed" when sending emails'
           href: ../profiles-and-accounts/operation-failed-send-email-outlook.md
         - name: Add a shared mailbox as an additional account
-          href: ../profiles-and-accounts/add-shared-mailbox-as-additional-account.md
+          href: /microsoft-365-apps/outlook/profiles-and-accounts/add-shared-mailbox-as-additional-account
         - name: Additional RSS feeds appear
           href: ../profiles-and-accounts/additional-rss-feeds-appear.md
         - name: Archive mailbox doesn't display in Outlook or Outlook on the web
@@ -404,13 +404,13 @@
         - name: Can't use EAS to connect Outlook to Exchange
           href: ../profiles-and-accounts/outlook-cannot-use-activesync-connect-exchange.md
         - name: Enable ZeroConfigExchange automatically create first profile
-          href: ../profiles-and-accounts/let-zeroconfigexchange-automatically-create-first-profile.md
+          href: /microsoft-365-apps/outlook/profiles-and-accounts/zeroconfigexchange
         - name: Event 1098 and can't create new profiles
           href: ../profiles-and-accounts/event-1098-and-cannot-create-new-profiles.md
         - name: Focused Inbox disappears
           href: ../profiles-and-accounts/focused-inbox-disappears-switch-folder.md
         - name: How to control AutoDiscover via Group Policy
-          href: ../profiles-and-accounts/how-to-control-autodiscover-via-group-policy.md
+          href: /microsoft-365-apps/outlook/profiles-and-accounts/control-autodiscover-via-group-policy
         - name: Issues when multiple accounts are added to the same profile
           href: ../profiles-and-accounts/issues-that-occur-when-adding-multiple-exchange-accounts.md
         - name: Mailboxes with full access aren't automapped to Outlook profile
@@ -426,7 +426,7 @@
         - name: Outlook doesn't connect or web services don't work after migration
           href: ../profiles-and-accounts/cannot-connect-web-service-not-working-migrated-to-office-365.md
         - name: Remove automapping for shared mailbox
-          href: ../profiles-and-accounts/remove-automapping-for-shared-mailbox.md
+          href: /microsoft-365-apps/outlook/profiles-and-accounts/remove-automapping-for-shared-mailbox
     - name: Security
       items:
         - name: A program is trying to send an email message on your behalf warning
@@ -444,15 +444,15 @@
         - name: External recipient can't open encrypted email
           href: ../security/external-recipient-can't-open-encrypted-email.md
         - name: How to block additional attachment file name extensions
-          href: ../security/how-to-block-additional-attachment-file-name-extensions.md
+          href: /microsoft-365-apps/outlook/security/block-additional-attachment-file-name-extensions
         - name: Information about email security settings
-          href: ../security/information-about-email-security-settings.md
+          href: /microsoft-365-apps/outlook/security/email-security-settings
         - name: Outlook Trust Center shows antivirus status as Unavailable
           href: ../security/outlook-trust-center-shows-antivirus-status-as-unavailable.md
         - name: Personal tags don't apply correctly for Inbox rule
           href: ../security/personal-policy-tag-not-work-correctly.md
         - name: Prevent delegates from reading protected messages
-          href: ../security/prevent-delegate-access-to-irm-protected-messages.md
+          href: /microsoft-365-apps/outlook/security/prevent-delegate-access-to-irm-messages
         - name: Your Digital ID name cannot be found error
           href: ../security/error-when-decrypting-message-via-3des-certificate.md
     - name: Synchronization
@@ -476,11 +476,11 @@
         - name: Synchronization issues occur in Outlook and in OWA
           href: ../synchronization/synchronization-issues-occur-in-outlook-owa.md
         - name: Synchronization monitor improvements
-          href: ../synchronization/synchronization-monitor-improvements.md
+          href: /microsoft-365-apps/outlook/configuration/sync-monitor-improvements
     - name: User Interface
       items:
         - name: Access public folders in Outlook for Windows
-          href: ../user-interface/navigate-to-public-folders-in-new-outlook.md      
+          href: /microsoft-365-apps/outlook/user-interface/public-folders-in-new-outlook
         - name: Apps for Outlook app doesn't load data
           href: ../user-interface/apps-for-outlook-app-does-not-load-data.md
         - name: Attachment saving scenarios do not work as expected
@@ -490,7 +490,7 @@
         - name: Can't assign color categories for IMAP accounts
           href: ../user-interface/cannot-assign-color-categories-for-imap-accounts.md
         - name: Can't delete default Outlook folders
-          href: ../user-interface/cannot-delete-default-outlook-folders.md
+          href: /microsoft-365-apps/outlook/user-interface/cannot-delete-default-outlook-folders
         - name: Can't open multiple Excel attachments
           href: ../user-interface/only-two-excel-attachments-can-open.md
         - name: Can't recover deleted items from a non-mail public folder
@@ -520,7 +520,7 @@
         - name: Conversation History folder is missing
           href: ../user-interface/conversation-history-folder-is-missing.md
         - name: Customization options for Today view
-          href: ../user-interface/customization-options-for-outlook-today-view.md
+          href: /microsoft-365-apps/outlook/user-interface/customize-outlook-today-view
         - name: Default Office Add-in icon is displayed
           href: ../user-interface/default-office-addin-icon-displayed-outlook-ribbon.md
         - name: Default folder is missing
@@ -542,11 +542,11 @@
         - name: Graphics file attachment becomes larger in recipient's email
           href: ../user-interface/graphics-file-attachment-grows-larger-in-recipient-email.md
         - name: How time zone normalization works
-          href: ../user-interface/how-time-zone-normalization-works-in-outlook.md
+          href: /microsoft-365-apps/outlook/user-interface/time-zone-normalization
         - name: How to configure default message class for new items
-          href: ../user-interface/how-to-configure-default-message-class-for-new-items.md
+          href: /microsoft-365-apps/outlook/user-interface/configure-default-message-class-for-new-items
         - name: How to decide where to publish custom forms
-          href: ../user-interface/how-to-determine-where-to-publish-custom-outlook-forms.md
+          href: /microsoft-365-apps/outlook/user-interface/publish-custom-outlook-form
         - name: IMAP account cannot download messages
           href: ../user-interface/outlook-imap-account-cannot-download-messages.md
         - name: Incomplete search results occur if PDF iFilter is installed
@@ -558,7 +558,7 @@
         - name: Mailbox quota information isn't displayed
           href: ../user-interface/mailbox-quota-information-not-displayed.md
         - name: MAPI is the only way to change profiles
-          href: ../user-interface/mapi-is-the-only-way-to-change-profiles.md
+          href: /microsoft-365-apps/outlook/user-interface/mapi-to-change-profiles
         - name: Messages occur if connecting to Microsoft 365 email accounts
           href: ../user-interface/messages-occur-when-connecting-to-office-365-email-account.md
         - name: Missing registry data causes problems with object model
@@ -586,7 +586,7 @@
         - name: Outlook icon missing from the Windows taskbar
           href: ../user-interface/outlook-application-icon-missing-from-windows-taskbar.md
         - name: Outlook Object Model can't run in a Windows service
-          href: ../user-interface/outlook-object-model-unsuitable-to-run-in-windows-service.md
+          href: /microsoft-365-apps/outlook/user-interface/oom-unsuitable-in-windows-service
         - name: PersonMetadata error in Search Folder
           href: ../user-interface/personmetadata-items.md
         - name: Presence icons do not show in Outlook
@@ -594,7 +594,7 @@
         - name: Reminders in Outlook do not appear
           href: ../user-interface/reminders-in-outlook-do-not-show.md
         - name: Remove duration from retention tags
-          href: ../user-interface/remove-duration-retention-policy-tag.md
+          href: /microsoft-365-apps/outlook/user-interface/remove-duration-info-in-retention-policy-tag
         - name: Search folders aren't populated in Online mode
           href: ../user-interface/outlook-search-folders-issue-online-mode.md
         - name: Search Folders don't appear in OWA
