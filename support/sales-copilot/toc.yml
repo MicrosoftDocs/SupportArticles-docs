@@ -23,6 +23,8 @@
     - name: Salesforce CRM users can't see data in Copilot for Sales
       href: crm-permissions-and-configurations/no-column-error.md
     - name: Salesforce CRM users can't view, edit, or save data in Copilot for Sales
+    - name: Server-to-Server Setup Disable Action Failed with Error Couldn’t get connected app details
+      href: crm-permissions-and-configurations/Server-to-Server Setup Disable Action Failed with Error Couldn’t get connected app details.md
       href: crm-permissions-and-configurations/salesforce-permission-error.md
     - name: '"This contact already exists" error when creating a CRM record'
       href: crm-permissions-and-configurations/duplicate-record-error.md

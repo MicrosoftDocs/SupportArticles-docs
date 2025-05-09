@@ -19,7 +19,7 @@ This article helps you troubleshoot the error "Couldn’t get connected app deta
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce      |
-|**Users**     | Adminstarator  |
+|**Users**     | Administrator  |
 
 ## Symptoms
 
@@ -37,7 +37,7 @@ This error means that failed to get the connected app information when try to re
 
 ## Resolution
 
-Please try again. If the issue persists, please gather the error details on the UI and reach out to support team.
+Please try again. If the problem continues, note the error details shown on the UI and contact support team for assistance.
 
 ## More information
 
