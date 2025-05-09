@@ -39,7 +39,7 @@ The following switches are available for this scenario. They aren't case-sensiti
 |---|---|---|
 |`-S <scenarioname>`|Specify this switch and `OfficeScrubScenario` as the value for the `scenarioname` parameter to run this scenario.|Required|
 |`-AcceptEula`|Specify this switch to accept the End User License Agreement (EULA) and to run this scenario.|Required|
-|`-OfficeVersion`|Specify this switch to remove the Office version that's defined in the `<version>` parameter. The allowed values for the `<version>` parameter are All, M365, 2021, 2019, 2016, 2013, 2010, and 2007.|Optional|
+|`-OfficeVersion`|Specify this switch to remove the Office version that's defined in the `<version>` parameter. The allowed values for the `<version>` parameter are All, `M365`, 2021, 2019, 2016, 2013, 2010, and 2007.|Optional|
 
 ## Sample commands
 
@@ -79,7 +79,7 @@ Here are some sample combinations of switches to run this scenario.
 
 ## Detected conditions and results
 
-When you run the Office Uninstall scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition that's encountered by this scenario, and the corresponding output that's displayed.
+When you run the Office Uninstall scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition that's encountered by this scenario, and the corresponding output it displays.
 
 |Condition|Action taken by the Enterprise version|Output shown in the Command Prompt window|
 |---|---|---|
