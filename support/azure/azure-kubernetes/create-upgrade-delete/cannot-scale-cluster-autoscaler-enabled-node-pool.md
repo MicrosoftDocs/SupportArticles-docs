@@ -22,9 +22,9 @@ You receive an error message that resembles the following message:
 
 ## Troubleshooting checklist
 
-Azure Kubernetes Service (AKS) uses virtual machine (VM) scale sets-based agent pools. These pools contain cluster nodes and [cluster autoscaling capabilities](/azure/aks/cluster-autoscaler), if they're enabled.
+Azure Kubernetes Service (AKS) uses Azure Virtual Machine Scale Sets-based agent pools. These pools contain cluster nodes and [cluster autoscaling capabilities](/azure/aks/cluster-autoscaler), if they're enabled.
 
-### Check that the cluster VM scale set exists
+### Check that the cluster virtual machine scale set exists
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Find the node resource group by searching for the following names:  
@@ -35,18 +35,18 @@ Azure Kubernetes Service (AKS) uses virtual machine (VM) scale sets-based agent 
    > [!NOTE]
    > When you create a cluster, AKS automatically creates a second resource group to store the AKS resources. For more information, see [Why are two resource groups created with AKS?](/azure/aks/faq#why-are-two-resource-groups-created-with-aks)
 
-1. Check the list of resources to make sure that a VM scale set exists.
+1. Check the list of resources to make sure that a virtual machine scale set exists.
 
-## Cause 1: The cluster VM scale set was deleted
+## Cause 1: The cluster virtual machine scale set was deleted
 
-If you delete the VM scale set that's attached to the cluster, this action causes the cluster autoscaler to fail. It also causes issues when you provision resources such as nodes and pods.
+If you delete the virtual machine scale set that's attached to the cluster, this action causes the cluster autoscaler to fail. It also causes issues when you provision resources such as nodes and pods.
 
 > [!NOTE]
-> Modifying any resource under the node resource group in the AKS cluster is an unsupported action and will cause cluster operation failures. You can prevent changes from being made to the node resource group by [blocking users from modifying resources](/azure/aks/cluster-configuration#fully-managed-resource-group-preview) that are managed by the AKS cluster.
+> Modifying any resource under the node resource group in the AKS cluster is an unsupported action and causes cluster operation failures. You can prevent changes from being made to the node resource group by [blocking users from modifying resources](/azure/aks/cluster-configuration#fully-managed-resource-group-preview) that are managed by the AKS cluster.
 
 ### Reconcile node pool
 
-If the cluster VM scale set is accidentally deleted, you can reconcile the node pool by using `az aks nodepool update`:
+If the cluster virtual machine scale set is accidentally deleted, you can reconcile the node pool by using `az aks nodepool update`:
 
 ```bash
 # Update Node Pool Configuration
@@ -80,7 +80,7 @@ Deleting the cluster node resource group causes issues when you provision the in
 
 ## Solution: Update the cluster to the goal state without changing the configuration
 
-To resolve this issue, run the following command to recover the deleted VM scale set or any tags (missing or modified).
+To resolve this issue, run the following command to recover the deleted virtual machine scale set or any tags (missing or modified).
 
 > [!NOTE]
 > It might take a few minutes until the operation finishes.
