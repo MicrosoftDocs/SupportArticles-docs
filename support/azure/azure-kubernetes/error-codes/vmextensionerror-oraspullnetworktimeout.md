@@ -1,5 +1,5 @@
 ---
-title: OrasPullNetworkTimeoutVMExtensionError when creating AKS clusters
+title: OrasPullNetworkTimeoutVMExtensionError When Creating AKS Clusters
 description: Learn how to troubleshoot the OrasPullNetworkTimeoutVMExtensionError error (211) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.date: 05/07/2025
 ms.reviewer: xinhl, v-weizhu
