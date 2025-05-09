@@ -32,7 +32,7 @@ To resolve this issue, follow these steps:
 1. Retrieve the ACR resource ID that AKS uses as the bootstrap ACR by running the following command:
 
     ```console
-    az aks show -g ${RESOURCE_GROUP} -n ${CLUSTER_NAME} --query 'bootstrapProfile.containerRegistryResourceId
+    az aks show -g ${RESOURCE_GROUP} -n ${CLUSTER_NAME} --query 'bootstrapProfile.containerRegistryResourceId'
     ```
 
 2. Verify the ACR cache rule. It should include `aks-managed-rule` with source repo `mcr.microsoft.com/*` and target repo `aks-managed-reposity/*`. Ensure no other cache rule exists with source or target repo as `*`, which override `aks-managed-rule`.
