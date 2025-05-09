@@ -1,7 +1,7 @@
 ---
 title: Name computers, domains, sites, and OUs
 description: Describes how to name computers, domains, sites, and organizational units in Active Directory.
-ms.date: 05/08/2025
+ms.date: 05/09/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
