@@ -29,7 +29,9 @@
     - name: 'Server-to-Server Setup Disable Action Failed with Error Couldn’t remove a resource'
       href: crm-permissions-and-configurations/server-to-server-setup-disable-action-failed-with-error-Couldn’t-remove-a-resource.md
     - name: 'Server-to-Server Setup Disable Action Failed with Error Couldn’t remove the connected app'
-      href: crm-permissions-and-configurations/Server-to-Server Setup Disable Action Failed with Error Couldn’t remove the connected app.md
+      href: crm-permissions-and-configurations/server-to-Server-setup-disable-action-failed-with-error-couldn’t-remove-the-connected-app.md
+    - name: Server-to-server Setup Disable Action Failed with Error Couldn’t remove the permission set
+    - href: crm-permissions-and-configurations/server-to-server-setup-disable-action-failed-with-error-couldn’t-remove-the-permission-set.md
     - name: '"This contact already exists" error when creating a CRM record'
       href: crm-permissions-and-configurations/duplicate-record-error.md
     - name: You don't have permission for this error
