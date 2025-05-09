@@ -2,7 +2,7 @@
 title: Purchase Order workflow error
 description: Workflow Approval Fails Due to Unvalidated Accounting Distributions After Purchase Order Change Request.
 ms.reviewer: shubhamshr
-ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orderss
+ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
 #  Workflow Approval Fails Due to Unvalidated Accounting Distributions After Purchase Order
 
@@ -12,7 +12,7 @@ When submitting a purchase order for approval after setting it back to Draft and
 
 "Stopped (error): Accounting distribution validation failed. Please recall purchase order workflow and rectify accounting distributions. This action can only be completed after the line number 1 is fully distributed."
 
-## Steps to reproduce:
+## Steps to reproduce
 
 Create and approve a purchase order for vendor with change management enabled.
 
@@ -27,4 +27,3 @@ Observe that the workflow approval fails with the above error.
 ## Workaround
 
 Disable the Parameter Auto Calculate Totals and Accounting Distribution from Accounts Payable Parameters -> General -> Purchase Order Workflow
-
