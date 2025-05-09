@@ -56,7 +56,7 @@ In that article, this naming convention applies to computer names, OU names, and
 
   For more information about the NetBIOS name syntax, see [NetBIOS name syntax](/openspecs/windows_protocols/ms-nbte/6f06fa0e-1dc4-4c41-accb-355aaf20546d).
 
-- **Character case**: Although NetBIOS is case sensitive, Windows only uses uppercase names, and in practice, the names are not case sensitive.
+- **Character case**: Although NetBIOS is case-sensitive, Windows uses only uppercase names, and in practice, the names aren't case-sensitive.
 - **Name length rules:**
     - Minimum name length: One character
     - Maximum name length: 15 characters
