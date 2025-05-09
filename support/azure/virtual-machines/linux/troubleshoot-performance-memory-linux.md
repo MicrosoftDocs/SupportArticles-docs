@@ -14,15 +14,18 @@ ms.date: 05/06/2025
 **Applies to:** :heavy_check_mark: Linux VMs
 
 
-
+##5 Things Memory might influence
 Memory is a resource which every process, including the kernel, does require.
-How much memory is required for each process does depend on its design and for what purpose the program got developed for. In short, based on the design more or less memory is allocated either at the Heap or on the Stack. Think of an in memory database, for instance, SAP HANA
-But memory can also indirectly be consumed via an increase of the page cache. What is the page cache?
-The page cache is an in memory representation of a file which got read from a disk before. With the help of the page cache an extra read from the disk can be avoided therefore. The best example is a file server which does benefit from this underlying kernel functionality.
-We therefore need always be aware of what application or applications are running on the same virtual machine and whether they might compete about the available memory. 
-Also of interest is to know whether the VM is running on a NUMA or on an UMA architecture.
-Depending on the memory requirements of a process, it might be to prefer an UMA architecture. Where the complete RAM can be address without a penalty, on the other hand, for HPC with many small processes or processes fitting in one of the NUMA-Nodes you can benefit from the CPU cache-locality. Another point to keep in mind is whether memory overcommitment is allowed by the kernel or not.
-Depending on its configuration, every memory request is fulfilled. Or it's denied if the amount of memory requested isn't available. 
+How much memory is required for each process does depend on its design and for what purpose the program got developed for. In short, based on the design more or less memory is allocated either at the Heap or on the Stack. Think of an in memory database like SAP HANA. 
+
+Though, memory can also indirectly be consumed via an increase of the page cache. What is the page cache? The page cache is an in memory representation of a file which got read from a disk before. With the help of the page cache an extra read from the disk can be avoided therefore. The best example is a file server which does benefit from this underlying kernel functionality.
+
+
+We therefore need always be aware of what application or applications are running on the same virtual machine and whether they might compete about the available memory. Also of interest is to know whether the VM is running on a NUMA or on an UMA architecture. Depending on the memory requirements of a process, it might be to prefer an UMA architecture. Where the complete RAM can be address without a penalty, on the other hand, for HPC with many small processes or processes fitting in one of the NUMA-Nodes you can benefit from the CPU cache-locality. 
+
+Another point to keep in mind is whether memory overcommitment is allowed by the kernel or not. Depending on its configuration, every memory request is fulfilled. Or it's denied if the amount of memory requested isn't available.
+
+
 Another part related to memory is the availability of swap space. Even, if we have nowadays plenty of RAM available it's still recommended to configure SWAP space. With the help of enabling swap, the overall system stability is increased by keeping it more resilient if there are low memory conditions. 
 For more information about these concepts, see the [kernel doc](https://docs.kernel.org/admin-guide/mm/concepts.html#concepts-overview)
 
@@ -158,12 +161,14 @@ The program is utilizing too much of the available memory. It isn't possible to 
 The information from the OOM we find on the console or simply with the command `dmesg`
 It starts with this detail at the beginning of the trace
 ![invoked OOM killer](media/mallo-invoked-oom-killer.png)
-
+:::image type="content" source="media/mallo-invoked-oom-killer.png" alt-text="OOM killer got invoked" border="false" lightbox="media/mallo-invoked-oom-killer.png":::
 And ends with the following lines
 ![out of memory](media/out-of-memory.png)
+:::image type="content" source="media/out-of-memory.png" alt-text="Error: Out of memory, raised" border="false" lightbox="media/out-of-memory.png":::
 
 In between, the following content is displayed
 ![OOM full detail](media/memory-in-between.png)
+:::image type="content" source="media/memory-in-between.png" alt-text="OOM full detail" border="false" lightbox="media/memory-in-between.png":::
 
 
 The important information we get from it are the following
@@ -175,6 +180,7 @@ No swap space
 
 The malloc process requested a single page (4 KB) --> order=0, one single page sounds not much, when we look at the following lines there should be plenty of memory available
 ![lowmem reserv](media/lowmem-reserve.png)
+
 
 On the first glimpse, there should be enough pages left. Let us further examine the situation. Memory is taken from the Normal Zone. Available memory is 29,500 kB, though the min value is 34628 kB. We are below the min-watermark, in that case only the kernel would be able to use the memory for any internal data structure. A user-space application isn't entitled to get the pages. At this point, the OOM gets involved finding a process which has the highest oom_score and also is utilizing most of the memory. The identified process is the one which gets scarified then. In the picture above you see that the oom_score for the malloc process is 0 and the RSS size is 917760. 
 Among all the other processes, it has the highest RSS size.
