@@ -53,6 +53,6 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: How to suppress Microsoft 365 AutoDiscover redirect warning
-            url: ./connectivity/how-to-suppress-microsoft-365-autodiscover-redirect-warning.md
+            url: /microsoft-365-apps/outlook/connectivity/suppress-autodiscover-redirect-warning-mac
           - text: Outlook 2016 for Mac crashes when a Proxy Auto Configuration file is used
             url: ./connectivity/outlook-2016-for-mac-crashes-using-proxy-auto-configuration-file.md
