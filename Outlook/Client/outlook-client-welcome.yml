@@ -23,9 +23,9 @@ landingContent:
           - text: How to open a shared calendar
             url: /microsoft-365-apps/outlook/calendaring/open-shared-calendar
           - text: How to share calendar and contacts
-            url: ./calendaring/how-to-share-calendar-and-contacts.md
+            url: /microsoft-365-apps/outlook/calendaring/share-calendar-and-contacts
           - text: Manage Room Finder
-            url: ./calendaring/room-finder.md
+            url: /microsoft-365-apps/outlook/calendaring/room-finder
   # Card
   - title: Authentication
     linkLists:

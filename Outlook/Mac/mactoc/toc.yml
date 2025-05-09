@@ -52,7 +52,7 @@
     - name: Diagnostic Logging
       items:
         - name: How to enable logging in Outlook for Mac
-          href: ../diagnostic-logging/how-to-enable-logging-in-outlook-for-mac.md
+          href: /microsoft-365-apps/outlook/diagnostic-logging/enable-logging
     - name: Email Messages
       items:
         - name: Font size differs from the original email
@@ -66,7 +66,7 @@
     - name: Import/Export
       items:
         - name: Can't import .olm files into Outlook for Windows
-          href: ../import-and-export/cannot-import-olm-file-into-outlook-for-windows.md
+          href: /microsoft-365-apps/outlook/import-export/cannot-import-olm-files
         - name: Can't import an ANSI .pst file
           href: ../import-and-export/cannot-import-ansi-pst-file.md
         - name: Permissions error when importing Outlook 2011 identity
