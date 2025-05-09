@@ -1,55 +1,65 @@
 ---
-title: Azure Kubernetes Service AI toolchain operator add-on issues
-description: Learn how to resolve issues that occur when you try to enable the Azure Kubernetes Service (AKS) AI toolchain operator add-on.
-ms.date: 05/06/2025
-author: sachidesai
-ms.author: sachidesai
+title: Errors when enabling AKS AI toolchain operator add-on
+description: Learn how to resolve errors that occur when you try to enable the Azure Kubernetes Service (AKS) AI toolchain operator add-on.
+ms.date: 05/09/2025
+ms.reviewer: sachidesai, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons, references_regions
 ---
+# Errors when enabling AKS AI toolchain operator add-on
 
-# AKS AI toolchain operator add-on issues
-
-This article discusses how to troubleshoot problems that you may experience when you enable the Microsoft Azure Kubernetes Service (AKS) AI toolchain operator add-on during cluster creation or a cluster update.
+This article provides guidance on resolving errors that might occur when you enable the Microsoft Azure Kubernetes Service (AKS) AI Toolchain Operator (KAITO) add-on during a cluster creation or update.
 
 ## Prerequisites
+
+Ensure the following tools are installed and configured. They'll be used in the following sections.
 
 - [Azure CLI](/cli/azure/install-azure-cli)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), the Kubernetes command-line client
 
 ## Symptoms
 
-AI toolchain operator add-on has two controllers: the `gpu-provisioner` controller and `workspace` controller. After enabling the add-on and deploying a KAITO workspace, you may experience one or more of the following errors in your pod logs:
+The KAITO add-on consists of two controllers: the `gpu-provisioner` controller and the `workspace` controller. After enabling the add-on and deploying a KAITO workspace, you might encounter one or more of the following errors in your pod logs:
 
 | Error message | Cause |
-|--|--|
+| --- | --- |
 | Workspace was not created | [Cause 1: KAITO custom resource not configured properly](#cause-1-misconfiguration-in-kaito-custom-resource) |
-| GPU node was not created | [Cause 2: GPU quota limitations](#cause-2-gpu-quota-limitations) |  
-| Resource ready condition is not `True` | [Cause 3: Long model inference image pull time](#cause-3-long-image-pull-time) |
+| GPU node was not created | [Cause 2: GPU quota limitations](#cause-2-gpu-quota-limitations) |
+| Resource ready condition is not `True` | [Cause 3: Long pull time for model inference images](#cause-3-long-pull-time-for-model-inference-images)|
 
+## Cause 1: Misconfiguration in KAITO custom resource
 
-## Cause 1: Misconfiguration in KAITO Custom Resource
+After you enable the add-on and deploy a preset or custom workspace custom resource (CR), the `workspace` controller includes a validation webhook. This webhook blocks common mistakes of setting wrong values in the CR specification.
 
-After you enable the add-on and deploy either a preset or custom workspace custom resource (CR), the workspace controller has a validation webhook that will block common mistakes of setting wrong values in the CR spec. Check your `gpu-provisioner` and workspace pod logs to ensure that any updates to GPU VM size meet the requirements of your model size. After the workspace CR is created successfully, track  deployment progress by running the following commands:
+To resolve this issue, follow these steps:
 
-```azurecli
-kubectl get machine -o wide
-```
+1. Check yourgpu-provisioner and workspace pod logs.
+2. Ensure that any updates to the GPU virtual machine (VM) size meet the requirements of your model size.
+3. Once the workspace CR is successfully created, track the deployment progress by running the following commands:
 
-```azurecli
-kubectl get workspace -o wide
-```
+    ```azurecli
+    kubectl get machine -o wide
+    ```
+
+    ```azurecli
+    kubectl get workspace -o wide
+    ```
 
 ## Cause 2: GPU quota limitations
 
-The `gpu-provisioner` controller may have failed to create the GPU node(s), in this case you can check the machine CR status (internal CR created by the workspace controller) for error messages. The machine CRs created by the `workspace` controller has a label key `kaito.sh/workspace` with workspace's name as the value. Address the potential GPU quota limitations by:
+The gpu-provisioner controller might fail to create GPU nodes due to quota limitations in your subscription or region. In this case, you can check the machine CR status (internal CR created by the workspace controller) for error messages. The machine CR created by the workspace controller has a kaito.sh/workspace label key with the workspace's name as the value.
 
-1. Requesting an [increase in the subscription quota](/azure/quotas/quickstart-increase-quota-portal) for the required GPU VM family for your deployment.
+To resolve this issue, use one of the following methods:
 
-2. Checking [GPU instance availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/table?msockid=182ea2d5e1ff6eb61ccbb1b8e5ff608a) in the specific region of your AKS cluster; you may need to switch region or GPU VM size if not available.
+- Request an [increase in the subscription quota](/azure/quotas/quickstart-increase-quota-portal?) for the required GPU VM family of your deployment.
+- Check [GPU instance availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/table?msockid=182ea2d5e1ff6eb61ccbb1b8e5ff608a) in the specific region of your AKS cluster.
 
-## Cause 3: Long image pull time
+    If the required GPU VM size is unavailable in your current region, consider switching to a different region or selecting an alternative GPU VM size.
 
-The model inference image may not be pulled if the image access mode is set to private. This can occur for images that you specify the URL and pull secret.
+## Cause 3: Long pull time for model inference images
 
-Note that the inference images are usually large (30GB-100GB), hence please expect a longer image pull time (up to tens of minutes depending on your AKS cluster networking setup).
+If the image access mode is set to private, the model inference image might not be pulled. This issue can occur for images with specified URLs and pull secrets.
+
+The inference images are typically large (30 GB -100 GB), so a longer image pull time is expected. Depending on your AKS cluster's networking setup, the pull process might take up to tens of minutes.
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
