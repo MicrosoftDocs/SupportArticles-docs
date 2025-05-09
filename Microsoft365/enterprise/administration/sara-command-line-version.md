@@ -14,7 +14,7 @@ ms.reviewer: gregmans; zebamehdi; meerak
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 03/14/2024
+ms.date: 05/09/2025
 ---
 # Enterprise version of Microsoft Support and Recovery Assistant
 
