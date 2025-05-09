@@ -49,12 +49,6 @@ items:
     href: analytics-platform-system/detect-data-skew-distribution-key-values.md
   - name: Error 105005 when you do CETAS to blob storage
     href: analytics-platform-system/error-cetas-to-blob-storage.md
-  - name: Evaluate PDW statistics accuracy
-    href: analytics-platform-system/evaluate-pdw-statistics-accuracy.md
-  - name: Msg 104381 when you run a statement with ORDER BY clause
-    href: analytics-platform-system/msg-104381-running-statement-order-by.md
-  - name: Operations Manager can't monitor APS appliance
-    href: analytics-platform-system/operations-manager-cannot-monitor-aps.md
 - name: Reporting Services (SSRS)
   href: reporting-services/toc.yml
 

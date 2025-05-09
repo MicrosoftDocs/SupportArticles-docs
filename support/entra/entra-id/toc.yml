@@ -49,6 +49,8 @@
   items:
   - name: Developing or registering apps
     items:
+      - name: 401 Unauthorized errors in ASP.NET Core Web API
+        href: app-integration/401-unauthorized-aspnet-core-web-api.md
       - name: Cookies are disabled error in MSAL.Net XBAP application
         href: app-integration/script-errors-running-msal-net-xbap-app.md
       - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
