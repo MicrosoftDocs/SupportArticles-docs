@@ -2,6 +2,7 @@
 title: Purchase Order workflow error
 description: Workflow Approval Fails Due to Unvalidated Accounting Distributions After Purchase Order Change Request.
 ms.reviewer: shubhamshr
+ms.date: 05/09/2025
 ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
 #  Workflow Approval Fails Due to Unvalidated Accounting Distributions After Purchase Order
