@@ -74,3 +74,5 @@ If you encounter the AADSTS1002016 error while running the PowerShell command `C
 ## References
 
 [Transport Layer Security (TLS) best practices with .NET Framework](/dotnet/framework/network-programming/tls)
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
