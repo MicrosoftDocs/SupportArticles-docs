@@ -20,7 +20,7 @@ The Office Uninstall scenario removes any version of Office from a device. This 
 
 In the full version of Microsoft Support and Recovery Assistant, the equivalent entry point for this scenario is *Office & Office Apps \ I have Office installed, but I'm having trouble uninstalling it*.
 
-**Note:** This scenario requires that you use an elevated Command Prompt window. To do this, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
+**Note:** This scenario requires that you use an elevated Command Prompt window. To do so, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
 ## Download the Enterprise version of the Assistant
 
@@ -79,7 +79,7 @@ Here are some sample combinations of switches to run this scenario.
 
 ## Detected conditions and results
 
-When you run the Office Uninstall scenario by using the Enterprise version of the Assistant, you don't receive any prompts. This is a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition that's encountered by this scenario, and the corresponding output that's displayed.
+When you run the Office Uninstall scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition that's encountered by this scenario, and the corresponding output that's displayed.
 
 |Condition|Action taken by the Enterprise version|Output shown in the Command Prompt window|
 |---|---|---|
