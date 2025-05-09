@@ -1,7 +1,7 @@
 ---
 title: OrasPullUnauthorizedVMExtensionError When Creating AKS Clusters
 description: Learn how to troubleshoot the OrasPullUnauthorizedVMExtensionError error (212) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 05/07/2025
+ms.date: 05/09/2025
 ms.reviewer: xinhl, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OrasPullUnauthorizedVMExtensionError error code (OrasPullUnauthorizedVMExtensionError (212)) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
