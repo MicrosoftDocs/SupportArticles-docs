@@ -358,6 +358,10 @@
   items:
   - name: VMExtension error codes
     items:
+    - name: OrasPullNetworkTimeoutVMExtensionError
+      href: error-codes/vmextensionerror-oraspullnetworktimeout.md
+    - name: OrasPullUnauthorizedVMExtensionError
+      href: error-codes/vmextensionerror-oraspullunauthorized.md
     - name: VMExtensionError_CniDownloadTimeout error
       href: error-codes/vmextensionerror-cnidownloadtimeout.md
     - name: VMExtensionError_OutboundConnFail error
