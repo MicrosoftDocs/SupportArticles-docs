@@ -12,7 +12,7 @@ ms.reviewer: gregmans; zebamehdi
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 03/14/2024
+ms.date: 05/09/2025
 ---
 # Scenario: Outlook Calendar Scan
 

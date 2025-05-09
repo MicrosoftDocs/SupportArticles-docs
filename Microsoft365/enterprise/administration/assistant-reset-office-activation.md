@@ -12,7 +12,7 @@ ms.reviewer: gregmans; zebamehdi; meerak
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 10/25/2022
+ms.date: 05/09/2025
 ---
 # Scenario: Reset Office Activation
 

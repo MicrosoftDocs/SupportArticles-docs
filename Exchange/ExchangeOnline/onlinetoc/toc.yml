@@ -468,7 +468,7 @@
         - name: Connection to Microsoft Exchange is unavailable error
           href: ../outlook-issues/connection-to-microsoft-exchange-is-unavailable-error.md
         - name: Control PST use and creation
-          href: ../outlook-issues/control-pst-use.md
+          href: /microsoft-365-apps/outlook/configuration/control-pst-use
         - name: Emails sent to wrong account if profile has many accounts
           href: ../outlook-issues/emails-sent-to-wrong-account-if-has-many-accounts.md
         - name: Encrypted connection unavailable
