@@ -39,8 +39,6 @@
       href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
     - name: Throttled error (429)
       href: create-upgrade-delete/error-code-aksrequeststhrottled.md
-    - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
-      href: create-upgrade-delete/subnet-with-external-resources-cannot-be-used-by-other-resources.md
     - name: Troubleshoot the AKSCapacityError error code
       href: create-upgrade-delete/akscapacityerror.md
     - name: VMExtensionProvisioningTimeout error
@@ -360,6 +358,10 @@
   items:
   - name: VMExtension error codes
     items:
+    - name: OrasPullNetworkTimeoutVMExtensionError
+      href: error-codes/vmextensionerror-oraspullnetworktimeout.md
+    - name: OrasPullUnauthorizedVMExtensionError
+      href: error-codes/vmextensionerror-oraspullunauthorized.md
     - name: VMExtensionError_CniDownloadTimeout error
       href: error-codes/vmextensionerror-cnidownloadtimeout.md
     - name: VMExtensionError_OutboundConnFail error
