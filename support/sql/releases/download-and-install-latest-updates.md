@@ -147,7 +147,7 @@ Each of the following links provides information for all of the applicable produ
 | 15.0.4023.6             | None         | CU3        | [KB4538853](sqlserver-2019/cumulativeupdate3.md)        | March 12, 2020     |
 | 15.0.4013.40            | None         | CU2        | [KB4536075](sqlserver-2019/cumulativeupdate2.md)        | February 13, 2020  |
 | 15.0.4003.23            | None         | CU1        | [KB4527376](sqlserver-2019/cumulativeupdate1.md)        | January 07, 2020   |
-| 15.0.2070.41            | None         | GDR        | [KB4517790](https://support.microsoft.com/help/4517790) | November 04, 2019  |
+| 15.0.2070.41            | None         | GDR        | [KB4517790](sqlserver-2019/service-update-rtm.md) | November 04, 2019  |
 | 15.0.2000.5             | None         | RTM        | NA                                                    | November 04, 2019  |
 
 ### SQL Server 2017
