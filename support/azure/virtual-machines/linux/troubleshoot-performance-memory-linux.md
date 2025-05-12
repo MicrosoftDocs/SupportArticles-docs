@@ -23,7 +23,7 @@ Though, memory can also indirectly be consumed via an increase of the page cache
 
 We therefore need always be aware of what application or applications are running on the same virtual machine and whether they might compete about the available memory. Also of interest is to know whether the VM is running on a NUMA or on an UMA architecture. Depending on the memory requirements of a process, it might be to prefer an UMA architecture. Where the complete RAM can be address without a penalty, on the other hand, for HPC with many small processes or processes fitting in one of the NUMA-Nodes you can benefit from the CPU cache-locality. 
 
-Another point to keep in mind is whether memory overcommitment is allowed by the kernel or not. Depending on its configuration, every memory request is fulfilled. Or it's denied if the amount of memory requested isn't available.
+Another point to keep in mind is whether the kernel does allow memory overcommitment. Depending on its configuration, every memory request is fulfilled. Or it's denied if the amount of memory requested isn't available.
 
 
 Another part related to memory is the availability of swap space. Even, if we have nowadays plenty of RAM available it's still recommended to configure SWAP space. With the help of enabling swap, the overall system stability is increased by keeping it more resilient if there are low memory conditions. 
@@ -40,11 +40,11 @@ If a detailed view is required for each process, the `pidstat -r` command can be
 
 
 Of particular interest are the columns 'VSZ' and 'RSS' VSZ. They display the amount of memory, in kilo bytes,  reserved by a process and the committed memory usage with the help of the RSS column. 
-Furthermore, via the column 'majflt/s' one gets an overview how often a memory page has to be read from a swap device. If there are concerns about high usage of swap, it's recommended to use the tool `vmstat` to monitor the page-in and page-out statistics over a period of time.
+Furthermore, via the column 'majflt/s' one gets an overview how often a memory page has to be read from a swap device. If there are concerns about high usage of swap, verify its usage with the tool `vmstat` to monitor the page-in and page-out statistics over a period of time.
 
 ![Sample vmstat output](media/vmstat.png)
 
-In case you see high number of pages be read or written from the SWAP these high numbers are usually a hint that memory is getting low. Either by too many processes competing about this resource or that the available RAM can't be used. HugePages, for instance,  might be enabled. HugePages are reserved memory. Only applications capable of utilizing HugePages can use this type of memory. For any other process, this memory isn't useable. In situations you're low on memory reconsider whether you require HugePages for your applications or whether they can also work with Transparent Huge Pages (THP). An example of an application which is able to use THP is the JAVA JVM with the help of the flag 
+In case you see high number of pages be read or written from the SWAP these high numbers are usually a hint that memory is getting low. Either by too many processes competing about this resource or that the available RAM can't be used. HugePages, for instance,  might be enabled. HugePages are reserved memory. Only applications capable of utilizing HugePages can use this type of memory. For any other process, this memory isn't useable. In situations, you're low on memory reconsider whether you require HugePages for your applications or whether they can also work with Transparent Huge Pages (THP). An example of an application which is able to use THP is the JAVA JVM with the help of the flag 
 `-XX:+UseTransparentHugePages`. More details about THP and how it can be controlled is documented at [Transparent HugePage Support](https://docs.kernel.org/admin-guide/mm/transhuge.html)
 For information about HugePages consult this part of the kernel documentation [HugeTLB Pages](https://docs.kernel.org/admin-guide/mm/hugetlbpage.html)
 
@@ -107,7 +107,7 @@ With the help of `/proc/meminfo`, it's possible figure out whether THP is used o
 To find out whether a process does use THP, you have to inspect the `smaps` file in the `/proc` directory of the process in question, for instance, `/proc/2275/smaps` and search for a line containing the word `heap`
 ![THP usage by the sample C program](media/thp.png)
 
-Here we can see that our large memory segment is allocated and `THPeligible` is enabled as part of a THP allocation. With the help of the madvice syscall the memory allocation is much more efficient to allocate this memory block, as one could do with HugePages. Depending on the size, either the kernel allocates just a small 4k page or the kernel is going to allocate a larger contiguous block. 
+Here we can see that our large memory segment is allocated and `THPeligible` is enabled as part of a THP allocation. With the help of the `madvice syscall` the memory allocation is much more efficient to allocate this memory block, as one could do with HugePages. Depending on the size, either the kernel allocates just a small 4k page or the kernel is going to allocate a larger contiguous block. 
 For more information, see the kernel doc at [Transparent Hugepage Support](https://www.kernel.org/doc/html/latest/admin-guide/mm/transhuge.html).
 
 ## NUMA
