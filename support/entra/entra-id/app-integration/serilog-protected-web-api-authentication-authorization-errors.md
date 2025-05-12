@@ -1,7 +1,7 @@
 ---
-title: Use Serilog to troubleshoot protected Web API authentication or authorization errors
+title: Use Serilog to Troubleshoot Protected Web API Authentication or Authorization Errors
 description: Provides a sample web API application to troubleshoot Microsoft Entra protected Web API authentication or authorization errors using Serilog logs.
-ms.date: 05/07/2025
+ms.date: 05/012/2025
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ms.reviewer: bachoang, v-weizhu
@@ -30,10 +30,10 @@ To add the application ID URI for a web API, follow these steps:
 
 1. In the Azure portal, navigate to the app registration of the web API.
 2. Select **Expose an API** under **Manager**.
-3. At the top of the page, select **Add** next to **Application ID URI**. This defaults to `api://<application-client-id>`.
+3. At the top of the page, select **Add** next to **Application ID URI**. The defaults is `api://<application-client-id>`.
 4. Select **Save**.
 
-:::image type="content" source="media/serilog-protected-web-api-authentication-authorization-errors/application-id-uri.png" alt-text="Screenshot that shows how to set the application ID URI in an app registration." border="false":::
+:::image type="content" source="media/serilog-protected-web-api-authentication-authorization-errors/application-id-uri.png" alt-text="Screenshot that shows how to set the application ID URI in an app registration.":::
 
 ### Step 2: Change the sample application configuration
 
@@ -69,7 +69,7 @@ Configure Serilog in the `Serilog` section in the **appsettings.json** file as f
 
 ## Set up logging for JwtBearer events
 
-Here's the sample Program.cs file that shows how to set up logging for the preceding events:
+Here's the sample **Program.cs** file that shows how to set up logging for the preceding events:
 
 ```csharp
 using Microsoft.AspNetCore.Authentication;
