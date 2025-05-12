@@ -1,0 +1,9 @@
+{
+    "redirections": [
+      {
+        "source_path": "entra/entra-id/mfa/authorization-request-denied-graph-api.md",
+        "redirect_url": "/troubleshoot/entra/entra-id/app-integration/troubleshoot-authorization-requestdenied-graph-api",
+        "redirect_document_id": false
+      }
+  ]
+}
