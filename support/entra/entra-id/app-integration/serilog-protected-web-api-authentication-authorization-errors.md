@@ -29,11 +29,11 @@ To run the sample application, you must perform the following steps:
 To add the application ID URI for a web API, follow these steps:
 
 1. In the Azure portal, navigate to the app registration of the web API.
-2. Select **Expose an API** under **Manager**.
+2. Select **Expose an API** under **Manage**.
 3. At the top of the page, select **Add** next to **Application ID URI**. The default is `api://<application-client-id>`.
-4. Select **Save**.
 
-:::image type="content" source="media/serilog-protected-web-api-authentication-authorization-errors/application-id-uri.png" alt-text="Screenshot that shows how to set the application ID URI in an app registration.":::
+   :::image type="content" source="media/serilog-protected-web-api-authentication-authorization-errors/application-id-uri.png" alt-text="Screenshot that shows how to set the application ID URI in an app registration.":::
+5. Select **Save**.
 
 ### Step 2: Change the sample application configuration
 
