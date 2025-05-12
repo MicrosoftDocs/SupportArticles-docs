@@ -21,8 +21,6 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Authorization_RequestDenied error when changing password
-            url: mfa/authorization-request-denied-graph-api.md
           - text: Can't authenticate using ADAL
             url: mfa/adal-authenticate-android-devices-fail.md
           - text: Code 403 Forbidden error when using SSO

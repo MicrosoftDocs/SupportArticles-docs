@@ -265,8 +265,6 @@
       href: mfa/text-voice-call-verification-code-mfa-not-send.md
   - name: Passwords
     items:
-    - name: Authorization_RequestDenied error when changing password
-      href: mfa/authorization-request-denied-graph-api.md
     - name: Can't verify account when resetting password
       href: user-prov-sync/could-not-verify-account-reset-pwd.md
     - name: Federated user is forced to sign in
