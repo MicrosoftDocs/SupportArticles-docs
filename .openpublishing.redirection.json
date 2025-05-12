@@ -13664,6 +13664,7 @@
       "source_path": "support/dynamics/gp/unapproved-pending-change-order-exist.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
     },
+    
     {
       "source_path": "support/dynamics/gp/use-banked-paycodes-with-project-accounting.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
@@ -13686,11 +13687,16 @@
     },
     {
       "source_path": "support/windows-server/active-directory/troubleshoot-errors-join-computer-to-domain.md",
-      "redirect_url": "/troubleshoot/windows-server/active-directory/networking-errors-join-computer-domain"
+      "redirect_url": "/troubleshoot/windows-server/active-directory/domain-join-networking-errors"
     },    
     {
     "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-excel-errors.md",
     "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/office-automation/excel/troubleshoot-excel-errors"
-  }
+  },
+  {
+      "source_path": "support/entra/entra-id/mfa/authorization-request-denied-graph-api.md",
+      "redirect_url": "/troubleshoot/entra/entra-id/app-integration/troubleshoot-authorization-requestdenied-graph-api",
+      "redirect_document_id": false
+    }
   ]
 }

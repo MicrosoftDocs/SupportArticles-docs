@@ -69,6 +69,8 @@
         href: app-integration/package-inspector-msal-android-native.md
       - name: Repeated login prompts in iOS MSAL implementation
         href: app-integration/repeat-login-prompts-in-msal-ios-app.md
+      - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
+        href: app-integration/serilog-protected-web-api-authentication-authorization-errors.md
       - name: WIF10201 No valid key mapping found
         href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
 
@@ -265,8 +267,6 @@
       href: mfa/text-voice-call-verification-code-mfa-not-send.md
   - name: Passwords
     items:
-    - name: Authorization_RequestDenied error when changing password
-      href: mfa/authorization-request-denied-graph-api.md
     - name: Can't verify account when resetting password
       href: user-prov-sync/could-not-verify-account-reset-pwd.md
     - name: Federated user is forced to sign in
