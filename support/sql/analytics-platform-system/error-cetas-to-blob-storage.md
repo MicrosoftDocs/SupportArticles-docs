@@ -1,15 +1,15 @@
 ---
 title: Error 105005 when you do CETAS to blob storage
 description: This article provides resolutions for the error that occurs when you do a CETAS operation to Azure Blob storage by using PolyBase.
-ms.date: 08/05/2020
+ms.date: 05/09/2025
 ms.custom: sap:Parallel Data Warehouse (APS)
-ms.reviewer: daleche, christys
+ms.reviewer: daleche, christys, ccaldera
 ---
 # Error 105005 when you do CETAS operation to Azure blob storage
 
 This article helps you resolve the problem that occurs when you do a `CREATE EXTERNAL TABLE AS SELECT (CETAS)` operation to Azure Blob storage by using PolyBase.
 
-_Original product version:_ &nbsp; SQL Server 2012 Parallel Data Warehouse (APS), SQL Server 2008 R2 Parallel Data Warehouse  
+_Original product version:_ &nbsp; SQL Server Parallel Data Warehouse (APS)   
 _Original KB number:_ &nbsp; 3210540
 
 ## Symptoms
