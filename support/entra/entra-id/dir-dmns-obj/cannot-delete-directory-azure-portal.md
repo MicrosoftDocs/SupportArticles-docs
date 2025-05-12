@@ -94,7 +94,7 @@ To learn how to remove applications from your directory, read [Adding, updating,
 You may also have to remove additional service principals. Use [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation) to remove all service principals:
 
 1. [Install Microsoft Graph PowerShell](/powershell/microsoftgraph/installation).
-2. Run the `Remove-MgServicePrincipal` command to remove the all service principals. This command requires at least the `Application.ReadWrite.All` permission. For more information, see [Remove-MgServicePrincipal](/powershell/module/microsoft.graph.applications/remove-mgserviceprincipal?view=graph-powershell-1.0).
+2. Run the `Remove-MgServicePrincipal` command to remove all service principals. This command requires at least the `Application.ReadWrite.All` permission. For more information, see [Remove-MgServicePrincipal](/powershell/module/microsoft.graph.applications/remove-mgserviceprincipal?view=graph-powershell-1.0).
 
   ```powershell
    Connect-MgGraph -Scopes "Application.ReadWrite.All" -tenant <tenant-ID>
