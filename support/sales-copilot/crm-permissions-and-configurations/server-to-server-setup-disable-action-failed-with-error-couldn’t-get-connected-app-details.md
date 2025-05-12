@@ -1,12 +1,12 @@
 ---
-title: Couldn’t get connected app details. Disable Action Failed error when enable Salesforce server-to-server flow
+title: Couldn’t get connected app details. Disable Action Failed error when enabling Salesforce server-to-server flow
 description: This article helps you troubleshoot the error "Couldn’t get connected app details for the Salesforce organization." when you disable Salesforce server-to-server flow.
 ms.date: 05/12/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-# "Couldn’t get connected app details. Disable Action Failed" error when enable Salesforce server-to-server flow
+# "Couldn’t get connected app details. Disable Action Failed" error when enabling Salesforce server-to-server flow
 
 This article helps you troubleshoot the error "Couldn’t get connected app details for the Salesforce organization." when you disable Salesforce server-to-server flow.
 
