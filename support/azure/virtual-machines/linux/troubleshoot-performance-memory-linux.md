@@ -156,19 +156,15 @@ int main() {
 ```
 
 The program is utilizing too much of the available memory. It isn't possible to allocate more than 3G of  memory
-![memory allocation error](media/malloc.png)
-
+![memory allocation error](media/troubleshoot-performance-memory-linux/malloc-error.png)
 The information from the OOM we find on the console or simply with the command `dmesg`
 It starts with this detail at the beginning of the trace
-![invoked OOM killer](media/mallo-invoked-oom-killer.png)
-:::image type="content" source="media/mallo-invoked-oom-killer.png" alt-text="OOM killer got invoked" border="false" lightbox="media/mallo-invoked-oom-killer.png":::
+![invoked OOM killer](media/troubleshoot-performance-memory-linux/malloc-invoked-oom.png)
 And ends with the following lines
-![out of memory](media/out-of-memory.png)
-:::image type="content" source="media/out-of-memory.png" alt-text="Error: Out of memory, raised" border="false" lightbox="media/out-of-memory.png":::
-
+![out of memory](media/troubleshoot-performance-memory-linux/malloc-out-of-memory.png)
 In between, the following content is displayed
-![OOM full detail](media/memory-in-between.png)
-:::image type="content" source="media/memory-in-between.png" alt-text="OOM full detail" border="false" lightbox="media/memory-in-between.png":::
+![OOM full detail #1](media/troubleshoot-performance-memory-linux/memory-details-1.png)
+![OOM full detail #2](media/troubleshoot-performance-memory-linux/memory-details-2.png)
 
 
 The important information we get from it are the following
@@ -203,6 +199,6 @@ It prints all running processes and their statistics. Another approach is to use
 
 Why do we sort on rss? RSS stands for 'Resident Set Size' the nonswapped physical memory that a task does use. VSZ is the 'Virtual Set Size' which contains the amount of memory the process reserved but not committed. Committed means that a page is written to the physical memory. So if we're interested which of the processes are occupying most of the available memory (physical + swap) we have to have a look at the RSS size of a process. In the screenshot above it looks like that 'snapd' does occupy much memory, though if we look at the RSS column we see that the process isn't that significant. On the other hand, there's a process named 'malloc' which has the same size of VSZ and RSS. So this one is indeed utilizing over 1.3G of memory. 
 
-Summary
+##Summary
 ========
 Working on a memory related issue requires first to get a better picture of the memory usage of the applications hosted on the system. Thier work patterns as well the right configuration of the system. All of it takes its time to understand whether the available memory on the system is sufficient. Or whether one has to reason about to enlarge the VM size, use a NUMA or an UMA system instead. Also it's worth to think about whether the application performance would benefit from utilizing THP. The best is therefore to work together with the application vendor what requirements they suggest. Plus verify your application on a test-system with a similar utilization you expect on a production system. 
