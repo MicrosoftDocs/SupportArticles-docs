@@ -104,7 +104,7 @@ You may also have to remove additional service principals. Use [Microsoft Graph 
   > [!NOTE]
   > You may receive an error when you remove some service principals. These principals can't be removed. However, this does not prevent you from deleting your directory. The error that you receive may resemble the following:
   >
-  > Remove-MgServicePrincipal : Specified App Principal ID is Microsoft Internal.
+  > Remove-MgServicePrincipal: Specified App Principal ID is Microsoft Internal.
 
 ## Directory has one or more Multi-Factor Authentication providers
 
