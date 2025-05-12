@@ -65,12 +65,12 @@
         href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
       - name: Infinite sign-in loop issue with ASP.NET applications
         href: app-integration/asp-dot-net-application-infinite-sign-in-loop.md
-      - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
-        href: app-integration/serilog-protected-web-api-authentication-authorization-errors.md
       - name: Package Inspector for MSAL Android Native
         href: app-integration/package-inspector-msal-android-native.md
       - name: Repeated login prompts in iOS MSAL implementation
         href: app-integration/repeat-login-prompts-in-msal-ios-app.md
+      - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
+        href: app-integration/serilog-protected-web-api-authentication-authorization-errors.md
       - name: WIF10201 No valid key mapping found
         href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
 
