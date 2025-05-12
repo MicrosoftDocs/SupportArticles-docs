@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files issues in Linux (SMB)
 description: Troubleshooting Azure Files issues in Linux. See general issues related to SMB Azure file shares when you connect from Linux clients and possible resolutions.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 01/22/2025
+ms.date: 05/12/2025
 ms.reviewer: kendownie, v-weizhu
 ---
 
@@ -161,17 +161,17 @@ sudo mount -t cifs //<storage-account-name>.file.core.windows.net/<share-name> <
 
 You can then create symlinks as suggested on the [wiki](https://wiki.samba.org/index.php/UNIX_Extensions#Storing_symlinks_on_Windows_servers).
 
-## Unable to access folders or files which name has a space or a dot at the end
+## Unable to access folders or files
 
-You can't access folders or files from the Azure file share while mounted on Linux. Commands like du and ls and/or third-party applications might fail with a "No such file or directory" error while accessing the share; however, you're able to upload files to these folders via the Azure portal.
+You can't access folders or files from the Azure file share while mounted on Linux. Commands like du and ls and/or third-party applications might fail with a "No such file or directory" error while accessing the share.
 
-### Cause
+### Cause 1
 
-The folders or files were uploaded from a system that encodes the characters at the end of the name to a different character. Files uploaded from a Macintosh computer may have a "0xF028" or "0xF029" character instead of 0x20 (space) or 0X2E (dot).
+The folders or files were uploaded from a system that encodes the characters at the end of the name to a different character. Files uploaded from a Macintosh computer might have a "0xF028" or "0xF029" character instead of 0x20 (space) or 0X2E (dot).
 
-### Solution
+### Solution 1
 
-Use the mapchars option on the share when mounting the share on Linux:
+Use the mapchars option when mounting the share on Linux.
 
 Instead of:
 
@@ -184,6 +184,14 @@ Use:
 ```bash
 sudo mount -t cifs $smbPath $mntPath -o vers=3.0,username=$storageAccountName,password=$storageAccountKey,serverino,mapchars
 ```
+
+### Cause 2
+
+If a file is deleted with a handle still open, the SMB server continues to maintain a zombie file until the last handle to the file is closed. Attempts to perform operations on this zombie file might result in "No such file or directory" errors on Linux.
+
+### Solution 2
+
+If needed, restore the deleted file from your latest backup.
 
 ## <a id="dns-account-migration"></a>DNS issues with live migration of Azure storage accounts
 
