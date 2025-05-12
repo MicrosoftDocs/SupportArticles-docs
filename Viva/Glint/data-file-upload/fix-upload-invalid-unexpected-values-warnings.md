@@ -3,7 +3,7 @@ title: Resolve file upload warnings related to invalid or unexpected values
 description: Fix issues that cause invalid or unexpected values when you upload employee attribute data to Viva Glint.
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 10/22/2024
+ms.date: 05/12/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -193,7 +193,7 @@ To fix the issue, follow these steps:
 1. Locate the row that's listed in the warning message.
 
    **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
-1. Replace the invalid **Locale** value with a valid value. For a list of valid language code values, download the [Viva Glint Employee Attribute Template](https://www.microsoft.com/en-us/download/details.aspx?id=105533), select the **Language Codes** worksheet, and then check the values in the **Language Code** column.
+1. Replace the invalid **Locale** value with a valid value. For a list of valid language code values, see [Viva Glint supported languages](/viva/glint/setup/supported-languages).
 1. Save the file, and upload it again to Viva Glint.
 
 ## INVALID_USER_TIMEZONE
@@ -215,7 +215,7 @@ To fix the issue, follow these steps:
 1. Locate the row that's listed in the warning message.
 
    **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
-1. Replace the invalid **User Timezone** value with a valid value. For a list of valid time zone values, download the [Viva Glint Employee Attribute Template](https://www.microsoft.com/en-us/download/details.aspx?id=105533), select the **Time Zones** worksheet, and then check the values in the **Canonical Time Zone** column.
+1. Replace the invalid **User Timezone** value with a valid value. For a list of valid time zone values, see [Viva Glint supported time zones](/viva/glint/setup/supported-time-zones).
 1. Save the file, and upload it again to Viva Glint.
 
 ## INVALID_PERSONAL_EMAIL
