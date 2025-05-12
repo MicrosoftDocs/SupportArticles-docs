@@ -13686,7 +13686,7 @@
     },
     {
       "source_path": "support/windows-server/active-directory/troubleshoot-errors-join-computer-to-domain.md",
-      "redirect_url": "/troubleshoot/windows-server/active-directory/networking-errors-join-computer-domain"
+      "redirect_url": "/troubleshoot/windows-server/active-directory/domain-join-networking-errors"
     },    
     {
     "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-excel-errors.md",
