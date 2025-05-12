@@ -96,15 +96,15 @@ You may also have to remove additional service principals. Use [Microsoft Graph 
 1. [Install Microsoft Graph PowerShell](/powershell/microsoftgraph/installation).
 2. Run the `Remove-MgServicePrincipal` command to remove all service principals. This command requires at least the `Application.ReadWrite.All` permission. For more information, see [Remove-MgServicePrincipal](/powershell/module/microsoft.graph.applications/remove-mgserviceprincipal?view=graph-powershell-1.0&preserve-view=true).
 
-  ```powershell
-   Connect-MgGraph -Scopes "Application.ReadWrite.All" -tenant <tenant-ID>
-   Get-MgServicePrincipal  | ForEach-Object { Remove-MgServicePrincipal -ServicePrincipalId $_.Id }
-  ```
+    ```powershell
+     Connect-MgGraph -Scopes "Application.ReadWrite.All" -tenant <tenant-ID>
+     Get-MgServicePrincipal  | ForEach-Object { Remove-MgServicePrincipal -ServicePrincipalId $_.Id }
+    ```
 
-  > [!NOTE]
-  > You may receive an error when you remove some service principals. These principals can't be removed. However, this does not prevent you from deleting your directory. The error that you receive may resemble the following:
-  >
-  > Remove-MgServicePrincipal: Specified App Principal ID is Microsoft Internal.
+    > [!NOTE]
+    > You may receive an error when you remove some service principals. These principals can't be removed. However, this does not prevent you from deleting your directory. The error that you receive may resemble the following:
+    >
+    > Remove-MgServicePrincipal: Specified App Principal ID is Microsoft Internal.
 
 ## Directory has one or more Multi-Factor Authentication providers
 
