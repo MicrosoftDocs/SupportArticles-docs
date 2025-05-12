@@ -1,12 +1,12 @@
 ---
 title: Server-to-Server Setup Disable Action Failed with Error Couldn’t get connected app details
 description: This article helps you troubleshoot the error "Couldn’t get connected app details for the Salesforce organization." when you disable Salesforce server-to-server flow.
-ms.date: 05/09/2025
+ms.date: 05/12/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-# Server-to-Server Setup Disable Action Failed with Error Couldn’t get connected app details
+# Couldn’t get connected app details when enable Salesforce server-to-server flow
 
 This article helps you troubleshoot the error "Couldn’t get connected app details for the Salesforce organization." when you disable Salesforce server-to-server flow.
 
@@ -23,7 +23,7 @@ This article helps you troubleshoot the error "Couldn’t get connected app deta
 
 ## Symptoms
 
-When administrator try to disable Salesforce with server-to-server flow:
+When you try to disable Salesforce with server-to-server flow, you receive the following error message:
 
 > Couldn’t get connected app details for the Salesforce organization.
 
@@ -31,9 +31,7 @@ You see the error "Couldn’t get connected app details for the Salesforce organ
 
 ## Cause
 
-Upon receiving a "disable" request, server end tries to delete deployed resources, including connected app, permission set, etc. 
-
-This error means that failed to get the connected app information when try to remove it.
+When a disable request is received, the server attempts to delete deployed resources, such as the connected app, permission set, and others. This error indicates that the connected app information could not be retrieved during the deletion process, possibly because it no longer exists or due to access restrictions.
 
 ## Resolution
 
