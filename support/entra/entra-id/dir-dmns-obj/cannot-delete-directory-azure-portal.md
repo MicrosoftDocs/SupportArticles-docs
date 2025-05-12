@@ -4,7 +4,7 @@ description: Fixes an issue in which you can't delete a directory from the Micro
 ms.date: 05/22/2020
 ms.reviewer: willfid
 ms.service: entra-id
-ms.custom: sap:Directory Management, has-azure-ad-ps-ref
+ms.custom: sap:Directory Management, no-azure-ad-ps-ref
 ---
 # Can't delete a directory through the Azure Management Portal
 
