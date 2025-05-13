@@ -32,6 +32,10 @@ In a Microsoft 365 environment, users don't receive SharePoint Online alert noti
 
 - The workflow doesn't work.
 
+> [!Important]
+> Starting July 2026, SharePoint Alerts for SharePoint Online will be fully retired and stop working. It's recommended to either use [rules](https://support.microsoft.com/en-us/office/create-a-rule-to-automate-a-list-or-library-151ea008-7fa6-409b-b0bd-b04a3b3cacd5) or [Power Automate](https://go.microsoft.com/fwlink/?linkid=2111055) to do notifications. [Learn more about the SharePoint Alerts retirement](https://aka.ms/retirement/alerts/support).
+
+
 ## Solutions
 
 ### Solution 1
