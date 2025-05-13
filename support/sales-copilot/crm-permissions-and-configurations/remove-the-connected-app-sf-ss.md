@@ -1,6 +1,6 @@
 ---
 title: Couldn’t remove the connected app. It may be read-only, missing, or restricted error when disabling Salesforce server-to-server flow
-description: This article helps you troubleshoot the error "Couldn’t remove the connected app. It may be read-only, missing, or restricted." when you disable Salesforce Server-to-server flow.
+description: Resolves an error that occurs when you disable Salesforce Server-to-Server flow and encounter the message "Couldn’t remove the connected app. It may be read-only, missing, or restricted.
 ms.date: 05/12/2025
 author: sbmjais
 ms.author: shjais
@@ -26,9 +26,8 @@ This article helps you troubleshoot the error "Couldn’t remove the connected a
 
 When you try to disable Salesforce with server-to-server flow, you receive the following error message:
 
-> Couldn’t remove the connected app
+> Couldn’t remove the connected app. It may be read-only, missing, or restricted.
 
-It may be read-only, missing, or restricted." on the UI.
 
 ## Cause
 
@@ -38,7 +37,7 @@ When a disable request is received, the server attempts to delete deployed resou
 
 1. Ensure that the user logged into the Teams admin settings has the necessary permissions to modify all data and manage connected apps. If the current user lacks these permissions, either assign the required permissions or switch to a user who has them.
 
-2. Go to **Setup** -> **Apps** -> **Connected Apps** -> **Manage Connected Apps**. Please check and confirm the app "Copilot for Sales Connected App" exists.
+2. Go to **Setup** > **Apps** > **Connected Apps** > **Manage Connected Apps**. Please check and confirm the app "Copilot for Sales Connected App" exists.
 
 ## More information
 
