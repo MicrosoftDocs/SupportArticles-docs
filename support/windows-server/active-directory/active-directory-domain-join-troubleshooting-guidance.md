@@ -1,7 +1,7 @@
 ---
 title: Active Directory domain join troubleshooting guidance
 description: Provides guidance to troubleshoot domain join issues.
-ms.date: 05/06/2025
+ms.date: 05/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -54,7 +54,7 @@ The following table lists the ports required to be open between the client compu
 |Domain join error code|Cause|Related article|
 |---|---|---|
 |0x569|This error occurs because the domain join user account lacks the **Access this computer from the network** user right at the domain controller (DC) servicing the domain join operation.|[Troubleshooting error code 0x569: The user has not been granted the requested logon type at this computer](error-0x569-not-granted-logon-type.md) |
-|0xaac or 0x8b0 |This error occurs for when you try to use an existing computer account name to join a computer to a domain.|[Troubleshooting error code 0xaac: Failure when you use an existing computer account to join a domain](failure-when-you-use-an-existing-computer-account-to-join-a-domain.md) |
+|0xaac or 0x8b0 |This error occurs when you try to use an existing computer account name to join a computer to a domain.|[Troubleshooting error code 0xaac: Failure when you use an existing computer account to join a domain](failure-when-you-use-an-existing-computer-account-to-join-a-domain.md) |
 |0x6BF or 0xC002001C|This error occurs when a network device (router, firewall, or virtual private network (VPN) device) rejects network packets between the client being joined and the domain controller (DC).|[Troubleshooting status code 0x6bf or 0xc002001c: The remote procedure call failed and did not execute](status-code-0x6bf-0xc002001c.md) |
 |0x6D9|This error occurs when network connectivity is blocked between the joining client and the Domain Controller (DC).|[Troubleshooting error code 0x6D9 "There are no more endpoints available from the endpoint mapper"](./domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md) |
 |0xa8b|This error occurs when you join a workgroup computer to a domain.|[Troubleshooting error code 0xa8b: An attempt to resolve the DNS name of a DC in the domain being joined has failed](error-0xa8b-resolve-dns-fail.md) |
