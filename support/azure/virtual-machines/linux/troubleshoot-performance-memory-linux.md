@@ -115,6 +115,7 @@ For more information, see the kernel doc at [Transparent Hugepage Support](https
 If you run on a NUMA system with more than one NODE available, it's also important to know what is the memory size each NODE does have. The complete available memory to the system can be addressed by each of the available nodes. Though, the best performance you get if the processes running on a particular NUMA NODE operate on the memory which is under direct control of this NODE. If, for example, a new memory request can't be fulfilled on the current node the memory is taken from another node. But operations on this part of the newly requested memory do imply a performance penalty. 
 
 Look at the following image
+
 ![numactl output](media/troubleshoot-performance-memory-linux/numactl.png)
 
 
@@ -155,14 +156,14 @@ int main() {
 }
 ```
 
-The program is utilizing too much of the available memory. It isn't possible to allocate more than 3G of  memory
+The program is utilizing too much of the available memory. It isn't possible to allocate more than 3G of  memory.
 ![memory allocation error](media/troubleshoot-performance-memory-linux/malloc-error.png)
-The information from the OOM we find on the console or simply with the command `dmesg`
-It starts with this detail at the beginning of the trace
+The information from the OOM we find on the console or simply with the command `dmesg`.
+It starts with this detail at the beginning of the trace.
 ![invoked OOM killer](media/troubleshoot-performance-memory-linux/malloc-invoked-oom.png)
-And ends with the following lines
+And ends with the following lines.
 ![out of memory](media/troubleshoot-performance-memory-linux/malloc-out-of-memory.png)
-In between, the following content is displayed
+In between, the following content is displayed.
 ![OOM full detail #1](media/troubleshoot-performance-memory-linux/memory-details-1.png)
 ![OOM full detail #2](media/troubleshoot-performance-memory-linux/memory-details-2.png)
 
@@ -200,4 +201,4 @@ It prints all running processes and their statistics. Another approach is to use
 Why do we sort on rss? RSS stands for 'Resident Set Size' the nonswapped physical memory that a task does use. VSZ is the 'Virtual Set Size' which contains the amount of memory the process reserved but not committed. Committed means that a page is written to the physical memory. So if we're interested which of the processes are occupying most of the available memory (physical + swap) we have to have a look at the RSS size of a process. In the screenshot above it looks like that 'snapd' does occupy much memory, though if we look at the RSS column we see that the process isn't that significant. On the other hand, there's a process named 'malloc' which has the same size of VSZ and RSS. So this one is indeed utilizing over 1.3G of memory. 
 
 ##### Summary
-Working on a memory related issue requires first to get a better picture of the memory usage of the applications hosted on the system. Thier work patterns as well the right configuration of the system. All of it takes its time to understand whether the available memory on the system is sufficient. Or whether one has to reason about to enlarge the VM size, use a NUMA or an UMA system instead. Also it's worth to think about whether the application performance would benefit from utilizing THP. The best is therefore to work together with the application vendor what requirements they suggest. Plus verify your application on a test-system with a similar utilization you expect on a production system. 
+Working on a memory related issue requires first to get a better picture of the memory usage of the applications hosted on the system. Their work patterns as well the right configuration of the system. All of it takes its time to understand whether the available memory on the system is sufficient. Or whether one has to reason about to enlarge the VM size, use a NUMA or an UMA system instead. Also it's worth to think about whether the application performance would benefit from utilizing THP. The best is therefore to work together with the application vendor what requirements they suggest. Plus verify your application on a test-system with a similar utilization you expect on a production system. 
