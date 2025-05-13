@@ -1,5 +1,5 @@
 ---
-title: Could Not Establish Trust Relationship for the SSL or TLS Secure Shannel
+title: Could Not Establish Trust Relationship for the SSL or TLS Secure Channel
 description: Provides a workaround to allow users with invalid certificates to use certain actions in Power Automate for desktop.
 ms.reviewer: nimoutzo
 ms.date: 05/13/2025
