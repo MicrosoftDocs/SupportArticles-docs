@@ -84,7 +84,7 @@ To identify the namespaces used by a machine:
 
 #### Step 2:  Configure the firewall with the DNS names required for both the primary and secondary  relays
 
-Configure your firewalls with the DNS names of all the Relay gateways, which can be found by running this script .
+Configure your firewalls with the DNS names of all the Relay gateways, which can be found by running [this script](https://github.com/Azure/azure-relay-dotnet/blob/dev/tools/GetNamespaceInfo.ps1) .
 
 This script will resolve the fully qualified domain names of all the gateways to which you need to establish a connection.
 
