@@ -62,7 +62,7 @@ This error can happen when the MX record for your hybrid domain points to Exchan
 
 To fix the problem, configure a dedicated connector to be used for hybrid. This connector will use smart host routing and will have your on-premises hybrid server configured as a smart host. The easiest way to fix the problem is to rerun the Hybrid Configuration Wizard in your on-premises Exchange organization. Or, you can verify the configuration of the connector that's used for hybrid by following these steps:
 
-##### New EAC
+##### EAC
 
 1. Open the [Microsoft 365 admin center](https://admin.microsoft.com), and then click **Admin centers** \> **Exchange** (you might need to click **...show all** first). The New EAC screen appears.
 
@@ -77,27 +77,6 @@ To fix the problem, configure a dedicated connector to be used for hybrid. This 
    :::image type="content" source="media/fix-error-code-5-4-6-through-5-4-20-in-exchange-online/connector-for-hybrid-new-eac.png" alt-text="Routing emails using hybrid connectors in New EAC.":::
 
 5. Ensure that the correct IP address or FQDN is specified for the smart host in your on-premises Exchange organization.
-
-##### Classic EAC
-
-1. Open the [Microsoft 365 admin center](https://admin.microsoft.com), and then click **Admin centers** \> **Exchange** (you might need to click **...show all** first).
-
-2. Click **Classic Exchange admin center** on the left pane of the New EAC screen.
-
-    > [!NOTE]
-    > You can go to the Classic EAC screen only from the New EAC screen.
-
-3. Click **mail flow** on the left pane. The **mail flow** home screen appears.
-
-4. Click the **connectors** tab. 
-
-5. Select the connector that's used for hybrid, and click **Edit** :::image type="icon" source="media/edit-icon.png":::.
-
-6. Go to **How do you want to route email messages** screen.
-
-   :::image type="content" source="media/fix-error-code-5-4-6-through-5-4-20-in-exchange-online/routing-through-smart-hosts-old-eac.png" alt-text="Routing emails using hybrid connectors in Old EAC.":::
-
-7. Ensure that the correct IP address or FQDN is specified for the smart host in your on-premises Exchange organization.
 
 #### You route all outgoing mail from Exchange Online through your on-premises hybrid server
 
