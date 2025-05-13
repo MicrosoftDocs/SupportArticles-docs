@@ -103,7 +103,7 @@ Netlogon startup failures (or any dependent service start failures) might requir
 - Restore missing or corrupted executable or DLL files.
 - Correct restrictive registry permissions.
 
-The following sections describes some event log errors that indicate that Netlogon failed to start.
+The following sections describe some event log errors that indicate that Netlogon failed to start.
 
 ### Symptom 1
 
