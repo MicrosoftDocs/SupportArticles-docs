@@ -1,13 +1,13 @@
 ---
-title: Couldn’t remove the permission set. It may be read-only, missing, or restricted error when disabling Salesforce server-to-server flow
-description: This article helps you troubleshoot the error "Couldn’t remove the permission set. It may be read-only, missing, or restricted." when you disable Salesforce Server-to-Server flow.
-ms.date: 05/12/2025
+title: Couldn't remove the permission set. It may be read-only, missing, or restricted error when disabling Salesforce server-to-server flow
+description: Resolves an error that occurs when you disable Salesforce Server-to-Server flow and receive the message. Couldn’t remove the permission set. It may be read-only, missing, or restricted.
+ms.date: 05/13/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-# "Couldn’t remove the permission set. It may be read-only, missing, or restricted" error when disabling Salesforce server-to-server flow
+# "Couldn't remove the permission set. It may be read-only, missing, or restricted" error when disabling Salesforce server-to-server flow
 
 This article helps you troubleshoot the error "Couldn’t remove the permission set. It may be read-only, missing, or restricted." when you disable Salesforce Server-to-server flow.
 
@@ -26,9 +26,7 @@ This article helps you troubleshoot the error "Couldn’t remove the permission 
 
 When you try to disable Salesforce with server-to-server flow, you receive the following error message:
 
-> Couldn’t remove the permission set
-
-It may be read-only, missing, or restricted." on the UI.
+> Couldn’t remove the permission set. It may be read-only, missing, or restricted.
 
 ## Cause
 

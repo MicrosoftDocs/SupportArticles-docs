@@ -29,9 +29,9 @@
     - name: Couldn't remove a resource error when disabling Salesforce server-to-server flow
       href: crm-permissions-and-configurations/remove-resource-sf-ss.md
     - name: 'Server-to-Server Setup Disable Action Failed with Error Couldn’t remove the connected app'
-      href: crm-permissions-and-configurations/server-to-Server-setup-disable-action-failed-with-error-couldn’t-remove-the-connected-app.md
+      href: crm-permissions-and-configurations/remove-the-connected-app-sf-ss.md
     - name: Server-to-server Setup Disable Action Failed with Error Couldn’t remove the permission set
-      href: crm-permissions-and-configurations/server-to-server-setup-disable-action-failed-with-error-couldn’t-remove-the-permission-set.md
+      href: crm-permissions-and-configurations/remove-the-permission-set-sf-ss.md
     - name: '"This contact already exists" error when creating a CRM record'
       href: crm-permissions-and-configurations/duplicate-record-error.md
     - name: You don't have permission for this error
