@@ -187,11 +187,11 @@ sudo mount -t cifs $smbPath $mntPath -o vers=3.0,username=$storageAccountName,pa
 
 ### Cause 2
 
-If a file is deleted with a handle still open, the SMB server continues to maintain a zombie file until the last handle to the file is closed. Attempts to perform operations on this zombie file might result in "No such file or directory" errors on Linux.
+When a file is deleted while a handle remains open, the SMB server continues to maintain a zombie file until the final handle to the file is closed. Any attempts to perform operations on this zombie file might result in "No such file or directory" errors on Linux.
 
 ### Solution 2
 
-If needed, restore the deleted file from your latest backup.
+Restore the deleted file from your latest backup if necessary.
 
 ## <a id="dns-account-migration"></a>DNS issues with live migration of Azure storage accounts
 
