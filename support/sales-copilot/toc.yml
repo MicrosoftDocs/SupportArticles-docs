@@ -76,4 +76,6 @@
       href: teams-collaboration-spaces/create-team-error.md       
     - name: Opportunity summary not displayed in deal rooms
       href: teams-collaboration-spaces/opportunity-summary-not-displayed.md
+    - name: 'Try again error when setup Salesforce server-to-server flow'
+      href: crm-permissions-and-configurations/try-again-sf-ss.md
  
