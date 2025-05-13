@@ -1,7 +1,7 @@
 ---
 title: Resolve az aks command invoke failures
 description: Resolve az aks command invoke failures in Azure CLI when you try to access a private Azure Kubernetes Service (AKS) cluster.
-ms.date: 05/09/2025
+ms.date: 05/13/2025
 ms.reviewer: chiragpa, andbar, haitch, momajed, albarqaw， v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity, devx-track-azurecli
