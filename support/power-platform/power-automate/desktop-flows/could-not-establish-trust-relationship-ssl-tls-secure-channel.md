@@ -1,8 +1,8 @@
 ---
-title: Could not establish trust relationship for the SSL or TLS secure channel
+title: Could Not Establish Trust Relationship for the SSL or TLS Secure Shannel
 description: Provides a workaround to allow users with invalid certificates to use certain actions in Power Automate for desktop.
 ms.reviewer: nimoutzo
-ms.date: 05/06/2025
+ms.date: 05/13/2025
 ms.custom: sap:Desktop flows\PAD Runtime - Action execution (not browser or UI)
 ---
 # "Could not establish trust relationship for the SSL/TLS secure channel" error
@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; Power Automate for desktop version 2.35 or later
 
 ## Symptoms
 
-Actions in Power Automate for desktop, like [Invoke web service](/power-automate/desktop-flows/actions-reference/web#invokewebservicebase), or [Get password from CyberArk](/power-automate/desktop-flows/actions-reference/cyberark#getpasswordbase), might fail during runtime with the following error:
+Actions in Power Automate for desktop, like [Invoke web service](/power-automate/desktop-flows/actions-reference/web#invokewebservicebase) or [Get password from CyberArk](/power-automate/desktop-flows/actions-reference/cyberark#getpasswordbase), might fail during runtime with the following error:
 
 > System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel.
 
@@ -27,7 +27,7 @@ Power Automate for desktop validates the status of HTTPS certificates to check t
 
 2. Companies that use package inspection to audit their network infrastructure might not allow users to sign in, as their Certificate Revocation List (CRL) might not have been defined or is unreachable.
 
-3. Tools like Fiddler might install a self-signed certificate on the system, which displays a revocation status of **Unknown**. Therefore, when the registry key is set to **Comprehensive**, the error might occur.
+3. Tools like Fiddler might install a self-signed certificate on the system with an **Unknown** revocation status. Therefore, when the registry key is set to **Comprehensive**, the error might occur.
 
 ## Workaround
 
