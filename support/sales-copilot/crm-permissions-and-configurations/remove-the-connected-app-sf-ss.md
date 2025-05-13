@@ -1,7 +1,7 @@
 ---
 title: Couldn’t remove the connected app. It may be read-only, missing, or restricted error when disabling Salesforce server-to-server flow
 description: Resolves an error that occurs when you disable Salesforce Server-to-Server flow and encounter the message "Couldn’t remove the connected app. It may be read-only, missing, or restricted.
-ms.date: 05/12/2025
+ms.date: 05/13/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
