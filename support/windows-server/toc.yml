@@ -342,6 +342,7 @@ items:
     - name: Use Event1644Reader.ps1 to analyze LDAP query performance
       href: ./active-directory/event1644reader-analyze-ldap-query-performance.md
   - name: Domain join issues
+  # Any changes to "Domain join issues" node need to be sync to "support/windows-client/toc.yml" > "Active Directory/Domain join issues"
     items:
     - name: 'Troubleshooting guidance: Active Directory domain join'
       href: ./active-directory/active-directory-domain-join-troubleshooting-guidance.md
