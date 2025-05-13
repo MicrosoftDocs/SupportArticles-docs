@@ -1,8 +1,8 @@
 ---
 title: Resolve az aks command invoke failures
 description: Resolve az aks command invoke failures in Azure CLI when you try to access a private Azure Kubernetes Service (AKS) cluster.
-ms.date: 10/25/2024
-ms.reviewer: chiragpa, andbar, haitch, momajed, v-leedennis, v-weizhu
+ms.date: 05/13/2025
+ms.reviewer: chiragpa, andbar, haitch, momajed, albarqaw， v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Connectivity, devx-track-azurecli
 #Customer intent: As an Azure Kubernetes user, I want to resolve az aks command invoke failures in Azure CLI so that I can successfully connect to my private Azure Kubernetes Service (AKS) cluster.
@@ -46,8 +46,16 @@ The operation returns a `Not Found` status because the `command-<ID>` pod can't 
 
 - Resource constraints
 - Nodes that have a `NotReady` or `SchedulingDisabled` state
-- Nodes that have taints that the pod can't tolerate
+- Nodes that have taints that the pod can't tolerate 
 - Other causes
+  
+Here are sample error messages for `KubernetesPerformanceError` or `KubernetesOperationError`:
+
+```output
+(KubernetesPerformanceError) Failed to run command due to cluster perf issue, container command-357ebsdfsd342869 in aks-command namespace did not start within 30s on your cluster, retry may helps. If issue persist, you may need to tune your cluster with better performance (larger node/paid tier).
+Code: KubernetesPerformanceError
+Message: Failed to run command due to cluster perf issue, container command-357ebc50d40c47a4a247ab6e067d2869 in aks-command namespace did not start within 30s on your cluster, retry may helps. If issue persist, you may need to tune your cluster with better performance (larger node/paid tier).
+```
 
 #### Solution 1: Change the configuration so that you can schedule and run the pod
 
