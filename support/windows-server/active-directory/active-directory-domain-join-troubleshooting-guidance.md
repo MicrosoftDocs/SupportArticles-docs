@@ -5,7 +5,7 @@ ms.date: 05/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-lianna
+ms.reviewer: kaushika, v-lianna, raviks
 ms.custom:
 - sap:active directory\on-premises active directory domain join
 - pcy:WinComm Directory Services
