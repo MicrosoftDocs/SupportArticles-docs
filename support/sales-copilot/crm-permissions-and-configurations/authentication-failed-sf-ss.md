@@ -52,7 +52,7 @@ To resolve this issue, you must fix the connected app and integration user confi
     1. User is associated with **Copilot for Sales connected app permission set** permission set.
     1. User is associated with **Salesforce API Integration** permission set license assignments.
 
-Also, check is there were unintended changes made to the connected app or integration user configuration. If yes, revert the changes to the original configuration.
+Also, check if there were unintended changes made to the connected app or integration user configuration. If yes, revert the changes to the original configuration.
 
 ## More information
 

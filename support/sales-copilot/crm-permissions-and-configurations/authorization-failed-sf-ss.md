@@ -28,7 +28,7 @@ When a user tries to access Salesforce with server-to-server flow, the following
 
 > Server-to-server authorization failed.
 
-The related error message reads "Couldn't get client credentials to access Salesforce.".
+## Error 1: Couldn't get client credentials to access Salesforce
 
 ## Cause
 
@@ -39,6 +39,23 @@ During Salesforce server-to-server flow setup, a connected app is deployed to th
 To resolve this issue, contact Microsoft support and provide the following information:
 - If the connected app "Copilot for Sales Connected App" was updated accidentally. 
 - If the connected app is still available, get the client ID of the connected app.
+
+## Error 2: Session ID isn't allowed for use REST API access at Salesforce
+
+## Cause
+
+During Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The error occurs when appropriate OAuth scope is not set for the connected app.
+
+## Resolution
+
+To resolve this issue, contact your administrator to set the appropriate OAuth scope for the connected app Confirm that the connection is still active in admin settings.
+
+1. Sign in to Salesforce CRM as an administrator.
+1. Go to **Setup** > **Platform Tools** > **Apps** > **App Manager**.
+1. On **Copilot for Sales Connected App** row, select the down arrow, and then select **Edit**.
+1. Under **API (Enable OAuth Settings)**, select **Manage user data via APIs (api)** in the **Selected OAuth Scopes** list.
+
+Also, check if there were unintended changes made to the connected app configuration. If yes, revert the changes to the original configuration.
 
 ## More information
 

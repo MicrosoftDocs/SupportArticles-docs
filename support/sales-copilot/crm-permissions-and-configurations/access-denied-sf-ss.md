@@ -44,7 +44,7 @@ To resolve this issue, you must fix the connected app configuration in Salesforc
 1. Under **Custom Connected App Handler**, ensure that the value of **Run As** is set to **Copilot for Sales Integration User**.
 1. Go to **Administration** > **Users** > **Users** and confirm that the profile of the integration user is **CopilotForSalesIntegrationProfile**.
 
-Also, check is there were unintended changes made to the connected app configuration. If yes, revert the changes to the original configuration.
+Also, check if there were unintended changes made to the connected app configuration. If yes, revert the changes to the original configuration.
 
 ## More information
 
