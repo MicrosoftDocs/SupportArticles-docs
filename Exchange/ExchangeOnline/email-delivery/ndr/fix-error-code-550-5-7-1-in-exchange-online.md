@@ -96,7 +96,7 @@ When the recipient is a mail-enabled public folder in your Exchange Online organ
 
 To configure the public folder to accept messages from external senders, follow these steps:
 
-#### New EAC
+#### EAC
 
 1. Open the Exchange admin center (EAC). For more information, see [Exchange admin center in Exchange Online](/Exchange/exchange-admin-center).
 
@@ -115,22 +115,6 @@ To configure the public folder to accept messages from external senders, follow 
    :::image type="content" source="media/fix-error-code-550-5-7-1-in-exchange-online/allow-all-senders-public-folder.png" alt-text="The screen on which the users configure all the senders to send messages to the public folder.":::
 
 6. Click **Save**.
-
-#### Classic EAC
-
-1. Open the Exchange admin center (EAC). For more information, see [exchange admin center in exchange online](/Exchange/exchange-admin-center).
-
-2. In the EAC, go to **Public folders** \> **Public folders** \> select the public folder from the list, and then click **Edit** :::image type="icon" source="media/edit-icon.png":::.
-
-   :::image type="content" source="media/fix-error-code-550-5-7-1-in-exchange-online/public-folders.png" alt-text="Screenshot of public folder lists under the Public folders tab." border="false":::
-
-3. In the public folder properties dialog box that opens, go to **Mail flow settings**, and configure the following settings in the **Accept messages from** section:
-    - Clear the check box for **Require that all senders are authenticated**.
-    - Select **All senders**.
-
-   :::image type="content" source="media/fix-error-code-550-5-7-1-in-exchange-online/delivery-restrictions.png" alt-text="Screenshot of the Message Delivery Restrictions page. The Require that all senders are authenticated check box is cleared." border="false":::
-
-4. Click **Save**.
 
 ### The sender is external and their source IP address is on Microsoft's blocklist
 
@@ -154,7 +138,7 @@ If you have an incorrect MX record, try the following steps:
 
 1. Check the sender and recipient domains for incorrect or stale MX records by using the **Advanced diagnostics** \> **Exchange Online** test in Microsoft Support and Recovery Assistant. For more information about the Support and Recovery Assistant, see [About Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/e90bb691-c2a7-4697-a94f-88836856c72f).
 
-2. Check with your domain registrar or DNS hosting service to verify the MX record for your domain is correct. The MX record for a domain that's enrolled in Exchange Online uses the syntax  `_\<domain\ >_.mail.protection.outlook.com`.
+2. Check with your domain registrar or DNS hosting service to verify the MX record for your domain is correct. The MX record for a domain that's enrolled in Exchange Online uses the syntax  `_\<domain\ >_.mail.protection.outlook.com` or `_\<domain\ >_.subdomain.mx.microsoft`
 
 3. Verify **Inbound SMTP Email** and **Outbound SMTP Email** at **Office 365** \> **Mail Flow Configuration** in the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/o365).
 
