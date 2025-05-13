@@ -24,10 +24,10 @@
       href: crm-permissions-and-configurations/no-column-error.md
     - name: Salesforce CRM users can't view, edit, or save data in Copilot for Sales
       href: crm-permissions-and-configurations/salesforce-permission-error.md
-    - name: 'Server-to-Server Setup Disable Action Failed with Error Couldn’t get connected app details'
-      href: crm-permissions-and-configurations/server-to-Server-Setup-disable-action-failed-with-error-couldn’t-get-connected-app-details.md
-    - name: 'Server-to-Server Setup Disable Action Failed with Error Couldn’t remove a resource'
-      href: crm-permissions-and-configurations/server-to-server-setup-disable-action-failed-with-error-Couldn’t-remove-a-resource.md
+    - name: Couldn't get connected app details for the Salesforce organization error when disabling Salesforce server-to-server flow'
+      href: crm-permissions-and-configurations/connected-app-detail-sf-ss.md
+    - name: Couldn't remove a resource error when disabling Salesforce server-to-server flow
+      href: crm-permissions-and-configurations/remove-resource-sf-ss.md
     - name: 'Server-to-Server Setup Disable Action Failed with Error Couldn’t remove the connected app'
       href: crm-permissions-and-configurations/server-to-Server-setup-disable-action-failed-with-error-couldn’t-remove-the-connected-app.md
     - name: Server-to-server Setup Disable Action Failed with Error Couldn’t remove the permission set
