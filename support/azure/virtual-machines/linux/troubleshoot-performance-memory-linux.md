@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot high Memory Usage issues in Linux
-description: Troubleshoot CPU performance issues on Linux virtual machines in Azure.
+description: Troubleshoot Memory performance issues on Linux virtual machines in Azure.
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance, linux-related-content
 ms.topic: troubleshooting
