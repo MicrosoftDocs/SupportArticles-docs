@@ -54,6 +54,4 @@ To work around the issue, manually update the ingestion key using the following 
 
 ### Troubleshooting
 
-If you receive an error response, please contact **Microsoft Support** and provide the **correlation ID** (`x-ms-correlation-request-id`) from the response headers of your API call for further assistance.
-
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+If you receive an error response, contact [**Microsoft Support**](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) and provide the **correlation ID** (`x-ms-correlation-request-id`) from the response headers of your API call for further assistance.
