@@ -6318,6 +6318,62 @@
     {
       "source_path": "support/sql/database-engine/replication/sql-merge-replication-synchronization-fails.md",
       "redirect_url": "/previous-versions/troubleshoot/sql/replication/sql-merge-replication-synchronization-fails"
+    },
+    {
+      "source_path": "support/sql/connect/sqldescribecol-return-wrong-column-length.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/connect/sqldescribecol-return-wrong-column-length"
+    },
+    {
+      "source_path": "support/sql/integration-services/error-you-virtualize-bids-ssdt.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/integration-services/error-you-virtualize-bids-ssdt"
+    },
+    {
+      "source_path": "support/sql/integration-services/ssis-package-fails-use-dqs-cleansing-component.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/integration-services/ssis-package-fails-use-dqs-cleansing-component"
+    },
+    {
+      "source_path": "support/sql/analytics-platform-system/evaluate-pdw-statistics-accuracy.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/analytics-platform-system/evaluate-pdw-statistics-accuracy"
+    },
+    {
+      "source_path": "support/sql/analytics-platform-system/msg-104381-running-statement-order-by.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/analytics-platform-system/msg-104381-running-statement-order-by"
+    },
+    {
+      "source_path": "support/sql/analytics-platform-system/operations-manager-cannot-monitor-aps.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/analytics-platform-system/operations-manager-cannot-monitor-aps"
+    },
+    {
+      "source_path": "support/sql/reporting-services/error-load-custom-extensions-data-tools.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/reporting-services/error-load-custom-extensions-data-tools"
+    },
+    {
+      "source_path": "support/sql/reporting-services/parameter-pane-not-visible-drillthrough-report.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/reporting-services/parameter-pane-not-visible-drillthrough-report"
+    },
+    {
+      "source_path": "support/sql/reporting-services/rendering-issues-internet-explorer.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/reporting-services/rendering-issues-internet-explorer"
+    },
+    {
+      "source_path": "support/sql/reporting-services/error-unable-retrieve-application-files.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/reporting-services/error-unable-retrieve-application-files"
+    },
+    {
+      "source_path": "support/sql/reporting-services/warning-message-add-reporting-services.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/reporting-services/warning-message-add-reporting-services"
+    },
+    {
+      "source_path": "support/sql/reporting-services/net-framework-assemblies-sql-2014.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/reporting-services/net-framework-assemblies-sql-2014"
+    },
+    {
+      "source_path": "support/sql/tools/visual-studio-2010-shell-installed-sql-server-2014-2012.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/tools/visual-studio-2010-shell-installed-sql-server-2014-2012"
+    },
+    {
+      "source_path": "support/sql/connect/check-mdac-version.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/connect/check-mdac-version"
     }
   ]
 }

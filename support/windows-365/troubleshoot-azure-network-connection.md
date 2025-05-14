@@ -27,6 +27,23 @@ When a Cloud PC is provisioned, it's automatically joined to the provided domain
 - You troubleshoot domain join failures like any physical computer in your organization.
 - If you have a domain name that can be resolved on the internet (like `contoso.com`), make sure that your Domain Name System (DNS) servers are configured as internal. Also, make sure that they can resolve Active Directory domain DNS records, not your public domain name.
 
+If you encounter the following errors in your ANC health checks, consider the suggestions in the following two sections to ensure your Azure and on-premises configurations can successfully reach the required Windows 365 endpoints:
+
+> Internal Server Error
+
+> InternalServerErrorUnableToRunDscScript
+
+### Domain controller line of sight
+
+Successful communication with a domain controller within your organization is essential for configuring an ANC to allow hybrid domain-joined Cloud PCs. Ensure that the Azure vNet used for your ANC connection has a network route to a domain controller and ensure that your DNS setup can successfully resolve it.
+
+> [!NOTE]
+> This section only applies to hybrid environments.
+
+### ANC Endpoint Access
+
+During ANC configuration, the service needs to download configuration data from various Microsoft endpoints as listed in [Network requirements](/windows-365/enterprise/requirements-network). Failure to reach these endpoints due to misconfigured network settings can lead to a failure. To ensure successful access, Transport Layer Security (TLS) inspection should be avoided on any vNET used for ANC connections. Ensure that you can successfully resolve and reach these endpoints through the Azure vNet used and ensure that any firewall, proxy, or other Network services employed within the network allow access to them.
+
 <a name='azure-active-directory-device-sync'></a>
 
 ## Microsoft Entra device sync
@@ -41,6 +58,9 @@ If provisioning fails, make sure that:
 - Your Microsoft Entra ID is active and healthy.
 - Microsoft Entra Connect is running correctly, and there are no issues with the sync server.
 - You manually perform an `Add-Computer` into the OU provided for Cloud PCs. Time how long it takes for that computer object to appear in Microsoft Entra ID.
+
+> [!NOTE]
+> If you receive an **Entra ID Sync Warning** after confirming that the recommended configuration is correctly set and there are no provisioning failures, no further action is required. This warning can occur if the check is performed directly after a sync has been completed.
 
 ## Azure subnet IP address range usage
 

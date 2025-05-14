@@ -342,6 +342,7 @@ items:
     - name: Use Event1644Reader.ps1 to analyze LDAP query performance
       href: ./active-directory/event1644reader-analyze-ldap-query-performance.md
   - name: Domain join issues
+  # Any changes to "Domain join issues" node need to be sync to "support/windows-client/toc.yml" > "Active Directory/Domain join issues"
     items:
     - name: 'Troubleshooting guidance: Active Directory domain join'
       href: ./active-directory/active-directory-domain-join-troubleshooting-guidance.md
@@ -381,8 +382,10 @@ items:
       href: ./active-directory/support-for-active-directory-over-nat.md
     - name: '"The account is not authorized to login from this station" error'
       href: ./active-directory/account-not-authorized-login-from-this-station.md
-    - name: Troubleshoot errors when joining computers to a domain
-      href: ./active-directory/troubleshoot-errors-join-computer-to-domain.md
+    - name: Troubleshoot authentication errors when joining computers to a domain
+      href: ./active-directory/domain-join-authentication-errors.md
+    - name: Troubleshoot networking errors when joining computers to a domain
+      href: ./active-directory/domain-join-networking-errors.md
   - name: LDAP configuration and interoperability
     items:
     - name: Enable LDAP over SSL
