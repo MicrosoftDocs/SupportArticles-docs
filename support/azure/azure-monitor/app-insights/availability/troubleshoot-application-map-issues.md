@@ -16,7 +16,7 @@ The **Application map** feature in Azure Monitor Application Insights might not 
 
 - Upgrade all components to the latest SDK version.
 
-- Support Azure Functions with CSharp by upgrading to [Azure Functions V2](/azure/azure-functions/functions-versions0).
+- Support Azure Functions with CSharp by upgrading to [Azure Functions V2](/azure/azure-functions/functions-versions).
 
 - Ensure the [cloud role name](/azure/azure-monitor/app/app-map#set-cloud-role-names) is correctly configured.
 
