@@ -23,7 +23,10 @@ This article describes Cumulative Update package 18 (CU18) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-There are no known issues in this cumulative update.
+SQL Server 2019 CU14 introduced a fix 14307204 to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT. However, this fix might create access violation dump files when the SESSION is reset for reuse (which is still present on SQL Server 2022). To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in SESSION_CONTEXT. To do this, use the following trace flags:
+	• 11042 - This trace flag disables the parallelism for the built-in SESSION_CONTEXT.
+  • 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
+
 
 ## Improvements and fixes included in this update
 
