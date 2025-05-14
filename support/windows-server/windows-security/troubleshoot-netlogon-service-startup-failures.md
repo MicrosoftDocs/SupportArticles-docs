@@ -105,7 +105,7 @@ Netlogon startup failures (or any dependent service start failures) might requir
 
 The following sections describe some event log errors that indicate that Netlogon failed to start.
 
-### Symptom 1
+## Symptom 1
 
 A dependent service doesn't start:
   
@@ -116,7 +116,7 @@ A dependent service doesn't start:
 > Description: The Netlogon service depends on the \<SERVICE NAME\> service which failed to start because of the following error:  
 > The dependency service or group failed to start.
 
-#### Resolution
+### Resolution
 
 Inspect the dependent services to determine which services failed to start. Verify that the services have a correct service startup configuration using the Services MMC snap-in to view and modify the service configuration.
 
@@ -128,7 +128,7 @@ In the following example, the Workstation service is configured with a **Disable
 
 Setting the **Startup type** to **Automatic** and starting the service restore the Workstation service operation.
 
-### Symptom 2
+## Symptom 2
 
 A nonexistent or invalid service is defined for the Netlogon service or a dependent service:
 
@@ -138,7 +138,7 @@ A nonexistent or invalid service is defined for the Netlogon service or a depend
 > Level: Error  
 > Description: The Netlogon service depends on the following service: \<MISSING OR INVALID SERVICE\>. This service might not be installed.
 
-#### Resolution
+### Resolution
 
 An invalid service might be configured in the **DependOnService** registry value of the Netlogon service, or the service referenced in this value might be missing as an installed service. In the following example, the Netlogon service on a member server failed to start because it can't validate a dependent service.
 
@@ -154,7 +154,7 @@ Remove the offending entry found within the **DependOnService** registry value:
 
 :::image type="content" source="media/troubleshoot-netlogon-service-startup-failures/remove-entry-from-depend-on-service-registry-value.png" alt-text="Screenshot showing how to remove an entry from the DependOnService registry value.":::
 
-### Symptom 3
+## Symptom 3
 
 An invalid or missing service Dynamic Linked Library (DLL) specified causes a dependent service not to start:
 
@@ -169,13 +169,13 @@ When you try to start the Netlogon service by using the Services MMC, the follow
 
 > Windows could not start the Netlogon service on Local Computer. Error 126: The specified module could not be found.
 
-#### Resolution
+### Resolution
 
 Each service application must successfully initialize DLLs in order to function. To resolve this issue, perform a system file scan by using the System File Checker (**SFC.exe**) tool, restore the missing DLLs from a backup, or repair or a reinstall the operating system.
 
 For more information, see [Use the System File Checker tool to repair missing or corrupted system files](https://support.microsoft.com/topic/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files-79aa86cb-ca52-166a-92a3-966e85d4094e).
 
-### Symptom 4
+## Symptom 4
 
 An invalid or missing service executable specified causes a dependent service not to start:
 
@@ -190,19 +190,54 @@ When you try to start the Netlogon service by using Services MMC, the following 
 
 > Windows could not start the Netlogon service on Local Computer. Error 2: The system cannot find the file specified.
 
-#### Resolution
+### Resolution
 
  When viewing service properties via the Services MMC, validate that the services that failed to start have a valid value configured in the **Path to executable** field. Or, validate that the **ImagePath** value is correct in the registry for the affected services.
 
-### Symptom 5
+## Symptom 5
 
 The Netlogon service reports that the service entered the stopped state during system boot. When you try to manually start the service, the following error message is displayed:
 
 > The Netlogon service on Local Computer started and then stopped. Some services stop automatically if they are not in use by other services or programs.
 
-#### Resolution
+### Resolution
 
 Validate that the service permissions within the registry are set to the appropriate values. Permissions vary based on the system role, such as, DCs versus workstations or member servers. Ensure that no entries specify a **Deny** permission for **SYSTEM** or **Administrators**. By default, registry permissions are inherited from the parent registry key and the owner is configured as **SYSTEM**.
+
+## Symptom 6
+
+The Netlogon is started successfully, but the service status is reported as not started or as paused. For domain members, the status can be set by administrators by running `Net pause netlogon` and `Net continue netlogon`. In services.msc snap-in, the services is displayed as the following:
+
+:::image type="content" source="media/troubleshoot-netlogon-service-startup-failures/screenshot-of-the-netlogon-services-status.png" alt-text="Screenshot of the Netlogon services status.":::
+
+You can also view the status in services.msc on DCs.
+
+> [!NOTE]
+> When the Netlogon service is paused, the DC does not respond to DC Locator requests (on LDAP port UDP/389). The computer is then not used for NTLM authentication or new Kerberos tickets.
+
+### Resolution
+
+The Netlogon services on DCs might be paused because of configuration problems. The Netlogon.log contains the entries about the causes:
+
+- > Netlogon Service Paused
+
+  The Netlogon service is paused by an administrator.
+
+- > NlInit: DS is paused
+
+  The Directory serivce is paused.
+
+- > Waiting for RPCSS
+
+  RPC Subsystem startup pending.
+
+- > SysVol not ready
+
+  The DFSR Initial replication not completed.
+
+The last condition can be caused if the DFSR replication engine does not signal that the initial replication of SYSVOL has worked and is good to be shared. Therefore, The Netlogon service is in the paused status until the replication is completed, and only shares SYSVOL and Netlogon after the replication is completed.
+
+To troubleshoot this issue, see [Troubleshoot missing SYSVOL and Netlogon shares for Distributed File System (DFS) Replication](../networking/troubleshoot-missing-sysvol-and-netlogon-shares.md)
 
 ## Additional symptoms
 
