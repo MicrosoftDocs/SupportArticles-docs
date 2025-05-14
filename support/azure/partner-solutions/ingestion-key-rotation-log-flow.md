@@ -13,12 +13,11 @@ ms.date: 04/24/2025
 
 # Logs missing after the ingestion key rotation
 
-When the ingestion key is rotated on the New Relic partner portal, log flow of the resources may stop due to the outdated key still being used by the Azure Native New Relic Service. If you are experiencing issues with log flow after rotating your ingestion key, this guide will help you resolve the issues.
+If you rotated your ingestion key in the New Relic partner portal, log flow may stop because the Azure Native New Relic Service is still using the old key. This guide shows you how to resolve the issue and restore log flow.
 
 ## Symptoms
 
-- You might observe log loss after the ingestion key rotation on the New Relic partner portal.
-- The Log flow status may still be **Sending** on the **Monitored resources** page of the Azure New Relic resource.
+You might observe log loss after the ingestion key rotation on the New Relic partner portal. The Log flow status may still be **Sending** on the **Monitored resources** page of the Azure New Relic resource.
 
 ## Cause
 
