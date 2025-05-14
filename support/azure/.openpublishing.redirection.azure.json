@@ -6326,11 +6326,11 @@
         "redirect_url": "/troubleshoot/azure/kubernetes-fleet/troubleshoot-clusterresourceplacement-api-issues"
       },
       {
-        "source_path": "kubernetes-fleet/cluster-resource-placement/crp-clusterresourceplacementavailable-false.md",
+        "source_path": "kubernetes-fleet/cluster-resource-placement/crp-clusterresourceplacementscheduled-false.md",
         "redirect_url": "/troubleshoot/azure/kubernetes-fleet/crp-clusterresourceplacementscheduled-false"
       },
       {
-        "source_path": "kubernetes-fleet/cluster-resource-placement/crp-clusterresourceplacementoverridden-false.md",
+        "source_path": "kubernetes-fleet/cluster-resource-placement/crp-clusterresourceplacementrolloutstarted-false.md",
         "redirect_url": "/troubleshoot/azure/kubernetes-fleet/crp-clusterresourceplacementrolloutstarted-false"
       },
       {

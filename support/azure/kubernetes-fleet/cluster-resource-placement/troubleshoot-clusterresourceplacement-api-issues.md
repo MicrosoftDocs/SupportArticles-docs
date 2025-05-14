@@ -162,4 +162,4 @@ To find the correct work resource, follow these steps:
    > [!NOTE]  
    > In this command, replace `{clusterName}` and `{CRPName}` with the names that you identified in the first step.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
