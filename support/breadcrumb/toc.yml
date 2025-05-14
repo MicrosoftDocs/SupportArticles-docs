@@ -193,6 +193,9 @@ items:
       - name: Kubernetes Fleet Manager
         tocHref: /troubleshoot/azure/kubernetes-fleet/
         topicHref: /troubleshoot/azure/kubernetes-fleet/welcome-azure-kubernetes-fleet
+      - name: Azure Native Integrations
+        tocHref: /troubleshoot/azure/partner-solutions/
+        topicHref: /troubleshoot/azure/partner-solutions/welcome-partner-solutions
 
     - name: Entra
       tocHref: /troubleshoot/entra/
