@@ -67,6 +67,8 @@ items:
         href: app-insights/availability/missing-cpu-total-committed-memory-metrics.md
       - name: Portal connectivity issues
         href: app-insights/availability/troubleshoot-portal-connectivity.md
+      - name: Troubleshoot Application map issues
+        href: app-insights/availability/troubleshoot-application-map-issues.md
       - name: Troubleshoot user behavior analytics tools in Azure Application Insights
         href: app-insights/availability/usage-troubleshoot.md
   - name: Status Monitor and Change Analysis
