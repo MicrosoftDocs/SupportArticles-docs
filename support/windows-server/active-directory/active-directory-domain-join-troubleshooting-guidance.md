@@ -1,7 +1,7 @@
 ---
 title: Active Directory domain join troubleshooting guidance
 description: Provides guidance to troubleshoot domain join issues.
-ms.date: 05/13/2025
+ms.date: 05/14/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -68,8 +68,8 @@ The following table lists the ports required to be open between the client compu
 
 For more information, see:
 
-- Troubleshoot [Networking error messages and resolutions](troubleshoot-errors-join-computer-to-domain.md#networking-error-messages-and-resolutions)
-- Troubleshoot [Authentication error messages and resolutions](troubleshoot-errors-join-computer-to-domain.md#authentication-error-messages-and-resolutions)
+- [Troubleshoot networking errors](domain-join-networking-errors.md)
+- [Troubleshoot authentication errors](domain-join-authentication-errors.md)
 
 ## Data collections for domain join issues
 
