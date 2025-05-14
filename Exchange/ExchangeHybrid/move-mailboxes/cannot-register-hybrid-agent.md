@@ -1,6 +1,6 @@
 ---
 title: Can't register a Hybrid Agent in Exchange Server
-description: Provides a resolution for an issue in which you can't register a Hybrid Agent.
+description: Provides a fix for an error message that states an app URL isn't found or is already in use, an app GUID isn't found, or OnPremisesPublishing isn't enabled.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -8,18 +8,17 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Migration
-  - CI 167780
+  - CI 167780, 3940
   - Exchange Hybrid
   - CSSTroubleshoot
-  - has-azure-ad-ps-ref
-ms.reviewer: haembab, ninob, meerak, v-trisshores
+  - no-azure-ad-ps-ref
+ms.reviewer: haembab, ninob, meerak, v-shorestris
 appliesto:
   - Exchange Online
   - Exchange Server 2019
   - Exchange Server 2016
-  - Exchange Server 2013
 search.appverid: MET150
-ms.date: 08/13/2024
+ms.date: 05/14/2025
 ---
 
 # Can't register a Hybrid Agent in Exchange Server
@@ -28,9 +27,9 @@ ms.date: 08/13/2024
 
 ## Symptoms
 
-When you use the Hybrid Configuration wizard (HCW) to set up a [Microsoft Hybrid Agent](/exchange/hybrid-deployment/hybrid-agent), you see the following registration error in the HCW for the installed Hybrid Agent.
+When you use Hybrid Configuration Wizard (HCW) to set up a [Microsoft Hybrid Agent](/exchange/hybrid-deployment/hybrid-agent), you see the following registration error in HCW for the installed Hybrid Agent.
 
-:::image type="content" source="media/cannot-register-hybrid-agent/hybrid-agent-registration-error.png" alt-text="Screenshot of a Hybrid Agent registration error in the HCW." border="true":::
+:::image type="content" source="media/cannot-register-hybrid-agent/hybrid-agent-registration-error.png" alt-text="Screenshot of a Hybrid Agent registration error in HCW." border="true":::
 
 You also receive the following error entries in the HCW log:
 
@@ -58,23 +57,55 @@ The same internal URL is used by an existing enterprise on-premises app that use
 
 The same internal URL is used by a previously installed, orphaned Hybrid Agent application that's not fully registered. An orphaned Hybrid Agent application can be caused by a failed Hybrid Agent installation or uninstallation.
 
-## Resolution
-
-Use the appropriate resolution, depending on the cause.
-
-### Resolution for Cause 1
+## Resolution for Cause 1
 
 Choose one of the following options:
 
-- Assign a different internal URL to the existing enterprise app. For more information, see [Add an on-premises application](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application) and [Set-AzureADApplicationProxyApplication](/powershell/module/azuread/set-azureadapplicationproxyapplication).
+- **Assign a different internal URL to the existing enterprise app**. Follow these steps:
 
-- Remove the existing enterprise app. For more information, see [Remove-AzureADApplicationProxyApplication](/powershell/module/azuread/remove-azureadapplicationproxyapplication).
+  1. Run the following PowerShell cmdlets to connect to your tenant:
 
-[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
+     ```powershell
+     Import-Module Microsoft.Graph.Beta.Applications
+     Connect-Graph -Scopes "Application.ReadWrite.All"
+     ```
 
-### Resolution for Cause 2
+  2. Run the following PowerShell commands to assign a different internal URL to the enterprise app.
 
-Remove the previously installed, orphaned Hybrid Agent application. To do this, follow these steps:
+     ```powershell
+     $params = @{
+       onPremisesPublishing = @{
+         internalUrl = "<internal app URL>"
+         externalUrl = "<external app URL>"
+       }
+     }
+     Update-MgBetaApplication -ApplicationId <app ID> -BodyParameter $params
+     ```
+
+     Although the intended change is to update the internal URL, the external URL is included as part of the update. You can use the existing external URL or an updated one.
+
+     For more information, see [Update-MgBetaApplication](/powershell/module/microsoft.graph.beta.applications/update-mgbetaapplication) and [Add an on-premises application](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application).
+
+- **Remove the existing enterprise app**. Follow these steps:
+
+  1. Run the following PowerShell cmdlets to connect to your tenant:
+
+     ```powershell
+     Import-Module Microsoft.Graph.Applications
+     Connect-Graph -Scopes "Application.ReadWrite.All"
+     ```
+
+  2. Run the following PowerShell cmdlet to remove the enterprise app.
+
+     ```powershell
+     Remove-MgApplication -ApplicationId <app ID>
+     ```
+
+     For more information, see [Remove-MgApplication](/powershell/module/microsoft.graph.applications/remove-mgapplication).
+
+## Resolution for Cause 2
+
+Remove the previously installed, orphaned Hybrid Agent application. Follow these steps:
 
 1. Get the application GUID of the previous Hybrid Agent application. You can find this GUID by searching the HCW log for the following entry:
 
@@ -84,23 +115,23 @@ Remove the previously installed, orphaned Hybrid Agent application. To do this, 
 
    `10386 [Client=UX, Thread=20] Previous Connector Application Name found: 8fc44b37-bf0d-45bf-8254-d4d033d93a6e`
 
-1. Remove the previous Hybrid Agent application. To do this, follow these steps:
+2. Remove the previous Hybrid Agent application. Follow these steps:
 
    1. Load the [HybridManagement PowerShell module](/exchange/hybrid-deployment/hybrid-agent#installation-prerequisites):
 
       1. Install the [Microsoft PackageManagement PowerShell module](https://www.powershellgallery.com/packages/PackageManagement).
 
-      1. Install the [Microsoft Azure PowerShell module](/powershell/azure/servicemanagement/install-azure-ps#step-2-install-azure-powershell).
+      2. Install the [Microsoft Azure PowerShell module](/powershell/azure/servicemanagement/install-azure-ps#step-2-install-azure-powershell).
 
-      1. Download the latest version of the Microsoft [HybridManagement.psm1](https://aka.ms/hybridconnectivity) PowerShell module to a server in your Exchange organization.
+      3. Download the latest version of the Microsoft [HybridManagement.psm1](https://aka.ms/hybridconnectivity) PowerShell module to a server in your Exchange organization.
 
-      1. In the folder that contains the HybridManagement module, run the following PowerShell command as an administrator:
+      4. In the folder that contains the HybridManagement module, run the following PowerShell command as an administrator:
 
          ```powershell
          Import-Module .\HybridManagement.psm1
          ```
 
-   1. Pass the application GUID that you found in step 1 to the [Remove-HybridApplication](/exchange/hybrid-deployment/hybrid-agent#hybrid-agent-powershell-module) cmdlet:
+   2. Pass the application GUID that you found in step 1 to the [Remove-HybridApplication](/exchange/hybrid-deployment/hybrid-agent#hybrid-agent-powershell-module) cmdlet:
 
       ```powershell
       Remove-HybridApplication -AppId <application GUID> -Credential (Get-Credential)
@@ -113,25 +144,33 @@ Remove the previously installed, orphaned Hybrid Agent application. To do this, 
       ```
 
       When you're prompted for credentials, enter your Microsoft 365 or Office 365 Global administrator credentials.
-1. Re-run the HCW in classic mode to unregister the Application Proxy service in Microsoft Entra ID.
-1. Go to **Programs and Features** in Control Panel, verify that **Microsoft Hybrid Service** isn't [installed](/exchange/hybrid-deployment/hybrid-agent#additional-information). If it is, re-run step 2 to remove the Hybrid Agent application.
-1. Re-run the HCW in modern mode.
+3. Rerun HCW in classic mode to unregister the Application Proxy service in Microsoft Entra ID.
+4. Go to **Programs and Features** in Control Panel, and verify that **Microsoft Hybrid Service** isn't [installed](/exchange/hybrid-deployment/hybrid-agent#additional-information). If it is, rerun step 2 to remove the Hybrid Agent application.
+5. Rerun HCW in modern mode.
   
    > [!NOTE]
    > When you're prompted to choose a hybrid topology, select **Exchange Modern Hybrid Topology**.
 
-If the Hybrid Agent application isn't successfully removed, use one of the following options:
+If the Hybrid Agent application isn't successfully removed, follow these steps:
 
-- Run the following [Remove-AzureADApplicationProxyApplication](/powershell/module/azuread/remove-azureadapplicationproxyapplication) command:
+1. Run the following PowerShell cmdlets to connect to your tenant:
 
    ```powershell
-   Remove-AzureADApplicationProxyApplication -ObjectId <application GUID> -RemoveADApplication $true
+   Import-Module Microsoft.Graph.Applications
+   Import-Module Microsoft.Graph.Beta.Applications
+   Connect-Graph -Scopes "Application.ReadWrite.All"
    ```
+
+2. If you don't know the application ID, run the following PowerShell cmdlet to get the application ID:
  
-- Run the following command to get the application GUID, and then run the `Remove-AzureADApplicationProxyApplication` command to remove the application: 
-  
   ```powershell
-  Get-AzureADServicePrincipal | where {$_.Tags -Contains "WindowsAzureActiveDirectoryOnPremApp"} | fl AppId, DisplayName
+  Get-MgBetaServicePrincipal | where {$_.Tags -Contains "WindowsAzureActiveDirectoryOnPremApp"}| FL AppId, DisplayName
   ```
- 
+
+3. Run the following PowerShell cmdlet to remove the hybrid application:
+
+   ```powershell
+   Remove-MgApplication -ApplicationId <application GUID>
+   ```
+
 If you still can't remove the Hybrid Agent application, [contact Microsoft Support](https://support.microsoft.com/contactus). 
