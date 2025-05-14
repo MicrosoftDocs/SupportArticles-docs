@@ -40,14 +40,18 @@ Use either of the following methods to access PSI metrics:
 Azure Managed Prometheus provides a way to monitor PSI metrics:
 
 1. Enable Azure Managed Prometheus for your AKS cluster by following the [documentation](/azure/azure-monitor/essentials/prometheus-metrics-enable).
+  
+    - To enable customized scrape metrics for Prometheus, follow the [documentation](azure/azure-monitor/containers/prometheus-metrics-scrape-configuration?tabs=CRDConfig,CRDScrapeConfig,ConfigFileScrapeConfigBasicAuth,ConfigFileScrapeConfigTLSAuth#scrape-configs). A recommended setting is to set the `minumum ingestion profile` to `false` and `node-exporter` to `true`.
 
-2. Navigate to the Azure Monitor workspace associated with the AKS cluster from the [Azure portal](https://portal.azure.com)
+1. Navigate to the Azure Monitor workspace associated with the AKS cluster from the [Azure portal](https://portal.azure.com)
 
-3. Under **Monitoring**, select **Metrics**.
+![image](https://github.com/user-attachments/assets/e797a954-3853-4b60-ab9a-bc5df6490e51)
 
-4. Select **Prometheus metrics** as the data source. Note that the metrics need to be enabled in Azure Managed Prometheus for it to be available. These metrics are exposed by node exporter/ cadvisor
+1. Under **Monitoring**, select **Metrics**.
 
-5. Query specific PSI metrics:
+1. Select **Prometheus metrics** as the data source. Note that the metrics need to be enabled in Azure Managed Prometheus for it to be available. These metrics are exposed by node exporter/ cadvisor
+
+1. Query specific PSI metrics:
 
    - For node-level CPU pressure:
      ```
@@ -58,7 +62,8 @@ Azure Managed Prometheus provides a way to monitor PSI metrics:
      ```
      container_cpu_cfs_throttled_seconds_total
      ```
-   -
+   ![image](https://github.com/user-attachments/assets/0f204aca-b39d-48c2-9b9b-cb38eac53091)
+
    Calculate the PSI-some percentage (percentage of time at least one task is stalled on CPU):
    ```
     rate(node_pressure_cpu_waiting_seconds_total[5m]) * 100  
@@ -129,6 +134,14 @@ Review the following table to learn how to implement best practices for avoiding
 - `container_cpu_cfs_throttled_periods_total`: The number of periods a container has been throttled.
 - `container_cpu_cfs_throttled_seconds_total`: Total time a container has been throttled.
 - Throttling percentage: `rate(container_cpu_cfs_throttled_periods_total[5m]) / rate(container_cpu_cfs_periods_total[5m]) * 100`
+
+## Why PSI?
+
+There are a multitude of reasons why AKS is now using PSI as an indicator for CPU Pressure instead of load average. Some of the reasons are:
+1. Load average typically under-signals CPU saturation in oversized, multi-core nodes.
+1. On chattier, containerised nodes, load average can over-signal leading to alert fatigue.
+1. Since load average does not have per-cgroup visibility, noisy pods can hide behind a low system average.
+
 
 ## References
 
