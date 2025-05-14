@@ -17,9 +17,9 @@ metadata:
 landingContent:
 
 # Card
-  - title:  Troubleshooting
+  - title:  Azure Native New Relic Service
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text:  Ingestion key rotation rresolution
+          - text:  Update ingestion key after rotation
             url: ingestion-key-rotation-log-flow.md
