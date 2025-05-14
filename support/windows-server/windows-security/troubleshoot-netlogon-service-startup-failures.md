@@ -217,7 +217,7 @@ You can also view the status in services.msc on DCs.
 
 ### Resolution
 
-The Netlogon services on DCs might be paused because of configuration problems. The Netlogon.log contains the entries about the causes:
+The Netlogon services on DCs might be paused because of configuration problems. The Netlogon.log contains the following entries about the causes:
 
 - > Netlogon Service Paused
 
@@ -235,9 +235,7 @@ The Netlogon services on DCs might be paused because of configuration problems. 
 
   The DFSR Initial replication not completed.
 
-The last condition can be caused if the DFSR replication engine doesn't signal that the initial replication of SYSVOL has worked and is good to be shared. Therefore, The Netlogon service is in the paused status until the replication is completed, and only shares SYSVOL and Netlogon after the replication is completed.
-
-To troubleshoot this issue, see [Troubleshoot missing SYSVOL and Netlogon shares for Distributed File System (DFS) Replication](../networking/troubleshoot-missing-sysvol-and-netlogon-shares.md)
+The last condition can be caused if the DFSR replication engine doesn't signal that the initial replication of SYSVOL has worked and is good to be shared. Therefore, The Netlogon service is in the paused status until the replication is completed, and only shares SYSVOL and Netlogon after the replication is completed. To troubleshoot this issue, see [Troubleshoot missing SYSVOL and Netlogon shares for Distributed File System (DFS) Replication](../networking/troubleshoot-missing-sysvol-and-netlogon-shares.md)
 
 ## Additional symptoms
 
