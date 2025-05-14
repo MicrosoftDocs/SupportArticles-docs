@@ -2,8 +2,9 @@
 title: Ingestion Key Rotation and Log Flow Resolution
 description: Learn how to resolve issues related to log flow after an ingestion key rotation in New Relic.
 author: apoorvasingh130
-ms.author: apoorvasingh
-ms.service: NewRelic.Observability
+ms.author: singhapoorva
+ms.service: partner-services
+ms.subservice: new-relic
 ms.topic: troubleshooting-problem-resolution
 ms.date: 04/24/2025
 
