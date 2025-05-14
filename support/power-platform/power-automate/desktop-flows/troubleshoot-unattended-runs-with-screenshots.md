@@ -1,8 +1,8 @@
 ---
-title: Troubleshoot failed unattended runs using screenshots
+title: Troubleshoot Failed Unattended Runs Using Screenshots
 description: Provides troubleshooting steps to identify and resolve issues causing unattended runs to fail in Microsoft Power Automate.
 ms.reviewer: alarnaud
-ms.date: 05/07/2025
+ms.date: 05/14/2025
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Troubleshoot failed unattended runs using screenshots
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 5007976
 
 ## Symptoms
 
-A script that runs successfully in attended mode fails to execute properly in unattended mode. It might also fail with an error message like:
+A script that runs successfully in attended mode fails to execute properly in unattended mode. It might also fail with an error message like the following:
 
 > There was a problem running the action 'Click'. The link could not be clicked on the web page.
 
@@ -22,22 +22,22 @@ A script that runs successfully in attended mode fails to execute properly in un
 
 Unattended run failures might occur due to the following reasons:
 
-- The script might not have been thoroughly tested in attended mode before being deployed in unattended mode.
-- The unattended session might use a different configuration compared to the attended session, such as a different Windows account, screen resolution, or browser settings (for example, user profile, popup blocker settings, or missing/disabled extensions.)
+- The script might be thoroughly tested in attended mode before being deployed in unattended mode.
+- The unattended session might use a different configuration compared to the attended session, such as a different Windows account, screen resolution, or browser settings (for example, user profile, popup blocker settings, missing extensions, or disabled extensions.)
 - Screens might not completely load due to insufficient delays or timing issues in the script.
 - A User Account Control (UAC) prompt might block UI automation when the session begins.
 
 ## Resolution
 
-As there could be different causes for this issue, the following solution describes a method of adding screenshots before and after a failing action to get some visual feedback. Analyzing the screenshots taken before and after the failure in unattended mode can help identify the root cause from the issues listed previously. The solution also describes how to compare display resolution and scale settings between attended and unattended run executions.
+As there might be different causes of this issue, the following solution describes a method of adding screenshots before and after a failing action to get some visual feedback. Analyzing the screenshots taken before and after the failure in unattended mode can help identify the root cause from the issues listed previously. The solution also describes how to compare display resolution and scale settings between attended and unattended run executions.
 
-If you've added screenshots in your flow and they fail to execute, you might have a UAC dialog interfering with automation of your flow. Sign in to the machine where the issue occurs using the same Windows account configured for the unattended flow execution, and check for any blocking dialogs. If you have such dialogs, adjust your startup configuration to prevent this issue.
+If you add screenshots in your flow and they fail to execute, you might have a UAC dialog interfering with automation of your flow. Sign in to the machine where the issue occurs using the same Windows account configured for the unattended flow execution, and check for any blocking dialogs. If you have such dialogs, adjust your startup configuration to prevent this issue.
 
 ### Add screenshots to troubleshoot
 
-You can capture screenshots immediately before and after a failing step in unattended mode using the [Take screenshot](/power-automate/desktop-flows/actions-reference/workstation#takescreenshotbase) action. The screenshots can provide visual feedback to help diagnose the issue. You can configure the failing step to continue on after the failure by modifying its "On error" behavior, allowing a screenshot to be captured after the failure occurs. Once the issue is resolved, revert the "On error" behavior of your flow to its original setting.
+You can capture screenshots immediately before and after a failing step in unattended mode using the [Take screenshot](/power-automate/desktop-flows/actions-reference/workstation#takescreenshotbase) action. The screenshots can provide visual feedback to help diagnose the issue. You can configure the failing step to continue after the failure by modifying its "On error" behavior, allowing a screenshot to be captured after the failure occurs. Once the issue is resolved, revert the "On error" behavior of your flow to its original setting.
 
-1. Sign in to the computer that reproduces the problem with the account you're using in your connection. Verify that no UAC prompt is blocking UI automation.
+1. Sign in to the computer that reproduces the problem with the account you use in your connection. Verify that no UAC prompt blocks UI automation.
 
 1. Locate the **Take screenshot** action.
 
@@ -57,7 +57,7 @@ You can capture screenshots immediately before and after a failing step in unatt
 
    In this example, the **Launch new Microsoft Edge** action is the failing action and is surrounded by the screenshot actions.
 
-   :::image type="content" source="media/troubleshoot-unattended-runs-with-screenshots/failed-action-surrounded-by-screenshot-actions.png" alt-text="An example of a failed action surrounded by the screenshot actions.":::
+   :::image type="content" source="media/troubleshoot-unattended-runs-with-screenshots/failed-action-surrounded-by-screenshot-actions.png" alt-text="Screenshot that shows an example of a failed action surrounded by the screenshot actions." lightbox="media/troubleshoot-unattended-runs-with-screenshots/failed-action-surrounded-by-screenshot-actions.png":::
 
 1. Change the "On error" behavior of the failing action:
 
@@ -77,7 +77,7 @@ You can capture screenshots immediately before and after a failing step in unatt
 
 Many UI automation issues arise due to screen resolution differences between the machines running the attended and unattended sessions. Compare the resolution settings between attended and unattended run executions to ensure they match in both modes.  
 
-In some cases, such as when using a virtual machine (VM) or Hyper-V, the display resolution settings might be unavailable or grayed out. As a workaround in such situations, you can add the following actions in your script before running in both modes.
+In some cases (for example, when using a virtual machine (VM) or Hyper-V), the display resolution settings might be unavailable or grayed out. As a workaround in such situations, you can add the following actions in your script before running in both modes.
 
 1. Copy and paste the following code snippet into the [Power Automate desktop flow designer](/power-automate/desktop-flows/flow-designer).
 
@@ -116,4 +116,4 @@ In some cases, such as when using a virtual machine (VM) or Hyper-V, the display
 
 1. Review the output file path from the last action, check that local execution is successful, and select **Save**.
 
-1. Run the script in both attended and unattended modes, then compare the resolution and scale output to ensure they match in both modes.
+1. Run the script in both attended and unattended modes, and then compare the resolution and scale output to ensure they match in both modes.
