@@ -37,7 +37,7 @@ This article lists common error messages that you might receive when you change 
 |768|SPO Tenant Rename can't be restarted because the current state is {0}.|The tenant renaming job is either suspended, queued, or in progress.|Wait for the tenant renaming job to finish.|
 |769|The domain name can't be the same as the current name.|Original and target domain are the same.|Use a target domain name that's different from the original domain name.|
 |770|SPO Tenant Rename is currently blocked.|Tenant renaming is blocked because the server is busy.|Retry the renaming action after some time passes.|
-|771|SPO Tenant Rename is currently blocked.|Tenant renaming is blocked because the tenant is undergoing a move.|Retry the renaming action after some time passes.|
+|771 1090 1091 1092 |SPO Tenant Rename is currently blocked.|Tenant renaming is blocked because the tenant is undergoing a move.|Retry the renaming action after some time passes.|
 |772|Scheduled date/time must be 24 hours in the future.|Scheduled time is less than 24 hours from the current time.|Provide a schedule time that's equal to or greater than 24 hours from the current time, and then start the renaming.|
 |773|Not Implemented.|Tenant renaming isn't enabled for the customer.|Tenant renaming isn't enabled yet for this customer. Wait for this feature to be implemented for your tenant.|
 |775|The scheduled date/time must be within 30 days.|The scheduled time is greater than 30 days from the current time.|Provide a schedule date/time value that's 30 days or fewer from the current day, and then start the renaming.|
