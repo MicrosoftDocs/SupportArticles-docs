@@ -1,5 +1,5 @@
 ---
-title: Ingestion Key Rotation and Log Flow Resolution
+title: Ingestion Key Rotation and Log Flow Resolution in Azure Native New Relic Service
 description: Learn how to resolve issues related to log flow after an ingestion key rotation in New Relic.
 author: apoorvasingh130
 ms.author: singhapoorva
@@ -11,14 +11,13 @@ ms.date: 04/24/2025
 #customer intent: As a customer, I want to resolve log flow issues after ingestion key rotation so that my logs can continue flowing from Azure to New Relic without disruptions.
 ---
 
-# Ingestion Key Rotation and Log Flow Issues in New Relic
+# Logs missing after the ingestion key rotation
 
-When the ingestion key is rotated on the New Relic partner portal, log flow of the resources may stop due to the outdated key still being used by the Azure New Relic service. If you are experiencing issues with log flow after rotating your ingestion key, this guide will help you resolve them.
-
+When the ingestion key is rotated on the New Relic partner portal, log flow of the resources may stop due to the outdated key still being used by the Azure Native New Relic Service. If you are experiencing issues with log flow after rotating your ingestion key, this guide will help you resolve the issues.
 
 ## Symptoms
 
-- You might observe log loss after the ingestion key rotation on the New Relic partner portal. 
+- You might observe log loss after the ingestion key rotation on the New Relic partner portal.
 - The Log flow status may still be **Sending** on the **Monitored resources** page of the Azure New Relic resource.
 
 ## Cause
@@ -27,7 +26,7 @@ The issue occurs because Azure isn't notified of the ingestion key rotation. As 
 
 ## Workaround : Update the ingestion key manually
 
-To work around the issue,  manually update the ingestion key by using the following API call:
+To work around the issue, manually update the ingestion key using the following API call:
 
 1. **Gather Resource Information**
    - Find the **resource ID** of the Azure New Relic resource associated with the account where the ingestion key was rotated. If multiple resources are linked to the same account, you can make the API call for any one of them.
@@ -53,7 +52,8 @@ To work around the issue,  manually update the ingestion key by using the follow
    - The request should return a **204** status code, indicating that the ingestion key has been successfully updated.
    - Note that it may take up to **24 hours** for log flow to resume due to cache resetting on our side.
 
-4. **Troubleshooting**
-   - If you receive an error response, please contact **Microsoft Support** and provide the **correlation ID** (`x-ms-correlation-request-id`) from the response headers of your API call for further assistance.
+### Troubleshooting
+
+If you receive an error response, please contact **Microsoft Support** and provide the **correlation ID** (`x-ms-correlation-request-id`) from the response headers of your API call for further assistance.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
