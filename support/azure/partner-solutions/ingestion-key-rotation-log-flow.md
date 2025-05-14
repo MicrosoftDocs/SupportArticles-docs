@@ -52,6 +52,6 @@ To work around the issue, manually update the ingestion key using the following 
    - The request should return a **204** status code, indicating that the ingestion key has been successfully updated.
    - Note that it may take up to **24 hours** for log flow to resume due to cache resetting on our side.
 
-### Troubleshooting
+## Troubleshooting
 
 If you receive an error response, contact [**Microsoft Support**](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot) and provide the **correlation ID** (`x-ms-correlation-request-id`) from the response headers of your API call for further assistance.

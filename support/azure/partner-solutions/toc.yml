@@ -1,4 +1,6 @@
-- name: Azure Native New Relic Service 
-  items:
-  - name: Ingestion key rotation resolution
-    href: ingestion-key-rotation-log-flow.md
+- name: Azure Native Integrations
+  itmes:
+  - name: Azure Native New Relic Service
+    items:
+    - name: Ingestion key rotation resolution
+      href: ingestion-key-rotation-log-flow.md
