@@ -1,7 +1,7 @@
 ---
 title: Connection to the linked server fails
 description: This article explains about the errors that might occur if the connection to the linked server fails.
-ms.date: 04/18/2024
+ms.date: 05/08/2025
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp

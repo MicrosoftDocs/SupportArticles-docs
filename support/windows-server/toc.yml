@@ -342,6 +342,7 @@ items:
     - name: Use Event1644Reader.ps1 to analyze LDAP query performance
       href: ./active-directory/event1644reader-analyze-ldap-query-performance.md
   - name: Domain join issues
+  # Any changes to "Domain join issues" node need to be sync to "support/windows-client/toc.yml" > "Active Directory/Domain join issues"
     items:
     - name: 'Troubleshooting guidance: Active Directory domain join'
       href: ./active-directory/active-directory-domain-join-troubleshooting-guidance.md
@@ -349,26 +350,44 @@ items:
       href: ./active-directory/cannot-connect-internet-domain.md
     - name: Default limit to workstation numbers
       href: ./active-directory/default-workstation-numbers-join-domain.md
+    - name: Error 0x6D9 "No more endpoints available from the endpoint mapper"
+      href: ./active-directory/domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md
+    - name: Error 0x40 "The specified network name is no longer available"
+      href: ./active-directory/domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md
+    - name: Failure when you use an existing computer account to join a domain
+      href: ./active-directory/failure-when-you-use-an-existing-computer-account-to-join-a-domain.md
     - name: Error 0x5 Access Denied when you rename a computer
       href: ./active-directory/error-0x5-access-denied-rename-computer.md
+    - name: Error code 0x54b
+      href: active-directory/error-code-0x54b.md
+    - name: Error code 0x0000232A
+      href: active-directory/error-code-0x0000232a.md
     - name: Error code 0x569
       href: ./active-directory/error-0x569-not-granted-logon-type.md
     - name: Error code 0xa8b
       href: ./active-directory/error-0xa8b-resolve-dns-fail.md
     - name: Netlogon service doesn't keep settings after in-place upgrade
       href: ./active-directory/netlogon-service-not-start-automatically.md
+    - name: Status code 0x216d
+      href: ./active-directory/status-code-0x216d-not-joined-domain.md
     - name: Status code 0x32 and you can't join a domain
       href: ./active-directory/status-code-0x32-cannot-join-domain.md
+    - name: Status code 0x3a
+      href: ./active-directory/status-code-0x3a-server-not-perform-operation.md
+    - name: 'Status code 0x6ba: The RPC server is unavailable'
+      href: ./active-directory/status-code-0x6ba-rpc-server-unavailable.md
+    - name: Status code 0x6bf or 0xc002001c
+      href: ./active-directory/status-code-0x6bf-0xc002001c.md
     - name: Support boundaries for Active Directory over NAT
       href: ./active-directory/support-for-active-directory-over-nat.md
     - name: '"The account is not authorized to login from this station" error'
       href: ./active-directory/account-not-authorized-login-from-this-station.md
-    - name: Troubleshoot errors when joining computers to a domain
-      href: ./active-directory/troubleshoot-errors-join-computer-to-domain.md
+    - name: Troubleshoot authentication errors when joining computers to a domain
+      href: ./active-directory/domain-join-authentication-errors.md
+    - name: Troubleshoot networking errors when joining computers to a domain
+      href: ./active-directory/domain-join-networking-errors.md
   - name: LDAP configuration and interoperability
     items:
-    - name: DCs can't be located and high-rate outbound sessions
-      href: ./active-directory/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Enable LDAP over SSL
       href: ./active-directory/enable-ldap-over-ssl-3rd-certification-authority.md
     - name: How to disable TLS 1.3 for AD and LDAP
@@ -521,6 +540,8 @@ items:
       href: ./active-directory/configure-authoritative-time-server.md
     - name: How Windows Time service treats leap second
       href: ./active-directory/time-service-treats-leap-second.md
+    - name: Secure Time Seeding recommendations for Windows Server
+      href: ./active-directory/sts-recommendations-for-windows-server.md
     - name: Support boundary for high-accuracy time
       href: ./active-directory/support-boundary-high-accuracy-time.md
     - name: Support for the leap second
@@ -2087,6 +2108,8 @@ items:
       href: ./remote/terminal-server-startup-connection-application.md
     - name: The connection settings stored in the Default.rdp file
       href: ./remote/remote-desktop-protocol-settings.md
+    - name: Unable to install RDS deployment or add RDS roles
+      href: remote/unable-to-install-rds-deployment-or-add-rds-roles.md
     - name: Updates for Remote Desktop Services
       href: ./remote/remote-desktop-services-updates.md
   - name: Application compatibility
@@ -2567,10 +2590,14 @@ items:
       href: ./system-management-components/schedule-server-process.md
     - name: Scheduled task may not run upon reboot
       href: ./system-management-components/scheduled-task-not-run-upon-reboot-machine-off.md
+    - name: Scheduled tasks fail with "Task schedular service is not available"
+      href: ../windows-client/system-management-components/task-schedular-service-is-not-available.md?context=/troubleshoot/windows-server/context/context
     - name: Scheduled tasks reference incorrect user profile paths
       href: ./system-management-components/scheduled-tasks-reference-incorrect-user-profile.md
     - name: Troubleshoot issues with scheduled tasks not running
       href: ./system-management-components/troubleshoot-scheduled-tasks-not-running.md
+    - name: Troubleshoot issues with the Task Scheduler service not starting
+      href: ../windows-client/system-management-components/task-scheduler-service-not-start.md?context=/troubleshoot/windows-server/context/context
     - name: Resolve Task Scheduler "Access Denied" error
       href: ./system-management-components/troubleshooting-task-scheduler-access-denied-error.md
   - name: WinRM
@@ -2627,6 +2654,8 @@ items:
       href: ./user-profiles-and-logon/interactive-logon-isnt-allowed.md
     - name: Turn on automatic logon
       href: ./user-profiles-and-logon/turn-on-automatic-logon.md
+    - name: User may not be able to Change Their Password
+      href: user-profiles-and-logon/user-must-change-password-at-next-logon-setting.md
     - name: User profiles may fail to load
       href: ./user-profiles-and-logon/user-profiles-may-fail-load.md
     - name: Windows logs on and logs off immediately
@@ -2655,8 +2684,6 @@ items:
       href: ./user-profiles-and-logon/user-profile-cannot-loaded-event-1509.md
     - name: Troubleshoot user profiles with events
       href: ./user-profiles-and-logon/troubleshoot-user-profiles-events.md
-    - name: User may not be able to Change Their Password
-      href: ./user-profiles-and-logon/user-must-change-password-at-next-logon-setting.md
 - name: Virtualization
   items:
   - name: Virtualization
@@ -2929,6 +2956,8 @@ items:
       href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md
   - name: Netlogon, secure channel, DC Locator
     items:
+    - name: DCs can't be located and high-rate outbound sessions
+      href: user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Troubleshoot domain controller location issues
       href: windows-security/troubleshoot-domain-controller-location-issues.md
     - name: 'Troubleshooting guidance: Secure channel'
@@ -3047,12 +3076,18 @@ items:
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
   - name: Windows Update fails - installation stops with error
     items:
+    - name: Troubleshoot Windows Update error 0x80070002
+      href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
     - name: CBS.log file contains entries that some files aren't repaired
       href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
     - name: Description of System File Checker (Sfc.exe)
       href: ./installing-updates-features-roles/system-file-checker.md
+    - name: Troubleshoot Windows Update error 0x8024002E
+      href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
+    - name: Troubleshoot Windows Update error 0x80070490
+      href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
     - name: Error 0x800f0831 when installing Windows updates
@@ -3119,6 +3154,8 @@ items:
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
     - name: Scripts to view the certificate information in the msDS-KeyCredentialLink attribute
       href: ./support-tools/script-to-view-msds-keycredentiallink-attribute-value.md
+    - name: 'Scripts to check and clean up the AGPM archive'
+      href: support-tools/scripts-check-and-cleanup-the-agpm-archive.md
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)

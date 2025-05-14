@@ -50,6 +50,7 @@ Windows updates may fail to install if there are corruption errors. You can chec
 |0x800f0984|PSFX_E_MATCHING_BINARY_MISSING|Matching component directory exist but binary missing|
 |0x800f0986|PSFX_E_APPLY_FORWARD_DELTA_FAILED|Applying forward delta failed|
 |0x800f0982|PSFX_E_MATCHING_COMPONENT_NOT_FOUND|Can't identify matching component for hydration|
+|[0x8024002E](troubleshoot-windows-update-error-code-0x8024002e.md)|WU_E_WU_DISABLED|Windows Update Client service is disabled|
 
 For example, an update might not install if a system file is damaged. The DISM may help you fix some Windows corruption errors.
 

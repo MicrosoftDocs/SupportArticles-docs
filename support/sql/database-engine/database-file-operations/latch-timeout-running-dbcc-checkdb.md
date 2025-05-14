@@ -1,7 +1,7 @@
 ---
 title: Error when you run the DBCC CHECKDB statement
 description: This article describes a problem where you receive an error message when you try to run the DBCC CHECKDB statement on a database that contains a large table in SQL Server.
-ms.date: 10/11/2022
+ms.date: 05/06/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: keithelm
 ---
@@ -9,7 +9,7 @@ ms.reviewer: keithelm
 
 This article introduces a problem where you receive an error message when you try to run the `DBCC CHECKDB` statement on a database that contains a large table in SQL Server.
 
-_Original product version:_ &nbsp; SQL Server 2012, SQL Server 2008  
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 919155
 
 ## Symptoms
@@ -33,29 +33,3 @@ This issue occurs because a time-out occurs when SQL Server traverses the Index 
 ## Status
 
 This behavior is by design.
-
-## Applies to
-
-- SQL Server 2008 Developer
-- SQL Server 2008 Enterprise
-- SQL Server 2008 Express
-- SQL Server 2008 Express with Advanced Services
-- SQL Server 2008 R2 Datacenter
-- SQL Server 2008 R2 Developer
-- SQL Server 2008 R2 Enterprise
-- SQL Server 2008 R2 Express
-- SQL Server 2008 R2 Express with Advanced Services
-- SQL Server 2008 R2 Standard
-- SQL Server 2008 R2 Standard Edition for Small Business
-- SQL Server 2008 R2 Web
-- SQL Server 2008 R2 Workgroup
-- SQL Server 2008 Standard
-- SQL Server 2008 Web
-- SQL Server 2008 Workgroup
-- SQL Server 2012 Business Intelligence
-- SQL Server 2012 Developer
-- SQL Server 2012 Enterprise
-- SQL Server 2012 Express
-- SQL Server 2012 Standard
-- SQL Server 2012 Web
-- SQL Server 2012 Enterprise Core

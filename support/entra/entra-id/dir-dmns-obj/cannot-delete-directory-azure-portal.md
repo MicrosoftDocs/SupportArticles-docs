@@ -4,7 +4,7 @@ description: Fixes an issue in which you can't delete a directory from the Micro
 ms.date: 05/22/2020
 ms.reviewer: willfid
 ms.service: entra-id
-ms.custom: sap:Directory Management, has-azure-ad-ps-ref
+ms.custom: sap:Directory Management, no-azure-ad-ps-ref
 ---
 # Can't delete a directory through the Azure Management Portal
 
@@ -91,22 +91,20 @@ If you have an Azure subscription, make sure that your Azure subscription is not
 
 To learn how to remove applications from your directory, read [Adding, updating, and removing an application](/azure/active-directory/develop/quickstart-register-app)
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+You may also have to remove additional service principals. Use [Microsoft Graph PowerShell](/powershell/microsoftgraph/installation) to remove all service principals:
 
-You may also have to remove additional service principals. Use Azure Active Directory module for Windows PowerShell to remove all service principals. To do this, follow these steps:
-
-1. Open Azure Active Directory module for Windows PowerShell.
-2. Connect to the Microsoft Online Service.
-3. Run the following command:
+1. [Install Microsoft Graph PowerShell](/powershell/microsoftgraph/installation).
+2. Run the `Remove-MgServicePrincipal` command to remove all service principals. This command requires at least the `Application.ReadWrite.All` permission. For more information, see [Remove-MgServicePrincipal](/powershell/module/microsoft.graph.applications/remove-mgserviceprincipal?view=graph-powershell-1.0&preserve-view=true).
 
     ```powershell
-    Get-MsolServicePrincipal | Remove-MsolServicePrincipal
+     Connect-MgGraph -Scopes "Application.ReadWrite.All" -tenant <tenant-ID>
+     Get-MgServicePrincipal  | ForEach-Object { Remove-MgServicePrincipal -ServicePrincipalId $_.Id }
     ```
 
     > [!NOTE]
     > You may receive an error when you remove some service principals. These principals can't be removed. However, this does not prevent you from deleting your directory. The error that you receive may resemble the following:
     >
-    > Remove-MsolServicePrincipal : Invalid value for parameter. Parameter Name: appPrincipalId.
+    > Remove-MgServicePrincipal: Specified App Principal ID is Microsoft Internal.
 
 ## Directory has one or more Multi-Factor Authentication providers
 

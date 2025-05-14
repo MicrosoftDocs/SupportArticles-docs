@@ -14,6 +14,8 @@
       href: administration/attibutemap-error-upgrade.md
     - name: Entity record names have duplicated numbers
       href: administration/entity-names-duplicated-numbers.md
+    - name: Inspection flows aren't triggered 
+      href: administration/inspection-flows-not-triggered.md
     - name: '"The user has not been assigned any roles" error'
       href: administration/user-has-no-roles.md
 - name: Customization
@@ -84,4 +86,6 @@
   items: 
     - name: Issue with cascading crew changes when assigning a booking
       href: scheduling/cascade-crew-changes-booking.md
+    - name: Form context is missing on bookable resource forms
+      href: scheduling/missing-form-context-bookable-resource.md
 

@@ -2,7 +2,7 @@
 title: Tracked to Dynamics 365 category is added to user's mailbox
 description: Helps you understand the Outlook category called Tracked to Dynamics 365 when the mailbox is configured for server-side synchronization.
 ms.reviewer: 
-ms.date: 12/06/2024
+ms.date: 04/17/2025
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # A "Tracked to Dynamics 365" category is unexpectedly added to a user's mailbox

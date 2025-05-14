@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the SubnetIsFull error code
-description: Learn how to troubleshoot the SubnetIsFull error when you try to scale an Azure Kubernetes Service (AKS) cluster.
+description: Introduces how to troubleshoot the SubnetIsFull error when you try to scale an Azure Kubernetes Service (AKS) cluster.
 ms.date: 02/28/2025
 author: jotavar
 ms.author: jotavar

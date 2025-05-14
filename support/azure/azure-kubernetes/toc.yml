@@ -39,8 +39,6 @@
       href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
     - name: Throttled error (429)
       href: create-upgrade-delete/error-code-aksrequeststhrottled.md
-    - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
-      href: create-upgrade-delete/subnet-with-external-resources-cannot-be-used-by-other-resources.md
     - name: Troubleshoot the AKSCapacityError error code
       href: create-upgrade-delete/akscapacityerror.md
     - name: VMExtensionProvisioningTimeout error
@@ -168,6 +166,8 @@
     href: availability-performance/identify-high-cpu-consuming-containers-aks.md
   - name: Identify memory saturation in AKS clusters
     href: availability-performance/identify-memory-saturation-aks.md
+  - name: Troubleshoot high memory consumption due to Linux kernel behaviors
+    href: availability-performance/high-memory-consumption-disk-intensive-applications.md
   - name: Troubleshoot cluster service health probe mode issues
     href: availability-performance/cluster-service-health-probe-mode-issues.md
   - name: Troubleshoot node not ready
@@ -345,17 +345,23 @@
     href: extensions/troubleshoot-dapr-extension-installation-errors.md
   - name: Troubleshoot deployment failures of Azure Marketplace offers
     href: extensions/troubleshoot-failed-kubernetes-deployment-offer.md
+  - name: Troubleshoot network isolated clusters
+    href: extensions/troubleshoot-network-isolated-cluster.md
   - name: KEDA add-on
     items:
     - name: Troubleshoot KEDA add-on
       href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
       href: extensions/changes-in-kubernetes-event-driven-autoscaling-add-on-214-215.md
-  
+
 - name: Troubleshoot error codes
   items:
   - name: VMExtension error codes
     items:
+    - name: OrasPullNetworkTimeoutVMExtensionError
+      href: error-codes/vmextensionerror-oraspullnetworktimeout.md
+    - name: OrasPullUnauthorizedVMExtensionError
+      href: error-codes/vmextensionerror-oraspullunauthorized.md
     - name: VMExtensionError_CniDownloadTimeout error
       href: error-codes/vmextensionerror-cnidownloadtimeout.md
     - name: VMExtensionError_OutboundConnFail error
@@ -366,7 +372,37 @@
       href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
     - name: VMExtensionError_VHDFileNotFound error
       href: error-codes/vmextensionerror-vhdfilenotfound.md
+    - name: VMExtensionError_ProvisioningTimeout error
+      href: error-codes/vmextensionerror-provisioningtimeout.md
   - name: UnsatisfiablePDB error
     href: error-codes/unsatisfiablepdb-error.md
   - name: AksCapacityHeavyUsage error
     href: error-codes/akscapacityheavyusage-error.md
+  - name: InvalidParameter error
+    href: error-codes/invalidparameter-error.md
+  - name: InvalidResourceReference error
+    href: error-codes/invalidresourcereference-error.md
+  - name: LinkedAuthorizationFailed error
+    href: error-codes/linkedauthorizationfailed-error.md
+  - name: MissingSubscriptionRegistration error
+    href: error-codes/missingsubscriptionregistration-error.md
+  - name: OperationNotAllowed or PublicIPCountLimitReached error
+    href: error-codes/operationnotallowed-publicipcountlimitreached-error.md
+  - name: AKSOperationPreempted error
+    href: error-codes/aksoperationpreempted-error.md
+  - name: RequestDisallowedByPolicy error
+    href: error-codes/requestdisallowedbypolicy-error.md
+  - name: ServicePrincipalValidationClientError error
+    href: error-codes/serviceprincipalvalidationclienterror-error.md
+  - name: SubscriptionRequestsThrottled error
+    href: error-codes/subscriptionrequeststhrottled.md
+  - name: Throttled error
+    href: error-codes/throttled-error.md
+  - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources
+    href: error-codes/subnetwithexternalresourcescannotbeusedbyotherresources-error.md 
+  - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error
+    href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
+  - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
+    href: error-codes/zonalallocation-allocationfailed-error.md
+  - name: QuotaExceeded or InsufficientVCPUQuota error
+    href: error-codes/quota-exceeded-error.md

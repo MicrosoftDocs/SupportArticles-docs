@@ -3,7 +3,7 @@ title: Multiple addenda lines in the EFT file
 description: Provides a solution to an issue where multiple addenda lines in the EFT file in Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # Multiple addenda lines in the EFT file in Microsoft Dynamics GP

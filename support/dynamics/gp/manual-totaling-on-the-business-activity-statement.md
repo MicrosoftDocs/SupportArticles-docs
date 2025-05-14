@@ -2,7 +2,7 @@
 title: Manual Totaling on the Business Activity Statement
 description: Describes Manual Totaling on the Business Activity Statement, how to control it, and how it affects the tax figures reported in Microsoft Dynamics GP and Microsoft Business Solutions - Great Plains 8.0.
 ms.reviewer: theley, lmuelle
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # Information about Manual Totaling on the Business Activity Statement in Microsoft Dynamics GP

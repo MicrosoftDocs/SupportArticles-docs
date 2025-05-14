@@ -1,31 +1,32 @@
 ---
 title: MDS Validate Version command fails
-description: This article provides resolutions for the problem where MDS Validate Version command fails with a server error in SQL Server 2012 and SQL Server 2014.
-ms.date: 02/22/2021
+description: This article provides resolutions for the problem where MDS Validate Version command fails with a server error in SQL Server.
+ms.date: 05/09/2025
 ms.custom: sap:Master Data Services
+ms.reviewer: jopilov
 ---
-# MDS Validate Version command fails with a server error in SQL Server 2012 and SQL Server 2014
+# MDS Validate Version command fails with a server error in SQL Server
 
-This article helps you resolve the problem where Master Data Services (MDS) Validate Version command fails with a server error in SQL Server 2012 and SQL Server 2014.
+This article helps you resolve the problem where Master Data Services (MDS) Validate Version command fails with a server error in SQL Server.
 
-_Original product version:_ &nbsp; SQL Server 2012, SQL Server 2014  
+_Original product version:_ &nbsp; SQL Server    
 _Original KB number:_ &nbsp; 2711671
 
 ## Symptoms
 
 Consider the following scenario:
 
-- An administrator installs Microsoft SQL Server 2012 or SQL Server 2014 MDS and then deploys the MDS website by using a new application pool account.
+- An administrator installs Microsoft SQL Server and then deploys the MDS website by using a new application pool account.
 
 - Later, you browse to the MDS website and then follow these steps:
 
-    1. You click the **Manage Versions** page.
+  1. Select the **Manage Versions** page.
 
-    1. You click the **Validate Version** command on the top toolbar.
+  1. Select the **Validate Version** command on the top toolbar.
 
-    1. You select the **Validate** check box for **Model**.
+  1. Select the **Validate** check box for **Model**.
 
-    1. You confirm the **Are you sure that you want to validate this version?** prompt and then click **OK**.
+  1. You confirm the **Are you sure that you want to validate this version?** prompt and then select **OK**.
 
 In this scenario, you receive the following error message in the browser window:
 
@@ -53,21 +54,21 @@ System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boo
 
 ## Cause
 
-This problem occurs because new accounts are not granted the `VIEW SERVER STATE` permission.
+This problem occurs because new accounts aren't granted the `VIEW SERVER STATE` permission.
 
 When you use the Master Data Services Configuration Manager utility to create an MDS website, the tool prompts you for the application pool user account credentials for the application pool identity.
 
 Next, after the MDS server and database are selected, the tool grants permissions to the account. The specified application pool credential account is granted several permissions in the specified MDS database and is added to the `MDS_ServiceAccounts` local users group and to the `mds_exec` database role within the specified MDS database catalog.
 
-However, the `VIEW SERVER STATE` permission is not granted to the master database. Sometimes, Windows accounts may have that permission in SQL Server. However, by default, new accounts are not granted that permission.
+However, the `VIEW SERVER STATE` permission isn't granted to the master database. Sometimes, Windows accounts may have that permission in SQL Server. However, by default, new accounts aren't granted that permission.
 
 The `VIEW SERVER STATE` permission is useful to query the service broker by using the `sys.dm_broker_activated_tasks` dynamic management view (DMV) to check the progress of queued background activity.
 
-The MDS web application internally runs the exec `mdm.udpValidationIsRunning` stored procedure to check the validation progress. However, the application pool credential that is running the query does not have permissions to the DMV and receives the following error message:
+The MDS web application internally runs the exec `mdm.udpValidationIsRunning` stored procedure to check the validation progress. However, the application pool credential that is running the query doesn't have permissions to the DMV and receives the following error message:
 
 > The user does not have permission to perform this action.
 
-The following statement inside the procedure fails, and the webpage is not rendered:
+The following statement inside the procedure fails, and the webpage isn't rendered:
 
 ```sql
 IF EXISTS (SELECT 1 FROM sys.dm_broker_activated_tasks
@@ -97,7 +98,7 @@ To determine whether this problem is related to the `VIEW SERVER STATE` permissi
 
 > The user does not have permission to perform this action.
 
-Then, check the account for effective permissions, and add the permissions if it is necessary. To do this, follow these steps:
+Then, check the account for effective permissions, and add the permissions if it's necessary. To do this, follow these steps:
 
 1. Open Management Studio, and then connect to the SQL Server database engine that is hosting the MDS catalog.
 
@@ -105,13 +106,13 @@ Then, check the account for effective permissions, and add the permissions if it
 
 1. Locate the account that is used to run the IIS MDS application pool.
 
-1. Right-click the account, and then click **Properties**.
+1. Right-click the account, and then select **Properties**.
 
-1. Click the **Securables** page. In the bottom pane, click the **Effective** tab.
+1. Select the **Securables** page. In the bottom pane, select the **Effective** tab.
 
     - If the effective permission `VIEW SERVER STATE` is listed, this is likely not the problem.
 
-    - If the permission is not listed, return to the **Explicit** tab on the **Login Properties** dialog box, and then click to select the **View Server State Permissions** check box to grant permissions to the account.
+    - If the permission isn't listed, return to the **Explicit** tab on the **Login Properties** dialog box, and then select the **View Server State Permissions** check box to grant permissions to the account.
 
 ## References
 
