@@ -14,12 +14,12 @@ This article helps you troubleshoot the error "The profile name is already in us
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Teams        |
-|**Platform**     | Web and desktop clients         |
-|**OS**     | Windows and Mac         |
-|**Deployment**     | User managed and admin managed       |
-|**CRM**     | Salesforce        |
-|**Users**     | Administrator   |
+|**Client app**     |  Teams   |
+|**Platform**     | Web and desktop clients |
+|**OS**     | Windows and Mac |
+|**Deployment**     | User managed and admin managed |
+|**CRM**     | Salesforce  |
+|**Users**     | Administrator |
 
 ## Symptoms
 
