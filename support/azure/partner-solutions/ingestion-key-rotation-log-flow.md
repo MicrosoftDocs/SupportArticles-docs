@@ -44,7 +44,7 @@ To work around the issue, manually update the ingestion key using the following 
      You can obtain the token using the **Network** tab of your browser's Developer tools:
       
       1. In the browser, press F12 to open Developer tools. Select **Network**, and then select **Disable Cache**.
-      1. Open azure portal and while keeping the **Network tab** open, perform any basic operations like opening a resource.
+      1. Open [Azure portal](https://portal.azure.com) and while keeping the **Network tab** open, perform any basic operations like opening a resource.
       1. Filter the result by **Fetch/XHR**. You can find a bearer token present in the request headers of the corresponding API call. Use it while it remains active.
       
          :::image type="content" source="media/ingestion-key-rotation-log-flow/get-token.png" alt-text="Screenshot of viewing access token." lightbox="media/ingestion-key-rotation-log-flow/get-token.png":::
