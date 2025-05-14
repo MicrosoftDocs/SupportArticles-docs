@@ -1,6 +1,6 @@
 ---
-title: Users don't receive SharePoint Online alert notifications
-description: This article describes an issue that users don't receive SharePoint Online alert notifications, and provides a solution.
+title: Users don't Receive SharePoint Alert Notifications
+description: This article describes an issue that users don't receive SharePoint alert notifications, and provides a solution.
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
@@ -12,33 +12,28 @@ ms.custom:
   - sap:Lists and Libraries\Alerts
   - CSSTroubleshoot
 appliesto: 
-  - SharePoint Online
-ms.date: 12/17/2023
+  - SharePoint in Microsoft 365
+ms.date: 05/14/2025
 ---
 
-# Users don't receive SharePoint Online alert notifications
+# Users don't receive SharePoint alert notifications
 
-## Problem
+> [!IMPORTANT]
+> Starting from July 2026, Microsoft will remove the ability to use SharePoint Alerts. It's recommended to use [rules](https://support.microsoft.com/office/create-a-rule-to-automate-a-list-or-library-151ea008-7fa6-409b-b0bd-b04a3b3cacd5) or [Power Automate](https://go.microsoft.com/fwlink/?linkid=2111055) to do notifications. For more information, see [SharePoint Alerts retirement](https://aka.ms/retirement/alerts/support).
 
-In a Microsoft 365 environment, users don't receive SharePoint Online alert notifications as expected. Specifically, users may experience one or more of the following symptoms:
+## Symptoms
+
+In a Microsoft 365 environment, users don't receive SharePoint alert notifications as expected. Specifically, users may experience one or more of the following symptoms:
 
 - Alert email messages aren't received after an alert is created.
-
 - Alerts don't work. Alerts aren't received.
-
 - Task list notifications don't work.
-
 - Workflow email messages aren't received.
-
 - The workflow doesn't work.
 
-> [!Important]
-> Starting July 2026, SharePoint Alerts for SharePoint Online will be fully retired and stop working. It's recommended to either use [rules](https://support.microsoft.com/en-us/office/create-a-rule-to-automate-a-list-or-library-151ea008-7fa6-409b-b0bd-b04a3b3cacd5) or [Power Automate](https://go.microsoft.com/fwlink/?linkid=2111055) to do notifications. [Learn more about the SharePoint Alerts retirement](https://aka.ms/retirement/alerts/support).
+## Resolution
 
-
-## Solutions
-
-### Solution 1
+### Resolution 1
 
 Investigate the user's permissions for the list, for the library, or for the task list. Make sure that the user account has at least Read permissions on the object.
 
@@ -47,18 +42,18 @@ Investigate the user's permissions for the list, for the library, or for the tas
 
 For more information about Permission Levels, see [Understanding Permission Levels](/sharepoint/understanding-permission-levels).
 
-### Solution 2
+### Resolution 2
 
 Verify that new alerts work. To do this, create a new alert on a test library or on a test list. Perform an action to generate the alert. For example, add, edit, or delete an item. Then, wait 15 minutes. If the alert isn't received, collect the following information, and then contact Microsoft 365 technical support:
 
 - Verify the last known time that alerts were received.
 - Record the exact steps to reproduce the issue in the new alert.
 
-### Solution 3
+### Resolution 3
 
 If the new alert is received but existing alerts aren't received, delete and then re-create all the user's alerts on the site. To do this, see [Manage, view, or delete SharePoint alerts](https://support.office.com/article/manage-view-or-delete-sharepoint-alerts-99dfb19c-9a90-4a8c-aba1-aa8c8afb0de2?ui=en-US&rs=en-US&ad=US#ID0EAADAAA=Online) to recreate the alert.
 
-### Solution 4
+### Resolution 4
 
 If all alerts from multiple files or libraries are not delivered, visit the Service Health Dashboard from the Microsoft 365 admin center, Health, Service health to check for any advisories/incidents that may be occurring with SharePoint or Exchange. The issue could be with the SharePoint alert capability or delays in emails through Exchange. It will also be important to note whether other email is being delivered, and if not, the issue is likely with Exchange delays.
 
