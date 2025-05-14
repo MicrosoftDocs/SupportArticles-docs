@@ -309,6 +309,8 @@
         href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
       - name: NoPermissionsInAccessToken when calling me endpoint
         href: users-groups-entra-apis/error-call-me-endpoint-microsoft-graph.md
+      - name: HTTP 403 authorization error when calling Microsoft Graph Security API
+        href: users-groups-entra-apis/403-error-when-calling-microsoft-graph-security-api.md
       - name: Tenant doesn't have premium license error when query sign-in activities
         href: users-groups-entra-apis/b2c-or-tenant-premium-license-sign-in-activities.md
    - name: Problem with using the Graph SDK - libraries

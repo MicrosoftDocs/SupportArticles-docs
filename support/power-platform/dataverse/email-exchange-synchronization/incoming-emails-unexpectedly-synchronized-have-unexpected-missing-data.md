@@ -63,7 +63,7 @@ To avoid duplicate emails to be tracked or synchronized:
 2. Navigate to **Settings** > **Email Configuration** > **Email Configuration Settings**.
 3. Under the **Set tracking options for emails between Microsoft Dynamics 365 users** setting, clear the **Track emails sent between Dynamics 365 users as two activities** option.
 
-   :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/track-emails-sent-between-dynamics-365-as-two-activities.png" alt-text="Screenshot that shows the Set tracking options for emails between Microsoft Dynamics 365 users setting.":::
+   :::image type="content" source="media/incoming-emails-unexpectedly-synchronized-have-unexpected-missing-data/track-emails-sent.png" alt-text="Screenshot that shows the Set tracking options for emails between Microsoft Dynamics 365 users setting.":::
 
 For more information about how the system detects if an email should be automatically promoted, see [Specify which emails are automatically tracked](/power-platform/admin/email-message-filtering-correlation).
 
