@@ -49,7 +49,9 @@ To work around the issue, manually update the ingestion key using the following 
       
          :::image type="content" source="media/ingestion-key-rotation-log-flow/get-token.png" alt-text="Screenshot of viewing access token." lightbox="media/ingestion-key-rotation-log-flow/get-token.png":::
 3. The request should return a **204** status code that indicates the ingestion key has been successfully updated.
-   - Note that it may take up to **24 hours** for log flow to resume due to cache resetting on our side.
+   
+    > [!NOTE]
+    > It may take up to **24 hours** for log flow to resume due to cache resetting on the Azure side.
 
 ## Troubleshooting
 
