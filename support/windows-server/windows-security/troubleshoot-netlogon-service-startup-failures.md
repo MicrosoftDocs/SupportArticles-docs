@@ -206,11 +206,11 @@ Validate that the service permissions within the registry are set to the appropr
 
 ### Symptom 6
 
-The Netlogon is started successfully, but the service status is reported as not started or as paused. For domain members, the status can be set by administrators by running `Net pause netlogon` and `Net continue netlogon`. In services.msc snap-in, the services is displayed as the following screenshot:
+The Netlogon is started successfully, but the service status is not reported as **Started** or **Running** but as **Paused**. For domain members, the status can be set by administrators by running `Net pause netlogon` and `Net continue netlogon`. In the services.msc snap-in, the services is displayed as the following screenshot:
 
 :::image type="content" source="media/troubleshoot-netlogon-service-startup-failures/screenshot-of-the-netlogon-services-status.png" alt-text="Screenshot of the Netlogon services status.":::
 
-You can also view the status in services.msc on DCs.
+You can also pause and continue (or resume) the Netlogon service on DCs.
 
 > [!NOTE]
 > When the Netlogon service is paused, the DC doesn't respond to DC Locator requests (on LDAP port UDP/389). The computer is then not used for NTLM authentication or new Kerberos tickets.
