@@ -19,7 +19,7 @@ The Istio add-on egress gateway is an Envoy-based proxy that can be used to rout
 
 The Istio add-on egress gateway takes a hard dependency on the [Static Egress Gateway feature](/azure/aks/configure-static-egress-gateway). You must enable Static Egress Gateway on your cluster before enabling an Istio add-on egress gateway.
 
-You can create multiple Istio add-on egress gateways across different namespaces with a Deployment/Service `name` of your choice, with a max of `2000` egress gateways per cluster.
+You can create multiple Istio add-on egress gateways across different namespaces with a Deployment/Service `name` of your choice, with a max of `500` egress gateways per cluster.
 
 ## Troubleshooting Checklist
 
@@ -45,9 +45,9 @@ Ensure that self-managed mutating and validating webhooks aren't blocking provis
 
 Istio egress gateway names must be less than or equal to 63 characters in length, can only consist of lowercase alphanumerical characters, '.' and '-,' and must start and end with a lowercase alphanumerical character. Istio egress gateway names should also be valid DNS names. The regex used for Istio egress name validations is: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$`.
 
-#### Step 3: Inspect the `StaticGatewayConfiguration` if Pods are stuck in `containerCreating`
+#### Step 3: Inspect Static Egress Gateway componnents if Istio egress deployments are not ready
 
-If the Istio egress gateway Pods are stuck in `containerCreating`, see [Step 2](#step-2-make-sure-that-an-egressipprefix-has-been-provisioned-for-the-staticgatewayconfiguration) in the "Static Egress Gateway errors" section on how to debug the `StaticGatewayConfiguration`.
+If Static Egress Gateway components such as the `kube-egress-gateway-cni-manager` are crashing, or there are other issues with the static egress IP allocation, Istio egress gateway provisioning could fail. See the subsequent section on [Static Egress Gateway Errors](#static-egress-gateway-errors-or-misconfiguration) to troubleshoot the Static Egress Gateway and [inspect the `StaticGatewayConfiguration`](#step-2-make-sure-that-an-egressipprefix-has-been-provisioned-for-the-staticgatewayconfiguration).
 
 ### Static Egress Gateway Errors or Misconfiguration
 
