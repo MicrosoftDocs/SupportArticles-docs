@@ -60,7 +60,7 @@ The `wids` claim in the token contains the Microsoft Entra role. It can be used 
    "b79fbf4d-3ef9-4689-8143-76b194e85509"
 ],
 "xms_st":{
-  "sub": "2PlgkuqwlA3tCtaPGljPacskUNgc1yWtGEyz"
+  "sub": "<sub>"
 }
 ```
 
