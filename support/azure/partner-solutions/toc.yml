@@ -1,5 +1,5 @@
 - name: Azure Native Integrations
-  itmes:
+  items:
   - name: Azure Native New Relic Service
     items:
     - name: Ingestion key rotation resolution
