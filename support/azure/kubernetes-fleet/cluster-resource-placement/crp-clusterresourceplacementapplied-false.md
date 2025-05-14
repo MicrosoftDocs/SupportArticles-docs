@@ -262,4 +262,4 @@ In this situation, a potential solution is to set the `AllowCoOwnership` to `tru
 
 Additionally, you can review the logs for the [Apply Work Controller](https://github.com/Azure/fleet/blob/main/pkg/controllers/work/apply_controller.go) for more insights into why the resources are unavailable.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
