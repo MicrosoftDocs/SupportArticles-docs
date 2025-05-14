@@ -9,7 +9,7 @@ ms.date: 05/13/2025
 
 # Troubleshoot Azure Kubernetes Fleet Manager DNS load balancing
 
-This article provides troubleshooting information for Azure Kubernetes Fleet Manager's DNS-based load balancing which uses Azure Traffic Manager to deliver load balancing for Kubernetes Services exposed as public endpoints across multiple member clusters.
+This article provides troubleshooting information for Azure Kubernetes Fleet Manager's DNS-based load balancing. Fleet Manager DNS load balancing uses Azure Traffic Manager to balance traffic across public endpoints from multiple AKS member clusters.
 
 ## Use Fleet Manager hub cluster to troubleshoot
 
@@ -43,7 +43,7 @@ kubectl get trafficmanagerprofile -n <namespace> <profile-name> -o yaml
 
 Possible causes:
 
-* A non-existent Azure resource group was specified in the `TrafficManagerProfile` manifest.
+* A nonexistent Azure resource group was specified in the `TrafficManagerProfile` manifest.
 * The resource group is not the same Azure Subscription as the Fleet Manager resource.
 * The Fleet Manager hub cluster identity does not have permission to create and manage Azure Traffic Manager profiles in the specified resource group.
 
@@ -158,7 +158,7 @@ kubectl get trafficmanagerbackend -n <namespace> <backend-name> -o yaml
 Possible causes:
 
 * The `TrafficManagerBackend` was created in a different namespace than the `TrafficManagerProfile`.
-* The `TrafficManagerProfile` was object exists, but the associated Azure Traffic Manager resource could not be found.
+* The `TrafficManagerProfile` was object exists, but the associated Azure Traffic Manager resource couldn't be found.
 
 The `TrafficManagerBackend` status provides details of the error.
   
@@ -190,7 +190,7 @@ status:
 **Possible Resolutions:**
 
 * Make sure to create the `TrafficManagerBackend` in the same namespace as the `TrafficManagerProfile`.
-* Ensure the Azure Traffic Manager resource exists. To recreate the resource, delete the `TrafficManagerProfile` from the Fleet Manager hub cluster and re-apply it.
+* Ensure the Azure Traffic Manager resource exists. To recreate the resource, delete the `TrafficManagerProfile` from the Fleet Manager hub cluster and reapply it.
 
 ### Invalid Service or ServiceExport
 
@@ -198,8 +198,8 @@ Possible causes:
 
 * The `Service` was created in a different namespace than the `TrafficManagerBackend`.
 * The `Service` exists, but the `ServiceExport` was not created in the same namespace as the `TrafficManagerBackend`.
-* The `Service` is not defined as a `LoadBalancer` type.
-* The `Service` is not exposed via an Azure public IP address or doesn't have a DNS name assigned.
+* The `Service` isn't defined as a `LoadBalancer` type.
+* The `Service` isn't exposed via an Azure public IP address or doesn't have a DNS name assigned.
 
 The `TrafficManagerBackend` status provides details of the error.
 
@@ -231,15 +231,15 @@ conditions:
 
 **Possible Resolutions:**
 
-* Ensure that the at least one `Service` of a member cluster is exported in the same namespace of the `TrafficManagerBackend` by creating `ServiceExport`.
+* Ensure at least one `Service` of a member cluster is exported in the same namespace of the `TrafficManagerBackend` by creating `ServiceExport`.
 * Ensure that the exported `Service` is load balancer type and exposed via an Azure public IP address, which must have a DNS name assigned to be used in a Traffic Manager profile.
 
 ## Invalid TrafficManagerProfile resource group or insufficient permissions
 
 Possible causes:
 
-* The `TrafficManagerProfile` was object exists, but the associated Azure Traffic Manager resource could not be found.
-* The Fleet Manager hub cluster identity does not have permission to create and manage Azure Traffic Manager profiles or endpoints in the specified resource group.
+* The `TrafficManagerProfile` was object exists, but the associated Azure Traffic Manager resource couldn't be found.
+* The Fleet Manager hub cluster identity doesn't have permission to create and manage Azure Traffic Manager profiles or endpoints in the specified resource group.
 
 The `TrafficManagerBackend` status provides details of the error.
 
@@ -256,7 +256,7 @@ conditions:
 
 **Possible Resolutions:**
 
-* Ensure the Azure Traffic Manager resource exists. To recreate the resource, delete the `TrafficManagerProfile` from the Fleet Manager hub cluster and re-apply it.
+* Ensure the Azure Traffic Manager resource exists. To recreate the resource, delete the `TrafficManagerProfile` from the Fleet Manager hub cluster and reapply it.
 * Check the Fleet Manager hub cluster identity has been granted the `Traffic Manager Contributor` role scoped to the resource group. For more information, see [Configure Fleet Manager permissions](/azure/kubernetes-fleet/howto-dns-load-balancing#configure-fleet-manager-permissions).
 
 ### Azure Traffic Manager endpoint limits reached
