@@ -68,6 +68,7 @@ Azure Relay requires to have all the relay gateways used by the primary and seco
 
 5. Make sure your network configuration allows web socket traffic and long-running connections: a common pattern is proxies or other network devices killing connections after a set time.
 6. Make sure firewall allows connections to Azure Relay gateways by following below steps:
+
 #### Step 1: identify the Azure relay namespaces
 
 Two Azure relay namespaces can be used for the connecting a machine to the Power Automate cloud services.
@@ -80,7 +81,7 @@ To identify the namespaces used by a machine:
 4. Click on "Generate the report"
 5. Open the generated xls file
 6. Local the Data column and copy the 2 URLs corresponding to PrimaryRelay and SecondaryRelay
-7. Extract the namespace part from each PrimaryRelay and SecondaryRelay URL https://<namespace>/guid_guid 
+7. Extract the namespace part from each PrimaryRelay and SecondaryRelay URL https://\<namespace>/guid_guid
 
 #### Step 2:  Configure the firewall with the DNS names required for both the primary and secondary  relays
 
@@ -99,8 +100,8 @@ The log should contain exceptions related to connectivity for a specific DNS or 
 The connection between the machine and the endpoint can be tested by running a TCP ping:
 
 1. Open PowerShell and run the below command
-2. Test-netconnection <ipaddress or dnsname> -port 443
-   
+2. Test-netconnection \<ipaddress or dnsname> -port 443
+
 The result will be displayed as the output of TcpTestSucceeded.
 
 If not succeeding, this is likely that the firewall does not allow the connection. Thus engage your network team to understand if any proxy or firewall could prevent access. There could be several firewalls and proxies between the machine and the Azure Relay services, thus make sure to check each of the subnet configurations.
