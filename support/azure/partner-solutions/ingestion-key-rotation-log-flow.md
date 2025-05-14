@@ -28,28 +28,28 @@ The issue occurs because Azure isn't notified of the ingestion key rotation. As 
 
 To work around the issue, manually update the ingestion key using the following API call:
 
-1. **Gather Resource Information**
-   - Find the **resource ID** of the Azure New Relic resource associated with the account where the ingestion key was rotated. If multiple resources are linked to the same account, you can make the API call for any one of them.
+1. Find the **resource ID** of the Azure New Relic resource associated with the account where the ingestion key was rotated. If multiple resources are linked to the same account, you can make the API call for any one of them.
 
-2. **Make the API Call to update the ingestion key**
-   - Use an API client (like **Postman** or **Bruno**) to make a **POST** request to the following endpoint:
+2. Make the API call to update the ingestion key. Use an API client (like **Postman** or **Bruno**) to make a **POST** request to the following endpoint:
 
      ```HTTP
      https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/NewRelic.Observability/monitors/{monitorName}/refreshIngestionKey
      ```
 
-     - **Query parameter**:
-       - `api-version`: `2024-10-01`
+     **Query parameter**: `api-version`: `2024-10-01`
 
-     - **Body**: Empty raw JSON
-     - **Authorization**: Use a **Bearer Token** for authentication. You can obtain the token using the **Network** tab of your browser's Developer tools:
-          1. In the browser, press F12 to open Developer tools. Select **Network**, and then select **Disable Cache**
-          1. Open azure portal and while keeping the **Network tab** open, perform any basic operations like opening a resource.
-          1. Filter the result by **Fetch/XHR**. You can find a bearer token present in the request headers of the corresponding API call. Use it while it remains active.
-    
+     **Body**: Empty raw JSON
+
+     **Authorization**: Use a **Bearer Token** for authentication.
+     
+     You can obtain the token using the **Network** tab of your browser's Developer tools:
+      
+      1. In the browser, press F12 to open Developer tools. Select **Network**, and then select **Disable Cache**.
+      1. Open azure portal and while keeping the **Network tab** open, perform any basic operations like opening a resource.
+      1. Filter the result by **Fetch/XHR**. You can find a bearer token present in the request headers of the corresponding API call. Use it while it remains active.
+      
          :::image type="content" source="media/ingestion-key-rotation-log-flow/get-token.png" alt-text="Screenshot of viewing access token." lightbox="media/ingestion-key-rotation-log-flow/get-token.png":::
-3. **Expected Outcome**
-   - The request should return a **204** status code, indicating that the ingestion key has been successfully updated.
+3. The request should return a **204** status code that indicates the ingestion key has been successfully updated.
    - Note that it may take up to **24 hours** for log flow to resume due to cache resetting on our side.
 
 ## Troubleshooting
