@@ -1,12 +1,12 @@
 ---
-title: Errors when enabling AKS AI toolchain operator add-on
+title: Troubleshoot AKS AI Toolchain Operator Add-on Errors
 description: Learn how to resolve errors that occur when you try to enable the Azure Kubernetes Service (AKS) AI toolchain operator add-on.
 ms.date: 05/09/2025
 ms.reviewer: sachidesai, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons, references_regions
 ---
-# Errors when enabling AKS AI toolchain operator add-on
+# Troubleshoot AKS AI toolchain operator add-on errors
 
 This article provides guidance on resolving errors that might occur when you enable the Microsoft Azure Kubernetes Service (AKS) AI Toolchain Operator (KAITO) add-on during a cluster creation or update.
 
