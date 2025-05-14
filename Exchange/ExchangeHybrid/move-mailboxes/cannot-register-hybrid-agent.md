@@ -163,9 +163,9 @@ If the Hybrid Agent application isn't successfully removed, follow these steps:
 
 2. If you don't know the application ID, run the following PowerShell cmdlet to get the application ID:
  
-  ```powershell
-  Get-MgBetaServicePrincipal | where {$_.Tags -Contains "WindowsAzureActiveDirectoryOnPremApp"}| FL AppId, DisplayName
-  ```
+   ```powershell
+   Get-MgBetaServicePrincipal | where {$_.Tags -Contains "WindowsAzureActiveDirectoryOnPremApp"}| FL AppId, DisplayName
+   ```
 
 3. Run the following PowerShell cmdlet to remove the hybrid application:
 
