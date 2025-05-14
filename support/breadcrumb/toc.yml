@@ -193,7 +193,7 @@ items:
       - name: Kubernetes Fleet Manager
         tocHref: /troubleshoot/azure/kubernetes-fleet/
         topicHref: /troubleshoot/azure/kubernetes-fleet/welcome-azure-kubernetes-fleet
-      - name: Azure Native integrations
+      - name: Azure Native Integrations
         tocHref: /troubleshoot/azure/partner-solutions/
         topicHref: /troubleshoot/azure/partner-solutions/welcome-native-integrations
 
