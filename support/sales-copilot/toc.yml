@@ -68,4 +68,7 @@
       href: teams-collaboration-spaces/create-team-error.md       
     - name: Opportunity summary not displayed in deal rooms
       href: teams-collaboration-spaces/opportunity-summary-not-displayed.md
+    - name: The profile name is already in use. Pick a different name or rename the existing profile in Salesforce error when enabling Salesforce server-to-server flow
+      href: crm-permissions-and-configurations/profile-name-already-in-use.md
+       
  
