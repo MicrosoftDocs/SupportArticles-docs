@@ -1,0 +1,19 @@
+- name: Troubleshoot Azure Native Integrations
+  href: welcome-azure-kubernetes-fleet.yml
+
+- name: Propagate resources issues
+  items:
+    - name: Troubleshooting guide for ClusterResourcePlacement 
+      href: troubleshoot-clusterresourceplacement-api-issues.md
+    - name: ClusterResourcePlacementScheduled is false
+      href: crp-clusterresourceplacementscheduled-false.md
+    - name: ClusterResourcePlacementRolloutStarted is false
+      href: crp-clusterresourceplacementrolloutstarted-false.md
+    - name: ClusterResourcePlacementOverridden is false
+      href: crp-clusterresourceplacementoverridden-false.md
+    - name: ClusterResourcePlacementWorkSynchronized is false 
+      href: crp-clusterresourceplacementworksynchronized-false.md
+    - name: ClusterResourcePlacementApplied is false 
+      href: crp-clusterresourceplacementapplied-false.md
+    - name: ClusterResourcePlacementAvailable is false 
+      href: crp-clusterresourceplacementavailable-false.md

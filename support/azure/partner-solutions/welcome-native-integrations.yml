@@ -1,0 +1,25 @@
+### YamlMime:Landing
+
+title: Azure Native Integrations troubleshooting documentation
+summary: Welcome to Azure Native Integration troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Native Integrations. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot Azure Native Integration issues
+  description: Documentation for troubleshooting common issues with Azure Native Integrations. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: partner-services
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/30/2025
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+# Card
+  - title:  Troubleshooting
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Ingestion key rotation rresolution
+            url: ingestion-key-rotation-log-flow.md
