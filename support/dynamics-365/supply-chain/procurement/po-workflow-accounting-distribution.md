@@ -25,6 +25,11 @@ Update the line item (e.g., change the unit price or receipt date), and resubmit
 
 Observe that the workflow approval fails with the above error.
 
+## Cause
+When Auto calculate totals and accounting distributions Feature is on, System automatically recalculates totals and accounting distributions when a purchase order is submitted to workflow. This recalculation happens in the background as part of workflow validation.
+If there are accounting distribution errors (e.g., missing financial dimensions or invalid combinations), the recalculation will fail. Instead of allowing the workflow to proceed, the system will generate a warning or error, preventing submission.
+
 ## Workaround
 
 Disable the Parameter Auto Calculate Totals and Accounting Distribution from Accounts Payable Parameters -> General -> Purchase Order Workflow
+By doing so, it will not allow you to submit to workflow if you have accounting Errors , it will drop a warning And it will be forced to Fixed the Distribution beforehand and then once submited to workflow it will pass always 
