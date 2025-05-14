@@ -19,7 +19,7 @@ This article helps you troubleshoot the error "The profile name is already in us
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce        |
-|**Users**     | All users   |
+|**Users**     | Administrator   |
 
 ## Symptoms
 

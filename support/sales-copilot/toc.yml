@@ -18,6 +18,8 @@
       href: crm-permissions-and-configurations/missing-privileges-sign-in.md
     - name: '"No access to Dynamics 365" error'
       href: crm-permissions-and-configurations/no-access-to-dynamics-365-error.md
+    - name: No changes were made error when enabling Salesforce server-to-server flow
+      href: crm-permissions-and-configurations/no-changes-were-made.md
     - name: '"Required fields are missing" error'
       href: crm-permissions-and-configurations/required-fields-missing.md
     - name: Salesforce CRM users can't see data in Copilot for Sales
