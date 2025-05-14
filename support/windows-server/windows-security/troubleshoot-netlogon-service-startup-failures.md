@@ -206,14 +206,14 @@ Validate that the service permissions within the registry are set to the appropr
 
 ## Symptom 6
 
-The Netlogon is started successfully, but the service status is reported as not started or as paused. For domain members, the status can be set by administrators by running `Net pause netlogon` and `Net continue netlogon`. In services.msc snap-in, the services is displayed as the following:
+The Netlogon is started successfully, but the service status is reported as not started or as paused. For domain members, the status can be set by administrators by running `Net pause netlogon` and `Net continue netlogon`. In services.msc snap-in, the services is displayed as the following screenshot:
 
 :::image type="content" source="media/troubleshoot-netlogon-service-startup-failures/screenshot-of-the-netlogon-services-status.png" alt-text="Screenshot of the Netlogon services status.":::
 
 You can also view the status in services.msc on DCs.
 
 > [!NOTE]
-> When the Netlogon service is paused, the DC does not respond to DC Locator requests (on LDAP port UDP/389). The computer is then not used for NTLM authentication or new Kerberos tickets.
+> When the Netlogon service is paused, the DC doesn't respond to DC Locator requests (on LDAP port UDP/389). The computer is then not used for NTLM authentication or new Kerberos tickets.
 
 ### Resolution
 
@@ -225,7 +225,7 @@ The Netlogon services on DCs might be paused because of configuration problems. 
 
 - > NlInit: DS is paused
 
-  The Directory serivce is paused.
+  The Directory service is paused.
 
 - > Waiting for RPCSS
 
@@ -235,7 +235,7 @@ The Netlogon services on DCs might be paused because of configuration problems. 
 
   The DFSR Initial replication not completed.
 
-The last condition can be caused if the DFSR replication engine does not signal that the initial replication of SYSVOL has worked and is good to be shared. Therefore, The Netlogon service is in the paused status until the replication is completed, and only shares SYSVOL and Netlogon after the replication is completed.
+The last condition can be caused if the DFSR replication engine doesn't signal that the initial replication of SYSVOL has worked and is good to be shared. Therefore, The Netlogon service is in the paused status until the replication is completed, and only shares SYSVOL and Netlogon after the replication is completed.
 
 To troubleshoot this issue, see [Troubleshoot missing SYSVOL and Netlogon shares for Distributed File System (DFS) Replication](../networking/troubleshoot-missing-sysvol-and-netlogon-shares.md)
 
