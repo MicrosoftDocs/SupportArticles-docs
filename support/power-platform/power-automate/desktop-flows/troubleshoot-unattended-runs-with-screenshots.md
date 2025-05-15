@@ -2,19 +2,19 @@
 title: Troubleshoot Failed Unattended Runs Using Screenshots
 description: Provides troubleshooting steps to identify and resolve issues causing unattended runs to fail in Microsoft Power Automate.
 ms.reviewer: alarnaud
-ms.date: 05/14/2025
+ms.date: 05/15/2025
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Troubleshoot failed unattended runs using screenshots
 
-This article provides guidance on troubleshooting failed unattended runs of scripts, particularly focusing on capturing screenshots to diagnose issues.
+This article provides guidance on troubleshooting failed unattended desktop flow runs, particularly focusing on capturing screenshots to diagnose issues.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5007976  
 
 ## Symptoms
 
-A script that runs successfully in attended mode fails to execute properly in unattended mode. It might also fail with an error message like the following:
+A desktop flow that runs successfully in attended mode fails to execute properly in unattended mode. It might also fail with an error message like the following:
 
 > There was a problem running the action 'Click'. The link could not be clicked on the web page.
 
@@ -22,7 +22,7 @@ A script that runs successfully in attended mode fails to execute properly in un
 
 Unattended run failures might occur due to the following reasons:
 
-- The script might be thoroughly tested in attended mode before being deployed in unattended mode.
+- The script might not have been thoroughly tested in attended mode before being deployed in unattended mode.
 - The unattended session might use a different configuration compared to the attended session, such as a different Windows account, screen resolution, or browser settings (for example, user profile, popup blocker settings, missing extensions, or disabled extensions.)
 - Screens might not completely load due to insufficient delays or timing issues in the script.
 - A User Account Control (UAC) prompt might block UI automation when the session begins.
@@ -75,7 +75,7 @@ You can capture screenshots immediately before and after a failing step in unatt
 
 ### Check screen resolution and scale differences
 
-Many UI automation issues arise due to screen resolution differences between the machines running the attended and unattended sessions. Compare the resolution settings between attended and unattended run executions to ensure they match in both modes.  
+Many UI automation issues arise due to screen resolution differences between the machines running the attended and unattended sessions. Compare the resolution settings between attended and unattended run executions to ensure they match in both modes. For more information on setting screen resolution in unattended mode, see [Set screen resolution on unattended mode](/power-automate/desktop-flows/how-to/set-screen-resolution-unattended-mode).
 
 In some cases (for example, when using a virtual machine (VM) or Hyper-V), the display resolution settings might be unavailable or grayed out. As a workaround in such situations, you can add the following actions in your script before running in both modes.
 
@@ -110,10 +110,10 @@ In some cases (for example, when using a virtual machine (VM) or Hyper-V), the d
     File.WriteText File: $'''c:\\test\\resolution_%FormattedDateTime%.txt''' TextToWrite: $'''height: %MonitorHeight% width: %MonitorWidth% frequency: %MonitorFrequency% bitCount: %MonitorBitCount% scale: %MonitorScaleOutput%''' AppendNewLine: True IfFileExists: File.IfFileExists.Overwrite Encoding: File.FileEncoding.Unicode
     ```
 
-   The following screenshot illustrates the steps to capture resolution settings and output them in a timestamped file.
+   The script will create the following actions to capture resolution settings and output them in a timestamped file.
 
    :::image type="content" source="media/troubleshoot-unattended-runs-with-screenshots/script-action.png" alt-text="Screenshot of the created steps.":::
 
 1. Review the output file path from the last action, check that local execution is successful, and select **Save**.
 
-1. Run the script in both attended and unattended modes, and then compare the resolution and scale output to ensure they match in both modes.
+1. Run the script in both attended and unattended modes, then compare the resolution and scale output of both modes, and update, if necessary, to ensure they match in both modes.
