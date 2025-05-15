@@ -1,479 +1,479 @@
 {
   "redirections": [
     {
-      "source_path": "Office/Client/access/access-cache-formats.md",
+      "source_path": "Client/access/access-cache-formats.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/access-crashes-update-ms16-004.md",
+      "source_path": "Client/access/access-crashes-update-ms16-004.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/access-engine-memory-leak.md",
+      "source_path": "Client/access/access-engine-memory-leak.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/access-wizard-fails-loading-dll.md",
+      "source_path": "Client/access/access-wizard-fails-loading-dll.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/activex-component-cannot-create-object.md",
+      "source_path": "Client/access/activex-component-cannot-create-object.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/adding-new-record-fails.md",
+      "source_path": "Client/access/adding-new-record-fails.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/adox-create-sql-pass-through-query.md",
+      "source_path": "Client/access/adox-create-sql-pass-through-query.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/change-the-connection-of-project.md",
+      "source_path": "Client/access/change-the-connection-of-project.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/convert-data-values-of-text-data-type.md",
+      "source_path": "Client/access/convert-data-values-of-text-data-type.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/create-a-running-totals-query.md",
+      "source_path": "Client/access/create-a-running-totals-query.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/create-dsn-less-connection-linkted-table.md",
+      "source_path": "Client/access/create-dsn-less-connection-linkted-table.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/database-unexpected-state.md",
+      "source_path": "Client/access/database-unexpected-state.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/determine-shared-resources-use.md",
+      "source_path": "Client/access/determine-shared-resources-use.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/determine-who-is-logged-on-to-database.md",
+      "source_path": "Client/access/determine-who-is-logged-on-to-database.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/diagnostic-data-collected.md",
+      "source_path": "Client/access/diagnostic-data-collected.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/disable-database-startup-options.md",
+      "source_path": "Client/access/disable-database-startup-options.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/display-images-using-custom-function.md",
+      "source_path": "Client/access/display-images-using-custom-function.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/enter-parameter-value-when-run-query.md",
+      "source_path": "Client/access/enter-parameter-value-when-run-query.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/error-changing-data.md",
+      "source_path": "Client/access/error-changing-data.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/error-run-compiled-mde-accde-ade.md",
+      "source_path": "Client/access/error-run-compiled-mde-accde-ade.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/error-running-query.md",
+      "source_path": "Client/access/error-running-query.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/error-saving-edited-record.md",
+      "source_path": "Client/access/error-saving-edited-record.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/error-using-built-in-wizards.md",
+      "source_path": "Client/access/error-using-built-in-wizards.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/extra-access-report-page-prints.md",
+      "source_path": "Client/access/extra-access-report-page-prints.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/fails-connecting-foxpro-databases.md",
+      "source_path": "Client/access/fails-connecting-foxpro-databases.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/fails-group-fields.md",
+      "source_path": "Client/access/fails-group-fields.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/find-record-by-ado-and-jet-ole-db-provider.md",
+      "source_path": "Client/access/find-record-by-ado-and-jet-ole-db-provider.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/force-new-line-msgbox-message.md",
+      "source_path": "Client/access/force-new-line-msgbox-message.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/import-attribute-centric-xml.md",
+      "source_path": "Client/access/import-attribute-centric-xml.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/import-export-access-to-excel.md",
+      "source_path": "Client/access/import-export-access-to-excel.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/jet-compact-utility-download.md",
+      "source_path": "Client/access/jet-compact-utility-download.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/manually-split-database.md",
+      "source_path": "Client/access/manually-split-database.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/move-to-specific-record-from-combo-box-selection.md",
+      "source_path": "Client/access/move-to-specific-record-from-combo-box-selection.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/open-access-wizard.md",
+      "source_path": "Client/access/open-access-wizard.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/prevent-database-bloat-dao.md",
+      "source_path": "Client/access/prevent-database-bloat-dao.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/programmatically-create-new-column.md",
+      "source_path": "Client/access/programmatically-create-new-column.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/prompted-username-password.md",
+      "source_path": "Client/access/prompted-username-password.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/query-evaluate-complex-criteria.md",
+      "source_path": "Client/access/query-evaluate-complex-criteria.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/reset-autonumber-value.md",
+      "source_path": "Client/access/reset-autonumber-value.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/reset-page-number-on-a-group-level.md",
+      "source_path": "Client/access/reset-page-number-on-a-group-level.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/resolve-vb-application-references.md",
+      "source_path": "Client/access/resolve-vb-application-references.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/retrieve-items-in-multiple-selection-list-box.md",
+      "source_path": "Client/access/retrieve-items-in-multiple-selection-list-box.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/run-time-error-3709.md",
+      "source_path": "Client/access/run-time-error-3709.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/save-changes-prompt.md",
+      "source_path": "Client/access/save-changes-prompt.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/scroll-records-with-mouse-wheel.md",
+      "source_path": "Client/access/scroll-records-with-mouse-wheel.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/setoption-disable-warning-messages.md",
+      "source_path": "Client/access/setoption-disable-warning-messages.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/shut-down-custom-application-remotely.md",
+      "source_path": "Client/access/shut-down-custom-application-remotely.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/sqlconfigdatasource-access-system-dsn.md",
+      "source_path": "Client/access/sqlconfigdatasource-access-system-dsn.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/sql-server-native-client-drivers.md",
+      "source_path": "Client/access/sql-server-native-client-drivers.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/sync-combo-boxes.md",
+      "source_path": "Client/access/sync-combo-boxes.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/table-analyzer-wizard.md",
+      "source_path": "Client/access/table-analyzer-wizard.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/tabledef-attributes-usage.md",
+      "source_path": "Client/access/tabledef-attributes-usage.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/text-box-multicolumn-combox-selections.md",
+      "source_path": "Client/access/text-box-multicolumn-combox-selections.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/troubleshoot-database-corruption.md",
+      "source_path": "Client/access/troubleshoot-database-corruption.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/update-delete-query-unsuccessful.md",
+      "source_path": "Client/access/update-delete-query-unsuccessful.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/update-impairs-access-database.md",
+      "source_path": "Client/access/update-impairs-access-database.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/use-common-dialog-api.md",
+      "source_path": "Client/access/use-common-dialog-api.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/access/use-workgroup-administrator-utility.md",
+      "source_path": "Client/access/use-workgroup-administrator-utility.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/1900-and-1904-date-system.md",
+      "source_path": "Client/excel/1900-and-1904-date-system.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/algorithm-of-xirr-funcation.md",
+      "source_path": "Client/excel/algorithm-of-xirr-funcation.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/apply-cell-shading-format-by-macro.md",
+      "source_path": "Client/excel/apply-cell-shading-format-by-macro.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/apply-password-to-separate-range.md",
+      "source_path": "Client/excel/apply-password-to-separate-range.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/autocomplete-not-work.md",
+      "source_path": "Client/excel/autocomplete-not-work.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/calculate-age-before-1-1-1900.md",
+      "source_path": "Client/excel/calculate-age-before-1-1-1900.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/calculate-interpolation-step-value.md",
+      "source_path": "Client/excel/calculate-interpolation-step-value.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/cannot-open-irm-protected-workbook.md",
+      "source_path": "Client/excel/cannot-open-irm-protected-workbook.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/center-across-columns-button-disappear.md",
+      "source_path": "Client/excel/center-across-columns-button-disappear.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/conditional-formatting-set-incorrectly.md",
+      "source_path": "Client/excel/conditional-formatting-set-incorrectly.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/convert-degrees-minutes-seconds-angles.md",
+      "source_path": "Client/excel/convert-degrees-minutes-seconds-angles.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/convert-excel-column-numbers.md",
+      "source_path": "Client/excel/convert-excel-column-numbers.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/copy-range-names.md",
+      "source_path": "Client/excel/copy-range-names.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/create-application-level-event-handler.md",
+      "source_path": "Client/excel/create-application-level-event-handler.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/create-monthly-calendar.md",
+      "source_path": "Client/excel/create-monthly-calendar.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/create-two-input-data-tables.md",
+      "source_path": "Client/excel/create-two-input-data-tables.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/delete-every-other-row.md",
+      "source_path": "Client/excel/delete-every-other-row.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/determine-column-widths.md",
+      "source_path": "Client/excel/determine-column-widths.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/different-print-quality.md",
+      "source_path": "Client/excel/different-print-quality.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/embedded-macros-not-run.md",
+      "source_path": "Client/excel/embedded-macros-not-run.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/excel-workbook-shows-old-property-values.md",
+      "source_path": "Client/excel/excel-workbook-shows-old-property-values.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/fails-printing-a-workbook.md",
+      "source_path": "Client/excel/fails-printing-a-workbook.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/file-repair-registry-key.md",
+      "source_path": "Client/excel/file-repair-registry-key.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/formulas-to-count-occurrences-in-excel.md",
+      "source_path": "Client/excel/formulas-to-count-occurrences-in-excel.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/get-latest-excel-viewer.md",
+      "source_path": "Client/excel/get-latest-excel-viewer.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/hyperlink-to-mht-file-fails-to-load.md",
+      "source_path": "Client/excel/hyperlink-to-mht-file-fails-to-load.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/incorrect-date-format-converted-csv-file.md",
+      "source_path": "Client/excel/incorrect-date-format-converted-csv-file.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/isblank-function-return-false.md",
+      "source_path": "Client/excel/isblank-function-return-false.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/macro-retrieves-chart-data.md",
+      "source_path": "Client/excel/macro-retrieves-chart-data.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/macros-run-slowly.md",
+      "source_path": "Client/excel/macros-run-slowly.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/make-paste-options-button-disappear.md",
+      "source_path": "Client/excel/make-paste-options-button-disappear.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/print-embedded-charts.md",
+      "source_path": "Client/excel/print-embedded-charts.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/removing-error-tracing-arrow-fails.md",
+      "source_path": "Client/excel/removing-error-tracing-arrow-fails.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/representing-ties-using-rank.md",
+      "source_path": "Client/excel/representing-ties-using-rank.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/run-macro-cells-change.md",
+      "source_path": "Client/excel/run-macro-cells-change.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/run-time-error-1004.md",
+      "source_path": "Client/excel/run-time-error-1004.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/run-time-error-2147467259-80004005.md",
+      "source_path": "Client/excel/run-time-error-2147467259-80004005.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/sap-add-ins-not-display-control.md",
+      "source_path": "Client/excel/sap-add-ins-not-display-control.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/save-file-to-network-drive.md",
+      "source_path": "Client/excel/save-file-to-network-drive.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/set-page-setup-attributes.md",
+      "source_path": "Client/excel/set-page-setup-attributes.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/set-up-realtimedata-function.md",
+      "source_path": "Client/excel/set-up-realtimedata-function.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/specialcells(xlcelltypeblanks)-vba-function.md",
+      "source_path": "Client/excel/specialcells(xlcelltypeblanks)-vba-function.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/statistical-functions-chiinv.md",
+      "source_path": "Client/excel/statistical-functions-chiinv.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/use-for-each-next-loop-to-delete-cell.md",
+      "source_path": "Client/excel/use-for-each-next-loop-to-delete-cell.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/use-left-right-mid-len-function.md",
+      "source_path": "Client/excel/use-left-right-mid-len-function.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/use-onentry-to-create-running-total.md",
+      "source_path": "Client/excel/use-onentry-to-create-running-total.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/use-shared-workbook.md",
+      "source_path": "Client/excel/use-shared-workbook.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/worksheet-function-in-vb-macro.md",
+      "source_path": "Client/excel/worksheet-function-in-vb-macro.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/excel/wrap-text-not-adjust-row-height.md",
+      "source_path": "Client/excel/wrap-text-not-adjust-row-height.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/infopath/generated-pdb-file-name-does-not-match-infopath-name.md",
+      "source_path": "Client/infopath/generated-pdb-file-name-does-not-match-infopath-name.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/office-suite-issues/run-time-error-13-type-mismatch.md",
+      "source_path": "Client/office-suite-issues/run-time-error-13-type-mismatch.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/project/calculate-work-duration-assignment.md",
+      "source_path": "Client/project/calculate-work-duration-assignment.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/project/cannot-enter-user-logon-account.md",
+      "source_path": "Client/project/cannot-enter-user-logon-account.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/project/error-when-open-visual-report-in-project.md",
+      "source_path": "Client/project/error-when-open-visual-report-in-project.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/project/eventing-service-error-when-changing-user-status-to-inactive-microsoft-project.md",
+      "source_path": "Client/project/eventing-service-error-when-changing-user-status-to-inactive-microsoft-project.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/project/expect-when-calling-into-paid-support.md",
+      "source_path": "Client/project/expect-when-calling-into-paid-support.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/project/file-size-increase-when-insert-picture.md",
+      "source_path": "Client/project/file-size-increase-when-insert-picture.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/project/iexplorer.exe-encountered-problem.md",
+      "source_path": "Client/project/iexplorer.exe-encountered-problem.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/project/sync-jobs-take-long-time-to-complete.md",
+      "source_path": "Client/project/sync-jobs-take-long-time-to-complete.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/project/upgrade-project-global-template.md",
+      "source_path": "Client/project/upgrade-project-global-template.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Office/Client/publisher/text-boxes-coverted-to-bitmap.md",
+      "source_path": "Client/publisher/text-boxes-coverted-to-bitmap.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     }
   ]
