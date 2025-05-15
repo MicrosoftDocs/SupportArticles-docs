@@ -2960,6 +2960,8 @@ items:
       href: user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Troubleshoot domain controller location issues
       href: windows-security/troubleshoot-domain-controller-location-issues.md
+    - name: Troubleshoot Netlogon service startup failures
+      href: windows-security/troubleshoot-netlogon-service-startup-failures.md
     - name: 'Troubleshooting guidance: Secure channel'
       href: ./windows-security/broken-trust-relationship-domain-joined-device-its-domain-secure-channel-issues.md
     - name: Gather information for secure channel issues
@@ -3154,7 +3156,7 @@ items:
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
     - name: Scripts to view the certificate information in the msDS-KeyCredentialLink attribute
       href: ./support-tools/script-to-view-msds-keycredentiallink-attribute-value.md
-    - name: 'Scripts to check and clean up the AGPM archive'
+    - name: Scripts to check and clean up the AGPM archive
       href: support-tools/scripts-check-and-cleanup-the-agpm-archive.md
   - name: TroubleShootingScript toolset (TSS)
     items:
