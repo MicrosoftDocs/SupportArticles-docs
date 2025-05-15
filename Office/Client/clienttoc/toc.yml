@@ -663,8 +663,6 @@
           href: ../project/sync-with-tasks-from-project.md
         - name: Tasks are not scheduled
           href: ../project/tasks-not-scheduled.md
-    - name: Publisher
-      items:
     - name: Settings
       items:
         - name: Display issues in Office applications
