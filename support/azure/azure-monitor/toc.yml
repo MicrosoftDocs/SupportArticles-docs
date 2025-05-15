@@ -69,14 +69,14 @@ items:
         href: app-insights/availability/troubleshoot-portal-connectivity.md
       - name: Troubleshoot user behavior analytics tools in Azure Application Insights
         href: app-insights/availability/usage-troubleshoot.md
+    - name: Troubleshoot Application map issues
+      href: app-insights/troubleshoot-application-map-issues.md
   - name: Status Monitor and Change Analysis
     items:
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
       href: app-insights/agent/status-monitor-v2-troubleshoot.md
     - name: Troubleshoot Azure Monitor's Change Analysis
       href: app-insights/agent/change-analysis-troubleshoot.md
-  - name: Troubleshoot Application map issues
-    href: app-insights/troubleshoot-application-map-issues.md
 - name: Log Analytics
   items:
   - name: Log Analytics workspaces
