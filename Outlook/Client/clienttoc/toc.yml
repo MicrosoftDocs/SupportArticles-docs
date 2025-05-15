@@ -244,7 +244,7 @@
         - name: Shareable links functionality
           href: /microsoft-365-apps/outlook/email-management/shareable-links-functionality-in-outlook.md
         - name: Some rules are disabled and can't be re-enabled
-          href: ../outlook/email-management/rules-not-be-uploaded-to-exchange-server.md
+          href: ../email-management/rules-not-be-uploaded-to-exchange-server.md
         - name: Unintentional email messages received
           href: ../email-management/unintentional-emails-received.md
     - name: Installation
