@@ -33,4 +33,8 @@ For Microsoft Teams meetings that are managed by using a shared mailbox, only a 
 |Set up audio conferencing|To set up audio conferencing, the shared mailbox must be assigned a [license for Teams Audio Conferencing](/microsoftteams/deploy-audio-conferencing-teams-landing-page#audio-conferencing-prerequisites).<br/><br/>**Note:** Meetings created for a mailbox that doesn't have an Audio Conferencing license will lack the Public Switched Telephone Network (PSTN) details in the meeting invitation.|
 |Create custom meeting policies|To create custom meeting policies, the shared mailbox must be assigned a Teams license.|
 
+**Limitations:**
+
+Users who are not added to the meeting when it is scheduled, will only have temporary access to the meeting chat. If you add another user to the meeting after having scheduled it, this user will only have access to the meeting chat during the meeting.
+
 For more information about Teams license options, see [Microsoft Teams add-on licenses](/microsoftteams/teams-add-on-licensing/microsoft-teams-add-on-licensing).
