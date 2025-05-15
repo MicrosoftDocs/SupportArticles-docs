@@ -25,11 +25,7 @@ This article describes Cumulative Update package 18 (CU18) for Microsoft SQL Ser
 
 ### Access violation when session is reset
 
-The following issue also applies to SQL Server 2022:
- 
-[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
-
-Microsoft is working on a fix for this issue and it will be available in a future CU.
+[!INCLUDE [av-sesssion-context-2022](../includes/av-sesssion-context-2022.md)]
 
 ## Improvements and fixes included in this update
 
