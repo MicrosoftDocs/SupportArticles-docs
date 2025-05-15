@@ -52,7 +52,22 @@ If your scenario is unique, you can use the Feedback option to describe your exp
 
 ## Scenario 3: Intelligent view highlights an edge
 
-When **intelligent view** highlights an edge, the actionable insights from the machine learning model should identify the significant issues that contribute to the high probability score. Keep in mind that the recommendation isn't based solely on failures, but on other indicators like unexpected latency in dominant flows.
+When **intelligent view** highlights an edge, it indicates a performance hotspot or failure hotspot in the dependency between two components. In this scenario, perform the following actions:
+
+1. Select the highlighted edge > **View details** to open detailed telemetry data in the side pane.
+2. Review failure rates or high latency in the dependency calls.
+
+    - If failures are high:
+
+        1. Select **Investigate Failures** in the side pane to inspect exception types and failure rates.
+        2. Check the corresponding dependency logs or failure traces to isolate the root cause.
+
+    - If latency is high:
+
+        1. Select **Investigate performance** to examine dependency response times.
+        2. Identify slow endpoints or services, and then review their recent deployment or configuration changes.
+
+For long-term analysis, consider setting up dependency health alerts using [Application Insights alerts](/azure/azure-monitor/alerts/alerts-overview).
 
 ## Scenario 4: Intelligent view doesn't load
 
