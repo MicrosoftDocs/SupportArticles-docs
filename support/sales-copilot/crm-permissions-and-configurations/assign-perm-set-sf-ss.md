@@ -1,6 +1,7 @@
 ---
 title: Couldn't assign permission set when enabling Salesforce server-to-server flow
 description: Resolves an error that occurs due to an inactive integration user in Salesforce.
+ms.date: 05/15/2024
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
