@@ -2,7 +2,7 @@
 title: Direct connectivity issues in Power Automate for desktop
 description: Provides more information about how to solve the direct connectivity issues in Power Automate for desktop.
 ms.reviewer: guco, madiazor, johndund, qliu
-ms.date: 01/22/2025
+ms.date: 05/15/2025
 ms.custom: sap:Desktop flows
 ---
 # Direct connectivity issues in Power Automate for desktop
@@ -18,26 +18,25 @@ When attempting to run your desktop flows from a cloud flow or manage your deskt
 
 #### Scenario 1
 
-- Your previously registered machines appear offline when they're booted up and connected to the network.
-- Runs fail with either of these error messages:
+- Your previously registered machines appear offline when they're started up and connected to the network.
+- Runs fail with one of the following error messages:
 
-  > ConnectionNotEstablished - None of the connected listeners accepted the connections within the allowed timeout. Check that your machine is online.
-
-  > NoListenerConnected - The endpoint was not found. There are no listeners connected for the endpoint. Check that your machine is online.
+  - > ConnectionNotEstablished - None of the connected listeners accepted the connections within the allowed timeout. Check that your machine is online.
+  - > NoListenerConnected - The endpoint was not found. There are no listeners connected for the endpoint. Check that your machine is online.
 
 #### Scenario 2
 
 - Desktop flows run on a registered machine as long as a user session is running (attended runs) or even for some minutes after the last user signs out (unattended runs).
-- The connection to the machine is lost after some minutes (for example, 15 minutes).
+- The connection to the machine is lost after some minutes (for example, 15 minutes.)
 - The connection is re-established once a user signs back in to the machine.
 
 #### Scenario 3
 
-When you sign out of your Windows computer, the machine status in the Power Automate portal shows as disconnected.
+When you sign out of your Windows computer, the machine status shows as disconnected in the Power Automate portal.
 
 ## Cause
 
-Direct to machine connectivity uses [Azure WCF relays](/azure/azure-relay/relay-what-is-it#wcf-relay) to allow the Microsoft cloud to connect to on-premises machines and schedule desktop flow runs. The Power Automate Windows service that runs on-premises opens a relay listener that connects to the Azure cloud by opening web sockets.
+Direct to machine connectivity uses [Azure Windows Communication Foundation (WCF) relays](/azure/azure-relay/relay-what-is-it#wcf-relay) to allow the Microsoft cloud to connect to on-premises machines and schedule desktop flow runs. The Power Automate Windows service that runs on-premises opens a relay listener that connects to the Azure cloud by opening web sockets.
 
 The most common cause of relay connectivity issues is the machine losing connection to the network. This can be caused by your machine not being powered on or losing network when no user is signed in to the machine.
 
@@ -48,105 +47,110 @@ The Power Automate service runs under its own Windows account (NT Service\UIFlow
 
 If the machine and Power Automate service have reliable access to the network, the next likeliest source of issues is the on-premises network blocking or interfering with Azure relay connections.
 
-A common culprit in both scenarios is a network proxy or a firewall that restricts outbound traffic. 
+A common culprit in both scenarios is a network proxy or a firewall that restricts outbound traffic.
 
 In particular, authenticated proxies that use the credentials of the connected Windows user, given that the Power Automate service runs under its own dedicated account.
 
-You can refer to [Proxy setup](https://support.microsoft.com/topic/power-automate-for-desktop-proxy-setup-8a79d690-1c02-416f-8af1-f057df5fe9b7) if you determine that you need to override the default proxy settings used by the Power Automate service. You may also need to [change the on-premises service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
+You can refer to [Proxy setup](/power-automate/desktop-flows/how-to/proxy-settings) if you determine that you need to override the default proxy settings used by the Power Automate service. You may also need to [change the on-premises service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
 
 Azure Relay requires to have all the relay gateways used by the primary and secondary namespaces allowed by the proxy and firewall configurations.
 
 ## How to investigate
 
-1. To help you investigate these issues, make sure to engage your network administrators who will have the knowledge required to understand what is happening.
+1. Engage your network administrators.
 
-2. Understand the topology of the network: what network devices does the traffic hop through before being handed off to the public internet: NAT, firewalls, proxies and so on. Get logs from these devices during impacted runs, and logs from the outermost network device attesting that the traffic to _*.servicebus.windows.net_ is handed off to the public internet.
+   Involve your network administrators to analyze network configurations and logs.
 
-3. If your network traffic runs though a proxy, attempt to mitigate the issue by [changing the on-premises account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account) with which the Power Automate service (UIFlowService) runs.
+2. Understand network topology.
 
-4. Get WCF logs from the Power Automate service (UIFlowService). For more information, see the [Enable WCF tracing](#enable-wcf-tracing) section below.
+   - Trace the path of traffic through network devices (for example, NAT, firewalls, proxies) to the public internet.
+   - Collect logs from devices during impacted runs and confirm traffic to _*.servicebus.windows.net_ successfully reaches the public internet.
 
-5. Make sure your network configuration allows web socket traffic and long-running connections: a common pattern is proxies or other network devices killing connections after a set time.
-6. Make sure firewall allows connections to Azure Relay gateways by following below steps:
+3. If your network traffic runs though a proxy, consider [changing the on-premises account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account) used by the Power Automate service (UIFlowService).
 
-#### Step 1: identify the Azure relay namespaces
+4. Get WCF logs from the Power Automate service (UIFlowService). For more information, see [Enable WCF tracing](#enable-wcf-tracing).
 
-Two Azure relay namespaces can be used for the connecting a machine to the Power Automate cloud services.
+5. Make sure your network configuration allows web socket traffic and long-running connections. Connections terminated after a set time may cause issues.
 
-To identify the namespaces used by a machine:
+6. Make sure firewall allows connections to Azure Relay gateways:
 
-1. Launch the "Power Automate machine runtime" application and sign-in
-2. Locate the "Diagnose connectivity issues for runtime" section and click on "Launch diagnostic tool"
-3. Wait for the diagnostics to end
-4. Click on "Generate the report"
-5. Open the generated xls file
-6. Local the Data column and copy the 2 URLs corresponding to PrimaryRelay and SecondaryRelay
-7. Extract the namespace part from each PrimaryRelay and SecondaryRelay URL https://\<namespace>/guid_guid
+   **Step 1: identify the Azure relay namespaces**
 
-#### Step 2:  Configure the firewall with the DNS names required for both the primary and secondary  relays
+   Two Azure relay namespaces can be used for connecting a machine to the Power Automate cloud services. To identify the namespaces used by a machine:
 
-Configure your firewalls with the DNS names of all the Relay gateways, which can be found by running [this script](https://github.com/Azure/azure-relay-dotnet/blob/dev/tools/GetNamespaceInfo.ps1) .
+    1. Launch the Power Automate machine runtime application and sign in.
+    2. Locate the **Diagnose connectivity issues for cloud runtime** section and select **Launch diagnostic tool**.
+    3. Wait for the diagnostics to complete.
+    4. Select **Generate the report**.
+    5. Open the generated XLS file and locate the **Data** column.
+    6. Extract the namespace part from the URLs of **PrimaryRelay** and **SecondaryRelay** (for example, https://\<namespace>/guid_guid.)
 
-This script will resolve the fully qualified domain names of all the gateways to which you need to establish a connection.
+    **Step 2: Configure the firewall with the DNS names required for both the primary and secondary relays**
 
-Change any rules that previously used the IP addresses to use the namespace DNS names for port 443.
+    1. Configure your firewalls with the Domain Name System (DNS) names of all the Relay gateways.
 
-#### Step 3: manual connectivity test can be done
+       The DNS names can be found by running the [script](https://github.com/Azure/azure-relay-dotnet/blob/dev/tools/GetNamespaceInfo.ps1). This script will resolve the fully qualified domain names (FQDNs) of all the gateways to which you need to establish a connection.
 
-WCF tracing can be enabled on the machine in case of cloud connectivity issue. Direct connectivity issues in Power Automate for desktop - Power Automate | Microsoft Learn 
+    2. Configure firewall rules to allow the DNS names on port 443 instead of IP addresses.
 
-The log should contain exceptions related to connectivity for a specific DNS or IP address or point to missing proxy configuration.
+    **Step 3: Perform manual connectivity tests**
 
-The connection between the machine and the endpoint can be tested by running a TCP ping:
+    WCF tracing can be enabled on the machine if there's cloud connectivity issue. For more information, see [Enable WCF tracing](#enable-wcf-tracing).
 
-1. Open PowerShell and run the below command
-2. Test-netconnection \<ipaddress or dnsname> -port 443
+    The WCF log should contain exceptions related to connectivity for a specific DNS or IP address or point to missing proxy configuration.
 
-The result will be displayed as the output of TcpTestSucceeded.
+    To test the connection between the machine and the endpoint, run a TCP ping from PowerShell using the following command:
 
-If not succeeding, this is likely that the firewall does not allow the connection. Thus engage your network team to understand if any proxy or firewall could prevent access. There could be several firewalls and proxies between the machine and the Azure Relay services, thus make sure to check each of the subnet configurations.
+    ```powershell
+    Test-netconnection \<ipaddress or dnsname> -port 443
+    ```
+
+    If the `TcpTestSucceeded` shows `False`, it's likely that the firewall doesn't allow the connection. Engage your network team to understand if any proxy or firewall could prevent access. There could be several firewalls and proxies between the machine and the Azure Relay services, so make sure to check each subnet configuration.
 
 ## What information to include when opening a support ticket
 
-- Your network topology: what are the devices that traffic goes through. (see the step 2 in the section above)
+If the issue still persists, you can open a support ticket with Microsoft by providing the following details:
+
+- Your network topology: what are the devices that traffic goes through. For more information, see the step 2 in the [How to investigate](#how-to-investigate).
 - Whether the Power Automate service (UIFlowService) on your machine is running as the default account (NT Service\UIFlowService) or if it has been changed to run as a different account.
 - Logs from your network devices showing that the traffic is indeed handed off to the public internet. Include times of the issues and the time zones used by the logs.
-- WCF traces from the impacted machines. (see the [Enable WCF tracing](#enable-wcf-tracing) section below)
+- WCF traces from the impacted machines. For more information, see [Enable WCF tracing](#enable-wcf-tracing).
 - Desktop flow run IDs of impacted runs.
 - Local logs from the impacted machine: they can be extracted using the Power Automate machine runtime app's troubleshooting pane.
 
 ## Enable WCF tracing
 
-In the installation folder (typically _C:\Program Files (x86)\Power Automate Desktop_), edit the _UIFlowService.exe.config_ file. This requires running your text editor as administrator.
+1. In the installation folder (typically _C:\Program Files (x86)\Power Automate Desktop_), edit the _UIFlowService.exe.config_ file. This requires running your text editor as administrator.
 
-Add this config section:
+2. Add the following configuration section between \</system.net> and \<appSettings>:
 
-```xml
-<system.diagnostics>
-  <sources>
-    <source name="System.ServiceModel" 
-            switchValue="Information,ActivityTracing"
-            propagateActivity="true">
-      <listeners>
-        <add name="wcfTraces"
-             type="System.Diagnostics.XmlWriterTraceListener"
-             initializeData="c:\logs\PADwcfTraces.svclog" />
-      </listeners>
-    </source>
-  </sources>
- <trace autoflush="true" />
-</system.diagnostics>
-```
+    :::image type="content" source="media/direct-connectivity-troubleshooting/added-config-section.png" alt-text="Screenshot of the config section that should be inserted into the correct location.":::
 
-- You can substitute the `c:\logs\PADwcfTraces.svclog` value with any valid path you'd like but the folder (`c:\logs` in this example) must exist, otherwise it won't be created and logs won't be written.
-- The Power Automate service must have permission to write in the chosen folder, granting the 'Everyone' user full control over the folder works. You can get the service user's Sid by running `sc showsid UIFlowService` in a command line if you want to give permissions to only that user.
+    ```xml
+    <system.diagnostics>
+      <sources>
+        <source name="System.ServiceModel" 
+                switchValue="Information,ActivityTracing"
+                propagateActivity="true">
+          <listeners>
+            <add name="wcfTraces"
+                 type="System.Diagnostics.XmlWriterTraceListener"
+                 initializeData="c:\logs\PADwcfTraces.svclog" />
+          </listeners>
+        </source>
+      </sources>
+     <trace autoflush="true" />
+    </system.diagnostics>
+    ```
 
-This config section needs to be added between \</system.net> and \<appSettings>, see the following screenshot:
+    - You can substitute the `c:\logs\PADwcfTraces.svclog` value with any valid path you'd like but the folder (the `c:\logs` in this example) must exist, otherwise it won't be created and logs won't be written.
+    - The Power Automate service must have permission to write in the chosen folder, granting the 'Everyone' user full control over the folder works. You can get the service user's Sid by running `sc showsid UIFlowService` in a command line if you want to give permissions to only that user.
 
-:::image type="content" source="media/direct-connectivity-troubleshooting/added-config-section.png" alt-text="Screenshot of the config section that should be inserted into the correct location.":::
+3. After saving the config file, restart the Power Automate service.
 
-After saving the config file, restart the Power Automate service. This can be done in the Services tool. The tool can be found by typing _services_ in the start menu, finding Power Automate Service, right-clicking it and choosing **Restart**. The following screenshot shows the step to restart the Power Automate service:
+   1. Open the Windows Services tool (search for "services" in the **Start** menu).
+   2. Find **Power Automate service**, right-click, and select **Restart**.
 
-:::image type="content" source="media/direct-connectivity-troubleshooting/restart-power-automate-service.png" alt-text="Restart the Power Automate Service in the Services tool.":::
+   :::image type="content" source="media/direct-connectivity-troubleshooting/restart-power-automate-service.png" alt-text="Restart the Power Automate Service in the Services tool.":::
 
-Traces will then be written to the file chosen in the config.
+Traces will be saved to the specified file, providing detailed logs to diagnose connectivity issues.
