@@ -1,10 +1,10 @@
 ---
-title: Access Denied or permission errors in SharePoint Online or OneDrive
-description: Resolve access and permission errors, such as Access Denied, You need permission to access this site, User not found in the directory, or This link is not available to you.
+title: "Access Denied" or "You need permission" errors in SharePoint Online and OneDrive
+description: Resolve common access and permission errors.
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 12/17/2023
+ms.date: 05/15/2025
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -43,9 +43,13 @@ These errors can occur for various reasons, such as:
 
 - Permissions for the affected user aren't configured correctly.
 - The account that's used to access the shared link is different from the account to which the sharing invitation was sent.
-- [Site user ID mismatch](../sharing-and-permissions/fix-site-user-id-mismatch.md). The ID mismatch usually occurs if a user account is deleted from the Microsoft 365 admin center, and then a new account is created by using the user principal name (UPN) that was used by the deleted account. The new account is assigned a new ID value even though the UPN is the same. The mismatch can also occur during directory synchronization between an Active Directory organizational unit (OU) and SharePoint if users have already logged in to SharePoint and are later moved to a different OU.
+- [Site user ID mismatch](../sharing-and-permissions/fix-site-user-id-mismatch.md). The ID mismatch usually occurs if a user account is deleted from the Microsoft 365 admin center, and then a new account is created by using the user principal name (UPN) that was used by the deleted account. The new account is assigned a new ID value even though the UPN is the same. The mismatch can also occur during directory synchronization between an Active Directory organizational unit (OU) and SharePoint if users are already logged in to SharePoint and later moved to a different OU.
 
-## Resolution option 1: Run the Check User Access diagnostic
+## Resolution
+
+Use one of the following options.
+
+**Option 1**: Run the "Check User Access" diagnostic
 
 > [!NOTE]
 > This diagnostic isn't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
@@ -59,7 +63,7 @@ Select the following **Run Tests** button, which populates the diagnostic in the
 
 The diagnostic performs a large range of verifications for internal users and guests who try to access SharePoint and OneDrive sites.
 
-## Resolution option 2: Manual fix
+**Option 2**: Manual fix
 
 To fix the access issues manually, follow the steps for the relevant scenario.
 
@@ -79,11 +83,11 @@ To fix the access issues manually, follow the steps for the relevant scenario.
 
 ### A user can't access their own OneDrive site
 
-This issue is usually caused by a site user ID mismatch. 
+This issue usually occurs when there's a site user ID mismatch.
 
 To fix the issue, check whether a new UPN exists. If it does, [delete the new UPN](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user), and then [restore the original UPN](/azure/active-directory/fundamentals/active-directory-users-restore).
 
-If you're not comfortable with using this procedure, see [Fix site user ID mismatch in SharePoint or OneDrive](../sharing-and-permissions/fix-site-user-id-mismatch.md) for an automated solution to fix the issue. 
+If you're not comfortable with using this procedure, see [Fix site user ID mismatch in SharePoint or OneDrive](../sharing-and-permissions/fix-site-user-id-mismatch.md) for an automated solution to fix the issue.
 
 ### A user can't access a shared link
 
