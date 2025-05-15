@@ -42,7 +42,7 @@
         - name: How to suppress Microsoft 365 AutoDiscover redirect warning
           href: /microsoft-365-apps/outlook/connectivity/how-to-suppress-microsoft-365-autodiscover-redirect-warning
         - name: Outlook 2016 for Mac crashes when a Proxy Auto Configuration file is used
-          href: /microsoft-365-apps/outlook/connectivity/outlook-2016-for-mac-crashes-using-proxy-auto-configuration-file
+          href: ../connectivity/outlook-2016-for-mac-crashes-using-proxy-auto-configuration-file.md
     - name: Delegation
       items:
         - name: Could not get delegate information form the server error
