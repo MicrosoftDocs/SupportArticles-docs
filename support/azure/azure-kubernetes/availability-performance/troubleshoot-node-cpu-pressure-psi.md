@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot CPU pressure in AKS clusters using PSI metrics
+title: Troubleshoot CPU Pressure in AKS Clusters Using PSI Metrics
 description: Provides troubleshoot guidance for CPU pressure using PSI metrics in an AKS cluster.
 ms.date: 05/15/2025
 ms.reviewer: aritraghosh, dafell, alvinli, v-weizhu
@@ -41,7 +41,7 @@ Azure Managed Prometheus provides a way to monitor PSI metrics:
 
 1. Enable Azure Managed Prometheus for your AKS cluster by following the instructions in [Enable Prometheus and Grafana](/azure/azure-monitor/containers/kubernetes-monitoring-enable#enable-prometheus-and-grafana).
 
-    To enable customized scrape metrics for Prometheus, see [Scrape configs](azure/azure-monitor/containers/prometheus-metrics-scrape-configuration#scrape-configs). We recommend setting `minumum ingestion profile` to `false` and `node-exporter` to `true`.
+    To enable customized scrape metrics for Prometheus, see [Scrape configs](/azure/azure-monitor/containers/prometheus-metrics-scrape-configuration#scrape-configs). We recommend setting `minumum ingestion profile` to `false` and `node-exporter` to `true`.
 
 2. Navigate to the Azure Monitor workspace associated with the AKS cluster from the [Azure portal](https://portal.azure.com).
 
