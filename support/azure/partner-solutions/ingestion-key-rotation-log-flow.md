@@ -29,7 +29,7 @@ To work around the issue, manually update the ingestion key using the following 
 
 1. Find the **resource ID** of the Azure New Relic resource associated with the account where the ingestion key was rotated. If multiple resources are linked to the same account, you can make the API call for any one of them.
 
-2. Make the API call to update the ingestion key. Use an API client (like **Postman** or **Bruno**) to make a **POST** request to the following endpoint:
+2. Make the API call to update the ingestion key. Use an API client (like **Bruno**) to make a **POST** request to the following endpoint:
 
      ```HTTP
      https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/NewRelic.Observability/monitors/{monitorName}/refreshIngestionKey
