@@ -17,13 +17,13 @@ If you rotated your ingestion key in the New Relic partner portal, log flow may 
 
 ## Symptoms
 
-You might observe log loss after the ingestion key rotation on the New Relic partner portal. The Log flow status may still be **Sending** on the **Monitored resources** page of the Azure New Relic resource.
+You might observe log loss after you rotate the ingestion key on the New Relic partner portal. The log flow status may still be **Sending** on the **Monitored resources** page of the Azure New Relic resource.
 
 ## Cause
 
 The issue occurs because Azure isn't notified of the ingestion key rotation. As a result, the old ingestion key remains stored in the configuration database. The log forwarder service continues to use the expired key to send logs. This causes authentication errors and results in log loss.
 
-## Workaround : Update the ingestion key manually
+## Workaround: Update the ingestion key manually
 
 To work around the issue, manually update the ingestion key using the following API call:
 
@@ -44,10 +44,10 @@ To work around the issue, manually update the ingestion key using the following 
      You can obtain the token using the **Network** tab of your browser's Developer tools:
       
       1. In the browser, press F12 to open Developer tools. Select **Network**, and then select **Disable Cache**.
-      1. Open [Azure portal](https://portal.azure.com) and while keeping the **Network tab** open, perform any basic operations like opening a resource.
+      1. Open the [Azure portal](https://portal.azure.com) and while keeping the **Network tab** open, perform any basic operations like opening a resource.
       1. Filter the result by **Fetch/XHR**. You can find a bearer token present in the request headers of the corresponding API call. Use it while it remains active.
       
-         :::image type="content" source="media/ingestion-key-rotation-log-flow/get-token.png" alt-text="Screenshot of viewing access token." lightbox="media/ingestion-key-rotation-log-flow/get-token.png":::
+         :::image type="content" source="media/ingestion-key-rotation-log-flow/get-token.png" alt-text="Screenshot showing how to view the access token." lightbox="media/ingestion-key-rotation-log-flow/get-token.png":::
 3. The request should return a **204** status code that indicates the ingestion key has been successfully updated.
    
     > [!NOTE]
@@ -56,3 +56,6 @@ To work around the issue, manually update the ingestion key using the following 
 ## Troubleshooting
 
 If you receive an error response, contact [**New Relic Support**](https://support.newrelic.com/s/) and provide the **correlation ID** (`x-ms-correlation-request-id`) from the response headers of your API call for further assistance.
+
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
