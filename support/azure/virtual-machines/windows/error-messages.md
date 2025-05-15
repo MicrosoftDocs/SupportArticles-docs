@@ -3,14 +3,13 @@ title: Common virtual machine error codes in Azure
 description: Understand some of the common error codes encountered when you provision and manage virtual machines in Azure
 services: virtual-machines
 documentationcenter: ''
-author: genlin
 manager: dcscontentpm 
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.workload: infrastructure
-ms.date: 09/02/2024
-ms.author: genli
+ms.date: 05/15/2025
+ms.reviewer: ekpathak, v-weizhu
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Understand common error messages when you manage virtual machines in Azure
@@ -210,6 +209,6 @@ This section lists the common error messages you might encounter when managing V
 |  VMRedeploymentFailed  |  VM '{0}' redeployment failed due to an internal error. Please retry later.  |
 |  VMRedeploymentTimedOut  |  Redeployment of VM '{0}' didn't finish in the allotted time. It might finish successfully in sometime. Else, you can retry the request.  |
 |  VMStartTimedOut  |  VM '{0}' did not start in the allotted time. The VM may still start successfully. Please check the power state later.  |
-|  Changing property 'creationData' is not allowed  |  Failed to update associated resources for VM '{0}'. An error occurred while updating associated resources for VM '{0}'. To delete the virtual machine without updating associated resources first, try again without updating any associated resource deletion states.   |
+|  OperationNotAllowed  |  Changing property 'creationData' is not allowed </br></br> Failed to update associated resources for VM '{0}'. An error occurred while updating associated resources for VM '{0}'. To delete the virtual machine without updating associated resources first, try again without updating any associated resource deletion states.   |
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
