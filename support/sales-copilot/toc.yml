@@ -14,6 +14,8 @@
       href: crm-permissions-and-configurations/update-settings-in-saleforce-error.md
     - name: Couldn't assign permission set when enabling Salesforce server-to-server flow
       href: crm-permissions-and-configurations/assign-perm-set-sf-ss.md
+    - name: Couldn't create user when enabling Salesforce server-to-server flow
+      href: crm-permissions-and-configurations/create-user-sf-ss.md
     - name: '"Fix mailbox errors in Dynamics 365" error'
       href: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
     - name: Missing privileges error when signing in
