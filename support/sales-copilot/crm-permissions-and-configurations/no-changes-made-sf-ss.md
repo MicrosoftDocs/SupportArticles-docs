@@ -7,6 +7,7 @@ ms.author: shjais
 manager: shujoshi
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
+
 # "No changes were made" error when enabling Salesforce server-to-server flow
 
 This article helps you troubleshoot the error "No changes were made." when you enable Salesforce server-to-server flow.
@@ -26,15 +27,15 @@ This article helps you troubleshoot the error "No changes were made." when you e
 
 When you try to enable Salesforce with server-to-server flow, the following error message is displayed:
 
-> No changes were made
+> No changes were made.
 
 ## Cause
 
-When a setup request is received, the server deploys a connected app to the Salesforce organization and creates an integration user. A permission set is then assigned to the integration user. The error occurs when the same permission set has already been assigned to the user, resulting in a duplicate assignment error during the setup process.
+During Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user that is created automatically. A permission set is then assigned to the integration user. The error occurs when the same permission set has already been assigned to the user.
 
 ## Resolution
 
-To resolve this issue, check for any manual changes to the connected app or profile with the prefix "Copilot For Sales." If the changes were not intentional, remove them. Try again, and contact Microsoft Support if the issue persists.
+To resolve this issue, check for any manual changes to the connected app or profile with the prefix "CopilotForSales." If the changes were not intentional, revert them. Otherwise, try again and contact Microsoft Support if the issue persists.
 
 ## More information
 

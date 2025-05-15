@@ -20,10 +20,12 @@
       href: crm-permissions-and-configurations/missing-privileges-sign-in.md
     - name: '"No access to Dynamics 365" error'
       href: crm-permissions-and-configurations/no-access-to-dynamics-365-error.md
-    - name: No changes were made error when enabling Salesforce server-to-server flow
-      href: crm-permissions-and-configurations/no-changes-were-made.md
+    - name: '"No changes were made" error when enabling Salesforce server-to-server flow'
+      href: crm-permissions-and-configurations/no-changes-made-sf-ss.md
     - name: '"Required fields are missing" error'
       href: crm-permissions-and-configurations/required-fields-missing.md
+    - name: Profile name already in use when enabling Salesforce server-to-server flow
+      href: crm-permissions-and-configurations/profile-name-already-exists-sf-ss.md
     - name: Salesforce CRM users can't see data in Copilot for Sales
       href: crm-permissions-and-configurations/no-column-error.md
     - name: Salesforce CRM users can't view, edit, or save data in Copilot for Sales
@@ -74,7 +76,5 @@
       href: teams-collaboration-spaces/create-team-error.md       
     - name: Opportunity summary not displayed in deal rooms
       href: teams-collaboration-spaces/opportunity-summary-not-displayed.md
-    - name: The profile name is already in use. Pick a different name or rename the existing profile in Salesforce error when enabling Salesforce server-to-server flow
-      href: crm-permissions-and-configurations/profile-name-already-in-use.md
        
  
