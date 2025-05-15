@@ -9,7 +9,7 @@ ms.custom: sap:Node/node pool availability and performance
 # Troubleshoot high CPU usage in AKS clusters
 
 > [!NOTE]
-> This guide is focused on high CPU utilization. In many cases, CPU PSI metrics are a better indicator of CPU Pressure than the utilization itself. More details are available [here](./node-cpu-psi-pressure.md).
+> This article discusses high CPU utilization. In many situations, CPU Pressure Stall Information (PSI) metrics provide a more accurate indication of CPU Pressure than utilization alone. For more information, see [Troubleshoot CPU pressure in AKS clusters using PSI metrics](troubleshoot-node-cpu-pressure-psi.md).
 
 High CPU usage is a symptom of one or more applications or processes that require so much CPU time that the performance or usability of the machine is impacted. High CPU usage can occur in many ways, but it's mostly caused by user configuration.
 
