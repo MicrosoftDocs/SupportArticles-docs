@@ -55,16 +55,13 @@ If the new alert is received but existing alerts aren't received, delete and the
 
 ### Resolution 4
 
-If all alerts from multiple files or libraries are not delivered, visit the Service Health Dashboard in the Microsoft 365 admin center, Health, Service health to check for any advisories or incidents that might be occurring in SharePoint or Microsoft Exchange Server. The issue could be a fault in the SharePoint alert capability or delays in delivering email messages through Exchange Server. Also, check whether other email is being delivered. If it's not, the issue is likely Exchange Server delays.
+If all alerts from multiple files or libraries aren't delivered, visit the Service Health Dashboard in the Microsoft 365 admin center (select **Health** > **Service health**) to check for any advisories or incidents that might be occurring in SharePoint or Microsoft Exchange Server. The issue could be a fault in the SharePoint alert capability or delays in delivering email messages through Exchange Server. Also, check whether other email is being delivered. If it's not, the issue is likely Exchange Server delays.
 
-> [!Note]
+> [!NOTE]
 >
 > * Check the JUNK folder in your email client. Sometimes, alerts are sent there.
-> 
 > * In cases in which an immediate alert rule is generating extremely high volume for a recipient email address, SharePoint might apply throttling. This process is intended to protect service health and overall alert delivery reliability. If a single email address is receiving several thousand immediate alert messages per hour across all its list or library subscriptions, it's likely that throttling is being applied.
-> 
 > * It's not possible to send alerts to Distribution or O365 groups. Only mail-enabled security groups are supported.
->
 > * You can't create custom alert email templates. You have to use Microsoft FLOW or SharePoint Designer Workflow to use custom templates.
 
 ## More information
