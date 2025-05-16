@@ -13,7 +13,7 @@ _Applies to:_ &nbsp; Configuration Manager (current branch)
 
 In Microsoft Configuration Manager (current branch - version 2409), you can't create bootable media and select a cloud management gateway for a management point.
 
-The following errors are logged in the **SMSProv.log** file:
+The following error is logged in the **SMSProv.log** file:
 
 ```output
 Failed to get MP installation directory path
@@ -21,7 +21,7 @@ Failed to get MP installation directory path
 ~*~*~GetTSMediaAdditionalInfo failed due to error 80004005
 ```
 
-The following errors are logged in the **CreateTSMedia.log** file:
+The following error is logged in the **CreateTSMedia.log** file:
 
 ```output
 Error invoking WMI method SMS_TaskSequencePackage.GetTSMediaAdditionalInfo (0x8004101d)
