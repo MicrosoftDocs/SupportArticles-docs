@@ -1,5 +1,5 @@
 ---
-title: "Access Denied" or "You need permission" errors in SharePoint Online and OneDrive
+title: Access Denied or You need permission errors in SharePoint Online and OneDrive
 description: Resolve common access and permission errors.
 ms.author: luche
 author: helenclu
@@ -22,7 +22,7 @@ appliesto:
   - OneDrive for Business
 ---
 
-# "Access Denied" or "You need permission" errors in SharePoint Online and OneDrive
+# Access Denied or You need permission errors in SharePoint Online and OneDrive
 
 ## Symptoms
 
