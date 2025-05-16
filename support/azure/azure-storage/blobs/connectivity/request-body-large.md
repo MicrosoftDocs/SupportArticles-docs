@@ -26,7 +26,7 @@ MaxLimit : 4194304
 This error can occur if the block size limit for the service version you run is exceeded. For example, versions prior to `2016-05-31` have a 4-MB block size limit per call to the Azure Storage service. Newer service versions support larger block sizes.
 For more information, see the following articles:
 
-- [Scale targets for Blob storage](/azure/storage/blobs/scalability-targets#scale-targets-for-blob-storage).
+- [Scale targets for Blob storage](/azure/storage/blobs/scalability-targets#scale-targets-for-blob-storage)
 - [Versioning for Azure Storage](/rest/api/storageservices/versioning-for-the-azure-storage-services)
 
 ## Workaround
