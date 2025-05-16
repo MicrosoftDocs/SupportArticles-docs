@@ -8,7 +8,7 @@ tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.workload: infrastructure
-ms.date: 05/15/2025
+ms.date: 05/16/2025
 ms.reviewer: ekpathak, v-weizhu
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
@@ -133,6 +133,7 @@ This section lists the common error messages you might encounter when managing V
 |  NotSupported  |  The license type is {0}, but the image blob {1} is not from on-premises.  |
 |  OperationNotAllowed  |  Availability Set {0} cannot be deleted. Before deleting an Availability Set please ensure that it does not contain any VM.  |
 |  OperationNotAllowed  |  Changing availability set SKU from 'Aligned' to 'Classic' is not allowed.  |
+|  OperationNotAllowed  |  Changing property 'creationData' is not allowed </br></br> Failed to update associated resources for VM '{0}'. An error occurred while updating associated resources for VM '{0}'. To delete the virtual machine without updating associated resources first, try again without updating any associated resource deletion states.   |
 |  OperationNotAllowed  |  Cannot modify extensions in the VM when the VM is not running.  |
 |  OperationNotAllowed  |  The Capture action is only supported on a Virtual Machine with blob based disks. Please use the 'Image' resource APIs to create an Image from a managed Virtual Machine.  |
 |  OperationNotAllowed  |  The resource {0} cannot be created from Image {1} until Image has been successfully created.  |
@@ -209,6 +210,5 @@ This section lists the common error messages you might encounter when managing V
 |  VMRedeploymentFailed  |  VM '{0}' redeployment failed due to an internal error. Please retry later.  |
 |  VMRedeploymentTimedOut  |  Redeployment of VM '{0}' didn't finish in the allotted time. It might finish successfully in sometime. Else, you can retry the request.  |
 |  VMStartTimedOut  |  VM '{0}' did not start in the allotted time. The VM may still start successfully. Please check the power state later.  |
-|  OperationNotAllowed  |  Changing property 'creationData' is not allowed </br></br> Failed to update associated resources for VM '{0}'. An error occurred while updating associated resources for VM '{0}'. To delete the virtual machine without updating associated resources first, try again without updating any associated resource deletion states.   |
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
