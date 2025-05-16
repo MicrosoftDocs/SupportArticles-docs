@@ -137,10 +137,10 @@
           href: ../contacts/contact-card-cannot-be-changed-by-group-policy-or-oct.md
         - name: Contact card doesn't show user details or presence
           href: ../contacts/contact-card-not-showing-user-details-or-presence.md
-        - name: Inconsistent performance with contacts
-          href: /exchange/troubleshoot/groups-and-distribution-lists/inconsistent-performance-with-contacts?context=/outlook/troubleshoot/context/client-context
         - name: Contacts folder empty and contacts are in another folder
           href: ../contacts/contacts-folder-empty-and-contacts-are-in-different-folder.md
+        - name: Inconsistent performance with contacts
+          href: /exchange/troubleshoot/groups-and-distribution-lists/inconsistent-performance-with-contacts?context=/outlook/troubleshoot/context/client-context
         - name: Unknown is displayed in group name when expanding
           href: ../contacts/cannot-expand-nested-contact-groups-unknown-shown.md
     - name: Data Files
