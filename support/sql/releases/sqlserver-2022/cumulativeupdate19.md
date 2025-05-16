@@ -16,7 +16,7 @@ _Version:_ &nbsp; 16.0.4195.2
 
 ## Summary
 
-This article describes Cumulative Update package 19 (CU19) for Microsoft SQL Server 2022. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 18 and it updates components in the following builds:
+This article describes Cumulative Update package 19 (CU19) for Microsoft SQL Server 2022. This update contains 13 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 18 and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4195.2**, file version: **2022.160.4195.2**
 - Analysis Services - Product version: **16.0.43.244**, file version: **2022.160.43.244**
@@ -37,7 +37,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | Bug reference | Description | Fix area| Component | Platform |
 |-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|---------------------------|----------|
 |<a id=3717029>[3717029](#3717029) </a> | Fixes an issue in which the SQL Server Analysis Services (SSAS) service stops responding and the model is damaged when you add too many members (for example, more than 1,820 members) to a database role. | Analysis Services | Analysis Services | Windows|
-|<a id=4110180>[4110180](#4110180) </a> | Fixes an issue in which using `BACKUP TO URL` for S3-compatible storage fails because the buffer for the multipart upload response is insufficient due to XML namespace clutter.|	SQL Server Engine | Backup Restore| All|
+|<a id=4110180>[4110180](#4110180) </a> | Fixes an issue in which using `BACKUP TO URL` for S3-compatible storage fails because the buffer for the multipart upload response is insufficient due to XML namespace clutter.|    SQL Server Engine | Backup Restore| All|
 |<a id=4009999>[4009999](#4009999) </a> | Fixes a Microsoft Entra authentication issue for SQL Server on Linux with IPv6 enabled. The `network.ipv6dnsrecordslimit` `mssql-conf` option is added to limit the number of AAAA records returned by Domain Name System (DNS) to values between 0 and 5 (inclusive). After enabling this option, at least one IPv4 address will be tried to connect to Entra servers. For more information, see [Microsoft Entra ID configuration options](/sql/linux/sql-server-linux-configure-mssql-conf#microsoft-entra-id-configuration-options). | SQL Server Engine | Linux | Linux|
 |<a id=4020612>[4020612](#4020612) </a> | Fixes an issue that affects Red Hat Enterprise Linux (RHEL) 9 in which the encrypted connection fails due to an OpenSSL version upgrade.| SQL Server Engine | Linux | Linux|
 |<a id=3855044>[3855044](#3855044) </a> | Fixes an assertion failure (Location: op_decod.cpp:9532; Expression: false) that you encounter when running a query with a linked server. | SQL Server Engine | Query Execution | All|
@@ -45,6 +45,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 |<a id=4013356>[4013356](#4013356) </a> | Fixes an issue in which incorrect results might be returned if using `WINDOW` clauses in conjunction with `CASE` statements.| SQL Server Engine | Query Optimizer | All|
 |<a id=4021026>[4021026](#4021026) </a> | Fixes an issue that you encounter when a large number of full-text fragments are marked for deletion by dropping fragments in batches.| SQL Server Engine | Search| All|
 |<a id=3402292>[3402292](#3402292) </a> | Fixes an issue in which the server audit created in a contained availability group doesn't work after the SQL Server instance restarts. | SQL Server Engine | Security Infrastructure | All|
+|<a id=3979473>[3979473](#3979473) </a> | Enables the `SERVER_OBJECT_PERMISSION_CHANGE_GROUP` action group to audit associated actions. | SQL Server Engine | Security Infrastructure | All|
 |<a id=3873130>[3873130](#3873130) </a> | Fixes non-yielding exceptions that you might encounter when the Service Broker queue becomes very long while sending messages (for example, due to an application not properly closing conversations).| SQL Server Engine | Service Broker| All|
 |<a id=4013480>[4013480](#4013480) </a> | Reverts to the 2-GB limit for the minidump file size to avoid dump issues when capturing minidump files on SQL Server instances with a large amount of memory. | SQL Server Engine | SQL OS| Windows|
 |<a id=4048867>[4048867](#4048867) </a> | Updates the log tail file name to be constructed according to the dump file name after running the `DBCC STACKDUMP` command.| SQL Server Engine | SQL OS| Windows|
