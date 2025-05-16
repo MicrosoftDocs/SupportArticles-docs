@@ -27,14 +27,14 @@ The issue occurs because Azure isn't notified of the ingestion key rotation. The
 
 To work around the issue, manually update the ingestion key by using the following API call:
 
-1. Find the **resource ID** of the Azure New Relic resource that's associated with the account to which the ingestion key was rotated. If multiple resources are linked to the same account, you can make the API call for any of them.
+1. Find the **Resource ID** of the Azure New Relic resource that's associated with the account to which the ingestion key was rotated. If multiple resources are linked to the same account, you can make the API call for any of them. The following is an example of a Resource ID: `/subscriptions/0493ccca-0000-0000-0000-f9bca5fc5dc9/resourceGroups/myRG/providers/NewRelic.Observability/monitors/MyNewRelicResource`. It includes the subscription ID, resource group name, and the Azure New Relic resource name.
 
 2. Make the API call to update the ingestion key. Use an API client (such as **Bruno**) to make a **POST** request to the following endpoint:
 
      ```HTTP
-     https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/NewRelic.Observability/monitors/{monitorName}/refreshIngestionKey
+          https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/NewRelic.Observability/monitors/{AzureNewRelicResourceName}/refreshIngestionKey
      ```
-
+     
      **Query parameter**: `api-version`: `2024-10-01`
 
      **Body**: Empty raw JSON
@@ -55,7 +55,7 @@ To work around the issue, manually update the ingestion key by using the followi
     > [!NOTE]
     > Because of cache resetting on the Azure side, log flow might take up to 24 hours to resume.
 
-## Troubleshooting
+## Get support
 
 If you receive an error response, contact [**New Relic Support**](https://support.newrelic.com/s/) and provide the **correlation ID** (`x-ms-correlation-request-id`) from the response headers of your API call for further assistance.
 
