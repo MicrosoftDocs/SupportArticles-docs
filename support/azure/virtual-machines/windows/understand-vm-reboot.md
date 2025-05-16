@@ -10,9 +10,9 @@ ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services
-ms.date: 10/14/2024
+ms.date: 05/16/2025
 ms.author: genli
-ms.reviewer: yutorigo, sinhamanisha, v-weizhu
+ms.reviewer: yutorigo, sinhamanisha, justingross, v-weizhu
 ms.custom: sap:VM restarted or stopped unexpectedly
 ---
 # Understand a system reboot for Azure VM
@@ -98,11 +98,13 @@ The VM is hosted on a physical server that is running inside an Azure datacenter
 
 Server faults are usually caused by hardware failure, such as the failure of a hard disk or solid-state drive. Azure continuously monitors these occurrences, identifies the underlying bugs, and rolls out updates after the mitigation has been implemented and tested.
 
-Because some host server faults can be specific to that server, a repeated VM reboot situation might be improved by manually redeploying the VM to another host server. This operation can be triggered by using the **[redeploy](/azure/virtual-machines/windows/redeploy-to-new-node-windows#use-the-azure-portal)** option on the details page of the VM, or by stopping and restarting the VM in the Azure portal.
+Because some host server faults can be specific to that server, a repeated VM reboot situation might be improved by manually redeploying the VM to another host server. This operation can be triggered by using the [redeploy](redeploy-to-new-node-windows.md#use-the-azure-portal) option on the details page of the VM, or by stopping and restarting the VM in the Azure portal.
 
 ### Auto-recovery
 
-The Azure platform is designed to handle host node issues with minimal impact on VM performance. When a host node encounters a problem, Azure first attempts the least disruptive recovery method, which is to reboot the host. If rebooting the host isn't possible or if the issue is hardware-related, Azure initiates an automatic recovery action to take the faulty host out of rotation for further investigation. As part of this automatic recovery, a process known as service healing will automatically relocate all VMs on the faulty host to another healthy one. This is usually completed within 15 minutes, although recovery time can vary based on factors such as the host's memory size and recovery methods used. Service healing is typically used as a last resort for hardware failures to ensure VMs continue to operate without significant downtime. For more details about how Azure handles these scenarios, see Service Healing – Auto-recovery of Virtual Machines. [Service Healing – Auto-recovery of Virtual Machines](https://azure.microsoft.com/blog/service-healing-auto-recovery-of-virtual-machines/).
+The Azure platform is designed to handle host node issues with minimal impact on VM performance. When a host node encounters a problem, Azure first attempts the least disruptive recovery method, which is to reboot the host. If rebooting the host isn't possible or if the issue is hardware-related, Azure initiates an automatic recovery action to take the faulty host out of rotation for further investigation. As part of this automatic recovery, a process known as service healing will automatically relocate all VMs on the faulty host to another healthy one. This process is usually completed within 15 minutes, although the recovery time can vary depending on factors such as the host's memory size and used recovery methods. Service healing is typically used as a last resort for hardware failures to ensure that VMs continue to operate without significant downtime.
+
+For more details about how Azure handles these scenarios, see [Service Healing – Auto-recovery of Virtual Machines](https://azure.microsoft.com/blog/service-healing-auto-recovery-of-virtual-machines/).
 
 ### Unplanned maintenance
 
@@ -115,10 +117,12 @@ Unplanned maintenance include the following:
 
 ### VM crashes
 
-VMs might restart because of issues within the VM itself or hardware related issues as described above (e.g. an issue with the OS disk). The workload or role that's running on the VM might trigger a bug check within the guest operating system. For help determining the reason for the crash, view the system and application logs for Windows VMs, and the serial logs for Linux VMs. Having a memory dump is normally the best way to investigate a crash to determine the root cause.
+VMs might restart due to internal VM issues or hardware issues as described above such as an OS disk issue. The workloads or role running on the VM might trigger a bug check in the guest OS. To find the crash reason, check system and application logs for Windows VMs, and serial logs for Linux VMs. Collecting a memory dump is usually the best way to identify the root cause.
 
- - [Windows Memory Dump Information](/windows-server/performance/memory-dump-file-options)
- - [Linux Crash Dump Information](/azure/virtual-machines/linux/serial-console-nmi-sysrq#distribution-specific-documentation)
+For more information, see the following articles:
+
+- [Windows crash dump information](./windows-server/performance/memory-dump-file-options.md)
+- [Linux crash dump information](./linux/serial-console-nmi-sysrq.md#distribution-specific-documentation)
 
 ### Storage-related forced shutdowns
 
