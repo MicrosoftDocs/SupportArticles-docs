@@ -54,13 +54,13 @@ The Microsoft 365 activation troubleshooter helps you resolve Microsoft 365 subs
 
 Follow these steps:
 
-1. Select the following button to start the troubleshooter.
+1. To start the troubleshooter, select the following button.
 
    > [!div class="nextstepaction"]
    > [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome)
 
    If you receive a pop-up window that displays a "This site is trying to open Get Help" message, select **Open**.
-1. Follow the instructions in the Get Help app to run the troubleshooter.
+1. To run the troubleshooter, follow the instructions in the Get Help app.
 
 After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the problem.
 <br/><br/>
@@ -73,7 +73,7 @@ After the troubleshooter finishes, it displays the results and provides addition
   
    If you're signed in by using your Work or School account, and you don't have a license assigned, [contact your Microsoft 365 administrator](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b) to get a license assigned.
   
-   If you have Microsoft 365 for Business Basic, you won't have any Office applications to install. You can use [Microsoft 365 Online apps](https://www.microsoft365.com/apps).
+   If you have Microsoft 365 for Business Basic, you don't have any Office applications to install. You can use [Microsoft 365 Online apps](https://www.microsoft365.com/apps) instead.
   
 1. Make sure that the [bit version of Office](https://support.microsoft.com/office/about-office-what-version-of-office-am-i-using-932788b8-a3ce-44bf-bb09-e334518b8b19) (32-bit or 64-bit) matches your [version of Windows](https://windows.microsoft.com/windows/32-bit-and-64-bit-windows).
   
@@ -89,13 +89,13 @@ After the troubleshooter finishes, it displays the results and provides addition
    > [!NOTE]
    > To run the troubleshooter, make sure that you're using the same Windows device on which Microsoft 365 or the Office product is installed. Additionally, make sure that your device is running Windows 10 or a later version.
 
-   1. Select the following button to start the troubleshooter.
+   1. To start the troubleshooter, select the following button.
 
       > [!div class="nextstepaction"]
       > [Microsoft 365 Uninstall troubleshooter](https://aka.ms/SaRA-OfficeUninstall-sarahome)
 
       If you receive a pop-up window that displays "This site is trying to open Get Help," select **Open**.
-   1. Follow the instructions in the Get Help app to run the troubleshooter.
+   1. To run the troubleshooter, follow the instructions in the Get Help app.
 1. Restart the device.
 1. [Install the correct version](https://support.microsoft.com/office/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658).
 <br/><br/>
