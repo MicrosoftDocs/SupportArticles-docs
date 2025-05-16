@@ -139,7 +139,7 @@
           href: ../contacts/contact-card-not-showing-user-details-or-presence.md
         - name: Inconsistent performance with contacts
           href: /exchange/troubleshoot/groups-and-distribution-lists/inconsistent-performance-with-contacts?context=/outlook/troubleshoot/context/client-context
-        - name: No Offline Address Book is downloaded
+        - name: Contacts folder empty and contacts are in another folder
           href: ../contacts/contacts-folder-empty-and-contacts-are-in-different-folder.md
         - name: Unknown is displayed in group name when expanding
           href: ../contacts/cannot-expand-nested-contact-groups-unknown-shown.md
