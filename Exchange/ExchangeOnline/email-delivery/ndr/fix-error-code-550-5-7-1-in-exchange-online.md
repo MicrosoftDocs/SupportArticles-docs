@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 550 5.7.1 in Exchange Online
-ms.date: 01/24/2024
+ms.date: 05/15/2025
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six
+ms.reviewer: arindamt
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
@@ -138,7 +138,7 @@ If you have an incorrect MX record, try the following steps:
 
 1. Check the sender and recipient domains for incorrect or stale MX records by using the **Advanced diagnostics** \> **Exchange Online** test in Microsoft Support and Recovery Assistant. For more information about the Support and Recovery Assistant, see [About Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/e90bb691-c2a7-4697-a94f-88836856c72f).
 
-2. Check with your domain registrar or DNS hosting service to verify the MX record for your domain is correct. The MX record for a domain that's enrolled in Exchange Online uses the syntax  `_\<domain\ >_.mail.protection.outlook.com` or `_\<domain\ >_.subdomain.mx.microsoft`
+2. Check with your domain registrar or DNS hosting service to verify the MX record for your domain is correct. The MX record for a domain that's enrolled in Exchange Online uses the syntax  `_\<domain\ >_.mail.protection.outlook.com` or `_\<domain\ >_.subdomain.mx.microsoft`.
 
 3. Verify **Inbound SMTP Email** and **Outbound SMTP Email** at **Office 365** \> **Mail Flow Configuration** in the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/o365).
 
