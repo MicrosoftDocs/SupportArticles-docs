@@ -1,11 +1,10 @@
 ---
 title: Request body is too large error when you write more than 4 MB of data to Azure Storage
 description: Describes an issue that triggers a "Request body is too large" error in Microsoft Azure. Occurs when you try to write more than 4 megabytes (MB) of data to Azure Storage.
-ms.date: 05/12/2025
+ms.date: 05/16/2025
 author: genlin
 ms.author: genli
 ms.service: azure-file-storage
-ms.reviewer: 
 ms.custom: sap:Connectivity
 ---
 # Error when you write more than 4 MB of data to Azure Storage: Request body is too large
@@ -24,10 +23,14 @@ MaxLimit : 4194304
 
 ## Cause
 
-This can occur if you exceed the allowed block size for the service version you are running. For example, in versions prior to 2016-05-31, there is a 4-MB block size limit for each call to the Azure Storage service. Newer service versions allow larger block sizes. For more information see:
-- [Azure Storage scalability and performance targets](https://learn.microsoft.com/azure/storage/blobs/scalability-targets#scale-targets-for-blob-storage).
-- [Versioning for Azure Storage](https://learn.microsoft.com/rest/api/storageservices/versioning-for-the-azure-storage-services)
+This error can occur if the block size limit for the service version you run is exceeded. For example, versions prior to `2016-05-31` have a 4-MB block size limit per call to the Azure Storage service. Newer service versions support larger block sizes.
+For more information, see the following articles:
+
+- [Scale targets for Blob storage](/azure/storage/blobs/scalability-targets#scale-targets-for-blob-storage).
+- [Versioning for Azure Storage](/rest/api/storageservices/versioning-for-the-azure-storage-services)
+
 ## Workaround
-If your file is too large, you must split it into chunks. For more information, see [Scalability and performance targets for standard storage accounts](https://learn.microsoft.com/azure/storage/common/scalability-targets-standard-account).
+
+If your file is too large, you must split it into chunks. For more information, see [Scalability and performance targets for standard storage accounts](/azure/storage/common/scalability-targets-standard-account).
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
