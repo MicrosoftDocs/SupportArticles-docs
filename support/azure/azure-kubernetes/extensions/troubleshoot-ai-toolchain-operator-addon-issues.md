@@ -23,11 +23,11 @@ The KAITO add-on consists of two controllers: the `gpu-provisioner` controller a
 
 | Error message | Cause |
 | --- | --- |
-| Workspace was not created | [Cause 1: Incorrect KAITO custom resource configuration](#cause-1-misconfiguration-in-kaito-custom-resources) |
+| Workspace was not created | [Cause 1: Incorrect KAITO custom resource configuration](#cause-1-incorrect-kaito-custom-resource-configuration) |
 | GPU node was not created | [Cause 2: GPU quota limitations](#cause-2-gpu-quota-limitations) |
 | Resource ready condition is not `True` | [Cause 3: Long pull time for model inference images](#cause-3-long-pull-time-for-model-inference-images)|
 
-## Cause 1: Misconfiguration in KAITO custom resources
+## Cause 1: Incorrect KAITO custom resource configuration
 
 After you enable the add-on and deploy a preset or custom workspace custom resource (CR), the `workspace` controller includes a validation webhook. This webhook blocks common mistakes of setting wrong values in the CR specification.
 
