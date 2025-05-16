@@ -1,6 +1,6 @@
 ---
 title: Fix NDR error 550 5.1.10 in Exchange Online
-ms.date: 01/24/2024
+ms.date: 05/15/2025
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -295,7 +295,7 @@ If you have a custom domain (for example, contoso.com instead of contoso.onmicro
 4. If Microsoft 365 or Office 365 detects any issues with your Exchange Online DNS record settings, follow the recommended steps to fix them. You might be prompted to make the changes directly within the Microsoft 365 admin center. Otherwise, you must update the MX record from your DNS host provider's portal. For more information, see [Create DNS records at any DNS hosting provider](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider).
 
    > [!NOTE]
-   > Typically, your domain's MX record should point to the Microsoft 365 or Office 365 fully qualified domain name: \<your domain\>.mail.protection.outlook.com or \<your domain>\.subdomain.mx.microsoft. DNS record updates usually propagate across the Internet in a few hours, but they can take up to 72 hours.
+   > Typically, your domain's MX record should point to the Microsoft 365 or Office 365 fully qualified domain name: \<your domain\>.mail.protection.outlook.com or \<your domain>\.subdomain.mx.microsoft. DNS record updates usually propagate across the internet in a few hours, but they can take up to 72 hours.
 
 ## Still need help with a 5.1.10 bounce message?
 
