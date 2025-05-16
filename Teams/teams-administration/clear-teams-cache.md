@@ -1,5 +1,5 @@
 ---
-title: Clear Teams cache
+title: Clear the Teams client cache
 description: Describes how to clear the Microsoft Teams client cache on Windows and macOS devices.
 author: helenclu
 ms.author: luche
@@ -17,7 +17,7 @@ appliesto:
   - New Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 12/04/2023
+ms.date: 05/15/2025
 ---
 # Clear the Teams client cache
 
