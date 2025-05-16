@@ -7,7 +7,7 @@ ms.custom: sap:Operating Systems Deployment (OSD)\Task Sequence Media (all types
 ---
 # Can't create bootable media with errors 80004005 and 0x8004101d
 
-_Applies to:_ &nbsp; Configuration Manager (current branch)
+_Applies to:_ &nbsp; Configuration Manager (current branch, version 2409)
 
 ## Symptoms
 
