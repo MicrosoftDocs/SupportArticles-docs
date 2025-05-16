@@ -121,8 +121,8 @@ VMs might restart due to internal VM issues or hardware issues as described abov
 
 For more information, see the following articles:
 
-- [Windows crash dump information](./windows-server/performance/memory-dump-file-options.md)
-- [Linux crash dump information](./linux/serial-console-nmi-sysrq.md#distribution-specific-documentation)
+- [Windows crash dump information](../../..//windows-server/performance/memory-dump-file-options.md)
+- [Linux crash dump information](../linux/serial-console-nmi-sysrq.md#distribution-specific-documentation)
 
 ### Storage-related forced shutdowns
 
