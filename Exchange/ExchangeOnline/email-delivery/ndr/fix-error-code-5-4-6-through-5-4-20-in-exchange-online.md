@@ -1,10 +1,10 @@
 ---
 title: Fix NDR error 5.4.6 or 5.4.14 in Exchange Online
-ms.date: 01/24/2024
+ms.date: 05/15/2025
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six
+ms.reviewer: arindamt
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
