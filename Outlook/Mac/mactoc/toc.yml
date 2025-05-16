@@ -21,8 +21,6 @@
           href: ../calendars/cannot-propose-a-new-time-for-a-meeting.md
         - name: Can't save a meeting as draft in Outlook for Mac via Office JS API
           href: ../calendars/cannot-save-meeting-as-draft-in-outlook-for-mac.md
-        - name: Configure rooms and workspaces for Room Finder
-          href: /outlook/troubleshoot/calendaring/configure-room-finder-rooms-workspaces?context=/outlook/troubleshoot/context/mac-context
         - name: Create and book a workspace in Outlook
           href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/mac-context
         - name: Meetings incorrectly display the UTC time zone
@@ -39,8 +37,6 @@
           href: ../calendars/cannot-open-another-calendar-with-freebusy-permission.md
     - name: Connectivity
       items:
-        - name: How to suppress Microsoft 365 AutoDiscover redirect warning
-          href: /microsoft-365-apps/outlook/connectivity/how-to-suppress-microsoft-365-autodiscover-redirect-warning
         - name: Outlook 2016 for Mac crashes when a Proxy Auto Configuration file is used
           href: ../connectivity/outlook-2016-for-mac-crashes-using-proxy-auto-configuration-file.md
     - name: Delegation
@@ -49,10 +45,6 @@
           href: ../delegation/could-not-get-delegate-information-from-the-server-error.md
         - name: Delegate permanently removes emails from manager's inbox
           href: ../delegation/delegate-permanently-deletes-emails-from-manager-inbox.md
-    - name: Diagnostic Logging
-      items:
-        - name: How to enable logging in Outlook for Mac
-          href: /microsoft-365-apps/outlook/diagnostic-logging/enable-logging
     - name: Email Messages
       items:
         - name: Font size differs from the original email
@@ -65,8 +57,6 @@
           href: ../files-and-folders/outlook-2016-for-mac-freezes-on-email-folders.md
     - name: Import/Export
       items:
-        - name: Can't import .olm files into Outlook for Windows
-          href: /microsoft-365-apps/outlook/import-export/cannot-import-olm-files
         - name: Can't import an ANSI .pst file
           href: ../import-and-export/cannot-import-ansi-pst-file.md
         - name: Permissions error when importing Outlook 2011 identity
