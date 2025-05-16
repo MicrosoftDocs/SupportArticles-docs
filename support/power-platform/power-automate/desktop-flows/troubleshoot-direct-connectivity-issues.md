@@ -48,9 +48,13 @@ The Power Automate service runs under its own Windows account (NT Service\UIFlow
 
 If the machine and Power Automate service have reliable access to the network, the next likeliest source of issues is the on-premises network blocking or interfering with Azure relay connections.
 
-A common culprit in both scenarios is a network proxy that restricts outbound traffic. In particular, authenticated proxies that use the credentials of the connected Windows user, given that the Power Automate service runs under its own dedicated account.
+A common culprit in both scenarios is a network proxy or a firewall that restricts outbound traffic. 
+
+In particular, authenticated proxies that use the credentials of the connected Windows user, given that the Power Automate service runs under its own dedicated account.
 
 You can refer to [Proxy setup](https://support.microsoft.com/topic/power-automate-for-desktop-proxy-setup-8a79d690-1c02-416f-8af1-f057df5fe9b7) if you determine that you need to override the default proxy settings used by the Power Automate service. You may also need to [change the on-premises service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
+
+Azure Relay requires to have all the relay gateways used by the primary and secondary namespaces allowed by the proxy and firewall configurations.
 
 ## How to investigate
 
@@ -63,6 +67,44 @@ You can refer to [Proxy setup](https://support.microsoft.com/topic/power-automat
 4. Get WCF logs from the Power Automate service (UIFlowService). For more information, see the [Enable WCF tracing](#enable-wcf-tracing) section below.
 
 5. Make sure your network configuration allows web socket traffic and long-running connections: a common pattern is proxies or other network devices killing connections after a set time.
+6. Make sure firewall allows connections to Azure Relay gateways by following below steps:
+
+#### Step 1: identify the Azure relay namespaces
+
+Two Azure relay namespaces can be used for the connecting a machine to the Power Automate cloud services.
+
+To identify the namespaces used by a machine:
+
+1. Launch the "Power Automate machine runtime" application and sign-in
+2. Locate the "Diagnose connectivity issues for runtime" section and click on "Launch diagnostic tool"
+3. Wait for the diagnostics to end
+4. Click on "Generate the report"
+5. Open the generated xls file
+6. Local the Data column and copy the 2 URLs corresponding to PrimaryRelay and SecondaryRelay
+7. Extract the namespace part from each PrimaryRelay and SecondaryRelay URL https://\<namespace>/guid_guid
+
+#### Step 2:  Configure the firewall with the DNS names required for both the primary and secondary  relays
+
+Configure your firewalls with the DNS names of all the Relay gateways, which can be found by running [this script](https://github.com/Azure/azure-relay-dotnet/blob/dev/tools/GetNamespaceInfo.ps1) .
+
+This script will resolve the fully qualified domain names of all the gateways to which you need to establish a connection.
+
+Change any rules that previously used the IP addresses to use the namespace DNS names for port 443.
+
+#### Step 3: manual connectivity test can be done
+
+WCF tracing can be enabled on the machine in case of cloud connectivity issue. Direct connectivity issues in Power Automate for desktop - Power Automate | Microsoft Learn 
+
+The log should contain exceptions related to connectivity for a specific DNS or IP address or point to missing proxy configuration.
+
+The connection between the machine and the endpoint can be tested by running a TCP ping:
+
+1. Open PowerShell and run the below command
+2. Test-netconnection \<ipaddress or dnsname> -port 443
+
+The result will be displayed as the output of TcpTestSucceeded.
+
+If not succeeding, this is likely that the firewall does not allow the connection. Thus engage your network team to understand if any proxy or firewall could prevent access. There could be several firewalls and proxies between the machine and the Azure Relay services, thus make sure to check each of the subnet configurations.
 
 ## What information to include when opening a support ticket
 
