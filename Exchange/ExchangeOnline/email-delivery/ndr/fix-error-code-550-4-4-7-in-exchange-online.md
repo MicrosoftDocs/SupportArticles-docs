@@ -4,7 +4,7 @@ ms.date: 05/15/2025
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.reviewer: v-six
+ms.reviewer: arindamt
 audience: Admin
 ms.topic: troubleshooting
 f1.keywords:
