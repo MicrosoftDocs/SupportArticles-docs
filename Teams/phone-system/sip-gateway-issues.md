@@ -29,9 +29,9 @@ SIP Gateway enables your organization to use any compatible SIP device with Micr
 1. Verify that [the SIP Gateway provisioning server's URL](/microsoftteams/sip-gateway-configure#set-the-sip-gateway-provisioning-server-url) begins in "HTTP", not "HTTPS". For example, use `http://noam.ipp.sdg.teams.microsoft.com`, not `https://noam.ipp.sdg.teams.microsoft.com`.
 1. Check whether the device can connect to SIP Gateway. Verify that the connection isn't blocked by your firewall or proxy server, and that the required HTTPS endpoints and TCP/UDP ports are open. For more information, see the list of items that follows "Before you can configure SIP Gateway" in [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
 
-## Device Validation Using \*55\* <OTP> is Currently Not Available for GCC Environment
+## Device Validation Using \*55\* \<OTP\> is Currently Not Available for GCC Environment
 
-Due to a recent upstream design change, customers in the GCC environment are unable to use the [OTP method for device validation](/microsoftteams/devices/sip-gateway-configure). SIP Gateway team is exploring options to mitigate this issue, however, customers can continue to use the [Zero Touch Common Area Phone Sign In](/microsoftteams/devices/sip-gateway-configure) method. We urge customers to setup and use the **Zero Touch Common Area Phone Sign In** for shared devices. Sign in directly from the device continues to be available for SIP IP Phones and DECT endpoints.
+Due to a recent upstream design change, customers in the GCC environment are unable to use the [OTP method for device validation](/microsoftteams/devices/sip-gateway-configure#provision-and-enroll-sip-devices-as-common-area-phones). SIP Gateway team is exploring options to mitigate this issue, however, customers can continue to use the [Zero Touch Common Area Phone Sign In](/microsoftteams/devices/sip-gateway-configure#zero-touch-common-area-phone-sign-in) method. We urge customers to setup and use the **Zero Touch Common Area Phone Sign In** for shared devices. Sign in directly from the device continues to be available for SIP IP Phones and DECT endpoints.
 
 ## Web app authentication fails when I try to sign in
 
