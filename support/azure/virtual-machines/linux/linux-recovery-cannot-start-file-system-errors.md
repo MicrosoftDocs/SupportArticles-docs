@@ -328,11 +328,14 @@ or
 mount /home
 ```
 
-If the journaled changes aren't written when you mount filesystems, use the `-L` flag to discard the journal and mount the filesystem as if all changes are successfully completed. When the `-L` flag is used, data loss will occur because the log shows incomplete file operations are being discarded.  
+If the journaled changes aren't written when you mount filesystems, use the `-L` flag to discard the journal and mount the filesystem as if all changes are successfully completed. 
+
 
 ```bash
 xfs_repair -L /dev/rootvg/homelv /recovery
 ```
+> [!CAUTION]
+> The `-L` flag causes xfs_repair to forcably clean entries in the transaction log journal. Data loss many times occurs when this happens.
 
 ### <a id="prevent-boot-failure"></a>Prevent boot failure
 
