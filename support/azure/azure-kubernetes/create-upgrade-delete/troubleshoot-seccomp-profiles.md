@@ -143,3 +143,9 @@ Testing and refining your seccomp profiles ensures optimal performance and secur
 
 ## Related Content
 [Secure container access to resources using built-in Linux security features](https://learn.microsoft.com/azure/aks/secure-container-access#secure-computing-seccomp)
+
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
+
+[!INCLUDE [Third-party contact information disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
