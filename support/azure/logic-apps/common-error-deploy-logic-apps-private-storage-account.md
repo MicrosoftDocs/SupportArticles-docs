@@ -85,7 +85,7 @@ The following list includes more troubleshooting actions that you can take to fi
 
      1. In the VM, find the DNS server that's used for resolution.
 
-     1. In your logic app, [find and set the `WEBSITE_DNS_SERVER` app setting](/azure/logic-apps/edit-app-settings-host-settings?tabs=azure-portal#manage-app-settings---localsettingsjson) to the same DNS server value that you found in the previous step.
+     1. In your logic app, [find and set the **WEBSITE_DNS_SERVER** app setting](/azure/logic-apps/edit-app-settings-host-settings?tabs=azure-portal#manage-app-settings---localsettingsjson) to the same DNS server value that you found in the previous step.
 
      1. Check that the virtual network integration is set up correctly with the appropriate virtual network and subnet in your logic app.
 
