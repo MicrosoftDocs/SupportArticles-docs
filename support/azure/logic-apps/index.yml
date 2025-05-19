@@ -6,7 +6,7 @@ summary: Welcome to Azure Logic Apps troubleshooting. These articles explain how
 metadata:
   title: Troubleshoot Azure Logic Apps issues
   description: Documentation for troubleshooting common issues with Azure Logic Apps. # Required; article description that is displayed in search results. < 160 chars.
-  ms.services: azure-logic-apps
+  ms.service: azure-logic-apps
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
