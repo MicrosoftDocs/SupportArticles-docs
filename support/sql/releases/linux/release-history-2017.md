@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2017 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 03/06/2025
+ms.date: 05/19/2025
 appliesto:
   - SQL Server 2017
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-related-content
@@ -15,6 +15,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2017](..
 
 - [Release history for SQL Server 2019 on Linux](release-history-2019.md?view=sql-server-ver15&preserve-view=true).
 - [Release history for SQL Server 2022 on Linux](release-history-2022.md?view=sql-server-ver16&preserve-view=true).
+- [Release history for SQL Server 2025 Preview on Linux](release-history-2025.md?view=sql-server-ver17&preserve-view=true).
 
 > [!NOTE]  
 > Any missing GDRs apply to the Windows version only.
