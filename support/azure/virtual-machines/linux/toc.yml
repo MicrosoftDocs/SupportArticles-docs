@@ -223,7 +223,7 @@
     href: troubleshoot-deployment-new-vm-linux.md
   - name: Custom/gallery/marketplace image allocation failure
     href: linux-custom-gallery-marketplace-image-allocation-failure.md
-  - name: Capture a Linux image for upload preparation
+  - name: Capture an image for upload preparation
     href: capture-linux-image-for-upload.md
   - name: Custom image provisioning errors
     href: linux-custom-image-provisioning-errors.md
