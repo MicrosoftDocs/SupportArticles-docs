@@ -1,6 +1,6 @@
 z---
-title: Windows VM Startup is Stuck on "Please wait for the Group Policy Client" in Azure
-description: Provides troubleshooting steps for an Azure virtual machine (VM) that's stuck in startup on the "Please wait for the Group Policy Client" screen.
+title: Windows VM Startup gets Stuck on "Please wait for the Group Policy Client" in Azure
+description: Provides troubleshooting steps for an Azure virtual machine (VM) that gets stuck in startup on the "Please wait for the Group Policy Client" screen.
 ms.date: 05/14/2025
 author: cwhitley-MSFT 
 ms.author: cwhitley
@@ -9,7 +9,7 @@ ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---
 
-# VM startup is stuck at "Please wait for the Group Policy Client"
+# VM startup gets stuck at "Please wait for the Group Policy Client"
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
@@ -23,9 +23,9 @@ A Windows VM doesn't start. When you use [Boot diagnostics](./boot-diagnostics.m
 
 ## Cause
 
-When a Windows virtual machine (VM) starts, it might take some time for the VM to apply Group Policy system settings. If the VM is applying many policies, or if the policies are particularly complex, this process can take longer than usual.
+When a Windows VM starts, it might take some time to apply Group Policy system settings. If the VM is applying many policies, or if the policies are complex, this process can take longer than usual.
 
-We recommend that you allow up to one hour for the VM to finish applying these settings. If the VM remains stuck on the same screen after that time, additional troubleshooting might be necessary to identify the specific cause of the issue.
+We recommend that you allow up to one hour for the VM to finish applying these settings. If the VM remains stuck on the same screen after that time, more troubleshooting might be necessary to identify the specific cause of the issue.
 
 ## Collect memory dump file for troubleshooting
 
