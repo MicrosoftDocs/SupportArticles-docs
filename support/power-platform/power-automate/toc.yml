@@ -130,6 +130,8 @@
       href: desktop-flows/enable-webview-pad-login.md
     - name: Can't access the parent flow
       href: desktop-flows/cannot-access-parent-flow.md
+    - name: '"Could not establish trust relationship for the SSL/TLS secure channel" error'
+      href: desktop-flows/could-not-establish-trust-relationship-ssl-tls-secure-channel.md
     - name: Can't interact with desktop application without an error
       href: desktop-flows/cannot-interact-with-desktop-application.md
     - name: Can't create, edit, save, or view desktop flows
@@ -210,6 +212,8 @@
       href: desktop-flows/tenant-restictions-machine-registration.md  
     - name: '"The specified module could not be found" error with terminal emulation action'
       href: desktop-flows/terminal-emulation-module-not-found.md
+    - name: Troubleshoot failed unattended runs using screenshots
+      href: desktop-flows/troubleshoot-unattended-runs-with-screenshots.md
     - name: Troubleshoot direct connectivity issues
       href: desktop-flows/troubleshoot-direct-connectivity-issues.md
     - name: Troubleshoot desktop flow run queue-based errors
