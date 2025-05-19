@@ -1,5 +1,5 @@
 ---
-title: Guest Invitation Redemption Fails With AADSTS50107 Error
+title: Guest Invitation Redemption Fails With Error AADSTS50107
 description: Provides a solution to the error AADSTS50107 that occurs when a guest user tries to redeem invitation via SAML external trust.
 ms.reviewer: laks, joaos, lyzh, v-weizhu
 ms.service: entra-id
