@@ -34,14 +34,15 @@ When a disable request is received, the server attempts to delete deployed resou
 
 ## Resolution
 
-To resolve this issue, perform the following actions:
+To resolve this issue, confirm that the permission set exists.
 
-- **Check permissions**: Ensure that the user signed in to the Teams admin settings has the necessary permissions to modify all data and manage permission sets. If the current user lacks these permissions, either assign the required permissions or switch to a user who has them.
-- **Check permission set**: Open the Salesforce Developer Console and run the following query to search for the permission set. Confirm that the **Copilot for Sales Permission Set** permission set exists.
+Open the Salesforce Developer Console and run the following query to search for the permission set. Confirm that the **Copilot for Sales Permission Set** permission set exists.
 
 ```sql
 SELECT Id, Name, Label, Description FROM PermissionSet WHERE Name = 'CopilotForSalesPermissionSet'
 ```
+
+If this issue persists, contact [Microsoft support](/microsoft-sales-copilot/get-support) for further assistance.
 
 ## More information
 

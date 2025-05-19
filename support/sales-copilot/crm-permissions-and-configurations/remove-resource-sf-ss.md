@@ -25,15 +25,7 @@ This article helps you troubleshoot an error that occurs when a resource can't b
 
 ## Symptoms
 
-When you try to disable Salesforce with server-to-server flow, you may receive the following error message.
-
-> Couldn't remove the permission set assignment due to an invalid reference key.
-
-## Cause
-
-When a disable request is received, the server attempts to delete deployed resources, such as the connected app and permission set. The error occurs when a resource either no longer exists or cannot be deleted due to dependencies from other components.
-
-You may get the following errors:
+When you try to disable Salesforce with server-to-server flow, one of the following error messages is displayed.
 
 - Couldn't remove the permission set assignment due to an invalid reference key.
 - Connection user ID not found or already removed.
@@ -43,9 +35,13 @@ You may get the following errors:
 - Couldn't find the permission set. It may have been deleted earlier.
 - Couldn't find the connection user. It may have been deleted earlier.
 
+## Cause
+
+When a disable request is received, the server attempts to delete deployed resources, such as the connected app and permission set. The error occurs when a resource either no longer exists or cannot be deleted due to dependencies from other components.
+
 ## Resolution
 
-To resolve this issue, try disabling the connection again. If the issue persists, gather the error details and contact Microsoft support.
+To resolve this issue, try disabling the connection again. If the issue persists, gather the error details and contact [Microsoft support](/microsoft-sales-copilot/get-support).
 
 ## More information
 

@@ -34,7 +34,7 @@ When a disable request is received, the server attempts to delete deployed resou
 
 ## Resolution
 
-To resolve this issue, try again. If the issue persists, gather the error details and contact Microsoft support.
+To resolve this issue, try again. If the issue persists, gather the error details and contact [Microsoft support](/microsoft-sales-copilot/get-support).
 ## More information
 
 If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

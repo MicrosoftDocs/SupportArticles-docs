@@ -34,10 +34,13 @@ When a disable request is received, the server attempts to delete deployed resou
 
 ## Resolution
 
-To resolve this issue, perform the following actions:
+To resolve this issue, confirm that the connected app exists.
 
-- **Check permissions**: Ensure that the user signed in to the Teams admin settings has the necessary permissions to modify all data and manage connected apps. If the current user lacks these permissions, either assign the required permissions or switch to a user who has them.
-- **Check connected app**: In Salesforce, go to **Setup** > **Apps** > **Connected Apps** > **Manage Connected Apps**. Confirm that the **Copilot for Sales Connected App** connected app exists.
+1. Sign in to Salesforce CRM as an administrator.
+
+1. Go to **Setup** > **Apps** > **Connected Apps** > **Manage Connected Apps**. Confirm that the **Copilot for Sales Connected App** connected app exists.
+
+If this issue persists, contact [Microsoft support](/microsoft-sales-copilot/get-support) for further assistance.
 
 ## More information
 
