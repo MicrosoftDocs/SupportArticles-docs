@@ -5,7 +5,7 @@ author: genlin
 ms.author: willfid
 ms.service: entra-id
 ms.date: 01/11/2025
-ms.custom: sap:Microsoft Entra App Integration and Development
+ms.custom: sap:Issues signing into application
 ---
 
 # Your browser is not supported or up-to-date error in MSAL app
