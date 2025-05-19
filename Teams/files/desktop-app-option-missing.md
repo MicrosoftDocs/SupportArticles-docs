@@ -1,21 +1,20 @@
 ---
-title: Desktop app option is missing when editing Office files in Teams
+title: Desktop App Option is Missing When Editing Office Files in Teams
 description: When you try to edit an Office file by using its corresponding desktop app in Teams, the desktop app option is unavailable.
-author: v-charloz
-ms.author: v-chazhang
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Teams Files\
   - CI 159208
+  - CI 5835
   - CSSTroubleshoot
 ms.reviewer: prbalusu; meerak
 appliesto: 
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 05/19/2025
 ---
 
 # The "Desktop app" option is missing when trying to edit an Office file in Teams
@@ -36,7 +35,7 @@ To fix this issue, make sure that the following prerequisite items are true:
 
 - You're using the [Teams desktop app for Windows or Mac](https://www.microsoft.com/microsoft-teams/download-app).
 
-- You download and install the corresponding Office desktop apps (Microsoft Office 2016 or a later version) from the [Microsoft 365 portal](https://portal.office.com/account#installs).
+- You [download and install]((https://support.microsoft.com/office/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658)) the corresponding Office desktop apps (Microsoft Office 2016 or a later version).
 
 - You have an [Office 365 E3 or E5 license](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans) that includes the `O365ProPlusRetail` product ID.
 

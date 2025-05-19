@@ -1,25 +1,22 @@
 ---
-title: Can't Verify Subscription or No Subscription Found in Office Mobile
-description: Discusses the Can't Verify Subscription or No Subscription Found error message that you receive when you try to use Office Mobile on an iPhone. Provides a resolution.
-author: helenclu
+title: Can't Verify Subscription or No Subscription Found
+description: Resolves the Can't Verify Subscription or No Subscription Found error message that you receive when you try to use Office Mobile on an iPhone.
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
+  - CI 5842
 ms.topic: troubleshooting
-ms.author: luche
-appliesto: 
-  - Office Mobile for iPhone
-ms.date: 03/31/2022
+ms.date: 05/19/2025
 ---
 
-# "Can't Verify Subscription" or "No Subscription Found" error messages in Office Mobile
+# "Can't Verify Subscription" or "No Subscription Found" error messages
 
 ## Symptoms
 
-When you use Office Mobile for iPhone, you receive one of the following error messages:  
+When you use Microsoft 365 Copilot app for iOS, you receive one of the following error messages:  
 
 > Can't Verify Subscription
 
@@ -31,31 +28,17 @@ When you use Office Mobile for iPhone, you receive one of the following error me
 
 ## Cause
 
-This issue occurs because a previously activated version of Office Mobile exists on the device, possibly from another subscription. Therefore, the new Office Professional Plus license cannot be applied.
+This issue occurs because a previously activated version exists on the device, possibly from another subscription. Therefore, the new Microsoft 365 license can't be applied.
 
-## Solution
+## Resolution
 
 To resolve this issue, follow these steps:
 
-1. Verify that you have a license assigned to youin the Microsoft 365 portal. To do this, follow these steps:
+1. [Check which Microsoft 365 business product or license](https://support.microsoft.com/office/what-microsoft-365-business-product-or-license-do-i-have-f8ab5e25-bf3f-4a47-b264-174b1ee925fd) you have.
 
-    > [!NOTE]
-    > If you cannot sign in or do not see the **Settings** button, then you may not have administrative permissions or may not have a license assigned to you.
-   1. Sign in to the [Microsoft 365 portal](https://portal.office.com/account/#subscriptions).
-   2. In the left pane, select **Subscriptions**.
+   If you're signed in by using your Work or School account, and you don't have a license assigned, [contact your Microsoft 365 administrator](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b) to get a license assigned.
 
-         :::image type="content" source="./media/subscription-issue-in-office-mobile/office-365-portal-subscriptions.png" alt-text="Screenshot shows after you sign in Microsoft 365 portal, select subscriptions in the left pane.":::
-   3. In the list of subscriptions and licenses, scroll down to the **Office 365 \<edition\>** section, and then look for **The latest desktop version of Office**. If you see this entry in the list, you have an Office subscription that's assigned correctly.
-
-        > [!NOTE]
-        > If you don't see a vertical scroll bar, hover the pointer over the list, press and hold the left mouse button, and then scroll.
-
-         :::image type="content" source="./media/subscription-issue-in-office-mobile/the-latest-desktop-version-of-office.png" alt-text="Screenshot shows the latest desktop version of Office after selecting subscriptions.":::
-   4. If an entry for **The latest desktop version of Office** does not appear in the list, contact your administrator or go to the following website:
-
-        - [Assign or remove licenses, or view a list of unlicensed users](/office365/admin/subscriptions-and-billing/assign-licenses-to-users?preserve-view=true&view=o365-worldwide)
-
-2. Verify the status of the service health for the Office Subscription service.
+2. Verify the status of the [service health](/microsoft-365/enterprise/view-service-health?view=o365-worldwide&preserve-view=true) in the Microsoft 365 admin center.
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 
