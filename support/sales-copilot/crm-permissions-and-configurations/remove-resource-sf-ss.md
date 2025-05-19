@@ -37,7 +37,7 @@ When you try to disable Salesforce with server-to-server flow, one of the follow
 
 ## Cause
 
-When a disable request is received, the server attempts to delete deployed resources, such as the connected app and permission set. The error occurs when a resource either no longer exists or cannot be deleted due to dependencies from other components.
+When a disable request is received, the server attempts to delete deployed resources, such as the connected app and permission set. The error occurs when a resource either no longer exists or can't be deleted due to dependencies from other components.
 
 ## Resolution
 
