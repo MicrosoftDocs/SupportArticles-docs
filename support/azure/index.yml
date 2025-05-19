@@ -100,6 +100,11 @@ productDirectory:
       text: Troubleshooting articles for Azure Container Registry
     - url: azure-kubernetes/welcome-azure-kubernetes.yml
       text: Troubleshooting articles for Azure Kubernetes Service (AKS)
+  - title: Logic Apps
+    imageSrc: "https://learn.microsoft.com/static/ui/media/product/azure/logic-apps.svg"
+    links:
+    - url: logic-apps/index.yml
+      text: Troubleshooting articles for Azure Logic Apps
   - title: High Performance Computing
     imageSrc: "https://static.docs.com/ui/media/product/azure/container-registry.svg"
     links:
