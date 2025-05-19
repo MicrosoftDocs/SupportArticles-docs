@@ -102,6 +102,8 @@
         href: app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md
       - name: Error AADSTS50105 - user not assigned a role
         href: app-integration/error-code-AADSTS50105-user-not-assigned-role.md
+      - name: Error AADSTS50107 - Guest invitation redemption fails
+        href: app-integration/error-aadsts50107-guest-redemption-fails.md
       - name: Error AADSTS650056 - misconfigured app
         href: app-integration/error-code-AADSTS650056-misconfigured-app.md
       - name: Error AADSTS70001 - app not found in directory
