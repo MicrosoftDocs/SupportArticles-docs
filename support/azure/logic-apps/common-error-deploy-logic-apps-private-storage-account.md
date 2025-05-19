@@ -8,7 +8,7 @@ ms.date: 05/19/2025
 # Customer intent: As a developer, I want to deploy Standard logic apps to Azure storage accounts that use private endpoints.
 ---
 
-# Troubleshooting private storage account errors in Azure Logic Apps
+# Troubleshoot private storage account errors in Azure Logic Apps
 
 When you create a single-tenant Standard logic app resource, you're required to have a storage account for storing logic app artifacts. You can restrict access to this storage account so that only the resources inside a virtual network can connect to your logic app workflow. Azure Storage supports adding private endpoints to your storage account.
 
