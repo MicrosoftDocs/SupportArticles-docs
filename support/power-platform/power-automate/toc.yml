@@ -212,6 +212,8 @@
       href: desktop-flows/tenant-restictions-machine-registration.md  
     - name: '"The specified module could not be found" error with terminal emulation action'
       href: desktop-flows/terminal-emulation-module-not-found.md
+    - name: Troubleshoot failed unattended runs using screenshots
+      href: desktop-flows/troubleshoot-unattended-runs-with-screenshots.md
     - name: Troubleshoot direct connectivity issues
       href: desktop-flows/troubleshoot-direct-connectivity-issues.md
     - name: Troubleshoot desktop flow run queue-based errors
