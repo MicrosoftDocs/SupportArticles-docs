@@ -1,6 +1,6 @@
 ---
 title: Can't Verify Subscription or No Subscription Found
-description: Resolves the Can't Verify Subscription or No Subscription Found error message that you receive when you try to use Office Mobile on an iPhone.
+description: Resolves the Can't Verify Subscription or No Subscription Found error message that you receive when you try to use the Microsoft 365 Copilot app for iOS.
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,13 +10,15 @@ ms.custom:
   - CI 5842
 ms.topic: troubleshooting
 ms.date: 05/19/2025
+appliesto: 
+  - Microsoft 365 Copilot app for iOS
 ---
 
 # "Can't Verify Subscription" or "No Subscription Found" error messages
 
 ## Symptoms
 
-When you use Microsoft 365 Copilot app for iOS, you receive one of the following error messages:  
+When you try to use the [Microsoft 365 Copilot app for iOS](https://support.microsoft.com/office/microsoft-365-copilot-app-for-ios-c8880c05-883a-46b6-ad32-9bffa31228d0), you receive one of the following error messages:  
 
 > Can't Verify Subscription
 
