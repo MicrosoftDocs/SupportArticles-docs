@@ -15,12 +15,12 @@ This article helps you troubleshoot and resolve the "Try again" error when you a
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Copilot for Sales Outlook add-in        |
+|**Client app**     |  Teams        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce        |
-|**Users**     | All users  |
+|**Users**     | Admin  |
 
 ## Symptoms
 
