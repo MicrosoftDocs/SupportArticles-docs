@@ -1,6 +1,8 @@
 ---
 title: Issue with Changing Accounting Date Due to Reversing Distributions and Closed Fiscal Period
+description: Provides a resolution for the issue that you can't change the accounting date on a purchase order.
 ms.reviewer: shubhamshr
+ms.date: 05/19/2025
 ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orderss
 ---
 # Cannot Change Accounting Date or Perform Budget Check Due to Unjournalized Reversing Distributions and Closed Fiscal Period
