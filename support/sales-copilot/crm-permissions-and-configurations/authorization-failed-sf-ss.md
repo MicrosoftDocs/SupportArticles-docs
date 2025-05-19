@@ -30,11 +30,11 @@ When a user tries to access Salesforce with server-to-server flow, the following
 
 ## Error 1: Couldn't get client credentials to access Salesforce
 
-## Cause
+## Cause 1
 
 During Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user. An access token is retrieved with the client ID and the secret of the connected app. The error occurs when the secret is invalid.
 
-## Resolution
+## Resolution 1
 
 To resolve this issue, contact [Microsoft support](/microsoft-sales-copilot/get-support) and provide the following information:
 - If the connected app "Copilot for Sales Connected App" was updated accidentally. 
@@ -42,11 +42,11 @@ To resolve this issue, contact [Microsoft support](/microsoft-sales-copilot/get-
 
 ## Error 2: Session ID isn't allowed for use REST API access at Salesforce
 
-## Cause
+## Cause 2
 
 During Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The error occurs when appropriate OAuth scope is not set for the connected app.
 
-## Resolution
+## Resolution 2
 
 To resolve this issue, contact your administrator to set the appropriate OAuth scope for the connected app Confirm that the connection is still active in admin settings.
 
