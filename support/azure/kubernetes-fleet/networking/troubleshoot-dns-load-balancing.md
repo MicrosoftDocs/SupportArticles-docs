@@ -162,7 +162,7 @@ kubectl get trafficmanagerbackend -n <namespace> <backend-name> -o yaml
 Possible causes:
 
 * The `TrafficManagerBackend` was created in a different namespace than the `TrafficManagerProfile`.
-* The `TrafficManagerProfile` was object exists, but the associated Azure Traffic Manager resource couldn't be found.
+* The `TrafficManagerProfile` object exists, but the associated Azure Traffic Manager resource couldn't be found.
 
 The `TrafficManagerBackend` status provides details of the error.
   
