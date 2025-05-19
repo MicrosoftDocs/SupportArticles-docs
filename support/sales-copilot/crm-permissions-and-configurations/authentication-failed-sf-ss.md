@@ -38,7 +38,7 @@ During Salesforce server-to-server flow setup, a connected app is deployed to th
 
 ## Resolution
 
-To resolve this issue, you must fix the connected app and integration user configuration in Salesforce. 
+To resolve this issue, ensure that the connected app and integration user configuration are correct. 
 
 1. Sign in to Salesforce CRM as an administrator.
 1. Go to **Setup** > **Platform Tools** > **Apps** > **App Manager**.

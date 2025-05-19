@@ -36,7 +36,7 @@ During Salesforce server-to-server flow setup, a connected app is deployed to th
 
 ## Resolution
 
-To resolve this issue, contact Microsoft support and provide the following information:
+To resolve this issue, contact [Microsoft support](/microsoft-sales-copilot/get-support) and provide the following information:
 - If the connected app "Copilot for Sales Connected App" was deleted accidentally. 
 - If the connected app is still available, get the ID of the connected app.
 

@@ -24,19 +24,18 @@ This article helps you troubleshoot and resolve the "Try again" error when you a
 
 ## Symptoms
 
-As an admin, when you try to set up the server-to-server flow for Salesforce, you may encounter the following error message.
+As an admin, when you try to set up the server-to-server flow for Salesforce, you may encounter one of the following errors:
 
-> Try again. 
-
-## Cause
-
-During setup, you might run into a few temporary issues such as:
 - Try again.
 - This might be a temporary error. Try again. If it doesn't work, check back in 5-10 minutes.
 
+## Cause
+
+When you set up the server-to-server flow for Salesforce, the system attempts to establish a connection with Salesforce. During the setup, you might run into a few temporary issues.
+
 ## Resolution
 
-To resolve this issue, wait for a few minutes and then try again. If the issue persists, gather the error details and contact Microsoft support.
+To resolve this issue, wait for a few minutes and then try again. If the issue persists, gather the error details and contact [Microsoft support](/microsoft-sales-copilot/get-support).
 
 ## More information
 

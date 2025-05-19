@@ -1,7 +1,7 @@
 ---
 title: Server-to-server authorization failed error when accessing Salesforce with server-to-server flow
 description: Resolves an error that occurs due to invalid secret of the connected app in Salesforce.
-ms.date: 05/12/2025
+ms.date: 05/19/2025
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
@@ -36,9 +36,9 @@ During Salesforce server-to-server flow setup, a connected app is deployed to th
 
 ## Resolution
 
-To resolve this issue, contact Microsoft support and provide the following information:
+To resolve this issue, contact [Microsoft support](/microsoft-sales-copilot/get-support) and provide the following information:
 - If the connected app "Copilot for Sales Connected App" was updated accidentally. 
-- If the connected app is still available, get the client ID of the connected app.
+- If the connected app is still available, get the ID of the connected app.
 
 ## Error 2: Session ID isn't allowed for use REST API access at Salesforce
 
@@ -53,9 +53,9 @@ To resolve this issue, contact your administrator to set the appropriate OAuth s
 1. Sign in to Salesforce CRM as an administrator.
 1. Go to **Setup** > **Platform Tools** > **Apps** > **App Manager**.
 1. On **Copilot for Sales Connected App** row, select the down arrow, and then select **Edit**.
-1. Under **API (Enable OAuth Settings)**, select **Manage user data via APIs (api)** in the **Selected OAuth Scopes** list.
-
-Also, check if there were unintended changes made to the connected app configuration. If yes, revert the changes to the original configuration.
+1. Under **API (Enable OAuth Settings)**, confirm that **Manage user data via APIs (api)** is selected in the **Selected OAuth Scopes** list. If it's not selected, check if the setting was changed manually by mistake. If yes, revert the changes. 
+    
+    If you don't select **Manage user data via APIs (api)**, the connected app won't be able to access Salesforce data.
 
 ## More information
 
