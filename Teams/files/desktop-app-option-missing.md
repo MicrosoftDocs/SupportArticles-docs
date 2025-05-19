@@ -35,7 +35,7 @@ To fix this issue, make sure that the following prerequisite items are true:
 
 - You're using the [Teams desktop app for Windows or Mac](https://www.microsoft.com/microsoft-teams/download-app).
 
-- You [download and install]((https://support.microsoft.com/office/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658)) the corresponding Office desktop apps (Microsoft Office 2016 or a later version).
+- You [download and install](https://support.microsoft.com/office/download-install-or-reinstall-microsoft-365-or-office-2024-on-a-pc-or-mac-4414eaaf-0478-48be-9c42-23adc4716658) the corresponding Office desktop apps (Microsoft Office 2016 or a later version).
 
 - You have an [Office 365 E3 or E5 license](https://www.microsoft.com/microsoft-365/enterprise/compare-office-365-plans) that includes the `O365ProPlusRetail` product ID.
 
