@@ -37,15 +37,29 @@ Because Static Egress Gateway is currently not supported on [Azure CNI Pod Subne
 
 ### Egress Gateway Provisioning Issues
 
-#### Step 1: Make sure admission controllers aren't blocking Istio egress provisioning
+#### Step 1: Verify that the Istio egress gateway deployment and service are provisioned
+
+Each Istio egress gateway should have a respective deployment and service provisioned. Verify that the Istio egress gateway deployment is ready. The name of the deployment will be in the following format: `<istio-egress-gateway-name>-<asm-revision>`. For instance, if the name of the egress gateway is `aks-istio-egressgateway` and the Istio add-on revision is `asm-1-24`, the name of the deployment will be `aks-istio-egressgateway-asm-1-24`.
+
+```bash
+kubectl get deployment $ISTIO_EGRESS_DEPLOYMENT_NAME -n $ISTIO_EGRESS_NAMESPACE
+```
+
+You should also see a service of type `ClusterIP` for the Istio egress gateway with a service VIP assigned. The name of the service will be the same as the name of the Istio egress gateway, without any `revision` appended. Ex: `aks-istio-egressgateway`. 
+
+```bash
+kubectl get service $ISTIO_EGRESS_NAME -n $ISTIO_EGRESS_NAMESPACE
+```
+
+#### Step 2: Make sure admission controllers aren't blocking Istio egress provisioning
 
 Ensure that self-managed mutating and validating webhooks aren't blocking provisioning of the Istio egress gateway resources. Because the Istio egress gateway can be deployed in user-managed namespaces, [AKS admissions enforcer](/azure/aks/faq#can-admission-controller-webhooks-impact-kube-system-and-internal-aks-namespaces-) can't prevent custom admission controllers from affecting Istio egress gateway resources.
 
-#### Step 2: Verify that the Istio add-on egress gateway name is valid
+#### Step 3: Verify that the Istio add-on egress gateway name is valid
 
 Istio egress gateway names must be less than or equal to 63 characters in length, can only consist of lowercase alphanumerical characters, '.' and '-,' and must start and end with a lowercase alphanumerical character. Istio egress gateway names should also be valid DNS names. The regex used for Istio egress name validations is: `^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$`.
 
-#### Step 3: Inspect Static Egress Gateway componnents if Istio egress deployments are not ready
+#### Step 4: Inspect Static Egress Gateway components if Istio egress deployments are not ready
 
 If Static Egress Gateway components such as the `kube-egress-gateway-cni-manager` are crashing, or there are other issues with the static egress IP allocation, Istio egress gateway provisioning could fail. See the subsequent section on [Static Egress Gateway Errors](#static-egress-gateway-errors-or-misconfiguration) to troubleshoot the Static Egress Gateway and [inspect the `StaticGatewayConfiguration`](#step-2-make-sure-that-an-egressipprefix-has-been-provisioned-for-the-staticgatewayconfiguration).
 
@@ -126,7 +140,17 @@ More information about Istio egress configuration can be found on the open sourc
 
 You can enable Envoy access logging via the [Istio MeshConfig](/azure/aks/istio-meshconfig) or [Telemetry API](/azure/aks/istio-telemetry) to inspect traffic flowing through the egress gateway.
 
-#### Step 2: Validate the Istio `Gateway` configuration
+#### Step 2: Inspect Istio egress gateway and istiod logs
+
+You should inspect the logs in the `istio-proxy` container for the Istio add-on egress gateway:
+
+```bash
+kubectl logs $ISTIO_EGRESS_POD_NAME -n $ISTIO_EGRESS_NAMESPACE
+```
+
+If you see `info    Envoy proxy is ready` in the logs, then the Istio egress gateway pod is able to communicate with Istiod and ready to serve traffic. It's also worth inspecting the `istiod` control plane logs to see if there are any Envoy `xDS` errors related to updating the configuration of the Istio egress gateway.
+
+#### Step 3: Validate the Istio `Gateway` configuration
 
 Ensure that the `selector` in the `Gateway` custom resource is properly set. For instance, if your `Gateway` object for the Istio egress gateway uses the `istio:` selector, then it must match the value of the `istio` label in the Kubernetes service spec for that egress gateway. 
 
@@ -158,14 +182,14 @@ spec:
     istio: asm-egress-test
 ```
 
-#### Step 3: Ensure that a `ServiceEntry` has been created and has DNS resolution enabled
+#### Step 4: Ensure that a `ServiceEntry` has been created and has DNS resolution enabled
 
 Ensure that you have created a `ServiceEntry` custom resource for the specific external service that that the egress gateway is forwarding requests to. Creating a `ServiceEntry` may be necessary even if the `outboundTrafficPolicy.mode` is set to `ALLOW_ANY`, since the `Gateway`, `VirtualService`, and `DestinationRule` custom resources may reference an external host via a `ServiceEntry` name. Additionally, when configuring a `ServiceEntry` to be used by an Istio egress gateway, you must set the `spec.resolution` to `DNS`. 
 
-#### Step 4: Verify the Kubernetes secret namespace for egress gateway mTLS origination
+#### Step 5: Verify the Kubernetes secret namespace for egress gateway mTLS origination
 
 If you're trying to configure the Istio egress gateway to perform mutual TLS origination, ensure that the Kubernetes secret object is in the same namespace that the egress gateway is deployed in. 
 
-#### Step 5: Ensure that applications are sending plaintext HTTP requests for Egress Gateway TLS origination and Authorization Policies
+#### Step 6: Ensure that applications are sending plaintext HTTP requests for Egress Gateway TLS origination and Authorization Policies
 
 To originate TLS and to apply Authorization Policies at the egress gateway, workloads in the mesh must send HTTP requests. The sidecar proxies can then use mTLS when forwarding requests to the egress gateway, and the egress gateway will terminate the mTLS connection and originate a simple TLS / HTTPS connection to the destination host.
