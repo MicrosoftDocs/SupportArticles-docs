@@ -12,7 +12,7 @@ ms.date: 05/19/2025
 
 When you create a single-tenant Standard logic app resource, you're required to have a storage account for storing logic app artifacts. You can restrict access to this storage account so that only the resources inside a virtual network can connect to your logic app workflow. Azure Storage supports adding private endpoints to your storage account.
 
-This article describes the common error that may happen when you deploy such logic apps to protected private storage accounts.
+This article describes common errors that might happen when you deploy Standard logic apps to protected private storage accounts.
 
 ## Troubleshoot common errors
 
