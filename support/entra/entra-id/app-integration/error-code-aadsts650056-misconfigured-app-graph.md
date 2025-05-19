@@ -23,7 +23,6 @@ This error usually occurs due to one of the following reasons:
 
 - The application does not have the required permissions to call Microsoft Graph APIs.
 - The admin has not consented to the permissions for the application on behalf of the tenant.
-- The application identifier specified in the request does not match the registered application identifier in Microsoft Entra ID.
 
 ## Solution 1: Verify application permissions and consent
 
@@ -32,20 +31,20 @@ If your organization owns the application, follow these steps:
 1. Sign in to the [Azure portal](https://portal.azure.com), go to the **App registrations**, select your app registration, and then select **API permissions**.
 2. Make sure that the application has at least the **User.Read** delegated permission from **Microsoft Graph**.
 3. Check the **Status** to verify whether the permissions are consented to. For example:
-    - If the permission is not consented to, it will appear as **Pending** or blank.
+    - If the permission isn't consented to, it will appear as **Pending** or blank.
     - If successfully consented, it will appear as "Granted for [Tenant Name]".
 
     Example of a consented permission:
 
     :::image type="content" source="./media/error-code-aadsts650056-misconfigured-app-graph/graph-api-permissions.png" alt-text="Screenshot of adding Graph API permissions." :::
 
-If your organization is not the application owner, follow these steps:
+If your organization isn't the application owner, follow these steps:
 
-1. Sign in to the application by using Global Administrator account. You should see a consent screen prompting you to grant permissions. Ensure you check the box for **"Consent on behalf of your organization"** before proceeding.
+1. Sign in to the application by using Global Administrator account. You should see a consent screen prompting you to grant permissions. Make sure that you select the **Consent on behalf of your organization** option before proceeding.
 
     Example of the consent screen:
 :::image type="content" source="./media/error-code-aadsts650056-misconfigured-app-graph/consent-permissions.png" alt-text="Screenshot of consent screen" :::
-2. If you do not see the consent screen, delete the application from the **Enterprise applications** section in Microsoft Entra ID and try signing in again.
+2. If you don't see the consent screen, delete the application from the **Enterprise applications** section in Microsoft Entra ID and try signing in again.
 
 If the error persists, proceed to the next solution.
 
