@@ -7,7 +7,7 @@ ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orde
 ---
 # Workflow approval fails with the "Accounting distribution validation failed" error
 
-This article addresses an issue where the workflow approval process for a purchase order fails due to unvalidated accounting distributions. The error occurs when the purchase order is modified and resubmitted without the validating accounting distributions, causing the workflow process to stop.
+This article addresses an issue where the workflow approval process for a purchase order fails due to unvalidated accounting distributions. The error occurs when the purchase order is modified and resubmitted without validating the accounting distributions, causing the workflow process to stop.
 
 ## Symptoms
 
