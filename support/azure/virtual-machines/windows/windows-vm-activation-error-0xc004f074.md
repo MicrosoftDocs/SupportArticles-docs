@@ -100,7 +100,7 @@ Follow these steps to check whether the VM is behind a Standard SKU internal loa
 
 ### Part 3: Verify the connectivity between the VM and Azure KMS service
 
-1. Clear the existing KMS Server configurations, and make sure that the VM is configured to use the correct Azure KMS server. To do this, run the following Software License Manager script command:
+1. Clear the existing KMS server configurations, and make sure that the VM is configured to use the correct Azure KMS server. To do this, run the following Software License Manager script command:
 
    ```powershell
    slmgr.vbs /ckms
