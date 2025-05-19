@@ -1,16 +1,15 @@
 ---
 title: Can't Access the Storage Account Services from Azure Logic Apps
-description: Deploy Standard logic app workflows to Azure storage accounts that use private endpoints and deny public access.
+description: Describes the common error that may happen when you deploy such logic apps to protected private storage accounts.
 services: logic-apps
 ms.suite: integration
 ms.reviewer: estfan, azla
 ms.custom: sap:Connectors
+ms.date: 05/19/2025
 # Customer intent: As a developer, I want to deploy Standard logic apps to Azure storage accounts that use private endpoints.
 ---
 
 # Troubleshooting private storage account errors in Azure Logic Apps
-
-[!INCLUDE [logic-apps-sku-standard](../../includes/logic-apps-sku-standard.md)]
 
 When you create a single-tenant Standard logic app resource, you're required to have a storage account for storing logic app artifacts. You can restrict access to this storage account so that only the resources inside a virtual network can connect to your logic app workflow. Azure Storage supports adding private endpoints to your storage account.
 
@@ -88,9 +87,8 @@ The following list includes more troubleshooting actions that you can take to fi
 
      1. In the VM, find the DNS server that's used for resolution.
 
-     1. In your logic app, [find and set the `WEBSITE_DNS_SERVER` app setting](edit-app-settings-host-settings.md?tabs=azure-portal?tabs=azure-portal#manage-app-settings---localsettingsjson) to the same DNS server value that you found in the previous step.
+     1. In your logic app, [find and set the `WEBSITE_DNS_SERVER` app setting](/azure/logic-apps/edit-app-settings-host-settings?tabs=azure-portal#manage-app-settings---localsettingsjson) to the same DNS server value that you found in the previous step.
 
      1. Check that the virtual network integration is set up correctly with the appropriate virtual network and subnet in your logic app.
-
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
