@@ -84,7 +84,7 @@ status:
 
 Possible causes:
 
-* The `metadata.name` (DNS prefix) specified in the `TrafficManagerProfile` manifest is already in use by another Azure Traffic Manager profile.
+* The DNS prefix generated is already in use by another Azure Traffic Manager profile. The DNS prefix consists of the namespace and the `metadata.name` field in the `TrafficManagerProfile` manifest. For example, if the namespace is `team-a` and the `metadata.name` is `webapp`, the DNS prefix would `team-a-webapp`.
 
 The `TrafficManagerProfile` status provides details of the source of the error.
 
@@ -99,7 +99,11 @@ status:
     type: Programmed
 ```
 
-**Possible Resolutions:** change the `metadata.name` field in the `TrafficManagerProfile`. You can use `nslookup` or similar tools to check if the DNS name (yourcustomname.trafficmanager.net) is available.
+**Possible Resolutions:**
+
+* Use `nslookup` or a similar tool to check if the full DNS name (`team-a-webapp.trafficmanager.net`) is available.
+* Change the `metadata.name` field in the `TrafficManagerProfile` manifest to a unique name.
+* Use a different namespace for the `TrafficManagerProfile` manifest. THis impacts the `TrafficManagerBackend` and `ServiceExport` objects, which must be in the same namespace.
 
 ### Azure Traffic Manager subscription limits reached
 
@@ -141,7 +145,7 @@ status:
     type: Programmed
 ```
 
-**Possible Resolutions:** Resubmit the request. If the error persists, check the Azure Traffic Manager service health.
+**Possible Resolutions:** If the error persists, check the Azure Traffic Manager service health.
 
 ## TrafficManagerBackend can't be created
 
@@ -190,6 +194,7 @@ status:
 **Possible Resolutions:**
 
 * Make sure to create the `TrafficManagerBackend` in the same namespace as the `TrafficManagerProfile`.
+* Ensure that the `Programmed` condition of `TrafficManagerProfile` is `Accepted`. If not, check the profile definition for validity and resubmit.
 * Ensure the Azure Traffic Manager resource exists. To recreate the resource, delete the `TrafficManagerProfile` from the Fleet Manager hub cluster and reapply it.
 
 ### Invalid Service or ServiceExport
@@ -282,7 +287,24 @@ status:
 
 ## Use Azure Log Analytics to troubleshoot
 
-In addition to querying the Fleet Manager hub cluster, you can use Azure Log Analytics for troubleshooting by selecting entries containing `trafficmanagerprofile/controller.go` in the `fleet-hub-net-controller-manager` category.
+In addition to querying the Fleet Manager hub cluster, you can use Azure Log Analytics for troubleshooting. 
+
+### TrafficManagerProfile
+
+Filter entries in the `fleet-hub-net-controller-manager` category using `trafficmanagerprofile/controller.go`.
+
+```kusto
+AzureDiagnostics
+| where Category == "fleet-hub-net-controller-manager"
+| project TimeGenerated, ResourceId, log_s
+| where ResourceId == "/subscriptions/xxx/resourceGroups/your-fleet-rg/providers/Microsoft.ContainerService/fleets/your-fleet"
+| where log_s contains "trafficmanagerprofile/controller.go"
+| limit 1000
+```
+
+### TrafficManagerBackend
+
+Filter entries in the `fleet-hub-net-controller-manager` category using `trafficmanagerbackend/controller.go`.
 
 ```kusto
 AzureDiagnostics
