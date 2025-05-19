@@ -1,6 +1,6 @@
 ---
-title: Can't delete load balancer with a private link service or a private link service with private endpoint connections
-description: Provides a solution to the CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error when you delete an AKS cluster.
+title: Can't delete a load balancer with a private link service or a private link service with private endpoint connections
+description: Provides a solution to the CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error code when you delete an AKS cluster.
 ms.date: 12/04/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, edneto, v-leedennis, v-weizhu
@@ -8,7 +8,7 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error code so that I can successfully delete an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# A load balancer with a private link service or a private link service with private endpoint connections can't be deleted
+# A load balancer with a private link service or a private link service with private endpoint connections cannot be deleted
 
 This article discusses how to identify and resolve the `CannotDeleteLoadBalancerWithPrivateLinkService` or `PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted` error that occurs when you try to delete a Microsoft Azure Kubernetes Service (AKS) cluster.
 

@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot PublicIPCountLimitReached error code
-description: Learn how to troubleshoot the PublicIPCountLimitReached error when you try to upgrade an Azure Kubernetes Service cluster.
+title: Troubleshoot PublicIPCountLimitReached Error Code
+description: Learn how to resolve the PublicIPCountLimitReached error when you try to upgrade an Azure Kubernetes Service cluster.
 ms.date: 10/06/2024
 editor: v-jsitser
 ms.reviewer: chiragpa, v-leedennis
@@ -8,8 +8,7 @@ ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a PublicIPCountLimitReached error so that I can upgrade the cluster successfully.
 ---
-
-# Troubleshoot the "PublicIPCountLimitReached" error code
+# Troubleshoot the PublicIPCountLimitReached error code
 
 This article explains how to identify and resolve the "PublicIPCountLimitReached" error. This error occurs when you try to create, update, or upgrade an Azure Kubernetes Service (AKS) cluster. This error can also be caused by any other action that triggers the creation of a Public IP address, such as deploying a Kubernetes Service-type Public Load Balancer.
 

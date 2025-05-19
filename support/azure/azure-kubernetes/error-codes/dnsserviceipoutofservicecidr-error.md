@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot the DnsServiceIpOutOfServiceCidr error code
-description: Learn how to troubleshoot the DnsServiceIpOutOfServiceCidr error when you try to create or upgrade an AKS cluster.
+title: Troubleshoot DnsServiceIpOutOfServiceCidr Error Code
+description: Learn how to resolve the DnsServiceIpOutOfServiceCidr error when you try to create or upgrade an AKS cluster.
 ms.date: 10/17/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, edneto, v-leedennis
@@ -8,7 +8,7 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the InUseRouteTableCannotBeDeleted error so that I can successfully delete an AKS cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the DnsServiceIpOutOfServiceCidr error
+# Troubleshoot the DnsServiceIpOutOfServiceCidr error code
 
 This article discusses how to identify and resolve the `DnsServiceIpOutOfServiceCidr` error that occurs when you try to create or upgrade an Azure Kubernetes Service (AKS) cluster.
 

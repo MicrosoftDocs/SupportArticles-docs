@@ -1,6 +1,6 @@
 ---
-title: InvalidLoadBalancerProfileAllocatedOutboundPorts error code
-description: Learn how to fix the InvalidLoadBalancerProfileAllocatedOutboundPorts error when you try to create or update an Azure Kubernetes Service (AKS) cluster.
+title: InvalidLoadBalancerProfileAllocatedOutboundPorts Error Code
+description: Learn how to resolve the InvalidLoadBalancerProfileAllocatedOutboundPorts error when you try to create or update an Azure Kubernetes Service (AKS) cluster.
 ms.date: 05/06/2024
 ms.reviewer: jotavar, v-weizhu
 ms.service: azure-kubernetes-service
@@ -8,7 +8,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to fix the InvalidLoadBalancerProfileAllocatedOutboundPorts error so that I can create or update an AKS cluster successfully.
 ---
 
-# "InvalidLoadBalancerProfileAllocatedOutboundPorts" error when creating or updating an AKS cluster
+# InvalidLoadBalancerProfileAllocatedOutboundPorts error when creating or updating an AKS cluster
 
 This article discusses how to identify and resolve the "InvalidLoadBalancerProfileAllocatedOutboundPorts" error code that occurs when you try to create or update a Microsoft Azure Kubernetes Service (AKS) cluster.
 

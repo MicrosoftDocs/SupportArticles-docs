@@ -1,12 +1,12 @@
 ---
-title: CreateOrUpdateVirtualNetworkLinkFailed error code 
-description: Provides a solution to the CreateOrUpdateVirtualNetworkLinkFailed error that occurs when you try to update or upgrade an Azure Kubernetes Service (AKS) cluster.
+title: CreateOrUpdateVirtualNetworkLinkFailed Error Code 
+description: Provides a solution to the CreateOrUpdateVirtualNetworkLinkFailed error code when you try to update or upgrade an Azure Kubernetes Service (AKS) cluster.
 ms.date: 03/13/2024
 ms.reviewer: axelg, chiragpa, jpalma, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# "CreateOrUpdateVirtualNetworkLinkFailed" error when updating or upgrading an AKS cluster
+# CreateOrUpdateVirtualNetworkLinkFailed error when updating or upgrading an AKS cluster
 
 This article provides a solution to the "CreateOrUpdateVirtualNetworkLinkFailed" error code that occurs when you try to update or upgrade a Microsoft Azure Kubernetes Service (AKS) cluster.
 

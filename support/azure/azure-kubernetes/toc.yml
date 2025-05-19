@@ -407,7 +407,7 @@
   - name: QuotaExceeded or InsufficientVCPUQuota error
     href: error-codes/quota-exceeded-error.md
   - name: BadRequest or InvalidClientSecret error
-    href: error-codes/badrequest-invalidclientsecret-error.md
+    href: error-codes/bad-request-or-invalid-client-secret-error.md
   - name: DnsServiceIpOutOfServiceCidr error
     href: error-codes/dnsserviceipoutofservicecidr-error.md
   - name: NodePoolMcVersionIncompatible error
@@ -429,6 +429,6 @@
   - name: CreateOrUpdateVirtualNetworkLinkFailed error
     href: error-codes/createorupdatevirtualnetworklinkfailed-error.md
   - name: CustomPrivateDNSZoneMissingPermissionError error
-    href: error-codes/customprivatednszonemissingpermissionerror-error.md
+    href: error-codes/customprivatednszonemissingpermissions-error.md
   - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
     href: error-codes/invalidloadbalancerprofileallocatedoutboundports-error.md
