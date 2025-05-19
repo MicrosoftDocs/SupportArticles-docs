@@ -1,43 +1,25 @@
 ### YamlMime:Landing
 
-title: Azure Logic Apps documentation # < 60 chars
-summary: Build automated scalable workflows, business processes, and enterprise orchestrations to integrate your apps and data across cloud services and on-premises systems. # < 160 chars
+title: Azure Logic Apps troubleshooting documentation
+summary: Welcome to Azure Logic Apps troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Logic Apps. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 
 metadata:
-  title: Azure Logic Apps documentation
-  description: Build automated scalable workflows, business processes, and enterprise orchestrations to integrate your apps and data across cloud services and on-premises systems.
-  ms.service: azure-logic-apps
-  ms.topic: landing-page
-  author: genlin
-  ms.author: genli
-  ms.date: 03/27/2025
+  title: Troubleshoot Azure Logic Apps issues
+  description: Documentation for troubleshooting common issues with Azure Logic Apps. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: azure-kubernetes-fleet-manager
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/30/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-# Cards and links should be based on top customer tasks or top subjects
-# Start card title with a verb
-  # Card (optional)
-  - title: Azure Logic Apps troubleshooting
+
+# Card
+  - title:  Troubleshooting
     linkLists:
-      - linkListType: overview
+      - linkListType: how-to-guide
         links:
-          - text: What is Azure Logic Apps?
-            url: logic-apps-overview.md
-    
-  - title: More information
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: Service limits and configuration
-            url: logic-apps-limits-and-config.md
-          - text: Pricing model
-            url: logic-apps-pricing.md
-          - text: Azure CLI - Consumption
-            url: /cli/azure/logic
-          - text: Azure CLI - Standard
-            url: /cli/azure/logicapp
-          - text: Azure PowerShell
-            url: /powershell/module/az.logicapp/
-          - text: REST API
-            url: /rest/api/logic/
+          - text:  Troubleshooting Private Storage Errors in Azure Logic Apps
+            url: common-error-deploy-logic-apps-private-storage-account.md

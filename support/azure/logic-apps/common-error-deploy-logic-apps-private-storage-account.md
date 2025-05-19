@@ -1,5 +1,5 @@
 ---
-title: Deploy Standard logic apps to private storage accounts
+title: Can't Access the Storage Account Services from Azure Logic Apps
 description: Deploy Standard logic app workflows to Azure storage accounts that use private endpoints and deny public access.
 services: logic-apps
 ms.suite: integration
@@ -8,7 +8,7 @@ ms.custom: sap:Connectors
 # Customer intent: As a developer, I want to deploy Standard logic apps to Azure storage accounts that use private endpoints.
 ---
 
-# Deploy single-tenant Standard logic apps to private storage accounts using private endpoints
+# Troubleshooting private storage account errors in Azure Logic Apps
 
 [!INCLUDE [logic-apps-sku-standard](../../includes/logic-apps-sku-standard.md)]
 
