@@ -58,7 +58,7 @@ After the troubleshooter finishes, it displays the results and provides addition
 </details>
 
 <details>
-<summary><b>Sign out of Office and sign back in</b></summary>
+<summary><b>Sign out of Microsoft 365 and sign back in</b></summary>
 
 1. Open a Microsoft 365 app, such as Word.
 1. Select your name and profile picture or icon at the top.
