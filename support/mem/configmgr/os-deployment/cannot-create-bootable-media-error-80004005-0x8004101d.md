@@ -30,7 +30,7 @@ StageCertificate::RetrieveTokenForMediaCert() failed. 0x8004101d
 
 ## Cause
 
-This issue occurs because the SMS Provider isn't located in the same location as the management point. In Configuration Manager (current branch, version 2409), the system checks the location of management point and attempts to use the DLLs available in that location.
+This issue occurs because the SMS provider isn't located in the same location as the management point. In Configuration Manager (current branch, version 2409), the system checks the location of management point and attempts to use the DLLs available in that location.
 
 ## Resolution
 
