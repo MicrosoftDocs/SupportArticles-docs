@@ -53,7 +53,7 @@ In particular, authenticated proxies that use the credentials of the connected W
 
 You can refer to [Proxy setup](/power-automate/desktop-flows/how-to/proxy-settings) if you determine that you need to override the default proxy settings used by the Power Automate service. You might also need to [change the on-premises service account](/power-automate/desktop-flows/troubleshoot#change-the-on-premises-service-account).
 
-For Azure Relay to function properly, it's necessary to configure the proxy and firewall settings to permit the relay gateways associated with both the primary and secondary namespaces. This ensures that the communication between these gateways isn't blocked by the network security settings.
+For Azure Relay to function properly, it's necessary to configure the proxy and firewall settings to permit the relay gateways associated with both the primary and secondary namespaces. It ensures that the communication between these gateways isn't blocked by the network security settings.
 
 ## How to investigate
 
@@ -120,7 +120,7 @@ If the issue still persists, you can open a support ticket with Microsoft by pro
 
 ## Enable WCF tracing
 
-1. In the installation folder (typically _C:\Program Files (x86)\Power Automate Desktop_), edit the _UIFlowService.exe.config_ file. This requires running your text editor as administrator.
+1. In the installation folder (typically _C:\Program Files (x86)\Power Automate Desktop_), edit the _UIFlowService.exe.config_ file. It requires running your text editor as administrator.
 
 2. Add the following configuration section between \</system.net> and \<appSettings>:
 
@@ -143,7 +143,7 @@ If the issue still persists, you can open a support ticket with Microsoft by pro
     </system.diagnostics>
     ```
 
-    - You can substitute the `c:\logs\PADwcfTraces.svclog` value with any valid path you want, but the folder (`c:\logs` in this example) must exist. Otherwise, it isn't be created and logs aren't be written.
+    - You can substitute the `c:\logs\PADwcfTraces.svclog` value with any valid path you want, but the folder (`c:\logs` in this example) must exist. Otherwise, it isn't be created and logs aren't written.
     - The Power Automate service needs permissions to write logs into the specified folder. You can grant full control to the `Everyone` user, allowing any user or service to write to the folder. Alternatively, to restrict permissions to only the Power Automate service, find the service user's Security Identifier (Sid) by running `sc showsid UIFlowService`, and then grant permissions to that user.
 
 3. After saving the config file, restart the Power Automate service.
