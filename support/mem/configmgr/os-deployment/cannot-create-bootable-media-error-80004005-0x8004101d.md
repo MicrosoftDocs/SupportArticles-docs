@@ -32,6 +32,10 @@ StageCertificate::RetrieveTokenForMediaCert() failed. 0x8004101d
 
 This issue occurs because the SMS provider isn't located in the same location as the management point. In Configuration Manager (current branch, version 2409), the system checks the location of management point and attempts to use the DLLs available in that location.
 
-## Resolution
+## Workaround
 
 Since a management point can't be hosted on a central administration site, you need to create the bootable media on a primary site. Additionally, ensure that all Configuration Manager providers are located in the same location as the management point.
+
+## Status
+
+Microsoft is working on a resolution and will update this article when it is available.
