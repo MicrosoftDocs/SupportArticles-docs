@@ -3,7 +3,7 @@ title: Custom Linux image provisioning errors
 description: Provides solutions to provisioning errors when you upload or capture a generalized virtual machine image as a specialized Linux VM image or vice versa.
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.service: azure-virtual-machines
-ms.date: 05/19/2025
+ms.date: 05/20/2025
 ms.reviewer: srijangupta, scotro, maries, jarrettr, v-weizhu
 ---
 # Provisioning errors when deploying custom Linux images
