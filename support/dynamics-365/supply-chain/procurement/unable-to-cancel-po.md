@@ -56,4 +56,3 @@ To cancel a PO in a closed period, you must reopen the closed or on-hold period.
 ## More information
 
 [Fiscal calendars, fiscal years, and periods](/dynamics365/finance/budgeting/fiscal-calendars-fiscal-years-periods)
-[]
