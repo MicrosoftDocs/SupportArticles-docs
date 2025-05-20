@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 07/19/2022
+ms.date: 05/20/2025
 ms.author: genli
 ---
 # Troubleshoot Linux virtual machine boot issues due to filesystem errors
@@ -335,7 +335,7 @@ If the journaled changes aren't written when you mount filesystems, use the `-L`
 xfs_repair -L /dev/rootvg/homelv /recovery
 ```
 > [!CAUTION]
-> The `-L` flag causes xfs_repair to forcably clean entries in the transaction log journal. Data loss many times occurs when this happens.
+> The `-L` flag forces `xfs_repair` to clean entries in the transaction log journal, which often results in data loss.
 
 ### <a id="prevent-boot-failure"></a>Prevent boot failure
 
