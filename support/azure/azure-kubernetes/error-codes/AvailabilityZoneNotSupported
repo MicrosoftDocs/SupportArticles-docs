@@ -44,7 +44,7 @@ is you see something like this, your subscription doesnt have access to zones in
                 {
                     "type": "Zone",
                     "values": [
-                        "centralus"
+                        "xxxxx"
                     ],
                     "restrictionInfo": {
                         "locations": [
