@@ -1,0 +1,49 @@
+
+
+Error: Code=AvailabilityZoneNotSupported; Message=Preflight validation check for resource(s) for container service c in resource group atm-probingplane-prod-cus failed. Message: The zone(s) '1' for resource 'usragentpool' is not supported. The supported zones for location 'centralus' are '
+
+---
+title: Troubleshoot AvailabilityZoneNotSupported error code
+description: Learn how to troubleshoot the AvailabilityZoneNotSupported error when you try to create an Azure Kubernetes Service cluster in a set of zones.
+ms.date: 05/20/2025
+editor: sushma kuchipudi
+ms.reviewer:
+ms.service: azure-kubernetes-service
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
+#Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster create that failed because of a AvailabilityZoneNotSupported error code so that I can create the cluster successfully.
+---
+
+# Troubleshoot the "AvailabilityZoneNotSupported" error code
+
+This article discusses how to identify and resolve the "AvailabilityZoneNotSupported" error that occurs when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
+
+Here's an example of the error message:
+
+> Preflight validation check for resource(s) for container service xxxx in resource group zzzz failed. Message: The zone(s) '1' for resource 'agentpoolName' is not supported.The supported zones for location 'xyz' are 'A', 'B'
+
+## Prerequisites
+az rest command
+
+## Symptoms
+
+An AKS cluster create fails in requested availability zones, and you receive a "AvailabilityZoneNotSupported" error message.
+
+## Cause
+
+The issue occurs if the requested sku is not available in any of the requested zones. 
+
+## Solution
+
+you can use the following command to verify if sku is not available in requested zones
+
+`az rest --method get  \
+  --url "https://management.azure.com/subscriptions/<subscription>/providers/Microsoft.Compute/skus?%24filter=location+eq+%27westus3%27&api-version=2022-03-01"  >> availableSkus.txt`
+
+You cna then search for the requested sku info in availableSkus.txt
+
+
+please use the Azure Portal to raise your request. Please follow instructions here to request access to a region or zone
+
+To request access to a region or zone, go to the [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). Please follow instructions mentioned [here](https://learn.microsoft.com/en-us/troubleshoot/azure/general/region-access-request-process)
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
