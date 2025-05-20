@@ -62,8 +62,6 @@ You would need to replace `<subscription>` and `<locaiton>` in the URL. You can 
             ]
 ```
 
-please use the Azure Portal to raise your request. Please follow instructions here to request access to a region or zone
-
 To request access to a region or zone, go to the [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest). Please follow instructions mentioned [here](https://learn.microsoft.com/en-us/troubleshoot/azure/general/region-access-request-process)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
