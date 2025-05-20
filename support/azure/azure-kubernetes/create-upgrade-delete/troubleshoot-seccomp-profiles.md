@@ -27,7 +27,7 @@ If a workload failure occurs, you might see errors such as:
 
 Workload is existing unexpectedly after the feature is enabled, with ```permission denied``` or ```function not implemented``` errors.
 
-To diagnose the root cause of workload failures due to blocked syscalls by easily getting visibility into pods and containers use the open source project Inspektor Gadget.
+To diagnose the root cause of workload failures due to blocked syscalls by easily getting visibility into pods and containers use the open source project [Inspektor Gadget](https://inspektor-gadget.io/).
 
 ## Prerequisites 
 - A tool to connect to the Kubernetes cluster, such as the `kubectl` tool. To install `kubectl` using the [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
@@ -105,7 +105,7 @@ Before testing, configure a custom seccomp profile that is identical to the one 
   ```
 
 ### Step 2: Install Inspektor Gadget
-Inspektor Gadget provides insights into syscalls affecting your containers. To install it, run the following commands to add the gadget plugin and deploy it:
+[Inspektor Gadget](https://inspektor-gadget.io/docs/latest/quick-start) provides insights into syscalls affecting your containers. To install it, run the following commands to add the gadget plugin and deploy it:
 
 ```console 
 kubectl krew install gadget
@@ -121,7 +121,7 @@ With Inspektor Gadget installed, start the audit ```seccomp profile gadget``` us
 kubectl gadget run ghcr.io/inspektor-gadget/gadget/audit_seccomp:latest
 ```
 ### Step 4: Analyze Blocked Syscalls
-Start running your workload and then the audit seccomp profile gadget will log blocked syscalls, along with their associated pods, containers, and processes. You can use this information to identify the root causes of workload failures.
+Start running your workload and then the [audit seccomp profile gadget](https://inspektor-gadget.io/docs/latest/gadgets/audit_seccomp) will log blocked syscalls, along with their associated pods, containers, and processes. You can use this information to identify the root causes of workload failures.
 
 We recommend investigating the following but you can find a larger list of blocked syscalls here. Here are some commonly blocked syscalls to look out for
 
