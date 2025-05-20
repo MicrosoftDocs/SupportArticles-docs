@@ -1,7 +1,7 @@
 ---
-title: Can't create bootable media with errors 80004005 and 0x8004101d
+title: Can't Create Bootable Media with Errors 80004005 and 0x8004101d
 description: Fixes an issue in which you can't create bootable media with errors 80004005 and 0x8004101d in Microsoft Configuration Manager (current branch, version 2409).
-ms.date: 05/16/2025
+ms.date: 05/20/2025
 ms.reviewer: kaushika, umaikhan
 ms.custom: sap:Operating Systems Deployment (OSD)\Task Sequence Media (all types)
 ---
@@ -30,12 +30,12 @@ StageCertificate::RetrieveTokenForMediaCert() failed. 0x8004101d
 
 ## Cause
 
-This issue occurs because the SMS provider isn't located in the same location as the management point. In Configuration Manager (current branch, version 2409), the system checks the location of management point and attempts to use the DLLs available in that location.
+This issue occurs because the SMS provider isn't in the same location as the management point. In Configuration Manager (current branch, version 2409), the system checks the location of the management point and attempts to use the DLLs available in that location.
 
 ## Workaround
 
-Since a management point can't be hosted on a central administration site, you need to create the bootable media on a primary site. Additionally, ensure that all Configuration Manager providers are located in the same location as the management point.
+Since a management point can't be hosted on a central administration site, you need to create the bootable media on a primary site. Additionally, ensure that all Configuration Manager providers are in the same location as the management point.
 
 ## Status
 
-Microsoft is working on a resolution and will update this article when it is available.
+Microsoft is working on a resolution and will update this article when it's available.
