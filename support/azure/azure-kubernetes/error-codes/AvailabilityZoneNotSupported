@@ -18,7 +18,7 @@ Here's an example of the error message:
 > Preflight validation check for resource(s) for container service xxxx in resource group zzzz failed. Message: The zone(s) '1' for resource 'agentpoolName' is not supported.The supported zones for location 'xyz' are 'A', 'B'
 
 ## Prerequisites
-az rest command
+Access to [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/get-started-with-azure-cli?view=azure-cli-latest)
 
 ## Symptoms
 
@@ -26,11 +26,14 @@ An AKS cluster create fails in requested availability zones, and you receive a "
 
 ## Cause
 
-The issue occurs if the requested sku is not available in any of the requested zones. 
+The issue occurs if the requested SKU is not available in the requested zones or there is restriction on the subscription.
 
 ## Solution
 
 you can use the following command to verify if sku is not available in requested zones
+az vm list-skus -l <location> --size <SKU> 
+
+or 
 
 `az rest --method get  \
   --url "https://management.azure.com/subscriptions/<subscription>/providers/Microsoft.Compute/skus?%24filter=location+eq+%27<location>%27&api-version=2022-03-01"  >> availableSkus.txt`
