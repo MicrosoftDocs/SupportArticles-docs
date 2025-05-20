@@ -24,7 +24,7 @@ Once the file upload process is complete, you might receive error or warning mes
 - **File level:** File level issues relate to data across all records in your file or the file itself.
 - **Line level:** Line level issues relate rows of data in your file. The message may give line numbers where the issue exists or describe conditions where you can find impacted rows.
 - **Warnings:** Warnings are informational may require your attention to determine what, if any, corrections are needed. These records upload into Viva Glint but don't pass validation or may not function as expected due to invalid data.
-- **Errors:** – Errors are issues that prevent data from uploading to the platform. A file level error prevents the entire file from being uploaded while a line level error prevents only the mentioned lines from being uploaded.
+- **Errors:** Errors are issues that prevent data from uploading to the platform. A file level error prevents the entire file from being uploaded while a line level error prevents only the mentioned lines from being uploaded.
 
 **Note**: A file level error means that the upload process failed and stopped. If the file is affected by more issues, those issues don't appear until the existing file level error is fixed. You might experience further warnings or errors after you fix an error and reupload the data file.
 
