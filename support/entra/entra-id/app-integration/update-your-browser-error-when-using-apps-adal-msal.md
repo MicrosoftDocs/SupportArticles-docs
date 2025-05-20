@@ -44,18 +44,6 @@ To resolve the issue, enable broker authentication by using [Web Account Manager
 var pca = PublicClientApplicationBuilder.Create("client_id").WithBroker(new BrokerOptions(BrokerOptions.OperatingSystems.Windows))
 ```
 
-If Web Account Manager is unavailable (such as on Windows Server 2012), consider the following options:
-
-- Use WebView2 (Edge-based Embedded WebView)
-
-    To enable WebView2, the app must target .NET 6+ Windows. Configure this setting in the project file:
-
-    ```xml
-    <TargetFramework>net6.0-windows10.0.22621.0</TargetFramework>
-    ```
-
-- Use the System Browser
-
-    If WebView2 cannot be used or your app can't target .NET 6+ Windows, then use the [default system browser for authentication](/entra/msal/dotnet/acquiring-tokens/using-web-browsers#how-to-use-the-default-system-browser).
+If Web Account Manager is unavailable (such as on Windows Server 2012), consider to use the [default system browser for authentication](/entra/msal/dotnet/acquiring-tokens/using-web-browsers#how-to-use-the-default-system-browser).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
