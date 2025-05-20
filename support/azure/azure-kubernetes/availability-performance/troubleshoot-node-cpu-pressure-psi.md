@@ -45,7 +45,7 @@ Azure Managed Prometheus provides a way to monitor PSI metrics:
 
 2. Navigate to the Azure Monitor workspace associated with the AKS cluster from the [Azure portal](https://portal.azure.com).
 
-    :::image type="content" source="media/troubleshoot-node-cpu-pressure-psi/configure-azure-monitor-for-containers.png" alt-text="Screenshow that shows how to navigate to the Azure Monitor workspace.":::
+    :::image type="content" source="media/troubleshoot-node-cpu-pressure-psi/configure-azure-monitor-for-containers.png" alt-text="Screenshow that shows how to navigate to the Azure Monitor workspace." lightbox="media/troubleshoot-node-cpu-pressure-psi/configure-azure-monitor-for-containers.png":::
 
 3. Under **Monitoring**, select **Metrics**.
 
@@ -58,9 +58,9 @@ Azure Managed Prometheus provides a way to monitor PSI metrics:
 
    - For node-level CPU pressure, use the `node_pressure_cpu_waiting_seconds_total` Prometheus Query Language (PromQL).
 
-   - For pod-level CPU pressure, use the `container_cpu_cfs_throttled_seconds_total` PromQL.
+    :::image type="content" source="media/troubleshoot-node-cpu-pressure-psi/node-level-cpu-pressure.png" alt-text="Screenshow that shows how to query node-level CPU pressure." lightbox="media/troubleshoot-node-cpu-pressure-psi/node-level-cpu-pressure.png":::
 
-    :::image type="content" source="media/troubleshoot-node-cpu-pressure-psi/node-level-cpu-pressure.png" alt-text="Screenshow that shows how to query node-level CPU pressure.":::
+   - For pod-level CPU pressure, use the `container_cpu_cfs_throttled_seconds_total` PromQL.
 
 6. Calculate the PSI-some percentage (percentage of time at least one task is stalled on CPU):
 
