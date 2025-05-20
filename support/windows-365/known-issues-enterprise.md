@@ -271,6 +271,14 @@ If provisioning fails due to an Autopilot Device Preparation Profile (DPP) (Prev
 
 Perform reprovision in the provisioning policy.
 
+### Scheduled reprovisioning does not recover if Frontline licenses are removed or expire from a tenant and the are added back
+
+If Frontline Cloud PCs are provisioned in shared mode and then licenses expire or are removed from the tenant, the Cloud PCs will be deprovisioned until valid liceses are added. After adding licenses back, the Cloud PCs will be provisioned according to the configurations defined in the Provisioning Policy. If you have configured a scheduled reprovision for a provisioning policy, it will not be re-activated. Manual reprovision action will also fail.
+
+#### Solution
+
+To recover full functionality of manual and scheduled reprovision after license expiration you should remove and then re-add the provisioning policy assignment.
+
 ## Next steps
 
 [Troubleshoot Windows 365 Enterprise Cloud PC](/windows-365/enterprise/troubleshooting)
