@@ -132,6 +132,8 @@
       href: procurement/vendor-rebate-not-cumulated.md
     - name: A product receipt voucher number is consumed even when not generating a voucher
       href: procurement/voucher-number-consumed.md
+    - name: Can't cancel a purchase order within a closed period
+      href: procurement/unable-to-cancel-po.md  
     - name: Can't delete a purchase order line after it's confirmed
       href: procurement/purchase-order-line-deletion-restriction.md  
     - name: Can't add a line to a purchase requisition after requesting a change
