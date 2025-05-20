@@ -45,7 +45,7 @@ Azure Managed Prometheus provides a way to monitor PSI metrics:
 
 2. Navigate to the Azure Monitor workspace associated with the AKS cluster from the [Azure portal](https://portal.azure.com).
 
-    :::image type="content" source="media/troubleshoot-node-cpu-pressure-psi/azure-monitor-workspace.png" alt-text="Screenshow that shows how to navigate to the Azure Monitor workspace.":::
+    :::image type="content" source="media/troubleshoot-node-cpu-pressure-psi/configure-azure-monitor-for-containers.png" alt-text="Screenshow that shows how to navigate to the Azure Monitor workspace.":::
 
 3. Under **Monitoring**, select **Metrics**.
 
