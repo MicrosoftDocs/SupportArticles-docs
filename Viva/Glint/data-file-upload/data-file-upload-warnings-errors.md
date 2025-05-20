@@ -19,12 +19,14 @@ To upload your employee data to Viva Glint, you can use one of the following met
 - [Import the data from the People page](/viva/glint/setup/upload-employee-attributes)
 - [Import the data through Secure File Transfer Protocol (SFTP)](/viva/glint/setup/sftp-data-automation)
 
- During the file upload process, you might experience the following kinds of issues:
+Once the file upload process is complete, you might receive error or warning messages. Errors or warnings may occur at the file level or at the line level. Depending on the type of message, take appropriate next steps:
 
-- **Warnings**: These issues affect only specific rows or columns of data. The rest of the file can be processed successfully.
-- **Errors**: These issues prevent the entire file from being uploaded.
+- **File level:** File level issues relate to data across all records in your file or the file itself.
+- **Line level:** Line level issues relate rows of data in your file. The message may give line numbers where the issue exists or describe conditions where you can find impacted rows.
+- **Warnings:** Warnings are informational may require your attention to determine what, if any, corrections are needed. These records upload into Viva Glint but don't pass validation or may not function as expected due to invalid data.
+- **Errors:** – Errors are issues that prevent data from uploading to the platform. A file level error prevents the entire file from being uploaded while a line level error prevents only the mentioned lines from being uploaded.
 
-**Note**: Whenever an error occurs during a file upload, the process fails and stops. If the file is affected by additional issues, those issues won't appear until the existing error is fixed. Therefore, you might experience further warnings or errors after you fix an error and re-upload the data file.
+**Note**: A file level error means that the upload process failed and stopped. If the file is affected by more issues, those issues don't appear until the existing file level error is fixed. You might experience further warnings or errors after you fix an error and reupload the data file.
 
 For more information about these issues and how to resolve them, see the following articles:
 
@@ -39,11 +41,11 @@ If you still can't resolve the issues, [contact Microsoft Support](../contact-su
 
 ## Email notification
 
-When warnings or errors occur during file uploads, Viva Glint admins are notified by email.
+When warnings or errors occur during SFTP file uploads, Viva Glint users are notified by email. To manage users that receive notifications, see: [Manage SFTP settings](/viva/glint/setup/sftp-data-automation#manage-sftp-settings).
 
 ### Upload from the People page
 
-If the data file is uploaded from the **People** page in Viva Glint, admins receive an email message that summarizes data changes and errors when the upload is ready for review and confirmation. To download an error list, open the **People** page, and then select **Review Upload** > **download errors**.
+If the data file is uploaded from the **People** page in Viva Glint, users receive an email message that summarizes data changes and errors when the upload is ready for review and confirmation. To download an error list, open the **People** page, and then select **Review Upload** > **download errors**.
 
 ### Upload through SFTP
 
