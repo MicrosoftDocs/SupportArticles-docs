@@ -11,7 +11,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 # Troubleshoot the "AvailabilityZoneNotSupported" error code
 
-This article discusses how to identify and resolve the "AvailabilityZoneNotSupported" error that occurs when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the "AvailabilityZoneNotSupported" error that occurs when you try to create an Azure Kubernetes Service (AKS) cluster.
 
 Here's an example of the error message:
 
@@ -33,7 +33,7 @@ The issue occurs if the requested sku is not available in any of the requested z
 you can use the following command to verify if sku is not available in requested zones
 
 `az rest --method get  \
-  --url "https://management.azure.com/subscriptions/<subscription>/providers/Microsoft.Compute/skus?%24filter=location+eq+%27westus3%27&api-version=2022-03-01"  >> availableSkus.txt`
+  --url "https://management.azure.com/subscriptions/<subscription>/providers/Microsoft.Compute/skus?%24filter=location+eq+%27<location>%27&api-version=2022-03-01"  >> availableSkus.txt`
 
 You cna then search for the requested sku info in availableSkus.txt
 
