@@ -1,9 +1,7 @@
 ---
-title: Microsoft 365 activation usage report issues
+title: Microsoft 365 Activation Usage Report Issues
 description: Describes issues an admin might encounter with Microsoft 365 activation usage reports.
-author: helenclu
 ms.reviewer: vikkarti
-ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,39 +11,34 @@ ms.custom:
   - CSSTroubleshoot
   - CI 157763
   - CI 159459
+  - CI 5843
 search.appverid: 
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 06/06/2024
+ms.date: 05/19/2025
 ---
 
 # Microsoft 365 activation usage report issues
 
-Admins can view activation reports for Microsoft 365 Apps by going to the [Microsoft 365 admin center](https://admin.microsoft.com), and selecting **Users** > **Active users** > **View Office activations**.
+Admins can view [activation reports](/microsoft-365/admin/activity-reports/microsoft-office-activations-ww?view=o365-worldwide&preserve-view=true) in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
-If you want to see which activations are still being used, go to https://admin.microsoft.com/#/reportsUsage/ProPlusUsage and sort by **Last activity date**. This can help you determine if there are unused licenses that can be assigned to other individuals in your organization.
-
-Individuals in your organization can see their Microsoft 365 Apps activations by going to https://portal.office.com/account/?ref=MeControl#
-
-For information about usage reports, see the following articles:
+For more information about Microsoft 365 reports, see the following articles:
 
 - [Microsoft 365 Reports in the admin center](/microsoft-365/admin/activity-reports/activity-reports)
-
 - [Overview of inventory in the Microsoft 365 Apps admin center](/deployoffice/admincenter/inventory)
-
 - [Sign-in logs in Microsoft Entra ID](/azure/active-directory/reports-monitoring/concept-sign-ins)
 
-For issues with the usage reports, see the following troubleshooting topics.
+For issues with the usage reports, see the following sections.
 
 ## Usage report is incorrect
 
-Note that Microsoft 365 Apps activations can take up to 48 hours to appear in the usage reports. If the individual opens a Microsoft 365 App such as Word or Excel, and there is no banner at the top stating they must activate, then their apps have successfully been activated.
+Microsoft 365 Apps activations can take up to 48 hours to appear in the usage reports. If the user opens a Microsoft 365 app, such as Word or Excel, and there is no banner at the top that says they must activate, their apps have been successfully activated.
 
 ## Report shows anonymous user names
 
-Beginning September 1, 2021, user names in Microsoft 365 usage reports are anonymous by default. For more information, see [Microsoft 365 reports show anonymous user names instead of actual user names](/microsoft-365/troubleshoot/miscellaneous/reports-show-anonymous-user-name).
+Starting September 1, 2021, user names in Microsoft 365 usage reports are anonymous by default. For more information, see [Microsoft 365 reports show anonymous user names instead of actual user names](/microsoft-365/troubleshoot/miscellaneous/reports-show-anonymous-user-name).
 
-## Report doesn’t show device name
+## Report doesn't show device name
 
-Currently, device names are not shown in the usage reports. This is by design.
+Currently, device names aren't shown in the usage reports. This behavior is by design.

@@ -7,8 +7,6 @@
       href: ../add-ins/cannot-save-to-onenote.md
   - name: Calendars
     items:
-    - name: Configure rooms and workspaces for Room Finder
-      href: /outlook/troubleshoot/calendaring/configure-room-finder-rooms-workspaces?context=/outlook/troubleshoot/context/mobile-context
     - name: Create and book a workspace in Outlook
       href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/mobile-context
   - name: Contacts
