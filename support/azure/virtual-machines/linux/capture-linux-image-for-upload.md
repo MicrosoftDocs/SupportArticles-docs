@@ -11,9 +11,11 @@ ms.reviewer: srijangupta, scotro, maries, jarrettr, v-weizhu
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article outlines the steps to capture a Linux image for preparing to upload it to Azure.
+This article provides step-by-step instructions for capturing a Linux image to prepare it for upload to Azure.
 
 ## Prerequisites
+
+Before proceeding, ensure the following prerequisites are met:
 
 - Access to the Linux machine whose disk you want to image.
 - Azure CLI installed on your local machine.
