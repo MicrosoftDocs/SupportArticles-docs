@@ -1,7 +1,3 @@
-
-
-Error: Code=AvailabilityZoneNotSupported; Message=Preflight validation check for resource(s) for container service c in resource group atm-probingplane-prod-cus failed. Message: The zone(s) '1' for resource 'usragentpool' is not supported. The supported zones for location 'centralus' are '
-
 ---
 title: Troubleshoot AvailabilityZoneNotSupported error code
 description: Learn how to troubleshoot the AvailabilityZoneNotSupported error when you try to create an Azure Kubernetes Service cluster in a set of zones.
