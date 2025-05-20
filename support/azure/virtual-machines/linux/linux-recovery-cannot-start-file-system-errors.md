@@ -13,8 +13,9 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 07/19/2022
+ms.date: 05/20/2025
 ms.author: genli
+ms.reviewer: maries, v-weizhu
 ---
 # Troubleshoot Linux virtual machine boot issues due to filesystem errors
 
@@ -328,11 +329,14 @@ or
 mount /home
 ```
 
-If the journaled changes aren't written when you mount filesystems, use the `-L` flag to discard the journal and mount the filesystem as if all changes are successfully completed. When the `-L` flag is used, data loss will occur because the log shows incomplete file operations are being discarded.  
+If the journaled changes aren't written when you mount filesystems, use the `-L` flag to discard the journal and mount the filesystem as if all changes are successfully completed. 
+
 
 ```bash
 xfs_repair -L /dev/rootvg/homelv /recovery
 ```
+> [!CAUTION]
+> The `-L` flag forces `xfs_repair` to clean entries in the transaction log journal, which often results in data loss.
 
 ### <a id="prevent-boot-failure"></a>Prevent boot failure
 
