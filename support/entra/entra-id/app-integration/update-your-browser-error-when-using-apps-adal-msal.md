@@ -21,7 +21,7 @@ You could also try to access https://aka.ms/mysecurityinfo from another device.
 
 ## Cause
 
-This issue occurs if the MSAL app uses outdated web browser controls, such as WebView1. These older controls do not support Microsoft Entra ID MFA registration or the self-service password reset wizard.
+This issue occurs if the MSAL app uses outdated web browser controls, such as WebView1. These older controls don't support Microsoft Entra ID MFA registration or the self-service password reset wizard.
 
 ## Resolution
 
