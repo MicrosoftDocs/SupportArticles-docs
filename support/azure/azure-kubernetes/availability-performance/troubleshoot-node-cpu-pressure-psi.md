@@ -32,14 +32,14 @@ To identify and resolve CPU pressure issues, follow these steps:
 
 Use one of the following methods to access PSI metrics:
 
-- In a web browser, use Azure Managed Prometheus/monitoring solution to query PSI metrics.
+- In a web browser, use Azure Monitoring Managed Prometheus or other monitoring solution to query PSI metrics.
 - In a console, use the Kubernetes command-line tool (`kubectl`).
 
 ### [Browser](#tab/browser)
 
-Azure Managed Prometheus provides a way to monitor PSI metrics:
+Azure Monitoring Managed Prometheus provides a way to monitor PSI metrics:
 
-1. Enable Azure Managed Prometheus for your AKS cluster by following the instructions in [Enable Prometheus and Grafana](/azure/azure-monitor/containers/kubernetes-monitoring-enable#enable-prometheus-and-grafana).
+1. Enable Azure Monitoring Managed Prometheus for your AKS cluster by following the instructions in [Enable Prometheus and Grafana](/azure/azure-monitor/containers/kubernetes-monitoring-enable#enable-prometheus-and-grafana).
 
     To enable customized scrape metrics for Prometheus, see [Scrape configs](/azure/azure-monitor/containers/prometheus-metrics-scrape-configuration#scrape-configs). We recommend setting `minumum ingestion profile` to `false` and `node-exporter` to `true`.
 
