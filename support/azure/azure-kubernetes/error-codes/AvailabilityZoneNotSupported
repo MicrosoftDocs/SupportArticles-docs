@@ -35,7 +35,33 @@ you can use the following command to verify if sku is not available in requested
 `az rest --method get  \
   --url "https://management.azure.com/subscriptions/<subscription>/providers/Microsoft.Compute/skus?%24filter=location+eq+%27<location>%27&api-version=2022-03-01"  >> availableSkus.txt`
 
-You cna then search for the requested sku info in availableSkus.txt
+You can then search for the requested sku info in availableSkus.txt
+
+is you see something like this, your subscription doesnt have access to zones in the requested region
+
+```
+"restrictions": [
+                {
+                    "type": "Zone",
+                    "values": [
+                        "centralus"
+                    ],
+                    "restrictionInfo": {
+                        "locations": [
+                            "xxxxx"
+                        ],
+                        "zones": [
+                            "1",
+                            "2",
+                            "3"
+                        ]
+                    },
+                    "reasonCode": "NotAvailableForSubscription"
+                }
+            ]
+```
+
+
 
 
 please use the Azure Portal to raise your request. Please follow instructions here to request access to a region or zone
