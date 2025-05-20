@@ -52,7 +52,7 @@ Wait seven days for the uncommitted blocklist to be cleaned up by garbage collec
 
 ### Solution 2: Use a dummy blob to make the data transfer
 
-Use the Azure Storage SDK to transfer the data by using a dummy blob. To do this, follow these steps:
+Use the Azure Storage SDK to transfer the data by using a dummy blob. To do so, follow these steps:
 
 1. Create a dummy blob that has the same blob name and is in the same container. This blob can have a length of zero.
 
@@ -60,7 +60,7 @@ Use the Azure Storage SDK to transfer the data by using a dummy blob. To do this
 
 ### Solution 3: Commit the uncommitted blocklist by using the Azure Storage SDK
 
-Use the Azure Storage SDK to commit the uncommitted block list and clean up the blob. To do this, follow these steps:
+Use the Azure Storage SDK to commit the uncommitted block list and clean up the blob. To do so, follow these steps:
 
 1. Retrieve the uncommitted blocklist by making a [Get Block List](/rest/api/storageservices/get-block-list) URI request in which the `blocklisttype` URI parameter is set to `uncommitted`.
 
