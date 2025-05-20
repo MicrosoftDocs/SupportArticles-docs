@@ -104,6 +104,43 @@ Before testing, configure a custom seccomp profile that is identical to the one 
   }
   ```
 
+•	The article [Configure a custom seccomp profile](https://learn.microsoft.com/azure/aks/secure-container-access#configure-a-custom-seccomp-profile) shows how you can apply your custom seccomp profile to your AKS cluster. 
+
+•	Alternatively you can use `kubectl debug`
+
+Using `kubectl` get the node name:
+```console 
+kubectl get nodes 
+```
+Then, use `kubectl debug` to start a debug pod on the node and make sure there is a seccomp folder
+
+```console 
+kubectl debug node/<node-name> -it --image=busybox
+/ # mkdir -p /host/var/lib/kubelet/seccomp
+```
+Leave the debug pod running and copy the podname, it is outputted when you create the debug pod. With `kubectl cp` we can transfer the seccomp profile file to the node directly:  
+
+```console
+$ kubectl cp <path local seccomp profile> <podname>:/host/var/lib/kubelet/seccomp/<seccomp profile filename>
+```
+Now we can modify the specification of the target pod, which should be confined to the recorded syscalls. For example:
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: default-pod
+  labels:
+    app: default-pod
+spec:
+  securityContext:
+    seccompProfile:
+      type: Localhost
+      localhostProfile: <seccomp profile file name>
+  containers:
+  - name: test-container
+    image: docker.io/library/nginx:latest
+```
+
 ### Step 2: Install Inspektor Gadget
 [Inspektor Gadget](https://inspektor-gadget.io/docs/latest/quick-start) provides insights into syscalls affecting your containers. To install it, run the following commands to add the gadget plugin and deploy it:
 
@@ -118,7 +155,7 @@ kubectl gadget deploy
 ### Step 3: Run the [audit seccomp profile gadget](https://inspektor-gadget.io/docs/latest/gadgets/audit_seccomp)
 With Inspektor Gadget installed, start the audit ```seccomp profile gadget``` using the ```kubectl gadget run``` command:
 ```console
-kubectl gadget run ghcr.io/inspektor-gadget/gadget/audit_seccomp:latest
+kubectl gadget run audit_seccomp
 ```
 ### Step 4: Analyze Blocked Syscalls
 Start running your workload and then the [audit seccomp profile gadget](https://inspektor-gadget.io/docs/latest/gadgets/audit_seccomp) will log blocked syscalls, along with their associated pods, containers, and processes. You can use this information to identify the root causes of workload failures.
@@ -135,9 +172,9 @@ We recommend investigating the following but you can find a larger list of block
 ## Next Steps
 If you encounter issues with your workloads due to blocked syscalls:
 
-•	Consider using a custom seccomp profile tailored to the specific needs of your application.
+•	Consider using a custom seccomp profile tailored to the specific needs of your application. You can check out the [Inspektor Gadget advise seccomp profile gadget](https://inspektor-gadget.io/docs/latest/gadgets/advise_seccomp).
 
-•	If security concerns are minimal, switch to the Unconfined profile to disable syscall restrictions entirely.
+•	If security concerns are minimal, switch to the `Unconfined` profile to disable syscall restrictions entirely.
 
 Testing and refining your seccomp profiles ensures optimal performance and security for your AKS workloads. For further assistance, consult the [Microsoft Learn documentation on AKS and seccomp](https://learn.microsoft.com/azure/aks/secure-container-access#secure-computing-seccomp).
 
