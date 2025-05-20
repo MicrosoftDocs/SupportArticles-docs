@@ -193,6 +193,9 @@ items:
       - name: Kubernetes Fleet Manager
         tocHref: /troubleshoot/azure/kubernetes-fleet/
         topicHref: /troubleshoot/azure/kubernetes-fleet/welcome-azure-kubernetes-fleet
+      - name: Azure Logic Apps
+        tocHref: /troubleshoot/azure/logic-apps/
+        topicHref: /troubleshoot/azure/logic-apps/index
 
     - name: Entra
       tocHref: /troubleshoot/entra/

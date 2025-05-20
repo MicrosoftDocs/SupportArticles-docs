@@ -58,6 +58,11 @@ productDirectory:
     links:
     - url: kubernetes-fleet/welcome-azure-kubernetes-fleet.yml
       text: Troubleshooting articles for Azure Kubernetes Fleet Manager
+  - title: Azure Logic Apps
+    imageSrc: "https://learn.microsoft.com/static/ui/media/product/azure/logic-apps.svg"
+    links:
+    - url: logic-apps/index.yml
+      text: Troubleshooting articles for Azure Logic Apps
   - title: Azure Monitor
     imageSrc: "https://static.docs.com/ui/media/product/azure/monitor.svg"
     links:
