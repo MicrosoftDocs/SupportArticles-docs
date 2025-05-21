@@ -128,7 +128,7 @@ Leave the debug pod running and copy the podname, the pod is created in the defa
 ```console
 $ kubectl cp <path local seccomp profile> <podname>:/host/var/lib/kubelet/seccomp/<seccomp profile filename>
 ```
-Now we can modify the specification of the target pod, which should be confined to the recorded syscalls. For example:
+Now we can modify the `seccompProfile` specification of the target pod, which should be confined to the recorded syscalls. For example:
 ```
 apiVersion: v1
 kind: Pod
