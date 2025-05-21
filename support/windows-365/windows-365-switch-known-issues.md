@@ -50,6 +50,16 @@ If the **Reconnect** option in the disconnect message dialog is used, reconnecti
 
 Let the disconnect complete, and then launch a new connection using **Task view**.
 
+## Cloud PC disconnects while focused on local PC
+
+Cloud PCs that are connected via Windows **Task view** quietly disconnect to avoid disrupting the local PC session. The disconnected Cloud PC session shows a black screen with a message box.
+
+### Solution
+
+When the re-connectable error message is displayed, you can reconnect through the message box that reassemble the following screenshot:
+
+\<To be added\>
+
 ## Navigation between sign-in prompts and your Cloud PC
 
 After you select a Cloud PC from the Task view, users might be prompted to sign in using their account credentials. In some builds of Windows, after providing the credentials, users might not be returned to the Cloud PC connection.
