@@ -13,6 +13,8 @@ items:
       href: ../windows-server/active-directory/cannot-connect-internet-domain.md?context=/troubleshoot/windows-client/context/context
     - name: Default limit to workstation numbers
       href: ../windows-server/active-directory/default-workstation-numbers-join-domain.md?context=/troubleshoot/windows-client/context/context
+    - name: Domain join log analysis
+      href: ../windows-server/active-directory/domain-join-log-analysis.md?context=/troubleshoot/windows-client/context/context
     - name: Error 0x40 "The specified network name is no longer available"
       href: ../windows-server/active-directory/domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md?context=/troubleshoot/windows-client/context/context
     - name: Error 0x5 Access Denied when you rename a computer
