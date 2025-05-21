@@ -410,6 +410,8 @@
     href: error-codes/publicipcountlimitreached-error.md
   - name: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error
     href: error-codes/publicipaddr-inusesubnet-netsecgrp-error.md
+  - name: QuotaExceeded or InsufficientVCPUQuota error
+    href: error-codes/quota-exceeded-error.md
   - name: RequestDisallowedByPolicy error
     href: error-codes/requestdisallowedbypolicy-error.md
   - name: ServicePrincipalValidationClientError error
@@ -432,5 +434,3 @@
     href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-codes/zonalallocation-allocationfailed-error.md
-  - name: QuotaExceeded or InsufficientVCPUQuota error
-    href: error-codes/quota-exceeded-error.md
