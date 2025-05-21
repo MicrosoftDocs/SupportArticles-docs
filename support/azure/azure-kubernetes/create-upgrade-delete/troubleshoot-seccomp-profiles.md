@@ -40,7 +40,7 @@ To diagnose the root cause of workload failures due to blocked syscalls by easil
 ### Step 1: Modify your seccomp profile
 Before testing, configure a custom seccomp profile that is identical to the one you are trying to troubleshoot and replace the default action in the seccomp profile:
 
-•	Replace ```SCMP_ACT_ERRNO``` with ```SCMP_ACT_LOG``` to log blocked syscalls instead of failing them outright.
+- Replace ```SCMP_ACT_ERRNO``` with ```SCMP_ACT_LOG``` to log blocked syscalls instead of failing them outright.
 
 •	Your custom seccomp profile might look something like this: 
 ```console 
