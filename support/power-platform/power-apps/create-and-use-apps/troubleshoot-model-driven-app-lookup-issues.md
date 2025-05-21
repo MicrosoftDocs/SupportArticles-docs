@@ -37,6 +37,9 @@ If the Lookup's search results are missing items or include unexpected items, in
 
 - If the fetchXML is correct, but the data returned is incorrect, the issue is on the server, such as a misconfigured relationship. Another possibility is that the user doesn't have correct permissions for some entities, which might not be apparent in the network response other than with an omission of results.
 
+> [!NOTE]
+> Clicking the text area will reveal the most recently used items; clicking the magnifying glass will perform a search. This behavior can be disabled to always perform a search.
+
 ## Views are incorrect
 
 - If an entity or view is missing from the Lookup views or results, or the default view is incorrect:
