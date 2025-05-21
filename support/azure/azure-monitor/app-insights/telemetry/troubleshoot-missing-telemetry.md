@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot Missing Telemetry in Application Insights
-description: Helps troubleshoot telemetry problems with auto-instrumentation in Application Insights.
+description: Helps you troubleshoot telemetry problems with auto-instrumentation in Application Insights.
 ms.service: azure-monitor
 ms.custom: sap:Application Insights
 ms.date: 05/21/2025
 ---
-# Troubleshoot missing telemetry in Azure Monitor Application Insights
+# Troubleshoot auto-instrumentation in Application Insights
 
-This article provides a step-by-step guide to troubleshoot issues when no data appears in a workspace-based Application Insights resource.
+This article provides a step-by-step guide to troubleshoot an issue where no data appears in a workspace-based Application Insights resource.
 
 ## Prerequisites
 
