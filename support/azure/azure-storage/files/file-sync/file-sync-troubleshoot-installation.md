@@ -216,7 +216,7 @@ Reset-StorageSyncServer
 ```
 
 > [!Note]  
-> If the server is part of a cluster, use the `Reset-StorageSyncServer` `-CleanClusterRegistration` parameter to remove the server from the Azure File Sync cluster registration detail.
+> If the server is part of a cluster, the `Reset-StorageSyncServer` `-CleanClusterRegistration` parameter will unregister all servers in the cluster.
 
 <a id="web-site-not-trusted"></a>**When I register a server, I see numerous "web site not trusted" responses. Why?**
 
