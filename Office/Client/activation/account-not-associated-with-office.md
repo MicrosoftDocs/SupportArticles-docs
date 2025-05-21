@@ -1,9 +1,7 @@
 ---
-title: Microsoft 365 Apps activation error The account isn’t associated with this Office product
-description: Troubleshooting the Microsoft 365 Apps activation error The account isn’t associated with this Office product.
-author: helenclu
+title: Activation Error The Account isn't Associated with this Office Product
+description: Troubleshooting the Microsoft 365 Apps activation error The account isn't associated with this Office product.
 ms.reviewer: vikkarti
-ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,66 +11,64 @@ ms.custom:
   - CSSTroubleshoot
   - CI 157755
   - CI 159112
+  - CI 5844
 search.appverid: 
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 02/11/2025
+ms.date: 05/19/2025
 ---
 
-# Microsoft 365 Apps activation error “The account isn’t associated with this Office product”
+# Microsoft 365 Apps activation error: "The account isn't associated with this Office product"
 
-When activating Microsoft 365 apps, you might encounter one of the following errors:  
+When you activate Microsoft 365 Apps, you might receive one of the following error messages:  
 
-The account doesn't have Office yet.
+> The account doesn't have Office yet.
 
-The account isn't associated with this office product.
+> The account isn't associated with this office product.
 
-Try the following troubleshooting methods to solve the problem.
+To solve the problem, try the following troubleshooting methods.
 
-**Note** Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren’t an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
-<br/><br/>
+> [!NOTE]
+> Some of these troubleshooting methods can be performed only by a Microsoft 365 admin. If you aren't an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
 
 <details>
-<summary><b>Sign out of Office and sign back in</b></summary>
+<summary><b>Sign out of Microsoft 365 and sign back in</b></summary>
 
-1.	Open an Office app, such as Word.
-1.	Select your name and profile picture or icon at the top.
-1.	Select **Sign out**.
-1.	Select **Sign in**.
-1.	Make sure you are signed in with your **Work or School** account, not your personal Microsoft account.
-1.	Try activating Microsoft 365 again.
-<br/><br/>
+1. Open a Microsoft 365 app, such as Word.
+1. Select your name and profile picture or icon at the top.
+1. Select **Sign out**.
+1. Select **Sign in**.
+1. Make sure that you're signed in by using your **Work or School** account, not your personal Microsoft account.
+1. Try to activate Microsoft 365 again.
+
 </details>
 
 <details>
 <summary><b>Reset Microsoft 365 activation state</b></summary>
 
 See [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
-<br/><br/>
+
 </details>
 
 <details>
 <summary><b>Remove Office credentials</b></summary>
 
-1.	From Start, type *credential manager*, and then select **Credential Manager** from the search results.
-1.	Select **Windows credentials**.
-1.	If there are any credentials for **MicrosoftOffice16**, select the arrow next to them and then select **Remove**.
-1.	Close Credential Manager.
-1.	From Start, select **Settings** (the gear icon) > **Accounts** > **Access work or school**.
-1.	If the account you use to sign in to office.com is listed there, but it isn’t the account you use to sign in to Windows, select it, and then select **Disconnect**.
-1.	Restart the device and try to activate Microsoft 365 again.
-<br/><br/>
+1. From Start, type *credential manager*, and then select **Credential Manager** from the search results.
+1. Select **Windows credentials**.
+1. If there are any credentials for **MicrosoftOffice16**, select the arrow next to them, and then select **Remove**.
+1. Close Credential Manager.
+1. From Start, select **Settings** (the gear icon) > **Accounts** > **Access work or school**.
+1. If the account that you use to sign in to Microsoft 365 is listed there, but it isn't the account you use to sign in to Windows, select it, and then select **Disconnect**.
+1. Restart the device and try again to activate Microsoft 365.
 
-<details>
-<summary><b>Reset your password</b></summary>
-
-Go to https://portal.office.com/account and select **Security & privacy**. Reset your password, then try activating Microsoft 365 again.
-<br/><br/>
 </details>
 
-### Additional troubleshooting
+<details>
+<summary><b>Change your password</b></summary>
 
-If the above steps don’t solve the problem, try the steps in the following article:
+[Change your password](https://support.microsoft.com/account-billing/change-your-work-or-school-account-password-97fced88-e0e7-4d7b-a9d3-936a3dcbd569), then try again to activate Microsoft 365.
 
-- [Microsoft 365 Apps activation limits](./activation-limits.md)
+</details>
+
+If the previous steps don't solve the problem, try the steps in [Microsoft 365 Apps activation limits](./activation-limits.md).
