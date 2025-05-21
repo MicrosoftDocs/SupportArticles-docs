@@ -6258,6 +6258,122 @@
     {
       "source_path": "support/mem/configmgr/update-management/error-0x800f0831-installing-update.md",
       "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-0x800f0831-installing-update"
+    },
+    {
+      "source_path": "support/sql/database-engine/database-mirroring/assertion-execute-bulk-insert-bcp.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/database-mirroring/assertion-execute-bulk-insert-bcp"
+    },
+    {
+      "source_path": "support/sql/database-engine/database-mirroring/assertion-partner-servers-using-mirroring.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/database-mirroring/assertion-partner-servers-using-mirroring"
+    },
+    {
+      "source_path": "support/sql/database-engine/backup-restore/asr-agent-vss-backup-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/backup-restore/asr-agent-vss-backup-fails"
+    },
+    {
+      "source_path": "support/sql/database-engine/database-file-operations/transaction-log-file-not-grow.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/database-file-operations/transaction-log-file-not-grow"
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/error-change-path-shared-component-directory.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/error-change-path-shared-component-directory"
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/error-upgrade-cluster-node.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/error-upgrade-cluster-node"
+    },
+    {
+      "source_path": "support/sql/database-engine/replication/error-replication-monitor.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/replication/error-replication-monitor"
+    },
+    {
+      "source_path": "support/sql/database-engine/replication/rowguidcol-not-supported-merge-replication.md",
+      "redirect_url": "/sql/relational-databases/replication/merge/merge-replication"
+    },
+    {
+      "source_path": "support/sql/database-engine/replication/duplicate-keys-sys-syscommittab-table.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/replication/duplicate-keys-sys-syscommittab-table"
+    },
+    {
+      "source_path": "support/sql/database-engine/replication/problem-use-custom-business-logic-handler.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/replication/problem-use-custom-business-logic-handler"
+    },
+    {
+      "source_path": "support/sql/database-engine/replication/merge-replication-cannot-support-centralized-subscriber-topologies.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/replication/merge-replication-cannot-support-centralized-subscriber-topologies"
+    },
+    {
+      "source_path": "support/sql/database-engine/replication/error-use-change-data-capture-service.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/replication/error-use-change-data-capture-service"
+    },
+    {
+      "source_path": "support/sql/database-engine/replication/script-failed-error-merge-publication-snapshot.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/replication/script-failed-error-merge-publication-snapshot"
+    },
+    {
+      "source_path": "support/sql/database-engine/replication/snapshot-logreader-agents-fail-destination-table-empty.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/replication/snapshot-logreader-agents-fail-destination-table-empty"
+    },
+    {
+      "source_path": "support/sql/database-engine/replication/sql-merge-replication-synchronization-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/replication/sql-merge-replication-synchronization-fails"
+    },
+    {
+      "source_path": "support/sql/connect/sqldescribecol-return-wrong-column-length.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/connect/sqldescribecol-return-wrong-column-length"
+    },
+    {
+      "source_path": "support/sql/integration-services/error-you-virtualize-bids-ssdt.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/integration-services/error-you-virtualize-bids-ssdt"
+    },
+    {
+      "source_path": "support/sql/integration-services/ssis-package-fails-use-dqs-cleansing-component.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/integration-services/ssis-package-fails-use-dqs-cleansing-component"
+    },
+    {
+      "source_path": "support/sql/analytics-platform-system/evaluate-pdw-statistics-accuracy.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/analytics-platform-system/evaluate-pdw-statistics-accuracy"
+    },
+    {
+      "source_path": "support/sql/analytics-platform-system/msg-104381-running-statement-order-by.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/analytics-platform-system/msg-104381-running-statement-order-by"
+    },
+    {
+      "source_path": "support/sql/analytics-platform-system/operations-manager-cannot-monitor-aps.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/analytics-platform-system/operations-manager-cannot-monitor-aps"
+    },
+    {
+      "source_path": "support/sql/reporting-services/error-load-custom-extensions-data-tools.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/reporting-services/error-load-custom-extensions-data-tools"
+    },
+    {
+      "source_path": "support/sql/reporting-services/parameter-pane-not-visible-drillthrough-report.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/reporting-services/parameter-pane-not-visible-drillthrough-report"
+    },
+    {
+      "source_path": "support/sql/reporting-services/rendering-issues-internet-explorer.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/reporting-services/rendering-issues-internet-explorer"
+    },
+    {
+      "source_path": "support/sql/reporting-services/error-unable-retrieve-application-files.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/reporting-services/error-unable-retrieve-application-files"
+    },
+    {
+      "source_path": "support/sql/reporting-services/warning-message-add-reporting-services.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/reporting-services/warning-message-add-reporting-services"
+    },
+    {
+      "source_path": "support/sql/reporting-services/net-framework-assemblies-sql-2014.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/reporting-services/net-framework-assemblies-sql-2014"
+    },
+    {
+      "source_path": "support/sql/tools/visual-studio-2010-shell-installed-sql-server-2014-2012.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/tools/visual-studio-2010-shell-installed-sql-server-2014-2012"
+    },
+    {
+      "source_path": "support/sql/connect/check-mdac-version.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/connect/check-mdac-version"
     }
   ]
 }

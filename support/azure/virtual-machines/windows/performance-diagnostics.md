@@ -10,7 +10,7 @@ tags: ''
 ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.topic: troubleshooting
-ms.date: 04/01/2025
+ms.date: 05/08/2025
 ms.custom: sap:VM Performance
 ms.reviewer: guywild, poharjan
 ms.author: anandh
@@ -24,14 +24,17 @@ ms.author: anandh
 
 You can use the Performance Diagnostics tool to identify and troubleshoot performance issues on your Azure virtual machine (VM) in one of two modes:
 
-* **Continuous diagnostics** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. Continuous diagnostics is Generally Available (GA) for Windows VM and in Public Preview for Linux VM.
+* **Continuous diagnostics** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. Continuous diagnostics is currently supported only on Windows.
 * **On-demand diagnostics** helps you troubleshoot an ongoing performance issue by providing more in-depth data, insights, and recommendations that are based on data that's collected at a single moment. On-demand diagnostics is supported on both Windows and Linux.
 
 Performance Diagnostics stores all insights and reports in a storage account that you can configure for short data retention to minimize costs.
 
 Run Performance Diagnostics directly from the Azure portal, where you can also review insights and a report about various logs, rich configuration, and diagnostics data. We recommend that you run Performance Diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
 
-This article explains how to use Performance Diagnostics and what the continuous and on-demand modes offer.
+This article explains how to use Performance Diagnostics and what the continuous and on-demand modes offer. 
+
+> [!NOTE]
+> Continuous diagnostics is currently supported only on Windows. On Windows VMs, you'll see the option to enable both on-demand and continuous diagnostics. On Linux VMs, you'll see the option to enable on-demand diagnostics. For more information, see [Install and run Performance Diagnostics on your VM](#install-and-run-performance-diagnostics-on-your-vm).
 
 ## Prerequisites
 
@@ -46,9 +49,29 @@ This article explains how to use Performance Diagnostics and what the continuous
 |:-----------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Run Performance Diagnostics              | The **Owner** role on the VM and an Azure role that includes the `Microsoft.Storage/storageAccounts/listkeys/action` permission on the storage account.                                  |
 | View Performance Diagnostics             | An Azure role that includes the `Microsoft.Storage/storageAccounts/listkeys/action` permission on the storage account or the **Storage Table Data Reader** role on the storage account. |
-| Download Performance Diagnostics reports | An Azure role that includes the `Microsoft.Storage/storageAccounts/listkeys/action` on the storage account or the **Storage Blob Data Reader** role on the storage account.             |
+| Download Performance Diagnostics reports | An Azure role that includes the **Storage Table Data Reader** and the **Storage Blob Data Reader** role on the storage account.           |
 
 For detailed information about built-in roles for Azure Storage, refer to [Azure built-in roles for Storage](/azure/role-based-access-control/built-in-roles/storage).
+
+For more information about storage account settings, see [view and manage storage account and stored data](performance-diagnostics.md#view-and-manage-storage-account-and-stored-data).
+
+### Known issue
+
+Some users who previously ran Performance Diagnostics successfully encounter the following error when attempting to run it again:
+
+> 'Authorization failed for template resource '\<resource>' of type 'Microsoft.Storage/storageAccounts/providers/roleAssignments'. The client '\<client>' with object id '\<ID>' does not have permission to perform action 'Microsoft.Authorization/roleAssignments/write' at scope '\<scope>'.
+
+#### Cause
+
+A recent rollout has a bug that tries to grant the write permission to the storage account for the current user when initiating a run from the Azure portal. An Azure role that includes the `Microsoft.Storage/storageAccounts/listkeys/action` permission isn't enough to grant this permission, causing the run to fail.
+
+#### Status
+
+A fix is being deployed.
+
+#### Workaround
+
+If users still encounter this issue, grant the `Microsoft.Authorization/roleAssignments/write` permission to the storage account with the **Role Based Access Control Administrator** or **User Access Administrator** role. The latter role can grant higher permissions.
 
 ## Supported operating systems
 
@@ -79,7 +102,7 @@ The following distributions are currently supported for on-demand diagnostics.
 | Debian                     | 9, 10, 11 [`*`], 12 |
 | SLES                       | 12 SP5 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP3 [`*`], 15 SP4 [`*`], 15 SP5 [`*`], 15 SP6 [`*`] |
 | AlmaLinux                  | 8.4, 8.5, 9 |
-| Azure Linux                | 2.0, 3.0 |
+| Azure Linux                | 2.0 |
 
 > [!NOTE]
 > [`*`] See [Known issues](../linux/how-to-use-perfinsights-linux.md#known-issues)
@@ -156,7 +179,7 @@ This table compares the data that's provided by Continuous and On-demand Perform
 
 |                               | Continuous Performance Diagnostics                                                                          | On-demand Performance Diagnostics                                                        |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| **Availability**              | GA for Windows VM, Public Preview for Linux VM                                                                     | GA for both Windows and Linux VMs                                                 |
+| **Availability**              | Currently supported only for Windows VMs                                                                    | Supported for both Windows and Linux VMs                                                 |
 | **Insights generated**        | Continuous actionable insights into high resource usage, such as high CPU, high memory, and high disk usage | On-demand actionable insights into high resource usage and various system configurations |
 | **Data collection frequency** | Collects data every 5 seconds, updates are uploaded every 5 minutes                                             | Collects data on demand for the selected duration of the on-demand run                    |
 | **Reports generated**         | Doesn't generate a report                                                                                   | Generates a report that has comprehensive diagnostics data                                   |

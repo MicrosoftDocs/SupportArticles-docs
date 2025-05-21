@@ -42,10 +42,6 @@
       href: connections/troubleshooting-flow-custom-connectors.md
     - name: User doesn't have service plan adequate for non-Standard connection
       href: connections/user-does-not-have-a-service-plan-error.md
-- name: Dataverse (CDS)
-  items:
-    - name: CDS user role can't access flows
-      href: dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
 - name: Desktop flows
   items:
     - name: Browser automation
@@ -66,10 +62,20 @@
           href: desktop-flows/browser-automation/web-extensions-policies.md
         - name: Web automation fails when machine runtime and MSIX versions are different
           href: desktop-flows/browser-automation/machine-runtime-msix-errors.md
+        - name: Press button or click link on web page doesn't work on file uploader
+          href: desktop-flows/browser-automation/file-uploader-click-issues.md
+        - name: Run JavaScript function on web page action doesn't execute
+          href: desktop-flows/browser-automation/js-not-executed.md
+        - name: Web automation fails in unattended mode
+          href: desktop-flows/browser-automation/web-automation-unattended-failures.md
+        - name: Issues when using Internet Explorer for web automation
+          href: desktop-flows/browser-automation/web-automation-ie-issue.md
     - name: Office automation
       items:
         - name: Excel
           items:
+            - name: Errors when running desktop flows including Excel actions
+              href: desktop-flows/office-automation/excel/troubleshoot-excel-errors.md
             - name: Launch Excel action errors
               href: desktop-flows/office-automation/excel/launch-excel-action-failures.md
         - name: Outlook
@@ -86,22 +92,32 @@
           href: desktop-flows/ui-automation/desktop-application-crashes-ui-automation.md
         - name: Can't access the elements of a Java application
           href: desktop-flows/ui-automation/cannot-access-java-application-elements.md
+        - name: Clicking elements doesn't work during runtime
+          href: desktop-flows/ui-automation/ui-rdp-automation/no-clicks-on-runtime.md
         - name: Focus window action can't bring a window to focus
           href: desktop-flows/ui-automation/focus-window-action-not-working.md
         - name: Failed to get UI element
           href: desktop-flows/ui-automation/failed-get-ui-element.md
-        - name: Failed to get element/window or Element/Window wasn't found error
+        - name: Failed to get element/window or Element/Window wasn't found errors
           href: desktop-flows/ui-automation/ui-automation-action-fails-errors.md
+        - name: Interactions with RDP or Citrix applications take a long time and fail
+          href: desktop-flows/ui-automation/ui-rdp-automation/interactions-with-rdp-citrix-takes-long-and-fails.md
         - name: SAP UI element click issue
           href: desktop-flows/ui-automation/ui-sap-automation/sap-click-element-dpi.md
         - name: Set drop-down list value in window/on web page action fails
           href: desktop-flows/ui-automation/set-drop-down-list-value-fails.md
         - name: UI element highlighting or hovering issues in virtual desktops
           href: desktop-flows/ui-automation/ui-rdp-automation/rdp-no-highlight.md
+        - name: '"The remote desktop was not found" error'
+          href: desktop-flows/ui-automation/ui-rdp-automation/error-remote-desktop-not-found.md
+        - name: UIPI issues with UI and web automation actions
+          href: desktop-flows/ui-automation/uipi-issues.md
     - name: '"Could not read the application certificate" error when creating a connection'
       href: desktop-flows/application-certificate-error.md
     - name: Agent-related errors when running attended or unattended desktop flows
       href: desktop-flows/agent-connectivity-issues-pad.md
+    - name: Can't connect to an IBM Personal Communications session
+      href: desktop-flows/cannot-connect-to-ibm-personal-communications.md 
     - name: Can't silently join a machine group
       href: desktop-flows/silent-join-machine-group-troubleshoot.md
     - name: Can't create a connection from a shared canvas app
@@ -114,6 +130,8 @@
       href: desktop-flows/enable-webview-pad-login.md
     - name: Can't access the parent flow
       href: desktop-flows/cannot-access-parent-flow.md
+    - name: '"Could not establish trust relationship for the SSL/TLS secure channel" error'
+      href: desktop-flows/could-not-establish-trust-relationship-ssl-tls-secure-channel.md
     - name: Can't interact with desktop application without an error
       href: desktop-flows/cannot-interact-with-desktop-application.md
     - name: Can't create, edit, save, or view desktop flows
@@ -150,10 +168,12 @@
       href: desktop-flows/error-communicating-with-the-emulator.md
     - name: Expression couldn't be evaluated error when using direct encrypted text
       href: desktop-flows/error-expression-could-not-be-evaluated.md
-    - name: Errors when running desktop flows including Excel actions
-      href: desktop-flows/troubleshoot-excel-errors.md
     - name: Errors when running attended or unattended desktop flows
       href: desktop-flows/troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
+    - name: '"Failed to run PowerShell script" error'
+      href: desktop-flows/failed-to-run-powershell-script-error.md
+    - name: '"Failed to take screenshot" error in unattended desktop flow run'
+      href: desktop-flows/take-screenshot-action-fails-in-unattended-mode.md
     - name: Failed connection between Power Automate components
       href: desktop-flows/failed-connection-between-power-automate-components.md
     - name: Failed license check on a desktop flow run
@@ -192,6 +212,8 @@
       href: desktop-flows/tenant-restictions-machine-registration.md  
     - name: '"The specified module could not be found" error with terminal emulation action'
       href: desktop-flows/terminal-emulation-module-not-found.md
+    - name: Troubleshoot failed unattended runs using screenshots
+      href: desktop-flows/troubleshoot-unattended-runs-with-screenshots.md
     - name: Troubleshoot direct connectivity issues
       href: desktop-flows/troubleshoot-direct-connectivity-issues.md
     - name: Troubleshoot desktop flow run queue-based errors

@@ -3,7 +3,7 @@ title: How to print duplicate checks
 description: Provides two methods for printing duplicate checks in Microsoft Dynamics GP and in Microsoft Great Plains.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # How to print duplicate checks in Microsoft Dynamics GP and in Microsoft Great Plains

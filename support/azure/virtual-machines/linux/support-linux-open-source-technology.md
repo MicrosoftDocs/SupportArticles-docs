@@ -4,7 +4,7 @@ description: Describes support for Linux distributions and open-source technolog
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.topic: article
-ms.date: 05/31/2024
+ms.date: 04/25/2025
 ms.reviewer: patcatun, clausw, divargas, rondom, azurevmlnxcic, v-weizhu
 ---
 
@@ -34,7 +34,9 @@ Microsoft Azure supports the [Linux operating system](https://azure.microsoft.co
 
 Microsoft Support provides assistance for the Azure platform or services. Microsoft also provides commercially viable support for Linux. A support plan is required to receive Microsoft Support.
 
-- In Azure Marketplace, Linux distributions are available. Microsoft assists customers for Linux support but may require customers to engage with Linux vendors for collaboration. Vendors may have to provide distribution-specific fixes.
+- Azure Marketplace offers various Linux distributions. Microsoft provides support for Linux customers, but they might need to work with specific Linux vendors for further assistance. These vendors might be required to deliver distribution-specific fixes.
+  - **Red Hat and SUSE PAYG images:** Microsoft Support manages the first levels of Linux support and will engage the vendor if required.
+  - **Red Hat and SUSE BYOS images**: Customers might contact the vendor directly for support. The vendor is primarily responsible for Linux support; however, Microsoft can provide additional assistance if required.
 - In Azure Marketplace, you may select a highly customized Linux image, such as a firewall appliance. Microsoft provides assistance for these images, but the Linux vendor must be engaged to troubleshoot specific system-related problems. Microsoft may collaborate with the vendor for those issues.
 - Microsoft Support doesn't assist customers for basic Linux administration, design, architecture, or deployment of applications or solutions on Azure.
 - The ability to customize Linux is one of the hallmarks of the operating system. We encourage you to use a Linux solution that benefits your organization. However, the Linux vendor may not support some modifications, such as custom kernels or modules. For vendor support, you may be required to use stock kernels or libraries for your image.

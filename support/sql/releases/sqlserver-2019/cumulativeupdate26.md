@@ -25,17 +25,15 @@ This article describes Cumulative Update package 26 (CU26) for Microsoft SQL Ser
 
 ### Issue one: Access violation when session is reset
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
-
-- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
-
-- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
 
 ### Issue two: Possibility of error 1204 due to disabled lock escalation
 
 SQL Server 2019 CU26 introduced a regression that can disable lock escalation, which causes error 1204 "The instance of the SQL Server Database Engine cannot obtain a LOCK resource at this time."
 
-To work around this issue, you can uninstall the CU26 or install the [CU28](cumulativeupdate28.md).
+To work around this issue, you can uninstall the CU26.
+
+This issue is fixed in [SQL Server 2019 CU28](cumulativeupdate28.md#3282395).
 
 ## Improvements and fixes included in this update
 

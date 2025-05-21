@@ -3,7 +3,7 @@ title: Service item cost and vendor do not show in outsourced purchase order
 description: Describes a problem that occurs if the functional currency is not configured correctly for the company. A resolution is provided.
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # The service item, the cost, and the vendor do not appear when you view an outsourced purchase order in Manufacturing in Microsoft Dynamics GP

@@ -223,6 +223,8 @@
     href: troubleshoot-deployment-new-vm-linux.md
   - name: Custom/gallery/marketplace image allocation failure
     href: linux-custom-gallery-marketplace-image-allocation-failure.md
+  - name: Capture an image for upload preparation
+    href: capture-linux-image-for-upload.md
   - name: Custom image provisioning errors
     href: linux-custom-image-provisioning-errors.md
   - name: VM deployment top issues
@@ -357,6 +359,8 @@
     href: how-to-display-encryption-settings-with-azure-resource-explorer.md
   - name: FAQ
     href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Troubleshoot boot failure after enabling Azure Disk Encryption
+    href: troubleshoot-vm-boot-failure-after-enabling-azure-disk-encryption.md
 
 - name: Repair a VM with Nested Hyper-V
   items:

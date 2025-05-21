@@ -29,7 +29,7 @@ To resolve this issue, follow these steps:
 1. Run `kubectl describe node <node-name>` to review detail information about the node's status. Look for any error messages or warnings that might indicate the root cause of the issue.
 2. Check the API server availability by running the `kubectl get apiservices` command. Make sure that the readiness probe is correctly configured in the deployment YAML file.
 3. Verify the node's network configuration to make sure that there are no connectivity issues.
-4. Check the node's resource usage, such as CPU, memory, and disk, to identify potential constraints. For more informations see [Monitor your Kubernetes cluster performance with Container insights](/azure/azure-monitor/containers/container-insights-analyze#view-performance-directly-from-a-cluster)
+4. Check the node's resource usage, such as CPU, memory, and disk, to identify potential constraints. For more information, see [Monitor your Kubernetes cluster performance with Container insights](/azure/azure-monitor/containers/container-insights-analyze#view-performance-directly-from-a-cluster).
 
 For further steps, see [Basic troubleshooting of Node Not Ready failures](node-not-ready-basic-troubleshooting.md).
 

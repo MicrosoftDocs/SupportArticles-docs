@@ -3,7 +3,7 @@
 title: Windows 365 Boot known issues
 description: Learn about known issues with Windows 365 Boot, including workarounds and updated fixes.
 manager: dcscontentpm
-ms.date: 01/20/2025
+ms.date: 03/31/2025
 ms.topic: troubleshooting
 ms.reviewer: elluthra, erikje
 ms.custom: intune-azure, get-started
@@ -278,6 +278,12 @@ If a user has a local setting screen (like Local Bluetooth settings) open on the
 ### Solution
 
 If the user must share a local settings screen, use a different tool like Quick Assist.
+
+## Can't return to the Cloud PC after signing in to the physical device 
+
+### Solution
+
+If the user still doesn't return to the Cloud PC sign-in screen after signing out of the physical device, restart the physical device.  
 
 ## Next steps
 

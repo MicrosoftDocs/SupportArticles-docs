@@ -27,5 +27,3 @@ items:
   href: sqliosim-utility-simulate-activity-disk-subsystem.md
 - name: Use SQLIOSim utility on Linux
   href: sqliosim-utility-simulate-activity-disk-subsystem-linux.md
-- name: Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012
-  href: visual-studio-2010-shell-installed-sql-server-2014-2012.md

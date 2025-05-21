@@ -11,7 +11,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 04/01/2025
+ms.date: 05/02/2025
 ms.author: genli
 ms.custom: sap:VM Performance
 ---
@@ -21,17 +21,17 @@ ms.custom: sap:VM Performance
 
 The [Performance Diagnostics (PerfInsights) extension](https://aka.ms/perfinsightsdownload) is a self-help diagnostics tool that collects and analyzes diagnostic data, and provides a report to help troubleshoot Windows virtual machine (VM) performance problems in Azure. Use Performance Diagnostics to identify and troubleshoot performance issues in one of two modes: 
 
-- **Continuous diagnostics** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes.
+- **Continuous diagnostics** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. 
 - **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time. 
 
 
-This article explains how to download the Performance Diagnostics extension to your Windows VM and run it from the command line using the CLI tool *PerfInsights.py*. You can also [run Performance Diagnostics from the portal](performance-diagnostics.md), and [deploy the Performance Diagnostics extension using an ARM template or PowerShell](performance-diagnostics-vm-extension.md).
+This article explains how to download the Performance Diagnostics extension to your Windows VM and run the tool using the CLI tool. You can also [run Performance Diagnostics from the portal](performance-diagnostics.md), and [deploy the Performance Diagnostics extension using an ARM template or PowerShell](performance-diagnostics-vm-extension.md).
 
 If you're experiencing performance problems with virtual machines, before contacting support, run Performance Diagnostics.
 
 ## Supported troubleshooting scenarios
 
-You can use Performance Diagnostics to troubleshoot various scenarios. The following sections describe common scenarios for using Continuous and On-Demand Performance Diagnostics to identify and troubleshoot performance issues. For a comparison of Continuous and On-Demand Performance Diagnostics, see [Performance Diagnostics insights and reports](performance-diagnostics.md).
+You can use Performance Diagnostics to troubleshoot various scenarios. The following sections describe common scenarios for using Continuous and On-Demand Performance Diagnostics to identify and troubleshoot performance issues. For a comparison of Continuous and On-Demand Performance Diagnostics, see [Performance Diagnostics insights and reports](performance-diagnostics.md)
 
 > [!NOTE]
 > For information about using PerfInsights across an Azure virtual machine scale set, see [PerfInsights and scale set VM instances](perfinsights-and-scale-set-vm-instances.md).
@@ -264,6 +264,14 @@ To run the PerfInsights tool, follow these steps:
     ```
 
     These are examples of how to use the CLI tool to run the various [troubleshooting scenarios](#supported-troubleshooting-scenarios):
+
+    - Run continuous performance diagnostics:
+      
+      ```console
+      PerfInsights /run always on /sau 
+      ```
+
+      To stop continuous performance diagnostics, press **Ctrl+C** or close the terminal.
 
     - Run the performance analysis scenario for 5 mins:
 

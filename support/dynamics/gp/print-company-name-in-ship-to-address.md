@@ -3,7 +3,7 @@ title: Print the company name in the Ship To Address section of the POP Purchase
 description: Describes the steps to print the company name in the Ship To Address section of the POP Purchase Order Blank Form report in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How to print the company name in the Ship To Address section of the POP Purchase Order Blank Form report in Microsoft Dynamics GP

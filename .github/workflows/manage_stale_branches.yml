@@ -1,0 +1,23 @@
+name: Manage stale branches
+
+permissions:
+  contents: write
+  pull-requests: read
+      
+on:
+  workflow_dispatch:
+  
+
+jobs:
+
+  stale-branch:
+    if: github.repository == 'MicrosoftDocs/SupportArticles-docs-pr'
+    uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-StaleBranch.yml@workflows-prod
+    with:
+        PayloadJson: ${{ toJSON(github) }}
+        RepoBranchSkipList: '[
+                              "automation"
+                             ]'
+        ReportOnly: false
+    secrets:
+        AccessToken: ${{ secrets.GITHUB_TOKEN }}

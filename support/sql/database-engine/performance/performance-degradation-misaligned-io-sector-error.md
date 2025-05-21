@@ -3,8 +3,8 @@ title: Performance Degradation from Misaligned I/O Sector Size Error
 description: This article describes how to resolve misaligned I/O operations due to sector size mismatches in SQL Server.
 ms.author: dpless
 author: dplessMSFT
-ms.reviewer: mathoma, v-sidong
-ms.date: 03/21/2025
+ms.reviewer: mathoma, dpless, v-sidong
+ms.date: 04/15/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ---
 # Performance degradation caused by misaligned I/O sector size errors in SQL Server
@@ -59,7 +59,7 @@ If you're experiencing performance degradation due to misaligned I/O operations 
 
 To enable Trace Flag 1800 as a startup parameter, follow these steps:
 
-1. On the system where SQL Server is installed, open [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager). 
+1. On the system where SQL Server is installed and there's a physical sector size mismatch, open [SQL Server Configuration Manager](/sql/relational-databases/sql-server-configuration-manager). 
 1. Expand **SQL Server Configuration Manager (Local**) and select **SQL Server Services**. 
 1. Right-click the SQL Server instance you want to configure and select **Properties**: 
 
@@ -74,6 +74,9 @@ To enable Trace Flag 1800 as a startup parameter, follow these steps:
    :::image type="content" source="media/performance-degradation-misaligned-io-sector-error/trace-flag-1800.png" alt-text="Screenshot of the SQL Server properties window with startup parameters highlighted.":::
 
 1. Restart the SQL Server service to enable the trace flag when your instance starts. 
+
+> [!NOTE]
+> Trace Flag 1800 can also be enabled on systems with a 4-KB sector size without any adverse performance impact.
 
 ## References
 

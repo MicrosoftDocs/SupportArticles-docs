@@ -1,12 +1,12 @@
 ---
 title: Error AADSTS50020 - User account from identity provider does not exist in tenant
-description: Troubleshoot scenarios in which a guest user unsuccessfully tries to sign in to the resource tenant and error code AADSTS50020 is returned.
+description: Troubleshoot scenarios in which a guest user unsuccessfully tries to sign in to the resource tenant and error code AADSTS50020 is returned
 ms.date: 11/23/2023
 ms.editor: v-jsitser
 ms.reviewer: rrajan, haelshab, sungow, v-leedennis
 ms.service: entra-id
-ms.custom: sap:Issues Signing In to Applications, has-azure-ad-ps-ref
-keywords:
+ms.custom: sap:Issues Signing In to Applications, no-azure-ad-ps-ref
+keywords: AADSTS50020
 #Customer intent: As a Microsoft Entra administrator, I want to figure out why error code AADSTS50020 occurs so that I can make sure that my guest users from an identity provider can sign in to a resource tenant.
 ---
 # Error AADSTS50020 - User account from identity provider does not exist in tenant
@@ -132,9 +132,9 @@ Use a tenant-specific endpoint (`https://login.microsoftonline.com/<TenantIDOrNa
 
 Error `AADSTS50020` might occur if the name of a guest user who was deleted in a resource tenant is re-created by the administrator of the home tenant. To verify that the guest user account in the resource tenant isn't associated with a user account in the home tenant, use one of the following options:
 
-### Verification option 1: Check whether the resource tenant's guest user is older than the home tenant's user account
+### Verification: Check whether the resource tenant's guest user is older than the home tenant's user account
 
-The first verification option involves comparing the age of the resource tenant's guest user against the home tenant's user account. You can make this verification by using Microsoft Graph or MSOnline PowerShell.
+To check the creation date of the guest user account, you can use Microsoft Graph, Microsoft Entra PowerShell, or the Microsoft Graph PowerShell SDK.
 
 #### Microsoft Graph
 
@@ -155,45 +155,26 @@ GET https://graph.microsoft.com/v1.0/users/{id | userPrincipalName}/createdDateT
 
 Then, check the creation date of the guest user in the resource tenant against the creation date of the user account in the home tenant. The scenario is confirmed if the guest user was created before the home tenant's user account was created.
 
-#### MSOnline PowerShell
+#### Microsoft Entra PowerShell
 
-> [!NOTE]
-> The [MSOnline PowerShell module](/powershell/azure/active-directory/install-msonlinev1) is set to be deprecated.
-> Because it's also incompatible with PowerShell Core, make sure that you're using a compatible PowerShell version so that you can run the following commands.
+Run the [Get-EntraUser](/powershell/module/microsoft.entra/get-entrauser) PowerShell cmdlet to review the user creation date, as follows:
 
-Run the [Get-MsolUser](/powershell/module/msonline/get-msoluser) PowerShell cmdlet to review the user creation date, as follows:
-
-```azurepowershell
-Get-MsolUser -SearchString user@contoso.com | Format-List whenCreated
+```powershell
+Get-EntraUser -UserId {id | userPrincipalName} | Select-Object id, userPrincipalName, createdDateTime
 ```
 
 Then, check the creation date of the guest user in the resource tenant against the creation date of the user account in the home tenant. The scenario is confirmed if the guest user was created before the home tenant's user account was created.
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+#### Microsoft Graph PowerShell SDK
 
-### Verification option 2: Check whether the resource tenant's guest alternative security ID differs from the home tenant's user net ID
+Run the [Get-MgUser](/powershell/module/microsoft.graph.users/get-mguser) PowerShell cmdlet to review the user creation date, as follows:
 
-> [!NOTE]
-> The [MSOnline PowerShell module](/powershell/azure/active-directory/install-msonlinev1) is set to be deprecated.
-> Because it's also incompatible with PowerShell Core, make sure that you're using a compatible PowerShell version so that you can run the following commands.
+```powershell
+$p = @('Id', 'UserPrincipalName', 'CreatedDateTime')
+Get-MgUser -UserId {id | userPrincipalName} -Property $p| Select-Object $p
+```
 
-When a guest user accepts an invitation, the user's `LiveID` attribute (the unique sign-in ID of the user) is stored within `AlternativeSecurityIds` in the `key` attribute. Because the user account was deleted and created in the home tenant, the `NetID` value for the account will have changed for the user in the home tenant. Compare the `NetID` value of the user account in the home tenant against the key value that's stored within `AlternativeSecurityIds` of the guest account in the resource tenant, as follows:
-
-1. In the home tenant, retrieve the value of the `LiveID` attribute using the `Get-MsolUser` PowerShell cmdlet:
-
-   ```azurepowershell
-   Get-MsolUser -SearchString tuser1 | Select-Object -ExpandProperty LiveID
-   ```
-
-1. In the resource tenant, convert the value of the `key` attribute within `AlternativeSecurityIds` to a base64-encoded string:
-
-   ```azurepowershell
-   [convert]::ToBase64String((Get-MsolUser -ObjectId 01234567-89ab-cdef-0123-456789abcdef
-          ).AlternativeSecurityIds.key)
-   ```
-
-1. Convert the base64-encoded string to a hexadecimal value by using an online converter (such as [base64.guru](https://base64.guru/converter/decode/hex)).
-1. Compare the values from step 1 and step 3 to verify that they're different. The `NetID` of the user account in the home tenant changed when the account was deleted and re-created.
+Then, check the creation date of the guest user in the resource tenant against the creation date of the user account in the home tenant. The scenario is confirmed if the guest user was created before the home tenant's user account was created.
 
 ### Solution: Reset the redemption status of the guest user account
 

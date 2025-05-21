@@ -63,3 +63,6 @@
       - name: Virtual Machine running Windows
         tocHref: /troubleshoot/windows-server/deployment/
         topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
+      - name: Virtual Machine running Windows
+        tocHref: /troubleshoot/windows-server/installing-updates-features-roles/
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
