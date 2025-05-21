@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot CPU Pressure in AKS Clusters Using PSI Metrics
 description: Provides troubleshoot guidance for CPU pressure using PSI metrics in an AKS cluster.
-ms.date: 05/15/2025
+ms.date: 05/21/2025
 ms.reviewer: aritraghosh, dafell, alvinli, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
@@ -52,13 +52,13 @@ Azure Monitoring Managed Prometheus provides a way to monitor PSI metrics:
 4. Select **Prometheus metrics** as the data source.
 
     > [!NOTE]
-    > The metrics need to be enabled in Azure Managed Prometheus for it to be available. These metrics are exposed by Node Exporter or cAdvisor.
+    > The metrics need to be enabled in Azure Monitoring Managed Prometheus for it to be available. These metrics are exposed by Node Exporter or cAdvisor.
 
 5. Query specific PSI metrics in Prometheus explorer:
 
    - For node-level CPU pressure, use the `node_pressure_cpu_waiting_seconds_total` Prometheus Query Language (PromQL).
 
-    :::image type="content" source="media/troubleshoot-node-cpu-pressure-psi/node-level-cpu-pressure.png" alt-text="Screenshow that shows how to query node-level CPU pressure." lightbox="media/troubleshoot-node-cpu-pressure-psi/node-level-cpu-pressure.png":::
+      :::image type="content" source="media/troubleshoot-node-cpu-pressure-psi/node-level-cpu-pressure.png" alt-text="Screenshow that shows how to query node-level CPU pressure." lightbox="media/troubleshoot-node-cpu-pressure-psi/node-level-cpu-pressure.png":::
 
    - For pod-level CPU pressure, use the `container_cpu_cfs_throttled_seconds_total` PromQL.
 
@@ -147,7 +147,7 @@ AKS uses PSI metrics as an indicator for CPU pressure instead of load average fo
 - [Linux PSI documentation](https://docs.kernel.org/accounting/psi.html)
 - [Kubernetes resource management](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
 - [AKS performance best practices](/azure/aks/concepts-clusters-workloads)
-- [Azure Managed Prometheus](/azure/azure-monitor/essentials/prometheus-metrics-enable)
+- [Azure Monitoring Managed Prometheus](/azure/azure-monitor/essentials/prometheus-metrics-enable)
 - [Quality of Service in Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
 - [Linux Completely Fair Scheduler](https://docs.kernel.org/scheduler/sched-design-CFS.html)
 
