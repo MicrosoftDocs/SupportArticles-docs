@@ -1,9 +1,7 @@
 ---
 title: Common issues when using SIP devices with Teams
 description: Troubleshoots common issues that occur when you use compatible SIP devices with Microsoft Teams.
-ms.date: 10/30/2023
-author: helenclu
-ms.author: luche
+ms.date: 05/21/2025
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -28,10 +26,6 @@ SIP Gateway enables your organization to use any compatible SIP device with Micr
 1. Make sure that you reset the device to the factory default settings.
 1. Verify that [the SIP Gateway provisioning server's URL](/microsoftteams/sip-gateway-configure#set-the-sip-gateway-provisioning-server-url) begins in "HTTP", not "HTTPS". For example, use `http://noam.ipp.sdg.teams.microsoft.com`, not `https://noam.ipp.sdg.teams.microsoft.com`.
 1. Check whether the device can connect to SIP Gateway. Verify that the connection isn't blocked by your firewall or proxy server, and that the required HTTPS endpoints and TCP/UDP ports are open. For more information, see the list of items that follows "Before you can configure SIP Gateway" in [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
-
-## Device Validation Using \*55\* \<OTP\> is Currently Not Available for GCC Environment
-
-Due to a recent upstream design change, customers in the GCC environment are unable to use the [OTP method for device validation](/microsoftteams/devices/sip-gateway-configure#provision-and-enroll-sip-devices-as-common-area-phones). SIP Gateway team is exploring options to mitigate this issue, however, customers can continue to use the [Zero Touch Common Area Phone Sign In](/microsoftteams/devices/sip-gateway-configure#zero-touch-common-area-phone-sign-in) method. We urge customers to setup and use the **Zero Touch Common Area Phone Sign In** for shared devices. Sign in directly from the device continues to be available for SIP IP Phones and DECT endpoints.
 
 ## Web app authentication fails when I try to sign in
 
@@ -95,6 +89,12 @@ The SIP device state isn't accurately reflected if the device user isn't signed 
 1. Check whether your device is registered.
 1. [Restart your device](/microsoftteams/sip-gateway-configure#restart-a-sip-device), and try again.
 1. Test whether you can receive the same call (from the same remote address) in the Teams app.
+
+## I can't enroll my device by using a one-time verification code
+
+Currently, enrolling SIP devices by dialing \*55\* followed by a [one-time verification code]((/microsoftteams/devices/sip-gateway-configure#provision-and-enroll-sip-devices-as-common-area-phones) isn't available in the GCC environment. 
+
+To work around this issue, use the [Zero Touch Common Area Phone sign in](/microsoftteams/devices/sip-gateway-configure#zero-touch-common-area-phone-sign-in) method.
 
 ## More information
 
