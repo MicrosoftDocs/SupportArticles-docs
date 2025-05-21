@@ -147,7 +147,7 @@ AKS uses PSI metrics as an indicator for CPU pressure instead of load average fo
 - [Linux PSI documentation](https://docs.kernel.org/accounting/psi.html)
 - [Kubernetes resource management](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
 - [AKS performance best practices](/azure/aks/concepts-clusters-workloads)
-- [Azure Monitoring Managed Prometheus](/azure/azure-monitor/essentials/prometheus-metrics-enable)
+- [Enable Prometheus and Grafana](/azure/azure-monitor/containers/kubernetes-monitoring-enable#enable-prometheus-and-grafana)
 - [Quality of Service in Kubernetes](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
 - [Linux Completely Fair Scheduler](https://docs.kernel.org/scheduler/sched-design-CFS.html)
 
