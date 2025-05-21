@@ -11,7 +11,7 @@ ms.date: 05/05/2025
 
 ---
 # Troubleshoot seccomp profile configurations on Azure Kubernetes Service
-Seccomp (Secure Computing Mode) is a Linux kernel feature that enhances the security of containerized workloads by restricting the system calls (syscalls) that containers can make. In Azure Kubernetes Service (AKS), the [containerd](https://containerd.io/) runtime used by AKS nodes natively supports seccomp. However, enabling a seccomp profile can sometimes lead to workload failures due to workload critical syscalls being blocked. This guide explains what seccomp profiles are, how they work, and how you can troubleshoot them using the open source project [Inspektor Gadget](inspektor-gadget.io)’s ```audit seccomp profile``` gadget.
+Seccomp (Secure Computing) is a Linux kernel feature that enhances the security of containerized workloads by restricting the system calls (syscalls) that containers can make. In Azure Kubernetes Service (AKS), the [containerd](https://containerd.io/) runtime used by AKS nodes natively supports seccomp. However, enabling a seccomp profile can sometimes lead to workload failures due to workload critical syscalls being blocked. This guide explains what seccomp profiles are, how they work, and how you can troubleshoot them using the open source project [Inspektor Gadget](inspektor-gadget.io)’s ```audit seccomp profile``` gadget.
 
 Seccomp profiles define the syscalls that are allowed or denied for a given container. Syscalls are the interface that allows user space programs to request kernel services. There are two seccomp profile values supported on AKS: 
 
