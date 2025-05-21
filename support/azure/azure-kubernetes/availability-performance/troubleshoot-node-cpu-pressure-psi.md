@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot CPU Pressure in AKS Clusters Using PSI Metrics
-description: Provides troubleshoot guidance for CPU pressure using PSI metrics in an AKS cluster.
+description: Provides troubleshoot guidance on CPU pressure using PSI metrics in an AKS cluster.
 ms.date: 05/21/2025
 ms.reviewer: aritraghosh, dafell, alvinli, v-weizhu
 ms.service: azure-kubernetes-service
@@ -21,8 +21,8 @@ The following table outlines the common symptoms of CPU pressure:
 |Symptom | Description |
 |---|---|
 |Increased application latency|Services respond slower even when CPU utilization appears moderate.|
-|Throttled containers|Containers experience delays in processing despite having CPU resources available on the node|
-|Degraded performance|Applications experience unpredictable performance variations that don't correlate with CPU usage percentages|
+|Throttled containers|Containers experience delays in processing despite having CPU resources available on the node.|
+|Degraded performance|Applications experience unpredictable performance variations that don't correlate with CPU usage percentages.|
 
 ## Troubleshooting checklist
 
@@ -45,20 +45,20 @@ Azure Monitoring Managed Prometheus provides a way to monitor PSI metrics:
 
 2. Navigate to the Azure Monitor workspace associated with the AKS cluster from the [Azure portal](https://portal.azure.com).
 
-    :::image type="content" source="media/troubleshoot-node-cpu-pressure-psi/configure-azure-monitor-for-containers.png" alt-text="Screenshow that shows how to navigate to the Azure Monitor workspace." lightbox="media/troubleshoot-node-cpu-pressure-psi/configure-azure-monitor-for-containers.png":::
+    :::image type="content" source="media/troubleshoot-node-cpu-pressure-psi/configure-azure-monitor-for-containers.png" alt-text="Screenshot that shows how to navigate to the Azure Monitor workspace." lightbox="media/troubleshoot-node-cpu-pressure-psi/configure-azure-monitor-for-containers.png":::
 
 3. Under **Monitoring**, select **Metrics**.
 
 4. Select **Prometheus metrics** as the data source.
 
     > [!NOTE]
-    > The metrics need to be enabled in Azure Monitoring Managed Prometheus for it to be available. These metrics are exposed by Node Exporter or cAdvisor.
+    > To use the metrics, you need to enable them in Azure Monitoring Managed Prometheus. These metrics are exposed by Node Exporter or cAdvisor.
 
 5. Query specific PSI metrics in Prometheus explorer:
 
    - For node-level CPU pressure, use the `node_pressure_cpu_waiting_seconds_total` Prometheus Query Language (PromQL).
 
-      :::image type="content" source="media/troubleshoot-node-cpu-pressure-psi/node-level-cpu-pressure.png" alt-text="Screenshow that shows how to query node-level CPU pressure." lightbox="media/troubleshoot-node-cpu-pressure-psi/node-level-cpu-pressure.png":::
+      :::image type="content" source="media/troubleshoot-node-cpu-pressure-psi/node-level-cpu-pressure.png" alt-text="Screenshot that shows how to query node-level CPU pressure." lightbox="media/troubleshoot-node-cpu-pressure-psi/node-level-cpu-pressure.png":::
 
    - For pod-level CPU pressure, use the `container_cpu_cfs_throttled_seconds_total` PromQL.
 
@@ -67,7 +67,7 @@ Azure Monitoring Managed Prometheus provides a way to monitor PSI metrics:
    `rate(node_pressure_cpu_waiting_seconds_total[5m]) * 100`
 
 > [!NOTE]
-> Some of the container level metrics such as `container_pressure_cpu_waiting_seconds_total` and `container_pressure_cpu_stalled_seconds_total` aren't available in AKS as they're part of the Kubelet PSI feature gate which is in alpha state. AKS begins supporting the use of the feature when it reaches beta stage.
+> Some of the container level metrics such as `container_pressure_cpu_waiting_seconds_total` and `container_pressure_cpu_stalled_seconds_total` aren't available in AKS as they're part of the Kubelet PSI feature gate that is in alpha state. AKS begins supporting the use of the feature when it reaches beta stage.
 
 ### [Command Line](#tab/command-line)
 
@@ -121,17 +121,17 @@ Review the following table to learn how to implement best practices for avoiding
 ## Key PSI metrics to monitor
 
 > [!NOTE]
-> If a node's CPU usage is moderate, but the containers on the node experience CFS throttling, consider increasing the resource limits or removing them and following [Linux's Completely Fair Scheduler (CFS)](https://docs.kernel.org/scheduler/sched-design-CFS.html) algorithm.
+> If a node's CPU usage is moderate but the containers on the node experience CFS throttling, increase the resource limits, or remove them and follow [Linux's Completely Fair Scheduler (CFS)](https://docs.kernel.org/scheduler/sched-design-CFS.html) algorithm.
 
 ### Node-level PSI metrics
 
-- `node_pressure_cpu_waiting_seconds_total`: Cumulative time tasks have been waiting for CPU.
+- `node_pressure_cpu_waiting_seconds_total`: Cumulative time tasks wait for CPU.
 - `node_cpu_seconds_total`: Traditional CPU utilization for comparison.
 
 ### Container-level PSI indicators
 
-- `container_cpu_cfs_throttled_periods_total`: The number of periods a container has been throttled.
-- `container_cpu_cfs_throttled_seconds_total`: Total time a container has been throttled.
+- `container_cpu_cfs_throttled_periods_total`: The number of periods a container is throttled.
+- `container_cpu_cfs_throttled_seconds_total`: Total time a container is throttled.
 - Throttling percentage: `rate(container_cpu_cfs_throttled_periods_total[5m]) / rate(container_cpu_cfs_periods_total[5m]) * 100`
 
 ## Why using PSI metrics?
