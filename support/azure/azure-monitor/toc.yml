@@ -23,6 +23,8 @@ items:
       href: app-insights/telemetry/investigate-missing-telemetry.md
     - name: Troubleshoot auto-instrumentation issues
       href: app-insights/telemetry/auto-instrumentation-troubleshoot.md
+    - name: Troubleshoot missing telemetry
+      href: app-insights/telemetry/troubleshoot-missing-telemetry.md
     - name: Troubleshoot high data ingestion
       href: app-insights/telemetry/troubleshoot-high-data-ingestion.md
     - name: Application Insights classic SDK troubleshooting
