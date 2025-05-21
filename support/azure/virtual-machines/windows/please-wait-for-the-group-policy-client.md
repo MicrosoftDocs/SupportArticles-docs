@@ -1,4 +1,4 @@
-z---
+---
 title: Windows VM Startup gets Stuck on "Please wait for the Group Policy Client" in Azure
 description: Provides troubleshooting steps for an Azure virtual machine (VM) that gets stuck in startup on the "Please wait for the Group Policy Client" screen.
 ms.date: 05/14/2025
