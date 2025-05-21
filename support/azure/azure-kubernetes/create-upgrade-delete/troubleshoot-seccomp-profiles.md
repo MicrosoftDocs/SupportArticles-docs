@@ -147,7 +147,7 @@ spec:
 ```
 
 ### Step 2: Install Inspektor Gadget
-[Inspektor Gadget](https://inspektor-gadget.io/docs/latest/quick-start) provides insights into syscalls affecting your containers. To install it, run the following commands to add the gadget plugin and deploy it:
+[Inspektor Gadget](https://inspektor-gadget.io/docs/latest/quick-start) provides insights into syscalls affecting your containers. To install it, run the following commands to install the `gadget` plugin in your host and deploy Inspektor Gadget into the cluster:
 
 ```console 
 kubectl krew install gadget
