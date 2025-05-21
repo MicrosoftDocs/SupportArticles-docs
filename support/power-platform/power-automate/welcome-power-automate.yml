@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: ChristySu #Required; your GitHub user alias, with correct capitalization.
   ms.author: christys #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/27/2024
+  ms.date: 04/30/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -58,7 +58,7 @@ landingContent:
           - text: '"Power Automate needs an update" message when opening Power Automate for desktop'
             url: desktop-flows/cannot-update-power-automate-for-desktop.md     
           - text: UI automation action fails with "Failed to get UI element" or "Failed to get window" error
-            url: desktop-flows/ui-automation-action-fails-errors.md 
+            url: desktop-flows/ui-automation/ui-automation-action-fails-errors.md 
 
   # Card
   - title: Flow run issues

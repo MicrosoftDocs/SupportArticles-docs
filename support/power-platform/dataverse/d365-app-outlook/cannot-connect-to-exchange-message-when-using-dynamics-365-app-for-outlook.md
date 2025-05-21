@@ -4,12 +4,13 @@ description: When you use Microsoft Dynamics 365 App for Outlook, you receive a 
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # Can't connect to Exchange message appears when using Microsoft Dynamics 365 App for Outlook
 
 This article provides resolutions for the issue that you receive a **Can't connect to Exchange** message when using Microsoft Dynamics 365 App for Outlook.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4534356
 
 ## Symptoms

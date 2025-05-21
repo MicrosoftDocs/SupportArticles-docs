@@ -3,7 +3,7 @@
 title: Windows 365 Boot known issues
 description: Learn about known issues with Windows 365 Boot, including workarounds and updated fixes.
 manager: dcscontentpm
-ms.date: 01/20/2025
+ms.date: 03/31/2025
 ms.topic: troubleshooting
 ms.reviewer: elluthra, erikje
 ms.custom: intune-azure, get-started
@@ -159,7 +159,7 @@ If you configured your device for Windows 365 Boot using the [Windows 365 Boot G
 2. Search for the device configuration profile that contains "Windows 365 Boot Device Configuration Policy" in its name.
 3. Make sure that the "Cloud Desktop" configuration is configured with the **Windows 365 Boot Mode** setting set to **Enable Windows 365 Boot Desktop**.
 4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
-5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
+5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](../mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune.md).
 
 If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 
@@ -175,7 +175,7 @@ If you configured your device for Windows 365 Boot using the [Windows 365 Boot G
 2. Search for the device configuration profile that contains "Windows 365 Boot Device Configuration Policy" in its name.
 3. Make sure that the "Windows Logon" configuration is configured with the **Override Shell Program** setting set to **Apply Lightweight shell**.
 4. Select **Device assignment status** and make sure that the configuration policy was successfully applied to it.
-5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune).
+5. If the check-in status isn't successful, see [Troubleshooting policies and profiles in Microsoft Intune](../mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune.md).
 
 If the problem persists, reinstall the physical device's operating system as explained in [Windows 365 Boot physical device requirements](/windows-365/enterprise/windows-365-boot-physical-device-requirements).
 
@@ -278,6 +278,12 @@ If a user has a local setting screen (like Local Bluetooth settings) open on the
 ### Solution
 
 If the user must share a local settings screen, use a different tool like Quick Assist.
+
+## Can't return to the Cloud PC after signing in to the physical device 
+
+### Solution
+
+If the user still doesn't return to the Cloud PC sign-in screen after signing out of the physical device, restart the physical device.  
 
 ## Next steps
 

@@ -6266,6 +6266,11 @@
         "redirect_document_id": false
       },
       {
+        "source_path": "azure-kubernetes/create-upgrade-delete/subnet-with-external-resources-cannot-be-used-by-other-resources.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
         "source_path": "azure-kubernetes/create-upgrade-delete/error-code-requestdisallowedbypolicy-delete.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
         "redirect_document_id": false
@@ -6291,6 +6296,30 @@
       {
         "source_path": "azure-monitor/app-insights/debug/snapshot-debugger-troubleshoot.md",
         "redirect_url": "/azure/azure-monitor/snapshot-debugger/snapshot-debugger-troubleshoot"
+      },
+      {
+        "source_path": "azure-kubernetes/error-codes/vhdfilenotfound.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/vmextensionerror-vhdfilenotfound"
+      },
+      {
+        "source_path": "virtual-machines/linux/linux-vm-no-boot-hyper-v-driver-issues.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/troubleshoot-lis-driver-issues-on-linux-vms"
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-reservedresourcename.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-invalidparameter"
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-using-feature-requiring-virtual-machine-scale-set.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes"
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/akscapacityerror.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/akscapacityheavyusage-error"
+      },
+      {
+        "source_path": "azure-kubernetes/error-codes/zonalallocation-allocatonfailed-error.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/zonalallocation-allocationfailed-error"
       }
   ]
 }

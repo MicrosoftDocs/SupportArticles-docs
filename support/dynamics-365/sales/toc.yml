@@ -1,127 +1,19 @@
 - name: Dynamics 365 Sales
   href: welcome-sales.yml
-- name: Access Issues
+- name: Customization
   items:
-    - name: Error when accessing an app module
-      href: error-when-accessing-app-module.md
-- name: Applications and Add-ons
-  items:
-    - name: The record could not be deleted because of an association
-      href: the-record-could-not-be-deleted.md
-- name: Customization and Solutions
-  items:
-    - name: A user doesn't appear in the All Eligible Users list
-      href: a-user-disappears-all-eligible-users.md
-    - name: Action isn't available
-      href: action-not-available.md
-    - name: Assembly version error when importing a solution
-      href: assembly-version-error-importing-dynamics-365-solution.md
-    - name: Button in command bar don't show after grid item selection
+    - name: Button in command bar doesn't appear after grid item selection
       href: button-in-command-bar-not-appear-after-grid-item-selection.md
-    - name: Can't change from publisher name to other publisher name
-      href: the-publisher-name-cannot-be-changed.md
-    - name: Can't complete this action for this component
-      href: you-cannot-complete-this-action-for-this-component-error-when-importing-solution.md
-    - name: Can't import a solution or install an app
-      href: unable-import-dynamics-365-solution.md
-    - name: Can't save a folder-level tracking mapping
-      href: error-occurs-when-saving-folder-level-tracking-mapping.md
-    - name: Can't Uninstall Solution when removing solutions
-      href: cannot-uninstall-solution-error-when-deleting-solution.md
-    - name: Cascading settings revert to the value in solution
-      href: cascading-settings-revert-value-solution.md
-    - name: Dependency error when uninstalling Portals solutions
-      href: error-when-uninstalling-portals-solutions.md
-    - name: Error 80040203 (Invalid Argument)
-      href: error-code-80040203-invalid-argument-error.md
-    - name: Error 80048539 when importing a solution patch
-      href: error-code-80048539-when-importing-solution-patch.md
-    - name: Error 80048541 when importing a solution
-      href: error-occurs-when-importing-solution.md
-    - name: Error 8004F042 when importing solution patch
-      href: error-code-8004f042-occurs.md
-    - name: Error when importing AttributeMap
-      href: error-when-importing-attributemap.md
-    - name: Import Generic Error 8004801e when importing a solution
-      href: import-generic-error.md
-    - name: Input string was not in a correct format when importing solution
-      href: input-string-was-not-in-a-correct-format-error.md
-    - name: Invalid Export - Business Process Entity Missing
-      href: failed-export-business-process.md
-    - name: Invalid file error 80048000 when importing a solution
-      href: invalid-file-error-parentheses-80048000.md
-    - name: InvalidPluginAssemblyContent when importing a solution
-      href: invalidpluginassemblycontent-error-when-importing-solution.md
-    - name: My Apps area is missing from navigation
-      href: my-apps-area-is-missing.md
-    - name: Only import solutions with package version of 9.0 or earlier
-      href: only-import-solutions-a-package.md
-    - name: Permission error 80040220 when importing or deleting solution
-      href: error-when-you-import-delete-solution.md
-    - name: Selecting Set Properties in the Workflow designer fails
-      href: workflow-designer-fails-load.md
-    - name: Solution can't be deleted due to dependencies
-      href: solution-cannot-be-deleted.md
-    - name: Solution import errors
-      href: troubleshoot-solution-import-errors-in-dynamics-365.md
-    - name: Solution install fails because of dependencies
-      href: solution-install-fails-due-dependencies.md
-    - name: SQL error 80044150 when importing a solution
-      href: sql-error-80044150-when-importing-solution.md
-    - name: SQL timeout error 80044151 when importing or exporting solution
-      href: sql-timeout-error-80044151-when-importing-or-exporting-dynamics-365-solution.md
-    - name: The [Solution Name] solution doesn't have an upgrade
-      href: error-when-selecting-a-solution.md
-    - name: The display order must be greater or equal to 10000
-      href: invalid-display-order-value.md
-    - name: The element savedquery has incomplete content
-      href: element-savedquery-has-incomplete-content.md
-    - name: The element Workflow has invalid child element ProcessTriggers
-      href: workflow-element-has-invalid-child-element.md
-    - name: The file provided was not uploaded
-      href: the-file-provided-was-not-uploaded-error.md
-    - name: The import file is too large to upload
-      href: the-import-file-is-too-large-upload.md
-    - name: The import of solution failed when importing solution
-      href: the-import-of-solution-failed-error-when-importing-solution.md
-    - name: The import of solution failed with error 8004f016
-      href: the-import-of-solution-failed-error-code-8004f016.md
-    - name: The import of the solution failed
-      href: import-of-solution-fails-due-to-missing-components.md
-    - name: The solution file is invalid
-      href: the-solution-file-is-invalid.md
-    - name: The solution installation or removal failed
-      href: solution-installation-or-removal-failed-error-when-installing-or-removing-solution.md
-    - name: The solution is already installed as a managed solution
-      href: the-solution-is-installed-a-managed-one.md
-    - name: The solution is already installed on this system
-      href: the-solution-is-installed-this-system.md
-    - name: The solution package was generated on Dynamics 365 Online
-      href: the-solution-package-was-365-online.md
-    - name: There was an error calculating dependencies for this component
-      href: an-error-calculating-dependencies.md
-    - name: This solution package can't be imported
-      href: this-solution-package-cannot-be-imported.md
-    - name: Unexpected error 80040216 when importing solution
-      href: unexpected-error-when-importing-solution.md
-    - name: Workflow generating system jobs and logs
-      href: workflow-creates-large-volume-of-system-jobs-and-logs.md
-    - name: You can't import patch for the solution
-      href: cannot-import-the-patch-the-solution.md
-- name: Data Import
+- name: Enterprise Marketing
   items:
-    - name: Error when importing SavedQuery
-      href: error-importing-savedquery-in-dynamics-365.md
-- name: Data Management
+    - name: Troubleshoot in-app marketing
+      href: troubleshoot-in-app-marketing-issues.md
+- name: Forecasting
   items:
-    - name: Error 8004f016 when importing contact-lead AttributeMap
-      href: error-code-8004f016-when-importing-contact-lead-attributemap.md
-- name: Dynamics 365 Server
-  items:
-    - name: Can't connect to the Dynamics 365 server
-      href: cannot-connect-your-dynamics-365-server.md
-    - name: CRM Installations, Updates, and Documentation
-      href: dynamics-crm-installations-updates-and-documentation.md
+    - name: Troubleshoot forecasts
+      href: troubleshoot-forecast-issues.md
+    - name: Troubleshoot Sales Pipeline chart
+      href: troubleshoot-sales-pipeline-issues.md
 - name: LinkedIn Sales Navigator
   items:
     - name: Can't view photos on custom contact and lead forms in Unified Interface
@@ -133,8 +25,52 @@
     - name: LinkedIn Sales Navigator display widgets don't load properly
       href: lisn-display-widgets-not-loading-properly.md
     - name: LinkedInSalesNavigatorControlsForUnifiedClient isn't available in the organization
-      href: lisn-solution-not-available-configure-lisn.md 
-- name: Microsoft Teams Integration
+      href: lisn-solution-not-available-configure-lisn.md
+- name: Lead
+  items:
+    - name: Troubleshoot automatic generation of contact or company-related fields
+      href: troubleshoot-lead-form-auto-generated-contact-company-fields.md
+    - name: Troubleshoot lead qualification issues for salespeople
+      href: troubleshoot-lead-qualification-issues-for-salespeople.md
+    - name: Troubleshoot lead qualification for system administrators
+      href: troubleshoot-lead-qualification-issues-for-system-admin.md
+- name: Opportunity
+  items:
+    - name: Troubleshoot common tables
+      href: troubleshoot-multiple-tables-issues.md
+    - name: Troubleshoot opportunities
+      href: troubleshoot-opportunities-issues.md
+    - name: Troubleshoot views
+      href: troubleshoot-table-views-issues.md
+- name: Order
+  items:
+    - name: Troubleshoot orders
+      href: troubleshoot-orders-issues.md
+- name: Price list
+  items:
+    - name: Troubleshoot currency and price lists
+      href: troubleshoot-currency-and-price-lists-issues.md
+- name: Product
+  items:
+    - name: Troubleshoot products
+      href: troubleshoot-products-issues.md
+- name: Sales app
+  items:
+    - name: Troubleshoot Unified Interface
+      href: troubleshoot-unified-interface-issues.md
+- name: Sales app installation
+  items:
+    - name: Troubleshoot Sales Professional
+      href: troubleshoot-sales-professional-issues.md
+- name: Sales Insights
+  items:
+    - name: Troubleshoot emails
+      href: troubleshoot-emails-issues.md
+    - name: Troubleshoot Sales Premium
+      href: troubleshoot-sales-premium-issues.md
+    - name: Troubleshoot relationship intelligence
+      href: troubleshoot-relationship-intelligence.md
+- name: Teams Dialer
   items:
     - name: Can't enable Teams dialer
       href: cannot-enable-dialer.md
@@ -148,57 +84,9 @@
       href: cannot-hear-other-customer.md
     - name: Seller can't make phone calls to PSTN
       href: cannot-make-phone-calls-to-pstn.md
-    - name: Troubleshoot Microsoft Teams chat integration with Dynamics 365
-      href: troubleshoot-dynamics365-embedcollab-issues.md
     - name: Teams dialer basic troubleshooting
       href: dialer-basic-troubleshooting.md
     - name: Teams dialer isn't visible in custom app
       href: dialer-not-available-in-custom-app.md
     - name: Teams dialer isn't visible in the Sales Hub
       href: dialer-not-visible-in-sales.md
-- name: Mobile Apps
-  items:
-    - name: We can't find any apps for your role
-      href: we-cannot-find-any-apps-your-role.md
-- name: Programmability and Software Development
-  items:
-    - name: TLS 1.2 is required for connectivity
-      href: tls-1-dot-2-required-for-connectivity.md
-- name: Sales Hub
-  items:
-    - name: Troubleshoot common tables
-      href: troubleshoot-multiple-tables-issues.md
-    - name: Troubleshoot currency and price lists
-      href: troubleshoot-currency-and-price-lists-issues.md
-    - name: Troubleshoot emails
-      href: troubleshoot-emails-issues.md
-    - name: Troubleshoot forecasts
-      href: troubleshoot-forecast-issues.md
-    - name: Troubleshoot in-app marketing
-      href: troubleshoot-in-app-marketing-issues.md
-    - name: Troubleshoot leads
-      items:
-        - name: Troubleshoot automatic generation of contact or company-related fields
-          href: troubleshoot-lead-form-auto-generated-contact-company-fields.md
-        - name: Troubleshoot lead qualification issues for salespeople
-          href: troubleshoot-lead-qualification-issues-for-salespeople.md
-        - name: Troubleshoot lead qualification for system administrators
-          href: troubleshoot-lead-qualification-issues-for-system-admin.md
-    - name: Troubleshoot opportunities
-      href: troubleshoot-opportunities-issues.md
-    - name: Troubleshoot orders
-      href: troubleshoot-orders-issues.md
-    - name: Troubleshoot products
-      href: troubleshoot-products-issues.md
-    - name: Troubleshoot Sales Pipeline chart
-      href: troubleshoot-sales-pipeline-issues.md
-    - name: Troubleshoot Sales Premium
-      href: troubleshoot-sales-premium-issues.md
-    - name: Troubleshoot Sales Professional
-      href: troubleshoot-sales-professional-issues.md
-    - name: Troubleshoot Unified Interface
-      href: troubleshoot-unified-interface-issues.md
-    - name: Troubleshoot views
-      href: troubleshoot-table-views-issues.md
-    - name: Troubleshoot relationship intelligence
-      href: troubleshoot-relationship-intelligence.md

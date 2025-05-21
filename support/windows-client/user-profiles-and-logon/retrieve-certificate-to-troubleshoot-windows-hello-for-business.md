@@ -6,9 +6,13 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: takondo
-ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
+ms.custom:
+- sap:user logon and profiles\user profiles
+- pcy:WinComm Directory Services
 ---
 # Retrieve certificate to troubleshoot Windows Hello for Business logon failures
+
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows client (All supported versions)  
 
 This article introduces how to troubleshoot Windows Hello for Business (WHfB) logon failures in a hybrid environment.
 

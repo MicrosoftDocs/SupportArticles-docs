@@ -1,7 +1,7 @@
 ---
 title: 429 Too Many Requests errors
 description: Troubleshoot why you receive 429 Too Many Requests errors on your Kubernetes clusters.
-ms.date: 08/29/2023
+ms.date: 02/20/2025
 ms.reviewer: chiragpa, nickoman, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 keywords:
@@ -82,7 +82,6 @@ For an AKS cluster, you can use [AKS Diagnose and Solve Problems](/azure/aks/aks
   - Host: The host where HTTP status 429 responses were detected. Azure Resource Manager throttles come from `management.azure.com`; anything else is a lower-layer resource provider.
   - User agent: Requests with a specified user agent that were throttled.
   - Operation: Operations where HTTP status 429 responses were detected.
-  - Client IP: The client IP address that sent the throttled requests.
 
 Request throttling can be caused by a combination of any cluster in this subscription, not just the request rate for this cluster.
 

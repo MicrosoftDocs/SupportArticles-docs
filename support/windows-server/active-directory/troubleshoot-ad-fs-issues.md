@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, abizerh, fszita, meerak
 ms.custom:
-- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues",,"has-azure-ad-ps-ref"]
+- sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
 - pcy:WinComm Directory Services
 ---
 # Troubleshoot AD FS issues in Microsoft Entra ID and Office 365
@@ -39,18 +39,17 @@ _Original KB number:_ &nbsp; 3079872
 
     :::image type="content" source="media/troubleshoot-ad-fs-issues/office-365-redirecting.png" alt-text="Page that is shown when the A D F S redirection occurs.":::
 
-    1. If no redirection occurs and you're prompted to enter a password on the same page, which means that Microsoft Entra ID or Office 365 doesn't recognize the user or the domain of the user to be federated. To check whether there's a federation trust between Microsoft Entra ID or Office 365 and your AD FS server, run the `Get-msoldomain` cmdlet from Azure AD PowerShell. If a domain is federated, its authentication property will be displayed as **Federated**, as in the following screenshot:
-
-        :::image type="content" source="media/troubleshoot-ad-fs-issues/federated-domain.png" alt-text="Cmdlet Get-msoldomain output shows that there is a federation trust between Microsoft Entra ID or Office 365 and your A D F S server.":::
-
+    1. If no redirection occurs and you're prompted to enter a password on the same page, which means that Microsoft Entra ID or Office 365 doesn't recognize the user or the domain of the user to be federated. To check whether there's a federation trust between Microsoft Entra ID or Office 365 and your AD FS server, run the `Get-MgDomain` cmdlet and check the **AuthenticationType**.
     2. If redirection occurs but you aren't redirected to your AD FS server for sign-in, check whether the AD FS service name resolves to the correct IP and whether it can connect to that IP on TCP port 443.
 
         If the domain is displayed as **Federated**, obtain information about the federation trust by running the following commands:
 
         ```powershell
-        Get-MsolFederationProperty -DomainName <domain>
-        Get-MsolDomainFederationSettings -DomainName <domain>
+        Get-MgDomainFederationConfiguration -DomainId <domain_id>
         ```
+
+        > [!NOTE]
+        > \<domain_id> is a placeholder for your domain's name. For example, contoso.com.
 
         Check the URI, URL, and certificate of the federation partner that's configured by Office 365 or Microsoft Entra ID.
 
@@ -280,20 +279,20 @@ _Original KB number:_ &nbsp; 3079872
         To get the User attribute value in Microsoft Entra ID, run the following command line:
 
         ```powershell
-        Get-MsolUser -UserPrincipalName <UPN>
+        Get-MgUser -UserId <user_id_string>
         ```
 
         SAML 2.0:  
         IDPEmail: The value of this claim should match the user principal name of the users in Microsoft Entra ID.  
         NAMEID: The value of this claim should match the sourceAnchor or ImmutableID of the user in Microsoft Entra ID.
 
-        For more information, see [Use a SAML 2.0 identity provider to implement single sign-on](/previous-versions/azure/azure-services/dn641269(v=azure.100)).
+        For more information, see [Use a SAML 2.0 Identity Provider (IdP) for Single Sign On](/entra/identity/hybrid/connect/how-to-connect-fed-saml-idp).
 
         Examples:  
         This issue can occur when the UPN of a synced user is changed in AD but without updating the online directory. In this scenario, you can either correct the user's UPN in AD (to match the related user's logon name) or run the following cmdlet to change the logon name of the related user in the Online directory:
 
         ```powershell
-        Set-MsolUserPrincipalName -UserPrincipalName [ExistingUPN] -NewUserPrincipalName [DomainUPN-AD]
+        Update-MgUser -UserId <user_id_string> -UserPrincipalName <DomainUPN-AD>
         ```
 
         It might also be that you're using AADsync to sync MAIL as UPN and EMPID as SourceAnchor, but the Relying Party claim rules at the AD FS level haven't been updated to send MAIL as UPN and EMPID as ImmutableID.
@@ -306,19 +305,25 @@ _Original KB number:_ &nbsp; 3079872
 
         Office 365 or Microsoft Entra ID will try to reach out to the AD FS service, assuming the service is reachable over the public network. We try to poll the AD FS federation metadata at regular intervals, to pull any configuration changes on AD FS, mainly the token-signing certificate info. If this process is not working, the global admin should receive a warning on the Office 365 portal about the token-signing certificate expiry and about the actions that are required to update it.
 
-        You can use `Get-MsolFederationProperty -DomainName <domain>` to dump the federation property on AD FS and Office 365. Here you can compare the TokenSigningCertificate thumbprint, to check whether the Office 365 tenant configuration for your federated domain is in sync with AD FS. If you find a mismatch in the token-signing certificate configuration, run the following command to update it:
+        You can use `Get-MgDomainFederationConfiguration -DomainId <domain_id>` to dump the federation property on AD FS and Office 365. Here you can compare the TokenSigningCertificate thumbprint, to check whether the Office 365 tenant configuration for your federated domain is in sync with AD FS. If you find a mismatch in the token-signing certificate configuration, run the following command to update it:
 
         ```powershell
-        Update-MsolFederatedDomain -DomainName <domain> -SupportMultipleDomain
+        Connect-MgGraph -scopes Domain.ReadWrite.All, Directory.ReadWrite.All
+        $tdo= Get-MgDomainFederationConfiguration -DomainID <domain_id>
+        Update-MgDomainFederationConfiguration -DomainId <domain_id> -InternalDomainFederationId $tdo.Id -SigningCertificate <certificate_token>
+        Disconnect-MgGraph
         ```
 
-        You can also run the following tool to schedule a task on the AD FS server that will monitor for the Auto-certificate rollover of the token-signing certificate and update the Office 365 tenant automatically.
+        > [!NOTE]
+        > \<domain_id> is a placeholder for your domain's name. For example, contoso.com.
 
-        [Verify and manage single sign-on with AD FS](/previous-versions/azure/azure-services/jj151809(v=azure.100))
+        For more information, see [Renew federation certificates for Microsoft 365 and Microsoft Entra ID](/entra/identity/hybrid/connect/how-to-connect-fed-o365-certs).
 
    - Issuance Transform claim rules for the Office 365 RP aren't configured correctly.
 
-        In a scenario where you have multiple TLDs (top-level domains), you might have logon issues if the Supportmultipledomain switch wasn't used when the RP trust was created and updated. For more information, see [SupportMultipleDomain switch, when managing SSO to Office 365](/archive/blogs/abizerh/supportmultipledomain-switch-when-managing-sso-to-office-365).
+     In a scenario where you have multiple TLDs (top-level domains), you might have logon issues if the Supportmultipledomain switch wasn't used when the RP trust was created and updated.
+
+     We recommend to use Entra Connect for managing the federations and the claim rules. This usually automatically configured ADFS and Entra appropriately. For more information, see [Multiple Domain Support for Federating with Microsoft Entra ID](/entra/identity/hybrid/connect/how-to-connect-install-multiple-domains).
 
    - Make sure that token encryption isn't being used by AD FS or STS when a token is issued to Microsoft Entra ID or to Office 365.
 6. There are stale cached credentials in Windows Credential Manager.
@@ -338,3 +343,13 @@ _Original KB number:_ &nbsp; 3079872
     |AD FS 2.0|AD FS 2012 R2|
     |---|---|
     |<ul><li>[Description of Update Rollup 3 for Active Directory Federation Services (AD FS) 2.0](https://support.microsoft.com/help/2790338) <br/> </li> <li>[Update is available to fix several issues after you install security update 2843638 on an AD FS server](https://support.microsoft.com/help/2896713 )</li>|[December 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2](https://support.microsoft.com/help/3013769) |
+
+## Reference
+
+For more information about the Microsoft Graph cmdlets, see the following articles:
+
+- [Get-MgDomain](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdomain)
+- [Get-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/get-mgdomainfederationconfiguration)
+- [Get-MgUser](/powershell/module/microsoft.graph.users/get-mguser)
+- [Update-MgUser](/powershell/module/microsoft.graph.users/update-mguser)
+- [Update-MgDomainFederationConfiguration](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdomainfederationconfiguration)

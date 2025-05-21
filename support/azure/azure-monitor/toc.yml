@@ -9,6 +9,8 @@ items:
       href: app-insights/telemetry/opentelemetry-troubleshooting-dotnet.md
     - name: Java
       href: app-insights/telemetry/opentelemetry-troubleshooting-java.md
+    - name: Java native images
+      href: app-insights/telemetry/java-spring-native-opentelemetry-issues.md
     - name: Node.js
       href: app-insights/telemetry/opentelemetry-troubleshooting-nodejs.md
     - name: Python
@@ -21,6 +23,8 @@ items:
       href: app-insights/telemetry/investigate-missing-telemetry.md
     - name: Troubleshoot auto-instrumentation issues
       href: app-insights/telemetry/auto-instrumentation-troubleshoot.md
+    - name: Troubleshoot high data ingestion
+      href: app-insights/telemetry/troubleshoot-high-data-ingestion.md
     - name: Application Insights classic SDK troubleshooting
       items:
       - name: .NET
@@ -29,8 +33,6 @@ items:
         href: app-insights/telemetry/java-2x-troubleshoot.md
       - name: Java 3.x
         href: app-insights/telemetry/java-standalone-troubleshoot.md
-      - name: Troubleshoot OpenTelemetry issues in Java native
-        href: app-insights/telemetry/java-spring-native-opentelemetry-issues.md
       - name: JavaScript
         items:
         - name: Troubleshoot Application Insights JavaScript SDK
@@ -142,3 +144,7 @@ items:
     - name: Advanced troubleshooting steps
       href: azure-monitor-agent/ama-windows-installation-issues-advanced-troubleshooting-steps.md
 
+- name: Diagnostic settings
+  items:
+  - name: Deleted event hub is automatically re-created
+    href: diagnostic-settings/data-flow/deleted-event-hub-automatically-recreated.md

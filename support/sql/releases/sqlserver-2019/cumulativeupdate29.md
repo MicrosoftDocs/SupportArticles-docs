@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 29 for SQL Server 2019 (KB5046365)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 29 (KB5046365).
-ms.date: 10/31/2024
+ms.date: 04/30/2024
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5046365
 ms.reviewer: v-qianli2
 appliesto:
@@ -25,13 +25,7 @@ This article describes Cumulative Update package 29 (CU29) for Microsoft SQL Ser
 
 ### Access violation when session is reset
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
-
-- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
-
-- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
-
-Microsoft is working on a fix for this issue and it will be available in a future CU.
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
 
 ## Improvements and fixes included in this update
 
@@ -51,7 +45,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3539961>[3539961](#3539961) </a> | Fixes an issue in which database striped backups using virtual device interface (VDI) tools might fail to restore with [error 3456](../../database-engine/backup-restore/backup-multistriped-vdi-issue.md). | SQL Server Engine| Backup Restore| All |
 | <a id=3287653>[3287653](#3287653) </a> | Fixes an assertion failure (Location: ListenerSpec.cpp:480; Expression: totalUsed + cbListenerName <= cbObj) that you encounter when creating a [distributed availability group (DAG)](/sql/database-engine/availability-groups/windows/distributed-availability-groups) and incorrectly specifying the number of availability groups in it to be other than two. | SQL Server Engine| High Availability and Disaster Recovery | All|
 | <a id=3407955>[3407955](#3407955) </a> | Fixes an issue in which a log backup stops responding on the primary replica after the secondary replica restarts if no additional workloads exist on the primary database. | SQL Server Engine| High Availability and Disaster Recovery | All|
-| <a id=3418490>[3418490](#3418490) </a> | Fixes a patching error that you encounter in secondary replicas of an availability group with databases that have SQL replication, change data capture (CDC), or SQL Server Integration Services database (SSISDB) enabled. For more information, see [known issue two of SQL Server 2019 CU28](cumulativeupdate28.md#issue-two-patching-error-for-secondary-replicas-in-an-availability-group-with-databases-enabled-replication-cdc-or-ssisdb) or [known issue three of SQL Server 2019 CU27](cumulativeupdate27.md#issue-three-patching-error-for-secondary-replicas-in-an-availability-group-with-databases-enabled-replication-cdc-or-ssisdb). | SQL Server Engine| High Availability and Disaster Recovery | Windows|
+| <a id=3418490>[3418490](#3418490) </a> | Fixes a patching error that you encounter in secondary replicas of an availability group with databases that have SQL replication or change data capture (CDC) enabled. For more information, see [known issue two of SQL Server 2019 CU28](cumulativeupdate28.md#issue-two-patching-error-for-secondary-replicas-in-an-availability-group-with-databases-enabled-replication-or-cdc) or [known issue three of SQL Server 2019 CU27](cumulativeupdate27.md#issue-three-patching-error-for-secondary-replicas-in-an-availability-group-with-databases-enabled-replication-or-cdc). | SQL Server Engine| High Availability and Disaster Recovery | Windows|
 | <a id=3336595>[3336595](#3336595) </a> | Adds a validation for the `MODEL` parameter when running `PREDICT` to avoid errors due to the input of wrong models.| SQL Server Engine| Query Execution | All |
 | <a id=3362873>[3362873](#3362873) </a> | Fixes an issue with checkpoint operation in which the following error 2601 occurs when SQL Server tries to perform a checkpoint operation on the database that has change tracking enabled: </br></br>\<DateTime> Error: 2601, Severity: 14, State: 1. </br>\<DateTime> Cannot insert duplicate key row in object '\<ObjectName>' with unique index '\<IndexName>'. The duplicate key value is \<KeyValue>. | SQL Server Engine| Replication | All|
 | <a id=3419782>[3419782](#3419782) </a> | Allows you to disable [OLE DB streaming](/sql/relational-databases/replication/agents/replication-distribution-agent) by passing `-UseOledbStreaming 0` for the Replication Distribution Agent to avoid the error mentioned in [Error message when you run the Distribution Agent in SQL Server](../../database-engine/replication/error-run-distribution-agent.md). | SQL Server Engine| Replication | All|

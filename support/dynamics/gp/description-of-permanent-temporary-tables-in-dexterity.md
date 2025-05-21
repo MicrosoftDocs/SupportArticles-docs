@@ -2,7 +2,7 @@
 title: Description of permanent temporary tables in Dexterity
 description: Describes permanent temporary tables in Dexterity in Microsoft Dynamics GP. You may need this table when you have to pass the table's contents to a background procedure.
 ms.reviewer: theley
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Description of "permanent" temporary tables in Dexterity in Microsoft Dynamics GP

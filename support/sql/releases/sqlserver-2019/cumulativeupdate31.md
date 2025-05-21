@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 31 for SQL Server 2019 (KB5049296)
-description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 31 (KB5049296).
-ms.date: 02/13/2025
+description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2019 cumulative update 31 (KB5049296).
+ms.date: 02/24/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5049296
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,15 +23,126 @@ This article describes Cumulative Update package 31 (CU31) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Access violation when session is reset
+### Issue one: Access violation when session is reset
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
+[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
 
-- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
+### Issue two: Patching a read-scale availability group (Windows or Linux) causes the availability group on the patched replica to be removed
 
-- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
+If you use the read-scale availability group (AG) feature in SQL Server on Windows or Linux, do **not** install this CU.
 
-Microsoft is working on a fix for this issue and it will be available in a future CU.
+This CU introduced [a fix to support AG names longer than 64 characters](#3548672). However, when the patch is installed on an instance that has the read-scale AG configured, the AG metadata is dropped. This issue affects read-scale AGs in both [Windows](/sql/database-engine/availability-groups/windows/read-scale-availability-groups) and [Linux](/sql/linux/sql-server-linux-availability-group-configure-rs), which means that the `CLUSTER_TYPE` of the AG is either `NONE` or `EXTERNAL`.
+
+When the AG is dropped after patching, you'll see the error message in the [SQL Server error log](/sql/tools/configuration-manager/viewing-the-sql-server-error-log) similar to the following one:
+
+```output
+<DateTime>     Error: 19433, Severity: 16, State: 1.
+<DateTime>     Always On: AG integrity check failed to find AG name to ID map entry with matching group ID for AG '<AGName>' (expected: '<AGName>'; found '<GUID Value>').
+<DateTime>     Always On: The local replica of availability group '<AGName>' is being removed. The instance of SQL Server failed to validate the integrity of the availability group configuration in the Windows Server Failover Clustering (WSFC) store.  This is expected if the availability group has been removed from another instance of SQL Server. This is an informational message only. No user action is required.
+```
+
+After the patch is installed, the metadata is removed and you must re-create the AG on the patched replica. If the AG replicas have mismatched SQL Server versions (for example, the primary replica is running SQL Server 2019 CU30 and the secondary replica is running SQL Server 2019 CU31), you can't re-create the AG on the replica with the missing metadata (the secondary replica). In order to add the AG again, you must uninstall the patch on the secondary replica first and then add the AG again.
+
+This issue is fixed in [SQL Server 2019 CU32](cumulativeupdate32.md#3907024).
+
+#### Example
+
+You can use steps that are similar to the following ones, but you need to update them for the given environment, including the `CLUSTER_TYPE`. The VM1 in the given example is the primary replica of the AG 'readscaleag' and VM2 is the secondary replica that has the patch applied but already uninstalled. Before running the script, both replicas VM1 and VM2 are running SQL Server 2019 CU30 and the AG metadata is missing on VM2. To run this script, use [SQLCMD mode](/sql/tools/sqlcmd/edit-sqlcmd-scripts-query-editor).
+
+```sql
+-- You must run this query in SQLCMD mode
+:setvar PrimaryServer "VM1\SQL19"
+:setvar SecondaryServer "VM2\SQL19"
+:setvar AvailabilityGroupName "readscaleag"
+:setvar EndpointURL "TCP://VM2.Contoso.lab:5022"
+:setvar DatabaseName "testReadScaleAGDb"
+:setvar ClusterType "NONE"
+
+-- Connect to primary server
+:CONNECT $(PrimaryServer)
+
+-- Remove replica on secondary server
+ALTER AVAILABILITY GROUP $(AvailabilityGroupName) REMOVE REPLICA ON N'$(SecondaryServer)';
+GO
+
+-- Connect to primary server again
+:CONNECT $(PrimaryServer)
+
+USE [master];
+GO
+
+-- Add replica on secondary server
+ALTER AVAILABILITY GROUP $(AvailabilityGroupName)
+ADD REPLICA ON N'$(SecondaryServer)' WITH (
+    ENDPOINT_URL = N'$(EndpointURL)', 
+    FAILOVER_MODE = MANUAL, 
+    AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT, 
+    BACKUP_PRIORITY = 50, 
+    SECONDARY_ROLE(ALLOW_CONNECTIONS = NO)
+);
+GO
+
+-- Connect to secondary server
+:CONNECT $(SecondaryServer)
+
+-- Join availability group with cluster type none
+ALTER AVAILABILITY GROUP $(AvailabilityGroupName) JOIN WITH (CLUSTER_TYPE = N'$(ClusterType)');
+GO
+
+-- Connect to secondary server again
+:CONNECT $(SecondaryServer)
+
+-- Set database to availability group
+-- Wait for the replica to start communicating
+BEGIN TRY
+    DECLARE @conn BIT;
+    DECLARE @count INT;
+    DECLARE @replica_id UNIQUEIDENTIFIER;
+    DECLARE @group_id UNIQUEIDENTIFIER;
+    
+    SET @conn = 0;
+    SET @count = 30; -- wait for 5 minutes 
+
+    IF (SERVERPROPERTY('IsHadrEnabled') = 1)
+        AND (ISNULL((SELECT member_state 
+                     FROM master.sys.dm_hadr_cluster_members 
+                     WHERE UPPER(member_name COLLATE Latin1_General_CI_AS) = UPPER(CAST(SERVERPROPERTY('ComputerNamePhysicalNetBIOS') AS NVARCHAR(256)) COLLATE Latin1_General_CI_AS)), 0) <> 0)
+        AND (ISNULL((SELECT state 
+                     FROM master.sys.database_mirroring_endpoints), 1) = 0)
+    BEGIN
+        SELECT @group_id = ags.group_id 
+        FROM master.sys.availability_groups AS ags 
+        WHERE name = N'$(AvailabilityGroupName)';
+
+        SELECT @replica_id = replicas.replica_id 
+        FROM master.sys.availability_replicas AS replicas 
+        WHERE UPPER(replicas.replica_server_name COLLATE Latin1_General_CI_AS) = UPPER(@@SERVERNAME COLLATE Latin1_General_CI_AS) 
+          AND group_id = @group_id;
+
+        WHILE @conn <> 1 AND @count > 0
+        BEGIN
+            SET @conn = ISNULL((SELECT connected_state 
+                                FROM master.sys.dm_hadr_availability_replica_states AS states 
+                                WHERE states.replica_id = @replica_id), 1);
+            IF @conn = 1
+            BEGIN
+                -- exit loop when the replica is connected, or if the query cannot find the replica status
+                BREAK;
+            END
+
+            WAITFOR DELAY '00:00:10';
+            SET @count = @count - 1;
+        END
+    END
+END TRY
+BEGIN CATCH
+    -- If the wait loop fails, do not stop execution of the alter database statement
+END CATCH
+
+ALTER DATABASE $(DatabaseName) SET HADR AVAILABILITY GROUP = $(AvailabilityGroupName);
+GO
+GO
+```
 
 ## Improvements and fixes included in this update
 

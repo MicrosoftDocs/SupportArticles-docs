@@ -9,7 +9,7 @@ ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.date: 06/26/2024
+ms.date: 02/26/2025
 ---
 # Troubleshooting Red Hat OS upgrade issues
 
@@ -607,8 +607,80 @@ The mounting failure occurs because version 2 of the control group (cgroup v2) i
 
 1. If that parameter is in one of those files, remove the parameter from the file, and then run the Leapp upgrade process again.
 
+### Upgrade symptom 7: Leapp upgrade doesn't continue after reboot, and VM boots into RHEL 8.10 instead
+
+If you run the Leapp upgrade from RHEL 8.10 to 9.4 or 9.5, the upgrade process might not continue after the required reboot. Instead, the VM boots back into RHEL 8.10 without loading the special upgrade initramfs.
+
+The following setting in `/etc/default/grub` might cause this issue:
+
+```config
+GRUB_DEFAULT=0
+```
+
+Since `GRUB_DEFAULT=0` forces the system to always boot the first menu entry in GRUB, it skips the Leapp upgrade entry and continues booting into the existing RHEL 8.10 environment.
+
+
+#### Upgrade solution 7: Modify GRUB to use the saved entry
+
+1. Change `GRUB_DEFAULT=0` to `GRUB_DEFAULT=saved`:
+
+    > [!NOTE]
+    > In this example, `GRUB_DEFAULT` is set to `0`, but in your environment, it might be `1` or another number. Ensure that you replace it accordingly in the `sed` command.
+
+
+    ```bash
+    sudo sed -i 's/^GRUB_DEFAULT=0/GRUB_DEFAULT=saved/' /etc/default/grub
+    ```
+
+2. Regenerate the GRUB configuration:
+
+    - **GEN 1:**
+
+        ```bash
+        sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+        ```
+
+    - **GEN 2:**
+
+        ```bash
+        grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg
+        ```
+
+3. Reboot the VM using the serial console:
+
+    ```bash
+    sudo reboot
+    ```
+
+    After the reboot, if the fix is applied correctly, the VM will boot into the Leapp upgrade initramfs, and you should see an output similar to the following lines in the serial console:
+
+    ```output
+    [  OK  ] Reached target Remote File Systems.
+            Starting dracut pre-mount hook...
+    [  OK  ] Finished dracut pre-mount hook.
+            Starting File System Check on /dev/mapper/rootvg-rootlv...
+    [  OK  ] Finished File System Check on /dev/mapper/rootvg-rootlv.
+            Mounting /sysroot...
+    [  OK  ] Mounted /sysroot.
+    [  OK  ] Reached target Initrd Root File System.
+    [  OK  ] Reached target System Upgrade.
+            Starting dracut pre-pivot and cleanup hook...
+            Starting System Upgrade...
+    [    6.507621] upgrade[677]: starting upgrade hook
+    [    6.531079] upgrade[677]: /bin/upgrade: line 20: /sysroot/var/tmp/system-upgrade.state: No such file or directory
+    [    6.543603] upgrade[677]: Storage initialisation: Attempt 0 of 11. Wait 15 seconds.
+    [    6.608365] dracut-pre-pivot[703]: 6.605850 | /etc/multipath.conf does not exist, blocklisting all devices.
+    [    6.620246] dracut-pre-pivot[703]: 6.608599 | You can run "/sbin/mpathconf --enable" to create
+    [    6.630208] dracut-pre-pivot[703]: 6.608921 | /etc/multipath.conf. See man mpathconf(8) for more details
+    [  OK  ] Finished dracut pre-pivot and cleanup hook.
+    [   21.555427] upgrade[714]:   5 logical volume(s) in volume group "rootvg" now active
+    [   21.581296] upgrade[677]: Mounting /usr with -o defaults,ro
+    ```
+
+    This output indicates that the Leapp upgrade process has continued successfully. After completion, the VM should boot into RHEL 9.*x*.
+
 > [!IMPORTANT]
-> If the Leapp upgrade is still failing for no apparent reason (such as when upgrading from version 7.9 to version 8.10 or from version 8.10 to version 9.4), don't upgrade to the latest version. Instead, try to upgrade to an intermediate version (such as from version 7.9 to version 8.8 or version 8.10 to version 9.2) by specifying the `--target x.y` flag. After the intermediate upgrade is successful, you can try to upgrade to the latest release.
+> If the Leapp upgrade still fails without an obvious reason (such as when upgrading from version 7.9 to version 8.10 or from version 8.10 to version 9.5), don't upgrade to the latest version. Instead, try to upgrade to an intermediate version (such as from version 7.9 to version 8.8 or version 8.10 to version 9.4) by specifying the `--target x.y` flag. After the intermediate upgrade is successful, you can try to upgrade to the latest release.
 
 ## Related content
 

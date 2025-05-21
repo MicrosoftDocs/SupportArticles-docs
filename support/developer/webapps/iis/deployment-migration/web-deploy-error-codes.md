@@ -1,7 +1,7 @@
 ---
 title: Web Deploy error codes
 description: For some common error codes, Web Deploy shows an error message. This article helps you to diagnose these issues and provides workarounds to avoid the errors.
-ms.date: 04/12/2011
+ms.date: 04/17/2025
 ms.reviewer: chihshen, bilalaslam, v-jayaramanp
 ms.topic: troubleshooting
 ms.custom: sap:Deployment and Migration\Web Deploy providers and directives

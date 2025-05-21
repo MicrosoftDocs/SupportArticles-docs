@@ -4,12 +4,13 @@ description: When you try to use Microsoft Dynamics 365 App for Outlook, you rec
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 03/31/2021
+ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
 # We're unable to connect to your Microsoft Dynamics 365 server error when using Microsoft Dynamics 365 App for Outlook
 
 This article provides a resolution for the issue that you can't use Microsoft Dynamics 365 App for Outlook due to the **We're unable to connect to your Microsoft Dynamics 365 server** error.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4341413
 
 ## Symptoms

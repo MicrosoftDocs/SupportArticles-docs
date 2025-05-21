@@ -1,7 +1,7 @@
 ---
 title: Mapped network drive may fail to reconnect in Windows 10, version 1809
 description: An article provides a workaround to resolve mapped network drives not working in Windows 10, version 1809.
-ms.date: 01/15/2025
+ms.date: 05/07/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -51,9 +51,9 @@ while($True){
     foreach( $MappedDrive in $MappedDrives)
     {
         try {
-            New-SmbMapping -LocalPath $MappedDrive.LocalPath -RemotePath $MappedDrive.RemotePath -Persistent $True
+            New-SmbMapping -LocalPath $MappedDrive.LocalPath -RemotePath $MappedDrive.RemotePath -Persistent $True -ErrorAction Stop
         } catch {
-            Write-Host "There was an error mapping $MappedDrive.RemotePath to $MappedDrive.LocalPath"
+            Write-Host "There was an error mapping $($MappedDrive.RemotePath) to $($MappedDrive.LocalPath)"
         }
     }
     $i = $i - 1
@@ -72,28 +72,45 @@ All workarounds should be executed in standard user security context. Executing 
 > [!NOTE]
 > This workaround works only for the device that has network access at logon. If the device has not established a network connection by the time of logon, the startup script won't automatically reconnect network drives.
 
-1. Copy the script file (MapDrives.cmd) to the following location:  
-    %ProgramData%\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp  
-2. Copy the script file (MapDrives.ps1) to the following location:  
-    %SystemDrive%\\Scripts\\
-3. A log file (StartupLog.txt) will be created in the %TEMP%\\ folder.
-4. Log off, and then log back on to the device to open the mapped drives.
+1. Copy the script file **MapDrives.cmd** to the following location:  
+    **%ProgramData%\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp**
+2. Copy the script file **MapDrives.ps1** to the following location: **%SystemDrive%\\Scripts\\**.
+3. A log file **StartupLog.txt** is created in the **%TEMP%\\** folder.
+4. Sign out, and then sign in to the device to open the mapped drives.
 
 #### Workaround 2: Create a scheduled task
 
 > [!NOTE]
 > A PowerShell window flashes up when the scheduled task runs.
 
-1. Copy the script file MapDrives.ps1 to the following location:  
-    %SystemDrive%\\Scripts\\  
+1. Copy the script file **MapDrives.ps1** to the following location: **%SystemDrive%\\Scripts\\**.
 2. In **Task Scheduler**, select **Action** > **Create Task**.
-3. On the **General** tab in the **Create Task** dialog box, type a name (such as *Map Network Drives*) and description for the task.
+3. On the **General** tab in the **Create Task** dialog, type a name (such as **Map Network Drives**) and description for the task.
 4. Select **Change User or Group**, select a local user or group (such as **LocalComputer\\Users**) and then select **OK**.
 5. On the **Triggers** tab, select **New**, and then select **At log on** for the **Begin the task** field.
 6. On the **Actions** tab, select **New**, and then select **Start a program** for the **Action** field.
-7. Type _Powershell.exe_ for the **Program/script** field.
+7. Type **Powershell.exe** for the **Program/script** field.
 8. In the **Add arguments (optional)** field, type the following:  
-    _-windowstyle hidden -command .\\MapDrives.ps1 >> %TEMP%\\StartupLog.txt 2>&1_
-9. In the **Start in (optional)** field, type the location (_%SystemDrive%\\Scripts\\_) of the script file.
+   **-windowstyle hidden -command .\\MapDrives.ps1 >> %TEMP%\\StartupLog.txt 2>&1**
+9. In the **Start in (optional)** field, type the location of the script file: **%SystemDrive%\\Scripts\\**.
 10. On the **Conditions** tab, select the **Start only if the following network connection is available** option, select **Any connection**, and then select **OK**.
-11. Log off, and then log back on to the device to run the scheduled task.
+11. Sign out, and then sign in to the device to run the scheduled task.
+
+#### Workaround 3: Create a scheduled task for VPN connection Event ID 20225
+
+> [!NOTE]
+> Event ID 20225 indicates that a virtual private network (VPN) connection is successfully established.
+
+1. Copy the script file **MapDrives.ps1** to the following location: **%SystemDrive%\\Scripts\\**.
+2. In **Task Scheduler**, select **Action** > **Create Task**.
+3. On the **General** tab in the **Create Task** dialog, type a name (such as **Map Network Drives**) and description for the task.
+4. Select **Change User or Group**, select a local user or group (such as **LocalComputer\\Users**) and then select **OK**.
+5. On the **Triggers** tab, select **New**, and then select **On an event** for the **Begin the task** field.
+6. Select **Application** from the **Log** dropdown list, type **RasClient** in the **Source** field, and type **20225** in the **Event ID** field. Then, select **OK**.
+7. On the **Actions** tab, select **New**, and then select **Start a program** for the **Action** field.
+8. Type **Powershell.exe** for the **Program/script** field.
+9. In the **Add arguments (optional)** field, type the following:  
+   **-windowsstyle hidden -command .\\MapDrives.ps1 >> %TEMP%\\StartupLog.txt 2>&1**
+10. In the **Start in (optional)** field, type the location of the script file: **%SystemDrive%\\Scripts\\**.
+11. On the **Conditions** tab, select the **Start only if the following network connection is available** option, select **Any connection**, and then select **OK**.
+12. Sign out, and then sign in to the device to run the scheduled task.

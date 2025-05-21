@@ -158,7 +158,7 @@ Run the following `leapp preupgrade` command:
 sudo leapp preupgrade --target <target_os_version> --no-rhsm
 ```
 
-Replace `<target_os_version>` with the target OS version, for example, `9.4`. 
+Replace `<target_os_version>` with the target OS version, for example, `9.4` or `9.5`. 
 
 ---
 
@@ -205,7 +205,7 @@ Continue the Leapp upgrade process after the Leapp pre-upgrade report shows no e
     ```
     
     > [!NOTE]
-    > - Replace `<target_os_version>` with the target OS version, for example, `9.4`.  
+    > - Replace `<target_os_version>` with the target OS version, for example, `9.4` or `9.5`. 
     > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process shows that a reboot is required to continue the process as follows, manually reboot the VM:

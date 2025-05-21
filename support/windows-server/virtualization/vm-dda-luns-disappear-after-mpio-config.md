@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
 keywords: DDA,passthrough,pass-through,LUN,MPIO
 ms.custom:
-- sap:virtualization and hyper-v\storage configuration"]
+- sap:virtualization and hyper-v\storage configuration
 - pcy:WinComm Storage High Avail
 ---
 

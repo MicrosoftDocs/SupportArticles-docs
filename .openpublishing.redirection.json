@@ -12757,6 +12757,14 @@
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/your-device-is-currently-unsupported"
     },
     {
+      "source_path": "support/mem/configmgr/client-management/cannot-download-content-from-cmg.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/cmg-communication-error"
+    },
+    {
+      "source_path": "support/mem/configmgr/client-management/cmg-communication-error-403.md",
+      "redirect_url": "/troubleshoot/mem/configmgr/client-management/cmg-communication-error"
+    },
+    {
       "source_path": "support/dynamics-365/sales/attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/attachments-not-tracked-to-dynamics-365-after-office-365-atp-is-enabled"
     },
@@ -12831,6 +12839,864 @@
     {
       "source_path": "support/dynamics-365/sales/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error.md",
       "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error"
+    },
+    {
+      "source_path": "support/windows-server/performance/use-userdump-create-dump-file.md",
+      "redirect_url": "/sysinternals/downloads/procdump"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/troubleshoot-dynamics-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/error-when-accessing-crm-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/new-forms-formatted-incorrectly.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/error-when-using-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/your-device-is-currently-unsupported.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/this-organization-has-already-been-configured-error-when-connecting.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/you-do-not-have-permission-to-access-this-app-error-when-accessing-dynamics-365-app-for-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/the-given-key-was-not-present-in-dictionary.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-given-key-was-not-present-in-dictionary"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/error-when-installing-crm-2016-outlook.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-installing-crm-2016-outlook"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/something-went-wrong-during-sign-in.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/something-went-wrong-during-sign"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/you-do-not-have-required-role-privilege.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/you-do-not-have-the-required-role-or-privilege-to-complete-this-action-error"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/we-cannot-load-this-app.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-when-opening-365-app-outlook"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/error-incomingemailrejected-install-dynamics-365-app-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/error-install-dynamics-365-app-outlook"
+    },
+    {
+      "source_path": "support/power-platform/dataverse/d365-app-outlook/current-user-role-not-have-required-permissions.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/privilege-error-occurs-when-using-dynamics-365-app-for-outlook"
+    },
+    {
+      "source_path": "support/windows-server/performance/disable-enable-dr-watson-program.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/disable-enable-dr-watson-program"
+    },
+    {
+      "source_path": "support/windows-server/performance/accessing-shared-folder-from-application-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/accessing-shared-folder-from-application-fails"
+    },
+    {
+      "source_path": "support/windows-server/performance/stop-error-code-0x00000019.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/stop-error-code-0x00000019"
+    },
+    {
+      "source_path": "support/windows-server/performance/stop-error-driver-irql-not-less-or-equal.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/stop-error-driver-irql-not-less-or-equal"
+    },
+    {
+      "source_path": "support/windows-server/performance/stop-error-0x109-on-VMWare-virtual-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/stop-error-0x109-on-VMWare-virtual-machine"
+    },
+    {
+      "source_path": "support/windows-server/performance/stop-0x0000000a-error-processor-c1-idle-state.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/stop-0x0000000a-error-processor-c1-idle-state"
+    },
+    {
+      "source_path": "support/windows-server/performance/troubleshoot-stop-0xc000021a-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/troubleshoot-stop-0xc000021a-error"
+    },
+    {
+      "source_path": "support/windows-server/performance/toggle-terminal-services-application-server-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/toggle-terminal-services-application-server-mode"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/cannot-join-computer-to-domain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/cannot-join-computer-to-domain"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/fail-to-join-computer-to-ad-domain.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/fail-to-join-computer-to-ad-domain"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/desktop-application-crashes-ui-automation.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation/desktop-application-crashes-ui-automation"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/cannot-access-java-application-elements.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation/cannot-access-java-application-elements"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/focus-window-action-not-working.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation/focus-window-action-not-working"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/failed-get-ui-element.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation/failed-get-ui-element"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/ui-automation-action-fails-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation/ui-automation-action-fails-errors"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/set-drop-down-list-value-fails.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/ui-automation/set-drop-down-list-value-fails"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/browser-automation-error-after-chromium-update.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/browser-automation-error-after-chromium-update"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/cannot-automate-webpage-with-iframes.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/cannot-automate-webpage-with-iframes"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/web-automation-action-fails-runtime.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/web-automation-action-fails-runtime"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/automate-save-as-open-upload-dialog-box-web-browser.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/automate-save-as-open-upload-dialog-box-web-browser"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/failed-to-assume-control-of-edge-chrome-firefox-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/failed-to-assume-control-of-edge-chrome-firefox-error"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/automation-browser-security-update.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/automation-browser-security-update"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/web-extensions-policies.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/browser-automation/web-extensions-policies"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/action-not-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/action-not-available"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/you-cannot-complete-this-action-for-this-component-error-when-importing-solution.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/you-cannot-complete-this-action-for-this-component-error-when-importing-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cascading-settings-revert-value-solution.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cascading-settings-revert-value-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/failed-export-business-process.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/failed-export-business-process"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/element-savedquery-has-incomplete-content.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/element-savedquery-has-incomplete-content"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-importing-attributemap.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/error-when-importing-attributemap"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/only-import-solutions-a-package.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/only-import-solutions-a-package"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-file-provided-was-not-uploaded-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-file-provided-was-not-uploaded-error"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-import-of-solution-failed-error-code-8004f016.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-import-of-solution-failed-error-code-8004f016"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-publisher-name-cannot-be-changed.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-publisher-name-cannot-be-changed"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/workflow-creates-large-volume-of-system-jobs-and-logs.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/workflow-creates-large-volume-of-system-jobs-and-logs"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/workflow-designer-fails-load.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/workflow-designer-fails-load"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/workflow-element-has-invalid-child-element.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/workflow-element-has-invalid-child-element"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-import-the-patch-the-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/input-string-was-not-in-a-correct-format-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-when-importing-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-occurs-when-saving-folder-level-tracking-mapping.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-selecting-a-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/import-generic-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/invalid-display-order-value.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/invalid-file-error-parentheses-80048000.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/sql-error-80044150-when-importing-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/sql-timeout-error-80044151-when-importing-or-exporting-dynamics-365-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-solution-package-was-365-online.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unexpected-error-when-importing-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/solution-installation-or-removal-failed-error-when-installing-or-removing-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/concurrent-solution-operation-failures"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-solution-is-installed-this-system.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/failure-converting-to-managed-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/a-user-disappears-all-eligible-users.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/a-user-disappears-all-eligible-users"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-import-file-is-too-large-upload.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/the-import-file-is-too-large-upload"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/an-error-calculating-dependencies.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/an-error-calculating-dependencies"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-code-8004f042-occurs.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/error-code-8004f042-occurs"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-uninstalling-portals-solutions.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/error-when-uninstalling-portals-solutions"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-you-import-delete-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/error-when-you-import-delete-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/invalidpluginassemblycontent-error-when-importing-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/invalidpluginassemblycontent-error-when-importing-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/my-apps-area-is-missing.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/my-apps-area-is-missing"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-import-of-solution-failed-error-when-importing-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/the-import-of-solution-failed-error-when-importing-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-solution-file-is-invalid.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/the-solution-file-is-invalid"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-solution-is-installed-a-managed-one.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/the-solution-is-installed-a-managed-one"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/this-solution-package-cannot-be-imported.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/this-solution-package-cannot-be-imported"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/unable-import-dynamics-365-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/unable-import-dynamics-365-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-uninstall-solution-error-when-deleting-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/cannot-uninstall-solution-error-when-deleting-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/assembly-version-error-importing-dynamics-365-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/assembly-version-error-importing-dynamics-365-solution"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/troubleshoot-solution-import-errors-in-dynamics-365.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/troubleshoot-solution-import-errors-in-dynamics-365"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/sync-center-slow-syncing-of-offline-files.md",
+      "redirect_url": "/troubleshoot/windows-client/networking/sync-center-slow-syncing-of-offline-files"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/troubleshoot-domain-controller-location-issues.md",
+      "redirect_url": "/troubleshoot/windows-server/windows-security/troubleshoot-domain-controller-location-issues"
+    },
+    {
+      "source_path": "support/windows-server/setup-upgrade-and-drivers/repair-or-in-place-upgrade.md",
+      "redirect_url": "/windows-server/get-started/perform-in-place-upgrade"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/roaming-profile-was-not-completely-synchronized-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/roaming-profile-was-not-completely-synchronized-error"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/renaming-user-account-not-change-profile-path.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/renaming-user-account-not-change-profile-path"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/event-id-300-windows-hello-successfully-created-in-windows-10"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/convert-domain-federated.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/convert-domain-federated"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/connection-adfs-failed-set-msoladfscontex.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/connection-adfs-failed-set-msoladfscontex"
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/error-invalid-store-path-loadstate-user-state-migration-tool.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/error-invalid-store-path-loadstate-user-state-migration-tool"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/file-replication-service-event-13552-13555.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/file-replication-service-event-13552-13555"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/remove-orphaned-domains.md",
+      "redirect_url": "/troubleshoot/windows-server/windows-security/remove-orphaned-domains"
+    },
+    {
+      "source_path": "support/windows-server/remote/error-when-connecting-terminal-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/error-when-connecting-terminal-server"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/tls-1-dot-2-required-for-connectivity.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/tls-1-dot-2-required-for-connectivity"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/dynamics-crm-installations-updates-and-documentation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/dynamics-crm-installations-updates-and-documentation"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/import-of-solution-fails-due-to-missing-components.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/missing-dependency-on-solution-import"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/solution-install-fails-due-dependencies.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/missing-dependency-on-solution-import"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-code-8004f016-when-importing-contact-lead-attributemap.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/welcome-dataverse"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/cannot-connect-your-dynamics-365-server.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/d365-app-outlook/cannot-connect-your-dynamics-365-server"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-when-accessing-app-module.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/environment-app-access/error-when-accessing-app-module"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/solution-cannot-be-deleted.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/solution-cannot-be-deleted"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/we-cannot-find-any-apps-your-role.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/environment-app-access/we-cannot-find-any-apps-your-role"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-code-80040203-invalid-argument-error.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/error-code-80040203-invalid-argument-error"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-code-80048539-when-importing-solution-patch.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/error-code-80048539-when-importing-solution-patch"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/error-importing-savedquery-in-dynamics-365.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/error-importing-savedquery-in-dynamics-365"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/troubleshoot-dynamics365-embedcollab-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/microsoft-teams/troubleshoot-dynamics365-embedcollab-issues"
+    },
+    {
+      "source_path": "support/dynamics-365/sales/the-record-could-not-be-deleted.md",
+      "redirect_url": "/troubleshoot/power-platform/dataverse/working-with-solutions/the-record-could-not-be-deleted"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/cloud-flows/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows"
+    },
+    {
+      "source_path": "support/dynamics/gp/add-tax-details-to-sop-blank-invoice-form-report.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/vacation-paycode-not-distributing-in-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/an-incorrect-recon-batch-is-created.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/the-save-button-is-unavailable-when-creating-user-in-user-setup.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/close-the-sales-kit-options-window-before-modifying-the-transaction.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/csst-setup-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/display-transfer-number-in-purchase-order-processing-document-inquiry.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/error-during-canadian-payroll-employee-import.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/description-of-the-field-that-is-used-to-print-outstanding-document-amounts.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/mrp-suggests-to-create-purchase-order.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/enter-the-renewal-date-error-when-saving-service-fee-as-renewable-fee.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/save-delete-tax-detail-id-lookup-button-grayed-out.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/set-up-quebec-qhip-tax-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/tax-calculations-in-project-accounting.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/undefined-symbol-foo764do5774dd-or-foo764do1098-or-report-not-found.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/use-default-field-option-is-unavailable-for-gl-account-description.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/developer-toolkit.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-create-smartlist-object-that-has-go-to-function.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/use-e-mail-messages-send-letters-statements.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/email-errors-in-microsoft-dynamics-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/a-program-is-trying-to-send-an-e-mail-program-on-your-behalf.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/email-pm-eft-remittances-steps.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/this-vendor-has-been-assigned-a-po.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/econnect-requires-integrated-security.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/either-bof-eof-is-true.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/workflow-manager-in-microsoft-dynamics-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/gl-trial-balance-srs-reports-return-no-data.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/privilege-error.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/information-about-credit-limit-feature.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/send-e-mail-statements-checkbox-grayed-out.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/use-activex-data-object-vba.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/dot-net-framework-2-dot-0-is-not-detected.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-generate-ach-file-for-prenoted-employees-without-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/use-fixed-assets-import-utility-to-update-assets.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/verify-tax-tables-have-correct-fica-social-security-limit.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/reminder-emails-for-workflow-new-feature.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/calculations-for-quarterly-941-report-in-us-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/field-list-button-is-missing.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/correct-differences-federal-wages.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/could-not-email-status-report-to-sender-error.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/error-dynamics-needs-shared-directory-store-ole-notes.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/use-integrate-menu-create-security-task.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/importing-data-into-human-resources-module.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/what-reports-can-use-to-view-hr-attendance-balances.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/process-track-an-advance-pay-run.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/send-emails-takes-long-time.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/project-button-missing-from-maintenance.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/three-types-of-olap-storage-schemes-are-compatible-with-analysis-cubes.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/assign-an-employee-allocate-the-wages.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/management-reporter-2012-base-diagnostic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/menu-path-for-electronic-reconcile-does-not-appear.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/upgrade-tables-payables-management.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/another-user-is-printing-or-calculating-1099s-error-when-printing-print-1099s.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/approval-email-is-routed-to-wrong-manager.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/error-when-printing-a-gl-tb-detail-report.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/error-on-vat-return.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-modify-sop-blank-order-form-report-from-extender.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/improve-the-performance-of-report-writer.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/multicurrency-billing-feature.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/average-cost-recalculated-differently-than-expected.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/cannot-turn-off-aa-trx-edit-lists.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/csst-wcb-functionality-is-not-working.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/differences-between-payroll-and-project-accounting-cost.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/example-of-banked-overtime-paycode-in-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/fatal-error-during-installation-when-installing-integration-manager.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/only-one-addenda-record-is-listed-for-each-vendor-payment.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/purchaseorderdetail-package-for-analysis-cubes-not-load-all-purchase-orders.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/integration-of-invoice-that-has-payment-leaves-0-01-in-on-account.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/description-of-the-asset-financial-detail-summarize-feature.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/errors-when-printing-benefit-summary-report.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/banked-sick-pay-accrual-based-on-dollars-in-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/get-the-shift-code-work-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/how-manufacturing-determines-issue-to-site-for-picklist.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/illegal-address-error-when-running-employee-integration.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/integration-performance-decreases-use-sql-source-file.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/login-failed-user-user-name.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/long-integer-out-of-range.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/principal-payments-in-receivables-management.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/tips-upgrading-dexterity-based-app.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/turn-off-garnishment-detail-summary-report.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/unable-to-create-related-link-error-when-publishing-report-to-sharepoint.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/warning-open-purchase-order-processing-window.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/wrong-number-of-arguments-when-selecting-attendance-transactions.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/you-must-enter-a-step-grade-value.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/accrual-checkboxes-in-accrual-period-setup-not-automatically-mark-off.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/violation-of-primary-key-constraint-error-when-doing-year-end-closing.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/purchasing-functionality-changes-project-accounting.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/commission-data-not-imported-when-running-sales-order-processing-integration.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/packing-batch-entry-file-1-error.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/error-imported-file-must-end-with-bch-csv.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/errors-when-creating-an-odbc-source-file.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/integration-between-red-and-aa.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/pa-history-receivings-report-not-order-by-project-number.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/payables-management-voucher-is-not-created.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/revenue-recognition-calculation-for-service-fees.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/state-information-does-not-populate-box-17-and-18-on-1099-form.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/payables-year-end-closing-report-only-print-at-year-end-close.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/unapproved-pending-change-order-exist.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    
+    {
+      "source_path": "support/dynamics/gp/use-banked-paycodes-with-project-accounting.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/vac-sick-tab-is-grayed-out-or-missing-on-employee-maintenance-card.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/visibility-to-which-gl-accounts-are-inactive-in-fa-batch.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/dynamics/gp/suta-futa-taxable-wages-are-off.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/dcs-cannot-be-located-high-rate-outbound-sessions.md",
+      "redirect_url": "/troubleshoot/windows-server/user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions"
+    },
+    {
+      "source_path": "support/windows-server/active-directory/troubleshoot-errors-join-computer-to-domain.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/domain-join-networking-errors"
+    },    
+    {
+    "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-excel-errors.md",
+    "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/office-automation/excel/troubleshoot-excel-errors"
+  },
+  {
+      "source_path": "support/entra/entra-id/mfa/authorization-request-denied-graph-api.md",
+      "redirect_url": "/troubleshoot/entra/entra-id/app-integration/troubleshoot-authorization-requestdenied-graph-api",
+      "redirect_document_id": false
     }
   ]
 }

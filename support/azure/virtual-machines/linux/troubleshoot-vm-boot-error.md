@@ -10,7 +10,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.topic: troubleshooting
-ms.date: 10/18/2024
+ms.date: 02/26/2025
 ms.author: divargas
 ms.reviewer: ekpathak, v-leedennis, v-weizhu
 ---
@@ -61,44 +61,43 @@ grub rescue>
 
     3. Check whether the VM can start by taking a look at the Azure serial console or by trying to connect to the VM.
 
-4. If the entire /boot partition or other important contents are missing and can't be recovered, we recommend restoring the VM from a backup. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
+4. If the entire `/boot` partition or other important contents are missing and can't be recovered, we recommend restoring the VM from a backup. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
 
 See the following sections for detailed errors, possible causes, and solutions.
 
 > [!NOTE]
 > In the commands mentioned in the following sections, replace `/dev/sdX` with the corresponding Operating System (OS) disk device.
 
-## <a id="unknown-filesystem"></a>Error: unknown filesystem
+### <a id="reinstall-grub-regenerate-grub-configuration-file-repairvm"></a> Reinstall GRUB and regenerate the GRUB configuration file using Azure Linux Auto Repair
 
-The following screenshot shows the error message:
+Azure Linux Auto Repair (ALAR) scripts are part of the VM repair extension described in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM](./repair-linux-vm-using-alar.md). ALAR covers the automation of multiple repair scenarios, including GRUB rescue issues.
 
-:::image type="content" source="./media/troubleshoot-vm-boot-error/grub-unknown-filesystem.png" alt-text="Screenshot of grub unknown file system error.":::
+The ALAR scripts use the repair extension `repair-button` to fix GRUB issues by specifying `--button-command grubfix` for Generation 1 VMs or `--button-command efifix` for Generation 2 VMs. This parameter triggers the automated recovery. Implement the following commands to automate the fix of common GRUB errors by reinstalling GRUB and regenerating the corresponding configuration file:
 
-This error might be associated with one of the following issues:
+* **Linux VMs without UEFI (BIOS based - Gen1):**
 
-* /boot file system corruption.
+    ```azurecli-interactive
+    az extension add -n vm-repair
+    az extension update -n vm-repair
+    az vm repair repair-button --button-command 'grubfix' --verbose $RGNAME --name $VMNAME
+    ```
 
-  To resolve this issue, follow the steps in [Fix /boot file system corruption](#fix-boot-file-system-corruption).
+* **Linux VMs with UEFI (Gen2):**
 
-* GRUB boot loader is pointing to an invalid disk or partition.
+    ```azurecli-interactive
+    az extension add -n vm-repair
+    az extension update -n vm-repair
+    az vm repair repair-button --button-command 'efifix' --verbose $RGNAME --name $VMNAME
+    ```
 
-  To resolve this issue, [reinstall GRUB and regenerate GRUB configuration file](#reinstall-grub-regenerate-grub-configuration-file).
+> [!IMPORTANT]
+> Replace the resource group name `$RGNAME` and VM name `$VMNAME` accordingly.
 
-* OS disk partition table issues caused by human error.
+The repair VM script, in conjunction with the ALAR script, temporarily creates a resource group, a repair VM, and a copy of the affected VM's OS disk. It reinstalls GRUB, regenerates the corresponding GRUB configuration file, and then swaps the broken VM's OS disk with the copied fixed disk. Finally, the `repair-button` script automatically deletes the resource group containing the temporary repair VM.
 
-  To resolve such issues, follow the steps in [Error: No such partition](#no-such-partition) with recommendations to re-create the /boot partition if missing or created incorrectly.
+### <a id="reinstall-grub-regenerate-grub-configuration-file"></a>Reinstall GRUB and regenerate the GRUB configuration file manually
 
-### <a id="fix-boot-file-system-corruption"></a>Fix /boot file system corruption
-
-1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM.
-
-2. Refer to [Troubleshoot file system corruption errors in Azure Linux](linux-recovery-cannot-start-file-system-errors.md) to resolve the corruption issues in the corresponding /boot partition.
-
-3. Go to step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
-
-### <a id="reinstall-grub-regenerate-grub-configuration-file"></a>Reinstall GRUB and regenerate GRUB configuration file
-
-1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM. Mount all the required file systems, including / and /boot in the rescue/repair VM, and then enter the [chroot](chroot-environment-linux.md) environment.
+1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM. Mount all the required file systems, including `/` and `/boot` in the rescue/repair VM, and then enter the [chroot](chroot-environment-linux.md) environment.
 
 2. Reinstall GRUB and regenerate the corresponding GRUB configuration file by using one of the following commands:
 
@@ -129,13 +128,43 @@ This error might be associated with one of the following issues:
         sed -i 's/hd2/hd0/g' /boot/grub2/grub.cfg
         ```
 
-    * **Ubuntu 20.04/22.04/24.04**
+    * **Ubuntu Gen1 and Gen2**
 
         ```bash
         grub-install /dev/sdX
         update-grub
         ```
   
+3. Go to step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
+
+## <a id="unknown-filesystem"></a>Error: unknown filesystem
+
+The following screenshot shows the error message:
+
+:::image type="content" source="./media/troubleshoot-vm-boot-error/grub-unknown-filesystem.png" alt-text="Screenshot of grub unknown file system error.":::
+
+This error might be associated with one of the following issues:
+
+* `/boot` file system corruption.
+
+  To resolve this issue, follow the steps in [Fix /boot file system corruption](#fix-boot-file-system-corruption).
+
+* GRUB boot loader points to an invalid disk or partition.
+
+  To resolve this issue, [reinstall GRUB and regenerate the GRUB configuration file manually](#reinstall-grub-regenerate-grub-configuration-file).
+
+* OS disk partition table issues caused by human error.
+
+  To resolve such issues, follow the steps in [Error: No such partition](#no-such-partition) to re-create the `/boot` partition if missing or created incorrectly.
+
+### <a id="fix-boot-file-system-corruption"></a>Fix /boot file system corruption
+
+To fix `/boot` file system corruption, follow these steps:
+
+1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM.
+
+2. Refer to [Troubleshoot file system corruption errors in Azure Linux](linux-recovery-cannot-start-file-system-errors.md) to resolve the corruption issues in the corresponding `/boot` partition.
+
 3. Go to step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
 ## <a id="error15"></a>Error 15: File not found
@@ -146,13 +175,13 @@ The following screenshot shows the error message:
 
 To resolve this issue, follow these steps:
 
-1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM. Mount all the required file systems, including / and */boot* in the rescue/repair VM, and then enter the [chroot](chroot-environment-linux.md) environment.
+1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM. Mount all the required file systems, including `/` and `/boot` in the rescue/repair VM, and then enter the [chroot](chroot-environment-linux.md) environment.
 
-2. Inspect the /boot file system contents and determine what's missing.
+2. Inspect the `/boot` file system contents and determine what's missing.
 
-3. If the GRUB configuration file is missing, [reinstall GRUB and regenerate GRUB configuration file](#reinstall-grub-regenerate-grub-configuration-file).
+3. If the GRUB configuration file is missing, [reinstall GRUB and regenerate the GRUB configuration file manually](#reinstall-grub-regenerate-grub-configuration-file).
 
-4. Verify that the file permissions in the /boot file system are OK. You can compare the permissions by using another VM that's running the same Linux version.
+4. Verify that the file permissions in the `/boot` file system are OK. You can compare the permissions by using another VM that's running the same Linux version.
 
 5. If the entire /boot partition or other important contents are missing and can't be recovered, we recommend restoring the VM from a backup. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
 
@@ -164,11 +193,11 @@ The following screenshot shows the error message:
 
 :::image type="content" source="./media/troubleshoot-vm-boot-error/grub-normal-file-not-found.png" alt-text="Screenshot of grub error normal.mod not found.":::
 
-1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create one. Mount all the required file systems, including / and /boot in the rescue/repair VM, and then enter the [chroot](chroot-environment-linux.md) environment.
+1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create one. Mount all the required file systems, including `/` and `/boot` in the rescue/repair VM, and then enter the [chroot](chroot-environment-linux.md) environment.
 
-2. If you're unable to mount the /boot file system due to a corruption error, [fix /boot file system corruption](#fix-boot-file-system-corruption).
+2. If you're unable to mount the `/boot` file system due to a corruption error, [fix /boot file system corruption](#fix-boot-file-system-corruption).
 
-3. When you're located inside chroot, verify the contents in the */boot/grub2/i386-pc* directory. If the contents are missing, copy the contents from */usr/lib/grub/i386-pc*. To do this, use the following commands:
+3. When you're located inside chroot, verify the contents in the `/boot/grub2/i386-pc` directory. If the contents are missing, copy the contents from `/usr/lib/grub/i386-pc`. To do this, use the following commands:
 
     ```bash
     ls -l /boot/grub2/i386-pc
@@ -194,7 +223,7 @@ The following screenshot shows the error message:
        ```bash
        yum reinstall $(rpm -qa | grep -i kernel)
        ```
-   4. Create the *grub.cfg* file:
+   4. Create the `grub.cfg` file:
   
        ```bash
        grub2-mkconfig -o /boot/grub2/grub.cfg
@@ -211,12 +240,12 @@ The following screenshot shows the error message:
 
 This error occurs on a RHEL-based VM (Red Hat, Oracle Linux, CentOS) in one of the following scenarios:
 
-* The /boot partition is deleted by mistake.
-* The /boot partition is re-created by using the wrong start and end sectors.
+* The `/boot` partition is deleted by mistake.
+* The `/boot` partition is re-created by using the wrong start and end sectors.
 
 ### Solution: Re-create /boot partition
 
-If the /boot partition is missing, re-create it by following these steps:
+If the `/boot` partition is missing, re-create it by following these steps:
 
 1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM.
 
@@ -236,19 +265,19 @@ If the /boot partition is missing, re-create it by following these steps:
 
 3. If the partition table has **dos** as the partition table type, [re-create /boot partition in dos systems](#re-create-boot-partition-in-dos-systems). If the partition table has **GPT** as the partition table type, [re-create /boot partition in GPT systems](#re-create-boot-partition-in-gpt-systems).
 
-4. Make sure that the GRUB boot loader is installed by using the proper disk. You can follow the steps in [Reinstall GRUB and regenerate GRUB configuration file](#reinstall-grub-regenerate-grub-configuration-file) to get it installed and configured.
+4. Make sure that the GRUB boot loader is installed by using the proper disk. You can follow the steps in [Reinstall GRUB and regenerate the GRUB configuration file manually](#reinstall-grub-regenerate-grub-configuration-file) to get it installed and configured.
 
 5. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
 #### <a id="re-create-boot-partition-in-dos-systems"></a>Re-create /boot partition in dos systems
 
-1. Re-create the /boot partition by using the following command:
+1. Re-create the `/boot` partition from a rescue/repair VM by using the following command:
 
     ```bash
     sudo fdisk /dev/sdX
     ```
 
-    Use the default values in the **First** and **Last** sectors, and **partition type** (83). Make sure the /boot partition table is marked as bootable by using the `a` option in the `fdisk` tool, as shown in the following output:
+    Use the default values in the **First** and **Last** sectors, and **partition type** (83). Make sure the `/boot` partition table is marked as bootable by using the `a` option in the `fdisk` tool, as shown in the following output:
 
     ```output
     sudo fdisk /dev/sdc
@@ -300,7 +329,7 @@ If the /boot partition is missing, re-create it by following these steps:
     Calling ioctl() to re-read partition table.
     ```
 
-2. After you re-create the missing /boot partition, check whether the /boot file system is detected. You should be able to see an entry for `/dev/sdX1` (the missing /boot partition).
+2. After you re-create the missing `/boot` partition, check whether the `/boot` file system is detected. You should be able to see an entry for `/dev/sdX1` (the missing /boot partition).
 
     ```bash
     sudo blkid /dev/sdX1
@@ -311,11 +340,11 @@ If the /boot partition is missing, re-create it by following these steps:
     /dev/sdc1: UUID="<UUID>" TYPE="ext4"
     ```
 
-3. If the /boot file system isn't visible in `blkid` after you re-create the partition, this means that the /boot data no longer exists. You have to re-create the /boot file system (by using the same UUID and file system format that's in the */etc/fstab* /boot entry), and then [restore its contents from a backup](/azure/backup/backup-azure-arm-restore-vms).
+3. If the `/boot` file system isn't visible in `blkid` after you re-create the partition, this means that the `/boot` data no longer exists. You have to re-create the `/boot` file system (by using the same UUID and file system format that's in the `/etc/fstab` `/boot` entry), and then [restore its contents from a backup](/azure/backup/backup-azure-arm-restore-vms).
 
 #### <a id="re-create-boot-partition-in-gpt-systems"></a>Re-create /boot partition in GPT systems
 
-1. Re-create the /boot partition by using the following command:
+1. Re-create the `/boot` partition from a rescue/repair VM by using the following command:
 
     ```bash
     sudo gdisk /dev/sdX
@@ -373,20 +402,20 @@ If the /boot partition is missing, re-create it by following these steps:
     The operation has completed successfully.
     ```
 
-2. Check whether the /boot file system is detected by the system by using the following command:
+2. Check whether the `/boot` file system is detected by the system by using the following command:
 
     ```bash
     sudo blkid /dev/sdX1
     ```
 
-    You should be able to see an entry for `/dev/sdX1` (the missing /boot partition).
+    You should be able to see an entry for `/dev/sdX1` (the missing `/boot` partition).
 
     ```output
     sudo blkid /dev/sdc1
     /dev/sdc1: UUID="<UUID>" BLOCK_SIZE="4096" TYPE="xfs" PARTLABEL="Linux filesystem" PARTUUID="<PARTUUID>"
     ```
 
-3. If the /boot file system isn't visible after you re-create the partition, this means that the /boot data no longer exists. You have to re-create the /boot file system (by using the same UUID that's in the */etc/fstab* /boot entry), and then [restore its contents from a backup](/azure/backup/backup-azure-arm-restore-vms).
+3. If the `/boot` file system isn't visible after you re-create the partition, this means that the `/boot` data no longer exists. You have to re-create the `/boot` file system (by using the same UUID that's in the `/etc/fstab` `/boot` entry), and then [restore its contents from a backup](/azure/backup/backup-azure-arm-restore-vms).
 
 ## <a id="grub_efi_get_secure_boot"></a>Error: symbol 'grub_efi_get_secure_boot' not found
 
@@ -400,7 +429,7 @@ Linux kernel version 4.12.14 (that's used in SLES 12 SP5) doesn't support the [S
 
 To resolve the boot error, follow these steps:  
 
-1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM. Mount all the required file systems, including / and /boot, and then enter the [chroot](chroot-environment-linux.md) environment.
+1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM. Mount all the required file systems, including `/` and `/boot`, and then enter the [chroot](chroot-environment-linux.md) environment.
 
 2. Run the following [YaST](https://yast.opensuse.org) command in the chroot environment:  
 
@@ -424,13 +453,13 @@ This kind of error is triggered in one of the following scenarios:
 
 * The GRUB configuration file is missing.
 * The wrong GRUB configuration is used.
-* The /boot partition or its contents are missing.
+* The `/boot` partition or its contents are missing.
 
 To resolve this error, follow these steps:
 
-1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM. Mount all the required file systems, including / and /boot, and then enter the [chroot](chroot-environment-linux.md) environment.
+1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM. Mount all the required file systems, including `/` and `/boot`, and then enter the [chroot](chroot-environment-linux.md) environment.
 
-2. Make sure that the */etc/default/grub* configuration file is configured. The [endorsed Azure Linux images](/azure/virtual-machines/linux/endorsed-distros) already have the required configurations. For more information, see the following articles:
+2. Make sure that the `/etc/default/grub` configuration file is configured. The [endorsed Azure Linux images](/azure/virtual-machines/linux/endorsed-distros) already have the required configurations. For more information, see the following articles:
 
     * [GRUB access in RHEL](serial-console-grub-single-user-mode.md#grub-access-in-rhel)
     * [GRUB access in CentOS](serial-console-grub-single-user-mode.md#grub-access-in-centos)
@@ -438,12 +467,12 @@ To resolve this error, follow these steps:
     * [GRUB access in SUSE SLES](serial-console-grub-single-user-mode.md#grub-access-in-suse-sles)
     * [GRUB access in Oracle Linux](serial-console-grub-single-user-mode.md#grub-access-in-oracle-linux)
 
-3. [Reinstall GRUB and regenerate GRUB configuration file](#reinstall-grub-regenerate-grub-configuration-file).
+3. [Reinstall GRUB and regenerate the GRUB configuration file manually](#reinstall-grub-regenerate-grub-configuration-file).
 
     > [!NOTE]
-    > If the missing file is */boot/grub/menu.lst*, this error is for older OS versions (RHEL 6.x, Centos 6.x and Ubuntu 14.04). The commands will differ because GRUB version 1 is used in those systems instead. GRUB version 1 isn't covered in this article.
+    > If the missing file is `/boot/grub/menu.lst`, this error is for older OS versions (RHEL 6.x, Centos 6.x and Ubuntu 14.04). The commands will differ because GRUB version 1 is used in those systems instead. GRUB version 1 isn't covered in this article.
 
-4. If the entire /boot partition is missing, follow the steps in [Error: no such partition](#no-such-partition).
+4. If the entire `/boot` partition is missing, follow the steps in [Error: no such partition](#no-such-partition).
 
 5. After the issue is resolved, go to step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 

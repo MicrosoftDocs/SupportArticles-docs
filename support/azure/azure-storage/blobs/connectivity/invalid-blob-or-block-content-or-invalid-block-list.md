@@ -1,9 +1,9 @@
 ---
 title: Uploading blob or block content fails in Azure Blob Storage
 description: Resolve upload failures of blob or block content (BlockCountExceedsLimit, InvalidBlobOrBlock, InvalidBlock, or InvalidBlockList) in Azure Blob Storage.
-ms.date: 11/11/2022
+ms.date: 05/19/2025
 editor: v-jsitser
-ms.reviewer: broder, anradha, v-leedennis
+ms.reviewer: broder, anradha
 ms.service: azure-storage
 #Customer intent: As an Azure Blob Storage user, I want to resolve BlockCountExceedsLimit, InvalidBlobOrBlock, InvalidBlock, or InvalidBlockList errors so that I can successfully upload large blobs or blocks of data in my applications.
 ms.custom: sap:Connectivity
@@ -38,7 +38,7 @@ The block length that was specified in the [Put Block](/rest/api/storageservices
 
 - The application or client specified a block size that isn't supported.
 
-- The size of the block is larger than the maximum allowed block size. To find the block size limits for different versions of the Blob Service REST API, see the [Remarks](/rest/api/storageservices/put-block#remarks) section of the "Put Block" reference article.
+- The size of the block is larger than the maximum allowed block size. To find the block size limits for different versions of the Blob Service REST API, see the [Remarks](/rest/api/storageservices/put-block#remarks) section of the `Put Block` reference article.
 
 - When you tried to upload blocks of data by using more than one application, there were uncommitted blocks that had inconsistent block lengths. This situation occurs because different applications use different lengths to upload data, or because a previous upload failed.
 
@@ -48,23 +48,23 @@ Remove the uncommitted blocks by implementing one of these solutions.
 
 ### Solution 1: Wait for garbage collection to pick up the uncommitted data
 
-Wait seven days for the uncommitted block list to be cleaned up by garbage collection.
+Wait seven days for the uncommitted blocklist to be cleaned up by garbage collection.
 
 ### Solution 2: Use a dummy blob to make the data transfer
 
-Use the Azure Storage SDK to transfer the data by using a dummy blob. To do this, follow these steps:
+Use the Azure Storage SDK to transfer the data by using a dummy blob. To do so, follow these steps:
 
 1. Create a dummy blob that has the same blob name and is in the same container. This blob can have a length of zero.
 
 1. Transfer the blob by using an unblocked transfer.
 
-### Solution 3: Commit the uncommitted block list by using the Azure Storage SDK
+### Solution 3: Commit the uncommitted blocklist by using the Azure Storage SDK
 
-Use the Azure Storage SDK to commit the uncommitted block list and clean up the blob. To do this, follow these steps:
+Use the Azure Storage SDK to commit the uncommitted block list and clean up the blob. To do so, follow these steps:
 
-1. Retrieve the uncommitted block list by making a [Get Block List](/rest/api/storageservices/get-block-list) URI request in which the `blocklisttype` URI parameter is set to `uncommitted`.
+1. Retrieve the uncommitted blocklist by making a [Get Block List](/rest/api/storageservices/get-block-list) URI request in which the `blocklisttype` URI parameter is set to `uncommitted`.
 
-1. Commit the block list by using the [Put Block List](/rest/api/storageservices/put-block-list) URI request.
+1. Commit the blocklist by using the [Put Block List](/rest/api/storageservices/put-block-list) URI request.
 
 1. Delete the blob.
 

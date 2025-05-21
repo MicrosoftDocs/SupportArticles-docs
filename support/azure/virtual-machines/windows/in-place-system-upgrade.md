@@ -1,18 +1,18 @@
 ---
 title: In-place upgrade for supported VMs running Windows in Azure
 description: Understand how to work around the unsupported in-place system upgrade on an Azure VM that runs Windows.
-ms.date: 10/22/2024
+ms.date: 05/09/2025
 ms.reviewer: joscon, scotro, azurevmcptcic, maulikshah, yogitagohel, v-weizhu
 ms.service: azure-virtual-machines
 ms.collection: windows
-ms.custom: sap:VM Admin - Windows (Guest OS)
+ms.custom: sap:Windows Update, Guest Patching and OS Upgrades
 ---
 # In-place upgrade for supported VMs running Windows in Azure
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
 > [!CAUTION]
-> Following the process in this article will cause a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure capabilities such as [Auto guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [Auto OS image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch?toc=%2Fazure%2Fvirtual-machines%2Ftoc.json#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, it's recommended to create a new VM using your preferred operating system instead of performing an in-place upgrade.
+> Following the process in this article causes a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure capabilities such as [Auto guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [Auto OS image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch?toc=%2Fazure%2Fvirtual-machines%2Ftoc.json#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, create a new VM using your preferred operating system instead of performing an in-place upgrade.
 
 This article describes how to do an in-place system upgrade of supported Windows 10-based Azure VMs. This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades. For Azure VMs running Windows Server, see [In-place upgrade for supported Windows Server VMs](/azure/virtual-machines/windows-in-place-upgrade).
 
@@ -47,7 +47,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 ### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
 
-- Windows 10 and 11 Enterprise multi-session, all versions
+- Windows 10 and 11 Enterprise multi-session, all versions (upgrade from single-session)
 - Windows 8.1
 - Windows 7 Enterprise
    
@@ -58,11 +58,11 @@ This process requires 45-60 minutes to complete and for the VM to restart. To do
 1. Verify that the Windows 10 VM doesn't use [Ephemeral OS Disk](/azure/virtual-machines/ephemeral-os-disks). This feature is currently not supported.
 2. Verify that the Windows 10 VM has at least 2 GB of RAM, and 12 GB of free disk space on the system disk.
 3. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). Or use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
-4. Check whether the backup was successful. To do this, turn off the original Windows 10 VM. Verify that a new VM can be successfully restored from the backup and that all applications are running successfully.
+4. To check whether the backup was successful, turn off the original Windows 10 VM and verify that a new VM can be successfully restored from the backup and that all applications are running successfully.
 
    > [!NOTE]  
-   > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. But both VMs can't be running at the same time unless the system name of the VM and the IP addresses on one of the VMs was changed to prevent conflicts.
-
+   > Either the original Windows 10 VM or the restored VM can be used as a source for in-place system upgrade. Both VMs cannot run simultaneously unless one VM's system name and IP address are changed to avoid conflicts.
+  
 5. Connect to the Windows 10 VM, and go to **Settings** > **Updates & Security** > **Windows Update**.
 6. In Windows Update, select **Check for updates**.
 7. When the Feature Update item appears, select **Download and install now**.

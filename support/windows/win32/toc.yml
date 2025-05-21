@@ -29,6 +29,8 @@
       href: half-width-full-width-katakana-hiragana-characters.md
     - name: IME crashes with cross-thread sent messages
       href: ime-crash-processing-cross-thread-sent-message.md
+    - name: Japanese handwritten characters aren't recognized
+      href: japanese-handwritten-characters-not-recognized.md
     - name: Navigation bar doesn't update when navigating shell namespace extension folders
       href: navigation-bar-not-update-navigating-shell-namespace-extension-folders.md
     - name: Owner window gets activated when taskbar buttons are created
@@ -79,5 +81,7 @@
       href: addin-components-core-os-processes.md
     - name: GetTickCount resets to zero after approximately 776 days
       href: gettickcount-resets-zero-after-approximately-776-days.md
+    - name: The UMDH tool generates warnings
+      href: umdh-windows-11-sdk-not-work-fine.md
     - name: User32.dll or Kernel32.dll doesn't initialize
       href: user32-kernel32-not-initialize.md

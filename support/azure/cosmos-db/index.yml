@@ -6,11 +6,12 @@ metadata:
   title: Troubleshoot Azure Cosmos DB issues
   description: Documentation for troubleshooting common issues with Azure Cosmos DB.
   author: seesharprun
-  editor: v-jsitser
   ms.author: sidandrews
   ms.reviewer: ouryba, v-jayaramanp
+  editor: v-jsitser
+  ms.service: azure-cosmos-db
   ms.topic: landing-page
-  ms.date: 01/18/2024
+  ms.date: 04/30/2025
 
 landingContent:
   - title: General troubleshooting

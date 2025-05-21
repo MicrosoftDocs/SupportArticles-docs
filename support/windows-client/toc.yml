@@ -5,6 +5,50 @@ items:
   items:
   - name: Active Directory
     href: ./active-directory/active-directory-overview.md
+  - name: Domain join issues
+    items:
+    - name: '"The account is not authorized to login from this station" error'
+      href: ../windows-server/active-directory/account-not-authorized-login-from-this-station.md?context=/troubleshoot/windows-client/context/context
+    - name: Cannot contect to the Internet or the domain
+      href: ../windows-server/active-directory/cannot-connect-internet-domain.md?context=/troubleshoot/windows-client/context/context
+    - name: Default limit to workstation numbers
+      href: ../windows-server/active-directory/default-workstation-numbers-join-domain.md?context=/troubleshoot/windows-client/context/context
+    - name: Error 0x40 "The specified network name is no longer available"
+      href: ../windows-server/active-directory/domain-join-error-0x40-the-specified-network-name-is-no-longer-available.md?context=/troubleshoot/windows-client/context/context
+    - name: Error 0x5 Access Denied when you rename a computer
+      href: ../windows-server/active-directory/error-0x5-access-denied-rename-computer.md?context=/troubleshoot/windows-client/context/context
+    - name: Error 0x6D9 "No more endpoints available from the endpoint mapper"
+      href: ../windows-server/active-directory/domain-join-error-0x6d9-there-are-no-more-endpoints-available-from-the-endpoint-mapper.md?context=/troubleshoot/windows-client/context/context
+    - name: Error code 0x0000232A
+      href: ../windows-server/active-directory/error-code-0x0000232a.md?context=/troubleshoot/windows-client/context/context
+    - name: Error code 0x54b
+      href: ../windows-server/active-directory/error-code-0x54b.md?context=/troubleshoot/windows-client/context/context
+    - name: Error code 0x569
+      href: ../windows-server/active-directory/error-0x569-not-granted-logon-type.md?context=/troubleshoot/windows-client/context/context
+    - name: Error code 0xa8b
+      href: ../windows-server/active-directory/error-0xa8b-resolve-dns-fail.md?context=/troubleshoot/windows-client/context/context
+    - name: Failure when you use an existing computer account to join a domain
+      href: ../windows-server/active-directory/failure-when-you-use-an-existing-computer-account-to-join-a-domain.md?context=/troubleshoot/windows-client/context/context
+    - name: Netlogon service doesn't keep settings after in-place upgrade
+      href: ../windows-server/active-directory/netlogon-service-not-start-automatically.md?context=/troubleshoot/windows-client/context/context
+    - name: Status code 0x216d
+      href: ../windows-server/active-directory/status-code-0x216d-not-joined-domain.md?context=/troubleshoot/windows-client/context/context
+    - name: Status code 0x32 and you can't join a domain
+      href: ../windows-server/active-directory/status-code-0x32-cannot-join-domain.md?context=/troubleshoot/windows-client/context/context
+    - name: Status code 0x3a
+      href: ../windows-server/active-directory/status-code-0x3a-server-not-perform-operation.md?context=/troubleshoot/windows-client/context/context
+    - name: 'Status code 0x6ba: The RPC server is unavailable'
+      href: ../windows-server/active-directory/status-code-0x6ba-rpc-server-unavailable.md?context=/troubleshoot/windows-client/context/context
+    - name: Status code 0x6bf or 0xc002001c
+      href: ../windows-server/active-directory/status-code-0x6bf-0xc002001c.md?context=/troubleshoot/windows-client/context/context
+    - name: Support boundaries for Active Directory over NAT
+      href: ../windows-server/active-directory/support-for-active-directory-over-nat.md?context=/troubleshoot/windows-client/context/context
+    - name: Troubleshoot authentication errors when joining computers to a domain
+      href: ../windows-server/active-directory/domain-join-authentication-errors.md?context=/troubleshoot/windows-client/context/context
+    - name: Troubleshoot networking errors when joining computers to a domain
+      href: ../windows-server/active-directory/domain-join-networking-errors.md?context=/troubleshoot/windows-client/context/context
+    - name: 'Troubleshooting guidance: Active Directory domain join'
+      href: ../windows-server/active-directory/active-directory-domain-join-troubleshooting-guidance.md?context=/troubleshoot/windows-client/context/context
   - name: Schema update - known issues, best practices, workflow review
     items:
     - name: Error when checking domain object property
@@ -335,6 +379,8 @@ items:
       href: ./networking/move-client-side-caching-folder.md
     - name: Offline file synchronization issues
       href: ./networking/offline-file-synchronization-issue.md
+    - name: Sync Center syncs offline files very slow
+      href: ./networking/sync-center-slow-syncing-of-offline-files.md
   - name: IP Address Management (IPAM)
     items:
     - name: Intranet site is identified as Internet site
@@ -381,6 +427,8 @@ items:
       href: ./networking/collect-data-using-network-monitor.md
     - name: Device can't connect to mobile broadband
       href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
+    - name: Diagnose packet loss
+      href: ./networking/diagnose-packet-loss.md
     - name: Domain-joined machines can't detect the domain profile
       href: ./networking/domain-joined-machines-cannot-detect-domain-profile.md
     - name: Enterprise APN lost after SIM change or MBN adapter error
@@ -837,6 +885,8 @@ items:
       href: ./setup-upgrade-and-drivers/updates-not-install-with-fast-startup.md
   - name: User state migration tool
     items:
+    - name: Error "Invalid store path" during the LoadState process
+      href: setup-upgrade-and-drivers/error-invalid-store-path-loadstate-user-state-migration-tool.md
     - name: USMT common issues
       href: ./setup-upgrade-and-drivers/usmt-common-issues.md
     - name: USMT return codes
@@ -935,7 +985,7 @@ items:
       href: ./shell-experience/recycle-bin-corrupted.md
     - name: Renaming a network folder fails
       href: ./shell-experience/renaming-a-network-folder-fails.md
-    - name: "Scenario guide: Black screen after you sign in to the system"
+    - name: 'Scenario guide: Black screen after you sign in to the system'
       href: ./shell-experience/scenario-guide-black-screen-after-sign-in.md
     - name: Support of whitespace characters in file and folder names
       href: ./shell-experience/file-folder-name-whitespace-characters.md
@@ -1029,8 +1079,12 @@ items:
       href: ./system-management-components/0x80041323-running-scheduled-tasks.md
     - name: Run programs automatically when a user logs on
       href: ./system-management-components/run-programs-automatically.md
+    - name: Scheduled tasks fail with "Task schedular service is not available"
+      href: ./system-management-components/task-schedular-service-is-not-available.md
     - name: Task scheduler runs tasks as background processes
       href: ./system-management-components/task-scheduler-task-only-runs-in-background.md
+    - name: Task Scheduler service can't start
+      href: ./system-management-components/task-scheduler-service-not-start.md
     - name: Use the at command to schedule tasks
       href: ./system-management-components/use-at-command-to-schedule-tasks.md
   - name: WER
@@ -1101,20 +1155,12 @@ items:
       href: ./user-profiles-and-logon/cached-user-logon-fails-lsasrv-event-45058.md
   - name: User profiles
     items:
-    - name: Can't set a convenience PIN
-      href: ./user-profiles-and-logon/cannot-configure-a-convenience-pin.md
     - name: Create a new profile if the profile is damaged
       href: ./user-profiles-and-logon/create-new-user-profile.md
-    - name: Error "Invalid store path" during the LoadState process
-      href: ./user-profiles-and-logon/error-invalid-store-path-loadstate-user-state-migration-tool.md
-    - name: Logon or logoff delays when you use roaming user profiles
-      href: ./user-profiles-and-logon/roaming-profile-was-not-completely-synchronized-error.md
-    - name: Renaming user account doesn't change profile path
-      href: ./user-profiles-and-logon/renaming-user-account-not-change-profile-path.md
   - name: Windows Hello for Business
     items:
-    - name: Event ID 300 - Windows Hello successfully created in Windows 10
-      href: ./user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md
+    - name: Can't set a convenience PIN
+      href: user-profiles-and-logon/cannot-configure-a-convenience-pin.md
     - name: Windows Hello errors during PIN creation in Windows 10
       href: ./user-profiles-and-logon/windows-hello-errors-during-pin-creation-in-windows-10.md
     - name: Retrieve certificate to troubleshoot Windows Hello for Business logon failures

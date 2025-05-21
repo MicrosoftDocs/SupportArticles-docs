@@ -1,36 +1,44 @@
 ---
-title: Dynamics 365 App for Outlook experience without Server-Side Synchronization
-description: Describes Dynamics 365 App for Outlook experience without Server-Side Synchronization.
+title: Can't Track and Set Regarding in Dynamics 365 App for Outlook
+description: Solves the Track and Set Regarding are currently disabled notification that occurs when using Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
-ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 04/17/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-In
 ---
-# Microsoft Dynamics 365 App for Outlook experience without Server-Side Synchronization
+# "Track and Set Regarding are currently disabled" occurs in Dynamics 365 App for Outlook
 
-This article describes an issue in which you receive a notification saying that Track and Set Regarding are currently disabled if Server-Side Synchronization is inactive in Microsoft Dynamics 365 App for Outlook.
+This article explains why you might receive a "Track and Set Regarding are currently disabled" notification in Microsoft Dynamics 365 App for Outlook.
 
-_Applies to:_ &nbsp; Microsoft Dynamics 365 Customer Engagement Online  
+_Applies to:_ &nbsp; Dynamics 365 App for Outlook  
 _Original KB number:_ &nbsp; 4508591
 
-When you use Dynamics 365 App for Outlook, you might see a notification that says:
+## Symptoms
+
+When using [Dynamics 365 App for Outlook](/dynamics365/outlook-app/overview), you might receive the following notification:
 
 > Track and Set Regarding are currently disabled. To use these features, please contact your admin. You can still view and interact with your Dynamics 365 data.
 
-:::image type="content" source="media/experience-without-server-side-synchronization/notification.png" alt-text="Screenshot of the notification without Server-Side Synchronization." lightbox="media/experience-without-server-side-synchronization/notification.png":::
+## Cause 1 - Server-side synchronization is inactive
 
-Dynamics 365 App for Outlook leverages Server-Side Synchronization to keep your Exchange items in sync with Dynamics 365. For example, if you track a meeting in Outlook, App for Outlook relies on Server-Side Synchronization to create the activity in Dynamics 365 and keep the two items in sync.
+Dynamics 365 App for Outlook uses [server-side synchronization](/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks) to keep your Exchange items in synchronization with Dynamics 365. For example, when you track a meeting in Outlook, Dynamics 365 App for Outlook relies on server-side synchronization to create the activity in Dynamics 365 and maintain synchronization between the two items.
 
-If we recognize that Server-Side Synchronization is inactive on your mailbox, we will not be able to provide the ability for you to track and set regarding on emails and appointments.
+If server-side synchronization is inactive on your mailbox, you can't track and set regarding on emails and appointments. However, you can still view Dynamics 365 information, such as accounts, contacts, and activities, and continue to create, update, and manage your information, as these actions aren't related to synchronization.
 
-With this updated, instead of blocking you from using App for Outlook, we are providing the ability for you to view your Dynamics 365 information like accounts, contacts, and activities. You can continue to create, update, and manage your information since they are not related to synchronization.
+### Resolution
 
-To fix issues with Server-Side Synchronization, contact your administrator, who can view the status of the service and take necessary steps to address the issue.
+To address this issue, contact your administrator who can check the status of the service and take necessary actions to activate server-side synchronization.
 
-## Additional possible cause
+## Cause 2 - Email address doesn't match the primary SMTP address
 
-One other potential cause of this message is if the email address in Dynamics 365 does not match the Primary SMTP address in Microsoft Exchange. For example: If a user's mailbox in Dynamics 365 has the email address value of John@contoso.com but the primary SMTP address in Exchange is John@contoso.com, that would also cause this symptom. Update the email address in Dynamics 365 to match the primary STMP email address in Exchange. When viewing the properties of a mailbox in Exchange, the primary SMTP email address is the one that appears in bold.
+Another cause is that the email address in Dynamics 365 doesn't match the [primary SMTP address](/Exchange/email-addresses-and-address-books/email-address-policies/email-address-policies#email-address-templates) in Microsoft Exchange.
 
-## Additional information
+### Resolution
 
-See [Test configuration of mailboxes for Server-Side Synchronization](/power-platform/admin/connect-exchange-online#test-configuration-of-mailboxes) for more information.
+To resolve this issue, [update the email address in Dynamics 365](/dynamics365/outlook-addin/user-guide/outlook-email-address-should-same#change-the-email-address-in-dynamics-365-apps-to-match-the-outlook-address) to match the primary SMTP email address in Exchange.
+
+> [!TIP]
+> To find the primary SMTP email address in Exchange, navigate to the [properties of the mailbox](/exchange/recipients/user-mailboxes/user-mailboxes#change-user-mailbox-properties). The primary SMTP email address is displayed in bold.
+
+## More information
+
+[Test the configuration of mailboxes for server-side synchronization](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes)

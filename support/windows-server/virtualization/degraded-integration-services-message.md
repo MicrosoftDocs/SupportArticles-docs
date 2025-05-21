@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, abgupta
 ms.custom:
-- sap:virtualization and hyper-v\linux integration components",,"linux-related-content"]
+- sap:virtualization and hyper-v\linux integration components
 - pcy:WinComm Storage High Avail
 ---
 # Degraded integration services message for non-Windows guests

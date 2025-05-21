@@ -3,8 +3,8 @@ title: Windows activation watermark continues to be displayed
 description: Learn how to resolve a scenario in which a Windows activation watermark continues to be displayed on Azure virtual machines.
 author: cwhitley-MSFT
 ms.author: cwhitley
-ms.reviewer: scotro, scottmca, kimberj, jdickson, shache, v-naqviadil, v-leedennis, v-weizhu
-ms.date: 06/04/2024
+ms.reviewer: scotro, scottmca, kimberj, jdickson, shache, justingross, v-naqviadil, v-leedennis, v-weizhu
+ms.date: 05/16/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ms.topic: troubleshooting-problem-resolution
@@ -12,7 +12,7 @@ ms.topic: troubleshooting-problem-resolution
 ---
 # Windows activation watermark continues to be displayed
 
-**Applies to:** :heavy_check_mark: Windows VMs running Windows Server 2022 Datacenter Azure Edition
+**Applies to:** :heavy_check_mark: Windows VMs running Windows Server 2025 Datacenter Azure Edition, Windows VMs running Windows Server 2022 Datacenter Azure Edition
 
 This document discusses how to resolve the continued presence of a Windows activation watermark on Microsoft Azure virtual machines.
 
@@ -22,7 +22,7 @@ This document discusses how to resolve the continued presence of a Windows activ
 
 ## Symptoms
 
-When you use an Azure virtual machine (VM) that runs Windows Server 2022 Datacenter Azure Edition, you encounter the following symptoms:
+When you use an Azure virtual machine (VM) that runs Windows Server 2025/2022 Datacenter Azure Edition, you encounter the following symptoms:
 
 - You see a watermark on the desktop that contains the following message:
 
@@ -37,9 +37,11 @@ When you use an Azure virtual machine (VM) that runs Windows Server 2022 Datacen
   ```console
   cscript c:\windows\system32\slmgr.vbs /dlv
   ```
-- When you restart or sign in to the VM, a pop-up window with the following message is displayed:
+- When you restart or sign in to the VM, a pop-up window with one of the following messages is displayed:
 
-  > Your Windows Server 2022 Datacenter Azure Edition VM has been deactivated because you are not running on Azure or a supported Azure Stack hypervisor, or that you have not enabled Azure benefits on the supported Azure Stack. To enable Azure benefits, go to your cluster settings in Windows Admin Center > Enable Azure benefits.
+  - > Your Windows Server 2022 Datacenter Azure Edition VM has been deactivated because you are not running on Azure or a supported Azure Stack hypervisor, or that you have not enabled Azure benefits on the supported Azure Stack. To enable Azure benefits, go to your cluster settings in Windows Admin Center > Enable Azure benefits.
+
+  - > Your Windows Server 2025 Datacenter Azure Edition VM has been deactivated because you are not running on Azure or a supported Azure Stack hypervisor, or that you have not enabled Azure benefits on the supported Azure Stack. To enable Azure benefits, go to your cluster settings in Windows Admin Center > Enable Azure benefits.
 
 ## Cause 1: Azure Instance Metadata Service connection issue
 
@@ -71,7 +73,7 @@ If you get a successful response, you'll see the metadata information from the V
  ```output
  compute                                                                                                                                                                  
  -------                                                                                                                                                                  
- @{azEnvironment=AzurePublicCloud; customData=; evictionPolicy=; isHostCompatibilityLayerVm=true; licenseType=; location=eastus; name=testWs2022; offer=WindowsServer; ...
+ @{azEnvironment=AzurePublicCloud; customData=; evictionPolicy=; isHostCompatibilityLayerVm=true; licenseType=; location=eastus; name=testWs; offer=WindowsServer; ...
  ```
 
 If not, it means that the connection to the IMDS wire server is blocked somewhere, and access to it needs to be allowed. The IP of the IMDS server is `169.254.169.254`. To fix the connection issue, go to [Solution 1: Bypass web proxies within the VM](#solution-1-bypass-web-proxies-within-the-vm).
@@ -241,8 +243,9 @@ To fix the certificate issue, go to [Solution 2: Ensure firewalls and proxies ar
 
 ## Solution 2: Ensure firewalls and proxies are configured to allow certificate downloads
 
-1. Check if [KB 5036909](https://support.microsoft.com/topic/april-9-2024-kb5036909-os-build-20348-2402-36062ce9-f426-40c6-9fb9-ee5ab428da8c) is installed. If not, install it. You can get it from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5036909).
-2. If you have installed the update but still encounter the issue, verify that your system's firewalls and proxies are configured to allow the download of certificates. For more information, see [Certificate downloads and revocation lists](/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#certificate-downloads-and-revocation-lists).
+1. If you use Windows Server 2022, check if [KB 5036909](https://support.microsoft.com/topic/april-9-2024-kb5036909-os-build-20348-2402-36062ce9-f426-40c6-9fb9-ee5ab428da8c) is installed. If not, install it. You can get it from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5036909).
+
+2. If you have installed the update for Windows Server 2022 but still encounter the issue or you use Windows Server 2025, verify that your system's firewalls and proxies are configured to allow the download of certificates. For more information, see [Certificate downloads and revocation lists](/azure/security/fundamentals/azure-ca-details#certificate-downloads-and-revocation-lists).
 
    Alternatively, you can download and install all the certificates directly from the [root and subordinate certificate authority chains](/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains#root-and-subordinate-certificate-authority-chains).
   

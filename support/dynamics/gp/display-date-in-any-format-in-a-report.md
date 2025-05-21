@@ -3,7 +3,7 @@ title: Display a date in any format in a report
 description: This article describes how to display a date in any format in a report in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Display a date in any format in a report in Microsoft Dynamics GP

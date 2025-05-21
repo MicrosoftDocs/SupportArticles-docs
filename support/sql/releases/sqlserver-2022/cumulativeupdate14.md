@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 14 for SQL Server 2022 (KB5038325)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 14 (KB5038325).
-ms.date: 09/11/2024
+ms.date: 04/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5038325
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,7 +23,7 @@ This article describes Cumulative Update package 14 (CU14) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Issue one: Patching error for secondary replicas in an availability group with databases enabled replication, CDC, or SSISDB
+### Issue one: Patching error for secondary replicas in an availability group with databases enabled replication or CDC
 
 [!INCLUDE [patching-error-2022](../includes/patching-error-2022.md)]
 
@@ -50,7 +50,7 @@ App-consistent recovery point generation failed.
 
 The issue arises from a code change in SQL Server 2022 CU14 that checks if a database is online and ready to be frozen. The current solution is to roll back to SQL Server 2022 CU13 and perform the snapshot backup. For more information about how to roll back the package to a previous version, see [Uninstall a Cumulative Update from SQL Server](/sql/sql-server/install/uninstall-a-cumulative-update-from-sql-server).
 
-Microsoft is working on a fix for this issue and it will be available in a future CU.
+This issue is fixed in [SQL Server 2022 CU15](cumulativeupdate15.md#3459086).
 
 ## Improvements and fixes included in this update
 

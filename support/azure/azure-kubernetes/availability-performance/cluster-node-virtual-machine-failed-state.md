@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service cluster/node is in a failed state
 description: Helps troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
-ms.date: 04/01/2024
+ms.date: 03/10/2025
 ms.reviewer: chiragpa, nickoman, v-weizhu, v-six, aritraghosh
 ms.service: azure-kubernetes-service
 keywords:
@@ -114,7 +114,7 @@ If you prefer to use Azure CLI to view the activity log for a failed cluster, fo
 
 In the Azure portal, navigate to your AKS cluster resource and select **Diagnose and solve problems** from the left menu. You'll see a list of categories and scenarios that you can select to run diagnostic checks and get recommended solutions.
 
-In the Azure CLI, use the `az aks collect` command with the `--name` and `--resource-group` parameters to collect diagnostic data from your cluster nodes. You can also use the `--storage-account` and `--sas-token` parameters to specify an Azure Storage account where the data will be uploaded. The output will include a link to the **Diagnose and Solve Problems** blade where you can view the results and suggested actions.
+In the Azure CLI, use the `az aks kollect` command with the `--name` and `--resource-group` parameters to collect diagnostic data from your cluster nodes. You can also use the `--storage-account` and `--sas-token` parameters to specify an Azure Storage account where the data will be uploaded. The output will include a link to the **Diagnose and Solve Problems** blade where you can view the results and suggested actions.
 
 In the **Diagnose and Solve Problems** blade, you can select **Cluster Issues** as the category. If any issues are detected, you'll see a list of possible solutions that you can follow to fix them.
 

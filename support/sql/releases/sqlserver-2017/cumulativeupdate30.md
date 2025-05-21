@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 30 for SQL Server 2017 (KB5013756)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 30 (KB5013756).
-ms.date: 07/26/2024
+ms.date: 03/20/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5013756, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows
@@ -15,7 +15,7 @@ _Version:_ &nbsp; 14.0.3451.2
 
 ## Summary
 
-This article describes Cumulative Update package 30 (CU30) for Microsoft SQL Server 2017. This update contains 8 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2017 Cumulative Update 29, and it updates components in the following builds:
+This article describes Cumulative Update package 30 (CU30) for Microsoft SQL Server 2017. This update contains 7 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2017 Cumulative Update 29, and it updates components in the following builds:
 
 - SQL Server - Product version: **14.0.3451.2**, file version: **2017.140.3451.2**
 - Analysis Services - Product version: **14.0.249.90**, file version: **2017.140.249.90**
@@ -39,7 +39,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 | Bug reference | Description | Fix area | Component | Platform |
 |---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|----------|
-| <a id=14812566>[14812566](#14812566) </a> | A latch time-out occurs and the IOCP listener stalls when Service Broker connects to an endpoint by using database mirroring. </br></br>**Note**: This fix is available when TF 12323 is enabled. |SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id=14605069>[14605069](#14605069) </a> | An access violation occurs when you try to truncate specific partitions of a table by using the `$Partition` function if the function name or table name doesn't exist. |SQL Server Engine | Metadata | Windows |
 | <a id=14669410>[14669410](#14669410) </a> | This fix resolves the following issues: </br></br>- An assertion failure occurs when your query contains the `MERGE` statement. </br></br>- The online index rebuild can't finish when you use the simple recovery model.| SQL Server Engine | Methods to access stored data | All |
 | <a id=14644630>[14644630](#14644630) </a> | Dropping temp tables causes an unresolved deadlock and dump file in some rare cases. | SQL Server Engine | Programmability | Windows |

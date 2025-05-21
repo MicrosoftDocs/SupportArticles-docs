@@ -17,6 +17,14 @@ items:
   items:
   - name: SQL Server 2022 build versions
     href: sqlserver-2022/build-versions.md
+  - name: Cumulative Update 19
+    items:
+    - name: Cumulative Update 19 (KB5054531)
+      href: sqlserver-2022/cumulativeupdate19.md
+  - name: Cumulative Update 18
+    items:
+    - name: Cumulative Update 18 (KB5050771)
+      href: sqlserver-2022/cumulativeupdate18.md
   - name: Cumulative Update 17
     items:
     - name: Cumulative Update 17 (KB5048038)
@@ -105,6 +113,10 @@ items:
   items:
   - name: SQL Server 2019 build versions
     href: sqlserver-2019/build-versions.md
+  - name: Cumulative Update 32
+    items:
+    - name: Cumulative Update 32 (KB5054833)
+      href: sqlserver-2019/cumulativeupdate32.md
   - name: Cumulative Update 31
     items:
     - name: Cumulative Update 31 (KB5049296)
@@ -237,6 +249,10 @@ items:
   items:
   - name: SQL Server 2017 build versions
     href: sqlserver-2017/build-versions.md
+  - name: Azure Connect Pack
+    items:
+    - name: Azure Connect Pack (KB5050533)
+      href: sqlserver-2017/azureconnect.md
   - name: Cumulative Update 31
     items:
     - name: Cumulative Update 31 (KB5016884)
@@ -555,6 +571,8 @@ items:
     href: sqlserver-2014/build-versions.md
 - name: SQL Server on Linux Release History
   items:
+  - name: SQL Server 2025 Preview
+    href: linux/release-history-2025.md
   - name: SQL Server 2022
     href: linux/release-history-2022.md
   - name: SQL Server 2019

@@ -1,7 +1,7 @@
 ---
 title: NTDS Replication Event 2089 is logged
 description: Discusses the problem where a new event error message is logged if you don't back up a Windows Server 2003 Service Pack 1 (SP1)-based domain controller in a given time period that is called the backup latency interval.
-ms.date: 01/15/2025
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,23 +12,23 @@ ms.custom:
 ---
 # NTDS Replication Event 2089 is logged if Windows Server 2003 SP1 and later domain controllers aren't backed up in a given time period
 
-This article discusses the problem where a new event error message is logged if you don't back up a Windows Server 2003 Service Pack 1 (SP1)-based domain controller in a given time period that is called the backup latency interval.
+This article discusses the problem where a new event error message is logged if you don't back up a Windows Server-based domain controller in a given time period that is called the backup latency interval.
 
-_Applies to:_ &nbsp; Window Server 2003  
+_Applies to:_ &nbsp; Windows Server (All supported versions)  
 _Original KB number:_ &nbsp; 914034
 
 ## Introduction
 
-When you back up a domain controller that is running Microsoft Windows Server 2003 Service Pack 1 (SP1), a new event error message is logged for each writable domain or application partition that the domain controller hosts. This is true if the partition isn't backed up in a given time period. The time period is called a backup latency interval. You can set a registry value to specify this interval in days.
+When you back up a domain controller, a new event error message is logged for each writable domain or application partition that the domain controller hosts. This is true if the partition isn't backed up in a given time period. The time period is called a backup latency interval. You can set a registry value to specify this interval in days.
 
 ## More information
 
-### New behavior in Windows Server 2003 SP1
+### New behavior in Windows Server 2003 SP1 and later version of Windows
 
 The DSA Signature attribute is modified every time that a system state backup is made. The operating system monitors this attribute. An event error message is logged when the backup latency interval criteria are met. Any Windows Server 2003 SP1-based domain controller may log the event because the DSA Signature attribute is a replicated attribute.
 
 > [!NOTE]
-> The new event error message is not logged until a backup is made on a Windows Server 2003-based domain controller that is running Windows Server 2003 SP1. Only Windows Server 2003 SP1-based domain controllers log this event error message.
+> The new event error message is not logged until a backup is made on a Windows Server 2003-based domain controller that is running Windows Server 2003 SP1 or later. Only Windows Server 2003 SP1-based domain controllers or later log this event error message.
 
 The default time period of the backup latency interval is half of the Tombstone Lifetime (TSL) for logging the event error message on the domain controller. The following list shows the difference in the default TSL values for a forest that is created on Windows Server 2003 and a forest that is created on Windows Server 2003 SP1:  
 
