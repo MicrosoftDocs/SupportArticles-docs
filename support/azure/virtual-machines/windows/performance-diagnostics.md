@@ -24,7 +24,7 @@ ms.author: anandh
 
 You can use the Performance Diagnostics tool to identify and troubleshoot performance issues on your Azure virtual machine (VM) in one of two modes:
 
-* **Continuous diagnostics** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. Continuous diagnostics is currently supported only on Windows.
+* **Continuous diagnostics** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. Continuous diagnostics is Generally Available (GA) for Windows VM and in Public Preview for Linux VM.
 * **On-demand diagnostics** helps you troubleshoot an ongoing performance issue by providing more in-depth data, insights, and recommendations that are based on data that's collected at a single moment. On-demand diagnostics is supported on both Windows and Linux.
 
 Performance Diagnostics stores all insights and reports in a storage account that you can configure for short data retention to minimize costs.
@@ -102,7 +102,7 @@ The following distributions are currently supported for on-demand diagnostics.
 | Debian                     | 9, 10, 11 [`*`], 12 |
 | SLES                       | 12 SP5 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP3 [`*`], 15 SP4 [`*`], 15 SP5 [`*`], 15 SP6 [`*`] |
 | AlmaLinux                  | 8.4, 8.5, 9 |
-| Azure Linux                | 2.0 |
+| Azure Linux                | 2.0|
 
 > [!NOTE]
 > [`*`] See [Known issues](../linux/how-to-use-perfinsights-linux.md#known-issues)
@@ -179,7 +179,7 @@ This table compares the data that's provided by Continuous and On-demand Perform
 
 |                               | Continuous Performance Diagnostics                                                                          | On-demand Performance Diagnostics                                                        |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| **Availability**              | Currently supported only for Windows VMs                                                                    | Supported for both Windows and Linux VMs                                                 |
+| **Availability**              | GA for Windows VM, Public Preview for Linux VM                                                                  | GA for both Windows and Linux VMs                                                 |
 | **Insights generated**        | Continuous actionable insights into high resource usage, such as high CPU, high memory, and high disk usage | On-demand actionable insights into high resource usage and various system configurations |
 | **Data collection frequency** | Collects data every 5 seconds, updates are uploaded every 5 minutes                                             | Collects data on demand for the selected duration of the on-demand run                    |
 | **Reports generated**         | Doesn't generate a report                                                                                   | Generates a report that has comprehensive diagnostics data                                   |
