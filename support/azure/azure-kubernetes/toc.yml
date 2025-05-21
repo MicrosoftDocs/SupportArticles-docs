@@ -414,6 +414,8 @@
     href: error-codes/nodepoolmcversionincompatible-error.md  
   - name: PublicIPCountLimitReached error
     href: error-codes/publicipcountlimitreached-error.md
+  - name: ServiceCidrOverlapExistingSubnetsCidr error
+    href: error-codes/servicecidroverlapexistingsubnetscidr-error.md
   - name: SubnetIsFull error
     href: error-codes/subnetisfull-error.md
   - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
