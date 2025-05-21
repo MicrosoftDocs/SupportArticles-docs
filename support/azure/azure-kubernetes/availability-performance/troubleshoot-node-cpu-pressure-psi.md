@@ -111,12 +111,12 @@ Review the following table to learn how to implement best practices for avoiding
 
 | Best practice | Description |
 |---|---|
-|[Focus on PSI metrics instead of utilization](https://docs.kernel.org/accounting/psi.html)|Use PSI metrics as your primary indicator of resource contention rather than CPU utilization percentages.|
-|[Identify pods utilizing the most CPU](./identify-high-cpu-consuming-containers-aks.md)|Isolate the pods that are utilizing the most CPU and identify solutions to reduce pressure.|
-|[Minimize CPU limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)|Consider removing CPU limits and rely on [Linux's Completely Fair Scheduler](https://docs.kernel.org/scheduler/sched-design-CFS.html) with CPU shares based on requests.|
-|[Use appropriate Quality of Service (QoS) classes](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)|Set the right QoSclass for each pod based on its importance and contention sensitivity.|
-|[Optimize pod placement](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)|Use pod anti-affinity rules to avoid placing CPU-intensive workloads on the same nodes.|
-|[Monitor for brief pressure spikes](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/)|Short pressure spikes can indicate issues even when average utilization appears acceptable.|
+|Focus on PSI metrics instead of utilization|Use PSI metrics as your primary indicator of resource contention rather than CPU utilization percentages. For more information, see [PSI - Pressure Stall Information](https://docs.kernel.org/accounting/psi.html).|
+|Identify pods utilizing the most CPU|Isolate the pods that are utilizing the most CPU and identify solutions to reduce pressure. For more information, see [Troubleshoot high CPU usage in AKS clusters](./identify-high-cpu-consuming-containers-aks.md).|
+|Minimize CPU limits|Consider removing CPU limits and rely on [Linux's Completely Fair Scheduler](https://docs.kernel.org/scheduler/sched-design-CFS.html) with CPU shares based on requests. For more information, see [Resource Management for Pods and Containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/).|
+|Use appropriate Quality of Service (QoS) classes|Set the right QoSclass for each pod based on its importance and contention sensitivity. For more information, see [Configure Quality of Service for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/).|
+|Optimize pod placement|Use pod anti-affinity rules to avoid placing CPU-intensive workloads on the same nodes. For more information, see [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/).|
+|Monitor for brief pressure spikes|Short pressure spikes can indicate issues even when average utilization appears acceptable. For more information, see [Resource metrics pipeline](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/).|
 
 ## Key PSI metrics to monitor
 
