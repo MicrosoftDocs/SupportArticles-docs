@@ -115,7 +115,9 @@ kubectl get nodes
 Then, use `kubectl debug` to start a debug pod on the node and make sure there is a seccomp folder
 
 ```console 
-kubectl debug node/<node-name> -it --image=busybox
+kubectl debug node/<node-name> -it --image=mcr.microsoft.com/azurelinux/base/core:3.0
+root [ / ]# mkdir -p /host/var/lib/kubelet/seccomp
+root [ / ]# tdnf install -y tar
 / # mkdir -p /host/var/lib/kubelet/seccomp
 ```
 Leave the debug pod running and copy the podname, it is outputted when you create the debug pod. With `kubectl cp` we can transfer the seccomp profile file to the node directly:  
