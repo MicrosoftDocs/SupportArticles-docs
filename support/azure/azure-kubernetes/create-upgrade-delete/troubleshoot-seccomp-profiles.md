@@ -25,7 +25,7 @@ When using seccomp profiles, it’s essential to test and validate their impact 
 
 If a workload failure occurs, you might see errors such as:
 
-Workload is existing unexpectedly after the feature is enabled, with ```permission denied``` or ```function not implemented``` errors.
+Workload is existing unexpectedly after the feature is enabled, with `permission denied` or `function not implemented` errors.
 
 To diagnose the root cause of workload failures due to blocked syscalls by easily getting visibility into pods and containers use the open source project [Inspektor Gadget](https://inspektor-gadget.io/).
 
