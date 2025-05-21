@@ -11,18 +11,19 @@ ms.date: 05/05/2025
 
 ---
 # Troubleshoot seccomp profile configurations on Azure Kubernetes Service
-Seccomp (Secure Computing) is a Linux kernel feature that enhances the security of containerized workloads by restricting the system calls (syscalls) that containers can make. In Azure Kubernetes Service (AKS), the [containerd](https://containerd.io/) runtime used by AKS nodes natively supports seccomp. However, enabling a seccomp profile can sometimes lead to workload failures due to workload critical syscalls being blocked. This guide explains what seccomp profiles are, how they work, and how you can troubleshoot them using the open source project [Inspektor Gadget](inspektor-gadget.io)’s ```audit seccomp profile``` gadget.
+[Seccomp (Secure Computing)](https://www.man7.org/linux/man-pages/man2/seccomp.2.html) is a Linux kernel feature that enhances the security of containerized workloads by restricting the system calls (syscalls) that containers can make. In Azure Kubernetes Service (AKS), the [containerd](https://containerd.io/) runtime used by AKS nodes natively supports seccomp. However, enabling a seccomp profile can sometimes lead to workload failures due to workload critical syscalls being blocked. This guide explains what seccomp profiles are, how they work, and how you can troubleshoot them using the open source project [Inspektor Gadget](inspektor-gadget.io)’s `audit_seccomp` gadget.
 
 Seccomp profiles define the syscalls that are allowed or denied for a given container. Syscalls are the interface that allows user space programs to request kernel services. There are two seccomp profile values supported on AKS: 
 
-•	```RuntimeDefault```: Use the seccomp profile given by the runtime
+-	`RuntimeDefault`: Use the seccomp profile given by the runtime
 
-•	```Unconfined```: All syscalls are executed 
+-	`Unconfined`: All syscalls are executed 
 
 To enable seccomp on your AKS node pools, see [Secure container access to resources using built-in Linux security features](https://learn.microsoft.com/azure/aks/secure-container-access). You can also configure a custom profile to meet your workload’s specific needs, see [Configure a custom seccomp profile](https://learn.microsoft.com/azure/aks/secure-container-access#configure-a-custom-seccomp-profile) for details. Custom seccomp profiles are not supported or managed by AKS. 
 
 When using seccomp profiles, it’s essential to test and validate their impact on your workloads. Some workloads might require a lower number of syscall restrictions than others. This means that workloads may fail during runtime with the ```RuntimeDefault``` profile. Here's how you can leverage the open source project Inspektor Gadget to diagnose issues and gain visibility into blocked syscalls.
 
+## Symptoms 
 If a workload failure occurs, you might see errors such as:
 
 Workload is existing unexpectedly after the feature is enabled, with `permission denied` or `function not implemented` errors.
@@ -31,6 +32,8 @@ To diagnose the root cause of workload failures due to blocked syscalls by easil
 
 ## Prerequisites 
 - A tool to connect to the Kubernetes cluster, such as the `kubectl` tool. To install `kubectl` using the [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+
+- Krew to easily install Inspektor Gadget if you don't already have it
 
 - The seccomp profile that you are trying to troubleshoot 
 
@@ -154,15 +157,15 @@ kubectl krew install gadget
 kubectl gadget deploy
 ```
 
-### Step 3: Run the [audit seccomp profile gadget](https://inspektor-gadget.io/docs/latest/gadgets/audit_seccomp)
+### Step 3: Run the [audit_seccomp gadget](https://inspektor-gadget.io/docs/latest/gadgets/audit_seccomp)
 With Inspektor Gadget installed, start the audit ```seccomp profile gadget``` using the ```kubectl gadget run``` command:
 ```console
 kubectl gadget run audit_seccomp
 ```
 ### Step 4: Analyze Blocked Syscalls
-Start running your workload and then the [audit seccomp profile gadget](https://inspektor-gadget.io/docs/latest/gadgets/audit_seccomp) will log blocked syscalls, along with their associated pods, containers, and processes. You can use this information to identify the root causes of workload failures.
+Start running your workload and then the [audit_seccomp gadget](https://inspektor-gadget.io/docs/latest/gadgets/audit_seccomp) will log blocked syscalls, along with their associated pods, containers, and processes. You can use this information to identify the root causes of workload failures.
 
-We recommend investigating the following but you can find a larger list of blocked syscalls here. Here are some commonly blocked syscalls to look out for
+We recommend investigating the following but you can find a larger list of blocked syscalls [here](https://learn.microsoft.com/en-us/azure/aks/secure-container-access#significant-syscalls-blocked-by-default-profile). Here are some commonly blocked syscalls to look out for
 
 | Syscall |Consideration |
 |---|---|
@@ -174,9 +177,8 @@ We recommend investigating the following but you can find a larger list of block
 ## Next Steps
 If you encounter issues with your workloads due to blocked syscalls:
 
-•	Consider using a custom seccomp profile tailored to the specific needs of your application. You can check out the [Inspektor Gadget advise seccomp profile gadget](https://inspektor-gadget.io/docs/latest/gadgets/advise_seccomp).
+-	Consider using a custom seccomp profile tailored to the specific needs of your application. You can check out the [Inspektor Gadget advise_seccomp gadget](https://inspektor-gadget.io/docs/latest/gadgets/advise_seccomp).
 
-•	If security concerns are minimal, switch to the `Unconfined` profile to disable syscall restrictions entirely.
 
 Testing and refining your seccomp profiles ensures optimal performance and security for your AKS workloads. For further assistance, consult the [Microsoft Learn documentation on AKS and seccomp](https://learn.microsoft.com/azure/aks/secure-container-access#secure-computing-seccomp).
 
