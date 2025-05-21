@@ -92,9 +92,9 @@ The SIP device state isn't accurately reflected if the device user isn't signed 
 
 ## I can't enroll my device by using a one-time verification code
 
-Currently, enrolling SIP devices by dialing \*55\* followed by a [one-time verification code]((/microsoftteams/devices/sip-gateway-configure#provision-and-enroll-sip-devices-as-common-area-phones) isn't available in the GCC environment. 
+Currently, enrolling SIP devices by dialing \*55\* followed by a [one-time verification code](/microsoftteams/devices/sip-gateway-configure#provision-and-enroll-sip-devices-as-common-area-phones) isn't available in the GCC environment. 
 
-To work around this issue, use the [Zero Touch Common Area Phone sign in](/microsoftteams/devices/sip-gateway-configure#zero-touch-common-area-phone-sign-in) method.
+To work around this issue, use the [Zero Touch Common Area Phone sign-in](/microsoftteams/devices/sip-gateway-configure#zero-touch-common-area-phone-sign-in) method.
 
 ## More information
 
