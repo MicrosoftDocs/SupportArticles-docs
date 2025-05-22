@@ -58,7 +58,7 @@ Cloud PCs that are connected via Windows **Task view** quietly disconnect to avo
 
 When the re-connectable error message is displayed, you can reconnect through the message box that reassemble the following screenshot:
 
-\<To be added\>
+:::image type="content" source="./media/windows-365-switch-known-issues/screenshot-prompting-to-reconnect-to-the-remote-session.png" alt-text="Screenshot prompting to reconnect to the remote session.":::
 
 ## Navigation between sign-in prompts and your Cloud PC
 
