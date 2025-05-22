@@ -272,7 +272,7 @@ Network traces are helpful in pinpointing AD domain join issues. During an AD do
 
 ### DNS
 
-The client queries the DNS SRV record to locate the DCs of the domain to join. In the following example, the client manages to locate 2 DCs.
+The client queries the DNS SRV record to locate the DCs of the domain to join. In the following example, the client manages to locate two DCs.
 
 ```output
 Source  Destination  Protocol Name  Description
@@ -303,7 +303,7 @@ dc1.contoso.local  HOST88.contoso.local  DNS  DNS:QueryId = 0x623B, QUERY (Stand
 
 ### LDAP ping
 
-Then the client picks up one DC and uses Lightweight Directory Access Protocol (LDAP) ping over UDP port 389 to detect the functionalities of that DC.
+Then the client picks up one of the DCs and uses Lightweight Directory Access Protocol (LDAP) ping over UDP port 389 to detect the functionalities of that DC.
 
 ```output
 Source  Destination  Protocol Name  Description
@@ -403,7 +403,10 @@ HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49708,
 
 ### LDAP
 
-LDAP traffic is used during domain join activity as well. Note that except for the leading LDAP search, which is for RootDSE and then the binding (authentication), the remaining LDAP traffic is encrypted. You cannot read the content in Network Monitor or Wireshark.
+LDAP traffic is used during domain join activity as well.
+
+> [!NOTE]
+> Except for the leading LDAP search, which is for RootDSE and then the binding (authentication), the remaining LDAP traffic is encrypted. You cannot read the content in Network Monitor or Wireshark.
 
 ```output
 Source  Destination  Protocol Name  Description
@@ -443,7 +446,7 @@ HOST88.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLe
 
 ### RPC
 
-Remote Procedure Call (RPC) traffic starts from TCP 135 port. The client binds to the RPC Endpoint Mapper (EPMP in netmon trace) service at TCP 135 port, queries the actual port of DRSR and NetLogon services, and then connects those 2 services.
+Remote Procedure Call (RPC) traffic starts from TCP 135 port. The client binds to the RPC Endpoint Mapper (EPMP) service at TCP 135 port, queries the actual port of Directory Replication Service Remote (DRSR) and the NetLogon services, and then connects those 2 services.
 
 > [!NOTE]
 > By default, the traffic of EPMAP doesn't requires authentication, but others traffics do.
@@ -539,9 +542,9 @@ HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49735,
 
 ### Kerberos
 
-Kerberos traffic also appears during domain join operation. The miscellaneous types of network traffic mentioned above, including SMB, LDAP and RPC, all require authentication. Typically, Kerberos is used.
+Kerberos traffic is also used during domain join operation, because all the types of network traffic mentioned in the previous sections, including SMB, LDAP and RPC, require authentication.
 
-For example, in the following network trace, the client gets a Kerberos TGT for the user account **CONTOSO\puser2** and the service ticket for the target SPN **cifs/DC2.contoso.local**. Then the client sets up the SMB session to the DC DC2.contoso.local with that service ticket.
+For example, in the following network trace, the client gets a Kerberos TGT for the user account **CONTOSO\puser2** and the service ticket for the target SPN **cifs/DC2.contoso.local**. Then, the client sets up the SMB session to the DC DC2.contoso.local with that service ticket.
 
 ```output
 Source  Destination  Protocol Name  Description
@@ -615,8 +618,8 @@ dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   IOCTL (0xb)
                + Ticket: Realm: CONTOSO.LOCAL, Sname: cifs/DC2.contoso.local
 ```
 
-
-Depending on the format of the user credential provided for the domain join operation (e.g., puser2@contoso.local or contoso\puser2 or contoso.local\puser2), you may see different Kerberos traffic.
+> [!NOTE]
+> Depending on the format of the user credential provided for the domain join operation (for example, puser2@contoso.local or contoso\puser2 or contoso.local\puser2), you may see different Kerberos traffic.
 
 #### About NTLM
 
@@ -671,12 +674,3 @@ System  dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   TREE CONNECT (0x
        + MechListMic: Version: 1
 
 ```
-
-# Conclusion
-
-Understanding the various logs and network traffic types involved in an AD domain join can significantly aid in troubleshooting and resolving AD domain join failures. By comparing logs from successful and unsuccessful attempts and analyzing the traffic patterns, you can pinpoint where issues arise and address them effectively.
-
-
-:date: Page updated by dennhu to substitute the sample `netsetup.log` from a Win11 24H2 machine. Also update the RPC and Kerberos sections. 04/04/2025.
-
-:date: Page updated by dennhu to substitute texts for all screenshots. 05/20/2025.
