@@ -222,6 +222,14 @@ If you back up the database to a disk or back up the transaction log to a disk, 
 
 For more information about antivirus considerations on a cluster, see [Antivirus software that isn't cluster-aware may cause problems with Cluster Services](../../../windows-server/high-availability/not-cluster-aware-antivirus-software-cause-issue.md).
 
+### Arc enabled SQL Server
+
+You might see the following files and executables (also referred to as system objects) being flagged when running antivirus software on an [Arc enabled SQL Server](/sql/sql-server/azure-arc/connect). Consider excluding these [necessary system objects](/sql/sql-server/azure-arc/agent-extension-files) from antivirus scanning.
+
+Starting with SQL Server 2025, SQL Server instances can use the Azure Arc machine's managed identity. You might need to add an exemption for the token folder. Follow the steps in [Setup managed identity for Arc enabled SQL Server](/sql/sql-server/azure-arc/managed-identity) for the proper setup and the folder path.
+
+We also recommend that you keep the extension up to date, as it includes ongoing security and feature updates. For more information, see the [latest extension release](/sql/sql-server/azure-arc/release-notes).
+
 ## Configure antivirus software to work with Analysis Services (SSAS)
 
 The following Analysis Services directories and processes can be excluded from antivirus scanning.
