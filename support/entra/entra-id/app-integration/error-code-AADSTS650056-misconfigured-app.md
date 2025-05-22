@@ -22,8 +22,8 @@ When you try to sign in to a web application that uses Microsoft Entra ID, you m
 This error usually occurs due to one of the following reasons:
 
 - The Issuer provided in the SAMLRequest is not valid.
-- The application does not have the required permissions to call Microsoft Graph APIs.
-- The admin has not consented to the permissions for the application on behalf of the tenant.
+- The application doesn't have the required permissions to call Microsoft Graph APIs.
+- The admin hasn't consented to the permissions for the application on behalf of the tenant.
 
 ## Solution 1 for SAML Authentication flows - The Issuer provided in the SAMLRequest is not valid
 
