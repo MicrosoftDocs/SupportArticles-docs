@@ -54,7 +54,7 @@ To work around the issue, manually update the ingestion key by using the followi
      2. Switch to Bash, and then run the `az account get-access-token --resource-type arm`.
      3. Copy the value of the access token. 
 
-     **Use brwoser Developer tools**
+     **Use browser Developer tools**
    
       1. In the browser, press F12 to open Developer tools.
       2. Select **Network**, and then select **Disable Cache**.
