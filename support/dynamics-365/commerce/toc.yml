@@ -1,9 +1,9 @@
-- name: Dynamics 365 Commerce
+﻿- name: Dynamics 365 Commerce
   href: welcome-commerce.yml
 - name: Channel management
   items:
     - name: A hierarchy is incorrectly published to a future date
-      href: channel-management/fix-incorrectly-published-hierarchy.md  
+      href: channel-management/fix-incorrectly-published-hierarchy.md
 - name: Commerce headquarters operations
   items:
     - name: Customer records don't appear in Commerce headquarters
@@ -40,8 +40,6 @@
   items:
     - name: Fix common statement posting issues by editing transactions
       href: financial-statements/fix-common-posting-issues.md
-    - name: Issues with the data reconciliation of a Z report
-      href: financial-statements/z-report-issues.md
     - name: Statement posting errors due to unavailable inventory or update conflicts
       href: financial-statements/inventory-errors-posting.md
 - name: Globalization
@@ -53,11 +51,11 @@
     - name: Asynchronous order synchronization issues
       href: order-management/synchronization-error.md
     - name: '"Payment type must be credit card" error on the sales order page'
-      href: order-management/payment-type-credit-card-error.md 
+      href: order-management/payment-type-credit-card-error.md
     - name: Taxes on online orders are incorrectly calculated
       href: order-management/tax-miscalculated-online-order.md
     - name: Troubleshoot issues with the online store transaction creation process
-      href: order-management/online-order-transaction-creation-failures.md   
+      href: order-management/online-order-transaction-creation-failures.md
 - name: Payments
   items:
     - name: A card payment fails due to an unsupported card type
@@ -65,43 +63,35 @@
     - name: Credit card entry page shows an error at checkout
       href: payments/credit-card-entry-form-error.md
     - name: Payments are automatically settled before orders are invoiced or shipped
-      href: payments/payments-auto-settled.md 
+      href: payments/payments-auto-settled.md
     - name: Refund on a return order is declined
       href: payments/refund-declined.md
-    - name: Refundable charges are miscalculated based on returned quantity
-      href: payments/refund-miscalculated-partial-return.md
     - name: Save for my next payment option doesn't appear
       href: payments/next-payment-link-not-appearing.md
     - name: Troubleshoot Dynamics 365 Payment Connector for Adyen issues
       href: payments/adyen-support.md
 - name: Point of sale (POS)
   items:
-    - name: POS reports an error that the redirect URI wasn't found
-      href: point-of-sale//troubleshoot-pos-aad-issues.md
     - name: Store Commerce app (POS) is suddenly deactivated
-      href: point-of-sale/store-commerce-app-pos-deactivated.md    
+      href: point-of-sale/store-commerce-app-pos-deactivated.md
     - name: Troubleshoot Store Commerce extension issues
       href: point-of-sale/store-commerce-extensions.md
     - name: Troubleshoot Store Commerce performance issues
       href: point-of-sale/store-commerce-performance.md
     - name: Troubleshoot Store Commerce setup and installation issues
       href: point-of-sale/store-commerce-setup-installation.md
-    - name: Troubleshoot Store Commerce sign-in issues
-      href: point-of-sale/store-commerce-sign-in.md
     - name: Troubleshoot generic errors displayed on the POS
       href: point-of-sale/troubleshoot-generic-error-in-pos.md
-- name: Pricing, discounts, and taxes 
+- name: Pricing, discounts, and taxes
   items:
     - name: Price change tracking issues
-      href: pricing-discounts-taxes/price-track-issues.md        
-- name: Ratings and reviews 
+      href: pricing-discounts-taxes/price-track-issues.md
+- name: Ratings and reviews
   items:
     - name: Ratings refiner appears when the ratings and reviews solution isn't enabled
       href: ratings-reviews/hide-ratings-refiner.md
 - name: Site builder content management
   items:
-    - name: Can't configure a security group for Commerce site builder during initial deployment
-      href: site-builder-content-management/security-group-site-builder.md    
     - name: Products and categories are missing after environment copy
       href: site-builder-content-management/missing-products-categories.md
     - name: Products and categories don't appear after a new site is mapped

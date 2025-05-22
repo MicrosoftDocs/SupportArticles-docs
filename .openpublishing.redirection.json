@@ -13697,6 +13697,26 @@
       "source_path": "support/entra/entra-id/mfa/authorization-request-denied-graph-api.md",
       "redirect_url": "/troubleshoot/entra/entra-id/app-integration/troubleshoot-authorization-requestdenied-graph-api",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/point-of-sale/store-commerce-sign-in.md",
+      "redirect_url": "/troubleshoot/dynamics-365/commerce/welcome-commerce"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/payments/refund-miscalculated-partial-return.md",
+      "redirect_url": "/troubleshoot/dynamics-365/commerce/welcome-commerce"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/point-of-sale/troubleshoot-pos-aad-issues.md",
+      "redirect_url": "/troubleshoot/dynamics-365/commerce/welcome-commerce"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/financial-statements/z-report-issues.md",
+      "redirect_url": "/troubleshoot/dynamics-365/commerce/welcome-commerce"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/site-builder-content-management/security-group-site-builder.md",
+      "redirect_url": "/troubleshoot/dynamics-365/commerce/welcome-commerce"
     }
   ]
 }
