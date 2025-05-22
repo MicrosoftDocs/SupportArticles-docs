@@ -1,7 +1,7 @@
 ---
 title: Support policy for SQL Server
 description: This article describes the support policy for Microsoft SQL Server.
-ms.date: 06/30/2023
+ms.date: 05/22/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, linux-related-content
 ms.reviewer: sureshka
 ---
@@ -30,7 +30,7 @@ Starting from SQL Server 2019, you can deploy the SQL Server Big Data Cluster on
 
 ## Supported hardware
 
-SQL Server Installations are supported on x64-based (AMD and Intel) processors. They are no longer supported on x86-based processors. For current information, see the [SQL Server 2016 and 2017: Hardware and software requirements](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server).
+SQL Server Installations are supported on x64-based (AMD and Intel) processors. They're no longer supported on x86-based processors. For current information, see the [SQL Server 2016 and 2017: Hardware and software requirements](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server).
 
 ## Supported virtualization technologies
 
@@ -50,7 +50,7 @@ Look in the operating system documentation for the current and updated hyperviso
 
 Microsoft also supports deploying SQL Server on VMware vSphere, allowing users to take advantage of the software-defined data center (SDDC) platform and capabilities such as network and storage virtualization. To learn more about how to best deploy SQL Server using vSphere, including right-sizing your SQL Server VMs and managing your vCenter Server configuration, see [Architecting Microsoft SQL Server on VMware vSphere](https://core.vmware.com/resource/architecting-microsoft-sql-server-vmware-vsphere#introduction).
 
-[Azure VMware Solution](https://azure.microsoft.com/products/azure-vmware#overview) is Microsoft's first-party solution that allows customers to run VMware workloads natively on Azure and also supports running SQL Server deployments on the same vSphere infrastructure you are used to running on VMware on-premises.
+[Azure VMware Solution](https://azure.microsoft.com/products/azure-vmware#overview) is Microsoft's first-party solution that allows customers to run VMware workloads natively on Azure and also supports running SQL Server deployments on the same vSphere infrastructure you're used to running on VMware on-premises.
 
 ## SQL Server running in Linux containers
 
@@ -76,13 +76,13 @@ The following guidelines and examples apply to the support for SQL Server on Lin
 
   - SQL Server 2017 on Red Hat 7.6 containers running on an Ubuntu Container host
 
-  - A Linux OS distribution that is not matched between the container and host
+  - A Linux OS distribution that isn't matched between the container and host
 
   - SQL Server 2017 on Ubuntu 16.04 container running on an Ubuntu 18.04 host
 
-  - A Linux OS version that is not matched between the container and host
+  - A Linux OS version that isn't matched between the container and host
 
-  - SQL Server 2017 on a CentOS container on a CentOS Container host (CentOS is not a supported Linux OS distribution for SQL Server on Linux. Microsoft will address only problems that are reproducible on a supported configuration.)
+  - SQL Server 2017 on a CentOS container on a CentOS Container host (CentOS isn't a supported Linux OS distribution for SQL Server on Linux. Microsoft will address only problems that are reproducible on a supported configuration.)
 
 The Linux container image for SQL Server 2017 is available on the Container Registry. You can use the Linux image in your typical DevOps, CI/CD pipeline, or production deployment scenarios. For more information, see [the documentation page for container deployment](/sql/linux/quickstart-install-connect-docker).
 
@@ -94,7 +94,7 @@ For more information about how the operating system vendors support the componen
 
 ## SQL Server running in Windows containers
 
-SQL Server deployments in Windows containers are not covered by support. For development and testing, create your own custom container images to work with SQL Server in Windows containers. Sample files are available on [GitHub](https://github.com/microsoft/mssql-docker/tree/master/windows) but are provided for reference only.
+SQL Server deployments in Windows containers aren't covered by support. For development and testing, create your own custom container images to work with SQL Server in Windows containers. Sample files are available on [GitHub](https://github.com/microsoft/mssql-docker/tree/master/windows) but are provided for reference only.
 
 ## SQL Server Containers running on container orchestrators
 
@@ -104,13 +104,13 @@ Starting from SQL Server 2019, you can deploy the SQL Server Big Data Cluster on
 
 ## Customizing SQL Server Containers
 
-Creation of custom SQL Server Linux Containers is supported when customized on top of SQL Server base containers downloaded from MCR (Container Registry), as well as ensuring that you do not modify the `SQL directories/binaries/licenses` located at the locations: `/opt/mssql/*` and `/usr/share/doc/*`, which when incorrectly modified could result in SQL Server process not starting.
+Creation of custom SQL Server Linux Containers is supported when customized on top of SQL Server base containers downloaded from MCR (Container Registry), as well as ensuring that you don't modify the `SQL directories/binaries/licenses` located at the locations: `/opt/mssql/*` and `/usr/share/doc/*`, which when incorrectly modified could result in SQL Server process not starting.
 
 You can also build your own SQL Server container images from scratch, given that the base image of the Linux OS container used to generate the custom SQL Server container image matches the [supported platforms](/sql/linux/sql-server-linux-release-notes-2019) for SQL Server on Linux and you follow the guidelines mentioned above.  
 
-As part of troubleshooting, if the customized container has SQL Server startup issues or some other SQL Server exception/error, then Microsoft can require you to uninstall the customization or add specific tools or packages to help troubleshoot and replicate the problem. If the issue does not occur after the removal of customization, then Microsoft will not support the customization or custom script.
+As part of troubleshooting, if the customized container has SQL Server startup issues or some other SQL Server exception/error, then Microsoft can require you to uninstall the customization or add specific tools or packages to help troubleshoot and replicate the problem. If the issue doesn't occur after the removal of customization, then Microsoft won't support the customization or custom script.
 
-SQL container customization is not supported for use in other Microsoft products that use SQL Linux containers such as Azure Arc for Data Services, Azure SQL Edge etc.,
+SQL container customization isn't supported for use in other Microsoft products that use SQL Linux containers such as Azure Arc for Data Services, Azure SQL Edge etc.,
 
 - **Examples of supported configurations:**
 
@@ -120,7 +120,7 @@ SQL container customization is not supported for use in other Microsoft products
 
 - **Examples of unsupported configurations:**
 
-  You try building a customized image on top of any Linux platform that is not mentioned in the [supported platforms](/sql/linux/sql-server-linux-release-notes-2019) documentation.
+  You try building a customized image on top of any Linux platform that isn't mentioned in the [supported platforms](/sql/linux/sql-server-linux-release-notes-2019) documentation.
 
 ## Supported file systems
 
@@ -132,7 +132,7 @@ If you install SQL Server on Linux, the supported file systems for the volumes t
 
 When you set up a high availability solution for SQL Server on Windows, refer to the support policies and requirements at [The Microsoft SQL Server support policy for Microsoft Clustering](https://support.microsoft.com/help/327518) and [Prerequisites, Restrictions, and Recommendations for Always On availability groups](/sql/database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability).
 
-When you set up a high availability solution for SQL Server on Linux, review the support policies of the OS vendor that are specific to high availability. Production environments require a fencing agent, such as STONITH, for high availability. A Linux cluster uses fencing to return the cluster to a known state. The correct manner in which to configure fencing depends on the distribution and the environment. Currently, fencing is not available in some cloud environments. For more information, see the following OS vendor policies and recommendations:
+When you set up a high availability solution for SQL Server on Linux, review the support policies of the OS vendor that are specific to high availability. Production environments require a fencing agent, such as STONITH, for high availability. A Linux cluster uses fencing to return the cluster to a known state. The correct manner in which to configure fencing depends on the distribution and the environment. Currently, fencing isn't available in some cloud environments. For more information, see the following OS vendor policies and recommendations:
 
 - [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/2912891)
 
@@ -144,7 +144,7 @@ For supported high availability solution in SQL Server on Linux, see [Business c
 
 ## Unsupported features
 
-You can find the current list of SQL Server features that aren't supported in the unsupported features and services section in [Release notes for SQL Server 2017 on Linux](/sql/linux/sql-server-linux-release-notes?view=sql-server-ver15&preserve-view=true). If you try to use components or features that are listed in the notes as unsupported, you might experience unexpected symptoms and errors. When you use a combination of features for your application or solution, make sure that the interoperability between the features is documented as supported. For guidance, see [Always On availability groups: interoperability (SQL Server)](/sql/database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server).
+You can find the current list of SQL Server features that aren't supported in the unsupported features and services section in [Release notes for SQL Server 2017 on Linux](/sql/linux/sql-server-linux-release-notes). If you try to use components or features that are listed in the notes as unsupported, you might experience unexpected symptoms and errors. When you use a combination of features for your application or solution, make sure that the interoperability between the features is documented as supported. For guidance, see [Always On availability groups: interoperability (SQL Server)](/sql/database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server).
 
 ## Support policy
 
