@@ -46,8 +46,16 @@ To work around the issue, manually update the ingestion key by using the followi
 
      **Authorization**: Use a **Bearer Token** for authentication.
      
-     You can obtain the token by using the **Network** tab of your browser's Developer tools:
-      
+     You can obtain the token by using one of the following methods:
+
+     **Use Azure Cloud PowerShell**
+
+     1. Sign in to the [Azure portal](https://portal.azure.com), and then open the Azure Cloud PowerShell. For more information, see [Start Azure Cloud PowerShell](/azure/cloud-shell/get-started/classic?tabs=azurecli#start-cloud-shell).
+     2. Switch to Bash, and then run the `az account get-access-token --resource-type arm`.
+     3. Copy the value of the access token. 
+
+     **Use brwoser Developer tools**
+   
       1. In the browser, press F12 to open Developer tools.
       2. Select **Network**, and then select **Disable Cache**.
       1. Open the [Azure portal](https://portal.azure.com).
@@ -55,7 +63,7 @@ To work around the issue, manually update the ingestion key by using the followi
       1. Filter the results by using **Fetch/XHR**. You can find a bearer token in the request headers of the corresponding API call. Use it while it remains active.
       
          :::image type="content" source="media/ingestion-key-rotation-log-flow/get-token.png" alt-text="Screenshot showing how to view the access token." lightbox="media/ingestion-key-rotation-log-flow/get-token.png":::
-5. The request should return a **204** status code that indicates that the ingestion key was successfully updated.
+6. The request should return a **204** status code that indicates that the ingestion key was successfully updated.
    
     > [!NOTE]
     > Because of cache resetting on the Azure side, log flow might take up to 24 hours to resume.
