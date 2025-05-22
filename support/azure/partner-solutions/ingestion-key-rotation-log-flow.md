@@ -51,7 +51,7 @@ To work around the issue, manually update the ingestion key by using the followi
      **Use Azure Cloud PowerShell**
 
      1. Sign in to the [Azure portal](https://portal.azure.com), and then open the Azure Cloud PowerShell. For more information, see [Start Azure Cloud PowerShell](/azure/cloud-shell/get-started/classic?tabs=azurecli#start-cloud-shell).
-     2. Switch to Bash, and then run the `az account get-access-token --resource-type arm`.
+     2. Switch to Bash, and then run the `az account get-access-token --resource-type arm` command.
      3. Copy the value of the access token. 
 
      **Use browser Developer tools**
