@@ -162,7 +162,7 @@ All the following commands should be run by using root privileges or by specifyi
    sudo tee rhel8-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-eus]\nname=Microsoft Azure RPMs for RHEL 8 EUS\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-eus\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
    ```
    
-2. Install the `rhui-azure-rhel8-eus` package by running
+2. Install the `rhui-azure-rhel8-eus` package by running:
 
    ```bash
    sudo dnf --config rhel8-eus.config install rhui-azure-rhel8-eus
@@ -187,13 +187,13 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 9._x_ - EUS](#tab/rhel9-eus)
 
-1. Create a config file by using this command 
+1. Create a config file by using this command: 
 
    ```bash
    sudo tee rhel9-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel9-eus]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9-eus)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9-eus\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
 
    ```
-2. Install the `rhui-azure-rhel9-eus` package by running
+2. Install the `rhui-azure-rhel9-eus` package by running.
 
    ```bash
    sudo dnf --config rhel9-eus.config install rhui-azure-rhel9-eus
@@ -211,7 +211,7 @@ All the following commands should be run by using root privileges or by specifyi
    sudo dnf repolist all
    ```
 
-5. Remove the temp file created on step 1
+5. Remove the temp file created on step 1.
 
    ```bash
    sudo rhel9-eus.config
@@ -240,7 +240,7 @@ All the following commands should be run by using root privileges or by specifyi
    sudo rm /etc/yum/vars/releasever
    ```
 
-2. Create a config file by using this command 
+2. Create a config file by using this command:
 
    ```bash
    sudo tee rhel7-non-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel7]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -257,7 +257,7 @@ All the following commands should be run by using root privileges or by specifyi
    ```bash
    sudo yum repolist
    ```
-5. Remove the temp file created on step 2
+5. Remove the temp file created on step 2.
 
    ```bash
    sudo rm rhel7-non-eus.config
@@ -271,7 +271,7 @@ All the following commands should be run by using root privileges or by specifyi
    sudo rm /etc/yum/vars/releasever
    ```
 
-2. Create a config file by using this command 
+2. Create a config file by using this command:
 
    ```bash
    sudo tee rhel8-non-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -288,7 +288,7 @@ All the following commands should be run by using root privileges or by specifyi
    ```bash
    sudo yum repolist
    ```
-5. Remove the temp file created on step 2
+5. Remove the temp file created on step 2.
 
    ```bash
    sudo rm rhel8-non-eus.config
@@ -302,7 +302,7 @@ All the following commands should be run by using root privileges or by specifyi
    sudo rm /etc/yum/vars/releasever
    ```
 
-2. Create a config file by using this command 
+2. Create a config file by using this command:
 
    ```bash
    sudo tee rhel9-non-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel9]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -319,7 +319,7 @@ All the following commands should be run by using root privileges or by specifyi
    ```bash
    sudo yum repolist
    ```
-5. Remove the temp file created on step 2
+5. Remove the temp file created on step 2.
 
    ```bash
    sudo rm rhel9-non-eus.config
@@ -328,7 +328,7 @@ All the following commands should be run by using root privileges or by specifyi
 #### [RHEL 10.0  non-EUS](#tab/rhel10-noneus)
 
 
-1. Create a config file by using this command 
+1. Create a config file by using this command:
 
    ```bash
    sudo tee rhel10-non-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel10]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 10 (rhel10)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel10\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft-2025.asc\nsslverify=1' 
@@ -345,7 +345,8 @@ All the following commands should be run by using root privileges or by specifyi
    ```bash
    sudo dnf repolist
    ```
-4. Remove the temp file created on step 2
+   
+4. Remove the temp file created on step 1.
 
    ```bash
    sudo rm rhel10-non-eus.config
@@ -380,7 +381,7 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
    sudo rm /etc/yum/vars/releasever
    ```
 
-2. Create a config file by using this command 
+2. Create a config file by using this command:
 
    ```bash
    sudo tee rhel7-base-sap-apps.config > /dev/null <<< $'[rhui-microsoft-azure-rhel7-base-sap-apps]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-base-sap-apps)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7-base-sap-apps\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -398,7 +399,7 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
    sudo yum repolist
    ```
 
-5. Remove the temp file created on step 1
+5. Remove the temp file created on step 2.
 
    ```bash
    sudo rm rhel7-base-sap-apps.config
@@ -415,7 +416,7 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
    sudo rm /etc/yum/vars/releasever
    ```
 
-2. Create a config file by using this command 
+2. Create a config file by using this command:
 
    ```bash
    sudo tee rhel7-base-sap-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel7-base-sap-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-base-sap-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7-base-sap-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -433,47 +434,10 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
    sudo yum repolist
    ```
    
-5. Remove the temp file created on step 2
+5. Remove the temp file created on step 2.
 
    ```bash
    sudo rm rhel7-base-sap-ha.config
-   ```
-
-#### [RHEL 7.9  - RHEL-HA](#tab/rhe79-rhel-ha)
-
-1. Remove the releasever file if it exists:
-
-   ```bash
-   sudo rm /etc/yum/vars/releasever
-   ```
-   
-2. Remove the client `rhui-azure-rhel7-ha` package by running the `dnf remove` command:
-
-   ```bash
-   sudo dnf remove rhui-azure-rhel7-ha
-   ```
-   
-3. Create a config file by using this command
-
-   ```bash
-   sudo tee rhel7-ha.config > /dev/null <<< $'[microsoft-azure-rhel7-ha]\nname=Microsoft Azure RPMs for RHEL7 HA\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-4. Install the `rhui-azure-rhel7-base-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
-
-   ```bash
-   sudo yum --config rhel7-ha.config install rhui-azure-rhel7-ha
-   ```
-
-5. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo dnf repolist
-   ```
-6. Remove the temp file created on step 3
-
-   ```bash
-   sudo rm rhel7-ha.config
    ```
 
 ---
@@ -497,7 +461,7 @@ Select the tab of an SAP image type to see the corresponding instructions.
 
 The following steps apply if the OS version is *earlier than the latest version available* supported by SAP for `RHEL 8.X` and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
-1. Create a config file by using this command
+1. Create a config file by using this command:
 
    ```bash
    sudo tee rhel8-sapapps.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-sapapps]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sapapps)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-sapapps\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -521,7 +485,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf repolist
    ```
 
-5. Remove the temp file created on step 1
+5. Remove the temp file created on step 1.
 
    ```bash
    sudo rm rhel8-sapapps.config
@@ -538,7 +502,7 @@ The following steps apply if the OS version is *RHEL 8.10* supported by SAP and 
    sudo rm /etc/yum/vars/releasever
    ```
    
-2. Create a config file by using this command
+2. Create a config file by using this command:
 
    ```bash
    sudo tee rhel8-base-sap-apps.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-base-sap-apps]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-apps)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-base-sap-apps\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -555,7 +519,7 @@ The following steps apply if the OS version is *RHEL 8.10* supported by SAP and 
    ```bash
    sudo dnf repolist
    ```
-5. Remove the temp file created on step 2
+5. Remove the temp file created on step 2.
 
    ```bash
    sudo rm rhel8-base-sap-apps.config
@@ -565,11 +529,10 @@ The following steps apply if the OS version is *RHEL 8.10* supported by SAP and 
 
 The following steps apply if the OS version is *earlier than the latest version available* supported by SAP for `RHEL 8._x_` and the VM was created by using the `RHEL-SAP-HA` offer image.
 
-1. Create a config file by using this command
+1. Create a config file by using this command:
 
    ```bash
    sudo tee rhel8-sap-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-sap-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-sap-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-sap-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-
    ```
 
 2. Install the `rhui-azure-rhel8-sap-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
@@ -589,7 +552,8 @@ The following steps apply if the OS version is *earlier than the latest version 
    ```bash
    sudo dnf repolist
    ```
-5. Remove the temp file created on step 2
+   
+5. Remove the temp file created on step 1.
 
    ```bash
    sudo rm rhel8-sap-ha.config
@@ -605,7 +569,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    sudo rm /etc/yum/vars/releasever
    ```
    
-2. Create a config file by using this command
+2. Create a config file by using this command:
 
    ```bash
    sudo tee rhel8-base-sap-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-base-sap-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-base-sap-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -623,7 +587,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    sudo dnf repolist
    ```
    
-5. Remove the temp file created on step 2
+5. Remove the temp file created on step 2.
 
    ```bash
    sudo rm rhel8-base-sap-ha.config
@@ -631,7 +595,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
 
 #### [RHEL 8._x_ - RHEL-HA (E4S)](#tab/rhel8-rhel-ha-e4s)
 
-1. Create a config file by using this command
+1. Create a config file by using this command:
 
    ```bash
    sudo tee rhel8-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -655,7 +619,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    sudo dnf repolist
    ```
 
-5. Remove the temp file created on step 2
+5. Remove the temp file created on step 2.
 
    ```bash
    sudo rm  rhel8-ha.config
@@ -675,7 +639,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    sudo dnf remove rhui-azure-rhel8-ha
    ```
    
-3. Create a config file by using this command
+3. Create a config file by using this command:
 
    ```bash
    sudo tee rhel8-base-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-base-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-base-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -692,7 +656,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    ```bash
    sudo dnf repolist
    ```
-6. Remove the temp file created on step 2
+6. Remove the temp file created on step 3.
 
    ```bash
    sudo rm  rhel8-base-ha.config
@@ -720,7 +684,7 @@ Select the tab of an SAP image type to see the corresponding instructions.
 
 The following steps apply if the OS version is *earlier than the latest version that's available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-APPS` offer image.
 
-1. Create a config file by using this command
+1. Create a config file by using this command:
 
    ```bash
    sudo tee rhel9-sapapps.config > /dev/null <<< $'[rhui-microsoft-azure-rhel9-sapapps]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9-sapapps)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9-sapapps\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -744,7 +708,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf repolist all
    ```
 
-5. Remove the temp file created on step 2
+5. Remove the temp file created on step 1.
 
    ```bash
    sudo rm  rhel9-sapapps.config
@@ -754,7 +718,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 The following steps apply if the OS version is *earlier than the latest version available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-HA` offer image.
 
-1. Create a config file by using this command
+1. Create a config file by using this command:
 
    ```bash
    sudo tee rhel9-sap-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel9-sap-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9-sap-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9-sap-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -778,7 +742,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf repolist all
    ```
 
-5. Remove the temp file created on step 1
+5. Remove the temp file created on step 1.
 
    ```bash
    sudo rm  rhel9-sap-ha.config
@@ -787,7 +751,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 #### [RHEL 9._x_ - RHEL-HA (E4S)](#tab/rhel9-rhel-ha-e4s)
 
 
-1. Create a config file by using this command
+1. Create a config file by using this command:
 
    ```bash
    sudo tee rhel9-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel9-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -810,7 +774,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    ```bash
    sudo dnf repolist
    ```
-5. Remove the temp file created on step 1
+5. Remove the temp file created on step 1.
 
    ```bash
    sudo rm rhel9-ha.config
