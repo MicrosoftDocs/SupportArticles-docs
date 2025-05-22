@@ -224,11 +224,11 @@ For more information about antivirus considerations on a cluster, see [Antivirus
 
 ### Arc enabled SQL Server
 
-In case you have an Antivirus running on an [Arc enabled SQL Server](https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/connect), you can see these system objects being flagged. Consider allowing these [necessary system objects](https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/agent-extension-files).
+You might see the following files and executables (also referred to as system objects) being flagged when running antivirus software on an [Arc enabled SQL Server](/sql/sql-server/azure-arc/connect). Consider excluding these [necessary system objects](/sql/sql-server/azure-arc/agent-extension-files) from antivirus scanning.
 
-With SQL Server 2025, SQL Server instances can make use of Arc machine's managed identity and additional exemption for the token's folder might be required. Follow this for the exact setup & the folder path: [Setup managed identity for Arc enabled SQL Server](/sql/sql-server/azure-arc/managed-identity?view=sql-server-ver17).
+Starting with SQL Server 2025, SQL Server instances can use the Azure Arc machine's managed identity. You might need to add an exemption for the token folder. Follow the steps in [Setup managed identity for Arc enabled SQL Server](/sql/sql-server/azure-arc/managed-identity) for the proper setup and the folder path.
 
-We also advise to keep the extension up to date, as we continue to add security & feature updates. Learn more on the [latest extension release](https://learn.microsoft.com/en-us/sql/sql-server/azure-arc/release-notes), which includes a resolution to signed binary issue with version: 1.1.3042.282
+We also recommend that you keep the extension up to date, as it includes ongoing security and feature updates. For more information, see the [latest extension release](/sql/sql-server/azure-arc/release-notes).
 
 ## Configure antivirus software to work with Analysis Services (SSAS)
 
