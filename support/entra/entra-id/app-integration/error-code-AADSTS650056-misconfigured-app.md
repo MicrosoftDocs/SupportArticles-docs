@@ -53,14 +53,16 @@ If your organization owns the application, follow these steps:
 
     Example of a consented permission:
 
-    :::image type="content" source="./media/error-code-aadsts650056-misconfigured-app-graph/graph-api-permissions.png" alt-text="Screenshot of adding Graph API permissions." :::
+    :::image type="content" source="./media/error-code-AADSTS650056-misconfigured-app/graph-api-permissions.png" alt-text="Screenshot of adding Graph API permissions." :::
 
 If your organization isn't the application owner, follow these steps:
 
 1. Sign in to the application by using Global Administrator account. You should see a consent screen prompting you to grant permissions. Make sure that you select the **Consent on behalf of your organization** option before proceeding.
 
     Example of the consent screen:
-:::image type="content" source="./media/error-code-aadsts650056-misconfigured-app-graph/consent-permissions.png" alt-text="Screenshot of consent screen" :::
+
+    :::image type="content" source="./media/error-code-AADSTS650056-misconfigured-app/consent-permissions.png" alt-text="Screenshot of consent screen" :::
+
 2. If you don't see the consent screen, delete the application from the **Enterprise applications** section in Microsoft Entra ID and try signing in again.
 
 If the error persists, proceed to the next solution.
