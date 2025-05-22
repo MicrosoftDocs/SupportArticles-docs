@@ -126,7 +126,7 @@ root [ / ]# tdnf install -y tar
 Leave the debug pod running and copy the podname, the pod is created in the default namespace and looks like node-debugger-<node-nam>-<random-sufix>. It is outputted when you create the debug pod. With `kubectl cp` we can transfer the seccomp profile file to the node directly:  
 
 ```console
-$ kubectl cp <path local seccomp profile> <podname>:/host/var/lib/kubelet/seccomp/<seccomp profile filename>
+kubectl cp <path local seccomp profile>/my-profile.json <podname>:/host/var/lib/kubelet/seccomp/my-profile.json
 ```
 Now we can modify the `seccompProfile` specification of the target pod, which should be confined to the recorded syscalls. For example:
 ```
