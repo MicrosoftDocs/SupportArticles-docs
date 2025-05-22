@@ -623,9 +623,9 @@ dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   IOCTL (0xb)
 
 #### About NTLM
 
-Even if you don't see any Kerberos traffic, that doesn't necessarily mean the domain join operation must fail. This is because when Kerberos cannot work under some scenarios, NTLM will be tried as the fallback. As long as nothing is preventing NTLM from working properly such as incompatible LMCompatibilityLevel or blocked NTLM authentication in Group Policy, domain join may still complete successfully with NTLM.
+Even if you don't see any Kerberos traffic, that doesn't necessarily mean the domain join operation must fail. This is because when Kerberos cannot work under some scenarios, NT LAN Manager (NTLM) is used as the fallback. As long as nothing is preventing NTLM from working properly such as incompatible LMCompatibilityLevel or blocked NTLM authentication in Group Policy, domain join still completes successfully with NTLM.
 
-Below is an example of successful SMB session setup using NTLM authentication.
+See the following example of successful SMB session setup using NTLM authentication.
 
 ```output
 Source  Destination  Protocol Name  Description
