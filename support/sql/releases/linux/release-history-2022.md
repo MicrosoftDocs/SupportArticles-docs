@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2022 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 05/15/2025
+ms.date: 05/19/2025
 appliesto:
   - SQL Server 2022
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-related-content
@@ -15,6 +15,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2022](..
 
 - [Release history for SQL Server 2017 on Linux](release-history-2017.md?view=sql-server-ver14&preserve-view=true).
 - [Release history for SQL Server 2019 on Linux](release-history-2019.md?view=sql-server-ver15&preserve-view=true).
+- [Release history for SQL Server 2025 Preview on Linux](release-history-2025.md?view=sql-server-ver17&preserve-view=true).
 
 > [!NOTE]  
 > Any missing GDRs apply to the Windows version only.
@@ -51,7 +52,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2022](..
 
 ## <a id="CU19"></a> CU 19 (May 2025)
 
-This is the Cumulative Update 19 (CU 19) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4195.2. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate19).
+This is the Cumulative Update 19 (CU 19) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4195.2. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2022/cumulativeupdate19.md).
 
 ### Package details
 
