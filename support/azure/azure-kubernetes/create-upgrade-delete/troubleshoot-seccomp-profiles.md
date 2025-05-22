@@ -140,7 +140,7 @@ spec:
   securityContext:
     seccompProfile:
       type: Localhost
-      localhostProfile: <seccomp profile file name>
+      localhostProfile: my-profile.json
   containers:
   - name: test-container
     image: docker.io/library/nginx:latest
