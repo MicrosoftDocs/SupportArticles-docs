@@ -13717,6 +13717,34 @@
     {
       "source_path": "support/dynamics-365/commerce/site-builder-content-management/security-group-site-builder.md",
       "redirect_url": "/troubleshoot/dynamics-365/commerce/welcome-commerce"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/point-of-sale/store-commerce-setup-installation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/commerce/point-of-sale/store-commerce-setup-installation"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/order-management/online-order-transaction-creation-failures.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/commerce/order-management/online-order-transaction-creation-failures"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/pricing-discounts-taxes/price-track-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/commerce/pricing-discounts-taxes/price-track-issues"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/site-builder-content-management/products-categories-unavailable.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/commerce/site-builder-content-management/products-categories-unavailable"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/payments/credit-card-entry-form-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/commerce/payments/credit-card-entry-form-error"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/point-of-sale/store-commerce-performance.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/commerce/point-of-sale/store-commerce-performance"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/ecommerce-storefront/pickup-store-link-missing.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics-365/commerce/ecommerce-storefront/pickup-store-link-missing"
     }
   ]
 }

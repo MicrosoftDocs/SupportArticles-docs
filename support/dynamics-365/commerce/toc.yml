@@ -28,8 +28,6 @@
   items:
     - name: Items without inventory can be checked out
       href: ecommerce-storefront/items-without-inventory-checked-out.md
-    - name: Pick this up option doesn't appear on cart or product details pages
-      href: ecommerce-storefront/pickup-store-link-missing.md
     - name: Retail store doesn't appear in the list of stores to pick up from
       href: ecommerce-storefront/pickup-store-missing.md
     - name: Restrict access to a storefront during testing or development
@@ -54,14 +52,10 @@
       href: order-management/payment-type-credit-card-error.md
     - name: Taxes on online orders are incorrectly calculated
       href: order-management/tax-miscalculated-online-order.md
-    - name: Troubleshoot issues with the online store transaction creation process
-      href: order-management/online-order-transaction-creation-failures.md
 - name: Payments
   items:
     - name: A card payment fails due to an unsupported card type
       href: payments/card-payments-fail-with-unsupported-card-type.md
-    - name: Credit card entry page shows an error at checkout
-      href: payments/credit-card-entry-form-error.md
     - name: Payments are automatically settled before orders are invoiced or shipped
       href: payments/payments-auto-settled.md
     - name: Refund on a return order is declined
@@ -76,16 +70,8 @@
       href: point-of-sale/store-commerce-app-pos-deactivated.md
     - name: Troubleshoot Store Commerce extension issues
       href: point-of-sale/store-commerce-extensions.md
-    - name: Troubleshoot Store Commerce performance issues
-      href: point-of-sale/store-commerce-performance.md
-    - name: Troubleshoot Store Commerce setup and installation issues
-      href: point-of-sale/store-commerce-setup-installation.md
     - name: Troubleshoot generic errors displayed on the POS
       href: point-of-sale/troubleshoot-generic-error-in-pos.md
-- name: Pricing, discounts, and taxes
-  items:
-    - name: Price change tracking issues
-      href: pricing-discounts-taxes/price-track-issues.md
 - name: Ratings and reviews
   items:
     - name: Ratings refiner appears when the ratings and reviews solution isn't enabled
@@ -94,5 +80,3 @@
   items:
     - name: Products and categories are missing after environment copy
       href: site-builder-content-management/missing-products-categories.md
-    - name: Products and categories don't appear after a new site is mapped
-      href: site-builder-content-management/products-categories-unavailable.md
