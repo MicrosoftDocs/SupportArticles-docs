@@ -214,7 +214,7 @@ If the technical problem that you experience exists in a third-party cloud Platf
 - [Microsoft SQL Server on AWS (Amazon Web Services))](https://aws.amazon.com/sql)
   - For more information, see [Microsoft FAQ – Amazon Web Services (AWS)](https://aws.amazon.com/windows/faq/#eos-microsoft-products)
 - [Cloud SQL: for PostgreSQL, MySQL & SQL Server (Google Cloud)](https://cloud.google.com/sql/)
-  - For more information, see [Google Cloud - Sql Server TROUBLESHOOTING)](https://cloud.google.com/sql/docs/sqlserver/troubleshooting)
+  - For more information, see [Google Cloud - Getting Support](https://cloud.google.com/sql/docs/sqlserver/getting-support) and [Google Cloud - Sql Server Troubleshooting](https://cloud.google.com/sql/docs/sqlserver/troubleshooting)
 
 ## Third-party information disclaimer
 
