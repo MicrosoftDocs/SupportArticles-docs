@@ -1,6 +1,6 @@
 ---
-title: Common issues when using SIP devices with Teams
-description: Troubleshoots common issues that occur when you use compatible SIP devices with Microsoft Teams.
+title: Common Issues When Using SIP Devices With Teams
+description: Troubleshoots common issues that occur when you use compatible SIP devices together with Microsoft Teams.
 ms.date: 05/21/2025
 manager: dcscontentpm
 audience: Admin
@@ -18,7 +18,7 @@ ms.reviewer: scapero, chasing
 
 # Common issues when you use SIP devices with Teams
 
-SIP Gateway enables your organization to use any compatible SIP device with Microsoft Teams. This article lists some common issues that might occur when you use a compatible SIP device to make and receive calls through Teams, and provides steps to help you troubleshoot these issues.
+SIP Gateway enables your organization to use any compatible SIP device together with Microsoft Teams. This article lists some common issues that might occur when you use a compatible SIP device to make and receive calls through Teams, and provides steps to help you troubleshoot these issues.
 
 ## I can't onboard my device
 
@@ -69,7 +69,7 @@ The SIP device state isn't accurately reflected if the device user isn't signed 
 
 ## My device shows the wrong language
 
-1. [Setting the SIP device's UI language](/microsoftteams/sip-gateway-configure#set-a-sip-devices-ui-language) is done on the SIP Gateway provisioning server. Check the language code string in the provisioning server URL. For example, `http://emea.ipp.sdg.teams.microsoft.com/lang_de` sets the language to German.
+1. You can [set the SIP device's UI language](/microsoftteams/sip-gateway-configure#set-a-sip-devices-ui-language) on the SIP Gateway provisioning server. Check the language code string in the provisioning server URL. For example, `http://emea.ipp.sdg.teams.microsoft.com/lang_de` sets the language to German.
 1. Check the device's web application. For more information, see the device manufacturer documentation.
 
 ## I can't register my device to Teams
