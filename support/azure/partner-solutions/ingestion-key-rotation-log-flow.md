@@ -30,7 +30,7 @@ To work around the issue, manually update the ingestion key by using the followi
 1. Find the **Resource ID** of the Azure New Relic resource that's associated with the account to which the ingestion key was rotated. If multiple resources are linked to the same account, you can make the API call for any of them. The following is an example of a Resource ID: `/subscriptions/0493ccca-0000-0000-0000-f9bca5fc5dc9/resourceGroups/myRG/providers/NewRelic.Observability/monitors/MyNewRelicResource`.
   It includes the subscription ID, the resource group name, and the Azure New Relic resource name.
 
-4. Make the API call to update the ingestion key. Use an API client (such as **Bruno**) to make a **POST** request to the following endpoint. You must replace the placeholders with your actual values:
+2. Make the API call to update the ingestion key. Use an API client (such as **Bruno**) to make a **POST** request to the following endpoint. You must replace the placeholders with your actual values:
 
      ```HTTP
      https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/NewRelic.Observability/monitors/{AzureNewRelicResourceName}/refreshIngestionKey
@@ -63,7 +63,7 @@ To work around the issue, manually update the ingestion key by using the followi
       5. Filter the results by using **Fetch/XHR**. You can find a bearer token in the request headers of the corresponding API call. Use it while it remains active.
       
          :::image type="content" source="media/ingestion-key-rotation-log-flow/get-token.png" alt-text="Screenshot showing how to view the access token." lightbox="media/ingestion-key-rotation-log-flow/get-token.png":::
-6. The request should return a **204** status code that indicates that the ingestion key was successfully updated.
+3. The request should return a **204** status code that indicates that the ingestion key was successfully updated.
    
     > [!NOTE]
     > Because of cache resetting on the Azure side, log flow might take up to 24 hours to resume.
