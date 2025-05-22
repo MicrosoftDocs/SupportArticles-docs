@@ -1,11 +1,11 @@
 ---
-title: Troubleshoot Missing Telemetry in Application Insights
-description: Helps you troubleshoot telemetry problems with auto-instrumentation in Application Insights.
+title: Troubleshoot AKS autoinstrumentation in Application Insights
+description: Helps you troubleshoot Azure Kubernetes Service autoinstrumentation problems in Application Insights.
 ms.service: azure-monitor
 ms.custom: sap:Application Insights
-ms.date: 05/21/2025
+ms.date: 05/22/2025
 ---
-# Troubleshoot auto-instrumentation in Application Insights
+# Troubleshoot Azure Kubernetes Service autoinstrumentation in Application Insights
 
 This article provides a step-by-step guide to troubleshoot an issue where no data appears in a workspace-based Application Insights resource.
 

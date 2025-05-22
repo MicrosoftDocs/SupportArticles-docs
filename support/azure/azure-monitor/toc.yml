@@ -5,6 +5,8 @@ items:
   items:
   - name: OpenTelemetry troubleshooting
     items:
+    - name: Azure Kubernetes Service (AKS)
+      href: app-insights/telemetry/troubleshoot-missing-telemetry.md
     - name: .NET
       href: app-insights/telemetry/opentelemetry-troubleshooting-dotnet.md
     - name: Java
@@ -23,8 +25,6 @@ items:
       href: app-insights/telemetry/investigate-missing-telemetry.md
     - name: Troubleshoot auto-instrumentation issues
       href: app-insights/telemetry/auto-instrumentation-troubleshoot.md
-    - name: Troubleshoot missing telemetry
-      href: app-insights/telemetry/troubleshoot-missing-telemetry.md
     - name: Troubleshoot high data ingestion
       href: app-insights/telemetry/troubleshoot-high-data-ingestion.md
     - name: Application Insights classic SDK troubleshooting
