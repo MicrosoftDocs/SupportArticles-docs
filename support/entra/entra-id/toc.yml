@@ -144,6 +144,8 @@
         href: app-integration/reply-url-redirected-to-localhost.md
       - name: Nonce is null error in ASP.NET MVC with OpenID Connect
         href: app-integration/troubleshoot-validation-context-nonce-null-mvc.md
+      - name: Your browser is not supported or up-to-date error in MSAL app
+        href: app-integration/update-your-browser-error-when-using-apps-adal-msal.md
   - name: Troubleshoot app registrations
     items: 
       - name: Application and delegated permissions for access tokens

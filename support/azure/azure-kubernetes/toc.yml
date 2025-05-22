@@ -162,8 +162,10 @@
     href: availability-performance/container-image-pull-performance.md
   - name: AKS cluster/node is in failed state
     href: availability-performance/cluster-node-virtual-machine-failed-state.md
-  - name: Identify nodes and containers consuming high CPU
+  - name: Identify nodes and containers utilizing high CPU
     href: availability-performance/identify-high-cpu-consuming-containers-aks.md
+  - name: Identify containers facing high CPU pressure and throttling
+    href: availability-performance/troubleshoot-node-cpu-pressure-psi.md
   - name: Identify memory saturation in AKS clusters
     href: availability-performance/identify-memory-saturation-aks.md
   - name: Troubleshoot high memory consumption due to Linux kernel behaviors
