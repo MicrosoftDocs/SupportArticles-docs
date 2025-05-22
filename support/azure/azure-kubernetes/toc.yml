@@ -145,9 +145,7 @@
       href: create-upgrade-delete/error-code-customprivatednszonemissingpermissionerror.md
     - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
       href: create-upgrade-delete/error-code-invalidloadbalancerprofileallocatedoutboundports.md
-    - name: Troubleshoot seccomp profiles on AKS
-      href: create-upgrade-delete/troubleshoot-seccomp-profile-issues.md
-      
+
 - name: Load balancer and Ingress controller
   items:
   - name: Create an unmanaged ingress controller
@@ -289,6 +287,11 @@
     href: storage/troubleshoot-common-bring-your-own-key-issues.md
   - name: Troubleshoot pods and namespaces stuck in the Terminating state
     href: storage/pods-namespaces-terminating-state.md
+
+- name: Security
+  items:
+  - name: Troubleshoot seccomp profiles on AKS
+    href: security/troubleshoot-seccomp-profiles.md
 
 - name: Extensions, Policies and Add-Ons
   items:
