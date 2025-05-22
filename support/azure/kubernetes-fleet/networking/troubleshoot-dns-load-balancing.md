@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Azure Kubernetes Fleet Manager DNS load balancing
 description: Troubleshoot errors that occur when using DNS load balancing in Azure Kubernetes Fleet Manager.
-editor: simonwaight
-ms.reviewer: simonwaight
+author: sjwaight
+ms.author: sjwaight
 ms.service: azure-kubernetes-fleet-manager
 ms.date: 05/13/2025
 ---
@@ -13,21 +13,16 @@ This article provides troubleshooting information for Azure Kubernetes Fleet Man
 
 ## Use Fleet Manager hub cluster to troubleshoot
 
-* User should have access to the Azure subscription and resource group where the Azure Traffic Manager profile is created.
-
-* [Install or upgrade Azure CLI](/cli/azure/install-azure-cli) to version `2.72.0` or later.
-
-* Install the **fleet** Azure CLI extension using the `az extension add`command, making sure your version is at least `1.5.2`.
+1. User should have access to the Azure subscription and resource group where the Azure Traffic Manager profile is created.
+2. [Install or upgrade Azure CLI](/cli/azure/install-azure-cli) to version `2.72.0` or later.
+3. Make sure that the Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool is installed. You can install kubectl by running the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+4. Install the **fleet** Azure CLI extension using the `az extension add`command, making sure your version is at least `1.5.2`.
 
     ```azurecli-interactive
     az extension add --name fleet
     ```
 
-* The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool.
-
-   **Note:** Install kubectl by using the Azure CLI, running the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
-
-* Access to the Fleet Manager hub cluster Kubernetes API. For more information, see [Access the Fleet Manager hub cluster API](/azure/kubernetes-fleet/access-fleet-hub-cluster-kubernetes-api).
+5. Access to the Fleet Manager hub cluster Kubernetes API. For more information, see [Access the Fleet Manager hub cluster API](/azure/kubernetes-fleet/access-fleet-hub-cluster-kubernetes-api).
 
 ## TrafficManagerProfile or Traffic Manager can't be created
 
