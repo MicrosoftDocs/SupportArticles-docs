@@ -42,19 +42,19 @@ SIP Gateway enables your organization to use any compatible SIP device together 
 ## My device isn't listed in the Teams admin center
 
 1. Make sure that you're using a [compatible SIP device](/microsoftteams/sip-gateway-plan#compatible-devices).
-1. Verify that you've successfully onboarded the device to SIP Gateway. For more information, see [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
-1. Make sure that you've [signed in](/microsoftteams/sip-gateway-configure#user-pairing-and-sign-in) to the device at least one time.
+1. Verify that you successfully onboarded the device to SIP Gateway. For more information, see [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
+1. Make sure that you [signed in](/microsoftteams/sip-gateway-configure#user-pairing-and-sign-in) to the device at least one time.
 
 ## My device is listed in the Teams admin center, but shows wrong state
 
 The SIP device state isn't accurately reflected if the device user isn't signed in. Therefore, check whether you're signed in to the device.
 
 - If you're signed in, refresh the Teams admin center to display the updated state.
-- If you're signed out, the device will appear as offline.
+- If you're signed out, the device appears as offline.
 
 ## I can't sign in to my device remotely
 
-1. Verify that you've [enrolled the device](/microsoftteams/sip-gateway-configure#provision-and-enroll-sip-devices-as-common-area-phones) correctly.
+1. Verify that you [enrolled the device](/microsoftteams/sip-gateway-configure#provision-and-enroll-sip-devices-as-common-area-phones) correctly.
 1. Try [local sign-in](/microsoftteams/sip-gateway-configure#user-pairing-and-sign-in).
 
 ## My device signs itself out
