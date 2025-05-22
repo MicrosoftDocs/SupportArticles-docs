@@ -56,7 +56,7 @@ Microsoft also supports deploying SQL Server on VMware vSphere, allowing users t
 
 This section describes the support policies and supported configurations for SQL Server running in Linux containers.
 
-SQL Server is an application that runs in the user space of a Linux container. SQL Server and its dependencies in the SQL Server container make calls to the underlying host operating system and its kernel. Different Linux operating systems come with different sets of user space applications and Linux Kernel that are well tested in combination with SQL Server. While it is possible to run SQL Server in an untested or unsupported configuration of container and host combinations, Microsoft does not recommend that you do this. We support only configurations that use the following guidelines. These guidelines dictate the well tested and supported configurations for running SQL Server Linux containers.  
+SQL Server is an application that runs in the user space of a Linux container. SQL Server and its dependencies in the SQL Server container make calls to the underlying host operating system and its kernel. Different Linux operating systems come with different sets of user space applications and Linux Kernel that are well tested in combination with SQL Server. While it's possible to run SQL Server in an untested or unsupported configuration of container and host combinations, Microsoft doesn't recommend that you do this. We support only configurations that use the following guidelines. These guidelines dictate the well tested and supported configurations for running SQL Server Linux containers.  
 
 The following guidelines and examples apply to the support for SQL Server on Linux container deployments.
 
@@ -104,7 +104,7 @@ Starting from SQL Server 2019, you can deploy the SQL Server Big Data Cluster on
 
 ## Customizing SQL Server Containers
 
-Creation of custom SQL Server Linux Containers is supported when customized on top of SQL Server base containers downloaded from MCR (Container Registry), as well as ensuring that you don't modify the `SQL directories/binaries/licenses` located at the locations: `/opt/mssql/*` and `/usr/share/doc/*`, which when incorrectly modified could result in SQL Server process not starting.
+Creation of custom SQL Server Linux Containers is supported when customized on top of SQL Server base containers downloaded from MCR (Container Registry), and ensuring that you don't modify the `SQL directories/binaries/licenses` located at the locations: `/opt/mssql/*` and `/usr/share/doc/*`, which when incorrectly modified could result in SQL Server process not starting.
 
 You can also build your own SQL Server container images from scratch, given that the base image of the Linux OS container used to generate the custom SQL Server container image matches the [supported platforms](/sql/linux/sql-server-linux-release-notes-2019) for SQL Server on Linux and you follow the guidelines mentioned above.  
 
