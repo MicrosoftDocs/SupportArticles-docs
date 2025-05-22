@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where a sign-in link redirects b
 author: josaw1 
 ms.author: josaw
 ms.reviewer: rassadi, brstor
-ms.date: 09/01/2023
+ms.date: 05/22/2025
 ms.custom: sap:Channel management\Issues with B2C channel configuration
 ---
 # Sign-in link redirects back to an e-commerce site

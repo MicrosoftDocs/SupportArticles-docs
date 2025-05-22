@@ -4,7 +4,7 @@ description: Provides a resolution to help you get support when you have issues 
 author: josaw1 
 ms.author: josaw
 ms.reviewer: rassadi, brstor
-ms.date: 09/01/2023
+ms.date: 05/22/2025
 ms.custom: sap:Payments\Issues with Dynamics 365 Payment Connector for Adyen
 ---
 # Troubleshoot issues with Dynamics 365 Payment Connector for Adyen 
