@@ -7,7 +7,7 @@ ms.date: 05/22/2025
 ---
 # Troubleshoot Azure Kubernetes Service autoinstrumentation in Application Insights
 
-This article provides a step-by-step guide to troubleshoot an issue where no data appears in a workspace-based Application Insights resource.
+This article provides a step-by-step guide to troubleshoot an issue where no telemetry data appears in a workspace-based Application Insights resource.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Ensure that the Kubernetes command-line tool (`kubectl`) is installed and config
 
 2. Verify the deployment is instrumented
 
-3. Check for the monitor.azure.com/instrumentation annotation on the deployment and its latest replica set.
+3. Check for the `monitor.azure.com/instrumentation` annotation on the deployment and its latest replica set.
 
     The annotation should be present with proper JSON in the following pattern:
 
@@ -33,7 +33,7 @@ Ensure that the Kubernetes command-line tool (`kubectl`) is installed and config
         - The *Instrumentation* custom resource contains the correct connection string and instrumentation platform.
     3. [Restart the deployment](/azure/azure-monitor/app/kubernetes-codeless#restart-deployment).
 
-5. Check for networking errors in the SDK log located in the pod's logs volume: /var/log/applicationinsights.
+5. Check for networking errors in the SDK log located in the pod's logs volume: */var/log/applicationinsights*.
 
     For example, the following errors indicate a connectivity issue:
 
@@ -41,10 +41,10 @@ Ensure that the Kubernetes command-line tool (`kubectl`) is installed and config
     - > Error: getaddrinfo ENOTFOUND eastus2-3.in.applicationinsights.azure.com
     - > getaddrinfo ENOTFOUND eastus2-3.in.applicationinsights.azure.com
 
-    If this type of error exists, sign into the container and test connectivity to the endpoint.
+    If this type of error exists, sign into the container and test connectivity to the endpoint:
 
     ```console
-    kubectl exec -ti customer-java-1-1234567890-abcde -- /bin/bash
+    kubectl exec -ti <pod-name> -- /bin/bash
     ```
 
     If connectivity can't be established, troubleshoot the network connectivity issue such as firewall or name resolution issues.
