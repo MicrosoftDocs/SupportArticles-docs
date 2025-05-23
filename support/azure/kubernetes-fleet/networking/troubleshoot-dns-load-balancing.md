@@ -9,7 +9,7 @@ ms.date: 05/13/2025
 
 # Troubleshoot Azure Kubernetes Fleet Manager DNS load balancing
 
-This article provides troubleshooting information for Azure Kubernetes Fleet Manager DNS-based load balancing. Fleet Manager DNS load balancing uses Azure Traffic Manager to balance traffic across public endpoints from multiple AKS member clusters.
+This article provides troubleshooting information for Azure Kubernetes Fleet Manager DNS-based load balancing. Fleet Manager DNS load balancing uses Azure Traffic Manager to balance traffic across public endpoints from multiple Azure Kubernetes Service (AKS) member clusters.
 
 ## Use Fleet Manager hub cluster to troubleshoot
 
@@ -81,7 +81,7 @@ To resolve this issue, follow these steps:
 
 This issue might occur if the generated DNS prefix is already used by another Azure Traffic Manager profile. The DNS prefix consists of the namespace and the `metadata.name` field in the `TrafficManagerProfile` manifest. For example, if the namespace is `team-a` and the `metadata.name` is `webapp`, the DNS prefix is `team-a-webapp`.
 
-The following example of the `TrafficManagerProfile` status shows that the Domain name is not available:
+The following example of the `TrafficManagerProfile` status shows that the domain name isn't available:
 
 ```yml
 status:
@@ -96,10 +96,10 @@ status:
 
 #### Solution
 
-To resolve this issue, use `nslookup` or a similar tool to determine whether the full DNS name (for example, `team-a-webapp.trafficmanager.net`) is available. If the name is not available, consider one of the following alternative solutions:
+To resolve this issue, use `nslookup` or a similar tool to determine whether the full DNS name (for example, `team-a-webapp.trafficmanager.net`) is available. If the name isn't available, consider one of the following alternative solutions:
 
 - Change the `metadata.name` field in the `TrafficManagerProfile` manifest to a unique name.
-- Use a different namespace for the `TrafficManagerProfile` manifest. This affects the `TrafficManagerBackend` and `ServiceExport` objects. These objects must be in the same namespace.
+- Use a different namespace for the `TrafficManagerProfile` manifest. This selection affects the `TrafficManagerBackend` and `ServiceExport` objects. These objects must be in the same namespace.
 
 ### Error 3: Azure Traffic Manager subscription limits reached
 
@@ -216,7 +216,7 @@ conditions:
   type: Accepted
 ```
 
-The `Service` is not defined as a `LoadBalancer` type:
+The `Service` isn't defined as a `LoadBalancer` type:
 
 ```yml
 status:
@@ -269,7 +269,7 @@ To resolve this issue, follow these steps:
 
 This issue might occur if more than 200 Azure Traffic Manager Endpoints would be created within a single Azure subscription.
 
-The following is the example of the `TrafficManagerBackend` status that shows the error:
+The following example of the `TrafficManagerBackend` status shows the error:
 
 ```yml
 status:
