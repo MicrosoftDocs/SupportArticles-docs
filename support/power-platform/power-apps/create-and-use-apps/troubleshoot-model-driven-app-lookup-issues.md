@@ -2,7 +2,7 @@
 title: Troubleshoot Lookup issues in model-driven apps
 description: Helps troubleshoot Simple Lookup control issues in Power Apps model-driven apps.
 author: hwhong
-ms.date: 03/28/2024
+ms.date: 05/23/2025
 ms.author: hwhong
 ms.custom: sap:Running model-driven app controls\Lookup, advanced lookup
 search.audienceType: 
@@ -38,7 +38,9 @@ If the Lookup's search results are missing items or include unexpected items, in
 - If the fetchXML is correct, but the data returned is incorrect, the issue is on the server, such as a misconfigured relationship. Another possibility is that the user doesn't have correct permissions for some entities, which might not be apparent in the network response other than with an omission of results.
 
 > [!NOTE]
-> Clicking the text area will reveal the most recently used items; clicking the magnifying glass will perform a search. This behavior can be disabled to always perform a search.
+>
+> - Selecting the text area (the input box of the Lookup) will show a list of the most recently used items, not a fresh search.
+> - Selecting the magnifying glass will trigger a search based on your input, showing results that match your search term. You can configure the control so that it always performs a search when you select the text area, instead of showing recent items.
 
 ## Views are incorrect
 
