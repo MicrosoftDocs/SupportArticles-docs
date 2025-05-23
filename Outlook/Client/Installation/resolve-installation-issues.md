@@ -90,6 +90,7 @@ Download mode dictates which download sources clients are allowed to use when do
 # [Windows 10](#tab/windows10)
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization`
 - Modify the value: `DODownloadMode` to **0**
+---
 
 ## Other deployment options
 
