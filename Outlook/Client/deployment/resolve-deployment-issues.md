@@ -15,7 +15,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: janellem
 appliesto: 
-  - Outlook for Microsoft 365
+  - Outlook for Windows
 search.appverid: MET150
 ms.date: 05/20/2025
 ---
