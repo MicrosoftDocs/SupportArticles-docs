@@ -23,13 +23,13 @@ ms.date: 05/23/2025
 
 Admins whose users encountered difficulties in installing the new Outlook might have policies in place that prevent app download and installation.
 
-Common scenarios include users attempting to switch from Desktop Outlook but finding the toggle reverts and new Outlook doesn't launch.
+Common scenarios include users attempting to switch from Desktop Outlook but finding the toggle reverts and the new Outlook doesn't launch.
 
 ## Policy restrictions
 
 Registry keys set by Group Policy or non-Microsoft tools could block the MSIX package installation. For a complete list of registry keys: [How Group Policy works with packaged apps - MSIX](/windows/msix/group-policy-msix)
 
-The notable registry keys impacting the installation of new Outlook's MSIX package include:
+The notable registry keys impacting the installation of the new Outlook's MSIX package include:
 
 - `BlockNonAdminUserInstall`
 - `AllowAllTrustedApps`
@@ -66,7 +66,7 @@ To check this setting for your computer:
 
 ## Check firewalls
 
-To download, install and get continuous updates for new Outlook, make sure proxy and firewall isn't blocking access to the Microsoft Store
+To download, install and get continuous updates for the new Outlook, make sure proxy and firewall isn't blocking access to the Microsoft Store
 
 - `https://res.cdn.office.net`
 - `https://res.cdn.office.net/nativehost/5mttl/installer/`
@@ -85,17 +85,17 @@ Download mode dictates which download sources clients are allowed to use when do
 
 # [Windows 11](#tab/windows11)
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization`
-- Setting the value for `DODownloadMode` to `100` (bypass) may cause installation to fail, as the bypass (`100`) setting is deprecated. Set this value to `0` instead.
+- Setting the value for `DODownloadMode` to **100** (bypass) may cause installation to fail, as the bypass (**100**) setting is deprecated. Set this value to **0** instead.
 
 # [Windows 10](#tab/windows10)
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization`
-- Modify the value: `DODownloadMode` to `0`
+- Modify the value: `DODownloadMode` to **0**
 
 ## Other deployment options
 
 ### Microsoft store is blocked
 
-For organizations that disable access to the Windows Store, the installer can be directly accessed from the Office CDN. To install new Outlook on a single computer with many users, follow these steps:
+For organizations that disable access to the Windows Store, the installer can be directly accessed from the Office CDN. To install the new Outlook on a single computer with many users, follow these steps:
 
 1. Download the [.exe installer](https://go.microsoft.com/fwlink/?linkid=2207851).
 1. Launch PowerShell 7 as an administrator: Right-click the PowerShell icon and choose Run as Administrator.
@@ -108,10 +108,10 @@ For organizations that disable access to the Windows Store, the installer can be
 
 ### Microsoft Store isn't blocked
 
-Install new Outlook via Windows Package Manager (winget), when Microsoft Store isn't blocked:
+Install the new Outlook via Windows Package Manager (winget), when Microsoft Store isn't blocked:
 
 1. Open PowerShell by pressing Windows + X and select Terminal (Windows 10 users select PowerShell).
-1. Enter the following command to install the Microsoft Store version of new Outlook:
+1. Enter the following command to install the Microsoft Store version of the new Outlook:
 
     ```powershell
     winget install -i -e --id=9NRX63209R7B --source=msstore --accept-package-agreements
