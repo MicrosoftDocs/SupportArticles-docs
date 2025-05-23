@@ -2,8 +2,9 @@
 title: Troubleshoot AKS Autoinstrumentation in Application Insights
 description: Helps you troubleshoot Azure Kubernetes Service autoinstrumentation problems in Application Insights.
 ms.service: azure-monitor
+ms.reviewer: aaronmax, v-weizhu
 ms.custom: sap:Application Insights
-ms.date: 05/22/2025
+ms.date: 05/23/2025
 ---
 # Troubleshoot Azure Kubernetes Service autoinstrumentation in Application Insights
 
