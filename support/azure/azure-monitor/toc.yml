@@ -51,6 +51,8 @@ items:
             href: app-insights/data/troubleshoot-app-insights-nodejs.md
   - name: Application Insights experiences
     items:
+    - name: Troubleshoot Application map issues
+      href: app-insights/troubleshoot-application-map-issues.md
     - name: Troubleshoot Azure Application Insights availability monitoring
       items:
       - name: Availability monitoring common issues FAQ
@@ -69,8 +71,6 @@ items:
         href: app-insights/availability/troubleshoot-portal-connectivity.md
       - name: Troubleshoot user behavior analytics tools in Azure Application Insights
         href: app-insights/availability/usage-troubleshoot.md
-    - name: Troubleshoot Application map issues
-      href: app-insights/troubleshoot-application-map-issues.md
   - name: Status Monitor and Change Analysis
     items:
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
