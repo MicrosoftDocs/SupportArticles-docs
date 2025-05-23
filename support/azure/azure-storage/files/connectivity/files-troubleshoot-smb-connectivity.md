@@ -145,9 +145,13 @@ When mounting a file share from on-premises or another datacenter, you might see
 
 This issue is likely caused by a proxy server or another type of Network Address Translation (NAT) device in the datapath that blocks the connection to map the Azure file share. In this case, the PowerShell cmdlet `Test-NetConnection` still might test connectivity on port 445 successfully.
 
+This issue definitively occurs when the Active Directory Computer or User account corresponding to the Azure Storage Account hosting the FSLogix user profiles is unable to process Kerberos authentications. The underlying reasons could be incorrect changes to the msDS-SupportedEncryptionTypes attribute or rotation of Azure Storage Account's Access Keys without updating it on the Active Directory account.
+
 #### Solution
 
 To resolve this issue, reproduce it and collect a network trace to get more information about the error's origin. In most cases, you must work with your network/firewall administrator to allow the content to pass through the network device.
+
+Kerberos errors will be visible in a network trace (e.g. flows tagged as KRB Error in case of a netsh trace). To resolve, follow the steps to enable Active Directory Domain Services authentication for Azure file shares (https://learn.microsoft.com/en-us/azure/storage/files/storage-files-identity-ad-ds-enable) to set up the authentication parameters properly.
 
 ### <a id="error-0x800704b3"></a> Failed with error code 0x800704b3
 
