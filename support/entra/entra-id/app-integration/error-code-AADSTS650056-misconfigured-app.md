@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/8d72a386-7b8e-4d18-8593-303fe7c43b0c)---
+---
 title: Error AADSTS650056 - Misconfigured application
 description: Provides solutions for the AADSTS650056 misconfiguration error.
 ms.date: 05/19/2025
