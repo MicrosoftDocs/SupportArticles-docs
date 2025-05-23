@@ -5,6 +5,8 @@ items:
   items:
   - name: OpenTelemetry troubleshooting
     items:
+    - name: Azure Kubernetes Service (AKS)
+      href: app-insights/telemetry/troubleshoot-aks-autoinstrumentation.md
     - name: .NET
       href: app-insights/telemetry/opentelemetry-troubleshooting-dotnet.md
     - name: Java
