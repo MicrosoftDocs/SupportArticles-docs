@@ -19,7 +19,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 05/20/2025
 ---
-# Resolve installation issues in new Outlook for Windows
+# Resolve installation issues in the new Outlook for Windows
 
 Admins whose users encountered difficulties in installing new Outlook might have policies in place that prevent app download and installation.
 
