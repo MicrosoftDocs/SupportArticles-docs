@@ -12,7 +12,7 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 05/02/2025
+ms.date: 05/23/2025
 ms.author: genli
 ---
 # Troubleshoot Linux virtual machine performance issues with Performance Diagnostics (PerfInsights)
@@ -28,9 +28,6 @@ ms.author: genli
 This article explains how to download the Performance Diagnostics extension to your Linux VM and run the tool using the CLI tool. You can also [run Performance Diagnostics from the portal](../windows/performance-diagnostics.md).
 
 If you are experiencing performance problems with virtual machines, before contacting support, run this tool.
-
-> [!NOTE]
-> [Continuous diagnostics](../windows/performance-diagnostics.md) is currently supported only on Windows.
 
 ## Supported troubleshooting scenarios
 
