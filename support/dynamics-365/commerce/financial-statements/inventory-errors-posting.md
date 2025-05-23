@@ -4,7 +4,7 @@ description: Provides workarounds for inventory-related issues during statement 
 author: josaw1 
 ms.author: josaw
 ms.reviewer: shajain, brstor
-ms.date: 09/04/2023
+ms.date: 05/22/2025
 ms.search.form: RetailStatementTable_InvoiceFailed
 ms.custom: sap:Financial statements\Issues with statement posting
 ---

@@ -6322,6 +6322,7 @@
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/zonalallocation-allocationfailed-error"
       },
       {
+
         "source_path": "kubernetes-fleet/troubleshoot-clusterresourceplacement-api-issues.md",
         "redirect_url": "/troubleshoot/azure/kubernetes-fleet/cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues"
       },
@@ -6348,6 +6349,10 @@
       {
         "source_path": "kubernetes-fleet/crp-clusterresourceplacementavailable-false.md",
         "redirect_url": "/troubleshoot/azure/kubernetes-fleet/cluster-resource-placement/crp-clusterresourceplacementavailable-false"
+
+        "source_path": "hpc/batch/error-accountencryptionkeyunavailable.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/welcome-hpc-batch"
+
       }
   ]
 }

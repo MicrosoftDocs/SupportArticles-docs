@@ -162,11 +162,13 @@
     href: availability-performance/container-image-pull-performance.md
   - name: AKS cluster/node is in failed state
     href: availability-performance/cluster-node-virtual-machine-failed-state.md
-  - name: Identify nodes and containers consuming high CPU
+  - name: Identify nodes and containers utilizing high CPU
     href: availability-performance/identify-high-cpu-consuming-containers-aks.md
+  - name: Identify containers facing high CPU pressure and throttling
+    href: availability-performance/troubleshoot-node-cpu-pressure-psi.md
   - name: Identify memory saturation in AKS clusters
     href: availability-performance/identify-memory-saturation-aks.md
-  - name: Troubleshoot high memory consumption due to Linux kernel behaviors
+  - name: Troubleshoot high memory consumption in disk-intensive applications
     href: availability-performance/high-memory-consumption-disk-intensive-applications.md
   - name: Troubleshoot cluster service health probe mode issues
     href: availability-performance/cluster-service-health-probe-mode-issues.md
@@ -376,35 +378,63 @@
       href: error-codes/vmextensionerror-vhdfilenotfound.md
     - name: VMExtensionError_ProvisioningTimeout error
       href: error-codes/vmextensionerror-provisioningtimeout.md
-  - name: UnsatisfiablePDB error
-    href: error-codes/unsatisfiablepdb-error.md
   - name: AksCapacityHeavyUsage error
     href: error-codes/akscapacityheavyusage-error.md
+  - name: AKSOperationPreempted error
+    href: error-codes/aksoperationpreempted-error.md
+  - name: BadRequest or InvalidClientSecret error
+    href: error-codes/bad-request-or-invalid-client-secret-error.md
+  - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
+    href: error-codes/lb-pvtlinksvcwithpvtendptconn-error.md
+  - name: CreateOrUpdateVirtualNetworkLinkFailed error
+    href: error-codes/createorupdatevirtualnetworklinkfailed-error.md
+  - name: CustomPrivateDNSZoneMissingPermissionError error
+    href: error-codes/customprivatednszonemissingpermissions-error.md
+  - name: DnsServiceIpOutOfServiceCidr error
+    href: error-codes/dnsserviceipoutofservicecidr-error.md
+  - name: InUseRouteTableCannotBeDeleted error
+    href: error-codes/inuseroutetablecannotbedeleted-error.md
   - name: InvalidParameter error
     href: error-codes/invalidparameter-error.md
   - name: InvalidResourceReference error
     href: error-codes/invalidresourcereference-error.md
+  - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
+    href: error-codes/invalidloadbalancerprofileallocatedoutboundports-error.md
   - name: LinkedAuthorizationFailed error
     href: error-codes/linkedauthorizationfailed-error.md
+  - name: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error
+    href: error-codes/networksecuritygroupinusebyvirtualmachinescaleset-error.md
   - name: MissingSubscriptionRegistration error
     href: error-codes/missingsubscriptionregistration-error.md
+  - name: NodePoolMcVersionIncompatible error
+    href: error-codes/nodepoolmcversionincompatible-error.md  
   - name: OperationNotAllowed or PublicIPCountLimitReached error
     href: error-codes/operationnotallowed-publicipcountlimitreached-error.md
-  - name: AKSOperationPreempted error
-    href: error-codes/aksoperationpreempted-error.md
+  - name: PublicIPCountLimitReached error
+    href: error-codes/publicipcountlimitreached-error.md
+  - name: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error
+    href: error-codes/publicipaddr-inusesubnet-netsecgrp-error.md
+  - name: QuotaExceeded or InsufficientVCPUQuota error
+    href: error-codes/quota-exceeded-error.md
   - name: RequestDisallowedByPolicy error
     href: error-codes/requestdisallowedbypolicy-error.md
   - name: ServicePrincipalValidationClientError error
     href: error-codes/serviceprincipalvalidationclienterror-error.md
   - name: SubscriptionRequestsThrottled error
     href: error-codes/subscriptionrequeststhrottled.md
+  - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources
+    href: error-codes/subnetwithexternalresourcescannotbeusedbyotherresources-error.md
+  - name: ServiceCidrOverlapExistingSubnetsCidr error
+    href: error-codes/servicecidroverlapexistingsubnetscidr-error.md
+  - name: SubnetIsFull error
+    href: error-codes/subnetisfull-error.md
+  - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error
+    href: error-codes/toomanyrequestsreceived-error.md
   - name: Throttled error
     href: error-codes/throttled-error.md
-  - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources
-    href: error-codes/subnetwithexternalresourcescannotbeusedbyotherresources-error.md 
+  - name: UnsatisfiablePDB error
+    href: error-codes/unsatisfiablepdb-error.md
   - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error
     href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-codes/zonalallocation-allocationfailed-error.md
-  - name: QuotaExceeded or InsufficientVCPUQuota error
-    href: error-codes/quota-exceeded-error.md

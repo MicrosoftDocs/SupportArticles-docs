@@ -1,7 +1,7 @@
 --- 
 title: Invalid Azure credentials error when setting up CycleCloud server
 description: This article describes how to add role assignments to resolve an invalid Azure credentials error. This error might occur when you're setting up a CycleCloud server. 
-ms.date: 10/27/2022
+ms.date: 05/22/2025
 editor: v-jsitser
 ms.reviewer: arrhpcglobal, v-leedennis
 ms.service: azure-common-issues-support
