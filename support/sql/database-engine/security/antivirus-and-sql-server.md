@@ -4,7 +4,7 @@ description: This article describes how to configure antivirus software on compu
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: jopilov
-ms.date: 01/10/2025
+ms.date: 05/23/2025
 ms.custom: sap:Security, Encryption, Auditing, Authorization
 ---
 
