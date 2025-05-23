@@ -18,18 +18,18 @@ To troubleshoot domain join failures, we can compare the logs of the failure sce
 
 ## Sample of a successful Netsetup.log
 
-The following sample is the typical `Netsetup.log` covering a successful AD domain join to the domain named *contoso.local*, collected from a Windows 10 24H2 virtual machine (VM) named *HOST88*.
+The following sample is the typical `Netsetup.log` covering a successful AD domain join to the domain named *contoso.local*, collected from a Windows 10 24H2 virtual machine (VM) named *PC8*.
 
 See lines starting with **//** for explanations.
 
 ```output
 03/06/2025 11:28:14:530 -----------------------------------------------------------------
-03/06/2025 11:28:14:530 NetpValidateName: checking to see if 'HOST88' is valid as type 1 name
-03/06/2025 11:28:14:530 NetpCheckNetBiosNameNotInUse for 'HOST88' [MACHINE] returned 0x0
-03/06/2025 11:28:14:530 NetpValidateName: name 'HOST88' is valid for type 1
+03/06/2025 11:28:14:530 NetpValidateName: checking to see if 'PC8' is valid as type 1 name
+03/06/2025 11:28:14:530 NetpCheckNetBiosNameNotInUse for 'PC8' [MACHINE] returned 0x0
+03/06/2025 11:28:14:530 NetpValidateName: name 'PC8' is valid for type 1
 03/06/2025 11:28:14:541 -----------------------------------------------------------------
-03/06/2025 11:28:14:541 NetpValidateName: checking to see if 'HOST88' is valid as type 5 name
-03/06/2025 11:28:14:541 NetpValidateName: name 'HOST88' is valid for type 5
+03/06/2025 11:28:14:541 NetpValidateName: checking to see if 'PC8' is valid as type 5 name
+03/06/2025 11:28:14:541 NetpValidateName: name 'PC8' is valid for type 5
 
 //At least one domain controller (DC) of the specified domain is located and it's qualified for AD join operation. User is prompted in GUI for a valid domain user credential.
 03/06/2025 11:28:14:562 -----------------------------------------------------------------
@@ -43,15 +43,15 @@ See lines starting with **//** for explanations.
 03/06/2025 11:29:05:537 NetpDoDomainJoin: using current computer names
 03/06/2025 11:29:05:537 NetpDoDomainJoin: NetpGetComputerNameEx(NetBios) returned 0x0
 03/06/2025 11:29:05:537 NetpDoDomainJoin: NetpGetComputerNameEx(DnsHostName) returned 0x0
-03/06/2025 11:29:05:537 NetpMachineValidToJoin: 'HOST88'
+03/06/2025 11:29:05:537 NetpMachineValidToJoin: 'PC8'
 03/06/2025 11:29:05:537   OS Version: 10.0
 03/06/2025 11:29:05:537   Build number: 26100 (26100.ge_release.240331-1435)
 03/06/2025 11:29:05:548   SKU: Windows 11 Enterprise
 03/06/2025 11:29:05:548   Architecture: 64-bit (AMD64)
 03/06/2025 11:29:05:559 NetpMachineValidToJoin: status: 0x0
 03/06/2025 11:29:05:559 NetpJoinDomain
-03/06/2025 11:29:05:559   HostName: HOST88
-03/06/2025 11:29:05:559   NetbiosName: HOST88
+03/06/2025 11:29:05:559   HostName: PC8
+03/06/2025 11:29:05:559   NetbiosName: PC8
 03/06/2025 11:29:05:559   Domain: contoso.local
 03/06/2025 11:29:05:559   MachineAccountOU: (NULL)
 03/06/2025 11:29:05:559   Account: contoso\puser2
@@ -60,7 +60,7 @@ See lines starting with **//** for explanations.
 03/06/2025 11:29:05:632 NetpCheckDomainNameIsValid [ Exists ] for 'contoso.local' returned 0x0
 03/06/2025 11:29:05:632 NetpValidateName: name 'contoso.local' is valid for type 3
 03/06/2025 11:29:05:632 NetpDsGetDcName: trying to find DC in domain 'contoso.local', flags: 0x40001010
-03/06/2025 11:29:06:519 NetpDsGetDcName: failed to find a DC having account 'HOST88$': 0x525, last error is 0x0
+03/06/2025 11:29:06:519 NetpDsGetDcName: failed to find a DC having account 'PC8$': 0x525, last error is 0x0
 03/06/2025 11:29:06:539 NetpDsGetDcName: status of verifying DNS A record name resolution for 'DC2.contoso.local': 0x0
 03/06/2025 11:29:06:539 NetpDsGetDcName: found DC '\\DC2.contoso.local' in the specified domain
 03/06/2025 11:29:06:539 NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
@@ -71,7 +71,7 @@ See lines starting with **//** for explanations.
 03/06/2025 11:29:06:674 NetpGetDnsHostName: PrimaryDnsSuffix defaulted to DNS domain name: contoso.local
 03/06/2025 11:29:06:678 NetpProvisionComputerAccount:
 03/06/2025 11:29:06:678   lpDomain: contoso.local
-03/06/2025 11:29:06:678   lpHostName: HOST88
+03/06/2025 11:29:06:678   lpHostName: PC8
 03/06/2025 11:29:06:678   lpMachineAccountOU: (NULL)
 03/06/2025 11:29:06:678   lpDcName: DC2.contoso.local
 03/06/2025 11:29:06:678   lpMachinePassword: (null)
@@ -90,7 +90,7 @@ See lines starting with **//** for explanations.
 03/06/2025 11:29:06:739 NetpGetComputerObjectDn: Crack results:   name = CONTOSO\
 
 //Check if a computer object with the same name already exists or not. If yes, it's the account reuse scenario.
-03/06/2025 11:29:06:739 NetpGetComputerObjectDn: Cracking account name CONTOSO\HOST88$ on \\DC2.contoso.local
+03/06/2025 11:29:06:739 NetpGetComputerObjectDn: Cracking account name CONTOSO\PC8$ on \\DC2.contoso.local
 03/06/2025 11:29:06:741 NetpGetComputerObjectDn: Crack results:   Account does not exist
 03/06/2025 11:29:06:741 NetpCreateComputerObjectInDs: NetpGetComputerObjectDn failed: 0x534
 03/06/2025 11:29:06:741 NetpProvisionComputerAccount: LDAP creation failed: 0x534
@@ -106,15 +106,15 @@ See lines starting with **//** for explanations.
 03/06/2025 11:29:06:755 NetpDoDomainJoin: using current computer names
 03/06/2025 11:29:06:755 NetpDoDomainJoin: NetpGetComputerNameEx(NetBios) returned 0x0
 03/06/2025 11:29:06:755 NetpDoDomainJoin: NetpGetComputerNameEx(DnsHostName) returned 0x0
-03/06/2025 11:29:06:755 NetpMachineValidToJoin: 'HOST88'
+03/06/2025 11:29:06:755 NetpMachineValidToJoin: 'PC8'
 03/06/2025 11:29:06:755   OS Version: 10.0
 03/06/2025 11:29:06:755   Build number: 26100 (26100.ge_release.240331-1435)
 03/06/2025 11:29:06:760   SKU: Windows 11 Enterprise
 03/06/2025 11:29:06:760   Architecture: 64-bit (AMD64)
 03/06/2025 11:29:06:762 NetpMachineValidToJoin: status: 0x0
 03/06/2025 11:29:06:762 NetpJoinDomain
-03/06/2025 11:29:06:762   HostName: HOST88
-03/06/2025 11:29:06:762   NetbiosName: HOST88
+03/06/2025 11:29:06:762   HostName: PC8
+03/06/2025 11:29:06:762   NetbiosName: PC8
 03/06/2025 11:29:06:762   Domain: contoso.local
 03/06/2025 11:29:06:762   MachineAccountOU: (NULL)
 03/06/2025 11:29:06:762   Account: contoso\puser2
@@ -123,7 +123,7 @@ See lines starting with **//** for explanations.
 03/06/2025 11:29:06:835 NetpCheckDomainNameIsValid [ Exists ] for 'contoso.local' returned 0x0
 03/06/2025 11:29:06:835 NetpValidateName: name 'contoso.local' is valid for type 3
 03/06/2025 11:29:06:835 NetpDsGetDcName: trying to find DC in domain 'contoso.local', flags: 0x40001010
-03/06/2025 11:29:07:703 NetpDsGetDcName: failed to find a DC having account 'HOST88$': 0x525, last error is 0x0
+03/06/2025 11:29:07:703 NetpDsGetDcName: failed to find a DC having account 'PC8$': 0x525, last error is 0x0
 03/06/2025 11:29:07:712 NetpDsGetDcName: status of verifying DNS A record name resolution for 'DC2.contoso.local': 0x0
 03/06/2025 11:29:07:712 NetpDsGetDcName: found DC '\\DC2.contoso.local' in the specified domain
 03/06/2025 11:29:07:712 NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
@@ -134,7 +134,7 @@ See lines starting with **//** for explanations.
 03/06/2025 11:29:07:712 NetpGetDnsHostName: PrimaryDnsSuffix defaulted to DNS domain name: contoso.local
 03/06/2025 11:29:07:719 NetpProvisionComputerAccount:
 03/06/2025 11:29:07:719   lpDomain: contoso.local
-03/06/2025 11:29:07:719   lpHostName: HOST88
+03/06/2025 11:29:07:719   lpHostName: PC8
 03/06/2025 11:29:07:719   lpMachineAccountOU: (NULL)
 03/06/2025 11:29:07:719   lpDcName: DC2.contoso.local
 03/06/2025 11:29:07:719   lpMachinePassword: (null)
@@ -151,12 +151,12 @@ See lines starting with **//** for explanations.
 03/06/2025 11:29:07:744 NetpCheckForDomainSIDCollision: returning 0x0(0).
 03/06/2025 11:29:07:750 NetpGetComputerObjectDn: Cracking DNS domain name contoso.local/ into Netbios on \\DC2.contoso.local
 03/06/2025 11:29:07:750 NetpGetComputerObjectDn: Crack results:   name = CONTOSO\
-03/06/2025 11:29:07:750 NetpGetComputerObjectDn: Cracking account name CONTOSO\HOST88$ on \\DC2.contoso.local
+03/06/2025 11:29:07:750 NetpGetComputerObjectDn: Cracking account name CONTOSO\PC8$ on \\DC2.contoso.local
 03/06/2025 11:29:07:750 NetpGetComputerObjectDn: Crack results:   Account does not exist
 03/06/2025 11:29:07:750 NetpGetComputerObjectDn: Cracking Netbios domain name CONTOSO\ into root DN on \\DC2.contoso.local
 03/06/2025 11:29:07:750 NetpGetComputerObjectDn: Crack results:   name = DC=contoso,DC=local
-03/06/2025 11:29:07:750 NetpGetComputerObjectDn: Got DN CN=HOST88,CN=Computers,DC=contoso,DC=local from the default computer container
-03/06/2025 11:29:07:750 NetpGetADObjectOwnerAttributes: Looking up attributes for machine account: CN=HOST88,CN=Computers,DC=contoso,DC=local
+03/06/2025 11:29:07:750 NetpGetComputerObjectDn: Got DN CN=PC8,CN=Computers,DC=contoso,DC=local from the default computer container
+03/06/2025 11:29:07:750 NetpGetADObjectOwnerAttributes: Looking up attributes for machine account: CN=PC8,CN=Computers,DC=contoso,DC=local
 03/06/2025 11:29:07:750 NetpGetADObjectOwnerAttributes: Ldap Search failed: 8240
 03/06/2025 11:29:07:750 NetpCheckIfAccountShouldBeReused: Computer Object does not exist in OU.
 03/06/2025 11:29:07:750 NetpCheckIfAccountShouldBeReused:fReuseAllowed: TRUE, NetStatus:0x2030
@@ -164,29 +164,29 @@ See lines starting with **//** for explanations.
 //Computer object is created.
 03/06/2025 11:29:07:750 NetpModifyComputerObjectInDs: Initial attribute values:
 03/06/2025 11:29:07:750     objectClass  =  Computer
-03/06/2025 11:29:07:750     SamAccountName  =  HOST88$
+03/06/2025 11:29:07:750     SamAccountName  =  PC8$
 03/06/2025 11:29:07:750     userAccountControl  =  0x1000
-03/06/2025 11:29:07:750     DnsHostName  =  HOST88.contoso.local
-03/06/2025 11:29:07:750     ServicePrincipalName  =  HOST/HOST88.contoso.local  RestrictedKrbHost/HOST88.contoso.local  HOST/HOST88  RestrictedKrbHost/HOST88
+03/06/2025 11:29:07:750     DnsHostName  =  PC8.contoso.local
+03/06/2025 11:29:07:750     ServicePrincipalName  =  HOST/PC8.contoso.local  RestrictedKrbHost/PC8.contoso.local  HOST/PC8  RestrictedKrbHost/PC8
 03/06/2025 11:29:07:750     unicodePwd  =  <SomePassword>
 03/06/2025 11:29:07:750 NetpModifyComputerObjectInDs: Computer Object does not exist in OU
 03/06/2025 11:29:07:750 NetpModifyComputerObjectInDs: Attribute values to set:
 03/06/2025 11:29:07:750     objectClass  =  Computer
-03/06/2025 11:29:07:750     SamAccountName  =  HOST88$
+03/06/2025 11:29:07:750     SamAccountName  =  PC8$
 03/06/2025 11:29:07:750     userAccountControl  =  0x1000
-03/06/2025 11:29:07:750     DnsHostName  =  HOST88.contoso.local
-03/06/2025 11:29:07:750     ServicePrincipalName  =  HOST/HOST88.contoso.local  RestrictedKrbHost/HOST88.contoso.local  HOST/HOST88  RestrictedKrbHost/HOST88
+03/06/2025 11:29:07:750     DnsHostName  =  PC8.contoso.local
+03/06/2025 11:29:07:750     ServicePrincipalName  =  HOST/PC8.contoso.local  RestrictedKrbHost/PC8.contoso.local  HOST/PC8  RestrictedKrbHost/PC8
 03/06/2025 11:29:07:750     unicodePwd  =  <SomePassword>
-03/06/2025 11:29:07:857 Querying "CN=HOST88,CN=Computers,DC=contoso,DC=local" for objectSid\objectGuid attributes
+03/06/2025 11:29:07:857 Querying "CN=PC8,CN=Computers,DC=contoso,DC=local" for objectSid\objectGuid attributes
 
 //SID of the new computer account.
 03/06/2025 11:29:07:859 NetpQueryAccountAttributes succeeded: got RID=0x643 objectSid=S-1-5-21-3127289744-4148518019-814850311-1603
-03/06/2025 11:29:07:859 NetpDeleteMachineAccountKey: called for computer 'HOST88'
+03/06/2025 11:29:07:859 NetpDeleteMachineAccountKey: called for computer 'PC8'
 03/06/2025 11:29:07:867 NetpGetComputerObjectDn: Cracking DNS domain name contoso.local/ into Netbios on \\DC2.contoso.local
 03/06/2025 11:29:07:867 NetpGetComputerObjectDn: Crack results:   name = CONTOSO\
-03/06/2025 11:29:07:867 NetpGetComputerObjectDn: Cracking account name CONTOSO\HOST88$ on \\DC2.contoso.local
-03/06/2025 11:29:07:876 NetpGetComputerObjectDn: Crack results:   (Account already exists) DN = CN=HOST88,CN=Computers,DC=contoso,DC=local
-03/06/2025 11:29:07:876 NetpDeleteMachineAccountKey: msDS-KeyCredentialLink attr was not found on computer 'HOST88' - no action required.
+03/06/2025 11:29:07:867 NetpGetComputerObjectDn: Cracking account name CONTOSO\PC8$ on \\DC2.contoso.local
+03/06/2025 11:29:07:876 NetpGetComputerObjectDn: Crack results:   (Account already exists) DN = CN=PC8,CN=Computers,DC=contoso,DC=local
+03/06/2025 11:29:07:876 NetpDeleteMachineAccountKey: msDS-KeyCredentialLink attr was not found on computer 'PC8' - no action required.
 03/06/2025 11:29:07:876 NetpDeleteMachineAccountKey: returning Status: 0 
 03/06/2025 11:29:07:876 ldap_unbind status: 0x0
 03/06/2025 11:29:07:876 NetpJoinCreatePackagePart: status:0x0.
@@ -243,22 +243,22 @@ Privileges: Setting backup/restore privileges.
 //0xa99 stands for "a restart is needed".
 03/06/2025 11:29:08:299 NetpProvContinueProvisioningPackageInstall: status: 0xa99.
 03/06/2025 11:29:10:559 -----------------------------------------------------------------
-03/06/2025 11:29:10:559 NetpChangeMachineName: from 'HOST88' to 'HOST88' using 'contoso\puser2' [0x1000]
+03/06/2025 11:29:10:559 NetpChangeMachineName: from 'PC8' to 'PC8' using 'contoso\puser2' [0x1000]
 03/06/2025 11:29:10:559 NetpChangeMachineName: using DnsHostnameToComputerNameEx
-03/06/2025 11:29:10:559 NetpChangeMachineName: generated netbios name: 'HOST88'
+03/06/2025 11:29:10:559 NetpChangeMachineName: generated netbios name: 'PC8'
 03/06/2025 11:29:10:559 NetpDsGetDcName: trying to find DC in domain 'contoso.local', flags: 0x1010
 03/06/2025 11:29:10:559 NetpDsGetDcName: found DC '\\DC2.contoso.local' in the specified domain
 03/06/2025 11:29:10:559 NetpGetDnsHostName: Read NV Domain: contoso.local
 03/06/2025 11:29:14:830 NetpGetComputerObjectDn: Cracking DNS domain name contoso.local/ into Netbios on \\DC2.contoso.local
 03/06/2025 11:29:14:830 NetpGetComputerObjectDn: Crack results:   name = CONTOSO\
-03/06/2025 11:29:14:830 NetpGetComputerObjectDn: Cracking account name CONTOSO\HOST88$ on \\DC2.contoso.local
-03/06/2025 11:29:14:830 NetpGetComputerObjectDn: Crack results:   (Account already exists) DN = CN=HOST88,CN=Computers,DC=contoso,DC=local
+03/06/2025 11:29:14:830 NetpGetComputerObjectDn: Cracking account name CONTOSO\PC8$ on \\DC2.contoso.local
+03/06/2025 11:29:14:830 NetpGetComputerObjectDn: Crack results:   (Account already exists) DN = CN=PC8,CN=Computers,DC=contoso,DC=local
 03/06/2025 11:29:14:844 NetpModifyComputerObjectInDs: Initial attribute values:
-03/06/2025 11:29:14:844     DnsHostName  =  HOST88.contoso.local
-03/06/2025 11:29:14:844     ServicePrincipalName  =  HOST/HOST88.contoso.local  RestrictedKrbHost/HOST88.contoso.local  HOST/HOST88  RestrictedKrbHost/HOST88
+03/06/2025 11:29:14:844     DnsHostName  =  PC8.contoso.local
+03/06/2025 11:29:14:844     ServicePrincipalName  =  HOST/PC8.contoso.local  RestrictedKrbHost/PC8.contoso.local  HOST/PC8  RestrictedKrbHost/PC8
 03/06/2025 11:29:14:844 NetpModifyComputerObjectInDs: Computer Object already exists in OU:
-03/06/2025 11:29:14:844     DnsHostName  =  HOST88.contoso.local
-03/06/2025 11:29:14:844     ServicePrincipalName  =  RestrictedKrbHost/HOST88  HOST/HOST88  RestrictedKrbHost/HOST88.contoso.local  HOST/HOST88.contoso.local
+03/06/2025 11:29:14:844     DnsHostName  =  PC8.contoso.local
+03/06/2025 11:29:14:844     ServicePrincipalName  =  RestrictedKrbHost/PC8  HOST/PC8  RestrictedKrbHost/PC8.contoso.local  HOST/PC8.contoso.local
 03/06/2025 11:29:14:844 NetpModifyComputerObjectInDs: There are _NO_ modifications to do
 03/06/2025 11:29:14:844 ldap_unbind status: 0x0
 03/06/2025 11:29:14:844 NetpChangeMachineName: status of setting DnsHostName and SPN: 0x0
@@ -276,10 +276,10 @@ The client queries the DNS SRV record to locate the DCs of the domain to join. I
 
 ```output
 Source  Destination  Protocol Name  Description
-HOST88.contoso.local  dc1.contoso.local  DNS  DNS:QueryId = 0xA793, QUERY (Standard query), Query  for _ldap._tcp.dc._msdcs.contoso.local of type SRV on class Internet
-dc1.contoso.local  HOST88.contoso.local  DNS  DNS:QueryId = 0xA793, QUERY (Standard query), Response - Success, 192.168.100.10, 192.168.100.12
-HOST88.contoso.local  dc1.contoso.local  DNS  DNS:QueryId = 0x623B, QUERY (Standard query), Query  for dc2.contoso.local of type Host Addr on class Internet
-dc1.contoso.local  HOST88.contoso.local  DNS  DNS:QueryId = 0x623B, QUERY (Standard query), Response - Success, 192.168.100.10
+PC8.contoso.local  dc1.contoso.local  DNS  DNS:QueryId = 0xA793, QUERY (Standard query), Query  for _ldap._tcp.dc._msdcs.contoso.local of type SRV on class Internet
+dc1.contoso.local  PC8.contoso.local  DNS  DNS:QueryId = 0xA793, QUERY (Standard query), Response - Success, 192.168.100.10, 192.168.100.12
+PC8.contoso.local  dc1.contoso.local  DNS  DNS:QueryId = 0x623B, QUERY (Standard query), Query  for dc2.contoso.local of type Host Addr on class Internet
+dc1.contoso.local  PC8.contoso.local  DNS  DNS:QueryId = 0x623B, QUERY (Standard query), Response - Success, 192.168.100.10
 ```
 
 ```output
@@ -307,8 +307,8 @@ Then the client picks up one of the DCs and uses Lightweight Directory Access Pr
 
 ```output
 Source  Destination  Protocol Name  Description
-HOST88.contoso.local  dc2.contoso.local  LDAPMessage  LDAPMessage:Search Request, MessageID: 1
-dc2.contoso.local  HOST88.contoso.local  NetLogon  NetLogon:LogonSAMLogonResponseEX (SAM Response to SAM logon request): 23 (0x17)
+PC8.contoso.local  dc2.contoso.local  LDAPMessage  LDAPMessage:Search Request, MessageID: 1
+dc2.contoso.local  PC8.contoso.local  NetLogon  NetLogon:LogonSAMLogonResponseEX (SAM Response to SAM logon request): 23 (0x17)
 ```
 
 In the response, the DC provides the general information of the domain and that DC's current capabilities.
@@ -367,37 +367,37 @@ In the response, the DC provides the general information of the domain and that 
 During AD domain join, Server Message Block (SMB) traffic is employed for Microsoft Remote Procedure Call (MSRPC) based communication.
 
 ```output
-Source  Destination  Protocol Name  Description
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125899379, Ack=0
-dc2.contoso.local  HOST88.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=Microsoft-DS(445), DstPort=49708, PayloadLen=0, Seq=3354173409, Ack=125899380
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125899380, Ack=3354173410
-HOST88.contoso.local  dc2.contoso.local  SMB  SMB:C; Negotiate, Dialect = NT LM 0.12, SMB 2.002, SMB 2.???
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   NEGOTIATE (0x0), GUID={AEEC955A-89D6-C899-40AB-A8E0AA928A2C}
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   NEGOTIATE (0x0), GUID={04043D5D-1500-C3B7-11EF-FA3AB1842093}
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   NEGOTIATE (0x0), GUID={AEEC955A-89D6-C899-40AB-A8E0AA928A2C}
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125899757, Ack=3354174038
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   SESSION SETUP (0x1)
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R  - NT Status: System - Error, Code = (22) STATUS_MORE_PROCESSING_REQUIRED  SESSION SETUP (0x1), SessionFlags=0x0
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   SESSION SETUP (0x1)
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   SESSION SETUP (0x1), SessionFlags=0x0
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   TREE CONNECT (0x3), Path=\\DC2.contoso.local\IPC$
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   TREE CONNECT (0x3), TID=0x1
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   IOCTL (0xb), FID=0xFFFFFFFFFFFFFFFF
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   IOCTL (0xb)
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125900788, Ack=3354174966
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   CREATE (0x5), Sh(RWD), File=NETLOGON@#290
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   CREATE (0x5), FID=0x1300000001(NETLOGON@#290)
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   QUERY INFORMATION (0x10), Class=FileStandardInformation (5), FID=0x1300000001(NETLOGON@#290)
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   QUERY INFORMATION (0x10), File=NETLOGON@#290
-HOST88.contoso.local  dc2.contoso.local  MSRPC  MSRPC:c/o Bind: Netlogon(NRPC) UUID{12345678-1234-ABCD-EF00-01234567CFFB}  Call=0x2  Assoc Grp=0x0  Xmit=0x10B8  Recv=0x10B8
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   WRITE (0x9), File=NETLOGON@#290
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   READ (0x8), FID=0x1300000001  (NETLOGON@#290) , 0x400 bytes from offset 0 (0x0)
-dc2.contoso.local  HOST88.contoso.local  MSRPC  MSRPC:c/o Bind Ack:  Call=0x2  Assoc Grp=0x47C8  Xmit=0x10B8  Recv=0x10B8
-HOST88.contoso.local  dc2.contoso.local  NRPC  NRPC:DsrEnumerateDomainTrusts Request, ServerName = \\DC2.contoso.local, Flags = 0x0000003F
-dc2.contoso.local  HOST88.contoso.local  NRPC  NRPC:DsrEnumerateDomainTrusts Response, DomainCount = 3, ReturnValue = ERROR_SUCCESS
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   CLOSE (0x6), FID=0x1300000001(NETLOGON@#290)
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   CLOSE (0x6), File=NETLOGON@#290
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125901745, Ack=3354176362
+Source             Destination        Protocol Name  Description
+PC8.contoso.local  dc2.contoso.local  TCP   TCP:Flags=......S., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125899379, Ack=0
+dc2.contoso.local  PC8.contoso.local  TCP   TCP:Flags=...A..S., SrcPort=Microsoft-DS(445), DstPort=49708, PayloadLen=0, Seq=3354173409, Ack=125899380
+PC8.contoso.local  dc2.contoso.local  TCP   TCP:Flags=...A...., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125899380, Ack=3354173410
+PC8.contoso.local  dc2.contoso.local  SMB   SMB:C; Negotiate, Dialect = NT LM 0.12, SMB 2.002, SMB 2.???
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   NEGOTIATE (0x0), GUID={AEEC955A-89D6-C899-40AB-A8E0AA928A2C}
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   NEGOTIATE (0x0), GUID={04043D5D-1500-C3B7-11EF-FA3AB1842093}
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   NEGOTIATE (0x0), GUID={AEEC955A-89D6-C899-40AB-A8E0AA928A2C}
+PC8.contoso.local  dc2.contoso.local  TCP   TCP:Flags=...A...., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125899757, Ack=3354174038
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   SESSION SETUP (0x1)
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R  - NT Status: System - Error, Code = (22) STATUS_MORE_PROCESSING_REQUIRED  SESSION SETUP (0x1), SessionFlags=0x0
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   SESSION SETUP (0x1)
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   SESSION SETUP (0x1), SessionFlags=0x0
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   TREE CONNECT (0x3), Path=\\DC2.contoso.local\IPC$
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   TREE CONNECT (0x3), TID=0x1
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   IOCTL (0xb), FID=0xFFFFFFFFFFFFFFFF
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   IOCTL (0xb)
+PC8.contoso.local  dc2.contoso.local  TCP   TCP:Flags=...A...., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125900788, Ack=3354174966
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   CREATE (0x5), Sh(RWD), File=NETLOGON@#290
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   CREATE (0x5), FID=0x1300000001(NETLOGON@#290)
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   QUERY INFORMATION (0x10), Class=FileStandardInformation (5), FID=0x1300000001(NETLOGON@#290)
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   QUERY INFORMATION (0x10), File=NETLOGON@#290
+PC8.contoso.local  dc2.contoso.local  MSRPC MSRPC:c/o Bind: Netlogon(NRPC) UUID{12345678-1234-ABCD-EF00-01234567CFFB}  Call=0x2  Assoc Grp=0x0  Xmit=0x10B8  Recv=0x10B8
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   WRITE (0x9), File=NETLOGON@#290
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   READ (0x8), FID=0x1300000001  (NETLOGON@#290) , 0x400 bytes from offset 0 (0x0)
+dc2.contoso.local  PC8.contoso.local  MSRPC MSRPC:c/o Bind Ack:  Call=0x2  Assoc Grp=0x47C8  Xmit=0x10B8  Recv=0x10B8
+PC8.contoso.local  dc2.contoso.local  NRPC  NRPC:DsrEnumerateDomainTrusts Request, ServerName = \\DC2.contoso.local, Flags = 0x0000003F
+dc2.contoso.local  PC8.contoso.local  NRPC  NRPC:DsrEnumerateDomainTrusts Response, DomainCount = 3, ReturnValue = ERROR_SUCCESS
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   CLOSE (0x6), FID=0x1300000001(NETLOGON@#290)
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   CLOSE (0x6), File=NETLOGON@#290
+PC8.contoso.local  dc2.contoso.local  TCP   TCP:Flags=...A...., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125901745, Ack=3354176362
 
 ```
 
@@ -410,38 +410,38 @@ LDAP traffic is used during domain join activity as well.
 
 ```output
 Source  Destination  Protocol Name  Description
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49709, DstPort=LDAP(389), PayloadLen=0, Seq=2785227450, Ack=0
-dc2.contoso.local  HOST88.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=LDAP(389), DstPort=49709, PayloadLen=0, Seq=616784870, Ack=2785227451
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49709, DstPort=LDAP(389), PayloadLen=0, Seq=2785227451, Ack=616784871
-HOST88.contoso.local  dc2.contoso.local  LDAPMessage  LDAPMessage:Search Request, MessageID: 6
-dc2.contoso.local  HOST88.contoso.local  LDAPMessage  LDAPMessage:Search Result Entry, MessageID: 6
-dc2.contoso.local  HOST88.contoso.local  TCP  TCP:[Continuation to #161]Flags=...AP..., SrcPort=LDAP(389), DstPort=49709, PayloadLen=1258, Seq=616786331 - 616787589, Ack=2785227801
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49709, DstPort=LDAP(389), PayloadLen=0, Seq=2785227801, Ack=616787589
-HOST88.contoso.local  dc2.contoso.local  LDAPMessage  LDAPMessage:Bind Request, MessageID: 8
-dc2.contoso.local  HOST88.contoso.local  LDAPMessage  LDAPMessage:Bind Response, MessageID: 8
-HOST88.contoso.local  dc2.contoso.local  LDAPMessage  LDAPMessage:Bind Request, MessageID: 9
-dc2.contoso.local  HOST88.contoso.local  LDAPMessage  LDAPMessage:Bind Response, MessageID: 9
-HOST88.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 160, AuthMechanism: GSS-SPNEGO
-dc2.contoso.local  HOST88.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 1270, AuthMechanism: GSS-SPNEGO
-HOST88.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 109, AuthMechanism: GSS-SPNEGO
-dc2.contoso.local  HOST88.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 171, AuthMechanism: GSS-SPNEGO
-HOST88.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 187, AuthMechanism: GSS-SPNEGO
-dc2.contoso.local  HOST88.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 156, AuthMechanism: GSS-SPNEGO
-HOST88.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 27, AuthMechanism: GSS-SPNEGO
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...F, SrcPort=49709, DstPort=LDAP(389), PayloadLen=0, Seq=2785228906, Ack=616789460
-dc2.contoso.local  HOST88.contoso.local  TCP  TCP:Flags=...A.R.., SrcPort=LDAP(389), DstPort=49709, PayloadLen=0, Seq=616789460, Ack=2785228906
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49712, DstPort=LDAP(389), PayloadLen=0, Seq=2375446589, Ack=0
-233  11:29:07 AM 3/6/2025  60.9814190    dc2.contoso.local  HOST88.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=LDAP(389), DstPort=49712, PayloadLen=0, Seq=3472306490, Ack=2375446590
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49712, DstPort=LDAP(389), PayloadLen=0, Seq=2375446590, Ack=3472306491
-HOST88.contoso.local  dc2.contoso.local  LDAPMessage  LDAPMessage:Bind Request, MessageID: 20
-dc2.contoso.local  HOST88.contoso.local  LDAPMessage  LDAPMessage:Bind Response, MessageID: 20
-HOST88.contoso.local  dc2.contoso.local  LDAPMessage  LDAPMessage:Bind Request, MessageID: 21
-dc2.contoso.local  HOST88.contoso.local  LDAPMessage  LDAPMessage:Bind Response, MessageID: 21
-HOST88.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 160, AuthMechanism: GSS-SPNEGO
-dc2.contoso.local  HOST88.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 1270, AuthMechanism: GSS-SPNEGO
-HOST88.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 109, AuthMechanism: GSS-SPNEGO
-dc2.contoso.local  HOST88.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 171, AuthMechanism: GSS-SPNEGO
-HOST88.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 187, AuthMechanism: GSS-SPNEGO
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49709, DstPort=LDAP(389), PayloadLen=0, Seq=2785227450, Ack=0
+dc2.contoso.local  PC8.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=LDAP(389), DstPort=49709, PayloadLen=0, Seq=616784870, Ack=2785227451
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49709, DstPort=LDAP(389), PayloadLen=0, Seq=2785227451, Ack=616784871
+PC8.contoso.local  dc2.contoso.local  LDAPMessage  LDAPMessage:Search Request, MessageID: 6
+dc2.contoso.local  PC8.contoso.local  LDAPMessage  LDAPMessage:Search Result Entry, MessageID: 6
+dc2.contoso.local  PC8.contoso.local  TCP  TCP:[Continuation to #161]Flags=...AP..., SrcPort=LDAP(389), DstPort=49709, PayloadLen=1258, Seq=616786331 - 616787589, Ack=2785227801
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49709, DstPort=LDAP(389), PayloadLen=0, Seq=2785227801, Ack=616787589
+PC8.contoso.local  dc2.contoso.local  LDAPMessage  LDAPMessage:Bind Request, MessageID: 8
+dc2.contoso.local  PC8.contoso.local  LDAPMessage  LDAPMessage:Bind Response, MessageID: 8
+PC8.contoso.local  dc2.contoso.local  LDAPMessage  LDAPMessage:Bind Request, MessageID: 9
+dc2.contoso.local  PC8.contoso.local  LDAPMessage  LDAPMessage:Bind Response, MessageID: 9
+PC8.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 160, AuthMechanism: GSS-SPNEGO
+dc2.contoso.local  PC8.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 1270, AuthMechanism: GSS-SPNEGO
+PC8.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 109, AuthMechanism: GSS-SPNEGO
+dc2.contoso.local  PC8.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 171, AuthMechanism: GSS-SPNEGO
+PC8.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 187, AuthMechanism: GSS-SPNEGO
+dc2.contoso.local  PC8.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 156, AuthMechanism: GSS-SPNEGO
+PC8.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 27, AuthMechanism: GSS-SPNEGO
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...F, SrcPort=49709, DstPort=LDAP(389), PayloadLen=0, Seq=2785228906, Ack=616789460
+dc2.contoso.local  PC8.contoso.local  TCP  TCP:Flags=...A.R.., SrcPort=LDAP(389), DstPort=49709, PayloadLen=0, Seq=616789460, Ack=2785228906
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49712, DstPort=LDAP(389), PayloadLen=0, Seq=2375446589, Ack=0
+233  11:29:07 AM 3/6/2025  60.9814190    dc2.contoso.local  PC8.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=LDAP(389), DstPort=49712, PayloadLen=0, Seq=3472306490, Ack=2375446590
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49712, DstPort=LDAP(389), PayloadLen=0, Seq=2375446590, Ack=3472306491
+PC8.contoso.local  dc2.contoso.local  LDAPMessage  LDAPMessage:Bind Request, MessageID: 20
+dc2.contoso.local  PC8.contoso.local  LDAPMessage  LDAPMessage:Bind Response, MessageID: 20
+PC8.contoso.local  dc2.contoso.local  LDAPMessage  LDAPMessage:Bind Request, MessageID: 21
+dc2.contoso.local  PC8.contoso.local  LDAPMessage  LDAPMessage:Bind Response, MessageID: 21
+PC8.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 160, AuthMechanism: GSS-SPNEGO
+dc2.contoso.local  PC8.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 1270, AuthMechanism: GSS-SPNEGO
+PC8.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 109, AuthMechanism: GSS-SPNEGO
+dc2.contoso.local  PC8.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 171, AuthMechanism: GSS-SPNEGO
+PC8.contoso.local  dc2.contoso.local  LDAPSASLBuffer  LDAPSASLBuffer:BufferLength: 187, AuthMechanism: GSS-SPNEGO
 ```
 
 ### RPC
@@ -455,13 +455,13 @@ Remote Procedure Call (RPC) traffic starts from TCP 135 port. The client binds t
 
 ```output
 Source  Destination  Protocol Name  Description
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49710, DstPort=DCE endpoint resolution(135), PayloadLen=0, Seq=2427001163, Ack=0
-dc2.contoso.local  HOST88.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=DCE endpoint resolution(135), DstPort=49710, PayloadLen=0, Seq=565983964, Ack=2427001164
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49710, DstPort=DCE endpoint resolution(135), PayloadLen=0, Seq=2427001164, Ack=565983965
-HOST88.contoso.local  dc2.contoso.local  MSRPC  MSRPC:c/o Bind: EPT(EPMP) UUID{E1AF8308-5D1F-11C9-91A4-08002B14A0FA}  Call=0x2  Assoc Grp=0x0  Xmit=0x16D0  Recv=0x16D0
-dc2.contoso.local  HOST88.contoso.local  MSRPC  MSRPC:c/o Bind Ack:  Call=0x2  Assoc Grp=0x3AA1  Xmit=0x16D0  Recv=0x16D0
-HOST88.contoso.local  dc2.contoso.local  EPM  EPM:Request: ept_map: NDR, DRSR(DRSR) {E3514235-4B06-11D1-AB04-00C04FC2DCD2} v4.0, RPC v5, 0.0.0.0:135 (0x87) [DCE endpoint resolution(135)]
-dc2.contoso.local  HOST88.contoso.local  EPM  EPM:Response: ept_map: NDR, DRSR(DRSR) {E3514235-4B06-11D1-AB04-00C04FC2DCD2} v4.0, RPC v5192.168.100.10, 192.168.100.10:49664 (0xC200) [49664]
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49710, DstPort=DCE endpoint resolution(135), PayloadLen=0, Seq=2427001163, Ack=0
+dc2.contoso.local  PC8.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=DCE endpoint resolution(135), DstPort=49710, PayloadLen=0, Seq=565983964, Ack=2427001164
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49710, DstPort=DCE endpoint resolution(135), PayloadLen=0, Seq=2427001164, Ack=565983965
+PC8.contoso.local  dc2.contoso.local  MSRPC  MSRPC:c/o Bind: EPT(EPMP) UUID{E1AF8308-5D1F-11C9-91A4-08002B14A0FA}  Call=0x2  Assoc Grp=0x0  Xmit=0x16D0  Recv=0x16D0
+dc2.contoso.local  PC8.contoso.local  MSRPC  MSRPC:c/o Bind Ack:  Call=0x2  Assoc Grp=0x3AA1  Xmit=0x16D0  Recv=0x16D0
+PC8.contoso.local  dc2.contoso.local  EPM  EPM:Request: ept_map: NDR, DRSR(DRSR) {E3514235-4B06-11D1-AB04-00C04FC2DCD2} v4.0, RPC v5, 0.0.0.0:135 (0x87) [DCE endpoint resolution(135)]
+dc2.contoso.local  PC8.contoso.local  EPM  EPM:Response: ept_map: NDR, DRSR(DRSR) {E3514235-4B06-11D1-AB04-00C04FC2DCD2} v4.0, RPC v5192.168.100.10, 192.168.100.10:49664 (0xC200) [49664]
 ```
 
 ```output
@@ -487,57 +487,57 @@ dc2.contoso.local  HOST88.contoso.local  EPM  EPM:Response: ept_map: NDR, DRSR(D
 
 ```output
 Source  Destination  Protocol Name  Description
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49711, DstPort=49671, PayloadLen=0, Seq=1098174753, Ack=0
-dc2.contoso.local  HOST88.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=49671, DstPort=49711, PayloadLen=0, Seq=57262962, Ack=1098174754
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49711, DstPort=49671, PayloadLen=0, Seq=1098174754, Ack=57262963,
-HOST88.contoso.local  dc2.contoso.local  MSRPC  MSRPC:c/o Bind: DRSR(DRSR) UUID{E3514235-4B06-11D1-AB04-00C04FC2DCD2}  Call=0x2  Assoc Grp=0x0  Xmit=0x16D0  Recv=0x16D0
-dc2.contoso.local  HOST88.contoso.local  MSRPC  MSRPC:c/o Bind Ack:  Call=0x2  Assoc Grp=0x47C7  Xmit=0x16D0  Recv=0x16D0
-HOST88.contoso.local  dc2.contoso.local  MSRPC  MSRPC:c/o Auth3:  Call=0x2
-HOST88.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSBind Request, *Encrypted*
-dc2.contoso.local  HOST88.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49671, DstPort=49711, PayloadLen=0, Seq=57263291, Ack=1098175682
-dc2.contoso.local  HOST88.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSBind Response, *Encrypted*
-HOST88.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Request, *Encrypted*
-dc2.contoso.local  HOST88.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Response, *Encrypted*
-HOST88.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Request, *Encrypted*
-dc2.contoso.local  HOST88.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Response, *Encrypted*
-HOST88.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSUnbind Request, *Encrypted*
-dc2.contoso.local  HOST88.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSUnbind Response, *Encrypted*
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49711, DstPort=49671, PayloadLen=0, Seq=1098176146, Ack=57263867
-HOST88.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSBind Request, *Encrypted*
-dc2.contoso.local  HOST88.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSBind Response, *Encrypted*
-HOST88.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Request, *Encrypted*
-dc2.contoso.local  HOST88.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Response, *Encrypted*
-HOST88.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Request, *Encrypted*
-dc2.contoso.local  HOST88.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Response, *Encrypted*
-HOST88.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Request, *Encrypted*
-dc2.contoso.local  HOST88.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Response, *Encrypted*
-HOST88.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSUnbind Request, *Encrypted*
-dc2.contoso.local  HOST88.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSUnbind Response, *Encrypted*
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49711, DstPort=49671, PayloadLen=0, Seq=1098174753, Ack=0
+dc2.contoso.local  PC8.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=49671, DstPort=49711, PayloadLen=0, Seq=57262962, Ack=1098174754
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49711, DstPort=49671, PayloadLen=0, Seq=1098174754, Ack=57262963,
+PC8.contoso.local  dc2.contoso.local  MSRPC  MSRPC:c/o Bind: DRSR(DRSR) UUID{E3514235-4B06-11D1-AB04-00C04FC2DCD2}  Call=0x2  Assoc Grp=0x0  Xmit=0x16D0  Recv=0x16D0
+dc2.contoso.local  PC8.contoso.local  MSRPC  MSRPC:c/o Bind Ack:  Call=0x2  Assoc Grp=0x47C7  Xmit=0x16D0  Recv=0x16D0
+PC8.contoso.local  dc2.contoso.local  MSRPC  MSRPC:c/o Auth3:  Call=0x2
+PC8.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSBind Request, *Encrypted*
+dc2.contoso.local  PC8.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49671, DstPort=49711, PayloadLen=0, Seq=57263291, Ack=1098175682
+dc2.contoso.local  PC8.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSBind Response, *Encrypted*
+PC8.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Request, *Encrypted*
+dc2.contoso.local  PC8.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Response, *Encrypted*
+PC8.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Request, *Encrypted*
+dc2.contoso.local  PC8.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Response, *Encrypted*
+PC8.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSUnbind Request, *Encrypted*
+dc2.contoso.local  PC8.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSUnbind Response, *Encrypted*
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49711, DstPort=49671, PayloadLen=0, Seq=1098176146, Ack=57263867
+PC8.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSBind Request, *Encrypted*
+dc2.contoso.local  PC8.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSBind Response, *Encrypted*
+PC8.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Request, *Encrypted*
+dc2.contoso.local  PC8.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Response, *Encrypted*
+PC8.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Request, *Encrypted*
+dc2.contoso.local  PC8.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Response, *Encrypted*
+PC8.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Request, *Encrypted*
+dc2.contoso.local  PC8.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSCrackNames Response, *Encrypted*
+PC8.contoso.local  dc2.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSUnbind Request, *Encrypted*
+dc2.contoso.local  PC8.contoso.local  DRSR  DRSR:drsuapi:IDL_DRSUnbind Response, *Encrypted*
 ```
 
 #### NetLogon traffic
 
 ```output
 Source  Destination  Protocol Name  Description
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49735, DstPort=49682, PayloadLen=0, Seq=2988617269, Ack=0
-dc2.contoso.local  HOST88.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=49682, DstPort=49735, PayloadLen=0, Seq=225723440, Ack=2988617270
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49735, DstPort=49682, PayloadLen=0, Seq=2988617270, Ack=225723441
-HOST88.contoso.local  dc2.contoso.local  MSRPC  MSRPC:c/o Bind: Netlogon(NRPC) UUID{12345678-1234-ABCD-EF00-01234567CFFB}  Call=0x2  Assoc Grp=0x0  Xmit=0x16D0  Recv=0x16D0
-dc2.contoso.local  HOST88.contoso.local  MSRPC  MSRPC:c/o Bind Ack:  Call=0x2  Assoc Grp=0x47C9  Xmit=0x16D0  Recv=0x16D0
-HOST88.contoso.local  dc2.contoso.local  NRPC  NRPC:NetrServerReqChallenge Request, PrimaryName = \\DC2.contoso.local, ComputerName = HOST88
-dc2.contoso.local  HOST88.contoso.local  NRPC  NRPC:NetrServerReqChallenge Response, ReturnValue = Success
-HOST88.contoso.local  dc2.contoso.local  NRPC  NRPC:NetrServerAuthenticate3 Request, PrimaryName = \\DC2.contoso.local, AccountName = HOST88$, ComputerName = HOST88, SecureChannelType = WorkstationSecureChannel , NegotiateFlags = 0x612FFFFF
-dc2.contoso.local  HOST88.contoso.local  NRPC  NRPC:NetrServerAuthenticate3 Response, NegotiateFlags = 0x612FFFFF, AccountRid = 1603, ReturnValue = Success
-HOST88.contoso.local  dc2.contoso.local  MSRPC  MSRPC:c/o Alter Cont: Netlogon(NRPC)  UUID{12345678-1234-ABCD-EF00-01234567CFFB}  Call=0x4
-dc2.contoso.local  HOST88.contoso.local  MSRPC  MSRPC:c/o Alter Cont Resp:  Call=0x4  Assoc Grp=0x47C9  Xmit=0x16D0  Recv=0x16D0
-HOST88.contoso.local  dc2.contoso.local  NRPC  NRPC:NetrLogonGetCapabilities Request, *Encrypted*
-dc2.contoso.local  HOST88.contoso.local  NRPC  NRPC:NetrLogonGetCapabilities Response, *Encrypted*
-HOST88.contoso.local  dc2.contoso.local  NRPC  NRPC:NetrLogonGetCapabilities Request, *Encrypted*
-dc2.contoso.local  HOST88.contoso.local  NRPC  NRPC:NetrLogonGetCapabilities Response, *Encrypted*
-HOST88.contoso.local  dc2.contoso.local  NRPC  NRPC:NetrLogonGetDomainInfo Request, *Encrypted*  
-dc2.contoso.local  HOST88.contoso.local  NRPC  NRPC:NetrLogonGetDomainInfo Response, partial*Un-Interpreted*
-dc2.contoso.local  HOST88.contoso.local  TCP  TCP:[Continuation to #561]Flags=...AP..., SrcPort=49682, DstPort=49735, PayloadLen=148, Seq=225725405 - 225725553, Ack=2988619262
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49735, DstPort=49682, PayloadLen=0, Seq=2988619262, Ack=225725553
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49735, DstPort=49682, PayloadLen=0, Seq=2988617269, Ack=0
+dc2.contoso.local  PC8.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=49682, DstPort=49735, PayloadLen=0, Seq=225723440, Ack=2988617270
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49735, DstPort=49682, PayloadLen=0, Seq=2988617270, Ack=225723441
+PC8.contoso.local  dc2.contoso.local  MSRPC  MSRPC:c/o Bind: Netlogon(NRPC) UUID{12345678-1234-ABCD-EF00-01234567CFFB}  Call=0x2  Assoc Grp=0x0  Xmit=0x16D0  Recv=0x16D0
+dc2.contoso.local  PC8.contoso.local  MSRPC  MSRPC:c/o Bind Ack:  Call=0x2  Assoc Grp=0x47C9  Xmit=0x16D0  Recv=0x16D0
+PC8.contoso.local  dc2.contoso.local  NRPC  NRPC:NetrServerReqChallenge Request, PrimaryName = \\DC2.contoso.local, ComputerName = PC8
+dc2.contoso.local  PC8.contoso.local  NRPC  NRPC:NetrServerReqChallenge Response, ReturnValue = Success
+PC8.contoso.local  dc2.contoso.local  NRPC  NRPC:NetrServerAuthenticate3 Request, PrimaryName = \\DC2.contoso.local, AccountName = PC8$, ComputerName = PC8, SecureChannelType = WorkstationSecureChannel , NegotiateFlags = 0x612FFFFF
+dc2.contoso.local  PC8.contoso.local  NRPC  NRPC:NetrServerAuthenticate3 Response, NegotiateFlags = 0x612FFFFF, AccountRid = 1603, ReturnValue = Success
+PC8.contoso.local  dc2.contoso.local  MSRPC  MSRPC:c/o Alter Cont: Netlogon(NRPC)  UUID{12345678-1234-ABCD-EF00-01234567CFFB}  Call=0x4
+dc2.contoso.local  PC8.contoso.local  MSRPC  MSRPC:c/o Alter Cont Resp:  Call=0x4  Assoc Grp=0x47C9  Xmit=0x16D0  Recv=0x16D0
+PC8.contoso.local  dc2.contoso.local  NRPC  NRPC:NetrLogonGetCapabilities Request, *Encrypted*
+dc2.contoso.local  PC8.contoso.local  NRPC  NRPC:NetrLogonGetCapabilities Response, *Encrypted*
+PC8.contoso.local  dc2.contoso.local  NRPC  NRPC:NetrLogonGetCapabilities Request, *Encrypted*
+dc2.contoso.local  PC8.contoso.local  NRPC  NRPC:NetrLogonGetCapabilities Response, *Encrypted*
+PC8.contoso.local  dc2.contoso.local  NRPC  NRPC:NetrLogonGetDomainInfo Request, *Encrypted*  
+dc2.contoso.local  PC8.contoso.local  NRPC  NRPC:NetrLogonGetDomainInfo Response, partial*Un-Interpreted*
+dc2.contoso.local  PC8.contoso.local  TCP  TCP:[Continuation to #561]Flags=...AP..., SrcPort=49682, DstPort=49735, PayloadLen=148, Seq=225725405 - 225725553, Ack=2988619262
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49735, DstPort=49682, PayloadLen=0, Seq=2988619262, Ack=225725553
 ```
 
 ### Kerberos
@@ -548,26 +548,26 @@ For example, in the following network trace, the client gets a Kerberos TGT for 
 
 ```output
 Source  Destination  Protocol Name  Description
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49744, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=787220943, Ack=0
-dc2.contoso.local  HOST88.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=Microsoft-DS(445), DstPort=49744, PayloadLen=0, Seq=3412289245, Ack=787220944
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49744, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=787220944, Ack=3412289246
-HOST88.contoso.local  dc2.contoso.local  SMB  SMB:C; Negotiate, Dialect = NT LM 0.12, SMB 2.002, SMB 2.???
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   NEGOTIATE (0x0), GUID={AAE1D73A-9C29-A9B8-48C1-BDD3D0C60992}
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   NEGOTIATE (0x0), GUID={04043D5D-1500-D1B7-11F0-0F9CE8E3C36C}
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   NEGOTIATE (0x0), GUID={AAE1D73A-9C29-A9B8-48C1-BDD3D0C60992}
-HOST88.contoso.local  dc1.contoso.local  KerberosV5  KerberosV5:AS Request Cname: puser2 Realm: contoso.local Sname: krbtgt/contoso.local
-dc1.contoso.local  HOST88.contoso.local  KerberosV5  KerberosV5:KRB_ERROR  - KDC_ERR_PREAUTH_REQUIRED (25)
-HOST88.contoso.local  dc1.contoso.local  KerberosV5  KerberosV5:AS Request Cname: puser2 Realm: contoso.local Sname: krbtgt/contoso.local
-dc1.contoso.local  HOST88.contoso.local  KerberosV5  KerberosV5:AS Response Ticket[Realm: CONTOSO.LOCAL, Sname: krbtgt/CONTOSO.LOCAL]
-HOST88.contoso.local  dc1.contoso.local  KerberosV5  KerberosV5:TGS Request Realm: CONTOSO.LOCAL Sname: cifs/DC2.contoso.local
-dc1.contoso.local  HOST88.contoso.local  KerberosV5  KerberosV5:TGS Response Cname: puser2
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   SESSION SETUP (0x1)
-dc2.contoso.local  HOST88.contoso.local  TCP  TCP:Flags=...A...., SrcPort=Microsoft-DS(445), DstPort=49744, PayloadLen=0, Seq=3412289874, Ack=787223156
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   SESSION SETUP (0x1), SessionFlags=0x0
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   TREE CONNECT (0x3), Path=\\DC2.contoso.local\IPC$
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   TREE CONNECT (0x3), TID=0x1
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   IOCTL (0xb), FID=0xFFFFFFFFFFFFFFFF
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   IOCTL (0xb)
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49744, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=787220943, Ack=0
+dc2.contoso.local  PC8.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=Microsoft-DS(445), DstPort=49744, PayloadLen=0, Seq=3412289245, Ack=787220944
+PC8.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49744, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=787220944, Ack=3412289246
+PC8.contoso.local  dc2.contoso.local  SMB  SMB:C; Negotiate, Dialect = NT LM 0.12, SMB 2.002, SMB 2.???
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   NEGOTIATE (0x0), GUID={AAE1D73A-9C29-A9B8-48C1-BDD3D0C60992}
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   NEGOTIATE (0x0), GUID={04043D5D-1500-D1B7-11F0-0F9CE8E3C36C}
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   NEGOTIATE (0x0), GUID={AAE1D73A-9C29-A9B8-48C1-BDD3D0C60992}
+PC8.contoso.local  dc1.contoso.local  KerberosV5  KerberosV5:AS Request Cname: puser2 Realm: contoso.local Sname: krbtgt/contoso.local
+dc1.contoso.local  PC8.contoso.local  KerberosV5  KerberosV5:KRB_ERROR  - KDC_ERR_PREAUTH_REQUIRED (25)
+PC8.contoso.local  dc1.contoso.local  KerberosV5  KerberosV5:AS Request Cname: puser2 Realm: contoso.local Sname: krbtgt/contoso.local
+dc1.contoso.local  PC8.contoso.local  KerberosV5  KerberosV5:AS Response Ticket[Realm: CONTOSO.LOCAL, Sname: krbtgt/CONTOSO.LOCAL]
+PC8.contoso.local  dc1.contoso.local  KerberosV5  KerberosV5:TGS Request Realm: CONTOSO.LOCAL Sname: cifs/DC2.contoso.local
+dc1.contoso.local  PC8.contoso.local  KerberosV5  KerberosV5:TGS Response Cname: puser2
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   SESSION SETUP (0x1)
+dc2.contoso.local  PC8.contoso.local  TCP  TCP:Flags=...A...., SrcPort=Microsoft-DS(445), DstPort=49744, PayloadLen=0, Seq=3412289874, Ack=787223156
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   SESSION SETUP (0x1), SessionFlags=0x0
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   TREE CONNECT (0x3), Path=\\DC2.contoso.local\IPC$
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   TREE CONNECT (0x3), TID=0x1
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   IOCTL (0xb), FID=0xFFFFFFFFFFFFFFFF
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   IOCTL (0xb)
 ```
 
 ```output
@@ -629,20 +629,20 @@ See the following example of successful SMB session setup using NTLM authenticat
 
 ```output
 Source  Destination  Protocol Name  Description
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=......S., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125899379, Ack=0
-dc2.contoso.local  HOST88.contoso.local  TCP  TCP:Flags=...A..S., SrcPort=Microsoft-DS(445), DstPort=49708, PayloadLen=0, Seq=3354173409, Ack=125899380
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125899380, Ack=3354173410
-HOST88.contoso.local  dc2.contoso.local  SMB  SMB:C; Negotiate, Dialect = NT LM 0.12, SMB 2.002, SMB 2.???
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   NEGOTIATE (0x0), GUID={AEEC955A-89D6-C899-40AB-A8E0AA928A2C}
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   NEGOTIATE (0x0), GUID={04043D5D-1500-C3B7-11EF-FA3AB1842093}
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   NEGOTIATE (0x0), GUID={AEEC955A-89D6-C899-40AB-A8E0AA928A2C}
-HOST88.contoso.local  dc2.contoso.local  TCP  TCP:Flags=...A...., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125899757, Ack=3354174038
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   SESSION SETUP (0x1)
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R  - NT Status: System - Error, Code = (22) STATUS_MORE_PROCESSING_REQUIRED  SESSION SETUP (0x1), SessionFlags=0x0
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   SESSION SETUP (0x1)
-dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   SESSION SETUP (0x1), SessionFlags=0x0
-HOST88.contoso.local  dc2.contoso.local  SMB2  SMB2:C   TREE CONNECT (0x3), Path=\\DC2.contoso.local\IPC$
-System  dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   TREE CONNECT (0x3), TID=0x1
+PC8.contoso.local  dc2.contoso.local  TCP   TCP:Flags=......S., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125899379, Ack=0
+dc2.contoso.local  PC8.contoso.local  TCP   TCP:Flags=...A..S., SrcPort=Microsoft-DS(445), DstPort=49708, PayloadLen=0, Seq=3354173409, Ack=125899380
+PC8.contoso.local  dc2.contoso.local  TCP   TCP:Flags=...A...., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125899380, Ack=3354173410
+PC8.contoso.local  dc2.contoso.local  SMB   SMB:C; Negotiate, Dialect = NT LM 0.12, SMB 2.002, SMB 2.???
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   NEGOTIATE (0x0), GUID={AEEC955A-89D6-C899-40AB-A8E0AA928A2C}
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   NEGOTIATE (0x0), GUID={04043D5D-1500-C3B7-11EF-FA3AB1842093}
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   NEGOTIATE (0x0), GUID={AEEC955A-89D6-C899-40AB-A8E0AA928A2C}
+PC8.contoso.local  dc2.contoso.local  TCP   TCP:Flags=...A...., SrcPort=49708, DstPort=Microsoft-DS(445), PayloadLen=0, Seq=125899757, Ack=3354174038
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   SESSION SETUP (0x1)
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R  - NT Status: System - Error, Code = (22) STATUS_MORE_PROCESSING_REQUIRED  SESSION SETUP (0x1), SessionFlags=0x0
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   SESSION SETUP (0x1)
+dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   SESSION SETUP (0x1), SessionFlags=0x0
+PC8.contoso.local  dc2.contoso.local  SMB2  SMB2:C   TREE CONNECT (0x3), Path=\\DC2.contoso.local\IPC$
+System  dc2.contoso.local  PC8.contoso.local  SMB2  SMB2:R   TREE CONNECT (0x3), TID=0x1
 ```
 
 ```output
@@ -668,7 +668,7 @@ System  dc2.contoso.local  HOST88.contoso.local  SMB2  SMB2:R   TREE CONNECT (0x
        + NegState: accept-incomplete (1)
        + Tag2: 
        + OctetStringHeader: 
-       + ResponseToken: NTLM AUTHENTICATE MESSAGEVersion:v2, Domain: contoso, User: puser2, Workstation: HOST88
+       + ResponseToken: NTLM AUTHENTICATE MESSAGEVersion:v2, Domain: contoso, User: puser2, Workstation: PC8
        + Tag3: 
        + OctetStringHeader: 
        + MechListMic: Version: 1
