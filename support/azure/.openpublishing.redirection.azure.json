@@ -6349,7 +6349,8 @@
       {
         "source_path": "kubernetes-fleet/crp-clusterresourceplacementavailable-false.md",
         "redirect_url": "/troubleshoot/azure/kubernetes-fleet/cluster-resource-placement/crp-clusterresourceplacementavailable-false"
-
+      },
+        {
         "source_path": "hpc/batch/error-accountencryptionkeyunavailable.md",
         "redirect_url": "/troubleshoot/azure/hpc/batch/welcome-hpc-batch"
 
