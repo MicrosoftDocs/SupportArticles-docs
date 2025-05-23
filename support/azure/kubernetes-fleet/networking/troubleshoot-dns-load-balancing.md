@@ -26,7 +26,7 @@ This article provides troubleshooting information for Azure Kubernetes Fleet Man
 
 ## Scenario 1: TrafficManagerProfile or Traffic Manager can't be created
 
-This section provides common reasons and solutions for the `TrafficManagerProfile` Kubernetes object and its associated Azure Traffic Manager resource not being created screnarios.
+This section provides common reasons and solutions for the `TrafficManagerProfile` Kubernetes object and its associated Azure Traffic Manager resource not being created scenarios.
 
 To determine the appropriate resolution, check the status of the `TrafficManagerProfile` object on the Fleet Manager hub cluster for the error message.
 
@@ -36,11 +36,11 @@ kubectl get trafficmanagerprofile -n <namespace> <profile-name> -o yaml
 
 ### Error 1: The client does not have authorization to perform action 
 
-This issue may occur if one of the following conditions are met:
+This issue may occur if one of the following conditions is met:
 
 * A nonexistent Azure resource group was specified in the `TrafficManagerProfile` manifest.
-* The resource group is not the same Azure Subscription as the Fleet Manager resource.
-* The Fleet Manager hub cluster identity does not have permission to create and manage Azure Traffic Manager profiles in the specified resource group.
+* The resource group isn't the same Azure Subscription as the Fleet Manager resource.
+* The Fleet Manager hub cluster identity doesn't have permission to create and manage Azure Traffic Manager profiles in the specified resource group.
 
 You can check The `TrafficManagerProfile` status for details of the error. The following is the example of the TrafficManagerProfile status that shows the insufficient permissions issue.
 
@@ -154,7 +154,7 @@ kubectl get trafficmanagerbackend -n <namespace> <backend-name> -o yaml
 
 ### Error 1: TrafficManagerProfile is not found or Invalid trafficManagerProfile
 
-This issue may occur if one of the following conditions are met:
+This issue may occur if one of the following conditions is met:
 
 - The `TrafficManagerBackend` was created in a different namespace than the `TrafficManagerProfile`.
 - The `TrafficManagerProfile` object exists, but the associated Azure Traffic Manager resource couldn't be found.
@@ -194,7 +194,7 @@ status:
 
 ### Error 2: Invalid Service or ServiceExport
 
-This issue may occur if one of the following conditions are met:
+This issue may occur if one of the following conditions is met:
 
 - The `Service` was created in a different namespace than the `TrafficManagerBackend`.
 - The `Service` exists, but the `ServiceExport` was not created in the same namespace as the `TrafficManagerBackend`.
@@ -236,7 +236,7 @@ conditions:
 
 ### Error 3: Azure Traffic Manager profile is not found
 
-This issue may occur if one of the following conditions are met:
+This issue may occur if one of the following conditions is met:
 
 - The `TrafficManagerProfile` was object exists, but the associated Azure Traffic Manager resource couldn't be found.
 - The Fleet Manager hub cluster identity doesn't have permission to create and manage Azure Traffic Manager profiles or endpoints in the specified resource group.
