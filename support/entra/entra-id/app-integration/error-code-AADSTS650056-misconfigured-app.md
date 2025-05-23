@@ -35,9 +35,9 @@ In the following SAML request example, the Issuer value must match the Identifie
 
 In this example, the Identifier URI is `https://www.contoso.com`.
 
-To fix a mismatch, do one of the following:
+To fix a mismatch, do one of the following actions:
 
-- Update the Identifier in the enterprise application to match the Issuer in the SAML request.
+- Update the Identifier in the enterprise application so that it matches the Issuer in the SAML request.
 - Update the SaaS application configuration on the vendor side so that it passes the correct Issuer.
 
 ## Solution 2: Verify application permissions and consent
@@ -70,9 +70,9 @@ If the error persists, go to the next solution.
 
 If the application is designed to access a specific resource, you might not be able to use the **Consent** button in the Azure portal. Instead, you might have to manually generate a consent URL, and then open the URL to grant permissions to the application.
 
-### For the authorization V1 endpoint:
+### For the authorization V1 endpoint
 
-The consent URL will resemble the following text:
+The consent URL resembles the following text:
 
 ```HTTP
 https://login.microsoftonline.com/{Tenant-Id}/oauth2/authorize?response\_type=code
@@ -92,9 +92,9 @@ https://login.microsoftonline.com/contoso.onmicrosoft.com/oauth2/authorize
 &scope=openid
 &prompt=consent
 ```
-### For the authorization V2 endpoint:
+### For the authorization V2 endpoint
 
-The consent URL will resemble the following text:
+The consent URL resembles the following text:
 
 ```HTTP
 https://login.microsoftonline.com/{Tenant-Id}/oauth2/v2.0/authorize
