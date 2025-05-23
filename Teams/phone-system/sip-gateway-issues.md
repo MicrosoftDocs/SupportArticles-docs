@@ -1,9 +1,7 @@
 ---
-title: Common issues when using SIP devices with Teams
-description: Troubleshoots common issues that occur when you use compatible SIP devices with Microsoft Teams.
-ms.date: 10/30/2023
-author: helenclu
-ms.author: luche
+title: Common Issues When Using SIP Devices With Teams
+description: Troubleshoots common issues that occur when you use compatible SIP devices together with Microsoft Teams.
+ms.date: 05/21/2025
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -20,7 +18,7 @@ ms.reviewer: scapero, chasing
 
 # Common issues when you use SIP devices with Teams
 
-SIP Gateway enables your organization to use any compatible SIP device with Microsoft Teams. This article lists some common issues that might occur when you use a compatible SIP device to make and receive calls through Teams, and provides steps to help you troubleshoot these issues.
+SIP Gateway enables your organization to use any compatible SIP device together with Microsoft Teams. This article lists some common issues that might occur when you use a compatible SIP device to make and receive calls through Teams, and provides steps to help you troubleshoot these issues.
 
 ## I can't onboard my device
 
@@ -44,19 +42,19 @@ SIP Gateway enables your organization to use any compatible SIP device with Micr
 ## My device isn't listed in the Teams admin center
 
 1. Make sure that you're using a [compatible SIP device](/microsoftteams/sip-gateway-plan#compatible-devices).
-1. Verify that you've successfully onboarded the device to SIP Gateway. For more information, see [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
-1. Make sure that you've [signed in](/microsoftteams/sip-gateway-configure#user-pairing-and-sign-in) to the device at least one time.
+1. Verify that you successfully onboarded the device to SIP Gateway. For more information, see [Configure SIP Gateway](/microsoftteams/sip-gateway-configure).
+1. Make sure that you [signed in](/microsoftteams/sip-gateway-configure#user-pairing-and-sign-in) to the device at least one time.
 
 ## My device is listed in the Teams admin center, but shows wrong state
 
 The SIP device state isn't accurately reflected if the device user isn't signed in. Therefore, check whether you're signed in to the device.
 
 - If you're signed in, refresh the Teams admin center to display the updated state.
-- If you're signed out, the device will appear as offline.
+- If you're signed out, the device appears as offline.
 
 ## I can't sign in to my device remotely
 
-1. Verify that you've [enrolled the device](/microsoftteams/sip-gateway-configure#provision-and-enroll-sip-devices-as-common-area-phones) correctly.
+1. Verify that you [enrolled the device](/microsoftteams/sip-gateway-configure#provision-and-enroll-sip-devices-as-common-area-phones) correctly.
 1. Try [local sign-in](/microsoftteams/sip-gateway-configure#user-pairing-and-sign-in).
 
 ## My device signs itself out
@@ -71,7 +69,7 @@ The SIP device state isn't accurately reflected if the device user isn't signed 
 
 ## My device shows the wrong language
 
-1. [Setting the SIP device's UI language](/microsoftteams/sip-gateway-configure#set-a-sip-devices-ui-language) is done on the SIP Gateway provisioning server. Check the language code string in the provisioning server URL. For example, `http://emea.ipp.sdg.teams.microsoft.com/lang_de` sets the language to German.
+1. You can [set the SIP device's UI language](/microsoftteams/sip-gateway-configure#set-a-sip-devices-ui-language) on the SIP Gateway provisioning server. Check the language code string in the provisioning server URL. For example, `http://emea.ipp.sdg.teams.microsoft.com/lang_de` sets the language to German.
 1. Check the device's web application. For more information, see the device manufacturer documentation.
 
 ## I can't register my device to Teams
@@ -91,6 +89,12 @@ The SIP device state isn't accurately reflected if the device user isn't signed 
 1. Check whether your device is registered.
 1. [Restart your device](/microsoftteams/sip-gateway-configure#restart-a-sip-device), and try again.
 1. Test whether you can receive the same call (from the same remote address) in the Teams app.
+
+## I can't enroll my device by using a one-time verification code
+
+Currently, enrolling SIP devices by dialing \*55\* followed by a [one-time verification code](/microsoftteams/devices/sip-gateway-configure#provision-and-enroll-sip-devices-as-common-area-phones) isn't available in the GCC environment. 
+
+To work around this issue, use the [Zero Touch Common Area Phone sign-in](/microsoftteams/devices/sip-gateway-configure#zero-touch-common-area-phone-sign-in) method.
 
 ## More information
 
