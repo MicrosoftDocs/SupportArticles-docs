@@ -59,7 +59,7 @@ This scenario collects basic information such as storage and hardware configurat
 
 - Storage information
 
-- Azure Virtual Machine Configuration (collected using [Azure Instance Metadata Service](/azure/virtual-machines/windows/instance-metadata-service)
+- Azure Virtual Machine Configuration (collected using [Azure Instance Metadata Service](/azure/virtual-machines/windows/instance-metadata-service))
 
 - List of running processes, Disk, Memory, and CPU usage
 
