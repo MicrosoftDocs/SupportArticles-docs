@@ -1,5 +1,5 @@
 ---
-title: Resolve installation issues in the new Outlook for Windows
+title: Resolve Installation Issues in the New Outlook for Windows
 description: Provides instructions to resolve installation issues with the new Outlook for Windows.
 author: cloud-writer
 ms.author: meerak
@@ -17,11 +17,11 @@ ms.reviewer: janellem
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 05/20/2025
+ms.date: 05/23/2025
 ---
 # Resolve installation issues in the new Outlook for Windows
 
-Admins whose users encountered difficulties in installing new Outlook might have policies in place that prevent app download and installation.
+Admins whose users encountered difficulties in installing the new Outlook might have policies in place that prevent app download and installation.
 
 Common scenarios include users attempting to switch from Desktop Outlook but finding the toggle reverts and new Outlook doesn't launch.
 
@@ -32,9 +32,7 @@ Registry keys set by Group Policy or non-Microsoft tools could block the MSIX pa
 The notable registry keys impacting the installation of new Outlook's MSIX package include:
 
 - `BlockNonAdminUserInstall`
-
 - `AllowAllTrustedApps`
-
 - `AllowDevelopmentWithoutDevLicense`
 
 > [!IMPORTANT]
@@ -43,25 +41,20 @@ The notable registry keys impacting the installation of new Outlook's MSIX packa
 The registry keys can be found at one of these locations:
 
 - `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock`
-
 - `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Appx`
 
 There are a few policies that could alter these registry keys and block app installation in your organization due to restricted policy set by the admins. Some of the known group policies that could prevent installation include:
 
 - Prevent non-admin users from installing packaged Windows apps
-
 - Allow all trusted apps to install (disabled)
 
 To check this setting for your computer:
 
 1. In Windows, search for **Edit Group Policy** or right-click the Windows Key and select **Run** > **gpedit.msc**.
-
 1. This command opens the **Local Group Policy Editor** screen.
-
 1. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **App package Deployment** to check settings for these policies:
 
     - Prevent non-admin users from installing packaged Windows apps
-
     - Allow all trusted apps to install
 
 1. Make sure that value for these settings is set as follows:
@@ -76,7 +69,6 @@ To check this setting for your computer:
 To download, install and get continuous updates for new Outlook, make sure proxy and firewall isn't blocking access to the Microsoft Store
 
 - `https://res.cdn.office.net`
-
 - `https://res.cdn.office.net/nativehost/5mttl/installer/`
 
 ## Check executables
@@ -84,9 +76,7 @@ To download, install and get continuous updates for new Outlook, make sure proxy
 Ensure there are no security policies or software blocking executables from running in the user's temp directory.
 
 - Examples of security programs include: AppLocker, Anti-Virus, Group Policy, non-Microsoft security software.
-
 - Classic Outlook downloads the installer to %TEMP%, which is almost always inside of the C:\Users\ directory unless explicitly configured otherwise. If they're blocking exes in that directory, Desktop Outlook fails to start the installer.
-
 - **NewOutlookInstaller.exe** is the filename that needs to execute.
 
 ## Check Download mode
@@ -108,11 +98,8 @@ Download mode dictates which download sources clients are allowed to use when do
 For organizations that disable access to the Windows Store, the installer can be directly accessed from the Office CDN. To install new Outlook on a single computer with many users, follow these steps:
 
 1. Download the [.exe installer](https://go.microsoft.com/fwlink/?linkid=2207851).
-
 1. Launch PowerShell 7 as an administrator: Right-click the PowerShell icon and choose Run as Administrator.
-
 1. Navigate to where the Setup.exe file is located.
-
 1. Run the following command:
 
     ```powershell
@@ -124,7 +111,6 @@ For organizations that disable access to the Windows Store, the installer can be
 Install new Outlook via Windows Package Manager (winget), when Microsoft Store isn't blocked:
 
 1. Open PowerShell by pressing Windows + X and select Terminal (Windows 10 users select PowerShell).
-
 1. Enter the following command to install the Microsoft Store version of new Outlook:
 
     ```powershell
