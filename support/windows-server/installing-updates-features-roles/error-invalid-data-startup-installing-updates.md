@@ -1,6 +1,6 @@
 ---
 title: ERROR_INVALID_DATA error after installing Windows updates
-description: Helps resolve error 0x8007000D (ERROR_INVALID_DATA) at system startup after installing Windows updates.
+description: Helps resolve error 0x8007000d (ERROR_INVALID_DATA) at system startup after installing Windows updates.
 ms.date: 05/23/2025
 manager: dcscontentpm
 audience: itpro
@@ -10,11 +10,11 @@ ms.custom:
 - sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
 - pcy:WinComm Devices Deploy
 ---
-# Error 0x8007000D at startup after installing updates
+# Error 0x8007000d at startup after installing updates
 
-This article helps resolve an issue in which you receive error 0x8007000D (ERROR_INVALID_DATA) at the system startup after installing Windows updates.
+This article helps resolve an issue in which you receive the 0x8007000d (ERROR_INVALID_DATA) error at the system startup after installing Windows updates.
 
-After you install an update and restart the system, the system performs a rollback at the system startup, and you receive error 0x8007000D (ERROR_INVALID_DATA).
+After you install an update and restart the system, the system performs a rollback at the system startup, and you receive the 0x8007000d (ERROR_INVALID_DATA) error.
 
 This issue occurs because the database of performance counters is corrupted.
 
