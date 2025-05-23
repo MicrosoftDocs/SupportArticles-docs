@@ -49,8 +49,10 @@ items:
             href: app-insights/data/how-to-update-third-party-server-configuration.md
           - name: Node.js
             href: app-insights/data/troubleshoot-app-insights-nodejs.md
-  - name: Application Insights features
+  - name: Application Insights experiences
     items:
+    - name: Troubleshoot Application map issues
+      href: app-insights/troubleshoot-application-map-issues.md
     - name: Troubleshoot Azure Application Insights availability monitoring
       items:
       - name: Availability monitoring common issues FAQ
@@ -75,7 +77,6 @@ items:
       href: app-insights/agent/status-monitor-v2-troubleshoot.md
     - name: Troubleshoot Azure Monitor's Change Analysis
       href: app-insights/agent/change-analysis-troubleshoot.md
-
 - name: Log Analytics
   items:
   - name: Log Analytics workspaces
