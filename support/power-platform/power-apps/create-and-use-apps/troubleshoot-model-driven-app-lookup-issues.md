@@ -40,7 +40,7 @@ If the Lookup's search results are missing items or include unexpected items, in
 > [!NOTE]
 >
 > - Selecting the text area (the input box of the Lookup) will show a list of the most recently used items, not a fresh search.
-> - Selecting the magnifying glass will trigger a search based on your input, showing results that match your search term. You can configure the control so that it always performs a search when you select the text area, instead of showing recent items.
+> - Selecting the magnifying glass will trigger a search based on your input, showing results that match your search terms. You can configure the control to always perform a search when you select the text area, instead of showing recent items.
 
 ## Views are incorrect
 
