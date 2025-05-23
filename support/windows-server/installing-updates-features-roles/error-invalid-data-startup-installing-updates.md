@@ -1,6 +1,6 @@
 ---
 title: ERROR_INVALID_DATA error after installing Windows updates
-description: Helps resolve error 0x8007000d (ERROR_INVALID_DATA) at system startup after installing Windows updates.
+description: Helps resolve the 0x8007000d (ERROR_INVALID_DATA) error at system startup after installing Windows updates.
 ms.date: 05/23/2025
 manager: dcscontentpm
 audience: itpro

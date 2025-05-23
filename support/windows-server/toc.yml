@@ -3090,6 +3090,8 @@ items:
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
     - name: Troubleshoot Windows Update error 0x80070490
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
+    - name: Error 0x8007000d after installing Windows updates
+      href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
     - name: Error 0x800f0831 when installing Windows updates
@@ -3098,8 +3100,6 @@ items:
       href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
     - name: Error C0190003 after installing updates
       href: ./installing-updates-features-roles/error-c0190003-install-updates-restart-computer.md
-    - name: ERROR_INVALID_DATA error after installing Windows updates
-      href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
     - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
       href: ./installing-updates-features-roles/failed-changed-absent-state-status-0x800f0922-error.md
     - name: Fail to install Network Policy Server role
