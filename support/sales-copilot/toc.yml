@@ -2,8 +2,6 @@
   href: welcome-sales-copilot.yml
 - name: CRM permissions and configurations
   items:
-    - name: '"Access denied for this user" error'
-      href: crm-permissions-and-configurations/access-denied-sf-ss.md
     - name: '"Align missing fields" error'
       href: crm-permissions-and-configurations/align-missing-fields-error.md      
     - name: Can't update records due to missing record access in Salesforce CRM
@@ -14,6 +12,8 @@
       href: crm-permissions-and-configurations/update-settings-to-save-emails-error.md
     - name: Can't save email to CRM if enhanced email isn't enabled in Salesforce CRM
       href: crm-permissions-and-configurations/update-settings-in-saleforce-error.md
+    - name: Errors that occur when accessing Salesforce with server-to-server flow
+      href: crm-permissions-and-configurations/errors-when-accessing-salesforce-with-server-to-server-flow.md
     - name: '"Fix mailbox errors in Dynamics 365" error'
       href: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
     - name: Missing privileges error when signing in
@@ -26,16 +26,8 @@
       href: crm-permissions-and-configurations/no-column-error.md
     - name: Salesforce CRM users can't view, edit, or save data in Copilot for Sales
       href: crm-permissions-and-configurations/salesforce-permission-error.md
-    - name: '"Server-to-server authentication failed" error'
-      href: crm-permissions-and-configurations/authentication-failed-sf-ss.md
-    - name: '"Server-to-server authorization failed" error'
-      href: crm-permissions-and-configurations/authorization-failed-sf-ss.md
     - name: '"This contact already exists" error when creating a CRM record'
       href: crm-permissions-and-configurations/duplicate-record-error.md
-    - name: '"Trouble connecting to Salesforce" error'
-      href: crm-permissions-and-configurations/trouble-connect-sf-ss.md
-    - name: '"Try again" error'
-      href: crm-permissions-and-configurations/try-again-sf-ss.md
     - name: You don't have permission for this error
       href: crm-permissions-and-configurations/no-admin-exists-error.md
 - name: Outlook side panel
