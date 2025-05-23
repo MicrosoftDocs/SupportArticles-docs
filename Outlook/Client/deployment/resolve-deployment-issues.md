@@ -17,7 +17,7 @@ ms.reviewer: janellem
 appliesto: 
   - Outlook for Windows
 search.appverid: MET150
-ms.date: 05/20/2025
+ms.date: 05/23/2025
 ---
 # Resolve deployment issues in the new Outlook for Windows
 
