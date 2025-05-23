@@ -1,6 +1,6 @@
 ---
 title: Resolve deployment issues in the new Outlook for Windows
-description: Provides instructions to resolve deployment issues when transitioning to the new Outlook for Windows
+description: Provides instructions to resolve deployment issues when transitioning to the new Outlook for Windows.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
