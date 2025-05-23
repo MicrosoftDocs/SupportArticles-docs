@@ -12,30 +12,22 @@
       href: crm-permissions-and-configurations/update-settings-to-save-emails-error.md
     - name: Can't save email to CRM if enhanced email isn't enabled in Salesforce CRM
       href: crm-permissions-and-configurations/update-settings-in-saleforce-error.md
-    - name: Couldn't assign permission set when enabling Salesforce server-to-server flow
-      href: crm-permissions-and-configurations/assign-perm-set-sf-ss.md
-    - name: Couldn't create user when enabling Salesforce server-to-server flow
-      href: crm-permissions-and-configurations/create-user-sf-ss.md
+    - name: Errors when enabling Salesforce with server-to-server flow
+      href: crm-permissions-and-configurations/errors-enabling-salesforce-server-to-server-flow.md
     - name: '"Fix mailbox errors in Dynamics 365" error'
       href: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
     - name: Missing privileges error when signing in
       href: crm-permissions-and-configurations/missing-privileges-sign-in.md
     - name: '"No access to Dynamics 365" error'
       href: crm-permissions-and-configurations/no-access-to-dynamics-365-error.md
-    - name: '"No changes were made" error when enabling Salesforce server-to-server flow'
-      href: crm-permissions-and-configurations/no-changes-made-sf-ss.md
     - name: '"Required fields are missing" error'
       href: crm-permissions-and-configurations/required-fields-missing.md
-    - name: Profile name already in use when enabling Salesforce server-to-server flow
-      href: crm-permissions-and-configurations/profile-name-already-exists-sf-ss.md
     - name: Salesforce CRM users can't see data in Copilot for Sales
       href: crm-permissions-and-configurations/no-column-error.md
     - name: Salesforce CRM users can't view, edit, or save data in Copilot for Sales
       href: crm-permissions-and-configurations/salesforce-permission-error.md
     - name: '"This contact already exists" error when creating a CRM record'
       href: crm-permissions-and-configurations/duplicate-record-error.md
-    - name: Unexpected errors when enabling Salesforce server-to-server flow
-      href: crm-permissions-and-configurations/enable-error-sf-ss.md
     - name: You don't have permission for this error
       href: crm-permissions-and-configurations/no-admin-exists-error.md
 - name: Outlook side panel
