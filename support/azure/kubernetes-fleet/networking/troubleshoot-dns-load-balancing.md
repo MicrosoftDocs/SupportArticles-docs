@@ -14,9 +14,9 @@ This article provides troubleshooting information for Azure Kubernetes Fleet Man
 ## Use Fleet Manager hub cluster to troubleshoot
 
 1. User should have access to the Azure subscription and resource group where the Azure Traffic Manager profile is created.
-2. [Install or upgrade Azure CLI](/cli/azure/install-azure-cli) to version `2.72.0` or later.
+2. [Install or upgrade Azure CLI](/cli/azure/install-azure-cli) to version 2.72.0 or later.
 3. Make sure that the Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool is installed. You can install kubectl by running the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
-4. Install the **fleet** Azure CLI extension using the `az extension add`command, making sure your version is at least `1.5.2`.
+4. Install the **fleet** Azure CLI extension using the `az extension add`command, making sure your version is at least 1.5.2.
 
     ```azurecli-interactive
     az extension add --name fleet
@@ -42,7 +42,7 @@ This issue may occur if one of the following conditions is met:
 * The resource group isn't the same Azure Subscription as the Fleet Manager resource.
 * The Fleet Manager hub cluster identity doesn't have permission to create and manage Azure Traffic Manager profiles in the specified resource group.
 
-You can check The `TrafficManagerProfile` status for details of the error. The following is the example of the TrafficManagerProfile status that shows the insufficient permissions issue.
+You can check The `TrafficManagerProfile` status for details of the error. The following is the example of the `TrafficManagerProfile` status that shows the insufficient permissions issue.
 
 ```yml
 status:
@@ -81,7 +81,7 @@ To resolve this issue, follow these steps:
 
 This issue may occur if the DNS prefix generated is already in use by another Azure Traffic Manager profile. The DNS prefix consists of the namespace and the `metadata.name` field in the `TrafficManagerProfile` manifest. For example, if the namespace is `team-a` and the `metadata.name` is `webapp`, the DNS prefix would `team-a-webapp`.
 
-The following is the example of the TrafficManagerProfile status that shows the Domain name is not available issue.
+The following is the example of the `TrafficManagerProfile` status that shows the Domain name is not available issue.
 
 ```yml
 status:
@@ -105,7 +105,7 @@ To resolve this issue, use `nslookup` or a similar tool to check if the full DNS
 
 This issue may occur if more than 200 Traffic Manager Profiles or Endpoints within a single Azure Subscription.
 
-The following is the example of the TrafficManagerProfile status that shows the Azure Traffic Manager profile limits reached issue.
+The following is the example of the `TrafficManagerProfile` status that shows the Azure Traffic Manager profile limits reached issue.
 
 ```yml
 status:
@@ -125,7 +125,7 @@ Consider to delete unused profiles or requesting an increase in the limit. For m
 
 This issue may occur if the Azure Traffic Manager service returns an error when creating the profile.
 
-The following is the example of the TrafficManagerProfile status that shows this error.
+The following is the example of the `TrafficManagerProfile` status that shows this error.
 
 ```yml
 status:
@@ -144,7 +144,7 @@ If the error persists, check the Azure Traffic Manager service health.
 
 ## Scenario 2: TrafficManagerBackend can't be created
 
-This section provides common causes and recommended solutions for scenarios that the TrafficManagerBackend Kubernetes can't be created.
+This section provides common causes and recommended solutions for scenarios that the `TrafficManagerBackend` Kubernetes can't be created.
 
 To determine the appropriate resolution, check the status of the `TrafficManagerBackend` object on the Fleet Manager hub cluster for the error message.
 
@@ -159,7 +159,7 @@ This issue may occur if one of the following conditions is met:
 - The `TrafficManagerBackend` was created in a different namespace than the `TrafficManagerProfile`.
 - The `TrafficManagerProfile` object exists, but the associated Azure Traffic Manager resource couldn't be found.
 
-The following are the examples of the TrafficManagerBackend status that shows this error.
+The following are the examples of the `TrafficManagerBackend` status that show the error.
   
 ```yml
 status:
@@ -188,9 +188,11 @@ status:
 
 ### Solution
 
-* Make sure to create the `TrafficManagerBackend` in the same namespace as the `TrafficManagerProfile`.
-* Ensure that the `Programmed` condition of `TrafficManagerProfile` is `Accepted`. If not, check the profile definition for validity and resubmit.
-* Ensure the Azure Traffic Manager resource exists. To recreate the resource, delete the `TrafficManagerProfile` from the Fleet Manager hub cluster and reapply it.
+To resolve this issue, follow these steps:
+
+1. Make sure to create the `TrafficManagerBackend` in the same namespace as the `TrafficManagerProfile`.
+2. Ensure that the `Programmed` condition of `TrafficManagerProfile` is `Accepted`. If not, check the profile definition for validity and resubmit.
+3. Ensure the Azure Traffic Manager resource exists. To recreate the resource, delete the `TrafficManagerProfile` from the Fleet Manager hub cluster and reapply it.
 
 ### Error 2: Invalid Service or ServiceExport
 
@@ -201,7 +203,7 @@ This issue may occur if one of the following conditions is met:
 - The `Service` isn't defined as a `LoadBalancer` type.
 - The `Service` isn't exposed via an Azure public IP address or doesn't have a DNS name assigned.
 
-The following are the examples of the TrafficManagerBackend status that shows the errors:
+The following are the examples of the `TrafficManagerBackend` status that shows the errors:
 
 ```yml
 status:
@@ -231,8 +233,10 @@ conditions:
 
 ### Solution
 
-* Ensure at least one `Service` of a member cluster is exported in the same namespace of the `TrafficManagerBackend` by creating `ServiceExport`.
-* Ensure that the exported `Service` is load balancer type and exposed via an Azure public IP address, which must have a DNS name assigned to be used in a Traffic Manager profile.
+To resolve this issue, follow these steps:
+
+1. Ensure at least one `Service` of a member cluster is exported in the same namespace of the `TrafficManagerBackend` by creating `ServiceExport`.
+2. Ensure that the exported `Service` is load balancer type and exposed via an Azure public IP address, which must have a DNS name assigned to be used in a Traffic Manager profile.
 
 ### Error 3: Azure Traffic Manager profile is not found
 
@@ -241,7 +245,7 @@ This issue may occur if one of the following conditions is met:
 - The `TrafficManagerProfile` was object exists, but the associated Azure Traffic Manager resource couldn't be found.
 - The Fleet Manager hub cluster identity doesn't have permission to create and manage Azure Traffic Manager profiles or endpoints in the specified resource group.
 
-The following is the example of the TrafficManagerBackend status that shows the error:
+The following is the example of the `TrafficManagerBackend` status that shows the error:
 
 ```yml
 status:
@@ -256,14 +260,16 @@ conditions:
 
 ### Solution
 
-* Ensure the Azure Traffic Manager resource exists. To recreate the resource, delete the `TrafficManagerProfile` from the Fleet Manager hub cluster and reapply it.
-* Check the Fleet Manager hub cluster identity has been granted the `Traffic Manager Contributor` role scoped to the resource group. For more information, see [Configure Fleet Manager permissions](/azure/kubernetes-fleet/howto-dns-load-balancing#configure-fleet-manager-permissions).
+To resolve this issue, follow these steps:
+
+1. Ensure the Azure Traffic Manager resource exists. To recreate the resource, delete the `TrafficManagerProfile` from the Fleet Manager hub cluster and reapply it.
+2. Check the Fleet Manager hub cluster identity has been granted the `Traffic Manager Contributor` role scoped to the resource group. For more information, see [Configure Fleet Manager permissions](/azure/kubernetes-fleet/howto-dns-load-balancing#configure-fleet-manager-permissions).
 
 ### Error 4: Azure Traffic Manager profile limits reached
 
 This issue may occur if more than 200 Azure Traffic Manager Endpoints would be created within a single Azure Subscription.
 
-The following is the example of the TrafficManagerBackend status that shows the error:
+The following is the example of the `TrafficManagerBackend` status that shows the error:
 
 ```yml
 status:
