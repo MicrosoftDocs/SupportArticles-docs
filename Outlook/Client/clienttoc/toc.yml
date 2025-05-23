@@ -173,6 +173,8 @@
           href: ../deployment/manage-distribute-outlook-vba-project.md
         - name: Policy template deploys DisableCrossAccountCopy as REG_EXPAND_SZ
           href: ../deployment/policy-template-deploys-disablecrossaccountcopy-as-reg-expand-sz.md
+        - name: Resolve deployment issues
+          href: ../deployment/resolve-deployment-issues.md
         - name: Settings unexpectedly change after removing Group Policy settings
           href: ../deployment/settings-unexpectedly-change-deleting-group-policy-settings.md
         - name: Unable to publish a form
@@ -219,6 +221,8 @@
           href: ../installation/installing-calendar-printing-assistant-fails.md
         - name: Map classic Outlook policies to new Outlook
           href: ../installation/map-classic-outlook-policies-to-new-outlook.md
+        - name: Resolve installation issues
+          href: ../installation/resolve-installation-issues.md
         - name: Upgrade to Office 2016 fails
           href: ../installation/upgrade-errors-office-2016.md
     - name: Junk Email
