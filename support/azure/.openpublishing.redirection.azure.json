@@ -6323,7 +6323,7 @@
       },
       {
         "source_path": "hpc/batch/error-accountencryptionkeyunavailable.md",
-        "redirect_url": "troubleshoot/azure/hpc/batch/welcome-hpc-batch"
+        "redirect_url": "/troubleshoot/azure/hpc/batch/welcome-hpc-batch"
       }
   ]
 }
