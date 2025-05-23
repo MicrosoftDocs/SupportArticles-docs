@@ -3,7 +3,7 @@ title: Troubleshoot Application Map Issues
 description: Provides general recommendations and specific suggestions for Application map issues.
 ms.date: 05/23/2025
 ms.service: azure-monitor
-ms.custom: sap:Application Map doesn't show performance of my app's components (Retired)
+ms.custom: sap:Application Map doesn't show performance of my app's components
 ms.reviewer: aaronmax, v-weizhu
 ---
 # Troubleshoot Application map issues
