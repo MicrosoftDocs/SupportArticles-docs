@@ -1,6 +1,6 @@
 ---
 title: Errors When Accessing Salesforce With Server-to-server Flow
-description: Troubleshoot and resolve errors that occur when accessing Salesforce with server-to-server flow or during setup.
+description: Troubleshoot and resolve errors that occur when accessing Salesforce with server-to-server flow or during setup in Microsoft Copilot for Sales.
 ms.date: 05/23/2025
 author: sbmjais
 ms.author: shjais
@@ -9,7 +9,7 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Errors that occur when accessing Salesforce with server-to-server flow
 
-This article helps you troubleshoot and resolve an error that might occur when a user tries to access Salesforce with server-to-server flow or when an administrator sets up the server-to-server flow for Salesforce.
+This article helps you troubleshoot and resolve an error that might occur when a user tries to access Salesforce with server-to-server flow or when an administrator sets up the server-to-server flow for Salesforce in Microsoft Copilot for Sales.
 
 ## Who is affected?
 
@@ -20,7 +20,7 @@ This article helps you troubleshoot and resolve an error that might occur when a
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce        |
-|**Users**     | All users or Admin  |
+|**Users**     | All users or administrators   |
 
 ## "Access denied for this user" error
 
@@ -117,7 +117,7 @@ During Salesforce server-to-server flow setup, a connected app is deployed to th
 
 To resolve this issue, contact [Microsoft support](/microsoft-sales-copilot/get-support) and provide the following information:
 
-- Whether the "Copilot for Sales Connected App" was updated accidentally.
+- Whether the "Copilot for Sales Connected App" connected app was updated accidentally.
 - If the connected app is still available, provide its ID.
 
 #### Error 2: Session ID isn't allowed for use REST API access at Salesforce
@@ -161,7 +161,7 @@ This error occurs when the client ID of the Salesforce connected app is invalid.
 
 To resolve this issue, contact [Microsoft support](/microsoft-sales-copilot/get-support) and provide the following information:
 
-- Whether the "Copilot for Sales Connected App" was deleted accidentally.
+- Whether the "Copilot for Sales Connected App" connected app was deleted accidentally.
 - If the connected app is still available, provide its ID.
 
 ## "Try again" error
