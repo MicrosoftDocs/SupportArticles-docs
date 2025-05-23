@@ -1,4 +1,4 @@
----
+![image](https://github.com/user-attachments/assets/8d72a386-7b8e-4d18-8593-303fe7c43b0c)---
 title: Error AADSTS650056 - Misconfigured application
 description: Provides solutions for the AADSTS650056 misconfiguration error.
 ms.date: 05/19/2025
@@ -25,7 +25,7 @@ This error typically occurs for one of the following reasons:
 - The application doesn't have the required permissions to call Microsoft Graph APIs.
 - The admin hasn't consented to the permissions for the application on behalf of the tenant.
 
-## Solution 1 for SAML Authentication flows - The Issuer provided in the SAMLRequest is not valid
+## Solution 1: The Issuer provided in the SAMLRequest is not valid （for SAML Authentication flows）
 
 In the following SAML request example, the Issuer value must match the Identifier (Entity ID) that's configured in the enterprise application. This value is also known as the *Identifier URI* or *App ID URI*. For example, a SAML request might resemble the following request:
 
