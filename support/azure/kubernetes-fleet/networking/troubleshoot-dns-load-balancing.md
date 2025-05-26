@@ -5,6 +5,7 @@ author: sjwaight
 ms.author: simonwaight
 ms.service: azure-kubernetes-fleet-manager
 ms.date: 05/13/2025
+ms.custom: sap:Creation of fleet resource
 ---
 
 # Troubleshoot Azure Kubernetes Fleet Manager DNS load balancing
