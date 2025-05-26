@@ -54,7 +54,7 @@ Starting in Windows Server 2019 and Windows 10, version 1809, you can disable WP
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp\DisableWpad
 ```
 
-After you disable WPAD, you must manually configure all proxies. The registry key stops WPAD detection for all proxy detection calls made through the Windows HTTP Services (WinHTTP) application programming interface (API). Even with this registry key set, applications can still resolve the name "WPAD" by calling the Domain Name System (DNS) directly. For example, running `nslookup WPAD` still resolves the name by using DNS.
+After you disable WPAD, you must manually configure all proxies. The registry key stops WPAD detection for all proxy detection calls made through the Windows HTTP Services (WinHTTP) application programming interface (API). Even with this registry key set, applications can still resolve the name "WPAD" by calling Domain Name System (DNS) directly. For example, running `nslookup WPAD` still resolves the name by using DNS.
 
 > [!IMPORTANT]
 > In addition to setting the registry key, WPAD should also be disabled in the Windows **Settings** UI, because third-party apps and Internet browsers may rely on these settings for Proxy Auto-Discovery.
