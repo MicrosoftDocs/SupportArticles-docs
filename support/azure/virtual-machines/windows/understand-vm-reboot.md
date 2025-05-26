@@ -10,7 +10,7 @@ ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services
-ms.date: 05/16/2025
+ms.date: 05/26/2025
 ms.author: genli
 ms.reviewer: yutorigo, sinhamanisha, justingross, v-weizhu
 ms.custom: sap:VM restarted or stopped unexpectedly
