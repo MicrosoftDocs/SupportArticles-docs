@@ -6,6 +6,9 @@ manager: dcscontentpm
 ms.date: 04/02/2025
 ms.reviewer: wincicuex, erikje
 ms.topic: troubleshooting
+ms.custom:
+- pcy:Session connectivity\Users are not able to make a connection
+- sap:WinComm User Experience
 ---
 # Windows 365 Link connection fails with "Cloud PC does not support Entra ID single sign-on"
 

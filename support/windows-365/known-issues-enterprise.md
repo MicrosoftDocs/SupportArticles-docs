@@ -5,7 +5,9 @@ manager: dcscontentpm
 ms.date: 05/23/2025
 ms.topic: troubleshooting
 ms.reviewer: ivivano, erikje, scottduf
-ms.custom: get-started
+ms.custom:
+- pcy:Onboarding issues
+- sap:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

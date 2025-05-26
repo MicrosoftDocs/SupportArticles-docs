@@ -1,43 +1,47 @@
 items:
 - name: Windows 365
   href: ./welcome-windows-365.yml
-- name: Azure network connection health checklist
-  href: ./health-checks.md
-- name: Connection errors
-  href: ./connection-errors.md
-- name: Connection fails with "Cloud PC does not support Entra ID single sign-on"
-  href: connection-fails-with-cloud-pc-does-not-support-entra-id-single-sign-on-sso.md
-- name: Connection fails with "connection to the remote PC was lost"
-  href: connection-fails-with-connection-to-the-remote-pc-was-lost.md
-- name: Connection fails with "Failed to open a Microsoft Entra ID credential prompt"
-  href: connection-fails-with-failed-to-open-a-microsoft-entra-id-credential-prompt.md
-- name: Connection fails with "an interactive window could not be shown"
-  href: ./connection-error-interactive-window-not-shown.md
-- name: Known issues with Windows 365 Business
-  href: ./known-issues.md
-- name: Known issues with Windows 365 Enterprise and Frontline
-  href: ./known-issues-enterprise.md
-- name: OOBE fails with "Something went wrong"
-  href: ./oobe-fails-error-something-wrong.md
-- name: OOBE fails with "An error has occurred"
-  href: ./oobe-fails-error-has-occurred.md
-- name: Provisioning errors
-  href: ./provisioning-errors.md
-- name: Troubleshoot Azure network connections
-  href: ./troubleshoot-azure-network-connection.md
-- name: Troubleshoot partner connectors
-  href: ./troubleshoot-partner-connector.md
-- name: Troubleshoot Windows 365 app
-  href: ./troubleshoot-windows-365-app.md
-- name: Troubleshoot Windows 365 Boot
-  href: ./troubleshoot-windows-365-boot.md
-- name: Troubleshoot Windows 365 GPU drivers
-  href: troubleshoot-windows-365-gpu-drivers.md
-- name: Windows 365 Boot known issues
-  href: ./windows-365-boot-known-issues.md
-- name: Troubleshoot Windows 365 Enterprise Cloud PC grace period issues
-  href: ./troubleshoot-windows-365-enterprise-cloud-pcs-grace-period-issue.md
-- name: Windows 365 setup issues
-  href: ./troubleshoot-windows-365-business.md
-- name: Windows 365 Switch known issues
-  href: ./windows-365-switch-known-issues.md
+- name: Windows 365 Business
+  items:
+  - name: Configuration and Management
+    href: troubleshoot-windows-365-business.md
+  - name: Onboarding issues
+    href: known-issues.md
+- name: Windows 365 Enterprise
+  items:
+  - name: Azure Network Connection
+    href: health-checks.md
+  - name: Azure Network Connection
+    href: troubleshoot-azure-network-connection.md
+  - name: Configuration and Management
+    href: troubleshoot-windows-365-app.md
+  - name: Configuration and Management
+    href: oobe-fails-error-has-occurred.md
+  - name: Configuration and Management
+    href: oobe-fails-error-something-wrong.md
+  - name: Onboarding issues
+    href: known-issues-enterprise.md
+  - name: Partner Solutions for W365
+    href: troubleshoot-partner-connector.md
+  - name: Performance Issues
+    href: troubleshoot-windows-365-gpu-drivers.md
+  - name: Provisioning
+    href: troubleshoot-windows-365-enterprise-cloud-pcs-grace-period-issue.md
+  - name: Provisioning
+    href: provisioning-errors.md
+  - name: Session connectivity
+    href: connection-errors.md
+  - name: Session connectivity
+    href: connection-fails-with-cloud-pc-does-not-support-entra-id-single-sign-on-sso.md
+  - name: Session connectivity
+    href: connection-fails-with-failed-to-open-a-microsoft-entra-id-credential-prompt.md
+  - name: Session connectivity
+    href: connection-fails-with-connection-to-the-remote-pc-was-lost.md
+  - name: Session connectivity
+    href: connection-error-interactive-window-not-shown.md
+  - name: Windows 365 Boot
+    href: troubleshoot-windows-365-boot.md
+  - name: Windows 365 Boot
+    href: windows-365-boot-known-issues.md
+  - name: Windows 365 Switch
+    href: windows-365-switch-known-issues.md

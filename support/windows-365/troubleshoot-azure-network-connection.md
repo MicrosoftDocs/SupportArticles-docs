@@ -1,12 +1,13 @@
 ---
-# required metadata
 title: Troubleshoot Azure network connections
 description: Troubleshoot Azure network connections in Windows 365.
 manager: dcscontentpm
 ms.date: 01/20/2025
 ms.topic: troubleshooting
 ms.reviewer: ericor, erikje
-ms.custom: intune-azure, get-started
+ms.custom:
+- pcy:Azure Network Connection\VNET Setup and Config Issues
+- sap:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2
