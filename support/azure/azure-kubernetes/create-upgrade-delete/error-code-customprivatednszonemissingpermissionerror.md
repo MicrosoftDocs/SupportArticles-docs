@@ -28,7 +28,11 @@ An AKS cluster create or update operation fails and returns the following error 
 
 ## Cause
 
-Before AKS runs a cluster create or update operation for a private cluster that uses a [custom private DNS zone](/azure/aks/private-clusters#configure-a-private-dns-zone), it checks whether the cluster's managed identity or service principal has the required permissions to control the private DNS zone. If AKS doesn't find the necessary permissions (for example, if the managed identity or service principal has been deleted, or if it has been deleted and recreated with the same name, or if an incorrect managed identity is being passed.), it blocks the operation so that the cluster doesn't enter a failed state.
+Before AKS runs a cluster create or update operation for a private cluster that uses a [custom private DNS zone](/azure/aks/private-clusters#configure-a-private-dns-zone), it checks whether the cluster's managed identity or service principal has the required permissions to control the private DNS zone. If AKS can't find the necessary permissions in cases like the following ones, it blocks the operation so that the cluster doesn't enter a failed state:
+
+- The managed identity or service principal has been deleted.
+- The managed identity or service principal has been re-created with the same name.
+- An incorrect managed identity is passed.
 
 ## Solution
 
