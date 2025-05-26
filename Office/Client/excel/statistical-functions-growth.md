@@ -70,7 +70,7 @@ GROWTH(known_y's, known_x's, new_x's, constant)
 
 The arguments, known_y's, known_x's, and new_x's must be arrays or cell ranges that have related dimensions. If known_y's is one column by m rows, then known_x's is c columns by m rows where c is greater than or equal to one. C is the number of predictor variables; m is the number of data points. New_x's must then be c columns by r rows where r is greater than or equal to one. (Similar relationships in dimensions must hold if data is laid out in rows instead of columns.) Constant is a logical argument that must be set to TRUE or FALSE (or 0 or 1 that Excel interprets as FALSE or TRUE, respectively). The last three arguments to GROWTH are all optional; see the GROWTH Help file for options of omitting the second argument, third argument, or both; omitting the fourth argument is interpreted as TRUE.
 
-The most common usage of GROWTH includes two ranges of cells that contain the data, such as GROWTH(A1:A100, B1:F100, B101:F108, TRUE). Because there is typically more than one predictor variable, the second argument in this example contains multiple columns. In this example, there are 100 subjects, one dependent variable value (known_y) for each subject, and five dependent variable values (known_x's) for each subject. There are eight more hypothetical subjects where you want to use GROWTH to compute predicted y values.
+The most common usage of GROWTH includes two ranges of cells that contain the data, such as GROWTH(A1:A100, B1:F100, B101:F108, TRUE). Because there's typically more than one predictor variable, the second argument in this example contains multiple columns. In this example, there are 100 subjects, one dependent variable value (known_y) for each subject, and five dependent variable values (known_x's) for each subject. There are eight more hypothetical subjects where you want to use GROWTH to compute predicted y values.
 
 ### Example of usage
 
@@ -129,7 +129,7 @@ To illustrate the GROWTH function, create a blank Excel worksheet, copy the foll
 > - In Microsoft Office Excel 2007, select the **Home** tab, select **Format** in the **Cells** group and then select **AutoFit Column Width**.
 > - In Excel 2003, point to **Column** on the **Format** menu, and then select **AutoFit Selection**.
 
-Data for GROWTH are in cells A1:C8. (Entries in cells D2:D6 are not part of the data, but are used for illustration below.) Results of GROWTH for two different models for both earlier versions of Excel and for later versions of Excel are presented in cells E10:E16 and I10:116, respectively. Results in cells A10:A16 will correspond to the version of Excel that you are using. For now, focus on the results for Excel 2003 and for later versions of Excel when you investigate how GROWTH calls LOGEST and how GROWTH uses LOGEST results.
+Data for GROWTH are in cells A1:C8. (Entries in cells D2:D6 aren't part of the data, but are used for illustration below.) Results of GROWTH for two different models for both earlier versions of Excel and for later versions of Excel are presented in cells E10:E16 and I10:116, respectively. Results in cells A10:A16 will correspond to the version of Excel that you use. For now, focus on the results for Excel 2003 and for later versions of Excel when you investigate how GROWTH calls LOGEST and how GROWTH uses LOGEST results.
 
 GROWTH and LOGEST can be viewed as interacting in the following steps:
 
@@ -139,18 +139,18 @@ GROWTH and LOGEST can be viewed as interacting in the following steps:
 4. For each new_x's row, the predicted y-value is calculated based on these LOGEST coefficients and the new_x's values in that row.
 5. The calculated value in step 4 is returned in the appropriate cell for GROWTH output that corresponds to that new_x's row.
 
-If GROWTH is to return appropriate results, then LOGEST must generate appropriate results in step 3. Because the evaluation of LOGEST in step 3 requires a call to LINEST, it is essential that LINEST be well behaved. Problems with LINEST in versions of Excel that are earlier than Excel 2003 come from collinear predictor columns. (There are other problems with LINEST and LOGEST in the earlier versions of Excel that occur when the last argument to GROWTH is set to FALSE. However, those problems do not affect the results of GROWTH, and are not discussed here.)
+If GROWTH is to return appropriate results, then LOGEST must generate appropriate results in step 3. Because the evaluation of LOGEST in step 3 requires a call to LINEST, it's essential that LINEST be well behaved. Problems with LINEST in versions of Excel that are earlier than Excel 2003 come from collinear predictor columns. (There are other problems with LINEST and LOGEST in the earlier versions of Excel that occur when the last argument to GROWTH is set to FALSE. However, those problems don't affect the results of GROWTH, and aren't discussed here.)
 
 Predictor columns (known_x's) are collinear if at least one column, c, can be expressed as a sum of multiples of others, c1, c2, and other columns. Column c is frequently called redundant because the information that it contains can be constructed from the columns c1, c2, and other columns. The fundamental principle in the existence of collinearity is that results should be unaffected by whether a redundant column is included in the original data or removed from the original data. Because LINEST in versions of Excel that are earlier than Excel 2003 did not look for collinearity, this principle was easily violated. Predictor columns are almost collinear if at least one column, c, can be expressed as almost equal to a sum of multiples of others, c1, c2, and other columns. In this case "almost equal" means a small sum of squared deviations of entries in c from corresponding entries in the weighted sum of c1, c2, and other columns. "Very small" might be less than 10^(-12), for example.
 
-The first model, in rows 10 to 12, uses columns B and C as predictors and requests Excel to model the constant (last argument set to TRUE). Excel then effectively inserts an additional predictor column that looks just like cells D2:D6. It is easy to notice that entries in column C in rows 2 to 6 are exactly equal to the sum of corresponding entries in columns B and D. Therefore, there is collinearity present because column C is a sum of multiples of the following items:
+The first model, in rows 10 to 12, uses columns B and C as predictors and requests Excel to model the constant (last argument set to TRUE). Excel then effectively inserts an additional predictor column that looks just like cells D2:D6. It's easy to notice that entries in column C in rows 2 to 6 are exactly equal to the sum of corresponding entries in columns B and D. Therefore, there is collinearity present because column C is a sum of multiples of the following items:
 
 - Column B
 - Excel's additional column of 1s that is inserted because the third argument to LOGEST was omitted or TRUE (the "normal" case)
 
-This causes such numeric problems that versions of Excel that are earlier than Excel 2003 cannot compute results. Therefore, the GROWTH output table is filled with #NUM!.
+This causes such numeric problems that versions of Excel that are earlier than Excel 2003 can't compute results. Therefore, the GROWTH output table is filled with #NUM!.
 
-The second model, in rows 14 to 16, is one that any version of Excel can handle successfully. There is no collinearity, and the user again requests Excel to model the constant. This model is included here for the following reasons:
+The second model, in rows 14 to 16, is one that any version of Excel can handle successfully. There's no collinearity, and the user again requests Excel to model the constant. This model is included here for the following reasons:
 
 - First, it's most typical of practical cases: that there's no collinearity present. These cases are handled sufficiently in all versions of Excel. It should be reassuring to know that numeric problems aren't likely to occur in the most common practical case if you have an earlier version of Excel.
 - Second, this example is used to compare the behavior of Excel 2003 and of later versions of Excel in the two models. Most major statistical packages analyze collinearity, remove a column that is a sum of multiples of others from the model, and alert the user with a message such as "column C is linearly dependent on other predictor columns and has been removed from the analysis."
@@ -167,13 +167,13 @@ Collinearity is identified in LOGEST in Excel 2003 and in later versions of Exce
 
 GROWTH results are adversely affected in versions of Excel that are earlier than Excel 2003 because of inaccurate results in LOGEST that, in turn, stem from inaccurate results in LINEST.
 
-LINEST was calculated using an approach that paid no attention to collinearity issues. The existence of collinearity caused round off errors, inappropriate standard errors of regression coefficients, and inappropriate degrees of freedom. Sometimes round off problems are sufficiently severe that LINEST filled its output table with #NUM!. If, as in most cases in practice, you can be confident that there weren't collinear (or almost collinear) predictor columns, then LINEST would generally provide acceptable results. Therefore, users of GROWTH can be similarly reassured if they can see the absence of collinear (or almost collinear) predictor columns.
+LINEST was calculated using an approach that paid no attention to collinearity issues. The existence of collinearity caused round-off errors, inappropriate standard errors of regression coefficients, and inappropriate degrees of freedom. Sometimes round-off problems are sufficiently severe that LINEST filled its output table with #NUM!. If, as in most cases in practice, you can be confident that there weren't collinear (or almost collinear) predictor columns, then LINEST would generally provide acceptable results. Therefore, users of GROWTH can be similarly reassured if they can see the absence of collinear (or almost collinear) predictor columns.
 
 ### Summary of results in Excel 2003 and in later versions of Excel
 
 Improvements in LINEST include switching to the QR Decomposition method of determining regression coefficients. QR Decomposition has the following advantages:
 
-- Better numeric stability (generally, smaller round off errors)
+- Better numeric stability (generally, smaller round-off errors)
 - Analysis of collinearity issues
 
 All problems with versions of Excel that are earlier than Excel 2003 that are illustrated in this article have been corrected for Excel 2003 and for later versions of Excel. These improvements in LINEST translate to improvements in LOGEST and GROWTH.
