@@ -1,11 +1,11 @@
 ---
 title: How to disable HTTP proxy features
 description: Describes how to disable specific features of Windows HTTP proxies.
-ms.date: 01/15/2025
+ms.date: 05/26/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-tappelgate
+ms.reviewer: kaushika, v-tappelgate, rnitsch
 ms.custom:
 - sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
 - pcy:WinComm Networking
@@ -54,7 +54,7 @@ Starting in Windows Server 2019 and Windows 10, version 1809, you can disable WP
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp\DisableWpad
 ```
 
-After you disable WPAD, you must manually configure all proxies. The key will stop WPAD detection for all proxy detection calls made through WinHTTP API. Applications can still resolve the name WPAD by calling DNS directly, even with this registry key set. For example, will 'nslookup WPAD' still resolve the name by using DNS.
+After you disable WPAD, you must manually configure all proxies. The registry key stops WPAD detection for all proxy detection calls made through the Windows HTTP Services (WinHTTP) application programming interface (API). Applications can still resolve the name WPAD by calling Domain Name System (DNS) directly, even with this registry key set. For example, running `nslookup WPAD` still resolve the name by using DNS.
 
 > [!IMPORTANT]
 > In addition to setting the registry key, WPAD should also be disabled in the Windows **Settings** UI, because third-party apps and Internet browsers may rely on these settings for Proxy Auto-Discovery.
