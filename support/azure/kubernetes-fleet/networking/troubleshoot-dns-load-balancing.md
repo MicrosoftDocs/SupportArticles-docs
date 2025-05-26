@@ -29,7 +29,7 @@ This article provides troubleshooting information for Azure Kubernetes Fleet Man
 
 This section provides common reasons and solutions for scenarios in which the `TrafficManagerProfile` Kubernetes object and its associated Azure Traffic Manager resource aren't created.
 
-To determine the appropriate resolution, check the status of the `TrafficManagerProfile` object on the Fleet Manager hub cluster for the error message.
+To determine the appropriate resolution, check the status of the `TrafficManagerProfile` object on the Fleet Manager hub cluster using the shown command.
 
 ```bash
 kubectl get trafficmanagerprofile -n <namespace> <profile-name> -o yaml
@@ -124,7 +124,7 @@ Consider deleting unused profiles or requesting an increase in the limit. For mo
 
 ### Error 4: Azure Traffic Manager returns an error
 
-This issue might occur if the Azure Traffic Manager service returns an error when it creats the profile.
+This issue might occur if the Azure Traffic Manager service returns an error when it creates the profile.
 
 The following example of the `TrafficManagerProfile` status shows this error:
 
@@ -147,7 +147,7 @@ If the error persists, check the Azure Traffic Manager service health.
 
 This section provides common causes and recommended solutions for scenarios in which the `TrafficManagerBackend` Kubernetes object can't be created.
 
-To determine the appropriate resolution, check the status of the `TrafficManagerBackend` object on the Fleet Manager hub cluster for the following error message:
+To determine the appropriate resolution, check the status of the `TrafficManagerBackend` object on the Fleet Manager hub cluster using the shown command.
 
 ```bash
 kubectl get trafficmanagerbackend -n <namespace> <backend-name> -o yaml
