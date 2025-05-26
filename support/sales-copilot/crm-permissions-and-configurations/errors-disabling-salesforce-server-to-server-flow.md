@@ -1,32 +1,32 @@
 ---
-title: Errors When Disabling Salesforce With Server-to-server Flow
-description: Resolves errors that might occur when disabling Salesforce with server-to-server flow in Microsoft Copilot for Sales.
+title: Errors When Disabling Salesforce with Server-to-Server Flow
+description: Troubleshoot errors that might occur when disabling Salesforce with a server-to-server flow in Microsoft Copilot for Sales.
 ms.date: 05/26/2025
 author: sbmjais
 ms.author: shjais
 ms.reviewer: marrabi
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-# Errors that occur when disabling Salesforce with server-to-server flow
+# Errors that occur when disabling Salesforce that uses a server-to-server flow
 
-This article helps you solve errors that might occur when you try to disable Salesforce with server-to-server flow in Microsoft Copilot for Sales.
+This article helps you troubleshoot errors that might occur when you try to disable Salesforce with a server-to-server flow in Microsoft Copilot for Sales.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Teams        |
+|**Client app**     |  Microsoft Teams        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce      |
-|**Users**     | Administrator  |
+|**Users**     | Administrators  |
 
 ## Couldn't get connected app details for the Salesforce organization
 
 ### Symptoms
 
-When you try to disable Salesforce with server-to-server flow, the following error message might occur:
+When you try to disable Salesforce with a server-to-server flow, the following error message might occur:
 
 > Couldn't get connected app details for the Salesforce organization.
 
@@ -42,13 +42,13 @@ To resolve this issue, try disabling Salesforce again. If the issue persists, ga
 
 ### Symptoms
 
-When you try to disable Salesforce with server-to-server flow, the following error message might occur:
+When you try to disable Salesforce with a server-to-server flow, the following error message might occur:
 
 > Couldn't remove the connected app. It may be read-only, missing, or restricted.
 
 ### Cause
 
-When a disable request is received, the server attempts to delete deployed resources, such as the connected app and permission set. The error occurs when the current user doesn't have the permissions to delete the connected app, or the app has already been deleted.
+When a disable request is received, the server attempts to delete deployed resources, such as the connected app and permission set. The error occurs when the current user doesn't have permission to delete the connected app or the app has already been deleted.
 
 ### Resolution
 
@@ -66,13 +66,13 @@ If this issue persists, contact [Microsoft support](/microsoft-sales-copilot/get
 
 ### Symptoms
 
-When you try to disable Salesforce with server-to-server flow, the following error message might occur:
+When you try to disable Salesforce with a server-to-server flow, the following error message might occur:
 
 > Couldn't remove the permission set. It may be read-only, missing, or restricted.
 
 ### Cause
 
-When a disable request is received, the server attempts to delete deployed resources, such as the connected app and permission set. The error occurs when the current user doesn't have the permissions to delete the permission set, or the permission set has already been deleted.
+When a disable request is received, the server attempts to delete deployed resources, such as the connected app and permission set. The error occurs when the current user doesn't have permission to delete the permission set or the permission set has already been deleted.
 
 ### Resolution
 
@@ -88,11 +88,11 @@ To resolve this issue, confirm that the permission set exists.
 
 If this issue persists, contact [Microsoft support](/microsoft-sales-copilot/get-support) for further assistance.
 
-## An error occurs when a resource can't be removed
+## Error when a resource can't be removed
 
 ### Symptoms
 
-When you try to disable Salesforce with server-to-server flow, one of the following error messages might occur:
+When you try to disable Salesforce with a server-to-server flow, one of the following error messages might occur:
 
 - > Couldn't remove the permission set assignment due to an invalid reference key.
 - > Connection user ID not found or already removed.
