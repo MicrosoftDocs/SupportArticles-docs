@@ -378,6 +378,8 @@
       href: error-codes/vmextensionerror-provisioningtimeout.md
   - name: UnsatisfiablePDB error
     href: error-codes/unsatisfiablepdb-error.md
+  - name: AvailabilityZoneNotSupported error
+    href: error-codes/availabilityzonenotsupported-error.md
   - name: AksCapacityHeavyUsage error
     href: error-codes/akscapacityheavyusage-error.md
   - name: InvalidParameter error
