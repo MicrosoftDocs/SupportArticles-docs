@@ -17,7 +17,7 @@ appliesto:
   - Excel 2010
   - Excel 2007
   - Excel 2003
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # How to create a dynamic defined range in an Excel worksheet

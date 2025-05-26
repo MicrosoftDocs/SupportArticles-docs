@@ -18,7 +18,7 @@ appliesto:
   - Access 2010
   - Access 2007
 search.appverid: MET150
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 # Access Error: Data on the Clipboard is damaged, so Microsoft Access can't paste it
 

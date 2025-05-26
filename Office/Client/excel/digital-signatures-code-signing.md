@@ -13,7 +13,7 @@ ms.author: luche
 appliesto: 
   - Excel 2007
   - Excel 2003
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Description of digital signatures and code signing in workbooks in Excel

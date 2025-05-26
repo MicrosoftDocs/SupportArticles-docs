@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # How to define relationships between tables in an Access database

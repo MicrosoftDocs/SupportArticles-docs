@@ -18,7 +18,7 @@ appliesto:
   - Access 2010
   - Access 2007
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 # Expression Builder doesn't display database's user-defined functions in the Functions node
 

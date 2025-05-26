@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 # How to troubleshoot errors that may occur when you update data in Access queries and forms
 

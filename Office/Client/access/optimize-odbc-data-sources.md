@@ -16,7 +16,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 
 # How to optimize Microsoft Access when using ODBC data sources

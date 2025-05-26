@@ -19,7 +19,7 @@ appliesto:
   - Excel 2016
   - Excel 2019
   - Excel for Microsoft 365
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Unable to use the Access ODBC, OLEDB, or DAO interfaces outside Office Click-to-Run applications

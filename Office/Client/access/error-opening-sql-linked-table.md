@@ -20,7 +20,7 @@ appliesto:
   - Microsoft Office Access 2003
   - Microsoft Office Access 2000
 search.appverid: MET150
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Error (ODBC--call failed) when you open a table that is linked to a SQL Database instance in Access

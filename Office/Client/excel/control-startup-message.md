@@ -18,7 +18,7 @@ appliesto:
   - Excel 2016
   - Excel 2019
   - Excel for Microsoft 365
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 # How to control the startup message about updating linked workbooks in Excel
 

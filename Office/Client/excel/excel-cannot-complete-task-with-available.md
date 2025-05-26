@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Excel 2010
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # "Excel cannot complete this task with available resources" error occurs in Excel 2010

@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Access
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 
 # What is an LDB File?
