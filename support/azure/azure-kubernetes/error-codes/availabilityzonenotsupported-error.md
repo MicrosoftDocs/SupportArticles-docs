@@ -67,6 +67,6 @@ Then, search for the requested SKU information in the command output. If you see
             ]
 ```
 
-In this case, request access to the region or zone from the [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) by following instructions in [Azure region access request process](../general/region-access-request-process.md).
+In this case, request access to the region or zone from the [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) by following instructions in [Azure region access request process](../../general/region-access-request-process.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
