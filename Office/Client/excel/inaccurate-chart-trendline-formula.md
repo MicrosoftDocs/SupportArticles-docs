@@ -29,15 +29,15 @@ The equation that is displayed for a trendline on an XY Scatter chart in Microso
 - **R-squared value** measures the trendline reliability - the nearer R2 is to 1, the better the trendline fits the data.
 
 > [!NOTE]
-> The trendline formula is used for an XY Scatter chart. This chart plots both the X axis and Y axis as values. Line, Column, and Bar charts plot only the Y axis as values. In these chart types , the X axis is plotted as only a linear series, regardless of what the labels actually are. Therefore, the trendline will be inaccurate if it is displayed on these types of charts. This behavior is by design.
+> The trendline formula is used for an XY Scatter chart. This chart plots both the X axis and Y axis as values. Line, Column, and Bar charts plot only the Y axis as values. In these chart types, the X axis is plotted as only a linear series, regardless of what the labels actually are. Therefore, the trendline is inaccurate if it's displayed on these types of charts. This behavior is by design.
 
 ## Cause
 
-Microsoft Excel plots trendlines incorrectly because the displayed equation may provide inaccurate results when you manually enter X values. For appearance, each X value is rounded off to the number of significant digits that are displayed in the chart. This behavior allows the equation to occupy less space in the chart area. However, the accuracy of the chart is significantly reduced. This can cause a trend to appear to be incorrect.
+Microsoft Excel plots trendlines incorrectly because the displayed equation may provide inaccurate results when you manually enter X values. For appearance, each X value is rounded off to the number of significant digits that are displayed in the chart. This behavior allows the equation to occupy less space in the chart area. However, the accuracy of the chart is reduced. It can cause a trend to appear to be incorrect.
 
 ## Workaround
 
-To work around this behavior, increase the digits in the trendline equation by increasing the number of decimal places that are displayed. To do this, follow these steps:
+To work around this behavior, increase the digits in the trendline equation by increasing the number of decimal places that are displayed:
 
 1. In the chart, select the trendline equation.
 1. On the **Format** menu, click **Selected Data Labels**.

@@ -39,19 +39,19 @@ In Microsoft Excel, when you use the logical functions AND and/or OR inside a SU
 
 ## More Information
 
-Use a SUM+IF statement to count the number of cells in a range that pass a given test or to sum those values in a range for which corresponding values in another (or the same) range meet the specified criteria. This behaves similarly to the DSUM function in Microsoft Excel.
+Use a SUM+IF statement to count the number of cells in a range that pass a given test or to sum those values in a range for which corresponding values in another (or the same) range meet the specified criteria. It behaves similarly to the DSUM function in Microsoft Excel.
 
 ### Example
 
 This example counts the number of values in the range A1:A10 that fall between 1 and 10, inclusively.
 
-To accomplish this, you can use the following nested IF statement:
+You can use the following nested IF statement:
 
 ```excel
 =SUM(IF(A1:A10>=1,IF(A1:A10<=10,1,0)))
 ```
 
-The following method also works and is much easier to read if you are conducting multiple tests:
+The following method also works and is easier to read if you're conducting multiple tests:
 
 ```excel
 =SUM(IF((A1:A10>=1)*(A1:A10<=10),1,0))
@@ -64,10 +64,11 @@ The following method counts the number of dates that fall between two given date
 ```
 
 > [!NOTE]
-> - You must enter these formulas as array formulas by pressing CTRL+SHIFT+ENTER simultaneously. On the Macintosh, press COMMAND+RETURN instead.   
-> - Arrays cannot refer to entire columns.   
 
-With this method, you are multiplying the results of one logical test by another logical test to return TRUEs and FALSEs to the SUM function. You can equate these to:
+> - You must enter these formulas as array formulas by pressing CTRL+SHIFT+ENTER simultaneously. On the Macintosh, press COMMAND+RETURN instead.
+> - Arrays can't refer to entire columns.
+
+With this method, you're multiplying the results of one logical test by another logical test to return TRUEs and FALSEs to the SUM function. You can equate these to:
 
 ```adoc
 TRUE*TRUE=1
@@ -82,7 +83,7 @@ The method shown above counts the number of cells in the range A1:A10 for which 
 =SUM(IF((A1:A10>=1)*(A1:A10<=10),B1:B10,0))
 ```
 
-You can implement an OR in a SUM+IF statement similarly. To do this, modify the formula shown above by replacing the multiplication sign (*) with a plus sign (+). This gives the following generic formula:
+You can implement an OR in a SUM+IF statement similarly. To do so, modify the formula shown above by replacing the multiplication sign (*) with a plus sign (+). It gives the following generic formula:
 
 ```excel
 =SUM(IF((Test1)+(Test2)+...+(Testn),1,0))
@@ -90,4 +91,4 @@ You can implement an OR in a SUM+IF statement similarly. To do this, modify the 
 
 ## References
 
-For more information about how to calculate a value based on a condition, click Microsoft Excel Help on the Help menu, type about calculating a value based on a condition in the Office Assistant or the Answer Wizard, and then click Search to view the topic.
+For more information about how to calculate a value based on a condition, select Microsoft Excel Help on the Help menu, type about calculating a value based on a condition in the Office Assistant or the Answer Wizard, and then select Search.
