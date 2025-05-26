@@ -5,6 +5,9 @@ manager: dcscontentpm
 ms.date: 04/02/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
+ms.custom:
+- pcy:Session connectivity\Users see random or intermittent disconnects
+- sap:WinComm User Experience
 ---
 # Windows 365 Link connection fails with error "an interactive window could not be shown"
 

@@ -1,12 +1,13 @@
 ---
-# required metadata
 title: Windows 365 Switch known issues
 description: Learn about known issues with Windows 365 Switch, including workarounds and updated fixes.
 manager: dcscontentpm
 ms.date: 01/20/2025
 ms.topic: troubleshooting
 ms.reviewer: elluthra, erikje
-ms.custom: intune-azure, get-started
+ms.custom:
+- pcy:Windows 365 Switch
+- sap:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

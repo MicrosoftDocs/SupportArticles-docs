@@ -5,7 +5,9 @@ manager: dcscontentpm
 ms.date: 01/20/2025
 ms.topic: troubleshooting
 ms.reviewer: mattsha, erikje
-ms.custom: intune-azure, get-started
+ms.custom:
+- pcy:Azure Network Connection\Health Check Issues
+- sap:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

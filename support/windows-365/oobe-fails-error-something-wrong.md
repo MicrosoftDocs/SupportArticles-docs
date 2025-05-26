@@ -5,6 +5,9 @@ manager: dcscontentpm
 ms.date: 04/02/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, erikje, v-lianna
+ms.custom:
+- pcy:Configuration and Management\Managing Devices with Intune
+- sap:WinComm User Experience
 ---
 # Windows 365 Link fails to load OOBE with error "Something went wrong"
 
