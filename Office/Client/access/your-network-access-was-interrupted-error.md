@@ -3,7 +3,7 @@ title: Access error Your network access was interrupted when using a mapped driv
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 audience: Admin
 ms.topic: troubleshooting
 search.appverid: 

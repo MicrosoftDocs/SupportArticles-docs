@@ -3,8 +3,6 @@
   items:
     - name: Access
       items:
-        - name: .LDB files
-          href: ../access/ldb-file-description.md
         - name: Access error String data, right truncation (#0)
           href: ../access/string-data-right-truncation.md
         - name: Access freezes when opening a linked table

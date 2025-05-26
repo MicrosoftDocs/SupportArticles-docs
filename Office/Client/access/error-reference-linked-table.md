@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 # "Cannot find the input table or query" or "record source doesn't exist" error when using Access
 

@@ -17,7 +17,7 @@ appliesto:
   - Access 2003
   - Access 2002
   - Access 2000
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Description of the expressions to count yes, no, and other responses in Access

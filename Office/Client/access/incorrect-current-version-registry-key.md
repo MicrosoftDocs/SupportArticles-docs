@@ -14,7 +14,7 @@ appliesto:
   - Access 2010
   - Access 2013
   - Microsoft Office Access 2007
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 
 # Access: Incorrect version registry key

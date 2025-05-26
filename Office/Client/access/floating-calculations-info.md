@@ -13,7 +13,7 @@ ms.reviewer: stuk
 appliesto: 
   - Access
 search.appverid: MET150
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 # Precision and accuracy in floating-point calculations
 
