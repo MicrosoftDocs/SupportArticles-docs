@@ -1,7 +1,7 @@
 ---
 title: Errors When Disabling Salesforce With Server-to-server Flow
 description: Resolves errors that might occur when disabling Salesforce with server-to-server flow in Microsoft Copilot for Sales.
-ms.date: 05/23/2025
+ms.date: 05/26/2025
 author: sbmjais
 ms.author: shjais
 ms.reviewer: marrabi
@@ -22,7 +22,7 @@ This article helps you solve errors that might occur when you try to disable Sal
 |**CRM**     | Salesforce      |
 |**Users**     | Administrator  |
 
-## "Couldn't get connected app details for the Salesforce organization" error
+## Couldn't get connected app details for the Salesforce organization
 
 ### Symptoms
 
@@ -38,7 +38,7 @@ When a disable request is received, the server attempts to delete deployed resou
 
 To resolve this issue, try disabling Salesforce again. If the issue persists, gather the error details and contact [Microsoft support](/microsoft-sales-copilot/get-support).
 
-## "Couldn't remove the connected app" error
+## Couldn't remove the connected app
 
 ### Symptoms
 
@@ -62,7 +62,7 @@ To resolve this issue, confirm that the connected app exists.
 
 If this issue persists, contact [Microsoft support](/microsoft-sales-copilot/get-support) for further assistance.
 
-## "Couldn't remove the permission set" error
+## Couldn't remove the permission set
 
 ### Symptoms
 
