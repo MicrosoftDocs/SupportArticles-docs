@@ -97,7 +97,7 @@ status:
 
 #### Solution
 
-To resolve this issue, use `nslookup` or a similar tool to determine whether the full DNS name (for example, `team-a-webapp.trafficmanager.net`) is available. If the name isn't available, consider one of the following alternative solutions:
+To resolve this issue, use `nslookup` or a similar tool to determine whether the full DNS name (for example, `team-a-webapp.trafficmanager.net`) already exits. If the name isn't available, consider one of the following alternative solutions:
 
 - Change the `metadata.name` field in the `TrafficManagerProfile` manifest to a unique name.
 - Use a different namespace for the `TrafficManagerProfile` manifest. This selection affects the `TrafficManagerBackend` and `ServiceExport` objects. These objects must be in the same namespace.
