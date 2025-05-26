@@ -18,7 +18,7 @@ appliesto:
   - Access 2010
   - Microsoft Office Access 2007
 ms.reviewer: ROBCOO, SROULEAU
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 # How to modify query properties in Microsoft Access
 

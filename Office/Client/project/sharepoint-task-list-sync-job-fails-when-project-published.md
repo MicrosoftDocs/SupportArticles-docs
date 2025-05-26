@@ -3,7 +3,7 @@ title: SharePoint task list sync job fails when Project is published
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 11/20/2019
+ms.date: 05/26/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: 
