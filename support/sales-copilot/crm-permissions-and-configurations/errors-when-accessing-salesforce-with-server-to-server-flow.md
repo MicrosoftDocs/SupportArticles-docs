@@ -1,7 +1,7 @@
 ---
 title: Errors When Accessing Salesforce With Server-to-server Flow
 description: Troubleshoot and resolve errors that occur when accessing Salesforce with server-to-server flow or during setup in Microsoft Copilot for Sales.
-ms.date: 05/23/2025
+ms.date: 05/26/2025
 author: sbmjais
 ms.author: shjais
 ms.reviewer: marrabi
@@ -9,7 +9,7 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Errors that occur when accessing Salesforce with server-to-server flow
 
-This article helps you troubleshoot and resolve an error that might occur when a user tries to access Salesforce with server-to-server flow or when an administrator sets up the server-to-server flow for Salesforce in Microsoft Copilot for Sales.
+This article helps you troubleshoot and resolve errors that might occur when a user tries to access Salesforce with server-to-server flow or when an administrator sets up the server-to-server flow for Salesforce in Microsoft Copilot for Sales.
 
 ## Who is affected?
 
@@ -22,7 +22,7 @@ This article helps you troubleshoot and resolve an error that might occur when a
 |**CRM**     | Salesforce        |
 |**Users**     | All users or administrators   |
 
-## "Access denied for this user" error
+## Access denied for this user
 
 ### Symptoms
 
@@ -54,7 +54,7 @@ To resolve this issue, update the connected app configuration in Salesforce:
 
 Also, check if there were unintended changes made to the connected app configuration. If yes, revert the changes to the original configuration.
 
-## "Server-to-server authentication failed" error
+## Server-to-server authentication failed
 
 ### Symptoms
 
@@ -97,7 +97,7 @@ To resolve this issue, ensure that the connected app and integration user config
 
 Also, check if there were unintended changes made to the connected app or integration user configuration. If yes, revert the changes to the original configuration.
 
-## "Server-to-server authorization failed" error
+## Server-to-server authorization failed
 
 ### Symptoms
 
@@ -141,7 +141,7 @@ To resolve this issue, contact your administrator to set the appropriate OAuth s
    > [!NOTE]
    > If the **Manage user data via APIs (api)** isn't selected, the connected app can't access Salesforce data.
 
-## "Trouble connecting to Salesforce" error
+## Trouble connecting to Salesforce
 
 ### Symptoms
 
@@ -164,7 +164,7 @@ To resolve this issue, contact [Microsoft support](/microsoft-sales-copilot/get-
 - Whether the "Copilot for Sales Connected App" connected app was deleted accidentally.
 - If the connected app is still available, provide its ID.
 
-## "Try again" error
+## Try again
 
 ### Symptoms
 
@@ -181,7 +181,7 @@ When you set up the server-to-server flow for Salesforce, the system attempts to
 
 To resolve this issue, wait for a few minutes and then try again. If the issue persists, gather the error details and contact [Microsoft support](/microsoft-sales-copilot/get-support).
 
-## "Unauthorized access denied" error
+## Unauthorized access denied
 
 ### Symptoms
 
@@ -203,6 +203,6 @@ To resolve this issue, try again after 10-15 minutes. If this issue persists, ch
 
 ## More information
 
-If the issue persists, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
