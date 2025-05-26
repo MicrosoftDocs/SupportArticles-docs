@@ -226,7 +226,7 @@ For more information about antivirus considerations on a cluster, see [Antivirus
 
 When you run antivirus software on an [Arc-enabled SQL Server](/sql/sql-server/azure-arc/connect) instance, some files and executables (also referred to as system objects) might be flagged. However, these [system objects](/sql/sql-server/azure-arc/agent-extension-files) are necessary for Arc-enabled SQL Server to function properly. To ensure optimal performance and stability, we recommend that you exclude these [necessary system objects](/sql/sql-server/azure-arc/agent-extension-files) from antivirus scanning.
 
-Starting with SQL Server 2025, SQL Server instances can use the Azure Arc machine's managed identity. You might need to add an exemption for the token folder. Follow the steps in [Set up a managed identity for Arc-enabled SQL Server](/sql/sql-server/azure-arc/managed-identity) for the proper setup and the folder path.
+Starting with SQL Server 2025, SQL Server instances can use the Azure Arc machine's managed identity. You might need to add an exemption for the token folder. Follow the steps in [Configure a managed identity for Arc-enabled SQL Server](/sql/sql-server/azure-arc/managed-identity) for the proper setup and the folder path.
 
 We also recommend that you keep the extension up to date, as it includes ongoing security and feature updates. For more information, see the [latest extension release](/sql/sql-server/azure-arc/release-notes).
 
