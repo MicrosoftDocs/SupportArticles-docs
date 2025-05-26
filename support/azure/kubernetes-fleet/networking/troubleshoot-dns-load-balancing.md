@@ -39,7 +39,7 @@ kubectl get trafficmanagerprofile -n <namespace> <profile-name> -o yaml
 This issue might occur if one of the following conditions is met:
 
 * A nonexistent Azure resource group is specified in the `TrafficManagerProfile` manifest.
-* The resource group doesn't have the same Azure Subscription value that the Fleet Manager resource has.
+* The resource group isn't in the same Azure subscription as the Fleet Manager resource.
 * The Fleet Manager hub cluster identity doesn't have permission to create and manage Azure Traffic Manager profiles in the specified resource group.
 
 You can check The `TrafficManagerProfile` status for details of the error. The following example of the `TrafficManagerProfile` status shows insufficient permissions:
@@ -123,7 +123,7 @@ Consider deleting unused profiles or requesting an increase in the limit. For mo
 
 ### Error 4: Azure Traffic Manager returns an error
 
-This issue might occur if the Azure Traffic Manager service returns an error when creating the profile.
+This issue might occur if the Azure Traffic Manager service returns an error when it creats the profile.
 
 The following example of the `TrafficManagerProfile` status shows this error:
 
@@ -316,6 +316,6 @@ AzureDiagnostics
 | limit 1000
 ```
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
