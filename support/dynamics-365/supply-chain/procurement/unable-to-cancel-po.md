@@ -42,7 +42,7 @@ For example, consider a fiscal year that runs from April 2023 to March 2024.
 
 ## Workaround
 
-To cancel a PO in a closed period, you must reopen the closed or on-hold period. For example, if the blocking error message indicates that the period for March 2024 is closed, follow these steps to reopen it:
+To cancel a PO in a closed period, you must reopen the closed or on-hold period. For example, if the blocking error message indicates that the period for March 2024 is closed, follow these steps to reopen that period and then cancel the PO:
 
 1. Navigate to **General ledger** > **Ledger setup** > **Ledger calendars**.
 1. Find the ledger calendar for the fiscal year and accounting period of the PO.
