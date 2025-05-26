@@ -41,9 +41,7 @@ The page locks required for the transaction exceed the MaxLocksPerFile value, wh
 ## Resolution
 
 > [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base: 
->
-> [322756 ](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows 
+> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
 There are several ways to work around this problem:
 
@@ -101,12 +99,12 @@ For Microsoft Office Access 2016 that is running on a 64-bit Windows operating s
 ### Method 2: Using SetOption to change MaxLocksPerFile Temporarily
 
 > [!NOTE]
-> The sample code in this article uses Microsoft Data Access Objects. For this code to run properly, you must reference the Microsoft DAO 3.6 Object Library. To do so, click References on the Tools menu in the Visual Basic Editor, and make sure that the Microsoft DAO 3.6 Object Library check box is selected.
+> The sample code in this article uses Microsoft Data Access Objects. For this code to run properly, you must reference the Microsoft DAO 3.6 Object Library. To do so, select References on the Tools menu in the Visual Basic Editor, and make sure that the Microsoft DAO 3.6 Object Library check box is selected.
 
-Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you're familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements. The SetOptionmethod temporarily overrides values for the Microsoft Jet database engine keys in the registry. The new value remains in effect until you change it again, or until the DBEngine object is closed.
+Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but isn't limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you're familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they won't modify these examples to provide added functionality or construct procedures to meet your specific requirements. The `SetOption` method temporarily overrides values for the Microsoft Jet database engine keys in the registry. The new value remains in effect until you change it again, or until the DBEngine object is closed.
 
 > [!NOTE]
-> Changes made to the MaxLocksPerFilesetting by using the SetOption method will only be available through the current session of Data Access Objects (DAO). Queries that are run through the Microsoft Access user interface will still use the settings in the registry.
+> Changes made to the MaxLocksPerFilesetting by using the `SetOption` method is only available through the current session of Data Access Objects (DAO). Queries that are run through the Microsoft Access user interface still use the settings in the registry.
 
 The following code sample sets MaxLocksPerFile to 200,000 before executing an update operation inside a transaction:
 
@@ -142,17 +140,19 @@ LargeUpdate_Error:
 
 ### Method 3: Setting the UseTransaction property in an action query
 
-If a stored action query causes the error, you can set its UseTransaction property to No. Note that if you do this, you cannot roll back your changes if there is a problem or an error while the query is running: 
+If a stored action query causes the error, you can set its `UseTransaction` property to **No**. 
+
+**Note**: If you do so, you can't roll back your changes if there's a problem or an error while the query is running.
 
 1. Open the query in Design view.   
-2. On the View menu, click Properties.   
-3. Click an empty space in the upper half of the query window to display the Query Properties dialog box.   
+2. On the View menu, select Properties.   
+3. Select an empty space in the upper half of the query window to display the Query Properties dialog box.   
 4. Set the UseTransactionproperty to No.   
 5. Save the query and close it.   
 
 ## More information
 
-The MaxLocksPerFilesetting in the registry prevents transactions in the Microsoft Jet database engine from exceeding a specified value. If a transaction tries to create locks in excess of the MaxLocksPerFile value, the transaction is split into two or more parts and partially committed.
+The `MaxLocksPerFilesetting` in the registry prevents transactions in the Microsoft Jet database engine from exceeding a specified value. If a transaction tries to create locks in excess of the MaxLocksPerFile value, the transaction is split into two or more parts and partially committed.
 
 ### Steps to reproduce the problem
 

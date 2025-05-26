@@ -21,14 +21,12 @@ ms.date: 05/26/2025
 
 # How to define relationships between tables in an Access database
 
-_Original KB number:_ &nbsp; 304466
-
 > [!NOTE]
 > Novice: Requires knowledge of the user interface on single-user computers. This article applies only to a Microsoft Access database (.mdb or .accdb).
 
 ## Summary
 
-This article describes how to define relationships in a Microsoft Access database. The article includes the following topics:
+This article describes how to define relationships in a Microsoft Access database. The article includes:
 
 - What are table relationships?
 - Kinds of table relationships
@@ -44,11 +42,11 @@ This article describes how to define relationships in a Microsoft Access databas
 
 ## What are table relationships?
 
-In a relational database, relationships enable you to prevent redundant data. For example, if you are designing a database that will track information about books, you might have a table named "Titles" that stores information about each book, such as the book's title, date of publication, and publisher. There is also information that you might want to store about the publisher, such as the publisher's telephone number, address, and ZIP Code/Postal Code. If you were to store all this information in the "Titles" table, the publisher's telephone number would be duplicated for each title that the publisher prints.
+In a relational database, relationships enable you to prevent redundant data. For example, if you're designing a database that tracks information about books, you might have a table that's named "Titles" that stores information about each book, such as the book's title, date of publication, and publisher. There's also information that you might want to store about the publisher, such as the publisher's telephone number, address, and ZIP Code/Postal Code. If you store all this information in the "Titles" table, the publisher's telephone number would be duplicated for each title that the publisher prints.
 
-A better solution is to store the publisher's information only one time, in a separate table that we will call "Publishers." You would then put a pointer in the "Titles" table that references an entry in the "Publishers" table.
+A better solution is to store the publisher's information only one time, in a separate table that's called "Publishers." You would then put a pointer in the "Titles" table that references an entry in the "Publishers" table.
 
-To make sure that you data stays synchronized, you can enforce referential integrity between tables. Referential integrity relationships help make sure that information in one table matches information in another. For example, each title in the "Titles" table must be associated with a specific publisher in the "Publishers" table. A title cannot be added to the database for a publisher that does not exist in the database.
+To make sure that your data stays synchronized, you can enforce referential integrity between tables. Referential integrity relationships help make sure that information in one table matches information in another. For example, each title in the "Titles" table must be associated with a specific publisher in the "Publishers" table. A title can't be added to the database for a publisher that doesn't exist in the database.
 
 Logical relationships in a database enable you to efficiently query data and create reports.
 
@@ -78,7 +76,7 @@ In a many-to-many relationship, a row in table A can have many matching rows in 
 
 In a one-to-one relationship, a row in table A can have no more than one matching row in table B, and vice versa. A one-to-one relationship is created if both of the related columns are primary keys or have unique constraints.
 
-This kind of relationship is not common, because most information that is related in this manner would be in one table. You might use a one-to-one relationship to take the following actions:
+This kind of relationship isn't common, because most information that is related in this manner would be in one table. You might use a one-to-one relationship to take the following actions:
 
 - Divide a table with many columns.
 - Isolate part of a table for security reasons.
@@ -89,13 +87,13 @@ In Access, the primary key side of a one-to-one relationship is denoted by a key
 
 ## How to define relationships between tables
 
-When you create a relationship between tables, the related fields do not have to have the same names. However, related fields must have the same data type unless the primary key field is an AutoNumber field. You can match an AutoNumber field with a Number field only if theFieldSizeproperty of both of the matching fields is the same. For example, you can match an AutoNumber field and a Number field if theFieldSizeproperty of both fields isLong Integer. Even when both matching fields are Number fields, they must have the sameFieldSizeproperty setting.
+When you create a relationship between tables, the related fields don't have to have the same names. However, related fields must have the same data type unless the primary key field is an AutoNumber field. You can match an AutoNumber field with a Number field only if theFieldSizeproperty of both of the matching fields is the same. For example, you can match an AutoNumber field and a Number field if theFieldSizeproperty of both fields isLong Integer. Even when both matching fields are Number fields, they must have the sameFieldSizeproperty setting.
 
 ### How to define a one-to-many or one-to-one relationship
 
 To create a one-to-many or a one-to-one relationship, follow these steps:
 
-1. Close all tables. You cannot create or change relationships between open tables.
+1. Close all tables. You can't create or change relationships between open tables.
 2. In Access 2002 or Access 2003, follow these steps:
 
    1. Press F11 to switch to the Database window.
