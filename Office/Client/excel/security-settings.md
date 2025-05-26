@@ -14,7 +14,7 @@ ms.custom:
 appliesto: 
   - Excel for Microsoft 365
   - Excel 2019
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Security settings for Dynamic Data Exchange in Excel Trust Center in Microsoft 365

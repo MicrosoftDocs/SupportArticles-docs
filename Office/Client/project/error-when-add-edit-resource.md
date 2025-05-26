@@ -13,7 +13,7 @@ search.appverid:
 appliesto: 
   - Project Online
   - Project Server 2013
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 
 # Error occurs when you add or edit a Resource in Enterprise Resource Pool

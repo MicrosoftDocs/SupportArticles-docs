@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Office Excel 2003
   - Microsoft Office Excel 2007
   - Excel 2010
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # How to use a logical AND or OR in a SUM+IF statement in Excel

@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
   - Excel 2004 for Mac
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Excel statistical functions: GROWTH

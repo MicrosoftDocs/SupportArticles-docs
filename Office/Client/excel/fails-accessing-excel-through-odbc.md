@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft Excel
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # PRB: "Operation must use an updateable query" When you access Excel through ODBC

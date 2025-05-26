@@ -13,7 +13,7 @@ search.appverid:
 appliesto: 
   - Excel 2013
   - Excel 2016
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 
 # Memory usage in the 32-bit edition of Excel 2013 and 2016

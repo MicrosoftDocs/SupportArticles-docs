@@ -16,7 +16,7 @@ appliesto:
   - Access 2010
   - Microsoft Office Access 2007
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 # Connection error when using CurrentProject.Connection or CurrentDB.Connection in Access
 

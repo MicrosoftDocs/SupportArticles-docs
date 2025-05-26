@@ -20,7 +20,7 @@ appliesto:
   - Excel 2010
   - Excel 2013
   - Excel 2016
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Excel incorrectly assumes that the year 1900 is a leap year

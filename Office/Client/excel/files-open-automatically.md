@@ -15,7 +15,7 @@ appliesto:
   - Excel 2019
   - Excel 2016
   - Excel 2013
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # How to prevent files from opening automatically in Excel

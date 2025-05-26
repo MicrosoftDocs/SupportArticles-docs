@@ -14,7 +14,7 @@ ms.author: luche
 ms.reviewer: chrisjen
 appliesto: 
   - Microsoft Excel
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Excel doesn't shut down after calling the Quit method when automating from JScript
