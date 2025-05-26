@@ -137,8 +137,6 @@ If you try to save or open an Excel file, and the path of that file (including t
 
 **Filename is not valid.**
 
-For more information, see [Error message when you open or save a file in Microsoft Excel: "Filename is not valid"](https://support.microsoft.com/help/213983).
-
 ### Process to save a file
 
 Excel follows these steps when it saves a file:
@@ -284,10 +282,6 @@ Restart Windows in safe mode, and then try to save the workbook to your local ha
 ## Additional resources
 
 To avoid problems that prevent files from being saved correctly, we recommend that you activate AutoSave. For more information, see [What is Autosave](https://support.microsoft.com/office/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5).
-
-If you experience specific problems when you use Excel, go to the following website to search for more information about your program version:
-
-[Microsoft Excel Product Solution Center: Excel](https://support.office.com/search/results?query=excel)
 
 ## Detailed view of the options
 
