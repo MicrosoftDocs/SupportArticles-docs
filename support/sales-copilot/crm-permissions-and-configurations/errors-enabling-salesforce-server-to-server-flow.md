@@ -1,7 +1,7 @@
 ---
 title: Errors When Enabling Salesforce With Server-to-server Flow
 description: Resolves errors that might occur when enabling Salesforce with server-to-server flow in Microsoft Copilot for Sales.
-ms.date: 05/23/2025
+ms.date: 05/26/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -10,7 +10,7 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Errors that occur when enabling Salesforce with server-to-server flow
 
-This article helps you solve errors that might occur when you try to enable Salesforce with server-to-server flow in Microsoft Copilot for Sales.
+This article helps you troubleshoot errors that might occur when you try to enable Salesforce with server-to-server flow in Microsoft Copilot for Sales.
 
 ## Who is affected?
 
@@ -23,7 +23,13 @@ This article helps you solve errors that might occur when you try to enable Sale
 |**CRM**     | Salesforce      |
 |**Users**     | Administrator  |
 
-## "Couldn't assign permission set because the integration user is inactive in Salesforce" error
+## Couldn't assign permission set because the integration user is inactive in Salesforce
+
+### Symptoms
+
+When you try to enable Salesforce with server-to-server flow，the following error message might occur:
+
+> Couldn't assign permission set because the integration user is inactive in Salesforce.
 
 ### Cause
 
@@ -39,7 +45,13 @@ To resolve this issue,
    - If inactive, set the user status to active.
    - If you can't activate the user, contact [Microsoft support](/microsoft-sales-copilot/get-support).
 
-## "Couldn't create user because Salesforce integration license limit reached" error
+## Couldn't create user because Salesforce integration license limit reached
+
+### Symptoms
+
+When you try to enable Salesforce with server-to-server flow，the following error message might occur:
+
+> Couldn't create user because Salesforce integration license limit reached.
 
 ### Cause
 
@@ -79,7 +91,13 @@ During Salesforce server-to-server flow setup, a connected app is deployed to th
 
 To resolve this issue, retry the operation. If the issue persists, gather the error details and contact [Microsoft support](/microsoft-sales-copilot/get-support).
 
-## "No changes were made" error
+## No changes were made
+
+### Symptoms
+
+When you try to enable Salesforce with server-to-server flow，the following error message might occur:
+
+> No changes were made.
 
 ### Cause
 
@@ -89,7 +107,13 @@ During Salesforce server-to-server flow setup, a connected app is deployed to th
 
 To resolve this issue, check for any manual changes to the connected app or profiles with the `CopilotForSales` prefix. If the changes were unintentional, revert them. Otherwise, retry the operation. If the issue continues, contact [Microsoft support](/microsoft-sales-copilot/get-support).
 
-## "The profile name is already in use. Pick a different name or rename the existing profile in Salesforce" error
+## The profile name is already in use. Pick a different name or rename the existing profile in Salesforce
+
+### Symptoms
+
+When you try to enable Salesforce with server-to-server flow，the following error message might occur:
+
+> The profile name is already in use. Pick a different name or rename the existing profile in Salesforce.
 
 ### Cause
 
