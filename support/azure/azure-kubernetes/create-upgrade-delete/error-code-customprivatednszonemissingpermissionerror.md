@@ -1,7 +1,7 @@
 ---
 title: CustomPrivateDNSZoneMissingPermissionError error code
 description: Learn how to fix the CustomPrivateDNSZoneMissingPermissionError error that occurs when you try to create or update an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/28/2023
+ms.date: 05/26/2025
 author: jotavar
 ms.author: jotavar
 editor: v-jsitser
@@ -28,7 +28,7 @@ An AKS cluster create or update operation fails and returns the following error 
 
 ## Cause
 
-Before AKS runs a cluster create or update operation for a private cluster that uses a [custom private DNS zone](/azure/aks/private-clusters#configure-a-private-dns-zone), it checks whether the cluster's managed identity or service principal has the required permissions to control the private DNS zone. If AKS doesn't find the necessary permissions (*eg. if the managed identity or service principal have been deleted, or if it has been deleted & recreated with the same name, or if a wrong managed identity is being passed*), it blocks the operation so that the cluster doesn't enter a failed state.
+Before AKS runs a cluster create or update operation for a private cluster that uses a [custom private DNS zone](/azure/aks/private-clusters#configure-a-private-dns-zone), it checks whether the cluster's managed identity or service principal has the required permissions to control the private DNS zone. If AKS doesn't find the necessary permissions (for example, if the managed identity or service principal has been deleted, or if it has been deleted and recreated with the same name, or if an incorrect managed identity is being passed.), it blocks the operation so that the cluster doesn't enter a failed state.
 
 ## Solution
 
