@@ -1,7 +1,7 @@
 ---
 title: CustomPrivateDNSZoneMissingPermissionError error code
 description: Learn how to fix the CustomPrivateDNSZoneMissingPermissionError error that occurs when you try to create or update an Azure Kubernetes Service (AKS) cluster.
-ms.date: 05/26/2025
+ms.date: 05/27/2025
 author: jotavar
 ms.author: jotavar
 editor: v-jsitser
