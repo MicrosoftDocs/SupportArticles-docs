@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 05/26/2025
+ms.date: 05/27/2025
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal, justingross
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -145,7 +145,7 @@ When mounting a file share from on-premises or another datacenter, you might see
 
 This issue is likely caused by a proxy server or another type of Network Address Translation (NAT) device in the datapath that blocks the connection to map the Azure file share. In this case, the PowerShell cmdlet `Test-NetConnection` still might test connectivity on port 445 successfully.
 
-This issue occurs when the Active Directory computer or user account corresponding to the Azure storage account hosting the FSLogix user profiles can't process Kerberos authentications. The underlying reasons could be incorrect changes to the `msDS-SupportedEncryptionTypes` attribute or the rotation of the storage account's access keys without updating them on the Active Directory account.
+This issue occurs when the Active Directory computer or user account corresponding to the Azure storage account that hosts the FSLogix user profiles can't process Kerberos authentications. The underlying reasons might include incorrect modifications to the `msDS-SupportedEncryptionTypes` attribute, or the rotation of the storage account's access keys without updating the new keys on the Active Directory account.
 
 #### Solution
 
