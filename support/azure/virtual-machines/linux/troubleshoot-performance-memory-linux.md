@@ -13,43 +13,53 @@ ms.date: 05/06/2025
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+This article describes how to troubleshoot Memory performance issues on Linux virtual machines in Azure.
 
-##### 5 Things Memory might influence
-Memory is a resource which every process, including the kernel, does require.
-How much memory is required for each process does depend on its design and for what purpose the program got developed for. In short, based on the design more or less memory is allocated either at the Heap or on the Stack. Think of an in memory database like SAP HANA. 
+## 5 Things Memory might influence
 
-Though, memory can also indirectly be consumed via an increase of the page cache. What is the page cache? The page cache is an in memory representation of a file which got read from a disk before. With the help of the page cache an extra read from the disk can be avoided therefore. The best example is a file server which does benefit from this underlying kernel functionality.
+- **Process Memory Allocation** - Memory is a resource which every proces including the kernel does require. The amount of memory needed depends on the process's design and purpose. Memory is usually assigned to either the stack or the heap. For example, in-memory databases like SAP HANA rely heavily on memory to store and process data efficiently.
 
+- **Page Cache Usage** - Memory can also indirectly be consumed via an increase of the page cache. The page cache is an in memory representation of a file which is read from a disk before. It heples avoid repeated disk reads. The best example is a file server which does benefit from this underlying kernel functionality.
 
-We therefore need always be aware of what application or applications are running on the same virtual machine and whether they might compete about the available memory. Also of interest is to know whether the VM is running on a NUMA or on an UMA architecture. Depending on the memory requirements of a process, it might be to prefer an UMA architecture. Where the complete RAM can be address without a penalty, on the other hand, for HPC with many small processes or processes fitting in one of the NUMA-Nodes you can benefit from the CPU cache-locality. 
+- **Memory Architecture** - It's important to be aware of what application or applications are running on the same virtual machine (VM), and whether they might compete for the available memory. You might also need to check if the VM is configured with Non-Uniform Memory Access (NUMA) or Uniform Memory Access (UMA) architecture. Depending on the memory requirements of a process, it might be to prefer an UMA architecture. Where the complete RAM can be address without a penalty, on the other hand, for HPC with many small processes or processes fitting in one of the NUMA-Nodes you can benefit from the CPU cache-locality. 
 
-Another point to keep in mind is whether the kernel does allow memory overcommitment. Depending on its configuration, every memory request is fulfilled. Or it's denied if the amount of memory requested isn't available.
+- **Memory Overcommitment** - Another point to keep in mind is whether the kernel allows memory overcommitment. Depending on its configuration, every memory request is fulfilled. Or it's denied if the amount of memory requested isn't available.
 
-
-Another part related to memory is the availability of swap space. Even, if we have nowadays plenty of RAM available it's still recommended to configure SWAP space. With the help of enabling swap, the overall system stability is increased by keeping it more resilient if there are low memory conditions. 
-For more information about these concepts, see the [kernel doc](https://docs.kernel.org/admin-guide/mm/concepts.html#concepts-overview)
+- **Swap Space** The last point is the availability of swap space. Enabling swap improves overall system stability by providing a buffer during low-memory conditions that helps the system remain resilient under pressure. For more information, see the [kernel doc](https://docs.kernel.org/admin-guide/mm/concepts.html#concepts-overview)
 
 
-##### Understand the memory utilization with the PROC filesystem and the standard tools
+## Understand the memory troubleshooting tools
 
-The standard command to see what amount of memory is available or occupied is the `free` command
+### free
+
+To view the amount of available and used memory on a system, use the `free` command.
+
 ![sample free output](media/troubleshoot-performance-memory-linux/free.png)
-It summarizes the reserved memory and what memory is still available including total and used swap space.
-If a detailed view is required for each process, the `pidstat -r` command can be used.
+
+It provides a summary of reserved and available memory including total and used swap space.
+
+### pidstat
+
+For a more detailed view of memory usage by individual processes, use the `pidstat -r` command.
 ![Sample pidstat -r output](media/troubleshoot-performance-memory-linux/pidstat.png)
 
+When you analyze memory usage report, two important columns to observe are `VSZ`, `RSS`:
 
-Of particular interest are the columns 'VSZ' and 'RSS' VSZ. They display the amount of memory, in kilo bytes,  reserved by a process and the committed memory usage with the help of the RSS column. 
-Furthermore, via the column 'majflt/s' one gets an overview how often a memory page has to be read from a swap device. If there are concerns about high usage of swap, verify its usage with the tool `vmstat` to monitor the page-in and page-out statistics over a period of time.
+- VSZ (Virtual Set Size) shows the total amount of virtual memory reserved by a process in kilobytes.
+- RSS (Resident Set Size) indicates how much of that memory is currently held in RAM (for example., committed memory).
+  
+Another useful metric is `majflt/s` (The number of major page faults per second) shows how often a memory page has to be read from a SWAP device. If there are concerns about high usage of SWAP, verify its usage with the tool `vmstat` to monitor the page-in and page-out statistics over a period of time.
 
+**Sample vmstat output**
 ![Sample vmstat output](media/troubleshoot-performance-memory-linux/vmstat.png)
 
-In case you see high number of pages be read or written from the SWAP these high numbers are usually a hint that memory is getting low. Either by too many processes competing about this resource or that the available RAM can't be used. HugePages, for instance,  might be enabled. HugePages are reserved memory. Only applications capable of utilizing HugePages can use this type of memory. For any other process, this memory isn't useable. In situations, you're low on memory reconsider whether you require HugePages for your applications or whether they can also work with Transparent Huge Pages (THP). An example of an application which is able to use THP is the JAVA JVM with the help of the flag 
-`-XX:+UseTransparentHugePages`. More details about THP and how it can be controlled is documented at [Transparent HugePage Support](https://docs.kernel.org/admin-guide/mm/transhuge.html)
-For information about HugePages consult this part of the kernel documentation [HugeTLB Pages](https://docs.kernel.org/admin-guide/mm/hugetlbpage.html)
+In this sample case, you may observe a high number of memory pages being read from or written to swap. These high numbers typically indicates that the system is running low on available memory.The cause could be multiple processes competing for memory or available memory cannot be used by most applications. One common reason for unavailable memory is the use of HugePages. HugePages are reserved memory. Only applications capable of utilizing HugePages can use this type of memory. For any other process, this memory isn't useable. In situations, you may need to evaluate whether HugePages are truly required for your applications. whether you require HugePages for your applications or whether they can also work with Transparent Huge Pages (THP). Alternatively, consider using Transparent Huge Pages (THP) which allow the kernel to manage large memory pages dynamically. For example, the Java Virtual Machine (JVM) can take advantage of THP by enabling the flag:
+`-XX:+UseTransparentHugePages`. For more details about THP, see [Transparent HugePage Support](https://docs.kernel.org/admin-guide/mm/transhuge.html)
+For information about HugePages, see [HugeTLB Pages](https://docs.kernel.org/admin-guide/mm/hugetlbpage.html)
 
+## Testing THP usage with a sample program
 
-In order, to see how THP is used by the system, we use the following small C program to allocate about 256 MByte of RAM via THP. The `madvise` system call is used to let the kernel know that we would like to have one contiguous area or memory.
+To observe how THP are used by the system, you can run a small C program that allocates approximately 256 MB of RAM. The program uses the `madvise` system call to inform the kernel that the allocated memory should be treated as a single, contiguous region—enabling THP where supported.
 
 ```C
 #include <stdio.h>
@@ -101,31 +111,36 @@ int main() {
 }
 ```
 
-If we run the program, it isn't directly visible whether THP is used by the program or not.
-With the help of `/proc/meminfo`, it's possible figure out whether THP is used on the system but it can't tell you which of the processes do. Look for the `AnonHugePage` property in this file. 
+If you the program, it isn't directly visible whether THP is used by the program or not.
+You can check overall THP usage on the system via `/proc/meminfo`. Check the `AnonHugePages` field to determine the amount of memory using THP. This file only provides system-wide statistics. 
 
-To find out whether a process does use THP, you have to inspect the `smaps` file in the `/proc` directory of the process in question, for instance, `/proc/2275/smaps` and search for a line containing the word `heap`
+To find out whether a process uses THP, you have to inspect the `smaps` file in the `/proc` directory of the process in question. For example `/proc/2275/smaps` and search for a line containing the word `heap`
 ![THP usage by the sample C program](media/troubleshoot-performance-memory-linux/thp.png)
 
-Here we can see that our large memory segment is allocated and `THPeligible` is enabled as part of a THP allocation. With the help of the `madvice syscall` the memory allocation is much more efficient to allocate this memory block, as one could do with HugePages. Depending on the size, either the kernel allocates just a small 4k page or the kernel is going to allocate a larger contiguous block. 
-For more information, see the kernel doc at [Transparent Hugepage Support](https://www.kernel.org/doc/html/latest/admin-guide/mm/transhuge.html).
+In this example, we can see that a large memory segment has been allocated and marked as `THPeligible`(THP are in use). With `madvice syscall`, the memory allocation is much more efficient to allocate this memory block, as one could do with HugePages. Depending on the size of the allocation, the kernel may assign either standard 4 KB pages or larger contiguous blocks. This optimization can improve performance for memory-intensive applications.
 
-##### NUMA
+For more information, see [Transparent Hugepage Support](https://www.kernel.org/doc/html/latest/admin-guide/mm/transhuge.html).
 
-If you run on a NUMA system with more than one NODE available, it's also important to know what is the memory size each NODE does have. The complete available memory to the system can be addressed by each of the available nodes. Though, the best performance you get if the processes running on a particular NUMA NODE operate on the memory which is under direct control of this NODE. If, for example, a new memory request can't be fulfilled on the current node the memory is taken from another node. But operations on this part of the newly requested memory do imply a performance penalty. 
+### NUMA
 
-Look at the following image
+When the applicaitons are running on a NUMA (Non-Uniform Memory Access) system with multiple nodes, it's important to know how much memory is available on each node. Although all nodes can access the system's total memory, performance is typically best when a process uses memory that resides on the same NUMA node as the CPU executing it.
+
+If a memory request cannot be fulfilled by the local node, the system allocates memory from another node. However, accessing memory across nodes introduces latency and can lead to performance penalties.
+
+To optimize performance, monitor memory locality and ensure that workloads are aligned with the memory resources of their assigned NUMA nodes.
+
+If you run on a NUMA system with more than one node available, it's also important to know what is the memory size each node does have. The complete available memory to the system can be addressed by each of the available nodes. Though, the best performance you get if the processes running on a particular NUMA NODE operate on the memory which is under direct control of this NODE. If, for example, a new memory request can't be fulfilled on the current node the memory is taken from another node. But operations on this part of the newly requested memory do imply a performance penalty. 
+
+The following is a sample of the system's NUMA configuration.
 
 ![numactl output](media/troubleshoot-performance-memory-linux/numactl.png)
 
-
-The matrix tells you that the accessing memory belonging to the same NODE does have distance level of 10.
-On the other hand, if you want to access memory on NODE1, has a distance level of 12. The difference in the distance between `NODE 0` and `NODE 1` are still manageable. But if you want to access memory belonging to `NODE 3` from `NODE 0` it's doable, though there's a distance level of 32. Which means it's about three times slower to operate on memory. This kind of difference one needs to be aware off if working on a performance issue
-Consult this [document](https://www.kernel.org/doc/html/latest/admin-guide/mm/numaperf.html) for further details. For a description of the numactl tool, consult the man page: [numactl(8)](https://man7.org/linux/man-pages/man8/migratepages.8.html)
+The configuration shows that accessing memory within the same Node does have distance level of 10. If you want to access memory on `Node 1` from `Node 0` has a higher distance value of 12 that are still manageable. But if you want to access memory on `NODE 3` from `NODE 0` (it's doable)， the distance level will become 32 which means three times slower to operate on memory. These differences are important to consider when diagnosing performance issues or optimizing memory-bound workloads.
+See [document](https://www.kernel.org/doc/html/latest/admin-guide/mm/numaperf.html) for further details. For a description of the `numactl` tool, see [numactl(8)](https://man7.org/linux/man-pages/man8/migratepages.8.html).
 
 To figure out whether there's a realignment of processes and a different Node required use the `numastat` tool. Its doc is located at [numastat(8)](https://man7.org/linux/man-pages/man8/numastat.8.html). With the help of `migratepages` tool [migratepages(8)](https://man7.org/linux/man-pages/man8/migratepages.8.html) one can then try to move the memory pages to the right NODE.
 
-Independent of NUMA is the question whether any memory request has to be fulfilled? The answer to this question is [memory overcommitment]( https://en.wikipedia.org/wiki/Memory_overcommitment ). Overcommitment is a crucial design decision and has a drastic effect on the functionality of the system performance or its stability. The Linux kernel supports three modes:
+ Overcommitment is a crucial design decision and has a drastic effect on the functionality of the system performance or its stability. The Linux kernel supports three modes:
 - 'Heuristic'
 - 'Always overcommit'
 - 'Don't overcommit'
@@ -200,5 +215,6 @@ It prints all running processes and their statistics. Another approach is to use
 
 Why do we sort on rss? RSS stands for 'Resident Set Size' the nonswapped physical memory that a task does use. VSZ is the 'Virtual Set Size' which contains the amount of memory the process reserved but not committed. Committed means that a page is written to the physical memory. So if we're interested which of the processes are occupying most of the available memory (physical + swap) we have to have a look at the RSS size of a process. In the screenshot above it looks like that 'snapd' does occupy much memory, though if we look at the RSS column we see that the process isn't that significant. On the other hand, there's a process named 'malloc' which has the same size of VSZ and RSS. So this one is indeed utilizing over 1.3G of memory. 
 
-##### Summary
-Working on a memory related issue requires first to get a better picture of the memory usage of the applications hosted on the system. Their work patterns as well the right configuration of the system. All of it takes its time to understand whether the available memory on the system is sufficient. Or whether one has to reason about to enlarge the VM size, use a NUMA or an UMA system instead. Also it's worth to think about whether the application performance would benefit from utilizing THP. The best is therefore to work together with the application vendor what requirements they suggest. Plus verify your application on a test-system with a similar utilization you expect on a production system. 
+## Summary
+When you work on a memory related issues, the first step is to understand how memory is being used by the applications hosted on the system. This includes analyzing their workload patterns and verifying whether the system is configured appropriately. This helps to determine if the available memory on the system is sufficient. Then you may need to consider scaling the virtual machine (VM), or choosing between a NUMA (Non-Uniform Memory Access) and UMA (Uniform Memory Access) architecture. Also it's worth to think about whether the application performance would benefit from Transparent Huge Pages (THP). The best approach is to collaborate with the application vendor to understand the recommended memory requirements.
+
