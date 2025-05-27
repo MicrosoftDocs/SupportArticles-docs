@@ -14,7 +14,7 @@ ms.custom:
 appliesto: 
   - Excel 2016
   - Excel 2013
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # How to clean up an Excel workbook so that it uses less memory
@@ -114,10 +114,7 @@ In addition to formatting, calculations can also cause crashing and hanging in E
 
 #### Method 1: Open the workbook in the latest version of Excel
 
-Opening an Excel workbook for the first time in a new version of Excel may take a long time if the workbook contains lots of calculations. To open the workbook for the first time, Excel has to recalculate the workbook and verify the values in the workbook. For more information, see the following articles:
-
-- [Workbook loads slowly the first time that it is opened in Excel](https://support.microsoft.com/help/210162)
-- [External links may be updated when you open a workbook that was last saved in an earlier version of Excel](https://support.microsoft.com/help/925893)
+Opening an Excel workbook for the first time in a new version of Excel may take a long time if the workbook contains lots of calculations. To open the workbook for the first time, Excel has to recalculate the workbook and verify the values in the workbook. For more information, see [Workbook loads slowly the first time that it is opened in Excel](https://support.microsoft.com/help/210162).
 
 If the file continues to open slowly after Excel recalculates the file completely and you save the file, move on to method 2.
 

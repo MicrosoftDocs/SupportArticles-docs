@@ -16,7 +16,7 @@ appliesto:
   - Excel 2010
   - Office Excel 2007
   - Office Excel 2003
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Methods for transferring data to Excel from Visual Basic

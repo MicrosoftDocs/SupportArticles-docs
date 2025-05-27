@@ -12,7 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Project Online
-ms.date: 8/10/2024
+ms.date: 05/26/2025
 ---
 
 # Error when you click on the Projects link in the top navigation bar in Project Online

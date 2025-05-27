@@ -15,7 +15,7 @@ ms.author: luche
 ms.reviewer: lauraho
 appliesto: 
   - Excel 2013
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Cannot modify the oData connections in an Excel 2013 PowerPivot workbook

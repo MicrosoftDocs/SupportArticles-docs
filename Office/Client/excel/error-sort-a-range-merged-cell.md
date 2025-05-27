@@ -18,7 +18,7 @@ appliesto:
   - Excel 2013
   - Excel 2010
   - Excel 2007
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # You may receive an error message when you sort a range that contains merged cells in Excel

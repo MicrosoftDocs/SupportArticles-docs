@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Excel
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Heavy Excel workloads run slowly in multi-session environments

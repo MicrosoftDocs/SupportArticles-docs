@@ -16,7 +16,7 @@ appliesto:
   - Access 2016
   - Access 2013
   - Access 2010
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # "Cannot update. Database or object is read-only" in a query against a linked SharePoint view if there are unlinked lookup fields

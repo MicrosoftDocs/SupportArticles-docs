@@ -17,7 +17,7 @@ appliesto:
   - Excel 2010
   - Excel 2007
   - Excel 2003
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Recalculation of a worksheet that contains a SUMIF formula takes longer than expected to finish
