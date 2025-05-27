@@ -1,29 +1,39 @@
 ---
-title: Enable Bundled Consent for Multiple Application Registrations in Azure AD
-description: Describes how  to bundle consent for application registrations 
+title: Enable Bundled Consent for Microsoft Entra ID Applications.
+description: Describes how to bundle consent for Microsoft Entra ID applications.
 ms.reviewer: willfid
 ms.service: entra-id
-ms.date: 05/09/2025
+ms.date: 05/27/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# How bundle consent for multiple application registrations
+# Bundle consent for Microsoft Entra ID applications
 
-In scenarios that you have a custom client application and a custom API. Each registered as separate applications in Microsoft Entra ID. You may want to streamline the user experience by allowing users to consent to both applications at once. This article explains how to configure bundled consent so that users can grant permissions to multiple apps in a single step.
+This article explains how to configure bundled consent for Microsoft Entra ID applications.
+
+## Symptoms
+
+You have a custom client app and a custom API app， and you create app registrations for the both apps in Microsoft Entra ID. You configure bundle the consent for these two apps. In this scenario, you might receive one of the following errors when you try to sign into the app:
+
+- AADSTS70000: The request was denied because one or more scopes requested are unauthorized or expired. The user must first sign in and grant the client application access to the requested scope
+
+- AADSTS650052: The app is trying to access a service\”{app_id}\”(\”app_name\”) that your organization %\”{organization}\” lacks a service principal for. Contact your IT Admin to review the configuration of your service subscriptions or consent to the application in order to create the required service principal
+
+## Solution
 
 ## Step 1: Configure knownClientApplications for the API app registration
 
-Add the custom client app ID to the custom APIs app registration `knownClientApplications` property. For more information, see [knownClientApplications attribute](/entra/identity-platform/reference-app-manifest#knownclientapplications-attribute).
+Add the custom client app ID to the custom API app registration's `knownClientApplications` property. For more information, see [knownClientApplications attribute](/entra/identity-platform/reference-app-manifest#knownclientapplications-attribute).
 
 ## Step 2: Configure API permissions
 
 Make sure that:
 
 - All required API permissions are correctly configured on both the custom client and custom API app registrations.
-- The custom client app registration includes the API permissions defined in the custom API app registration.
+- The custom client app registration includes the API permissions that are defined in the custom API app registration.
 
 ## Step 3: The sign-in request
 
-Your authentication request must use the `.default` scope for Microsoft Graph. For Microsoft accounts, the scope must be for the custom API. This also works for school and work accounts.
+Your authentication request must use the `.default` scope for Microsoft Graph. For Microsoft accounts, the scope must be for the custom API. 
 
 ### Example Request for Microsoft accounts and Work or school accounts
 
@@ -65,17 +75,17 @@ var loginResult = await clientApp.AcquireTokenInteractive(consentScope)
 
 Consent propagation for new service principals and permissions may take time. Your application should handle this delay.
 
-### Acquire Tokens for Multiple Resources
+### Acquire Tokens for multiple resources
 
-If your client app needs to acquire tokens for another resource such as Microsoft Graph, you must implement logic to handle potential delays after user consent. Here are some recommendations:
+If your client app needs to acquire tokens for another resource such as Microsoft Graph, you must implement logic to handle potential delays after users consent to application. Here are some recommendations:
 
 - Use the `.default` scope when requesting tokens.
-- Track acquired scopes until the required one is returned
+- Track acquired scopes until the required one is returned.
 - Add a delay if the result still does not have the required scope.
 
-Currently, if `acquireTokenSilent` fails, MSAL will force you to perform a successful interaction before it will allow you to use `AcquireTokenSilent` again, even if you have a valid refresh token to use.
+Currently, if `AcquireTokenSilent` fails, MSAL requires a successful interactive authentication before allowing another silent token acquisition. This restriction applies even if a valid refresh token is available.
 
-Here is some sample code of retry logic
+Here is a sample code about retry logic:
 
 ```csharp
     public static async Task<AuthenticationResult> GetTokenAfterConsentAsync(string[] resourceScopes)
@@ -140,7 +150,7 @@ Here is some sample code of retry logic
 
 ### On the custom API using the On-behalf-of flow
 
-In the same way the client app does, when your custom API tries to acquire tokens for another resource using the On-Behalf-Of (OBO) flow, it may fail immediately after consent. To resolve this issue, you can implement retry logic and scope tracking as the following sample:
+Similar to the client app, when your custom API tries to acquire tokens for another resource using the On-Behalf-Of (OBO) flow, it may fail immediately after consent. To resolve this issue, you can implement retry logic and scope tracking as the following sample:
 
 ```csharp
 while (result == null && retryCount >= 6)
@@ -187,15 +197,14 @@ if(apiResult.StatusCode==HttpStatusCode.Forbidden)
 
 ## Recommendations and expected behavior
 
-Building an app for handling bundled consent is not as straight forward. Preferably you have a separate process you can walk your users through to perform this bundled consent, provision your app and API within their tenant or on their Microsoft Account and only get the consent experience once. (Separate from actually signing into the app.) If you don’t have this process and trying to build it into your app and your sign in experience, it gets messy and your users will have multiple consent prompts. I would recommend that you build a experience within your app that warns users they may get prompted to consent (multiple times).
+Ideally, you should create a separate flow that guides users through the consent process, provisions your app and API in their tenant or Microsoft account, and completes consent in a single step that separate from signing in.
 
-For Microsoft Accounts, I would expect minimum of two consent prompts. One for the application, and one for the API.
+If you don’t separate this flow and instead combine it with your app’s sign-in experience, the process can become confusing. Users may encounter multiple consent prompts. To improve the experience, consider adding a message in your app that informs users they might be asked to consent more than once：
 
-For work and school accounts, I would expect only one consent prompt. Azure AD handles bundled consent much better than Microsoft Accounts.
+- For Microsoft accounts, expect at least two consent prompts: one for the client app and one for the API.
+- For work or school accounts, typically only one consent prompt is required.
 
-Here is a end to end example sample of code. This has a pretty good user experience considering trying to support all account types and only prompting consent if required. Its not perfect as perfect is virtually non-existent.
-
-
+The following is an end-to-end code sample that demonstrates a smooth user experience. It supports all account types and prompts for consent only when necessary.
 
 ```csharp
 string[] msGraphScopes = { "User.Read", "Mail.Send", "Calendar.Read" }
