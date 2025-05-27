@@ -1,7 +1,7 @@
 ---
-title: AADSTS7500514 - A Supported Type of SAML Response was not Found with PingFederate
-description: Describes error code `AADSTS7500514` that's returned if a federated account tries to authenticate by using Microsoft Entra ID.
-ms.date: 04/17/2025
+title: AADSTS7500514 - A Supported Type of SAML Response Was Not Found with PingFederate
+description: Describes error code AADSTS7500514 that's returned if a federated account tries to authenticate by using Microsoft Entra ID.
+ms.date: 05/27/2025
 ms.author: bachoang
 ms.service: entra-id
 ms.custom: sap:Issues Signing In to Applications, has-azure-ad-ps-ref
