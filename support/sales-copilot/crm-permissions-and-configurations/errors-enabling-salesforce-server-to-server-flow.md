@@ -1,6 +1,6 @@
 ---
-title: Errors When Enabling Salesforce With Server-to-server Flow
-description: Resolves errors that might occur when enabling Salesforce with server-to-server flow in Microsoft Copilot for Sales.
+title: Errors When Enabling Salesforce with Server-to-Server Flow
+description: Troubleshoot errors that might occur when enabling Salesforce with a server-to-server flow in Microsoft Copilot for Sales.
 ms.date: 05/26/2025
 author: sbmjais
 ms.author: shjais
@@ -8,36 +8,36 @@ manager: shujoshi
 ms.reviewer: marrabi
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-# Errors that occur when enabling Salesforce with server-to-server flow
+# Errors that occur when enabling Salesforce that uses a server-to-server flow
 
-This article helps you troubleshoot errors that might occur when you try to enable Salesforce with server-to-server flow in Microsoft Copilot for Sales.
+This article helps you troubleshoot errors that might occur when you try to enable Salesforce with a server-to-server flow in Microsoft Copilot for Sales.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Teams        |
+|**Client app**     |  Microsoft Teams        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce      |
-|**Users**     | Administrator  |
+|**Users**     | Administrators  |
 
 ## Couldn't assign permission set because the integration user is inactive in Salesforce
 
 ### Symptoms
 
-When you try to enable Salesforce with server-to-server flow，the following error message might occur:
+When you try to enable Salesforce with a server-to-server flow, the following error message might occur:
 
 > Couldn't assign permission set because the integration user is inactive in Salesforce.
 
 ### Cause
 
-During Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user that is created automatically. A permission set is then assigned to the integration user. The error occurs when the integration user is inactive in Salesforce. The permission set can't be assigned to an inactive user.
+During the Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user that is created automatically. A permission set is then assigned to the integration user. The error occurs when the integration user is inactive in Salesforce. The permission set can't be assigned to an inactive user.
 
 ### Resolution
 
-To resolve this issue,
+To resolve this issue:
 
 1. In Salesforce, search for a user with the `copilotforsalesintegrationuser` prefix in the username.
 
@@ -49,17 +49,17 @@ To resolve this issue,
 
 ### Symptoms
 
-When you try to enable Salesforce with server-to-server flow，the following error message might occur:
+When you try to enable Salesforce with a server-to-server flow, the following error message might occur:
 
 > Couldn't create user because Salesforce integration license limit reached.
 
 ### Cause
 
-During Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user that is created automatically. Salesforce Integration user license is assigned to this integration user. The error occurs when the maximum allowed number of Salesforce Integration user licenses has already been reached.
+During the Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user that is created automatically. A Salesforce Integration user license is assigned to this integration user. The error occurs when the maximum number of Salesforce Integration user licenses has already been reached.
 
 ### Resolution
 
-To resolve this issue, check if the maximum allowed number of Salesforce Integration user licenses has been reached. If so, you need to either reassign existing integration users to other licenses or purchase more licenses.
+To resolve this issue, check if the maximum number of Salesforce Integration user licenses has been reached. If so, you need to reassign existing integration users to other licenses or purchase more licenses.
 
 To check the number of integration user licenses available in your Salesforce organization:
 
@@ -67,13 +67,13 @@ To check the number of integration user licenses available in your Salesforce or
 
 2. Go to **Setup** > **Company Settings** > **Company Information**.
 
-3. Under **User Licenses**, check the number of **Salesforce Integration** licenses available under the **Remaining Licenses** column. If the number is 0, you need to either deactivate existing integration users or change their licenses to other types. You can also purchase more licenses.
+3. Under **User Licenses**, check the number of available **Salesforce Integration** licenses under the **Remaining Licenses** column. If the number is **0**, you need to deactivate existing integration users or change their licenses to other types. You can also purchase more licenses.
 
-## Unexpected errors when enabling Salesforce with server-to-server flow
+## Unexpected errors when enabling Salesforce with a server-to-server flow
 
 ### Symptoms
 
-When you try to enable Salesforce with server-to-server flow, you might receive one of the following error messages:
+When you try to enable Salesforce with a server-to-server flow, you might receive one of the following error messages:
 
 - > Couldn't get deployment status due to incorrect ID format.
 - > Couldn't find the connected app.
@@ -85,7 +85,7 @@ When you try to enable Salesforce with server-to-server flow, you might receive 
 
 ### Cause
 
-During Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user that is created automatically. A permission set is then assigned to the integration user. In this process, some unexpected errors might occur.
+During the Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user that is created automatically. A permission set is then assigned to the integration user. In this process, some unexpected errors might occur.
 
 ### Resolution
 
@@ -95,13 +95,13 @@ To resolve this issue, retry the operation. If the issue persists, gather the er
 
 ### Symptoms
 
-When you try to enable Salesforce with server-to-server flow，the following error message might occur:
+When you try to enable Salesforce with a server-to-server flow, the following error message might occur:
 
 > No changes were made.
 
 ### Cause
 
-During Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user that is created automatically. A permission set is then assigned to the integration user. The error occurs when the same permission set has already been assigned to the user.
+During the Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user that is created automatically. A permission set is then assigned to the integration user. The error occurs when the same permission set has already been assigned to the user.
 
 ### Resolution
 
@@ -111,13 +111,13 @@ To resolve this issue, check for any manual changes to the connected app or prof
 
 ### Symptoms
 
-When you try to enable Salesforce with server-to-server flow，the following error message might occur:
+When you try to enable Salesforce with a server-to-server flow, the following error message might occur:
 
 > The profile name is already in use. Pick a different name or rename the existing profile in Salesforce.
 
 ### Cause
 
-During Salesforce server-to-server flow setup, a profile named **Copilot For Sales Integration Profile** is created in the Salesforce organization. The error occurs when a profile with the same name already exists, thereby preventing the creation process.
+During the Salesforce server-to-server flow setup, a profile named **Copilot For Sales Integration Profile** is created in the Salesforce organization. The error occurs when a profile with the same name already exists, preventing the creation process.
 
 ### Resolution
 
