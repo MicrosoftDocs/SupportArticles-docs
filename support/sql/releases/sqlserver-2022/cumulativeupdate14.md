@@ -52,6 +52,10 @@ The issue arises from a code change in SQL Server 2022 CU14 that checks if a dat
 
 This issue is fixed in [SQL Server 2022 CU15](cumulativeupdate15.md#3459086).
 
+### Issue three: Access violation when session is reset
+
+[!INCLUDE [av-sesssion-context-2022](../includes/av-sesssion-context-2022.md)]
+
 ## Improvements and fixes included in this update
 
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).

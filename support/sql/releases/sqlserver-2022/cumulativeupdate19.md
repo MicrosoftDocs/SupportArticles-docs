@@ -23,7 +23,9 @@ This article describes Cumulative Update package 19 (CU19) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-There are no known issues in this cumulative update.
+### Access violation when session is reset
+
+[!INCLUDE [av-sesssion-context-2022](../includes/av-sesssion-context-2022.md)]
 
 ## Improvements and fixes included in this update
 

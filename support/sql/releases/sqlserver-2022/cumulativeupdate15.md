@@ -23,9 +23,13 @@ This article describes Cumulative Update package 15 (CU15) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Patching error for secondary replicas in an availability group with databases enabled replication or CDC
+### Issue one: Patching error for secondary replicas in an availability group with databases enabled replication or CDC
 
 [!INCLUDE [patching-error-2022](../includes/patching-error-2022.md)]
+
+### Issue two: Access violation when session is reset
+
+[!INCLUDE [av-sesssion-context-2022](../includes/av-sesssion-context-2022.md)]
 
 ## Improvements and fixes included in this update
 

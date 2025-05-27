@@ -65,6 +65,10 @@ To work around this issue, you can either uninstall this cumulative update or en
 
 This issue is fixed in [SQL Server 2022 CU5](cumulativeupdate5.md#2417020).
 
+### Issue three
+
+[!INCLUDE [av-sesssion-context-2022](../includes/av-sesssion-context-2022.md)]
+
 ## Improvements and fixes included in this update
 
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).

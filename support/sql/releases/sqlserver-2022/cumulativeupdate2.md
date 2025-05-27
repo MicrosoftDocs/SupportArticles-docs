@@ -23,6 +23,8 @@ This article describes Cumulative Update package 2 (CU2) for Microsoft SQL Serve
 
 ## Known issues in this update
 
+### Issue one
+
 After you install this cumulative update, external data sources using generic ODBC connector may no longer work. When you try to query external tables that were created before installing this cumulative update, you receive the following error message:
 
 > Msg 7320, Level 16, State 110, Line 68  
@@ -36,6 +38,10 @@ If you try to create a new external table, you receive the following error messa
 To work around this issue, you can uninstall this cumulative update or add the Driver keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
 
 This issue is fixed in [SQL Server 2022 CU5](cumulativeupdate5.md#2398344).
+
+### Issue two
+
+[!INCLUDE [av-sesssion-context-2022](../includes/av-sesssion-context-2022.md)]
 
 ## Improvements and fixes included in this update
 
