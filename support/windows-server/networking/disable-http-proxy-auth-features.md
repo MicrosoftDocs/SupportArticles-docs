@@ -1,7 +1,7 @@
 ---
 title: How to disable HTTP proxy features
 description: Describes how to disable specific features of Windows HTTP proxies.
-ms.date: 05/26/2025
+ms.date: 05/27/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
