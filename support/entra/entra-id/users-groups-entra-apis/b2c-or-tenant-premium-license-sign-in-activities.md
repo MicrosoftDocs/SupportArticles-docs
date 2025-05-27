@@ -1,6 +1,6 @@
 ---
-title: Tenant doesn't have premium license When You Query User Sign-in Activities By Using Microsoft Graph
-description: Provides solutions to the "either tenant is B2C or tenant doesn't have premium license" error when you query user sign-in activities by using Microsoft Graph
+title: Tenant Doesn't Have Premium License When You Query User Sign-in Activities By Using Microsoft Graph
+description: Provides solutions to the either tenant is B2C or tenant doesn't have premium license error when you query user sign-in activities by using Microsoft Graph
 ms.date: 04/25/2025
 ms.service: entra-id
 ms.author: bachoang
