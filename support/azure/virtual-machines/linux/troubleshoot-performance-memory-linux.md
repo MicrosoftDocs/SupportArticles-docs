@@ -13,9 +13,11 @@ ms.date: 05/06/2025
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article describes how to troubleshoot Memory performance issues on Linux virtual machines in Azure.
+This article describes how to troubleshoot Memory performance issues on Linux virtual machines in Azure. 
 
-## 5 Things Memory might influence
+When you work on a memory related issues, the first step is to understand how memory is being used by the applications hosted on the system. This includes analyzing their workload patterns and verifying whether the system is configured appropriately. This helps to determine if the available memory on the system is sufficient. Then you may need to consider scaling the virtual machine (VM), or choosing between a NUMA (Non-Uniform Memory Access) and UMA (Uniform Memory Access) architecture. Also it's worth to think about whether the application performance would benefit from Transparent Huge Pages (THP). The best approach is to collaborate with the application vendor to understand the recommended memory requirements.
+
+## Key areas impacted by memory
 
 - **Process Memory Allocation** - Memory is a resource which every proces including the kernel does require. The amount of memory needed depends on the process's design and purpose. Memory is usually assigned to either the stack or the heap. For example, in-memory databases like SAP HANA rely heavily on memory to store and process data efficiently.
 
@@ -27,7 +29,6 @@ This article describes how to troubleshoot Memory performance issues on Linux vi
 
 - **Swap Space** The last point is the availability of swap space. Enabling swap improves overall system stability by providing a buffer during low-memory conditions that helps the system remain resilient under pressure. For more information, see the [kernel doc](https://docs.kernel.org/admin-guide/mm/concepts.html#concepts-overview)
 
-
 ## Understand the memory troubleshooting tools
 
 ### free
@@ -38,7 +39,7 @@ To view the amount of available and used memory on a system, use the `free` comm
 
 It provides a summary of reserved and available memory including total and used swap space.
 
-### pidstat
+### pidstat and vmstat
 
 For a more detailed view of memory usage by individual processes, use the `pidstat -r` command.
 ![Sample pidstat -r output](media/troubleshoot-performance-memory-linux/pidstat.png)
@@ -57,7 +58,7 @@ In this sample case, you may observe a high number of memory pages being read fr
 `-XX:+UseTransparentHugePages`. For more details about THP, see [Transparent HugePage Support](https://docs.kernel.org/admin-guide/mm/transhuge.html)
 For information about HugePages, see [HugeTLB Pages](https://docs.kernel.org/admin-guide/mm/hugetlbpage.html)
 
-## Testing THP usage with a sample program
+### Testing THP usage with a sample program
 
 To observe how THP are used by the system, you can run a small C program that allocates approximately 256 MB of RAM. The program uses the `madvise` system call to inform the kernel that the allocated memory should be treated as a single, contiguous region—enabling THP where supported.
 
@@ -140,15 +141,18 @@ See [document](https://www.kernel.org/doc/html/latest/admin-guide/mm/numaperf.ht
 
 To figure out whether there's a realignment of processes and a different Node required use the `numastat` tool. Its doc is located at [numastat(8)](https://man7.org/linux/man-pages/man8/numastat.8.html). With the help of `migratepages` tool [migratepages(8)](https://man7.org/linux/man-pages/man8/migratepages.8.html) one can then try to move the memory pages to the right NODE.
 
+### Overcommitment
+
  Overcommitment is a crucial design decision and has a drastic effect on the functionality of the system performance or its stability. The Linux kernel supports three modes:
 - 'Heuristic'
 - 'Always overcommit'
 - 'Don't overcommit'
   
-By default the Heuristic scheme is set It provides a good trade-off  between always overcommit and don't overcommit. The other two depend on the application design. For more information, see the [kernel documentation](https://www.kernel.org/doc/Documentation/vm/overcommit-accounting) for further details.
-An incorrect setting could be therefore the explanation why a new memory page or pages can't be allocated. Affecting the creation of new processes or that internal kernel structures don't get enough memory either.
+By default the `Heuristic` scheme is used. This mode offers a balanced trade-off between always allowing memory overcommitment and strictly denying it. For more information, see the [kernel documentation](https://www.kernel.org/doc/Documentation/vm/overcommit-accounting).
 
-If it comes to memory allocation issues, it can happen that there aren't enough resources left for the kernel. In such a situation the OOM killer might kick in to free some of the pages to make them available to kernel tasks or requests from other applications which would like to write a page or more. If there are signs of OOM killer activities, it's actually a signal to the administrator that the system is already on its limits. This means there are too many processes running or some have high memory requirements - if a memory leak can be excluded. The VM size needs to be increased or some of the applications needs to be hosted on a different server.
+An incorrect setting could be the reason memory pages fail to allocate, potentially affecting the creation of new processes or preventing internal kernel structures from obtaining sufficient memory.
+
+If it’s confirmed that the issue is related to memory allocation, it may indicate that there are not enough resources left for the kernel. In such a situation the OOM killer might kick in to free some of the pages to make them available to kernel tasks or requests from other applications which would like to write a page or more. If there are signs of OOM killer activities, it's actually a signal to the administrator that the system is already on its limits. This means there are too many processes running or some have high memory requirements - if a memory leak can be excluded. The VM size needs to be increased or some of the applications needs to be hosted on a different server.
 
 What information are logged if the OOM had to intervene? Given is the following simple C program to allocate memory and set  default value
 
@@ -171,7 +175,7 @@ int main() {
 }
 ```
 
-The program is utilizing too much of the available memory. It isn't possible to allocate more than 3G of  memory.
+The program is utilizing too much of the available memory. It isn't possible to allocate more than 3G of memory.
 ![memory allocation error](media/troubleshoot-performance-memory-linux/malloc-error.png)
 The information from the OOM we find on the console or simply with the command `dmesg`.
 It starts with this detail at the beginning of the trace.
@@ -212,9 +216,7 @@ If we would like to find out more about which process is responsible eating up a
 It prints all running processes and their statistics. Another approach is to use the 'ps' tool to get similar  `ps aux --sort=-rss | head -n 10`
 ![ps aux output](media/troubleshoot-performance-memory-linux/ps-aux.png)
 
-
 Why do we sort on rss? RSS stands for 'Resident Set Size' the nonswapped physical memory that a task does use. VSZ is the 'Virtual Set Size' which contains the amount of memory the process reserved but not committed. Committed means that a page is written to the physical memory. So if we're interested which of the processes are occupying most of the available memory (physical + swap) we have to have a look at the RSS size of a process. In the screenshot above it looks like that 'snapd' does occupy much memory, though if we look at the RSS column we see that the process isn't that significant. On the other hand, there's a process named 'malloc' which has the same size of VSZ and RSS. So this one is indeed utilizing over 1.3G of memory. 
 
-## Summary
-When you work on a memory related issues, the first step is to understand how memory is being used by the applications hosted on the system. This includes analyzing their workload patterns and verifying whether the system is configured appropriately. This helps to determine if the available memory on the system is sufficient. Then you may need to consider scaling the virtual machine (VM), or choosing between a NUMA (Non-Uniform Memory Access) and UMA (Uniform Memory Access) architecture. Also it's worth to think about whether the application performance would benefit from Transparent Huge Pages (THP). The best approach is to collaborate with the application vendor to understand the recommended memory requirements.
+
 
