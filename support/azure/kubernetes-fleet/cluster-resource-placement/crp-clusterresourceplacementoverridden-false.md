@@ -173,4 +173,5 @@ jsonPatchOverrides:
 
 This adds the new label `newlabel` that has the value `new-value` to the ClusterRole `secret-reader`.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
