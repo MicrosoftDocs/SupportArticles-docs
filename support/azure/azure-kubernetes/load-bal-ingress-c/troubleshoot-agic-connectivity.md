@@ -75,3 +75,111 @@ If you're exposing a application with an `ingress` it's implicit that you have a
     kubectl port-forward svc/<YOUR_SERVICE> 9090:<YOUR_SERVICE_PORT> -n <YOUR_NAMESPACE>
     ```
 
+4. Make a request to localhost on mapped port:
+
+    ```console
+    curl -v http://localhost:9090 
+    ```
+
+5. Validate if your application is working properly:
+  
+    > [!NOTE]
+    > If you see any unexpected error on this step, you must investigate the problem and solve it to continue reading this guide.
+
+    ```console
+    $ curl -v http://localhost:9090 
+    * Host localhost:9090 was resolved.
+    * IPv6: ::1
+    * IPv4: 127.0.0.1
+    *   Trying [::1]:9090...
+    * Connected to localhost (::1) port 9090
+    > GET / HTTP/1.1
+    > Host: localhost:9090
+    > User-Agent: curl/8.5.0
+    > Accept: */*
+    >
+    < HTTP/1.1 200 OK
+    < Content-Type: text/html; charset=utf-8
+    < Date: Tue, 27 May 2025 00:54:58 GMT
+    < Server: Kestrel
+    < Transfer-Encoding: chunked
+    ```
+
+## Troubleshooting Step 2: Inspect the Ingress settings
+
+Now you have to make sure if the `Ingress` was created correctly, to do so follow the steps:
+
+1. Find out your `Ingress`:
+
+    ```console
+    kubectl get ingress -A
+    ```
+
+2. Describe you `Ingress`:
+
+    ```console
+    kubectl describe ingress <YOUR_INGRESS> -n <YOUR_NAMESPACE>
+    ```
+
+3. Check the events, the rules, and the address:
+
+    ```console
+    $ kubectl describe ingress <YOUR_INGRESS> -n <YOUR_NAMESPACE>
+    Name:             dummy-web
+    Labels:           <none>
+    Namespace:        default
+    Address:
+    Ingress Class:    azure-application-gateway
+    Default backend:  <default>
+    Rules:
+    Host        Path  Backends
+    ----        ----  --------
+    *
+                /   dummy-web:8080 (10.224.0.70:8080,10.224.0.72:8080,10.224.0.88:8080 + 12 more...)
+    Annotations:  <none>
+    Events:
+    Type    Reason              Age                  From                       Message
+    ----    ------              ----                 ----                       -------
+    Normal  ResetIngressStatus  13m (x5 over 13m)    azure/application-gateway  Reset IP for Ingress default/dummy-web. Application Gateway <APPLICATION_GATEWAY_ID> is in stopped state
+    ```
+
+In this case, you can see that there is no address for this `Ingress`, and there is an event: Normal  ResetIngressStatus  13m (x5 over 13m)    azure/application-gateway  Reset IP for Ingress default/dummy-web. Application Gateway <APPLICATION_GATEWAY_ID> is in stopped state.
+
+## Troubleshooting Step 3: Inspect the ingress pod logs
+
+1. Find out the `Ingress` pod:
+
+    ```console
+    kubectl get pod -A | grep ingress
+    ```
+
+2. Inspect `logs`:
+
+    ```console
+    kubectl get pod -A | grep ingress
+    ```
+
+If in the previous step you saw any event on the ingress, you must try to look for then at this `logs` or find out any unexpected errors.
+
+## Troubleshooting Step 4: Inspect the Application Gateway operational state
+
+This step focus on understanding the operation state of the [Application Gateway](/azure/application-gateway/overview) used as [Ingress Controller on AKS](/azure/application-gateway/ingress-controller-overview).
+
+1. Get tha Application Gateway ID:
+
+    > [!NOTE]
+    > If you see any unexpected error on this step, you must might have misconfigured `AGIC`, please read the guide: [Enable the ingress controller add-on for a new AKS cluster with a new application gateway instance](azure/application-gateway/tutorial-ingress-controller-add-on-new).
+
+    ```console
+    {
+    "config": {
+        "applicationGatewayName": "<APPLICATION_GATEWAY_NAME>",
+        "effectiveApplicationGatewayId": "...",
+        "subnetCIDR": "..."
+    },
+    "enabled": true,
+    ..
+    }
+    ```
+
+
