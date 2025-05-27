@@ -1,270 +1,78 @@
 ---
-title: Enable Bundled Consent for Multiple Application Registrations in Azure AD
-description: Describes how  to bundle consent for application registrations 
-ms.reviewer: willfid
+title: Microsoft Entra Applications Using TLS 1.0/1.1 Fail to Authenticate
+description: Provides solutions to authentication errors that occur with Microsoft Entra applications using TLS version 1.0 or 1.1.
+ms.reviewer: bachoang, v-weizhu
 ms.service: entra-id
 ms.date: 05/09/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# How bundle consent for multiple application registrations
+# Microsoft Entra applications using TLS 1.0/1.1 fail to authenticate
 
-In scenarios that you have a custom client application and a custom API. Each registered as separate applications in Microsoft Entra ID. You may want to streamline the user experience by allowing users to consent to both applications at once. This article explains how to configure bundled consent so that users can grant permissions to multiple apps in a single step.
+This article provides solutions to authentication errors that occur with Microsoft Entra-integrated applications targeting versions earlier than Microsoft .NET Framework 4.7.
 
-## Step 1: Configure knownClientApplications for the API app registration
+## Symptoms
 
-Add the custom client app ID to the custom APIs app registration `knownClientApplications` property. For more information, see [knownClientApplications attribute](/entra/identity-platform/reference-app-manifest#knownclientapplications-attribute).
+Applications using an older version of the .NET Framework might encounter authentication failures with one of the following error messages:
 
-## Step 2: Configure API permissions
+- > AADSTS1002016: You are using TLS version 1.0, 1.1 and/or 3DES cipher which are deprecated to improve the security posture of Azure AD
 
-Make sure that:
+- > IDX20804: Unable to retrieve document from: '[PII is hidden]'
 
-- All required API permissions are correctly configured on both the custom client and custom API app registrations.
-- The custom client app registration includes the API permissions defined in the custom API app registration.
+- > IDX20803: Unable to obtain configuration from: '[PII is hidden]'
 
-## Step 3: The sign-in request
+- > IDX10803: Unable to create to obtain configuration from: 'https://login.microsoftonline.com/{Tenant-ID}/.well-known/openid-configuration'
 
-Your authentication request must use the `.default` scope for Microsoft Graph. For Microsoft accounts, the scope must be for the custom API. This also works for school and work accounts.
+- > IDX20807: Unable to retrieve document from: 'System.String'
 
-### Example Request for Microsoft accounts and Work or school accounts
+- > System.Net.Http.Headers.HttpResponseHeaders RequestMessage {Method: POST, RequestUri: '\<request-uri>', Version: 1.1, Content: System.Net.Http.FormUrlEncodedContent, Headers: { Content-Type: application/x-www-form-urlencoded Content-Length: 970 }} System.Net.Http.HttpRequestMessage StatusCode UpgradeRequired This service requires use of the TLS-1.2 protocol
 
-```HTTP
-https://login.microsoftonline.com/common/oauth2/v2.0/authorize
-?response_type=code
-&Client_id=72333f42-5078-4212-abb2-e4f9521ec76a
-&redirect_uri=https://localhost
-&scope=openid profile offline_access app_uri_id1/.default
-&prompt=consent
-```
-> [NOTE!]
-> The client will not appear as having permission for the API. This is expected because the client is listed as a knownClientApplication.
+## Cause
 
-### Example request for Work or school accounts only
+Starting January 31, 2022, Microsoft enforced the use of the TLS 1.2 protocol for client applications connecting to Microsoft Entra services on the Microsoft Identity Platform to ensure compliance with security and industry standards. For more information about this change, see [Enable support for TLS 1.2 in your environment for Microsoft Entra TLS 1.1 and 1.0 deprecation](../ad-dmn-services/enable-support-tls-environment.md) and [Act fast to secure your infrastructure by moving to TLS 1.2!](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/act-fast-to-secure-your-infrastructure-by-moving-to-tls-1-2/2967457)
 
-If you are not supporting Microsoft Accounts:
+Applications running on older platforms or using older .NET Framework versions might not have TLS 1.2 enabled. Therefore, they can't retrieve the OpenID Connect metadata document, resulting in failed authentication.
 
-```http
+## Solution 1: Upgrade the .NET Framework
 
-GET https://login.microsoftonline.com/common/oauth2/v2.0/authorize
-?response_type=code
-&client_id=72333f42-5078-4212-abb2-e4f9521ec76a
-&redirect_uri=https://localhost
-&scope=openid profile offline_access User.Read https://graph.microsoft.com/.default
-&prompt=consent
+Upgrade the application to use .NET Framework 4.7 or later, where TLS 1.2 is enabled by default.
 
-```
+## Solution 2: Enable TLS 1.2 programmatically
 
-### Implementation with MSAL.NET
-
-```http
-String[] consentScope = { "api://ae5a0bbe-d6b3-4a20-867b-c8d9fd442160/.default" };
-var loginResult = await clientApp.AcquireTokenInteractive(consentScope)
-    .WithAccount(account)
-	 .WithPrompt(Prompt.Consent)
-      .ExecuteAsync();
-```
-
-Consent propagation for new service principals and permissions may take time. Your application should handle this delay.
-
-### Acquire Tokens for Multiple Resources
-
-If your client app needs to acquire tokens for another resource such as Microsoft Graph, you must implement logic to handle potential delays after user consent. Here are some recommendations:
-
-- Use the `.default` scope when requesting tokens.
-- Track acquired scopes until the required one is returned
-- Add a delay if the result still does not have the required scope.
-
-Currently, if `acquireTokenSilent` fails, MSAL will force you to perform a successful interaction before it will allow you to use `AcquireTokenSilent` again, even if you have a valid refresh token to use.
-
-Here is some sample code of retry logic
+If upgrading the .NET Framework isn't feasible, you can enable TLS 1.2 by adding the following code to the **Global.asax.cs** file in your application:
 
 ```csharp
-    public static async Task<AuthenticationResult> GetTokenAfterConsentAsync(string[] resourceScopes)
-        {
-            AuthenticationResult result = null;
-            int retryCount = 0;
+using System.Net;
 
-            int index = resourceScopes[0].LastIndexOf("/");
-
-            string resource = String.Empty;
-
-            // Determine resource of scope
-            if (index < 0)
-            {
-                resource = "https://graph.microsoft.com";
-            }
-            else
-            {
-                resource = resourceScopes[0].Substring(0, index);
-            }
-
-            string[] defaultScope = { $"{resource}/.default" };
-
-            string[] acquiredScopes = { "" };
-            string[] scopes = defaultScope;
-            
-            while (!acquiredScopes.Contains(resourceScopes[0]) && retryCount <= 15)
-            {
-                try
-                {
-                    result = await clientApp.AcquireTokenSilent(scopes, CurrentAccount).WithForceRefresh(true).ExecuteAsync();
-                    acquiredScopes = result.Scopes.ToArray();
-                    if (acquiredScopes.Contains(resourceScopes[0])) continue;
-                }
-                catch (Exception e)
-                { }
-
-                // Switch scopes to pass to MSAL on next loop. This tricks MSAL to force AcquireTokenSilent after failure. This also resolves intermittent cachine issue in ESTS
-                scopes = scopes == resourceScopes ? defaultScope : resourceScopes;
-                retryCount++;
-
-                // Obvisouly something went wrong
-                if(retryCount==15)
-                {
-                    throw new Exception();
-                }
-
-                // MSA tokens do not return scope in expected format when .default is used
-                int i = 0;
-                foreach(var acquiredScope in acquiredScopes)
-                {
-                    if(acquiredScope.IndexOf('/')==0) acquiredScopes[i].Replace("/", $"{resource}/");
-                    i++;
-                }
-
-                Thread.Sleep(2000);
-            }
-
-            return result;
-        }
-```
-
-### On the custom API using the On-behalf-of flow
-
-In the same way the client app does, when your custom API tries to acquire tokens for another resource using the On-Behalf-Of (OBO) flow, it may fail immediately after consent. To resolve this issue, you can implement retry logic and scope tracking as the following sample:
-
-```csharp
-while (result == null && retryCount >= 6)
-            {
-                UserAssertion assertion = new UserAssertion(accessToken);
-                try
-                {
-                    result = await apiMsalClient.AcquireTokenOnBehalfOf(scopes, assertion).ExecuteAsync();
-                    
-                }
-                catch { }
-
-                retryCount++;
-
-                if (result == null)
-                {
-                    Thread.Sleep(1000 * retryCount * 2);
-                }
-            }
-
-If (result==null) return new HttpStatusCodeResult(HttpStatusCode.Forbidden, "Need Consent");
-```
-
-If all retries fail, return an error and throw an error and instruct the client to initial a full consent process.
-
-**Example of client code that assumes your API throws a 403**
-
-```
-HttpResponseMessage apiResult = null;
-apiResult = await MockApiCall(result.AccessToken);
-
-if(apiResult.StatusCode==HttpStatusCode.Forbidden)
+protected void Application_Start()
 {
-  var authResult = await clientApp.AcquireTokenInteractive(apiDefaultScope)
-    .WithAccount(account)
-    .WithPrompt(Prompt.Consent)
-    .ExecuteAsync();
-  CurrentAccount = authResult.Account;
-
-  // Retry API call
-  apiResult = await MockApiCall(result.AccessToken); 
-}         
-```
-
-## Recommendations and expected behavior
-
-Building an app for handling bundled consent is not as straight forward. Preferably you have a separate process you can walk your users through to perform this bundled consent, provision your app and API within their tenant or on their Microsoft Account and only get the consent experience once. (Separate from actually signing into the app.) If you don’t have this process and trying to build it into your app and your sign in experience, it gets messy and your users will have multiple consent prompts. I would recommend that you build a experience within your app that warns users they may get prompted to consent (multiple times).
-
-For Microsoft Accounts, I would expect minimum of two consent prompts. One for the application, and one for the API.
-
-For work and school accounts, I would expect only one consent prompt. Azure AD handles bundled consent much better than Microsoft Accounts.
-
-Here is a end to end example sample of code. This has a pretty good user experience considering trying to support all account types and only prompting consent if required. Its not perfect as perfect is virtually non-existent.
-
-
-
-```csharp
-string[] msGraphScopes = { "User.Read", "Mail.Send", "Calendar.Read" }
-String[] apiScopes = { "api://ae5a0bbe-d6b3-4a20-867b-c8d9fd442160/access_as_user" };
-String[] msGraphDefaultScope = { "https://graph.microsoft.com/.default" };
-String[] apiDefaultScope = { "api://ae5a0bbe-d6b3-4a20-867b-c8d9fd442160/.default" };
-
-var accounts = await clientApp.GetAccountsAsync();
-IAccount account = accounts.FirstOrDefault();
-
-AuthenticationResult msGraphTokenResult = null;
-AuthenticationResult apiTokenResult = null;
-
-try
-{
-	msGraphTokenResult = await clientApp.AcquireTokenSilent(msGraphScopes, account).ExecuteAsync();
-	apiTokenResult = await clientApp.AcquireTokenSilent(apiScopes, account).ExecuteAsync();
-}
-catch (Exception e1)
-{
-	
-	string catch1Message = e1.Message;
-	string catch2Message = String.Empty;
-
-	try
-	{
-        // First possible consent experience
-		var result = await clientApp.AcquireTokenInteractive(apiScopes)
-		  .WithExtraScopesToConsent(msGraphScopes)
-		  .WithAccount(account)
-		  .ExecuteAsync();
-		CurrentAccount = result.Account;
-		msGraphTokenResult = await clientApp.AcquireTokenSilent(msGraphScopes, CurrentAccount).ExecuteAsync();
-		apiTokenResult = await clientApp.AcquireTokenSilent(apiScopes, CurrentAccount).ExecuteAsync();
-	}
-	catch(Exception e2)
-	{
-		catch2Message = e2.Message;
-	};
-
-	if(catch1Message.Contains("AADSTS650052") || catch2Message.Contains("AADSTS650052") || catch1Message.Contains("AADSTS70000") || catch2Message.Contains("AADSTS70000"))
-	{
-        // Second possible consent experience
-		var result = await clientApp.AcquireTokenInteractive(apiDefaultScope)
-			.WithAccount(account)
-			.WithPrompt(Prompt.Consent)
-			.ExecuteAsync();
-		CurrentAccount = result.Account;
-		msGraphTokenResult = await GetTokenAfterConsentAsync(msGraphScopes);
-		apiTokenResult = await GetTokenAfterConsentAsync(apiScopes);
-	}
-}
-
-// Call API
-
-apiResult = await MockApiCall(apiTokenResult.AccessToken);
-var contentMessage = await apiResult.Content.ReadAsStringAsync();
-
-if(apiResult.StatusCode==HttpStatusCode.Forbidden)
-{
-	var result = await clientApp.AcquireTokenInteractive(apiDefaultScope)
-		.WithAccount(account)
-		.WithPrompt(Prompt.Consent)
-		.ExecuteAsync();
-	CurrentAccount = result.Account;
-
-	// Retry API call
-	apiResult = await MockApiCall(result.AccessToken);
+ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3; // only allow TLS 1.2 and SSL 3
+// The rest of your startup code goes here
 }
 ```
+
+## Solution 3: Change web.config to enable TLS 1.2
+
+If .NET Framework 4.7.2 is available, you can enable TLS 1.2 by adding the following configuration to the **web.config** file:
+
+```json
+<system.web>
+    <httpRuntime targetFramework="4.7.2" />
+</system.web>
+```
+
+> [!NOTE]
+> If using .NET Framework 4.7.2 causes breaking changes to your app, this solution might not work.
+
+## Solution 4: Enable TLS 1.2 before running PowerShell commands
+
+If you encounter the AADSTS1002016 error while running the PowerShell command `Connect-MSolService`, `Connect-AzureAD`, or `Connect-MSGraph` (from the Microsoft Intune PowerShell SDK module), set the security protocol to TLS 1.2 before executing the commands:
+
+```powershell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+```
+
+## References
+
+[Transport Layer Security (TLS) best practices with .NET Framework](/dotnet/framework/network-programming/tls)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
