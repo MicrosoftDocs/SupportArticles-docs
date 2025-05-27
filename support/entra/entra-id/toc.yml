@@ -114,6 +114,8 @@
         href: app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md
       - name: Error AADSTS50105 - user not assigned a role
         href: app-integration/error-code-AADSTS50105-user-not-assigned-role.md
+      - name: Error AADSTS50107 - Guest invitation redemption fails
+        href: app-integration/error-aadsts50107-guest-redemption-fails.md
       - name: Error AADSTS650056 - misconfigured app
         href: app-integration/error-code-AADSTS650056-misconfigured-app.md
       - name: Error AADSTS70001 - app not found in directory
@@ -142,6 +144,8 @@
         href: app-integration/reply-url-redirected-to-localhost.md
       - name: Nonce is null error in ASP.NET MVC with OpenID Connect
         href: app-integration/troubleshoot-validation-context-nonce-null-mvc.md
+      - name: Your browser is not supported or up-to-date error in MSAL app
+        href: app-integration/update-your-browser-error-when-using-apps-adal-msal.md
   - name: Troubleshoot app registrations
     items: 
       - name: Application and delegated permissions for access tokens
@@ -311,7 +315,7 @@
         href: users-groups-entra-apis/error-call-me-endpoint-microsoft-graph.md
       - name: HTTP 403 authorization error when calling Microsoft Graph Security API
         href: users-groups-entra-apis/403-error-when-calling-microsoft-graph-security-api.md
-      - name: Tenant doesn't have premium license error when query sign-in activities
+      - name: Premium license error when querying sign-in activities
         href: users-groups-entra-apis/b2c-or-tenant-premium-license-sign-in-activities.md
    - name: Problem with using the Graph SDK - libraries
      items:
