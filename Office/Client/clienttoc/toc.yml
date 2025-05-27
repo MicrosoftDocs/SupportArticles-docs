@@ -221,6 +221,10 @@
           href: ../activation/run-into-a-problem.md
         - name: You currently have not been assigned an office license that includes the Office desktop apps
           href: ../activation/license-not-assigned.md
+    - name: Copilot
+      items:
+        - name: Copilot is missing, disabled, or doesn't work correctly
+          href: ../copilot/copilot-missing-disabled-not-work-correctly.md
     - name: End of Support
       items:
         - name: Office 2007 has reached end of extended support
