@@ -273,12 +273,12 @@ Network traces are helpful in pinpointing AD domain join issues. During an AD do
 > [!NOTE]
 >
 > The snippets are taken from Wireshark. Other network trace analysis tools might show the frame summaries and details differently.
->
-> In these network traces, the IP address represent the following roles:
->
-> - 192.168.100.13 - Client
-> - 192.168.100.12 - DNS server and DC
-> - 192.168.100.10 - DC
+
+In these network traces, the IP address represent the following roles:
+
+- 192.168.100.13 - Client
+- 192.168.100.12 - DNS server and DC
+- 192.168.100.10 - DC
 
 ### DNS
 
