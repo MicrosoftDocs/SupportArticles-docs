@@ -94,7 +94,7 @@ To start the process, run tests from a test pod against each layer.
    kubectl get pod --namespace kube-system --selector k8s-app=kube-dns --output wide
    ```
 
-1. Connect to the test pod (using `kubectl exec -it aks-test -- bash`) and test the DNS resolution against each CoreDNS pod IP address by running the following commands:
+1. Connect to the test pod using the `kubectl exec -it aks-test -- bash` command and test the DNS resolution against each CoreDNS pod IP address by running the following commands:
 
    ```bash
    # Placeholder values
@@ -167,44 +167,46 @@ Examine the DNS server configuration of the virtual network, and determine wheth
 
 ##### Review the health and performance of CoreDNS pods
 
-You can use kubectl commands to check the health and performance of CoreDNS pods. Start by verifying that the CoreDNS pods are running:
+You can use `kubectl` commands to check the health and performance of CoreDNS pods. To do so, follow these steps:
 
-```bash
-kubectl get pods -l k8s-app=kube-dns -n kube-system
-```
+1. Verify that the CoreDNS pods are running:
 
-Check whether the CoreDNS pods are overused:
+   ```bash
+   kubectl get pods -l k8s-app=kube-dns -n kube-system
+   ```
 
-```bash
-kubectl top pods -n kube-system -l k8s-app=kube-dns
-```
+2. Check if the CoreDNS pods are overused:
 
-```output
-NAME                      CPU(cores)   MEMORY(bytes)
-coredns-dc97c5f55-424f7   3m           23Mi
-coredns-dc97c5f55-wbh4q   3m           25Mi
-```
+   ```bash
+   kubectl top pods -n kube-system -l k8s-app=kube-dns
+   ```
 
-Verify that the nodes that host the CoreDNS pods aren't overused. Also, get the nodes that are hosting the CoreDNS pods:
+   ```output
+   NAME                      CPU(cores)   MEMORY(bytes)
+   coredns-dc97c5f55-424f7   3m           23Mi
+   coredns-dc97c5f55-wbh4q   3m           25Mi
+   ```
 
-```bash
-kubectl get pods -n kube-system -l k8s-app=kube-dns -o jsonpath='{.items[*].spec.nodeName}'
-```
+3. Get the nodes that host the CoreDNS pods:
 
-Check the usage of these nodes:
+   ```bash
+   kubectl get pods -n kube-system -l k8s-app=kube-dns -o jsonpath='{.items[*].spec.nodeName}'
+   ```
 
-```bash
-kubectl top nodes
-```
+4. Verify that the nodes aren't overused:
 
-Verify the logs for the CoreDNS pods:
+   ```bash
+   kubectl top nodes
+   ```
 
-```bash
-kubectl logs -l k8s-app=kube-dns -n kube-system
-```
+5. Verify the logs for the CoreDNS pods:
+
+   ```bash
+   kubectl logs -l k8s-app=kube-dns -n kube-system
+   ```
 
 > [!NOTE]
-> To see more debugging information, enable verbose logs in CoreDNS. To enable verbose logging in CoreDNS, see [Troubleshooting CoreDNS customizations in AKS](/azure/aks/coredns-custom#troubleshooting).
+> To get more debugging information, enable verbose logs in CoreDNS. To do so, see [Troubleshooting CoreDNS customization in AKS](/azure/aks/coredns-custom#troubleshooting).
 
 ##### Review the health and performance of nodes
 
@@ -260,19 +262,20 @@ To get a better picture of resource usage at the pod and node level, you can als
 
 #### Part 3: Analyze DNS traffic and review DNS resolution performance
 
-Analyzing DNS traffic can help you understand how your AKS cluster is handling the DNS queries. Ideally, you want to reproduce the problem on a test pod while you capture the traffic from this test pod and on each of the CoreDNS pods.
+Analyzing DNS traffic can help you understand how your AKS cluster handles the DNS queries. Ideally, you want to reproduce the problem on a test pod while you capture the traffic from this test pod and on each of the CoreDNS pods.
 
 There are two main ways to analyze DNS traffic:
 
-- Using real-time DNS analysis tools (e.g. [Inspektor Gadget](../../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget)) to analyze the DNS traffic in real time.
-- Using traffic capture tools (e.g. [Retina Capture](https://retina.sh/docs/Troubleshooting/capture), [Dumpy](https://github.com/larryTheSlap/dumpy)) to collect the DNS traffic and analyze the traffic in a network packet analyzer tool, such as Wireshark. 
+- Using real-time DNS analysis tools, such as [Inspektor Gadget](../../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget), to analyze the DNS traffic in real time.
+- Using traffic capture tools, such as [Retina Capture](https://retina.sh/docs/Troubleshooting/capture) and [Dumpy](https://github.com/larryTheSlap/dumpy), to collect the DNS traffic and analyze it with a network packet analyzer tool, such as Wireshark.
 
-In both the approaches the goal would be to understand the health and performance of DNS responses using DNS response codes, response times, and other metrics. You are free to choose the approach that best fits your needs.
+Both approaches aim to understand the health and performance of DNS responses using DNS response codes, response times, and other metrics. Choose the one that fits your needs best.
 
 ##### Real-time DNS traffic analysis
 
-In this section, we will use [Inspektor Gadget](../../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget) to analyze the DNS traffic in real time. Follow this [guide](../../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster) to install Inspektor Gadget to your cluster.
-We can use the following command to trace DNS traffic across all namespaces
+You can use [Inspektor Gadget](../../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget) to analyze the DNS traffic in real time. To install Inspektor Gadget to your cluster, see [How to install Inspektor Gadget in an AKS cluster](../../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster).
+
+To trace DNS traffic across all namespaces, use the following command:
 
 ```bash
 # Get the version of Gadget
@@ -281,7 +284,8 @@ GADGET_VERSION=$(kubectl gadget version | grep Server | awk '{print $3}')
 kubectl gadget run trace_dns:$GADGET_VERSION --all-namespaces --fields "src,dst,name,qr,qtype,id,rcode,latency_ns"
 ```
 
-Where `--fields` is a comma-separated list of fields to be displayed. The following table describes the fields that are used in the command:
+Where `--fields` is a comma-separated list of fields to displayed. The following list describes the fields that are used in the command:
+
 - `src`: The source of the request with Kubernetes information (`<kind>/<namespace>/<name>:<port>`).
 - `dst`: The destination of the request with Kubernetes information (`<kind>/<namespace>/<name>:<port>`).
 - `name`: The name of the DNS request.
@@ -291,7 +295,7 @@ Where `--fields` is a comma-separated list of fields to be displayed. The follow
 - `rcode`: The response code of the DNS request.
 - `latency_ns`: The latency of the DNS request.
 
-The output of the command will look like the following:
+The command output looks like the following:
 
 ```output
 SRC                                  DST                                  NAME                        QR QTYPE          ID             RCODE           LATENCY_NS
@@ -303,14 +307,14 @@ p/default/aks-test:56921             p/kube-system/coredns-57d886c994-r2… db.c
 p/kube-system/coredns-57d886c994-r2… p/default/aks-test:56921             db.contoso.com.             R  A              6574           NameErr…               0ns
 ```
 
-Here you can use `ID` to identify if a query has a response or not. The `RCODE` field will show you the response code of the DNS request. The `LATENCY_NS` field will show you the latency of the DNS request in nanoseconds. Together, these fields can help you understand the health and performance of DNS responses.
-For more information about real-time DNS analysis, see [Troubleshoot DNS failures across an AKS cluster in real time](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md)
+You can use the `ID` field to identify if a query has a response or not. The `RCODE` field shows you the response code of the DNS request. The `LATENCY_NS` field shows you the latency of the DNS request in nanoseconds. These fields can help you understand the health and performance of DNS responses.
+For more information about real-time DNS analysis, see [Troubleshoot DNS failures across an AKS cluster in real time](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md).
 
 ##### Capture DNS traffic
 
-In this section, we use Dumpy as an example of how to collect DNS traffic captures from each CoreDNS pod and a client DNS pod (in this case, the `aks-test` pod).
+This section demonstrates how to use Dumpy to collect DNS traffic captures from each CoreDNS pod and a client DNS pod (in this case, the `aks-test` pod).
 
-To collect the captures from the test client pod, run the following Dumpy command:
+To collect the captures from the test client pod, run the following command:
 
 ```bash
 kubectl dumpy capture pod aks-test -f "-i any port 53" --name dns-cap1-aks-test

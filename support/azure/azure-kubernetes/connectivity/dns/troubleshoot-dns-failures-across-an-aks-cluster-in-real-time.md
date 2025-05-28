@@ -8,7 +8,7 @@ ms.date: 08/09/2024
 ---
 # Real-time DNS traffic analysis to troubleshoot DNS resolution failures in AKS
 
-This article discusses how to troubleshoot DNS failures across an Azure Kubernetes Service (AKS) cluster in real time.
+This article discusses how to troubleshoot Domain Name System (DNS) failures across an Azure Kubernetes Service (AKS) cluster in real time.
 
 > [!NOTE]
 > This article is complementary to [Basic troubleshooting of DNS resolution problems in AKS](basic-troubleshooting-dns-resolution-problems.md) guide.
@@ -79,12 +79,14 @@ Here are some causes of unsuccessful DNS responses:
 
 - The DNS name being resolved has a typo.
 - The upstream DNS nameservers experience issues.
-- A misconfigured networking configuration (netpol, firewall, NSG rules etc.) is blocking DNS traffic.
-- The DNS name becomes invalid after expansion. To understand how DNS queries might be expanded using a pod's `/etc/resolv.conf`, see [Namespaces of Services](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#namespaces-of-services).
+- A misconfigured networking configuration (such as NetworkPolicy (NetPol), firewall or NSG rules) blocks DNS traffic.
+- The DNS name becomes invalid after expansion.
+
+  To understand how DNS queries might be expanded using the `/etc/resolv.conf` file of a pod, see [Namespaces of Services](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#namespaces-of-services).
 
 ## Step 2: Identify slow DNS queries across the cluster
 
-You can use the DNS gadget to identify all the slow DNS queries across the cluster. To perform this check, trace DNS packets on all the nodes and filter slow responses. 
+You can use the DNS gadget to identify all the slow DNS queries across the cluster. To perform this check, trace DNS packets on all the nodes and filter slow responses.
 
 In the following example, you're using a latency value of `5ms` to define slow packets. You can change it to a desired value, for example, `5μs`, `20ms`, `1s`:
 
@@ -96,6 +98,7 @@ kubectl gadget run trace_dns:$GADGET_VERSION \
 ```
 
 Here are the explanations of the command parameters:
+
 - `--all-namespaces`: Shows data from pods in all namespaces.
 - `--fields k8s.node,src,dst,name,qtype,rcode,latency_ns`: Shows only Kubernetes information, source and destination of the DNS packets, DNS name, DNS query type, DNS response code, and latency in nanoseconds.
 - `--filter "latency_ns_raw>5000000"`: Matches only DNS responses with latency greater than `5ms` (`5000000` nanoseconds).
