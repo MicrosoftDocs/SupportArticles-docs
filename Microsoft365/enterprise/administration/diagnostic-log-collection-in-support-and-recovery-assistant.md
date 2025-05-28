@@ -14,7 +14,7 @@ search.appverid:
   - MOE150
 ms.assetid: 5f76de29-9ee3-47de-84ce-2d49fdc32174
 description: Learn about diagnostic log collection in Support and Recovery Assistant. 
-ms.date: 03/31/2022
+ms.date: 05/28/2025
 ---
 
 # Turn off diagnostic log collection in Support and Recovery Assistant

@@ -12,7 +12,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 12/06/2023
+ms.date: 05/28/2025
 ---
 
 # Increase the size of diagnostic logs for Microsoft 365 Apps for enterprise

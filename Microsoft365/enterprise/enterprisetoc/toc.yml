@@ -23,3 +23,5 @@
         href: ../administration/assistant-teams-meeting-add-in-outlook.md
       - name: 'Scenario: Reset Office Activation'
         href: ../administration/assistant-reset-office-activation.md      
+    - name: Diagnostic log collection in Support and Recovery Assistant
+      href: ../administration/diagnostic-log-collection-in-support-and-recovery-assistant.md
