@@ -17,25 +17,26 @@ Access to [Azure CLI](/cli/azure/get-started-with-azure-cli).
 
 ## Symptoms
 
-An AKS cluster creation fails in requested availability zones and you receive an "AvailabilityZoneNotSupported" error with the following message:
+An AKS cluster creation fails in specified availability zones and you receive an "AvailabilityZoneNotSupported" error with the following message:
 
 > Preflight validation check for resource(s) for container service \<resource-name> in resource group \<resource-group-name> failed. Message: The zone(s) '1' for resource 'agentpoolName' is not supported.The supported zones for location '\<location>' are 'A', 'B'
 
 ## Cause
 
-The issue occurs because the requested SKU isn't available in the requested zones or there's a restriction on the Azure subscription.
+The issue occurs because the requested SKU is unavailable in a specified zone or the zone is restricted by the Azure subscription.
 
-## Solution 1: Ensure SKU availability in the requested zones
+To determine the root cause, follow these steps:
 
-1. Get SKU details by running one of the following commands:
-
-    - List SKU details for the specific location and size:
+1. Verify if the requested SKU isn't available in the specified zone:
 
         ```azurecli
         az vm list-skus -l <location> --size <SKU> 
         ```
 
-    - Retrieve all SKU details for a subscription and location:
+    > [!NOTE]
+    > Replace `<SKU>` and `<locaiton>` accordingly.
+
+2. Verify if the specified zone is restricted by your subscription:
 
         ```azurecli
         az rest --method get \
@@ -43,40 +44,34 @@ The issue occurs because the requested SKU isn't available in the requested zone
         ```
 
     > [!NOTE]
-    > Replace `<subscription>`, `<SKU>` and `<locaiton>` in the commands accordingly.
+    > Replace `<subscription>` and `<locaiton>` accordingly.
 
-2. Check the requested SKU information and available zones from the command output.
+    If you see the following information in the *availableSkus.txt* file, it indicates that your subscription doesn't have access to zones in the specified location.
 
-3. If the requested SKU isn't available in the requested zones, \<what operations should users do?>
-
-If you see the following information in the *availableSkus.txt* file, it indicates that your subscription doesn't have access to zones in the requested region.
-
-```output
-"restrictions": [
-                {
-                    "type": "Zone",
-                    "values": [
-                        "<zone>"
-                    ],
-                    "restrictionInfo": {
-                        "locations": [
-                            "<location>"
+    ```output
+    "restrictions": [
+                    {
+                        "type": "Zone",
+                        "values": [
+                            "<zone>"
                         ],
-                        "zones": [
-                            "1",
-                            "2",
-                            "3"
-                        ]
-                    },
-                    "reasonCode": "NotAvailableForSubscription"
-                }
-            ]
-```
+                        "restrictionInfo": {
+                            "locations": [
+                                "<location>"
+                            ],
+                            "zones": [
+                                "1",
+                                "2",
+                                "3"
+                            ]
+                        },
+                        "reasonCode": "NotAvailableForSubscription"
+                    }
+                ]
+    ```
 
-In this case, [request access to the restricted region or zone](#solution-2-request-access-to-the-restricted-region-or-zone).
+## Solution: Request access to the specified zone
 
-## Solution 2: Request access to the restricted region or zone
-
-If your subscription doesn't have access to zones in the requested region, request access to the region or zone from the [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) by following the [Azure region access request process](../../general/region-access-request-process.md).
+To resolve this issue, request access to the specified region or zone on the subscription by following the [Azure region access request process](../../general/region-access-request-process.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
