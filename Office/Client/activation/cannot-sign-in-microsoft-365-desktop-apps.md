@@ -14,7 +14,7 @@ ms.custom:
 ms.reviewer: alextok,balram,naveerap
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 11/02/2023
+ms.date: 05/28/2025
 ---
 
 # Can't sign in to Microsoft 365 desktop applications
