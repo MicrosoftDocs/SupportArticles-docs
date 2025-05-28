@@ -1,8 +1,6 @@
 ---
 title: Available Teams meeting features for shared mailboxes
 description: Discusses available features when you schedule and manage Microsoft Teams meetings by using shared mailboxes, and lists detailed information about each feature.
-author: helenclu
-ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: conceptual
@@ -14,7 +12,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 08/05/2024
+ms.date: 05/28/2025
 ---
 # Teams meeting features for shared mailboxes
 
@@ -33,10 +31,8 @@ For Microsoft Teams meetings that are managed by using a shared mailbox, only a 
 |Set up audio conferencing|To set up audio conferencing, the shared mailbox must be assigned a [license for Teams Audio Conferencing](/microsoftteams/deploy-audio-conferencing-teams-landing-page#audio-conferencing-prerequisites).<br/><br/>**Note:** Meetings created for a mailbox that doesn't have an Audio Conferencing license will lack the Public Switched Telephone Network (PSTN) details in the meeting invitation.|
 |Create custom meeting policies|To create custom meeting policies, the shared mailbox must be assigned a Teams license.|
 
-**Known limitations:**
-
-Users who are not added to the meeting during the initial scheduling will only have temporary access to the meeting chat. 
-
-Example: If you add another user to the meeting invite after having scheduled it, this user will only have access to the meeting chat during the meeting. After the meeting ends, the user will automatically be removed from the meeting chat.
-
 For more information about Teams license options, see [Microsoft Teams add-on licenses](/microsoftteams/teams-add-on-licensing/microsoft-teams-add-on-licensing).
+
+## Known limitations
+
+Users who weren't added to the meeting when the meeting was initially scheduled have only temporary access to the meeting chat. For example, if you add User A to the meeting invitation after scheduling the meeting, this user only has access to the meeting chat during the meeting. After the meeting ends, user A is automatically removed from the meeting chat.
