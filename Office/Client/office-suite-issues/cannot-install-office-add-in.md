@@ -37,20 +37,20 @@ This problem occurs because of incorrect information in the Windows registry.
 ## Resolution
 
 > [!WARNING]
-> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
+> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. Modify the registry at your own risk.
 
-To resolve this problem, please follow these steps.
+To resolve this problem, follow these steps.
 
 1. Exit any open Office programs.
-2. Start Registry Editor. To do this, press the Windows key+R to open the Run window, type regedit in the Open box, and then press OK.
-3. In Registry Editor, locate and then click the following subkey:
+2. Start Registry Editor. To do so, press the Windows key+R to open the Run window, type regedit in the Open box, and then press OK.
+3. In Registry Editor, locate and then select the following subkey:
 
     HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\WEF\Providers
 
     > [!NOTE]
     > Replace x.0 with your version of Office (16.0 = Microsoft 365 Apps, Office LTSC 2021, Office 2019, Office 2016, and 15.0 = Office 2013).
 4. Select the first subkey under \Providers (for example,\KpwDSnL9jumf9ZJTx_XF_Q==).
-5. Examine the data value for the UniqueID value. You are looking for either of the following values:
+5. Examine the data value for the UniqueID value. You're looking for either of the following values:
 
     - *guid*_ADAL
     - Anonymous
@@ -70,9 +70,9 @@ To resolve this problem, please follow these steps.
     > [!NOTE]
     > \<username\> is your user name and x.0 is your Office version.
 
-    If you are unable to manually locate the above folder, press the Windows key+R to open the Run window, type the command below for your version of Office in the Open box, and then press OK:  
+    If you're unable to manually locate the folder, press the Windows key+R to open the Run window, type the command below for your version of Office in the Open box, and then press OK:  
 
-      - Microsoft 365 Apps, Office LTSC 2021, Office 2019 and Office 2016
+      - Microsoft 365 Apps, Office LTSC 2021, Office 2019, and Office 2016
 
         %localappdata%\microsoft\office\16.0\WEF
 

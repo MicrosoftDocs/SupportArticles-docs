@@ -1,6 +1,6 @@
 ---
 title: No Add-ins loaded due to group policy settings
-description: Microsoft Outlook 2013 and Outlook 2016 include group policy settings that control how add-ins are managed. An administrator may use these settings to enable or disable specific add-ins. Additionally, these can be configured to allow a user to control the use of a specific add-in. This article provides details on configuring the Block all unmanaged add-ins and List of managed add-ins group policy settings.
+description: Microsoft Outlook 2013 and Outlook 2016 include group policy settings that control how add-ins are managed. An administrator may use these settings to enable or disable specific add-ins. Additionally, they can be configured to allow a user to control the use of a specific add-in. This article provides details on configuring the Block all unmanaged add-ins and List of managed add-ins group policy settings.
 author: helenclu
 manager: dcscontentpm
 audience: ITPro
@@ -31,7 +31,7 @@ When you look at **Add-Ins** section of the **Options** dialog box in a Microsof
 
 :::image type="content" source="media/office-add-in-not-loaded/no-add-in-outlook.png" alt-text="Screenshot shows no add-ins are enabled in Outlook.":::
 
-If you then open the **COM Add-ins** dialog box by clicking **Go**, you cannot enable any of the listed add-ins. When you select any add-in, the **COM Add-ins** dialog box displays the following text.
+If you then open the **COM Add-ins** dialog box by clicking **Go**, you can't enable any of the listed add-ins. When you select any add-in, the **COM Add-ins** dialog box displays the following text.
 
 > The add-in you have selected is disabled by your system administrator.
 
@@ -41,9 +41,9 @@ The warning is shown in the following figure for Outlook.
 
 ## Cause
 
-Warning Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
+Warning Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. Modify the registry at your own risk.
 
-This problem occurs because your administrator has configured a group policy setting to disable all COM add-ins.
+This problem occurs because your administrator configured a group policy setting to disable all COM add-ins.
 
 The following registry data is used to disable all add-ins:
 
@@ -57,9 +57,9 @@ The following registry data is used to disable all add-ins:
 
 > [!NOTE]
 >
-> - When this problem occurs, there is nothing listed under this key except for the Default REG_SZ value with no data.
-> - In the above registry data, \<application> is the name of the Office program in which you are experiencing this problem.
-> - In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013).
+> - When this problem occurs, there's nothing listed under this key except for the Default REG_SZ value with no data.
+> - In the registry data, \<application\> is the name of the Office program in which you're experiencing this problem.
+> - In the registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013).
 
 ## More Information
 
@@ -67,7 +67,7 @@ Through group policy, an administrator can manage the add-ins that are loaded in
 
 - List of managed add-ins
 
-  This policy setting allows you to specify which add-ins are always enabled, always disabled (blocked), or configurable by the user. To block add-ins that are not managed by this policy setting, you must also configure the Block all unmanaged add-ins policy setting.
+  This policy setting allows you to specify which add-ins are always enabled, always disabled (blocked), or configurable by the user. To block add-ins that aren't managed by this policy setting, you must also configure the Block all unmanaged add-ins policy setting.
 
   To enable the List of managed add-ins policy setting, you must provide the programmatic identifier (ProgID) for each COM add-in that you want to manage. To obtain the ProgID for an add-in, use the Windows Registry Editor on the client computer where the add-in is installed. Locate the registry key names under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\\\<application>\Addins or HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\\\<application>\Addins.
 
@@ -87,19 +87,19 @@ Through group policy, an administrator can manage the add-ins that are loaded in
 
   **Values:** \<one of the following values>
 
-  **0** = The add-in is always disabled (blocked)
+  **0** = The add-in are always disabled (blocked)
 
-  **1** = The add-ins is always enabled
+  **1** = The add-ins are always enabled
 
   **2**= The add-in can be manually enabled or disabled by the user
 
   > [!NOTE]
-  > In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013)
+  > In the registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013)
 - Block all unmanaged add-ins
 
-  This policy setting blocks all add-ins that are not managed by the "List of managed add-ins" policy setting.
+  This policy setting blocks all add-ins that aren't managed by the "List of managed add-ins" policy setting.
 
-  If you enable the Block all unmanaged add-ins and List of managed add-ins policy settings, all add-ins are blocked except those that are configured in the List of managed add-ins as 1 (always enabled) or 2 (configurable by the user).
+  If you enable the Block all unmanaged add-ins and List of managed add-ins policy settings, all add-ins are blocked except those add-ins that are configured in the List of managed add-ins as 1 (always enabled) or 2 (configurable by the user).
 
   When you enable the Block all unmanaged add-ins policy, the following registry data is configured on the Outlook client:
 
@@ -111,5 +111,5 @@ Through group policy, an administrator can manage the add-ins that are loaded in
 
  > [!NOTE]
 >
- > - If RestrictToList is set to 1, but you do not enable any add-ins using the List of managed add-ins policy, all COM add-ins are disabled.
- > - In the above registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013).
+ > - If RestrictToList is set to 1, but you don't enable any add-ins using the List of managed add-ins policy, all COM add-ins are disabled.
+ > - In the registry key path, x.0 corresponds to version of Office (16.0 = Office 2016, 15.0 = Office 2013).
