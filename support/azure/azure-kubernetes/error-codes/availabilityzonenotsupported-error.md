@@ -23,11 +23,11 @@ An AKS cluster creation fails in specified availability zones and you receive an
 
 ## Cause
 
-The issue occurs because the requested SKU is unavailable in a specified zone or the zone is restricted by the Azure subscription.
+The issue occurs because the requested SKU is unavailable in the specified zones or is restricted by the Azure subscription.
 
 To determine the root cause, follow these steps:
 
-1. Verify if the requested SKU isn't available in the specified zone:
+1. Verify if the requested SKU isn't available in the specified zones:
 
         ```azurecli
         az vm list-skus -l <location> --size <SKU> 
@@ -36,7 +36,7 @@ To determine the root cause, follow these steps:
     > [!NOTE]
     > Replace `<SKU>` and `<locaiton>` accordingly.
 
-2. Verify if the specified zone is restricted by your subscription:
+2. Verify if the requested SKU is restricted by your subscription:
 
         ```azurecli
         az rest --method get \
@@ -46,7 +46,7 @@ To determine the root cause, follow these steps:
     > [!NOTE]
     > Replace `<subscription>` and `<locaiton>` accordingly.
 
-    If you see the following information in the *availableSkus.txt* file, it indicates that your subscription doesn't have access to zones in the specified location.
+3. Search for the requested SKU in the *availableSkus.txt* file. If you see the lines like the following, it indicates that your subscription doesn't have access to zones in the specified location:
 
     ```output
     "restrictions": [
@@ -72,6 +72,6 @@ To determine the root cause, follow these steps:
 
 ## Solution: Request access to the specified zone
 
-To resolve this issue, request access to the specified region or zone on the subscription by following the [Azure region access request process](../../general/region-access-request-process.md).
+To resolve this issue, request access to the specified region or zone by following the [Azure region access request process](../../general/region-access-request-process.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
