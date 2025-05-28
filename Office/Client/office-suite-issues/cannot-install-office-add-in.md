@@ -16,7 +16,7 @@ appliesto:
   - Office 2019
   - Office 2016
   - Office 2013
-ms.date: 03/31/2022
+ms.date: 05/28/2025
 ---
 # "We can't start this app..." error installing an Office add-in
 

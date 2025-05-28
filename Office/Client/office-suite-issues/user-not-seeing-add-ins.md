@@ -16,7 +16,7 @@ search.appverid:
   - MOE150
 ms.assetid: 060e809d-8cb6-427b-9e2f-dab67138acae
 description: Learn how to help your users troubleshoot centralized add-ins, if they are not seeing them.
-ms.date: 03/31/2022
+ms.date: 05/28/2025
 ---
 
 # User not seeing add-ins

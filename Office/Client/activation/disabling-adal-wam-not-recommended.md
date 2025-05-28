@@ -3,7 +3,7 @@ title: Disabling ADAL or WAM to fix Microsoft 365 sign-in or activation issues n
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 02/25/2025
+ms.date: 05/28/2025
 audience: Admin
 ms.topic: troubleshooting
 search.appverid: 

@@ -20,7 +20,7 @@ appliesto:
   - Outlook 2013
   - Excel 2013
   - PowerPoint 2013
-ms.date: 03/31/2022
+ms.date: 05/28/2025
 ---
 
 # No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs
