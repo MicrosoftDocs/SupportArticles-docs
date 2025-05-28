@@ -14,7 +14,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 # "No current record" error when you print or preview a report in Access
 

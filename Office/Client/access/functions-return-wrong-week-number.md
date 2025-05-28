@@ -13,13 +13,13 @@ ms.reviewer: denniwil
 appliesto: 
   - Access
 search.appverid: MET150
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Format or DatePart functions can return wrong week number for last Monday in Year
 
 > [!WARNING]
-> There is an issue with the use of this function. The last Monday in some calendar years can be returned as week 53 when it should be week 1. For more information and a workaround, see [Format or DatePart functions can return wrong week number for last Monday in Year](functions-return-wrong-week-number.md).
+> There's an issue with the use of this function. The last Monday in some calendar years can be returned as week 53 when it should be week 1. For more information and a workaround, see [Format or DatePart functions can return wrong week number for last Monday in Year](functions-return-wrong-week-number.md).
 
 ## Symptoms
 
@@ -40,7 +40,7 @@ Use a user-defined function to return the Week number based on the rules for the
 
 ## More Information
 
-The ISO 8601 standard is used extensively in Europe and includes the following:
+The ISO 8601 standard is used extensively in Europe and includes:
 
 ```asciidoc
 ISO 8601 "Data elements and interchange formats - Information interchange   - Representation of dates and times"
@@ -48,7 +48,7 @@ ISO 8601 : 1988 (E) paragraph 3.17:
 "week, calendar: A seven day period within a calendar year, starting on a Monday and identified by its ordinal number within the year; the first calendar week of the year is the one that includes the first Thursday of that year. In the Gregorian calendar, this is equivalent to the week which includes 4 January."
 ```
 
-This can be implemented by applying these rules for Calendar weeks:
+It can be implemented by applying these rules for Calendar weeks:
 
 - A year is divided into either 52 or 53 calendar weeks.
 - A calendar week has seven days. Monday is day 1 and Sunday is day 7.
@@ -114,7 +114,7 @@ In Visual Basic and Visual Basic for Applications, all date functionality, excep
    ```
 
 4. Use (Ctrl + G) to open the Immediate Window if it's not already open.
-5. Type **?Test1** in the Immediate window and hit Enter, note the following results in the Immediate window:
+5. Type **\?Test1** in the Immediate window and hit Enter, note the following results in the Immediate window:
 
    ```asciidoc
    Format function:
@@ -217,7 +217,7 @@ You can avoid using these functions to determine Week number by writing code tha
    ```
 
 4. Use (Ctrl + G) to open the Immediate Window if it's not already open.
-5. Type **?Test3** in the Immediate window and hit Enter, note the following results in the Immediate window:
+5. Type **\?Test3** in the Immediate window and hit Enter, note the following results in the Immediate window:
 
    ```asciidoc
    WeekNumber function:

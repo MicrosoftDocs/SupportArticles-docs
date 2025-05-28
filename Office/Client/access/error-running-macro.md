@@ -18,7 +18,7 @@ appliesto:
   - Access 2010
   - Microsoft Office Access 2007
 search.appverid: MET150
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 # "Action Failed Error Number: 2950" error when running a macro that calls a VBA function in an Access database
 

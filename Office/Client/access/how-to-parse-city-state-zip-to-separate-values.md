@@ -19,7 +19,7 @@ appliesto:
   - Access 2007
   - Access 2003
 ms.reviewer: malcolms
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 # How To Parse City, State, and Zip Code into Separate Values
 

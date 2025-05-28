@@ -13,7 +13,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Microsoft Excel
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Sample macro to insert/delete rows or columns on multiple sheets in Excel

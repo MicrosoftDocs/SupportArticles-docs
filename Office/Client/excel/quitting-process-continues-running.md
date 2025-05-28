@@ -14,7 +14,7 @@ ms.author: luche
 appliesto: 
   - Office Excel 2007
   - Office Excel 2003
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # An active Excel process continues to run after using a VBA macro to programmatically quit Excel

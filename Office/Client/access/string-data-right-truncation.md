@@ -16,7 +16,7 @@ appliesto:
   - Access for Microsoft 365
   - Access 2019
   - Access 2016
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 
 # Access error: "String data, right truncation (#0)"

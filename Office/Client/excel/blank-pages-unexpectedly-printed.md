@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Excel 2010
   - Excel 2013
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Blank pages are unexpectedly printed in Excel

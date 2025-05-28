@@ -17,7 +17,7 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 # External links may be calculated when you open a workbook that was last saved in an earlier version of Excel
 

@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Use Saved property to determine if a workbook has changed

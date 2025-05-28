@@ -13,7 +13,7 @@ search.appverid:
 appliesto: 
   - Project Online
   - Project Server 2013
-ms.date: 08/10/2024
+ms.date: 05/26/2025
 ---
 
 # Error occurs when accessing Project Web App

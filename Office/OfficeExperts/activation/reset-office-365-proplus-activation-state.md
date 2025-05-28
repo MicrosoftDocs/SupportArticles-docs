@@ -18,7 +18,7 @@ ms.custom:
 ms.reviewer: mattphil
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 02/11/2025
+ms.date: 05/27/2025
 ---
 
 # Reset activation state for Microsoft 365 Apps for enterprise
@@ -43,7 +43,7 @@ To complete these tasks, you need to clear prior activations of Microsoft 365 ap
 The [Enterprise version of the Assistant](https://aka.ms/SaRA_EnterpriseVersion) is a command-line version that can be scripted and is recommended to reset Office activation on multiple devices and on devices that you can't access immediately.
 
 > [!div class="nextstepaction"]
-> [Download th Enterprise version](https://aka.ms/SaRA_EnterpriseVersionFiles)
+> [Download the Enterprise version](https://aka.ms/SaRA_EnterpriseVersionFiles)
 
 ## Method: Run the Microsoft 365 activation troubleshooter in Get Help
 
