@@ -46,7 +46,7 @@ _Original KB number:_ &nbsp; 4555406
 |ConnectionNotEstablished|404|Attended</br>Unattended|The endpoint wasn't found. None of the connected listeners accepted the connection within the allowed timeout.</br> This error code can be caused by routing or firewall configuration issues. Check that your machine is online and can communicate with the required Power Automate endpoints.|
 |DnsError|404|Attended</br>Unattended|The endpoint wasn't found.</br> Register your machine again and schedule new runs.|
 |ConnectionTimeout|404|Attended</br>Unattended|This request operation didn't receive a reply within the configured timeout.</br> Check that your machine is online and can communicate with the required Power Automate endpoints.|
-|EndpointDoNotExist|404|Attended</br>Unattended|The endpoint wasn't found.</br>Register your machine again and schedule new runs.|
+|EndpointDoNotExist|404|Attended</br>Unattended|The endpoint wasn't found.</br>Register your machine again and schedule new runs.<br/>This error typically occurs when the machine registration is deleted in the middle of the run, such as when machine is re-registered.|
 |GroupIsEmpty|400|Attended</br>Unattended|The machine group is empty.</br> Add machines to the group, then reschedule new runs.|
 |MSEntraMachineAlwaysPromptingForPassword|400|Unattended|For more information about this error code, see [An unattended desktop flow run fails with the MSEntraMachineAlwaysPromptingForPassword error](msentramachinealwayspromptingforpassword-error.md).|
 |NoCandidateMachine|400|Attended</br>Unattended|The run has exceeded the queue waiting time limit.</br> Consider allocating more machines or spreading desktop flow runs to optimize wait time in the queue.|
