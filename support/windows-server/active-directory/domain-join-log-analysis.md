@@ -509,48 +509,48 @@ DCE/RPC Endpoint Mapper, Map
 #### DRSR traffic
 
 ```output
-Source    Destination  Protocol  Info
-192.168.100.13  192.168.100.10  TCP    49711 → 49671 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
-192.168.100.10  192.168.100.13  TCP    49671 → 49711 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
-192.168.100.13  192.168.100.10  TCP    49711 → 49671 [ACK] Seq=1 Ack=1 Win=65280 Len=0
+Source          Destination     Protocol  Info
+192.168.100.13  192.168.100.10  TCP       49711 → 49671 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.100.10  192.168.100.13  TCP       49671 → 49711 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.100.13  192.168.100.10  TCP       49711 → 49671 [ACK] Seq=1 Ack=1 Win=65280 Len=0
 192.168.100.13  192.168.100.10  DCERPC    Bind: call_id: 2, Fragment: Single, 3 context items: DRSUAPI V4.0 (32bit NDR), DRSUAPI V4.0 (64bit NDR), DRSUAPI V4.0 (6cb71c2c-9812-4540-0300-000000000000), NTLMSSP_NEGOTIATE
 192.168.100.10  192.168.100.13  DCERPC    Bind_ack: call_id: 2, Fragment: Single, max_xmit: 5840 max_recv: 5840, 3 results: Provider rejection, Acceptance, Negotiate ACK, NTLMSSP_CHALLENGE
 192.168.100.13  192.168.100.10  DCERPC    AUTH3: call_id: 2, Fragment: Single, NTLMSSP_AUTH, User: contoso\puser2
-192.168.100.13  192.168.100.10  DRSUAPI    DsBind request
-192.168.100.10  192.168.100.13  TCP    49671 → 49711 [ACK] Seq=329 Ack=929 Win=2096896 Len=0
-192.168.100.10  192.168.100.13  DRSUAPI    DsBind response
-192.168.100.13  192.168.100.10  DRSUAPI    DsCrackNames request
-192.168.100.10  192.168.100.13  DRSUAPI    DsCrackNames response
-192.168.100.13  192.168.100.10  DRSUAPI    DsCrackNames request
-192.168.100.10  192.168.100.13  DRSUAPI    DsCrackNames response
-192.168.100.13  192.168.100.10  DRSUAPI    DsUnbind request
-192.168.100.10  192.168.100.13  DRSUAPI    DsUnbind response
-192.168.100.13  192.168.100.10  TCP    49711 → 49671 [ACK] Seq=1393 Ack=905 Win=64512 Len=0
+192.168.100.13  192.168.100.10  DRSUAPI   DsBind request
+192.168.100.10  192.168.100.13  TCP       49671 → 49711 [ACK] Seq=329 Ack=929 Win=2096896 Len=0
+192.168.100.10  192.168.100.13  DRSUAPI   DsBind response
+192.168.100.13  192.168.100.10  DRSUAPI   DsCrackNames request
+192.168.100.10  192.168.100.13  DRSUAPI   DsCrackNames response
+192.168.100.13  192.168.100.10  DRSUAPI   DsCrackNames request
+192.168.100.10  192.168.100.13  DRSUAPI   DsCrackNames response
+192.168.100.13  192.168.100.10  DRSUAPI   DsUnbind request
+192.168.100.10  192.168.100.13  DRSUAPI   DsUnbind response
+192.168.100.13  192.168.100.10  TCP       49711 → 49671 [ACK] Seq=1393 Ack=905 Win=64512 Len=0
 ```
 
 #### NetLogon traffic
 
 ```output
-Source    Destination  Protocol  Info
-192.168.100.13  192.168.100.10  TCP    49735 → 49682 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
-192.168.100.10  192.168.100.13  TCP    49682 → 49735 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
-192.168.100.13  192.168.100.10  TCP    49735 → 49682 [ACK] Seq=1 Ack=1 Win=65280 Len=0
-192.168.100.13  192.168.100.10  DCERPC    Bind: call_id: 2, Fragment: Single, 3 context items: RPC_NETLOGON V1.0 (32bit NDR), RPC_NETLOGON V1.0 (64bit NDR), RPC_NETLOGON V1.0 (6cb71c2c-9812-4540-0300-000000000000)
-192.168.100.10  192.168.100.13  DCERPC    Bind_ack: call_id: 2, Fragment: Single, max_xmit: 5840 max_recv: 5840, 3 results: Provider rejection, Acceptance, Negotiate ACK
+Source          Destination     Protocol      Info
+192.168.100.13  192.168.100.10  TCP           49735 → 49682 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.100.10  192.168.100.13  TCP           49682 → 49735 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.100.13  192.168.100.10  TCP           49735 → 49682 [ACK] Seq=1 Ack=1 Win=65280 Len=0
+192.168.100.13  192.168.100.10  DCERPC        Bind: call_id: 2, Fragment: Single, 3 context items: RPC_NETLOGON V1.0 (32bit NDR), RPC_NETLOGON V1.0 (64bit NDR), RPC_NETLOGON V1.0 (6cb71c2c-9812-4540-0300-000000000000)
+192.168.100.10  192.168.100.13  DCERPC        Bind_ack: call_id: 2, Fragment: Single, max_xmit: 5840 max_recv: 5840, 3 results: Provider rejection, Acceptance, Negotiate ACK
 192.168.100.13  192.168.100.10  RPC_NETLOGON  NetrServerReqChallenge request, 
 192.168.100.10  192.168.100.13  RPC_NETLOGON  NetrServerReqChallenge response
 192.168.100.13  192.168.100.10  RPC_NETLOGON  NetrServerAuthenticate3 request
 192.168.100.10  192.168.100.13  RPC_NETLOGON  NetrServerAuthenticate3 response
-192.168.100.13  192.168.100.10  DCERPC    Alter_context: call_id: 4, Fragment: Single, 1 context items: RPC_NETLOGON V1.0 (64bit NDR)
-192.168.100.10  192.168.100.13  DCERPC    Alter_context_resp: call_id: 4, Fragment: Single, max_xmit: 5840 max_recv: 5840, 1 results: Acceptance
+192.168.100.13  192.168.100.10  DCERPC        Alter_context: call_id: 4, Fragment: Single, 1 context items: RPC_NETLOGON V1.0 (64bit NDR)
+192.168.100.10  192.168.100.13  DCERPC        Alter_context_resp: call_id: 4, Fragment: Single, max_xmit: 5840 max_recv: 5840, 1 results: Acceptance
 192.168.100.13  192.168.100.10  RPC_NETLOGON  NetrLogonGetCapabilities request
 192.168.100.10  192.168.100.13  RPC_NETLOGON  NetrLogonGetCapabilities response
 192.168.100.13  192.168.100.10  RPC_NETLOGON  NetrLogonGetCapabilities request
 192.168.100.10  192.168.100.13  RPC_NETLOGON  NetrLogonGetCapabilities response
 192.168.100.13  192.168.100.10  RPC_NETLOGON  NetrLogonGetDomainInfo request
-192.168.100.10  192.168.100.13  TCP    49682 → 49735 [ACK] Seq=505 Ack=1993 Win=2097920 Len=1460 [TCP PDU reassembled in 562]
+192.168.100.10  192.168.100.13  TCP           49682 → 49735 [ACK] Seq=505 Ack=1993 Win=2097920 Len=1460 [TCP PDU reassembled in 562]
 192.168.100.10  192.168.100.13  RPC_NETLOGON  NetrLogonGetDomainInfo response
-192.168.100.13  192.168.100.10  TCP    49735 → 49682 [ACK] Seq=1993 Ack=2113 Win=65280 Len=09735, DstPort=49682, PayloadLen=0, Seq=2988619262, Ack=225725553
+192.168.100.13  192.168.100.10  TCP           49735 → 49682 [ACK] Seq=1993 Ack=2113 Win=65280 Len=09735, DstPort=49682, PayloadLen=0, Seq=2988619262, Ack=225725553
 ```
 
 ### Kerberos
@@ -560,25 +560,25 @@ Kerberos traffic is also used during domain join operation, because all the type
 For example, in the following network trace, the client gets a Kerberos TGT for the user account **CONTOSO\puser2** and the service ticket for the target SPN **cifs/DC2.contoso.local**. Then, the client sets up the SMB session to the DC DC2.contoso.local with that service ticket.
 
 ```output
-Source    Destination  Protocol  Info
-192.168.100.13  192.168.100.10  TCP    49744 → 445 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
-192.168.100.10  192.168.100.13  TCP    445 → 49744 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
-192.168.100.13  192.168.100.10  TCP    49744 → 445 [ACK] Seq=1 Ack=1 Win=65280 Len=0
-192.168.100.13  192.168.100.10  SMB    Negotiate Protocol Request
-192.168.100.10  192.168.100.13  SMB2    Negotiate Protocol Response
-192.168.100.13  192.168.100.10  SMB2    Negotiate Protocol Request
-192.168.100.10  192.168.100.13  SMB2    Negotiate Protocol Response
-192.168.100.13  192.168.100.12  KRB5    AS-REQ
-192.168.100.12  192.168.100.13  KRB5    KRB Error: KRB5KDC_ERR_PREAUTH_REQUIRED
-192.168.100.13  192.168.100.12  KRB5    AS-REQ
-192.168.100.12  192.168.100.13  KRB5    AS-REP
-192.168.100.13  192.168.100.12  KRB5    TGS-REQ
-192.168.100.12  192.168.100.13  KRB5    TGS-REP
-192.168.100.13  192.168.100.10  SMB2    Session Setup Request
-192.168.100.10  192.168.100.13  TCP    445 → 49744 [ACK] Seq=629 Ack=2213 Win=2097920 Len=0
-192.168.100.10  192.168.100.13  SMB2    Session Setup Response
-192.168.100.13  192.168.100.10  SMB2    Tree Connect Request Tree: \\DC2.contoso.local\IPC$
-192.168.100.10  192.168.100.13  SMB2    Tree Connect Response
+Source          Destination     Protocol  Info
+192.168.100.13  192.168.100.10  TCP       49744 → 445 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.100.10  192.168.100.13  TCP       445 → 49744 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.100.13  192.168.100.10  TCP       49744 → 445 [ACK] Seq=1 Ack=1 Win=65280 Len=0
+192.168.100.13  192.168.100.10  SMB       Negotiate Protocol Request
+192.168.100.10  192.168.100.13  SMB2      Negotiate Protocol Response
+192.168.100.13  192.168.100.10  SMB2      Negotiate Protocol Request
+192.168.100.10  192.168.100.13  SMB2      Negotiate Protocol Response
+192.168.100.13  192.168.100.12  KRB5      AS-REQ
+192.168.100.12  192.168.100.13  KRB5      KRB Error: KRB5KDC_ERR_PREAUTH_REQUIRED
+192.168.100.13  192.168.100.12  KRB5      AS-REQ
+192.168.100.12  192.168.100.13  KRB5      AS-REP
+192.168.100.13  192.168.100.12  KRB5      TGS-REQ
+192.168.100.12  192.168.100.13  KRB5      TGS-REP
+192.168.100.13  192.168.100.10  SMB2      Session Setup Request
+192.168.100.10  192.168.100.13  TCP       445 → 49744 [ACK] Seq=629 Ack=2213 Win=2097920 Len=0
+192.168.100.10  192.168.100.13  SMB2      Session Setup Response
+192.168.100.13  192.168.100.10  SMB2      Tree Connect Request Tree: \\DC2.contoso.local\IPC$
+192.168.100.10  192.168.100.13  SMB2      Tree Connect Response
 ```
 
 ```output
@@ -637,21 +637,21 @@ Even if you don't see any Kerberos traffic, that doesn't necessarily mean the do
 See the following example of successful SMB session setup using NTLM authentication.
 
 ```output
-Source    Destination  Protocol  Info
-192.168.100.13  192.168.100.10  TCP    49708 → 445 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
-192.168.100.10  192.168.100.13  TCP    445 → 49708 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
-192.168.100.13  192.168.100.10  TCP    49708 → 445 [ACK] Seq=1 Ack=1 Win=65280 Len=0
-192.168.100.13  192.168.100.10  SMB    Negotiate Protocol Request
-192.168.100.10  192.168.100.13  SMB2    Negotiate Protocol Response
-192.168.100.13  192.168.100.10  SMB2    Negotiate Protocol Request
-192.168.100.10  192.168.100.13  SMB2    Negotiate Protocol Response
-192.168.100.13  192.168.100.10  TCP    49708 → 445 [ACK] Seq=378 Ack=629 Win=64768 Len=0
-192.168.100.13  192.168.100.10  SMB2    Session Setup Request, NTLMSSP_NEGOTIATE
-192.168.100.10  192.168.100.13  SMB2    Session Setup Response, Error: STATUS_MORE_PROCESSING_REQUIRED, NTLMSSP_CHALLENGE
-192.168.100.13  192.168.100.10  SMB2    Session Setup Request, NTLMSSP_AUTH, User: contoso\puser2
-192.168.100.10  192.168.100.13  SMB2    Session Setup Response
-192.168.100.13  192.168.100.10  SMB2    Tree Connect Request Tree: \\DC2.contoso.local\IPC$
-192.168.100.10  192.168.100.13  SMB2    Tree Connect Response
+Source          Destination     Protocol  Info
+192.168.100.13  192.168.100.10  TCP       49708 → 445 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.100.10  192.168.100.13  TCP       445 → 49708 [SYN, ACK] Seq=0 Ack=1 Win=65535 Len=0 MSS=1460 WS=256 SACK_PERM
+192.168.100.13  192.168.100.10  TCP       49708 → 445 [ACK] Seq=1 Ack=1 Win=65280 Len=0
+192.168.100.13  192.168.100.10  SMB       Negotiate Protocol Request
+192.168.100.10  192.168.100.13  SMB2      Negotiate Protocol Response
+192.168.100.13  192.168.100.10  SMB2      Negotiate Protocol Request
+192.168.100.10  192.168.100.13  SMB2      Negotiate Protocol Response
+192.168.100.13  192.168.100.10  TCP       49708 → 445 [ACK] Seq=378 Ack=629 Win=64768 Len=0
+192.168.100.13  192.168.100.10  SMB2      Session Setup Request, NTLMSSP_NEGOTIATE
+192.168.100.10  192.168.100.13  SMB2      Session Setup Response, Error: STATUS_MORE_PROCESSING_REQUIRED, NTLMSSP_CHALLENGE
+192.168.100.13  192.168.100.10  SMB2      Session Setup Request, NTLMSSP_AUTH, User: contoso\puser2
+192.168.100.10  192.168.100.13  SMB2      Session Setup Response
+192.168.100.13  192.168.100.10  SMB2      Tree Connect Request Tree: \\DC2.contoso.local\IPC$
+192.168.100.10  192.168.100.13  SMB2      Tree Connect Response
 ```
 
 ```output
