@@ -25,28 +25,19 @@ An AKS cluster creation fails in specified availability zones and you receive an
 
 The issue occurs because the requested SKU is unavailable in the specified zones or is restricted by the Azure subscription.
 
-To determine the root cause, follow these steps:
+To determine the root cauese, perform one or two actions below:
 
-1. Verify if the requested SKU isn't available in the specified zones:
+- To verify if the requested SKU is restricted by your subscription, run the following command:
 
-        ```azurecli
-        az vm list-skus -l <location> --size <SKU> 
-        ```
-
-    > [!NOTE]
-    > Replace `<SKU>` and `<locaiton>` accordingly.
-
-2. Verify if the requested SKU is restricted by your subscription:
-
-        ```azurecli
-        az rest --method get \
-            --url "https://management.azure.com/subscriptions/<subscription>/providers/Microsoft.Compute/skus?%24filter=location+eq+%27<location>%27&api-version=2022-03-01"  >> availableSkus.txt
-        ```
+    ```azurecli
+    az rest --method get \
+        --url "https://management.azure.com/subscriptions/<subscription>/providers/Microsoft.Compute/skus?%24filter=location+eq+%27<location>%27&api-version=2022-03-01"  >> availableSkus.txt
+    ```
 
     > [!NOTE]
     > Replace `<subscription>` and `<locaiton>` accordingly.
 
-3. Search for the requested SKU in the *availableSkus.txt* file. If you see the lines like the following, it indicates that your subscription doesn't have access to zones in the specified location:
+    Then, search for the requested SKU in the *availableSkus.txt* file. If you see the lines like the following, it indicates that your subscription doesn't have access to zones in the specified location:
 
     ```output
     "restrictions": [
@@ -69,6 +60,15 @@ To determine the root cause, follow these steps:
                     }
                 ]
     ```
+
+- To verify if the requested SKU isn't available in the specified zones, run the following command:
+
+    ```azurecli
+    az vm list-skus -l <location> --size <SKU> 
+    ```
+
+    > [!NOTE]
+    > Replace `<SKU>` and `<locaiton>` accordingly.
 
 ## Solution: Request access to the specified zone
 
