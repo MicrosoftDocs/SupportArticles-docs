@@ -1,15 +1,15 @@
 ---
-title: Errors When Accessing Salesforce With Server-to-server Flow
+title: Errors When Accessing Salesforce with Server-to-Server Flow
 description: Troubleshoot and resolve errors that occur when accessing Salesforce with server-to-server flow or during setup in Microsoft Copilot for Sales.
-ms.date: 05/26/2025
+ms.date: 05/28/2025
 author: sbmjais
 ms.author: shjais
 ms.reviewer: marrabi
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-# Errors that occur when accessing Salesforce with server-to-server flow
+# Errors that occur when accessing Salesforce that uses a server-to-server flow
 
-This article helps you troubleshoot and resolve errors that might occur when a user tries to access Salesforce with server-to-server flow or when an administrator sets up the server-to-server flow for Salesforce in Microsoft Copilot for Sales.
+This article helps you troubleshoot and resolve errors that might occur when a user tries to access Salesforce with a server-to-server flow or when an administrator sets up the server-to-server flow for Salesforce in Microsoft Copilot for Sales.
 
 ## Who is affected?
 
@@ -30,7 +30,7 @@ When a user tries to access Salesforce with the server-to-server flow, the follo
 
 > Access denied for this user.
 
-You might also see:
+You might also see the following message:
 
 > User doesn't have admin permission to access the connected app.
 
@@ -52,7 +52,7 @@ To resolve this issue, update the connected app configuration in Salesforce:
 
 1. Go to **Administration** > **Users** > **Users** and confirm that the profile of the integration user is **CopilotForSalesIntegrationProfile**.
 
-Also, check if there were unintended changes made to the connected app configuration. If yes, revert the changes to the original configuration.
+In addition, check if any unintended changes are made to the connected app configuration. If yes, revert the changes to the original configuration.
 
 ## Server-to-server authentication failed
 
@@ -95,7 +95,7 @@ To resolve this issue, ensure that the connected app and integration user config
     1. The user is associated with the **Copilot for Sales connected app permission set**.
     1. The user is associated with the **Salesforce API Integration** permission set license assignments.
 
-Also, check if there were unintended changes made to the connected app or integration user configuration. If yes, revert the changes to the original configuration.
+In addition, check if any unintended changes are made to the connected app or integration user configuration. If yes, revert the changes to the original configuration.
 
 ## Server-to-server authorization failed
 
@@ -111,13 +111,13 @@ You might also see one of the following messages:
 
 ##### Cause
 
-During Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user. An access token is retrieved with the client ID and the secret of the connected app. The error occurs when the secret is invalid.
+During the Salesforce server-to-server flow setup, a connected app is deployed to the Salesforce organization. The connected app is associated with an integration user. An access token is retrieved with the client ID and the secret of the connected app. The error occurs when the secret is invalid.
 
 ##### Resolution
 
 To resolve this issue, contact [Microsoft support](/microsoft-sales-copilot/get-support) and provide the following information:
 
-- Whether the "Copilot for Sales Connected App" connected app was updated accidentally.
+- Whether the "Copilot for Sales Connected App" connected app is updated accidentally.
 - If the connected app is still available, provide its ID.
 
 #### Error 2: Session ID isn't allowed for use REST API access at Salesforce
@@ -136,7 +136,7 @@ To resolve this issue, contact your administrator to set the appropriate OAuth s
 
 1. On **Copilot for Sales Connected App** row, select the down arrow, and then select **Edit**.
 
-1. Under **API (Enable OAuth Settings)**, ensure the **Manage user data via APIs (api)** is selected in the **Selected OAuth Scopes** list. If it's not selected, check if the setting was changed manually by mistake. If yes, revert the changes.
+1. Under **API (Enable OAuth Settings)**, ensure the **Manage user data via APIs (api)** is selected in the **Selected OAuth Scopes** list. If it's not selected, check if the setting is changed manually by mistake. If yes, revert the changes.
 
    > [!NOTE]
    > If the **Manage user data via APIs (api)** isn't selected, the connected app can't access Salesforce data.
@@ -149,26 +149,26 @@ When a user tries to access Salesforce with the server-to-server flow, the follo
 
 > Trouble connecting to Salesforce.
 
-You might also see:
+You might also see the following message:
 
 > Couldn't get Client ID for access token retrieval from Salesforce. The connected app might be misconfigured.
 
 ### Cause
 
-This error occurs when the client ID of the Salesforce connected app is invalid. During server-to-server flow setup, a connected app is deployed in Salesforce and linked to an integration user. The access token is retrieved using the client ID and secret of this app. If the client ID is missing or incorrect, authentication fails.
+This error occurs when the client ID of the Salesforce connected app is invalid. During the server-to-server flow setup, a connected app is deployed in Salesforce and linked to an integration user. The access token is retrieved using the client ID and secret of this app. If the client ID is missing or incorrect, authentication fails.
 
 ### Resolution
 
 To resolve this issue, contact [Microsoft support](/microsoft-sales-copilot/get-support) and provide the following information:
 
-- Whether the "Copilot for Sales Connected App" connected app was deleted accidentally.
+- Whether the "Copilot for Sales Connected App" connected app is deleted accidentally.
 - If the connected app is still available, provide its ID.
 
 ## Try again
 
 ### Symptoms
 
-As an administrator, when you try to set up the server-to-server flow for Salesforce, you may receive one of the following error messages:
+As an administrator, when you try to set up the server-to-server flow for Salesforce, you might receive one of the following error messages:
 
 - > Try again.
 - > This might be a temporary error. Try again. If it doesn't work, check back in 5-10 minutes.
@@ -189,7 +189,7 @@ When a user tries to access Salesforce with the server-to-server flow, the follo
 
 > Unauthorized access denied.
 
-You might also see:
+You might also see the following message:
 
 > Access token expired or invalid. Try saving again to refresh it.
 
@@ -199,7 +199,7 @@ The access token used for authentication is expired or invalid.
 
 ### Resolution
 
-To resolve this issue, try again after 10-15 minutes. If this issue persists, check with your administrator to confirm if the connection is still active.
+To resolve this issue, try again after 10 to 15 minutes. If this issue persists, check with your administrator to confirm if the connection is still active.
 
 ## More information
 
