@@ -18,7 +18,7 @@ When you use a Remote Desktop Protocol (RDP) connection to connect to a computer
 
 > The system administrator has restricted the types of logon (network or interactive) that you may use.
 
-This error indicates that an attempted RDP connection is blocked because of a restriction in the system's Local Security Policy or Group Policy settings related to the allowed logon type. The error is bound and mapped to the error SSL_ERR_LOGON_TYPE_NOT_GRANTED when the system receives the error STATUS_LOGON_TYPE_NOT_GRANTED (0xC000015B).
+This error indicates that an attempted RDP connection is blocked because of a restriction in the system's Local Security Policy or Group Policy settings related to the allowed logon type.
 
 In addition, you also receive the following events or messages in Event Viewer logs:
 
