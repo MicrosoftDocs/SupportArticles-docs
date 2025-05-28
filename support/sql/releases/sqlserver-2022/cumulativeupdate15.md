@@ -27,9 +27,9 @@ This article describes Cumulative Update package 15 (CU15) for Microsoft SQL Ser
 
 [!INCLUDE [patching-error-2022](../includes/patching-error-2022.md)]
 
-### Issue two: Access violation when session is reset
+### Issue two: Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-[!INCLUDE [av-sesssion-context-2022](../includes/av-sesssion-context-2022.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 

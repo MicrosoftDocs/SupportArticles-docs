@@ -29,9 +29,9 @@ The newly-created warning message in issue [2901635](#2901635) might fill up the
 
 This issue is fixed in [SQL Server 2019 CU28](cumulativeupdate28.md#3312461).
 
-### Issue two: Access violation when session is reset
+### Issue two: Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ### Issue three: Patching error for secondary replicas in an availability group with databases enabled replication or CDC
 

@@ -31,7 +31,7 @@ This issue is fixed in [SQL Server 2019 CU15](cumulativeupdate15.md#14488550).
 
 ### Issue two
 
-[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 

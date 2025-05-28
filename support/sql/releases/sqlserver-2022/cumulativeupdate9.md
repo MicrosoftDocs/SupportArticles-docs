@@ -23,9 +23,9 @@ This article describes Cumulative Update package 9 (CU9) for Microsoft SQL Serve
 
 ## Known issues in this update
 
-### Access violation when session is reset
+### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-[!INCLUDE [av-sesssion-context-2022](../includes/av-sesssion-context-2022.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 

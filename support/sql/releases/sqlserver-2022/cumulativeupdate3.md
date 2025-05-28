@@ -41,7 +41,7 @@ This issue is fixed in [SQL Server 2022 CU5](cumulativeupdate5.md#2398344).
 
 ### Issue two
 
-[!INCLUDE [av-sesssion-context-2022](../includes/av-sesssion-context-2022.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 

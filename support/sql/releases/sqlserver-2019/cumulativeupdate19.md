@@ -28,7 +28,7 @@ This article describes Cumulative Update package 19 (CU19) for Microsoft SQL Ser
 
 ### Issue one
 
-[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ### Issue two
 

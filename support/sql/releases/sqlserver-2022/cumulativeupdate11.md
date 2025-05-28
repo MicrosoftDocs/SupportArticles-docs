@@ -28,9 +28,9 @@ SQL Server 2022 CU10 introduced [fix 2714261](cumulativeupdate10.md#2714261), wh
 
 This issue is fixed in [SQL Server 2022 CU12](cumulativeupdate12.md#2923126).
 
-### Issue two: Access violation when session is reset
+### Issue two: Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-[!INCLUDE [av-sesssion-context-2022](../includes/av-sesssion-context-2022.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 

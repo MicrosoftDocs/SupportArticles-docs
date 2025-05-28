@@ -52,9 +52,9 @@ The issue arises from a code change in SQL Server 2022 CU14 that checks if a dat
 
 This issue is fixed in [SQL Server 2022 CU15](cumulativeupdate15.md#3459086).
 
-### Issue three: Access violation when session is reset
+### Issue three: Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-[!INCLUDE [av-sesssion-context-2022](../includes/av-sesssion-context-2022.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 
