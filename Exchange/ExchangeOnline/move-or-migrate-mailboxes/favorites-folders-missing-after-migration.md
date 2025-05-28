@@ -1,5 +1,5 @@
 ---
-title: Favorites folders are missing in the Outlook client after migration to Exchange Online
+title: Favorites Folders Are Missing in the Outlook Client After Migration to Exchange Online
 description: Works around an issue in which Favorites folders are missing in the Outlook client after migration to Exchange Online.
 author: cloud-writer
 ms.author: meerak
@@ -10,12 +10,12 @@ ms.custom:
   - sap:Migration
   - Exchange Online
   - CSSTroubleshoot
-  - CI 175574
-ms.reviewer: likhitk, batre, meerak, v-trisshores
+  - CI 175574, 6015
+ms.reviewer: likhitk, sujnai, batre, meerak, v-trisshores
 appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 05/28/2025
 ---
 
 # Favorites folders are missing in the Outlook client after migration to Exchange Online
@@ -30,7 +30,7 @@ Consider the following scenario:
 
 In that scenario, folders that were listed as Favorites prior to migration are no longer listed as Favorites in the Outlook client.
 
-Outlook on the web isn't affected by this issue.
+Outlook on the web doesn't have this issue.
 
 ## Cause
 
@@ -48,51 +48,65 @@ Manually [re-add folders to Favorites](https://support.microsoft.com/office/add-
 
 ### Workaround 2
 
-Use the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases) tool to manually update the `MailboxDN` value of each folder that should be added to Favorites.
+Use the [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases) tool to manually update the `MailboxDN` value of each folder that should appear in the Favorites list.
 
-Follow these steps:
+> [!IMPORTANT]
+> Although the MFCMAPI editor is supported, you should use caution when you use this tool to change mailboxes. Using the MFCMAPI editor incorrectly can cause permanent damage to a mailbox.
 
-1. Run the following command to connect to Exchange Online PowerShell:
+Follow these steps in the user's new profile:
 
-   ```powershell
-   Connect-ExchangeOnline
-   ```
+1. Note the name of a Favorites folder that is visible. If none are visible, add a folder to Favorites to create a visible folder.
 
-2. Run the following command to find the `LegacyExchangeDN` value of the Exchange Online mailbox:
+2. Note the names of all folders that don't appear in the Favorites list.
 
-   ```powershell
-   Get-Mailbox <mailbox SMTP address> | FL LegacyExchangeDN
-   ```
+3. [Open the associated contents table in MFCMAPI](#open-the-associated-contents-table-in-mfcmapi).
 
-3. Determine whether your Outlook installation is a [32-bit or 64-bit](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c) version by checking **File** \> **Office account** \> **About Outlook**.
+4. For the folder that does appear in the Favorites list:
+   
+   1. [Open the PR_WLINK_STORE_ENTRYID editor for the folder](#open-the-pr_wlink_store_entryid-editor-for-a-folder).
+   
+   2. Copy the hexadecimal value from the **Binary** section of the editor.
 
-4. Download and extract the latest 32-bit or 64-bit [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases) release to match your Outlook installation.
+   3. Select **Cancel** to close the editor, and then close the Properties window for the folder.
 
-   > [!IMPORTANT]
-   > Although the MFCMAPI editor is supported, you should use caution when you use this tool to change mailboxes. Using the MFCMAPI editor incorrectly can cause permanent damage to a mailbox.
+5. For each folder that doesn't appear in the Favorites list, perform the following steps:
 
-5. Make sure that Outlook is closed, and then run MFCMapi.exe. If the MFCMAPI startup screen appears, close it.
+   1. [Open the PR_WLINK_STORE_ENTRYID editor for the folder](#open-the-pr_wlink_store_entryid-editor-for-a-folder).
 
-6. Select **Session** \> **Logon** to open the **Choose Profile** window.
+   2. Replace the entire hexadecimal value in the **Binary** section of the editor with the hexadecimal value that you copied in Step 4.
 
-7. Select the Outlook profile for the user's mailbox, and then select **OK**.
+   3. Select **OK** to save the value and close the editor, and then close the Properties window for the folder.
 
-8. Double-click the mailbox SMTP address in the **Display Name** column to open the **Root Mailbox** window for the mailbox.
+6. Close all MFCMAPI windows to exit the application.
 
-9. In the left pane, select **Root Mailbox** \> **Common Views**.
+7. Start Outlook and verify that the Favorites folder collection that you had prior to migration is restored.
 
-10. In the right-pane, double-click **PR_FOLDER_ASSOCIATED_CONTENTS** to open the **Associated contents** table.
+#### Common MFCMAPI procedures
 
-11. For each folder that doesn't appear in the Favorites list, perform the following steps:
+##### Open the associated contents table in MFCMAPI
 
-    1. Double-click the folder name in the **PR_SUBJECT** column to open the **Properties** window for the folder.
+1. If you don't already have MFCMAPI installed, follow these steps:
 
-    2. Double-click the **PR_WLINK_STORE_ENTRYID** entry in the **Name** column to open the **Property Editor** window.
+   1. Determine whether your Outlook installation is a [32-bit or 64-bit](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c) version by checking **File** \> **Office account** \> **About Outlook**.
 
-    3. In the **Smart View** section, select the **EntryID** \> **MAPI Message Store Entry ID** \> **MailboxDN** field. The field value corresponds to the `LegacyExchangeDN` value of the on-premises mailbox prior to migration.
+   2. Download and extract the latest 32-bit or 64-bit [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases) release to match your Outlook installation.
 
-    4. In the **Text** section, update the **MailboxDN value** to match the current `LegacyExchangeDN` value of the mailbox that you obtained in Step 2.
+3. Make sure that Outlook is closed, and then run MFCMapi.exe. If the MFCMAPI startup screen appears, close it.
 
-12. Close all MFCMAPI windows to exit the application.
+4. Select **Session** \> **Logon** to open the **Choose Profile** window.
 
-13. Start Outlook and verify that the Favorites folder collection that you had prior to migration is restored.
+5. Select the new profile for the user's mailbox, and then select **OK**.
+
+6. Double-click the mailbox SMTP address in the **Display Name** column to open the **Root Mailbox** window for the mailbox.
+
+7. In the left pane, select **Root Mailbox** \> **Common Views** to open the applicable right-pane view.
+
+8. In the right-pane, double-click **PR_FOLDER_ASSOCIATED_CONTENTS** to open the **Associated contents** table.
+
+##### Open the PR_WLINK_STORE_ENTRYID editor for a folder
+
+1. In the **Associated contents** table, locate the name of the folder in the **PR_SUBJECT** column.
+
+2. Double-click the folder's name to open its **Properties** window.
+
+3. In the **Properties** window, double-click the **PR_WLINK_STORE_ENTRYID** entry in the **Name** column. This will open the **Property Editor** window for the folder.
