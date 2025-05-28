@@ -1,5 +1,5 @@
 ---
-title: Can't Cancel a Budget-Enabled Purchase order Within a Closed Period
+title: Can't Cancel a Budget-Enabled Purchase Order Within a Closed Period
 description: Provides a workaround to cancel or request a change to a purchase order governed by budget within a closed period in Microsoft Dynamics 365 Supply Chain Management.
 ms.reviewer: shubhamshr
 ms.date: 05/28/2025
