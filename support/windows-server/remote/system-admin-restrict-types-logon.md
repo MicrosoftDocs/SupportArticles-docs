@@ -1,7 +1,7 @@
 ---
 title: The System Administrator Has Restricted the Types of Logon
-description: Helps resolve an error "The system administrator has restricted the types of logon (network or interactive) that you may use" when connecting to a computer.
-ms.date: 05/26/2025
+description: Helps resolve an error when connecting to a computer—The system administrator has restricted the types of logon (network or interactive).
+ms.date: 05/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -23,7 +23,7 @@ This error indicates that an attempted RDP connection is blocked because of a re
 In addition, you also receive the following events or messages in Event Viewer logs:
 
 - [Event ID 4625](/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625) with a logon failure due to logon type restrictions.
-- [Event ID 4005](/answers/questions/389027/winlogon-error-4005)  with the message "The Windows logon process has unexpectedly terminated."
+- [Event ID 4005](/answers/questions/389027/winlogon-error-4005) with the message "The Windows logon process has unexpectedly terminated."
 
 This error might occur for the following reasons:
 
@@ -74,7 +74,7 @@ This error might occur for the following reasons:
             - Ensure the user or group is a member of **Remote Desktop Users**.
             - Confirm group policy inheritance applies as expected.
 
-3. Check effective Group Policy. Run the following command:
+3. Check the effective Group Policy. Run the following command:
 
     ```console
     gpresult /h report.html
