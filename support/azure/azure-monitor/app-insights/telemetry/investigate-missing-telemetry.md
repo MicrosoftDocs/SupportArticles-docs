@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot missing application telemetry in Azure Monitor Application Insights
 description: Describes how to test connectivity and telemetry ingestion by using PowerShell or curl to identify the step in the processing pipeline that causes telemetry to go missing.
-ms.date: 05/27/2025
+ms.date: 05/28/2025
 ms.reviewer: aaronmax, toddfous, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
