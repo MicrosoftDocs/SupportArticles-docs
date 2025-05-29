@@ -1,18 +1,12 @@
-- name: Office Products Troubleshooting
+﻿- name: Office Products Troubleshooting
   href: ../office-client-welcome.yml
   items:
     - name: Access
       items:
-        - name: .LDB files
-          href: ../access/ldb-file-description.md
-        - name: Access cache formats for SharePoint
-          href: ../access/access-cache-formats.md
         - name: Access error String data, right truncation (#0)
           href: ../access/string-data-right-truncation.md
         - name: Access freezes when opening a linked table
           href: ../access/access-freezes-when-open-linked-table.md
-        - name: ActiveX component can't create object
-          href: ../access/activex-component-cannot-create-object.md
         - name: ADODB code errors with adBiglnt data
           href: ../access/adBigInt-data-type-errors.md
         - name: Ambiguous name detected
@@ -21,24 +15,10 @@
           href: ../access/automate-selected-printer-for-report.md
         - name: Build a dynamic query with values from a search form
           href: ../access/build-dynamic-query-from-search-form.md
-        - name: Can't add new records programmatically
-          href: ../access/adding-new-record-fails.md
         - name: Can't add or delete records with ADO methods
           href: ../access/cannot-add-delete-records-ado.md
-        - name: Can't change linked Excel tables
-          href: ../access/error-changing-data.md
-        - name: Can't enter a large amount of text in Memo field with an index
-          href: ../access/run-time-error-3709.md
-        - name: Can't group on fields
-          href: ../access/fails-group-fields.md
-        - name: Can't import attribute-centric XML
-          href: ../access/import-attribute-centric-xml.md
         - name: Can't open a previous created database
           href: ../access/database-previous-version.md
-        - name: Can't open any wizard
-          href: ../access/open-access-wizard.md
-        - name: Can't open databases compiled as MDE, ACCDE or ADE files
-          href: ../access/error-run-compiled-mde-accde-ade.md
         - name: Can't open or make a reference to a linked table
           href: ../access/error-reference-linked-table.md
         - name: Can't perform an operation on a table
@@ -49,8 +29,6 @@
           href: ../access/errors-publishing-exporting.md
         - name: Can't save a table after updating a field
           href: ../access/too-many-fields-defined-error.md
-        - name: Can't update or delete data in a linked table
-          href: ../access/update-delete-query-unsuccessful.md
         - name: Can't update. Database or object is read-only
           href: ../access/database-or-object-is-read-only.md
         - name: Can't use CDec() function in Access query
@@ -59,34 +37,16 @@
           href: ../access/cannot-use-odbc-or-oledb.md
         - name: Change dates by using functions and operators
           href: ../access/change-dates-by-functions-operators.md
-        - name: Change the connection of a  project programmatically
-          href: ../access/change-the-connection-of-project.md
         - name: Connection error in database
           href: ../access/database-connection-error.md
-        - name: Convert data values of Text data type to proper case format
-          href: ../access/convert-data-values-of-text-data-type.md
         - name: Could not deploy package when deploying DACPAC files
           href: ../access/deploy-dacpac-access-web-app-package.md
         - name: Count occurrences of Yes or No in a field with Yes/No data type
           href: ../access/expressions-to-count-yes-no-other-reponses.md
-        - name: Crashes after install security update MS16-004
-          href: ../access/access-crashes-update-ms16-004.md
         - name: Crashes when updating linked SharePoint list
           href: ../access/access-crashes-updating-linked-list.md
-        - name: Create DSN-less connection to SQL Server for linked tables
-          href: ../access/create-dsn-less-connection-linkted-table.md
-        - name: Create new columns programmatically
-          href: ../access/programmatically-create-new-column.md
-        - name: Create query to evaluate complex criteria
-          href: ../access/query-evaluate-complex-criteria.md
-        - name: Create SQL pass-through query with ADO
-          href: ../access/adox-create-sql-pass-through-query.md
         - name: Damaged data on the Clipboard
           href: ../access/clipboard-data-damaged.md
-        - name: Database begins to bloat after you use DAO
-          href: ../access/prevent-database-bloat-dao.md
-        - name: Database in an unexpected state
-          href: ../access/database-unexpected-state.md
         - name: Database normalization basics
           href: ../access/database-normalization-description.md
         - name: Database or object is read-only
@@ -99,22 +59,8 @@
           href: ../access/decimal-value-rounded-up-down-integer.md
         - name: Define relationships between tables
           href: ../access/define-table-relationships.md
-        - name: Determine who is logged on to a database
-          href: ../access/determine-who-is-logged-on-to-database.md
-        - name: Determine who opened a database
-          href: ../access/determine-shared-resources-use.md
-        - name: Display images using custom function
-          href: ../access/display-images-using-custom-function.md
-        - name: Enforce or disable startup options in a database
-          href: ../access/disable-database-startup-options.md
-        - name: Enter Parameter Value dialog box appears
-          href: ../access/enter-parameter-value-when-run-query.md
         - name: Error 2950 when running a macro
           href: ../access/error-running-macro.md
-        - name: Error loading DLL
-          href: ../access/access-wizard-fails-loading-dll.md
-        - name: Error running query with UniqueValues property
-          href: ../access/error-running-query.md
         - name: Error running wizards
           href: ../access/running-wizard-error-loading-dll.md
         - name: Error using special characters
@@ -123,38 +69,24 @@
           href: ../access/error-compiling-module-running-procedure.md
         - name: Error when inserting table record
           href: ../access/error-inserting-table-record-autonumber.md
-        - name: Error when using built-in wizards
-          href: ../access/error-using-built-in-wizards.md
         - name: Error when you work in Access table linked to a list
           href: ../access/cant-update-database-or-object-error.md
-        - name: Errors during importing/exporting to Excel
-          href: ../access/import-export-access-to-excel.md
         - name: Exclusive lock required for saving changes
           href: ../access/saving-changes-require-exclusive-lock.md
-        - name: Extra Access report page prints
-          href: ../access/extra-access-report-page-prints.md
         - name: File already in use
           href: ../access/error-opening-database.md
         - name: File association errors when opening databases
           href: ../access/error-double-clicking-database.md
-        - name: Find a record by using ADO and Jet OLE DB provider
-          href: ../access/find-record-by-ado-and-jet-ole-db-provider.md
         - name: Floating-point calculations
           href: ../access/floating-calculations-info.md
-        - name: Force a new line in a MsgBox message
-          href: ../access/force-new-line-msgbox-message.md
         - name: Functions return a wrong week number
           href: ../access/functions-return-wrong-week-number.md
         - name: Functions to calculate age in months and in years
           href: ../access/calculate-age-in-months-years.md
         - name: Hide combo box drop-down arrow
           href: ../access/hide-combo-box-drop-down-arrow.md
-        - name: How Table Analyzer Wizard works
-          href: ../access/table-analyzer-wizard.md
         - name: How to change query properties
           href: ../access/how-to-change-query-properties.md
-        - name: How to create a running totals query
-          href: ../access/create-a-running-totals-query.md
         - name: How to loop through references to view properties
           href: ../access/how-to-loop-through-references-view-properties.md
         - name: How to parse City, State, Zip to separate values
@@ -171,8 +103,6 @@
           href: ../access/foreachrecord-issue.md
         - name: Issues when you retrieve SharePoint list data
           href: ../access/retrieve-sharepoint-list-in-access.md
-        - name: Jet compact utility is available in download center
-          href: ../access/jet-compact-utility-download.md
         - name: Linked Excel data is truncated
           href: ../access/linked-table-data-truncated.md
         - name: Linked table connection failed when using Microsoft Entra ID
@@ -185,12 +115,8 @@
           href: ../access/reserved-words.md
         - name: Long integer numbers are converted as double data type
           href: ../access/long-integer-numbers-converted-double-data-type.md
-        - name: Memory leak when Access connects to database files
-          href: ../access/access-engine-memory-leak.md
         - name: Missing or broken reference
           href: ../access/database-contain-missing-reference.md
-        - name: Move to a specific record from Combo Box selection
-          href: ../access/move-to-specific-record-from-combo-box-selection.md
         - name: No current record
           href: ../access/print-preview-error.md
         - name: No license to start Access
@@ -205,74 +131,30 @@
           href: ../access/jet-odbc-driver-available-32-bit-version.md
         - name: Optimize Access when using ODBC data sources
           href: ../access/optimize-odbc-data-sources.md
-        - name: Populate text boxes with multicolumn Combo Box selections
-          href: ../access/text-box-multicolumn-combox-selections.md
-        - name: Prompt users to save changes
-          href: ../access/save-changes-prompt.md
-        - name: Prompted for username and password
-          href: ../access/prompted-username-password.md
         - name: Query must have at least one destination field
           href: ../access/query-must-have-at-least-one-destination-field.md
-        - name: Reset an AutoNumber field value
-          href: ../access/reset-autonumber-value.md
-        - name: Reset page number on group level in a report
-          href: ../access/reset-page-number-on-a-group-level.md
         - name: Resolve database reference issues
           href: ../access/resolve-reference-issues.md
-        - name: Resolve references in VBA
-          href: ../access/resolve-vb-application-references.md
         - name: Runtime error 2147319779 (8002801d) library not registered
           href: ../access/library-unregistered-runtime-error.md
         - name: Save Password checkbox is unavailable
           href: ../access/save-password-checkbox-unavailable.md
-        - name: Scroll records with mouse wheel
-          href: ../access/scroll-records-with-mouse-wheel.md
-        - name: Security Update impairs Access Database
-          href: ../access/update-impairs-access-database.md
-        - name: Shut down a custom Access application remotely
-          href: ../access/shut-down-custom-application-remotely.md
-        - name: Split a database manually
-          href: ../access/manually-split-database.md
-        - name: SQL Server Native Client drivers used by Access
-          href: ../access/sql-server-native-client-drivers.md
         - name: Stop responding when creating MDE, ACCDE, or ADE files
           href: ../access/stop-responding-when-create-mde-accde-ade-files.md
-        - name: Store items from multiple selection list box as comma-delimited string
-          href: ../access/retrieve-items-in-multiple-selection-list-box.md
         - name: Store, calculate, and compare Date/Time data
           href: ../access/store-calculate-compare-datetime-data.md
-        - name: Support diagnostic
-          href: ../access/diagnostic-data-collected.md
         - name: Switchboard Manager doesn't appear
           href: ../access/switchboard-manager-option-disappears.md
-        - name: Synchronize two combo boxes
-          href: ../access/sync-combo-boxes.md
         - name: Text of text box control displays incorrectly
           href: ../access/text-box-control-information-incorrectly.md
         - name: The digital signature in Access is tampered with or invalidated
           href: ../access/access-database-digital-signature-invalidated.md
         - name: Troubleshoot errors updating queries or forms
           href: ../access/errors-updating-query-form-data.md
-        - name: Troubleshooting corruption in database
-          href: ../access/troubleshoot-database-corruption.md
-        - name: Unable to connect to FoxPro databases
-          href: ../access/fails-connecting-foxpro-databases.md
         - name: Unable to create an MDE, ACCDE, or ADE database
           href: ../access/error-saving-database.md
-        - name: Unable to save multi-table view record
-          href: ../access/error-saving-edited-record.md
-        - name: Use Attributes property of a TableDef object
-          href: ../access/tabledef-attributes-usage.md
-        - name: Use Common Dialog API
-          href: ../access/use-common-dialog-api.md
         - name: Use query by form (QBF) technique
           href: ../access/use-query-form-qbf-technique.md
-        - name: Use SetOption to disable warning messages
-          href: ../access/setoption-disable-warning-messages.md
-        - name: Use SQLConfigDataSource to create a system DSN
-          href: ../access/sqlconfigdatasource-access-system-dsn.md
-        - name: Use the Workgroup Administrator utility
-          href: ../access/use-workgroup-administrator-utility.md
         - name: Your network access was interrupted when using a mapped drive
           href: ../access/your-network-access-was-interrupted-error.md
     - name: Activation
@@ -287,10 +169,20 @@
           href: ../activation/account-doesnt-exist.md
         - name: Activation error Trusted Platform Module malfunctioned
           href: ../activation/tpm-malfunctioned.md
+        - name: Can't sign in to an Office 2016 for Mac app
+          href: ../activation/sign-in-to-office-2016-for-mac-fail.md
+        - name: Can't sign in to Microsoft 365 desktop applications
+          href: ../activation/cannot-sign-in-microsoft-365-desktop-apps.md
         - name: Can't verify the license for this product
           href: ../activation/license-issue-when-start-office-application.md
+        - name: Can't verify subscription
+          href: ../activation/subscription-issue-in-office-mobile.md
+        - name: Connection issues when signing in Office 2016
+          href: ../activation/connection-issue-when-sign-in-office-2016.md
+        - name: Disabling ADAL or WAM not recommended for fixing Microsoft 365 sign-in or activation issues
+          href: ../activation/disabling-adal-wam-not-recommended.md
         - name: Errors activating Microsoft 365 on older Windows versions
-          href: ../activation/errors-activating-on-older-windows.md
+          href: ../activation/errors-activating-on-older-windows.md 
         - name: Office activation process issues
           href: ../activation/office-activation-process-issues.md
         - name: Issue when activating Microsoft 365 Apps for enterprise
@@ -323,6 +215,8 @@
           href: ../activation/subscription-expired.md
         - name: Microsoft 365 Apps activation usage report issues
           href: ../activation/activation-usage-report-issues.md
+        - name: Microsoft 365 users aren't automatically signed into Office
+          href: ../activation/office-365-users-not-signed-in-office.md  
         - name: Office for Mac activation An unknown error has occurred
           href: ../activation/mac-unknown-error.md
         - name: Sign in issues when activating Microsoft 365 Apps
@@ -335,10 +229,18 @@
           href: ../activation/cant-be-used-to-activate.md
         - name: Troubleshooting device-based licensing for Microsoft 365 Apps
           href: ../activation/device-based-licensing.md
+        - name: Use Fiddler trace logs for MFA
+          href: ../activation/fiddler-trace-logs-for-mfa.md
+        - name: Use MSOAID for authentication issues
+          href: ../activation/use-msoaid-for-authentication-issues.md
         - name: We've run into a problem with your Microsoft 365 subscription
           href: ../activation/run-into-a-problem.md
         - name: You currently have not been assigned an office license that includes the Office desktop apps
           href: ../activation/license-not-assigned.md
+    - name: Copilot
+      items:
+        - name: Copilot is missing, disabled, or doesn't work correctly
+          href: ../copilot/copilot-missing-disabled-not-work-correctly.md
     - name: End of Support
       items:
         - name: Office 2007 has reached end of extended support
@@ -347,42 +249,22 @@
           href: ../support/2013-versions-of-office-365.md
     - name: Excel
       items:
-        - name: .SpecialCells(xlCellTypeBlanks) VBA function doesn't work
-          href: ../excel/specialcells(xlcelltypeblanks)-vba-function.md
         - name: 'A formula returns "#VALUE!" Error'
           href: ../excel/formula-returns-value-error.md
-        - name: Algorithm is used by the XIRR() function
-          href: ../excel/algorithm-of-xirr-funcation.md
         - name: An active process continues to run
           href: ../excel/quitting-process-continues-running.md
-        - name: Apply permissions to separate ranges
-          href: ../excel/apply-password-to-separate-range.md
-        - name: AutoComplete may not work
-          href: ../excel/autocomplete-not-work.md
         - name: Blank pages are unexpectedly printed
           href: ../excel/blank-pages-unexpectedly-printed.md
-        - name: Calculate ages before 1/1/1900
-          href: ../excel/calculate-age-before-1-1-1900.md
-        - name: Calculate interpolation step value
-          href: ../excel/calculate-interpolation-step-value.md
         - name: Can't export to Excel from SharePoint Online
           href: ../excel/cannot-export-to-excel.md
         - name: Can't modify oData connection in PowerPivot
           href: ../excel/cannot-modify-odata-connection.md
-        - name: Can't open IRM protected workbook
-          href: ../excel/cannot-open-irm-protected-workbook.md
         - name: Can't paste any attributes into a workbook in another instance
           href: ../excel/cannot-paste-attributes.md
-        - name: Can't remove error tracing arrow
-          href: ../excel/removing-error-tracing-arrow-fails.md
         - name: Can't use object linking and embedding
           href: ../excel/cant-use-object-linking-and-embedding-error.md
-        - name: Center Across Columns does not appear on the toolbar
-          href: ../excel/center-across-columns-button-disappear.md
         - name: Chart trendline formula is inaccurate
           href: ../excel/inaccurate-chart-trendline-formula.md
-        - name: CHIINV statistical functions
-          href: ../excel/statistical-functions-chiinv.md
         - name: Clean up workbooks with less memory
           href: ../excel/clean-workbook-less-memory.md
         - name: Columns and rows are labeled numerically
@@ -391,48 +273,24 @@
           href: ../excel/add-ins-command-bars-removed.md
         - name: Command can't be used on multiple selections
           href: ../excel/command-cannot-be-used-on-selections.md
-        - name: Conditional formatting is set incorrectly with VBA
-          href: ../excel/conditional-formatting-set-incorrectly.md
-        - name: Convert degrees/minutes/seconds angles
-          href: ../excel/convert-degrees-minutes-seconds-angles.md
-        - name: Convert Excel column numbers
-          href: ../excel/convert-excel-column-numbers.md
         - name: Create a dynamic defined range
           href: ../excel/create-dynamic-defined-range.md
-        - name: Create a monthly calendar
-          href: ../excel/create-monthly-calendar.md
-        - name: Create and user two-input data tables
-          href: ../excel/create-two-input-data-tables.md
-        - name: Create application-level event handlers
-          href: ../excel/create-application-level-event-handler.md
         - name: Custom function may not calculate expected value
           href: ../excel/custom-function-calculate-wrong-value.md
         - name: Excel data doesn't retain formatting in mail merge
           href: ../excel/excel-data-not-retain-formatting-mail-merge.md  
-        - name: Excel workbook shows old property values
-          href: ../excel/excel-workbook-shows-old-property-values.md
-        - name: Date format is incorrect when converting a CSV text file with macros
-          href: ../excel/incorrect-date-format-converted-csv-file.md
-        - name: Delete cells with a "For Each...Next" loop
-          href: ../excel/use-for-each-next-loop-to-delete-cell.md
-        - name: Delete every other row on a worksheet
-          href: ../excel/delete-every-other-row.md
         - name: Determine the current mode of calculation
           href: ../excel/current-mode-of-calculation.md
         - name: Determine whether a year is a leap year
           href: ../excel/determine-a-leap-year.md
         - name: Difference between STDEVPA and STDEVP functions
           href: ../excel/statistical-functions-differences.md
-        - name: Differences between 1900 and 1904 date system
-          href: ../excel/1900-and-1904-date-system.md
         - name: Digital signatures and code signing
           href: ../excel/digital-signatures-code-signing.md
         - name: Display more digits in trendline equation coefficients
           href: ../excel/trendline-equation-coefficient-digits.md
         - name: Dsum and Dcount functions not working
           href: ../excel/dsum-and-dcount-not-work-with-pivottables.md
-        - name: Embedded macros are blocked from running
-          href: ../excel/embedded-macros-not-run.md
         - name: Error when saving a file
           href: ../excel/error-saving-file.md
         - name: Error when sending commands in Excel
@@ -453,8 +311,6 @@
           href: ../excel/export-text-file-with-comma-quote.md
         - name: External links may be calculated when you open a workbook
           href: ../excel/external-links-calculated-open-workbook-earlier-version-excel.md
-        - name: FALSE result with the ISBLANK() function
-          href: ../excel/isblank-function-return-false.md
         - name: First sheet name displays different language
           href: ../excel/first-sheet-name-displays-different-language.md
         - name: Floating-point arithmetic gives inaccurate results
@@ -467,22 +323,14 @@
           href: ../excel/prn-file-limited-to-240-characters.md
         - name: Formula errors when list separator isn't set
           href: ../excel/formula-errors.md
-        - name: Formulas to count text occurrences in Excel
-          href: ../excel/formulas-to-count-occurrences-in-excel.md
         - name: GROWTH statistical functions
           href: ../excel/statistical-functions-growth.md
         - name: Heavy Excel workloads run slowly in multi-session environments
           href: ../excel/heavy-excel-workloads-run-slowly-multisession.md
         - name: Hide sheets and use xlVeryHidden constant in a macro
           href: ../excel/hide-sheet-and-use-xlveryhidden.md
-        - name: How column widths are determined
-          href: ../excel/determine-column-widths.md
         - name: How Excel works with two-digit year numbers
           href: ../excel/two-digit-year-numbers.md
-        - name: How to obtain the latest Excel Viewer
-          href: ../excel/get-latest-excel-viewer.md
-        - name: Hyperlink to mht file fails to load
-          href: ../excel/hyperlink-to-mht-file-fails-to-load.md
         - name: Invalid signature error in Excel workbooks
           href: ../excel/document-contains-invalid-signatures-error.md
         - name: Issue when saving Excel workbooks
@@ -493,8 +341,6 @@
           href: ../excel/fails-starting-excel-mac.md
         - name: Issue when updating external links
           href: ../excel/update-external-links.md
-        - name: Issue with using different print quality for sheets
-          href: ../excel/different-print-quality.md
         - name: Large Address Aware capability change
           href: ../excel/laa-capability-change.md
         - name: Last digits are changed to zeros
@@ -505,14 +351,6 @@
           href: ../excel/long-numbers-incorrectly-in-excel.md
         - name: Loop through a list of data by using macros
           href: ../excel/loop-through-data-using-macro.md
-        - name: Macro to extract data from a chart
-          href: ../excel/macro-retrieves-chart-data.md
-        - name: Macros run slowly
-          href: ../excel/macros-run-slowly.md
-        - name: Make Paste Options button disappear
-          href: ../excel/make-paste-options-button-disappear.md
-        - name: Margins do not fit page size when printing
-          href: ../excel/fails-printing-a-workbook.md
         - name: Memory usage in the 32-bit edition of Excel
           href: ../excel/memory-usage-32-bit-edition-of-excel.md
         - name: Network Mapped Drive hyperlinks resolve as UNC
@@ -529,36 +367,14 @@
           href: ../excel/percentage-format-changes-numeric.md
         - name: Prevent files from opening automatically
           href: ../excel/files-open-automatically.md
-        - name: Programmatically copy all range names
-          href: ../excel/copy-range-names.md
-        - name: Programmatically print all embedded charts
-          href: ../excel/print-embedded-charts.md
-        - name: Programmatically save a file to a network drive
-          href: ../excel/save-file-to-network-drive.md
         - name: Recalculation with a SUMIF formula takes a longer time
           href: ../excel/worksheet-recalculation-sumif-formula.md
-        - name: Registry keys that control the File Repair feature
-          href: ../excel/file-repair-registry-key.md
-        - name: Representing ties by using RANK
-          href: ../excel/representing-ties-using-rank.md
         - name: RSQ statistical functions
           href: ../excel/statistical-functions-rsq.md
-        - name: Run a macro with certain cells change
-          href: ../excel/run-macro-cells-change.md
-        - name: Run-time Error 1004 with legend entries in charts
-          href: ../excel/run-time-error-1004.md
-        - name: Run-time error '-2147467259 (80004005)' when setting a chart property
-          href: ../excel/run-time-error-2147467259-80004005.md
         - name: Sample macro to insert/delete rows or columns
           href: ../excel/macro-insert-delete-rows-columns.md
-        - name: SAP add-ins don't display controls after update to version 1806
-          href: ../excel/sap-add-ins-not-display-control.md
         - name: Security settings for Dynamic Data Exchange
           href: ../excel/security-settings.md
-        - name: Set page setup attributes for sheets
-          href: ../excel/set-page-setup-attributes.md
-        - name: Set up and use the RTD function
-          href: ../excel/set-up-realtimedata-function.md
         - name: Startup message about updating linked workbooks
           href: ../excel/control-startup-message.md
         - name: Too many different cell formats in Excel
@@ -569,28 +385,16 @@
           href: ../excel/available-resources-errors.md
         - name: Turn off Function Argument ToolTips
           href: ../excel/turn-off-function-argument-tooltips.md
-        - name: Use a worksheet function in a VB macro
-          href: ../excel/worksheet-function-in-vb-macro.md
         - name: Use defined names to update a chart range
           href: ../excel/defined-names-to-update-chart-range.md
-        - name: Use left, right, mid, and len functions in VB
-          href: ../excel/use-left-right-mid-len-function.md
         - name: Use logical AND or OR in a SUM+IF statement
           href: ../excel/logical-and-or-in-sum-if.md
-        - name: Use macro to apply cell shading format to other rows
-          href: ../excel/apply-cell-shading-format-by-macro.md
-        - name: Use OnEntry macro to create a running total in cell comment
-          href: ../excel/use-onentry-to-create-running-total.md
         - name: Use saved property to determine if workbook is changed
           href: ../excel/saved-property-determine-workbook-is-changed.md
-        - name: Use shared workbooks with different versions
-          href: ../excel/use-shared-workbook.md
         - name: User info in @mentions doesn't resolve
           href: ../excel/mentions-not-resolve-user-information.md
         - name: VBA writes to cells slowly when ActiveX controls are invisible
           href: ../excel/vba-writes-to-cells-slowly.md
-        - name: Wrap text doesn't adjust row height
-          href: ../excel/wrap-text-not-adjust-row-height.md
     - name: Forms
       items:
         - name: Resolve file upload errors in Microsoft Forms
@@ -599,18 +403,20 @@
       items:
         - name: Disable code-behind prompt for InfoPath forms
           href: ../infopath/disabling-code-behind-prompt-for-infopath-forms.md
-        - name: Generated .PDB files don't match InfoPath form name
-          href: ../infopath/generated-pdb-file-name-does-not-match-infopath-name.md
         - name: InfoPath 2013 crashes when connect Access database
           href: ../infopath/infopath-2013-crashes-when-connecting-to-access-database.md
     - name: Installation
       items:
+        - name: Automatic updating isn't enabled
+          href: ../installation/automatic-updates.md
         - name: Error 1935 when install Office 2010
           href: ../installation/error-1935-when-install-office-2010.md
         - name: Error code 30010-45 or 30088-26 installing Microsoft 365 Apps
           href: ../installation/error-code-30010-45-or-30088-26.md
         - name: Error starting Microsoft Office third-party .NET add-in
           href: ../installation/access-denied-error-when-starting-third-party-apps.md
+        - name: Error when installing Microsoft 365 apps
+          href: ../installation/cannot-access-powershell-file-error.md
         - name: Error when you install an Office program
           href: ../installation/error-run-office-setup-program.md
         - name: How to download and run Office LTSC installation files not in VLSC
@@ -621,6 +427,8 @@
           href: ../installation/install-and-activate-office-2013.md
         - name: Office setup issues
           href: ../installation/office-setup-issues.md
+        - name: Prioritize BITS for Office 2016 updates
+          href: ../installation/prioritize-bits-for-office-2016-updates.md
         - name: Use SaRA to collect data about Microsoft 365 Apps installations
           href: ../installation/use-sara-to-collect-install-info.md
     - name: Loop
@@ -649,6 +457,10 @@
           href: ../office-for-mac/excel-mac-error-application-quit-unexpectedly.md
         - name: wkresources files in Trash
           href: ../office-for-mac/wkresources-files-moved-to-trash.md
+    - name: Office Online Server
+      items:
+        - name: Web sites lose SSL certificate bindings
+          href: ../office-online-server/web-sites-lose-ssl-certificate-bindings.md
     - name: Office Suite Issues
       items:
         - name: "0x80004005: General Error Unable to Open Registry Key"
@@ -689,8 +501,14 @@
           href: ../office-suite-issues/compile-error-procedure-too-large.md
         - name: Complete repair of corrupted files isn't guaranteed
           href: ../office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md
+        - name: Control the blocking of OLE/COM
+          href: ../office-suite-issues/control-block-ole-com.md
+        - name: Deploy SaRA using Intune
+          href: ../office-suite-issues/install-sara-from-intune.md
         - name: Document Information Panel is deprecated
           href: ../office-suite-issues/document-information-panel-deprecate.md
+        - name: Enable or disable hyperlink warning messages
+          href: ../office-suite-issues/enable-disable-hyperlink-warning.md
         - name: Error when editing an equation in Office
           href: ../office-suite-issues/issue-when-edit-equation-in-office.md
         - name: Error when opening a document
@@ -701,6 +519,10 @@
           href: ../office-suite-issues/file-cannot-be-saved.md
         - name: Features to enable collaboration
           href: ../office-suite-issues/enable-collaboration.md
+        - name: Increase the size of diagnostic logs
+          href: ../office-suite-issues/collect-office-diagnostic-logs.md
+        - name: Install Microsoft Support and Recovery Assistant from network share
+          href: ../office-suite-issues/install-sara-from-network-share.md
         - name: Invalid product key or license mismatch
           href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
         - name: Issue when launching Office in Microsoft Store app
@@ -725,6 +547,8 @@
           href: ../office-suite-issues/missing-fonts-opening-documents.md
         - name: Mobile viewing PDF files with Office Web Apps
           href: ../office-suite-issues/mobile-viewing-pdf-files.md
+        - name: No Add-ins loaded due to group policy settings 
+          href: ../office-suite-issues/office-add-in-not-loaded.md
         - name: No default mail client
           href: ../office-suite-issues/no-default-mail-client-error.md
         - name: No Office entitlement found on device
@@ -737,6 +561,8 @@
           href: ../office-suite-issues/office-end-user-license-agreement.md
         - name: Office error "could not create the work file"
           href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
+        - name: Office Feature Updates task
+          href: ../office-suite-issues/office-feature-updates-task-faq.md
         - name: Office has detected a problem with this file
           href: ../office-suite-issues/office-file-fails-validation.md
         - name: Office installation Error 1401, 1402 or 1406
@@ -745,16 +571,22 @@
           href: ../office-suite-issues/office-stops-responding.md
         - name: Repair process of click-to-run app
           href: ../office-suite-issues/click-to-run-app-repair-process.md
-        - name: "Run-time Error 13: Type Mismatch"
-          href: ../office-suite-issues/run-time-error-13-type-mismatch.md
         - name: Saving documents to network server is slow
           href: ../office-suite-issues/saving-file-to-network-server-slow.md
         - name: Services display incorrectly in Research pane
           href: ../office-suite-issues/duplicate-service-listed.md
         - name: Set default font for Office apps
           href: ../office-suite-issues/set-default-font.md
+        - name: Subscription automatic license renewal fails
+          href: ../office-suite-issues/subscription-license-renewal-fail.md
+        - name: Support limitations for Microsoft 365 Apps issues
+          href: ../office-suite-issues/issue-support-limitations.md
+        - name: Supported Product IDs for Click-to-Run
+          href: ../office-suite-issues/product-ids-supported-office-deployment-click-to-run.md
         - name: The document caused a serious error the last time it was opened
           href: ../office-suite-issues/error-open-word-excel.md
+        - name: Third-party network solutions on Microsoft 365 traffic
+          href: ../office-suite-issues/office-365-third-party-network-devices.md
         - name: This file can't be previewed
           href: ../office-suite-issues/this-file-cant-be-previewed.md
         - name: Unable to create DSN for Office System Driver
@@ -765,8 +597,12 @@
           href: ../office-suite-issues/use-multiple-versions-of-office.md
         - name: Use GetObject and CreateObject with automation server
           href: ../office-suite-issues/getobject-createobject-behavior.md
+        - name: Users don't see Office add-ins
+          href: ../office-suite-issues/user-not-seeing-add-ins.md  
         - name: View error signatures for Office
           href: ../office-suite-issues/view-error-signatures.md
+        - name: We can't start this app error when you install an add-in
+          href: ../office-suite-issues/cannot-install-office-add-in.md
         - name: Your system is low on virtual memory
           href: ../office-suite-issues/your-system-is-low-on-virtual-memory.md
     - name: OneNote
@@ -835,16 +671,10 @@
           href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context
     - name: Project
       items:
-        - name: Calculate work and duration with resource assignment changes
-          href: ../project/calculate-work-duration-assignment.md
         - name: Can't add or edit resources in Enterprise Resource Pool
           href: ../project/error-when-add-edit-resource.md
-        - name: Can't enter User Logon Account for new resource
-          href: ../project/cannot-enter-user-logon-account.md
         - name: Can't save to global.mpt when existing Project
           href: ../project/cant-save-to-global.mpt-error.md
-        - name: Can't view a timesheet in PWA
-          href: ../project/iexplorer.exe-encountered-problem.md
         - name: Circular relationship error when indenting task
           href: ../project/circular-relationship-error-when-indenting-task.md
         - name: Create a report template
@@ -853,24 +683,14 @@
           href: ../project/definition-of-project-constraints.md
         - name: Error when accessing Project Web App
           href: ../project/error-when-access-pwa.md
-        - name: Error when opening a visual report
-          href: ../project/error-when-open-visual-report-in-project.md
         - name: Error when you click project link
           href: ../project/error-when-click-on-project-links.md
-        - name: Expect when calling into paid support
-          href: ../project/expect-when-calling-into-paid-support.md
-        - name: File size increases when inserting picture
-          href: ../project/file-size-increase-when-insert-picture.md
         - name: Gantt Chart or Usage views print on too many pages
           href: ../project/gantt-chart-usage-view-print-issues.md
         - name: How to remove leading split in a task
           href: ../project/remove-leading-split-in-task.md
-        - name: How to upgrade Project global template
-          href: ../project/upgrade-project-global-template.md
         - name: Import task outline structure into-project
           href: ../project/import-task-outline-structure.md
-        - name: Issue when changing user's status to inactive in Project
-          href: ../project/eventing-service-error-when-changing-user-status-to-inactive-microsoft-project.md
         - name: Make a custom toolbarribbon available to all users
           href: ../project/custom-toolbarribbon-available-to-all-users.md
         - name: Operatio times out when connecting to Odata
@@ -893,16 +713,10 @@
           href: ../project/sharepoint-task-list-sync-job-fails-when-project-published.md
         - name: Show fiscal dates on a timescaled view
           href: ../project/fiscal-dates-on-timescaled-view.md
-        - name: Sync Jobs take a long time to complete
-          href: ../project/sync-jobs-take-long-time-to-complete.md
         - name: Sync with SharePoint tasks list
           href: ../project/sync-with-tasks-from-project.md
         - name: Tasks are not scheduled
           href: ../project/tasks-not-scheduled.md
-    - name: Publisher
-      items:
-        - name: Text boxes in Publisher-created email are converted to bitmap
-          href: ../publisher/text-boxes-coverted-to-bitmap.md
     - name: Settings
       items:
         - name: Display issues in Office applications
@@ -915,6 +729,10 @@
           href: ../settings/how-to-securely-open-office-documents-that-have-dde-fields.md
         - name: Use registry to clear the most recently used files list
           href: ../settings/clear-most-recently-used-file.md
+    - name: Sway
+      items:
+        - name: Disabled Microsoft 365 Sway tile continues to appear in App Launcher
+          href: ../sway/disabled-sway-tile-appear.md
     - name: Third party add-ins
       items:
         - name: Can't start the converter SSPDFCG_X64.cnv

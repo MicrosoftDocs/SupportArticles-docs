@@ -14,7 +14,7 @@ ms.custom:
 appliesto: 
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Differences between the Excel statistical functions STDEVPA and STDEVP

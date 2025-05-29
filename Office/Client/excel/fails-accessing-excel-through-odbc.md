@@ -1,6 +1,6 @@
 ---
-title: Cannot access Excel through ADO and ODBC
-description: You can't edit an Excel worksheet through ADO and ODBC because this worksheet is saved or opened as ReadOnly.
+title: Can't access Excel through ADO and ODBC
+description: You can't edit an Excel worksheet through ADO and Open Database Connectivity (ODBC) because this worksheet is saved or opened as ReadOnly.
 author: helenclu
 manager: dcscontentpm
 search.appverid: 
@@ -12,22 +12,22 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft Excel
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
-# PRB: "Operation must use an updateable query" When you access Excel through ODBC
+# Error "Operation must use an updateable query" When you access Excel through ODBC
 
 ## Symptoms
 
 When you edit an Excel worksheet through ADO and ODBC, you may receive the following error message if you use an ADO DataControl object:
 
-```asciidoc
+```output
 [Microsoft][ODBC Excel Driver] Operation must use an updateable query.
 ```
 
-If you use a Recordset object that is generated with ADO code, you may receive the following error message when you edit an Excel worksheet through ADO and ODBC:
+If you use a Recordset object that's generated with ADO code, you may receive the following error message when you edit an Excel worksheet through ADO and ODBC:
 
-```asciidoc
+```output
 Run-time error '-2147467259(80004005)': [Microsoft][ODBC Excel Driver] Operation must use an updateable query.
 ```
 
@@ -42,16 +42,16 @@ This problem occurs if you try to edit a worksheet that is saved or opened as Re
 
 To resolve this problem, use the following methods:
 
-- Make sure that the LockType property of the Recordset object is not set to ReadOnly.
-- Make sure that the file that you are trying to open is not saved as ReadOnly.
-- If you are connecting through a DSN, follow these steps:
+- Make sure that the LockType property of the Recordset object isn't set to ReadOnly.
+- Make sure that the file that you're trying to open isn't saved as ReadOnly.
+- If you're connecting through a DSN, follow these steps:
 
-  1. Open Control Panel, and then click ODBC Data Source Administrator.
+  1. Open Control Panel, and then select ODBC Data Source Administrator.
   2. Double-click your DSN.
-  3. In the ODBC Microsoft Excel Setup dialog box, click Options.
-  4. Make sure that the ReadOnly check box is not selected.
+  3. In the ODBC Microsoft Excel Setup dialog box, select Options.
+  4. Make sure that the ReadOnly check box is cleared.
 
-- If you are using a DSN-less connection, make sure to include the "ReadOnly=0" option in the connection string. For example:
+- If you're using a DSN-less connection, make sure to include the "ReadOnly=0" option in the connection string. For example:
 
   ```vb
   cn.Open "Driver={Microsoft Excel Driver (*.xls)};DBQ=C:\MyDoc.xls;ReadOnly=0;"
@@ -66,7 +66,7 @@ This behavior is by design.
 ### Steps to Reproduce the Behavior
 
 1. Create a new Standard EXE project in Visual Basic.
-2. On the Project menu, click References, and then add a reference to Microsoft ActiveX Data Objects Library.
+2. On the Project menu, select References, and then add a reference to Microsoft ActiveX Data Objects Library.
 3. Add a Command button to Form1.
 4. Add the following code to Form1:
 
@@ -102,13 +102,11 @@ This behavior is by design.
 
 5. Save the application.
 6. Create a new Excel worksheet, and then save the worksheet as Test.xls.
-7. On the Insert menu, point to Name, and then click Define.
+7. On the Insert menu, point to Name, and then select Define.
 8. Create a new table inside the Excel worksheet, and then name the table TB1.
 9. Save the worksheet in the same folder as the Visual Basic application.
 10. Press F5 to run the application.
 
 ## References
 
-For additional information, see the following article:
-
-[Office Space: Tips and Tricks for Scripting Microsoft Office Applications](https://support.microsoft.com/help/257819)
+For more information, see [Office Space: Tips and Tricks for Scripting Microsoft Office Applications](https://support.microsoft.com/help/257819).

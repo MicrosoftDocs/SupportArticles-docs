@@ -26,7 +26,7 @@ appliesto:
   - Outlook on the web
 search.appverid: 
   - MET150
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 # User information in @mentions doesn't resolve
 

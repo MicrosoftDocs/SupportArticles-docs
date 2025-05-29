@@ -18,7 +18,7 @@ appliesto:
   - Excel for Microsoft 365
   - Microsoft Excel for Mac 2011
   - Excel for Mac for Microsoft 365
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Floating-point arithmetic may give inaccurate results in Excel

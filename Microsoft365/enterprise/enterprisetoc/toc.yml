@@ -1,12 +1,10 @@
-- name: Microsoft 365 Enterprise Troubleshooting
+﻿- name: Microsoft 365 Enterprise Troubleshooting
   href: ../o365-enterprise-welcome.yml
   items:
   - name: Administration
     items:
     - name: COM and .NET errors after Office architecture migration
       href: ../administration/com-net-errors-after-migration.md
-    - name: Can't insert scriptable ActiveX controls
-      href: ../administration/insert-scriptable-activex-control.md
     - name: Enterprise version of Microsoft Support and Recovery Assistant
       items:
       - name: Overview
@@ -25,29 +23,5 @@
         href: ../administration/assistant-teams-meeting-add-in-outlook.md
       - name: 'Scenario: Reset Office Activation'
         href: ../administration/assistant-reset-office-activation.md      
-    - name: Format of the CSV file isn't correct error
-      href: ../administration/format-of-the-csv-file-not-correct-error-when-importing-contacts.md
-    - name: Issue on devices with App-V enabled
-      href: ../administration/issues-on-devices-with-app-v-enabled.md
-    - name: Office applications crash or can't start
-      href: ../administration/office-crash-or-cannot-start.md
-    - name: Office for iOS requires HTTPS for server resources
-      href: ../administration/office-ios-requires-https.md    
-  - name: Authentication
-    items:
-    - name: '"Invalid provider specified" with using Office 2016'
-      href: ../authentication/invalid-provider-specified-error.md
-    - name: Can't sign in Microsoft 365 from multiple federated domains
-      href: ../authentication//cant-sign-in-office-365-multiple-domain-federation.md
-  - name: Miscellaneous
-    items:
-    - name: Can't find or insert any clip art
-      href: ../miscellaneous/cannot-find-any-clip art.md
-  - name: Project Online
-    items:
-    - name: Can't access newly purchased project online with license
-      href: ../project-online/cant-access-newly-purchased-project-online.md
-    - name: Can't connect to Project Online OData from SSIS
-      href: ../project-online/cant-connect-project-online-odata-from-ssis.md
-    - name: Can't save a project to Project Web App
-      href: ../project-online/cant-save-project-client-to-web-app.md
+    - name: Diagnostic log collection in Support and Recovery Assistant
+      href: ../administration/diagnostic-log-collection-in-support-and-recovery-assistant.md

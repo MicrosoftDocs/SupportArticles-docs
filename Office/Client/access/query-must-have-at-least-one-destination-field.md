@@ -18,7 +18,7 @@ appliesto:
   - Access 2010
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # "Query must have at least one destination field" when you run an Access query

@@ -15,7 +15,7 @@ ms.reviewer: robdil
 appliesto: 
   - Access 2007
   - Access 2002
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 
 # You cannot add records or delete records with the ADO AddNew method or with the Delete method

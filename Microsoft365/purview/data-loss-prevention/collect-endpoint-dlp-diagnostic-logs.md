@@ -15,7 +15,7 @@ ms.reviewer: managrawal, sathyana, meerak, v-shorestris
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 01/15/2025
+ms.date: 05/05/2025
 ---
 
 # Collect endpoint DLP diagnostic logs

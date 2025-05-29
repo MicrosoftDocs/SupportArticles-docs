@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
   - Excel 2010
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # How to loop through a list of data on a worksheet by using macros in Excel

@@ -1,7 +1,7 @@
 ---
 title: Mail contacts lose access to encrypted content
 description: A known issue in groups causes mail contacts to lose access or have intermittent access to encrypted content.
-ms.date: 05/05/2022
+ms.date: 05/05/2025
 author: helenclu
 ms.author: luche
 manager: dcscontentpm

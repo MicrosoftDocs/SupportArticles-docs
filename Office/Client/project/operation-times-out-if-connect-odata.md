@@ -12,7 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 
 # The operation has timed out when connecting to OData by using SSIS in Project Online

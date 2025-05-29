@@ -13,7 +13,7 @@ ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 06/24/2024
+ms.date: 05/05/2025
 ---
 
 # Can't delete folders in the Deleted Items folder of an archive mailbox in Exchange Online

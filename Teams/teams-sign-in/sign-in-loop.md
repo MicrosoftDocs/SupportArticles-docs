@@ -13,7 +13,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Microsoft Teams
-ms.date: 11/02/2023
+ms.date: 05/15/2025
 adobe-target: true
 ---
 

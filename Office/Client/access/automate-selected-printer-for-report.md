@@ -16,7 +16,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # How to automate the process of selecting the printer for a report in Microsoft Access

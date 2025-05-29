@@ -22,7 +22,7 @@ appliesto:
   - Outlook 2021 for Mac
   - Outlook 2019 for Mac
 search.appverid: MET150
-ms.date: 09/02/2024
+ms.date: 05/05/2025
 ---
 
 # Resolve Microsoft Purview Message Encryption issues

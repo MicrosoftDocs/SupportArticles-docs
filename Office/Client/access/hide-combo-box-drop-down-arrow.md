@@ -19,7 +19,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 # How to hide the combo box drop-down arrow on a form in Access
 

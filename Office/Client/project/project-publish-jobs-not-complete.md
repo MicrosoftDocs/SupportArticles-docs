@@ -13,7 +13,7 @@ ms.custom:
 appliesto: 
   - Project Online
   - Project Server 2013
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 
 # Project Publish jobs remain at 80 percent for a long time before completing

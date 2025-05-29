@@ -1,5 +1,5 @@
 ---
-title: Shared calendar appears in a delegate's Online Archive folder
+title: Shared Calendar Appears in a Delegate's Online Archive Folder
 description: Provides a workaround for an issue in which Outlook displays a shared calendar in a delegate's Online Archive folder.
 author: cloud-writer
 ms.author: meerak
@@ -11,19 +11,17 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 173134
-ms.reviewer: benwinz, tylewis, meerak, v-trisshores
+  - CI 5553
+ms.reviewer: benwinz, tylewis, gbratton, meerak, v-trisshores
 appliesto:
   - Exchange Online
   - Outlook on the web
   - Outlook for Microsoft 365
-  - Outlook LTSC 2021
-  - Outlook 2019
-  - Outlook 2016
-  - Outlook 2013
+  - Outlook for Windows
   - Outlook for Mac
   - Outlook for Mac for Microsoft 365
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 04/25/2025
 ---
 
 # Shared calendar appears in delegate's Online Archive folder
@@ -77,7 +75,6 @@ To work around this issue, choose from the following options:
 - To hide shared calendars that appear in a delegate's Online Archive folder in Outlook, follow these steps:
 
   > [!NOTE]
-  >
   > To use the following procedure, you must be the owner of the delegate's mailbox or have full access permissions to it. Run the procedure on a Microsoft Windows computer that has the Outlook desktop client installed and an Outlook profile for the delegate's mailbox.
   
   1. Determine whether your Outlook installation is a [32-bit or 64-bit](https://support.microsoft.com/office/what-version-of-outlook-do-i-have-b3a9568c-edb5-42b9-9825-d48d82b2257c) version by checking **File** \> **Office** **account** \> **About** **Outlook**.
@@ -87,32 +84,22 @@ To work around this issue, choose from the following options:
      [!INCLUDE [Important MFCMAPI alert](../../../includes/mfcmapi-important-alert.md)]
   
   3. Make sure that Outlook is closed, and then run *MFCMapi.exe*. If the MFCMAPI startup screen appears, close it.
+
+  4. Open the **Choose Profile** window by selecting **Session** \> **Logon**.
   
-  4. Open the **Options** window by selecting **Tools** \> **Options**.
+  5. Select the Outlook profile for the delegate's mailbox, and then select **OK**.
   
-  5. Select both of the following checkboxes, and then select **OK**:
+  6. Open the online archive store by double-clicking **Online Archive**.
   
-     - **Use the MDB_ONLINE flag when calling OpenMsgStore**
-     - **Use the MAPI_NO_CACHE flag when calling OpenEntry**
+  7. In the left pane, expand **Root Container** \> **Top of Information Store** \> **Calendar**, and then select the shared calendar folder.
   
-  6. Open the **Choose Profile** window by selecting **Session** \> **Logon**.
+  8. In the right pane, open the **Property Editor** window by double-clicking the **PR_ATTR_HIDDEN** property.
   
-  7. Select the Outlook profile for the delegate's mailbox, and then select **OK**.
-  
-  8. Open the online archive store by double-clicking **Online Archive**.
-  
-  9. In the left pane, expand **Root Container** \> **Top of Information Store** \> **Calendar**, and then select the shared calendar folder.
-  
-  10. In the right pane, open the **Property Editor** window by double-clicking the **PR_ATTR_HIDDEN** property.
-  
-  11. Select the **Boolean** checkbox, and then select **OK**.
+  9. Select the **Boolean** checkbox, and then select **OK**.
  
       **Note:** If you need to hide additional calendars, repeat steps 9 to 11 for each calendar.
        
-  12. Exit the application by closing all MFCMAPI windows.
+  10. Exit the application by closing all MFCMAPI windows.
   
-  13. Start Outlook and verify that the delegate's Online Archive folder no longer displays the shared calendar.
-
-## Status
-
-Microsoft is investigating this issue and will update this article when more information becomes available.
+  11. Start Outlook and verify that the delegate's Online Archive folder no longer displays the shared calendar.
+  

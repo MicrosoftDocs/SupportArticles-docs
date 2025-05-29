@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
   - Microsoft Office Excel 2002
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # Display more digits in trendline equation coefficients in Excel

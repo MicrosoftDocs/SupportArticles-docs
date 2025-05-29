@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Office Access 2003
   - Microsoft Office Access 2002
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 # List of reserved words in Access 2002 and in later versions of Access
 

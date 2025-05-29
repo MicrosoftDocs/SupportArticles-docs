@@ -12,7 +12,7 @@ ms.reviewer: gregmans; zebamehdi
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 10/25/2022
+ms.date: 05/09/2025
 ---
 # Scenario: Office Uninstall
 
@@ -20,7 +20,7 @@ The Office Uninstall scenario removes any version of Office from a device. This 
 
 In the full version of Microsoft Support and Recovery Assistant, the equivalent entry point for this scenario is *Office & Office Apps \ I have Office installed, but I'm having trouble uninstalling it*.
 
-**Note:** This scenario requires that you use an elevated Command Prompt window. To do this, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
+**Note:** This scenario requires that you use an elevated Command Prompt window. To do so, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
 ## Download the Enterprise version of the Assistant
 
@@ -39,7 +39,7 @@ The following switches are available for this scenario. They aren't case-sensiti
 |---|---|---|
 |`-S <scenarioname>`|Specify this switch and `OfficeScrubScenario` as the value for the `scenarioname` parameter to run this scenario.|Required|
 |`-AcceptEula`|Specify this switch to accept the End User License Agreement (EULA) and to run this scenario.|Required|
-|`-OfficeVersion`|Specify this switch to remove the Office version that's defined in the `<version>` parameter. The allowed values for the `<version>` parameter are All, M365, 2021, 2019, 2016, 2013, 2010, and 2007.|Optional|
+|`-OfficeVersion`|Specify this switch to remove the Office version that's defined in the `<version>` parameter. The allowed values for the `<version>` parameter are All, `M365`, 2021, 2019, 2016, 2013, 2010, and 2007.|Optional|
 
 ## Sample commands
 
@@ -79,7 +79,7 @@ Here are some sample combinations of switches to run this scenario.
 
 ## Detected conditions and results
 
-When you run the Office Uninstall scenario by using the Enterprise version of the Assistant, you don't receive any prompts. This is a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition that's encountered by this scenario, and the corresponding output that's displayed.
+When you run the Office Uninstall scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition that's encountered by this scenario, and the corresponding output it displays.
 
 |Condition|Action taken by the Enterprise version|Output shown in the Command Prompt window|
 |---|---|---|

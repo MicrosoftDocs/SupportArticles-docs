@@ -15,7 +15,7 @@ appliesto:
   - Project Professional 2010
   - Microsoft Office Project Professional 2003
   - Microsoft Office Project Standard 2003
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 
 # How to print a Gantt Chart view without table information
