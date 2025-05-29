@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot high Memory Usage issues in Linux
-description: Troubleshoot Memory performance issues on Linux virtual machines in Azure.
+title: Troubleshoot High Memory Usage Issues in Linux
+description: Troubleshoot memory performance issues on Linux virtual machines in Azure.
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance, linux-related-content
 ms.topic: troubleshooting
@@ -9,21 +9,21 @@ author: malachma
 ms.author: malachma
 ms.date: 05/06/2025
 ---
-# Troubleshoot Memory performance issues in Linux
+# Troubleshoot memory performance issues in Linux
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-This article describes how to troubleshoot Memory performance issues on Linux virtual machines in Azure. 
+This article discusses how to troubleshoot memory performance issues that occur on Linux virtual machines (VMs) in Microsoft Azure. 
 
-When you work on a memory related issues, the first step is to understand how memory is being used by the applications hosted on the system. This includes analyzing their workload patterns and verifying whether the system is configured appropriately. This helps to determine if the available memory on the system is sufficient. Then you may need to consider scaling the virtual machine (VM), or choosing between a NUMA (Non-Uniform Memory Access) and UMA (Uniform Memory Access) architecture. Also it's worth to think about whether the application performance would benefit from Transparent Huge Pages (THP). The best approach is to collaborate with the application vendor to understand the recommended memory requirements.
+The first step to working on memory-related issues is to understand how memory is used by the applications that are hosted on the system. You can begin by analyzing workload patterns and determining whether the system is configured correctly. This step helps you to evaluate the appropriate level of available memory on the system. Next, you might have to consider scaling the VM or choosing between a NUMA (Non-Uniform Memory Access) and UMA (Uniform Memory Access) architecture. Also, it's worthwhile to consider whether the application performance would benefit from Transparent Huge Pages (THP). The best approach is to collaborate with the application vendor to understand the recommended memory requirements.
 
-## Key areas impacted by memory
+## Key areas affected by memory
 
-- **Process Memory Allocation** - Memory is a resource which every process including the kernel does require. The amount of memory needed depends on the process's design and purpose. Memory is usually assigned to either the stack or the heap. For example, in-memory databases like SAP HANA rely heavily on memory to store and process data efficiently.
+- **Process Memory Allocation** - Memory is a necessary resource for every process, including the kernel. The amount of memory that's required depends on the process design and purpose. Memory is usually assigned to either the stack or the heap. For example, in-memory databases such as SAP HANA rely heavily on memory to store and process data efficiently.
 
-- **Page Cache Usage** - Memory can also indirectly be consumed via an increase of the page cache. The page cache is an in memory representation of a file which is read from a disk before. It helps avoid repeated disk reads. The best example is a file server which does benefit from this underlying kernel functionality.
+- **Page Cache Usage** - Memory can also be consumed indirectly through an increase of the page cache. The page cache is an in-memory representation of a file that was previously read from a disk. This cache helps avoid repeated disk reads. The best example of this process is a file server that benefits from this underlying kernel functionality.
 
-- **Memory Architecture** - It's important to be aware of what application or applications are running on the same virtual machine (VM), and whether they might compete for the available memory. You might also need to check if the VM is configured with Non-Uniform Memory Access (NUMA) or Uniform Memory Access (UMA) architecture. Depending on the memory requirements of a process, it might be to prefer an UMA architecture. Where the complete RAM can be address without a penalty, on the other hand, for HPC with many small processes or processes fitting in one of the NUMA-Nodes you can benefit from the CPU cache-locality. 
+- **Memory Architecture** - It's important to know which application or applications are running on the same VM, and whether they might compete for the available memory. You might also have to check whether the VM is configured by using Non-Uniform Memory Access (NUMA) or Uniform Memory Access (UMA) architecture. Depending on the memory requirements of a process, it might be to prefer an UMA architecture. Where the complete RAM can be address without a penalty, on the other hand, for HPC with many small processes or processes fitting in one of the NUMA-Nodes you can benefit from the CPU cache-locality. 
 
 - **Memory Overcommitment** - Another point to keep in mind is whether the kernel allows memory overcommitment. Depending on its configuration, every memory request is fulfilled. Or it's denied if the amount of memory requested isn't available.
 
