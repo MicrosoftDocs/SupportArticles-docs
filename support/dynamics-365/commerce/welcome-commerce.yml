@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-commerce
   author: bstorie
   ms.author: brstor
-  ms.date: 04/30/2025
+  ms.date: 05/26/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -45,8 +45,6 @@ landingContent:
         links:
           - text: Items without inventory can be checked out
             url: ecommerce-storefront/items-without-inventory-checked-out.md
-          - text: Pick this up option doesn't appear on cart or product details pages
-            url: ecommerce-storefront/pickup-store-link-missing.md
           - text: Retail store doesn't appear in the list of stores to pick up from
             url: ecommerce-storefront/pickup-store-missing.md
           - text: Restrict access to a storefront during testing or development
@@ -61,8 +59,6 @@ landingContent:
         links:
           - text: Fix common statement posting issues by editing transactions
             url: financial-statements/fix-common-posting-issues.md
-          - text: Issues with the data reconciliation of a Z report
-            url: financial-statements/z-report-issues.md
           - text: Statement posting errors due to unavailable inventory or update conflicts
             url: financial-statements/inventory-errors-posting.md
 
@@ -85,8 +81,6 @@ landingContent:
             url: order-management/payment-type-credit-card-error.md 
           - text: Taxes on online orders are incorrectly calculated
             url: order-management/tax-miscalculated-online-order.md 
-          - text: Troubleshoot issues with the online store transaction creation process
-            url: order-management/online-order-transaction-creation-failures.md
 
   # Card
   - title: Payments
@@ -95,14 +89,10 @@ landingContent:
         links:
           - text: A card payment fails due to an unsupported card type
             url: payments/card-payments-fail-with-unsupported-card-type.md
-          - text: Credit card entry page shows an error at checkout
-            url: payments/credit-card-entry-form-error.md
           - text: Payments are automatically settled before orders are invoiced or shipped
             url: payments/payments-auto-settled.md 
           - text: Refund on a return order is declined
             url: payments/refund-declined.md                   
-          - text: Refundable charges are miscalculated based on returned quantity
-            url: payments/refund-miscalculated-partial-return.md
           - text: Save for my next payment option doesn't appear
             url: payments/next-payment-link-not-appearing.md                   
           - text: Troubleshoot Dynamics 365 Payment Connector for Adyen issues
@@ -117,17 +107,3 @@ landingContent:
             url: point-of-sale/store-commerce-app-pos-deactivated.md
           - text: Troubleshoot Store Commerce extension issues
             url: point-of-sale/store-commerce-extensions.md
-          - text: Troubleshoot Store Commerce performance issues
-            url: point-of-sale/store-commerce-performance.md
-          - text: Troubleshoot Store Commerce setup and installation issues
-            url: point-of-sale/store-commerce-setup-installation.md
-          - text: Troubleshoot Store Commerce sign-in issues
-            url: point-of-sale/store-commerce-sign-in.md
-
- # Card
-  - title: Pricing, discounts, and taxes
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Price change tracking issues
-            url: pricing-discounts-taxes/price-track-issues.md

@@ -342,6 +342,7 @@ items:
     - name: Use Event1644Reader.ps1 to analyze LDAP query performance
       href: ./active-directory/event1644reader-analyze-ldap-query-performance.md
   - name: Domain join issues
+  # Any changes to "Domain join issues" node need to be sync to "support/windows-client/toc.yml" > "Active Directory/Domain join issues"
     items:
     - name: 'Troubleshooting guidance: Active Directory domain join'
       href: ./active-directory/active-directory-domain-join-troubleshooting-guidance.md
@@ -381,8 +382,10 @@ items:
       href: ./active-directory/support-for-active-directory-over-nat.md
     - name: '"The account is not authorized to login from this station" error'
       href: ./active-directory/account-not-authorized-login-from-this-station.md
-    - name: Troubleshoot errors when joining computers to a domain
-      href: ./active-directory/troubleshoot-errors-join-computer-to-domain.md
+    - name: Troubleshoot authentication errors when joining computers to a domain
+      href: ./active-directory/domain-join-authentication-errors.md
+    - name: Troubleshoot networking errors when joining computers to a domain
+      href: ./active-directory/domain-join-networking-errors.md
   - name: LDAP configuration and interoperability
     items:
     - name: Enable LDAP over SSL
@@ -2957,6 +2960,8 @@ items:
       href: user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Troubleshoot domain controller location issues
       href: windows-security/troubleshoot-domain-controller-location-issues.md
+    - name: Troubleshoot Netlogon service startup failures
+      href: windows-security/troubleshoot-netlogon-service-startup-failures.md
     - name: 'Troubleshooting guidance: Secure channel'
       href: ./windows-security/broken-trust-relationship-domain-joined-device-its-domain-secure-channel-issues.md
     - name: Gather information for secure channel issues
@@ -3085,6 +3090,8 @@ items:
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
     - name: Troubleshoot Windows Update error 0x80070490
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
+    - name: Error 0x8007000d after installing Windows updates
+      href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
     - name: Error 0x800705aa when Windows Update fails
       href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
     - name: Error 0x800f0831 when installing Windows updates
@@ -3093,8 +3100,6 @@ items:
       href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
     - name: Error C0190003 after installing updates
       href: ./installing-updates-features-roles/error-c0190003-install-updates-restart-computer.md
-    - name: ERROR_INVALID_DATA error after installing Windows updates
-      href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
     - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
       href: ./installing-updates-features-roles/failed-changed-absent-state-status-0x800f0922-error.md
     - name: Fail to install Network Policy Server role
@@ -3151,7 +3156,7 @@ items:
       href: ./support-tools/scripts-retrieve-profile-age-delete-aged-copies.md
     - name: Scripts to view the certificate information in the msDS-KeyCredentialLink attribute
       href: ./support-tools/script-to-view-msds-keycredentiallink-attribute-value.md
-    - name: 'Scripts to check and clean up the AGPM archive'
+    - name: Scripts to check and clean up the AGPM archive
       href: support-tools/scripts-check-and-cleanup-the-agpm-archive.md
   - name: TroubleShootingScript toolset (TSS)
     items:

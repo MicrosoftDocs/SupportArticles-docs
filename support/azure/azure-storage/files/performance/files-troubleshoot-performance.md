@@ -3,7 +3,7 @@ title: Azure Files performance troubleshooting guide
 description: Troubleshoot performance issues with Azure file shares and discover potential causes and associated workarounds for these problems.
 ms.service: azure-file-storage
 ms.custom: sap:Performance, linux-related-content
-ms.date: 01/23/2025
+ms.date: 05/21/2025
 ms.reviewer: kendownie, v-weizhu
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
 ---
@@ -120,7 +120,7 @@ If you're using a premium file share, increase the provisioned file share size t
 
 If the majority of your requests are metadata-centric (such as `createfile`, `openfile`, `closefile`, `queryinfo`, or `querydirectory`), the latency will be worse than that of read/write operations.
 
-To determine whether most of your requests are metadata-centric, start by following steps 1-4 as previously outlined in Cause 1. For step 5, instead of adding a filter for **Response type**, add a property filter for **API name**.
+To determine whether most of your requests are metadata-centric, start by following steps 1-4 as previously outlined in Cause 1. For step 5, instead of adding a filter for **Response type**, add a property filter for **API name**. For more information, see [Monitor utilization by metadata IOPS](/azure/storage/files/analyze-files-metrics?tabs=azure-portal#monitor-utilization-by-metadata-iops).
 
 :::image type="content" source="media/files-troubleshoot-performance/metadata-metrics.png" alt-text="Screenshot that shows the 'API name' property filter.":::
 

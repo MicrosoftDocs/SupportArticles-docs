@@ -1,7 +1,7 @@
 ---
 title: Identify resources created by Azure Batch
 description: This article provides resources to help you identify the Azure Batch account and pool associated with a specific network-related resource in the Azure Subscription.
-ms.date: 02/21/2024
+ms.date: 05/23/2025
 author: genlin
 ms.author: cabermu
 ms.service: azure-batch

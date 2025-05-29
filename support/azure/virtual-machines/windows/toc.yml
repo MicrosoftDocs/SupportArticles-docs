@@ -320,14 +320,20 @@
       href: boot-error-0xc0000221.md
     - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
       href: windows-boot-failure.md
-    - name: Azure VM login hangs at "Applying Group Policy Environment"
+    - name: Azure VM startup hangs at "Applying Group Policy Environment"
       href: applying-group-policy-environment-policy.md
-    - name: Azure VM Startup hangs at "Applying Group Policy Scheduled Tasks policy"
+    - name: Azure VM startup hangs at "Applying Group Policy Scheduled Tasks policy"
       href: applying-group-policy-scheduled-tasks-policy.md
     - name: Azure VM startup hangs at "Applying Group Policy Power Options policy"
       href: applying-group-policy-power-options.md
     - name: Azure VM startup hangs at "Applying Group Policy Registry policy"
       href: applying-group-policy-registry-policy.md
+    - name: Azure VM startup hangs at "Applying Group Policy Services policy"
+      href: applying-group-policy-services-policy.md
+    - name: Azure VM startup hangs at "Applying Group Policy Shortcuts policy"
+      href: applying-group-policy-shortcuts-policy.md
+    - name: Azure VM startup hangs at "Applying Software Installation policy"
+      href: applying-software-installation-policy.md
     - name: Troubleshoot Windows VM OS with missing boot manager
       href: os-bootmgr-missing.md
     - name: OS isn't found
@@ -342,6 +348,8 @@
       href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
     - name: Azure VM cannot RDP - working on features
       href: azure-vm-cannot-rdp-working-features.md
+    - name: Azure VM startup hangs at "Please wait for the Group Policy Client"
+      href: please-wait-for-the-group-policy-client.md
 
 - name: Cannot start or stop my VM
   items:

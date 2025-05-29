@@ -49,24 +49,30 @@
   items:
   - name: Developing or registering apps
     items:
-      - name: Cookies are disabled error in MSAL.Net XBAP application
-        href: app-integration/script-errors-running-msal-net-xbap-app.md
-      - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
-        href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
+      - name: 401 Unauthorized errors in ASP.NET Core Web API
+        href: app-integration/401-unauthorized-aspnet-core-web-api.md
+      - name: Applications using TLS 1.0/1.1 fail to authenticate
+        href: app-integration/application-using-tls-1dot0-1dot1-authentication-fail.md
       - name: Authentication fails after Android app is published to Google Play Store
         href: app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
-      - name: WIF10201 No valid key mapping found
-        href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
-      - name: Package Inspector for MSAL Android Native
-        href: app-integration/package-inspector-msal-android-native.md
+      - name: Cookies are disabled error in MSAL.Net XBAP application
+        href: app-integration/script-errors-running-msal-net-xbap-app.md
       - name: Enable MSAL4J logging in a Spring Boot web application
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
-      - name: Repeated login prompts in iOS MSAL implementation
-        href: app-integration/repeat-login-prompts-in-msal-ios-app.md
       - name: Error AADSTS7000218 - Invalid client
         href: app-integration/confidential-client-application-authentication-error-aadsts7000218.md
+      - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
+        href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
       - name: Infinite sign-in loop issue with ASP.NET applications
         href: app-integration/asp-dot-net-application-infinite-sign-in-loop.md
+      - name: Package Inspector for MSAL Android Native
+        href: app-integration/package-inspector-msal-android-native.md
+      - name: Repeated login prompts in iOS MSAL implementation
+        href: app-integration/repeat-login-prompts-in-msal-ios-app.md
+      - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
+        href: app-integration/serilog-protected-web-api-authentication-authorization-errors.md
+      - name: WIF10201 No valid key mapping found
+        href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
 
   - name: Troubleshoot adding apps
     href: app-integration/troubleshoot-adding-apps.md
@@ -108,6 +114,8 @@
         href: app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md
       - name: Error AADSTS50105 - user not assigned a role
         href: app-integration/error-code-AADSTS50105-user-not-assigned-role.md
+      - name: Error AADSTS50107 - Guest invitation redemption fails
+        href: app-integration/error-aadsts50107-guest-redemption-fails.md
       - name: Error AADSTS650056 - misconfigured app
         href: app-integration/error-code-AADSTS650056-misconfigured-app.md
       - name: Error AADSTS70001 - app not found in directory
@@ -136,6 +144,8 @@
         href: app-integration/reply-url-redirected-to-localhost.md
       - name: Nonce is null error in ASP.NET MVC with OpenID Connect
         href: app-integration/troubleshoot-validation-context-nonce-null-mvc.md
+      - name: Your browser is not supported or up-to-date error in MSAL app
+        href: app-integration/update-your-browser-error-when-using-apps-adal-msal.md
   - name: Troubleshoot app registrations
     items: 
       - name: Application and delegated permissions for access tokens
@@ -261,8 +271,6 @@
       href: mfa/text-voice-call-verification-code-mfa-not-send.md
   - name: Passwords
     items:
-    - name: Authorization_RequestDenied error when changing password
-      href: mfa/authorization-request-denied-graph-api.md
     - name: Can't verify account when resetting password
       href: user-prov-sync/could-not-verify-account-reset-pwd.md
     - name: Federated user is forced to sign in
@@ -305,7 +313,9 @@
         href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
       - name: NoPermissionsInAccessToken when calling me endpoint
         href: users-groups-entra-apis/error-call-me-endpoint-microsoft-graph.md
-      - name: Tenant doesn't have premium license error when query sign-in activities
+      - name: HTTP 403 authorization error when calling Microsoft Graph Security API
+        href: users-groups-entra-apis/403-error-when-calling-microsoft-graph-security-api.md
+      - name: Premium license error when querying sign-in activities
         href: users-groups-entra-apis/b2c-or-tenant-premium-license-sign-in-activities.md
    - name: Problem with using the Graph SDK - libraries
      items:

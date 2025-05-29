@@ -91,7 +91,6 @@ This issue occurs with VMs that are deployed with an uninitialized temporary dri
 |[Dldsv6](/azure/virtual-machines/sizes/general-purpose/dldsv6-series#sizes-in-series)|[Daldsv6](/azure/virtual-machines/sizes/general-purpose/daldsv6-series#sizes-in-series)|
 |[Ddsv6](/azure/virtual-machines/sizes/general-purpose/ddsv6-series#sizes-in-series)|[Dadsv6](/azure/virtual-machines/sizes/general-purpose/dadsv6-series#sizes-in-series)|
 |[Edsv6](/azure/virtual-machines/sizes/memory-optimized/edsv6-series#sizes-in-series)|[Eadsv6](/azure/virtual-machines/sizes/memory-optimized/eadsv6-series#sizes-in-series)|
-|[Edsv6](/azure/virtual-machines/sizes/memory-optimized/edsv6-series#sizes-in-series)||
 |[Lsv3](/azure/virtual-machines/sizes/storage-optimized/lsv3-series#sizes-in-series) - All Azure VMs||
 |[Fxmdsv2](/azure/virtual-machines/sizes/compute-optimized/fxmdsv2-series#sizes-in-series)||
 
