@@ -14,7 +14,7 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Outlook
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 05/29/2025
 ---
 # How to deploy Microsoft Support and Recovery Assistant  using Microsoft Intune
 
