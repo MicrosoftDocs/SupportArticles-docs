@@ -19,9 +19,9 @@ When you work on a memory related issues, the first step is to understand how me
 
 ## Key areas impacted by memory
 
-- **Process Memory Allocation** - Memory is a resource which every proces including the kernel does require. The amount of memory needed depends on the process's design and purpose. Memory is usually assigned to either the stack or the heap. For example, in-memory databases like SAP HANA rely heavily on memory to store and process data efficiently.
+- **Process Memory Allocation** - Memory is a resource which every process including the kernel does require. The amount of memory needed depends on the process's design and purpose. Memory is usually assigned to either the stack or the heap. For example, in-memory databases like SAP HANA rely heavily on memory to store and process data efficiently.
 
-- **Page Cache Usage** - Memory can also indirectly be consumed via an increase of the page cache. The page cache is an in memory representation of a file which is read from a disk before. It heples avoid repeated disk reads. The best example is a file server which does benefit from this underlying kernel functionality.
+- **Page Cache Usage** - Memory can also indirectly be consumed via an increase of the page cache. The page cache is an in memory representation of a file which is read from a disk before. It helps avoid repeated disk reads. The best example is a file server which does benefit from this underlying kernel functionality.
 
 - **Memory Architecture** - It's important to be aware of what application or applications are running on the same virtual machine (VM), and whether they might compete for the available memory. You might also need to check if the VM is configured with Non-Uniform Memory Access (NUMA) or Uniform Memory Access (UMA) architecture. Depending on the memory requirements of a process, it might be to prefer an UMA architecture. Where the complete RAM can be address without a penalty, on the other hand, for HPC with many small processes or processes fitting in one of the NUMA-Nodes you can benefit from the CPU cache-locality. 
 
@@ -54,7 +54,7 @@ Another useful metric is `majflt/s` (The number of major page faults per second)
 **Sample vmstat output**
 ![Sample vmstat output](media/troubleshoot-performance-memory-linux/vmstat.png)
 
-In this sample case, you may observe a high number of memory pages being read from or written to swap. These high numbers typically indicates that the system is running low on available memory.The cause could be multiple processes competing for memory or available memory cannot be used by most applications. One common reason for unavailable memory is the use of HugePages. HugePages are reserved memory. Only applications capable of utilizing HugePages can use this type of memory. For any other process, this memory isn't useable. In situations, you may need to evaluate whether HugePages are truly required for your applications. whether you require HugePages for your applications or whether they can also work with Transparent Huge Pages (THP). Alternatively, consider using Transparent Huge Pages (THP) which allow the kernel to manage large memory pages dynamically. For example, the Java Virtual Machine (JVM) can take advantage of THP by enabling the flag:
+In this sample case, you may observe a high number of memory pages being read from or written to swap. These high numbers typically indicates that the system is running low on available memory. The cause could be multiple processes competing for memory or available memory cannot be used by most applications. One common reason for unavailable memory is the use of HugePages. HugePages are reserved memory. Only applications capable of utilizing HugePages can use this type of memory. For any other process, this memory isn't useable. In situations, you may need to evaluate whether HugePages are truly required for your applications. whether you require HugePages for your applications or whether they can also work with Transparent Huge Pages (THP). Alternatively, consider using Transparent Huge Pages (THP) which allow the kernel to manage large memory pages dynamically. For example, the Java Virtual Machine (JVM) can take advantage of THP by enabling the flag:
 `-XX:+UseTransparentHugePages`. For more details about THP, see [Transparent HugePage Support](https://docs.kernel.org/admin-guide/mm/transhuge.html)
 For information about HugePages, see [HugeTLB Pages](https://docs.kernel.org/admin-guide/mm/hugetlbpage.html)
 
@@ -124,7 +124,7 @@ For more information, see [Transparent Hugepage Support](https://www.kernel.org/
 
 ### NUMA
 
-When the applicaitons are running on a NUMA (Non-Uniform Memory Access) system with multiple nodes, it's important to know how much memory is available on each node. Although all nodes can access the system's total memory, performance is typically best when a process uses memory that resides on the same NUMA node as the CPU executing it.
+When the applications are running on a NUMA (Non-Uniform Memory Access) system with multiple nodes, it's important to know how much memory is available on each node. Although all nodes can access the system's total memory, performance is typically best when a process uses memory that resides on the same NUMA node as the CPU executing it.
 
 If a memory request cannot be fulfilled by the local node, the system allocates memory from another node. However, accessing memory across nodes introduces latency and can lead to performance penalties.
 
@@ -157,7 +157,7 @@ If it’s confirmed that the issue is related to memory allocation, it could ind
 
 #### System logs generated during OOM Events
 
-The following section intruduces how to identify when the OOM Killer is triggered and what information is logged by the system.
+The following section introduces how to identify when the OOM Killer is triggered and what information is logged by the system.
 
 The following simple C program tests how much memory can be allocated dynamically on a system before it fails.
 
@@ -203,7 +203,7 @@ No swap space
 3829648 kBytes are in use
 ```
 
-In the following log, the malloc process requested a single 4 KB page (order=0). Although 4 KB page is a samll size, the system was already under pressure. The log shows that memory was being allocated from the "Normal Zone":
+In the following log, the malloc process requested a single 4 KB page (order=0). Although 4 KB page is a small size, the system was already under pressure. The log shows that memory was being allocated from the "Normal Zone":
 ![lowmem reserv](media/troubleshoot-performance-memory-linux/lowmem-reserve.png)
 
 The available memory (`free`) is 29,500 KB , but the minimum watermark (`min`) was 34,628 KB. Since the system was below this threshold, only the kernel could use the remaining memory， and user-space applications were denied. That’s when the OOM killer is involved. It selects the process with the highest `oom_score` and memory usage ('RSS'). In this example, the malloc process had an `oom_score` of 0 but the highest `RSS` (917760), so it's selected as the target for termination.
@@ -211,23 +211,28 @@ The available memory (`free`) is 29,500 KB , but the minimum watermark (`min`) w
 
 ### Monitor gradual memory growth
 
-OOM events are easy to detect since related messages are logged to the console or system logs. But what about gradual increases in memory usage that don't turn into an OOM. 
+OOM events are easy to detect since related messages are logged to the console and system logs. However, gradual increases in memory usage that don’t result in an OOM event can be harder to detect.
 
-What can be used to make the administrator aware of it?
+To monitor memory usage over time, use the `sar` tool from the `sysstat` package. To focus on the memory details, use the option 'r' such as 'sar -r'. 
 
-A good tool to see how the memory does grow over a period of time is the 'sar' tool from the sysstat package. To focus on the memory details only, use the option 'r' --> 'sar -r'
-Look at this example
+Example output:
+
 ![sar memory information](media/troubleshoot-performance-memory-linux/sar-info.png)
 
-Here we see that memory usage does grow for about 2h. After, it suddenly returns to just 4% of memory utilization. It could be a normal application behavior and it should be investigated over some days when those spikes do occur. Maybe in the morning many users sign in to a specific application. Or there's a cron job running at this time per day or week. Another reason could be a reporting engine which requires much resources when reports are scheduled. In short, memory utilization isn't a bad thing by itself, instead it depends on the application or the applications running on this VM. Without this knowledge, it isn't possible to do a proper RCA in order to explain a high memory consumption.
+In this case, memory usage does grow for about two hours. Then, it drops back to 4%. This behavior might be expected such as during peak login hours or resource-intensive reporting tasks. To determine whether this is normal, you may need to monitor usage over several days and correlate it with application activity. High memory usage is not necessarily a problem. It depends on the workload and how the applications are designed to use memory.
 
-If we would like to find out more about which process is responsible eating up all your available memory the 'pidstat' tool could be of help.
+To find which processes are consuming the most memory, use `pidstat`. 
+
+Example output:
+
 ![pidstat output](media/troubleshoot-performance-memory-linux/pidstat-memory.png)
 
-It prints all running processes and their statistics. Another approach is to use the 'ps' tool to get similar  `ps aux --sort=-rss | head -n 10`
+It displays all running processes and their statistics. Another approach is to use the 'ps' tool to get similar  `ps aux --sort=-rss | head -n 10`
+
+Example output:
 ![ps aux output](media/troubleshoot-performance-memory-linux/ps-aux.png)
 
-Why do we sort on rss? RSS stands for 'Resident Set Size' the nonswapped physical memory that a task does use. VSZ is the 'Virtual Set Size' which contains the amount of memory the process reserved but not committed. Committed means that a page is written to the physical memory. So if we're interested which of the processes are occupying most of the available memory (physical + swap) we have to have a look at the RSS size of a process. In the screenshot above it looks like that 'snapd' does occupy much memory, though if we look at the RSS column we see that the process isn't that significant. On the other hand, there's a process named 'malloc' which has the same size of VSZ and RSS. So this one is indeed utilizing over 1.3G of memory. 
+#### Why sort by RSS?
 
-
+Resident Set Size (RSS) is the portion of a process’s memory held in RAM (non-swapped physical memory). In contrast,  Virtual Set Size （VSZ） is the 'Virtual Set Size' represents the total amount of memory the process has reserved, including memory that hasn’t been committed. `Committed memory` refers to pages that are actually written to physical memory. If you're trying to identify which processes are using the most physical memory (including swap), focus on the `RSS` column. In the example output, the `snapd` process appears to use a lot of memory, but its `RSS` value is low. The `malloc` process has similar `VSZ` and `RSS` values that indicate it’s actively using over 1.3 GB of memory.
 
