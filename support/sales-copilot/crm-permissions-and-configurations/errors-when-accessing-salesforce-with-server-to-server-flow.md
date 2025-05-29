@@ -1,13 +1,13 @@
 ---
 title: Errors When Accessing Salesforce with Server-to-Server Flow
 description: Troubleshoot and resolve errors that occur when accessing Salesforce with server-to-server flow or during setup in Microsoft Copilot for Sales.
-ms.date: 05/28/2025
+ms.date: 05/29/2025
 author: sbmjais
 ms.author: shjais
 ms.reviewer: marrabi
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-# Errors that occur when accessing Salesforce that uses a server-to-server flow
+# Errors that occur when accessing Salesforce with server-to-server flow
 
 This article helps you troubleshoot and resolve errors that might occur when a user tries to access Salesforce with a server-to-server flow or when an administrator sets up the server-to-server flow for Salesforce in Microsoft Copilot for Sales.
 
