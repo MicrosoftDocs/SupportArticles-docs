@@ -57,11 +57,11 @@ Follow these steps in the user's new profile:
 
 1. Note the name of a Favorites folder that is visible. If none are visible, add a folder to Favorites to create a visible folder.
 
-2. Note the names of all folders that don't appear in the Favorites list.
+2. Note the names of all Favorites folders that don't appear in the Favorites list.
 
 3. [Open the associated contents table in MFCMAPI](#open-the-associated-contents-table-in-mfcmapi).
 
-4. For the folder that does appear in the Favorites list:
+4. For the Favorites folder that does appear in the Favorites list:
    
    1. [Open the PR_WLINK_STORE_ENTRYID editor for the folder](#open-the-pr_wlink_store_entryid-editor-for-a-folder).
    
@@ -69,7 +69,7 @@ Follow these steps in the user's new profile:
 
    3. Select **Cancel** to close the editor, and then close the Properties window for the folder.
 
-5. For each folder that doesn't appear in the Favorites list, perform the following steps:
+5. For each Favorites folder that doesn't appear in the Favorites list, perform the following steps:
 
    1. [Open the PR_WLINK_STORE_ENTRYID editor for the folder](#open-the-pr_wlink_store_entryid-editor-for-a-folder).
 
