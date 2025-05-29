@@ -1,9 +1,9 @@
 ---
-title: Handle data file upload warnings and errors in Viva Glint
+title: Handle Data File Upload Warnings and Errors in Viva Glint
 description: Overview of how to handle data file upload warnings and errors in Viva Glint. 
 manager: dcscontentpm
 ms.reviewer: aweixelman
-ms.date: 10/28/2024
+ms.date: 05/22/2025
 audience: ITPro
 ms.topic: troubleshooting
 search.appverid: MET150
@@ -14,17 +14,19 @@ ms.custom:
 
 # Handle data file upload warnings and errors in Viva Glint
 
-To upload your employee data to Viva Glint, you can use one of the following methods:
+To upload your employee data to Viva Glint, use one of the following methods:
 
 - [Import the data from the People page](/viva/glint/setup/upload-employee-attributes)
 - [Import the data through Secure File Transfer Protocol (SFTP)](/viva/glint/setup/sftp-data-automation)
 
- During the file upload process, you might experience the following kinds of issues:
+After the file upload process is completed, you might receive error or warning messages. Errors or warnings can occur at the file level or the line level.
 
-- **Warnings**: These issues affect only specific rows or columns of data. The rest of the file can be processed successfully.
-- **Errors**: These issues prevent the entire file from being uploaded.
+- **File level:** File level issues relate to data across all records in your file or the file itself.
+- **Line level:** Line level issues relate to rows of data in your file. The message might provide line numbers to indicate where the issue exists or it might describe conditions where you can find affected rows.
+- **Warnings:** Warnings are informational and might require your attention to determine whether corrections are necessary. These records are uploaded to Viva Glint but don't pass validation or might not function as expected because of invalid data.
+- **Errors:** Errors are issues that prevent data from being uploaded to Viva Glint. A file-level error prevents the entire file from being uploaded, and a line-level error prevents only specific lines from being uploaded.
 
-**Note**: Whenever an error occurs during a file upload, the process fails and stops. If the file is affected by additional issues, those issues won't appear until the existing error is fixed. Therefore, you might experience further warnings or errors after you fix an error and re-upload the data file.
+**Note**: A file-level error means that the upload process failed and stopped. If the file is affected by more issues, those issues don't appear until the existing file-level error is fixed. You might experience further warnings or errors after you fix an error and reupload the data file.
 
 For more information about these issues and how to resolve them, see the following articles:
 
@@ -39,11 +41,11 @@ If you still can't resolve the issues, [contact Microsoft Support](../contact-su
 
 ## Email notification
 
-When warnings or errors occur during file uploads, Viva Glint admins are notified by email.
+When warnings or errors occur during SFTP file uploads, Viva Glint users are notified by email. To manage users that receive notifications, see [Manage SFTP settings](/viva/glint/setup/sftp-data-automation#manage-sftp-settings).
 
 ### Upload from the People page
 
-If the data file is uploaded from the **People** page in Viva Glint, admins receive an email message that summarizes data changes and errors when the upload is ready for review and confirmation. To download an error list, open the **People** page, and then select **Review Upload** > **download errors**.
+If the data file is uploaded from the **People** page in Viva Glint, users receive an email message that summarizes data changes and errors when the upload is ready for review and confirmation. To download an error list, open the **People** page, and then select **Review Upload** > **download errors**.
 
 ### Upload through SFTP
 
@@ -61,6 +63,6 @@ The following table lists possible status values for SFTP file uploads, indicate
 
 ## Activity Audit Log
 
-Viva Glint admins can use the [Activity Audit Log](/viva/glint/setup/activity-audit-log) to download a complete list of errors and warnings for data upload failures and review other data import activities.
+Viva Glint admins can use the [Activity Audit Log](/viva/glint/setup/activity-audit-log) to download a complete list of errors and warnings for data upload failures, and review other data import activities.
 
 **Note**: The downloadable error files in the Active Audit Log contain a maximum of 1,000 rows per error category. For example, if there are more than 1,000 warnings for DUPLICATED_EMAIL, only the first 1,000 warnings are included in the file.

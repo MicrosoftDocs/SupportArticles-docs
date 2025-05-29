@@ -14,7 +14,7 @@ appliesto:
   - Access 2016
   - Access 2013
   - Access 2010
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 
 # "Database you are trying to open requires a newer version of Microsoft Access" error in Access

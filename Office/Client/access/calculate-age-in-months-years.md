@@ -16,7 +16,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # How to create two functions to calculate age in months and in years in Access

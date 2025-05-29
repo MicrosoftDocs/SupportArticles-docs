@@ -17,7 +17,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 
 # "The expression you entered has a function containing the wrong number of arguments" when you use CDec() function in an Access query

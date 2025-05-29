@@ -20,24 +20,22 @@ appliesto:
   - Microsoft Office Access 2003
   - Microsoft Office Access 2000
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 05/26/2025
 ---
 
 # How to loop through the references to view their properties in Microsoft Access
-
-_Original KB number:_ &nbsp; 209849
 
 ## Summary
 
 When you view the location of references with the References dialog box on the Tools menu, the trailing portion of the path name may be truncated because of the limitations of the dialog box. This article shows you how to use a Visual Basic for Applications procedure to loop through the References collection and retrieve the properties of each reference.
 
-Microsoft provides programming examples for illustration only, without warranty either expressed or implied. This includes, but is not limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you are familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they will not modify these examples to provide added functionality or construct procedures to meet your specific requirements.
+Microsoft provides programming examples for illustration only, without warranty either expressed or implied. It includes, but isn't limited to, the implied warranties of merchantability or fitness for a particular purpose. This article assumes that you're familiar with the programming language that is being demonstrated and with the tools that are used to create and to debug procedures. Microsoft support engineers can help explain the functionality of a particular procedure, but they won't modify these examples to provide added functionality or construct procedures to meet your specific requirements.
 
 ## More information
 
 To loop through the References collection and retrieve the properties of each reference, follow these steps:
 
-1. Create a module and type the following line in the **Declarations** section if it is not already there:
+1. Create a module and type the following line in the **Declarations** section if it isn't already there:
 
     ```vb
     Option Explicit
@@ -78,6 +76,6 @@ To loop through the References collection and retrieve the properties of each re
 
 ## References
 
-For more information about the References collection, in the Visual Basic Editor, click Microsoft Visual Basic Help on the Help menu, type reference object in the Office Assistant or the Answer Wizard, and then click Search to view the topic.
+For more information about the References collection, in the Visual Basic Editor, click Microsoft Visual Basic Help on the Help menu, type reference object in the Office Assistant or the Answer Wizard, and then select Search.
 
-For more information about enumerating through the References collection by using the For Each...Next statement, in the Visual Basic Editor, click **Microsoft Visual Basic Help** on the **Help** menu, type next in the Office Assistant or the Answer Wizard, and then click **Search** to view the topic.
+For more information about enumerating through the References collection by using the For Each...Next statement, in the Visual Basic Editor, click **Microsoft Visual Basic Help** on the **Help** menu, type next in the Office Assistant or the Answer Wizard, and then select **Search**.

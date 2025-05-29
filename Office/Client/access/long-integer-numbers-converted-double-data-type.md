@@ -19,7 +19,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 ms.reviewer: amyv
-ms.date: 06/06/2024
+ms.date: 05/26/2025
 ---
 # Access exports long integer numbers as double data type with decimal places in dBase IV (.dbf) format
 
