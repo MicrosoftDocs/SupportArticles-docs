@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot common certificate issues in RHUI
+title: Troubleshoot Common Certificate Issues in RHUI
 description: Troubleshoot common Red Hat Update Infrastructure certificate issues in Azure that are caused by expired or missing TLS or SSL certificates.
 author: msaenzbosupport
 ms.author: msaenzbo
@@ -30,7 +30,7 @@ This article discusses common issues in the Red Hat Update Infrastructure (RHUI)
 > - Starting on January 2020, the new Azure US Government images began using the public IP addresses that were mentioned previously under the Azure Global header.
 
 > [!NOTE]
-> Starting June 30, 2024, Red Hat Enterprise Linux 7 will reach the end of maintenance support 2 phase. The maintenance phase is followed by the Extended Life Phase. As Red Hat Enterprise Linux 7 transitions out of the Full/Maintenance Phases, upgrading to Red Hat Enterprise Linux 8 or 9. If customers must stay on Red Hat Enterprise Linux 7, it's recommended to add the Red Hat Enterprise Linux Extended Life Cycle Support (ELS) Add-On.
+> Starting June 30, 2024, RHEL 7 will reach the end of the Maintenance Support 2 phase. This maintenance phase is followed by the Extended Life phase. As RHEL 7 transitions out of the full maintenance phases, customers should upgrade to RHEL 8 or 9. If your organization must stay on RHEL 7, we recommended that you install the Red Hat Enterprise Linux Extended Life Cycle Support (ELS) Add-on.
 > For more information, see [Extended Life Cycle Support](/azure/virtual-machines/workloads/redhat/redhat-extended-lifecycle-support)
 
 
