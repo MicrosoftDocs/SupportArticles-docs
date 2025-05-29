@@ -12,7 +12,7 @@
       href: crm-permissions-and-configurations/update-settings-to-save-emails-error.md
     - name: Can't save email to CRM if enhanced email isn't enabled in Salesforce CRM
       href: crm-permissions-and-configurations/update-settings-in-saleforce-error.md
-    - name: Errors that occur when accessing Salesforce with server-to-server flow
+    - name: Errors when accessing Salesforce with server-to-server flow
       href: crm-permissions-and-configurations/errors-when-accessing-salesforce-with-server-to-server-flow.md
     - name: Errors when disabling Salesforce with server-to-server flow
       href: crm-permissions-and-configurations/errors-disabling-salesforce-server-to-server-flow.md
