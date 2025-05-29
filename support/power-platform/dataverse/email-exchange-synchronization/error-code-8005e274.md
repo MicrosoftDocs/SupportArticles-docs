@@ -8,11 +8,19 @@ ms.author: rahulmital
 ---
 # Error code 8005E274 when you test and enable mailbox
 
-This article provides a resolution for error code 8005E274 that occurs when you test and enable a mailbox for server-side synchronization in Microsoft Dataverse.
+This article provides a resolution for error code 8005E274 that occurs when you test and enable a mailbox for server-side synchronization in Microsoft Dataverse. 
+
+Additionally, you may see the following error information in the corresponding mailbox alert for the Test and Enable failure: 
+
+`Email Server Error Code: MailboxNotEnabledForRESTAPI`
 
 ## Symptoms
 
-When a user tries to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Microsoft Dataverse, the test fails with error code 8005E274.
+When a user tries to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Microsoft Dataverse, the test fails with error code 8005E274. 
+
+Additionally, you may see the following error information in the corresponding mailbox alert for the Test and Enable failure: 
+
+`Email Server Error Code: MailboxNotEnabledForRESTAPI`
 
 ## Cause
 
