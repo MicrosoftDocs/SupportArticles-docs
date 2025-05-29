@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appiesto: 
   - Sway
-ms.date: 03/31/2022
+ms.date: 05/29/2025
 ---
 
 # Microsoft 365 Sway tile continues to appear in App Launcher even after it's disabled

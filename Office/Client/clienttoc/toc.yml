@@ -169,10 +169,14 @@
           href: ../activation/account-doesnt-exist.md
         - name: Activation error Trusted Platform Module malfunctioned
           href: ../activation/tpm-malfunctioned.md
+        - name: Can't sign in to an Office 2016 for Mac app
+          href: ../activation/sign-in-to-office-2016-for-mac-fail.md
         - name: Can't sign in to Microsoft 365 desktop applications
           href: ../activation/cannot-sign-in-microsoft-365-desktop-apps.md
         - name: Can't verify the license for this product
           href: ../activation/license-issue-when-start-office-application.md
+        - name: Can't verify subscription
+          href: ../activation/subscription-issue-in-office-mobile.md
         - name: Connection issues when signing in Office 2016
           href: ../activation/connection-issue-when-sign-in-office-2016.md
         - name: Disabling ADAL or WAM not recommended for fixing Microsoft 365 sign-in or activation issues
@@ -211,6 +215,8 @@
           href: ../activation/subscription-expired.md
         - name: Microsoft 365 Apps activation usage report issues
           href: ../activation/activation-usage-report-issues.md
+        - name: Microsoft 365 users aren't automatically signed into Office
+          href: ../activation/office-365-users-not-signed-in-office.md  
         - name: Office for Mac activation An unknown error has occurred
           href: ../activation/mac-unknown-error.md
         - name: Sign in issues when activating Microsoft 365 Apps
@@ -401,6 +407,8 @@
           href: ../infopath/infopath-2013-crashes-when-connecting-to-access-database.md
     - name: Installation
       items:
+        - name: Automatic updating isn't enabled
+          href: ../installation/automatic-updates.md
         - name: Error 1935 when install Office 2010
           href: ../installation/error-1935-when-install-office-2010.md
         - name: Error code 30010-45 or 30088-26 installing Microsoft 365 Apps
@@ -419,6 +427,8 @@
           href: ../installation/install-and-activate-office-2013.md
         - name: Office setup issues
           href: ../installation/office-setup-issues.md
+        - name: Prioritize BITS for Office 2016 updates
+          href: ../installation/prioritize-bits-for-office-2016-updates.md
         - name: Use SaRA to collect data about Microsoft 365 Apps installations
           href: ../installation/use-sara-to-collect-install-info.md
     - name: Loop
@@ -447,6 +457,10 @@
           href: ../office-for-mac/excel-mac-error-application-quit-unexpectedly.md
         - name: wkresources files in Trash
           href: ../office-for-mac/wkresources-files-moved-to-trash.md
+    - name: Office Online Server
+      items:
+        - name: Web sites lose SSL certificate bindings
+          href: ../office-online-server/web-sites-lose-ssl-certificate-bindings.md
     - name: Office Suite Issues
       items:
         - name: "0x80004005: General Error Unable to Open Registry Key"
@@ -487,6 +501,10 @@
           href: ../office-suite-issues/compile-error-procedure-too-large.md
         - name: Complete repair of corrupted files isn't guaranteed
           href: ../office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md
+        - name: Control the blocking of OLE/COM
+          href: ../office-suite-issues/control-block-ole-com.md
+        - name: Deploy SaRA using Intune
+          href: ../office-suite-issues/install-sara-from-intune.md
         - name: Document Information Panel is deprecated
           href: ../office-suite-issues/document-information-panel-deprecate.md
         - name: Enable or disable hyperlink warning messages
@@ -503,6 +521,8 @@
           href: ../office-suite-issues/enable-collaboration.md
         - name: Increase the size of diagnostic logs
           href: ../office-suite-issues/collect-office-diagnostic-logs.md
+        - name: Install Microsoft Support and Recovery Assistant from network share
+          href: ../office-suite-issues/install-sara-from-network-share.md
         - name: Invalid product key or license mismatch
           href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
         - name: Issue when launching Office in Microsoft Store app
@@ -541,6 +561,8 @@
           href: ../office-suite-issues/office-end-user-license-agreement.md
         - name: Office error "could not create the work file"
           href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
+        - name: Office Feature Updates task
+          href: ../office-suite-issues/office-feature-updates-task-faq.md
         - name: Office has detected a problem with this file
           href: ../office-suite-issues/office-file-fails-validation.md
         - name: Office installation Error 1401, 1402 or 1406
@@ -555,8 +577,16 @@
           href: ../office-suite-issues/duplicate-service-listed.md
         - name: Set default font for Office apps
           href: ../office-suite-issues/set-default-font.md
+        - name: Subscription automatic license renewal fails
+          href: ../office-suite-issues/subscription-license-renewal-fail.md
+        - name: Support limitations for Microsoft 365 Apps issues
+          href: ../office-suite-issues/issue-support-limitations.md
+        - name: Supported Product IDs for Click-to-Run
+          href: ../office-suite-issues/product-ids-supported-office-deployment-click-to-run.md
         - name: The document caused a serious error the last time it was opened
           href: ../office-suite-issues/error-open-word-excel.md
+        - name: Third-party network solutions on Microsoft 365 traffic
+          href: ../office-suite-issues/office-365-third-party-network-devices.md
         - name: This file can't be previewed
           href: ../office-suite-issues/this-file-cant-be-previewed.md
         - name: Unable to create DSN for Office System Driver
@@ -571,6 +601,8 @@
           href: ../office-suite-issues/user-not-seeing-add-ins.md  
         - name: View error signatures for Office
           href: ../office-suite-issues/view-error-signatures.md
+        - name: We can't start this app error when you install an add-in
+          href: ../office-suite-issues/cannot-install-office-add-in.md
         - name: Your system is low on virtual memory
           href: ../office-suite-issues/your-system-is-low-on-virtual-memory.md
     - name: OneNote
@@ -697,6 +729,10 @@
           href: ../settings/how-to-securely-open-office-documents-that-have-dde-fields.md
         - name: Use registry to clear the most recently used files list
           href: ../settings/clear-most-recently-used-file.md
+    - name: Sway
+      items:
+        - name: Disabled Microsoft 365 Sway tile continues to appear in App Launcher
+          href: ../sway/disabled-sway-tile-appear.md
     - name: Third party add-ins
       items:
         - name: Can't start the converter SSPDFCG_X64.cnv
