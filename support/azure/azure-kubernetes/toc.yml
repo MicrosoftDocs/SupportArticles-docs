@@ -248,7 +248,7 @@
     items:
     - name: Basic troubleshooting
       href: connectivity/dns/basic-troubleshooting-dns-resolution-problems.md
-    - name: DNS Traffic analysis in real-time
+    - name: DNS traffic analysis in real time
       href: connectivity/dns/troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md
     - name: Troubleshoot DNS from inside a pod
       href: connectivity/dns/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md

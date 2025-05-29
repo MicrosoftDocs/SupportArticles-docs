@@ -3,7 +3,7 @@ title: Basic troubleshooting of DNS resolution problems in AKS
 description: Learn how to create a troubleshooting workflow to fix DNS resolution problems in Azure Kubernetes Service (AKS).
 author: sturrent
 ms.author: seturren
-ms.date: 08/09/2024
+ms.date: 05/29/2025
 ms.reviewer: v-rekhanain, v-leedennis, josebl, v-weizhu, qasimsarfraz
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -262,7 +262,7 @@ To get a better picture of resource usage at the pod and node level, you can als
 
 #### Part 3: Analyze DNS traffic and review DNS resolution performance
 
-Analyzing DNS traffic can help you understand how your AKS cluster handles the DNS queries. Ideally, you want to reproduce the problem on a test pod while you capture the traffic from this test pod and on each of the CoreDNS pods.
+Analyzing DNS traffic can help you understand how your AKS cluster handles the DNS queries. Ideally, you should reproduce the problem on a test pod while you capture the traffic from this test pod and on each of the CoreDNS pods.
 
 There are two main ways to analyze DNS traffic:
 
@@ -284,7 +284,7 @@ GADGET_VERSION=$(kubectl gadget version | grep Server | awk '{print $3}')
 kubectl gadget run trace_dns:$GADGET_VERSION --all-namespaces --fields "src,dst,name,qr,qtype,id,rcode,latency_ns"
 ```
 
-Where `--fields` is a comma-separated list of fields to displayed. The following list describes the fields that are used in the command:
+Where `--fields` is a comma-separated list of fields to be displayed. The following list describes the fields that are used in the command:
 
 - `src`: The source of the request with Kubernetes information (`<kind>/<namespace>/<name>:<port>`).
 - `dst`: The destination of the request with Kubernetes information (`<kind>/<namespace>/<name>:<port>`).
@@ -307,7 +307,7 @@ p/default/aks-test:56921             p/kube-system/coredns-57d886c994-r2… db.c
 p/kube-system/coredns-57d886c994-r2… p/default/aks-test:56921             db.contoso.com.             R  A              6574           NameErr…               0ns
 ```
 
-You can use the `ID` field to identify if a query has a response or not. The `RCODE` field shows you the response code of the DNS request. The `LATENCY_NS` field shows you the latency of the DNS request in nanoseconds. These fields can help you understand the health and performance of DNS responses.
+You can use the `ID` field to identify whether a query has a response. The `RCODE` field shows you the response code of the DNS request. The `LATENCY_NS` field shows you the latency of the DNS request in nanoseconds. These fields can help you understand the health and performance of DNS responses.
 For more information about real-time DNS analysis, see [Troubleshoot DNS failures across an AKS cluster in real time](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md).
 
 ##### Capture DNS traffic
