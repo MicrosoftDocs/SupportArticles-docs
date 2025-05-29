@@ -8,11 +8,11 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Bundle consent for Microsoft Entra ID applications
 
-This article explains how to configure bundled consent for Microsoft Entra ID applications.
+This article discusses how to configure bundled consent for Microsoft Entra ID applications.
 
 ## Symptoms
 
-You have a custom client app and a custom API app, and you create app registrations for both apps in Microsoft Entra ID. You configure bundle consent for these two apps. In this scenario, you might receive one of the following errors when you try to sign into the app:
+You have a custom client app and a custom API app, and you create app registrations for both apps in Microsoft Entra ID. You configure bundled consent for both apps. In this scenario, you might receive one of the following error messages when you try to sign in to either app:
 
 - AADSTS70000: The request was denied because one or more scopes requested are unauthorized or expired. The user must first sign in and grant the client application access to the requested scope.
 
@@ -35,7 +35,7 @@ Make sure that:
 
 Your authentication request must use the `.default` scope for Microsoft Graph. For Microsoft accounts, the scope must be for the custom API.
 
-**Example Request for Microsoft accounts and Work or school accounts**
+**Example Request for Microsoft accounts and work or school accounts**
 
 ```HTTP
 https://login.microsoftonline.com/common/oauth2/v2.0/authorize
@@ -47,11 +47,11 @@ https://login.microsoftonline.com/common/oauth2/v2.0/authorize
 ```
 
 > [!NOTE]
-> The client will not appear as having permission for the API. This is expected because the client is listed as a knownClientApplication.
+> The client will seem to be lacking permission for the API. This is expected because the client is listed as `knownClientApplication`.
 
-**Example request for Work or school accounts only**
+**Example request for work or school accounts only**
 
-If you are not supporting Microsoft Accounts:
+If you're not supporting Microsoft Accounts:
 
 ```http
 
@@ -63,7 +63,7 @@ GET https://login.microsoftonline.com/common/oauth2/v2.0/authorize
 &prompt=consent
 ```
 
-#### Implementation with MSAL.NET
+#### Implementation by using MSAL.NET
 
 ```csharp
 String[] consentScope = { "api://ae5a0bbe-d6b3-4a20-867b-c8d9fd442160/.default" };
@@ -73,19 +73,19 @@ var loginResult = await clientApp.AcquireTokenInteractive(consentScope)
       .ExecuteAsync();
 ```
 
-Consent propagation for new service principals and permissions may take time. Your application should handle this delay.
+Consent propagation for new service principals and permissions can take some time to finish. Your application should successfully handle this delay.
 
 #### Acquire tokens for multiple resources
 
-If your client app needs to acquire tokens for another resource such as Microsoft Graph, you must implement logic to handle potential delays after users consent to application. Here are some recommendations:
+If your client app has to acquire tokens for another resource, such as Microsoft Graph, you must implement logic to handle potential delays after users consent to the application. Here are some recommendations:
 
-- Use the `.default` scope when requesting tokens.
+- Use the `.default` scope when you request tokens.
 - Track acquired scopes until the required one is returned.
 - Add a delay if the result still does not have the required scope.
 
-Currently, if `AcquireTokenSilent` fails, MSAL requires a successful interactive authentication before allowing another silent token acquisition. This restriction applies even if a valid refresh token is available.
+Currently, if `AcquireTokenSilent` fails, MSAL requires a successful interactive authentication before it allows another silent token acquisition. This restriction applies even if a valid refresh token is available.
 
-Here is a sample code about the retry logic:
+Here's some sample code that uses retry logic:
 
 ```csharp
     public static async Task<AuthenticationResult> GetTokenAfterConsentAsync(string[] resourceScopes)
@@ -148,9 +148,9 @@ Here is a sample code about the retry logic:
         }
 ```
 
-#### On the custom API using the On-behalf-of flow
+#### About the custom API that uses the On-behalf-of flow
 
-Similar to the client app, when your custom API tries to acquire tokens for another resource using the On-Behalf-Of (OBO) flow, it may fail immediately after consent. To resolve this issue, you can implement retry logic and scope tracking as the following sample:
+Similar to the client app, when your custom API tries to acquire tokens for another resource by using the On-Behalf-Of (OBO) flow, it might fail immediately after consent. To resolve this issue, you can implement retry logic and scope tracking, as in the following sample code:
 
 ```csharp
 while (result == null && retryCount >= 6)
@@ -174,7 +174,7 @@ while (result == null && retryCount >= 6)
 If (result==null) return new HttpStatusCodeResult(HttpStatusCode.Forbidden, "Need Consent");
 ```
 
-If all retries fail, return an error and instruct the client to initial a full consent process.
+If all retries fail, return an error message, and then instruct the client to initial a full consent process.
 
 **Example of client code that assumes your API throws a 403**
 
@@ -197,12 +197,12 @@ if(apiResult.StatusCode==HttpStatusCode.Forbidden)
 
 ## Recommendations and expected behavior
 
-Ideally, you should create a separate flow that guides users through the consent process, provisions your app and API in their tenant or Microsoft account, and completes consent in a single step that separate from signing in.
+Ideally, you would create a separate flow that guides users through the consent process, provisions your app and API in their tenant or Microsoft account, and completes consent in a single step that's separate from signing in.
 
 If you don't separate this flow and instead combine it with your app's sign-in experience, the process can become confusing. Users may encounter multiple consent prompts. To improve the experience, consider adding a message in your app that informs users they might be asked to consent more than once：
 
 - For Microsoft accounts, expect at least two consent prompts: one for the client app and one for the API.
-- For work or school accounts, typically only one consent prompt is required.
+- Typically, for work or school accounts, only one consent prompt is required.
 
 The following is an end-to-end code sample that demonstrates a smooth user experience. It supports all account types and prompts for consent only when necessary.
 
