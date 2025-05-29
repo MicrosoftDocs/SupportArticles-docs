@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 05/20/2025
+ms.date: 05/29/2025
 ---
 # Known issues with Teams Rooms on Android
 
@@ -33,8 +33,6 @@ ms.date: 05/20/2025
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
-|Teams Rooms on Android devices experience a delay with signing in after a user signs out.|You sign out of a Teams Rooms on Android device either manually or from the Microsoft Teams admin center. When you try to sign in again immediately, there's a delay. This delay is because the authentication code takes 15 minutes or longer to refresh after a device signs out.<br/><br/>This issue occurs on all Teams on Android devices, including those devices that are running version 5.0.6061.0 of the Company portal app.|Restart the affected device to force the code to refresh.|
-|Unable to open a whiteboard on Android touch displays and all-in-one devices.|On Teams Rooms for Android touch displays and all-in-one devices, you're unable to start a whiteboard session outside of a meeting by selecting the **Whiteboard** option.<br/><br/>This issue occurs on devices that are running on tenants which are more than two years old.|To resolve this issue, contact Microsoft Support.|
 |Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
 
 ## Issues with Teams phones
