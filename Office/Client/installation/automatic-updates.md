@@ -23,7 +23,7 @@ appliesto:
   - Office Professional 2013
   - Office Professional Plus 2013
   - Office Standard 2013
-ms.date: 03/31/2022
+ms.date: 05/29/2025
 ---
 
 # Automatic updating for Microsoft Office is not enabled

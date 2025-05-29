@@ -12,7 +12,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Microsoft 365 admin
-ms.date: 09/27/2023
+ms.date: 05/29/2025
 ---
 # Support limitations for issues with Microsoft 365 Apps for enterprise or Microsoft 365 Apps for business
 
