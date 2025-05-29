@@ -34,7 +34,7 @@ ErrorMessage: The specified cookie value in VHD footer indicates that disk 'disk
 This problem occurs for one of the following reasons:
 
 - The VHD does not comply with the 1-MB alignment (offset). The supported disk size should be 1 MB * N. For example, the disk should be 102,401 MB.
-- The disk has unallocated spaces. The unallocated spaces are valid in a dynamic disk and may not contain metadata or data, but their presence can complicate the conversion to a fixed disk and cause errors.
+- The VHD has unallocated spaces. The unallocated spaces may not contain metadata or data, but their presence can complicate the conversion to a fixed disk and cause errors.
 - The VHD is corrupted or not supported.
 
 ## Resolution
