@@ -3,7 +3,7 @@
 - name: CRM permissions and configurations
   items:
     - name: '"Align missing fields" error'
-      href: crm-permissions-and-configurations/align-missing-fields-error.md        
+      href: crm-permissions-and-configurations/align-missing-fields-error.md      
     - name: Can't update records due to missing record access in Salesforce CRM
       href: crm-permissions-and-configurations/missing-record-update-edit-access.md
     - name: Can't update records due to missing object access in Salesforce CRM
@@ -12,6 +12,8 @@
       href: crm-permissions-and-configurations/update-settings-to-save-emails-error.md
     - name: Can't save email to CRM if enhanced email isn't enabled in Salesforce CRM
       href: crm-permissions-and-configurations/update-settings-in-saleforce-error.md
+    - name: Errors when accessing Salesforce with server-to-server flow
+      href: crm-permissions-and-configurations/errors-when-accessing-salesforce-with-server-to-server-flow.md
     - name: Errors when disabling Salesforce with server-to-server flow
       href: crm-permissions-and-configurations/errors-disabling-salesforce-server-to-server-flow.md
     - name: Errors when enabling Salesforce with server-to-server flow
