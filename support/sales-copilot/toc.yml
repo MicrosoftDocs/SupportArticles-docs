@@ -14,6 +14,8 @@
       href: crm-permissions-and-configurations/update-settings-in-saleforce-error.md
     - name: Errors when disabling Salesforce with server-to-server flow
       href: crm-permissions-and-configurations/errors-disabling-salesforce-server-to-server-flow.md
+    - name: Errors when enabling Salesforce with server-to-server flow
+      href: crm-permissions-and-configurations/errors-enabling-salesforce-server-to-server-flow.md
     - name: '"Fix mailbox errors in Dynamics 365" error'
       href: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
     - name: Missing privileges error when signing in
@@ -70,4 +72,5 @@
       href: teams-collaboration-spaces/create-team-error.md       
     - name: Opportunity summary not displayed in deal rooms
       href: teams-collaboration-spaces/opportunity-summary-not-displayed.md
+       
  

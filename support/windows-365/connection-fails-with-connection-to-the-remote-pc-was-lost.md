@@ -6,6 +6,9 @@ manager: dcscontentpm
 ms.date: 04/02/2025
 ms.reviewer: wincicuex, erikje
 ms.topic: troubleshooting
+ms.custom:
+- pcy:Session connectivity\Users see random or intermittent disconnects
+- sap:WinComm User Experience
 ---
 # Windows 365 Link connection fails with "connection to the remote PC was lost"
 

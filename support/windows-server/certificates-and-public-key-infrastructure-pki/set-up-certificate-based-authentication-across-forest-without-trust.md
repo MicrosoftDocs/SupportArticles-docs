@@ -70,7 +70,7 @@ To configure the IIS Web server in the resource forest, follow these steps:
 
 2. On the IIS Web server, enable **Active Directory Client Certificate Authentication**.
 
-    :::image type="content" source="./media/set-up-certificate-based-authentication-across-forest-without-trust/enable-active-directory-client-certificate-authentication.png" alt-text="Enabling the Active Directory Client Certificate Authentication.":::
+    :::image type="content" source="./media/set-up-certificate-based-authentication-across-forest-without-trust/enable-client-certificate-authentication.png" alt-text="Enabling the Active Directory Client Certificate Authentication.":::
 
 3. On your website, configure **SSL Settings** to **Require SSL** and then under **Client certificates**, select **Require**.
 

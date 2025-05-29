@@ -1,7 +1,7 @@
 ---
 title: Azure Batch task fails without stdout or stderr
 description: Explains the cause for an Azure Batch task failure without stdout or stderr and provides some suggestions.
-ms.date: 04/19/2023
+ms.date: 05/23/2025
 ms.reviewer: biny, v-weizhu
 ms.service: azure-batch
 ms.custom: sap:Azure Batch

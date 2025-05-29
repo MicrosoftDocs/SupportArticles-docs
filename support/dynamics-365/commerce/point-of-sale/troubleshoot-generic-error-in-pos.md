@@ -3,7 +3,7 @@ title: Troubleshoot generic errors displayed on the POS
 description: Lists the steps you can take to investigate a generic error displayed on the POS in Dynamics 365 Commerce.
 author: bstorie
 ms.author: brstor
-ms.date: 10/12/2023
+ms.date: 05/22/2025
 ms.custom: sap:Point of sale (POS)\Issues with Store Commerce app reliability
 ---
 # Troubleshoot generic errors displayed on the POS

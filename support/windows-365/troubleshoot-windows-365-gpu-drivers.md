@@ -6,7 +6,9 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: feadebay,erikje
-ms.custom: intune-azure, get-started
+ms.custom:
+- pcy:Performance Issues
+- sap:WinComm User Experience
 ---
 # Troubleshoot Windows 365 GPU drivers
 
