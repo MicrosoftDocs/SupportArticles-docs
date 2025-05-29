@@ -327,6 +327,8 @@
       items:
       - name: Istio add-on ingress gateway troubleshooting
         href: extensions/istio-add-on-ingress-gateway.md
+      - name: Istio add-on egress gateway troubleshooting
+        href: extensions/istio-add-on-egress-gateway.md
       - name: Istio add-on MeshConfig troubleshooting
         href: extensions/istio-add-on-meshconfig.md
       - name: Istio add-on minor revision upgrade troubleshooting
