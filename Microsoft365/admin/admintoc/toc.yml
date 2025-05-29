@@ -13,8 +13,6 @@
       href: ../access-management/grant-everyone-claim-to-external-users.md
     - name: Issue with reset admin password
       href: ../access-management/issue-with-reset-admin-password.md
-    - name: Office add-ins
-      href: ../access-management/user-not-seeing-add-ins.md
     - name: Your session has expired in Office Online
       href: ../access-management/your-session-has-expired-error.md
   - name: Active Directory
@@ -65,28 +63,12 @@
       href: ../authentication/office-365-user-with-name-already-exists.md
     - name: Authentication automatically fails
       href: ../authentication/automatic-authentication-fails.md
-    - name: Can't sign in to Microsoft 365 desktop applications
-      href: ../authentication/cannot-sign-in-microsoft-365-desktop-apps.md  
     - name: Certificate-based authentication fails on iOS
-      href: ../authentication/certificate-based-authentication-fails-on-ios.md
-    - name: Connection issues when signing in Office 2016
-      href: ../authentication/connection-issue-when-sign-in-office-2016.md
-    - name: Disabling ADAL or WAM not recommended for fixing Microsoft 365 sign-in or activation issues
-      href: ../administration/disabling-adal-wam-not-recommended.md
+      href: ../authentication/certificate-based-authentication-fails-on-ios.md    
     - name: Federated users account issues
       href: ../authentication/account-issues-for-federated-users.md
     - name: Federation Service certificates are expiring
       href: ../authentication/federation-service-certificate-expire.md
-  - name: Diagnostic Logs
-    items:
-    - name: Diagnostic log collection in Support and Recovery Assistant
-      href: ../diagnostic-logs/diagnostic-log-collection-in-support-and-recovery-assistant.md
-    - name: Increase the size of diagnostic logs
-      href: ../diagnostic-logs/collect-office-diagnostic-logs.md
-    - name: Use Fiddler trace logs for MFA
-      href: ../diagnostic-logs/fiddler-trace-logs-for-mfa.md
-    - name: Use MSOAID for authentication issues
-      href: ../diagnostic-logs/use-msoaid-for-authentication-issues.md
   - name: Domain Management
     items:
     - name: Can't add a domain
@@ -97,16 +79,12 @@
       href: ../administration/send-email-full-redelegation-domain.md
     - name: Child domain doesn't inherit parent changes
       href: ../administration/child-domain-fails-inherit-parent-domain-changes.md
-    - name: Enable or disable hyperlink warning messages
-      href: ../administration/enable-disable-hyperlink-warning.md
     - name: Issue when removing a domain
       href: ../administration/error-remove-domain-from-office-365.md
   - name: Group Policy
     items:
     - name: Configure default email client using policy
       href: ../group-policy/configure-email-client-using-policy.md
-    - name: No Add-ins loaded due to group policy settings 
-      href: ../group-policy/office-add-in-not-loaded.md
   - name: Groups
     items: 
     - name: Distribution group issues
@@ -117,8 +95,6 @@
       href: ../installation/cannot-install-office-add-in.md
     - name: Deploy SaRA using Intune
       href: ../installation/install-sara-from-intune.md
-    - name: Error when installing Microsoft 365 apps
-      href: ../installation/cannot-access-powershell-file-error.md
     - name: Error when uninstalling Microsoft 365 Pro Plus
       href: ../installation/something-went-wrong-30016-4-error.md
     - name: Install SaRA from network share

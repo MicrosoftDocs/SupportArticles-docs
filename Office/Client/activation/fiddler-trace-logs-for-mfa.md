@@ -13,7 +13,7 @@ search.appverid:
 appliesto: 
   - Entra ID
   - Microsoft 365
-ms.date: 10/20/2023
+ms.date: 05/28/2025
 ---
 
 # How to use Fiddler trace logs for MFA in Microsoft 365 and Microsoft Entra ID

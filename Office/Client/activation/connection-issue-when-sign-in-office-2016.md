@@ -13,7 +13,7 @@ ms.custom:
 appliesto: 
   - Microsoft 365 Apps for enterprise
   - Office 2016
-ms.date: 02/25/2025
+ms.date: 05/28/2025
 ---
 
 # Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10

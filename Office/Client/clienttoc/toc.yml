@@ -169,10 +169,16 @@
           href: ../activation/account-doesnt-exist.md
         - name: Activation error Trusted Platform Module malfunctioned
           href: ../activation/tpm-malfunctioned.md
+        - name: Can't sign in to Microsoft 365 desktop applications
+          href: ../activation/cannot-sign-in-microsoft-365-desktop-apps.md
         - name: Can't verify the license for this product
           href: ../activation/license-issue-when-start-office-application.md
+        - name: Connection issues when signing in Office 2016
+          href: ../activation/connection-issue-when-sign-in-office-2016.md
+        - name: Disabling ADAL or WAM not recommended for fixing Microsoft 365 sign-in or activation issues
+          href: ../activation/disabling-adal-wam-not-recommended.md
         - name: Errors activating Microsoft 365 on older Windows versions
-          href: ../activation/errors-activating-on-older-windows.md
+          href: ../activation/errors-activating-on-older-windows.md 
         - name: Office activation process issues
           href: ../activation/office-activation-process-issues.md
         - name: Issue when activating Microsoft 365 Apps for enterprise
@@ -217,6 +223,10 @@
           href: ../activation/cant-be-used-to-activate.md
         - name: Troubleshooting device-based licensing for Microsoft 365 Apps
           href: ../activation/device-based-licensing.md
+        - name: Use Fiddler trace logs for MFA
+          href: ../activation/fiddler-trace-logs-for-mfa.md
+        - name: Use MSOAID for authentication issues
+          href: ../activation/use-msoaid-for-authentication-issues.md
         - name: We've run into a problem with your Microsoft 365 subscription
           href: ../activation/run-into-a-problem.md
         - name: You currently have not been assigned an office license that includes the Office desktop apps
@@ -397,6 +407,8 @@
           href: ../installation/error-code-30010-45-or-30088-26.md
         - name: Error starting Microsoft Office third-party .NET add-in
           href: ../installation/access-denied-error-when-starting-third-party-apps.md
+        - name: Error when installing Microsoft 365 apps
+          href: ../installation/cannot-access-powershell-file-error.md
         - name: Error when you install an Office program
           href: ../installation/error-run-office-setup-program.md
         - name: How to download and run Office LTSC installation files not in VLSC
@@ -477,6 +489,8 @@
           href: ../office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md
         - name: Document Information Panel is deprecated
           href: ../office-suite-issues/document-information-panel-deprecate.md
+        - name: Enable or disable hyperlink warning messages
+          href: ../office-suite-issues/enable-disable-hyperlink-warning.md
         - name: Error when editing an equation in Office
           href: ../office-suite-issues/issue-when-edit-equation-in-office.md
         - name: Error when opening a document
@@ -487,6 +501,8 @@
           href: ../office-suite-issues/file-cannot-be-saved.md
         - name: Features to enable collaboration
           href: ../office-suite-issues/enable-collaboration.md
+        - name: Increase the size of diagnostic logs
+          href: ../office-suite-issues/collect-office-diagnostic-logs.md
         - name: Invalid product key or license mismatch
           href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
         - name: Issue when launching Office in Microsoft Store app
@@ -511,6 +527,8 @@
           href: ../office-suite-issues/missing-fonts-opening-documents.md
         - name: Mobile viewing PDF files with Office Web Apps
           href: ../office-suite-issues/mobile-viewing-pdf-files.md
+        - name: No Add-ins loaded due to group policy settings 
+          href: ../office-suite-issues/office-add-in-not-loaded.md
         - name: No default mail client
           href: ../office-suite-issues/no-default-mail-client-error.md
         - name: No Office entitlement found on device
@@ -549,6 +567,8 @@
           href: ../office-suite-issues/use-multiple-versions-of-office.md
         - name: Use GetObject and CreateObject with automation server
           href: ../office-suite-issues/getobject-createobject-behavior.md
+        - name: Users don't see Office add-ins
+          href: ../office-suite-issues/user-not-seeing-add-ins.md  
         - name: View error signatures for Office
           href: ../office-suite-issues/view-error-signatures.md
         - name: Your system is low on virtual memory
