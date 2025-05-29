@@ -12,7 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 05/29/2025
 ---
 
 # Using third-party network devices or solutions with Microsoft 365

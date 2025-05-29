@@ -14,7 +14,7 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Microsoft 365 Apps
   - Microsoft 365 Family
-ms.date: 03/31/2022
+ms.date: 05/29/2025
 ---
 
 # Microsoft 365 subscription automatic license renewal fails when sppcext.dll is missing

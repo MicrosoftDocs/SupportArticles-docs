@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Office 2016 for Mac
-ms.date: 03/31/2022
+ms.date: 05/29/2025
 ---
 
 # Can't sign in to an Office 2016 for Mac app

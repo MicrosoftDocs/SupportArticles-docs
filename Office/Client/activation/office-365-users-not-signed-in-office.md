@@ -12,7 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Azure Active Directory
-ms.date: 03/31/2022
+ms.date: 05/29/2025
 ---
 
 # Microsoft 365 users aren't automatically signed into an Office app through Active Directory accounts after they sign out

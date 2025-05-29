@@ -13,7 +13,7 @@ ms.author: luche
 ms.reviewer: mgraham
 appliesto: 
   - Office Web Apps Server 2013
-ms.date: 03/31/2022
+ms.date: 05/29/2025
 ---
 
 # Web sites lose SSL certificate bindings on Office Online Server
