@@ -299,6 +299,8 @@
      href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
    - name: The memberOf API returns null values for properties
      href: users-groups-entra-apis/memberof-api-returns-null-properties.md
+   - name: Only one user is returned when running List users API
+     href: users-groups-entra-apis/only-one-user-returned-by-microsoft-graph-list-users-api.md
    - name: Getting access denied errors (Authorization)
      items:
       - name: Add an owner to an application
