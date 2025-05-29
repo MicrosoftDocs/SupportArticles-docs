@@ -60,7 +60,7 @@ For information about HugePages, see [HugeTLB Pages](https://docs.kernel.org/adm
 
 ### Testing THP usage with a sample program
 
-To observe how THP are used by the system, you can run a small C program that allocates approximately 256 MB of RAM. The program uses the `madvise` system call to inform the kernel that the allocated memory should be treated as a single, contiguous region—enabling THP where supported.
+To observe how THP is used by the system, you can run a small C program that allocates approximately 256 MB of RAM. The program uses the `madvise` system call to inform the kernel that the allocated memory should be treated as a single, contiguous region—enabling THP where supported.
 
 ```C
 #include <stdio.h>
@@ -141,20 +141,25 @@ See [document](https://www.kernel.org/doc/html/latest/admin-guide/mm/numaperf.ht
 
 To figure out whether there's a realignment of processes and a different Node required use the `numastat` tool. Its doc is located at [numastat(8)](https://man7.org/linux/man-pages/man8/numastat.8.html). With the help of `migratepages` tool [migratepages(8)](https://man7.org/linux/man-pages/man8/migratepages.8.html) one can then try to move the memory pages to the right NODE.
 
-### Overcommitment
+### Overcommitment and OOM killer
 
- Overcommitment is a crucial design decision and has a drastic effect on the functionality of the system performance or its stability. The Linux kernel supports three modes:
+Overcommitting is an important design choice that can seriously impact how well the system performs or how stable it is. The Linux kernel supports three modes:
+
 - 'Heuristic'
 - 'Always overcommit'
 - 'Don't overcommit'
   
 By default the `Heuristic` scheme is used. This mode offers a balanced trade-off between always allowing memory overcommitment and strictly denying it. For more information, see the [kernel documentation](https://www.kernel.org/doc/Documentation/vm/overcommit-accounting).
 
-An incorrect setting could be the reason memory pages fail to allocate, potentially affecting the creation of new processes or preventing internal kernel structures from obtaining sufficient memory.
+An incorrect Overcommitting setting may cause memory pages to fail to allocate, potentially hindering the creation of new processes or preventing internal kernel structures from acquiring sufficient memory.
 
-If it’s confirmed that the issue is related to memory allocation, it may indicate that there are not enough resources left for the kernel. In such a situation the OOM killer might kick in to free some of the pages to make them available to kernel tasks or requests from other applications which would like to write a page or more. If there are signs of OOM killer activities, it's actually a signal to the administrator that the system is already on its limits. This means there are too many processes running or some have high memory requirements - if a memory leak can be excluded. The VM size needs to be increased or some of the applications needs to be hosted on a different server.
+If it’s confirmed that the issue is related to memory allocation, it could indicate that there are not enough resources left for the kernel. In this kind of situation, the OOM (Out-Of-Memory) killer might may be invoked. Its job is to free up some memory pages, so they can be used by kernel tasks or other applications. When the OOM killer is invoked, it's a warning that the system has reached its resource limits. This could be caused by having too many processes running, or by some processes consuming a large amount of memory if a memory leak has already been eliminated as the cause. To address the issue, consider increasing the VM size or moving some applications to another server.
 
-What information are logged if the OOM had to intervene? Given is the following simple C program to allocate memory and set  default value
+#### System logs generated during OOM Events
+
+The following section intruduces how to identify when the OOM Killer is triggered and what information is logged by the system.
+
+The following simple C program tests how much memory can be allocated dynamically on a system before it fails.
 
 ```C
 #include <stdio.h>
@@ -175,35 +180,41 @@ int main() {
 }
 ```
 
-The program is utilizing too much of the available memory. It isn't possible to allocate more than 3G of memory.
+When you run this program, you will find that memory allocation fails after around 3 GB.
 ![memory allocation error](media/troubleshoot-performance-memory-linux/malloc-error.png)
-The information from the OOM we find on the console or simply with the command `dmesg`.
-It starts with this detail at the beginning of the trace.
+
+When the system runs out of memory, the OOM killer is invoked. You can view the related logs using the `dmesg` command. The log entries typically begin like this: 
+
 ![invoked OOM killer](media/troubleshoot-performance-memory-linux/malloc-invoked-oom.png)
-And ends with the following lines.
+
+And end with a summary of the memory state:
+
 ![out of memory](media/troubleshoot-performance-memory-linux/malloc-out-of-memory.png)
-In between, the following content is displayed.
+
+Between those entries, you’ll find detailed information about memory usage and the process selected for termination:
+
 ![OOM full detail #1](media/troubleshoot-performance-memory-linux/memory-details-1.png)
 ![OOM full detail #2](media/troubleshoot-performance-memory-linux/memory-details-2.png)
 
-
-The important information we get from it are the following
+From this, we can extract the following insights:
 ```
 4194160 kBytes physical memory 
 No swap space
 3829648 kBytes are in use
 ```
 
-The malloc process requested a single page (4 KB) --> order=0, one single page sounds not much, when we look at the following lines there should be plenty of memory available
+In the following log, the malloc process requested a single 4 KB page (order=0). Although 4 KB page is a samll size, the system was already under pressure. The log shows that memory was being allocated from the "Normal Zone":
 ![lowmem reserv](media/troubleshoot-performance-memory-linux/lowmem-reserve.png)
 
-
-On the first glimpse, there should be enough pages left. Let us further examine the situation. Memory is taken from the Normal Zone. Available memory is 29,500 kB, though the min value is 34628 kB. We are below the min-watermark, in that case only the kernel would be able to use the memory for any internal data structure. A user-space application isn't entitled to get the pages. At this point, the OOM gets involved finding a process which has the highest oom_score and also is utilizing most of the memory. The identified process is the one which gets scarified then. In the picture above you see that the oom_score for the malloc process is 0 and the RSS size is 917760. 
-Among all the other processes, it has the highest RSS size.
+The available memory (`free`) is 29,500 KB , but the minimum watermark (`min`) was 34,628 KB. Since the system was below this threshold, only the kernel could use the remaining memory， and user-space applications were denied. That’s when the OOM killer is involved. It selects the process with the highest `oom_score` and memory usage ('RSS'). In this example, the malloc process had an `oom_score` of 0 but the highest `RSS` (917760), so it's selected as the target for termination.
 
 
-Spotting an OOM issue is easy as the relevant information are printed on the console or in the system log. Allowing the administrator to reason about why the OOM did happen. 
-But what about a steady increase  of memory usage, which don't turn into an OOM? What can be used to make the administrator aware of it?
+### Monitor gradual memory growth
+
+OOM events are easy to detect since related messages are logged to the console or system logs. But what about gradual increases in memory usage that don't turn into an OOM. 
+
+What can be used to make the administrator aware of it?
+
 A good tool to see how the memory does grow over a period of time is the 'sar' tool from the sysstat package. To focus on the memory details only, use the option 'r' --> 'sar -r'
 Look at this example
 ![sar memory information](media/troubleshoot-performance-memory-linux/sar-info.png)
