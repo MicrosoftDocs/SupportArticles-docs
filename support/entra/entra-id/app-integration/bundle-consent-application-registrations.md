@@ -6,7 +6,7 @@ ms.service: entra-id
 ms.date: 05/27/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# Bundle consent for Microsoft Entra ID applications
+# Bundled consent for Microsoft Entra ID applications
 
 This article discusses how to configure bundled consent for Microsoft Entra ID applications.
 
