@@ -30,7 +30,7 @@ This article discusses common issues in the Red Hat Update Infrastructure (RHUI)
 > - Starting on January 2020, the new Azure US Government images began using the public IP addresses that were mentioned previously under the Azure Global header.
 
 > [!NOTE]
-> Starting June 30, 2024, RHEL 7 will reach the end of the Maintenance Support 2 phase. This maintenance phase is followed by the Extended Life phase. As RHEL 7 transitions out of the full maintenance phases, customers should upgrade to RHEL 8 or 9. If your organization must stay on RHEL 7, we recommended that you install the Red Hat Enterprise Linux Extended Life Cycle Support (ELS) Add-on.
+> Starting June 30, 2024, RHEL 7 reaches the end of the Maintenance Support 2 phase. This maintenance phase is followed by the Extended Life phase. As RHEL 7 transitions out of the full maintenance phases, customers should upgrade to RHEL 8 or 9. If your organization must stay on RHEL 7, we recommended that you install the Red Hat Enterprise Linux Extended Life Cycle Support (ELS) Add-on.
 > For more information, see [Extended Life Cycle Support](/azure/virtual-machines/workloads/redhat/redhat-extended-lifecycle-support)
 
 
