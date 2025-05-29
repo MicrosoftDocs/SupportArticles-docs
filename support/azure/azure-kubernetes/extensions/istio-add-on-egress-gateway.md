@@ -64,7 +64,7 @@ Ensure that self-managed mutating and validating webhooks don't block provisioni
 Istio egress gateway names must:
 
 - Be 63 characters or fewer in length.
-- Only contain lowercase alphanumeric characters, '.' and '-'.
+- Only contain lowercase alphanumeric characters, `.`, and `-`.
 - Start and end with a lowercase alphanumerical character.
 - Be valid Domain Name System (DNS) names.
 
