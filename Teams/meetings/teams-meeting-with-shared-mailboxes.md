@@ -3,7 +3,7 @@ title: Available Teams Meeting Features for Shared Mailboxes
 description: Discusses available features when you schedule and manage Microsoft Teams meetings by using shared mailboxes.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.custom: 
   - sap:Teams Meetings\Meeting Options and Roles
   - CI 172564
