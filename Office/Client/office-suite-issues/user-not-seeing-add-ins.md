@@ -1,12 +1,12 @@
 ---
-title: User not seeing add-ins
-ms.author: luche
-author: helenclu
+title: Users Don't See Add-ins
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-ms.custom: 
+ms.custom:
+  - sap:Building and Debugging Add-Ins for Office 365 Web and Desktop Apps
   - CSSTroubleshoot
+  - CI 5934
 ms.collection: 
   - M365-subscription-management
   - Adm_O365
@@ -15,66 +15,45 @@ search.appverid:
   - MET150
   - MOE150
 ms.assetid: 060e809d-8cb6-427b-9e2f-dab67138acae
-description: Learn how to help your users troubleshoot centralized add-ins, if they aren't seeing them.
-ms.date: 05/28/2025
+description: Resolves issues that your users don't see add-ins in Microsoft 365 application.
+ms.date: 05/29/2025
 ---
 
-# User not seeing add-ins
+# Users don't see add-ins
 
-Now that you've deployed the add-in, your end users can start using it in their Office applications. The add-in appears on all platforms that the add-in supports.
+After you [deploy add-ins](/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide), your end users can start using them in their Microsoft 365 applications. The add-in appears on all platforms that the add-in supports.
   
-## For Word, PowerPoint, Excel (2016, 2019 or for Microsoft 365)
+## For Word, PowerPoint, Excel
 
-If the add-in supports add-in commands, the commands appear on the Office ribbon. In the following example, the command appears for the People Graph add-in in the **Insert** tab. The add-in command can appear on any tab. 
+If the add-in supports add-in commands, the commands appear on the ribbon. In the following example, the command appears for the People Graph add-in in the **Insert** tab. The add-in command can appear on any tab.
   
 :::image type="content" source="./media/user-not-seeing-add-ins/people-graph.png" alt-text="Screenshot of People Graph in the Insert tab." border="false":::
   
-If the deployed add-in doesn't support add-in commands or if you want to view all deployed add-ins, you can view them via **My Add-ins** from the **Insert** tab. 
+If the deployed add-in doesn't support add-in commands or if you want to view all deployed add-ins, you can view them by selecting **My Add-ins** from the **Insert** tab.
   
 :::image type="content" source="./media/user-not-seeing-add-ins/my-add-ins.png" alt-text="Screenshot shows you can view add-ins in My Add-ins from the Insert tab." border="false":::
   
-Then select the **Admin Managed** tab along the top in the Office Add-ins window. If add-in isn't there, select **Refresh** in the top right corner.
+Then select the **Admin Managed** tab along the top in the Office Add-ins window. If add-in isn't there, select **Refresh**.
   
 :::image type="content" source="./media/user-not-seeing-add-ins/refresh-if-your-add-in-is-not-present.png" alt-text="Screenshot of Refresh in the top right corner." border="false":::
   
-## For Outlook 2016, Outlook 2019 and Outlook for Microsoft 365
+## For Outlook
 
-On the **Home** ribbon, select **Store**, as shown here. Select **Admin-managed** in the left nav. 
+On the **Home** ribbon, select **Store**, and then select **Admin-managed**.
   
 :::image type="content" source="./media/user-not-seeing-add-ins/store-button.png" alt-text="Screenshot of the Store button." border="false":::
   
-Users can't see add-in? Try one of these methods:
+If users can't see add-in, try one of the following methods:
   
 - **Use the compatibility checker**
-    
-  - Outputs a status report for each user in your organization, whether they have a valid Office License, if they're set up correctly on Exchange, and if they're ready for centralized deployment. For more information, see [deployment compatibility checker](https://www.microsoft.com/download/details.aspx?id=55270).
-    
-- **Check Office version requirements**
-    
-  - The user might be on an older, incompatible version of Office. For add-ins to be deployed the user must have Office ProPlus or Microsoft 365. You can check it out for any member of your organization. To find out how, see [Microsoft 365 reports](https://support.office.com/article/office-365-reports-in-the-admin-center-microsoft-office-activations-87c24ae2-82e0-4d1e-be01-c3bcc3f18c60?ui=en-US&amp;rs=en-US&amp;ad=US).
-    
-  - Alternatively, you can check it manually by going to the application, such as Word, then select **File \> Account**. Under **Product Information**, you should see **Microsoft 365 Apps for enterprise**. 
-    
-- **Check Exchange requirements**
-    
-  - Microsoft Exchange stores the add-in manifests within your organization's tenant. The admin deploying add-ins and the users receiving those add-ins must be on a version of Exchange Server that supports OAuth authentication. By default, Exchange Multi-Tenant and Dedicated VNext deployments support OAuth. Exchange Dedicated Legacy and hybrid on-premises deployments can be configured to support OAuth; however, it isn't the default configuration.
-    
-  - Check with your organization's Exchange admin to find out which configuration is in use. OAuth connectivity per user can be verified by using the [Test-OAuthConnectivity](/powershell/module/exchange/organization/Test-OAuthConnectivity) PowerShell cmdlet. 
- 
-- For more information on requirements, see [Determine if Centralized Deployment of add-ins works for your organization](/microsoft-365/admin/manage/centralized-deployment-of-add-ins#requirements).
-    
-- **See regulations surrounding minors using add-ins**
-    
-  - See further information regarding [minors using add-ins](https://support.office.com/article/Manage-deployment-of-Office-365-add-ins-in-the-Office-365-admin-center-737e8c86-be63-44d7-bf02-492fa7cd9c3f) if applicable. 
-    
-- **Check for nested groups**
-    
-  - Add-ins will no longer appear to the user if the user is removed from a group that the add-in is assigned to.
-    
-  - Centralized deployment currently doesn't support nested group assignments. It supports users in top-level groups or groups without parent groups, but not users in nested groups or groups that have parent groups.
-    
-  - For more information, check out [user and group assignments](https://support.office.com/article/Determine-if-Centralized-Deployment-of-add-ins-works-for-your-Office-365-organization-B4527D49-4073-4B43-8274-31B7A3166F92).
-    
-## See also
 
-[Manage deployment of Microsoft 365 add-ins in the Microsoft 365 admin center](/office365/admin/manage/manage-deployment-of-add-ins).
+  - It outputs a status report for each user in your organization, whether they have a valid Microsoft 365 License, are set up correctly on Exchange, and are ready for centralized deployment. For more information, see [deployment compatibility checker](https://www.microsoft.com/download/details.aspx?id=55270).  
+- **Check [Microsoft 365 requirements](/microsoft-365/admin/manage/centralized-deployment-of-add-ins?view=o365-worldwide&preserve-view=true#microsoft-365-requirements)**  
+- **Check [Exchange Online requirements](/microsoft-365/admin/manage/centralized-deployment-of-add-ins?view=o365-worldwide&preserve-view=true#exchange-online-requirements)**
+- **See regulations regarding [minors using add-ins](/microsoft-365/admin/manage/minors-and-acquiring-addins-from-the-store?view=o365-worldwide&preserve-view=true)**
+- **Check for nested groups**
+
+  - Add-ins no longer appear to the user if the user is removed from a group that the add-in is assigned to.
+  - Centralized deployment currently doesn't support nested group assignments. It supports users in top-level groups or groups without parent groups, but not users in nested groups or groups that have parent groups.
+
+  For more information, see [user and group assignments](/microsoft-365/admin/manage/centralized-deployment-of-add-ins?view=o365-worldwide&preserve-view=true#user-and-group-assignments).
