@@ -47,7 +47,7 @@ https://login.microsoftonline.com/common/oauth2/v2.0/authorize
 ```
 
 > [!NOTE]
-> The client will seem to be lacking permission for the API. This is expected because the client is listed as `knownClientApplication`.
+> The client will seem to be lacking permission for the API. This condition is expected because the client is listed as `knownClientApplication`.
 
 **Example request for work or school accounts only**
 
@@ -197,14 +197,17 @@ if(apiResult.StatusCode==HttpStatusCode.Forbidden)
 
 ## Recommendations and expected behavior
 
-Ideally, you would create a separate flow that guides users through the consent process, provisions your app and API in their tenant or Microsoft account, and completes consent in a single step that's separate from signing in.
+Ideally, you would create a separate flow that takes the following actions:
+- Guides users through the consent process
+- Provisions your app and API in their tenant or Microsoft account
+- Completes consent in a single step that's separate from signing in
 
-If you don't separate this flow and instead combine it with your app's sign-in experience, the process can become confusing. Users may encounter multiple consent prompts. To improve the experience, consider adding a message in your app that informs users they might be asked to consent more than once：
+If you don't separate this flow, and instead combine it with your app's sign-in experience, the process can become confusing. Users might encounter multiple consent prompts. To improve the experience, consider adding a message in your app to inform users that they might be asked to consent more than one time：
 
 - For Microsoft accounts, expect at least two consent prompts: one for the client app and one for the API.
 - Typically, for work or school accounts, only one consent prompt is required.
 
-The following is an end-to-end code sample that demonstrates a smooth user experience. It supports all account types and prompts for consent only when necessary.
+The following is an end-to-end code sample that demonstrates a smooth user experience. This code supports all account types and prompts for consent only when necessary.
 
 ```csharp
 string[] msGraphScopes = { "User.Read", "Mail.Send", "Calendar.Read" }
