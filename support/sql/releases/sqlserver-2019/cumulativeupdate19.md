@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 19 for SQL Server 2019 (KB5023049)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 19 (KB5023049).
-ms.date: 07/26/2024
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5023049
 ms.reviewer: v-cuichen
 appliesto:

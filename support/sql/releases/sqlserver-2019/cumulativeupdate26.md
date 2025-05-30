@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 26 for SQL Server 2019 (KB5035123)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 26 (KB5035123).
-ms.date: 01/29/2025
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5035123
 ms.reviewer: v-qianli2
 appliesto:

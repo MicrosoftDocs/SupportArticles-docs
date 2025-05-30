@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 9 for SQL Server 2022 (KB5030731)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 9 (KB5030731).
-ms.date: 07/26/2024
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5030731
 ms.reviewer: v-qianli2
 appliesto:

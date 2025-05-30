@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 19 for SQL Server 2022 (KB5054531)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 19 (KB5054531).
-ms.date: 05/15/2025
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5054531
 ms.reviewer: v-qianli2
 appliesto:

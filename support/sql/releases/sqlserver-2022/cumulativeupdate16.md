@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 16 for SQL Server 2022 (KB5048033)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 16 (KB5048033).
-ms.date: 04/30/2025
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5048033
 ms.reviewer: v-qianli2
 appliesto:

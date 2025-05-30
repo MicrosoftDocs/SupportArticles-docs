@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 32 for SQL Server 2019 (KB5054833)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2019 cumulative update 32 (KB5054833).
-ms.date: 02/27/2025
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5054833
 ms.reviewer: v-qianli2
 appliesto:

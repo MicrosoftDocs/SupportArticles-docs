@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 10 for SQL Server 2022 (KB5031778)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 10 (KB5031778).
-ms.date: 01/29/2024
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5031778
 ms.reviewer: v-qianli2
 appliesto:

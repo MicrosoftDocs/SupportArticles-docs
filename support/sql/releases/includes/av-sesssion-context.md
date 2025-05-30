@@ -1,7 +1,7 @@
 ---
 ms.author: jopilov
 author: PiJoCoder
-ms.date: 05/28/2025
+ms.date: 05/30/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage), evergreen
 ms.reviewer: derekw，moraja，bcaetano，randolphwest，mathoma，v-cuichen
 ---
