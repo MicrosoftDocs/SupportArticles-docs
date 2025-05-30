@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: 
   - sap:Teams Device Management (TAC)
   - CI 160238
