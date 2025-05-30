@@ -80,7 +80,7 @@ This error might occur for the following reasons:
 
     Open the report and verify the relevant logon rights under **Computer Details**.
 
-4. Ensure NLA compatibility:
+4. Ensure the NLA compatibility:
 
     - Use the latest version of the Remote Desktop client.
     - Enable NLA on the remote computer.
