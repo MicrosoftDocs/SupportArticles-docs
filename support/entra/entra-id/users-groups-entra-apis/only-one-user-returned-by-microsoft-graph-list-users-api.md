@@ -30,6 +30,6 @@ This issue occurs because you're signed in with a personal Microsoft account (MS
 
 ## Solution
 
-To retrieve all users in the directory, you must sign in to Microsoft Graph using an organizational Microsoft Entra account, such as `userPrincipalName = name@tenant.onmicrosoft.com`.
+To retrieve all users in the directory, you must sign in to Microsoft Graph Explorer using an organizational Microsoft Entra account, such as `userPrincipalName = name@tenant.onmicrosoft.com`.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
