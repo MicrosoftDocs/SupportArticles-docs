@@ -220,3 +220,16 @@ The Windows logon troubleshooter addresses issues with user logon by repairing c
 |Activation date|Retirement date|More information|
 |---|---|---|
 |3/24/2025||[https://aka.ms/AAv1efl](https://aka.ms/AAv1efl)|
+
+## Troubleshooter for Windows User Profile
+
+The text displayed in **Settings**:
+Automatically change system settings to fix a problem on your device
+ 
+## Description
+
+The Windows User Profile troubleshooter addresses issues with Windows 10 Start menu open issues by repairing the permissions on the registry keys. This troubleshooter runs automatically on devices and can't be run manually. To check if it has run, go to **Start** > **Settings** > **Update & Security** > **Troubleshoot** > **View troubleshooting history** in Windows 10 and look for **User Profile troubleshooter**.
+
+|Activation date|Retirement date|More information|
+|---|---|---|
+|5/29/2025||[https://Aka.ms/AAwe51y](https://Aka.ms/AAwe51y)|
