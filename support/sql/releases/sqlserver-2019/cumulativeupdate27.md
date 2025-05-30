@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 27 for SQL Server 2019 (KB5037331)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 27 (KB5037331).
-ms.date: 04/30/2025
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5037331
 ms.reviewer: v-qianli2
 appliesto:
@@ -29,9 +29,9 @@ The newly-created warning message in issue [2901635](#2901635) might fill up the
 
 This issue is fixed in [SQL Server 2019 CU28](cumulativeupdate28.md#3312461).
 
-### Issue two: Access violation when session is reset
+### Issue two: Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ### Issue three: Patching error for secondary replicas in an availability group with databases enabled replication or CDC
 

@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 16 for SQL Server 2022 (KB5048033)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 16 (KB5048033).
-ms.date: 04/30/2025
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5048033
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,7 +23,9 @@ This article describes Cumulative Update package 16 (CU16) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-There are no known issues in this cumulative update.
+### Incorrect behavior of SESSION_CONTEXT in parallel plans
+
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 
@@ -42,7 +44,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=3586315>[3586315](#3586315) </a> | [FIX: Database is suspended incorrectly when you run ALTER SERVER CONFIGURATION (KB5048510)](database-suspend-incorrect-run-alter-server-configuration.md) | SQL Server Engine | Backup Restore| All|
 | <a id=2331381>[2331381](#2331381) </a> | Fixes an issue that causes the `BACKUP SERVER WITH METADATA_ONLY` snapshot command to fail with the following errors when the SQL Server instance has more than 64 databases: </br></br>Msg 3088, Level 16, State 1, Line \<LineNumber> </br>Server \<ServerName> with dbid \<DatabaseID> failed to resume in session \<SessionID>. </br></br>Msg 925, Level 19, State 1, Line \<LineNumber> </br>Maximum number of databases used for each query has been exceeded. The maximum allowed is 64. </br></br>Msg 0, Level 20, State 0, Line \<LineNumber> </br>A severe error occurred on the current command.  The results, if any, should be discarded.| SQL Server Engine | Backup Restore| All|
 | <a id=3567000>[3567000](#3567000) </a> | Fixes a deadlock issue that you might encounter when performing a Transact-SQL snapshot backup using the `METADATA_ONLY` option under heavy concurrent OLTP workloads, which causes an eventual time-out of the backup with the following errors: </br></br>Error: 3041, Severity: 16, State: 1. </br>BACKUP failed to complete the command BACKUP DATABASE \<DatabaseName>. Check the backup application log for detailed messages. </br></br>\<DateTime> ERROR: [PID:\<PID>:Backup:\<BackupID>] Snapshot failed with message 'Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.'. | SQL Server Engine | Backup Restore| All|
-| <a id=3418488>[3418488](#3418488) </a> | Fixes a patching error that you encounter in secondary replicas of an availability group with databases that have SQL replication or change data capture (CDC) enabled. For more information, see [known issue of SQL Server 2022 CU15](cumulativeupdate15.md#patching-error-for-secondary-replicas-in-an-availability-group-with-databases-enabled-replication-or-cdc) or [known issue one of SQL Server 2022 CU14](cumulativeupdate14.md#issue-one-patching-error-for-secondary-replicas-in-an-availability-group-with-databases-enabled-replication-or-cdc). | SQL Server Engine | High Availability and Disaster Recovery | Windows|
+| <a id=3418488>[3418488](#3418488) </a> | Fixes a patching error that you encounter in secondary replicas of an availability group with databases that have SQL replication or change data capture (CDC) enabled. For more information, see [known issue of SQL Server 2022 CU15](cumulativeupdate15.md#issue-one-patching-error-for-secondary-replicas-in-an-availability-group-with-databases-enabled-replication-or-cdc) or [known issue one of SQL Server 2022 CU14](cumulativeupdate14.md#issue-one-patching-error-for-secondary-replicas-in-an-availability-group-with-databases-enabled-replication-or-cdc). | SQL Server Engine | High Availability and Disaster Recovery | Windows|
 | <a id=3487067>[3487067](#3487067) </a> | Fixes an issue that causes database corruption if a system failure with `alternatewritethrough` mode occurs.| SQL Server Engine | Linux | Linux|
 | <a id=3435174>[3435174](#3435174) </a> | Fixes incorrect results that you might encounter when you use the contained availability group (AG) and remove plans for a specific object by altering it from either a contained AG or non-contained AG connection. When you make changes from a contained AG or non-contained AG connection, the other connection continues to use the old plan for the altered object until it's manually removed from the plan cache. | SQL Server Engine | Programmability | All|
 | <a id=2696108>[2696108](#2696108) </a> | Removes unnecessary log messages written to the SQL Server error log by the `sys.sp_flush_ct_internal_table_on_demand` stored procedure.| SQL Server Engine | Replication | All|
