@@ -53,7 +53,7 @@ For a more detailed view of memory usage by individual processes, use the `pidst
 
 When you analyze memory usage reports, two important columns to observe are `VSZ` and `RSS`:
 
-- VSZ (Virtual Set Size) shows the total amount of virtual memory (in kilobytes) that's reserved by a process.
+- VSZ (Virtual Set Size) shows the total amount of virtual memory (in kilobytes) that a process reserves.
 - RSS (Resident Set Size) indicates how much virtual memory is currently held in RAM (for example, committed memory).
   
 Another useful metric is `majflt/s` (the number of major page faults per second). This number measures how often a memory page has to be read from a swap device. If you have concerns about high usage of swap memory, verify the amount by using the `vmstat` tool to monitor the page-in and page-out statistics over time.
@@ -61,7 +61,7 @@ Another useful metric is `majflt/s` (the number of major page faults per second)
 **Sample vmstat output**
 ![Sample vmstat output](media/troubleshoot-performance-memory-linux/vmstat.png)
 
-In this sample, you might observe that many memory pages are read from or written to swap. These high values typically indicate that the system is running low on available memory. This might occur because multiple processes are competing for memory, or because available memory can't be used by most applications. 
+In this sample, you might observe that many memory pages are read from or written to swap. These high values typically indicate that the system is running low on available memory. This condition might occur because multiple processes are competing for memory, or because most of the applications can't use available memory. 
 
 A common reason for unavailable memory is the use of HugePages. HugePages are reserved memory. Not all applications can use reserved memory. In some situations, you might have to evaluate whether your applications need HugePages or would work more effectively by using Transparent HugePages (THP). THP allow the kernel to manage large memory pages dynamically. For example, the Java Virtual Machine (JVM) can take advantage of THP by enabling the following flag:
 
@@ -139,13 +139,13 @@ For more information, see [Transparent Hugepage Support](https://www.kernel.org/
 
 ### NUMA
 
-If the applications are running on a NUMA system that has multiple nodes, it's important to know the memory capacity of each node. Although all nodes can access the system's total memory, you'll get optimum performance if the processes that run on a particular NUMA node operate on the memory that's under direct control of that node. If a memory request can't be fulfilled by the local node, the system allocates memory from another node. However, accessing memory across nodes introduces latency and can cause performance penalties. Therefore, you should monitor memory locality to make sure that workloads are aligned with the memory resources of their assigned NUMA nodes. 
+If the applications are running on a NUMA system that has multiple nodes, it's important to know the memory capacity of each node. All nodes can access the system's total memory. However, you get optimum performance if the processes that run on a particular NUMA node operate on the memory that's under direct control of that node. If the local node can't fulfill a memory request, the system allocates memory from another node. However, accessing memory across nodes introduces latency and can cause performance penalties. Therefore, you should monitor memory locality to make sure that workloads are aligned with the memory resources of their assigned NUMA nodes. 
 
-The following is a sample of the system's NUMA configuration.
+The following screenshot shows a sample of the system's NUMA configuration.
 
 ![numactl output](media/troubleshoot-performance-memory-linux/numactl.png)
 
-This configuration shows that accessing memory within the same node has a distance level of 10. If you want to access memory on `Node 1` from `Node 0`, this process has a high distance value of 12 but is still manageable. However, if you want to access memory on `NODE 3` from `NODE 0`, the distance level becomes 32. This is still doable but is also three times slower. It's valuable to consider these differences when you diagnose performance issues or optimize memory-bound workloads. For more information, see [this Linux Kernel article](https://www.kernel.org/doc/html/latest/admin-guide/mm/numaperf.html). For a description of the `numactl` tool, see [numactl(8)](https://man7.org/linux/man-pages/man8/migratepages.8.html).
+This configuration shows that accessing memory within the same node has a distance level of 10. If you want to access memory on `Node 1` from `Node 0`, this process has a high distance value of 12 but is still manageable. However, if you want to access memory on `NODE 3` from `NODE 0`, the distance level becomes 32. This process is still doable but is also three times slower. It's valuable to consider these differences when you diagnose performance issues or optimize memory-bound workloads. For more information, see [this Linux Kernel article](https://www.kernel.org/doc/html/latest/admin-guide/mm/numaperf.html). For a description of the `numactl` tool, see [numactl(8)](https://man7.org/linux/man-pages/man8/migratepages.8.html).
 
 To determine whether a realignment of processes exists and a different node would be required, use the `numastat` tool. The documentation for this tool is available at [numastat(8)](https://man7.org/linux/man-pages/man8/numastat.8.html). The `migratepages` tool [migratepages(8)](https://man7.org/linux/man-pages/man8/migratepages.8.html) can help you to move the memory pages to the correct node.
 
@@ -161,7 +161,7 @@ By default, the `Heuristic` scheme is used. This mode offers a balanced trade-of
 
 An incorrect Overcommitment setting might prevent memory pages from allocating memory. Potentially, this condition could hinder new process creation or prevent internal kernel structures from acquiring sufficient memory.
 
-If you verify that the issue is related to memory allocation, the most likely cause of this issue is insufficient resources left for the kernel. In this kind of situation, the OOM (Out-Of-Memory) killer might be invoked. Its job is to free up some memory pages for use by kernel tasks or other applications. By invoking the OOM killer, the system is warning you that it has reached its resource limits. If you've already eliminated the possibility of a memory leak, the cause of this condition could be having too many processes running, or having processes that are consuming lots of memory. To resolve the issue, consider increasing the VM size or moving some applications to another server.
+If you verify that the issue is related to memory allocation, the most likely cause of this issue is insufficient resources left for the kernel. In this kind of situation, the OOM (Out-Of-Memory) killer might be invoked. Its job is to free up some memory pages for use by kernel tasks or other applications. By invoking the OOM killer, the system is warning you that it reached its resource limits. If you can eliminate the possibility of a memory leak, the cause of this condition could be that too many processes are running, or that processes that are consuming lots of memory. To resolve the issue, consider increasing the VM size or moving some applications to another server.
 
 #### System logs generated during OOM Events
 
@@ -200,7 +200,7 @@ The entries typically end in a summary of the memory state.
 
 ![out of memory](media/troubleshoot-performance-memory-linux/malloc-out-of-memory.png)
 
-Between those entries, you’ll find detailed information about memory usage and the process that was selected for termination.
+Between those entries, you can find detailed information about memory usage and the process that was selected for termination.
 
 ![OOM full detail #1](media/troubleshoot-performance-memory-linux/memory-details-1.png)
 ![OOM full detail #2](media/troubleshoot-performance-memory-linux/memory-details-2.png)
@@ -217,7 +217,7 @@ In the following log example, the malloc process requested a single 4 KB page (o
 
 ![lowmem reserv](media/troubleshoot-performance-memory-linux/lowmem-reserve.png)
 
-The available memory (`free`) is 29,500 KB. However, the minimum watermark (`min`) was 34,628 KB. Because the system was below this threshold, only the kernel could use the remaining memory，and user-space applications were denied. That’s when the OOM killer was involved. It selects the process that has the highest `oom_score` and memory usage ('RSS'). In this example, the malloc process had an `oom_score` of 0 but also has the highest `RSS` (917760). Therefore, it's selected as the target for termination.
+The available memory (`free`) is 29,500 KB. However, the minimum watermark (`min`) is 34,628 KB. Because the system is below this threshold, only the kernel can use the remaining memory，and user-space applications are denied. The OOM killer is invoked at this point. It selects the process that has the highest `oom_score` and memory usage ('RSS'). In this example, the malloc process had an `oom_score` of 0 but also has the highest `RSS` (917760). Therefore, it's selected as the target for termination.
 
 ### Monitor gradual memory growth
 
@@ -229,7 +229,7 @@ To monitor memory usage over time, use the `sar` tool from the `sysstat` package
 
 ![sar memory information](media/troubleshoot-performance-memory-linux/sar-info.png)
 
-In this case, memory usage does grow for about two hours. Then, it drops back to four percent. This behavior might be expected, such as during peak login hours or resource-intensive reporting tasks. To determine whether this is normal, you might have to monitor usage over several days, and then correlate it with application activity. High memory usage is not necessarily a problem. It depends on the workload and how the applications are designed to use memory.
+In this case, memory usage does grow for about two hours. Then, it drops back to four percent. This behavior might be expected, such as during peak login hours or resource-intensive reporting tasks. To determine whether this behavior is normal, you might have to monitor usage over several days, and then correlate it with application activity. High memory usage is not necessarily a problem. It depends on the workload and how the applications are designed to use memory.
 
 To find which processes are consuming the most memory, use `pidstat`. 
 
@@ -247,6 +247,6 @@ This output displays all running processes and their statistics. Another approac
 
 #### Why sort by RSS?
 
-Resident Set Size (RSS) is the portion of process memory that's held in RAM (non-swapped physical memory). In contrast, Virtual Set Size（VSZ）represents the total amount of memory that the process has reserved, including memory that hasn’t been committed. `Committed memory` refers to pages that are actually written to physical memory. If you're trying to identify which processes are using the most physical memory (including swap), focus on the `RSS` column. In the example output, the `snapd` process appears to use lots of memory, but its `RSS` value is low. The `malloc` process has similar `VSZ` and `RSS` values that indicate that it’s actively using more than 1.3 GB of memory.
+Resident Set Size (RSS) is the portion of process memory that's held in RAM (non-swapped physical memory). In contrast, Virtual Set Size（VSZ）represents the total amount of memory that the process reserves, including memory that isn’t committed. `Committed memory` refers to pages that are actually written to physical memory. If you're trying to identify which processes are using the most physical memory (including swap), focus on the `RSS` column. In the example output, the `snapd` process appears to use lots of memory, but its `RSS` value is low. The `malloc` process has similar `VSZ` and `RSS` values that indicate that it’s actively using more than 1.3 GB of memory.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
