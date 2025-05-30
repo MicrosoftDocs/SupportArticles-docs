@@ -223,7 +223,7 @@ The Windows logon troubleshooter addresses issues with user logon by repairing c
 
 ## Troubleshooter for Windows User Profile
 
-The text displayed in **Settings**:
+The text displayed in **Settings**:  
 Automatically change system settings to fix a problem on your device
  
 ## Description
