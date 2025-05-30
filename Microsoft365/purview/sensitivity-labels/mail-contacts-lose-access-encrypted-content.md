@@ -1,18 +1,18 @@
 ---
-title: Mail contacts lose access to encrypted content
-description: A known issue in groups causes mail contacts to lose access or have intermittent access to encrypted content.
-ms.date: 05/05/2025
-author: helenclu
-ms.author: luche
+title: Mail Contacts Lose Access To Encrypted Content
+description: Provides a workaround for an issue in which mail contacts in groups either lose access or have intermittent access to encrypted content.
+ms.date: 05/30/2025
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Sensitivity Labels
-  - CI 162121
+  - CI 162121, 3921
   - CSSTroubleshoot
-  - has-azure-ad-ps-ref
-ms.reviewer: cabailey
+  - no-azure-ad-ps-ref
+ms.reviewer: sathyana
 appliesto: 
   - Microsoft 365 (Enterprise, Business, Government, Education)
 search.appverid: MET150
@@ -22,31 +22,56 @@ search.appverid: MET150
 
 ## Symptoms
 
-Consider the following scenario:  
-
-- You're working with some content that's encrypted by the Azure Information Protection service.
-- Usage rights are assigned to a group that contains mail contacts.
-
-In this scenario, the mail contacts lose access to the encrypted content or have only intermittent access to the content.
-
-**Note:** A typical way to apply this encryption is to use sensitivity labels that are created and published from the Microsoft Purview compliance portal.
+External users who are mail contacts in a Microsoft 365 group report that they have no access, or only intermittent access, to encrypted content.
 
 ## Cause
 
-This issue occurs because of a known issue that affects mail contacts in groups that are assigned usage rights.  
+This known issue affects mail contacts in groups that have usage rights to content that's encrypted by Microsoft Purview Information Protection.
 
-In this case, the mail contacts are users outside your organization who have a Microsoft Entra object type of **Contact** instead of **User**. In the Exchange admin center, these contacts display a **Contact Type** of **MailContact**.
-
-To verify the object type for group members, run the following [Get-AzureADGroupMember](/powershell/module/azuread/get-azureadgroupmember) cmdlet:
-
-```powershell
-Get-AzureADGroupMember -ObjectId <ObjectID>| fl
-```
-
-[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
-
-**Note:** In this cmdlet, replace \<_ObjectID_> with the affected group ID. To obtain the group ID, open the group from the [Azure portal](https://portal.azure.com/). In the output, check whether the `ObjectType` attribute displays **User** or **Contact** for each group member.
+**Note:** Encryption is commonly applied by using sensitivity labels that are created and published from the Microsoft Purview portal.
 
 ## Workaround
 
-Add users who are outside your organization as [guest users](/azure/active-directory/external-identities/add-users-administrator#add-guest-users-to-a-group) instead of as mail contacts in the existing group that you have granted usage rights and access to. Alternatively, specify the affected mail contacts directly instead of using the existing group.
+Use the following steps to work around the issue:
+
+1. Identify all group members that are mail contacts:
+
+   1. Run the following PowerShell cmdlets to connect to [Microsoft Graph PowerShell](/powershell/microsoftgraph/authentication-commands#use-connect-mggraph):
+
+      ```powershell
+      Install-Module Microsoft.Graph.Groups -Scope CurrentUser -Force
+      Connect-MgGraph -Scopes "Group.Read.All", "GroupMember.Read.All"
+      ```
+
+   2. Run the following PowerShell commands to verify the object type for each group member:
+
+      ```powershell
+      # Specify the DisplayName of the group.
+      $groupDisplayName = "<group DisplayName>"
+
+      # Get the group ID.
+      $groupId = (Get-MgGroup -Filter "displayName eq '$groupDisplayName'").Id
+
+      # List group members including their Id, DisplayName, and ObjectType.
+      Get-MgGroupMember -GroupId $groupId -All | Select-Object -Property Id, 
+        @{Name='DisplayName';Expression={$_.AdditionalProperties.'displayName'}}, 
+        @{Name='ObjectType';Expression={$_.AdditionalProperties.'@odata.type'}} | FL
+      ```
+
+      The following command output lists the group members, showing whether they're mail contacts or users:
+
+      > Id          : c0a70f60-9927-4841-9e10-ef58455422e1  
+      > DisplayName : Aisling Ní Dhómhnaill  
+      > ObjectType  : #microsoft.graph.user  
+      >   
+      > Id          : 34b63b74-66f7-4be1-ab7f-b7f7d003e0c6  
+      > DisplayName : Qamar Mounir  
+      > ObjectType  : #microsoft.graph.orgContact  
+
+2. For each external user that's identified as a mail contact in the affected group, select one of the following options:
+
+   - **Convert to a guest**: Add the external user to the group as a [guest](/azure/active-directory/external-identities/add-users-administrator#add-guest-users-to-a-group).
+   
+   - **Grant direct permissions**: Directly grant the external user permissions on the encrypted content rather than through group membership.
+
+3. Remove the mail contacts from the group.
