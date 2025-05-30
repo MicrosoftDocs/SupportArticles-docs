@@ -1,5 +1,5 @@
 ---
-title: Domain join log analysis
+title: Domain Join Log Analysis
 description: Provides a detailed guide on what occurs on a client computer during a domain join operation.
 ms.date: 06/04/2025
 manager: dcscontentpm
@@ -12,15 +12,15 @@ ms.custom:
 ---
 # Domain join log analysis
 
-This article provides a detailed guide on what occurs on a client computer when joining an Active Directory (AD) domain. The article includes a sample of successful Netsetup.log, a breakdown of the network traffic during the AD domain join operation, and explanations of the various types of traffic involved.
+This article provides a detailed guide on what occurs on a client computer when joining an Active Directory (AD) domain. The article includes a successful `Netsetup.log` sample, a breakdown of the network traffic during the AD domain join operation, and explanations of the various types of traffic involved.
 
-To troubleshoot domain join failures, we can compare the logs of the failure scenario and successful scenario to identify the cause. Logs needed for troubleshooting include `Netsetup.log`, which is located at `%windir%\debug` folder and enabled by default, and network trace collected from the client computer.
+To troubleshoot domain join failures, you can compare the logs of the failed and successful scenarios to identify the cause. Logs needed for troubleshooting include `Netsetup.log`, which is located in the `%windir%\debug` folder and enabled by default, and network traces collected from the client computer.
 
-## Sample of a successful Netsetup.log
+## Sample of a successful Netsetup.log file
 
-The following sample is the typical `Netsetup.log` covering a successful AD domain join to the domain named *contoso.local*, collected from a Windows 10 24H2 virtual machine (VM) named *PC8*.
+The following sample is a typical `Netsetup.log` file covering a successful AD domain join to a domain named *contoso.local*, collected from a Windows 10 24H2 virtual machine (VM) named *PC8*.
 
-See lines starting with **//** for explanations.
+See the lines starting with **//** for explanations.
 
 ```output
 mm/dd/yyyy HH:MM:SS:DDD -----------------------------------------------------------------
@@ -268,7 +268,7 @@ mm/dd/yyyy HH:MM:SS:DDD NetpChangeMachineName: SetComputerNameEx() returned 0x1
 
 ## Network traces
 
-Network traces are helpful in pinpointing AD domain join issues. During an AD domain join operation, multiple types of traffic occur between the client and some Domain Name System (DNS) server, and then between the client and some DCs. The following sections discuss each type of traffic.
+Network traces are helpful in pinpointing AD domain join issues. During an AD domain join operation, multiple types of traffic occur between the client and some Domain Name System (DNS) servers, and then between the client and some domain controllers (DCs). The following sections discuss each type of traffic.
 
 > [!NOTE]
 >
@@ -282,7 +282,7 @@ In these network traces, the IP addresses represent the following roles:
 
 ### DNS
 
-The client queries the DNS SRV record to locate the DCs of the domain to join. In the following example, the client manages to locate two DCs.
+The client queries the DNS SRV record to locate the domain's DCs to join. In the following example, the client successfully locates two DCs.
 
 ```output
 Source          Destination     Protocol  Info
@@ -314,7 +314,7 @@ Domain Name System (response)
 
 ### LDAP ping
 
-Then the client picks up one of the DCs and uses Lightweight Directory Access Protocol (LDAP) ping over UDP port 389 to detect the functionalities of that DC.
+Then, the client picks up one of the DCs and uses Lightweight Directory Access Protocol (LDAP) ping over UDP port 389 to detect the functionalities of that DC.
 
 ```output
 Source          Destination     Protocol  Info
@@ -322,7 +322,7 @@ Source          Destination     Protocol  Info
 192.168.100.10  192.168.100.13  CLDAP     searchResEntry(1) "<ROOT>" searchResDone(1) success  [1 result]
 ```
 
-In the response, the DC provides the general information of the domain and that DC's current capabilities.
+In response, the DC provides general information on the domain and that DC's current capabilities.
 
 ```output
 Internet Protocol Version 4, Src: 192.168.100.10, Dst: 192.168.100.13
@@ -373,7 +373,7 @@ Connectionless Lightweight Directory Access Protocol
 
 ### SMB
 
-During AD domain join, Server Message Block (SMB) traffic is employed for Microsoft Remote Procedure Call (MSRPC) based communication.
+During AD domain join, Server Message Block (SMB) traffic is employed for Microsoft Remote Procedure Call (MSRPC)-based communication.
 
 ```output
 Source          Destination     Protocol      Info
@@ -411,10 +411,10 @@ Source          Destination     Protocol      Info
 
 ### LDAP
 
-LDAP traffic is used during domain join activity as well. Except for the leading LDAP search, which is for RootDSE and then the binding (authentication), the remaining LDAP traffic is encrypted. Therefore, you can't read the content in network trace.
+LDAP traffic is also used during the domain join activity. Except for the leading LDAP search for RootDSE and then the binding (authentication), the remaining LDAP traffic is encrypted. Therefore, you can't read the content in the network trace.
 
 > [!NOTE]
-> By default, NTLM payload is encrypted since Windows Server 2003. For Kerberos authenticated sessions, the caller can decide whether to request encryption or not. Other factors such as OS version and security policy configuration on both sides also matter.
+> Since Windows Server 2003, NTLM payloads have been encrypted by default. For Kerberos authenticated sessions, the caller can decide whether to request encryption. Other factors, such as the OS version and security policy configuration on both sides, also matter.
 
 ```output
 Source          Destination     Protocol  Info
@@ -451,10 +451,10 @@ Source          Destination     Protocol  Info
 
 ### RPC
 
-Remote Procedure Call (RPC) traffic starts from TCP 135 port. The client binds to the RPC Endpoint Mapper (EPMAP) service at TCP 135 port, queries the actual port of Directory Replication Service Remote (DRSR) and the NetLogon services, and then connects those two services.
+Remote Procedure Call (RPC) traffic starts from TCP port 135. The client binds to the RPC Endpoint Mapper (EPMAP) service on TCP port 135, queries the actual ports of the Directory Replication Service Remote (DRSR) and NetLogon services, and then connects those two services.
 
 > [!NOTE]
-> By default, EPMAP traffic doesn't requires authentication. Therefore, we don't recommend enabling EPMAP traffic. Traffic of the DRSR and NETLOGON services requires authentication.
+> By default, EPMAP traffic doesn't require authentication. Therefore, we don't recommend enabling EPMAP traffic. However, traffic of the DRSR and NETLOGON services requires authentication.
 
 #### EPMAP traffic
 
@@ -555,9 +555,9 @@ Source          Destination     Protocol      Info
 
 ### Kerberos
 
-Kerberos traffic is also used during domain join operation, because all the types of network traffic mentioned in the previous sections, including SMB, LDAP, and RPC, require authentication.
+Kerberos traffic is also used during domain join operation because all the types of network traffic mentioned in the previous sections, including SMB, LDAP, and RPC, require authentication.
 
-For example, in the following network trace, the client gets a Kerberos TGT for the user account **CONTOSO\puser2** and the service ticket for the target SPN **cifs/DC2.contoso.local**. Then, the client sets up the SMB session to the DC **DC2.contoso.local** with that service ticket.
+For example, in the following network trace, the client gets a Kerberos TGT for the user account `CONTOSO\puser2` and a service ticket for the target SPN `cifs/DC2.contoso.local`. Then, the client sets up an SMB session to the DC `DC2.contoso.local` with that service ticket.
 
 ```output
 Source          Destination     Protocol  Info
@@ -628,13 +628,13 @@ SMB2 (Server Message Block Protocol version 2)
 ```
 
 > [!NOTE]
-> Depending on the format of the user credential provided for the domain join operation (For example, puser2@contoso.local or contoso\puser2 or contoso.local\puser2), you might see different Kerberos traffic.
+> Depending on the format of the user credentials provided for the domain join operation (for example, puser2@contoso.local, contoso\puser2, or contoso.local\puser2), you might see different Kerberos traffic.
 
 #### About NTLM
 
-Even if you don't see any Kerberos traffic, it doesn't necessarily mean the domain join operation must fail. This is because when Kerberos can't work under some scenarios, NT LAN Manager (NTLM) is used as the fallback. As long as nothing is preventing NTLM from working properly such as incompatible LMCompatibilityLevel or blocked NTLM authentication in Group Policy, domain join still completes successfully with NTLM.
+Even if you don't see any Kerberos traffic, it doesn't necessarily mean the domain join operation must fail. This is because when Kerberos doesn't work under some scenarios, NT LAN Manager (NTLM) is used as a fallback. If nothing prevents NTLM from working properly, such as incompatible LMCompatibilityLevel or blocked NTLM authentication in Group Policy, the domain join still completes successfully with NTLM.
 
-See the following example of successful SMB session setup using NTLM authentication.
+See the following example of a successful SMB session setup using NTLM authentication.
 
 ```output
 Source          Destination     Protocol  Info
@@ -692,7 +692,5 @@ SMB2 (Server Message Block Protocol version 2)
                         mechListMIC: 01000000f034f89d42da9b4d00000000
                         NTLMSSP Verifier
 ```
-
-## Reference
 
 [!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]
