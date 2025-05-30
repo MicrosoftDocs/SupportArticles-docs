@@ -17,7 +17,7 @@ appliesto:
   - Microsoft 365
   - Office 2019
   - Office 2016
-ms.date: 05/22/2025
+ms.date: 05/30/2025
 ---
 
 # No Add-ins loaded due to Group Policy settings
@@ -36,22 +36,14 @@ If you then open the **COM Add-ins** dialog box by selecting **Go**, you can't e
 
 ## Cause
 
-This problem occurs because your administrator configures a Group Policy setting to disable all COM add-ins.
+This problem occurs because your administrator configures Group Policy settings to disable all COM add-ins.
 
-> [!WARNDING]
-> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
+> [!WARNING]
+> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. Modify the registry at your own risk.
 
-The following registry data is used to disable all add-ins:
+In this situation, the `RestrictToList` value under the `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\<application>\Resiliency` registry key is set to **1**. In addition, under the `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\<application>\Resiliency\AddinList` key, nothing is listed except the (Default) value.
 
-**Key:** `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\<application>\Resiliency`
-
-**DWORD:** RestrictToList
-
-**Value:** 1
-
-In addition, under the `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\<application>\Resiliency\AddinList`key, nothing is listed except for the Default REG_SZ value with no data.
-
-**Note**: In the above registry keys, \<application\> is the name of the application in which you experience this problem.
+**Note**: In these registry keys, \<application\> is the name of the application in which you experience this problem.
 
 ## More Information
 
@@ -63,7 +55,7 @@ Administrator can manage the add-ins that are loaded in Office applications by u
 
   To enable the **List of Managed Add-ins** policy setting, you must provide the programmatic identifier (ProgID) for each COM add-in that you want to manage. To obtain the ProgID for an add-in, use Registry Editor on the client computer where the add-in is installed. Locate the registry key names under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\<application>\Addins` or `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\<application>\Addins`.
 
-  To use this policy, you must also specify how each add-in is managed. To specify how each add-in is managed, configure one of the following three options:
+  To use this policy, you must also specify how each add-in is managed by configuring one of the following three options:
 
   - **0**: The add-in is always disabled (blocked).
   - **1**: The add-in is always enabled.
@@ -73,9 +65,9 @@ Administrator can manage the add-ins that are loaded in Office applications by u
 
   **Key:** `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\<application>\Resiliency\AddinList`
   
-  **REG_SZ:** \<ProgID for the add-in\>
+  **Value name:** \<ProgID for the add-in\>
 
-  **Values:** Specify one of the following values:
+  **Value data:** Specify one of the following values:
 
   - **0**: The add-in is always disabled (blocked).
   - **1**: The add-in is always enabled.
@@ -85,14 +77,14 @@ Administrator can manage the add-ins that are loaded in Office applications by u
 
   This policy setting blocks all add-ins that aren't managed by the **List of Managed Add-ins** policy setting.
 
-  If you enable the **Block all unmanaged add-ins** and **List of Managed Add-ins** policy settings, all add-ins are blocked except those that are configured in the list of managed add-ins as 1 (always enabled) or 2 (configurable by the user).
+  If you enable the **Block all unmanaged add-ins** and **List of Managed Add-ins** policy settings, all add-ins are blocked except those add-ins that are configured in the list of managed add-ins as 1 (always enabled) or 2 (configurable by the user).
 
   When you enable the **Block all unmanaged add-ins** policy setting, the following registry data is configured on the Office client:
 
   **Key:** `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\<application>\Resiliency`
 
-  **DWORD:** RestrictToList
+  **Value name:** RestrictToList
 
-  **Value:** 1
+  **Value data:** 1
 
   When `RestrictToList` is set to 1 and you don't enable any add-ins by using the **List of Managed Add-ins** policy setting, all COM add-ins are disabled.
