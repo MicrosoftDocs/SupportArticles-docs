@@ -20,6 +20,10 @@ _Original KB number:_ &nbsp; 896458
 
 The x64-based versions of Windows don't support 16-bit programs, 16-bit processes, or 16-bit components. However, 64-bit versions of Windows may recognize some 16-bit installers and automatically convert the 16-bit installer to a 32-bit installer.
 
+### Use 16-bit InstallShield installers to install 32-bit applications
+
+ If you are using a 16-bit InstallShield installer to install a 32-bit application, download and install the [16-bit InstallShield Support package](https://download.microsoft.com/download/748580b8-0e66-45c5-a4b0-dbd37a44e230/16BitInstallShieldSupport.msi) before launching the 16-bit InstallShield installer.
+
 ## More information
 
 To run a 16-bit program or a 32-bit program that uses 16-bit processes or 16-bit components, you must install the program on a 32-bit version of Windows. To run such a program, you can install a 32-bit version of Windows in a dual-boot configuration with the 64-bit version of Windows. Then, you can restart your computer to the 32-bit version of Windows and install the 16-bit program or 32-bit program that uses 16-bit processes or 16-bit components.
