@@ -1,7 +1,7 @@
 ---
 title: Microsoft Graph List Users API Only Return One User
 description: Provides a solution to an issue where the Microsoft Graph REST API List users only returns one user in a directory.
-ms.date: 05/29/2025
+ms.date: 05/30/2025
 ms.service: entra-id
 ms.reviewer: bachoang, v-weizhu
 ms.custom: sap:Problem with querying or provisioning resources
@@ -16,13 +16,13 @@ Consider the following scenario:
 
 - You sign in to [Microsoft Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer) by selecting the profile icon at the top right.
 
-    :::image type="content" source="media/only-one-user-returned-by-microsoft-graph-list-users-api/microsoft-graph-explorer-sign-in.png" alt-text="Image alt text." lightbox="media/only-one-user-returned-by-microsoft-graph-list-users-api/microsoft-graph-explorer-sign-in.png" border="false":::
+    :::image type="content" source="media/only-one-user-returned-by-microsoft-graph-list-users-api/microsoft-graph-explorer-sign-in.png" alt-text="Screenshot that shows the sign-in button in Microsoft Graph Explorer." lightbox="media/only-one-user-returned-by-microsoft-graph-list-users-api/microsoft-graph-explorer-sign-in.png" border="false":::
 
 - After sign-in, you try to run this query `GET https://graph.microsoft.com/v1.0/users` to retrieve all users in your directory.
 
 In this case, only one user is returned. The expected output is a list of multiple users from the directory.
 
-:::image type="content" source="media/only-one-user-returned-by-microsoft-graph-list-users-api/list-users-query-result.png" alt-text="Image alt text." lightbox="media/only-one-user-returned-by-microsoft-graph-list-users-api/list-users-query-result.png" border="false":::
+:::image type="content" source="media/only-one-user-returned-by-microsoft-graph-list-users-api/list-users-query-result.png" alt-text="Screenshot that shows the query result." lightbox="media/only-one-user-returned-by-microsoft-graph-list-users-api/list-users-query-result.png" border="false":::
 
 ## Cause
 
