@@ -43,7 +43,7 @@ To resolve this issue, request access to the specified region or zone by followi
     ```
     
     > [!NOTE]
-    > Replace `<subscription>`, <SKU>, and `<locaiton>` accordingly.
+    > Replace `<subscription>`, `<SKU>`, and `<locaiton>` accordingly.
 2. Search for the requested SKU from the command output.
 3. If you see the information like the following, it indicates that the requested SKU has restrictions in some or all zones for your subscription:
 
