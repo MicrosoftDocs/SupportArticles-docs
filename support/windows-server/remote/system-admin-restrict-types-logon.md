@@ -37,7 +37,7 @@ This error might occur for the following reasons:
 
 ## Troubleshooting steps
 
-1. Add the user to the **Remote Desktop Users** group by using the following cmdlet:
+1. Open **lusrmgr.msc** and ensure the user is a member of **Remote Desktop Users**. If not, add the user to the **Remote Desktop Users** group by using the following cmdlet:
 
     ```Powershell
     Add-LocalGroupMember -Group "Remote Desktop Users" -Member "DOMAIN\Username"
@@ -45,23 +45,21 @@ This error might occur for the following reasons:
 
 2. Verify user rights and group membership.
 
-    - On the local machine (via **secpol.msc** and **lusrmgr.msc**):
+    - On the local machine:
 
-        - In the Local Security Policy snap-in (**secpol.msc**), go to **Local Policies** > **User Rights Assignment**:
+        In the Local Security Policy snap-in (**secpol.msc**), go to **Local Policies** > **User Rights Assignment**:
 
-            - Ensure the user or group is included in the following policies:
+        - Ensure the user or group is included in the following policies:
 
-                - **Access this computer from the network**
-                - **Allow log on locally**
-                - **Allow log on through Remote Desktop Services**
+            - **Access this computer from the network**
+            - **Allow log on locally**
+            - **Allow log on through Remote Desktop Services**
 
-            - Ensure the user or group isn't included in the following policies:
+        - Ensure the user or group isn't included in the following policies:
 
-                - **Deny access to this computer from the network**
-                - **Deny log on locally**
-                - **Deny log on through Remote Desktop Services**
-
-        - Open **lusrmgr.msc** and ensure the user is a member of **Remote Desktop Users**.
+            - **Deny access to this computer from the network**
+            - **Deny log on locally**
+            - **Deny log on through Remote Desktop Services**
 
     - On the domain controller (if the system is domain-joined):
 
@@ -74,7 +72,7 @@ This error might occur for the following reasons:
             - Ensure the user or group is a member of **Remote Desktop Users**.
             - Confirm group policy inheritance applies as expected.
 
-3. Check the effective Group Policy. Run the following command:
+3. Check the effective Group Policy. Run the following command to generate a report with the Resultant Set of Policy information:
 
     ```console
     gpresult /h report.html
@@ -82,7 +80,13 @@ This error might occur for the following reasons:
 
     Open the report and verify the relevant logon rights under **Computer Details**.
 
-4. Ensure NLA compatibility. You can temporarily disable NLA by using the following cmdlet if necessary:
+4. Ensure NLA compatibility:
+
+    - Use the latest version of the Remote Desktop client.
+    - Enable NLA on the remote computer.
+    - Configure user accounts with valid credentials, as NLA requires authentication before the session is established.
+
+    If necessary, temporarily disable NLA by using the following cmdlet:
 
     ```powershell
     Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" -Name "UserAuthentication" -Value 0
