@@ -287,20 +287,20 @@
       href: mfa/cannot-verify-account-reset-pwd.md
 - name: Microsoft Graph Users, Groups, and Entra APIs
   items: 
-   - name: Handling errors in Graph API requests with Invoke-RestMethod
-     href: app-integration/graph-api-error-handling-invoke-restmethod.md
-   - name: Troubleshoot Authorization RequestDenied error
-     href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
    - name: 403 error when adding a user to a group
      href: users-groups-entra-apis/authorization-requestdenied-403-error-add-user-group.md
    - name: 404 error when managing objects
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
-   - name: Use managed identities to call Graph APIs in VB.Net and C#
-     href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
-   - name: The memberOf API returns null values for properties
-     href: users-groups-entra-apis/memberof-api-returns-null-properties.md
+   - name: Handling errors in Graph API requests with Invoke-RestMethod
+     href: app-integration/graph-api-error-handling-invoke-restmethod.md
    - name: Only one user is returned when running List users API
      href: users-groups-entra-apis/only-one-user-returned-by-microsoft-graph-list-users-api.md
+   - name: The memberOf API returns null values for properties
+     href: users-groups-entra-apis/memberof-api-returns-null-properties.md
+   - name: Troubleshoot Authorization RequestDenied error
+     href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
+   - name: Use managed identities to call Graph APIs in VB.Net and C#
+     href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
    - name: Getting access denied errors (Authorization)
      items:
       - name: Add an owner to an application
