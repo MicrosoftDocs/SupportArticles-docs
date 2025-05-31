@@ -67,9 +67,9 @@ services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme, options =
 
 Here are a few examples of how to do this:
 
-**If you're using code similar to the following to add Microsoft Entra ID authentication**:
+If you're using code similar to the following to add Microsoft Entra ID authentication:
 
-```
+```csharp
 services.AddAuthentication(AzureADDefaults.AuthenticationScheme)
   .AddAzureAD(options => Configuration.Bind("AzureAd", options))
 ```
@@ -93,6 +93,7 @@ services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme, options =
     };
 });
 ```
+
 Your configuration in Startup.cs should look something like this:
 
 ```csharp
@@ -138,9 +139,9 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions()
 });
 ```
 
-**If you're using `Microsoft.Identity.Web` to add your Microsoft Entra ID configuration:**
+If you're using `Microsoft.Identity.Web` to add your Microsoft Entra ID configuration:
 
-```
+```csharp
 //…
 using Microsoft.Identity.Web;
 //…
@@ -171,7 +172,7 @@ public class Startup
 }			
 ```
 
-**If you're implementing your own custom `OpenIdConnectOptions` to configure Microsoft Entra ID authentication:**
+If you're implementing your own custom `OpenIdConnectOptions` to configure Microsoft Entra ID authentication:
 
 ```csharp
 services.Configure<OpenIdConnectOptions>(options =>
