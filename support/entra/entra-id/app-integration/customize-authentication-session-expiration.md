@@ -14,7 +14,7 @@ This customization can also help resolve AJAX issues (such as CORS errors to `lo
 
 ## For ASP.NET
 
-In most cases, In the `ConfigureAuth` method of your `Startup.Auth.cs` file, update the `app.UseCookieAuthentication()` method to:
+In the `ConfigureAuth` method of your `Startup.Auth.cs` file, update the `app.UseCookieAuthentication()` method to:
 
 ```csharp
 app.UseCookieAuthentication(new CookieAuthenticationOptions()
@@ -44,7 +44,7 @@ app.UseOpenIdConnectAuthentication(
 
 In ASP.NET Core, you need to add the `OnTokenValidated` event to update the ticket properties. This sets the ticket expiration time before the application redirects to Microsoft Entra ID for reauthentication.
 
-```
+```csharp
 services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme, options =>
 {
     // decouple the token lifetime from the Web App
@@ -74,7 +74,7 @@ services.AddAuthentication(AzureADDefaults.AuthenticationScheme)
   .AddAzureAD(options => Configuration.Bind("AzureAd", options))
 ```
 
-Then add the following codes:
+Then add the following code:
 
 ```csharp
 services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme, options =>
@@ -184,7 +184,7 @@ services.Configure<OpenIdConnectOptions>(options =>
 });
 ```
 
-If you're integrating a ASP.NET Core WS-Fed application, then it might look something like the following:
+If you're integrating an ASP.NET Core WS-Fed application, then it might look something like the following:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
