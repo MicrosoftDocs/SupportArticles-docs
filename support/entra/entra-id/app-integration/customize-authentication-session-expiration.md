@@ -6,7 +6,7 @@ ms.reviewer: willfid
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# Customize Middleware authentication ticket to extend user sign-in time
+# Customize Middleware authentication ticket to extend user sign-in duration
 
 Microsoft Entra ID tokens (ID tokens, access tokens, and SAML tokens) by default expire after one hour. ASP.NET and ASP.NET Core Middleware set their authentication ticket to the expiration of these tokens by default. If you don't want your web application to redirect users to Microsoft Entra ID to sign in again, you can customize the Middleware authentication ticket.
 
