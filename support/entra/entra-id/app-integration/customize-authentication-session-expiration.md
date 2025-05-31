@@ -1,14 +1,14 @@
 ---
-title: Update ASP.NET or ASP.NET Core App Session to Last Longer Than Entra ID Tokens
-description: Describes a problem in which Microsoft Entra ID is sending the token to an incorrect reply URL endpoint or localhost.
-ms.date: 08/26/2022
-ms.reviewer: bernawy
+title: Configure ASP.NET or ASP.NET Core App Session to Last Longer Than Entra ID Tokens
+description: Describes how to configure ASP.NET or ASP.NET Core App session to last longer than Microsoft Entra ID token.
+ms.date: 05/31/2025
+ms.reviewer: willfid
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# Update ASP.NET or ASP.NET Core App Session to Last Longer Than Azure AD Tokens
+# Customize Middleware authentication ticket to extend user sign-in time
 
-Microsoft Entra ID tokens (ID tokens, access tokens, and SAML tokens) by default last one hour. Asp.Net and Asp.Net Core Middleware set their authentication ticket to the expiration of these tokens by default. If you do not want your web application to redirect users to Microsoft Entra ID to sign in again, you can customize the Middleware authentication ticket.
+Microsoft Entra ID tokens (ID tokens, access tokens, and SAML tokens) by default expire after one hour. ASP.NET and ASP.NET Core Middleware set their authentication ticket to the expiration of these tokens by default. If you don't want your web application to redirect users to Microsoft Entra ID to sign in again, you can customize the Middleware authentication ticket.
 
 This customization can also help resolve AJAX issues (such as CORS errors to `login.microsoftonline.com`) where your app is both a Web App and Web API.
 
@@ -40,9 +40,9 @@ app.UseOpenIdConnectAuthentication(
 
 ```
 
-## For Asp.Net Core
+## For ASP.NET Core
 
-In ASP.NET Core, you need to add the `OnTokenValidated` event to update the ticket properties. This sets the ticket expiration time before the application redirects to Microsoft Entra ID for re-authentication.
+In ASP.NET Core, you need to add the `OnTokenValidated` event to update the ticket properties. This sets the ticket expiration time before the application redirects to Microsoft Entra ID for reauthentication.
 
 ```
 services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme, options =>
@@ -184,7 +184,7 @@ services.Configure<OpenIdConnectOptions>(options =>
 });
 ```
 
-If you're integrating a Asp.Net Core WS-Fed application, then it might look something like the following:
+If you're integrating a ASP.NET Core WS-Fed application, then it might look something like the following:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
