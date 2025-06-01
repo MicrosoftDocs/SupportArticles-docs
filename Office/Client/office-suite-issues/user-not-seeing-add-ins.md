@@ -1,5 +1,6 @@
 ---
 title: Users Don't See Add-ins
+description: Resolves issues that prevent your users from seeing add-ins in Microsoft 365 applications.
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -15,7 +16,6 @@ search.appverid:
   - MET150
   - MOE150
 ms.assetid: 060e809d-8cb6-427b-9e2f-dab67138acae
-description: Resolves issues that your users don't see add-ins in Microsoft 365 application.
 ms.date: 05/30/2025
 ---
 
