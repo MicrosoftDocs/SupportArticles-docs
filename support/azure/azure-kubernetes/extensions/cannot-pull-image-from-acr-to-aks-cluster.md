@@ -349,6 +349,39 @@ spec:
   nodeSelector:
     "kubernetes.io/os": linux
 ```
+## Cause 6: Kubelet exceeded the default pull rate limit for image
+When multiple jobs require pulling same images it can exceed Kubelet default pull rate limit, see [registryPullQPS](https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/#kubelet-config-k8s-io-v1beta1-KubeletConfiguration)
+
+> Failed to pull image "acrname.azurecr.io/repo/nginx:latest": **pull QPS exceeded**. This occurred for pod podname at 4/22/2025, 12:48:32.000 PM UTC.
+
+### Solution: 
+Change the  [```imagePullPolicy```](https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy) from ```Always``` to ```IfNotPresent``` to prevent unnecessary pulls.
+
+Here’s an example of how you can do this in your deployment YAML file:
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: myacr.azurecr.io/my-image:latest
+        imagePullPolicy: IfNotPresent
+```
+In this example:
+
+The imagePullPolicy: IfNotPresent ensures that the image is pulled from registry only if it is not already present on the node
+
 
 ## More information
 
