@@ -61,6 +61,7 @@ In this situation, you might also receive one of the following error messages:
 > - Device is not in required device state: compliant. Conditional Access policy requires a compliant device, and the device is not compliant. The user must enroll their device with an approved MDM provider like Intune.
 > - Device used during the authentication is disabled.
 > - Application needs to enforce Intune protection policies.
+> - Error from token exchange. Permission denied due to missing connection ACL.
 
 ### Troubleshooting steps
 
