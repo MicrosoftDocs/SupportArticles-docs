@@ -7,8 +7,8 @@ items:
     href: ./active-directory/active-directory-overview.md
   - name: Domain join issues
     items:
-    - name: '"The account is not authorized to login from this station" error'
-      href: ../windows-server/active-directory/account-not-authorized-login-from-this-station.md?context=/troubleshoot/windows-client/context/context
+    - name: 'Troubleshooting guidance: Active Directory domain join'
+      href: ../windows-server/active-directory/active-directory-domain-join-troubleshooting-guidance.md?context=/troubleshoot/windows-client/context/context
     - name: Cannot contect to the Internet or the domain
       href: ../windows-server/active-directory/cannot-connect-internet-domain.md?context=/troubleshoot/windows-client/context/context
     - name: Default limit to workstation numbers
@@ -43,12 +43,12 @@ items:
       href: ../windows-server/active-directory/status-code-0x6bf-0xc002001c.md?context=/troubleshoot/windows-client/context/context
     - name: Support boundaries for Active Directory over NAT
       href: ../windows-server/active-directory/support-for-active-directory-over-nat.md?context=/troubleshoot/windows-client/context/context
+    - name: '"The account is not authorized to login from this station" error'
+      href: ../windows-server/active-directory/account-not-authorized-login-from-this-station.md?context=/troubleshoot/windows-client/context/context
     - name: Troubleshoot authentication errors when joining computers to a domain
       href: ../windows-server/active-directory/domain-join-authentication-errors.md?context=/troubleshoot/windows-client/context/context
     - name: Troubleshoot networking errors when joining computers to a domain
       href: ../windows-server/active-directory/domain-join-networking-errors.md?context=/troubleshoot/windows-client/context/context
-    - name: 'Troubleshooting guidance: Active Directory domain join'
-      href: ../windows-server/active-directory/active-directory-domain-join-troubleshooting-guidance.md?context=/troubleshoot/windows-client/context/context
   - name: Schema update - known issues, best practices, workflow review
     items:
     - name: Error when checking domain object property
@@ -117,6 +117,8 @@ items:
       href: ./application-management/modern-apps-application-packages-reported-vulnerable.md
   - name: MSI
     items:
+    - name: 0x80070BC9 error when installing MSI package
+      href: ./application-management/0x80070bc9-error-while-installing-msi-package.md
     - name: Can't uninstall an application
       href: ./application-management/error-opening-installation-log-file.md
     - name: Enable Windows Installer logging
@@ -127,8 +129,6 @@ items:
       href: ./application-management/missing-windows-installer-cache.md
     - name: VersionNT value for Windows 10, Windows Server 2016, and Windows Server 2019
       href: ./application-management/versionnt-value-for-windows-10-server.md
-    - name: 0x80070BC9 error when installing MSI package
-      href: ./application-management/0x80070bc9-error-while-installing-msi-package.md
   - name: Multilingual User Interface (MUI) and Input Method Editor (IME)
     items:
     - name: Can not link TextService in Eudcedit.exe
@@ -225,6 +225,8 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/certs-missing-after-device-update.md
   - name: Smart card logon
     items:
+    - name: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
+      href: ./certificates-and-public-key-infrastructure-pki/0x6-error-invalid-handle-multithreaded-application.md
     - name: Can't authenticate because of an incorrect PIV smart card driver update
       href: ./certificates-and-public-key-infrastructure-pki/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
     - name: Code 31 for Microsoft USB CCID smart card reader
@@ -233,8 +235,6 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md
     - name: Registry keys for smart card PIN caching options not available
       href: ./certificates-and-public-key-infrastructure-pki/registry-keys-smart-card-pin-caching-options-not-available.md
-    - name: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
-      href: ./certificates-and-public-key-infrastructure-pki/0x6-error-invalid-handle-multithreaded-application.md
 - name: Group Policy
   items:
   - name: Group Policy
@@ -347,10 +347,10 @@ items:
       href: ./networking/configure-domain-suffix-search-list-domain-name-system-clients.md
     - name: DNS requests appear to be random
       href: ./networking/dns-requests-random-network-properties-change.md
-    - name: Troubleshoot DNS dynamic update issues
-      href: ./networking/troubleshooting-dns-dynamic-update-issues.md
     - name: Troubleshoot DNS client name resolution issues
       href: ./networking/troubleshoot-dns-client-resolution-issues.md
+    - name: Troubleshoot DNS dynamic update issues
+      href: ./networking/troubleshooting-dns-dynamic-update-issues.md
     - name: URI-encoding in UNC paths interpreted literally
       href: ./networking/url-encoding-unc-paths-not-url-decoded.md
   - name: Dynamic Host Configuration Protocol (DHCP)
@@ -401,10 +401,10 @@ items:
       href: ./networking/directaccess-clients-teredo-tunneling-not-connect-after-upgrade.md
     - name: Disconnect incoming VPN connection
       href: ./networking/disconnect-incoming-vpn-connection.md
-    - name: Error codes for dial-up or VPN connections
-      href: ./networking/error-codes-for-dial-up-vpn-connection.md
     - name: Error 721 when establishing a VPN connection
       href: ./networking/error-when-establishing-vpn-connection.md
+    - name: Error codes for dial-up or VPN connections
+      href: ./networking/error-codes-for-dial-up-vpn-connection.md
     - name: Modern Apps can't connect when using Check Point VPN
       href: ./networking/modern-apps-cannot-connect-check-point-vpn.md
     - name: Troubleshoot L2TP/IPSec VPN client connection
@@ -413,8 +413,6 @@ items:
       href: ./networking/windows-connection-manager-disconnects-wlan.md
   - name: TCP/IP communications
     items:
-    - name: RPC error troubleshooting guidance
-      href: ./networking/rpc-errors-troubleshooting.md
     - name: Additional gateways appear in persistent routes
       href: ./networking/incorrect-default-gateways-in-persistent-routes.md
     - name: Can't install SNMP and WMI SNMP Provider
@@ -433,12 +431,12 @@ items:
       href: ./networking/domain-joined-machines-cannot-detect-domain-profile.md
     - name: Enterprise APN lost after SIM change or MBN adapter error
       href: ./networking/enterprise-apn-lost-after-sim-change-mbn-adapter-error.md
+    - name: Error 0x80071779 when removing network components
+      href: ./networking/cannot-uninstall-client-for-microsoft-networks.md
     - name: Error 734 when establishing a dial-up connection
       href: ./networking/cannot-establish-dial-up-connection.md
     - name: Error "WSAENOBUFS (10055)"
       href: ./networking/connect-tcp-greater-than-5000-error-wsaenobufs-10055.md
-    - name: Error 0x80071779 when removing network components
-      href: ./networking/cannot-uninstall-client-for-microsoft-networks.md
     - name: How to disable network adapter power management
       href: ./networking/power-management-on-network-adapter.md
     - name: ICS doesn't work after computer or service restart
@@ -449,6 +447,8 @@ items:
       href: ./networking/network-gets-disconnected-computer-not-used-after-sign-in.md
     - name: Port Scanning Prevention Filter behavior
       href: ./networking/lots-disk-io-writes-wfpdiag-etl-log.md
+    - name: RPC error troubleshooting guidance
+      href: ./networking/rpc-errors-troubleshooting.md
     - name: Settings for minimizing periodic WAN traffic
       href: ./networking/settings-for-minimizing-periodic-wan-traffic.md
     - name: Set up your small business network
@@ -489,6 +489,8 @@ items:
       href: ./networking/internet-firewalls-prevent-browsing-file-sharing.md
   - name: Wireless networking and 802.1X authentication
     items:
+    - name: 802.1X authentication issues troubleshooting
+      href: ./networking/802-1x-authentication-issues-troubleshooting.md
     - name: Code 31 error for WAN Miniport device
       href: ./networking/code-31-error-device-manager-for-wan-miniport.md
     - name: Configure Wi-Fi Sense and Paid Wi-Fi Services
@@ -513,8 +515,6 @@ items:
       href: ./networking/wireless-devices-disabled-airplane-mode-off.md
     - name: Wireless network connectivity issues troubleshooting
       href: ./networking/wireless-network-connectivity-issues-troubleshooting.md
-    - name: 802.1X authentication issues troubleshooting
-      href: ./networking/802-1x-authentication-issues-troubleshooting.md
 - name: Performance
   items:
   - name: Performance
@@ -565,6 +565,8 @@ items:
       href: ./performance/read-small-memory-dump-file.md
     - name: Stop code when initializing PMem or NVDIMM
       href: ./performance/stop-code-initialize-pmem-nvdimm.md
+    - name: Stop error 0xE6 for a wireless device driver
+      href: ./performance/stop-error-0xe6-wireless-device-driver-dmar.md
     - name: Stop error 7B or Inaccessible_Boot_Device troubleshooting
       href: ./performance/stop-error-7b-or-inaccessible-boot-device-troubleshooting.md
     - name: Stop error on Lenovo ThinkPad with KB4568831 update
@@ -573,8 +575,6 @@ items:
       href: ./performance/stop-error-or-blue-screen-error-troubleshooting.md
     - name: Stop error when updating in-box Broadcom network adapter driver
       href: ./performance/stop-error-broadcom-network-driver-update.md
-    - name: Stop error 0xE6 for a wireless device driver
-      href: ./performance/stop-error-0xe6-wireless-device-driver-dmar.md
     - name: Tablet device creates only a minidump file
       href: ./performance/tablet-device-creates-minidump-file.md
     - name: Windows start-up issues advanced troubleshooting
@@ -671,10 +671,10 @@ items:
       href: ./printing/add-print-directory-feature.md
     - name: Alter printers that roam with roaming profiles
       href: ./printing/alter-printers-behavior-roaming-profiles.md
-    - name: Errors when you connect to a shared printer by using a CNAME record
-      href: ./printing/errors-connect-to-shared-printer-cname-record.md
     - name: Error 0x00000709 when you use CNAME record
       href: ./printing/error-0x00000709-use-cname-record.md
+    - name: Errors when you connect to a shared printer by using a CNAME record
+      href: ./printing/errors-connect-to-shared-printer-cname-record.md
     - name: Printing from Modern App creates large spool file
       href: ./printing/print-modern-app-creates-large-file.md
     - name: Windows 11 RPC connection updates for print
@@ -697,12 +697,12 @@ items:
       href: ./remote/description-remote-server-administration-tools.md
   - name: Connecting to a session or desktop
     items:
+    - name: 802.1x user authentication fails when using RDS connection
+      href: ./remote/cannot-use-802dot1x-user-authentication-connect-rds.md
     - name: Local computer behaves as if Windows logo key is pressed
       href: ./remote/local-computer-behaves-as-if-windows-logo-key-pressed.md
     - name: Use MSTSC or universal Remote Desktop client instead of RDMan
       href: ./remote/use-mstsc-universal-remote-desktop-client-instead-rdman.md
-    - name: 802.1x user authentication fails when using RDS connection
-      href: ./remote/cannot-use-802dot1x-user-authentication-connect-rds.md
   - name: Redirection (not printer)
     items:
     - name: Some USB devices aren't available
@@ -737,10 +737,10 @@ items:
       href: ./setup-upgrade-and-drivers/dynamic-link-library.md
     - name: Error when you access a USB storage device
       href: ./setup-upgrade-and-drivers/error-when-you-access-usb-storage-device.md
-    - name: Event ID 7000 or 7026 after starting a computer
-      href: ./setup-upgrade-and-drivers/system-log-event-id-7000-7026.md
     - name: Event ID 219 when a device is plugged into a Windows system
       href: ./setup-upgrade-and-drivers/event-id-219-when-device-plugged-in-windows-system.md
+    - name: Event ID 7000 or 7026 after starting a computer
+      href: ./setup-upgrade-and-drivers/system-log-event-id-7000-7026.md
     - name: Fail to attach PCI Express expansion chassis
       href: ./setup-upgrade-and-drivers/error-attach-pci-express-expansion-chassis.md
     - name: Firmware update failures in Windows 8.1
@@ -793,22 +793,22 @@ items:
       href: ./setup-upgrade-and-drivers/dism-apply-image-command-fails-error-code-5.md
     - name: Download and burn an ISO file from VLSC
       href: ./setup-upgrade-and-drivers/iso-file-on-vlsc.md
-    - name: Error "A fatal error occurred while trying to sysprep the machine"
-      href: ./setup-upgrade-and-drivers/fatal-error-occurred-sysprep-machine.md
     - name: Error 0x80042468 when creating a single partition
       href: ./setup-upgrade-and-drivers/error-when-creating-single-partition.md
     - name: Error 87 when a Windows 10 image is applied
       href: ./setup-upgrade-and-drivers/dism-error-87-apply-windows-10-image.md
+    - name: Error "A fatal error occurred while trying to sysprep the machine"
+      href: ./setup-upgrade-and-drivers/fatal-error-occurred-sysprep-machine.md
     - name: Event ID 10 is logged in Application log
       href: ./setup-upgrade-and-drivers/event-10-is-logged-in-application-log.md
+    - name: F5 doesn't refresh Explorer
+      href: ./setup-upgrade-and-drivers/f5-not-refresh-explorer-windows-pe-windows-10.md
     - name: Fail to perform an in-place upgrade
       href: ./setup-upgrade-and-drivers/windows-not-parse-process-unattend-answer-file.md
     - name: Fail to start an operating system on a 64-bit UEFI-based computer
       href: ./setup-upgrade-and-drivers/blinitializelibrary-failed-start-os-on-64-bit-uefi-based-computer.md
     - name: Fail to upgrade Windows 10 Enterprise edition
       href: ./setup-upgrade-and-drivers/contact-system-administrator-to-upgrade-windows.md
-    - name: F5 doesn't refresh Explorer
-      href: ./setup-upgrade-and-drivers/f5-not-refresh-explorer-windows-pe-windows-10.md
     - name: HAL_INITIALIZATION_FAILED error on VMWare VM
       href: ./setup-upgrade-and-drivers/installation-error-hal-initialization-failed.md
     - name: How to customize the default local user profile when creating an image
@@ -841,14 +841,6 @@ items:
       href: ./setup-upgrade-and-drivers/sysprep-fails-remove-or-update-store-apps.md
     - name: System restore points are disabled after upgrade
       href: ./setup-upgrade-and-drivers/system-restore-points-disabled.md
-    - name: Windows optional component setup tool
-      href: ./setup-upgrade-and-drivers/use-ocsetup-to-install-remove-components.md
-    - name: Windows setup log file locations
-      href: ./setup-upgrade-and-drivers/windows-setup-log-file-locations.md
-    - name: Windows SIM can't generate a catalog
-      href: ./setup-upgrade-and-drivers/windows-sim-unable-generate-catalog-error.md
-    - name: Windows 7 Upgrade Advisor tool failed to run
-      href: ./setup-upgrade-and-drivers/upgrade-advisor-tool-failed-to-run.md
     - name: Windows 10 upgrade error codes
       href: ./setup-upgrade-and-drivers/windows-10-upgrade-error-codes.md
     - name: Windows 10 upgrade issues troubleshooting
@@ -857,6 +849,14 @@ items:
       href: ./setup-upgrade-and-drivers/windows-10-upgrade-quick-fixes.md
     - name: Windows 10 upgrade resolution procedures
       href: ./setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures.md
+    - name: Windows 7 Upgrade Advisor tool failed to run
+      href: ./setup-upgrade-and-drivers/upgrade-advisor-tool-failed-to-run.md
+    - name: Windows optional component setup tool
+      href: ./setup-upgrade-and-drivers/use-ocsetup-to-install-remove-components.md
+    - name: Windows setup log file locations
+      href: ./setup-upgrade-and-drivers/windows-setup-log-file-locations.md
+    - name: Windows SIM can't generate a catalog
+      href: ./setup-upgrade-and-drivers/windows-sim-unable-generate-catalog-error.md
     - name: Windows Update blocked because of drive reassignment
       href: ./setup-upgrade-and-drivers/drive-reassignment-block-update.md
     - name: WinRE can't be built after deploying an image
@@ -1073,10 +1073,10 @@ items:
       href: ./system-management-components/rsat-client-missing-dns-server-tool.md
   - name: Task Scheduler
     items:
-    - name: Error when using the "/z" switch with the "Schtasks.exe" command
-      href: ./system-management-components/error-task-xml-missing-required-element-attribute.md
     - name: Error 0x80041323 when you run Scheduled tasks
       href: ./system-management-components/0x80041323-running-scheduled-tasks.md
+    - name: Error when using the "/z" switch with the "Schtasks.exe" command
+      href: ./system-management-components/error-task-xml-missing-required-element-attribute.md
     - name: Run programs automatically when a user logs on
       href: ./system-management-components/run-programs-automatically.md
     - name: Scheduled tasks fail with "Task schedular service is not available"
@@ -1161,10 +1161,10 @@ items:
     items:
     - name: Can't set a convenience PIN
       href: user-profiles-and-logon/cannot-configure-a-convenience-pin.md
-    - name: Windows Hello errors during PIN creation in Windows 10
-      href: ./user-profiles-and-logon/windows-hello-errors-during-pin-creation-in-windows-10.md
     - name: Retrieve certificate to troubleshoot Windows Hello for Business logon failures
       href: ./user-profiles-and-logon/retrieve-certificate-to-troubleshoot-windows-hello-for-business.md
+    - name: Windows Hello errors during PIN creation in Windows 10
+      href: ./user-profiles-and-logon/windows-hello-errors-during-pin-creation-in-windows-10.md
 - name: Virtualization
   items:
   - name: Virtualization
