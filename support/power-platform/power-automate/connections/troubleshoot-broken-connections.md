@@ -5,9 +5,8 @@ ms.custom: sap:Connections
 ms.workload: connectors
 author: nravindra-msft
 ms.author: nravindra
-ms.reviewer: angieandrews
-ms.date: 01/23/2025
-
+ms.reviewer: angieandrews, rehodger
+ms.date: 06/03/2025
 ---
 # Troubleshoot broken connections in Microsoft Power Platform
 
