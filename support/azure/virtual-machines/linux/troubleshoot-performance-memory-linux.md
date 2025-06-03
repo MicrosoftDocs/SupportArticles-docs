@@ -216,8 +216,6 @@ No swap space
 In the following log example, the malloc process requested a single 4 KB page (order=0). Although 4 KB page is small, the system was already under pressure. The log shows that memory was being allocated from the "Normal Zone."
 
   :::image type="content" source="media/troubleshoot-performance-memory-linux/lowmem-reserve.png" alt-text="Screenshot of the log example about malloc." lightbox="media/troubleshoot-performance-memory-linux/lowmem-reserve.png":::
-    
-![lowmem reserv](media/troubleshoot-performance-memory-linux/lowmem-reserve.png)
 
 The available memory (`free`) is 29,500 KB. However, the minimum watermark (`min`) is 34,628 KB. Because the system is below this threshold, only the kernel can use the remaining memory，and user-space applications are denied. The OOM killer is invoked at this point. It selects the process that has the highest `oom_score` and memory usage ('RSS'). In this example, the malloc process had an `oom_score` of 0 but also has the highest `RSS` (917760). Therefore, it's selected as the target for termination.
 
