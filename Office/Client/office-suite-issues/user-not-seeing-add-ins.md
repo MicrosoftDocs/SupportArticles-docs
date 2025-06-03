@@ -16,14 +16,14 @@ search.appverid:
   - MET150
   - MOE150
 ms.assetid: 060e809d-8cb6-427b-9e2f-dab67138acae
-ms.date: 05/30/2025
+ms.date: 06/02/2025
 ---
 
 # Users don't see add-ins
 
-After you [deploy add-ins](/microsoft-365/admin/manage/manage-deployment-of-add-ins) in Microsoft 365 applications, the add-ins should appear on all platforms that the add-ins support. However, in some cases, users don't see the add-ins. To troubleshoot the issue, refer to the appropriate section for the affected application.
-  
-## For Word, PowerPoint, Excel
+After you [deploy add-ins](/microsoft-365/admin/manage/manage-deployment-of-add-ins) in Microsoft 365 applications, the add-ins should appear on all platforms that the add-ins support.
+
+**For Word, PowerPoint, Excel**
 
 If the add-in supports add-in commands, the commands appear on the ribbon. The commands can appear on any tab. In the following example, the command for the People Graph add-in appears on the **Insert** tab. 
   
@@ -37,12 +37,12 @@ Then, select the **Admin Managed** tab at the top of the Office Add-ins window. 
   
 :::image type="content" source="./media/user-not-seeing-add-ins/refresh-if-your-add-in-is-not-present.png" alt-text="Screenshot of the Refresh command in the top-right corner." border="false":::
   
-## For Outlook
+**For Outlook**
 
 On the **Home** ribbon, select **Store** > **Admin-managed**.
   
 :::image type="content" source="./media/user-not-seeing-add-ins/store-button.png" alt-text="Screenshot of the Store button." border="false":::
-  
+
 If users can't see add-ins, use one of the following methods:
   
 - Use the Compatibility Checker.
