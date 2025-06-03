@@ -13,7 +13,7 @@ If a client application obtains a token from Microsoft Entra ID and sends it to 
 
 > IDX10501: Signature validation failed. Unable to match 'kid'
 
-This article explains how applications retrieve the public key for both [OAuth2](/entra/architecture/auth-oauth2) and [SAML](/entra/architecture/auth-saml) authorizations, and how to configure your application to avoid signature validation issues.
+To resolve token signature validation errors like IDX10501, make sure that your application is configured to retrieve the correct public key from Microsoft Entra ID. Use the appropriate metadata endpoint based on the application type and signing configuration.
 
 ## For OAuth2 resource applications
 
@@ -22,6 +22,8 @@ This section demonstrates how OAuth2 application validates an token issued from 
 1. Use an API client to perform an [Authorization Code flow](/entra/identity-platform/v2-oauth2-auth-code-flow) and acquire an token.
 1. Decode the token by using [jwt.ms](https://jwt.ms), and take a note of the `kid`.
 1. Depend on your Microsoft Entra ID application version, use the token as a Bearer token to call one of the following keys discovery endpoints. The API will return three keys. The `kid` you obtained in step 2 should match one of the keys returned by the keys discovery endpoint.
+
+    For v1.0 applications, use:
 
     ```http
     https://login.microsoftonline.com/common/discovery/keys
@@ -106,9 +108,5 @@ services.Configure<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme, opt
     options.MetadataAddress = "https://login.microsoftonline.com/<tenant>/.well-known/openid-configuration?appid=<SAML App ID>";
 });
 ```
-
-## Next Step
-
-
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
