@@ -124,19 +124,6 @@ public void ConfigureServices(IServiceCollection services)
 
   //...
 }
-
-```csharp
-app.UseCookieAuthentication(new CookieAuthenticationOptions()
-{
-  CookieManager = new Microsoft.Owin.Host.SystemWeb.SystemWebChunkingCookieManager(),
-  Provider = new CookieAuthenticationProvider()
-  {
-    OnResponseSignIn = (context) =>
-    {
-      context.Properties.ExpiresUtc = DateTimeOffset.UtcNow.AddHours(12);
-    }
-  }
-});
 ```
 
 If you're using `Microsoft.Identity.Web` to add your Microsoft Entra ID configuration:
