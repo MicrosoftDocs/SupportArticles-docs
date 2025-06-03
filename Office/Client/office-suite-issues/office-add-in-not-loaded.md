@@ -15,7 +15,7 @@ appliesto:
   - Microsoft 365
   - Office 2019
   - Office 2016
-ms.date: 05/30/2025
+ms.date: 06/02/2025
 ---
 
 # No add-ins loaded because of Group Policy settings
