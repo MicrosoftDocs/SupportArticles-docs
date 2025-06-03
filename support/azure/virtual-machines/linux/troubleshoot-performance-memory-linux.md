@@ -73,7 +73,7 @@ For more information about HugePages, see [HugeTLB Pages](https://docs.kernel.or
 
 ### Testing THP usage in a sample program
 
-To observe how THP is used by the system, you can run a small C program that allocates approximately 256 MB of RAM. The program uses the `madvise` system call to inform the kernel that the allocated memory should be treated as a single, contiguous, region-enabling THP, where supported.
+To observe how THP is used by the system, you can run a small C program that allocates approximately 256 MB of RAM. The program uses the `madvise` system call to tell the Linux kernel that this memory region should use huge pages if the THP is supported.
 
 ```C
 #include <stdio.h>
@@ -125,7 +125,7 @@ int main() {
 }
 ```
 
-If you the program, it isn't directly visible whether THP is used by the program.
+If you run the program, it isn't directly observable whether THP is used by the program.
 
 You can verify overall THP usage on the system by examining the `/proc/meminfo` file. Check the `AnonHugePages` field to determine the amount of memory that's using THP. This file provides only system-wide statistics. 
 
@@ -133,7 +133,7 @@ To learn whether a process uses THP, you have to inspect the `smaps` file in the
 
 ![THP usage by the sample C program](media/troubleshoot-performance-memory-linux/thp.png)
 
-This example shows that a large memory segment was allocated and marked as `THPeligible`(THP are in use). By using `madvice syscall`, the allocation of this memory block is much more efficient, as one could do with HugePages. Depending on the size of the allocation, the kernel might assign either standard 4 KB pages or larger contiguous blocks. This optimization can improve performance for memory-intensive applications.
+This example shows that a large memory segment was allocated and marked as `THPeligible`(THP are in use). By using `madvice syscall`, the allocation of this memory block is much more efficient. You could achieve the same efficiency by using Huge Pages. Depending on the size of the allocation, the kernel might assign either standard 4 KB pages or larger contiguous blocks. This optimization can improve performance for memory-intensive applications.
 
 For more information, see [Transparent Hugepage Support](https://www.kernel.org/doc/html/latest/admin-guide/mm/transhuge.html).
 
@@ -157,7 +157,7 @@ Overcommitment is an important design choice that can seriously affect system pe
 - 'Always overcommit'
 - 'Don't overcommit'
   
-By default, the `Heuristic` scheme is used. This mode offers a balanced trade-off between always allowing memory overcommitment and strictly denying it. For more information, see the [kernel documentation](https://www.kernel.org/doc/Documentation/vm/overcommit-accounting).
+By default, the system uses the `Heuristic` scheme. This mode offers a balanced trade-off between always allowing memory overcommitment and strictly denying it. For more information, see the [kernel documentation](https://www.kernel.org/doc/Documentation/vm/overcommit-accounting).
 
 An incorrect Overcommitment setting might prevent memory pages from allocating memory. Potentially, this condition could hinder new process creation or prevent internal kernel structures from acquiring sufficient memory.
 
@@ -249,4 +249,6 @@ This output displays all running processes and their statistics. Another approac
 
 Resident Set Size (RSS) is the portion of process memory that's held in RAM (non-swapped physical memory). In contrast, Virtual Set Size（VSZ）represents the total amount of memory that the process reserves, including memory that isn’t committed. `Committed memory` refers to pages that are actually written to physical memory. If you're trying to identify which processes are using the most physical memory (including swap), focus on the `RSS` column. In the example output, the `snapd` process appears to use lots of memory, but its `RSS` value is low. The `malloc` process has similar `VSZ` and `RSS` values that indicate that it’s actively using more than 1.3 GB of memory.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../.../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
