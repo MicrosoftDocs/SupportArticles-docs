@@ -42,7 +42,7 @@ app.UseOpenIdConnectAuthentication(
 
 ## For ASP.NET Core
 
-In ASP.NET Core, you have to add the `OnTokenValidated` event to update the ticket properties. This change sets the ticket expiration time to be before the application redirects to Microsoft Entra ID for reauthentication.
+In ASP.NET Core, you have to add the `OnTokenValidated` event to update the ticket properties. This addition sets the ticket expiration time to occur before the application redirects to Microsoft Entra ID for reauthentication.
 
 ```csharp
 services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme, options =>
@@ -210,6 +210,6 @@ public void ConfigureServices(IServiceCollection services)
 These settings control the expiration of the authentication ticket that determines how long a user stays signed in. You can configure this expiration to suit your requirement.
 
 > [!NOTE]
-> If you modify the ticket expiration, users may still have access to your application even if they've been deleted or disabled in Microsoft Entra ID,. This condition remains true until the ticket expires.
+> If you modify the ticket expiration, users might still have access to your application even if they're deleted or disabled in Microsoft Entra ID. This condition remains true until the ticket expires.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
