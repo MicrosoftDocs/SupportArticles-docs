@@ -9,17 +9,17 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # IDX10501 Signature Validation Errors in Microsoft Entra ID applications
 
-When an application integrated with Microsoft Entra ID receives a token, it must validate the token's signature by using the public key of the certificate that signed the token. If the application cannot find the correct key identifier (kid), it may throw an error like:
+If a client application obtains a token from Microsoft Entra ID and sends it to a resource (API) application, the resource application must validate the token. It does this by using the public key from the certificate that was used to sign the token. If the application cannot find the correct key identifier (kid), it may throw an error like:
 
 > IDX10501: Signature validation failed. Unable to match 'kid'
 
-This article explains how applications retrieve the correct public key for both [OAuth2](/entra/architecture/auth-oauth2) and [SAML](/entra/architecture/auth-saml) authorizations, and how to configure your application to avoid signature validation issues.
+This article explains how applications retrieve the public key for both [OAuth2](/entra/architecture/auth-oauth2) and [SAML](/entra/architecture/auth-saml) authorizations, and how to configure your application to avoid signature validation issues.
 
-## For OAuth2 Applications
+## For OAuth2 resource applications
 
-This section demonstrates how OAuth2 application validates an access token issued from Microsoft Entra ID:
+This section demonstrates how OAuth2 application validates an token issued from Microsoft Entra ID:
 
-1. Use an API client to perform an [Authorization Code flow](/entra/identity-platform/v2-oauth2-auth-code-flow) and acquire an access token.
+1. Use an API client to perform an [Authorization Code flow](/entra/identity-platform/v2-oauth2-auth-code-flow) and acquire an token.
 1. Decode the token by using [jwt.ms](https://jwt.ms), and take a note of the `kid`.
 1. Depend on your Microsoft Entra ID application version, use the token as a Bearer token to call one of the following keys discovery endpoints. The API will return three keys. The `kid` you obtained in step 2 should match one of the keys returned by the keys discovery endpoint.
 
@@ -32,7 +32,7 @@ This section demonstrates how OAuth2 application validates an access token issue
     https://login.microsoftonline.com/common/discovery/v2.0/keys
     ```
 
-## For SAML Applications
+## For SAML resource applications
 
 For SAML apps like `SharepointSAMLTest`, Microsoft Entra ID uses the app-specific certificate to sign tokens. To retrieve the correct public key, follow these steps:
 
@@ -107,7 +107,8 @@ services.Configure<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme, opt
 });
 ```
 
-## Conclusion
+## Next Step
+
 
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
