@@ -13,7 +13,7 @@ If a client application obtains a token from Microsoft Entra ID and sends it to 
 
 > IDX10501: Signature validation failed. Unable to match 'kid'
 
-To resolve token signature validation errors like IDX10501, make sure that your application is configured to retrieve the correct public key from Microsoft Entra ID. Use the appropriate metadata endpoint based on the application type and signing configuration.
+To resolve token signature validation errors like IDX10501, make sure that your application is configured to retrieve the correct public key from Microsoft Entra ID. Use the appropriate discovery or metadata endpoint based on the application type and signing configuration.
 
 ## For OAuth2 resource applications
 
