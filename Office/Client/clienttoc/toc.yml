@@ -547,7 +547,7 @@
           href: ../office-suite-issues/missing-fonts-opening-documents.md
         - name: Mobile viewing PDF files with Office Web Apps
           href: ../office-suite-issues/mobile-viewing-pdf-files.md
-        - name: No Add-ins loaded due to group policy settings 
+        - name: No Add-ins loaded due to Group Policy settings
           href: ../office-suite-issues/office-add-in-not-loaded.md
         - name: No default mail client
           href: ../office-suite-issues/no-default-mail-client-error.md
@@ -597,7 +597,7 @@
           href: ../office-suite-issues/use-multiple-versions-of-office.md
         - name: Use GetObject and CreateObject with automation server
           href: ../office-suite-issues/getobject-createobject-behavior.md
-        - name: Users don't see Office add-ins
+        - name: Users don't see add-ins
           href: ../office-suite-issues/user-not-seeing-add-ins.md  
         - name: View error signatures for Office
           href: ../office-suite-issues/view-error-signatures.md
