@@ -17,7 +17,7 @@ This article explains how applications retrieve the correct public key for both 
 
 ## For OAuth2 Applications
 
-This section demonstrate how OAuth2 Application validate an access token issued from Microsoft Entra ID:
+This section demonstrates how OAuth2 application validates an access token issued from Microsoft Entra ID:
 
 1. Use an API client to perform an [Authorization Code flow](/entra/identity-platform/v2-oauth2-auth-code-flow) and acquire an access token.
 1. Decode the token by using [jwt.ms](https://jwt.ms), and take a note of the `kid`.
