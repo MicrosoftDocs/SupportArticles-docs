@@ -32,7 +32,7 @@ To enable memory dump setting, follow these steps:
 1. In **Control Panel**, select **System and Security** > **System**.
 2. Select **Advanced system settings**, and then select the **Advanced** tab.
 3. In the **Startup and Recovery** area, select **Settings**.
-4. Make sure that **Kernel memory dump** or **Complete memory dump** is selected under **Writing Debugging Information**.
+4. Make sure that **Kernel memory dump**, **Automatic memory dump** or **Complete memory dump** is selected under **Writing Debugging Information**.
 5. Restart the computer.
 
 > [!NOTE]
