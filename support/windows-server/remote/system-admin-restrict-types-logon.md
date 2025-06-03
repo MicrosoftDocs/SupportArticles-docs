@@ -6,7 +6,6 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, akastha, narafa, v-lianna
-contributors: akhil1199 
 ms.custom:
 - sap:remote desktop services and terminal services\session connectivity
 - pcy:WinComm User Experience
