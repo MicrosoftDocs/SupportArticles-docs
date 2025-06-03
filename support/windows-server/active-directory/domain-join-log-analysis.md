@@ -22,248 +22,251 @@ The following sample is a typical `Netsetup.log` file covering a successful AD d
 
 See the lines starting with **//** for explanations.
 
+> [!NOTE]
+> Timestamps are removed from the example log, because they are not relevant to the explanation of the behavior.
+
 ```output
-mm/dd/yyyy HH:MM:SS:DDD -----------------------------------------------------------------
-mm/dd/yyyy HH:MM:SS:DDD NetpValidateName: checking to see if 'PC8' is valid as type 1 name
-mm/dd/yyyy HH:MM:SS:DDD NetpCheckNetBiosNameNotInUse for 'PC8' [MACHINE] returned 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpValidateName: name 'PC8' is valid for type 1
-mm/dd/yyyy HH:MM:SS:DDD -----------------------------------------------------------------
-mm/dd/yyyy HH:MM:SS:DDD NetpValidateName: checking to see if 'PC8' is valid as type 5 name
-mm/dd/yyyy HH:MM:SS:DDD NetpValidateName: name 'PC8' is valid for type 5
+-----------------------------------------------------------------
+NetpValidateName: checking to see if 'PC8' is valid as type 1 name
+NetpCheckNetBiosNameNotInUse for 'PC8' [MACHINE] returned 0x0
+NetpValidateName: name 'PC8' is valid for type 1
+-----------------------------------------------------------------
+NetpValidateName: checking to see if 'PC8' is valid as type 5 name
+NetpValidateName: name 'PC8' is valid for type 5
 
 //At least one domain controller (DC) of the specified domain is located and it's qualified for AD join operation. User is prompted in GUI for a valid domain user credential.
-mm/dd/yyyy HH:MM:SS:DDD -----------------------------------------------------------------
-mm/dd/yyyy HH:MM:SS:DDD NetpValidateName: checking to see if 'contoso.local' is valid as type 3 name
-mm/dd/yyyy HH:MM:SS:DDD NetpCheckDomainNameIsValid [ Exists ] for 'contoso.local' returned 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpValidateName: name 'contoso.local' is valid for type 3
+-----------------------------------------------------------------
+NetpValidateName: checking to see if 'contoso.local' is valid as type 3 name
+NetpCheckDomainNameIsValid [ Exists ] for 'contoso.local' returned 0x0
+NetpValidateName: name 'contoso.local' is valid for type 3
 
 //Activity begins after a valid domain user credential is provided in GUI.
-mm/dd/yyyy HH:MM:SS:DDD -----------------------------------------------------------------
-mm/dd/yyyy HH:MM:SS:DDD NetpDoDomainJoin
-mm/dd/yyyy HH:MM:SS:DDD NetpDoDomainJoin: using current computer names
-mm/dd/yyyy HH:MM:SS:DDD NetpDoDomainJoin: NetpGetComputerNameEx(NetBios) returned 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpDoDomainJoin: NetpGetComputerNameEx(DnsHostName) returned 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpMachineValidToJoin: 'PC8'
-mm/dd/yyyy HH:MM:SS:DDD   OS Version: 10.0
-mm/dd/yyyy HH:MM:SS:DDD   Build number: 26100 (26100.ge_release.240331-1435)
-mm/dd/yyyy HH:MM:SS:DDD   SKU: Windows 11 Enterprise
-mm/dd/yyyy HH:MM:SS:DDD   Architecture: 64-bit (AMD64)
-mm/dd/yyyy HH:MM:SS:DDD NetpMachineValidToJoin: status: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomain
-mm/dd/yyyy HH:MM:SS:DDD   HostName: PC8
-mm/dd/yyyy HH:MM:SS:DDD   NetbiosName: PC8
-mm/dd/yyyy HH:MM:SS:DDD   Domain: contoso.local
-mm/dd/yyyy HH:MM:SS:DDD   MachineAccountOU: (NULL)
-mm/dd/yyyy HH:MM:SS:DDD   Account: contoso\puser2
-mm/dd/yyyy HH:MM:SS:DDD   Options: 0x25
-mm/dd/yyyy HH:MM:SS:DDD NetpValidateName: checking to see if 'contoso.local' is valid as type 3 name
-mm/dd/yyyy HH:MM:SS:DDD NetpCheckDomainNameIsValid [ Exists ] for 'contoso.local' returned 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpValidateName: name 'contoso.local' is valid for type 3
-mm/dd/yyyy HH:MM:SS:DDD NetpDsGetDcName: trying to find DC in domain 'contoso.local', flags: 0x40001010
-mm/dd/yyyy HH:MM:SS:DDD NetpDsGetDcName: failed to find a DC having account 'PC8$': 0x525, last error is 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpDsGetDcName: status of verifying DNS A record name resolution for 'DC2.contoso.local': 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpDsGetDcName: found DC '\\DC2.contoso.local' in the specified domain
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpDisableIDNEncoding: using FQDN contoso.local from dcinfo
-mm/dd/yyyy HH:MM:SS:DDD NetpDisableIDNEncoding: DnsDisableIdnEncoding(UNTILREBOOT) on 'contoso.local' succeeded
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: NetpDisableIDNEncoding returned: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: status of connecting to dc '\\DC2.contoso.local': 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpGetDnsHostName: PrimaryDnsSuffix defaulted to DNS domain name: contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpProvisionComputerAccount:
-mm/dd/yyyy HH:MM:SS:DDD   lpDomain: contoso.local
-mm/dd/yyyy HH:MM:SS:DDD   lpHostName: PC8
-mm/dd/yyyy HH:MM:SS:DDD   lpMachineAccountOU: (NULL)
-mm/dd/yyyy HH:MM:SS:DDD   lpDcName: DC2.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD   lpMachinePassword: (null)
-mm/dd/yyyy HH:MM:SS:DDD   lpAccount: contoso\puser2
-mm/dd/yyyy HH:MM:SS:DDD   lpPassword: (non-null)
-mm/dd/yyyy HH:MM:SS:DDD   dwJoinOptions: 0x25
-mm/dd/yyyy HH:MM:SS:DDD   dwOptions: 0x40000003
-mm/dd/yyyy HH:MM:SS:DDD NetpLdapBind: Verified minimum encryption strength on DC2.contoso.local: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpLdapGetLsaPrimaryDomain: reading domain data
-mm/dd/yyyy HH:MM:SS:DDD NetpGetNCData: Reading NC data
-mm/dd/yyyy HH:MM:SS:DDD NetpGetDomainData: Lookup domain data for: DC=contoso,DC=local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetDomainData: Lookup crossref data for: CN=Partitions,CN=Configuration,DC=contoso,DC=local
-mm/dd/yyyy HH:MM:SS:DDD NetpLdapGetLsaPrimaryDomain: result of retrieving domain data: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpCheckForDomainSIDCollision: returning 0x0(0).
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Cracking DNS domain name contoso.local/ into Netbios on \\DC2.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Crack results:   name = CONTOSO\
+-----------------------------------------------------------------
+NetpDoDomainJoin
+NetpDoDomainJoin: using current computer names
+NetpDoDomainJoin: NetpGetComputerNameEx(NetBios) returned 0x0
+NetpDoDomainJoin: NetpGetComputerNameEx(DnsHostName) returned 0x0
+NetpMachineValidToJoin: 'PC8'
+  OS Version: 10.0
+  Build number: 26100 (26100.ge_release.240331-1435)
+  SKU: Windows 11 Enterprise
+  Architecture: 64-bit (AMD64)
+NetpMachineValidToJoin: status: 0x0
+NetpJoinDomain
+  HostName: PC8
+  NetbiosName: PC8
+  Domain: contoso.local
+  MachineAccountOU: (NULL)
+  Account: contoso\puser2
+  Options: 0x25
+NetpValidateName: checking to see if 'contoso.local' is valid as type 3 name
+NetpCheckDomainNameIsValid [ Exists ] for 'contoso.local' returned 0x0
+NetpValidateName: name 'contoso.local' is valid for type 3
+NetpDsGetDcName: trying to find DC in domain 'contoso.local', flags: 0x40001010
+NetpDsGetDcName: failed to find a DC having account 'PC8$': 0x525, last error is 0x0
+NetpDsGetDcName: status of verifying DNS A record name resolution for 'DC2.contoso.local': 0x0
+NetpDsGetDcName: found DC '\\DC2.contoso.local' in the specified domain
+NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
+NetpDisableIDNEncoding: using FQDN contoso.local from dcinfo
+NetpDisableIDNEncoding: DnsDisableIdnEncoding(UNTILREBOOT) on 'contoso.local' succeeded
+NetpJoinDomainOnDs: NetpDisableIDNEncoding returned: 0x0
+NetpJoinDomainOnDs: status of connecting to dc '\\DC2.contoso.local': 0x0
+NetpGetDnsHostName: PrimaryDnsSuffix defaulted to DNS domain name: contoso.local
+NetpProvisionComputerAccount:
+  lpDomain: contoso.local
+  lpHostName: PC8
+  lpMachineAccountOU: (NULL)
+  lpDcName: DC2.contoso.local
+  lpMachinePassword: (null)
+  lpAccount: contoso\puser2
+  lpPassword: (non-null)
+  dwJoinOptions: 0x25
+  dwOptions: 0x40000003
+NetpLdapBind: Verified minimum encryption strength on DC2.contoso.local: 0x0
+NetpLdapGetLsaPrimaryDomain: reading domain data
+NetpGetNCData: Reading NC data
+NetpGetDomainData: Lookup domain data for: DC=contoso,DC=local
+NetpGetDomainData: Lookup crossref data for: CN=Partitions,CN=Configuration,DC=contoso,DC=local
+NetpLdapGetLsaPrimaryDomain: result of retrieving domain data: 0x0
+NetpCheckForDomainSIDCollision: returning 0x0(0).
+NetpGetComputerObjectDn: Cracking DNS domain name contoso.local/ into Netbios on \\DC2.contoso.local
+NetpGetComputerObjectDn: Crack results:   name = CONTOSO\
 
 //Check if a computer object with the same name already exists or not. If yes, it's the account reuse scenario.
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Cracking account name CONTOSO\PC8$ on \\DC2.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Crack results:   Account does not exist
-mm/dd/yyyy HH:MM:SS:DDD NetpCreateComputerObjectInDs: NetpGetComputerObjectDn failed: 0x534
-mm/dd/yyyy HH:MM:SS:DDD NetpProvisionComputerAccount: LDAP creation failed: 0x534
-mm/dd/yyyy HH:MM:SS:DDD ldap_unbind status: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinCreatePackagePart: status:0x534.
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: Function exits with status of: 0x534
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: status of disconnecting from '\\DC2.contoso.local': 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'contoso.local' returned 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: NetpResetIDNEncoding on 'contoso.local': 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpDoDomainJoin: status: 0x534
-mm/dd/yyyy HH:MM:SS:DDD -----------------------------------------------------------------
-mm/dd/yyyy HH:MM:SS:DDD NetpDoDomainJoin
-mm/dd/yyyy HH:MM:SS:DDD NetpDoDomainJoin: using current computer names
-mm/dd/yyyy HH:MM:SS:DDD NetpDoDomainJoin: NetpGetComputerNameEx(NetBios) returned 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpDoDomainJoin: NetpGetComputerNameEx(DnsHostName) returned 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpMachineValidToJoin: 'PC8'
-mm/dd/yyyy HH:MM:SS:DDD   OS Version: 10.0
-mm/dd/yyyy HH:MM:SS:DDD   Build number: 26100 (26100.ge_release.240331-1435)
-mm/dd/yyyy HH:MM:SS:DDD   SKU: Windows 11 Enterprise
-mm/dd/yyyy HH:MM:SS:DDD   Architecture: 64-bit (AMD64)
-mm/dd/yyyy HH:MM:SS:DDD NetpMachineValidToJoin: status: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomain
-mm/dd/yyyy HH:MM:SS:DDD   HostName: PC8
-mm/dd/yyyy HH:MM:SS:DDD   NetbiosName: PC8
-mm/dd/yyyy HH:MM:SS:DDD   Domain: contoso.local
-mm/dd/yyyy HH:MM:SS:DDD   MachineAccountOU: (NULL)
-mm/dd/yyyy HH:MM:SS:DDD   Account: contoso\puser2
-mm/dd/yyyy HH:MM:SS:DDD   Options: 0x27
-mm/dd/yyyy HH:MM:SS:DDD NetpValidateName: checking to see if 'contoso.local' is valid as type 3 name
-mm/dd/yyyy HH:MM:SS:DDD NetpCheckDomainNameIsValid [ Exists ] for 'contoso.local' returned 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpValidateName: name 'contoso.local' is valid for type 3
-mm/dd/yyyy HH:MM:SS:DDD NetpDsGetDcName: trying to find DC in domain 'contoso.local', flags: 0x40001010
-mm/dd/yyyy HH:MM:SS:DDD NetpDsGetDcName: failed to find a DC having account 'PC8$': 0x525, last error is 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpDsGetDcName: status of verifying DNS A record name resolution for 'DC2.contoso.local': 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpDsGetDcName: found DC '\\DC2.contoso.local' in the specified domain
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpDisableIDNEncoding: using FQDN contoso.local from dcinfo
-mm/dd/yyyy HH:MM:SS:DDD NetpDisableIDNEncoding: DnsDisableIdnEncoding(UNTILREBOOT) on 'contoso.local' succeeded
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: NetpDisableIDNEncoding returned: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: status of connecting to dc '\\DC2.contoso.local': 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpGetDnsHostName: PrimaryDnsSuffix defaulted to DNS domain name: contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpProvisionComputerAccount:
-mm/dd/yyyy HH:MM:SS:DDD   lpDomain: contoso.local
-mm/dd/yyyy HH:MM:SS:DDD   lpHostName: PC8
-mm/dd/yyyy HH:MM:SS:DDD   lpMachineAccountOU: (NULL)
-mm/dd/yyyy HH:MM:SS:DDD   lpDcName: DC2.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD   lpMachinePassword: (null)
-mm/dd/yyyy HH:MM:SS:DDD   lpAccount: contoso\puser2
-mm/dd/yyyy HH:MM:SS:DDD   lpPassword: (non-null)
-mm/dd/yyyy HH:MM:SS:DDD   dwJoinOptions: 0x27
-mm/dd/yyyy HH:MM:SS:DDD   dwOptions: 0x40000003
-mm/dd/yyyy HH:MM:SS:DDD NetpLdapBind: Verified minimum encryption strength on DC2.contoso.local: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpLdapGetLsaPrimaryDomain: reading domain data
-mm/dd/yyyy HH:MM:SS:DDD NetpGetNCData: Reading NC data
-mm/dd/yyyy HH:MM:SS:DDD NetpGetDomainData: Lookup domain data for: DC=contoso,DC=local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetDomainData: Lookup crossref data for: CN=Partitions,CN=Configuration,DC=contoso,DC=local
-mm/dd/yyyy HH:MM:SS:DDD NetpLdapGetLsaPrimaryDomain: result of retrieving domain data: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpCheckForDomainSIDCollision: returning 0x0(0).
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Cracking DNS domain name contoso.local/ into Netbios on \\DC2.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Crack results:   name = CONTOSO\
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Cracking account name CONTOSO\PC8$ on \\DC2.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Crack results:   Account does not exist
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Cracking Netbios domain name CONTOSO\ into root DN on \\DC2.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Crack results:   name = DC=contoso,DC=local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Got DN CN=PC8,CN=Computers,DC=contoso,DC=local from the default computer container
-mm/dd/yyyy HH:MM:SS:DDD NetpGetADObjectOwnerAttributes: Looking up attributes for machine account: CN=PC8,CN=Computers,DC=contoso,DC=local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetADObjectOwnerAttributes: Ldap Search failed: 8240
-mm/dd/yyyy HH:MM:SS:DDD NetpCheckIfAccountShouldBeReused: Computer Object does not exist in OU.
-mm/dd/yyyy HH:MM:SS:DDD NetpCheckIfAccountShouldBeReused:fReuseAllowed: TRUE, NetStatus:0x2030
+NetpGetComputerObjectDn: Cracking account name CONTOSO\PC8$ on \\DC2.contoso.local
+NetpGetComputerObjectDn: Crack results:   Account does not exist
+NetpCreateComputerObjectInDs: NetpGetComputerObjectDn failed: 0x534
+NetpProvisionComputerAccount: LDAP creation failed: 0x534
+ldap_unbind status: 0x0
+NetpJoinCreatePackagePart: status:0x534.
+NetpJoinDomainOnDs: Function exits with status of: 0x534
+NetpJoinDomainOnDs: status of disconnecting from '\\DC2.contoso.local': 0x0
+NetpResetIDNEncoding: DnsDisableIdnEncoding(RESETALL) on 'contoso.local' returned 0x0
+NetpJoinDomainOnDs: NetpResetIDNEncoding on 'contoso.local': 0x0
+NetpDoDomainJoin: status: 0x534
+-----------------------------------------------------------------
+NetpDoDomainJoin
+NetpDoDomainJoin: using current computer names
+NetpDoDomainJoin: NetpGetComputerNameEx(NetBios) returned 0x0
+NetpDoDomainJoin: NetpGetComputerNameEx(DnsHostName) returned 0x0
+NetpMachineValidToJoin: 'PC8'
+  OS Version: 10.0
+  Build number: 26100 (26100.ge_release.240331-1435)
+  SKU: Windows 11 Enterprise
+  Architecture: 64-bit (AMD64)
+NetpMachineValidToJoin: status: 0x0
+NetpJoinDomain
+  HostName: PC8
+  NetbiosName: PC8
+  Domain: contoso.local
+  MachineAccountOU: (NULL)
+  Account: contoso\puser2
+  Options: 0x27
+NetpValidateName: checking to see if 'contoso.local' is valid as type 3 name
+NetpCheckDomainNameIsValid [ Exists ] for 'contoso.local' returned 0x0
+NetpValidateName: name 'contoso.local' is valid for type 3
+NetpDsGetDcName: trying to find DC in domain 'contoso.local', flags: 0x40001010
+NetpDsGetDcName: failed to find a DC having account 'PC8$': 0x525, last error is 0x0
+NetpDsGetDcName: status of verifying DNS A record name resolution for 'DC2.contoso.local': 0x0
+NetpDsGetDcName: found DC '\\DC2.contoso.local' in the specified domain
+NetpJoinDomainOnDs: NetpDsGetDcName returned: 0x0
+NetpDisableIDNEncoding: using FQDN contoso.local from dcinfo
+NetpDisableIDNEncoding: DnsDisableIdnEncoding(UNTILREBOOT) on 'contoso.local' succeeded
+NetpJoinDomainOnDs: NetpDisableIDNEncoding returned: 0x0
+NetpJoinDomainOnDs: status of connecting to dc '\\DC2.contoso.local': 0x0
+NetpGetDnsHostName: PrimaryDnsSuffix defaulted to DNS domain name: contoso.local
+NetpProvisionComputerAccount:
+  lpDomain: contoso.local
+  lpHostName: PC8
+  lpMachineAccountOU: (NULL)
+  lpDcName: DC2.contoso.local
+  lpMachinePassword: (null)
+  lpAccount: contoso\puser2
+  lpPassword: (non-null)
+  dwJoinOptions: 0x27
+  dwOptions: 0x40000003
+NetpLdapBind: Verified minimum encryption strength on DC2.contoso.local: 0x0
+NetpLdapGetLsaPrimaryDomain: reading domain data
+NetpGetNCData: Reading NC data
+NetpGetDomainData: Lookup domain data for: DC=contoso,DC=local
+NetpGetDomainData: Lookup crossref data for: CN=Partitions,CN=Configuration,DC=contoso,DC=local
+NetpLdapGetLsaPrimaryDomain: result of retrieving domain data: 0x0
+NetpCheckForDomainSIDCollision: returning 0x0(0).
+NetpGetComputerObjectDn: Cracking DNS domain name contoso.local/ into Netbios on \\DC2.contoso.local
+NetpGetComputerObjectDn: Crack results:   name = CONTOSO\
+NetpGetComputerObjectDn: Cracking account name CONTOSO\PC8$ on \\DC2.contoso.local
+NetpGetComputerObjectDn: Crack results:   Account does not exist
+NetpGetComputerObjectDn: Cracking Netbios domain name CONTOSO\ into root DN on \\DC2.contoso.local
+NetpGetComputerObjectDn: Crack results:   name = DC=contoso,DC=local
+NetpGetComputerObjectDn: Got DN CN=PC8,CN=Computers,DC=contoso,DC=local from the default computer container
+NetpGetADObjectOwnerAttributes: Looking up attributes for machine account: CN=PC8,CN=Computers,DC=contoso,DC=local
+NetpGetADObjectOwnerAttributes: Ldap Search failed: 8240
+NetpCheckIfAccountShouldBeReused: Computer Object does not exist in OU.
+NetpCheckIfAccountShouldBeReused:fReuseAllowed: TRUE, NetStatus:0x2030
 
 //Computer object is created.
-mm/dd/yyyy HH:MM:SS:DDD NetpModifyComputerObjectInDs: Initial attribute values:
-mm/dd/yyyy HH:MM:SS:DDD     objectClass  =  Computer
-mm/dd/yyyy HH:MM:SS:DDD     SamAccountName  =  PC8$
-mm/dd/yyyy HH:MM:SS:DDD     userAccountControl  =  0x1000
-mm/dd/yyyy HH:MM:SS:DDD     DnsHostName  =  PC8.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD     ServicePrincipalName  =  HOST/PC8.contoso.local  RestrictedKrbHost/PC8.contoso.local  HOST/PC8  RestrictedKrbHost/PC8
-mm/dd/yyyy HH:MM:SS:DDD     unicodePwd  =  <SomePassword>
-mm/dd/yyyy HH:MM:SS:DDD NetpModifyComputerObjectInDs: Computer Object does not exist in OU
-mm/dd/yyyy HH:MM:SS:DDD NetpModifyComputerObjectInDs: Attribute values to set:
-mm/dd/yyyy HH:MM:SS:DDD     objectClass  =  Computer
-mm/dd/yyyy HH:MM:SS:DDD     SamAccountName  =  PC8$
-mm/dd/yyyy HH:MM:SS:DDD     userAccountControl  =  0x1000
-mm/dd/yyyy HH:MM:SS:DDD     DnsHostName  =  PC8.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD     ServicePrincipalName  =  HOST/PC8.contoso.local  RestrictedKrbHost/PC8.contoso.local  HOST/PC8  RestrictedKrbHost/PC8
-mm/dd/yyyy HH:MM:SS:DDD     unicodePwd  =  <SomePassword>
-mm/dd/yyyy HH:MM:SS:DDD Querying "CN=PC8,CN=Computers,DC=contoso,DC=local" for objectSid\objectGuid attributes
+NetpModifyComputerObjectInDs: Initial attribute values:
+    objectClass  =  Computer
+    SamAccountName  =  PC8$
+    userAccountControl  =  0x1000
+    DnsHostName  =  PC8.contoso.local
+    ServicePrincipalName  =  HOST/PC8.contoso.local  RestrictedKrbHost/PC8.contoso.local  HOST/PC8  RestrictedKrbHost/PC8
+    unicodePwd  =  <SomePassword>
+NetpModifyComputerObjectInDs: Computer Object does not exist in OU
+NetpModifyComputerObjectInDs: Attribute values to set:
+    objectClass  =  Computer
+    SamAccountName  =  PC8$
+    userAccountControl  =  0x1000
+    DnsHostName  =  PC8.contoso.local
+    ServicePrincipalName  =  HOST/PC8.contoso.local  RestrictedKrbHost/PC8.contoso.local  HOST/PC8  RestrictedKrbHost/PC8
+    unicodePwd  =  <SomePassword>
+Querying "CN=PC8,CN=Computers,DC=contoso,DC=local" for objectSid\objectGuid attributes
 
 //SID of the new computer account.
-mm/dd/yyyy HH:MM:SS:DDD NetpQueryAccountAttributes succeeded: got RID=0x643 objectSid=S-1-5-21-3127289744-4148518019-814850311-1603
-mm/dd/yyyy HH:MM:SS:DDD NetpDeleteMachineAccountKey: called for computer 'PC8'
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Cracking DNS domain name contoso.local/ into Netbios on \\DC2.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Crack results:   name = CONTOSO\
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Cracking account name CONTOSO\PC8$ on \\DC2.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Crack results:   (Account already exists) DN = CN=PC8,CN=Computers,DC=contoso,DC=local
-mm/dd/yyyy HH:MM:SS:DDD NetpDeleteMachineAccountKey: msDS-KeyCredentialLink attr was not found on computer 'PC8' - no action required.
-mm/dd/yyyy HH:MM:SS:DDD NetpDeleteMachineAccountKey: returning Status: 0 
-mm/dd/yyyy HH:MM:SS:DDD ldap_unbind status: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinCreatePackagePart: status:0x0.
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: Setting netlogon cache.
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: status of setting netlogon cache: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: Function exits with status of: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainOnDs: status of disconnecting from '\\DC2.contoso.local': 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomain: DsrIsDeviceJoined returned false
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomain: NetpCompleteOfflineDomainJoin SUCCESS: Requested a reboot :0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpDoDomainJoin: status: 0x0
+NetpQueryAccountAttributes succeeded: got RID=0x643 objectSid=S-1-5-21-3127289744-4148518019-814850311-1603
+NetpDeleteMachineAccountKey: called for computer 'PC8'
+NetpGetComputerObjectDn: Cracking DNS domain name contoso.local/ into Netbios on \\DC2.contoso.local
+NetpGetComputerObjectDn: Crack results:   name = CONTOSO\
+NetpGetComputerObjectDn: Cracking account name CONTOSO\PC8$ on \\DC2.contoso.local
+NetpGetComputerObjectDn: Crack results:   (Account already exists) DN = CN=PC8,CN=Computers,DC=contoso,DC=local
+NetpDeleteMachineAccountKey: msDS-KeyCredentialLink attr was not found on computer 'PC8' - no action required.
+NetpDeleteMachineAccountKey: returning Status: 0 
+ldap_unbind status: 0x0
+NetpJoinCreatePackagePart: status:0x0.
+NetpJoinDomainOnDs: Setting netlogon cache.
+NetpJoinDomainOnDs: status of setting netlogon cache: 0x0
+NetpJoinDomainOnDs: Function exits with status of: 0x0
+NetpJoinDomainOnDs: status of disconnecting from '\\DC2.contoso.local': 0x0
+NetpJoinDomain: DsrIsDeviceJoined returned false
+NetpJoinDomain: NetpCompleteOfflineDomainJoin SUCCESS: Requested a reboot :0x0
+NetpDoDomainJoin: status: 0x0
 Privileges: Setting backup/restore privileges.
-mm/dd/yyyy HH:MM:SS:DDD NetpProvGetWindowsImageState: IMAGE_STATE_COMPLETE.
-mm/dd/yyyy HH:MM:SS:DDD NetpAddPartCollectionToRegistry.
-mm/dd/yyyy HH:MM:SS:DDD NetpProvGetTargetProductVersion: Target product version: 10.0.26100.3037
-mm/dd/yyyy HH:MM:SS:DDD NetpAddPartCollectionToRegistry: delete OP state key status: 0x2.
-mm/dd/yyyy HH:MM:SS:DDD NetpConvertBlobToJoinState: Translating provisioning data to internal format
-mm/dd/yyyy HH:MM:SS:DDD NetpConvertBlobToJoinState: Selecting version 1
-mm/dd/yyyy HH:MM:SS:DDD NetpConvertBlobToJoinState: exiting: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoin2RequestPackagePartInstall: Successfully persisted all fields
-mm/dd/yyyy HH:MM:SS:DDD NetpJoin3RequestPackagePartInstall: Successfully persisted all fields
-mm/dd/yyyy HH:MM:SS:DDD NetpJoin4RequestPackagePartInstall: Successfully persisted all fields
-mm/dd/yyyy HH:MM:SS:DDD NetpAddPartCollectionToRegistry: Successfully initiated provisioning package installation: 4/4 part(s) installed.
-mm/dd/yyyy HH:MM:SS:DDD NetpAddPartCollectionToRegistry: status: 0x0.
-mm/dd/yyyy HH:MM:SS:DDD NetpOpenRegistry: status: 0x0.
-mm/dd/yyyy HH:MM:SS:DDD NetpSetPrivileges: status: 0x0.
-mm/dd/yyyy HH:MM:SS:DDD NetpRequestProvisioningPackageInstall: status: 0x0.
-mm/dd/yyyy HH:MM:SS:DDD -----------------------------------------------------------------
-mm/dd/yyyy HH:MM:SS:DDD NetpProvContinueProvisioningPackageInstall:
-mm/dd/yyyy HH:MM:SS:DDD   Context: 0
-mm/dd/yyyy HH:MM:SS:DDD NetpProvGetWindowsImageState: IMAGE_STATE_COMPLETE.
-mm/dd/yyyy HH:MM:SS:DDD NetpCreatePartListFromRegistry: status: 0x0.
-mm/dd/yyyy HH:MM:SS:DDD NetpCompleteOfflineDomainJoin
-mm/dd/yyyy HH:MM:SS:DDD   fBootTimeCaller: FALSE
-mm/dd/yyyy HH:MM:SS:DDD   fSetLocalGroups: TRUE
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainLocal: NetpHandleJoinedStateInfo returned: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainLocal: NetpManageMachineSecret returned: 0x0.
-mm/dd/yyyy HH:MM:SS:DDD Calling NetpQueryService to get Netlogon service state.
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainLocal: NetpQueryService returned: 0x0.
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainLocal: status of setting LSA pri. domain: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpManageLocalGroupsForJoin: Adding groups for new domain, removing groups from old domain, if any.
-mm/dd/yyyy HH:MM:SS:DDD NetpManageLocalGroupsForJoin: status of modifying groups related to domain 'CONTOSO' to local groups: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpManageLocalGroupsForJoin: INFO: No old domain groups to process.
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainLocal: Status of managing local groups: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainLocal: status of setting ComputerNamePhysicalDnsDomain to 'contoso.local': 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainLocal: Controlling services and setting service start type.
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinDomainLocal: Updating W32TimeConfighttps://supportability.visualstudio.com/
-mm/dd/yyyy HH:MM:SS:DDD NetpCompleteOfflineDomainJoin: status: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinProvider2OLContinuePackagePartInstall: ignoring Context=0 (work finished already).
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinProvider3OLContinuePackagePartInstall: ignoring Context=0 (work finished already).
-mm/dd/yyyy HH:MM:SS:DDD NetpJoinProvider4OLContinuePackagePartInstall: ignoring Context=0 (work finished already).
-mm/dd/yyyy HH:MM:SS:DDD NetpProvContinueProvisioningPackageInstall: Provisioning package installation completed successfully.
-mm/dd/yyyy HH:MM:SS:DDD NetpProvContinueProvisioningPackageInstall: delete OP state key status: 0x0.
+NetpProvGetWindowsImageState: IMAGE_STATE_COMPLETE.
+NetpAddPartCollectionToRegistry.
+NetpProvGetTargetProductVersion: Target product version: 10.0.26100.3037
+NetpAddPartCollectionToRegistry: delete OP state key status: 0x2.
+NetpConvertBlobToJoinState: Translating provisioning data to internal format
+NetpConvertBlobToJoinState: Selecting version 1
+NetpConvertBlobToJoinState: exiting: 0x0
+NetpJoin2RequestPackagePartInstall: Successfully persisted all fields
+NetpJoin3RequestPackagePartInstall: Successfully persisted all fields
+NetpJoin4RequestPackagePartInstall: Successfully persisted all fields
+NetpAddPartCollectionToRegistry: Successfully initiated provisioning package installation: 4/4 part(s) installed.
+NetpAddPartCollectionToRegistry: status: 0x0.
+NetpOpenRegistry: status: 0x0.
+NetpSetPrivileges: status: 0x0.
+NetpRequestProvisioningPackageInstall: status: 0x0.
+-----------------------------------------------------------------
+NetpProvContinueProvisioningPackageInstall:
+  Context: 0
+NetpProvGetWindowsImageState: IMAGE_STATE_COMPLETE.
+NetpCreatePartListFromRegistry: status: 0x0.
+NetpCompleteOfflineDomainJoin
+  fBootTimeCaller: FALSE
+  fSetLocalGroups: TRUE
+NetpJoinDomainLocal: NetpHandleJoinedStateInfo returned: 0x0
+NetpJoinDomainLocal: NetpManageMachineSecret returned: 0x0.
+Calling NetpQueryService to get Netlogon service state.
+NetpJoinDomainLocal: NetpQueryService returned: 0x0.
+NetpJoinDomainLocal: status of setting LSA pri. domain: 0x0
+NetpManageLocalGroupsForJoin: Adding groups for new domain, removing groups from old domain, if any.
+NetpManageLocalGroupsForJoin: status of modifying groups related to domain 'CONTOSO' to local groups: 0x0
+NetpManageLocalGroupsForJoin: INFO: No old domain groups to process.
+NetpJoinDomainLocal: Status of managing local groups: 0x0
+NetpJoinDomainLocal: status of setting ComputerNamePhysicalDnsDomain to 'contoso.local': 0x0
+NetpJoinDomainLocal: Controlling services and setting service start type.
+NetpJoinDomainLocal: Updating W32TimeConfighttps://supportability.visualstudio.com/
+NetpCompleteOfflineDomainJoin: status: 0x0
+NetpJoinProvider2OLContinuePackagePartInstall: ignoring Context=0 (work finished already).
+NetpJoinProvider3OLContinuePackagePartInstall: ignoring Context=0 (work finished already).
+NetpJoinProvider4OLContinuePackagePartInstall: ignoring Context=0 (work finished already).
+NetpProvContinueProvisioningPackageInstall: Provisioning package installation completed successfully.
+NetpProvContinueProvisioningPackageInstall: delete OP state key status: 0x0.
 
 //0xa99 stands for "a restart is needed".
-mm/dd/yyyy HH:MM:SS:DDD NetpProvContinueProvisioningPackageInstall: status: 0xa99.
-mm/dd/yyyy HH:MM:SS:DDD -----------------------------------------------------------------
-mm/dd/yyyy HH:MM:SS:DDD NetpChangeMachineName: from 'PC8' to 'PC8' using 'contoso\puser2' [0x1000]
-mm/dd/yyyy HH:MM:SS:DDD NetpChangeMachineName: using DnsHostnameToComputerNameEx
-mm/dd/yyyy HH:MM:SS:DDD NetpChangeMachineName: generated netbios name: 'PC8'
-mm/dd/yyyy HH:MM:SS:DDD NetpDsGetDcName: trying to find DC in domain 'contoso.local', flags: 0x1010
-mm/dd/yyyy HH:MM:SS:DDD NetpDsGetDcName: found DC '\\DC2.contoso.local' in the specified domain
-mm/dd/yyyy HH:MM:SS:DDD NetpGetDnsHostName: Read NV Domain: contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Cracking DNS domain name contoso.local/ into Netbios on \\DC2.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Crack results:   name = CONTOSO\
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Cracking account name CONTOSO\PC8$ on \\DC2.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpGetComputerObjectDn: Crack results:   (Account already exists) DN = CN=PC8,CN=Computers,DC=contoso,DC=local
-mm/dd/yyyy HH:MM:SS:DDD NetpModifyComputerObjectInDs: Initial attribute values:
-mm/dd/yyyy HH:MM:SS:DDD     DnsHostName  =  PC8.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD     ServicePrincipalName  =  HOST/PC8.contoso.local  RestrictedKrbHost/PC8.contoso.local  HOST/PC8  RestrictedKrbHost/PC8
-mm/dd/yyyy HH:MM:SS:DDD NetpModifyComputerObjectInDs: Computer Object already exists in OU:
-mm/dd/yyyy HH:MM:SS:DDD     DnsHostName  =  PC8.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD     ServicePrincipalName  =  RestrictedKrbHost/PC8  HOST/PC8  RestrictedKrbHost/PC8.contoso.local  HOST/PC8.contoso.local
-mm/dd/yyyy HH:MM:SS:DDD NetpModifyComputerObjectInDs: There are _NO_ modifications to do
-mm/dd/yyyy HH:MM:SS:DDD ldap_unbind status: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpChangeMachineName: status of setting DnsHostName and SPN: 0x0
-mm/dd/yyyy HH:MM:SS:DDD NetpChangeMachineName: DsrIsDeviceJoinedEx returned false. dsrInstance = 0
-mm/dd/yyyy HH:MM:SS:DDD NetpChangeMachineName: SetComputerNameEx() returned 0x1
+NetpProvContinueProvisioningPackageInstall: status: 0xa99.
+-----------------------------------------------------------------
+NetpChangeMachineName: from 'PC8' to 'PC8' using 'contoso\puser2' [0x1000]
+NetpChangeMachineName: using DnsHostnameToComputerNameEx
+NetpChangeMachineName: generated netbios name: 'PC8'
+NetpDsGetDcName: trying to find DC in domain 'contoso.local', flags: 0x1010
+NetpDsGetDcName: found DC '\\DC2.contoso.local' in the specified domain
+NetpGetDnsHostName: Read NV Domain: contoso.local
+NetpGetComputerObjectDn: Cracking DNS domain name contoso.local/ into Netbios on \\DC2.contoso.local
+NetpGetComputerObjectDn: Crack results:   name = CONTOSO\
+NetpGetComputerObjectDn: Cracking account name CONTOSO\PC8$ on \\DC2.contoso.local
+NetpGetComputerObjectDn: Crack results:   (Account already exists) DN = CN=PC8,CN=Computers,DC=contoso,DC=local
+NetpModifyComputerObjectInDs: Initial attribute values:
+    DnsHostName  =  PC8.contoso.local
+    ServicePrincipalName  =  HOST/PC8.contoso.local  RestrictedKrbHost/PC8.contoso.local  HOST/PC8  RestrictedKrbHost/PC8
+NetpModifyComputerObjectInDs: Computer Object already exists in OU:
+    DnsHostName  =  PC8.contoso.local
+    ServicePrincipalName  =  RestrictedKrbHost/PC8  HOST/PC8  RestrictedKrbHost/PC8.contoso.local  HOST/PC8.contoso.local
+NetpModifyComputerObjectInDs: There are _NO_ modifications to do
+ldap_unbind status: 0x0
+NetpChangeMachineName: status of setting DnsHostName and SPN: 0x0
+NetpChangeMachineName: DsrIsDeviceJoinedEx returned false. dsrInstance = 0
+NetpChangeMachineName: SetComputerNameEx() returned 0x1
 ```
 
 ## Network traces
