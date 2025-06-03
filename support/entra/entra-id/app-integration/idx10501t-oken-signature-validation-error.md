@@ -1,6 +1,6 @@
 ---
-title: How to Resolve Token Signature Validation Errors in Azure AD Applications
-description: This article describes how to resolve Token Signature Validation Errors in Microsoft Entra ID applications
+title: How to Resolve Token Signature Validation Errors in Microsoft Entra ID applications
+description: This article describes how to resolve oken signature validation Errors in Microsoft Entra ID applications
 ms.date: 06/03/2025
 author: genlin
 ms.author: bachoang
@@ -16,6 +16,8 @@ When an application integrated with Microsoft Entra ID receives a token, it must
 This article explains how to retrieve the correct public key for both [OAuth2](/entra/architecture/auth-oauth2) and [SAML](/entra/architecture/auth-saml) applications, and how to configure your application to avoid signature validation issues.
 
 ## Validating Tokens for OAuth2 Applications
+
+To resolve token signature validation errors like IDX10501, ensure your application is configured to retrieve the correct public key from Microsoft Entra ID. Use the appropriate metadata endpoint based on the application type and signing configuration. For more information on Microsoft Entra ID signing key rollover, see [Signing key rollover in the Microsoft identity platform](/entra/identity-platform/signing-key-rollover).
 
 To validate an access token issued for an OAuth2 app, use the following steps:
 
@@ -108,7 +110,6 @@ services.Configure<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme, opt
 ```
 
 ## Conclusion
-To resolve token signature validation errors like IDX10501, ensure your application is configured to retrieve the correct public key from Microsoft Entra ID. Use the appropriate metadata endpoint based on the application type and signing configuration.
-For more information on Microsoft Entra ID signing key rollover, see [Signing key rollover in the Microsoft identity platform](/entra/identity-platform/signing-key-rollover).
+
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
