@@ -237,9 +237,7 @@ To find which processes are consuming the most memory, use `pidstat`.
 
 ![pidstat output](media/troubleshoot-performance-memory-linux/pidstat-memory.png)
 
-This output displays all running processes and their statistics. Another approach is to use the 'ps' tool to get similar results:
-
-    `ps aux --sort=-rss | head -n 10`
+This output displays all running processes and their statistics. Another approach is to use the 'ps' tool to get similar results: `ps aux --sort=-rss | head -n 10`
 
 **Example output**
 
@@ -249,6 +247,6 @@ This output displays all running processes and their statistics. Another approac
 
 Resident Set Size (RSS) is the portion of process memory that's held in RAM (non-swapped physical memory). In contrast, Virtual Set Size（VSZ）represents the total amount of memory that the process reserves, including memory that isn’t committed. `Committed memory` refers to pages that are actually written to physical memory. If you're trying to identify which processes are using the most physical memory (including swap), focus on the `RSS` column. In the example output, the `snapd` process appears to use lots of memory, but its `RSS` value is low. The `malloc` process has similar `VSZ` and `RSS` values that indicate that it’s actively using more than 1.3 GB of memory.
 
-[!INCLUDE [Third-party disclaimer](../../.../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
