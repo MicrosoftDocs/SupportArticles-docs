@@ -9,7 +9,7 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # IDX10501 Signature Validation Errors in Microsoft Entra ID applications
 
-If a client application obtains a token from Microsoft Entra ID and sends it to a resource (API) application, the resource application must validate the token. It does this by using the public key from the certificate that was used to sign the token. If the application cannot find the correct key identifier (kid), it may throw an error like:
+If a client application obtains an access token from Microsoft Entra ID and sends it to a resource (API) application, the resource application must validate the token. It does this by using the public key from the certificate that was used to sign the token. If the application cannot find the correct key identifier (kid), it may throw an error like:
 
 > IDX10501: Signature validation failed. Unable to match 'kid'
 
@@ -109,4 +109,7 @@ services.Configure<JwtBearerOptions>(JwtBearerDefaults.AuthenticationScheme, opt
 });
 ```
 
+## Next step
+
+To learn more about Microsoft Entra ID signing keys rollover, see [Access tokens in the Microsoft identity platform][/entra/identity-platform/access-tokens]
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
