@@ -136,6 +136,8 @@
         href: app-integration/error-aadsts900439-usgclientnotsupportedonpublicendpoint.md
       - name: Error AADSTS50000 - issuing a token or an issue with our sign-in service
         href: app-integration/error-code-aadsts50000-issuing-token-sign-in-service.md
+      - name: Enable bundle consent for apps
+        href: app-integration/bundle-consent-application-registrations.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
         href: app-integration/troubleshoot-sign-in-saml-based-apps.md
       - name: Troubleshooting infinite redirection between OIDC app and Entra ID
