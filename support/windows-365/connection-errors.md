@@ -1,12 +1,13 @@
 ---
-# required metadata
 title: Troubleshoot connection errors
 description: Troubleshoot connection errors in Windows 365.
 manager: dcscontentpm
 ms.date: 01/20/2025
 ms.topic: troubleshooting
 ms.reviewer: traceyadams, erikje
-ms.custom: intune-azure, get-started
+ms.custom:
+- pcy:Session connectivity\Users are not able to make a connection
+- sap:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 18 for SQL Server 2022 (KB5050771)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 18 (KB5050771).
-ms.date: 03/13/2025
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5050771
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,7 +23,9 @@ This article describes Cumulative Update package 18 (CU18) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-There are no known issues in this cumulative update.
+### Incorrect behavior of SESSION_CONTEXT in parallel plans
+
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 

@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 21 for SQL Server 2019 (KB5025808)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 21 (KB5025808).
-ms.date: 07/26/2024
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5025808
 ms.reviewer: v-qianli2
 appliesto:
@@ -25,7 +25,7 @@ This article describes Cumulative Update package 21 (CU21) for Microsoft SQL Ser
 
 ### Issue one
 
-[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ### Issue two
 

@@ -1,7 +1,7 @@
 ---
 title: Use managed identities in an Azure Batch account or pool
 description: Use managed identities in an Azure Batch account or pool. Download application packages or retrieve blobs from a batch pool.
-ms.date: 11/15/2022
+ms.date: 05/23/2025
 editor: v-jsitser
 ms.reviewer: biny, v-leedennis
 ms.service: azure-batch

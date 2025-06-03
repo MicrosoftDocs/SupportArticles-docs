@@ -11,7 +11,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 08/02/2024
+ms.date: 02/18/2025
 ms.author: genli
 ms.custom: sap:VM Performance
 ---
@@ -39,7 +39,9 @@ This extension can be installed on:
 
 ## Extension schema
 
-The following JSON shows the schema for Azure Performance Diagnostics VM Extension. This extension requires the name and key for a storage account to store the diagnostics output and report. These values are sensitive. Storage account key should be stored inside a protected setting configuration. Azure VM extension protected setting data is encrypted, and it is only decrypted on the target virtual machine. Note that **storageAccountName** and **storageAccountKey** are case-sensitive. Other required parameters are listed in the following section.
+The following JSON shows the schema for Azure Performance Diagnostics VM Extension. This extension requires the name for a storage account to store the diagnostics output and report. These values are sensitive. Storage account key should be stored inside a protected setting configuration. Azure VM extension protected setting data is encrypted, and it is only decrypted on the target virtual machine. Note that **storageAccountName** and **storageAccountKey** are case-sensitive. Other required parameters are listed in the following section.
+
+Specify the authentication type in the JSON file. If no authentication type is specified, the default authentication type is system-assigned managed identity and user needs to pass a storage account key.
 
 ```JSON
 {
@@ -65,7 +67,10 @@ The following JSON shows the schema for Azure Performance Diagnostics VM Extensi
          "resourceId": "[resourceId('Microsoft.Compute/virtualMachines', parameters('vmName'))]"
        },
        "protectedSettings": {
-           "storageAccountKey": "[parameters('storageAccountKey')]"       
+   "authenticationType": "[parameters('authenticationType')]",
+                         "storageAccountKey": "[parameters('storageAccountKey')]",
+   "managedIdentityClientId": "[parameters('managedIdentityClientId')]",
+   
        }
      }
    }
@@ -91,6 +96,8 @@ The following JSON shows the schema for Azure Performance Diagnostics VM Extensi
 | resourceId | /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName} | The unique identifier of a VM. |
 | storageAccountName | mystorageaccount | The name of the storage account to store the diagnostics logs and results. |
 | storageAccountKey | lDuVvxuZB28NNP…hAiRF3voADxLBTcc== | The key for the storage account. |
+|authenticationType|systemmanagedidentity|The authentication type used to connect to the storage account. Valid values are `systemmanagedidentity`, `usermanagedidentity`, and `storagekeys`.|
+|managedIdentityClientId|f81d4afe-7ced-11d0-a765-00a0c91c6bf6|The client ID of the user-managed identity to be used for authenticating to the storage account.|
 
 ## Install the extension
 
@@ -192,7 +199,15 @@ Azure virtual machine extensions can be deployed with Azure Resource Manager tem
    "requestTimeUtc": {
      "type": "string",
      "defaultValue": "10/2/2017 11:06:00 PM"
-   }       
+   },
+   "authenticationType": {
+	 "type": "string",
+	 "defaultValue": "SystemManagedIdentity"
+   },
+   "managedIdentityClientId": {
+	 "type": "string",
+		 "defaultValue": ""
+   }      
  },
  "resources": [
    {
@@ -230,12 +245,32 @@ Azure virtual machine extensions can be deployed with Azure Resource Manager tem
 
 Use the `Set-AzVMExtension` command to deploy Azure Performance Diagnostics VM Extension to an existing virtual machine:
 
-```powershell
-$PublicSettings = @{ "storageAccountName"="mystorageaccount";"performanceScenario"="basic"; "enableContinuousDiagnostics" : $False;"traceDurationInSeconds"=300;"perfCounterTrace"="p";"networkTrace"="";"xperfTrace"="";"storPortTrace"="";"srNumber"="";"requestTimeUtc"="2017-09-28T22:08:53.736Z";"resourceId"="VMResourceId" }
-$ProtectedSettings = @{"storageAccountKey"="mystoragekey" }
- 
-Set-AzVMExtension -ExtensionName "AzurePerformanceDiagnostics" -ResourceGroupName "myResourceGroup" -VMName "myVM" -Publisher "Microsoft.Azure.Performance.Diagnostics" -ExtensionType "AzurePerformanceDiagnostics" -TypeHandlerVersion 1.0 -Settings $PublicSettings -ProtectedSettings $ProtectedSettings -Location WestUS
-```
+- System-assigned managed identity
+
+  ```powershell
+  $PublicSettings = @{ "storageAccountName"="mystorageaccount";"performanceScenario"="basic"; "enableContinuousDiagnostics" : $False;"traceDurationInSeconds"=300;"perfCounterTrace"="p";"networkTrace"="";"xperfTrace"="";"storPortTrace"="";"srNumber"="";"requestTimeUtc"="2024-10-20T22:08:53.736Z";"resourceId"="VMResourceId" }
+  $ProtectedSettings = @{"storageAccountName"="mystorageaccount";"authenticationType"="SystemManagedIdentity" }
+  
+  Set-AzVMExtension -ExtensionName "AzurePerformanceDiagnostics" -ResourceGroupName "myResourceGroup" -VMName "myVM" -Publisher "Microsoft.Azure.Performance.Diagnostics" -ExtensionType "AzurePerformanceDiagnostics" -TypeHandlerVersion 1.0 -Settings $PublicSettings -ProtectedSettings $ProtectedSettings -Location WestUS
+  ```
+
+- User-assigned managed identity
+
+  ```powershell
+  $PublicSettings = @{ "storageAccountName"="mystorageaccount";"performanceScenario"="basic"; "enableContinuousDiagnostics" : $False;"traceDurationInSeconds"=300;"perfCounterTrace"="p";"networkTrace"="";"xperfTrace"="";"storPortTrace"="";"srNumber"="";"requestTimeUtc"="2024-10-20T22:08:53.736Z";"resourceId"="VMResourceId" }
+  $ProtectedSettings = @{"storageAccountName"="mystorageaccount";"authenticationType"="UserManagedIdentity";"managedIdentityClientId"="myUserManagedIdentityClientId"}
+  
+  Set-AzVMExtension -ExtensionName "AzurePerformanceDiagnostics" -ResourceGroupName "myResourceGroup" -VMName "myVM" -Publisher "Microsoft.Azure.Performance.Diagnostics" -ExtensionType "AzurePerformanceDiagnostics" -TypeHandlerVersion 1.0 -Settings $PublicSettings -ProtectedSettings $ProtectedSettings -Location WestUS
+  ```
+
+- Storage account access keys
+
+  ```powershell
+  $PublicSettings = @{ "storageAccountName"="mystorageaccount";"performanceScenario"="basic"; "enableContinuousDiagnostics" : $False;"traceDurationInSeconds"=300;"perfCounterTrace"="p";"networkTrace"="";"xperfTrace"="";"storPortTrace"="";"srNumber"="";"requestTimeUtc"="2024-10-20T22:08:53.736Z";"resourceId"="VMResourceId" }
+  $ProtectedSettings = @{"storageAccountKey"="mystoragekey" }
+  
+  Set-AzVMExtension -ExtensionName "AzurePerformanceDiagnostics" -ResourceGroupName "myResourceGroup" -VMName "myVM" -Publisher "Microsoft.Azure.Performance.Diagnostics" -ExtensionType "AzurePerformanceDiagnostics" -TypeHandlerVersion 1.0 -Settings $PublicSettings -ProtectedSettings $ProtectedSettings -Location WestUS
+  ```
 
 ## Information on the data captured
 
@@ -243,7 +278,7 @@ The PerfInsights tool collects various logs, configuration, and diagnostic data,
 
 ## View and share the results
 
-Output from the extension can be found in a zip file that uploaded to the storage account specified during the installation and is shared for 30 days by using [Shared Access Signatures (SAS)](/azure/storage/common/storage-sas-overview). This zip file contains diagnostic logs and a report with findings and recommendations. A SAS link to the output zip file can be found inside a text file named *zipfilename*_saslink.txt under the folder **C:\Packages\Plugins\Microsoft.Azure.Performance.Diagnostics.AzurePerformanceDiagnostics\\\<version>**. Anyone who has this link is able to download the zip file.
+Output from the extension can be found in a zip file that uploaded to the storage account specified during the installation and is shared for 30 days by using Shared Access Signatures (SAS). This zip file contains diagnostic logs and a report with findings and recommendations. A SAS link to the output zip file can be found inside a text file named *zipfilename*_saslink.txt under the folder **C:\Packages\Plugins\Microsoft.Azure.Performance.Diagnostics.AzurePerformanceDiagnostics\\\<version>**. Anyone who has this link is able to download the zip file.
 
 To assist the support engineer working on your support ticket, Microsoft might use this SAS link to download the diagnostics data.
 
