@@ -1,29 +1,27 @@
 ---
 title: How to Resolve Token Signature Validation Errors in Microsoft Entra ID applications
-description: This article describes how to resolve oken signature validation Errors in Microsoft Entra ID applications
+description: This article describes how to resolve IDX10501 Signature Validation Errors in Microsoft Entra ID applications。
 ms.date: 06/03/2025
 author: genlin
 ms.author: bachoang
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# Handling errors in Microsoft Graph API Requests with Invoke-RestMethod
+# IDX10501 Signature Validation Errors in Microsoft Entra ID applications
 
 When an application integrated with Microsoft Entra ID receives a token, it must validate the token's signature by using the public key of the certificate that signed the token. If the application cannot find the correct key identifier (kid), it may throw an error like:
 
 > IDX10501: Signature validation failed. Unable to match 'kid'
 
-This article explains how to retrieve the correct public key for both [OAuth2](/entra/architecture/auth-oauth2) and [SAML](/entra/architecture/auth-saml) applications, and how to configure your application to avoid signature validation issues.
+This article explains how applications retrieve the correct public key for both [OAuth2](/entra/architecture/auth-oauth2) and [SAML](/entra/architecture/auth-saml) authorizations, and how to configure your application to avoid signature validation issues.
 
 ## Validating Tokens for OAuth2 Applications
 
-To resolve token signature validation errors like IDX10501, ensure your application is configured to retrieve the correct public key from Microsoft Entra ID. Use the appropriate metadata endpoint based on the application type and signing configuration. For more information on Microsoft Entra ID signing key rollover, see [Signing key rollover in the Microsoft identity platform](/entra/identity-platform/signing-key-rollover).
-
 To validate an access token issued for an OAuth2 app, use the following steps:
 
-1. Use a API client to perform an [Authorization Code flow](/entra/identity-platform/v2-oauth2-auth-code-flow) and acquire an access token.
+1. Use an API client to perform an [Authorization Code flow](/entra/identity-platform/v2-oauth2-auth-code-flow) and acquire an access token.
 1. Decode the token by using [jwt.ms](https://jwt.ms), and take a note of the `kid`.
-1. Use the token as a Bearer token to call one of the following keys discovery endpoints, depending on your Microsoft Entra ID application version. The API response will return three keys. The `kid` you obtained in step 2 should match one of the keys returned by the keys discovery endpoint.
+1. Depend on your Microsoft Entra ID application version, use the token as a Bearer token to call one of the following keys discovery endpoints. The API will return three keys. The `kid` you obtained in step 2 should match one of the keys returned by the keys discovery endpoint.
 
     ```http
     https://login.microsoftonline.com/common/discovery/keys
