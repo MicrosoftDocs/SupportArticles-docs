@@ -51,10 +51,7 @@ https://login.microsoftonline.com/common/oauth2/v2.0/authorize
 
 **Example request for work or school accounts only**
 
-If you're not supporting Microsoft Accounts:
-
 ```http
-
 GET https://login.microsoftonline.com/common/oauth2/v2.0/authorize
 ?response_type=code
 &client_id=72333f42-5078-4212-abb2-e4f9521ec76a
@@ -174,7 +171,7 @@ while (result == null && retryCount >= 6)
 If (result==null) return new HttpStatusCodeResult(HttpStatusCode.Forbidden, "Need Consent");
 ```
 
-If all retries fail, return an error message, and then instruct the client to initial a full consent process.
+If all retries fail, return an error message, and then instruct the client to start a full consent process.
 
 **Example of client code that assumes your API throws a 403**
 
