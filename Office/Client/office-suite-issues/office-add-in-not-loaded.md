@@ -1,11 +1,9 @@
 ---
 title: No Add-ins Loaded Because of Group Policy Settings
 description: Provides details to configure the Block all unmanaged add-ins and List of managed add-ins Group Policy settings in Office 2016 and later.
-author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
 ms.reviewer: gregmans
 ms.custom:
   - sap:Building and Debugging Add-Ins for Office 365 Web and Desktop Apps
