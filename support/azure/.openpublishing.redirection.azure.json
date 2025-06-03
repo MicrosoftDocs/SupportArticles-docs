@@ -6320,6 +6320,40 @@
       {
         "source_path": "azure-kubernetes/error-codes/zonalallocation-allocatonfailed-error.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/zonalallocation-allocationfailed-error"
+      },
+      {
+
+        "source_path": "kubernetes-fleet/troubleshoot-clusterresourceplacement-api-issues.md",
+        "redirect_url": "/troubleshoot/azure/kubernetes-fleet/cluster-resource-placement/troubleshoot-clusterresourceplacement-api-issues"
+      },
+      {
+        "source_path": "kubernetes-fleet/crp-clusterresourceplacementscheduled-false.md",
+        "redirect_url": "/troubleshoot/azure/kubernetes-fleet/cluster-resource-placement/crp-clusterresourceplacementscheduled-false"
+      },
+      {
+        "source_path": "kubernetes-fleet/crp-clusterresourceplacementrolloutstarted-false.md",
+        "redirect_url": "/troubleshoot/azure/kubernetes-fleet/cluster-resource-placement/crp-clusterresourceplacementrolloutstarted-false"
+      },
+      {
+        "source_path": "kubernetes-fleet/crp-clusterresourceplacementoverridden-false.md",
+        "redirect_url": "/troubleshoot/azure/kubernetes-fleet/cluster-resource-placement/crp-clusterresourceplacementoverridden-false"
+      },
+      {
+        "source_path": "kubernetes-fleet/crp-clusterresourceplacementworksynchronized-false.md",
+        "redirect_url": "/troubleshoot/azure/kubernetes-fleet/cluster-resource-placement/crp-clusterresourceplacementworksynchronized-false"
+      },
+      {
+        "source_path": "kubernetes-fleet/crp-clusterresourceplacementapplied-false.md",
+        "redirect_url": "/troubleshoot/azure/kubernetes-fleet/cluster-resource-placement/crp-clusterresourceplacementapplied-false"
+      },
+      {
+        "source_path": "kubernetes-fleet/crp-clusterresourceplacementavailable-false.md",
+        "redirect_url": "/troubleshoot/azure/kubernetes-fleet/cluster-resource-placement/crp-clusterresourceplacementavailable-false"
+      },
+        {
+        "source_path": "hpc/batch/error-accountencryptionkeyunavailable.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/welcome-hpc-batch"
+
       }
   ]
 }

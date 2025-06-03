@@ -6,6 +6,7 @@ ms.reviewer: zhangryan, chiragpa, shasb, ericlucier, arfallas, sachidesai
 ms.service: azure-kubernetes-fleet-manager
 ms.custom: sap:Other issue or questions related to Fleet manager
 ---
+
 # Troubleshooting ClusterResourcePlacement API in Azure Kubernetes Fleet Manager
 
 This troubleshooting guide helps you resolve `ClusterResourcePlacement` API object-related issues when you use Azure Kubernetes Fleet Manager. Troubleshooting these errors on the hub cluster requires knowledge of the following objects:
@@ -15,7 +16,7 @@ This troubleshooting guide helps you resolve `ClusterResourcePlacement` API obje
 - `ClusterResourceBinding`
 - `Work`
 
-For more details about each object, see the [API reference](https://github.com/Azure/fleet/blob/main/docs/api-references.md).
+For more details about each object, see the [KubeFleet API reference](https://kubefleet-dev.github.io/website/docs/api-reference/).
 
 ## Complete progression of the ClusterResourcePlacement deployment
 
@@ -161,4 +162,4 @@ To find the correct work resource, follow these steps:
    > [!NOTE]  
    > In this command, replace `{clusterName}` and `{CRPName}` with the names that you identified in the first step.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

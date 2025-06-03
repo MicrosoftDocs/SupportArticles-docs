@@ -13745,6 +13745,18 @@
     {
       "source_path": "support/dynamics-365/commerce/ecommerce-storefront/pickup-store-link-missing.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics-365/commerce/ecommerce-storefront/pickup-store-link-missing"
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/connectivity/basic-troubleshooting-dns-resolution-problems.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/dns/basic-troubleshooting-dns-resolution-problems"
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/connectivity/troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/dns/troubleshoot-dns-failures-across-an-aks-cluster-in-real-time"
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/connectivity/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/dns/troubleshoot-dns-failure-from-pod-but-not-from-worker-node"
     }
   ]
 }

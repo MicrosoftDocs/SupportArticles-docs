@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 10 for SQL Server 2022 (KB5031778)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 10 (KB5031778).
-ms.date: 01/29/2024
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5031778
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,11 +23,15 @@ This article describes Cumulative Update package 10 (CU10) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Read-scale availability group not displayed in dm_hadr_database_replica_cluster_states
+### Issue one: Read-scale availability group not displayed in dm_hadr_database_replica_cluster_states
 
 SQL Server 2022 CU10 introduced [fix 2714261](#2714261), which causes an issue with `sys.dm_hadr_database_replica_cluster_states` for read-scale availability groups that results in the **Availability Databases** folder in SQL Server Management Studio (SSMS) not showing the databases in the availability group (AG). To mitigate this issue, roll back the patch to CU9.
 
 This issue is fixed in [SQL Server 2022 CU12](cumulativeupdate12.md#2923126).
+
+### Issue two: Incorrect behavior of SESSION_CONTEXT in parallel plans
+
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 

@@ -116,7 +116,7 @@ For basic troubleshooting for egress traffic from an AKS cluster, follow these s
 
 1. [Check whether the cluster can reach any other external endpoint](./troubleshoot-connections-endpoints-outside-virtual-network.md).
 
-1. [Check whether a network policy is blocking the traffic](./troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md).
+1. [Check whether a network policy is blocking the traffic](./dns/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md).
 
 1. [Check whether an NSG is blocking the traffic](./traffic-between-node-pools-is-blocked.md).
 
@@ -278,7 +278,7 @@ To verify that the endpoint is reachable from the node where the problematic pod
    IP4Address : 23.200.197.152
    ```
 
-In one unusual scenario that involves DNS resolution, the DNS queries get a correct response from the node but fail from the pod. For this scenario, you might consider [checking DNS resolution failures from inside the pod but not from the worker node](troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md). If you want to inspect DNS resolution for an endpoint across the cluster, you can consider [checking DNS resolution status across the cluster](troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md#step-3-verify-the-health-of-the-upstream-dns-servers).
+In one unusual scenario that involves DNS resolution, the DNS queries get a correct response from the node but fail from the pod. For this scenario, you might consider [checking DNS resolution failures from inside the pod but not from the worker node](./dns/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md). If you want to inspect DNS resolution for an endpoint across the cluster, you can consider [checking DNS resolution status across the cluster](./dns/troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md#step-3-verify-the-health-of-the-upstream-dns-servers).
 
 If the DNS resolution is successful, continue to the network tests. Otherwise, verify the DNS configuration for the cluster.
 

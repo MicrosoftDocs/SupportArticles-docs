@@ -221,4 +221,5 @@ In this situation, a potential solution is to check the deployment in the member
 
 For all other situations, make sure that the propagated resource is configured correctly. Additionally, verify that the selected cluster has sufficient available capacity to accommodate the new resources.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
