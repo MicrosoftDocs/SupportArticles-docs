@@ -1,20 +1,20 @@
 ---
 title: Configure ASP.NET or ASP.NET Core App Session to Last Longer Than Entra ID Tokens
-description: Describes how to configure ASP.NET or ASP.NET Core App session to last longer than Microsoft Entra ID token.
+description: Discusses how to configure ASP.NET or ASP.NET Core App session to last longer than Microsoft Entra ID token.
 ms.date: 05/31/2025
 ms.reviewer: willfid
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# Customize Middleware authentication ticket to extend user sign-in duration
+# Customize middleware authentication ticket to extend user sign-in duration
 
-Microsoft Entra ID tokens (ID tokens, access tokens, and SAML tokens) by default expire after one hour. ASP.NET and ASP.NET Core Middleware set their authentication ticket to the expiration of these tokens by default. If you don't want your web application to redirect users to Microsoft Entra ID to sign in again, you can customize the Middleware authentication ticket.
+By default, Microsoft Entra ID tokens (ID tokens, access tokens, and SAML tokens) expire after one hour. Also by default, ASP.NET and ASP.NET Core middleware set their authentication tickets to the expiration of these tokens. If you don't want your web application to redirect users to Microsoft Entra ID to have them sign in again, you can customize the middleware authentication ticket.
 
 This customization can also help resolve AJAX issues (such as CORS errors to `login.microsoftonline.com`) where your app is both a Web App and Web API.
 
 ## For ASP.NET
 
-In the `ConfigureAuth` method of your `Startup.Auth.cs` file, update the `app.UseCookieAuthentication()` method to:
+In the `ConfigureAuth` method of the `Startup.Auth.cs` file, update the `app.UseCookieAuthentication()` method to:
 
 ```csharp
 app.UseCookieAuthentication(new CookieAuthenticationOptions()
@@ -29,7 +29,8 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions()
   }
 });
 ```
-Then, decouple the token lifetime from the Web App:
+
+Then, decouple the token lifetime from the web app:
 
 ```csharp
 app.UseOpenIdConnectAuthentication(
@@ -37,12 +38,11 @@ app.UseOpenIdConnectAuthentication(
                 {
                     UseTokenLifetime = false,
                     ...
-
 ```
 
 ## For ASP.NET Core
 
-In ASP.NET Core, you need to add the `OnTokenValidated` event to update the ticket properties. This sets the ticket expiration time before the application redirects to Microsoft Entra ID for reauthentication.
+In ASP.NET Core, you have to add the `OnTokenValidated` event to update the ticket properties. This change sets the ticket expiration time to be before the application redirects to Microsoft Entra ID for reauthentication.
 
 ```csharp
 services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme, options =>
@@ -65,9 +65,9 @@ services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme, options =
 
 ### Examples
 
-Here are a few examples of how to do this:
+Here are a few examples of how to do make this setting:
 
-If you're using code similar to the following to add Microsoft Entra ID authentication:
+If you're using code similar to the following example to add Microsoft Entra ID authentication:
 
 ```csharp
 services.AddAuthentication(AzureADDefaults.AuthenticationScheme)
@@ -94,7 +94,7 @@ services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme, options =
 });
 ```
 
-Your configuration in Startup.cs should look something like this:
+Your configuration in Startup.cs should resemble the following example:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -172,7 +172,7 @@ services.Configure<OpenIdConnectOptions>(options =>
 });
 ```
 
-If you're integrating an ASP.NET Core WS-Fed application, then it might look something like the following:
+If you're integrating an ASP.NET Core WS-Fed application:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -207,10 +207,9 @@ public void ConfigureServices(IServiceCollection services)
 ```
 ## More information
 
-These settings control the expiration of the authentication ticket, which determines how long a user stays signed in. You can configure this expiration to suit your requirement.
+These settings control the expiration of the authentication ticket that determines how long a user stays signed in. You can configure this expiration to suit your requirement.
 
->[!NOTE]
-> If you modify the ticket expiration, users may still have access to your application even if they've been deleted or disabled in Microsoft Entra ID, until the ticket expires.
+> [!NOTE]
+> If you modify the ticket expiration, users may still have access to your application even if they've been deleted or disabled in Microsoft Entra ID,. This condition remains true until the ticket expires.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
-
