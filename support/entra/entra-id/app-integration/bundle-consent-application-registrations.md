@@ -175,7 +175,7 @@ If all retries fail, return an error message, and then instruct the client to st
 
 **Example of client code that assumes your API throws a 403**
 
-```
+```csharp
 HttpResponseMessage apiResult = null;
 apiResult = await MockApiCall(result.AccessToken);
 
