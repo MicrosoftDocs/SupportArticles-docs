@@ -15,9 +15,9 @@ When an application integrated with Microsoft Entra ID receives a token, it must
 
 This article explains how applications retrieve the correct public key for both [OAuth2](/entra/architecture/auth-oauth2) and [SAML](/entra/architecture/auth-saml) authorizations, and how to configure your application to avoid signature validation issues.
 
-## Validating Tokens for OAuth2 Applications
+## For OAuth2 Applications
 
-To validate an access token issued for an OAuth2 app, use the following steps:
+This section demonstrate how OAuth2 Application validate an access token issued from Microsoft Entra ID:
 
 1. Use an API client to perform an [Authorization Code flow](/entra/identity-platform/v2-oauth2-auth-code-flow) and acquire an access token.
 1. Decode the token by using [jwt.ms](https://jwt.ms), and take a note of the `kid`.
@@ -32,7 +32,7 @@ To validate an access token issued for an OAuth2 app, use the following steps:
     https://login.microsoftonline.com/common/discovery/v2.0/keys
     ```
 
-## Validating Tokens for SAML Applications
+## For SAML Applications
 
 For SAML apps like `SharepointSAMLTest`, Microsoft Entra ID uses the app-specific certificate to sign tokens. To retrieve the correct public key, follow these steps:
 
