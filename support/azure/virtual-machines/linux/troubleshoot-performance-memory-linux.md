@@ -41,7 +41,7 @@ You can use the following command line tools to troubleshoot.
 
 To view the amount of available and used memory on a system, use the `free` command.
 
-![sample free output](media/troubleshoot-performance-memory-linux/free.png)
+![Screenshot of sample free output.](media/troubleshoot-performance-memory-linux/free.png)
 
 This command generates a summary of reserved and available memory, including total and used swap space.
 
@@ -49,7 +49,7 @@ This command generates a summary of reserved and available memory, including tot
 
 For a more detailed view of memory usage by individual processes, use the `pidstat -r` command.
 
-![Sample pidstat -r output](media/troubleshoot-performance-memory-linux/pidstat.png)
+![Screenshot of sample pidstat -r output.](media/troubleshoot-performance-memory-linux/pidstat.png)
 
 When you analyze memory usage reports, two important columns to observe are `VSZ` and `RSS`:
 
@@ -131,7 +131,7 @@ You can verify overall THP usage on the system by examining the `/proc/meminfo` 
 
 To learn whether a process uses THP, you have to inspect the `smaps` file in the `/proc` directory of the process in question. For example, in `/proc/2275/smaps`, search for a line that contains the word `heap` (shown here at the far right).
 
-![THP usage by the sample C program](media/troubleshoot-performance-memory-linux/thp.png)
+![Screenshot of THP usage by the sample C program.](media/troubleshoot-performance-memory-linux/thp.png)
 
 This example shows that a large memory segment was allocated and marked as `THPeligible`(THP are in use). By using `madvice syscall`, the allocation of this memory block is much more efficient. You could achieve the same efficiency by using Huge Pages. Depending on the size of the allocation, the kernel might assign either standard 4 KB pages or larger contiguous blocks. This optimization can improve performance for memory-intensive applications.
 
@@ -143,7 +143,7 @@ If the applications are running on a NUMA system that has multiple nodes, it's i
 
 The following screenshot shows a sample of the system's NUMA configuration.
 
-![numactl output](media/troubleshoot-performance-memory-linux/numactl.png)
+![Screenshot of of numactl output.](media/troubleshoot-performance-memory-linux/numactl.png)
 
 This configuration shows that accessing memory within the same node has a distance level of 10. If you want to access memory on `Node 1` from `Node 0`, this process has a high distance value of 12 but is still manageable. However, if you want to access memory on `NODE 3` from `NODE 0`, the distance level becomes 32. This process is still doable but is also three times slower. It's valuable to consider these differences when you diagnose performance issues or optimize memory-bound workloads. For more information, see [this Linux Kernel article](https://www.kernel.org/doc/html/latest/admin-guide/mm/numaperf.html). For a description of the `numactl` tool, see [numactl(8)](https://man7.org/linux/man-pages/man8/migratepages.8.html).
 
@@ -190,20 +190,20 @@ int main() {
 
 This program indicates that memory allocation fails after around 3 GB.
 
-![memory allocation error](media/troubleshoot-performance-memory-linux/malloc-error.png)
+![Screenshot of of memory allocation error.](media/troubleshoot-performance-memory-linux/malloc-error.png)
 
 When the system runs out of memory, the OOM killer is invoked. You can view the related logs by using the `dmesg` command. The log entries typically begin as shown in the following screenshot.
 
-![invoked OOM killer](media/troubleshoot-performance-memory-linux/malloc-invoked-oom.png)
+![Screenshot of invoked OOM killer log.](media/troubleshoot-performance-memory-linux/malloc-invoked-oom.png)
 
 The entries typically end in a summary of the memory state.
 
-![out of memory](media/troubleshoot-performance-memory-linux/malloc-out-of-memory.png)
+![Screenshot of out of memory state.](media/troubleshoot-performance-memory-linux/malloc-out-of-memory.png)
 
 Between those entries, you can find detailed information about memory usage and the process that was selected for termination.
 
-![OOM full detail #1](media/troubleshoot-performance-memory-linux/memory-details-1.png)
-![OOM full detail #2](media/troubleshoot-performance-memory-linux/memory-details-2.png)
+![Screenshot of OOM full detail #1.](media/troubleshoot-performance-memory-linux/memory-details-1.png)
+![Screenshot of OOM full detail #2.](media/troubleshoot-performance-memory-linux/memory-details-2.png)
 
 From this information, you can extract the following insights:
 
@@ -215,6 +215,8 @@ No swap space
 
 In the following log example, the malloc process requested a single 4 KB page (order=0). Although 4 KB page is small, the system was already under pressure. The log shows that memory was being allocated from the "Normal Zone."
 
+  :::image type="content" source="media/troubleshoot-performance-memory-linux/lowmem-reserve.png" alt-text="Screenshot of the log example about malloc." lightbox="media/troubleshoot-performance-memory-linux/lowmem-reserve.png":::
+    
 ![lowmem reserv](media/troubleshoot-performance-memory-linux/lowmem-reserve.png)
 
 The available memory (`free`) is 29,500 KB. However, the minimum watermark (`min`) is 34,628 KB. Because the system is below this threshold, only the kernel can use the remaining memory，and user-space applications are denied. The OOM killer is invoked at this point. It selects the process that has the highest `oom_score` and memory usage ('RSS'). In this example, the malloc process had an `oom_score` of 0 but also has the highest `RSS` (917760). Therefore, it's selected as the target for termination.
@@ -227,7 +229,7 @@ To monitor memory usage over time, use the `sar` tool from the `sysstat` package
 
 **Example output**
 
-![sar memory information](media/troubleshoot-performance-memory-linux/sar-info.png)
+![Screenshot of sar memory information.](media/troubleshoot-performance-memory-linux/sar-info.png)
 
 In this case, memory usage does grow for about two hours. Then, it drops back to four percent. This behavior might be expected, such as during peak login hours or resource-intensive reporting tasks. To determine whether this behavior is normal, you might have to monitor usage over several days, and then correlate it with application activity. High memory usage is not necessarily a problem. It depends on the workload and how the applications are designed to use memory.
 
@@ -235,13 +237,13 @@ To find which processes are consuming the most memory, use `pidstat`.
 
 **Example output**
 
-![pidstat output](media/troubleshoot-performance-memory-linux/pidstat-memory.png)
+![Screenshot of pidstat output.](media/troubleshoot-performance-memory-linux/pidstat-memory.png)
 
 This output displays all running processes and their statistics. Another approach is to use the 'ps' tool to get similar results: `ps aux --sort=-rss | head -n 10`
 
 **Example output**
 
-![ps aux output](media/troubleshoot-performance-memory-linux/ps-aux.png)
+![Screenshot of ps aux output.](media/troubleshoot-performance-memory-linux/ps-aux.png)
 
 #### Why sort by RSS?
 
