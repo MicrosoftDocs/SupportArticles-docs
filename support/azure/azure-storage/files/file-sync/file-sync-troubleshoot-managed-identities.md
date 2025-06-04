@@ -78,6 +78,10 @@ Server endpoint:
 
 When you run the `Set-AzStorageSyncServiceIdentity` cmdlet or create new cloud and server endpoints, these permissions are granted. If these permissions are removed, operations fail with the errors listed in the following section.
 
+## Unable to Recreate Storage Sync Service due to Dangling Enterprise App
+
+When you attempt to recreate a Storage Sync Service, you might encounter a failure due to a dangling enterprise app left by the previous Storage Sync Service. If this occurs, you can wait for a few hours for ARM to automatically delete the apps. Alternatively, you can manually delete the app in Entra ID by navigating to **Enterprise applications** and deleting the associated app. 
+
 ## Common issues
 
 This section covers common issues that occur when permissions or configuration settings are incorrect.
