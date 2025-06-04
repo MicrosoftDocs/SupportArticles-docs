@@ -203,7 +203,7 @@ aks-nodepool1-38695788-vmss000002  default       default-pod  test-container    
 aks-nodepool1-38695788-vmss000002  default       default-pod  test-container     nginx            3996610  3996610  SECCOMP_RET_LOG  SYS_CLONE
 ```
 
-The output indicates that the `test-container` executes the `SYS_CLONE` syscall which the seccomp profile blocks. With this information, you can determine whether to permit the syscalls in your container. If so, adjust the seccomp profile by removing the listed syscalls, which will prevent the workload from failing.
+The output indicates that the `test-container` executes the `SYS_CLONE` syscall which the seccomp profile would have blocked. With this information, you can determine whether to permit the listed syscalls in your container. If so, adjust the seccomp profile by removing them, which will prevent the workload from failing.
 
 Here are some commonly blocked syscalls to watch out for. A more comprehensive list is available in [Significant syscalls blocked by default profile](/azure/aks/secure-container-access#significant-syscalls-blocked-by-default-profile).
 
