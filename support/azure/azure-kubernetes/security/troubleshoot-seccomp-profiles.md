@@ -20,7 +20,7 @@ Seccomp profiles specify the syscalls that are allowed or denied for a specify c
 
 To enable seccomp on your AKS node pools, see [Secure container access to resources using built-in Linux security features](/azure/aks/secure-container-access). You can also configure a custom profile to meet your workload's specific needs, see [Configure a custom seccomp profile](/azure/aks/secure-container-access#configure-a-custom-seccomp-profile) for details.
 
-When using seccomp profiles, it's important to test and validate the affect on your workloads. Some workloads might require a lower number of syscall restrictions than others. This means that if workloads require syscalls that aren't included in the default profile, they might fail during runtime with the RuntimeDefault profile.
+When using seccomp profiles, it's important to test and validate the affect on your workloads. Some workloads might require a lower number of syscall restrictions than others. This means that if workloads require syscalls that aren't included in the configured profile, they might fail during runtime.
 
 This article shows how to use the open source project [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) to diagnose issues and gain visibility into blocked syscalls.
 
