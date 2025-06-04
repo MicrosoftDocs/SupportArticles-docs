@@ -179,7 +179,7 @@
           href: ../activation/subscription-issue-in-office-mobile.md
         - name: Connection issues when signing in Office 2016
           href: ../activation/connection-issue-when-sign-in-office-2016.md
-        - name: Disabling ADAL or WAM not recommended for fixing Microsoft 365 sign-in or activation issues
+        - name: Disabling ADAL or WAM not supported for fixing sign-in or activation issues
           href: ../activation/disabling-adal-wam-not-recommended.md
         - name: Errors activating Microsoft 365 on older Windows versions
           href: ../activation/errors-activating-on-older-windows.md 
