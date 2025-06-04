@@ -26,11 +26,7 @@ By default, Microsoft 365 Apps for enterprise (2016 version) uses Azure Active D
 If you experience authentication issues in Office applications on Windows 10, perform the following actions:
 
 - Update to the latest build for your channel according to [Update history for Microsoft 365 Apps for enterprise](/officeupdates/update-history-office365-proplus-by-date).
-- Make sure that you're running one of the following Windows build versions:
-  - Any build for Windows 10, version 1809 or a later version
-  - 17134.677 or later builds for Windows 10, version 1803
-  - 16299.461 or later builds for Windows 10, version 1709
-  - 15063.1112 or later builds for Windows 10, version 1703
+- Make sure that you're running Windows 10, version 22H2
 
 ## Symptoms
 
@@ -71,7 +67,7 @@ To resolve this issue, make sure that your local firewall, antivirus software, a
 
 Also, make sure that your network environment doesn't block the primary destination [https://login.microsoftonline.com](https://login.microsoftonline.com).
 
-**Note**: This primary address covers many IP addresses and many services. Some of these addresses may be blocked for no apparent reason in your environment, causeing intermittent problems with some devices while other devices work fine.
+**Note**: This primary address covers many IP addresses and many services. Some of these addresses may be blocked for no apparent reason in your environment, causing intermittent problems with some devices while other devices work fine.
 
 ### Symptom 2
 
@@ -86,14 +82,13 @@ This issue may occur for the following reasons:
   1. Look for errors that show the following pattern:
 
      ```output
-     0x?**028**????, 0x?**029**???? or 0x?**009**????
+     0x?028????, 0x?029????, 0x?009????
      ```
 
   To avoid this issue in the future, we recommend that you update the TPM firmware.
 
-  - **For Windows 10, version 1709 or later versions:** The operating system automatically detects situations that are related to TPM failures and provides a user recovery process that should occur automatically. If this process doesn't occur automatically, we recommend that you use the [manual recovery](#manual-recovery) method.
-  - For Windows 10, version 1703:** An automatic process is provided for Microsoft Entra hybrid join. No automatic process is provided for other environment configurations. If the Microsoft Entra hybrid join process doesn't occur automatically, we recommend that you use the [manual recovery](#manual-recovery) method.
-- A device is disabled by the user, the Enterprise administrator, or a policy because of a security concern or by mistake. To determine whether you're experiencing this issue, follow these steps:  
+  **For Windows 10, version 1709 or later versions**: The operating system automatically detects situations that are related to TPM failures and provides a user recovery process that should occur automatically. If this process doesn't occur automatically, we recommend that you use the [manual recovery](#manual-recovery) method.  
+- A device is disabled by the user, the administrator, or a policy because of a security concern or by mistake. To determine whether you're experiencing this issue, follow these steps:  
   
   1. Open Event viewer.
   1. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD** > **Operational**.
@@ -101,8 +96,8 @@ This issue may occur for the following reasons:
 
      > Description: AADSTS70002: Error validating credentials. AADSTS135011: Device used during the authentication is disabled.
 
-  To resolve this issue, we recommend that the Enterprise administrator enable the device in Active Directory or Microsoft Entra ID. For information about how to manage devices in Microsoft Entra ID, see [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities).
-- The Enterprise administrator or a policy deleted a device because of a security reason or by mistake. To determine whether you're experiencing this issue, follow these steps:  
+  To resolve this issue, we recommend that the administrator enable the device in Active Directory or Microsoft Entra ID. For information about how to manage devices in Microsoft Entra ID, see [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities).
+- The administrator or a policy deleted a device because of a security reason or by mistake. To determine whether you're experiencing this issue, follow these steps:  
 
   1. Open Event viewer.
   1. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD** > **Operational**.
@@ -138,7 +133,7 @@ To perform a manual recovery, follow the appropriate steps, depending on how the
 
    Run the `dsregcmd /status` command.
 
-   The result should contain the following field under the **User state** section:  
+   The result should contain the following field under the **User State** section:  
 
    ```output
    WorkplaceJoined : YES
@@ -173,7 +168,7 @@ The sign-in workflow stops, or no progress is shown on the screen. The sign-in w
 
 :::image type="content" source="./media/connection-issue-when-sign-in-office-2016/sign-in-page.png" alt-text="Screenshot of the page that shows the Signing in status.":::
 
-This issue occurs because WAM is disabling non-HTTPS traffic to prevent security threats, such as someone stealing user credentials. To determine whether you're experiencing this issue, follow these steps:
+This issue occurs because WAM disables non-HTTPS traffic to prevent security threats, such as someone stealing user credentials. To determine whether you're experiencing this issue, follow these steps:
 
 1. Open Event viewer.
 1. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD** > **Operational**.
