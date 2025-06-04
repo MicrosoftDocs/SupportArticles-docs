@@ -317,7 +317,7 @@ Storage Explorer only supports basic authentication with proxy servers. Other au
 
 The **Application** > **Proxy** > **Proxy configuration** setting determines which source Storage Explorer gets the proxy configuration from.
 
-If you select **Use environment variables**, make sure to set the `HTTPS_PROXY` or `HTTP_PROXY` environment variables. Environment variables are case-sensitive, so be sure to set the correct variables. If these variables are undefined or invalid, Storage Explorer doesn't use a proxy. Restart Storage Explorer after you modify any environment variables.
+If you select **Use environment variables**, make sure to set the `HTTPS_PROXY` or `HTTP_PROXY` environment variables. Environment variables are case-sensitive, so be sure to set the correct variables. If these variables are undefined or invalid, Storage Explorer won't use a proxy. Restart Storage Explorer after you modify any environment variables.
 
 If you select **Use app proxy settings**, make sure the in-app proxy settings are correct.
 
