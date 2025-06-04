@@ -61,7 +61,7 @@ Use the following steps to work around the issue:
       The following command output lists the group members, showing whether they're mail contacts or users:
 
       > Id          : c0a70f60-9927-4841-9e10-ef58455422e1  
-      > DisplayName : Aisling Ní Dhómhnaill  
+      > DisplayName : Erwin Mendosa  
       > ObjectType  : #microsoft.graph.user  
       >   
       > Id          : 34b63b74-66f7-4be1-ab7f-b7f7d003e0c6  
