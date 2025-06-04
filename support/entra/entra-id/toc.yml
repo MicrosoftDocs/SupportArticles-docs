@@ -56,6 +56,8 @@
       - name: Authentication fails after Android app is published to Google Play Store
         href: app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
       - name: Cookies are disabled error in MSAL.Net XBAP application
+        href: app-integration/customize-authentication-session-expiration.md
+      - name: Customize Middleware authentication ticket
         href: app-integration/script-errors-running-msal-net-xbap-app.md
       - name: Enable MSAL4J logging in a Spring Boot web application
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
