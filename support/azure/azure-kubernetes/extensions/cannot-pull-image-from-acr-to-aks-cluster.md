@@ -351,9 +351,9 @@ spec:
 ```
 ## Cause 6: Kubelet exceeds the default image pull rate limit
 
-When multiple jobs pull the same images, it can exceed the Kubelet default pull rate limit. In this case, the following error is displayed:
+When multiple jobs pull the same images, the Kubelet default pull rate limit might be exceeded. In this case, an error message like the following one is displayed:
 
-> Failed to pull image "acrname.azurecr.io/repo/nginx:latest": **pull QPS exceeded**. This occurred for pod podname at 4/22/2025, 12:48:32.000 PM UTC.
+> Failed to pull image "acrname.azurecr.io/repo/nginx:latest": **pull QPS exceeded**. This occurred for pod \<podname\> at 4/22/2025, 12:48:32.000 PM UTC.
 
 For more information about the limit, see the [registryPullQPS configuration](https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/#kubelet-config-k8s-io-v1beta1-KubeletConfiguration).
 
