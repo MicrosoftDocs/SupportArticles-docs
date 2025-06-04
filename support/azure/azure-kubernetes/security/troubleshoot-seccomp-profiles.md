@@ -177,7 +177,7 @@ kubectl gadget run audit_seccomp
 
 ### Step 4: Analyze blocked syscalls
 
-Run your workload using the `kubectl apply -f` command. Then, the [audit_seccomp gadget](https://go.microsoft.com/fwlink/?linkid=2259786) will log blocked syscalls, along with their associated pods, containers, and processes. You can use this information to identify the root causes of workload failures.
+Run your workload using the `kubectl apply -f` command. Then, the [audit_seccomp gadget](https://go.microsoft.com/fwlink/?linkid=2259786) will log the syscalls that the seccomp profile would have blocked, along with their associated pods, containers, and processes. You can use this information to identify the root causes of workload failures.
 
 For example, if you run the above-mentioned `default-pod` pod with the `my-profile.json` profile, the output looks like the following one:
 
