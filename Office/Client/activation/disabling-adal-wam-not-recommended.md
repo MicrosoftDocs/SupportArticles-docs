@@ -22,7 +22,7 @@ ms.reviewer: jploegert
 
 To diagnose and automatically fix common sign-in and activation issues, run the [Microsoft 365 Sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome) and [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome).
 
-Microsoft does't support disabling Azure Active Directory Authentication Library (ADAL) or Web Account Manager (WAM) authentication as a solution to sign-in or activation issues. This method can adversely affect your environment.
+Microsoft doesn't support disabling Azure Active Directory Authentication Library (ADAL) or Web Account Manager (WAM) authentication as a solution to sign-in or activation issues. This method can adversely affect your environment.
 
 > [!WARNING]
 > To support compliance with the Digital Markets Act (DMA) in the European Economic Area (EEA), the manner in which users sign in to apps on Windows is managed through enforcement within WAM. Disabling WAM authentication puts the Office client into a legacy state and a Microsoft unsupported configuration.
@@ -56,7 +56,6 @@ For more information about sign-in related symptoms and solutions, see the follo
 
 - [Microsoft Entra device management FAQ](/azure/active-directory/devices/faq)
 - [Troubleshooting devices using the dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd)
-- [How to troubleshoot non-browser apps that can't sign in-to Microsoft 365, Azure, or Intune](https://support.office.com/article/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-office-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1)
-- ["Access Denied", or user is repeatedly prompted for credentials when connecting to Microsoft 365](/microsoft-365/troubleshoot/security/access-denied-when-connect-to-office-365)
+- [How to troubleshoot non-browser apps that can't sign in to Microsoft 365, Azure, or Intune](https://support.office.com/article/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-office-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
