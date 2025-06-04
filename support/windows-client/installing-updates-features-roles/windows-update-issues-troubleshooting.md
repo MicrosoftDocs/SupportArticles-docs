@@ -194,7 +194,6 @@ Windows client devices can receive updates from various sources, including Windo
 2. Run the cmdlet:
 
     ```powershell
-
     $MUSM = New-Object -ComObject "Microsoft.Update.ServiceManager"
     ```
 

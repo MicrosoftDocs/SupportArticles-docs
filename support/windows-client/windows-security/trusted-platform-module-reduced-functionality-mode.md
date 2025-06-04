@@ -14,7 +14,7 @@ ms.custom:
 
 This article provides a workaround for an issue in which the Trusted Platform Module (TPM) is in reduced functionality mode after a successful deployment of Windows 10.
 
-_Applies to:_ &nbsp; Windows 10 – all editions
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4018657
 
 ## Symptoms

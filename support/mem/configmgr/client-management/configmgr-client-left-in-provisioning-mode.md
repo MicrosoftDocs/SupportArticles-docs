@@ -9,7 +9,7 @@ ms.custom: sap:Client Operations\Other
 
 This article solves the issue that the Configuration Manager client is left in provisioning mode after performing an in-place upgrade to Windows 10.
 
-_Original product version:_ &nbsp; Configuration Manager (current branch)
+_Original product version:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4021950
 
 ## Symptoms

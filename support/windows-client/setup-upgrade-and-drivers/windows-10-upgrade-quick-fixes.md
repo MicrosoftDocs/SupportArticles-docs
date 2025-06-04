@@ -157,7 +157,7 @@ Verify compatibility information, and if desired reinstall antivirus application
 
 To remove the application, go to **Control Panel** > **Programs** > **Programs and Features** and select the antivirus application, then select **Uninstall**. Choose **Yes** when you're asked to confirm program removal.
 
-For more information, see [Windows 7 - How to properly uninstall programs](https://support.microsoft.com/help/2601726) or [Repair or remove programs in Windows 10](https://support.microsoft.com/help/4028054/windows-repair-or-remove-programs-in-windows-10).
+For more information, see [Windows 7 - How to properly uninstall programs](https://support.microsoft.com/topic/8c95f23f-5627-8b73-ef98-565cff984446) or [Repair or remove programs in Windows 10](https://support.microsoft.com/help/4028054/windows-repair-or-remove-programs-in-windows-10).
 
 ### Uninstall non-essential software
 

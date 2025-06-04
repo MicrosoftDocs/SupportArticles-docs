@@ -7,7 +7,7 @@ ms.topic: troubleshooting
 ms.custom:
 - sap:windows desktop and shell experience\kiosk mode
 - pcy:WinComm User Experience
-ms.reviewer: sybruckm, paoloma
+ms.reviewer: sybruckm, lizlong, paoloma
 audience: itpro
 ---
 # Troubleshoot kiosk mode issues
