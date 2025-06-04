@@ -26,21 +26,21 @@ By default, Microsoft 365 Apps for enterprise (2016 version) uses Azure Active D
 If you experience authentication issues in Office applications on Windows 10, perform the following actions:
 
 - Update to the latest build for your channel according to [Update history for Microsoft 365 Apps for enterprise](/officeupdates/update-history-office365-proplus-by-date).
-- Make sure that you're running Windows 10, version 22H2
+- Make sure that you're running Windows 10, version 22H2.
 
 ## Symptoms
 
-After you update to Microsoft Office 2016 build 16.0.7967 or a later version on Windows 10, you may experience one of the following symptoms.
+After you update to Microsoft Office 2016 build 16.0.7967 or a later version on Windows 10, you might experience one of the following symptoms.
 
 ### Symptom 1
 
-When the overall network is working on your devices, Office applications may experience connection issues. You may receive a message that resembles the following example:
+When the overall network is working on your devices, Office applications might experience connection issues. You might receive a message that resembles the following example:
 
 > You'll need the internet for this.  
 > We couldn't connect to one of the services we needed to sign you in. Please check your connection and try again.  
 > 0xCAA70007
 
-:::image type="content" source="./media/connection-issue-when-sign-in-office-2016/error-message-saying-you-need-internet.png" alt-text="Screenshot of the error message shows that you will need the internet for this.":::
+:::image type="content" source="./media/connection-issue-when-sign-in-office-2016/error-message-saying-you-need-internet.png" alt-text="Screenshot of the you will need the internet for this error message.":::
 
 To determine whether you're experiencing this issue, follow these steps:
 
@@ -53,11 +53,11 @@ To determine whether you're experiencing this issue, follow these steps:
     0x?AA7????,  0x?AA8????, 0x?AA3????, 0x102, 0x80070102
     ```  
 
-1. Make sure that the time these errors occur is related to the time when you actually connect to Internet, and it isn't an intermittent network issue caused by a loss of Wi-Fi connection or a wake-up after hibernation and initialization of the network stack.
+1. Make sure that the time at which these errors occur corresponds with the time at which you actually connect to the internet. Also, make sure that the connection error isn't an intermittent network issue that's caused by a loss of Wi-Fi connection or a wake-up after hibernation and initialization of the network stack.
 
-Then, to determine whether your issue is caused by network environment or local firewall/antivirus software, follow these steps:
+Then, to determine whether your issue is caused by network environment or local firewall or antivirus software, follow these steps:
   
-1. Open Edge (not Internet Explorer) and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). Navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If it fails, the issue is caused by a network environment or local firewall/antivirus software.  
+1. Open Edge (not Internet Explorer), andthen go to [https://login.microsoftonline.com](https://login.microsoftonline.com). Navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If it fails, the issue is caused by a network environment or local firewall/antivirus software.  
 1. Open Edge (not Internet Explorer) in InPrivate mode and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). After you enter credentials, navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If it fails, the issue is caused by a network environment or local firewall/antivirus software.
 
 To resolve this issue, make sure that your local firewall, antivirus software, and Windows Defender don't block the following processes that engage in token acquisition:
@@ -67,13 +67,13 @@ To resolve this issue, make sure that your local firewall, antivirus software, a
 
 Also, make sure that your network environment doesn't block the primary destination [https://login.microsoftonline.com](https://login.microsoftonline.com).
 
-**Note**: This primary address covers many IP addresses and many services. Some of these addresses may be blocked for no apparent reason in your environment, causing intermittent problems with some devices while other devices work fine.
+**Note**: This primary address covers many IP addresses and many services. Some of these addresses may be blocked in your environment for no apparent reason. This might cause intermittent problems with some devices while other devices continue to work correctly. 
 
 ### Symptom 2
 
-When you try to open or save a document in SharePoint and OneDrive in Microsoft 365, or you try to synchronize email messages or calendar in Microsoft Outlook, you're prompted for credentials. After you enter credentials, you're prompted again.
+When you try to open or save a document in SharePoint and OneDrive in Microsoft 365, or you try to synchronize email messages or calendar entries in Microsoft Outlook, you're prompted for credentials. After you enter credentials, you're prompted again.
 
-This issue may occur for the following reasons:
+This issue might occur for the following reasons:
 
 - The Trusted Platform Module (TPM) chip or firmware is malfunctioning. Windows uses the TPM chip to protect your credentials. The chip may become corrupted or reset in some conditions. To determine whether you're experiencing this kind of issue, follow these steps:
 
@@ -117,7 +117,7 @@ To perform a manual recovery, follow the appropriate steps, depending on how the
 
    Run the `dsregcmd /status` command. ​​
 
-   The result should contain the following fields under the **Device State** section:  
+   The results output should contain the following fields under the **Device State** section:  
 
    ```output
    AzureAdJoined : YES
@@ -133,7 +133,7 @@ To perform a manual recovery, follow the appropriate steps, depending on how the
 
    Run the `dsregcmd /status` command.
 
-   The result should contain the following field under the **User State** section:  
+   The results output should contain the following field under the **User State** section:  
 
    ```output
    WorkplaceJoined : YES
@@ -157,9 +157,9 @@ To perform a manual recovery, follow the appropriate steps, depending on how the
 
    To perform the recovery, follow these steps:
 
-   1. Back up your data first.
+   1. Back up your data.
    1. Create a new local administrator.
-   1. Disconnect the current logon user account from the domain. To do so, go to **Setting** > **Accounts** > **Access work or school**, select the account, and then select **Disconnect**.
+   1. Disconnect the current logon user account from the domain. To do this, go to **Setting** > **Accounts** > **Access work or school**, select the account, and then select **Disconnect**.
    1. Sign in by using the new local administrator account, and reconnect to Microsoft Entra ID.
 
 ### Symptom 3
