@@ -53,12 +53,12 @@ To determine whether you're experiencing this issue, follow these steps:
     0x?AA7????,  0x?AA8????, 0x?AA3????, 0x102, 0x80070102
     ```  
 
-1. Make sure that the time at which these errors occur corresponds with the time at which you actually connect to the internet. Also, make sure that the connection error isn't an intermittent network issue that's caused by a loss of Wi-Fi connection or a wake-up after hibernation and initialization of the network stack.
+1. Make sure that the time at which these errors occur corresponds with the time at which you actually connect to the internet. Also, make sure that the connection error isn't an intermittent network issue that's caused by a loss of Wi-Fi connection or by the system waking up after hibernation and initialization of the network stack.
 
-Then, to determine whether your issue is caused by network environment or local firewall or antivirus software, follow these steps:
+Then, to determine whether your issue is caused by the network environment, local firewall, or antivirus software, follow these steps:
   
-1. Open Edge (not Internet Explorer), andthen go to [https://login.microsoftonline.com](https://login.microsoftonline.com). Navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If it fails, the issue is caused by a network environment or local firewall/antivirus software.  
-1. Open Edge (not Internet Explorer) in InPrivate mode and go to [https://login.microsoftonline.com](https://login.microsoftonline.com). After you enter credentials, navigation should land on [https://www.office.com](https://www.office.com) or your company's default landing page. If it fails, the issue is caused by a network environment or local firewall/antivirus software.
+1. Open Edge (not Internet Explorer), and then go to [https://login.microsoftonline.com](https://login.microsoftonline.com). You should be taken to [https://www.office.com](https://www.office.com) or your company's default landing page. If navigation fails, the issue is caused by a network environment or local firewall or antivirus software.  
+1. Open Edge (not Internet Explorer) in InPrivate mode, and then go to [https://login.microsoftonline.com](https://login.microsoftonline.com). After you enter credentials, you should be taken to [https://www.office.com](https://www.office.com) or your company's default landing page. If navigation fails, the issue is caused by a network environment or local firewall or antivirus software.
 
 To resolve this issue, make sure that your local firewall, antivirus software, and Windows Defender don't block the following processes that engage in token acquisition:
 
@@ -67,7 +67,7 @@ To resolve this issue, make sure that your local firewall, antivirus software, a
 
 Also, make sure that your network environment doesn't block the primary destination [https://login.microsoftonline.com](https://login.microsoftonline.com).
 
-**Note**: This primary address covers many IP addresses and many services. Some of these addresses may be blocked in your environment for no apparent reason. This might cause intermittent problems with some devices while other devices continue to work correctly. 
+**Note**: This primary address covers many IP addresses and many services. Some of these addresses might be blocked in your environment for no apparent reason. This condition might cause intermittent problems that affect some devices while other devices continue to work correctly. 
 
 ### Symptom 2
 
@@ -90,16 +90,16 @@ This issue might occur for the following reasons:
   **For Windows 10, version 1709 or later versions**: The operating system automatically detects situations that are related to TPM failures and provides a user recovery process that should occur automatically. If this process doesn't occur automatically, we recommend that you use the [manual recovery](#manual-recovery) method.  
 - A device is disabled by the user, the administrator, or a policy because of a security concern or by mistake. To determine whether you're experiencing this issue, follow these steps:  
   
-  1. Open Event viewer.
+  1. Open Event Viewer.
   1. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD** > **Operational**.
   1. Look for the following message:
 
      > Description: AADSTS70002: Error validating credentials. AADSTS135011: Device used during the authentication is disabled.
 
-  To resolve this issue, we recommend that the administrator enable the device in Active Directory or Microsoft Entra ID. For information about how to manage devices in Microsoft Entra ID, see [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities).
-- The administrator or a policy deleted a device because of a security reason or by mistake. To determine whether you're experiencing this issue, follow these steps:  
+  To resolve this issue, we recommend that the administrator enables the device in Active Directory or Microsoft Entra ID. For information about how to manage devices in Microsoft Entra ID, see [Manage device identities using the Microsoft Entra admin center](/entra/identity/devices/manage-device-identities).
+- The administrator or a policy deleted a device because of security concerns or by mistake. To determine whether you're experiencing this issue, follow these steps:  
 
-  1. Open Event viewer.
+  1. Open Event Viewer.
   1. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD** > **Operational**.
   1. Look for the following message:
 
@@ -170,7 +170,7 @@ The sign-in workflow stops, or no progress is shown on the screen. The sign-in w
 
 This issue occurs because WAM disables non-HTTPS traffic to prevent security threats, such as someone stealing user credentials. To determine whether you're experiencing this issue, follow these steps:
 
-1. Open Event viewer.
+1. Open Event Viewer.
 1. Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **AAD** > **Operational**.
 1. Look for the following message:
 
