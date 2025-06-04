@@ -5,11 +5,12 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
+ms.reviewer: akastha
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure
-ms.date: 06/29/2020
+ms.date: 06/04/2025
 ms.author: genli
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
