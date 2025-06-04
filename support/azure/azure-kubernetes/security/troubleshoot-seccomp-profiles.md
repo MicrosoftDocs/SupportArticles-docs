@@ -13,7 +13,7 @@ ms.date: 06/04/2025
 
 ## Background
 
-Seccomp profiles specify the syscalls that are allowed or denied for a specify container. Syscalls are the interface that allows user space programs to request kernel services. There are two values supported on AKS:
+Syscalls are the interface that allows user space programs to request kernel services. Seccomp profiles specify the syscalls that are allowed or denied for a specify container. There are two values supported on AKS:
 
 - `RuntimeDefault`: Use the default seccomp profile given by the runtime.
 - `Unconfined`: All syscalls are allowed.
