@@ -10,8 +10,7 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 
 By default, Microsoft Entra ID tokens (ID tokens, access tokens, and SAML tokens) expire after one hour. Also by default, ASP.NET and ASP.NET Core middleware set their authentication tickets to the expiration of these tokens. If you don't want your web application to redirect users to Microsoft Entra ID to have them sign in again, you can customize the middleware authentication ticket.
 
-This customization can also help resolve AJAX issues (such as CORS errors to `login.microsoftonline.com`) where your app is both a Web App and Web API.
-
+This customization can also help resolve AJAX-related issues, such as coss-origin resource sharing (CORS) errors to login.microsoftonline.com. These issues often occur when your app functions as both a web application and a web API.
 ## For ASP.NET
 
 In the `ConfigureAuth` method of the `Startup.Auth.cs` file, update the `app.UseCookieAuthentication()` method to:
