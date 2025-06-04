@@ -13,7 +13,7 @@ ms.date: 06/04/2025
 
 ## Background
 
-Syscalls are the interface that allows user space programs to request kernel services. Seccomp profiles specify the syscalls that are allowed or denied for a specify container. There are two values supported on AKS:
+Syscalls are the interface that allows user space programs to request kernel services. Seccomp profiles specify the syscalls that are allowed or denied for a specific container. There are two values supported on AKS:
 
 - `RuntimeDefault`: Use the default seccomp profile given by the runtime.
 - `Unconfined`: All syscalls are allowed.
@@ -209,7 +209,7 @@ Here are some commonly blocked syscalls to watch out for. A more comprehensive l
 
 | Blocked syscall |Consideration |
 |---|---|
-| `clock_settime`  or `clock_adjtime` | If your workload needs accurate time synchronization |
+| `clock_settime`  or `clock_adjtime` | If your workload needs accurate time synchronization, ensure this syscall is not being blocked. |
 | `add_key` or `key_ctl` | If your workload requires key management, these blocked syscalls prevent containers from using the kernel keyring which is used for retaining security data, authentication keys, encryption keys, and other data within the kernel. |
 | `clone`  | This syscall prevents the cloning of new namespaces, except for `CLONE_NEWUSER`. Workloads that depend on creating new namespaces might be affected if this syscall is blocked.  |
 | `io_uring`  | This syscall is blocked with the move to `containerd` 2.0. However, it's not blocked in the profile for `containerd` 1.7.  |
