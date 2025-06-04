@@ -1,7 +1,7 @@
 ---
 title: The System Administrator Has Restricted the Types of Logon
 description: Helps resolve an error when connecting to a computer—The system administrator has restricted the types of logon (network or interactive).
-ms.date: 06/03/2025
+ms.date: 06/04/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
