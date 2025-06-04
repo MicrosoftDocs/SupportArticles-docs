@@ -1,7 +1,7 @@
 ---
 title: Mail Contacts Lose Access To Encrypted Content
 description: Provides a workaround for an issue in which mail contacts in groups either lose access or have intermittent access to encrypted content.
-ms.date: 05/30/2025
+ms.date: 06/04/2025
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
