@@ -317,7 +317,7 @@ Storage Explorer only supports basic authentication with proxy servers. Other au
 
 The **Application** > **Proxy** > **Proxy configuration** setting determines which source Storage Explorer gets the proxy configuration from.
 
-If you select **Use environment variables**, make sure to set the `HTTPS_PROXY` or `HTTP_PROXY` environment variables. Environment variables are case-sensitive, so be sure to set the correct variables. If these variables are undefined or invalid, Storage Explorer won't use a proxy. Restart Storage Explorer after you modify any environment variables.
+If you select **Use environment variables**, make sure to set the `HTTPS_PROXY` or `HTTP_PROXY` environment variables. Environment variables are case-sensitive, so be sure to set the correct variables. If these variables are undefined or invalid, Storage Explorer doesn't use a proxy. Restart Storage Explorer after you modify any environment variables.
 
 If you select **Use app proxy settings**, make sure the in-app proxy settings are correct.
 
@@ -478,6 +478,9 @@ If you accidentally attached by using an invalid shared access signature URL and
 
 Storage Explorer comes packaged with all dependencies it needs to run on Windows.
 
+> [!NOTE]
+> Some components require access to the command line. If access to the command line is restricted, Storage Explorer might not work as expected. If you encounter issues, contact your system administrator.
+
 ## [macOS](#tab/macOS)
 
 Storage Explorer comes packaged with all dependencies it needs to run on macOS.
@@ -498,7 +501,7 @@ snap connect storage-explorer:password-manager-service :password-manager-service
 
 You can also download the application as a *.tar.gz* file, but you have to install dependencies manually.
 
-Storage Explorer requires the [.NET 6 runtime](/dotnet/core/install/linux) to be installed on your system. The ASP.NET runtime isn't required.
+Storage Explorer requires the [.NET 8 runtime](/dotnet/core/install/linux) to be installed on your system. The ASP.NET runtime isn't required.
 
 > [!NOTE]
 > Older versions of Storage Explorer might require a different version of .NET or .NET Core. To determine the required version, refer to the release notes or in-app error messages.
@@ -676,7 +679,7 @@ AzCopy logs can be found easily via two different methods:
 For some issues, you need to provide logs of the network calls made by Storage Explorer. On Windows, you can get network logs by using Fiddler.
 
 > [!NOTE]
-> Fiddler traces might contain passwords you entered or sent in your browser during the gathering of the trace. Make sure to read the instructions on how to sanitize a Fiddler trace. Don't upload Fiddler traces to GitHub. You'll be told where you can securely send your Fiddler trace.
+> Fiddler traces might contain passwords you entered or sent in your browser during the gathering of the trace. Make sure to read the instructions on how to sanitize a Fiddler trace. Don't upload Fiddler traces to GitHub. Wait for instructions on how you can securely send your Fiddler trace.
 
 #### Part 1: Install and configure Fiddler
 
