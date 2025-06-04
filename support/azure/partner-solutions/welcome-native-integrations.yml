@@ -21,8 +21,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text:  Update ingestion key after rotation
-            url: ingestion-key-rotation-log-flow.md
+          - text:  Resolve Azure Native Integrations Purchase Errors
+            url: marketplace-purchases-errors.md
 
 # Card
   - title:  Azure Native New Relic Service
