@@ -20,6 +20,8 @@ ms.reviewer: jploegert
 
 # Disabling ADAL or WAM isn't supported to fix Microsoft 365 sign-in or activation issues
 
+To diagnose and automatically fix common sign-in and activation issues, run the [Microsoft 365 Sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome) and [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome).
+
 Microsoft does't support disabling Azure Active Directory Authentication Library (ADAL) or Web Account Manager (WAM) authentication as a solution to sign-in or activation issues. This method can adversely affect your environment.
 
 > [!WARNING]
@@ -30,12 +32,6 @@ By default, Microsoft 365 apps (for example, Office client apps) use ADAL framew
 ADAL enables sign-in features such as Multi-Factor Authentication (MFA), smart card  authentication, and certificate-based authentication for Office client apps across different platforms. Some security-related features on Windows devices are available exclusively through WAM. Additionally, all future innovations are implemented through WAM.
 
 ## Recommendations to resolve common sign-in issues
-
-### Automatic
-
-To diagnose and automatically fix common sign-in and activation issues, run the [Microsoft 365 Sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome) and [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome).
-
-### Manual
 
 Authentication issues that occur during sign-in or activation typically manifest themselves as one of the following symptoms:
 
