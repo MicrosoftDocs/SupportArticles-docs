@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AvailabilityZoneNotSupported Error Code
 description: Learn how to troubleshoot the AvailabilityZoneNotSupported error when you try to create an Azure Kubernetes Service cluster in a set of zones.
-ms.date: 05/30/2025
+ms.date: 06/04/2025
 ms.reviewer: marcha, skuchipudi, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
@@ -17,21 +17,21 @@ Access to [Azure CLI](/cli/azure/get-started-with-azure-cli).
 
 ## Symptoms
 
-An AKS cluster creation fails in specified availability zones and you receive an "AvailabilityZoneNotSupported" error with the following message:
+An AKS cluster creation fails in specified availability zones, and you receive an "AvailabilityZoneNotSupported" error with the following message:
 
-> Preflight validation check for resource(s) for container service \<resource-name> in resource group \<resource-group-name> failed. Message: The zone(s) '1' for resource 'agentpoolName' is not supported.The supported zones for location '\<location>' are 'A', 'B'
+> Preflight validation check for resource(s) for container service \<resource-name> in resource group \<resource-group-name> failed. Message: The zone(s) '1' for resource '\<agentpoolName>' is not supported. The supported zones for location '\<location>' are 'A', 'B'
 
 ## Cause
 
-The issue occurs because the requested SKU has restrictions in some or all zones for your subscription. To verify the restrictions, go to the [Verify SKU restrictions](#verify-sku-restrictions) section.
+The issue occurs because the requested SKU has restrictions in some or all zones of your subscription. To verify the restrictions, go to the [Verify SKU restrictions](#verify-sku-restrictions) section.
 
 ## Solution
 
-To resolve this issue, request access to the specified region or zone by following the [Azure region access request process](../../general/region-access-request-process.md).
+To resolve this issue, follow the [Azure region access request process](../../general/region-access-request-process.md) to request access to the specified region or zone.
 
 ## Verify SKU restrictions
 
-1. List SKU details by running one of the following commands:
+1. List the SKU details by running one of the following commands:
 
     ```azurecli
     az vm list-skus -l <location> --size <SKU> 
@@ -43,9 +43,9 @@ To resolve this issue, request access to the specified region or zone by followi
     ```
     
     > [!NOTE]
-    > Replace `<subscription>`, `<SKU>`, and `<locaiton>` accordingly.
+    > Replace `<subscription>`, `<SKU>`, and `<location>` accordingly.
 2. Search for the requested SKU from the command output.
-3. If you see the information like the following, it indicates that the requested SKU has restrictions in some or all zones for your subscription:
+3. If you see information like the following, it indicates that the requested SKU has restrictions in some or all zones of your subscription:
 
     ```json
     "restrictions": [
