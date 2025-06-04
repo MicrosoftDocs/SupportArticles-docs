@@ -1,6 +1,6 @@
 ---
-title: Disabling ADAL or WAM to Fix Microsoft 365 Sign-in or Activation Issues not Supported
-description: This article explains why disabling ADAL or WAM authentication to fix Office sign-in issues isn't supported. This article also offers possible resolutions.
+title: Disabling ADAL or WAM to Fix Microsoft 365 Sign-in or Activation Issues Not Supported
+description: This article explains why disabling ADAL or WAM authentication to fix Office sign-in issues isn't supported, and it offers possible resolutions.
 manager: dcscontentpm
 ms.date: 06/04/2025
 audience: Admin
@@ -20,37 +20,40 @@ ms.reviewer: jploegert
 
 # Disabling ADAL or WAM isn't supported to fix Microsoft 365 sign-in or activation issues
 
-Microsoft does't support disabling Azure Active Directory Authentication Library (ADAL) or Web Account Manager (WAM) authentication as a solution to fix sign-in or activation issues. This action can have adverse effects in your environment.
+Microsoft does't support disabling Azure Active Directory Authentication Library (ADAL) or Web Account Manager (WAM) authentication as a solution to sign-in or activation issues. This method can adversely affect your environment.
 
 > [!WARNING]
-> To support compliance with the Digital Markets Act (DMA) in the European Economic Area (EEA), the way users sign in to apps on Windows is managed by leveraging enforcement within WAM. Disabling WAM authentication puts the Office client into a legacy state and a Microsoft unsupported configuration.
+> To support compliance with the Digital Markets Act (DMA) in the European Economic Area (EEA), the manner in which users sign in to apps on Windows is managed through enforcement within WAM. Disabling WAM authentication puts the Office client into a legacy state and a Microsoft unsupported configuration.
 
 By default, Microsoft 365 apps (for example, Office client apps) use ADAL framework-based [Modern Authentication](/microsoft-365/enterprise/modern-auth-for-office-2013-and-2016). Starting in build 16.0.7967, Microsoft 365 apps use [Web Account Manager](/azure/active-directory/devices/concept-primary-refresh-token#key-terminology-and-components) for sign-in workflows on Windows builds that are later than build 15000 (Windows 10, version 1703, build 15063.138).
 
-ADAL enables sign-in features such as Multi-Factor Authentication (MFA), smart card, and certificate-based authentication for Office client apps across different platforms. Some security-related features on Windows devices are available exclusively through WAM. Additionally, all future innovations are implemented through WAM.
+ADAL enables sign-in features such as Multi-Factor Authentication (MFA), smart card  authentication, and certificate-based authentication for Office client apps across different platforms. Some security-related features on Windows devices are available exclusively through WAM. Additionally, all future innovations are implemented through WAM.
 
-> [!TIP]
-> To diagnose and automatically fix common sign-in and activation issues, run the [Microsoft 365 Sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome) and [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome).
+## Recommendations to resolve common sign-in issues
 
-## Recommendations for resolving common sign-in issues
+### Automatic
+
+To diagnose and automatically fix common sign-in and activation issues, run the [Microsoft 365 Sign-in troubleshooter](https://aka.ms/SaRA-OfficeSignIn-sarahome) and [Microsoft 365 activation troubleshooter](https://aka.ms/SaRA-OfficeActivation-sarahome).
+
+### Manual
 
 Authentication issues that occur during sign-in or activation typically manifest themselves as one of the following symptoms:
 
 - You can't sign in, and you receive repeated password prompts ("Credentials Needed" or "Needs Password").
 - The sign-in window doesn't appear, is blank, prematurely disappears, or stops responding.
-- Specific errors that are displayed in Microsoft 365 apps or the sign-in user interface.
+- Specific errors are displayed in Microsoft 365 apps or the sign-in user interface.
 
 If you experience sign-in issues, consider the following recommendations:
 
 - [Manually sign-out](https://support.microsoft.com/office/sign-out-of-office-5a20dc11-47e9-4b6f-945d-478cb6d92071) of all accounts in the Office app. Then, restart the app and try again to sign in.
-- [Reset activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
+- [Reset the activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 - If you experience device issues, for example, the device is deleted or disabled, [follow these recommendations](./connection-issue-when-sign-in-office-2016.md#symptom-2).
-- If the investigation suggests that an authentication process is experiencing network or connectivity issues, then [these steps](./connection-issue-when-sign-in-office-2016.md#symptom-1) should be helpful. Additionally, you can [reset Internet Explorer settings](https://support.microsoft.com/windows/change-or-reset-internet-explorer-settings-2d4bac50-5762-91c5-a057-a922533f77d5), and then try again to sign in.
+- If the investigation suggests that an authentication process is experiencing network or connectivity issues, then [follow these steps](./connection-issue-when-sign-in-office-2016.md#symptom-1). Additionally, you can [reset Internet Explorer settings](https://support.microsoft.com/windows/change-or-reset-internet-explorer-settings-2d4bac50-5762-91c5-a057-a922533f77d5), and then try again to sign in.
 
    > [!NOTE]  
    > After you reset Internet Explorer settings, you lose any custom settings.
 
-- In some cases, Microsoft Entra ID, or MSA WAM plugins might be missing on the device that blocks users from signing in to Office. Follow the steps in [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails) to restore the plugins and avoid having to remove them in the future.
+- In some cases, Microsoft Entra ID, or MSA WAM plugins might be missing on the device that blocks users from signing in to Office. To restore the plugins and avoid having to remove them in the future, follow the steps in [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
 - For information about how to troubleshoot other common sign-in issues, see [Connection issues when signing in after updating to Office 2016 build 16.0.7967](./connection-issue-when-sign-in-office-2016.md).
 
 For more information about sign-in related symptoms and solutions, see the following articles:
