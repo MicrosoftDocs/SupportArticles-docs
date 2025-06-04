@@ -123,9 +123,9 @@ The article [Configure a custom seccomp profile](/azure/aks/secure-container-acc
     root [ / ]# tdnf install -y tar
     ```
 
-3. In another terminal, copy the pod name. The pod is created in the `default` namespace and the name looks like `node-debugger-<node-name>-<random-sufix>`. It's outputted when you create the debug pod.
+3. Copy the pod name printed when running the `kubectl debug` command. It looks like `node-debugger-<node-name>-<random-sufix>`. It can also be retrieved by listing the pods in the `default` namespace.
 
-4. Transfer the seccomp profile file to the node directly:
+4. In another terminal, transfer the seccomp profile file to the node directly:
 
     ```console
     kubectl cp <the path of the local seccomp profile>/my-profile.json <pod name>:/host/var/lib/kubelet/seccomp/my-profile.json
