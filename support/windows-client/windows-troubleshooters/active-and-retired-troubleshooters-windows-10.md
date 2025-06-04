@@ -228,7 +228,7 @@ Automatically change system settings to fix a problem on your device
  
 ## Description
 
-The Windows User Profile troubleshooter addresses issues with Windows 10 Start menu open issues by repairing the permissions on the registry keys. This troubleshooter runs automatically on devices and can't be run manually. To check if it has run, go to **Start** > **Settings** > **Update & Security** > **Troubleshoot** > **View troubleshooting history** in Windows 10 and look for **User Profile troubleshooter**.
+The Windows User Profile troubleshooter addresses issues with opening the Windows 10 Start menu by repairing the permissions on the registry keys. This troubleshooter runs automatically on devices and can't be run manually. To check if it has run, go to **Start** > **Settings** > **Update & Security** > **Troubleshoot** > **View troubleshooting history** in Windows 10 and look for **User Profile troubleshooter**.
 
 |Activation date|Retirement date|More information|
 |---|---|---|
