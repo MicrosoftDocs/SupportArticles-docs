@@ -8,7 +8,7 @@ ms.collection: highpri
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
-ms.reviewer: kaushika,aaroncz
+ms.reviewer: kaushika
 audience: itpro
 ---
 # Advanced troubleshooting for stop or blue screen errors
@@ -204,7 +204,7 @@ We estimate that about 75 percent of all stop errors are caused by faulty driver
 >
 > Don't try to verify all the drivers at one time. This action can degrade performance and make the system unusable. It also limits the effectiveness of the tool.
 
-Use the following guidelines when you use Driver Verifier:  
+Use the following guidelines when you use Driver Verifier:
 
 - Test any "suspicious" drivers. For example, drivers that were recently updated or that are known to be problematic.
 - If you continue to experience non-analyzable crashes, try enabling verification on all third-party and unsigned drivers.
@@ -337,9 +337,9 @@ Unable to get NonPagedPoolStart
 Unable to get NonPagedPoolEnd
 Unable to get PagedPoolStart
 Unable to get PagedPoolEnd
-000000000011092a 
+000000000011092a
 CURRENT_IRQL:  2
-FAULTING_IP: 
+FAULTING_IP:
 NDIS!NdisQueueIoWorkItem+4 [minio\ndis\sys\miniport.c @ 9708]
 fffff807`aa74f4c4 48895120        mov     qword ptr [rcx+20h],rdx
 CPU_COUNT: 8
@@ -372,34 +372,34 @@ Resetting default scope
 
 LAST_CONTROL_TRANSFER:  from fffff800603799e9 to fffff8006036e0e0
 
-STACK_TEXT:  
-ffffa884`c0c3f568 fffff800`603799e9 : 00000000`0000000a 00000000`0011092a 00000000`00000002 00000000`00000001 : nt!KeBugCheckEx [minkernel\ntos\ke\amd64\procstat.asm @ 134] 
-ffffa884`c0c3f570 fffff800`60377d7d : fffff78a`4000a150 ffffb30e`03fba001 ffff8180`f0b5d180 00000000`000000ff : nt!KiBugCheckDispatch+0x69 [minkernel\ntos\ke\amd64\trap.asm @ 2998] 
-ffffa884`c0c3f6b0 fffff807`aa74f4c4 : 00000000`00000002 ffff8180`f0754180 00000000`00269fb1 ffff8180`f0754180 : nt!KiPageFault+0x23d [minkernel\ntos\ke\amd64\trap.asm @ 1248] 
-ffffa884`c0c3f840 fffff800`60256b63 : ffffb30e`0e18f710 ffff8180`f0754180 ffffa884`c0c3fa18 00000000`00000002 : NDIS!NdisQueueIoWorkItem+0x4 [minio\ndis\sys\miniport.c @ 9708] 
-ffffa884`c0c3f870 fffff800`60257bfd : 00000000`00000008 00000000`00000000 00000000`00269fb1 ffff8180`f0754180 : nt!KiProcessExpiredTimerList+0x153 [minkernel\ntos\ke\dpcsup.c @ 2078] 
-ffffa884`c0c3f960 fffff800`6037123a : 00000000`00000000 ffff8180`f0754180 00000000`00000000 ffff8180`f0760cc0 : nt!KiRetireDpcList+0x43d [minkernel\ntos\ke\dpcsup.c @ 1512] 
-ffffa884`c0c3fb60 00000000`00000000 : ffffa884`c0c40000 ffffa884`c0c39000 00000000`00000000 00000000`00000000 : nt!KiIdleLoop+0x5a [minkernel\ntos\ke\amd64\idle.asm @ 166] 
+STACK_TEXT:
+ffffa884`c0c3f568 fffff800`603799e9 : 00000000`0000000a 00000000`0011092a 00000000`00000002 00000000`00000001 : nt!KeBugCheckEx [minkernel\ntos\ke\amd64\procstat.asm @ 134]
+ffffa884`c0c3f570 fffff800`60377d7d : fffff78a`4000a150 ffffb30e`03fba001 ffff8180`f0b5d180 00000000`000000ff : nt!KiBugCheckDispatch+0x69 [minkernel\ntos\ke\amd64\trap.asm @ 2998]
+ffffa884`c0c3f6b0 fffff807`aa74f4c4 : 00000000`00000002 ffff8180`f0754180 00000000`00269fb1 ffff8180`f0754180 : nt!KiPageFault+0x23d [minkernel\ntos\ke\amd64\trap.asm @ 1248]
+ffffa884`c0c3f840 fffff800`60256b63 : ffffb30e`0e18f710 ffff8180`f0754180 ffffa884`c0c3fa18 00000000`00000002 : NDIS!NdisQueueIoWorkItem+0x4 [minio\ndis\sys\miniport.c @ 9708]
+ffffa884`c0c3f870 fffff800`60257bfd : 00000000`00000008 00000000`00000000 00000000`00269fb1 ffff8180`f0754180 : nt!KiProcessExpiredTimerList+0x153 [minkernel\ntos\ke\dpcsup.c @ 2078]
+ffffa884`c0c3f960 fffff800`6037123a : 00000000`00000000 ffff8180`f0754180 00000000`00000000 ffff8180`f0760cc0 : nt!KiRetireDpcList+0x43d [minkernel\ntos\ke\dpcsup.c @ 1512]
+ffffa884`c0c3fb60 00000000`00000000 : ffffa884`c0c40000 ffffa884`c0c39000 00000000`00000000 00000000`00000000 : nt!KiIdleLoop+0x5a [minkernel\ntos\ke\amd64\idle.asm @ 166]
 
 RETRACER_ANALYSIS_TAG_STATUS:  Failed in getting KPCR for core 2
 THREAD_SHA1_HASH_MOD_FUNC:  5b59a784f22d4b5cbd5a8452fe39914b8fd7961d
 THREAD_SHA1_HASH_MOD_FUNC_OFFSET:  5643383f9cae3ca39073f7721b53f0c633bfb948
 THREAD_SHA1_HASH_MOD:  20edda059578820e64b723e466deea47f59bd675
-FOLLOWUP_IP: 
+FOLLOWUP_IP:
 NDIS!NdisQueueIoWorkItem+4 [minio\ndis\sys\miniport.c @ 9708]
 fffff807`aa74f4c4 48895120        mov     qword ptr [rcx+20h],rdx
 FAULT_INSTR_CODE:  20518948
 FAULTING_SOURCE_LINE:  minio\ndis\sys\miniport.c
 FAULTING_SOURCE_FILE:  minio\ndis\sys\miniport.c
 FAULTING_SOURCE_LINE_NUMBER:  9708
-FAULTING_SOURCE_CODE:  
+FAULTING_SOURCE_CODE:
   9704:     _In_ _Points_to_data_      PVOID                       WorkItemContext
   9705:     )
   9706: {
-  9707: 
+  9707:
 > 9708:     ((PNDIS_IO_WORK_ITEM)NdisIoWorkItemHandle)->Routine = Routine;
   9709:     ((PNDIS_IO_WORK_ITEM)NdisIoWorkItemHandle)->WorkItemContext = WorkItemContext;
-  9710: 
+  9710:
   9711:     IoQueueWorkItem(((PNDIS_IO_WORK_ITEM)NdisIoWorkItemHandle)->IoWorkItem,
   9712:                     ndisDispatchIoWorkItem,
   9713:                     CriticalWorkQueue,
@@ -428,7 +428,7 @@ PRODUCT_TYPE:  1
 OSPLATFORM_TYPE:  x64
 OSNAME:  Windows 10
 OSEDITION:  Windows 10 WinNt TerminalServer SingleUserTS Personal
-OS_LOCALE:  
+OS_LOCALE:
 USER_LCID:  0
 OSBUILD_TIMESTAMP:  2017-11-26 03:49:20
 BUILDDATESTAMP_STR:  170928-1534
@@ -494,8 +494,8 @@ BUGCHECK_P2: 0
 BUGCHECK_P3: ffffffff82154573
 BUGCHECK_P4: 0
 READ_ADDRESS: 822821d0: Unable to get MiVisibleState
-8ba10000 
-FAULTING_IP: 
+8ba10000
+FAULTING_IP:
 nt!memcpy+33 [minkernel\crts\crtw32\string\i386\memcpy.asm @ 213
 82154573 f3a5            rep movs dword ptr es:[edi],dword ptr [esi]
 MM_INTERNAL_CODE:  0
@@ -527,7 +527,7 @@ LOCK_ADDRESS:  8226c6e0 -- (!locks 8226c6e0)
 Cannot get _ERESOURCE type
 Resource @ nt!PiEngineLock (0x8226c6e0)    Available
 1 total locks
-PNP_TRIAGE_DATA: 
+PNP_TRIAGE_DATA:
                 Lock address  : 0x8226c6e0
                 Thread Count  : 0
                 Thread address: 0x00000000
@@ -535,46 +535,46 @@ PNP_TRIAGE_DATA:
 
 LAST_CONTROL_TRANSFER:  from 82076708 to 821507e8
 
-STACK_TEXT:  
-8ba0ede4 82076708 00000050 8ba10000 00000000 nt!KeBugCheckEx [minkernel\ntos\ke\i386\procstat.asm @ 114] 
-8ba0ee40 8207771e 8ba0efa8 8ba10000 8ba0eea0 nt!MiSystemFault+0x13c8 [minkernel\ntos\mm\mmfault.c @ 4755] 
-8ba0ef08 821652ac 00000000 8ba10000 00000000 nt!MmAccessFault+0x83e [minkernel\ntos\mm\mmfault.c @ 6868] 
-8ba0ef08 82154573 00000000 8ba10000 00000000 nt!_KiTrap0E+0xec [minkernel\ntos\ke\i386\trap.asm @ 5153] 
-8ba0f024 86692866 a2bfd314 8ba0f094 0000850a nt!memcpy+0x33 [minkernel\crts\crtw32\string\i386\memcpy.asm @ 213] 
-8ba0f040 866961bc 8ba0f19c a2bfd0e8 00000000 NDIS!ndisMSetPowerManagementCapabilities+0x8a [minio\ndis\sys\miniport.c @ 7969] 
-8ba0f060 866e1f66 866e1caf adfb9000 00000000 NDIS!ndisMSetGeneralAttributes+0x23d [minio\ndis\sys\miniport.c @ 8198] 
-8ba0f078 ac50c15f a2bfd0e8 0000009f 00000001 NDIS!NdisMSetMiniportAttributes+0x2b7 [minio\ndis\sys\miniport.c @ 7184] 
+STACK_TEXT:
+8ba0ede4 82076708 00000050 8ba10000 00000000 nt!KeBugCheckEx [minkernel\ntos\ke\i386\procstat.asm @ 114]
+8ba0ee40 8207771e 8ba0efa8 8ba10000 8ba0eea0 nt!MiSystemFault+0x13c8 [minkernel\ntos\mm\mmfault.c @ 4755]
+8ba0ef08 821652ac 00000000 8ba10000 00000000 nt!MmAccessFault+0x83e [minkernel\ntos\mm\mmfault.c @ 6868]
+8ba0ef08 82154573 00000000 8ba10000 00000000 nt!_KiTrap0E+0xec [minkernel\ntos\ke\i386\trap.asm @ 5153]
+8ba0f024 86692866 a2bfd314 8ba0f094 0000850a nt!memcpy+0x33 [minkernel\crts\crtw32\string\i386\memcpy.asm @ 213]
+8ba0f040 866961bc 8ba0f19c a2bfd0e8 00000000 NDIS!ndisMSetPowerManagementCapabilities+0x8a [minio\ndis\sys\miniport.c @ 7969]
+8ba0f060 866e1f66 866e1caf adfb9000 00000000 NDIS!ndisMSetGeneralAttributes+0x23d [minio\ndis\sys\miniport.c @ 8198]
+8ba0f078 ac50c15f a2bfd0e8 0000009f 00000001 NDIS!NdisMSetMiniportAttributes+0x2b7 [minio\ndis\sys\miniport.c @ 7184]
 WARNING: Stack unwind information not available. Following frames may be wrong.
 8ba0f270 ac526f96 adfb9000 a2bfd0e8 8269b9b0 WwanUsbMp+0x1c15f
 8ba0f3cc 866e368a a2bfd0e8 00000000 8ba0f4c0 WwanUsbMp+0x36f96
-8ba0f410 867004b0 a2bfd0e8 a2bfd0e8 a2be2a70 NDIS!ndisMInvokeInitialize+0x60 [minio\ndis\sys\miniport.c @ 13834] 
-8ba0f7ac 866dbc8e a2acf730 866b807c 00000000 NDIS!ndisMInitializeAdapter+0xa23 [minio\ndis\sys\miniport.c @ 601] 
-8ba0f7d8 866e687d a2bfd0e8 00000000 00000000 NDIS!ndisInitializeAdapter+0x4c [minio\ndis\sys\initpnp.c @ 931] 
-8ba0f800 866e90bb adfb64d8 00000000 a2bfd0e8 NDIS!ndisPnPStartDevice+0x118 [minio\ndis\sys\configm.c @ 4235] 
-8ba0f820 866e8a58 adfb64d8 a2bfd0e8 00000000 NDIS!ndisStartDeviceSynchronous+0xbd [minio\ndis\sys\ndispnp.c @ 3096] 
-8ba0f838 866e81df adfb64d8 8ba0f85e 8ba0f85f NDIS!ndisPnPIrpStartDevice+0xb4 [minio\ndis\sys\ndispnp.c @ 1067] 
-8ba0f860 820a7e98 a2bfd030 adfb64d8 8ba0f910 NDIS!ndisPnPDispatch+0x108 [minio\ndis\sys\ndispnp.c @ 2429] 
-8ba0f878 8231f07e 8ba0f8ec adf5d4c8 872e2eb8 nt!IofCallDriver+0x48 [minkernel\ntos\io\iomgr\iosubs.c @ 3149] 
-8ba0f898 820b8569 820c92b8 872e2eb8 8ba0f910 nt!PnpAsynchronousCall+0x9e [minkernel\ntos\io\pnpmgr\irp.c @ 3005] 
-8ba0f8cc 820c9a76 00000000 820c92b8 872e2eb8 nt!PnpSendIrp+0x67 [minkernel\ntos\io\pnpmgr\irp.h @ 286] 
-8ba0f914 8234577b 872e2eb8 adf638b0 adf638b0 nt!PnpStartDevice+0x60 [minkernel\ntos\io\pnpmgr\irp.c @ 3187] 
-8ba0f94c 82346cc7 872e2eb8 adf638b0 adf638b0 nt!PnpStartDeviceNode+0xc3 [minkernel\ntos\io\pnpmgr\start.c @ 1712] 
-8ba0f96c 82343c68 00000000 a2bdb3d8 adf638b0 nt!PipProcessStartPhase1+0x4d [minkernel\ntos\io\pnpmgr\start.c @ 114] 
-8ba0fb5c 824db885 8ba0fb80 00000000 00000000 nt!PipProcessDevNodeTree+0x386 [minkernel\ntos\io\pnpmgr\enum.c @ 6129] 
-8ba0fb88 8219571b 85852520 8c601040 8226ba90 nt!PiRestartDevice+0x91 [minkernel\ntos\io\pnpmgr\enum.c @ 4743] 
-8ba0fbe8 820804af 00000000 00000000 8c601040 nt!PnpDeviceActionWorker+0xdb4b7 [minkernel\ntos\io\pnpmgr\action.c @ 674] 
-8ba0fc38 8211485c 85852520 421de295 00000000 nt!ExpWorkerThread+0xcf [minkernel\ntos\ex\worker.c @ 4270] 
-8ba0fc70 82166785 820803e0 85852520 00000000 nt!PspSystemThreadStartup+0x4a [minkernel\ntos\ps\psexec.c @ 7756] 
-8ba0fc88 82051e07 85943940 8ba0fcd8 82051bb9 nt!KiThreadStartup+0x15 [minkernel\ntos\ke\i386\threadbg.asm @ 82] 
-8ba0fc94 82051bb9 8b9cc600 8ba10000 8ba0d000 nt!KiProcessDeferredReadyList+0x17 [minkernel\ntos\ke\thredsup.c @ 5309] 
-8ba0fcd8 00000000 00000000 00000000 00000000 nt!KeSetPriorityThread+0x249 [minkernel\ntos\ke\thredobj.c @ 3881] 
+8ba0f410 867004b0 a2bfd0e8 a2bfd0e8 a2be2a70 NDIS!ndisMInvokeInitialize+0x60 [minio\ndis\sys\miniport.c @ 13834]
+8ba0f7ac 866dbc8e a2acf730 866b807c 00000000 NDIS!ndisMInitializeAdapter+0xa23 [minio\ndis\sys\miniport.c @ 601]
+8ba0f7d8 866e687d a2bfd0e8 00000000 00000000 NDIS!ndisInitializeAdapter+0x4c [minio\ndis\sys\initpnp.c @ 931]
+8ba0f800 866e90bb adfb64d8 00000000 a2bfd0e8 NDIS!ndisPnPStartDevice+0x118 [minio\ndis\sys\configm.c @ 4235]
+8ba0f820 866e8a58 adfb64d8 a2bfd0e8 00000000 NDIS!ndisStartDeviceSynchronous+0xbd [minio\ndis\sys\ndispnp.c @ 3096]
+8ba0f838 866e81df adfb64d8 8ba0f85e 8ba0f85f NDIS!ndisPnPIrpStartDevice+0xb4 [minio\ndis\sys\ndispnp.c @ 1067]
+8ba0f860 820a7e98 a2bfd030 adfb64d8 8ba0f910 NDIS!ndisPnPDispatch+0x108 [minio\ndis\sys\ndispnp.c @ 2429]
+8ba0f878 8231f07e 8ba0f8ec adf5d4c8 872e2eb8 nt!IofCallDriver+0x48 [minkernel\ntos\io\iomgr\iosubs.c @ 3149]
+8ba0f898 820b8569 820c92b8 872e2eb8 8ba0f910 nt!PnpAsynchronousCall+0x9e [minkernel\ntos\io\pnpmgr\irp.c @ 3005]
+8ba0f8cc 820c9a76 00000000 820c92b8 872e2eb8 nt!PnpSendIrp+0x67 [minkernel\ntos\io\pnpmgr\irp.h @ 286]
+8ba0f914 8234577b 872e2eb8 adf638b0 adf638b0 nt!PnpStartDevice+0x60 [minkernel\ntos\io\pnpmgr\irp.c @ 3187]
+8ba0f94c 82346cc7 872e2eb8 adf638b0 adf638b0 nt!PnpStartDeviceNode+0xc3 [minkernel\ntos\io\pnpmgr\start.c @ 1712]
+8ba0f96c 82343c68 00000000 a2bdb3d8 adf638b0 nt!PipProcessStartPhase1+0x4d [minkernel\ntos\io\pnpmgr\start.c @ 114]
+8ba0fb5c 824db885 8ba0fb80 00000000 00000000 nt!PipProcessDevNodeTree+0x386 [minkernel\ntos\io\pnpmgr\enum.c @ 6129]
+8ba0fb88 8219571b 85852520 8c601040 8226ba90 nt!PiRestartDevice+0x91 [minkernel\ntos\io\pnpmgr\enum.c @ 4743]
+8ba0fbe8 820804af 00000000 00000000 8c601040 nt!PnpDeviceActionWorker+0xdb4b7 [minkernel\ntos\io\pnpmgr\action.c @ 674]
+8ba0fc38 8211485c 85852520 421de295 00000000 nt!ExpWorkerThread+0xcf [minkernel\ntos\ex\worker.c @ 4270]
+8ba0fc70 82166785 820803e0 85852520 00000000 nt!PspSystemThreadStartup+0x4a [minkernel\ntos\ps\psexec.c @ 7756]
+8ba0fc88 82051e07 85943940 8ba0fcd8 82051bb9 nt!KiThreadStartup+0x15 [minkernel\ntos\ke\i386\threadbg.asm @ 82]
+8ba0fc94 82051bb9 8b9cc600 8ba10000 8ba0d000 nt!KiProcessDeferredReadyList+0x17 [minkernel\ntos\ke\thredsup.c @ 5309]
+8ba0fcd8 00000000 00000000 00000000 00000000 nt!KeSetPriorityThread+0x249 [minkernel\ntos\ke\thredobj.c @ 3881]
 
 
 RETRACER_ANALYSIS_TAG_STATUS:  Failed in getting KPCR for core 1
 THREAD_SHA1_HASH_MOD_FUNC:  e029276c66aea80ba36903e89947127118d31128
 THREAD_SHA1_HASH_MOD_FUNC_OFFSET:  012389f065d31c8eedd6204846a560146a38099b
 THREAD_SHA1_HASH_MOD:  44dc639eb162a28d47eaeeae4afe6f9eeccced3d
-FOLLOWUP_IP: 
+FOLLOWUP_IP:
 WwanUsbMp+1c15f
 ac50c15f 8bf0            mov     esi,eax
 FAULT_INSTR_CODE:  f33bf08b
@@ -601,7 +601,7 @@ PRODUCT_TYPE:  1
 OSPLATFORM_TYPE:  x86
 OSNAME:  Windows 10
 OSEDITION:  Windows 10 WinNt TerminalServer SingleUserTS
-OS_LOCALE:  
+OS_LOCALE:
 USER_LCID:  0
 OSBUILD_TIMESTAMP:  2017-09-28 18:32:28
 BUILDDATESTAMP_STR:  170928-1534
