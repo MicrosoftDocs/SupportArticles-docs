@@ -5,7 +5,7 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, scottmca, aaroncz, v-jesits
+ms.reviewer: kaushika, scottmca, v-jesits
 ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
@@ -19,24 +19,24 @@ _Original KB number:_ &nbsp; 2872000
 ## Summary
 
 The latest version of the Microsoft Deployment Toolkit can be downloaded from the following Microsoft Download Center website:
-[Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=325278)  
+[Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=325278)
 For more information about the Microsoft Deployment Toolkit, see the following Windows website:
-[Microsoft Deployment Toolkit documentation](https://www.microsoft.com/mdt)  
+[Microsoft Deployment Toolkit documentation](https://www.microsoft.com/mdt)
 
 ## More information
 
-Microsoft Deployment Toolkits use the following support life cycle:  
+Microsoft Deployment Toolkits use the following support life cycle:
 
 - MDT releases will support only scenarios that use underpinning technologies that are still under their mainstream support policy.
 - MDT releases will be supported for one (1) year after the next version is released, whichever date is last.
-Currently supported version: [Microsoft Deployment Toolkit (latest released build)](https://www.microsoft.com/download/details.aspx?id=54259)  
+Currently supported version: [Microsoft Deployment Toolkit (latest released build)](https://www.microsoft.com/download/details.aspx?id=54259)
 These earlier product versions are not available for download and are no longer supported:
 - Microsoft Deployment Toolkit 2013  (8443)
 - Microsoft Deployment Toolkit 2013 Update 2
 - Microsoft Deployment Toolkit (MDT) 2013 Update 1
 - Microsoft Deployment Toolkit (MDT) 2012 Update 1
 - Microsoft Deployment Toolkit (MDT) 2013
-- Microsoft Deployment Toolkit 2010 Update 1, September 2010 release  
+- Microsoft Deployment Toolkit 2010 Update 1, September 2010 release
 - Microsoft Deployment Toolkit 2010 (RTW), September 2009 release
 - Microsoft Deployment Toolkit 2008 Update 1, September 2008 release
 - Microsoft Deployment Toolkit 2008, March 2008 release
