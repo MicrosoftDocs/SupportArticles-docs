@@ -6,7 +6,7 @@ ms.workload: connectors
 author: nravindra-msft
 ms.author: nravindra
 ms.reviewer: angieandrews, rehodger
-ms.date: 06/03/2025
+ms.date: 06/04/2025
 ---
 # Troubleshoot broken connections in Microsoft Power Platform
 
