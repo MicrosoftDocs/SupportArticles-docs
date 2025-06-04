@@ -42,7 +42,7 @@ After you configuring AKS workloads to use a seccomp profile, the workloads exit
 
 ### Step 1: Modify your seccomp profile
 
-Create a custom seccomp profile matching the one you're troubleshooting and replace its default action such as  `SCMP_ACT_ERRNO` with `SCMP_ACT_LOG` to log blocked syscalls instead of failing them.
+Create a custom seccomp profile matching the one you're troubleshooting and replace its default action such as `SCMP_ACT_ERRNO` with `SCMP_ACT_LOG` to log blocked syscalls instead of failing them.
 
 Your custom seccomp profile might look like this:
 
