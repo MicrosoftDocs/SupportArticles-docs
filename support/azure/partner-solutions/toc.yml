@@ -1,5 +1,7 @@
 - name: Azure Native Integrations
   items:
+  - name: Azure Native Integrations purchases errors
+    href: marketplace-purchases-errors.md
   - name: Azure Native New Relic Service
     items:
     - name: Ingestion key rotation resolution
