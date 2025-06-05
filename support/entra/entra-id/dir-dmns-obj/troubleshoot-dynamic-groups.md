@@ -3,7 +3,7 @@ title: Troubleshoot dynamic groups
 description: This article helps you diagnose and resolve issues with dynamic groups.
 ms.date: 04/17/2025
 ms.service: entra-id
-ms.custom: sap:Groups, has-azure-ad-ps-ref
+ms.custom: sap:Groups, no-azure-ad-ps-ref
 ms.reviewer: mimart, v-weizhu, v-loeide, mbhargav, yuhko, barclayn
 ---
 # Troubleshoot dynamic groups
