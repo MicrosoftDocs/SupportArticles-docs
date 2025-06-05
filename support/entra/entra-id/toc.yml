@@ -291,6 +291,8 @@
       href: mfa/cannot-verify-account-reset-pwd.md
 - name: Microsoft Graph Users, Groups, and Entra APIs
   items: 
+   - name: Graph API request fails to get B2B users using UPN
+     href: users-groups-entra-apis/microsoft-graph-api-query-cannot-get-b2b-user-by-upn.md
    - name: Handling errors in Graph API requests with Invoke-RestMethod
      href: app-integration/graph-api-error-handling-invoke-restmethod.md
    - name: Troubleshoot Authorization RequestDenied error
