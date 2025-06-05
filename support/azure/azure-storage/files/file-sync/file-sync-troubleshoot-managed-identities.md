@@ -80,7 +80,7 @@ When you run the `Set-AzStorageSyncServiceIdentity` cmdlet or create new cloud a
 
 ## Unable to recreate Storage Sync Service due to dangling enterprise app
 
-When you attempt to recreate a Storage Sync Service, you might encounter a failure due to a dangling enterprise app left by the previous Storage Sync Service. If this occurs, you can wait for a few hours for ARM to automatically delete the apps. Alternatively, you can manually delete the app in Entra ID by navigating to **Enterprise applications** and deleting the associated app. 
+When you attempt to recreate a Storage Sync Service, you might encounter a failure due to a dangling enterprise app left by the previous Storage Sync Service. If this occurs, you can wait for a few hours for ARM to automatically delete the apps. Alternatively, you can manually delete the app in Microsoft Entra ID by navigating to **Enterprise applications** and deleting the associated app. 
 
 ## Common issues
 
