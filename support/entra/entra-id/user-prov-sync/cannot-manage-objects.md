@@ -35,7 +35,7 @@ This issue may occur if one or more of the following conditions are true:
 You want to manage objects in Office 365, Azure, or Intune and you no longer want to use directory synchronization.
 
 1. Make sure that [Microsoft Graph PowerShell is installed](/powershell/microsoftgraph/installation).
-2. Use the `Connect-MgGraph` command to sign in with the required scopes such as `Organization.ReadWrite.All`. For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started). 
+1. Use the `Connect-MgGraph` command to sign in with the required scopes such as `Organization.ReadWrite.All`. For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started).
 1. Disable directory synchronization by running the [update-mgorganization](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgorganization) command. 
 
     ```powershell
@@ -54,7 +54,7 @@ You want to manage objects in Office 365, Azure, or Intune and you no longer wan
 1. Check that directory synchronization was fully disabled. To do it, run the following command:
 
     ```powershell
-     Get-MgOrganization | Select OnPremisesSyncEnabled
+     Get-MgOrganization -organizationId $organizationId| Select OnPremisesSyncEnabled
     ```
 
     This command will return **True** or ***False**. Continue to run this command periodically until it returns **False**, and then go to the next step.
