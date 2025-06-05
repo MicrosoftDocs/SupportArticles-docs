@@ -36,7 +36,7 @@ You want to manage objects in Office 365, Azure, or Intune and you no longer wan
 
 1. Make sure that [Microsoft Graph PowerShell is installed](/powershell/microsoftgraph/installation).
 1. Use the `Connect-MgGraph` command to sign in with the required scopes such as `Organization.ReadWrite.All`. For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started). 
-1. Disable directory synchronization by running the [update-mgorganization](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgorganization) command. 
+1. Disable directory synchronization by running the [Update-MgOrganization](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgorganization) command. 
 
     ```powershell
     $organizationId = (Get-MgOrganization).Id
@@ -53,13 +53,13 @@ You want to manage objects in Office 365, Azure, or Intune and you no longer wan
      Get-MgOrganization | Select OnPremisesSyncEnabled
     ```
 
-    This command will return **True** or ***False**. Continue to run this command periodically until it returns **False**, and then go to the next step.
+    This command will return **True** or **False**. Continue to run this command periodically until it returns **False**, and then go to the next step.
 
     It may take 72 hours for deactivation to be completed. The time depends on the number of objects that are in your cloud service subscription account.
 
 1. Try to update an object by using Windows PowerShell or by using the cloud service portal.
 
-     Step 4 may take a while to be completed. There's a process in the cloud service environment that computes attribute values. The process must be completed before the objects can be changed by using Windows PowerShell or by using the cloud service portal.
+     Step 3 may take a while to be completed. There's a process in the cloud service environment that computes attribute values. The process must be completed before the objects can be changed by using Windows PowerShell or by using the cloud service portal.
 
 ### You delete an object from an on-premises AD DS. However, the object isn't deleted from your cloud service subscription account
 
