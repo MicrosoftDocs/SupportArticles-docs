@@ -32,7 +32,7 @@ This issue may occur if one of the following conditions is true:
 
 To fix this issue, follow these steps:
 
-1. Make sure that the [Microsoft Graph PowerShell module](/powershell/microsoftgraph/installation) and [ADSyncTools PowerShell](/azure/active-directory/hybrid/connect/reference-connect-adsynctools ) are installed.
+1. Make sure that the [Microsoft Graph PowerShell module](/powershell/microsoftgraph/installation) and [ADSyncTools PowerShell module](/azure/active-directory/hybrid/connect/reference-connect-adsynctools ) are installed.
 1. Run the following ADSync command to force directory synchronization:
     ```powershell
     Start-ADSyncSyncCycle -PolicyType Initial
