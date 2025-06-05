@@ -43,12 +43,12 @@ You want to manage objects in Office 365, Azure, or Intune and you no longer wan
     $organizationId = (Get-MgOrganization).Id
     
     # Store the False value for the DirSyncEnabled Attribute
-  $params = @{
-  onPremisesSyncEnabled = $False
-  }
- 
-      # Perform the update
-  Update-MgOrganization -OrganizationId $organizationId -BodyParameter $params
+    $params = @{
+    onPremisesSyncEnabled = $False
+    }
+    
+    # Perform the update
+    Update-MgOrganization -OrganizationId $organizationId -BodyParameter $params
     ```
 
 1. Check that directory synchronization was fully disabled. To do it, run the following command:
