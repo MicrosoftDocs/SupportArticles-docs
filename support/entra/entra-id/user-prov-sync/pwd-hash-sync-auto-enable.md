@@ -76,7 +76,4 @@ Optionally, if you want to clear password hashes that are already synchronized t
    4. Complete the wizard.
 2. Use the [Reset-MgUserAuthenticationMethodPassword](/powershell/module/microsoft.graph.identity.signins/reset-mguserauthenticationmethodpassword) cmdlet to set random passwords on all affected users. You have to run this cmdlet five times for each user because Microsoft Entra ID stores the last four password hashes in the password hash history.
 
->[!NOTE]
-> The Reset-MgUserAuthenticationMethod cmdlet does not work if the user is using a federated domain. To clear password hashes for the user in the federated domain, you must change the UPN of the user to a non-federated domain, and then run the cmdlet to set the random password. After that, revert the UPN of the user to the original state.
-
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
