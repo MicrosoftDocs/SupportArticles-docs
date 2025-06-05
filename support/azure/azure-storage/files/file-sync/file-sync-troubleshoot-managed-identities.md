@@ -3,7 +3,7 @@ title: Troubleshoot Azure File Sync managed identity issues
 description: Troubleshoot common issues when your Azure File Sync deployment is configured to use managed identities.
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 04/02/2025
+ms.date: 06/05/2025
 author: khdownie
 ms.author: kendownie
 ---
@@ -65,6 +65,28 @@ When you try to delete a Storage Sync Service, you might get the following error
 
 This issue occurs when your file share has unused Azure File Sync snapshots. To reduce your cost, the unused snapshots are deleted before removing the Storage Sync Service. The snapshot count varies with the dataset size. If you can't delete the Storage Sync Service after a few hours, try again the next day.
 
+## Error "Failed to perform resource identity operation" when creating Storage Sync Service
+
+When creating a Storage Sync Service, you might get the following error: "Failed to perform resource identity operation." This error occurs when you delete a Storage Sync Service and then attempt to recreate it using the same name within the same tenant.
+
+To resolve this issue, you can create a new name for the Storage Sync Service, investigate the conflicting app in Microsoft Entra ID (and delete it manually if needed), or wait for the system to auto-clean up the app.
+
+- **Use a different Storage Sync Service name**  
+  Create the Storage Sync Service with a different name than the one previously used.
+
+- **How to investigate the conflicting service principal in Microsoft Entra ID**  
+ A conflicting service principal app might still exist in Microsoft Entra ID (formerly Azure AD). This app was likely created during the initial provisioning of the Storage Sync Service.
+
+- **Choose manual deletion (optional)**  
+  If you need immediate resolution, you can manually delete the conflicting app:  
+  1. Go to the Microsoft Entra admin center.  
+  1. Navigate to **Enterprise applications**.  
+  1. Search for the app name that matches the Storage Sync Service.  
+  1. Select the app and then select **Delete**.
+
+- **Wait for automatic cleanup**  
+  If the app was created by the Storage Sync Service provisioning process, the system will automatically delete it within 24 hours. If the service isn't urgently needed, you may choose to wait for this automatic cleanup to complete.
+
 ## Permissions required to access a storage account and Azure file share
 
 When Azure File Sync is configured to use a managed identity, your cloud and server endpoints need the following permissions to access a storage account and Azure file share:
@@ -77,10 +99,6 @@ Server endpoint:
 - Register server managed identity must be a member of the **Storage File Data Privileged Contributor** role on an Azure file share.
 
 When you run the `Set-AzStorageSyncServiceIdentity` cmdlet or create new cloud and server endpoints, these permissions are granted. If these permissions are removed, operations fail with the errors listed in the following section.
-
-## Unable to recreate Storage Sync Service due to dangling enterprise app
-
-When you attempt to recreate a Storage Sync Service, you might encounter a failure due to a dangling enterprise app left by the previous Storage Sync Service. If this occurs, you can wait for a few hours for ARM to automatically delete the apps. Alternatively, you can manually delete the app in Microsoft Entra ID by navigating to **Enterprise applications** and deleting the associated app. 
 
 ## Common issues
 
