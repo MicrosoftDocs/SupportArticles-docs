@@ -1,10 +1,10 @@
 ---
 title: How to use UPN matching for identity synchronization in Office 365, Azure, or Intune
 description: Describes how to use UPN matching for identity synchronization in Office 365, Azure, or Intune.
-ms.date: 05/11/2020
+ms.date: 06/05/2025
 ms.reviewer: willfid
 ms.service: entra-id
-ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
+ms.custom: sap:Microsoft Entra Connect Sync, no-azure-ad-ps-ref
 ---
 # How to use UPN matching for identity synchronization in Office 365, Azure, or Intune
 
@@ -41,10 +41,23 @@ The UPN matching process has the following technical limitations:
 
 To start the UPN matching process, follow these steps:
 
-1. If you started syncing to Microsoft Entra ID before March 30, 2016, run the following Azure AD PowerShell cmdlet to enable UPN soft match for your organization only:
+1. If you started syncing to Microsoft Entra ID before March 30, 2016, run the following [Update-MgDirectoryOnPremiseSynchronization]() cmdlet to enable UPN soft match for your organization only:
 
     ```powershell
-    Set-MsolDirSyncFeature -Feature EnableSoftMatchOnUpn -Enable $True
+    Import-Module Microsoft.Graph.Identity.DirectoryManagement
+    
+    # Replace with your actual Directory Sync ID
+    $onPremisesDirectorySynchronizationId = "<your-directory-sync-id>"
+    
+    # Define the parameters to enable SoftMatchOnUpn
+    $params = @{
+        features = @{
+            SoftMatchOnUpnEnabled = $true
+        }
+    }
+    
+    # Run the update
+    Update-MgDirectoryOnPremiseSynchronization -OnPremisesDirectorySynchronizationId $onPremisesDirectorySynchronizationId -BodyParameter $params
     ```
 
     > [!NOTE]
