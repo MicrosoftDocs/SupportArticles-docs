@@ -291,6 +291,8 @@
       href: mfa/cannot-verify-account-reset-pwd.md
 - name: Microsoft Graph Users, Groups, and Entra APIs
   items: 
+   - name: Change enumeration is not supported for requested tenant
+     href: delta-query-not-supported-for-aad-b2c-tenant.md
    - name: Handling errors in Graph API requests with Invoke-RestMethod
      href: app-integration/graph-api-error-handling-invoke-restmethod.md
    - name: Troubleshoot Authorization RequestDenied error
