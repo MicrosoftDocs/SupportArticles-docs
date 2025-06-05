@@ -39,7 +39,9 @@ The UPN matching process has the following technical limitations:
 
 To start the UPN matching process, follow these steps:
 
-1. If you started syncing to Microsoft Entra ID before March 30, 2016, run the following [Update-MgDirectoryOnPremiseSynchronization](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdirectoryonpremisesynchronization) cmdlet to enable UPN soft match for your organization only. For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started)]
+1. If you started syncing to Microsoft Entra ID before March 30, 2016, run the following [Update-MgDirectoryOnPremiseSynchronization](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdirectoryonpremisesynchronization) cmdlet to enable UPN soft match for your organization only. 
+
+    For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started).
 
     ```powershell
     Import-Module Microsoft.Graph.Identity.DirectoryManagement
