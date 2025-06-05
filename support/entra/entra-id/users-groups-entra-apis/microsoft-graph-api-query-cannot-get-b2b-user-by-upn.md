@@ -11,11 +11,15 @@ This article provides a solution to an error that occurs when you run a Microsof
 
 ## Symptoms
 
-When you execute a Microsoft Graph API request to get a B2B user using UPN, you might encounter an error similar to the following one:
+When you execute a Microsoft Graph API request to get a B2B user using UPN, you might encounter an error.
 
-```msgraph
-https://graph.microsoft.com/v1.0/users/example\_gmail.com#EXT#@example.onmicrosoft.com
+Request example:
 
+`https://graph.microsoft.com/v1.0/users/example_gmail.com#EXT#@example.onmicrosoft.com`
+
+Response exmaple:
+
+```output
 {
 "error": {
 "code": "Request_ResourceNotFound",
