@@ -38,7 +38,7 @@ To resolve this issue, use one of the following methods:
 ### Method 2: To allow only the one guest user or configure on a per user basis
 
 1. Make sure that the [Microsoft Graph PowerShell is installed](/powershell/microsoftgraph/installation).
-1. Use the `Connect-MgGraph` command to sign in with the required scopes. For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started)
+1. Use the `Connect-MgGraph` command to sign in with the required scopes. For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started).
 1. Run the [Update-MgUser](/powershell/module/microsoft.graph.users/update-mguser) cmdlet:
 
     ```powershell
