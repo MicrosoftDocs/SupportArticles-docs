@@ -1,12 +1,12 @@
 ---
-title: Object deletions aren't synchronized to Microsoft Entra ID when using the Azure AD Connect
+title: Object deletions aren't synchronized to Microsoft Entra ID when using the Microsoft Entra ID Connect
 description: Describes an issue in which a deleted on-premises Active Directory object isn't removed from Microsoft Entra ID when directory synchronization is used in Office 365, Azure, or Microsoft Intune.
 ms.date: 10/19/2023
 ms.reviewer: 
 ms.service: entra-id
-ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
+ms.custom: sap:Microsoft Entra Connect Sync, no-azure-ad-ps-ref
 ---
-# Object deletions aren't synchronized to Microsoft Entra ID when using the Azure AD Connect
+# Object deletions aren't synchronized to Microsoft Entra ID when using the Microsoft Entra ID Connect
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2709902
@@ -32,31 +32,22 @@ This issue may occur if one of the following conditions is true:
 
 To fix this issue, follow these steps:
 
-1. Ensure that the ADSyncTools module is installed for PowerShell. For more information, see [Microsoft Entra Connect: ADSyncTools PowerShell Reference](/azure/active-directory/hybrid/connect/reference-connect-adsynctools).
+1. Ensure that the [Microsoft Graph PowerShell module](/powershell/microsoftgraph/installation) is installed. For more information, see [Microsoft Entra Connect: ADSyncTools PowerShell Reference](/azure/active-directory/hybrid/connect/reference-connect-adsynctools).
 1. Run the following ADSync command to force directory synchronization:
     ```powershell
     Start-ADSyncSyncCycle -PolicyType Initial
     ```
-1. If sync is working correctly but the Active Directory object deletion is still not propagated to Microsoft Entra ID, manually remove the orphaned object. To do so, use one of the following cmdlets in Azure Active Directory module for Windows PowerShell:
+1. If sync is working correctly but the Active Directory object deletion is still not propagated to Microsoft Entra ID, manually remove the orphaned object. To do so, use one of the following cmdlets in Microsoft Graph PowerShell:
 
-    ```powershell
-    Remove-MsolContact
-    ```
-
-    ```powershell
-    Remove-MsolGroup
-    ```
-
-    ```powershell
-    Remove-MsolUser
-    ```
-
-    [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+    - [Remove-MgContact](/powershell/module/microsoft.graph.identity.directorymanagement/remove-mgcontact)
+    - [Remove-MgGroup](/powershell/module/microsoft.graph.groups/remove-mggroup)
+    - [Remove-MgUser](/powershell/module/microsoft.graph.users/remove-mguser)
 
     For example, to manually remove orphaned user ID `john.smith@contoso.com` that was originally created by using directory synchronization, you would run the following cmdlet:
 
      ```powershell
-     Remove-MsolUser -UserPrincipalName John.Smith@Contoso.com
+     $user = Get-MgUser -Filter "userPrincipalName eq 'john.smith@contoso.com'"
+     Remove-MgUser -UserId $user.id
      ```
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
