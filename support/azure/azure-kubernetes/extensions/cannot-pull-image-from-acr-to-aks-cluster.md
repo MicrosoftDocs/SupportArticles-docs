@@ -1,7 +1,7 @@
 ---
 title: Can't pull images from Azure Container Registry to Kubernetes
 description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from a container registry to an AKS cluster.
-ms.date: 06/04/2025
+ms.date: 06/05/2025
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, andbar, albarqaw, v-weizhu, v-leedennis
@@ -357,7 +357,7 @@ When multiple jobs pull the same images, the Kubelet default pull rate limit mig
 
 For more information about the limit, see the [registryPullQPS configuration](https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/#kubelet-config-k8s-io-v1beta1-KubeletConfiguration).
 
-### Solution: Change imagePullPolicy to IfNotPresent
+### Solution: Change the value of imagePullPolicy to IfNotPresent
 
 To resolve this issue, change the value of [imagePullPolicy](https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy) from `Always` to `IfNotPresent` in the deployment YAML file to prevent unnecessary pulls. `IfNotPresent` ensures that the image is pulled from the registry only if it's not already present on the node.
 
