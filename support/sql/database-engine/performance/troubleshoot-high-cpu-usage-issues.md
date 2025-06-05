@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot high-CPU-usage issues in SQL Server
 description: This article provides a procedure to help you fix high-CPU-usage issues on a server that is running SQL Server.
-ms.date: 01/10/2025
+ms.date: 06/06/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 ms.reviewer: jopilov, v-jayaramanp, v-sidong
@@ -59,7 +59,7 @@ Use one of the following tools to check whether the SQL Server process is actual
 
 ## Step 2: Identify queries contributing to CPU usage
 
-If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common reason is SQL Server queries that perform table or index scans, followed by sort, hash operations and loops (nested loop operator or WHILE (T-SQL)). To get an idea of how much CPU the queries are currently using, out of overall CPU capacity, run the following statement:
+If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common reason is SQL Server queries that perform table or index scans, followed by sort and hash operations and loops (nested loop operator or WHILE (T-SQL)). To get an idea of how much CPU the queries are currently using, out of overall CPU capacity, run the following statement:
 
 ```sql
 DECLARE @init_sum_cpu_time int,
@@ -203,9 +203,9 @@ If your SQL Server instance experiences a high CPU scenario caused by spinlock c
 > [!NOTE]
 > High CPU usage may result from spinlock contention on many other spinlock types. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention).
 
-## Step 9: Check your Power Plan settings at the OS level
+## Step 9: Check your power plan settings at the OS level
 
-If your SQL Server workload is requires high CPU capacity, having Windows configured to the default (Balanced) power plan option may cause CPU to reach maximum capacity. Typically, on SQL Server systems with heavy workloads, it is recommended that you switch your Power Plan setting to a High Performance power plan for maximum utilization of computing capacity on the system. For more information, see [Slow performance on Windows Server when using the Balanced power plan](/troubleshoot/windows-server/performance/slow-performance-when-using-power-plan).  
+If your SQL Server workload requires high CPU capacity, having Windows configured to the default Balanced power plan might cause the CPU to reach its maximum capacity. Typically, on SQL Server systems with heavy workloads, we recommend that you switch your power plan setting to **High Performance** for maximum utilization of computing capacity on the system. For more information, see [Slow performance on Windows Server when using the Balanced power plan](/troubleshoot/windows-server/performance/slow-performance-when-using-power-plan).  
 
 ## Step 10: Configure your virtual machine
 
@@ -230,8 +230,6 @@ WHERE (qs.total_worker_time/execution_count > @cputime_threshold_microsec
         AND execution_count > @execution_count
 ORDER BY  qs.total_worker_time DESC 
 ```
-
-
 
 ## See also
 
