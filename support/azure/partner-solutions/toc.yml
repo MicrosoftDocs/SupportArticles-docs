@@ -1,8 +1,9 @@
 - name: Welcome
   href: welcome-native-integrations.yml
+- name: Azure Native Integrations purchase errors
+  href: marketplace-purchases-errors.md
 - name: Azure Native New Relic Service
   items:
     - name: Ingestion key rotation resolution
       href: ingestion-key-rotation-log-flow.md
-- name: Azure Native Integrations purchase errors
-  href: marketplace-purchases-errors.md
+
