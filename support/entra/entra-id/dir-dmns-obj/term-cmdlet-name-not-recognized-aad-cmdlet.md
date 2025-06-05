@@ -4,7 +4,7 @@ description: Describes an issue in which you receive an error message when you t
 ms.date: 07/06/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.custom: sap:Directory Management, has-azure-ad-ps-ref
+ms.custom: sap:Directory Management, no-azure-ad-ps-ref
 ---
 # Error when you try to run Azure Active Directory module for Windows PowerShell cmdlets: The term \<cmdlet name> is not recognized
 
