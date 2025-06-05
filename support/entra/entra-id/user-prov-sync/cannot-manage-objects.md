@@ -35,22 +35,18 @@ This issue may occur if one or more of the following conditions are true:
 You want to manage objects in Office 365, Azure, or Intune and you no longer want to use directory synchronization.
 
 1. Make sure that [Microsoft Graph PowerShell is installed](/powershell/microsoftgraph/installation).
-2. Use the `Connect-MgGraph` command to sign in with the required scopes such as `Organization.ReadWrite.All`. For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started). 
+1. Use the `Connect-MgGraph` command to sign in with the required scopes such as `Organization.ReadWrite.All`. For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started). 
 1. Disable directory synchronization by running the [update-mgorganization](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgorganization) command. 
 
     ```powershell
-    
     $organizationId = (Get-MgOrganization).Id
     
-    # Store the False value for the DirSyncEnabled Attribute
     $params = @{
     onPremisesSyncEnabled = $False
     }
     
-    # Perform the update
     Update-MgOrganization -OrganizationId $organizationId -BodyParameter $params
     ```
-
 1. Check that directory synchronization was fully disabled. To do it, run the following command:
 
     ```powershell
@@ -80,7 +76,13 @@ Force directory synchronization by using the steps on this article: [Start the S
 To re-enable directory synchronization, run the following command:
 
 ```powershell
-Set-MsolDirSyncEnabled -EnableDirSync $true
+$organizationId = (Get-MgOrganization).Id
+
+$params = @{
+onPremisesSyncEnabled = $True
+}
+
+Update-MgOrganization -OrganizationId $organizationId -BodyParameter $params
 ```
 
 It's important to plan carefully when you re-enable directory synchronization. If you used the cloud service portal or Windows PowerShell to make any changes directly to the objects that were originally synchronized from on-premises AD DS, the changes will be overwritten by on-premises attributes and settings the first time that synchronization occurs after directory synchronization is re-enabled.
