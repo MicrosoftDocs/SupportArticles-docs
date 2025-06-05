@@ -5,6 +5,8 @@ permissions:
   pull-requests: read
       
 on:
+  schedule:
+    - cron: "0 9 1,28 * *"
   workflow_dispatch:
   
 
