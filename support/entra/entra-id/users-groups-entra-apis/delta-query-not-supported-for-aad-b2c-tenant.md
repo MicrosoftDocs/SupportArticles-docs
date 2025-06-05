@@ -21,7 +21,7 @@ When executing a [Microsoft Graph delta query](/graph/delta-query-overview), suc
 'innerError': {
 'request-id': '<request-id>',
 'date': '2020-05-22T13:17:45'
-}
+    }
 }
 ```
 
