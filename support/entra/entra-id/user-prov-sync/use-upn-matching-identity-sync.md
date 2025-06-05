@@ -37,11 +37,9 @@ The UPN matching process has the following technical limitations:
 
 ## How to use UPN matching to match an on-premises user to a cloud identity
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
 To start the UPN matching process, follow these steps:
 
-1. If you started syncing to Microsoft Entra ID before March 30, 2016, run the following [Update-MgDirectoryOnPremiseSynchronization]() cmdlet to enable UPN soft match for your organization only:
+1. If you started syncing to Microsoft Entra ID before March 30, 2016, run the following [Update-MgDirectoryOnPremiseSynchronization](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgdirectoryonpremisesynchronization) cmdlet to enable UPN soft match for your organization only. For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started)]
 
     ```powershell
     Import-Module Microsoft.Graph.Identity.DirectoryManagement
@@ -62,7 +60,7 @@ To start the UPN matching process, follow these steps:
 
     > [!NOTE]
     > UPN soft match is automatically enabled for organizations that started syncing to Microsoft Entra ID on or after March 30, 2016.
-2. Obtain the UPN from the user account in Microsoft Entra ID. To do so, use one of the following methods:
+4. Obtain the UPN from the user account in Microsoft Entra ID. To do so, use one of the following methods:
 
      - Method 1: Use the Office 365 portal.
 
@@ -78,8 +76,8 @@ To start the UPN matching process, follow these steps:
         3. Go to the users management page.
         4. Find and then select the user.
         5. Note of the user name, which is the UPN.
-3. On a domain controller or a computer that has the Remote Server Administration Tools installed (RSAT), open Active Directory Users and Computers. Create a user account, or update an existing user account, by using a user name/UPN that matches the target user account in Microsoft Entra ID. For more information, see [Create a User Account in Active Directory Users and Computers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd894463(v=ws.10)).
-4. Force directory synchronization. For more information, see [Force directory synchronization](https://techcommunity.microsoft.com/t5/itops-talk-blog/powershell-basics-how-to-force-azuread-connect-to-sync/ba-p/887043).
+5. On a domain controller or a computer that has the Remote Server Administration Tools installed (RSAT), open Active Directory Users and Computers. Create a user account, or update an existing user account, by using a user name/UPN that matches the target user account in Microsoft Entra ID. For more information, see [Create a User Account in Active Directory Users and Computers](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd894463(v=ws.10)).
+6. Force directory synchronization. For more information, see [Force directory synchronization](https://techcommunity.microsoft.com/t5/itops-talk-blog/powershell-basics-how-to-force-azuread-connect-to-sync/ba-p/887043).
 
 ## More information
 
