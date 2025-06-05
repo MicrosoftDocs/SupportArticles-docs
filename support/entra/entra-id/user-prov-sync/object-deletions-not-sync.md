@@ -32,7 +32,7 @@ This issue may occur if one of the following conditions is true:
 
 To fix this issue, follow these steps:
 
-1. Ensure that the [Microsoft Graph PowerShell module](/powershell/microsoftgraph/installation) is installed. For more information, see [Microsoft Entra Connect: ADSyncTools PowerShell Reference](/azure/active-directory/hybrid/connect/reference-connect-adsynctools).
+1. Ensure that the [Microsoft Graph PowerShell module](/powershell/microsoftgraph/installation) and [ADSyncTools PowerShell](/azure/active-directory/hybrid/connect/reference-connect-adsynctools ) is installed.
 1. Run the following ADSync command to force directory synchronization:
     ```powershell
     Start-ADSyncSyncCycle -PolicyType Initial
