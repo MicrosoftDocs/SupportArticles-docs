@@ -12,7 +12,7 @@ This article discusses an error that occurs when you run a Microsoft Graph delta
 
 ## Symptoms
 
-When executing a [Microsoft Graph delta query](/graph/delta-query-overview), such as GET [https://graph.microsoft.com/beta/users/delta](https://graph.microsoft.com/beta/users/delta), you might receive the following error response:
+When executing a [Microsoft Graph delta query](/graph/delta-query-overview), such as `GET https://graph.microsoft.com/beta/users/delta`, you might receive the following error response:
 
 ```output
 'error': {
@@ -27,7 +27,7 @@ When executing a [Microsoft Graph delta query](/graph/delta-query-overview), suc
 
 ## Cause
 
-This issue occurs when your tenant is an [Azure AD B2C](https://docs.microsoft.com/en-us/azure/active-directory-b2c/overview) tenant. Currently, differential query or delta query isn't supported in Azure AD B2C tenants.
+This issue occurs when your tenant is an [Azure AD B2C](/azure/active-directory-b2c/overview) tenant. Currently, differential query or delta query isn't supported in Azure AD B2C tenants.
 
 ## Solution
 
