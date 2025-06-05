@@ -6,7 +6,7 @@ ms.service: entra-id
 ms.custom: sap:Problem with querying or provisioning resources
 ms.reviewer: bachoang, v-weizhu
 ---
-# Change enumeration is not supported for requested tenant when running Microsoft Graph delta query
+# Error "Change enumeration is not supported for requested tenant" when running Microsoft Graph delta query
 
 This article discusses an error that occurs when you run a Microsoft Graph delta query.
 
