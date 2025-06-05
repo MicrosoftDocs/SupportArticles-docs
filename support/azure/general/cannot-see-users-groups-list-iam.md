@@ -1,9 +1,9 @@
 ---
 title: Can't see list of users/groups to add permissions in IAM in Azure portal
 description: Resolves an issue in which you can't see list of users or groups when adding permissions in Access Control (IAM) in the Azure portal.
-ms.date: 08/14/2020
+ms.date: 06/05/2025
 ms.service: azure-common-issues-support
-ms.custom: has-azure-ad-ps-ref
+ms.custom: no-azure-ad-ps-ref
 ms.author: genli
 author: genlin
 ms.reviewer: 
@@ -37,29 +37,12 @@ To resolve this issue, use one of the following methods:
 
 ### Method 2: To allow only the one guest user or configure on a per user basis
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
-1. Open Windows PowerShell.
-2. Run the following cmdlet:
-
-    ```powershell
-    Import-Module AzureAd
-    ```
-
-     Make sure that the Azure Active Directory PowerShell for Graph is installed. For more information, see [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true).
-
-3. As a global administrator of the directory where the guest user was added, connect to Azure AD PowerShell and the directory:
+1. Make sure that [Microsoft Graph Powershell](/powershell/microsoftgraph/installation) is installed.
+1. Use the `Connect-MgGraph` command to sign in with the required scopes.  For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started)
+1. Run the following cmdlet:
 
     ```powershell
-    Connect-AzureAD -TenantId 'Tenant_Directory_Id'
-    ```
-
-    You can get the Tennat ID by looking at your Microsoft Entra ID Properties in the Azure portal.
-
-4. Run the following cmdlet:
-
-    ```powershell
-    Set-AzureADUser -ObjectId 'User_Object_Id' -UserType Member
+    Update-MgUser -UserId '2a1fa0b8-0000-0000-0000-68d0db617b02' -UserType Member
     ```
 
     You can get the users Object ID by looking at the Users Profile page within the Azure portal.
