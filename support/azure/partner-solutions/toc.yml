@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-native-integrations.md
+  href: welcome-native-integrations.yml
 
 - name: Azure Native Integrations purchases errors
   href: marketplace-purchases-errors.md
