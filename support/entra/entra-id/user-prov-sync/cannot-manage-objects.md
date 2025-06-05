@@ -4,7 +4,7 @@ description: Resolves an issue that you can't manage or remove objects created t
 ms.date: 08/30/2021
 ms.reviewer: 
 ms.service: entra-id
-ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
+ms.custom: sap:Microsoft Entra Connect Sync, no-azure-ad-ps-ref
 ---
 # Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool
 
@@ -34,33 +34,36 @@ This issue may occur if one or more of the following conditions are true:
 
 You want to manage objects in Office 365, Azure, or Intune and you no longer want to use directory synchronization.
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
-1. If you're not running Windows 10, install the 64-bit version of the Microsoft Online Services Sign-in Assistant: [Microsoft Online Services Sign-in Assistant for IT Professionals RTW](https://download.microsoft.com/download/7/1/E/71EF1D05-A42C-4A1F-8162-96494B5E615C/msoidcli_32bit.msi).
-1. Install the Microsoft Azure Active Directory module for Windows PowerShell:
-
-    1. Open an elevated Windows PowerShell command prompt (run Windows PowerShell as an administrator).
-    2. Run the `Install-Module MSOnline` command.
-
-1. Disable directory synchronization by running the following command:
+1. Make sure that [Microsoft Graph PowerShell is installed](/powershell/microsoftgraph/installation).
+2. Use the `Connect-MgGraph` command to sign in with the required scopes such as `Organization.ReadWrite.All`. For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started). 
+1. Disable directory synchronization by running the [update-mgorganization](/powershell/module/microsoft.graph.identity.directorymanagement/update-mgorganization) command. 
 
     ```powershell
-     Set-MsolDirSyncEnabled -EnableDirSync $false
+    
+    $organizationId = (Get-MgOrganization).Id
+    
+    # Store the False value for the DirSyncEnabled Attribute
+  $params = @{
+  onPremisesSyncEnabled = $False
+  }
+ 
+      # Perform the update
+  Update-MgOrganization -OrganizationId $organizationId -BodyParameter $params
     ```
 
-1. Check that directory synchronization was fully disabled by using the Windows PowerShell. To do it, run the following command periodically:
+1. Check that directory synchronization was fully disabled. To do it, run the following command:
 
     ```powershell
-     (Get-MSOLCompanyInformation).DirectorySynchronizationEnabled
+     Get-MgOrganization | Select OnPremisesSyncEnabled
     ```
 
-    This command will return **True** or **False**. Continue to run this command periodically until it returns **False**, and then go to the next step.
+    This command will return **True** or ***False**. Continue to run this command periodically until it returns **False**, and then go to the next step.
 
     It may take 72 hours for deactivation to be completed. The time depends on the number of objects that are in your cloud service subscription account.
 
 1. Try to update an object by using Windows PowerShell or by using the cloud service portal.
 
-     Step 4 may take a while to be completed. There's a process in the cloud service environment that computes attribute values. The process must be completed before the objects can be changed by using Windows PowerShell or by using the cloud service portal.
+     Step 4 may take a while to be completed. There's a process in the cloud service environment that computes attribute values. The process must be completed before the objects can be changed by using Windows PowerShell or by using the cloud service portal.
 
 ### You delete an object from an on-premises AD DS. However, the object isn't deleted from your cloud service subscription account
 
@@ -70,7 +73,7 @@ Force directory synchronization by using the steps on this article: [Start the S
 - If all updates and deletions aren't synchronized to the cloud service, contact Support.
 
     > [!NOTE]
-    > As an alternative resolution for this scenario, an object can be manually deleted in the cloud service. However, the object can't be updated in the cloud service. For more information about how to resolve this issue, see the following Microsoft Knowledge Base article: [Object deletions aren't synchronized to Microsoft Entra ID when using the Azure Active Directory Sync tool](https://support.microsoft.com/help/2709902).  
+    > As an alternative resolution for this scenario, an object can be manually deleted in the cloud service. However, the object can't be updated in the cloud service. For more information about how to resolve this issue, see the following Microsoft Knowledge Base article: [Object deletions aren't synchronized to Microsoft Entra ID when using the Azure Active Directory Sync tool](https://support.microsoft.com/help/2709902).  
 
 ## More information
 
