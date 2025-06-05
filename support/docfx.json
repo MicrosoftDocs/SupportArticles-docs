@@ -126,9 +126,6 @@
         "azure/general/*.md": "https://learn.microsoft.com/answers/tags/133/azure",
         "azure/virtual-desktop/**/*.md": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/idb-p/AzureVirtualDesktop"
       },
-      "layout": {
-        "**/index.yml": "LandingPage"
-      },
       "manager": {
         "**/*.md": "dcscontentpm"
       },
