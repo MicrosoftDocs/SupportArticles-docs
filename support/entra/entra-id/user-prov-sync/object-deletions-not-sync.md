@@ -37,7 +37,7 @@ To fix this issue, follow these steps:
     ```powershell
     Start-ADSyncSyncCycle -PolicyType Initial
     ```
-1. If sync is working correctly but the Active Directory object deletion is still not propagated to Microsoft Entra ID, manually remove the orphaned object. To do so, use one of the following cmdlets in Microsoft Graph PowerShell:
+1. If sync is working correctly but the Active Directory object deletion is still not propagated to Microsoft Entra ID, manually remove the orphaned object. To do so, use one of the following Microsoft Graph PowerShell cmdlets:
 
     - [Remove-MgContact](/powershell/module/microsoft.graph.identity.directorymanagement/remove-mgcontact)
     - [Remove-MgGroup](/powershell/module/microsoft.graph.groups/remove-mggroup)
