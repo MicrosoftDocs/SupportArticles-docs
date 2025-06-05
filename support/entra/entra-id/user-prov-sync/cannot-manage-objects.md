@@ -73,7 +73,7 @@ Force directory synchronization by using the steps on this article: [Start the S
 
 ## More information
 
-To re-enable directory synchronization, run the following command:
+To re-enable directory synchronization, run the following commands:
 
 ```powershell
 $organizationId = (Get-MgOrganization).Id
