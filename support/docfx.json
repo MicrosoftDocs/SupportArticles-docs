@@ -127,7 +127,7 @@
         "azure/virtual-desktop/**/*.md": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/idb-p/AzureVirtualDesktop"
       },
       "layout": {
-        "**/index.yml": "LandingPage"
+        "**/index.yml": "landing-page"
       },
       "manager": {
         "**/*.md": "dcscontentpm"
