@@ -4,7 +4,7 @@ description: Fixes a problem in which Password Hash Synchronization is automatic
 ms.date: 05/28/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
+ms.custom: sap:Microsoft Entra Connect Sync, no-azure-ad-ps-ref
 ---
 # Password Hash Sync is automatically enabled during Microsoft Entra Connect Pass-through Authentication
 
@@ -74,11 +74,8 @@ Optionally, if you want to clear password hashes that are already synchronized t
    2. Select the **Customize synchronization options** task.
    3. On the **Optional features** page, clear the **Password writeback** feature check box.
    4. Complete the wizard.
-2. Use the [Set-MsolUserPassword](/powershell/module/msonline/set-msoluserpassword?view=azureadps-1.0&preserve-view=true) cmdlet to set random passwords on all affected users. You have to run this cmdlet five times for each user because Microsoft Entra ID stores the last four password hashes in the password hash history.
+2. Use the [Reset-MgUserAuthenticationMethodPassword](/powershell/module/microsoft.graph.identity.signins/reset-mguserauthenticationmethodpassword) cmdlet to set random passwords on all affected users. You have to run this cmdlet five times for each user because Microsoft Entra ID stores the last four password hashes in the password hash history.
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
->[!NOTE]
-> The Set-MsolUserPassword cmdlet does not work if the user is using a federated domain. To clear password hashes for the user in the federated domain, you must change the UPN of the user to a non-federated domain, and then run the cmdlet to set the random password. After that, revert the UPN of the user to the original state.
-
+    >[!NOTE]
+    >If the cmdlet doesn't work for a federated domain user, you may need to temporarily change the UPN of the user to a non-federated domain, and then run the cmdlet to set the random password. After that, revert the UPN of the user to the original state.
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

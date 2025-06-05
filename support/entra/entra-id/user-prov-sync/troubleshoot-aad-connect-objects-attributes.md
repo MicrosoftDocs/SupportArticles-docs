@@ -5,7 +5,7 @@ ms.date: 03/04/2025
 ms.reviewer: nualex, v-weizhu
 editor: v-jesits
 ms.service: entra-id
-ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
+ms.custom: sap:Microsoft Entra Connect Sync, no-azure-ad-ps-ref
 ---
 
 # End-to-end troubleshooting of Microsoft Entra Connect objects and attributes
