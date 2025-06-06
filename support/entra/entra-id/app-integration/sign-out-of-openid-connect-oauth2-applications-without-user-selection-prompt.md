@@ -60,6 +60,8 @@ post_logout_redirect_uri=https://login.microsoftonline.com/common/oauth2/nativec
 &logout_hint=<logout_hint value>
 ```
 
+## More information
+
 For applications using Microsoft Authentication Library for JavaScript (MSAL.js), when you send a `EndSessionRequest` with the user account, MSAL.js automatically sends the `logout_hint` claim if detected.
 
 Here's an example code snippet:
