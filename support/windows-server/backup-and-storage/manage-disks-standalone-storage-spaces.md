@@ -27,7 +27,7 @@ To identify the LUN of a physical disk, follow these steps:
     Get-StoragePool -FriendlyName "<StoragePoolName>" | Get-PhysicalDisk | Select-Object FriendlyName, UniqueId, HealthStatus, Size, PhysicalLocation, DeviceID, CannotPoolReason, Usage | Format-List
     ```
 
-    Here's an output example:
+    Here's an example output:
 
     ```output
     Friendlyname     : Msft Virtual Disk
@@ -41,19 +41,20 @@ To identify the LUN of a physical disk, follow these steps:
     ```
 
     > [!NOTE]
+    > Breakdown of the cmdlet:
     >
     > - `FriendlyName`: The user-friendly name of the physical disk.
-    > - `UniqueID`: A unique identifier for the disk.
+    > - `UniqueId`: A unique identifier for the disk.
     > - `PhysicalLocation`: Specifies the physical location of the disk in the system. `Adapter 0` is for operating system disk and temp disk, and `Adapter 1` is for data disks.
     > - `Usage`: Displays how the disk is currently being used (for example, for storage pools, virtual disks, and so on).
 
 2. To retrieve the unique ID of the virtual disk in the storage pool, run the following cmdlets:
 
     ```powershell
-    Get-StoragenNode
+    Get-StorageNode
     ```
 
-    Here's an output example:
+    Here's an example output:
 
     ```output
     Name                          Manufacturer            Model             OperationalStatus 
@@ -67,7 +68,7 @@ To identify the LUN of a physical disk, follow these steps:
     Get-StorageNode -name "<StorageNodeName>" | get-virtualdisk | ft friendlyname, uniqueid, allocatedsize, footprintonpool
     ```
 
-    Here's an output example:
+    Here's an example output:
 
     ```output
     friendlyname uniqueid    allocatedsize footprintonpool
@@ -152,7 +153,7 @@ To identify the LUN of a physical disk, follow these steps:
     ```
 
     > [!NOTE]
-    > Breakdown of commands:
+    > Breakdown of the cmdlet:
     >
     > - `FriendlyName`: The user-friendly name of the physical disk.
     > - `CanPool`: Indicates whether the disk can be added to a storage pool.
@@ -195,7 +196,7 @@ To identify the LUN of a physical disk, follow these steps:
 
 8. Once the disk is removed from the storage pool, it should be available under the primordial pool.
 
-    :::image type="content" source="media/manage-disks-standalone-storage-spaces/primordial-pool.png" alt-text="Screenshot of the storage pool showing that the disk is available under the primordial pool.":::
+    :::image type="content" source="media/manage-disks-standalone-storage-spaces/primordial-pool.png" alt-text="Screenshot of the storage pool showing that the disk is available under the primordial pool." lightbox="media/manage-disks-standalone-storage-spaces/primordial-pool.png":::
 
 9. After confirming the removal with the `Get-PhysicalDisk` cmdlet in PowerShell, detach the physical disk in the Azure portal if necessary.
 10. Verify the health of the storage pool and the virtual disk by running the `Get-StoragePool` and `Get-VirtualDisk` cmdlets.
