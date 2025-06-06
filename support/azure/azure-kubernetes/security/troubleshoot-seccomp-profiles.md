@@ -203,13 +203,13 @@ aks-nodepool1-38695788-vmss000002  default       default-pod  test-container    
 aks-nodepool1-38695788-vmss000002  default       default-pod  test-container     nginx            3996610  3996610  SECCOMP_RET_LOG  SYS_CLONE
 ```
 
-The output indicates that the `test-container` executes the `SYS_CLONE` syscall which the seccomp profile should block. With this information, you can determine whether to permit the listed syscalls in your container. If so, adjust the seccomp profile by removing them, which prevents the workload from failing.
+The output indicates that the `test-container` executes the `SYS_CLONE` syscall that the seccomp profile should block. With this information, you can determine whether to permit the listed syscalls in your container. If so, adjust the seccomp profile by removing them, which prevents the workload from failing.
 
 Here are some commonly blocked syscalls to watch out for. A more comprehensive list is available in [Significant syscalls blocked by default profile](/azure/aks/secure-container-access#significant-syscalls-blocked-by-default-profile).
 
 | Blocked syscall |Consideration |
 |---|---|
-| `clock_settime`  or `clock_adjtime` | If your workload needs accurate time synchronization, ensure this syscall is not being blocked. |
+| `clock_settime`  or `clock_adjtime` | If your workload needs accurate time synchronization, ensure this syscall isn't blocked. |
 | `add_key` or `key_ctl` | If your workload requires key management, these blocked syscalls prevent containers from using the kernel keyring that is used for retaining security data, authentication keys, encryption keys, and other data within the kernel. |
 | `clone`  | This syscall prevents the cloning of new namespaces, except for `CLONE_NEWUSER`. Workloads that depend on creating new namespaces might be affected if this syscall is blocked.  |
 | `io_uring`  | This syscall is blocked with the move to `containerd` 2.0. However, it's not blocked in the profile for `containerd` 1.7.  |
