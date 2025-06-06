@@ -758,7 +758,6 @@ items:
       href: ./backup-and-storage/extend-stand-alone-tiered-storage-spaces.md
     - name: Manage the disks in standalone Storage Spaces 
       href: ./backup-and-storage/manage-disks-standalone-storage-spaces.md
-
   - name: System Restore or resetting your computer
     items:
     - name: How to restore a Windows 7 installation
