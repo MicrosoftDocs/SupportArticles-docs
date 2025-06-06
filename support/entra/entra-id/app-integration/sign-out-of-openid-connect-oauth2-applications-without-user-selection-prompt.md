@@ -1,5 +1,5 @@
 ---
-title: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
+title: Bypass user selection prompt when signing out of OpenID Connect/OAuth2 applications
 description: Describes how to sign out of an OpenID Connect/OAuth2 application without a user selection prompt.
 ms.service: entra-id
 ms.date: 06/06/2025

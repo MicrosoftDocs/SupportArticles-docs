@@ -156,8 +156,8 @@
         href: app-integration/application-delegated-permission-access-tokens-identity-platform.md
       - name: Troubleshoot consent issues
         href: app-integration/troubleshoot-consent-issues.md
-- name: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
-  href: app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
+  - name: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
+    href: app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
 - name: Use NetLog as an alternative to Fiddler and HAR captures
   href: app-integration/use-netlog-capture-network-traffic.md
 - name: Business To Consumer (B2C) Tenants
