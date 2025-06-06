@@ -22,6 +22,8 @@ By default, when you sign out of an OpenID Connect/OAuth2 application registered
     4. Select the optional claim **login_hint** to add.
     5. Select **Add**.
 
+:::image type="content" source="media/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt/login-hint-optional-claim.png" alt-text="Screenshot that shows the login_hint claim.":::
+
 For more information about adding optional claims, see [Configure and manage optional claims in ID tokens, access tokens, and SAML tokens](/entra/identity-platform/optional-claims).
 
 ## Step 2: Ensure "profile" and "openid" scopes are included in the original sign-in request
