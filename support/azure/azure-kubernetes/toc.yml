@@ -290,7 +290,7 @@
 
 - name: Security
   items:
-  - name: Troubleshoot seccomp profiles on AKS
+  - name: Troubleshoot seccomp profiles in AKS
     href: security/troubleshoot-seccomp-profiles.md
 
 - name: Extensions, Policies and Add-Ons
