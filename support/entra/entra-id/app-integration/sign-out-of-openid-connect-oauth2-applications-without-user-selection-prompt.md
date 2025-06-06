@@ -48,9 +48,7 @@ Here are two examples of including both the `openid` and `profile` OpenID connec
 
     After sign-in, when Microsoft Entra ID redirects back to your application, the `id_token` is returned.
 
-In the returned `id_token`, the `login_hint` claim is included and looks similar to this one:
-
-`O.CiQ0M2E1NDg4Yy05ZGU2LTQyZTUtYWJkZS0zY2IzNGU4ZjBlZGMSJGFhMDBkMWZhLTUyNjktNGUxYy1iMDZkLTMwODY4Mzc…`
+In the returned `id_token`, the value of the `login_hint` claim is included.
 
 ## Step 3: Pass the logout\_hint parameter in the sign-out request
 
@@ -59,7 +57,7 @@ When you send the sign-out request, pass the `logout_hint` parameter with the va
 ```http
 https://login.microsoftonline.com/<username>.onmicrosoft.com/oauth2/v2.0/logout?
 post_logout_redirect_uri=https://login.microsoftonline.com/common/oauth2/nativeclient
-&logout_hint=O.CiQ0M2E1NDg4Yy05ZGU2LTQyZTUtYWJkZS0zY2IzNGU4ZjBlZGMSJGFhMDBkMWZhLTUyNjktNGUxYy1iMDZkLTMwODY4Mzc…
+&logout_hint=<logout_hint value>
 ```
 
 For applications using Microsoft Authentication Library for JavaScript (MSAL.js), when you send a `EndSessionRequest` with the user account, MSAL.js automatically sends the `logout_hint` claim if detected.
