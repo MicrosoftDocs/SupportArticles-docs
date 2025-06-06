@@ -30,9 +30,9 @@ On a Windows device that has security software installed, you might experience a
 - The sign-in window is stuck on authentication.
 
    :::image type="content" source="./media/cannot-sign-in-microsoft-365-desktop-apps/sign-in-hangs-on-authentication.png" alt-text="Screenshot of a sign-in window that gets stuck on authentication.":::
-- The Outlook desktop client displays the message "Trying to connect…".
-- The Teams desktop client displays the message "We weren't able to connect. Sign in and we'll try again."
-- You open Event Viewer and select **Windows Logs** > **Application**. When you examine the details of the **AppModel-State** entries in the **Source** column of the table, you see one of the following event messages that end with a warning or error code `-2147xxxxxx`:
+- The Outlook desktop client displays the message, "Trying to connect…".
+- The Teams desktop client displays the message, "We weren't able to connect. Sign in and we'll try again."
+- You open Event Viewer and select **Windows Logs** > **Application**. When you examine the details of the **AppModel-State** entries in the **Source** column of the table, you see one of the following event messages that ends in a warning or error code `-2147xxxxxx`:
 
   - > Failure to load the application settings for package
   - > Repair of state locations for operation SettingsInitialize against package Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy with error
@@ -40,18 +40,18 @@ On a Windows device that has security software installed, you might experience a
   - > Triggered repair because operation LocalSettings against package Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy hit error
   - > Triggered repair of state locations because operation SettingsInitialize against package Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy hit error
 
-    :::image type="content" source="./media/cannot-sign-in-microsoft-365-desktop-apps/event-viewer-warning.png" alt-text="Screenshot of the Event Viewer showing results filtered for the source entry appmodel-state, and an event message that has the error code which begins with 2147.":::
+    :::image type="content" source="./media/cannot-sign-in-microsoft-365-desktop-apps/event-viewer-warning.png" alt-text="Screenshot of the Event Viewer showing results filtered for the Source entry Appmodel-State, and an event message that has the error code that begins in 2147.":::
 
 ## Cause
 
-The issue may be caused by existing or obsolete Windows Filtering Platform (WFP) drivers in the security software. In this situation, the security software prevents network communication from being established or maintaining the previous communication state. Additionally, the security software might block Web Account Manager (WAM) plug-ins, or remove the plug-ins as a side effect of its activity on the device.
+The issue might be caused by existing or obsolete Windows Filtering Platform (WFP) drivers in the security software. In this situation, the security software prevents network communication from being established or maintaining the previous communication state. Additionally, the security software might block Web Account Manager (WAM) plug-ins, or remove the plug-ins as a side effect of its activity on the device.
 
-If Event Viewer displays any of the event messages that are listed in the [Symptoms](#symptoms) section, the messages indicate that the WAM plug-ins are either broken or tampered with.
+If Event Viewer displays any of the event messages that are listed in the [Symptoms](#symptoms) section, the messages indicate that the WAM plug-ins are broken or were tampered with.
 
 > [!NOTE]
 >
 > - The WAM plug-ins are used by Microsoft 365 apps for establishing and renewing sign-in sessions. The plug-ins are installed within the context of the user profile. This means that although one user might experience problems, another user on the same device might not. Therefore, any mitigation and diagnosis should be done within the context of the affected user, not at the device level or administrator level.
-> - If the plug-ins are corrupted, tampered with, or removed from the user profile because of security software scanning activity, try to repeatedly install the plug-ins by using a background PowerShell script or Group Policy logon script. This action might temporarily mitigate the issue until the next antivirus scan.
+> - If the plug-ins are corrupted or were tampered with or removed from the user profile because of security software scanning activity, try to repeatedly install the plug-ins by using a background PowerShell script or Group Policy logon script. This action might temporarily mitigate the issue until the next antivirus scan.
 
 ## Resolution
 
