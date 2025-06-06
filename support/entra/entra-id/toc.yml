@@ -47,6 +47,8 @@
     
 - name: Microsoft Entra App Integration and Development 
   items:
+  - name: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
+    href: app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
   - name: Developing or registering apps
     items:
       - name: 401 Unauthorized errors in ASP.NET Core Web API
