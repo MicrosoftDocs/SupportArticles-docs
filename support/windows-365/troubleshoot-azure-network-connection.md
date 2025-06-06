@@ -41,6 +41,14 @@ Successful communication with a domain controller within your organization is es
 > [!NOTE]
 > This section only applies to hybrid environments.
 
+### WinRM requirements for ANC
+
+WinRM (Windows Remote Management) is required to complete ANC setup.
+
+To ensure successful provisioning, please verify that WinRM is not restricted to specific IP Addresses, whether through Group Policy Object (GPO) or Microsoft Intune Configuration Service Provider (CSP), for groups used in your provisioning policies. WinRM should be configured to allow network requests from any IP address.
+
+Learn More: [GPO Configuration](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management) [Intune CSP Documentation](/windows/client-management/mdm/policy-csp-remotemanagement)
+
 ### ANC Endpoint Access
 
 During ANC configuration, the service needs to download configuration data from various Microsoft endpoints as listed in [Network requirements](/windows-365/enterprise/requirements-network). Failure to reach these endpoints due to misconfigured network settings can lead to a failure. To ensure successful access, Transport Layer Security (TLS) inspection should be avoided on any vNET used for ANC connections. Ensure that you can successfully resolve and reach these endpoints through the Azure vNet used and ensure that any firewall, proxy, or other Network services employed within the network allow access to them.
