@@ -46,12 +46,12 @@ On a Windows device that has security software installed, you might experience a
 
 The issue might be caused by existing or obsolete Windows Filtering Platform (WFP) drivers in the security software. In this situation, the security software prevents network communication from being established or maintaining the previous communication state. Additionally, the security software might block Web Account Manager (WAM) plug-ins, or remove the plug-ins as a side effect of its activity on the device.
 
-If Event Viewer displays any of the event messages that are listed in the [Symptoms](#symptoms) section, the messages indicate that the WAM plug-ins are broken or were tampered with.
+If Event Viewer displays any of the event messages that are listed in the ["Symptoms"](#symptoms) section, the messages indicate that the WAM plug-ins are broken or were tampered with.
 
 > [!NOTE]
 >
 > - The WAM plug-ins are used by Microsoft 365 apps for establishing and renewing sign-in sessions. The plug-ins are installed within the context of the user profile. This means that although one user might experience problems, another user on the same device might not. Therefore, any mitigation and diagnosis should be done within the context of the affected user, not at the device level or administrator level.
-> - If the plug-ins are corrupted or were tampered with or removed from the user profile because of security software scanning activity, try to repeatedly install the plug-ins by using a background PowerShell script or Group Policy logon script. This action might temporarily mitigate the issue until the next antivirus scan.
+> - If the plug-ins were corrupted, tampered with, or removed from the user profile because of security software scanning, try to install the plug-ins repeatedly by using a background PowerShell script or Group Policy logon script. This action might temporarily mitigate the issue until the next antivirus scan.
 
 ## Resolution
 
