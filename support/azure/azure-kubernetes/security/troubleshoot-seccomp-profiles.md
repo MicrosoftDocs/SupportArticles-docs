@@ -4,7 +4,7 @@ description: Helps you troubleshoot Azure Kubernetes Service workload issues cau
 ms.reviewer: mayasingh, josebl, qasimsarfraz, v-weizhu
 ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-general #Don't change.
-ms.date: 06/04/2025
+ms.date: 06/06/2025
 #customer intent: As a DevOps Engineer, I want to set up an effective Seccomp profile so that I can run my workloads successfully while making them as secure as possible.
 ---
 # Troubleshoot seccomp profile configuration in Azure Kubernetes Service
@@ -13,20 +13,20 @@ ms.date: 06/04/2025
 
 ## Background
 
-Syscalls are the interface that allows user space programs to request kernel services. Seccomp profiles specify the syscalls that are allowed or denied for a specific container. There are two values supported on AKS:
+Syscalls are the interface that allows user space programs to request kernel services. Seccomp profiles specify the syscalls that are allowed or denied for a specific container. AKS supports two values:
 
 - `RuntimeDefault`: Use the default seccomp profile given by the runtime.
 - `Unconfined`: All syscalls are allowed.
 
 To enable seccomp on your AKS node pools, see [Secure container access to resources using built-in Linux security features](/azure/aks/secure-container-access). You can also configure a custom profile to meet your workload's specific needs, see [Configure a custom seccomp profile](/azure/aks/secure-container-access#configure-a-custom-seccomp-profile) for details.
 
-When using seccomp profiles, it's important to test and validate the affect on your workloads. Some workloads might require a lower number of syscall restrictions than others. This means that if workloads require syscalls that aren't included in the configured profile, they might fail during runtime.
+When using seccomp profiles, it's important to test and validate the effect on your workloads. Some workloads might require a lower number of syscall restrictions than others. This means that if workloads require syscalls that aren't included in the configured profile, they might fail during runtime.
 
 This article shows how to use the open source project [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) to diagnose issues and gain visibility into blocked syscalls.
 
 ## Symptoms
 
-After you configuring AKS workloads to use a seccomp profile, the workloads exits unexpectedly with one of the following errors:
+After you configure AKS workloads to use a seccomp profile, the workloads exit unexpectedly with one of the following errors:
 
 - > permission denied
 - > function not implemented
@@ -177,7 +177,7 @@ kubectl gadget run audit_seccomp
 
 ### Step 4: Analyze blocked syscalls
 
-Run your workload using the `kubectl apply -f` command. Then, the [audit_seccomp gadget](https://go.microsoft.com/fwlink/?linkid=2259786) will log the syscalls that the seccomp profile would have blocked, along with their associated pods, containers, and processes. You can use this information to identify the root causes of workload failures.
+Run your workload using the `kubectl apply -f` command. Then, the [audit_seccomp gadget](https://go.microsoft.com/fwlink/?linkid=2259786) logs the syscalls that the seccomp profile should block, along with their associated pods, containers, and processes. You can use this information to identify the root causes of workload failures.
 
 For example, if you run the above-mentioned `default-pod` pod with the `my-profile.json` profile, the output looks like the following one:
 
@@ -203,14 +203,14 @@ aks-nodepool1-38695788-vmss000002  default       default-pod  test-container    
 aks-nodepool1-38695788-vmss000002  default       default-pod  test-container     nginx            3996610  3996610  SECCOMP_RET_LOG  SYS_CLONE
 ```
 
-The output indicates that the `test-container` executes the `SYS_CLONE` syscall which the seccomp profile would have blocked. With this information, you can determine whether to permit the listed syscalls in your container. If so, adjust the seccomp profile by removing them, which will prevent the workload from failing.
+The output indicates that the `test-container` executes the `SYS_CLONE` syscall which the seccomp profile should block. With this information, you can determine whether to permit the listed syscalls in your container. If so, adjust the seccomp profile by removing them, which prevents the workload from failing.
 
 Here are some commonly blocked syscalls to watch out for. A more comprehensive list is available in [Significant syscalls blocked by default profile](/azure/aks/secure-container-access#significant-syscalls-blocked-by-default-profile).
 
 | Blocked syscall |Consideration |
 |---|---|
 | `clock_settime`  or `clock_adjtime` | If your workload needs accurate time synchronization, ensure this syscall is not being blocked. |
-| `add_key` or `key_ctl` | If your workload requires key management, these blocked syscalls prevent containers from using the kernel keyring which is used for retaining security data, authentication keys, encryption keys, and other data within the kernel. |
+| `add_key` or `key_ctl` | If your workload requires key management, these blocked syscalls prevent containers from using the kernel keyring that is used for retaining security data, authentication keys, encryption keys, and other data within the kernel. |
 | `clone`  | This syscall prevents the cloning of new namespaces, except for `CLONE_NEWUSER`. Workloads that depend on creating new namespaces might be affected if this syscall is blocked.  |
 | `io_uring`  | This syscall is blocked with the move to `containerd` 2.0. However, it's not blocked in the profile for `containerd` 1.7.  |
 
