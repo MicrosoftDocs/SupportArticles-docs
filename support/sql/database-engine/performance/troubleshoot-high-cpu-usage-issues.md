@@ -205,7 +205,7 @@ If your SQL Server instance experiences a high CPU scenario caused by spinlock c
 
 ## Step 9: Check your power plan settings at the OS level
 
-If your SQL Server workload requires high CPU capacity, having Windows configured to the default Balanced power plan might cause the CPU to reach its maximum capacity. Typically, on SQL Server systems with heavy workloads, we recommend that you switch your power plan setting to **High Performance** for maximum utilization of computing capacity on the system. For more information, see [Slow performance on Windows Server when using the Balanced power plan](/troubleshoot/windows-server/performance/slow-performance-when-using-power-plan).  
+SQL Server workloads may experience reduced performance and cause high CPU on the system when Windows is configured with the default **Balanced** power plan. A Balanced power plan setting might lower the CPU clock speed to conserve energy. For example, a processor rated at 3.00 GHz may throttle down to 1.2 GHz. As a result, workloads that typically consume around 30% CPU may reach 100% utilization due to the reduced clock speed. To maintain consistent and optimal performance for compute-intensive SQL Server workloads, we recommend that you configure the system to use the **High Performance** power plan. This setting ensures the CPU operates at its full rated speed, helping to avoid performance bottlenecks. For more information, see [Slow performance on Windows Server when using the Balanced power plan](/troubleshoot/windows-server/performance/slow-performance-when-using-power-plan).  
 
 ## Step 10: Configure your virtual machine
 
