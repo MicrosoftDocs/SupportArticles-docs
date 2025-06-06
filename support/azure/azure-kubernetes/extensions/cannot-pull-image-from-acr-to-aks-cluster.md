@@ -1,10 +1,10 @@
 ---
 title: Can't pull images from Azure Container Registry to Kubernetes
 description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from a container registry to an AKS cluster.
-ms.date: 03/25/2025
+ms.date: 06/05/2025
 author: genlin
 ms.author: genli
-ms.reviewer: chiragpa, andbar, v-weizhu, v-leedennis
+ms.reviewer: chiragpa, andbar, albarqaw, v-weizhu, v-leedennis
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons, devx-track-azurecli
 ---
@@ -348,6 +348,40 @@ spec:
       protocol: TCP
   nodeSelector:
     "kubernetes.io/os": linux
+```
+## Cause 6: Kubelet exceeds the default image pull rate limit
+
+When multiple jobs pull the same images, the Kubelet default pull rate limit might be exceeded. In this case, an error message like the following one is displayed:
+
+> Failed to pull image "acrname.azurecr.io/repo/nginx:latest": **pull QPS exceeded**. This occurred for pod \<podname\> at 4/22/2025, 12:48:32.000 PM UTC.
+
+For more information about the limit, see the [registryPullQPS configuration](https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/#kubelet-config-k8s-io-v1beta1-KubeletConfiguration).
+
+### Solution: Change the value of imagePullPolicy to IfNotPresent
+
+To resolve this issue, change the value of [imagePullPolicy](https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy) from `Always` to `IfNotPresent` in the deployment YAML file to prevent unnecessary pulls. `IfNotPresent` ensures that the image is pulled from the registry only if it's not already present on the node.
+
+Here's an example of the deployment YAML file:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: myacr.azurecr.io/my-image:latest
+        imagePullPolicy: IfNotPresent
 ```
 
 ## More information
