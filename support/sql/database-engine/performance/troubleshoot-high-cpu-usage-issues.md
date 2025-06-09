@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot high-CPU-usage issues in SQL Server
 description: This article provides a procedure to help you fix high-CPU-usage issues on a server that is running SQL Server.
-ms.date: 06/06/2025
+ms.date: 06/09/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 ms.reviewer: jopilov, v-jayaramanp, v-sidong
@@ -205,7 +205,7 @@ If your SQL Server instance experiences a high CPU scenario caused by spinlock c
 
 ## Step 9: Check your power plan settings at the OS level
 
-SQL Server workloads may experience reduced performance and cause high CPU on the system when Windows is configured with the default **Balanced** power plan. A Balanced power plan setting might lower the CPU clock speed to conserve energy. For example, a processor rated at 3.00 GHz may throttle down to 1.2 GHz. As a result, workloads that typically consume around 30% CPU may reach 100% utilization due to the reduced clock speed. To maintain consistent and optimal performance for compute-intensive SQL Server workloads, we recommend that you configure the system to use the **High Performance** power plan. This setting ensures the CPU operates at its full rated speed, helping to avoid performance bottlenecks. For more information, see [Slow performance on Windows Server when using the Balanced power plan](/troubleshoot/windows-server/performance/slow-performance-when-using-power-plan).  
+SQL Server workloads may experience reduced performance and cause high CPU on the system when Windows is configured with the default **Balanced** power plan. The **Balanced** power plan setting might lower the CPU clock speed to conserve energy. For example, a processor rated at 3.00 GHz may throttle down to 1.2 GHz. As a result, workloads that typically consume around 30% CPU may reach 100% utilization due to the reduced clock speed. To maintain consistent and optimal performance for compute-intensive SQL Server workloads, we recommend that you configure the system to use the **High Performance** power plan. This setting ensures the CPU operates at its full rated speed, helping to avoid performance bottlenecks. For more information, see [Slow performance on Windows Server when using the Balanced power plan](/troubleshoot/windows-server/performance/slow-performance-when-using-power-plan).  
 
 ## Step 10: Configure your virtual machine
 
