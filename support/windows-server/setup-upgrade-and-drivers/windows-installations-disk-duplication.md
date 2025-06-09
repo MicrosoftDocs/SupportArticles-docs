@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 314828
 
 ## Summary
 
-When you deploy a duplicated or imaged Windows installation, it is required that the System Preparation (Sysprep) tool is used before the capture of the image. Windows comes with Sysprep, located in the folder: %windir%\system32\sysprep.
+When you deploy a duplicated or imaged Windows installation, it is required that the System Preparation (Sysprep) tool is used before the capture of the image. Sysprep is a Windows built-in tool located in the folder: `%windir%\system32\sysprep`.
 
 ## More information
 
@@ -29,10 +29,10 @@ The following example displays the SIDs for four local user accounts. Only the l
 
 HKEY_USERS on local machine
 
-S-1-5-21-191058668-193157475-1542849698-500 Administrator
-S-1-5-21-191058668-193157475-1542849698-1000 User1
-S-1-5-21-191058668-193157475-1542849698-1001 User2
-S-1-5-21-191058668-193157475-1542849698-1002 User3
+- S-1-5-21-191058668-193157475-1542849698-500 Administrator
+- S-1-5-21-191058668-193157475-1542849698-1000 User1
+- S-1-5-21-191058668-193157475-1542849698-1001 User2
+- S-1-5-21-191058668-193157475-1542849698-1002 User3
 
 Cloning or duplicating an installation without taking the recommended steps could lead to duplicate SIDs. For removable media, a duplicate SID might give an account access to files even though NTFS permissions for the account specifically deny access to those files. Because the SID identifies both the computer or domain and the user, unique SIDs are necessary to maintain support for current and future programs. For more information about issues that might occur if you clone an installation of Windows 8 or of Windows Server 2012, go to the [Windows 8 and Windows Server 2012 specific information](#windows-8-and-windows-server-2012-specific-information) section.
 
@@ -59,12 +59,12 @@ We support the following operating systems that are prepared by using the Syspre
 - All versions of Windows Server 2022
 - All versions of Windows Server 2025
 
-We do not provide support for computers that are set up by using SID-duplicating tools other than the System Preparation tool. For example, this includes the following:
+Microsoft doesn't provide support for computers that are set up by using SID-duplicating tools other than the SysPrep tool.
 
 - [NewSID](/sysinternals/downloads/newsid)
 - GhostWalker
 
-Microsoft does not provide support for computers that are set up by using SID-duplicating tools other than the System Preparation tool (SysPrep).
+Microsoft does not provide support for computers that are set up by using SID-duplicating tools other than the SysPrep tool.
 
 > [!NOTE]
 > If an image was created without using Sysprep, we do not support the running of Sysprep after the image is deployed as a way to bring the computer back into compliance. Sysprep must be run before the capture of the image.
@@ -82,7 +82,7 @@ To resolve these issues, use one of the following methods:
 
 ## References
 
-For more information about the Windows System Preparation Tool, visit the following Microsoft websites:
+For more information about the SysPrep tool, visit the following Microsoft websites:
 
 - Windows Server 2003 [What Is Sysprep?](/previous-versions/windows/it-pro/windows-server-2003/cc783215(v=ws.10))
 - Windows 8 and Windows Server 2012 [Sysprep Overview](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825209(v=win.10))
