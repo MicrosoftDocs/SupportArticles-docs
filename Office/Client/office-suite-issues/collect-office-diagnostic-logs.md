@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - CSSTroubleshoot
-ms.date: 06/06/2025
+  - CI 5939
+ms.date: 06/09/2025
 ---
 
 # Increase the size of diagnostic logs for Office
