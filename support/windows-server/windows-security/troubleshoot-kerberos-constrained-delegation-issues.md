@@ -49,7 +49,7 @@ Use the Internet Information Services (IIS) tool (available on the Server Manage
 2. Select **Process Model** > **Identity**. Make sure that **Built-in account** is selected, and that an appropriate built-in account (such as **NetworkService**) is selected. Select **OK** to return to the properties list. 
 3. Make sure that **Load User Profile** is set to **True**. Select **OK** to close the properties list.
 4. If you changed any settings, restart the IIS service.
-5. When you are sure that all settings are correct, try to authenticate again.
+5. When you're sure that all settings are correct, try to authenticate again.
 
 ## Troubleshooting Kerberos constrained delegation when using a custom service account
 
@@ -71,7 +71,7 @@ Use Active Directory Users and Computers (available on the Server Manager **Tool
 2. Make sure that **Trust this user for delegation to specified services only** is selected.
 3. Make sure that the authentication option that's selected is appropriate for the users that access the web service.
 4. Make sure that the service list includes the back-end service (or a common service class such as HOST for the back-end server). If needed, select **Add** to add the service to the list.
-5. Select **Account**, and then review the **Account options** settings. Make sure that **Account is sensitive and cannot be delegated** is not selected.
+5. Select **Account**, and then review the **Account options** settings. Make sure that **Account is sensitive and cannot be delegated** isn't selected.
 6. Select **OK**.
 
 ### 3. Check the delegation configuration of the computer account of the front-end server
@@ -91,4 +91,4 @@ Use the Internet Information Services (IIS) tool (available on the Server Manage
 2. Select **Process Model** > **Identity**. Make sure that **Custom account** is selected, and that the service account is selected. Select **OK** to return to the properties list.
 3. Make sure that **Load User Profile** is set to **True**. Select **OK** to close the properties list.
 4. Restart the IIS service.
-5. When you are sure that all settings are correct, try to authenticate again.
+5. When you're sure that all settings are correct, try to authenticate again.
