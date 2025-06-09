@@ -19,7 +19,7 @@ This guide provides you with the fundamental concepts used when troubleshooting 
 
 ## Troubleshooting checklist
 
-The Kerberos protocol relies on a number of infrastructure components and services. If any of these components or services are not available or not functioning, you might see authentication issues.
+The Kerberos protocol relies on a number of infrastructure components and services. If any of these components or services aren't available or not functioning, you might see authentication issues.
 
 ### 1. Check events and logs
 
@@ -29,7 +29,7 @@ Check the event logs for indications of an issue. Use Event Viewer to review the
 - The target server or service.
 - The domain controller.
 
-In particular, look for any events from sources that may relate to Kerberos authentication or the services that it relies on. These sources include the following:
+In particular, look for any events from sources that might relate to Kerberos authentication or the services that it relies on. These sources include the following:
 
 - Kerberos.
 - Key Distribution Center (KDC).
@@ -38,18 +38,18 @@ In particular, look for any events from sources that may relate to Kerberos auth
 
 On the target server, check the Security log for failure audits. Such failures might show that the Kerberos protocol was being used when an authentication failure occurred.
 
-Some events or errors indicate specific issues. If any of the computers has recorded one of the following events or errors, select the link for more detailed troubleshooting information.
+Some events or errors indicate specific issues. If any of the computers recorded one of the following events or errors, select the link for more detailed troubleshooting information.
 
 | Event or error | Troubleshooting information |
 | - | - |
-| Event ID 4, Error KERB_AP_ERR_MODIFIED | The client couldn't decrypt the service ticket. More than one issue can cause this error, so check for other events that might be related. For example, this string might mean that the client and target server clocks are out of sync, or that the SPN is not unique. In a multi-domain environment, the service account name might not be unique in the forest (or other trusted forests).<br/>For more information, see [The kerberos client received a KRB_AP_ERR_MODIFIED error from the server](kerberos-client-krb-ap-err-modified-error.md). If that article doesn't help, see [Kerberos generates KDC_ERR_S_PRINCIPAL_UNKNOWN or KDC_ERR_PRINCIPAL_NOT_UNIQUE error](kerberos-error-kdc-err-s-principal-unknown-or-not-unique.md). |
+| Event ID 4, Error KERB_AP_ERR_MODIFIED | The client couldn't decrypt the service ticket. More than one issue can cause this error, so check for other events that might be related. For example, this string might mean that the client and target server clocks are out of sync, or that the SPN isn't unique. In a multi-domain environment, the service account name might not be unique in the forest (or other trusted forests).<br/>For more information, see [The kerberos client received a KRB_AP_ERR_MODIFIED error from the server](kerberos-client-krb-ap-err-modified-error.md). If that article doesn't help, see [Kerberos generates KDC_ERR_S_PRINCIPAL_UNKNOWN or KDC_ERR_PRINCIPAL_NOT_UNIQUE error](kerberos-error-kdc-err-s-principal-unknown-or-not-unique.md). |
 | Event ID 4, Error KERB_AP_ERR_SKEW | [Make sure that the computer clocks are synchronized](#g-make-sure-that-the-computer-clocks-are-synchronized) |
 | Event ID 14 | ["Unsupported etype" error when accessing a resource in a trusted domain](unsupported-etype-error-accessing-trusted-domain.md) |
 | Event ID 16 or Event ID 27 | [KDC event ID 16 or 27 is logged if DES for Kerberos is disabled](kdc-event-16-27-des-encryption-disabled.md)<br/>[Event ID 27 KDC Errors on Windows Server 2003 Domain Controllers](event-id-27-kdc-errors.md) |
 | Error 1069 | [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)) |
 | Event ID 5719, Error 1311, or Error 1355 | [Event ID 5719, Error 1311, or Error 1355 - Domain controller or domain not found](troubleshoot-kerberos-dc-domain-not-found-event-id-5719.md) |
 
-If you identify an issue that you know how to fix, please fix that issue and then try to authenticate again before you continue.
+If you identify an issue that you know how to fix, fix that issue and then try to authenticate again before you continue.
 
 ### 2. Check infrastructure
 
@@ -114,7 +114,7 @@ If the client or target server can't contact a domain controller, you see a mess
 
 > The specified domain either does not exist or could not be contacted.
 
-If you see this message, see []() for more troubleshooting information. Otherwise, continue through this checklist.
+If you see this message, see [Event ID 5719, Error 1311, or Error 1355 - Domain controller or domain not found](troubleshoot-kerberos-dc-domain-not-found-event-id-5719.md) for more troubleshooting information. Otherwise, continue through this checklist.
 
 #### f. Check that DNS is working between the client and the target server
 
@@ -140,7 +140,7 @@ If the `nslookup` command correctly resolves the target server name, the DNS con
    - Client IP address.
    - Subnet mask.
    - Default gateway.
-   - DNS server IP addresses. Consider recording these addresses, and noting which DNS server is preferred and which is secondary. This information will be useful for later troubleshooting.
+   - DNS server IP addresses. Consider recording these addresses, and noting which DNS server is preferred and which is secondary. This information is useful for later troubleshooting.
    - Connection-specific DNS suffix.
 
    If any of these settings are incorrect, fix them or contact your DNS administrator for assistance. If you made any changes, run `nslookup <TargetName>` again.
@@ -177,14 +177,14 @@ If DNS still doesn't work correctly, follow these steps:
    nslookup WebServer1 10.0.0.1
    ```
 
-   The following table summarizes the results that these `nslookup` queries might produce, the the implications of those results.
+   The following table summarizes the results that these `nslookup` queries might produce, the implications of those results.
 
    | | Target query<br/>succeeds | Target query<br/>fails |
    | - | - | - |
    | **Client query**<br/>**succeeds** | No DNS issue | Issue with the target or at least one DNS server |
    | **Client query**<br/>**fails** | Issue with the client or at least one DNS server | Issue with one or more DNS servers |
 
-If the query results indicate that you have a DNS issue, see the following articles for additional assistance:
+If the query results indicate that you have a DNS issue, see the following articles for more assistance:
 
 - [Troubleshooting Domain Name System (DNS) issues](../networking/dns/troubleshoot/troubleshoot-dns-data-collection)
 - [Troubleshooting DNS clients](../networking/dns/troubleshoot/troubleshoot-dns-client.md)
@@ -194,12 +194,12 @@ If you resolve the DNS issue but the Kerberos issue remains, continue troublesho
 
 #### g. Make sure that the computer clocks are synchronized
 
-The client computer or the target server can cache tickets for future use, but each ticket has timestamps that determine its time to live (TTL). The timestamps are set by the Kerberos Key Distribution Center service, which runs on the domain controllers.
+The client computer or the target server can cache tickets for future use, but each ticket has timestamps that determine its time to live (TTL). The Kerberos Key Distribution Center service, which runs on the domain controllers, sets the timestamps.
 
-The difference in time between the domain controller and the client computer or the target server must be less than five minutes. Typically, if the clocks are not synchronized, Windows can re-synchronize them automatically. There are two cases where you might have to take action:
+The difference in time between the domain controller and the client computer or the target server must be less than five minutes. Typically, if the clocks aren't synchronized, Windows can resynchronize them automatically. There are two cases where you might have to take action:
 
 - The clocks are out of sync by more than 48 hours.
-- The out-of-sync clock does not use a domain controller in its domain as a time server, or does not use the same time server as those domain controllers.
+- The out-of-sync clock doesn't use a domain controller in its domain as a time server, or doesn't use the same time server as those domain controllers.
 
 To resolve this issue, the affected computer has to recheck the network for time servers and then resynchronize its own clock. To do this, open an administrative Command Prompt window and then run the following command:
 
@@ -226,13 +226,13 @@ Make sure that the client and server applications are up to date on the client c
 
 #### j. Restart the computers
 
-If you have not already restarted the client computer, target server, or domain controller, restart them now. After the computers have restarted, try to authenticate again.
+If you haven't already restarted the client computer, target server, or domain controller, restart them now. After the computers restart, try to authenticate again.
 
 If your infrastructure is OK and you still have an issue, continue to the more advanced troubleshooting procedures.
 
 ### 3. Collect trace and ticket data
 
-The following procedures use the free [Network Monitor](https://www.microsoft.com/download/details.aspx?id=4865) tool. Download and install the tool on both the client computer and the target server.For an example of how to use Network Monitor to collect trace data and identify Kerberos messages, see [Kerberos errors in network captures](https://techcommunity.microsoft.com/blog/askds/kerberos-errors-in-network-captures/400066).
+The following procedures use the free [Network Monitor](https://www.microsoft.com/download/details.aspx?id=4865) tool. Download and install the tool on both the client computer and the target server. For an example of how to use Network Monitor to collect trace data and identify Kerberos messages, see [Kerberos errors in network captures](https://techcommunity.microsoft.com/blog/askds/kerberos-errors-in-network-captures/400066).
 
 #### a. Collect simultaneous network traces
 
@@ -269,7 +269,7 @@ On the target server, follow these steps:
    klist -li 0x3e7 purge
    ```
 
-Try to reproduce your issue. After that's done, stop and save the traces on both the client computer and the target server. To do this, in Network Monitor, select **Stop**, and then select **Save As**.
+Try to reproduce your issue, and then stop and save the traces on both the client computer and the target server. To do this, in Network Monitor, select **Stop**, and then select **Save As**.
 
 #### b. Record ticket information
 
@@ -338,7 +338,7 @@ When your target service has separate front-end and back-end components, Kerbero
 
 Kerberos supports three types of delegation:
 
-- **Unconstrained delegation**. After the client accesses the front-end service, the front-end service can access any other service on the client's behalf. This configuration is the easiest to implement, but is the least secure. Unconstrained delegation is not recommended because it doesn't restrict which services the authenticated account can interact with.
+- **Unconstrained delegation**. After the client accesses the front-end service, the front-end service can access any other service on the client's behalf. This configuration is the easiest to implement, but is the least secure. Unconstrained delegation isn't recommended because it doesn't restrict which services the authenticated account can interact with.
 - **Constrained delegation**. The front-end service maintains a list of services that it can access on behalf of a client.
 - **Resource-based constrained delegation (RBCD)**. The back-end service maintains a list of front-end services that can access it on behalf of a client.
 
