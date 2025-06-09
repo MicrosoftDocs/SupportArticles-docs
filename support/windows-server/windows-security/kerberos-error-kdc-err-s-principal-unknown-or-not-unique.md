@@ -1,6 +1,6 @@
 ---
 title: Kerberos generates KDC_ERR_S_PRINCIPAL_UNKNOWN or KDC_ERR_PRINCIPAL_NOT_UNIQUE error
-description: 
+description: Guidance for troubleshooting missing, incorrect, or duplicate SPNs that cause Kerberos authentication issues.
 ms.date: 06/15/2025
 manager: dcscontentpm
 audience: itpro
@@ -16,9 +16,9 @@ keywords: KDC_ERR_S_PRINCIPAL_UNKNOWN, KDC_ERR_PRINCIPAL_NOT_UNIQUE
 
 These errors indicate that the client is requesting access to a service that Kerberos can't identify. This type of error indicates one or more of the following issues:
 
-- The service account is not configured correctly.
-- The service is not using the service account that is configured for it.
-- More than one account has been configured for the service.
+- The service account isn't configured correctly.
+- The service isn't using the service account that is configured for it.
+- More than one account is configured for the service.
 - The client didn't correctly request the service.
 
 Each service has a service principal name (SPN), which identifies it to clients and other services. The SPN is an attribute of the Active Directory Domain Services (AD DS) account that the service uses. A service can run in the context of a custom service account or in the context of a built-in account such as the computer account of the local computer (or one of the security contexts that's related to the computer account, such as Local System or Network Service).
@@ -85,7 +85,7 @@ You might see any (or more than one) of the following issues:
 | The custom account doesn't have the SPN. | The computer account should have the SPN, but it doesn't.<sup>1</sup> |
 | The custom account has an incorrect SPN, or an SPN that doesn't match the SPN that the client requested.<sup>2</sup> | The computer account has an incorrect SPN, or an SPN that doesn't match the SPN that the client requested.<sup>2</sup> |
 
-<sup>1</sup> For a list of the services that can use the HOST SPN of the computer account, see [setspn](https://learn.microsoft.com/windows-server/administration/windows-commands/setspn). If your service is not one of these common services, you have to configure an SPN for the service on the computer account.  
+<sup>1</sup> For a list of the services that can use the HOST SPN of the computer account, see [setspn](https://learn.microsoft.com/windows-server/administration/windows-commands/setspn). If your service isn't one of these common services, you have to configure an SPN for the service on the computer account.  
 
 <sup>2</sup> For the client request information, see the network trace data.
 
@@ -93,9 +93,9 @@ Use the following procedures to fix the SPN configuration:
 
 - If the service account is configured correctly but the client requested an incorrect SPN, see [Fix an inconsistent SPN](#fix-an-inconsistent-spn).
 
-- If the correct service account has the SPN but the SPN is not correct, remove the incorrect SPN and then add the correct SPN. For details, see [Remove an SPN from an account](#remove-an-spn-from-an-account) and [Add an SPN to a service account](#add-an-spn-to-a-service-account).
+- If the correct service account has the SPN but the SPN isn't correct, remove the incorrect SPN and then add the correct SPN. For details, see [Remove an SPN from an account](#remove-an-spn-from-an-account) and [Add an SPN to a service account](#add-an-spn-to-a-service-account).
 
-- If the SPN has been assigned to any account other than the correct service account (custom account or computer account), remove the SPN from those accounts. See [Remove an SPN from an account](#remove-an-spn-from-an-account).
+- If the SPN his assigned to any account other than the correct service account (custom account or computer account), remove the SPN from those accounts. See [Remove an SPN from an account](#remove-an-spn-from-an-account).
 
 - If your service uses a custom account but the custom account doesn't have an assigned SPN, add the SPN. For details, see [Add an SPN to a service account](#add-an-spn-to-a-service-account).
 
@@ -127,7 +127,7 @@ setspn -S \<SPN> \<AccountName>
 
 Determine which version of the SPN is correct, the one that the client requested or the one that's configured on the service account.
 
-If the client is requesting an incorrect SPN, verify what information your client uses to build an SPN for a request, and make sure that the source information is correct. One source of this information is DNS Beyond DNS, clients might use other sources for this information (especially non-browser or custom clients).
+If the client is requesting an incorrect SPN, verify what information your client uses to build an SPN for a request, and make sure that the source information is correct. One source of this information is DNS. Beyond DNS, clients might use other sources for this information (especially non-browser or custom clients).
 
 If the service account uses the incorrect SPN, [remove the SPN from the service account](#remove-an-spn-from-an-account), and then [add the correct SPN](#add-an-spn-to-a-service-account).
 
