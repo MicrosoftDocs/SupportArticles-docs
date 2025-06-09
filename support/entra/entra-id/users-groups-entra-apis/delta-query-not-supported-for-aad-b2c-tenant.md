@@ -1,12 +1,12 @@
 ---
-title: Change enumeration is not supported for requested tenant
+title: Change Enumeration Is Not Supported for Requested Tenant
 description: Describes an issue in which you receive the Request_UnsupportedQuery error code when you run a Microsoft Graph delta query.
-ms.date: 06/05/2025
+ms.date: 06/09/2025
 ms.service: entra-id
 ms.custom: sap:Problem with querying or provisioning resources
 ms.reviewer: bachoang, v-weizhu
 ---
-# Error "Change enumeration is not supported for requested tenant" when running Microsoft Graph delta query
+# Error "Change enumeration is not supported for requested tenant" when running a Microsoft Graph delta query
 
 This article discusses an error that occurs when you run a Microsoft Graph delta query.
 
@@ -27,7 +27,7 @@ When executing a [Microsoft Graph delta query](/graph/delta-query-overview), suc
 
 ## Cause
 
-This issue occurs when your tenant is an [Azure AD B2C](/azure/active-directory-b2c/overview) tenant. Currently, differential query or delta query isn't supported in Azure AD B2C tenants.
+This issue occurs when your tenant is an [Azure Active Directory (AD) B2C](/azure/active-directory-b2c/overview) tenant. Currently, differential or delta queries aren't supported in Azure AD B2C tenants.
 
 ## Solution
 
