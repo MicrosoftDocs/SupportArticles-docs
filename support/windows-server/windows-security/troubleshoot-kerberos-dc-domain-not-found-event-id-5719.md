@@ -12,7 +12,7 @@ ms.reviewer: kaushika, raviks, v-lianna, jobesanc
 ---
 # Event ID 5719, Error 1311, or Error 1355 - Domain controller or domain not found
 
-Kerberos depends on domain controllers for authentication, authorization, and delegation functions. If a client computer or target server attempts to authenticate by using Kerberos and can't contact an domain controller, you see a message that resembles one of the following messages:
+Kerberos depends on domain controllers for authentication, authorization, and delegation functions. If a client computer or target server attempts to authenticate by using Kerberos and can't contact a domain controller, you see a message that resembles one of the following messages:
 
 > The following error occurred attempting to join the domain "Contoso":
 >
@@ -27,7 +27,7 @@ The error messages might differ from an application standpoint, but the meaning 
 This type of error usually results from one of the following causes:
 
 - Ports are blocked between the client and the domain controller.
-- The client's DNS configuration isn't correct.
+- The client's Domain Name System (DNS) configuration isn't correct.
 - The DNS server configuration on the domain controller isn't correct.
 
 ## Troubleshoot a domain or domain controller not found error
@@ -74,7 +74,7 @@ This type of error usually results from one of the following causes:
    - Client IP address.
    - Subnet mask.
    - Default gateway.
-   - DNS server IP addresses. Consider recording these addresses, and noting which DNS server is preferred and which is secondary. This information will be useful for later troubleshooting.
+   - DNS server IP addresses. Consider recording these addresses, and noting which DNS server is preferred and which is secondary. This information is useful for later troubleshooting.
    - Connection-specific DNS suffix.
 
 1. If any of the network adapter settings are incorrect, fix them or contact your DNS administrator for assistance.
