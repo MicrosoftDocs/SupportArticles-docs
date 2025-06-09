@@ -1,13 +1,13 @@
 ---
 title: Accounting Distribution Validation Failed Error
 description: Solves an issue where you can't submit a purchase order for approval after it's updated.
-ms.reviewer: shubhamshr
-ms.date: 05/19/2025
+ms.reviewer: shubhamshr, ashuaggarwal
+ms.date: 06/09/2025
 ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
 # Workflow approval fails with the "Accounting distribution validation failed" error
 
-This article addresses an issue where the workflow approval process for a purchase order fails due to unvalidated accounting distributions. The error occurs when the purchase order is modified and resubmitted without validating the accounting distributions, causing the workflow process to stop.
+This article addresses an issue where the workflow approval process for a purchase order fails due to unvalidated [accounting distributions](/dynamics365/finance/accounts-payable/accounting-distributions). The error occurs when the purchase order is modified and resubmitted without validating the accounting distributions, causing the workflow process to stop.
 
 ## Symptoms
 
