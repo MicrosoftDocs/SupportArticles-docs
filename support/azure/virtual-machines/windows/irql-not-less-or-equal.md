@@ -1,6 +1,6 @@
 ---
 title: Bug check 0x0000001A - IRQL_NOT_LESS_OR_EQUAL
-description: Provides troubleshooting steps for an Azure virtual machine (VM) that is experiencing the IRQL_NOT_LESS_OR_EQUAL bug check (0x0000001A) during startup.
+description: Provides troubleshooting steps for an Azure virtual machine (VM) that is experiencing the IRQL_NOT_LESS_OR_EQUAL bug check (0x0000001A).
 ms.date: 06/07/2025
 author: cwhitley-MSFT 
 ms.author: cwhitley
