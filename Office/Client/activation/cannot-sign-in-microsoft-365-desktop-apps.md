@@ -9,11 +9,12 @@ ms.topic: troubleshooting
 ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - CI 176805
+  - CI 5937
   - CSSTroubleshoot
 ms.reviewer: alextok,balram,naveerap
 appliesto: 
   - Microsoft 365 Apps for Enterprise
-ms.date: 06/06/2025
+ms.date: 06/09/2025
 ---
 
 # Can't sign in to Microsoft 365 desktop applications
