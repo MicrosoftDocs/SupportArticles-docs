@@ -47,6 +47,7 @@ Use the following procedure to resolve the problem:
    ```cmd
    msiexec /x {PRODUCT-CODE-GUID}
    ```
+   Repeat the above command for **each ProductCode** linked to the inactive instance.
    **Example:**
 
    ```cmd
