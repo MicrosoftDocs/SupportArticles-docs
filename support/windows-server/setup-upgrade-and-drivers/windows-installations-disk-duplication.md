@@ -19,7 +19,7 @@ _Original KB number:_ &nbsp; 314828
 
 ## Summary
 
-When you deploy a duplicated or imaged Windows installation, it is required that the System Preparation (Sysprep) tool is used before the capture of the image. Sysprep prepares an installation of Microsoft Windows for duplication, auditing, and customer delivery. For Windows 2000, Windows XP, and Windows Server 2003, Sysprep is included with the latest service pack Deploy.cab. For later versions of Windows, Sysprep is included with the operating system, and Sysprep is located in the folder: `%windir%\system32\sysprep`.
+When you deploy a duplicated or imaged Windows installation, it is required that the System Preparation (Sysprep) tool is used before the capture of the image. Windows comes with Sysprep, located in the folder: %windir%\system32\sysprep.
 
 ## More information
 
@@ -30,9 +30,9 @@ The following example displays the SIDs for four local user accounts. Only the l
 HKEY_USERS on local machine
 
 S-1-5-21-191058668-193157475-1542849698-500 Administrator
-S-1-5-21-191058668-193157475-1542849698-1000 User 1a
-S-1-5-21-191058668-193157475-1542849698-1001 User 2
-S-1-5-21-191058668-193157475-1542849698-1002 User 3
+S-1-5-21-191058668-193157475-1542849698-1000 User1
+S-1-5-21-191058668-193157475-1542849698-1001 User2
+S-1-5-21-191058668-193157475-1542849698-1002 User3
 
 Cloning or duplicating an installation without taking the recommended steps could lead to duplicate SIDs. For removable media, a duplicate SID might give an account access to files even though NTFS permissions for the account specifically deny access to those files. Because the SID identifies both the computer or domain and the user, unique SIDs are necessary to maintain support for current and future programs. For more information about issues that might occur if you clone an installation of Windows 8 or of Windows Server 2012, go to the [Windows 8 and Windows Server 2012 specific information](#windows-8-and-windows-server-2012-specific-information) section.
 
@@ -49,36 +49,22 @@ In addition to the computer SID, many other components and features must be clea
 
 We support the following operating systems that are prepared by using the Sysprep utility and then imaged:
 
-- Windows NT Workstation 4.0
-- Windows NT Server 4.0 (stand-alone server, not primary domain controllers or backup domain controllers)
-- Windows 2000 Professional
-- Windows 2000 Server (must be imaged before you run DCPromo)
-- Windows 2000 Advanced Server
-- Windows XP Home Edition
-- Windows XP Professional
-- Windows Server 2003, Standard Edition
-- Windows Server 2003, Datacenter Edition
-- Windows Server 2003, Enterprise Edition
-- Windows Server 2003, Web Edition
-- All versions of Windows Vista
-- All versions of Windows Server 2008
-- All versions of Windows 7
-- All versions of Windows Server 2008 R2
-- All versions of Windows 8
-- All versions of Windows Server 2012
 - All versions of Windows 10
+- All versions of Windows 11
+- All versions of Windows Server 2012
 - All versions of Windows Server 2016
 - All versions of Windows Server 2019
 - All versions of Windows Server 1903
 - All versions of Windows Server, version 1909
-- All versions of Windows 11
+- All versions of Windows Server 2022
+- All versions of Windows Server 2025
 
 We do not provide support for computers that are set up by using SID-duplicating tools other than the System Preparation tool. For example, this includes the following:
 
 - [NewSID](/sysinternals/downloads/newsid)
 - GhostWalker
 
-Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+Microsoft does not provide support for computers that are set up by using SID-duplicating tools other than the System Preparation tool (SysPrep).
 
 > [!NOTE]
 > If an image was created without using Sysprep, we do not support the running of Sysprep after the image is deployed as a way to bring the computer back into compliance. Sysprep must be run before the capture of the image.
