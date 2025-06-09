@@ -39,6 +39,19 @@ Use the following procedure to resolve the problem:
 
 1. Navigate to the **Tools** menu and select the **Installed SQL Server features discovery report** and verify there are no more \<instance name\>.INACTIVE instances shown in the report.
 
+1. In case you find the inactive instance entries then Within the XML, around each **MSSQLSERVER.INACTIVE** instance, locate the `ProductCode` field , it will be looks like:
+   ```xml
+   ProductCode="{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}"
+   ```
+   Note each **ProductCode** associated with the inactive instance then open  **Command Prompt as Administrator** and for each `ProductCode` identified, run the following command to manually uninstall the component:
+   ```cmd
+   msiexec /x {PRODUCT-CODE-GUID}
+   ```
+   **Example:**
+
+   ```cmd
+   msiexec /x {9FFAE13C-6160-4DD0-A67A-DAC5994F81BD}
+   ```
 1. Retry the setup program that was originally failing to complete.
 
 > [!NOTE]
