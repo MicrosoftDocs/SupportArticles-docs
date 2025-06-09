@@ -1,7 +1,7 @@
 ---
 title: Disk duplication of Windows installations
 description: Describes the SID and supported methods for cloning or duplicating a Windows installation.
-ms.date: 01/15/2025
+ms.date: 06/09/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
