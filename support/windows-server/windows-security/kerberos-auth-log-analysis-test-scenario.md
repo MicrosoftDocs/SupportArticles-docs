@@ -1,6 +1,6 @@
 ---
 title: Use a log analysis test scenario to troubleshoot Kerberos authentication
-description: Provides guidance to troubleshoot Kerberos authentication issues.
+description: Uses an example topology to demonstrate techniques for troubleshooting Kerberos issues.
 ms.date: 06/15/2025
 manager: dcscontentpm
 audience: itpro
@@ -18,7 +18,7 @@ This article uses a hypothetical client and server deployment to demonstrate tro
 
 - User "John" belongs to the `contoso.com` domain.
 
-- All of the domain's DNS servers are domain controllers.
+- All of the domain's Domain Name System (DNS) servers are domain controllers.
 
 - John is signed in to a client computer that's configured as follows:
 
@@ -104,7 +104,7 @@ The process starts when user John, signed in to the client computer `Client1.con
 **Step 5** occurs on the client computer, and includes the following steps:
 
 1. The client computer receives the challenge response message from `IISServer.contoso.com`.
-1. The Microsoft Edge process verifies that `IISServer.contoso.com` belongs belongs to the local intranet zone, so the authentication process should use Kerberos instead of NTLM.
+1. The Microsoft Edge process verifies that `IISServer.contoso.com` belongs to the local intranet zone, so the authentication process should use Kerberos instead of NTLM.
 1. The Microsoft Edge process calls *LSASS.exe* to look for a service ticket for `IISServer.contoso.com`.
 1. In this case, the client computer doesn't have an appropriate service ticket. The Microsoft Edge process sends a request to the Kerberos Distribution Center (KDC) for a ticket.
 
@@ -117,7 +117,7 @@ The process starts when user John, signed in to the client computer `Client1.con
 **Step 7** occurs on the domain controller, and includes the following steps:
 
 1. The Microsoft Edge process creates a Kerberos Application Protocol (AP) message, which includes the service ticket.
-1. The MIcrosoft Edge process sends the AP message to `IISServer.contoso.com` in response to the HTTP 401 challenge response message.
+1. The Microsoft Edge process sends the AP message to `IISServer.contoso.com` in response to the HTTP 401 challenge response message.
 
 **Step 8** occurs on the web server, and includes the following steps:
 
@@ -137,7 +137,7 @@ Use the following steps to gather trace data on an environment that resembles th
 1. On the client computer, open an administrative Command Prompt window and then run `ipconfig /flushdns`.
 1. Open Network Monitor, and start recording.
 1. Open Microsoft Edge, and in the browser bar, enter `http://iisserver.contoso.com`.
-1. When the Edge operation finishes, stop recording in Network Monitor.
+1. When the Microsoft Edge operation finishes, stop recording in Network Monitor.
 
 ## Review the data that the authentication test generates
 
@@ -237,7 +237,7 @@ Kdc Called: DCA.contoso.com
 
 ### Review audit events on the target server
 
-In Event Viewer on `IISServer.contoso.com`, go to the **Windows Logs** > **Security** log to review sign in (logon) events. Look for instances of event ID 4624 or 4625, and check the following fields:
+In Event Viewer on `IISServer.contoso.com`, go to the **Windows Logs** > **Security** log to review sign-in (logon) events. Look for instances of event ID 4624 or 4625, and check the following fields:
 
 - **Keywords**: **Audit Success** or **Audit Failure**
 - **Logon type**: **3** (network logon)
