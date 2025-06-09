@@ -17,7 +17,7 @@ appliesto:
   - Office 2021
   - Office 2019
   - Office 2016
-ms.date: 06/06/2025
+ms.date: 06/09/2025
 ---
 
 # Enable or disable hyperlink warning messages in Office applications
