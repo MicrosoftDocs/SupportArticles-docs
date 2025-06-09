@@ -8,7 +8,7 @@ ms.reviewer: bachoang, v-weizhu
 ---
 # Error "Change enumeration is not supported for requested tenant" when running a Microsoft Graph delta query
 
-This article discusses an error that occurs when you run a Microsoft Graph delta query.
+This article provides a solution to an error that occurs when you run a Microsoft Graph delta query.
 
 ## Symptoms
 
