@@ -49,13 +49,13 @@ If the client computer doesn't have a service ticket, continue to the next proce
 
 ## 3. Check the configuration of an affected client application
 
-Different types of clients use different criteria to identify intranet sites, and use different settings to implement single sign-on. The procedures in this article apply to Microsoft Edge, version 87 or a newer version (or browser-based applications that are based on Edge). If you're using a different type of client, consider the following options:
+Different types of clients use different criteria to identify intranet sites, and use different settings to implement single sign-on. The procedures in this article apply to Microsoft Edge, version 87 or a newer version (or browser-based applications that are based on Microsoft Edge). If you're using a different type of client, consider the following options:
 
 - **Clients that aren't browser-based**. Review the documentation for the client application or contact the application's support provider. Make sure that the client is configured correctly to support SSO authentication.
 
-- **Clients that are based on Internet Explorer (or similar older browser)**. Older browsers, including Internet Explorer (all versions) and Edge versions older than version 87 use different default configurations than the newer browsers. For more information about how to troubleshoot Kerberos issues when using Internet Explorer, see [Troubleshoot Kerberos failures in Internet Explorer](https://learn.microsoft.com/troubleshoot/developer/webapps/iis/www-authentication-authorization/troubleshoot-kerberos-failures-ie).
+- **Clients that are based on Internet Explorer (or similar older browser)**. Older browsers, including Internet Explorer (all versions) and Microsoft Edge versions older than version 87 use different default configurations than the newer browsers. For more information about how to troubleshoot Kerberos issues when using Internet Explorer, see [Troubleshoot Kerberos failures in Internet Explorer](https://learn.microsoft.com/troubleshoot/developer/webapps/iis/www-authentication-authorization/troubleshoot-kerberos-failures-ie).
 
-Unlike older browsers, Microsoft Edge version 87 (and later versions) only uses two internet zones: **Internet** and **Local intranet**. Edge ignores other zone settings such as **Restricted sites**. Additionally, Edge doesn't always use the client computer's zone settings to identify intranet sites. Edge considers other factors, such as proxy configurations. For these reasons Group Policy provides the most consistent method to manage Edge configuration.
+Unlike older browsers, Microsoft Edge version 87 (and later versions) only uses two internet zones: **Internet** and **Local intranet**. Microsoft Edge ignores other zone settings such as **Restricted sites**. Additionally, Microsoft Edge doesn't always use the client computer's zone settings to identify intranet sites. Microsoft Edge considers other factors, such as proxy configurations. For these reasons, Group Policy provides the most consistent method to manage Microsoft Edge configuration.
 
 > [NOTE!]  
 > If you need to check the configuration on a single computer, see [Check a single client computer's internet authentication settings](#check-a-single-client-computers-internet-authentication-settings).
@@ -70,7 +70,7 @@ For more information, see the following articles:
 - [AuthServerAllowList](https://learn.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist)
 - [Per-site configuration by policy](https://learn.microsoft.com/deployedge/per-site-configuration-by-policy#windows-security-zones)
 
-For information about how to obtain and work with the Edge group policy administrative templates, see [Configure Microsoft Edge policy settings on Windows devices](https://learn.microsoft.com/deployedge/configure-microsoft-edge).
+For information about how to obtain and work with the Microsoft Edge group policy administrative templates, see [Configure Microsoft Edge policy settings on Windows devices](https://learn.microsoft.com/deployedge/configure-microsoft-edge).
 
 If you make any changes to the Group Policy settings, make sure that the changes propagate out to the client computers and users. Restart the client browser that you're troubleshooting, clear the browser cache, and then try to authenticate again.
 
@@ -83,4 +83,4 @@ To check the configuration of a single client computer independently of the Grou
 3. In the **Security** category on the **Advanced** tab, make sure that **Enable Integrated Windows Authentication** is selected.
 4. In **Internet Properties**, select **Security**, and then select **Local intranet** > **Sites**.
 5. Make sure that the settings are correct for your environment.
-6. When you are sure that all settings are correct, try to authenticate again.
+6. When you're sure that all settings are correct, try to authenticate again.
