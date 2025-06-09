@@ -2,7 +2,7 @@
 title: Bypass user selection prompt when signing out of OpenID Connect/OAuth2 applications
 description: Describes how to sign out of an OpenID Connect/OAuth2 application without a user selection prompt.
 ms.service: entra-id
-ms.date: 06/06/2025
+ms.date: 06/09/2025
 ms.reviewer: willfid, v-weizhu
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ms.topic: how-to
@@ -57,12 +57,12 @@ When you send the sign-out request, pass the `logout_hint` parameter with the va
 ```http
 https://login.microsoftonline.com/<username>.onmicrosoft.com/oauth2/v2.0/logout?
 post_logout_redirect_uri=https://login.microsoftonline.com/common/oauth2/nativeclient
-&logout_hint=<logout_hint value>
+&logout_hint=<login_hint_claim_value>
 ```
 
 ## More information
 
-For applications using Microsoft Authentication Library for JavaScript (MSAL.js), when you send a `EndSessionRequest` with the user account, MSAL.js automatically sends the `logout_hint` claim if detected.
+For applications using Microsoft Authentication Library for JavaScript (MSAL.js), when you send a `EndSessionRequest` with the user account, MSAL.js automatically sends the `logout_hint` parameter with the `login_hint` claim if detected.
 
 Here's an example code snippet:
 
