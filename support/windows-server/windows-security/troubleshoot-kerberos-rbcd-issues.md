@@ -33,7 +33,7 @@ The configuration details differ depending on the type of account that the front
 
 ## Troubleshooting Kerberos RBCD when using a built-in service account
 
-1. To check the back-end (resource) server's delegation configuration, open a Windows Powershell command prompt window and then run the following cmdlet:
+1. To check the back-end (resource) server's delegation configuration, open a Windows PowerShell command prompt window and then run the following cmdlet:
 
    ```powershell
    Get-ADComputer -Identity <BackEndSvcAcct> -PrincipalsAllowedToDelegateToAccount
@@ -46,7 +46,7 @@ The configuration details differ depending on the type of account that the front
    - If this list includes the service account that the front-end service is using, then RBCD is correctly configured. Skip to step 3.
    - If this list doesn't include the service account that the front-end service is using, then follow the next step.
 
-2. To configure RBCD on the back-end service account run the following cmdlet:
+2. To configure RBCD on the back-end service account, run the following cmdlet:
 
    ```powershell
    Set-ADComputer -AuthType Negotiate -Identity <BackEndSvcAcct> -PrincipalsAllowedToDelegateToAccount <FrontEndSvcAcct>
@@ -57,12 +57,12 @@ The configuration details differ depending on the type of account that the front
 
 3. Check the front-end service account options. Use Active Directory Users and Computers (available on the Server Manager **Tools** menu) for these steps.
 
-   1. In Active Directory Users and Computers, right-click the service account (typically in the **Computers** container), and then select **Properties** > **Account**, and then review the **Account options** settings. Make sure that **Account is sensitive and cannot be delegated** is not selected.
+   1. In Active Directory Users and Computers, right-click the service account (typically in the **Computers** container), and then select **Properties** > **Account**, and then review the **Account options** settings. Make sure that **Account is sensitive and cannot be delegated** isn't selected.
    2. Select **OK**.
 
 ## Troubleshooting Kerberos RBCD when using a custom service account
 
-1. To check the back-end (resource) server's delegation configuration, open a Powershell command prompt window and the run the following cmdlet:
+1. To check the back-end (resource) server's delegation configuration, open a PowerShell command prompt window and the run the following cmdlet:
 
    ```powershell
    Get-ADUser -Identity <BackEndSvcAcct> -PrincipalsAllowedToDelegateToAccount
@@ -78,7 +78,7 @@ The configuration details differ depending on the type of account that the front
    - If this list includes the service account that the front-end service is using, then RBCD is correctly configured. Skip to step 3.
    - If this list doesn't include the service account that the front-end service is using, then follow the next step.
 
-2. To configure RBCD on the back-end service account run the following cmdlet:
+2. To configure RBCD on the back-end service account, run the following cmdlet:
 
    ```powershell
    Set-ADUser -Identity <BackEndSvcAcct> -PrincipalsAllowedToDelegateToAccount <FrontEndSvcAcct>
@@ -92,5 +92,5 @@ The configuration details differ depending on the type of account that the front
 
 3. Check the front-end service account options. Use Active Directory Users and Computers (available on the Server Manager **Tools** menu) for these steps.
 
-   1. In Active Directory Users and Computers, right-click the service account (typically in the **Users** container), and then select **Properties** > **Account**, and then review the **Account options** settings. Make sure that **Account is sensitive and cannot be delegated** is not selected.
+   1. In Active Directory Users and Computers, right-click the service account (typically in the **Users** container), and then select **Properties** > **Account**, and then review the **Account options** settings. Make sure that **Account is sensitive and cannot be delegated** isn't selected.
    2. Select **OK**.
