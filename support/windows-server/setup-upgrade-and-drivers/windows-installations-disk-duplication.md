@@ -61,11 +61,6 @@ We support the following operating systems that are prepared by using the Syspre
 
 Microsoft doesn't provide support for computers that are set up by using SID-duplicating tools other than the SysPrep tool.
 
-- [NewSID](/sysinternals/downloads/newsid)
-- GhostWalker
-
-Microsoft does not provide support for computers that are set up by using SID-duplicating tools other than the SysPrep tool.
-
 > [!NOTE]
 > If an image was created without using Sysprep, we do not support the running of Sysprep after the image is deployed as a way to bring the computer back into compliance. Sysprep must be run before the capture of the image.
 
