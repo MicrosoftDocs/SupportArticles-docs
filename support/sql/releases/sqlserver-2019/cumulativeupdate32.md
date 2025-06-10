@@ -36,12 +36,9 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 
 For more information about the bug that is fixed in this cumulative update, see the following table.
 
-> [!IMPORTANT]
-> If you have already installed SQL Server 2019 CU31 and encounter this issue, you must uninstall SQL Server 2019 CU31 from the affected systems before installing this CU.
-
 | Bug reference| Description| Fix area | Component | Platform |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|----------|
-| <a id=3907024>[3907024](#3907024) </a> | Fixes an issue in which patching a read-scale availability group causes the availability group on the patched replica to be removed. For more information, see [issue two of SQL Server 2019 CU31](cumulativeupdate31.md#issue-two-patching-a-read-scale-availability-group-windows-or-linux-causes-the-availability-group-on-the-patched-replica-to-be-removed). | SQL Server Engine  | High Availability and Disaster Recovery | All |
+| <a id=3907024>[3907024](#3907024) </a> | Fixes an issue in which patching a read-scale availability group causes the availability group on the patched replica to be removed. For more information, see [issue two of SQL Server 2019 CU31](cumulativeupdate31.md#issue-two-patching-a-read-scale-availability-group-windows-or-linux-causes-the-availability-group-on-the-patched-replica-to-be-removed). </br></br>**Note**: If you have already installed SQL Server 2019 CU31 and encounter this issue, you must uninstall SQL Server 2019 CU31 from the affected systems before installing this CU. | SQL Server Engine  | High Availability and Disaster Recovery | All |
 
 ## How to obtain or download this or the latest cumulative update package
 
