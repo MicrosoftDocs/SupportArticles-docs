@@ -45,7 +45,7 @@ Successful communication with a domain controller within your organization is es
 
 WinRM is required to complete an ANC setup.
 
-To ensure successful provisioning, verify that WinRM isn't restricted to specific IP addresses, whether through Group Policy Object (GPO) or Microsoft Intune configuration service provider (CSP), for groups used in your provisioning policies. WinRM should be configured to allow network requests from any IP address.
+To ensure successful provisioning, verify that WinRM isn't restricted to specific IP addresses, whether through a Group Policy Object (GPO) or Microsoft Intune configuration service provider (CSP), for the groups used in your provisioning policies. WinRM should be configured to allow network requests from any IP address.
 
 For more information, see [GPO configurations](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management) or [Intune CSP](/windows/client-management/mdm/policy-csp-remotemanagement).
 
