@@ -41,6 +41,7 @@ To create a cloud endpoint, your user account must have the following Microsoft 
 
 The following built-in roles have the required Microsoft Authorization permissions:
 
+- Azure File Sync Administrator
 - Owner
 - User Access Administrator
 
@@ -49,7 +50,7 @@ To determine whether your user account role has the required permissions:
 1. In the Azure portal, select **Resource groups**.
 2. Select the resource group where the storage account is located, and then select **Access control (IAM)**.
 3. On the **Check access** tab, select **View my access**.
-4. On the **Current role assignments** tab, select the role (for example, Owner or Contributor) for your user account.
+4. On the **Current role assignments** tab, select the role (for example, File Sync Administrator, Owner or Contributor) for your user account.
 5. On the **Permissions** tab, verify the role for your user account has the following permissions:
     - **Read**: **Get role definition**
     - **Write**: **Create or update custom role definition**
