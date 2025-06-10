@@ -59,7 +59,7 @@ productDirectory:
     - url: kubernetes-fleet/welcome-azure-kubernetes-fleet.yml
       text: Troubleshooting articles for Azure Kubernetes Fleet Manager
   - title: Azure Logic Apps
-    imageSrc: "https://learn.microsoft.com/static/ui/media/product/azure/logic-apps.svg"
+    imageSrc: "https://static.docs.com/ui/media/product/azure/logic-apps.svg"
     links:
     - url: logic-apps/index.yml
       text: Troubleshooting articles for Azure Logic Apps
@@ -136,6 +136,11 @@ productDirectory:
     links:
     - url: virtual-machine-scale-sets/welcome-virtual-machine-scale-sets.yml
       text: Troubleshooting articles for Virtual Machine Scale Sets
+  - title: Azure Native Integrations
+    imageSrc: "https://learn.microsoft.com/azure/media/index/energy-data-services.svg"
+    links:
+    - url: partner-solutions/welcome-native-integrations.yml
+      text: Troubleshooting articles for Azure Native Integrations
   - title: Other Azure Services
     imageSrc: "https://static.docs.com/ui/media/product/azure/azure.svg"
     links:

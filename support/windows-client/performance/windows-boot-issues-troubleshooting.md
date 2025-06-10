@@ -8,7 +8,7 @@ ms.collection: highpri
 ms.custom:
 - sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
 - pcy:WinComm Performance
-ms.reviewer: dougeby,aaroncz
+ms.reviewer: dougeby
 audience: itpro
 ---
 # Advanced troubleshooting for Windows boot problems
@@ -131,11 +131,11 @@ If you receive BCD-related errors, follow these steps:
 
     ```console
     bcdedit /export c:\bcdbackup
-    
+
     attrib c:\boot\bcd -r -s -h
-    
+
     ren c:\boot\bcd bcd.old
-    
+
     bootrec /rebuildbcd
     ```
 

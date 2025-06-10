@@ -1,7 +1,7 @@
 ---
 title: Error code 8005E274 when you test and enable a mailbox
 description: Provides a resolution for error code 8005E274 that occurs when you test and enable a mailbox for server-side synchronization.
-ms.date: 04/29/2024
+ms.date: 06/06/2025
 ms.custom: sap:Email and Exchange Synchronization\Set up and configuration of server-side synchronization
 author: rahulmital
 ms.author: rahulmital
@@ -14,9 +14,13 @@ This article provides a resolution for error code 8005E274 that occurs when you 
 
 When a user tries to [test and enable a mailbox](/power-platform/admin/connect-exchange-online#test-the-configuration-of-mailboxes) in Microsoft Dataverse, the test fails with error code 8005E274.
 
+You might also see the following error message in the [Alerts](/power-platform/admin/monitor-email-processing-errors#view-alerts) section of the mailbox record:
+
+> **Email Server Error Code:** MailboxNotEnabledForRESTAPI
+
 ## Cause
 
-This issue occurs because the associated Exchange mailbox isn't enabled for the REST API. The mailbox associated with the email address isn't enabled for the REST API connectivity in the Microsoft 365 tenant associated with an email server profile. This issue can occur if the mailbox doesn't have an Exchange Online license, is disabled, or exists in an Exchange on-premises hybrid deployment.
+This issue occurs because the Exchange mailbox associated with the email address isn't enabled for REST API connectivity in the Microsoft 365 tenant relative to the configured email server profile. This issue can occur if the mailbox doesn't have an Exchange Online license, is disabled, or exists in an Exchange on-premises hybrid deployment.
 
 ## Resolution
 

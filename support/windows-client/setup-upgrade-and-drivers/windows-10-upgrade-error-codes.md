@@ -8,7 +8,7 @@ ms.collection: highpri
 ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
-ms.reviewer: dougeby,aaroncz
+ms.reviewer: dougeby
 audience: itpro
 ---
 # Windows 10 upgrade error codes
@@ -53,7 +53,7 @@ Other result codes can be matched to the specific type of error encountered. To 
 
 1. Identify the error code type as either Win32 or NTSTATUS using the first hexadecimal digit:
 
-    8 = Win32 error code (ex: 0x80070070)  
+    8 = Win32 error code (ex: 0x80070070)
     C = NTSTATUS value (ex: 0xC1900107)
 2. Write down the last four digits of the error code (ex: 0x80070070 = 0070). These digits are the actual error code type as defined in the [HRESULT](/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a) or the [NTSTATUS](/openspecs/windows_protocols/ms-erref/87fba13e-bf06-450e-83b1-9241dc81e781) structure. Other digits in the code identify things such as the device type that produced the error.
 3. Based on the type of error code determined in the first step (Win32 or NTSTATUS), match the four digits derived from the second step to either a Win32 error code or NTSTATUS value using the following links:
@@ -148,8 +148,8 @@ If you need assistance from Microsoft support, we recommend you collect the info
 
 ## More information
 
-- [Windows 10 FAQ for IT professionals](/windows/deployment/planning/windows-10-enterprise-faq-itpro)  
-- [Windows 10 Enterprise system requirements](https://technet.microsoft.com/windows/dn798752.aspx)  
-- [Windows 10 Specifications](https://www.microsoft.com/windows/windows-10-specifications)  
-- [Microsoft Windows Q & A](/answers/products/windows)  
+- [Windows 10 FAQ for IT professionals](/windows/deployment/planning/windows-10-enterprise-faq-itpro)
+- [Windows 10 Enterprise system requirements](https://technet.microsoft.com/windows/dn798752.aspx)
+- [Windows 10 Specifications](https://www.microsoft.com/windows/windows-10-specifications)
+- [Microsoft Windows Q & A](/answers/products/windows)
 - [Fix Windows Update errors by using the DISM or System Update Readiness tool](../../windows-server/deployment/fix-windows-update-errors.md)

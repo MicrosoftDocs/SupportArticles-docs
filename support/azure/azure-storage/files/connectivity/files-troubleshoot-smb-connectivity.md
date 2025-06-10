@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: sap:Connectivity, devx-track-azurepowershell, linux-related-content
-ms.date: 04/24/2025
+ms.date: 05/27/2025
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal, justingross
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -145,9 +145,13 @@ When mounting a file share from on-premises or another datacenter, you might see
 
 This issue is likely caused by a proxy server or another type of Network Address Translation (NAT) device in the datapath that blocks the connection to map the Azure file share. In this case, the PowerShell cmdlet `Test-NetConnection` still might test connectivity on port 445 successfully.
 
+This issue occurs when the Active Directory computer or user account corresponding to the Azure storage account that hosts the FSLogix user profiles can't process Kerberos authentications. The underlying reasons might include incorrect modifications to the `msDS-SupportedEncryptionTypes` attribute, or the rotation of the storage account's access keys without updating the new keys on the Active Directory account.
+
 #### Solution
 
 To resolve this issue, reproduce it and collect a network trace to get more information about the error's origin. In most cases, you must work with your network/firewall administrator to allow the content to pass through the network device.
+
+Kerberos errors can be seen in a network trace, such as flows labeled as KRB Error in a `netsh` trace. To resolve them, [enable Active Directory Domain Services authentication for Azure file shares](/azure/storage/files/storage-files-identity-ad-ds-enable) to set up the authentication parameters properly.
 
 ### <a id="error-0x800704b3"></a> Failed with error code 0x800704b3
 

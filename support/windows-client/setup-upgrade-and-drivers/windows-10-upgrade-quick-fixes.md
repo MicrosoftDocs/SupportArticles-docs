@@ -7,7 +7,7 @@ ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
 ms.topic: troubleshooting
-ms.reviewer: dougeby, aaroncz, kaushika
+ms.reviewer: dougeby, kaushika
 audience: itpro
 ---
 
@@ -82,7 +82,7 @@ To check and repair errors on the system drive:
     C:\WINDOWS\system32>chkdsk /F
     The type of the file system is NTFS.
     Cannot lock current drive.
-    
+
     Chkdsk cannot run because the volume is in use by another
     process.  Would you like to schedule this volume to be
     checked the next time the system restarts? (Y/N) Y
@@ -157,7 +157,7 @@ Verify compatibility information, and if desired reinstall antivirus application
 
 To remove the application, go to **Control Panel** > **Programs** > **Programs and Features** and select the antivirus application, then select **Uninstall**. Choose **Yes** when you're asked to confirm program removal.
 
-For more information, see [Windows 7 - How to properly uninstall programs](https://support.microsoft.com/help/2601726) or [Repair or remove programs in Windows 10](https://support.microsoft.com/help/4028054/windows-repair-or-remove-programs-in-windows-10).
+For more information, see [Windows 7 - How to properly uninstall programs](https://support.microsoft.com/topic/8c95f23f-5627-8b73-ef98-565cff984446) or [Repair or remove programs in Windows 10](https://support.microsoft.com/help/4028054/windows-repair-or-remove-programs-in-windows-10).
 
 ### Uninstall non-essential software
 

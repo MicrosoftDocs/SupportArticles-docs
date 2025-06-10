@@ -1,12 +1,13 @@
 ---
-# required metadata
 title: Troubleshoot provisioning errors
 description: Troubleshoot provisioning errors in Windows 365.
 manager: dcscontentpm
 ms.date: 01/20/2025
 ms.topic: troubleshooting
 ms.reviewer: mattsha, erikje
-ms.custom: intune-azure, get-started
+ms.custom:
+- pcy:Provisioning\Provisioning Failure
+- sap:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

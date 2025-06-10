@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 30 for SQL Server 2019 (KB5049235)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 30 (KB5049235).
-ms.date: 12/12/2024
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5049235
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,9 +23,9 @@ This article describes Cumulative Update package 30 (CU30) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Access violation when session is reset
+### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 

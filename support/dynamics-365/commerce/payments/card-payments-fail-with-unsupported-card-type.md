@@ -3,7 +3,7 @@ title: Card payments fail due to an unsupported card type in Dynamics 365 Commer
 description: Provides a resolution for the card type is not an accepted form of payment error that occurs when processing credit or debit card transactions in Microsoft Dynamics 365 Commerce.
 author: bstorie
 ms.author: brstor
-ms.date: 08/30/2023 
+ms.date: 05/22/2025
 ms.custom: sap:Payments\Issues with payment transactions
 ---
 # A card payment fails due to an unsupported card type

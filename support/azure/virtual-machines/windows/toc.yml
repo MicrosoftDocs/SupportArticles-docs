@@ -142,6 +142,8 @@
         href: azure-vm-nsi-not-starting.md
       - name: Cannot RDP into Azure VM because of a brute force attack
         href: cannot-rdp-azure-vm-brute-force.md
+      - name: The system administrator has restricted the types of logon
+        href: ../../../windows-server/remote/system-admin-restrict-types-logon.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
       - name: Troubleshoot a failed trust relationship in an Azure Windows VM
         href: troubleshoot-broken-secure-channel.md
       - name: Troubleshoot RDP error because DHCP is disabled

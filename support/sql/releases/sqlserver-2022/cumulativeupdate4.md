@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 4 for SQL Server 2022 (KB5026717)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 4 (KB5026717).
-ms.date: 07/26/2024
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5026717
 ms.reviewer: v-qianli2
 appliesto:
@@ -64,6 +64,10 @@ After you install this cumulative update, you may receive incorrect results from
 To work around this issue, you can either uninstall this cumulative update or enable trace flag (TF) 13166 and then run `DBCC FREEPROCCACHE`.
 
 This issue is fixed in [SQL Server 2022 CU5](cumulativeupdate5.md#2417020).
+
+### Issue three
+
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 
