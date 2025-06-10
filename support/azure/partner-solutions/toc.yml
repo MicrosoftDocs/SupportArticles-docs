@@ -1,6 +1,6 @@
 - name: Troubleshooting for Azure Native Integrations
   href: welcome-native-integrations.yml
-- name: Azure Native Integrations purchase errors
+- name: Marketplace purchase errors
   href: marketplace-purchases-errors.md
 - name: Azure Native New Relic Service
   items:
