@@ -12,7 +12,7 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 05/23/2025
+ms.date: 06/10/2025
 ms.author: genli
 ---
 # Troubleshoot Linux virtual machine performance issues with Performance Diagnostics (PerfInsights)
@@ -217,7 +217,7 @@ The following categories of rules are currently supported:
     | Debian                     | 9, 10, 11 [`*`]                                    |
     | SLES                       | 12 SP5 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP3 [`*`], 15 SP4 [`*`], 15 SP5 [`*`], 15 SP6 [`*`]                                     |
     | AlmaLinux                  | 8.4, 8.5                                               |
-    | Azure Linux               | 2.0                                                   |
+    | Azure Linux               | 2.0, 3.0                                                   |
 
 >[!Note]
 >[`*`] Please refer to [Known issues](#known-issues) section
