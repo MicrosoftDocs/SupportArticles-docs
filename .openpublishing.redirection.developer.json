@@ -6374,34 +6374,6 @@
     {
       "source_path": "support/sql/connect/check-mdac-version.md",
       "redirect_url": "/previous-versions/troubleshoot/sql/connect/check-mdac-version"
-    },
-    {
-      "source_path": "support/windows/win32/user32-kernel32-not-initialize.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows/win32/user-32-kernel-32-not-initialize"
-    },
-    {
-      "source_path": "support/windows/win32/application-using-message-filters-unresponsive-win10.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows/win32/application-using-message-filters-unresponsive-windows-10"
-    },
-    {
-      "source_path": "support/windows/win32/print-app-xps-document-writer.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows/win32/print-application-xps-document-writer"
-    },
-    {
-      "source_path": "support/windows/win32/mix-gdi-and-gdi-plus-drawing.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows/win32/interoperability-gdi-gdi-plus"
-    },
-    {
-      "source_path": "support/windows/win32/shell-functions-multithreaded-apartment.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows/win32/shell-functions-multithreaded-apartment"
-    },
-    {
-      "source_path": "support/windows/win32/geticmprofile-might-leak-one-or-more-handles-on-windows10.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows/win32/geticmprofile-might-leak-one-more-handles-windows-10"
-    },
-    {
-      "source_path": "support/windows/win32/east-asian-first-character-not-recognized.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows/win32/east-asian-first-character-not-recognized"
     }
   ]
 }
