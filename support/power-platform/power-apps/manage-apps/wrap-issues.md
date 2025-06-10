@@ -262,12 +262,29 @@ You need to add your access key to the Azure blob storage account in the Azure k
 
 3. To explore the results and troubleshoot sign-in errors, copy the correlation ID from the mobile screen showing the failed sign-in and follow the guide in [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors).
 
+## Issue 8 - Error Code: 5objp
+
+Reason for the above error code:The hash key or redirect URL used in the APK does not match the one registered in Azure AD, causing a mismatch error during authentication.
+
+Steps to Debug and Fix Redirect URI Issues in Android App Using Emulator:
+1.	Install Android Studio to set up an emulator on your system.
+2.	Launch the emulator and drag and drop the APK file onto it to install the app.
+3.	Open the app in the emulator, attempt to log in, and observe the error message.
+4.	The error screen will display the redirect URI the app is trying to use.
+5.	If the hash key in the URI contains encoded characters like %2, %3, etc., replace them with the correct characters (e.g., %2F becomes /) to decode the Signature Hash Key.
+6.	Copy the decoded Signature Hash Key.
+7.	Go to the Azure Portal → App Registrations → Select the relevant app.
+8.	Under Authentication, check the list of configured Redirect URIs.
+9.	If the displayed redirect URI is missing, add it by entering the Bundle ID and the Signature Hash Key, then save the changes.
+
 ## Other issues in wrap for Power Apps
 
 For all other issues, or if your issue persists after following these steps, see [Next steps](#next-steps) later in this article to report the issue through a support request. You need to provide a repro video, screenshots, or both, and a session ID that can be get in the following ways:
 
 - On the sign-in screen, go to the lower right corner to select the gear icon, and then select **Session Details**.
 - After you open the app, tap and hold on the screen, and then select **Session Details**.
+
+
 
 ## Next steps
 
