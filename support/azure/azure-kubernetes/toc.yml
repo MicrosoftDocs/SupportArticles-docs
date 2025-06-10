@@ -292,6 +292,11 @@
   - name: Troubleshoot pods and namespaces stuck in the Terminating state
     href: storage/pods-namespaces-terminating-state.md
 
+- name: Security
+  items:
+  - name: Troubleshoot seccomp profiles in AKS
+    href: security/troubleshoot-seccomp-profiles.md
+
 - name: Extensions, Policies and Add-Ons
   items:
   - name: Troubleshoot Azure Policy Add-on for AKS
@@ -382,6 +387,8 @@
       href: error-codes/vmextensionerror-vhdfilenotfound.md
     - name: VMExtensionError_ProvisioningTimeout error
       href: error-codes/vmextensionerror-provisioningtimeout.md
+  - name: AvailabilityZoneNotSupported error
+    href: error-codes/availabilityzonenotsupported-error.md
   - name: AksCapacityHeavyUsage error
     href: error-codes/akscapacityheavyusage-error.md
   - name: AKSOperationPreempted error

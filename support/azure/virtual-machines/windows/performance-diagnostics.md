@@ -10,7 +10,7 @@ tags: ''
 ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.topic: troubleshooting
-ms.date: 05/08/2025
+ms.date: 06/03/2025
 ms.custom: sap:VM Performance
 ms.reviewer: guywild, poharjan
 ms.author: anandh
@@ -45,33 +45,18 @@ This article explains how to use Performance Diagnostics and what the continuous
 
 ## Permissions required
 
-| Action                                   | Permissions required                                                                                                                                                                 |
-|:-----------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Run Performance Diagnostics              | The **Owner** role on the VM and an Azure role that includes the `Microsoft.Storage/storageAccounts/listkeys/action` permission on the storage account.                                  |
-| View Performance Diagnostics             | An Azure role that includes the `Microsoft.Storage/storageAccounts/listkeys/action` permission on the storage account or the **Storage Table Data Reader** role on the storage account. |
-| Download Performance Diagnostics reports | An Azure role that includes the **Storage Table Data Reader** and the **Storage Blob Data Reader** role on the storage account.           |
+| Action | Authentication type | Permissions required |
+|:-|:-|:-|
+| Run Performance Diagnostics | Storage Account Access Keys | The **Owner** role on the VM and an Azure role that includes the **Microsoft.Storage/storageAccounts/listkeys/action** permission on the storage account. |
+| Run Performance Diagnostics | Managed Identities (System-assigned and User-assigned) | The **Owner** role on the VM and an Azure role that includes the **Microsoft.Storage/storageAccounts/providers/roleAssignments/write** permission on the storage account. |
+| View Performance Diagnostics | Storage Account Access Keys | An Azure role that includes the **Microsoft.Storage/storageAccounts/listkeys/action** permission on the storage account or the **Storage Table Data Reader** role on the storage account. |
+| View Performance Diagnostics | Managed Identities (System-assigned and User-assigned) | An Azure role that includes the **Storage Table Data Reader** role on the storage account. |
+| Download Performance Diagnostics reports | All | An Azure role that includes the **Storage Table Data Reader** role and the **Storage Blob Data Reader** role on the storage account. |
+
 
 For detailed information about built-in roles for Azure Storage, refer to [Azure built-in roles for Storage](/azure/role-based-access-control/built-in-roles/storage).
 
 For more information about storage account settings, see [view and manage storage account and stored data](performance-diagnostics.md#view-and-manage-storage-account-and-stored-data).
-
-### Known issue
-
-Some users who previously ran Performance Diagnostics successfully encounter the following error when attempting to run it again:
-
-> 'Authorization failed for template resource '\<resource>' of type 'Microsoft.Storage/storageAccounts/providers/roleAssignments'. The client '\<client>' with object id '\<ID>' does not have permission to perform action 'Microsoft.Authorization/roleAssignments/write' at scope '\<scope>'.
-
-#### Cause
-
-A recent rollout has a bug that tries to grant the write permission to the storage account for the current user when initiating a run from the Azure portal. An Azure role that includes the `Microsoft.Storage/storageAccounts/listkeys/action` permission isn't enough to grant this permission, causing the run to fail.
-
-#### Status
-
-A fix is being deployed.
-
-#### Workaround
-
-If users still encounter this issue, grant the `Microsoft.Authorization/roleAssignments/write` permission to the storage account with the **Role Based Access Control Administrator** or **User Access Administrator** role. The latter role can grant higher permissions.
 
 ## Supported operating systems
 
@@ -163,6 +148,7 @@ Select one of the following tabs for detailed instructions.
     | **Enable continuous diagnostics** | Get continuous, actionable insights into high resource usage by having data collected every 5 seconds and updates uploaded every 5 minutes to address performance issues promptly. Store insights in your preferred storage account. The storage account retains insights based on the account retention policies that you can configure to [manage the data lifecycle effectively](/azure/storage/blobs/lifecycle-management-policy-configure). You can disable continuous diagnostics at any time. |
     | **Run on-demand diagnostics** | Get on-demand, actionable insights into high resource usage and various system configurations. Receive a downloadable report that provides comprehensive diagnostics data to address performance issues. Store insights and reports in your preferred storage account. The storage account retains insights that are based on the account retention policies that you can configure to [manage the data lifecycle effectively](/azure/storage/blobs/lifecycle-management-policy-configure). You can initiate on-demand diagnostics at any time by using the specific analysis type that you need:<br/><ul><li>**Performance analysis**<br/>Includes all checks in the **Quick analysis** scenario, and monitors high resource consumption. Use this version to troubleshoot general performance issues, such as high CPU, memory, and disk usage. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><br/><li>**Quick analysis**<br/>Checks for known issues, analyzes best practices, and collects diagnostics data. This analysis takes several minutes to run. Learn more for [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><br/><li>**Advanced performance analysis** [*Windows only*]<br/>Includes all checks in the **Performance analysis** scenario, and collects one or more of the traces, as listed in the following sections. Use this scenario to troubleshoot complex issues that require more traces. Running this scenario for longer periods increases the overall size of diagnostics output, depending on the size of the VM and the trace options that are selected. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li><br/><li>**Azure file analysis** [*Windows only*]<br/>Includes all checks in the **Performance analysis** scenario, and captures a network trace and Server Message Block (SMB) counters. Use this scenario to troubleshoot the performance of Azure files. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li></ul> |
     | **Storage account** | Optionally, if you want to use a single storage account to store the Performance Diagnostics results for multiple VMs, you can select a storage account from the drop-down menu. If you don't specify a storage account, Performance Diagnostics uses the default diagnostics storage account or creates a new storage account. |
+    |[Authentication method](#authentication-methods)|Performance Diagnostics supports three authentication methods to write performance diagnostics data to the storage account. They are system-assigned managed identity (default), user-assigned managed identity and storage account access keys. If system-assigned managed identity is selected but not enabled for the VM, Performance Diagnostics attempts to enable it. If the current user lacks the necessary permissions, this operation might fail.|
 
 5. Review the legal terms and privacy policy, and select the corresponding checkbox to acknowledge acceptance (*required*).
 
@@ -172,6 +158,30 @@ Select one of the following tabs for detailed instructions.
 6. Select **Apply** to apply the selected options and install the tool.
 
     A notification is displayed as Performance Diagnostics starts to install. After the installation is completed, a second notification indicates that the installation is successful. If the **Run on-demand diagnostics** option is selected, the selected performance analysis scenario is then run for the specified duration.
+
+### Authentication methods
+
+Performance Diagnostics supports [Managed Identities](/entra/identity/managed-identities-azure-resources/overview) and [Storage account access keys](/azure/storage/common/storage-account-keys-manage) as authentication methods to write performance diagnostics data to the storage account:
+
+> [!NOTE]
+> For optimal security, Microsoft recommends using Microsoft Entra ID with managed identities to authorize requests against blob, queue, and table data, whenever possible. Authorization with Microsoft Entra ID and managed identities provides superior security and ease of use over Shared Key authorization.
+
+- System-assigned managed identity
+
+    This is the default authentication method. If system-assigned managed identity is selected but not enabled for the VM, Performance Diagnostics attempts to enable it. If the current user lacks the necessary permissions, this operation might fail. Performance Diagnostics adds the **Storage Table Data Contributor** role and the **Storage Blob Data Contributor** role for the storage account, to the system-assigned managed identity. For more information, see [How to enable system-assigned managed identity on an existing VM](/entra/identity/managed-identities-azure-resources/how-to-configure-managed-identities#enable-system-assigned-managed-identity-on-an-existing-vm).
+
+- User-assigned managed identity
+
+    The user can select one from a list of user-assigned managed identities associated with the VM. Performance Diagnostics adds the **Storage Table Data Contributor** role and the **Storage Blob Data Contributor** role for the storage account, to the user-assigned managed identity. For more information, see [How to assign a user-assigned managed identity to an existing VM](/entra/identity/managed-identities-azure-resources/how-to-configure-managed-identities#assign-a-user-assigned-managed-identity-to-an-existing-vm).
+
+- Storage account access keys
+
+    The user can select storage account access keys. If **Allow storage account key access** is disabled for the storage account, the installation operation fails. For more information, see [Shared key authorization](/azure/storage/common/shared-key-authorization-prevent#disable-shared-key-authorization).
+
+To change the authentication method, uninstall Performance Diagnostics and reinstall it. 
+
+> [!NOTE]
+> Once the managed identities are linked to the VM, it might take a few minutes for them to be propagated and recognized by Performance Diagnostics. If the installation fails, wait a few minutes and try again.
 
 ## View insights and reports
 

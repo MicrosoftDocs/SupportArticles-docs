@@ -116,7 +116,7 @@ On each cluster node, enable Offline Files:
     3. Select **Add Features** in the right pane.
     4. Do one of the following, as appropriate for your Windows version:
          - For Windows Server 2016, visit [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience).
-         - For Windows Server 2102 and 2012 R2, choose **Desktop Experience** under **User Interfaces and Infrastructures** in the features list.
+         - For Windows Server 2012 and 2012 R2, choose **Desktop Experience** under **User Interfaces and Infrastructures** in the features list.
          - For Windows Server 2008 and 2008 R2, choose **Desktop Experience**.
     5. Select **Install** to install Desktop Experience.
     6. Restart the computer.

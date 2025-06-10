@@ -3,7 +3,7 @@ title: Troubleshoot dynamic groups
 description: This article helps you diagnose and resolve issues with dynamic groups.
 ms.date: 04/17/2025
 ms.service: entra-id
-ms.custom: sap:Groups, has-azure-ad-ps-ref
+ms.custom: sap:Groups, no-azure-ad-ps-ref
 ms.reviewer: mimart, v-weizhu, v-loeide, mbhargav, yuhko, barclayn
 ---
 # Troubleshoot dynamic groups
@@ -246,9 +246,7 @@ Before attempting to delete a group in Microsoft Entra ID, ensure you have [dele
 
 ### Delete a group<a id="21"></a>
 
-1. Groups can be deleted from the directory [using the Remove-AzureADGroup cmdlet in the Azure AD PowerShell module](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#delete-groups).
-
-   [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+1. Groups can be deleted from the directory [using the `Remove-MgGroup` cmdlet in the Microsoft Graph PowerShell](/powershell/module/microsoft.graph.groups/remove-mggroup).
 
 1. Before attempting to delete a group in Microsoft Entra ID, ensure you have [deleted all assigned licenses  to avoid errors](/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license).
 

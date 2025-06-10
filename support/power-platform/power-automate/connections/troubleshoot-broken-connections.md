@@ -5,9 +5,8 @@ ms.custom: sap:Connections
 ms.workload: connectors
 author: nravindra-msft
 ms.author: nravindra
-ms.reviewer: angieandrews
-ms.date: 01/23/2025
-
+ms.reviewer: angieandrews, rehodger
+ms.date: 06/04/2025
 ---
 # Troubleshoot broken connections in Microsoft Power Platform
 
@@ -61,6 +60,7 @@ In this situation, you might also receive one of the following error messages:
 > - Device is not in required device state: compliant. Conditional Access policy requires a compliant device, and the device is not compliant. The user must enroll their device with an approved MDM provider like Intune.
 > - Device used during the authentication is disabled.
 > - Application needs to enforce Intune protection policies.
+> - Error from token exchange. Permission denied due to missing connection ACL.
 
 ### Troubleshooting steps
 

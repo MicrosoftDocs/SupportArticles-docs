@@ -56,6 +56,8 @@
       - name: Authentication fails after Android app is published to Google Play Store
         href: app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
       - name: Cookies are disabled error in MSAL.Net XBAP application
+        href: app-integration/customize-authentication-session-expiration.md
+      - name: Customize Middleware authentication ticket
         href: app-integration/script-errors-running-msal-net-xbap-app.md
       - name: Enable MSAL4J logging in a Spring Boot web application
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
@@ -136,6 +138,8 @@
         href: app-integration/error-aadsts900439-usgclientnotsupportedonpublicendpoint.md
       - name: Error AADSTS50000 - issuing a token or an issue with our sign-in service
         href: app-integration/error-code-aadsts50000-issuing-token-sign-in-service.md
+      - name: Enable bundle consent for apps
+        href: app-integration/bundle-consent-application-registrations.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
         href: app-integration/troubleshoot-sign-in-saml-based-apps.md
       - name: Troubleshooting infinite redirection between OIDC app and Entra ID
@@ -291,14 +295,16 @@
      href: users-groups-entra-apis/authorization-requestdenied-403-error-add-user-group.md
    - name: 404 error when managing objects
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
+   - name: Change enumeration is not supported for requested tenant
+     href: users-groups-entra-apis/delta-query-not-supported-for-aad-b2c-tenant.md
    - name: Handling errors in Graph API requests with Invoke-RestMethod
      href: app-integration/graph-api-error-handling-invoke-restmethod.md
    - name: Only one user is returned when running List users API
      href: users-groups-entra-apis/only-one-user-returned-by-microsoft-graph-list-users-api.md
-   - name: The memberOf API returns null values for properties
-     href: users-groups-entra-apis/memberof-api-returns-null-properties.md
    - name: Troubleshoot Authorization RequestDenied error
      href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
+   - name: The memberOf API returns null values for properties
+     href: users-groups-entra-apis/memberof-api-returns-null-properties.md
    - name: Use managed identities to call Graph APIs in VB.Net and C#
      href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
    - name: Getting access denied errors (Authorization)
