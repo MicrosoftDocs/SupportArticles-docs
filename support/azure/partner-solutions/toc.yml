@@ -1,4 +1,4 @@
-- name: Welcome
+- name: Troubleshooting for Azure Native Integrations
   href: welcome-native-integrations.yml
 - name: Azure Native Integrations purchase errors
   href: marketplace-purchases-errors.md
