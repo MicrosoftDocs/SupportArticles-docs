@@ -186,9 +186,9 @@ If DNS still doesn't work correctly, follow these steps:
 
 If the query results indicate that you have a DNS issue, see the following articles for more assistance:
 
-- [Troubleshooting Domain Name System (DNS) issues](../networking/dns/troubleshoot/troubleshoot-dns-data-collection)
-- [Troubleshooting DNS clients](../networking/dns/troubleshoot/troubleshoot-dns-client.md)
-- [Troubleshooting DNS servers](../networking/dns/troubleshoot/troubleshoot-dns-server.md)
+- [Troubleshooting Domain Name System (DNS) issues](../networking/troubleshoot/troubleshoot-dns-data-collection)
+- [Troubleshooting DNS clients](../networking/troubleshoot/troubleshoot-dns-client.md)
+- [Troubleshooting DNS servers](../networking/troubleshoot/troubleshoot-dns-server.md)
 
 If you resolve the DNS issue but the Kerberos issue remains, continue troubleshooting the Kerberos issue from the next section of this article.
 
@@ -210,7 +210,7 @@ w32tm /resync /computer:<Target> /rediscover
 > [NOTE!]  
 > In this command, \<Target> represents the computer that you are configuring. The `/rediscover` option instructs the computer to check the network for new or updated time sources.
 
-For more information about the options that are available for the `w32tm` command, see [Windows Time service tools and settings: Command-line parameters for W32Time](../networking/windows-time-service/windows-time-service-tools-and-settings.md#command-line-parameters-for-w32time).
+For more information about the options that are available for the `w32tm` command, see [Windows Time service tools and settings: Command-line parameters for W32Time](/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings#command-line-parameters-for-w32time).
 
 If you resynchronize clocks, try to authenticate again.
 
@@ -324,7 +324,7 @@ Service issues typically involve the SPN and the service account. For example, t
 
 - [Kerberos generates KDC_ERR_S_PRINCIPAL_UNKNOWN or KDC_ERR_PRINCIPAL_NOT_UNIQUE error](kerberos-error-kdc-err-s-principal-unknown-or-not-unique.md).
 
-- [Service Logons Fail Due to Incorrectly Set SPNs](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)).
+- [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)).
 
 - [The kerberos client received a KRB_AP_ERR_MODIFIED error from the server](kerberos-client-krb-ap-err-modified-error.md).
 
@@ -351,7 +351,7 @@ Kerberos supports three types of delegation:
 >
 >   Constrained delegation and RBCD are different configurations, and they are mutually exclusive. When a front-end service requests a ticket to a back-end service, the KDC first checks the front-end service for constrained delegation. If constrained delegation is not configured for the front-end service, the KDC checks the back-end service for resource-based constrained delegation. Because of this sequence, constrained delegation takes precedence over resource-based delegation.
 >
-> - By default, Microsoft Edge does not support unconstrained delegation. If you're using unconstrained delegation, see [Kerberos unconstrained double-hop authentication with Microsoft Edge (Chromium)](https://learn.microsoft.com/troubleshoot/developer/webapps/iis/www-authentication-authorization/kerberos-double-hop-authentication-edge-chromium) for more information about the configuration you need.
+> - By default, Microsoft Edge does not support unconstrained delegation. If you're using unconstrained delegation, see [Kerberos unconstrained double-hop authentication with Microsoft Edge (Chromium)](/troubleshoot/developer/webapps/iis/www-authentication-authorization/kerberos-double-hop-authentication-edge-chromium) for more information about the configuration you need.
 >
 > - Unconstrained delegation is not recommended because it doesn't restrict which services the authenticated account can interact with.
 
