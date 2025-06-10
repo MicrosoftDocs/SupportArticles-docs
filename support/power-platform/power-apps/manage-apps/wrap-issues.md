@@ -277,6 +277,16 @@ Steps to Debug and Fix Redirect URI Issues in Android App Using Emulator:
 8.	Under Authentication, check the list of configured Redirect URIs.
 9.	If the displayed redirect URI is missing, add it by entering the Bundle ID and the Signature Hash Key, then save the changes.
 
+
+## Issue 9 - Error code: 9n155
+This issue occurs when the app registration is not configured to support multi-tenant accounts. Update the app registration to allow multiple organizations (multi-tenant).
+
+Steps to Fix:
+1. Go to Azure Portal → App Registrations → Select the relevant app.
+2. Navigate to Overview → Supported account types -> it should be "Multiple Organization" as an input
+3. If the current setting is not "Accounts in any organizational directory (Any Azure AD directory)", click to edit it.
+4. Update the setting to Multiple organizations (multi-tenant) and save the changes.
+
 ## Other issues in wrap for Power Apps
 
 For all other issues, or if your issue persists after following these steps, see [Next steps](#next-steps) later in this article to report the issue through a support request. You need to provide a repro video, screenshots, or both, and a session ID that can be get in the following ways:
