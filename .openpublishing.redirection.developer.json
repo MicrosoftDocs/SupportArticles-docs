@@ -6374,6 +6374,14 @@
     {
       "source_path": "support/sql/connect/check-mdac-version.md",
       "redirect_url": "/previous-versions/troubleshoot/sql/connect/check-mdac-version"
+    },
+    {
+      "source_path": "support/sql/database-engine/replication/apply-hotfix-sql-replication-topology.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/replication/apply-hotfix-sql-replication-topology"
+    },
+    {
+      "source_path": "support/sql/database-engine/linked-servers/set-up-troubleshoot-linked-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/linked-servers/set-up-troubleshoot-linked-server"
     }
   ]
 }
