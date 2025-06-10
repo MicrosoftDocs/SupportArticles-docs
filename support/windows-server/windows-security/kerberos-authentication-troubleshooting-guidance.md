@@ -47,7 +47,7 @@ Some events or errors indicate specific issues. If any of the computers recorded
 | Event ID 14 | ["Unsupported etype" error when accessing a resource in a trusted domain](unsupported-etype-error-accessing-trusted-domain.md) |
 | Event ID 16 or Event ID 27 | [KDC event ID 16 or 27 is logged if DES for Kerberos is disabled](kdc-event-16-27-des-encryption-disabled.md)<br/>[Event ID 27 KDC Errors on Windows Server 2003 Domain Controllers](event-id-27-kdc-errors.md) |
 | Error 1069 | [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)) |
-| Event ID 5719, Error 1311, or Error 1355 | [Event ID 5719, Error 1311, or Error 1355 - Domain controller or domain not found](troubleshoot-kerberos-dc-domain-not-found-event-id-5719.md) |
+| Event ID 5719, Error 1311, or Error 1355 | [Event ID 5719, Error 1311, or Error 1355 - Domain controller or domain not found](troubleshoot-kerberos-domain-not-found-event-id-5719.md) |
 
 If you identify an issue that you know how to fix, fix that issue and then try to authenticate again before you continue.
 
@@ -114,7 +114,7 @@ If the client or target server can't contact a domain controller, you see a mess
 
 > The specified domain either does not exist or could not be contacted.
 
-If you see this message, see [Event ID 5719, Error 1311, or Error 1355 - Domain controller or domain not found](troubleshoot-kerberos-dc-domain-not-found-event-id-5719.md) for more troubleshooting information. Otherwise, continue through this checklist.
+If you see this message, see [Event ID 5719, Error 1311, or Error 1355 - Domain controller or domain not found](troubleshoot-kerberos-domain-not-found-event-id-5719.md) for more troubleshooting information. Otherwise, continue through this checklist.
 
 #### f. Check that DNS is working between the client and the target server
 
