@@ -187,8 +187,8 @@ If DNS still doesn't work correctly, follow these steps:
 If the query results indicate that you have a DNS issue, see the following articles for more assistance:
 
 - [Troubleshooting Domain Name System (DNS) issues](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-data-collection#data-collection)
-- [Troubleshooting DNS clients](/windows-server/networking/troubleshoot/troubleshoot-dns-client)
-- [Troubleshooting DNS servers](/windows-server/networking/troubleshoot/troubleshoot-dns-server)
+- [Troubleshooting DNS clients](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-client)
+- [Troubleshooting DNS servers](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server)
 
 If you resolve the DNS issue but the Kerberos issue remains, continue troubleshooting the Kerberos issue from the next section of this article.
 
@@ -378,4 +378,4 @@ The configuration details for delegation differ depending on the type of delegat
 
 ## Using a log analysis test scenario to troubleshoot Kerberos authentication
 
-For advanced Kerberos testing and troubleshooting, see [Use a log analysis test scenario to troubleshoot Kerberos authentication](kerberos-auth-log-analysis-test-scenario.md).
+For advanced Kerberos testing and troubleshooting, see [Use a log analysis test scenario to troubleshoot Kerberos authentication](kerberos-authentication-log-analysis-test-scenario.md).

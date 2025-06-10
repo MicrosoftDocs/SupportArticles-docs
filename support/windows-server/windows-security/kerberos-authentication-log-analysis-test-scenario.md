@@ -29,7 +29,7 @@ This article uses a hypothetical client and server deployment to demonstrate tro
     (Installed from [Microsoft Network Monitor](https://www.microsoft.com/download/details.aspx?id=4865)).
   - Internet options configuration: all `contoso.com` sites belong to the local intranet zone.
 
-    :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/internet-options-local-intranet-zone.png" alt-text="Screenshot of Internet Properties, which shows all `contoso.com` websites are a part of the local intranet zone.":::
+    :::image type="content" source="media/kerberos-authentication-log-analysis-test-scenario/internet-options-local-intranet-zone.png" alt-text="Screenshot of Internet Properties, which shows all `contoso.com` websites are a part of the local intranet zone.":::
 
 - Using the client computer, John connects to a target server that's configured as follows:
 
@@ -42,11 +42,11 @@ This article uses a hypothetical client and server deployment to demonstrate tro
 
     - **Windows Authentication** is **Enabled**.
 
-      :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/windows-authentication-enabled.png" alt-text="Screenshot of the Internet Information Services Manager window that shows that Windows Authentication is Enabled.":::
+      :::image type="content" source="media/kerberos-authentication-log-analysis-test-scenario/windows-authentication-enabled.png" alt-text="Screenshot of the Internet Information Services Manager window that shows that Windows Authentication is Enabled.":::
 
     - The list of enabled authentication providers includes Negotiate, as shown in the following screenshot:
 
-      :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/enabled-providers-negotiate.png" alt-text="Screenshot of the Providers window showing the Enabled Providers includes Negotiate.":::
+      :::image type="content" source="media/kerberos-authentication-log-analysis-test-scenario/enabled-providers-negotiate.png" alt-text="Screenshot of the Providers window showing the Enabled Providers includes Negotiate.":::
 
   - Logon auditing configuration: Logon Success auditing and Logon Failure auditing are both enabled.
 
@@ -76,7 +76,7 @@ This article uses a hypothetical client and server deployment to demonstrate tro
 
 The following diagram shows the sequence of Kerberos request and response messages and the paths of those messages in the environment that's described in the previous section.
 
-:::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/authentication-flow.png" alt-text="Screenshot of an authentication flow.":::
+:::image type="content" source="media/kerberos-authentication-log-analysis-test-scenario/authentication-flow.png" alt-text="Screenshot of an authentication flow.":::
 
 The process starts when user John, signed in to the client computer `Client1.contoso.com`, opens a Microsoft Edge browser and connects to `IISServer.contoso.com`.
 
