@@ -36,7 +36,7 @@ This section demonstrates how OAuth2 application validates an token issued from 
 
 ## For SAML resource applications
 
-For SAML apps like `SharepointSAMLTest`, Microsoft Entra ID uses the app-specific certificate to sign tokens. To retrieve the correct public key, follow these steps:
+For SAML, Microsoft Entra ID uses the app-specific certificate to sign tokens. To retrieve the correct public key, follow these steps:
 
 1. Use the API client to acquire an access token for the SAML app.
 2. Use the following keys discovery endpoint, replacing `<tenant>` and `<SAML App ID>` with your values. 
