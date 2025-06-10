@@ -3,7 +3,7 @@ title: Can't Sign in to Teams for Mac after macOS Upgrade
 description: Provides information about an issue with signing in to Teams after upgrading to macOS 15.3.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 ms.custom: 
   - sap:Teams Clients\Mac Desktop
   - CI 3757

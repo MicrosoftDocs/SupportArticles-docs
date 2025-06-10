@@ -1,7 +1,7 @@
 ---
 title: Prevent Antivirus and DLP Tools from Blocking or Crashing Microsoft Teams
 manager: dcscontentpm
-ms.date: 03/12/2025
+ms.date: 06/06/2025
 audience: Admin
 ms.topic: troubleshooting
 search.appverid:
@@ -31,7 +31,7 @@ To prevent issues from occurring when you start or use the new Teams app, add al
 - `msedgewebview2.exe`
 - `ms-teams.exe`
 - `ms-teamsupdate.exe`
-- `ms-teams_autostarter.exe`
+- `msteams_autostarter.exe`
 
 Alternatively, you can add the processes to the allowlist for programs in your DLP application. The method to accomplish this addition varies. For specific instructions, contact your DLP application manufacturer.
 
