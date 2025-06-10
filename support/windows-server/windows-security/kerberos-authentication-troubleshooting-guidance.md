@@ -186,9 +186,9 @@ If DNS still doesn't work correctly, follow these steps:
 
 If the query results indicate that you have a DNS issue, see the following articles for more assistance:
 
-- [Troubleshooting Domain Name System (DNS) issues](/windows-server/networking/troubleshoot/troubleshoot-dns-data-collection)
-- [Troubleshooting DNS clients](/windows-server/networking/troubleshoot/troubleshoot-dns-client.md)
-- [Troubleshooting DNS servers](/windows-server/networking/troubleshoot/troubleshoot-dns-server.md)
+- [Troubleshooting Domain Name System (DNS) issues](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-data-collection#data-collection)
+- [Troubleshooting DNS clients](/windows-server/networking/troubleshoot/troubleshoot-dns-client)
+- [Troubleshooting DNS servers](/windows-server/networking/troubleshoot/troubleshoot-dns-server)
 
 If you resolve the DNS issue but the Kerberos issue remains, continue troubleshooting the Kerberos issue from the next section of this article.
 
@@ -330,7 +330,7 @@ Service issues typically involve the SPN and the service account. For example, t
 
 ### Single sign-on (SSO) issues
 
-Single sign-on is an authentication method that allows users to sign in using one set of credentials to multiple systems or applications within a single intranet. To work correctly, both the target service (or the front-end component of the target service) and the client must have the correct settings. For information about how to troubleshoot these settings, see [Troubleshooting Kerberos single sign-on issues](kerberos-sso-issues.md).
+Single sign-on is an authentication method that allows users to sign in using one set of credentials to multiple systems or applications within a single intranet. To work correctly, both the target service (or the front-end component of the target service) and the client must have the correct settings. For information about how to troubleshoot these settings, see [Troubleshooting Kerberos single sign-on issues](troubleshoot-kerberos-sso-issues.md).
 
 ### Delegation issues
 
