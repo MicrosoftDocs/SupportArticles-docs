@@ -31,12 +31,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Apps using message filters may not respond in Windows 10
-            url: application-using-message-filters-unresponsive-win10.md
           - text: Three- or four-finger touch interactions doesn't work in Windows 11
             url: finger3or4-touch-interaction-no-longer-works.md
-          - text: Call Shell APIs from a multithreaded apartment
-            url: shell-functions-multithreaded-apartment.md
 
   - title: Distributed transactions
     linkLists:
@@ -57,8 +53,6 @@ landingContent:
         links:
           - text: Converting PDF to bitmap causes partial data loss in the image
             url: converting-pdf-file-to-bitmap-image.md
-          - text: Can't print to XPS Document Writer
-            url: print-app-xps-document-writer.md
 
   - title: Security development
     linkLists:
