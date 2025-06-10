@@ -71,6 +71,8 @@
         href: app-integration/package-inspector-msal-android-native.md
       - name: Repeated login prompts in iOS MSAL implementation
         href: app-integration/repeat-login-prompts-in-msal-ios-app.md
+      - name: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
+        href: app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
       - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
         href: app-integration/serilog-protected-web-api-authentication-authorization-errors.md
       - name: WIF10201 No valid key mapping found
@@ -156,8 +158,6 @@
         href: app-integration/application-delegated-permission-access-tokens-identity-platform.md
       - name: Troubleshoot consent issues
         href: app-integration/troubleshoot-consent-issues.md
-  - name: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
-    href: app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
 - name: Use NetLog as an alternative to Fiddler and HAR captures
   href: app-integration/use-netlog-capture-network-traffic.md
 - name: Business To Consumer (B2C) Tenants
