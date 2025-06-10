@@ -2,9 +2,9 @@
 title: Troubleshoot Azure network connections
 description: Troubleshoot Azure network connections in Windows 365.
 manager: dcscontentpm
-ms.date: 01/20/2025
+ms.date: 06/10/2025
 ms.topic: troubleshooting
-ms.reviewer: ericor, erikje
+ms.reviewer: ericor, erikje, joeno
 ms.custom:
 - pcy:Azure Network Connection\VNET Setup and Config Issues
 - sap:WinComm User Experience
@@ -41,13 +41,13 @@ Successful communication with a domain controller within your organization is es
 > [!NOTE]
 > This section only applies to hybrid environments.
 
-### WinRM requirements for ANC
+### Windows Remote Management (WinRM) requirements for ANC
 
-WinRM (Windows Remote Management) is required to complete ANC setup.
+WinRM is required to complete an ANC setup.
 
-To ensure successful provisioning, please verify that WinRM is not restricted to specific IP Addresses, whether through Group Policy Object (GPO) or Microsoft Intune Configuration Service Provider (CSP), for groups used in your provisioning policies. WinRM should be configured to allow network requests from any IP address.
+To ensure successful provisioning, verify that WinRM isn't restricted to specific IP addresses, whether through Group Policy Object (GPO) or Microsoft Intune configuration service provider (CSP), for groups used in your provisioning policies. WinRM should be configured to allow network requests from any IP address.
 
-Learn More: [GPO Configuration](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management) [Intune CSP Documentation](/windows/client-management/mdm/policy-csp-remotemanagement)
+For more information, see [GPO configurations](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management) or [Intune CSP](/windows/client-management/mdm/policy-csp-remotemanagement).
 
 ### ANC Endpoint Access
 
