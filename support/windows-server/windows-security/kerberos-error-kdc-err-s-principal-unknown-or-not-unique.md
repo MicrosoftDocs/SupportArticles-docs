@@ -71,7 +71,7 @@ These procedures differ slightly depending on whether the service uses a custom 
    > - In this command, \<SPN> represents the SPN that you're searching for.
    > - Searching for duplicates, especially forest-wide, can take a long period of time and a large amount of memory.
 
-For more information about the `setspn` command and the available options, see [setspn](https://learn.microsoft.com/windows-server/administration/windows-commands/setspn).
+For more information about the `setspn` command and the available options, see [setspn](/windows-server/administration/windows-commands/setspn).
 
 ## Reconfigure the SPN as needed
 
@@ -85,7 +85,7 @@ You might see any (or more than one) of the following issues:
 | The custom account doesn't have the SPN. | The computer account should have the SPN, but it doesn't.<sup>1</sup> |
 | The custom account has an incorrect SPN, or an SPN that doesn't match the SPN that the client requested.<sup>2</sup> | The computer account has an incorrect SPN, or an SPN that doesn't match the SPN that the client requested.<sup>2</sup> |
 
-<sup>1</sup> For a list of the services that can use the HOST SPN of the computer account, see [setspn](https://learn.microsoft.com/windows-server/administration/windows-commands/setspn). If your service isn't one of these common services, you have to configure an SPN for the service on the computer account.  
+<sup>1</sup> For a list of the services that can use the HOST SPN of the computer account, see [setspn](/windows-server/administration/windows-commands/setspn). If your service isn't one of these common services, you have to configure an SPN for the service on the computer account.  
 
 <sup>2</sup> For the client request information, see the network trace data.
 

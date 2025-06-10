@@ -186,9 +186,9 @@ If DNS still doesn't work correctly, follow these steps:
 
 If the query results indicate that you have a DNS issue, see the following articles for more assistance:
 
-- [Troubleshooting Domain Name System (DNS) issues](../networking/troubleshoot/troubleshoot-dns-data-collection)
-- [Troubleshooting DNS clients](../networking/troubleshoot/troubleshoot-dns-client.md)
-- [Troubleshooting DNS servers](../networking/troubleshoot/troubleshoot-dns-server.md)
+- [Troubleshooting Domain Name System (DNS) issues](/windows-server/networking/troubleshoot/troubleshoot-dns-data-collection)
+- [Troubleshooting DNS clients](/windows-server/networking/troubleshoot/troubleshoot-dns-client.md)
+- [Troubleshooting DNS servers](/windows-server/networking/troubleshoot/troubleshoot-dns-server.md)
 
 If you resolve the DNS issue but the Kerberos issue remains, continue troubleshooting the Kerberos issue from the next section of this article.
 
@@ -210,7 +210,7 @@ w32tm /resync /computer:<Target> /rediscover
 > [NOTE!]  
 > In this command, \<Target> represents the computer that you are configuring. The `/rediscover` option instructs the computer to check the network for new or updated time sources.
 
-For more information about the options that are available for the `w32tm` command, see [Windows Time service tools and settings: Command-line parameters for W32Time](/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings#command-line-parameters-for-w32time).
+For more information about the options that are available for the `w32tm` command, see [Windows Time service tools and settings: Command-line parameters for W32Time](/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config#command-line-parameters-for-w32time).
 
 If you resynchronize clocks, try to authenticate again.
 

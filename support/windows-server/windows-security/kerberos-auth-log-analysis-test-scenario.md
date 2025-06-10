@@ -93,7 +93,7 @@ The process starts when user John, signed in to the client computer `Client1.con
 
 **Step 3** occurs on the client computer, and includes the following steps:
 
-1. The client computer performs a [TCP three-way handshake](./networking/three-way-handshake-via-tcpip.md) with `IISServer.contoso.com`, using TCP port 80.
+1. The client computer performs a [TCP three-way handshake](../networking/three-way-handshake-via-tcpip.md) with `IISServer.contoso.com`, using TCP port 80.
 1. The client computer sends an anonymous HTTP request to `IISServer.contoso.com`.
 
 **Step 4** occurs on the target server, and includes the following steps:

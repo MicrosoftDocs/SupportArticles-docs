@@ -81,7 +81,7 @@ This type of error usually results from one of the following causes:
 
 1. If you made any changes, run `nslookup <TargetName>` again.
 
-   If `nslookup` still doesn't correctly resolve the name, there might be a larger DNS problem. Contact your DNS administrator, or to troubleshoot this issue further yourself, see [Troubleshooting DNS servers](https://learn.microsoft.com/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server).
+   If `nslookup` still doesn't correctly resolve the name, there might be a larger DNS problem. Contact your DNS administrator, or to troubleshoot this issue further yourself, see [Troubleshooting DNS servers](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server).
 
 1. If `nslookup` now resolves the name correctly, run `nltest` again. Depending on the result, do one of the following:
 

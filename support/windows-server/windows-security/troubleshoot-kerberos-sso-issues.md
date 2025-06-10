@@ -43,7 +43,7 @@ If SSO still doesn't work correctly, continue to the next procedure.
 
 When you collected trace data, did you find a service ticket?
 
-If the client computer got a ticket to the target service when you authenticated, then the problem might relate to the way credentials are delegated. For information about troubleshooting delegation issues, see [Kerberos authentication troubleshooting guidance: Troubleshoot delegation issues](kerberos-authentication-troubleshooting-guidance.md#troubleshoot-delegation-issues).
+If the client computer got a ticket to the target service when you authenticated, then the problem might relate to the way credentials are delegated. For information about troubleshooting delegation issues, see [Kerberos authentication troubleshooting guidance: Troubleshoot delegation issues](kerberos-authentication-troubleshooting-guidance.md#delegation-issues).
 
 If the client computer doesn't have a service ticket, continue to the next procedure.
 
@@ -53,7 +53,7 @@ Different types of clients use different criteria to identify intranet sites, an
 
 - **Clients that aren't browser-based**. Review the documentation for the client application or contact the application's support provider. Make sure that the client is configured correctly to support SSO authentication.
 
-- **Clients that are based on Internet Explorer (or similar older browser)**. Older browsers, including Internet Explorer (all versions) and Microsoft Edge versions older than version 87 use different default configurations than the newer browsers. For more information about how to troubleshoot Kerberos issues when using Internet Explorer, see [Troubleshoot Kerberos failures in Internet Explorer](https://learn.microsoft.com/troubleshoot/developer/webapps/iis/www-authentication-authorization/troubleshoot-kerberos-failures-ie).
+- **Clients that are based on Internet Explorer (or similar older browser)**. Older browsers, including Internet Explorer (all versions) and Microsoft Edge versions older than version 87 use different default configurations than the newer browsers. For more information about how to troubleshoot Kerberos issues when using Internet Explorer, see [Troubleshoot Kerberos failures in Internet Explorer](/troubleshoot/developer/webapps/iis/www-authentication-authorization/troubleshoot-kerberos-failures-ie).
 
 Unlike older browsers, Microsoft Edge version 87 (and later versions) only uses two internet zones: **Internet** and **Local intranet**. Microsoft Edge ignores other zone settings such as **Restricted sites**. Additionally, Microsoft Edge doesn't always use the client computer's zone settings to identify intranet sites. Microsoft Edge considers other factors, such as proxy configurations. For these reasons, Group Policy provides the most consistent method to manage Microsoft Edge configuration.
 
@@ -67,10 +67,10 @@ The **AuthServerAllowlist** Group Policy setting (**Configure list of allowed au
 
 For more information, see the following articles:
 
-- [AuthServerAllowList](https://learn.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist)
-- [Per-site configuration by policy](https://learn.microsoft.com/deployedge/per-site-configuration-by-policy#windows-security-zones)
+- [AuthServerAllowList](/deployedge/microsoft-edge-policies#authserverallowlist)
+- [Per-site configuration by policy](/deployedge/per-site-configuration-by-policy#windows-security-zones)
 
-For information about how to obtain and work with the Microsoft Edge group policy administrative templates, see [Configure Microsoft Edge policy settings on Windows devices](https://learn.microsoft.com/deployedge/configure-microsoft-edge).
+For information about how to obtain and work with the Microsoft Edge group policy administrative templates, see [Configure Microsoft Edge policy settings on Windows devices](/deployedge/configure-microsoft-edge).
 
 If you make any changes to the Group Policy settings, make sure that the changes propagate out to the client computers and users. Restart the client browser that you're troubleshooting, clear the browser cache, and then try to authenticate again.
 
