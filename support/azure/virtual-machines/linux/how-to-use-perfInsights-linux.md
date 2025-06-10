@@ -37,11 +37,11 @@ You can use Performance Diagnostics to troubleshoot various scenarios. The follo
 
 Continuous Performance diagnostics lets you identify high resource usage by monitoring your VM regularly for: 
 
-- High CPU usage: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods. 
+- High CPU usage: Detects high CPU usage periods and shows the top CPU usage consumers during those periods. 
 
-- High memory usage: Detects high memory usage periods, and shows the top memory usage consumers during those periods. 
+- High memory usage: Detects high memory usage periods and shows the top memory usage consumers during those periods. 
 
-- High disk usage: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
+- High disk usage: Detects high disk usage periods on physical disks and shows the top disk usage consumers during those periods.
 
 PerfInsights can collect and analyze several kinds of information. The following sections cover common scenarios.
 
