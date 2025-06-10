@@ -265,7 +265,7 @@ To run the PerfInsights tool, follow these steps:
     sudo python perfinsights.py
     ```
 
-    :::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-command-line.png" alt-text="Screenshot of PerfInsights Linux command-line output.":::
+    :::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-command-line.png" alt-text="Screenshot of PerfInsights Linux command-line output." lightbox="media/how-to-use-perfinsights-linux/perfinsights-linux-command-line.png":::
 
     The basic syntax for running PerfInsights scenarios is:
 
