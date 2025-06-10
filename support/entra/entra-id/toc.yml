@@ -299,6 +299,8 @@
      href: users-groups-entra-apis/delta-query-not-supported-for-aad-b2c-tenant.md
    - name: Handling errors in Graph API requests with Invoke-RestMethod
      href: app-integration/graph-api-error-handling-invoke-restmethod.md
+   - name: Only one user is returned when running List users API
+     href: users-groups-entra-apis/only-one-user-returned-by-microsoft-graph-list-users-api.md
    - name: Troubleshoot Authorization RequestDenied error
      href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
    - name: The memberOf API returns null values for properties
