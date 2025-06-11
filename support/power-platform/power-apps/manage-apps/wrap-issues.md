@@ -25,13 +25,12 @@ All images in your wrap project must be in PNG format. If you use another format
 
 ### Step 2: Check Key Vault Setup
 
-Make sure you have created an Azure service principal and assigned the correct role. See steps 1 and 2 in [Create native mobile apps for iOS and Android using wrap](/power-apps/maker/common/wrap/wrap-how-to).
+Make sure you have created an Azure service principal and assigned the correct role.Learn more: [Create Azure key vault for wrap in Power Apps](/power-apps/maker/common/wrap/create-key-vault-for-code-signing).
 
-Your key vault should contain:
+Your key vault must contain:
 - For iOS: two tags, one certificate, one secret
 - For Android: one tag, one certificate
 
-Learn more: [Create Azure key vault for wrap in Power Apps](/power-apps/maker/common/wrap/create-key-vault-for-code-signing).
 
 ## Issue 2: Wrap Button is Disabled
 
@@ -39,8 +38,8 @@ You can only wrap apps if you have edit permissions. Confirm you have the correc
 
 ## Issue 3: Unable to Save Project or Trigger Build
 
-- Update to the latest version of the wrap solution.
-- Make sure there are no UI validation errors blocking the **Save** or **Build** actions.
+- Update to the latest version of the wrap solution and try again
+
 
 ## Issue 4: Unable to Install Wrapped Mobile App
 
@@ -54,14 +53,13 @@ Also, verify your device meets these [minimum requirements](/power-apps/maker/co
 ## Issue 5: Cannot Sign In or See Data in Wrapped App
 
 If you have trouble signing in or accessing data, check the following:
-- Microsoft Entra app is set up properly.
-- All required API permissions are configured. For more info and a screenshot, see below and [Configure API Permissions](/power-apps/maker/common/wrap/how-to):
+- All required API permissions are configured. Make sure admin permissions are granted.
 
   :::image type="content" source="media/wrap-issues/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/wrap-issues/api-permissions-2.png":::
 
-- The `Add-AdminAllowedThirdPartyApps` script ran successfully. Details: [Allow registered apps in your environment](/power-apps/maker/common/wrap/how-to).
+- The `Add-AdminAllowedThirdPartyApps` script ran successfully. Details: [Allow registered apps in your environment](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 - The Microsoft Entra app type is **Multitenant**. Under **Authentication**, the supported account type should be **Accounts in any organizational directory (Any Microsoft Entra ID tenant)**.
-- Proper redirect URIs are set for iOS and Android. For Android, confirm the hash is correct. See [Configure platform settings and redirect URIs](/power-apps/maker/common/wrap/how-to).
+- Proper redirect URIs are set for iOS and Android. For Android, confirm the hash is correct. See [Configure platform settings and redirect URIs](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
 ## Issue 6: Azure Key Vault Errors in Wrap for Power Apps
 
@@ -105,7 +103,7 @@ You may encounter these error codes in the wrap wizard:
 
       :::image type="content" source="media/wrap-issues/add-members.png" alt-text="Screenshot that shows the Members tab on the top menu." lightbox="media/wrap-issues/add-members.png":::
 
-   3. Search for **Wrap KeyVault Access App**.
+   3. Search for **Your AppName**.
 
       :::image type="content" source="media/wrap-issues/select-members-to-add-role.png" alt-text="Screenshot that shows how to search for Wrap KeyVault Access App." lightbox="media/wrap-issues/select-members-to-add-role.png":::
 
