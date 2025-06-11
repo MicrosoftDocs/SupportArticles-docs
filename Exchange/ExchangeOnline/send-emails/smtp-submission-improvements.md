@@ -44,7 +44,7 @@ Depending on the application or device that sends email messages, you may experi
 
 The service has various limits to prevent abuse and to ensure fair use. An additional limit is being added. Under the new limit, up to three concurrent connections are allowed to send email messages at the same time. If an application tries to send more than three messages at the same time by using multiple connections, each connection will receive the following error message:
 
-> 432 4.3.2 STOREDRV.ClientSubmit; sender thread limit exceeded
+> 432 4.3.2 Concurrent connections limit exceeded.
 
 Additional throttling limits for the SMTP Authentication protocol are:
 
