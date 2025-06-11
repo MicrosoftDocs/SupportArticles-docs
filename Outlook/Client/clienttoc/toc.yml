@@ -219,8 +219,6 @@
           href: ../installation/disablepst-and-pstdisablegrow-policies-are-ignored.md
         - name: Install Calendar Printing Assistant fails
           href: ../installation/installing-calendar-printing-assistant-fails.md
-        - name: Map classic Outlook policies to new Outlook
-          href: ../installation/map-classic-outlook-policies-to-new-outlook.md
         - name: Resolve installation issues
           href: ../installation/resolve-installation-issues.md
         - name: Upgrade to Office 2016 fails
