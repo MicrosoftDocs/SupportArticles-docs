@@ -2906,8 +2906,6 @@ items:
       href: ./windows-security/authentication-fails-non-windows-ntlm-kerberos-server.md
     - name: Constrained delegation for CIFS fails with ACCESS_DENIED
       href: ./windows-security/constrained-delegation-access-denied.md
-    - name: Constrained delegation issues
-      href: ./windows-security/troubleshoot-kerberos-constrained-delegation-issues.md
     - name: Event ID 27 KDC error on domain controllers
       href: ./windows-security/event-id-27-kdc-errors.md
     - name: Event ID 5719, Error 1311, or Error 1355 - Domain controller or domain not found
@@ -2934,20 +2932,22 @@ items:
       href: ./windows-security/logging-on-user-account-fails.md
     - name: Registry keys about Kerberos protocol and KDC
       href: ./windows-security/kerberos-protocol-registry-kdc-configuration-keys.md
-    - name: 'Resource-based constrained delegation issues'
-      href: ./windows-security/troubleshoot-kerberos-rbcd-issues.md
     - name: Resource SID compression causes authorization problems
       href: ./windows-security/authorizaiton-issue-device-not-support-resource-sid-compression.md
-    - name: SSO issues
-      href: ./windows-security/troubleshoot-kerberos-sso-issues.md
     - name: SSO with pre-logon fails during user logon
       href: ./windows-security/sso-pre-logon-fails-during-user-logon.md
     - name: TGS requests for krbtgt account fail
       href: ./windows-security/tgs-request-for-krbtgt-account-fails.md
     - name: The Fingerprint Registration Wizard doesn't run
       href: ./windows-security/fingerprint-registration-wizard-not-run-install-fingerprint-reader.md
-    - name: Use a log analysis test scenario
+    - name: Troubleshoot constrained delegation issues
+      href: ./windows-security/troubleshoot-kerberos-constrained-delegation-issues.md
+    - name: Troubleshoot Kerberos using a log analysis test scenario
       href: ./windows-security/kerberos-authentication-log-analysis-test-scenario.md
+    - name: 'Troubleshoot resource-based constrained delegation issues'
+      href: ./windows-security/troubleshoot-kerberos-rbcd-issues.md
+    - name: Troubleshoot SSO issues
+      href: ./windows-security/troubleshoot-kerberos-sso-issues.md
   - name: Legacy authentication (NTLM)
     items:
     - name: Audit event shows authentication package as NTLMv1
