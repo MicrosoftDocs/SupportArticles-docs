@@ -17,7 +17,7 @@ To resolve token signature validation errors such as "IDX10501," make sure that 
 
 ## For OAuth2 resource applications
 
-The following steps demonstrate how OAuth2 application validates a token that's issued from Microsoft Entra ID:
+The following steps demonstrate how an OAuth2 application validates a token that's issued from Microsoft Entra ID:
 
 1. Use an API client to perform an [Authorization Code flow](/entra/identity-platform/v2-oauth2-auth-code-flow) and acquire a token.
 1. Decode the token by using [jwt.ms](https://jwt.ms), and note the `kid`.
