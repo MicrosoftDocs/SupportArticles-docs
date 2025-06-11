@@ -244,7 +244,7 @@ After setting up Azure Key Vaults, add all required tags. Confirm that the resou
 
 1. Ensure the user has access to the app. See: [Share a canvas app with your organization](/power-apps/maker/canvas-apps/share-app).
 2. If access exists, check [Conditional Access policies in Microsoft Entra admin center](/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies).
-3. For more troubleshooting, copy the correlation ID shown on the failed sign-in screen and follow the instructions in [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/users/troubleshoot-sign-in).
+3. For more troubleshooting, copy the correlation ID shown on the failed sign-in screen and share with the support request
 
 ## Issue 8: Error Code 5objp
 
