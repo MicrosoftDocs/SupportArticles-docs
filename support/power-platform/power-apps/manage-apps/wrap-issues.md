@@ -92,7 +92,7 @@ You may encounter these error codes in the wrap wizard:
    Connect-AzureAD -TenantId <your tenant ID>
    ```
    ```powershell
-   New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
+   New-AzureADServicePrincipal -AppId <AppName> -DisplayName <AppDisplayName>
    ```
 
 3. In the [Azure portal](https://portal.azure.com), under **Access Control (IAM)**, add a **Reader** role assignment to the Service Principal.
@@ -111,7 +111,7 @@ You may encounter these error codes in the wrap wizard:
 
    4. Assign the **Reader** role.
 
-      :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to Wrap KeyVault Access App." lightbox="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png":::
+      :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to <Your App Name>." lightbox="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png":::
 
 ### Error code 1000119
 
@@ -130,7 +130,7 @@ You may encounter these error codes in the wrap wizard:
    Connect-AzureAD -TenantId <your tenant ID>
    ```
    ```powershell
-   New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
+   New-AzureADServicePrincipal -AppId <AppName> -DisplayName <DisplayName>
    ```
 
 4. In the [Azure portal](https://portal.azure.com), assign the **Reader** role as shown above.
