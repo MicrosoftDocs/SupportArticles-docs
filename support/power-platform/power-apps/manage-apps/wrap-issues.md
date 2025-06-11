@@ -90,6 +90,8 @@ The following Azure key vault error codes might appear in wrap for Power Apps an
 - [Error code 1000122: iOS certificate is not valid.](#error-code-1000122)
 - [Error code 1000123: iOS profile is not valid.](#error-code-1000123)
 - [Error code 1000128: Missing access key used while accessing Azure Blob storage location.](#error-code-1000128)
+- [Error code 1000130: Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard is not set.](#error-code-1000130)
+- [Error code 1000131: Missing tags for the specified Azure Key Vault resourceID.](#error-code-1000131)
 
 #### Error code 1000118
 
@@ -253,26 +255,6 @@ The following Azure key vault error codes might appear in wrap for Power Apps an
 |1000128    |   Missing access key used while accessing azure blob storage location|
 
 You need to add your access key to the Azure blob storage account in the Azure key vault. For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
-
-## Issue 7 - Wrap app sign-in fails
-
-1. Verify if the user has access to the application. For more information, see [Share a canvas app with your organization](/power-apps/maker/canvas-apps/share-app).
-
-2. If the user has access permissions, [review the app's Conditional Access policies in the Microsoft Entra admin center](/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies?tabs=microsoft-entra-admin-center#how-to-view-conditional-access-policies). Ensure you have a role that allows you to see both the sign-in logs and the Conditional Access policies.
-
-3. To explore the results and troubleshoot sign-in errors, copy the correlation ID from the mobile screen showing the failed sign-in and follow the guide in [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors).
-
-## Other issues in wrap for Power Apps
-
-For all other issues, or if your issue persists after following these steps, see [Next steps](#next-steps) later in this article to report the issue through a support request. You need to provide a repro video, screenshots, or both, and a session ID that can be get in the following ways:
-
-- On the sign-in screen, go to the lower right corner to select the gear icon, and then select **Session Details**.
-- After you open the app, tap and hold on the screen, and then select **Session Details**.
-
-## Next steps
-
-If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support), or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). For more information, see [Get Help + Support](/power-platform/admin/get-help-support).
-
 
 #### Error code 1000130
 
