@@ -1,5 +1,4 @@
 ---
-
 title: Troubleshooting the Wrap Feature in Power Apps  
 description: Solutions for common issues when using the wrap feature in Power Apps.  
 ms.reviewer: sitaramp, koagarwa  
@@ -11,24 +10,24 @@ ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\
 
 # Troubleshooting Wrap Feature Issues in Power Apps
 
-This guide covers how to resolve frequent problems encountered with the wrap feature in Microsoft Power Apps.
+This guide provides solutions for common issues encountered when using the wrap feature in Microsoft Power Apps.
 
 ## Issue 1: Wrap Build Fails
 
-If the wrap build fails, try the following troubleshooting steps:
+If your wrap build fails, try these steps:
 
 ### Step 1: Ensure Images are PNG
 
-Confirm that all images used in your wrap project are in PNG format. If you use any other format, the build won’t succeed. Convert images to *.png* with an image converter.
+All images in your wrap project must be in PNG format. If you use another format, the build will fail. Use an image converter to convert images to *.png*.
 
 > [!IMPORTANT]  
-> Changing a file extension to *.png* does not actually convert the image to PNG format.
+> Renaming a file extension to *.png* does not convert the image to PNG format.
 
 ### Step 2: Check Key Vault Setup
 
-Verify that you have created an Azure service principal and assigned the correct role. Details are available in steps 1 and 2 of [Create native mobile apps for iOS and Android using wrap](/power-apps/maker/common/wrap/wrap-how-to).
+Make sure you have created an Azure service principal and assigned the correct role. See steps 1 and 2 in [Create native mobile apps for iOS and Android using wrap](/power-apps/maker/common/wrap/wrap-how-to).
 
-Ensure your key vault contains the correct items:
+Your key vault should contain:
 - For iOS: two tags, one certificate, one secret
 - For Android: one tag, one certificate
 
@@ -38,15 +37,19 @@ Learn more: [Create Azure key vault for wrap in Power Apps](/power-apps/maker/co
 
 You can only wrap apps if you have edit permissions. Confirm you have the correct permissions for the app and try again.
 
+## Issue 3: Unable to Save Project or Trigger Build
+
+- Update to the latest version of the wrap solution.
+- Make sure there are no UI validation errors blocking the **Save** or **Build** actions.
 
 ## Issue 4: Unable to Install Wrapped Mobile App
 
-Ensure your application is properly signed. This can be done by configuring a key vault during build, or by signing the app manually. See:
+Ensure your app is properly signed. You can do this by configuring a key vault during build or by signing the app manually. See:
 - [Set up Key vault for automated signing](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform)
 - [Code sign for iOS](/power-apps/maker/common/wrap/code-sign-ios)
 - [Code sign for Android](/power-apps/maker/common/wrap/code-sign-android)
 
-Also verify your device meets these [minimum requirements](/power-apps/maker/common/wrap/overview#software-and-device-requirements).
+Also, verify your device meets these [minimum requirements](/power-apps/maker/common/wrap/overview#software-and-device-requirements).
 
 ## Issue 5: Cannot Sign In or See Data in Wrapped App
 
@@ -235,7 +238,7 @@ To resolve this error, add the resourceID for the Azure Key Vaults you intend to
 | ------------- |:-------------|
 |1000131  |   Missing tags for the specified Azure Key Vault resourceID.|
 
-After setting up Azure Key Vaults, add all required tags. Confirm that the resourceID associated with the bundleID in the wrap wizard includes every necessary tags. For more information [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
+After setting up Azure Key Vaults, add all required tags. Confirm that the resourceID associated with the bundleID in the wrap wizard includes every necessary tag. For more information see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
 ## Issue 7: Sign-in to Wrapped App Fails
 
@@ -243,7 +246,7 @@ After setting up Azure Key Vaults, add all required tags. Confirm that the resou
 2. If access exists, check [Conditional Access policies in Microsoft Entra admin center](/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies).
 3. For more troubleshooting, copy the correlation ID shown on the failed sign-in screen and follow the instructions in [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/users/troubleshoot-sign-in).
 
-## Issue 8 – Error Code: 5objp
+## Issue 8: Error Code 5objp
 
 **Reason:**  
 The hash key or redirect URL used in the APK does not match the one registered in Azure AD, causing a mismatch error during authentication.
@@ -259,7 +262,7 @@ The hash key or redirect URL used in the APK does not match the one registered i
 8. Under **Authentication**, review the configured Redirect URIs.
 9. If the displayed redirect URI is missing, add it with the correct Bundle ID and Signature Hash Key, then save.
 
-## Issue 9 – Error Code: 9n155
+## Issue 9: Error Code 9n155
 
 **Reason:**  
 The app registration is not configured to support multi-tenant accounts.
@@ -272,7 +275,7 @@ The app registration is not configured to support multi-tenant accounts.
 
 ## Other Issues
 
-For issues not covered here, or if the above steps do not resolve your problem, see [Next steps](#next-steps) to report your issue. Be prepared to provide a repro.
+If your issue is not covered here, or if the above steps do not resolve your problem, see [Next steps](#next-steps) to report your issue. Be prepared to provide a repro.
 
 - On the sign-in screen, tap the gear icon in the bottom right and select **Session Details**.
 - After opening the app, press and hold the screen, then select **Session Details**.
