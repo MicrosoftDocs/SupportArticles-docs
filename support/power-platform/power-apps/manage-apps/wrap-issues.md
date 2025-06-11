@@ -254,6 +254,23 @@ The following Azure key vault error codes might appear in wrap for Power Apps an
 
 You need to add your access key to the Azure blob storage account in the Azure key vault. For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
+#### Error code 1000130
+
+| Error code      | Description          |
+| ------------- |:-------------|
+|1000130  |  Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard is not set. |
+
+To resolve this error, add the resourceID for the Azure Key Vaults you intend to use with your wrap application. Ensure that all required tags are present for the resourceID linked to the bundleID specified in the wrap wizard. For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
+
+#### Error code 1000131
+
+| Error code      | Description          |
+| ------------- |:-------------|
+|1000131  |   Missing tags for the specified Azure Key Vault resourceID.|
+
+After setting up Azure Key Vaults, add all required tags. Confirm that the resourceID associated with the bundleID in the wrap wizard includes every necessary tags. For more information [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
+
+
 ## Issue 7 - Wrap app sign-in fails
 
 1. Verify if the user has access to the application. For more information, see [Share a canvas app with your organization](/power-apps/maker/canvas-apps/share-app).
