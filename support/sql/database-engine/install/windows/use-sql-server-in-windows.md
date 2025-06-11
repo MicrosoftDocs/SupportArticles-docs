@@ -1,10 +1,9 @@
 ---
 title: Version Requirements for SQL Server in Windows Operating System
-description: This article describes the version requirements for SQL Server in Windows operating system.
-ms.reviewer: randolphwest, jopilov
+description: This article describes the version requirements for SQL Server in the Windows operating system.
 ms.date: 06/10/2025
-ms.custom:
-  - sap:Installation, Patching, Upgrade, Uninstall
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
+ms.reviewer: randolphwest, jopilov
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
@@ -17,9 +16,7 @@ This article describes the version requirements for SQL Server in the Windows op
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2681562
 
-## Summary
-
-> [!NOTE]  
+> [!NOTE]
 > Unless noted otherwise, when an OS is supported for a major SQL Server version, it remains supported for all subsequent servicing releases. For example, if SQL Server 2016 release to manufacturing (RTM) is supported on Windows 10, this implies that any CUs on top of SQL Server 2016 RTM or SQL Server 2016 Service Pack 1 (SP1) are supported on Windows 10.
 
 How to use this article:
