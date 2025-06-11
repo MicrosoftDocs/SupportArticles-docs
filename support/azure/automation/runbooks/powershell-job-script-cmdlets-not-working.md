@@ -101,7 +101,4 @@ To resolve this error, use one of the following methods:
 - [Run runbooks on a Hybrid Runbook Worker](/azure/automation/automation-hrw-run-runbooks)
 - [Update Azure PowerShell modules in Automation](/azure/automation/automation-update-azure-modules)
 
-[!INCLUDE [Azure Help Support](../../../includes/ai-generated-attribution.md)]
-
-[!INCLUDE [Azure Help Support](../../../includes/azure/classic-vm-deprecation.md)]
-
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
