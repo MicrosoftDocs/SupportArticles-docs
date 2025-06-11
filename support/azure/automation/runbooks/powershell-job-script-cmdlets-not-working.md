@@ -8,16 +8,14 @@ ms.custom: sap:Runbook not working as expected
 ---
 # Troubleshoot runbook execution issues when using PowerShell in Azure Automation
 
-This article provides guidance for diagnosing and resolving runbook execution issues that occur when executing PowerShell scripts or cmdlets in Azure Automation.
+This article provides guidance for diagnosing and resolving runbook execution issues that occur when using PowerShell scripts or cmdlets in Azure Automation.
 
 > [!NOTE]
 > Azure Automation enables recovery of runbooks deleted in last 29 days. You can restore a deleted runbook by running a PowerShell script as a job in your Automation account. For more information, see [Restore deleted runbook](/azure/automation/manage-runbooks#restore-deleted-runbook).
 
-## PowerShell runbooks
+## Limitations and known issues with PowerShell runbooks
 
 PowerShell runbooks are built on Windows PowerShell. You can edit their code directly by using the text editor in the Azure portal. You can also use an offline text editor and then [import the runbooks](/azure/automation/manage-runbooks) into Azure Automation. The PowerShell version is determined by the **Runtime version** specified.
-
-## Limitations and known issues with PowerShell runbooks
 
 **Limitations:**
 
@@ -43,8 +41,6 @@ PowerShell runbooks are built on Windows PowerShell. You can edit their code dir
 - When you use the [ExchangeOnlineManagement](/powershell/exchange/exchange-online-powershell) module version 3.0.0 or later, you can experience errors.
 
   To resolve this issue, make sure that you explicitly upload the `PowerShellGet` and `PackageManagement` modules.
-
-For more information, see [Limitations and Known issues](/azure/automation/automation-runbook-types#powershell-workflow-runbooks).
 
 ## Before troubleshooting
 
