@@ -24,15 +24,7 @@ Confirm that all images used in your wrap project are in PNG format. If you use 
 > [!IMPORTANT]  
 > Changing a file extension to *.png* does not actually convert the image to PNG format.
 
-### Step 2: Confirm App Center Configuration
-
-The App Center link must be created as an app inside an organization, not as a standalone app. See the screenshot below for how this is set up in the wrap wizard:
-
-:::image type="content" source="media/wrap-issues/new-app-center-location.png" alt-text="Screenshot that shows how to create a new app center location in wrap wizard.":::
-
-For more details, refer to [Step 5: Manage output](/power-apps/maker/common/wrap/wrap-how-to#step-5-manage-output).
-
-### Step 3: Check Key Vault Setup
+### Step 2: Check Key Vault Setup
 
 Verify that you have created an Azure service principal and assigned the correct role. Details are available in steps 1 and 2 of [Create native mobile apps for iOS and Android using wrap](/power-apps/maker/common/wrap/wrap-how-to).
 
@@ -42,19 +34,10 @@ Ensure your key vault contains the correct items:
 
 Learn more: [Create Azure key vault for wrap in Power Apps](/power-apps/maker/common/wrap/create-key-vault-for-code-signing).
 
-### Step 4: Retry the Build
-
-If everything is configured properly but the build still fails, check the [Other issues in wrap](#other-issues-in-wrap-for-power-apps) section below.
-
 ## Issue 2: Wrap Button is Disabled
 
 You can only wrap apps if you have edit permissions. Confirm you have the correct permissions for the app and try again.
 
-## Issue 3: Unable to Save Project or Trigger Build
-
-Try the following:
-- Update to the latest version of the wrap solution.
-- Make sure there are no UI validation errors blocking the **Save** or **Build** actions.
 
 ## Issue 4: Unable to Install Wrapped Mobile App
 
@@ -238,7 +221,7 @@ You may encounter these error codes in the wrap wizard:
 
 Add your access key from the Azure blob storage account to the Azure key vault. Learn more: [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
-#### Error code 1000130
+### Error code 1000130
 
 | Error code      | Description          |
 | ------------- |:-------------|
@@ -246,7 +229,7 @@ Add your access key from the Azure blob storage account to the Azure key vault. 
 
 To resolve this error, add the resourceID for the Azure Key Vaults you intend to use with your wrap application. Ensure that all required tags are present for the resourceID linked to the bundleID specified in the wrap wizard. For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
-#### Error code 1000131
+### Error code 1000131
 
 | Error code      | Description          |
 | ------------- |:-------------|
