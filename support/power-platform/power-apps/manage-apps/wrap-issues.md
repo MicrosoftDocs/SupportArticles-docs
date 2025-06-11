@@ -262,29 +262,32 @@ You need to add your access key to the Azure blob storage account in the Azure k
 
 3. To explore the results and troubleshoot sign-in errors, copy the correlation ID from the mobile screen showing the failed sign-in and follow the guide in [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors).
 
-## Issue 8 - Error Code: 5objp
+## Issue 8 – Error Code: 5objp
 
-Reason for the above error code:The hash key or redirect URL used in the APK does not match the one registered in Azure AD, causing a mismatch error during authentication.
-Steps to Debug and Fix Redirect URI Issues in Android App Using Emulator:
-1.	Install Android Studio to set up an emulator on your system.
-2.	Launch the emulator and drag and drop the APK file onto it to install the app.
-3.	Open the app in the emulator, attempt to log in, and observe the error message.
-4.	The error screen will display the redirect URI the app is trying to use.
-5.	If the hash key in the URI contains encoded characters like %2, %3, etc., replace them with the correct characters (e.g., %2F becomes /) to decode the Signature Hash Key.
-6.	Copy the decoded Signature Hash Key.
-7.	Go to the Azure Portal → App Registrations → Select the relevant app.
-8.	Under Authentication, check the list of configured Redirect URIs.
-9.	If the displayed redirect URI is missing, add it by entering the Bundle ID and the Signature Hash Key, then save the changes.
+**Reason:**  
+The hash key or redirect URL used in the APK does not match the one registered in Azure AD, causing a mismatch error during authentication.
 
+**How to Debug and Fix Redirect URI Issues (Android/Emulator):**
+1. Install Android Studio and set up an emulator.
+2. Launch the emulator and drag the APK file onto it to install the app.
+3. Open the app in the emulator, attempt to log in, and observe the error message.
+4. The error screen will display the redirect URI being used.
+5. If the hash key in the URI contains encoded characters (e.g., `%2F`), decode them (e.g., `%2F` becomes `/`) to get the Signature Hash Key.
+6. Copy the decoded Signature Hash Key.
+7. In the Azure Portal, go to **App Registrations** and select the relevant app.
+8. Under **Authentication**, review the configured Redirect URIs.
+9. If the displayed redirect URI is missing, add it with the correct Bundle ID and Signature Hash Key, then save.
 
-## Issue 9 - Error code: 9n155
+## Issue 9 – Error Code: 9n155
 
-This issue occurs when the app registration is not configured to support multi-tenant accounts. Update the app registration to allow multiple organizations (multi-tenant).
-Steps to Fix:
-1. Go to Azure Portal → App Registrations → Select the relevant app.
-2. Navigate to Overview → Supported account types -> it should be "Multiple Organization" as an input
-3. If the current setting is not "Accounts in any organizational directory (Any Azure AD directory)", click to edit it.
-4. Update the setting to Multiple organizations (multi-tenant) and save the changes.
+**Reason:**  
+The app registration is not configured to support multi-tenant accounts.
+
+**How to Fix:**
+1. Go to the Azure Portal → **App Registrations** → select your app.
+2. In **Overview**, find **Supported account types**. It should be set to "Multiple organizations".
+3. If not, click to edit and select **Accounts in any organizational directory (Any Azure AD directory)**.
+4. Save your changes.
 
 ## Other issues in wrap for Power Apps
 
@@ -292,8 +295,6 @@ For all other issues, or if your issue persists after following these steps, see
 
 - On the sign-in screen, go to the lower right corner to select the gear icon, and then select **Session Details**.
 - After you open the app, tap and hold on the screen, and then select **Session Details**.
-
-
 
 ## Next steps
 
