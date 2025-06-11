@@ -9,17 +9,17 @@ ms.custom: sap:Component Development\COM, DCOM, and COM+ Programming and Runtime
 ---
 # CoInitializeEx function fails after calling the HtmlHelp function on the same thread
 
-This article discusses an issue where the [CoInitializeEx function](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) fails after calling the `HtmlHelp` function on the same thread.
+This article discusses an issue where the [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) function fails after calling the `HtmlHelp` function on the same thread.
 
 _Applies to:_ &nbsp; All supported operating system
 
 ## Symptoms
 
-If an application calls `HtmlHelp` before calling `CoInitializeEx` with the specified `COINIT_MULTITHREADED` value, `CoInitializeEx` can return `RPC_E_CHANGED_MODE (0x80010106)`. As a result, the application may crash, hang, or display unexpected behavior.
+If an application calls `HtmlHelp` before calling `CoInitializeEx` with the specified `COINIT_MULTITHREADED` value, `CoInitializeEx` can return `RPC_E_CHANGED_MODE (0x80010106)`. As a result, the application might crash, hang, or display unexpected behavior.
 
 ## Cause
 
-If a thread that calls `HtmlHelp` hasn't been initialized with `CoInitialize` or `CoInitializeEx`, `HtmlHelp` initializes the thread as apartment-threaded with `COINIT_APARTMENTTHREADED`.
+If a thread that calls `HtmlHelp` isn't initialized with `CoInitialize` or `CoInitializeEx`, `HtmlHelp` initializes the thread as apartment-threaded with `COINIT_APARTMENTTHREADED`.
 
 ## Workaround
 

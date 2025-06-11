@@ -37,10 +37,10 @@ This problem occurs because the Component Object Model (COM) initialization coun
 
 ## Resolution
 
-To resolve this problem, remove the `CoInitialize` calls and the `CoUninitialize` calls from the affected COM DLL. A COM DLL that exposes COM components and is loaded through COM calls from a client should not call the `CoInitialize` function or the `CoUninitialize` function on any thread that is used to load or to start the DLL. These threads are owned by the client application, by the COM runtime, or by the COM+ runtime. Only the COM DLL should call these APIs on additional threads that were explicitly created by the COM DLL. However, it is a common bug for COM DLLs to call the `CoInitialize` function and the `CoUninitialize` function in response to attach events and detach events in the `DllMain` function.
+To resolve this problem, remove the `CoInitialize` calls and the `CoUninitialize` calls from the affected COM DLL. A COM DLL that exposes COM components and is loaded through COM calls from a client shouldn't call the `CoInitialize` function or the `CoUninitialize` function on any thread that is used to load or to start the DLL. These threads are owned by the client application, by the COM runtime, or by the COM+ runtime. Only the COM DLL should call these APIs on additional threads that were explicitly created by the COM DLL. However, it's a common bug for COM DLLs to call the `CoInitialize` function and the `CoUninitialize` function in response to attach events and detach events in the `DllMain` function.
 
 > [!NOTE]  
-> It is correct for a standard Win32 DLL that isn't loaded through COM to call these APIs if the standard Win32 DLL plans to use COM APIs. However, these functions should not be called from the `DllMain` function.
+> It's correct for a standard Win32 DLL that isn't loaded through COM to call these APIs if the standard Win32 DLL plans to use COM APIs. However, these functions shouldn't be called from the `DllMain` function.
 
 For more information about the `CoInitialize` function, see [CoInitialize function](/windows/win32/api/objbase/nf-objbase-coinitialize).
 
@@ -56,24 +56,24 @@ To determine which COM component contains the affected code, use the Microsoft I
 1. [Download and install DebugDiag](https://www.microsoft.com/download/details.aspx?id=58210).
 2. Create a crash rule in DebugDiag. To do this, follow these steps:
 
-   1. Click **Start**, point to **Programs**, point to **IIS Diagnostics (32bit)**, point to **Debug Diagnostics Tool**, and then click **Debug Diagnostics Tool 1.0**.
-   2. If the **Select Rule Type** dialog box opens, click **Cancel**.
-   3. On the **Tools** menu, click **Options And Settings**.
-   4. Click the **Folders and Search Paths** tab, and then enter `srv*C:\symsrv\*http://msdl.microsoft.com/download/symbols` in the **Symbol Search Path For Analysis** field.
-   5. In the **Symbol Search Path For Debugging** field, enter `srv*C:\symsrv\*http://msdl.microsoft.com/download/symbols`, and then click **OK**.
-   6. Click **Add Rule**.
-   7. Click **Crash**, and then click **Next**.
-   8. Click **A specific MTS/COM+ application (included high and medium isolation websites)**, and then click **Next**.
-   9. Click the appropriate COM+ application, and then click **Next**.
-   10. In the **Advanced Configuration (Optional)** dialog box, click **Breakpoints**.
-   11. In the **Configure Breakpoints** dialog box, click **Add Breakpoint**.
-   12. In the **Configure Breakpoint** dialog box, enter *ole32!CoInitializeEx* in the **Breakpoint Expression** field, enter *1000* in the **Action Type** field, keep **Log Stack Trace** in the **Action Type** field, and then click **OK**.
-   13. In the **Configure Breakpoints** dialog box, click **Add Breakpoint**.
-   14. In the **Configure Breakpoint** dialog box, enter *ole32!CoUninitialize* in the **Breakpoint Expression** field, enter *1000* in the **Action Limit** field, and then click **OK**.
-   15. In the **Configure Breakpoints** dialog box, click **Save & Close**.
-   16. In the **Advanced Configuration (Optional)** dialog box, click **Next**.
-   17. In the **Select Dump Location And Rule Name (Optional)** dialog box, click **Next**.
-   18. In the **Rule Completed** dialog box, click **Activate the rule now**, and then click **Finish**.
+   1. Select **Start**, point to **Programs**, point to **IIS Diagnostics (32bit)**, point to **Debug Diagnostics Tool**, and then select **Debug Diagnostics Tool 1.0**.
+   2. If the **Select Rule Type** dialog box opens, select **Cancel**.
+   3. On the **Tools** menu, select **Options And Settings**.
+   4. Select the **Folders and Search Paths** tab, and then enter `srv*C:\symsrv\*http://msdl.microsoft.com/download/symbols` in the **Symbol Search Path For Analysis** field.
+   5. In the **Symbol Search Path For Debugging** field, enter `srv*C:\symsrv\*http://msdl.microsoft.com/download/symbols`, and then select **OK**.
+   6. Select **Add Rule**.
+   7. Select **Crash**, and then select **Next**.
+   8. Select **A specific MTS/COM+ application (included high and medium isolation websites)**, and then select **Next**.
+   9. Select the appropriate COM+ application, and then select **Next**.
+   10. In the **Advanced Configuration (Optional)** dialog box, select **Breakpoints**.
+   11. In the **Configure Breakpoints** dialog box, select **Add Breakpoint**.
+   12. In the **Configure Breakpoint** dialog box, enter *ole32!CoInitializeEx* in the **Breakpoint Expression** field, enter *1000* in the **Action Type** field, keep **Log Stack Trace** in the **Action Type** field, and then select **OK**.
+   13. In the **Configure Breakpoints** dialog box, select **Add Breakpoint**.
+   14. In the **Configure Breakpoint** dialog box, enter *ole32!CoUninitialize* in the **Breakpoint Expression** field, enter *1000* in the **Action Limit** field, and then select **OK**.
+   15. In the **Configure Breakpoints** dialog box, select **Save & Close**.
+   16. In the **Advanced Configuration (Optional)** dialog box, select **Next**.
+   17. In the **Select Dump Location And Rule Name (Optional)** dialog box, select **Next**.
+   18. In the **Rule Completed** dialog box, select **Activate the rule now**, and then select **Finish**.
 
 DebugDiag monitors the selected COM+ application when the application runs. Every time that DebugDiag experiences one of the selected breakpoints, DebugDiag adds data to a log file. By default, the log file will be named:  
 `C:\Program Files\IIS Resources\DebugDiag\Logs\dllhost__PID__\<pid>\__Date__\<date> __Time\_\<time> Log.txt`
