@@ -4,7 +4,7 @@ description: This article describes the version requirements for SQL Server in W
 ms.reviewer: randolphwest, jopilov
 ms.date: 06/10/2025
 ms.custom:
-  - "sap:Installation, Patching, Upgrade, Uninstall"
+  - sap:Installation, Patching, Upgrade, Uninstall
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
