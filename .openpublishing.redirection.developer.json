@@ -6410,6 +6410,10 @@
     {
       "source_path": "support/windows/win32/east-asian-first-character-not-recognized.md",
       "redirect_url": "/previous-versions/troubleshoot/windows/win32/east-asian-first-character-not-recognized"
+    },
+    {
+      "source_path": "support/sql/database-engine/database-file-operations/virtual-host-driver-lead-data-consistency.md",
+      "redirect_url": "/troubleshoot/sql/welcome-sql-server"
     }
   ]
 }
