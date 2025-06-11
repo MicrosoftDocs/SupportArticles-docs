@@ -14,7 +14,7 @@ ms.reviewer: kaushika, raviks, v-lianna, jobesanc
 
 This guide provides you with the fundamental concepts used when troubleshooting Kerberos authentication issues.
 
-> [IMPORTANT!]  
+> [!IMPORTANT]  
 > This article provides general guidance. You might have to adapt the procedures and examples here to work with your specific configuration.
 
 ## Troubleshooting checklist
@@ -63,21 +63,21 @@ If you made any changes, try to authenticate again before you continue.
 
 If needed, join the client computer or target server to an appropriate domain. Then try to authenticate again.
 
-> [NOTE!]  
+> [!NOTE]  
 > In this context, "appropriate domains" are domains within a single forest or within a set of forests that have trust relationships.
 
 #### c. Check the health of the target server and its supporting services
 
 Make sure that application or front-end services (such as web services) and back-end services (such as SQL Server service) are running.
 
-> [NOTE!]  
+> [!NOTE]  
 > If you see a message that resembles "A service has generated Error 1069: The service did not start due to a logon failure," see [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)).
 
 #### d. Make sure that the correct ports are available
 
 Check all firewalls (including Windows Firewall on each computer) between the client computer, the domain controller, and the target server. Make sure traffic is allowed on the following ports:  
 
-  > [NOTE!]  
+  > [!NOTE]  
   > The list uses the _**server**_**:** _**client port**_**,** _**server port**_ format.
 
 - **DHCP:** 67 (UDP), 67 (UDP)
@@ -104,7 +104,7 @@ On the client computer, open an elevated Command Prompt window, and then run the
 nltest /dsgetdc:<DomainName> /force /kdc
 ```
 
-> [NOTE!]  
+> [!NOTE]  
 >
 > - In this command, \<DomainName> represents the name of the domain of the computer that you are querying from.
 
@@ -124,7 +124,7 @@ On the client computer, open an administrative Command Prompt window and then ru
 nslookup <TargetName>
 ```
 
-> [NOTE!]  
+> [!NOTE]  
 > In this command, \<TargetName> represents the NetBIOS name of the target server.
 
 If the `nslookup` command correctly resolves the target server name, the DNS configuration is correct. If the command doesn't resolve the target server name, follow these steps to check the client computer's network adapter configuration:
@@ -153,7 +153,7 @@ If DNS still doesn't work correctly, follow these steps:
    nslookup <ClientName> <DNSIPAddress>
    ```
 
-   > [NOTE!]  
+   > [!NOTE]  
    > In this command, \<ClientName> represents the NetBIOS name of the client computer, and \<DNSIPAddress> represents the IP address of one the DNS servers that the client is configured to use. First, use the IP address of the preferred DNS server that you recorded in the previous procedure. If the command doesn't work, try again using the IP address of the client's secondary DNS server.
 
    For example, if the client computer's name is "client1" and the IP address of the client's preferred DNS server is 10.0.0.1, run the following command:
@@ -168,7 +168,7 @@ If DNS still doesn't work correctly, follow these steps:
    nslookup <TargetName> <DNSIPAddress>
    ```
 
-   > [NOTE!]  
+   > [!NOTE]  
    > In this command, \<TargetName> represents the NetBIOS name of the target server, and \<DNSIPAddress> represents the IP address of one the DNS servers that the target server is configured to use. First, use the IP address of the preferred DNS server that you recorded in the previous procedure. If the command doesn't work the first time that you run it, try again using the IP address of the target server's secondary DNS server.
 
    For example, if the target server's name is "WebServer1" and the IP address of the target server's preferred DNS server is 10.0.0.1, run the following command:
@@ -207,7 +207,7 @@ To resolve this issue, the affected computer has to recheck the network for time
 w32tm /resync /computer:<Target> /rediscover
 ```
 
-> [NOTE!]  
+> [!NOTE]  
 > In this command, \<Target> represents the computer that you are configuring. The `/rediscover` option instructs the computer to check the network for new or updated time sources.
 
 For more information about the options that are available for the `w32tm` command, see [Windows Time service tools and settings: Command-line parameters for W32Time](/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config#command-line-parameters-for-w32time).
@@ -295,7 +295,7 @@ Event descriptions that contain strings that resemble the following are part of 
 - KerberosV5:AP Request
 - KerberosV5:AP Response
 
-> [NOTE!]  
+> [!NOTE]  
 > You can also use Network Monitor to check the trace data for ticket information in HTTP GET requests. If the ticket information is missing in the GET request, there was a problem in using Kerberos authentication.
 
 Event descriptions that contain strings that resemble the following mean that there's a problem. The following list includes some of the most common errors. If you see one of these strings, note any server names, IP addresses, and SPNs for later use.
@@ -342,10 +342,10 @@ Kerberos supports three types of delegation:
 - **Constrained delegation**. The front-end service maintains a list of services that it can access on behalf of a client.
 - **Resource-based constrained delegation (RBCD)**. The back-end service maintains a list of front-end services that can access it on behalf of a client.
 
-> [NOTE!]  
+> [!NOTE]  
 > If you have an issue using constrained delegation with CIFS, see [Constrained delegation for CIFS fails with ACCESS_DENIED error](constrained-delegation-access-denied.md).
 
-> [IMPORTANT!]  
+> [!IMPORTANT]  
 >
 > - Don't configure constrained delegation and RBCD on the same set of front-end and back-end servers.
 >

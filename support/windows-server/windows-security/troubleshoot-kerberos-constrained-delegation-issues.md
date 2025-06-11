@@ -13,7 +13,7 @@ ms.reviewer: kaushika, raviks,
 
 # Troubleshooting Kerberos constrained delegation issues
 
-> [IMPORTANT!]  
+> [!IMPORTANT]  
 > Before you use the procedures in this article, follow the steps in the Kerberos [Troubleshooting checklist](kerberos-authentication-troubleshooting-guidance.md#troubleshooting-checklist). The most common causes of Kerberos problems are infrastructure issues or service principal name (SPN) issues. The checklist helps you identify such issues.
 
 When your target service has separate front-end and back-end components, Kerberos can delegate client credentials (including access permissions) to a service account. In simple terms, the client accesses the front-end service, and then the front-end service accesses the back-end service on the client's behalf. In the case of constrained delegation, the front-end service maintains a list of services that it can access on behalf of a client.

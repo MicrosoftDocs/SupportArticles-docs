@@ -40,12 +40,12 @@ This type of error usually results from one of the following causes:
    nltest /dsgetdc:<DomainName> /force /kdc
    ```
 
-   > [NOTE!]  
+   > [!NOTE]  
    > In this command, \<DomainName> represents the name of the domain of the client computer.
 
    The `nltest` command retrieves a list of one or more available domain controllers. If the client or target server can't contact a domain controller, you see an error message.
 
-   > [NOTE!]  
+   > [!NOTE]  
    > The list might not include all of the domain controllers that are available.
 
    If the domain controller still isn't available, continue to the next step.
@@ -56,7 +56,7 @@ This type of error usually results from one of the following causes:
    nslookup <TargetName>
    ```
 
-   > [NOTE!]  
+   > [!NOTE]  
    > In this command, \<TargetName> represents the NetBIOS name of the target server.
 
    If the `nslookup` command correctly resolves the target server name, the DNS configuration is correct.

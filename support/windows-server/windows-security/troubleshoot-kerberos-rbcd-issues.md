@@ -13,12 +13,12 @@ ms.reviewer: kaushika, raviks,
 
 # Troubleshooting Kerberos RBCD issues
 
-> [IMPORTANT!]  
+> [!IMPORTANT]  
 > Before you use the procedures in this article, follow the steps in the Kerberos [Troubleshooting checklist](kerberos-authentication-troubleshooting-guidance.md#troubleshooting-checklist). The most common causes of Kerberos problems are infrastructure issues or service principal name (SPN) issues. The checklist helps you identify such issues.
 
 When your target service has separate front-end and back-end components, Kerberos can delegate client credentials (including access permissions) to a service account. In simple terms, the client accesses the front-end service, and then the front-end service accesses the back-end service on the client's behalf. In the case of resource-based constrained delegation (RBCD), the back-end service maintains a list of services that can access it on behalf of a client. This list is associated with the account that the back-end service uses. You have to use Windows PowerShell to configure this setting.
 
-> [NOTE!]  
+> [!NOTE]  
 > You'll have to use the `ActiveDirectory` PowerShell module for these procedures. To make sure that your environment has the correct PowerShell module, open a PowerShell window and then run the following commands, in order:
 >
 > ```powershell
@@ -39,7 +39,7 @@ The configuration details differ depending on the type of account that the front
    Get-ADComputer -Identity <BackEndSvcAcct> -PrincipalsAllowedToDelegateToAccount
    ```
 
-   > [NOTE!]  
+   > [!NOTE]  
    > In this command, \<BackEndSvcAcct> represents the back-end service account (in this case, name of the back-end computer).
 
    This cmdlet retrieves the list of principals that can delegate to the back-end service. Do one of the following:
@@ -52,7 +52,7 @@ The configuration details differ depending on the type of account that the front
    Set-ADComputer -AuthType Negotiate -Identity <BackEndSvcAcct> -PrincipalsAllowedToDelegateToAccount <FrontEndSvcAcct>
    ```
 
-   > [NOTE!]  
+   > [!NOTE]  
    > In this command, \<BackEndSvcAcct> represents the back-end service account, and \<FrontEndSvcAcct> represents the front-end service account.
 
 3. Check the front-end service account options. Use Active Directory Users and Computers (available on the Server Manager **Tools** menu) for these steps.
@@ -68,10 +68,10 @@ The configuration details differ depending on the type of account that the front
    Get-ADUser -Identity <BackEndSvcAcct> -PrincipalsAllowedToDelegateToAccount
    ```
 
-   > [IMPORTANT!]  
+   > [!IMPORTANT]  
    > If the back-end service uses a managed service account, use `Get-ADServiceAccount` instead of `Get-ADUser`.
 
-   > [NOTE!]  
+   > [!NOTE]  
    > In this command, \<BackEndSvcAcct> represents the back-end service account.
 
    This cmdlet retrieves the list of principals that can delegate to the back-end service. Do one of the following:
@@ -84,10 +84,10 @@ The configuration details differ depending on the type of account that the front
    Set-ADUser -Identity <BackEndSvcAcct> -PrincipalsAllowedToDelegateToAccount <FrontEndSvcAcct>
    ```
 
-   > [IMPORTANT!]  
+   > [!IMPORTANT]  
    > If the services use a managed service account, use **Get-ADServiceAccount** instead of **Get-ADUser**.
 
-   > [NOTE!]  
+   > [!NOTE]  
    > In these commands, \<BackEndSvcAcct> represents the back-end service account, and \<FrontEndSvcAcct> represents the front-end service account.
 
 3. Check the front-end service account options. Use Active Directory Users and Computers (available on the Server Manager **Tools** menu) for these steps.

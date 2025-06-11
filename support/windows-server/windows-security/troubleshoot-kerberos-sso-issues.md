@@ -13,12 +13,12 @@ ms.reviewer: kaushika, raviks,
 
 # Troubleshooting Kerberos single sign-on issues
 
-> [IMPORTANT!]  
+> [!IMPORTANT]  
 > Before you use the procedures in this article, follow the steps in the Kerberos [Troubleshooting checklist](kerberos-authentication-troubleshooting-guidance.md#troubleshooting-checklist). The most common causes of Kerberos problems are infrastructure issues or service principal name (SPN) issues. The checklist helps you identify such issues. In addition, the procedures in this article use some of the information that you collected while following the checklist. In particular, you might need to know whether the client computer received a service ticket for the target service.
 
 Kerberos authentication supports single sign-on (SSO) authentication in intranet environments. SSO issues usually indicate that the client application is using a protocol other than Kerberos to authenticate the user when it should be using Kerberos. Such issues could result from a configuration problem in the service or in the client application.
 
-> [NOTE!]  
+> [!NOTE]  
 > If the issue only affects a few users or computers, the client configuration is more likely to be the issue than the service configuration. You can skip to the [check the client configuration](#3-check-the-configuration-of-an-affected-client-application) procedure later in this article.
 
 ## 1. Check the target service configuration
@@ -57,7 +57,7 @@ Different types of clients use different criteria to identify intranet sites, an
 
 Unlike older browsers, Microsoft Edge version 87 (and later versions) only uses two internet zones: **Internet** and **Local intranet**. Microsoft Edge ignores other zone settings such as **Restricted sites**. Additionally, Microsoft Edge doesn't always use the client computer's zone settings to identify intranet sites. Microsoft Edge considers other factors, such as proxy configurations. For these reasons, Group Policy provides the most consistent method to manage Microsoft Edge configuration.
 
-> [NOTE!]  
+> [!NOTE]  
 > If you need to check the configuration on a single computer, see [Check a single client computer's internet authentication settings](#check-a-single-client-computers-internet-authentication-settings).
 
 The **AuthServerAllowlist** Group Policy setting (**Configure list of allowed authentication servers**) takes precedence over the zone settings on the client computer. To check this setting, use the Group Policy Management Console and the Group Policy Editor (available in the **Tools** menu in Server Manager). Make sure that this setting does the following:

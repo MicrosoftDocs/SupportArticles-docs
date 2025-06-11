@@ -28,7 +28,7 @@ The way you configure SPNs differs depending on the type of account that your se
 - A custom service account has to have an explicit SPN for each service that uses the account.
 - The computer account might have explicit SPNs that are configured for the services that use it. However, common service classes map automatically to the HOST/ SPN, which is in turn automatically generated for each computer account. In such cases, some services might not have their own SPN configured on the computer account.
 
-> [IMPORTANT!]  
+> [!IMPORTANT]  
 >
 > - Unless a service uses the computer account and the HOST SPN, SPNs must be unique in the AD DS forest. In a multi-forest environment, the SPN must be unique across all of the associated forests.
 > - One SPN can only be associated with one account. A common cause of SPN issues is when a service is configured to use a custom account but the SPN is associated with both the custom account and the computer account.
@@ -51,14 +51,14 @@ These procedures differ slightly depending on whether the service uses a custom 
    setspn -L <Name>
    ```
 
-   > [NOTE!]  
+   > [!NOTE]  
    >
    > - In this command, \<Name> represents the name of either the computer that runs the service, or a custom account that the service uses.
    > - In a multi-domain environment, use the format \<Domain\\Name> to specify the account's domain.
 
 1. Search for any accounts that use the requested SPN. This search identifies any duplicate SPNs or SPNs that are assigned to the incorrect account.
 
-   > [NOTE!]  
+   > [!NOTE]  
    > To perform this procedure, you have to have at least Enterprise Administrator permissions.
 
    To identify the account or accounts that are associated with the SPN, open an administrative Command Prompt window, and then run one of the following commands:
@@ -67,7 +67,7 @@ These procedures differ slightly depending on whether the service uses a custom 
    | - | - |
    | `setspn -Q <SPN>` | `setspn -X <SPN>` |
 
-   > [NOTE!]  
+   > [!NOTE]  
    > - In this command, \<SPN> represents the SPN that you're searching for.
    > - Searching for duplicates, especially forest-wide, can take a long period of time and a large amount of memory.
 
@@ -109,7 +109,7 @@ To remove the SPN from an account, run the following command at the administrati
 setspn -D <SPN> <AccountName>
 ```
 
-> [NOTE!]  
+> [!NOTE]  
 > In this command, \<SPN> represents the SPN that you want to remove. \<AccountName> represents the account (or one of the accounts) that you want to remove the SPN from.
 
 ### Add an SPN to a service account
@@ -120,7 +120,7 @@ To add the SPN to an account, run the following command at the administrative co
 setspn -S \<SPN> \<AccountName>
 ```
 
-> [NOTE!]  
+> [!NOTE]  
 > In this command, \<SPN> represents the SPN that you want to add. \<AccountName> represents the account (or one of the accounts) that you want to add the SPN to.
 
 ### Fix an inconsistent SPN

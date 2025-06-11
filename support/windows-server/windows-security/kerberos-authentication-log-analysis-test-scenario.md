@@ -50,7 +50,7 @@ This article uses a hypothetical client and server deployment to demonstrate tro
 
   - Logon auditing configuration: Logon Success auditing and Logon Failure auditing are both enabled.
 
-    > [NOTE!]  
+    > [!NOTE]  
     > By default, all Windows Server operating systems have Success and Failure logon auditing enabled. To verify this setting, open an administrative Command Prompt window and then run the following command:
     >
     > ```console
@@ -131,7 +131,7 @@ The process starts when user John, signed in to the client computer `Client1.con
 
 Use the following steps to gather trace data on an environment that resembles the one described previously in [Environment and configuration](#environment-and-configuration). During this test, the system components should interact in the manner described in [Expected authentication flow](#expected-authentication-flow).
 
-> [!NOTE]
+> [!NOTE]  
 > To use the procedures in this section, you have to belong to the local Administrators group.
 
 1. On the client computer, open an administrative Command Prompt window and then run `ipconfig /flushdns`.
