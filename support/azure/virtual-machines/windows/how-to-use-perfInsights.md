@@ -265,14 +265,6 @@ To run the PerfInsights tool, follow these steps:
 
     These are examples of how to use the CLI tool to run the various [troubleshooting scenarios](#supported-troubleshooting-scenarios):
 
-    - Run continuous performance diagnostics:
-      
-      ```console
-      PerfInsights /run always on /sau 
-      ```
-
-      To stop continuous performance diagnostics, press **Ctrl+C** or close the terminal.
-
     - Run the performance analysis scenario for 5 mins:
 
       ```console

@@ -114,6 +114,8 @@
 
   - name: Troubleshoot Linux CPU performance issues
     href: troubleshoot-performance-cpu-linux.md
+  - name: Troubleshoot Linux Memory performance issues
+    href: troubleshoot-performance-memory-linux.md
     
 - name: Windows Update and OS Updates
   items:
