@@ -9,8 +9,6 @@ items:
   href: troubleshoot-error-20598.md
 - name: 213 error when attaching CDC enabled database
   href: attach-change-data-capture-database.md
-- name: Apply SQL hotfixes in a replication topology
-  href: apply-hotfix-sql-replication-topology.md
 - name: ASCII function returns different results
   href: ascii-function-returns-different-results-publisher-subscriber.md
 - name: CDC capture job fails when processing changes

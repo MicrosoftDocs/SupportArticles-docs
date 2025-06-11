@@ -12,21 +12,36 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 05/02/2025
+ms.date: 06/10/2025
 ms.author: genli
 ---
 # Troubleshoot Linux virtual machine performance issues with Performance Diagnostics (PerfInsights)
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-[PerfInsights Linux](https://aka.ms/perfinsightslinuxdownload) is a self-help diagnostics tool that collects and analyzes the diagnostic data, and provides a report to help troubleshoot Linux virtual machine performance problems in Azure. PerfInsights can be run on supported virtual machines as a standalone tool, or directly from the portal by using [Performance Diagnostics for Azure virtual machines](../windows/performance-diagnostics.md).
+[PerfInsights Linux](https://aka.ms/perfinsightslinuxdownload) is a self-help diagnostics tool that collects and analyzes the diagnostic data, and provides a report to help troubleshoot Linux virtual machine performance problems in Azure. Use Performance Diagnostics to identify and troubleshoot performance issues in one of two modes: 
+
+- **Continuous diagnostics** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. 
+
+- **On-demand diagnostics** helps you troubleshoot an ongoing performance issue with more in-depth data, insights, and recommendations based on data collected at a single point in time.
+
+This article explains how to download the Performance Diagnostics extension to your Linux VM and run the tool using the CLI tool. You can also [run Performance Diagnostics from the portal](../windows/performance-diagnostics.md).
 
 If you are experiencing performance problems with virtual machines, before contacting support, run this tool.
 
-> [!NOTE]
-> [Continuous diagnostics](../windows/performance-diagnostics.md) is currently supported only on Windows. 
-
 ## Supported troubleshooting scenarios
+
+You can use Performance Diagnostics to troubleshoot various scenarios. The following sections describe common scenarios for using Continuous and On-Demand Performance Diagnostics to identify and troubleshoot performance issues. For a comparison of Continuous and On-Demand Performance Diagnostics, see [Performance Diagnostics insights and reports](../windows/performance-diagnostics.md).
+
+## Continuous diagnostics
+
+Continuous Performance diagnostics lets you identify high resource usage by monitoring your VM regularly for: 
+
+- High CPU usage: Detects high CPU usage periods and shows the top CPU usage consumers during those periods. 
+
+- High memory usage: Detects high memory usage periods and shows the top memory usage consumers during those periods. 
+
+- High disk usage: Detects high disk usage periods on physical disks and shows the top disk usage consumers during those periods.
 
 PerfInsights can collect and analyze several kinds of information. The following sections cover common scenarios.
 
@@ -44,7 +59,7 @@ This scenario collects basic information such as storage and hardware configurat
 
 - Storage information
 
-- Azure Virtual Machine Configuration (collected using [Azure Instance Metadata Service](/azure/virtual-machines/windows/instance-metadata-service)
+- Azure Virtual Machine Configuration (collected using [Azure Instance Metadata Service](/azure/virtual-machines/windows/instance-metadata-service))
 
 - List of running processes, Disk, Memory, and CPU usage
 
@@ -202,7 +217,7 @@ The following categories of rules are currently supported:
     | Debian                     | 9, 10, 11 [`*`]                                    |
     | SLES                       | 12 SP5 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP3 [`*`], 15 SP4 [`*`], 15 SP5 [`*`], 15 SP6 [`*`]                                     |
     | AlmaLinux                  | 8.4, 8.5                                               |
-    | Azure Linux               | 2.0                                                   |
+    | Azure Linux               | 2.0, 3.0                                                   |
 
 >[!Note]
 >[`*`] Please refer to [Known issues](#known-issues) section
@@ -250,7 +265,7 @@ To run the PerfInsights tool, follow these steps:
     sudo python perfinsights.py
     ```
 
-    :::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-commandline.png" alt-text="Screenshot of PerfInsights Linux command-line output.":::
+    :::image type="content" source="media/how-to-use-perfinsights-linux/perfinsights-linux-command-line.png" alt-text="Screenshot of PerfInsights Linux command-line output." lightbox="media/how-to-use-perfinsights-linux/perfinsights-linux-command-line.png":::
 
     The basic syntax for running PerfInsights scenarios is:
 
@@ -258,19 +273,19 @@ To run the PerfInsights tool, follow these steps:
     sudo python perfinsights.py -r <ScenarioName> -d [duration]<H | M | S> [AdditionalOptions]
     ```
 
-    You can use the below example to run Quick performance analysis scenario for 1 minute and create the results under /tmp/output folder:
+    You can use the following example to run Quick performance analysis scenario for 1 minute and create the results under /tmp/output folder:
 
     ```bash
     sudo python perfinsights.py -r quick -d 1M -a -o /tmp/output
     ```
 
-    You can use the below example to run performance analysis scenario for 5 mins and upload the result (stores in a TAR file) to the storage account:
+    You can use the following example to run performance analysis scenario for 5 mins and upload the result (stores in a TAR file) to the storage account:
 
     ```bash
     sudo python perfinsights.py -r vmslow -d 300S -a -t <StorageAccountName> -k <StorageAccountKey> -i <full resource Uri of the current VM>
     ```
 
-    You can use the below example to run the HPC performance analysis scenario for 1 mins and upload the result TAR file to the storage account:
+    You can use the following example to run the HPC performance analysis scenario for 1 mins and upload the result TAR file to the storage account:
 
     ```bash
     sudo python perfinsights.py -r hpc -d 60S -a -t <StorageAccountName> -k <StorageAccountKey> -i <full resource Uri of the current VM>

@@ -1,7 +1,7 @@
 ---
 title: Modify printer settings with the DocumentProperties
 description: This article describes how to modify printer settings with the DocumentProperties function.
-ms.date: 12/19/2023
+ms.date: 06/11/2025
 ms.custom: sap:Graphics and Multimedia development\Printing and the Print Spooler API
 ---
 

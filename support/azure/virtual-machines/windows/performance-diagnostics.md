@@ -10,7 +10,7 @@ tags: ''
 ms.service: azure-virtual-machines
 ms.workload: infrastructure-services
 ms.topic: troubleshooting
-ms.date: 06/03/2025
+ms.date: 06/10/2025
 ms.custom: sap:VM Performance
 ms.reviewer: guywild, poharjan
 ms.author: anandh
@@ -24,17 +24,14 @@ ms.author: anandh
 
 You can use the Performance Diagnostics tool to identify and troubleshoot performance issues on your Azure virtual machine (VM) in one of two modes:
 
-* **Continuous diagnostics** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. Continuous diagnostics is currently supported only on Windows.
+* **Continuous diagnostics** collects data at five-second intervals and reports actionable insights about high resource usage every five minutes. Continuous diagnostics is Generally Available (GA) for Windows VMs and in Public Preview for Linux VMs.
 * **On-demand diagnostics** helps you troubleshoot an ongoing performance issue by providing more in-depth data, insights, and recommendations that are based on data that's collected at a single moment. On-demand diagnostics is supported on both Windows and Linux.
 
 Performance Diagnostics stores all insights and reports in a storage account that you can configure for short data retention to minimize costs.
 
 Run Performance Diagnostics directly from the Azure portal, where you can also review insights and a report about various logs, rich configuration, and diagnostics data. We recommend that you run Performance Diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
 
-This article explains how to use Performance Diagnostics and what the continuous and on-demand modes offer. 
-
-> [!NOTE]
-> Continuous diagnostics is currently supported only on Windows. On Windows VMs, you'll see the option to enable both on-demand and continuous diagnostics. On Linux VMs, you'll see the option to enable on-demand diagnostics. For more information, see [Install and run Performance Diagnostics on your VM](#install-and-run-performance-diagnostics-on-your-vm).
+This article explains how to use Performance Diagnostics and what the continuous and on-demand modes offer.
 
 ## Prerequisites
 
@@ -87,7 +84,7 @@ The following distributions are currently supported for on-demand diagnostics.
 | Debian                     | 9, 10, 11 [`*`], 12 |
 | SLES                       | 12 SP5 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP3 [`*`], 15 SP4 [`*`], 15 SP5 [`*`], 15 SP6 [`*`] |
 | AlmaLinux                  | 8.4, 8.5, 9 |
-| Azure Linux                | 2.0 |
+| Azure Linux                | 2.0, 3.0|
 
 > [!NOTE]
 > [`*`] See [Known issues](../linux/how-to-use-perfinsights-linux.md#known-issues)
@@ -145,7 +142,7 @@ Select one of the following tabs for detailed instructions.
 
     | Option | Description |
     | ------ | ----------- |
-    | **Enable continuous diagnostics** | Get continuous, actionable insights into high resource usage by having data collected every 5 seconds and updates uploaded every 5 minutes to address performance issues promptly. Store insights in your preferred storage account. The storage account retains insights based on the account retention policies that you can configure to [manage the data lifecycle effectively](/azure/storage/blobs/lifecycle-management-policy-configure). You can disable continuous diagnostics at any time. |
+    | **Enable continuous diagnostics** | Get continuous, actionable insights into high resource usage by having data collected every five seconds and updates uploaded every five minutes to address performance issues promptly. Store insights in your preferred storage account. The storage account retains insights based on the account retention policies that you can configure to [manage the data lifecycle effectively](/azure/storage/blobs/lifecycle-management-policy-configure). You can disable continuous diagnostics at any time. |
     | **Run on-demand diagnostics** | Get on-demand, actionable insights into high resource usage and various system configurations. Receive a downloadable report that provides comprehensive diagnostics data to address performance issues. Store insights and reports in your preferred storage account. The storage account retains insights that are based on the account retention policies that you can configure to [manage the data lifecycle effectively](/azure/storage/blobs/lifecycle-management-policy-configure). You can initiate on-demand diagnostics at any time by using the specific analysis type that you need:<br/><ul><li>**Performance analysis**<br/>Includes all checks in the **Quick analysis** scenario, and monitors high resource consumption. Use this version to troubleshoot general performance issues, such as high CPU, memory, and disk usage. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><br/><li>**Quick analysis**<br/>Checks for known issues, analyzes best practices, and collects diagnostics data. This analysis takes several minutes to run. Learn more for [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><br/><li>**Advanced performance analysis** [*Windows only*]<br/>Includes all checks in the **Performance analysis** scenario, and collects one or more of the traces, as listed in the following sections. Use this scenario to troubleshoot complex issues that require more traces. Running this scenario for longer periods increases the overall size of diagnostics output, depending on the size of the VM and the trace options that are selected. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li><br/><li>**Azure file analysis** [*Windows only*]<br/>Includes all checks in the **Performance analysis** scenario, and captures a network trace and Server Message Block (SMB) counters. Use this scenario to troubleshoot the performance of Azure files. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li></ul> |
     | **Storage account** | Optionally, if you want to use a single storage account to store the Performance Diagnostics results for multiple VMs, you can select a storage account from the drop-down menu. If you don't specify a storage account, Performance Diagnostics uses the default diagnostics storage account or creates a new storage account. |
     |[Authentication method](#authentication-methods)|Performance Diagnostics supports three authentication methods to write performance diagnostics data to the storage account. They are system-assigned managed identity (default), user-assigned managed identity and storage account access keys. If system-assigned managed identity is selected but not enabled for the VM, Performance Diagnostics attempts to enable it. If the current user lacks the necessary permissions, this operation might fail.|
@@ -189,9 +186,9 @@ This table compares the data that's provided by Continuous and On-demand Perform
 
 |                               | Continuous Performance Diagnostics                                                                          | On-demand Performance Diagnostics                                                        |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| **Availability**              | Currently supported only for Windows VMs                                                                    | Supported for both Windows and Linux VMs                                                 |
+| **Availability**              | GA for Windows VMs, Public Preview for Linux VMs                                                                  | GA for both Windows and Linux VMs                                                 |
 | **Insights generated**        | Continuous actionable insights into high resource usage, such as high CPU, high memory, and high disk usage | On-demand actionable insights into high resource usage and various system configurations |
-| **Data collection frequency** | Collects data every 5 seconds, updates are uploaded every 5 minutes                                             | Collects data on demand for the selected duration of the on-demand run                    |
+| **Data collection frequency** | Collects data every five seconds, updates are uploaded every five minutes                                             | Collects data on demand for the selected duration of the on-demand run                    |
 | **Reports generated**         | Doesn't generate a report                                                                                   | Generates a report that has comprehensive diagnostics data                                   |
 
 ### View Performance Diagnostics insights

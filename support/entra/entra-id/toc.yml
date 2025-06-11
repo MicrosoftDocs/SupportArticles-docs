@@ -71,6 +71,8 @@
         href: app-integration/package-inspector-msal-android-native.md
       - name: Repeated login prompts in iOS MSAL implementation
         href: app-integration/repeat-login-prompts-in-msal-ios-app.md
+      - name: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
+        href: app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
       - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
         href: app-integration/serilog-protected-web-api-authentication-authorization-errors.md
       - name: WIF10201 No valid key mapping found
@@ -299,6 +301,8 @@
      href: users-groups-entra-apis/delta-query-not-supported-for-aad-b2c-tenant.md
    - name: Handling errors in Graph API requests with Invoke-RestMethod
      href: app-integration/graph-api-error-handling-invoke-restmethod.md
+   - name: Only one user is returned when running List users API
+     href: users-groups-entra-apis/only-one-user-returned-by-microsoft-graph-list-users-api.md
    - name: Troubleshoot Authorization RequestDenied error
      href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
    - name: The memberOf API returns null values for properties

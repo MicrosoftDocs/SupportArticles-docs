@@ -5,6 +5,7 @@ ms.reviewer: mayasingh, josebl, qasimsarfraz, v-weizhu
 ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-general #Don't change.
 ms.date: 06/06/2025
+ms.custom: sap:security and identity
 #customer intent: As a DevOps Engineer, I want to set up an effective Seccomp profile so that I can run my workloads successfully while making them as secure as possible.
 ---
 # Troubleshoot seccomp profile configuration in Azure Kubernetes Service

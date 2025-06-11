@@ -10,11 +10,19 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/30/2025
+  ms.date: 06/04/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+
+# Card
+  - title:  All Partner Services
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Resolve Azure Native Integrations Purchase Errors
+            url: marketplace-purchases-errors.md
 
 # Card
   - title:  Azure Native New Relic Service
