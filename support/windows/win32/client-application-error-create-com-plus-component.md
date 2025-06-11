@@ -1,7 +1,7 @@
 ---
 title: An application fails to create a COM+ component
 description: This article describes a problem that might occur when a client application tries to create a COM+ component, and the client application receives an error message.
-ms.date: 12/19/2023
+ms.date: 06/11/2025
 ms.custom: sap:Component Development\COM, DCOM, and COM+ Programming and Runtime
 ms.reviewer: wmascia
 ---
