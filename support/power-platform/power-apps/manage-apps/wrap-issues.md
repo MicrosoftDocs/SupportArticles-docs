@@ -23,7 +23,7 @@ If your wrap build fails, try these steps:
 All images in your wrap project must be in PNG format. Using other formats will cause the build to fail. Use an image converter to convert images to `.png`.
 
 > [!IMPORTANT]  
-> Renaming a file extension to `.png` does not convert the image to PNG format.
+> Renaming a file extension to `.png` doesn't convert the image to PNG format.
 
 ### 2. Check Key Vault Setup
 
@@ -59,7 +59,7 @@ Also, verify your device meets these [minimum requirements](/power-apps/maker/co
 
 ---
 
-## Issue 5: Cannot Sign In or See Data in Wrapped App
+## Issue 5: Can't Sign In or See Data in Wrapped App
 
 If you have trouble signing in or accessing data, check the following:
 
@@ -82,13 +82,13 @@ If you have trouble signing in or accessing data, check the following:
 You may encounter these error codes in the wrap wizard:
 
 - [Error code 1000118: Default subscription not found or missing access permissions.](#error-code-1000118)
-- [Error code 1000119: Key vault does not exist or is missing access privileges.](#error-code-1000119)
+- [Error code 1000119: Key vault doesn't exist or is missing access privileges.](#error-code-1000119)
 - [Error code 1000120: No organization ID tags found on key vault.](#error-code-1000120)
-- [Error code 1000121: Android keystore is not valid. Missing tag and/or certificate.](#error-code-1000121)
-- [Error code 1000122: iOS certificate is not valid.](#error-code-1000122)
-- [Error code 1000123: iOS profile is not valid.](#error-code-1000123)
+- [Error code 1000121: Android keystore isn't valid. Missing tag and/or certificate.](#error-code-1000121)
+- [Error code 1000122: iOS certificate isn't valid.](#error-code-1000122)
+- [Error code 1000123: iOS profile isn't valid.](#error-code-1000123)
 - [Error code 1000128: Missing access key used while accessing Azure Blob storage location.](#error-code-1000128)
-- [Error code 1000130: Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard is not set.](#error-code-1000130)
+- [Error code 1000130: Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set.](#error-code-1000130)
 - [Error code 1000131: Missing tags for the specified Azure Key Vault resourceID.](#error-code-1000131)
 
 ---
@@ -135,7 +135,7 @@ You may encounter these error codes in the wrap wizard:
 
 | Error code | Description |
 |------------|--------------------------|
-|1000119     | Key vault does not exist, or Key vault is missing access privileges |
+|1000119     | Key vault doesn't exist, or Key vault is missing access privileges |
 
 1. Confirm your Azure key vault is in the tenant’s **Default subscription**.
 2. While creating the key vault, select **Vault access policy**.
@@ -193,7 +193,7 @@ You may encounter these error codes in the wrap wizard:
 
 | Error code | Description |
 |------------|--------------------------|
-|1000121     | Android keystore is not valid. Missing Tag and/or Certificate |
+|1000121     | Android keystore isn' valid. Missing Tag and/or Certificate |
 
 1. Import your **Android Certificate**.
 
@@ -213,7 +213,7 @@ You may encounter these error codes in the wrap wizard:
 
 | Error code | Description |
 |------------|--------------------------|
-|1000122     | iOS certificate is not valid |
+|1000122     | iOS certificate isn't valid |
 
 1. Import your **iOS Certificate**.
 
@@ -233,7 +233,7 @@ You may encounter these error codes in the wrap wizard:
 
 | Error code | Description |
 |------------|--------------------------|
-|1000123     | iOS profile is not valid |
+|1000123     | iOS profile isn't valid |
 
 1. Import your **Provisioning Profile** as a **Secret**.
 2. Add a **Tag** for your provisioning profile:
@@ -259,7 +259,7 @@ Learn more: [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#
 
 | Error code      | Description          |
 | ------------- |:-------------|
-|1000130  |  Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard is not set. |
+|1000130  |  Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set. |
 
 To resolve this error, add the resourceID for the Azure Key Vaults you intend to use with your wrap application.  
 Ensure that all required tags are present for the resourceID linked to the bundleID specified in the wrap wizard.  
@@ -290,7 +290,7 @@ For more information, see [Step 2: Target platform](/power-apps/maker/common/wra
 ## Issue 8: Error Code 5objp
 
 **Reason:**  
-The hash key or redirect URL used in the APK does not match the one registered in Azure AD, causing a mismatch error during authentication.
+The hash key or redirect URL used in the APK doesn't match the one registered in Azure AD, causing a mismatch error during authentication.
 
 **How to Debug and Fix Redirect URI Issues (Android/Emulator):**
 1. Install Android Studio and set up an emulator.
@@ -308,7 +308,7 @@ The hash key or redirect URL used in the APK does not match the one registered i
 ## Issue 9: Error Code 9n155
 
 **Reason:**  
-The app registration is not configured to support multi-tenant accounts.
+The app registration isn't configured to support multi-tenant accounts.
 
 **How to Fix:**
 1. Go to the Azure Portal → **App Registrations** → select your app.
@@ -320,7 +320,7 @@ The app registration is not configured to support multi-tenant accounts.
 
 ## Other Issues
 
-If your issue is not covered here, or if the above steps do not resolve your problem, see [Next steps](#next-steps) to report your issue. Be prepared to provide a repro.
+If your issue isn't covered here, or if the above steps don't resolve your problem, see [Next steps](#next-steps) to report your issue. Be prepared to provide a repro.
 
 - On the sign-in screen, tap the gear icon in the bottom right and select **Session Details**.
 - After opening the app, press and hold the screen, then select **Session Details**.
