@@ -1,12 +1,11 @@
 ---
-title: Can't access PowerShell.exe when installing Microsoft 365 apps
+title: Can't Access PowerShell.exe When You Install Microsoft 365 Apps
 description: Provides a workaround for an issue that prevents you from installing Microsoft 365 apps because PowerShell is blocked.
-author: helenclu
-ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: 
+ms.custom:
+  - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - CI 171120
   - CSSTroubleshoot
 ms.reviewer: balram, bcorob, ansons
@@ -16,10 +15,10 @@ appliesto:
   - Office 2021
   - Office 2019
 search.appverid: MET150
-ms.date: 05/28/2025
+ms.date: 06/11/2025
 ---
 
-# "Windows cannot access the specified device, path, or file" error when installing Microsoft 365 apps
+# Error "Windows cannot access the specified device, path, or file" when you install Microsoft 365 apps
 
 ## Symptoms
 
