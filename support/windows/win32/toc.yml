@@ -25,8 +25,6 @@
       href: ime-crash-processing-cross-thread-sent-message.md
     - name: Japanese handwritten characters aren't recognized
       href: japanese-handwritten-characters-not-recognized.md
-    - name: Navigation bar doesn't update when navigating shell namespace extension folders
-      href: navigation-bar-not-update-navigating-shell-namespace-extension-folders.md
     - name: Owner window gets activated when taskbar buttons are created
       href: owner-window-activated-taskbar-buttons-created-both-windows.md
   - name: Distributed transactions
