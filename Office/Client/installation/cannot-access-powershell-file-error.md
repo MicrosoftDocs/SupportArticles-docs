@@ -7,6 +7,7 @@ ms.topic: troubleshooting
 ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - CI 171120
+  - CI 5945
   - CSSTroubleshoot
 ms.reviewer: balram, bcorob, ansons
 appliesto: 

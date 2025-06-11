@@ -11,6 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - CSSTroubleshoot
   - CI 165888
+  - CI 5942
 appliesto: 
   - Microsoft 365
 ms.date: 06/11/2025
