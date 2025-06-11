@@ -5,7 +5,7 @@ author: cts-davean
 ms.author: davean
 ms.reviewer: v-sidong
 ms.custom: sap:System Services Development\Other
-ms.date: 06/10/2025
+ms.date: 06/11/2025
 ---
 
 # GetTickCount resets to zero after approximately 776 days
@@ -20,7 +20,7 @@ This problem occurs in 32-bit applications running on Windows 8, Windows Server 
 
 ## Status
 
-Microsoft has confirmed this problem is fixed in Windows 11 version 24H2 and Windows Server 2025.
+Microsoft has confirmed this problem is fixed in Windows 11, version 24H2 and Windows Server 2025.
 
 ## Workaround
 
