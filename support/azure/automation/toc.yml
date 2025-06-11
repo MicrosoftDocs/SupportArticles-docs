@@ -1,9 +1,9 @@
 - name: Welcome
   href: welcome-automation.yml
-  - name: Runbook not working as expected
-    items:
-    - name: Troubleshoot runbook execution issues when using PowerShell
-      href: runbooks/powershell-job-script-cmdlets-not-working.md
+- name: Runbook not working as expected
+  items:
+  - name: Troubleshoot runbook execution issues when using PowerShell
+    href: runbooks/powershell-job-script-cmdlets-not-working.md
 - name: Automation modifications aren't reflected in the portal
   href: configuration/modifications-not-reflect-portal.md
 - name: Capture diagnostics information
