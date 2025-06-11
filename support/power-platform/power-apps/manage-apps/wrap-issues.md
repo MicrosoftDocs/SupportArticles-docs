@@ -265,7 +265,6 @@ You need to add your access key to the Azure blob storage account in the Azure k
 ## Issue 8 - Error Code: 5objp
 
 Reason for the above error code:The hash key or redirect URL used in the APK does not match the one registered in Azure AD, causing a mismatch error during authentication.
-
 Steps to Debug and Fix Redirect URI Issues in Android App Using Emulator:
 1.	Install Android Studio to set up an emulator on your system.
 2.	Launch the emulator and drag and drop the APK file onto it to install the app.
@@ -279,8 +278,8 @@ Steps to Debug and Fix Redirect URI Issues in Android App Using Emulator:
 
 
 ## Issue 9 - Error code: 9n155
-This issue occurs when the app registration is not configured to support multi-tenant accounts. Update the app registration to allow multiple organizations (multi-tenant).
 
+This issue occurs when the app registration is not configured to support multi-tenant accounts. Update the app registration to allow multiple organizations (multi-tenant).
 Steps to Fix:
 1. Go to Azure Portal → App Registrations → Select the relevant app.
 2. Navigate to Overview → Supported account types -> it should be "Multiple Organization" as an input
