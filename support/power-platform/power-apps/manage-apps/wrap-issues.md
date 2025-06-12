@@ -97,7 +97,7 @@ For each error, follow the recommended steps below:
    ```
 
    ```powershell
-   New-AzureADServicePrincipal -AppId <AppName> -DisplayName <AppDisplayName>
+   New-AzureADServicePrincipal -AppId <AppId> -DisplayName <AppDisplayName>
    ```
 
 3. In the [Azure portal](https://portal.azure.com), under **Access Control (IAM)**, assign the **Reader** role to your service principal.
@@ -138,7 +138,7 @@ For each error, follow the recommended steps below:
    ```
 
    ```powershell
-   New-AzureADServicePrincipal -AppId <AppName> -DisplayName <DisplayName>
+   New-AzureADServicePrincipal -AppId <AppId> -DisplayName <DisplayName>
    ```
 
 4. In the [Azure portal](https://portal.azure.com), assign the **Reader** role as shown above.
