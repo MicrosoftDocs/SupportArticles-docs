@@ -162,7 +162,7 @@ To identify the LUN of a physical disk, follow these steps:
     >
     >   - Code: `@{Name="Size (GB)"; Expression={[math]::Round($_.Size / 1GB, 2)}}`
     >   - Explanation:
-    >     - `@{...}`: A hashtable defining a calculated property.
+    >     - `@{...}`: A hash table defining a calculated property.
     >     - `Name="Size (GB)"`: Specifies the name of the new property (in this case, "Size (GB)").
     >     - `Expression={...}`: Defines how the property value is calculated:
     >       - `$_.Size`: Refers to the size property of the current physical disk (value is in bytes).
@@ -196,7 +196,7 @@ To identify the LUN of a physical disk, follow these steps:
 
 8. Once the disk is removed from the storage pool, it should be available under the primordial pool.
 
-    :::image type="content" source="media/manage-disks-standalone-storage-spaces/primordial-pool.png" alt-text="Screenshot of the storage pool showing that the disk is available under the primordial pool.":::
+    :::image type="content" source="media/manage-disks-standalone-storage-spaces/primordial-pool.png" alt-text="Screenshot of the storage pool showing that the disk is available under the primordial pool." lightbox="media/manage-disks-standalone-storage-spaces/primordial-pool.png":::
 
 9. After confirming the removal with the `Get-PhysicalDisk` cmdlet in PowerShell, detach the physical disk in the Azure portal if necessary.
 10. Verify the health of the storage pool and the virtual disk by running the `Get-StoragePool` and `Get-VirtualDisk` cmdlets.
