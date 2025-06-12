@@ -97,7 +97,7 @@ For each error, follow the recommended steps below:
    ```
 
    ```powershell
-   New-AzureADServicePrincipal -AppId <AppId> -DisplayName <AppDisplayName>
+   New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
    ```
 
 3. In the [Azure portal](https://portal.azure.com), under **Access Control (IAM)**, assign the **Reader** role to your service principal.
@@ -138,7 +138,7 @@ For each error, follow the recommended steps below:
    ```
 
    ```powershell
-   New-AzureADServicePrincipal -AppId <AppId> -DisplayName <DisplayName>
+   New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
    ```
 
 4. In the [Azure portal](https://portal.azure.com), assign the **Reader** role as shown above.
