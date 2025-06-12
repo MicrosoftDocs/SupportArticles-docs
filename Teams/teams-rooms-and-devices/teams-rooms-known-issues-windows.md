@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 05/20/2025
+ms.date: 06/12/2025
 ---
 # Known issues with Teams Rooms on Windows
 
@@ -43,6 +43,7 @@ ms.date: 05/20/2025
 |Resource accounts not getting real-time alerts about audio & video quality.|Some Teams Rooms resource accounts which are assigned the Microsoft Teams Rooms Pro service plan are not sent the expected real-time alerts when the audio or video quality is poor.<br/><br/>When you check the Microsoft Teams admin center, the status of these accounts is displayed as **Pending provisioning**.<br/><br/>When you try to add the Teams Rooms Pro licensed account to the Real-Time Analytics policy in the Microsoft Teams admin center, you get the following error message:<br/><i>Audio monitoring is available only for users who have Teams Premium or a Teams Rooms Pro license. Visit the Microsoft 365 admin center to upgrade licenses.</i>|To work around the issue, use the following steps:<ol><li>Navigate to the Microsoft 365 admin center.</li><li>Remove the Teams Rooms Pro license from the Teams Rooms resource account.</li><li>Save the updated settings.</li><li>Reassign the Teams Rooms Pro license to the Teams Rooms resource account.</li><li>Save the updated settings.</li></ol>|
 |Unable to join some Webex meetings|When you select the **Join** button to join a Cisco Webex meeting from a Teams Rooms on Windows device, you're not connected to the meeting and see the home screen on the device instead.|No workaround is available at this time. Cisco is investigating the issue.|
 |Only see one camera's view even though multi-camera feature is turned on.|Your Teams Rooms on Windows device is configured for multiple cameras. However after the device restarts, remote users might see only the default camera's view.<br/><br/>This issue might occur only in the first meeting after the device restarts. The cameras function as expected in all subsequent meetings.|To work around the issue, end the first meeting after the device restarts, and start a second meeting.|
+|Front of Room view displays a blank, black screen on a remote access tool.|When you access a Teams Rooms on Windows console remotely by using tools such as the Teams Rooms Pro Management Portal (PMP), TeamViewer, Virtual Network Computing (VNC) etc., the Front of Room (FoR) monitors display a black image instead of the expected user interface.<br/><br/>The FoR monitors in the meeting room display the expected screen but show only a black image in the view on the remote access tool.<br/><br/>If you sign in to the Teams Rooms device by using administrator credentials, you see the Windows screen in the FoR view as expected.|No workaround is available at this time.|
 
 ## Hardware issues
 
