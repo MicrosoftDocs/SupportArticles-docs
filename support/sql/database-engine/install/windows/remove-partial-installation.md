@@ -1,7 +1,7 @@
 ---
 title: Remove a partial installation of SQL Server
 description: This article describes the procedure to remove a partial installation of SQL Server.
-ms.date: 09/25/2020
+ms.date: 06/12/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: amylewis
 ms.topic: how-to
@@ -39,20 +39,25 @@ Use the following procedure to resolve the problem:
 
 1. Navigate to the **Tools** menu and select the **Installed SQL Server features discovery report** and verify there are no more \<instance name\>.INACTIVE instances shown in the report.
 
-1. In case you find the inactive instance entries then Within the XML, around each **MSSQLSERVER.INACTIVE** instance, locate the `ProductCode` field , it will be looks like:
-   ```xml
-   ProductCode="{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}"
-   ```
-   Note each **ProductCode** associated with the inactive instance then open  **Command Prompt as Administrator** and for each `ProductCode` identified, run the following command to manually uninstall the component:
-   ```cmd
-   msiexec /x {PRODUCT-CODE-GUID}
-   ```
-   Repeat the above command for **each ProductCode** linked to the inactive instance.
-   **Example:**
+1. If there are inactive instances in the discovery report, follow these steps to remove them:
 
-   ```cmd
-   msiexec /x {9FFAE13C-6160-4DD0-A67A-DAC5994F81BD}
-   ```
+   1. Open the corresponding XML file.
+   1. Find each **MSSQLSERVER.INACTIVE** entry.
+   1. Locate and note down the **ProductCode** value. Here is an example:
+
+      ```xml
+      ProductCode="{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}"
+      ```
+   1. Open **Command Prompt** as an administrator and run the following command for each **ProductCode**:
+
+      ```cmd
+      msiexec /x {PRODUCT-CODE-GUID}
+      ```
+      Repeat the above command for each **ProductCode** linked to the inactive instance. Here is an example:
+
+      ```cmd
+      msiexec /x {9FFAE13C-6160-4DD0-A67A-DAC5994F81BD}
+      ```
 1. Retry the setup program that was originally failing to complete.
 
 > [!NOTE]
