@@ -162,7 +162,7 @@ To identify the LUN of a physical disk, follow these steps:
     >
     >   - Code: `@{Name="Size (GB)"; Expression={[math]::Round($_.Size / 1GB, 2)}}`
     >   - Explanation:
-    >     - `@{...}`: A hash table defining a calculated property.
+    >     - `@{...}`: A hashtable defining a calculated property.
     >     - `Name="Size (GB)"`: Specifies the name of the new property (in this case, "Size (GB)").
     >     - `Expression={...}`: Defines how the property value is calculated:
     >       - `$_.Size`: Refers to the size property of the current physical disk (value is in bytes).
