@@ -1,7 +1,7 @@
 ---
 title: Manage Disks in Standalone Storage Spaces
 description: Provides a detailed guide on how to identify the Logical Unit Number (LUN) of a physical disk presented from Azure for Storage Spaces on Windows Server.
-ms.date: 06/06/2025
+ms.date: 06/12/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Manage disks in standalone Storage Spaces on Windows Server hosted in Azure
 
-This article provides a detailed guide on how to identify the Logical Unit Number (LUN) of a physical disk presented from Azure for Storage Spaces on Windows Server. This is essential when you remove or replace a physical disk from the storage pool. By following these instructions, you can effectively manage your storage spaces' configurations without compromising data integrity or service availability.
+This article provides a detailed guide on how to identify the Logical Unit Number (LUN) of a physical disk presented from Azure for Storage Spaces on Windows Server. This is essential when you remove or replace a physical disk from the storage pool. By following these instructions, you can effectively manage the configurations of your storage spaces without compromising data integrity or service availability.
 
 > [!Important]
 > To complete the following procedures, ensure you have administrator privileges in Windows PowerShell and the necessary permissions to manage disks in [Microsoft Azure portal](https://aka.ms/azureportal).
@@ -45,8 +45,8 @@ To identify the LUN of a physical disk, follow these steps:
     >
     > - `FriendlyName`: The user-friendly name of the physical disk.
     > - `UniqueId`: A unique identifier for the disk.
-    > - `PhysicalLocation`: Specifies the physical location of the disk in the system. `Adapter 0` is for operating system disk and temp disk, and `Adapter 1` is for data disks.
-    > - `Usage`: Displays how the disk is currently being used (for example, for storage pools, virtual disks, and so on).
+    > - `PhysicalLocation`: Specifies the physical location of the disk in the system. `Adapter 0` is for the operating system disk and temp disks, and `Adapter 1` is for data disks.
+    > - `Usage`: Displays how the disk is currently being used (for example, for storage pools and virtual disks).
 
 2. To retrieve the unique ID of the virtual disk in the storage pool, run the following cmdlets:
 
@@ -79,13 +79,13 @@ To identify the LUN of a physical disk, follow these steps:
     > [!NOTE]
     > The numbers shown in the `allocatedsize` and `footprintonpool` are in bytes.
 
-3. To locate the LUN of the data disks in the Azure portal, go to Azure portal, select the virtual machine, and select **Settings** > **Disks**. Note down the LUN and match it with the retrieved information from Step 1.
+3. To locate the LUN of the data disks in the Azure portal, go to Azure portal, select the virtual machine, and select **Settings** > **Disks**. Note down the LUN and match it with the retrieved information from step 1.
 
     :::image type="content" source="media/manage-disks-standalone-storage-spaces/storage-spaces-vm.png" alt-text="Screenshot of the StorageSpacesVM window showing the Disks information with LUN.":::
 
 ## Remove a physical disk from the storage pool
 
-1. To retire a physical disk from the storage pool, run the [Set-PhysicalDisk](/powershell/module/storage/set-physicaldisk) cmdlet by using the unique ID (get from Step 1 of the preceding section):
+1. To retire a physical disk from the storage pool, run the [Set-PhysicalDisk](/powershell/module/storage/set-physicaldisk) cmdlet by using the unique ID from step 1 of the preceding section:
 
     ```powershell
     Set-PhysicalDisk -UniqueId <UniqueID> -Usage Retired
@@ -107,7 +107,7 @@ To identify the LUN of a physical disk, follow these steps:
     4      Msft Virtual Disk              Unspecified False   OK                Healthy      Retired      35 GB
     ```
 
-2. To identify the physical disks associated with the virtual disk, run the following cmdlet by using the unique ID (get from Step 2 of the preceding section):
+2. To identify the physical disks associated with the virtual disk, run the following cmdlet by using the unique ID from step 2 of the preceding section:
 
     ```powershell
     Get-VirtualDisk -UniqueId <UniqueID> | Get-PhysicalDisk
@@ -166,14 +166,14 @@ To identify the LUN of a physical disk, follow these steps:
     >     - `Name="Size (GB)"`: Specifies the name of the new property (in this case, "Size (GB)").
     >     - `Expression={...}`: Defines how the property value is calculated:
     >       - `$_.Size`: Refers to the size property of the current physical disk (value is in bytes).
-    >       - `/ 1GB`: Converts the size from bytes to gigabytes (1 GB is a constant in PowerShell equal to 1024 * 1024 * 1024 bytes).
+    >       - `/ 1GB`: Converts the size from bytes to gigabytes (1 GB is a constant in PowerShell equal to 1,024 * 1,024 * 1,024 bytes).
     >       - `[math]::Round(..., 2)`: Rounds the result to `2` decimal places for readability.
     >
     > - `PhysicalLocation`: Specifies the physical location of the disk in the system.
-    > - `Usage`: Displays how the disk is currently being used (for example, for storage pools, virtual disks, and so on).
+    > - `Usage`: Displays how the disk is currently being used (for example, for storage pools and virtual disks).
     > - `VirtualDiskFootprint`: Indicates how much of the physical disk's capacity is being used by virtual disks.
 
-6. Remove the physical disk ([Remove-PhysicalDisk](/powershell/module/storage/remove-physicaldisk)) from the server by running the following cmdlets using the unique ID from Step 1:
+6. [Remove the physical disk](/powershell/module/storage/remove-physicaldisk) from the server by running the following cmdlets using the unique ID from step 1:
 
     ```powershell
     $PDToRemove = Get-PhysicalDisk -UniqueID <UniqueID>
