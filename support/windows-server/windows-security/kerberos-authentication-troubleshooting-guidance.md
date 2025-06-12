@@ -164,7 +164,7 @@ If DNS still doesn't work correctly, follow these steps:
    nslookup client1 10.0.0.1
    ```
 
-1. Run the same command from the target server. The command resembles the following:
+1. Run the same command from the target server. It now resembles the following command:
 
    ```console
    nslookup <TargetName> <DNSIPAddress>
@@ -224,11 +224,11 @@ If you installed any updates, restart the affected computers, and then try again
 
 #### i. Check application update status
 
-Make sure that the client and server applications are up to date on the client computer and the target server. If you install any updates, restart the affected computers and then try to authenticate again.
+Make sure that the client and server applications are up to date on the client computer and the target server. If you install any updates, restart the affected computers and then try again to authenticate.
 
 #### j. Restart the computers
 
-If you haven't already restarted the client computer, target server, or domain controller, restart them now. After the computers restart, try to authenticate again.
+If you didn't already restart the client computer, target server, or domain controller, restart them now. After the computers restart, try again to authenticate.
 
 If your infrastructure is OK and you still have an issue, continue to the more advanced troubleshooting procedures.
 
@@ -240,9 +240,9 @@ The following procedures use the free [Network Monitor](https://www.microsoft.co
 
 On the client computer, follow these steps:
 
-1. Do one of the following:
+1. Do one of the following actions:
    - Restart the client computer.
-   - Sign out the account that you're using to troubleshoot, and then sign in again.
+   - Sign out of the account that you're using to troubleshoot, and then sign in again.
    - Close the client application, and then reopen it.
 
 1. Start tracing. To do this, follow these steps:
@@ -285,7 +285,7 @@ This command generates a list of tickets. You can copy this information to anoth
 
 ### 4. Check the trace data for Kerberos messages
 
-You can use Network Monitor to review, filter, and search data in capture files. In particular, look for events that are labeled with "KerberosV5." In addition to status information, such events can list the names or IP addresses of domain controllers that were contacted and the service principal name (SPN) of the service that the client tried  to reach.
+You can use Network Monitor to review, filter, and search data in capture files. In particular, look for events that are labeled by using "KerberosV5." These events provide status information. They can also list the names or IP addresses of domain controllers that were contacted and the service principal name (SPN) of the service that the client tried to reach.
 
 Event descriptions that contain strings that resemble the following are part of typical Kerberos functions:
 
@@ -322,7 +322,7 @@ If a user belongs to a large number of groups (for example, more than 1,000 grou
 
 ### Service issues
 
-Service issues typically involve the SPN and the service account. For example, the SPN might be incorrect, missing, configured on the incorrect account, or configured on more than one account. The troubleshooting checklist in this article  [a. Collect simultaneous network traces](#a-collect-simultaneous-network-traces) earlier in this article. If you have already identified a common SPN issue, see the following articles:
+Service issues typically involve the SPN and the service account. For example, the SPN might be incorrect, missing, configured on the incorrect account, or configured on more than one account. The troubleshooting checklist in this article  [a. Collect simultaneous network traces](#a-collect-simultaneous-network-traces) earlier in this article. If you already determined a common SPN issue, see the following articles:
 
 - [Kerberos generates KDC_ERR_S_PRINCIPAL_UNKNOWN or KDC_ERR_PRINCIPAL_NOT_UNIQUE error](kerberos-error-kdc-err-s-principal-unknown-or-not-unique.md).
 
