@@ -3,7 +3,7 @@ title: Income Tax calculations or discrepancies with the CRA in Canadian Payroll
 description: This article provides information on how income taxes are calculated in Canadian Payroll for Microsoft Dynamics GP, and why the tax calculations in GP may be different than other tax calculators from the Canada Revenue Agency (CRA).
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
-ms.date: 04/17/2025
+ms.date: 06/12/2025
 ms.custom: sap:Payroll
 ---
 # Income Tax calculations or discrepancies with the CRA in Canadian Payroll for Microsoft Dynamics GP
@@ -27,7 +27,7 @@ This article will address these questions:
 
 ## Cause
 
-The CRA accepts different tax calculation methods (as outlined in the link below). The CRA online payroll calculator uses a simple tax calculation method. And Wintod (which is program provided by the Canadian government to calculate taxes) does not take prior history into account and is only an 'estimate'. Microsoft Dynamics GP uses a method called Cumulative Averaging that takes prior pay periods into account, uses a 'projected' annual income established by the date entered, and the number of pay periods that have occurred are factored in. This method does comply within the ranges set by the CRA.
+The CRA accepts different tax calculation methods (as outlined in the link below). The CRA online payroll calculator (PDOC) uses a simple tax calculation method. The [PDOC provided by CRA](https://apps.cra-arc.gc.ca/ebci/rhpd/beta/entry), does not take prior pay history into account and is only an 'estimate'. Microsoft Dynamics GP uses a method called Cumulative Averaging that takes prior pay periods into account, uses a 'projected' annual income established by the date entered, and the number of pay periods that have occurred are factored in. This method does comply within the ranges set by the CRA.
 
 ## Resolution
 
@@ -37,7 +37,7 @@ For instance, the existence of prior pay runs for that employee will affect the 
 
 The CRA actually defines a 'range' of taxes and not a single number as the tax due. The reason they define a range is because they have more than one method to calculate taxes that is accepted. They use a simpler method that is the same for each period in their calculator, and Microsoft Dynamics GP uses a more complex method that takes past history into account. We have verified with the CRA that the numbers calculated by Microsoft Dynamics GP do comply within their acceptable range. There is a pdf published at the site below to explain Computer Tax Calculations. At the bottom of the site below, click on the link under Effective January 1, 2019 to find the pdf. The method Microsoft Dynamics GP uses is similar to [Option 2 - Tax Formula based on cumulative averaging](https://www.canada.ca/en/revenue-agency/services/forms-publications/payroll/t4127-payroll-deductions-formulas/t4127-jan/t4127-jan-payroll-deductions-formulas-computer-programs.html#toc49) in Chapter 6.
 
-[T4127-JAN Payroll Deductions Formulas - 113th Edition - Effective January 1, 2021](https://www.canada.ca/en/revenue-agency/services/forms-publications/payroll/t4127-payroll-deductions-formulas/t4127-jan/)
+[T4127 Payroll Deductions Formulas](https://www.canada.ca/en/revenue-agency/services/forms-publications/payroll/t4127-payroll-deductions-formulas.html)
 
 > [!NOTE]
 > For a new hire with no history, you must use the date of January 1 in order to match the CRA calculations. For example, in the first payrun for a new employee, the tax calculation will vary if you enter it dated January 1 versus a date later in the year, as pay periods that have occurred are also taken into account.
