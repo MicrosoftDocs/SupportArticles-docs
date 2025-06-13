@@ -2506,6 +2506,8 @@ items:
       href: ./shell-experience/default-date-format-changed.md
   - name: File Explorer/Windows Explorer
     items:
+    - name: High-speed network adapters show inaccurate link speed
+      href: ./shell-experience/network-adapters-inaccurate-link-speed.md
     - name: Increased CPU usage when accessing a FileTable share
       href: ./shell-experience/increased-cpu-usage.md
     - name: TEMP folder with logon session ID is deleted
