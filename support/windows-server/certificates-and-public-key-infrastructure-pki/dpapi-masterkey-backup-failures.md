@@ -44,7 +44,10 @@ _Original KB number:_ &nbsp; 3205778
 
 9. SQL Server installation fails with the following error:
 
-    > Error(s): SQL server setup has encountered the following error: "generating the XML document error code 0x8410001.
+    > SQL Server Setup failure.  
+    > SQL Server Setup has encountered the following error:  
+    > "There was an error generating the XML document.  
+    > Error code 0x84B10001.
 
 10. Domain users can't manage SQL databases from SMSS. (SQL Server Management Studio). This issue occurs when the database is navigated from via **SSMS DataBases** -> **CustomerDatabase** -> **Tables** -> **Table name**.
 
