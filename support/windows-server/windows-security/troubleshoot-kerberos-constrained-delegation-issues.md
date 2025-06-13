@@ -71,7 +71,7 @@ Use **Active Directory Users and Computers** (available on the Server Manager **
 2. Make sure that **Trust this user for delegation to specified services only** is selected.
 3. Make sure that the authentication option that's selected is appropriate for the users that access the web service.
 4. Make sure that the service list includes the back-end service (or a common service class such as HOST for the back-end server). If it's necessary, select **Add** to add the service to the list.
-5. Select **Account**, and then review the **Account options** settings. Make sure that **Account is sensitive and cannot be delegated** is not selected.
+5. Select **Account**, and then review the **Account options** settings. Make sure that **Account is sensitive and cannot be delegated** isn't selected.
 6. Select **OK**.
 
 ### Step 4. Check the delegation configuration of the computer account of the front-end server
