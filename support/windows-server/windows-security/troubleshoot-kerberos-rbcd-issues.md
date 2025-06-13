@@ -42,7 +42,7 @@ The configuration details differ depending on the type of account that the front
    > [!NOTE]  
    > In this command, \<BackEndSvcAcct> represents the back-end service account (in this case, the name of the back-end computer).
 
-   This cmdlet retrieves the list of principals that can delegate to the back-end service. Do one of the following:
+   This cmdlet retrieves the list of principals that can delegate to the back-end service. Do one of the following actions:
    - If this list includes the service account that the front-end service is using, then RBCD is correctly configured. Skip to step 3.
    - If this list doesn't include the service account that the front-end service is using, go to the next step.
 
@@ -75,7 +75,7 @@ The configuration details differ depending on the type of account that the front
    > [!NOTE]  
    > In this command, \<BackEndSvcAcct> represents the back-end service account.
 
-   This cmdlet retrieves the list of principals that can delegate to the back-end service. Do one of the following:
+   This cmdlet retrieves the list of principals that can delegate to the back-end service. Do one of the following actions:
    - If this list includes the service account that the front-end service is using, then RBCD is correctly configured. Skip to step 3.
    - If this list doesn't include the service account that the front-end service is using, go to the next step.
 
