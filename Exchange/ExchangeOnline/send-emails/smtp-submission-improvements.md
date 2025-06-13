@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 01/24/2024
+ms.date: 06/12/2025
 ms.reviewer: v-six
 ---
 # Changes in message store and throttling for concurrent connections
