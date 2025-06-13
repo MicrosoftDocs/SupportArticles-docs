@@ -1,21 +1,21 @@
 ---
-title: Troubleshoot runbook execution issues when using PowerShell
+title: Troubleshoot Runbook Execution Issues When Using PowerShell
 description: Describes some runbook execution issues that occur when you use PowerShell in Azure Automation and provides solutions to them.
-ms.date: 06/10/2025
+ms.date: 06/13/2025
 ms.reviewer: adoyle, v-weizhu
 ms.service: azure-automation
 ms.custom: sap:Runbook not working as expected
 ---
 # Troubleshoot runbook execution issues when using PowerShell in Azure Automation
 
-This article provides guidance for diagnosing and resolving runbook execution issues that occur when using PowerShell scripts or cmdlets in Azure Automation.
+This article provides guidance on diagnosing and resolving runbook execution issues that occur when using PowerShell scripts or cmdlets in Azure Automation.
 
 > [!NOTE]
 > Azure Automation enables recovery of runbooks deleted in last 29 days. You can restore a deleted runbook by running a PowerShell script as a job in your Automation account. For more information, see [Restore deleted runbook](/azure/automation/manage-runbooks#restore-deleted-runbook).
 
 ## Limitations and known issues with PowerShell runbooks
 
-PowerShell runbooks are built on Windows PowerShell. You can edit their code directly by using the text editor in the Azure portal. You can also use an offline text editor and then [import the runbooks](/azure/automation/manage-runbooks) into Azure Automation. The PowerShell version is determined by the **Runtime version** specified.
+PowerShell runbooks are built on Windows PowerShell. You can edit their code directly by using the text editor in the Azure portal. You can also use an offline text editor and then [import the runbooks](/azure/automation/manage-runbooks#import-a-runbook-) into Azure Automation. The PowerShell version is determined by the **Runtime version** specified.
 
 **Limitations:**
 
@@ -38,7 +38,7 @@ PowerShell runbooks are built on Windows PowerShell. You can edit their code dir
   $ProgressPreference = "Continue"
   ```
 
-- When you use the [ExchangeOnlineManagement](/powershell/exchange/exchange-online-powershell) module version 3.0.0 or later, you can experience errors.
+- When you use the [ExchangeOnlineManagement](/powershell/exchange/exchange-online-powershell) module version 3.0.0 or later, you might experience errors.
 
   To resolve this issue, make sure that you explicitly upload the `PowerShellGet` and `PackageManagement` modules.
 
