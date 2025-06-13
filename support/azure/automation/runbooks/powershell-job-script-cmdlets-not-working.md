@@ -15,7 +15,7 @@ This article provides guidance on diagnosing and resolving runbook execution iss
 
 ## Limitations and known issues with PowerShell runbooks
 
-PowerShell runbooks are built on Windows PowerShell. You can edit their code directly by using the text editor in the Azure portal. You can also use an offline text editor and then [import the runbooks](/azure/automation/manage-runbooks#import-a-runbook-) into Azure Automation. The PowerShell version is determined by the **Runtime version** specified.
+PowerShell runbooks are built on Windows PowerShell. You can edit their code directly by using the text editor in the Azure portal. You can also use an offline text editor and then [import the runbooks](/azure/automation/manage-runbooks#import-a-runbook) into Azure Automation. The PowerShell version is determined by the **Runtime version** specified.
 
 **Limitations:**
 
