@@ -1,14 +1,14 @@
 ---
 title: Recommended updates and configuration options
-description: This article includes a list of performance improvements and configuration options that are available for SQL Server 2012 and later versions.
+description: This article includes a list of performance improvements and configuration options that are available for SQL Server 2014 and 2012.
 ms.date: 06/12/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: ramakoni, Sureshka, jopilov
 ms.topic: how-to
 ---
-# Recommended updates and configuration options for SQL Server with high-performance workloads
+# Recommended updates and configuration options for SQL Server 2014 and 2012 with high-performance workloads
 
-This article includes a list of performance improvements and configuration options that are available for SQL Server 2012 and later versions.
+This article includes a list of performance improvements and configuration options that are available for SQL Server 2014 and SQL Server 2012.
 
 _Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012  
 _Original KB number:_ &nbsp; 2964518
