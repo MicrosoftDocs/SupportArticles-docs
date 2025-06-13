@@ -280,63 +280,81 @@ For more information, see [Step 2: Target platform](/power-apps/maker/common/wra
 
 Issue: Redirect URI mismatch. This error appears during the app authentication process.
 
-### Common root causes
+#### Common root causes
 
 #### 1. Signature Hash Key mismatch
 
 The APK is signed with a different key than the one registered in the Entra ID application. This can happen if:
 - A different keystore is used during the build process
+
 - The registered hash key was incorrectly generated or copied (for example, includes extra spaces or invalid characters)
 
 #### 2. Redirect URI mismatch
 
 The redirect URI being used by the app doesn't match what's registered in the portal:
 - Redirect URIs are case-sensitive — mismatches can occur if the bundle ID or URI is typed manually with incorrect casing
+
 - Special characters in the URI (such as %2F, %3D) must be properly encoded and match exactly what is registered in Entra ID
 
-### How to fix the issue
+#### How to fix the issue
 
 #### Verify the Signature Hash Key
 
 1. Generate the correct hash key from the keystore used to sign the app
+
 2. Confirm it's registered under **Authentication** → **Android platform settings** in the Entra portal
 
-### Check the Redirect URI
+#### Check the Redirect URI
 
 1. Install [Android Studio](https://developer.android.com/studio) and set up an emulator
+
 2. Launch the emulator and drag the APK file onto it to install the app
+
 3. Open the app in the emulator, attempt to sign in, and note the error message
+
 4. On the error screen, locate the redirect URI being used
+
 5. If the hash key in the URI contains encoded characters (for example, `%2F`), decode them (`%2F` becomes `/`) to get the Signature Hash Key
+
 6. Copy the decoded Signature Hash Key
+
 7. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **App registrations** and select your app
+
 8. Under **Authentication**, review the configured [redirect URIs](/entra/identity-platform/how-to-add-redirect-uri#add-a-redirect-uri)
+
 9. If the redirect URI is missing, add it with the correct Bundle ID and Signature Hash Key, then save your changes
+
 10. Compare the existing redirect URI character-by-character (including case and encoding) with the one registered in Entra ID
+
 11. If manually entering the Bundle ID in the portal, double-check for case consistency
 
-### Recommended practices
+#### Recommended practices
 
 To avoid this error in the future:
 
 - Always copy the Bundle ID and hash key directly from the project/build output
+
 - Use logging or emulator logs to inspect the exact redirect URI at runtime
+
 - Avoid manually typing or modifying hash keys or redirect URIs
+
 - Use [Android Studio](https://developer.android.com/studio) to verify your app configuration
 
 ---
 
 ## Issue 9: Error message: "Something went wrong [2002]", Error code: 9n155
 
-### Common root causes
+#### Common root causes
 This error typically occurs when the app registration is created using the Wrap Wizard, which by default sets the app to single-tenant mode. If the user does not manually update this setting or accidentally selects single tenant during manual app registration, wrap app will be unable to authenticate, resulting in error 9n155. 
 
 Issue: The app registration isn't configured to support [multitenant accounts](/security/zero-trust/develop/identity-supported-account-types#accounts-in-any-organizational-directory-only---multitenant).
 
-### Resolution
+#### Resolution
 
 1. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **App registrations** and select your app.
+
 2. In the **Essentials** section, locate **Supported account types**. It should be set to **Multiple organizations**. If not, set it to **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)**.
+
 3. Save your changes.
 
 ---
@@ -349,8 +367,8 @@ If your issue isn't covered here, or if the steps above don't resolve your probl
 
 For troubleshooting sign-in issues, you can collect session details:
 
-- **On the sign-in screen**: Tap the gear icon in the bottom right and select **Session Details**.
-- **After opening the app**: Press and hold the screen, then select **Session Details**.
+- For Wrap wizard: **On the sign-in screen**: Tap the gear icon in the top right and select **Session Details**.
+- For mobile devices: **After opening the app**: Press and hold the screen, then select **Session Details**.
 
 ## Next steps
 
