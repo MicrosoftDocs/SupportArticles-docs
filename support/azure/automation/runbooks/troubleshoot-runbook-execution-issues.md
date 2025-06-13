@@ -23,7 +23,7 @@ Process automation in Azure Automation lets you create and manage PowerShell, a 
 |---|---|
 |`400 Bad Request: This webhook is expired or disabled`|[Scenario: 400 Bad Request status when calling a webhook](/azure/automation/troubleshoot/runbooks#expired%20webhook)|
 |`The remote server returned an error: (403) Forbidden`|[Scenario: Access blocked to Azure Storage, or Azure Key Vault, or Azure SQL](/azure/automation/troubleshoot/runbooks#scenario-access-blocked-to-azure-storage-or-azure-key-vault-or-azure-sql)|
-|`The remote server returned an error: (403) Forbidden`|[Scenario: Runbook fails with a No permission or Forbidden 403 error](/azure/automation/troubleshoot/runbooks#runbook-fails-no-permission)|
+|`this.Client.SubscriptionId cannot be null`|[Scenario: Runbook fails with "this.Client.SubscriptionId cannot be null." error message](/azure/automation/troubleshoot/runbooks#runbook-fails-no-permission)|
 |`ErrorCode: AuthorizationFailed` </br></br>`StatusCode: 403`|[Scenario: Runbooks fail when dealing with multiple subscriptions](/azure/automation/troubleshoot/runbooks#runbook-auth-failure)|
 |`429: The request rate is currently too large. Please try again.`|[Scenario: 429: The request rate is currently too large](/azure/automation/troubleshoot/runbooks#429)|
 
@@ -34,7 +34,7 @@ Process automation in Azure Automation lets you create and manage PowerShell, a 
 |Runbooks fail with the error `The subscription named <subscription name> cannot be found.`|This error can occur when the runbook doesn't use a managed identity to access Azure resources. To resolve this issue, see [Scenario: Unable to find the Azure subscription](/azure/automation/troubleshoot/runbooks#unable-to-find-subscription).|
 |`Your Azure credentials haven't been set up or have expired, please run connect-azureRmAccount to set up your azure credentials.`|This error can occur when you don't use a managed identity.|
 |Command not recognized.|This error often occurs when modules aren't imported or are out-of-date. Make sure that dependent modules in your script are [imported into Azure Automation](/azure/automation/automation-runbook-gallery#modules-in-powershell-gallery) and are the correct version. If the module is in your Automation account, there might be an issue loading it into the sandbox. Try adding an explicit `import-module` statement at the beginning of your runbook.|
-|Forbidden with client authentication scheme *anonymous*.|This error occurs when using credentials in an Azure Automation sandbox. To resolve this error, use a managed identity.|
+|`The HTTP request was forbidden with client authentication scheme 'anonymous'`.|This error occurs when using credentials in an Azure Automation sandbox. To resolve this error, use a managed identity.|
 |`Unable to require token for tenant <tenant-id>`.|This error occurs when using credentials in an Azure Automation sandbox. To resolve this error, use a managed identity.|
 |`Server failed to authenticate the request.`|This error occurs when using credentials in an Azure Automation sandbox. To resolve this error, use a managed identity.|
 |Errors when using the `Connect-AzAccount` cmdlet.|[Scenario: Sign-in to Azure account failed](/azure/automation/troubleshoot/runbooks#sign-in-failed).|
@@ -46,14 +46,14 @@ Process automation in Azure Automation lets you create and manage PowerShell, a 
 
 |Issue|Solution|
 |---|---|
-|Runbook is suspended or unexpectedly fails.|Review your [Job Statuses](/azure/automation/automation-runbook-execution#job-statuses) for runbook statuses and possible causes. [Add more output](/azure/automation/automation-runbook-output-and-messages#message-streams) to identify what happens before the runbook is suspended. [Handle any exceptions](/azure/automation/automation-runbook-execution#handling-exceptions) thrown by your job. Retry when certain exceptions occur, such as WebSocket exceptions, to prevent transient network failures from causing runbook failures. If you have issues with a cmdlet, you might find more information with the service you try to use through the cmdlet. For example, the `New-AzAnalysisServicesServer` cmdlet related issues might end up with the Analysis Services team.|
+|Runbook is suspended or unexpectedly fails.|Review your [Job Statuses](/azure/automation/automation-runbook-execution#job-statuses) for runbook statuses and possible causes. [Add more output](/azure/automation/automation-runbook-output-and-messages#message-streams) to identify what happens before the runbook is suspended. [Handle any exceptions](/azure/automation/automation-runbook-execution#handling-exceptions) thrown by your job. Retry your job when certain exceptions occur, such as WebSocket exceptions, to prevent transient network failures from causing runbook failures. If you have issues with a cmdlet, you might find more information with the service you try to use through the cmdlet. For example, the `New-AzAnalysisServicesServer` cmdlet related issues might end up with the Analysis Services team.|
 |Job was tried three times, but it failed.|Check the [Automation Limits](/azure/azure-subscription-service-limits#automation-limits). If the limitation applies to Azure sandboxes only, consider moving to a [hybrid worker](/azure/automation/automation-hybrid-runbook-worker).|
 |Runbooks were working but stopped.|[Make sure to use a managed identity](/azure/automation/migrate-run-as-accounts-managed-identity#cert-renewal). If [using webhooks to start runbooks](/azure/automation/automation-webhooks#renew-webhook), make sure the webhook hasn't expired.|
-|Using a hybrid worker.|Refer to the [Hybrid Runbook Worker troubleshooting guide](/azure/automation/troubleshoot/hybrid-runbook-worker).|
-|Runbook is stuck.|If you can't stop a runbook job in the Azure portal, try stopping it by using the PowerShell cmdlet [Stop-AzureRmAutomationJob](/powershell/module/azurerm.automation/Stop-AzureRmAutomationJob) or [Stop-AzAutomationJob](/powershell/module/az.automation/Stop-AzAutomationJob).|
+|Issues when using a hybrid worker.|Refer to the [Hybrid Runbook Worker troubleshooting guide](/azure/automation/troubleshoot/hybrid-runbook-worker).|
+|Runbook is stuck.|If you can't stop a runbook job in the Azure portal, try stopping it by using the PowerShell cmdlet `Stop-AzureRmAutomationJob` or `Stop-AzAutomationJob`.|
 |Can't start or schedule a runbook.|Make sure your runbook [is published](/azure/automation/manage-runbooks#publish-a-runbook).|
-|Using cmdlets that depend on binaries.|Some cmdlets rely on binaries, such as Microsoft Data Access Components (MDAC) or the Azure Fabric SDK. These cmdlets can't be run in the Azure Automation sandbox and need to be executed through [a hybrid worker](/azure/automation/automation-hybrid-runbook-worker).|
-|Multiple subscriptions in a runbook.|To manage Azure resources across several subscriptions with Azure Automation, see [Dealing with multiple subscriptions](/azure/automation/troubleshoot/runbooks#runbook-auth-failure) to prevent errors.|
+|Issues when using cmdlets that depend on binaries.|Some cmdlets rely on binaries, such as Microsoft Data Access Components (MDAC) or the Azure Fabric SDK. These cmdlets can't be run in the Azure Automation sandbox and must be executed through [a hybrid worker](/azure/automation/automation-hybrid-runbook-worker).|
+|Issues when there are multiple subscriptions in a runbook.|To manage Azure resources across several subscriptions with Azure Automation, see [Dealing with multiple subscriptions](/azure/automation/troubleshoot/runbooks#runbook-auth-failure) to prevent errors.|
 
 ## Troubleshoot common issues
 
@@ -63,8 +63,8 @@ The following table helps you troubleshoot common issues with runbooks:
 |---|---|
 |Unable to create a new Automation job in the West Europe region.|This issue occurs because of scalability limits with the Automation service in the West Europe region. To resolve it, follow the steps in [Unable to create new Automation job in the West Europe region](/answers/questions/910816/index.html).|
 |Runbook bugs or Azure Automation issues.|To learn how to troubleshoot common scenarios, see [Troubleshoot runbook issues](/azure/automation/troubleshoot/runbooks#runbook-fails).|
-|Runbook output and message issues.| See [Retrieve runbook output and messages](/azure/automation/automation-runbook-output-and-messages#runbook-output).|
-|PowerShell module issues in Azure Automation.|See [Update Azure PowerShell modules in Automation](/azure/automation/automation-update-azure-modules).|
+|Runbook output and message issues.| To resolve such issues, [retrieve runbook output and messages](/azure/automation/automation-runbook-output-and-messages#runbook-output).|
+|PowerShell module issues in Azure Automation.|To resolve such issues, [update Azure PowerShell modules in Automation](/azure/automation/automation-update-azure-modules).|
 
 ## Reference
 
