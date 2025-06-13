@@ -1,7 +1,7 @@
 ---
 title: Always On DB in recovery pending or suspect state 
 description: This article describes the errors and limitations of an availability database in Microsoft SQL Server that is in a Recovery Pending or Suspect state and how to restore the database to full functionality in an availability group.
-ms.date: 04/08/2025
+ms.date: 06/12/2025
 ms.custom: sap:Always On Availability Groups (AG)
 ms.reviewer: ramakoni, cmathews, jopilov
 ---
@@ -10,7 +10,7 @@ ms.reviewer: ramakoni, cmathews, jopilov
 
 This article describes the errors and limitations of an availability database in Microsoft SQL Server that's in a `Recovery Pending` or `Suspect` state and how to restore the database to full functionality in an availability group.
 
-_Original product version:_ &nbsp; SQL Server 2012  
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2857849
 
 ## Summary
@@ -256,4 +256,3 @@ This method will result in a small outage for applications that are currently co
     ```
 
 3. Recover the damaged database. Then add it and the secondary replica back to the availability group.
-

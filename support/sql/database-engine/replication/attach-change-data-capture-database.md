@@ -1,19 +1,20 @@
 ---
 title: Can't attach CDC-enabled database
-description: This article provides resolutions for the problem where you can't attach a database with Change Data Capture enabled to a SQL Server 2016 or SQL Server 2017 on Windows instance after you detach it on SQL Server 2014 or an earlier version.
-ms.date: 03/16/2020
+description: This article provides resolutions for the problem where you can't attach a database with Change Data Capture enabled to a SQL Server 2016 or a later version on Windows instance after you detach it on SQL Server 2014 or an earlier version.
+ms.date: 06/12/2025
 ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
+ms.reviewer: jopilov
 ---
-# Error when you attach a CDC-enabled database to an instance of SQL Server 2016 or SQL Server 2017 on Windows
+# Error when you attach a CDC-enabled database to an instance of SQL Server 2016 or a later version on Windows
 
-This article helps you resolve the problem where you can't attach a CDC-enabled database to an instance of SQL Server 2016 or SQL Server 2017 on Windows.
+This article helps you resolve the problem where you can't attach a CDC-enabled database to an instance of SQL Server 2016 or a later version on Windows.
 
-_Original product version:_ &nbsp; SQL Server 2008 and the later versions  
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 3200464
 
 ## Symptoms
 
-You detach a database with `Change Data Capture` enabled on SQL Server 2014 or an earlier version, and you attach it to a SQL Server 2016 or SQL Server 2017 on Windows instance. In this situation, you encounter the following error when you run the `sp_cdc_enable_table` system procedure:
+You detach a database with `Change Data Capture` enabled on SQL Server 2014 or an earlier version, and you attach it to a SQL Server 2016 or a later version on Windows instance. In this situation, you encounter the following error when you run the `sp_cdc_enable_table` system procedure:
 
 Command
 
@@ -31,6 +32,6 @@ Error message
 
 ## Resolution
 
-To resolve this issue, run `sp_cdc_vupgrade` after you attach a database on an instance of SQL Server 2016 or SQL Server 2017 on Windows that has `Change Data Capture` enabled.
+To resolve this issue, run `sp_cdc_vupgrade` after you attach a database on an instance of SQL Server 2016 or a later version on Windows that has `Change Data Capture` enabled.
 
 For more information, see [Attach a database](/sql/relational-databases/databases/attach-a-database).
