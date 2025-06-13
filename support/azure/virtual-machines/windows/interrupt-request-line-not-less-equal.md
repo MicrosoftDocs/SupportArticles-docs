@@ -18,7 +18,7 @@ This article helps you resolve an issue where a Microsoft Azure virtual machine 
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of a VM, the Windows operating system (OS) displays the **IRQL_NOT_LESS_OR_EQUAL** bug check (0x0000001A).
 
-:::image type="content" source="/media/interrupt-request-line-not-less-equal/interrupt-request-line-not-less-equal-bugcheck-screen.png" alt-text="Screenshot of Windows operating system bug check IRQL_NOT_LESS_OR_EQUAL (0x0000001A).":::
+:::image type="content" source="media/interrupt-request-line-not-less-equal/interrupt-request-line-not-less-equal-bug-check-screen.png" alt-text="Screenshot of Windows operating system bug check IRQL_NOT_LESS_OR_EQUAL (0x0000001A).":::
 
 ## Cause
 
