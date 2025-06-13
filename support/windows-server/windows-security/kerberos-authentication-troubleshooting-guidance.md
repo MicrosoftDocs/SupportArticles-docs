@@ -1,5 +1,5 @@
 ---
-title: Kerberos authentication troubleshooting guidance
+title: Kerberos Authentication Troubleshooting Guidance
 description: Provides guidance to troubleshoot Kerberos authentication issues.
 ms.date: 06/15/2025
 manager: dcscontentpm
