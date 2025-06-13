@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot runbook execution issues in Azure Automation
-description:
+description: Provides troubleshooting guidance for runbook execution issues in Azure Automation.
 ms.date: 06/13/2025
 ms.service: azure-automation
 ms.reviewer: adoyle, v-weizhu
@@ -13,7 +13,7 @@ Process automation in Azure Automation lets you create and manage PowerShell, a 
 > [!NOTE]
 >
 > - If you use the Newtonsoft.Json v10, be sure to import this module explicitly so that your PowerShell 5.1 and PowerShell 7.1 runbooks that have a dependency on this version of the module function correctly.
-> - PowerShell 7.1 is no longer supported by the parent product PowerShell. We recommend creating PowerShell 7.2 runbooks for long-term support. Learn more about [PowerShell 7.2 runbooks](https://learn.microsoft.com/azure/automation/automation-runbook-types).
+> - PowerShell 7.1 is no longer supported by the parent product PowerShell. We recommend creating PowerShell 7.2 runbooks for long-term support. Learn more about [PowerShell 7.2 runbooks](/azure/automation/automation-runbook-types).
 > - If none of the following solutions resolves your issue, before opening a support case, see [Data to collect when opening a case for Microsoft Azure Automation](/azure/automation/troubleshoot/collect-data-microsoft-azure-automation-case).
 > - Azure Automation enables recovery of runbooks deleted in the last 29 days - Restore the deleted runbook by running a PowerShell script as a job in your Automation account. For more information, see [Restore deleted runbook](/azure/automation/manage-runbooks#restore-deleted-runbook).
 
@@ -50,7 +50,7 @@ Process automation in Azure Automation lets you create and manage PowerShell, a 
 |Job was tried three times, but it failed.|Check the [Automation Limits](/azure/azure-subscription-service-limits#automation-limits). If the limitation applies to Azure sandboxes only, consider moving to a [hybrid worker](/azure/automation/automation-hybrid-runbook-worker).|
 |Runbooks were working but stopped.|[Make sure to use a managed identity](/azure/automation/migrate-run-as-accounts-managed-identity#cert-renewal). If [using webhooks to start runbooks](/azure/automation/automation-webhooks#renew-webhook), make sure the webhook hasn't expired.|
 |Using a hybrid worker.|Refer to the [Hybrid Runbook Worker troubleshooting guide](/azure/automation/troubleshoot/hybrid-runbook-worker).|
-|Runbook is stuck.|If you can't stop a runbook job in the Azure portal, try stopping it by using the PowerShell cmdlet [Stop-AzureRmAutomationJob](/powershell/module/azurerm.automation/Stop-AzureRmAutomationJob?view=azurermps-6.13.0) or [Stop-AzAutomationJob](/powershell/module/az.automation/Stop-AzAutomationJob?view=azps-2.4.0).|
+|Runbook is stuck.|If you can't stop a runbook job in the Azure portal, try stopping it by using the PowerShell cmdlet [Stop-AzureRmAutomationJob](/powershell/module/azurerm.automation/Stop-AzureRmAutomationJob) or [Stop-AzAutomationJob](/powershell/module/az.automation/Stop-AzAutomationJob).|
 |Can't start or schedule a runbook.|Make sure your runbook [is published](/azure/automation/manage-runbooks#publish-a-runbook).|
 |Using cmdlets that depend on binaries.|Some cmdlets rely on binaries, such as Microsoft Data Access Components (MDAC) or the Azure Fabric SDK. These cmdlets can't be run in the Azure Automation sandbox and need to be executed through [a hybrid worker](/azure/automation/automation-hybrid-runbook-worker).|
 |Multiple subscriptions in a runbook.|To manage Azure resources across several subscriptions with Azure Automation, see [Dealing with multiple subscriptions](/azure/automation/troubleshoot/runbooks#runbook-auth-failure) to prevent errors.|
