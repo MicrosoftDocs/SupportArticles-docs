@@ -6,8 +6,8 @@ author: jinglouMSFT
 ms.author: jinglou
 ms.service: azure-storage
 ms.custom: sap:Alerts, Metrics, Logging and Monitoring, linux-related-content
-ms.date: 12/23/2024
-ms.reviewer: cralvord,richardgao
+ms.date: 06/13/2025
+ms.reviewer: cralvord, richardgao
 ---
 
 # Azure Storage Explorer troubleshooting guide
@@ -479,7 +479,7 @@ If you accidentally attached by using an invalid shared access signature URL and
 Storage Explorer comes packaged with all dependencies it needs to run on Windows.
 
 > [!NOTE]
-> Some components require access to the command line. If access to the command line is restricted, Storage Explorer might not work as expected. If you encounter issues, contact your system administrator.
+> Some components need command line access. If it's restricted, Storage Explorer might not work as expected. If you encounter issues, contact your system administrator.
 
 ## [macOS](#tab/macOS)
 
@@ -679,7 +679,7 @@ AzCopy logs can be found easily via two different methods:
 For some issues, you need to provide logs of the network calls made by Storage Explorer. On Windows, you can get network logs by using Fiddler.
 
 > [!NOTE]
-> Fiddler traces might contain passwords you entered or sent in your browser during the gathering of the trace. Make sure to read the instructions on how to sanitize a Fiddler trace. Don't upload Fiddler traces to GitHub. Wait for instructions on how you can securely send your Fiddler trace.
+> Fiddler traces might contain passwords you entered or sent in your browser during the gathering of the trace. Make sure to read the instructions on how to sanitize a Fiddler trace. Don't upload Fiddler traces to GitHub. Wait for instructions on how to securely send your Fiddler trace.
 
 #### Part 1: Install and configure Fiddler
 
