@@ -2,6 +2,8 @@
   href: welcome-automation.yml
 - name: Runbook not working as expected
   items:
+  - name: Troubleshoot runbook execution issues
+    href: runbooks/troubleshoot-runbook-execution-issues.md
   - name: Troubleshoot runbook execution issues when using PowerShell
     href: runbooks/powershell-job-script-cmdlets-not-working.md
 
