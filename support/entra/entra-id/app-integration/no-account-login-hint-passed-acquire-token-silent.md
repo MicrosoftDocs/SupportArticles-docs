@@ -2,7 +2,7 @@
 title: No account or login hint was passed to the AcquireTokenSilent
 description: Provides solutions to an error that occurs when web applications using Microsoft Authentication Library (MSAL) or Microsoft Identity Web acquire a token silently.
 ms.service: entra-id
-ms.date: 06/12/2025
+ms.date: 06/13/2025
 ms.reviewer: willfid, v-weizhu
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
@@ -18,10 +18,11 @@ Assume that your web applications authenticate users using MSAL or Microsoft Ide
 
 ## Cause
 
-This issue occurs because the MSAL token cache is empty. In ASP.NET or ASP.NET Core web applications, this issue occurs in the following scenarios:
+This issue occurs because MSAL looks for a account that no longer exists in the token cache based on the existing authentication cookie. The authentication cookie is created only after a interactive sign-in and contains information about the user. This issue occurs in the following scenarios:
 
-- An authentication cookie is passed to the web application, but the application has restarted.
-- Memory is cleared due to high memory usage.
+- After the web application has restarted.
+- Memory is cleared due to high memory usage or a set period of inactivity.
+- MSAL has a default cache size limit that automatically removes older entries.
 
 ## Solution 1 (recommended): Implement a persistent token cache
 
@@ -116,7 +117,7 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions
 
 ### For web applications using Microsoft Identity Web
 
-Microsoft Identity Web provides built-in mechanisms to manage token cache. To resolve the issue, see [Managing incremental consent and conditional access](https://github.com/AzureAD/microsoft-identity-web/wiki/Managing-incremental-consent-and-conditional-access). If this document doesn't help you resolve the issue, you can manually clear the authentication cookie using a custom cookie authentication event:
+Microsoft Identity Web provides built-in mechanisms to manage token cache. For more information, see [Managing incremental consent and conditional access](https://github.com/AzureAD/microsoft-identity-web/wiki/Managing-incremental-consent-and-conditional-access). If this document doesn't help you resolve the issue, you can manually clear the authentication cookie using a custom cookie authentication event:
 
 1. Create a custom cookie authentication event:
 
