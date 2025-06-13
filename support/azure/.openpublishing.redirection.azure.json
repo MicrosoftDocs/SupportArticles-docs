@@ -6353,7 +6353,26 @@
         {
         "source_path": "hpc/batch/error-accountencryptionkeyunavailable.md",
         "redirect_url": "/troubleshoot/azure/hpc/batch/welcome-hpc-batch"
-
+      },
+        {
+        "source_path": "automation/configuration/modifications-not-reflect-portal.md",
+        "redirect_url": "/troubleshoot/azure/automation/welcome-automation"
+      },
+        {
+        "source_path": "automation/runbooks/automation-scripted-diagnostic-capture.md",
+        "redirect_url": "/troubleshoot/azure/automation/welcome-automation"
+      },
+        {
+        "source_path": "automation/updates/find-azurermresource-fails.md",
+        "redirect_url": "/troubleshoot/azure/automation/welcome-automation"
+      },
+        {
+        "source_path": "automation/runbooks/capture-debug-stream-automation-runbook.md",
+        "redirect_url": "/troubleshoot/azure/automation/welcome-automation"
+      },
+        {
+        "source_path": "automation/runbooks/reinstall-oms-agent-linux.md",
+        "redirect_url": "/troubleshoot/azure/automation/welcome-automation"
       }
   ]
 }
