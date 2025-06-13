@@ -20,8 +20,8 @@ If your target service has separate front-end and back-end components, Kerberos 
 
 The configuration details differ depending on the type of account that the front-end service uses. This article provides separate procedures for different kinds of service accounts:
 
-- [Troubleshooting Kerberos constrained delegation if using a built-in service account](#troubleshooting-kerberos-constrained-delegation-when-using-a-built-in-service-account).
-- [Troubleshooting Kerberos constrained delegation if using a custom service account](#troubleshooting-kerberos-constrained-delegation-when-using-a-custom-service-account).
+- [Troubleshooting Kerberos constrained delegation if using a built-in service account](#troubleshooting-kerberos-constrained-delegation-when-using-a-built-in-service-account)
+- [Troubleshooting Kerberos constrained delegation if using a custom service account](#troubleshooting-kerberos-constrained-delegation-when-using-a-custom-service-account)
 
 ## Troubleshooting Kerberos constrained delegation if using a built-in service account
 
