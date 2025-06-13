@@ -105,13 +105,11 @@ You may encounter these error codes in the wrap wizard:
 
 **Description**: Default subscription not found, or missing access permissions
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
 #### Resolution steps:
 
 1. Ensure your Azure key vault is in the tenant's **Default subscription**.
 
-2. As an admin, run the following commands in PowerShell:
+2. As an Azure AD admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20' by running the following commands in PowerShell:
 
    ```powershell
    Connect-AzureAD -TenantId <your tenant ID>
@@ -140,8 +138,6 @@ You may encounter these error codes in the wrap wizard:
 
 **Description**: Key vault doesn't exist, or Key vault is missing access privileges
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
 #### Resolution steps:
 
 1. Confirm your Azure key vault is in the tenant's **Default subscription**.
@@ -150,7 +146,7 @@ You may encounter these error codes in the wrap wizard:
 
    :::image type="content" source="media/wrap-issues/vault-acces-policy.png" alt-text="Select the Vault Access policy option under the Access configuration tab.":::
 
-3. As an admin, run the following commands in PowerShell:
+3. As an azure AD admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20'by running the following commands in PowerShell:
 
    ```powershell
    Connect-AzureAD -TenantId <your tenant ID>
@@ -282,46 +278,65 @@ For more information, see [Step 2: Target platform](/power-apps/maker/common/wra
 
 ## Issue 8: Error message: "Something went wrong. [5objp]"
 
-### Cause
+Issue: Redirect URI mismatch. This error appears during the app authentication process.
 
-The Signature Hash Key or redirect URI used in the Android Package Kit (APK) file doesn't match the one registered in Microsoft Entra ID (formerly Azure Active Directory), causing a mismatch error during authentication.
+## Common root causes
 
-### Resolution
+### 1. Signature Hash Key mismatch
 
-To troubleshoot and resolve redirect URI issues for Android:
+The APK is signed with a different key than the one registered in the Entra ID application. This can happen if:
+- A different keystore is used during the build process
+- The registered hash key was incorrectly generated or copied (for example, includes extra spaces or invalid characters)
 
-1. Install [Android Studio](https://developer.android.com/studio) and set up an emulator.
+### 2. Redirect URI mismatch
 
-2. Launch the emulator and drag the APK file onto it to install the app.
+The redirect URI being used by the app doesn't match what's registered in the portal:
+- Redirect URIs are case-sensitive — mismatches can occur if the bundle ID or URI is typed manually with incorrect casing
+- Special characters in the URI (such as %2F, %3D) must be properly encoded and match exactly what is registered in Entra ID
 
-3. Open the app in the emulator, attempt to sign in, and note the error message.
+## How to fix the issue
 
-4. On the error screen, locate the redirect URI being used.
+### Verify the Signature Hash Key
 
-5. If the hash key in the URI contains encoded characters (for example, `%2F`), decode them (`%2F` becomes `/`) to get the Signature Hash Key.
+1. Generate the correct hash key from the keystore used to sign the app
+2. Confirm it's registered under **Authentication** → **Android platform settings** in the Entra portal
 
-6. Copy the decoded Signature Hash Key.
+### Check the Redirect URI
 
-7. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **App registrations** and select your app.
+1. Install [Android Studio](https://developer.android.com/studio) and set up an emulator
+2. Launch the emulator and drag the APK file onto it to install the app
+3. Open the app in the emulator, attempt to sign in, and note the error message
+4. On the error screen, locate the redirect URI being used
+5. If the hash key in the URI contains encoded characters (for example, `%2F`), decode them (`%2F` becomes `/`) to get the Signature Hash Key
+6. Copy the decoded Signature Hash Key
+7. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **App registrations** and select your app
+8. Under **Authentication**, review the configured [redirect URIs](/entra/identity-platform/how-to-add-redirect-uri#add-a-redirect-uri)
+9. If the redirect URI is missing, add it with the correct Bundle ID and Signature Hash Key, then save your changes
+10. Compare the existing redirect URI character-by-character (including case and encoding) with the one registered in Entra ID
+11. If manually entering the Bundle ID in the portal, double-check for case consistency
 
-8. Under **Authentication**, review the configured [redirect URIs](/entra/identity-platform/how-to-add-redirect-uri#add-a-redirect-uri).
+## Recommended practices
 
-9. If the redirect URI is missing, add it with the correct Bundle ID and Signature Hash Key, then save your changes.
+To avoid this error in the future:
+
+- Always copy the Bundle ID and hash key directly from the project/build output
+- Use logging or emulator logs to inspect the exact redirect URI at runtime
+- Avoid manually typing or modifying hash keys or redirect URIs
+- Use [Android Studio](https://developer.android.com/studio) to verify your app configuration
 
 ---
 
 ## Issue 9: Error message: "Something went wrong [2002]", Error code: 9n155
 
-### Cause
+## Common root causes
+This error typically occurs when the app registration is created using the Wrap Wizard, which by default sets the app to single-tenant mode. If the user does not manually update this setting or accidentally selects single tenant during manual app registration, wrap app will be unable to authenticate, resulting in error 9n155. 
 
-The app registration isn't configured to support [multitenant accounts](/security/zero-trust/develop/identity-supported-account-types#accounts-in-any-organizational-directory-only---multitenant).
+Issue: The app registration isn't configured to support [multitenant accounts](/security/zero-trust/develop/identity-supported-account-types#accounts-in-any-organizational-directory-only---multitenant).
 
 ### Resolution
 
 1. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **App registrations** and select your app.
-
 2. In the **Essentials** section, locate **Supported account types**. It should be set to **Multiple organizations**. If not, set it to **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)**.
-
 3. Save your changes.
 
 ---
