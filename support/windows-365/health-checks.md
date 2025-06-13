@@ -37,8 +37,8 @@ Every failed ANC or success with a warning error state includes the technical de
 
 ## Supported checks
 
-- **DNS can resolve Active Directory domain**: Resolve the provided Active Directory domain name.
-- **Active directory domain join**: A domain join using the credentials, domain, and OU provided.
+- **DNS can resolve Active Directory domain**: Ensure that the Service Location (SRV) locator resource records for a domain controller can be located via DNS. For more information, see [Verify that SRV Domain Name System (DNS) records have been created](../windows-server/networking/verify-srv-dns-records-have-been-created.md).
+- **Active directory domain join**: Confirm that the domain join action using the credentials, domain, and Organizational Unit (OU) provided on the ANC configuration is successful. Failures in this check can occur if the password has been changed.
 - **Endpoint connectivity**: Connectivity to the required [URL/endpoints](/windows-365/enterprise/requirements-network).
 - **Microsoft Entra device sync (warning)**: Device ID sync is enabled on the Microsoft Entra tenant, and the computer object is being synced within 90 minutes.
 - **Azure subnet IP address usage**: Sufficient IP addresses are available in the provided Azure subnet.

@@ -2,7 +2,7 @@
 title: Graphics::DrawImage appears slow when drawing a JPEG or PNG image to a printer
 description: Provides a resolution for an issue where Graphics::DrawImage appears slow when you call it to draw a JPEG or PNG image to a printer. 
 ms.reviewer: ishimada, davean, aartigoyle, v-sidong
-ms.date: 12/19/2023
+ms.date: 06/11/2025
 ms.custom: sap:Graphics and Multimedia development\GDI+ API
 ---
 

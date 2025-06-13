@@ -39,5 +39,3 @@ items:
   href: transaction-log-file-grows-databases-in-memory-oltp.md
 - name: Troubleshoot errors related to system disk sector size greater than 4 KB
   href: troubleshoot-os-4kb-disk-sector-size.md
-- name: Virtual host drivers lead to data consistency problems
-  href: virtual-host-driver-lead-data-consistency.md
