@@ -337,7 +337,7 @@
     - name: Azure VM startup hangs at "Applying Software Installation policy"
       href: applying-software-installation-policy.md
     - name: Azure VM startup hangs at "IRQL_NOT_LESS_OR_EQUAL"
-      href: interrupt-request-line-not-less-or-equal.md
+      href: interrupt-request-line-not-less-equal.md
     - name: Troubleshoot Windows VM OS with missing boot manager
       href: os-bootmgr-missing.md
     - name: OS isn't found
