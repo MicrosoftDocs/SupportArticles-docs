@@ -4,7 +4,6 @@ description: This file provides troubleshooting guidance for connectivity issues
 ms.reviewer: claudiogodoy
 ms.service: azure-kubernetes-service
 ms.custom: sap:Load balancer and Ingress controller
-ms.topic: troubleshoot
 ms.date: 05/24/2025
 ---
 # Troubleshoot Application Gateway Ingress Controller connectivity
@@ -162,7 +161,7 @@ This step focuses on understanding the operational state of the [Application Gat
     ```
   
     > [!NOTE]
-    > If you see any unexpected error on this step, you might have misconfigured `AGIC`, please read the guide: [Enable the ingress controller add-on for a new AKS cluster with a new application gateway instance](azure/application-gateway/tutorial-ingress-controller-add-on-new).
+    > If you see any unexpected error on this step, you might have misconfigured `AGIC`, please read the guide: [Enable the ingress controller add-on for a new AKS cluster with a new application gateway instance](/azure/application-gateway/tutorial-ingress-controller-add-on-new).
 
     ```console
     {
