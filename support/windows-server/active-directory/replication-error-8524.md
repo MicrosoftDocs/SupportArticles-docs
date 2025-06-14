@@ -15,6 +15,8 @@ ms.custom:
 This article describes symptoms, cause, and resolution steps for AD operations that fail with Win32 error 8524:
 
 > The DSA operation is unable to proceed because of a DNS lookup failure.
+> 
+> Applies to:   All supported versions of Windows Server
 
 _Original KB number:_ &nbsp; 2021446
 
