@@ -16,6 +16,8 @@ This article describes an issue where Active Directory Replications fail with Wi
 
 _Original KB number:_ &nbsp; 2089874
 
+Applies to:   All supported versions of Windows Server
+
 **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com).
 
 ## Symptoms
