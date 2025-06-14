@@ -416,7 +416,7 @@ In Event Viewer on the target server, go to the **Windows Logs** > **Security** 
 To verify that other services on the target server can process Kerberos authentication, follow these steps:
 
 1. On the target server, create a file share or identify an existing file share to use for testing. Make sure that you (in the role of "John") have Read permission on the folder.
-1. On the client computer, sign in as the user "John", and then open Windows Explorer.
+1. On the client computer, sign in (as the user "John"), and then open Windows Explorer.
 1. In the address bar, enter *\\\IISServer.contoso.com \\Software$*.
 1. On the target server, open Event Viewer, and then review the Security events. Verify that there are new event ID 4624 events, or event ID 4625 events.
 1. On the client computer, run the `klist tickets` command at the command prompt. The command output should include a service ticket for `CIFS/IISServer.contoso.com`, as shown in the following excerpt:
