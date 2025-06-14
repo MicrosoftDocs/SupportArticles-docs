@@ -9,7 +9,7 @@ ms.date: 05/24/2025
 ---
 # Troubleshoot Application Gateway Ingress Controller connectivity
 
-The [Application Gateway Ingress Controller (AGIC)](https://learn.microsoft.com/azure/application-gateway/ingress-controller-overview) is a Kubernetes application that enables [Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/what-is-aks) customers to use Azure's native Application Gateway L7 load-balancer to expose cloud software to the Internet.
+The [Application Gateway Ingress Controller (AGIC)](/azure/application-gateway/ingress-controller-overview) is a Kubernetes application that enables [Azure Kubernetes Service (AKS)](/azure/aks/what-is-aks) customers to use Azure's native Application Gateway L7 load-balancer to expose cloud software to the Internet.
 
 This article provides step-by-step guidance to troubleshoot `AGIC` connectivity issues effectively.
 
@@ -186,7 +186,7 @@ The expected `operationalState` is `Running`. If it's different, you may need to
 
 ## Step 5 (Optional): Inspect Mapped Kubernetes and Application Gateway IPs
 
-The [AGIC](https://learn.microsoft.com/en-us/azure/application-gateway/ingress-controller-overview) monitors the pod IPs and maps them to `backendAddressPools` in the `Application Gateway` instance. This step validates that integration.
+The [AGIC](/azure/application-gateway/ingress-controller-overview) monitors the pod IPs and maps them to `backendAddressPools` in the `Application Gateway` instance. This step validates that integration.
 
 1. **Get the Application Gateway `backendAddressPools`**:
 
