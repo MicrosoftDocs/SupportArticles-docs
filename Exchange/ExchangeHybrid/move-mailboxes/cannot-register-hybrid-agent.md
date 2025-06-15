@@ -51,7 +51,7 @@ The errors occur if the internal URL that's used by the Hybrid Agent application
 
 ### Cause 1
 
-The same internal URL is used by an existing enterprise on-premises app that uses [Microsoft Entra application proxy](/azure/active-directory/app-proxy/application-proxy).
+The same internal URL is used by an existing enterprise on-premises app that uses [Microsoft Entra application proxy](/entra/identity/app-proxy/).
 
 ### Cause 2
 
