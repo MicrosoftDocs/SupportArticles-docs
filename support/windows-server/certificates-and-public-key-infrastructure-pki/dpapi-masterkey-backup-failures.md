@@ -1,7 +1,7 @@
 ---
 title: DPAPI MasterKey backup failures
 description: Helps solve DPAPI MasterKey backup failures that occur when RWDC isn't available.
-ms.date: 01/15/2025
+ms.date: 06/16/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -46,7 +46,7 @@ _Original KB number:_ &nbsp; 3205778
 
     > SQL Server Setup failure.  
     > SQL Server Setup has encountered the following error:  
-    > "There was an error generating the XML document.  
+    > There was an error generating the XML document.  
     > Error code 0x84B10001.
 
 10. Domain users can't manage SQL databases from SMSS. (SQL Server Management Studio). This issue occurs when the database is navigated from via **SSMS DataBases** -> **CustomerDatabase** -> **Tables** -> **Table name**.
