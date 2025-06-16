@@ -4,10 +4,9 @@ description: Solutions for common issues when using the wrap feature in Power Ap
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 06/12/2025
+ms.date: 06/16/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
-
 # Troubleshooting wrap feature issues in Power Apps
 
 This guide provides solutions for common issues encountered when using the [wrap](/power-apps/maker/common/wrap/overview) feature in Microsoft Power Apps.
@@ -50,10 +49,12 @@ Update to the latest version of the wrap solution and try again.
 ## Issue 4: Unable to install wrapped mobile app
 
 Ensure your app is properly signed. You can do this by:
+
 1. Configuring a key vault during the build process, or
 2. Signing the app manually
 
 For more information, see:
+
 - [Set up Key vault for automated signing](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform)
 - [Code sign for iOS](/power-apps/maker/common/wrap/code-sign-ios)
 - [Code sign for Android](/power-apps/maker/common/wrap/code-sign-android)
@@ -105,7 +106,7 @@ You may encounter these error codes in the wrap wizard:
 
 **Description**: Default subscription not found, or missing access permissions
 
-#### Resolution steps:
+#### Resolution steps
 
 1. Ensure your Azure key vault is in the tenant's **Default subscription**.
 
@@ -118,27 +119,27 @@ You may encounter these error codes in the wrap wizard:
 
 3. In the [Azure portal](https://portal.azure.com), under **Access Control (IAM)**, assign the **Reader** role to your service principal:
 
-   a. Go to **Access control (IAM)**, then select **Add role assignment**.
+   1. Go to **Access control (IAM)**, then select **Add role assignment**.
 
-   :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab." lightbox="media/wrap-issues/add-role-assignment.png":::
+      :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab." lightbox="media/wrap-issues/add-role-assignment.png":::
 
-   b. Choose **Reader** under **Job function roles** and go to the **Members** tab.
+   1. Choose **Reader** under **Job function roles** and go to the **Members** tab.
 
-   :::image type="content" source="media/wrap-issues/add-members.png" alt-text="Screenshot that shows the Members tab on the top menu." lightbox="media/wrap-issues/add-members.png":::
+      :::image type="content" source="media/wrap-issues/add-members.png" alt-text="Screenshot that shows the Members tab on the top menu." lightbox="media/wrap-issues/add-members.png":::
 
-   c. Search for your app name.
+   1. Search for your app name.
 
-   :::image type="content" source="media/wrap-issues/select-members-to-add-role.png" alt-text="Screenshot that shows how to search for your app." lightbox="media/wrap-issues/select-members-to-add-role.png":::
+      :::image type="content" source="media/wrap-issues/select-members-to-add-role.png" alt-text="Screenshot that shows how to search for your app." lightbox="media/wrap-issues/select-members-to-add-role.png":::
 
-   d. Assign the **Reader** role.
+   1. Assign the **Reader** role.
 
-   :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to your app." lightbox="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png":::
+      :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to your app." lightbox="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png":::
 
 ### Error code 1000119
 
 **Description**: Key vault doesn't exist, or Key vault is missing access privileges
 
-#### Resolution steps:
+#### Resolution steps
 
 1. Confirm your Azure key vault is in the tenant's **Default subscription**.
 
@@ -146,7 +147,7 @@ You may encounter these error codes in the wrap wizard:
 
    :::image type="content" source="media/wrap-issues/vault-acces-policy.png" alt-text="Select the Vault Access policy option under the Access configuration tab.":::
 
-3. As an azure AD admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20'by running the following commands in PowerShell:
+3. As an Azure AD admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20'by running the following commands in PowerShell:
 
    ```powershell
    Connect-AzureAD -TenantId <your tenant ID>
@@ -165,7 +166,7 @@ You may encounter these error codes in the wrap wizard:
 
 **Description**: No organization ID tags found on key vault
 
-#### Resolution steps:
+#### Resolution steps
 
 1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), select your environment.
 
@@ -183,7 +184,7 @@ You may encounter these error codes in the wrap wizard:
 
 **Description**: Android keystore isn't valid. Missing Tag and/or Certificate
 
-#### Resolution steps:
+#### Resolution steps
 
 1. Import your **Android Certificate**.
 
@@ -202,7 +203,7 @@ You may encounter these error codes in the wrap wizard:
 
 **Description**: iOS certificate isn't valid
 
-#### Resolution steps:
+#### Resolution steps
 
 1. Import your **iOS Certificate**.
 
@@ -221,7 +222,7 @@ You may encounter these error codes in the wrap wizard:
 
 **Description**: iOS profile isn't valid
 
-#### Resolution steps:
+#### Resolution steps
 
 1. Import your **Provisioning Profile** as a **Secret**.
 
@@ -236,7 +237,7 @@ You may encounter these error codes in the wrap wizard:
 
 **Description**: Missing access key used while accessing Azure Blob storage location
 
-#### Resolution steps:
+#### Resolution steps
 
 Add your access key from the Azure Blob storage account to the Azure key vault.
 
@@ -246,7 +247,7 @@ For more information, see [Step 2: Target platform](/power-apps/maker/common/wra
 
 **Description**: Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set.
 
-#### Resolution steps:
+#### Resolution steps
 
 - Add the resource ID for the Azure Key Vaults you intend to use with your wrap application.
 - Ensure that all required tags are present for the resource ID linked to the Bundle ID specified in the wrap wizard.
@@ -257,7 +258,7 @@ For more information, see [Step 2: Target platform](/power-apps/maker/common/wra
 
 **Description**: Missing tags for the specified Azure Key Vault resourceID.
 
-#### Resolution steps:
+#### Resolution steps
 
 - After setting up Azure Key Vaults, add all required tags.
 - Confirm that the resource ID associated with the Bundle ID specified in the wrap wizard includes every necessary tag.
@@ -278,76 +279,76 @@ For more information, see [Step 2: Target platform](/power-apps/maker/common/wra
 
 ## Issue 8: Error message: "Something went wrong. [5objp]"
 
-Issue: Redirect URI mismatch. This error appears during the app authentication process.
+This issue may occur due to a Signature Hash Key mismatch or a Redirect URI mismatch during the app authentication process.
 
 #### Common root causes
 
-#### 1. Signature Hash Key mismatch
+##### Cause 1: Signature Hash Key mismatch
 
-The APK is signed with a different key than the one registered in the Entra ID application. This can happen if:
-- A different keystore is used during the build process
+The APK is signed with a different key than the one registered in the Microsoft Entra ID application. This can occur if:
 
-- The registered hash key was incorrectly generated or copied (for example, includes extra spaces or invalid characters)
+- A different keystore is used during the build process.
 
-#### 2. Redirect URI mismatch
+- The registered hash key was incorrectly generated or copied (for example, includes extra spaces or invalid characters.)
+
+##### Casue 2: Redirect URI mismatch
 
 The redirect URI being used by the app doesn't match what's registered in the portal:
-- Redirect URIs are case-sensitive — mismatches can occur if the bundle ID or URI is typed manually with incorrect casing
 
-- Special characters in the URI (such as %2F, %3D) must be properly encoded and match exactly what is registered in Entra ID
+- Redirect URIs are case-sensitive — mismatches can occur if the Bundle ID or URI is entered with incorrect casing.
+
+- Special characters in the URI (such as `%2F`, `%3D`) must be properly encoded and match exactly what is registered in Microsoft Entra ID.
 
 #### How to fix the issue
 
-#### Verify the Signature Hash Key
+##### Verify the Signature Hash Key
 
-1. Generate the correct hash key from the keystore used to sign the app
+1. Generate the correct hash key from the keystore used to sign the app.
 
-2. Confirm it's registered under **Authentication** → **Android platform settings** in the Entra portal
+2. Confirm it's registered under **Authentication** > **Android platform settings** in the Microsoft Entra portal.
 
-#### Check the Redirect URI
+##### Check the Redirect URI
 
-1. Install [Android Studio](https://developer.android.com/studio) and set up an emulator
+1. Install [Android Studio](https://developer.android.com/studio) and set up an emulator.
 
-2. Launch the emulator and drag the APK file onto it to install the app
+2. Launch the emulator and drag the APK file onto it to install the app.
 
-3. Open the app in the emulator, attempt to sign in, and note the error message
+3. Open the app in the emulator, attempt to sign in, and note the error message.
 
-4. On the error screen, locate the redirect URI being used
+4. On the error screen, locate the redirect URI being used.
 
-5. If the hash key in the URI contains encoded characters (for example, `%2F`), decode them (`%2F` becomes `/`) to get the Signature Hash Key
+5. If the hash key in the URI contains encoded characters (for example, `%2F`), decode them (`%2F` becomes `/`) to get the Signature Hash Key.
 
-6. Copy the decoded Signature Hash Key
+6. Copy the decoded Signature Hash Key.
 
-7. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **App registrations** and select your app
+7. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **App registrations** and select your app.
 
-8. Under **Authentication**, review the configured [redirect URIs](/entra/identity-platform/how-to-add-redirect-uri#add-a-redirect-uri)
+8. Under **Authentication**, review the configured [redirect URIs](/entra/identity-platform/how-to-add-redirect-uri#add-a-redirect-uri).
 
-9. If the redirect URI is missing, add it with the correct Bundle ID and Signature Hash Key, then save your changes
+9. If the redirect URI is missing, add it with the correct Bundle ID and Signature Hash Key, then save your changes.
 
-10. Compare the existing redirect URI character-by-character (including case and encoding) with the one registered in Entra ID
+10. Compare the existing redirect URI character-by-character (including case and encoding) with the one registered in Microsoft Entra ID.
 
-11. If manually entering the Bundle ID in the portal, double-check for case consistency
+11. If manually entering the Bundle ID in the portal, double-check for case consistency.
 
 #### Recommended practices
 
 To avoid this error in the future:
 
-- Always copy the Bundle ID and hash key directly from the project/build output
-
-- Use logging or emulator logs to inspect the exact redirect URI at runtime
-
-- Avoid manually typing or modifying hash keys or redirect URIs
-
-- Use [Android Studio](https://developer.android.com/studio) to verify your app configuration
+- Always copy the Bundle ID and hash key directly from the project or build output.
+- Use logging or emulator logs to inspect the exact redirect URI at runtime.
+- Avoid manually typing or modifying hash keys or redirect URIs.
+- Use [Android Studio](https://developer.android.com/studio) to verify your app configuration.
 
 ---
 
 ## Issue 9: Error message: "Something went wrong [2002]", Error code: 9n155
 
-#### Common root causes
-This error typically occurs when the app registration is created using the Wrap Wizard, which by default sets the app to single-tenant mode. If the user does not manually update this setting or accidentally selects single tenant during manual app registration, wrap app will be unable to authenticate, resulting in error 9n155. 
+The error might occur when the app registration isn't configured to support [multitenant accounts](/security/zero-trust/develop/identity-supported-account-types#accounts-in-any-organizational-directory-only---multitenant).
 
-Issue: The app registration isn't configured to support [multitenant accounts](/security/zero-trust/develop/identity-supported-account-types#accounts-in-any-organizational-directory-only---multitenant).
+#### Common root causes
+
+This error typically occurs when the app registration is created using the wrap wizard, which by default sets the app to single-tenant mode. If the user doesn't manually update this setting or accidentally selects single tenant during manual app registration, wrap app will be unable to authenticate, resulting in error code 9n155.
 
 #### Resolution
 
@@ -367,8 +368,8 @@ If your issue isn't covered here, or if the steps above don't resolve your probl
 
 For troubleshooting sign-in issues, you can collect session details:
 
-- For Wrap wizard: **On the sign-in screen**: Tap the gear icon in the top right and select **Session Details**.
-- For mobile devices: **After opening the app**: Press and hold the screen, then select **Session Details**.
+- For wrap wizard: On the sign-in screen, tap the gear icon in the upper-right corner and select **Session Details**.
+- For mobile devices: After opening the app, press and hold the screen, then select **Session Details**.
 
 ## Next steps
 
