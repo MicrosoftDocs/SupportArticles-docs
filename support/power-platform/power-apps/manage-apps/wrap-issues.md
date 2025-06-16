@@ -110,7 +110,7 @@ You may encounter these error codes in the wrap wizard:
 
 1. Ensure your Azure key vault is in the tenant's **Default subscription**.
 
-2. As an Azure AD admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20' by running the following commands in PowerShell:
+2. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20' by running the following commands in PowerShell:
 
    ```powershell
    Connect-AzureAD -TenantId <your tenant ID>
@@ -147,7 +147,7 @@ You may encounter these error codes in the wrap wizard:
 
    :::image type="content" source="media/wrap-issues/vault-acces-policy.png" alt-text="Select the Vault Access policy option under the Access configuration tab.":::
 
-3. As an Azure AD admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20'by running the following commands in PowerShell:
+3. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20'by running the following commands in PowerShell:
 
    ```powershell
    Connect-AzureAD -TenantId <your tenant ID>
@@ -291,11 +291,11 @@ The APK is signed with a different key than the one registered in the Microsoft 
 
 - The registered hash key was incorrectly generated or copied (for example, includes extra spaces or invalid characters.)
 
-##### Casue 2: Redirect URI mismatch
+##### Cause 2: Redirect URI mismatch
 
 The redirect URI being used by the app doesn't match what's registered in the portal:
 
-- Redirect URIs are case-sensitive — mismatches can occur if the Bundle ID or URI is entered with incorrect casing.
+- Redirect URIs are case-sensitive. Mismatches can occur if the Bundle ID or URI is entered with incorrect casing.
 
 - Special characters in the URI (such as `%2F`, `%3D`) must be properly encoded and match exactly what is registered in Microsoft Entra ID.
 
@@ -350,7 +350,7 @@ To avoid this error in the future:
 
 ---
 
-## Issue 9: Error message: "Something went wrong [2002]", Error code: 9n155
+## Issue 9: Error message "Something went wrong [2002]" and error code 9n155
 
 The error might occur when the app registration isn't configured to support [multitenant accounts](/security/zero-trust/develop/identity-supported-account-types#accounts-in-any-organizational-directory-only---multitenant).
 
