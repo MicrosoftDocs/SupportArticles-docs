@@ -46,7 +46,7 @@ Use Active Directory Users and Computers (available on the Server Manager **Tool
 Use the Internet Information Services (IIS) tool (available on the Server Manager **Tools** menu) to review application pool settings.
 
 1. In the IIS console, expand the IIS server and select **Application Pools**. In the right pane, right-click **DefaultAppPool**, and then select **Advanced Settings**.
-2. Select **Process Model** > **Identity**. Make sure that **Built-in account** is selected and that an appropriate built-in account (such as **NetworkService**) is selected. Select **OK** to return to the properties list. 
+2. Select **Process Model** > **Identity**. Make sure that **Built-in account** is selected and that an appropriate built-in account (such as **NetworkService**) is selected. Select **OK** to return to the properties list.
 3. Make sure that **Load User Profile** is set to **True**. Select **OK** to close the properties list.
 4. If you changed any settings, restart the IIS service.
 5. Try again to authenticate.
