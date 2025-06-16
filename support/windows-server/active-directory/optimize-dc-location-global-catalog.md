@@ -16,6 +16,8 @@ This article provides the steps to optimize the location of a domain controller 
 
 _Original KB number:_ &nbsp; 306602
 
+**Applies to: All supported versions of Windows Server**
+
 ## Summary
 
 The domain controller locator mechanism in Windows 2000 always prefers a domain controller that resides in the site of the client that is searching for a domain controller. This is achieved by a domain controller that registers site-specific domain controller locator DNS SRV resource records for the site in which the domain controller resides.
