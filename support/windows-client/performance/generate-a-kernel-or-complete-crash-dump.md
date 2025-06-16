@@ -58,7 +58,8 @@ If you can sign in while the problem is occurring, you can use the Microsoft Sys
 3. At the command line, run the following command:
 
    ```console
-   notMyfault.exe /crash
+   notmyfaultc64.exe /getdumptype = full
+   notmyfaultc64.exe /crash 0x01
    ```
 
 > [!NOTE]
