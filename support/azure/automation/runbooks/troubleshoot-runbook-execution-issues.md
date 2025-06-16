@@ -63,8 +63,8 @@ The following table helps you troubleshoot common issues with runbooks:
 |---|---|
 |Unable to create a new Automation job in the West Europe region.|This issue occurs because of scalability limits with the Automation service in the West Europe region. To resolve it, follow the steps in [Unable to create new Automation job in the West Europe region](/answers/questions/910816/index.html).|
 |Runbook bugs or Azure Automation issues.|To learn how to troubleshoot common scenarios, see [Troubleshoot runbook issues](/azure/automation/troubleshoot/runbooks#runbook-fails).|
-|Runbook output and message issues.| To resolve such issues, [retrieve runbook output and messages](/azure/automation/automation-runbook-output-and-messages#runbook-output).|
-|PowerShell module issues in Azure Automation.|To resolve such issues, [update Azure PowerShell modules in Automation](/azure/automation/automation-update-azure-modules).|
+|Runbook output and message issues.| To resolve such issues, see [Retrieve runbook output and messages](/azure/automation/automation-runbook-output-and-messages#runbook-output).|
+|PowerShell module issues in Azure Automation.|To resolve such issues, see [Update Azure PowerShell modules in Automation](/azure/automation/automation-update-azure-modules).|
 
 ## Reference
 
