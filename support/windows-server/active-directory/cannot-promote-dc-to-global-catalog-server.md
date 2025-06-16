@@ -16,6 +16,8 @@ This article provides solutions to an issue where you can't promote a Windows Se
 
 _Original KB number:_ &nbsp; 889711, 910204
 
+**Applies to: All supported versions of Windows Server**
+
 ## Event messages logged in the Directory Services log of Windows Server
 
 You can't promote a Windows Server domain controller to a global catalog server. After you try to assign the global catalog server role to the Windows Server domain controller by selecting the **Global Catalog** checkbox, the domain controller isn't promoted to a global catalog server. If you enable diagnostic logging for the Knowledge Consistency Checker (KCC) at level 1, information events that are similar to the following may be logged repeatedly in the Directory Services log.
