@@ -2,7 +2,7 @@
 title: No account or login hint was passed to the AcquireTokenSilent
 description: Provides solutions to an error that occurs when web applications using Microsoft Authentication Library (MSAL) or Microsoft Identity Web acquire a token silently.
 ms.service: entra-id
-ms.date: 06/13/2025
+ms.date: 06/16/2025
 ms.reviewer: willfid, v-weizhu
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
@@ -30,7 +30,7 @@ You can implement a persistent token cache in a durable location such as SQL Ser
 
 ## Solution 2: Reject the authentication cookie
 
-You can implement a cookie authentication event to validate whether the current signed-in user is present in the MSAL token cache. If the user isn't present, reject the authentication cookie and force the current user to sign in again.
+You can implement a cookie authentication event to validate whether the current signed-in user is present in the MSAL token cache. If the user isn't present, reject the authentication cookie and force the current user to sign in again. For more information about how to implete the custom persistent token cache, see [Token cache serialization](/entra/msal/dotnet/how-to/token-cache-serialization).
 
 ### For ASP.NET web applications using MSAL
 
