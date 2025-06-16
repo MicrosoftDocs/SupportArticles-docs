@@ -373,10 +373,10 @@ The different delegation types place different requirements on your topology. Th
 
 The configuration details for delegation differ depending on the type of delegation that you're using and the type of account that the front-end service uses. To troubleshoot delegation issues further, see the following articles, as appropriate:
 
-- [Troubleshooting Kerberos constrained delegation when using a built-in service account](troubleshoot-kerberos-constrained-delegation-issues.md#troubleshooting-kerberos-constrained-delegation-when-using-a-built-in-service-account).
-- [Troubleshooting Kerberos RBCD when using a built-in service account](troubleshoot-kerberos-rbcd-issues.md#troubleshooting-kerberos-rbcd-when-using-a-built-in-service-account).
-- [Troubleshooting Kerberos constrained delegation when using a custom service account](troubleshoot-kerberos-constrained-delegation-issues.md#troubleshooting-kerberos-constrained-delegation-when-using-a-custom-service-account).
-- [Troubleshooting Kerberos RBCD when using a custom service account](troubleshoot-kerberos-rbcd-issues.md#troubleshooting-kerberos-rbcd-when-using-a-custom-service-account).
+- [Troubleshooting Kerberos constrained delegation if using a built-in service account](troubleshoot-kerberos-constrained-delegation-issues.md#troubleshooting-kerberos-constrained-delegation-if-using-a-built-in-service-account).
+- [Troubleshooting Kerberos RBCD if using a built-in service account](troubleshoot-kerberos-rbcd-issues.md#troubleshooting-kerberos-rbcd-if-using-a-built-in-service-account).
+- [Troubleshooting Kerberos constrained delegation if using a custom service account](troubleshoot-kerberos-constrained-delegation-issues.md#troubleshooting-kerberos-constrained-delegation-if-using-a-custom-service-account).
+- [Troubleshooting Kerberos RBCD if using a custom service account](troubleshoot-kerberos-rbcd-issues.md#troubleshooting-kerberos-rbcd-if-using-a-custom-service-account).
 
 ## Using a log analysis test scenario to troubleshoot Kerberos authentication
 
