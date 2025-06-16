@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2017 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 05/19/2025
+ms.date: 06/16/2025
 appliesto:
   - SQL Server 2017
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-related-content
@@ -20,55 +20,55 @@ The following table lists the release history for [!INCLUDE [sql-server-2017](..
 > [!NOTE]  
 > Any missing GDRs apply to the Windows version only.
 
-| Release                    | Version       | Release date |
-| -------------------------- | ------------- | ------------ |
-| [AzureConnectFeaturePack](#AzureConnectFeaturePack) | 14.0.3490.10  | 2025-03-06   |
-| [CU 31 GDR 6](#CU31-GDR6)  | 14.0.3485.1   | 2024-11-12   |
-| [CU 31 GDR 5](#CU31-GDR5)  | 14.0.3480.1   | 2024-10-08   |
-| [CU 31 GDR 4](#CU31-GDR4)  | 14.0.3475.1   | 2024-09-10   |
-| [CU 31 GDR 2](#CU31-GDR2)  | 14.0.3465.1   | 2023-10-10   |
-| [CU 31 GDR 1](#CU31-GDR1)  | 14.0.3460.9   | 2023-02-14   |
-| [CU 31](#CU31)             | 14.0.3456.2   | 2022-09-20   |
-| [CU 30](#CU30)             | 14.0.3451.2   | 2022-07-13   |
-| [CU 29 GDR](#CU29-GDR)     | 14.0.3445.2   | 2022-06-14   |
-| [CU 29](#CU29)             | 14.0.3436.1   | 2022-03-30   |
-| [CU 28](#CU28)             | 14.0.3430.2   | 2022-01-13   |
-| [CU 27](#CU27)             | 14.0.3421.10  | 2021-10-27   |
-| [CU 26](#CU26)             | 14.0.3411.3   | 2021-09-14   |
-| [CU 25](#CU25)             | 14.0.3401.7   | 2021-07-12   |
-| [CU 24](#CU24)             | 14.0.3391.2   | 2021-05-10   |
-| [CU 23](#CU23)             | 14.0.3381.3   | 2021-02-24   |
-| [CU 22 GDR](#CU22)         | 14.0.3370.1   | 2021-01-12   |
-| [GDR 5](#GDR5)             | 14.0.2037.2   | 2021-01-12   |
-| [CU 22](#CU22)             | 14.0.3356.20  | 2020-09-10   |
-| [CU 21](#CU21)             | 14.0.3335.7   | 2020-07-01   |
-| [CU 20](#CU20)             | 14.0.3294.2   | 2020-04-10   |
-| [CU 19](#CU19)             | 14.0.3281.6   | 2020-02-05   |
-| [CU 18](#CU18)             | 14.0.3257.3   | 2019-12-09   |
-| [CU 17](#CU17)             | 14.0.3238.1   | 2019-10-08   |
-| [CU 16](#CU16)             | 14.0.3223.3   | 2019-08-01   |
-| [CU 15 GDR](#CU15-GDR)     | 14.0.3192.2   | 2019-07-09   |
-| [GDR 4](#GDR4)             | 14.0.2027.2   | 2019-07-09   |
-| [CU 15](#CU15)             | 14.0.3162.1   | 2019-05-23   |
-| [CU 14](#CU14)             | 14.0.3076.1   | 2019-03-25   |
-| [CU 13](#CU13)             | 14.0.3048.4   | 2018-12-18   |
-| [CU 12](#CU12)             | 14.0.3045.24  | 2018-10-24   |
-| [CU 11](#CU11)             | 14.0.3038.14  | 2018-09-20   |
-| [CU 10](#CU10)             | 14.0.3037.1   | 2018-08-27   |
-| [CU 9 GDR](#CU9-GDR)       | 14.0.3035.2   | 2018-08-18   |
-| [GDR 2](#GDR2)             | 14.0.2002.14  | 2018-08-18   |
-| [CU 9](#CU9)               | 14.0.3030.27  | 2018-07-18   |
-| [CU 8](#CU8)               | 14.0.3029.16  | 2018-06-21   |
-| [CU 7](#CU7)               | 14.0.3026.27  | 2018-05-24   |
-| [CU 6](#CU6)               | 14.0.3025.34  | 2018-04-19   |
-| [CU 5](#CU5)               | 14.0.3023.8   | 2018-03-20   |
-| [CU 4](#CU4)               | 14.0.3022.28  | 2018-02-20   |
-| [CU 3](#CU3)               | 14.0.3015.40  | 2018-01-03   |
-| [CU 3 GDR](#CU3-GDR)       | 14.0.3015.40  | 2018-01-03   |
-| [GDR 1](#GDR1)             | 14.0.2000.63  | 2018-01-03   |
-| [CU 2](#CU2)               | 14.0.3008.27  | 2017-11-28   |
-| [CU 1](#CU1)               | 14.0.3006.16  | 2017-10-24   |
-| [GA](#GA)                  | 14.0.1000.169 | 2017-10-02   |
+| Release | Version | Release date |
+| --- | --- | --- |
+| [AzureConnectFeaturePack](#AzureConnectFeaturePack) | 14.0.3490.10 | 2025-03-06 |
+| [CU 31 GDR 6](#CU31-GDR6) | 14.0.3485.1 | 2024-11-12 |
+| [CU 31 GDR 5](#CU31-GDR5) | 14.0.3480.1 | 2024-10-08 |
+| [CU 31 GDR 4](#CU31-GDR4) | 14.0.3475.1 | 2024-09-10 |
+| [CU 31 GDR 2](#CU31-GDR2) | 14.0.3465.1 | 2023-10-10 |
+| [CU 31 GDR 1](#CU31-GDR1) | 14.0.3460.9 | 2023-02-14 |
+| [CU 31](#CU31) | 14.0.3456.2 | 2022-09-20 |
+| [CU 30](#CU30) | 14.0.3451.2 | 2022-07-13 |
+| [CU 29 GDR](#CU29-GDR) | 14.0.3445.2 | 2022-06-14 |
+| [CU 29](#CU29) | 14.0.3436.1 | 2022-03-30 |
+| [CU 28](#CU28) | 14.0.3430.2 | 2022-01-13 |
+| [CU 27](#CU27) | 14.0.3421.10 | 2021-10-27 |
+| [CU 26](#CU26) | 14.0.3411.3 | 2021-09-14 |
+| [CU 25](#CU25) | 14.0.3401.7 | 2021-07-12 |
+| [CU 24](#CU24) | 14.0.3391.2 | 2021-05-10 |
+| [CU 23](#CU23) | 14.0.3381.3 | 2021-02-24 |
+| [CU 22 GDR](#CU22) | 14.0.3370.1 | 2021-01-12 |
+| [GDR 5](#GDR5) | 14.0.2037.2 | 2021-01-12 |
+| [CU 22](#CU22) | 14.0.3356.20 | 2020-09-10 |
+| [CU 21](#CU21) | 14.0.3335.7 | 2020-07-01 |
+| [CU 20](#CU20) | 14.0.3294.2 | 2020-04-10 |
+| [CU 19](#CU19) | 14.0.3281.6 | 2020-02-05 |
+| [CU 18](#CU18) | 14.0.3257.3 | 2019-12-09 |
+| [CU 17](#CU17) | 14.0.3238.1 | 2019-10-08 |
+| [CU 16](#CU16) | 14.0.3223.3 | 2019-08-01 |
+| [CU 15 GDR](#CU15-GDR) | 14.0.3192.2 | 2019-07-09 |
+| [GDR 4](#GDR4) | 14.0.2027.2 | 2019-07-09 |
+| [CU 15](#CU15) | 14.0.3162.1 | 2019-05-23 |
+| [CU 14](#CU14) | 14.0.3076.1 | 2019-03-25 |
+| [CU 13](#CU13) | 14.0.3048.4 | 2018-12-18 |
+| [CU 12](#CU12) | 14.0.3045.24 | 2018-10-24 |
+| [CU 11](#CU11) | 14.0.3038.14 | 2018-09-20 |
+| [CU 10](#CU10) | 14.0.3037.1 | 2018-08-27 |
+| [CU 9 GDR](#CU9-GDR) | 14.0.3035.2 | 2018-08-18 |
+| [GDR 2](#GDR2) | 14.0.2002.14 | 2018-08-18 |
+| [CU 9](#CU9) | 14.0.3030.27 | 2018-07-18 |
+| [CU 8](#CU8) | 14.0.3029.16 | 2018-06-21 |
+| [CU 7](#CU7) | 14.0.3026.27 | 2018-05-24 |
+| [CU 6](#CU6) | 14.0.3025.34 | 2018-04-19 |
+| [CU 5](#CU5) | 14.0.3023.8 | 2018-03-20 |
+| [CU 4](#CU4) | 14.0.3022.28 | 2018-02-20 |
+| [CU 3](#CU3) | 14.0.3015.40 | 2018-01-03 |
+| [CU 3 GDR](#CU3-GDR) | 14.0.3015.40 | 2018-01-03 |
+| [GDR 1](#GDR1) | 14.0.2000.63 | 2018-01-03 |
+| [CU 2](#CU2) | 14.0.3008.27 | 2017-11-28 |
+| [CU 1](#CU1) | 14.0.3006.16 | 2017-10-24 |
+| [GA](#GA) | 14.0.1000.169 | 2017-10-02 |
 
 ## <a id="AzureConnectFeaturePack"></a> Azure Connect Pack (March 2025)
 
@@ -926,5 +926,5 @@ Go back to the [release history](#release-history).
 - [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](/sql/linux/quickstart-install-connect-suse)
 - [Quickstart: Install SQL Server and create a database on Ubuntu](/sql/linux/quickstart-install-connect-ubuntu)
 - [Quickstart: Run SQL Server Linux container images with Docker](/sql/linux/quickstart-install-connect-docker)
-- [Create a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
+- [Provision a Linux virtual machine running SQL Server in the Azure portal](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Quickstart: Run SQL Server in the cloud](/sql/linux/quickstart-install-connect-clouds)
