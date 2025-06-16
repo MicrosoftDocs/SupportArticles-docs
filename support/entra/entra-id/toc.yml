@@ -61,14 +61,14 @@
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
       - name: Error AADSTS7000218 - Invalid client
         href: app-integration/confidential-client-application-authentication-error-aadsts7000218.md
-      - name: IDX10501 Signature Validation Errors
-        href: app-integration/idx10501-token-signature-validation-error.md
       - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
         href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
       - name: Infinite sign-in loop issue with ASP.NET applications
         href: app-integration/asp-dot-net-application-infinite-sign-in-loop.md
       - name: Package Inspector for MSAL Android Native
         href: app-integration/package-inspector-msal-android-native.md
+      - name: Unable to match key ID 
+        href: app-integration/idx10501-token-signature-validation-error.md
       - name: Repeated login prompts in iOS MSAL implementation
         href: app-integration/repeat-login-prompts-in-msal-ios-app.md
       - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
