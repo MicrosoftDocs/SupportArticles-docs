@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2019 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 05/19/2025
+ms.date: 06/16/2025
 appliesto:
   - SQL Server 2019
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-related-content
@@ -20,51 +20,51 @@ The following table lists the release history for [!INCLUDE [sql-server-2019](..
 > [!NOTE]  
 > Any missing GDRs apply to the Windows version only.
 
-| Release                    | Version       | Release date |
-| -------------------------- | ------------- | ------------ |
-| [CU 32](#CU32)             | 15.0.4430.1   | 2025-02-27   |
-| [CU 31](#CU31)             | 15.0.4420.2   | 2025-02-13   |
-| [CU 30](#CU30)             | 15.0.4415.2   | 2024-12-12   |
-| [CU 29 GDR](#CU29-GDR)     | 15.0.4410.1   | 2024-11-12   |
-| [CU 29](#CU29)             | 15.0.4405.4   | 2024-10-31   |
-| [CU 28 GDR 2](#CU28-GDR2)  | 15.0.4395.2   | 2024-10-08   |
-| [CU 28 GDR 1](#CU28-GDR1)  | 15.0.4390.2   | 2024-09-10   |
-| [CU 28](#CU28)             | 15.0.4385.2   | 2024-08-01   |
-| [CU 27](#CU27)             | 15.0.4375.4   | 2024-06-13   |
-| [CU 26](#CU26)             | 15.0.4365.2   | 2024-04-11   |
-| [CU 25 GDR](#CU25-GDR)     | 15.0.4360.2   | 2024-04-09   |
-| [CU 25](#CU25)             | 15.0.4355.3   | 2024-02-15   |
-| [CU 24](#CU24)             | 15.0.4345.5   | 2023-12-14   |
-| [CU 23](#CU23)             | 15.0.4335.1   | 2023-10-12   |
-| [CU 22 GDR](#CU22-GDR)     | 15.0.4326.1   | 2023-10-10   |
-| [CU 22](#CU22)             | 15.0.4322.2   | 2023-08-14   |
-| [CU 21](#CU21)             | 15.0.4316.3   | 2023-06-15   |
-| [CU 20](#CU20)             | 15.0.4312.2   | 2023-04-13   |
-| [CU 19](#CU19)             | 15.0.4298.1   | 2023-02-16   |
-| [CU 18 GDR](#CU18-GDR)     | 15.0.4280.7   | 2023-02-14   |
-| [CU 18](#CU18)             | 15.0.4261.1   | 2022-09-28   |
-| [CU 17](#CU17)             | 15.0.4249.2   | 2022-08-11   |
-| [CU 16 GDR](#CU16-GDR)     | 15.0.4236.7   | 2022-06-14   |
-| [CU 16](#CU16)             | 15.0.4223.1   | 2022-04-18   |
-| [CU 15](#CU15)             | 15.0.4198.2   | 2022-01-27   |
-| [CU 14](#CU14)             | 15.0.4188.2   | 2021-11-22   |
-| [CU 13](#CU13)             | 15.0.4178.1   | 2021-10-05   |
-| [CU 12](#CU12)             | 15.0.4153.1   | 2021-08-04   |
-| [CU 11](#CU11)             | 15.0.4138.2   | 2021-06-10   |
-| [CU 10](#CU10)             | 15.0.4123.1   | 2021-04-06   |
-| [CU 9](#CU9)               | 15.0.4102.2   | 2021-02-10   |
-| [CU 8 GDR](#CU8-GDR)       | 15.0.4083.2   | 2021-01-12   |
-| [GDR 2](#GDR2)             | 15.0.2080.9   | 2021-01-12   |
-| [CU 8](#CU8)               | 15.0.4073.23  | 2020-10-07   |
-| [CU 7 (Removed)](../sqlserver-2019/cumulativeupdate7.md) | 15.0.4063.15  | 2020-09-02   |
-| [CU 6](#CU6)               | 15.0.4053.23  | 2020-08-04   |
-| [CU 5](#CU5)               | 15.0.4043.16  | 2020-06-22   |
-| [CU 4](#CU4)               | 15.0.4033.1   | 2020-03-31   |
-| [CU 3](#CU3)               | 15.0.4023.6   | 2020-03-12   |
-| [CU 2](#CU2)               | 15.0.4013.40  | 2020-02-13   |
-| [CU 1](#CU1)               | 15.0.4003.23  | 2020-01-07   |
-| [GA](#GA)                  | 15.0.2000.5   | 2019-11-04   |
-| [GDR 1](#GDR1)             | 15.0.2070.41  | 2019-11-04   |
+| Release | Version | Release date |
+| --- | --- | --- |
+| [CU 32](#CU32) | 15.0.4430.1 | 2025-02-27 |
+| [CU 31](#CU31) | 15.0.4420.2 | 2025-02-13 |
+| [CU 30](#CU30) | 15.0.4415.2 | 2024-12-12 |
+| [CU 29 GDR](#CU29-GDR) | 15.0.4410.1 | 2024-11-12 |
+| [CU 29](#CU29) | 15.0.4405.4 | 2024-10-31 |
+| [CU 28 GDR 2](#CU28-GDR2) | 15.0.4395.2 | 2024-10-08 |
+| [CU 28 GDR 1](#CU28-GDR1) | 15.0.4390.2 | 2024-09-10 |
+| [CU 28](#CU28) | 15.0.4385.2 | 2024-08-01 |
+| [CU 27](#CU27) | 15.0.4375.4 | 2024-06-13 |
+| [CU 26](#CU26) | 15.0.4365.2 | 2024-04-11 |
+| [CU 25 GDR](#CU25-GDR) | 15.0.4360.2 | 2024-04-09 |
+| [CU 25](#CU25) | 15.0.4355.3 | 2024-02-15 |
+| [CU 24](#CU24) | 15.0.4345.5 | 2023-12-14 |
+| [CU 23](#CU23) | 15.0.4335.1 | 2023-10-12 |
+| [CU 22 GDR](#CU22-GDR) | 15.0.4326.1 | 2023-10-10 |
+| [CU 22](#CU22) | 15.0.4322.2 | 2023-08-14 |
+| [CU 21](#CU21) | 15.0.4316.3 | 2023-06-15 |
+| [CU 20](#CU20) | 15.0.4312.2 | 2023-04-13 |
+| [CU 19](#CU19) | 15.0.4298.1 | 2023-02-16 |
+| [CU 18 GDR](#CU18-GDR) | 15.0.4280.7 | 2023-02-14 |
+| [CU 18](#CU18) | 15.0.4261.1 | 2022-09-28 |
+| [CU 17](#CU17) | 15.0.4249.2 | 2022-08-11 |
+| [CU 16 GDR](#CU16-GDR) | 15.0.4236.7 | 2022-06-14 |
+| [CU 16](#CU16) | 15.0.4223.1 | 2022-04-18 |
+| [CU 15](#CU15) | 15.0.4198.2 | 2022-01-27 |
+| [CU 14](#CU14) | 15.0.4188.2 | 2021-11-22 |
+| [CU 13](#CU13) | 15.0.4178.1 | 2021-10-05 |
+| [CU 12](#CU12) | 15.0.4153.1 | 2021-08-04 |
+| [CU 11](#CU11) | 15.0.4138.2 | 2021-06-10 |
+| [CU 10](#CU10) | 15.0.4123.1 | 2021-04-06 |
+| [CU 9](#CU9) | 15.0.4102.2 | 2021-02-10 |
+| [CU 8 GDR](#CU8-GDR) | 15.0.4083.2 | 2021-01-12 |
+| [GDR 2](#GDR2) | 15.0.2080.9 | 2021-01-12 |
+| [CU 8](#CU8) | 15.0.4073.23 | 2020-10-07 |
+| [CU 7 (Removed)](../sqlserver-2019/cumulativeupdate7.md) | 15.0.4063.15 | 2020-09-02 |
+| [CU 6](#CU6) | 15.0.4053.23 | 2020-08-04 |
+| [CU 5](#CU5) | 15.0.4043.16 | 2020-06-22 |
+| [CU 4](#CU4) | 15.0.4033.1 | 2020-03-31 |
+| [CU 3](#CU3) | 15.0.4023.6 | 2020-03-12 |
+| [CU 2](#CU2) | 15.0.4013.40 | 2020-02-13 |
+| [CU 1](#CU1) | 15.0.4003.23 | 2020-01-07 |
+| [GA](#GA) | 15.0.2000.5 | 2019-11-04 |
+| [GDR 1](#GDR1) | 15.0.2070.41 | 2019-11-04 |
 
 ## <a id="CU32"></a> CU 32 (February 2025)
 
@@ -786,5 +786,5 @@ Go back to the [release history](#release-history).
 - [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](/sql/linux/quickstart-install-connect-suse)
 - [Quickstart: Install SQL Server and create a database on Ubuntu](/sql/linux/quickstart-install-connect-ubuntu)
 - [Quickstart: Run SQL Server Linux container images with Docker](/sql/linux/quickstart-install-connect-docker)
-- [Create a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
+- [Provision a Linux virtual machine running SQL Server in the Azure portal](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
 - [Quickstart: Run SQL Server in the cloud](/sql/linux/quickstart-install-connect-clouds)
