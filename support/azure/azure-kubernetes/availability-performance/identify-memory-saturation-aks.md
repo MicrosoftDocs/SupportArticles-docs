@@ -14,6 +14,8 @@ This article discusses methods for troubleshooting memory saturation issues. Mem
 ## Prerequisites
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+- The [krew](https://sigs.k8s.io/krew) package manager for installing [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072). You can follow the [krew quickstart guide](https://krew.sigs.k8s.io/docs/user-guide/quickstart/) to install it.
+- The open source project [Inspektor Gadget](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#how-to-install-inspektor-gadget-in-an-aks-cluster) for advanced process level memory analysis.
 
 ## Symptoms
 
@@ -88,7 +90,7 @@ This procedure uses the kubectl commands in a console. It displays only the curr
    aks-testmemory-30616462-vmss000002   74m          3%     1715Mi          31%
    ```
 
-1. Get the list of pods that are running on the node and their memory usage by running the [kubectl get pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) and [kubectl top pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-pod-em-) commands: 
+2. Get the list of pods that are running on the node and their memory usage by running the [kubectl get pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) and [kubectl top pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-pod-em-) commands: 
 
    ```bash
    kubectl get pods --all-namespaces --output wide \
@@ -125,7 +127,7 @@ This procedure uses the kubectl commands in a console. It displays only the curr
    ama-logs-w5bmd                       12m          403Mi
    ```
 
-1. Review the requests and limits for each pod on the node by running the [kubectl describe node](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) command:
+3. Review the requests and limits for each pod on the node by running the [kubectl describe node](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) command:
 
    ```bash
    kubectl describe node <node-name>
@@ -158,9 +160,49 @@ This procedure uses the kubectl commands in a console. It displays only the curr
 
 ---
 
-Now that you've identified the pods that are using high memory, you can identify the applications that are running on the pod.
+Now that you've identified the pods that are using high memory, you can identify the applications that are running on the pod or identify processes that may be consuming excess memory.
 
-### Step 2: Review best practices to avoid memory saturation
+### Step 2: Identify process level memory usage
+
+For advanced process level memory analysis, use [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) to monitor real-time memory usage at the process level within containers:
+
+   ```bash
+   # Install Inspektor Gadget
+   kubectl krew install gadget
+   kubectl gadget deploy   # Monitor top memory-consuming processes across all containers
+   kubectl gadget run top_process --sort memory 
+   
+   # Monitor processes on a specific node
+   kubectl gadget run top_process --sort memory --node <node-name> 
+   
+   # Monitor processes in a specific namespace
+   kubectl gadget run top_process --sort memory --namespace <namespace-name> 
+   ```
+
+   The output of the Inspektor Gadget `top_process` command resembles the following:
+
+   ```output
+   K8S.NODE                          K8S.NAMESPACE    K8S.PODNAME                              K8S.CONTAINERNAME         PID COMM               CPUUSAGE CPUUSAGERELA…     MEMORYRSS MEMORYVIRTUAL MEMORYRELATI… THREADCOUNT STATE               UID STARTTIMESTR
+   aks-agentpool-30486455-vmss0  kube-system  ama-logs-w5bmd                   ama-logs          123456   1        ama-logs         2.1   8.7     403Mi    1.2Gi
+   aks-agentpool-30486455-vmss0  kube-system  ama-metrics-node-54sfj           ama-metrics       123457   1        ama-metrics      1.6   5.4     249Mi    856Mi
+   aks-agentpool-30486455-vmss0  default      adservice-795589cf6f-xs66r       adservice         123458   1        adservice        0.4   1.9     87Mi     345Mi
+   aks-agentpool-30486455-vmss0  kube-system  csi-azuredisk-node-9fh7h         csi-provisioner   123459   1        csi-provisioner  0.2   1.0     46Mi     234Mi
+   ```
+```dotnetcli
+K8S.NODE            K8S.NAMESPACE       K8S.PODNAME         K8S.CONTAINERNAME         PID COMM               CPUUSAGE CPUUSAGERELA…     MEMORYRSS MEMORYVIRTUAL MEMORYRELATI… THREADCOUNT STATE               UID STARTTIMESTR
+minikube            test-namespace      test-pod            test-container            747 ig                      0.3           0.1      94101504    1979633664           2.3           8 S                     0 2025-05-20T2
+minikube            test-namespace      test-pod            test-container          40192 ig                      0.3           0.1     134131712    2056871936           3.3           9 S                     0 2025-05-27T1
+minikube            test-namespace      test-pod            test-container          32493 ig                      0.3           0.1     161894400    2061258752           3.9           8 S                     0 2025-05-24T1
+                                                                                       98 ata_sff                 0.0           0.0             0             0           0.0           1 I                     0 2025-05-20T2
+                                                                                       99 md                      0.0           0.0             0             0           0.0           1 I                     0 2025-05-20T2
+                                                                                      817 sshd                    0.0           0.0       6160384      15507456           0.2           1 S                     0 2025-05-20T2
+```
+
+
+You can use this output to identify the processes that are consuming the most memory on the node. The output includes the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU usage, memory usage (RSS and Virtual), and relative memory usage.
+
+
+### Step 3: Review best practices to avoid memory saturation
 
 Review the following table to learn how to implement best practices for avoiding memory saturation.
 
