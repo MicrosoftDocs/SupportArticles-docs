@@ -1,30 +1,30 @@
 ---
-title: Troubleshooting the wrap feature in Power Apps
-description: Solutions for common issues when using the wrap feature in Power Apps.
+title: Troubleshoot the wrap feature in Power Apps
+description: Provides solutions to common issues when using the wrap feature in Power Apps.
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
 ms.date: 06/16/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
-# Troubleshooting wrap feature issues in Power Apps
+# Troubleshoot wrap feature issues in Power Apps
 
-This guide provides solutions for common issues encountered when using the [wrap](/power-apps/maker/common/wrap/overview) feature in Microsoft Power Apps.
+This guide provides solutions to common issues encountered when using the [wrap](/power-apps/maker/common/wrap/overview) feature in Microsoft Power Apps.
 
 ## Issue 1: Wrap build fails
 
-If your wrap build fails, try the following steps:
+If your wrap build fails, try the following actions:
 
 ### Verify image formats
 
-All images in your wrap project must be in PNG format. Using other formats will cause the build to fail. Use an image converter to convert images to `.png`.
+All images in your wrap project must be in PNG format. Using other formats causes the build to fail. Use an image converter to convert images to `.png`.
 
 > [!IMPORTANT]  
 > Renaming a file extension to `.png` doesn't convert the image to PNG format.
 
 ### Check Azure key vault setup
 
-- Ensure you have created an Azure service principal and assigned the correct role.
+- Ensure you create an Azure service principal and assign the correct role.
 - For more information, see [Create Azure key vault for wrap in Power Apps](/power-apps/maker/common/wrap/create-key-vault-for-code-signing).
 
 Your key vault must contain:
@@ -48,10 +48,7 @@ Update to the latest version of the wrap solution and try again.
 
 ## Issue 4: Unable to install wrapped mobile app
 
-Ensure your app is properly signed. You can do this by:
-
-1. Configuring a key vault during the build process, or
-2. Signing the app manually
+Ensure your app is properly signed by configuring a key vault during the build process, or signing the app manually.
 
 For more information, see:
 
@@ -59,13 +56,13 @@ For more information, see:
 - [Code sign for iOS](/power-apps/maker/common/wrap/code-sign-ios)
 - [Code sign for Android](/power-apps/maker/common/wrap/code-sign-android)
 
-Also, verify your device meets the [minimum requirements](/power-apps/maker/common/wrap/overview#software-and-device-requirements).
+In addition, verify your device meets the [minimum requirements](/power-apps/maker/common/wrap/overview#software-and-device-requirements).
 
 ---
 
 ## Issue 5: Can't sign in or see data in wrapped app
 
-If you can't sign in or see data in your wrapped app, try the following steps:
+If you can't sign in or see data in your wrapped app, try the following actions:
 
 ### Verify API permissions and access
 
@@ -73,7 +70,7 @@ If you can't sign in or see data in your wrapped app, try the following steps:
 
   :::image type="content" source="media/wrap-issues/api-permissions-2.png" alt-text="Screenshot that shows the API permissions for the app." lightbox="media/wrap-issues/api-permissions-2.png":::
 
-- Ensure the `Add-AdminAllowedThirdPartyApps` script has been run successfully.  
+- Ensure the `Add-AdminAllowedThirdPartyApps` script runs successfully.  
   For more information, see [Allow registered apps in your environment](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
 ### Check account type and redirect URIs
@@ -88,29 +85,29 @@ If you can't sign in or see data in your wrapped app, try the following steps:
 
 ## Issue 6: Azure key vault errors in wrap for Power Apps
 
-You may encounter these error codes in the wrap wizard:
+You might encounter these error codes in the wrap wizard:
 
-| Error Code | Description |
+| Error Code | Error Message |
 |------------|-------------|
-| [1000118](#error-code-1000118) | Default subscription not found or missing access permissions |
-| [1000119](#error-code-1000119) | Key vault doesn't exist or is missing access privileges |
-| [1000120](#error-code-1000120) | No organization ID tags found on key vault |
-| [1000121](#error-code-1000121) | Android keystore isn't valid. Missing tag and/or certificate |
-| [1000122](#error-code-1000122) | iOS certificate isn't valid |
-| [1000123](#error-code-1000123) | iOS profile isn't valid |
-| [1000128](#error-code-1000128) | Missing access key used while accessing Azure Blob storage location |
-| [1000130](#error-code-1000130) | Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set |
-| [1000131](#error-code-1000131) | Missing tags for the specified Azure Key Vault resourceID |
+| [1000118](#error-code-1000118) | Default subscription not found or missing access permissions. |
+| [1000119](#error-code-1000119) | Key vault doesn't exist or is missing access privileges. |
+| [1000120](#error-code-1000120) | No organization ID tags found on key vault. |
+| [1000121](#error-code-1000121) | Android keystore isn't valid. Missing tag and/or certificate. |
+| [1000122](#error-code-1000122) | iOS certificate isn't valid. |
+| [1000123](#error-code-1000123) | iOS profile isn't valid. |
+| [1000128](#error-code-1000128) | Missing access key used while accessing Azure Blob storage location. |
+| [1000130](#error-code-1000130) | Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set. |
+| [1000131](#error-code-1000131) | Missing tags for the specified Azure Key Vault resourceID. |
 
 ### Error code 1000118
 
-**Description**: Default subscription not found, or missing access permissions
+Erroe message: Default subscription not found, or missing access permissions.
 
 #### Resolution steps
 
 1. Ensure your Azure key vault is in the tenant's **Default subscription**.
 
-2. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20' by running the following commands in PowerShell:
+2. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20" by running the following commands in PowerShell:
 
    ```powershell
    Connect-AzureAD -TenantId <your tenant ID>
@@ -119,7 +116,7 @@ You may encounter these error codes in the wrap wizard:
 
 3. In the [Azure portal](https://portal.azure.com), under **Access Control (IAM)**, assign the **Reader** role to your service principal:
 
-   1. Go to **Access control (IAM)**, then select **Add role assignment**.
+   1. Go to **Access control (IAM)**, and then select **Add role assignment**.
 
       :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab." lightbox="media/wrap-issues/add-role-assignment.png":::
 
@@ -137,7 +134,7 @@ You may encounter these error codes in the wrap wizard:
 
 ### Error code 1000119
 
-**Description**: Key vault doesn't exist, or Key vault is missing access privileges
+Error message: Key vault doesn't exist, or Key vault is missing access privileges.
 
 #### Resolution steps
 
@@ -147,7 +144,7 @@ You may encounter these error codes in the wrap wizard:
 
    :::image type="content" source="media/wrap-issues/vault-acces-policy.png" alt-text="Select the Vault Access policy option under the Access configuration tab.":::
 
-3. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20'by running the following commands in PowerShell:
+3. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20" by running the following commands in PowerShell:
 
    ```powershell
    Connect-AzureAD -TenantId <your tenant ID>
@@ -164,7 +161,7 @@ You may encounter these error codes in the wrap wizard:
 
 ### Error code 1000120
 
-**Description**: No organization ID tags found on key vault
+Error message: No organization ID tags found on key vault.
 
 #### Resolution steps
 
@@ -182,7 +179,7 @@ You may encounter these error codes in the wrap wizard:
 
 ### Error code 1000121
 
-**Description**: Android keystore isn't valid. Missing Tag and/or Certificate
+Error message: Android keystore isn't valid. Missing Tag and/or Certificate.
 
 #### Resolution steps
 
@@ -195,13 +192,13 @@ You may encounter these error codes in the wrap wizard:
 2. Add a **Tag** for your certificate:
 
    - **Tag name**: Use the same Bundle ID as your wrap project (for example, `com.testApp.wrap`).
-   - **Tag value**: Use the certificate name you assigned while uploading (for example, `AndroidCertificate`).
+   - **Tag value**: Use the certificate name you assigned when uploading (for example, `AndroidCertificate`).
 
    :::image type="content" source="media/wrap-issues/create-certificate-tag.png" alt-text="Screenshot that shows how to create a certificate tag." lightbox="media/wrap-issues/create-certificate-tag.png":::
 
 ### Error code 1000122
 
-**Description**: iOS certificate isn't valid
+Error message: iOS certificate isn't valid.
 
 #### Resolution steps
 
@@ -214,13 +211,13 @@ You may encounter these error codes in the wrap wizard:
 2. Add a **Tag** for your certificate:
 
    - **Tag name**: Use the Bundle ID from your wrap project.
-   - **Tag value**: Use the certificate name you assigned while uploading (for example, `iOSCertificate`).
+   - **Tag value**: Use the certificate name you assigned when uploading (for example, `iOSCertificate`).
 
    :::image type="content" source="media/wrap-issues/certificate-tag-ios.png" alt-text="Screenshot that shows how to create a certificate tag for iOS." lightbox="media/wrap-issues/certificate-tag-ios.png":::
 
 ### Error code 1000123
 
-**Description**: iOS profile isn't valid
+Error message: iOS profile isn't valid.
 
 #### Resolution steps
 
@@ -235,7 +232,7 @@ You may encounter these error codes in the wrap wizard:
 
 ### Error code 1000128
 
-**Description**: Missing access key used while accessing Azure Blob storage location
+Error message: Missing access key used while accessing Azure Blob storage location.
 
 #### Resolution steps
 
@@ -245,22 +242,22 @@ For more information, see [Step 2: Target platform](/power-apps/maker/common/wra
 
 ### Error code 1000130
 
-**Description**: Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set.
+Error message: Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set.
 
 #### Resolution steps
 
-- Add the resource ID for the Azure Key Vaults you intend to use with your wrap application.
+- Add the resource ID for the Azure key vaults you intend to use with your wrap application.
 - Ensure that all required tags are present for the resource ID linked to the Bundle ID specified in the wrap wizard.
 
 For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
 ### Error code 1000131
 
-**Description**: Missing tags for the specified Azure Key Vault resourceID.
+Error message: Missing tags for the specified Azure Key Vault resourceID.
 
 #### Resolution steps
 
-- After setting up Azure Key Vaults, add all required tags.
+- After setting up Azure key vaults, add all required tags.
 - Confirm that the resource ID associated with the Bundle ID specified in the wrap wizard includes every necessary tag.
 
 For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
@@ -279,23 +276,23 @@ For more information, see [Step 2: Target platform](/power-apps/maker/common/wra
 
 ## Issue 8: Error message: "Something went wrong. [5objp]"
 
-This issue may occur due to a Signature Hash Key mismatch or a Redirect URI mismatch during the app authentication process.
+This issue might occur due to a Signature Hash Key mismatch or a Redirect URI mismatch during the app authentication process.
 
 #### Common root causes
 
 ##### Cause 1: Signature Hash Key mismatch
 
-The APK is signed with a different key than the one registered in the Microsoft Entra ID application. This can occur if:
+The APK is signed with a different key than the one registered in the Microsoft Entra ID application. This might occur if:
 
 - A different keystore is used during the build process.
 
-- The registered hash key was incorrectly generated or copied (for example, includes extra spaces or invalid characters.)
+- The registered hash key is incorrectly generated or copied (for example, it includes extra spaces or invalid characters.)
 
 ##### Cause 2: Redirect URI mismatch
 
 The redirect URI being used by the app doesn't match what's registered in the portal:
 
-- Redirect URIs are case-sensitive. Mismatches can occur if the Bundle ID or URI is entered with incorrect casing.
+- Redirect URIs are case-sensitive. Mismatches might occur if the Bundle ID or URI is entered with incorrect casing.
 
 - Special characters in the URI (such as `%2F`, `%3D`) must be properly encoded and match exactly what is registered in Microsoft Entra ID.
 
@@ -313,7 +310,7 @@ The redirect URI being used by the app doesn't match what's registered in the po
 
 5. Check that your app's Signature Hash Key is listed and matches the hash key generated from your keystore.
 
-6. If the hash key is missing or incorrect, add or update it as needed, then save your changes.
+6. If the hash key is missing or incorrect, add or update it as needed, and then save your changes.
 
 ##### Check the Redirect URI
 
@@ -333,7 +330,7 @@ The redirect URI being used by the app doesn't match what's registered in the po
 
 8. Under **Authentication**, review the configured [redirect URIs](/entra/identity-platform/how-to-add-redirect-uri#add-a-redirect-uri).
 
-9. If the redirect URI is missing, add it with the correct Bundle ID and Signature Hash Key, then save your changes.
+9. If the redirect URI is missing, add it with the correct Bundle ID and Signature Hash Key, and then save your changes.
 
 10. Compare the existing redirect URI character-by-character (including case and encoding) with the one registered in Microsoft Entra ID.
 
@@ -356,7 +353,7 @@ The error might occur when the app registration isn't configured to support [mul
 
 #### Common root causes
 
-This error typically occurs when the app registration is created using the wrap wizard, which by default sets the app to single-tenant mode. If the user doesn't manually update this setting or accidentally selects single tenant during manual app registration, wrap app will be unable to authenticate, resulting in error code 9n155.
+This error typically occurs when the app registration is created using the wrap wizard, which by default sets the app to single-tenant mode. If the user doesn't manually update this setting or accidentally selects single tenant during manual app registration, wrap app is unable to authenticate, resulting in error code 9n155.
 
 #### Resolution
 
@@ -370,14 +367,14 @@ This error typically occurs when the app registration is created using the wrap 
 
 ## Other issues
 
-If your issue isn't covered here, or if the steps above don't resolve your problem, see [Next steps](#next-steps) to report your issue. Be prepared to provide detailed steps to reproduce the problem.
+If your issue isn't covered here, or if the preceding steps don't resolve your problem, see [Next steps](#next-steps) to report your issue. Be prepared to provide detailed steps to reproduce the problem.
 
 ### Collecting diagnostic information
 
 For troubleshooting sign-in issues, you can collect session details:
 
 - For wrap wizard: On the sign-in screen, tap the gear icon in the upper-right corner and select **Session Details**.
-- For mobile devices: After opening the app, press and hold the screen, then select **Session Details**.
+- For mobile devices: After opening the app, press and hold the screen, and then select **Session Details**.
 
 ## Next steps
 
