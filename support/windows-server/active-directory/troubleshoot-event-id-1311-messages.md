@@ -16,6 +16,8 @@ This article describes how to troubleshoot event ID 1311 messages in the Directo
 
 _Original KB number:_ &nbsp; 307593
 
+**Applies to: All supported versions of Windows Server**
+
 ## Symptoms
 
 The Knowledge Consistency Checker (KCC) constructs and maintains the replication topology for Active Directory. To do this, the KCC examines the sum of all naming contexts that reside in the forest and all administrator-defined constraints for site, site link, and link cost.
