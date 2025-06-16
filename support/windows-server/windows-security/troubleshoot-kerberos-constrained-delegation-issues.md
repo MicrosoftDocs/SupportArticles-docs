@@ -20,8 +20,8 @@ If your target service has separate front-end and back-end components, Kerberos 
 
 The configuration details differ depending on the type of account that the front-end service uses. This article provides separate procedures for different kinds of service accounts:
 
-- [Troubleshooting Kerberos constrained delegation if using a built-in service account](#troubleshooting-kerberos-constrained-delegation-when-using-a-built-in-service-account)
-- [Troubleshooting Kerberos constrained delegation if using a custom service account](#troubleshooting-kerberos-constrained-delegation-when-using-a-custom-service-account)
+- [Troubleshooting Kerberos constrained delegation if using a built-in service account](#troubleshooting-kerberos-constrained-delegation-if-using-a-built-in-service-account)
+- [Troubleshooting Kerberos constrained delegation if using a custom service account](#troubleshooting-kerberos-constrained-delegation-if-using-a-custom-service-account)
 
 ## Troubleshooting Kerberos constrained delegation if using a built-in service account
 
@@ -49,7 +49,7 @@ Use the Internet Information Services (IIS) tool (available on the Server Manage
 2. Select **Process Model** > **Identity**. Make sure that **Built-in account** is selected and that an appropriate built-in account (such as **NetworkService**) is selected. Select **OK** to return to the properties list. 
 3. Make sure that **Load User Profile** is set to **True**. Select **OK** to close the properties list.
 4. If you changed any settings, restart the IIS service.
-5. Make sure that all settings are correct, and then try again to authenticate.
+5. Try again to authenticate.
 
 ## Troubleshooting Kerberos constrained delegation if using a custom service account
 
@@ -91,4 +91,4 @@ Use the Internet Information Services (IIS) tool (available on the Server Manage
 2. Select **Process Model** > **Identity**. Make sure that **Custom account** is selected and the service account is selected. Select **OK** to return to the properties list.
 3. Make sure that **Load User Profile** is set to **True**. Select **OK** to close the properties list.
 4. Restart the IIS service.
-5. Make sure that all settings are correct, and then try again to authenticate.
+5. Try again to authenticate.
