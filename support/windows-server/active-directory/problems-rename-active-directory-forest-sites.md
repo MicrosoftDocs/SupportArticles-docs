@@ -16,6 +16,8 @@ This article describes the problems that you may experience when you rename site
 
 _Original KB number:_ &nbsp; 920718
 
+**Applies to: All supported versions of Windows Server**
+
 ## More information
 
 When you rename a site in the Active Directory forest, the following events occur in the background:
