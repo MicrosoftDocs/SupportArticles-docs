@@ -2,7 +2,7 @@
 title: Customers are unable to add phone numbers to Azure Communication Services (ACS) service request
 description: Resolves an issue where customers are unable to add phone numbers to Azure Communication Services (ACS) service request in Omnichannel for Customer Service.
 ms.reviewer: mgandham
-ms.author: gandhamm
+ms.author: mgandham
 ms.date: 06/16/2025
 ms.custom: sap:Voice channel
 ms.collection: CEnSKM-ai-copilot

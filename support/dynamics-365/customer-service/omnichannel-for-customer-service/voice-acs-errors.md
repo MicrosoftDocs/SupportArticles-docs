@@ -2,7 +2,7 @@
 title: Troubleshoot connectivity errors caused by firewalls or VPNs 
 description: Resolves an issue where VPN or firewall blocks Azure Communication Services registration.
 ms.reviewer: mgandham
-ms.author: gandhamm
+ms.author: mgandham
 ms.date: 06/16/2025
 ms.custom: sap:Voice channel
 ms.collection: CEnSKM-ai-copilot
