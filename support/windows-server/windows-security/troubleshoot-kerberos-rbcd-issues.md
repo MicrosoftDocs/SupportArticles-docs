@@ -28,8 +28,8 @@ If your target service has separate front-end and back-end components, Kerberos 
 
 The configuration details differ depending on the type of account that the front-end service uses. This article provides separate procedures for different kinds of service accounts:
 
-- [Troubleshooting Kerberos RBCD if using a built-in service account](#troubleshooting-kerberos-rbcd-when-using-a-built-in-service-account)
-- [Troubleshooting Kerberos RBCD if using a custom service account](#troubleshooting-kerberos-rbcd-when-using-a-custom-service-account)
+- [Troubleshooting Kerberos RBCD if using a built-in service account](#troubleshooting-kerberos-rbcd-if-using-a-built-in-service-account)
+- [Troubleshooting Kerberos RBCD if using a custom service account](#troubleshooting-kerberos-rbcd-if-using-a-custom-service-account)
 
 ## Troubleshooting Kerberos RBCD if using a built-in service account
 
