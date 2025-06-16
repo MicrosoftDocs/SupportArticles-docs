@@ -69,6 +69,8 @@
         href: app-integration/asp-dot-net-application-infinite-sign-in-loop.md
       - name: Package Inspector for MSAL Android Native
         href: app-integration/package-inspector-msal-android-native.md
+      - name: Unable to match key ID 
+        href: app-integration/idx10501-token-signature-validation-error.md
       - name: Repeated login prompts in iOS MSAL implementation
         href: app-integration/repeat-login-prompts-in-msal-ios-app.md
       - name: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
