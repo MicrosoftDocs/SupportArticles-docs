@@ -24,15 +24,15 @@ Warning message:
 
 > RECORD_STAGING_FAILURE: Found \<x\> existing record that has been previously deleted corresponding to line number \<y\>.
 
-This issue occurs if users are deleted from Microsoft Entra ID and their corresponding records in Viva Glint are marked as **Deleted**. The [Disregard Employee IDs of previously deleted employees](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) setting manages how Viva Glint processes deleted user records.
+This issue occurs if users are deleted from Microsoft Entra ID and their corresponding records in Viva Glint are marked as **soft Deleted**. The [Disregard Employee IDs of previously deleted employees](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) setting manages how Viva Glint processes deleted user records.
 
 ### Resolution
 
 To fix the issue, use one of the following methods:
 
-- If you upload the data by using **Import** on the **People** page, confirm the upload. This way records that are marked as deleted in Microsoft Entra ID and Viva Glint will be skipped. All other data without other errors or warnings will be imported into Viva Glint.
+- If you upload the data by using **Import** on the **People** page, confirm the upload. This way records that are marked as soft deleted in Microsoft Entra ID and Viva Glint will be skipped. All other data without other errors or warnings will be imported into Viva Glint.
 
-  **Note**: If you upload the data by using Viva Glint Secure File Transfer Protocol (SFTP), records that are marked as deleted will be automatically skipped.
+  **Note**: If you upload the data by using Viva Glint Secure File Transfer Protocol (SFTP), records that are marked as soft deleted will be automatically skipped.
 - Remove the deleted records and upload the file again. Follow these steps:
 
   1. If necessary, work with your Microsoft 365 or Entra ID administrator to confirm the users that are deleted from Microsoft Entra ID.
