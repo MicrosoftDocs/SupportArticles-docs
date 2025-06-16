@@ -1,6 +1,6 @@
 ---
 title: How to Resolve Token Signature Validation Errors in Microsoft Entra ID Applications
-description: This article discusses how to resolve IDX10501 Signature Validation Errors in Microsoft Entra ID applications?
+description: This article discusses how to resolve IDX10501 Signature Validation Errors in Microsoft Entra ID applications.
 ms.date: 06/03/2025
 author: genlin
 ms.author: bachoang
