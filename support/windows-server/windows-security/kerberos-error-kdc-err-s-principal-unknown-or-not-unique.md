@@ -127,7 +127,7 @@ setspn -S \<SPN> \<AccountName>
 
 Determine which version of the SPN is correct: Either the one that the client requested or the one that's configured on the service account.
 
-If the client is requesting an incorrect SPN, verify the information that your client uses to build an SPN for a request, and make sure that the source information is correct. DNS is a common source of this information. Other clients (especially non-browser or custom clients) might use other sources.
+If the client is requesting an incorrect SPN, verify the information that your client uses to build an SPN for a request, and make sure that the source information is correct. DNS is a common source of this information. Other clients (especially non-browser or custom clients) might use other sources in addition to DNS.
 
 If the service account uses the incorrect SPN, [remove the SPN from the service account](#remove-an-spn-from-an-account), and then [add the correct SPN](#add-an-spn-to-a-service-account).
 
@@ -140,4 +140,4 @@ An SPN uses the \<ServiceClass>/\<Host>:\<Port>/,\<ServiceName> format and inclu
 - \<Port> (optional) represents the port number that the service uses.
 - \<ServiceName> (optional) represents the name of the service.
 
-For more information about which format to use for SPNs and when to use optional parameters, see [Name Formats for Unique SPNs](/windows/win32/ad/name-formats-for-unique-spns).
+For more information about how to format SPNs and when to use optional parameters, see [Name Formats for Unique SPNs](/windows/win32/ad/name-formats-for-unique-spns).
