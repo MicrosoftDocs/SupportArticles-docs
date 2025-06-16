@@ -303,9 +303,17 @@ The redirect URI being used by the app doesn't match what's registered in the po
 
 ##### Verify the Signature Hash Key
 
-1. Generate the correct hash key from the keystore used to sign the app.
+1. [Generate the correct hash key](/power-apps/maker/common/wrap/code-sign-android#generate-keys) from the keystore used to sign the app.
 
-2. Confirm it's registered under **Authentication** > **Android platform settings** in the Microsoft Entra portal.
+2. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **App registrations** and select your app.
+
+3. In the app's navigation pane, select **Authentication**.
+
+4. Under the **Platform configurations** section, locate the **Android** platform.
+
+5. Check that your app's Signature Hash Key is listed and matches the hash key generated from your keystore.
+
+6. If the hash key is missing or incorrect, add or update it as needed, then save your changes.
 
 ##### Check the Redirect URI
 
