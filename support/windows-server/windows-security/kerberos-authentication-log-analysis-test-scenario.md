@@ -82,7 +82,8 @@ The process starts when user John, who is signed in to the client computer `Clie
 
 **Step 1** occurs on the client computer, and includes the following steps:
 
-1. The DNS resolver service caches `IISServer.contoso.com` to check whether this information is already cached. The DNS resolver service checks the HOSTS file (*C:\\Windows\\System32\\drivers\\etc\\Hosts*) for any mapping of `IISServer.contoso.com`.
+1. The DNS resolver service caches `IISServer.contoso.com` to check whether this information is already cached. 
+1. The DNS resolver service checks the HOSTS file (*C:\\Windows\\System32\\drivers\\etc\\Hosts*) for any mapping of `IISServer.contoso.com`.
 1. The DNS client service sends a DNS query to the preferred DNS server (as configured on the IP configuration settings).
 
 **Step 2** occurs on the DNS server (domain controller), and includes the following steps:
