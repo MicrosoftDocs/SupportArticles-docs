@@ -1,14 +1,14 @@
 ---
 title: Generate a kernel or complete crash dump
 description: Learn how to generate a kernel or complete crash dump, and then use the output to troubleshoot several issues.
-ms.date: 06/06/2025
+ms.date: 06/16/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
-ms.reviewer: willchen
+ms.reviewer: willchen, chcart
 audience: itpro
 ---
 # Generate a kernel or complete crash dump
@@ -58,7 +58,8 @@ If you can sign in while the problem is occurring, you can use the Microsoft Sys
 3. At the command line, run the following command:
 
    ```console
-   notMyfault.exe /crash
+   notmyfaultc64.exe /getdumptype = full
+   notmyfaultc64.exe /crash 0x01
    ```
 
 > [!NOTE]
