@@ -53,13 +53,13 @@ If you verify an issue that you know how to fix, first fix that issue, and then 
 
 ### 2. Check infrastructure
 
-#### a. Client app and target service on the same computer
+#### a. Make sure that the client app and the target service aren't on the same computer
 
 By default, if the client app and the target service are installed on a single computer, Kerberos is disabled. If you can't install the client application and the target service on separate computers, you have to change specific security-related settings in Windows. Additionally, you might have to change a registry key. For more information about the issues that are related to this scenario, and the specific settings that affect it, see [Error message when you try to access a server locally](../networking/accessing-server-locally-with-fqdn-cname-alias-denied.md).
 
 If you made any changes, try again to authenticate before you continue.
 
-#### b. Client computer, target server, and resource servers are joined to appropriate domains
+#### b. Check that the client computer, target server, and resource servers are joined to appropriate domains
 
 If necessary, join the client computer or target server to an appropriate domain. Then, try again to authenticate.
 
@@ -196,7 +196,7 @@ If you resolve the DNS issue but the Kerberos issue remains, try the following t
 
 #### g. Make sure that the computer clocks are synchronized
 
-The client computer or the target server can cache tickets for future use. However, each ticket has timestamps that determine its time to live (TTL). The Kerberos Key Distribution Center service that runs on the domain controllers sets the timestamps.
+The client computer or the target server can cache tickets for future use. However, each ticket has timestamps that determine its time to live (TTL). The Kerberos Key Distribution Center service, which runs on the domain controllers, sets the timestamps.
 
 The difference in time between the domain controller and the client computer or the target server must be less than five minutes. Typically, if the clocks aren't synchronized, Windows can resynchronize them automatically. There are two cases in which you might have to take action:
 
@@ -271,7 +271,7 @@ On the target server, follow these steps:
    klist -li 0x3e7 purge
    ```
 
-Try to reproduce your issue, and then stop and save the traces on both the client and target servers. To do this, in Network Monitor, select **Stop**, and then select **Save As**.
+Try to reproduce your issue, and then stop and save the traces on both the client computer and the target server. To do this, in Network Monitor, select **Stop**, and then select **Save As**.
 
 #### b. Record ticket information
 
@@ -341,8 +341,8 @@ When your target service has separate front-end and back-end components, Kerbero
 Kerberos supports three types of delegation:
 
 - **Unconstrained delegation**. After the client accesses the front-end service, the front-end service can access any other service on the client's behalf. This configuration is the easiest to implement, but is also the least secure. We don't recommend unconstrained delegation isn't recommended because it doesn't restrict which services the authenticated account can interact with.
-- **Constrained delegation**. The front-end service maintains a list of services that it can access on behalf of a client.
-- **Resource-based constrained delegation (RBCD)**. The back-end service maintains a list of front-end services that it can access it on behalf of a client.
+- **Constrained delegation**. The front-end service maintains a list of services that it can access on a client's behalf.
+- **Resource-based constrained delegation (RBCD)**. The back-end service maintains an allow list of front-end services that can request access the to the back-end service on a client's behalf.
 
 > [!NOTE]  
 > If you experience an issue when you use constrained delegation together with CIFS, see [Constrained delegation for CIFS fails with ACCESS_DENIED error](constrained-delegation-access-denied.md).
