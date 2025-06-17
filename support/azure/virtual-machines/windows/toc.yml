@@ -338,6 +338,8 @@
       href: applying-software-installation-policy.md
     - name: Azure VM startup hangs at "IRQL_NOT_LESS_OR_EQUAL"
       href: interrupt-request-line-not-less-equal.md
+    - name: Bug Check 0x00000019 - BAD_POOL_HEADER
+      href: BAD_POOL_HEADER
     - name: Troubleshoot Windows VM OS with missing boot manager
       href: os-bootmgr-missing.md
     - name: OS isn't found
