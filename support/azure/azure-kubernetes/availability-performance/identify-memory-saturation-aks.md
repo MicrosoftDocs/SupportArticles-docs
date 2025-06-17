@@ -182,13 +182,6 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
    The output of the Inspektor Gadget `top_process` command resembles the following:
 
    ```output
-   K8S.NODE                          K8S.NAMESPACE    K8S.PODNAME                              K8S.CONTAINERNAME         PID COMM               CPUUSAGE CPUUSAGERELA…     MEMORYRSS MEMORYVIRTUAL MEMORYRELATI… THREADCOUNT STATE               UID STARTTIMESTR
-   aks-agentpool-30486455-vmss0  kube-system  ama-logs-w5bmd                   ama-logs          123456   1        ama-logs         2.1   8.7     403Mi    1.2Gi
-   aks-agentpool-30486455-vmss0  kube-system  ama-metrics-node-54sfj           ama-metrics       123457   1        ama-metrics      1.6   5.4     249Mi    856Mi
-   aks-agentpool-30486455-vmss0  default      adservice-795589cf6f-xs66r       adservice         123458   1        adservice        0.4   1.9     87Mi     345Mi
-   aks-agentpool-30486455-vmss0  kube-system  csi-azuredisk-node-9fh7h         csi-provisioner   123459   1        csi-provisioner  0.2   1.0     46Mi     234Mi
-   ```
-```
 K8S.NODE                       K8S.NAMESPACE                  K8S.PODNAME                       MEMORYVIRTUAL        MEMORYRSS   MEMORYRELATIVE
 aks-agentpool-3…901-vmss000001                                                                   278205104128         58867712              0.4
 aks-agentpool-3…901-vmss000000                                                                   278205104128         55783424              0.3
