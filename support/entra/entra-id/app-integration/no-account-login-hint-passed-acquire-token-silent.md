@@ -1,5 +1,5 @@
 ---
-title: No account or login hint was passed to the AcquireTokenSilent
+title: No Account or Login Hint Was Passed to the AcquireTokenSilent
 description: Provides solutions to an error that occurs when web applications using Microsoft Authentication Library (MSAL) or Microsoft Identity Web acquire a token silently.
 ms.service: entra-id
 ms.date: 06/16/2025
@@ -8,7 +8,7 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Error "No account or login hint was passed to the AcquireTokenSilent" in web applications without persistent token cache
 
-This article offers solutions for the error "No account or login hint was passed to the AcquireTokenSilent" that occurs with a web application using Microsoft Authentication Library (MSAL) or Microsoft Identity Web.
+This article offers solutions for the "No account or login hint was passed to the AcquireTokenSilent" error that occurs in a web application using Microsoft Authentication Library (MSAL) or Microsoft Identity Web.
 
 ## Symptoms
 
@@ -18,19 +18,19 @@ Assume that your web applications authenticate users using MSAL or Microsoft Ide
 
 ## Cause
 
-This issue occurs because MSAL looks for a account that no longer exists in the token cache based on the existing authentication cookie. The authentication cookie is created only after a interactive sign-in and contains information about the user. This issue occurs in the following scenarios:
+This issue occurs because MSAL looks for an account that no longer exists in the token cache based on an existing authentication cookie. The authentication cookie is created only after an interactive sign-in and contains information about the user. This issue occurs in the following scenarios:
 
-- After the web application has restarted.
-- Memory is cleared due to high memory usage or a set period of inactivity.
+- The web application has restarted.
+- The memory is cleared due to high memory usage or a set period of inactivity.
 - MSAL has a default cache size limit that automatically removes older entries.
 
 ## Solution 1 (recommended): Implement a persistent token cache
 
-You can implement a persistent token cache in a durable location such as SQL Server or a file-based storage. A persistent token cache ensures that tokens are retained even when the application restarts or memory is cleared.
+You can implement a persistent token cache in a durable location such as SQL Server or file-based storage. A persistent token cache ensures that tokens are retained even when the application restarts or the memory is cleared.
 
 ## Solution 2: Reject the authentication cookie
 
-You can implement a cookie authentication event to validate whether the current signed-in user is present in the MSAL token cache. If the user isn't present, reject the authentication cookie and force the current user to sign in again. For more information about how to implete the custom persistent token cache, see [Token cache serialization](/entra/msal/dotnet/how-to/token-cache-serialization).
+You can implement a cookie authentication event to validate whether the currently signed-in user is present in the MSAL token cache. If the user isn't present, reject the authentication cookie and force the current user to sign in again. For more information about how to implement a custom persistent token cache, see [Token cache serialization](/entra/msal/dotnet/how-to/token-cache-serialization).
 
 ### For ASP.NET web applications using MSAL
 
@@ -63,7 +63,7 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions
 ```
 
 > [!NOTE]
-> To implement a cookie authentication event, the web application must have the following helper classes and the `Microsoft.Identity.Web.TokenCache` NuGet package installed.
+> To implement a cookie authentication event, the web application must install the following helper classes and the `Microsoft.Identity.Web.TokenCache` NuGet package.
 >
 > - `MsalAppBuilder.cs`
 > - `AuthenticationConfig.cs`
@@ -117,11 +117,11 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions
 
 ### For web applications using Microsoft Identity Web
 
-Microsoft Identity Web provides built-in mechanisms to manage token cache. For more information, see [Managing incremental consent and conditional access](https://github.com/AzureAD/microsoft-identity-web/wiki/Managing-incremental-consent-and-conditional-access). If this document doesn't help you resolve the issue, you can manually clear the authentication cookie using a custom cookie authentication event:
+Microsoft Identity Web provides built-in mechanisms to manage token caches. For more information, see [Managing incremental consent and conditional access](https://github.com/AzureAD/microsoft-identity-web/wiki/Managing-incremental-consent-and-conditional-access). If this document doesn't help you resolve the issue, you can manually clear the authentication cookie using a custom cookie authentication event:
 
 1. Create a custom cookie authentication event:
 
-    ```chsarp
+    ```csharp
     using Microsoft.AspNetCore.Authentication.Cookies;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Identity.Client;
@@ -166,7 +166,7 @@ Microsoft Identity Web provides built-in mechanisms to manage token cache. For m
 
 2. Register the custom cookie authentication event:
 
-    ```chsarp
+    ```csharp
     // Add Microsoft Identity Web
     services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
                         .AddMicrosoftIdentityWebApp(Configuration.GetSection("AzureAd"))
