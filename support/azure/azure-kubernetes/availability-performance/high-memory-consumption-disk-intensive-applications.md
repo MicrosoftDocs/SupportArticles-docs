@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot High Memory Consumption in Disk-Intensive Applications
-description: Helps identify and resolve excessive memory usage due to Linux kernel behaviors on Kubernetes pods. #non-tech change
+description: Helps identify and resolve excessive memory usage due to Linux kernel behaviors on Kubernetes pods.
 ms.date: 04/30/2025
 ms.reviewer: claudiogodoy, v-weizhu
 ms.service: azure-kubernetes-service
