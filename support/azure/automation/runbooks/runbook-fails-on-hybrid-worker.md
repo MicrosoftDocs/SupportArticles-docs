@@ -47,9 +47,9 @@ Connectivity problems are a common cause of issues with Hybrid Runbook Workers. 
 
 | **Issue** | **Resolution** |
 |-----------|----------------|
-| `sudo` prompts unexpectedly for a password. | See [Linux runbook worker prompts for password](/azure/automation/troubleshoot/hybrid-runbook-worker#prompt-for-password). |
+| Unexpected password prompt appears when using `sudo`. | See [Linux runbook worker prompts for password](/azure/automation/troubleshoot/hybrid-runbook-worker#prompt-for-password). |
 | Log file shows "The specified class does not exist." | See [Class does not exist error](/azure/automation/troubleshoot/hybrid-runbook-worker#class-does-not-exist). |
-| Linux job stuck in **Running** state | 1. Switch to `sudo` permissions: `sudo su`<br>2. Check to make sure that `hwd` service is running: `systemctl status hwd.service`<br>3. Open the following file in Hybrid Worker: `vi /lib/systemd/system/hwd.service`<br>4. Update the setting from `CPUQuota=25%` to `CPUQuota=` to make the usage unrestricted as the following: <br><br>`[Unit]`<br>`Description=HW Service`<br>`After=network.target`<br>`[Service]`<br>`Type=simple`<br>`ExecStart=/usr/bin/python3 .../automationWorkerStarterScript.py`<br>`TimeoutStartSec=5`<br>`Restart=always`<br>`RestartSec=10s`<br>`TimeoutStopSec=600`<br>`CPUQuota=`<br>`KillMode=process`<br>`[Install]`<br>`WantedBy=multi-user.target`<br><br> 5. Restart hwd service: `systemctl daemon-reload`and `systemctl restart hwd.service`<br>|
+| Linux job stuck in **Running** state | 1. Switch to `sudo` permissions: `sudo su`<br>2. Check to make sure that `hwd` service is running: `systemctl status hwd.service`<br>3. Open the following file in Hybrid Worker: `vi /lib/systemd/system/hwd.service`<br>4. Update the setting from `CPUQuota=25%` to `CPUQuota=` to make the usage unrestricted as the following: <br><br>`[Unit]`<br>`Description=HW Service`<br>`After=network.target`<br>`[Service]`<br>`Type=simple`<br>`ExecStart=/usr/bin/python3 .../automationWorkerStarterScript.py`<br>`TimeoutStartSec=5`<br>`Restart=always`<br>`RestartSec=10s`<br>`TimeoutStopSec=600`<br>`CPUQuota=`<br>`KillMode=process`<br>`[Install]`<br>`WantedBy=multi-user.target`<br><br> 5. Restart `hwd` service: `systemctl daemon-reload`and `systemctl restart hwd.service`<br>|
 
 ## Other error messages
 
