@@ -23,7 +23,7 @@ Before starting, ensure you have the following tools installed:
 ## Common Symptoms
 
 > [!NOTE]
-> This article focuses on Application Gateway Ingress Controller issues. similar symptoms may be caused by other underlying problems. Refer to [Troubleshoot connection issues to an app hosted in an AKS cluster](/troubleshoot/azure/azure-kubernetes/connectivity/connection-issues-application-hosted-aks-cluster) for additional information.
+> This article focuses on Application Gateway Ingress Controller issues. Similar symptoms may be caused by other underlying problems. Refer to [Troubleshoot connection issues to an app hosted in an AKS cluster](/troubleshoot/azure/azure-kubernetes/connectivity/connection-issues-application-hosted-aks-cluster) for additional information.
 
 | Symptom | Description |
 | --- | --- |
