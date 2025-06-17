@@ -188,14 +188,21 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
    aks-agentpool-30486455-vmss0  default      adservice-795589cf6f-xs66r       adservice         123458   1        adservice        0.4   1.9     87Mi     345Mi
    aks-agentpool-30486455-vmss0  kube-system  csi-azuredisk-node-9fh7h         csi-provisioner   123459   1        csi-provisioner  0.2   1.0     46Mi     234Mi
    ```
-```dotnetcli
-K8S.NODE            K8S.NAMESPACE       K8S.PODNAME         K8S.CONTAINERNAME         PID COMM               CPUUSAGE CPUUSAGERELA…     MEMORYRSS MEMORYVIRTUAL MEMORYRELATI… THREADCOUNT STATE               UID STARTTIMESTR
-minikube            test-namespace      test-pod            test-container            747 ig                      0.3           0.1      94101504    1979633664           2.3           8 S                     0 2025-05-20T2
-minikube            test-namespace      test-pod            test-container          40192 ig                      0.3           0.1     134131712    2056871936           3.3           9 S                     0 2025-05-27T1
-minikube            test-namespace      test-pod            test-container          32493 ig                      0.3           0.1     161894400    2061258752           3.9           8 S                     0 2025-05-24T1
-                                                                                       98 ata_sff                 0.0           0.0             0             0           0.0           1 I                     0 2025-05-20T2
-                                                                                       99 md                      0.0           0.0             0             0           0.0           1 I                     0 2025-05-20T2
-                                                                                      817 sshd                    0.0           0.0       6160384      15507456           0.2           1 S                     0 2025-05-20T2
+```
+K8S.NODE                       K8S.NAMESPACE                  K8S.PODNAME                       MEMORYVIRTUAL        MEMORYRSS   MEMORYRELATIVE
+aks-agentpool-3…901-vmss000001                                                                   278205104128         58867712              0.4
+aks-agentpool-3…901-vmss000000                                                                   278205104128         55783424              0.3
+aks-agentpool-3…901-vmss000001 kube-system                    microsoft-defen…ector-ds-fxsvt       5706969088        126631936              0.8
+aks-agentpool-3…901-vmss000000 kube-system                    microsoft-defen…ector-ds-6xm7b       5706706944        126951424              0.8
+aks-agentpool-3…901-vmss000000                                                                     3056590848         95174656              0.6
+aks-agentpool-3…901-vmss000001                                                                     3006267392         94322688              0.6
+aks-agentpool-3…901-vmss000001                                                                     2484064256         77725696              0.5
+aks-agentpool-3…901-vmss000000                                                                     2403966976         69836800              0.4
+aks-agentpool-3…901-vmss000001                                                                     2245877760        112701440              0.7
+aks-agentpool-3…901-vmss000000                                                                     2245877760        116981760              0.7
+aks-agentpool-3…901-vmss000000                                                                     2121269248         50823168              0.3
+aks-agentpool-3…901-vmss000000                                                                     2120482816         34844672              0.2
+
 ```
 
 
