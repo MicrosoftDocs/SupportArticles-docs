@@ -23,12 +23,12 @@ Before you start, make sure that you have the following tools installed:
 ## Common symptoms
 
 > [!NOTE]
-> This article focuses on Application Gateway Ingress Controller issues. Similar symptoms might be caused by other underlying problems. For more information, see [Troubleshoot connection issues to an app hosted in an AKS cluster](/troubleshoot/azure/azure-kubernetes/connectivity/connection-issues-application-hosted-aks-cluster).
+> This article focuses on Application Gateway Ingress Controller issues. Other underlying problems might cause similar symptoms. For more information, see [Troubleshoot connection issues to an app hosted in an AKS cluster](/troubleshoot/azure/azure-kubernetes/connectivity/connection-issues-application-hosted-aks-cluster).
 
 | Symptom | Description |
 | --- | --- |
-| **Ingress without IP address** | Errors in assigning an `IP address` to the `Ingress` indicate that AGIC is not functioning correctly. |
-| **HTTP Timeout** | If `DNS`, `Ingress`, and `Application` are working, the issue is likely caused by AGIC. |
+| **Ingress without IP address** | Errors in assigning an `IP address` to the `Ingress` indicate that AGIC isn't functioning correctly. |
+| **HTTP Timeout** | If `DNS`, `Ingress`, and `Application` are working, AGIC is the likely cause of the issue. |
 
 ## Step 1: Verify application functionality
 
@@ -161,7 +161,7 @@ This step focuses on understanding the operational state of the [Application Gat
     ```
   
     > [!NOTE]
-    > If you exncounter an unexpected error during this step, you might have misconfigured AGIC. In this case, refer to the following guide: [Enable the ingress controller add-on for a new AKS cluster with a new application gateway instance](/azure/application-gateway/tutorial-ingress-controller-add-on-new).
+    > If you encounter an unexpected error during this step, AGIC might be misconfigured. In this case, refer to the following guide: [Enable the ingress controller add-on for a new AKS cluster with a new application gateway instance](/azure/application-gateway/tutorial-ingress-controller-add-on-new).
 
     ```console
     {
@@ -205,7 +205,7 @@ The [AGIC](/azure/application-gateway/ingress-controller-overview) monitors the 
 
 ## Solution: Start the Application Gateway
 
-If AGIC is not working as expected, it might be stopped or misconfigured. If the Application Gateway operational state is not `Running`, start or restart AGIC, wait a few seconds, and then test the application again.
+If AGIC isn't working as expected, it might be stopped or misconfigured. If the Application Gateway operational state isn't `Running`, start or restart AGIC, wait a few seconds, and then test the application again.
 
 ```console
 az network application-gateway start --name <YOUR_APPLICATION_GATEWAY_NAME> --resource-group <YOUR_RG_NAME>
