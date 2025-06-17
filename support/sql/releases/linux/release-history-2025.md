@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2025 Previ
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 06/16/2025
+ms.date: 06/17/2025
 appliesto:
   - SQL Server 2025 Preview
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-related-content
@@ -25,7 +25,9 @@ The following table lists the release history for [!INCLUDE [sql-server-2025](..
 | [CTP 2.1](#CTP2.1) | 17.0.800.3 | 2025-06-16 |
 | [CTP 2.0](#CTP2.0) | 17.0.700.9 | 2025-05-19 |
 
-## <a id="CTP2.1"></a> CTP 2.1 (June 2025)
+<a id="CTP2.1"></a>
+
+## CTP 2.1 (June 2025)
 
 This is the CTP 2.1 of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. This is a pre-release version of [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.800.3.
 
@@ -41,7 +43,9 @@ For manual or offline package installations, you can download the RPM and Debian
 
 Go back to the [release history](#release-history).
 
-## <a id="CTP2.0"></a> CTP 2.0 (May 2025)
+<a id="CTP2.0"></a>
+
+## CTP 2.0 (May 2025)
 
 This is the CTP 2.0 of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. This is a pre-release version of [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.700.9.
 
