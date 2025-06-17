@@ -52,7 +52,7 @@ User A can use Outlook on the web or new Outlook for Windows to access User B's 
 ### Method 2
 
 > [!WARNING]
-> This method grants User A Full Access permission to User B's entire mailbox, including mail, contacts, and private calendar items.
+> This method grants User A: **Full Access** permission to User B's entire mailbox, including mail, contacts, and private calendar items.
 
 Follow these steps:
 
