@@ -7,8 +7,6 @@
           href: ../access/string-data-right-truncation.md
         - name: Access freezes when opening a linked table
           href: ../access/access-freezes-when-open-linked-table.md
-        - name: ADODB code errors with adBiglnt data
-          href: ../access/adBigInt-data-type-errors.md
         - name: Ambiguous name detected
           href: ../access/ambiguous-name-detected.md
         - name: Automate the process of selecting printer for a report
@@ -87,8 +85,6 @@
           href: ../access/hide-combo-box-drop-down-arrow.md
         - name: How to change query properties
           href: ../access/how-to-change-query-properties.md
-        - name: How to loop through references to view properties
-          href: ../access/how-to-loop-through-references-view-properties.md
         - name: How to parse City, State, Zip to separate values
           href: ../access/how-to-parse-city-state-zip-to-separate-values.md
         - name: ID is increment when adding a new field
@@ -99,14 +95,10 @@
           href: ../access/lock-files-introduction.md
         - name: Issue when loading an Access web app
           href: ../access/load-access-web-app-in-ie.md
-        - name: Issue with ForEachRecord data macro
-          href: ../access/foreachrecord-issue.md
         - name: Issues when you retrieve SharePoint list data
           href: ../access/retrieve-sharepoint-list-in-access.md
         - name: Linked Excel data is truncated
           href: ../access/linked-table-data-truncated.md
-        - name: Linked table connection failed when using Microsoft Entra ID
-          href: ../access/linked-table-connection-failed.md
         - name: Linked table to a SharePoint list returns
           href: ../access/access-linked-table-return-deleted.md
         - name: Linked table to SQL Server database returns
@@ -182,7 +174,7 @@
         - name: Disabling ADAL or WAM not supported for fixing sign-in or activation issues
           href: ../activation/disabling-adal-wam-not-recommended.md
         - name: Errors activating Microsoft 365 on older Windows versions
-          href: ../activation/errors-activating-on-older-windows.md 
+          href: ../activation/errors-activating-on-older-windows.md
         - name: Office activation process issues
           href: ../activation/office-activation-process-issues.md
         - name: Issue when activating Microsoft 365 Apps for enterprise
@@ -216,7 +208,7 @@
         - name: Microsoft 365 Apps activation usage report issues
           href: ../activation/activation-usage-report-issues.md
         - name: Microsoft 365 users aren't automatically signed into Office
-          href: ../activation/office-365-users-not-signed-in-office.md  
+          href: ../activation/office-365-users-not-signed-in-office.md
         - name: Office for Mac activation An unknown error has occurred
           href: ../activation/mac-unknown-error.md
         - name: Sign in issues when activating Microsoft 365 Apps
@@ -278,7 +270,7 @@
         - name: Custom function may not calculate expected value
           href: ../excel/custom-function-calculate-wrong-value.md
         - name: Excel data doesn't retain formatting in mail merge
-          href: ../excel/excel-data-not-retain-formatting-mail-merge.md  
+          href: ../excel/excel-data-not-retain-formatting-mail-merge.md
         - name: Determine the current mode of calculation
           href: ../excel/current-mode-of-calculation.md
         - name: Determine whether a year is a leap year
@@ -301,8 +293,6 @@
           href: ../excel/index-outside-bounds-of-array-error.md
         - name: Excel cannot complete this task
           href: ../excel/excel-cannot-complete-task-with-available.md
-        - name: Excel doesn't shut down after calling Quit method
-          href: ../excel/jscript-not-shut-down-excel.md
         - name: Excel incorrectly assumes 1900 is a leap year
           href: ../excel/wrongly-assumes-1900-is-leap-year.md
         - name: Excel opening blank
@@ -399,12 +389,6 @@
       items:
         - name: Resolve file upload errors in Microsoft Forms
           href: ../forms/resolve-file-upload-errors-microsoft-forms.md
-    - name: InfoPath
-      items:
-        - name: Disable code-behind prompt for InfoPath forms
-          href: ../infopath/disabling-code-behind-prompt-for-infopath-forms.md
-        - name: InfoPath 2013 crashes when connect Access database
-          href: ../infopath/infopath-2013-crashes-when-connecting-to-access-database.md
     - name: Installation
       items:
         - name: Automatic updating isn't enabled
@@ -441,22 +425,16 @@
           href: ../mobile/prevent-office-add-in-work-account.md
     - name: Office for Mac
       items:
-        - name: Can't pass the Welcome Screen in Office for Mac
-          href: ../office-for-mac/office-for-mac-welcome-screen.md
         - name: Known issues with Office for Mac
           href: ../office-for-mac/office-for-mac-issues-macos-10-7.md
         - name: Office 2016 for Mac 64-bit upgrade
           href: ../office-for-mac/office-2016-for-mac-64-bit-upgrade.md
         - name: Office 2016 for Mac prompts you for authentication
           href: ../office-for-mac/office-for-mac-prompted-for-authentication.md
-        - name: Office 365 Enterprise E3 setup is incomplete
-          href: ../office-for-mac/o365-e3-setup-incomplete.md
         - name: PowerPoint for Mac is closed unexpectedly
           href: ../office-for-mac/powerpoint-mac-closes-unexpectedly.md
         - name: The application Microsoft Excel quit unexpectedly
           href: ../office-for-mac/excel-mac-error-application-quit-unexpectedly.md
-        - name: wkresources files in Trash
-          href: ../office-for-mac/wkresources-files-moved-to-trash.md
     - name: Office Online Server
       items:
         - name: Web sites lose SSL certificate bindings
@@ -465,8 +443,6 @@
       items:
         - name: "0x80004005: General Error Unable to Open Registry Key"
           href: ../office-suite-issues/fails-accessing-page-connected-access-database.md
-        - name: AD FS sites are slow to open
-          href: ../office-suite-issues/slow-open-adfs-sites.md
         - name: Another account is already signed in
           href: ../office-suite-issues/another-account-already-signed-in.md
         - name: Applications crash when opening IRM document
@@ -573,8 +549,6 @@
           href: ../office-suite-issues/click-to-run-app-repair-process.md
         - name: Saving documents to network server is slow
           href: ../office-suite-issues/saving-file-to-network-server-slow.md
-        - name: Services display incorrectly in Research pane
-          href: ../office-suite-issues/duplicate-service-listed.md
         - name: Set default font for Office apps
           href: ../office-suite-issues/set-default-font.md
         - name: Subscription automatic license renewal fails
@@ -598,7 +572,7 @@
         - name: Use GetObject and CreateObject with automation server
           href: ../office-suite-issues/getobject-createobject-behavior.md
         - name: Users don't see add-ins
-          href: ../office-suite-issues/user-not-seeing-add-ins.md  
+          href: ../office-suite-issues/user-not-seeing-add-ins.md
         - name: View error signatures for Office
           href: ../office-suite-issues/view-error-signatures.md
         - name: We can't start this app error when you install an add-in
@@ -625,8 +599,8 @@
           href: /outlook/troubleshoot/outlook-mobile-welcome
         - name: Outlook for Mac
           href: /outlook/troubleshoot/outlook-mac-welcome
-        - name: Outlook for Windows  
-          href: /outlook/troubleshoot/outlook-client-welcome      
+        - name: Outlook for Windows
+          href: /outlook/troubleshoot/outlook-client-welcome
     - name: Performance
       items:
         - name: Some Office applications are not responding
@@ -644,7 +618,7 @@
         - name: Can't load an add-in with a low macro security level
           href: ../powerpoint/powerpoint-fails-loading-add-in.md
         - name: Can't use videos as slide backgrounds
-          href: ../powerpoint/cannot-use-videos-as-slide-backgrounds.md  
+          href: ../powerpoint/cannot-use-videos-as-slide-backgrounds.md
         - name: Change the export resolution of PowerPoint slide
           href: ../powerpoint/change-export-slide-resolution.md
         - name: Hlink.dll Can't Be Loaded
@@ -677,8 +651,6 @@
           href: ../project/cant-save-to-global.mpt-error.md
         - name: Circular relationship error when indenting task
           href: ../project/circular-relationship-error-when-indenting-task.md
-        - name: Create a report template
-          href: ../project/create-report-template.md
         - name: Definition of project constraints
           href: ../project/definition-of-project-constraints.md
         - name: Error when accessing Project Web App
@@ -693,26 +665,14 @@
           href: ../project/import-task-outline-structure.md
         - name: Make a custom toolbarribbon available to all users
           href: ../project/custom-toolbarribbon-available-to-all-users.md
-        - name: Operatio times out when connecting to Odata
-          href: ../project/operation-times-out-if-connect-odata.md
         - name: Print Gantt Chart view without table information
           href: ../project/print-gantt-chart-view-without-table.md
         - name: Progress bars not drawn for tasks that are in progress
           href: ../project/progress-bars-not-drawn-for-tasks.md
-        - name: Project opens calendar from a different instance
-          href: ../project/project-opens-calendar-from-different-instance-when-editing.md
-        - name: Project Publish job process remains at 80%
-          href: ../project/project-publish-jobs-not-complete.md
-        - name: Removed users are not inactivated
-          href: ../project/removed-erp-group-user-activated.md
         - name: Resource plan using FTE calculates unexpectedly
           href: ../project/resource-plan-fte-calculate-unexpected.md
         - name: Running macro automatically
           href: ../project/running-macro-automatically-when-starting.md
-        - name: SharePoint task list sync job fails when Project is published
-          href: ../project/sharepoint-task-list-sync-job-fails-when-project-published.md
-        - name: Show fiscal dates on a timescaled view
-          href: ../project/fiscal-dates-on-timescaled-view.md
         - name: Sync with SharePoint tasks list
           href: ../project/sync-with-tasks-from-project.md
         - name: Tasks are not scheduled
@@ -745,16 +705,12 @@
           href: ../third-party-add-ins/third-party-installed-font-fails-appearing.md
     - name: Visio
       items:
-        - name: Can't add visio drawing control
-          href: ../visio/cannot-add-visio-drawing-control.md
         - name: Can't change text or shape fill color
           href: ../visio/cant-change-text-or-shape-fill-color.md
         - name: Can't open file type blocked by registry policy settings
           href: ../visio/file-blocked-by-registry-policy.md
         - name: Can't open Visio files in Visio Web Access
           href: ../visio/open-visio-files-in-visio-web-access.md
-        - name: Can't split a connector to insert a new shape
-          href: ../visio/cannot-split-connector-insert-new-shape.md
         - name: Create flexible organization charts in Visio
           href: ../visio/create-flexible-organization-charts-visio.md
         - name: Data graphics aren't displayed
@@ -763,16 +719,10 @@
           href: ../visio/search-for-shapes-use-windows-search.md
         - name: Fit to Drawing not working
           href: ../visio/fit-to-drawing-command-not-work.md
-        - name: Text not displayed when the drawing opens in a browser
-          href: ../visio/text-not-displayed-in-drawing.md
         - name: This is not a valid win32 application when installing Microsoft 365
           href: ../visio/not-a-valid-win32-application-error.md
         - name: Troubleshoot damaged drawings in Visio
           href: ../visio/troubleshoot-damaged-drawings.md
-        - name: Visio Services does not render diagrams
-          href: ../visio/visio-services-not-render-diagrams.md
-        - name: Visio Services was unable to load Web Drawing
-          href: ../visio/cannot-load-visio-web-drawing.md
     - name: Word
       items:
         - name: A connector doesn't move when moving a shape
@@ -830,7 +780,7 @@
         - name: Reset user options and registry settings in Word
           href: ../word/reset-options-and-settings-in-word.md
         - name: Save As dialog box appears two times
-          href: ../word/save-as-dialog-box-appears-two-times.md  
+          href: ../word/save-as-dialog-box-appears-two-times.md
         - name: Spell checker doesn't check text in the form fields
           href: ../word/spell-checker-not-check-form-field-text.md
         - name: Spell checker doesn't recognize misspelled words in Word 2010
