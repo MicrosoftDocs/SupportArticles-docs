@@ -1,7 +1,7 @@
 ---
 title: Generate a kernel or complete crash dump
 description: Learn how to generate a kernel or complete crash dump, and then use the output to troubleshoot several issues.
-ms.date: 06/16/2025
+ms.date: 06/17/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
