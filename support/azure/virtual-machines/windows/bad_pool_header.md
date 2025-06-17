@@ -8,7 +8,7 @@ ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---
 
-# VM startup is stuck on bug check 0x00000019 - BAD_POOL_HEADER
+# Bug check 0x00000019 - BAD_POOL_HEADER
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
