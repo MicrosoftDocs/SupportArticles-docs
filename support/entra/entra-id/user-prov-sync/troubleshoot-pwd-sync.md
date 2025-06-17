@@ -86,7 +86,7 @@ In this scenario, passwords of all users appear not to sync. It usually occurs i
 
 To resolve this issue, first make sure that you enable password synchronization. To do it, start Microsoft Entra Connect configuration wizard, select **Configure** and **Customize synchronization options**, then continue through the screens until you see the option to enable password synchronization.
 
-After password synchronization is enabled, you must wait for a full password sync to finish. Check the Windows [Event Viewer logs](/troubleshoot/entra/entra-id/user-prov-sync/troubleshoot-pwd-sync#event-id-messages-in-event-viewer) to monitor the password synchronization process.
+After password synchronization is enabled, you must wait for a full password sync to finish. Check the Windows [Event Viewer logs](troubleshoot-pwd-sync.md#event-id-messages-in-event-viewer) to monitor the password synchronization process.
 
 ## Troubleshoot one user whose password isn't synced
 
