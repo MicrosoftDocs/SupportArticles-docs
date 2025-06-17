@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop listener certificate configurations
 description: Describes the methods to configure RDP listener certificates in Windows Server 2012 R2 and Windows Server 2012.
-ms.date: 01/15/2025
+ms.date: 06/17/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -23,13 +23,13 @@ The listener component runs on the Remote Desktop server and is responsible for 
 
 ## Configure Remote Desktop server listener certificate
 
-The MMC method is not available starting from Windows Server 2012 or Windows Server 2012 R2. It is however always possible to configure the RDP listener using WMI or the Registry.
+The MMC method is not available starting from Windows Server 2012 or Windows Server 2012 R2. However, you can always configure the RDP listener by using WMI or the registry.
 
 ::: zone pivot="windows-server-pre-2012"
 
 ### [MMC](#tab/mmc)
 
-The Remote Desktop Configuration Manager MMC snap-in lets you direct access to the RDP listener. In the snap-in, you can bind a certificate to the listener and in turn, enforce SSL security for the RDP sessions.
+The Remote Desktop Configuration Manager MMC snap-in enables you direct access to the RDP listener. In the snap-in, you can bind a certificate to the listener and in turn, enforce SSL security for the RDP sessions.
 
 ::: zone-end
 
