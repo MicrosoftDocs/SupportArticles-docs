@@ -1,7 +1,7 @@
 ---
 title: High-Speed Network Adapters Show Inaccurate Link Speeds
 description: Describes a limitation in Windows user interfaces where the link speed might not be displayed correctly for high-speed network adapters.
-ms.date: 06/16/2025
+ms.date: 06/17/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
