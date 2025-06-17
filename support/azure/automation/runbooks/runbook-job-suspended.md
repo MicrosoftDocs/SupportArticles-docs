@@ -11,7 +11,7 @@ ms.custom: sap:Runbook not working as expected
 This article provides solutions to an issue where runbook jobs get suspended in Azure Automation.
 
 > [!NOTE]
-> Azure Automation enables recovery of runbooks deleted in last 29 days - Restore the deleted runbook by running a PowerShell script as a job in your Automation account. For more information, see [Restore deleted runbook](https://learn.microsoft.com/azure/automation/manage-runbooks#restore-deleted-runbook).
+> Azure Automation enables recovery of runbooks deleted in last 29 days - Restore the deleted runbook by running a PowerShell script as a job in your Automation account. For more information, see [Restore deleted runbook](/azure/automation/manage-runbooks#restore-deleted-runbook).
 
 ## Symptoms
 
@@ -59,7 +59,7 @@ If your runbook can't call an executable or subprocess in an Azure sandbox, run 
 
 ## References
 
-- [Throttling Azure Resource Manager requests](https://learn.microsoft.com/azure/azure-resource-manager/management/request-limits-and-throttling)
-- [Troubleshooting API throttling errors](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/troubleshooting-throttling-errors)
+- [Throttling Azure Resource Manager requests](/azure/azure-resource-manager/management/request-limits-and-throttling)
+- [Troubleshooting API throttling errors](../../virtual-machines/windows/troubleshooting-throttling-errors.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
