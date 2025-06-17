@@ -1,4 +1,4 @@
-- name: Office Experts
+﻿- name: Office Experts
   href: ../office-experts-welcome.yml
   items:
   - name: Activation
@@ -13,14 +13,8 @@
     items:
     - name: 0xC004F038 computer couldn't be activated in KMS
       href: ../administration/0xc004f038-computer-not-activate.md
-    - name: Can't check in files when LAN doesn't have Internet
-      href: ../administration/cannot-check-in-files-when-lan-does-not-have-internet.md
     - name: Can't open file from recently used document list
       href: ../administration/cant-open-files-most-recently-used-list.md
-    - name: Check the size of this month's Office ProPlus update
-      href: ../administration/how-big-was-this-months-office-proplus-update.md
-    - name: Compatibility report in Excel Online
-      href: ../administration/compatibility-report-about-text-queries-in-excel-online.md
     - name: Determine build version of Online Server
       href: ../administration/how-to-determine-build-version-of-office-online-server.md
     - name: Errors when accessing documents in Online Server
@@ -29,8 +23,6 @@
       href: ../administration/office-viewers-or-web-apps-shows-this-page-cannot-be-displayed.md
     - name: Issue with using guest links to Excel Online workbook
       href: ../administration/workbook-contains-external-data-connections.md
-    - name: lookup-multi select not work on Office backstage
-      href: ../administration/sharepoint-properties-backstage-file-info.md
     - name: Manage the First Run screens for Office 2013
       href: ../administration/manage-office-2013-first-run-screens.md
     - name: Office Online limitations and features with IRM
@@ -47,16 +39,10 @@
       href: ../administration/use-custom-fonts-with-office-online-server.md
   - name: Authentication
     items:
-    - name: Office not render DUO API multifactor authentication login page
-      href: ../authentication/not-render-a-custom-duo-api-multi-factor-authentication-login-page.md
-    - name: HTML login page not render correctly in Office
-      href: ../authentication/custom-html-login-page-not-render-correctly.md
   - name: Diagnostic Logs
     items:
     - name: Enable Microsoft 365 Apps for enterprise ULS logging
       href: ../diagnostic-logs/how-to-enable-office-365-proplus-uls-logging.md
-    - name: Office Lens icons display incorrectly 
-      href: ../diagnostic-logs/office-lens-icons-incorrectly-display.md
   - name: Excel
     items:
     - name: '"Cannot access directory" error in Excel 2016'
@@ -77,10 +63,8 @@
       href: ../excel/use-macro-rename-sheet.md
   - name: Installation
     items:
-    - name: Automate the update uninstallation for Office 
+    - name: Automate the update uninstallation for Office
       href: ../installation/automate-uninstall-office-update.md
-    - name: Deploy Online Server to security hardened drives
-      href: ../installation/deploy-office-online-server-to-security-hardened-drive.md
     - name: Install a second KMS host for Office
       href: ../installation/guidance-on-installing-a-second-kms-host-for-office.md
     - name: Office installation failures
@@ -93,24 +77,14 @@
       href: ../microsoft-forms/no-email-notifications-for-responses-to-group-forms.md
   - name: PowerPivot
     items:
-    - name: '"The workbook must be checked out" error for PowerPivot'
-      href: ../powerpivot/powerpivot-workbook-checked-out.md
     - name: PowerPivot data model not refresh
       href: ../powerpivot/powerpivot-data-model-does-not-refresh.md
-    - name: PowerPivot doesn't work with .atomsvc files
-      href: ../powerpivot/powerpivot-does-not-work-with-atomsvc-files.md
-    - name: Third-party PowerPivot data refresh tools not supported
-      href: ../powerpivot/third-party-powerpivot-data-refresh-tools-are-not-supported.md
-    - name: Upsize PowerPivot 2013 workbooks to SSAS
-      href: ../powerpivot/upsize-powerpivot-2013-workbooks-to-sql-server-analysis-services.md
   - name: Project
     items:
     - name: Issue when refresh Project Online data in Excel Online
       href: ../excel/excel-online-refresh-fails-project-online-using-timebyday.md
   - name: Sway
     items:
-    - name: File size limit error when upload files to Sway
-      href: ../sway/sway-file-size-limit-error.md
   - name: Word
     items:
     - name: Force Word documents open in edit mode from email link
