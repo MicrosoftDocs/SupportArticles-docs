@@ -16,7 +16,7 @@ This article provides guidance for troubleshooting and resolving issues with Hyb
 
 ## Troubleshoot connectivity issues
 
-Connectivity problems are a common cause of issues with Hybrid Runbook Workers. Use the [Test Cloud Connectivity tool](azure/azure-monitor/agents/agent-windows-troubleshoot?tabs=UpdateMMA#connectivity-issues) to verify that your environment is correctly configured.
+Connectivity problems are a common cause of issues with Hybrid Runbook Workers. Use the [Test Cloud Connectivity tool](/azure/azure-monitor/agents/agent-windows-troubleshoot?tabs=UpdateMMA#connectivity-issues) to verify that your environment is correctly configured.
 
 ## General troubleshooting
 
