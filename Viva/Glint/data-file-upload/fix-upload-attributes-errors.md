@@ -26,7 +26,8 @@ Error message:
 
 To fix the issue, delete the extra column, and then upload the file again to Viva Glint.
 
-**Note**: If Viva Glint creates a column that's based on the source data (for example, **Tenure** from **Hire Date**), don't include the derived field as a column in the employee attribute data file.
+> [!NOTE]
+> If Viva Glint creates a column that's based on the source data (for example, **Tenure** from **Hire Date**), don't include the derived field as a column in the employee attribute data file.
 
 ## MISSING_COLUMN
 
