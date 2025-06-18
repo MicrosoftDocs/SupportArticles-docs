@@ -144,7 +144,7 @@ LAPS failed to find the currently configured local administrator account
 
 Windows LAPS reads the local administrator's name from Group Policy or the Intune setting **Name of administrator account to manage**. If this setting isn't configured, it will look for the local account with a security identifier (SID) ending with 500 (administrator). If Windows LAPS can't find the account, Event ID 10013 is logged.
 
-Starting with Windows 11, version 24H2 and Windows Server 2025, a feature is added to create managed users. For more information, see [Windows LAPS account management modes](/windows-server/identity/laps/laps-concepts-account-management-modes). For previous versions, the account needs to exist.
+Starting with Windows 11, version 24H2 and Windows Server 2025, a feature to create the managed user has been added. For more information, see [Windows LAPS account management modes](/windows-server/identity/laps/laps-concepts-account-management-modes). For earlier versions, the account must already exist.
 
 ### Resolution
 
