@@ -114,7 +114,8 @@ To fix the issue, follow these steps:
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Locate the row that's listed in the error message, and then enter the correct value in the **Employee ID** field.
 
-    **Note**: The header row isn't included in the row count. For example, if the error message indicates line 20, go to row 21.
+    > [!NOTE]
+    > The header row isn't included in the row count. For example, if the error message indicates line 20, go to row 21.
 1. Save the file, and then try again to upload it to Viva Glint.
 
 ## NO_EMPLOYEE_RECORD
@@ -136,7 +137,8 @@ To fix the issue, follow these steps:
 1. In the admin dashboard, select the **Configuration** icon, and then select **People** in the **Employees** section.
 1. For each row that's listed in the error message, follow these steps:
 
-    **Note**: The header row isn't included in the row count. For example, if the error message indicates line 20, go to row 21.
+    > [!NOTE]
+    > The header row isn't included in the row count. For example, if the error message indicates line 20, go to row 21.
 
     1. On the **People** page, search for the associated user by their first and last name.
     1. Select the user to open their profile.
@@ -177,7 +179,8 @@ To fix the issue, follow these steps:
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. For each row that’s listed in the error message, enter a unique employee ID in the **Employee ID** field.
 
-    **Note**: The header row isn't included in the row count. For example, if the error message indicates line 20, go to row 21.
+    > [!NOTE]
+    > The header row isn't included in the row count. For example, if the error message indicates line 20, go to row 21.
 1. Save the file, and then try again to upload it to Viva Glint.
 
 ## DUPLICATE_ID
@@ -198,5 +201,6 @@ To fix the issue, follow these steps:
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Locate the row that's listed in the error message, and then enter a unique employee ID that's not associated with any other users in Viva Glint.
 
-    **Note**: The header row isn't included in the row count. For example, if the error message indicates line 20, go to row 21.
+    > [!NOTE]
+    > The header row isn't included in the row count. For example, if the error message indicates line 20, go to row 21.
 1. Save the file, and then try again to upload it to Viva Glint.
