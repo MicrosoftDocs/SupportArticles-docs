@@ -43,7 +43,8 @@ To fix the issue, follow these steps:
       =TEXT(A1,"mm/dd/yyyy")
    1. [Fill the formula](https://support.microsoft.com/office/fill-a-formula-down-into-adjacent-cells-041edfe2-05bc-40e6-b933-ef48c3f308c6) into the cells in the new column (column B).
   
-      **Note:** This formula translates blank date cells into "01/01/1900" or "01/00/1900." To prevent upload errors, remove these invalid dates before you upload the file.
+      > [!NOTE]
+      > This formula translates blank date cells into "01/01/1900" or "01/00/1900." To prevent upload errors, remove these invalid dates before you upload the file.
       
    1. Copy the date values from the new column (column B), and then paste the values into the original date column (column A) by using the **Paste** > **Paste Special** > **Values** [option](https://support.microsoft.com/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad).
    1. Delete the new column that contains the formula.
@@ -73,7 +74,8 @@ To fix the issue, follow these steps:
        - Active Attributes
        - Derived Attributes
 
-          **Note**: In this section, review the attributes that are used by Viva Glint to create the derived attributes. These attributes are listed in the **Calculate From** field.
+          > [!NOTE]
+          > In this section, review the attributes that are used by Viva Glint to create the derived attributes. These attributes are listed in the **Calculate From** field.
        - Optional System Attributes
        - Hierarchy Attributes
 1. For each attribute that's identified in step 2c, compare its name in Viva Glint with the value in the header row of the data file, and then fix any mismatches. Make sure that:
@@ -164,7 +166,8 @@ To fix the issue, follow these steps:
 
 1. In the employee attribute data file, locate the CEO or top-level person, and then remove their Manager ID value.
 
-    **Note**: Make sure that the **Manager ID** field is blank. Don't enter a space or "NULL" as the value.
+    > [!NOTE]
+    > Make sure that the **Manager ID** field is blank. Don't enter a space or "NULL" as the value.
 1. Save the file, and then upload it again to Viva Glint.
 
 To avoid this issue in the future, work with your Human Resources Information System (HRIS) team to make sure that the **Manager ID** field is blank for the CEO or top-level person in the employee attribute data.
