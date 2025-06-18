@@ -182,21 +182,14 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
    The output of the Inspektor Gadget `top_process` command resembles the following:
 
    ```output
-K8S.NODE                       K8S.NAMESPACE                  K8S.PODNAME                       MEMORYVIRTUAL        MEMORYRSS   MEMORYRELATIVE
-aks-agentpool-3…901-vmss000001                                                                   278205104128         58867712              0.4
-aks-agentpool-3…901-vmss000000                                                                   278205104128         55783424              0.3
-aks-agentpool-3…901-vmss000001 kube-system                    microsoft-defen…ector-ds-fxsvt       5706969088        126631936              0.8
-aks-agentpool-3…901-vmss000000 kube-system                    microsoft-defen…ector-ds-6xm7b       5706706944        126951424              0.8
-aks-agentpool-3…901-vmss000000                                                                     3056590848         95174656              0.6
-aks-agentpool-3…901-vmss000001                                                                     3006267392         94322688              0.6
-aks-agentpool-3…901-vmss000001                                                                     2484064256         77725696              0.5
-aks-agentpool-3…901-vmss000000                                                                     2403966976         69836800              0.4
-aks-agentpool-3…901-vmss000001                                                                     2245877760        112701440              0.7
-aks-agentpool-3…901-vmss000000                                                                     2245877760        116981760              0.7
-aks-agentpool-3…901-vmss000000                                                                     2121269248         50823168              0.3
-aks-agentpool-3…901-vmss000000                                                                     2120482816         34844672              0.2
-
-```
+      K8S.NODE                       K8S.NAMESPACE                  K8S.PODNAME                       MEMORYVIRTUAL        MEMORYRSS   MEMORYRELATIVE
+      aks-agentpool-3…901-vmss000001 default                        memory-stress                         944521216        943947776              5.6
+      aks-agentpool-3…901-vmss000001 default                        memory-stress                         944521216        943947776              5.6
+      aks-agentpool-3…901-vmss000001 default                        memory-stress                         944521216        872644608              5.2
+      aks-agentpool-3…901-vmss000001 default                        memory-stress                         944521216        797147136              4.8
+      aks-agentpool-3…901-vmss000000                                                                      436805632        339316736              2.0
+    
+    ```
 
 
 You can use this output to identify the processes that are consuming the most memory on the node. The output includes the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU usage, memory usage (RSS and Virtual), and relative memory usage.
