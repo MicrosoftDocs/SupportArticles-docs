@@ -37,7 +37,8 @@ To fix the issue, follow these steps:
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in its original format.
 1. For each user that's identified in step 3, enter a unique email address.
 
-    **Note**: For employees who aren't assigned an email address yet, use the following value as their email address:
+    > [!NOTE]
+    > For employees who aren't assigned an email address yet, use the following value as their email address:
 
     \<Employee ID\>@\<your organization's domain\>
 1. Save the employee attribute data file, and then upload it again to Viva Glint.
@@ -57,7 +58,8 @@ To fix the issue, follow these steps:
 1. In the admin dashboard, select the **Configuration** icon, and then select **People** in the **Employees** section.
 1. Locate the user that's associated with the email address that's mentioned in the warning message, and then select the user to view their profile.
 
-    **Note**: If the user status is **INACTIVE**, and your organization recycles email addresses for employees who left the organization, we recommend that you change their email address to their Employee ID so that the email address can be assigned to a new employee. This action is also recommended when you deactivate a user in Viva Glint.
+    > [!NOTE]
+    > If the user status is **INACTIVE**, and your organization recycles email addresses for employees who left the organization, we recommend that you change their email address to their Employee ID so that the email address can be assigned to a new employee. This action is also recommended when you deactivate a user in Viva Glint.
 
     If you can't find the email address that's mentioned in the warning message, see the [DUPLICATED_EMAIL: Deleted user](#duplicated_email-deleted-user) section.
 1. Open the employee attribute data file, and use the appropriate method, depending on the file type:
