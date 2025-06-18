@@ -41,7 +41,7 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions
 {
     Provider = new CookieAuthenticationProvider()
     {
-        OnValidateIdentity = async context =&gt;
+        OnValidateIdentity = async context =>
         {
             IConfidentialClientApplication clientApp = MsalAppBuilder.BuildConfidentialClientApplication();
         
@@ -159,7 +159,7 @@ Microsoft Identity Web provides built-in mechanisms to manage token caches. For 
             {
                 return ex.InnerException is MsalUiRequiredException
         
-                       && (ex.InnerException as MsalUiRequiredException).ErrorCode == "user\_null";
+                       && (ex.InnerException as MsalUiRequiredException).ErrorCode == "user_null";
         
             }
         
