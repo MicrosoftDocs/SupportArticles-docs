@@ -63,7 +63,7 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions
 ```
 
 > [!NOTE]
-> To implement a cookie authentication event, the web application must install the following helper classes and the `Microsoft.Identity.Web.TokenCache` NuGet package.
+> To implement a cookie authentication event, the web application must install the following helper classes and the `Microsoft.Identity.Web.TokenCache` NuGet package:
 >
 > - `MsalAppBuilder.cs`
 > - `AuthenticationConfig.cs`
@@ -150,7 +150,11 @@ Microsoft Identity Web provides built-in mechanisms to manage token caches. For 
                     context.RejectPrincipal();
                 }
             }
-                
+            /// <summary>
+            /// Is the exception due to no account in the token cache?
+            /// </summary>
+            /// <param name="ex">Exception thrown by <see cref="ITokenAcquisition"/>.GetTokenForXX methods.</param>
+            /// <returns>A boolean indicating if the exception relates to the absence of an account in the cache.</returns>
             private static bool AccountDoesNotExistInTokenCache(MicrosoftIdentityWebChallengeUserException ex)
             {
                 return ex.InnerException is MsalUiRequiredException
