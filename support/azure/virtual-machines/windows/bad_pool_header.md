@@ -1,7 +1,7 @@
 ---
 title: Bug Check 0x00000019 - BAD_POOL_HEADER
 description: Provides solutions to an issue where an Azure virtual machine (VM) experiences the BAD_POOL_HEADER bug check (0x00000019).
-ms.date: 06/17/2025
+ms.date: 06/18/2025
 ms.reviewer: cwhitley
 ms.service: azure-virtual-machines
 ms.collection: windows
