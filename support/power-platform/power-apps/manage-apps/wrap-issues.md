@@ -246,19 +246,42 @@ Error message: Missing default value: The required environment variable for sett
 
 #### Resolution steps
 
+- Missing environment variable - Verify whether the environment variable with the given name exists - "PA_Wrap_KV_ResourceID". If not create one 
+
 - Add the resource ID for the Azure key vaults you intend to use with your wrap application.
+
 - Ensure that all required tags are present for the resource ID linked to the Bundle ID specified in the wrap wizard.
 
 For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
 ### Error code 1000131
 
-Error message: Missing tags for the specified Azure Key Vault resourceID.
+Error message: No tags or missing access permission for the specified Azure Key Vault.
 
 #### Resolution steps
 
-- After setting up Azure key vaults, add all required tags.
-- Confirm that the resource ID associated with the Bundle ID specified in the wrap wizard includes every necessary tag.
+- Verify that the environment variable "PA_Wrap_KV_ResourceID" exists. If it does not, create it.
+
+- Set this variable to the resource ID of the Azure Key Vault you intend to use with your Wrap application.
+
+- Confirm that the specified resource ID includes all required tags associated with the Bundle ID defined in the Wrap Wizard.
+
+- Verify your access permission for your key vault
+  - As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20" by running the following commands in PowerShell:
+
+     ```powershell
+     Connect-AzureAD -TenantId <your tenant ID>
+     New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
+     ```
+  - In the [Azure portal](https://portal.azure.com), under **Access Control (IAM)**, assign the **Reader** role to your service principal:
+   1. Go to **Access control (IAM)**, and then select **Add role assignment**.
+      :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab." lightbox="media/wrap-issues/add-role-assignment.png":::
+   1. Choose **Reader** under **Job function roles** and go to the **Members** tab.
+      :::image type="content" source="media/wrap-issues/add-members.png" alt-text="Screenshot that shows the Members tab on the top menu." lightbox="media/wrap-issues/add-members.png":::
+   1. Search for your app name.
+      :::image type="content" source="media/wrap-issues/select-members-to-add-role.png" alt-text="Screenshot that shows how to search for your app." lightbox="media/wrap-issues/select-members-to-add-role.png":::
+   1. Assign the **Reader** role.
+      :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to your app." lightbox="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png":::
 
 For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
