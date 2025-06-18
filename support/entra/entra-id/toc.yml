@@ -67,6 +67,8 @@
         href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
       - name: Infinite sign-in loop issue with ASP.NET applications
         href: app-integration/asp-dot-net-application-infinite-sign-in-loop.md
+      - name: No account or login hint was passed to the AcquireTokenSilent
+        href: app-integration/no-account-login-hint-passed-acquire-token-silent.md
       - name: Package Inspector for MSAL Android Native
         href: app-integration/package-inspector-msal-android-native.md
       - name: Unable to match key ID 
