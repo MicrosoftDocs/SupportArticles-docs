@@ -214,6 +214,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80c80201 | -2134375935 | ECS_E_SYNC_UNPROCESSABLE_ITEM_REPARSEPOINT | The sync failed due to the presence of a reparse point. | Remove the reparse point or replace it with regular file content before attempting the sync again. |
 | 0x80c80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_TRAILING_DOT | The item failed to sync because one of its path components has trailing dots. | Rename the item by removing any trailing dots that appear in the path. |
 | 0x80c8024e | -2134375858 | ECS_E_SYNC_ITEM_SKIP_CONSTRAINT_CONFLICT_NOT_ALLOWED | This error indicates a constraint conflict that was detected but was unable to be reported. The item will be skipped. | If the error persists, create a support request. |
+| 0x80c80208 | -2134375928 | ECS_E_SYNC_ITEM_RECONCILIATION_SKIP | A file or directory was skipped during the synchronization pass to rebuild the sync client's metadata. It will be synchronized in the next full synchronization attempt. | If the error persists for several days, create a support request. |
 
 
 ### Handling unsupported characters
