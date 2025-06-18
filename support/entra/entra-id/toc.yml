@@ -332,7 +332,7 @@
    - name: Problem with using the Graph SDK - libraries
      items:
       - name: IDX14102 error - Unable to decode the header
-        href: users-groups-entra-apis/idx14102-unable-to-decode-the-header.md
+        href: users-groups-entra-apis/unable-to-decode-header-error.md
       - name: Python scripts making requests are detected as web crawlers
         href: users-groups-entra-apis/python-scripts-microsoft-graph-requests-detected-as-web-crawler.md
 - name: Microsoft Entra User Provisioning and Synchronization
