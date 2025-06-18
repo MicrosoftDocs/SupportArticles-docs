@@ -1,15 +1,15 @@
 ---
 title: Use PFX-formatted certificates
 description: This article describes the Microsoft PVKConverter for SQL Server tool. This tool supports the conversion of a certificate that uses the PFX format into PVK/DER format.
-ms.date: 09/25/2020
+ms.date: 06/18/2025
 ms.custom: sap:Security, Encryption, Auditing, Authorization
-ms.reviewer: vencher
+ms.reviewer: vencher, jopilov
 ---
 # Use PFX-formatted certificates in SQL Server
 
-This article introduces the Microsoft PVKConverter for SQL Server tool. This tool supports the conversion of a certificate that uses the PFX format into PVK/DER format.
+This article introduces the Microsoft PVKConverter for SQL Server tool. This tool supports the conversion of a certificate that uses the PFX format into PVK/DER format. In SQL Server 2022 (16.x) or later versions, certificates with private keys can be backed up or restored directly to and from files or binary blobs using the public key pairs (PKCS) #12 or personal information exchange (PFX) format. For more information, see [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql).
 
-_Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012, SQL Server 2008, SQL Server 2005  
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2914662
 
 ## Summary
@@ -34,10 +34,10 @@ To use certificates that are in the PFX format in Microsoft SQL Server, use Micr
     > [!NOTE]
     > The number of PVK/DER files that are generated depends on the number of public/private key pairs that are contained in the PFX file. One PVK/DER file pair is generated for each public/private key pair.
 
-3. Use SQL Query Analyzer to run the following Transact-SQL script:
+3. Run the following Transact-SQL script:
 
     ```sql
-    CREATE CERTIFICATE >Certificate name>
+    CREATE CERTIFICATE <Certificate name>
      FROM FILE = '<PVK/DER format file>.cer'
      WITH PRIVATE KEY (FILE = '<PVK/DER format file>.pvk',
      DECRYPTION BY PASSWORD = '<Encryption password>');
@@ -58,36 +58,3 @@ Windows Certificate Manager supports the export to PFX format only of existing c
 - For Microsoft SQL Server 2014 Service Pack 1, see [3082513 FIX: TDE certificate creation fails in SQL Server 2014 SP1 if the serial number is greater than 16 bytes](https://support.microsoft.com/help/3082513).
 
 - For other versions of SQL Server, see [Not able to use PFX format certificate in SQL Server?](https://techcommunity.microsoft.com/t5/sql-server-support/not-able-to-use-pfx-format-certificate-in-sql-server/ba-p/318593).
-
-## Applies to
-
-- SQL Server 2014 Developer
-- SQL Server 2014 Developer
-- SQL Server 2014 Enterprise
-- SQL Server 2014 Enterprise
-- SQL Server 2014 Web
-- SQL Server 2014 Web
-- SQL Server 2014 Standard
-- SQL Server 2014 Standard
-- SQL Server 2014 Express
-- SQL Server 2014 Express
-- SQL Server 2012 Developer
-- SQL Server 2012 Enterprise
-- SQL Server 2012 Web
-- SQL Server 2012 Standard
-- SQL Server 2012 Express
-- SQL Server 2008 R2 Datacenter
-- SQL Server 2008 R2 Developer
-- SQL Server 2008 R2 Enterprise
-- SQL Server 2008 R2 Web
-- SQL Server 2008 R2 Standard
-- SQL Server 2008 R2 Express
-- SQL Server 2008 Developer
-- SQL Server 2008 Enterprise
-- SQL Server 2008 Workgroup
-- SQL Server 2008 Web
-- SQL Server 2008 Express
-- Microsoft SQL Server 2005 Enterprise Edition
-- Microsoft SQL Server 2005 Workgroup Edition
-- Microsoft SQL Server 2005 Standard Edition
-- Microsoft SQL Server 2005 Express Edition  
