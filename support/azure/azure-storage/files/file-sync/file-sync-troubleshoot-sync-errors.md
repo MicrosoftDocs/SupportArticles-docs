@@ -961,6 +961,17 @@ To resolve this issue, delete and recreate the sync group by performing the foll
 
 No action is required. This error occurs because sync detected the replica has been restored to an older state. Sync will now enter a reconciliation mode, where it recreates the sync relationship by merging the contents of the Azure file share and the data on the server endpoint. When reconciliation mode is triggered, the process can be very time consuming, depending upon the namespace size. Regular synchronization doesn't happen until the reconciliation finishes, and files that are different (last modified time or size) between the Azure file share and server endpoint will result in file conflicts.
 
+<a id="-2134375775"></a>**Sync failed because the path for the server endpoint has changed**  
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80c802a1 |
+| **HRESULT (decimal)** | -2134375775 |
+| **Error string** | ECS_E_SYNC_ROOT_VOLUME_CHANGED |
+| **Remediation required** | No |
+
+This error occurs because the path at which the server endpoint is provisioned is currently located on a different volume than where it was originally provisioned. When this issue occurs, create a support request and we will contact you to help you resolve this issue.
+
 <a id="-2145844941"></a>**Sync failed because the HTTP request was redirected**  
 
 | Error | Code |
