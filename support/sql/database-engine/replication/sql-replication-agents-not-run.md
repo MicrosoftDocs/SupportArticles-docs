@@ -9,7 +9,7 @@ ms.reviewer: akshaym, jopilov
 
 This article helps you work around the problem where some replication agents can't run when you configure many SQL Server replication agents to run on a server.
 
-_Original product version:_ &nbsp; SQL Server
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 949296
 
 ## Symptoms
