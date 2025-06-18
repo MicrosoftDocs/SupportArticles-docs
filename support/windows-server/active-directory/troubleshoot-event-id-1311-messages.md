@@ -15,7 +15,7 @@ ms.custom:
 This article describes how to troubleshoot event ID 1311 messages in the Directory Service event log on a Windows domain.
 
 _Original KB number:_ &nbsp; 307593  
-_Applies to:_ All supported versions of Windows Server
+_Applies to:_ &nbsp; All supported versions of Windows Server
 
 ## Symptoms
 
