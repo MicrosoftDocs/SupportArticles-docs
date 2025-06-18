@@ -1209,6 +1209,20 @@ If the error persists for more than a day, create a support request.
 | **Error string** | WININET_E_INCORRECT_HANDLE_STATE |
 | **Remediation required** | No |
 
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80c87093 |
+| **HRESULT (decimal)** | -2134347629 |
+| **Error string** | ECS_E_MGMT_DATA_PLANE_INTERNAL_ERROR |
+| **Remediation required** | No |
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80c87005 |
+| **HRESULT (decimal)** | -2134347771 |
+| **Error string** | ECS_E_MGMT_INTERNAL_ERROR |
+| **Remediation required** | No |
+
 No action required. This error should automatically resolve. If the error persists for several days, create a support request.
 
 <a id="-2146233079"></a>**An internal error occurred.**
