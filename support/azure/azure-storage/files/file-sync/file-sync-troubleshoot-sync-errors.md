@@ -176,6 +176,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x8007007b | -2147024773 | ERROR_INVALID_NAME | The file or directory name is invalid. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
 | 0x80070459 | -2147023783 | ERROR_NO_UNICODE_TRANSLATION | The file or directory name has unsupported surrogate pair characters. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
 | 0x80c80255 | -2134375851 | ECS_E_XSMB_REST_INCOMPATIBILITY | The file or directory name is invalid. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
+| 0x80c8026d | -2134375827 | ECS_E_SYNC_ITEM_RESTRICTED_AT_ROOT | The specified item name is restricted at the root of the sync share and thus cannot be synced.  | No action required. See [File System Compatibility](/azure/storage/file-sync/file-sync-planning#file-system-compatibility) for more information. |
 | 0x80c80018 | -2134376424 | ECS_E_SYNC_FILE_IN_USE | The file can't be synced because it's in use. The file will be synced when it's no longer in use. | No action required. Azure File Sync creates a temporary VSS snapshot once a day on the server to sync files that have open handles. |
 | 0x80c86013 | -2134351853 | ECS_E_SYNC_CLOUD_FILE_IN_USE | The cloud file can't be synced because it's in use. This error occurs when an application holds an open handle to a file in the cloud, preventing sync operations from being performed until the application releases the handle. | Check the open file handles and close them if they're no longer needed. For more information, see [List Handles](/rest/api/storageservices/list-handles) and [Force Close Handles](/rest/api/storageservices/force-close-handles). |
 | 0x80c8031d | -2134375651 | ECS_E_CONCURRENCY_CHECK_FAILED | The file has changed, but the change hasn't yet been detected by sync. Sync will recover after this change is detected. | No action required. |
@@ -213,6 +214,8 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80c80201 | -2134375935 | ECS_E_SYNC_UNPROCESSABLE_ITEM_REPARSEPOINT | The sync failed due to the presence of a reparse point. | Remove the reparse point or replace it with regular file content before attempting the sync again. |
 | 0x80c80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_TRAILING_DOT | The item failed to sync because one of its path components has trailing dots. | Rename the item by removing any trailing dots that appear in the path. |
 | 0x80c8024e | -2134375858 | ECS_E_SYNC_ITEM_SKIP_CONSTRAINT_CONFLICT_NOT_ALLOWED | This error indicates a constraint conflict that was detected but was unable to be reported. The item will be skipped. | If the error persists, create a support request. |
+| 0x80c80208 | -2134375928 | ECS_E_SYNC_ITEM_RECONCILIATION_SKIP | A file or directory was skipped during the synchronization pass to rebuild the sync client's metadata. It will be synchronized in the next full synchronization attempt. | If the error persists for several days, create a support request. |
+
 
 ### Handling unsupported characters
 
@@ -958,6 +961,17 @@ To resolve this issue, delete and recreate the sync group by performing the foll
 
 No action is required. This error occurs because sync detected the replica has been restored to an older state. Sync will now enter a reconciliation mode, where it recreates the sync relationship by merging the contents of the Azure file share and the data on the server endpoint. When reconciliation mode is triggered, the process can be very time consuming, depending upon the namespace size. Regular synchronization doesn't happen until the reconciliation finishes, and files that are different (last modified time or size) between the Azure file share and server endpoint will result in file conflicts.
 
+<a id="-2134375775"></a>**Sync failed because the path for the server endpoint has changed**  
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80c802a1 |
+| **HRESULT (decimal)** | -2134375775 |
+| **Error string** | ECS_E_SYNC_ROOT_VOLUME_CHANGED |
+| **Remediation required** | No |
+
+This error occurs because the path at which the server endpoint is provisioned is currently located on a different volume than where it was originally provisioned. When this issue occurs, create a support request and we will contact you to help you resolve this issue.
+
 <a id="-2145844941"></a>**Sync failed because the HTTP request was redirected**  
 
 | Error | Code |
@@ -1193,6 +1207,20 @@ If the error persists for more than a day, create a support request.
 | **HRESULT** | 0x80072ef3 |
 | **HRESULT (decimal)** | -2147012877 |
 | **Error string** | WININET_E_INCORRECT_HANDLE_STATE |
+| **Remediation required** | No |
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80c87093 |
+| **HRESULT (decimal)** | -2134347629 |
+| **Error string** | ECS_E_MGMT_DATA_PLANE_INTERNAL_ERROR |
+| **Remediation required** | No |
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80c87005 |
+| **HRESULT (decimal)** | -2134347771 |
+| **Error string** | ECS_E_MGMT_INTERNAL_ERROR |
 | **Remediation required** | No |
 
 No action required. This error should automatically resolve. If the error persists for several days, create a support request.
