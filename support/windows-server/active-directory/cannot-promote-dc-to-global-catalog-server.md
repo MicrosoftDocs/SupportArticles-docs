@@ -1,7 +1,7 @@
 ---
 title: Can't promote a domain controller to a global catalog server
 description: Describes a problem where you can't promote a Windows Server-based domain controller to be a global catalog server.
-ms.date: 01/15/2025
+ms.date: 06/18/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,9 +14,8 @@ ms.custom:
 
 This article provides solutions to an issue where you can't promote a Windows Server domain controller to a global catalog server.
 
-_Original KB number:_ &nbsp; 889711, 910204
-
-**Applies to: All supported versions of Windows Server**
+_Original KB number:_ &nbsp; 889711, 910204  
+_Applies to:_ &nbsp; All supported versions of Windows Server
 
 ## Event messages logged in the Directory Services log of Windows Server
 
