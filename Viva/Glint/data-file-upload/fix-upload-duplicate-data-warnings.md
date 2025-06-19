@@ -1,6 +1,6 @@
 ---
-title: Resolve File Upload Warnings Related to Duplicate Data
-description: Fix duplicate data warnings that occur when you upload employee attribute data to Microsoft Viva Glint.
+title: Resolve File Upload Errors Related to Duplicate Data
+description: Fix duplicate data errors that occur when you upload employee attribute data to Microsoft Viva Glint.
 manager: dcscontentpm
 ms.reviewer: aweixelman
 ms.date: 04/17/2025
@@ -12,9 +12,9 @@ ms.custom:
   - CI190691
 ---
 
-# Resolve file upload warnings related to duplicate data
+# Resolve file upload errors related to duplicate data
 
-When you upload employee attribute data to Microsoft Viva Glint, you might receive one of the following warning messages that are caused by duplicate data. To fix the issue, select the relevant warning, and follow the appropriate resolution.
+When you upload employee attribute data to Microsoft Viva Glint, you might receive one of the following error messages that are caused by duplicate data. To fix the issue, select the relevant error, and follow the appropriate resolution.
 
 ## INVALID_EMPLOYEE_DATA: Email or ID is assigned to multiple users
 
