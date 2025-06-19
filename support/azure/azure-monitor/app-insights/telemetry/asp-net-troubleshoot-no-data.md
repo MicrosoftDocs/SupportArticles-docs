@@ -13,6 +13,8 @@ ms.custom: sap:Missing or Incorrect data after enabling Application Insights in 
 
 This article provides troubleshooting information to help resolve issues when data is missing or doesn't appear when you're using Application Insights for .NET and .NET Core.
 
+[!INCLUDE [Azure Help Support](../../../../includes/azure/application-insights-sdk-support.md)]
+
 > [!NOTE]
 > This article was recently updated to use the term *Azure Monitor logs* instead of *Log Analytics*. Log data is still stored in a Log Analytics workspace, and it's still collected and analyzed by the same Log Analytics service. We're updating the terminology to better reflect the role of [logs in Azure Monitor](/azure/azure-monitor/logs/data-platform-logs). For more information, see [Azure Monitor terminology changes](/azure/azure-monitor/terminology).
 
