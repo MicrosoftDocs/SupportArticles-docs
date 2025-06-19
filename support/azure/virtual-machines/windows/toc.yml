@@ -336,10 +336,10 @@
       href: applying-group-policy-shortcuts-policy.md
     - name: Azure VM startup hangs at "Applying Software Installation policy"
       href: applying-software-installation-policy.md
-    - name: Azure VM startup hangs at "IRQL_NOT_LESS_OR_EQUAL"
+    - name: Bug Check 0x0000001A - IRQL_NOT_LESS_OR_EQUAL
       href: interrupt-request-line-not-less-equal.md
-    - name: Bug Check 0x00000019 - BAD_POOL_HEADER
-      href: bad_pool_header.md
+    - name: Bug check 0x00000019 - BAD_POOL_HEADER
+      href: bad-pool-header.md
     - name: Troubleshoot Windows VM OS with missing boot manager
       href: os-bootmgr-missing.md
     - name: OS isn't found
