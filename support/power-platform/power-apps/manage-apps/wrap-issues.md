@@ -4,7 +4,7 @@ description: Provides solutions to common issues when using the wrap feature in 
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 06/17/2025
+ms.date: 06/19/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Troubleshoot wrap feature issues in Power Apps
@@ -97,7 +97,7 @@ You might encounter these error codes in the wrap wizard:
 | [1000123](#error-code-1000123) | iOS profile isn't valid. |
 | [1000128](#error-code-1000128) | Missing access key used while accessing Azure Blob storage location. |
 | [1000130](#error-code-1000130) | Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set. |
-| [1000131](#error-code-1000131) | Missing tags for the specified Azure Key Vault resourceID. |
+| [1000131](#error-code-1000131) | No tags or missing access permission for the specified Azure Key Vault. |
 
 ### Error code 1000118
 
@@ -246,11 +246,11 @@ Error message: Missing default value: The required environment variable for sett
 
 #### Resolution steps
 
-- Missing environment variable - Verify whether the environment variable with the given name exists - "PA_Wrap_KV_ResourceID". If not create one 
+1. Verify if the `PA_Wrap_KV_ResourceID` environment variable exists. If it doesn't, create it.
 
-- Add the resource ID for the Azure key vaults you intend to use with your wrap application.
+2. Assign the resource ID of the Azure key vault you intend to use with your wrap application to the variable.
 
-- Ensure that all required tags are present for the resource ID linked to the Bundle ID specified in the wrap wizard.
+3. Confirm that the specified resource ID includes all required tags associated with the Bundle ID defined in the wrap wizard.
 
 For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
@@ -260,28 +260,38 @@ Error message: No tags or missing access permission for the specified Azure Key 
 
 #### Resolution steps
 
-- Verify that the environment variable "PA_Wrap_KV_ResourceID" exists. If it does not, create it.
+1. Verify if the `PA_Wrap_KV_ResourceID` environment variable exists. If it doesn't, create it.
 
-- Set this variable to the resource ID of the Azure Key Vault you intend to use with your Wrap application.
+2. Assign the resource ID of the Azure key vault you intend to use with your wrap application to the variable.
 
-- Confirm that the specified resource ID includes all required tags associated with the Bundle ID defined in the Wrap Wizard.
+3. Confirm that the specified resource ID includes all required tags associated with the Bundle ID defined in the wrap wizard.
 
-- Verify your access permission for your key vault
-  - As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20" by running the following commands in PowerShell:
+4. Ensure you have permissions to access your key vault:
 
-     ```powershell
-     Connect-AzureAD -TenantId <your tenant ID>
-     New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
-     ```
-  - In the [Azure portal](https://portal.azure.com), under **Access Control (IAM)**, assign the **Reader** role to your service principal:
-   1. Go to **Access control (IAM)**, and then select **Add role assignment**.
-      :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab." lightbox="media/wrap-issues/add-role-assignment.png":::
-   1. Choose **Reader** under **Job function roles** and go to the **Members** tab.
-      :::image type="content" source="media/wrap-issues/add-members.png" alt-text="Screenshot that shows the Members tab on the top menu." lightbox="media/wrap-issues/add-members.png":::
-   1. Search for your app name.
-      :::image type="content" source="media/wrap-issues/select-members-to-add-role.png" alt-text="Screenshot that shows how to search for your app." lightbox="media/wrap-issues/select-members-to-add-role.png":::
-   1. Assign the **Reader** role.
-      :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to your app." lightbox="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png":::
+   1. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20" by running the following commands in PowerShell:
+
+      ```powershell
+      Connect-AzureAD -TenantId <your tenant ID>
+      New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
+      ```
+
+   1. In the [Azure portal](https://portal.azure.com), under **Access Control (IAM)**, assign the **Reader** role to your service principal:
+
+      1. Go to **Access control (IAM)**, and then select **Add role assignment**.
+
+         :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab." lightbox="media/wrap-issues/add-role-assignment.png":::
+
+      1. Choose **Reader** under **Job function roles** and go to the **Members** tab.
+
+         :::image type="content" source="media/wrap-issues/add-members.png" alt-text="Screenshot that shows the Members tab on the top menu." lightbox="media/wrap-issues/add-members.png":::
+
+      1. Search for your app name.
+
+         :::image type="content" source="media/wrap-issues/select-members-to-add-role.png" alt-text="Screenshot that shows how to search for your app." lightbox="media/wrap-issues/select-members-to-add-role.png":::
+
+      1. Assign the **Reader** role.
+
+         :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to your app." lightbox="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png":::
 
 For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
