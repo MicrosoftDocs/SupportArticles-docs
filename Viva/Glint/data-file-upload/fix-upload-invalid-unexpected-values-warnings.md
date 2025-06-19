@@ -1,5 +1,5 @@
 ---
-title: Resolve file upload warnings related to invalid or unexpected values
+title: Resolve file upload warnings and errors related to invalid or unexpected values
 description: Fix issues that cause invalid or unexpected values when you upload employee attribute data to Viva Glint.
 manager: dcscontentpm
 ms.reviewer: aweixelman
@@ -14,15 +14,17 @@ ms.custom:
   - CI192293
 ---
 
-# Resolve file upload warnings related to invalid or unexpected values
+# Resolve file upload warnings and errors related to invalid or unexpected values
 
-When you upload employee attribute data to Microsoft Viva Glint, you receive one of the following warning messages. Select the warning that you experience from the list at the top of the article, and follow the appropriate resolution to fix the issue.
+When you upload employee attribute data to Microsoft Viva Glint, you receive one of the following warning or error messages. Select the warning or error that you experience from the list at the top of the article, and follow the appropriate resolution to fix the issue.
 
 ## RECORD_STAGING_FAILURE
 
-Warning message:
+**Message:**
 
 > RECORD_STAGING_FAILURE: Found \<x\> existing record that has been previously deleted corresponding to line number \<y\>.
+
+**Issue type:** Line-level error
 
 This issue occurs if users are deleted from Microsoft Entra ID and their corresponding records in Viva Glint are marked as **soft Deleted**. The [Disregard Employee IDs of previously deleted employees](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) setting manages how Viva Glint processes deleted user records.
 
@@ -33,7 +35,7 @@ To fix the issue, use one of the following methods:
 - If you upload the data by using **Import** on the **People** page, confirm the upload. This way records that are marked as soft deleted in Microsoft Entra ID and Viva Glint will be skipped. All other data without other errors or warnings will be imported into Viva Glint.
 
   > [!NOTE]
-  > If you upload the data by using Viva Glint Secure File Transfer Protocol (SFTP), records that are marked as deleted will be automatically skipped.
+  > If you upload the data by using Viva Glint Secure File Transfer Protocol (SFTP), records that are marked as soft deleted will be automatically skipped.
 
 - Remove the deleted records and upload the file again. Follow these steps:
 
@@ -50,9 +52,11 @@ To fix the issue, use one of the following methods:
 
 ## INVALID_EMPLOYEE_DATA: unsupported characters
 
-Warning message:
+**Message:**
 
 > INVALID_EMPLOYEE_DATA: Skipping line number \<x\> because column \<y\> contains unsupported characters.
+
+**Issue type:** Line-level error
 
 This issue occurs because the file that you uploaded contains old Kanji characters. Viva Glint supports only modern Kanji characters.
 
@@ -74,9 +78,11 @@ To fix the issue, follow these steps:
 
 ## MISSING_REQUIRED_VALUE
 
-Warning message:
+**Message:**
 
 > MISSING_REQUIRED_VALUE: Line \<x\> is missing a required value for Employee First Name, Employee Last Name, and Email address for user ID \<ID\>.
+
+**Issue type:** Line-level error
 
 This issue occurs if an employee record in your file is missing values for one or more of the following required fields:
 
@@ -99,9 +105,11 @@ To fix the issue, follow these steps:
 
 ## INVALID_EMAIL
 
-Warning message:
+**Message:**
 
 > INVALID_EMAIL: There are \<number\> employees without a valid Work Email, which could be related to employees with an Employee ID sent as the email value.
+
+**Issue type:** Line-level warning
 
 ### Resolution
 
@@ -109,9 +117,11 @@ To fix the issue, verify that email addresses are in a valid format, including t
 
 ## FIELD_TOO_BIG_FATAL
 
-Warning messages:
+**Message:**
 
 > FIELD_TOO_BIG_FATAL: Required field \<Attribute Name\> can't be longer than 64 characters.
+
+**Issue type:** Line-level error
 
 ### Resolution
 
@@ -122,9 +132,11 @@ To fix the issue, check for fields that might be accidentally strung together. R
 
 ## CHAR_LIMIT_EXCEED_NON_MANDATORY
 
-Warning message:
+**Message:**
 
 > CHAR_LIMIT_EXCEED_NON_MANDATORY: Non-Required field \<Attribute Name\> is longer than 64 characters. As a result, the value has been truncated to 64 characters, which is what will be shown in reporting. (Number of employees impacted: \<number\>)
+
+**Issue type:** Line-level warning
 
 ### Resolution
 
@@ -132,9 +144,11 @@ To fix the issue, check for fields that might be accidentally strung together. R
 
 ## SUSPICIOUS_VALUE
 
-Warning message:
+**Message:**
 
 > SUSPICIOUS_VALUE: Value of Employee \<Attribute Name\> for Employee ID \<ID\> contains suspicious characters. Check for special/unexpected characters that may have been corrupted and reupload your file to correct.
+
+**Issue type:** Line-level warning
 
 ### Resolution
 
@@ -147,9 +161,11 @@ Then, upload the file again to Viva Glint.
 
 ## INVALID_STATUS
 
-Warning message:
+**Message:**
 
 > INVALID_STATUS: Status value 'LEAVE' is invalid. This value needs to be exactly "ACTIVE" or "INACTIVE", in all caps.
+
+**Issue type:** Line-level error
 
 ### Resolution
 
@@ -157,9 +173,11 @@ To fix the issue, make sure that the value of the **Status** attribute contains 
 
 ## UNEXPECTED_ATTRIBUTE
 
-Warning message:
+**Message:**
 
 > UNEXPECTED_ATTRIBUTE: The following attribute/attributes '\<Attribute Name\>' are in the file but not configured in Viva Glint.
+
+**Issue type:** Line-level error
 
 This issue occurs in one of the following situations:
 
@@ -182,9 +200,11 @@ After you update the attributes, upload the file again to Viva Glint.
 
 ## INVALID_LOCALE
 
-Warning message:
+**Message:**
 
 > INVALID_LOCALE: Line \<x\> the Locale value \<locale\> is not a valid locale string.
+
+**Issue type:** Line-level warning
 
 This issue occurs if the file that you upload contains invalid language code values.
 
@@ -205,9 +225,11 @@ To fix the issue, follow these steps:
 
 ## INVALID_USER_TIMEZONE
 
-Warning message:
+**Message:**
 
 > INVALID_USER_TIMEZONE: Line \<x\> the User Timezone value \<timezone\> is not a valid international timezone string.
+
+**Issue type:** Line-level warning
 
 This issue occurs if the file that you upload contains invalid time zone values.
 
@@ -228,9 +250,11 @@ To fix the issue, follow these steps:
 
 ## INVALID_PERSONAL_EMAIL
 
-Warning message:
+**Message:**
 
 > INVALID_PERSONAL_EMAIL: Line \<x\> the Personal Email value '\<email address\>' is not formatted like a valid email address.
+
+**Issue type:** Line-level warning
 
 This issue occurs because the file that you tried to upload contains invalid values for the personal email address attribute.
 

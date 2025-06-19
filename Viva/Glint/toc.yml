@@ -15,9 +15,9 @@
           href: ./data-file-upload/fix-upload-attributes-errors.md
         - name: Resolve upload errors related to derived attributes
           href: ./data-file-upload/fix-upload-derivation-errors.md
-        - name: Resolve upload warnings related to duplicate data
+        - name: Resolve upload errors related to duplicate data
           href: ./data-file-upload/fix-upload-duplicate-data-warnings.md
-        - name: Resolve upload warnings related to invalid or unexpected values
+        - name: Resolve upload errors and warnings related to invalid or unexpected values
           href: ./data-file-upload/fix-upload-invalid-unexpected-values-warnings.md
         - name: Resolve upload warnings related to manager hierarchy
           href: ./data-file-upload/fix-upload-manager-hierarchy-warnings.md
