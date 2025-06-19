@@ -14,7 +14,7 @@ ms.custom:
 
 This guide provides the fundamental concepts to use when troubleshooting Windows Local Administrator Password Solution (Windows LAPS) issues.
 
-Windows LAPS is a Windows feature that automatically manages and backs up the password of a local administrator account on your Microsoft Entra joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it. For more information, see [What is Windows LAPS?](/windows-server/identity/laps/laps-overview)
+Windows LAPS is a Windows feature that automatically manages and backs up the password of a local administrator account on your Microsoft Entra joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it. For more information, see [What is Windows LAPS?](/windows-server/identity/laps/laps-overview).
 
 > [!NOTE]
 >
@@ -144,7 +144,8 @@ LAPS failed to find the currently configured local administrator account
 
 Windows LAPS reads the local administrator's name from Group Policy or the Intune setting **Name of administrator account to manage**. If this setting isn't configured, it will look for the local account with a security identifier (SID) ending with 500 (administrator). If Windows LAPS can't find the account, Event ID 10013 is logged.
 
-In the current version of Windows LAPS, there's no feature to create the managed user.
+From Windows 11 24H2 and Server 2025 a feature to create the managed user was added. For more information se [Windows LAPS account management modes](/windows-server/identity/laps/laps-concepts-account-management-modes).
+For previous versions, the account needs to exist.
 
 ### Resolution
 
@@ -193,7 +194,7 @@ The device (Microsoft Entra joined or hybrid joined) that's configured with Wind
 
 ### Resolution
 
-1. Verify that you can connect successfully to the registration endpoint (`https://enterpriseregistration.windows.net`). If you open Microsoft Edge or Google Chrome and connect to the registration endpoint (`https://enterpriseregistration.windows.net`), you get a message "Endpoint not found". This message means you can connect to the Enterprise Registration Endpoint.
+1. Verify that you can connect successfully to the registration endpoint (`https://enterpriseregistration.windows.net`). If you open Microsoft Edge or Google Chrome and connect to the registration endpoint (`https://enterpriseregistration.windows.net`), you get a message "Unsupported method or endpoint.". This message means you can connect to the Enterprise Registration Endpoint.
 2. If you're using a proxy server, verify that your proxy is configured under the system context. You can open an elevated command prompt and run the `netsh winhttp show proxy` command to display the proxy.
 
 ## Event ID 10026
@@ -245,8 +246,6 @@ Windows LAPS can't update the password of the locally managed user account on th
 4. The lower pane displays the loaded DLLs or modules. Identify if there are any third-party modules by using the **Company Name** field (any modules other than Microsoft).
 
     Review the DLL list to identify if the name of the third-party DLL (module) has some keywords like "security," "password," or "policies." Uninstall or stop the application or service that might be using this DLL.
-
-<a name='machine-joined-to-azure-ad'></a>
 
 ### Machine joined to Microsoft Entra ID
 
@@ -437,7 +436,7 @@ This issue can also occur if you move the machine to a different organizational 
 1. If you haven't run the Windows LAPS PowerShell cmdlet to assign the Self Permission to the computer account, run the following cmdlet:
 
     ```PowerShell
-    Set-LapsADComputerSelfPermission -identity <OU Name>
+    Set-LapsADComputerSelfPermission -Identity <OU Name>
     ```
 
     For example:
