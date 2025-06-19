@@ -89,16 +89,16 @@ You might encounter these error codes in the wrap wizard:
 
 | Error code | Error message |
 |------------|-------------|
-| [1000118](#error-code-1000118) | [Default subscription not found or missing access permissions.](https://go.microsoft.com/fwlink/?linkid=2325214) |
-| [1000119](#error-code-1000119) | [Key vault doesn't exist or is missing access privileges.](https://go.microsoft.com/fwlink/?linkid=2324834)|
-| [1000120](#error-code-1000120) | [No organization ID tags found on key vault. Ensure that the tag {Bundle ID}.{organization-id} is present and uses the correct case sensitivity.](https://go.microsoft.com/fwlink/?linkid=2324835)|
-| [1000121](#error-code-1000121) | [Android keystore isn't valid. Ensure that the tag {Bundle ID}.{keystore} is present and uses the correct case sensitivity.](https://go.microsoft.com/fwlink/?linkid=2324836) |
-| [1000122](#error-code-1000122) | [iOS certificate isn't valid. Missing Tag and/or Secret. Ensure that the tag {Bundle ID}.{cert} is present and uses the correct case sensitivity.](https://go.microsoft.com/fwlink/?linkid=2325313) |
-| [1000123](#error-code-1000123) | [iOS profile isn't valid. Ensure that the tag {Bundle ID}.{profile} is present and uses the correct case sensitivity.](https://go.microsoft.com/fwlink/?linkid=2325214)|
-| [1000128](#error-code-1000128) | [Missing access key required to access the Azure Blob Storage location. Ensure that the tag {Bundle ID}.{accessKey} is present and uses the correct case sensitivity.](https://go.microsoft.com/fwlink/?linkid=2325220) |
-| [1000130](#error-code-1000130) | [Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set.](https://go.microsoft.com/fwlink/?linkid=2324839) |
-| [1000131](#error-code-1000131) | [No tags or missing access permission for the specified Azure Key Vault.](https://go.microsoft.com/fwlink/?linkid=2325221) |
-| [1000132](#error-code-1000132) | [Missing environment variable 'PA_Wrap_KV_ResourceID' for the targeted environment.](https://go.microsoft.com/fwlink/?linkid=2325214) |
+| [1000118](#error-code-1000118) | Default subscription not found or missing access permissions. |
+| [1000119](#error-code-1000119) | Key vault doesn't exist or is missing access privileges.|
+| [1000120](#error-code-1000120) | No organization ID tags found on key vault. Ensure that the tag {Bundle ID}.{organization-id} is present and uses the correct case sensitivity.|
+| [1000121](#error-code-1000121) | Android keystore isn't valid. Ensure that the tag {Bundle ID}.{keystore} is present and uses the correct case sensitivity.|
+| [1000122](#error-code-1000122) | iOS certificate isn't valid. Missing Tag and/or Secret. Ensure that the tag {Bundle ID}.{cert} is present and uses the correct case sensitivity.|
+| [1000123](#error-code-1000123) | iOS profile isn't valid. Ensure that the tag {Bundle ID}.{profile} is present and uses the correct case sensitivity.|
+| [1000128](#error-code-1000128) | Missing access key required to access the Azure Blob Storage location. Ensure that the tag {Bundle ID}.{accessKey} is present and uses the correct case sensitivity.|
+| [1000130](#error-code-1000130) | Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set.|
+| [1000131](#error-code-1000131) | No tags or missing access permission for the specified Azure Key Vault. |
+| [1000132](#error-code-1000132) | Missing environment variable 'PA_Wrap_KV_ResourceID' for the targeted environment. |
 
 ### Error code 1000118
 
