@@ -87,7 +87,7 @@ If you can't sign in or see data in your wrapped app, try the following actions:
 
 You might encounter these error codes in the wrap wizard:
 
-| Error Code | Error Message |
+| Error code | Error message |
 |------------|-------------|
 | [1000118](#error-code-1000118) | Default subscription not found or missing access permissions. |
 | [1000119](#error-code-1000119) | Key vault doesn't exist or is missing access privileges. |
