@@ -513,6 +513,421 @@ Some issues occur during VM migration, such as the VM entering a hung state, boo
 
 We recommend disabling any third-party repositories and security tools on the system before proceeding with the SUSE migration. Disabling them during the migration is crucial to prevent dependency conflicts, ensure system stability, maintain consistency with official packages, simplify troubleshooting, and provide a smoother upgrade process.
 
+## Scenario 12: Successful Migration from SLES12 SP5 to SLES15 SP3, but SLES15 SP3 to SP6 Upgrade Fails with Error
+
+The migration succeeds from SLES 12 SP5 to SLES 15 SP3. While you execute the `sudo zypper migration -v` command on SLES 15 SP3, the migration fails and you get the following output:
+
+```output
+[SUSE_Linux_Enterprise_Server_x86_64:SLE-Product-SLES15-SP6-Updates|plugin:/susecloud?credentials=SUSE_Linux_Enterprise_Server_x86_64&amp;path=/repo/SUSE/Updates/SLE-Product-SLES/15-SP6/x86_64/update/] Valid metadata not found at specified URL
+History:
+- Signature verification failed for repomd.xml
+- Can&apos;t provide /repodata/repomd.xml
+      
+
+</message>
+<message type="warning">Skipping repository &apos;SLE-Product-SLES15-SP6-Updates&apos; because of the above error.</message>
+<message type="error">Some of the repositories have not been refreshed because of an error.</message>
+<message type="info">Loading repository data...</message>
+<message type="info">Reading installed packages...</message>
+
+<search-result version="0.0">
+<solvable-list>
+<solvable status="installed" name="sle-module-basesystem" kind="product" edition="15.3-0" arch="x86_64" repository="(System Packages)"/>
+</solvable-list>
+</search-result>
+</stream>
+
+**Migration failed.**
+
+Performing repository rollback...
+Starting to sync system product activations to the server. This can take some time...
+Rollback successful.
+'/usr/lib/zypper/commands/zypper-migration' exited with status 1
+
+```
+
+You can also find the output in the `/var/log/messages` or `/var/log/distro-migration.log` file.
+
+### Cause 
+
+Mid of 2023, SUSE has changed the GPG signing key for the SUSE Linux Enterprise 15 products, and products based on those (SUSE Enterprise Storage, SUSE Manager, SUSE CaaSP) to the RSA 4096 bit key as specified in SUSE article [https://www.suse.com/support/security/keys/](https://www.suse.com/support/security/keys).
+
+### Resolution
+
+1. Verify the existing keys.
+```output
+# rpm -q gpg-pubkey
+gpg-pubkey-39db7c82-66c5d91a
+gpg-pubkey-50a3dd1c-50f35137
+```
+2. Create a file named `repo-signing-key-sle-15.txt` using vi editor.
+
+```bash
+# vi repo-signing-key-sle-15.txt
+```
+
+3. Add the following contents and save the file.
+```bash
+# cat repo-signing-key-sle-15.txt
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v2.0.15 (GNU/Linux)
+
+mQINBGPJSBwBEAC+sp2UJHVei0aAkvnEeeuRrIbzyWotRYuDgdWzS4V01alxFl97
+ZPA6syyyZpITGP6fLP0AG0KipXABcYdaF7iFGKnhm6v5ExQ+Aft9SNaJmGqxwPng
+2jHGoaovbcOrvpix1INwPlxyxAaKfCtdH6kE9ZBzZXKHhDwTuBAyIJmvz5P4djxs
+RFxryZ2wq2IbhT/eu5b+3QRdeOHhbP/K2ZA+jd4Ct6uSyEAV0n9D5rVrtKhYqzp7
+zXPYntFW9IgEC/HisQ3TcDhKqK0xfxsQAYjsrvrbhc2O1sHWfhDEqV7W8yPrEbH2
+NTWmQxiSf4ZEJsKOZa6TI4fOS89OPRRIC0Ec+mFWHHSfhGaiK0g59TSuBECke7jV
+hgwLKa0WGzxhYaZ/dPxjke9MfHPIlCrwfH4tKsEY5Cy+GQWwt8s7J9lK1gEGz0c2
+nLA4PBDCPqKB/+GEHkF+hyN1GHlhoY78mJ+c/QHyTv/DYOvS3jr5RaJYwKkBHS+0
+5pBUGW6PANT6yoDGOGLaq7hJLdeAwW+qLSfFSxBOnjBrtBV4Pqj1kbzCKFBGgazF
+UPhWOSRms8erkr4ltGtUPDJxna16uoTZaYkjn7fZ/3iTqVgnSC/sOJM9KpA1kFrg
+5R1OdTzymu7OwH7cmPSn0Yyg1BlU3K8EYFRFfhKptcNzuwERIAdcY39QnQARAQAB
+tChTVVNFIFBhY2thZ2UgU2lnbmluZyBLZXkgPGJ1aWxkQHN1c2UuZGU+iQI+BBMB
+AgAoBQJjyUgcAhsDBQkHhM4ABgsJCAcDAgYVCAIJCgsEFgIDAQIeAQIXgAAKCRD3
+Twm8P6HWzozMD/9xq1D3I+YWyrKJJRhyX8O1x3oYwayo1Si8VaqHUHMx5vL4VGub
+cCGieg6+9cwbGVVqh4f0wozrrllTgwXuepzivvwlQnZ/cfdjYwV961MTl2/+0JD3
+Hv39ef78DSU7iq8Pa22MPbXiliRvm3YJEsBnPRxDnGdGKDvLXlwugmHwHQXUTUvm
+XpipD19xgJ+FUKxbsHudiFBHAfvzmvckn2wsz6pIasAH8PoWFyyoYbGbffDBx17v
+YHhkZODadeD9N5lyo/mNkjFjTgHSTDYuhsor2AkSe4ptyY6EWONGg8ezqLLqJgWj
+KcI3o0dOf1dpIIubkbrnshul/tT5DHQrKqqPDu6zuloKOSdKBWwh2zDPGYVGmii6
+E/YKw8+lgTBs4Xuz4IxPhD/mSjLrADjuObhZhwQuM71SkQlScX4NhEeWoWfBg1k2
+2V7zU6lGodEx5QtmeMe3yhMsTUBn9ls9VR+Zr6N1rhcubDwDu5JLbbUyNBOiqDc9
+yQbIOD9bBG+XTxzs2VsAFkKWuW8opSJIDQ1LDg9pKF10IjrSyb+ln4OuRwQK5LHy
+mGllHiz1Feivf6//Tb63qgd3k8HtwdjeK5YuXM1LwnisIhfZuhKWm2gdzKCvdGsn
+Y0bH1r5E/rCFhRii/iyCxZN/2KIg/dHo8BXoh5zvzJ1XZ/bgiDnWSkQvdA==
+=umXA
+-----END PGP PUBLIC KEY BLOCK-----
+```
+4. Import the key from the file `repo-signing-key-sle-15.txt`.
+```bash
+# rpm --import repo-signing-key-sle-15.txt
+```
+5. Verify if the key is imported.
+```output
+# rpm -q gpg-pubkey
+gpg-pubkey-39db7c82-66c5d91a
+gpg-pubkey-50a3dd1c-50f35137
+gpg-pubkey-3fa1d6ce-63c9481c
+```
+6. Initiate migration.
+
+```output
+# zypper migration -v
+.
+.                                                                                         
+All repositories have been refreshed.
+Installed products:
+  SLES/15.3/x86_64          
+  sle-module-containers/15.3/x86_64 
+  sle-module-legacy/15.3/x86_64 
+  sle-module-public-cloud/15.3/x86_64 
+  sle-module-web-scripting/15.3/x86_64 
+  sle-module-basesystem/15.3/x86_64 
+  sle-module-server-applications/15.3/x86_64 
+  sle-module-desktop-applications/15.3/x86_64 
+  sle-module-development-tools/15.3/x86_64 
+
+Available migrations:
+
+    1 | SUSE Linux Enterprise Server 15 SP6 x86_64
+        Basesystem Module 15 SP6 x86_64
+        Containers Module 15 SP6 x86_64
+        Desktop Applications Module 15 SP6 x86_64
+        Server Applications Module 15 SP6 x86_64
+        Development Tools Module 15 SP6 x86_64
+        Legacy Module 15 SP6 x86_64
+        Public Cloud Module 15 SP6 x86_64
+        Web and Scripting Module 15 SP6 x86_64
+       
+    2 | SUSE Linux Enterprise Server 15 SP5 x86_64
+        Basesystem Module 15 SP5 x86_64
+        Containers Module 15 SP5 x86_64
+        Desktop Applications Module 15 SP5 x86_64
+        Server Applications Module 15 SP5 x86_64
+        Development Tools Module 15 SP5 x86_64
+        Legacy Module 15 SP5 x86_64
+        Public Cloud Module 15 SP5 x86_64
+        Web and Scripting Module 15 SP5 x86_64
+       
+    3 | SUSE Linux Enterprise Server 15 SP4 x86_64
+        Basesystem Module 15 SP4 x86_64
+        Containers Module 15 SP4 x86_64
+        Desktop Applications Module 15 SP4 x86_64
+        Server Applications Module 15 SP4 x86_64
+        Development Tools Module 15 SP4 x86_64
+        Legacy Module 15 SP4 x86_64
+        Public Cloud Module 15 SP4 x86_64
+        Web and Scripting Module 15 SP4 x86_64
+       
+
+[num/q]: 1
+Upgrading product SUSE Linux Enterprise Server 15 SP6 x86_64.
+Removing service SUSE_Linux_Enterprise_Server_x86_64.
+Adding service SUSE_Linux_Enterprise_Server_x86_64.
+Upgrading product Basesystem Module 15 SP6 x86_64.
+Removing service Basesystem_Module_x86_64.
+Adding service Basesystem_Module_x86_64.
+Upgrading product Containers Module 15 SP6 x86_64.
+Removing service Containers_Module_x86_64.
+Adding service Containers_Module_x86_64.
+Upgrading product Desktop Applications Module 15 SP6 x86_64.
+Removing service Desktop_Applications_Module_x86_64.
+Adding service Desktop_Applications_Module_x86_64.
+Upgrading product Server Applications Module 15 SP6 x86_64.
+Removing service Server_Applications_Module_x86_64.
+Adding service Server_Applications_Module_x86_64.
+Upgrading product Development Tools Module 15 SP6 x86_64.
+Removing service Development_Tools_Module_x86_64.
+Adding service Development_Tools_Module_x86_64.
+Upgrading product Legacy Module 15 SP6 x86_64.
+Removing service Legacy_Module_x86_64.
+Adding service Legacy_Module_x86_64.
+Upgrading product Public Cloud Module 15 SP6 x86_64.
+Removing service Public_Cloud_Module_x86_64.
+Adding service Public_Cloud_Module_x86_64.
+Upgrading product Web and Scripting Module 15 SP6 x86_64.
+Removing service Web_and_Scripting_Module_x86_64.
+Adding service Web_and_Scripting_Module_x86_64.
+
+Executing 'zypper --releasever 15.6 ref -f'
+
+Warning: Enforced setting: $releasever=15.6
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Basesystem15-SP6-Pool' metadata ..................................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Basesystem15-SP6-Pool' cache .......................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Basesystem15-SP6-Updates' metadata ...............................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Basesystem15-SP6-Updates' cache ....................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Containers15-SP6-Pool' metadata ..................................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Containers15-SP6-Pool' cache .......................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Containers15-SP6-Updates' metadata ...............................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Containers15-SP6-Updates' cache ....................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Desktop-Applications15-SP6-Pool' metadata ........................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Desktop-Applications15-SP6-Pool' cache .............................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Desktop-Applications15-SP6-Updates' metadata .....................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Desktop-Applications15-SP6-Updates' cache ..........................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-DevTools15-SP6-Pool' metadata ....................................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-DevTools15-SP6-Pool' cache .........................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-DevTools15-SP6-Updates' metadata .................................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-DevTools15-SP6-Updates' cache ......................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Legacy15-SP6-Pool' metadata ......................................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Legacy15-SP6-Pool' cache ...........................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Legacy15-SP6-Updates' metadata ...................................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Legacy15-SP6-Updates' cache ........................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Public-Cloud15-SP6-Pool' metadata ................................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Public-Cloud15-SP6-Pool' cache .....................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Public-Cloud15-SP6-Updates' metadata .............................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Public-Cloud15-SP6-Updates' cache ..................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Product-SLES15-SP6-Pool' metadata .......................................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Product-SLES15-SP6-Pool' cache ............................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Product-SLES15-SP6-Updates' metadata ....................................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Product-SLES15-SP6-Updates' cache .........................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Server-Applications15-SP6-Pool' metadata .........................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Server-Applications15-SP6-Pool' cache ..............................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Server-Applications15-SP6-Updates' metadata ......................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Server-Applications15-SP6-Updates' cache ...........................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Web-Scripting15-SP6-Pool' metadata ...............................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Web-Scripting15-SP6-Pool' cache ....................................................................................................[done]
+Forcing raw metadata refresh
+Retrieving repository 'SLE-Module-Web-Scripting15-SP6-Updates' metadata ............................................................................................[done]
+Forcing building of repository cache
+Building repository 'SLE-Module-Web-Scripting15-SP6-Updates' cache .................................................................................................[done]
+All repositories have been refreshed.
+
+Executing 'zypper --releasever 15.6 --verbose  --no-refresh  dist-upgrade --no-allow-vendor-change '
+
+Autorefresh disabled.
+Verbosity: 2
+Warning: Enforced setting: $releasever=15.6
+Initializing Target
+Loading repository data...
+Reading installed packages...
+Warning: You are about to do a distribution upgrade with all enabled repositories. Make sure these repositories are compatible before you continue. See 'man zypper' for more information about this command.
+Computing distribution upgrade...
+Force resolution: No
+Computing upgrade...
+
+Problem: nothing provides 'python311-isodate >= 0.6.0' needed by the to be installed python311-msrest-0.7.1-150400.14.3.1.noarch
+ Solution 1: deinstallation of python3-vsts-cd-manager-1.0.2-150200.7.3.2.noarch
+ Solution 2: keep obsolete python3-vsts-cd-manager-1.0.2-150200.7.3.2.noarch
+ Solution 3: break python311-msrest-0.7.1-150400.14.3.1.noarch by ignoring some of its dependencies
+
+Choose from above solutions by number or cancel [1/2/3/c/d/?] (c): 1
+Applying solution 1
+Resolving dependencies...
+Computing distribution upgrade...
+Force resolution: No
+Computing upgrade...
+
+The following 9 items are locked and will not be changed by any action:
+ Available:
+  plymouth plymouth-branding-SLE plymouth-devel plymouth-dracut plymouth-lang plymouth-plugin-label plymouth-plugin-label-ft plymouth-plugin-script plymouth-scripts
+
+The following 674 packages are going to be upgraded:
+.
+.
+The following 2 packages require a system reboot:
+  kernel-azure    6.4.0-150600.8.37.1
+  kernel-default  6.4.0-150600.23.50.1
+
+674 packages to upgrade, 167 new, 40 to remove.
+Overall download size: 1.14 GiB. Already cached: 0 B. After the operation, additional 218.8 MiB will be used.
+
+    Note: System reboot required.
+Continue? [y/n/v/...? shows all options] (y): y
+.
+.
+.
+.
+File /usr/lib64/python3.6/zipapp.py
+  from install of
+     python3-base-3.6.15-150300.10.84.1.x86_64 (SLE-Module-Basesystem15-SP6-Updates)
+  conflicts with file from package
+     python36-base-3.6.15-73.1.x86_64 (@System)
+
+File /usr/lib64/python3.6/zipfile.py
+  from install of
+     python3-base-3.6.15-150300.10.84.1.x86_64 (SLE-Module-Basesystem15-SP6-Updates)
+  conflicts with file from package
+     python36-base-3.6.15-73.1.x86_64 (@System)
+
+File /usr/share/man/man1/python3.6.1.gz
+  from install of
+     python3-base-3.6.15-150300.10.84.1.x86_64 (SLE-Module-Basesystem15-SP6-Updates)
+  conflicts with file from package
+     python36-base-3.6.15-73.1.x86_64 (@System)
+
+
+File conflicts happen when two packages attempt to install files with the same name but different contents. If you continue, conflicting files will be replaced losing the previous content.
+
+Continue? [yes/no] (no): yes
+
+(  1/865) Removing atk-lang-2.34.1-1.56.noarch .....................................................................................................................[done]
+(  2/865) Installing: hicolor-icon-theme-0.17-150600.19.2.noarch ...................................................................................................[done]
+.
+.
+dracut[I]: Module 'tpm2-tss' will not be installed, because command 'tpm2' could not be found!
+dracut[I]: Module 'nvmf' will not be installed, because command 'nvme' could not be found!
+dracut[I]: Module 'nvmf' will not be installed, because command 'jq' could not be found!
+dracut[I]: Module 'biosdevname' will not be installed, because command 'biosdevname' could not be found!
+dracut[I]: Module 'memstrack' will not be installed, because command 'memstrack' could not be found!
+dracut[I]: memstrack is not available
+dracut[I]: If you need to use rd.memdebug>=4, please install memstrack and procps-ng
+dracut[I]: Module 'squash' will not be installed, because command 'mksquashfs' could not be found!
+dracut[I]: Module 'squash' will not be installed, because command 'unsquashfs' could not be found!
+dracut[I]: Module 'systemd-pcrphase' will not be installed, because command '/usr/lib/systemd/systemd-pcrphase' could not be found!
+dracut[I]: Module 'systemd-portabled' will not be installed, because command 'portablectl' could not be found!
+dracut[I]: Module 'systemd-portabled' will not be installed, because command '/usr/lib/systemd/systemd-portabled' could not be found!
+dracut[I]: Module 'systemd-repart' will not be installed, because command 'systemd-repart' could not be found!
+dracut[I]: Module 'systemd-resolved' will not be installed, because command 'resolvectl' could not be found!
+dracut[I]: Module 'systemd-resolved' will not be installed, because command '/usr/lib/systemd/systemd-resolved' could not be found!
+dracut[I]: Module 'dbus-broker' will not be installed, because command 'dbus-broker' could not be found!
+dracut[I]: Module 'rngd' will not be installed, because command 'rngd' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmand' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmanctl' could not be found!
+dracut[I]: Module 'connman' will not be installed, because command 'connmand-wait-online' could not be found!
+dracut[I]: Module 'network-manager' will not be installed, because command 'NetworkManager' could not be found!
+dracut[I]: 62bluetooth: Could not find any command of '/usr/lib/bluetooth/bluetoothd /usr/libexec/bluetooth/bluetoothd'!
+dracut[I]: Module 'btrfs' will not be installed, because command 'btrfs' could not be found!
+dracut[I]: Module 'dmraid' will not be installed, because command 'dmraid' could not be found!
+dracut[I]: Module 'dmsquash-live-ntfs' will not be installed, because command 'ntfs-3g' could not be found!
+dracut[I]: Module 'pcsc' will not be installed, because command 'pcscd' could not be found!
+dracut[I]: Module 'tpm2-tss' will not be installed, because command 'tpm2' could not be found!
+dracut[I]: Module 'nvmf' will not be installed, because command 'nvme' could not be found!
+dracut[I]: Module 'nvmf' will not be installed, because command 'jq' could not be found!
+dracut[I]: Module 'memstrack' will not be installed, because command 'memstrack' could not be found!
+dracut[I]: memstrack is not available
+dracut[I]: If you need to use rd.memdebug>=4, please install memstrack and procps-ng
+dracut[I]: Module 'squash' will not be installed, because command 'mksquashfs' could not be found!
+dracut[I]: Module 'squash' will not be installed, because command 'unsquashfs' could not be found!
+dracut[I]: *** Including module: systemd ***
+dracut[I]: *** Including module: systemd-initrd ***
+dracut[I]: *** Including module: i18n ***
+dracut[I]: No KEYMAP configured.
+dracut[I]: *** Including module: kernel-modules ***
+dracut[I]: *** Including module: kernel-modules-extra ***
+dracut[I]: *** Including module: rootfs-block ***
+dracut[I]: *** Including module: suse-xfs ***
+dracut[I]: *** Including module: terminfo ***
+dracut[I]: *** Including module: udev-rules ***
+dracut[I]: *** Including module: dracut-systemd ***
+dracut[I]: *** Including module: haveged ***
+dracut[I]: *** Including module: usrmount ***
+dracut[I]: *** Including module: base ***
+dracut[I]: *** Including module: fs-lib ***
+dracut[I]: *** Including module: shutdown ***
+dracut[I]: *** Including module: suse ***
+dracut[I]: *** Including module: suse-initrd ***
+dracut[I]: *** Including modules done ***
+dracut[I]: *** Installing kernel module dependencies ***
+dracut[I]: *** Installing kernel module dependencies done ***
+dracut[I]: *** Resolving executable dependencies ***
+dracut[I]: *** Resolving executable dependencies done ***
+dracut[I]: *** Hardlinking files ***
+dracut[I]: *** Hardlinking files done ***
+dracut[I]: *** Generating early-microcode cpio image ***
+dracut[I]: *** Store current command line parameters ***
+dracut[I]: Stored kernel commandline:
+dracut[I]:  root=UUID=c7fd69e7-8a33-4bd4-8672-90af686abb4d rootfstype=xfs rootflags=rw,relatime,attr2,inode64,logbufs=8,logbsize=32k,noquota
+dracut[I]: *** Stripping files ***
+dracut[I]: *** Stripping files done ***
+dracut[I]: *** Creating image file '/boot/initrd-6.4.0-150600.8.37-azure' ***
+dracut[I]: *** Creating initramfs image file '/boot/initrd-6.4.0-150600.8.37-azure' done ***
+renamed '/etc/modprobe.d/10-unsupported-modules.conf.rpmsave' -> '/etc/modprobe.d/10-unsupported-modules.conf'
+Executing %posttrans scripts .......................................................................................................................................[done]
+CommitResult  (total 865, done 865, error 0, skipped 0, updateMessages 0)
+Checking for running processes using deleted libraries...
+There are running programs which still use files and libraries deleted or updated by recent upgrades. They should be restarted to benefit from the latest updates. Run 'zypper ps -s' to list these programs.
+ 
+Since the last system boot core libraries or services have been updated.
+Reboot is suggested to ensure that your system benefits from these updates.
+```
+7. Verify successful execution of migration.
+```bash
+# echo $?
+0
+```
+8. Reboot the VM.
+```bash
+# reboot
+```
+After reboot, the VM will be successfully migrated to SLES 15 SP6.
+
+
+
 ## Next steps
 
 If your issue isn't resolved, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot). When you submit your request, attach a copy of the `/var/log/distromigration.log` file for troubleshooting.
