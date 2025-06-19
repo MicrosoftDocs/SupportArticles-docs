@@ -243,7 +243,7 @@ Follow these steps:
 
 1. Check the value of the registry key. The correct value is as follows:
 
-   - MSI: `C:\Program Files (x86)\Power Automate Desktop\PAD.ChromiumManifest.json`
+   - MSI: `C:\Program Files (x86)\Power Automate Desktop\dotnet\PAD.ChromiumManifest.json`
    - MSIX Windows 11: `C:\Program Files\WindowsApps\Microsoft.PowerAutomateDesktop_X.Y.Z.0_x64__8wekyb3d8bbwe\PAD.ChromiumManifest.json`
 
      To retrieve `X.Y.Z`:
