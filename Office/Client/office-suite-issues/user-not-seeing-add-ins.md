@@ -16,7 +16,7 @@ search.appverid:
   - MET150
   - MOE150
 ms.assetid: 060e809d-8cb6-427b-9e2f-dab67138acae
-ms.date: 06/02/2025
+ms.date: 06/18/2025
 ---
 
 # Users don't see add-ins
@@ -57,3 +57,10 @@ If users can't see add-ins, use one of the following methods:
   - Centralized deployment currently supports users in top-level groups or groups without parent groups. It doesn't support users in nested group assignments or groups that have parent groups.
 
   For more information, see [user and group assignments](/microsoft-365/admin/manage/centralized-deployment-of-add-ins?view=o365-worldwide&preserve-view=true#user-and-group-assignments).
+
+- If you know the GUID of the add-in, which is in the add-in manifest, check to see if the add-in is fully installed with these steps: 
+
+   - Navigate to the folder `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\` in **File Explorer** and search all subfolders for the ID.
+   - Open the Windows Registry and search for the ID.
+
+- If the add-in was installed from AppSource, navigate to the folder `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\` in **File Explorer** and search all subfolders for the add-in's AppSource ID, such as `WA999999999`. 
