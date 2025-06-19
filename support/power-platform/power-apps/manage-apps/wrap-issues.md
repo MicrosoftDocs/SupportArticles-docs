@@ -91,13 +91,14 @@ You might encounter these error codes in the wrap wizard:
 |------------|-------------|
 | [1000118](#error-code-1000118) | Default subscription not found or missing access permissions. |
 | [1000119](#error-code-1000119) | Key vault doesn't exist or is missing access privileges. |
-| [1000120](#error-code-1000120) | No organization ID tags found on key vault. |
-| [1000121](#error-code-1000121) | Android keystore isn't valid. Missing tag and/or certificate. |
-| [1000122](#error-code-1000122) | iOS certificate isn't valid. |
-| [1000123](#error-code-1000123) | iOS profile isn't valid. |
-| [1000128](#error-code-1000128) | Missing access key used while accessing Azure Blob storage location. |
+| [1000120](#error-code-1000120) | No organization ID tags found on key vault. Ensure that the tag {Bundle ID}.{organization-id} is present and uses the correct case sensitivity.|
+| [1000121](#error-code-1000121) | Android keystore isn't valid. Ensure that the tag {Bundle ID}.{keystore} is present and uses the correct case sensitivity. |
+| [1000122](#error-code-1000122) | iOS certificate isn't valid. Missing Tag and/or Secret. Ensure that the tag {Bundle ID}.{cert} is present and uses the correct case sensitivity. |
+| [1000123](#error-code-1000123) | iOS profile isn't valid. Ensure that the tag {Bundle ID}.{profile} is present and uses the correct case sensitivity.|
+| [1000128](#error-code-1000128) | Missing access key required to access the Azure Blob Storage location. Ensure that the tag {Bundle ID}.{accessKey} is present and uses the correct case sensitivity. |
 | [1000130](#error-code-1000130) | Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set. |
 | [1000131](#error-code-1000131) | No tags or missing access permission for the specified Azure Key Vault. |
+| [1000132](#error-code-1000132) | Missing environment variable 'PA_Wrap_KV_ResourceID' for the targeted environment. |
 
 ### Error code 1000118
 
@@ -161,7 +162,7 @@ Error message: Key vault doesn't exist, or Key vault is missing access privilege
 
 ### Error code 1000120
 
-Error message: No organization ID tags found on key vault.Ensure that the tag {Bundle ID}.{organization-id} is present and uses the correct case sensitivity.
+Error message: No organization ID tags found on key vault. Ensure that the tag {Bundle ID}.{organization-id} is present and uses the correct case sensitivity.
 
 #### Resolution steps
 
@@ -232,7 +233,7 @@ Error message: iOS profile isn't valid. Ensure that the tag {Bundle ID}.{profile
 
 ### Error code 1000128
 
-Error message: Missing access key required to access the Azure Blob Storage location. Ensure that the tag {Bundle ID}.{accessKey} is present and uses the correct case sensitivity..
+Error message: Missing access key required to access the Azure Blob Storage location. Ensure that the tag {Bundle ID}.{accessKey} is present and uses the correct case sensitivity.
 
 #### Resolution steps
 
@@ -298,9 +299,9 @@ Error message: Missing environment variable 'PA_Wrap_KV_ResourceID' for the targ
 
 #### Resolution steps
 
-  1. Check whether the environment variable PA_Wrap_KV_ResourceID exists in the target environment. If it does not, create it.
+1. Check whether the environment variable `PA_Wrap_KV_ResourceID` exists in the target environment. If it doesn't, create it.
 
-  2. Ensure the name follows the correct naming convention without typos or formatting errors.
+2. Ensure the name follows the correct naming convention without typos or formatting errors.
 
 For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
