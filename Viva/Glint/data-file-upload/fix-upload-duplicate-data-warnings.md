@@ -1,6 +1,6 @@
 ---
-title: Resolve File Upload Warnings Related to Duplicate Data
-description: Fix duplicate data warnings that occur when you upload employee attribute data to Microsoft Viva Glint.
+title: Resolve File Upload Errors Related to Duplicate Data
+description: Fix duplicate data errors that occur when you upload employee attribute data to Microsoft Viva Glint.
 manager: dcscontentpm
 ms.reviewer: aweixelman
 ms.date: 04/17/2025
@@ -12,17 +12,23 @@ ms.custom:
   - CI190691
 ---
 
-# Resolve file upload warnings related to duplicate data
+# Resolve file upload errors related to duplicate data
 
-When you upload employee attribute data to Microsoft Viva Glint, you might receive one of the following warning messages that are caused by duplicate data. To fix the issue, select the relevant warning, and follow the appropriate resolution.
+When you upload employee attribute data to Microsoft Viva Glint, you might receive one of the following error messages that are caused by duplicate data. To fix the issue, select the relevant error, and follow the appropriate resolution.
 
-## INVALID_EMPLOYEE_DATA: Email is assigned to multiple users
+## INVALID_EMPLOYEE_DATA: Email or ID is assigned to multiple users
 
-Warning message:
+**Message:**
 
 > INVALID_EMPLOYEE_DATA: Email \<Email address, such as user@contoso.com\> is assigned to multiple users in the file.
+>
+> OR
+>
+> INVALID_EMPLOYEE_DATA: External user id \<x>\ is assigned to more than one record in the user file. Resolve this duplication and reupload.
 
-This issue occurs because multiple users in the uploaded file share the same email address. Email addresses must be unique in the employee attribute data.
+**Issue type:** Line-level error
+
+This issue occurs because multiple users in the uploaded file share the same email address or employee ID. Email addresses and employee IDs must be unique in the employee attribute data.
 
 ### Resolution
 
@@ -30,12 +36,12 @@ To fix the issue, follow these steps:
 
 1. In the admin dashboard, select the **Configuration** icon, then select **Activity Audit Log** in the **Service Configuration** section.
 1. In the log, locate the file that didn't upload, and then select **Download errors file** in the **Details** column.
-1. Open the errors file, and then identify the users that are assigned the email address that's mentioned in the warning message.
+1. Open the errors file, and then identify the users that are assigned the email address or employee ID that's mentioned in the warning message.
 1. Open the employee attribute data file, and use the appropriate method, depending on the file type:
 
     - If the data file has an *.xlsx* extension, open it in Microsoft Excel.
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in its original format.
-1. For each user that's identified in step 3, enter a unique email address.
+1. For each user that's identified in step 3, enter a unique email address or employee ID.
 
     > [!NOTE]
     > For employees who aren't assigned an email address yet, use the following value as their email address:
@@ -45,9 +51,11 @@ To fix the issue, follow these steps:
 
 ## DUPLICATED_EMAIL
 
-Warning message:
+**Message:**
 
 > DUPLICATED_EMAIL: The Email Address \<Email address, such as user@contoso.com\> in the user file is already assigned to a different user in your Viva Glint People Database.
+
+**Issue type:** Line-level error
 
 This issue occurs because one or more users in the uploaded file are assigned an email address that's already associated with a different user in Viva Glint. Email addresses must be unique in the employee attribute data.
 
@@ -72,11 +80,13 @@ To fix the issue, follow these steps:
 
 ## DUPLICATED_EMAIL: Deleted user
 
-Warning message:
+**Message:**
 
 > DUPLICATED_EMAIL: The Email Address \<Email address, such as user@contoso.com\> in the user file is already assigned to a different user in your Viva Glint People Database.
 
-This issue occurs because one or more users in the uploaded file are assigned an email address that's already associated with a user whose record is in a [soft-deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) in Viva Glint, but the uploaded Employee ID doesn't match the employee ID of the soft-deleted user. 
+**Issue type:** Line-level error
+
+This issue occurs because one or more users in the uploaded file are assigned an email address that's already associated with a user whose record is in a [soft deleted state](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) in Viva Glint, but the uploaded Employee ID doesn't match the employee ID of the soft deleted user. 
 
 ### Resolution
 
@@ -90,9 +100,11 @@ This issue occurs because one or more users in the uploaded file are assigned an
 
 ## DUPLICATED_EXTERNAL_USER_ID
 
-Warning message:
+**Message:**
 
 > DUPLICATED_EXTERNAL_USER_ID: The Employee ID \<ID\> in the user file is already assigned to another employee with Email Address \<Email address, such as user@contoso.com\> in the Viva Glint database.
+
+**Issue type:** Line-level error
 
 ### Resolution
 
