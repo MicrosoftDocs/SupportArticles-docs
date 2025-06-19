@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 01/23/2025
+ms.date: 06/19/2025
 ms.author: kendownie
 ms.custom: sap:File Sync, devx-track-azurepowershell
 ms.reviewer: v-weizhu, vritikanaik
@@ -176,7 +176,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x8007007b | -2147024773 | ERROR_INVALID_NAME | The file or directory name is invalid. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
 | 0x80070459 | -2147023783 | ERROR_NO_UNICODE_TRANSLATION | The file or directory name has unsupported surrogate pair characters. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
 | 0x80c80255 | -2134375851 | ECS_E_XSMB_REST_INCOMPATIBILITY | The file or directory name is invalid. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
-| 0x80c8026d | -2134375827 | ECS_E_SYNC_ITEM_RESTRICTED_AT_ROOT | The specified item name is restricted at the root of the sync share and thus cannot be synced.  | No action required. See [File System Compatibility](/azure/storage/file-sync/file-sync-planning#file-system-compatibility) for more information. |
+| 0x80c8026d | -2134375827 | ECS_E_SYNC_ITEM_RESTRICTED_AT_ROOT | The specified item name is restricted at the root of the sync share and therefore can't be synchronized.  | No action required. For more information, see [File System Compatibility](/azure/storage/file-sync/file-sync-planning#file-system-compatibility). |
 | 0x80c80018 | -2134376424 | ECS_E_SYNC_FILE_IN_USE | The file can't be synced because it's in use. The file will be synced when it's no longer in use. | No action required. Azure File Sync creates a temporary VSS snapshot once a day on the server to sync files that have open handles. |
 | 0x80c86013 | -2134351853 | ECS_E_SYNC_CLOUD_FILE_IN_USE | The cloud file can't be synced because it's in use. This error occurs when an application holds an open handle to a file in the cloud, preventing sync operations from being performed until the application releases the handle. | Check the open file handles and close them if they're no longer needed. For more information, see [List Handles](/rest/api/storageservices/list-handles) and [Force Close Handles](/rest/api/storageservices/force-close-handles). |
 | 0x80c8031d | -2134375651 | ECS_E_CONCURRENCY_CHECK_FAILED | The file has changed, but the change hasn't yet been detected by sync. Sync will recover after this change is detected. | No action required. |
@@ -214,7 +214,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80c80201 | -2134375935 | ECS_E_SYNC_UNPROCESSABLE_ITEM_REPARSEPOINT | The sync failed due to the presence of a reparse point. | Remove the reparse point or replace it with regular file content before attempting the sync again. |
 | 0x80c80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_TRAILING_DOT | The item failed to sync because one of its path components has trailing dots. | Rename the item by removing any trailing dots that appear in the path. |
 | 0x80c8024e | -2134375858 | ECS_E_SYNC_ITEM_SKIP_CONSTRAINT_CONFLICT_NOT_ALLOWED | This error indicates a constraint conflict that was detected but was unable to be reported. The item will be skipped. | If the error persists, create a support request. |
-| 0x80c80208 | -2134375928 | ECS_E_SYNC_ITEM_RECONCILIATION_SKIP | A file or directory was skipped during the synchronization pass to rebuild the sync client's metadata. It will be synchronized in the next full synchronization attempt. | If the error persists for several days, create a support request. |
+| 0x80c80208 | -2134375928 | ECS_E_SYNC_ITEM_RECONCILIATION_SKIP | During the synchronization process to rebuild the sync client's metadata, a file or directory was skipped. It will be synchronized in the next full synchronization attempt. | If the error persists for several days, create a support request. |
 
 
 ### Handling unsupported characters
@@ -970,7 +970,7 @@ No action is required. This error occurs because sync detected the replica has b
 | **Error string** | ECS_E_SYNC_ROOT_VOLUME_CHANGED |
 | **Remediation required** | No |
 
-This error occurs because the path at which the server endpoint is provisioned is currently located on a different volume than where it was originally provisioned. When this issue occurs, create a support request and we will contact you to help you resolve this issue.
+This error occurs because the path where the server endpoint is provisioned is now on a different volume than it was originally provisioned. When this issue occurs, create a support request and we will contact you to help you resolve it.
 
 <a id="-2145844941"></a>**Sync failed because the HTTP request was redirected**  
 
