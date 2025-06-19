@@ -19,9 +19,11 @@ When you try to [update employee IDs](/viva/glint/setup/id-update#update-employe
 
 ## CONFIGURATION_ERROR: Columns
 
-Error message:
+**Message:**
 
 > This file must contain the First Name, Last Name, Email Address, and New Employee ID.  All of these columns must be present, with no additional columns.  Please correct and resubmit.
+
+**Issue type:** File-level error
 
 This error occurs if the uploaded file contains extra columns in addition to the required columns.
 
@@ -38,9 +40,11 @@ Then, try again to upload the file to Viva Glint.
 
 ## MISSING_COLUMN
 
-Error message:
+**Message:**
 
 > Missing mandatory column \<attribute name\>. Add this column of data to your file and reupload.
+
+**Issue type:** File-level error
 
 This error occurs if one of the following required columns is missing from the uploaded file:
 
@@ -55,9 +59,11 @@ To fix the issue, add the missing column and its data to the file. Then, try aga
 
 ## UNEXPECTED_ATTRIBUTE
 
-Error message:
+**Message:**
 
 > The following attribute/attributes '\<attribute name 1\>', '\<attribute name 2\>' are in file but not configured in Glint. If this is a new attribute, use the self-serve feature in Glint by navigating to Settings -> Configure -> People and add new attributes or email support.
+
+**Issue type:** File-level error
 
 This issue is caused by a mismatch between the attribute header in the uploaded file and the attribute names that are specified in Viva Glint.
 
@@ -79,9 +85,11 @@ To fix the issue, follow these steps:
 
 ## CONFIGURATION_ERROR: No new values
 
-Error message:
+**Message:**
 
 > All Employee Ids match the existing values for all users. Please upload a different data file and resubmit.
+
+**Issue type:** File-level error
 
 This error occurs if all employee IDs in the uploaded file are identical to values that are already in Viva Glint.
 
@@ -98,9 +106,11 @@ To fix the issue, follow these steps:
 
 ## CONFIGURATION_ERROR: Blank IDs
 
-Error message:
+**Message:**
 
 > This file has a missing Employee Id at line \<x\>.  Please correct and resubmit.
+
+**Issue type:** File-level error
 
 This error occurs if an employee record in the uploaded file is missing the employee ID value.
 
@@ -120,9 +130,11 @@ To fix the issue, follow these steps:
 
 ## NO_EMPLOYEE_RECORD
 
-Error message:
+**Message:**
 
 > Line \<x\> with email user@contoso.com does not correspond to any existing user in Viva Glint. Please correct and resubmit.
+
+**Issue type:** File-level error
 
 This error occurs if the uploaded file contains email addresses that aren't associated with any user in Viva Glint.
 
@@ -147,13 +159,15 @@ To fix the issue, follow these steps:
 
 ## SUSPICIOUS_VALUE
 
-Warning message:
+**Message:**
 
 Warning at line \<x\>: The First Name of \<y\> does not match the stored value of \<z\>.
 
 Or:
 
 Warning at line \<x\>: The Last Name of \<y\> does not match the stored value of \<z\>.
+
+**Issue type:** Line-level warning
 
 This warning message occurs if a user's first or last name doesn't match the values in Viva Glint. This warning doesn't cause the employee ID update to fail.
 
@@ -163,9 +177,11 @@ If names changes are expected, you can ignore the warning. Otherwise, [upload an
 
 ## DUPLICATE_IN_FILE
 
-Error message:
+**Message:**
 
 > Lines \<x\> and \<y\> contain the same Employee ID of \<z\>. Each ID must be unique. Please correct and resubmit.
+
+**Issue type:** File-level error
 
 This error occurs if multiple users have the same employee ID in the uploaded file.
 
@@ -185,9 +201,11 @@ To fix the issue, follow these steps:
 
 ## DUPLICATE_ID
 
-Error message:
+**Message:**
 
 > The Employee ID \<ID value\> on line \<y\> is already associated with user@contoso.com. Please correct and resubmit.
+
+**Issue type:** File-level error
 
 This issue occurs if an employee ID in the uploaded file is already assigned to a different user in Viva Glint.
 
