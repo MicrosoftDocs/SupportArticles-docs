@@ -87,7 +87,7 @@ If you can't sign in or see data in your wrapped app, try the following actions:
 
 You might encounter these error codes in the wrap wizard:
 
-| Error Code | Error Message |
+| Error code | Error message |
 |------------|-------------|
 | [1000118](#error-code-1000118) | Default subscription not found or missing access permissions. |
 | [1000119](#error-code-1000119) | Key vault doesn't exist or is missing access privileges. |
@@ -266,7 +266,7 @@ Error message: No tags or missing access permission for the specified Azure Key 
 
 3. Confirm that the specified resource ID includes all required tags associated with the Bundle ID defined in the wrap wizard.
 
-4. Ensure you have permissions to access your key vault:
+4. Ensure you have permission to access your key vault:
 
    1. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20" by running the following commands in PowerShell:
 
