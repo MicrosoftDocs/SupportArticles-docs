@@ -161,7 +161,7 @@ Error message: Key vault doesn't exist, or Key vault is missing access privilege
 
 ### Error code 1000120
 
-Error message: No organization ID tags found on key vault.
+Error message: No organization ID tags found on key vault.Ensure that the tag {Bundle ID}.{organization-id} is present and uses the correct case sensitivity.
 
 #### Resolution steps
 
@@ -179,7 +179,7 @@ Error message: No organization ID tags found on key vault.
 
 ### Error code 1000121
 
-Error message: Android keystore isn't valid. Missing Tag and/or Certificate.
+Error message: Android keystore isn't valid. Ensure that the tag {Bundle ID}.{keystore} is present and uses the correct case sensitivity.
 
 #### Resolution steps
 
@@ -198,7 +198,7 @@ Error message: Android keystore isn't valid. Missing Tag and/or Certificate.
 
 ### Error code 1000122
 
-Error message: iOS certificate isn't valid.
+Error message: iOS certificate isn't valid. Missing Tag and/or Secret. Ensure that the tag {Bundle ID}.{cert} is present and uses the correct case sensitivity.
 
 #### Resolution steps
 
@@ -217,7 +217,7 @@ Error message: iOS certificate isn't valid.
 
 ### Error code 1000123
 
-Error message: iOS profile isn't valid.
+Error message: iOS profile isn't valid. Ensure that the tag {Bundle ID}.{profile} is present and uses the correct case sensitivity.
 
 #### Resolution steps
 
@@ -232,7 +232,7 @@ Error message: iOS profile isn't valid.
 
 ### Error code 1000128
 
-Error message: Missing access key used while accessing Azure Blob storage location.
+Error message: Missing access key required to access the Azure Blob Storage location. Ensure that the tag {Bundle ID}.{accessKey} is present and uses the correct case sensitivity..
 
 #### Resolution steps
 
@@ -246,11 +246,9 @@ Error message: Missing default value: The required environment variable for sett
 
 #### Resolution steps
 
-1. Verify if the `PA_Wrap_KV_ResourceID` environment variable exists. If it doesn't, create it.
+1. Assign the resource ID of the Azure key vault you intend to use with your wrap application to the variable.
 
-2. Assign the resource ID of the Azure key vault you intend to use with your wrap application to the variable.
-
-3. Confirm that the specified resource ID includes all required tags associated with the Bundle ID defined in the wrap wizard.
+2. Confirm that the specified resource ID includes all required tags associated with the Bundle ID defined in the wrap wizard.
 
 For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
@@ -260,13 +258,11 @@ Error message: No tags or missing access permission for the specified Azure Key 
 
 #### Resolution steps
 
-1. Verify if the `PA_Wrap_KV_ResourceID` environment variable exists. If it doesn't, create it.
+1. Assign the resource ID of the Azure key vault you intend to use with your wrap application to the variable.
 
-2. Assign the resource ID of the Azure key vault you intend to use with your wrap application to the variable.
+2. Confirm that the specified resource ID includes all required tags associated with the Bundle ID defined in the wrap wizard.
 
-3. Confirm that the specified resource ID includes all required tags associated with the Bundle ID defined in the wrap wizard.
-
-4. Ensure you have permissions to access your key vault:
+3. Ensure you have permissions to access your key vault:
 
    1. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20" by running the following commands in PowerShell:
 
@@ -292,6 +288,19 @@ Error message: No tags or missing access permission for the specified Azure Key 
       1. Assign the **Reader** role.
 
          :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to your app." lightbox="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png":::
+
+For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
+
+---
+### Error code 1000132
+
+Error message: Missing environment variable 'PA_Wrap_KV_ResourceID' for the targeted environment.
+
+#### Resolution steps
+
+  1. Check whether the environment variable PA_Wrap_KV_ResourceID exists in the target environment. If it does not, create it.
+
+  2. Ensure the name follows the correct naming convention without typos or formatting errors.
 
 For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
