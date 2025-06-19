@@ -98,7 +98,7 @@ You might encounter these error codes in the wrap wizard:
 | [1000128](#error-code-1000128) | [Missing access key required to access the Azure Blob Storage location. Ensure that the tag {Bundle ID}.{accessKey} is present and uses the correct case sensitivity.](https://go.microsoft.com/fwlink/?linkid=2325220) |
 | [1000130](#error-code-1000130) | [Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set.](https://go.microsoft.com/fwlink/?linkid=2324839) |
 | [1000131](#error-code-1000131) | [No tags or missing access permission for the specified Azure Key Vault.](https://go.microsoft.com/fwlink/?linkid=2325221) |
-| [1000132](#error-code-1000132) | Missing environment variable 'PA_Wrap_KV_ResourceID' for the targeted environment. |
+| [1000132](#error-code-1000132) | [Missing environment variable 'PA_Wrap_KV_ResourceID' for the targeted environment.](https://go.microsoft.com/fwlink/?linkid=2325214) |
 
 ### Error code 1000118
 
