@@ -15,7 +15,7 @@ This article provides troubleshooting information to help resolve issues when da
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure/application-insights-sdk-support.md)]
 
-> [!NOTE]
+> [!IMPORTANT]
 > This article was recently updated to use the term *Azure Monitor logs* instead of *Log Analytics*. Log data is still stored in a Log Analytics workspace, and it's still collected and analyzed by the same Log Analytics service. We're updating the terminology to better reflect the role of [logs in Azure Monitor](/azure/azure-monitor/logs/data-platform-logs). For more information, see [Azure Monitor terminology changes](/azure/azure-monitor/terminology).
 
 ## Some of my telemetry is missing
