@@ -15,6 +15,8 @@ ms.custom: sap:Missing or Incorrect data after enabling Application Insights in 
 
 This article provides troubleshooting information to resolve common issues that might occur when you're instrumenting a Java application by using the Java agent for Application Insights. Application Insights is a feature of the Azure Monitor platform service.
 
+[!INCLUDE [Azure Help Support](../../../../includes/azure/application-insights-sdk-support.md)]
+
 ## Check the self-diagnostic log file
 
 By default, Application Insights Java 3._x_ produces a log file that's named *applicationinsights.log* in the same directory
