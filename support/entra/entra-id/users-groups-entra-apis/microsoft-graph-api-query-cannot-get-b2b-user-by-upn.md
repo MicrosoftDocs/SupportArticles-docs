@@ -1,10 +1,10 @@
 ---
-title: Microsoft Graph API requests fail to get B2B users using UPN
+title: Microsoft Graph API Requests Fail to Get B2B Users Using UPN
 description: Provides a solution to an issue where a Microsoft Graph API request fails to get a Business-to-Business (B2B) user using User Principal Name (UPN).
 ms.service: entra-id
 ms.reviewer: bhvootla, v-weizhu
 ms.custom: sap:Problem with querying or provisioning resources
-ms.date: 06/05/2025
+ms.date: 06/20/2025
 ---
 # Microsoft Graph API requests fail to get B2B users using UPN
 
