@@ -103,7 +103,7 @@ The script (import_py3package_from_pypi.py) requires the following parameters.
 
 Parameter value should be provided as a single string in the following format:
 
--s <subscription_id> -g <resource_group> -a<automation_account> -m <module_name> -v <module_version>
+`-s <subscription_id> -g <resource_group> -a<automation_account> -m <module_name> -v <module_version>`
 
 ## Scenario: Runbook fails with "Parameter length exceeded" error
 
