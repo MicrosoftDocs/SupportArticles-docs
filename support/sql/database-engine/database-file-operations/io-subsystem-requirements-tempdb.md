@@ -1,26 +1,21 @@
 ---
 title: I/O subsystem requirements for the tempdb
 description: This article describes the I/O subsystem requirements for the tempdb database in SQL Server.
-ms.date: 09/25/2020
+ms.date: 06/12/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
-ms.reviewer: rdorr
+ms.reviewer: rdorr, jopilov
 ms.topic: article
 ---
 # Microsoft SQL Server I/O subsystem requirements for the tempdb database
 
 This article introduces the I/O subsystem requirements for the tempdb database in SQL Server.
 
-_Original product version:_ &nbsp; Microsoft SQL Server 2005, SQL Server 2008, SQL Server 2012 SQL Server 2014  
+_Original product version:_ &nbsp; Microsoft SQL Server  
 _Original KB number:_ &nbsp; 917047
 
 ## Summary
 
-Microsoft SQL Server requires that the I/O subsystem used to store system and user databases fully honor Write-Ahead Logging (WAL) requirements through specific I/O principals. These requirements are necessary in order to honor the ACID properties of transactions: Atomic, Consistent, Isolated, and Durable. Details about I/O subsystem compliance requirements are provided in the following references:
-
-SQL Server 2000 I/O basics [https://technet.microsoft.com/library/cc966500.aspx](/previous-versions//cc966500(v=technet.10))
-
-> [!NOTE]
-> This article also applies to SQL Server 2005 and later versions.
+Microsoft SQL Server requires that the I/O subsystem used to store system and user databases fully honor Write-Ahead Logging (WAL) requirements through specific I/O principals. These requirements are necessary in order to honor the ACID properties of transactions: Atomic, Consistent, Isolated, and Durable. Details about I/O subsystem compliance requirements are provided in [SQL Server I/O basics](/previous-versions//cc966500(v=technet.10)).
 
 The following list is a quick summary of the requirements:
 
@@ -54,7 +49,7 @@ To guarantee the success of the recovery processes, such as rollback and crash r
 The storage location for the tempdb database must act in strict accordance with established disk drive protocols. In all ways, the device on which the tempdb database is stored must appear and act as a physical disk providing read after write capabilities. Transaction sector rewrite operations may be an additional requirement of specific implementations. For example, SQL Server does not support database modifications by using NTFS file system compression because NTFS compression can rewrite sectors of the log that have already been written and considered hardened. A failure during this type of rewrite can cause the database to be unusable, damaging data that SQL Server already considered secure.
 
 > [!NOTE]
-> SQL Server 2005 extended support or compression to read only databases and file groups. See the SQL Server 2005 Books Online for complete details.
+> SQL Server extended support or compression to read only databases and file groups. See the SQL Server Books Online for complete details.
 
 Transactional sector rewrite operations are pertinent to all SQL Server databases that include the tempdb database. A growing variety of extended storage technologies use devices and utilities that can rewrite data that SQL Server considers secure. For example, some of the emerging technologies perform in-memory caching or data compression. In order to avoid severe database damage, any sector rewrite must have full transactional support in such a way that if a failure occurs, the data is rolled back to the previous sector images. This guarantees that SQL Server is never exposed to an unexpected interruption or data damage condition.
 
@@ -100,7 +95,7 @@ An application should tune to remove unnecessary and unwanted sorts and hashes t
 
 The benefits of putting the tempdb database on a high-speed system can only be determined through rigorous testing and measurements of the application workloads. The workload has to be studied carefully for the characteristics that the tempdb database may benefit from, and the I/O safety must be confirmed before deployment.
 
-The sort and hash operations work together with the SQL Server memory managers to determine the size of the in-memory scratch area for each sort or hash operation. As soon as the sort or hash data exceeds the allocated in-memory scratch area, data may be written to the tempdb database. This algorithm has been expanded in SQL Server 2005, reducing the tempdb database usage requirements over earlier versions of SQL Server.
+The sort and hash operations work together with the SQL Server memory managers to determine the size of the in-memory scratch area for each sort or hash operation. As soon as the sort or hash data exceeds the allocated in-memory scratch area, data may be written to the tempdb database. This algorithm has been expanded in SQL Server, reducing the tempdb database usage requirements over earlier versions of SQL Server.
 
 > [!CAUTION]
 > SQL Server is designed to account for memory levels and current query activities when making query plan decisions that involve the use of tempdb database operations. Therefore, the performance gains vary significantly based on workloads and application design. We strongly recommend that you complete testing with the preferred solution to determine possible gains and evaluate I/O safety requirements before such a deployment.
@@ -180,15 +175,13 @@ Microsoft doesn't certify or validate that third-party products work correctly w
 
 ## References
 
-For more information, see the following Microsoft Knowledge Base articles:
-
-- [Additional SQL Server diagnostics added to detect unreported I/O problems](https://support.microsoft.com/help/826433)
+For more information, see:
 
 - [Error message 823 may indicate hardware problems or system problems in SQL Server](/sql/relational-databases/errors-events/mssqlserver-823-database-engine-error)
 
 - [Using disk drive caching with SQL Server](https://support.microsoft.com/help/234656)  
 
-- [Description of support for network database files in SQL Server](https://support.microsoft.com/help/304261)
+- [Description of support for network database files in SQL Server](./support-network-database-files.md)
 
 - [Microsoft does not certify that third-party products will work with Microsoft SQL Server](https://support.microsoft.com/help/913945)
 
@@ -197,3 +190,5 @@ For more information, see the following Microsoft Knowledge Base articles:
 - [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10))
 
 - [Query Performance](/previous-versions/sql/sql-server-2008-r2/ms190610(v=sql.105))
+
+- [SQL Server Database Engine Disk Input/Output (I/O) requirements](./database-engine-input-output-requirements.md)

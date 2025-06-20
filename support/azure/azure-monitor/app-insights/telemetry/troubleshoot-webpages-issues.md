@@ -11,6 +11,8 @@ ms.reviewer: mmcc, toddfous, aaronmax, v-weizhu
 
 The article explains certain issues that involve [Application Insights JavaScript SDK for webpages](/azure/azure-monitor/app/javascript) and offers strategies to help fix these issues.
 
+[!INCLUDE [Azure Help Support](../../../../includes/azure/application-insights-sdk-support.md)]
+
 ## I'm seeing a "0" value recorded for page views in Application Insights
 
 This is by design when instrumenting Single Page Applications (SPA). See the following [GitHub issue](https://github.com/microsoft/ApplicationInsights-JS/issues/1139). 
