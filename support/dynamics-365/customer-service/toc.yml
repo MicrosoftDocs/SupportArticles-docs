@@ -258,10 +258,6 @@
           href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md
         - name: Use diagnostic messages to troubleshoot call issues
           href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md
-        - name: Unable to add phone numbers to Azure Communication Services service request
-          href: omnichannel-for-customer-service/voice-acs-number-issue.md
-        - name: Troubleshoot connectivity errors caused by firewalls or VPNs  
-          href: omnichannel-for-customer-service/voice-acs-errors.md    
     - name: WhatsApp via Twilio
       items:
         - name: '"Resource not found" error when configuring WhatsApp channel'
