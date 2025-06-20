@@ -38,8 +38,8 @@ Many permissions can be granted to a public folder. The following list describes
 
 The following table lists the predefined public folder roles and the permissions that are included in each role. The table headers reflect the permissions that were described earlier in this article.
 
-| Role| Create Items| Read Items| Create Subfolders| Folder Owner| Folder Contact| Folder Visible| Edit OwnedItems| Edit AllItems| Delete OwnedItems| Delete AllItems |
-|---|---|---|---|---|---|---|---|---|---|---|
+|Role|Create Items|Read Items|Create Subfolders|Folder Owner|Folder Contact|Folder Visible|Edit OwnedItems|Edit AllItems|Delete OwnedItems|Delete AllItems|
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |None||||||X|||||
 |Owner|X|X|X|X|X|X|X|X|X|X|
 |PublishingEditor|X|X|X|||X|X|X|X|X|
