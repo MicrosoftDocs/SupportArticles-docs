@@ -182,14 +182,14 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
    The output of the Inspektor Gadget `top_process` command resembles the following:
 
    ```output
-      K8S.NODE                       K8S.NAMESPACE                  K8S.PODNAME                       MEMORYVIRTUAL        MEMORYRSS   MEMORYRELATIVE
-      aks-agentpool-3…901-vmss000001 default                        memory-stress                         944521216        943947776              5.6
-      aks-agentpool-3…901-vmss000001 default                        memory-stress                         944521216        943947776              5.6
-      aks-agentpool-3…901-vmss000001 default                        memory-stress                         944521216        872644608              5.2
-      aks-agentpool-3…901-vmss000001 default                        memory-stress                         944521216        797147136              4.8
-      aks-agentpool-3…901-vmss000000                                                                      436805632        339316736              2.0
-    
-    ```
+
+      K8S.NODE                       K8S.NAMESPACE             K8S.PODNAME                 MEMORYVIRTUAL    MEMORYRSS   MEMORYRELATIVE
+      aks-agentpool-3…901-vmss000001 default                   memory-stress               944521216        943947776              5.6
+      aks-agentpool-3…901-vmss000001 default                   memory-stress               944521216        943947776              5.6
+      aks-agentpool-3…901-vmss000001 default                   memory-stress               944521216        872644608              5.2
+      aks-agentpool-3…901-vmss000001 default                   memory-stress               944521216        797147136              4.8
+      aks-agentpool-3…901-vmss000000                                                       436805632        339316736              2.0
+   ```   
 
 
 You can use this output to identify the processes that are consuming the most memory on the node. The output can include the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU usage, memory usage (RSS and Virtual), and relative memory usage.
