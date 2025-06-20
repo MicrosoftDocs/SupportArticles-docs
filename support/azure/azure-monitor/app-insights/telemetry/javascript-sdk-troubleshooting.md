@@ -13,6 +13,8 @@ ms.reviewer: mmcc, toddfous, aaronmax, v-leedennis
 
 This article discusses how to troubleshoot various issues that involve the [Application Insights JavaScript SDK](https://github.com/Microsoft/ApplicationInsights-JS). The subjects in this article include SDK load failure for JavaScript web apps and source map support for JavaScript apps.
 
+[!INCLUDE [Azure Help Support](../../../../includes/azure/application-insights-sdk-support.md)]
+
 <!-- 
 Editor's Note: This link name above "SDK Load Failure" has a direct references by https://go.microsoft.com/fwlink/?linkid=2128109 which is embedded in the snippet and from the JavaScript Page. If you change this text you MUST also update these references.
 -->

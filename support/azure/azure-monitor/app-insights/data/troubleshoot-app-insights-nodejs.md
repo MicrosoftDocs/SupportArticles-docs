@@ -13,6 +13,8 @@ ms.custom: sap:Missing or Incorrect data after enabling Application Insights in 
 
 This article discusses troubleshooting steps to fix general problems that are related to the Application Insights monitoring of Node.js apps and services.
 
+[!INCLUDE [Azure Help Support](../../../../includes/azure/application-insights-sdk-support.md)]
+
 ## Troubleshooting checklist
 
 ### Troubleshooting step 1: Test connectivity between your application host and the ingestion service
