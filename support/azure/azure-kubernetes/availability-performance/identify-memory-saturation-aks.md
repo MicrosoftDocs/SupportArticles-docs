@@ -170,13 +170,13 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
    # Install Inspektor Gadget
    kubectl krew install gadget
    kubectl gadget deploy   # Monitor top memory-consuming processes across all containers
-   kubectl gadget run top_process --sort memory 
+   kubectl gadget run top_process --sort memoryRelative 
    
    # Monitor processes on a specific node
-   kubectl gadget run top_process --sort memory --node <node-name> 
+   kubectl gadget run top_process --sort memoryRelative --node <node-name> 
    
    # Monitor processes in a specific namespace
-   kubectl gadget run top_process --sort memory --namespace <namespace-name> 
+   kubectl gadget run top_process --sort memoryRelative --namespace <namespace-name> 
    ```
 
    The output of the Inspektor Gadget `top_process` command resembles the following:
@@ -192,7 +192,7 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
     ```
 
 
-You can use this output to identify the processes that are consuming the most memory on the node. The output includes the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU usage, memory usage (RSS and Virtual), and relative memory usage.
+You can use this output to identify the processes that are consuming the most memory on the node. The output can include the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU usage, memory usage (RSS and Virtual), and relative memory usage.
 
 
 ### Step 3: Review best practices to avoid memory saturation
