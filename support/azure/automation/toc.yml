@@ -3,7 +3,7 @@
 - name: Runbook not working as expected
   items:
   - name: Troubleshoot error codes during runbook execution
-    href: runbooks/powershell-job-script-cmdlets-not-working.md
+    href: runbooks/error-running-powershell-runbook.md
   - name: Troubleshoot runbook execution issues when using PowerShell
     href: runbooks/powershell-job-script-cmdlets-not-working.md
 

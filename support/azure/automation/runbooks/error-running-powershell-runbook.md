@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Error Codes during runbook execution in Azure Automation
+title: Troubleshoot Error Codes During Runbook Execution in Azure Automation
 description: Helps you troubleshoot some errors that occur during runbook execution in Azure Automation.
 ms.date: 06/20/2025
 ms.reviewer: adoyle, v-weizhu
@@ -8,14 +8,14 @@ ms.custom: sap:Runbook not working as expected
 ---
 # Troubleshoot error codes during runbook execution in Azure Automation
 
-When using runbooks in Azure Automation, you may encounter issues due to runtime or PowerShell exceptions, for example, or due to specific error messages.
+When using runbooks in Azure Automation, you might encounter issues due to runtime or PowerShell exceptions or due to specific error messages. This article lists some issues and provides solutions to them.
 
 > [!NOTE]
 > Azure Automation enables recovery of runbooks deleted in the last 29 days - Restore the deleted runbook by running a PowerShell script as a job in your Automation account.  For more information, see [Restore deleted runbook](/azure/automation/manage-runbooks#restore-deleted-runbook).
 
 ## Troubleshoot error messages
 
-Review the following table to resolve runbook-related error messages.
+Review the following table to resolve runbook execution related error messages:
 
 |Error|Description|Solution|
 |-----|-----------|
