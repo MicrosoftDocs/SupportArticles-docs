@@ -18,9 +18,11 @@ When you upload employee attribute data to Microsoft Viva Glint, you may receive
 
 ## MANAGER_HIERARCHY_UPDATE_WARNING (no manager ID assigned)
 
-Warning message:
+**Message:**
 
 > MANAGER_HIERARCHY_UPDATE_WARNING: There are \<number\> employee records without a manager. The CEO/top of hierarchy shouldn't have a Manager ID. Employees without a Manager won't be reported in Manager reports, their scores/response won't roll up into any manager. The first 20 records: user1@contoso.com, user2@contoso.com...
+
+**Issue type:** Line-level warning
 
 > [!NOTE]
 > Results for employees without a Manager ID won't appear in the manager hierarchy results but will still be aggregated to other attributes and the overall organization score.
@@ -41,9 +43,11 @@ To fix the issue, follow these steps:
 
 ## MANAGER_HIERARCHY_UPDATE_WARNING (missing manager record)
 
-Warning message:
+**Message:**
 
 > MANAGER_HIERARCHY_UPDATE_WARNING: external user id \<x\> is mapped to manager reference \<y\> which is not on file or system. This will cause your manager's hierarchy to be incomplete and employee results don't roll into Manager Hierarchy views in reporting.
+
+**Issue type:** Line-level warning
 
 This issue occurs if the uploaded file contains employees who are shown to report to a manager whose Manager ID doesn't have a corresponding employee record.
 

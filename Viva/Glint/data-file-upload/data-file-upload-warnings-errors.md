@@ -26,7 +26,8 @@ After the file upload process is completed, you might receive error or warning m
 - **Warnings:** Warnings are informational and might require your attention to determine whether corrections are necessary. These records are uploaded to Viva Glint but don't pass validation or might not function as expected because of invalid data.
 - **Errors:** Errors are issues that prevent data from being uploaded to Viva Glint. A file-level error prevents the entire file from being uploaded, and a line-level error prevents only specific lines from being uploaded.
 
-**Note**: A file-level error means that the upload process failed and stopped. If the file is affected by more issues, those issues don't appear until the existing file-level error is fixed. You might experience further warnings or errors after you fix an error and reupload the data file.
+> [!NOTE]
+> A file-level error means that the upload process failed and stopped. If the file is affected by more issues, those issues don't appear until the existing file-level error is fixed. You might experience further warnings or errors after you fix an error and reupload the data file.
 
 For more information about these issues and how to resolve them, see the following articles:
 
@@ -59,10 +60,12 @@ The following table lists possible status values for SFTP file uploads, indicate
 |Succeeded|Yes|Review and resolve warnings|
 |Failed|Yes|Review and resolve errors|
 
-**Note**: SFTP upload notification messages can contain up to 100 lines of warnings and errors.
+> [!NOTE]
+> SFTP upload notification messages can contain up to 100 lines of warnings and errors.
 
 ## Activity Audit Log
 
 Viva Glint admins can use the [Activity Audit Log](/viva/glint/setup/activity-audit-log) to download a complete list of errors and warnings for data upload failures, and review other data import activities.
 
-**Note**: The downloadable error files in the Active Audit Log contain a maximum of 1,000 rows per error category. For example, if there are more than 1,000 warnings for DUPLICATED_EMAIL, only the first 1,000 warnings are included in the file.
+> [!NOTE]
+> The downloadable error files in the Active Audit Log contain a maximum of 1,000 rows per error category. For example, if there are more than 1,000 warnings for DUPLICATED_EMAIL, only the first 1,000 warnings are included in the file.

@@ -18,21 +18,26 @@ When you upload employee attribute data to Microsoft Viva Glint, you may receive
 
 ## DUPLICATE_COLUMN
 
-Error message:
+**Message:**
 
 > DUPLICATE_COLUMN: Column \<Attribute Name\> appears 2 times. Column \<Attribute Name\> can only appear once.
+
+**Issue type:** File-level error
 
 ### Resolution
 
 To fix the issue, delete the extra column, and then upload the file again to Viva Glint.
 
-**Note**: If Viva Glint creates a column that's based on the source data (for example, **Tenure** from **Hire Date**), don't include the derived field as a column in the employee attribute data file.
+> [!NOTE]
+> If Viva Glint creates a column that's based on the source data (for example, **Tenure** from **Hire Date**), don't include the derived field as a column in the employee attribute data file.
 
 ## MISSING_COLUMN
 
-Error message:
+**Message:**
 
 > MISSING_COLUMN: Missing required column '\<Attribute Name\>'. Add this column of data to your file and reupload.
+
+**Issue type:** File-level error
 
 This issue occurs if one or more of the following required columns are missing from the file that you upload:
 
