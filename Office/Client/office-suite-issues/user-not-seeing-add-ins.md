@@ -3,6 +3,7 @@ title: Users Don't See Add-ins
 description: Resolves issues that prevent your users from seeing add-ins in Microsoft 365 applications.
 manager: dcscontentpm
 audience: Admin
+ms.reviewer: rickki
 ms.topic: troubleshooting
 ms.custom:
   - sap:Building and Debugging Add-Ins for Office 365 Web and Desktop Apps
@@ -16,7 +17,7 @@ search.appverid:
   - MET150
   - MOE150
 ms.assetid: 060e809d-8cb6-427b-9e2f-dab67138acae
-ms.date: 06/18/2025
+ms.date: 06/21/2025
 ---
 
 # Users don't see add-ins
@@ -43,7 +44,7 @@ On the **Home** ribbon, select **Store** > **Admin-managed**.
   
 :::image type="content" source="./media/user-not-seeing-add-ins/store-button.png" alt-text="Screenshot of the Store button." border="false":::
 
-If users can't see add-ins, use one of the following methods:
+If users can't see add-ins, use one of the following methods to troubleshoot the issue:
   
 - Use the Compatibility Checker.
 
@@ -58,9 +59,9 @@ If users can't see add-ins, use one of the following methods:
 
   For more information, see [user and group assignments](/microsoft-365/admin/manage/centralized-deployment-of-add-ins?view=o365-worldwide&preserve-view=true#user-and-group-assignments).
 
-- If you know the GUID of the add-in, which is in the add-in manifest, check to see if the add-in is fully installed with these steps: 
+- Check whether the add-in is fully installed by searching for the add-in's GUID from its manifest. 
 
-   - Navigate to the folder `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\` in **File Explorer** and search all subfolders for the ID.
-   - Open the Windows Registry and search for the ID.
+   - Navigate to the `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\` folder in **File Explorer** and search all subfolders for the GUID.
+   - Open the Windows Registry editor and search for the GUID.
+   - If the add-in was installed by using AppSource, navigate to the `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\` folder and search all subfolders for the add-in's AppSource ID, such as `WA999999999`.
 
-- If the add-in was installed from AppSource, navigate to the folder `%LOCALAPPDATA%\Microsoft\Office\16.0\Wef\` in **File Explorer** and search all subfolders for the add-in's AppSource ID, such as `WA999999999`. 
