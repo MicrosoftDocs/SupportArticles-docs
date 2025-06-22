@@ -23,28 +23,39 @@ The listener component runs on the Remote Desktop server and is responsible for 
 
 ## Configure Remote Desktop server listener certificate
 
-The MMC method is not available starting from Windows Server 2012 or Windows Server 2012 R2. However, you can always configure the RDP listener by using WMI or the registry.
+### [MMC](#tab/mmc)
 
 ::: zone pivot="windows-server-pre-2012"
-
-### [MMC](#tab/mmc)
 
 The Remote Desktop Configuration Manager MMC snap-in enables you direct access to the RDP listener. In the snap-in, you can bind a certificate to the listener and in turn, enforce SSL security for the RDP sessions.
 
 ::: zone-end
+::: zone pivot="windows-server-2012"
 
-### [Windows Management Instrumentation (WMI)](#tab/wmi)
+The MMC method is not available starting from Windows Server 2012 or Windows Server 2012 R2. However, you can always configure the RDP listener by using WMI or the registry.
+
+::: zone-end
+::: zone pivot="windows-11-or-server-2025"
+
+The MMC method is not available starting from Windows Server 2012 or Windows Server 2012 R2. However, you can always configure the RDP listener by using WMI or the registry.
+
+::: zone-end
+
+### [WMI](#tab/wmi)
 
 The configuration data for the RDS listener is stored in the `Win32_TSGeneralSetting` class in WMI under the `Root\CimV2\TerminalServices` namespace.
 
 The certificate for the RDS listener is referenced through the **Thumbprint** value of that certificate on a **SSLCertificateSHA1Hash** property. The thumbprint value is unique to each certificate.
 
 > [!NOTE]
-> Before you run the wmic commands, the certificate that you want to use must be imported to the Personal certificate store for the computer account. If you do not import the certificate, you will receive an **Invalid Parameter** error.
+> Before you run the commands, the certificate that you want to use must be imported to the **Personal** certificate store for the computer account (via `certlm.msc`). If you do not import the certificate, you will receive an **Invalid Parameter** error.
 
 To configure a certificate by using WMI, follow these steps:
 
 1. Open the properties dialog for your certificate and select the **Details** tab.
+
+::: zone pivot="windows-server-pre-2012"
+
 2. Scroll down to the **Thumbprint** field and copy the space delimited hexadecimal string into something like Notepad.
 
    The following screenshot is an example of the certificate thumbprint in the **Certificate** properties:
@@ -65,43 +76,62 @@ To configure a certificate by using WMI, follow these steps:
 
 4. At command prompt, run the following wmic command together with the thumbprint value that you obtain in step 3:
 
-::: zone pivot="windows-server-pre-2012"
-
    ```console
    wmic /namespace:\\root\cimv2\TerminalServices PATH Win32_TSGeneralSetting Set SSLCertificateSHA1Hash="THUMBPRINT"
    ```
+
+    The following screenshot is a successful example:
+
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-wmic-commands.png" alt-text="A successful example of running the wmic command together with the thumbprint value that you obtain in step 3." border="false":::
 
 ::: zone-end
 ::: zone pivot="windows-server-2012"
 
+2. Scroll down to the **Thumbprint** field and copy the space delimited hexadecimal string into something like Notepad.
+
+   The following screenshot is an example of the certificate thumbprint in the **Certificate** properties:
+
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-property.png" alt-text="An example of the certificate thumbprint in the Certificate properties.":::
+
+   If you copy the string into Notepad, it should resemble the following screenshot:
+
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-string-in-notepad.png" alt-text="Copy and paste the thumbprint string into Notepad.":::
+
+   After you remove the spaces in the string, it still contains the invisible ASCII character that is only visible at the command prompt. The following screenshot is an example:
+
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/ascii-character-in-command-prompt.png" alt-text="The invisible ASCII character that is only shown at the command prompt." border="false":::
+
+   Make sure that this ASCII character is removed before you run the command to import the certificate.
+
+3. Remove all spaces from the string. There may be an invisible ACSII character that is also copied. This is not visible in Notepad. The only way to validate is to copy directly into the Command Prompt window.
+
+4. At command prompt, run the following wmic command together with the thumbprint value that you obtain in step 3:
+
    ```console
    wmic /namespace:\\root\cimv2\TerminalServices PATH Win32_TSGeneralSetting Set SSLCertificateSHA1Hash="THUMBPRINT"
    ```
 
+    The following screenshot is a successful example:
+
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-wmic-commands.png" alt-text="A successful example of running the wmic command together with the thumbprint value that you obtain in step 3." border="false":::
+
 ::: zone-end
 ::: zone pivot="windows-11-or-server-2025"
+
+2. Scroll down to the **Thumbprint** field and copy it.
+   The following screenshot is an example of the certificate thumbprint in the **Certificate** properties:
+
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-property-w11.png" alt-text="An example of the certificate thumbprint in the Certificate properties.":::
+
+3. At command prompt, run the following powershell command together with the thumbprint value that you obtain in step 2:
 
    ```console
    Get-WmiObject -class "Win32_TSGeneralSetting" -Namespace root\cimv2\terminalservices | Set-WmiInstance -Arguments @{SSLCertificateSHA1Hash="THUMBPRINT"}
    ```
 
-::: zone-end
+    The following screenshot is a successful example:
 
-   The following screenshot is a successful example:
-
-::: zone pivot="windows-server-pre-2012"
-
-   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-wmic-commands.png" alt-text="A successful example of running the wmic command together with the thumbprint value that you obtain in step 3." border="false":::
-
-::: zone-end
-::: zone pivot="windows-server-2012"
-
-   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-wmic-commands.png" alt-text="A successful example of running the wmic command together with the thumbprint value that you obtain in step 3." border="false":::
-
-::: zone-end
-::: zone pivot="windows-11-or-server-2025"
-
-   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-powershell-commands.png" alt-text="A successful example of running the powershell command together with the thumbprint value that you obtain in step 3." border="false":::
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-powershell-commands.png" alt-text="A successful example of running the powershell command together with the thumbprint value that you obtain in step 2." border="false":::
 
 ::: zone-end
 
