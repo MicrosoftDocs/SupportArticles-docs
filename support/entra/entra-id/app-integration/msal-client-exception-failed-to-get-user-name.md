@@ -1,0 +1,83 @@
+---
+title: MsalClientException - Failed to get user name
+description: PDiscusses a "Failed to get user name" error when an application uses Integrated Windows Authentication (IWA) with Microsoft Authentication Library (MSAL) and provide solutions.
+ms.service: entra-id
+ms.date: 06/23/2025
+ms.reviewer: willfid, v-weizhu
+ms.custom: sap:Developing or Registering apps with Microsoft identity platform
+---
+
+# Microsoft.Identity.Client.MsalClientException: Failed to get user name
+
+This article provides a solution to a "Failed to get user name" error that occurs when an application uses Integrated Windows Authentication (IWA) with Microsoft Authentication Library (MSAL).
+
+## Symptoms
+
+When your application uses IWA with MSAL, if calling the `AcquireTokenByIntegratedWindowsAuth` method as follows:
+
+```csharp
+result = await app.AcquireTokenByIntegratedWindowsAuth(scopes)
+```
+
+You encounter one of the following errors:  
+
+> Microsoft.Identity.Client.MsalClientException: Failed to get user name —>  
+> System.ComponentModel.Win32Exception: No mapping between account names and security IDs was done
+
+Or  
+
+> Microsoft.Identity.Client.MsalClientException: Failed to get user name —>  
+> System.ComponentModel.Win32Exception: Access Denied
+
+> [!NOTE]
+> The error message originates from Windows.
+
+## Cause
+
+The error occurs because MSAL calls the [GetUserNameEx](/windows/win32/api/secext/nf-secext-getusernameexa) function from `secur32.dll`. For more information, see [MSAL WindowsNativeMethods.cs - GetUserNameEx](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/01ecd12464007fc1988b6a127aa0b1b980bca1ed/src/client/Microsoft.Identity.Client/Platforms/Features/DesktopOS/WindowsNativeMethods.cs#L66).
+
+## Solution
+
+> [!NOTE]
+> Before you begin, ensure the following minimum requirements are met:
+>
+> - You run the application as a local Active Directory user and not a local computer user account.
+> - The device where the application run is joined to the domain.
+
+To resolve this issue, pass the username to `AcquireTokenByIntegratedWindowsAuth`.
+
+If the username is known beforehand, you can manually pass it to MSAL, as follows:
+
+`result = await app.AcquireTokenByIntegratedWindowsAuth(scopes).WithUsername("<service-account>@contoso.com")`
+
+If the username isn't known beforehand, dynamically retrieve the username and then pass it to `AcquireTokenByIntegratedWindowsAuth` by using one of the following methods:
+
+- Use `System.Security.Principal.WindowsIdentity.GetCurrent()`
+
+    Here's the code example:
+
+    ```csharp
+    string username = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+    result = await app.AcquireTokenByIntegratedWindowsAuth(scopes).WithUsername(username)
+    ```
+
+    > [!NOTE]
+    > If the returned username doesn't include a domain, this method fails and returns different errors. For proper integration with Microsoft Entra ID, you must pass the username in the format of a user principal name.
+
+- Use `PublicClientApplication.OperatingSystemAccount.Username`
+
+    Here's the code example:
+
+    ```csharp
+    string username = PublicClientApplication.OperatingSystemAccount.Username;
+    result = await app.AcquireTokenByIntegratedWindowsAuth(scopes).WithUsername(username)
+    ```
+
+    > [!NOTE]
+    > This method tries to access the Windows Account Broker to get the user signed into the device. It doesn't work if the application runs on Internet Information Services (IIS) or Windows Servers.
+
+## Reference
+
+[Using MSAL.NET with Integrated Windows Authentication (IWA)](/entra/msal/dotnet/acquiring-tokens/desktop-mobile/integrated-windows-authentication)
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
