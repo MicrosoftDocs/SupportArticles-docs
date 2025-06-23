@@ -16,8 +16,8 @@ This article provides step-by-step guidance to troubleshoot AGIC connectivity is
 
 Before you start, make sure that you have the following tools installed:
 
-- **Kubernetes CLI (`kubectl`)**: Use [Azure CLI](/cli/azure/install-azure-cli) to install it by running the command, `az aks install-cli`.
 - **Azure CLI**: Follow the [installation guide](/cli/azure/install-azure-cli).
+- **Kubernetes CLI (`kubectl`)**: Use Azure CLI to install it by running the command, `az aks install-cli`.
 - **Client URL (`cURL`) tool**: Install it by following [this guidance](https://www.tecmint.com/install-curl-in-linux/).
 
 ## Common symptoms
