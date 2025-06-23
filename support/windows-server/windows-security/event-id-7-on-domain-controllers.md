@@ -36,19 +36,19 @@ Event Xml:
 <Event
 xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
  <System>
- <Provider Name="Microsoft-Windows-Kerberos-Key-Distribution-Center" Guid="**guid**" EventSourceName="KDC" />
+ <Provider Name="Microsoft-Windows-Kerberos-Key-Distribution-Center" Guid="(guid)" EventSourceName="KDC" />
  <EventID Qualifiers="49152">7</EventID>
  <Version>0</Version>
  <Level>2</Level>
  <Task>0</Task>
  <Opcode>0</Opcode>
  <Keywords>0x80000000000000</Keywords>
- <TimeCreated SystemTime="**date time**" />
+ <TimeCreated SystemTime="(date time)" />
  <EventRecordID>29550</EventRecordID>
  <Correlation />
  <Execution ProcessID="896" ThreadID="0" />
  <Channel>System</Channel>
- <Computer>**dc fqdn**</Computer>
+ <Computer>(dc fqdn)</Computer>
  <Security />
  </System>
  <EventData>
