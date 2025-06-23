@@ -12,7 +12,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 05/28/2025
+ms.date: 06/23/2025
 ---
 # Teams meeting features for shared mailboxes
 
@@ -34,7 +34,7 @@ For Microsoft Teams meetings that are managed by using a shared mailbox, only a 
 For more information about Teams license options, see [Microsoft Teams add-on licenses](/microsoftteams/teams-add-on-licensing/microsoft-teams-add-on-licensing).
 
 > [!IMPORTANT]
-> Meeting features that aren't listed in the table remain **unsupported** for unlicensed shared mailboxes. For example, Webinars, Town Halls, and View-Only Attendee Mode (StreamingAttendeeMode). If a feature isn't listed, it doesn't work or isn't supported for an unlicensed shared mailbox, regardless of the meeting organizer's meeting policy settings or license. If you need to use these features, you must assign a Teams license to the shared mailbox.  
+> Meeting features that aren't listed in the table remain **unsupported** for unlicensed shared mailboxes. For example, Webinars, Town Halls, and View-Only Attendee Mode (StreamingAttendeeMode). These unlisted features don't work or aren't supported for an unlicensed shared mailbox, regardless of the meeting organizer's meeting policy settings or license. If you have to use these features, you must assign a Teams license to the shared mailbox.  
 
 ## Known limitations
 
