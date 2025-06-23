@@ -2,7 +2,7 @@
 title: Troubleshoot issues in Power Automate browser extensions
 description: Provides a resolution for the Failed to assume control of browser (Internal error or communication failure) error or Get Extension message.
 ms.reviewer: nimoutzo, gtrantzas
-ms.date: 04/09/2025
+ms.date: 06/23/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Troubleshoot issues in Power Automate browser extensions
