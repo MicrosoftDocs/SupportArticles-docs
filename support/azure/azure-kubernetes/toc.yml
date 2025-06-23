@@ -3,7 +3,7 @@
 
 - name: Create, Upgrade, Scale and Delete operations (cluster or nodepool)
   items:
-  - name: Create operations
+  - name: Create operationsload-bal-ingress-c/troubleshoot-agic-connectivity.md
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
@@ -151,7 +151,7 @@
   - name: Create an unmanaged ingress controller
     href: load-bal-ingress-c/create-unmanaged-ingress-controller.md
   - name: Troubleshoot Application Gateway Ingress Controller connectivity
-    href: load-bal-ingress-c/troubleshoot-agic-connectivity.md
+    href: load-bal-ingress-c/troubleshoot-app-gateway-ingress-controller-connectivity-issues.md
 
 - name: Troubleshoot Kubernetes control plane
   items:
