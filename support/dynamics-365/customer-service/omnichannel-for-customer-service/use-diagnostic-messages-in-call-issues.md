@@ -5,7 +5,7 @@ ms.author: araghunath
 author: araghunath08
 ms.reviewer: nenellim 
 ms.collection: 
-ms.date: 03/03/2024
+ms.date: 06/23/2025
 ms.custom: sap:Voice channel
 ---
 # Use diagnostic messages to troubleshoot issues in voice calls
@@ -27,7 +27,11 @@ The following table lists the warning messages that appear when your agents have
 
 ## Troubleshoot connectivity errors caused by firewalls or VPNs
 
-The application displays the "The connection to the telephony system was lost. We're working on re-establishing the connection." error if there are issues with your organization's firewall or VPN. We recommend that you check your firewall configuration and allow list the  domains in [firewall configuration](/azure/communication-services/concepts/voice-video-calling/network-requirements#firewall-configuration).
+The following error message may appear when there are issues with your organization's firewall or VPN.
+
+> The connection to the telephony system was lost. We're working on re-establishing the connection.
+
+To mitigate the issue, check your firewall configuration and ensure that you have connectivity to the required ports and IP addresses. For more details, see Azure Communication Services [firewall configuration](/azure/communication-services/concepts/voice-video-calling/network-requirements#firewall-configuration).
 
 ## Troubleshoot device issues
 
