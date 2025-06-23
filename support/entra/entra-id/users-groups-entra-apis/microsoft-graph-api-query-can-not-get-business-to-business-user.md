@@ -4,7 +4,7 @@ description: Provides a solution to an issue where a Microsoft Graph API request
 ms.service: entra-id
 ms.reviewer: bhvootla, v-weizhu
 ms.custom: sap:Problem with querying or provisioning resources
-ms.date: 06/20/2025
+ms.date: 06/23/2025
 ---
 # Microsoft Graph API requests fail to get B2B users using UPN
 
