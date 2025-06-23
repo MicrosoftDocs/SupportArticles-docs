@@ -49,6 +49,7 @@ ms.date: 06/12/2025
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |During a Coordinated meeting, when the meeting volume is changed by using a room remote, the speaker on a Surface Hub or Teams Rooms device turns on.|For a trusted device such as a Surface Hub or Teams Rooms device that is set up to automatically join a Coordinated meeting when the primary device joins, the speaker turns on when a room remote is used to change the meeting volume. This issue occurs even though the audio settings on the device are turned off, and whether they're enabled or disabled.|Turn off proximity join and room remote capabilities on the trusted devices that automatically join a Coordinated meeting.|
+|The central part of the console on a Teams Rooms device doesn't respond to touch and mouse input.|On some Microsoft Teams Rooms devices such as the Crestron Dell Optiplex 7080 that use a 4k monitor connected as the front-of-room display, the central portion of the display intermittently stops responding to touch and mouse controls.<br/><br/>Despite this issue, the Teams Rooms app is functional and accepts inputs from a connected keyboard.|Contact Microsoft Support for assistance to work around this issue.|
 
 ## Limitations
 
