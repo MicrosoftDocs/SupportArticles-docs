@@ -2903,7 +2903,7 @@ items:
   - name: Kerberos authentication
     items:
     - name: Event ID 7 on a DC running Windows Server 2025
-      href: windows-security/event-id-7-on-a-dc-running-windows-server-2025.md
+      href: windows-security/event-id-7-dc-running-windows-server-2025.md
     - name: 'Troubleshooting guidance: Kerberos authentication'
       href: ./windows-security/kerberos-authentication-troubleshooting-guidance.md
     - name: Active Directory authentication fails with klist error 0x8009030e
