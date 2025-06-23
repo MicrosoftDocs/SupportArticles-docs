@@ -18,9 +18,11 @@ When you upload employee attribute data to Microsoft Viva Glint, you might recei
 
 ## The date format is incorrectly configured
 
-Error message:
+**Message:**
 
 > DERIVATION_ERROR: The date format is incorrectly configured for the following columns: (Hire Date). We're expecting \<date format, such as mm/dd/yyyy\>. For Microsoft Excel files, ensure that cells are in Text format.
+
+**Issue type:** File-level error
 
 This issue occurs because the date format in the file that you upload doesn't match the format that's specified when you set up attributes in Viva Glint.
 
@@ -43,7 +45,8 @@ To fix the issue, follow these steps:
       =TEXT(A1,"mm/dd/yyyy")
    1. [Fill the formula](https://support.microsoft.com/office/fill-a-formula-down-into-adjacent-cells-041edfe2-05bc-40e6-b933-ef48c3f308c6) into the cells in the new column (column B).
   
-      **Note:** This formula translates blank date cells into "01/01/1900" or "01/00/1900." To prevent upload errors, remove these invalid dates before you upload the file.
+      > [!NOTE]
+      > This formula translates blank date cells into "01/01/1900" or "01/00/1900." To prevent upload errors, remove these invalid dates before you upload the file.
       
    1. Copy the date values from the new column (column B), and then paste the values into the original date column (column A) by using the **Paste** > **Paste Special** > **Values** [option](https://support.microsoft.com/office/paste-options-8ea795b0-87cd-46af-9b59-ed4d8b1669ad).
    1. Delete the new column that contains the formula.
@@ -51,9 +54,11 @@ To fix the issue, follow these steps:
 
 ## Attribute headers in the uploaded file don't match Viva Glint configuration
 
-Error message:
+**Message:**
 
-> DERIVATION_ERROR: Attribute headers in the uploaded file don't match your Viva Glint configuration. Ensure that all attribute header names match and are included in your file. Include columns Hire Date and Birth Year. These columns are used for deriving attributes Tenure, Age Group.
+> ENRICHMENT_FAILURE: Attribute headers in the uploaded file don't match your Viva Glint configuration. Ensure that all attribute header names match and are included in your file. Include columns Hire Date and Birth Year. These columns are used for deriving attributes Tenure, Age Group.
+
+**Issue type:** File-level error
 
 This issue is caused by a mismatch between the attribute header in the uploaded file and the attribute names that are specified in Viva Glint. Attribute headers must match the attribute names in Viva Glint exactly, including the case and space characters.
 
@@ -73,7 +78,8 @@ To fix the issue, follow these steps:
        - Active Attributes
        - Derived Attributes
 
-          **Note**: In this section, review the attributes that are used by Viva Glint to create the derived attributes. These attributes are listed in the **Calculate From** field.
+          > [!NOTE]
+          > In this section, review the attributes that are used by Viva Glint to create the derived attributes. These attributes are listed in the **Calculate From** field.
        - Optional System Attributes
        - Hierarchy Attributes
 1. For each attribute that's identified in step 2c, compare its name in Viva Glint with the value in the header row of the data file, and then fix any mismatches. Make sure that:
@@ -87,10 +93,12 @@ To fix the issue, follow these steps:
 
 ## File is in an unexpected format
 
-Error messages:
+**Messages:**
 
 - > DERIVATION_ERROR: File is in an unexpected format. Expecting csv file format. Check to see if the file passed is a csv file with UTF-8 encoding and comma delimited values.
 - > DERIVATION_ERROR: File is in an unexpected format. Expecting xlsx file format. Check to see if the file passed is a xlsx file with no formulas and no additional sheets.
+
+**Issue type:** File-level error 
 
 This issue occurs because the file that you upload isn't in the format that's specified when you set up attributes in Viva Glint.
 
@@ -109,9 +117,11 @@ To fix the issue, resave the file in the expected format, and upload it again to
 
 ## Derivation failed due to invalid data
 
-Error message:
+**Message:**
 
 > DERIVATION_ERROR: Processing the file failed. Derivation failed due to invalid data in \<attribute, such as Hire Date\>. Review and reupload file.
+
+**Issue type:** File-level error
 
 This issue occurs because the file you that upload contains invalid data, such as:
 
@@ -134,9 +144,11 @@ To fix the issue, follow these steps:
 
 ## Row length doesn't match header's length
 
-Error message:
+**Message:**
 
 > ENRICHMENT_FAILURE: Row \<line number, such as 100\> length doesn't match header's length. Can't create file.
+
+**Issue type:** File-level error 
 
 ### Resolution
 
@@ -152,9 +164,11 @@ To fix the issue, follow these steps:
 
 ## MANAGER_HIERARCHY_UPDATE_ERROR
 
-Error message:
+**Message:**
 
 > MANAGER_HIERARCHY_UPDATE_ERROR: There should be at least one employee record with no manager, otherwise the reporting hierarchy may be invalid. Leave the Manager ID empty for the CEO/top level leader.
+
+**Issue type:** File-level error
 
 This issue occurs if the CEO or top-level person has a **Manager ID** value assigned.
 
@@ -164,16 +178,19 @@ To fix the issue, follow these steps:
 
 1. In the employee attribute data file, locate the CEO or top-level person, and then remove their Manager ID value.
 
-    **Note**: Make sure that the **Manager ID** field is blank. Don't enter a space or "NULL" as the value.
+    > [!NOTE]
+    > Make sure that the **Manager ID** field is blank. Don't enter a space or "NULL" as the value.
 1. Save the file, and then upload it again to Viva Glint.
 
 To avoid this issue in the future, work with your Human Resources Information System (HRIS) team to make sure that the **Manager ID** field is blank for the CEO or top-level person in the employee attribute data.
 
 ## MANAGER_HIERARCHY_ERROR
 
-Error message:
+**Message:**
 
-> MANAGER HIERARCHY ERROR: Manager Email address snguyen@contoso.com is mentioned more than once in chain of commands, creating a cycle. They either are reporting to themselves or are creating a circular reporting with another user that needs to be resolved.
+> MANAGER HIERARCHY ERROR: Manager Email address user@contoso.com is mentioned more than once in chain of commands, creating a cycle. They either are reporting to themselves or are creating a circular reporting with another user that needs to be resolved.
+
+**Issue type:** File-level error
 
 This error occurs if the employee attribute data shows that one or more managers either report to themselves or have a circular reporting relationship with other managers.
 

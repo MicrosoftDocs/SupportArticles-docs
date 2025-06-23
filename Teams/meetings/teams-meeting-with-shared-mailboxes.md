@@ -33,6 +33,9 @@ For Microsoft Teams meetings that are managed by using a shared mailbox, only a 
 
 For more information about Teams license options, see [Microsoft Teams add-on licenses](/microsoftteams/teams-add-on-licensing/microsoft-teams-add-on-licensing).
 
+> [!IMPORTANT]
+> Meeting features that aren't listed in the table remain **unsupported** for unlicensed shared mailboxes. For example, Webinars, Town Halls, and View-Only Attendee Mode (StreamingAttendeeMode). If a feature isn't listed, it doesn't work or isn't supported for an unlicensed shared mailbox, regardless of the meeting organizer's meeting policy settings or license. If you need to use these features, you must assign a Teams license to the shared mailbox.  
+
 ## Known limitations
 
 Users who aren't added to the meeting when the meeting is initially scheduled have only temporary access to the meeting chat. For example, if you add User A to the meeting invitation after you schedule the meeting, User A has access to only the meeting chat during the meeting. After the meeting ends, user A is automatically removed from the meeting chat.

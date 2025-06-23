@@ -1,5 +1,5 @@
 ---
-title: Resolve file upload warnings related to invalid or unexpected values
+title: Resolve file upload warnings and errors related to invalid or unexpected values
 description: Fix issues that cause invalid or unexpected values when you upload employee attribute data to Viva Glint.
 manager: dcscontentpm
 ms.reviewer: aweixelman
@@ -14,25 +14,29 @@ ms.custom:
   - CI192293
 ---
 
-# Resolve file upload warnings related to invalid or unexpected values
+# Resolve file upload warnings and errors related to invalid or unexpected values
 
-When you upload employee attribute data to Microsoft Viva Glint, you receive one of the following warning messages. Select the warning that you experience from the list at the top of the article, and follow the appropriate resolution to fix the issue.
+When you upload employee attribute data to Microsoft Viva Glint, you receive one of the following warning or error messages. Select the warning or error that you experience from the list at the top of the article, and follow the appropriate resolution to fix the issue.
 
 ## RECORD_STAGING_FAILURE
 
-Warning message:
+**Message:**
 
 > RECORD_STAGING_FAILURE: Found \<x\> existing record that has been previously deleted corresponding to line number \<y\>.
 
-This issue occurs if users are deleted from Microsoft Entra ID and their corresponding records in Viva Glint are marked as **Deleted**. The [Disregard Employee IDs of previously deleted employees](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) setting manages how Viva Glint processes deleted user records.
+**Issue type:** Line-level error
+
+This issue occurs if users are deleted from Microsoft Entra ID and their corresponding records in Viva Glint are marked as **soft Deleted**. The [Disregard Employee IDs of previously deleted employees](/viva/glint/setup/manage-general-settings#disregard-employee-ids-of-previously-deleted-employees) setting manages how Viva Glint processes deleted user records.
 
 ### Resolution
 
 To fix the issue, use one of the following methods:
 
-- If you upload the data by using **Import** on the **People** page, confirm the upload. This way records that are marked as deleted in Microsoft Entra ID and Viva Glint will be skipped. All other data without other errors or warnings will be imported into Viva Glint.
+- If you upload the data by using **Import** on the **People** page, confirm the upload. This way records that are marked as soft deleted in Microsoft Entra ID and Viva Glint will be skipped. All other data without other errors or warnings will be imported into Viva Glint.
 
-  **Note**: If you upload the data by using Viva Glint Secure File Transfer Protocol (SFTP), records that are marked as deleted will be automatically skipped.
+  > [!NOTE]
+  > If you upload the data by using Viva Glint Secure File Transfer Protocol (SFTP), records that are marked as soft deleted will be automatically skipped.
+
 - Remove the deleted records and upload the file again. Follow these steps:
 
   1. If necessary, work with your Microsoft 365 or Entra ID administrator to confirm the users that are deleted from Microsoft Entra ID.
@@ -42,14 +46,17 @@ To fix the issue, use one of the following methods:
        - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
   1. Remove the rows that are listed in the warning message.
 
-     **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
+     > [!NOTE]
+     > The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
   1. Save the file, and upload it again to Viva Glint.
 
 ## INVALID_EMPLOYEE_DATA: unsupported characters
 
-Warning message:
+**Message:**
 
 > INVALID_EMPLOYEE_DATA: Skipping line number \<x\> because column \<y\> contains unsupported characters.
+
+**Issue type:** Line-level error
 
 This issue occurs because the file that you uploaded contains old Kanji characters. Viva Glint supports only modern Kanji characters.
 
@@ -63,16 +70,19 @@ To fix the issue, follow these steps:
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Locate the row that's listed in the warning message.
 
-    **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
+    > [!NOTE]
+    > The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
 1. Review the value in the column that's listed in the warning message.
 1. Replace all old Kanji characters with modern Kanji characters. Or, delete the old Kanji characters.
 1. Save the file, and upload it again to Viva Glint.
 
 ## MISSING_REQUIRED_VALUE
 
-Warning message:
+**Message:**
 
 > MISSING_REQUIRED_VALUE: Line \<x\> is missing a required value for Employee First Name, Employee Last Name, and Email address for user ID \<ID\>.
+
+**Issue type:** Line-level error
 
 This issue occurs if an employee record in your file is missing values for one or more of the following required fields:
 
@@ -89,14 +99,17 @@ To fix the issue, follow these steps:
 1. Review the employee attribute data file to identify rows in which values are missing for the required fields.
 1. Complete the affected fields with valid values.
 
-    **Note**: For employees that have only a first name provided, populate the **Last name** field with a hyphen (-) or a period (.).
+    > [!NOTE]
+    > For employees that have only a first name provided, populate the **Last name** field with a hyphen (-) or a period (.).
 1. Save the file, and upload it again to Viva Glint.
 
 ## INVALID_EMAIL
 
-Warning message:
+**Message:**
 
 > INVALID_EMAIL: There are \<number\> employees without a valid Work Email, which could be related to employees with an Employee ID sent as the email value.
+
+**Issue type:** Line-level warning
 
 ### Resolution
 
@@ -104,21 +117,26 @@ To fix the issue, verify that email addresses are in a valid format, including t
 
 ## FIELD_TOO_BIG_FATAL
 
-Warning messages:
+**Message:**
 
 > FIELD_TOO_BIG_FATAL: Required field \<Attribute Name\> can't be longer than 64 characters.
+
+**Issue type:** Line-level error
 
 ### Resolution
 
 To fix the issue, check for fields that might be accidentally strung together. Review the file and verify that all required attributes have values that are less than 64 characters.
 
-**Note**: For the **Status** field, the limit is 32 characters.
+> [!NOTE]
+> For the **Status** field, the limit is 32 characters.
 
 ## CHAR_LIMIT_EXCEED_NON_MANDATORY
 
-Warning message:
+**Message:**
 
 > CHAR_LIMIT_EXCEED_NON_MANDATORY: Non-Required field \<Attribute Name\> is longer than 64 characters. As a result, the value has been truncated to 64 characters, which is what will be shown in reporting. (Number of employees impacted: \<number\>)
+
+**Issue type:** Line-level warning
 
 ### Resolution
 
@@ -126,9 +144,11 @@ To fix the issue, check for fields that might be accidentally strung together. R
 
 ## SUSPICIOUS_VALUE
 
-Warning message:
+**Message:**
 
 > SUSPICIOUS_VALUE: Value of Employee \<Attribute Name\> for Employee ID \<ID\> contains suspicious characters. Check for special/unexpected characters that may have been corrupted and reupload your file to correct.
+
+**Issue type:** Line-level warning
 
 ### Resolution
 
@@ -141,9 +161,11 @@ Then, upload the file again to Viva Glint.
 
 ## INVALID_STATUS
 
-Warning message:
+**Message:**
 
 > INVALID_STATUS: Status value 'LEAVE' is invalid. This value needs to be exactly "ACTIVE" or "INACTIVE", in all caps.
+
+**Issue type:** Line-level error
 
 ### Resolution
 
@@ -151,9 +173,11 @@ To fix the issue, make sure that the value of the **Status** attribute contains 
 
 ## UNEXPECTED_ATTRIBUTE
 
-Warning message:
+**Message:**
 
 > UNEXPECTED_ATTRIBUTE: The following attribute/attributes '\<Attribute Name\>' are in the file but not configured in Viva Glint.
+
+**Issue type:** Line-level error
 
 This issue occurs in one of the following situations:
 
@@ -176,9 +200,11 @@ After you update the attributes, upload the file again to Viva Glint.
 
 ## INVALID_LOCALE
 
-Warning message:
+**Message:**
 
 > INVALID_LOCALE: Line \<x\> the Locale value \<locale\> is not a valid locale string.
+
+**Issue type:** Line-level warning
 
 This issue occurs if the file that you upload contains invalid language code values.
 
@@ -192,15 +218,18 @@ To fix the issue, follow these steps:
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Locate the row that's listed in the warning message.
 
-   **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
+   > [!NOTE]
+   > The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
 1. Replace the invalid **Locale** value with a valid value. For a list of valid language code values, see [Viva Glint supported languages](/viva/glint/setup/supported-languages).
 1. Save the file, and upload it again to Viva Glint.
 
 ## INVALID_USER_TIMEZONE
 
-Warning message:
+**Message:**
 
 > INVALID_USER_TIMEZONE: Line \<x\> the User Timezone value \<timezone\> is not a valid international timezone string.
+
+**Issue type:** Line-level warning
 
 This issue occurs if the file that you upload contains invalid time zone values.
 
@@ -214,15 +243,18 @@ To fix the issue, follow these steps:
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Locate the row that's listed in the warning message.
 
-   **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
+   > [!NOTE]
+   > The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
 1. Replace the invalid **User Timezone** value with a valid value. For a list of valid time zone values, see [Viva Glint supported time zones](/viva/glint/setup/supported-time-zones).
 1. Save the file, and upload it again to Viva Glint.
 
 ## INVALID_PERSONAL_EMAIL
 
-Warning message:
+**Message:**
 
 > INVALID_PERSONAL_EMAIL: Line \<x\> the Personal Email value '\<email address\>' is not formatted like a valid email address.
+
+**Issue type:** Line-level warning
 
 This issue occurs because the file that you tried to upload contains invalid values for the personal email address attribute.
 
@@ -236,7 +268,8 @@ To fix the issue, follow these steps:
     - If the data file has a *.csv* extension, use the [Text Import Wizard](https://support.microsoft.com/office/text-import-wizard-c5b02af6-fda1-4440-899f-f78bafe41857) to import the data into Excel by preserving the data in the original format.
 1. Locate the row that's listed in the warning message.
 
-   **Note**: The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
+   > [!NOTE]
+   > The header row isn't included in the row count. For example, if the warning indicates line 20, go to row 21.
 1. Replace the invalid **Personal Email** value with a valid value. A valid email address uses the following syntax:
 
    \<username\>@\<email domain\>
@@ -244,4 +277,5 @@ To fix the issue, follow these steps:
    For example, john@outlook.com.
 1. Save the file, and upload it again to Viva Glint.
 
-   **Note**: You can confirm the current upload, and add the corrected addresses in a future upload. However, until they are corrected, personal email addresses that are in an invalid format will remain associated with the affected users in Viva Glint.
+   > [!NOTE]
+   > You can confirm the current upload, and add the corrected addresses in a future upload. However, until they are corrected, personal email addresses that are in an invalid format will remain associated with the affected users in Viva Glint.
