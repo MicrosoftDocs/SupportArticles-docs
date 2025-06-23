@@ -29,12 +29,9 @@ Or
 > Microsoft.Identity.Client.MsalClientException: Failed to get user name —>  
 > System.ComponentModel.Win32Exception: Access Denied
 
-> [!NOTE]
-> The error message originates from Windows.
-
 ## Cause
 
-The error occurs because MSAL calls the [GetUserNameEx](/windows/win32/api/secext/nf-secext-getusernameexa) function from `secur32.dll`. For more information, see [MSAL WindowsNativeMethods.cs - GetUserNameEx](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/01ecd12464007fc1988b6a127aa0b1b980bca1ed/src/client/Microsoft.Identity.Client/Platforms/Features/DesktopOS/WindowsNativeMethods.cs#L66).
+The error originates from Windows. It occurs because MSAL calls the [GetUserNameEx](/windows/win32/api/secext/nf-secext-getusernameexa) function from `secur32.dll`. For more information, see [MSAL WindowsNativeMethods.cs - GetUserNameEx](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/blob/01ecd12464007fc1988b6a127aa0b1b980bca1ed/src/client/Microsoft.Identity.Client/Platforms/Features/DesktopOS/WindowsNativeMethods.cs#L66).
 
 ## Solution
 
