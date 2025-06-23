@@ -303,6 +303,8 @@
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
    - name: Change enumeration is not supported for requested tenant
      href: users-groups-entra-apis/delta-query-not-supported-for-aad-b2c-tenant.md
+   - name: Graph API request fails to get B2B users using UPN
+     href: users-groups-entra-apis/microsoft-graph-api-query-can-not-get-business-to-business-user.md
    - name: Handling errors in Graph API requests with Invoke-RestMethod
      href: app-integration/graph-api-error-handling-invoke-restmethod.md
    - name: Only one user is returned when running List users API
