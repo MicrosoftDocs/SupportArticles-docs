@@ -241,7 +241,7 @@ In general, the following issues are the high-level reasons why SQL Server queri
 
 ## Graphical representation of the methodology
 
-:::image type="content" source="media/troubleshoot-slow-io-sql/slow-disk-io-issues.png" alt-text="Visual representation of the methodology to correct slow I/O issues with SQL Server.":::
+:::image type="content" source="media/troubleshoot-slow-io-sql/slow-disk-io-issues.svg" alt-text="Visual representation of the methodology to correct slow I/O issues with SQL Server.":::
 
 ## Information on I/O-related wait types
 
