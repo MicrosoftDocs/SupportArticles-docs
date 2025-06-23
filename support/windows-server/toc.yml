@@ -756,7 +756,7 @@ items:
     items:
     - name: Extend stand-alone tiered storage spaces
       href: ./backup-and-storage/extend-stand-alone-tiered-storage-spaces.md
-    - name: Manage disks in standalone Storage Spaces 
+    - name: Manage disks in standalone Storage Spaces
       href: ./backup-and-storage/manage-disks-standalone-storage-spaces.md
   - name: System Restore or resetting your computer
     items:
@@ -2902,6 +2902,8 @@ items:
       href: ./windows-security/description-support-suite-b-cryptographic-ipsec.md
   - name: Kerberos authentication
     items:
+    - name: Event ID 7 on a DC running Windows Server 2025
+      href: windows-security/event-id-7-on-a-dc-running-windows-server-2025.md
     - name: 'Troubleshooting guidance: Kerberos authentication'
       href: ./windows-security/kerberos-authentication-troubleshooting-guidance.md
     - name: Active Directory authentication fails with klist error 0x8009030e
@@ -2948,7 +2950,7 @@ items:
       href: ./windows-security/troubleshoot-kerberos-constrained-delegation-issues.md
     - name: Troubleshoot Kerberos using a log analysis test scenario
       href: ./windows-security/kerberos-authentication-log-analysis-test-scenario.md
-    - name: 'Troubleshoot resource-based constrained delegation issues'
+    - name: Troubleshoot resource-based constrained delegation issues
       href: ./windows-security/troubleshoot-kerberos-rbcd-issues.md
     - name: Troubleshoot SSO issues
       href: ./windows-security/troubleshoot-kerberos-sso-issues.md
