@@ -26,9 +26,12 @@
       "monikers": [],
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "SupportArticles-M365",
@@ -38,9 +41,12 @@
       "monikers": [],
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "SupportArticles-Office",
@@ -50,9 +56,12 @@
       "monikers": [],
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "SupportArticles-Outlook",
@@ -64,7 +73,8 @@
       "type_mapping": {
         "Conceptual": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "SupportArticles-SharePoint",
@@ -86,9 +96,12 @@
       "monikers": [],
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "SupportArticles-Teams",
@@ -98,9 +111,12 @@
       "monikers": [],
       "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "SupportArticles-Viva",
