@@ -27,7 +27,7 @@ The following table lists the warning messages that appear when your agents have
 
 ## Troubleshoot connectivity errors caused by firewalls or VPNs
 
-The following error message may appear when there are issues with your organization's firewall or VPN.
+The following error message might appear when there are issues with your organization's firewall or VPN.
 
 > The connection to the telephony system was lost. We're working on re-establishing the connection.
 
