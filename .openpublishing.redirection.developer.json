@@ -6418,6 +6418,10 @@
     {
       "source_path": "support/windows/win32/navigation-bar-not-update-navigating-shell-namespace-extension-folders.md",
       "redirect_url": "/troubleshoot/windows/win32/welcome-windowsdeveloper"
+    },
+    {
+      "source_path": "support/sql/database-engine/failover-clusters/support-policy-clustered-configurations.md",
+      "redirect_url": "/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server#microsoft-support-policy-for-clustered-configurations-of-sql-server-with-windows-server"
     }
   ]
 }
