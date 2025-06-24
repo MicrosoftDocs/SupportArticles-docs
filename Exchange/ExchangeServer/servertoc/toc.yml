@@ -1,3 +1,4 @@
+items:
 - name: Exchange Server Troubleshooting
   href: ../exchange-server-welcome.yml
   items:
@@ -140,7 +141,7 @@
         - name: MAPI is the only way to change profiles
           href: /outlook/troubleshoot/user-interface/mapi-is-the-only-way-to-change-profiles
         - name: MCDB status is Offline and SSDs aren't formatted
-          href: ../administration/mcdb-status-is-offline-ssds-aren’t-formatted.md
+          href: ../administration/mcdb-status-is-offline-ssds-arent-formatted.md
         - name: MRSProxyConfiguration settings aren't honored
           href: ../administration/mrsproxyconfiguration-settings-not-honored.md
         - name: Multipart/mixed Internet message format

@@ -43,7 +43,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: How to manage .pst files
-            url: ./data-files/how-to-manage-pst-files.md
+            url: /previous-versions/troubleshoot/outlook/how-to-manage-pst-files
           - text: How to repair personal folder file (.pst)
             url: ./data-files/how-to-repair-personal-folder-file.md
           - text: Only some emails are synchronized

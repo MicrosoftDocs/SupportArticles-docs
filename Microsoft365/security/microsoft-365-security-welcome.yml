@@ -23,12 +23,12 @@ landingContent:
           - text: Account security alert email message
             url: ./o365-security/account-security-alert-email.md
           - text: Issue with connect-MSOLService cmdlet
-            url: ./o365-security/access-denied-office-365-azure.md
+            url: /previous-versions/troubleshoot/content-retirement
   # Card
   - title: Antispam
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Sender Rewriting Scheme
-            url: ./antispam/sender-rewriting-scheme.md
+            url: /exchange/reference/sender-rewriting-scheme
             

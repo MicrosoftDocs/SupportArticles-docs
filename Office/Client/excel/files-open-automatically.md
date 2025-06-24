@@ -123,5 +123,5 @@ If you select **Yes** in either message, Excel starts without opening any other 
 
 For more information about Excel startup folders, see the following articles:
 
-- [Use startup folders in Excel](use-startup-folders.md)  
+- [Use startup folders in Excel](/previous-versions/troubleshoot/content-retirement)  
 - [Description of the startup switches for Excel](https://support.microsoft.com/help/291288)

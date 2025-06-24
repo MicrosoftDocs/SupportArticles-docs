@@ -1,3 +1,4 @@
+items:
 - name: Exchange Online Troubleshooting
   href: ../exchange-online-welcome.yml
   items:
@@ -296,7 +297,7 @@
             - name: 550 5.1.1 through 550 5.1.20
               href: ../email-delivery/ndr/fix-error-code-550-5-1-1-through-5-1-20-in-exchange-online.md
             - name: 550 5.1.8 Access denied
-              href: ../email-delivery/ndr/fix-error-code-5-1-8-in-exchange-online.md
+              href: https://support.microsoft.com/topic/e323f21d-4460-4be1-999c-c9c0cc6be4b4
             - name: 550 5.1.10
               href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md
             - name: 550 5.1.10 RESOLVER.ADR.RecipientNotFound
@@ -306,7 +307,7 @@
             - name: 550 5.2.0 RESOLVER.ADR.BadPrimary
               href: ../email-delivery/ndr/badprimary-ndr.md
             - name: 550 5.4.1
-              href: ../email-delivery/ndr/fix-error-code-550-5-4-1-in-exchange-online.md
+              href: https://support.microsoft.com/topic/c0e98a8e-81db-49c2-9bf1-32a1734d3e77
             - name: 550 5.6.0 APPROVAL.InvalidExpiry
               href: ../email-delivery/ndr/550-5-6-0-approval-invalidexpiry-cannot-read-expiry-poilcy-error.md
             - name: 550 5.6.11
@@ -336,7 +337,7 @@
             - name: 550 5.7.136
               href: ../email-delivery/ndr/fix-error-code-5-7-136-in-exchange-online.md
             - name: 550 5.7.700 through 550 5.7.750
-              href: ../email-delivery/ndr/fix-error-code-5-7-700-through-5-7-750.md
+              href: https://support.microsoft.com/topic/f5675801-1846-4d1c-9599-5b4e26a9175d
             - name: 554 4.3.2 mailbox busy
               href: ../email-delivery/ndr/remote-server-returned-mailbox-busy.md
             - name: 554 5.2.0 STOREDRV.Deliver.Exception
@@ -636,7 +637,7 @@
         - name: EWS API can't access Teams data
           href: ../send-emails/ews-not-support-access-teams-data.md
         - name: How to set IIS SMTP for outgoing TLS authentication
-          href: ../send-emails/how-to-set-iis-smtp-for-outgoing-tls-auth.md
+          href: /exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail
         - name: Inline UUEncoded attachments are garbled or unreadable
           href: ../send-emails/inline-uuencoded-attachments-garbled-unreadable.md
         - name: Issues with OOF replies

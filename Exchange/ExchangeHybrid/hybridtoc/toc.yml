@@ -1,3 +1,4 @@
+items:
 - name: Exchange hybrid deployment troubleshooting
   href: ../exchange-hybrid-welcome.yml
   items:
@@ -16,7 +17,7 @@
         - name: Free/busy lookups return hash marks
           href: ../administration/free-busy-lookups-return-hash-marks-in-hybrid.md
         - name: Invalid Product Key when activating
-          href: ../administration/invalid-product-key-error-when-activating-hybrid-edition-of-exchange-2013.md
+          href: /previous-versions/troubleshoot/content-retirement
         - name: Mail user who has proxy addresses isn't synced
           href: ../administration/mail-user-who-has-proxy-addresses-that-use-non-verified-domains-not-synced.md
         - name: Manage Federation Wizard can't roll to a new certificate

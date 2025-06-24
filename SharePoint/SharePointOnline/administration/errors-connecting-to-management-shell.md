@@ -73,6 +73,6 @@ For more information about SharePoint Online Management Shell, see the following
 
 > [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
-> [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](..\security\cannot-force-modern-authentication.md)
+> [Cannot force Modern Authentication when using Connect-SPOService cmdlet in SharePoint Online Management Shell](/previous-versions/troubleshoot/content-retirement)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

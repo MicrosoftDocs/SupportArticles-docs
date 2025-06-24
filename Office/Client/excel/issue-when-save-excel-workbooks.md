@@ -56,7 +56,7 @@ For more information about Microsoft Excel safe mode, press **F1** in Excel to o
 
 For more information about how to determine the folders that Excel uses during startup, and additional options to disable this functionality, see the following articles:
 
-- [Use startup folders in Excel](use-startup-folders.md)
+- [Use startup folders in Excel](/previous-versions/troubleshoot/content-retirement)
 - [How to prevent files from opening automatically in Excel](files-open-automatically.md)
 
 ## [Permissions](#tab/restricted)

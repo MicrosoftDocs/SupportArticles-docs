@@ -1,4 +1,5 @@
-﻿- name: Microsoft 365 Administration Troubleshooting
+﻿items:
+- name: Microsoft 365 Administration Troubleshooting
   href: ../o365-admin-welcome.yml
   items:
   - name: Access Management
@@ -92,7 +93,7 @@
   - name: Installation
     items:
     - name: Can't start this app when installing an add-in
-      href: ../installation/cannot-install-office-add-in.md
+      href: /microsoft-365/troubleshoot/installation/cannot-install-office-add-in
     - name: Error when uninstalling Microsoft 365 Pro Plus
       href: ../installation/something-went-wrong-30016-4-error.md
   - name: Miscellaneous

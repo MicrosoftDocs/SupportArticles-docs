@@ -30,7 +30,7 @@ Before your password changed, you saved your credentials. The stored credentials
 
 ## Resolution
 
-To resolve this problem, install the latest update for Outlook 2010 or Outlook 2013. For more information about the latest updates for Microsoft Outlook, see [How to install the latest applicable updates for Microsoft Outlook (US English only)](../deployment/install-outlook-latest-updates.md).
+To resolve this problem, install the latest update for Outlook 2010 or Outlook 2013. For more information about the latest updates for Microsoft Outlook, see [How to install the latest applicable updates for Microsoft Outlook (US English only)](/outlook/troubleshoot/installation/install-outlook-latest-updates).
 
 ## Workaround
 
@@ -47,4 +47,4 @@ If you are unable to install the latest update for Outlook 2010 or Outlook 2013,
 
 ## More Information
 
-If your administrator uses the Microsoft Office Group Policy templates, they may configure Outlook not to save Basic Authentication credentials. If they do this, the **Remember my credentials** option is still available in the password prompt, but has no effect when you enable it. For more information about the effect of this policy setting, see [Policy to prevent Outlook from saving basic authentication credentials seems not to work](prevent-saving-credentials.md).
+If your administrator uses the Microsoft Office Group Policy templates, they may configure Outlook not to save Basic Authentication credentials. If they do this, the **Remember my credentials** option is still available in the password prompt, but has no effect when you enable it. For more information about the effect of this policy setting, see [Policy to prevent Outlook from saving basic authentication credentials seems not to work](/previous-versions/troubleshoot/outlook/prevent-saving-credentials).

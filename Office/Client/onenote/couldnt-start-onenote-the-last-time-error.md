@@ -130,6 +130,6 @@ Reference: [Deployment guide for OneNote](/deployoffice/deployment-guide-onenote
 - [What's new in OneNote for Windows 10](https://support.office.com/article/what-s-new-in-onenote-for-windows-10-1477d5de-f4fd-4943-b18a-ff17091161ea?ui=en-US&rs=en-US&ad=US)
 - [What's the difference between OneNote and OneNote 2016?](https://support.office.com/article/what-s-the-difference-between-onenote-and-onenote-2016-a624e692-b78b-4c09-b07f-46181958118f?ui=en-US&rs=en-IN&ad=IN)
 - [Get started with OneNote](https://support.office.com/article/get-started-with-onenote-e768fafa-8f9b-4eac-8600-65aa10b2fe97?ui=en-US&rs=en-US&ad=US)
-- [How to locate your OneNote notebooks](locate-onenote-notebooks.md)
+- [How to locate your OneNote notebooks](https://support.microsoft.com/office/32cb2bd7-afe7-44d2-a711-398a88421287)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

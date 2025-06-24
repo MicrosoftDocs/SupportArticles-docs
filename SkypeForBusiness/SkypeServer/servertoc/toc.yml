@@ -1,3 +1,4 @@
+items:
 - name: Skype for Business Server Troubleshooting
   href: ../skype-server-welcome.yml
   items:
@@ -24,7 +25,7 @@
   - name: Configuration
     items:
     - name: '"Set Your Location" field is unavailable'
-      href: ../../SkypeOnline/online-configuration/cant-set-location-in-lync.md?toc=/SkypeforBusiness/troubleshoot/servertoc/toc.json&bc=/SkypeforBusiness/troubleshoot/breadcrumb/toc.json
+      href: /skypeforbusiness/troubleshoot/sfbonline-end-of-support?toc=/SkypeforBusiness/troubleshoot/servertoc/toc.json&bc=/SkypeforBusiness/troubleshoot/breadcrumb/toc.json
     - name: Access Edge service fails to start 
       href: ../server-configuration/lync-server-2013-access-edge-service-not-start.md
     - name: Access edge services can't negotiate TLS connection 
@@ -218,4 +219,4 @@
     - name: Sign-in error when creating or joining a meeting
       href: ../server-sign-in/create-join-meeting-sign-in-error.md
     - name: Troubleshoot issues related to Skype for Business sign-in
-      href: ../../SkypeOnline/online-sign-in/troubleshoot-issues-related-skype-for-business-sign-in.md?toc=/SkypeforBusiness/troubleshoot/servertoc/toc.json&bc=/SkypeforBusiness/troubleshoot/breadcrumb/toc.json
+      href: /skypeforbusiness/troubleshoot/sfbonline-end-of-support?toc=/SkypeforBusiness/troubleshoot/servertoc/toc.json&bc=/SkypeforBusiness/troubleshoot/breadcrumb/toc.json

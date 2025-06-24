@@ -34,7 +34,7 @@ landingContent:
           - text: 0xC004F038 computer couldn't be activated in KMS
             url: ./administration/0xc004f038-computer-not-activate.md
           - text: Can't check in files when LAN doesn't have Internet
-            url: ./administration/cannot-check-in-files-when-lan-does-not-have-internet.md
+            url: /previous-versions/troubleshoot/content-retirement
           - text: Can't open file from recently used document list
             url: ./administration/cant-open-files-most-recently-used-list.md
 
@@ -43,9 +43,9 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Office not renders DUO API multifactor authentication sign-in page
-            url: ./authentication/not-render-a-custom-duo-api-multi-factor-authentication-login-page.md
+            url: /previous-versions/troubleshoot/content-retirement
           - text: HTML sign-in page not renders correctly in Office
-            url: ./authentication/custom-html-login-page-not-render-correctly.md
+            url: /previous-versions/troubleshoot/content-retirement
 
   - title: Diagnostic Logs
     linkLists:
@@ -54,7 +54,7 @@ landingContent:
           - text: Enable Microsoft 365 Apps for enterprise ULS logging
             url: ./diagnostic-logs/how-to-enable-office-365-proplus-uls-logging.md
           - text: Office Lens icons display incorrectly 
-            url: ./diagnostic-logs/office-lens-icons-incorrectly-display.md
+            url: /previous-versions/troubleshoot/content-retirement
 
   - title: Excel
     linkLists:
@@ -72,6 +72,6 @@ landingContent:
           - text: Automate the update uninstallation for Office 
             url: ./installation/automate-uninstall-office-update.md
           - text: Deploy Online Server to security hardened drives
-            url: ./installation/deploy-office-online-server-to-security-hardened-drive.md
+            url: /previous-versions/troubleshoot/content-retirement
           - text: Install a second KMS host for Office
             url: ./installation/guidance-on-installing-a-second-kms-host-for-office.md

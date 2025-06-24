@@ -39,4 +39,4 @@ To work around this problem, select the **Use the cache format that is compatibl
 
 ## More Information
 
-For more information about known issues that occur when you use SharePoint lists in Access, see [Access cache formats for SharePoint lists and document libraries](access-cache-formats.md).
+For more information about known issues that occur when you use SharePoint lists in Access, see [Access cache formats for SharePoint lists and document libraries](/previous-versions/troubleshoot/content-retirement).

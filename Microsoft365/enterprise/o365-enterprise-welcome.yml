@@ -23,7 +23,7 @@ landingContent:
           - text: COM and .NET errors after Office architecture migration
             url: ./administration/com-net-errors-after-migration.md
           - text: Can't insert scriptable ActiveX controls
-            url: ./administration/insert-scriptable-activex-control.md
+            url: /previous-versions/troubleshoot/content-retirement
 
   - title: Enterprise version of Microsoft Support and Recovery Assistant
     linkLists:
@@ -41,24 +41,24 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: '"Invalid provider specified" with using Office 2016'
-            url: ./authentication/invalid-provider-specified-error.md
+            url: /previous-versions/troubleshoot/content-retirement
           - text: Can't sign in Microsoft 365 from multiple federated domains
-            url: ./authentication//cant-sign-in-office-365-multiple-domain-federation.md
+            url: /previous-versions/troubleshoot/microsoft-365/enterprise/cant-sign-in-office-365-multiple-domain-federation
 
   - title: Miscellaneous
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Can't find or insert any clip art
-            url: ./miscellaneous/cannot-find-any-clip art.md
+            url: /microsoft-365/troubleshoot/miscellaneous/cannot-find-any-clip art
 
   - title: Project Online
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Can't access newly purchased project online with license
-            url: ./project-online/cant-access-newly-purchased-project-online.md
+            url: /microsoft-365/troubleshoot/project-online/cant-access-newly-purchased-project-online
           - text: Can't connect to Project Online OData from SSIS
-            url: ./project-online/cant-connect-project-online-odata-from-ssis.md
+            url: /microsoft-365/troubleshoot/project-online/cant-connect-project-online-odata-from-ssis
           - text: Can't save a project to Project Web App
-            url: ./project-online/cant-save-project-client-to-web-app.md
+            url: /microsoft-365/troubleshoot/project-online/cant-save-project-client-to-web-app

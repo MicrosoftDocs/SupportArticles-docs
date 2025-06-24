@@ -1,4 +1,5 @@
-﻿- name: Office Products Troubleshooting
+﻿items:
+- name: Office Products Troubleshooting
   href: ../office-client-welcome.yml
   items:
     - name: Access
@@ -238,9 +239,9 @@
     - name: End of Support
       items:
         - name: Office 2007 has reached end of extended support
-          href: ../support/office-2007-not-support.md
+          href: /lifecycle/announcements/office-2007-end-of-support
         - name: Support for 2013 versions of Microsoft 365 Apps for enterprise ends
-          href: ../support/2013-versions-of-office-365.md
+          href: /lifecycle/announcements/office-365-2013-versions-ended-support
     - name: Excel
       items:
         - name: 'A formula returns "#VALUE!" Error'

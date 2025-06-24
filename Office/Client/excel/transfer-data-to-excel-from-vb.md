@@ -370,7 +370,7 @@ For more information, see the following article:
 
 [You cannot change, add, or delete data in tables that are linked to an Excel workbook in Office Access 2003 or in Access 2002](https://support.microsoft.com/help/904953)
 
-For more information about using ADO to access an Excel workbook, see [How To Query and Update Excel Data Using ADO From ASP](query-update-data.md).
+For more information about using ADO to access an Excel workbook, see [How To Query and Update Excel Data Using ADO From ASP](/previous-versions/troubleshoot/content-retirement).
 
 #### Use DDE to transfer data to Excel
 

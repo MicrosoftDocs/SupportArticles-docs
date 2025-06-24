@@ -46,7 +46,7 @@ These issues can occur for the following reasons:
   
 - The Terms of Use (ToU) and MFA Conditional Access policies, if both are used
 
-  For more information, see [Known issues with Teams phones](rooms-known-issues.md#issues-with-teams-phones).
+  For more information, see [Known issues with Teams phones](/microsoftteams/troubleshoot/teams-rooms-and-devices/rooms-known-issues#issues-with-teams-phones).
 
 ## Resolution
 
@@ -121,5 +121,5 @@ The following screenshot shows a sample device filter.
 - [App protection policies overview](/mem/intune/apps/app-protection-policy#microsoft-teams-android-devices)
 - [Conditional Access and compliance best practices for Microsoft Teams Rooms](/microsoftteams/rooms/conditional-access-and-compliance-for-devices)
 - [Authentication best practices for Microsoft Teams shared device management of Android devices](/MicrosoftTeams/devices/authentication-best-practices-for-android-devices#using-filters-for-devices)
-- [Known issues in Teams Rooms and devices](rooms-known-issues.md#issues-with-teams-phones)
+- [Known issues in Teams Rooms and devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/rooms-known-issues#issues-with-teams-phones)
 - [Video: Intune Compliance & Conditional Access with Teams Android devices](https://www.youtube.com/watch?v=uTQR_YuWZag)

@@ -32,9 +32,9 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Dial pad is missing
-            url: ./teams-conferencing/no-dial-pad.md
+            url: /microsoftteams/dial-pad-configuration
           - text: Give Control doesn't work
-            url: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
+            url: ./teams-conferencing/give-control-doesnt-work-sharescreen.md
  # Card
   - title: IM and presence
     linkLists:
@@ -54,7 +54,7 @@ landingContent:
           - text: Collect Android Teams device logs
             url: ./teams-rooms-and-devices/collect-device-logs.md
           - text: Known issues
-            url: ./teams-rooms-and-devices/rooms-known-issues.md
+            url: /microsoftteams/troubleshoot/teams-rooms-and-devices/rooms-known-issues
           - text: Signed out of Teams Android devices
             url: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md          
  # Card

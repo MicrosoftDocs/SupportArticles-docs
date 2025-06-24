@@ -21,7 +21,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Outlook for Mac compatibility with Apple iCloud
-            url: ./account/outlook-for-mac-compatibility-with-apple-icloud.md
+            url: /previous-versions/troubleshoot/content-retirement
 
   - title: Attachments
     linkLists:
@@ -35,7 +35,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Manage the Google sign-in prompt
-            url: ./authentication/manage-the-google-sign-in-prompt-in-outlook-2016.md
+            url: /microsoft-365-apps/outlook/authentication/manage-google-sign-in-prompt
 
   - title: Calendars
     linkLists:

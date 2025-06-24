@@ -55,4 +55,4 @@ In most lock conflict situations, you receive a generic "Write conflict" message
 > [!NOTE]
 > The state of the information in the lock file has no bearing on the state of the database. If a lock file becomes corrupted, everything in the database should still work correctly. However, you may see scrambled text instead of user names in any lock conflict messages.
 
-With Microsoft Visual Basic for Applications, you can output a list of users who are logged into a specific database. For more information about how to do this and sample code, see [How to determine who is logged on to a database by using Microsoft Jet UserRoster in Access](determine-who-is-logged-on-to-database.md).
+With Microsoft Visual Basic for Applications, you can output a list of users who are logged into a specific database. For more information about how to do this and sample code, see [How to determine who is logged on to a database by using Microsoft Jet UserRoster in Access](/previous-versions/troubleshoot/content-retirement).

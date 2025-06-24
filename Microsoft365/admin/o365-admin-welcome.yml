@@ -23,7 +23,7 @@ landingContent:
           - text: Adding guest users in the M365 admin center
             url: ./access-management/cannot-add-guest-users-in-m365-admin-center.md
           - text: '"Application configuration incomplete" error'
-            url: ./access-management/error-run-office-365-desktop-setup-tool.md
+            url: /microsoft-365/troubleshoot/access-management/error-run-office-365-desktop-setup-tool
           - text: Can't open an IRM-protected document with sign-in prompts
             url: ./access-management/cannot-open-irm-protected-document.md
 
@@ -43,7 +43,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: 80041317 or 80043431 during sign-in
-            url: ./authentication/office-365-sign-in-error-80041317-80043431.md
+            url: /previous-versions/troubleshoot/microsoft-365/admin/office-365-sign-in-error-80041317-80043431
           - text: 8004789A when signing in to Microsoft 365
             url: ./authentication/federated-user-sign-in-to-office-365.md
           - text: 80048163 when federated user tries to sign in
@@ -54,31 +54,31 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Collect a Network Monitor trace in Microsoft 365
-            url: ./diagnostic-logs/collect-network-monitor-trace.md
+            url: /microsoft-365/troubleshoot/diagnostic-logs/collect-network-monitor-trace
           - text: Diagnostic log collection in Support and Recovery Assistant
-            url: ./diagnostic-logs/diagnostic-log-collection-in-support-and-recovery-assistant.md
+            url: /microsoft-365/troubleshoot/administration/diagnostic-log-collection-in-support-and-recovery-assistant
           - text: Enable O365 ProPlus ULS logging
-            url: ./diagnostic-logs/collect-office-diagnostic-logs.md
+            url: /office/troubleshoot/office-suite-issues/collect-office-diagnostic-logs
 
   - title: Domain Management
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: '"Add domain" option is missing'
-            url: ./administration/add-domain-option-missing.md
+            url: /previous-versions/troubleshoot/content-retirement
           - text: '"Cannot continue" error when starting Desktop Setup Tool'
-            url: ./administration/error-when-start-desktop-setup-tool.md
+            url: /previous-versions/troubleshoot/content-retirement
           - text: '"Remove" link is unavailable'
-            url: ./administration/remove-domain-link-unavailable.md
+            url: /previous-versions/troubleshoot/microsoft-365/admin/remove-domain-link-unavailable
 
   - title: Group Policy
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Block OneDrive use from Office
-            url: ./group-policy/block-onedrive-use-from-office.md
+            url: /microsoft-365/troubleshoot/group-policy/block-onedrive-use-from-office
           - text: Configure default email client using policy
             url: ./group-policy/configure-email-client-using-policy.md
           - text: No Add-ins loaded due to group policy settings 
-            url: ./group-policy/office-add-in-not-loaded.md
+            url: /microsoft-365/troubleshoot/group-policy/office-add-in-not-loaded
 

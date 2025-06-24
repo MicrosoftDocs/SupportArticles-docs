@@ -32,7 +32,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Error "Do you want to download the converter?"
-            url: ./office-suite-issues/error-do-you-want-download-converter.md
+            url: https://support.microsoft.com/office/end-of-support-for-office-2010-3a3e45de-51ac-4944-b2ba-c2e415432789
           - text: Another account is already signed in
             url: ./office-suite-issues/another-account-already-signed-in.md
           - text: Error "could not create the work file"
@@ -43,7 +43,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Formulas to count text occurrences
-            url: ./excel/formulas-to-count-occurrences-in-excel.md
+            url: /previous-versions/troubleshoot/content-retirement
           - text: Issue when saving workbooks
             url: ./excel/issue-when-save-excel-workbooks.md
           - text: Excel opening blank
