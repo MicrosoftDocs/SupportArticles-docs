@@ -89,6 +89,18 @@
         "Conceptual": "Content"
       },
       "build_entry_point": "docs"
+    },
+    {
+      "docset_name": "SupportArticles-Teams",
+      "build_source_folder": "Teams",
+      "build_output_subfolder": "SupportArticles-Teams",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
     }
   ],
   "notification_subscribers": [
