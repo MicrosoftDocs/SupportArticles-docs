@@ -261,6 +261,8 @@
       href: ./teams-rooms-and-devices/collect-device-logs.md
     - name: Conditional Access-related issues on Teams Android devices
       href: ./teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md
+    - name: Create a support request for Teams device issues
+      href: ./teams-rooms-and-devices/create-support-request-teams-device-issues.md
     - name: Known issues with Teams Rooms on Android
       href: ./teams-rooms-and-devices/teams-rooms-known-issues-android.md
     - name: Known issues with Teams Rooms on Windows
