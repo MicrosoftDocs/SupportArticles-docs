@@ -166,6 +166,8 @@
       href: procurement/post-setting-turned-off.md
     - name: Unit prices on purchase orders aren't calculated based on the unit conversion
       href: procurement/po-unit-prices-not-calculated.md
+    - name: Workflow approval fails with "Accounting distribution validation failed"
+      href: procurement/po-workflow-accounting-distribution.md
     - name: You can only complete a purchase order action for fully distributed line numbers
       href: procurement/action-requires-full-distribution.md
     - name: You can't add the Price unit field to the Purchase agreement page
