@@ -43,7 +43,7 @@ To create a support request, follow these steps:
 
    - In the [Microsoft Teams Rooms Pro Management Portal](https://portal.rooms.microsoft.com/), select **Contact support** in the upper-right corner of the page.
    - In the [Microsoft 365 admin center](https://admin.microsoft.com/), select **Help** in the upper-right corner of the page.
-   - In the [Microsoft Teams admin center](https://go.microsoft.com/fwlink/?linkid=867439), select **Help** in the upper-right corner of the page.
+   - In the [Microsoft Teams admin center](https://admin.teams.microsoft.com/), select **Help** in the upper-right corner of the page.
 1. In the text box under **How can we help**, enter your question, and then select **Search**.
 1. Review the suggested topics. If the results aren't helpful, select **Contact support**.
 1. Select a contact method.
