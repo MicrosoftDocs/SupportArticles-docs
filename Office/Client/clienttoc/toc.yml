@@ -287,7 +287,7 @@
         - name: Dsum and Dcount functions not working
           href: ../excel/dsum-and-dcount-not-work-with-pivottables.md
         - name: Error when saving a file
-          href: ../excel/error-saving-file.md
+          href: /office/troubleshoot/excel/issue-when-save-excel-workbooks?tabs=file-name-lengtherror-saving-file.md
         - name: Error when sending commands in Excel
           href: ../excel/error-when-send-commands-in-excel.md
         - name: Error when you copy formulas over large area
