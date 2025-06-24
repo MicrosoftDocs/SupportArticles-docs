@@ -2,7 +2,7 @@
 title: Unable to Cancel a Budget-Enabled Purchase Order in a Closed Period
 description: Describes a workaround for canceling or modifying a budget-controlled purchase order when the accounting period is closed in Microsoft Dynamics 365 Supply Chain Management.
 ms.reviewer: shubhamshr, ashuaggarwal
-ms.date: 06/23/2025
+ms.date: 06/24/2025
 ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
 # Can't cancel a purchase order governed by budget within a closed period
