@@ -29,6 +29,18 @@
         "Conceptual": "Content"
       },
       "build_entry_point": "docs"
+    },
+    {
+      "docset_name": "SupportArticles-M365",
+      "build_source_folder": "Microsoft365",
+      "build_output_subfolder": "SupportArticles-M365",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
     }
   ],
   "notification_subscribers": [
