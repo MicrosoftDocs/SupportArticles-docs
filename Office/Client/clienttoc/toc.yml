@@ -173,6 +173,8 @@
           href: ../activation/connection-issue-when-sign-in-office-2016.md
         - name: Disabling ADAL or WAM not supported for fixing sign-in or activation issues
           href: ../activation/disabling-adal-wam-not-recommended.md
+        - name: Error code 80070520, -2147023584, or 2147943712 when signing in to Microsoft 365 apps
+          href: ../activation/error-80070520-sign-in-microsoft-365-apps.md
         - name: Errors activating Microsoft 365 on older Windows versions
           href: ../activation/errors-activating-on-older-windows.md
         - name: Office activation process issues
