@@ -144,15 +144,20 @@ If the `Ingress` lacks an address or displays events that indicate issues, inves
 
 2. **Inspect the logs**:
 
-    ```console
+     ```console
     kubectl logs <INGRESS_POD_NAME> -n <YOUR_NAMESPACE>
+    ```
+   For the AGIC that is deployed by using the add-on, run the following command:
+    
+    ```console
+   kubectl logs -n kube-system -l=app=ingress-appgw
     ```
 
 Look for any errors or warnings that might indicate what's going wrong.
 
 ## Step 4: Check Application Gateway operational State
 
-This step focuses on understanding the operational state of the [Application Gateway](/azure/application-gateway/overview) if it's used as an [Ingress Controller on AKS](/azure/application-gateway/ingress-controller-overview).
+This step only applies to AGIC that is deployed by using the add-on. It focuses on understanding the operational state of the [Application Gateway](/azure/application-gateway/overview) if it's used as an [Ingress Controller on AKS](/azure/application-gateway/ingress-controller-overview).
 
 1. **Get the Application Gateway name**:
 
