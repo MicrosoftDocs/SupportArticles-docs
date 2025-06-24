@@ -1,0 +1,339 @@
+- name: Teams Troubleshooting
+  href: teams-welcome.yml
+  items:
+  - name: Administration
+    items:
+    - name: '"FAILED_TO_AUTO_DISCOVER_DOMAIN" error in admin center'
+      href: ./teams-administration/failed-to-auto-discover-domain-error-teams-admin-center.md
+    - name: "\"We couldn't add member\" error when adding users"
+      href: ./teams-administration/couldnt-add-member-error.md
+    - name: Can't access Teams Premium features
+      href: ./teams-administration/cannot-access-teams-premium-features.md
+    - name: Clear the Teams client cache
+      href: ./teams-administration/clear-teams-cache.md
+    - name: Disable SharePoint News notifications in Teams
+      href: ./teams-administration/disable-sharepoint-news-notifications.md
+    - name: Error switching a tenant to Teams Only mode
+      href: ./teams-administration/cannot-switch-to-teams-only-mode.md
+    - name: Issues receiving messages and calls
+      href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
+    - name: Prevent antivirus and DLP tools from blocking or crashing Microsoft Teams
+      href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
+    - name: Resolve issues when starting the new Teams app
+      href: ./teams-sign-in/resolve-new-teams-launch-issues.md
+    - name: Resolve new Teams installation issues
+      href: ./teams-administration/fix-new-teams-installation-issues.md     
+    - name: Self-help diagnostics for Teams admins
+      href: ./teams-administration/admin-self-help-diagnostics.md
+    - name: Teams Client Health
+      items:
+      - name: Resolve Teams client crash issues
+        href: ./teams-administration/resolve-teams-client-crash-issues.md
+      - name: Resolve Teams client launch failures
+        href: ./teams-administration/resolve-teams-client-launch-failures.md
+      - name: Resolve Teams client update failures
+        href: ./teams-administration/resolve-teams-client-update-failures.md
+      - name: '"Root cause undetermined" for Teams client update failure'
+        href: ./teams-administration/root-cause-undetermined-teams-update-failure.md
+    - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
+      href: ./teams-administration/following-application-instance-not-present-error.md
+    - name: Troubleshoot connectivity issues
+      href: /microsoftteams/connectivity-issues?context=/MicrosoftTeams/troubleshoot/context/context
+    - name: Troubleshoot installation and update issues of classic Teams
+      href: /microsoftteams/troubleshoot-installation?context=/MicrosoftTeams/troubleshoot/context/context
+    - name: User information isn't updated
+      href: ./teams-administration/user-information-not-updated.md
+  - name: Authentication
+    items:
+    - name: Always log into the domain-joined PC account
+      href: ./authentication/teams-defaults-to-domain-joined-account.md
+    - name: Stops working when joining from Microsoft Edge or Internet Explorer 
+      href: ./authentication/teams-stops-working-when-joining-from-edge.md
+  - name: Channels
+    items:
+    - name: A channel can't be recreated after deletion
+      href: ./channels/channel-cannot-be-recreated-after-deletion.md
+    - name: Logon re-enabled user doesn't see previous joined teams
+      href: ./channels/logon-reenabled-user-not-see-previous-joined-teams.md
+  - name: Conferencing
+    items:
+    - name: '"You need a phone system license" error when assigning a toll service number from the admin center'
+      href: ./teams-conferencing/need-a-license-error-when-assigning-a-number.md
+    - name: CVI information doesn't autopopulate in a Meet Now instance 
+      href: ./teams-conferencing/cvi-info-does-not-populate-in-meet-now.md
+    - name: Dialing out requires five or more digits 
+      href: ./teams-conferencing/teams-call-requires-five-or-more-digits.md
+    - name: Give Control doesn't work
+      href: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
+    - name: Organizer can't start Outlook meeting and stuck in virtual lobby
+      href: ./teams-conferencing/organizer-cant-start-teams-meeting.md
+    - name: PSTN callers with the same "From" number are shown as the same user
+      href: ./teams-conferencing/pstn-callers-shown-with-same-call-in-number.md
+    - name: Skype for Business broadcasts a dial tone
+      href: /skypeforbusiness/troubleshoot/server-conferencing/sfb-play-dial-tone-teams-call?context=/MicrosoftTeams/troubleshoot/context/context
+    - name: Skype for Business required for some meetings instead of Teams
+      href: ./teams-conferencing/meeting-requires-skype-instead-of-teams.md
+    - name: Static conference ID not supported for Teams meetings
+      href: ./teams-conferencing/static-conference-id-not-supported.md
+    - name: Meetings are unavailable 
+      href: ./teams-conferencing/teams-meetings-not-available.md
+    - name: Teams is slow during video meetings on laptops docked to 4K/HDR monitors
+      href: ./teams-conferencing/teams-slow-video-meetings-laptops-4k.md    
+  - name: Contacts
+    items:
+    - name: User appears as Unknown User in Teams
+      href: ./contacts/unknown-user-teams.md
+  - name: Exchange integration
+    items:
+    - name: External federated contacts don't appear in Teams search
+      href: ./exchange-integration/external-contacts-not-in-search.md
+    - name: Teams and Exchange interaction issues
+      href: ./exchange-integration/teams-exchange-interaction-issue.md
+  - name: Files
+    items:
+    - name: Error 404 when accessing the OneDrive app in Teams
+      href: ./files/404-error-access-onedrive-teams.md
+    - name: Error uploading files to chats
+      href: ./files/cannot-upload-files-or-access-onedrive.md
+    - name: Error when selecting Files tab
+      href: ./files/access-files-tab-errors.md
+    - name: Can't open files in a chat window
+      href: ./files/do-not-have-access-to-this-file-teams.md
+    - name: Can't share files in a large group chat or meeting chat
+      href: ./files/cannot-share-files-in-large-chat.md  
+    - name: Desktop app option is missing
+      href: ./files/desktop-app-option-missing.md
+    - name: Guest user can't access Files tab
+      href: ./files/guests-cannot-access-files.md   
+  - name: Forms
+    items:
+    - name: Can't send or respond a poll
+      href: ./forms/cannot-send-poll.md
+  - name: IM and Presence
+    items:
+    - name: A contact's presence is unknown
+      href: ./teams-im-presence/contact-presence-status-unknown.md
+    - name: Actual presence status isn't displayed
+      href: ./teams-im-presence/presence-not-show-actual-status.md
+    - name: Can't send message to Skype for Business
+      href: ./teams-im-presence/teams-user-not-send-message-in-sfb.md
+    - name: Deleted messages with an @ mention send notifications with a channel link
+      href: ./teams-im-presence/deleted-messages-send-notifications-with-link.md
+    - name: Issues with presence status in Outlook
+      href: ./teams-im-presence/issues-with-presence-in-outlook.md
+    - name: Messages are unexpectedly deleted by retention policies
+      href: ./teams-im-presence/messages-unexpectedly-deleted-retention-policy.md 
+  - name: Meetings
+    items:
+    - name: Can't join a Teams meeting through PSTN dial-in or CVI-enabled devices
+      href: ./meetings/cannot-join-cvi-pstn-meeting.md
+    - name: External participants are blocked from joining meetings
+      href: ./meetings/external-participants-join-meeting-blocked.md
+    - name: External users appear as Unknown
+      href: ./meetings/external-user-shown-as-unknown.md
+    - name: Fix video display lag 
+      href: ./meetings/fix-choppy-video.md            
+    - name: Issues with meeting chat
+      href: ./meetings/meeting-chat-issues.md
+    - name: Issues with meeting recordings
+      href: ./meetings/troubleshoot-meeting-recording-issues.md
+    - name: Issues with webinars
+      href: ./meetings/issues-with-webinars.md
+    - name: Known issues when using Teams certified peripherals
+      href: ./meetings/known-issues-teams-certified-peripherals.md
+    - name: New Teams desktop app fails to render video
+      href: ./meetings/new-teams-desktop-app-fail-render-video.md
+    - name: Resolve Teams Meeting add-in issues
+      href: ./meetings/resolve-teams-meeting-add-in-issues.md
+    - name: Teams meeting add-in is missing
+      href: ./meetings/teams-meeting-add-in-missing.md
+    - name: Teams meeting features for shared mailboxes
+      href: ./meetings/teams-meeting-with-shared-mailboxes.md
+  - name: Mobile
+    items:
+    - name: A website with Conditional Access doesn't display when viewed on the Website tab 
+      href: ./mobile/websites-with-conditional-access-dont-display.md
+    - name: Can't see autofavorited channels in mobile app
+      href: ./mobile/cant-see-auto-favorited-channels-in-mobile.md
+    - name: Settings for Teams calls with Apple CarPlay
+      href: ./mobile/settings-teams-calls-carplay.md
+  - name: OneNote Integration
+    items:
+    - name: Issue with accessing notebooks
+      href: ./teams-onenote-integration/issue-access-notebook.md
+    - name: Temporary change to file size download limit in OneNote
+      href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?context=/MicrosoftTeams/troubleshoot/context/context
+  - name: Phone System
+    items:
+    - name: Issues when using SIP devices
+      href: ./phone-system/sip-gateway-issues.md
+    - name: Dial Plans
+      items: 
+      - name: Errors when trying to manage dial plans
+        href: ./phone-system/dial-plans/errors-managing-dial-plans.md
+    - name: Direct Routing
+      items:
+      - name: Diagnose issues that affect Direct Routing
+        href: ./phone-system/direct-routing/diagnose-direct-routing-issues.md
+      - name: Issues with call transfers
+        href: ./phone-system/direct-routing/issues-with-call-transfers.md
+      - name: Issues with inbound calls
+        href: ./phone-system/direct-routing/issues-with-inbound-calls.md
+      - name: Issues with LMO
+        href: ./phone-system/direct-routing/issues-with-lmo.md
+      - name: Issues with outbound calls
+        href: ./phone-system/direct-routing/issues-with-outbound-calls.md
+      - name: Issues with SBC connectivity
+        href: ./phone-system/direct-routing/sip-options-tls-certificate-issues.md
+      - name: Microsoft and SIP response codes
+        items:
+        - name: Microsoft and SIP response codes
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes.md
+        - name: SIP response code 400
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-400.md
+        - name: SIP response code 402
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-402.md
+        - name: SIP response code 403
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-403.md
+        - name: SIP response code 404
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-404.md
+        - name: SIP response code 408
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-408.md
+        - name: SIP response code 410
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-410.md
+        - name: SIP response code 412
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-412.md
+        - name: SIP response code 420
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-420.md
+        - name: SIP response code 480
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-480.md
+        - name: SIP response code 484
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-484.md
+        - name: SIP response code 486
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-486.md
+        - name: SIP response code 488
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-488.md
+        - name: SIP response code 500
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-500.md
+        - name: SIP response code 503
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-503.md
+        - name: SIP response code 504
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-504.md
+  - name: Provisioning
+    items:
+    - name: Can't create a team 
+      href: ./provisioning/users-cant-create-team.md
+    - name: Deleting a team also deletes the group associated with it
+      href: ./provisioning/deleting-team-also-deletes-group.md
+  - name: Sign-in
+    items:
+    - name: Resolve sign-in errors
+      href: ./teams-sign-in/resolve-sign-in-errors.md
+    - name: Someone has already setup Teams for your organization
+      href: ./teams-sign-in/someone-has-already-setup-teams.md
+    - name: Teams doesn't automatically update
+      href: ./teams-sign-in/teams-doesnt-automatically-update.md
+    - name: Teams doesn't load
+      href: ./teams-sign-in/sign-in-loop.md      
+    - name: Teams starts with a white screen
+      href: ./teams-sign-in/symlink-or-drivemap-causes-white-screen.md
+    - name: Error "You're missing out" during sign-in
+      href: ./teams-sign-in/error-missing-out-sign-in-teams.md
+  - name: Sites
+    items:
+    - name: Websites aren't viewable
+      href: ./sites/cannot-view-website-teams-web-client.md
+    - name: '"This site cant be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
+      href: /sharepoint/troubleshoot/sites/err-invalid-response-accessing-sharepoint-site?context=/MicrosoftTeams/troubleshoot/context/context
+  - name: Tabs
+    items:
+    - name: Owner can't create Planner tab
+      href: ./tabs/teams-owner-cannot-create-planner-tab.md
+    - name: Tabs not working after enabling Conditional Access
+      href: ./tabs/tabs-dont-work-after-enabling-conditional-access.md
+    - name: Websites don't load in the new Teams desktop client
+      href: ./tabs/websites-not-loaded-new-teams.md
+  - name: Teams Rooms and devices
+    items:
+    - name: Certified Android devices get signed out of Teams
+      href: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md
+    - name: Collect Android Teams device logs
+      href: ./teams-rooms-and-devices/collect-device-logs.md
+    - name: Conditional Access-related issues on Teams Android devices
+      href: ./teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md
+    - name: Create a support request for Teams device issues
+      href: ./teams-rooms-and-devices/create-support-request-teams-device-issues.md
+    - name: Known issues with Teams Rooms on Android
+      href: ./teams-rooms-and-devices/teams-rooms-known-issues-android.md
+    - name: Known issues with Teams Rooms on Windows
+      href: ./teams-rooms-and-devices/teams-rooms-known-issues-windows.md
+    - name: On-screen keyboard size is reduced on some devices
+      href: ./teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced.md
+    - name: Teams Rooms app doesn't start automatically after updates
+      href: ./teams-rooms-and-devices/teams-rooms-not-auto-start-after-windows-updates.md
+    - name: Teams Rooms devices can't fetch calendar
+      href: ./teams-rooms-and-devices/mtr-device-cannot-fetch-calendar.md
+    - name: Teams Rooms Pro Management
+      items:
+      - name: Get support for Teams Rooms Pro Management
+        href: ./teams-rooms-and-devices/get-support-teams-rooms-pro-management.md
+      - name: Black or blank screen or no system response
+        href: ./teams-rooms-and-devices/black-blank-screen.md
+      - name: Bluetooth disabled status is Unhealthy
+        href: ./teams-rooms-and-devices/bluetooth-disabled-status-unhealthy.md
+      - name: Camera status is unhealthy
+        href: ./teams-rooms-and-devices/camera-status-unhealthy.md
+      - name: CPU performance limited status is Unhealthy
+        href: ./teams-rooms-and-devices/cpu-performance-limited-status-unhealthy.md
+      - name: Default Credentials status is unhealthy
+        href: ./teams-rooms-and-devices/default-credentials-status-unhealthy.md
+      - name: Disk Space status is unhealthy
+        href: ./teams-rooms-and-devices/disk-space-status-unhealthy.md
+      - name: Display status is unhealthy
+        href: ./teams-rooms-and-devices/display-status-unhealthy.md
+      - name: HDMI ingest status is unhealthy
+        href: ./teams-rooms-and-devices/hdmi-ingest-status-unhealthy.md
+      - name: Meeting app status is unhealthy
+        href: ./teams-rooms-and-devices/meeting-app-status-unhealthy.md  
+      - name: Microphone or speaker status is unhealthy
+        href: ./teams-rooms-and-devices/microphone-speaker-status-unhealthy.md
+      - name: Monitored or Offline status is Unhealthy
+        href: ./teams-rooms-and-devices/monitored-offline-status-unhealthy.md  
+      - name: OS Edition status is Unhealthy
+        href: ./teams-rooms-and-devices/os-edition-status-unhealthy.md
+      - name: Sleep timer status is Unhealthy
+        href: ./teams-rooms-and-devices/sleep-timer-status-unhealthy.md
+      - name: USB Peripheral Power Drain status is Unhealthy
+        href: ./teams-rooms-and-devices/usb-peripheral-power-drain-status-unhealthy.md
+      - name: USB Selective Suspend status is Unhealthy
+        href: ./teams-rooms-and-devices/usb-selective-suspend-status-unhealthy.md
+      - name: Resolve Teams Rooms resource account sign-in issues
+        href: ./teams-rooms-and-devices/teams-rooms-resource-account-sign-in-issues.md
+      - name: Resolve Windows Update issues on Teams Rooms Pro devices
+        href: ./teams-rooms-and-devices/teams-rooms-device-windows-update-issues.md
+  - name: Teams on Linux
+    items: 
+    - name: Known issues on Linux
+      href: ./teams-on-linux/linux-known-issues.md
+  - name: Teams on Mac
+    items:
+    - name: Audio issues when using Teams on macOS
+      href: ./teams-on-mac/teams-audio-issue-mac.md
+    - name: Can't sign in to Teams for Mac after macOS upgrade
+      href: ./teams-on-mac/teams-sign-in-issues-after-os-upgrade.md
+    - name: Incorrect presence status in Teams for Mac
+      href: ./teams-on-mac/incorrect-presence-status-teams-for-mac.md
+    - name: Teams-specific notification sound reverts to macOS notification sound
+      href: ./teams-on-mac/teams-notification-sound-reverts-to-default.md
+  - name: Teams on Windows
+    items:
+    - name: Error when calling from a contact card
+      href: ./teams-on-windows/error-call-from-contact-card.md
+    - name: Teams remembered as XBox game
+      href: ./teams-on-windows/performance-affected-when-teams-remembered-as-game.md
+  - name: Third-party programs
+    items:
+    - name: Dell Encryption prevents Teams from starting correctly
+      href: ./third-party-programs/dell-encryption-prevents-teams-from-starting.md
+    - name: Symantec DLP interferes with Teams processes
+      href: ./third-party-programs/symantec-dlp-interferes-with-teams.md
