@@ -1,0 +1,83 @@
+### YamlMime:Landing
+
+title: Exchange hybrid deployment troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Exchange hybrid deployments. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Exchange hybrid deployment troubleshooting
+  description: Documentation for troubleshooting common issues with Exchange hybrid deployment.
+  ms.service: exchange-online
+  ms.topic: landing-page
+  author: cloud-writer
+  ms.author: meerak
+  ms.date: 01/24/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: 405 error for the connection to associated endpoints
+            url: ./administration/endpoint-connection-405-error.md
+          - text: Can't add and verify a domain in hybrid
+            url: ./administration/cannot-add-and-verify-domain.md
+          - text: Can't set up a hybrid deployment when running Set-FederatedOrganizationIdentifier
+            url: ./administration/cannot-set-up-hybrid-deployment.md
+
+  - title: Calendars
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting'
+            url: ./calendars/550-5111-ndr-delegate-sends-update-meeting.md
+          - text: Can't access free/busy of non-Internet-facing AD site
+            url: ./calendars/cannot-access-freebusy-info-of-non-internet-facing-ad-site.md
+          - text: Can't add conference rooms to meeting requests in OWA
+            url: ./calendars/cannot-add-conference-rooms-to-meeting-in-owa.md
+
+  - title: Email Delivery
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't send mail to a moved mailbox
+            url: ./email-delivery/delivery-has-failed-and-550-5-1-1-resolver.adr.recipnotfound.md
+          - text: Can't receive mail after installing new certificate
+            url: ./email-delivery/cannot-receive-mail-with-new-certificate.md
+          - text: Email from the Edge Transport server appears as mail from external contacts
+            url: ./email-delivery/email-sent-from-edge-transport-server-appears-as-mail-from-external-contacts.md
+
+  - title: Groups and Distribution Lists
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't access Microsoft 365 groups in Outlook
+            url: ./groups-and-distribution-lists/cannot-access-office-365-groups-in-outlook.md
+          - text: Can't manage groups that's synced to Microsoft 365
+            url: ./groups-and-distribution-lists/cannot-manage-group-synced-from-on-premises.md
+          - text: Dynamic distribution group members don't receive emails
+            url: ./groups-and-distribution-lists/dynamic-distribution-group-members-not-receive-emails.md
+
+  - title: Hybrid Configuration Errors
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: 1007 AccessDenied or Ensure your system time is correct error
+            url: ./hybrid-configuration-wizard-errors/1007-accessdenied-or-ensure-your-system-time-is-correct-error.md
+          - text: 550 5.7.64 Relay Access Denied ATTR36
+            url: ./hybrid-configuration-wizard-errors/relay-access-denied-attr36-ndr.md
+          - text: ADSTS50011 error when running the Hybrid Configuration Wizard
+            url: ./hybrid-configuration-wizard-errors/error-hybrid-config-wizard.md
+
+  - title: Move Mailboxes
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: 403 forbidden error when moving mailboxes to Exchange Online
+            url: ./move-mailboxes/remote-server-returned-error-403-forbidden.md
+          - text: Access is denied error when moving mailboxes
+            url: ./move-mailboxes/access-is-denied-error-when-moving-mailboxes.md
+          - text: Can't find a recipient that has mailbox GUID error
+            url: ./move-mailboxes/migrationpermanentexception-when-moving-mailboxes.md

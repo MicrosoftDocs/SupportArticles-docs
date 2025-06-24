@@ -1,0 +1,801 @@
+﻿- name: Office Products Troubleshooting
+  href: ../office-client-welcome.yml
+  items:
+    - name: Access
+      items:
+        - name: Access error String data, right truncation (#0)
+          href: ../access/string-data-right-truncation.md
+        - name: Access freezes when opening a linked table
+          href: ../access/access-freezes-when-open-linked-table.md
+        - name: Ambiguous name detected
+          href: ../access/ambiguous-name-detected.md
+        - name: Automate the process of selecting printer for a report
+          href: ../access/automate-selected-printer-for-report.md
+        - name: Build a dynamic query with values from a search form
+          href: ../access/build-dynamic-query-from-search-form.md
+        - name: Can't add or delete records with ADO methods
+          href: ../access/cannot-add-delete-records-ado.md
+        - name: Can't open a previous created database
+          href: ../access/database-previous-version.md
+        - name: Can't open or make a reference to a linked table
+          href: ../access/error-reference-linked-table.md
+        - name: Can't perform an operation on a table
+          href: ../access/error-when-perform-operation-on-table.md
+        - name: Can't process transactions in a multi-user environment
+          href: ../access/file-sharing-lock-count-exceeded.md
+        - name: Can't publish or export to SharePoint
+          href: ../access/errors-publishing-exporting.md
+        - name: Can't save a table after updating a field
+          href: ../access/too-many-fields-defined-error.md
+        - name: Can't update. Database or object is read-only
+          href: ../access/database-or-object-is-read-only.md
+        - name: Can't use CDec() function in Access query
+          href: ../access/cdec-function-error.md
+        - name: Can't use ODBC driver or OLEDB provider
+          href: ../access/cannot-use-odbc-or-oledb.md
+        - name: Change dates by using functions and operators
+          href: ../access/change-dates-by-functions-operators.md
+        - name: Connection error in database
+          href: ../access/database-connection-error.md
+        - name: Could not deploy package when deploying DACPAC files
+          href: ../access/deploy-dacpac-access-web-app-package.md
+        - name: Count occurrences of Yes or No in a field with Yes/No data type
+          href: ../access/expressions-to-count-yes-no-other-reponses.md
+        - name: Crashes when updating linked SharePoint list
+          href: ../access/access-crashes-updating-linked-list.md
+        - name: Damaged data on the Clipboard
+          href: ../access/clipboard-data-damaged.md
+        - name: Database normalization basics
+          href: ../access/database-normalization-description.md
+        - name: Database or object is read-only
+          href: ../access/error-query-against-linked-sharepoint-view.md
+        - name: Database requires a newer version of Access
+          href: ../access/database-requires-newer-access.md
+        - name: Database user-defined function isn't displayed
+          href: ../access/user-defined-function-fail-displayed.md
+        - name: Decimal value  is rounded up or down to integer value
+          href: ../access/decimal-value-rounded-up-down-integer.md
+        - name: Define relationships between tables
+          href: ../access/define-table-relationships.md
+        - name: Error 2950 when running a macro
+          href: ../access/error-running-macro.md
+        - name: Error running wizards
+          href: ../access/running-wizard-error-loading-dll.md
+        - name: Error using special characters
+          href: ../access/error-using-special-characters.md
+        - name: Error when compiling modules or running procedures
+          href: ../access/error-compiling-module-running-procedure.md
+        - name: Error when inserting table record
+          href: ../access/error-inserting-table-record-autonumber.md
+        - name: Error when you work in Access table linked to a list
+          href: ../access/cant-update-database-or-object-error.md
+        - name: Exclusive lock required for saving changes
+          href: ../access/saving-changes-require-exclusive-lock.md
+        - name: File already in use
+          href: ../access/error-opening-database.md
+        - name: File association errors when opening databases
+          href: ../access/error-double-clicking-database.md
+        - name: Floating-point calculations
+          href: ../access/floating-calculations-info.md
+        - name: Functions return a wrong week number
+          href: ../access/functions-return-wrong-week-number.md
+        - name: Functions to calculate age in months and in years
+          href: ../access/calculate-age-in-months-years.md
+        - name: Hide combo box drop-down arrow
+          href: ../access/hide-combo-box-drop-down-arrow.md
+        - name: How to change query properties
+          href: ../access/how-to-change-query-properties.md
+        - name: How to parse City, State, Zip to separate values
+          href: ../access/how-to-parse-city-state-zip-to-separate-values.md
+        - name: ID is increment when adding a new field
+          href: ../access/id-field-increment-by-one.md
+        - name: Incorrect registry key for current version of Access
+          href: ../access/incorrect-current-version-registry-key.md
+        - name: Introduction to lock files (.laccdb & .ldb)
+          href: ../access/lock-files-introduction.md
+        - name: Issue when loading an Access web app
+          href: ../access/load-access-web-app-in-ie.md
+        - name: Issues when you retrieve SharePoint list data
+          href: ../access/retrieve-sharepoint-list-in-access.md
+        - name: Linked Excel data is truncated
+          href: ../access/linked-table-data-truncated.md
+        - name: Linked table to a SharePoint list returns
+          href: ../access/access-linked-table-return-deleted.md
+        - name: Linked table to SQL Server database returns
+          href: ../access/access-linked-table-deleted.md
+        - name: List Access reserved words
+          href: ../access/reserved-words.md
+        - name: Long integer numbers are converted as double data type
+          href: ../access/long-integer-numbers-converted-double-data-type.md
+        - name: Missing or broken reference
+          href: ../access/database-contain-missing-reference.md
+        - name: No current record
+          href: ../access/print-preview-error.md
+        - name: No license to start Access
+          href: ../access/error-launching-access.md
+        - name: Not a valid Teradata SQL token when running outer join queries
+          href: ../access/invalid-teradata-token.md
+        - name: ODBC Data Source Administrator crashes when adding a system DSN
+          href: ../access/odbc-administrator-crashes.md
+        - name: ODBC--call failed
+          href: ../access/error-opening-sql-linked-table.md
+        - name: OLE DB Provider for Jet and ODBC driver
+          href: ../access/jet-odbc-driver-available-32-bit-version.md
+        - name: Optimize Access when using ODBC data sources
+          href: ../access/optimize-odbc-data-sources.md
+        - name: Query must have at least one destination field
+          href: ../access/query-must-have-at-least-one-destination-field.md
+        - name: Resolve database reference issues
+          href: ../access/resolve-reference-issues.md
+        - name: Runtime error 2147319779 (8002801d) library not registered
+          href: ../access/library-unregistered-runtime-error.md
+        - name: Save Password checkbox is unavailable
+          href: ../access/save-password-checkbox-unavailable.md
+        - name: Stop responding when creating MDE, ACCDE, or ADE files
+          href: ../access/stop-responding-when-create-mde-accde-ade-files.md
+        - name: Store, calculate, and compare Date/Time data
+          href: ../access/store-calculate-compare-datetime-data.md
+        - name: Switchboard Manager doesn't appear
+          href: ../access/switchboard-manager-option-disappears.md
+        - name: Text of text box control displays incorrectly
+          href: ../access/text-box-control-information-incorrectly.md
+        - name: The digital signature in Access is tampered with or invalidated
+          href: ../access/access-database-digital-signature-invalidated.md
+        - name: Troubleshoot errors updating queries or forms
+          href: ../access/errors-updating-query-form-data.md
+        - name: Unable to create an MDE, ACCDE, or ADE database
+          href: ../access/error-saving-database.md
+        - name: Use query by form (QBF) technique
+          href: ../access/use-query-form-qbf-technique.md
+        - name: Your network access was interrupted when using a mapped drive
+          href: ../access/your-network-access-was-interrupted-error.md
+    - name: Activation
+      items:
+        - name: Account or subscription verification errors activating Microsoft 365 Apps
+          href: ../activation/account-or-subscription-errors.md
+        - name: Activating Microsoft 365 Apps for Business with a product key
+          href: ../activation/activate-with-product-key.md
+        - name: Activation error Sorry, we are having some temporary server issues
+          href: ../activation/temporary-server-issues.md
+        - name: Activation error That Microsoft account doesn’t exist
+          href: ../activation/account-doesnt-exist.md
+        - name: Activation error Trusted Platform Module malfunctioned
+          href: ../activation/tpm-malfunctioned.md
+        - name: Can't sign in to an Office 2016 for Mac app
+          href: ../activation/sign-in-to-office-2016-for-mac-fail.md
+        - name: Can't sign in to Microsoft 365 desktop applications
+          href: ../activation/cannot-sign-in-microsoft-365-desktop-apps.md
+        - name: Can't verify the license for this product
+          href: ../activation/license-issue-when-start-office-application.md
+        - name: Can't verify subscription
+          href: ../activation/subscription-issue-in-office-mobile.md
+        - name: Connection issues when signing in Office 2016
+          href: ../activation/connection-issue-when-sign-in-office-2016.md
+        - name: Disabling ADAL or WAM not supported for fixing sign-in or activation issues
+          href: ../activation/disabling-adal-wam-not-recommended.md
+        - name: Error code 80070520, -2147023584, or 2147943712 when signing in to Microsoft 365 apps
+          href: ../activation/error-80070520-sign-in-microsoft-365-apps.md
+        - name: Errors activating Microsoft 365 on older Windows versions
+          href: ../activation/errors-activating-on-older-windows.md
+        - name: Office activation process issues
+          href: ../activation/office-activation-process-issues.md
+        - name: Issue when activating Microsoft 365 Apps for enterprise
+          href: ../activation/issue-when-activate-office-365-proplus.md
+        - name: Issue when activating Office from Microsoft 365
+          href: ../activation/issue-when-activate-office-from-office-365.md
+        - name: Issues with shared computer activation for Microsoft 365 Apps
+          href: ../activation/shared-computer-activation.md
+        - name: Microsoft 365 Apps activation error 0xCAA50021
+          href: ../activation/activation-error-0xcaa50021.md
+        - name: Microsoft 365 Apps activation error 0x80070005
+          href: ../activation/activation-error-0x80070005.md
+        - name: Microsoft 365 Apps activation error AADSTS9002313 Invalid Request
+          href: ../activation/aadsts9002313-invalid-request.md
+        - name: Microsoft 365 Apps activation error codes 0xCAA70007 and 0xCAA80000
+          href: ../activation/0xcaa70007-and-0xcaa80000.md
+        - name: Microsoft 365 Apps activation error There’s a problem with your account
+          href: ../activation/problem-with-your-account.md
+        - name: Microsoft 365 Apps activation error Your account doesn’t allow editing on a Mac
+          href: ../activation/doesnt-allow-editing-on-mac.md
+        - name: Microsoft 365 Apps activation error Your organization has disabled this device
+          href: ../activation/your-organization-disabled-this-device.md
+        - name: Microsoft 365 Apps activation limits
+          href: ../activation/activation-limits.md
+        - name: Microsoft 365 Apps activation network connection issues
+          href: ../activation/network-connection-issues.md
+        - name: Microsoft 365 Apps activation Product deactivated
+          href: ../activation/product-deactivated.md
+        - name: Microsoft 365 Apps activation Subscription expired error
+          href: ../activation/subscription-expired.md
+        - name: Microsoft 365 Apps activation usage report issues
+          href: ../activation/activation-usage-report-issues.md
+        - name: Microsoft 365 users aren't automatically signed into Office
+          href: ../activation/office-365-users-not-signed-in-office.md
+        - name: Office for Mac activation An unknown error has occurred
+          href: ../activation/mac-unknown-error.md
+        - name: Sign in issues when activating Microsoft 365 Apps
+          href: ../activation/sign-in-issues.md
+        - name: Sorry, another account from your organization is already signed in on this computer
+          href: ../activation/another-account-already-signed-in.md
+        - name: The account isn't associated with this Office product
+          href: ../activation/account-not-associated-with-office.md
+        - name: The products we found in your account can't be used to activate
+          href: ../activation/cant-be-used-to-activate.md
+        - name: Troubleshooting device-based licensing for Microsoft 365 Apps
+          href: ../activation/device-based-licensing.md
+        - name: Use Fiddler trace logs for MFA
+          href: ../activation/fiddler-trace-logs-for-mfa.md
+        - name: Use MSOAID for authentication issues
+          href: ../activation/use-msoaid-for-authentication-issues.md
+        - name: We've run into a problem with your Microsoft 365 subscription
+          href: ../activation/run-into-a-problem.md
+        - name: You currently have not been assigned an office license that includes the Office desktop apps
+          href: ../activation/license-not-assigned.md
+    - name: Copilot
+      items:
+        - name: Copilot is missing, disabled, or doesn't work correctly
+          href: ../copilot/copilot-missing-disabled-not-work-correctly.md
+    - name: End of Support
+      items:
+        - name: Office 2007 has reached end of extended support
+          href: ../support/office-2007-not-support.md
+        - name: Support for 2013 versions of Microsoft 365 Apps for enterprise ends
+          href: ../support/2013-versions-of-office-365.md
+    - name: Excel
+      items:
+        - name: 'A formula returns "#VALUE!" Error'
+          href: ../excel/formula-returns-value-error.md
+        - name: An active process continues to run
+          href: ../excel/quitting-process-continues-running.md
+        - name: Blank pages are unexpectedly printed
+          href: ../excel/blank-pages-unexpectedly-printed.md
+        - name: Can't export to Excel from SharePoint Online
+          href: ../excel/cannot-export-to-excel.md
+        - name: Can't modify oData connection in PowerPivot
+          href: ../excel/cannot-modify-odata-connection.md
+        - name: Can't paste any attributes into a workbook in another instance
+          href: ../excel/cannot-paste-attributes.md
+        - name: Can't use object linking and embedding
+          href: ../excel/cant-use-object-linking-and-embedding-error.md
+        - name: Chart trendline formula is inaccurate
+          href: ../excel/inaccurate-chart-trendline-formula.md
+        - name: Clean up workbooks with less memory
+          href: ../excel/clean-workbook-less-memory.md
+        - name: Columns and rows are labeled numerically
+          href: ../excel/numeric-columns-and-rows.md
+        - name: Command bars of add-ins aren't displayed or removed
+          href: ../excel/add-ins-command-bars-removed.md
+        - name: Command can't be used on multiple selections
+          href: ../excel/command-cannot-be-used-on-selections.md
+        - name: Create a dynamic defined range
+          href: ../excel/create-dynamic-defined-range.md
+        - name: Custom function may not calculate expected value
+          href: ../excel/custom-function-calculate-wrong-value.md
+        - name: Excel data doesn't retain formatting in mail merge
+          href: ../excel/excel-data-not-retain-formatting-mail-merge.md
+        - name: Determine the current mode of calculation
+          href: ../excel/current-mode-of-calculation.md
+        - name: Determine whether a year is a leap year
+          href: ../excel/determine-a-leap-year.md
+        - name: Difference between STDEVPA and STDEVP functions
+          href: ../excel/statistical-functions-differences.md
+        - name: Digital signatures and code signing
+          href: ../excel/digital-signatures-code-signing.md
+        - name: Display more digits in trendline equation coefficients
+          href: ../excel/trendline-equation-coefficient-digits.md
+        - name: Dsum and Dcount functions not working
+          href: ../excel/dsum-and-dcount-not-work-with-pivottables.md
+        - name: Error when saving a file
+          href: ../excel/error-saving-file.md
+        - name: Error when sending commands in Excel
+          href: ../excel/error-when-send-commands-in-excel.md
+        - name: Error when you copy formulas over large area
+          href: ../excel/copy-formulas-over-large-area.md
+        - name: Error when you import data to a workbook
+          href: ../excel/index-outside-bounds-of-array-error.md
+        - name: Excel cannot complete this task
+          href: ../excel/excel-cannot-complete-task-with-available.md
+        - name: Excel incorrectly assumes 1900 is a leap year
+          href: ../excel/wrongly-assumes-1900-is-leap-year.md
+        - name: Excel opening blank
+          href: ../excel/excel-opens-blank.md
+        - name: Export a text file with both comma and quote delimiters
+          href: ../excel/export-text-file-with-comma-quote.md
+        - name: External links may be calculated when you open a workbook
+          href: ../excel/external-links-calculated-open-workbook-earlier-version-excel.md
+        - name: First sheet name displays different language
+          href: ../excel/first-sheet-name-displays-different-language.md
+        - name: Floating-point arithmetic gives inaccurate results
+          href: ../excel/floating-point-arithmetic-inaccurate-result.md
+        - name: Force Excel to open in a new instance by default
+          href: ../excel/force-excel-to-open-new-instance.md
+        - name: Format Cells settings
+          href: ../excel/format-cells-settings.md
+        - name: Formatted text is limited to 240 characters per line
+          href: ../excel/prn-file-limited-to-240-characters.md
+        - name: Formula errors when list separator isn't set
+          href: ../excel/formula-errors.md
+        - name: GROWTH statistical functions
+          href: ../excel/statistical-functions-growth.md
+        - name: Heavy Excel workloads run slowly in multi-session environments
+          href: ../excel/heavy-excel-workloads-run-slowly-multisession.md
+        - name: Hide sheets and use xlVeryHidden constant in a macro
+          href: ../excel/hide-sheet-and-use-xlveryhidden.md
+        - name: How Excel works with two-digit year numbers
+          href: ../excel/two-digit-year-numbers.md
+        - name: Invalid signature error in Excel workbooks
+          href: ../excel/document-contains-invalid-signatures-error.md
+        - name: Issue when saving Excel workbooks
+          href: ../excel/issue-when-save-excel-workbooks.md
+        - name: Issue when sorting a range that has merged cells
+          href: ../excel/error-sort-a-range-merged-cell.md
+        - name: Issue when starting Excel for Mac
+          href: ../excel/fails-starting-excel-mac.md
+        - name: Issue when updating external links
+          href: ../excel/update-external-links.md
+        - name: Large Address Aware capability change
+          href: ../excel/laa-capability-change.md
+        - name: Last digits are changed to zeros
+          href: ../excel/last-digits-changed-to-zeros.md
+        - name: Link a Visio drawing to a specific region
+          href: ../excel/link-visio-drawing-to-a-specific-region.md
+        - name: Long numbers are displayed incorrectly
+          href: ../excel/long-numbers-incorrectly-in-excel.md
+        - name: Loop through a list of data by using macros
+          href: ../excel/loop-through-data-using-macro.md
+        - name: Memory usage in the 32-bit edition of Excel
+          href: ../excel/memory-usage-32-bit-edition-of-excel.md
+        - name: Network Mapped Drive hyperlinks resolve as UNC
+          href: ../excel/network-mapped-drive-hyperlinks-unc.md
+        - name: Object Model calls fails from WorkbookOpen event
+          href: ../excel/object-model-calls-fails-workbookopen-event.md
+        - name: Operation Must Use an Updatable Query
+          href: ../excel/fails-accessing-excel-through-odbc.md
+        - name: Parts of Excel turn white or gray
+          href: ../excel/parts-of-excel-turn-white-or-gray.md
+        - name: Paster special option is missing or not working
+          href: ../excel/paste-special-missing-or-not-working.md
+        - name: Percentage format changes to Numeric
+          href: ../excel/percentage-format-changes-numeric.md
+        - name: Prevent files from opening automatically
+          href: ../excel/files-open-automatically.md
+        - name: Recalculation with a SUMIF formula takes a longer time
+          href: ../excel/worksheet-recalculation-sumif-formula.md
+        - name: RSQ statistical functions
+          href: ../excel/statistical-functions-rsq.md
+        - name: Sample macro to insert/delete rows or columns
+          href: ../excel/macro-insert-delete-rows-columns.md
+        - name: Security settings for Dynamic Data Exchange
+          href: ../excel/security-settings.md
+        - name: Startup message about updating linked workbooks
+          href: ../excel/control-startup-message.md
+        - name: Too many different cell formats in Excel
+          href: ../excel/too-many-different-cell-formats-in-excel.md
+        - name: Transfer data to Excel from Visual Basic
+          href: ../excel/transfer-data-to-excel-from-vb.md
+        - name: Troubleshoot available resources issues
+          href: ../excel/available-resources-errors.md
+        - name: Turn off Function Argument ToolTips
+          href: ../excel/turn-off-function-argument-tooltips.md
+        - name: Use defined names to update a chart range
+          href: ../excel/defined-names-to-update-chart-range.md
+        - name: Use logical AND or OR in a SUM+IF statement
+          href: ../excel/logical-and-or-in-sum-if.md
+        - name: Use saved property to determine if workbook is changed
+          href: ../excel/saved-property-determine-workbook-is-changed.md
+        - name: User info in @mentions doesn't resolve
+          href: ../excel/mentions-not-resolve-user-information.md
+        - name: VBA writes to cells slowly when ActiveX controls are invisible
+          href: ../excel/vba-writes-to-cells-slowly.md
+    - name: Forms
+      items:
+        - name: Resolve file upload errors in Microsoft Forms
+          href: ../forms/resolve-file-upload-errors-microsoft-forms.md
+    - name: Installation
+      items:
+        - name: Automatic updating isn't enabled
+          href: ../installation/automatic-updates.md
+        - name: Error 1935 when install Office 2010
+          href: ../installation/error-1935-when-install-office-2010.md
+        - name: Error code 30010-45 or 30088-26 installing Microsoft 365 Apps
+          href: ../installation/error-code-30010-45-or-30088-26.md
+        - name: Error starting Microsoft Office third-party .NET add-in
+          href: ../installation/access-denied-error-when-starting-third-party-apps.md
+        - name: Error when installing Microsoft 365 apps
+          href: ../installation/cannot-access-powershell-file-error.md
+        - name: Error when you install an Office program
+          href: ../installation/error-run-office-setup-program.md
+        - name: How to download and run Office LTSC installation files not in VLSC
+          href: ../installation/how-to-download-office-install-not-in-vlsc.md
+        - name: ForceUpgrade and ForceDowngrade attributes
+          href: ../installation/forceupgrade-forcedowngrade-removed-odt-config.md
+        - name: Install Office Pro 2013 on a Terminal Server
+          href: ../installation/install-and-activate-office-2013.md
+        - name: Office setup issues
+          href: ../installation/office-setup-issues.md
+        - name: Prioritize BITS for Office 2016 updates
+          href: ../installation/prioritize-bits-for-office-2016-updates.md
+        - name: Use SaRA to collect data about Microsoft 365 Apps installations
+          href: ../installation/use-sara-to-collect-install-info.md
+    - name: Loop
+      items:
+        - name: Workspaces are unexpectedly stored in SharePoint Online sites
+          href: ../loop/loop-workspace-unexpectedly-stored-in-sharepoint-online-site.md
+    - name: Mobile
+      items:
+        - name: Block use of Office add-ins from work or school accounts
+          href: ../mobile/prevent-office-add-in-work-account.md
+    - name: Office for Mac
+      items:
+        - name: Known issues with Office for Mac
+          href: ../office-for-mac/office-for-mac-issues-macos-10-7.md
+        - name: Office 2016 for Mac 64-bit upgrade
+          href: ../office-for-mac/office-2016-for-mac-64-bit-upgrade.md
+        - name: Office 2016 for Mac prompts you for authentication
+          href: ../office-for-mac/office-for-mac-prompted-for-authentication.md
+        - name: PowerPoint for Mac is closed unexpectedly
+          href: ../office-for-mac/powerpoint-mac-closes-unexpectedly.md
+        - name: The application Microsoft Excel quit unexpectedly
+          href: ../office-for-mac/excel-mac-error-application-quit-unexpectedly.md
+    - name: Office Online Server
+      items:
+        - name: Web sites lose SSL certificate bindings
+          href: ../office-online-server/web-sites-lose-ssl-certificate-bindings.md
+    - name: Office Suite Issues
+      items:
+        - name: "0x80004005: General Error Unable to Open Registry Key"
+          href: ../office-suite-issues/fails-accessing-page-connected-access-database.md
+        - name: Another account is already signed in
+          href: ../office-suite-issues/another-account-already-signed-in.md
+        - name: Applications crash when opening IRM document
+          href: ../office-suite-issues/office-applications-crash-when-open-irm-doc.md
+        - name: Apps for Office don't start
+          href: ../office-suite-issues/apps-for-office-not-start.md
+        - name: Background task activation is spurious
+          href: ../office-suite-issues/background-task-activation-spurious.md
+        - name: Can't access a SharePoint Online place in Office Mobile
+          href: ../office-suite-issues/cannot-access-sharepoint-online-place.md
+        - name: Can't create user name that contains special characters
+          href: ../office-suite-issues/username-contains-special-character.md
+        - name: Can't embed Adobe OpenType fonts
+          href: ../office-suite-issues/fails-embedding-adobe-opentype-font.md
+        - name: Can't install 64-bit Office with 32-bit
+          href: ../office-suite-issues/cannot-install-64-bit-office-with-32-bit.md
+        - name: Can't install 64-bit version of Office with Click-to-Run
+          href: ../office-suite-issues/64-bit-cant-install-with-click-to-run.md
+        - name: Can't locate proxy server when clicking hyperlink
+          href: ../office-suite-issues/cannot-locate-server-when-click-hyperlink.md
+        - name: Can't open a file from UNC share
+          href: ../office-suite-issues/file-not-found-when-open-file-from-unc.md
+        - name: Can't open Click-to-run version of Office on terminal server
+          href: ../office-suite-issues/click-to-run-office-on-terminal-server.md
+        - name: Can't open this add-in from localhost when loading an add-in
+          href: ../office-suite-issues/cannot-open-add-in-from-localhost.md
+        - name: Can't start in Windows safe mode
+          href: ../office-suite-issues/office-not-start-safe-mode-windows.md
+        - name: Can't uninstall Office
+          href: ../office-suite-issues/error-when-uninstall-office.md
+        - name: "Compile Error: Procedure too large"
+          href: ../office-suite-issues/compile-error-procedure-too-large.md
+        - name: Complete repair of corrupted files isn't guaranteed
+          href: ../office-suite-issues/cannot-guarantee-complete-repair-corrupted-files.md
+        - name: Control the blocking of OLE/COM
+          href: ../office-suite-issues/control-block-ole-com.md
+        - name: Deploy SaRA using Intune
+          href: ../office-suite-issues/install-sara-from-intune.md
+        - name: Document Information Panel is deprecated
+          href: ../office-suite-issues/document-information-panel-deprecate.md
+        - name: Enable or disable hyperlink warning messages
+          href: ../office-suite-issues/enable-disable-hyperlink-warning.md
+        - name: Error when editing an equation in Office
+          href: ../office-suite-issues/issue-when-edit-equation-in-office.md
+        - name: Error when opening a document
+          href: ../office-suite-issues/error-open-document.md
+        - name: Error when you open files from SharePoint in Office client
+          href: ../office-suite-issues/files-fail-to-open.md
+        - name: "This file cannot be saved"
+          href: ../office-suite-issues/file-cannot-be-saved.md
+        - name: Features to enable collaboration
+          href: ../office-suite-issues/enable-collaboration.md
+        - name: Increase the size of diagnostic logs
+          href: ../office-suite-issues/collect-office-diagnostic-logs.md
+        - name: Install Microsoft Support and Recovery Assistant from network share
+          href: ../office-suite-issues/install-sara-from-network-share.md
+        - name: Invalid product key or license mismatch
+          href: ../office-suite-issues/invalid-product-key-or-license-mismatch-error.md
+        - name: Issue when launching Office in Microsoft Store app
+          href: ../office-suite-issues/windows-cannot-access-device.md
+        - name: Issue when Microsoft 365 activates Skype for Business
+          href: ../office-suite-issues/office-365-activates-skype.md
+        - name: Issue when opening a file with a long folder name
+          href: ../office-suite-issues/fails-opening-long-folder-name-files.md
+        - name: Issue with starting Office applications
+          href: ../office-suite-issues/microsoft-program-cannot-be-opened.md
+        - name: Issues when you click hyperlink to SSO Web site in a document
+          href: ../office-suite-issues/click-hyperlink-to-sso-website.md
+        - name: Loss of image quality occurs in a document
+          href: ../office-suite-issues/office-docuemnt-image-quality-loss.md
+        - name: Manage templates in Office program
+          href: ../office-suite-issues/manage-office-program-templates.md
+        - name: Microsoft 365 apps open files from SharePoint On-Premises that aren’t the current version
+          href: ../office-suite-issues/office-opens-outdated-files.md
+        - name: Missing file error with a web page file
+          href: ../office-suite-issues/web-page-missing-file-error.md
+        - name: Missing fonts issue in documents
+          href: ../office-suite-issues/missing-fonts-opening-documents.md
+        - name: Mobile viewing PDF files with Office Web Apps
+          href: ../office-suite-issues/mobile-viewing-pdf-files.md
+        - name: No Add-ins loaded due to Group Policy settings
+          href: ../office-suite-issues/office-add-in-not-loaded.md
+        - name: No default mail client
+          href: ../office-suite-issues/no-default-mail-client-error.md
+        - name: No Office entitlement found on device
+          href: ../office-suite-issues/office-not-entitled-on-device.md
+        - name: Numbering Schema for Office 2013
+          href: ../office-suite-issues/numbering-scheme-product-code-guids.md
+        - name: Numbering Schema for Office 2016
+          href: ../office-suite-issues/numbering-scheme-for-product-guid.md
+        - name: Office End User License Agreement always appears
+          href: ../office-suite-issues/office-end-user-license-agreement.md
+        - name: Office error "could not create the work file"
+          href: ../office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
+        - name: Office Feature Updates task
+          href: ../office-suite-issues/office-feature-updates-task-faq.md
+        - name: Office has detected a problem with this file
+          href: ../office-suite-issues/office-file-fails-validation.md
+        - name: Office installation Error 1401, 1402 or 1406
+          href: ../office-suite-issues/office-install-error-1401-1402-1406.md
+        - name: Office stops responding when you open a file
+          href: ../office-suite-issues/office-stops-responding.md
+        - name: Repair process of click-to-run app
+          href: ../office-suite-issues/click-to-run-app-repair-process.md
+        - name: Saving documents to network server is slow
+          href: ../office-suite-issues/saving-file-to-network-server-slow.md
+        - name: Set default font for Office apps
+          href: ../office-suite-issues/set-default-font.md
+        - name: Subscription automatic license renewal fails
+          href: ../office-suite-issues/subscription-license-renewal-fail.md
+        - name: Support limitations for Microsoft 365 Apps issues
+          href: ../office-suite-issues/issue-support-limitations.md
+        - name: Supported Product IDs for Click-to-Run
+          href: ../office-suite-issues/product-ids-supported-office-deployment-click-to-run.md
+        - name: The document caused a serious error the last time it was opened
+          href: ../office-suite-issues/error-open-word-excel.md
+        - name: Third-party network solutions on Microsoft 365 traffic
+          href: ../office-suite-issues/office-365-third-party-network-devices.md
+        - name: This file can't be previewed
+          href: ../office-suite-issues/this-file-cant-be-previewed.md
+        - name: Unable to create DSN for Office System Driver
+          href: ../office-suite-issues/cant-create-dsn-for-office-system-driver.md
+        - name: Updates are offered for nonexistent Office programs
+          href: ../office-suite-issues/updates-provided-for-nonexistent-office.md
+        - name: Use different versions of Office on the same PC
+          href: ../office-suite-issues/use-multiple-versions-of-office.md
+        - name: Use GetObject and CreateObject with automation server
+          href: ../office-suite-issues/getobject-createobject-behavior.md
+        - name: Users don't see add-ins
+          href: ../office-suite-issues/user-not-seeing-add-ins.md
+        - name: View error signatures for Office
+          href: ../office-suite-issues/view-error-signatures.md
+        - name: We can't start this app error when you install an add-in
+          href: ../office-suite-issues/cannot-install-office-add-in.md
+        - name: Your system is low on virtual memory
+          href: ../office-suite-issues/your-system-is-low-on-virtual-memory.md
+    - name: OneNote
+      items:
+        - name: Content Not Yet Available
+          href: ../onenote/onenote-error-content-not-yet-available.md
+        - name: Errors when you sync a notebook
+          href: ../onenote/error-sync-notebook.md
+        - name: Send to OneNote and Meeting Notes buttons don't work
+          href: ../onenote/send-to-onenote-and-meeting-notes-buttons-not-working.md
+        - name: Temporary change to file size download limit in OneNote
+          href: ../onenote/temp-change-onenote-file-size-download.md
+        - name: Warning when a notebook is in an offline location
+          href: ../onenote/notebook-offline-location.md
+        - name: We couldn't start OneNote the last time we tried
+          href: ../onenote/couldnt-start-onenote-the-last-time-error.md
+    - name: Outlook
+      items:
+        - name: Outlook for iOS and Android
+          href: /outlook/troubleshoot/outlook-mobile-welcome
+        - name: Outlook for Mac
+          href: /outlook/troubleshoot/outlook-mac-welcome
+        - name: Outlook for Windows
+          href: /outlook/troubleshoot/outlook-client-welcome
+    - name: Performance
+      items:
+        - name: Some Office applications are not responding
+          href: ../performance/office-applications-not-responding.md
+        - name: Open network file slow or stop responding
+          href: ../performance/office-slow-or-stop-responding.md
+    - name: Planner
+      items:
+        - name: Guest users have no access to assigned tasks
+          href: ../planner/guests-cannot-comment-assigned-tasks.md
+    - name: PowerPoint
+      items:
+        - name: Can't edit video or audio in a presentation
+          href: ../powerpoint/cannot-edit-video-or-audio.md
+        - name: Can't load an add-in with a low macro security level
+          href: ../powerpoint/powerpoint-fails-loading-add-in.md
+        - name: Can't use videos as slide backgrounds
+          href: ../powerpoint/cannot-use-videos-as-slide-backgrounds.md
+        - name: Change the export resolution of PowerPoint slide
+          href: ../powerpoint/change-export-slide-resolution.md
+        - name: Hlink.dll Can't Be Loaded
+          href: ../powerpoint/viewing-presentation-fails.md
+        - name: Fonts aren't embedded
+          href: ../powerpoint/fonts-not-embedded.md
+        - name: Not enough printer memory available to print page
+          href: ../powerpoint/not-enought-printer-memory-available.md
+        - name: Office opens blank from SharePoint
+          href: ../powerpoint/office-opens-blank-from-sharepoint.md
+        - name: PowerPoint files not rendering in Office Online Server after Security Update
+          href: ../powerpoint/files-not-rendering-office-online-server-after-security-update.md
+        - name: PowerPoint for Mac startup error
+          href: ../powerpoint/fails-starting-powerpoint-mac.md
+        - name: PowerPoint stops responding (spinning wheel)
+          href: ../powerpoint/powerpoint-stops-responding.md
+        - name: Save presentation as webpage is unavailable
+          href: ../powerpoint/save-presentation-as-webpage-unavailable.md
+        - name: Slide transition sounds are missing
+          href: ../powerpoint/slide-transition-sounds-missing.md
+        - name: Troubleshoot a damaged presentation
+          href: ../powerpoint/damaged-presentation.md
+        - name: User info in @mentions doesn't resolve
+          href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context
+    - name: Project
+      items:
+        - name: Can't add or edit resources in Enterprise Resource Pool
+          href: ../project/error-when-add-edit-resource.md
+        - name: Can't save to global.mpt when existing Project
+          href: ../project/cant-save-to-global.mpt-error.md
+        - name: Circular relationship error when indenting task
+          href: ../project/circular-relationship-error-when-indenting-task.md
+        - name: Definition of project constraints
+          href: ../project/definition-of-project-constraints.md
+        - name: Error when accessing Project Web App
+          href: ../project/error-when-access-pwa.md
+        - name: Error when you click project link
+          href: ../project/error-when-click-on-project-links.md
+        - name: Gantt Chart or Usage views print on too many pages
+          href: ../project/gantt-chart-usage-view-print-issues.md
+        - name: How to remove leading split in a task
+          href: ../project/remove-leading-split-in-task.md
+        - name: Import task outline structure into-project
+          href: ../project/import-task-outline-structure.md
+        - name: Make a custom toolbarribbon available to all users
+          href: ../project/custom-toolbarribbon-available-to-all-users.md
+        - name: Print Gantt Chart view without table information
+          href: ../project/print-gantt-chart-view-without-table.md
+        - name: Progress bars not drawn for tasks that are in progress
+          href: ../project/progress-bars-not-drawn-for-tasks.md
+        - name: Resource plan using FTE calculates unexpectedly
+          href: ../project/resource-plan-fte-calculate-unexpected.md
+        - name: Running macro automatically
+          href: ../project/running-macro-automatically-when-starting.md
+        - name: Sync with SharePoint tasks list
+          href: ../project/sync-with-tasks-from-project.md
+        - name: Tasks are not scheduled
+          href: ../project/tasks-not-scheduled.md
+    - name: Settings
+      items:
+        - name: Display issues in Office applications
+          href: ../settings/office-display-issues.md
+        - name: Error in Office when file is blocked
+          href: ../settings/file-blocked-in-office.md
+        - name: How to use Problem Steps Recorder
+          href: ../settings/how-to-use-problem-steps-recorder.md
+        - name: Securely opening Office documents with DDE fields
+          href: ../settings/how-to-securely-open-office-documents-that-have-dde-fields.md
+        - name: Use registry to clear the most recently used files list
+          href: ../settings/clear-most-recently-used-file.md
+    - name: Sway
+      items:
+        - name: Disabled Microsoft 365 Sway tile continues to appear in App Launcher
+          href: ../sway/disabled-sway-tile-appear.md
+    - name: Third party add-ins
+      items:
+        - name: Can't start the converter SSPDFCG_X64.cnv
+          href: ../third-party-add-ins/converter-sspdfcg-x64.cnv.md
+        - name: Incompatibilities between Office and Adobe
+          href: ../third-party-add-ins/incompatibilities-between-office-and-adobe.md
+        - name: Office crash with SendToBluetooth add-in installed
+          href: ../third-party-add-ins/office-crash-with-sendtobluetooth.md
+        - name: Third-party installed fonts isn't in the font list in Word for Mac
+          href: ../third-party-add-ins/third-party-installed-font-fails-appearing.md
+    - name: Visio
+      items:
+        - name: Can't change text or shape fill color
+          href: ../visio/cant-change-text-or-shape-fill-color.md
+        - name: Can't open file type blocked by registry policy settings
+          href: ../visio/file-blocked-by-registry-policy.md
+        - name: Can't open Visio files in Visio Web Access
+          href: ../visio/open-visio-files-in-visio-web-access.md
+        - name: Create flexible organization charts in Visio
+          href: ../visio/create-flexible-organization-charts-visio.md
+        - name: Data graphics aren't displayed
+          href: ../visio/data-graphics-not-displayed.md
+        - name: Enable Windows Search service to use Search for Shapes
+          href: ../visio/search-for-shapes-use-windows-search.md
+        - name: Fit to Drawing not working
+          href: ../visio/fit-to-drawing-command-not-work.md
+        - name: This is not a valid win32 application when installing Microsoft 365
+          href: ../visio/not-a-valid-win32-application-error.md
+        - name: Troubleshoot damaged drawings in Visio
+          href: ../visio/troubleshoot-damaged-drawings.md
+    - name: Word
+      items:
+        - name: A connector doesn't move when moving a shape
+          href: ../word/connector-not-move-with-shapes.md
+        - name: A corrupt global template causes errors when automating Word
+          href: ../word/corrupt-global-template-causes-errors-automating-word.md
+        - name: Auto-Exec and Auto-Open macros
+          href: ../word/autoexec-autoopen-macros-word.md
+        - name: Can't open documents with unsupported XML elements
+          href: ../word/custom-xml-elements-not-supported.md
+        - name: Can't open this file because it is larger than 512 Megabytes
+          href: ../word/file-larger-than-512-megabytes.md
+        - name: Can't use  mouse to draw selection rectangle
+          href: ../word/cant-use-mouse-draw-selection-rectangle.md
+        - name: Configure the default search engine
+          href: ../word/configure-search-engine-in-word.md
+        - name: Create TOC entries without page numbers
+          href: ../word/create-toc-entries-no-page-number.md
+        - name: Cross-reference links don't update to the correct heading number
+          href: ../word/cross-reference-links-update.md
+        - name: Customize the color of the spelling and grammar checker underlines
+          href: ../word/spelling-grammar-checker-underline-color.md
+        - name: Damaged documents in Word
+          href: ../word/damaged-documents-in-word.md
+        - name: Document building blocks may be missing
+          href: ../word/document-building-blocks-missing.md
+        - name: End tag error when opening docx file
+          href: ../word/end-tag-error-when-open-docx.md
+        - name: Excel data doesn't retain formatting in mail merge
+          href: ../excel/excel-data-not-retain-formatting-mail-merge.md
+        - name: Fails to clear the Embed Linguistic Data check box
+          href: ../word/fails-clear-embed-linguistic-data-check-box.md
+        - name: Headers and footers remain after removing sensitivity label
+          href: ../word/headers-footers-remain-after-remove-sensitivity-label.md
+        - name: How to merge multiple documents
+          href: ../word/merge-word-documents.md
+        - name: How to recover unsaved Word documents
+          href: ../word/recover-lost-unsaved-corrupted-document.md
+        - name: Image DPI is changed after you print to PDF
+          href: ../word/image-dpi-change-after-print-to-pdf.md
+        - name: In-place edit of an embedded Word document with ActiveX control causes flickering
+          href: ../word/embedded-doc-with-activex-control-flickers.md
+        - name: Issues when start or use Word
+          href: ../word/issues-when-start-or-use-word.md
+        - name: Mail merge issue
+          href: ../word/mail-merge-error.md
+        - name: Object may not appear in Word 2010
+          href: ../word/object-not-appear-in-word-2010.md
+        - name: Operating parameter limitations and specifications
+          href: ../word/operating-parameter-limitation.md
+        - name: Performance issues with AutoRecover location
+          href: ../word/performance-issue-on-autorecover-location.md
+        - name: relationship rID8 was not found
+          href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
+        - name: Reset user options and registry settings in Word
+          href: ../word/reset-options-and-settings-in-word.md
+        - name: Save As dialog box appears two times
+          href: ../word/save-as-dialog-box-appears-two-times.md
+        - name: Spell checker doesn't check text in the form fields
+          href: ../word/spell-checker-not-check-form-field-text.md
+        - name: Spell checker doesn't recognize misspelled words in Word 2010
+          href: ../word/not-recognize-misspelled-words-in-word.md
+        - name: Track Changes functionality disabled when RMS is disabled
+          href: ../word/track-changes-disabled.md
+        - name: User info in @mentions doesn't resolve
+          href: /office/troubleshoot/excel/mentions-not-resolve-user-information?context=/office/troubleshoot/context/client-context
+        - name: Using printer fonts in Word
+          href: ../word/printer-fonts-in-word.md
+        - name: Word slows or stops responding
+          href: ../word/word-stops-responding.md
+        - name: You're prompted to save changes to global template
+          href: ../word/save-changes-to-global-template.md
+    - name: Office Developer
+      href: /previous-versions/office/troubleshoot/office-developer/add-button-in-word

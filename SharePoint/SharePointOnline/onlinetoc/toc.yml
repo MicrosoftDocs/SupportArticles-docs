@@ -1,0 +1,455 @@
+- name: SharePoint Online Troubleshooting
+  href: ../sharepoint-online-welcome.yml
+  items:
+  - name: Administration
+    items:
+    - name: '"Access denied" error for PIM-managed accounts in SharePoint or OneDrive admin center'
+      href: ../administration/access-denied-to-pim-user-accounts.md
+    - name: '"Access Denied" or permission errors'
+      href: ../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md
+    - name: '"API access" does not appear in the Modern admin center'
+      href: ../administration/api-access-does-not-appear.md
+    - name: '"Could not connect to SharePoint Online" error'
+      href: ../administration/connect-sposervice-error.md
+    - name: Temporary changes in process schedule for SharePoint Online services 
+      href: ../administration/temporary-adjustments-in-sharepoint-online.md
+    - name: '"Sync to Outlook" button and "Task" link are missing'
+      href: ../administration/sync-to-outlook-tasks-link-missing.md
+    - name: Authentication errors when client doesn't have TLS 1.2 support
+      href: ../administration/authentication-errors-tls12-support.md
+    - name: Authentication errors occur when connecting to SharePoint or OneDrive from Windows 7 or 8
+      href: ../administration/authentication-errors-windows7.md
+    - name: Authentication issues in SharePoint Designer 2013
+      href: ../administration/authentication-issues-in-sharepoint-designer-2013.md
+    - name: Automatic EXIF property import unsupported
+      href: ../administration/automatic-exif-property-import-unsupported.md
+    - name: Create a default Site collection Term Set if none is present
+      href: ../administration/create-default-site-term-set.md
+    - name: Creation of team site from SharePoint Home doesn't complete
+      href: ../administration/team-site-creation-stops.md
+    - name: Deleting a content type from the SharePoint Content Type Hub
+      href: ../administration/deleting-content-type-from-hub.md
+    - name: Error when accessing SharePoint or OneDrive
+      href: ../administration/error-accessing-sharepoint-onedrive.md
+    - name: Error 404 in OneDrive or SharePoint
+      href: ../administration/error-404-onedrive-sharepoint.md
+    - name: Errors when connecting to SharePoint Online Management Shell
+      href: ../administration/errors-connecting-to-management-shell.md
+    - name: Errors when you rename a SharePoint domain
+      href: ../administration/errors-when-renaming.md
+    - name: Exclude or remove sites from a SharePoint Online retention policy
+      href: ../administration/exclude-sites-from-retention-policy.md
+    - name: FAQ about SharePoint domain renames
+      href: ../administration/domain-rename-faq.md
+    - name: Invalid URL error when clicking an online prompted link
+      href: ../administration/promoted-link-invalid-url.md
+    - name: Issue when browsing to a SharePoint site
+      href: ../administration/access-to-sharepoint-online-is-monitored.md
+    - name: Issue with Send To connection
+      href: ../administration/troubleshoot-send-to-connection-error.md
+    - name: Issue with the SharePoint Hybrid Picker
+      href: ../administration/troubleshoot-error-when-you-use-hybrid-picker.md
+    - name: .NET update causes SharePoint provider-hosted add-in running on Azure to stop working
+      href: ../administration/NET-update-causes-azure-add-in-to-stop-working.md
+    - name: Online information about ULS log access
+      href: ../administration/information-about-uls-log-access.md
+    - name: Presence information doesn't show
+      href: ../administration/presence-information-fails-showing.md
+    - name: Profile picture not shown in SharePoint Online
+      href: ../administration/profile-picture-not-showing.md
+    - name: Remove assembly reference from Sandbox solution
+      href: ../../SharePointServer/administration/change-sandbox-solution.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: SharePoint Online PowerShell command doesn't work correctly
+      href: ../administration/sharepoint-online-powershell-command-does-not-work-correctly.md
+    - name: SharePoint Online out of storage space
+      href: ../administration/out-of-storage.md
+    - name: Third-party tools changes support
+      href: ../administration/third-party-tools-change-support.md    
+    - name: Troubleshoot site collection upgrade issues
+      href: ../administration/troubleshoot-site-collection-upgrade-issue.md
+    - name: Unable to delete items in SharePoint and OneDrive
+      href: ../administration/unable-to-delete-files.md
+    - name: Unexpected error in SharePoint admin center Content type gallery
+      href: ../administration/content-type-gallery-error.md
+    - name: Uncompiled audiences are present in SharePoint Online
+      href: ../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md
+    - name: Unable to access SharePoint Online
+      href: ../administration/sharepoint-online-inaccessible.md  
+    - name: Using relative URLs isn't supported
+      href: ../lists-and-libraries/relative-url-across-site-collection-not-supported.md
+  - name: Diagnostics
+    items:
+    - name: Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive 
+      href: ../diagnostics/sharepoint-and-onedrive-diagnostics.md
+  - name: Apps
+    items:
+    - name: Issue when clicking .mov or .mp4 files
+      href: ../apps/windows-media-player-cannot-connect-to-server.md
+    - name: Issue when clicking a guest link to an online item
+      href: ../apps/guest-link-fails-accessing-shared-resource.md
+    - name: Issue when opening an Access desktop database
+      href: ../apps/fails-opening-access-desktop-database.md
+    - name: Issue with updating a SharePoint app
+      href: ../apps/fails-updating-sharepoint-app.md
+    - name: MSN Weather Service API is retired
+      href: ../apps/msn-weather-service-api-retired.md
+    - name: Site collection admins can't register apps or update permissions
+      href: ../apps/cannot-register-app-update-permissions.md
+    - name: This content can't be displayed in a frame
+      href: ../apps/view-owa-page-viewer-web-part.md
+  - name: InfoPath
+    items:
+    - name: '"Access Denied" error (Event ID 5566) when you open a form in the browser'
+      href: ../InfoPath/access-denied-when-opening-form-id-5566.md
+    - name: Differences of InfoPath Forms Services
+      href: ../InfoPath/infopath-forms-services.md
+    - name: InfoPath can't open the selected form when opening an InfoPath Filler form
+      href: ../InfoPath/fails-opening-infopath-filler-form.md
+    - name: Issue when clicking an InfoPath form in mobile view
+      href: ../InfoPath/click-infopath-form-mobile-view.md
+    - name: Issue when connecting an InfoPath form
+      href: ../InfoPath/fails-connecting-infopath-form.md
+  - name: Lists and Libraries
+    items:
+    - name: '"drag files here" option is missing for a list'
+      href: ../lists-and-libraries/drag-files-here-option-missing.md
+    - name: 0x80070005 error for an online list sync
+      href: ../lists-and-libraries/sync-sharepoint-list-error-0x80070005.md
+    - name: An online list opens the form dialog box when adding items
+      href: ../lists-and-libraries/calendar-view-list-opens-dialog-box.md
+    - name: Asset library displays a film reel icon for the video content type
+      href: ../lists-and-libraries/film-reel-icon-video-content.md
+    - name: Can't check in multiple items in a document library
+      href: ../lists-and-libraries/cannot-check-in-multiple-items.md
+    - name: Can't delete Teams channel folders
+      href: ../lists-and-libraries/deleted-teams-standard-channel-folder-deletion-fails.md
+    - name: Can't open documents in a local client from Chrome
+      href: ../../SharePointServer/lists-and-libraries/cant-open-sp-documents-from-chrome.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Can't share/break inheritance of a folder, list, or library
+      href: ../lists-and-libraries/error-share-break-inheritance.md
+    - name: Can't sync files or folders
+      href: ../lists-and-libraries/cannot-sync-files-folders.md
+    - name: Can't sync recurring Calendar items with error 0x80004005
+      href: ../lists-and-libraries/outlook-not-sync-recurring-calendar-items.md
+    - name: Change to default content type setting for new lists 
+      href: ../lists-and-libraries/change-to-how-lists-are-named.md
+    - name: Changes to default versioning setting for document libraries
+      href: ../lists-and-libraries/library-versioning-setting-changes.md
+    - name: Check for Known Folder Move eligibility
+      href: ../lists-and-libraries/determine-known-folder-move-eligibility.md
+    - name: Common issues syncing SharePoint lists offline
+      href: ../lists-and-libraries/common-sync-issues.md
+    - name: Content Organizer doesn't comply with specified interval
+      href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
+    - name: Content Organizer doesn't comply with specified interval
+      href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
+    - name: Default column name shown in list settings
+      href: ../lists-and-libraries/default-column-name-still-shown.md
+    - name: Documents aren't displayed in web browser with TLS 1.2
+      href: ../lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2.md
+    - name: Edit column doesn't display the edit link
+      href: ../lists-and-libraries/edit-column-fails-displaying-edit-link.md
+    - name: Error when creating a list from Excel
+      href: ../lists-and-libraries/error-create-list-excel.md
+    - name: Error when view or edit in Word or PowerPoint Online
+      href: ../lists-and-libraries/error-when-view-or-edit-in-browser.md
+    - name: Excel survey doesn't have full functionality
+      href: ../lists-and-libraries/excel-survey-does-not-have-full-functionality-when-click-new.md
+    - name: File post-processing takes up to 24 hours
+      href: ../lists-and-libraries/file-post-processing-takes-up-to-24-hours.md
+    - name: Filtering doesn't work for Managed Metadata in SharePoint
+      href: ../lists-and-libraries/managed-metadata-column-fails-filtering.md
+    - name: Information about dragging files into document libraries
+      href: ../lists-and-libraries/dragging-files-using-web-browser.md
+    - name: Issue when creating a calendar overlay
+      href: ../lists-and-libraries/fails-creating-calendar-overlay.md
+    - name: Issue when creating documents in Microsoft 365 portal
+      href: ../lists-and-libraries/o365-portal-fails-creating-documents.md
+    - name: Issue when deleting an online list item attachment
+      href: ../lists-and-libraries/list-item-fails-saving-same-attachment.md
+    - name: Issue when opening documents in client applications
+      href: ../lists-and-libraries/the-webpage-cannot-be-displayed-when-open-an-office-document.md
+    - name: Issue when saving a list or library as template
+      href: ../lists-and-libraries/fails-saving-list-as-template.md
+    - name: Issue when sorting or filtering a column
+      href: ../lists-and-libraries/fails-filtering-sharepoint-column.md
+    - name: Issues with Open with Explorer
+      href: ../lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md
+    - name: Lists and Libraries Modern View Compatibility check
+      href: ../lists-and-libraries/modern-view-compatibility-checklist.md
+    - name: Minimal Download Strategy feature isn't used for a list or library
+      href: ../lists-and-libraries/mds-functionality-unaffect-library.md
+    - name: Modified time isn't displayed correctly for an online list item
+      href: ../lists-and-libraries/modified-time-shows-incorrectly.md
+    - name: Mentions in SharePoint documents don’t send email to participant
+      href: ../lists-and-libraries/no-email-after-mention.md
+    - name: Number of items in this list exceeds the list view threshold
+      href: ../lists-and-libraries/items-exceeds-list-view-threshold.md
+    - name: Per-location view settings don't work at the folder level
+      href: ../lists-and-libraries/per-location-view-settings-fail-working.md
+    - name: Picture library doesn't display thumbnail previews
+      href: ../lists-and-libraries/picture-library-thumbnail-preview.md
+    - name: Relative URLs for content types across site collections isn't supported
+      href: ../lists-and-libraries/relative-url-across-site-collection-not-supported.md
+    - name: Required information isn't prompted when uploading files
+      href: ../lists-and-libraries/upload-file-using-new-experience.md
+    - name: SharePoint files open as read-only
+      href: ../lists-and-libraries/files-open-as-read-only-and-cannot-check-in-or-out.md
+    - name: Simple controls are missing for a document library
+      href: ../lists-and-libraries/simple-controls-missing.md
+    - name: Slow "Open with Explorer" performance on Windows 8 or Windows Server 2012
+      href: ../lists-and-libraries/slow-open-with-explorer-performance.md
+    - name: Task list shows item title as .000 
+      href: ../lists-and-libraries/task-list-shows-000.md
+    - name: Template-generated list doesn't display correct column data
+      href: ../lists-and-libraries/template-generated-list-incorrect-data.md
+    - name: The URL <file name> is invalid when uploading a file
+      href: ../lists-and-libraries/url-invalid-upload-file-to-list.md
+    - name: Troubleshoot mapped network drives
+      href: ../lists-and-libraries/troubleshoot-mapped-network-drives.md
+  - name: Migration
+    items:
+    - name: Error "Service is not available" when using the Stream migration tool
+      href: ../migration/service-not-available-stream-migration-tool.md
+    - name: Information about manual migration
+      href: ../migration/content-manual-migration.md
+  - name: Performance
+    items:
+    - name: Performance troubleshooter for SharePoint Online
+      href: ../Performance/sharepoint-online-performance-troubleshooter.md
+    - name: Publishing pages take longer than expected to load
+      href: ../Performance/publishing-pages-take-longer-to-load.md
+  - name: Search
+    items:
+    - name: '"Not all terms were imported successfully" error with importing term set'
+      href: ../search/troubleshoot-error-when-importing-a-term-set.md
+    - name: Classic site collection search usage reports
+      href: ../search/classic-site-collection-search-usage-reports.md  
+    - name: Document preview and content type icon aren't displayed
+      href: ../Search/content-type-icon-not-display.md
+    - name: Items are missing from online search results
+      href: ../Search/items-missing-from-search-results.md
+    - name: Near-duplicate items aren't listed in SharePoint Online or SharePoint Server 2013 on-premises search results
+      href: ../search/near-duplicate-items-are-not-listed-in-search-results.md
+    - name: No updated results when searching people categories properties
+      href: ../search/updated-results-are-not-returned-when-searching-people-properties.md
+    - name: Search doesn't provide results from another language
+      href: ../Search/no-search-results-from-another-language.md
+    - name: Search results are missing
+      href: ../Search/search-results-missing.md
+    - name: Search results aren't returned
+      href: ../Search/search-results-not-return.md
+    - name: Search results don't appear for group owners after creating a new Microsoft 365 group
+      href: ../search/search-results-dont-appear-for-group-owners.md
+  - name: Security
+    items:
+    - name: Documents deleted by retention policy after workload is removed
+      href: ../../OneDrive/security/retention-policies-deleting-documents-after-workload-removal.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Handling ransomware in SharePoint Online
+      href: ../security/handling-ransomware-in-sharepoint-online.md
+    - name: Migrated accounts aren't resolved
+      href: ../Security/migrated-user-name-resolution-fails.md
+    - name: Online cross-domain iframe requests are blocked
+      href: ../security/cross-domain-iframe-requests-are-blocked.md
+    - name: '"Session has expired" when opening a document'
+      href: ../Security/session-has-expired.md
+    - name: There's a problem with your account when opening documents
+      href: ../Security/problem-with-your-account.md
+  - name: Sharing and Permissions
+    items:
+    - name: '"Access Denied due to organizational policies" error'
+      href: ../sharing-and-permissions/access-denied-due-to-org-policies.md
+    - name: Access Denied error when accessing a shared folder
+      href: ../sharing-and-permissions/access-denied-shared-folder.md
+    - name: App permission error when updating user profile properties
+      href: ../sharing-and-permissions/app-permission-error-update-user-profile-property.md
+    - name: Email notifications from sharing events aren't delivered to recipients
+      href: ../sharing-and-permissions/sharing-email-not-delivered.md
+    - name: '"Error 403 Forbidden" in OneDrive or SharePoint'
+      href: ../sharing-and-permissions/error-403-forbidden.md
+    - name: Error ResponseStatusNotOK when sharing a site
+      href: ../sharing-and-permissions/responsestatusnotok-sharing-sharepoint-onedrive-site.md
+    - name: '"Everyone except external users" group is removed'
+      href: ../sharing-and-permissions/everyone-except-external-user-removed.md
+    - name: '"External sharing is disabled for the site" error with Online Admin Center'
+      href: ../sharing-and-permissions/troubleshoot-error-when-tries-to-access-center.md
+    - name: '"Shared With"column displays users unexpectedly'
+      href: ../sharing-and-permissions/shared-with-column-users-no-access.md
+    - name: '"Your organization policies do not allow you to share with these users" error'
+      href: ../sharing-and-permissions/organization-policies-do-not-allow-you-to-share-with-users-error.md
+    - name: Anonymous users are prompted for credentials
+      href: ../sharing-and-permissions/anonymous-users-are-prompted-for-credentials-in-library.md
+    - name: Can't add external users to a SharePoint Online External Content Type
+      href: ../sharing-and-permissions/cannot-add-external-users-to-content-type.md
+    - name: Can't share/break inheritance of a folder, list, or library
+      href: ../lists-and-libraries/error-share-break-inheritance.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Creator of teams group is listed as an admin
+      href: ../sharing-and-permissions/fails-retrieving-teams-group-owner.md
+    - name: Credential prompts after resting mouse pointer over a user name
+      href: ../sharing-and-permissions/rest-mouse-pointer-on-user-name.md
+    - name: Email invitation isn't received
+      href: ../sharing-and-permissions/everyone-group-not-receive-email-invitation.md
+    - name: Error when accepting an online invitation with another account
+      href: ../sharing-and-permissions/error-when-external-user-accepts-an-invitation-by-using-another-account.md
+    - name: External users can't find users in people picker
+      href: ../sharing-and-permissions/people-picker-fails-finding-users.md
+    - name: Fix site user ID mismatch in SharePoint or OneDrive
+      href: ../sharing-and-permissions/fix-site-user-id-mismatch.md
+    - name: Issue after accepting a resource invite
+      href: ../sharing-and-permissions/unable-to-complete-request.md
+    - name: Issue when external users select links to shared resource
+      href: ../sharing-and-permissions/external-user-fails-accessing-shared-resource.md
+    - name: Issue when processing a pending request
+      href: ../sharing-and-permissions/request-approval-failed.md
+    - name: Issue with activate or deactivate the Publishing feature
+      href: ../sharing-and-permissions/activating-publishing-feature-access-error.md
+    - name: New guests can't access a SharePoint resource
+      href: ../sharing-and-permissions/error-selected-user-account-does-not-exist.md
+    - name: No verification code to access shared secure link
+      href: ../sharing-and-permissions/no-verification-code-to-access-shared-secure-link.md
+    - name: Option isn't received to request access to resource
+      href: ../sharing-and-permissions/request-access-to-resource.md
+    - name: Required permissions for managing Secure Store Service
+      href: ../sharing-and-permissions/managing-secure-store-service-app-permissions.md
+    - name: Sharing options are greyed out when sharing from SharePoint Online or OneDrive
+      href: ../sharing-and-permissions/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive.md
+    - name: SSL certificate authentication issues 
+      href: ../sharing-and-permissions/ssl-certificate-authentication.md    
+    - name: Unable to reach the server when sharing files
+      href: ../sharing-and-permissions/share-file-unable-reach-server.md
+    - name: You aren't allowed to create team sites
+      href: ../sharing-and-permissions/issue-when-you-click-new-site-on-followed-sites-page.md
+  - name: Sites
+    items:
+    - name: '"Header Field Too Long" error'
+      href: ../Sites/header-field-too-long-error.md
+    - name: '"HTTP request is unauthorized" error'
+      href: ../Sites/calendar-overlay-unsupported.md
+    - name: '"This site cannot be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
+      href: ../Sites/err-invalid-response-accessing-sharepoint-site.md
+    - name: '"You do not have an e-mail address" error with creating an online alert'
+      href: ../sites/do-not-have-an-e-mail-address-when-create-an-alert.md
+    - name: A URL that resides under a root site collection is broken
+      href: ../sites/url-that-resides-under-root-site-collection-is-broken.md
+    - name: Can't access online sites with a full redelegation domain
+      href: ../sites/cannot-access-sites-by-using-a-domain.md
+    - name: Can't change the default language for a site collection
+      href: ../Sites/change-default-language-site-collection.md
+    - name: Can't find specified web in the given URL
+      href: ../Sites/cannot-find-specified-web-given-url.md
+    - name: Can't permanently delete a site when it's connected to a Microsoft 365 group
+      href: ../Sites/cannot-permanently-delete-site.md    
+    - name: Customizations of the top navigation bar are reverted
+      href: ../Sites/customizations-revert-to-default-settings.md
+    - name: Error "Site is protected by Microsoft 365 Backup and cannot be deleted"
+      href: ../sites/cannot-delete-sites-protected-by-microsoft365-backup.md
+    - name: Error "This page has been blocked as it violates the Acceptable Use Policy"
+      href: ../sites/page-blocked-violates-acceptable-use-policy.md
+    - name: Error when trying to change site logo on Microsoft 365 group SharePoint site
+      href: ../sites/error-when-changing-o365-site-logo.md
+    - name: Error when trying to delete a SharePoint site
+      href: ../sites/compliance-policy-blocking-site-deletion.md    
+    - name: Issue when activating Announcement Tiles feature
+      href: ../Sites/announcement-tiles-not-supported.md
+    - name: Issue when creating an online site
+      href: ../Sites/site-names-cant-contain-reserved-word.md
+    - name: Issue when saving a site as a template
+      href: ../Sites/fails-saving-site-as-template.md
+    - name: Issue when saving an online site as template
+      href: ../Sites/save-site-as-template.md
+    - name: Issue with "New Navigation Link" or "Save site as template" option
+      href: ../Sites/new-navigation-link-save-site-as-template.md
+    - name: Modified dates on the SharePoint site contents page aren't accurate
+      href: ../../SharePointServer/lists-and-libraries/modified-date-site-contents-not-accurate.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Notifications not received by group connected to SharePoint site
+      href: ../sites/notification-email-not-received.md
+    - name: Public websites are discontinued
+      href: ../Sites/public-websites-be-discontinued.md
+    - name: Rich Text fields don't respond
+      href: ../Sites/rich-text-fields-fails-responding.md
+    - name: SharePoint Online alert notifications aren't received
+      href: ../Sites/no-alert-notifications.md
+    - name: SharePoint or OneDrive read-only error messages
+      href: ../Sites/site-is-read-only.md
+    - name: Site doesn't use the site theme for top navigation bar
+      href: ../Sites/top-navigation-bar-not-use-site-theme.md
+    - name: Site is at or near the metadata limit
+      href: ../sites/site-reached-metadata-limit.md
+    - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive
+      href: ../sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md
+    - name: Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage
+      href: ../sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md
+    - name: Unable to delete a SharePoint site
+      href: ../sites/unable-to-delete-site.md
+    - name: Unable to schedule page publishing after changing a content type 
+      href: ../sites/cant-schedule-publish.md
+  - name: Synchronization
+    items:
+    - name: A synchronized file is moved to the recycle bin
+      href: ../Sync/synced-file-moved-to-recycle-bin.md
+    - name: SharePoint Workspace doesn't always sync automatically
+      href: ../../SharePointServer/sync/sharepoint-workspace-not-sync-with-online.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+  - name: Video
+    items:
+    - name: Can’t view embedded Stream video in Teams app
+      href: ../video/cant-view-embedded-video.md
+  - name: Web Parts
+    items:
+    - name: A list view Web Part for a tasks list doesn't filter values
+      href: ../Web-parts/list-view-web-part-not-filter-values.md
+    - name: A WSRP Viewer Web Part contains no Producer options
+      href: ../Web-parts/wspr-viewer-web-part-unsupported.md
+    - name: An online Web Part doesn't display
+      href: ../Web-parts/fails-displaying-web-part-including-xslt-code.md
+    - name: Issue on a site page with pages library web part
+      href: ../../SharePointServer/web-parts/sorry-something-went-wrong-error-on-site-page-with-pages-library-web-part.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Issue when changing Summary Links Web Part
+      href: ../Web-parts/change-summary-link-web-part.md
+    - name: Non-CDN-enabled Picture Library Slideshow web part not working
+      href: ../web-parts/non-cdn-enabled-picture-library-slideshow-web-part-no-longer-switches-automatically-to-new-images.md
+    - name: Sites.aspx page doesn't display content
+      href: ../Web-parts/aspx-page-not-display-content.md
+    - name: '"Something went wrong" error configuring SPFx component in a SharePoint Online page'
+      href: ../web-parts/something-went-wrong-error-configuring-spfx-component.md
+    - name: Unable to drag and drop web parts onto classic pages in SharePoint Online
+      href: ../web-parts/unable-to-drag-drop-web-parts.md
+    - name: Unable to create alerts for views in SharePoint
+      href: ../web-parts/unable-to-create-view-alerts.md
+  - name: Workflows
+    items:
+    - name: '"Access denied" error with an Approval Workflow task'
+      href: ../workflows/access-denied-when-approve-workflow-task.md
+    - name: A workflow doesn't complete
+      href: ../Workflows/workflow-using-impersonation-step-fails-completed.md
+    - name: A workflow doesn't execute
+      href: ../Workflows/workflow-lookup-fails-executing.md
+    - name: A Workflow Status error is reported
+      href: ../workflows/error-reported-in-sharepoint-2010-workflow-status.md
+    - name: An online workflow is linked to the source workflow
+      href: ../Workflows/copied-workflow-linked-to-source-workflow.md
+    - name: Daily email limit has exceeded or unable to send to a recipient
+      href: ../Workflows/configured-workflow-fails-running.md
+    - name: Gather Workflow troubleshooting data
+      href: ../Workflows/gather-workflow-data.md
+    - name: Items revert to the "Pending" status
+      href: ../Workflows/item-pending-status.md
+    - name: Nintex workflow on SharePoint Online fails to start
+      href: ../Workflows/nintex-workflow-fails-to-start.md
+    - name: Outlook doesn't respond when approving an online approval workflow
+      href: ../Workflows/outlook-fails-responding-sharepoint-workflow.md
+    - name: Publishing Approval workflow doesn't automatically start
+      href: ../Workflows/publishing-approval-workflow-fails-starting.md
+    - name: Replace List Item Permissions action fails
+      href: ../Workflows/replace-list-item-permission-fail.md
+    - name: SharePoint 2013 workflow HTTP Unauthorized
+      href: ../workflows/workflow-http-unauthorized.md
+    - name: SharePoint 2013 Workflow Error '“To try again, reload the page”'
+      href: ../workflows/reload-the-page.md
+    - name: Workflow contains blank values in output
+      href: ../Workflows/workflow-contains-blank-values.md
+    - name: Workflow fails to update a Person or Group column
+      href: ../Workflows/workflow-update-list-item-fail.md
+    - name: Workflow issues after connecting to a site
+      href: ../Workflows/connecting-site-workflow-problems.md
+    - name: Workflow platform creates Word files that can't be opened
+      href: ../Workflows/workflow-platform-created-word-fails-opening.md

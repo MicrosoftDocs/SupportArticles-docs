@@ -6,6 +6,8 @@
           "**/*.md",
           "**/*.yml"
         ],
+        "src": "Hub",
+        "dest": ".",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -18,13 +20,96 @@
           "ThirdPartyNotices.md",
           "SECURITY.md"
         ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "SharePointServer",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "SharePointExperts",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "SharePointOnline",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "SharePointHybrid",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "OneDrive",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
       }
     ],
     "resource": [
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.pdf",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -38,11 +123,36 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/breadcrumb/SupportArticles-SharePoint/toc.yml",
+      "breadcrumb_path": "/sharepoint/troubleshoot/breadcrumb/toc.json",
+      "recommendations": true,
       "feedback_system": "Standard",
-      "permissioned-type": "public"
+      "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/06735c62-321c-ec11-b6e7-0022481f8472",
+      "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "searchScope": ["SharePoint Support"],
+      "titleSuffix": "SharePoint",
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
     },
-    "fileMetadata": {},
-    "template": []
+    "fileMetadata": {
+      "ms.service": {
+        "SharePointHybrid/**/*.md": "sharepoint-online",
+        "SharePointOnline/**/*.md": "sharepoint-online",
+        "OneDrive/**/*.md": "one-drive",
+        "SharePointServer/**/*.md": "sharepoint-server-itpro",
+        "SharePointExperts/**/*.md": "sharepoint-server-itpro",
+        "SharePointOnline/migration/**/*.md": "microsoft-365-migration"
+      },
+      "author": {
+        "**/*.md": "helenclu"
+      },
+      "ms.author": {
+        "**/*.md": "luche"
+      }
+    },
+    "template": [],
+    "dest": "OfficeDocs-Support-SharePoint",
+    "markdownEngineName": "markdig"
   }
 }

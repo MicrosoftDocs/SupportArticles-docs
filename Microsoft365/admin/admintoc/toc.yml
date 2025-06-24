@@ -1,0 +1,121 @@
+﻿- name: Microsoft 365 Administration Troubleshooting
+  href: ../o365-admin-welcome.yml
+  items:
+  - name: Access Management
+    items:
+    - name: Adding guests in the admin center
+      href: ../access-management/cannot-add-guest-users-in-m365-admin-center.md
+    - name: Can't open an IRM-protected document with sign-in prompts
+      href: ../access-management/cannot-open-irm-protected-document.md
+    - name: Full Access permissions aren't working after a migration
+      href: ../access-management/office-365-dedicated-itar-vnext.md
+    - name: Grant the Everyone claim to external users
+      href: ../access-management/grant-everyone-claim-to-external-users.md
+    - name: Issue with reset admin password
+      href: ../access-management/issue-with-reset-admin-password.md
+    - name: Your session has expired in Office Online
+      href: ../access-management/your-session-has-expired-error.md
+  - name: Active Directory
+    items:
+    - name: '"AADSTS65005" error when signing in to cloud services'
+      href: ../active-directory/aadsts65005-error-when-sign-in-cloud.md
+    - name: '"Duplicate" is displayed in the ERROR column'
+      href: ../active-directory/run-idfix-dirsync-error-remediation-tool.md
+    - name: '"This does not look like a valid user ID" when you sign in'
+      href: ../active-directory/this-doesnt-look-like-valid-user-id-error.md
+    - name: AD FS endpoint connection issues
+      href: ../active-directory/ad-fs-endpoint-connection-issue.md
+    - name: Can't change phone number with MFA
+      href: ../active-directory/cant-change-phone-number-with-mfa.md
+    - name: Can't set up security verification settings
+      href: ../active-directory/sorry-we-cant-process-your-request-error.md
+    - name: Directory Sync tool stops syncing objects
+      href: ../active-directory/directory-sync-tool-not-sync-object.md
+    - name: Email address contains an underscore character
+      href: ../active-directory/email-address-contain-underscore.md
+    - name: Error when you run IdFix tool
+      href: ../active-directory/idfix-tool-running-error.md
+    - name: Error when you run the IdFix tool in AD DS
+      href: ../active-directory/idfix-not-display-objects-errors.md
+    - name: Errors when using Entra ID Graph API applications
+      href: ../active-directory/errors-using-azure-ad-custom-apps.md
+    - name: Exception Error when you run Directory Sync Configuration wizard
+      href: ../active-directory/exception-with-azure-ad-sync.md
+    - name: Set up single sign-on
+      href: ../active-directory/set-up-single-sign-on.md
+    - name: Signing in to Microsoft 365 fails
+      href: ../active-directory/sign-in-fails-if-federation-endpoint-changes.md
+    - name: Support for migrations from AD RMS to Azure RMS
+      href: ../active-directory/migration-from-ad-rms-to-azure-rms.md
+    - name: Support options for setting SSO
+      href: ../active-directory/support-options-of-set-single-sign-on.md
+    - name: Troubleshoot single sign-on issues
+      href: ../active-directory/single-sign-on-issues.md
+    - name: User passwords not synced from AD DS
+      href: ../active-directory/password-synchronization-not-activated.md
+  - name: Authentication
+    items:
+    - name: 8004789A when signing in to Microsoft 365
+      href: ../authentication/federated-user-sign-in-to-office-365.md
+    - name: 80048163 when federated user tries to sign in
+      href: ../authentication/federated-user-fails-signing-in.md
+    - name: A user with this name already exists
+      href: ../authentication/office-365-user-with-name-already-exists.md
+    - name: Authentication automatically fails
+      href: ../authentication/automatic-authentication-fails.md
+    - name: Certificate-based authentication fails on iOS
+      href: ../authentication/certificate-based-authentication-fails-on-ios.md    
+    - name: Federated users account issues
+      href: ../authentication/account-issues-for-federated-users.md
+    - name: Federation Service certificates are expiring
+      href: ../authentication/federation-service-certificate-expire.md
+  - name: Domain Management
+    items:
+    - name: Can't add a domain
+      href: ../administration/administrator-failed-adding-domain.md
+    - name: Can't assign a federated domain
+      href: ../domain-management/cannot-assign-federated-domain-to-user.md
+    - name: Can't send emails from full redelegation domain
+      href: ../administration/send-email-full-redelegation-domain.md
+    - name: Child domain doesn't inherit parent changes
+      href: ../administration/child-domain-fails-inherit-parent-domain-changes.md
+    - name: Issue when removing a domain
+      href: ../administration/error-remove-domain-from-office-365.md
+  - name: Group Policy
+    items:
+    - name: Configure default email client using policy
+      href: ../group-policy/configure-email-client-using-policy.md
+  - name: Groups
+    items: 
+    - name: Distribution group issues
+      href: ../groups/distribution-list-issues.md
+  - name: Installation
+    items:
+    - name: Can't start this app when installing an add-in
+      href: ../installation/cannot-install-office-add-in.md
+    - name: Error when uninstalling Microsoft 365 Pro Plus
+      href: ../installation/something-went-wrong-30016-4-error.md
+  - name: Miscellaneous
+    items:
+    - name: Chrome cookie behavior effect on applications
+      href: ../miscellaneous/chrome-behavior-affects-applications.md
+    - name: New Startup Boost tasks in Windows Task Scheduler
+      href: ../miscellaneous/new-startup-boost-tasks-windows-task-scheduler.md
+    - name: Open Support cases for GCC High and DoD
+      href: ../miscellaneous/support-cases-for-gcc-high-dod.md
+    - name: Reports show anonymous user names
+      href: ../miscellaneous/reports-show-anonymous-user-name.md    
+  - name: Sign-in
+    items:
+    - name: Can't sign in to Microsoft cloud service
+      href: ../sign-in/office-365-azure-intune-sign-in-issue.md
+    - name: Can't sign in to Microsoft 365 portal
+      href: ../sign-in/cannot-sign-in-to-office-365.md
+    - name: Error when federated users sign in to Microsoft 365
+      href: ../sign-in/federated-users-sign-in-error-ad-fs.md
+    - name: Federated user is repeatedly prompted for credentials
+      href: ../sign-in/federated-user-repeatedly-prompted-for-credentials.md
+    - name: Forgot sign-in password to Microsoft 365, Azure, or Intune
+      href: ../sign-in/forgot-sign-in-password.md
+    - name: Sign-in issues with Office modern authentication
+      href: ../sign-in/sign-in-issue-with-modern-auth.md

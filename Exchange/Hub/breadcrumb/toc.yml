@@ -1,0 +1,7 @@
+- name: Microsoft Exchange
+  tocHref: /exchange/
+  topicHref: /exchange/index
+  items:
+  - name: Troubleshooting
+    tocHref: /exchange/troubleshoot/
+    topicHref: /exchange/troubleshoot/index

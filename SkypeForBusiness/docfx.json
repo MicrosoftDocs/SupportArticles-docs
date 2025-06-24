@@ -6,6 +6,8 @@
           "**/*.md",
           "**/*.yml"
         ],
+        "src": "Hub",
+        "dest": ".",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -18,13 +20,80 @@
           "ThirdPartyNotices.md",
           "SECURITY.md"
         ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "SkypeServer",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "SkypeOnline",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "SkypeHybrid",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "SkypeExperts",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
       }
     ],
     "resource": [
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.pdf",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -38,11 +107,34 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/breadcrumb/SupportArticles-SkypeForBusiness/toc.yml",
+      "breadcrumb_path": "/skypeforbusiness/troubleshoot/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
+      "recommendations": true,
       "feedback_system": "Standard",
-      "permissioned-type": "public"
+      "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "titleSuffix": "Skype for Business",
+      "searchScope": ["Skype for Business Support"] ,
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
     },
-    "fileMetadata": {},
-    "template": []
+    "fileMetadata": {
+      "ms.service": {
+        "SkypeOnline/**/*.md": "skype-for-business-online",
+        "SkypeHybrid/**/*.md": "skype-for-business-online",
+        "SkypeServer/**/*.md": "skype-for-business-server",
+        "SkypeExperts/**/*.md": "skype-for-business-server"
+      },
+      "author": {
+        "**/*.md": "helenclu"
+      },
+      "ms.author": {
+        "**/*.md": "luche"
+      }
+    },
+    "template": [],
+    "dest": "OfficeDocs-Support-Skype",
+    "markdownEngineName": "markdig"
   }
 }

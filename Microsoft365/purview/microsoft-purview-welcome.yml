@@ -1,0 +1,76 @@
+### YamlMime:Landing
+
+title: Microsoft Purview troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Microsoft Purview. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Microsoft Purview troubleshooting
+  description: Documentation for troubleshooting common issues with Microsoft Purview.
+  ms.service: purview
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 07/26/2022
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Archive mailboxes
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Messages aren't moved to archive mailboxes
+            url: ./archive-mailboxes/message-not-moved-to-archive.md
+          - text: "\"Mailbox is full\" warning"
+            url: ./archive-mailboxes/mailbox-full-warning-though-not-reached-quota.md
+          - text: Archive mailbox issues
+            url: ./archive-mailboxes/archive-mailbox-issues.md
+  # Card
+  - title: eDiscovery
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve eDiscovery issues
+            url: ./ediscovery/resolve-ediscovery-issues.md
+ # Card
+  - title: Audit logs
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Mailbox audit logs
+            url: ./audit-logs/mailbox-audit-logs.md
+          - text: Issue when searching audit log
+            url: ./audit-logs/issue-search-audit-log.md
+          - text: UserAgent property
+            url: ./audit-logs/useragent-property.md
+ # Card
+  - title: Message encryption
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't display message
+            url: ./office-message-encryption/cannot-display-message.md
+          - text: Disable Encrypt-Only
+            url: ./office-message-encryption/disable-encrypt-only.md  
+ # Card
+  - title: Data Loss Prevention (DLP)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Common scenarios for tips
+            url: ./data-loss-prevention/data-loss-prevention-policy-tips.md
+          - text: DLP not working
+            url: ./data-loss-prevention/data-loss-prevention-not-work.md
+ # Card
+  - title: Retention
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: MRM and retention policies
+            url: ./retention/mrm-and-retention-policy.md
+          - text: Managed folders disappear
+            url: ./retention/managed-folders-disappear.md
+          - text: Can't manage disposition reviews
+            url: ./retention/cannot-manage-disposition-reviews.md
+            

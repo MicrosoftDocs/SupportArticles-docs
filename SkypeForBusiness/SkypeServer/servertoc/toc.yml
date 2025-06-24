@@ -1,0 +1,221 @@
+- name: Skype for Business Server Troubleshooting
+  href: ../skype-server-welcome.yml
+  items:
+  - name: Conferencing
+    items:
+    - name: Can't connect conferencing modalities
+      href: ../server-conferencing/cannot-connect-conferencing-modalities.md
+    - name: Conference creation, modification, or deletion fails
+      href: ../server-conferencing/conference-operation-fail.md
+    - name: Conferencing feature fails for mandatory user profile
+      href: ../server-conferencing/conferencing-feature-fails-for-mandatory-user.md
+    - name: Enable the Conferencing Add-in for Outlook
+      href: ../server-conferencing/enable-conferencing-add-in-for-outlook.md
+    - name: Lync clients cannot upload a presentation
+      href: ../server-conferencing/cannot-upload-presentation.md
+    - name: On-screen keyboard disappears
+      href: ../server-conferencing/virtual-keyboard-disappears.md
+    - name: Peer-to-Peer desktop sharing issues
+      href: ../server-conferencing/peer-to-peer-desktop-sharing-issues.md
+    - name: Skype for Business broadcasts a dial tone
+      href: ../server-conferencing/sfb-play-dial-tone-teams-call.md
+    - name: Video calls not working with Logitech Brio Webcam
+      href: ../server-conferencing/cant-do-video-call.md
+  - name: Configuration
+    items:
+    - name: '"Set Your Location" field is unavailable'
+      href: ../../SkypeOnline/online-configuration/cant-set-location-in-lync.md?toc=/SkypeforBusiness/troubleshoot/servertoc/toc.json&bc=/SkypeforBusiness/troubleshoot/breadcrumb/toc.json
+    - name: Access Edge service fails to start 
+      href: ../server-configuration/lync-server-2013-access-edge-service-not-start.md
+    - name: Access edge services can't negotiate TLS connection 
+      href: ../server-configuration/access-edge-services-cannot-negotiate-tls.md
+    - name: Bug Check 0x133 on Edge server
+      href: ../server-configuration/bugcheck-0x133-edge-server.md
+    - name: Can't perform a CMS failover
+      href: ../server-configuration/cannot-perform-cms-failover.md
+    - name: Can't start a front-end server
+      href: ../server-configuration/cannot-start-front-end-server.md
+    - name: Census data is now collected for Lync
+      href: ../server-configuration/census-data-collected.md
+    - name: Central management store replication failures
+      href: ../server-configuration/central-management-store-replication-failures.md
+    - name: Check the version of Skype for Business 2016
+      href: ../server-configuration/check-version-of-skype-for-business-2016.md
+    - name: Collect log files from Skype for Business Client
+      href: ../server-configuration/collect-log-files.md
+    - name: Disable Automatic Gain Control
+      href: ../server-configuration/disable-automatic-gain-control.md
+    - name: Disable contextual tips
+      href: ../server-configuration/disable-contextual-tips.md
+    - name: Enable-CsAdForest command fails
+      href: ../server-configuration/enable-csadforest-command-fails.md
+    - name: Error when you use Install-CsDatabase cmdlet 
+      href: ../server-configuration/error-with-install-csdatabase.md
+    - name: Event 32263 error 0xC3E93C2F on Front End servers
+      href: ../server-configuration/event-32263-0xc3e93c2f-front-end.md
+    - name: Event IDs 32402, 61045 logged in Front End
+      href: ../server-configuration/event-32402-61045-front-end.md
+    - name: How to use Configuration Information
+      href: ../server-configuration/how-to-use-configuration-information.md
+    - name: Insufficient access rights when move user command
+      href: ../server-configuration/issue-attempt-move-or-enable-user-command.md
+    - name: Issue when File Store share in unsupported configuration
+      href: ../server-configuration/issue-file-store-share-unsupported.md
+    - name: LyncBackupService.exe stops responding after pool pairing Skype for Business Server 2019
+      href: ../server-configuration/lyncbackupservice-exe-crashes-with-pool-pairing.md
+    - name: Lync Server 2013 Front-End server services not start
+      href: ../server-configuration/front-end-services-not-start.md
+    - name: Move-CsUser and Move-CsLegacyUser commands fail
+      href: ../server-configuration/move-csuser-move-cslegacyuser-fail.md
+    - name: Prevent Lync Server certificate expiration
+      href: ../server-configuration/lync-server-certificate-expiration.md
+    - name: Remote PowerShell cmdlets don't work
+      href: ../server-configuration/remote-powershell-cmdlets-not-working.md
+    - name: Skype for Business 2016 freezes for Malwarebytes
+      href: ../server-configuration/skype-for-business-2016-freeze-malwarebytes.md
+    - name: Stops responding when receiving IM toast notification
+      href: ../server-configuration/not-responding-receive-toast-notification.md
+    - name: Supportability is available for Lync Server 2010
+      href: ../server-configuration/available-supportability-lync-2010.md
+    - name: Test-CsFederatedPartner cmdlet fails
+      href: ../server-configuration/test-csfederatedpart-fail.md
+    - name: UCWA mobility web service not accept connections
+      href: ../server-configuration/ucwa-mobility-web-service-not-accept-connections.md
+    - name: Windows Fabric, Front-end services won't start
+      href: ../server-configuration/windows-fabric-front-end-services-not-start.md
+    - name: You have been added as a delegate for %User%
+      href: ../server-configuration/added-as-delegate-notice.md
+  - name: Contacts
+    items:
+    - name: Contact card shows phone number instead of name
+      href: ../server-contacts/contact-card-not-display-phone-number.md
+    - name: Didn't find an organizational chart
+      href: ../server-contacts/not-find-organizational-chart-error.md
+    - name: Duplicated working numbers for contacts
+      href: ../server-contacts/duplicated-working-numbers-for-contacts.md
+    - name: Maximum Followers Reached in contact card
+      href: ../server-contacts/contact-card-maximum-followers-reached.md
+    - name: No delegation relationship in Lync 2013
+      href: ../server-contacts/no-delegation-relationship.md
+    - name: Telephone numbers of contacts are missing
+      href: ../server-contacts/contacts-telephone-numbers-missing.md
+  - name: Exchange Integration
+    items:
+    - name: MAPI unavailable
+      href: ../server-exchange-integration/mapi-unavailable.md
+    - name: Skype for Business and Exchange integration fails
+      href: ../server-exchange-integration/sfb-and-exchange-integration-fails.md
+  - name: IM and Presence
+    items:
+    - name: Chat history not show in conversation window
+      href: ../server-im-presence/chat-history-not-show-conversation-window.md
+    - name: Emoticons and emojis converted to text
+      href: ../server-im-presence/emoticons-and-emojis-converted-to-text.md
+    - name: Enabling presence privacy mode update presence status
+      href: ../server-im-presence/presence-privacy-mode-update-presence-status.md
+    - name: Lync conversation window doesn't contain IM
+      href: ../server-im-presence/blank-conversation-window.md
+  - name: Install/Uninstall
+    items:
+    - name: '"Get-VM" is not recognized during install of Cloud Connector Edition'
+      href: ../server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md
+    - name: Clean uninstallation of Skype for Business on Mac
+      href: ../server-install-or-uninstall/clean-uninstallation.md
+    - name: Error when you install Lync Server 2013
+      href: ../server-install-or-uninstall/error-when-install-lync-server.md
+    - name: Setup Lync Server wizard returns warning
+      href: ../server-install-or-uninstall/setup-lync-server-wizard-returns-warning.md
+    - name: The installation (MSI) of Lync 2010 not complete
+      href: ../server-install-or-uninstall/lync-2010-msi-installation-not-complete.md
+    - name: Title bar displays "Lync"
+      href: ../server-install-or-uninstall/title-bar-displays-lync.md
+  - name: Meetings
+    items:
+    - name: Administrative delegates can't use Lync Meeting add-in
+      href: ../server-meetings/cannot-use-lync-meeting-add-in.md
+    - name: Black screen during desktop sharing on macOS High Sierra
+      href: ../server-meetings/desktop-sharing-black-screen-macos-high-sierra.md
+    - name: Can't join a meeting on iOS 10.0 and later
+      href: ../server-meetings/cant-join-meeting-on-ios-10-later.md
+    - name: Can't join a meeting on iOS 9.2 and later
+      href: ../server-meetings/cant-join-meeting-on-ios-9-2.md
+    - name: Enable Online Meeting Add-in for Lync 2010 in Outlook
+      href: ../server-meetings/enable-online-meeting-add-in-for-lync-2010.md
+    - name: "Error 12029: We couldn't connect you to this meeting"
+      href: ../server-meetings/cannot-connect-you-to-this-meeting.md
+    - name: Issue when join Meeting Broadcast as event team member
+      href: ../server-meetings/issue-join-meeting-broadcast.md
+    - name: Meeting conversation window disappears
+      href: ../server-meetings/meeting-conversation-windows-disappers.md
+    - name: Meeting invitations not sent from Outlook
+      href: ../server-meetings/meeting-invitations-not-sent-from-outlook.md
+    - name: Slow meeting refresh in non-VbSS client
+      href: ../server-meetings/slow-meeting-refresh-non-vbss-client.md
+    - name: Users whose SIP address contains apostrophe can't join meeting
+      href: ../server-meetings/join-meeting-sip-address-has-apostrophe.md
+    - name: Video is missing in meeting recording
+      href: ../server-meetings/video-missing-meeting-recording.md
+  - name: Mobile Devices
+    items:
+    - name: Message content is missing in Apple push notifications
+      href: ../server-mobile-devices/im-content-not-appear-notification.md
+    - name: Issues with Skype for Business for Android
+      href: ../server-mobile-devices/issues-for-android.md
+    - name: Lync 2010 for Android supports Android smartphone
+      href: ../server-mobile-devices/lync-support-android-smartphone.md
+    - name: Lync 2013 for iPhone/iPad features are missing
+      href: ../server-mobile-devices/lync-2013-iphone-features-missing-ios-client.md
+  - name: Phone System
+    items:
+    - name: Blind transfer from anonymous response group agent fails
+      href: ../server-phone-system/blind-transfer-fails.md
+    - name: Call to Response Group Agent fails
+      href: ../server-phone-system/call-to-response-group-agent-fails.md
+    - name: Calls to Subscriber Access or Auto Attendant fail 
+      href: ../server-phone-system/call-to-subscriber-access-auto-attendan-fail.md
+    - name: Calls to UM Auto Attendant fail 
+      href: ../server-phone-system/calls-to-um-auto-attendant-fail.md
+    - name: Country code is automatically added to calls
+      href: ../server-phone-system/country-code-automatically-added-to-calls.md
+    - name: Disable CallKit integration 
+      href: ../server-phone-system/disable-callkit-integration.md
+    - name: New features of firmware update for Polycom VVX Phone 
+      href: ../server-phone-system/new-features-in-firmware-update.md
+    - name: One-way audio after PSTN call is put on hold
+      href: ../server-phone-system/one-way-audio-after-PSTN-call-hold.md
+    - name: TLS failure with Event ID 1649
+      href: ../server-phone-system/event-id-1649-tls-failure.md
+    - name: Voice settings are intermittently reset
+      href: ../server-phone-system/voice-settings-intermittently-reset.md
+  - name: Sign-in
+    items:
+    - name: '"Click to Join" fails to invoke Skype for Business'
+      href: ../server-sign-in/click-to-join-fails.md
+    - name: '"Form region cannot be open" in Outlook preview pane'
+      href: ../server-sign-in/form-region-cannot-be-open-outlook.md
+    - name: '"You can not sign in with this version of Lync" error'
+      href: ../server-sign-in/you-cant-sign-in-with-this-version-of-lync.md
+    - name: Authentication fails during PIN sign-in
+      href: ../server-sign-in/authentication-fails-pin-sign-in.md
+    - name: Can't sign in mobile client version 5.4
+      href: ../server-sign-in/cannot-sign-in-mobile-client.md
+    - name: Can't sign in Skype for Business
+      href: ../server-sign-in/unable-to-sign-in-to-sfb.md
+    - name: Can't sign in to Lync client in limited functionality mode
+      href: ../server-sign-in/cannot-sign-in-limited-functionality-mode.md
+    - name: Can't verify trusted server for sign-in address
+      href: ../server-sign-in/cannot-verify-the-server-is-trusted.md
+    - name: Client not start when click meeting link in Chrome
+      href: ../server-sign-in/client-not-start-click-meeting-link.md
+    - name: Issues in mobile client for Google Android
+      href: ../server-sign-in/issues-mobile-client-for-android.md
+    - name: Lync becomes the default application for certain protocols
+      href: ../server-sign-in/registry-settings-overwritten-when-sign-in.md
+    - name: Newly created users can't sign in 
+      href: ../server-sign-in/newly-created-users-cant-sign-in.md
+    - name: SideBySide event ID 35 is logged
+      href: ../server-sign-in/sidebyside-event-id-35-logged.md
+    - name: Sign-in error when creating or joining a meeting
+      href: ../server-sign-in/create-join-meeting-sign-in-error.md
+    - name: Troubleshoot issues related to Skype for Business sign-in
+      href: ../../SkypeOnline/online-sign-in/troubleshoot-issues-related-skype-for-business-sign-in.md?toc=/SkypeforBusiness/troubleshoot/servertoc/toc.json&bc=/SkypeforBusiness/troubleshoot/breadcrumb/toc.json

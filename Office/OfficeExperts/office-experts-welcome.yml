@@ -1,0 +1,77 @@
+### YamlMime:Landing
+
+title: Office Experts
+summary: Welcome to this collection of content that has contributions from various Office experts in the community. The experts will be happy to answer any questions about their content. Bring them on! If you like their contribution, feel free to write an appreciative note to them for sharing their expertise.
+metadata:
+  title: Office Experts
+  description: Documentation for troubleshooting common issues with Microsoft Office products.
+  ms.service: office-perpetual-itpro
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 03/27/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Activation
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Activate Office 2010 KMS host through phone
+            url: ./activation/activate-office-2010-kms-host-via-phone-activation.md
+          - text: Discover Office and Windows KMS hosts
+            url: ./activation/discover-remove-unauthorized-office-windows-kms-hosts.md
+          - text: Reset activation state for Microsoft 365 Apps for enterprise
+            url: ./activation/reset-office-365-proplus-activation-state.md
+
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: 0xC004F038 computer couldn't be activated in KMS
+            url: ./administration/0xc004f038-computer-not-activate.md
+          - text: Can't check in files when LAN doesn't have Internet
+            url: ./administration/cannot-check-in-files-when-lan-does-not-have-internet.md
+          - text: Can't open file from recently used document list
+            url: ./administration/cant-open-files-most-recently-used-list.md
+
+  - title: Authentication
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Office not renders DUO API multifactor authentication sign-in page
+            url: ./authentication/not-render-a-custom-duo-api-multi-factor-authentication-login-page.md
+          - text: HTML sign-in page not renders correctly in Office
+            url: ./authentication/custom-html-login-page-not-render-correctly.md
+
+  - title: Diagnostic Logs
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Enable Microsoft 365 Apps for enterprise ULS logging
+            url: ./diagnostic-logs/how-to-enable-office-365-proplus-uls-logging.md
+          - text: Office Lens icons display incorrectly 
+            url: ./diagnostic-logs/office-lens-icons-incorrectly-display.md
+
+  - title: Excel
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"Cannot access directory" error in Excel 2016'
+            url: ./excel/cannot-access-directory-error-in-excel-2016.md
+          - text: '"Request Was Taking Too Long" in Excel Online'
+            url: ./excel/request-too-long-opening-excel-workbook.md
+
+  - title: Installation
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Automate the update uninstallation for Office 
+            url: ./installation/automate-uninstall-office-update.md
+          - text: Deploy Online Server to security hardened drives
+            url: ./installation/deploy-office-online-server-to-security-hardened-drive.md
+          - text: Install a second KMS host for Office
+            url: ./installation/guidance-on-installing-a-second-kms-host-for-office.md

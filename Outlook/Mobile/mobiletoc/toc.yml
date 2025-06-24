@@ -1,0 +1,27 @@
+- name: Outlook for iOS and Android Troubleshooting
+  href: ../outlook-mobile-welcome.yml
+  items:
+  - name: Add-ins
+    items:
+    - name: Can't save items from Outlook for iOS to OneNote
+      href: ../add-ins/cannot-save-to-onenote.md
+  - name: Calendars
+    items:
+    - name: Create and book a workspace in Outlook
+      href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/mobile-context
+  - name: Contacts
+    items:
+    - name: Duplicate Outlook contacts in iOS Contacts app
+      href: /exchange/troubleshoot/mobile-devices/duplicate-contacts-in-ios-contacts-app?context=/outlook/troubleshoot/context/mobile-context
+  - name: Exchange ActiveSync
+    items:
+    - name: Invitations are forwarded by an attendee for an existing meeting
+      href: ../exchange-activesync/invitations-forwarded-by-attendee-for-existing-meeting.md
+  - name: Exchange connectivity
+    items:
+    - name: ActiveSync v12.0 is out of support
+      href: ../exchange-connectivity/activesync-v12.0-out-of-support.md
+    - name: Outlook app access end after June 1 if EWS app policies not set correctly
+      href: /exchange/troubleshoot/mobile-devices/outlook-app-access-end-after-june-1-if-ews-app-policies-not-set-correctly?context=/outlook/troubleshoot/context/mobile-context
+    - name: Outlook for iOS and Android with Device Access (ABQ) rules are quarantined
+      href: ../exchange-connectivity/outlook-for-ios-and-android-with-abq-rules-are-quarantined.md

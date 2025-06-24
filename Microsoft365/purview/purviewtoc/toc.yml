@@ -1,0 +1,131 @@
+- name: Microsoft Purview Troubleshooting
+  href: ../microsoft-purview-welcome.yml
+  items:
+  - name: Archive Mailboxes
+    items:
+    - name: "\"Mailbox is full\" warning"
+      href: ../archive-mailboxes/mailbox-full-warning-though-not-reached-quota.md
+    - name: A mailbox reaches its quota
+      href: ../archive-mailboxes/mailbox-reaches-quota.md
+    - name: Archive mailbox issues
+      href: ../archive-mailboxes/archive-mailbox-issues.md
+    - name: ArchiveStatus shows None
+      href: ../archive-mailboxes/archivestatus-set-none.md
+    - name: Can't delete folders of an archive mailbox
+      href: ../archive-mailboxes/cannot-delete-folders-archive-mailbox.md
+    - name: Can't migrate archive mailboxes
+      href: ../archive-mailboxes/cannot-migrate-archive-mailboxes.md
+    - name: Can't provision or deprovision
+      href: ../archive-mailboxes/cannot-provision-deprovision.md
+    - name: Can't see Calendar folder
+      href: ../archive-mailboxes/cannot-see-calendar-folder.md
+    - name: Can't use archive mailbox in Outlook for Mac 2011
+      href: ../archive-mailboxes/cannot-use-archive-mailbox-mac.md
+    - name: Can't access cloud-based archive mailbox
+      href: ../archive-mailboxes/cloud-based-archive-unavailable.md
+    - name: Contents of cloud-based archive are the same as on-premises
+      href: ../archive-mailboxes/cloud-based-archive-content-same-as-on-premises.md
+    - name: Enable and disable issue
+      href: ../archive-mailboxes/enable-disable-issue.md
+    - name: Issue when enabling mailbox archiving
+      href: ../archive-mailboxes/issue-when-enable-mailbox-archiving.md
+    - name: Items are duplicated
+      href: ../archive-mailboxes/items-duplicated.md
+    - name: Mail access issues
+      href: ../archive-mailboxes/mail-access-issues.md
+    - name: Messages aren't moved to archive mailboxes
+      href: ../archive-mailboxes/message-not-moved-to-archive.md
+  - name: Audit Logs
+    items:
+    - name: BOXServiceAccount is added
+      href: ../audit-logs/boxserviceaccount-is-added-to-role.md
+    - name: Issue when searching audit log
+      href: ../audit-logs/issue-search-audit-log.md
+    - name: Mailbox audit logs
+      href: ../audit-logs/mailbox-audit-logs.md
+    - name: UserAgent property
+      href: ../audit-logs/useragent-property.md
+  - name: Data Loss Prevention (DLP)
+    items:
+    - name: Analyze endpoint DLP diagnostic logs
+      href: ../data-loss-prevention/analyze-endpoint-dlp-diagnostic-logs.md
+    - name: Collect compliance diagnostics
+      href: ../data-loss-prevention/collect-compliance-diagnostics.md
+    - name: Collect endpoint DLP diagnostic logs
+      href: ../data-loss-prevention/collect-endpoint-dlp-diagnostic-logs.md
+    - name: Common scenarios for tips
+      href: ../data-loss-prevention/data-loss-prevention-policy-tips.md
+    - name: Data loss prevention not working
+      href: ../data-loss-prevention/data-loss-prevention-not-work.md
+  - name: Diagnostics
+    items:
+    - name: Self-help diagnostics for issues in Microsoft Purview
+      href: ../diagnostics/purview-compliance-diagnostics.md
+  - name: eDiscovery
+    items:
+    - name: Can't run In-Place eDiscovery search in EAC
+      href: ../ediscovery/cannot-run-ediscovery-search-cloud-mailbox.md
+    - name: Resolve eDiscovery search errors
+      href: ../ediscovery/resolve-ediscovery-issues.md
+    - name: Resolve eDiscovery hold errors
+      href: ../ediscovery/resolve-ediscovery-hold-issues.md
+  - name: Holds
+    items:
+    - name: Can't update calendar items from OWA or Outlook on Mac
+      href: ../holds/cannot-update-calendar-items-from-owa-or-outlook-on-mac.md
+    - name: Changes to IgnoreLegalHold
+      href: ../holds/ignorelegalhold-not-available.md
+    - name: Restore In-Place and Litigation Hold
+      href: ../holds/restore-in-place-litigation-hold.md
+    - name: Retention policy no longer works after a mailbox is moved
+      href: ../holds/retention-policy-not-working-after-mailbox-moved.md
+  - name: Information barriers
+    items:
+    - name: Resolve communication issues in Information Barriers
+      href: ../information-barriers/information-barriers-troubleshooting.md
+  - name: Information protection scanner
+    items:
+    - name: Resolve issues with scanner deployment
+      href: ../information-protection-scanner/resolve-deployment-issues.md
+  - name: Retention
+    items:
+    - name: Auto-apply label doesn't apply to messages
+      href: ../retention/auto-apply-retention-label-not-apply-messages.md
+    - name: Can't manage disposition reviews
+      href: ../retention/cannot-manage-disposition-reviews.md
+    - name: Can't retain cloud attachments
+      href: ../retention/cannot-retain-cloud-attachments.md
+    - name: Identify errors in Microsoft 365 retention and retention label policies
+      href: ../retention/identify-errors-in-retention-and-retention-label-policies.md
+    - name: Managed folders disappear
+      href: ../retention/managed-folders-disappear.md
+    - name: MRM and retention policies
+      href: ../retention/mrm-and-retention-policy.md
+    - name: Resolve email archive and deletion issues
+      href: ../retention/troubleshoot-mrm-email-archive-deletion.md
+    - name: Resolve errors in Microsoft 365 retention and retention label policies
+      href: ../retention/resolve-errors-in-retention-and-retention-label-policies.md
+  - name: Microsoft Purview Message Encryption
+    items:
+    - name: Can't display message
+      href: ../office-message-encryption/cannot-display-message.md
+    - name: Disable Encrypt-Only
+      href: ../office-message-encryption/disable-encrypt-only.md
+    - name: External recipient can't open encrypted email
+      href: /outlook/troubleshoot/security/external-recipient-can't-open-encrypted-email?context=/microsoft-365/troubleshoot/context/client-context
+    - name: Resolve Microsoft Purview Message Encryption issues
+      href: ../office-message-encryption/fix-message-encryption-issue-microsoft-purview.md
+  - name: PST Import Service
+    items:
+    - name: Import job fails with MailboxAmbiguous
+      href: ../pst-import-service/import-fails-mailboxambiguous.md
+    - name: Import job common issues
+      href: ../pst-import-service/issues-with-pst-import-job.md
+  - name: Sensitivity Labels
+    items:
+    - name: Can't send encrypted email to many recipients
+      href: ../sensitivity-labels/encrypted-email-cannot-send-many-recipients.md
+    - name: Mail contacts lose access to encrypted content
+      href: ../sensitivity-labels/mail-contacts-lose-access-encrypted-content.md
+    - name: Sensitivity labels are missing
+      href: ../sensitivity-labels/sensitivity-labels-missing.md

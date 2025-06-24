@@ -1,0 +1,11 @@
+- name: Learn
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Skype for Business
+    tocHref: /skypeforbusiness/
+    topicHref: /skypeforbusiness/index
+    items:
+    - name: Troubleshooting
+      tocHref: /skypeforbusiness/troubleshoot/
+      topicHref: /skypeforbusiness/troubleshoot/index

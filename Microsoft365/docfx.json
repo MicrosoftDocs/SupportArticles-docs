@@ -6,6 +6,8 @@
           "**/*.md",
           "**/*.yml"
         ],
+        "src": "admin",
+        "dest": ".",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -18,18 +20,86 @@
           "ThirdPartyNotices.md",
           "SECURITY.md"
         ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "purview",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "enterprise",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "security",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "Hub",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
       }
     ],
     "resource": [
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg",
+          "**/*.pdf"
         ],
         "exclude": [
           "**/obj/**",
           "**/includes/**",
           "_themes/**",
+          "_themes.pdf/**",
           "**/docfx.json",
           "_repo.en-us/**"
         ]
@@ -38,11 +108,41 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/breadcrumb/SupportArticles-M365/toc.yml",
+      "breadcrumb_path": "/microsoft-365/troubleshoot/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
+      "recommendations": true,
       "feedback_system": "Standard",
-      "permissioned-type": "public"
+      "feedback_product_url": "https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
+      "hideEdit": true,
+      "searchScope": ["Microsoft 365 Support"],
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "titleSuffix": "Microsoft 365",
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
     },
-    "fileMetadata": {},
-    "template": []
+    "fileMetadata": {
+      "ms.service": {
+        "admin/**/*.md": "microsoft-365-admin",
+        "enterprise/**/*.md": "microsoft-365-enterprise",
+        "security/**/*.md": "microsoft-365-security",
+        "purview/**/*.md": "purview"      
+      },
+      "author": {
+        "admin/**/*.md": "helenclu",
+        "enterprise/**/*.md": "helenclu",
+        "purview/**/*.md": "cloud-writer",
+        "security/**/*.md": "cloud-writer"
+      },
+      "ms.author": {
+        "admin/**/*.md": "luche",
+        "enterprise/**/*.md": "luche",
+        "purview/**/*.md": "meerak",
+        "security/**/*.md": "meerak"
+      }
+    },
+    "template": [],
+    "dest": "OfficeDocs-Support-Office365",
+    "markdownEngineName": "markdig"
   }
 }

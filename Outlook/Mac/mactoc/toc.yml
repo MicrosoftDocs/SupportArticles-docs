@@ -1,0 +1,89 @@
+- name: Outlook for Mac Troubleshooting
+  href: ../outlook-mac-welcome.yml
+  items:
+    - name: Attachments
+      items:
+        - name: Can't save a JPEG attachment with a .jpg extension
+          href: ../attachments/you-cannot-save-this-document-with-extension-jpg-error.md
+    - name: Calendars
+      items:
+        - name: Access Denied changing shared calendar permissions
+          href: ../calendars/access-denied-change-shared-calendar-permissions.md
+        - name: Can't accept new meeting time proposals
+          href: ../calendars/cannot-accept-new-meeting-time-proposals.md
+        - name: Can't move a meeting between calendars
+          href: ../calendars/cannot-move-meetings-between-calendars.md
+        - name: Can't open a shared calendar
+          href: ../calendars/cannot-open-shared-calendar.md
+        - name: Can't open a shared Calendar folder
+          href: ../calendars/you-do-not-have-permission-error.md
+        - name: Can't propose a new meeting time
+          href: ../calendars/cannot-propose-a-new-time-for-a-meeting.md
+        - name: Can't save a meeting as draft in Outlook for Mac via Office JS API
+          href: ../calendars/cannot-save-meeting-as-draft-in-outlook-for-mac.md
+        - name: Create and book a workspace in Outlook
+          href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/mac-context
+        - name: Meetings incorrectly display the UTC time zone
+          href: ../calendars/meetings-incorrectly-display-utc-timezone.md
+        - name: No meeting reminders for delegates
+          href: ../calendars/no-meeting-reminders-for-delegates.md
+        - name: Shared calendar in delegate's Online Archive
+          href: /exchange/troubleshoot/calendars/shared-calendar-in-delegate-online-archive?context=/outlook/troubleshoot/context/mac-context
+        - name: Shared calendar shows private event details 
+          href: ../calendars/shared-calendar-shows-private-event-details.md
+        - name: The Open Shared Calendar option is unavailable
+          href: ../calendars/cannot-open-a-shared-calendar-in-outlook-2016.md
+        - name: User with Free/Busy permission can't open another calendar
+          href: ../calendars/cannot-open-another-calendar-with-freebusy-permission.md
+    - name: Connectivity
+      items:
+        - name: Outlook 2016 for Mac crashes when a Proxy Auto Configuration file is used
+          href: ../connectivity/outlook-2016-for-mac-crashes-using-proxy-auto-configuration-file.md
+    - name: Delegation
+      items:
+        - name: Could not get delegate information form the server error
+          href: ../delegation/could-not-get-delegate-information-from-the-server-error.md
+        - name: Delegate permanently removes emails from manager's inbox
+          href: ../delegation/delegate-permanently-deletes-emails-from-manager-inbox.md
+    - name: Email Messages
+      items:
+        - name: Font size differs from the original email
+          href: ../email-messages/font-size-may-differ-from-original-email.md
+        - name: Unintentional email messages received
+          href: /outlook/troubleshoot/email-management/unintentional-emails-received?context=/outlook/troubleshoot/context/mac-context
+    - name: Files and Folders
+      items:
+        - name: Outlook 2016 for Mac freezes on email folders
+          href: ../files-and-folders/outlook-2016-for-mac-freezes-on-email-folders.md
+    - name: Import/Export
+      items:
+        - name: Can't import an ANSI .pst file
+          href: ../import-and-export/cannot-import-ansi-pst-file.md
+        - name: Permissions error when importing Outlook 2011 identity
+          href: ../import-and-export/permissions-error-when-importing-outlook-2011-identity.md
+    - name: Installation
+      items:
+        - name: Outlook 2016 for Mac crashes after startup
+          href: ../installation/outlook-2016-for-mac-crashes-immediately-after-startup.md
+        - name: Outlook for Mac is a locally cached email client
+          href: ../installation/outlook-for-mac-is-a-locally-cached-email-client.md
+    - name: Search
+      items:
+        - name: Can't open email from Spotlight search results
+          href: ../search/cannot-open-email-from-sportlight-search-results.md
+    - name: Send/Receive Emails
+      items:
+        - name: Can't send emails from a distribution list
+          href: ../send-receive-emails/outlook-mac-security-groups-cannot-send-emails.md
+        - name: Emails are stuck in Outbox in Outlook 2016 for Mac
+          href: ../send-receive-emails/email-stuck-in-outbox-outlook-2016-mac.md
+        - name: Error 19738 when sending large emails using Outlook for Mac
+          href: /exchange/troubleshoot/mailflow/error-19738-send-large-email-outlook-mac?context=/outlook/troubleshoot/context/mac-context
+        - name: Emails sent from a shared mailbox aren't saved in the Sent Items folder
+          href: /exchange/troubleshoot/administration/email-from-shared-mailbox-not-saved-sent-items?context=/outlook/troubleshoot/context/mac-context
+        - name: Outlook for Mac repeatedly prompts for credentials
+          href: ../send-receive-emails/prompted-for-credentials-modern-authentication.md
+    - name: Sign-in
+      items:
+        - name: Repeated authentication prompts
+          href: ../sign-in/repeated-prompts-authentication.md

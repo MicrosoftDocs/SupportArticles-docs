@@ -1,0 +1,81 @@
+### YamlMime:Landing
+
+title: SharePoint Server troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using SharePoint Server. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: SharePoint Server troubleshooting
+  description: Documentation for troubleshooting common issues with SharePoint Server.
+  ms.service: sharepoint-server-itpro
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 12/17/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Top SharePoint Server troubleshooting articles
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshooting common SPMT issues and errors
+            url: /sharepointmigration/troubleshooting-common-spmt-issues
+          - text: '"Server Error in / Application. Access to the path is denied" when you log on to Windows SharePoint Services 2.0'
+            url: ./security/access-to-the-path-is-denied-during-logon.md
+          - text: How to uninstall Groove
+            url: https://support.microsoft.com/help/907504
+
+  - title: Other SharePoint Server content
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: SharePoint help & learning
+            url: https://support.microsoft.com/sharepoint
+          - text: SharePoint end user troubleshooting
+            url: https://support.microsoft.com/office/b6c6bab7-55f9-454a-924a-13bea01558ef
+          - text: SharePoint administrator documentation
+            url: /sharepoint/sharepoint-server
+
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"Upgrade Available" status in farms'
+            url: ./administration/upgrade-available-status-in-new-farm.md
+          - text: 800703fa Illegal operation attempted on a registry key
+            url: ./administration/800703fa-Illegal-operation-error.md
+          - text: A user's display name is incorrect on MySite 
+            url: ./administration/users-display-name-incorrect-on-mysite.md
+
+  - title: Apps
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Access Services reports are not enabled
+            url: ./Apps/running-access-reports-error.md
+          - text: Can't start the Web Application service
+            url: ./apps/cannot-start-an-application-service.md
+          - text: Installing Windows Server AppFabric updates
+            url: ./apps/installing-appfabric-updates.md
+
+  - title: Designer
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Object moved when connecting to a SharePoint site
+            url: ./designer/object-moved-when-connecting-sharepoint-site.md
+          - text: Switch user account in SharePoint Designer 2013
+            url: ./designer/switch-sharepoint-designer-user-account.md
+
+  - title: InfoPath
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: "\"Invalid form template\" error when running design checker"
+            url: ./infopath/invalid-from-template.md
+          - text: "\"Schema validation found non-datatype errors\" error"
+            url: ./infopath/schema-validation-found-non-datatype-errors.md
+          - text: Columns published from InfoPath fields are recreated
+            url: ./infopath/columns-published-from-infopath-fields-recreated.md
