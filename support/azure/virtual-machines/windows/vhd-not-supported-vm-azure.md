@@ -5,11 +5,12 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
+ms.reviewer: akastha
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure
-ms.date: 06/29/2020
+ms.date: 06/04/2025
 ms.author: genli
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
@@ -33,15 +34,16 @@ ErrorMessage: The specified cookie value in VHD footer indicates that disk 'disk
 
 This problem occurs for one of the following reasons:
 
-- The VHD does not comply with the 1 MB alignment (offset). The supported disk size should be 1 MB * N. For example, the disk should be 102,401 MB.
+- The VHD does not comply with the 1-MB alignment (offset). The supported disk size should be 1 MB * N. For example, the disk should be 102,401 MB.
+- The VHD has unallocated spaces. The unallocated spaces may not contain metadata or data, but their presence can complicate the conversion to a fixed disk and cause errors.
 - The VHD is corrupted or not supported.
 
 ## Resolution
 
 > [!NOTE]
-> To perform the following fix, the customer will need to perform these steps prior to uploading the VHD into Azure.
+> To perform the following fix, perform these steps prior to uploading the VHD into Azure.
 
-To resolve this problem, resize the disk to comply with 1 MB alignment:
+To resolve this problem, resize the disk to comply with 1-MB alignment:
 
 - To resolve the problem in Windows, use the [Resize-VHD PowerShell cmdlet](/powershell/module/hyper-v/resize-vhd). Note that **Resize-VHD** is not an Azure PowerShell cmdlet.
 

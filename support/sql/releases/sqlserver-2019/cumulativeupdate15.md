@@ -1,7 +1,7 @@
 ---
 title: Cumulative Update 15 for SQL Server 2019 (KB5008996)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 15 (KB5008996).
-ms.date: 07/26/2024
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5008996
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,9 +23,9 @@ This article describes Cumulative Update package 15 (CU15) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Access violation when session is reset
+### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this cumulative update
 

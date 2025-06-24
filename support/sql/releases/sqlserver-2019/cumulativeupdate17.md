@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 17 for SQL Server 2019 (KB5016394)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 17 (KB5016394).
-ms.date: 07/26/2024
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5016394
 ms.reviewer: v-cuichen
 appliesto:
@@ -23,9 +23,9 @@ This article describes Cumulative Update package 17 (CU17) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Access violation when session is reset
+### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-[!INCLUDE [av-sesssion-context-2019](../includes/av-sesssion-context-2019.md)]
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 

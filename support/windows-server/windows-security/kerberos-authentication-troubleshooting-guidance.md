@@ -1,7 +1,7 @@
 ---
-title: Kerberos authentication troubleshooting guidance
+title: Kerberos Authentication Troubleshooting Guidance
 description: Provides guidance to troubleshoot Kerberos authentication issues.
-ms.date: 01/15/2025
+ms.date: 06/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,487 +12,372 @@ ms.reviewer: kaushika, raviks, v-lianna, jobesanc
 ---
 # Kerberos authentication troubleshooting guidance
 
-This guide provides you with the fundamental concepts used when troubleshooting Kerberos authentication issues.
+This guide provides fundamental concepts for you to follow when you troubleshoot Kerberos authentication issues.
+
+> [!IMPORTANT]  
+> This article provides general guidance. You might have to adapt the procedures and examples that are presented here to work for your specific configuration.
 
 ## Troubleshooting checklist
 
-- A Kerberos-related error is a symptom of another service failing. The Kerberos protocol relies on many services that must be available and functioning properly for any authentication to take place.
-- To determine whether a problem is occurring with Kerberos authentication, check the System event log for errors from any services by filtering it using the "source" (such as Kerberos, kdc, LsaSrv, or Netlogon) on the client, target server, or domain controller that provide authentication. If any such errors exist, there might be errors associated with the Kerberos protocol as well.
-- Failure audits on the target server's Security event log might show that the Kerberos protocol was being used when a logon failure occurred.
-- Before you inspect the Kerberos protocol, make sure that the following services or conditions are functioning properly:
+The Kerberos protocol relies on several infrastructure components and services. If any of these components or services are unavailable or not functioning, you might experience authentication issues.
 
-  - The network infrastructure is functioning properly, and all computers and services can communicate.
-  - The domain controller is accessible. You can run the command `nltest /dsgetdc:<Domain Name> /force /kdc` (for example, `nltest /dsgetdc:contoso.com /force /kdc`) on the client or target server.
-  - Domain Name System (DNS) is configured properly and resolves host names and services appropriately.
-  - The clocks are synchronized across the domain.
-  - All critical updates and security updates for Windows Server are installed.
-  - All software, including non-Microsoft software, is updated.
-  - The computer is restarted if you're running a server operating system.
-  - The required services and server are available. The Kerberos authentication protocol requires a functioning domain controller, DNS infrastructure, and network to work properly. Verify that you can access these resources before you begin troubleshooting the Kerberos protocol.
+### 1. Check events and logs
 
-If you've examined all these conditions and are still having authentication problems or Kerberos errors, you need to look further for a solution. The problems can be caused by how the Kerberos protocol is configured or by how other technologies that work with the Kerberos protocol are configured.
+Check the event logs for indications of an issue. Use Event Viewer to review the Security and System logs on the systems that are involved in the authentication operation:
+
+- The authenticating client
+- The target server or service
+- The domain controller
+
+In particular, look for any events from sources that might relate to Kerberos authentication or the services that it relies on, such as the following sources:
+
+- Kerberos
+- Key Distribution Center (KDC)
+- LSA (LsaSrv)
+- Netlogon
+
+On the target server, check the Security log for failure audits. Such failures might show that the Kerberos protocol is used when an authentication failure occurs.
+
+Some events or errors indicate specific issues. If any of the affected computers recorded any of the following events or errors, select the link for more detailed troubleshooting information.
+
+| Event or error | Troubleshooting information |
+| - | - |
+| Event ID 4, Error KERB_AP_ERR_MODIFIED | The client couldn't decrypt the service ticket. Because more than one issue can cause this error, check for related events. For example, this string might mean that the client and target server clocks are out of sync, or that the SPN isn't unique. In a multi-domain environment, the service account name might not be unique in the forest (or other trusted forests).<br/>For more information, see [The kerberos client received a KRB_AP_ERR_MODIFIED error from the server](kerberos-client-krb-ap-err-modified-error.md) and [Kerberos generates KDC_ERR_S_PRINCIPAL_UNKNOWN or KDC_ERR_PRINCIPAL_NOT_UNIQUE error](kerberos-error-kdc-err-s-principal-unknown-or-not-unique.md). |
+| Event ID 4, Error KERB_AP_ERR_SKEW | [Make sure that the computer clocks are synchronized](#g-make-sure-that-the-computer-clocks-are-synchronized) |
+| Event ID 14 | ["Unsupported etype" error when accessing a resource in a trusted domain](unsupported-etype-error-accessing-trusted-domain.md) |
+| Event ID 16 or Event ID 27 | [KDC event ID 16 or 27 is logged if DES for Kerberos is disabled](kdc-event-16-27-des-encryption-disabled.md)<br/>[Event ID 27 KDC Errors on Windows Server 2003 Domain Controllers](event-id-27-kdc-errors.md) |
+| Error 1069 | [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)) |
+| Event ID 5719, Error 1311, or Error 1355 | [Event ID 5719, Error 1311, or Error 1355 - Domain controller or domain not found](troubleshoot-kerberos-domain-not-found-event-id-5719.md) |
+
+If you verify an issue that you know how to fix, first fix that issue, and then try again to authenticate before you continue.
+
+### 2. Check infrastructure
+
+#### a. Make sure that the client app and the target service aren't on the same computer
+
+By default, if the client app and the target service are installed on a single computer, Kerberos is disabled. If you can't install the client application and the target service on separate computers, you have to change specific security-related settings in Windows. Additionally, you might have to change a registry key. For more information about the issues that are related to this scenario, and the specific settings that affect it, see [Error message when you try to access a server locally](../networking/accessing-server-locally-with-fqdn-cname-alias-denied.md).
+
+If you made any changes, try again to authenticate before you continue.
+
+#### b. Check that the client computer, target server, and resource servers are joined to appropriate domains
+
+If necessary, join the client computer or target server to an appropriate domain. Then, try again to authenticate.
+
+> [!NOTE]  
+> In this context, "appropriate domains" are domains within a single forest or within a set of forests that have trust relationships.
+
+#### c. Check the health of the target server and its supporting services
+
+Make sure that application or front-end services (such as web services) and back-end services (such as SQL Server service) are running.
+
+> [!NOTE]  
+> You might receive a message that resembles, "A service has generated Error 1069: The service did not start due to a logon failure." If you receive this message, see [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)).
+
+#### d. Make sure that the correct ports are available
+
+Check all firewalls (including Windows Firewall on each computer) between the client computer, the domain controller, and the target server. Make sure that traffic is allowed on the following ports. 
+
+  > [!NOTE]  
+  > This list uses the _**server**_**:** _**client port**_**,** _**server port**_ format.
+
+- **DHCP:** 67 (UDP), 67 (UDP)
+- **DNS:** 49152 -65535 (TCP, UDP), 53 (TCP, UDP)
+- **HTTPS, including certificate-based authentication:** 443 (TCP), 443 (TCP)
+- **Kerberos:** 49152 -65535 (TCP, UDP), 88 (TCP, UDP)
+- **Kerberos password change:** 49152 -65535 (TCP), 464 (TCP, UDP)
+- **LDAP, including DC Locator:** 49152 -65535 (TCP, UDP), 389 (TCP, UDP)
+- **LDAP SSL:** 49152 -65535 (TCP), 636 (TCP)
+- **SMB:** 49152 -65535 (TCP, UDP), 445 (TCP)
+- **RPC endpoint mapper:** 49152 -65535 (TCP), 135 (TCP)
+- **RPC for LSA, SAM, NetLogon:** 49152 -65535 (TCP), 49152-65535 (TCP)
+- **W32Time:** 49152 -65535 (UDP), 123 (UDP)
+
+If you make changes to any firewall settings, try again to authenticate.
+
+#### e. Check that domain controllers are available
+
+When the client tries to contact a service or application (referred to as the "target server"), both the client and the target server require a domain controller to facilitate authentication, authorization, and delegation.
+
+On the client computer, open an elevated Command Prompt window, and then run the following command:
+
+```console
+nltest /dsgetdc:<DomainName> /force /kdc
+```
+
+> [!NOTE]  
+>
+> In this command, \<DomainName> represents the name of the domain of the computer that you are querying from.
+
+The `nltest` command retrieves a list of available domain controllers (although the list might not include all the available domain controllers). Record the fully qualified domain names and IP addresses of these domain controllers for use in later procedures.
+
+If the client or target server can't contact a domain controller, you receive a message that resembles the following (sometimes labeled "error 1355"):
+
+> The specified domain either does not exist or could not be contacted.
+
+If you receive this message, see [Event ID 5719, Error 1311, or Error 1355 - Domain controller or domain not found](troubleshoot-kerberos-domain-not-found-event-id-5719.md) for more troubleshooting information. Otherwise, continue through this checklist.
+
+#### f. Check that DNS is working between the client and the target server
+
+On the client computer, open an administrative Command Prompt window, and then run the following command:
+
+```console
+nslookup <TargetName>
+```
+
+> [!NOTE]  
+> In this command, \<TargetName> represents the NetBIOS name of the target server.
+
+If the `nslookup` command correctly resolves the target server name, the DNS configuration is correct. If the command doesn't resolve the target server name, follow these steps to check the client computer's network adapter configuration:
+
+1. On the client computer, run the following command:
+
+   ```console
+   ipconfig /all
+   ```
+
+1. In the command output, determine which network adapter is in use. Check the following adapter settings:
+
+   - Client IP address
+   - Subnet mask
+   - Default gateway
+   - Connection-specific DNS suffix
+   - DNS server IP addresses
+
+     Record the IP addresses, and note which DNS server is preferred and which is secondary. This information is useful for later troubleshooting.
+   
+   If any of these settings are incorrect, fix them or contact your DNS administrator for assistance. If you made any changes, run `nslookup <TargetName>` again.
+
+If DNS still doesn't work correctly, follow these steps:
+
+1. Run the following command on the client computer:
+
+   ```console
+   nslookup <ClientName> <DNSIPAddress>
+   ```
+
+   > [!NOTE]  
+   > In this command, \<ClientName> represents the NetBIOS name of the client computer, and \<DNSIPAddress> represents the IP address of one the DNS servers that the client is configured to use. First, use the IP address of the preferred DNS server that you recorded in the previous procedure. If the command doesn't work, try again by using the IP address of the client's secondary DNS server.
+
+   For example, if the client computer's name is "client1" and the IP address of the client's preferred DNS server is 10.0.0.1, run the following command:
+
+   ```console
+   nslookup client1 10.0.0.1
+   ```
+
+1. Run the same command from the target server. It now resembles the following command:
+
+   ```console
+   nslookup <TargetName> <DNSIPAddress>
+   ```
+
+   > [!NOTE]  
+   > In this command, \<TargetName> represents the NetBIOS name of the target server, and \<DNSIPAddress> represents the IP address of one the DNS servers that the target server is configured to use. First, use the IP address of the preferred DNS server that you recorded in the previous procedure. If the command doesn't work the first time that you run it, try again using the IP address of the target server's secondary DNS server.
+
+   For example, if the target server's name is "WebServer1" and the IP address of the target server's preferred DNS server is 10.0.0.1, run the following command:
+
+   ```console
+   nslookup WebServer1 10.0.0.1
+   ```
+
+   The following table summarizes the possible results of the `nslookup` queries and their implications.
+
+   | | Target query<br/>succeeds | Target query<br/>fails |
+   | - | - | - |
+   | **Client query**<br/>**succeeds** | No DNS issue | Issue that affects the target or at least one DNS server |
+   | **Client query**<br/>**fails** | Issue that affects the client or at least one DNS server | Issue that affects one or more DNS servers |
+
+If the query results indicate that you have a DNS issue, see the following articles for more help:
+
+- [Troubleshooting Domain Name System (DNS) issues](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-data-collection#data-collection)
+- [Troubleshooting DNS clients](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-client)
+- [Troubleshooting DNS servers](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server)
+
+If you resolve the DNS issue but the Kerberos issue remains, try the following troubleshooting methods.
+
+#### g. Make sure that the computer clocks are synchronized
+
+The client computer or the target server can cache tickets for future use. However, each ticket has timestamps that determine its time to live (TTL). The Kerberos Key Distribution Center service, which runs on the domain controllers, sets the timestamps.
+
+The difference in time between the domain controller and the client computer or the target server must be less than five minutes. Typically, if the clocks aren't synchronized, Windows can resynchronize them automatically. There are two cases in which you might have to take action:
+
+- The clocks are out of sync by more than 48 hours.
+- The out-of-sync clock doesn't use a domain controller in its domain as a time server, or doesn't use the same time server as those domain controllers do.
+
+To resolve this issue, the affected computer has to recheck the network for time servers and then resynchronize its own clock. To enable these actions, open an administrative Command Prompt window, and then run the following command:
+
+```console
+w32tm /resync /computer:<Target> /rediscover
+```
+
+> [!NOTE]  
+> In this command, \<Target> represents the computer that you are configuring. The `/rediscover` option instructs the computer to check the network for new or updated time sources.
+
+For more information about the options that are available for the `w32tm` command, see [Windows Time service tools and settings: Command-line parameters for W32Time](/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings?tabs=config#command-line-parameters-for-w32time).
+
+If you resynchronize clocks, try again to authenticate.
+
+#### h. Check Windows Update status
+
+Make sure that all domain controllers, the client computer, and the target server all have relevant Windows updates.
+
+If you installed any updates, restart the affected computers, and then try again to authenticate.
+
+#### i. Check application update status
+
+Make sure that the client and server applications are up to date on the client computer and the target server. If you install any updates, restart the affected computers and then try again to authenticate.
+
+#### j. Restart the computers
+
+If you didn't already restart the client computer, target server, or domain controller, restart them now. After the computers restart, try again to authenticate.
+
+If your infrastructure is OK and you still have an issue, continue to the more advanced troubleshooting procedures.
+
+### 3. Collect trace and ticket data
+
+The following procedures use the free [Network Monitor](https://www.microsoft.com/download/details.aspx?id=4865) tool. Download and install the tool on both the client computer and the target server. For an example of how to use Network Monitor to collect trace data and identify Kerberos messages, see [Kerberos errors in network captures](https://techcommunity.microsoft.com/blog/askds/kerberos-errors-in-network-captures/400066).
+
+#### a. Collect simultaneous network traces
+
+On the client computer, follow these steps:
+
+1. Do one of the following actions:
+   - Restart the client computer.
+   - Sign out of the account that you're using to troubleshoot, and then sign in again.
+   - Close the client application, and then reopen it.
+
+1. Start tracing. To do this, follow these steps:
+   1. Select **Start**, and then type **netmon**.
+   1. In the search results, right-click **Microsoft Network Monitor 3.4**, and then select **Run as administrator** (select **Yes** in the User Account Control window).
+   1. In Network Monitor, select **Start**.
+
+1. Open an administrative Command Prompt window, and then run the following commands, in sequence:
+
+   ```console
+   ipconfig /flushdns
+   nbtstat -RR
+   klist purge
+   klist -li 0x3e7 purge
+   ```
+
+On the target server, follow these steps:
+
+1. Open Network Monitor as an Administrator, and then select **Start**.
+1. Open an administrative Command Prompt window, and then run the following commands, in sequence:
+
+   ```console
+   ipconfig /flushdns
+   nbtstat -RR
+   klist purge
+   klist -li 0x3e7 purge
+   ```
+
+Try to reproduce your issue, and then stop and save the traces on both the client computer and the target server. To do this, in Network Monitor, select **Stop**, and then select **Save As**.
+
+#### b. Record ticket information
+
+After you reproduce your issue and stop tracing, check the Kerberos tickets that were generated while you were recording trace data. At the command prompt on the client computer and on the target server, run the following command:
+
+```console
+klist tickets
+```
+
+This command generates a list of tickets. You can copy this information to another application (such as Notepad) so that you can use it in later troubleshooting procedures.
+
+### 4. Check the trace data for Kerberos messages
+
+You can use Network Monitor to review, filter, and search data in capture files. In particular, look for events that are labeled by using "KerberosV5." These events provide status information. They can also list the names or IP addresses of domain controllers that were contacted and the service principal name (SPN) of the service that the client tried to reach.
+
+Event descriptions that contain strings that resemble the following are part of typical Kerberos functions:
+
+- KerberosV5:KRB_Error -KDC_ERR_PREAUTH_REQUIRED
+- KerberosV5:AS Request
+- KerberosV5:AS Response
+- KerberosV5:TGS Request
+- KerberosV5:TGS Response
+- KerberosV5:AP Request
+- KerberosV5:AP Response
+
+> [!NOTE]  
+> You can also use Network Monitor to check the trace data for ticket information in HTTP GET requests. If the ticket information is missing in the GET request, there was a problem in using Kerberos authentication.
+
+Event descriptions that contain strings that resemble the following mean that there's a problem. The following list includes some of the most common errors. If you see one of these strings, note any server names, IP addresses, and SPNs for later use.
+
+- **KDC_ERR_PRINCIPAL_NOT_UNIQUE or KDC_ERR_S_PRINCIPAL_UNKNOWN**. The requested SPN is associated with more than one account, or isn't associated with any account. For help resolving either of these issues, see [Kerberos generates KDC_ERR_S_PRINCIPAL_UNKNOWN or KDC_ERR_PRINCIPAL_NOT_UNIQUE error](kerberos-error-kdc-err-s-principal-unknown-or-not-unique.md).
+
+- **KRB_AP_ERR_MODIFIED**. The client couldn't decrypt the service ticket. More than one issue can cause this error. Review the trace data for other errors that accompany KRB_AP_ERR_MODIFIED. Check the event logs for Event ID 4 and other related events, as described in [1. Check events and logs](#1-check-events-and-logs).
+
+- **ERB_AP_ERR_SKEW**. The client and target server clocks are out of sync. For more information, see [Make sure that the computer clocks are synchronized](#g-make-sure-that-the-computer-clocks-are-synchronized).
+
+- **KDC_ERR_ETYPE_NOTSUPP**. One or more of the components involved in authentication uses an encryption type that is disabled for other components. Check the event logs for more information about which components and which encryption types are involved, as described in [1. Check events and logs](#1-check-events-and-logs).
 
 ## Common issues and solutions
 
-### Kerberos delegation issues
+### HTTP 400 - Bad Request (Request Header too long) issue
 
-In a typical scenario, the impersonating account would be a service account assigned to a web application or the computer account of a web server. The impersonated account would be a user account requiring access to resources via a web application.
+If a user belongs to a large number of groups (for example, more than 1,000 groups), Kerberos might deny the user access because it doesn't correctly process the request. For more information about this issue, see the following articles:
 
-There are three types of delegation using Kerberos:
+- [Problems with Kerberos authentication when a user belongs to many groups](kerberos-authentication-problems-if-user-belongs-to-groups.md).
 
-- Full delegation (unconstrained delegation)
+- [Logging on a user account that is a member of more than 1,010 groups may fail on a Windows Server-based computer](logging-on-user-account-fails.md).
 
-  Full delegation should be avoided as much as possible. The user (front-end user and back-end user) can be located in different domains and also in different forests.
-- Constrained delegation (Kerberos only and protocol transition)
+### Service issues
 
-  The user can be from any domain or forest, but the front-end and the back-end services should be running in the same domain.
-- Resource-based constrained delegation (RBCD)
+Service issues typically involve the SPN and the service account. For example, the SPN might be incorrect, missing, configured on the incorrect account, or configured on more than one account. The troubleshooting checklist in this article  [a. Collect simultaneous network traces](#a-collect-simultaneous-network-traces) earlier in this article. If you already determined a common SPN issue, see the following articles:
 
-  The user can be from any domain, and front-end and back-end resources can be from any domain or forest.
+- [Kerberos generates KDC_ERR_S_PRINCIPAL_UNKNOWN or KDC_ERR_PRINCIPAL_NOT_UNIQUE error](kerberos-error-kdc-err-s-principal-unknown-or-not-unique.md).
 
-### Most common Kerberos delegation troubleshooting
+- [Service Logons Fail Due to Incorrectly Set SPNs](/previous-versions/windows/it-pro/windows-server-2003/cc772897(v=ws.10)).
 
-- Service principal name missing or duplicated
-- Name resolution failures or incorrect responses (wrong IP addresses given for a server name)
-- Large Kerberos tickets size (MaxTokenSize) and environment not set up properly
-- Ports being blocked by firewalls or routers
-- Service account not given appropriate privileges (User Rights Assignment)
-- Front-end or back-end services not in the same domain and constrained delegation setup (not RBCD)
+- [The kerberos client received a KRB_AP_ERR_MODIFIED error from the server](kerberos-client-krb-ap-err-modified-error.md).
 
-For more information, see:
+### Single sign-on (SSO) issues
 
-- [Constrained delegation for CIFS fails with ACCESS_DENIED error](constrained-delegation-access-denied.md)
-- [Configure constrained delegation for a custom service account](../identity/configure-kerberos-constrained-delegation.md#scenario-1-configure-constrained-delegation-for-a-custom-service-account)
-- [Configure constrained delegation on the NetworkService account](../identity/configure-kerberos-constrained-delegation.md#scenario-2-configure-constrained-delegation-on-the-networkservice-account)
+Single sign-on is an authentication method that allows users to sign in using one set of credentials to multiple systems or applications within a single intranet. To work correctly, both the target service (or the front-end component of the target service) and the client must have the correct settings. For information about how to troubleshoot these settings, see [Troubleshooting Kerberos single sign-on issues](troubleshoot-kerberos-sso-issues.md).
 
-### Single sign-on (SSO) broken and prompting for authentication once
+### Delegation issues
 
-Consider the following scenarios:
+When your target service has separate front-end and back-end components, Kerberos can delegate client credentials (including access permissions) to a service account. In simple terms, the client accesses the front-end service, and then the front-end service accesses the back-end service on the client's behalf.
 
-- A client and server application like Microsoft Edge and Internet Information Services (IIS) server. The IIS server is configured with Windows Authentication (Negotiate).
-- A client and server application like an SMB client and SMB server. By default, the SMB server is configured with Negotiate Security Support Provider Interface (SSPI).
+Kerberos supports three types of delegation:
 
-A User opens Microsoft Edge and browses an internal website `http://webserver.contoso.com`. The website is configured with [Negotiate](/windows/win32/secauthn/microsoft-negotiate), and this website prompts for authentication. After the user manually enters the username and password, the user gets authentication, and the website works as expected.
+- **Unconstrained delegation**. After the client accesses the front-end service, the front-end service can access any other service on the client's behalf. This configuration is the easiest to implement, but is also the least secure. We don't recommend unconstrained delegation isn't recommended because it doesn't restrict which services the authenticated account can interact with.
+- **Constrained delegation**. The front-end service maintains a list of services that it can access on a client's behalf.
+- **Resource-based constrained delegation (RBCD)**. The back-end service maintains an allow list of front-end services that can request access the to the back-end service on a client's behalf.
 
-> [!NOTE]
-> This scenario is an example of a client and server. The troubleshooting technique is the same for any client and server configured with Integrated Windows authentication.
+> [!NOTE]  
+> If you experience an issue when you use constrained delegation together with CIFS, see [Constrained delegation for CIFS fails with ACCESS_DENIED error](constrained-delegation-access-denied.md).
 
-Integrated Windows authentication is broken on the user level or the machine level.
+> [!IMPORTANT]  
+>
+> - Don't configure constrained delegation and RBCD on the same set of front-end and back-end servers.
+>
+>   Constrained delegation and RBCD are different configurations, and they are mutually exclusive. When a front-end service requests a ticket to a back-end service, the KDC first checks the front-end service for constrained delegation. If constrained delegation is not configured for the front-end service, the KDC checks the back-end service for resource-based constrained delegation. Because of this sequence, constrained delegation takes precedence over resource-based delegation.
+>
+> - By default, Microsoft Edge does not support unconstrained delegation. If you're using unconstrained delegation, see [Kerberos unconstrained double-hop authentication with Microsoft Edge (Chromium)](/troubleshoot/developer/webapps/iis/www-authentication-authorization/kerberos-double-hop-authentication-edge-chromium) for more information about the configuration that you need.
+>
+> - Unconstrained delegation is not recommended because it doesn't restrict which services the authenticated account can interact with.
 
-#### Troubleshooting methods
+#### Supported topology types
 
-- Review the client configuration for an integrated authentication setting, which can be enabled at an application or machine level. For example, all HTTP-based applications would look for the site to be in a Trusted zone when trying to perform integrated authentication.  
+The different delegation types place different requirements on your topology. The following table lists three common types of topology, and which types of delegation (if any) are supported for each type.
 
-  Open *inetcpl.cpl* (**Internet Options**), which all HTTP-based applications use for Internet Explorer configurations, and review if the website is configured as **Local intranet**.
-- Applications also have a configuration to perform Integrated Windows authentication.
+| Topology type | Unconstrained delegation | Constrained delegation | RBCD |
+| - | - | - | - |
+| All services reside in a single domain | Supported (not recommended) | Supported | Supported |
+| Front-end and back-end services reside in different domains | Supported (not recommended) | Not supported | Supported |
+| Front-end and back-end services reside in different (trusted) forests | Supported<sup>*</sup> (not recommended) | Not supported | Supported<sup>*</sup> |
 
-  Microsoft Edge or Internet Explorer has a setting **Enable Integrated Windows Authentication** to be enabled.
-- Review the application configuration, and the client computer can obtain a Kerberos ticket for a given service principal name (SPN). In this example, the SPN is `http/webserver.contoso.com`.
-  - Success message when you can find the SPN:
+<sup>*</sup> Make sure that the service account of the front-end service can authenticate across the trust with the trusted domain controller.
 
-    ```console
-    C:>klist get http/webserver.contoso.com
-    Current LogonId is 0:0x9bd1f
-    A ticket to http/webserver.contoso.com has been retrieved successfully.
-    ```
+#### Troubleshooting specific delegation types
 
-  - Error message when you can't find the SPN:
-  
-    ```console
-    C:>klist get http/webserver.contoso.com
-    klist failed with 0xc000018b/-1073741429: The SAM database on the Windows Server does not have a computer account for this workstation trust relationship.
-    ```
+The configuration details for delegation differ depending on the type of delegation that you're using and the type of account that the front-end service uses. To troubleshoot delegation issues further, see the following articles, as appropriate:
 
-  Identify and add the respective SPNs to the appropriate user, service, or machine accounts.
+- [Troubleshooting Kerberos constrained delegation if using a built-in service account](troubleshoot-kerberos-constrained-delegation-issues.md#troubleshooting-kerberos-constrained-delegation-if-using-a-built-in-service-account).
+- [Troubleshooting Kerberos RBCD if using a built-in service account](troubleshoot-kerberos-rbcd-issues.md#troubleshooting-kerberos-rbcd-if-using-a-built-in-service-account).
+- [Troubleshooting Kerberos constrained delegation if using a custom service account](troubleshoot-kerberos-constrained-delegation-issues.md#troubleshooting-kerberos-constrained-delegation-if-using-a-custom-service-account).
+- [Troubleshooting Kerberos RBCD if using a custom service account](troubleshoot-kerberos-rbcd-issues.md#troubleshooting-kerberos-rbcd-if-using-a-custom-service-account).
 
-- If you've identified that the SPNs can be retrieved, you can verify if they're registered on the correct account by using the following command:
+## Using a log analysis test scenario to troubleshoot Kerberos authentication
 
-    ```console
-    setspn -F -Q */webserver.contoso.com
-    ```
-
-### Authentication DC discovery issues
-
-Application servers configured with Integrated Windows authentication need domain controllers (DCs) to authenticate the user/computer and service.
-
-The inability to contact a domain controller during the authentication process leads to error 1355:
-
-> The specified domain either does not exist or could not be contacted
-
-#### Unable to access a resource configured with Integrated Windows authentication with an error 1355
-
-> [!NOTE]
-> Error messages may differ from an application standpoint, but the meaning of the error is that the client or server is unable to discover a domain controller.
-
-Here are examples of such error messages:
-
-- > The following error occurred attempting to join the domain "Contoso":  
-    The specified domain either does not exist or could not be contacted.
-- > The Domain Controller for the domain contoso.com  could not be found
-- > Could not contact domain Controller 1355
-
-#### Top causes of the issue
-
-- DNS misconfiguration on the client
-
-  You can run the `ipconfig /all` command and review the DNS servers list.
-- DNS misconfiguration on the domain controllers in a trusted domain or forest
-- Network ports blocked between the client and domain controllers
-
-  DC Discovery ports: UDP 389 (UDP LDAP) and UDP 53 (DNS)
-
-#### Troubleshooting steps
-
-1. Run the `nslookup` command to identify any DNS misconfigurations.
-2. Open required ports between the client and the domain controller. For more information, see [How to configure a firewall for Active Directory domains and trusts](../identity/config-firewall-for-ad-domains-and-trusts.md).
-
-## Log analysis test scenario
-
-### Environment and configuration
-
-- Client machine
-
-    `Client1.contoso.com` (a Windows 11 machine) joins the domain `Contoso.com`.
-- User `John`
-
-    The user belongs to `Contoso.com` and signs in on the client machine.
-- Internet options on the client machine
-
-    All the websites are a part of the local intranet zone.
-
-    :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/internet-options-local-intranet-zone.png" alt-text="Screenshot of Internet Properties, which shows all the websites are a part of the local intranet zone.":::
-
-- Server
-
-    `IISServer.contoso.com` (Windows Server 2019) joins the domain `Contoso.com`.
-- Authentication configuration
-
-    **Windows Authentication** is **Enabled**.
-
-    :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/windows-authentication-enabled.png" alt-text="Screenshot of the Internet Information Services Manager window showing Windows Authentication is Enabled.":::
-
-- Authentication Providers: Negotiate
-
-    Enabled providers are set as follows:
-
-    :::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/enabled-providers-negotiate.png" alt-text="Screenshot of the Providers window showing the Enabled Providers includes Negotiate.":::
-
-### Authentication flow
-
-:::image type="content" source="media/kerberos-authentication-troubleshooting-guidance/authentication-flow.png" alt-text="Screenshot of an authentication flow.":::
-
-1. User `John` signs in to `Client1.contoso.com`, opens a Microsoft Edge browser and connects to `IISServer.contoso.com`.
-2. The client machine will perform the below steps (Step 1 in the above diagram):
-    1. The DNS resolver caches `IISServer.contoso.com` to verify if this information is already cached.
-    2. The DNS resolver checks the HOSTS file for any mapping of `IISServer.contoso.com` located in *C:\\Windows\\System32\\drivers\\etc\\Hosts*.
-    3. Send a DNS query to the preferred DNS server (configured on the IP configuration settings), which is also a domain controller in the environment.
-3. The DNS service running on the domain controller will look into its configured zones, resolve the Host A record, and respond back with an IP address of `IISServer.contoso.com` (Step 2 in the above diagram).
-4. The client machine will perform a TCP three-way handshake on TCP port 80 to `IISServer.contoso.com`.
-5. The client machine will send an anonymous HTTP request to `IISServer.contoso.com`.
-6. The IIS server listening on port 80 will receive the request from `Client1.contoso.com`, look into the IIS servers authentication configuration and send back an HTTP 401 challenge response to the client machine with Negotiate as the authentication configuration (Step 3 in the above diagram).
-7. The Microsoft Edge process running on `Client1.contoso.com` will know that the IIS server is configured with Negotiate and will verify if the website is a part of the local intranet zone. If the website is in the local intranet zone, then the Microsoft Edge process will call into *LSASS.exe* to get a Kerberos ticket with an SPN `HTTP\IISServer.contoso.com` (Step 5 in the above diagram).
-8. The domain controller (KDC service) will receive the request from `Client1.contoso.com`, search its database for the SPN `HTTP\IISServer.contoso.com` and find `IISServer.contoso.com` is configured with this SPN.
-9. The domain controller will respond back with a TGS response with the ticket for the IIS server (Step 6 in the above diagram).
-10. The Microsoft Edge process on the client machine will send a Kerberos Application Protocol (AP) request to the IIS web server with the Kerberos TGS ticket issued by the domain controller.
-11. The IIS process will call into *LSASS.exe* on the web server to decrypt the ticket and create a token with SessionID and Users group membership for authorization.
-12. IIS process will get a handle from *LSASS.exe* to the token to make authorization decisions and allow the User to connect with an AP response.
-
-### Network Monitor analysis of the workflow
-
-> [!NOTE]
-> You need to be a user of the local Administrators group to perform the below activities.
-
-1. Install [Microsoft Network Monitor](https://www.microsoft.com/download/details.aspx?id=4865) on the client machine (`Client1.contoso.com`).
-2. Run the following command in an elevated command prompt window (*cmd.exe*):
-
-    ```console
-    ipconfig /flushdns
-    ```
-
-3. Start the Network Monitor.
-4. Open Microsoft Edge browser and type `http://iisserver.contoso.com`.
-5. Network trace analysis:
-    1. DNS query to the domain controller for a Host A record: `IISServer.contoso.com`.
-
-        ```output
-        3005    00:59:30.0738430    Client1.contoso.com    DCA.contoso.com    DNS    DNS:QueryId = 0x666A, QUERY (Standard query), Query  for iisserver.contoso.com of type Host Addr on class Internet
-        ```
-
-    2. DNS response from the DNS service on the domain controller.
-
-        ```output
-        3006    00:59:30.0743438    DCA.contoso.com    Client1.contoso.com    DNS    DNS:QueryId = 0x666A, QUERY (Standard query), Response - Success, 192.168.2.104
-        ```
-
-    3. The Microsoft Edge process on `Client1.contoso.com` connects to the IIS web server `IISServer.contoso.com` (anonymous connection).
-
-        ```output
-        3027    00:59:30.1609409    Client1.contoso.com    iisserver.contoso.com    HTTP    HTTP:Request, GET /
-        Host:  iisserver.contoso.com
-        ```
-
-    4. IIS server responds back with HTTP response 401: Negotiate and NTLM (configuration performed on the IIS server).
-
-        ```output
-        3028    00:59:30.1633647    iisserver.contoso.com    Client1.contoso.com    HTTP    HTTP:Response, HTTP/1.1, Status: Unauthorized, URL: /favicon.ico Using Multiple Authetication Methods, see frame details
-
-        WWWAuthenticate: Negotiate
-        WWWAuthenticate: NTLM
-        ```
-
-    5. Kerberos request from `Client1.contoso.com` goes to the domain controller `DCA.contoso.com` with an SPN: `HTTP/iisserver.contoso.com`.
-
-        ```output
-        3034    00:59:30.1834048    Client1.contoso.com    DCA.contoso.com    KerberosV5    KerberosV5:TGS Request Realm: CONTOSO.COM Sname: HTTP/iisserver.contoso.com
-        ```
-
-    6. Domain controller `DCA.contoso.com` responds back with the Kerberos request, which has a TGS response with a Kerberos ticket.
-
-        ```output
-        3036    00:59:30.1848687    DCA.contoso.com    Client1.contoso.com    KerberosV5    KerberosV5:TGS Response Cname: John 
-        Ticket: Realm: CONTOSO.COM, Sname: HTTP/iisserver.contoso.com
-        Sname: HTTP/iisserver.contoso.com
-        ```
-
-    7. The Microsoft Edge process on `Client1.contoso.com` now goes to the IIS server with a Kerberos AP request.
-
-        ```output
-        3040    00:59:30.1853262    Client1.contoso.com    iisserver.contoso.com    HTTP    HTTP:Request, GET /favicon.ico , Using GSS-API Authorization
-        Authorization: Negotiate
-        Authorization:  Negotiate YIIHGwYGKwYBBQUCoIIHDzCCBwugMDAuBgkqhkiC9xIBAgIGCSqGSIb3EgECAgYKKwYBBAGCNwICHgYKKwYBBAGCNwICCqKCBtUEggbRYIIGzQYJKoZIhvcSAQICAQBugga8MIIGuKADAgEFoQMCAQ6iBwMFACAAAACjggTvYYIE6zCCBOegAwIBBaENGwtDT05UT1NPLkNPTaIoMCagAwIBAqEfMB0bBEhUVFAbF
-        SpnegoToken: 0x1
-        NegTokenInit: 
-        ApReq: KRB_AP_REQ (14)
-        Ticket: Realm: CONTOSO.COM, Sname: HTTP/iisserver.contoso.com
-        ```
-
-    8. IIS server responds back with a response that the authentication is complete.
-
-        ```output
-        3044    00:59:30.1875763    iisserver.contoso.com    Client1.contoso.com    HTTP    HTTP:Response, HTTP/1.1, Status: Not found, URL: / , Using GSS-API Authentication
-        WWWAuthenticate: Negotiate oYG2MIGzoAMKAQChCwYJKoZIgvcSAQICooGeBIGbYIGYBgkqhkiG9xIBAgICAG+BiDCBhaADAgEFoQMCAQ+ieTB3oAMCARKicARuIF62dHj2/qKDRV5XjGKmyFl2/z6b9OHTCTKigAatXS1vZTVC1dMvtNniSN8GpXJspqNvEfbETSinF0ee7KLaprxNgTYwTrMVMnd95SoqBkm/FuY7WbTAuPvyRmUuBY3EKZEy
-        NegotiateAuthorization: 
-        GssAPI: 0x1
-        NegTokenResp: 
-        ApRep: KRB_AP_REP (15)
-        ```
-
-6. Run the `klist tickets` command to review the Kerberos ticket in the command output on `Client1.contoso.com`.
-
-    ```output
-    Client: John @ CONTOSO.COM
-    Server: HTTP/iisserver.contoso.com @ CONTOSO.COM
-    KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
-    Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
-    Start Time: 11/28/2022 0:59:30 (local)
-    End Time:   11/28/2022 10:58:56 (local)
-    Renew Time: 12/5/2022 0:58:56 (local)
-    Session Key Type: AES-256-CTS-HMAC-SHA1-96
-    Cache Flags: 0
-    Kdc Called: DCA.contoso.com
-    ```
-
-7. Review Event ID 4624 on the IIS server showing the `Success` audit:
-
-- By default, the `Success` or `Failure` audits is enabled on all server operating system of Windows. You can verify whether the auditing is enabled by the following command.
-- If you find auditing is not enabled, then enable the auditing. Review the logon category in the below list. As you can observe, the logon subcategory is enabled with `Success and Failure`.
-
-    ```console
-    C:\>auditpol /get /Subcategory:"logon"
-    System audit policy
-    Category/Subcategory                      Setting
-    Logon/Logoff
-      Logon                                   Success and Failure
-    ```
-
-    If you don't observe logon with `Success and Failure`, then run the command to enable it:
-
-    ```console
-    C:\>auditpol /set /subcategory:"Logon" /Success:enable /Failure:enable
-    The command was successfully executed.
-    ```
-
-### Review the success security Event ID 4624 on IISServer.contoso.com
-
-Observe the following fields:
-
-- `Logon type`: 3 (network logon)
-- `Security ID` in `New Logon` field: `Contoso\John`
-- `Source Network Address`: IP address of the client machine
-- `Logon Process` and `Authentication Package`: `Kerberos`
-
-```output
-Log Name:      Security
-Source:        Microsoft-Windows-Security-Auditing
-Date:          11/28/2022 12:59:30 AM
-Event ID:      4624
-Task Category: Logon
-Level:         Information
-Keywords:      Audit Success
-User:          N/A
-Computer:      IISServer.contoso.com
-Description:
-An account was successfully logged on.
-
-Subject:
-    Security ID:        NULL SID
-    Account Name:        -
-    Account Domain:        -
-    Logon ID:        0x0
-
-Logon Information:
-    Logon Type:        3
-    Restricted Admin Mode:    -
-    Virtual Account:        No
-    Elevated Token:        No
-
-Impersonation Level:        Impersonation
-
-New Logon:
-    Security ID:        CONTOSO\John
-    Account Name:        John
-    Account Domain:        CONTOSO.COM
-    Logon ID:        0x1B64449
-    Linked Logon ID:        0x0
-    Network Account Name:    -
-    Network Account Domain:    -
-    Logon GUID:        {<GUID>}
-
-Process Information:
-    Process ID:        0x0
-    Process Name:        -
-
-Network Information:
-    Workstation Name:    -
-    Source Network Address:    192.168.2.101
-    Source Port:        52655
-
-Detailed Authentication Information:
-    Logon Process:        Kerberos
-    Authentication Package:    Kerberos
-```
-
-### Troubleshoot authentication workflow
-
-Use one of the following methods to troubleshoot the issue.
-
-- Verify if you can resolve the name of the IIS web server (`IISServer.contoso.com`) from `Client1.contoso.com`.
-- Verify if the DNS server is responding back to the correct IIS server IP address by using the following cmdlet:
-
-    ```powershell
-    PS C:\> Resolve-DnsName -Name IISServer.contoso.com
-    
-    Name                                           Type   TTL   Section    IPAddress
-    ----                                           ----   ---   -------    ---------
-    IISServer.contoso.com                          A      1200  Answer     192.168.2.104
-    ```
-
-- Verify if the network ports are opened between the client machine and the IIS web server (`IISServer.contoso.com`) by using the following cmdlet:
-
-    ```powershell
-    PS C:\> Test-NetConnection -Port 80 IISServer.contoso.com                                                               
-    
-    ComputerName     : IISServer.contoso.com
-    RemoteAddress    : 192.168.2.104
-    RemotePort       : 80
-    InterfaceAlias   : Ethernet 2
-    SourceAddress    : 192.168.2.101
-    TcpTestSucceeded : True
-    ```
-
-- Verify if you are getting a Kerberos ticket from the domain controller.
-
-    1. Open a normal Command Prompt (not an administrator Command Prompt) in the context of the user trying to access the website.
-    2. Run the `klist purge` command.
-    3. Run the `klist get http/iisserver.contoso.com` command as follows:
-
-        ```console
-        PS C:\> klist get http/iisserver.contoso.com
-        
-        Current LogonId is 0:0xa8a98b
-        A ticket to http/iisserver.contoso.com has been retrieved successfully.
-        
-        Cached Tickets: (2)
-        
-        #0>     Client: John @ CONTOSO.COM
-                Server: krbtgt/CONTOSO.COM @ CONTOSO.COM
-                KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
-                Ticket Flags 0x40e10000 -> forwardable renewable initial pre_authent name_canonicalize
-                Start Time: 11/28/2022 1:28:11 (local)
-                End Time:   11/28/2022 11:28:11 (local)
-                Renew Time: 12/5/2022 1:28:11 (local)
-                Session Key Type: AES-256-CTS-HMAC-SHA1-96
-                Cache Flags: 0x1 -> PRIMARY
-                Kdc Called: DCA.contoso.com
-        
-        #1>     Client: John @ CONTOSO.COM
-                Server: http/iisserver.contoso.com @ CONTOSO.COM
-                KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
-                Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
-                Start Time: 11/28/2022 1:28:11 (local)
-                End Time:   11/28/2022 11:28:11 (local)
-                Renew Time: 12/5/2022 1:28:11 (local)
-                Session Key Type: AES-256-CTS-HMAC-SHA1-96
-                Cache Flags: 0
-                Kdc Called: DCA.contoso.com
-        ```
-
-        You will find that you get a Kerberos ticket for the SPN `http/IISServer.contoso.com` in the `Cached Ticket (2)` column.
-
-- Verify if the IIS web service is running on the IIS server using the default credentials.
-
-    Open a normal PowerShell Prompt (not an administrator PowerShell Prompt) in the context of the user trying to access the website.
-
-    ```powershell
-    PS C:\> invoke-webrequest -Uri http://IIsserver.contoso.com -UseDefaultCredentials
-    PS C:\> invoke-webrequest -Uri http://IIsserver.contoso.com -UseDefaultCredentials
-    
-    
-    StatusCode        : 200
-    StatusDescription : OK
-    Content           : <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-                        <html xmlns="http://www.w3.org/1999/xhtml">
-                        <head>
-                        <meta http-equiv="Content-Type" cont...
-    RawContent        : HTTP/1.1 200 OK
-                        Persistent-Auth: true
-                        Accept-Ranges: bytes
-                        Content-Length: 703
-                        Content-Type: text/html
-                        Date: Mon, 28 Nov 2022 09:31:40 GMT
-                        ETag: "3275ea8a1d91:0"
-                        Last-Modified: Fri, 25 Nov 2022...
-    ```
-
-- Review the Security event log on the IIS server:
-  - Success event log 4624
-  - Error event log 4625
-
-- Process of isolation: You can use the troubleshooting steps below to verify if other services on the IIS server can process Kerberos authentication.
-
-  Prerequisites:
-  - The IIS server should be running a server version of Windows.
-  - The IIS server should have a port opened for services like SMB (port 445).
-  - Create a new share or provide the user `John` with permissions to Read on one of the Folders (for example, *Software$*) that is already shared on the machine.
-
-    1. Sign in to `Client1.contoso.com`.
-    2. Open Windows Explorer.
-    3. Type *\\IISServer.contoso.com \\Software$*.
-    4. Open Security events on `IISServer.contoso.com` and verify if you observe Event ID 4624.
-    5. Open a normal Command Prompt on `Client1.contoso.com` as the user `John`. Run the `klist tickets` command and review for the ticket `CIFS/IISServer.contoso.com`.
-
-        ```output
-        #1>     Client: John @ CONTOSO.COM
-                Server: cifs/iisserver.contoso.com @ CONTOSO.COM
-                KerbTicket Encryption Type: AES-256-CTS-HMAC-SHA1-96
-                Ticket Flags 0x40a10000 -> forwardable renewable pre_authent name_canonicalize
-                Start Time: 11/28/2022 1:40:22 (local)
-                End Time:   11/28/2022 11:28:11 (local)
-                Renew Time: 12/5/2022 1:28:11 (local)
-                Session Key Type: AES-256-CTS-HMAC-SHA1-96
-                Cache Flags: 0
-                Kdc Called: DCA.contoso.com
-        ```
-
-    6. Collect network traces on `Client1.contoso.com`. Review the network traces to observe which step fails so that you can further narrow down the steps and troubleshoot the issue.
+For advanced Kerberos testing and troubleshooting, see [Use a log analysis test scenario to troubleshoot Kerberos authentication](kerberos-authentication-log-analysis-test-scenario.md).

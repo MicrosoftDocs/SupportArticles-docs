@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 19 for SQL Server 2022 (KB5054531)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 19 (KB5054531).
-ms.date: 05/15/2025
+ms.date: 05/30/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5054531
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,14 +16,16 @@ _Version:_ &nbsp; 16.0.4195.2
 
 ## Summary
 
-This article describes Cumulative Update package 19 (CU19) for Microsoft SQL Server 2022. This update contains 12 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 18 and it updates components in the following builds:
+This article describes Cumulative Update package 19 (CU19) for Microsoft SQL Server 2022. This update contains 13 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 18 and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4195.2**, file version: **2022.160.4195.2**
 - Analysis Services - Product version: **16.0.43.244**, file version: **2022.160.43.244**
 
 ## Known issues in this update
 
-There are no known issues in this cumulative update.
+### Incorrect behavior of SESSION_CONTEXT in parallel plans
+
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 
@@ -45,6 +47,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 |<a id=4013356>[4013356](#4013356) </a> | Fixes an issue in which incorrect results might be returned if using `WINDOW` clauses in conjunction with `CASE` statements.| SQL Server Engine | Query Optimizer | All|
 |<a id=4021026>[4021026](#4021026) </a> | Fixes an issue that you encounter when a large number of full-text fragments are marked for deletion by dropping fragments in batches.| SQL Server Engine | Search| All|
 |<a id=3402292>[3402292](#3402292) </a> | Fixes an issue in which the server audit created in a contained availability group doesn't work after the SQL Server instance restarts. | SQL Server Engine | Security Infrastructure | All|
+|<a id=3979473>[3979473](#3979473) </a> | Enables the `SERVER_OBJECT_PERMISSION_CHANGE_GROUP` action group to audit associated actions. | SQL Server Engine | Security Infrastructure | All|
 |<a id=3873130>[3873130](#3873130) </a> | Fixes non-yielding exceptions that you might encounter when the Service Broker queue becomes very long while sending messages (for example, due to an application not properly closing conversations).| SQL Server Engine | Service Broker| All|
 |<a id=4013480>[4013480](#4013480) </a> | Reverts to the 2-GB limit for the minidump file size to avoid dump issues when capturing minidump files on SQL Server instances with a large amount of memory. | SQL Server Engine | SQL OS| Windows|
 |<a id=4048867>[4048867](#4048867) </a> | Updates the log tail file name to be constructed according to the dump file name after running the `DBCC STACKDUMP` command.| SQL Server Engine | SQL OS| Windows|

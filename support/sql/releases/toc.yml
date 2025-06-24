@@ -571,6 +571,8 @@ items:
     href: sqlserver-2014/build-versions.md
 - name: SQL Server on Linux Release History
   items:
+  - name: SQL Server 2025 Preview
+    href: linux/release-history-2025.md
   - name: SQL Server 2022
     href: linux/release-history-2022.md
   - name: SQL Server 2019

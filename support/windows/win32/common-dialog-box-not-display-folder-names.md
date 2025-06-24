@@ -1,7 +1,7 @@
 ---
 title: Explorer-style common file dialog box doesn't display folder names
 description: Describes an issue that the Explorer-style common file dialog box doesn't display folder names longer than 67 characters.
-ms.date: 04/09/2024
+ms.date: 06/11/2025
 ms.custom: sap:Desktop app UI development\Windows controls and common dialogs
 ms.reviewer: karywa, davean, v-sidong
 ---

@@ -56,6 +56,8 @@
       - name: Authentication fails after Android app is published to Google Play Store
         href: app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
       - name: Cookies are disabled error in MSAL.Net XBAP application
+        href: app-integration/customize-authentication-session-expiration.md
+      - name: Customize Middleware authentication ticket
         href: app-integration/script-errors-running-msal-net-xbap-app.md
       - name: Enable MSAL4J logging in a Spring Boot web application
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
@@ -65,10 +67,16 @@
         href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
       - name: Infinite sign-in loop issue with ASP.NET applications
         href: app-integration/asp-dot-net-application-infinite-sign-in-loop.md
+      - name: No account or login hint was passed to the AcquireTokenSilent
+        href: app-integration/no-account-login-hint-passed-acquire-token-silent.md
       - name: Package Inspector for MSAL Android Native
         href: app-integration/package-inspector-msal-android-native.md
+      - name: Unable to match key ID 
+        href: app-integration/idx10501-token-signature-validation-error.md
       - name: Repeated login prompts in iOS MSAL implementation
         href: app-integration/repeat-login-prompts-in-msal-ios-app.md
+      - name: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
+        href: app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
       - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
         href: app-integration/serilog-protected-web-api-authentication-authorization-errors.md
       - name: WIF10201 No valid key mapping found
@@ -114,6 +122,8 @@
         href: app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md
       - name: Error AADSTS50105 - user not assigned a role
         href: app-integration/error-code-AADSTS50105-user-not-assigned-role.md
+      - name: Error AADSTS50107 - Guest invitation redemption fails
+        href: app-integration/error-aadsts50107-guest-redemption-fails.md
       - name: Error AADSTS650056 - misconfigured app
         href: app-integration/error-code-AADSTS650056-misconfigured-app.md
       - name: Error AADSTS70001 - app not found in directory
@@ -134,6 +144,8 @@
         href: app-integration/error-aadsts900439-usgclientnotsupportedonpublicendpoint.md
       - name: Error AADSTS50000 - issuing a token or an issue with our sign-in service
         href: app-integration/error-code-aadsts50000-issuing-token-sign-in-service.md
+      - name: Enable bundle consent for apps
+        href: app-integration/bundle-consent-application-registrations.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
         href: app-integration/troubleshoot-sign-in-saml-based-apps.md
       - name: Troubleshooting infinite redirection between OIDC app and Entra ID
@@ -142,6 +154,8 @@
         href: app-integration/reply-url-redirected-to-localhost.md
       - name: Nonce is null error in ASP.NET MVC with OpenID Connect
         href: app-integration/troubleshoot-validation-context-nonce-null-mvc.md
+      - name: Your browser is not supported or up-to-date error in MSAL app
+        href: app-integration/update-your-browser-error-when-using-apps-adal-msal.md
   - name: Troubleshoot app registrations
     items: 
       - name: Application and delegated permissions for access tokens
@@ -283,18 +297,24 @@
       href: mfa/cannot-verify-account-reset-pwd.md
 - name: Microsoft Graph Users, Groups, and Entra APIs
   items: 
-   - name: Handling errors in Graph API requests with Invoke-RestMethod
-     href: app-integration/graph-api-error-handling-invoke-restmethod.md
-   - name: Troubleshoot Authorization RequestDenied error
-     href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
    - name: 403 error when adding a user to a group
      href: users-groups-entra-apis/authorization-requestdenied-403-error-add-user-group.md
    - name: 404 error when managing objects
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
-   - name: Use managed identities to call Graph APIs in VB.Net and C#
-     href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
+   - name: Change enumeration is not supported for requested tenant
+     href: users-groups-entra-apis/delta-query-not-supported-for-aad-b2c-tenant.md
+   - name: Graph API request fails to get B2B users using UPN
+     href: users-groups-entra-apis/microsoft-graph-api-query-can-not-get-business-to-business-user.md
+   - name: Handling errors in Graph API requests with Invoke-RestMethod
+     href: app-integration/graph-api-error-handling-invoke-restmethod.md
+   - name: Only one user is returned when running List users API
+     href: users-groups-entra-apis/only-one-user-returned-by-microsoft-graph-list-users-api.md
+   - name: Troubleshoot Authorization RequestDenied error
+     href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
    - name: The memberOf API returns null values for properties
      href: users-groups-entra-apis/memberof-api-returns-null-properties.md
+   - name: Use managed identities to call Graph APIs in VB.Net and C#
+     href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
    - name: Getting access denied errors (Authorization)
      items:
       - name: Add an owner to an application
@@ -311,7 +331,7 @@
         href: users-groups-entra-apis/error-call-me-endpoint-microsoft-graph.md
       - name: HTTP 403 authorization error when calling Microsoft Graph Security API
         href: users-groups-entra-apis/403-error-when-calling-microsoft-graph-security-api.md
-      - name: Tenant doesn't have premium license error when query sign-in activities
+      - name: Premium license error when querying sign-in activities
         href: users-groups-entra-apis/b2c-or-tenant-premium-license-sign-in-activities.md
    - name: Problem with using the Graph SDK - libraries
      items:

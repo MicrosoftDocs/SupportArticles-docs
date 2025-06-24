@@ -114,6 +114,8 @@
 
   - name: Troubleshoot Linux CPU performance issues
     href: troubleshoot-performance-cpu-linux.md
+  - name: Troubleshoot Linux Memory performance issues
+    href: troubleshoot-performance-memory-linux.md
     
 - name: Windows Update and OS Updates
   items:
@@ -223,6 +225,8 @@
     href: troubleshoot-deployment-new-vm-linux.md
   - name: Custom/gallery/marketplace image allocation failure
     href: linux-custom-gallery-marketplace-image-allocation-failure.md
+  - name: Capture an image for upload preparation
+    href: capture-linux-image-for-upload.md
   - name: Custom image provisioning errors
     href: linux-custom-image-provisioning-errors.md
   - name: VM deployment top issues

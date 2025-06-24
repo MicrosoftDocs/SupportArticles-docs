@@ -3,7 +3,7 @@ title: Troubleshoot Azure File Sync managed identity issues
 description: Troubleshoot common issues when your Azure File Sync deployment is configured to use managed identities.
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 04/02/2025
+ms.date: 06/09/2025
 author: khdownie
 ms.author: kendownie
 ---
@@ -64,6 +64,33 @@ When you try to delete a Storage Sync Service, you might get the following error
 > Unable to delete Storage Sync Service in region \<region>. The Storage Sync Service is deleting snapshots that are no longer needed. Please try again in a few hours.
 
 This issue occurs when your file share has unused Azure File Sync snapshots. To reduce your cost, the unused snapshots are deleted before removing the Storage Sync Service. The snapshot count varies with the dataset size. If you can't delete the Storage Sync Service after a few hours, try again the next day.
+
+## Error "Failed to perform resource identity operation" when creating a Storage Sync Service
+
+When creating a Storage Sync Service, you might get the following error:
+
+> Failed to perform resource identity operation.
+
+This issue occurs in one of the following scenarios:
+
+- You delete a Storage Sync Service and then try to recreate it using the same name within the same tenant.
+
+- A conflicting service principal app might still exist in Microsoft Entra ID.
+
+    This app was likely created during the initial provisioning of the Storage Sync Service and will be deleted automatically within 24 hours.
+
+To resolve this issue, use one of the following methods:
+
+- Create the Storage Sync Service with a different name than the one previously used.
+
+- Wait for the automatic cleanup of the conflicting service principal app to finish, or delete it manually.
+
+    If the service isn't urgently required, wait for this automatic cleanup to finish. If an immediate resolution is needed, you can manually delete the conflicting app:
+
+    1. Go to the Microsoft Entra admin center.
+    2. Navigate to **Enterprise applications**.  
+    3. Search for the app name that matches the Storage Sync Service.  
+    4. Select the app and then select **Delete**.
 
 ## Permissions required to access a storage account and Azure file share
 

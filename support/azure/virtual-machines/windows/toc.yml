@@ -142,6 +142,8 @@
         href: azure-vm-nsi-not-starting.md
       - name: Cannot RDP into Azure VM because of a brute force attack
         href: cannot-rdp-azure-vm-brute-force.md
+      - name: The system administrator has restricted the types of logon
+        href: ../../../windows-server/remote/system-admin-restrict-types-logon.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
       - name: Troubleshoot a failed trust relationship in an Azure Windows VM
         href: troubleshoot-broken-secure-channel.md
       - name: Troubleshoot RDP error because DHCP is disabled
@@ -334,6 +336,8 @@
       href: applying-group-policy-shortcuts-policy.md
     - name: Azure VM startup hangs at "Applying Software Installation policy"
       href: applying-software-installation-policy.md
+    - name: Azure VM startup hangs at "IRQL_NOT_LESS_OR_EQUAL"
+      href: interrupt-request-line-not-less-equal.md
     - name: Troubleshoot Windows VM OS with missing boot manager
       href: os-bootmgr-missing.md
     - name: OS isn't found
@@ -348,6 +352,8 @@
       href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
     - name: Azure VM cannot RDP - working on features
       href: azure-vm-cannot-rdp-working-features.md
+    - name: Azure VM startup hangs at "Please wait for the Group Policy Client"
+      href: please-wait-for-the-group-policy-client.md
 
 - name: Cannot start or stop my VM
   items:
