@@ -21,7 +21,7 @@ items:
     - name: Prevent antivirus and DLP tools from blocking or crashing Microsoft Teams
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Resolve issues when starting the new Teams app
-      href: ./teams-sign-in/resolve-new-teams-launch-issues.md
+      href: ./teams-administration/resolve-new-teams-launch-issues.md
     - name: Resolve new Teams installation issues
       href: ./teams-administration/fix-new-teams-installation-issues.md     
     - name: Self-help diagnostics for Teams admins
@@ -65,7 +65,7 @@ items:
     - name: Dialing out requires five or more digits 
       href: ./teams-conferencing/teams-call-requires-five-or-more-digits.md
     - name: Give Control doesn't work
-      href: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
+      href: ./teams-conferencing/give-control-doesnt-work-sharescreen.md
     - name: Organizer can't start Outlook meeting and stuck in virtual lobby
       href: ./teams-conferencing/organizer-cant-start-teams-meeting.md
     - name: PSTN callers with the same "From" number are shown as the same user
