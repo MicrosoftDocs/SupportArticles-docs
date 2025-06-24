@@ -1,8 +1,8 @@
 ---
-title: Can't Change Accounting Date Or Do a Budget Check
+title: Can't Change Accounting Date or Do a Budget Check
 description: Works around an issue where you can't change the accounting date on a purchase order in Microsoft Dynamics 365 Supply Chain Management.
 ms.reviewer: shubhamshr, ashuaggarwal
-ms.date: 06/23/2025
+ms.date: 06/24/2025
 ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
 # Can't change the accounting date or perform a budget check on a purchase order
@@ -25,7 +25,7 @@ This issue occurs because the accounting date on the PO falls within a closed fi
 
 To resolve this issue, use one of the following workarounds:
 
-### Option 1: Cancel and recreate the purchase order
+### Option 1: Cancel and re-create the purchase order
 
 1. [Cancel the PO](/dynamics365/supply-chain/procurement/purchase-order-approval-confirmation#canceling-purchase-orders).
 2. Create a new purchase order with the correct accounting date.
