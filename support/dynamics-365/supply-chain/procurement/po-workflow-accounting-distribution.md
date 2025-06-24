@@ -2,7 +2,7 @@
 title: Accounting Distribution Validation Failed Error
 description: Solves an issue where you can't submit a purchase order for approval after it's updated.
 ms.reviewer: shubhamshr, ashuaggarwal
-ms.date: 06/09/2025
+ms.date: 06/24/2025
 ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
 # Workflow approval fails with the "Accounting distribution validation failed" error
