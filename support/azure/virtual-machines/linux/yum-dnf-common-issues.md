@@ -53,6 +53,7 @@ This version of the check script currently supports only the following Red Hat V
 - RHEL 7._x_ PAYG VMs
 - RHEL 8._x_ PAYG VMs
 - RHEL 9._x_ PAYG VMs
+- RHEL 10._x_ PAYG VMs
 
 #### How to run the RHUI check script
 
@@ -73,7 +74,7 @@ To run the check script, enter the following shell commands on a Red Hat VM:
     ```
 3. The script generates a report that includes any issues that are found. The script output is also saved in `/var/log/rhuicheck.log` after you run it. 
 
-#### [Red Hat 8.x and 9.x](#tab/rhel89)
+#### [Red Hat 8.x, 9.x, and 10.x](#tab/rhel89)
 
 1. If the VM has internet access, run the script directly from the VM by using the following command:
 
@@ -280,7 +281,7 @@ There are two possible solutions: Try to complete the transaction, or manually r
    sudo yum-complete-transaction --cleanup-only
    ```
 
-##### [RHEL/Centos/Oracle Linux 8._x_ and 9._x_](#tab/rhel89)
+##### [RHEL/Centos/Oracle Linux 8._x_, 9._x_, and 10._x_](#tab/rhel89)
 
 1. Try to complete the transaction by running the following [yum history](http://yum.baseurl.org/wiki/YumHistory.html) command:
 
@@ -318,7 +319,7 @@ There are two possible solutions: Try to complete the transaction, or manually r
    sudo yum install kernel-<newversion>-<release>.<arch>
    ```
 
-##### [RHEL/Centos/Oracle Linux 8._x_ and 9._x_](#tab/rhel89)
+##### [RHEL/Centos/Oracle Linux 8._x_, 9._x_, and 10._x_](#tab/rhel89)
 
 1. Back up the */var/lib/dnf* and */etc/dnf\** directories by running the following commands:
 
@@ -409,10 +410,10 @@ If the error typically occurs because an incorrect value is used for */etc/yum/v
 
 2. Determine the current value for the release version by running the following `cat` command.
 
-   | RHEL version | Command                             |
-   |--------------|-------------------------------------|
-   | RHEL 7       | `sudo cat /etc/yum/vars/releasever` |
-   | RHEL 8 and 9 | `sudo cat /etc/dnf/vars/releasever` |
+   | RHEL version      | Command                             |
+   |-------------------|-------------------------------------|
+   | RHEL 7            | `sudo cat /etc/yum/vars/releasever` |
+   | RHEL 8, 9, and 10 | `sudo cat /etc/dnf/vars/releasever` |
 
 3. Modify and use the correct value for the release version:
 
@@ -433,10 +434,10 @@ If the error typically occurs because an incorrect value is used for */etc/yum/v
 
    - If your system is using non-EUS repositories, make sure that you remove the version lock for the */etc/yum/vars/releasever* or */etc/dnf/vars/releasever* file by running the following command.
 
-     | RHEL version | Command                                   |
-     |--------------|-------------------------------------------|
-     | RHEL 7       | `sudo echo "" > /etc/yum/vars/releasever` |
-     | RHEL 8 and 9 | `sudo echo "" > /etc/dnf/vars/releasever` |
+     | RHEL version      | Command                                   |
+     |-------------------|-------------------------------------------|
+     | RHEL 7            | `sudo echo "" > /etc/yum/vars/releasever` |
+     | RHEL 8, 9, and 10 | `sudo echo "" > /etc/dnf/vars/releasever` |
 
 ##### [Oracle Linux](#tab/ol)
 

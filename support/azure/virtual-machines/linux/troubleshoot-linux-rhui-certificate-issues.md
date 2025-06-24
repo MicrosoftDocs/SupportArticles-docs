@@ -143,653 +143,149 @@ Errors during downloading metadata for repository 'rhel-X-for-x86_64-XXXX-XXX-rh
   - Curl error (58): Problem with the local SSL certificate for https://rhui-3.microsoft.com/pulp/repos/content/eus/rhel8/rhui/X.X/x86_64/XXXXX/os/repodata/repomd.xml [could not load PEM client certificate, OpenSSL error error:02001002:system library:fopen:No such file or directory, (no key found, wrong pass phrase, or wrong file format?)]
 ```
 
-### Solution 3: Install the EUS, non-EUS, or SAP/E4S RHUI package
+### Solution 3: Install the Base RHEL, EUS, or SAP/E4S RHUI package
 
 
-Install the missing RHUI package for EUS, non-EUS, or SAP/E4S.
+Install the missing RHUI package for Base RHEL (non-EUS), EUS, or SAP/E4S.
 
-All the following commands should be run by using root privileges or by specifying `sudo`.
-
-
-#### EUS RHUI package installation
-
-
-#### [RHEL 8._x_ - EUS](#tab/rhel8-eus)
-
-1. Create a config file by using this command.
+1. Remove the releasever file if it exists.
 
    ```bash
-   sudo tee rhel8-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-eus]\nname=Microsoft Azure RPMs for RHEL 8 EUS\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-eus\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
+   sudo rm /etc/yum/vars/releasever  # Either location works on dnf-based systems, and thus both must be cleared.
+   sudo rm /etc/dnf/vars/releasever  # It's expected that this directory does not exist on RHEL 7
+   ```
+
+2. Set some variables based on RHEL major version and offering for use in the commands below.
+
+   ```bash
+   source /etc/os-release
+   MAJOR_VERSION=$(echo $VERSION_ID | cut -d '.' -f 1)
+   MINOR_VERSION=$(echo $VERSION_ID | cut -d '.' -f 2)
+   echo $MAJOR_VERSION  # for example "8" or "10"
+   GPG_KEY_SUFFIX=$(if [ $MAJOR_VERSION -eq "10" ]; then echo "-2025"; fi)
+   GPG_KEY="https://packages.microsoft.com/keys/microsoft${GPG_KEY_SUFFIX}.asc"
+   ```
+
+3. Set variables depending on your desired product offering. 
+
+   #### [Base (non-EUS)](#tab/rhel)
+   ```bash
+   OFFERING="rhel${MAJOR_VERSION}"
+   ```
+
+   #### [EUS](#tab/eus)
+   > [!NOTE]
+   > EUS is only available on minor versions where Red Hat has released it, current non-EOL versions include 9.4 and 9.6.
+   > See Red Hat's [Life Cycle docs](https://access.redhat.com/support/policy/updates/errata) for more info.
+
+   ```bash
+   OFFERING="rhel${MAJOR_VERSION}-eus"
+   # Lock the releasever variable
+   source /etc/os-release && echo $VERSION_ID | sudo tee /etc/yum/vars/releasever
+   ```
+
+   #### [SAP-APPS](#tab/sap-apps)
+   > [!NOTE]
+   > This offer is only available if the VM was created using the `RHEL-SAP-APPS` offer image and the OS version
+   > is _earlier than the latest version supported by SAP_.
+   > Only minor versions for which [Red Hat offers EUS support](https://access.redhat.com/support/policy/updates/errata) are available.
+   > The last minor version of each RHEL (7,9, 8.10, 9.10 (unreleased), etc.) is supported until the end of the life cycle, and doesn't require EUS support.
+   > For RHEL 7, only 7.9 is still supported.
+
+   ```bash
+   if [ $VERSION_ID -eq "7.9" ]; then
+     OFFERING="rhel7-base-sap-apps"
+   elif [ $MINOR_VERSION -eq "10" ]; then
+     OFFERING="rhel${MAJOR_VERSION}-base-sap-apps"
+   else
+     OFFERING="rhel${MAJOR_VERSION}-sapapps"
+     # Lock the releasever variable
+     source /etc/os-release && echo $VERSION_ID | sudo tee /etc/yum/vars/releasever
+   fi
+   ```
+
+   #### [SAP-HA](#tab/sap-ha)
+   > [!NOTE]
+   > This offer is only available if the VM was created using the `RHEL-SAP-HA` offer image and the OS version
+   > is _earlier than the latest version supported by SAP_.
+   > Only minor versions for which [Red Hat offers E4S support](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) are available.
+   > The last minor version of each RHEL (7.9, 8.10, 9.10 (unreleased), etc.) is supported until the end of the life cycle, and doesn't require E4S support.
+   > For RHEL 7, only 7.9 is still supported.
+
+   ```bash
+   if [ $VERSION_ID -eq "7.9" ]; then
+     OFFERING="rhel7-base-sap-ha"
+   elif [ $MINOR_VERSION -eq "10" ]; then
+     OFFERING="rhel${MAJOR_VERSION}-base-sap-ha"
+   else
+     OFFERING="rhel${MAJOR_VERSION}-sap-ha"
+     # Lock the releasever variable
+     source /etc/os-release && echo $VERSION_ID | sudo tee /etc/yum/vars/releasever
+   fi
+   ```
+
+   #### [HA](#tab/ha)
+   > [!NOTE]
+   > Only minor versions for which [Red Hat offers EUS support](https://access.redhat.com/support/policy/updates/errata) are available.
+   > The last minor version of each RHEL (8.10, 9.10 (unreleased), etc.) is supported until the end of the life cycle, and doesn't require EUS support.
+   > RHEL 7 has no HA option.
+
+   ```bash
+   if [ $MINOR_VERSION -eq "10" ]; then
+     OFFERING="rhel${MAJOR_VERSION}-base-ha"
+   else
+     OFFERING="rhel${MAJOR_VERSION}-ha"
+     # Lock the releasever variable
+     source /etc/os-release && echo $VERSION_ID | sudo tee /etc/yum/vars/releasever
+   fi
+   ```
+
+4. Ensure previous rhui-azure rpms are cleaned up.
+   ```bash
+   sudo dnf remove rhui-azure-*
+   ```
+
+5. Create a config file by using this command or a text editor.
+
+   ```bash
+   cat <<EOF > temporary-rhui.config
+   [temporary-rhui]
+   name=Temporary RHUI repo
+   baseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-${OFFERING}
+   enabled=1
+   sslverify=1
+   gpgcheck=1
+   gpgkey=${GPG_KEY}
+   EOF
    ```
    
-2. Install the `rhui-azure-rhel8-eus` package by running:
+6. Install the `rhui-azure-*` package by running:
 
    ```bash
-   sudo dnf --config rhel8-eus.config install rhui-azure-rhel8-eus
+   sudo yum --config temporary-rhui.config install rhui-azure-${OFFERING}
    ```
 
-3. Lock the `releasever` variable:
+7. Verify that the corresponding repositories are available and show no errors. To do this, run the `yum repolist` command:
 
    ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/dnf/vars/releasever
+   sudo yum repolist all
    ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo dnf repolist all
-   ```
-5. Remove the temp file created on step 1.
+8. Remove the temp file created previously.
 
    ```bash
-   sudo rhel8-eus.config
-   ```
-
-#### [RHEL 9._x_ - EUS](#tab/rhel9-eus)
-
-1. Create a config file by using this command: 
-
-   ```bash
-   sudo tee rhel9-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel9-eus]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9-eus)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9-eus\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-
-   ```
-2. Install the `rhui-azure-rhel9-eus` package by running.
-
-   ```bash
-   sudo dnf --config rhel9-eus.config install rhui-azure-rhel9-eus
-   ```
-
-3. Lock the `releasever` variable:
-
-   ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/dnf/vars/releasever
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo dnf repolist all
-   ```
-
-5. Remove the temp file created on step 1.
-
-   ```bash
-   sudo rhel9-eus.config
+   rm temporary-rhui.config
    ```
 
 ---
 
 > [!NOTE]
-> If you're using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config rhelX-XX-XX.config` command won't work because it doesn't include your proxy settings. In this case, move the temp file `rhelX-XX-XX.config`  directly in `/etc/yum.repos.d/` as `.repo`
+> If you're using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config temporary-rhui.config` command won't work because it doesn't include your proxy settings. In this case, move the temp file `temporary-rhui.config` to `/etc/yum.repos.d/` and rename to a `.repo` file.
 >
 > ```bash  
-> sudo mv rhelX-XX-XX.config /etc/yum.repos.d/ms.repo
-> sudo yum install rhui-azure-rhel-X-X-X
-> sudo rm rhelX-XX-XX.config
+> sudo mv temporary-rhui.config /etc/yum.repos.d/ms.repo
+> sudo yum install rhui-azure-${OFFERING}
+> sudo rm /etc/yum.repos.d/ms.repo
 > ```
->
-> Replace `rhelX-XX-XX.config` and `rhui-azure-rhel-X-X-X` with the actual values, as appropriate.
-
-#### Non-EUS RHUI package installation
-
-#### [RHEL 7._x_ - non-EUS](#tab/rhel7-noneus)
-
-1. Remove the releasever file if it exists.
-
-   ```bash
-   sudo rm /etc/yum/vars/releasever
-   ```
-
-2. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel7-non-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel7]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-3. Install the `rhui-azure-rhel7` package by running the `yum install` command:
-
-   ```bash
-   sudo yum --config rhel7-non-eus.config install rhui-azure-rhel7
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `yum repolist` command:
-
-   ```bash
-   sudo yum repolist
-   ```
-5. Remove the temp file created on step 2.
-
-   ```bash
-   sudo rm rhel7-non-eus.config
-   ```
-
-#### [RHEL 8._x_ - non-EUS](#tab/rhel8-noneus)
-
-1. Remove the releasever file if it exists.
-
-   ```bash
-   sudo rm /etc/yum/vars/releasever
-   ```
-
-2. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel8-non-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-3. Install the `rhui-azure-rhel8` package by running the `dnf install` command:
-
-   ```bash
-   sudo dnf --config rhel8-non-eus.config install rhui-azure-rhel8
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo yum repolist
-   ```
-5. Remove the temp file created on step 2.
-
-   ```bash
-   sudo rm rhel8-non-eus.config
-   ```
-
-#### [RHEL 9._x_ - non-EUS](#tab/rhel9-noneus)
-
-1. Remove the releasever file if it exists.
-
-   ```bash
-   sudo rm /etc/yum/vars/releasever
-   ```
-
-2. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel9-non-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel9]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-3. Install the `rhui-azure-rhel9` package by running the `dnf install` command:
-
-   ```bash
-   sudo dnf --config rhel9-non-eus.config install rhui-azure-rhel9
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo yum repolist
-   ```
-5. Remove the temp file created on step 2.
-
-   ```bash
-   sudo rm rhel9-non-eus.config
-   ```
-
-#### [RHEL 10.0  non-EUS](#tab/rhel10-noneus)
-
-
-1. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel10-non-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel10]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 10 (rhel10)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel10\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft-2025.asc\nsslverify=1' 
-   ```
-
-2. Install the `rhui-azure-rhel10` package by running the `dnf install` command:
-
-   ```bash
-   sudo dnf --config rhel10-non-eus.config install rhui-azure-rhel10
-   ```
-
-3. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo dnf repolist
-   ```
-   
-4. Remove the temp file created on step 1.
-
-   ```bash
-   sudo rm rhel10-non-eus.config
-   ```
-   
----
-
-> [!NOTE]
-> If you're using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config rhelX-XX-XX.config` command won't work because it doesn't include your proxy settings. In this case, move the temp file `rhelX-XX-XX.config`  directly in `/etc/yum.repos.d/` as `.repo`
->
-> ```bash  
-> sudo mv rhelX-XX-XX.config /etc/yum.repos.d/ms.repo
-> sudo yum install rhui-azure-rhel-X-X-X
-> sudo rm rhelX-XX-XX.config
-> ```
->
-> Replace `rhelX-XX-XX.config` and `rhui-azure-rhel-X-X-X` with the actual values, as appropriate.
-
-
-#### RHEL 7 SAP/E4S/HANA RHUI package installation
-
-Select the tab of an SAP image type to see the corresponding instructions.
-
-
-#### [RHEL 7.9 - RHEL-SAP-APPS](#tab/rhel79-rhel-sap-apps)
-
-The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-APPS` offer image.
-
-1. Remove the releasever file if it exists.
-
-   ```bash
-   sudo rm /etc/yum/vars/releasever
-   ```
-
-2. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel7-base-sap-apps.config > /dev/null <<< $'[rhui-microsoft-azure-rhel7-base-sap-apps]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-base-sap-apps)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7-base-sap-apps\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-3. Install the `rhui-azure-rhel7-base-sap-apps` package by running the `yum install` command:
-
-   ```bash
-   sudo yum --config rhel7-base-sap-apps.config install rhui-azure-rhel7-base-sap-apps
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `yum repolist` command:
-
-   ```bash
-   sudo yum repolist
-   ```
-
-5. Remove the temp file created on step 2.
-
-   ```bash
-   sudo rm rhel7-base-sap-apps.config
-   ```
-
-   
-#### [RHEL 7.9 - RHEL-SAP-HA](#tab/rhe79-rhel-sap-ha)
-
-The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-HA` offer image.
-
-1. Remove the releasever file if it exists.
-
-   ```bash
-   sudo rm /etc/yum/vars/releasever
-   ```
-
-2. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel7-base-sap-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel7-base-sap-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-base-sap-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7-base-sap-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-   
-3. Install the `rhui-azure-rhel7-base-sap-ha` package by running the `yum install` command:
-
-   ```bash
-   sudo yum --config rhel7-base-sap-ha.config install rhui-azure-rhel7-base-sap-ha
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `yum repolist` command:
-
-   ```bash
-   sudo yum repolist
-   ```
-   
-5. Remove the temp file created on step 2.
-
-   ```bash
-   sudo rm rhel7-base-sap-ha.config
-   ```
-
----
-
-> [!NOTE]
-> If you're using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config rhelX-XX-XX.config` command won't work because it doesn't include your proxy settings. In this case, move the temp file `rhelX-XX-XX.config`  directly in `/etc/yum.repos.d/` as `.repo`
->
-> ```bash  
-> sudo mv rhelX-XX-XX.config /etc/yum.repos.d/ms.repo
-> sudo yum install rhui-azure-rhel-X-X-X
-> sudo rm rhelX-XX-XX.config
-> ```
-> Replace `rhelX-XX-XX.config` and `rhui-azure-rhel-X-X-X` with the actual values, as appropriate.
-
-
-#### RHEL 8 SAP/E4S/HANA RHUI package installation
-
-Select the tab of an SAP image type to see the corresponding instructions.
-
-#### [RHEL 8._x_ - RHEL-SAP-APPS](#tab/rhel8-rhel-sap-apps)
-
-The following steps apply if the OS version is *earlier than the latest version available* supported by SAP for `RHEL 8.X` and the VM was created by using the `RHEL-SAP-APPS` offer image.
-
-1. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel8-sapapps.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-sapapps]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sapapps)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-sapapps\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-   
-2. Install the `rhui-azure-rhel8-sapapps` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
-
-   ```bash
-   sudo dnf --config rhel8-sapapps.config install rhui-azure-rhel8-sapapps
-   ```
-
-3. Lock the `releasever` variable:
-
-   ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/dnf/vars/releasever
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo dnf repolist
-   ```
-
-5. Remove the temp file created on step 1.
-
-   ```bash
-   sudo rm rhel8-sapapps.config
-   ```
-
-
-#### [RHEL 8.10 - RHEL-SAP-APPS](#tab/rhel810-rhel-sap-apps)
-
-The following steps apply if the OS version is *RHEL 8.10* supported by SAP and the VM was created by using the `RHEL-SAP-APPS` offer image.
-
-1. Remove the releasever file if it exists.
-
-   ```bash
-   sudo rm /etc/yum/vars/releasever
-   ```
-   
-2. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel8-base-sap-apps.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-base-sap-apps]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-apps)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-base-sap-apps\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-3. Install the `rhui-azure-rhel8-base-sap-apps` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
-
-   ```bash
-   sudo dnf --config rhel8-base-sap-apps.config install rhui-azure-rhel8-base-sap-apps
-   ```
-   
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo dnf repolist
-   ```
-5. Remove the temp file created on step 2.
-
-   ```bash
-   sudo rm rhel8-base-sap-apps.config
-   ```
-   
-#### [RHEL 8._x_ - RHEL-SAP-HA (E4S)](#tab/rhel8-rhel-sap-ha-e4s)
-
-The following steps apply if the OS version is *earlier than the latest version available* supported by SAP for `RHEL 8._x_` and the VM was created by using the `RHEL-SAP-HA` offer image.
-
-1. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel8-sap-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-sap-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-sap-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-sap-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-2. Install the `rhui-azure-rhel8-sap-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
-
-   ```bash
-   sudo dnf --config rhel8-sap-ha.config install rhui-azure-rhel8-sap-ha
-   ```
-
-3. Lock the `releasever` variable:
-
-   ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/dnf/vars/releasever
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo dnf repolist
-   ```
-   
-5. Remove the temp file created on step 1.
-
-   ```bash
-   sudo rm rhel8-sap-ha.config
-   ```
-
-#### [RHEL 8.10 - RHEL-SAP-HA](#tab/rhe810-rhel-sap-ha)
-
-The following steps apply if the OS version is *RHEL 8.10* and the VM was created by using the `RHEL-SAP-HA` offer image.
-
-1. Remove the releasever file if it exists.
-
-   ```bash
-   sudo rm /etc/yum/vars/releasever
-   ```
-   
-2. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel8-base-sap-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-base-sap-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-base-sap-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-3. Install the `rhui-azure-rhel8-base-sap-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
-
-   ```bash
-   sudo dnf --config rhel8-base-sap-ha.config install rhui-azure-rhel8-base-sap-ha
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo dnf repolist
-   ```
-   
-5. Remove the temp file created on step 2.
-
-   ```bash
-   sudo rm rhel8-base-sap-ha.config
-   ```
-
-#### [RHEL 8._x_ - RHEL-HA (E4S)](#tab/rhel8-rhel-ha-e4s)
-
-1. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel8-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-2. Install the `rhui-azure-rhel8-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
-
-   ```bash
-   sudo dnf --config rhel8-ha.config install rhui-azure-rhel8-ha
-   ```
-
-3. Lock the `releasever` variable:
-
-   ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/dnf/vars/releasever
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo dnf repolist
-   ```
-
-5. Remove the temp file created on step 2.
-
-   ```bash
-   sudo rm  rhel8-ha.config
-   ```
-
-#### [RHEL 8.10 - RHEL-HA](#tab/rhe810-rhel-base-ha)
-
-1. Remove the releasever file if it exists:
-
-   ```bash
-   sudo rm /etc/yum/vars/releasever
-   ```
-   
-2. Remove the client `rhui-azure-rhel8-ha` package by running the `dnf remove` command:
-
-   ```bash
-   sudo dnf remove rhui-azure-rhel8-ha
-   ```
-   
-3. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel8-base-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-base-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-base-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-4. Install the `rhui-azure-rhel8-base-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
-
-   ```bash
-   sudo dnf --config rhel8-base-ha.config install rhui-azure-rhel8-base-ha
-   ```
-
-5. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo dnf repolist
-   ```
-6. Remove the temp file created on step 3.
-
-   ```bash
-   sudo rm  rhel8-base-ha.config
-   ```
-
----
-
-
-> [!NOTE]
-> If you're using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config rhelX-XX-XX.config` command won't work because it doesn't include your proxy settings. In this case, move the temp file `rhelX-XX-XX.config`  directly in `/etc/yum.repos.d/` as `.repo`
->
-> ```bash  
-> sudo mv rhelX-XX-XX.config /etc/yum.repos.d/ms.repo
-> sudo yum install rhui-azure-rhel-X-X-X
-> sudo rm rhelX-XX-XX.config
-> ```
-> Replace `rhelX-XX-XX.config` and `rhui-azure-rhel-X-X-X` with the actual values, as appropriate.
-
-
-#### RHEL 9 SAP/HANA RHUI package installation
-
-Select the tab of an SAP image type to see the corresponding instructions.
-
-#### [RHEL 9._x_ - RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
-
-The following steps apply if the OS version is *earlier than the latest version that's available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-APPS` offer image.
-
-1. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel9-sapapps.config > /dev/null <<< $'[rhui-microsoft-azure-rhel9-sapapps]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9-sapapps)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9-sapapps\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-2. Install the `rhui-azure-rhel9-sapapps` package by running the `dnf install` command:
-
-   ```bash
-   sudo dnf --config rhel9-sapapps.config  install rhui-azure-rhel9-sapapps
-   ```
-
-3. Lock the `releasever` level. Currently, the version must be 9.2 or 9.4.
-
-   ```bash
-   sudo sh -c 'echo 9.4 > /etc/dnf/vars/releasever'
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `yum repolist` command:
-
-   ```bash
-   sudo dnf repolist all
-   ```
-
-5. Remove the temp file created on step 1.
-
-   ```bash
-   sudo rm  rhel9-sapapps.config
-   ```
-
-#### [RHEL 9._x_ - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
-
-The following steps apply if the OS version is *earlier than the latest version available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-HA` offer image.
-
-1. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel9-sap-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel9-sap-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9-sap-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9-sap-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-2. Install the `rhui-azure-rhel9-sap-ha` package by running the `dnf install` command:
-
-   ```bash
-   sudo dnf --config rhel9-sap-ha.config install rhui-azure-rhel9-sap-ha
-   ```
-
-3. Lock the `releasever` level. Currently, the version must be 9.2 or 9.4.
-
-   ```bash
-   sudo sh -c 'echo 9.4 > /etc/dnf/vars/releasever'
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo dnf repolist all
-   ```
-
-5. Remove the temp file created on step 1.
-
-   ```bash
-   sudo rm  rhel9-sap-ha.config
-   ```
-
-#### [RHEL 9._x_ - RHEL-HA (E4S)](#tab/rhel9-rhel-ha-e4s)
-
-
-1. Create a config file by using this command:
-
-   ```bash
-   sudo tee rhel9-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel9-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
-   ```
-
-2. Install the `rhui-azure-rhel9-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
-
-   ```bash
-   sudo dnf --config rhel9-ha.config install rhui-azure-rhel9-ha
-   ```
-
-3. Lock the `releasever` level. Currently, the version must be 9.2 or 9.4.
-
-   ```bash
-   sudo sh -c 'echo 9.4 > /etc/dnf/vars/releasever'
-   ```
-
-4. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
-
-   ```bash
-   sudo dnf repolist
-   ```
-5. Remove the temp file created on step 1.
-
-   ```bash
-   sudo rm rhel9-ha.config
-   ```
----
-
-> [!NOTE]
-> If you're using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config rhelX-XX-XX.config` command won't work because it doesn't include your proxy settings. In this case, move the temp file `rhelX-XX-XX.config`  directly in `/etc/yum.repos.d/` as `.repo`
->
-> ```bash  
-> sudo mv rhelX-XX-XX.config /etc/yum.repos.d/ms.repo
-> sudo yum install rhui-azure-rhel-X-X-X
-> sudo rm rhelX-XX-XX.config
-> ```
-> Replace `rhelX-XX-XX.config` and `rhui-azure-rhel-X-X-X` with the actual values, as appropriate.
 
 
 ## Cause 4: SSL CA certificate is missing

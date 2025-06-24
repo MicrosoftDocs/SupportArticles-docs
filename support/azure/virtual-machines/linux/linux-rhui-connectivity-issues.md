@@ -89,6 +89,7 @@ This version of the validation script currently supports only the following Red 
 - RHEL 7._x_ PAYG VMs
 - RHEL 8._x_ PAYG VMs
 - RHEL 9._x_ PAYG VMs
+- RHEL 10._x_ PAYG VMs
 
 #### How to run the validation script
 
@@ -110,7 +111,7 @@ To run the validation script, enter the following shell commands on a Red Hat VM
 
   The script will generate a report that identifies any specific issues. The script output is also saved in `/var/log/rhuicheck.log` after execution. You can also inspect that log file separately.
 
-#### [Red Hat 8.x and 9.x](#tab/rhel89)
+#### [Red Hat 8.x, 9.x, and 10.x](#tab/rhel89)
 
 1. If the virtual machine has internet access, execute the script directly from the VM using the following command:
 
