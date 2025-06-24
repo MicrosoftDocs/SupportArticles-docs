@@ -16,28 +16,28 @@ metadata:
 landingContent:
 
   # Card
-  - title: Code Deployment
+  - title: Application Code Deployment
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Application issues post deployment
             url: deployment/functions-deploying-runtime-issues-post-deployment.md
 
-  - title: Configuration and Management
+  - title: Configuring and Managing Function Apps
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Migration of runtime/language version
             url: config-mgmt/functions-configuring-updateversion.md
 
-  - title: Creation or Deletion
+  - title: Creating or Deleting Function Apps
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: General troubleshooting
             url: creation-deletion/functions-create-or-delete-faq.md
 
-  - title: Monitoring
+  - title: Monitoring using Application Insights, Metrics and Alerts
     linkLists:
       - linkListType: how-to-guide
         links:

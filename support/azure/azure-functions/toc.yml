@@ -1,19 +1,19 @@
 items:
 - name: Welcome
   href: welcome-azure-functions.yml
-- name: Code Deployment
+- name: Application Code Deployment
   items:
     - name: Application issues post deployment
       href: deployment/functions-deploying-runtime-issues-post-deployment.md
-- name: Configuration and Management
+- name: Configuring and Managing Function Apps
   items:
     - name: Migration of runtime/language version
       href: config-mgmt/functions-configuring-updateversion.md
-- name: Creation or Deletion
+- name: Creating or Deleting Function Apps
   items:
     - name: General troubleshooting
       href: creation-deletion/functions-create-or-delete-faq.md
-- name: Monitoring
+- name: Monitoring using Application Insights, Metrics and Alerts
   items:
     - name: Application Insights logs missing or incorrect
       href: monitoring/functions-monitoring-appinsightslogs.md
