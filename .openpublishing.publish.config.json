@@ -24,7 +24,7 @@
       "build_output_subfolder": "SupportArticles-Exchange",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -36,7 +36,7 @@
       "build_output_subfolder": "SupportArticles-M365",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -48,7 +48,7 @@
       "build_output_subfolder": "SupportArticles-Office",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -60,7 +60,7 @@
       "build_output_subfolder": "SupportArticles-Outlook",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -72,7 +72,7 @@
       "build_output_subfolder": "SupportArticles-SharePoint",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -84,7 +84,7 @@
       "build_output_subfolder": "SupportArticles-SkypeForBusiness",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -96,7 +96,7 @@
       "build_output_subfolder": "SupportArticles-Teams",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -108,7 +108,7 @@
       "build_output_subfolder": "SupportArticles-Viva",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
