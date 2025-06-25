@@ -6421,7 +6421,7 @@
     },
     {
       "source_path": "support/sql/database-engine/database-file-operations/support-iscsi-technology-components.md",
-      "redirect_url": "/previous-versions/troubleshoot/sql/database-file-operations/support-iscsi-technology-components"
+      "redirect_url": "/sql/relational-databases/sql-server-storage-guide#iscsi"
     }
   ]
 }
