@@ -41,7 +41,7 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/viva/troubleshoot/breadcrumb/toc.json",
+      "breadcrumb_path": "/troubleshoot/viva/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "recommendations": true,
       "feedback_system": "Standard",

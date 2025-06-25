@@ -8,27 +8,27 @@ items:
     topicHref: /viva/index
     items:
     - name: Troubleshooting
-      tocHref: /viva/troubleshoot/
-      topicHref: /viva/troubleshoot/index
+      tocHref: /troubleshoot/viva/
+      topicHref: /troubleshoot/viva/index
       items:
       - name: Viva Connections
-        tocHref: /viva/troubleshoot/connections/
-        topicHref: /viva/troubleshoot/connections/viva-connections-welcome
+        tocHref: /troubleshoot/viva/connections/
+        topicHref: /troubleshoot/viva/connections/viva-connections-welcome
       - name: Viva Engage
-        tocHref: /viva/troubleshoot/engage/
-        topicHref: /viva/troubleshoot/engage/viva-engage-welcome
+        tocHref: /troubleshoot/viva/engage/
+        topicHref: /troubleshoot/viva/engage/viva-engage-welcome
       - name: Viva Glint
-        tocHref: /viva/troubleshoot/glint/
-        topicHref: /viva/troubleshoot/glint/viva-glint-welcome
+        tocHref: /troubleshoot/viva/glint/
+        topicHref: /troubleshoot/viva/glint/viva-glint-welcome
       - name: Viva Insights
-        tocHref: /viva/troubleshoot/insights/
-        topicHref: /viva/troubleshoot/insights/viva-insights-welcome
+        tocHref: /troubleshoot/viva/insights/
+        topicHref: /troubleshoot/viva/insights/viva-insights-welcome
       - name: Viva Learning
-        tocHref: /viva/troubleshoot/learning/
-        topicHref: /viva/troubleshoot/learning/viva-learning-welcome 
+        tocHref: /troubleshoot/viva/learning/
+        topicHref: /troubleshoot/viva/learning/viva-learning-welcome 
       - name: Viva Pulse
-        tocHref: /viva/troubleshoot/pulse/
-        topicHref: /viva/troubleshoot/pulse/viva-pulse-welcome
+        tocHref: /troubleshoot/viva/pulse/
+        topicHref: /troubleshoot/viva/pulse/viva-pulse-welcome
       - name: Viva suite administration
-        tocHref: /viva/troubleshoot/viva-suite-administration
-        topicHref: /viva/troubleshoot/viva-suite-administration/viva-suite-administration-welcome
+        tocHref: /troubleshoot/viva/viva-suite-administration
+        topicHref: /troubleshoot/viva/viva-suite-administration/viva-suite-administration-welcome

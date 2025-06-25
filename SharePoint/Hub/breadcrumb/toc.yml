@@ -7,5 +7,5 @@
     topicHref: /sharepoint/index
     items:
     - name: Troubleshooting
-      tocHref: /sharepoint/troubleshoot/
-      topicHref: /sharepoint/troubleshoot/index
+      tocHref: /troubleshoot/sharepoint/
+      topicHref: /troubleshoot/sharepoint/index

@@ -17,7 +17,7 @@ items:
     - name: Error switching a tenant to Teams Only mode
       href: ./teams-administration/cannot-switch-to-teams-only-mode.md
     - name: Issues receiving messages and calls
-      href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
+      href: /microsoftteams/legacy-login-issues?context=/troubleshoot/MicrosoftTeams/context/context
     - name: Prevent antivirus and DLP tools from blocking or crashing Microsoft Teams
       href: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
     - name: Resolve issues when starting the new Teams app
@@ -39,9 +39,9 @@ items:
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
       href: ./teams-administration/following-application-instance-not-present-error.md
     - name: Troubleshoot connectivity issues
-      href: /microsoftteams/connectivity-issues?context=/MicrosoftTeams/troubleshoot/context/context
+      href: /microsoftteams/connectivity-issues?context=/troubleshoot/MicrosoftTeams/context/context
     - name: Troubleshoot installation and update issues of classic Teams
-      href: /microsoftteams/troubleshoot-installation?context=/MicrosoftTeams/troubleshoot/context/context
+      href: /microsoftteams/troubleshoot-installation?context=/troubleshoot/MicrosoftTeams/context/context
     - name: User information isn't updated
       href: ./teams-administration/user-information-not-updated.md
   - name: Authentication
@@ -71,7 +71,7 @@ items:
     - name: PSTN callers with the same "From" number are shown as the same user
       href: ./teams-conferencing/pstn-callers-shown-with-same-call-in-number.md
     - name: Skype for Business broadcasts a dial tone
-      href: /skypeforbusiness/troubleshoot/server-conferencing/sfb-play-dial-tone-teams-call?context=/MicrosoftTeams/troubleshoot/context/context
+      href: /troubleshoot/skypeforbusiness/server-conferencing/sfb-play-dial-tone-teams-call?context=/troubleshoot/MicrosoftTeams/context/context
     - name: Skype for Business required for some meetings instead of Teams
       href: ./teams-conferencing/meeting-requires-skype-instead-of-teams.md
     - name: Static conference ID not supported for Teams meetings
@@ -163,7 +163,7 @@ items:
     - name: Issue with accessing notebooks
       href: ./teams-onenote-integration/issue-access-notebook.md
     - name: Temporary change to file size download limit in OneNote
-      href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?context=/MicrosoftTeams/troubleshoot/context/context
+      href: /troubleshoot/office/onenote/temp-change-onenote-file-size-download?context=/troubleshoot/MicrosoftTeams/context/context
   - name: Phone System
     items:
     - name: Issues when using SIP devices
@@ -245,7 +245,7 @@ items:
     - name: Websites aren't viewable
       href: ./sites/cannot-view-website-teams-web-client.md
     - name: '"This site cant be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
-      href: /sharepoint/troubleshoot/sites/err-invalid-response-accessing-sharepoint-site?context=/MicrosoftTeams/troubleshoot/context/context
+      href: /troubleshoot/sharepoint/sites/err-invalid-response-accessing-sharepoint-site?context=/troubleshoot/MicrosoftTeams/context/context
   - name: Tabs
     items:
     - name: Owner can't create Planner tab

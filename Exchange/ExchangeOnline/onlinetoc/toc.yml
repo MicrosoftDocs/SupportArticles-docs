@@ -493,7 +493,7 @@ items:
         - name: Resources to fix connection issues
           href: ../outlook-issues/office-365-troubleshooting-resources.md
         - name: Self-help diagnostics
-          href: /exchange/troubleshoot/administration/self-help-diagnostics?context=/exchange/troubleshoot/context/online-context
+          href: /troubleshoot/exchange/administration/self-help-diagnostics?context=/troubleshoot/exchange/context/online-context
         - name: Sending and receiving email
           href: ../outlook-issues/outlook-connection-issues.md
         - name: Room Finder doesn't display Show a Room list option
@@ -505,7 +505,7 @@ items:
     - name: Outlook on the web Issues
       items:
         - name: '"Send updates" prompt not displayed'
-          href: /outlook/troubleshoot/calendaring/send-updates-prompt-not-displayed?context=/exchange/troubleshoot/context/online-context
+          href: /troubleshoot/outlook/calendaring/send-updates-prompt-not-displayed?context=/troubleshoot/exchange/context/online-context
         - name: Archive mailbox doesn't appear in Outlook or Outlook on the web
           href: ../outlook-on-the-web-issues/archive-mailbox-not-visible.md
         - name: Can't create a new message by using OWA

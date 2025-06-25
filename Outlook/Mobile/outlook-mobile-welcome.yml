@@ -28,16 +28,16 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Configure rooms and workspaces for Room Finder
-            url: /outlook/troubleshoot/calendaring/configure-room-finder-rooms-workspaces?context=/outlook/troubleshoot/context/mobile-context
+            url: /troubleshoot/outlook/calendaring/configure-room-finder-rooms-workspaces?context=/troubleshoot/outlook/context/mobile-context
           - text: Create and book a workspace in Outlook
-            url: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/mobile-context
+            url: /troubleshoot/exchange/outlook-issues/create-book-workspace-outlook?context=/troubleshoot/outlook/context/mobile-context
 
   - title: Contacts
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Duplicate Outlook contacts in iOS Contacts app
-            url: /exchange/troubleshoot/mobile-devices/duplicate-contacts-in-ios-contacts-app?context=/outlook/troubleshoot/context/mobile-context
+            url: /troubleshoot/exchange/mobile-devices/duplicate-contacts-in-ios-contacts-app?context=/troubleshoot/outlook/context/mobile-context
 
   - title: Exchange ActiveSync
     linkLists:
@@ -53,6 +53,6 @@ landingContent:
           - text: ActiveSync v12.0 is out of support
             url: ./exchange-connectivity/activesync-v12.0-out-of-support.md
           - text: Outlook app access end after June 1 if EWS app policies not set correctly
-            url: /exchange/troubleshoot/mobile-devices/outlook-app-access-end-after-june-1-if-ews-app-policies-not-set-correctly?context=/outlook/troubleshoot/context/mobile-context
+            url: /troubleshoot/exchange/mobile-devices/outlook-app-access-end-after-june-1-if-ews-app-policies-not-set-correctly?context=/troubleshoot/outlook/context/mobile-context
           - text: Outlook for iOS and Android with Device Access (ABQ) rules are quarantined
             url: ./exchange-connectivity/outlook-for-ios-and-android-with-abq-rules-are-quarantined.md

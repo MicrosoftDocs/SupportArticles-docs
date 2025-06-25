@@ -22,13 +22,13 @@
         - name: Can't save a meeting as draft in Outlook for Mac via Office JS API
           href: ../calendars/cannot-save-meeting-as-draft-in-outlook-for-mac.md
         - name: Create and book a workspace in Outlook
-          href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/mac-context
+          href: /troubleshoot/exchange/outlook-issues/create-book-workspace-outlook?context=/troubleshoot/outlook/context/mac-context
         - name: Meetings incorrectly display the UTC time zone
           href: ../calendars/meetings-incorrectly-display-utc-timezone.md
         - name: No meeting reminders for delegates
           href: ../calendars/no-meeting-reminders-for-delegates.md
         - name: Shared calendar in delegate's Online Archive
-          href: /exchange/troubleshoot/calendars/shared-calendar-in-delegate-online-archive?context=/outlook/troubleshoot/context/mac-context
+          href: /troubleshoot/exchange/calendars/shared-calendar-in-delegate-online-archive?context=/troubleshoot/outlook/context/mac-context
         - name: Shared calendar shows private event details 
           href: ../calendars/shared-calendar-shows-private-event-details.md
         - name: The Open Shared Calendar option is unavailable
@@ -50,7 +50,7 @@
         - name: Font size differs from the original email
           href: ../email-messages/font-size-may-differ-from-original-email.md
         - name: Unintentional email messages received
-          href: /outlook/troubleshoot/email-management/unintentional-emails-received?context=/outlook/troubleshoot/context/mac-context
+          href: /troubleshoot/outlook/email-management/unintentional-emails-received?context=/troubleshoot/outlook/context/mac-context
     - name: Files and Folders
       items:
         - name: Outlook 2016 for Mac freezes on email folders
@@ -78,9 +78,9 @@
         - name: Emails are stuck in Outbox in Outlook 2016 for Mac
           href: ../send-receive-emails/email-stuck-in-outbox-outlook-2016-mac.md
         - name: Error 19738 when sending large emails using Outlook for Mac
-          href: /exchange/troubleshoot/mailflow/error-19738-send-large-email-outlook-mac?context=/outlook/troubleshoot/context/mac-context
+          href: /troubleshoot/exchange/mailflow/error-19738-send-large-email-outlook-mac?context=/troubleshoot/outlook/context/mac-context
         - name: Emails sent from a shared mailbox aren't saved in the Sent Items folder
-          href: /exchange/troubleshoot/administration/email-from-shared-mailbox-not-saved-sent-items?context=/outlook/troubleshoot/context/mac-context
+          href: /troubleshoot/exchange/administration/email-from-shared-mailbox-not-saved-sent-items?context=/troubleshoot/outlook/context/mac-context
         - name: Outlook for Mac repeatedly prompts for credentials
           href: ../send-receive-emails/prompted-for-credentials-modern-authentication.md
     - name: Sign-in

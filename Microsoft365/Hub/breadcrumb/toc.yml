@@ -7,5 +7,5 @@
     topicHref: /microsoft-365/index
     items:
     - name: Troubleshooting
-      tocHref: /microsoft-365/troubleshoot/
-      topicHref: /microsoft-365/troubleshoot/index
+      tocHref: /troubleshoot/microsoft-365/
+      topicHref: /troubleshoot/microsoft-365/index

@@ -3,5 +3,5 @@
   topicHref: /exchange/index
   items:
   - name: Troubleshooting
-    tocHref: /exchange/troubleshoot/
-    topicHref: /exchange/troubleshoot/index
+    tocHref: /troubleshoot/exchange/
+    topicHref: /troubleshoot/exchange/index
