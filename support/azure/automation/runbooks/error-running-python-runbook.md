@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot issues with python packages in Azure Automation
+title: Troubleshoot Issues with Python Packages in Azure Automation
 description: Describes how to import, manage, and use Python packages in Azure Automation and provides a solution to an issue with python packages.
-ms.date: 06/20/2025
+ms.date: 06/25/2025
 ms.reviewer: adoyle, v-weizhu
 ms.service: azure-automation
 ms.custom: sap:Runbook not working as expected
@@ -11,7 +11,7 @@ ms.custom: sap:Runbook not working as expected
 The article shows how to import, manage, and use Python packages in Azure Automation running on the Azure sandbox environment and Hybrid Runbook Workers. Python packages should be downloaded on Hybrid Runbook workers for successful job execution. To help simplify runbooks, you can use Python packages to import the modules you need.
 
 > [!NOTE]
-> Azure Automation enables recovery of runbooks deleted in the last 29 days - Restore the deleted runbook by running a PowerShell script as a job in your Automation account. See [Restore deleted runbook](/azure/automation/manage-runbooks#restore-deleted-runbook) for more information.
+> Azure Automation enables the recovery of runbooks deleted in the last 29 days. You can restore the deleted runbook by running a PowerShell script as a job in your Automation account. For more ingormation, see [Restore deleted runbook](/azure/automation/manage-runbooks#restore-deleted-runbook).
 
 ## Import Python 2 packages
 
@@ -27,7 +27,7 @@ After a package is imported, it's listed on the **Python packages** page in your
 
 ## Import packages with dependencies
 
-Azure Automation doesn't resolve dependencies for Python packages during the import process. Use one of the following two methods to import a package with all its dependencies.
+Azure Automation doesn't resolve dependencies for Python packages during the import process. Use one of the following methods to import a package with all its dependencies.
 
 ### Method 1: Manually download
 
@@ -39,7 +39,7 @@ C:\Python27\Scripts\pip2.7.exe download -d <output-directory> <package-name>
 
 Once the packages and all its dependencies are downloaded, you can import them into your Automation account.
 
-#### Method 2: Use a runbook
+### Method 2: Use a runbook
 
 To get a runbook, [import Python 2 packages from pypi into Azure Automation account](https://github.com/azureautomation/import-python-2-packages-from-pypi-into-azure-automation-account).
 
@@ -53,7 +53,7 @@ When you start the runbook, ensure the following things:
     - -a \<automationAccount\>
     - -m \<modulePackage\>
 
-    The runbook allows you to specify what package to download. For example, set the `-m` parameter to `Azure` to downloads all Azure modules and all dependencies (approximately 105 packages).
+    The runbook allows you to specify which package to download. For example, set the `-m` parameter to `Azure` to download all Azure modules and all dependencies (approximately 105 packages).
 - The runbook requires a managed identity for the Automation account to work.
 
 After the runbook execution is complete, you can check the **Python packages** under **Shared Resources** in your Automation account to verify that the package is imported correctly.
@@ -63,11 +63,11 @@ After the runbook execution is complete, you can check the **Python packages** u
 To support Python 3.8 runbooks in the Automation service, some Python packages are installed by default. For more information, see [Default Python packages](/azure/automation/default-python-packages). The default version can be overridden by importing Python packages into your Automation account. The imported version is preferred in your Automation account. To import a single package, see [Import a Python 3 package](#import-a-python-3-package). To import a package with multiple packages, see [Import a Python 3 package with dependencies](#import-a-python-3-package-with-dependencies).
 
 > [!NOTE]
-> There are no default packages installed for Python 3.10 (preview).
+> Python 3.10 (preview) doesn't have default packages installed.
 
 ## Import a Python 3 package
 
-1. In your Automation account, select **Python packages** under **Shared Resources**. Then select **+ Add a Python package**.
+1. In your Automation account, select **Python packages** under **Shared Resources**. Then, select **+ Add a Python package**.
 
 2. On the **Add Python Package** page, select a local package to upload. The package can be a **.whl** or **.tar.gz** file for Python 3.8 and a **.whl** file for Python 3.10 (preview).
 
@@ -111,15 +111,15 @@ Your runbook that uses those parameters fails with the following error:
 
 > Total Length of Runbook Parameter names and values exceeds the limit of 30,000 characters. To avoid this issue, use Automation Variables to pass values to runbook.
 
-**Cause:**
+### Cause
 
 Python 2.7, Python 3.8, and PowerShell 7.1 runbooks have a limit on the total length of characters for all parameters provided. The total length of all parameter names and values can't exceed 30,000 characters.
 
-**Resolution:**
+### Resolution
 
 To resolve this issue, use Azure Automation Variables to pass values to the runbook or shorten parameter names and values so they don't exceed 30,000 characters in total.
 
-## Reference
+## References
 
 - [Manage modules in Azure Automation](/azure/automation/shared-resources/modules)
 - [Runbook execution in Azure Automation](/azure/automation/automation-runbook-execution)
