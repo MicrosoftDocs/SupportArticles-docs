@@ -36,7 +36,7 @@ To solve this issue, follow these steps:
 - In Internet Explorer, select **Settings** > **Internet Options** > **Security** > **Trusted Sites** > **Sites**. In the **Add this website to zone** field, enter `\*\.dynamics.com`, and then select **Add**.
 - In Internet Explorer, select **Settings** > **Internet Options** > **Security** > **Trusted Sites**. In the area labeled **Security level for this zone**, change the option to **Medium-Low**.
 - Disable the pop-up blocker in your browser.
-- Install [Microsoft .NET Framework 4.7.2 or higher](https://dotnet.microsoft.com/download/dotnet-framework/net472) to workstations.
+- Confirm you have the correct .NET framework version installed on workstations.
 - If you're using the Chrome browser, you must install the **ClickOnce** extension to download the Report Designer client. If you're running Chrome in incognito mode, make sure the **ClickOnce** extension is enabled for incognito mode. For more information about the Chrome **ClickOnce** extension, see [System requirements for cloud deployments](/dynamics365/fin-ops-core/fin-ops/get-started/system-requirements).
 - If you're using Microsoft Edge with the Chrome browser, you don't need to install the **ClickOnce** extension for Microsoft Edge Chromium. However, you must enable the **ClickOnce** option to download the Report Designer client. If you're running incognito mode, make sure the **ClickOnce** extension is enabled for incognito mode.
 
