@@ -24,5 +24,8 @@ landingContent:
         links:   
           - text: Troubleshoot error codes during runbook execution
             url: runbooks/error-running-powershell-runbook.md                                                            
+        links:       
+          - text: Runbook jobs get suspended
+            url: runbooks/runbook-job-suspended.md                                                        
           - text: Troubleshoot runbook execution issues when using PowerShell
             url: runbooks/powershell-job-script-cmdlets-not-working.md

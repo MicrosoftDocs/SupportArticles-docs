@@ -4,6 +4,8 @@
   items:
   - name: Troubleshoot error codes during runbook execution
     href: runbooks/error-running-powershell-runbook.md
+  - name: Runbook jobs get suspended
+    href: runbooks/runbook-job-suspended.md
   - name: Troubleshoot runbook execution issues when using PowerShell
     href: runbooks/powershell-job-script-cmdlets-not-working.md
 
