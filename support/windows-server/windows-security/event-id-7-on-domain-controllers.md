@@ -1,7 +1,7 @@
 ---
-title: Event ID 7 is intermittently logged on a Windows Server 2025-based DC
-description: Introduces the issue in which event ID 7 is intermittently logged on a Windows Server 2025-based DC.
-ms.date: 06/23/2025
+title: Event ID 7 Is Intermittently Logged on a Windows Server 2025-Based DC
+description: Describes an issue in which event ID 7 is intermittently logged on a Windows Server 2025-based DC.
+ms.date: 06/25/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
 ---
-# Event ID 7 is intermittently logged on a Windows Server 2025-based DC
+# Event ID 7 is intermittently logged on a Windows Server 2025-based domain controller
 
 Active Directory domain controllers (DCs) that are running Windows Server 2025 might intermittently log event ID 7. This article provides suggestions for this error.
 
@@ -28,9 +28,9 @@ Here's a sample of the event:
 > User: N/A  
 > Computer: \<dc fqdn\>  
 > Description:  
-> The Security Account Manager failed a KDC request in an unexpected way. The error is in the data field. The account name was and lookup type 0x108.
+> The Security Account Manager failed a KDC request in an unexpected way. The error is in the data field. **The account name was** and lookup type 0x108.
 
-Event Xml:
+Event XML:
 
 ```xml
 <Event
@@ -61,16 +61,14 @@ xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
 ```
 
 > [!IMPORTANT]
-> The text of the event has a blank account name: **The account name was ...**.
+> The event text contains a blank account name.
 >
 > If the event ID lists a different account name or lookup type, it might be a separate issue that requires investigation.
 
 ## Resolution
 
-This issue doesn't affect computer functionality or performance. These events can be safely ignored when the account name is blank.
+Microsoft has acknowledged this issue. It doesn't affect computer functionality or performance. These events can be safely ignored when the account name is blank.
 
 ## More information
 
-This issue only impacts Windows Server 2025 when running as an Active Directory Key Distribution Center (KDC). No other versions of Windows Server have this issue.
-
-Microsoft has acknowledged this issue. These events can be safely ignored.
+This issue only affects Windows Server 2025 when running as an Active Directory Key Distribution Center (KDC). Other versions of Windows Server don't have this issue.
