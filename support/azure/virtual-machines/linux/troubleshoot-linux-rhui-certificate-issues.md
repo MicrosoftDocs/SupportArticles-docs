@@ -161,9 +161,22 @@ Install the missing RHUI package for Base RHEL (non-EUS), EUS, or SAP/E4S.
    source /etc/os-release
    MAJOR_VERSION=$(echo $VERSION_ID | cut -d '.' -f 1)
    MINOR_VERSION=$(echo $VERSION_ID | cut -d '.' -f 2)
+   if [ -z "$MAJOR_VERSION" ]; then
+     echo "Could not determine major version. Please stop and check /etc/os-release."
+   fi
    echo $MAJOR_VERSION  # for example "8" or "10"
-   GPG_KEY_SUFFIX=$(if [ $MAJOR_VERSION -eq "10" ]; then echo "-2025"; fi)
-   GPG_KEY="https://packages.microsoft.com/keys/microsoft${GPG_KEY_SUFFIX}.asc"
+
+   if [ "$MAJOR_VERSION" -eq "10" ]; then
+     GPG_KEY="https://packages.microsoft.com/keys/microsoft-2025.asc"
+   else
+     GPG_KEY="https://packages.microsoft.com/keys/microsoft.asc"
+   fi
+   if [ $(curl --silent --head --output /dev/null --write-out "%{http_code}" --location $GPG_KEY) -ne "200" ]; then
+     echo "Error: Unable to fetch GPG key from:"
+     echo "   $GPG_KEY"
+     echo "Please verify internet connectivity."
+     echo "If you must proceed without the GPG key you can set 'gpgcheck=0' below."
+   fi
    ```
 
 3. Set variables depending on your desired product offering. 
@@ -242,7 +255,7 @@ Install the missing RHUI package for Base RHEL (non-EUS), EUS, or SAP/E4S.
 
 4. Ensure previous rhui-azure rpms are cleaned up.
    ```bash
-   sudo dnf remove rhui-azure-*
+   sudo yum remove rhui-azure-*
    ```
 
 5. Create a config file by using this command or a text editor.
