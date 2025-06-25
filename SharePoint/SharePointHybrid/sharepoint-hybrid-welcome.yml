@@ -1,0 +1,46 @@
+### YamlMime:Landing
+
+title: SharePoint hybrid deployment troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using SharePoint hybrid deployments. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: SharePoint hybrid deployment troubleshooting
+  description: Documentation for troubleshooting common issues with SharePoint hybrid deployment.
+  ms.service: sharepoint-online
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 12/17/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: InfoPath
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: SoapServerException when use InfoPath designer
+            url: ./infopath/soapserverexception-when-customizing-list-form-using-InfoPath-designer.md
+
+  - title: Search
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Hybrid search fails to crawl or return results
+            url: ./search/hybrid-search-failures.md
+          - text: Online content isn't displayed in on-premises search
+            url: ./search/online-content-not-displayed-in-on-premises-search.md
+          - text: On-premises content isn't displayed in online search
+            url: ./search/on-premises-content-not-displayed-in-online-search.md
+
+  - title: Workflows
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't set "Hyperlink with formatting and constraints for publishing"
+            url: ./Workflows/fails-setting-workflow-column-value.md
+          - text: Completed tasks aren't deleted for workflows
+            url: ./Workflows/fails-deleting-completed-workflow-tasks.md
+          - text: Documents can't be opened in SharePoint Online
+            url: ./Workflows/workflow-platform-created-document-fails-open.md

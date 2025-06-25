@@ -24,7 +24,10 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.pdf",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -38,11 +41,36 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/breadcrumb/SupportArticles-Viva/toc.yml",
+      "breadcrumb_path": "/troubleshoot/viva/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
+      "recommendations": true,
       "feedback_system": "Standard",
-      "permissioned-type": "public"
+      "feedback_product_url": "https://techcommunity.microsoft.com/t5/microsoft-viva-blog/bg-p/MicrosoftVivaBlog",
+      "titleSuffix": "Viva",
+      "ms.service": "viva",
+      "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "searchScope": ["Viva Support"],
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
     },
-    "fileMetadata": {},
-    "template": []
+    "fileMetadata": {
+      "ms.service": {
+        "Glint/**/*.md": "viva-glint",
+        "Learning/**/*.md": "viva-learning",
+        "Pulse/**/*.md": "viva-pulse",
+        "Connections/**/*.md": "viva-connections"
+      },
+      "author": {
+        "**/*.md": "helenclu"
+      },
+      "ms.author": {
+        "**/*.md": "luche"
+      }
+    },
+    "template": [],
+    "dest": "OfficeDocs-Support-Viva",
+    "markdownEngineName": "markdig"
   }
 }
