@@ -1,0 +1,518 @@
+items:
+- name: Exchange Server Troubleshooting
+  href: ../exchange-server-welcome.yml
+  items:
+    - name: Administration
+      items:
+        - name: '"The term New-Mailbox is not recognized" error'
+          href: ../administration/term-new-mailbox-not-recognized-error.md
+        - name: 400 Bad Request when accessing the Options page
+          href: ../administration/400-bad-request-access-options-page.md
+        - name: 403 Forbidden when viewing cross-forest free/busy information
+          href: ../administration/403-forbidden-view-free-busy-information.md
+        - name: Access Denied when deleting federation trust
+          href: ../administration/1007-access-denied-delete-federation-trust.md
+        - name: Active Sync URL is in an invalid format
+          href: ../administration/url-invalid-format.md
+        - name: Avoid unsupported integration methods for Exchange
+          href: ../administration/avoid-unsupported-integration-methods.md
+        - name: Can't access OWA or EAC with expired OAuth certificate
+          href: ../administration/cannot-access-owa-or-ecp-if-oauth-expired.md
+        - name: Can't access public folders
+          href: ../administration/outlook-users-cannot-access-public-folders.md
+        - name: Can't back up a passive database copy in DAG
+          href: ../administration/vss-e-writererror-retryable-error.md
+        - name: Can't download or update OAB
+          href: ../administration/outlook-unable-download-offline-address-book.md
+        - name: Can't export to PST with EAC
+          href: ../administration/cannot-use-eac-export-pst-file.md
+        - name: Can't install add-ins in Microsoft Store
+          href: ../administration/unable-install-add-ins-microsoft-store.md
+        - name: Can't look up free/busy information
+          href: ../administration/cross-forest-or-hybrid-free-busy-lookups-fail.md
+        - name: Can't manage Exchange 2019 databases in EAC
+          href: ../administration/can't-manage-ex19-database-eac.md
+        - name: Can't mount databases that are larger than 1024 GB
+          href: ../administration/exchange-cannot-mount-database-larger-than-1024-gb.md
+        - name: Can't open a mailbox with Receive-As permissions
+          href: ../administration/cannot-access-mailbox-with-receive-as-permission.md
+        - name: Can't open EMS on Edge Transport server
+          href: ../administration/unable-open-ems-launchems.md
+        - name: Can't remove AD user accounts of health mailboxes
+          href: ../administration/remove-mailboxdatabase-cannot-remove-health-mailboxes.md
+        - name: Can't remove remote shared mailbox
+          href: ../administration/cannot-remove-remote-shared-mailbox.md
+        - name: Can't restore database from backup with MCDB enabled
+          href: ../administration/restore-database-backup-mcdb-enable.md
+        - name: Can't restore individual databases via Windows Server Backup
+          href: ../administration/cannot-restore-individual-database-via-backup.md
+        - name: Can't start Exchange Management Shell/Console
+          href: ../administration/fail-to-start-exchange-management-shell-console.md
+        - name: Can't restore a LUN drive
+          href: ../administration/cannot-restore-lun-drive.md
+        - name: Can't use EAC to add remote shared mailbox
+          href: ../administration/cannot-eac-add-remote-shared-mailbox-distribution-group.md
+        - name: Certificate status couldn't be determined error
+          href: ../administration/cannot-import-third-party-certificate.md
+        - name: Cmdlet/parameter combinations not working
+          href: ../administration/cmdlet-parameter-combinations-not-working.md
+        - name: Connecting to the remote server failed
+          href: ../administration/connecting-remote-server-failed.md
+        - name: Could not load file or assembly error when browsing EWS or Autodiscover sites
+          href: ../administration/could-not-load-file-or-assembly-browsing-ews-or-autodiscover.md
+        - name: Cross forest free/busy lookup fails
+          href: ../administration/cross-forest-free-busy-lookup-fails.md
+        - name: DAG network Misconfigured error
+          href: ../administration/dag-network-misconfigured-error.md
+        - name: Database switchover causes ExAssertException
+          href: ../administration/database-switchover-causes-exassertexception.md
+        - name: Delete junk email rules by using MFCMAPI
+          href: ../administration/delete-junk-email-rules-mfcmapi-exchange.md
+        - name: Doesn't display all OUs
+          href: ../administration/exchange-server-not-display-all-ou.md
+        - name: Edge Transport server version isn't updated after an upgrade
+          href: ../administration/incorrect-edge-transport-server-version-eac-ecp.md
+        - name: Email received via EOP not journaled
+          href: ../administration/email-received-via-eop-not-journaled.md
+        - name: Empty StorageLimitStatus when running Get-MailboxStatistics
+          href: ../administration/empty-storagelimitstatus-run-get-mailboxstatistics.md
+        - name: EMS fails to start with error
+          href: ../administration/fail-to-start-ems-canot-find-path.md
+        - name: Error 0x6f7 when adding server to DAG
+          href: ../administration/error-0x6f7-add-server-to-dag.md
+        - name: Error 0x80004005 when mounting a database
+          href: ../administration/event-9519-error-0x80004005-mount-database.md
+        - name: Error occurs when installing Edge role
+          href: ../administration/ad-error-0x52-install-edge-role.md
+        - name: Error occurs when tracing a message
+          href: ../administration/object-reference-not-set-to-instance-error.md
+        - name: Error when creating a public folder mailbox
+          href: ../administration/existing-public-folder-deployment-detected-error.md
+        - name: Error when making changes to federation trust
+          href: ../administration/federation-certificate-with-thumbprint-cannot-be-found.md
+        - name: Error when managing a user in EAC
+          href: ../administration/cannot-find-the-organizational-unit.md
+        - name: Error when removing a mailbox database
+          href: ../administration/error-remove-a-mailbox-database.md
+        - name: Error when starting EMS or EMC
+          href: ../administration/winrm-not-process-request-ems-emc.md
+        - name: Error when updating a meeting in a large distribution group
+          href: ../administration/too-many-recipients-update-meeting-distribution-group.md
+        - name: Error-Insufficient access rights to perform the operation
+          href: ../administration/insufficient-access-rights-perform-operation.md
+        - name: EWS App pool crashes
+          href: ../administration/ews-app-pool-crashes.md
+        - name: Exchange 2013 end of support roadmap
+          href: ../administration/exchange-2013-end-of-support.md
+        - name: Exchange CU installation fails
+          href: ../administration/cannot-install-exchange-cu-localized-windows.md
+        - name: Fail to add mailbox database copy
+          href: ../administration/add-database-copy-seeding-operation-failed.md
+        - name: Fail to change the ownership of a distribution group
+          href: ../administration/cannot-change-distribution-group-ownership.md
+        - name: Fail to configure Out of Office messages in OWA
+          href: ../administration/cannot-configure-out-of-office-message-owa-ecp.md
+        - name: Fail to grant Delegate permissions to a security group
+          href: ../administration/cannot-grant-delegate-permission-to-security-group.md
+        - name: Free/busy lookups fail in hybrid deployment
+          href: ../administration/hybrid-freebusy-lookups-fail.md
+        - name: Get-VirtualDirectory cmdlets run slowly
+          href: ../administration/get-virtualdirectory-run-slowly.md
+        - name: HCW errors in Organization Configuration transfer
+          href: ../administration/hybrid-configuration-wizard-errors-organization-configuration-transfer.md
+        - name: HTTP error 403 when starting EMS
+          href: ../administration/http-403-error-start-ems.md
+        - name: HTTP error 500 when signing in to EAC
+          href: ../administration/http-500-error-during-eac-sign-in.md
+        - name: HTTP error 500 when starting EMS or EMC
+          href: ../administration/http-error-500-start-ems-emc.md
+        - name: Low disk space on database logs or drives
+          href: ../administration/low-disk-space-on-database-logs-drivers.md
+        - name: Mailbox UPN and SamAccountName contain a GUID
+          href: ../administration/mailbox-upn-samaccountname-contain-guid.md
+        - name: Mailboxes are quarantined and databases fail over
+          href: ../administration/mailboxes-quarantined-databases-fail-over.md
+        - name: Managed Availability messages are journaled
+          href: ../administration/managed-availability-messages-journaled.md
+        - name: Managing RBAC roles shows warnings or errors
+          href: ../administration/managing-rbac-roles-display-warnings-or-errors.md
+        - name: MAPI applications can't access archive mailboxes
+          href: /outlook/troubleshoot/user-interface/mapi-apps-cannot-access-archive-mailboxes
+        - name: MAPI is the only way to change profiles
+          href: /outlook/troubleshoot/user-interface/mapi-is-the-only-way-to-change-profiles
+        - name: MCDB status is Offline and SSDs aren't formatted
+          href: ../administration/mcdb-status-is-offline-ssds-arent-formatted.md
+        - name: MRSProxyConfiguration settings aren't honored
+          href: ../administration/mrsproxyconfiguration-settings-not-honored.md
+        - name: Multipart/mixed Internet message format
+          href: ../administration/multipart-mixed-mime-message-format.md
+        - name: No active public folder mailboxes were found error
+          href: ../administration/no-active-public-folder-mailboxes-were-found-error.md
+        - name: No result using a number to search for an Excel attachment
+          href: ../administration/no-result-use-number-to-search-excel-attachment.md
+        - name: On-premises EAC link goes to product comparison
+          href: ../administration/o365-link-eac-redirect-product-comparison.md
+        - name: Options in Resource Scheduling not available
+          href: ../administration/disabled-options-in-resource-scheduling.md
+        - name: OVA isn't available for a shared mailbox
+          href: ../administration/ova-not-available-for-shared-mailboxes.md
+        - name: Removed Default or Anonymous permission can't be restored
+          href: ../administration/default-anonymous-permission-cannot-restore.md
+        - name: Restarts frequently with Stop error
+          href: ../administration/exchange-restarts-frequently-stop-error.md
+        - name: Running Test-IRMConfiguration in EMS fails
+          href: ../administration/test-irmconfiguration-failed-to-acquire-use-license.md
+        - name: S/MIME encoded email cannot be viewed
+          href: ../administration/s-mime-email-cannot-be-viewed.md
+        - name: SCOM reports unhealthy health sets
+          href: ../administration/scom-reports-unhealthy-health-sets.md
+        - name: Search-MailboxAuditLog returns AQS parser error
+          href: ../administration/search-mailboxauditlog-returns-aqs-parser-error.md
+        - name: SendAs permission not shown in Send As Permission
+          href: ../administration/sendas-permissions-not-visible-in-wizard.md
+        - name: Server component state remains Inactive after changed to Active
+          href: ../administration/requestor-changed-server-component.md
+        - name: Set-ServerComponentState ends Exchange Frontend Transport service
+          href: ../administration/frontend-transport-service-terminate-run-set-servercomponentstate.md
+        - name: SetupVersionInformationCorruptException if opening EMS
+          href: ../administration/setupversioninformationcorruptexception-when-opening-ems.md
+        - name: Some cmdlets fail to run with Add-PSSnapin
+          href: ../administration/cmdlets-fail-powershell-ise.md
+        - name: Test cmdlets fail with error
+          href: ../administration/test-owaconnectivity-ecpconnectivity-cmdlets-fail.md
+        - name: Unable to update the password for Windows in Exchange
+          href: ../administration/cannot-update-password-windows.md
+        - name: Unexpected Automapping results when adding mailbox permissions
+          href: ../administration/unwanted-automapping-results-add-remove-mailbox-permission.md
+        - name: Unexpected PublicFolderMailBoxes dynamic distribution groups
+          href: ../administration/publicfoldermailboxes-dynamic-distribution-groups.md
+        - name: Unhealthy state when monitoring mailboxes are deleted
+          href: ../administration/unhealthy-state-monitoring-mailboxes-deleted.md
+        - name: UnifiedContent folder fills up drive
+          href: ../administration/unifiedcontent-folder-fills-up-drive.md
+        - name: UPN suffix doesn't show up in EAC or EMS
+          href: ../administration/upn-suffix-not-display-eac-ems.md
+        - name: Use event ID 2080 to help solve AD  access issues
+          href: ../administration/msexchangedsaccess-event-id-2080.md
+        - name: W3wp.exe process causes high memory usage
+          href: ../administration/high-memory-usage-by-w3wp-process-of-default-app.md
+        - name: Warning when running Exchange 2010 Best Practices Analyzer
+          href: ../administration/best-practices-analyzer-returns-no-paging-file-info.md
+        - name: WinRM times out when adding a mailbox server to an existing DAG
+          href: ../administration/winrm-time-out-add-mailbox-server-to-existing-dag.md
+    - name: Client Connectivity
+      items:
+        - name: '"Insecure connection" error in Outlook for iOS or Android'
+          href: ../client-connectivity/insecure-connection-secure-connection-unavailable-outlook-ios-android.md
+        - name: '"The connection to your mail server timed out" error in Outlook for iOS or Outlook for Android'
+          href: ../client-connectivity/connection-to-mail-server-timed-out.md
+        - name: '"You''ve exceeded the storage limit for your mailbox" error'
+          href: ../client-connectivity/you-have-exceeded-the-storage-limit-for-your-mailbox.md
+        - name: 454 4.7.0 Temporary authentication failure
+          href: ../client-connectivity/454-4-7-0-temporary-authentication-failure.md
+        - name: A user can't create new rules in Outlook or OWA
+          href: ../client-connectivity/user-cannot-create-new-rules-outlook-owa.md
+        - name: ActiveSync clients can't connect
+          href: ../client-connectivity/activesync-clients-not-connect-sync-delay.md
+        - name: Add-ins will stop working in OWA
+          href: ../client-connectivity/add-ins-will-stop-working-outlook-on-the-web.md
+        - name: Attendees get a meeting update without changes
+          href: ../client-connectivity/attendees-meeting-update-without-changes.md
+        - name: Can't access archive mailbox in Outlook
+          href: ../client-connectivity/cannot-access-archive-mailbox-in-outlook.md
+        - name: Can't access archive mailboxes with Full Access permission
+          href: ../client-connectivity/cannot-access-archive-mailbox-with-full-access.md
+        - name: Can't access calendar in OWA
+          href: ../client-connectivity/cannot-access-calendar-outlook-web-app.md
+        - name: Can't access shared mailboxes via POP/IMAP
+          href: ../client-connectivity/accessing-shared-mailboxes-fails.md
+        - name: Can't connect to POP3 or IMAP4
+          href: ../client-connectivity/cannot-connect-to-pop3-or-imap4.md
+        - name: Can't create appointment or all day event
+          href: ../client-connectivity/cannot-create-appointment.md
+        - name: Can't open a shared folder in Outlook on the web
+          href: ../client-connectivity/cannot-open-shared-folder-owa.md
+        - name: Can't open documents on a network file share
+          href: ../../ExchangeOnline/outlook-on-the-web-issues/cannot-open-documents-on-network-file-share.md?context=%2fexchange%2ftroubleshoot%2fcontext%2fserver-context
+        - name: Can't open OWA, ECP, or EMS after a self-signed certificate is removed
+          href: ../client-connectivity/owa-ecp-ems-cannot-connect-after-self-signed-certificate-removed.md
+        - name: Can't search people in OWA
+          href: ../client-connectivity/can't-connect-error-searching-people-owa.md
+        - name: Can't synchronize an Exchange ActiveSync device
+          href: ../client-connectivity/event-1053-activesync-not-have-sufficient-permissions-to-create-container.md
+        - name: Can't connect to a mailbox from OWA
+          href: ../client-connectivity/cannot-connect-to-mailbox-via-owa.md
+        - name: Can't sign in or sees the wrong interface
+          href: ../client-connectivity/cannot-sign-in-or-see-wrong-interface-after-moving-mailbox.md
+        - name: Can't use Autodiscover to connect to mailbox
+          href: ../client-connectivity/cannot-use-autodiscover-to-connect-to-mailbox.md
+        - name: Can't run Test-OutlookConnectivity
+          href: ../client-connectivity/test-outlookconnectivity-fails.md
+        - name: Color categories aren't print in OWA
+          href: ../client-connectivity/color-categories-not-print-outlook-on-the-web.md
+        - name: EAS still sync with a disabled account or an old password
+          href: ../client-connectivity/eas-devices-still-sync-with-disabled-account.md
+        - name: ECP redirection fails
+          href: ../client-connectivity/ecp-redirection-fails-exchange-2016-on-prem.md
+        - name: Errors in EMS, EAC, ECP, or OWA
+          href: ../client-connectivity/error-occur-ems-eac-owa.md
+        - name: Event ID 1309 and can't access OWA and ECP
+          href: ../client-connectivity/event-1309-code-3005-cannot-access-owa-ecp.md
+        - name: Exchange ActiveSync device is blocked by ABQ list
+          href: ../client-connectivity/eas-device-is-blocked-by-abq-list.md
+        - name: FBA page shows when accessing OWA or EAC
+          href: ../client-connectivity/fba-page-shows-when-accessing-owa-or-eac.md
+        - name: HTTP error 400 when opening another user's mailbox
+          href: ../client-connectivity/http-400-bad-request-open-user-mailbox.md
+        - name: Incorrect Sent time stamp
+          href: ../client-connectivity/incorrect-sent-time-stamp.md
+        - name: Mailbox that's re-enabled can't be accessed
+          href: ../client-connectivity/cannot-connect-to-re-enabled-mailbox.md
+        - name: OST file sync issues
+          href: ../client-connectivity/ost-sync-issues.md
+        - name: Outlook Anywhere clients can't connect to server
+          href: ../client-connectivity/outlook-anywhere-clients-not-connect-to-server.md
+        - name: Outlook Can't access public folders hosted on legacy Exchange servers
+          href: ../client-connectivity/outlook-cannot-access-legacy-public-folders.md
+        - name: Outlook Can't connect via firewall or proxy server
+          href: ../client-connectivity/outlook-not-connect-firewall-proxy-server.md
+        - name: Outlook connection issues caused by the RPC encryption requirement
+          href: ../client-connectivity/outlook-connection-issue-caused-by-rpc-encryption-requirement.md
+        - name: OWA doesn't redirect to ADFS login
+          href: ../client-connectivity/owa-not-redirect-adfs-login.md
+        - name: OWA or ECP stop working after installing Exchange Server security update
+          href: ../client-connectivity/owa-stops-working-after-update.md
+        - name: Password expiration isn't notified
+          href: ../client-connectivity/owa-password-expiration-notification.md
+        - name: Performance issues on Exchange connection
+          href: ../client-connectivity/performance-issues-connect-to-exchange.md
+        - name: "Repair failed CU/SU installations"
+          href: ../client-connectivity/exchange-security-update-issues.md
+        - name: Repair update messages due to TimeZoneMatchCheck failures
+          href: ../client-connectivity/repair-update-messages-triggered-by-timezonematchcheck.md
+        - name: RopFastTransferSourceCopyTo operation fails
+          href: ../client-connectivity/ropfasttransfersourcecopyto-operation-fails.md
+        - name: Security warning when accessing OWA or ECP
+          href: ../client-connectivity/owa-and-ecp-unavailable-users-get-security-warning.md
+        - name: Set up OWA
+          href: ../client-connectivity/set-up-web-access.md
+        - name: Show organizer name instead of subject
+          href: ../client-connectivity/calendar-shows-organizer-name.md
+        - name: Troubleshoot ActiveSync issues
+          href: ../client-connectivity/troubleshoot-activesync-with-exchange-server.md
+    - name: Compliance
+      items:
+        - name: Audit Log searches fail with ErrorInvalidServerVersion
+          href: ../compliance/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
+        - name: Content index state is stuck in crawling
+          href: ../compliance/content-index-state-stuck-crawling-exchange-server-2010.md
+        - name: eDiscovery search ignores attached mail items
+          href: ../compliance/ediscovery-search-ignores-attached-mail-items.md
+        - name: eDiscovery search ignores some query keywords
+          href: ../compliance/ediscovery-search-ignores-query-keywords.md
+        - name: Error when doing a multi-mailbox search
+          href: ../compliance/cannot-perform-multi-mailbox-search.md
+        - name: Issues caused by update 2874216/MS13-061
+          href: ../compliance/mailbox-database-content-index-shows-failed.md
+        - name: Items are removed by MRM 2.0 unexpectedly
+          href: ../compliance/items-are-removed-by-mrm-2-0-unexpectedly.md
+        - name: Missing items in eDiscovery search results
+          href: ../compliance/ediscovery-search-missing-items.md
+        - name: MRM doesn't process items in the Sync Issues folder
+          href: ../compliance/mrm-not-process-sync-issues-folder.md
+        - name: Reinstall Search Foundation
+          href: ../compliance/reinstall-search-foundation.md
+        - name: Search doesn't work if NodeRunner.exe stops
+          href: ../compliance/noderunnersexe-stops-search-not-work.md
+        - name: Search-AdminAuditLog or Search-MailboxAuditLog returns empty result
+          href: ../compliance/search-adminauditlog-mailboxauditlog-return-no-result.md
+        - name: Search-Mailbox cmdlet error
+          href: ../compliance/search-mailbox-cmdlet-fails.md
+    - name: Development
+      items:
+        - name: Develop apps via Exchange Powershell and .NET Framework
+          href: ../development/develop-apps-by-using-exchange-powershell.md
+        - name: MAPI applications can't access archive mailboxes
+          href: ../development/mapi-apps-cannot-access-archive-mailboxes.md
+        - name: Support limitations for open standards
+          href: ../development/public-protocols-support-limitations.md
+    - name: Distribution Lists
+      items:
+        - name: Get-DistributionGroupMember not return all members
+          href: ../distribution-list/get-distributiongroupmember-not-return-members.md
+    - name: Mail flow
+      items:
+        - name: 451 4.4.0 DNS query failed
+          href: ../mailflow/dns-query-failed.md
+        - name: 554 5.4.14 Hop count exceeded
+          href: ../mailflow/hop-count-exceeded-possible-mail-loop.md
+        - name: Apps for Outlook 2013 can't activate in email
+          href: /outlook/troubleshoot/user-interface/apps-for-outlook-2013-do-not-activate-as-expected
+        - name: Assertion Failed when editing a transport rule
+          href: ../mailflow/cannot-edit-transport-rule.md
+        - name: Attachments are dropped during IMAIL conversion
+          href: ../mailflow/attachments-dropped-during-imail-conversion.md
+        - name: Blank emails after installing ESET NOD32 4.x
+          href: /outlook/troubleshoot/user-interface/empty-email-body-esetnod32-4x-installed
+        - name: Can't attach large files in OWA
+          href: ../mailflow/owa-cannot-attach-large-files.md
+        - name: Can't remove an installed certificate
+          href: ../mailflow/cannot-remove-installed-certificate.md
+        - name: Can't send an email with full access
+          href: ../mailflow/cannot-send-email-with-full-access.md
+        - name: Can't send or receive emails behind a Cisco PIX or ASA firewall
+          href: ../mailflow/cannot-send-receive-email-behind-cisco-firewall.md
+        - name: Can't view Microsoft 365 IRM-encrypted messages
+          href: ../mailflow/cannot-open-irm-email-dynamic-distribution-group.md
+        - name: Connector remote IP address limit is exceeded
+          href: ../mailflow/connector-remote-ip-address-limit-exceeded.md
+        - name: Delayed mail delivery in Exchange
+          href: ../mailflow/mail-delivery-delay-exchange.md
+        - name: DNS query failed error when email stuck in Draft
+          href: ../mailflow/dns-query-failed-error-when-email-stuck-in-draft.md
+        - name: Edge Transport servers reject messages
+          href: ../mailflow/edge-transport-servers-reject-messages.md
+        - name: Email body part is shown incorrectly as an attachment
+          href: ../mailflow/message-body-shown-as-attachment.md
+        - name: Emails sent to the Poison queue
+          href: ../mailflow/emails-placed-in-poison-queue.md
+        - name: Emails are stuck in queues
+          href: ../mailflow/email-stuck-queues.md
+        - name: Emails aren't delivered to all recipients
+          href: ../mailflow/emails-not-delivered-dynamic-distribution-group.md
+        - name: Emails sent to Exchange Online appear external
+          href: ../mailflow/email-sent-to-online-appears-external.md
+        - name: Emails with images delivery is delayed
+          href: ../mailflow/delivery-emails-with-pictures-delayed.md
+        - name: Error 19738 when sending large emails using Outlook for Mac
+          href: ../mailflow/error-19738-send-large-email-outlook-mac.md
+        - name: Error when adding a large attachment in OWA
+          href: ../mailflow/cannot-add-attachment-outlook-web.md
+        - name: Error when sending S/MIME encrypted mails from OWA
+          href: ../mailflow/cannot-send-smime-encrypted-mail-owa.md
+        - name: Event ID 17018 when Microsoft Exchange Transport service stops
+          href: ../mailflow/event-17018-MSExchangeTransport-service-stop.md
+        - name: Event ID 7009 when users send or receive emails
+          href: ../mailflow/event-7009-send-receive-emails.md
+        - name: External or app created emails not delivered
+          href: ../mailflow/external-or-application-created-emails-cannot-be-delivered.md
+        - name: External users can't send emails to distribution group
+          href: ../mailflow/external-user-cannot-send-email-to-distribution-group.md
+        - name: '"Failed to process message due to a transient exception" error'
+          href: ../mailflow/failed-to-process-message-due-to-transient-exception.md
+        - name: Messages aren't evenly distributed
+          href: ../mailflow/uneven-distribution-messages-basicauth-basicauthrequiretls.md
+        - name: Outbound email messages aren't sent
+          href: ../mailflow/outbound-email-messages-are-not-sent.md
+        - name: Read receipt shows incorrect information
+          href: ../mailflow/read-receipt-shows-incorrect-information.md
+        - name: The front-end Microsoft Exchange Transport service stops and doesn't start
+          href: ../mailflow/front-end-microsoft-exchange-transport-service-stops.md
+        - name: TLS negotiation failed with error NoCredentials error
+          href: ../mailflow/tls-negotiation-failed-with-error-nocredentials-error.md
+        - name: Unreadable characters in the subject line
+          href: ../mailflow/unreadable-characters-in-subject-line.md
+        - name: Use nslookup to get MX records for SMTP domain
+          href: ../mailflow/get-internet-mx-record-smtp-domain-with-nslookup.md
+    - name: Migration
+      items:
+        - name: AD property 'homeMDB' isn't writeable on recipient when moving mailbox
+          href: ../migration/ad-property-homemdb-not-writeable.md
+        - name: Can't access mailbox after adding mailbox server to a DAG
+          href: ../migration/cannot-access-move-mailbox.md
+        - name: Can't move a mailbox to a database
+          href: ../migration/error-move-mailbox-to-database-exchange-2010.md
+        - name: Can't move mailboxes due to Exchange Online limits
+          href: ../migration/save-changes-made-item-store-migrate-mailbox.md
+        - name: Can't replicate public folder
+          href: ../migration/cannot-replicate-public-folder-to-exchange-server.md
+        - name: Can't see free/busy info after a mailbox move
+          href: ../migration/no-free-busy-info-mailbox-move.md
+        - name: Cross-forest move to an Exchange 2013 database fails
+          href: ../migration/cannot-move-mailbox-to-Exchange-2013-database.md
+        - name: Error when you move a mailbox
+          href: ../migration/cannot-set-folder-security-descriptor-non-canonical-acl.md
+        - name: Mailbox move request isn't showing in EAC
+          href: ../migration/eac-not-show-mailbox-move-request.md
+        - name: Mailboxes are stalled during a migration
+          href: ../migration/mailboxes-stalled-during-migration.md
+        - name: MapiExceptionPartialCompletion error when moving a mailbox
+          href: ../migration/Mapiexceptionpartialcompletion-error-new-moverequest.md
+        - name: Migration Workflow doesn't start
+          href: ../migration/msexchange-migration-workflow-not-start.md
+        - name: Moving migration mailbox fails
+          href: ../migration/moving-migration-mailbox-fails.md
+        - name: New move request remains in queued status
+          href: ../migration/new-move-request-remains-queued-status.md
+        - name: Public folder replication fails
+          href: ../migration/public-folders-not-replicate.md
+        - name: Error when migrating public folder batch
+          href: ../migration/subscription-wasnt-found-for-user-error.md
+        - name: Remote move migration doesn't finalize
+          href: ../migration/remote-move-migration-not-finalize.md
+    - name: Public Folders
+      items:
+        - name: Can't create modern public folders
+          href: ../public-folders/cannot-create-modern-public-folders.md
+        - name: Export-ModernPublicFolderStatistics.ps1 script fails
+          href: ../public-folders/export-modernpublicfolderstatistics-script-fails.md
+        - name: How to disable conflict message
+          href: ../public-folders/disable-conflict-message.md
+        - name: No active public folder mailboxes were found
+          href: ../public-folders/migrationbatch-fails-no-public-folder-mailboxes.md
+        - name: Public folder meetings cannot be modified in OWA
+          href: ../../ExchangeOnline/calendars/public-folder-meetings-not-modified-in-owa.md?context=%2fexchange%2ftroubleshoot%2fcontext%2fserver-context
+        - name: Large items skipped during migration
+          href: ../public-folders/large-items-skipped.md
+        - name: Public folder items are deleted after batch migration
+          href: ../public-folders/items-deleted-public-folder-batch-migration.md
+        - name: Public folder migration stops at 95%
+          href: ../public-folders/public-folder-migration-fails.md
+        - name: Public folder permissions for Exchange Server
+          href: ../public-folders/public-folder-permissions-for-exchange-server.md
+        - name: Public folder users can't manage subfolders
+          href: ../../ExchangeOnline/public-folders/public-folder-users-cannot-manage-subfolders.md?context=%2fexchange%2ftroubleshoot%2fcontext%2fserver-context
+        - name: Troubleshoot public folder replication issues
+          href: ../public-folders/troubleshoot-public-folder-replication.md
+    - name: Setup
+      items:
+        - name: '"Organization Preparation FAILED" error'
+          href: ../setup/organization-preparation-failed.md
+        - name: '"Your request cannot be completed right now" error'
+          href: ../setup/owa-your-request-cannot-be-completed.md
+        - name: Active Directory wasn't prepared using hosting mode error
+          href: ../setup/active-directory-wasnt-prepared-using-hosting-mode-error.md
+        - name: Can't get child of ADObjectId
+          href: ../setup/edge-transport-setup-fails-domain-joined-server.md
+        - name: Can't install Exchange from unattended installation
+          href: ../setup/cannot-install-exchange-server-from-unattended-installation.md
+        - name: Can't use Setup.exe to uninstall server role
+          href: ../setup/cannot-uninstall-server-role-via-setup-exe.md
+        - name: Cumulative Update 20 shown instead of CU22
+          href: ../setup/cumulative-update-20-is-shown-not-22.md
+        - name: Error when you try to view messages in Queue Viewer
+          href: ../setup/queue-viewer-error-when-viewing-messages.md
+        - name: Event ID 6010 logged after installing CU23
+          href: ../setup/event-id-6010-after-cumulative-update-23.md
+        - name: Exchange Server 2019 setup does not run correctly using PowerShell
+          href: ../setup/ex2019-setup-does-not-run-correctly-started-powershell.md
+        - name: Instal PST Capture tool fails
+          href: ../setup/pst-capture-setup-wizard-ended-prematurely.md
+        - name: Install Exchange Server 2010 SP2 fails
+          href: ../setup/installing-exchange-2010-sp2-fails.md
+        - name: Install updates for Mailbox-role server fails
+          href: ../setup/error-occurred-while-configuring-search-foundation.md
+        - name: Installation in RecoverServer mode fails
+          href: ../setup/language-pack-bundle-not-found.md
+        - name: Installation of Edge Transport role fails
+          href: ../setup/process-execution-failed-with-exit-code-3.md
+        - name: Issues occur if arbitration mailbox isn't upgraded
+          href: ../setup/issues-occur-if-arbitration-mailbox-not-upgraded.md
+        - name: Run Update cmdlet fails
+          href: ../setup/network-path-was-not-found-error.md
+        - name: Service Pack upgrade fails
+          href: ../setup/service-pack-upgrade-fails.md
+        - name: Setup of Mailbox role fails
+          href: ../setup/setup-of-mailbox-role-fails-with-error.md
+        - name: Version error in RecoverServer mode install
+          href: ../setup/version-error-in-recover-server-mode-install.md

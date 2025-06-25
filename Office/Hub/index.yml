@@ -1,0 +1,150 @@
+### YamlMime:Hub
+
+title: Microsoft 365 troubleshooting for admins and IT professionals # < 60 chars
+summary: Microsoft 365 provides online services and server products for your business with solutions for small to enterprise scale. This page provides guidance for troubleshooting issues with these products and services. # < 160 chars
+# brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
+brand: m365
+
+metadata:
+  title: Microsoft 365 troubleshooting for admins and IT professionals # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Microsoft 365 provides online services and server products for your business with solutions for small to enterprise scale. This page provides guidance for troubleshooting issues with these products and services. # < 160 chars
+  ms.service: office-perpetual-itpro
+  ms.topic: hub-page # Required
+  audience: ITPro
+  author: helenclu #Required; your GitHub user alias, with correct capitalization.
+  ms.author: luche #Required; microsoft alias of author; optional team alias.
+  ms.date: 07/03/2019 #Required; mm/dd/yyyy format.
+
+# productDirectory section (optional)
+productDirectory:
+  items:
+    # Card
+    - title: Microsoft 365
+      # imageSrc should be square in ratio with no whitespace
+      imageSrc: /media/logos/logo-ms-social.png
+      links:
+        - url: /troubleshoot/microsoft-365/o365-enterprise-welcome
+          text: Microsoft 365 Enterprise
+        - url: /troubleshoot/microsoft-365/o365-admin-welcome
+          text: Microsoft 365 admin center
+        - url: /troubleshoot/microsoft-365/microsoft-purview-welcome
+          text: Microsoft Purview
+        - url: /troubleshoot/microsoft-365/microsoft-365-security-welcome
+          text: Microsoft 365 Security
+    # Card
+    - title: Microsoft Teams
+      imageSrc: /media/logos/logo_MSTeams.svg
+      links:
+        - url: /troubleshoot/microsoftteams/teams-welcome
+          text: Microsoft Teams
+    # Card      
+    - title: Microsoft 365 Apps
+      # imageSrc should be square in ratio with no whitespace
+      imageSrc: /support/media/hub-landing/logo-m365-app.png
+      links:
+        - url: /troubleshoot/office/office-client-welcome
+          text: Microsoft 365 Apps (Office products)
+        - url: /troubleshoot/office/office-experts-welcome
+          text: From the Office Experts
+    # Card
+    - title: SharePoint
+      imageSrc: /media/logos/logo_sharepoint.svg
+      links:
+        - url: /troubleshoot/sharepoint/sharepoint-server-welcome
+          text: SharePoint Server
+        - url: /troubleshoot/sharepoint/sharepoint-online-welcome
+          text: SharePoint Online
+        - url: /troubleshoot/sharepoint/sharepoint-hybrid-welcome
+          text: SharePoint Hybrid
+        - url: /troubleshoot/sharepoint/sharepoint-experts-welcome
+          text: From the SharePoint Experts
+    # Card
+    - title: Exchange
+      imageSrc: /media/logos/logo_Exchange.svg
+      links:
+        - url: /troubleshoot/exchange/exchange-server-welcome
+          text: Exchange Server
+        - url: /troubleshoot/exchange/exchange-online-welcome
+          text: Exchange Online
+        - url: /troubleshoot/exchange/exchange-hybrid-welcome
+          text: Exchange Hybrid
+    # Card
+    - title: Skype for Business
+      imageSrc: /media/logos/logo_Skype_for_Business.svg
+      links:
+        - url: /troubleshoot/skypeforbusiness/skype-server-welcome
+          text: Skype for Business Server
+        - url: /troubleshoot/skypeforbusiness/skype-hybrid-welcome
+          text: Skype for Business Hybrid
+        - url: /troubleshoot/skypeforbusiness/skype-experts-welcome
+          text: From the Skype for Business Experts
+    # Card
+    - title: Microsoft Outlook
+      imageSrc: /media/logos/logo-outlook.svg
+      links:
+        - url: /troubleshoot/outlook/outlook-client-welcome
+          text: Outlook for Windows
+        - url: /troubleshoot/outlook/outlook-mac-welcome
+          text: Outlook for Mac
+        - url: /troubleshoot/outlook/outlook-mobile-welcome
+          text: Outlook for iOS and Android
+    # Card
+    - title: OneDrive
+      imageSrc: /office/media/logos/logo-onedriveforbusiness.svg
+      links:
+        - url: /troubleshoot/sharepoint/onedrive-welcome
+          text: OneDrive for Business
+    # Card
+    - title: Microsoft Viva
+      imageSrc: /support/media/hub-landing/logo-viva.png
+      links:
+        - url: /troubleshoot/viva/connections/viva-connections-welcome
+          text: Microsoft Viva Connections
+        - url: /troubleshoot/viva/engage/viva-engage-welcome
+          text: Microsoft Viva Engage
+        - url: /troubleshoot/viva/glint/viva-glint-welcome
+          text: Microsoft Viva Glint
+        - url: /troubleshoot/viva/insights/viva-insights-welcome
+          text: Microsoft Viva Insights
+   # Card
+    - title: Microsoft Viva
+      imageSrc: /support/media/hub-landing/logo-viva.png
+      links:
+        - url: /troubleshoot/viva/learning/viva-learning-welcome
+          text: Microsoft Viva Learning
+        - url: /troubleshoot/viva/pulse/viva-pulse-welcome
+          text: Microsoft Viva Pulse  
+        - url: /troubleshoot/viva/viva-suite-administration/viva-suite-administration-welcome
+          text: Microsoft Viva Suite Administration
+
+# additionalContent section (optional)
+# Card with summary style
+additionalContent:
+  # Supports up to 3 sections
+  sections:
+    - title: Related guidance for # < 60 chars (optional)
+      items:
+        # Card
+        - title: Developers
+          summary: Guidance for developing solutions for Office products and services.
+          url: https://developer.microsoft.com/office/docs
+        # Card
+        - title: End users
+          summary: Find help, training, and technical support for users of Office products on support.office.com.
+          url: https://go.microsoft.com/fwlink/?linkid=787131
+        # Card
+        - title: Business owners
+          summary: Find help, training, and technical support for business owners who use Microsoft 365.
+          url: /office365/smallbusiness/build-your-small-business/build-your-small-business
+        # Card
+        - title: Educators IT
+          summary: Find guidance for admins and IT Professionals in educational organizations.
+          url: /education/
+        # Card
+        - title: Educators
+          summary: Find help, training, and technical support for educators.
+          url: https://support.microsoft.com/education
+        # Card
+        - title: Admins and IT Professionals
+          summary: Guidance for admins and IT Professionals managing Office products and services.
+          url: /office/

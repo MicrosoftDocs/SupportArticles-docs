@@ -6,6 +6,8 @@
           "**/*.md",
           "**/*.yml"
         ],
+        "src": "Client",
+        "dest": ".",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -18,18 +20,86 @@
           "ThirdPartyNotices.md",
           "SECURITY.md"
         ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "Hub",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "Mac",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "Mobile",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "OutlookExperts",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
       }
     ],
     "resource": [
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg",
+          "**/*.pdf"
         ],
         "exclude": [
           "**/obj/**",
           "**/includes/**",
           "_themes/**",
+          "_themes.pdf/**",
           "**/docfx.json",
           "_repo.en-us/**"
         ]
@@ -38,11 +108,30 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "~/breadcrumb/SupportArticles-Outlook/toc.yml",
+      "breadcrumb_path": "/troubleshoot/outlook/breadcrumb/toc.json",
+      "recommendations": true,
       "feedback_system": "Standard",
-      "permissioned-type": "public"
+      "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-Outlook.yml",
+      "titleSuffix": "Outlook",
+      "searchScope": ["Outlook Support"],
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
     },
-    "fileMetadata": {},
-    "template": []
+    "fileMetadata": {
+      "ms.service": {
+        "**/*.md": "outlook"
+      },
+      "author": {
+        "**/*.md": "cloud-writer"
+      },
+      "ms.author": {
+        "**/*.md": "meerak"
+      }
+    },
+    "template": [],
+    "dest": "OfficeDocs-Support-Outlook",
+    "markdownEngineName": "markdig"
   }
 }

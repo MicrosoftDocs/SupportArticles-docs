@@ -1,0 +1,27 @@
+﻿- name: Microsoft 365 Enterprise Troubleshooting
+  href: ../o365-enterprise-welcome.yml
+  items:
+  - name: Administration
+    items:
+    - name: COM and .NET errors after Office architecture migration
+      href: ../administration/com-net-errors-after-migration.md
+    - name: Enterprise version of Microsoft Support and Recovery Assistant
+      items:
+      - name: Overview
+        href: ../administration/sara-command-line-version.md
+      - name: 'Scenario: Outlook Scan'
+        href: ../administration/assistant-outlook-scan.md
+      - name: 'Scenario: Office Uninstall'
+        href: ../administration/assistant-office-uninstall.md
+      - name: 'Scenario: Office Activation'
+        href: ../administration/assistant-office-activation.md
+      - name: 'Scenario: Office Shared Computer Activation'
+        href: ../administration/assistant-office-shared-computer-activation.md
+      - name: 'Scenario: Outlook Calendar Scan'
+        href: ../administration/assistant-outlook-calendar-scan.md
+      - name: 'Scenario: Teams Meeting Add-in for Outlook'
+        href: ../administration/assistant-teams-meeting-add-in-outlook.md
+      - name: 'Scenario: Reset Office Activation'
+        href: ../administration/assistant-reset-office-activation.md      
+    - name: Diagnostic log collection in Support and Recovery Assistant
+      href: ../administration/diagnostic-log-collection-in-support-and-recovery-assistant.md
