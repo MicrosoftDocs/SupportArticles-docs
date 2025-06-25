@@ -15,7 +15,7 @@ When using runbooks in Azure Automation, you might encounter issues due to runti
 
 ## Troubleshoot error messages
 
-Review the following table to resolve runbook execution related error messages:
+Review the following table to resolve runbook execution-related error messages:
 
 |Error|Description|Solution|
 |-----|-----------|
@@ -32,7 +32,7 @@ If none of these solutions addresses your issue, see [Troubleshoot runbook issue
 > [!NOTE]
 > Before opening a case, follow the steps in [Data to collect when opening a case for Azure Automation](/azure/automation/troubleshoot/collect-data-microsoft-azure-automation-case). This process will help us resolve your case as quickly as possible. 
 
-## Reference
+## References
 
 - [Start a runbook in Azure Automation](/azure/automation/start-runbooks)
 - [Run Automation runbooks on a Hybrid Runbook Worker](/azure/automation/automation-hrw-run-runbooks)
