@@ -2,7 +2,7 @@
 title: Troubleshoot issues in Power Automate browser extensions
 description: Provides a resolution for the Failed to assume control of browser (Internal error or communication failure) error or Get Extension message.
 ms.reviewer: nimoutzo, gtrantzas
-ms.date: 04/09/2025
+ms.date: 06/23/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Troubleshoot issues in Power Automate browser extensions
@@ -243,7 +243,7 @@ Follow these steps:
 
 1. Check the value of the registry key. The correct value is as follows:
 
-   - MSI: `C:\Program Files (x86)\Power Automate Desktop\PAD.ChromiumManifest.json`
+   - MSI: `C:\Program Files (x86)\Power Automate Desktop\dotnet\PAD.ChromiumManifest.json`
    - MSIX Windows 11: `C:\Program Files\WindowsApps\Microsoft.PowerAutomateDesktop_X.Y.Z.0_x64__8wekyb3d8bbwe\PAD.ChromiumManifest.json`
 
      To retrieve `X.Y.Z`:

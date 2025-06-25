@@ -2,6 +2,8 @@
   href: welcome-automation.yml
 - name: Runbook not working as expected
   items:
+  - name: Runbook jobs get suspended
+    href: runbooks/runbook-job-suspended.md
   - name: Troubleshoot issues with python packages
     href: runbooks/error-running-python-runbook.md
   - name: Troubleshoot runbook execution issues when using PowerShell
