@@ -1321,6 +1321,8 @@ items:
       href: ./installing-updates-features-roles/updates-automatically-downloaded.md
   - name: Failure to install Windows Updates
     items:
+    - name: Determine whether WSUS configuration causes WU issue
+      href: installing-updates-features-roles/determine-whether-wsus-configuration-causes-wu-issue.md
     - name: 'Troubleshooting guidance: Windows Update'
       href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
     - name: How to downgrade from Windows 8
