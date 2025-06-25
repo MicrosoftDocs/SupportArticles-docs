@@ -11,7 +11,7 @@ ms.custom: sap:Runbook not working as expected
 The article shows how to import, manage, and use Python packages in Azure Automation running on the Azure sandbox environment and Hybrid Runbook Workers. Python packages should be downloaded on Hybrid Runbook workers for successful job execution. To help simplify runbooks, you can use Python packages to import the modules you need.
 
 > [!NOTE]
-> Azure Automation enables the recovery of runbooks deleted in the last 29 days. You can restore the deleted runbook by running a PowerShell script as a job in your Automation account. For more ingormation, see [Restore deleted runbook](/azure/automation/manage-runbooks#restore-deleted-runbook).
+> Azure Automation enables the recovery of runbooks deleted in the last 29 days. You can restore the deleted runbook by running a PowerShell script as a job in your Automation account. For more information, see [Restore deleted runbook](/azure/automation/manage-runbooks#restore-deleted-runbook).
 
 ## Import Python 2 packages
 
@@ -83,7 +83,7 @@ You can import a Python 3.8 package and its dependencies by importing the Python
 
 ### Import the script into a runbook
 
-For more information about importing the runbook, see [Import a runbook from the Azure portal](/azure/automation/manage-runbooks#import-a-runbook-from-the-azure-portal). Copy the file from GitHub to a storage that the Azure portal can access before you run the import.
+For more information about importing the runbook, see [Import a runbook from the Azure portal](/azure/automation/manage-runbooks#import-a-runbook-from-the-azure-portal). Copy the file from GitHub to storage that the Azure portal can access before you run the import.
 
 The **Import a runbook** page defaults the runbook name to match the name of the script. If you have access to the field, you can change the name. **Runbook type** might default to **Python 2.7**. If it does, make sure to change it to **Python 3.8**.
 
