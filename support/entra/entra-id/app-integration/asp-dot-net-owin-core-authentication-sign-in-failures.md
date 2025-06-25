@@ -39,11 +39,11 @@ Ensure your code for handling the `AuthenticationFailed` event in the *Startup.c
 
 You can modify this to send the error message to your logs or send it to a custom error page. At a minimum, the error message should be displayed in the browser's address bar.
 
-:::image type="content" source="media/asp-dot-net-owin-core-authentication-sign-in-failures/error-message-in-address-bar.png" alt-text="Screenshot that shows the error message in the browser address bar.":::
+:::image type="content" source="media/asp-dot-net-open-web-interface-for-dot-net-core-authentication-sign-in-failures/error-message-in-address-bar.png" alt-text="Screenshot that shows the error message in the browser address bar.":::
 
 If there's an infinite loop, the error message should be visible in the Fiddler capture.
 
-:::image type="content" source="media/asp-dot-net-owin-core-authentication-sign-in-failures/error-message-in-fiddler-capture.png" alt-text="Screenshot that shows the error message in the Fiddler capture.":::
+:::image type="content" source="media/asp-dot-net-open-web-interface-for-dot-net-core-authentication-sign-in-failures/error-message-in-fiddler-capture.png" alt-text="Screenshot that shows the error message in the Fiddler capture.":::
 
 For more information about using Fiddler, see [Collect HTTPS traffic using Fiddler for Microsoft Entra ID apps](capture-https-traffic-fiddler-entra-id-app.md).
 
