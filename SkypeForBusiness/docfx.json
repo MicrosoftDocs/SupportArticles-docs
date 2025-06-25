@@ -12,7 +12,6 @@
           "**/obj/**",
           "**/includes/**",
           "_themes/**",
-          "**/docfx.json",
           "_repo.en-us/**",
           "README.md",
           "LICENSE",
