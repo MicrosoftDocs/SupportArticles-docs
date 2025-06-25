@@ -4,7 +4,7 @@ description: Provides solutions to common issues when using the wrap feature in 
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 06/17/2025
+ms.date: 06/24/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Troubleshoot wrap feature issues in Power Apps
@@ -87,17 +87,18 @@ If you can't sign in or see data in your wrapped app, try the following actions:
 
 You might encounter these error codes in the wrap wizard:
 
-| Error Code | Error Message |
+| Error code | Error message |
 |------------|-------------|
 | [1000118](#error-code-1000118) | Default subscription not found or missing access permissions. |
-| [1000119](#error-code-1000119) | Key vault doesn't exist or is missing access privileges. |
-| [1000120](#error-code-1000120) | No organization ID tags found on key vault. |
-| [1000121](#error-code-1000121) | Android keystore isn't valid. Missing tag and/or certificate. |
-| [1000122](#error-code-1000122) | iOS certificate isn't valid. |
-| [1000123](#error-code-1000123) | iOS profile isn't valid. |
-| [1000128](#error-code-1000128) | Missing access key used while accessing Azure Blob storage location. |
-| [1000130](#error-code-1000130) | Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set. |
-| [1000131](#error-code-1000131) | Missing tags for the specified Azure Key Vault resourceID. |
+| [1000119](#error-code-1000119) | Key vault doesn't exist or is missing access privileges.|
+| [1000120](#error-code-1000120) | No organization ID tags found on key vault. Ensure that the tag {Bundle ID}.{organization-id} is present and uses the correct case sensitivity.|
+| [1000121](#error-code-1000121) | Android keystore isn't valid. Ensure that the tag {Bundle ID}.{keystore} is present and uses the correct case sensitivity.|
+| [1000122](#error-code-1000122) | iOS certificate isn't valid. Missing Tag and/or Secret. Ensure that the tag {Bundle ID}.{cert} is present and uses the correct case sensitivity.|
+| [1000123](#error-code-1000123) | iOS profile isn't valid. Ensure that the tag {Bundle ID}.{profile} is present and uses the correct case sensitivity.|
+| [1000128](#error-code-1000128) | Missing access key required to access the Azure Blob Storage location. Ensure that the tag {Bundle ID}.{accessKey} is present and uses the correct case sensitivity.|
+| [1000130](#error-code-1000130) | Missing default value: The required environment variable for setting up Azure Key Vault in the wrap wizard isn't set.|
+| [1000131](#error-code-1000131) | No tags or missing access permission for the specified Azure Key Vault. |
+| [1000132](#error-code-1000132) | Missing environment variable 'PA_Wrap_KV_ResourceID' for the targeted environment. |
 
 ### Error code 1000118
 
@@ -161,7 +162,7 @@ Error message: Key vault doesn't exist, or Key vault is missing access privilege
 
 ### Error code 1000120
 
-Error message: No organization ID tags found on key vault.
+Error message: No organization ID tags found on key vault. Ensure that the tag {Bundle ID}.{organization-id} is present and uses the correct case sensitivity.
 
 #### Resolution steps
 
@@ -179,7 +180,7 @@ Error message: No organization ID tags found on key vault.
 
 ### Error code 1000121
 
-Error message: Android keystore isn't valid. Missing Tag and/or Certificate.
+Error message: Android keystore isn't valid. Ensure that the tag {Bundle ID}.{keystore} is present and uses the correct case sensitivity.
 
 #### Resolution steps
 
@@ -198,7 +199,7 @@ Error message: Android keystore isn't valid. Missing Tag and/or Certificate.
 
 ### Error code 1000122
 
-Error message: iOS certificate isn't valid.
+Error message: iOS certificate isn't valid. Missing Tag and/or Secret. Ensure that the tag {Bundle ID}.{cert} is present and uses the correct case sensitivity.
 
 #### Resolution steps
 
@@ -217,7 +218,7 @@ Error message: iOS certificate isn't valid.
 
 ### Error code 1000123
 
-Error message: iOS profile isn't valid.
+Error message: iOS profile isn't valid. Ensure that the tag {Bundle ID}.{profile} is present and uses the correct case sensitivity.
 
 #### Resolution steps
 
@@ -232,7 +233,7 @@ Error message: iOS profile isn't valid.
 
 ### Error code 1000128
 
-Error message: Missing access key used while accessing Azure Blob storage location.
+Error message: Missing access key required to access the Azure Blob Storage location. Ensure that the tag {Bundle ID}.{accessKey} is present and uses the correct case sensitivity.
 
 #### Resolution steps
 
@@ -246,19 +247,61 @@ Error message: Missing default value: The required environment variable for sett
 
 #### Resolution steps
 
-- Add the resource ID for the Azure key vaults you intend to use with your wrap application.
-- Ensure that all required tags are present for the resource ID linked to the Bundle ID specified in the wrap wizard.
+1. Assign the resource ID of the Azure key vault you intend to use with your wrap application to the variable.
+
+2. Confirm that the specified resource ID includes all required tags associated with the Bundle ID defined in the wrap wizard.
 
 For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
 ### Error code 1000131
 
-Error message: Missing tags for the specified Azure Key Vault resourceID.
+Error message: No tags or missing access permission for the specified Azure Key Vault.
 
 #### Resolution steps
 
-- After setting up Azure key vaults, add all required tags.
-- Confirm that the resource ID associated with the Bundle ID specified in the wrap wizard includes every necessary tag.
+1. Assign the resource ID of the Azure key vault you intend to use with your wrap application to the variable.
+
+2. Confirm that the specified resource ID includes all required tags associated with the Bundle ID defined in the wrap wizard.
+
+3. Ensure you have permission to access your key vault:
+
+   1. As a Microsoft Entra ID (formerly Azure AD) admin, add the service principal for the AppID "4e1f8dc5-5a42-45ce-a096-700fa485ba20" by running the following commands in PowerShell:
+
+      ```powershell
+      Connect-AzureAD -TenantId <your tenant ID>
+      New-AzureADServicePrincipal -AppId 4e1f8dc5-5a42-45ce-a096-700fa485ba20 -DisplayName "Wrap KeyVault Access App"
+      ```
+
+   1. In the [Azure portal](https://portal.azure.com), under **Access Control (IAM)**, assign the **Reader** role to your service principal:
+
+      1. Go to **Access control (IAM)**, and then select **Add role assignment**.
+
+         :::image type="content" source="media/wrap-issues/add-role-assignment.png" alt-text="Screenshot that shows the Add role assignment option in the Access control (IAM) tab." lightbox="media/wrap-issues/add-role-assignment.png":::
+
+      1. Choose **Reader** under **Job function roles** and go to the **Members** tab.
+
+         :::image type="content" source="media/wrap-issues/add-members.png" alt-text="Screenshot that shows the Members tab on the top menu." lightbox="media/wrap-issues/add-members.png":::
+
+      1. Search for your app name.
+
+         :::image type="content" source="media/wrap-issues/select-members-to-add-role.png" alt-text="Screenshot that shows how to search for your app." lightbox="media/wrap-issues/select-members-to-add-role.png":::
+
+      1. Assign the **Reader** role.
+
+         :::image type="content" source="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png" alt-text="Screenshot that shows how to assign a Reader role to your app." lightbox="media/wrap-issues/assign-reader-role-to-wrap-keyvault-access-app.png":::
+
+For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
+
+---
+### Error code 1000132
+
+Error message: Missing environment variable 'PA_Wrap_KV_ResourceID' for the targeted environment.
+
+#### Resolution steps
+
+1. Check whether the environment variable `PA_Wrap_KV_ResourceID` exists in the target environment. If it doesn't, create it.
+
+2. Ensure the name follows the correct naming convention without typos or formatting errors.
 
 For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
 
