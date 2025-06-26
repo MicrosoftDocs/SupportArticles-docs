@@ -170,7 +170,7 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
    # Install Inspektor Gadget
    kubectl krew install gadget
    kubectl gadget deploy   # Monitor top memory-consuming processes across all containers
-   kubectl gadget run ghcr.io/inspektor-gadget/gadget/top_process:latest --sort memoryRelative --max-entries 12 --annotate processes:fetch-interval=3s,processes:fetch-count=0
+   kubectl gadget run top_process --sort memoryRelative --max-entries 12
    
    # Monitor processes on a specific node
    kubectl gadget run top_process --sort memoryRelative --node <node-name> 
