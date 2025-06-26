@@ -1,0 +1,82 @@
+### YamlMime:Landing
+
+title: Exchange Online troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Exchange Online. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Exchange Online troubleshooting
+  description: Documentation for troubleshooting common issues with Exchange Online.
+  ms.service: exchange-online
+  ms.topic: landing-page
+  author: cloud-writer
+  ms.author: meerak
+  ms.date: 01/24/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Outlook issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Sending and receiving email
+            url: ./outlook-issues/outlook-connection-issues.md
+          - text: Issues with crash or stop responding
+            url: ./outlook-issues/crash-issues.md
+          - text: Can't set up profile with Autodiscover
+            url: ./outlook-issues/cannot-set-up-profile-autodiscover.md
+  # Card
+  - title: User and shared mailboxes
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Sent items aren't saved
+            url: ./user-and-shared-mailboxes/sent-mail-is-not-saved.md
+          - text: Set automatic replies
+            url: ./user-and-shared-mailboxes/set-automatic-replies.md
+          - text: Increase or customize mailbox size
+            url: ./user-and-shared-mailboxes/increase-or-customize-mailbox-size.md
+ # Card
+  - title: Email delivery
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Find and fix email delivery issues
+            url: ./email-delivery/email-delivery-issues.md
+          - text: Fix issues with devices and LOB apps that send email using Microsoft 365
+            url: /exchange/mail-flow-best-practices/fix-issues-with-printers-scanners-and-lob-applications-that-send-email-using-off
+          - text: Email non-delivery reports and SMTP errors
+            url: /exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online
+ # Card
+  - title: Calendars
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Message store has reached its maximum size
+            url: ./calendars/store-reached-maximum-size.md
+          - text: No conference rooms with Room Finders
+            url: ./calendars/conference-rooms-not-displayed.md
+          - text: Can't remove calendar items or emails
+            url: ./calendars/cannot-remove-items.md
+ # Card
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Transition from D/ITAR to vNext
+            url: ./administration/modern-authentication-configuration.md
+          - text: Access is denied with Windows PowerShell
+            url: ./administration/access-denied-connect-powershell.md
+ # Card
+  - title: Move/migrate mailboxes
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't see free/busy information
+            url: ./move-or-migrate-mailboxes/cannot-see-free-busy-information.md
+          - text: No smtp proxy matching
+            url: ./move-or-migrate-mailboxes/no-smtp-proxy-matching.md
+          - text: Troubleshoot mailbox migration issues
+            url: ./move-or-migrate-mailboxes/troubleshoot-migration-issues-in-exchange-hybrid.md
+            

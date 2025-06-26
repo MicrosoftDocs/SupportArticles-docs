@@ -1,0 +1,79 @@
+### YamlMime:Landing
+
+title: Exchange Server troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Exchange Server. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Exchange Server troubleshooting
+  description: Documentation for troubleshooting common issues with Exchange Server.
+  ms.service: exchange-server-it-pro
+  ms.topic: landing-page
+  author: cloud-writer
+  ms.author: meerak
+  ms.date: 01/24/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"The term New-Mailbox is not recognized" error'
+            url: ./administration/term-new-mailbox-not-recognized-error.md
+          - text: 400 Bad Request when accessing the Options page
+            url: ./administration/400-bad-request-access-options-page.md
+          - text: 403 Forbidden when viewing cross-forest free/busy information
+            url: ./administration/403-forbidden-view-free-busy-information.md
+
+  - title: Client Connectivity
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"Insecure connection" error in Outlook for iOS or Android'
+            url: ./client-connectivity/insecure-connection-secure-connection-unavailable-outlook-ios-android.md
+          - text: '"The connection to your mail server timed out" error in Outlook for iOS or Outlook for Android'
+            url: ./client-connectivity/connection-to-mail-server-timed-out.md
+          - text: '"You''ve exceeded the storage limit for your mailbox" error'
+            url: ./client-connectivity/you-have-exceeded-the-storage-limit-for-your-mailbox.md
+
+  - title: Compliance
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Audit Log searches fail with ErrorInvalidServerVersion
+            url: ./compliance/mailbox-audit-log-searches-fail-errorinvalidserverversion.md
+          - text: Content index state is stuck in crawling
+            url: ./compliance/content-index-state-stuck-crawling-exchange-server-2010.md
+          - text: Error when doing a multi-mailbox search
+            url: ./compliance/cannot-perform-multi-mailbox-search.md
+
+  - title: Development
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Develop apps via Exchange PowerShell and .NET Framework
+            url: ./development/develop-apps-by-using-exchange-powershell.md
+          - text: Support limitations for open standards
+            url: ./development/public-protocols-support-limitations.md
+
+  - title: Distribution Lists
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Get-DistributionGroupMember not return all members
+            url: ./distribution-list/get-distributiongroupmember-not-return-members.md
+
+  - title: Mail flow
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: 451 4.4.0 DNS query failed
+            url: ./mailflow/dns-query-failed.md
+          - text: 554 5.4.14 Hop count exceeded
+            url: ./mailflow/hop-count-exceeded-possible-mail-loop.md
+          - text: Apps for Outlook 2013 can't activate in email
+            url: /outlook/troubleshoot/user-interface/apps-for-outlook-2013-do-not-activate-as-expected
+          - text: Assertion Failed when editing a transport rule
+            url: ./mailflow/cannot-edit-transport-rule.md

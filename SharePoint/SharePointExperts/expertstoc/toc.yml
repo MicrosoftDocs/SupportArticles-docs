@@ -1,0 +1,74 @@
+- name: SharePoint Experts
+  href: ../sharepoint-experts-welcome.yml
+  items:
+  - name: Administration
+    items:
+    - name: '"A schedule cannot be enabled for a workbook" when scheduling a PowerPivot data refresh'
+      href: ../administration/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh.md
+    - name: '"Call to Excel Services failed" when running scheduled PowerPivot data refresh'
+      href: ../administration/call-to-excel-services-failed.md
+    - name: '"cannot locate a server" error in PowerPivot'
+      href: ../administration/cannot-locate-a-server-to-load-workbook-data-model-in-powerpivot.md
+    - name: Can't open Office files from SharePoint 
+      href: ../administration/cant-open-office-files.md
+    - name: '"Retrieving the COM class factory for component failed 800703fa" in Excel Services and PowerPivot'
+      href: ../administration/retrieving-com-class-factory-for-component-failed.md
+    - name: '"SetAuthContext need to be run as sysadmin" error in PowerPivot'
+      href: ../administration/powerpivot-shows-setauthcontext-need-to-be-run-as-sysadmin.md
+    - name: '"The user is not a farm administrator" error with PowerPivot Configuration Tool'
+      href: ../administration/powerpivot-configuration-tool-shows-user-not-farm-administrator.md
+    - name: '"The virtual path maps to another application" error when running scheduled data refresh'
+      href: ../administration/virtual-path-maps-to-another-application-not-allowed.md
+    - name: Antivirus and intermittent issues with Online Server
+      href: ../administration/antivirus-and-intermittent-issues.md
+    - name: Behavior when using Office Online Server with multiple zones
+      href: ../administration/multiple-alternate-access-mapping-zone.md
+    - name: Email notifications aren't sent for scheduled PowerPivot data refresh failures
+      href: ../administration/email-notifications-sent-for-scheduled-data-refresh-failures-in-power-pivot.md
+    - name: Excel workbooks in XML format don't open from SharePoint
+      href: ../administration/excel-workbooks-in-xml-format-not-open.md
+    - name: Issue when loading Sandbox cube in PowerPivot
+      href: ../administration/error-occurred-when-loading-sandbox-cube-in-powerpivot.md
+    - name: Issue when opening SharePoint documents
+      href: ../administration/edit-document-requires-compatible-application-and-web-browser.md
+    - name: Large Publisher files open in read-only mode
+      href: ../administration/large-publisher-files-open-in-read-only-mode.md
+    - name: Microsoft Forms shows "Sorry, something went wrong"
+      href: ../administration/microsoft-forms-shows-sorry-something-went-wrong.md
+    - name: Orphaned record for PowerPivot service application database
+      href: ../administration/orphaned-record-for-powerpivot-service-application-database.md
+    - name: PowerPivot Gallery Snapshots Fail for SSL Host Header Sites
+      href: ../administration/troubleshooting-powerpivot-gallery-snapshot.md
+    - name: PowerPivot Performance Counter errors
+      href: ../administration/powerpivot-performance-counter-errors.md
+    - name: PowerPivot scheduled data refresh fails
+      href: ../administration/powerpivot-scheduled-data-refresh-fails.md
+    - name: Some Office files open in read-only mode in SharePoint
+      href: ../administration/files-open-in-read-only-mode.md
+  - name: Lists and libraries
+    items:
+    - name: '"You will need a new app to open this ms-visio" when opening Visio files'
+      href: ../lists-and-libraries/need-a-new-app-to-open-this-ms-visio.md
+    - name: Files are downloaded instead of opening
+      href: ../lists-and-libraries/files-downloaded-instead-of-opening-office-application.md
+    - name: PowerPivot data refresh from a list 
+      href: ../lists-and-libraries/list-refresh-odata-data-feed.md
+  - name: Sharing and Permissions
+    items:
+    - name: Additional credential prompts for Office documents
+      href: ../sharing-and-permissions/credential-prompt-persistent-cookies.md
+    - name: SharePoint Designer 2013 login Issues in a cloud scenario
+      href: ../sharing-and-permissions/login-issues-in-a-cloud-scenario.md
+  - name: Security
+    items:
+    - name: Scheduled data refresh with non-Windows Authentication
+      href: ../security/schedule-data-refresh-to-a-source-with-non-windows-authentication.md
+  - name: Web Parts
+    items:
+    - name: '"We could not find the file you wanted" with Excel Web Access Web Part'
+      href: ../web-parts/excel-web-access-web-part-error.md
+    - name: Increasing PowerPoint size limit of embedded media
+      href: ../web-parts/increase-size-limit-embedded-media.md
+    - name: Issue with Excel Web Access Web Parts
+      href: ../web-parts/something-went-wrong-error-in-excel-web-parts.md
+      
