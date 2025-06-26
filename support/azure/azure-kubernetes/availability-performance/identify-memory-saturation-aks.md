@@ -164,7 +164,7 @@ Now that you've identified the pods that are using high memory, you can identify
 
 ### Step 2: Identify process level memory usage
 
-For advanced process level memory analysis, use [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) to monitor real time memory usage at the process level within containers:
+For advanced process level memory analysis, use [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) to monitor real time memory usage at the process level within pods:
 
    ```bash
    # Install Inspektor Gadget
