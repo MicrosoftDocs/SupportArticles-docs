@@ -102,7 +102,7 @@ To configure a certificate by using WMI, follow these steps:
 
 2. Scroll down to the **Thumbprint** field and copy it. The following screenshot is an example of the certificate thumbprint in the **Certificate** properties:
 
-   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-property-windows-11.png" alt-text="An example of the certificate thumbprint in the Certificate properties.":::
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-property-w11.png" alt-text="An example of the certificate thumbprint in the Certificate properties.":::
 
 3. At command prompt, run the following PowerShell command together with the thumbprint value that you obtain in step 2:
 
