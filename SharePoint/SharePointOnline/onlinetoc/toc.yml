@@ -151,7 +151,7 @@
       href: ../lists-and-libraries/modern-view-compatibility-checklist.md
     - name: Modified time isn't displayed correctly for an online list item
       href: ../lists-and-libraries/modified-time-shows-incorrectly.md
-    - name: Mentions in SharePoint documents donâ€™t send email to participant
+    - name: Mentions in SharePoint documents don't send email to participant
       href: ../lists-and-libraries/no-email-after-mention.md
     - name: Number of items in this list exceeds the list view threshold
       href: ../lists-and-libraries/items-exceeds-list-view-threshold.md
@@ -349,7 +349,7 @@
       href: ../../SharePointServer/sync/sharepoint-workspace-not-sync-with-online.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Video
     items:
-    - name: Canâ€™t view embedded Stream video in Teams app
+    - name: Can't view embedded Stream video in Teams app
       href: ../video/cant-view-embedded-video.md
   - name: Web Parts
     items:
