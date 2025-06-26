@@ -42,6 +42,8 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
 |SAP NetWeaver and other SAP Applications   | RHEL 8.10         | RHEL 9.4          |      
 |SAP NetWeaver and other SAP Applications | RHEL 8.10        | RHEL 9.6          |
 
+> [!NOTE]  
+> For more information, see [Supported in-place upgrade paths for Red Hat Enterprise Linux](https://access.redhat.com/articles/4263361)
 
 According to the [Upgrading SAP environments from RHEL 8 to RHEL 9 - Supported upgrade paths](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/9/html/upgrading_sap_environments_from_rhel_8_to_rhel_9/asmb_supported-upgrade-paths_how-to-in-place-upgrade-sap-environments-from-rhel8-to-rhel9#asmb_supported-upgrade-paths_how-to-in-place-upgrade-sap-environments-from-rhel8-to-rhel9) documentation, SAP validates SAP HANA for the RHEL minor versions that receive package updates for more than six months. Currently, the supported in-place upgrade paths for an SAP HANA system are from RHEL 8.10 to RHEL 9.4 and from RHEL 8.10 to RHEL 9.6. This documentation also describes restrictions and detailed steps for upgrading an SAP HANA system.
 
