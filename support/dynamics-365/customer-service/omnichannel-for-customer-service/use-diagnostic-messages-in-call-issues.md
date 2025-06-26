@@ -24,14 +24,7 @@ The following table lists the warning messages that appear when your agents have
 | Your network is causing poor call quality. Try switching to a better network, or moving closer to a Wi-Fi access point.  | Appears when the incoming streaming quality is poor.  | `networkReceiveQuality` |
 | Your network is causing poor call quality. Try switching to a better network, or moving closer to a Wi-Fi access point.  | Appears when the outgoing streaming quality is poor. | `networkSendQuality` |
 | There is a problem connecting to the network. Ensure firewall rules are correctly set up.  | Appears when there are problems with the network. | `networkRelaysNotReachable` |
-
-## Troubleshoot connectivity errors caused by firewalls or VPNs
-
-The following error message might appear when there are issues with your organization's firewall or VPN:
-
-> The connection to the telephony system was lost. We're working on re-establishing the connection.
-
-To mitigate the issue, check your firewall configuration and ensure that you have connectivity to the required ports and IP addresses. For more details, see Azure Communication Services [firewall configuration](/azure/communication-services/concepts/voice-video-calling/network-requirements#firewall-configuration).
+| The connection to the telephony system was lost. We're working on re-establishing the connection. | Appears when there are problems with your organization's firewall or VPN. To mitigate the issue, check your firewall configuration and make sure that you have connectivity to the required ports and IP addresses. For more details, see Azure Communication Services [firewall configuration](/azure/communication-services/concepts/voice-video-calling/network-requirements#firewall-configuration). |  |
 
 ## Troubleshoot device issues
 
