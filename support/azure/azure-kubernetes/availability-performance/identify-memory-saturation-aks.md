@@ -167,24 +167,31 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
 
 1. Install Inspektor Gadget using the instructions found in the [documentation](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#how-to-install-inspektor-gadget-in-an-aks-cluster)
 
-2. Run the [top_process gadget](https://aka.ms/igtopprocess) to identify processes that are using large amounts of memory. You can use `--fields` to select certain columns and can filter events based on specific field values, for example the pod names of previously identified pods with high memory consumption. You can also
-     - Identify top memory-consuming processes across the cluster
-     - Identify top memory-consuming processes on a specific node
-     - Identify top memory-consuming processes on a specific namespace 
+2. Run the [top_process gadget](https://aka.ms/igtopprocess) to identify processes that are using large amounts of memory. You can use `--fields` to select certain columns and `--filter` to filter events based on specific field values, for example the pod names of previously identified pods with high memory consumption. You can also:
 
-   ```bash
-   # Run top_process across the cluster
-   kubectl gadget run top_process --sort memoryRelative --max-entries 12
-   
-   # Monitor processes on a specific pod
-   kubectl gadget run top_process --sort memoryRelative --podname <pod-name>
+   - Identify top 10 memory-consuming processes across the cluster:
 
-   # Monitor processes on a specific node
-   kubectl gadget run top_process --sort memoryRelative --node <node-name> 
-   
-   # Monitor processes in a specific namespace
-   kubectl gadget run top_process --sort memoryRelative --namespace <namespace> 
-   ```
+        ```bash
+        kubectl gadget run top_process --sort -memoryRelative --max-entries 10
+        ```
+
+   - Identify top memory-consuming processes on a specific node:
+
+        ```bash
+        kubectl gadget run top_process --sort -memoryRelative --filter k8s.node==<node-name>
+        ```
+
+   - Identify top memory-consuming processes in a specific namespace:
+
+        ```bash
+        kubectl gadget run top_process --sort -memoryRelative --filter k8s.namespace==<namespace>
+        ```
+
+   - Identify top memory-consuming processes in a specific pod:
+
+        ```bash
+        kubectl gadget run top_process --sort -memoryRelative --filter k8s.podName==<pod-name>
+        ```
 
    The output of the Inspektor Gadget `top_process` command resembles the following:
 
