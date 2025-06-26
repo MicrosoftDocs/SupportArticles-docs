@@ -23,7 +23,7 @@ When an administrator reviews the sign-in logs on the home tenant, a "90072" err
 
 > User account {email} from identity provider {idp} does not exist in tenant {tenant} and cannot access the application {appId}({appName}) in that tenant. The account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Microsoft Entra user account.
 
-### Cause 1： Users log in to Microsoft Entra admin center by using personal Microsoft Accounts
+## Cause 1：Users log in to Microsoft Entra admin center by using personal Microsoft Accounts
 
 When you try to log in to Microsoft Entra admin center by using your personal Microsoft Accounts (Outlook, Hotmail or OneDrive), you are connected to the Microsoft Services tenant by default. Within the default tenant, there is no linked directory for performing any actions. This behavior is expected. 
 
