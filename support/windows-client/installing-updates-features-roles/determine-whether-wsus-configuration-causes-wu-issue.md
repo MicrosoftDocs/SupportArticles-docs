@@ -1,7 +1,7 @@
 ---
 title: Determine whether WSUS configuration causes WU installation failure
 description: Helps you isolate whether the cause of a WU issue is with WSUS configuration or with the WU service.
-ms.date: 06/25/2025
+ms.date: 07/01/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Determine whether WSUS configuration causes WU installation failure
 
-When Windows Update (WU) issue occurs in an environment with Windows Server Update Service (WSUS) deployed, this article helps you isolate whether the cause is with WSUS configuration or with the WU service.
+Assume that Windows Server Update Service (WSUS) is deployed in an environment. This article helps you determine whether a Windows Update (WU) issue is caused by the WSUS configuration or by the WU service.
 
 ## More information
 
