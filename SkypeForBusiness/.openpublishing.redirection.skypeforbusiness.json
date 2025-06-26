@@ -1,0 +1,84 @@
+{
+  "redirections": [
+    {
+      "source_path": "SkypeHybrid/hybrid-phone-system/voicemails-not-delivered.md",
+      "redirect_url": "/troubleshoot/microsoftteams/phone-system/voicemails-not-delivered"
+    },
+    {
+      "source_path": "SkypeHybrid/skype-hybrid-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeExperts/skype-experts-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeExperts/quality-of-service/qos-config-and-best-practice-guide.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeExperts/performance-issues/sfb-memory-usage.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-exchange-integration/repeatedly-prompted-for-credentials.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-exchange-integration/allowadalfornonlyncIndependentofLync-setting.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-conferencing/there-is-a-duplicate-key-sequence.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-conferencing/cant-connect-to-sfb-remote-powershell.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-sign-in/sso-no-longer-works.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-phone-system/phone-contact-number-not-updated.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-phone-system/incoming-call-fails-cloud-connector.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-phone-system/issue-configure-call-queue.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-move-sfb-online/move-csuser-hostedmigration-fault-507.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-move-sfb-online/sfb-is-not-installed-office-365.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-move-sfb-online/move-csuser--hostedmigration-fault.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-move-sfb-online/cannot-move-users-from-different-ad-domain.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-move-sfb-online/hostedmigration-fault-error-506.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-meetings/present-content-on-premises-meeting.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SkypeHybrid/hybrid-im-presence/sfb-online-users-cant-im.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    }
+  ]
+}

@@ -220,6 +220,8 @@ items:
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-503.md
         - name: SIP response code 504
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-504.md
+    - name: Voicemail messages are not delivered
+      href: ./phone-system/voicemails-not-delivered.md
   - name: Provisioning
     items:
     - name: Can't create a team 
