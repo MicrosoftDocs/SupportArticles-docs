@@ -192,7 +192,7 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
    ```   
 
 
-You can use this output to identify the processes that are consuming the most memory on the node. The output can include the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU usage, memory usage (RSS and Virtual), and relative memory usage.
+You can use this output to identify the processes that are consuming the most memory on the node. The output can include the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU and memory usage, check https://inspektor-gadget.io/docs/latest/gadgets/top_process/ for further details
 
 
 ### Step 3: Review best practices to avoid memory saturation
