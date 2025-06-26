@@ -14,8 +14,7 @@ This article discusses methods for troubleshooting memory saturation issues. Mem
 ## Prerequisites
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
-- The [krew](https://sigs.k8s.io/krew) package manager for installing [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072). You can follow the [krew quickstart guide](https://krew.sigs.k8s.io/docs/user-guide/quickstart/) to install it.
-- The open source project [Inspektor Gadget](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#how-to-install-inspektor-gadget-in-an-aks-cluster) for advanced process level memory analysis.
+- The open source project [Inspektor Gadget](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#what-is-inspektor-gadget) for advanced process level memory analysis. You can find details around installation in [this guide](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#how-to-install-inspektor-gadget-in-an-aks-cluster). 
 
 ## Symptoms
 
@@ -166,12 +165,20 @@ Now that you've identified the pods that are using high memory, you can identify
 
 For advanced process level memory analysis, use [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) to monitor real time memory usage at the process level within pods:
 
+1. Install Inspektor Gadget using the instructions found in the [documentation](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#how-to-install-inspektor-gadget-in-an-aks-cluster)
+
+2. Run the [top_process gadget](https://aka.ms/igtopprocess) to identify processes that are using large amounts of memory. You can use `--fields` to select certain columns and can filter events based on specific field values, for example the pod names of previously identified pods with high memory consumption. You can also
+     - Identify top memory-consuming processes across the cluster
+     - Identify top memory-consuming processes on a specific node
+     - Identify top memory-consuming processes on a specific namespace 
+
    ```bash
-   # Install Inspektor Gadget
-   kubectl krew install gadget
-   kubectl gadget deploy   # Monitor top memory-consuming processes across all containers
+   # Run top_process across the cluster
    kubectl gadget run top_process --sort memoryRelative --max-entries 12
    
+   # Monitor processes on a specific pod
+   kubectl gadget run top_process --sort memoryRelative --podname <pod-name>
+
    # Monitor processes on a specific node
    kubectl gadget run top_process --sort memoryRelative --node <node-name> 
    
@@ -183,16 +190,16 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
 
    ```output
 
-      K8S.NODE                       K8S.NAMESPACE             K8S.PODNAME                 MEMORYVIRTUAL    MEMORYRSS   MEMORYRELATIVE
-      aks-agentpool-3…901-vmss000001 default                   memory-stress                      944 MB       943 MB              5.6
-      aks-agentpool-3…901-vmss000001 default                   memory-stress                      944 MB       943 MB              5.6
-      aks-agentpool-3…901-vmss000001 default                   memory-stress                      944 MB       872 MB              5.2
-      aks-agentpool-3…901-vmss000001 default                   memory-stress                      944 MB       796 MB              4.8
-      aks-agentpool-3…901-vmss000000                                                       436805632        339316736              2.0
+      K8S.NODE                          K8S.NAMESPACE          K8S.PODNAME            PID       MEMORYVIRTUAL    MEMORYRSS   MEMORYRELATIVE     
+      aks-agentpool-3…901-vmss000001    default                memory-stress        21676              944 MB       943 MB              5.6     
+      aks-agentpool-3…901-vmss000001    default                memory-stress        21678              944 MB       943 MB              5.6      
+      aks-agentpool-3…901-vmss000001    default                memory-stress        21677              944 MB       872 MB              5.2     
+      aks-agentpool-3…901-vmss000001    default                memory-stress        21679              944 MB       796 MB              4.8     
+
    ```   
 
 
-You can use this output to identify the processes that are consuming the most memory on the node. The output can include the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU and memory usage, check https://inspektor-gadget.io/docs/latest/gadgets/top_process/ for further details
+You can use this output to identify the processes that are consuming the most memory on the node. The output can include the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU and memory usage, check [the documentation](https://aka.ms/igtopprocess) for more details.
 
 
 ### Step 3: Review best practices to avoid memory saturation
