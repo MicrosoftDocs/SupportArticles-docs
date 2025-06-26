@@ -46,6 +46,10 @@ You can perform an in-place upgrade from RHEL 7 to the following RHEL 8 minor ve
 | RHEL 7.9         | RHEL 8.10 (default) | Jun 30, 2028        |
 
 > [!NOTE]  
+> For more information, see [Supported in-place upgrade paths for Red Hat Enterprise Linux](https://access.redhat.com/articles/4263361)
+
+
+> [!NOTE]  
 >  If you locked the VM to a minor release, remove the version lock. For more information, see [Switch a RHEL 7.x VM back to non-EUS](/azure/virtual-machines/workloads/redhat/redhat-rhui#switch-a-rhel-server-to-non-eus-repositories).
 
 1. If you restricted packages to a specific version using the `yum-plugin-versionlock` command, remove the restriction:
@@ -96,7 +100,8 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
 | RHEL 8.10        | RHEL 9.4       | April 30, 2026 (EUS)|
 | RHEL 8.10        | RHEL 9.6       | April 31, 2027 (EUS)|
 
-
+> [!NOTE]  
+> For more information, see [Supported in-place upgrade paths for Red Hat Enterprise Linux](https://access.redhat.com/articles/4263361)
 
 > [!NOTE]  
 > If you locked the VM to a minor release, remove the version lock. For more information, see [Switch a RHEL 8.x VM back to non-EUS](/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel8#switch-a-rhel-server-to-non-eus-repositories).
