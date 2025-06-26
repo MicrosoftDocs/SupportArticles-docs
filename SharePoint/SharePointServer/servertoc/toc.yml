@@ -1,4 +1,4 @@
-- name: SharePoint Server Troubleshooting
+﻿- name: SharePoint Server Troubleshooting
   href: ../sharepoint-server-welcome.yml
   items:
   - name: Administration
@@ -7,8 +7,6 @@
       href: ../administration/upgrade-available-status-in-new-farm.md
     - name: 800703fa Illegal operation attempted on a registry key
       href: ../administration/800703fa-Illegal-operation-error.md
-    - name: A user's display name is incorrect on MySite 
-      href: ../administration/users-display-name-incorrect-on-mysite.md
     - name: Administrative timer jobs fail after an upgrade
       href: ../administration/administrative-timer-jobs-not-run-after-upgrad.md
     - name: Can't import active users through AD Import
@@ -19,38 +17,26 @@
       href: ../administration/compatibility-level-change.md
     - name: Change the database server in a farm
       href: ../administration/how-to-change-the-database-in-farms.md
-    - name: Configure Excel Services for Kerberos authentication
-      href: ../administration/configure-excel-services-kerberos.md
     - name: Database compatibility level causes low performance
       href: ../administration/sql-database-compatibility-for-sharepoint-installation.md
     - name: Delete temporary and permanent SharePoint data
       href: ../administration/delete-temporary-permanent-data.md
     - name: Disable WebDAV use in SharePoint
       href: ../administration/how-to-disable-webdav-use.md
-    - name: Disabled Functions in SharePoint Workspace safe mode
-      href: ../administration/function-disabled-in-safe-mode.md
     - name: Hybrid Picker prerequisite check fail in a consuming farm
       href: ../administration/hybrid-picker-prerequisite-check-fail-in-consuming-farm.md
-    - name: Information about SharePoint Server 2019 On-Premises 
+    - name: Information about SharePoint Server 2019 On-Premises
       href: ../administration/sharepoint-on-premises-2019-information.md
     - name: Issue with a slipstream installation
       href: ../administration/administration-tool-stopped-working-during-a-slipstream-installation.md
-    - name: Issue with configuring a PowerPivot service
-      href: ../administration/error-configuring-powerpivot-service-with-oracle-data-source-sharepoint-server-2013.md
     - name: Issue with OOB workflow creation
       href: ../administration/requested-registry-access-not-allowed-error-sharepoint-2013-OOB-workflow-creation.md
     - name: NullReferenceException with Products Configuration Wizard
       href: ../administration/nullreferenceexception-for-configuration-wizard.md
-    - name: Operations Manager APM Agent causes heap corruption
-      href: ../administration/system-center-2016-operations-manager-apm-agent-causing-heap-corruption.md
     - name: Presence information doesn't show
       href: ../../SharePointOnline/administration/presence-information-fails-showing.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Provider-hosted add-ins stop working and HTTP 401 error with hybrid features
       href: ../administration/provider-hosted-add-ins-stop-working-and-http-401-error-after-configure-farm-hybrid-features.md
-    - name: Remove assembly reference from Sandbox solution
-      href: ../administration/change-sandbox-solution.md
-    - name: SharePoint 2013 SP1 support in Windows Server 2012 R2
-      href: ../administration/windows-server-2012-r2-support-sharepoint-2013-sp1.md
     - name: SharePoint installs the obsolete SQL Server product
       href: ../administration/sharepoint-installs-obsolete-sql-server-product.md
     - name: SQL collation supportability for SharePoint databases
@@ -67,16 +53,10 @@
       href: ../administration/user-profile-service-application-not-function.md
   - name: Apps
     items:
-    - name: Access Services reports are not enabled
-      href: ../Apps/running-access-reports-error.md
     - name: Can't start the Web Application service
       href: ../apps/cannot-start-an-application-service.md
     - name: Installing Windows Server AppFabric updates
       href: ../apps/installing-appfabric-updates.md
-    - name: Projects with field elements cannot be redeployed
-      href: ../apps/projects-with-field-elements-cannot-redeploy.md
-    - name: System.ArgumentException when signing out web application
-      href: ../apps/system.argumentexception-exception-when-sign-out-of-web-application.md
   - name: Designer
     items:
     - name: Object moved when connecting to a SharePoint site
@@ -85,22 +65,14 @@
       href: ../designer/switch-sharepoint-designer-user-account.md
   - name: InfoPath
     items:
-    - name: "\"Invalid form template\" error when running design checker"
-      href: ../infopath/invalid-from-template.md
-    - name: "\"Schema validation found non-datatype errors\" error"
-      href: ../infopath/schema-validation-found-non-datatype-errors.md
     - name: Columns published from InfoPath fields are recreated
       href: ../infopath/columns-published-from-infopath-fields-recreated.md
     - name: Differences of InfoPath Forms Services
       href: ../../SharePointOnline/InfoPath/infopath-forms-services.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: Forms time out or take a long time to open
-      href: ../infopath/forms-timeout-or-take-a-long-time-to-open.md
   - name: Installation and Setup
     items:
     - name: Block OneDrive.exe from being advertised with Office 2016
       href: ../installation-and-setup/how-to-block-onedrive-from-being-advertised-after-install-office-2016.md
-    - name: Certain installation scenarios aren't supported
-      href: ../installation-and-setup/certain-installation-scenarios-are-not-supported.md
     - name: Error 2711 when install RBS client for SQL server 2016
       href: ../installation-and-setup/error-2711-install-rbs-for-sql-server.md
     - name: Unable to install SharePoint Server 2019
@@ -113,8 +85,6 @@
     items:
     - name: '"Request timed out" when uploading a large file'
       href: ../lists-and-libraries/request-timed-out-when-upload-large-file-to-library.md
-    - name: Attachment is missing from an email message
-      href: ../lists-and-libraries/attachment-is-missing-in-email-message-to-library.md
     - name: Cannot locate a server to load the workbook Data Model
       href: ../lists-and-libraries/cannot-locate-server-to-load-workbook-data-model.md
     - name: Can't open a file using OW or Office Online Server
@@ -129,10 +99,6 @@
       href: ../../SharePointOnline/lists-and-libraries/content-organizer-not-comply-with-interval.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Error when view or edit in Word or PowerPoint Online
       href: ../../SharePointOnline/lists-and-libraries/error-when-view-or-edit-in-browser.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: Explorer View option isn't available on the Current View list box
-      href: ../lists-and-libraries/sharepoint-explorer-view-option-not-available.md
-    - name: Feature id isn't assigned when saving a list as a template
-      href: ../lists-and-libraries/feature-id-not-assigned-when-saving-a-list-as-template.md
     - name: IFilter alternative to the native PDF parser
       href: ../lists-and-libraries/ifilter-alternative-to-the-native-pdf-parser.md
     - name: Information about dragging files into document libraries
@@ -143,22 +109,12 @@
       href: ../../SharePointOnline/lists-and-libraries/per-location-view-settings-fail-working.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Problems opening Office documents from SharePoint
       href: ../lists-and-libraries/problems-open-files-from-sharepoint.md
-    - name: Property doesn't exist
-      href: ../lists-and-libraries/property-does-not-exist-or-is-used-in-manner-inconsistent-with-schema-settings.md
     - name: Server Message bar is missing for Office documents opened via a hyperlink
       href: ../lists-and-libraries/message-bar-is-missing-when-open-office-documents-via-link-from-library.md
     - name: SharePoint App "Import Spreadsheet" fails
       href: ../lists-and-libraries/import-spreadsheet-app-error-an-unexpected-error-has-occurred-2147352567.md
-    - name: SharePoint Designer 2013 shows empty wfpub library
-      href: ../lists-and-libraries/shows-empty-wfpub-library.md
-    - name: Slide Library toolbar is unavailable for certain installations
-      href: ../lists-and-libraries/slide-library-toolbar-not-available.md
     - name: The URL <file name> is invalid when uploading a file
       href: ../../SharePointOnline/lists-and-libraries/url-invalid-upload-file-to-list.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: Upload Multiple Documents option isn't available
-      href: ../lists-and-libraries/upload-multiple-documents-option-not-available.md
-    - name: Visio Graphics Service application pool isn't recycled
-      href: ../lists-and-libraries/visio-graphics-service-application-pool-not-recycled.md
   - name: People Picker
     items:
     - name: No exact match was found
@@ -177,8 +133,6 @@
       href: ../powershell/missing-argument-for-parameter-error.md
   - name: Records Management
     items:
-    - name: Automatically declaring items as records causes duplicates
-      href: ../records-management/automatically-declaring-items-causes-duplicates.md
   - name: Search
     items:
     - name: '"Item not crawled" error with a site'
@@ -191,24 +145,16 @@
       href: ../Search/crawler-has-insufficient-permissions.md
     - name: Document preview and content type icon aren't displayed
       href: ../../SharePointOnline/Search/content-type-icon-not-display.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: Incomplete search results for choice type columns with multiple values
-      href: ../search/incomplete-search-results-for-choice-type-columns-with-multiple-values.md
     - name: Near-duplicate items aren't listed in SharePoint Online or SharePoint Server 2013 on-premises search results
       href: ../../SharePointOnline/search/near-duplicate-items-are-not-listed-in-search-results.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Privileges don't exist in service account configuration
       href: ../search/privilege-not-exist-service-account-configuration.md
-    - name: Search box removed if Suite Navigation search control turned off
-      href: ../search/search-box-removed-from-suite-nav.md
     - name: Search errors on Windows Server 2019
       href: ../search/search-errors-windows-server-2019.md
-    - name: SharePoint search crawler ignores directives in Robots.txt
-      href: ../search/crawler-ignores-directives-for-user-agent.md
   - name: Security
     items:
     - name: '"401 unauthorized" when using OAuth and SAML claims'
       href: ../security/401-unauthorized-error-when-using-oauth-and-saml-claims.md
-    - name: Configure SQL Server Reporting Services
-      href: ../security/configure-sql-server-reporting-services.md
     - name: Encryption type requested isn't supported by KDC
       href: ../security/configuration-to-support-kerberos-aes-encryption.md
     - name: Event ID 8306 when activating Security Token Service Application
@@ -223,14 +169,8 @@
       href: ../security/access-to-the-path-is-denied-during-logon.md
   - name: Sharing and Permissions
     items:
-    - name: Access denied when you send an email to a SharePoint group
-      href: ../sharing-and-permissions/access-denied-when-send-an-email-to-groups.md
-    - name: Anonymous users can't open XLSX files from a document library
-      href: ../sharing-and-permissions/anonymous-users-cannot-open-xlsx-files-from-a-document-library.md
     - name: Issue with activate or deactivate the Publishing feature
       href: ../../SharePointOnline/sharing-and-permissions/activating-publishing-feature-access-error.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: People Picker field embedded doesn't show "Add People"
-      href: ../sharing-and-permissions/picker-field-embedded-does-not-show-add-people.md
     - name: Prompted for credentials when opening documents anonymously
       href: ../sharing-and-permissions/receive-credentials-prompting.md
     - name: Required permissions for managing Secure Store Service
@@ -245,26 +185,14 @@
       href: ../../SharePointOnline/Sites/calendar-overlay-unsupported.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: '"Something went wrong" when accessing a site'
       href: ../sites/something-went-wrong-when-access-site.md
-    - name: '"Sync to SharePoint Workspace" is not available'
-      href: ../sites/unavailable-sync-to-sharepoint-workspace.md
     - name: Blank screen when logging on to a SharePoint site
       href: ../sites/blank-screen-when-you-log-on-sites.md
-    - name: Can't connect a workspace to a site
-      href: ../sites/cant-connect-workspace-to-site.md
     - name: Can't display SharePoint pages in iFrame
       href: ../sites/cannot-display-sharepoint-pages-in-iframe.md
-    - name: Can't start SharePoint Workspace or Groove
-      href: ../sites/workspace-groove-detected-another-device.md
     - name: Certificate security warning for a SharePoint site
       href: ../sites/sharepoint-site-certificate-security-warning.md
-    - name: Customize application pages in the Layouts folder
-      href: ../sites/customize-application-pages-in-layouts-folder.md
-    - name: Don't support export/import of subsites with Publishing templates
-      href: ../sites/not-support-subsite-export-import-with-publishing-templates.md
     - name: Enable scripts error when you open a SharePoint site
       href: ../sites/enable-scripts-and-reload-page-error.md
-    - name: Error when starting Groove or SharePoint Workspace
-      href: ../sites/cant-start-groove-or-sharepoint.md
     - name: Issue when saving a site as a template
       href: ../../SharePointOnline/Sites/fails-saving-site-as-template.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Modified dates on the SharePoint site contents page are not accurate
@@ -273,8 +201,6 @@
       href: ../../SharePointOnline/Sites/rich-text-fields-fails-responding.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Site slowness because of STS certificate CRL checking
       href: ../sites/site-slowness-because-of-sts-certificate-crl-checking.md
-    - name: Using PageParserPath directive can cause performance problems
-      href: ../sites/using-pageparserpath-directive.md
     - name: Viewing SharePoint .aspx page generates errors
       href: ../sites/page-not-use-valid-page-lauout.md
   - name: Synchronization
@@ -287,8 +213,6 @@
     items:
     - name: A list view Web Part for a tasks list doesn't filter values
       href: ../../SharePointOnline/Web-parts/list-view-web-part-not-filter-values.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: A Web Part never finishes refreshing
-      href: ../web-parts/web-part-refresh-in-sharepoint-foundation-2010.md
     - name: Issue on a site page with pages library web part
       href: ../web-parts/sorry-something-went-wrong-error-on-site-page-with-pages-library-web-part.md
     - name: Loading behavior option is removed
@@ -303,8 +227,6 @@
       href: ../../SharePointOnline/workflows/access-denied-when-approve-workflow-task.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: '"Access Denied" when a workflow sends an email'
       href: ../workflows/access-denied-error-sharepoint-2010-when-workflow-sends-email-to-group.md
-    - name: "\"Specified RunAs account is invalid\" error"
-      href: ../workflows/specified-runas-account-is-invalid.md
     - name: A response was returned that didn't come
       href: ../workflows/response-returned-did-not-come-from-workflow-manager-error.md
     - name: A workflow doesn't complete
@@ -317,10 +239,6 @@
       href: ../../SharePointOnline/Workflows/publishing-approval-workflow-fails-starting.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Replace List Item Permissions action fails
       href: ../../SharePointOnline/Workflows/replace-list-item-permission-fail.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: Upgrade SharePoint through Workflow Manager
-      href: ../workflows/upgrade-sharepoint-through-workflow-manager.md
-    - name: Workflow can't send email to groups from initiation form
-      href: ../workflows/workflow-cannot-send-email-to-group.md
     - name: Workflow contains blank values in output
       href: ../../SharePointOnline/Workflows/workflow-contains-blank-values.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Workflow issues after connecting to a site
