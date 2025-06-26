@@ -1,5 +1,5 @@
 ---
-title: Set the default font for Office applications
+title: Set the Default Font for Office Applications
 description: Provides detailed steps for administrators to set the default font for Office applications, such as Word, Excel, and PowerPoint.
 author: helenclu
 ms.author: luche
@@ -20,7 +20,7 @@ appliesto:
   - PowerPoint for Microsoft 365
   - PowerPoint 2016
 search.appverid: MET150
-ms.date: 06/06/2024
+ms.date: 06/26/2025
 ---
 # How to set the default font for Word, Excel, and PowerPoint
 
@@ -29,14 +29,22 @@ This article provides detailed steps for administrators to set the default font 
 ## Set the default font for Word
 
 > [!NOTE]
-> There are no direct Group Policy Objects (GPOs) to set the default font in Word (for both Microsoft 365 and 2016).
+> There are no direct Group Policy Objects (GPOs) to set the default font in Word.
 
-1. Create a blank file that is configured by using the font and styles that you want to set as the default.
-2. Select **File** > **Save As**.
-3. Select the **.dotm** file name extension.
-4. Save the file to **%Appdata%\Microsoft\Templates**.
-5. Replace the **Normal.dotm** file.
-6. After the **Normal.dotm** file is created on the administrator's computer, you can deploy the same file to the **%Appdata%\Microsoft\Templates** location on users' computers.
+Follow these steps:
+
+1. Back up the existing template:
+
+   1. Navigate to the `%APPDATA%\Microsoft\Templates` folder, and locate the `normal.dotm` file.
+   1. Rename the file to `normal.dotm.bak`.
+1. Open Word, and then close Word. This action creates a new, clean `normal.dotm` file in the `%APPDATA%\Microsoft\Templates` folder.
+1. Open Word again.
+1. Open the `%APPDATA%\Microsoft\Templates\normal.dotm` file.
+1. Configure the font and style settings that you want for the default font.
+1. Save and close the file.
+1. Close Word.
+
+The revised `normal.dotm` file now contains your customizations. You can distribute this file to other users by copying it to the same path on their computers.
 
 For more information, see [Change the default settings for new documents](https://support.office.com/article/Change-the-default-settings-for-new-documents-430B4132-E129-46E4-97D2-19C326352C7F).
 
@@ -44,10 +52,10 @@ For more information, see [Change the default settings for new documents](https:
 
 - **Set a cloud policy (for Microsoft 365):**
 
-  1. Create a font policy from [Policy Management](https://config.office.com/officeSettings/officepolicies).
-  2. Apply the cloud policy to a security group that target users are members of.
+  1. Create a font policy at [Policy Management](https://config.office.com/officeSettings/officepolicies).
+  2. Apply the cloud policy to a security group that the target users are members of.
 
-     :::image type="content" source="media/set-default-font/policy-management.svg" alt-text="Screenshot to edit policy configuration in Policy Management." border="false":::
+     :::image type="content" source="media/set-default-font/policy-management.svg" alt-text="Screenshot of the edit policy configuration in Policy Management." border="false":::
 
 - **Set a GPO (for Excel 2016):**
 
@@ -57,29 +65,30 @@ For more information, see [Change the default settings for new documents](https:
 
   :::image type="content" source="media/set-default-font/gpo-font.svg" alt-text="Screenshot to set Font Group Policy Object in Excel 2016." border="false":::
 
-## Set the default font for PowerPoint (for both Microsoft 365 and Office 2016)
+## Set the default font for PowerPoint
 
 To set default font for PowerPoint, set a default theme, and save it as a .potx file.
 
 > [!NOTE]
 > Setting the default template requires the following items:
+>
 > - The correct file name: **Default Theme.potx**
 > - The correct location: **%Appdata%\Microsoft\Templates\Document Themes**
 
 To set the default theme, follow these steps:
 
 1. Start PowerPoint.
-2. Open an existing PowerPoint template that you have configured by using the font and styles that you want to set as the default.
-3. Select **File** > **Save As**.
-4. Select **PowerPoint Template (*.potx)** in the file type list. This automatically changes the folder location to **Custom Office Templates** (a personal template folder).
+1. Open an existing PowerPoint template that you configured by using the font and styles that you want to set as the default.
+1. Select **File** > **Save As**.
+1. Select **PowerPoint Template (\*.potx)** in the file type list. This selection automatically changes the folder location to **Custom Office Templates** (a personal template folder).
 
    > [!NOTE]
-   > Don't save it here because this enables you to view your template under **Custom Office Templates**.
+   > Don't save the file here because this enables you to view your template under **Custom Office Templates**.
 
-5. Select **More options** to opens a file name dialog box, replace the whole file name with **%Appdata%\Microsoft\Templates\\**, and then press Enter.
-6. In the **Templates** folder, open the **Document Themes** folder. If you see a **Default Theme.potx** file existing in the folder, you can also make a backup of the file. To do this, select the file, press Ctrl+C, and then press Ctrl+V.
-7. Enter the name "**Default Theme**" to manually name the file, and then save it. If a Default Theme.potx file exists, you can also select the Default Theme.potx file, and then select **Save** to overwrite it.
-8. Close PowerPoint, and then select **File** > **New**. Now, you see the default template that's displayed as an option. 
+1. Select **More options** to open a file name dialog box, replace the whole file name with **%Appdata%\Microsoft\Templates\\**, and then press Enter.
+1. In the **Templates** folder, open the **Document Themes** folder. If you see a **Default Theme.potx** file in the folder, you can also make a backup of the file. To make a backup, select the file, press Ctrl+C, and then press Ctrl+V.
+1. Manually name the file "**Default Theme**", and then save it. If a Default Theme.potx file exists, you can also select the Default Theme.potx file, and then select **Save** to overwrite it.
+1. Close PowerPoint, and then select **File** > **New**. The default template is now displayed as an option.
 
    :::image type="content" source="media/set-default-font/default-template.svg" alt-text="Screenshot shows the Default Theme that's displayed as an option." border="false":::
 

@@ -122,9 +122,7 @@
     "fileMetadata": {
       "ms.service": {
         "SkypeOnline/**/*.md": "skype-for-business-online",
-        "SkypeHybrid/**/*.md": "skype-for-business-online",
-        "SkypeServer/**/*.md": "skype-for-business-server",
-        "SkypeExperts/**/*.md": "skype-for-business-server"
+        "SkypeServer/**/*.md": "skype-for-business-server"
       },
       "author": {
         "**/*.md": "helenclu"
