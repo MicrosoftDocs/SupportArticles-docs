@@ -61,7 +61,7 @@ xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
 ```
 
 > [!IMPORTANT]
-> The event text contains a blank account name.
+> The text of the event has a blank account name: **The account name was ...**.
 >
 > If the event ID lists a different account name or lookup type, it might be a separate issue that requires investigation.
 
