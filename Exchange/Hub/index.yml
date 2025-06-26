@@ -88,7 +88,7 @@ productDirectory:
     - title: OneDrive
       imageSrc: /office/media/logos/logo-onedriveforbusiness.svg
       links:
-        - url: /troubleshoot/sharepoint/support/onedrive-welcome
+        - url: /troubleshoot/sharepoint/onedrive-welcome
           text: OneDrive for Business
    # Card
     - title: Microsoft Viva
