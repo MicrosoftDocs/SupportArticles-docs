@@ -74,10 +74,6 @@ productDirectory:
       links:
         - url: /troubleshoot/skypeforbusiness/skype-server-welcome
           text: Skype for Business Server
-        - url: /troubleshoot/skypeforbusiness/skype-hybrid-welcome
-          text: Skype for Business Hybrid
-        - url: /troubleshoot/skypeforbusiness/skype-experts-welcome
-          text: From the Skype for Business Experts
     # Card
     - title: Microsoft Outlook
       imageSrc: /media/logos/logo-outlook.svg
