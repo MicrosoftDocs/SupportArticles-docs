@@ -112,7 +112,7 @@
       "recommendations": true,
       "feedback_system": "Standard",
       "hideEdit": true,
-      "uhfHeaderId": "MSDocsHeader-Outlook.yml",
+      "uhfHeaderId": "MSDocsHeader-Outlook",
       "titleSuffix": "Outlook",
       "searchScope": ["Outlook Support"],
       "contributors_to_exclude": [ 
