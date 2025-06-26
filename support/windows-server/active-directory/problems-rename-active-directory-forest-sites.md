@@ -1,7 +1,7 @@
 ---
 title: You may experience problems when you rename sites in the Active Directory forest
 description: Describes the problems that you may experience when you rename sites in the Active Directory forest.
-ms.date: 01/15/2025
+ms.date: 06/18/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,7 +14,8 @@ ms.custom:
 
 This article describes the problems that you may experience when you rename sites in the Active Directory forest.
 
-_Original KB number:_ &nbsp; 920718
+_Original KB number:_ &nbsp; 920718  
+_Applies to:_ &nbsp; All supported versions of Windows Server
 
 ## More information
 

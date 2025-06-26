@@ -1,0 +1,84 @@
+### YamlMime:Landing
+
+title: Outlook for Windows troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Outlook for Windows. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Outlook for Windows troubleshooting
+  description: Documentation for troubleshooting common issues with Outlook for Windows.
+  ms.topic: landing-page
+  author: cloud-writer
+  ms.author: meerak
+  ms.date: 01/30/2024
+  ms.service: outlook
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Calendaring
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: How to open a shared calendar
+            url: /microsoft-365-apps/outlook/calendaring/open-shared-calendar
+          - text: How to share calendar and contacts
+            url: /microsoft-365-apps/outlook/calendaring/share-calendar-and-contacts
+          - text: Manage Room Finder
+            url: /microsoft-365-apps/outlook/calendaring/room-finder
+  # Card
+  - title: Authentication
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Continually password prompts
+            url: ./authentication/continually-prompts-password-office-365.md
+          - text: Doesn't use Modern Authentication to connect Microsoft 365
+            url: ./authentication/outlook-prompt-password-modern-authentication-enabled.md
+          - text: Password prompt at every start or can't create profile
+            url: ./authentication/password-prompt-at-every-start-or-cannot-create-profile.md
+ # Card
+  - title: Data files
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: How to manage .pst files
+            url: /previous-versions/troubleshoot/outlook/how-to-manage-pst-files
+          - text: How to repair personal folder file (.pst)
+            url: ./data-files/how-to-repair-personal-folder-file.md
+          - text: Only some emails are synchronized
+            url: ./data-files/fewer-emails-in-shared-mailboxes-or-public-folders.md
+ # Card
+  - title: Synchronization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Email stays in Outbox until manually send or receive
+            url: ./synchronization/email-stays-in-outbox-until-manually-send-or-receive.md
+          - text: Error 0x8004010F when sending or receiving email
+            url: ./synchronization/error-0x8004010f-when-sending-or-receiving-emails.md
+          - text: Synchronization issues occur in Outlook and OWA
+            url: ./synchronization/synchronization-issues-occur-in-outlook-owa.md        
+ # Card
+  - title: Message body
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Hyperlinks don't work
+            url: ./message-body/hyperlinks-not-working-in-outlook.md
+          - text: Attachment size exceeds the allowable limit error
+            url: ./message-body/attachment-size-exceeds-the-allowable-limit-error.md
+          - text: The Linked image cannot be displayed error
+            url: ./message-body/the-linked-image-cannot-be-displayed-error.md
+ # Card
+  - title: Files
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Outlook freezes or "Outlook not responding" error
+            url: ./performance/outlook-not-responding-error-or-outlook-freezes.md
+          - text: Performance issues with too many items or folders
+            url: ./performance/performance-issues-if-too-many-items-or-folders.md
+          - text: Scan by using Microsoft Support and Recovery Assistant
+            url: ./performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant.md
+            

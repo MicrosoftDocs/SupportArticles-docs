@@ -1,0 +1,128 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "src": "Hub",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "**/docfx.json",
+          "_repo.en-us/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices.md",
+          "SECURITY.md"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "ExchangeServer",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "ExchangeOnline",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "ExchangeHybrid",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.pdf",
+          "**/*.svg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "**/docfx.json",
+          "_repo.en-us/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/troubleshoot/exchange/breadcrumb/toc.json",
+      "recommendations": true,
+      "feedback_system": "Standard",
+      "titleSuffix": "Exchange",
+      "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "searchScope": ["Exchange Support"],
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
+    },
+    "fileMetadata": {
+      "feedback_system": {
+        "ExchangeOnline/**/*.md": "Standard"
+      },
+      "feedback_product_url": {
+        "ExchangeOnline/**/*.md": "https://admin.exchange.microsoft.com"
+      },
+      "ms.service": {
+        "ExchangeOnline/**/*.md": "exchange-online",
+        "ExchangeHybrid/**/*.md": "exchange-online",
+        "ExchangeServer/**/*.md": "exchange-server-it-pro"
+      },
+      "author": {
+        "**/*.md": "cloud-writer"
+      },
+      "ms.author": {
+        "**/*.md": "meerak"
+      }
+    },
+    "template": [],
+    "dest": "OfficeDocs-Support-Exchange",
+    "markdownEngineName": "markdig"
+  }
+}

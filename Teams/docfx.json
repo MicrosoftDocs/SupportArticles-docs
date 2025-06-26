@@ -1,0 +1,70 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices.md",
+          "SECURITY.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "**/docfx.json",
+          "_repo.en-us/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/troubleshoot/microsoftteams/breadcrumb/toc.json",
+      "recommendations": true,
+      "feedback_system": "Standard",
+      "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472",
+      "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
+      "titleSuffix": "Microsoft Teams",
+      "searchScope": ["Teams Support"],
+      "contributors_to_exclude": [ 
+        "beccarobins"
+      ]
+    },
+    "fileMetadata": {
+      "ms.service": {
+        "**/*.md": "msteams"
+      },
+      "author": {
+        "**/*.md": "helenclu"
+      },
+      "ms.author": {
+        "**/*.md": "luche"
+      }
+    },
+    "template": [],
+    "dest": "OfficeDocs-Support-MicrosoftTeams",
+    "markdownEngineName": "markdig"
+  }
+}

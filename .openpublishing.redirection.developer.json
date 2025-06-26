@@ -6418,6 +6418,10 @@
     {
       "source_path": "support/windows/win32/navigation-bar-not-update-navigating-shell-namespace-extension-folders.md",
       "redirect_url": "/troubleshoot/windows/win32/welcome-windowsdeveloper"
+    },
+    {
+      "source_path": "support/sql/database-engine/database-file-operations/support-iscsi-technology-components.md",
+      "redirect_url": "/sql/relational-databases/sql-server-storage-guide#iscsi"
     }
   ]
 }
