@@ -184,10 +184,10 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
    ```output
 
       K8S.NODE                       K8S.NAMESPACE             K8S.PODNAME                 MEMORYVIRTUAL    MEMORYRSS   MEMORYRELATIVE
-      aks-agentpool-3…901-vmss000001 default                   memory-stress               944521216        943947776              5.6
-      aks-agentpool-3…901-vmss000001 default                   memory-stress               944521216        943947776              5.6
-      aks-agentpool-3…901-vmss000001 default                   memory-stress               944521216        872644608              5.2
-      aks-agentpool-3…901-vmss000001 default                   memory-stress               944521216        797147136              4.8
+      aks-agentpool-3…901-vmss000001 default                   memory-stress                      944 MB       943 MB              5.6
+      aks-agentpool-3…901-vmss000001 default                   memory-stress                      944 MB       943 MB              5.6
+      aks-agentpool-3…901-vmss000001 default                   memory-stress                      944 MB       872 MB              5.2
+      aks-agentpool-3…901-vmss000001 default                   memory-stress                      944 MB       796 MB              4.8
       aks-agentpool-3…901-vmss000000                                                       436805632        339316736              2.0
    ```   
 
