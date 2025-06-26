@@ -43,6 +43,9 @@ System configuration   | Source OS version| Target version     |
 |SAP NetWeaver and other SAP Applications |  RHEL 7.9         | RHEL 8.10 (default) |
 
 > [!NOTE]  
+> For more information, see [Supported in-place upgrade paths for Red Hat Enterprise Linux](https://access.redhat.com/articles/4263361)
+
+> [!NOTE]  
 > To update an SAP-HANA PAYG VM running on RHEL 7.7 or an earlier version, you must first upgrade it to RHEL 7.9. For detailed instructions, see [How to upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 7.x to 7.9](upgrade-rhel-7dotx-to-7dot9-sap-hana-apps.md).
 
 According to the [Upgrading SAP HANA System](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_for_sap_solutions/8/html/upgrading_sap_environments_from_rhel_7_to_rhel_8/asmb_upgrading-hana-system_asmb_planning-upgrade) documentation, SAP validates SAP HANA for RHEL minor versions that receive package updates for longer than six months. Therefore, for SAP HANA hosts, the upgrade paths include only Extended Update Support (EUS)/Update Services for SAP Solutions (E4S) releases and the last minor release for a given major release.
