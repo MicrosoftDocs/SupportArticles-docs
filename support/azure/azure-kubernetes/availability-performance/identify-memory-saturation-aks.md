@@ -176,7 +176,7 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
    kubectl gadget run top_process --sort memoryRelative --node <node-name> 
    
    # Monitor processes in a specific namespace
-   kubectl gadget run top_process --sort memoryRelative --namespace <namespace-name> 
+   kubectl gadget run top_process --sort memoryRelative --namespace <namespace> 
    ```
 
    The output of the Inspektor Gadget `top_process` command resembles the following:
