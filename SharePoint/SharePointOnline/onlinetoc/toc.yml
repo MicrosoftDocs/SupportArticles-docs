@@ -391,7 +391,7 @@
       href: ../Workflows/replace-list-item-permission-fail.md
     - name: SharePoint 2013 workflow HTTP Unauthorized
       href: ../workflows/workflow-http-unauthorized.md
-    - name: SharePoint 2013 Workflow Error 'â€œTo try again, reload the pageâ€'
+    - name: SharePoint 2013 Workflow Error '"To try again, reload the page"'
       href: ../workflows/reload-the-page.md
     - name: Workflow contains blank values in output
       href: ../Workflows/workflow-contains-blank-values.md
