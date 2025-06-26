@@ -1,4 +1,4 @@
-- name: OneDrive for Business Troubleshooting
+﻿- name: OneDrive for Business Troubleshooting
   href: ../onedrive-welcome.yml
   items:
   - name: Administration
@@ -17,8 +17,6 @@
       href: ../../SharePointOnline/lists-and-libraries/file-post-processing-takes-up-to-24-hours.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Security
     items:
-    - name: Documents deleted by retention policy after workload is removed
-      href: ../security/retention-policies-deleting-documents-after-workload-removal.md
     - name: There is a problem with your account when opening documents
       href: ../../SharePointOnline/Security/problem-with-your-account.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Search
@@ -54,7 +52,7 @@
     - name: Troubleshooting guide stops at provisioning stage
       href: ../../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: You can't edit your files because your license to use OneDrive ended
-      href: ../sites/cannot-edit-files-onedrive-license-end.md      
+      href: ../sites/cannot-edit-files-onedrive-license-end.md
   - name: Sync
     items:
     - name: Can't connect to the specified SharePoint site
@@ -93,7 +91,7 @@
       href: ../sync/sign-into-onedrive-error-0x8004e4d0.md
     - name: Sign into OneDrive sync app error AADSTS50020
       href: ../sync/sign-into-onedrive-sync-app-error.md
-    - name: Sync error "Sorry, OneDrive can't add your folder right now" 
+    - name: Sync error "Sorry, OneDrive can't add your folder right now"
       href: ../sync/cant-add-folder-right-now.md
     - name: Sync error FSLogix_unsupported_environment on virtual machines
       href: ../sync/fslogix-unsupported-environment-sync-error-vm.md

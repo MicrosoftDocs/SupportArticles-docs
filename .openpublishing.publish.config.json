@@ -195,7 +195,8 @@
     ".openpublishing.redirection.developer.json",
     "support/azure/.openpublishing.redirection.azure.json",
     "support/system-center/.openpublishing.redirection.systemcenter.json",
-    "SkypeForBusiness/.openpublishing.redirection.skypeforbusiness.json"
+    "SkypeForBusiness/.openpublishing.redirection.skypeforbusiness.json",
+    "SharePoint/.openpublishing.redirection.SharePoint.json"
   ],
   "need_generate_pdf_url_template": true
 }

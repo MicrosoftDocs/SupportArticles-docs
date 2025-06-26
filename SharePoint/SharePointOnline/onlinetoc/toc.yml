@@ -1,4 +1,4 @@
-- name: SharePoint Online Troubleshooting
+﻿- name: SharePoint Online Troubleshooting
   href: ../sharepoint-online-welcome.yml
   items:
   - name: Administration
@@ -11,8 +11,6 @@
       href: ../administration/api-access-does-not-appear.md
     - name: '"Could not connect to SharePoint Online" error'
       href: ../administration/connect-sposervice-error.md
-    - name: Temporary changes in process schedule for SharePoint Online services 
-      href: ../administration/temporary-adjustments-in-sharepoint-online.md
     - name: '"Sync to Outlook" button and "Task" link are missing'
       href: ../administration/sync-to-outlook-tasks-link-missing.md
     - name: Authentication errors when client doesn't have TLS 1.2 support
@@ -21,8 +19,6 @@
       href: ../administration/authentication-errors-windows7.md
     - name: Authentication issues in SharePoint Designer 2013
       href: ../administration/authentication-issues-in-sharepoint-designer-2013.md
-    - name: Automatic EXIF property import unsupported
-      href: ../administration/automatic-exif-property-import-unsupported.md
     - name: Create a default Site collection Term Set if none is present
       href: ../administration/create-default-site-term-set.md
     - name: Creation of team site from SharePoint Home doesn't complete
@@ -45,16 +41,10 @@
       href: ../administration/promoted-link-invalid-url.md
     - name: Issue when browsing to a SharePoint site
       href: ../administration/access-to-sharepoint-online-is-monitored.md
-    - name: Issue with Send To connection
-      href: ../administration/troubleshoot-send-to-connection-error.md
     - name: Issue with the SharePoint Hybrid Picker
       href: ../administration/troubleshoot-error-when-you-use-hybrid-picker.md
-    - name: .NET update causes SharePoint provider-hosted add-in running on Azure to stop working
-      href: ../administration/NET-update-causes-azure-add-in-to-stop-working.md
     - name: Online information about ULS log access
       href: ../administration/information-about-uls-log-access.md
-    - name: Presence information doesn't show
-      href: ../administration/presence-information-fails-showing.md
     - name: Profile picture not shown in SharePoint Online
       href: ../administration/profile-picture-not-showing.md
     - name: Remove assembly reference from Sandbox solution
@@ -64,7 +54,7 @@
     - name: SharePoint Online out of storage space
       href: ../administration/out-of-storage.md
     - name: Third-party tools changes support
-      href: ../administration/third-party-tools-change-support.md    
+      href: ../administration/third-party-tools-change-support.md
     - name: Troubleshoot site collection upgrade issues
       href: ../administration/troubleshoot-site-collection-upgrade-issue.md
     - name: Unable to delete items in SharePoint and OneDrive
@@ -74,12 +64,12 @@
     - name: Uncompiled audiences are present in SharePoint Online
       href: ../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md
     - name: Unable to access SharePoint Online
-      href: ../administration/sharepoint-online-inaccessible.md  
+      href: ../administration/sharepoint-online-inaccessible.md
     - name: Using relative URLs isn't supported
       href: ../lists-and-libraries/relative-url-across-site-collection-not-supported.md
   - name: Diagnostics
     items:
-    - name: Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive 
+    - name: Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive
       href: ../diagnostics/sharepoint-and-onedrive-diagnostics.md
   - name: Apps
     items:
@@ -91,8 +81,6 @@
       href: ../apps/fails-opening-access-desktop-database.md
     - name: Issue with updating a SharePoint app
       href: ../apps/fails-updating-sharepoint-app.md
-    - name: MSN Weather Service API is retired
-      href: ../apps/msn-weather-service-api-retired.md
     - name: Site collection admins can't register apps or update permissions
       href: ../apps/cannot-register-app-update-permissions.md
     - name: This content can't be displayed in a frame
@@ -105,8 +93,6 @@
       href: ../InfoPath/infopath-forms-services.md
     - name: InfoPath can't open the selected form when opening an InfoPath Filler form
       href: ../InfoPath/fails-opening-infopath-filler-form.md
-    - name: Issue when clicking an InfoPath form in mobile view
-      href: ../InfoPath/click-infopath-form-mobile-view.md
     - name: Issue when connecting an InfoPath form
       href: ../InfoPath/fails-connecting-infopath-form.md
   - name: Lists and Libraries
@@ -115,12 +101,6 @@
       href: ../lists-and-libraries/drag-files-here-option-missing.md
     - name: 0x80070005 error for an online list sync
       href: ../lists-and-libraries/sync-sharepoint-list-error-0x80070005.md
-    - name: An online list opens the form dialog box when adding items
-      href: ../lists-and-libraries/calendar-view-list-opens-dialog-box.md
-    - name: Asset library displays a film reel icon for the video content type
-      href: ../lists-and-libraries/film-reel-icon-video-content.md
-    - name: Can't check in multiple items in a document library
-      href: ../lists-and-libraries/cannot-check-in-multiple-items.md
     - name: Can't delete Teams channel folders
       href: ../lists-and-libraries/deleted-teams-standard-channel-folder-deletion-fails.md
     - name: Can't open documents in a local client from Chrome
@@ -131,7 +111,7 @@
       href: ../lists-and-libraries/cannot-sync-files-folders.md
     - name: Can't sync recurring Calendar items with error 0x80004005
       href: ../lists-and-libraries/outlook-not-sync-recurring-calendar-items.md
-    - name: Change to default content type setting for new lists 
+    - name: Change to default content type setting for new lists
       href: ../lists-and-libraries/change-to-how-lists-are-named.md
     - name: Changes to default versioning setting for document libraries
       href: ../lists-and-libraries/library-versioning-setting-changes.md
@@ -139,14 +119,8 @@
       href: ../lists-and-libraries/determine-known-folder-move-eligibility.md
     - name: Common issues syncing SharePoint lists offline
       href: ../lists-and-libraries/common-sync-issues.md
-    - name: Content Organizer doesn't comply with specified interval
-      href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
-    - name: Content Organizer doesn't comply with specified interval
-      href: ../lists-and-libraries/content-organizer-not-comply-with-interval.md
     - name: Default column name shown in list settings
       href: ../lists-and-libraries/default-column-name-still-shown.md
-    - name: Documents aren't displayed in web browser with TLS 1.2
-      href: ../lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2.md
     - name: Edit column doesn't display the edit link
       href: ../lists-and-libraries/edit-column-fails-displaying-edit-link.md
     - name: Error when creating a list from Excel
@@ -167,8 +141,6 @@
       href: ../lists-and-libraries/o365-portal-fails-creating-documents.md
     - name: Issue when deleting an online list item attachment
       href: ../lists-and-libraries/list-item-fails-saving-same-attachment.md
-    - name: Issue when opening documents in client applications
-      href: ../lists-and-libraries/the-webpage-cannot-be-displayed-when-open-an-office-document.md
     - name: Issue when saving a list or library as template
       href: ../lists-and-libraries/fails-saving-list-as-template.md
     - name: Issue when sorting or filtering a column
@@ -177,11 +149,9 @@
       href: ../lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md
     - name: Lists and Libraries Modern View Compatibility check
       href: ../lists-and-libraries/modern-view-compatibility-checklist.md
-    - name: Minimal Download Strategy feature isn't used for a list or library
-      href: ../lists-and-libraries/mds-functionality-unaffect-library.md
     - name: Modified time isn't displayed correctly for an online list item
       href: ../lists-and-libraries/modified-time-shows-incorrectly.md
-    - name: Mentions in SharePoint documents don’t send email to participant
+    - name: Mentions in SharePoint documents don't send email to participant
       href: ../lists-and-libraries/no-email-after-mention.md
     - name: Number of items in this list exceeds the list view threshold
       href: ../lists-and-libraries/items-exceeds-list-view-threshold.md
@@ -197,9 +167,7 @@
       href: ../lists-and-libraries/files-open-as-read-only-and-cannot-check-in-or-out.md
     - name: Simple controls are missing for a document library
       href: ../lists-and-libraries/simple-controls-missing.md
-    - name: Slow "Open with Explorer" performance on Windows 8 or Windows Server 2012
-      href: ../lists-and-libraries/slow-open-with-explorer-performance.md
-    - name: Task list shows item title as .000 
+    - name: Task list shows item title as .000
       href: ../lists-and-libraries/task-list-shows-000.md
     - name: Template-generated list doesn't display correct column data
       href: ../lists-and-libraries/template-generated-list-incorrect-data.md
@@ -224,7 +192,7 @@
     - name: '"Not all terms were imported successfully" error with importing term set'
       href: ../search/troubleshoot-error-when-importing-a-term-set.md
     - name: Classic site collection search usage reports
-      href: ../search/classic-site-collection-search-usage-reports.md  
+      href: ../search/classic-site-collection-search-usage-reports.md
     - name: Document preview and content type icon aren't displayed
       href: ../Search/content-type-icon-not-display.md
     - name: Items are missing from online search results
@@ -283,10 +251,6 @@
       href: ../sharing-and-permissions/cannot-add-external-users-to-content-type.md
     - name: Can't share/break inheritance of a folder, list, or library
       href: ../lists-and-libraries/error-share-break-inheritance.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: Creator of teams group is listed as an admin
-      href: ../sharing-and-permissions/fails-retrieving-teams-group-owner.md
-    - name: Credential prompts after resting mouse pointer over a user name
-      href: ../sharing-and-permissions/rest-mouse-pointer-on-user-name.md
     - name: Email invitation isn't received
       href: ../sharing-and-permissions/everyone-group-not-receive-email-invitation.md
     - name: Error when accepting an online invitation with another account
@@ -309,12 +273,10 @@
       href: ../sharing-and-permissions/no-verification-code-to-access-shared-secure-link.md
     - name: Option isn't received to request access to resource
       href: ../sharing-and-permissions/request-access-to-resource.md
-    - name: Required permissions for managing Secure Store Service
-      href: ../sharing-and-permissions/managing-secure-store-service-app-permissions.md
     - name: Sharing options are greyed out when sharing from SharePoint Online or OneDrive
       href: ../sharing-and-permissions/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive.md
-    - name: SSL certificate authentication issues 
-      href: ../sharing-and-permissions/ssl-certificate-authentication.md    
+    - name: SSL certificate authentication issues
+      href: ../sharing-and-permissions/ssl-certificate-authentication.md
     - name: Unable to reach the server when sharing files
       href: ../sharing-and-permissions/share-file-unable-reach-server.md
     - name: You aren't allowed to create team sites
@@ -338,7 +300,7 @@
     - name: Can't find specified web in the given URL
       href: ../Sites/cannot-find-specified-web-given-url.md
     - name: Can't permanently delete a site when it's connected to a Microsoft 365 group
-      href: ../Sites/cannot-permanently-delete-site.md    
+      href: ../Sites/cannot-permanently-delete-site.md
     - name: Customizations of the top navigation bar are reverted
       href: ../Sites/customizations-revert-to-default-settings.md
     - name: Error "Site is protected by Microsoft 365 Backup and cannot be deleted"
@@ -348,7 +310,7 @@
     - name: Error when trying to change site logo on Microsoft 365 group SharePoint site
       href: ../sites/error-when-changing-o365-site-logo.md
     - name: Error when trying to delete a SharePoint site
-      href: ../sites/compliance-policy-blocking-site-deletion.md    
+      href: ../sites/compliance-policy-blocking-site-deletion.md
     - name: Issue when activating Announcement Tiles feature
       href: ../Sites/announcement-tiles-not-supported.md
     - name: Issue when creating an online site
@@ -365,14 +327,10 @@
       href: ../sites/notification-email-not-received.md
     - name: Public websites are discontinued
       href: ../Sites/public-websites-be-discontinued.md
-    - name: Rich Text fields don't respond
-      href: ../Sites/rich-text-fields-fails-responding.md
     - name: SharePoint Online alert notifications aren't received
       href: ../Sites/no-alert-notifications.md
     - name: SharePoint or OneDrive read-only error messages
       href: ../Sites/site-is-read-only.md
-    - name: Site doesn't use the site theme for top navigation bar
-      href: ../Sites/top-navigation-bar-not-use-site-theme.md
     - name: Site is at or near the metadata limit
       href: ../sites/site-reached-metadata-limit.md
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive
@@ -381,7 +339,7 @@
       href: ../sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md
     - name: Unable to delete a SharePoint site
       href: ../sites/unable-to-delete-site.md
-    - name: Unable to schedule page publishing after changing a content type 
+    - name: Unable to schedule page publishing after changing a content type
       href: ../sites/cant-schedule-publish.md
   - name: Synchronization
     items:
@@ -391,14 +349,10 @@
       href: ../../SharePointServer/sync/sharepoint-workspace-not-sync-with-online.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Video
     items:
-    - name: Can’t view embedded Stream video in Teams app
+    - name: Can't view embedded Stream video in Teams app
       href: ../video/cant-view-embedded-video.md
   - name: Web Parts
     items:
-    - name: A list view Web Part for a tasks list doesn't filter values
-      href: ../Web-parts/list-view-web-part-not-filter-values.md
-    - name: A WSRP Viewer Web Part contains no Producer options
-      href: ../Web-parts/wspr-viewer-web-part-unsupported.md
     - name: An online Web Part doesn't display
       href: ../Web-parts/fails-displaying-web-part-including-xslt-code.md
     - name: Issue on a site page with pages library web part
@@ -411,14 +365,10 @@
       href: ../Web-parts/aspx-page-not-display-content.md
     - name: '"Something went wrong" error configuring SPFx component in a SharePoint Online page'
       href: ../web-parts/something-went-wrong-error-configuring-spfx-component.md
-    - name: Unable to drag and drop web parts onto classic pages in SharePoint Online
-      href: ../web-parts/unable-to-drag-drop-web-parts.md
     - name: Unable to create alerts for views in SharePoint
       href: ../web-parts/unable-to-create-view-alerts.md
   - name: Workflows
     items:
-    - name: '"Access denied" error with an Approval Workflow task'
-      href: ../workflows/access-denied-when-approve-workflow-task.md
     - name: A workflow doesn't complete
       href: ../Workflows/workflow-using-impersonation-step-fails-completed.md
     - name: A workflow doesn't execute
@@ -435,15 +385,13 @@
       href: ../Workflows/item-pending-status.md
     - name: Nintex workflow on SharePoint Online fails to start
       href: ../Workflows/nintex-workflow-fails-to-start.md
-    - name: Outlook doesn't respond when approving an online approval workflow
-      href: ../Workflows/outlook-fails-responding-sharepoint-workflow.md
     - name: Publishing Approval workflow doesn't automatically start
       href: ../Workflows/publishing-approval-workflow-fails-starting.md
     - name: Replace List Item Permissions action fails
       href: ../Workflows/replace-list-item-permission-fail.md
     - name: SharePoint 2013 workflow HTTP Unauthorized
       href: ../workflows/workflow-http-unauthorized.md
-    - name: SharePoint 2013 Workflow Error '“To try again, reload the page”'
+    - name: SharePoint 2013 Workflow Error '"To try again, reload the page"'
       href: ../workflows/reload-the-page.md
     - name: Workflow contains blank values in output
       href: ../Workflows/workflow-contains-blank-values.md
@@ -451,5 +399,3 @@
       href: ../Workflows/workflow-update-list-item-fail.md
     - name: Workflow issues after connecting to a site
       href: ../Workflows/connecting-site-workflow-problems.md
-    - name: Workflow platform creates Word files that can't be opened
-      href: ../Workflows/workflow-platform-created-word-fails-opening.md
