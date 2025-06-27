@@ -3,7 +3,7 @@ title: Troubleshoot ASP.NET OWIN and ASP.NET Core authentication sign-in failure
 description: Helps you expose hidden error messages that can guide you toward resolving ASP.NET OWIN and ASP.NET Core authentication sign-in failures with Microsoft Entra ID.
 ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
-ms.date: 06/25/2025
+ms.date: 06/27/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Troubleshoot ASP.NET OWIN and ASP.NET Core authentication sign-in failures with Microsoft Entra ID
@@ -27,15 +27,119 @@ To expose hidden errors during the sign-in process, use the `OnAuthenticationFai
 
 ### For ASP.NET OWIN
 
-Ensure your code for handling the `AuthenticationFailed` event in the *Startup.Auth.cs* file follows a structure similar to the following:
+Ensure your code for the `AuthenticationFailed` event in the *Startup.Auth.cs* file follows this structure:
 
-[ASPNET\_OWIN\_OnAuthenticationFailed.cs](https://gist.github.com/ms-willfid/813dd19091dfa8650895182cb45d5d1c)
+```csharp
+public void ConfigureAuth(IAppBuilder app)
+{
+    app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);
+
+    app.UseCookieAuthentication(new CookieAuthenticationOptions());
+
+    app.UseOpenIdConnectAuthentication(
+        new OpenIdConnectAuthenticationOptions
+        {
+            ResponseType = OpenIdConnectResponseType.CodeIdToken,
+            ClientId = clientId,
+            Authority = Authority,
+           //...
+
+            Notifications = new OpenIdConnectAuthenticationNotifications()
+            {
+                // If there is a code in the OpenID Connect response, redeem it for an access token
+                AuthorizationCodeReceived = (context) =>
+                {
+                    // ...
+                },
+
+                // On Authentication Failed
+                AuthenticationFailed = (context) =>
+                {
+                    String ErrorMessage = context.Exception.Message;
+                    String InnerErrorMessage = String.Empty;
+
+                    String RedirectError = String.Format("error_message={0}", ErrorMessage);
+
+                    if (context.Exception.InnerException != null)
+                    {
+                        InnerErrorMessage = context.Exception.InnerException.Message;
+                        RedirectError = String.Format("{0}&inner_error={1}", RedirectError, InnerErrorMessage);
+                    }
+
+                    // or you can just throw it
+                  // throw new Exception(RedirectError);
+
+                    RedirectError = RedirectError.Replace("\r\n", "  ");
+
+                    context.Response.Redirect("/?" + RedirectError);
+                    context.HandleResponse();
+                    return Task.FromResult(0);
+                }
+            }
+
+      });
+
+// ...
+```
 
 ### For ASP.NET Core
 
-Ensure your code for handling the `AuthenticationFailed` event in the *Startup.cs* file follows a structure similar to the following:
+Ensure your code for the `AuthenticationFailed` event in the *Startup.cs* file follows this structure:
 
-[ASPNETCore\_Auth\_OnAuthenticationFailed.cs](https://gist.github.com/ms-willfid/813dd19091dfa8650895182cb45d5d1c)
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.Configure<CookiePolicyOptions>(options =>
+    {
+        // ...
+    });
+
+    services.AddAuthentication(AzureADDefaults.AuthenticationScheme)
+        .AddAzureAD(options => Configuration.Bind("AzureAd", options));
+
+    // ...
+
+    services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme, options =>
+    {
+    options.Authority = options.Authority;
+
+    // Token Validation
+    options.TokenValidationParameters.IssuerValidator = AadIssuerValidator.ValidateAadIssuer;
+
+    // Response type
+    options.ResponseType = "id_token code";
+
+    // On Authorization Code Received
+    options.Events.OnAuthorizationCodeReceived = async context =>
+    {
+        // ...
+    };
+
+    // On Authentication Failed
+    options.Events.OnAuthenticationFailed = async context =>
+    {
+        String ErrorMessage = context.Exception.Message;
+        String InnerErrorMessage = String.Empty;
+
+        String RedirectError = String.Format("?error_message={0}", ErrorMessage);
+
+        if (context.Exception.InnerException != null)
+        {
+            InnerErrorMessage = context.Exception.InnerException.Message;
+            RedirectError = String.Format("{0}&inner_error={1}", RedirectError, InnerErrorMessage);
+        }
+
+       // or you can just throw it
+       // throw new Exception(RedirectError);
+
+        RedirectError = RedirectError.Replace("\r\n", "  ");
+
+        context.Response.Redirect(RedirectError);
+        context.HandleResponse();
+    };
+
+    // ...
+```
 
 You can modify this to send the error message to your logs or send it to a custom error page. At a minimum, the error message should be displayed in the browser's address bar.
 
