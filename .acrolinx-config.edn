@@ -1,2 +1,2 @@
 {:allowed-branchname-matches ["main"]
- :allowed-filename-matches ["support/"]}
+ :allowed-filename-matches ["Exchange/" "Microsoft365/" "Office/" "Outlook/" "SharePoint/" "SkypeforBusiness/" "Teams/" "Viva/" "support/"]}

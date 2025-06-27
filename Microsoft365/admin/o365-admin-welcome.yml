@@ -1,0 +1,85 @@
+### YamlMime:Landing
+
+title: Microsoft 365 Administration troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when performing Microsoft 365 administrative tasks. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Microsoft 365 Administration troubleshooting
+  description: Documentation for troubleshooting common issues with Microsoft 365 Administration.
+  ms.service: microsoft-365-admin
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 03/27/2023
+  hideEdit: true
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Access Management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Adding guest users in the M365 admin center
+            url: ./access-management/cannot-add-guest-users-in-m365-admin-center.md
+          - text: '"Application configuration incomplete" error'
+            url: /microsoft-365/troubleshoot/access-management/error-run-office-365-desktop-setup-tool
+          - text: Can't open an IRM-protected document with sign-in prompts
+            url: ./access-management/cannot-open-irm-protected-document.md
+
+  - title: Active Directory
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"AADSTS65005" error when signing in to cloud services'
+            url: ./active-directory/aadsts65005-error-when-sign-in-cloud.md
+          - text: '"Duplicate" is displayed in the ERROR column'
+            url: ./active-directory/run-idfix-dirsync-error-remediation-tool.md
+          - text: '"This does not look like a valid user ID" when you sign in'
+            url: ./active-directory/this-doesnt-look-like-valid-user-id-error.md
+
+  - title: Authentication
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: 80041317 or 80043431 during sign-in
+            url: /previous-versions/troubleshoot/microsoft-365/admin/office-365-sign-in-error-80041317-80043431
+          - text: 8004789A when signing in to Microsoft 365
+            url: ./authentication/federated-user-sign-in-to-office-365.md
+          - text: 80048163 when federated user tries to sign in
+            url: ./authentication/federated-user-fails-signing-in.md
+
+  - title: Diagnostic Logs
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Collect a Network Monitor trace in Microsoft 365
+            url: /microsoft-365/troubleshoot/diagnostic-logs/collect-network-monitor-trace
+          - text: Diagnostic log collection in Support and Recovery Assistant
+            url: /microsoft-365/troubleshoot/administration/diagnostic-log-collection-in-support-and-recovery-assistant
+          - text: Enable O365 ProPlus ULS logging
+            url: /office/troubleshoot/office-suite-issues/collect-office-diagnostic-logs
+
+  - title: Domain Management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"Add domain" option is missing'
+            url: /previous-versions/troubleshoot/content-retirement
+          - text: '"Cannot continue" error when starting Desktop Setup Tool'
+            url: /previous-versions/troubleshoot/content-retirement
+          - text: '"Remove" link is unavailable'
+            url: /previous-versions/troubleshoot/microsoft-365/admin/remove-domain-link-unavailable
+
+  - title: Group Policy
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Block OneDrive use from Office
+            url: /microsoft-365/troubleshoot/group-policy/block-onedrive-use-from-office
+          - text: Configure default email client using policy
+            url: ./group-policy/configure-email-client-using-policy.md
+          - text: No Add-ins loaded due to group policy settings 
+            url: /microsoft-365/troubleshoot/group-policy/office-add-in-not-loaded
+

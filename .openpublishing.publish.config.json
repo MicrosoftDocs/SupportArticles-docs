@@ -17,6 +17,118 @@
         "Conceptual": "Content"
       },
       "template_folder": "_themes"
+    },
+    {
+      "docset_name": "SupportArticles-Exchange",
+      "build_source_folder": "Exchange",
+      "build_output_subfolder": "SupportArticles-Exchange",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "SupportArticles-M365",
+      "build_source_folder": "Microsoft365",
+      "build_output_subfolder": "SupportArticles-M365",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "SupportArticles-Office",
+      "build_source_folder": "Office",
+      "build_output_subfolder": "SupportArticles-Office",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "SupportArticles-Outlook",
+      "build_source_folder": "Outlook",
+      "build_output_subfolder": "SupportArticles-Outlook",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "SupportArticles-SharePoint",
+      "build_source_folder": "SharePoint",
+      "build_output_subfolder": "SupportArticles-SharePoint",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
+    },
+    {
+      "docset_name": "SupportArticles-SkypeForBusiness",
+      "build_source_folder": "SkypeForBusiness",
+      "build_output_subfolder": "SupportArticles-SkypeForBusiness",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "SupportArticles-Teams",
+      "build_source_folder": "Teams",
+      "build_output_subfolder": "SupportArticles-Teams",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
+    {
+      "docset_name": "SupportArticles-Viva",
+      "build_source_folder": "Viva",
+      "build_output_subfolder": "SupportArticles-Viva",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs"
     }
   ],
   "notification_subscribers": [
@@ -82,7 +194,9 @@
     ".openpublishing.redirection.json",
     ".openpublishing.redirection.developer.json",
     "support/azure/.openpublishing.redirection.azure.json",
-    "support/system-center/.openpublishing.redirection.systemcenter.json"
+    "support/system-center/.openpublishing.redirection.systemcenter.json",
+    "SkypeForBusiness/.openpublishing.redirection.skypeforbusiness.json",
+    "SharePoint/.openpublishing.redirection.SharePoint.json"
   ],
   "need_generate_pdf_url_template": true
 }

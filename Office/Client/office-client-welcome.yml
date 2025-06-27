@@ -1,0 +1,85 @@
+### YamlMime:Landing
+
+title: Office products troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Microsoft Office products. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Office products troubleshooting
+  description: Documentation for troubleshooting common issues with Microsoft Office products.
+  ms.service: office-perpetual-itpro
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 07/25/2022
+  hideEdit: true
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Word
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: How to recover unsaved documents
+            url: ./word/recover-lost-unsaved-corrupted-document.md
+          - text: How to merge multiple documents
+            url: ./word/merge-word-documents.md
+          - text: Damaged documents in Word
+            url: ./word/damaged-documents-in-word.md
+  # Card
+  - title: Office Suite Issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Error "Do you want to download the converter?"
+            url: https://support.microsoft.com/office/end-of-support-for-office-2010-3a3e45de-51ac-4944-b2ba-c2e415432789
+          - text: Another account is already signed in
+            url: ./office-suite-issues/another-account-already-signed-in.md
+          - text: Error "could not create the work file"
+            url: ./office-suite-issues/no-file-previews-file-explorer-switching-to-32-bit.md
+ # Card
+  - title: Excel
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Formulas to count text occurrences
+            url: /previous-versions/troubleshoot/content-retirement
+          - text: Issue when saving workbooks
+            url: ./excel/issue-when-save-excel-workbooks.md
+          - text: Excel opening blank
+            url: ./excel/excel-opens-blank.md
+ # Card
+  - title: PowerPoint
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Change the export resolution of slide
+            url: ./powerpoint/change-export-slide-resolution.md
+          - text: Troubleshoot a damaged presentation
+            url: ./powerpoint/damaged-presentation.md
+          - text: Fonts aren't embedded
+            url: ./powerpoint/fonts-not-embedded.md  
+ # Card
+  - title: OneNote
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Content Not Yet Available
+            url: ./onenote/onenote-error-content-not-yet-available.md
+          - text: Warning when a notebook is in an offline location
+            url: ./onenote/notebook-offline-location.md
+          - text: Temporary change to file size download limit
+            url: ./onenote/temp-change-onenote-file-size-download.md
+ # Card
+  - title: Access
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Database normalization basics
+            url: ./access/database-normalization-description.md
+          - text: Define relationships between tables
+            url: ./access/define-table-relationships.md
+          - text: Error using special characters
+            url: ./access/error-using-special-characters.md
+            
