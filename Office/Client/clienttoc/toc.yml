@@ -1,5 +1,5 @@
 ﻿items:
-- name: Office Products Troubleshooting
+- name: Microsoft 365 Apps Troubleshooting
   href: ../office-client-welcome.yml
   items:
     - name: Access
