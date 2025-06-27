@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/power-platform/dataverse/working-with-solutions/failure-converting-to-managed-solution.md",
+      "redirect_url": "https://learn.microsoft.com/power-platform/alm/",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/power-automate/desktop-flows/desktop-flow-runs-not-show-monitor-runs.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/desktop-flow-runs-missing-from-list",
       "redirect_document_id": false
