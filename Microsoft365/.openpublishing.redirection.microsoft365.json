@@ -9,6 +9,10 @@
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
+      "source_path": "enterprise/o365-enterprise-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
       "source_path": "enterprise/administration/assistant-outlook-scan.md",
       "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-outlook-scan"
     },
@@ -39,6 +43,22 @@
     {
       "source_path": "enterprise/administration/assistant-outlook-calendar-scan.md",
       "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-outlook-calendar-scan"
+    },
+    {
+      "source_path": "security/o365-security/invalid-security-code-office-365-azure.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "security/microsoft-365-security-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "security/o365-security/account-security-alert-email.md",
+      "redirect_url": "/troubleshoot/microsoft-365/account-security/account-security-alert-email"
+    },
+    {
+      "source_path": "security/o365-security/cannot-access-application-from-ios-device.md",
+      "redirect_url": "/troubleshoot/microsoft-365/account-security/cannot-access-application-from-ios-device"
     }
   ]
 }

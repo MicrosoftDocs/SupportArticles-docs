@@ -18,6 +18,12 @@
       href: ../access-management/issue-with-reset-admin-password.md
     - name: Your session has expired in Office Online
       href: ../access-management/your-session-has-expired-error.md
+  - name: Account Security
+    items:
+    - name: Account security alert email message
+      href: ../account-security/account-security-alert-email.md
+    - name: Can't access application from iOS devices
+      href: ../account-security/cannot-access-application-from-ios-device.md
   - name: Active Directory
     items:
     - name: '"AADSTS65005" error when signing in to cloud services'

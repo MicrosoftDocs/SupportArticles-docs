@@ -27,8 +27,6 @@ productDirectory:
           text: Microsoft 365 admin center
         - url: /troubleshoot/microsoft-365/microsoft-purview-welcome
           text: Microsoft Purview
-        - url: /troubleshoot/microsoft-365/microsoft-365-security-welcome
-          text: Microsoft 365 Security
     # Card
     - title: Microsoft Teams
       imageSrc: /media/logos/logo_MSTeams.svg
