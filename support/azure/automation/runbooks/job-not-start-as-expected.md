@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Issues with Runbook Execution Start Time
 description: Discusses an issue where jobs don't start as expected in Azure Automation.
-ms.date: 06/25/2025
+ms.date: 06/27/2025
 ms.reviewer: adoyle, v-weizhu
 ms.service: azure-automation
 ms.custom: sap:Runbook not working as expected
