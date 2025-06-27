@@ -24,11 +24,14 @@
       "build_output_subfolder": "SupportArticles-Exchange",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "SupportArticles-M365",
@@ -36,11 +39,14 @@
       "build_output_subfolder": "SupportArticles-M365",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "SupportArticles-Office",
@@ -48,11 +54,14 @@
       "build_output_subfolder": "SupportArticles-Office",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "SupportArticles-Outlook",
@@ -60,11 +69,12 @@
       "build_output_subfolder": "SupportArticles-Outlook",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "SupportArticles-SharePoint",
@@ -72,7 +82,7 @@
       "build_output_subfolder": "SupportArticles-SharePoint",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -84,11 +94,14 @@
       "build_output_subfolder": "SupportArticles-SkypeForBusiness",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "SupportArticles-Teams",
@@ -96,11 +109,14 @@
       "build_output_subfolder": "SupportArticles-Teams",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
-        "Conceptual": "Content"
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
     },
     {
       "docset_name": "SupportArticles-Viva",
@@ -108,7 +124,7 @@
       "build_output_subfolder": "SupportArticles-Viva",
       "locale": "en-us",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -178,7 +194,10 @@
     ".openpublishing.redirection.json",
     ".openpublishing.redirection.developer.json",
     "support/azure/.openpublishing.redirection.azure.json",
-    "support/system-center/.openpublishing.redirection.systemcenter.json"
+    "support/system-center/.openpublishing.redirection.systemcenter.json",
+    "SkypeForBusiness/.openpublishing.redirection.skypeforbusiness.json",
+    "SharePoint/.openpublishing.redirection.SharePoint.json",
+    "Microsoft365/.openpublishing.redirection.microsoft365.json"
   ],
   "need_generate_pdf_url_template": true
 }

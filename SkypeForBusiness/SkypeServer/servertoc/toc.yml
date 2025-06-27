@@ -1,0 +1,58 @@
+﻿items:
+- name: Skype for Business Server Troubleshooting
+  href: ../skype-server-welcome.yml
+  items:
+  - name: Conferencing
+    items:
+    - name: Enable the Conferencing Add-in for Outlook
+      href: ../server-conferencing/enable-conferencing-add-in-for-outlook.md
+    - name: Skype for Business broadcasts a dial tone
+      href: ../server-conferencing/sfb-play-dial-tone-teams-call.md
+  - name: Configuration
+    items:
+    - name: '"Set Your Location" field is unavailable'
+      href: /skypeforbusiness/troubleshoot/sfbonline-end-of-support?toc=/SkypeforBusiness/troubleshoot/servertoc/toc.json&bc=/SkypeforBusiness/troubleshoot/breadcrumb/toc.json
+    - name: Central management store replication failures
+      href: ../server-configuration/central-management-store-replication-failures.md
+    - name: Collect log files from Skype for Business Client
+      href: ../server-configuration/collect-log-files.md
+    - name: Disable Automatic Gain Control
+      href: ../server-configuration/disable-automatic-gain-control.md
+    - name: Insufficient access rights when move user command
+      href: ../server-configuration/issue-attempt-move-or-enable-user-command.md
+  - name: Exchange Integration
+    items:
+    - name: MAPI unavailable
+      href: ../server-exchange-integration/mapi-unavailable.md
+    - name: Skype for Business and Exchange integration fails
+      href: ../server-exchange-integration/sfb-and-exchange-integration-fails.md
+  - name: IM and Presence
+    items:
+    - name: Chat history not show in conversation window
+      href: ../server-im-presence/chat-history-not-show-conversation-window.md
+  - name: Install/Uninstall
+    items:
+    - name: '"Get-VM" is not recognized during install of Cloud Connector Edition'
+      href: ../server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md
+    - name: Clean uninstallation of Skype for Business on Mac
+      href: ../server-install-or-uninstall/clean-uninstallation.md
+  - name: Meetings
+    items:
+    - name: "Error 12029: We couldn't connect you to this meeting"
+      href: ../server-meetings/cannot-connect-you-to-this-meeting.md
+    - name: Issue when join Meeting Broadcast as event team member
+      href: ../server-meetings/issue-join-meeting-broadcast.md
+  - name: Mobile Devices
+    items:
+    - name: Issues with Skype for Business for Android
+      href: ../server-mobile-devices/issues-for-android.md
+  - name: Sign-in
+    items:
+    - name: Can't sign in Skype for Business
+      href: ../server-sign-in/unable-to-sign-in-to-sfb.md
+    - name: Client not start when click meeting link in Chrome
+      href: ../server-sign-in/client-not-start-click-meeting-link.md
+    - name: SideBySide event ID 35 is logged
+      href: ../server-sign-in/sidebyside-event-id-35-logged.md
+    - name: Troubleshoot issues related to Skype for Business sign-in
+      href: /skypeforbusiness/troubleshoot/sfbonline-end-of-support?toc=/SkypeforBusiness/troubleshoot/servertoc/toc.json&bc=/SkypeforBusiness/troubleshoot/breadcrumb/toc.json
