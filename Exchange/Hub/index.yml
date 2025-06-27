@@ -23,14 +23,10 @@ productDirectory:
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo-ms-social.png
       links:
-        - url: /troubleshoot/microsoft-365/o365-enterprise-welcome
-          text: Microsoft 365 Enterprise
         - url: /troubleshoot/microsoft-365/o365-admin-welcome
           text: Microsoft 365 admin center
         - url: /troubleshoot/microsoft-365/microsoft-purview-welcome
           text: Microsoft Purview
-        - url: /troubleshoot/microsoft-365/microsoft-365-security-welcome
-          text: Microsoft 365 Security
     # Card
     - title: Microsoft Teams
       imageSrc: /media/logos/logo_MSTeams.svg
@@ -43,7 +39,7 @@ productDirectory:
       imageSrc: /support/media/hub-landing/logo-m365-app.png
       links:
         - url: /troubleshoot/office/office-client-welcome
-          text: Microsoft 365 Apps (Office products)
+          text: Microsoft 365 Apps
         - url: /troubleshoot/office/office-experts-welcome
           text: From the Office Experts
     # Card

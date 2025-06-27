@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Office products troubleshooting
-summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Microsoft Office products. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+title: Microsoft 365 Apps troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Microsoft Microsoft 365 Apps. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
 metadata:
-  title: Office products troubleshooting
-  description: Documentation for troubleshooting common issues with Microsoft Office products.
+  title: Microsoft 365 Apps troubleshooting
+  description: Documentation for troubleshooting common issues with Microsoft Microsoft 365 Apps.
   ms.service: office-perpetual-itpro
   ms.topic: landing-page
   author: helenclu
