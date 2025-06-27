@@ -23,8 +23,6 @@ productDirectory:
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo-ms-social.png
       links:
-        - url: ../enterprise/o365-enterprise-welcome.yml
-          text: Microsoft 365 Enterprise
         - url: ../admin/o365-admin-welcome.yml
           text: Microsoft 365 admin center
         - url: ../purview/microsoft-purview-welcome.yml

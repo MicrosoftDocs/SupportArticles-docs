@@ -1,0 +1,44 @@
+{
+  "redirections": [
+    {
+      "source_path": "enterprise/administration/com-net-errors-after-migration.md",
+      "redirect_url": "/troubleshoot/microsoft-365/access-management/com-net-errors-after-migration"
+    },
+    {
+      "source_path": "enterprise/administration/diagnostic-log-collection-in-support-and-recovery-assistant.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-outlook-scan.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-outlook-scan"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-reset-office-activation.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-reset-office-activation"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-teams-meeting-add-in-outlook.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-teams-meeting-add-in-outlook"
+    },
+    {
+      "source_path": "enterprise/administration/sara-command-line-version.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/sara-command-line-version"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-office-activation.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-office-activation"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-office-shared-computer-activation.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-office-shared-computer-activation"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-office-uninstall.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-office-uninstall"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-outlook-calendar-scan.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-outlook-calendar-scan"
+    }
+  ]
+}
