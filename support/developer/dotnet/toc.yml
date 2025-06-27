@@ -1,4 +1,4 @@
-
+﻿
 items:
 - name: Welcome
   href: welcome-dotnet-landing.yml
@@ -12,8 +12,6 @@ items:
     href: ./framework/general/developer-language-pack.md
   - name: Event ID 1101 after Domain Controller promotion
     href: ./framework/general/runtime-event-1101.md
-  - name: Access violation when you call Ping
-    href: ./framework/general/access-violation-call-ping-send-repeatedly.md
   - name: Can't trigger PreviewKeyDown event by IME
     href: ./framework/general/cannot-trigger-event-in-wpf-with-ime.md
   - name: ArgumentException when you select rows
@@ -46,20 +44,12 @@ items:
     href: ./framework/general/computer-stops-responding-mscorsvw.md
   - name: Create a summary row for DataGrid
     href: ./framework/general/create-summary-row-datagrid.md
-  - name: Data on the clipboard is unavailable
-    href: ./framework/general/data-clipboard-from-winform-app-unavailable.md
   - name: Different WebExceptionStatus are thrown
     href: ./framework/general/httpwebrequest-different-webexceptionstatus.md
   - name: Endpoints of an arc aren't drawn correctly
     href: ./framework/general/arc-endpoints-not-be-drawn-correctly.md
   - name: Error or high CPU utilization when running a WPF-based application
     href: ./framework/general/error-high-cpu-utilization-running-wpf-based-application.md
-  - name: Error when applications connect to an instance
-    href: ./framework/general/error-applications-connect-instance-same-computer.md
-  - name: Explain DefaultValueAttribute
-    href: ./framework/general/confusing-defaultvalueattribute.md
-  - name: Event handle leaks in an application
-    href: ./framework/general/event-handle-leaks.md
   - name: Exception when you instantiate a WPF window
     href: ./framework/general/executionengine-exception-wpf-window.md
   - name: Exception when you applications with UI automation
@@ -82,8 +72,6 @@ items:
     href: ./framework/general/install-assembly-global-assembly-cache.md
   - name: InvokeMember throws AmbigousMatchException
     href: ./framework/general/invokemember-ambigousmatchexception.md
-  - name: Known issues for .NET Framework 4.5.1 Preview
-    href: ./framework/general/issues-dotnet-framework-451-preview.md
   - name: Memory corruption in the managed process
     href: ./framework/general/citrix-virtual-memory-optimization-80131506-error.md
   - name: Memory optimization for HTTP POST or PUT
@@ -116,10 +104,6 @@ items:
     href: ./framework/general/serialization-onassemblyresolve-event-causes-recursion.md
   - name: StackOverflowException in DataGridView
     href: ./framework/general/stackoverflowexception-datagridview-tablet.md
-  - name: System.Net SDP package information
-    href: ./framework/general/system-dotnet-sdp-package-information.md
-  - name: System.Net and WCF diagnostics
-    href: ./framework/general/system-dotnet-wcf-diagnostics.md
   - name: TableLayoutPanel is displayed with large spaces
     href: ./framework/general/nested-tablelayoutpanel-large-empty-spaces.md
   - name: Text rendering issues on a TextBlock that's a child of a Viewbox
@@ -134,14 +118,10 @@ items:
     href: ./framework/general/winform-app-use-settooltip-not-release-memory.md
   - name: Windows Forms applications throw SecurityException
     href: ./framework/general/winform-app-securityexception.md
-  - name: WPF application hangs when you use fonts over 100 pts in size
-    href: ./framework/general/wpf-application-hangs-using-fonts-over-100pts.md
   - name: WPF render thread failures
     href: ./framework/general/wpf-render-thread-failures.md
   - name: WPF XBAPs crash during startup
     href: ./framework/general/wpf-browser-hosted-applications-xbaps-crash.md
-  - name: Build fails when you deploy a component
-    href: ./framework/general/build-fails-deploy-component-system-text-encoding.md
 - name: Installation and Deployment
   items:
   - name: A ClickOnce application fails to run
@@ -152,8 +132,6 @@ items:
     href: ./framework/installation/clickonce-cannot-deploy-app-terminal-server.md
   - name: Can't install PFX files by using X509Certificate
     href: ./framework/installation/install-pfx-file-using-x509certificate.md
-  - name: Can't run .NET Framework based applications
-    href: ./framework/installation/cannot-run-dotnet-framework-based-applications.md
   - name: Can't run programs after an upgrade
     href: ./framework/installation/cannot-run-programs-after-upgrade.md
   - name: ClickOnce applications fail to update
