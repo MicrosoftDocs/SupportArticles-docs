@@ -21,9 +21,11 @@ landingContent:
   - title: Runbook not working as expected
     linkLists:
       - linkListType: how-to-guide
-        links: 
+        links:                                                                  
           - text: Runbook jobs get suspended
-            url: runbooks/runbook-job-suspended.md   
+            url: runbooks/runbook-job-suspended.md     
+          - text: Troubleshoot error codes during runbook execution
+            url: runbooks/error-running-powershell-runbook.md   
           - text: Troubleshoot issues with python packages
             url: runbooks/error-running-python-runbook.md
           - text: Troubleshoot issues with runbook execution start time
