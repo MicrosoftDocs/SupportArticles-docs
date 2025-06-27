@@ -6420,6 +6420,10 @@
       "redirect_url": "/troubleshoot/windows/win32/welcome-windowsdeveloper"
     },
     {
+      "source_path": "support/sql/database-engine/failover-clusters/support-policy-clustered-configurations.md",
+      "redirect_url": "/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server#sql-server-fci-supported-configuration-on-windows-server-failover-cluster-wsfc"
+    },
+    {
       "source_path": "support/sql/database-engine/database-file-operations/support-iscsi-technology-components.md",
       "redirect_url": "/sql/relational-databases/sql-server-storage-guide#iscsi"
     },
@@ -6466,6 +6470,254 @@
     {
       "source_path": "support/developer/dotnet/framework/general/access-violation-call-ping-send-repeatedly.md",
       "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/publishing-clickonce-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/publishing-clickonce-fails"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/new-japanese-era-updates.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/new-japanese-era-updates"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/manifest-definitions-do-not-match-reference.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/manifest-definitions-do-not-match-reference"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/determine-dotnet-versions-service-pack-levels.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/determine-dotnet-versions-service-pack-levels"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/install-pfx-file-using-x509certificate.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/install-pfx-file-using-x509certificate"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/clickonce-cannot-deploy-app-terminal-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/clickonce-cannot-deploy-app-terminal-server"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/clickonce-not-support-roaming-profiles.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/clickonce-not-support-roaming-profiles"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/clickonce-app-install-launch-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/clickonce-app-install-launch-fail"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/clickonce-application-fails-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/clickonce-application-fails-update"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/cannot-run-programs-after-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/cannot-run-programs-after-upgrade"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/applications-crash-at-startup.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/applications-crash-at-startup"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/xml-parser-invalid-character.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/xml-parser-invalid-character"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/wrong-winform-height-width.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/wrong-winform-height-width"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/wpf-browser-hosted-applications-xbaps-crash.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/wpf-browser-hosted-applications-xbaps-crash"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/winform-app-use-settooltip-not-release-memory.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/winform-app-use-settooltip-not-release-memory"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/winform-app-securityexception.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/winform-app-securityexception"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/stackoverflowexception-datagridview-tablet.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/stackoverflowexception-datagridview-tablet"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/serialization-onassemblyresolve-event-causes-recursion.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/serialization-onassemblyresolve-event-causes-recursion"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/sgen-mixed-mode-assembly-built-v2-0-50727.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/sgen-mixed-mode-assembly-built-v2-0-50727"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/rss20feedformatter-throw-exception.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/rss20feedformatter-throw-exception"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/runtime-event-1101.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/runtime-event-1101"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/remotingexception-binary-format-message.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/remotingexception-binary-format-message"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/post-put-request-fail-httpwebrequest.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/post-put-request-fail-httpwebrequest"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/perfview-diagnostic-information.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/perfview-diagnostic-information"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/ports-run-out-use-connectiongroupname.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/ports-run-out-use-connectiongroupname"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/password-icredentials-cannot-pass-wcf-service.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/password-icredentials-cannot-pass-wcf-service"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/password-empty-networkcredential-deserialized-wcf.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/password-empty-networkcredential-deserialized-wcf"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/out-of-memory-dotnet-framework-461.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/out-of-memory-dotnet-framework-461"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/nested-tablelayoutpanel-large-empty-spaces.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/nested-tablelayoutpanel-large-empty-spaces"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/no-events-from-com-object.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/no-events-from-com-object"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/msdtc-transaction-requires-full-trust.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/msdtc-transaction-requires-full-trust"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/long-spin-wait-loops-high-cpu.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/long-spin-wait-loops-high-cpu"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/memory-optimization-large-httpwebrequest.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/memory-optimization-large-httpwebrequest"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/invokemember-ambigousmatchexception.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/invokemember-ambigousmatchexception"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/install-assembly-global-assembly-cache.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/install-assembly-global-assembly-cache"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/httpwebrequest-different-webexceptionstatus.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/httpwebrequest-different-webexceptionstatus"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/initialize-winform-control-access-localdatastore.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/initialize-winform-control-access-localdatastore"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/high-memory-usage-enlistdurable.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/high-memory-usage-enlistdurable"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/ftpwebrequest-behavior.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/ftpwebrequest-behavior"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/full-screen-wpf-apps-not-receive-touch-input-events.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/full-screen-wpf-apps-not-receive-touch-input-events"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/fatalexecutionengineerror-call-com-multilpe-appdomains.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/fatalexecutionengineerror-call-com-multilpe-appdomains"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/executionengine-exception-wpf-window.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/executionengine-exception-wpf-window"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/far-eastern-fonts-text-lost-on-images-xps.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/far-eastern-fonts-text-lost-on-images-xps"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/exception-run-app-with-ui-automation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/exception-run-app-with-ui-automation"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/error-security-descriptor-native-image-module.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/error-security-descriptor-native-image-module"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/error-high-cpu-utilization-running-wpf-based-application.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/error-high-cpu-utilization-running-wpf-based-application"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/error-mc6017-define-class-xaml.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/error-mc6017-define-class-xaml"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/developer-language-pack.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/developer-language-pack"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/create-summary-row-datagrid.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/create-summary-row-datagrid"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/compatibility-issue-ria-sp2-ef-5.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/compatibility-issue-ria-sp2-ef-5"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/computer-stops-responding-mscorsvw.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/computer-stops-responding-mscorsvw"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/citrix-virtual-memory-optimization-80131506-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/citrix-virtual-memory-optimization-80131506-error"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/comexception-error-from-wpf-app.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/comexception-error-from-wpf-app"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/change-tsaware.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/change-tsaware"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/cannot-load-interop-assembly.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/cannot-load-interop-assembly"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/cannot-consume-web-service-via-http-proxy.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/cannot-consume-web-service-via-http-proxy"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/break-memory-leak-debugbreak-wpf.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/break-memory-leak-debugbreak-wpf"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/arc-endpoints-not-be-drawn-correctly.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/arc-endpoints-not-be-drawn-correctly"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/argumentexception-select-row-wpf-datagrid.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/argumentexception-select-row-wpf-datagrid"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/setup-diagnostics.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/setup-diagnostics"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/require-clickonce-manifest-signing.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/require-clickonce-manifest-signing"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/patching-framework-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/patching-framework-fails"
     }
   ]
 }

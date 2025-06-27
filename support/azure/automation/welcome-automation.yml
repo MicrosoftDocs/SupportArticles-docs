@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 06/13/2025
+  ms.date: 06/27/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -21,8 +21,14 @@ landingContent:
   - title: Runbook not working as expected
     linkLists:
       - linkListType: how-to-guide
-        links:       
+        links:                                                                  
           - text: Runbook jobs get suspended
-            url: runbooks/runbook-job-suspended.md                                                        
+            url: runbooks/runbook-job-suspended.md     
+          - text: Troubleshoot error codes during runbook execution
+            url: runbooks/error-running-powershell-runbook.md   
+          - text: Troubleshoot issues with python packages
+            url: runbooks/error-running-python-runbook.md
+          - text: Troubleshoot issues with runbook execution start time
+            url: runbooks/job-not-start-as-expected.md
           - text: Troubleshoot runbook execution issues when using PowerShell
             url: runbooks/powershell-job-script-cmdlets-not-working.md
