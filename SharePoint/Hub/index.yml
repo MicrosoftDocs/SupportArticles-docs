@@ -39,7 +39,7 @@ productDirectory:
       imageSrc: /support/media/hub-landing/logo-m365-app.png
       links:
         - url: /troubleshoot/office/office-client-welcome
-          text: Microsoft 365 Apps (Office products)
+          text: Microsoft 365 Apps
         - url: /troubleshoot/office/office-experts-welcome
           text: From the Office Experts
     # Card
