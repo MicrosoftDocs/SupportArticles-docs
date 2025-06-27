@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop listener certificate configurations
 description: Describes the methods to configure RDP listener certificates in Windows Server 2012 R2 and Windows Server 2012.
-ms.date: 06/17/2025
+ms.date: 06/27/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,41 +13,34 @@ zone_pivot_groups: rdp-windows-server-versions
 ---
 # Remote Desktop listener certificate configurations
 
-This article describes the methods to configure listener certificates on a Windows Server that is not part of a Remote Desktop Services (RDS) deployment.
+This article describes the methods to configure listener certificates on a Windows Server that isn't part of a Remote Desktop Services (RDS) deployment.
 
 _Original KB number:_ &nbsp; 3042780
 
 ## About Remote Desktop server listener availability
 
-The listener component runs on the Remote Desktop server and is responsible for listening to and accepting new Remote Desktop Protocol (RDP) client connections. This lets users establish new remote sessions on the Remote Desktop server. There is a listener for each Remote Desktop Services connection that exists on the Remote Desktop server. Connections can be created and configured by using the Remote Desktop Services Configuration tool.
+The listener component runs on the Remote Desktop server and is responsible for listening to and accepting new Remote Desktop Protocol (RDP) client connections. This lets users establish new remote sessions on the Remote Desktop server. There's a listener for each Remote Desktop Services connection that exists on the Remote Desktop server. Connections can be created and configured by using the Remote Desktop Services Configuration tool.
 
 ## Configure Remote Desktop server listener certificate
 
-The MMC method is not available starting from Windows Server 2012 or Windows Server 2012 R2. However, you can always configure the RDP listener by using WMI or the registry.
+### [WMI](#tab/wmi)
 
-::: zone pivot="windows-server-pre-2012"
-
-### [MMC](#tab/mmc)
-
-The Remote Desktop Configuration Manager MMC snap-in enables you direct access to the RDP listener. In the snap-in, you can bind a certificate to the listener and in turn, enforce SSL security for the RDP sessions.
-
-::: zone-end
-
-### [Windows Management Instrumentation (WMI)](#tab/wmi)
-
-The configuration data for the RDS listener is stored in the `Win32_TSGeneralSetting` class in WMI under the `Root\CimV2\TerminalServices` namespace.
+The configuration data for the RDS listener is stored in the `Win32_TSGeneralSetting` class in Windows Management Instrumentation (WMI) under the `Root\CimV2\TerminalServices` namespace.
 
 The certificate for the RDS listener is referenced through the **Thumbprint** value of that certificate on a **SSLCertificateSHA1Hash** property. The thumbprint value is unique to each certificate.
 
 > [!NOTE]
-> Before you run the wmic commands, the certificate that you want to use must be imported to the Personal certificate store for the computer account. If you do not import the certificate, you will receive an **Invalid Parameter** error.
+> Before you run the commands, the certificate that you want to use must be imported to the **Personal** certificate store for the computer account (via `certlm.msc`). If you don't import the certificate, you'll receive an **Invalid Parameter** error.
 
 To configure a certificate by using WMI, follow these steps:
 
 1. Open the properties dialog for your certificate and select the **Details** tab.
-2. Scroll down to the **Thumbprint** field and copy the space delimited hexadecimal string into something like Notepad.
 
-   The following screenshot is an example of the certificate thumbprint in the **Certificate** properties:
+::: zone pivot="windows-server-pre-2012"
+
+2. Scroll down to the **Thumbprint** field and copy the space-delimited hexadecimal string into something like Notepad.
+
+   The following screenshot shows an example of the certificate thumbprint in the **Certificate** properties:
 
    :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-property.png" alt-text="An example of the certificate thumbprint in the Certificate properties.":::
 
@@ -61,47 +54,65 @@ To configure a certificate by using WMI, follow these steps:
 
    Make sure that this ASCII character is removed before you run the command to import the certificate.
 
-3. Remove all spaces from the string. There may be an invisible ACSII character that is also copied. This is not visible in Notepad. The only way to validate is to copy directly into the Command Prompt window.
+3. Remove all spaces from the string. There may be an invisible ACSII character that is also copied. This character isn't visible in Notepad. To validate the string, copy the string directly into the Command Prompt window.
 
-4. At command prompt, run the following wmic command together with the thumbprint value that you obtain in step 3:
-
-::: zone pivot="windows-server-pre-2012"
+4. At command prompt, run the following `wmic` command together with the thumbprint value that you obtain in step 3:
 
    ```console
    wmic /namespace:\\root\cimv2\TerminalServices PATH Win32_TSGeneralSetting Set SSLCertificateSHA1Hash="THUMBPRINT"
    ```
+
+    The following screenshot shows a successful example:
+
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-wmic-commands.png" alt-text="A successful example of running the `wmic` command together with the thumbprint value that you obtain in step 3." border="false":::
 
 ::: zone-end
 ::: zone pivot="windows-server-2012"
 
+2. Scroll down to the **Thumbprint** field and copy the space-delimited hexadecimal string into a text editor like Notepad.
+
+   The following screenshot shows an example of the certificate thumbprint in the **Certificate** properties:
+
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-property.png" alt-text="An example of the certificate thumbprint in the Certificate properties.":::
+
+   When you copy the string into Notepad, it should look like the following screenshot:
+
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-string-in-notepad.png" alt-text="Copy and paste the thumbprint string into Notepad.":::
+
+   After you remove the spaces in the string, it still contains an invisible ASCII character that is only visible at the command prompt. The following screenshot shows an example:
+
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/ascii-character-in-command-prompt.png" alt-text="The invisible ASCII character that is only shown at the command prompt." border="false":::
+
+   Ensure that this ASCII character is removed before you run the command to import the certificate.
+
+3. Remove all spaces from the string. There might be an invisible ACSII character that is also copied. This character isn't visible in Notepad. To validate the string, copy the string directly into the Command Prompt window.
+
+4. At command prompt, run the following `wmic` command together with the thumbprint value that you obtain in step 3:
+
    ```console
    wmic /namespace:\\root\cimv2\TerminalServices PATH Win32_TSGeneralSetting Set SSLCertificateSHA1Hash="THUMBPRINT"
    ```
 
+    The following screenshot shows a successful example:
+
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-wmic-commands.png" alt-text="A successful example of running the `wmic` command together with the thumbprint value that you obtain in step 3." border="false":::
+
 ::: zone-end
 ::: zone pivot="windows-11-or-server-2025"
+
+2. Scroll down to the **Thumbprint** field and copy it. The following screenshot is an example of the certificate thumbprint in the **Certificate** properties:
+
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/thumbprint-property-w11.png" alt-text="An example of the certificate thumbprint in the Certificate properties.":::
+
+3. At command prompt, run the following PowerShell command together with the thumbprint value that you obtain in step 2:
 
    ```console
    Get-WmiObject -class "Win32_TSGeneralSetting" -Namespace root\cimv2\terminalservices | Set-WmiInstance -Arguments @{SSLCertificateSHA1Hash="THUMBPRINT"}
    ```
 
-::: zone-end
+    The following screenshot shows a successful example:
 
-   The following screenshot is a successful example:
-
-::: zone pivot="windows-server-pre-2012"
-
-   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-wmic-commands.png" alt-text="A successful example of running the wmic command together with the thumbprint value that you obtain in step 3." border="false":::
-
-::: zone-end
-::: zone pivot="windows-server-2012"
-
-   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-wmic-commands.png" alt-text="A successful example of running the wmic command together with the thumbprint value that you obtain in step 3." border="false":::
-
-::: zone-end
-::: zone pivot="windows-11-or-server-2025"
-
-   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-powershell-commands.png" alt-text="A successful example of running the powershell command together with the thumbprint value that you obtain in step 3." border="false":::
+   :::image type="content" source="./media/remote-desktop-listener-certificate-configurations/successful-example-to-run-powershell-commands.png" alt-text="A successful example of running the PowerShell command together with the thumbprint value that you obtain in step 2." border="false":::
 
 ::: zone-end
 
@@ -134,14 +145,30 @@ To configure a certificate by using registry editor, follow these steps:
 
    To change the permissions, follow these steps on the Certificates snap-in for the local computer:
 
-   1. Click **Start**, click **Run**, type *mmc*, and then click **OK**.
-   2. On the **File** menu, click **Add/Remove Snap-in**.
-   3. In the **Add or Remove Snap-ins**  dialog box, on the **Available snap-ins** list, click **Certificates**, and then click **Add**.
-   4. In the **Certificates** snap-in dialog box, click **Computer account**, and then click **Next**.
-   5. In the **Select Computer** dialog box, click **Local computer: (the computer this console is running on)**, and then click **Finish**.
-   6. In the **Add or Remove Snap-ins** dialog box, click **OK**.
+   1. Select **Start**, select **Run**, type *mmc*, and then select **OK**.
+   2. On the **File** menu, select **Add/Remove Snap-in**.
+   3. In the **Add or Remove Snap-ins**  dialog box, on the **Available snap-ins** list, select **Certificates**, and then select **Add**.
+   4. In the **Certificates** snap-in dialog box, select **Computer account**, and then select **Next**.
+   5. In the **Select Computer** dialog box, select **Local computer: (the computer this console is running on)**, and then select **Finish**.
+   6. In the **Add or Remove Snap-ins** dialog box, select **OK**.
    7. In the **Certificates** snap-in, on the console tree, expand **Certificates (Local Computer)**, expand **Personal**, and then select the SSL certificate that you want to use.
    8. Right-click the certificate, select **All Tasks**, and then select **Manage Private Keys**.
-   9. In the **Permissions** dialog box, click **Add**, type *NETWORK SERVICE*, click **OK**, select **Read** under the **Allow** check box, and then click **OK**.
+   9. In the **Permissions** dialog box, select **Add**, type *NETWORK SERVICE*, select **OK**, select **Read** under the **Allow** check box, and then select **OK**.
 
----
+### [MMC](#tab/mmc)
+
+::: zone pivot="windows-server-pre-2012"
+
+The Remote Desktop Configuration Manager Microsoft Management Console (MMC) snap-in enables you direct access to the RDP listener. In the snap-in, you can bind a certificate to the listener and in turn, enforce SSL security for the RDP sessions.
+
+::: zone-end
+::: zone pivot="windows-server-2012"
+
+The Microsoft Management Console (MMC) method isn't available starting from Windows Server 2012 or Windows Server 2012 R2. However, you can always configure the RDP listener by using WMI or the registry.
+
+::: zone-end
+::: zone pivot="windows-11-or-server-2025"
+
+The Microsoft Management Console (MMC) method isn't available starting from Windows Server 2012 or Windows Server 2012 R2. However, you can always configure the RDP listener by using WMI or the registry.
+
+::: zone-end
