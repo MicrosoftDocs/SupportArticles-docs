@@ -2,7 +2,7 @@
 title: Upgrade RHEL PAYG virtual machines using Leapp
 description: Provides steps to upgrade virtual machines that use RHEL pay-as-you-go images from RHEL 7 to RHEL 8 or RHEL 8 to RHEL 9.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 06/20/2025
+ms.date: 06/27/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.topic: how-to
