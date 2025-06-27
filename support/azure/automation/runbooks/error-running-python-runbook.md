@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Issues with Python Packages in Azure Automation
 description: Describes how to import, manage, and use Python packages in Azure Automation and provides a solution to an issue with python packages.
-ms.date: 06/25/2025
+ms.date: 06/27/2025
 ms.reviewer: adoyle, v-weizhu
 ms.service: azure-automation
 ms.custom: sap:Runbook not working as expected
