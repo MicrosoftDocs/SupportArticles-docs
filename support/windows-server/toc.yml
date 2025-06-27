@@ -756,7 +756,7 @@ items:
     items:
     - name: Extend stand-alone tiered storage spaces
       href: ./backup-and-storage/extend-stand-alone-tiered-storage-spaces.md
-    - name: Manage disks in standalone Storage Spaces 
+    - name: Manage disks in standalone Storage Spaces
       href: ./backup-and-storage/manage-disks-standalone-storage-spaces.md
   - name: System Restore or resetting your computer
     items:
@@ -2506,6 +2506,8 @@ items:
       href: ./shell-experience/default-date-format-changed.md
   - name: File Explorer/Windows Explorer
     items:
+    - name: High-speed network adapters show inaccurate link speeds
+      href: ./shell-experience/network-adapters-inaccurate-link-speed.md
     - name: Increased CPU usage when accessing a FileTable share
       href: ./shell-experience/increased-cpu-usage.md
     - name: TEMP folder with logon session ID is deleted
@@ -2900,6 +2902,8 @@ items:
       href: ./windows-security/description-support-suite-b-cryptographic-ipsec.md
   - name: Kerberos authentication
     items:
+    - name: Event ID 7 on a domain controller running Windows Server 2025
+      href: windows-security/event-id-7-on-domain-controllers.md
     - name: 'Troubleshooting guidance: Kerberos authentication'
       href: ./windows-security/kerberos-authentication-troubleshooting-guidance.md
     - name: Active Directory authentication fails with klist error 0x8009030e
@@ -2910,10 +2914,14 @@ items:
       href: ./windows-security/constrained-delegation-access-denied.md
     - name: Event ID 27 KDC error on domain controllers
       href: ./windows-security/event-id-27-kdc-errors.md
+    - name: Event ID 5719, Error 1311, or Error 1355 - Domain controller or domain not found
+      href: ./windows-security/troubleshoot-kerberos-domain-not-found-event-id-5719.md
     - name: How to disable the Subject Alternative Name for UPN mapping
       href: ./windows-security/disable-subject-alternative-name-upn-mapping.md
     - name: How to force Kerberos to use TCP instead of UDP
       href: ./windows-security/force-kerberos-use-tcp-instead-udp.md
+    - name: KDC_ERR_S_PRINCIPAL_UNKNOWN or KDC_ERR_PRINCIPAL_NOT_UNIQUE error
+      href: ./windows-security/kerberos-error-kdc-err-s-principal-unknown-or-not-unique.md
     - name: KDC event  16 or 27 if DES for Kerberos is disabled
       href: ./windows-security/kdc-event-16-27-des-encryption-disabled.md
     - name: KDC service on an RODC can't start and generates error 1450
@@ -2938,6 +2946,14 @@ items:
       href: ./windows-security/tgs-request-for-krbtgt-account-fails.md
     - name: The Fingerprint Registration Wizard doesn't run
       href: ./windows-security/fingerprint-registration-wizard-not-run-install-fingerprint-reader.md
+    - name: Troubleshoot constrained delegation issues
+      href: ./windows-security/troubleshoot-kerberos-constrained-delegation-issues.md
+    - name: Troubleshoot Kerberos using a log analysis test scenario
+      href: ./windows-security/kerberos-authentication-log-analysis-test-scenario.md
+    - name: Troubleshoot resource-based constrained delegation issues
+      href: ./windows-security/troubleshoot-kerberos-rbcd-issues.md
+    - name: Troubleshoot SSO issues
+      href: ./windows-security/troubleshoot-kerberos-sso-issues.md
   - name: Legacy authentication (NTLM)
     items:
     - name: Audit event shows authentication package as NTLMv1

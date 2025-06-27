@@ -37,7 +37,7 @@ After you configure AKS workloads to use a seccomp profile, the workloads exit u
 - A tool to connect to the Kubernetes cluster, such as the `kubectl` tool. To install `kubectl` using the [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 - The [krew](https://sigs.k8s.io/krew) package manager for installing [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072)'s plugin. You can follow the [krew quickstart guide](https://krew.sigs.k8s.io/docs/user-guide/quickstart/) to install it.
 - The seccomp profile that you're trying to troubleshoot.
-- The open source project [Inspektor Gadget](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#how-to-install-inspektor-gadget-in-an-aks-cluster).
+- The open source project [Inspektor Gadget](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster).
 
 ## Troubleshooting checklist
 

@@ -1,7 +1,7 @@
 ---
 title: SQL Transaction log grows continuously
 description: This article helps you resolve the problem where you notice continuous transaction log growth for a CDC enabled database.
-ms.date: 04/23/2025
+ms.date: 06/18/2025
 ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ---
 # SQL Transaction log grows when you use Change Data Capture for Oracle by Attunity
@@ -15,7 +15,8 @@ _Original KB number:_ &nbsp; 2871474
 
 Consider the following scenario:
 
-- You use Microsoft SQL Server 2017 on Windows, SQL Server 2016, 2014, or 2012 Change Data Capture for Oracle by Attunity.
+- You use SQL Server 2017, SQL Server 2016, SQL Server 2014, or SQL Server 2012 on Windows.
+- You use Change Data Capture for Oracle by Attunity.
 - You create a CDC instance to capture changes from Oracle database tables.
 - The change capture values are stored in SQL Server change capture databases.
 - The transaction log on the SQL Server database grows, and transactions aren't marked for truncation as data changes are captured.
@@ -103,6 +104,6 @@ For more information, see [Manage the size of the transaction log file](/previou
 ## More information
 
 For more information, see
-[Troubleshoot CDC instance errors in Microsoft change data capture for Oracle by Attunity](https://social.technet.microsoft.com/wiki/contents/articles/7642.troubleshoot-cdc-instance-errors-in-microsoft-change-data-capture-for-oracle-by-attunity.aspx).
+[Troubleshoot CDC instance errors in Microsoft change data capture for Oracle by Attunity](/archive/technet-wiki/7642.troubleshoot-cdc-instance-errors-in-microsoft-change-data-capture-for-oracle-by-attunity).
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
