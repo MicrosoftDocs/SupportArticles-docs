@@ -212,8 +212,6 @@
       href: working-with-solutions/unable-import-dynamics-365-solution.md
     - name: Can't import solutions or publish changes
       href: working-with-solutions/cannot-import-solutions-publish-changes.md
-    - name: Can't install managed solution previously deployed as unmanaged
-      href: working-with-solutions/failure-converting-to-managed-solution.md
     - name: Can't Uninstall Solution when removing solutions
       href: working-with-solutions/cannot-uninstall-solution-error-when-deleting-solution.md
     - name: Changes not effective after solution import
