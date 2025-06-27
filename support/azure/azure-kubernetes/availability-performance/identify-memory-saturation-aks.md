@@ -1,7 +1,7 @@
 --- 
 title: Troubleshoot memory saturation in AKS clusters
 description: Troubleshoot memory saturation in Azure Kubernetes Service (AKS) clusters across namespaces and containers. Learn how to identify the hosting node.
-ms.date: 08/30/2024
+ms.date: 06/27/2025
 editor: v-jsitser
 ms.reviewer: chiragpa, aritraghosh, v-leedennis
 ms.service: azure-kubernetes-service
@@ -14,7 +14,7 @@ This article discusses methods for troubleshooting memory saturation issues. Mem
 ## Prerequisites
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
-- The open source project [Inspektor Gadget](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#what-is-inspektor-gadget) for advanced process level memory analysis. You can find details around installation in [this guide](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#how-to-install-inspektor-gadget-in-an-aks-cluster). 
+- The open source project [Inspektor Gadget](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#what-is-inspektor-gadget) for advanced process level memory analysis. For more information, see [How to install Inspektor Gadget in an AKS cluster](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#how-to-install-inspektor-gadget-in-an-aks-cluster). 
 
 ## Symptoms
 
