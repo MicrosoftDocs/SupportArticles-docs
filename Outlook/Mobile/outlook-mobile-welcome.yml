@@ -10,6 +10,7 @@ metadata:
   ms.author: meerak
   ms.date: 01/30/2024
   ms.service: outlook
+  hideEdit: true
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

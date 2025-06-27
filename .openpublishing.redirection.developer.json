@@ -6422,6 +6422,50 @@
     {
       "source_path": "support/sql/database-engine/database-file-operations/support-iscsi-technology-components.md",
       "redirect_url": "/sql/relational-databases/sql-server-storage-guide#iscsi"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/installation/cannot-run-dotnet-framework-based-applications.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/confusing-defaultvalueattribute.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/error-applications-connect-instance-same-computer.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/system-dotnet-wcf-diagnostics.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/system-dotnet-sdp-package-information.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/issues-dotnet-framework-451-preview.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/build-fails-deploy-component-system-text-encoding.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/data-clipboard-from-winform-app-unavailable.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/wpf-application-hangs-using-fonts-over-100pts.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/event-handle-leaks.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing"
+    },
+    {
+      "source_path": "support/developer/dotnet/framework/general/access-violation-call-ping-send-repeatedly.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/welcome-dotnet-landing"
     }
   ]
 }
