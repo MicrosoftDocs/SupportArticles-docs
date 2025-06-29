@@ -1,7 +1,7 @@
 ---
 title: OLE DB driver installation check
 description: Provides insights into the installation, validation, and resolution of issues related to OLE DB drivers.
-ms.date: 01/09/2024
+ms.date: 06/29/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: mastewa, jopilov, prmadhes, v-sidong
 ---
@@ -9,7 +9,38 @@ ms.reviewer: mastewa, jopilov, prmadhes, v-sidong
 
 Object Linking and Embedding Database (OLE DB) is a Microsoft data access technology used to connect applications to various data sources using OLE DB providers. Troubleshooting OLE DB driver installations and validations can be complex, but is crucial for seamless database interaction. This troubleshooting guide aims to provide insights into the installation, validation, and resolution of issues related to OLE DB drivers.
 
-## About UDL files
+## Validate OLEDB driver/provider via PowerShell
+
+To validate if the latest OLEDB driver for SQL Server  is installed on your system, you can run the following PowerShell command under an Adminsitrator.
+
+```PowerShell
+Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft" |Where-Object { $_.Name -like "*MSOLEDBSQL*" } |ForEach-Object {   Get-ItemProperty $_.PSPath}
+```
+
+The output may look something like this, if you have version 18 and 19 installed on your system:
+
+```output
+InstalledVersion : 18.7.4.0
+PSPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSOLEDBSQL
+PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft
+PSChildName      : MSOLEDBSQL
+PSProvider       : Microsoft.PowerShell.Core\Registry
+
+InstalledVersion : 19.4.1.0
+PSPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSOLEDBSQL19
+PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft
+PSChildName      : MSOLEDBSQL19
+PSProvider       : Microsoft.PowerShell.Core\Registry
+
+```
+
+You can also check for a SQLNCLI installation using this command:
+
+```PowerShell
+Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft" |Where-Object { $_.Name -like "*SQLNCLi*" } |ForEach-Object {   Get-ItemProperty $_.PSPath}
+```
+
+## Validate OLEDB driver via a UDL
 
 One of the simplest ways to test an OLE DB provider is via the Universal Data Link (UDL) file. Create any text file in Windows Explorer and rename it to have a *.UDL* file extension. Make sure you have file extensions turned on to make the change. For more information, see [Test OLE DB connectivity to SQL Server by using a UDL file](../../connect/test-oledb-connectivity-use-udl-file.md)
 
@@ -17,12 +48,21 @@ Double-click the file to open a dialog where you can see the installed providers
 
 :::image type="content" source="media/oledb-driver-install-check/udl-test-oledb-provider.png" alt-text="Screenshot shows how to use UDL file to test OLE DB provider.":::
 
-> [!NOTE]
-> If you select **OK** in the dialog, you can open the UDL file in Notepad to see the connection string you can use in your application. For example:
->
-> ```output
-> Provider=SQLNCLI11.1;Integrated Security="";Persist Security Info=False;User ID=sa;Initial Catalog=northwind;Data Source=tcp:SQLProd01.contoso.com,1433;Initial File Name="";Server SPN=""
-> ```
+Select **OK** in the dialog to confirm the configuration.
+
+### Examine the UDL file content 
+If you can open the UDL file in a text editor like Notepad, you can see the connection string and copy that to use in your application. Here are two examples:
+
+ ```output
+ Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=master;Data Source=localhost;Initial File Name="";Server SPN="";Authentication="";Access Token=""
+```
+ ```output
+ Provider=SQLNCLI11.1;Integrated Security="";Persist Security Info=False;User ID=sa;Initial Catalog=AdventureWorks;Data Source=tcp:SQLProd01.contoso.com,1433;Initial File Name="";Server SPN=""
+ ```
+
+### How to launch a UDL file
+
+The simplest way to use an UDL is to double-click it. But if you need to understand the internals of how it works, review the following information. 
 
 The UDL file UI is provided by *OLEDB32.DLL* and hosted in *RUNDLL32.DLL*.
 
@@ -36,7 +76,7 @@ The UDL file UI is provided by *OLEDB32.DLL* and hosted in *RUNDLL32.DLL*.
 
 The *.UDL* file extension is mapped to the first command. For the second, you can simplify things by running a 32-bit command prompt and then running `START C:\TEMP\TEST.UDL` to test 32-bit providers. Even simpler is to map the *.UDL32* file extension to the 32-bit command.
 
-## 32-bit .udl32 file extension mapping
+#### 32-bit .udl32 file extension mapping
 
 If you frequently use 32-bit providers, you can map the file extension *.udl32* to launch the 32-bit UDL dialog. Follow these steps:
 
@@ -114,7 +154,7 @@ These are the paths in Registry Editor for 32-bit machines:
 
 ## Support for third-party providers
 
-Support for third-party OLE DB providers is limited to validating the ProgID points to a valid CLSID and that the `InProcServer32` subkey points to the correct DLL. If the path is incorrect or the registry entry doesn't exist, reinstall the provider or contact the vendor. If the files exist but the registry entries don't, you can manually register the provider using `REGSVR32`. To register a COM DLL, run the following command at an elevated command prompt:
+Technical support for third-party OLE DB providers is limited to validating the ProgID points to a valid CLSID and that the `InProcServer32` subkey points to the correct DLL. If the path is incorrect or the registry entry doesn't exist, reinstall the provider or contact the vendor. If the files exist but the registry entries don't, you can manually register the provider using `REGSVR32`. To register a COM DLL, run the following command at an elevated command prompt:
 
 ```cmd
 Regsvr32 sqlncli11
