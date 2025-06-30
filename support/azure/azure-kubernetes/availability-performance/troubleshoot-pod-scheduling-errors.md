@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Pod scheduler Errors in AKS
-description: Explains common scheduling errors, their causes, and how to resolve them.
+description: Explains common scheduler errors, their causes, and how to resolve them.
 ms.date: 06/30/2025
 ms.reviewer: 
 ms.service: azure-kubernetes-service
@@ -9,17 +9,17 @@ ms.custom: sap:Node/node pool availability and performance
 
 # Troubleshoot pod scheduler errors in AKS
 
-When you deploy workloads in Azure Kubernetes Service (AKS), you might encounter scheduling errors that prevent Pods from running. This article explains common scheduling errors, their causes, and how to resolve them.
+When you deploy workloads in Azure Kubernetes Service (AKS), you might encounter scheduler errors that prevent Pods from running. This article provides solutions to common scheduler errors.
 
 ## Error: 0/(X) nodes are available: X node(s) had volume node affinity conflict
 
-Pods remain in the Pending state with the scheduler message:
+Pods remain in the Pending state with the following scheduler error:
 
 >0/(X) nodes are available: X node(s) had volume node affinity conflict.
 
 ### Cause
 
-Persistent Volumes can define nodeAffinity rules that restrict which nodes can access the volume. If no node matches these rules, the Pod can't be scheduled.
+[Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#node-affinity) define `nodeAffinity rules` that restrict which nodes can access the volume. If none of the available nodes satisfy the volume's affinity rules, the scheduler cannot assign the Pod to any node.
 
 ### Solution
 
@@ -33,8 +33,8 @@ Persistent Volumes can define nodeAffinity rules that restrict which nodes can a
     ```bash
     kubectl get nodes --show-labels
     ```
-3. Align node affinity with node labels by ensuring at least one node has labels that match the PV's nodeAffinity.
-4. Update the PV or node labels:
+3. Make sure that at least one node's labels match the `nodeAffinity` specified in the Persistent Volume's YAML spec.
+4. To resolve the conflict, Update the Persistent Volume's affinity rules to match existing node labels or add the required labels to the correct node:
 
     ```bash
     kubectl label nodes <node-name> <key>=<value>
@@ -45,7 +45,7 @@ Persistent Volumes can define nodeAffinity rules that restrict which nodes can a
 
 ## Error: 0/(X) nodes are available: X Insufficient CPU
 
-Pods remain in the Pending state with the scheduler message:
+Pods remain in the Pending state with the scheduler error:
 
 >Error: 0/(X) nodes are available: X Insufficient CPU.
 
@@ -54,18 +54,18 @@ Pods remain in the Pending state with the scheduler message:
 This issue occurs when one or more of the following conditions are met:
 
 - All node resources are in use.
-- Pod's CPU request exceeds available capacity.
+- The pending Pod's resource requests exceed available CPU on the nodes.
 - The node pools lack sufficient resources or have incorrect configuration settings.
 
 ### Solution
 
-1. Check resource usage and Pod requirements:
+1. Review CPU usage on all nodes and verify if there is enough unallocated CPU to meet the pod's request.
 
     ```bash
     kubectl describe pod <pod-name>
     kubectl describe nodes
     ```
-2. Scale the node pool:
+2. If no node has enough CPU, increase the number of nodes or use larger VM sizes in the node pool：
 
     ```bash
     
@@ -75,12 +75,12 @@ This issue occurs when one or more of the following conditions are met:
       --name <nodepool-name> \
       --node-count <desired-node-count>
     ```
-3. Optimize Pod resource requests. Make sure that  CPU requests and limits are appropriate for your node sizes.
-4. Review taints and affinity rules. Check if other scheduling constraints are preventing placement.
+3. Optimize Pod resource requests. Make sure that CPU requests and limits are appropriate for your node sizes.
+4. Verify if any scheduling constraints are restricting pod placement across available nodes.
 
 ## Error: 0/(X) nodes are available: X node(s) had untolerated taint
 
-Pods remain in the Pending state with the scheduler message:
+Pods remain in the Pending state with the error:
 
 >Error: 0/(X) nodes are available: X node(s) had untolerated taint.
 
@@ -98,7 +98,7 @@ The Kubernetes scheduler tries to assign the Pod to a node, but all nodes are re
     ```bash
      kubectl get nodes -o json | jq '.items[].spec.taints'   
     ```
-2. Add necessary tolerations to Pod spec. Edit your deployment or Pod YAML to include matching tolerations for the taints on your nodes. For example, if your node has the taint key=value:NoSchedule, your Pod spec must include: 
+2. Add necessary tolerations to Pod spec: Edit your deployment or Pod YAML to include matching tolerations for the taints on your nodes. For example, if your node has the taint key=value:NoSchedule, your Pod spec must include: 
 
     ```yml
     tolerations:
@@ -111,7 +111,7 @@ The Kubernetes scheduler tries to assign the Pod to a node, but all nodes are re
     
       effect: "NoSchedule"
     ```
-3. If the taint isn't needed, you can remove it from the node:
+   If the taint isn't needed, you can remove it from the node:
     
     ```bash
     kubectl taint nodes <node-name> <key>:<effect>-  
@@ -121,3 +121,10 @@ The Kubernetes scheduler tries to assign the Pod to a node, but all nodes are re
     ```bash
     kubectl get pods -o wide  
     ```
+## Reference
+
+- [Kubernetes: Use Azure Disks with Azure Kubernetes Service (AKS)](/azure/aks/azure-disks-dynamic-pv)
+- [Troubleshoot pod deployment issues in Azure Kubernetes Service (AKS)](/azure/aks/operator-best-practices-cluster-management#troubleshoot-pod-deployment-issues)
+- [Kubernetes Documentation: Insufficient CPU](https://kubernetes.io/docs/concepts/scheduling-eviction/resource-bin-packing/#insufficient-resource)
+- [Kubernetes: Taints and Tolerations](https://learn.microsoft.com/en-us/azure/aks/node-taints)
+- [Assign and Schedule Pods with Taints and Tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
