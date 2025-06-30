@@ -1,19 +1,19 @@
 ---
-title: MsalClientException - Failed to get user name
-description: PDiscusses a "Failed to get user name" error when an application uses Integrated Windows Authentication (IWA) with Microsoft Authentication Library (MSAL) and provide solutions.
+title: MsalClientException - Failed to Get User Name
+description: Resolves the Failed to get user name error when an application uses Integrated Windows Authentication (IWA) with Microsoft Authentication Library (MSAL).
 ms.service: entra-id
-ms.date: 06/23/2025
+ms.date: 06/30/2025
 ms.reviewer: willfid, v-weizhu
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 
 # Microsoft.Identity.Client.MsalClientException: Failed to get user name
 
-This article provides a solution to a "Failed to get user name" error that occurs when an application uses Integrated Windows Authentication (IWA) with Microsoft Authentication Library (MSAL).
+This article provides a solution to the "Failed to get user name" error that occurs when an application uses Integrated Windows Authentication (IWA) together with Microsoft Authentication Library (MSAL).
 
 ## Symptoms
 
-When your application uses IWA with MSAL, if calling the `AcquireTokenByIntegratedWindowsAuth` method as follows:
+When your application uses IWA with together MSAL, if calling the `AcquireTokenByIntegratedWindowsAuth` method as follows:
 
 ```csharp
 result = await app.AcquireTokenByIntegratedWindowsAuth(scopes)
@@ -21,13 +21,11 @@ result = await app.AcquireTokenByIntegratedWindowsAuth(scopes)
 
 You encounter one of the following errors:  
 
-> Microsoft.Identity.Client.MsalClientException: Failed to get user name —>  
-> System.ComponentModel.Win32Exception: No mapping between account names and security IDs was done
+- > Microsoft.Identity.Client.MsalClientException: Failed to get user name —>  
+  > System.ComponentModel.Win32Exception: No mapping between account names and security IDs was done 
 
-Or  
-
-> Microsoft.Identity.Client.MsalClientException: Failed to get user name —>  
-> System.ComponentModel.Win32Exception: Access Denied
+- > Microsoft.Identity.Client.MsalClientException: Failed to get user name —>  
+  > System.ComponentModel.Win32Exception: Access Denied
 
 ## Cause
 
@@ -38,12 +36,12 @@ The error originates from Windows. It occurs because MSAL calls the [GetUserName
 > [!NOTE]
 > Before you begin, ensure the following minimum requirements are met:
 >
-> - You run the application as a local Active Directory user and not a local computer user account.
-> - The device where the application run is joined to the domain.
+> - Run the application as a local Active Directory user, not a local computer user account.
+> - The device running the application is joined to the domain.
 
 To resolve this issue, pass the username to `AcquireTokenByIntegratedWindowsAuth`.
 
-If the username is known beforehand, you can manually pass it to MSAL, as follows:
+If the username is known beforehand, you can manually pass it to MSAL as follows:
 
 `result = await app.AcquireTokenByIntegratedWindowsAuth(scopes).WithUsername("<service-account>@contoso.com")`
 
@@ -71,7 +69,7 @@ If the username isn't known beforehand, dynamically retrieve the username and th
     ```
 
     > [!NOTE]
-    > This method tries to access the Windows Account Broker to get the user signed into the device. It doesn't work if the application runs on Internet Information Services (IIS) or Windows Servers.
+    > This method tries to access the Windows Account Broker to sign the user into the device. It doesn't work if the application runs on Internet Information Services (IIS) or Windows Server.
 
 ## Reference
 
