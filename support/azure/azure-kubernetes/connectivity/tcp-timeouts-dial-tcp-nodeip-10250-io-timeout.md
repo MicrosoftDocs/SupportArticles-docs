@@ -1,15 +1,12 @@
 ---
 title: TCP 10250 I/O timeout errors when connecting to a node's Kubelet for log retrieval
 description: Learn how to troubleshoot TCP 10250 I/O timeout errors that occur when retrieving kubectl logs from a pod in an Azure Kubernetes Service (AKS) cluster.
-ms.topic: article
-ms.date: 06/03/2025
-author: ''
-ms.author: ''
-ms.custom: sap:Connectivity, innovation-engine
+ms.date: 09/19/2024
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why I'm receiving TCP timeouts (such as 'dial tcp <Node_IP>:10250: i/o timeout') so that I can use my Azure Kubernetes Service (AKS) cluster successfully.
+ms.custom: sap:Connectivity, innovation-engine
 ---
 
 # 10250 I/O timeouts error when running kubectl log command
