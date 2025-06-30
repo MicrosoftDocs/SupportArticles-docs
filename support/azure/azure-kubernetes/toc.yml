@@ -172,8 +172,8 @@
     href: availability-performance/high-memory-consumption-disk-intensive-applications.md
   - name: Troubleshoot cluster service health probe mode issues
     href: availability-performance/cluster-service-health-probe-mode-issues.md
+  - name: Troubleshoot pod scheduler errors 
     href: availability-performance/troubleshoot-pod-scheduler-errors.md
-  - name: Troubleshoot pod scheduler errors
   - name: Troubleshoot node not ready
     items:
     - name: Basic troubleshooting

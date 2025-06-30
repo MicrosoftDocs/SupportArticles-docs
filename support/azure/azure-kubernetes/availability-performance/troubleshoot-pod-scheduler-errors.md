@@ -124,7 +124,7 @@ The Kubernetes scheduler tries to assign the Pod to a node, but all nodes are re
 ## Reference
 
 - [Kubernetes: Use Azure Disks with Azure Kubernetes Service](/azure/aks/azure-disks-dynamic-pv)
-- [Kubernetes: Taints and Tolerations](/azure/aks/node-taints)
+- [Kubernetes: Use node taints](/azure/aks/use-node-taints)
 - [Kubernetes Documentation: Insufficient CPU](https://kubernetes.io/docs/concepts/scheduling-eviction/resource-bin-packing/#insufficient-resource)
 - [Kubernetes Documentation: Assign and Schedule Pods with Taints and Tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
 
