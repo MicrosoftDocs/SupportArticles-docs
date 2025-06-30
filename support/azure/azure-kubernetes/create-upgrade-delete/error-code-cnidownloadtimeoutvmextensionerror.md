@@ -1,13 +1,16 @@
 ---
 title: Troubleshoot Container Network Interface download failures
 description: Learn how to resolve Container Network Interface download failures when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 05/05/2025
+ms.topic: article
+ms.date: 06/12/2024
+author: v-jsitser
+ms.author: v-jsitser
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), innovation-engine
 editor: v-jsitser
 ms.reviewer: axelg, chiragpa, mariochaves, v-weizhu, v-leedennis
-ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the container network interface download failures so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
+
 # Troubleshoot Container Network Interface download failures
 
 This article discusses how to identify and resolve the `CniDownloadTimeoutVMExtensionError` error code (also known as error code `ERR_CNI_DOWNLOAD_TIMEOUT`, error number 41) or the `WINDOWS_CSE_ERROR_DOWNLOAD_CNI_PACKAGE` error code (error number 35) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
@@ -15,6 +18,7 @@ This article discusses how to identify and resolve the `CniDownloadTimeoutVMExte
 ## Prerequisites
 
 - The [Curl](https://curl.se/download.html) command-line tool
+- Network access from the same environment where AKS nodes will be deployed (same VNet, firewall rules, etc.)
 
 ## Symptoms
 
@@ -46,10 +50,76 @@ Your cluster nodes can't connect to the endpoint that's used to download the Con
 
 Run a Curl command to verify that your nodes can download the binaries:
 
-```bash
-curl https://acs-mirror.azureedge.net/cni/azure-vnet-cni-linux-amd64-v1.0.25.tgz
+First, attempt a test download of the Azure CNI package for Linux from the official mirror endpoint.
 
-curl --fail --ssl https://acs-mirror.azureedge.net/cni/azure-vnet-cni-linux-amd64-v1.0.25.tgz  --output /opt/cni/downloads/azure-vnet-cni-linux-amd64-v1.0.25.tgz
+```bash
+curl -I https://acs-mirror.azureedge.net/cni/azure-vnet-cni-linux-amd64-v1.0.25.tgz
+```
+
+Results:
+
+<!-- expected_similarity=0.3 -->
+
+```output
+HTTP/2 200 
+content-length: 970752
+content-type: application/x-gzip
+last-modified: Wed, 22 Jun 2022 00:00:00 GMT
+etag: "0x8DA53F1234567"
+server: ECAcc (dab/4B9E)
+x-cache: HIT
+cache-control: public, max-age=86400
+accept-ranges: bytes
+date: Thu, 05 Jun 2025 00:00:00 GMT
+```
+
+This command checks if the endpoint is reachable and returns the HTTP headers. If you see a `200 OK` response, it indicates that the endpoint is accessible.
+
+Next, attempt a download with validation and save the file locally for further troubleshooting. This will help determine if SSL or outbound connectivity is correctly configured.
+
+```bash
+# Create a temporary directory for testing
+mkdir -p /tmp/cni-test
+
+# Download the CNI package to the temp directory
+curl -L --fail https://acs-mirror.azureedge.net/cni/azure-vnet-cni-linux-amd64-v1.0.25.tgz --output /tmp/cni-test/azure-vnet-cni-linux-amd64-v1.0.25.tgz && echo "Download successful" || echo "Download failed"
+```
+
+Results:
+
+<!-- expected_similarity=0.3 -->
+
+```output
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 6495k  100 6495k    0     0  8234k      0 --:--:-- --:--:-- --:--:-- 8230k
+Download successful
+```
+
+Verify the downloaded file:
+
+```bash
+ls -la /tmp/cni-test/
+file /tmp/cni-test/azure-vnet-cni-linux-amd64-v1.0.25.tgz
+```
+
+Results:
+
+<!-- expected_similarity=0.3 -->
+
+```output
+total 6500
+drwxr-xr-x 2 user user    4096 Jun 20 10:30 .
+drwxrwxrwt 8 root root    4096 Jun 20 10:30 ..
+-rw-r--r-- 1 user user 6651392 Jun 20 10:30 azure-vnet-cni-linux-amd64-v1.0.25.tgz
+
+/tmp/cni-test/azure-vnet-cni-linux-amd64-v1.0.25.tgz: gzip compressed data, from Unix, original size modulo 2^32 20070400
+```
+
+Clean up the test files:
+
+```bash
+rm -rf /tmp/cni-test/
 ```
 
 If you can't download these files, make sure that traffic is allowed to the downloading endpoint. For more information, see [Azure Global required FQDN/application rules](/azure/aks/outbound-rules-control-egress#azure-global-required-fqdn--application-rules).
