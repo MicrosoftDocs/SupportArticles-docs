@@ -14,7 +14,11 @@ Object Linking and Embedding Database (OLE DB) is a Microsoft data access techno
 To validate if the latest OLEDB driver for SQL Server  is installed on your system, you can run the following PowerShell command under an Administrator.
 
 ```PowerShell
-Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft" |Where-Object { $_.Name -like "*MSOLEDBSQL*" } |ForEach-Object {   Get-ItemProperty $_.PSPath}
+
+Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft", "HKLM:\SOFTWARE\Wow6432Node\Microsoft" |
+    Where-Object { $_.Name -like "*MSOLEDBSQL*" } |
+    ForEach-Object { Get-ItemProperty $_.PSPath }
+
 ```
 
 The output might look something like this, if you have version 18 and 19 installed on your system:
@@ -32,12 +36,25 @@ PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWA
 PSChildName      : MSOLEDBSQL19
 PSProvider       : Microsoft.PowerShell.Core\Registry
 
+InstalledVersion : 18.7.4.0
+PSPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSOLEDBSQL
+PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft
+PSChildName      : MSOLEDBSQL
+PSProvider       : Microsoft.PowerShell.Core\Registry
+
+InstalledVersion : 19.4.1.0
+PSPath           : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSOLEDBSQL19
+PSParentPath     : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft
+PSChildName      : MSOLEDBSQL19
+PSProvider       : Microsoft.PowerShell.Core\Registry
 ```
 
 You can also check for a SQLNCLI installation using this command:
 
 ```PowerShell
-Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft" |Where-Object { $_.Name -like "*SQLNCLi*" } |ForEach-Object {   Get-ItemProperty $_.PSPath}
+Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft", "HKLM:\SOFTWARE\Wow6432Node\Microsoft" |
+   Where-Object { $_.Name -like "*SQLNCLi*" } |
+   ForEach-Object {   Get-ItemProperty $_.PSPath}
 ```
 
 ## Validate OLEDB driver via a UDL
@@ -51,7 +68,7 @@ Double-click the file to open a dialog where you can see the installed providers
 Select **OK** in the dialog to confirm the configuration.
 
 ### Examine the UDL file content 
-If you can open the UDL file in a text editor like Notepad, you can see the connection string and copy that to use in your application. Here are two examples:
+If you open the UDL file in a text editor like Notepad, you see the connection string and can copy that to use in your application. Here are two examples:
 
  ```output
  Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=master;Data Source=localhost;Initial File Name="";Server SPN="";Authentication="";Access Token=""
