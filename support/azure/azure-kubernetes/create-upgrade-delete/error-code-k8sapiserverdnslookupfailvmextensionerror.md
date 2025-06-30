@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)
 description: Learn how to troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error (52) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.topic: article
-ms.date: 06/14/2024
-author: MicrosoftDocsExec
-ms.author: MicrosoftDocsExec
-ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), innovation-engine
+ms.date: 01/24/2024
+ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir
+ms.service: azure-kubernetes-service
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (or error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL, error number 52) so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool),  innovation-engine
 ---
 
 # Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)
