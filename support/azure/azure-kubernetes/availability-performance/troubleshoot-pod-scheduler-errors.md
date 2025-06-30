@@ -34,7 +34,7 @@ Pods remain in the Pending state with the following scheduler error:
     kubectl get nodes --show-labels
     ```
 3. Make sure that at least one node's labels match the `nodeAffinity` specified in the Persistent Volume's YAML spec.
-4. To resolve the conflict, Update the Persistent Volume's affinity rules to match existing node labels or add the required labels to the correct node:
+4. To resolve the conflict, Update the Persistent Volume's `nodeAffinity` rules to match existing node labels or add the required labels to the correct node:
 
     ```bash
     kubectl label nodes <node-name> <key>=<value>
@@ -102,14 +102,10 @@ The Kubernetes scheduler tries to assign the Pod to a node, but all nodes are re
 
     ```yml
     tolerations:
-    
-    - key: "key"
-    
-      operator: "Equal"
-    
-      value: "value"
-    
-      effect: "NoSchedule"
+      - key: "key"
+        operator: "Equal"
+        value: "value"
+        effect: "NoSchedule"
     ```
    If the taint isn't needed, you can remove it from the node:
     
