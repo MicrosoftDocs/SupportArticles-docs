@@ -33,10 +33,11 @@ This article provides a resolution for common issues that can cause problems whe
 
 To solve this issue, follow these steps:
 
-- In Internet Explorer, select **Settings** > **Internet Options** > **Security** > **Trusted Sites** > **Sites**. In the **Add this website to zone** field, enter `\*\.dynamics.com`, and then select **Add**.
-- In Internet Explorer, select **Settings** > **Internet Options** > **Security** > **Trusted Sites**. In the area labeled **Security level for this zone**, change the option to **Medium-Low**.
-- Disable the pop-up blocker in your browser.
-- Confirm you have the correct .NET framework version installed on workstations.
+- If you're using Internet Explorer:
+    - Select **Settings** > **Internet Options** > **Security** > **Trusted Sites** > **Sites**. In the **Add this website to zone** field, enter `\*\.dynamics.com`, and then select **Add**.
+    - Select **Settings** > **Internet Options** > **Security** > **Trusted Sites**. In the area labeled **Security level for this zone**, change the option to **Medium-Low**.
+    - Disable the pop-up blocker in your browser.
+    - Confirm you have the correct .NET framework version installed on workstations.
 - If you're using the Chrome browser, you must install the **ClickOnce** extension to download the Report Designer client. If you're running Chrome in incognito mode, make sure the **ClickOnce** extension is enabled for incognito mode. For more information about the Chrome **ClickOnce** extension, see [System requirements for cloud deployments](/dynamics365/fin-ops-core/fin-ops/get-started/system-requirements).
 - If you're using Microsoft Edge with the Chrome browser, you don't need to install the **ClickOnce** extension for Microsoft Edge Chromium. However, you must enable the **ClickOnce** option to download the Report Designer client. If you're running incognito mode, make sure the **ClickOnce** extension is enabled for incognito mode.
 
@@ -50,7 +51,7 @@ To solve this issue, follow these steps:
 
 ### Resolution
 
-- To verify that the user doesn't have permission, select **Yes** on the error, "Unable to connect to the Financial reporting server. Select Yes if you want to continue and specify a different server address." Then select **Test Connection**. If you don't have permission, you'll see a message that says, "Connection attempt failed. User does not have appropriate permissions to connect to the server. Contact your system administrator."
+- To check if you lack the required permissions, select **Yes** when the error message "Unable to connect to the Financial reporting server. Select **Yes** if you want to continue and specify a different server address." appears. Then select Test Connection. If you don't have permission, you'll see a message that says, "Connection attempt failed. User does not have appropriate permissions to connect to the server. Contact your system administrator."
 - The required permissions are listed in [Granting security access to Financial reporting](/dynamics365/finance/general-ledger/financial-reporting-getting-started#granting-security-access-to-financial-reporting). Security in Financial reporting is based on these privileges. You won't have access unless these privileges (or another security role that includes these privileges) are assigned to you.
 - The **Company Users Provider to Company** integration task (also responsible for and known as user integration) runs on a 5-minute interval. It might take up to 10 minutes for any permission changes to take effect in Financial reporting.
 
