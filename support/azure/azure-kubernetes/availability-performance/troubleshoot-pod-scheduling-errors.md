@@ -7,7 +7,7 @@ ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
 ---
 
-## Troubleshoot pod scheduler errors in AKS
+# Troubleshoot pod scheduler errors in AKS
 
 When you deploy workloads in Azure Kubernetes Service (AKS), you might encounter scheduling errors that prevent Pods from running. This article explains common scheduling errors, their causes, and how to resolve them.
 
@@ -111,9 +111,9 @@ The Kubernetes scheduler tries to assign the Pod to a node, but all nodes are re
 
   effect: "NoSchedule"
     ```
-3.  If the taint is not needed, you can remove it from the node:
+3. If the taint is not needed, you can remove it from the node:
 
-    ```
+    ```bash
     kubectl taint nodes <node-name> <key>:<effect>-  
     ```
 4. Redeploy or monitor the Pod status:
