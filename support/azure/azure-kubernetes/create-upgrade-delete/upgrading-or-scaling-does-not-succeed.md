@@ -1,14 +1,13 @@
 ---
 title: Troubleshoot cluster upgrading and scaling errors
 description: Troubleshoot errors that occur when you try to upgrade or scale an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/19/2024
-editor: v-jsitser
-ms.reviewer: chiragpa, nickoman, v-leedennis
-ms.service: azure-kubernetes-service
-keywords:
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot errors so that I can successfully upgrade or scale an Azure Kubernetes Service (AKS) cluster.
-ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
+ms.topic: article
+ms.date: 06/12/2024
+author: v-jsitser
+ms.author: v-jsitser
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), innovation-engine
 ---
+
 # Troubleshoot cluster upgrading and scaling errors
 
 This article discusses how to troubleshoot errors that occur when you try to upgrade or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
@@ -56,7 +55,17 @@ To resolve this issue, follow these steps:
     To retrieve detailed status about your cluster, run the following [az aks show](/cli/azure/aks#az-aks-show) command:
 
     ```azurecli
-    az aks show --resource-group myResourceGroup --name myAKSCluster --output table
+    az aks show --resource-group $RESOURCE_GROUP_NAME --name $CLUSTER_NAME --output table
+    ```
+
+    Results: 
+
+    <!-- expected_similarity=0.3 -->
+
+    ```output
+    Name          Location    ResourceGroup       KubernetesVersion    ProvisioningState    Fqdn
+    ------------- ----------- ------------------- ------------------- ------------------- ---------------
+    myAKSClusterx eastus2     myResourceGroupx    1.27.x              Succeeded            xxxxx.xxxxxx.x
     ```
 
 2. Refer to the following table to take the appropriate action based on the cluster's status:
