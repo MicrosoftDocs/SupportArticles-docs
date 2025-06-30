@@ -13,7 +13,7 @@ This article provides a solution to the "Failed to get user name" error that occ
 
 ## Symptoms
 
-When your application uses IWA with together MSAL, if calling the `AcquireTokenByIntegratedWindowsAuth` method as follows:
+When your application uses IWA together with MSAL, if calling the `AcquireTokenByIntegratedWindowsAuth` method as follows:
 
 ```csharp
 result = await app.AcquireTokenByIntegratedWindowsAuth(scopes)
