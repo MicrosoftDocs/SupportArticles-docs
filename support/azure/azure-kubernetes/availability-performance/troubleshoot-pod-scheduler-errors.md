@@ -19,7 +19,7 @@ Pods remain in the Pending state with the following scheduler error:
 
 ### Cause
 
-[Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#node-affinity) define `nodeAffinity rules` that restrict which nodes can access the volume. If none of the available nodes satisfy the volume's affinity rules, the scheduler cannot assign the Pod to any node.
+[Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#node-affinity) define `nodeAffinity` rules that restrict which nodes can access the volume. If none of the available nodes satisfy the volume's affinity rules, the scheduler cannot assign the Pod to any node.
 
 ### Solution
 
