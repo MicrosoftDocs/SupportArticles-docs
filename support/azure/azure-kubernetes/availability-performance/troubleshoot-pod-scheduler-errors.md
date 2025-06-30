@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Pod scheduler Errors in AKS
+title: Troubleshoot Pod scheduler Errors in Azure Kubernetes Service
 description: Explains common scheduler errors, their causes, and how to resolve them.
 ms.date: 06/30/2025
 ms.reviewer: 
@@ -7,7 +7,7 @@ ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
 ---
 
-# Troubleshoot pod scheduler errors in AKS
+# Troubleshoot pod scheduler errors in Azure Kubernetes Service
 
 When you deploy workloads in Azure Kubernetes Service (AKS), you might encounter scheduler errors that prevent Pods from running. This article provides solutions to common scheduler errors.
 
