@@ -101,18 +101,18 @@ The Kubernetes scheduler tries to assign the Pod to a node, but all nodes are re
 2. Add necessary tolerations to Pod spec. Edit your deployment or Pod YAML to include matching tolerations for the taints on your nodes. For example, if your node has the taint key=value:NoSchedule, your Pod spec must include: 
 
     ```yml
-  tolerations:
-
-- key: "key"
-
-  operator: "Equal"
-
-  value: "value"
-
-  effect: "NoSchedule"
+    tolerations:
+    
+    - key: "key"
+    
+      operator: "Equal"
+    
+      value: "value"
+    
+      effect: "NoSchedule"
     ```
 3. If the taint isn't needed, you can remove it from the node:
-
+    
     ```bash
     kubectl taint nodes <node-name> <key>:<effect>-  
     ```
@@ -121,6 +121,3 @@ The Kubernetes scheduler tries to assign the Pod to a node, but all nodes are re
     ```bash
     kubectl get pods -o wide  
     ```
-
-
-    
