@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Pod Scheduling Errors in AKS
-description: his article explains common scheduling errors, their causes, and how to resolve them.
+description: Explains common scheduling errors, their causes, and how to resolve them.
 ms.date: 06/30/2025
 ms.reviewer: 
 ms.service: azure-kubernetes-service
@@ -13,7 +13,7 @@ When you deploy workloads in Azure Kubernetes Service (AKS), you might encounter
 
 ## Error: 0/(X) nodes are available: X node(s) had volume node affinity conflict
 
-Pods remains in the Pending state with the scheduler message:
+Pods remain in the Pending state with the scheduler message:
 
 >0/(X) nodes are available: X node(s) had volume node affinity conflict.
 
@@ -45,7 +45,7 @@ Persistent Volumes can define nodeAffinity rules that restrict which nodes can a
 
 ## Error: 0/(X) nodes are available: X Insufficient CPU
 
-Pods remains in the Pending state with the scheduler message:
+Pods remain in the Pending state with the scheduler message:
 
 >Error: 0/(X) nodes are available: X Insufficient CPU.
 
@@ -80,7 +80,7 @@ This issue occurs when one or more of the following conditions are met:
 
 ## Error: 0/(X) nodes are available: X node(s) had untolerated taint
 
-Pods remains in the Pending state with the scheduler message:
+Pods remain in the Pending state with the scheduler message:
 
 >Error: 0/(X) nodes are available: X node(s) had untolerated taint.
 
@@ -88,7 +88,7 @@ Pods remains in the Pending state with the scheduler message:
 
 The Kubernetes scheduler tries to assign the Pod to a node, but all nodes are rejected for one of the following reasons:
 
-- The node has a taint (`key=value:effect`) that the Pod does not tolerate.
+- The node has a taint (`key=value:effect`) that the Pod doesn't tolerate.
 
 - The node has other taint-based restrictions that prevent the Pod from being scheduled.
 
@@ -111,7 +111,7 @@ The Kubernetes scheduler tries to assign the Pod to a node, but all nodes are re
 
   effect: "NoSchedule"
     ```
-3.  If the taint is not needed, you can remove it from the node:
+3.  If the taint isn't needed, you can remove it from the node:
 
     ```
     kubectl taint nodes <node-name> <key>:<effect>-  
