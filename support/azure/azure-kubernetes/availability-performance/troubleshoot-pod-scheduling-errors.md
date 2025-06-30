@@ -111,7 +111,7 @@ The Kubernetes scheduler tries to assign the Pod to a node, but all nodes are re
 
   effect: "NoSchedule"
     ```
-3.  If the taint isn't needed, you can remove it from the node:
+3. If the taint isn't needed, you can remove it from the node:
 
     ```bash
     kubectl taint nodes <node-name> <key>:<effect>-  
