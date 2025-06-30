@@ -37,7 +37,7 @@ To solve this issue, follow these steps:
     - Select **Settings** > **Internet Options** > **Security** > **Trusted Sites** > **Sites**. In the **Add this website to zone** field, enter `\*\.dynamics.com`, and then select **Add**.
     - Select **Settings** > **Internet Options** > **Security** > **Trusted Sites**. In the area labeled **Security level for this zone**, change the option to **Medium-Low**.
     - Disable the pop-up blocker in your browser.
-    - Confirm you have the correct .NET framework version installed on workstations.
+    - Confirm you have the latest .NET framework version installed on workstations.
 - If you're using the Chrome browser, you must install the **ClickOnce** extension to download the Report Designer client. If you're running Chrome in incognito mode, make sure the **ClickOnce** extension is enabled for incognito mode. For more information about the Chrome **ClickOnce** extension, see [System requirements for cloud deployments](/dynamics365/fin-ops-core/fin-ops/get-started/system-requirements).
 - If you're using Microsoft Edge with the Chrome browser, you don't need to install the **ClickOnce** extension for Microsoft Edge Chromium. However, you must enable the **ClickOnce** option to download the Report Designer client. If you're running incognito mode, make sure the **ClickOnce** extension is enabled for incognito mode.
 
@@ -47,7 +47,7 @@ To solve this issue, follow these steps:
     4. Set the drop-down menu option to **Enabled**.
     5. Select **Restart Browser**.
 
-## Issue 2 - The user isn't assigned the required permissions to use Financial reporting
+## Issue 2 - User receives "Connection attempt failed. User does not have appropriate permissions to connect to the server. Contact your system administrator." message when trying to use Financial reporting
 
 ### Resolution
 
