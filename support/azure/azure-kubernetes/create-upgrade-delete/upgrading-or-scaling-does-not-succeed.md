@@ -1,10 +1,12 @@
 ---
 title: Troubleshoot cluster upgrading and scaling errors
 description: Troubleshoot errors that occur when you try to upgrade or scale an Azure Kubernetes Service (AKS) cluster.
-ms.topic: article
-ms.date: 06/12/2024
-author: v-jsitser
-ms.author: v-jsitser
+ms.date: 09/19/2024
+editor: v-jsitser
+ms.reviewer: chiragpa, nickoman, v-leedennis
+ms.service: azure-kubernetes-service
+keywords:
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot errors so that I can successfully upgrade or scale an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), innovation-engine
 ---
 
