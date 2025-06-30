@@ -478,6 +478,8 @@ items:
           href: ../outlook-issues/crash-issues.md
         - name: Issues when using Autodiscover service
           href: ../outlook-issues/issues-when-using-autodiscover-service.md
+        - name: Mailbox named properties quota exceeded
+          href: ../outlook-issues/named-property-quota-exceeded.md
         - name: No permissions error when accessing another user's mailbox folder
           href: ../outlook-issues/cannot-access-another-mailbox-folder.md
         - name: Outlook can't set up a Microsoft 365 account
