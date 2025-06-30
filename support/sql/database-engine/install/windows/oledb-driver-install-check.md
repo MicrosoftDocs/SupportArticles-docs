@@ -11,13 +11,13 @@ Object Linking and Embedding Database (OLE DB) is a Microsoft data access techno
 
 ## Validate OLEDB driver/provider via PowerShell
 
-To validate if the latest OLEDB driver for SQL Server  is installed on your system, you can run the following PowerShell command under an Adminsitrator.
+To validate if the latest OLEDB driver for SQL Server  is installed on your system, you can run the following PowerShell command under an Administrator.
 
 ```PowerShell
 Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft" |Where-Object { $_.Name -like "*MSOLEDBSQL*" } |ForEach-Object {   Get-ItemProperty $_.PSPath}
 ```
 
-The output may look something like this, if you have version 18 and 19 installed on your system:
+The output might look something like this, if you have version 18 and 19 installed on your system:
 
 ```output
 InstalledVersion : 18.7.4.0
@@ -104,13 +104,13 @@ If you frequently use 32-bit providers, you can map the file extension *.udl32* 
     [HKEY_CLASSES_ROOT\ft000001\shell\open\ddeexec]
     ```
 
-1. Double-click the *.reg* file and then you can create a file with a *.udl32* file extension. For example, *test.udl32*. And it will launch the 32-bit UDL dialog. For example:
+1. Double-click the *.reg* file and then you can create a file with a *.udl32* file extension. For example, *test.udl32*. And it launches the 32-bit UDL dialog. For example:
 
    :::image type="content" source="media/oledb-driver-install-check/32-bit-udl-dialog.png" alt-text="Screenshot shows an example of a 32-bit UDL dialog.":::
 
 ## Validate an OLE DB Provider
 
-The first step for validating a provider is to see whether the name appears in the list of installed providers of a 64-bit or 32-bit UDL dialog, as shown above. If it doesn't, you need to reinstall the provider or consult the vendor.
+The first step for validating a provider is to see whether the name appears in the list of installed providers of a 64-bit or 32-bit UDL dialog, as shown in the previous section. If it doesn't, you need to reinstall the provider or consult the vendor.
 
 You can also trace the driver location in the registry. The driver name is a COM [ProgID](/windows/win32/com/-progid--key) and you can find it in [HKEY_CLASSES_ROOT](/windows/win32/sysinfo/hkey-classes-root-key).
 
@@ -141,7 +141,7 @@ In this case, the provider is located in the *SysWow64* folder.
 > [!NOTE]
 > These examples are from 64-bit machines. On 32-bit machines, there's no `Wow6432Node` in the registry.
 
-These are the paths to **SQL Native Client 11.0** in Registry Editor for 64-bit machines:
+These registry keys are the paths to **SQL Native Client 11.0** in Registry Editor for 64-bit machines:
 
 - `HKEY_CLASSES_ROOT\SQLNCLI.1\CLSID`
 - `HKEY_CLASSES_ROOT\CLSID\<guid>\InProcServer32`
@@ -152,9 +152,9 @@ These are the paths in Registry Editor for 32-bit machines:
 - `HKEY_CLASSES_ROOT\SQLNCLI.1\CLSID`
 - `HKEY_CLASSES_ROOT\CLSID\{guid}\InProcServer32`
 
-## Support for third-party providers
+## Support for non-Microsoft providers
 
-Technical support for third-party OLE DB providers is limited to validating the ProgID points to a valid CLSID and that the `InProcServer32` subkey points to the correct DLL. If the path is incorrect or the registry entry doesn't exist, reinstall the provider or contact the vendor. If the files exist but the registry entries don't, you can manually register the provider using `REGSVR32`. To register a COM DLL, run the following command at an elevated command prompt:
+Technical support for non-Microsoft OLE DB providers is limited to validating the ProgID points to a valid CLSID and that the `InProcServer32` subkey points to the correct DLL. If the path is incorrect or the registry entry doesn't exist, reinstall the provider or contact the vendor. If the files exist but the registry entries don't, you can manually register the provider using `REGSVR32`. To register a COM DLL, run the following command at an elevated command prompt:
 
 ```cmd
 Regsvr32 sqlncli11
