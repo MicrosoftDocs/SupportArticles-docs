@@ -13,7 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365 Apps
-ms.date: 06/24/2025
+ms.date: 06/30/2025
 ---
 
 # Error code 80070520, -2147023584, or 2147943712 when signing in to Microsoft 365 apps
@@ -40,7 +40,7 @@ This issue can occur for the following reasons:
 
   - Run as administrator
   - Run as different user
-  - Run as privileged user
+  - Run with elevated access
 
   These methods interfere with the app's authentication flow. They aren't supported in most scenarios.
 
