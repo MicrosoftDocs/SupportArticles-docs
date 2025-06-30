@@ -354,6 +354,8 @@
       href: azure-vm-cannot-rdp-working-features.md
     - name: Azure VM startup hangs at "Please wait for the Group Policy Client"
       href: please-wait-for-the-group-policy-client.md
+    - name: Bug check 0x0000001A - MEMORY_MANAGEMENT
+      href: memory-management-0x0000001A.md
 
 - name: Cannot start or stop my VM
   items:
