@@ -1,12 +1,14 @@
 ---
 title: Node Not Ready because of custom script extension (CSE) errors
 description: Troubleshoot scenarios in which custom script extension (CSE) errors cause Node Not Ready states in an Azure Kubernetes Service (AKS) cluster node pool.
-ms.date: 10/08/2022
+ms.date: 06/08/2024
 ms.reviewer: rissing, chiragpa, momajed, v-leedennis
 ms.service: azure-kubernetes-service
-ms.custom: sap:Node/node pool availability and performance, devx-track-azurecli
-#Customer intent: As an Azure Kubernetes user, I want to prevent custom script extension (CSE) errors so that I can avoid a Node Not Ready state within a node pool,  and avoid a Cluster Not in Succeeded state within Azure Kubernetes Service (AKS).
+ms.custom: sap:Node/node pool availability and performance, devx-track-azurecli, innovation-engine
+author: MicrosoftDocs
+ms.author: MicrosoftDocs
 ---
+
 # Troubleshoot node not ready failures caused by CSE errors
 
 This article helps you troubleshoot scenarios in which a Microsoft Azure Kubernetes Service (AKS) cluster isn't in the `Succeeded` state and an AKS node isn't ready within a node pool because of custom script extension (CSE) errors.
@@ -25,10 +27,31 @@ The node extension deployment fails and returns more than one error code when yo
 
 1. To better understand the current failure on the cluster, run the [az aks show](/cli/azure/aks#az-aks-show) and [az resource update](/cli/azure/resource#az-resource-update) commands to set up debugging:
 
+    Set your environment variables and run the commands to view the cluster's status and debug information.
+
     ```azurecli
+    export RG_NAME="my-aks-rg"
+    export CLUSTER_NAME="myakscluster"
     clusterResourceId=$(az aks show \
-        --resource-group <resource-group-name> --name <cluster-name> --output tsv --query id)
+        --resource-group $RG_NAME --name $CLUSTER_NAME --output tsv --query id)
     az resource update --debug --verbose --ids $clusterResourceId
+    ```
+
+    Results:
+
+    <!-- expected_similarity=0.3 -->
+
+    ```output
+    {
+      "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/my-aks-rg-xxx/providers/Microsoft.ContainerService/managedClusters/myaksclusterxxx",
+      "name": "myaksclusterxxx",
+      "type": "Microsoft.ContainerService/managedClusters",
+      "location": "eastus2",
+      "tags": null,
+      "properties": {
+        ...
+      }
+    }
     ```
 
 1. Check the debugging output and the error messages that you received from the `az resource update` command against the error list in the [CSE helper](https://github.com/Azure/AgentBaker/blob/1bf9892afd715a34e0c6b7312e712047f10319ce/parts/linux/cloud-init/artifacts/cse_helpers.sh) executable file on GitHub.
@@ -53,42 +76,52 @@ Set up your custom Domain Name System (DNS) server so that it can do name resolu
 
   - For Virtual Machine Scale Set nodes, use the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command:
 
+    > **Important:** You must specify the `--instance-id` of the VM scale set. Here, we demonstrate querying for a valid instance ID (e.g., 0) and a likely VMSS in an AKS node resource group. Update values appropriately to match your environment.
+
     ```azurecli
+    export NODE_RESOURCE_GROUP=$(az aks show --resource-group $RG_NAME --name $CLUSTER_NAME --query nodeResourceGroup -o tsv)
+    export VMSS_NAME=$(az vmss list --resource-group $NODE_RESOURCE_GROUP --query "[0].name" -o tsv)
+    export DNS_IP_ADDRESS="10.0.0.10"
+    export INSTANCE_ID=$(az vmss list-instances --resource-group $NODE_RESOURCE_GROUP --name $VMSS_NAME --query "[0].instanceId" -o tsv)
+    export API_FQDN=$(az aks show --resource-group $RG_NAME --name $CLUSTER_NAME --query fqdn -o tsv)
+
     az vmss run-command invoke \
-        --resource-group <resource-group-name> \
-        --name <vm-scale-set-name> \
-        --command-id RunShellScript \
-        --instance-id 0 \
-        --output tsv \
-        --query "value[0].message" \
-        --scripts "telnet <dns-ip-address> 53"
-    az vmss run-command invoke \
-        --resource-group <resource-group-name> \
-        --name <vm-scale-set-name> \
-        --instance-id 0 \
+        --resource-group $NODE_RESOURCE_GROUP \
+        --name $VMSS_NAME \
+        --instance-id $INSTANCE_ID \
         --command-id RunShellScript \
         --output tsv \
         --query "value[0].message" \
-        --scripts "nslookup <api-fqdn> <dns-ip-address>"
+        --scripts "telnet $DNS_IP_ADDRESS 53"
+    az vmss run-command invoke \
+        --resource-group $NODE_RESOURCE_GROUP \
+        --name $VMSS_NAME \
+        --instance-id $INSTANCE_ID \
+        --command-id RunShellScript \
+        --output tsv \
+        --query "value[0].message" \
+        --scripts "nslookup $API_FQDN $DNS_IP_ADDRESS"
     ```
 
   - For VM availability set nodes, use the [az vm run-command invoke](/cli/azure/vm/run-command#az-vm-run-command-invoke) command:
 
+    > **Important:** You must specify the `--name` of a valid VM in an availability set in your resource group. Here is a template for running network checks.
+
     ```azurecli
     az vm run-command invoke \
-        --resource-group <resource-group-name> \
-        --name <vm-availability-set-name> \
+        --resource-group $RG_NAME \
+        --name $AVAILABILITY_SET_VM \
         --command-id RunShellScript \
         --output tsv \
         --query "value[0].message" \
-        --scripts "telnet <dns-ip-address> 53"
+        --scripts "telnet $DNS_IP_ADDRESS 53"
     az vm run-command invoke \
-        --resource-group <resource-group-name> \
-        --name <vm-availability-set-name> \
+        --resource-group $RG_NAME \
+        --name $AVAILABILITY_SET_VM \
         --command-id RunShellScript \
         --output tsv \
         --query "value[0].message" \
-        --scripts "nslookup <api-fqdn> <dns-ip-address>"
+        --scripts "nslookup $API_FQDN $DNS_IP_ADDRESS"
     ```
 
 For more information, see [Name resolution for resources in Azure virtual networks](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances) and [Hub and spoke with custom DNS](/azure/aks/private-clusters#hub-and-spoke-with-custom-dns).
