@@ -51,7 +51,7 @@ To solve this issue, follow these steps:
 
 ### Resolution
 
-- To check if you have the required permissions, select **Yes** when the error message "Unable to connect to the Financial reporting server. Select **Yes** if you want to continue and specify a different server address." appears. Then, select **Test Connection**. If you don't have permission, you'll see a message that says, "Connection attempt failed. User does not have appropriate permissions to connect to the server. Contact your system administrator."
+- To check if the issue is caused due to lack of permissions, select **Yes** when the error message "Unable to connect to the Financial reporting server. Select **Yes** if you want to continue and specify a different server address. Then, select **Test connection**. If you don't have permission, you'll see a message that says, "Connection attempt failed. User does not have appropriate permissions to connect to the server. Contact your system administrator."
 - The required permissions are listed in [Granting security access to Financial reporting](/dynamics365/finance/general-ledger/financial-reporting-getting-started#granting-security-access-to-financial-reporting). Security in Financial reporting is based on these privileges. You won't have access unless these privileges (or another security role that includes these privileges) are assigned to you.
 - The **Company Users Provider to Company** integration task (also responsible for and known as user integration) runs on a 5-minute interval. It might take up to 10 minutes for any permission changes to take effect in Financial reporting.
 
