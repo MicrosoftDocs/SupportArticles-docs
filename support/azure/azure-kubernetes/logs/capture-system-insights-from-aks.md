@@ -15,7 +15,7 @@ ms.custom: sap:Monitoring and Logging
 
 This article discusses the process of gathering real-time system insights from your Microsoft Azure Kubernetes Service (AKS) cluster by using Inspektor Gadget. The article contains step-by-step instructions for installing this tool on your AKS environment. It also explores practical examples that show how Inspektor Gadget helps you gather valuable information to do effective debugging of real-world issues.
 
-## Demo-How to trace DNS traffic
+## Demo: Real-time DNS troubleshooting and critical file-access alerting
 
 To begin, consider the following quick demo. Suppose that you have to figure out why the DNS requests from an application fail. By using Inspektor Gadget, you can capture the DNS traffic in the Kubernetes namespace in which your application is running:
 
@@ -172,7 +172,7 @@ Use the instructions for your OS:
    apt update && apt install -y curl
    ```
 
-2. Download Microsoft GPG public key:
+2. Download Microsoft GNU Privacy Guard (GPG) public key:
 
     ```bash
     curl -sSL https://packages.microsoft.com/keys/microsoft.asc | tee /usr/share/keyrings/microsoft.asc
@@ -204,7 +204,7 @@ Use the instructions for your OS:
    apt update && apt install -y curl
    ```
 
-2. Download Microsoft GPG public key:
+2. Download Microsoft GNU Privacy Guard (GPG) public key:
 
     ```bash
     curl -sSL https://packages.microsoft.com/keys/microsoft.asc | tee /usr/share/keyrings/microsoft.asc
