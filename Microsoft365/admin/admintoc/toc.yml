@@ -4,6 +4,8 @@
   items:
   - name: Access Management
     items:
+    - name: COM and .NET errors after Office architecture migration
+      href: ../access-management/com-net-errors-after-migration.md
     - name: Adding guests in the admin center
       href: ../access-management/cannot-add-guest-users-in-m365-admin-center.md
     - name: Can't open an IRM-protected document with sign-in prompts
@@ -16,6 +18,12 @@
       href: ../access-management/issue-with-reset-admin-password.md
     - name: Your session has expired in Office Online
       href: ../access-management/your-session-has-expired-error.md
+  - name: Account Security
+    items:
+    - name: Account security alert email message
+      href: ../account-security/account-security-alert-email.md
+    - name: Can't access application from iOS devices
+      href: ../account-security/cannot-access-application-from-ios-device.md
   - name: Active Directory
     items:
     - name: '"AADSTS65005" error when signing in to cloud services'
@@ -73,15 +81,15 @@
   - name: Domain Management
     items:
     - name: Can't add a domain
-      href: ../administration/administrator-failed-adding-domain.md
+      href: ../domain-management/administrator-failed-adding-domain.md
     - name: Can't assign a federated domain
       href: ../domain-management/cannot-assign-federated-domain-to-user.md
     - name: Can't send emails from full redelegation domain
-      href: ../administration/send-email-full-redelegation-domain.md
+      href: ../domain-management/send-email-full-redelegation-domain.md
     - name: Child domain doesn't inherit parent changes
-      href: ../administration/child-domain-fails-inherit-parent-domain-changes.md
+      href: ../domain-management/child-domain-fails-inherit-parent-domain-changes.md
     - name: Issue when removing a domain
-      href: ../administration/error-remove-domain-from-office-365.md
+      href: ../domain-management/error-remove-domain-from-office-365.md
   - name: Group Policy
     items:
     - name: Configure default email client using policy
@@ -98,6 +106,24 @@
       href: ../installation/something-went-wrong-30016-4-error.md
   - name: Miscellaneous
     items:
+    - name: Enterprise version of Microsoft Support and Recovery Assistant
+      items:
+      - name: Overview
+        href: ../miscellaneous/sara-command-line-version.md
+      - name: 'Scenario: Outlook Scan'
+        href: ../miscellaneous/assistant-outlook-scan.md
+      - name: 'Scenario: Office Uninstall'
+        href: ../miscellaneous/assistant-office-uninstall.md
+      - name: 'Scenario: Office Activation'
+        href: ../miscellaneous/assistant-office-activation.md
+      - name: 'Scenario: Office Shared Computer Activation'
+        href: ../miscellaneous/assistant-office-shared-computer-activation.md
+      - name: 'Scenario: Outlook Calendar Scan'
+        href: ../miscellaneous/assistant-outlook-calendar-scan.md
+      - name: 'Scenario: Teams Meeting Add-in for Outlook'
+        href: ../miscellaneous/assistant-teams-meeting-add-in-outlook.md
+      - name: 'Scenario: Reset Office Activation'
+        href: ../miscellaneous/assistant-reset-office-activation.md
     - name: Chrome cookie behavior effect on applications
       href: ../miscellaneous/chrome-behavior-affects-applications.md
     - name: New Startup Boost tasks in Windows Task Scheduler

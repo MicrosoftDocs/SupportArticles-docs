@@ -1,0 +1,80 @@
+{
+  "redirections": [
+    {
+      "source_path": "enterprise/administration/com-net-errors-after-migration.md",
+      "redirect_url": "/troubleshoot/microsoft-365/access-management/com-net-errors-after-migration"
+    },
+    {
+      "source_path": "enterprise/administration/diagnostic-log-collection-in-support-and-recovery-assistant.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "enterprise/o365-enterprise-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-outlook-scan.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-outlook-scan"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-reset-office-activation.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-reset-office-activation"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-teams-meeting-add-in-outlook.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-teams-meeting-add-in-outlook"
+    },
+    {
+      "source_path": "enterprise/administration/sara-command-line-version.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/sara-command-line-version"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-office-activation.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-office-activation"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-office-shared-computer-activation.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-office-shared-computer-activation"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-office-uninstall.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-office-uninstall"
+    },
+    {
+      "source_path": "enterprise/administration/assistant-outlook-calendar-scan.md",
+      "redirect_url": "/troubleshoot/microsoft-365/miscellaneous/assistant-outlook-calendar-scan"
+    },
+    {
+      "source_path": "security/o365-security/invalid-security-code-office-365-azure.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "security/microsoft-365-security-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "security/o365-security/account-security-alert-email.md",
+      "redirect_url": "/troubleshoot/microsoft-365/account-security/account-security-alert-email"
+    },
+    {
+      "source_path": "security/o365-security/cannot-access-application-from-ios-device.md",
+      "redirect_url": "/troubleshoot/microsoft-365/account-security/cannot-access-application-from-ios-device"
+    },
+    {
+      "source_path": "admin/administration/administrator-failed-adding-domain.md",
+      "redirect_url": "/troubleshoot/microsoft-365/domain-management/administrator-failed-adding-domain"
+    },
+    {
+      "source_path": "admin/administration/child-domain-fails-inherit-parent-domain-changes.md",
+      "redirect_url": "/troubleshoot/microsoft-365/domain-management/child-domain-fails-inherit-parent-domain-changes"
+    },
+    {
+      "source_path": "admin/administration/error-remove-domain-from-office-365.md",
+      "redirect_url": "/troubleshoot/microsoft-365/domain-management/error-remove-domain-from-office-365"
+    },
+    {
+      "source_path": "admin/administration/send-email-full-redelegation-domain.md",
+      "redirect_url": "/troubleshoot/microsoft-365/domain-management/send-email-full-redelegation-domain"
+    }
+  ]
+}
