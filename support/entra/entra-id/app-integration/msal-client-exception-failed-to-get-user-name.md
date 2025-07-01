@@ -2,7 +2,7 @@
 title: MsalClientException - Failed to Get User Name
 description: Resolves the Failed to get user name error when an application uses Integrated Windows Authentication (IWA) with Microsoft Authentication Library (MSAL).
 ms.service: entra-id
-ms.date: 06/30/2025
+ms.date: 07/01/2025
 ms.reviewer: willfid, v-weizhu
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
