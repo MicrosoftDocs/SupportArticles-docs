@@ -145,7 +145,7 @@ If you frequently use 32-bit providers, you can map a new file extension, for ex
    [HKEY_CLASSES_ROOT\ft000001\shell\open]
    
    [HKEY_CLASSES_ROOT\ft000001\shell\open\command]
-   @="C:\\\\Windows\\\\SysWOW64\\\\Rundll32.exe \"C:\\\\Program Files (x86)\\\\Common Files\\\\system\\\\Ole DB\\\\oledb32.dll\",OpenDSLFile %1"
+   @="C:\\Windows\\SysWOW64\\Rundll32.exe \"C:\\Program Files (x86)\\Common Files\\system\\Ole DB\\oledb32.dll\",OpenDSLFile %1"
    
    [HKEY_CLASSES_ROOT\ft000001\shell\open\ddeexec]
    ```
@@ -154,8 +154,7 @@ If you frequently use 32-bit providers, you can map a new file extension, for ex
 1. Then create a file with a *.udl32* file extension. For example, *c:\temp\test.udl32*. 
 1. Double-click the *test.udl32* to launch the 32-bit UDL dialog. For example, you might see a dialog like this:
 
-   :::image type="content" source="media/oledb-driver-install-check/32-bit-udl-dialog.png" alt-text="Screenshot shows an example of a 32-bit UDL dialog.":::
-
+   :::image type="content" source="media/test-oledb-connectivity-use-udl-file/32-bit-udl-dialog.png" alt-text="Screenshot shows an example of a 32-bit UDL dialog.":::
 
 ## Tips to troubleshoot connection issues
 
