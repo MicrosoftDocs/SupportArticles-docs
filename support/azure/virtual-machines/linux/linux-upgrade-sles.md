@@ -555,20 +555,21 @@ Mid of 2023, SUSE has changed the GPG signing key for the SUSE Linux Enterprise 
 ### Resolution
 
 1. Verify the existing keys.
+```bash
+sudo rpm -q gpg-pubkey
+```
 ```output
-# rpm -q gpg-pubkey
 gpg-pubkey-39db7c82-66c5d91a
 gpg-pubkey-50a3dd1c-50f35137
 ```
-2. Create a file named `repo-signing-key-sle-15.txt` using vi editor.
+2. Create a file named `repo-signing-key-sle-15.txt` using `vi` editor under your home directory.
 
 ```bash
-# vi repo-signing-key-sle-15.txt
+sudo vi repo-signing-key-sle-15.txt
 ```
-
 3. Add the following contents and save the file.
+   
 ```bash
-# cat repo-signing-key-sle-15.txt
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2.0.15 (GNU/Linux)
 
@@ -601,19 +602,23 @@ Y0bH1r5E/rCFhRii/iyCxZN/2KIg/dHo8BXoh5zvzJ1XZ/bgiDnWSkQvdA==
 ```
 4. Import the key from the file `repo-signing-key-sle-15.txt`.
 ```bash
-# rpm --import repo-signing-key-sle-15.txt
+sudo rpm --import repo-signing-key-sle-15.txt
 ```
 5. Verify if the key is imported.
+```bash
+sudo rpm -q gpg-pubkey
+```
 ```output
-# rpm -q gpg-pubkey
 gpg-pubkey-39db7c82-66c5d91a
 gpg-pubkey-50a3dd1c-50f35137
 gpg-pubkey-3fa1d6ce-63c9481c
 ```
 6. Initiate migration.
 
+```bash
+sudo zypper migration -v
+```
 ```output
-# zypper migration -v
 .
 .                                                                                         
 All repositories have been refreshed.
@@ -917,12 +922,14 @@ Reboot is suggested to ensure that your system benefits from these updates.
 ```
 7. Verify successful execution of migration.
 ```bash
-# echo $?
+sudo echo $?
+```
+```output
 0
 ```
 8. Reboot the VM.
 ```bash
-# reboot
+sudo reboot
 ```
 After reboot, the VM will be successfully migrated to SLES 15 SP6.
 
