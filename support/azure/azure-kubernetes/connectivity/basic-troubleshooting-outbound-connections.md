@@ -2,7 +2,7 @@
 title: Basic troubleshooting of outbound connections from an AKS cluster
 description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
 ms.date: 11/28/2024
-ms.reviewer: chiragpa, rissing, jopalhei, jaewonpark, v-leedennis, v-weizhu
+ms.reviewer: chiragpa, rissing, jopalhei, jaewonpark, v-leedennis, v-weizhu, juliayin
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to perform basic troubleshooting of outbound connections from an Azure Kubernetes Service (AKS) cluster so that I don't experience connection issues when I use AKS.
@@ -62,20 +62,22 @@ It's important to understand the nature of egress flow for your cluster so that 
 
 ## Considerations when troubleshooting
 
-#### Check your egress device
+#### Check your egress device(s) within traffic flow
 
-When you troubleshoot outbound traffic in AKS, it's important to know what your egress device is (that is, the device through which the traffic passes). Here, the egress device could be one of the following components:
+When you troubleshoot outbound traffic in AKS, it's important to know what egress device(s) are present (that is, the devices through which the traffic passes). Here, the egress device could be one of the following components:
 
 - Azure Load Balancer
 - Azure Firewall or a custom firewall
 - A network address translation (NAT) gateway
 - A proxy server
+- Network security group (NSG)
+- Network policy
 
-The flow could also differ based on the destination. For example, internal traffic (that is, within the cluster) doesn't go through the egress device. The internal traffic would use only the cluster networking. For public outbound traffic, determine if there's an egress device passing through and check that device.
+The flow could also differ based on the destination. For example, internal traffic (that is, within the cluster) doesn't go through the egress device. The internal traffic would use only the cluster networking. For public outbound traffic, determine which egress devices are implemented for your cluster.
 
-#### Check each hop within traffic flow
+To easily identify which egress device(s) are present for public outbound traffic, you can use the [Azure Virtual Network Verifier](link) tool to check the traffic flow from your cluster nodes to the public internet. By running a connectivity analysis, you can visualize the hops within the traffic flow and any misconfigurations within Azure networking resources that are blocking traffic. We recommend using the Virtual Network Verifier tool as a first step in troubleshooting outbound connectivity issues to isolate the issue and detect problematic egress devices.
 
-After identifying the egress device, check the following factors:
+If you prefer to troubleshoot manually, we recommend that you check the following factors:
 
 - The source and the destination for the request.
 - The hops in between the source and the destination.
@@ -106,6 +108,8 @@ If other troubleshooting steps don't provide any conclusive outcome, take packet
 
 For basic troubleshooting for egress traffic from an AKS cluster, follow these steps:
 
+1. [Check if traffic to the endpoint is blocked by Azure network resources using Azure Virtual Network Verifier](link)
+
 1. [Make sure that the Domain Name System (DNS) resolution for the endpoint works correctly](#check-whether-the-pod-and-node-can-reach-the-endpoint).
 
 1. Make sure that you can reach the endpoint through an IP address.
@@ -127,6 +131,22 @@ For basic troubleshooting for egress traffic from an AKS cluster, follow these s
 > [!NOTE]
 >
 > Assumes no service mesh when you do basic troubleshooting. If you use a service mesh such as Istio, it produces unusual outcomes for TCP based traffic.
+
+#### Check if Azure network resources are blocking traffic to the endpoint
+
+To determine if traffic is blocked the endpoint due to Azure network resources, run a connectivity analysis from your AKS cluster nodes to the endpoint using the Azure Virtual Network Verifier tool. The connectivity analysis covers the following resources:
+
+- Azure Load Balancer
+- Azure Firewall
+- A network address translation (NAT) gateway
+- Network security group (NSG)
+- Network policy (?)
+
+> [!NOTE]
+>
+> Azure Virtual Network Verifier does not look at any external or third-party networking resources, such as a custom firewall. After running the connectivity analysis, we recommend that you perform a manual check of any external networking to cover all hops in the traffic flow.
+
+1. To run the analysis, navigate to your cluster in the Azure portal. In the sidebar, navigate to the Settings -> Node pools blade.
 
 #### Check whether the pod and node can reach the endpoint
 
