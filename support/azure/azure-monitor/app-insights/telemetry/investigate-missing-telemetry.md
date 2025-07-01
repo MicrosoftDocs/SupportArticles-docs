@@ -13,7 +13,7 @@ This article helps you to identify the step in the processing pipeline that caus
 
 ## The Azure portal fails to pull or render the records you're trying to view
 
-Check if Microsoft Entra ID authentication is required. If your Application Insights resource is configured to use Microsoft Entra ID (formerly Azure AD) authentication, your application must also be configured to authenticate using Microsoft Entra ID.
+Check if Microsoft Entra ID (formerly Azure AD) authentication is required. If your Application Insights resource is configured to use Microsoft Entra ID authentication, your application must also be configured to authenticate using Microsoft Entra ID.
 
 If the application hasn't been updated to support Microsoft Entra ID, telemetry won't be accepted by the backend, even if the instrumentation appears correct.
 
