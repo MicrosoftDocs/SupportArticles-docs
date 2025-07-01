@@ -4,7 +4,7 @@ description:   Learn how to use Inspektor Gadget to capture useful information f
 author:        blanquicet
 ms.author:     josebl
 editor:        v-jsitser
-ms.reviewer:   cssakscic, josebl, v-leedennis
+ms.reviewer:   cssakscic, josebl, v-leedennis, mayasingh
 ms.service:    azure-kubernetes-service
 ms.topic:      how-to
 ms.date:       07/01/2025
@@ -17,7 +17,7 @@ This article discusses the process of gathering real-time system insights from y
 
 ## Demo: Real-time DNS troubleshooting and critical file-access alerting
 
-To begin, consider the following quick demo. Suppose that you have to figure out why the DNS requests from an application fail. By using Inspektor Gadget, you can capture the DNS traffic in the Kubernetes namespace in which your application is running:
+To begin, consider the following quick demo. Suppose that you have to figure out why the DNS requests from an application fail. By using Inspektor Gadget, you can run the [trace_dns gadget](https://go.microsoft.com/fwlink/?linkid=2260317) to capture the DNS traffic in the Kubernetes namespace in which your application is running:
 
 ```bash
 kubectl gadget run trace_dns \
@@ -33,7 +33,7 @@ aks-nodepool-41788306-vmss000002  demo-pod     13cc  Q   example.com.         1.
 
 From this information, we can see that the DNS requests are directed to the DNS server at IP address `1.2.3.4` (the `NAMESERVER` column), but we only see the queries (`Q` in `QR` column) and no responses (`R` in `QR` column). This means that the DNS server didn't respond to the queries, which is why the application can't resolve the domain name `www.example.com`.
 
-Now, suppose that `1.2.3.4` isn't the default name server configuration, and you suspect that a malicious process is modifying the configuration at runtime. In these kinds of cases, Inspektor Gadget goes beyond DNS diagnostics. It also enables you to monitor processes that access critical files (such as */etc/resolv.conf*) and have the intention of modifying those files. To do that, filter the flags in the output to show any of the [writing file access modes](https://linux.die.net/man/3/open) (`O_WRONLY` to open for writing only, or `O_RDWR` to open for reading and writing):
+Now, suppose that `1.2.3.4` isn't the default name server configuration, and you suspect that a malicious process is modifying the configuration at runtime. In these kinds of cases, Inspektor Gadget goes beyond DNS diagnostics. It also enables you to monitor processes that access critical files (such as */etc/resolv.conf*) and have the intention of modifying those files. To do that, run the [trace_open gadget](https://go.microsoft.com/fwlink/?linkid=2260318) in the same namespace and filter the results by the file name and the flags that indicate [the intention to write to the file](https://linux.die.net/man/3/open) (`O_WRONLY` to open for writing only, or `O_RDWR` to open for reading and writing):
 
 ```bash
 kubectl gadget run trace_open \
@@ -282,6 +282,14 @@ kubectl get daemonset gadget -n gadget -o jsonpath='{.spec.template.spec.contain
 ```output
 mcr.microsoft.com/oss/v2/inspektor-gadget/inspektor-gadget:vX.Y.Z
 ```
+
+> [!NOTE]
+> If you usually use the [krew](https://sigs.k8s.io/krew) package manager for installing kubectl plug-ins, and you are comfortable installing Inspektor Gadget directly from its GitHub repository, you can use the following commands for easy installation of the `kubectl gadget` plug-in and deployment of Inspektor Gadget in your cluster:
+>
+> ```bash
+> kubectl krew install gadget
+> kubectl gadget deploy
+> ```
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
