@@ -59,6 +59,22 @@
     {
       "source_path": "security/o365-security/cannot-access-application-from-ios-device.md",
       "redirect_url": "/troubleshoot/microsoft-365/account-security/cannot-access-application-from-ios-device"
+    },
+    {
+      "source_path": "admin/administration/administrator-failed-adding-domain.md",
+      "redirect_url": "/troubleshoot/microsoft-365/domain-management/administrator-failed-adding-domain"
+    },
+    {
+      "source_path": "admin/administration/child-domain-fails-inherit-parent-domain-changes.md",
+      "redirect_url": "/troubleshoot/microsoft-365/domain-management/child-domain-fails-inherit-parent-domain-changes"
+    },
+    {
+      "source_path": "admin/administration/error-remove-domain-from-office-365.md",
+      "redirect_url": "/troubleshoot/microsoft-365/domain-management/error-remove-domain-from-office-365"
+    },
+    {
+      "source_path": "admin/administration/send-email-full-redelegation-domain.md",
+      "redirect_url": "/troubleshoot/microsoft-365/domain-management/send-email-full-redelegation-domain"
     }
   ]
 }
