@@ -1,7 +1,7 @@
 ---
 title: IDX14102 Error When Using Microsoft Graph PowerShell
 description: Resolves an error that occurs when you run the Microsoft Graph PowerShell cmdlet Connect-MgGraph.
-ms.date: 06/30/2025
+ms.date: 07/01/2025
 ms.service: entra-id
 ms.custom: sap:Problem with using the Graph SDK - libraries
 ms.reviewer: adoyle, willfid, nualex, v-weizhu
