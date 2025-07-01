@@ -27,6 +27,7 @@ To help narrow down the cause, a quick and easy test is to try to manually insta
 
 To troubleshoot WU issues, see the following articles:
 
+- [Use Windows Update client policies and WSUS together](/windows/deployment/update/wufb-wsus). Use the information in the article to determine whether the update is from WSUS or from WU.
 - [Troubleshoot problems updating Windows](https://support.microsoft.com/en-us/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c)
 - [Troubleshoot issues with Windows Server Update Services (WSUS) client agents](../../mem/configmgr/update-management/troubleshoot-issues-with-wsus-client-agents.md)
 - [How to download updates that include drivers and hotfixes from the Windows Update Catalog](download-updates-drivers-hotfixes-windows-update-catalog.md)
