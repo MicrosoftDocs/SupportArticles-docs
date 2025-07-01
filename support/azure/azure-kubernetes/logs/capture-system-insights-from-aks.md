@@ -109,7 +109,7 @@ Use the instructions for your OS:
 > [!NOTE]
 > To install a specific release or compile it from the source, see [Install kubectl gadget](https://go.microsoft.com/fwlink/?linkid=2260075#installing-the-kubectl-gadget-client) on GitHub.
 
-##### [Azure Linux 3.0](#tab/azureLinux3.0)
+# [Azure Linux 3.0](#tab/azureLinux3.0)
 
 1. Add the Microsoft Cloud-Native repository to your system:
 
@@ -132,7 +132,7 @@ Use the instructions for your OS:
     tdnf install --refresh -y kubectl-gadget
     ```
 
-##### [Ubuntu 22.04](#tab/ubuntu22.04)
+# [Ubuntu 22.04](#tab/ubuntu22.04)
 
 1. Get `curl` if you don't have it installed:
 
@@ -164,7 +164,7 @@ Use the instructions for your OS:
     apt install -y kubectl-gadget
     ```
 
-##### [Ubuntu 20.04](#tab/ubuntu20.04)
+# [Ubuntu 20.04](#tab/ubuntu20.04)
 
 1. Get `curl` if you don't have it installed:
 
@@ -196,7 +196,7 @@ Use the instructions for your OS:
     apt install -y kubectl-gadget
     ```
 
-##### [Ubuntu 18.04](#tab/ubuntu18.04)
+# [Ubuntu 18.04](#tab/ubuntu18.04)
 
 1. Get `curl` if you don't have it installed:
 
