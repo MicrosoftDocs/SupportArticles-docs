@@ -1,7 +1,7 @@
 ---
 title: Bug Check 0x00000019 - BAD_POOL_HEADER
-description: Provides solutions to an issue where an Azure virtual machine (VM) experiences the BAD_POOL_HEADER bug check (0x00000019).
-ms.date: 06/19/2025
+description: Describes an issue where an Azure virtual machine (VM) experiences the BAD_POOL_HEADER bug check (0x00000019).
+ms.date: 07/01/2025
 ms.reviewer: cwhitley
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -22,7 +22,7 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
 ## Cause
 
-This issue occurs because the pool is already corrupted at the time of the current request. This corruption might or might not be due to the caller.  A detailed dump analysis is necessary to determine the source or cause of the pool corruption.
+This issue occurs because the pool was already corrupted when the current request was made. This corruption might or might not be caused by the caller. A detailed dump analysis is necessary to determine the source or cause of the pool corruption.
 
 ## Collect a memory dump for troubleshooting
 
