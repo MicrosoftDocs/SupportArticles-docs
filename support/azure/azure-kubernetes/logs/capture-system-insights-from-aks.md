@@ -49,7 +49,7 @@ aks-nodepool-41788306-vmss000002  demo-pod     malicious-proc  /etc/resolv.conf 
 
 ## What is Inspektor Gadget?
 
-[Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) is a framework that's designed for building, packaging, deploying, and running tools that are dedicated to debugging and inspecting Linux and Kubernetes systems. These tools (*Gadgets*) are implemented as [eBPF](https://go.microsoft.com/fwlink/?linkid=2259866) programs. Their primary goal is to gather low-level kernel data to provide insights into specific system scenarios. The Inspektor Gadget framework manages the association of the collected data by using high-level references, such as Kubernetes resources. This integration makes sure that a seamless connection exists between low-level insights and their corresponding high-level context. The integration streamlines the troubleshooting process and the collection of relevant information.
+[Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) is a framework that makes monitoring, troubleshooting, and security easy for workloads running on Linux and Kubernetes. It is made up of tools (*Gadgets*) that leverage [eBPF](https://go.microsoft.com/fwlink/?linkid=2259866) programs. Their primary goal is to gather low-level kernel data to provide insights into specific system scenarios. The Inspektor Gadget framework manages the association of the collected data by using high-level references, such as Kubernetes resources. This integration makes sure that a seamless connection exists between low-level insights and their corresponding high-level context. The integration streamlines the troubleshooting process and the collection of relevant information.
 
 ## Gadgets
 
