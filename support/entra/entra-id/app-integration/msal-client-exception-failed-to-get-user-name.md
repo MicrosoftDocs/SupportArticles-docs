@@ -43,7 +43,9 @@ To resolve this issue, pass the username to `AcquireTokenByIntegratedWindowsAuth
 
 If the username is known beforehand, you can manually pass it to MSAL as follows:
 
-`result = await app.AcquireTokenByIntegratedWindowsAuth(scopes).WithUsername("<service-account>@contoso.com")`
+```csharp
+result = await app.AcquireTokenByIntegratedWindowsAuth(scopes).WithUsername("<service-account>@contoso.com")
+```
 
 If the username isn't known beforehand, dynamically retrieve the username and then pass it to `AcquireTokenByIntegratedWindowsAuth` by using one of the following methods:
 
