@@ -7,7 +7,7 @@ editor:        v-jsitser
 ms.reviewer:   cssakscic, josebl, v-leedennis
 ms.service:    azure-kubernetes-service
 ms.topic:      how-to
-ms.date:       08/09/2024
+ms.date:       07/01/2025
 ms.custom: sap:Monitoring and Logging
 ---
 
@@ -15,7 +15,7 @@ ms.custom: sap:Monitoring and Logging
 
 This article discusses the process of gathering real-time system insights from your Microsoft Azure Kubernetes Service (AKS) cluster by using Inspektor Gadget. The article contains step-by-step instructions for installing this tool on your AKS environment. It also explores practical examples that show how Inspektor Gadget helps you gather valuable information to do effective debugging of real-world issues.
 
-## Demo
+## Demo-How to trace DNS traffic
 
 To begin, consider the following quick demo. Suppose that you have to figure out why the DNS requests from an application fail. By using Inspektor Gadget, you can capture the DNS traffic in the Kubernetes namespace in which your application is running:
 
@@ -31,7 +31,7 @@ aks-nodepool-41788306-vmss000002  demo-pod     13cc  Q   example.com.         1.
 aks-nodepool-41788306-vmss000002  demo-pod     13cc  Q   example.com.         1.2.3.4
 ```
 
-From this information, we can see that the DNS requests are directed to the DNS server at IP address `1.2.3.4` (`NAMESERVER` column), but we only see the queries (`Q` in `QR` column) and no responses (`R` in `QR` column). This means that the DNS server didn't respond to the queries, which is why the application can't resolve the domain name `www.example.com`.
+From this information, we can see that the DNS requests are directed to the DNS server at IP address `1.2.3.4` (the `NAMESERVER` column), but we only see the queries (`Q` in `QR` column) and no responses (`R` in `QR` column). This means that the DNS server didn't respond to the queries, which is why the application can't resolve the domain name `www.example.com`.
 
 Now, suppose that `1.2.3.4` isn't the default name server configuration, and you suspect that a malicious process is modifying the configuration at runtime. In these kinds of cases, Inspektor Gadget goes beyond DNS diagnostics. It also enables you to monitor processes that access critical files (such as */etc/resolv.conf*) and have the intention of modifying those files. To do that, filter the flags in the output to show any of the [writing file access modes](https://linux.die.net/man/3/open) (`O_WRONLY` to open for writing only, or `O_RDWR` to open for reading and writing):
 
@@ -140,7 +140,7 @@ Use the instructions for your OS:
    apt update && apt install -y curl
    ```
 
-2. Download Microsoft GPG public key:
+2. Download Microsoft GNU Privacy Guard (GPG) public key:
 
     ```bash
     curl -sSL https://packages.microsoft.com/keys/microsoft.asc | tee /usr/share/keyrings/microsoft.asc
@@ -228,13 +228,15 @@ Use the instructions for your OS:
     apt install -y kubectl-gadget
     ```
 
+---
+
 Now, verify the installation by running the `version` command:
 
 ```bash
 kubectl gadget version
 ```
 
-The `version` command shows you the version of the client (`kubectl gadget` plug-in), but it also tells you that it isn't installed yet on the server (the cluster):
+The command output shows you the version of the client (`kubectl gadget` plug-in), and it isn't installed yet on the server (the cluster):
 
 ```output
 Client version: vX.Y.Z
@@ -271,7 +273,7 @@ Client version: vX.Y.Z
 Server version: vX.Y.Z
 ```
 
-Notice that by deploying Inspektor Gadget using the `kubectl gadget` plug-in available in the Microsoft Cloud-Native repository, the container image used for the DaemonSet is automatically pulled from the Microsoft Container Registry (MCR):
+When deploying Inspektor Gadget with the `kubectl gadget` plug-in available in the Microsoft Cloud-Native repository, the container image used for the DaemonSet is automatically pulled from the Microsoft Container Registry (MCR):
 
 ```bash
 kubectl get daemonset gadget -n gadget -o jsonpath='{.spec.template.spec.containers[*].image}'
