@@ -147,6 +147,9 @@ To determine if traffic is blocked the endpoint due to Azure network resources, 
 > Azure Virtual Network Verifier does not look at any external or third-party networking resources, such as a custom firewall. After running the connectivity analysis, we recommend that you perform a manual check of any external networking to cover all hops in the traffic flow.
 
 1. To run the analysis, navigate to your cluster in the Azure portal. In the sidebar, navigate to the Settings -> Node pools blade.
+2. Identify the nodepool you want to run a connectivity analysis from. Click on the nodepool to select it as the scope.
+3. Click on the three dots "..." in the toolbar at the top of the page. In the expanded menu, select "Connectivity <img width="626" alt="image" src="https://github.com/user-attachments/assets/b2f05947-f753-49b9-9536-98d0b998ab52" />
+
 
 #### Check whether the pod and node can reach the endpoint
 
