@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 05/29/2025
+ms.date: 07/01/2025
 ---
 # Known issues with Teams Rooms on Android
 
@@ -43,6 +43,7 @@ ms.date: 05/29/2025
 |Can't add, delete, or edit contacts on Teams phones|You can't perform the add, delete, and edit operations on contacts from Teams phones.|Use either the Teams desktop or the Teams web client to perform these actions.|
 |Can't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | End the call made by using the **Consult first** option and then resume the original call.|
 |Unable to assign speed dial to line keys on a sidecar|When you assign speed dial contacts to line keys on the sidecar that is connected to a touch phone device, they don't work.|No workaround is available for the speed dial contacts that you assigned by using the sidecar. However the speed dial contacts that're already set up and shared line delegates and other groups are automatically pinned on the sidecar.|
+|Speed dial line key doesn't transfer an active call.|In older Teams Phones versions, you could transfer an active call by selecting a line key that is configured as a speed dial for a specific contact.<br/><br/>Beginning with Teams Phones version 1.7.0 1449/1.0.94.2025165302, you're only able to make an outgoing call to the speed dial after you select it from the **Transfer** menu.|If you want to transfer active calls to specific contacts, configure line keys as speed dials for those contacts and assign the **Transfer** and **Consult Transfer** menu options to the appropriate line keys.|
 
 ## Limitations
 

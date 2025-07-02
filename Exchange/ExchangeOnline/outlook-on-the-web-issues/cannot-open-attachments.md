@@ -1,6 +1,6 @@
 ---
-title: Microsoft 365 users can't open or view attachments in Outlook on the web
-description: Describes an issue in which Outlook on the web attachments can't be viewed or opened in Microsoft 365. Provides a resolution and a workaround.
+title: Can't open or view attachments in Outlook on the web
+description: Provides a resolution for an issue in which Outlook on the web attachments can't be viewed or opened in Microsoft 365. 
 author: cloud-writer
 ms.author: meerak
 audience: ITPro
@@ -14,12 +14,12 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 01/24/2024
+ms.date: 07/01/2025
 ms.reviewer: v-six
 ---
-# Microsoft 365 users can't open or view attachments in Outlook on the web
+# Can't open or view attachments in Outlook on the web
 
-## Problem
+## Symptoms
 
 When Microsoft 365 users try to open or view attachments in email messages in Outlook on the web, they experience the following symptoms:
 
@@ -30,7 +30,7 @@ When Microsoft 365 users try to open or view attachments in email messages in Ou
 
 This issue occurs if the attachment is blocked by Outlook on the web. By default, Outlook on the web blocks attachments that have the following file name extensions:
 
-`.ade`, `.adp`, `.apk`, `.app`, `.appcontent-ms`, `.application`, `.appref-ms`, `.appx`, `.asp`, `.aspx`, `.asx`, `.bas`, `.bat`, `.bgi`, `.cab`, `.cdxml`, `.cer`, `.chm`, `.cmd`, `.cnt`, `.com`, `.cpl`, `.crt`, `.csh`, `.der`, `.diagcab`, `.exe`, `.fxp`, `.gadget`, `.grp`, `.hlp`, `.hpj`, `.hta`, `.htc`, `.img`, `.inf`, `.ins`, `.iso`, `.isp`, `.its`, `.jar`, `.jnlp`, `.js`, `.jse`, `.ksh`, `.lnk`, `.mad`, `.maf`, `.mag`, `.mam`, `.maq`, `.mar`, `.mas`, `.mat`, `.mau`, `.mav`, `.maw`, `.mcf`, `.mda`, `.mdb`, `.mde`, `.mdt`, `.mdw`, `.mdz`, `.mht`, `.mhtml`, `.msc`, `.msh`, `.msh1`, `.msh2`, `.mshxml`, `.msh1xml`, `.msh2xml`, `.msi`, `.msp`, `.mst`, `.msu`, `.ops`, `.osd`, `.pcd`, `.pif`, `.pl`, `.plg`, `.prf`, `.prg`, `.printerexport`, `.ps1`, `.ps1xml`, `.ps2`, `.ps2xml`, `.psc1`, `.psc2`, `.psd1`, `.psdm1`, `.pssc`, `.pst`, `.py`, `.pyc`, `.pyo`, `.pyw`, `.pyz`, `.pyzw`, `.reg`, `.scf`, `.scr`, `.sct`, `.settingcontent-ms`, `.shb`, `.shs`, `.theme`, `.tmp`, `.udl`, `.url`, `.vb`, `.vbe`, `.vbp`, `.vbs`, `.vhd`, `.vhdx`, `.vsmacros`, `.vsw`, `.webpnp`, `.website`, `.ws`, `.wsb`, `.wsc`, `.wsf`, `.wsh`, `.xbap`, `.xll`, `.xnk`
+`.ade`,`.adp`,`.apk`,`.app`,`.appx`,`.appcontent-ms`,`.application`,`.appref-ms`,`.asp`,`.aspx`,`.asx`,`.bas`,`.bat`,`.bgi`,`.cab`,`.cdxml`,`.cer`,`.chm`,`.cmd`,`.cnt`,`.com`,`.cpl`,`.crt`,`.csh`,`.der`,`.diagcab`,`.exe`,`.fxp`,`.gadget`,`.grp`,`.hlp`,`.hpj`,`.hta`,`.htc`,`.img`,`.inf`,`.ins`,`.iso`,`.isp`,`.its`,`.jar`,`.jnlp`,`.js`,`.jse`,`.ksh`,`.lnk`,`.mad`,`.maf`,`.mag`,`.mam`,`.maq`,`.mar`,`.mas`,`.mat`,`.mau`,`.mav`,`.maw`,`.mcf`,`.mda`,`.mdb`,`.mde`,`.mdt`,`.mdw`,`.mdz`,`.mht`,`.mhtml`,`.msc`,`.msh`,`.msh1`,`.msh1xml`,`.msh2`,`.msh2xml`,`.mshxml`,`.msi`,`.msp`,`.mst`,`.msu`,`.ops`,`.osd`,`.pcd`,`.pif`,`.pl`,`.plg`,`.prf`,`.prg`,`.printerexport`,`.ps1`,`.ps1xml`,`.ps2`,`.ps2xml`,`.psc1`,`.psc2`,`.psd1`,`.psdm1`,`.pssc`,`.pst`,`.py`,`.pyc`,`.pyo`,`.pyw`,`.pyz`,`.pyzw`,`.reg`,`.scf`,`.scr`,`.sct`,`.settingcontent-ms`,`.shb`,`.shs`,`.theme`,`.tmp`,`.udl`,`.url`,`.vb`,`.vbe`,`.vbp`,`.vbs`,`.vhd`,`.vhdx`,`.vsmacros`,`.vsw`,`.webpnp`,`.website`,`.ws`,`.wsb`,`.wsc`,`.wsf`,`.wsh`,`.xbap`,`.xll`,`.xnk`,`.library-ms`,`.search-ms`
 
 ## Resolution
 
@@ -52,7 +52,7 @@ Things to consider:
 
 ## Workaround
 
-Direct users to compress the files that they intend to send (for example, as a .zip file) and then send the compressed files as attachments.
+If the mailbox policy can't be changed, then direct users to compress the files that they intend to send, such as .zip file, and then send the compressed file as an attachment.
 
 ## More information
 
