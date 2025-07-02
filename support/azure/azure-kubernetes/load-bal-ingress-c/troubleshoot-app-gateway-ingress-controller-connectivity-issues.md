@@ -157,9 +157,11 @@ Look for any errors or warnings that might indicate what's going wrong.
 
 ## Step 4: Check Application Gateway operational State
 
-This step only applies to AGIC that is deployed by using the add-on. It focuses on understanding the operational state of the [Application Gateway](/azure/application-gateway/overview) if it's used as an [Ingress Controller on AKS](/azure/application-gateway/ingress-controller-overview).
+It focuses on understanding the operational state of the [Application Gateway](/azure/application-gateway/overview) if it's used as an [Ingress Controller on AKS](/azure/application-gateway/ingress-controller-overview).
 
-1. **Get the Application Gateway name**:
+### [Add-on](#tab/Add-on)
+
+1. Get the Application Gateway name:
 
     ```console
     az aks show --name <YOUR_AKS_NAME> --resource-group <YOUR_RG_NAME> --query addonProfiles.ingressApplicationGateway
@@ -180,14 +182,31 @@ This step only applies to AGIC that is deployed by using the add-on. It focuses 
     }
     ```
 
-2. **Verify the Application Gateway operational state**:
+2. Verify the Application Gateway operational state:
+
+    ```console
+    az network application-gateway show --name <YOUR_APPLICATION_GATEWAY_NAME> --resource-group <YOUR_RG_NAME> --query operationalState
+    ```
+
+
+### [Helm](#tab/helm)
+
+1. Get the Application Gateway name:
+
+    ```console
+    helm show values agic-controller --jsonpath "appgw.name"
+    ```
+
+    > [!NOTE]
+    > If you see any unexpected error on this step, you might have misconfigured `AGIC`, see [Install AGIC by using a new Application Gateway deployment](/azure/application-gateway/ingress-controller-install-new).
+
+2. Validate the Application Gateway operational state:
 
     ```console
     az network application-gateway show --name <YOUR_APPLICATION_GATEWAY_NAME> --resource-group <YOUR_RG_NAME> --query operationalState
     ```
   
 The expected `operationalState` value is `Running`. If it's something different, you might have to restart the Application Gateway.
-
 ## Step 5 (Optional): Inspect Mapped Kubernetes and Application Gateway IPs
 
 The [AGIC](/azure/application-gateway/ingress-controller-overview) monitors the pod IPs and maps them to `backendAddressPools` in the `Application Gateway` instance. This step verifies that integration.
