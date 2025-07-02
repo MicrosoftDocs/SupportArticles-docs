@@ -1,9 +1,9 @@
 ---
-title: Troubleshoot ASP.NET OWIN and ASP.NET Core authentication sign-in failures
+title: Troubleshoot ASP.NET OWIN and ASP.NET Core Authentication Sign-in Failures
 description: Helps you expose hidden error messages that can guide you toward resolving ASP.NET OWIN and ASP.NET Core authentication sign-in failures with Microsoft Entra ID.
 ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
-ms.date: 06/27/2025
+ms.date: 07/02/2025
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Troubleshoot ASP.NET OWIN and ASP.NET Core authentication sign-in failures with Microsoft Entra ID
@@ -17,9 +17,9 @@ When you develop an ASP.NET Open Web Interface for .NET (OWIN) or ASP.NET Core A
 
 You might see some common sign-in failure behaviors as follows:
 
-- Infinite loop between your web application and Microsoft Entra ID.
-- After signing into Microsoft Entra ID, you're redirected to your web application like it never signed in.
-- You land on your error page, but it doesn't provide useful error messages.
+- An infinite loop occurs between your web application and Microsoft Entra ID.
+- After signing in to Microsoft Entra ID, you're redirected to your web application as if you never signed in.
+- You enter an error page, but it doesn't provide useful error messages.
 
 ## Expose hidden errors by using the OnAuthenticationFailed event
 
@@ -141,7 +141,7 @@ public void ConfigureServices(IServiceCollection services)
     // ...
 ```
 
-You can modify this to send the error message to your logs or send it to a custom error page. At a minimum, the error message should be displayed in the browser's address bar.
+You can modify this structure to send the error message to your logs or send it to a custom error page. At a minimum, the error message should be displayed in the browser's address bar.
 
 :::image type="content" source="media/asp-dot-net-open-web-interface-for-dot-net-core-authentication-sign-in-failures/error-message-in-address-bar.png" alt-text="Screenshot that shows the error message in the browser address bar.":::
 
