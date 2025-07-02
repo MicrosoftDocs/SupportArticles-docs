@@ -279,6 +279,39 @@ The following procedure shows you how to throttle an offending client's LIST Pod
     kubectl get --raw /metrics | grep "restrict-bad-client"
     ```
 
+### Solution 3c: Use the API Server Resource Intensive Listing Detector in Azure Portal
+
+> **New:** Azure Kubernetes Service now provides a built-in analyzer to help you identify agents making resource-intensive LIST calls, which are a leading cause of API server and etcd performance issues.
+
+**How to access the detector:**
+
+1. Open your AKS cluster in the Azure portal.
+2. Go to **Diagnose and solve problems**.
+3. Click **Cluster and Control Plane Availability and Performance**.
+4. Select **API server resource intensive listing detector**.
+
+This detector analyzes recent API server activity and highlights agents or workloads generating large or frequent LIST calls. It provides a summary of potential impacts, such as request timeouts, increased 408/503 errors, node instability, health probe failures, and OOM-Kills in API server or etcd.
+
+#### How to interpret the detector output
+
+- **Summary:**  
+  Indicates if resource-intensive LIST calls were detected and describes possible impacts on your cluster.
+- **Analysis window:**  
+  Shows the 30-minute window analyzed, with peak memory and CPU usage.
+- **Read types:**  
+  Explains whether LIST calls were served from the API server cache (preferred) or required fetching from etcd (most impactful).
+- **Charts and tables:**  
+  Identify which agents, namespaces, or workloads are generating the most resource-intensive LIST calls.
+
+> Only successful LIST calls are counted. Failed or throttled calls are excluded.
+
+The analyzer also provides actionable recommendations directly in the Azure portal, tailored to the detected patterns, to help you remediate and optimize your cluster.
+
+> **Note:**
+> The API server resource intensive listing detector is available to all users with access to the AKS resource in the Azure portal. No special permissions or prerequisites are required.
+> 
+> After identifying the offending agents and applying the above recommendations, you can further use [Priority and Fairness](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/) to throttle or isolate problematic clients.
+
 ## Cause 4: A custom webhook might cause a deadlock in API server pods
 
 A custom webhook, such as Kyverno, might be causing a deadlock within API server pods.
