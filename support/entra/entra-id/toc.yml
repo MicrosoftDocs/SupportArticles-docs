@@ -81,6 +81,8 @@
         href: app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
       - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
         href: app-integration/serilog-protected-web-api-authentication-authorization-errors.md
+      - name: Troubleshoot ASP.NET OWIN and ASP.NET Core authentication sign-in failures
+        href: app-integration/asp-dot-net-open-web-interface-for-dot-net-core-authentication-sign-in-failures.md
       - name: WIF10201 No valid key mapping found
         href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
 
