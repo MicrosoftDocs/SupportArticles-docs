@@ -31,13 +31,6 @@ landingContent:
           - text: Can't save a JPEG attachment with a .jpg extension
             url: ./attachments/you-cannot-save-this-document-with-extension-jpg-error.md
 
-  - title: Authentication
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Manage the Google sign-in prompt
-            url: /microsoft-365-apps/outlook/authentication/manage-google-sign-in-prompt
-
   - title: Calendars
     linkLists:
       - linkListType: how-to-guide
