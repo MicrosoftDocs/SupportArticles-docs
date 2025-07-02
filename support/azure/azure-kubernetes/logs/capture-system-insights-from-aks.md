@@ -7,7 +7,7 @@ editor:        v-jsitser
 ms.reviewer:   cssakscic, josebl, v-leedennis, mayasingh
 ms.service:    azure-kubernetes-service
 ms.topic:      how-to
-ms.date:       07/01/2025
+ms.date:       07/02/2025
 ms.custom: sap:Monitoring and Logging
 ---
 
@@ -31,7 +31,7 @@ aks-nodepool-41788306-vmss000002  demo-pod     13cc  Q   example.com.         1.
 aks-nodepool-41788306-vmss000002  demo-pod     13cc  Q   example.com.         1.2.3.4
 ```
 
-From this information, we can see that the DNS requests are directed to the DNS server at IP address `1.2.3.4` (the `NAMESERVER` column), but we only see the queries (`Q` in `QR` column) and no responses (`R` in `QR` column). This means that the DNS server didn't respond to the queries, which is why the application can't resolve the domain name `www.example.com`.
+From this information, we can see that the DNS requests are directed to the DNS server at IP address `1.2.3.4` (as indicated in the `NAMESERVER` column), but we only see the queries (`Q` in the `QR` column) and no responses (`R` in the `QR` column). This means that the DNS server didn't respond to the queries, which is why the application can't resolve the domain name `www.example.com`.
 
 Now, suppose that `1.2.3.4` isn't the default name server configuration, and you suspect that a malicious process is modifying the configuration at runtime. In these kinds of cases, Inspektor Gadget goes beyond DNS diagnostics. It also enables you to monitor processes that access critical files (such as */etc/resolv.conf*) and have the intention of modifying those files. To do that, run the [trace_open gadget](https://go.microsoft.com/fwlink/?linkid=2260318) in the same namespace and filter the results by the file name and the flags that indicate [the intention to write to the file](https://linux.die.net/man/3/open) (`O_WRONLY` to open for writing only, or `O_RDWR` to open for reading and writing):
 
@@ -49,7 +49,7 @@ aks-nodepool-41788306-vmss000002  demo-pod     malicious-proc  /etc/resolv.conf 
 
 ## What is Inspektor Gadget?
 
-[Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) is a framework that makes monitoring, troubleshooting, and security easy for workloads running on Linux and Kubernetes. It consists of tools (*Gadgets*) that leverage [eBPF](https://go.microsoft.com/fwlink/?linkid=2259866) programs. Their primary goal is to gather low-level kernel data to provide insights into specific system scenarios. The Inspektor Gadget framework manages the association of the collected data by using high-level references, such as Kubernetes resources. This integration makes sure that a seamless connection exists between low-level insights and their corresponding high-level context. The integration streamlines the troubleshooting process and the collection of relevant information.
+[Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) is a framework that makes it easy to monitor, troubleshoot, and secure workloads running on Linux and Kubernetes. It consists of tools (*Gadgets*) that leverage [eBPF](https://go.microsoft.com/fwlink/?linkid=2259866) programs. Their primary goal is to gather low-level kernel data to provide insights into specific system scenarios. The Inspektor Gadget framework manages the association of the collected data by using high-level references, such as Kubernetes resources. This integration makes sure that a seamless connection exists between low-level insights and their corresponding high-level context. The integration streamlines the troubleshooting process and the collection of relevant information.
 
 ## Gadgets
 
@@ -140,7 +140,7 @@ Use the instructions for your OS:
    apt update && apt install -y curl
    ```
 
-2. Download Microsoft GNU Privacy Guard (GPG) public key:
+2. Download the Microsoft GNU Privacy Guard (GPG) public key:
 
     ```bash
     curl -sSL https://packages.microsoft.com/keys/microsoft.asc | tee /usr/share/keyrings/microsoft.asc
@@ -172,7 +172,7 @@ Use the instructions for your OS:
    apt update && apt install -y curl
    ```
 
-2. Download Microsoft GNU Privacy Guard (GPG) public key:
+2. Download the Microsoft GNU Privacy Guard (GPG) public key:
 
     ```bash
     curl -sSL https://packages.microsoft.com/keys/microsoft.asc | tee /usr/share/keyrings/microsoft.asc
@@ -204,7 +204,7 @@ Use the instructions for your OS:
    apt update && apt install -y curl
    ```
 
-2. Download Microsoft GNU Privacy Guard (GPG) public key:
+2. Download the Microsoft GNU Privacy Guard (GPG) public key:
 
     ```bash
     curl -sSL https://packages.microsoft.com/keys/microsoft.asc | tee /usr/share/keyrings/microsoft.asc
@@ -236,7 +236,7 @@ Now, verify the installation by running the `version` command:
 kubectl gadget version
 ```
 
-The command output shows you the version of the client (`kubectl gadget` plug-in), and it isn't installed yet on the server (the cluster):
+The command output shows you the version of the client (`kubectl gadget` plug-in) and that it isn't installed yet on the server (the cluster):
 
 ```output
 Client version: vX.Y.Z
@@ -284,7 +284,7 @@ mcr.microsoft.com/oss/v2/inspektor-gadget/inspektor-gadget:vX.Y.Z
 ```
 
 > [!NOTE]
-> If you use the [krew](https://sigs.k8s.io/krew) package manager for installing kubectl plug-ins and are comfortable installing Inspektor Gadget directly from its GitHub repository, you can use the following commands for easy installation of the `kubectl gadget` plug-in and deployment of Inspektor Gadget in your cluster:
+> If you use the [krew](https://sigs.k8s.io/krew) package manager to install kubectl plug-ins and prefer to install Inspektor Gadget directly from its GitHub repository, you can easily install the `kubectl gadget` plug-in and deploy Inspektor Gadget in your cluster using the following commands:
 >
 > ```bash
 > kubectl krew install gadget
