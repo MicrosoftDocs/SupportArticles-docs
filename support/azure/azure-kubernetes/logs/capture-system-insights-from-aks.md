@@ -49,7 +49,7 @@ aks-nodepool-41788306-vmss000002  demo-pod     malicious-proc  /etc/resolv.conf 
 
 ## What is Inspektor Gadget?
 
-[Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) is a framework that makes monitoring, troubleshooting, and security easy for workloads running on Linux and Kubernetes. It is made up of tools (*Gadgets*) that leverage [eBPF](https://go.microsoft.com/fwlink/?linkid=2259866) programs. Their primary goal is to gather low-level kernel data to provide insights into specific system scenarios. The Inspektor Gadget framework manages the association of the collected data by using high-level references, such as Kubernetes resources. This integration makes sure that a seamless connection exists between low-level insights and their corresponding high-level context. The integration streamlines the troubleshooting process and the collection of relevant information.
+[Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) is a framework that makes monitoring, troubleshooting, and security easy for workloads running on Linux and Kubernetes. It consists of tools (*Gadgets*) that leverage [eBPF](https://go.microsoft.com/fwlink/?linkid=2259866) programs. Their primary goal is to gather low-level kernel data to provide insights into specific system scenarios. The Inspektor Gadget framework manages the association of the collected data by using high-level references, such as Kubernetes resources. This integration makes sure that a seamless connection exists between low-level insights and their corresponding high-level context. The integration streamlines the troubleshooting process and the collection of relevant information.
 
 ## Gadgets
 
@@ -284,7 +284,7 @@ mcr.microsoft.com/oss/v2/inspektor-gadget/inspektor-gadget:vX.Y.Z
 ```
 
 > [!NOTE]
-> If you usually use the [krew](https://sigs.k8s.io/krew) package manager for installing kubectl plug-ins, and you are comfortable installing Inspektor Gadget directly from its GitHub repository, you can use the following commands for easy installation of the `kubectl gadget` plug-in and deployment of Inspektor Gadget in your cluster:
+> If you use the [krew](https://sigs.k8s.io/krew) package manager for installing kubectl plug-ins and are comfortable installing Inspektor Gadget directly from its GitHub repository, you can use the following commands for easy installation of the `kubectl gadget` plug-in and deployment of Inspektor Gadget in your cluster:
 >
 > ```bash
 > kubectl krew install gadget
