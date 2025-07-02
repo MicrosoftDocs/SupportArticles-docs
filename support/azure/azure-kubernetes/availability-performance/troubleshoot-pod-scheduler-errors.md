@@ -13,7 +13,8 @@ When you deploy workloads in Azure Kubernetes Service (AKS), you might encounter
 
 ## Error: 0/(X) nodes are available: Y node(s) had volume node affinity conflict
 
-> [!NOTE] X and Y represent the number of nodes. These values depend on your cluster configuration.
+> [!NOTE]
+>  X and Y represent the number of nodes. These values depend on your cluster configuration.
  
 Pods remain in the Pending state with the following scheduler error:
 
