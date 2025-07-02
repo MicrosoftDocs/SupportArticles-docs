@@ -11,11 +11,13 @@ ms.custom: sap:Node/node pool availability and performance
 
 When you deploy workloads in Azure Kubernetes Service (AKS), you might encounter scheduler errors that prevent Pods from running. This article provides solutions to common scheduler errors.
 
-## Error: 0/(X) nodes are available: X node(s) had volume node affinity conflict
+## Error: 0/(X) nodes are available: Y node(s) had volume node affinity conflict
 
+> [!NOTE] X and Y represent the number of nodes. These values depend on your cluster configuration.
+ 
 Pods remain in the Pending state with the following scheduler error:
 
->0/(X) nodes are available: X node(s) had volume node affinity conflict.
+>0/(X) nodes are available: Y node(s) had volume node affinity conflict.
 
 ### Cause
 
@@ -43,11 +45,11 @@ Pods remain in the Pending state with the following scheduler error:
 5. After resolving the conflict, monitor the Pod status or retry the deployment.
 
 
-## Error: 0/(X) nodes are available: X Insufficient CPU
+## Error: 0/(X) nodes are available: Insufficient CPU
 
 Pods remain in the Pending state with the scheduler error:
 
->Error: 0/(X) nodes are available: X Insufficient CPU.
+>Error: 0/(X) nodes are available: Insufficient CPU.
 
 ### Cause
 
@@ -78,11 +80,11 @@ This issue occurs when one or more of the following conditions are met:
 3. Optimize Pod resource requests. Make sure that CPU requests and limits are appropriate for your node sizes.
 4. Verify if any scheduling constraints are restricting pod placement across available nodes.
 
-## Error: 0/(X) nodes are available: X node(s) had untolerated taint
+## Error: 0/(X) nodes are available: Y node(s) had untolerated taint
 
 Pods remain in the Pending state with the error:
 
->Error: 0/(X) nodes are available: X node(s) had untolerated taint.
+>Error: 0/(X) nodes are available: Y node(s) had untolerated taint.
 
 ### Cause
 
