@@ -207,6 +207,8 @@ It focuses on understanding the operational state of the [Application Gateway](/
     ```
   
 The expected `operationalState` value is `Running`. If it's something different, you might have to restart the Application Gateway.
+
+---
 ## Step 5 (Optional): Inspect Mapped Kubernetes and Application Gateway IPs
 
 The [AGIC](/azure/application-gateway/ingress-controller-overview) monitors the pod IPs and maps them to `backendAddressPools` in the `Application Gateway` instance. This step verifies that integration.
