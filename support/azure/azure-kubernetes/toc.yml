@@ -3,7 +3,7 @@
 
 - name: Create, Upgrade, Scale and Delete operations (cluster or nodepool)
   items:
-  - name: Create operationsload-bal-ingress-c/troubleshoot-agic-connectivity.md
+  - name: Create operations
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
