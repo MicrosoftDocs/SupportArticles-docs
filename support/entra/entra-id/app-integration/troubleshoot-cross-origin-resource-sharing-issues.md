@@ -226,8 +226,8 @@ If your app uses Microsoft Entra Application Proxy, see [understand complex appl
 
 ## References
 
-- [Enable Cross-Origin Requests (CORS) in ASP.NET Core | Microsoft Learn](/aspnet/core/security/cors?view=aspnetcore-6.0)
-- [Enabling Cross-Origin Requests in ASP.NET Web API 2 | Microsoft Learn](/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api)
+- [Enable Cross-Origin Requests (CORS) in ASP.NET Core](/aspnet/core/security/cors)
+- [Enabling Cross-Origin Requests in ASP.NET Web API 2](/aspnet/web-api/overview/security/enabling-cross-origin-requests-in-web-api)
 - [Azure App Service REST API tutorial](/azure/app-service/app-service-web-tutorial-rest-api)
 - [Azure API Management CORS policy](/azure/api-management/cors-policy)
 
