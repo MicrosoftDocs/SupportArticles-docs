@@ -5,24 +5,21 @@ ms.date: 06/29/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: mastewa, jopilov, prmadhes, v-sidong
 ---
-
 # OLE DB driver installation check
 
 Object Linking and Embedding Database (OLE DB) is a Microsoft data access technology used to connect applications to various data sources using OLE DB providers. Troubleshooting OLE DB driver installations and validations can be complex, but is crucial for seamless database interaction. This troubleshooting guide aims to provide insights into the installation, validation, and resolution of issues related to OLE DB drivers.
 
-## Validate OLEDB driver/provider via PowerShell
+## Validate OLE DB driver or provider via PowerShell
 
-To validate if the latest OLEDB driver for SQL Server  is installed on your system, you can run the following PowerShell command under an Administrator.
+To validate if the latest OLE DB driver for SQL Server is installed on the operating system, run the following PowerShell cmdlet as an administrator.
 
 ```PowerShell
-
 Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft", "HKLM:\SOFTWARE\Wow6432Node\Microsoft" |
     Where-Object { $_.Name -like "*MSOLEDBSQL*" } |
     ForEach-Object { Get-ItemProperty $_.PSPath }
-
 ```
 
-The output might look something like this, if you have version 18 and 19 installed on your system:
+If you have version 18 and 19 installed on the operating system, The output might look something like this.
 
 ```output
 InstalledVersion : 18.7.4.0
@@ -50,7 +47,7 @@ PSChildName      : MSOLEDBSQL19
 PSProvider       : Microsoft.PowerShell.Core\Registry
 ```
 
-You can also check for a SQLNCLI installation using this command:
+To check for an OLE DB provider interface (SQLNCLI) installation, run the following PowerShell cmdlet as an administrator.
 
 ```PowerShell
 Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft", "HKLM:\SOFTWARE\Wow6432Node\Microsoft" |
@@ -58,10 +55,9 @@ Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft", "HKLM:\SOFTWARE\Wow6432Node\Micr
    ForEach-Object {   Get-ItemProperty $_.PSPath}
 ```
 
-## Validate OLEDB driver via a UDL
+## Validate OLE DB driver via a UDL
 
-One of the simplest ways to test an OLE DB provider is via the Universal Data Link (UDL) file. Create any text file in Windows Explorer and rename it to have a *.UDL* file extension. Make sure you have file extensions turned on to make the change. Double-click the file to open a dialog where you can see the installed providers and test their connections. For more information, see [Test OLE DB connectivity to SQL Server by using a UDL file](../../connect/test-oledb-connectivity-use-udl-file.md)
-
+One of the easiest ways to test an OLE DB provider is by using a Universal Data Link (UDL) file. Create any text file in Windows Explorer and rename it to have the *.udl* file extension. Make sure you have [file extensions turned on](https://support.microsoft.com/windows/da4a4430-8e76-89c5-59f7-1cdbbc75cb01) to make the change. Double-click the file to open a dialog where you can see the installed providers and test their connections. For more information, see [Test OLE DB connectivity to SQL Server by using a UDL file](../../connect/test-oledb-connectivity-use-udl-file.md).
 
 :::image type="content" source="media/oledb-driver-install-check/udl-test-oledb-provider.png" alt-text="Screenshot shows how to use UDL file to test OLE DB provider.":::
 
@@ -69,23 +65,23 @@ Select **OK** in the dialog to confirm the configuration.
 
 ### Examine the UDL file content
 
-If you open the UDL file in a text editor like Notepad, you see the connection string and can copy that to use in your application. Here are two examples:
+If you open the UDL file in a text editor like Notepad, copy the connection string to use in your application. Here are two examples:
 
- ```output
- Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=master;Data Source=localhost;Initial File Name="";Server SPN="";Authentication="";Access Token=""
+```output
+Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=master;Data Source=localhost;Initial File Name="";Server SPN="";Authentication="";Access Token=""
 ```
- ```output
- Provider=SQLNCLI11.1;Integrated Security="";Persist Security Info=False;User ID=sa;Initial Catalog=AdventureWorks;Data Source=tcp:SQLProd01.contoso.com,1433;Initial File Name="";Server SPN=""
- ```
 
+```output
+Provider=SQLNCLI11.1;Integrated Security="";Persist Security Info=False;User ID=sa;Initial Catalog=AdventureWorks;Data Source=tcp:SQLProd01.contoso.com,1433;Initial File Name="";Server SPN=""
+```
 
-## Validate an OLE DB driver or provider
+### Validate an OLE DB driver
 
 The first step for validating a driver is to see whether the name appears in the list of installed providers of a 64-bit or 32-bit UDL dialog, as shown in the previous section. If it doesn't, you need to reinstall the provider or consult the vendor.
 
 You can also trace the driver location in the registry. The driver name is a COM [ProgID](/windows/win32/com/-progid--key) and you can find it in [HKEY_CLASSES_ROOT](/windows/win32/sysinfo/hkey-classes-root-key).
 
-Let's illustrate the details by using the SQL Server Native Client driver. In the following image, you can see the mapping between the ProgID **SQLNCLI11.1** and the provider name **SQL Server Native Client 11.0**.
+Let's use the SQL Server Native Client driver to illustrate the details. In the following image, you can see the mapping between the ProgID **SQLNCLI11.1** and the provider name **SQL Server Native Client 11.0**.
 
 :::image type="content" source="media/oledb-driver-install-check/mapping-progid-provider-name.png" alt-text="Screenshot shows the mapping between the ProgID SQLNCLI11.1 and the Provider name SQL Server Native Client 11.0.":::
 
