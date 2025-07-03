@@ -18,7 +18,7 @@ This article helps you resolve an issue where a Microsoft Azure virtual machine 
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of a VM, the Windows operating system (OS) displays the **MEMORY_MANAGEMENT** bug check (0x0000001A).
 
-:::image type="content" source="media/bug-check-memory-management-0x0000001a/memory-management-screen.png" alt-text="Screenshot of Windows operating system bug check MEMORY_MANAGEMENT (0x0000001A).":::
+:::image type="content" source="media/bug-check-memory-management/memory-management-screen.png" alt-text="Screenshot of Windows operating system bug check MEMORY_MANAGEMENT (0x0000001A).":::
 
 ## Cause
 

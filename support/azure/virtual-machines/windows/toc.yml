@@ -355,7 +355,7 @@
     - name: Azure VM startup hangs at "Please wait for the Group Policy Client"
       href: please-wait-for-the-group-policy-client.md
     - name: Bug check 0x0000001A - MEMORY_MANAGEMENT
-      href: bug-check-memory-management-0x0000001a.md
+      href: bug-check-memory-management.md
 
 - name: Cannot start or stop my VM
   items:
