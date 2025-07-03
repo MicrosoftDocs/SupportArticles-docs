@@ -7,11 +7,10 @@ ms.reviewer: mhart
 ms.date: 12/12/2024
 ms.custom: sap:Mobile Application\Application is throwing errors
 ---
-# The Field Service mobile app shows the home page unexpectedly and a WebView reset occurs
-
-This article helps you troubleshoot and resolve issues in the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview), where the home page is unexpectedly displayed, and a WebView reset occurs.
 
 # WebView Reset Overview
+
+This article helps you troubleshoot and resolve issues in the [Dynamics 365 Field Service mobile app](/dynamics365/field-service/mobile/overview), where the home page is unexpectedly displayed, and a WebView reset occurs.
 
 A WebView reset error while using Field Service Mobile indicates that the code within the app module is using too much memory. The cause of a WebView reset is the activity that precedes it, which causes memory pressure on the WebView process. Model-driven Applications in Power Apps like Field Service are web applications that are run within a WebView on the mobile client. This leaves them susceptible to memory management policies that mobile operating systems impose on these processes.
 
@@ -29,12 +28,12 @@ There are two common causes of memory pressure buildup to be aware of.
 
 ## Debugging Memory Pressure
 
-The WebView reset error itself is specific to iOS applications running WebViews and can only be reproduced within that context, however any code causing memory pressure on mobile causes memory pressure buildup on desktop browsers as well. This enables investigation of the root cause of a WebView reset using browser debug tools, like those provided by Microsoft Edge for tracking memory usage: [Fix memory problems - Microsoft Edge Developer documentation](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/memory-problems/) <br/>
-These debugging tools are also available on mobile devices if needed: [Debugging JavaScript Code in Model-Driven Apps](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/debug-javascript-code) <br/>
+The WebView reset error itself is specific to iOS applications running WebViews and can only be reproduced within that context, however any code causing memory pressure on mobile causes memory pressure buildup on desktop browsers as well. This enables investigation of the root cause of a WebView reset using browser debug tools, like those provided by Microsoft Edge for tracking memory usage: [Fix memory problems - Microsoft Edge Developer documentation](https://learn.microsoft.com/microsoft-edge/devtools-guide-chromium/memory-problems/) <br/>
+These debugging tools are also available on mobile devices if needed: [Debugging JavaScript Code in Model-Driven Apps](https://learn.microsoft.com/power-apps/developer/model-driven-apps/clientapi/debug-javascript-code) <br/>
 When debugging memory issues on iOS directly, Safari memory analysis tools enable you to identify the memory performance of the app module: [Timelines Tab](https://webkit.org/web-inspector/timelines-tab/)
 
 ## Related content
 
-- [Debugging JavaScript Code in Model-Driven Apps](https://learn.microsoft.com/en-us/power-apps/developer/model-driven-apps/clientapi/debug-javascript-code)
-- [Fix memory problems - Microsoft Edge Developer documentation](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/memory-problems/)
+- [Debugging JavaScript Code in Model-Driven Apps](https://learn.microsoft.com/power-apps/developer/model-driven-apps/clientapi/debug-javascript-code)
+- [Fix memory problems - Microsoft Edge Developer documentation](https://learn.microsoft.com/microsoft-edge/devtools-guide-chromium/memory-problems/)
 - [Performance considerations when customizing the mobile app](/dynamics365/field-service/mobile/improve-mobile-performance)
