@@ -76,7 +76,7 @@ When you troubleshoot outbound traffic in AKS, it's important to know what egres
 The flow could also differ based on the destination. For example, internal traffic (that is, within the cluster) doesn't go through the egress device. The internal traffic would use only the cluster networking. For public outbound traffic, determine which egress devices are implemented for your cluster.
 
 #### Check outbound connectivity path and blockers with Azure Virtual Network Verifier (Preview)
-To easily identify which egress device(s) are present for public outbound traffic, you can use the [Azure Virtual Network Verifier (Preview)](link) tool to check the traffic flow from your cluster nodes to the public internet. By running a connectivity analysis, you can visualize the hops within the traffic flow and any misconfigurations within Azure networking resources that are blocking traffic. We recommend using the Virtual Network Verifier tool as a first step in troubleshooting outbound connectivity issues to isolate the issue and detect problematic egress devices.
+To easily identify which egress device(s) are present for public outbound traffic, you can use the [Azure Virtual Network Verifier (Preview)](/azure/virtual-network-manager/concept-virtual-network-verifier) tool to check the traffic flow from your cluster nodes to the public internet. By running a connectivity analysis, you can visualize the hops within the traffic flow and any misconfigurations within Azure networking resources that are blocking traffic. We recommend using the Virtual Network Verifier tool as a first step in troubleshooting outbound connectivity issues to isolate the issue and detect problematic egress devices.
 
 #### Manual troubleshooting
 If you prefer to troubleshoot manually, we recommend that you check the following factors:
@@ -106,7 +106,7 @@ If other troubleshooting steps don't provide any conclusive outcome, take packet
 
 For basic troubleshooting for egress traffic from an AKS cluster, follow these steps:
 
-1. [Check if traffic to the endpoint is blocked by Azure network resources using Azure Virtual Network Verifier (Preview)](link)
+1. [Check if traffic to the endpoint is blocked by Azure network resources using Azure Virtual Network Verifier (Preview)](#check-if-azure-network-resources-are-blocking-traffic-to-the-endpoint).
 
 1. [Make sure that the Domain Name System (DNS) resolution for the endpoint works correctly](#check-whether-the-pod-and-node-can-reach-the-endpoint).
 
