@@ -7,22 +7,23 @@ ms.date: 07/03/2025
 ms.reviewer: madiazor, guco, fredg 
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
-# Resolve session creation error codes for an unattended desktop flow run
+# Resolve session creation errors for an unattended desktop flow run
 
-This article provides background and potential solutions to the `SessionCreationError` and `SessionCreationErrorWithThirdPartyCredentialProvider` error codes that might occur during an unattended desktop flow run in Microsoft Power Automate.
+This article provides background and potential solutions for session creation errors that might occur during an unattended desktop flow run in Microsoft Power Automate.
 
 _Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 
-Your [unattended desktop flow run](/power-automate/desktop-flows/run-unattended-desktop-flows) might fail with the `SessionCreationError` or `SessionCreationErrorWithThirdPartyCredentialProvider` error code.
+Your [unattended desktop flow run](/power-automate/desktop-flows/run-unattended-desktop-flows) might fail with one of the following error codes:
+
+- [SessionCreationErrorWithThirdPartyCredentialProvider](#sessioncreationerrorwiththirdpartycredentialprovider)
+- [SessionCreationUserPromptedForCredentialsAfterConnection](#sessioncreationuserpromptedforcredentialsafterconnection)
+- [SessionCreationError](#sessioncreationerror)
 
 ## Cause
 
-When an unattended session is run, Power Automate attempts to create a remote desktop (RDP) session on the target machine. If this session creation fails, you might receive one of the following error codes:
-
-- [SessionCreationErrorWithThirdPartyCredentialProvider](#sessioncreationerrorwiththirdpartycredentialprovider)
-- [SessionCreationError](#sessioncreationerror)
+When an unattended session is run, Power Automate attempts to create a Remote Desktop Protocol (RDP) connection on the target machine. If this session creation fails, you might receive one of the error codes.
 
 ## SessionCreationErrorWithThirdPartyCredentialProvider
 
@@ -43,6 +44,71 @@ Each subkey represents an installed credential provider. The following table lis
 | SailPoint Technologies Desktop Password Reset | 0094A34B-0BF0-4789-8B2D-8339E469D756 |
 | SIDCredentialProvider | 36ED98C6-02FF-47e8-B7FE-957A411CEA16 |
 | CGWinLogon | BDA6DA5B-7E7E-482C-9B3E-67AFF0C838C0 |
+
+## SessionCreationUserPromptedForCredentialsAfterConnection
+
+This error code occurs when the machine prompts for credentials after the Remote Desktop Protocol (RDP) connection is established. Power Automate expects credentials to be handled during the connection setup, so this unexpected prompt may cause the flow to fail.
+
+### Resolution
+
+The resolution steps depend on the machine's setup. Follow the instructions below to determine the setup and apply the appropriate solution:
+
+1. Open a Command Prompt and execute the following command:
+
+   `dsregcmd /status`
+
+2. In the output, under the "Device State" section, check the values of AzureAdJoined and DomainJoined.
+
+**If AzureAdJoined: YES and DomainJoined: NO**
+
+1. Open the Windows Registry Editor (regedit).
+
+2. Navigate to the following path:
+
+   Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+
+3. Check if the Terminal Services key contains a fPromptForPassword subkey:
+
+   - If it exists and is set to 1, contact your IT department to disable the policy “Always prompt for password upon connection”. After the policy is updated, force a policy refresh on the machine.
+   - If the fPromptForPassword value does not exist, navigate to:
+
+     `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`
+
+     - Look for the DWORD named fPromptForPassword. If it exists, set its value to 0. If it does not exist, create it and set its value to 0.
+
+**For other machine configurations**
+
+1. Open the Windows Registry Editor (regedit).
+2. Navigate to the following path:
+
+   Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+
+3. Check if the Terminal Services key contains the following values:
+
+    - fPromptForPassword set to 1
+    - SecurityLayer set to 0
+    - UserAuthentication set to 0
+
+   If all three values exist, contact your IT department to update one of these values:
+
+   - Set fPromptForPassword to 0, or
+   - Set SecurityLayer to 1 or 2, or
+   - Set UserAuthentication to 1.
+
+4. If one or more values are missing:
+
+   - Choose one of the missing values based on your requirements.
+   - Navigate to:
+
+     Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp
+
+   - Update (or create if not present) the selected value:
+
+     - Set fPromptForPassword to 0, or
+     - Set SecurityLayer to 1 or 2, or
+     - Set UserAuthentication to 1.
+
+5. Restart the machine after registry changes.
 
 ## SessionCreationError
 
