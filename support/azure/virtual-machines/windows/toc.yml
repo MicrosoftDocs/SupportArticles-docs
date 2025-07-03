@@ -338,7 +338,7 @@
       href: applying-software-installation-policy.md
     - name: Azure VM startup hangs at "Please wait for the Group Policy Client"
       href: please-wait-for-the-group-policy-client.md
-    - name: Bug Check 0x0000001A - IRQL_NOT_LESS_OR_EQUAL
+    - name: Bug check 0x0000001A - IRQL_NOT_LESS_OR_EQUAL
       href: interrupt-request-line-not-less-equal.md
     - name: Bug check 0x00000019 - BAD_POOL_HEADER
       href: bad-pool-header.md
