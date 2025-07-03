@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot missing application telemetry in Azure Monitor Application Insights
 description: Describes how to test connectivity and telemetry ingestion by using PowerShell or curl to identify the step in the processing pipeline that causes telemetry to go missing.
-ms.date: 05/28/2025
+ms.date: 07/03/2025
 ms.reviewer: aaronmax, toddfous, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
@@ -10,6 +10,16 @@ ms.custom: sap:Missing or Incorrect data after enabling Application Insights in 
 # Troubleshoot missing application telemetry in Azure Monitor Application Insights
 
 This article helps you to identify the step in the processing pipeline that causes telemetry to be missing by testing connectivity and telemetry ingestion using PowerShell or curl.
+
+## The Azure portal fails to pull or render the records you're trying to view
+
+Check if Microsoft Entra ID (formerly Azure AD) authentication is required. If your Application Insights resource is configured to use Microsoft Entra ID authentication, your application must also be configured to authenticate using Microsoft Entra ID.
+
+If the application hasn't been updated to support Microsoft Entra ID, telemetry won't be accepted by the backend, even if the instrumentation appears correct.
+
+To configure your application to authenticate using Microsoft Entra ID, follow the steps in [Enable Microsoft Entra ID (formerly Azure AD) authentication](/azure/azure-monitor/app/opentelemetry-configuration#enable-microsoft-entra-id-formerly-azure-ad-authentication).
+
+This scenario is a common cause of missing telemetry when migrating to Microsoft Entra ID–secured Application Insights resources.
 
 ## Steps that can cause telemetry to be missing
 
@@ -25,7 +35,7 @@ If application telemetry doesn't show in the Azure portal, failures across steps
 - The ingestion pipeline drops or severely slows down telemetry as part of its processing due to [service health](https://azure.microsoft.com/get-started/azure-portal/service-health/#overview).
 - (Uncommon) Log Analytics faces service health problems when saving telemetry records.
 - (Uncommon) The query API at `api.applicationinsights.io` fails when querying records from Log Analytics.
-- The Azure portal fails to pull or render the records you're trying to view.
+- Other possible causes and solutions are discussed in [Troubleshoot missing application telemetry in Azure Monitor Application Insights](investigate-missing-telemetry.md).
 
 > [!TIP]
 > The Application Insights support teams can't assist with networking issues. When submitting a support ticket for networking issues that prevent Application Insights from receiving telemetry data, such as DNS resolution failures, ensure that you specify Azure Networking or Azure Private Link in your product or issue description in the Azure portal. This will ensure that your support case is routed correctly.
