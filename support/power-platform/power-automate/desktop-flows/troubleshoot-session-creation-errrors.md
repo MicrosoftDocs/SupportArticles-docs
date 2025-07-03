@@ -47,68 +47,69 @@ Each subkey represents an installed credential provider. The following table lis
 
 ## SessionCreationUserPromptedForCredentialsAfterConnection
 
-This error code occurs when the machine prompts for credentials after the Remote Desktop Protocol (RDP) connection is established. Power Automate expects credentials to be handled during the connection setup, so this unexpected prompt may cause the flow to fail.
+This error code occurs when the machine prompts for credentials after the RDP connection is established. Power Automate expects credentials to be handled during the connection setup, so this unexpected prompt may cause the flow to fail.
 
 ### Resolution
 
 The resolution steps depend on the machine's setup. Follow the instructions below to determine the setup and apply the appropriate solution:
 
-1. Open a Command Prompt and execute the following command:
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
-   `dsregcmd /status`
+1. Open **Command Prompt** and run `dsregcmd /status`.
 
-2. In the output, under the "Device State" section, check the values of AzureAdJoined and DomainJoined.
+2. In the output under the **Device State** section, check the values for `AzureAdJoined` and `DomainJoined`.
 
-**If AzureAdJoined: YES and DomainJoined: NO**
+**If `AzureAdJoined: YES` and `DomainJoined: NO`:**
 
-1. Open the Windows Registry Editor (regedit).
+1. Open **Registry Editor** (`regedit`).
 
 2. Navigate to the following path:
 
-   Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+   `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services`
 
-3. Check if the Terminal Services key contains a fPromptForPassword subkey:
+3. Check if the `Terminal Services` key contains a `fPromptForPassword` subkey:
 
-   - If it exists and is set to 1, contact your IT department to disable the policy “Always prompt for password upon connection”. After the policy is updated, force a policy refresh on the machine.
-   - If the fPromptForPassword value does not exist, navigate to:
+   - If it exists and is set to **1**, contact your IT department to disable the "Always prompt for password upon connection" policy. After the policy is updated, force a policy refresh on the machine.
+   - If `fPromptForPassword` doesn't exist, navigate to:
 
      `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`
 
-     - Look for the DWORD named fPromptForPassword. If it exists, set its value to 0. If it does not exist, create it and set its value to 0.
+     - Look for the `fPromptForPassword` DWORD. If it exists, set its value to **0**. If it doesn't exist, create it and set its value to **0**.
 
-**For other machine configurations**
+**For other machine configurations:**
 
-1. Open the Windows Registry Editor (regedit).
+1. Open **Registry Editor** (`regedit`).
+
 2. Navigate to the following path:
 
-   Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services
+   `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services`
 
-3. Check if the Terminal Services key contains the following values:
+3. Check if the `Terminal Services` key contains the following values:
 
-    - fPromptForPassword set to 1
-    - SecurityLayer set to 0
-    - UserAuthentication set to 0
+    - `fPromptForPassword` = **1**
+    - `SecurityLayer` = **0**
+    - `UserAuthentication` = **0**
 
    If all three values exist, contact your IT department to update one of these values:
 
-   - Set fPromptForPassword to 0, or
-   - Set SecurityLayer to 1 or 2, or
-   - Set UserAuthentication to 1.
+   - Set `fPromptForPassword` to **0**, or
+   - Set `SecurityLayer` to **1** or **2**, or
+   - Set `UserAuthentication` to **1**.
 
 4. If one or more values are missing:
 
    - Choose one of the missing values based on your requirements.
    - Navigate to:
 
-     Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp
+     `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`
 
    - Update (or create if not present) the selected value:
 
-     - Set fPromptForPassword to 0, or
-     - Set SecurityLayer to 1 or 2, or
-     - Set UserAuthentication to 1.
+     - Set `fPromptForPassword` to **0**, or
+     - Set `SecurityLayer` to **1** or **2**, or
+     - Set `UserAuthentication` to **1**.
 
-5. Restart the machine after registry changes.
+5. Restart the machine after making registry changes.
 
 ## SessionCreationError
 
