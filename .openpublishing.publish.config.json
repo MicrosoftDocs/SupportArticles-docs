@@ -193,6 +193,7 @@
   "redirection_files": [
     ".openpublishing.redirection.json",
     ".openpublishing.redirection.developer.json",
+    ".openpublishing.redirection.teams.json",
     "support/azure/.openpublishing.redirection.azure.json",
     "support/system-center/.openpublishing.redirection.systemcenter.json",
     "SkypeForBusiness/.openpublishing.redirection.skypeforbusiness.json",
