@@ -1,6 +1,6 @@
 ---
 title: Bug Check 0x0000001A - MEMORY_MANAGEMENT
-description: Provides solutions to an issue where an Azure virtual machine (VM) experiences the MEMORY_MANAGEMENT bug check (0x0000001A).
+description: Describes an issue where an Azure virtual machine (VM) experiences the MEMORY_MANAGEMENT bug check (0x0000001A).
 ms.date: 07/03/2025
 ms.reviewer: cwhitley
 ms.service: azure-virtual-machines
