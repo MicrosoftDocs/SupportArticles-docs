@@ -79,6 +79,8 @@
         href: app-integration/repeat-login-prompts-in-msal-ios-app.md
       - name: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
         href: app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
+      - name: Troubleshoot Cross-Origin Resource Sharing issues
+        href: app-integration/Troubleshoot-cross-origin-resource-sharing-issues.md
       - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
         href: app-integration/serilog-protected-web-api-authentication-authorization-errors.md
       - name: Troubleshoot ASP.NET OWIN and ASP.NET Core authentication sign-in failures
