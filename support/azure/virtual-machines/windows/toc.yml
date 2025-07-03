@@ -336,10 +336,14 @@
       href: applying-group-policy-shortcuts-policy.md
     - name: Azure VM startup hangs at "Applying Software Installation policy"
       href: applying-software-installation-policy.md
-    - name: Bug Check 0x0000001A - IRQL_NOT_LESS_OR_EQUAL
+    - name: Azure VM startup hangs at "Please wait for the Group Policy Client"
+      href: please-wait-for-the-group-policy-client.md
+    - name: Bug check 0x0000001A - IRQL_NOT_LESS_OR_EQUAL
       href: interrupt-request-line-not-less-equal.md
     - name: Bug check 0x00000019 - BAD_POOL_HEADER
       href: bad-pool-header.md
+    - name: Bug check 0x0000001A - MEMORY_MANAGEMENT
+      href: bug-check-memory-management.md
     - name: Troubleshoot Windows VM OS with missing boot manager
       href: os-bootmgr-missing.md
     - name: OS isn't found
@@ -354,8 +358,6 @@
       href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
     - name: Azure VM cannot RDP - working on features
       href: azure-vm-cannot-rdp-working-features.md
-    - name: Azure VM startup hangs at "Please wait for the Group Policy Client"
-      href: please-wait-for-the-group-policy-client.md
 
 - name: Cannot start or stop my VM
   items:
