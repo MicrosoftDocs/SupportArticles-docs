@@ -75,8 +75,10 @@ When you troubleshoot outbound traffic in AKS, it's important to know what egres
 
 The flow could also differ based on the destination. For example, internal traffic (that is, within the cluster) doesn't go through the egress device. The internal traffic would use only the cluster networking. For public outbound traffic, determine which egress devices are implemented for your cluster.
 
-To easily identify which egress device(s) are present for public outbound traffic, you can use the [Azure Virtual Network Verifier](link) tool to check the traffic flow from your cluster nodes to the public internet. By running a connectivity analysis, you can visualize the hops within the traffic flow and any misconfigurations within Azure networking resources that are blocking traffic. We recommend using the Virtual Network Verifier tool as a first step in troubleshooting outbound connectivity issues to isolate the issue and detect problematic egress devices.
+#### Check outbound connectivity path and blockers with Azure Virtual Network Verifier (Preview)
+To easily identify which egress device(s) are present for public outbound traffic, you can use the [Azure Virtual Network Verifier (Preview)](link) tool to check the traffic flow from your cluster nodes to the public internet. By running a connectivity analysis, you can visualize the hops within the traffic flow and any misconfigurations within Azure networking resources that are blocking traffic. We recommend using the Virtual Network Verifier tool as a first step in troubleshooting outbound connectivity issues to isolate the issue and detect problematic egress devices.
 
+#### Manual troubleshooting
 If you prefer to troubleshoot manually, we recommend that you check the following factors:
 
 - The source and the destination for the request.
@@ -88,13 +90,9 @@ If you prefer to troubleshoot manually, we recommend that you check the followin
   - Network security group (NSG)
   - Network policy
 
-To identify a problematic hop, check the response codes before and after it. To check whether the packets arrive properly in a specific hop, you can proceed with packet captures.
+To identify a problematic hop, [check the HTTP response codes before and after it](get-and-analyze-http-response-codes.md). These codes are useful to identify the nature of the issue. The codes are especially helpful in scenarios in which the application responds to HTTP requests. To check whether the packets arrive properly in a specific hop, you can proceed with packet captures.
 
-##### Check HTTP response codes
-
-When you check each component, [get and analyze HTTP response codes](get-and-analyze-http-response-codes.md). These codes are useful to identify the nature of the issue. The codes are especially helpful in scenarios in which the application responds to HTTP requests.
-
-##### Take packet captures from the client and server
+#### Take packet captures from the client and server
 
 If other troubleshooting steps don't provide any conclusive outcome, take packet captures from the client and server. Packet captures are also useful when non-HTTP traffic is involved between the client and server. For more information about how to collect packet captures for AKS environment, see the following articles in the data collection guide:
 
@@ -108,7 +106,7 @@ If other troubleshooting steps don't provide any conclusive outcome, take packet
 
 For basic troubleshooting for egress traffic from an AKS cluster, follow these steps:
 
-1. [Check if traffic to the endpoint is blocked by Azure network resources using Azure Virtual Network Verifier](link)
+1. [Check if traffic to the endpoint is blocked by Azure network resources using Azure Virtual Network Verifier (Preview)](link)
 
 1. [Make sure that the Domain Name System (DNS) resolution for the endpoint works correctly](#check-whether-the-pod-and-node-can-reach-the-endpoint).
 
@@ -134,21 +132,26 @@ For basic troubleshooting for egress traffic from an AKS cluster, follow these s
 
 #### Check if Azure network resources are blocking traffic to the endpoint
 
-To determine if traffic is blocked the endpoint due to Azure network resources, run a connectivity analysis from your AKS cluster nodes to the endpoint using the Azure Virtual Network Verifier tool. The connectivity analysis covers the following resources:
+To determine if traffic is blocked the endpoint due to Azure network resources, run a connectivity analysis from your AKS cluster nodes to the endpoint using the Azure Virtual Network Verifier (Preview) tool. The connectivity analysis covers the following resources:
 
 - Azure Load Balancer
 - Azure Firewall
 - A network address translation (NAT) gateway
 - Network security group (NSG)
-- Network policy (?)
+- Network policy
 
 > [!NOTE]
 >
-> Azure Virtual Network Verifier does not look at any external or third-party networking resources, such as a custom firewall. After running the connectivity analysis, we recommend that you perform a manual check of any external networking to cover all hops in the traffic flow.
+> Azure Virtual Network Verifier (Preview) does not look at any external or third-party networking resources, such as a custom firewall. After running the connectivity analysis, we recommend that you perform a manual check of any external networking to cover all hops in the traffic flow.
+> 
+> Currently, clusters using Azure CNI Overlay are not supported for this feature. Support for CNI Overlay will be released in August 2025.
 
 1. To run the analysis, navigate to your cluster in the Azure portal. In the sidebar, navigate to the Settings -> Node pools blade.
 2. Identify the nodepool you want to run a connectivity analysis from. Click on the nodepool to select it as the scope.
-3. Click on the three dots "..." in the toolbar at the top of the page. In the expanded menu, select "Connectivity <img width="626" alt="image" src="https://github.com/user-attachments/assets/b2f05947-f753-49b9-9536-98d0b998ab52" />
+3. Click on the three dots "..." in the toolbar at the top of the page. In the expanded menu, select "Connectivity analysis (Preview)".<img width="626" alt="image" src="https://github.com/user-attachments/assets/b2f05947-f753-49b9-9536-98d0b998ab52" />
+4. Select a Virtual Machine Scale Set (VMSS) instance as the source. The source IP address(es) will be generated automatically.
+5. Select a public domain name/endpoint as the destination for the analysis. The destination IP address(es) will also be generated automatically.
+6. Run the analysis and wait up to 2 minutes for the results. In the resulting diagram, identify the associated Azure network resources and where traffic is blocked. Click on the icons to show the detailed analysis output.
 
 
 #### Check whether the pod and node can reach the endpoint
