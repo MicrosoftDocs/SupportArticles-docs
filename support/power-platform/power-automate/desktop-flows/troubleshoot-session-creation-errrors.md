@@ -61,7 +61,7 @@ The resolution steps depend on the machine's setup. Follow the instructions belo
 
 **If `AzureAdJoined: YES` and `DomainJoined: NO`:**
 
-1. Open **Registry Editor** (`regedit`).
+1. Open **Registry Editor** by pressing Windows+<kbd>R</kbd>, typing `regedit`, and pressing <kbd>Enter</kbd>.
 
 2. Navigate to the following path:
 
@@ -78,7 +78,7 @@ The resolution steps depend on the machine's setup. Follow the instructions belo
 
 **For other machine configurations:**
 
-1. Open **Registry Editor** (`regedit`).
+1. Open **Registry Editor** by pressing Windows+<kbd>R</kbd>, typing `regedit`, and pressing <kbd>Enter</kbd>.
 
 2. Navigate to the following path:
 
