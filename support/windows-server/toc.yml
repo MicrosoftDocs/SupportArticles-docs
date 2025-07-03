@@ -2210,6 +2210,8 @@ items:
       href: ./remote/no-connected-icon-in-notification-area.md
     - name: Remote Desktop tab in RDWEB is missing from Edge
       href: ./remote/edge-not-work-run-rdweb-require-activex-controls.md
+    - name: Remote Desktop Web Access troubleshooting
+      href: ./remote/remote-desktop-web-access-troubleshooting.yml
   - name: Redirection (not printer)
     items:
     - name: Caps Lock status change isn't synced to client computer

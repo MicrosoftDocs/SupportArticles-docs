@@ -67,6 +67,8 @@
         href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
       - name: Infinite sign-in loop issue with ASP.NET applications
         href: app-integration/asp-dot-net-application-infinite-sign-in-loop.md
+      - name: MsalClientException - Failed to get user name
+        href: app-integration/msal-client-exception-failed-to-get-user-name.md
       - name: No account or login hint was passed to the AcquireTokenSilent
         href: app-integration/no-account-login-hint-passed-acquire-token-silent.md
       - name: Package Inspector for MSAL Android Native
@@ -79,6 +81,8 @@
         href: app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
       - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
         href: app-integration/serilog-protected-web-api-authentication-authorization-errors.md
+      - name: Troubleshoot ASP.NET OWIN and ASP.NET Core authentication sign-in failures
+        href: app-integration/asp-dot-net-open-web-interface-for-dot-net-core-authentication-sign-in-failures.md
       - name: WIF10201 No valid key mapping found
         href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
 
@@ -335,6 +339,8 @@
         href: users-groups-entra-apis/b2c-or-tenant-premium-license-sign-in-activities.md
    - name: Problem with using the Graph SDK - libraries
      items:
+      - name: IDX14102 error - Unable to decode the header
+        href: users-groups-entra-apis/unable-to-decode-header-error.md
       - name: Python scripts making requests are detected as web crawlers
         href: users-groups-entra-apis/python-scripts-microsoft-graph-requests-detected-as-web-crawler.md
 - name: Microsoft Entra User Provisioning and Synchronization

@@ -81,15 +81,15 @@
   - name: Domain Management
     items:
     - name: Can't add a domain
-      href: ../administration/administrator-failed-adding-domain.md
+      href: ../domain-management/administrator-failed-adding-domain.md
     - name: Can't assign a federated domain
       href: ../domain-management/cannot-assign-federated-domain-to-user.md
     - name: Can't send emails from full redelegation domain
-      href: ../administration/send-email-full-redelegation-domain.md
+      href: ../domain-management/send-email-full-redelegation-domain.md
     - name: Child domain doesn't inherit parent changes
-      href: ../administration/child-domain-fails-inherit-parent-domain-changes.md
+      href: ../domain-management/child-domain-fails-inherit-parent-domain-changes.md
     - name: Issue when removing a domain
-      href: ../administration/error-remove-domain-from-office-365.md
+      href: ../domain-management/error-remove-domain-from-office-365.md
   - name: Group Policy
     items:
     - name: Configure default email client using policy
