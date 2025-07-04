@@ -3,7 +3,7 @@ title: Home Page Unexpectedly Shown and WebView Reset in Dynamics 365 Field Serv
 description: Helps resolve WebView reset issues in the Dynamics 365 Field Service mobile app.
 author: JonBaker007
 ms.author: jobaker
-ms.reviewer: mhart
+ms.reviewer: puneet-singh1
 ms.date: 07/04/2025
 ms.custom: sap:Mobile Application\Application is throwing errors
 ---
