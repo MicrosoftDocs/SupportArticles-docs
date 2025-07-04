@@ -2,7 +2,7 @@
 title: Troubleshoot Cross-Origin Resource Sharing issues
 description: Helps you troubleshoot and resolve Cross-Origin Resource Sharing issues when using Microsoft Entra ID.
 ms.service: entra-id
-ms.date: 07/03/2025
+ms.date: 07/04/2025
 ms.reviewer: willfid, v-weizhu
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
@@ -115,7 +115,7 @@ Origin: https://app.domain.com
 Cookie: .AspNet.Cookies=xyz…
 ```
 
-If you use ASP.NET or ASP.NET Core, configure Microsoft Entra ID to avoid using token lifetime as the session lifetime. For more information, see [Update ASP.NET or ASP.NET Core app session to last longer than Microsoft Entra tokens](https://blogs.aaddevsup.xyz/2021/04/8044/). You can configure the API authentication to throw an error instead of performing a redirect. For ASP.NET Core, you can use the following code:
+If you use ASP.NET or ASP.NET Core, configure Microsoft Entra ID to avoid using token lifetime as the session lifetime. For more information, see [Customize middleware authentication ticket to extend user sign-in duration](customize-authentication-session-expiration.md). You can configure the API authentication to throw an error instead of performing a redirect. For ASP.NET Core, you can use the following code:
 
 ```csharp
     services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme, options =>
@@ -222,7 +222,7 @@ All other flows won't be supported in Single Page Applications. Microsoft Entra 
 
 ### Scenario 6: Using Microsoft Entra Application Proxy
 
-If your app uses Microsoft Entra Application Proxy, see [understand complex applications in Microsoft Entra application proxy](/entra/identity/app-proxy/application-proxy-configure-complex-application).
+If your app uses Microsoft Entra Application Proxy, see [Understand complex applications in Microsoft Entra application proxy](/entra/identity/app-proxy/application-proxy-configure-complex-application).
 
 ## References
 
