@@ -3,7 +3,7 @@ title: Session creation error codes in unattended desktop flow runs
 description: Solves error codes related to session creation during unattended desktop flow runs in Power Automate.
 author: johndund 
 ms.author: johndund 
-ms.date: 07/03/2025
+ms.date: 07/04/2025
 ms.reviewer: madiazor, guco, fredg 
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
@@ -47,11 +47,11 @@ Each subkey represents an installed credential provider. The following table lis
 
 ## SessionCreationUserPromptedForCredentialsAfterConnection
 
-This error code occurs when the machine prompts for credentials after the RDP connection is established. Power Automate expects credentials to be handled during the connection setup, so this unexpected prompt may cause the flow to fail.
+This error code occurs when the machine prompts for credentials after the RDP connection is established. Power Automate expects credentials to be handled during the connection setup, so this unexpected prompt might cause the flow to fail.
 
 ### Resolution
 
-The resolution steps depend on the machine's setup. Follow the instructions below to determine the setup and apply the appropriate solution:
+The resolution steps depend on the machine's setup. Follow the instructions to determine the setup and apply the appropriate solution:
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
