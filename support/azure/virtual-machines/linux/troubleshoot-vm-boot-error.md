@@ -70,7 +70,8 @@ See the following sections for detailed errors, possible causes, and solutions.
 
 ### <a id="reinstall-grub-regenerate-grub-configuration-file-repairvm"></a> Reinstall GRUB and regenerate the GRUB configuration file using Azure Linux Auto Repair
 
-
+> [!div class="nextstepaction"]
+> [Run in Linux](https://go.microsoft.com/fwlink/?linkid=2321844)
 
 Azure Linux Auto Repair (ALAR) scripts are part of the VM repair extension described in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM](./repair-linux-vm-using-alar.md). ALAR covers the automation of multiple repair scenarios, including GRUB rescue issues.
 
@@ -98,9 +99,6 @@ The ALAR scripts use the repair extension `repair-button` to fix GRUB issues by 
 The repair VM script, in conjunction with the ALAR script, temporarily creates a resource group, a repair VM, and a copy of the affected VM's OS disk. It reinstalls GRUB, regenerates the corresponding GRUB configuration file, and then swaps the broken VM's OS disk with the copied fixed disk. Finally, the `repair-button` script automatically deletes the resource group containing the temporary repair VM.
 
 ### <a id="reinstall-grub-regenerate-grub-configuration-file"></a>Reinstall GRUB and regenerate the GRUB configuration file manually
-
-> [!div class="nextstepaction"]
-> [Deploy and Explore](https://go.microsoft.com/fwlink/?linkid=2321844)
 
 1. Check whether a rescue/repair VM was created. If it wasn't created, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create the VM. Mount all the required file systems, including `/` and `/boot` in the rescue/repair VM, and then enter the [chroot](chroot-environment-linux.md) environment.
 
