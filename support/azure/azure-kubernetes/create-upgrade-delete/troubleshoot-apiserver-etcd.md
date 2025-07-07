@@ -120,7 +120,7 @@ The analyzer also provides actionable recommendations directly in the Azure port
 > **Note:**
 > The API server resource intensive listing detector is available to all users with access to the AKS resource in the Azure portal. No special permissions or prerequisites are required.
 > 
-> After identifying the offending agents and applying the above recommendations, you can further use [Priority and Fairness](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/) or refer to [This Section](https://review.learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/troubleshoot-apiserver-etcd?branch=pr-en-us-9260&tabs=resource-specific#cause-3-an-offending-client-makes-excessive-list-or-put-calls) to throttle or isolate problematic clients.
+> After identifying the offending agents and applying the above recommendations, you can further use [Priority and Fairness](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/) or refer [this section](https://review.learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/troubleshoot-apiserver-etcd?branch=pr-en-us-9260&tabs=resource-specific#cause-3-an-offending-client-makes-excessive-list-or-put-calls) to throttle or isolate problematic clients.
 
 **1.b.** Additionally, you can also run following query to identify the average latency of API server requests per user agent as plotted on a time chart:
 
