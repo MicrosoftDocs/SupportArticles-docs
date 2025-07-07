@@ -49,7 +49,7 @@ Deleting the virtual machine scale set attached to the cluster causes the cluste
 
 If the cluster virtual machine scale set is accidentally deleted, you can reconcile the node pool by using `az aks nodepool update`:
 
-```bash
+```shell
 # Update Node Pool Configuration
 az aks nodepool update --resource-group <resource-group-name> --cluster-name <cluster-name> --name <nodepool-name> --tags <tags> --node-taints <taints> --labels <labels>
 
@@ -66,7 +66,7 @@ You may receive scaling errors if you modify or delete Azure-created tags and ot
 
 Use the Azure CLI to make sure that the node resource group has the correct tags for AKS name and the AKS group name:
 
-```bash
+```shell
 # Add or update tags for AKS name and AKS group name
 az group update --name <node-resource-group-name> --set tags.AKS-Managed-Cluster-Name=<aks-managed-cluster-name> tags.AKS-Managed-Cluster-RG=<aks-managed-cluster-rg>
 
