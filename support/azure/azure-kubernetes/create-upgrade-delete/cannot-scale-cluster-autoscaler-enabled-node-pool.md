@@ -45,9 +45,35 @@ Deleting the virtual machine scale set attached to the cluster causes the cluste
 > [!NOTE]
 > Modifying any resource under the node resource group in the AKS cluster is an unsupported action and will cause cluster operation failures. You can prevent changes from being made to the node resource group by [blocking users from modifying resources](/azure/aks/cluster-configuration#fully-managed-resource-group-preview) managed by the AKS cluster.
 
+### Reconcile node pool
+
+If the cluster virtual machine scale set is accidentally deleted, you can reconcile the node pool by using `az aks nodepool update`:
+
+```bash
+# Update Node Pool Configuration
+az aks nodepool update --resource-group <resource-group-name> --cluster-name <cluster-name> --name <nodepool-name> --tags <tags> --node-taints <taints> --labels <labels>
+
+# Verify the Update
+az aks nodepool show --resource-group <resource-group-name> --cluster-name <cluster-name> --name <nodepool-name>
+```
+Monitor the node pool to make sure that it's functioning as expected and that all nodes are operational.
+
 ## Cause 2: Tags or any other properties were modified from the node resource group
 
 You may receive scaling errors if you modify or delete Azure-created tags and other resource properties in the node resource group. For more information, see [Can I modify tags and other properties of the AKS resources in the node resource group?](/azure/aks/faq#can-i-modify-tags-and-other-properties-of-the-aks-resources-in-the-node-resource-group)
+
+### Reconcile node resource group tags
+
+Use the Azure CLI to make sure that the node resource group has the correct tags for AKS name and the AKS group name:
+
+```bash
+# Add or update tags for AKS name and AKS group name
+az group update --name <node-resource-group-name> --set tags.AKS-Managed-Cluster-Name=<aks-managed-cluster-name> tags.AKS-Managed-Cluster-RG=<aks-managed-cluster-rg>
+
+# Verify the tags
+az group show --name <node-resource-group-name> --query "tags"
+```
+Monitor the resource group to make sure that the tags are correctly applied and that the resource group is functioning as expected.
 
 ## Cause 3: The cluster node resource group was deleted
 
