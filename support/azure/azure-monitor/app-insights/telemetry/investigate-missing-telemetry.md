@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot missing application telemetry in Azure Monitor Application Insights
 description: Describes how to test connectivity and telemetry ingestion by using PowerShell or curl to identify the step in the processing pipeline that causes telemetry to go missing.
-ms.date: 07/03/2025
+ms.date: 07/07/2025
 ms.reviewer: aaronmax, toddfous, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
@@ -13,13 +13,9 @@ This article helps you to identify the step in the processing pipeline that caus
 
 ## The Azure portal fails to pull or render the records you're trying to view
 
-Check if Microsoft Entra ID (formerly Azure AD) authentication is required. If your Application Insights resource is configured to use Microsoft Entra ID authentication, your application must also be configured to authenticate using Microsoft Entra ID.
-
-If the application hasn't been updated to support Microsoft Entra ID, telemetry won't be accepted by the backend, even if the instrumentation appears correct.
+If your Application Insights data collection endpoint is configured to use Microsoft Entra ID (formerly Azure AD) for authentication, your application must also be configured to authenticate with Microsoft Entra ID. In this scenario, your application is responsible for authenticating using Microsoft Entra ID. If the application isn't correctly configured, telemetry will be rejected and won't appear in the Azure portal even if instrumentation appears correct and your application is generating telemetry data.
 
 To configure your application to authenticate using Microsoft Entra ID, follow the steps in [Enable Microsoft Entra ID (formerly Azure AD) authentication](/azure/azure-monitor/app/opentelemetry-configuration#enable-microsoft-entra-id-formerly-azure-ad-authentication).
-
-This scenario is a common cause of missing telemetry when migrating to Microsoft Entra ID–secured Application Insights resources.
 
 ## Steps that can cause telemetry to be missing
 
