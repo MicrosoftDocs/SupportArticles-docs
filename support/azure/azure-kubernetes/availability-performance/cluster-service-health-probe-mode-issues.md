@@ -37,7 +37,7 @@ The following operations also happen:
 
 To troubleshoot these issues, follow these steps:
 
-0. First, connect to your AKS cluster using the Azure CLI:
+1. First, connect to your AKS cluster using the Azure CLI:
 
     ```azurecli
     export RESOURCE_GROUP="aks-rg"
@@ -45,7 +45,7 @@ To troubleshoot these issues, follow these steps:
     az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER_NAME --overwrite-existing
     ```
 
-1. Next, check the RP frontend log to see if the health probe mode in the LoadBalancerProfile is properly configured. You can use the `az aks show` command to view the LoadBalancerProfile property of your cluster. 
+2. Next, check the RP frontend log to see if the health probe mode in the LoadBalancerProfile is properly configured. You can use the `az aks show` command to view the LoadBalancerProfile property of your cluster. 
 
     ```azurecli
     export RESOURCE_GROUP="aks-rg"
@@ -74,7 +74,7 @@ To troubleshoot these issues, follow these steps:
     }
     ```
 
-2. Check the cloud provider configuration. In modern AKS clusters, the cloud provider configuration is managed internally and the `ccp` namespace doesn't exist. Instead, check for cloud provider related resources and verify the cloud-node-manager pods are running properly:
+3. Check the cloud provider configuration. In modern AKS clusters, the cloud provider configuration is managed internally and the `ccp` namespace doesn't exist. Instead, check for cloud provider related resources and verify the cloud-node-manager pods are running properly:
 
 
     ```bash
@@ -97,7 +97,7 @@ To troubleshoot these issues, follow these steps:
     cloud-node-manager-rfb2w                        2/2     Running   0          16m
     ```
 
-3. Check the chart or overlay daemonset cloud-node-manager to see if the health-probe-proxy sidecar container is enabled. You can use the `kubectl get ds` command to view the daemonset.
+4. Check the chart or overlay daemonset cloud-node-manager to see if the health-probe-proxy sidecar container is enabled. You can use the `kubectl get ds` command to view the daemonset.
 
     ```shell
     kubectl get ds -n kube-system cloud-node-manager -o yaml
