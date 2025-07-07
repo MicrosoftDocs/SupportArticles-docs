@@ -59,57 +59,57 @@ The resolution steps depend on the machine's setup. Follow the instructions to d
 
 2. In the output under the **Device State** section, check the values for `AzureAdJoined` and `DomainJoined`.
 
-**If `AzureAdJoined: YES` and `DomainJoined: NO`:**
+   **If `AzureAdJoined: YES` and `DomainJoined: NO`:**
 
-1. Open **Registry Editor** by pressing Windows+<kbd>R</kbd>, typing `regedit`, and pressing <kbd>Enter</kbd>.
+   1. Open **Registry Editor** by pressing Windows+<kbd>R</kbd>, typing `regedit`, and pressing <kbd>Enter</kbd>.
 
-2. Navigate to the following path:
+   2. Navigate to the following path:
 
-   `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services`
+      `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services`
 
-3. Check if the `Terminal Services` key contains a `fPromptForPassword` subkey:
+   3. Check if the `Terminal Services` key contains a `fPromptForPassword` subkey:
 
-   - If it exists and is set to **1**, contact your IT department to disable the "Always prompt for password upon connection" policy. After the policy is updated, force a policy refresh on the machine.
-   - If `fPromptForPassword` doesn't exist, navigate to:
+      - If it exists and is set to **1**, contact your IT department to disable the "Always prompt for password upon connection" policy. After the policy is updated, force a policy refresh on the machine.
+      - If `fPromptForPassword` doesn't exist, navigate to:
 
-     `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`
+        `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`
 
-     - Look for the `fPromptForPassword` DWORD. If it exists, set its value to **0**. If it doesn't exist, create it and set its value to **0**.
+        Look for the `fPromptForPassword` DWORD. If it exists, set its value to **0**. If it doesn't exist, create it and set its value to **0**.
 
-**For other machine configurations:**
+   **For other machine configurations:**
 
-1. Open **Registry Editor** by pressing Windows+<kbd>R</kbd>, typing `regedit`, and pressing <kbd>Enter</kbd>.
+   1. Open **Registry Editor** by pressing Windows+<kbd>R</kbd>, typing `regedit`, and pressing <kbd>Enter</kbd>.
 
-2. Navigate to the following path:
+   2. Navigate to the following path:
 
-   `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services`
+      `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services`
 
-3. Check if the `Terminal Services` key contains the following values:
+   3. Check if the `Terminal Services` key contains the following values:
 
-    - `fPromptForPassword` = **1**
-    - `SecurityLayer` = **0**
-    - `UserAuthentication` = **0**
+      - `fPromptForPassword` = **1**
+      - `SecurityLayer` = **0**
+      - `UserAuthentication` = **0**
 
-   If all three values exist, contact your IT department to update one of these values:
+      If all three values exist, contact your IT department to update one of these values:
 
-   - Set `fPromptForPassword` to **0**, or
-   - Set `SecurityLayer` to **1** or **2**, or
-   - Set `UserAuthentication` to **1**.
+      - Set `fPromptForPassword` to **0**, or
+      - Set `SecurityLayer` to **1** or **2**, or
+      - Set `UserAuthentication` to **1**.
 
-4. If one or more values are missing:
+      If one or more values are missing:
 
-   - Choose one of the missing values based on your requirements.
-   - Navigate to:
+      - Choose one of the missing values based on your requirements.
+      - Navigate to:
 
-     `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`
+        `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp`
 
-   - Update (or create if not present) the selected value:
+      - Update (or create if not present) the selected value:
 
-     - Set `fPromptForPassword` to **0**, or
-     - Set `SecurityLayer` to **1** or **2**, or
-     - Set `UserAuthentication` to **1**.
+         - Set `fPromptForPassword` to **0**, or
+         - Set `SecurityLayer` to **1** or **2**, or
+         - Set `UserAuthentication` to **1**.
 
-5. Restart the machine after making registry changes.
+3. Restart the machine after making registry changes.
 
 ## SessionCreationError
 
