@@ -13,7 +13,7 @@ This article helps you to identify the step in the processing pipeline that caus
 
 ## The Azure portal fails to pull or render the records you're trying to view
 
-If the Application Insights data collection endpoint is set to use Microsoft Entra ID (formerly Azure AD) for authentication, the application must also be configured to authenticate with Microsoft Entra ID. In this scenario, your application is responsible for authenticating using Microsoft Entra ID. If the application is not correctly configured, telemetry will be rejected and won’t appear in the Azure portal even if instrumentation appears correct and your application is generating telemetry data.
+If your Application Insights data collection endpoint is configured to use Microsoft Entra ID (formerly Azure AD) for authentication, your application must also be configured to authenticate with Microsoft Entra ID. In this scenario, your application is responsible for authenticating using Microsoft Entra ID. If the application isn't correctly configured, telemetry will be rejected and won't appear in the Azure portal even if instrumentation appears correct and your application is generating telemetry data.
 
 To configure your application to authenticate using Microsoft Entra ID, follow the steps in [Enable Microsoft Entra ID (formerly Azure AD) authentication](/azure/azure-monitor/app/opentelemetry-configuration#enable-microsoft-entra-id-formerly-azure-ad-authentication).
 
