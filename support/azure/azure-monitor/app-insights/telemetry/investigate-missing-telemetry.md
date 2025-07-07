@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot missing application telemetry in Azure Monitor Application Insights
 description: Describes how to test connectivity and telemetry ingestion by using PowerShell or curl to identify the step in the processing pipeline that causes telemetry to go missing.
-ms.date: 07/03/2025
+ms.date: 07/07/2025
 ms.reviewer: aaronmax, toddfous, v-weizhu
 ms.service: azure-monitor
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
@@ -13,7 +13,7 @@ This article helps you to identify the step in the processing pipeline that caus
 
 ## The Azure portal fails to pull or render the records you're trying to view
 
-If your Application Insights data collection endpoint is configured to use Microsoft Entra ID (formerly Azure AD) for authentication, then your application must also be configured to authenticate with Microsoft Entra ID. In this scenario, your application is responsible for authenticating using Microsoft Entra ID. If the application is not properly configured to do so, telemetry will be rejected and won’t appear in the Azure portal even if your instrumentation appears correct and your application is generating telemetry data.
+If the Application Insights data collection endpoint is set to use Microsoft Entra ID (formerly Azure AD) for authentication, the application must also be configured to authenticate with Microsoft Entra ID. In this scenario, your application is responsible for authenticating using Microsoft Entra ID. If the application is not correctly configured, telemetry will be rejected and won’t appear in the Azure portal even if instrumentation appears correct and your application is generating telemetry data.
 
 To configure your application to authenticate using Microsoft Entra ID, follow the steps in [Enable Microsoft Entra ID (formerly Azure AD) authentication](/azure/azure-monitor/app/opentelemetry-configuration#enable-microsoft-entra-id-formerly-azure-ad-authentication).
 
