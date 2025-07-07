@@ -108,6 +108,9 @@ If the VM serial console access isn't available, an alternative solution is to r
 
 #### Use Azure Linux Auto Repair (ALAR)
 
+> [!div class="nextstepaction"]
+> [Deploy and Explore](https://go.microsoft.com/fwlink/?linkid=2321930)
+
 Azure Linux Auto Repair (ALAR) scripts are part of the VM repair extension described in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM](./repair-linux-vm-using-alar.md). ALAR covers the automation of multiple repair scenarios, including `/etc/fstab` issues.
 
 The ALAR scripts use the repair extension `repair-button` to fix fstab issues by specifying `--button-command fstab`. This parameter triggers the automated recovery. Implement the following steps to automate fstab errors via the offline ALAR approach:
