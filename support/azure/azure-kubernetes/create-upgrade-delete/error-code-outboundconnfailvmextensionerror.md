@@ -20,7 +20,7 @@ This article describes how to identify and resolve the `OutboundConnFailVMExtens
 
 ## Symptoms
 
-When you try to start or create an AKS cluster, you receive the following error message:
+When you try to create, scale, or upgrade an AKS cluster, you may receive the following error message:
 
 > Unable to establish outbound connection from agents, please see <https://aka.ms/aks-required-ports-and-addresses> for more information.
 >
@@ -36,7 +36,13 @@ When you try to start or create an AKS cluster, you receive the following error 
 
 The custom script extension that downloads the necessary components to provision the nodes couldn't establish the necessary outbound connectivity to obtain packages. For public clusters, the nodes try to communicate with the Microsoft Container Registry (MCR) endpoint (`mcr.microsoft.com`) on port 443.
 
-There are many reasons why the traffic might be blocked. In any of these situations, the best way to test connectivity is to use the Secure Shell protocol (SSH) to connect to the node. To make the connection, follow the instructions in [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access). Then, test the connectivity on the cluster by following these steps:
+There are many reasons why the outbound traffic might be blocked. The best way to troubleshoot outbound connectivity failures is by running a connectivity analysis with Azure Virtual Network Verifier. The connectivity analysis looks at the Azure networking resources in the outbound traffic flow and identifies where traffic is blocked.
+
+
+
+
+
+is to use the Secure Shell protocol (SSH) to connect to the node. To make the connection, follow the instructions in [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access). Then, test the connectivity on the cluster by following these steps:
 
 1. After you connect to the node, run the `nc` and `dig` commands:
 
