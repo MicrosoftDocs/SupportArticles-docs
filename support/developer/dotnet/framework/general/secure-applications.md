@@ -1,26 +1,22 @@
 ---
 title: Secure applications built on .NET Framework
 description: Describes important considerations for securing applications that are built on the .NET Framework.
-ms.date: 05/06/2020
+ms.date: 07/07/2025
 ms.topic: how-to
 ms.custom: sap:Common Language Runtime (CLR)
+
+#customer intent: As a developer, I want to secure my .NET Framework application so that it is protected against security vulnerabilities.
 ---
 # Secure applications that are built on the .NET Framework
 
 This article describes important considerations for securing applications that are built on Microsoft .NET Framework.
 
-_Original product version:_ &nbsp; .NET Framework  
-_Original KB number:_ &nbsp; 818014
-
-## Summary
-
 This article is one of a series of articles that provide detailed information for applications that are built on the .NET Framework.
 
-The articles in this series include the following ones:
+The articles in this series include the following:
 
-- [HOW TO: Deploy Applications That Are Built on the .NET Framework](https://support.microsoft.com/help/818016)
-
-- [HOW TO: Secure Applications That Are Built on the .NET Framework](https://support.microsoft.com/help/818014)
+- [Deploy applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/installation/deploy-applications)
+- [Secure applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/general/secure-applications)
 
 ## Adjust .NET Framework security on a zone-by-zone basis
 
@@ -76,7 +72,7 @@ Many ASP.NET applications don't allow anonymous access. An ASP.NET application t
 
 ASP.NET includes Forms authentication. It's a unique way to authenticate users without creating Windows accounts. ASP.NET also includes the ability to grant or deny these users' access to different web resources.
 
-For more information about how to control access to web resources on a per-user basis, visit [How To Restrict Specific Users from Gaining Access to Specified web Resources](https://support.microsoft.com/help/815151).
+For more information about how to control access to web resources on a per-user basis, visit [Restrict specific users from gaining access to specified web resources](/troubleshoot/developer/webapps/aspnet/configuration/restrict-users-access-web-resource).
 
 ## Limit the web services protocols that a server permits
 
@@ -86,12 +82,8 @@ By default, ASP.NET supports three ways for web services clients to issue reques
 
 ASP.NET web services provide a browser-friendly interface to make it easier for developers to create web services clients. This friendly interface permits anyone who can reach the web service to view the complete details of the methods that are available and any required parameters. This access is useful for public web services that include only publicly available methods. However, it may reduce the security of private web services.
 
-For additional information about how to control access to web resources on a per-user basis, visit [How To Restrict Specific Users from Gaining Access to Specified web Resources](https://support.microsoft.com/help/815151).
+For additional information about how to control access to web resources on a per-user basis, visit [Restrict specific users from gaining access to specified web resources](/troubleshoot/developer/webapps/aspnet/configuration/restrict-users-access-web-resource).
 
 ## Use ASP.NET to protect file types
 
 The structure of ASP.NET applications causes many private files to be stored with files that end-users request. ASP.NET protects these files by intercepting requests for the files and returning an error. You can extend this type of protection to any file type by using configuration settings. If your application includes unusual file types that should remain private, you can use ASP.NET file protection to protect those files.
-
-## References
-
-For more information about how to secure applications that are built on the .NET Framework, visit [What's new in Windows 10 deployment](/windows/deployment/deploy-whats-new).

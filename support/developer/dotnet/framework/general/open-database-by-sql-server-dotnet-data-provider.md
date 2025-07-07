@@ -1,50 +1,45 @@
 ---
 title: Open SQL database by VB .NET
 description: Introduces how to open SQL Server databases by using SQL Server .NET Data Provider with Visual Basic .NET.
-ms.date: 05/12/2020
+ms.date: 07/07/2025
 ms.topic: how-to
 ms.custom: sap:Class Library Namespaces
+
+#customer intent: As a developer, I want to open SQL Server databases using the SQL Server .NET Data Provider with Visual Basic .NET so that I can integrate SQL Server with to my applications. 
 ---
-# Open SQL Server database by using SQL Server .NET Data Provider with Visual Basic .NET  
+# Open SQL Server database by using SQL Server .NET Data Provider with Visual Basic .NET
 
-This article provides information about how to open SQL Server databases by using SQL Server .NET Data Provider with Visual Basic .NET.
+This article provides information about how to open SQL Server databases by using SQL Server .NET Data Provider with Visual Basic .NET. You can use ADO.NET to open a SQL Server database using the SQL Server .NET Data Provider. ADO.NET gathers all of the classes that are required for data handling.
 
-_Original product version:_ &nbsp; Visual Basic .NET  
-_Original KB number:_ &nbsp; 308656
-
-## Summary
-
-This article describes how you can use ADO.NET to open a SQL Server database by using the SQL Server .NET data provider. ADO.NET gathers all of the classes that are required for data handling. The `System.Data.SqlClient` namespace describes a collection of classes that are used to programmatically access a SQL Server data source. You can access ADO classes through the `System.Data.OleDb` namespace to provide support for OLE DB databases.
+The `System.Data.SqlClient` namespace describes a collection of classes that are used to programmatically access a SQL Server data source. You can access ADO classes through the `System.Data.OleDb` namespace to provide support for OLE DB databases.
 
 In this article, connections are set up both programmatically and using the Visual Studio .NET Server Explorer. The code samples in this article use the `SqlConnection`, `SqlCommand`, and `SqlDataReader` ADO.NET objects.
 
-## Requirements
-
-The following list outlines the required hardware, software, network infrastructure, and service packs that you need:
+## Prerequisites
 
 - Microsoft SQL Server
 - Visual Basic .NET
 
-> [!NOTE]  
+> [!NOTE]
 > SQL Server and Visual Basic .NET must be installed and running on the same computer. In addition, the user must be able to use Windows Integrated Security to connect to SQL Server.
 
 This article assumes that you're familiar with the following topics:
 
 - ADO.NET concepts
 - SQL Server concepts and Transact-SQL (T-SQL) syntax
-- *Northwind* sample database
+- _Northwind_ sample database
 
 ## Create Visual Basic .NET Windows application
 
-1. Start Visual Studio .NET, and create a new Visual Basic Windows Application project named *SQLDataAccess*.
-2. Open Form1. In the first line of *Form1.vb*, add a reference to the ADO.NET namespace as follows:
+1. Start Visual Studio .NET, and create a new Visual Basic Windows Application project named _SQLDataAccess_.
+2. Open Form1. In the first line of _Form1.vb_, add a reference to the ADO.NET namespace as follows:
 
     ```vb
     Imports System.Data.SqlClient
     ```
 
 3. From the Windows **Start** menu, point to **Programs**, point to Microsoft SQL Server, and then click **SQL Server Service Manager** to ensure that the SQL Server service is running on your computer.
-4. Set the **Server** property to the name of your computer, and then set the **Services** property to *MSSQLServer*.
+4. Set the **Server** property to the name of your computer, and then set the **Services** property to _MSSQLServer_.
 5. If the service isn't running, click **Start**.
 6. Close the **SQL Server Service Manager** dialog box.
 
@@ -85,7 +80,7 @@ The `SqlConnection` object establishes a database connection, the `SqlCommand` o
     myConn.Open()
     ```
 
-`SqlConnection` uses your Windows logon details to connect to the *Northwind* database on your computer.
+`SqlConnection` uses your Windows logon details to connect to the _Northwind_ database on your computer.
 
 ## Use the SqlDataReader object to retrieve data from SQL Server
 
@@ -126,7 +121,7 @@ The `SqlConnection` object establishes a database connection, the `SqlCommand` o
 2. Right-click **Data Connections**, and then click **Add connection**.
 3. In the **Data Link Properties** dialog box, click localhost in the **Select or enter a server name** box.
 4. Click **Windows NT Integrated Security** to log on to the server.
-5. Click **Select the database on the server**, and then select *Northwind* database from the list.
+5. Click **Select the database on the server**, and then select _Northwind_ database from the list.
 6. Click **Test Connection** to validate the connection, and then click **OK**.
 7. In the Server Explorer, click to expand the **Data Connections** tree so that the `Employees` table node expands. The properties of individual fields appear in the **Properties** window.
 
@@ -154,6 +149,7 @@ The `SqlConnection` object establishes a database connection, the `SqlCommand` o
 
 9. Save and run the project.
 
-## References
+## Related content
 
-For more information about using ADO.NET, refer to the **Data** section of the **Visual Basic** topic in the Visual Studio .NET Help documentation.
+- [ADO.NET](/dotnet/framework/data/adonet/)
+- [Accessing data in Visual Basic applications](/dotnet/visual-basic/developing-apps/accessing-data)

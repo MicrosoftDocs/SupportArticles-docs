@@ -1,38 +1,34 @@
 ---
 title: Deploy applications built on .NET Framework
 description: This article describes important considerations for deploying applications that are built on the .NET Framework.
-ms.date: 05/06/2020
+ms.date: 07/07/2025
 ms.custom: sap:Installation and Deployment
 ms.topic: how-to
+
+#customer intent: As a developer, I want to deploy my .NET Framework application so that it's accessible to my users.
 ---
 # Deploy applications that are built on the .NET Framework
 
 This article describes important considerations for deploying applications that are built on the .NET Framework.
 
-_Original product version:_ &nbsp; .NET Framework  
-_Original KB number:_ &nbsp; 818016
-
-## Summary
-
 This article is one of a series of articles that provide detailed information for applications that are built on the .NET Framework.
 
-The articles in this series also include the following ones:
+The articles in this series include the following:
 
-- [HOW TO: Deploy Applications That Are Built on the .NET Framework](https://support.microsoft.com/help/818016)
-
-- [HOW TO: Secure Applications That Are Built on the .NET Framework](https://support.microsoft.com/help/818014)
+- [Deploy applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/installation/deploy-applications)
+- [Secure applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/general/secure-applications)
 
 ## Create the Web.Config file for an ASP.NET application
 
-The *Web.config* file is an XML file that contains application-specific settings that override system defaults. While most ASP applications that are built on the .NET Framework are deployed with a *Web.config* file, the *Web.config* file is optional. You may have to create a *Web.config* file to override default settings on an application-by-application basis.
+The `Web.config` file is an XML file that contains application-specific settings that override system defaults. While most ASP applications that are built on the .NET Framework are deployed with a `Web.config` file, the `Web.config` file is optional. You may have to create a `Web.config` file to override default settings on an application-by-application basis.
 
-For more information about how to create a *Web.config* file for an application that doesn't already have one, visit [How To Edit the Configuration of an ASP.NET Application](https://support.microsoft.com/help/815178).
+For more information about how to create a `Web.config` file for an application that doesn't already have one, visit [Edit the configuration of an ASP.NET application](/troubleshoot/developer/webapps/aspnet/development/edit-web-config).
 
 ## Edit the configuration of an ASP.NET application
 
-All systems where the .NET Framework has been deployed have system-wide ASP.NET configuration settings that are defined in the \<system.web> element of the *Machine.config* file. You can modify these settings (frequently, you must modify these settings) on an application-by-application basis.
+All systems where the .NET Framework has been deployed have system-wide ASP.NET configuration settings that are defined in the `<system.web>` element of the `Machine.config` file. You can modify these settings (frequently, you must modify these settings) on an application-by-application basis.
 
-For more information about how to override .NET framework default configuration settings for a specific application, see [How To Edit the Configuration of an ASP.NET Application](https://support.microsoft.com/help/815178).
+For more information about how to override .NET framework default configuration settings for a specific application, see [Edit the configuration of an ASP.NET application](/troubleshoot/developer/webapps/aspnet/development/edit-web-config).
 
 ## Determine if a client system meets the minimum requirements for installing the .NET Framework
 
@@ -46,25 +42,25 @@ Before you can deploy applications that are built on the .NET Framework to a ser
 
 When the .NET Framework is installed on a server computer running Internet Information Services (IIS), ASP.NET is automatically enabled for virtual servers. However, you might not want this configuration. As new ASP Web applications that are built on the .NET Framework are deployed to a server computer running IIS 5.0, you can control which virtual servers and directories support ASP.NET and which virtual servers don't.
 
-For additional information about how to enable and disable ASP.NET functionality for virtual servers and directories in IIS 5.0, visit [HOW TO: Selectively Enable or Disable ASP.NET Functionality in IIS](https://support.microsoft.com/help/815175).
+For additional information about how to enable and disable ASP.NET functionality for virtual servers and directories in IIS 5.0, visit [Plan an ASP.NET Website on IIS](/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/plan-an-asp-net-website-on-iis).
 
 ## Configure custom error messages for an ASP.NET application
 
 Many sites change IIS default error message to display a user-friendly page or to notify an administrator. When a server computer running IIS 5.0 has custom error messages, and an ASP Web application that is built on the .NET Framework is deployed to that server computer, errors in the ASP.NET application don't use IIS 5.0 custom error messages unless the application is configured to do so.
 
-For additional information about how to configure custom error messages for ASP applications built on the .NET Framework, visit [How To Create Custom Error Reporting Pages in ASP.NET Using Visual Basic .NET](https://support.microsoft.com/help/308132).
+For additional information about how to configure custom error messages for ASP applications built on the .NET Framework, visit [Create custom error reporting pages in ASP.NET by using Visual Basic .NET](/troubleshoot/developer/webapps/aspnet/development/custom-error-reporting-page).
 
 ## Make application-specific and directory-specific configuration settings in an ASP.NET application
 
-The most common way to override system defaults for a whole ASP.NET application is to create or edit a *Web.config* file for that application. However, configuration changes frequently must apply only to specific files or folders in an application. There are two ways to limit the scope of configuration changes:
+The most common way to override system defaults for a whole ASP.NET application is to create or edit a `Web.config` file for that application. However, configuration changes frequently must apply only to specific files or folders in an application. There are two ways to limit the scope of configuration changes:
 
-- Add the `<location>` configuration element to the *Machine.config* file to the *Web.config* file.
+- Add the `<location>` configuration element to the `Machine.config` file or the `Web.config` file.
 
-- Add additional *Web.config* files to subfolders. For additional information about how to apply changes that affect specific applications and directories, visit [How To Make Application and Directory-Specific Configuration Settings in an ASP.NET Application](https://support.microsoft.com/help/815174).
+- Add additional `Web.config` files to subfolders. For additional information about how to apply changes that affect specific applications and directories, visit [Make application and directory-specific configuration settings in an ASP.NET application](/troubleshoot/developer/webapps/aspnet/development/application-directory-configuration).
 
 ## Configure session state management for ASP.NET applications
 
-ASP.NET has new features for session state management. Session state settings in ASP.NET are configured through the *Web.config* file of an ASP.NET application. Several sessions state management options are available in ASP.NET. These options include mode (inproc, State Server, SQL Server), cookieless state management, out-of process mode state server, and the port settings.
+ASP.NET has new features for session state management. Session state settings in ASP.NET are configured through the `Web.config` file of an ASP.NET application. Several sessions state management options are available in ASP.NET. These options include mode (inproc, State Server, SQL Server), cookieless state management, out-of process mode state server, and the port settings.
 
 For more information about ASP.NET Session State Management, visit [ASP.NET Session State](/previous-versions/dotnet/articles/ms972429(v=msdn.10)).
 
@@ -88,15 +84,13 @@ ASP.NET supports Windows authentication, and can impersonate the end user in muc
 
 You can deploy your ASP.NET web application by using the MS-DOS `xcopy` command-line utility. However, it's a good idea to deploy your project instead of using `xcopy`. As with the Copy Project command, `xcopy` doesn't register or verify the location of assemblies. Also, for web projects, `xcopy` doesn't automatically configure IIS directory settings.
 
-For additional information, visit [How to deploy an ASP.NET Web application using Xcopy deployment](https://support.microsoft.com/help/326355).
+For additional information, visit [Deploy an ASP.NET web application by using Xcopy deployment](/troubleshoot/developer/visualstudio/language-compilers/deploy-aspnet-app-xcopy-command).
 
 ## Set up multiple server ASP.NET web applications and web services
 
 For most uses of ASP.NET, a single server can handle all requests quickly. However, many environments must deploy multiple servers to handle consistently high volumes of traffic, to support processor-intensive applications, to respond to sudden bursts in traffic, or to meet redundancy requirements.
 
-## References
+## Related content
 
-For more information about how to deploy applications that are built on the .NET Framework, and about .NET interoperability, visit the following Microsoft web sites:
-
+- [Deploy .NET Framework and applications](/dotnet/framework/deployment/)
 - [Deploying the .NET Framework](/dotnet/framework/deployment/deploying-the-net-framework)
-- [What's new in Windows 10 deployment](/windows/deployment/deploy-whats-new)
