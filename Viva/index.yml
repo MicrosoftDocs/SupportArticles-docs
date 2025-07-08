@@ -78,8 +78,6 @@ productDirectory:
           text: Outlook for Windows
         - url: /troubleshoot/outlook/outlook-mac-welcome
           text: Outlook for Mac
-        - url: /troubleshoot/outlook/outlook-mobile-welcome
-          text: Outlook for iOS and Android
     # Card
     - title: OneDrive
       imageSrc: /office/media/logos/logo-onedriveforbusiness.svg
