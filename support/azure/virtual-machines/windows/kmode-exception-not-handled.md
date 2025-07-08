@@ -1,7 +1,7 @@
 ---
 title: Bug Check 0x0000001E - KMODE_EXCEPTION_NOT_HANDLED
 description: Describes an issue where an Azure virtual machine (VM) experiences the KMODE_EXCEPTION_NOT_HANDLED bug check (0x0000001E).
-ms.date: 07/03/2025
+ms.date: 07/08/2025
 ms.reviewer: cwhitley
 ms.service: azure-virtual-machines
 ms.collection: windows
