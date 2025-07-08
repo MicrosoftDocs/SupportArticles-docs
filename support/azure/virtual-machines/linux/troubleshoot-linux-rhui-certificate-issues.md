@@ -154,7 +154,7 @@ Use the table below to determine the correct RHUI package type based on your RHE
 | **Image Type**     | **Support Model**         | **Applicable Versions**                      | **RHUI Package Prefix**            | **Uses `releasever`?** |
 |--------------------|---------------------------|----------------------------------------------|------------------------------------|-------------------------|
 | Generic RHEL       | Non-EUS                   | 8.10, 9.8, 10.0                               | `rhui-azure-rhelX`                 | No                      |
-| Generic RHEL       | EUS                       | 8.2, 8.4, 8.6, 8.8, 9.2, 9.4, 9.6 (planned)   | `rhui-azure-rhelX-eus`             | Yes                     |
+| Generic RHEL       | EUS                       | 8.2, 8.4, 8.6, 8.8, 9.2, 9.4, 9.6             | `rhui-azure-rhelX-eus`             | Yes                     |
 | RHEL-SAP-APPS      | EUS                       | 8.6, 8.8, 9.2, 9.4, 9.6                       | `rhui-azure-rhelX-sapapps`         | Yes                     |
 | RHEL-SAP-APPS      | Base (no EUS available)   | 7.9, 8.10                                     | `rhui-azure-rhelX-base-sap-apps`   | No                      |
 | RHEL-SAP-HA        | E4S                       | 8.6, 8.8, 9.0, 9.2, 9.4, 9.6                  | `rhui-azure-rhelX-sap-ha`          | Yes                     |
