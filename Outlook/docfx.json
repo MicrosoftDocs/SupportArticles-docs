@@ -58,6 +58,22 @@
           "**/*.md",
           "**/**.yml"
         ],
+        "src": "Mobile",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
         "src": "OutlookExperts",
         "dest": ".",
         "exclude": [
