@@ -172,37 +172,23 @@ Use the table below to determine the correct RHUI package type based on your RHE
 
 Use the following index to jump directly to the corresponding section below.
 
-### EUS RHUI package installation
-
-- [RHEL 8._x_ - EUS](#rhel-8x---eus)
-- [RHEL 9._x_ - EUS](#rhel-9x---eus)
-
-### Non-EUS RHUI package installation
-
-- [RHEL 7._9_ - non-EUS](#rhel-79---non-eus)
-- [RHEL 8.10 - non-EUS](#rhel-810---non-eus)
-- [RHEL 9._x_ - non-EUS](#rhel-9x---non-eus)
-- [RHEL 10.0 - non-EUS](#rhel-100--non-eus)
-
-### RHEL 7 SAP/E4S/HANA RHUI package installation
-
-- [RHEL 7.9 - RHEL-SAP-APPS](#rhel-79---rhel-sap-apps)
-- [RHEL 7.9 - RHEL-SAP-HA](#rhel-79---rhel-sap-ha)
-
-### RHEL 8 SAP/E4S/HANA RHUI package installation
-
-- [RHEL 8._x_ - RHEL-SAP-APPS](#rhel-8x---rhel-sap-apps)
-- [RHEL 8.10 - RHEL-SAP-APPS](#rhel-810---rhel-sap-apps)
-- [RHEL 8._x_ - RHEL-SAP-HA (E4S)](#rhel-8x---rhel-sap-ha-e4s)
-- [RHEL 8.10 - RHEL-SAP-HA](#rhel-810---rhel-sap-ha)
-- [RHEL 8._x_ - RHEL-HA](#rhel-8x---rhel-ha)
-- [RHEL 8.10 - RHEL-HA](#rhel-810---rhel-ha)
-
-### RHEL 9 SAP/HANA RHUI package installation
-
-- [RHEL 9._x_ - RHEL-SAP-APPS](#rhel-9x---rhel-sap-apps)
-- [RHEL 9._x_ - RHEL-SAP-HA (E4S)](#rhel-9x---rhel-sap-ha-e4s)
-- [RHEL 9._x_ - RHEL-HA](#rhel-9x---rhel-ha)
+- [RHEL 8._x_ - EUS](#tab/rhel8-eus)
+- [RHEL 9._x_ - EUS](#tab/rhel9-eus)
+- [RHEL 7._9_ - non-EUS](#tab/rhel7-noneus)
+- [RHEL 8.10 - non-EUS](#tab/rhel8-noneus)
+- [RHEL 9._x_ - non-EUS](#tab/rhel9-noneus)
+- [RHEL 10.0  non-EUS](#tab/rhel10-noneus)
+- [RHEL 7.9 - RHEL-SAP-APPS](#tab/rhel79-rhel-sap-apps)
+- [RHEL 7.9 - RHEL-SAP-HA](#tab/rhe79-rhel-sap-ha)
+- [RHEL 8._x_ - RHEL-SAP-APPS](#tab/rhel8-rhel-sap-apps)
+- [RHEL 8.10 - RHEL-SAP-APPS](#tab/rhel810-rhel-sap-apps)
+- [RHEL 8._x_ - RHEL-SAP-HA (E4S)](#tab/rhel8-rhel-sap-ha-e4s)
+- [RHEL 8.10 - RHEL-SAP-HA](#tab/rhe810-rhel-sap-ha)
+- [RHEL 8._x_ - RHEL-HA ](#tab/rhel8-rhel-ha)
+- [RHEL 8.10 - RHEL-HA](#tab/rhe810-rhel-base-ha)
+- [RHEL 9._x_ - RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
+- [RHEL 9._x_ - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
+- [RHEL 9._x_ - RHEL-HA ](#tab/rhel9-rhel-ha-e4s)
 
 
 
