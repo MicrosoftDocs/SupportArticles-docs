@@ -1,15 +1,18 @@
 ---
 title: Time-out occurs when an application calls the Poll method
 description: This article provides workarounds for the timeout issue that occurs when an application calls the Poll method.
-ms.date: 12/28/2020
+ms.date: 07/08/2025
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: roriddle, dev_triage
 ms.custom: sap:Class Library Namespaces
+ms.topic: troubleshooting-problem-resolution
+
+#customer intent: As a developer, I want to fix time-outs that occur when my application calls the Poll method so that my application doesn't hang or lose socket data.
 ---
 # Time-out occurs when an application calls the Poll method
 
-_Original product version:_ &nbsp; .NET Core
+_Original product version:_ .NET Core
 
 ## Symptom
 
@@ -19,7 +22,7 @@ A time-out occurs when you run an application that is using the `System.Net.Secu
 
 The `SslStream` class is reading data from the socket faster than the application can read data from the stream buffer.
 
-## Workaround
+## Solution
 
 To work around this issue, use one of the following methods:
 

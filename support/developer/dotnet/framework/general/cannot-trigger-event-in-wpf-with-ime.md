@@ -1,11 +1,14 @@
 ---
 title: IME can't trigger PreviewKeyDown event of TextBox in WPF apps
 description: Describes the issue that some Microsoft IMEs can't trigger PreviewKeyDown event of TextBox control in WPF apps.
-ms.date: 02/28/2022
+ms.date: 07/08/2025
 Author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: hirotoh
 ms.custom: sap:Class Library Namespaces
+ms.topic: troubleshooting-problem-resolution
+
+#customer intent: As a developer, I want to fix IMEs not triggering PreviewKeyDown events so that TextBoxes in my WPF app function correctly.
 ---
 # PreviewKeyDown event of TextBox control can't be triggered by Microsoft IME in WPF apps
 
@@ -14,7 +17,7 @@ ms.custom: sap:Class Library Namespaces
 
 This article discusses an issue that prevents [PreviewKeyDown](/dotnet/api/system.windows.forms.control.previewkeydown) events of TextBox controls from being triggered by some Microsoft  input method editors (IMEs) in Windows Presentation Foundation (WPF) applications.
 
-_Applies to:_ &nbsp; Windows Presentation Foundation, Windows 10, version 2004, Windows 10, version 20H2, Windows 10, version 21H1, Windows 10, version 21H2
+_Applies to:_ Windows Presentation Foundation, Windows 10, version 2004, Windows 10, version 20H2, Windows 10, version 21H1, Windows 10, version 21H2
 
 ## Symptoms
 
@@ -29,7 +32,7 @@ In this scenario, the `PreviewKeyDown` event of the control isn't triggered. The
 
 Microsoft IMEs are updated in some versions of Windows 10. This issue occurs when you use some of the latest Microsoft IMEs.
 
-## Workaround
+## Solution
 
 Turn on the **Compatibility** option to revert to the previous version of Microsoft IME. To do this, follow these steps:
 
