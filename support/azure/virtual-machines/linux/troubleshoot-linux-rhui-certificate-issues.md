@@ -168,6 +168,43 @@ Use the table below to determine the correct RHUI package type based on your RHE
 > 🔹 For complete support timelines, refer to the [Red Hat EUS and E4S lifecycle documentation](https://access.redhat.com/articles/rhel-eus).
 
 
+## RHUI Package Installation Index
+
+Use the following index to jump directly to the corresponding section below.
+
+### EUS RHUI package installation
+
+- [RHEL 8._x_ - EUS](#rhel-8x---eus)
+- [RHEL 9._x_ - EUS](#rhel-9x---eus)
+
+### Non-EUS RHUI package installation
+
+- [RHEL 7._9_ - non-EUS](#rhel-79---non-eus)
+- [RHEL 8.10 - non-EUS](#rhel-810---non-eus)
+- [RHEL 9._x_ - non-EUS](#rhel-9x---non-eus)
+- [RHEL 10.0 - non-EUS](#rhel-100--non-eus)
+
+### RHEL 7 SAP/E4S/HANA RHUI package installation
+
+- [RHEL 7.9 - RHEL-SAP-APPS](#rhel-79---rhel-sap-apps)
+- [RHEL 7.9 - RHEL-SAP-HA](#rhel-79---rhel-sap-ha)
+
+### RHEL 8 SAP/E4S/HANA RHUI package installation
+
+- [RHEL 8._x_ - RHEL-SAP-APPS](#rhel-8x---rhel-sap-apps)
+- [RHEL 8.10 - RHEL-SAP-APPS](#rhel-810---rhel-sap-apps)
+- [RHEL 8._x_ - RHEL-SAP-HA (E4S)](#rhel-8x---rhel-sap-ha-e4s)
+- [RHEL 8.10 - RHEL-SAP-HA](#rhel-810---rhel-sap-ha)
+- [RHEL 8._x_ - RHEL-HA](#rhel-8x---rhel-ha)
+- [RHEL 8.10 - RHEL-HA](#rhel-810---rhel-ha)
+
+### RHEL 9 SAP/HANA RHUI package installation
+
+- [RHEL 9._x_ - RHEL-SAP-APPS](#rhel-9x---rhel-sap-apps)
+- [RHEL 9._x_ - RHEL-SAP-HA (E4S)](#rhel-9x---rhel-sap-ha-e4s)
+- [RHEL 9._x_ - RHEL-HA](#rhel-9x---rhel-ha)
+
+
 
 #### EUS RHUI package installation
 
