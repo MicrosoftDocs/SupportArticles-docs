@@ -199,8 +199,8 @@
     "SkypeForBusiness/.openpublishing.redirection.skypeforbusiness.json",
     "SharePoint/.openpublishing.redirection.SharePoint.json",
     "Microsoft365/.openpublishing.redirection.microsoft365.json",
-    "Exchange/.openpublishing.redirection.exchange.json",
-    "Outlook/.openpublishing.redirection.outlook.json"
+    "Outlook/.openpublishing.redirection.outlook.json",
+    "Exchange/.openpublishing.redirection.exchange.json"
   ],
   "need_generate_pdf_url_template": true
 }
