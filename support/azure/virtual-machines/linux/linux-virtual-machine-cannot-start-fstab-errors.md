@@ -15,7 +15,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 02/26/2025
+ms.date: 07/08/2025
 ---
 
 # Troubleshoot Linux VM boot issues due to fstab errors
