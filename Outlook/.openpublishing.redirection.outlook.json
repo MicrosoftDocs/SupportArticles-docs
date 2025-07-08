@@ -13,6 +13,10 @@
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
+      "source_path": "Mobile/outlook-mobile-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
       "source_path": "Mobile/exchange-connectivity/outlook-for-ios-and-android-with-abq-rules-are-quarantined.md",
       "redirect_url": "/previous-versions/troubleshoot/outlook/outlook-for-ios-and-android-with-abq-rules-are-quarantined"
     }
