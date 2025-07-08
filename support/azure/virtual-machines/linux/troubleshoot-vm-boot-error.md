@@ -10,7 +10,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.topic: troubleshooting
-ms.date: 02/26/2025
+ms.date: 07/08/2025
 ms.author: divargas
 ms.reviewer: ekpathak, v-leedennis, v-weizhu
 ---
@@ -69,6 +69,9 @@ See the following sections for detailed errors, possible causes, and solutions.
 > In the commands mentioned in the following sections, replace `/dev/sdX` with the corresponding Operating System (OS) disk device.
 
 ### <a id="reinstall-grub-regenerate-grub-configuration-file-repairvm"></a> Reinstall GRUB and regenerate the GRUB configuration file using Azure Linux Auto Repair
+
+> [!div class="nextstepaction"]
+> [Run in Linux](https://go.microsoft.com/fwlink/?linkid=2321844)
 
 Azure Linux Auto Repair (ALAR) scripts are part of the VM repair extension described in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM](./repair-linux-vm-using-alar.md). ALAR covers the automation of multiple repair scenarios, including GRUB rescue issues.
 
