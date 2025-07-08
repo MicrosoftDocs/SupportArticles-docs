@@ -149,18 +149,22 @@ Install the missing RHUI package for EUS, non-EUS, or SAP/E4S.
 
 All the following commands should be run by using root privileges or by specifying `sudo`.
 
+Use the table below to determine the correct RHUI package type based on your RHEL version and image type.
+
+| **Image Type**     | **Support Model**         | **Applicable Versions**                      | **RHUI Package Prefix**            | **Uses `releasever`?** |
+|--------------------|---------------------------|----------------------------------------------|------------------------------------|-------------------------|
+| Generic RHEL       | Non-EUS                   | 8.10, 9.8, 10.0                               | `rhui-azure-rhelX`                 | No                      |
+| Generic RHEL       | EUS                       | 8.2, 8.4, 8.6, 8.8, 9.2, 9.4, 9.6 (planned)   | `rhui-azure-rhelX-eus`             | Yes                     |
+| RHEL-SAP-APPS      | EUS                       | 8.6, 8.8, 9.2, 9.4, 9.6                       | `rhui-azure-rhelX-sapapps`         | Yes                     |
+| RHEL-SAP-APPS      | Base (no EUS available)   | 7.9, 8.10                                     | `rhui-azure-rhelX-base-sap-apps`   | No                      |
+| RHEL-SAP-HA        | E4S                       | 8.6, 8.8, 9.0, 9.2, 9.4, 9.6                  | `rhui-azure-rhelX-sap-ha`          | Yes                     |
+| RHEL-SAP-HA        | Base (no E4S available)   | 7.9, 8.10,                                    | `rhui-azure-rhelX-base-sap-ha`     | No                      |
+| RHEL-HA            | EUS                       | 8.6, 9.4                                      | `rhui-azure-rhelX-ha`              | Yes                     |
+| RHEL-HA            | Base (no EUS available    | 7.9, 8.10                                     | `rhui-azure-rhelX-base-ha`         | No                      |
+
 > [!NOTE]
-> Use the table below to determine the correct RHUI package type based on your RHEL version and image type.
-
-| **Image Type**     | **Support Model** | **Applicable Versions**                     | **RHUI Package Prefix**        | **Uses `releasever`?**  |
-|--------------------|-------------------|---------------------------------------------|--------------------------------|-------------------------|
-| Generic RHEL       | Non-EUS           | 8.10, 9.8, 10.0                              | `rhui-azure-rhelX`             | No                      |
-| Generic RHEL       | EUS               | 8.2, 8.4, 8.6, 8.8, 9.2, 9.4, 9.6            | `rhui-azure-rhelX-eus`         | Yes                     |
-| `RHEL-SAP-APPS`    | EUS               | 8.6, 8.8, 9.2, 9.4, 9.6                      | `rhui-azure-rhelX-sapapps`     | Yes                     |
-| `RHEL-SAP-HA`      | E4S               | 8.6, 8.8, 9.0, 9.2, 9.4, 9.6                 | `rhui-azure-rhelX-sap-ha`      | Yes                     |
-| `RHEL-HA`          | Non-EUS or Base   | 7.9, 8.10, 9.6                               | `rhui-azure-rhelX-base-ha`     | No                      |
-
 > 🔹 When the documentation mentions `8.x` or `9.x`, it refers to supported minor versions that fall under EUS or E4S, depending on the image type.  
+> 🔹 For SAP workloads running on **RHEL 7.9 or 8.10**, where EUS or E4S is **not available**, the RHUI client uses packages with the prefix `base-` (e.g., `rhui-azure-rhel8-base-sap-apps`).  
 > 🔹 For complete support timelines, refer to the [Red Hat EUS and E4S lifecycle documentation](https://access.redhat.com/articles/rhel-eus).
 
 
