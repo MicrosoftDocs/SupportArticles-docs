@@ -3,7 +3,7 @@ title: Recover Azure Linux VM from kernel-related boot issues
 description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot after applying kernel changes.
 author: divargas-msft
 ms.author: divargas
-ms.date: 04/15/2024
+ms.date: 07/08/2025
 ms.reviewer: jofrance
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot start or stop my VM, devx-track-azurecli, linux-related-content
