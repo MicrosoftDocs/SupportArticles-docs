@@ -1,15 +1,13 @@
 ---
 title: AADSTS7000222 - BadRequest or InvalidClientSecret error
 description: Learn how to troubleshoot the BadRequest or InvalidClientSecret error when you try to create or upgrade an Azure Kubernetes Service (AKS) cluster.
+ms.topic: article
+ms.date: 06/13/2024
 author: axelgMS
 ms.author: axelg
-ms.date: 12/19/2023
-editor: v-jsitser
-ms.reviewer: v-leedennis
-ms.service: azure-kubernetes-service
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the BadRequest or InvalidClientSecret error code so that I can successfully create or upgrade an Azure Kubernetes Service (AKS) cluster.
-ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), innovation-engine
 ---
+
 # AADSTS7000222 - BadRequest or InvalidClientSecret error
 
 This article discusses how to identify and resolve the `AADSTS7000222` error (`BadRequest` or `InvalidClientSecret`) that occurs when you try to create or upgrade a Microsoft Azure Kubernetes Service (AKS) cluster.
@@ -39,11 +37,11 @@ The issue that generates this service principal alert usually occurs for one of 
 
 #### Verify the cause
 
-Run the following Azure CLI code to retrieve the service principal profile for your AKS cluster and [check the expiration date of the service principal](/azure/aks/update-credentials#check-the-expiration-date-of-your-service-principal):
+Use the following commands to retrieve the service principal profile for your AKS cluster and check the expiration date of the service principal. Make sure to set the appropriate variables for your AKS resource group and cluster name.
 
 ```azurecli
-SP_ID=$(az aks show --resource-group <rg-name> \
-    --name <aks-cluster-name> \
+SP_ID=$(az aks show --resource-group $RESOURCE_GROUP_NAME \
+    --name $AKS_CLUSTER_NAME \
     --query servicePrincipalProfile.clientId \
     --output tsv)
 az ad app credential list --id "$SP_ID"
