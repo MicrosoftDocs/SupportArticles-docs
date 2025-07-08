@@ -145,10 +145,23 @@ Errors during downloading metadata for repository 'rhel-X-for-x86_64-XXXX-XXX-rh
 
 ### Solution 3: Install the EUS, non-EUS, or SAP/E4S RHUI package
 
-
 Install the missing RHUI package for EUS, non-EUS, or SAP/E4S.
 
 All the following commands should be run by using root privileges or by specifying `sudo`.
+
+> [!NOTE]
+> Use the table below to determine the correct RHUI package type based on your RHEL version and image type.
+
+| **Image Type**     | **Support Model** | **Applicable Versions**                     | **RHUI Package Prefix**        | **Uses `releasever`?**  |
+|--------------------|-------------------|---------------------------------------------|--------------------------------|-------------------------|
+| Generic RHEL       | Non-EUS           | 8.10, 9.8, 10.0                              | `rhui-azure-rhelX`             | No                      |
+| Generic RHEL       | EUS               | 8.2, 8.4, 8.6, 8.8, 9.2, 9.4, 9.6            | `rhui-azure-rhelX-eus`         | Yes                     |
+| `RHEL-SAP-APPS`    | EUS               | 8.6, 8.8, 9.2, 9.4, 9.6                      | `rhui-azure-rhelX-sapapps`     | Yes                     |
+| `RHEL-SAP-HA`      | E4S               | 8.6, 8.8, 9.0, 9.2, 9.4, 9.6                 | `rhui-azure-rhelX-sap-ha`      | Yes                     |
+| `RHEL-HA`          | Non-EUS or Base   | 7.9, 8.10, 9.6                               | `rhui-azure-rhelX-base-ha`     | No                      |
+
+> 🔹 When the documentation mentions `8.x` or `9.x`, it refers to supported minor versions that fall under EUS or E4S, depending on the image type.  
+> 🔹 For complete support timelines, refer to the [Red Hat EUS and E4S lifecycle documentation](https://access.redhat.com/articles/rhel-eus).
 
 
 
@@ -156,10 +169,6 @@ All the following commands should be run by using root privileges or by specifyi
 
 
 #### [RHEL 8._x_ - EUS](#tab/rhel8-eus)
-
-> [!NOTE]
-> Replace the X with a valid EUS for Red Hat Enterprise Linux, like 8.1, 8.2, 8.4, 8.6, and 8.8.  For more information, see [RHEL EUS version available](https://access.redhat.com/articles/rhel-eus).
-
 
 1. Create a config file by using this command.
 
@@ -191,10 +200,6 @@ All the following commands should be run by using root privileges or by specifyi
    ```
 
 #### [RHEL 9._x_ - EUS](#tab/rhel9-eus)
-
-> [!NOTE]
-> Replace the X with a valid EUS for Red Hat Enterprise Linux, like 9.0, 9.2, 9.4, 9.6.  For more information, see [RHEL EUS version available](https://access.redhat.com/articles/rhel-eus).
-
 
 1. Create a config file by using this command: 
 
@@ -243,10 +248,6 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 7._9_ - non-EUS](#tab/rhel7-noneus)
 
-> [!NOTE]
-> Starting June 30, 2024, RHEL 7 reaches the end of the Maintenance Support 2 phase. This maintenance phase is followed by the Extended Life phase. As RHEL 7 transitions out of the full maintenance phases, customers should upgrade to RHEL 8 or 9. If your organization must stay on RHEL 7, we recommended that you install the Red Hat Enterprise Linux Extended Life Cycle Support (ELS) Add-on.
-> For more information, see [Extended Life Cycle Support](/azure/virtual-machines/workloads/redhat/redhat-extended-lifecycle-support)
-
 
 1. Remove the releasever file if it exists.
 
@@ -279,9 +280,6 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 8.10 - non-EUS](#tab/rhel8-noneus)
 
-> [!NOTE]
-> RHEL non-EUS releases, latest version 8.10.
-> For more information, see [Red Hat Support Policy](https://access.redhat.com/support/policy/updates/errata)
 
 1. Remove the releasever file if it exists.
 
@@ -314,9 +312,6 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 9._x_ - non-EUS](#tab/rhel9-noneus)
 
-> [!NOTE]
-> RHEL non-EUS releases, latest version availble 9.6
-> For more information, see [Red Hat Support Policy](https://access.redhat.com/support/policy/updates/errata).
 
 1. Remove the releasever file if it exists.
 
@@ -349,9 +344,6 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 10.0  non-EUS](#tab/rhel10-noneus)
 
-> [!NOTE]
-> RHEL non-EUS releases, 10.0.
-> For more information, see [Red Hat Support Policy](https://access.redhat.com/support/policy/updates/errata)
 
 1. Create a config file by using this command:
 
@@ -398,10 +390,6 @@ Select the tab of an SAP image type to see the corresponding instructions.
 
 #### [RHEL 7.9 - RHEL-SAP-APPS](#tab/rhel79-rhel-sap-apps)
 
-> [!NOTE]
-> Starting June 30, 2024, RHEL 7 reaches the end of the Maintenance Support 2 phase. This maintenance phase is followed by the Extended Life phase. As RHEL 7 transitions out of the full maintenance phases, customers should upgrade to RHEL 8 or 9. If your organization must stay on RHEL 7, we recommended that you install the Red Hat Enterprise Linux Extended Life Cycle Support (ELS) Add-on.
-> For more information, see [Extended Life Cycle Support](/azure/virtual-machines/workloads/redhat/redhat-extended-lifecycle-support)
-
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -437,11 +425,6 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
 
    
 #### [RHEL 7.9 - RHEL-SAP-HA](#tab/rhe79-rhel-sap-ha)
-
-> [!NOTE]
-> Starting June 30, 2024, RHEL 7 reaches the end of the Maintenance Support 2 phase. This maintenance phase is followed by the Extended Life phase. As RHEL 7 transitions out of the full maintenance phases, customers should upgrade to RHEL 8 or 9. If your organization must stay on RHEL 7, we recommended that you install the Red Hat Enterprise Linux Extended Life Cycle Support (ELS) Add-on.
-> For more information, see [Extended Life Cycle Support](/azure/virtual-machines/workloads/redhat/redhat-extended-lifecycle-support)
-
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -494,9 +477,6 @@ Select the tab of an SAP image type to see the corresponding instructions.
 
 #### [RHEL 8._x_ - RHEL-SAP-APPS](#tab/rhel8-rhel-sap-apps)
 
-> [!NOTE]
-> Replace the X with a valid EUS for Red Hat Enterprise Linux (SAP Solutions), like 8.4, 8.6, and 8.8.
-> For more information, see [Update_Services_for_SAP_Solutions](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) 
 
 The following steps apply if the OS version is *earlier than the latest version available* supported by SAP for `RHEL 8.X` and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -535,9 +515,6 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 The following steps apply if the OS version is *RHEL 8.10* supported by SAP and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
-> [!NOTE]
-> RHEL 8.10 is the final release of RHEL 8.
-
 
 1. Remove the releasever file if it exists.
 
@@ -569,11 +546,6 @@ The following steps apply if the OS version is *RHEL 8.10* supported by SAP and 
    ```
    
 #### [RHEL 8._x_ - RHEL-SAP-HA (E4S)](#tab/rhel8-rhel-sap-ha-e4s)
-
-> [!NOTE]
-> Replace the X with a valid E4S for Red Hat Enterprise Linux (SAP HA), like 8.4, 8.6, and 8.8.
-> For more information, see [Update_Services_for_SAP_Solutions](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions)
-
 
 The following steps apply if the OS version is *earlier than the latest version available* supported by SAP for `RHEL 8._x_` and the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -611,9 +583,6 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 The following steps apply if the OS version is *RHEL 8.10* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
-> [!NOTE]
-> RHEL 8.10 is Final release of RHEL 8.
-
 
 1. Remove the releasever file if it exists.
 
@@ -647,9 +616,6 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
 
 #### [RHEL 8._x_ - RHEL-HA ](#tab/rhel8-rhel-ha)
 
-> [!NOTE]
-> Replace the X with a valid E4S for Red Hat Enterprise Linux (SAP HA), like 8.4, 8.6, and 8.8.
-> For more information, see [Update_Services_for_SAP_Solutions](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions)
 
 1. Create a config file by using this command:
 
@@ -683,8 +649,6 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
 
 #### [RHEL 8.10 - RHEL-HA](#tab/rhe810-rhel-base-ha)
 
-> [!NOTE]
-> RHEL 8.10 is the final release of RHEL 8.
 
 
 1. Remove the releasever file if it exists:
@@ -742,11 +706,6 @@ Select the tab of an SAP image type to see the corresponding instructions.
 
 #### [RHEL 9._x_ - RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
 
-> [!NOTE]
-> Replace the X with a valid EUS for Red Hat Enterprise Linux under SAP solutions, like 9.2, 9.4, 9.6.
-> For more information, see [Update_Services_for_SAP_Solutions](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions)
-
-
 
 The following steps apply if the OS version is *earlier than the latest version that's available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -782,9 +741,6 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 #### [RHEL 9._x_ - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
 
-> [!NOTE]
-> Replace the X with a valid EUS for Red Hat Enterprise Linux (SAP APPS), like 9.0, 9.2, 9.4 and 9.6.
-> For more information, see [Update_Services_for_SAP_Solutions](https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions)
 
 
 The following steps apply if the OS version is *earlier than the latest version available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-HA` offer image.
@@ -820,9 +776,6 @@ The following steps apply if the OS version is *earlier than the latest version 
    ```
 
 #### [RHEL 9._x_ - RHEL-HA ](#tab/rhel9-rhel-ha-e4s)
-
-> [!NOTE]
-> Replace the X with a valid EUS for Red Hat Enterprise Linux (HA), like 9.0, 9.2, 9.4 and 9.6.
 
 1. Create a config file by using this command:
 
