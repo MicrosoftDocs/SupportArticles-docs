@@ -14,7 +14,7 @@ This article discusses methods for troubleshooting memory saturation issues. Mem
 ## Prerequisites
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
-- The open source project [Inspektor Gadget](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#what-is-inspektor-gadget) for advanced process level memory analysis. For more information, see [How to install Inspektor Gadget in an AKS cluster](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#how-to-install-inspektor-gadget-in-an-aks-cluster). 
+- The open source project [Inspektor Gadget](../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget) for advanced process level memory analysis. For more information, see [How to install Inspektor Gadget in an AKS cluster](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster). 
 
 ## Symptoms
 
@@ -165,7 +165,7 @@ Now that you've identified the pods that are using high memory, you can identify
 
 For advanced process level memory analysis, use [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) to monitor real time memory usage at the process level within pods:
 
-1. Install Inspektor Gadget using the instructions found in the [documentation](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#how-to-install-inspektor-gadget-in-an-aks-cluster)
+1. Install Inspektor Gadget using the instructions found in the [documentation](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster)
 
 2. Run the [top_process gadget](https://aka.ms/igtopprocess) to identify processes that are using large amounts of memory. You can use `--fields` to select certain columns and `--filter` to filter events based on specific field values, for example the pod names of previously identified pods with high memory consumption. You can also:
 
