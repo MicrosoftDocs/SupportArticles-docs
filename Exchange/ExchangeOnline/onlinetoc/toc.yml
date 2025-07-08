@@ -390,8 +390,6 @@ items:
           href: ../mobile-devices/issues-for-mobile-devices.md
         - name: Mobile devices aren't quarantined as expected
           href: ../mobile-devices/mobile-devices-not-quarantined-as-expected.md
-        - name: Outlook app access end after June 1 if EWS app policies not set correctly
-          href: ../mobile-devices/outlook-app-access-end-after-june-1-if-ews-app-policies-not-set-correctly.md
         - name: Some Android devices don't redirect to Exchange Online
           href: ../mobile-devices/some-android-devices-do-not-redirect-to-exchange-online.md
         - name: Use Outlook Web App to remotely wipe an ActiveSync device
