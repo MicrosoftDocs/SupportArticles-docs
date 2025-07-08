@@ -151,10 +151,15 @@ Install the missing RHUI package for EUS, non-EUS, or SAP/E4S.
 All the following commands should be run by using root privileges or by specifying `sudo`.
 
 
+
 #### EUS RHUI package installation
 
 
 #### [RHEL 8._x_ - EUS](#tab/rhel8-eus)
+
+> [!NOTE]
+> Replace the X with a valid EUS for Red Hat Enterprise Linux, like 8.1, 8.2, 8.4, 8.6, and 8.8.  For more information, see [RHEL EUS version available] (https://access.redhat.com/articles/rhel-eus)
+
 
 1. Create a config file by using this command.
 
@@ -186,6 +191,10 @@ All the following commands should be run by using root privileges or by specifyi
    ```
 
 #### [RHEL 9._x_ - EUS](#tab/rhel9-eus)
+
+> [!NOTE]
+> Replace the X with a valid EUS for Red Hat Enterprise Linux, like 9.0, 9.2, 9.4, 9.6.  For more information, see [RHEL EUS version available] (https://access.redhat.com/articles/rhel-eus)
+
 
 1. Create a config file by using this command: 
 
@@ -232,7 +241,7 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### Non-EUS RHUI package installation
 
-#### [RHEL 7._x_ - non-EUS](#tab/rhel7-noneus)
+#### [RHEL 7._9_ - non-EUS](#tab/rhel7-noneus)
 
 1. Remove the releasever file if it exists.
 
@@ -263,7 +272,11 @@ All the following commands should be run by using root privileges or by specifyi
    sudo rm rhel7-non-eus.config
    ```
 
-#### [RHEL 8._x_ - non-EUS](#tab/rhel8-noneus)
+#### [RHEL 8.10 - non-EUS](#tab/rhel8-noneus)
+
+> [!NOTE]
+> RHEL non-EUS releases, latest version 8.10
+> For more information, see:[Red Hat Support Policy](https://access.redhat.com/support/policy/updates/errata)
 
 1. Remove the releasever file if it exists.
 
@@ -296,6 +309,10 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 9._x_ - non-EUS](#tab/rhel9-noneus)
 
+> [!NOTE]
+> RHEL non-EUS releases, latest version availble 9.6
+> For more information, see:[Red Hat Support Policy](https://access.redhat.com/support/policy/updates/errata)
+
 1. Remove the releasever file if it exists.
 
    ```bash
@@ -327,6 +344,9 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 10.0  non-EUS](#tab/rhel10-noneus)
 
+> [!NOTE]
+> RHEL non-EUS releases, 10.0.
+> For more information, see:[Red Hat Support Policy](https://access.redhat.com/support/policy/updates/errata)
 
 1. Create a config file by using this command:
 
@@ -459,6 +479,10 @@ Select the tab of an SAP image type to see the corresponding instructions.
 
 #### [RHEL 8._x_ - RHEL-SAP-APPS](#tab/rhel8-rhel-sap-apps)
 
+> [!NOTE]
+> Replace the X with a valid EUS for Red Hat Enterprise Linux (SAP Solutions), like 8.4, 8.6, and 8.8.
+> For more information, see [Update_Services_for_SAP_Solutions] (https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions) 
+
 The following steps apply if the OS version is *earlier than the latest version available* supported by SAP for `RHEL 8.X` and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
 1. Create a config file by using this command:
@@ -496,6 +520,10 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 The following steps apply if the OS version is *RHEL 8.10* supported by SAP and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
+> [!NOTE]
+> RHEL 8.10 is the final release of RHEL 8.
+
+
 1. Remove the releasever file if it exists.
 
    ```bash
@@ -526,6 +554,11 @@ The following steps apply if the OS version is *RHEL 8.10* supported by SAP and 
    ```
    
 #### [RHEL 8._x_ - RHEL-SAP-HA (E4S)](#tab/rhel8-rhel-sap-ha-e4s)
+
+> [!NOTE]
+> Replace the X with a valid E4S for Red Hat Enterprise Linux (SAP HA), like 8.4, 8.6, and 8.8.
+> For more information, see [Update_Services_for_SAP_Solutions] (https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions)
+
 
 The following steps apply if the OS version is *earlier than the latest version available* supported by SAP for `RHEL 8._x_` and the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -563,6 +596,10 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 The following steps apply if the OS version is *RHEL 8.10* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
+> [!NOTE]
+> RHEL 8.10 is Final release of RHEL 8.
+
+
 1. Remove the releasever file if it exists.
 
    ```bash
@@ -593,7 +630,11 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    sudo rm rhel8-base-sap-ha.config
    ```
 
-#### [RHEL 8._x_ - RHEL-HA (E4S)](#tab/rhel8-rhel-ha-e4s)
+#### [RHEL 8._x_ - RHEL-HA ](#tab/rhel8-rhel-ha)
+
+> [!NOTE]
+> Replace the X with a valid E4S for Red Hat Enterprise Linux (SAP HA), like 8.4, 8.6, and 8.8.
+> For more information, see [Update_Services_for_SAP_Solutions] (https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions)
 
 1. Create a config file by using this command:
 
@@ -626,6 +667,10 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    ```
 
 #### [RHEL 8.10 - RHEL-HA](#tab/rhe810-rhel-base-ha)
+
+> [!NOTE]
+> RHEL 8.10 is the final release of RHEL 8.
+
 
 1. Remove the releasever file if it exists:
 
@@ -682,6 +727,12 @@ Select the tab of an SAP image type to see the corresponding instructions.
 
 #### [RHEL 9._x_ - RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
 
+> [!NOTE]
+> Replace the X with a valid EUS for Red Hat Enterprise Linux under SAP solutions, like 9.2, 9.4, 9.6.
+> For more information, see [Update_Services_for_SAP_Solutions] (https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions)
+
+
+
 The following steps apply if the OS version is *earlier than the latest version that's available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-APPS` offer image.
 
 1. Create a config file by using this command:
@@ -716,6 +767,11 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 #### [RHEL 9._x_ - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
 
+> [!NOTE]
+> Replace the X with a valid EUS for Red Hat Enterprise Linux (SAP APPS), like 9.0, 9.2, 9.4 and 9.6.
+> For more information, see [Update_Services_for_SAP_Solutions] (https://access.redhat.com/support/policy/updates/errata#Update_Services_for_SAP_Solutions)
+
+
 The following steps apply if the OS version is *earlier than the latest version available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-HA` offer image.
 
 1. Create a config file by using this command:
@@ -748,8 +804,10 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo rm  rhel9-sap-ha.config
    ```
 
-#### [RHEL 9._x_ - RHEL-HA (E4S)](#tab/rhel9-rhel-ha-e4s)
+#### [RHEL 9._x_ - RHEL-HA ](#tab/rhel9-rhel-ha-e4s)
 
+> [!NOTE]
+> Replace the X with a valid EUS for Red Hat Enterprise Linux (HA), like 9.0, 9.2, 9.4 and 9.6.
 
 1. Create a config file by using this command:
 
