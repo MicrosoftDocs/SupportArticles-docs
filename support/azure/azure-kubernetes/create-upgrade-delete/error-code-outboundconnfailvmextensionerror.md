@@ -36,13 +36,34 @@ When you try to create, scale, or upgrade an AKS cluster, you may receive the fo
 
 The custom script extension that downloads the necessary components to provision the nodes couldn't establish the necessary outbound connectivity to obtain packages. For public clusters, the nodes try to communicate with the Microsoft Container Registry (MCR) endpoint (`mcr.microsoft.com`) on port 443.
 
-There are many reasons why the outbound traffic might be blocked. The best way to troubleshoot outbound connectivity failures is by running a connectivity analysis with Azure Virtual Network Verifier. The connectivity analysis looks at the Azure networking resources in the outbound traffic flow and identifies where traffic is blocked.
+There are many reasons why the outbound traffic might be blocked. The best way to troubleshoot outbound connectivity failures is by running a connectivity analysis with [Azure Virtual Network Verifier (Preview)](/azure/virtual-network-manager/concept-virtual-network-verifier). By running a connectivity analysis, you can visualize the hops within the traffic flow and any misconfigurations within Azure networking resources that are blocking traffic. To manually troubleshoot outbound connectivity failures, you can use the Secure Shell protocol (SSH) to connect to the node. Below are troubleshooting instructions for both types of investigations:
 
+### Check if Azure network resources are blocking traffic to the endpoint
 
+To determine if traffic is blocked the endpoint due to Azure network resources, run a connectivity analysis from your AKS cluster nodes to the endpoint using the [Azure Virtual Network Verifier (Preview)](/azure/virtual-network-manager/concept-virtual-network-verifier) tool. The connectivity analysis covers the following resources:
 
+- Azure Load Balancer
+- Azure Firewall
+- A network address translation (NAT) gateway
+- Network security group (NSG)
+- Network policy
 
+> [!NOTE]
+>
+> Azure Virtual Network Verifier (Preview) does not look at any external or third-party networking resources, such as a custom firewall. After running the connectivity analysis, we recommend that you perform a manual check of any external networking to cover all hops in the traffic flow.
+> 
+> Currently, clusters using Azure CNI Overlay are not supported for this feature. Support for CNI Overlay will be released in August 2025.
 
-is to use the Secure Shell protocol (SSH) to connect to the node. To make the connection, follow the instructions in [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access). Then, test the connectivity on the cluster by following these steps:
+1. To run the analysis, navigate to your cluster in the Azure portal. In the sidebar, navigate to the Settings -> Node pools blade.
+1. Identify the nodepool you want to run a connectivity analysis from. Click on the nodepool to select it as the scope.
+1. Click on the three dots "..." in the toolbar at the top of the page. In the expanded menu, select "Connectivity analysis (Preview)".<img width="626" alt="image" src="https://github.com/user-attachments/assets/b2f05947-f753-49b9-9536-98d0b998ab52" />
+1. Select a Virtual Machine Scale Set (VMSS) instance as the source. The source IP address(es) will be generated automatically.
+1. Select a public domain name/endpoint as the destination for the analysis. The destination IP address(es) will also be generated automatically.
+1. Run the analysis and wait up to 2 minutes for the results. In the resulting diagram, identify the associated Azure network resources and where traffic is blocked. Click on the icons to show the detailed analysis output.
+
+### Manual troubleshooting
+
+If the Azure Virtual Network Verifier (Preview) tool doesn't provide enough insight into the issue, you can manually troubleshoot outbound connectivity failures by using the Secure Shell protocol (SSH) to connect to the node. To make the connection, follow the instructions in [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access). Then, test the connectivity on the cluster by following these steps:
 
 1. After you connect to the node, run the `nc` and `dig` commands:
 
@@ -115,6 +136,7 @@ is to use the Secure Shell protocol (SSH) to connect to the node. To make the co
    >     --output json \
    >     --scripts "dig mcr.microsoft.com 443"
    > ```
+
 ## Solution
 
 The following table lists specific reasons why traffic might be blocked, and the corresponding solution for each reason:
