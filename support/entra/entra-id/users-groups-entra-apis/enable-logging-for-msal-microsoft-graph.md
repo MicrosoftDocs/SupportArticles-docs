@@ -9,7 +9,7 @@ ms.topic: how-to
 ---
 # How to enable logging for MSAL.NET and Microsoft Graph SDK
 
-[Microsoft Graph SDK](/graph/sdks/sdks-overview) has the ability to log complete HTTP requests and responses. The way this logging mechanism works is by implementing a custom [HttpClient Message handle](https://visualstudiomagazine.com/articles/2014/08/01/creating-custom-httpclient-handlers.aspx) to intercept every HTTP request and response between the client application and the Microsoft Graph Service. Besides hooking into the processing pipeline of the `GraphServiceClient` class to do request and response tracing, you can also configure proxy information. For more information, see [Customize the Microsoft Graph SDK service client](/graph/sdks/customize-client?tabs=csharp). MSAL.NET is used in the authentication provider of the `GraphServiceClient` class. Consequently, [logging](/azure/active-directory/develop/msal-logging-dotnet) in this library can provide valuable insight into authentication failures.
+[Microsoft Graph SDK](/graph/sdks/sdks-overview) has the ability to log complete HTTP requests and responses. The way this logging mechanism works is by implementing a custom [HttpClient Message handler](https://visualstudiomagazine.com/articles/2014/08/01/creating-custom-httpclient-handlers.aspx) to intercept every HTTP request and response between the client application and the Microsoft Graph Service. Besides hooking into the processing pipeline of the `GraphServiceClient` class to do request and response tracing, you can also configure proxy information. For more information, see [Customize the Microsoft Graph SDK service client](/graph/sdks/customize-client?tabs=csharp). MSAL.NET is used in the authentication provider of the `GraphServiceClient` class. Consequently, [logging](/azure/active-directory/develop/msal-logging-dotnet) in this library can provide valuable insight into authentication failures.
 
 This article explains how to enable logging for both MSAL.NET and Microsoft Graph SDK by using a [.NET Core 3.0 console application sample](https://github.com/bachoang/MSGraphLoggingSample).
 
@@ -72,7 +72,7 @@ Create an Azure Storage account for storing MSAL.NET and Microsoft Graph SDK log
 
 ### Application code
 
-The complete sample code is available in this [GitHub repository](https://github.com/bachoang/MSGraphLoggingSample). Configuration options are stored in the following `appsettings.json` file. The sample application uses a code snippet from [this article](./app-integration/get-signed-in-users-groups-in-access-token.md) to read configuration settings from the `appsettings.json` file. It relies on the Microsoft Graph beta endpoint, so it references the Microsoft.Graph.Beta package; for v1 endpoint, use the Microsoft.Graph package. For more information, see [Use the Microsoft Graph SDKs with the beta API](/graph/sdks/use-beta).
+The complete sample code is available in this [GitHub repository](https://github.com/bachoang/MSGraphLoggingSample). Configuration options are stored in the following `appsettings.json` file. The sample application uses a code snippet from [this article](../app-integration/get-signed-in-users-groups-in-access-token.md) to read configuration settings from the `appsettings.json` file. It relies on the Microsoft Graph beta endpoint, so it references the Microsoft.Graph.Beta package; for v1 endpoint, use the Microsoft.Graph package. For more information, see [Use the Microsoft Graph SDKs with the beta API](/graph/sdks/use-beta).
 
 ```json
 {

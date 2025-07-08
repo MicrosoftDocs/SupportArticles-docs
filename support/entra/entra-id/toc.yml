@@ -342,7 +342,7 @@
    - name: Problem with using the Graph SDK - libraries
      items:
       - name: Enable logging for MSAL.NET and Microsoft Graph SDK
-        href: users-groups-entra-apis/enable-logging-for-msal-and-microsoft-graph.md
+        href: users-groups-entra-apis/enable-logging-for-msal-microsoft-graph.md
       - name: IDX14102 error - Unable to decode the header
         href: users-groups-entra-apis/unable-to-decode-header-error.md
       - name: Python scripts making requests are detected as web crawlers
