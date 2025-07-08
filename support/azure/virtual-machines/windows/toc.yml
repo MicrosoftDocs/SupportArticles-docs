@@ -358,6 +358,8 @@
       href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
     - name: Azure VM cannot RDP - working on features
       href: azure-vm-cannot-rdp-working-features.md
+    - name: Bug Check 0x0000001E - KMODE_EXCEPTION_NOT_HANDLED
+      href: kmode-exception-not-handled.md
 
 - name: Cannot start or stop my VM
   items:
