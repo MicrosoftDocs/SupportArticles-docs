@@ -2,7 +2,7 @@
 title: Troubleshoot Cross-Origin Resource Sharing Issues
 description: Helps you troubleshoot and resolve Cross-Origin Resource Sharing issues when using Microsoft Entra ID.
 ms.service: entra-id
-ms.date: 07/07/2025
+ms.date: 07/08/2025
 ms.reviewer: willfid, v-weizhu
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
