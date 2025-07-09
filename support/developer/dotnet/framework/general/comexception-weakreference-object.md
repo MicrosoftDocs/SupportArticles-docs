@@ -13,6 +13,7 @@ ms.topic: troubleshooting-problem-resolution
 This article helps you work around the `COMException` exception that occurs when you create a WeakReference object in an Microsoft .NET Framework-based application.
 
 _Original product version:_ Microsoft .NET Framework 4.5
+
 _Original KB number:_ 2978463
 
 ## Symptoms
