@@ -472,8 +472,7 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
    ```
 
    
-#### <a id="tab/rhel79-rhel-sap-ha-base"></a> [RHEL 7.9 - RHEL-SAP-HA-BASE](#tab/rhe79-rhel-sap-ha-base)
-
+#### <a id="tab/rhel79-rhel-sap-ha-base"></a> [RHEL 7.9 - RHEL-SAP-HA-BASE](#tab/rhel79-rhel-sap-ha-base)
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -630,7 +629,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo rm rhel8-sap-ha.config
    ```
 
-#### <a id="tab/rhel810-rhel-sap-ha-base"></a> [RHEL 8.10 - RHEL-SAP-HA-BASE](#tab/rhe810-rhel-sap-ha-base)
+#### <a id="tab/rhel810-rhel-sap-ha-base"></a> [RHEL 8.10 - RHEL-SAP-HA-BASE](#tab/rhel810-rhel-sap-ha-base)
 
 
 The following steps apply if the OS version is *RHEL 8.10* and the VM was created by using the `RHEL-SAP-HA` offer image.
@@ -699,7 +698,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    sudo rm  rhel8-ha.config
    ```
 
-#### <a id="tab/rhel810-rhel-ha-base"></a> [RHEL 8.10 - RHEL-HA-BASE](#tab/rhe810-rhel-ha-base)
+#### <a id="tab/rhel810-rhel-ha-base"></a> [RHEL 8.10 - RHEL-HA-BASE](#tab/rhel810-rhel-ha-base)
 
 
 
