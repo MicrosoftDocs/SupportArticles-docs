@@ -18,6 +18,10 @@ The articles in this series include the following:
 - [Deploy applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/installation/deploy-applications)
 - [Secure applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/general/secure-applications)
 
+_Original product version:_ .NET Framework
+
+_Original KB number:_ 818016
+
 ## Create the Web.Config file for an ASP.NET application
 
 The `Web.config` file is an XML file that contains application-specific settings that override system defaults. While most ASP applications that are built on the .NET Framework are deployed with a `Web.config` file, the `Web.config` file is optional. You may have to create a `Web.config` file to override default settings on an application-by-application basis.

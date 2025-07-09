@@ -14,6 +14,8 @@ This document discusses failures in WPF's render thread, with particular attenti
 
 Each WPF application may have one or more UI threads running their own message pump (`Dispatcher.Run`). Each UI thread is responsible for processing window messages from the thread's message queue and dispatching them to windows owned by that thread. Each WPF application has just one render thread. It's a separate thread that communicates with DirectX/D3D (and/or GDI if the software rendering pipeline is being used). For WPF content, each UI thread sends detailed instructions to the render thread on what to draw. The render thread then takes those instructions and renders the content.
 
+_Original product version:_ .NET Framework 4.8
+
 ## Failures in SyncFlush, WaitForNextMessage, SynchronizeChannel, and NotifyPartitionIsZombie
 
 Developers often face problems related to render thread failures with Windows Presentation Foundation (WPF) applications. Users may report their application throws exceptions such as:

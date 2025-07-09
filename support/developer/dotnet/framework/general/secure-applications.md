@@ -18,6 +18,10 @@ The articles in this series include the following:
 - [Deploy applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/installation/deploy-applications)
 - [Secure applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/general/secure-applications)
 
+_Original product version:_ .NET Framework
+
+_Original KB number:_ 818014
+
 ## Adjust .NET Framework security on a zone-by-zone basis
 
 The .NET Framework assigns trust levels to managed assemblies. These assignments are based, in part, on the zone where the assembly runs. The standard zones are My Computer, Local Intranet, Internet, Trusted Sites, and Untrusted Sites. You may have to increase or reduce the trust level that is associated with one of these zones. The .NET Framework includes tools for adjusting these settings.

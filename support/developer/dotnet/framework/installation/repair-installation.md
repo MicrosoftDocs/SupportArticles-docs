@@ -12,6 +12,10 @@ ms.custom: sap:Installation and Deployment
 
 This article describes how to repair the existing installation of Microsoft .NET Framework. You may need to repair your installation of the .NET Framework if you upgrade your operating system or if the current installation of the .NET Framework becomes corrupted.
 
+_Original product version:_ Microsoft .NET Framework
+
+_Original KB number:_ 306160
+
 ## Repair .NET Framework
 
 1. Obtain the original installation source. For example, if you installed the .NET Framework from a CD-ROM or from a digital video disc (DVD), insert that disk. If you downloaded the .NET Framework, download the .NET Framework again. Make sure that you select **save** to disk. If you installed the .NET Framework from a network share, reconnect to that share.

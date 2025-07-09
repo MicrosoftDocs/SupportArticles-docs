@@ -16,6 +16,10 @@ XPath is used programmatically to evaluate expressions and select specific nodes
 
 This article refers to the Microsoft .NET Framework Class Library namespace `System.Xml.XPath`.
 
+_Original product version:_ Visual Studio, .NET Framework
+
+_Original KB number:_ 308333
+
 ## Prerequisites
 
 This article assumes that you're familiar with the following topics:
