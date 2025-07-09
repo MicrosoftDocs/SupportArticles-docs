@@ -13,15 +13,15 @@ ms.topic: troubleshooting-problem-resolution
 
 _Applies to:_ .NET Framework 4.0 or later
 
-This article discusses a text rendering issue that occurs when a TextBlock is the child of a [Viewbox](/dotnet/desktop/wpf/controls/viewbox?view=netframeworkdesktop-4.8&preserve-view=true) and the TextBlock's displayed text is modified.
+This article discusses a text rendering issue that occurs when a TextBlock is the child of a [Viewbox](/dotnet/desktop/wpf/controls/viewbox?view=netframeworkdesktop-4.8&preserve-view=true) and the TextBlock's content is modified.
 
 ## Symptoms
 
-A TextBlock control (including derived classes) is the child of a Viewbox control, and the TextBlock leave artifacts on screen when its text is modified.
+When a TextBlock control (including any derived classes) is the child of a Viewbox control, updating the TextBlock's content leaves artifacts of the old text on the screen.
 
 ## Cause
 
-The transform process that the Viewbox applies to the [TextBlock](/dotnet/api/system.windows.controls.textblock?view=windowsdesktop-8.0&preserve-view=true) can cause rounding errors when the Viewbox calculates the _dirty rectangle_ area on text changes. Portions of the previous text might be left on the screen if the dirty rectangle isn't large enough to completely erase the previous text.
+The transform process the Viewbox applies to the [TextBlock](/dotnet/api/system.windows.controls.textblock?view=windowsdesktop-8.0&preserve-view=true) can cause rounding errors when the Viewbox calculates the _dirty rectangle_ area after the TextBlock's content changes. Portions of the previous text might be left on the screen if the _dirty rectangle_ isn't large enough to completely erase the previous text.
 
 ## Solution
 
