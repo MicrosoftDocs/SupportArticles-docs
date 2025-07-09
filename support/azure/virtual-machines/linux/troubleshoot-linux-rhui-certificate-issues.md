@@ -208,6 +208,8 @@ Use the following index to jump directly to the corresponding section below.
 #### EUS RHUI package installation
 <a id="eus"></a>
 
+Select the tab of an EUS image type to see the corresponding instructions.
+
 #### [RHEL 8.x - EUS](#tab/rhel8-eus)
 <a id="tab/rhel8-eus"></a>
 
@@ -288,6 +290,8 @@ Use the following index to jump directly to the corresponding section below.
 
 #### Non-EUS RHUI package installation
 <a id="non-eus"></a>
+
+Select the tab of an Non-EUS image type to see the corresponding instructions.
 
 #### [RHEL 7.9 - non-EUS](#tab/rhel7-noneus)
 <a id="tab/rhel7-noneus"></a>
@@ -750,7 +754,6 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
 
 #### RHEL 9 SAP/E4S/HA RHUI package installation
 <a id="rhel9sap"></a>
-
 
 Select the tab of an SAP image type to see the corresponding instructions.
 
