@@ -13,11 +13,11 @@ ms.topic: troubleshooting-problem-resolution
 
 _Applies to:_ .NET Framework 4.0 or later
 
-This article discusses a text rendering issue that occurs when a TextBlock is the child of a [Viewbox](/dotnet/desktop/wpf/controls/viewbox?view=netframeworkdesktop-4.8&preserve-view=true) and the TextBlock's content is modified.
+This article discusses a text rendering issue that can occur when a TextBlock is the child of a [Viewbox](/dotnet/desktop/wpf/controls/viewbox?view=netframeworkdesktop-4.8&preserve-view=true) and the TextBlock's content is modified.
 
 ## Symptoms
 
-When a TextBlock control (including any derived classes) is the child of a Viewbox control, updating the TextBlock's content leaves artifacts of the old text on the screen.
+When you update the content of a TextBlock (including derived classes) that's inside a Viewbox, remnants of the previous text remain visible on the screen.
 
 ## Cause
 
