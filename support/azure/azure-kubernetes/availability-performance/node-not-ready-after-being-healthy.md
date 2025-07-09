@@ -5,8 +5,9 @@ ms.date: 08/27/2024
 ms.reviewer: rissing, chiragpa, momajed, v-leedennis
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to prevent an Azure Kubernetes Service (AKS) cluster node from regressing to a Not Ready status so that I can continue to use the cluster node successfully.
-ms.custom: sap:Node/node pool availability and performance
+ms.custom: sap:Node/node pool availability and performance, innovation-engine
 ---
+
 # Troubleshoot a change in a healthy node to Not Ready status
 
 This article discusses a scenario in which the status of an Azure Kubernetes Service (AKS) cluster node changes to **Not Ready** after the node is in a healthy state for some time. This article outlines the particular cause and provides a possible solution.
@@ -24,6 +25,17 @@ This article discusses a scenario in which the status of an Azure Kubernetes Ser
   - [sort](https://man7.org/linux/man-pages/man1/sort.1.html)
   - [watch](https://man7.org/linux/man-pages/man1/watch.1.html)
 
+## Connect to the AKS cluster
+
+Before you can troubleshoot the issue, you must connect to the AKS cluster. To do so, run the following commands:
+
+```bash
+export RANDOM_SUFFIX=$(head -c 3 /dev/urandom | xxd -p)
+export RESOURCE_GROUP="my-resource-group$RANDOM_SUFFIX"
+export AKS_CLUSTER="my-aks-cluster$RANDOM_SUFFIX"
+az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --overwrite-existing
+```
+
 ## Symptoms
 
 The status of a cluster node that has a healthy state (all services running) unexpectedly changes to **Not Ready**. To view the status of a node, run the following [kubectl describe](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) command:
@@ -36,18 +48,37 @@ kubectl describe nodes
 
 The [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) stopped posting its **Ready** status.
 
-Examine the output of the `kubectl describe nodes` command to find the [Conditions](https://kubernetes.io/docs/reference/node/node-status/#condition) field and the [Capacity and Allocatable](https://kubernetes.io/docs/reference/node/node-status/#capacity) blocks. Do the content of these fields appear as expected? (For example, in the **Conditions** field, does the `message` property contain the "kubelet is posting ready status" string?) In this case, if you have direct Secure Shell (SSH) access to the node, check the recent events to understand the error. Look within the */var/log/messages* file. Or, generate the kubelet and container daemon log files by running the following shell commands:
+Examine the output of the `kubectl describe nodes` command to find the [Conditions](https://kubernetes.io/docs/reference/node/node-status/#condition) field and the [Capacity and Allocatable](https://kubernetes.io/docs/reference/node/node-status/#capacity) blocks. Do the content of these fields appear as expected? (For example, in the **Conditions** field, does the `message` property contain the "kubelet is posting ready status" string?) In this case, if you have direct Secure Shell (SSH) access to the node, check the recent events to understand the error. Look within the */var/log/syslog* file instead of */var/log/messages* (not available on all distributions). Or, generate the kubelet and container daemon log files by running the following shell commands:
 
 ```bash
-# To check messages file,
-cat /var/log/messages
+# First, identify the NotReady node
+export NODE_NAME=$(kubectl get nodes --no-headers | grep NotReady | awk '{print $1}' | head -1)
 
-# To check kubelet and containerd daemon logs,
-journalctl -u kubelet > kubelet.log
-journalctl -u containerd > containerd.log
+if [ -z "$NODE_NAME" ]; then
+    echo "No NotReady nodes found"
+    kubectl get nodes
+else
+    echo "Found NotReady node: $NODE_NAME"
+    
+    # Use kubectl debug to access the node
+    kubectl debug node/$NODE_NAME -it --image=mcr.microsoft.com/dotnet/runtime-deps:6.0 -- chroot /host bash -c "
+        echo '=== Checking syslog ==='
+        if [ -f /var/log/syslog ]; then
+            tail -100 /var/log/syslog
+        else
+            echo 'syslog not found'
+        fi
+        
+        echo '=== Checking kubelet logs ==='
+        journalctl -u kubelet --no-pager | tail -100
+        
+        echo '=== Checking containerd logs ==='
+        journalctl -u containerd --no-pager | tail -100
+    "
+fi
 ```
 
-After you run these commands, examine the messages and daemon log files for more information about the error.
+After you run these commands, examine the syslog and daemon log files for more information about the error.
 
 ## Solution
 
@@ -124,7 +155,8 @@ Instead, identify the offending application, and then take the appropriate actio
 To monitor the thread count for each control group (cgroup) and print the top eight cgroups, run the following shell command:
 
 ```bash
-watch 'ps -e -w -o "thcount,cgname" --no-headers | awk "{a[\$2] += \$1} END{for (i in a) print a[i], i}" | sort --numeric-sort --reverse | head --lines=8'
+# Show current thread count for each cgroup (top 8)
+ps -e -w -o "thcount,cgname" --no-headers | awk '{a[$2] += $1} END{for (i in a) print a[i], i}' | sort --numeric-sort --reverse | head --lines=8
 ```
 
 For more information, see [Process ID limits and reservations](https://kubernetes.io/docs/concepts/policy/pid-limiting/).

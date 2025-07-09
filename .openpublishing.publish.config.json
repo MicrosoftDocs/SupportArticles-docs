@@ -193,14 +193,16 @@
   "redirection_files": [
     ".openpublishing.redirection.json",
     ".openpublishing.redirection.developer.json",
+    ".openpublishing.redirection.exchange.json",
+    ".openpublishing.redirection.microsoft365.json",
+    ".openpublishing.redirection.office.json",
+    ".openpublishing.redirection.outlook.json",
+    ".openpublishing.redirection.SharePoint.json",
+    ".openpublishing.redirection.skypeforbusiness.json",
     ".openpublishing.redirection.teams.json",
+    ".openpublishing.redirection.viva.json",
     "support/azure/.openpublishing.redirection.azure.json",
-    "support/system-center/.openpublishing.redirection.systemcenter.json",
-    "SkypeForBusiness/.openpublishing.redirection.skypeforbusiness.json",
-    "SharePoint/.openpublishing.redirection.SharePoint.json",
-    "Microsoft365/.openpublishing.redirection.microsoft365.json",
-    "Outlook/.openpublishing.redirection.outlook.json",
-    "Exchange/.openpublishing.redirection.exchange.json"
+    "support/system-center/.openpublishing.redirection.systemcenter.json"
   ],
   "need_generate_pdf_url_template": true
 }

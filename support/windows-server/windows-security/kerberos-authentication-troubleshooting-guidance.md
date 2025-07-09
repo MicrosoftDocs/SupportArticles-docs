@@ -353,7 +353,7 @@ Kerberos supports three types of delegation:
 >
 >   Constrained delegation and RBCD are different configurations, and they are mutually exclusive. When a front-end service requests a ticket to a back-end service, the KDC first checks the front-end service for constrained delegation. If constrained delegation is not configured for the front-end service, the KDC checks the back-end service for resource-based constrained delegation. Because of this sequence, constrained delegation takes precedence over resource-based delegation.
 >
-> - By default, Microsoft Edge does not support unconstrained delegation. If you're using unconstrained delegation, see [Kerberos unconstrained double-hop authentication with Microsoft Edge (Chromium)](/troubleshoot/developer/webapps/iis/www-authentication-authorization/kerberos-double-hop-authentication-edge-chromium) for more information about the configuration that you need.
+> - By default, Microsoft Edge does not support unconstrained delegation. If you're using unconstrained delegation, see [Kerberos unconstrained double-hop authentication with Microsoft Edge (Chromium)](../../developer/webapps/iis/www-authentication-authorization/kerberos-double-hop-authentication-edge-chromium.md) for more information about the configuration that you need.
 >
 > - Unconstrained delegation is not recommended because it doesn't restrict which services the authenticated account can interact with.
 
