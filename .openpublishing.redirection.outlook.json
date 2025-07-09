@@ -1,23 +1,23 @@
 {
   "redirections": [
     {
-      "source_path": "Mobile/add-ins/cannot-save-to-onenote.md",
+      "source_path": "Outlook/Mobile/add-ins/cannot-save-to-onenote.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Mobile/exchange-activesync/invitations-forwarded-by-attendee-for-existing-meeting.md",
+      "source_path": "Outlook/Mobile/exchange-activesync/invitations-forwarded-by-attendee-for-existing-meeting.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Mobile/exchange-connectivity/activesync-v12.0-out-of-support.md",
+      "source_path": "Outlook/Mobile/exchange-connectivity/activesync-v12.0-out-of-support.md",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Mobile/outlook-mobile-welcome.yml",
+      "source_path": "Outlook/Mobile/outlook-mobile-welcome.yml",
       "redirect_url": "/previous-versions/troubleshoot/content-retirement"
     },
     {
-      "source_path": "Mobile/exchange-connectivity/outlook-for-ios-and-android-with-abq-rules-are-quarantined.md",
+      "source_path": "Outlook/Mobile/exchange-connectivity/outlook-for-ios-and-android-with-abq-rules-are-quarantined.md",
       "redirect_url": "/previous-versions/troubleshoot/outlook/outlook-for-ios-and-android-with-abq-rules-are-quarantined"
     }
   ]

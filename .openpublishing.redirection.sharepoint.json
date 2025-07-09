@@ -1,0 +1,332 @@
+{
+  "redirections": [
+    {
+      "source_path": "SharePoint/OneDrive/security/retention-policies-deleting-documents-after-workload-removal.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/cannot-locate-a-server-to-load-workbook-data-model-in-powerpivot.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/error-occurred-when-loading-sandbox-cube-in-powerpivot.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/files-open-in-read-only-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/multiple-alternate-access-mapping-zone.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/orphaned-record-for-powerpivot-service-application-database.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/powerpivot-configuration-tool-shows-user-not-farm-administrator.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/powerpivot-performance-counter-errors.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/powerpivot-shows-setauthcontext-need-to-be-run-as-sysadmin.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/administration/virtual-path-maps-to-another-application-not-allowed.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/lists-and-libraries/list-refresh-odata-data-feed.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/lists-and-libraries/need-a-new-app-to-open-this-ms-visio.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/security/schedule-data-refresh-to-a-source-with-non-windows-authentication.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/sharing-and-permissions/credential-prompt-persistent-cookies.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointExperts/web-parts/something-went-wrong-error-in-excel-web-parts.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/administration/automatic-exif-property-import-unsupported.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/administration/NET-update-causes-azure-add-in-to-stop-working.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/administration/presence-information-fails-showing.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/administration/temporary-adjustments-in-sharepoint-online.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/administration/troubleshoot-send-to-connection-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/apps/msn-weather-service-api-retired.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/infopath/click-infopath-form-mobile-view.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/lists-and-libraries/calendar-view-list-opens-dialog-box.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/lists-and-libraries/cannot-check-in-multiple-items.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/lists-and-libraries/content-organizer-not-comply-with-interval.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/lists-and-libraries/documents-not-displayed-in-web-browser-when-using-tls-1.2.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/lists-and-libraries/film-reel-icon-video-content.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/lists-and-libraries/mds-functionality-unaffect-library.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/lists-and-libraries/slow-open-with-explorer-performance.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/lists-and-libraries/the-webpage-cannot-be-displayed-when-open-an-office-document.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/sharing-and-permissions/fails-retrieving-teams-group-owner.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/sharing-and-permissions/managing-secure-store-service-app-permissions.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/sharing-and-permissions/rest-mouse-pointer-on-user-name.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/sites/rich-text-fields-fails-responding.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/sites/top-navigation-bar-not-use-site-theme.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/web-parts/list-view-web-part-not-filter-values.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/web-parts/unable-to-drag-drop-web-parts.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/web-parts/wspr-viewer-web-part-unsupported.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/workflows/access-denied-when-approve-workflow-task.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/workflows/outlook-fails-responding-sharepoint-workflow.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointOnline/workflows/workflow-platform-created-word-fails-opening.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/administration/change-sandbox-solution.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/administration/configure-excel-services-kerberos.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/administration/error-configuring-powerpivot-service-with-oracle-data-source-sharepoint-server-2013.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/administration/function-disabled-in-safe-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/administration/system-center-2016-operations-manager-apm-agent-causing-heap-corruption.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/administration/users-display-name-incorrect-on-mysite.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/administration/windows-server-2012-r2-support-sharepoint-2013-sp1.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/apps/projects-with-field-elements-cannot-redeploy.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/apps/running-access-reports-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/apps/system.argumentexception-exception-when-sign-out-of-web-application.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/infopath/forms-timeout-or-take-a-long-time-to-open.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/infopath/invalid-from-template.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/infopath/schema-validation-found-non-datatype-errors.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/installation-and-setup/certain-installation-scenarios-are-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/lists-and-libraries/attachment-is-missing-in-email-message-to-library.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/lists-and-libraries/feature-id-not-assigned-when-saving-a-list-as-template.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/lists-and-libraries/property-does-not-exist-or-is-used-in-manner-inconsistent-with-schema-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/lists-and-libraries/sharepoint-explorer-view-option-not-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/lists-and-libraries/shows-empty-wfpub-library.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/lists-and-libraries/slide-library-toolbar-not-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/lists-and-libraries/upload-multiple-documents-option-not-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/lists-and-libraries/visio-graphics-service-application-pool-not-recycled.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/records-management/automatically-declaring-items-causes-duplicates.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/search/crawler-ignores-directives-for-user-agent.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/search/incomplete-search-results-for-choice-type-columns-with-multiple-values.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/search/search-box-removed-from-suite-nav.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/security/configure-sql-server-reporting-services.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/sharing-and-permissions/access-denied-when-send-an-email-to-groups.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/sharing-and-permissions/anonymous-users-cannot-open-xlsx-files-from-a-document-library.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/sharing-and-permissions/picker-field-embedded-does-not-show-add-people.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/sites/cant-connect-workspace-to-site.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/sites/cant-start-groove-or-sharepoint.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/sites/customize-application-pages-in-layouts-folder.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/sites/not-support-subsite-export-import-with-publishing-templates.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/sites/unavailable-sync-to-sharepoint-workspace.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/sites/using-pageparserpath-directive.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/sites/workspace-groove-detected-another-device.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/web-parts/web-part-refresh-in-sharepoint-foundation-2010.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/workflows/specified-runas-account-is-invalid.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/workflows/upgrade-sharepoint-through-workflow-manager.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+    },
+    {
+      "source_path": "SharePoint/SharePointServer/workflows/workflow-cannot-send-email-to-group.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     }
+  ]
+}
