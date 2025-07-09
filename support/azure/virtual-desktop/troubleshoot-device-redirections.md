@@ -29,6 +29,34 @@ If a user signs in to the session host with a single-factor credential like user
 3. Choose **Sign-in options** at the bottom of the window.
 4. Select **Sign in with Windows Hello or a security key**. They should see an option to select Windows Hello or security authentication methods.
 
+## Clipboard and Window Resizing Issues After SxS Network Stack Update
+
+**Applies to:** Azure Virtual Desktop – SxS Network Stack version 1.0.2501.05600 and later
+
+### Symptoms
+- Clipboard redirection fails (e.g., copying from the AVD session to the local device does not work).
+- The AVD session window cannot be resized.
+- Issues occur after updating to SxS Network Stack version `1.0.2501.05600` or later.
+- Affects environments that use restrictive application control policies (e.g., antivirus allow lists).
+
+### Cause
+The updated SxS network stack introduces new executables—`rdpclipcdv.exe` and `rdpinputcdv.exe`—used to handle clipboard and window resizing functionality. If these executables are blocked, the functionality fails to initialize properly.
+
+This impacts environments that enforce application restriction policies, such as:
+- Software Restriction Policies (SRP)
+- AppLocker
+- Third-party endpoint protection software
+
+### Resolution
+Ensure the following executables are allow-listed **when executed from subfolders of** `C:\Program Files\Microsoft RDInfra`:
+- `rdpinit.exe`
+- `rdpshell.exe`
+- `rdpstartup.exe`
+- `rdpstartuplauncher.exe`
+- `rdpvchost.exe`
+- `rdpclipcdv.exe`
+- `rdpinputcdv.exe`
+
 ## Provide feedback
 
 Visit the [Azure Virtual Desktop Tech Community](https://techcommunity.microsoft.com/t5/azure-virtual-desktop/bd-p/AzureVirtualDesktopForum) to discuss the Azure Virtual Desktop service with the product team and active community members.
