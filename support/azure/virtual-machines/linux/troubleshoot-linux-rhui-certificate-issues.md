@@ -208,7 +208,7 @@ RHEL 9 SAP/HANA RHUI package installation
 
 #### [RHEL 8.x - EUS](#tab/rhel8-eus)
 
-## <a id="tab/rhel8-eus"></a>RHEL 8.x - EUS
+## <a id="tab/rhel8-eus"></a>
 
 1. Create a config file by using this command.
 
@@ -240,7 +240,7 @@ RHEL 9 SAP/HANA RHUI package installation
    ```
 
 #### [RHEL 9.x - EUS](#tab/rhel9-eus)
-## <a id="tab/rhel9-eus"></a>RHEL 9.x - EUS
+## <a id="tab/rhel9-eus"></a>
 
 1. Create a config file by using this command: 
 
@@ -288,7 +288,7 @@ RHEL 9 SAP/HANA RHUI package installation
 #### Non-EUS RHUI package installation
 
 #### [RHEL 7.9 - non-EUS](#tab/rhel7-noneus)
-## <a id="tab/rhel7-noneus"></a>RHEL 7.9 - non-EUS
+## <a id="tab/rhel7-noneus"></a>
 
 1. Remove the releasever file if it exists.
 
@@ -320,7 +320,7 @@ RHEL 9 SAP/HANA RHUI package installation
    ```
 
 #### [RHEL 8.10 - non-EUS](#tab/rhel8-noneus)
-## <a id="tab/rhel8-noneus"></a>RHEL 8.10 - non-EUS
+## <a id="tab/rhel8-noneus"></a>
 
 1. Remove the releasever file if it exists.
 
@@ -352,7 +352,7 @@ RHEL 9 SAP/HANA RHUI package installation
    ```
 
 #### [RHEL 9._x_ - non-EUS](#tab/rhel9-noneus)
-## <a id="tab/rhel9-noneus"></a>RHEL 9.x - non-EUS
+## <a id="tab/rhel9-noneus"></a>
 
 1. Remove the releasever file if it exists.
 
@@ -384,7 +384,7 @@ RHEL 9 SAP/HANA RHUI package installation
    ```
 
 #### [RHEL 10 - non-EUS](#tab/rhel10-noneus)
-## <a id="tab/rhel10-noneus"></a>RHEL 10 - non-EUS
+## <a id="tab/rhel10-noneus"></a>
 
 1. Create a config file by using this command:
 
@@ -430,7 +430,7 @@ Select the tab of an SAP image type to see the corresponding instructions.
 
 
 #### [RHEL 7.9 - RHEL-SAP-APPS-BASE](#tab/rhel79-rhel-sap-apps-base)
-## <a id="tab/rhel79-rhel-sap-apps-base"></a>RHEL 7.9 - RHEL-SAP-APPS-BASE
+## <a id="tab/rhel79-rhel-sap-apps-base"></a>
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -466,7 +466,7 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
 
    
 #### [RHEL 7.9 - RHEL-SAP-HA-BASE](#tab/rhe79-rhel-sap-ha-base)
-## <a id="tab/rhel79-rhel-sap-ha-base"></a>RHEL 7.9 - RHEL-SAP-HA-BASE
+## <a id="tab/rhel79-rhel-sap-ha-base"></a>
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -518,7 +518,7 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
 Select the tab of an SAP image type to see the corresponding instructions.
 
 #### [RHEL 8.x - RHEL-SAP-APPS](#tab/rhel8-rhel-sap-apps)
-## <a id="tab/rhel8-rhel-sap-apps"></a>RHEL 8.x - RHEL-SAP-APPS
+## <a id="tab/rhel8-rhel-sap-apps"></a>
 
 The following steps apply if the OS version is *earlier than the latest version available* supported by SAP for `RHEL 8.X` and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -554,7 +554,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 
 #### [RHEL 8.10 - RHEL-SAP-APPS-BASE](#tab/rhel810-rhel-sap-apps-base)
-## <a id="tab/rhel810-rhel-sap-apps-base"></a>RHEL 8.10 - RHEL-SAP-APPS-BASE
+## <a id="tab/rhel810-rhel-sap-apps-base"></a>
 
 The following steps apply if the OS version is *RHEL 8.10* supported by SAP and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -589,8 +589,7 @@ The following steps apply if the OS version is *RHEL 8.10* supported by SAP and 
    ```
    
 #### [RHEL 8.x - RHEL-SAP-HA (E4S)](#tab/rhel8-rhel-sap-ha-e4s)
-## <a id="tab/rhel8-rhel-sap-ha-e4s"></a>RHEL 8.x - RHEL-SAP-HA (E4S)
-
+## <a id="tab/rhel8-rhel-sap-ha-e4s"></a>
 The following steps apply if the OS version is *earlier than the latest version available* supported by SAP for `RHEL 8._x_` and the VM was created by using the `RHEL-SAP-HA` offer image.
 
 1. Create a config file by using this command:
@@ -624,7 +623,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    ```
 
 #### [RHEL 8.10 - RHEL-SAP-HA-BASE](#tab/rhe810-rhel-sap-ha-base)
-## <a id="tab/rhel810-rhel-sap-ha-base"></a>RHEL 8.10 - RHEL-SAP-HA-BASE
+## <a id="tab/rhel810-rhel-sap-ha-base"></a>
 
 The following steps apply if the OS version is *RHEL 8.10* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -660,7 +659,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    ```
 
 #### [RHEL 8.x - RHEL-HA ](#tab/rhel8-rhel-ha-eus)
-## <a id="tab/rhel8-rhel-ha-eus"></a>RHEL 8.x - RHEL-HA
+## <a id="tab/rhel8-rhel-ha-eus"></a>
 
 1. Create a config file by using this command:
 
@@ -693,7 +692,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    ```
 
 #### [RHEL 8.10 - RHEL-HA-BASE](#tab/rhe810-rhel-ha-base)
-## <a id="tab/rhel810-rhel-ha-base"></a>RHEL 8.10 - RHEL-HA-BASE
+## <a id="tab/rhel810-rhel-ha-base"></a>
 
 
 1. Remove the releasever file if it exists:
@@ -750,7 +749,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
 Select the tab of an SAP image type to see the corresponding instructions.
 
 #### [RHEL 9.x - RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
-## <a id="tab/rhel9-rhel-sap-apps"></a>RHEL 9.x - RHEL-SAP-APPS
+## <a id="tab/rhel9-rhel-sap-apps"></a>
 
 The following steps apply if the OS version is *earlier than the latest version that's available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -785,7 +784,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    ```
 
 #### [RHEL 9.x - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
-## <a id="tab/rhel9-rhel-sap-ha-e4s"></a>RHEL 9.x - RHEL-SAP-HA (E4S)
+## <a id="tab/rhel9-rhel-sap-ha-e4s"></a>
 
 
 The following steps apply if the OS version is *earlier than the latest version available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-HA` offer image.
@@ -821,7 +820,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    ```
 
 #### [RHEL 9.x - RHEL-HA ](#tab/rhel9-rhel-ha-eus)
-## <a id="tab/rhel9-rhel-ha-eus"></a>RHEL 9.x - RHEL-HA 
+## <a id="tab/rhel9-rhel-ha-eus"></a>
 
 1. Create a config file by using this command:
 
