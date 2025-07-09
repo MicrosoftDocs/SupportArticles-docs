@@ -12,6 +12,9 @@ ms.topic: troubleshooting-problem-resolution
 
 This article helps you work around the `COMException` exception that occurs when you create a WeakReference object in an Microsoft .NET Framework-based application.
 
+_Original product version:_ Microsoft .NET Framework 4.5
+_Original KB number:_ 2978463
+
 ## Symptoms
 
 Assume that you develop a .NET Framework-based application. In this application, you use the reflection API to enumerate methods in a `WeakReference<T>` type. Then you call the `GetFunctionPointer` method on the `RuntimeMethodHandle` handle for the `WeakReference<T>.Create` function. When the pointer to the `WeakReference<T>.Create` method is retrieved by using code that resembles the following code sample:
