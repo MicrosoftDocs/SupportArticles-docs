@@ -27,6 +27,10 @@ You might also receive one of these common suberror codes:
 - [AttendedUserNotLoggedIn](#attendedusernotloggedin)
 - [UIFlowAlreadyRunning](#uiflowalreadyrunning)
 
+## How to investigate
+
+Lifecycle events of desktop flows in the queue can be viewed from the monitor run details page in the [queue events section](/power-automate/desktop-flows/monitor-run-details#view-queue-events). They provide insights on the multiple launch attempts and can help understand the inner root cause.
+
 ## Cause
 
 When no machines are available, Power Automate creates a queue to hold the desktop flows waiting to be run. Once a machine is available, the next desktop flow run will be selected to run based on [priority](/power-automate/desktop-flows/monitor-desktop-flow-queues#setting-a-priority) and request time. If no machine is available after six hours since the time it was requested, the desktop flow will time out and fail with a `NoCandidateMachine` error code.
