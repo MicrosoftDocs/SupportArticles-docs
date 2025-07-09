@@ -9,13 +9,22 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/30/2025
+  ms.date: 07/09/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
  # Card
+  - title: Troubleshoot Azure Activity Log issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Diagnostic Settings Transition from Legacy Solutions
+            url: ./activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md
+          - text: Understanding and Transitioning from Legacy to Diagnostic Settings for Azure Activity Logs
+            url: ./activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md
+  
   - title: Troubleshoot Azure Application Insights issues
     linkLists:
       - linkListType: how-to-guide
