@@ -1,6 +1,6 @@
 ---
 title: Text Rendering Issue when a TextBlock is the Child of a Viewbox
-description: This articles helps you troubleshoot a TextBlock displaying artifacts of old text when the TextBlock is the child of a Viewbox.
+description: This article helps you troubleshoot a TextBlock displaying artifacts of old text when the TextBlock is the child of a Viewbox.
 ms.date: 07/08/2025
 ms.custom: sap:Class Library Namespaces
 ms.reviewer: mihayash, davean, v-jayaramanp
