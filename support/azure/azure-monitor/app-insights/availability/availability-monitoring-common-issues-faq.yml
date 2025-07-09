@@ -3,7 +3,7 @@ metadata:
   title: Azure Application Insights availability monitoring common issues FAQ
   description: Review a list of frequently asked questions (FAQ) about common issues that occur when you use Application Insights availability monitoring.
   ms.topic: faq
-  ms.date: 06/24/2024
+  ms.date: 07/09/2025
   ms.reviewer: v-leedennis, toddfous, v-weizhu
   ms.service: azure-monitor
   ms.custom: sap:Availability Tests
@@ -16,7 +16,7 @@ sections:
       - question: |
           My site looks OK, but I experience test failures. Why is Application Insights alerting me?
         answer: |
-          - Starting from December 2023, the Availability Test web requests use TLS 1.3, the latest and fastest version of the encryption protocol, to match the latest security standards. If the tests against your site fail, check if your web server can accept inbound TLS 1.3 client connections. For more information, see [Application Insights Availability Tests TLS 1.3 Enablement](https://azure.microsoft.com/updates/in-development-application-insights-availability-tests-tls-13-enablement-2/).
+          - Starting in December 2023, Availability Test web requests use TLS 1.3 in supported regions to align with the latest security standards. If your tests fail, check whether your web server accepts inbound TLS 1.3 client connections. For regional support details, see [Application Insights Availability Tests TLS 1.3 Enablement](https://azure.microsoft.com/updates/in-development-application-insights-availability-tests-tls-13-enablement-2/).
           
           - Does your test have the **Parse dependent requests** option enabled? That forces a strict check on resources such as scripts and images. These kinds of failures might not be noticeable in a browser. Check all images, scripts, style sheets, and any other files that are loaded by the page. If any of them fails, the test is reported as failed, even if the main HTML page loads without issues. To filter the test for such resource failures, clear the **Parse dependent requests** check box in the test configuration.
 
