@@ -168,37 +168,37 @@ Use the table below to determine the correct RHUI package type based on your RHE
 > 🔹 For complete support timelines, refer to the [Red Hat EUS and E4S lifecycle documentation](https://access.redhat.com/articles/rhel-eus).
 
 
-## RHUI Package Installation Index
+##### RHUI Package Installation Index
 
 Use the following index to jump directly to the corresponding section below.
 
-### EUS RHUI package installation
+EUS RHUI package installation
 
 - [RHEL 8.x - EUS](#tab/rhel8-eus)
 - [RHEL 9.x - EUS](#tab/rhel9-eus)
 
-### Non-EUS RHUI package installation
+Non-EUS RHUI package installation
 
 - [RHEL 7.9 - non-EUS](#tab/rhel7-noneus)
 - [RHEL 8.10 - non-EUS](#tab/rhel8-noneus)
 - [RHEL 9.x - non-EUS](#tab/rhel9-noneus)
 - [RHEL 10 - non-EUS](#tab/rhel10-noneus)
 
-### RHEL 7 SAP/E4S/HANA RHUI package installation
+RHEL 7 SAP/E4S/HANA RHUI package installation
 
-- [RHEL 7.9 - RHEL-SAP-APPS](#tab/rhel79-rhel-sap-apps)
-- [RHEL 7.9 - RHEL-SAP-HA](#tab/rhel79-rhel-sap-ha)
+- [RHEL 7.9 - RHEL-SAP-APPS-BASE](#tab/rhel79-rhel-sap-apps-base)
+- [RHEL 7.9 - RHEL-SAP-HA-BASE](#tab/rhel79-rhel-sap-ha-base)
 
-### RHEL 8 SAP/E4S/HANA RHUI package installation
+RHEL 8 SAP/E4S/HANA RHUI package installation
 
 - [RHEL 8.x - RHEL-SAP-APPS](#tab/rhel8-rhel-sap-apps)
-- [RHEL 8.10 - RHEL-SAP-APPS](#tab/rhel810-rhel-sap-apps)
+- [RHEL 8.10 - RHEL-SAP-APPS-BASE](#tab/rhel810-rhel-sap-apps-base)
 - [RHEL 8.x - RHEL-SAP-HA (E4S)](#tab/rhel8-rhel-sap-ha-e4s)
-- [RHEL 8.10 - RHEL-SAP-HA](#tab/rhel810-rhel-sap-ha)
+- [RHEL 8.10 - RHEL-SAP-HA-BASE](#tab/rhel810-rhel-sap-ha-base)
 - [RHEL 8.x - RHEL-HA](#tab/rhel8-rhel-ha-eus)
-- [RHEL 8.10 - RHEL-HA](#tab/rhel810-rhel-base-ha)
+- [RHEL 8.10 - RHEL-HA-BASE](#tab/rhel810-rhel-ha-base)
 
-### RHEL 9 SAP/HANA RHUI package installation
+RHEL 9 SAP/HANA RHUI package installation
 
 - [RHEL 9.x - RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
 - [RHEL 9.x - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
@@ -429,8 +429,8 @@ Use the following index to jump directly to the corresponding section below.
 Select the tab of an SAP image type to see the corresponding instructions.
 
 
-#### [RHEL 7.9 - RHEL-SAP-APPS](#tab/rhel79-rhel-sap-apps)
-## <a id="tab/rhel79-rhel-sap-apps"></a>RHEL 7.9 - RHEL-SAP-APPS
+#### [RHEL 7.9 - RHEL-SAP-APPS-BASE](#tab/rhel79-rhel-sap-apps-base)
+## <a id="tab/rhel79-rhel-sap-apps-base"></a>RHEL 7.9 - RHEL-SAP-APPS-BASE
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -465,8 +465,8 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
    ```
 
    
-#### [RHEL 7.9 - RHEL-SAP-HA](#tab/rhe79-rhel-sap-ha)
-## <a id="tab/rhel79-rhel-sap-ha"></a>RHEL 7.9 - RHEL-SAP-HA
+#### [RHEL 7.9 - RHEL-SAP-HA-BASE](#tab/rhe79-rhel-sap-ha-base)
+## <a id="tab/rhel79-rhel-sap-ha-base"></a>RHEL 7.9 - RHEL-SAP-HA-BASE
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -553,8 +553,8 @@ The following steps apply if the OS version is *earlier than the latest version 
    ```
 
 
-#### [RHEL 8.10 - RHEL-SAP-APPS](#tab/rhel810-rhel-sap-apps)
-## <a id="tab/rhel810-rhel-sap-apps"></a>RHEL 8.10 - RHEL-SAP-APPS
+#### [RHEL 8.10 - RHEL-SAP-APPS-BASE](#tab/rhel810-rhel-sap-apps-base)
+## <a id="tab/rhel810-rhel-sap-apps-base"></a>RHEL 8.10 - RHEL-SAP-APPS-BASE
 
 The following steps apply if the OS version is *RHEL 8.10* supported by SAP and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -623,8 +623,8 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo rm rhel8-sap-ha.config
    ```
 
-#### [RHEL 8.10 - RHEL-SAP-HA](#tab/rhe810-rhel-sap-ha)
-## <a id="tab/rhel810-rhel-sap-ha"></a>RHEL 8.10 - RHEL-SAP-HA
+#### [RHEL 8.10 - RHEL-SAP-HA-BASE](#tab/rhe810-rhel-sap-ha-base)
+## <a id="tab/rhel810-rhel-sap-ha-base"></a>RHEL 8.10 - RHEL-SAP-HA-BASE
 
 The following steps apply if the OS version is *RHEL 8.10* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -692,8 +692,8 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    sudo rm  rhel8-ha.config
    ```
 
-#### [RHEL 8.10 - RHEL-HA](#tab/rhe810-rhel-base-ha)
-## <a id="tab/rhel810-rhel-ha"></a>RHEL 8.10 - RHEL-HA
+#### [RHEL 8.10 - RHEL-HA-BASE](#tab/rhe810-rhel-ha-base)
+## <a id="tab/rhel810-rhel-ha-base"></a>RHEL 8.10 - RHEL-HA-BASE
 
 
 1. Remove the releasever file if it exists:
