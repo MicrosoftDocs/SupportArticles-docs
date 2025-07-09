@@ -198,7 +198,7 @@ Use the following index to jump directly to the corresponding section below.
 - [RHEL 8.x - RHEL-HA](#tab/rhel8-rhel-ha-eus)
 - [RHEL 8.10 - RHEL-HA-BASE](#tab/rhel810-rhel-ha-base)
 
-[RHEL 9 SAP/HANA RHUI package installation](#rhel9sap)
+[RHEL 9 SAP/E4S/HA RHUI package installation](#rhel9sap)
 
 - [RHEL 9.x - RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
 - [RHEL 9.x - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
@@ -748,8 +748,8 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
 > Replace `rhelX-XX-XX.config` and `rhui-azure-rhel-X-X-X` with the actual values, as appropriate.
 
 
-#### RHEL 9 SAP/HANA RHUI package installation
-<a id="tab/rhel9sap"></a>
+#### RHEL 9 SAP/E4S/HA RHUI package installation
+<a id="rhel9sap"></a>
 
 
 Select the tab of an SAP image type to see the corresponding instructions.
