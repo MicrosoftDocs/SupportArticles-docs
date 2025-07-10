@@ -123,7 +123,7 @@ The _.udl_ file extension is mapped to the first command. For 32-bit providers o
 
 ### Create a 32-bit UDL32 file extension mapping
 
-If you frequently use 32-bit providers, you can map a new file extension (for example, _.udl32_) to launch the 32-bit UDL dialog by using the following steps.
+If you frequently use 32-bit providers on a 64-bit operating systems, you can map a new file extension (for example, _.udl32_) to launch the 32-bit UDL dialog by using the following steps.
 
 [!INCLUDE [registry-important-alert](../../../../includes/registry-important-alert.md)]
 
