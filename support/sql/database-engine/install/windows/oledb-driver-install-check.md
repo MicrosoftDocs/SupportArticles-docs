@@ -55,9 +55,9 @@ Get-ChildItem -Path "HKLM:\SOFTWARE\Microsoft", "HKLM:\SOFTWARE\Wow6432Node\Micr
    ForEach-Object {   Get-ItemProperty $_.PSPath}
 ```
 
-## Validate OLE DB driver via a UDL
+## Validate OLE DB driver via a UDL file
 
-One of the easiest ways to test an OLE DB provider is by using a Universal Data Link (UDL) file. Create any text file in Windows Explorer and rename it to have the *.udl* file extension. Make sure you have [file extensions turned on](https://support.microsoft.com/windows/da4a4430-8e76-89c5-59f7-1cdbbc75cb01) to make the change. Double-click the file to open a dialog where you can see the installed providers and test their connections. For more information, see [Test OLE DB connectivity to SQL Server by using a UDL file](../../connect/test-oledb-connectivity-use-udl-file.md).
+One of the easiest ways to test an OLE DB driver is by using a Universal Data Link (UDL) file. Create any text file in Windows Explorer and rename it to have the *.udl* file extension. Make sure you have [file extensions turned on](https://support.microsoft.com/windows/da4a4430-8e76-89c5-59f7-1cdbbc75cb01) to make the change. Double-click the file to open a dialog where you can see the installed providers and test their connections. For more information, see [Test OLE DB connectivity to SQL Server by using a UDL file](../../connect/test-oledb-connectivity-use-udl-file.md).
 
 :::image type="content" source="media/oledb-driver-install-check/udl-test-oledb-provider.png" alt-text="Screenshot shows how to use UDL file to test OLE DB provider.":::
 
@@ -65,7 +65,7 @@ Select **OK** in the dialog to confirm the configuration.
 
 ### Examine the UDL file content
 
-If you open the UDL file in a text editor like Notepad, copy the connection string to use in your application. Here are two examples:
+If you open the UDL file in a text editor, you can copy the connection string to use in your application. Here are two examples:
 
 ```output
 Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=master;Data Source=localhost;Initial File Name="";Server SPN="";Authentication="";Access Token=""
@@ -81,7 +81,7 @@ The first step for validating a driver is to see whether the name appears in the
 
 You can also trace the driver location in the registry. The driver name is a COM [ProgID](/windows/win32/com/-progid--key) and you can find it in [HKEY_CLASSES_ROOT](/windows/win32/sysinfo/hkey-classes-root-key).
 
-Let's use the SQL Server Native Client driver to illustrate the details. In the following image, you can see the mapping between the ProgID **SQLNCLI11.1** and the provider name **SQL Server Native Client 11.0**.
+Using the SQL Server Native Client driver as an example, you can see in the following image, the mapping between the ProgID **SQLNCLI11.1** and the provider name **SQL Server Native Client 11.0**.
 
 :::image type="content" source="media/oledb-driver-install-check/mapping-progid-provider-name.png" alt-text="Screenshot shows the mapping between the ProgID SQLNCLI11.1 and the Provider name SQL Server Native Client 11.0.":::
 
@@ -89,7 +89,7 @@ The ProgID of both 32-bit and 64-bit providers appears under the same key.
 
 In addition to **SQLNCLI11.1**, there's also a ProgID called **SQLNCLI11**. The reason for this is that a provider developer might allow multiple versions of the same provider to be installed side by side, each with a different numeric suffix. The unnumbered name is the version-independent ProgID. Applications can point to this and be redirected to the latest version of the provider.
 
-For all intents and purposes, these two different ProgID names should be equivalent. However, there were a few cases where they weren't. Applications using the version-independent name can't connect, but they can connect if using the versioned ProgID. The reason is that the two entries point to different [CLSID](/windows/win32/com/clsid-key-hklm) values, which is how to find the provider DLL.
+For all intents and purposes, these two different ProgID names should be equivalent. However, there may be cases cases where they arent't. In those cases, applications using the version-independent name can't connect, but they can connect if using the versioned ProgID. The reason is that the two entries point to different [CLSID](/windows/win32/com/clsid-key-hklm) values, which is how to find the provider DLL.
 
 :::image type="content" source="media/oledb-driver-install-check/find-provider-dll-versioned-progid.png" alt-text="Screenshot shows how to find the provider dll using the versioned ProgId.":::
 
