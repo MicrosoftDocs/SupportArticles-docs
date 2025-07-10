@@ -1,7 +1,7 @@
 ---
 title: Bug Check 0x0000001E - KMODE_EXCEPTION_NOT_HANDLED
 description: Describes an issue where an Azure virtual machine (VM) experiences the KMODE_EXCEPTION_NOT_HANDLED bug check (0x0000001E).
-ms.date: 07/08/2025
+ms.date: 07/10/2025
 ms.reviewer: cwhitley
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -18,7 +18,7 @@ This article helps you resolve an issue where a Microsoft Azure virtual machine 
 
 When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of a VM, the Windows operating system (OS) displays the **KMODE_EXCEPTION_NOT_HANDLED** bug check (0x0000001E).
 
-:::image type="content" source="media/kmode-exception-not-handled/kmode-exception-not-handled-screen.png" alt-text="Screenshot of Windows operating system bug check KMODE_EXCEPTION_NOT_HANDLED (0x0000001E).":::
+:::image type="content" source="media/kernel-mode-exception-not-handled/kernel-mode-exception-not-handled-screen.png" alt-text="Screenshot of Windows operating system bug check KMODE_EXCEPTION_NOT_HANDLED (0x0000001E).":::
 
 ## Cause
 
