@@ -299,7 +299,7 @@ There are two possible solutions: Try to complete the transaction, or manually r
 
 #### Solution 4b: Manually remove duplicates
 
-##### [RHEL/Centos/Oracle Linux 7._x_](#tab/rhel7x)
+##### [RHEL/Centos/Oracle Linux 7._x_](#tab/rhelcentosoracle7)
 
 1. Remove the duplicate packages manually by running the following commands. The `yum check` command might require a lot of time, but obtaining its output is crucial to proceed with these steps:
 
