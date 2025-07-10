@@ -34,8 +34,8 @@ If a user signs in to the session host with a single-factor credential like user
 **Applies to:** Azure Virtual Desktop – SxS Network Stack version 1.0.2501.05600 and later
 
 ### Symptoms
-- Clipboard redirection fails (e.g., copying from the AVD session to the local device does not work).
-- The AVD session window cannot be resized.
+- Clipboard redirection fails (e.g., copying from the remote session to the local device does not work).
+- The remote session window cannot be resized.
 - Issues occur after updating to SxS Network Stack version `1.0.2501.05600` or later.
 - Affects environments that use restrictive application control policies (e.g., antivirus allow lists).
 
