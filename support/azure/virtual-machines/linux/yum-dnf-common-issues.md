@@ -74,7 +74,7 @@ To run the check script, enter the following shell commands on a Red Hat VM:
     ```
 3. The script generates a report that includes any issues that are found. The script output is also saved in `/var/log/rhuicheck.log` after you run it. 
 
-#### [Red Hat 8.x, 9.x, and 10.x](#tab/rhel8910)
+#### [Red Hat 8.x, 9.x, and 10.x](#tab/rhel89)
 
 1. If the VM has internet access, run the script directly from the VM by using the following command:
 
@@ -265,7 +265,7 @@ There are two possible solutions: Try to complete the transaction, or manually r
 
 #### Solution 4a: Try to complete the transaction
  
-##### [RHEL/Centos/Oracle Linux 7._x_](#tab/rhel7x)
+##### [RHEL/Centos/Oracle Linux 7._x_](#tab/rhel7)
 
 1. Try to complete the transaction by running the following [yum-complete-transaction](https://linux.die.net/man/8/yum-complete-transaction) command:
 
@@ -299,7 +299,7 @@ There are two possible solutions: Try to complete the transaction, or manually r
 
 #### Solution 4b: Manually remove duplicates
 
-##### [RHEL/Centos/Oracle Linux 7._x_](#tab/rhelcentosoracle7)
+##### [RHEL/Centos/Oracle Linux 7._x_](#tab/rhel7)
 
 1. Remove the duplicate packages manually by running the following commands. The `yum check` command might require a lot of time, but obtaining its output is crucial to proceed with these steps:
 
