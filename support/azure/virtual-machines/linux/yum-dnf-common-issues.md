@@ -59,7 +59,7 @@ This version of the check script currently supports only the following Red Hat V
 
 To run the check script, enter the following shell commands on a Red Hat VM:
 
-#### [Red Hat 7.x](#tab/rhel7)
+#### [Red Hat 7.x](#tab/rhel7x)
 
 1. If the VM has internet access, run the script directly from the VM by using the following command:
 
