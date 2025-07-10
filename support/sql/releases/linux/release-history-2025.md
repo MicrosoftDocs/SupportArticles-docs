@@ -29,7 +29,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2025](..
 
 ## CTP 2.1 (June 2025)
 
-This is the CTP 2.1 of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. This is a pre-release version of [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.800.3.
+This is the CTP 2.1 of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. This is a prerelease version of [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.800.3.
 
 ### Package details
 
@@ -47,7 +47,7 @@ Go back to the [release history](#release-history).
 
 ## CTP 2.0 (May 2025)
 
-This is the CTP 2.0 of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. This is a pre-release version of [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.700.9.
+This is the CTP 2.0 of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. This is a prerelease version of [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.700.9.
 
 > [!IMPORTANT]  
 > In [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)] on Linux, the CPU time for a query (for example, returned by set statistics time, or captured via Extended Events or SQL Server Profiler traces) can currently display inaccurately. This amount can often show significantly more than the actual execution time, even when the query isn't running in parallel. This is a known issue, and we're actively working on a resolution. This issue affects [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)] on Linux deployed on traditional VMs, physical machines, and container-based environments. This issue is resolved in CTP 2.1.
