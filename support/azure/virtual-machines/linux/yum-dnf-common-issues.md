@@ -265,7 +265,7 @@ There are two possible solutions: Try to complete the transaction, or manually r
 
 #### Solution 4a: Try to complete the transaction
  
-##### [RHEL/Centos/Oracle Linux 7._x_](#tab/rhel7)
+##### [RHEL/Centos/Oracle Linux 7._x_](#tab/rhel7x)
 
 1. Try to complete the transaction by running the following [yum-complete-transaction](https://linux.die.net/man/8/yum-complete-transaction) command:
 
