@@ -68,3 +68,4 @@ Visit the [Azure Virtual Desktop Tech Community](https://techcommunity.microsoft
 - To troubleshoot issues while configuring a virtual machine (VM) in Azure Virtual Desktop, see [Session host virtual machine configuration](/support/azure/virtual-desktop/troubleshoot-vm-configuration).
 - To troubleshoot issues related to the Azure Virtual Desktop agent or session connectivity, see [Troubleshoot common Azure Virtual Desktop Agent issues](/support/azure/virtual-desktop/troubleshoot-agent).
 - To troubleshoot issues when using PowerShell with Azure Virtual Desktop, see [Azure Virtual Desktop PowerShell](/support/azure/virtual-desktop/troubleshoot-powershell).
+- To go through a troubleshooting tutorial, see [Tutorial: Troubleshoot Resource Manager template deployments](/azure/azure-resource-manager/troubleshooting/quickstart-troubleshoot-arm-deployment).
