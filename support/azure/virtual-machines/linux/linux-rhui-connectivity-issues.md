@@ -11,7 +11,7 @@ ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.date: 10/18/2024
+ms.date: 07/10/2025
 ---
 
 # Troubleshoot Red Hat RHUI connectivity issues
@@ -111,7 +111,7 @@ To run the validation script, enter the following shell commands on a Red Hat VM
 
   The script will generate a report that identifies any specific issues. The script output is also saved in `/var/log/rhuicheck.log` after execution. You can also inspect that log file separately.
 
-#### [Red Hat 8.x, 9.x, and 10.x](#tab/rhel89)
+#### [Red Hat 8.x, 9.x, and 10.x](#tab/rhel8910)
 
 1. If the virtual machine has internet access, execute the script directly from the VM using the following command:
 
