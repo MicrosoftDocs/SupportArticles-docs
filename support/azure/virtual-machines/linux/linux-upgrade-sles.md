@@ -550,7 +550,7 @@ You can also find the output in the `/var/log/messages` or `/var/log/distro-migr
 
 ### Cause 
 
-Mid of 2023, SUSE has changed the GPG signing key for the SUSE Linux Enterprise 15 products, and products based on those (SUSE Enterprise Storage, SUSE Manager, SUSE CaaSP) to the RSA 4096 bit key as specified in SUSE article [https://www.suse.com/support/security/keys/](https://www.suse.com/support/security/keys).
+Mid of 2023, SUSE has changed the GPG signing key for the SUSE Linux Enterprise 15 products, and products based on those (SUSE Enterprise Storage, SUSE Manager, SUSE CaaSP) to the RSA 4096 bit key as specified in SUSE article [SUSE Signing Keys](https://www.suse.com/support/security/keys).
 
 ### Resolution
 
@@ -618,9 +618,7 @@ gpg-pubkey-3fa1d6ce-63c9481c
 ```bash
 sudo zypper migration -v
 ```
-```output
-.
-.                                                                                         
+```output                                                                                    
 All repositories have been refreshed.
 Installed products:
   SLES/15.3/x86_64          
@@ -920,7 +918,7 @@ There are running programs which still use files and libraries deleted or update
 Since the last system boot core libraries or services have been updated.
 Reboot is suggested to ensure that your system benefits from these updates.
 ```
-7. Verify successful execution of migration.
+7. Verify the successful execution of the migration by running the following command. In the example below, an output of `0` indicates that the migration completed successfully. A non-zero return value signifies that an issue occurred. You can also review `/var/log/zypper.log` for detailed status and error messages.
 ```bash
 sudo echo $?
 ```
