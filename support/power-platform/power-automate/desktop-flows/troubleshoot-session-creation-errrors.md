@@ -3,7 +3,7 @@ title: Session creation error codes in unattended desktop flow runs
 description: Solves error codes related to session creation during unattended desktop flow runs in Power Automate.
 author: johndund 
 ms.author: johndund 
-ms.date: 07/04/2025
+ms.date: 07/10/2025
 ms.reviewer: madiazor, guco, fredg 
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
@@ -27,7 +27,7 @@ When an unattended session is run, Power Automate attempts to create a Remote De
 
 ## SessionCreationErrorWithThirdPartyCredentialProvider
 
-This error code occurs because third-party software interferes with Power Automate's ability to create a session on the machine. Power Automate doesn't support some third-party credential providers.
+This error code occurs because third-party software interferes with Power Automate's ability to create a session on the machine. Power Automate doesn't support some third-party credential providers, or might experience conflicts depending on their configuration.
 
 ### Resolution
 
