@@ -59,7 +59,7 @@ This version of the check script currently supports only the following Red Hat V
 
 To run the check script, enter the following shell commands on a Red Hat VM:
 
-#### [Red Hat 7.x](#tab/rhel7x)
+#### [Red Hat 7.x](#tab/rhel7)
 
 1. If the VM has internet access, run the script directly from the VM by using the following command:
 
@@ -299,7 +299,7 @@ There are two possible solutions: Try to complete the transaction, or manually r
 
 #### Solution 4b: Manually remove duplicates
 
-##### [RHEL/Centos/Oracle Linux 7._x_](#tab/rhel7)
+##### [RHEL/Centos/Oracle Linux 7._x_](#tab/rhel7x)
 
 1. Remove the duplicate packages manually by running the following commands. The `yum check` command might require a lot of time, but obtaining its output is crucial to proceed with these steps:
 
