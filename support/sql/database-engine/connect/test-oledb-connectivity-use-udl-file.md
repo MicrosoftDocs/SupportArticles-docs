@@ -25,15 +25,15 @@ To create a UDL file to test your OLE DB provider, follow these steps:
 
 1. To show file extensions in File Explorer, follow these steps:
 
-    1. Select **Start**, and enter *File Explorer Options*.
+    1. Select **Start**, and enter _File Explorer Options_.
 
     1. Select the **View** tab, uncheck the **Hide extensions for known file types** option, and then select **OK**.
 
-1. Navigate to the folder where you want to create a UDL file. For example, *c:\\temp*.
+1. Navigate to the folder where you want to create a UDL file. For example, _C:\\temp_.
 
-1. Create a new text file (such as *sqlconn.txt*), and then rename the extension from *.txt* to *.udl*. (Select **Yes** to the warning message about changing the file name extension.)
+1. Create a new text file (such as _sqlconn.txt_), and then rename the extension from _.txt_ to _.udl_. (Select **Yes** to the warning message about changing the file name extension.)
 
-    You can also use the following PowerShell script to create *sqlconn.udl* in your *%temp%* folder.
+    You can also use the following PowerShell script to create _sqlconn.udl_ in your _%temp%_ folder.
 
       ```Powershell
       clear
@@ -45,9 +45,9 @@ To create a UDL file to test your OLE DB provider, follow these steps:
       Invoke-Expression ($env:temp + "\sqlconn.udl")
       ```
 
-## Test the connection by using the SQL Server OLE DB provider
+## Test the connection by using the SQL Server OLE DB driver
 
-[Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server#1-microsoft-ole-db-driver-for-sql-server-msoledbsql-recommended) (MSOLEDBSQL) is the latest SQL Server OLE DB driver. The driver has all the new features, such as TLS 1.2 and 1.3, [MultiSubnetFailover](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover), and Azure authentication methods (Microsoft Entra ID). We recommend this driver for newer SQL Server databases.
+[Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server#1-microsoft-ole-db-driver-for-sql-server-msoledbsql-recommended) (MSOLEDBSQL) is the latest SQL Server OLE DB driver. The driver has new features, such as TLS 1.2 and 1.3, [MultiSubnetFailover](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.multisubnetfailover), and Azure authentication methods (Microsoft Entra ID). We recommend this driver for newer SQL Server databases.
 
 [Microsoft OLE DB Provider for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server#3-microsoft-ole-db-provider-for-sql-server-sqloledb) (SQLOLEDB) is the legacy OLE DB connectivity provider. It's built into Windows and can connect to any version of SQL Server that's not configured to require TLS 1.2 or 1.3 channel bindings.
 
@@ -100,34 +100,34 @@ To test the connection of 32-bit providers in 64-bit operating systems, follow t
 1. Run the following command to open the UDL file:
 
     ```console
-    c:\temp\test.udl
+    C:\temp\test.udl
     ```
 
-1. If you see **Microsoft Jet 4.0 OLE DB Provider** on the **Provider** tab, which means you successfully loaded the 32-bit dialog and can now select the 32-bit provider to test the connection.
+1. If you see **Microsoft Jet 4.0 OLE DB Provider** on the **Provider** tab, you successfully loaded the 32-bit dialog and can now select the 32-bit provider to test the connection.
 
-### How to launch a UDL file
+## Launch a UDL file
 
-Double-click a UDL file to launch it. However, if you need to understand the internals of how it works, review the following information.
+Double-click a UDL file to launch it. The following describes the underlying process used when launching a UDL file.
 
-The UDL file UI is provided by *OLEDB32.DLL* and hosted in *RUNDLL32.EXE*.
+The UDL file UI is provided by _OLEDB32.DLL_ and hosted in _RUNDLL32.EXE_.
 
-- For 32-bit operating systems or for 64-bit providers on 64-bit operating systems, use the following command (assuming *c:\temp\test.udl*):
+- For 32-bit operating systems or for 64-bit providers on 64-bit operating systems, use the following command (assuming `C:\temp\test.udl`):
 
   `Rundll32.exe "C:\Program Files\Common Files\System\OLE DB\oledb32.dll",OpenDSLFile C:\temp\test.udl`
 
 - For 32-bit providers on 64-bit operating systems, use the following command:
 
-  `C:\Windows\SysWOW64\Rundll32.exe "C:\Program Files (x86)\Common Files\system\Ole DB\oledb32.dll",OpenDSLFile c:\temp\test.udl`
+  `C:\Windows\SysWOW64\Rundll32.exe "C:\Program Files (x86)\Common Files\system\Ole DB\oledb32.dll",OpenDSLFile C:\temp\test.udl`
 
-The *.udl* file extension is mapped to the first command. For the second one, you can simplify things by running a 32-bit command prompt and then running `START C:\TEMP\TEST.UDL` to test 32-bit providers. Another way is to map the *.udl32* file extension to the 32-bit command.
+The _.udl_ file extension is mapped to the first command. For 32-bit providers on 64-bit operating systems, you can simplify things by running a 32-bit command prompt and then running `START C:\TEMP\TEST.UDL` to test 32-bit providers. Optionally, you can create a file extension mapping that uses the 32-bit command.
 
-#### A 32-bit UDL32 file extension mapping
+### Create a 32-bit UDL32 file extension mapping
 
-If you frequently use 32-bit providers, you can map a new file extension (for example, *.udl32*) to launch the 32-bit UDL dialog by using the following steps.
+If you frequently use 32-bit providers, you can map a new file extension (for example, _.udl32_) to launch the 32-bit UDL dialog by using the following steps.
 
 [!INCLUDE [registry-important-alert](../../../../includes/registry-important-alert.md)]
 
-1. Copy the following script to Notepad and save it as *udl32.reg*.
+1. Copy the following script to Notepad and save it as _udl32.reg_.
 
    ```output
    Windows Registry Editor Version 5.00
@@ -151,9 +151,9 @@ If you frequently use 32-bit providers, you can map a new file extension (for ex
    [HKEY_CLASSES_ROOT\ft000001\shell\open\ddeexec]
    ```
 
-1. Double-click the *.reg* file to create a registry key, which helps you automatically launch UDL32 files.
-1. Create a file with the *.udl32* file extension. For example, *c:\temp\test.udl32*.
-1. Double-click the *test.udl32* to launch the 32-bit UDL dialog. For example, you might see a dialog like this:
+1. Double-click the _.reg_ file to create a registry key, which helps you automatically launch UDL32 files.
+1. Create a file with the _.udl32_ file extension. For example, _C:\temp\test.udl32_.
+1. Double-click the _test.udl32_ to launch the 32-bit UDL dialog. For example, you might see a dialog like this:
 
    :::image type="content" source="media/test-oledb-connectivity-use-udl-file/32-bit-udl-dialog.png" alt-text="Screenshot shows an example of a 32-bit UDL dialog.":::
 
