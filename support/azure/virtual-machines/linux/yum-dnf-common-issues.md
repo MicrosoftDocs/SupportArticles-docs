@@ -11,7 +11,7 @@ ms.topic: troubleshooting-general
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: linux-related-content
-ms.date: 10/16/2024
+ms.date: 07/10/2025
 #customer intent: As an Azure Linux VM administrator, I want troubleshoot issues in the yum and dnf tools so that I can successfully install or update applications on my VMs.
 ---
 # Troubleshoot common issues in the yum and dnf package management tools for Linux
@@ -53,6 +53,7 @@ This version of the check script currently supports only the following Red Hat V
 - RHEL 7._x_ PAYG VMs
 - RHEL 8._x_ PAYG VMs
 - RHEL 9._x_ PAYG VMs
+- RHEL 10._x_ PAYG VMs
 
 #### How to run the RHUI check script
 
@@ -73,7 +74,7 @@ To run the check script, enter the following shell commands on a Red Hat VM:
     ```
 3. The script generates a report that includes any issues that are found. The script output is also saved in `/var/log/rhuicheck.log` after you run it. 
 
-#### [Red Hat 8.x and 9.x](#tab/rhel89)
+#### [Red Hat 8.x, 9.x, and 10.x](#tab/rhel89)
 
 1. If the VM has internet access, run the script directly from the VM by using the following command:
 
