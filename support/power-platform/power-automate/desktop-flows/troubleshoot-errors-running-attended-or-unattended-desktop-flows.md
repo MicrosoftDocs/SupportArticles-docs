@@ -2,7 +2,7 @@
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: cefriant, kenseongtan, guco, johndund, alarnaud, ermathon
-ms.date: 05/29/2025
+ms.date: 07/11/2025
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -23,6 +23,7 @@ _Original KB number:_ &nbsp; 4555406
 |AttendedUserSessionNotActive<br>AttendedUserNotLoggedIn|400|Attended|Check that you're logged in with the correct user and that the session is unlocked on the machine. For more information about the error codes, see [AttendedUserSessionNotActive](troubleshoot-desktop-flow-run-queue-errors.md#attendedusersessionnotactive) and [AttendedUserNotLoggedIn](troubleshoot-desktop-flow-run-queue-errors.md#attendedusernotloggedin).|
 |SessionCreationError|400|Unattended|We couldn't create the session on the machine for an unknown reason. To solve this issue, see [Troubleshoot session creation error codes for an unattended desktop flow run](troubleshoot-session-creation-errrors.md#sessioncreationerror).|
 |SessionCreationErrorWithThirdPartyCredentialProvider|400|Unattended|To solve this issue, see [Troubleshoot session creation error codes for an unattended desktop flow run](troubleshoot-session-creation-errrors.md#sessioncreationerrorwiththirdpartycredentialprovider).|
+|SessionCreationUserPromptedForCredentialsAfterConnection|400|Unattended|To solve this issue, see [Troubleshoot session creation error codes for an unattended desktop flow run](troubleshoot-session-creation-errrors.md#sessioncreationuserpromptedforcredentialsafterconnection).|
 |SessionCreationWinLogonFailure|400|Unattended|We can't create a Windows session to run your unattended desktop flow. You need to restart your machine.|
 |SessionExistsForTheUserWhenUnattended|400|Unattended|Check that you aren't logged in with the same user (regardless of the state of the session) on the machine. For more information about this error code, see [SessionExistsForTheUserWhenUnattended](troubleshoot-desktop-flow-run-queue-errors.md#sessionexistsfortheuserwhenunattended).|
 |UnattendedUserSessionDisconnected|400|Unattended|For more information about this error code, see [UnattendedUserSessionDisconnected](troubleshoot-desktop-flow-run-queue-errors.md#unattendedusersessiondisconnected).|
