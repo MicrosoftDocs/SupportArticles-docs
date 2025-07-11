@@ -206,9 +206,7 @@ Use the following index to navigate directly to the corresponding section below.
   
 ##### <a id="eus"></a> EUS RHUI package installation
 
-Select the tab of an EUS image type to see the corresponding instructions.
-
-###### <a id="tab/rhel8-eus"></a> [RHEL 8.x - EUS](#tab/rhel8-eus)
+###### <a id="tab/rhel8-eus"></a> RHEL 8.x - EUS
 
 1. Create a config file by using this command.
 
@@ -240,9 +238,9 @@ Select the tab of an EUS image type to see the corresponding instructions.
    sudo rhel8-eus.config
    ```
 
-###### <a id="tab/rhel9-eus"></a> [RHEL 9.x - EUS](#tab/rhel9-eus)
+###### <a id="tab/rhel9-eus"></a> RHEL 9.x - EUS
 
-1. Create a config file by using this command: 
+1. Create a config file by using this command:
 
    ```bash
    sudo tee rhel9-eus.config > /dev/null <<< $'[rhui-microsoft-azure-rhel9-eus]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9-eus)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9-eus\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
@@ -273,8 +271,6 @@ Select the tab of an EUS image type to see the corresponding instructions.
    sudo rhel9-eus.config
    ```
 
----
-
 > [!NOTE]
 > If you're using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config rhelX-XX-XX.config` command won't work because it doesn't include your proxy settings. In this case, move the temp file `rhelX-XX-XX.config`  directly in `/etc/yum.repos.d/` as `.repo`
 >
@@ -288,9 +284,7 @@ Select the tab of an EUS image type to see the corresponding instructions.
 
 ##### <a id="non-eus"></a> Non-EUS RHUI package installation
 
-Select the tab of an Non-EUS image type to see the corresponding instructions.
-
-###### <a id="tab/rhel7-noneus"></a> [RHEL 7.9 - non-EUS](#tab/rhel7-noneus)
+###### <a id="tab/rhel7-noneus"></a> RHEL 7.9 - non-EUS
 
 1. Remove the releasever file if it exists.
 
@@ -322,7 +316,7 @@ Select the tab of an Non-EUS image type to see the corresponding instructions.
    sudo rm rhel7-non-eus.config
    ```
 
-###### <a id="tab/rhel8-noneus"></a> [RHEL 8.10 - non-EUS](#tab/rhel8-noneus)
+###### <a id="tab/rhel8-noneus"></a> RHEL 8.10 - non-EUS
 
 1. Remove the releasever file if it exists.
 
@@ -354,7 +348,7 @@ Select the tab of an Non-EUS image type to see the corresponding instructions.
    sudo rm rhel8-non-eus.config
    ```
 
-###### <a id="tab/rhel9-noneus"></a> [RHEL 9.x - non-EUS](#tab/rhel9-noneus)
+###### <a id="tab/rhel9-noneus"></a> RHEL 9.x - non-EUS
 
 1. Remove the releasever file if it exists.
 
@@ -386,7 +380,7 @@ Select the tab of an Non-EUS image type to see the corresponding instructions.
    sudo rm rhel9-non-eus.config
    ```
 
-###### <a id="tab/rhel10-noneus"></a> [RHEL 10 - non-EUS](#tab/rhel10-noneus)
+###### <a id="tab/rhel10-noneus"></a> RHEL 10 - non-EUS
 
 1. Create a config file by using this command:
 
@@ -412,8 +406,6 @@ Select the tab of an Non-EUS image type to see the corresponding instructions.
    sudo rm rhel10-non-eus.config
    ```
 
----
-
 > [!NOTE]
 > If you're using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config rhelX-XX-XX.config` command won't work because it doesn't include your proxy settings. In this case, move the temp file `rhelX-XX-XX.config`  directly in `/etc/yum.repos.d/` as `.repo`
 >
@@ -427,9 +419,7 @@ Select the tab of an Non-EUS image type to see the corresponding instructions.
 
 ##### <a id="rhel79sap"></a> RHEL 7 SAP/E4S/HANA RHUI package installation
 
-Select the tab of an SAP image type to see the corresponding instructions.
-
-###### <a id="tab/rhel79-rhel-sap-apps-base"></a> [RHEL 7.9 - RHEL-SAP-APPS (BASE)](#tab/rhel79-rhel-sap-apps-base)
+###### <a id="tab/rhel79-rhel-sap-apps-base"></a> RHEL 7.9 - RHEL-SAP-APPS (BASE)
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -463,7 +453,7 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
    sudo rm rhel7-base-sap-apps.config
    ```
 
-###### <a id="tab/rhel79-rhel-sap-ha-base"></a> [RHEL 7.9 - RHEL-SAP-HA (BASE)](#tab/rhel79-rhel-sap-ha-base)
+###### <a id="tab/rhel79-rhel-sap-ha-base"></a> RHEL 7.9 - RHEL-SAP-HA (BASE)
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -497,8 +487,6 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
    sudo rm rhel7-base-sap-ha.config
    ```
 
----
-
 > [!NOTE]
 > If you're using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config rhelX-XX-XX.config` command won't work because it doesn't include your proxy settings. In this case, move the temp file `rhelX-XX-XX.config`  directly in `/etc/yum.repos.d/` as `.repo`
 >
@@ -511,9 +499,7 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
 
 ##### <a id="rhel8sap"></a> RHEL 8 SAP/E4S/HANA RHUI package installation
 
-Select the tab of an SAP image type to see the corresponding instructions.
-
-###### <a id="tab/rhel8-rhel-sap-apps"></a> [RHEL 8.x - RHEL-SAP-APPS](#tab/rhel8-rhel-sap-apps)
+###### <a id="tab/rhel8-rhel-sap-apps"></a> RHEL 8.x - RHEL-SAP-APPS
 
 The following steps apply if the OS version is *earlier than the latest version available* supported by SAP for `RHEL 8.X` and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -547,10 +533,9 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo rm rhel8-sapapps.config
    ```
 
-###### <a id="tab/rhel810-rhel-sap-apps-base"></a> [RHEL 8.10 - RHEL-SAP-APPS (BASE)](#tab/rhel810-rhel-sap-apps-base)
+###### <a id="tab/rhel810-rhel-sap-apps-base"></a> RHEL 8.10 - RHEL-SAP-APPS (BASE)
 
 The following steps apply if the OS version is *RHEL 8.10* supported by SAP and the VM was created by using the `RHEL-SAP-APPS` offer image.
-
 
 1. Remove the releasever file if it exists.
 
@@ -582,7 +567,7 @@ The following steps apply if the OS version is *RHEL 8.10* supported by SAP and 
    sudo rm rhel8-base-sap-apps.config
    ```
 
-###### <a id="tab/rhel8-rhel-sap-ha-e4s"></a> [RHEL 8.x - RHEL-SAP-HA (E4S)](#tab/rhel8-rhel-sap-ha-e4s)
+###### <a id="tab/rhel8-rhel-sap-ha-e4s"></a> RHEL 8.x - RHEL-SAP-HA (E4S)
 
 The following steps apply if the OS version is *earlier than the latest version available* supported by SAP for `RHEL 8._x_` and the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -616,7 +601,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo rm rhel8-sap-ha.config
    ```
 
-###### <a id="tab/rhel810-rhel-sap-ha-base"></a> [RHEL 8.10 - RHEL-SAP-HA (BASE)](#tab/rhel810-rhel-sap-ha-base)
+###### <a id="tab/rhel810-rhel-sap-ha-base"></a> RHEL 8.10 - RHEL-SAP-HA (BASE)
 
 The following steps apply if the OS version is *RHEL 8.10* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -650,7 +635,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    sudo rm rhel8-base-sap-ha.config
    ```
 
-###### <a id="tab/rhel8-rhel-ha-eus"></a> [RHEL 8.x - RHEL-HA](#tab/rhel8-rhel-ha-eus)
+###### <a id="tab/rhel8-rhel-ha-eus"></a> RHEL 8.x - RHEL-HA
 
 1. Create a config file by using this command:
 
@@ -682,7 +667,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    sudo rm  rhel8-ha.config
    ```
 
-###### <a id="tab/rhel810-rhel-ha-base"></a> [RHEL 8.10 - RHEL-HA (BASE)](#tab/rhel810-rhel-ha-base)
+###### <a id="tab/rhel810-rhel-ha-base"></a> RHEL 8.10 - RHEL-HA (BASE)
 
 1. Remove the releasever file if it exists:
 
@@ -713,13 +698,12 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
    ```bash
    sudo dnf repolist
    ```
+
 6. Remove the temp file created on step 3.
 
    ```bash
    sudo rm  rhel8-base-ha.config
    ```
-
----
 
 > [!NOTE]
 > If you're using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config rhelX-XX-XX.config` command won't work because it doesn't include your proxy settings. In this case, move the temp file `rhelX-XX-XX.config`  directly in `/etc/yum.repos.d/` as `.repo`
@@ -733,9 +717,7 @@ The following steps apply if the OS version is *RHEL 8.10* and the VM was create
 
 ##### <a id="rhel9sap"></a> RHEL 9 SAP/E4S/HA RHUI package installation
 
-Select the tab of an SAP image type to see the corresponding instructions.
-
-###### <a id="tab/rhel9-rhel-sap-apps"></a> [RHEL 9.x - RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
+###### <a id="tab/rhel9-rhel-sap-apps"></a> RHEL 9.x - RHEL-SAP-APPS
 
 The following steps apply if the OS version is *earlier than the latest version that's available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -769,7 +751,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo rm  rhel9-sapapps.config
    ```
 
-###### <a id="tab/rhel9-rhel-sap-ha-e4s"></a> [RHEL 9.x - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
+###### <a id="tab/rhel9-rhel-sap-ha-e4s"></a> RHEL 9.x - RHEL-SAP-HA (E4S)
 
 The following steps apply if the OS version is *earlier than the latest version available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -803,7 +785,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo rm  rhel9-sap-ha.config
    ```
 
-###### <a id="tab/rhel9-rhel-ha-eus"></a> [RHEL 9.x - RHEL-HA](#tab/rhel9-rhel-ha-eus)
+###### <a id="tab/rhel9-rhel-ha-eus"></a> RHEL 9.x - RHEL-HA
 
 1. Create a config file by using this command:
 
@@ -834,8 +816,6 @@ The following steps apply if the OS version is *earlier than the latest version 
    ```bash
    sudo rm rhel9-ha.config
    ```
-
----
 
 > [!NOTE]
 > If you're using a proxy in */etc/yum.conf* or */etc/dnf.conf*, the `yum --config rhelX-XX-XX.config` command won't work because it doesn't include your proxy settings. In this case, move the temp file `rhelX-XX-XX.config`  directly in `/etc/yum.repos.d/` as `.repo`
