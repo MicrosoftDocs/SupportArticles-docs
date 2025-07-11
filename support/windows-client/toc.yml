@@ -545,7 +545,7 @@ items:
       href: ./performance/view-system-registry-with-64-bit-windows.md
     - name: Windows 10 causes issues when it calls CreateWindowEx
       href: ./performance/issues-when-calls-createwindowex-32-bit-applications.md
-  - name: Blue Screen/Bugcheck
+  - name: Bugcheck/Stop code errors
     items:
     - name: Bug check 0x124 after a Windows in-place upgrade on Apple devices
       href: ./performance/bug-check-0x124-windows-upgrade-boot-camp-apple-devices.md
