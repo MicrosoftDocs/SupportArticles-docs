@@ -43,7 +43,7 @@ This article assumes that you're familiar with the following topics:
     Imports System.Data.SqlClient
     ```
 
-4. Select **Start**, point to **Programs**, point to Microsoft SQL Server, and then select **SQL Server Service Manager** to make sure that the SQL Server service is running on your computer.
+4. To make sure that the SQL Server service is running on your computer, select **Start**, point to **Programs**, point to Microsoft SQL Server, and then select **SQL Server Service Manager**.
 5. Set the **Server** property to the name of your computer, and then set the **Services** property to _MSSQLServer_.
 6. If the service isn't running, select **Start**.
 7. Close the **SQL Server Service Manager** dialog box.
@@ -95,8 +95,9 @@ The `SqlConnection` object establishes a database connection, the `SqlCommand` o
     myReader = myCmd.ExecuteReader()
     ```
 
-2. When the `myCmd.ExecuteReader` method runs, `SqlCommand` retrieves two fields from the `Employees` table and creates a `SqlDataReader` object.
-3. To display the query results, add the following code to the `Form1_Load` event procedure:
+When the `myCmd.ExecuteReader` method runs, `SqlCommand` retrieves two fields from the `Employees` table and creates a `SqlDataReader` object.
+
+2. To display the query results, add the following code to the `Form1_Load` event procedure:
 
     ```vb
     'Concatenate the query result into a string.
@@ -110,7 +111,7 @@ The `SqlConnection` object establishes a database connection, the `SqlCommand` o
 
 The `myReader.Read` method returns a boolean value that indicates whether there are more records to be read. The results of the SQL query are displayed in a message box.
 
-4. To close the `SqlDataReader` and `SqlConnection` objects, add the following code to the `Form1_Load` event procedure:
+3. To close the `SqlDataReader` and `SqlConnection` objects, add the following code to the `Form1_Load` event procedure:
 
     ```vb
     'Close the reader and the database connection.
@@ -118,7 +119,7 @@ The `myReader.Read` method returns a boolean value that indicates whether there 
      myConn.Close()
     ```
 
-5. Save and run the project.
+4. Save and run the project.
 
 ## View database in Server Explorer
 
