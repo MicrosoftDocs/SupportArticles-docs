@@ -1311,6 +1311,13 @@ No action required. This error should automatically resolve. If the error persis
 | **Error string** | ERROR_GEN_FAILURE |
 | **Remediation required** | Maybe |
 
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80041005 |
+| **HRESULT (decimal)** | -2147217403 |
+| **Error string** | SYNC_E_KNOWLEDGE_DECREASED |
+| **Remediation required** | Maybe |
+
 If the error persists for more than a day, create a support request.
 
 <a id="-2147467261"></a>**An internal error occurred.**
