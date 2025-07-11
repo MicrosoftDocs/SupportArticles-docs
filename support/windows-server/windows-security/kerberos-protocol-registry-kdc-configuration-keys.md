@@ -231,7 +231,7 @@ The registry entries that are listed in this section must be added to the follow
   - Default value: 0
   - Possible values: 0 (false) or any non-zero value (true)
 
-    This value indicates whether IP addresses will be added in the Ticket-Granting Service Reply (TGS_REP).
+    This value indicates whether IP addresses will be added in the Ticket-Granting Service Reply (TGS_REP). If the resource server enforces validation of this optional field and detects that there is no match between the client's IP address and the ticket's value, then the error KRB_AP_ERR_BADADDR ("Incorrect net address") is returned and the logon fails.
 
 - Entry: KdcDontCheckAddresses
 
