@@ -1,5 +1,5 @@
 ---
-title: Open SQL database by VB .NET
+title: Open SQL Database By Using VB .NET
 description: Introduces how to open SQL Server databases by using SQL Server .NET Data Provider together with Visual Basic .NET.
 ms.date: 07/07/2025
 ms.topic: how-to
@@ -35,7 +35,7 @@ This article assumes that you're familiar with the following topics:
 
 ## Create Visual Basic .NET Windows application
 
-1. In Visual Studio .NET, create a Visual Basic Windows Application project that's named _SQLDataAccess_.
+1. In Visual Studio .NET, create a Visual Basic Windows Application project, and name it _SQLDataAccess_.
 2. Open Form1.
 3. In the first line of _Form1.vb_, add a reference to the ADO.NET namespace, as follows:
 
