@@ -33,7 +33,7 @@ This article addresses the issue of Azure Function Apps reaching their daily log
 - **Unexpected Log Volume**: If logs are unexpectedly high, investigate recent changes in the application or external factors contributing to the increase.
 - **Quota Adjustment**: Ensure that any quota adjustments are aligned with the application's monitoring needs and budget constraints.
 
-Reference
+## Reference
 
 - [Azure Monitor Documentation](https://learn.microsoft.com/azure/azure-monitor/)
 - [Application Insights Quota Management](https://learn.microsoft.com/azure/azure-monitor/app/pricing)
