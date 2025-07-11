@@ -4,7 +4,7 @@ description: Helps resolve WebView reset issues in the Dynamics 365 Field Servic
 author: JonBaker007
 ms.author: jobaker
 ms.reviewer: puneet-singh1
-ms.date: 07/10/2025
+ms.date: 07/11/2025
 ms.custom: sap:Mobile Application\Application is throwing errors
 ---
 # Troubleshoot WebView reset in Dynamics 365 Field Service mobile app
