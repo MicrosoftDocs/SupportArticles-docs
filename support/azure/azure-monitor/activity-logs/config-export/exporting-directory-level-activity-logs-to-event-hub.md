@@ -44,7 +44,7 @@ Exporting directory-level activity logs to an Event Hub can be achieved through 
 - **Issue:** Permission errors when setting up diagnostic settings.
   - **Solution:** Ensure you have the necessary permissions to create or update diagnostic settings in Azure.
 
-Reference
+## Reference
 
 - [Azure Monitor Documentation](https://learn.microsoft.com/azure/monitoring/)
 - [Event Hubs Documentation](https://learn.microsoft.com/azure/event-hubs/)
