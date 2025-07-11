@@ -573,8 +573,8 @@ items:
       href: ./performance/stop-error-7b-or-inaccessible-boot-device-troubleshooting.md
     - name: Stop error on Lenovo ThinkPad with KB4568831 update
       href: ./performance/stop-error-lenovo-thinkpad-kb4568831-uefi.md
-    - name: Stop error or blue screen error troubleshooting
-      href: ./performance/stop-error-or-blue-screen-error-troubleshooting.md
+    - name: Stop code error troubleshooting
+      href: ./performance/stop-code-error-troubleshooting.md
     - name: Stop error when updating in-box Broadcom network adapter driver
       href: ./performance/stop-error-broadcom-network-driver-update.md
     - name: Tablet device creates only a minidump file
