@@ -42,7 +42,7 @@ If you have security configuration policies at the enterprise, machine, and user
 
 During upgrades, testing, and troubleshooting, the configuration of production systems might change in unintentional ways. For example, an administrator might grant administrative credentials to a user while determining whether an error is related to access rights. If that administrator forgets to revoke those elevated credentials after completing the troubleshooting process, the integrity of the system is compromised.
 
-Because this kind of action can degrade system security over time, we recommend that you do regular audits. To run the audits, create a baseline measure by documenting the key aspects of a pristine system. Compare these settings against the baseline over time to determine whether any problems have developed that might significantly reduce the level of vulnerability.
+Because this kind of action can degrade system security over time, we recommend that you do regular audits. To run the audits, create a baseline measure by documenting the key aspects of a pristine system. Compare these settings against the baseline over time to determine whether any problems developed that might significantly reduce the level of vulnerability.
 
 ## Configure a .NET-connected application and SQL Server to use an alternative port number for network communications
 
@@ -74,7 +74,7 @@ Many ASP.NET applications don't allow anonymous access. An ASP.NET application t
 
 ## Restrict specific users from gaining access to specified web resources
 
-ASP.NET includes Forms authentication. This is a unique way to authenticate users without creating Windows accounts. ASP.NET also includes the ability to grant or deny access to different web resources for these users.
+ASP.NET includes Forms authentication. This unique method authenticates users without creating Windows accounts. ASP.NET also includes the ability to grant or deny access to different web resources for these users.
 
 For more information about how to control access to web resources on a per-user basis, visit [Restrict specific users from gaining access to specified web resources](/troubleshoot/developer/webapps/aspnet/configuration/restrict-users-access-web-resource).
 
