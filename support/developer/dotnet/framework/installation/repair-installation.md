@@ -12,7 +12,7 @@ ms.custom: sap:Installation and Deployment
 
 This article describes how to repair an existing installation of Microsoft .NET Framework. You might have to repair this installation after you upgrade your operating system or if the current installation of .NET Framework becomes corrupted.
 
-_Original product version:_ Microsoft .NET Framework
+_Applies to:_ Microsoft .NET Framework
 
 _Original KB number:_ 306160
 

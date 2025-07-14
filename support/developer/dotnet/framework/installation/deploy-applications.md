@@ -13,12 +13,9 @@ This article describes important considerations for deploying applications that 
 
 This article is one of a series of articles that provide detailed information for applications that are built on the .NET Framework.
 
-The articles in this series include the following:
+For important considerations when securing applications that are built on the .NET Framework, see the related [Secure applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/general/secure-applications).
 
-- [Deploy applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/installation/deploy-applications)
-- [Secure applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/general/secure-applications)
-
-_Original product version:_ .NET Framework
+_Applies to:_ .NET Framework
 
 _Original KB number:_ 818016
 

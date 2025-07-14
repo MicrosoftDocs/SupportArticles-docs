@@ -15,7 +15,7 @@ The `System.Data.SqlClient` namespace describes a collection of classes that are
 
 In this article, connections are set up both programmatically and by using the Visual Studio .NET Server Explorer. The code samples in this article use the `SqlConnection`, `SqlCommand`, and `SqlDataReader` ADO.NET objects.
 
-_Original product version:_ Visual Basic .NET
+_Applies to:_ Visual Basic .NET
 
 _Original KB number:_ 308656
 

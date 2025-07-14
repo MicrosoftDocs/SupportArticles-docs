@@ -13,12 +13,9 @@ This article discusses important considerations for securing applications that a
 
 This article is one of a series of articles that provide detailed information for applications that are built on .NET Framework.
 
-The articles in this series include the following:
+For important consideration when deploying applications that are built on the .NET Framework, see the related [Deploy applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/installation/deploy-applications).
 
-- [Deploy applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/installation/deploy-applications)
-- [Secure applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/general/secure-applications)
-
-_Original product version:_ .NET Framework
+_Applies to:_ .NET Framework
 
 _Original KB number:_ 818014
 
@@ -42,7 +39,7 @@ If you have security configuration policies at the enterprise, machine, and user
 
 During upgrades, testing, and troubleshooting, the configuration of production systems might change in unintentional ways. For example, an administrator might grant administrative credentials to a user while determining whether an error is related to access rights. If that administrator forgets to revoke those elevated credentials after completing the troubleshooting process, the integrity of the system is compromised.
 
-Because this kind of action can degrade system security over time, we recommend that you do regular audits. To run the audits, create a baseline measure by documenting the key aspects of a pristine system. Compare these settings against the baseline over time to determine whether any problems developed that might significantly reduce the level of vulnerability.
+Because this kind of action can degrade system security over time, we recommend that you do regular audits. To run the audits, create a baseline measure by documenting the key aspects of a pristine system. Compare these settings against the baseline over time to determine whether any problems developed that might significantly reduce the level of security.
 
 ## Configure a .NET-connected application and SQL Server to use an alternative port number for network communications
 
