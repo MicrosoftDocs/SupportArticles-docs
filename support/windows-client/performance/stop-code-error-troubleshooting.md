@@ -1,7 +1,7 @@
 ---
 title: Stop code error or bug check troubleshooting
 description: Learn advanced options for troubleshooting stop code errors or bug check errors.
-ms.date: 07/11/2025
+ms.date: 07/14/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
