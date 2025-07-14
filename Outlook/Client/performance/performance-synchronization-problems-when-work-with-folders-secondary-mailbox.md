@@ -79,7 +79,7 @@ This problem may occur if the following conditions are true:
     > [!NOTE]
     > You can add secondary mailboxes to your profile manually through the **Advanced** tab in the Microsoft Exchange dialog box, or automatically by using the "Auto-Mapping" feature on Exchange.
 
-    :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-in-secondary-mailbox/secondary-mailboxes.jpg" alt-text="Screenshot that shows secondary mailboxes.":::
+    :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-secondary-mailbox/secondary-mailboxes.jpg" alt-text="Screenshot that shows secondary mailboxes.":::
 
 - This secondary mailbox contains many folders.
 
@@ -87,7 +87,7 @@ This problem may occur if the following conditions are true:
 
 - The default option to Download shared folders is enabled in your profile.
 
-    :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-in-secondary-mailbox/default-option.jpg" alt-text="Screenshot that shows the default options for Download shared folders.":::
+    :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-secondary-mailbox/default-option.jpg" alt-text="Screenshot that shows the default options for Download shared folders.":::
 
 This problem occurs because Outlook 2010 and later versions locally cache (in your Outlook data file [.ost]) all folders to which you have access in the secondary mailbox. This is a change from earlier versions of Outlook. Outlook 2003 doesn't cache any shared folders. By default, Outlook 2007 caches only those shared folders that don't contain email (such as Calendar, Contacts, and Tasks).
 
@@ -142,7 +142,7 @@ To disable the caching of all shared folders in Outlook 2010 and later versions,
 
 1. Select to clear the **Download shared folders** check box.
 
-    :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-in-secondary-mailbox/download-shared-folders.jpg" alt-text="Screenshot that shows the Download shared folders option.":::
+    :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-secondary-mailbox/download-shared-folders.jpg" alt-text="Screenshot that shows the Download shared folders option.":::
 
 1. Select **OK** two times.
 
@@ -164,7 +164,7 @@ To disable the caching of all shared folders in Outlook 2007, follow these steps
 
 1. Select to clear the **Download shared folders** check box.
 
-    :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-in-secondary-mailbox/download-shared-folders.jpg" alt-text="Screenshot that shows the Download shared folders option.":::
+    :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-secondary-mailbox/download-shared-folders.jpg" alt-text="Screenshot that shows the Download shared folders option.":::
 
 1. Select **OK** two times.
 
@@ -230,7 +230,7 @@ If you want to cache all folders in the secondary Exchange mailbox, follow these
     - Email address
     - Password
 
-    :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-in-secondary-mailbox/auto-account-setup.jpg" alt-text="Screenshot that shows the Auto Account Setup section.":::
+    :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-secondary-mailbox/auto-account-setup.jpg" alt-text="Screenshot that shows the Auto Account Setup section.":::
 
 1. After the account has successfully been configured, select **Finish**.
 
@@ -248,7 +248,7 @@ If you want to cache all folders in the secondary Exchange mailbox, follow these
     - Use Cached Exchange Mode (enabled to allow the secondary mailbox to be cached locally in your .ost file)
     - User name
 
-    :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-in-secondary-mailbox/server-settings.jpg" alt-text="Screenshot that shows Server Settings section.":::
+    :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-secondary-mailbox/server-settings.jpg" alt-text="Screenshot that shows Server Settings section.":::
 
 1. Select **Finish**, select **Close**, select **Close**, and then select **OK**.
 
@@ -259,11 +259,11 @@ If you want to cache all folders in the secondary Exchange mailbox, follow these
 >
 > - New email alerts are displayed for both Exchange mailboxes.
 >
-> :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-in-secondary-mailbox/new-email-alerts.jpg" alt-text="Screenshot that shows new email alerts.":::
+> :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-secondary-mailbox/new-email-alerts.jpg" alt-text="Screenshot that shows new email alerts.":::
 >
 > - Messages that are marked as private can be viewed in the second Exchange mailbox even though the account of the first Exchange mailbox isn't configured specifically to allow for the viewing of private messages.
 >
-> :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-in-secondary-mailbox/private-message.jpg" alt-text="Screenshot that shows an example of a private message.":::
+> :::image type="content" source="media/performance-synchronization-problems-when-work-with-folders-secondary-mailbox/private-message.jpg" alt-text="Screenshot that shows an example of a private message.":::
 
 ## More Information
 

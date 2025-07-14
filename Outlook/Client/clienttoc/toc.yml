@@ -318,7 +318,7 @@
         - name: Outlook.exe.log in %Temp% consumes too much disk space
           href: ../performance/outlook-exe-log-file-in-temp-folder-consumes-too-much-space.md
         - name: Performance and synchronization issues when working with folders in a secondary mailbox
-          href: ../performance/performance-and-synchronization-problems-when-work-with-folders-in-secondary-mailbox.md
+          href: ../performance/performance-synchronization-problems-when-work-with-folders-secondary-mailbox.md
         - name: Performance is slow in Microsoft 365
           href: ../performance/outlook-performance-is-slow-in-office-365.md
         - name: Performance issues with too many items or folders
