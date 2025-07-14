@@ -12,7 +12,7 @@ ms.topic: troubleshooting-known-issue
 
 This article explains the problem where [KB 2998527](https://support.microsoft.com/help/2998527) causes incorrect code lookups on past dates when you use the `TimeZoneInfo` class in an application.
 
-_Original product version:_ .NET Framework 4.6, 4.5
+_Applies to:_ .NET Framework 4.6, 4.5
 
 _Original KB number:_ 3012229
 

@@ -12,7 +12,7 @@ ms.topic: troubleshooting-problem-resolution
 ---
 # Time-out occurs when an application calls the Poll method
 
-_Original product version:_ .NET Core
+_Applies to:_ .NET Core
 
 ## Symptom
 
