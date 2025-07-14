@@ -216,7 +216,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
     ```bash
     sudo mkdir -p /root/packages/rpms
     ```
-3. Download the following packages based on SLES versions:
+3. Download the following packages based on SLES versions of the affected virtual machine:
 
    SLES 12
    ```bash
