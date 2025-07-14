@@ -24,12 +24,6 @@ landingContent:
             url: ./activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md
           - text: Diagnostic Settings Transition from Legacy Solutions
             url: ./activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md
-          - text: Detailed Guide on Pushing Subscription Activity Logs to Sentinel
-            url: ./activity-logs/config-export/pushing-subscription-activity-logs-to-sentinel.md
-          - text: Exporting Directory Level Activity Logs to Event Hub
-            url: ./activity-logs/config-export/exporting-directory-level-activity-logs-to-event-hub.md
-          - text: Resolving Log Limit Issues in Azure Function Apps
-            url: ./activity-logs/config-export/resolving-log-limit-issues-in-azure-function-apps.md
   
   - title: Troubleshoot Azure Application Insights issues
     linkLists:
