@@ -1,7 +1,7 @@
 ---
 title: Bug Check 0x0000001E - KMODE_EXCEPTION_NOT_HANDLED
 description: Describes an issue where an Azure virtual machine (VM) experiences the KMODE_EXCEPTION_NOT_HANDLED bug check (0x0000001E).
-ms.date: 07/10/2025
+ms.date: 07/14/2025
 ms.reviewer: cwhitley
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -22,7 +22,7 @@ When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of
 
 ## Cause
 
-This indicates that a kernel-mode program generated an exception which the error handler did not catch. To interpret it, you must identify which exception was generated with a memory dump.
+This indicates that a kernel-mode program generated an exception that the error handler didn't catch. To interpret it, you must identify which exception was generated with a memory dump.
 
 ## Collect a memory dump for troubleshooting
 
