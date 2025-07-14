@@ -419,7 +419,7 @@
           href: ../user-interface/calling-openmsgstore-opens-archive-mailbox.md
         - name: Can't assign color categories for IMAP accounts
           href: ../user-interface/cannot-assign-color-categories-for-imap-accounts.md
-        - name: "Cannot copy this folder because it may contain private items" error
+        - name: '"Cannot copy this folder because it may contain private items" error'
           href: ../user-interface/cannot-copy-this-folder-because-it-may-contain-private-items.md
         - name: Can't open multiple Excel attachments
           href: ../user-interface/only-two-excel-attachments-can-open.md
