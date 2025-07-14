@@ -142,9 +142,9 @@
         "azure/**/*.md": "JarrettRenshaw",
         "entra/**/*.md": "JarrettRenshaw",
         "azure/devops/**/*.md": "aartig13",
-        "azure/azure-functions/**/*.md": "aartigoyle",
+        "azure/azure-functions/**/*.md": "aartig13",
         "azure/synapse-analytics/**/*.md": "aartig13",
-        "azure/cosmos-db/**/*.md": "aartigoyle",
+        "azure/cosmos-db/**/*.md": "aartig13",
         "developer/**/*.md": "aartig13",
         "sql/**/*.md": "aartig13",
         "windows/win32/**/*.md": "aartig13",
@@ -171,7 +171,7 @@
         "sales-copilot/**/*.md": "CEnSKM-ai-copilot"
       },
       "ms.author": {
-        "**/*.md": "aartigoyle",
+        "**/*.md": "dcscontentpm",
         "azure/virtual-desktop/**/*.*": "kaushika",
         "azure/**/*.md": "jarrettr",
         "entra/**/*.md": "jarrettr",
