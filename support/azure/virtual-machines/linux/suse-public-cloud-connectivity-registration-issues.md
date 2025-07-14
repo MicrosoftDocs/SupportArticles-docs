@@ -228,7 +228,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
    sudo zypper --pkg-cache-dir /root/packages/ download cloud-regionsrv-client cloud-regionsrv-client-plugin-azure regionServiceClientConfigAzure python3-azuremetadata suseconnect-ng python3-cssselect python3-toml python3-lxml python3-M2Crypto python3-zypp-plugin python3-dnspython libsuseconnect suseconnect-ruby-bindings docker docker-bash-completion runc containerd libcontainers-common bash-completion
    ```
 
-5. Run the following commands:
+4. Run the following commands:
 
     ```bash
     sudo find /root/packages/ -type f -name "*.rpm" -exec cp {} /root/packages/rpms/ \;
@@ -236,7 +236,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
     sudo tar -czvf suse-public-registration.tgz rpms
     ```
 
-6. Transfer `suse-public-registration.tgz` to the broken instance:
+5. Transfer `suse-public-registration.tgz` to the broken instance:
 
     ```bash
     sudo scp /root/packages/suse-public-registration.tgz user@targetip:/tmp
@@ -245,7 +245,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
     > [!NOTE]
     > Replace `user` and `targetip` as appropriate.
 
-7. Sign in to the broken instance to extract and install the packages:
+6. Sign in to the broken instance to extract and install the packages:
 
     ```bash
     sudo cd tmp
@@ -254,7 +254,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
     sudo zypper --no-refresh --no-remote --non-interactive install --force *.rpm
     ```
 
-8. Register the VM again:
+7. Register the VM again:
 
     ```bash
     sudo registercloudguest --force-new
