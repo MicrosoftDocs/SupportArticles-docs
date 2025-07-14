@@ -1,7 +1,7 @@
 ---
 title: Migrated user across forests isn't found in People Picker
 description: The user doesn't exist or isn't unique error for migrated users across forests in SharePoint.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Profiles and People\People Picker
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - SharePoint Server 2016
   - SharePoint Server 2013

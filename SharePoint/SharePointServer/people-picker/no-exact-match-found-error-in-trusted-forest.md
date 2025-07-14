@@ -1,8 +1,8 @@
 ---
 title: People Picker doesn't work in a trusted forest
 description: Resolves an issue that occurs when you configure a forest trust between two Active Directory forests and the Windows Internet Name Service (WINS) isn't enabled for NetBIOS resolution.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

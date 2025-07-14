@@ -1,8 +1,8 @@
 ---
 title: You receive an end tag error when you open a DOCX file in Word 2013, 2010, or 2007
 description: Provides an automated solution to fix errors you may get when opening Word 2013, 2010, or 2007 documents containing equations.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

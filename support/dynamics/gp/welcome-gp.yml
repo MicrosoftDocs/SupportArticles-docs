@@ -7,8 +7,8 @@ metadata:
   description: Landing page for Microsoft Dynamics GP troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: dynamics-gp
   ms.topic: landing-page # Required
-  author: aartig13 #Required; your GitHub user alias, with correct capitalization.
-  ms.author: aartigoyle #Required; microsoft alias of author; optional team alias.
+  author: ChristySu #Required; your GitHub user alias, with correct capitalization.
+  ms.author: christys #Required; microsoft alias of author; optional team alias.
   ms.date: 04/30/2025
   ms.reviewer: theley
 

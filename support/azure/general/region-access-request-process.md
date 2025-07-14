@@ -3,8 +3,8 @@ title: Azure region access request process
 description: Describes the process to request access for certain Azure regions.
 ms.date: 11/25/2024
 ms.service: azure-common-issues-support
-ms.author: jarrettr
-author: JarrettRenshaw
+ms.author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Azure region access request process  

@@ -1,13 +1,13 @@
 ---
 title: External users can't find Microsoft 365 users in the people picker
 description: External users can't find Microsoft 365 users in the people picker when they try to share a SharePoint Online resource.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Profiles and People\People Picker
   - CSSTroubleshoot

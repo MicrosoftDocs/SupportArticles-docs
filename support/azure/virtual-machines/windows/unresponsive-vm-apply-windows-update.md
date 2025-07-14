@@ -3,7 +3,7 @@ title: Azure VM is unresponsive with C01A001D error when applying Windows Update
 description: This article provides steps to resolve issues where Windows update generates an error and becomes unresponsive in an Azure VM.
 services: virtual-machines
 documentationcenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
@@ -12,7 +12,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 06/09/2023
-ms.author: jarrettr
+ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
 # VM is unresponsive with "C01A001D" error after applying Windows Update

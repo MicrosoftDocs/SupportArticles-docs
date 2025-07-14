@@ -1,8 +1,8 @@
 ---
 title: Update the DST information manually in SharePoint Server
 description: Describes how to manually update the DST information in the time zone definition file, Timezone.xml, in SharePoint Server.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

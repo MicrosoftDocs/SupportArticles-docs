@@ -1,8 +1,8 @@
 ---
 title: Unable to start Access
 description: Fixes an issue in which you can't launch Access because of a permissions issue in the registry.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -7,8 +7,8 @@ metadata:
   description: This article lists Knowledge Base (KB) and other Support articles for Microsoft Identity Manager. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: microsoft-identity-manager
   ms.topic: landing-page # Required
-  author: Cloud-Writer  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: meerak #Required; microsoft alias of author; optional team alias.
+  author: helenclu  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: luche #Required; microsoft alias of author; optional team alias.
   ms.date: 04/30/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

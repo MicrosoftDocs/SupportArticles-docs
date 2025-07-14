@@ -1,8 +1,8 @@
 ---
 title: Switchboard Manager option doesn't appear
 description: Fixes an issue in which you can't locate the Switchboard Manager option in the ribbon when you create a new switchboard form in an .accdb client database in Access.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

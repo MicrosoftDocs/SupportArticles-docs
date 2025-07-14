@@ -1,8 +1,8 @@
 ---
 title: Can't set up Outlook for Mac 2011 to use the archive mailbox feature in Exchange Online
 description: Describes how you can't use the archive mailbox feature in Exchange Online for Microsoft 365 with Outlook for Mac 2011. Outlook for Mac 2011 doesn't support archiving. Provides a workaround.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

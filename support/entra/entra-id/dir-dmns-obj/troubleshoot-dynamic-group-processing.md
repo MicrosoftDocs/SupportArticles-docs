@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Groups with dynamic membership processing in Microsoft Entra ID
 description: Learn how to troubleshoot dynamic group processing by using pause and resume dynamic group processing scripts
-author: JarrettRenshaw
-ms.author: jarrettr
+author: genlin
+ms.author: genli
 ms.reviewer: yuhko, barclayn, v-weizhu
 ms.date: 04/24/2025
 ms.service: entra-id

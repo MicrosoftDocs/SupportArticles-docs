@@ -1,13 +1,13 @@
 ---
 title: Excel statistical functions RSQ
 description: Describes the Excel statistical function RSQ.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - Editing\Functions
   - CSSTroubleshoot

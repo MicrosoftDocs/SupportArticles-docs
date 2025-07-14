@@ -1,7 +1,7 @@
 ---
 title: Error when you compile a module or run a procedure in Access
 description: Resolves the (Your Microsoft Office Access database or project contains a missing or broken reference to the file) error in Access.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -9,7 +9,7 @@ audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Access for Microsoft 365
   - Access 2019

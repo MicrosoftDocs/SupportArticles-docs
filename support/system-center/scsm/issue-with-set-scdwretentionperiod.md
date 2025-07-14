@@ -1,8 +1,8 @@
 ---
 title: Set-SCDWRetentionPeriod doesn't work correctly
 description: Discusses that the Set-SCDWRetentionPeriod cmdlet doesn't set the data retention period correctly. Provides a workaround.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 ms.reviewer: aakashb, khusmeno
 ms.date: 05/21/2024
 ---

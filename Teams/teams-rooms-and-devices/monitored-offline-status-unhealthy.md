@@ -4,8 +4,8 @@ description: Resolve the issue that causes the Monitored or Offline signal of a 
 ms.reviewer: joolive
 ms.topic: troubleshooting
 ms.date: 12/10/2023
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: Admin
 search.appverid: 

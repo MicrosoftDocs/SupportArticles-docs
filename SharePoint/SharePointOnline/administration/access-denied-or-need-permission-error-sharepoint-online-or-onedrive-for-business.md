@@ -1,8 +1,8 @@
 ---
 title: Access Denied or You need permission errors in SharePoint Online and OneDrive
 description: Resolve common access and permission errors.
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 05/15/2025
 audience: Admin

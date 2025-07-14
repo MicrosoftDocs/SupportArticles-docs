@@ -1,8 +1,8 @@
 ---
 title: How to use mailbox audit logs in Microsoft 365
 description: Describes how to use mailbox audit logs to determine when a mailbox was updated unexpectedly or whether items are missing in Microsoft 365 dedicated.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

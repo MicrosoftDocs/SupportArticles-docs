@@ -4,8 +4,8 @@ description: Resolve the issue that causes the Room Camera, Default Room Camera,
 ms.reviewer: lamos
 ms.topic: troubleshooting
 ms.date: 10/30/2023
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: Admin
 search.appverid: 

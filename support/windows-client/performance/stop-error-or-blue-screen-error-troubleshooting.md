@@ -1,28 +1,28 @@
 ---
-title: Stop code error or bug check troubleshooting
-description: Learn advanced options for troubleshooting stop code errors or bug check errors.
-ms.date: 07/14/2025
+title: Stop error, bug check, or blue screen error troubleshooting
+description: Learn advanced options for troubleshooting stop errors, also known as blue screen errors or bug check errors.
+ms.date: 01/15/2025
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
-ms.reviewer: kaushika, mereddy
+ms.reviewer: kaushika
 audience: itpro
 ---
-# Advanced troubleshooting for stop code errors
+# Advanced troubleshooting for stop or blue screen errors
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806236" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows boot issues</span>
 
 > [!NOTE]
-> If you're not a support agent or IT professional, you'll find more helpful information about stop code error messages in [Troubleshoot stop code errors](https://support.microsoft.com/sbs/windows/troubleshoot-blue-screen-errors-5c62726c-6489-52da-a372-3f73142c14ad).
+> If you're not a support agent or IT professional, you'll find more helpful information about stop error ("blue screen") messages in [Troubleshoot blue screen errors](https://support.microsoft.com/sbs/windows/troubleshoot-blue-screen-errors-5c62726c-6489-52da-a372-3f73142c14ad).
 
 _Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client
 
 ## What causes stop errors?
 
-When Windows encounters a condition that compromises safe system operation, the system stops. Examples include something failing that could compromise security or lead to corruption of the operating system (OS) and/or user data. When the machine stops in order to prevent the operating system from moving forward in these conditions, it is called a bug check (or bugcheck). It is also commonly referred to as a system crash, a kernel error, or a stop code error. On preview releases of Windows, the screen color can be green, leading to the green screen of death (GSOD).
+When Windows encounters a condition that compromises safe system operation, the system stops. Examples include something failing that could compromise security or lead to corruption of the operating system (OS) and/or user data. When the machine stops in order to prevent the operating system from moving forward in these conditions, it is called a bug check (or bugcheck). It is also commonly referred to as a system crash, a kernel error, a blue screen, a blue screen of death (BSOD), or a stop error. On preview releases of Windows, the screen color can be green, leading to the green screen of death (GSOD).
 
 There's no simple explanation for the cause of stop errors. Many different factors can be involved. Our analysis of the root causes of crashes indicates that:
 

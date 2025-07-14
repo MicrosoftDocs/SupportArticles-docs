@@ -2,8 +2,8 @@
 title: Can't pull images from Azure Container Registry to Kubernetes
 description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from a container registry to an AKS cluster.
 ms.date: 06/05/2025
-author: JarrettRenshaw
-ms.author: jarrettr
+author: genlin
+ms.author: genli
 ms.reviewer: chiragpa, andbar, albarqaw, v-weizhu, v-leedennis
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons, devx-track-azurecli

@@ -1,13 +1,13 @@
 ---
 title: Issues when you retrieve SharePoint list data
 description: Describes issues that you may encounter when you request data from SharePoint lists in Access, and provide resolutions.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 search.appverid: 
   - MET150
 appliesto: 

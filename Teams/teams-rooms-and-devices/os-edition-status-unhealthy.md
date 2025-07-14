@@ -4,8 +4,8 @@ description: Resolve the issue that causes the OS Edition signal of a Teams Room
 ms.reviewer: joolive
 ms.topic: troubleshooting
 ms.date: 12/08/2023
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: Admin
 search.appverid: 

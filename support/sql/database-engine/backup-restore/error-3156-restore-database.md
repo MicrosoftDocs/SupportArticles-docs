@@ -2,8 +2,8 @@
 title: Error 3156 when you restore a database
 description: This article provides workarounds for the 3156 error that occurs when you restore a database with a memory-optimized filegroup in SQL Server.
 ms.date: 04/15/2021
-author: aartig13
-ms.author: aartigoyle
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: jolamber, sqlblt
 ms.custom: sap:Database Backup and Restore
 ---

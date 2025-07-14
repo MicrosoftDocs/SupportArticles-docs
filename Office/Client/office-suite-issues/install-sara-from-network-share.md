@@ -1,8 +1,8 @@
 ---
 title: Install Microsoft Support and Recovery Assistant from a network share or internet location
 description: Learn how to install SaRA from a network share and update the SaRA files so that SaRA installations use the latest files.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

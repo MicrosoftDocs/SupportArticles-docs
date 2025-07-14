@@ -13,7 +13,7 @@ appliesto:
 - Exchange Server 2016 
 - Exchange Online
 search.appverid: MET150
-ms.reviewer: ninob, jarrettr, v-six
+ms.reviewer: ninob, genli, v-six
 author: cloud-writer
 ms.author: meerak
 ms.date: 01/24/2024

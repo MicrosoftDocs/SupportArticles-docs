@@ -1,8 +1,8 @@
 ---
 title: Unable to open an Access database on a server
 description: Fixes an issue in which you may receive a file already in use error message when you open an Access database.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

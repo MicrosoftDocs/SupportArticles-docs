@@ -1,7 +1,7 @@
 ---
 title: Can't install 64-bit Office with 32-bit Office
 description: Describes why you may receive the error message You cannot install the 64-bit version of Office 2010 because you have 32-bit Office products installed.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - DownloadInstall\SxS\SxSOrPerpetual
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Office 2010
 ms.date: 06/06/2024

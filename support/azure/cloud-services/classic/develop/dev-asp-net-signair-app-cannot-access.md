@@ -3,8 +3,8 @@ title: ASP.NET SignalR application cannot be accessed although all role instance
 description: Provides information about troubleshooting issues in which the ASP.NET SignalR application is not able to access with error "Can't reach this page".
 ms.date: 09/26/2022
 ms.reviewer: 
-author: JarrettRenshaw
-ms.author: jarrettr
+author: genlin
+ms.author: genli
 ms.service: azure-cloud-services-classic
 ms.custom: sap:Development
 ---

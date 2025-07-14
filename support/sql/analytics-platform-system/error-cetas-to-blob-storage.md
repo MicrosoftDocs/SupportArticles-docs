@@ -3,7 +3,7 @@ title: Error 105005 when you do CETAS to blob storage
 description: This article provides resolutions for the error that occurs when you do a CETAS operation to Azure Blob storage by using PolyBase.
 ms.date: 05/09/2025
 ms.custom: sap:Parallel Data Warehouse (APS)
-ms.reviewer: daleche, aartigoyle, ccaldera
+ms.reviewer: daleche, christys, ccaldera
 ---
 # Error 105005 when you do CETAS operation to Azure blob storage
 

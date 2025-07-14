@@ -3,7 +3,7 @@ title: Troubleshoot Windows VM deployment in Azure
 description: Troubleshoot Resource Manager deployment issues when you create a new Windows virtual machine in Azure
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: azure-virtual-machines
@@ -12,7 +12,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 06/04/2024
-ms.author: jarrettr
+ms.author: genli
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ---
 # Troubleshoot deployment issues when creating a new Windows VM in Azure

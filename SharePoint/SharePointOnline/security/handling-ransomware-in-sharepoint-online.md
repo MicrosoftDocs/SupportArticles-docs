@@ -1,7 +1,7 @@
 ---
 title: Handling ransomware in Sharepoint Online
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 10/09/2024
 audience: ITPro

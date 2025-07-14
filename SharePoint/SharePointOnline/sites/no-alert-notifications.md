@@ -1,13 +1,13 @@
 ---
 title: Users Don't Receive SharePoint Alert Notifications
 description: This article discusses and resolves an issue that prevents users from receiving SharePoint alert notifications.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Lists and Libraries\Alerts
   - CSSTroubleshoot

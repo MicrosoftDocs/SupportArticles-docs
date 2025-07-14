@@ -1,8 +1,8 @@
 ---
 title: How to Remove a Leading Split in a Task
 description: Provides the workaround to remove a leading split in a task in Microsoft Project.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

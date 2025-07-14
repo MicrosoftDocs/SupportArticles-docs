@@ -1,13 +1,13 @@
 ---
 title: Publishing approval workflow doesn't automatically start
 description: A Publishing Approval workflow doesn't start automatically with the error The workflow could not update the item, possibly because one or more columns for the item require a different type of information.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Workflows and Automation\Performance
   - CSSTroubleshoot

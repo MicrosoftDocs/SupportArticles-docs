@@ -1,13 +1,13 @@
 ---
 title: SharePoint Workspace doesn't sync automatically
 description: Describes conditions under which a SharePoint workspace or the SharePoint Files tool doesn't sync automatically.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Hybrid with M365 (OneDrive,App launcher, Site following, PowerApps, Flow, etc.)
   - CSSTroubleshoot

@@ -1,13 +1,13 @@
 ---
 title: Exchange Online calendar isn't displayed in SharePoint Online
 description: The ability to use the calendar overlay in a SharePoint Online or SharePoint Server calendar that's retrieved from Exchange Online isn't supported.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Lists and Libraries\Other
   - CSSTroubleshoot

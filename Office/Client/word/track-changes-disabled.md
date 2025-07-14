@@ -1,13 +1,13 @@
 ---
 title: Track Changes functionality is disabled when RMS is applied
 description: Describes that the Track Changes functionality is disabled when Rights Management Services (RMS) is applied, and provides a resolution.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Sharing\Collab

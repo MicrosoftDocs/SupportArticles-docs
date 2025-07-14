@@ -1,13 +1,13 @@
 ---
 title: Error after you accept an invite to a SharePoint
 description: This article introduces that using relative URLs for content types across site collections is not supported.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Sharing\Errors
   - CSSTroubleshoot

@@ -1,13 +1,13 @@
 ---
 title: Something went wrong when you access a SharePoint 2013 site
 description: Describes an issue in which you receive a Sorry, something went wrong error message when you access a SharePoint 2013 website.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Farm Administration
   - CSSTroubleshoot

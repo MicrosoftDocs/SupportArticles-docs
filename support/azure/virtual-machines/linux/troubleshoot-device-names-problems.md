@@ -3,7 +3,7 @@ title: Troubleshoot Linux VM device name changes in Azure
 description: Explains why Linux VM device names change and how to solve the problem.
 services: virtual-machines
 documentationcenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 tags: ''
 ms.custom: sap:My VM is not booting, linux-related-content
@@ -14,7 +14,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
 ms.date: 07/24/2024
-ms.author: jarrettr
+ms.author: genli
 ---
 
 # Troubleshoot Linux VM device name changes

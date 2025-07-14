@@ -1,11 +1,11 @@
 ---
 title: Running a macro automatically when you start Project
 description: Describes how to create a macro and run it automatically when you start Project.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
 search.appverid: 

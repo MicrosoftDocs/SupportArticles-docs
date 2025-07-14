@@ -1,6 +1,6 @@
 ---
-author: JarrettRenshaw
-ms.author: jarrettr
+author: genlin
+ms.author: genli
 ms.service: azure-virtual-machines
 ms.topic: include
 ms.date: 06/17/2024

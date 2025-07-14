@@ -1,7 +1,7 @@
 ---
 title: Support engineers can't guarantee complete repair of all corrupted Office files
 description: Not all corrupted Office files including Word, Excel, PowerPoint, and Outlook files can be completely repaired.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - Open\Recovery
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Microsoft 365 Personal
   - Microsoft 365 Home

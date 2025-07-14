@@ -1,8 +1,8 @@
 ---
 title: Supportability about SQL collation for SharePoint databases
 description: Describes the Supportability regarding SQL Server collation for SharePoint databases and TempDB.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

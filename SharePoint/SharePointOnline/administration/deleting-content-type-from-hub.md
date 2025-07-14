@@ -1,7 +1,7 @@
 ---
 title: How to delete a content type from the SharePoint Content Type Hub
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 12/17/2023
 audience: Admin

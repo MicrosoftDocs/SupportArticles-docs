@@ -1,13 +1,13 @@
 ---
 title: NullReferenceException with SharePoint 2013 Products Configuration Wizard
 description: Describes an issue in which you receive a NullReferenceException when there are comments in the web.config file of the SharePoint Web application.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Setup, Upgrade, Migration and Patching
   - CSSTroubleshoot

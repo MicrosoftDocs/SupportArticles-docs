@@ -3,7 +3,7 @@ title: Too many admin sessions Open error occurs when you try to make an RDP con
 description: Learn how to troubleshoot the "too many admin sessions open" error when you try to connect to an Azure VM.
 services: virtual-machines
 documentationCenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 editor: v-jesits
 ms.service: azure-virtual-machines
@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 09/16/2021
-ms.author: jarrettr
+ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
 # Too many admin sessions open error when you try to connect to an Azure Windows VM

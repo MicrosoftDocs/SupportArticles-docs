@@ -1,8 +1,8 @@
 ---
 title: Heavy Excel workloads run slowly in multi-session environments
 description: Describes a slow performance issue that you might experience when you run heavy Excel workloads in a multi-session environment. Provides workarounds.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

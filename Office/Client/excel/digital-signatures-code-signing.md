@@ -1,7 +1,7 @@
 ---
 title: Digital signatures and code signing in workbooks in Excel
 description: Provides general information about digital signatures and code signing in workbooks in Excel 2003 and in later versions of Excel.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Excel 2007
   - Excel 2003

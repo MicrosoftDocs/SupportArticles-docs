@@ -1,8 +1,8 @@
 ---
 title: OneDrive local folder name isn't updated with the changed organization name
 description: The OneDrive local folder name in configured clients isn't updated after the organization name is changed.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

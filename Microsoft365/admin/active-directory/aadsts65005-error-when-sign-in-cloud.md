@@ -1,8 +1,8 @@
 ---
 title: AADSTS65005 error when you try to sign in to Microsoft Cloud services
 description: Describes an error that occurs when you try to sign in to or authenticate to one of the Microsoft Cloud Services by using a company app such as Microsoft 365, Intune, Dynamics, Power BI, or Azure.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

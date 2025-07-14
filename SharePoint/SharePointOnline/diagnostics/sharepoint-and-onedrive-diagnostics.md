@@ -1,7 +1,7 @@
 ---
 title: Self-help diagnostics for SharePoint Online and OneDrive administrators
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 08/21/2024
 audience: Admin

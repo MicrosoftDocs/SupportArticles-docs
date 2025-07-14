@@ -1,7 +1,7 @@
 ---
 title: Incorrect registry key for Access
 description: Describes an issue in which Access may not detect/repair the registry key that specifies the configured version of Access. Provides a solution.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Access 2010
   - Access 2013

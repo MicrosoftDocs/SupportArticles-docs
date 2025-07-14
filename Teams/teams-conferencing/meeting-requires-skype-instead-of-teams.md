@@ -1,7 +1,7 @@
 ---
 title: A Teams meeting wants to open Skype for Business
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 ms.date: 10/30/2023
 audience: ITPro
 ms.topic: troubleshooting

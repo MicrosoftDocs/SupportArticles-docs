@@ -1,7 +1,7 @@
 ---
 title: Enabling Conditional Access in Teams causes tabs to stop working
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 ms.date: 10/30/2023
 audience: ITPro
 ms.topic: troubleshooting

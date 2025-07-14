@@ -2,8 +2,8 @@
 title: Identify computers that have MCA issues
 description: Discusses how to determine whether you have an MCA issue that you can fix by configuring MaxConcurrentApi in the registry, and how to identify the affected computers in your infrastructure.
 ms.date: 01/15/2025
-author: kaushika-msft
-ms.author: kaushika
+author: Deland-Han
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

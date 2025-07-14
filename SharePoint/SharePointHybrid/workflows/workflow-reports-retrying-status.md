@@ -1,7 +1,7 @@
 ---
 title: Workflow reports a status of Failed on Start (retrying)
 description: A Collect Feedback – SharePoint 2010 workflow reports a status of Failed on Start (retrying) in SharePoint Online or SharePoint Server.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Workflows and Automation\Other
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - SharePoint Online
   - SharePoint Server

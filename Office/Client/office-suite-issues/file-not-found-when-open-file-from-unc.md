@@ -1,8 +1,8 @@
 ---
 title: File not found error when you try to open an Office file from a UNC share
 description: Resolves an issue in which you cannot open an Office file from a UNC share by using Office Online. Additionally, you receive the error message the URL of the original file is not valid or the document is not publically assessable.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

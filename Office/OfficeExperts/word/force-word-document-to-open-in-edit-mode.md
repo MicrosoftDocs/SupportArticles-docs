@@ -1,8 +1,8 @@
 ---
 title: Open word documents in edit mode from a hyperlink in an email message
 description: Describes how to force a Word document to open in edit mode from an email link by using a SharePoint workflow email task.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 ms.reviewer: warrenr
 manager: dcscontentpm
 search.appverid: 

@@ -1,8 +1,8 @@
 ---
 title: Unable to share or break inheritance in SharePoint and OneDrive
 description: Fixes an issue in which you can't share or break inheritance of a folder, list, or library because of too many uniquely permitted items in a list or library.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

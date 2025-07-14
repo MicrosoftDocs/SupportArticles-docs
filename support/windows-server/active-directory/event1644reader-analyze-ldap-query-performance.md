@@ -5,7 +5,7 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, mingchen, nasira, jseifert, deverett, justintu, arrenc, aartigoyle
+ms.reviewer: kaushika, mingchen, nasira, jseifert, deverett, justintu, arrenc, christys
 ms.custom:
 - sap:active directory\ldap configuration and interoperability
 - pcy:WinComm Directory Services

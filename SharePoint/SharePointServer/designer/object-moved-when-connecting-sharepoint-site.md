@@ -1,8 +1,8 @@
 ---
 title: Object moved when connecting to a SharePoint site
 description: Resolves a problem in which you can't use SharePoint Designer 2013 to connect to a SharePoint site. When this issue occurs, you receive a The server could not complete your request error message, followed by an Object moved error message.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

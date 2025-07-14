@@ -1,14 +1,14 @@
 ---
 title: Troubleshoot View In File Explorer issues in SharePoint
 description: Discusses how to troubleshoot issues that you experience when you use the View In File Explorer command.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 ms.date: 12/17/2023
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - SharePoint Online
 ms.custom: 

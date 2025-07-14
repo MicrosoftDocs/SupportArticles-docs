@@ -2,12 +2,12 @@
 title: Supportability of adding Azure VMs to an existing availability set
 description: This article provides a supportability matrix about which VM series you can mix in the same availability set
 documentationcenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.date: 12/07/2021
-ms.author: jarrettr
+ms.author: genli
 ms.custom: sap:Cannot create a VM
 ---
 # Supportability of adding Azure VMs to an existing availability set

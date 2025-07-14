@@ -2,8 +2,8 @@
 title: How to enable Failed Request Tracing and logging for UNC hosting
 description: Walks through how to enable Failed Request Tracing and logging for UNC hosting
 ms.date: 11/23/2007
-ms.author: aartigoyle
-author: aartig13
+ms.author: haiyingyu
+author: HaiyingYu
 ms.reviewer: johnhart, riande
 ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---

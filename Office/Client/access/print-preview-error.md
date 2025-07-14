@@ -1,8 +1,8 @@
 ---
 title: Unable to print or preview a report
 description: Describes a problem that occurs when you try to print or preview the report, and then you move between the report pages. You receive a No current record error message.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

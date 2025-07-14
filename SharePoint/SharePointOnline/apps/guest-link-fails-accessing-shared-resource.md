@@ -1,13 +1,13 @@
 ---
 title: Can't access a shared SharePoint app item by using a guest link
 description: You can't click a guest link to a SharePoint Online app item when you publish the app to a SharePoint app catalog.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:App Bar and Navigation\Other
   - CSSTroubleshoot

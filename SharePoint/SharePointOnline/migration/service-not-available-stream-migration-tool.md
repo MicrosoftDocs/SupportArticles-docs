@@ -1,8 +1,8 @@
 ---
 title: Stream migration tool returns Service not available
 description: Describes an issue in which you receive a Service is not available error message when you start the Stream migration tool.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 ms.reviewer: prbalusu, salarson
 manager: dcscontentpm
 search.appverid: 

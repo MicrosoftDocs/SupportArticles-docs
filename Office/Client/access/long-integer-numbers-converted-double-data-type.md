@@ -1,7 +1,7 @@
 ---
 title: Access exports long integer numbers as double data type with decimal places in dBase IV (.dbf) format
 description: Describes a problem that occurs you export an Access table that contains long integer numbers to dBase IV (*.dbf) format. During export, the numbers are converted to double data type and will show decimal places.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -9,7 +9,7 @@ audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Access for Microsoft 365
   - Access 2019

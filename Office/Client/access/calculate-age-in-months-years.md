@@ -1,7 +1,7 @@
 ---
 title: Calculate age in months and in years
 description: Describes how to create two functions that you can use to calculate the age of a person or of a thing that are based on a specified date in Access.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 ms.custom: 
   - CI 111294
@@ -10,7 +10,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.reviewer: mattbum
 appliesto: 
   - Access 2007

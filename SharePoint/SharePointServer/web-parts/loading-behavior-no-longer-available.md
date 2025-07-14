@@ -1,8 +1,8 @@
 ---
 title: Loading behavior option is removed
 description: In SharePoint Search Results Web Part, the loading behavior option is removed after installing updates.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

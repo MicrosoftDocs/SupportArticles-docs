@@ -1,13 +1,13 @@
 ---
 title: Command bars of Excel add-ins are not displayed or removed automatically
 description: Describes issues in which command bars that are included in Excel add-ins are not displayed or removed when the add-ins are loaded or unloaded in Excel 2013.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - Extensibility\AddIns
   - CSSTroubleshoot

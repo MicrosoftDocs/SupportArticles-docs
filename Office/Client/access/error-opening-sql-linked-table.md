@@ -1,8 +1,8 @@
 ---
 title: Error (ODBC--call failed) when you open a table that is linked to a SQL Database instance
 description: Describes an issue in which you receive an error message while linking a SQL Database instance table by using ODBC. The issue occurs when you open the linked table in Access.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

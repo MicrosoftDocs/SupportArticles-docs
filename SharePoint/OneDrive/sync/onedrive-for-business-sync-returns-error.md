@@ -1,13 +1,13 @@
 ---
 title: We can't connect to the specified SharePoint site
 description: Describes an issue that triggers a We can't connect to the specified SharePoint site error. Occurs when you click Sync Now in OneDrive for Business or SharePoint. A resolution is provided.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
 appliesto: 

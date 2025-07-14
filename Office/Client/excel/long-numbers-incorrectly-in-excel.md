@@ -1,7 +1,7 @@
 ---
 title: Long numbers are displayed incorrectly in Excel
 description: Describes how to show long numbers in Excel cells.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - Editing\Cells
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Excel 2010
   - Microsoft Office Excel 2007

@@ -1,7 +1,7 @@
 ---
 title: Teams website tab does not display portals with Conditional Access restrictions
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 ms.date: 10/30/2023
 audience: ITPro
 ms.topic: troubleshooting

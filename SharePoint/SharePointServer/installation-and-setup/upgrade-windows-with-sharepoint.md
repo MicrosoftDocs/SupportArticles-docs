@@ -1,13 +1,13 @@
 ---
 title: Upgrade Windows on a server that has SharePoint Server installed
 description: Describes how to upgrade the Windows Server version of a server used for SharePoint.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Setup, Upgrade, Migration and Patching
   - CSSTroubleshoot

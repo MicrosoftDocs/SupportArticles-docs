@@ -1,7 +1,7 @@
 ---
 title: Error when accessing SharePoint or OneDrive after role activation in PIM
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 02/24/2025
 audience: Admin

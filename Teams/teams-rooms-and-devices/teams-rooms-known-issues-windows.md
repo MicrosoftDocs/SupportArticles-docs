@@ -1,8 +1,8 @@
 ---
 title: Known issues with Teams Rooms on Windows
 description: Provides a list of known issues for Teams Rooms on Windows.
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 ms.reviewer: mattslomka, sohailta, garyanselme, czawideh
 manager: dcscontentpm
 audience: ITPro

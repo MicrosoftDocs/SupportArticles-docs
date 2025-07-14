@@ -1,7 +1,7 @@
 ---
 title: Can't open online-only file error when opening a file in OneDrive
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 12/17/2023
 audience: ITPro

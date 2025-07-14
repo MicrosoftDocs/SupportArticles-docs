@@ -4,13 +4,13 @@ title: Blue screen errors when booting an Azure VM
 description: Learn how to troubleshoot the issue that the blue screen error is received when booting.
 services: virtual-machines
 documentationCenter: ''
-author: JarrettRenshaw
+author: genlin
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 05/13/2024
-ms.author: jarrettr
+ms.author: genli
 ms.custom: sap:My VM is not booting
 ---
 # Windows shows blue screen error when booting an Azure VM

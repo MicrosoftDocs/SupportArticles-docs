@@ -63,10 +63,10 @@
         "Connections/**/*.md": "viva-connections"
       },
       "author": {
-        "**/*.md": "Cloud-Writer"
+        "**/*.md": "helenclu"
       },
       "ms.author": {
-        "**/*.md": "meerak"
+        "**/*.md": "luche"
       }
     },
     "template": [],

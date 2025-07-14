@@ -1,8 +1,8 @@
 ---
 title: Excel cannot complete this task with available resources error in Excel 2010
 description: Provides information about this error and various steps you can take to resolve it depending on the scenario.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

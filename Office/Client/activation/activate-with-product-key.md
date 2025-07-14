@@ -1,9 +1,9 @@
 ---
 title: Activating Microsoft 365 Apps for Business with a product key
 description: Describes how to activate Microsoft 365 Apps for Business with a product key.
-author: Cloud-Writer
+author: helenclu
 ms.reviewer: vikkarti
-ms.author: meerak
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

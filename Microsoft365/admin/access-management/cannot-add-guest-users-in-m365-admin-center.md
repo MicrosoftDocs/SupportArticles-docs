@@ -1,7 +1,7 @@
 ---
 title: Unable to add guests in Microsoft 365 admin center
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 10/20/2023
 audience: Admin

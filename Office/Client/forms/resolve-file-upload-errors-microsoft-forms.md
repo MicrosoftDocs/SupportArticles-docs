@@ -1,7 +1,7 @@
 ---
 title: Resolve file upload errors in Microsoft Forms
 description: Resolve some common errors that you might expreience when you try to add a file upload question to a form or upload a file.
-author: Cloud-Writer
+author: helenclu
 ms.reviewer: zakirh
 manager: dcscontentpm
 search.appverid: 

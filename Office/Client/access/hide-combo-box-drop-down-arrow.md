@@ -1,8 +1,8 @@
 ---
 title: Hide the drop-down arrow on a combo box
 description: Describes the detailed steps to hide the drop-down arrow on a combo box until the combo box is selected.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

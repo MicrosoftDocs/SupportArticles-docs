@@ -10,7 +10,7 @@ ms.custom:
   - sap:Client Connectivity
   - Exchange Online
   - CSSTroubleshoot
-ms.reviewer: batre, jmartin, jarrettr, jamesmi, v-six
+ms.reviewer: batre, jmartin, genli, jamesmi, v-six
 appliesto: 
   - Exchange Online
   - Exchange Server 2019

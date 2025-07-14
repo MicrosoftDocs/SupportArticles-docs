@@ -1,11 +1,11 @@
 ---
 title: The Office Feature Updates task 
 description: Describes Office Feature Updates task
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
 search.appverid: 

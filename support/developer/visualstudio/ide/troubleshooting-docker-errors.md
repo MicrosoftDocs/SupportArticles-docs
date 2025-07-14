@@ -4,8 +4,8 @@ description: Troubleshoot problems you encounter when using Visual Studio to cre
 ms.devlang: dotnet
 ms.custom: sap:Integrated Development Environment (IDE)\Other, linux-related-content
 ms.date: 02/20/2025
-author: aartig13
-ms.author: aartigoyle
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: ghogen
 ---
 # Troubleshoot Visual Studio development with Docker

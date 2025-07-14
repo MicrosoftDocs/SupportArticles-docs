@@ -1,11 +1,11 @@
 ---
 title: Floating-point arithmetic may give inaccurate result in Excel
 description: Discusses that floating-point arithmetic may give inaccurate results in Excel.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.reviewer: clayj
 ms.custom: 
   - Reliability

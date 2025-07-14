@@ -4,7 +4,7 @@ description: Fixes an issue in which Windows 10 Group Policy-based auto-enrollme
 ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Enroll Device - Windows\AutoEnrollment
-ms.reviewer: kaushika, meerak
+ms.reviewer: kaushika, luche
 ---
 # 80180002b error during Windows 10 Group Policy-based auto-enrollment to Intune
 

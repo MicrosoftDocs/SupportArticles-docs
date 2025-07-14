@@ -4,7 +4,7 @@ description: This article provides a resolution for an issue that occurs after y
 ms.date: 04/30/2024
 author: prmadhes-msft
 ms.author: prmadhes
-ms.reviewer: jopilov, aartigoyle, v-jayaramanp
+ms.reviewer: jopilov, haiyingyu, v-jayaramanp
 ms.custom: sap:Database Connectivity and Authentication
 ---
 

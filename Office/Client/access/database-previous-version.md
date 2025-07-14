@@ -1,13 +1,13 @@
 ---
 title: Cannot Open an Access database created with a previous version of your application
 description: Works around an issue in which you receive an error message when you try to open an Access 97 database in Access 2013 or Access 2016.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
 appliesto: 

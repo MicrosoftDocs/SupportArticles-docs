@@ -1,13 +1,13 @@
 ---
 title: Microsoft 365 One of on-premises Federation Service certificates is expiring
 description: Describes a scenario in which you receive a One of your on-premises Federation Service certificates is expiring message in the Microsoft 365 portal. Provides a resolution.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
 appliesto: 

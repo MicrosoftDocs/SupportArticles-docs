@@ -4,8 +4,8 @@ description: Discusses how to create a support request and collect required info
 ms.reviewer: aageorge
 ms.topic: troubleshooting
 ms.date: 12/14/2023
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: Admin
 search.appverid: 

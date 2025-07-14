@@ -1,7 +1,7 @@
 ---
 title: Cannot paste any attributes into a workbook in another Excel instance
 description: Describes a behavior in which  you cannot paste cell attributes from one instance of Excel  to another instance of Excel. Provides a workaround.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.custom:
   - Editing\CopyOrPaste
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Excel for Microsoft 365
   - Excel 2019

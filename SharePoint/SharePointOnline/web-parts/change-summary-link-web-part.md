@@ -1,13 +1,13 @@
 ---
 title: Sorry, something went wrong when you change the Summary Links Web Part
 description: This article describes an issue where Sorry, something went wrong error when you try to change the Summary Links Web Part in SharePoint Online, and provides a solution.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Web Parts\Quick Links Web Part
   - CSSTroubleshoot

@@ -3,8 +3,8 @@ title: ASP.NET SignalR application is not working in Azure cloud service
 description: Provides information about troubleshooting issues where ASP.NET SignalR application is not working in Azure Cloud Service.
 ms.date: 09/26/2022
 ms.reviewer: 
-author: JarrettRenshaw
-ms.author: jarrettr
+author: genlin
+ms.author: genli
 ms.service: azure-cloud-services-classic
 ms.custom: sap:Development
 ---

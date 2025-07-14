@@ -2,7 +2,7 @@
 title: Kerberos tickets - KRB_AP_ERR_TKT_EXPIRED error in SQL Server
 description: This article provides symptoms and resolution for the consistent authentication errors to SQL Server that impact Kerberos tickets.
 ms.date: 03/13/2024
-ms.reviewer: jopilov, aartigoyle, prmadhes, v-jayaramanp
+ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Database Connectivity and Authentication
 ---
 

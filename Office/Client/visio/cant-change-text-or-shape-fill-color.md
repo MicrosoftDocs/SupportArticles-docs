@@ -1,8 +1,8 @@
 ---
 title: Cannot change text or shape fill color in Visio when using a High Contrast Windows theme
 description: Describes an issue that may occur in Visio 2013 or Visio 2010 when using a High Contrast theme in Windows 8 or Windows 7.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

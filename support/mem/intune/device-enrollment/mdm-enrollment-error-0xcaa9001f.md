@@ -4,7 +4,7 @@ description: Describes an issue in which MDM enrollment fails and generates erro
 ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Enroll Device - Windows\HybridJoin
-ms.reviewer: kaushika, meerak
+ms.reviewer: kaushika, luche
 ---
 # MDM enrollment fails with error 0xcaa9001f for co-managed Windows devices
 

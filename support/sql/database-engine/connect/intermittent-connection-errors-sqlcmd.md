@@ -4,7 +4,7 @@ description: This article provides a resolution for intermittent connection erro
 ms.date: 04/17/2024
 author: prmadhes-msft
 ms.author: prmadhes
-ms.reviewer: jopilov, aartigoyle, v-jayaramanp
+ms.reviewer: jopilov, haiyingyu, v-jayaramanp
 ms.custom: sap:Database Connectivity and Authentication
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: How to resolve Access reference issues
 description: Provides some methods to check and resolve the reference issues in an Access database and provides some guidelines for avoiding reference issues.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

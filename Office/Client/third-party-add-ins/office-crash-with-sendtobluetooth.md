@@ -1,8 +1,8 @@
 ---
 title: Office programs may crash with the SendToBluetooth add-in installed
 description: Describes problems that may occur with Office applications with the SendToBluetooth add-in installed.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

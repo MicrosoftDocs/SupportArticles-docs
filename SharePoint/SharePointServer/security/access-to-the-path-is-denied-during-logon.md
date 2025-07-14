@@ -1,7 +1,7 @@
 ---
 title: Server Error in '/' Application. Access to the path is denied when you sign in to Windows SharePoint Services 2.0
 description: Describes how you receive an error message and you can't log on to SharePoint Services installed on a domain controller by using a correct user name and password. To resolve this issue, you must configure the appropriate permissions ASP.NET.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Administration\Timer Service and jobs
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Windows SharePoint Services 2.0
 ms.date: 12/17/2023

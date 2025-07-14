@@ -1,8 +1,8 @@
 ---
 title: Document contains invalid signatures error if opening digitally signed in newer version Excel file
 description: Describes a problem in which you receive an error message when you open an Excel 2007 digitally signed workbook in Excel 2010. Provides a workaround for this problem.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

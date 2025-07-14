@@ -1,8 +1,8 @@
 ---
 title: Issues with Microsoft Purview Information Protection scanner
 description: Provides checks to verify the health of the scanner deployment and resolutions for scanner errors.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

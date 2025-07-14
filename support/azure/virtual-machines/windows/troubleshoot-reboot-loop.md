@@ -3,7 +3,7 @@ title: Windows reboot loop on an Azure VM
 description: Learn how to troubleshoot Windows reboot loop.
 services: virtual-machines
 documentationCenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 10/08/2023
-ms.author: jarrettr
+ms.author: genli
 ms.reviewer: v-weizhu
 ms.custom: sap:My VM is not booting
 ---

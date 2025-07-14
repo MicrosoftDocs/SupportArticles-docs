@@ -1,13 +1,13 @@
 ---
 title: SharePoint Online Lists and Libraries Modern View Compatibility check
 description: A list of potential causes for a list or library not to render in Modern View.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 keyword: modern view
 ms.custom: 
   - sap:Lists and Libraries\Views

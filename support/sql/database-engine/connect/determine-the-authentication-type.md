@@ -2,7 +2,7 @@
 title: Determine the authentication type
 description: This article explains about how to determine the type of authentication that's used when you connect to SQL Server.
 ms.date: 04/03/2025
-ms.reviewer: jopilov, aartigoyle, prmadhes, v-jayaramanp
+ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Database Connectivity and Authentication
 ms.topic: how-to
 ---

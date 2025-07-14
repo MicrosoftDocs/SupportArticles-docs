@@ -1,13 +1,13 @@
 ---
 title: Increase the size limit of embedded media for the Microsoft PowerPoint Online
 description: This article describes how to increase the size limit of embedded media for the PowerPoint Web App.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Farm Administration
   - CSSTroubleshoot

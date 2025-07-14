@@ -1,13 +1,13 @@
 ---
 title: Filtering doesn't work for Tasks list with a Managed Metadata column
 description: When trying to filter a Tasks list using the Managed Metadata column, the list doesn't filter as expected.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Lists and Libraries\Columns
   - CSSTroubleshoot

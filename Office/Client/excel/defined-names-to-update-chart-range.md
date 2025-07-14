@@ -1,11 +1,11 @@
 ---
 title: Use defined names to automatically update a chart range
 description: Provides two methods for using defined names to automatically update a chart range. You can use these methods to set up a chart that can be automatically updated when you add new information to an existing chart range.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - Editing\Formulae
   - CSSTroubleshoot

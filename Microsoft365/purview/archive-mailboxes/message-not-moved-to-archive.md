@@ -1,10 +1,10 @@
 ---
 title: Messages aren't moved to archive mailbox after you create retention policy
 description: Describes a scenario in Exchange Online in Microsoft 365 in which a retention policy that you create to move messages to a user's archive mailbox doesn't automatically run. Provides a workaround.
-author: Cloud-Writer
+author: helenclu
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Archiving
   - CSSTroubleshoot

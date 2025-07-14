@@ -1,7 +1,7 @@
 ---
 title: How to merge Word documents
 description: Describes how to merge multiple Word documents into one.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Editing\Combine
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Microsoft Word
 ms.date: 06/06/2024

@@ -1,8 +1,8 @@
 ---
 title: Teams is slow during video sharing on laptops docked to 4K/UHD monitors
 description: This article provides workarounds you can use to improve Teams' performance when video is shared during meetings.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

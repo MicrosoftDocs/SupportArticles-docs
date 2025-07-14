@@ -2,8 +2,8 @@
 title: Azure Synapse Analytics Apache Spark pools diagnostic logs
 description: Lists the Apache Spark diagnostic logs that's collected during troubleshooting by Microsoft Support.
 ms.date: 05/27/2021
-author: JarrettRenshaw
-ms.author: jarrettr
+author: genlin
+ms.author: genli
 ms.service: azure-diagnostics-support
 ms.reviewer: 
 ms.custom: sap:Job Execution and Performance

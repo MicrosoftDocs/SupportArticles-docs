@@ -1,7 +1,7 @@
 ---
 title: Expressions to count yes, no, and other responses
 description: Describes how to use the expressions to count yes, no, and other responses in Access.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 ms.custom: 
   - CI 111294
@@ -10,7 +10,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.reviewer: mattbum
 appliesto: 
   - Access 2007

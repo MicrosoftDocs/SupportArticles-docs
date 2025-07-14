@@ -1,7 +1,7 @@
 ---
 title: Everyone except external users group is removed on Microsoft 365
 description: Works around an issue in which the Everyone except external users group is removed by a managed service account on private group sites.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.custom:
   - sap:Permissions\Permission Groups
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - SharePoint Online
 ms.date: 12/17/2023

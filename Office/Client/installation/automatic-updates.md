@@ -1,8 +1,8 @@
 ---
 title: Automatic updating for Microsoft Office is not enabled
 description: Provides the steps to re-enable the automatic updates for Office 2016 and 2013.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

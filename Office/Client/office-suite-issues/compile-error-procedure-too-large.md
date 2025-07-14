@@ -1,7 +1,7 @@
 ---
 title: Procedure too large error when you run a VBA macro
 description: Describes an issue in which you receive an error message when you run a VBA macro in a 32-bit version of an Office 2010 program. Specifically, this issue occurs when the VBA macro was created in a 64-bit version of an Office 2010 program. Provides a workaround.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - Extensibility\Macros
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.reviewer: rtaylor
 appliesto: 
   - Office 2010

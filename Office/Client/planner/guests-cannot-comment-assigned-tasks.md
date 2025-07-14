@@ -1,8 +1,8 @@
 ---
 title: Guests have no access to assigned Planner tasks
 description: Fixes an issue in which guests who are assigned tasks in Microsoft Planner can't add comments to the tasks.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

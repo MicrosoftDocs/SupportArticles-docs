@@ -1,8 +1,8 @@
 ---
 title: Office error “could not create the work file”
 description: What to do if document previews don't show up after uninstalling the 64-bit version of Office and then installing the 32-bit version.
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 06/06/2024
 audience: ITPro

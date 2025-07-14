@@ -1,13 +1,13 @@
 ---
 title: Forgot password to sign in to Microsoft 365, Intune, or Azure
 description: Provides a resolution for when a user or administrator forgets their password to sign in to Microsoft 365, Intune, or Azure.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - CI 162285
   - CSSTroubleshoot

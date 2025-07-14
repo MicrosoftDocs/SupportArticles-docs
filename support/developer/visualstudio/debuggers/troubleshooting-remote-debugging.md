@@ -2,8 +2,8 @@
 title: Troubleshoot remote debugging
 description: Learn how to resolve some of the common issues with remote debugging.
 ms.date: 08/03/2022
-author: aartig13
-ms.author: aartigoyle
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: mikejo
 ms.custom: sap:Debuggers and Analyzers\Visual Studio Remote Debugger
 ---

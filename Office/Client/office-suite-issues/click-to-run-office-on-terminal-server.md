@@ -1,7 +1,7 @@
 ---
 title: Open Click-to-Run version of Office on a terminal server
 description: Works around an issue that prevents you from opening the Click-to-Run version of an Office 2013 and Office 2016 program or suite. This issue occurs after you install the program or suite on a terminal server.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -9,7 +9,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Deploying Office using Shared Computer Activation
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 ms.reviewer: offspms, andyfel
 search.appverid: 
   - MET150

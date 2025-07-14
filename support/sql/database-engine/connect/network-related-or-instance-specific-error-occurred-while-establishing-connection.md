@@ -3,8 +3,8 @@ title: A network-related or instance-specific error occurred
 description: Provides troubleshooting steps for network-related or instance-specific errors if you can't connect to an instance of the SQL Server Database Engine on a single server.
 ms.date: 01/10/2025
 ms.custom: sap:Database Connectivity and Authentication
-author: aartig13
-ms.author: aartigoyle
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: jopilov
 ---
 # A network-related or instance-specific error occurred while establishing a connection to SQL Server

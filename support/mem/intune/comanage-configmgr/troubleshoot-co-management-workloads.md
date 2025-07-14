@@ -4,7 +4,7 @@ description: Helps you understand and troubleshoot issues that you may encounter
 ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Co-management with System Center Configuration Manager\Switch Configuration Manager workloads to Intune
-ms.reviewer: kaushika, meerak
+ms.reviewer: kaushika, luche
 ---
 # Troubleshoot co-management workloads
 

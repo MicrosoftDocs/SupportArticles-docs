@@ -13757,10 +13757,6 @@
     {
       "source_path": "support/azure/azure-kubernetes/connectivity/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/dns/troubleshoot-dns-failure-from-pod-but-not-from-worker-node"
-    },
-    {
-      "source_path": "support/windows-client/performance/stop-error-or-blue-screen-error-troubleshooting.md",
-      "redirect_url": "/troubleshoot/windows-client/performance/stop-code-error-troubleshooting"
     }
   ]
 }

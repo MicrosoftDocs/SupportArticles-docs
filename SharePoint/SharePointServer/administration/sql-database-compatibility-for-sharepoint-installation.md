@@ -1,8 +1,8 @@
 ---
 title: Database compatibility level causes low performance
 description: Provides a workaround for an issue in which query performance is decreased or CPU usage is increased because of supported SQL Server database compatibility level for SharePoint Server 2016 installations.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -9,8 +9,8 @@ dev_langs:
   - VB
   - CSharp
   - C++
-author: aartig13
-ms.author: aartigoyle
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: mikejo, jagbal
 ms.custom: sap:Tools and Utilities\MSI and ClickOnce Setup development tools
 ---

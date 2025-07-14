@@ -12,7 +12,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 05/02/2025
-ms.author: jarrettr
+ms.author: genli
 ms.custom: sap:VM Performance
 ---
 #  Troubleshoot Windows virtual machine performance issues using the Performance Diagnostics (PerfInsights) CLI tool

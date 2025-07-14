@@ -1,8 +1,8 @@
 ---
 title: A contact's presence is unknown in Teams
 description: Fixes an issue in which the presence of a contact is displayed as Status unknown in Teams.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

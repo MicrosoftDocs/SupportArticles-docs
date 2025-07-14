@@ -1,8 +1,8 @@
 ---
 title: Application unresponsive due to low system memory
 description: This article provides resolution to the problem where you see errors and unstable applications because the system is about to run out of memory.
-author: aartig13
-ms.author: aartigoyle
+author: HaiyingYu
+ms.author: haiyingyu
 ms.topic: troubleshooting
 ms.date: 05/10/2022
 ms.custom: sap:Integrated Development Environment (IDE)\Other

@@ -1,13 +1,13 @@
 ---
 title: Anonymous users are prompted for credentials in a SharePoint Online library
 description: Anonymous users receives an authentication prompt when they try to access an asset in a Microsoft SharePoint Online library. Provides a resolution.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Permissions\Other
   - CSSTroubleshoot

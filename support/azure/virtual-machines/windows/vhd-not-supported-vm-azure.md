@@ -3,7 +3,7 @@ title: 'VHD is not supported when you create a virtual machine in Azure'
 description: This article helps correct VHD errors when running a virtual machine in Microsoft Azure.
 services: virtual-machines
 documentationCenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 ms.reviewer: akastha
 ms.service: azure-virtual-machines
@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure
 ms.date: 06/04/2025
-ms.author: jarrettr
+ms.author: genli
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # VHD is not supported when you create a virtual machine in Azure

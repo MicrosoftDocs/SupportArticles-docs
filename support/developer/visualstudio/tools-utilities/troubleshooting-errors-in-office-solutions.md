@@ -13,8 +13,8 @@ f1_keywords:
 dev_langs:
   - VB
   - CSharp
-author: aartig13
-ms.author: aartigoyle
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: johnhart
 ms.custom: sap:Tools and Utilities\Microsoft Office dev tools
 ---

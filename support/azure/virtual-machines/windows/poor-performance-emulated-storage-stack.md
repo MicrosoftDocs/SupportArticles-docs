@@ -2,7 +2,7 @@
 title: Poor performance for VMs that run with an emulated mode storage stack on Windows Server 2012 R2
 description: Describes an issue that causes poor performance to occur for VMs that run with an emulated mode storage stack on Windows Server 2012 R2.
 ms.date: 07/21/2020
-ms.reviewer: mohak, jarrettr, scotro, clandis, jamesca, nagag, rakkim
+ms.reviewer: mohak, genli, scotro, clandis, jamesca, nagag, rakkim
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:VM Performance

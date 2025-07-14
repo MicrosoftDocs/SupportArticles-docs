@@ -1,7 +1,7 @@
 ---
 title: Store, calculate, and compare Date/Time data
 description: Provides information on how to store, calculate, and compare Date/Time data in Access and discusses why you may get unexpected results when you calculate dates and times or compare dates and times.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 ms.custom: 
   - CI 111294
@@ -10,7 +10,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.reviewer: mattbum
 appliesto: 
   - Access 2007

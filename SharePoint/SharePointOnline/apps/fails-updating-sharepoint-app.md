@@ -1,13 +1,13 @@
 ---
 title: Unable to update a SharePoint app because of different version installed
 description: You cannot update a SharePoint app with the error message saying that a different version of this App is already installed with the same version number.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:App Bar and Navigation\Other
   - CSSTroubleshoot

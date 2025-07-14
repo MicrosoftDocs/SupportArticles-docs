@@ -1,11 +1,11 @@
 ---
 title: How to print a Gantt Chart view without table information
 description: Describes how to print a Gantt Chart view without table information.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.reviewer: adrianje
 ms.custom: 
   - CSSTroubleshoot

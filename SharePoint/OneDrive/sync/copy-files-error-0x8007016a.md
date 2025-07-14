@@ -1,8 +1,8 @@
 ---
 title: Error 0x8007016a when copying files in OneDrive
 description: Fixes an issue in which you can't copy files in OneDrive and error code 0x8007016a is returned.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

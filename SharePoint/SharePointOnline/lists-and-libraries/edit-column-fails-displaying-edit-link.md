@@ -1,13 +1,13 @@
 ---
 title: Edit column in a SharePoint Online list doesn't display the edit link
 description: You have added the Edit (link to edit item) column to a SharePoint library, but no link is present for items in the library.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Lists and Libraries\Columns
   - CSSTroubleshoot

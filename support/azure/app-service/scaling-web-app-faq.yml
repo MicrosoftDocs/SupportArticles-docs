@@ -4,7 +4,7 @@ metadata:
   description: Describe common questions and answers about scaling in Azure App Service.
   services: app-service
   author: auolivei
-  ms.reviewer:  jarrettr
+  ms.reviewer:  genli
   ms.topic: faq
   ms.date: 12/05/2024
   ms.author: auolivei

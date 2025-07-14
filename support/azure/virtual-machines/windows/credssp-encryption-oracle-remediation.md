@@ -8,7 +8,7 @@ ms.collection: windows
 ms.custom: sap:Cannot connect to my VM
 ---
 
-<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "aartigoyle" for triage before making the further changes to the screenshots.
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
 --->
 
 # Error when you try to RDP to a Windows VM in Azure: CredSSP encryption oracle remediation

@@ -1,8 +1,8 @@
 ---
 title: Use the SQLIOSim utility on Linux
 description: This article describes how to use SQLIOSim utility to simulate SQL Server activity on a disk subsystem on Linux.
-author: aartig13
-ms.author: aartigoyle
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: amitkh, dansha, rafidl, sureshka, randolphwest, jopilov
 ms.date: 04/08/2025
 ms.topic: how-to

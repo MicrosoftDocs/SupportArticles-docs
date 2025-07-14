@@ -13,7 +13,7 @@ appliesto:
 - Exchange Server 2013 Enterprise 
 - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.reviewer: batre, aartigoyle, jarrettr, v-six
+ms.reviewer: batre, christys, genli, v-six
 author: cloud-writer
 ms.author: meerak
 ms.date: 01/24/2024

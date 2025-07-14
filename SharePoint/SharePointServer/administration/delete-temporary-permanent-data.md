@@ -1,13 +1,13 @@
 ---
 title: Delete temporary and permanent SharePoint data
 description: Introduces how to delete temporary and permanent data in SharePoint Workspace 2010.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.reviewer: clake, fselkirk, patrigan, v-chsu
 ms.custom: 
   - sap:Administration\Other

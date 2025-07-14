@@ -3,7 +3,7 @@ title: Windows virtual machine cannot boot due to windows boot manager
 description: This article provides steps to resolve issues where Windows Boot Manager prevents the booting of an Azure Virtual Machine.
 services: virtual-machines
 documentationcenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines

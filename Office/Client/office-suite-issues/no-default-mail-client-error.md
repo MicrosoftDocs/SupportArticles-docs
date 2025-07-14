@@ -1,7 +1,7 @@
 ---
 title: No default mail client error
 description: Describes an issue in which you receive No default mail client error when you attempt to send a file from Office programs. Provides a solution.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Web Server Integration (SharePoint & Non-SharePoint)
   - Open\Sharing
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Microsoft Office
 ms.date: 06/06/2024

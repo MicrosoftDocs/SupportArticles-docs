@@ -1,13 +1,13 @@
 ---
 title: Not a valid Teradata SQL token error when you run outer join queries
 description: Fixes an issue when executing outer join queries that utilize linked tables with the Teradata ODBC driver 15.10 or later
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
 appliesto: 

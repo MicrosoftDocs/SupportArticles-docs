@@ -1,13 +1,13 @@
 ---
 title: Error message when you try to modify or to delete an alternate access mapping in Windows SharePoint Services 3.0
 description: Describes an issue that occurs after you perform a system recovery in which the configuration database is restored. Provides a resolution.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Farm Administration
   - CSSTroubleshoot

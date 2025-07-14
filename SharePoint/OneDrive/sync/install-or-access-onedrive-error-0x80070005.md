@@ -1,8 +1,8 @@
 ---
 title: Can't install or access OneDrive with error 0x80070005
 description: Fixes an issue in which you can't install or access OneDrive, and you receive error code 0x80070005.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

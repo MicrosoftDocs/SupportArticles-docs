@@ -4,8 +4,8 @@ description: After Windows updates are installed on a Teams Rooms device and the
 ms.reviewer: gosepulv
 ms.topic: troubleshooting
 ms.date: 10/30/2023
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: Admin
 search.appverid: 

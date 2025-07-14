@@ -1,8 +1,8 @@
 ---
 title: Fix site user ID mismatch in SharePoint or OneDrive
 description: Provides a diagnostic that offers resolutions for common issues caused by a site user ID mismatch. 
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 ms.date: 08/09/2024
 audience: Admin

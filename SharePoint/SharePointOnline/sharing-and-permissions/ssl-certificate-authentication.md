@@ -1,13 +1,13 @@
 ---
 title: SSL certificate authentication issues
 description: This article provides solutions for resolving SSL certificate authentication issues.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Authentication and Authorization\Conditional Access Policy
   - CSSTroubleshoot

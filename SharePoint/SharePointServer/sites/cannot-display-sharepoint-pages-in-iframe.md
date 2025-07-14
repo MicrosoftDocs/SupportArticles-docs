@@ -1,8 +1,8 @@
 ---
 title: Can't display SharePoint pages in iFrame
 description: Describes why you're unable to load SharePoint Pages from a different domain inside an iFrame.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

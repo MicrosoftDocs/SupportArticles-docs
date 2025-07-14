@@ -1,13 +1,13 @@
 ---
 title: Session expired error
 description: Resolves an error that occurs when you try to open a document from SharePoint in an Office Online application.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Sites\Other
   - CSSTroubleshoot

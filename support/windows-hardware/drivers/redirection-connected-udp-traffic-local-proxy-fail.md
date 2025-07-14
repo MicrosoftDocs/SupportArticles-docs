@@ -2,8 +2,8 @@
 title: Failed to redirect connected UDP traffic
 description: This article provides workarounds for the redirection failure problem that occurs when the connected UDP traffic is redirected to a local proxy using a WFP callout driver.
 ms.date: 04/20/2021
-author: aartig13
-ms.author: aartigoyle
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: jesweare, dev_triage
 ms.custom: sap:Other Driver
 ---

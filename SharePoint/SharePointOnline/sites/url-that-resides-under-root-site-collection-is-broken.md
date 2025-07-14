@@ -1,13 +1,13 @@
 ---
 title: How to replace the root site in SharePoint Online
 description: Provides steps about how to replace the root site in SharePoint Online.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:SharePoint Admin Center\Deleted Sites
   - CSSTroubleshoot

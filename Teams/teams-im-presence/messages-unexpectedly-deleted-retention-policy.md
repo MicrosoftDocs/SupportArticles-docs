@@ -1,8 +1,8 @@
 ---
 title: Messages in Teams and Viva Engage unexpectedly deleted by retention policies
 description: Explains why messages are unexpectedly deleted from the Teams or Viva Engage apps in some scenarios if retention policies are used in your organization. 
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

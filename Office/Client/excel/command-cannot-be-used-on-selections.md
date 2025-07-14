@@ -1,13 +1,13 @@
 ---
 title: That command cannot be used on multiple selections
 description: Describes an issue that occurs when you try to copy nonadjacent cell or range selections.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - Editing\Cells
   - CSSTroubleshoot

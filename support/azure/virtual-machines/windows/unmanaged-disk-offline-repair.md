@@ -1,7 +1,7 @@
 ---
-author: JarrettRenshaw
+author: genlin
 description: This article describes how to attach an unmanaged disk to a repair VM for offline servicing.
-ms.author: jarrettr
+ms.author: genli
 ms.date: 05/17/2022
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurecli, devx-track-azurepowershell

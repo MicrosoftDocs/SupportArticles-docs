@@ -1,9 +1,9 @@
 ---
 title: Exclude or Remove Sites From a SharePoint Online Retention Policy
 description: Describes how to exclude or remove sites from your SharePoint Online retention policy.
-author: Cloud-Writer
+author: helenclu
 ms.reviewer: PramodBalusu
-ms.author: meerak
+ms.author: luche
 manager: dcscontentpm
 ms.date: 02/16/2025
 audience: Admin

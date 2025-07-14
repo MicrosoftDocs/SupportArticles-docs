@@ -1,13 +1,13 @@
 ---
 title: Columns and rows are labeled numerically
 description: Fixes an issue in which column labels are numeric rather than alphabetic in Excel.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - Editing\Formulae
   - CSSTroubleshoot

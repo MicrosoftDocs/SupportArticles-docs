@@ -1,7 +1,7 @@
 ---
 title: There's a problem with your account error
 description: Resolves an error when you try to open Office documents from OneDrive or SharePoint Online.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Authentication and Authorization\Conditional Access Policy
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - SharePoint Online
   - OneDrive for Business

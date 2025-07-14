@@ -1,7 +1,7 @@
 ---
 title: (This item might not exist or is no longer available) error when using OneDrive
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 12/17/2023
 audience: Admin

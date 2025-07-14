@@ -1,8 +1,8 @@
 ---
 title: Use a form to specify the criteria for a query
 description: Describes how to use a form to specify the criteria for a query. This technique is called query by form (QBF).
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

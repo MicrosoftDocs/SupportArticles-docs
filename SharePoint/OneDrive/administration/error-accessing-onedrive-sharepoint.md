@@ -1,8 +1,8 @@
 ---
 title: Error when accessing OneDrive or Sharepoint
 description: Describes how to resolve an issue when unable to OneDrive or Sharepoint
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 ms.reviewer: prbalusu
 manager: dcscontentpm
 ms.date: 12/17/2023

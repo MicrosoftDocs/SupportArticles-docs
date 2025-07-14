@@ -1,14 +1,14 @@
 ---
 title: Task list shows item title as .000
 description: This article describes an issue where the Task List displays a title as .000 instead of the actual title.
-author: Cloud-Writer
+author: helenclu
 ms.reviewer: salarson
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Lists and Libraries\Views
   - CSSTroubleshoot

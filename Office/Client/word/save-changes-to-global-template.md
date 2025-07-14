@@ -1,11 +1,11 @@
 ---
 title: Prompted to save changes to global template
 description: Describes a problem where you are prompted to save the changes to the Normal.dotm global template every time that you exit Word 2007. Provides workarounds.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.reviewer: mmaxey
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features

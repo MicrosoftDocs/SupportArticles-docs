@@ -1,8 +1,8 @@
 ---
 title: Known issues when you use Teams certified peripherals
 description: Lists known issues that occur when you use Teams certified peripherals and provides workarounds.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

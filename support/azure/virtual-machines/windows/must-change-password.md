@@ -3,7 +3,7 @@ title: Azure virtual machine error You must change your password before logging 
 description: When using Remote Desktop Protocol to connect to a virtual machine, you might have to change the password of the account first.
 services: virtual-machines
 documentationcenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 tags: virtual-machines
 ms.service: azure-virtual-machines
@@ -13,7 +13,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 07/29/2022
-ms.author: jarrettr
+ms.author: genli
 ms.custom: sap:Cannot connect to my VM
 ---
 

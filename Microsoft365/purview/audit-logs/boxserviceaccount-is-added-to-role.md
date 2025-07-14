@@ -1,13 +1,13 @@
 ---
 title: BOXServiceAccount is added to a role in Microsoft 365 alerts
 description: BOXServiceAccount is added to a role in Microsoft 365 alerts.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Auditing
   - CSSTroubleshoot

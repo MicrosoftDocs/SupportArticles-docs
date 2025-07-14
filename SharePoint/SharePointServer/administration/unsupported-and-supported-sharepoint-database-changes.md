@@ -1,8 +1,8 @@
 ---
 title: Unsupported and supported SharePoint database changes
 description: Describes some unsupported and supported SharePoint database changes, and what actions you have to take when you experience an unsupported database change.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

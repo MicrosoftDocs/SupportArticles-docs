@@ -1,7 +1,7 @@
 ---
 title: Error when changing site logo on Microsoft 365 group SharePoint site
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 08/09/2024
 audience: Admin

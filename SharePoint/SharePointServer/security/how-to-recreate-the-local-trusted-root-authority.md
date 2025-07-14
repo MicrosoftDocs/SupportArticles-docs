@@ -1,13 +1,13 @@
 ---
 title: How to re-create the local Trusted Root Authority
 description: Describes that how to re-create the local Trusted Root Authority.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Farm Administration
   - CSSTroubleshoot

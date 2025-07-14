@@ -1,13 +1,13 @@
 ---
 title: Failure trying to synch site  - Event ID 5553
 description: Provides information about the event ID 5553 during a site synchronization.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Farm Administration
   - CSSTroubleshoot

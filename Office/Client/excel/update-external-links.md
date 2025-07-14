@@ -1,7 +1,7 @@
 ---
 title: Error message when you update external links
 description: Provides a workaround for an issue in which you receive the error message Microsoft Excel cannot find name <Defined Name> or We can't update some of the links in your workbook right now when you update an external reference links that contain a three-dimensional reference in a defined name in an .xlsx file. This issue occurs in Excel.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - Open\Links
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Excel for Microsoft 365
   - Excel 2019

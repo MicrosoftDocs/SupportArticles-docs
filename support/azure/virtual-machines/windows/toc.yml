@@ -344,8 +344,6 @@
       href: bad-pool-header.md
     - name: Bug check 0x0000001A - MEMORY_MANAGEMENT
       href: bug-check-memory-management.md
-    - name: Bug check 0x0000001E - KMODE_EXCEPTION_NOT_HANDLED
-      href: kernel-mode-exception-not-handled.md
     - name: Troubleshoot Windows VM OS with missing boot manager
       href: os-bootmgr-missing.md
     - name: OS isn't found
@@ -360,7 +358,6 @@
       href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
     - name: Azure VM cannot RDP - working on features
       href: azure-vm-cannot-rdp-working-features.md
-    
 
 - name: Cannot start or stop my VM
   items:

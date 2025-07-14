@@ -1,8 +1,8 @@
 ---
 title: Enable coauthoring for OneDrive-synced files
 description: Explains how to enable coauthoring for OneDrive-synced files in Microsoft 365 after an October 2019 change removes the feature.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

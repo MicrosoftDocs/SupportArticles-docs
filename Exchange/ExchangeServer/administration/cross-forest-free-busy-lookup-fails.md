@@ -6,7 +6,7 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: excontent, message, exuetr, jmartin, aartigoyle, jarrettr, v-six
+ms.reviewer: excontent, message, exuetr, jmartin, christys, genli, v-six
 ms.custom: 
   - sap:Sharing\Issue viewing Free Busy
   - Exchange Server

@@ -1,13 +1,13 @@
 ---
 title: Create An Excel Add-In to Calculate Body Mass Index (BMI)
 description: This article describes how to create a custom function to calculate BMI (Body Mass Index), save Excel Add-In file, install the Add-In and uninstall the Add-In.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - Extensibility\Macros
   - sap:office-experts

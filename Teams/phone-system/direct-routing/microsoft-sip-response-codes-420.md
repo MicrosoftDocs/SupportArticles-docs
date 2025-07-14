@@ -2,8 +2,8 @@
 title: SIP 420 and Microsoft response codes
 description: Lists combinations of Microsoft response codes and the SIP 420 error, and provides actions to resolve the errors.
 ms.date: 11/22/2024
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Resolve "FAILED_TO_AUTO_DISCOVER_DOMAIN" error
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 08/09/2024
 audience: ITPro

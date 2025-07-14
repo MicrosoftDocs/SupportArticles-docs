@@ -1,13 +1,13 @@
 ---
 title: Hybrid Picker prerequisite check fail in SharePoint 2016 consuming farm
 description: Describes an issue that Hybrid Picker prerequisite check fails in a SharePoint 2016 consuming farm that doesn't have its local User Profile service application.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Service Applications (except Search)
   - CSSTroubleshoot

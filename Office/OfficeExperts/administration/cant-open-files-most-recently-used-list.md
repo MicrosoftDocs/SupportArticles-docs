@@ -1,8 +1,8 @@
 ---
 title: Microsoft 365 can't open files from the most recently used document list (MRU)
 description: Describe an issue where Microsoft 365 can't open files from the most recently used document list (MRU). Provides a solution.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 ms.reviewer: warrenr
 manager: dcscontentpm
 ms.custom: 

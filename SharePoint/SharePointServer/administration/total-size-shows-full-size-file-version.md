@@ -1,8 +1,8 @@
 ---
 title: Total Size shows full file size for each version
 description: Describes an unexpected versioning behavior in SharePoint Server 2013. When only the metadata is changed, the full size of the document is counted against the site collection quota.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

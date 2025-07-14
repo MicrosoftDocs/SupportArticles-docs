@@ -6,8 +6,8 @@ metadata:
   title: Windows 365 troubleshooting documentation
   description: Documentation for troubleshooting common issues with Windows 365. # Required; article description that is displayed in search results. < 160 chars.  
   ms.topic: landing-page # Required
-  author: kaushika-msft  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: kaushika #Required; microsoft alias of author; optional team alias.
+  author: Deland-Han  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: delhan #Required; microsoft alias of author; optional team alias.
   ms.date: 01/17/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

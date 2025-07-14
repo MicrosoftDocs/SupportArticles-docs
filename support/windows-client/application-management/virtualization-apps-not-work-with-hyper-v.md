@@ -11,7 +11,7 @@ ms.custom:
 - pcy:WinComm Performance
 ---
 
-<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "aartigoyle" for triage before making the further changes to the screenshots.
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
 --->
 
 # Virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard

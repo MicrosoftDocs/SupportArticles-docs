@@ -3,7 +3,7 @@ title: 'Azure Virtual Machines shutdown is stuck on Restarting, Shutting Down, o
 description: This article helps you troubleshoot service errors in Azure Windows Virtual Machines.
 services: virtual-machines
 documentationCenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.collection: windows

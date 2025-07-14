@@ -1,8 +1,8 @@
 ---
 title: The encryption type requested isn't supported by the KDC
 description: Describes how to resolve errors that occur after changing SharePoint configuration requirements to support Kerberos AES encryption.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

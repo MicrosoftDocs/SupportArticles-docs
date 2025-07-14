@@ -1,8 +1,8 @@
 ---
 title: Error 0x8004de85 or 0x8004de8a when signing in to OneDrive
 description: Fixes an issue in which you can't sign in to OneDrive and you receive error code 0x8004de85 or 0x8004de8a.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

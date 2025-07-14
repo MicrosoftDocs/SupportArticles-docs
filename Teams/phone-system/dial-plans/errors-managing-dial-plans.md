@@ -3,7 +3,7 @@ title: Errors when trying to manage dial plans
 description: Describes errors that occur if you try to manage dial plans by using an unlicensed account.
 ms.date: 10/30/2023
 author: Cloud-Writer
-ms.author: meerak
+ms.author: luche
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting

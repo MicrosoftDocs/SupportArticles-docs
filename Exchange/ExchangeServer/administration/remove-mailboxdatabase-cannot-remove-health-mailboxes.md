@@ -10,7 +10,7 @@ ms.custom:
   - sap:High Availability, Health, Performance, Content Indexing\Health set unhealthy
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: batre, jarrettr, v-six
+ms.reviewer: batre, genli, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition

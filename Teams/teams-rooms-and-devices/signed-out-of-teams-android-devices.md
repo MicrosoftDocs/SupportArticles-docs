@@ -2,8 +2,8 @@
 title: Certified Android devices get signed out of Teams
 description: Provides workarounds for an issue in which certified Android devices are signed out of Teams automatically.
 ms.date: 08/08/2024
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting

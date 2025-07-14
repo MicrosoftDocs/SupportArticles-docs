@@ -1,13 +1,13 @@
 ---
 title: Word cannot start the converter SSPDFCG_X64.cnv error when you start Word
 description: Describes an error that occurs when you launch Microsoft  Word or try to perform a mail merge when have Nuance software installed on your computer. A resolution is provided.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Editing\MailMerge

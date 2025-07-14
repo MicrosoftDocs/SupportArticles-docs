@@ -10,7 +10,7 @@ ms.custom:
   - sap:User Interface features and Configuration\Reading Pane or Preview Pane
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: tasitae, jarrettr
+ms.reviewer: tasitae, genli
 appliesto: 
   - Outlook 2019
   - Outlook 2016

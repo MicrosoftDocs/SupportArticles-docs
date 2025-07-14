@@ -1,13 +1,13 @@
 ---
 title: SharePoint Online doesn't return search results
 description: This article describes how to resolve an issue that SharePoint Online doesn't return search results
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Search\Syntex, Queries and Results
   - CSSTroubleshoot

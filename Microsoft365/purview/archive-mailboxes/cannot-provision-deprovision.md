@@ -1,8 +1,8 @@
 ---
 title: Archive mailbox can't be provisioned or deprovisioned after a mailbox is migrated to Office 365 Dedicated/ITAR vNext
 description: Provides a resolution for an issue that prevents adding an archive to a mailbox after the mailbox is migrated to Microsoft Office 365 Dedicated/ITAR vNext. 
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

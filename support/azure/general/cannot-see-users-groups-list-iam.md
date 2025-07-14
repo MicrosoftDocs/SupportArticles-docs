@@ -4,8 +4,8 @@ description: Resolves an issue in which you can't see list of users or groups wh
 ms.date: 06/05/2025
 ms.service: azure-common-issues-support
 ms.custom: no-azure-ad-ps-ref
-ms.author: jarrettr
-author: JarrettRenshaw
+ms.author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Can't see list of users or groups when adding permissions in Access Control in the Azure portal

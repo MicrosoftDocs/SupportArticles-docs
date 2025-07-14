@@ -3,8 +3,8 @@ title: Cannot connect to 'HealthMonitor' worker role instance using RDP
 description: Provides information about troubleshooting issues in which the 'HealthMonitor' worker role instance is not able to remote connect.
 ms.date: 09/26/2022
 ms.reviewer: 
-author: JarrettRenshaw
-ms.author: jarrettr
+author: genlin
+ms.author: genli
 ms.service: azure-cloud-services-classic
 ms.custom: sap:Development
 ---

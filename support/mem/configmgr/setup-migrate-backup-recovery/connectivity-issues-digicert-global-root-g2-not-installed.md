@@ -2,7 +2,7 @@
 title: Connectivity issues if the DigiCert Global Root G2 root certificate is not installed
 description: Fixes a connectivity issue in which the DigiCert Global Root G2 root certificate is not installed.
 ms.date: 02/11/2025
-author: Cloud-Writer
+author: helenclu
 ms.author: vinpa
 ms.reviewer: kaushika, vinpa
 ms.custom: sap:Site Server and Roles\Certificates (PKI)

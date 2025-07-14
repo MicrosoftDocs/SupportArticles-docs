@@ -2,8 +2,8 @@
 title: Troubleshoot the underlying causes of an MCA issue
 description: Discusses how to determine the cause of an MCA issue.
 ms.date: 01/15/2025
-author: kaushika-msft
-ms.author: kaushika
+author: Deland-Han
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

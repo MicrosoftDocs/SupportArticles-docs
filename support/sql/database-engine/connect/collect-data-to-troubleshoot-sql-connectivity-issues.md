@@ -2,7 +2,7 @@
 title: Data collection methods for SQL connectivity issues
 description: This article provides possible list of questions based on several components that you can use to effectively identify the type of SQL Server connectivity issues and find the right resolution.
 ms.date: 05/29/2024
-ms.reviewer: jopilov, prmadhes, v-jayaramanp, aartigoyle
+ms.reviewer: jopilov, prmadhes, v-jayaramanp, haiyingyu
 ms.custom: sap:Connection issues
 ---
 

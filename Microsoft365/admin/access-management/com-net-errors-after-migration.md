@@ -1,11 +1,11 @@
 ---
 title: COM and .NET errors after Office architecture migration
 description: Describes an issue in which you experience errors after you migrate Office to 64-bit architecture if COM or .NET is used.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
   - CI 146798

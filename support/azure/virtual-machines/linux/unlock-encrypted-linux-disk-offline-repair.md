@@ -4,7 +4,7 @@ description: Describes how to repair a Linux VM that has an encrypted OS disk.
 services: virtual-machines
 ms.collection: linux
 ms.service: azure-virtual-machines
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 editor: v-jesits
 ms.topic: troubleshooting

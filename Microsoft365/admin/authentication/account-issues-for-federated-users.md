@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot account issues for federated users in Microsoft 365, Azure, or Intune
 description: Describes how to troubleshoot single sign-on (SSO) user account issues in Microsoft 365, Azure, or Microsoft Intune.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

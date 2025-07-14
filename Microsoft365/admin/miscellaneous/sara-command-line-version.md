@@ -1,8 +1,8 @@
 ---
 title: Microsoft Support and Recovery Assistant Enterprise version
 description: Describes the Enterprise version of Microsoft Support and Recovery Assistant, historically known as SaRA.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

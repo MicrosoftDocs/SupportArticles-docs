@@ -1,7 +1,7 @@
 ---
 title: The SharePoint Online Modern admin center does not display (Advanced) and (API access)
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 12/17/2023
 audience: Admin

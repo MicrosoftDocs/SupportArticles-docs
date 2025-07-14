@@ -132,17 +132,17 @@
     }
   ],
   "notification_subscribers": [
-    "meerak@microsoft.com",
-    "aartigoyle@microsoft.com",
-    "kaushika@microsoft.com",
-    "jarrettr@microsoft.com"
+    "luche@microsoft.com",
+    "haiyingyu@microsoft.com",
+    "delhan@microsoft.com",
+    "Lin.Gen@microsoft.com"
   ],
   "sync_notification_subscribers": [
-    "aartigoyle@microsoft.com",
-    " kaushika@microsoft.com",
-    " meerak@microsoft.com",
-    " aartigoyle@microsoft.com",
-    " jarrettr@microsoft.com",
+    "christys@microsoft.com",
+    " delhan@microsoft.com",
+    " luche@microsoft.com",
+    " haiyingyu@microsoft.com",
+    " lin.gen@microsoft.com",
     " v-six@microsoft.com"
   ],
   "branches_to_filter": [],

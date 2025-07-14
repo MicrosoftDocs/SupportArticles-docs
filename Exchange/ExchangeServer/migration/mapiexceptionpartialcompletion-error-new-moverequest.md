@@ -10,7 +10,7 @@ ms.custom:
   - sap:Migration\Issues with Move Mailbox within same organization
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: nickul, jarrettr, v-six
+ms.reviewer: nickul, genli, v-six
 appliesto: 
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition

@@ -1,7 +1,7 @@
 ---
 title: Using printer fonts in Word
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 06/06/2024
 audience: Admin

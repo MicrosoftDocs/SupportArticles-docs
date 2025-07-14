@@ -3,7 +3,7 @@ title: Support Tip - Understanding the flow behind deployment, delivery, and pro
 description: This article highlights and explains the flow that is associated with a Win32 app during its deployment, delivery, and processing through Intune.
 ms.date: 02/11/2025
 ms.reviewer: kaushika, sausarka
-author: Cloud-Writer
+author: helenclu
 ms.author: sausarka
 search.appverid: MET150
 ms.custom: sap:AppDeployment - Windows\Win32, CI 121778, CSSTroubleshooting

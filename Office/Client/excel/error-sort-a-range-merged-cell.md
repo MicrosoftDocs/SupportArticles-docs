@@ -1,13 +1,13 @@
 ---
 title: An error message when you sort a range that contains merged cells in Excel
 description: Discusses a problem in which you may receive an error message when you sort a range that contains merged cells in Excel.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - Editing\Cells
   - CSSTroubleshoot

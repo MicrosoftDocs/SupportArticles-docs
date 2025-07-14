@@ -1,13 +1,13 @@
 ---
 title: Template-generated list doesn't display correct data for a column
 description: This article describes an issue where template-generated list doesn't display correct data for a column in SharePoint Online, and provides a solution.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Lists and Libraries\Columns
   - CSSTroubleshoot

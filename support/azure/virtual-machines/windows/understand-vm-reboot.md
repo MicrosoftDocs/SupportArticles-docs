@@ -3,7 +3,7 @@ title: Understand a system reboot for an Azure VM
 description: Lists the events that can cause a VM to reboot.
 services: virtual-machines
 documentationcenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 tags: ''
 ms.service: azure-virtual-machines
@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services
 ms.date: 05/26/2025
-ms.author: jarrettr
+ms.author: genli
 ms.reviewer: yutorigo, sinhamanisha, justingross, v-weizhu
 ms.custom: sap:VM restarted or stopped unexpectedly
 ---

@@ -1,8 +1,8 @@
 ---
 title: Issues with call transfers
 description: Troubleshoot issues affecting call transfers that are initiated by Microsoft.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

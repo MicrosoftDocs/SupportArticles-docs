@@ -2,8 +2,8 @@
 title: Use Failed Request Tracing to troubleshoot Classic ASP errors
 description: Describes how to use Failed Request Tracing to troubleshoot Classic ASP errors
 ms.date: 12/18/2024
-ms.author: aartigoyle
-author: aartig13
+ms.author: haiyingyu
+author: HaiyingYu
 ms.reviewer: johnhart, robmcm, zixie
 
 ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing

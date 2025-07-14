@@ -1,7 +1,7 @@
 ---
 title: Removing sensitivity label does not remove headers and footers in Word for Microsoft 365
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 06/06/2024
 audience: Admin

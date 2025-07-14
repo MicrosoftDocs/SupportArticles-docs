@@ -1,7 +1,7 @@
 ---
 title: Offer updates for Office programs that you do not have installed
 description: Describes how Microsoft Update or Windows Update may offer updates to programs that you do not have installed on your computer. We provide steps to resolve this issue.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -9,7 +9,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - DownloadInstall\Updates\ProblemsInstallingUpdates
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 ms.reviewer: v-chasec
 search.appverid: 
   - MET150

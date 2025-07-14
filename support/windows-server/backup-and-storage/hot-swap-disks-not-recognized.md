@@ -5,7 +5,7 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, aamelt, kaushika
+ms.reviewer: kaushika, aamelt, delhan
 ms.custom:
 - sap:backup,recovery,disk,and storage\partition and volume management
 - pcy:WinComm Storage High Avail

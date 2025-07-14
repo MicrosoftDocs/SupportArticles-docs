@@ -1,7 +1,7 @@
 ---
 title: Search results don't appear for group owners after creating a new Microsoft 365 group
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 ms.date: 12/17/2023
 audience: Admin

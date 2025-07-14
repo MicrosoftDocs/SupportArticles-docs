@@ -4,7 +4,7 @@ description: Describes common scenarios that use Application Insights to trouble
 ms.date: 04/01/2024
 ms.reviewer: patcatun
 author: JerryZhangMS
-ms.author: jarrettr
+ms.author: genli
 ms.service: azure-cloud-services-extended-support
 ms.custom: sap:Service Availability and Performance
 ---

@@ -1,7 +1,7 @@
 ---
 title: Export a text file with both comma and quote delimiters in Excel
 description: Provides the procedure to export a text file with both comma and quote delimiters in Excel
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.custom:
   - Extensibility\Macros
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Office Excel 2007
   - Office Excel 2003

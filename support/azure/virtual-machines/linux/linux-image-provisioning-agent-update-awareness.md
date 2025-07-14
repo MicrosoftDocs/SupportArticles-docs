@@ -5,8 +5,8 @@ ms.date: 10/10/2020
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 ms.collection: linux
-ms.author: jarrettr
-author: JarrettRenshaw
+ms.author: genli
+author: genlin
 ms.reviewer: 
 ---
 # Linux Image Provisioning Agent update awareness

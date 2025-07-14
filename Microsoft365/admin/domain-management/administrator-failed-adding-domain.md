@@ -1,7 +1,7 @@
 ---
 title: An administrator can't add a domain to Microsoft 365, Azure, or Intune
 description: Discusses an issue in which an administrator can't add a domain to Microsoft 365, Azure or Intune. Provides a resolution.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Microsoft 365
   - Cloud Services (Web roles/Worker roles)

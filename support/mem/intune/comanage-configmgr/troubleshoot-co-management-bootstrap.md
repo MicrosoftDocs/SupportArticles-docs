@@ -4,7 +4,7 @@ description: Helps you understand and troubleshoot issues that you may encounter
 ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Co-management with System Center Configuration Manager\Prepare Windows 10 devices for co-management
-ms.reviewer: kaushika, meerak, aaronmiller
+ms.reviewer: kaushika, luche, aaronmiller
 ---
 # Troubleshoot co-management: Bootstrap with modern provisioning
 

@@ -3,7 +3,7 @@ title: How to troubleshoot the chroot environment in a Linux rescue VM
 description: This article describes how to troubleshoot the chroot environment in the rescue virtual machine (VM) in Linux.
 services: virtual-machines
 documentationcenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.collection: linux
@@ -12,7 +12,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.date: 04/15/2024
-ms.author: jarrettr
+ms.author: genli
 ---
 
 # Chroot environment in a Linux rescue VM

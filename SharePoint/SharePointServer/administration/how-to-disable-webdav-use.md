@@ -1,13 +1,13 @@
 ---
 title: SharePoint 2013 - Disable WebDAV use on SharePoint
 description: Describes that how to disable WebDAV use in SharePoint  .
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Farm Administration
   - CSSTroubleshoot

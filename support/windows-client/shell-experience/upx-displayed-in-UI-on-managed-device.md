@@ -5,7 +5,7 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, ningzhan, kaushika, aartigoyle
+ms.reviewer: kaushika, ningzhan, delhan, christys
 ms.custom:
 - sap:windows desktop and shell experience\desktop (shell,explorer.exe init,themes,colors,icons,recycle bin)
 - pcy:WinComm User Experience

@@ -3,7 +3,7 @@ title: Unowned driver updates are installed unexpectedly
 description: This article provides resolutions for the problem that allows driver packages that contain hardware IDs that are not owned by the publisher to be downloaded and installed from Windows Update.
 ms.date: 09/04/2020
 ms.custom: sap:Other Driver
-ms.reviewer: danielwh, davean, kaushika, aartigoyle
+ms.reviewer: danielwh, davean, delhan, christys
 ---
 # Unowned driver updates are installed unexpectedly from Windows Update
 

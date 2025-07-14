@@ -1,7 +1,7 @@
 ---
 title: The digital signature in Access is tampered with or invalidated
 description: Describes database usage scenarios that are known to invalidate the digital signature of an Access database. Provides workarounds.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 ms.custom: 
   - CI 177076
@@ -10,7 +10,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.reviewer: denniwil
 ms.date: 05/26/2025
 ---

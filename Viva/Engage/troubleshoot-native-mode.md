@@ -2,8 +2,8 @@
 title: Resolve issues with your Viva Engage network in Native Mode
 description: Provides a resolution for issues when using the Viva Engage network in Native Mode.
 ms.reviewer: ethli
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

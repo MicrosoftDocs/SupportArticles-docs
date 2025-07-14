@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Server
   - CI 119623
   - CSSTroubleshoot
-ms.reviewer: dpaul, honche, jarrettr, jarrettr, aartigoyle, v-six
+ms.reviewer: dpaul, honche, jarrettr, genli, christys, v-six
 search.appverid: 
   - MET150
 appliesto: 

@@ -1,13 +1,13 @@
 ---
 title: Error when a delegated partner administrator accesses a client's SharePoint Online admin center
 description: Provides a resolution for an issue in which external sharing is disabled for the site when a delegated partner administrator tries to access a client's SharePoint Online admin center.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Sharing\External
   - CSSTroubleshoot

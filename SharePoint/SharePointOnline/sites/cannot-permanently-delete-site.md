@@ -1,7 +1,7 @@
 ---
 title: Can't delete a site connected to a Microsoft 365 group permanently
 description: Provides a resolution to delete a site from the SharePoint admin center permanently.
-author: Cloud-Writer
+author: helenclu
 ms.reviewer: salarson
 manager: dcscontentpm
 search.appverid: 
@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 149203
   - CI 150314
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - SharePoint Online
 ms.date: 08/09/2024

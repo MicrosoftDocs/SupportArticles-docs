@@ -129,14 +129,14 @@
         "purview/**/*.md": "purview"      
       },
       "author": {
-        "admin/**/*.md": "Cloud-Writer",
-        "enterprise/**/*.md": "Cloud-Writer",
+        "admin/**/*.md": "helenclu",
+        "enterprise/**/*.md": "helenclu",
         "purview/**/*.md": "cloud-writer",
         "security/**/*.md": "cloud-writer"
       },
       "ms.author": {
-        "admin/**/*.md": "meerak",
-        "enterprise/**/*.md": "meerak",
+        "admin/**/*.md": "luche",
+        "enterprise/**/*.md": "luche",
         "purview/**/*.md": "meerak",
         "security/**/*.md": "meerak"
       }

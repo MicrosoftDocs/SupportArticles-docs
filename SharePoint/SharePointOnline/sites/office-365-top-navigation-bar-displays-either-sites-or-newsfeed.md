@@ -1,13 +1,13 @@
 ---
 title: The Microsoft 365 top navigation bar displays either Sites or Newsfeed instead of OneDrive in SharePoint Online
 description: Describes an issue in which the Microsoft 365 top navigation bar displays either Sites or Newsfeed instead of OneDrive in SharePoint Online.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:SharePoint Admin Center\Navigation
   - CSSTroubleshoot

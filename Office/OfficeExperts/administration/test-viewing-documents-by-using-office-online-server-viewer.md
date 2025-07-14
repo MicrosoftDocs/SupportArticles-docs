@@ -1,8 +1,8 @@
 ---
 title: Test viewing Office documents by using Microsoft Offices Online or Office Online Server viewer
 description: Describes how to test viewing Office documents by using Microsoft Offices Online or Office Online Server viewer.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 ms.reviewer: jhaak
 manager: dcscontentpm
 search.appverid: 

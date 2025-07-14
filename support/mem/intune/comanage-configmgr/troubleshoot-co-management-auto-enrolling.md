@@ -4,7 +4,7 @@ description: Helps you understand and troubleshoot issues when you set up co-man
 ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Co-management with System Center Configuration Manager\Prepare Windows 10 devices for co-management
-ms.reviewer: kaushika, meerak
+ms.reviewer: kaushika, luche
 ---
 # Troubleshoot co-management: Auto-enroll existing Configuration Manager-managed devices into Intune
 

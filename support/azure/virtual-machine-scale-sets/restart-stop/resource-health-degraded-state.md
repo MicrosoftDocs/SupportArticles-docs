@@ -2,8 +2,8 @@
 title: Health state shows Degraded in Azure Virtual Machine Scale Set 
 description: Explains the transient Degraded state that's displayed in Azure Virtual Machine Scale Set Resource Health or Activity Log.
 ms.date: 04/07/2022
-author: JarrettRenshaw
-ms.author: jarrettr
+author: genlin
+ms.author: genli
 ms.service: azure-virtual-machine-scale-sets
 ms.reviewer: macla, pudesira
 ms.custom: sap:My instance was restarted or stopped unexpectedly

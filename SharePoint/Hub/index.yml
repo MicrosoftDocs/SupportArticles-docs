@@ -11,8 +11,8 @@ metadata:
   ms.service: o365-administration #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: hub-page # Required
   audience: ITPro
-  author: Cloud-Writer #Required; your GitHub user alias, with correct capitalization.
-  ms.author: meerak #Required; microsoft alias of author; optional team alias.
+  author: helenclu #Required; your GitHub user alias, with correct capitalization.
+  ms.author: luche #Required; microsoft alias of author; optional team alias.
   ms.date: 12/17/2023 #Required; mm/dd/yyyy format.
 
 # productDirectory section (optional)

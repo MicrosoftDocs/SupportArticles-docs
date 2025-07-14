@@ -1,13 +1,13 @@
 ---
 title: This page isn't using a valid page layout error
 description: Viewing a SharePoint .aspx page generates the error "This page isn't using a valid page layout". Provides a solution for this issue.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Site or Web Administration
   - CSSTroubleshoot

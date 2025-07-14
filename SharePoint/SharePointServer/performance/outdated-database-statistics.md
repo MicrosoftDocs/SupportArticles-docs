@@ -1,13 +1,13 @@
 ---
 title: Outdated database statistics decrease SharePoint Server performance, cause time-outs, and generate run-time errors
 description: Discusses how to display database statistics and the reasons to update statistics to avoid performance issues, time-outs issues, and run-time errors in SharePoint Server.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Performance
   - CSSTroubleshoot

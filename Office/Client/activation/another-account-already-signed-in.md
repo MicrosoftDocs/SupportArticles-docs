@@ -1,9 +1,9 @@
 ---
 title: Another account from your organization is already signed in on this computer
 description: Troubleshooting steps for Microsoft 365 apps activation error Sorry, another account from your organization is already signed in on this computer.
-author: Cloud-Writer
+author: helenclu
 ms.reviewer: vikkarti
-ms.author: meerak
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

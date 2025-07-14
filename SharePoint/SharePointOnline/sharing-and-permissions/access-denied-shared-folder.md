@@ -1,8 +1,8 @@
 ---
 title: Access Denied error when accessing a shared folder
 description: Describes issues that occur when users try to access a shared folder on a SharePoint or OneDrive site that has Limited-access user permission lockdown mode enabled.   
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 ms.date: 12/17/2023
 audience: Admin

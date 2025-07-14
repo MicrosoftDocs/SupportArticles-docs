@@ -1,13 +1,13 @@
 ---
 title: Unable to display a SharePoint Online Web Part containing custom XSLT code
 description: You cannot display a SharePoint Online Web Part with custom XSLT code.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Web Parts\Other
   - CSSTroubleshoot

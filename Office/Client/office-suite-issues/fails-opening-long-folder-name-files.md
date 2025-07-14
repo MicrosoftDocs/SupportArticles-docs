@@ -1,13 +1,13 @@
 ---
 title: Can't open an Office file that has a long folder name
 description: Describes a problem where you may receive an error message when you open an Office file that has a long folder name.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Open

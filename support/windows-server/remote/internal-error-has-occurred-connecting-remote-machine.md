@@ -2,8 +2,8 @@
 title: An internal error has occurred
 description: Helps troubleshoot An internal error has occurred error when connecting to a remote machine.
 ms.date: 01/15/2025
-author: kaushika-msft
-ms.author: kaushika
+author: Deland-Han
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

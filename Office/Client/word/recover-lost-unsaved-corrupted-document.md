@@ -1,7 +1,7 @@
 ---
 title: How to recover unsaved Word documents
 description: Describes a range of options to locate and recover lost or unsaved Microsoft Word documents.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -14,7 +14,7 @@ ms.custom:
   - CI 150212
   - CI 155568
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Word for Microsoft 365
   - Word 2019

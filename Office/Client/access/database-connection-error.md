@@ -1,8 +1,8 @@
 ---
 title: Unable to open a database with connection error
 description: Fixes an issue in which you receive an error Method 'Connection' of object '_Current Project' failed when you open a database in Access.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

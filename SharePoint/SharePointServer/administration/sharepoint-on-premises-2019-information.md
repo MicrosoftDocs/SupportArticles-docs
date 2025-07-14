@@ -1,13 +1,13 @@
 ---
 title: Information about SharePoint On-Premises 2019
 description: Describes some information about SharePoint On-Premises 2019.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Administration\Other
   - CSSTroubleshoot

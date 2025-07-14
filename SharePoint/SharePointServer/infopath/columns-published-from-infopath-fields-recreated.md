@@ -1,8 +1,8 @@
 ---
 title: Columns published from InfoPath fields are recreated
 description: Fixes an issue in which columns published from InfoPath fields are recreated when the same InfoPath form template is republished to more than one document libraries in a SharePoint site.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

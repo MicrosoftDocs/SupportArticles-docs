@@ -1,8 +1,8 @@
 ---
 title: Administrative timer jobs fail after an upgrade
 description: Fixes an issue in which administrative operations that depend on timer jobs to be completed aren't successful after an upgrade.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

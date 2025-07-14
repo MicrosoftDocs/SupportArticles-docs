@@ -1,8 +1,8 @@
 ---
 title: Unable to view websites using Teams on the web
 description: Discusses an issue that user is unable to view some websites using Teams on the web.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

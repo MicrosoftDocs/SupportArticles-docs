@@ -2,8 +2,8 @@
 title: Self-help diagnostics for Microsoft Viva administrators
 description: Provides a list of available diagnostics for apps in the Viva suite.
 manager: dcscontentpm
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 ms.reviewer: bpeterse, meerak
 ms.date: 11/06/2023
 audience: ITPro

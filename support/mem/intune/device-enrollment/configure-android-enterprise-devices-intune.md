@@ -2,8 +2,8 @@
 title: How to configure Android enterprise devices in Microsoft Intune 
 description: This guide describes how to configure Android enterprise devices in Microsoft Intune.
 keywords:
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 ms.date: 02/11/2025
 ms.reviewer: kaushika, mandia
 search.appverid: MET150

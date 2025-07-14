@@ -1,7 +1,7 @@
 ---
 title: Error message in Office when registry policy settings block a file
 description: Describes an issue that occurs when you try to open or to save a file type in an Office program, but your registry policy setting blocks the file.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Open\Errors
   - CSSTroubleshoot
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Word 2016
   - Excel 2016

@@ -3,7 +3,7 @@ title: Troubleshoot Azure virtual machine performance on Linux or Windows
 description: This article describes virtual machine (VM) generic performance troubleshooting through monitoring and observing bottlenecks and provides possible remediation for issues that may occur.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: JarrettRenshaw
+author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.custom: sap:VM Performance, linux-related-content
@@ -13,7 +13,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 10/17/2024
-ms.author: jarrettr
+ms.author: genli
 ---
 
 # Troubleshoot Azure virtual machine performance on Linux or Windows

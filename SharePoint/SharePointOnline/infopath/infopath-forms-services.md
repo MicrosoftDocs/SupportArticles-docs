@@ -1,13 +1,13 @@
 ---
 title: InfoPath Forms Services differences between SharePoint Online On-Premises
 description: This article describes some differences between SharePoint Online (DvNext/MT) and SharePoint On-Premises in how InfoPath Forms Services works
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:SharePoint Admin Center\Other
   - CSSTroubleshoot

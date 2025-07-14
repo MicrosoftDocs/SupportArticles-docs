@@ -3,7 +3,7 @@ title: Can't use Custom Report Items in SSDT
 description: This article provides a workaround to resolve a problem that prevents you from using Custom Report Items in SQL Server Data Tools for Visual Studio 2015 and Visual Studio 2017.
 ms.date: 04/27/2020
 ms.custom: sap:SQL Server Data Tools (SSDT)\Reporting Services Project
-ms.reviewer: bradsy, daleche, aartigoyle
+ms.reviewer: bradsy, daleche, christys
 ---
 # Can't use Custom Report Items in SQL Server Data Tools for Visual Studio 2015 and Visual Studio 2017
 

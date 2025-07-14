@@ -1,7 +1,7 @@
 ---
 title: Symantec DLP interferes with Teams processes
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 ms.date: 01/02/2024
 audience: ITPro
 ms.topic: troubleshooting

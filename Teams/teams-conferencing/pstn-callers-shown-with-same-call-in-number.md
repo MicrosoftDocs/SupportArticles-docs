@@ -1,7 +1,7 @@
 ---
 title: Teams meeting shows PSTN callers as having the same From number
-ms.author: meerak
-author: Cloud-Writer
+ms.author: luche
+author: helenclu
 ms.date: 10/30/2023
 audience: ITPro
 ms.topic: troubleshooting

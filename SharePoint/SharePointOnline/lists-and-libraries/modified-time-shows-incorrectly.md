@@ -1,13 +1,13 @@
 ---
 title: Modified time shows incorrectly for a SharePoint list
 description: When viewing modified column in a SharePoint Online list, the list item shows the time stamp as "12:00 AM," even though no change was made at that specific time.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.custom: 
   - sap:Lists and Libraries\Columns
   - CSSTroubleshoot

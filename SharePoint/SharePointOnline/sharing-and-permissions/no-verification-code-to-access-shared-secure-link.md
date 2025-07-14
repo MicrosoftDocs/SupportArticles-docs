@@ -1,8 +1,8 @@
 ---
 title: No verification code when external recipients access shared secure links
 description: Provides a solution to resolve the verification code not being received from shared secure links.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

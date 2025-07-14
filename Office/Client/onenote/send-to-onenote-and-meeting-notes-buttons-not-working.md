@@ -14,7 +14,7 @@ appliesto:
 - Outlook 2013
 - OneNote 2013
 search.appverid: MET150
-ms.reviewer: rlindgre, tasitae, jarrettr
+ms.reviewer: rlindgre, tasitae, lin.gen
 author: simonxjx
 ms.author: v-six
 ms.date: 06/06/2024

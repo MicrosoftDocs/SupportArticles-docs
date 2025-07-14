@@ -3,7 +3,7 @@ title: Troubleshoot Azure VM RDP connection issues by Event ID
 description: Use event IDs to troubleshoot various issues that prevent a Remote Desktop protocol (RDP) connection to an Azure Virtual Machine (VM).
 services: virtual-machines-windows
 documentationcenter: ''
-author: kaushika-msft
+author: Deland-Han
 manager: dcscontentpm
 tags: ''
 ms.service: azure-virtual-machines
@@ -13,7 +13,7 @@ ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 11/01/2018
-ms.author: kaushika
+ms.author: delhan
 ms.custom: sap:Cannot connect to my VM
 ---
 # Troubleshoot Azure VM RDP connection issues by Event ID

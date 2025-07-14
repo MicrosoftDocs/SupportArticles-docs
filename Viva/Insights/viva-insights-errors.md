@@ -1,8 +1,8 @@
 ---
 title: Resolve Viva Insights errors
 description: Discusses how to resolve errors that you encounter in Viva Insights.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 ms.date: 06/30/2025
 ms.service: viva-insights

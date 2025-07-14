@@ -1,8 +1,8 @@
 ---
 title: Give control doesn't work when you share screen in Teams
 description: This article describes an issue in which drop-down for Give control doesn't work when you share screen in Teams desktop client. Provides a resolution.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

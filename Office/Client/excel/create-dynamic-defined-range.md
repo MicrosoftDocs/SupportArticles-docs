@@ -1,11 +1,11 @@
 ---
 title: Create a dynamic defined range in a worksheet
 description: Provides a method to create a dynamic defined range that can automatically extend to include new information if you have a named range that must be extended.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 ms.reviewer: v-barryb
 ms.custom: 
   - Editing\Formulae

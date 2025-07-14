@@ -1,7 +1,7 @@
 ---
 title: Can't assign federated domain to user in Microsoft 365 Admin Center
 description: Discusses a scenario in which you can't assign a federated domain to a user in the Microsoft 365 Admin Center.
-author: Cloud-Writer
+author: helenclu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -9,7 +9,7 @@ audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: meerak
+ms.author: luche
 appliesto: 
   - Microsoft 365
 ms.date: 03/31/2022

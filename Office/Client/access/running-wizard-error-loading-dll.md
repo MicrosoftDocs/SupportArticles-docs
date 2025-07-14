@@ -1,8 +1,8 @@
 ---
 title: Error in loading dll when running wizards
 description: Fixes an issue in which you receive the error 'Error in loading dll' or 'Object library not registered' when you run wizards in Access.
-author: Cloud-Writer
-ms.author: meerak
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

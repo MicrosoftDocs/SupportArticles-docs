@@ -2,8 +2,8 @@
 title: Error 2250 (NERR_UseNotFound) when LanmanWorkstation service fails to start
 description: Describes how to resolve an issue in which the LanManWorkstation service doesn't start and Windows generates Error 2250.
 ms.date: 01/15/2025
-author: kaushika-msft
-ms.author: kaushika
+author: Deland-Han
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
