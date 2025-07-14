@@ -127,7 +127,7 @@ To learn about installing the Azure File Sync Agent for Windows, see [Install an
 1. Review the **Error Message** field for detailed information about the cause of the extension deployment failure.
 
 > [!IMPORTANT]
-> Uninstall the failed extension, perform the required remediation steps, then reinstall it. Save error message details for troubleshooting or contacting Azure File Sync support, as uninstalling the failed extension will delete these details.
+> The failed extension must be uninstalled and then reinstalled after performing the required remediation steps. Save error message details for troubleshooting or contacting Azure File Sync support, as uninstalling the failed extension will delete these details.
 
 #### Error code reference and remediation
  
