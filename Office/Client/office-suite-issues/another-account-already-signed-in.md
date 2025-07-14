@@ -1,7 +1,7 @@
 ---
 title: Another account is already signed in computer when signing in to Office 2013
 description: Fixes an error message that occurs when you try to sign in to an Office 2013 app by using Microsoft 365 credentials.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - Activation\Errors\Sorry another account from your organization is already signed in on this computer
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Microsoft 365
   - Office 2013

@@ -1,13 +1,13 @@
 ---
 title: Mail merge error when a data source is accessed by multiple users in Word
 description: Fixes an issue in which you receive an error when a data source is accessed by multiple users.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Editing\MailMerge

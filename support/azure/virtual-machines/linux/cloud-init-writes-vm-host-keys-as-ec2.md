@@ -5,8 +5,8 @@ ms.date: 10/10/2020
 ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 ms.service: azure-virtual-machines
 ms.collection: linux
-ms.author: genli
-author: genlin
+ms.author: jarrettr
+author: JarrettRenshaw
 ms.reviewer: Timothy.Basham, Scott.L.Roberts
 ---
 # Cloud-init writes virtual machine's host keys as ec2

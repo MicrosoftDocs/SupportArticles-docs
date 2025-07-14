@@ -1,8 +1,8 @@
 ---
 title: Access crashes when updating a linked SharePoint list
 description: Fixes an issue in which Access crashes when you update a linked SharePoint list and try to commit the record change.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

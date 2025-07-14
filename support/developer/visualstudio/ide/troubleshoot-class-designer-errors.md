@@ -15,8 +15,8 @@ f1_keywords:
 - vs.classdesigner.ViewInDiagramUnparsableTypeFound
 - vs.classdesigner.AssociationTypeNotFound
 - vs.classdesigner.CPlusPlusTypeCannotBeAdded
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ms.reviewer: tglee
 ms.custom: sap:Integrated Development Environment (IDE)\Designers (WPF, WinForms, XAML, etc.)
 ---

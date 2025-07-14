@@ -1,9 +1,9 @@
 ---
 title: OneDrive sync error Sorry, OneDrive can’t add your folder right now
 description: Describes fix for error Sorry, OneDrive can't add your folder right now.
-author: helenclu
+author: Cloud-Writer
 ms.reviewer: PramodBalusu
-ms.author: luche
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

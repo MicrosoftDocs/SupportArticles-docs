@@ -1,8 +1,8 @@
 ---
 title: Cannot update calendar items from OWA or Outlook on Mac
 description: When a mailbox is on hold and the Versions folder is full, you can't update calendar items from OWA or Outlook. Provides a resolution.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

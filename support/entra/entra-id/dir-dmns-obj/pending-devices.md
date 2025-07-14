@@ -1,8 +1,8 @@
 ---
 title: Pending devices in Microsoft Entra ID
 description: Explains why a device is in the pending state in Microsoft Entra ID.
-author: genlin
-ms.author: genli
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.date: 10/10/2023
 ms.service: entra-id
 ms.custom: sap:Devices

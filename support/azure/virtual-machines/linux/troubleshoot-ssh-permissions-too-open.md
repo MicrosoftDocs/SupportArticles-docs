@@ -2,7 +2,7 @@
 title: Can’t SSH to Azure Linux VM because permissions are too open
 description: Troubleshoot the permissions are too open error when you try to connect to Azure Linux VM
 services: virtual-machines
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 tags: 
 ms.custom: sap:Cannot connect to my VM, linux-related-content
@@ -12,7 +12,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
 ms.date: 12/30/2021
-ms.author: genli
+ms.author: jarrettr
 ---
 # Can't SSH to Azure Linux VM because permissions are too open
 

@@ -2,8 +2,8 @@
 title: Teams Rooms devices can't fetch calendar from Exchange Online
 description: Resolves an issue that a Microsoft Teams Rooms (MTR) device can't fetch calendar from Exchange Online.
 ms.date: 10/30/2023
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting

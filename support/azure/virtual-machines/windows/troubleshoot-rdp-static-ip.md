@@ -3,7 +3,7 @@ title: Cannot remote desktop to Azure Virtual Machines because of static IP
 description: Learn how to troubleshoot RDP problem that is caused by static IP in Microsoft Azure.
 services: virtual-machines
 documentationCenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 11/08/2018
-ms.author: genli
+ms.author: jarrettr
 ms.custom: sap:Cannot connect to my VM
 ---
 # Cannot remote desktop to Azure Virtual Machines because of static IP

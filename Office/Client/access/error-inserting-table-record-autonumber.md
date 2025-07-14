@@ -1,8 +1,8 @@
 ---
 title: Error (The changes you requested to the table were not successful) when you insert a new record in a table
 description: Describes an issue in which you receive a (The changes you requested to the table were not successful) message when you insert a new record in a table that contains an Autonumber field.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Unable to run a procedure with ambiguous name detected
 description: Fixes an issue in which you can't run a procedure because there are multiple procedures with the same name in a module.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

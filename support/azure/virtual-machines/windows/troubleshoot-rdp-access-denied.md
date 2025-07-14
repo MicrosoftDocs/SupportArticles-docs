@@ -3,7 +3,7 @@ title: Access is denied error when you connect to an Azure Windows VM
 description: Resolves an access denial problem that occurs when you try to connect to an Azure Windows VM by using Remote Desktop.
 services: virtual-machines
 documentationCenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 09/14/2021
-ms.author: genli
+ms.author: jarrettr
 ms.custom: sap:Cannot connect to my VM
 ---
 # Access is denied when you try to connect to an Azure Windows VM

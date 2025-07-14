@@ -1,8 +1,8 @@
 ---
 title: Determine the Known Folder Move eligibility
 description: Describes how to check to see if the OneDrive sync client for SharePoint in Windows has the capability to use the Known Folder Move feature.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

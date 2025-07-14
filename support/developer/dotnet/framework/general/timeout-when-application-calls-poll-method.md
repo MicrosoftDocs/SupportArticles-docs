@@ -2,8 +2,8 @@
 title: Time-out occurs when an application calls the Poll method
 description: This article provides workarounds for the timeout issue that occurs when an application calls the Poll method.
 ms.date: 07/08/2025
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ms.reviewer: roriddle, dev_triage
 ms.custom: sap:Class Library Namespaces
 ms.topic: troubleshooting-problem-resolution

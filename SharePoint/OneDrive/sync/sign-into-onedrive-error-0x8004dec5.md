@@ -1,8 +1,8 @@
 ---
 title: Error 0x8004dec5 when signing in to OneDrive
 description: Fixes an issue in which you can't sign in to OneDrive and you receive error code 0x8004dec5.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

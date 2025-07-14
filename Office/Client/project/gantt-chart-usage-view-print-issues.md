@@ -1,11 +1,11 @@
 ---
 title: Gantt Chart view or Usage view print on too many pages
 description: Describes an issue where Gantt Chart view or Usage views print on too many pages in Project. Provides a solution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: timj
 ms.custom: 
   - CSSTroubleshoot
