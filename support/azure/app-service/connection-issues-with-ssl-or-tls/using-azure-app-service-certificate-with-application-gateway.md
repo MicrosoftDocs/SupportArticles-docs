@@ -106,8 +106,7 @@ configure them.
     - In Application Gateway \> Listeners \> + Add Listener
     - Choose HTTPS and select **Key Vault certificate**.
 
->[!NOTE] As of writing, Key Vault integration only supports certificates
->with the private key in `.pfx` format.
+> [!NOTE] As of writing, Key Vault integration only supports certificates with the private key in `.pfx` format.
 
 ## Limitations and Considerations
 
