@@ -55,7 +55,7 @@ Connectivity problems are a common cause of issues that affect runbooks. Use the
 
 | **Error** | **Resolution** |
 |-----------|----------------|
-| "The subscription cannot be found" | This usually means that the runbook isn't using a managed identity. Follow the steps in [Unable to find subscription](/azure/automation/troubleshoot/runbooks#unable-to-find-subscription). |
+| "The subscription cannot be found" | This error usually means that the runbook isn't using a managed identity. Follow the steps in [Unable to find subscription](/azure/automation/troubleshoot/runbooks#unable-to-find-subscription). |
 | "Strong authentication enrollment is required." | See [Authentication to Azure failed due to MFA](/azure/automation/troubleshoot/runbooks#auth-failed-mfa). |
 | "No permission" or similar error | Make sure that the [managed identity has appropriate permissions](/azure/role-based-access-control/role-assignments-portal). |
 
