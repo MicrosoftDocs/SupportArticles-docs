@@ -137,7 +137,7 @@
         "**/*.md": "itpro"
       },
       "author": {
-        "**/*.md": "dcscontentpm",
+        "**/*.md": "JarrettRenshaw",
         "azure/virtual-desktop/**/*.*": "kaushika-msft",
         "azure/**/*.md": "JarrettRenshaw",
         "entra/**/*.md": "JarrettRenshaw",
