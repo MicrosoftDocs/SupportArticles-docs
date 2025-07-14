@@ -1,7 +1,7 @@
 ---
 title: Rename Excel sheet with cell contents by using Macro
 description: This article is made to help you to manage worksheet specially rename Excel sheet automatically with cell contents by using Macro in Microsoft Excel versions 2003, 2007, 2010 and 2013.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - Extensibility\Macros
   - sap:office-experts
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Excel for Microsoft 365
   - Excel 2019

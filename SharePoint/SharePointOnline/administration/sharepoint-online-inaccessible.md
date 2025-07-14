@@ -1,8 +1,8 @@
 ---
 title: Unable to access SharePoint Online
 description: Troubleshoot SharePoint Online inaccessible issue when you have no appropriate permissions to access the site or file or receive 503 or Server is busy errors.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

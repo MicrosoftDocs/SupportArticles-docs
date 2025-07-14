@@ -1,8 +1,8 @@
 ---
 title: Format or DatePar functions return a wrong week number for a date
 description: When determining the week number of a date using either the Format or DatePart function, the last Monday in some calendar years is returned as week 53 when it should be week 1.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

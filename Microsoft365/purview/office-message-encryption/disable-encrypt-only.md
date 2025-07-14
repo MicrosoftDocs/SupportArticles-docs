@@ -1,8 +1,8 @@
 ---
 title: Disabling the Encrypt-Only feature in Outlook
 description: Describes how to update the DRM registry key to disable Encrypt-Only on the Encrypt list without also disabling Message Classification.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

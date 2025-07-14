@@ -1,13 +1,13 @@
 ---
 title: SharePoint identity and permission issues in two-way domain trust if active accounts share SID history
 description: Fixes SharePoint exhibits identity and permission issues in a two-way domain trust if active accounts share an SID history.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Authentication & User Profiles\Other
   - CSSTroubleshoot

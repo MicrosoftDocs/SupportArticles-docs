@@ -3,7 +3,7 @@ title: We can't sign into your account error occurs when you make an RDP connect
 description: Learn how to troubleshoot can't sign into your account errors in Microsoft Azure.
 services: virtual-machines
 documentationCenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 10/18/2021
-ms.author: genli
+ms.author: jarrettr
 ms.custom: sap:Cannot connect to my VM
 ---
 # Can't sign into your account when you try to connect to an Azure Windows VM

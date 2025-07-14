@@ -6,7 +6,7 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: charw, marcn, genli, v-six
+ms.reviewer: charw, marcn, jarrettr, v-six
 ms.custom: 
   - sap:High Availability, Health, Performance, Content Indexing\Server Performance Issue (high CPU, high Memory, Disk Utilization)
   - Exchange Server

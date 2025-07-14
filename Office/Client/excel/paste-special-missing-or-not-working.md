@@ -1,8 +1,8 @@
 ---
 title: Paste Special option is missing or not working in Microsoft Office
 description: If your Paste Special option is missing,  look here. Paste Special allows you to paste using the formatting of your choice.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

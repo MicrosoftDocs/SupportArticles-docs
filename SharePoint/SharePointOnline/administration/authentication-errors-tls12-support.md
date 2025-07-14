@@ -1,7 +1,7 @@
 ---
 title: Authentication errors when client doesn't have TLS 1.2 support
 description: You experience authentication and connection errors if the client doesn't support TLS 1.2.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -14,7 +14,7 @@ ms.custom:
   - CI 147050
   - CI 152523
 ms.collection: SPO_Content
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - SharePoint Online
   - Microsoft 365

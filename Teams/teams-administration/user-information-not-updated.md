@@ -1,8 +1,8 @@
 ---
 title: User information isn't updated in Teams
 description: Describes an issue in which Teams user information isn't updated in Teams client. This behavior is by design.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

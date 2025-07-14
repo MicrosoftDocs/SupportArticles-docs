@@ -1,11 +1,11 @@
 ---
 title: Method to determine whether a year is a leap year
 description: Describes how to determine whether the year in a date that is used in an Excel document is a leap year.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: akeeler
 ms.custom: 
   - Reliability

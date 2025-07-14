@@ -1,13 +1,13 @@
 ---
 title: Unable to reach the server when sharing files
 description: This article fixes an issue in which you receive an Unable to reach the server message when you share files or folders.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Sharing\Sharing links
   - CSSTroubleshoot

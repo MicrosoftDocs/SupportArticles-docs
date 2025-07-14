@@ -1,13 +1,13 @@
 ---
 title: Relative and absolute URLs for content types across site collections is not supported
 description: This article introduces that using relative and absolute URLs for content types across site collections is not supported.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Lists and Libraries\Content Types
   - CSSTroubleshoot

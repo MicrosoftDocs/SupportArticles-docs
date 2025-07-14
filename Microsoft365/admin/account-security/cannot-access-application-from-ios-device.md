@@ -1,8 +1,8 @@
 ---
 title: Unable to access applications from iOS devices
 description: Fixes an issue in which a Conditional Access policy prevents access by using the application on iOS devices.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

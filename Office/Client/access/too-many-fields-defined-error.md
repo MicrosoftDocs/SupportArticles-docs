@@ -1,7 +1,7 @@
 ---
 title: Too Many Fields Defined error
 description: Explains that you may receive an unexpected error message when you try to save a table after adding a new field or changing the properties of an existing field since the internal column count to track the number of fields in the table has reached 255.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 ms.custom: 
   - CI 111294
@@ -10,7 +10,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Access for Microsoft 365
   - Access 2019

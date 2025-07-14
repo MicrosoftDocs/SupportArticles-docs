@@ -1,7 +1,7 @@
 ---
 title: Office stops responding when you open a file
 description: Using Save, Save As or Open causes Office to hang or freeze for a long period of time. Office can hang or freeze when trying to open or save files on a mapped network device or drive.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - Reliability
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: V-DARMAC
 appliesto: 
   - Office 2010

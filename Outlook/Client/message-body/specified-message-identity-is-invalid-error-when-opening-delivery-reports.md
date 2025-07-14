@@ -10,7 +10,7 @@ ms.custom:
   - sap:Sending, Receiving, Synchronizing, or viewing email\Blank or incorrectly displayed message body
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: luche, genli
+ms.reviewer: meerak, jarrettr
 appliesto: 
   - Outlook 2019
   - Outlook 2016

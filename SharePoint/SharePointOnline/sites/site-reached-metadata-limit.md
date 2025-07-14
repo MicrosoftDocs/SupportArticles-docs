@@ -1,7 +1,7 @@
 ---
 title: SharePoint site metadata is at or near limit error message
-ms.author: luche
-author: helenclu
+ms.author: meerak
+author: Cloud-Writer
 manager: dcscontentpm
 ms.date: 12/17/2023
 audience: Admin
