@@ -349,7 +349,7 @@
   - name: AKS Cost Analysis add-on issues
     href: extensions/aks-cost-analysis-add-on-issues.md
   - name: Troubleshoot Node Autoprovisioning Issues
-    href: troubleshoot-node-autoprovision-add-on.md
+    href: troubleshoot-node-auto-provision-add-on.md
   - name: Troubleshoot AI toolchain operator add-on errors
     href: extensions/troubleshoot-ai-toolchain-operator-addon-issues.md
   - name: Can't pull images from container registry to cluster
