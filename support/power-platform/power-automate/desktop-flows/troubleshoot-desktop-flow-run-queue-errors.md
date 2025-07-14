@@ -3,9 +3,9 @@ title: Troubleshoot desktop flow run queue-based errors
 description: Provides solutions to desktop flow queue-based error codes like NoCandidateMachine or No machine able to run the desktop flow has been found.
 author: rpapostolis # GitHub alias
 ms.author: appapaio # Microsoft alias
-ms.reviewer: befrey, lulubran, johndund, guco, fredg
+ms.reviewer: befrey, lulubran, johndund, guco, fredg, ermathon
 ms.custom: sap:Desktop flows\Power Automate for desktop errors
-ms.date: 10/08/2024
+ms.date: 07/14/2025
 ---
 # Troubleshoot desktop flow run queue errors
 
@@ -29,7 +29,7 @@ You might also receive one of these common suberror codes:
 
 ## How to investigate
 
-Lifecycle events of desktop flows in the queue can be viewed from the monitor run details page in the [queue events section](/power-automate/desktop-flows/monitor-run-details#view-queue-events). They provide insights on the multiple launch attempts and can help understand the inner root cause.
+You can view the lifecycle events of desktop flows in the queue from the monitor run details page, specifically in the [queue events section](/power-automate/desktop-flows/monitor-run-details#view-queue-events). These events provide detailed information about each launch attempt and can help you identify the underlying root cause of queue-based errors.
 
 ## Cause
 
