@@ -1,6 +1,16 @@
 items:
 - name: Troubleshoot Azure Monitor
   href: welcome-azure-monitor.yml
+- name: Activity Logs
+  items:
+  - name: I can't configure export of Activity Logs
+    items: 
+    - name: Configuring Export in Azure Portal
+      items: 
+      - name: Diagnostic Settings Transition from Legacy Solutions
+        href: activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md
+      - name: Understanding and Transitioning from Legacy to Diagnostic Settings for Azure Activity Logs
+        href: activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
