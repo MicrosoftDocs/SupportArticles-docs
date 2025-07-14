@@ -141,6 +141,8 @@
           href: ../contacts/contacts-folder-empty-and-contacts-are-in-different-folder.md
         - name: Inconsistent performance with contacts
           href: /troubleshoot/exchange/groups-and-distribution-lists/inconsistent-performance-with-contacts?context=/troubleshoot/outlook/context/client-context
+        - name: Offline Address Book (OAB) does not display the Global Address List by default
+          href: ../contacts/offline-address-book-not-display-global-address-list.md
         - name: Unknown is displayed in group name when expanding
           href: ../contacts/cannot-expand-nested-contact-groups-unknown-shown.md
     - name: Data Files
@@ -201,6 +203,8 @@
           href: ../email-management/inbox-rule-does-not-appear-in-outlook-client.md
         - name: Issues with OOF reply
           href: /troubleshoot/exchange/send-emails/understand-troubleshoot-oof-replies
+        - name: Messages in an e-mail thread are automatically moved to the Deleted Items folder
+          href: ../email-management/message-automatically-moved-deleted-items-folder.md
         - name: Messages move from the Inbox to a renamed folder
           href: ../email-management/messages-move-from-inbox-to-renamed-folder.md
         - name: Some rules are disabled and can't be re-enabled
@@ -313,6 +317,8 @@
           href: ../performance/outlook-shutdown-slowly-if-using-requireshutdownnotification.md
         - name: Outlook.exe.log in %Temp% consumes too much disk space
           href: ../performance/outlook-exe-log-file-in-temp-folder-consumes-too-much-space.md
+        - name: Performance and synchronization issues when working with folders in a secondary mailbox
+          href: ../performance/performance-and-synchronization-problems-when-work-with-folders-in-a-secondary-mailbox.md
         - name: Performance is slow in Microsoft 365
           href: ../performance/outlook-performance-is-slow-in-office-365.md
         - name: Performance issues with too many items or folders
@@ -413,6 +419,8 @@
           href: ../user-interface/calling-openmsgstore-opens-archive-mailbox.md
         - name: Can't assign color categories for IMAP accounts
           href: ../user-interface/cannot-assign-color-categories-for-imap-accounts.md
+        - name: "Cannot copy this folder because it may contain private items" error
+          href: ../user-interface/cannot-copy-this-folder-because-it-may-contain-private-items.md
         - name: Can't open multiple Excel attachments
           href: ../user-interface/only-two-excel-attachments-can-open.md
         - name: Can't recover deleted items from a non-mail public folder
