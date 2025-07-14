@@ -29,7 +29,7 @@ You might also receive one of these common suberror codes:
 
 ## How to investigate
 
-You can view the lifecycle events of desktop flows in the queue from the monitor run details page, specifically in the [queue events section](/power-automate/desktop-flows/monitor-run-details#view-queue-events). These events provide detailed information about each launch attempt and can help you identify the underlying root cause of queue-based errors.
+You can view lifecycle events for desktop flows in the queue from the monitor run details page, specifically in the [queue events section](/power-automate/desktop-flows/monitor-run-details#view-queue-events). These events provide detailed information about each launch attempt and can help you identify the underlying root cause of queue-based errors.
 
 ## Cause
 
