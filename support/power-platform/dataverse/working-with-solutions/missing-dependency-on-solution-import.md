@@ -29,9 +29,6 @@ This issue might occur when applications are upgraded to the latest version thro
 
 ## Workaround
 
-> [!IMPORTANT]
-> The experience described here might not be available to the environments of all the regions yet.
-
 To work around this issue, follow these steps:
 
 1. Select the **Show dependencies** button to navigate to the **Missing dependencies** page.
@@ -64,6 +61,16 @@ Next to the application name, you'll find an **Install** or **Update** button th
 
   - System administrators can use the **Update** button to open the application update page in the Power Platform admin center.
   - Non-system administrators can use the **Copy Update Link** button to copy the application update link and request their system administrator to update the application.
+ 
+
+> [!IMPORTANT]
+> This experience described below might not be available to the environments of all the regions yet.
+
+
+When the solution relies only on components from first party Dynamics 365 applications that are missing or outdated in the target environment. If these components can be auto-updated by the system, Import will automatically update/install the missing components by updating/installing its corresponding application followed by import of the solution. If the update/install of dependent application fails, the import of the solution will fail as well. The status of update/install can be tracked in the solution history page. 
+
+
+
   
 ### Missing dependencies coming from another managed solution
 
