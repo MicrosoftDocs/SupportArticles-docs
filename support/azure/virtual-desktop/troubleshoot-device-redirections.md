@@ -2,8 +2,8 @@
 title: Device redirections in Azure Virtual Desktop
 description: Helps resolve issues with device redirections in Azure Virtual Desktop.
 ms.topic: troubleshooting
-ms.date: 01/21/2025
-ms.reviewer: daknappe
+ms.date: 07/14/2025
+ms.reviewer: daknappe, dgundarev, spatnaik
 ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Troubleshoot device redirections for Azure Virtual Desktop
@@ -29,33 +29,34 @@ If a user signs in to the session host with a single-factor credential like user
 3. Choose **Sign-in options** at the bottom of the window.
 4. Select **Sign in with Windows Hello or a security key**. They should see an option to select Windows Hello or security authentication methods.
 
-## Clipboard and Window Resizing Issues After SxS Network Stack Update
+## Clipboard and window resizing issues after SxS Network Stack update
 
-**Applies to:** Azure Virtual Desktop – SxS Network Stack version 1.0.2501.05600 and later
+Applies to: Azure Virtual Desktop – SxS Network Stack version 1.0.2501.05600 and later
 
-### Symptoms
-- Clipboard redirection fails (e.g., copying from the remote session to the local device does not work).
-- The remote session window cannot be resized.
-- Issues occur after updating to SxS Network Stack version `1.0.2501.05600` or later.
-- Affects environments that use restrictive application control policies (e.g., antivirus allow lists).
+You might experience one or more of the following issues:
 
-### Cause
-The updated SxS network stack introduces new executables—`rdpclipcdv.exe` and `rdpinputcdv.exe`—used to handle clipboard and window resizing functionality. If these executables are blocked, the functionality fails to initialize properly.
+- Clipboard redirection fails (for example, copying from the remote session to the local device doesn't work).
+- The remote session window can't be resized.
+- Issues occur after updating to SxS Network Stack version 1.0.2501.05600 or later.
+- Environments that use restrictive application control policies (for example, antivirus allowlists) are affected.
+
+These issues occur because the updated SxS Network Stack introduces new executables: **rdpclipcdv.exe** and **rdpinputcdv.exe**. These executables are used to handle clipboard and window resizing functionality. If they're blocked, the functionality fails to initialize properly.
 
 This impacts environments that enforce application restriction policies, such as:
+
 - Software Restriction Policies (SRP)
 - AppLocker
 - Third-party endpoint protection software
 
-### Resolution
-Ensure the following executables are allow-listed **when executed from subfolders of** `C:\Program Files\Microsoft RDInfra`:
-- `rdpinit.exe`
-- `rdpshell.exe`
-- `rdpstartup.exe`
-- `rdpstartuplauncher.exe`
-- `rdpvchost.exe`
-- `rdpclipcdv.exe`
-- `rdpinputcdv.exe`
+To resolve the issue, ensure the following executables are allow-listed when executed from subfolders of **C:\\Program Files\\Microsoft RDInfra**:
+
+- **rdpinit.exe**
+- **rdpshell.exe**
+- **rdpstartup.exe**
+- **rdpstartuplauncher.exe**
+- **rdpvchost.exe**
+- **rdpclipcdv.exe**
+- **rdpinputcdv.exe**
 
 ## Provide feedback
 
@@ -63,9 +64,9 @@ Visit the [Azure Virtual Desktop Tech Community](https://techcommunity.microsoft
 
 ## More information
 
-- For an overview of troubleshooting Azure Virtual Desktop and the escalation tracks, see [Troubleshooting overview, feedback, and support](/support/azure/virtual-desktop/troubleshoot-set-up-overview).
-- To troubleshoot issues while creating an Azure Virtual Desktop environment and host pool in an Azure Virtual Desktop environment, see [Environment and host pool creation](/support/azure/virtual-desktop/troubleshoot-set-up-issues).
-- To troubleshoot issues while configuring a virtual machine (VM) in Azure Virtual Desktop, see [Session host virtual machine configuration](/support/azure/virtual-desktop/troubleshoot-vm-configuration).
-- To troubleshoot issues related to the Azure Virtual Desktop agent or session connectivity, see [Troubleshoot common Azure Virtual Desktop Agent issues](/support/azure/virtual-desktop/troubleshoot-agent).
-- To troubleshoot issues when using PowerShell with Azure Virtual Desktop, see [Azure Virtual Desktop PowerShell](/support/azure/virtual-desktop/troubleshoot-powershell).
+- For an overview of troubleshooting Azure Virtual Desktop and the escalation tracks, see [Troubleshooting overview, feedback, and support](troubleshoot-set-up-overview.md).
+- To troubleshoot issues while creating an Azure Virtual Desktop environment and host pool in an Azure Virtual Desktop environment, see [Environment and host pool creation](troubleshoot-set-up-issues.md).
+- To troubleshoot issues while configuring a virtual machine (VM) in Azure Virtual Desktop, see [Session host virtual machine configuration](troubleshoot-vm-configuration.md).
+- To troubleshoot issues related to the Azure Virtual Desktop agent or session connectivity, see [Troubleshoot common Azure Virtual Desktop Agent issues](troubleshoot-agent.md).
+- To troubleshoot issues when using PowerShell with Azure Virtual Desktop, see [Azure Virtual Desktop PowerShell](troubleshoot-powershell.md).
 - To go through a troubleshooting tutorial, see [Tutorial: Troubleshoot Resource Manager template deployments](/azure/azure-resource-manager/troubleshooting/quickstart-troubleshoot-arm-deployment).
