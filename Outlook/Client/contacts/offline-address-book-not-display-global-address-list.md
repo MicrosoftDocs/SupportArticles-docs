@@ -1,6 +1,6 @@
 ---
 title: Offline Address Book Does Not Display The Global Address List By Default
-description: Fixes an issue in which you can't view the contacts of a public folder in Outlook.
+description: Fixes an issue in which Offline Address Book does not display the Global Address List by default in Outlook.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
