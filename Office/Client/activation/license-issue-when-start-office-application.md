@@ -1,13 +1,13 @@
 ---
 title: Cannot verify the license for this product when you start an Office app
 description: Describes an issue that triggers a licensing error when you try to start an Office 2016 or 2013 application. Provides a resolution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Errors\Couldn't verify account or subscription or license

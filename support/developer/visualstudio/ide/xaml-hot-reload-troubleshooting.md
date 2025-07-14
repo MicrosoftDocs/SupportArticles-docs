@@ -2,8 +2,8 @@
 title: Troubleshooting XAML Hot Reload
 description: Fix problems that you may encounter with XAML Hot Reload.
 ms.date: 03/02/2022
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ms.reviewer: maleger
 ms.custom: sap:Integrated Development Environment (IDE)\Designers (WPF, WinForms, XAML, etc.)
 ---

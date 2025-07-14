@@ -11,7 +11,7 @@ ms.custom:
   - sap:Mail Flow\Issues with Transport Rules
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: genli, davidsan, v-six
+ms.reviewer: jarrettr, davidsan, v-six
 appliesto: 
   - Exchange Server
   - Exchange Online

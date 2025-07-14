@@ -1,7 +1,7 @@
 ---
 title: Teams doesn't load
 description: Provides a fix for when the Teams client doesn't load.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Teams Identity and Auth\Client Sign-in (window, mac, linux, web)
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Microsoft Teams
 ms.date: 05/15/2025

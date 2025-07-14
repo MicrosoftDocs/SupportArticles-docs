@@ -1,7 +1,7 @@
 ---
 title: An in-place edit of an embedded Word document that contains an ActiveX control causes flickering
-ms.author: luche
-author: helenclu
+ms.author: meerak
+author: Cloud-Writer
 manager: dcscontentpm
 ms.date: 06/06/2024
 audience: Admin

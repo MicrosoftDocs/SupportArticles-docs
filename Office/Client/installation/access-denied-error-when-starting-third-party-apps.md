@@ -1,7 +1,7 @@
 ---
 title: Starting third-party add-in causes Access Denied error
-ms.author: luche
-author: helenclu
+ms.author: meerak
+author: Cloud-Writer
 manager: dcscontentpm
 ms.date: 06/06/2024
 audience: Admin

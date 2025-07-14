@@ -1,7 +1,7 @@
 ---
 title: Query must have at least one destination field error when you run a query
 description: Discusses a problem in which you receive Query must have at least one destination field when you run an existing Access query. Provides a workaround.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Access for Microsoft 365
   - Access 2019

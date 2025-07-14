@@ -1,13 +1,13 @@
 ---
 title: Web part controls don't work after sites are migrated to SharePoint 2016
 description: Describes an issue that causes SharePoint 2013 web part controls to stop working once you've migrated to SharePoint 2016. Provides a resolution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:User experience\Webpart infrastructure
   - CSSTroubleshoot

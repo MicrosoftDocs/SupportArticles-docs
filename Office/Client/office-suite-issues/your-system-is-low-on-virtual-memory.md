@@ -1,7 +1,7 @@
 ---
 title: Your system is low on virtual memory
 description: Describes the error message that you may receive when you try to start an Office program.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - DownloadInstall\InstallErrors\AppLaunchErrors
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Office 2010
   - Office 2007

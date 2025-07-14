@@ -1,8 +1,8 @@
 ---
 title: Rebuild a Microsoft Office Web Apps server farm easily
 description: Describes how to rebuild Microsoft Office Web Apps server farm.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 ms.reviwer: brbering
 manager: dcscontentpm
 search.appverid: 

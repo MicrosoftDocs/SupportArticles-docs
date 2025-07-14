@@ -2,8 +2,8 @@
 title: QuotaExceeded error when scaling virtual machine scale sets
 description: Steps to resolve issues when QuotaExceeded error appears.
 ms.date: 05/04/2020
-author: genlin
-ms.author: genli
+author: JarrettRenshaw
+ms.author: jarrettr
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

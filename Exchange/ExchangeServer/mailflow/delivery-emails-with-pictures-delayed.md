@@ -10,7 +10,7 @@ ms.custom:
   - sap:Mail Flow\Need Help with Configuring Mailflow, Mail routing (Connectors, Domains)
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: shanbram, genli, christys, v-six
+ms.reviewer: shanbram, jarrettr, aartigoyle, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition

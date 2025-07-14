@@ -4,8 +4,8 @@ description: Resolve the issue that causes the Default Credentials signal of a M
 ms.reviewer: joolive
 ms.topic: troubleshooting
 ms.date: 10/30/2023
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 search.appverid: 

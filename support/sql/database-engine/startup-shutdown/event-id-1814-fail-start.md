@@ -2,8 +2,8 @@
 title: Event ID 1814 is logged in the System log
 description: This article provides resolutions for the problem where SQL Server fails to start and Event ID 1814 is logged in the System log.
 ms.date: 01/28/2020
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ms.reviewer: ramakoni
 ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ---

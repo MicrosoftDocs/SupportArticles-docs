@@ -1,8 +1,8 @@
 ---
 title: Microsoft 365 Import job fails with MailboxAmbiguous error in the Import job log file
 description: Describes an issue in which you can't use the Microsoft 365 Import Service to import PST files through the network or drive shipping.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

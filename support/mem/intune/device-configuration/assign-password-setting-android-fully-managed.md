@@ -1,8 +1,8 @@
 ---
 title: Tips for assigning device password settings to Android Enterprise fully managed devices in Intune
 description: Describes different behavior when a device restrictions profile that includes password settings is assigned to Android Enterprise fully managed devices before and after enrollment. 
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 ms.reviewer: kaushika, anziob, frcohen
 ms.date: 02/11/2025
 search.appverid: MET150

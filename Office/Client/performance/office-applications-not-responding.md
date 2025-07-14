@@ -1,8 +1,8 @@
 ---
 title: Some Office applications are not responding
 description: Fix the problem that causes Office applications to stop responding because some versions of the Intel graphics driver have a heap corruption bug in the system.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Classic site collection search usage reports
 description: This article provides information about usage and popularity reports in SharePoint Online.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 ms.custom: 
   - sap:Search\Site Usage Analytics
   - CI 109958

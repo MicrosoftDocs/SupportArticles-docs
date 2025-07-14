@@ -1,13 +1,13 @@
 ---
 title: The URL is invalid error when you upload a file to a SharePoint list
 description: This article describes an issue where the URL is invalid when you upload a file to a SharePoint list, and provides a solution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Files and Documents\Upload
   - CSSTroubleshoot

@@ -1,11 +1,11 @@
 ---
 title: Error occurs when accessing Project Web App
 description: Provides resolutions for errors when accessing PWA Online
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - CSSTroubleshoot
 search.appverid: 

@@ -1,8 +1,8 @@
 ---
 title: Error when you try to enable or disable an archive mailbox for an Exchange Online user or move a mailbox to an on-premises environment
 description: Describes that you receive an error message when you try to enable or disable an archive mailbox for an existing Exchange Online user or move a mailbox from Exchange Online to an on-premises environment.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
