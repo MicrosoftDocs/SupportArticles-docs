@@ -1,9 +1,9 @@
 ---
 title: Troubleshooting device-based licensing for Microsoft 365 Apps
 description: Describes issues you might encounter with Microsoft 365 device-based licensing.
-author: helenclu
+author: Cloud-Writer
 ms.reviewer: vikkarti
-ms.author: luche
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

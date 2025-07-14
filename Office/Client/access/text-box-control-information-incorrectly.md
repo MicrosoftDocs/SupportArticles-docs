@@ -1,7 +1,7 @@
 ---
 title: Text that is in a text box control of a report or a form may not appear correctly in Access
 description: Explains that the text that is in a text box control of a report or of a form does not appear correctly when the vertical property of the text box is changed to Yes.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -9,7 +9,7 @@ audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Access for Microsoft 365
   - Access 2019

@@ -5,7 +5,7 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, davean, eddo, delhan
+ms.reviewer: kaushika, davean, eddo, kaushika
 ms.custom:
 - sap:system performance\system configuration (page file,startup or running apps,error handling)
 - pcy:WinComm Performance

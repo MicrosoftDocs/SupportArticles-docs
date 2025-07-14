@@ -3,8 +3,8 @@ title: How to enable debug logging for the Azure Site Recovery in Hyper-V Site P
 description: Describes how to enable debug logging (also known as ETL tracing) for Microsoft Azure Site Recovery (ASR) in Hyper-V Site to Azure protection scenarios running on a Windows Server 2012 R2 Hyper-V server.
 ms.date: 03/05/2021
 ms.service: azure-site-recovery
-ms.author: genli
-author: genlin
+ms.author: jarrettr
+author: JarrettRenshaw
 ms.reviewer: markstan
 ms.custom: sap:I need help with Azure Backup
 ---

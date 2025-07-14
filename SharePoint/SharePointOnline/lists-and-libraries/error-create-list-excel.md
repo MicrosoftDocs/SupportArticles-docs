@@ -1,8 +1,8 @@
 ---
 title: Error when creating a list from Excel - Something went wrong. The file does not exist
 description: This article describes the steps to resolve a missing list file in Excel.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 ms.reviewer: prbalusu
 manager: dcscontentpm
 search.appverid: 

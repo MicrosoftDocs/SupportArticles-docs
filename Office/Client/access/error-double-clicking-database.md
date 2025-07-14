@@ -1,8 +1,8 @@
 ---
 title: Errors when double-clicking to open a database
 description: Fixes an issue in which you can't open a database by double-clicking it in Windows Explorer with the error message about invalid Win32 application or about file association.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

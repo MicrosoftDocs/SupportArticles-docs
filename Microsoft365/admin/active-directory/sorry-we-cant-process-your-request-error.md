@@ -1,8 +1,8 @@
 ---
 title: Can't set security verification with Microsoft Entra multifactor authentication
 description: Describes an issue that triggers an error message when you try to set up extra security verification settings for a user for Microsoft Entra multifactor authentication.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: External users shown as Unknown in meeting details
 description: An external (federated) user is displayed as Unknown on the Overview page of a Teams meeting or call. This behavior is by design.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

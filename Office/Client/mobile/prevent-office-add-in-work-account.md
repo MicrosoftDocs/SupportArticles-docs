@@ -1,8 +1,8 @@
 ---
 title: Block use of Office Add-ins for work or school accounts
 description: Describes how to prevent iOS users from using Office add-ins for Word, Excel, and PowerPoint when users are signed into their work or school accounts.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: SharePoint installs the obsolete SQL Server product
 description: Provides a workaround for an issue in which SharePoint installs the obsolete Microsoft SQL 2005 Analysis Services ADOMD.NET.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

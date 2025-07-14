@@ -1,11 +1,11 @@
 ---
 title: Office activation process issues
 description: Provides troubleshooting information about the error codes and corresponding descriptions of Office 2010 and Office 2013 activation process issues that can be repaired by using the Office Repair tool.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Perpetual

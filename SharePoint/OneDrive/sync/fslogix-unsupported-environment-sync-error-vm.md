@@ -1,8 +1,8 @@
 ---
 title: OneDrive sync error FSLogix_unsupported_environment on VMs
 description: The OneDrive sync client can't sync on virtual machines that use FSLogix versions earlier than FSLogix 2009 hotfix 1.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

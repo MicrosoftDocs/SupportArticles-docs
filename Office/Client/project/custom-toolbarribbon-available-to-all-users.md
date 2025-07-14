@@ -1,8 +1,8 @@
 ---
 title: Make a custom toolbar/ribbon available to all users in Project client
 description: Describes how to create a custom toolbar that has a button to run a macro. Includes information about how to make the toolbar available to all users of Project client.  Also talks about how to do the same for the Ribbon in 2010. Also makes mention of an error when opening plans The Enterprise Global already contains, it could be a view, a table or any other Project object that has a duplicate name.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

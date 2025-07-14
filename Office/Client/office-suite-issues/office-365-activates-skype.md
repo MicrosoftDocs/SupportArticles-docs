@@ -1,13 +1,13 @@
 ---
 title: This feature has been disabled by your Administrator
 description: Fixes an issue in which Skype for Business activation fails if you install it from Microsoft 365 Apps for enterprise as a stand-alone application.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Errors\Unable to connect

@@ -1,8 +1,8 @@
 ---
 title: Precision and accuracy in floating-point calculations
 description: Describes the rules that should be followed for floating-point calculations.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

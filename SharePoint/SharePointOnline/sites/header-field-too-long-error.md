@@ -1,8 +1,8 @@
 ---
 title: SharePoint site returns Header Field Too Long error
 description: Fixes an issue in which you can't access a SharePoint site because a request header field is too long.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

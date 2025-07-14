@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot errors when updating data in query or form
 description: Lists troubleshooting information about the Operation must use an updatable query or the This Recordset is not updateable errors when you update data in an Access form.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

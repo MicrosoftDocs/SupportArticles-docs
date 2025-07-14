@@ -10,7 +10,7 @@ ms.custom:
   - sap:Calendar\Other
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: Genli
+ms.reviewer: jarrettr
 appliesto: 
   - Outlook 2019
   - Outlook 2016

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot site collection upgrade issues
 description: This article describes how to troubleshoot site collection upgrade issues.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Sites\Other
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - SharePoint Online
 ms.date: 12/17/2023

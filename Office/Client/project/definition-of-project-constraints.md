@@ -1,8 +1,8 @@
 ---
 title: Definition of Microsoft Project constraints
 description: Provides the definitions of Project constraints.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

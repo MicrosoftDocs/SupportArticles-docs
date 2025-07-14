@@ -1,7 +1,7 @@
 ---
 title: Configure the default search engine in Word 2013
 description: Describes how to change the default search engine for the feature that lets you perform a web search for a word in Word 2013. By default, the search is performed by Bing.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Open
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 ms.reviewer: mmaxey
 appliesto: 
   - Word 2013

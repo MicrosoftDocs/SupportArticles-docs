@@ -1,8 +1,8 @@
 ---
 title: List or view is read-only in SharePoint Datasheet View
 description: Fixes an issue in which a list or view is read-only when you try to edit the list in SharePoint Datasheet View.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

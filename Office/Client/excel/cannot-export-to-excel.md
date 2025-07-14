@@ -1,7 +1,7 @@
 ---
 title: Unable to export to Excel from SharePoint
 description: Export to excel from SharePoint doesn't work. An unexpected error has occurred. Changes to your data cannot be saved. error returned.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.custom:
   - Editing\Data\ImportExport
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Excel
 ms.date: 05/26/2025

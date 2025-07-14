@@ -1,8 +1,8 @@
 ---
 title: Error AADSTS50020 when signing into OneDrive
 description: You can't sign in to the OneDrive sync app if you see error AADSTS50020 because of cached identities from the previous tenant.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

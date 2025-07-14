@@ -1,7 +1,7 @@
 ---
 title: ASP.NET MVC Application Error WIF10201 No Valid Key Mapping Found for SecurityToken
 description: This article provides guidance for troubleshooting the error, WIF10201- No valid key mapping found for securityToken.
-author: genlin
+author: JarrettRenshaw
 ms.author: bachoang
 ms.service: entra-id
 ms.topic: troubleshooting-problem-resolution 

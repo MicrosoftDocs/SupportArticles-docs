@@ -1,8 +1,8 @@
 ---
 title: Description of the numbering scheme for product code GUIDs in Office 2013
 description: Describes how to read the product GUIDs in the Windows registry to determine information about the Office 2013 suite, programs, or utilities that you're using.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

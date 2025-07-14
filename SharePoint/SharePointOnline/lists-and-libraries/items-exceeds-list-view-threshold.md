@@ -1,13 +1,13 @@
 ---
 title: The number of items in this list exceeds the list view threshold
 description: This article describes The number of items in this list exceeds the list view threshold error, and provides a solution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Lists and Libraries\Managing list view threshold errors
   - CSSTroubleshoot

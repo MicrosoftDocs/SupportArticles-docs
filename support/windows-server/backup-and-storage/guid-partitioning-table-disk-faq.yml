@@ -3,8 +3,8 @@ metadata:
   title: FAQs about GUID Partitioning Table disk
   description: Provides a list of frequently asked questions about the GUID Partition Table disk architecture.
   ms.date: 01/15/2025
-  author: Deland-Han
-  ms.author: delhan
+  author: kaushika-msft
+  ms.author: kaushika
   manager: dcscontentpm
   audience: itpro
   ms.topic: faq

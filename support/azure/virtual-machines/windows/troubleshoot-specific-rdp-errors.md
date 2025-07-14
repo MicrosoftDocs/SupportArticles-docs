@@ -4,7 +4,7 @@ description: Understand specific error messages that you may receive when trying
 keywords: Remote desktop error,remote desktop connection error,cannot connect to VM,remote desktop troubleshooting
 services: virtual-machines
 documentationcenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
 ms.service: azure-virtual-machines
@@ -13,7 +13,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 10/31/2018
-ms.author: genli
+ms.author: jarrettr
 ms.custom: sap:Cannot connect to my VM
 ---
 # Troubleshooting specific RDP error messages to a Windows VM in Azure
