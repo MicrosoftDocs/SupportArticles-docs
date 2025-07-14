@@ -3,7 +3,7 @@ title: Troubleshoot Azure File Sync agent installation and server registration
 description: Troubleshoot common issues with installing the Azure File Sync agent and registering Windows Server with the Storage Sync Service. 
 author: khdownie
 ms.service: azure-file-storage
-ms.date: 07/11/2025
+ms.date: 07/14/2025
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -124,25 +124,25 @@ To learn about installing the Azure File Sync Agent for Windows, see [Install an
 1. Navigate to your **Arc Server** in the Azure portal.
 1. Go to the **Extensions** blade for the server.
 1. Locate `AzureFileSyncAgentExtension` and select **View Details** under the **Status** column.
-1. Review the **Error Message** field for detailed information on why the extension deployment failed.
+1. Review the **Error Message** field for detailed information about the cause of the extension deployment failure.
 
 > [!IMPORTANT]
-> The failed extension must be uninstalled and then reinstalled **after** performing the required remediation steps. Save the error message details for troubleshooting or when contacting Azure File Sync support. Uninstalling the extension will remove these details.
+> Uninstall the failed extension, perform the required remediation steps, then reinstall it. Save error message details for troubleshooting or contacting Azure File Sync support, as uninstalling the failed extension will delete these details.
 
 #### Error code reference and remediation
  
-| **Error Message** | **Error Code** | **Remediation Steps** |
+| **Error Message** | **Error Code** | **Remediation steps** |
 |-------------------|----------------|------------------------|
-| Cannot install Azure File Sync agent because .NET Framework 4.7.2 or later is required. Install the latest .NET Framework and try again | 206 | Install .NET Framework 4.7.2 or higher. Reboot the machine afterward. |
+| Cannot install Azure File Sync agent because .NET Framework 4.7.2 or later is required. Install the latest .NET Framework and try again | 206 | Install .NET Framework 4.7.2 or later, then restart your computer. |
 | Azure File Sync agent is already installed. No further action needed. | 0 | No action required. The extension is installed, but no customization is applied. |
 | The Azure File Sync agent is only supported on RTM (Release to Manufacturing) versions of supported operating systems. | 51 | Azure File Sync agent and extension are supported only on RTM versions of Windows Server 2016, 2019, 2022, and 2025. |
-| Proxy settings error. `UseCustomProxy` is enabled but ProxyAddress is missing or invalid. ProxyAddress must be specified without port and length must be less than 255 characters. | 201 | Ensure `ProxyAddress` is specified. Must be under 255 characters. |
-| Proxy settings error. `UseCustomProxy` is enabled but ProxyPort is missing or invalid. Proxy port must be a number between 1 and 65535 | 202 | Provide a valid `ProxyPort` (numeric value between 1 and 65535) when `UseCustomProxy` is enabled. |
+| Proxy settings error. `UseCustomProxy` is enabled but ProxyAddress is missing or invalid. ProxyAddress must be specified without port and length must be less than 255 characters. | 201 | Ensure that the `ProxyAddress` is specified and doesn't exceed 255 characters in length. |
+| Proxy settings error. `UseCustomProxy` is enabled but ProxyPort is missing or invalid. Proxy port must be a number between 1 and 65535 | 202 | Provide a valid `ProxyPort` (a numeric value between 1 and 65535) when `UseCustomProxy` is enabled. |
 | Proxy settings error. `ProxyAuthRequired` is enabled but ProxyUsername is missing or invalid. `ProxyUsername` length must be between 3 and 255 characters | 203 | Ensure `ProxyUsername` is specified and its length is between 3 and 255 characters. |
 | Proxy settings error. `ProxyAuthRequired` is enabled but ProxyPassword is missing or empty | 204 | Provide a non-empty `ProxyPassword` when `ProxyAuthRequired` is enabled. |
-| A system reboot is pending due to Storage Sync file rename operations. Restart your server before installing the Azure File Sync agent. | 83 | A reboot is required. Restart the server before attempting agent installation again. |
-| The file signature is not valid. Or Signature validation failed for the downloaded MSI file | 86 | The installer file might be corrupted or tampered with. Re-download the MSI file from a trusted source. |
-| Certificate chain validation failed. | 86 | Ensure the required root certificates are installed. Refer to [this documentation](/azure/aks/aksarc/aks-edge-howto-offline-install).<br><br>**If using a proxy**, ensure the following domains are bypassed:<br>`login.microsoftonline.com`, `management.azure.com`, `go.microsoft.com`, `download.microsoft.com`, `download.windowsupdate.com`, `crl.microsoft.com`, `oneocsp.microsoft.com`, `ocsp.msocsp.com`, `www.microsoft.com`.<br><br>Restart the machine to apply any updates. |
+| A system reboot is pending due to Storage Sync file rename operations. Restart your server before installing the Azure File Sync agent. | 83 | A reboot is required. Restart the server before installing the agent again. |
+| The file signature is not valid. Or Signature validation failed for the downloaded MSI file | 86 | The installer file might be corrupted or tampered with. Download the MSI file again from a trusted source. |
+| Certificate chain validation failed. | 86 | Ensure the required root certificates are installed. Refer to [Prerequisites for AKS Edge Essentials offline installation](/azure/aks/aksarc/aks-edge-howto-offline-install).<br><br>If using a proxy, ensure the following domains are bypassed:<br>`login.microsoftonline.com`, `management.azure.com`, `go.microsoft.com`, `download.microsoft.com`, `download.windowsupdate.com`, `crl.microsoft.com`, `oneocsp.microsoft.com`, `ocsp.msocsp.com`, `www.microsoft.com`.<br><br>Restart the computer to apply any updates. |
 | Azure File Sync agent download or configuration failed. Details: Failed to configure auto update settings: Agent install directory not found in registry. Please check the installation. | 214 | 1. Open an elevated PowerShell session and check if .NET 4.7.2 or higher is installed:<br>```$releaseKey = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" -ErrorAction SilentlyContinue).Release```<br>2. If `$releaseKey` is less than `461808`, .NET 4.7.2 isn't installed.<br>3. Download and install .NET Framework 4.7.2 or later from the [official .NET download site](https://dotnet.microsoft.com/download/dotnet-framework). |
 
 ## Server registration
