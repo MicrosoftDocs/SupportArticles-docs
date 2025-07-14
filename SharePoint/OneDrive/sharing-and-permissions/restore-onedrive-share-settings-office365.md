@@ -1,7 +1,7 @@
 ---
 title: How to restore Microsoft 365 admin center Sharing settings for OneDrive
-ms.author: luche
-author: helenclu
+ms.author: meerak
+author: Cloud-Writer
 manager: dcscontentpm
 ms.date: 12/17/2023
 audience: Admin

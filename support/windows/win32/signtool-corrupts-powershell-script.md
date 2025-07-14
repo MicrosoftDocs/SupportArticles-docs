@@ -4,8 +4,8 @@ description: This article provides resolutions for the PowerShell script file co
 ms.date: 06/11/2025
 ms.custom: sap:Security Development\Certificate API
 ms.reviewer: mstanley
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ---
 
 # PowerShell script files re-signed with SignTool may be corrupted

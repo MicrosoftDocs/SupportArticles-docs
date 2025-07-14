@@ -1,11 +1,11 @@
 ---
 title: Tasks aren't scheduled as expected in Microsoft Project
 description: Describes an issue where Tasks aren't scheduled as expected in Microsoft Project. Provides a solution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: plammer
 ms.custom: 
   - CSSTroubleshoot

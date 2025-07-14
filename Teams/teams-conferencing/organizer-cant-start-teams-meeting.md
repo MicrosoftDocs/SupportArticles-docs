@@ -1,7 +1,7 @@
 ---
 title: Teams meeting organizer cannot start meeting
-ms.author: luche
-author: helenclu
+ms.author: meerak
+author: Cloud-Writer
 ms.date: 10/30/2023
 audience: ITPro
 ms.topic: troubleshooting

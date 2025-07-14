@@ -5,8 +5,8 @@ ms.date: 10/10/2020
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot start or stop my VM, linux-related-content
 ms.collection: linux
-ms.author: genli
-author: genlin
+ms.author: jarrettr
+author: JarrettRenshaw
 ms.reviewer: 
 ---
 # Can't access Generation 2 Linux VM after a reboot

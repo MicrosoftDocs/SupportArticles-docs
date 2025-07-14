@@ -3,8 +3,8 @@ title: An existing connection was forcibly closed (OS error 10054)
 description: Describes scenarios in which an existing connection was forcibly closed by the remote host and provides resolutions.
 ms.date: 01/10/2025
 ms.custom: sap:Database Connectivity and Authentication
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ms.reviewer: jopilov, v-jayaramanp
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: How to control the blocking of OLE/COM components in Microsoft 365
 description: Describes how to control the blocking of OLE/COM components in Microsoft 365 Subscription.
-author: helenclu
+author: Cloud-Writer
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 manager: dcscontentpm
 ms.custom: 
   - CSSTroubleshoot

@@ -3,13 +3,13 @@ title: Troubleshooting Azure VM allocation failures
 description: Troubleshoot allocation failures when you create or resize a VM in Azure.
 services: virtual-machines
 documentationcenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 tags: top-support-issue,azure-resource-manager,azure-service-management
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.date: 02/21/2025
-ms.author: genli
+ms.author: jarrettr
 ms.reviewer: clmendes
 ms.custom: sap:Received an Allocation Failure
 ---

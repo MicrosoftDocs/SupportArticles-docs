@@ -1,7 +1,7 @@
 ---
 title: Recalculation of worksheet that contains SUMIF takes longer to finish
 description: Describes an issue where Excel takes a long to complete the recalculation and move the insertion point to the next cell. Occurs when you type a number in a cell in a worksheet that contains a SUMIF formula.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - Editing\Formulae
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Excel 2016
   - Excel 2013

@@ -2,7 +2,7 @@
 title: Excel opens a blank screen when you double-click a file icon or file name
 description: Offers resolutions to an issue where you see a blank screen when you try to open an Excel workbook by double-clicking its icon or file name.
 ms.date: 05/26/2025
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 147067
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Excel for Microsoft 365
   - Excel LTSC 2021

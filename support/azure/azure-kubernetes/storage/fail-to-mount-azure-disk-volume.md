@@ -2,8 +2,8 @@
 title: Unable to Mount Azure Disk Volumes
 description: Describes errors that occur when mounting Azure disk volumes fails, and provides solutions.
 ms.date: 03/22/2025
-author: genlin
-ms.author: genli
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.reviewer: chiragpa, akscsscic, v-weizhu
 ms.service: azure-kubernetes-service
 ms.custom: sap:Storage

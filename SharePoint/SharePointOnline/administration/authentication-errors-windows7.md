@@ -1,7 +1,7 @@
 ---
 title: Authentication errors occur when connecting to SharePoint or OneDrive from Windows 7 or 8
 description: You experience authentication errors when connecting to SharePoint or OneDrive from Windows 7 or Windows 8.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 148433
 ms.collection: SPO_Content
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - SharePoint Online
   - Windows 7

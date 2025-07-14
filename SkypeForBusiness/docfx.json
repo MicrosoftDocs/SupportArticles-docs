@@ -125,10 +125,10 @@
         "SkypeServer/**/*.md": "skype-for-business-server"
       },
       "author": {
-        "**/*.md": "helenclu"
+        "**/*.md": "Cloud-Writer"
       },
       "ms.author": {
-        "**/*.md": "luche"
+        "**/*.md": "meerak"
       }
     },
     "template": [],

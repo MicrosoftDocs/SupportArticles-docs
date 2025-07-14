@@ -1,8 +1,8 @@
 ---
 title: Mail access issues in a hybrid Exchange deployment with cloud-based archive
 description: Describes an issue in which users who have a cloud-based archive in a hybrid Exchange deployment can't access their mail in Outlook or Outlook on the web. Also, on-premises users receive an NDR when they try to send mail to users who have a cloud-based archive.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -3,7 +3,7 @@
 title: Use a Windows troubleshooting VM with Azure PowerShell
 description: Learn how to troubleshoot Windows VM issues in Azure by connecting the OS disk to a recovery VM using Azure PowerShell
 services: virtual-machines
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: vm-windows
 ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurepowershell
 ms.workload: infrastructure
 ms.date: 08/09/2018
-ms.author: genli
+ms.author: jarrettr
 ---
 # Troubleshoot a Windows VM by attaching the OS disk to a recovery VM using Azure PowerShell
 

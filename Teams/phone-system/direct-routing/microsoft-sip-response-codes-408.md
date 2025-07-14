@@ -2,8 +2,8 @@
 title: SIP 408 and Microsoft response codes
 description: Lists combinations of Microsoft response code and the SIP 408 error, and provides actions to resolve the errors.
 ms.date: 10/30/2023
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting

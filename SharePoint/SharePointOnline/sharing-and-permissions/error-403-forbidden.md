@@ -1,14 +1,14 @@
 ---
 title: Error 403 Forbidden in OneDrive or SharePoint
 description: How to troubleshoot Error 403 Forbidden for OneDrive or SharePoint sites.
-author: helenclu
+author: Cloud-Writer
 ms.reviewer: bpeterse
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Sites\Error 404: Site Unavailable
   - CSSTroubleshoot

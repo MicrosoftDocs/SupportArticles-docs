@@ -2,8 +2,8 @@
 title: Event ID 33565 and SQL Server doesn't start
 description: This article provides resolutions for the problem where SQL Server fails to start and event ID 33565 is logged in the Application event log.
 ms.date: 05/08/2025
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ms.reviewer: ramakoni, jopilov
 ms.custom: sap:Startup, shutdown, restart issues (instance or database)
 ---

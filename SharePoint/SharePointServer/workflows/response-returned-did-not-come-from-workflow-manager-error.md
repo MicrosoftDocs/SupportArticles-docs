@@ -1,7 +1,7 @@
 ---
 title: Unable to configure and register a workflow manager
-ms.author: luche
-author: helenclu
+ms.author: meerak
+author: Cloud-Writer
 manager: dcscontentpm
 ms.date: 12/17/2023
 audience: Admin

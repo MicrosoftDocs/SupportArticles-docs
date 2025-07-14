@@ -1,8 +1,8 @@
 ---
 title: Issues with Local Media Optimization
 description: Fixes issues in which Local Media Optimization (LMO) for Direct Routing doesn't work as expected.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

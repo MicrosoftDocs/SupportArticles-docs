@@ -1,7 +1,7 @@
 ---
 title: Upload a file to a library using the new experience version
 description: This article describes an issue where you aren't prompted for required information when you upload a file to a SharePoint Online library using the new experience version, and provides a solution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Files and Documents\Upload
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - SharePoint Online
 ms.date: 12/17/2023

@@ -1,13 +1,13 @@
 ---
 title: Picture Library doesn't display thumbnail previews
 description: This article describes an issue where SharePoint Online Picture Library doesn't display thumbnail previews, and provides a solution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Lists and Libraries\Other
   - CSSTroubleshoot

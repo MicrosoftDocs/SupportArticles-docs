@@ -1,8 +1,8 @@
 ---
 title: Teams degraded performance if Teams is remembered as a game by Xbox Game Bar
 description: Fixes an issue in which Teams experiences performance issues if it's remembered as a game by Xbox Game Bar.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

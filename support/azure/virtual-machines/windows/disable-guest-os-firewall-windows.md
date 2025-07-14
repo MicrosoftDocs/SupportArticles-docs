@@ -3,7 +3,7 @@ title: Disable the guest OS Firewall in Azure VM
 description: Learn a workaround method for troubleshooting situations where a guest operating system firewall is filtering partial or complete traffic to a VM.
 services: virtual-machines
 documentationcenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 tags: ''
 ms.service: azure-virtual-machines
@@ -13,7 +13,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 08/30/2021
-ms.author: genli
+ms.author: jarrettr
 
 ms.custom: sap:Cannot connect to my VM
 ---
