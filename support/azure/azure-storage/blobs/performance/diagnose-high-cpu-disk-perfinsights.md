@@ -3,8 +3,8 @@ title: How to use PerfInsights to diagnose high CPU or disk usage issues
 description: Introduce the troubleshooting skill of using PerfInsights to diagnose performance issues.
 ms.date: 08/14/2020
 ms.service: azure-storage
-ms.author: genli
-author: genlin
+ms.author: jarrettr
+author: JarrettRenshaw
 ms.reviewer: 
 ms.custom: sap:Performance and Throughput
 ---

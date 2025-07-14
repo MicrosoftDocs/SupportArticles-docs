@@ -1,13 +1,13 @@
 ---
 title: How to change the database server in a SharePoint farm
 description: Describes the steps to change the database server in a SharePoint farm.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Administration\Farm Administration
   - CSSTroubleshoot

@@ -3,7 +3,7 @@ title: Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-pr
 description: This article describes the significance of CSPs, Open Mobile Alliance – Uniform Resources (OMA-URIs), and how custom mobile device management (MDM) policies are delivered to a Windows 10-based device with Microsoft Intune.
 ms.date: 02/11/2025
 ms.reviewer: kaushika, sausarka
-author: helenclu
+author: Cloud-Writer
 ms.author: sausarka
 search.appverid: MET150
 ms.custom: sap:Configure Devices - Windows\Custom, CI 121166, CSSTroubleshooting

@@ -1,9 +1,9 @@
 ---
 title: Error Code 0x8004de40 or 0x8004de88 when signing in to OneDrive
 description: Describes how to resolve an issue when unable to sign in to OneDrive
-author: helenclu
+author: Cloud-Writer
 ms.reviewer: salarson
-ms.author: luche
+ms.author: meerak
 manager: dcscontentpm
 ms.date: 12/17/2023
 audience: Admin

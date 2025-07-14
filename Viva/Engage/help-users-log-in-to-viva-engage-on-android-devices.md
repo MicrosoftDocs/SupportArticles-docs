@@ -1,8 +1,8 @@
 ---
 title: Users can't sign in to Viva Engage on Android devices
 description: Fix issues that users can't sign in to Viva Engage on an Android device.
-ms.author: luche
-author: helenclu
+ms.author: meerak
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,13 +1,13 @@
 ---
 title: We are unable to connect right now when try to activate Microsoft 365 Apps for enterprise
 description: Describes an issue that triggers an error message when users try to activate Microsoft 365 Apps for enterprise. Provides a workaround.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Errors\Unable to connect

@@ -3,7 +3,7 @@ title: Block remote use of local accounts in Windows
 description: This article describes how to block remote use of local accounts in Windows.
 ms.date: 10/30/2020
 ms.custom: sap:Security, Encryption, Auditing, Authorization
-ms.reviewer: chrissk, delhan
+ms.reviewer: chrissk, kaushika
 ms.topic: how-to
 ---
 # Block the remote use of local accounts in Windows

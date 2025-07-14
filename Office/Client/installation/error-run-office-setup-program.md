@@ -1,7 +1,7 @@
 ---
 title: Error when you install an Office program
 description: Describes an error message that you receive when you install an Office program.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - DownloadInstall\SxS\SxSOrPerpetual
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: jenl
 appliesto: 
   - Office 2010

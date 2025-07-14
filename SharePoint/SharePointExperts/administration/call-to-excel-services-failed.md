@@ -1,8 +1,8 @@
 ---
 title: Call to Excel Services failed with a scheduled data refresh
 description: Fixes the Call to Excel Services failed error when you run a scheduled data refresh by using PowerPivot.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 ms.reviwer: zakirh
 manager: dcscontentpm
 search.appverid: 

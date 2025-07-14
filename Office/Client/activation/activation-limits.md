@@ -1,9 +1,9 @@
 ---
 title: Microsoft 365 Apps activation limits
 description: Describes Microsoft 365 Apps activation limits.
-author: helenclu
+author: Cloud-Writer
 ms.reviewer: vikkarti
-ms.author: luche
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

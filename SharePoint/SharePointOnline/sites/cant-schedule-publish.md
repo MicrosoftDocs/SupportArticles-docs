@@ -1,8 +1,8 @@
 ---
 title: Can't schedule page publishing after changing a content type
 description: The scheduling section of a page is blank after you edit its content type in the SharePoint admin center.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 search.appverid: 
   - MET150

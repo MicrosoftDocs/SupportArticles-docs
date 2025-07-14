@@ -1,7 +1,7 @@
 ---
 title: SharePoint files open as read-only
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 ms.reviewer: salarson
 manager: dcscontentpm
 search.appverid: 

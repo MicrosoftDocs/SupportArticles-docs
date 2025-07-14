@@ -1,8 +1,8 @@
 ---
 title: Office 2016 for Mac 64-bit upgrade
 description: Discusses the conversion of Office 2016 for Mac to 64-bit in the August 2016 release.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

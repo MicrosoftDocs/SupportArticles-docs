@@ -1,8 +1,8 @@
 ---
 title: Known issues with Teams Rooms on Android
 description: Provides a list of known issues for Teams Rooms on Android.
-ms.author: luche
-author: helenclu
+ms.author: meerak
+author: Cloud-Writer
 ms.reviewer: sohailta, garyanselme, czawideh
 manager: dcscontentpm
 audience: ITPro

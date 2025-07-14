@@ -1,8 +1,8 @@
 ---
 title: Access may stop responding when you try to create an MDE or ACCDE file, or an ADE file
 description: Discusses the problem when you try to save an Access database file (.mdb or .accdb) as an MDE file (.mde) or an ACCDE file (.accde).
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

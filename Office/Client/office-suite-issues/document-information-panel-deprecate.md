@@ -1,8 +1,8 @@
 ---
 title: The Document Information Panel (DIP) is deprecated in Office 2016 applications
 description: Describes a method to access and edit properties of documents in Office 2016 applications because the Document Information Panel is deprecated.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

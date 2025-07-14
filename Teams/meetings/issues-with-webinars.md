@@ -1,8 +1,8 @@
 ---
 title: Issues with Teams webinars
 description: Troubleshoot issues that affect Teams webinars, including missing or inactive Webinar and For Everyone options.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

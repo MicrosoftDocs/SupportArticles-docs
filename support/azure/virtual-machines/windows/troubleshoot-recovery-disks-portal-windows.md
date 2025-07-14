@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot a Windows VM in the Azure portal
-author: genlin
+author: JarrettRenshaw
 description: This article describes how to attach a disk to a repair VM for offline servicing.
-ms.author: genli
+ms.author: jarrettr
 ms.date: 07/16/2021
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting

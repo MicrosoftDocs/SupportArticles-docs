@@ -4,8 +4,8 @@ description: Discusses how to exclude devices from Conditional Access policies
 ms.reviewer: taherr
 ms.topic: troubleshooting
 ms.date: 05/26/2024
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 search.appverid: 

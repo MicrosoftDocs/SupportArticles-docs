@@ -1,8 +1,8 @@
 ---
 title: Unable to export or publish a table to a SharePoint list
 description: You get an error attempting to export an Access table or publish an Access database to SharePoint when an Attachment in the Access table has an invalid SharePoint file name.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

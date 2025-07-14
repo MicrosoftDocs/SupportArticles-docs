@@ -5,7 +5,7 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, arudell, christys
+ms.reviewer: kaushika, arudell, aartigoyle
 ms.custom:
 - sap:network connectivity and file sharing\windows nic teaming (load balance failover)
 - pcy:WinComm Networking

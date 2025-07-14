@@ -1,8 +1,8 @@
 ---
 title: Best practice to optimize CreateFile() function performance in Azure
 description: Introduce a best practice to optimize the performance of the CreateFile() function in Azure.
-author: genlin
-ms.author: genli
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.service: azure-file-storage
 ms.date: 08/14/2020
 ms.reviewer: 

@@ -92,10 +92,10 @@
         "**/*.md": "office-perpetual-itpro"     
       },
       "author": {
-        "**/*.md": "helenclu"
+        "**/*.md": "Cloud-Writer"
       },
       "ms.author": {
-        "**/*.md": "luche"
+        "**/*.md": "meerak"
       }
     },
     "template": [],

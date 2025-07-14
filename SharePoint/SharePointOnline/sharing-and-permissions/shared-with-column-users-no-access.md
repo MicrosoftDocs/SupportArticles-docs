@@ -1,13 +1,13 @@
 ---
 title: SharedWith column displays users who no longer have access to a document
 description: This article explains an issue where the SharedWith column displays users who no longer have access to a document in SharePoint Online.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Permissions\Errors
   - CSSTroubleshoot

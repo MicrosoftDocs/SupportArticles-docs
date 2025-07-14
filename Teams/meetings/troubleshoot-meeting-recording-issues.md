@@ -1,8 +1,8 @@
 ---
 title: Issues that affect meeting recordings
 description: Provides guides to troubleshoot meeting recording issues, such as a missing recording button or recording link.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

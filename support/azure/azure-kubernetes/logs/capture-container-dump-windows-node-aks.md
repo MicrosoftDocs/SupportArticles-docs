@@ -3,7 +3,7 @@ title: Capture a Windows container dump file from a Windows node in an AKS clust
 description: Understand how to capture a Windows container dump file from a Windows node within an Azure Kubernetes Service (AKS) cluster.
 ms.date: 04/17/2024
 ms.author: abelch
-ms.reviewer: genli
+ms.reviewer: jarrettr
 ms.service: azure-kubernetes-service
 ms.custom: sap:Monitoring and Logging
 ---

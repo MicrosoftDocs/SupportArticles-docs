@@ -1,13 +1,13 @@
 ---
 title: Workflow problems after you connect to a SharePoint site
 description: Install SharePoint Designer 2013 to fix workflow problems after you connect to a SharePoint Online or SharePoint Server 2013 site.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Workflows and Automation\Other
   - CSSTroubleshoot

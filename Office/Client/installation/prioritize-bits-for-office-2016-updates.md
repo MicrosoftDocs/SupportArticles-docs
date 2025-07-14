@@ -1,7 +1,7 @@
 ---
 title: Prioritize BITS by Office 2016 clients for downloading updates
 description: Describes how to use BITS for Office 2016 clients to download updates.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -9,7 +9,7 @@ audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Microsoft 365 Apps for enterprise
   - Microsoft 365 Business

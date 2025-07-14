@@ -9,8 +9,8 @@ metadata:
   services: azure
   ms.service: information-protection #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: genlin  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  author: JarrettRenshaw  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jarrettr #Required; microsoft alias of author; optional team alias.
   ms.date: 04/30/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

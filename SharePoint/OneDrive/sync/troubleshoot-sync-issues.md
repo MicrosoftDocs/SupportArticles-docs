@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot OneDrive for work or school sync issues
 description: Helps you resolve issues that you can't sync OneDrive for work or school.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
