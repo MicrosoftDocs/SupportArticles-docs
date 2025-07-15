@@ -62,12 +62,14 @@ Next to the application name, you'll find an **Install** or **Update** button th
   - System administrators can use the **Update** button to open the application update page in the Power Platform admin center.
   - Non-system administrators can use the **Copy Update Link** button to copy the application update link and request their system administrator to update the application.
 
+### Missing dependencies coming from a first-party Dynamics 365 application
+
 > [!IMPORTANT]
 > This experience described below might not be available to the environments of all the regions yet.
 
-When a solution depends only on components from first-party Dynamics 365 applications that are missing or outdated in the target environment, the system might be able to automatically update or install these components. In this case, no manual action is required from the user. The **Missing dependencies** page will display a checkbox **Deploy Dependencies**. Selecting this option allows the system to automatically update or install the required components before importing the solution. If the update or installation of a dependent application fails, the solution import will also fail. You can track the status of these updates or installations on the solution history page.
+When a solution depends only on components from first-party Dynamics 365 applications that are missing or outdated in the target environment, the system might be able to automatically update or install these components. In this case, no manual action is required from the user. The **Missing dependencies** page will display the **Deploy Dependencies** option. If you select the option and select the **Import** button, the system will first install or update the required dependencies and then proceed to import the solution. If the update or installation of a dependent application fails, the solution import will also fail. You can track the status of these updates or installations on the solution history page.
 
-:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png" alt-text="Screenshot that shows the Applications section of the Missing dependencies page with first-party application which can be auto installed or updated from the system." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png":::
+:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png" alt-text="Screenshot that shows the Applications section of the Missing dependencies page with a first-party application which can be auto installed or updated from the system." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png":::
 
 ### Missing dependencies coming from another managed solution
 
