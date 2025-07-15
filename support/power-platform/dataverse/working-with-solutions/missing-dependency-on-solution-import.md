@@ -69,7 +69,7 @@ Next to the application name, you'll find an **Install** or **Update** button th
 
 When a solution depends only on components from first-party Dynamics 365 applications that are missing or outdated in the target environment, the system might be able to automatically update or install these components. In this case, no manual action is required from the user. The **Missing dependencies** page will display the **Deploy Dependencies** option. If you select the option and select the **Import** button, the system will first install or update the required dependencies and then proceed to import the solution. If the update or installation of a dependent application fails, the solution import will also fail. You can track the status of these updates or installations on the solution history page.
 
-:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png" alt-text="Screenshot that shows the Applications section of the Missing dependencies page with a first-party application which can be auto installed or updated from the system." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png":::
+:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png" alt-text="Screenshot that shows the Applications section of the Missing dependencies page with a first-party application that can be auto installed or updated from the system." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png":::
 
 ### Missing dependencies coming from another managed solution
 
