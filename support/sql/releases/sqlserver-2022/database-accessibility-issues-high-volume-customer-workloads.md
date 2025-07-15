@@ -2,6 +2,7 @@
 title: Database accessibility issues with high-volume customer workloads
 description: Fixes an issue where high-volume customer workloads using Extensible Key Management (EKM) for encryption and key generation experience database accessibility issues.
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5023236
 appliesto:
 - SQL Server 2022 on Windows

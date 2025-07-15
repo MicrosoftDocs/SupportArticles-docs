@@ -2,6 +2,7 @@
 title: Microsoft Entra managed identity support for backup and restore database operations and for EKM with AKV in SQL Server on Azure VMs
 description: Adds the support of Microsoft Entra managed identity for backup and restore database operations and for EKM with AKV in SQL Server on Azure Windows VMs.
 ms.date: 01/16/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5043526
 ms.reviewer: mireks, alswanso, v-qianli2
 appliesto:
