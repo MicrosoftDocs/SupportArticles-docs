@@ -67,8 +67,9 @@ Next to the application name, you'll find an **Install** or **Update** button th
 > This experience described below might not be available to the environments of all the regions yet.
 
 
-When the solution relies only on components from first party Dynamics 365 applications that are missing or outdated in the target environment. If these components can be auto-updated by the system, Import will automatically update/install the missing components by updating/installing its corresponding application followed by import of the solution. If the update/install of dependent application fails, the import of the solution will fail as well. The status of update/install can be tracked in the solution history page. 
+When the solution relies only on components from first party Dynamics 365 applications that are missing or outdated in the target environment. If these components can be auto-updated by the system, no manual install/update is required by the user. The page will show a checkbox **Deploy Dependencies** which will consent the system to automatically update/install the missing components before the import of solution by updating/installing its corresponding application followed by import of the solution. If the update/install of dependent application fails, the import of the solution will fail as well. The status of update/install can be tracked in the solution history page. 
 
+:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-1Papplication.png" alt-text="Screenshot that shows the Applications section of the Missing dependencies page with 1P application which can be auto installed/updated from the system." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-1Papplication.png":::
 
 
   
