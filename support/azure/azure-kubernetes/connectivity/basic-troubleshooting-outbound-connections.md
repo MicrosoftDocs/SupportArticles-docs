@@ -108,7 +108,7 @@ For basic troubleshooting for egress traffic from an AKS cluster, follow these s
 
 1. [Check if Azure network resources are blocking traffic to the endpoint using Azure Virtual Network Verifier (Preview)](#check-if-azure-network-resources-are-blocking-traffic-to-the-endpoint).
 
-1. [Make sure that the Domain Name System (DNS) resolution for the endpoint works correctly](#check-whether-the-pod-and-node-can-reach-the-endpoint).
+1. [Make sure that the Domain Name System (DNS) resolution for the endpoint works correctly](#check-that-the-domain-name-service-(dns)-resolution-for-the-endpoint-works-correctly).
 
 1. Make sure that you can reach the endpoint through an IP address.
 
