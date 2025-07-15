@@ -1,6 +1,6 @@
 ---
 title: Query XPathDocument By Using an XPath Expression
-description: Demonstrates how to query an XPathDocument object by using an XML Path Language (XPath) expression that uses the XPathNavigator class.
+description: Demonstrates how to query an XPathDocument object by using an XML Path Language (XPath) expression and the XPathNavigator class.
 ms.date: 07/07/2025
 ms.reviewer: JAYAPST
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.custom: sap:Class Library Namespaces
 ---
 # Query XML with an XPath expression in Visual C\#
 
-This article discusses how to query an `XPathDocument` object by using an XML Path Language (XPath) expression that uses the `XPathNavigator` class.
+This article discusses how to query an `XPathDocument` object by using an XML Path Language (XPath) expression and the `XPathNavigator` class.
 
 XPath is used programmatically to evaluate expressions and select specific nodes in a document.
 

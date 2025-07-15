@@ -11,8 +11,6 @@ ms.custom: sap:Common Language Runtime (CLR)
 
 This article discusses important considerations for securing applications that are built on Microsoft .NET Framework.
 
-This article is one of a series of articles that provide detailed information for applications that are built on .NET Framework.
-
 For important consideration when deploying applications that are built on the .NET Framework, see the related [Deploy applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/installation/deploy-applications).
 
 _Applies to:_ .NET Framework

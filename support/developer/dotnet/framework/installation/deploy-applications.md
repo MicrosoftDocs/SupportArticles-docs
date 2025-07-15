@@ -11,8 +11,6 @@ ms.topic: how-to
 
 This article describes important considerations for deploying applications that are built on the .NET Framework.
 
-This article is one of a series of articles that provide detailed information for applications that are built on the .NET Framework.
-
 For important considerations when securing applications that are built on the .NET Framework, see the related [Secure applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/general/secure-applications).
 
 _Applies to:_ .NET Framework
