@@ -32,6 +32,8 @@ When you try to create, scale, or upgrade an AKS cluster, you may receive the fo
 >
 > Error details : "vmssCSE error messages : {**vmssCSE exit status=50, output=pt/apt.conf.d/95proxy**...}
 
+This error may also cause your running nodes to become NotReady or cause image pull failures because outbound connectivity is blocked from some or all nodes in your cluster.
+
 ## Cause
 
 The custom script extension that downloads the necessary components to provision the nodes couldn't establish the necessary outbound connectivity to obtain packages. For public clusters, the nodes try to communicate with the Microsoft Container Registry (MCR) endpoint (`mcr.microsoft.com`) on port 443.
