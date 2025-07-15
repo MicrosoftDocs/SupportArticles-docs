@@ -7,12 +7,12 @@ Signature validation errors occur when a resource provider (not Microsoft Entra 
 
 Steps to troubleshoot:
 
-- [Step 1](#step1)
-- [Step 2](#step2)
+- [Step 1](#step-1-get-and-decode-the-access-token)
+- [Step 2](#step-2-identify-the-access-token-using-the-aud-claim)
 
 ## Steps to troubleshoot
 
-### <a id="step1"/> [Step 1: Get and decode the access token](#tab/step1)
+### [Step 1: Get and decode the access token](#tab/step1)
 
 To understand the issue, get and decode the access token being sent to the resource provider. Then, review the following claims in the token:
 - **aud** (Audience)
@@ -21,7 +21,7 @@ To understand the issue, get and decode the access token being sent to the resou
 
 You can decode access tokens using [https://jwt.ms](https://jwt.ms).
 
-### <a id="step2"/> [Step 2: Identify the access token using the "aud" claim](#tab/step2)
+### [Step 2: Identify the access token using the "aud" claim](#tab/step2)
 
 If you send a Microsoft Graph access token to a non-Microsoft Graph resource provider, you will get a signature validation error. Only Microsoft Graph can validate these tokens. You can identify Microsoft Graph tokens by the "aud" claim. Its value is one of the following:
 - https://graph.microsoft.us
