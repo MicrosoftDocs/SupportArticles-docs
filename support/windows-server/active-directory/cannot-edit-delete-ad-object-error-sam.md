@@ -99,7 +99,7 @@ The object was deleted and undeleted. Deleted objects don't have the `sAMAccount
 >
 > If the undeletion was done recently, you can restore the object using a backup in an authoritative restore. This also restores these attributes.
 
-To resolve this issue,  use the new facility included in Windows Server 2025 to repair broken objects as specified in [[MS-ADTS]: fixupObjectState](/openspecs/windows_protocols/ms-adts/37294765-9e7d-41a1-aded-2d6f744eee8c).
+To resolve this issue,  use the new facility included in Windows Server 2022 and Windows Server 2025 to repair broken objects as specified in [[MS-ADTS]: fixupObjectState](/openspecs/windows_protocols/ms-adts/37294765-9e7d-41a1-aded-2d6f744eee8c).
 
 > [!NOTE]
 > There's also functionality to repair the `LastLogonTimeStamp` attribute. For more information, see [User or computer accounts have the lastLogonTimestamp value set to a future time](accounts-lastlogontimestamp-future-time.md).
