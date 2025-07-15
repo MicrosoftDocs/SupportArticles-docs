@@ -41,7 +41,7 @@ Users might encounter challenges when they try to push subscription activity log
 
 ### Common issues and solutions
 
-- **Issue**: Logs are not appearing in Sentinel.
+- **Issue**: Logs aren't appearing in Sentinel.
     - **Solution**: Make sure that the correct Log Analytics workspace is selected and that the diagnostic settings are correctly configured.
 
 ## References
