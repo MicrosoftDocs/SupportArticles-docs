@@ -6,34 +6,34 @@ ms.reviewer: v-liuamson
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
-# Resolving Log Limit Issues in Azure Function Apps
+# Resolving log limit issues in Azure Function Apps
 
-## Introduction
+This article discusses the issue of Azure Function Apps reaching their daily log limit. This condition prevents additional logs from being sent and affects the application's performance and monitoring capabilities. The issue might occur if the log volume exceeds the configured quota. 
 
-This article addresses the issue of Azure Function Apps reaching their daily log limit, which prevents further logs from being sent. This can occur when the log volume exceeds the configured quota, impacting the application's performance and monitoring capabilities.
+## Instructions to resolve log limit issues
 
-### Step-by-Step Instructions to Resolve Log Limit Issues
+To resolve log limit issues in Azure Function Apps, follow these steps:
 
-1. **Identify the Function App**: Navigate to the Azure portal and locate the specific Function App experiencing log issues.
+1. **Identify the Function App**: Navigate to the Azure portal, and locate the specific Function App that is experiencing log issues.
 
-2. **Check Current Log Quota**: Access the **Application Insights** associated with the Function App. Review the current log quota settings to determine if they are being exceeded.
+2. **Check current log quota**: Access the **Application Insights** that's associated with the Function App. Review the current log quota settings to determine whether they're being exceeded.
 
-3. **Evaluate Log Volume**: Analyze the logs to assess whether the increase in log volume is justified. Use **Azure Monitor** charts to visualize log trends and identify any anomalies.
+3. **Evaluate log volume**: Analyze the logs to assess whether the increase in log volume is justified. Use Azure Monitor charts to visualize log trends and identify any anomalies.
 
-4. **Increase Log Quota**: If the log volume increase is reasonable, adjust the log quota in **Application Insights**. Go to the **Settings** section, select **Usage and estimated costs**, and modify the quota as needed.
+4. **Increase log quota**: If the log volume increase is reasonable, adjust the log quota in Application Insights. Go to the **Settings** section, select **Usage and estimated costs**, and modify the quota as appropriate.
 
-5. **Contact Function App Owner**: If the log increase is unexpected, reach out to the Function App owner for further troubleshooting. Ensure they are aware of the log limits and potential impacts.
+5. **Contact function app owner**: If the log increase is unexpected, reach out to the Function App owner for further troubleshooting. Make sure that they are aware of the log limits and potential effects.
 
-6. **Check Log Analytics Workspace**: Verify that the **Log Analytics Workspace** associated with the Application Insights does not have its own quota limitations that could affect logging.
+6. **Check Log Analytics workspace**: Verify that the Log Analytics workspace that's associated with the Application Insights doesn't have its own quota limitations that could affect logging.
 
-7. **Monitor for Bottlenecks**: After adjusting quotas, monitor the workspace for any potential bottlenecks that may arise due to increased log volumes.
+7. **Monitor for bottlenecks**: After you adjust the quotas, monitor the workspace for any potential bottlenecks that might occur because of increased log volumes.
 
-### Common Issues and Solutions
+## Common issues and solutions
 
-- **Unexpected Log Volume**: If logs are unexpectedly high, investigate recent changes in the application or external factors contributing to the increase.
-- **Quota Adjustment**: Ensure that any quota adjustments are aligned with the application's monitoring needs and budget constraints.
+- **Unexpected log volume**: If log volumes are unexpectedly high, investigate recent changes in the application or external factors that might contribute to the increase.
+- **Quota adjustment**: Make sure that any quota adjustments are aligned with the application's monitoring needs and budget constraints.
 
-## Reference
+## References
 
 - [Azure Monitor Documentation](https://learn.microsoft.com/azure/azure-monitor/)
 - [Application Insights Quota Management](https://learn.microsoft.com/azure/azure-monitor/app/pricing)
