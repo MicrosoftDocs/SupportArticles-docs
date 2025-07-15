@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft, pagienge, navpreetkaur, v-weizhu
 editor: v-jsitser
-ms.date: 01/08/2025
+ms.date: 07/15/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
@@ -149,9 +149,9 @@ Install the missing RHUI package for EUS, non-EUS, or SAP/E4S.
 
 All the following commands should be run by using root privileges or by specifying `sudo`.
 
-Use the following table to determine the correct RHUI package type based on your RHEL version and image type.
+Use the following table to determine the correct RHUI package type based on your RHEL version and image type:
 
-| **Image Type**     | **Support Model**         | **Applicable Versions**                      | **RHUI Package Prefix**            | **Uses `releasever`?** |
+| Image type     | Support model         | Applicable version                      | RHUI package prefix            | Using `releasever`? |
 |--------------------|---------------------------|----------------------------------------------|------------------------------------|-------------------------|
 | Generic RHEL       | Non-EUS                   | 8.10, 9.8, 10.0                               | `rhui-azure-rhelX`                 | No                      |
 | Generic RHEL       | EUS                       | 8.2, 8.4, 8.6, 8.8, 9.2, 9.4, 9.6             | `rhui-azure-rhelX-eus`             | Yes                     |
@@ -170,7 +170,7 @@ Use the following table to determine the correct RHUI package type based on your
 
 #### RHUI package installation index
 
-Use the following index to navigate directly to the corresponding section below.
+Use the following index to navigate directly to the corresponding section:
 
 [EUS RHUI package installation](#eus)
 
