@@ -106,7 +106,8 @@ configure them.
     - In Application Gateway \> Listeners \> + Add Listener
     - Choose HTTPS and select **Key Vault certificate**.
 
-> [!NOTE] As of writing, Key Vault integration only supports certificates with the private key in `.pfx` format.
+> [!NOTE]
+> As of writing, Key Vault integration only supports certificates with the private key in `.pfx` format.
 
 ## Limitations and Considerations
 
@@ -171,7 +172,7 @@ Only `.pfx` files are accepted by Application Gateway.
   Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/configuration-request-routing-rules)
 
 Using App Service Certificates in Application Gateway is certainly
-possible and secure --- with the right steps. By understanding the
+possible and secure - with the right steps. By understanding the
 limitations and using Key Vault effectively, you can build a robust
 certificate management workflow across both App Services and Application
 Gateway.
