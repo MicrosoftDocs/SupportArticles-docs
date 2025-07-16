@@ -4,8 +4,8 @@ description: Get detailed steps on how to use Azure App Service certificate with
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-app-service
-ms.date: 07/14/2025
-ms.reviewer: v-liuamson
+ms.date: 07/16/2025
+ms.reviewer: v-liuamson; v-gsitser
 ms.custom: Connection issues with SSL or TLS
 ---
 
