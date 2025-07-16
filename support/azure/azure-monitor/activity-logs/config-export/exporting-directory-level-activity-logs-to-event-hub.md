@@ -14,7 +14,7 @@ This article provides guidance on exporting directory-level activity logs to an 
 
 Exporting directory-level activity logs to an Event Hub can be achieved through an API call that creates management group level diagnostic settings. This solution is particularly useful for organizations looking to centralize their log data for better analysis and monitoring.
 
-### Step-by-Step Instructions to Export Logs
+### Step-by-step instructions to export logs
 
 1. **Access Azure Portal**
    - Navigate to the Azure portal and sign in with your credentials.
