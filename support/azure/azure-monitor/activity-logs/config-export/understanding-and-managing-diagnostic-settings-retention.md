@@ -26,12 +26,14 @@ When managing Azure resources, you might encounter issues related to the transit
 
 2. **Check for Legacy Solutions**:
    - Use the following PowerShell command to determine if legacy solutions are in use:
-     ```powershell
+  
+    ```powershell
      $WorkspaceName = Get-AzOperationalInsightsWorkspace
      foreach ($Name in $WorkspaceName) {
          Get-AzOperationalInsightsDataSource -Kind AzureActivityLog -ResourceGroupName $Name.ResourceGroupName -WorkspaceName $Name.Name
      }
      ```
+
    - If no output is returned, legacy solutions are not in use, and no further action is required.
 
 3. **Automatic Transition**:
