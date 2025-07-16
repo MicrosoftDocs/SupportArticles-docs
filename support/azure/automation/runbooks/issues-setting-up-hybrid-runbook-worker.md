@@ -1,23 +1,24 @@
 ---
-title: Common Runbook Execution Problems on Hybrid Runbook Worker
-description: Describes some common issues that might occur when you run a runbook on Hybrid Runbook Worker.
+title: Common Runbook Creation Problems on Hybrid Runbook Worker
+description: Describes some common issues that might occur when you set up a runbook on Hybrid Runbook Worker.
 ms.date: 06/13/2025
 ms.reviewer: adoyle
 ms.service: azure-automation
 ms.custom: sap:Runbook not working as expected
 ---
 
-# Common Runbook Execution Problems on Hybrid Runbook Workers
+# : Common Runbook creation problems
 
-This article describes common issues you might experience when you run runbooks on a hybrid runbook worker.
+This article describes common issues you might experience when you set up runbooks on a hybrid runbook worker.
 
 > [!NOTE]
-> The agent-based user hybrid runbook worker (Windows and Linux) was retired on August 31, 2024, and is no longer supported. For migration guidance, see https://learn.microsoft.com/azure/automation/migrate-existing-agent-based-hybrid-worker-to-extension-based-workers.
+> The agent-based user hybrid runbook worker (Windows and Linux) was retired on August 31, 2024, and is no longer supported. For more information, see [migration guidance](/azure/automation/migrate-existing-agent-based-hybrid-worker-to-extension-based-workers).
 
 ## Troubleshoot tools
 
-Connectivity problems are a common cause of issues with Hybrid Runbook Workers. Use the [Test Cloud Connectivity tool](azure/azure-monitor/agents/agent-windows-troubleshoot?tabs=UpdateMMA#connectivity-issues) to verify that your environment is correctly configured.
+- Connectivity problems are a common cause of issues with Hybrid Runbook Workers. Use the [Test Cloud Connectivity tool](azure/azure-monitor/agents/agent-windows-troubleshoot?tabs=UpdateMMA#connectivity-issues) to verify that your environment is correctly configured.
 
+- Run the offline version of the [agent registration script](/azure/azure-monitor/agents/agent-windows-troubleshoot?tabs=UpdateMMA#log-analytics-troubleshooting-tool) to troubleshoot hybrid worker prerequisites. Although the script includes some checks specific to update management, most of the requirements also apply to hybrid workers.
 
 ## Common issues and solutions
 
