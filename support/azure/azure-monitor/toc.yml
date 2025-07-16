@@ -95,8 +95,8 @@ items:
   items:
   - name: Configure and Manage Log analytics tables
     items:
-    - name: New
-      href: log-analytics/configure-and-manage-log-analytics-tables/new.md
+    - name: Troubleshoot Performance Logs Not Populating in Azure Government
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-performance-logs-not-populating.md
   - name: Log Analytics workspaces
     items:
     - name: Error code 0x80090016 - keyset doesn't exist
