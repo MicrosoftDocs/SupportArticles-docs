@@ -11,8 +11,8 @@ items:
         href: activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md
       - name: Diagnostic Settings Transition from Legacy Solutions
         href: activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md
-      - name: New
-        href: activity-logs/config-export/new.md
+      - name: Centralized Configuration of Activity Logs to Event Hub
+        href: activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hub.md
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
