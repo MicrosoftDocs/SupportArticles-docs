@@ -1,9 +1,9 @@
 ---
-title: Enable logging for MSAL.NET and Microsoft Graph SDK
+title: Enable Logging for MSAL.NET and Microsoft Graph SDK
 description: Introduces how to enable logging for both MSAL.NET and Microsoft Graph SDK.
 ms.reviewer: bachoang, v-weizhu
 ms.service: entra-id
-ms.date: 07/08/2025
+ms.date: 07/16/2025
 ms.custom: sap:Problem with using the Graph SDK - libraries
 ms.topic: how-to
 ---
@@ -90,11 +90,11 @@ The complete sample code is available in this [GitHub repository](https://github
 }
 ```
 
-The sample application uses both a `GET` and `POST` requests to show logging the complete HTTP requests and responses, including headers and body. The following four helper functions are used to get the information for each part. Any function can be commented out if the corresponding information isn't required.
+The sample application uses both `GET` and `POST` requests to show logging of the complete HTTP requests and responses, including headers and body. The following four helper functions are used to get the information for each part. Any function can be commented out if the corresponding information isn't required.
 
 :::image type="content" source="media/enable-logging-for-msal-and-microsoft-graph/helper-functions.png" alt-text="Screenshot that shows four helper functions":::
 
-These helper functions are used in the logging `HttpClient` message handler as shown below. Requests are logged before calling the `DelegatingHandler.SendAsync` method and responses are logged after the call.
+These helper functions are used in the logging `HttpClient` message handler as shown here. Requests are logged before calling the `DelegatingHandler.SendAsync` method and responses are logged after the call.
 
 ```csharp
 public class SeriLoggingHandler : DelegatingHandler
@@ -163,7 +163,7 @@ IPublicClientApplication publicClientApplication = PublicClientApplicationBuilde
 After you run the sample application, Microsoft Graph requests and responses should appear in:
 
 - The console window.
-- The directory location configured in the `appsettings.json` file. Log file names include the date, as shown below:
+- The directory location configured in the `appsettings.json` file. Log file names include the date, as shown here:
 
     :::image type="content" source="media/enable-logging-for-msal-and-microsoft-graph/local-microsoft-graph-logs.png" alt-text="Screenshot that shows local logs":::
 
