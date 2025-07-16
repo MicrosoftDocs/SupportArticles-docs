@@ -17,30 +17,25 @@ Organizations often require a centralized approach to manage Activity Logs acros
 
 ## Step-by-Step Instructions to Configure Activity Logs
 
-### 1. Create an Azure Policy for Activity Logs
+1. **Create an Azure Policy for Activity Logs:**
+   - Navigate to the Azure portal and access the **Azure Policy** service.
+   - Create a new policy definition using the JSON provided in the community example. This policy should automate the enablement of activity log diagnostics settings across all subscriptions under a management group.
 
-- Navigate to the Azure portal and access the **Azure Policy** service.
-- Create a new policy definition using the JSON provided in the community example. This policy should automate the enablement of activity log diagnostics settings across all subscriptions under a management group.
+2. **Assign the Policy to Management Group:**
+   - Assign the newly created policy to the desired management group containing the required subscriptions.
+   - Ensure that the policy is set to send data to the specified Event Hub.
 
-### 2. Assign the Policy to Management Group
+3. **Configure Log Analytics Workspace:**
+   - Access the **Log Analytics Workspace** in the Azure portal.
+   - Set up data export rules to forward logs from the Log Analytics Workspace to the Event Hub. Specify the source table as `AzureActivity` and the destination as the central Event Hub.
 
-- Assign the newly created policy to the desired management group containing the required subscriptions.
-- Ensure that the policy is set to send data to the specified Event Hub.
+4. **Verify Event Hub Configuration:**
+   - Ensure the Event Hub is configured to handle the expected log volume from all subscriptions.
+   - Review performance benchmarks and adjust the Event Hub tier if necessary to manage logs efficiently.
 
-### 3. Configure Log Analytics Workspace
-
-- Access the **Log Analytics Workspace** in the Azure portal.
-- Set up data export rules to forward logs from the Log Analytics Workspace to the Event Hub. Specify the source table as `AzureActivity` and the destination as the central Event Hub.
-
-### 4. Verify Event Hub Configuration
-
-- Ensure the Event Hub is configured to handle the expected log volume from all subscriptions.
-- Review performance benchmarks and adjust the Event Hub tier if necessary to manage logs efficiently.
-
-### 5. Monitor and Adjust
-
-- Regularly monitor the Event Hub's performance and log flow.
-- Adjust configurations as needed to optimize performance and cost.
+5. **Monitor and Adjust:**
+   - Regularly monitor the Event Hub's performance and log flow.
+   - Adjust configurations as needed to optimize performance and cost.
 
 ## Common Issues and Solutions
 
