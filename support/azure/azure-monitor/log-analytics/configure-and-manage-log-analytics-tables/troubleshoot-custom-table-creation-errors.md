@@ -13,29 +13,24 @@ When attempting to create a custom table in Azure, users may encounter an error 
 
 ## Step-by-Step Instructions to Resolve Custom Table Creation Errors
 
-### 1. Verify JSON File Validity
+1. **Verify JSON File Validity**
+   - Ensure that the JSON file used for table creation is correctly formatted and contains all necessary fields.
+   - Use tools like *JSONLint* to validate the JSON structure.
 
-- Ensure that the JSON file used for table creation is correctly formatted and contains all necessary fields.
-- Use tools like *JSONLint* to validate the JSON structure.
+2. **Check Azure Logs**
+   - Navigate to **Azure Monitor** and access the **Logs** section.
+   - Review the ARM logs for any error messages related to the custom table creation process.
 
-### 2. Check Azure Logs
+3. **Reattempt Table Creation**
+   - Retry the table creation process using the Azure portal or Azure CLI.
+   - If the error persists, consider using a different browser or clearing the browser cache.
 
-- Navigate to **Azure Monitor** and access the **Logs** section.
-- Review the ARM logs for any error messages related to the custom table creation process.
+4. **Collect Diagnostic Information**
+   - Gather HAR files and console logs to identify any frontend issues.
+   - Use the Azure portal to capture network activity during the table creation attempt.
 
-### 3. Reattempt Table Creation
-
-- Retry the table creation process using the Azure portal or Azure CLI.
-- If the error persists, consider using a different browser or clearing the browser cache.
-
-### 4. Collect Diagnostic Information
-
-- Gather HAR files and console logs to identify any frontend issues.
-- Use the Azure portal to capture network activity during the table creation attempt.
-
-### 5. Consult Azure Documentation
-
-- Refer to the [Azure Custom Tables Documentation](https://learn.microsoft.com/azure/monitoring-and-diagnostics/monitoring-custom-tables) for detailed guidance on creating custom tables.
+5. **Consult Azure Documentation**
+   - Refer to the [Azure Custom Tables Documentation](https://learn.microsoft.com/azure/monitoring-and-diagnostics/monitoring-custom-tables) for detailed guidance on creating custom tables.
 
 ### Common Issues and Solutions
 
