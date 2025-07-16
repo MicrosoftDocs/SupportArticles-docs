@@ -95,7 +95,7 @@ items:
   items:
   - name: Configure and Manage Log analytics tables
     items:
-    - name: Understanding and Mitigating High Data Consumption
+    - name: Understanding and Mitigating High Data Consumption in Log Analytics
       href: log-analytics/configure-and-manage-log-analytics-tables/understanding-and-mitigating-high-data-consumption.md
   - name: Log Analytics workspaces
     items:
