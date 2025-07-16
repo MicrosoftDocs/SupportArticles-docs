@@ -11,8 +11,8 @@ items:
         href: activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md
       - name: Diagnostic Settings Transition from Legacy Solutions
         href: activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md
-      - name: New
-        href: activity-logs/config-export/new.md
+      - name: Troubleshoot Export of Audit Logs to Another Tenant
+        href: activity-logs/config-export/troubleshoot-export-of-audit-logs-to-another-tenant.md
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
