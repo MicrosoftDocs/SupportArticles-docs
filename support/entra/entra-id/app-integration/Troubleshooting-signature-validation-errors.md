@@ -34,19 +34,15 @@ If you send a Microsoft Graph access token to a non-Microsoft Graph resource pro
 - `https://dod-graph.microsoft.us/`
 - `00000003-0000-0000-c000-000000000000`
 
-**Solution**
-
 Ensure the correct access token is acquired for the resource provider and its `aud` claim is expected by the resource provider. The audience of access tokens is determined by the scope parameter that's sent in the request when acquiring access tokens. For example, to get an access token for `https://api.contoso.com`, use a scope like `https://api.contoso.com/read`.
 
 For more information, see [Configure an application to expose a web API](/entra/identity-platform/quickstart-configure-app-expose-web-apis).
 
-### Step 3: Validate the signing key configuration
+## Scenario 2: OpenId Connect Metadata configuration is used
 
-For other scenarios, the resource provider determines where to get the signing keys based on the OpenId Connect Metadata configuration and which signing key to use based on the `kid` claim in the access token. You can configure this on the resource provider such as your custom API or API Authentication layer. If you use a Microsoft Authentication library like Microsoft Authentication Library (MSAL) or Microsoft Identity Web, the default configuration is like the following:
+The resource provider determines where to get the signing keys based on the OpenId Connect Metadata configuration and which signing key to use based on the `kid` claim in the access token. You can configure this on the resource provider such as your custom API or API Authentication layer. If you use a Microsoft Authentication library like Microsoft Authentication Library (MSAL) or Microsoft Identity Web, the default configuration is like `https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`.
 
-`https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`
-
-If you have configured a tenant ID, the `MetadataAddress` would be `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`. If you configured an `Authority` that looks like `https://login.microsoftonline.us/{tenant-id}`, then the `MetadataAddress` would be `https://login.microsoftonline.us/{tenant-id}/v2.0/.well-known/openid-configuration`.
+If you have configured a tenant ID, the `MetadataAddress` would be `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`. If you have configured an `Authority` like `https://login.microsoftonline.us/{tenant-id}`, then the `MetadataAddress` would be `https://login.microsoftonline.us/{tenant-id}/v2.0/.well-known/openid-configuration`.
 
 The OpenId Connect Metadata endpoint includes a `jwks_uri` property (also known as discovery keys endpoint), which specifies the location of signing keys. Depending on which OpenId Connect Metadata endpoint is used, it will return a URL for the `jwks_uri`. Here's a table that provides a few examples:
 
@@ -77,9 +73,7 @@ The content of discovery keys endpoint looks like this:
 		},
 ```
 
-### Step 4: Verify the "iss" claim
-
-The `kid` claim in the access token must match one of the keys available on the discovery key endpoint based on the `kid` property. If the `kid` doesn't match, there are two possible reasons:
+The `kid` claim in the access token must match one of the keys available on the discovery keys endpoint based on the `kid` property. If the `kid` doesn't match, there are two possible reasons:
 
 - Microsoft Entra ID and Azure Active Directory (AD) B2C uses different signing keys.
 - The application is enabled for Security Assertion Markup Language (SAML) Single Sign-On (SSO).
@@ -97,7 +91,7 @@ For Azure AD B2C-issued tokens, the `iss` claim follows this format:
 
 `https://{your-domain}.b2clogin.com/tfp/{tenant-id}/{policy-id}/v2.0/`
 
-Make sure your OpenId Connect Metadata configuration on the resource provider is configured correctly.
+Make sure your OpenId Connect Metadata configuration on the resource provider is configured correctly:
 
 For Microsoft Entra ID-issued tokens, make sure the OpenId Connect Metadata configuration looks like `https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`.
 
@@ -212,7 +206,7 @@ For more details, see [Microsoft Identity Web customization](https://github.com/
 
 See [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad).
 
-#### **Using Azure API Management**
+#### Using Azure API Management
 
 See [Secure an Azure API Management API with Azure AD B2C](/azure/active-directory-b2c/secure-api-management?tabs=app-reg-ga).
 
