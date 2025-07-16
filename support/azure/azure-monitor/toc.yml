@@ -95,8 +95,8 @@ items:
   items:
   - name: Configure and Manage Log analytics tables
     items:
-    - name: New
-      href: log-analytics/configure-and-manage-log-analytics-tables/new.md
+    - name: Troubleshoot Custom Table Creation Errors in Azure
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-table-creation-errors.md
   items:
   - name: Log Analytics workspaces
     items:
