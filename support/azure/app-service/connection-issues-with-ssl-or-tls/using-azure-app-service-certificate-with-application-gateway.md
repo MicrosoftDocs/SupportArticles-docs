@@ -111,35 +111,32 @@ configure them.
 
 ## Limitations and Considerations
 
-### 1. **Direct Use Not Supported**
+1. **Direct Use Not Supported:**
 
-You cannot bind an App Service Certificate to Application Gateway
-directly like you can for App Services.
+    - You cannot bind an App Service Certificate to Application Gateway directly like you can for App Services.
 
-### 2. **Export Required for Manual Use**
+2. **Export Required for Manual Use:**
 
-You must extract the `.pfx` format from Key Vault before using it in
-Application Gateway (if not using Key Vault reference).
+    - You must extract the `.pfx` format from Key Vault before using it in
+    Application Gateway (if not using Key Vault reference).
 
-### 3. **Auto-Renewal Challenges**
+3. **Auto-Renewal Challenges:**
 
-- App Service Certificates support auto-renewal only for App Services.
-- When used in Application Gateway, auto-renewal **does not
+    - App Service Certificates support auto-renewal only for App Services.
+    - When used in Application Gateway, auto-renewal **does not
   automatically propagate**.
-- You must **manually update the certificate** in Application Gateway
+    - You must **manually update the certificate** in Application Gateway
   after renewal.
-- Recommended to use **Azure Automation or Logic App** to automate this
+    - Recommended to use **Azure Automation or Logic App** to automate this
   update process. Refer to [Renew certificates in Application
   Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/renew-certificates).
 
-### 4. **Certificate Format Restrictions**
+4. **Certificate Format Restrictions:**
 
-Only `.pfx` files are accepted by Application Gateway.
-
-- `.cer` or `.pem` files will be rejected.
-- Self-signed certificates are supported but must be uploaded as PFX.
-  See [Self-signed certificates for Application
-  Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/self-signed-certificates).
+    - Only `.pfx` files are accepted by Application Gateway.
+    - `.cer` or `.pem` files will be rejected.
+    - Self-signed certificates are supported but must be uploaded as PFX.
+    - See [Self-signed certificates for Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/self-signed-certificates).
 
 ## Best Practices
 
