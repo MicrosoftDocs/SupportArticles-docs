@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot connectivity and registration for SUSE SLES VMs
+title: Troubleshoot Connectivity and Registration for SUSE SLES VMs
 description: Troubleshoot scenarios in which an Azure VM that has a SUSE Linux Enterprise Server image can't connect to the SUSE Subscription Management Tool (SMT) repository.
 ms.date: 05/12/2025
 author: rnirek
@@ -200,7 +200,7 @@ sudo tail /var/log/cloudregister
 2025-01-29 20:20:06,917 ERROR:No response from: [('23.101.171.119', '2603:1030:603::2e9'), ('23.101.164.199', '2603:1030:603::625'), ('23.96.231.74', '2603:1030:603::2e6')]
 ```
 
-The output indicates that a connectivity error exists. However, this is not true. This indication occurs because the error handling process in the registration scripts doesn't show the certificate errors from the old libraries.
+The output indicates that a connectivity error exists. However, this isn't true. This indication occurs because the error handling process in the registration scripts doesn't show the certificate errors from the old libraries.
 
 The script output might also mistakenly indicate that a certificate for one of the SMT IPs that's displayed in the `sudo tail /var/log/cloudregister` command output can't be found. This is also a library issue, not an issue that affects the CA list on the VM.
 
@@ -216,7 +216,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
     ```bash
     sudo mkdir -p /root/packages/rpms
     ```
-3. Download the following packages based on SLES versions of the affected virtual machine:
+3. Download the following packages based on SLES versions of the affected VM:
 
    SLES 12
    ```bash
