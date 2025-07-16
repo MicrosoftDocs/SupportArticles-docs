@@ -2,8 +2,8 @@
 title: Using Failed Request Tracing rules to troubleshoot Application Request Routing
 description: Describes the steps to enable Failed Request Tracing rules to debug failures and trace steps in Application Request Routing.
 ms.date: 01/03/2025
-ms.author: haiyingyu
-author: HaiyingYu
+ms.author: aartigoyle
+author: aartig13
 ms.reviewer: johnhart, riande, paulboc
 ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---

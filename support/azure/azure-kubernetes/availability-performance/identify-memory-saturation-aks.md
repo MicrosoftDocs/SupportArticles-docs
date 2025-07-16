@@ -1,7 +1,7 @@
 --- 
 title: Troubleshoot memory saturation in AKS clusters
 description: Troubleshoot memory saturation in Azure Kubernetes Service (AKS) clusters across namespaces and containers. Learn how to identify the hosting node.
-ms.date: 08/30/2024
+ms.date: 06/27/2025
 editor: v-jsitser
 ms.reviewer: chiragpa, aritraghosh, v-leedennis
 ms.service: azure-kubernetes-service
@@ -14,6 +14,7 @@ This article discusses methods for troubleshooting memory saturation issues. Mem
 ## Prerequisites
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+- The open source project [Inspektor Gadget](../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget) for advanced process level memory analysis. For more information, see [How to install Inspektor Gadget in an AKS cluster](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster). 
 
 ## Symptoms
 
@@ -88,7 +89,7 @@ This procedure uses the kubectl commands in a console. It displays only the curr
    aks-testmemory-30616462-vmss000002   74m          3%     1715Mi          31%
    ```
 
-1. Get the list of pods that are running on the node and their memory usage by running the [kubectl get pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) and [kubectl top pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-pod-em-) commands: 
+2. Get the list of pods that are running on the node and their memory usage by running the [kubectl get pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) and [kubectl top pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-pod-em-) commands: 
 
    ```bash
    kubectl get pods --all-namespaces --output wide \
@@ -125,7 +126,7 @@ This procedure uses the kubectl commands in a console. It displays only the curr
    ama-logs-w5bmd                       12m          403Mi
    ```
 
-1. Review the requests and limits for each pod on the node by running the [kubectl describe node](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) command:
+3. Review the requests and limits for each pod on the node by running the [kubectl describe node](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#describe) command:
 
    ```bash
    kubectl describe node <node-name>
@@ -158,9 +159,57 @@ This procedure uses the kubectl commands in a console. It displays only the curr
 
 ---
 
-Now that you've identified the pods that are using high memory, you can identify the applications that are running on the pod.
+Now that you've identified the pods that are using high memory, you can identify the applications that are running on the pod or identify processes that may be consuming excess memory.
 
-### Step 2: Review best practices to avoid memory saturation
+### Step 2: Identify process level memory usage
+
+For advanced process level memory analysis, use [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) to monitor real time memory usage at the process level within pods:
+
+1. Install Inspektor Gadget using the instructions found in the [documentation](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster)
+
+2. Run the [top_process gadget](https://aka.ms/igtopprocess) to identify processes that are using large amounts of memory. You can use `--fields` to select certain columns and `--filter` to filter events based on specific field values, for example the pod names of previously identified pods with high memory consumption. You can also:
+
+   - Identify top 10 memory-consuming processes across the cluster:
+
+        ```bash
+        kubectl gadget run top_process --sort -memoryRelative --max-entries 10
+        ```
+
+   - Identify top memory-consuming processes on a specific node:
+
+        ```bash
+        kubectl gadget run top_process --sort -memoryRelative --filter k8s.node==<node-name>
+        ```
+
+   - Identify top memory-consuming processes in a specific namespace:
+
+        ```bash
+        kubectl gadget run top_process --sort -memoryRelative --filter k8s.namespace==<namespace>
+        ```
+
+   - Identify top memory-consuming processes in a specific pod:
+
+        ```bash
+        kubectl gadget run top_process --sort -memoryRelative --filter k8s.podName==<pod-name>
+        ```
+
+   The output of the Inspektor Gadget `top_process` command resembles the following:
+
+   ```output
+
+      K8S.NODE                          K8S.NAMESPACE          K8S.PODNAME            PID       COMM   MEMORYVIRTUAL    MEMORYRSS   MEMORYRELATIVE     
+      aks-agentpool-3…901-vmss000001    default                memory-stress        21676     stress          944 MB       943 MB              5.6     
+      aks-agentpool-3…901-vmss000001    default                memory-stress        21678     stress          944 MB       943 MB              5.6      
+      aks-agentpool-3…901-vmss000001    default                memory-stress        21677     stress          944 MB       872 MB              5.2     
+      aks-agentpool-3…901-vmss000001    default                memory-stress        21679     stress          944 MB       796 MB              4.8     
+
+   ```   
+
+
+You can use this output to identify the processes that are consuming the most memory on the node. The output can include the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU and memory usage, check [the documentation](https://aka.ms/igtopprocess) for more details.
+
+
+### Step 3: Review best practices to avoid memory saturation
 
 Review the following table to learn how to implement best practices for avoiding memory saturation.
 

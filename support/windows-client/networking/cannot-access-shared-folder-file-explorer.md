@@ -11,7 +11,7 @@ ms.custom:
 - pcy:WinComm Networking
 ---
 
-<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "aartigoyle" for triage before making the further changes to the screenshots.
 --->
 
 # Can't access shared folders from File Explorer in Windows 10

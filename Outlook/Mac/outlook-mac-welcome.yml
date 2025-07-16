@@ -1,0 +1,52 @@
+### YamlMime:Landing
+
+title: Outlook for Mac troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Outlook for Mac. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Outlook for Mac troubleshooting
+  description: Documentation for troubleshooting common issues with Outlook for Mac.
+  ms.topic: landing-page
+  author: cloud-writer
+  ms.author: meerak
+  ms.date: 01/30/2024
+  ms.service: outlook
+  hideEdit: true
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Account
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Outlook for Mac compatibility with Apple iCloud
+            url: /previous-versions/troubleshoot/content-retirement
+
+  - title: Attachments
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't save a JPEG attachment with a .jpg extension
+            url: ./attachments/you-cannot-save-this-document-with-extension-jpg-error.md
+
+  - title: Calendars
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Access Denied changing shared calendar permissions
+            url: ./calendars/access-denied-change-shared-calendar-permissions.md
+          - text: Can't accept new meeting time proposals
+            url: ./calendars/cannot-accept-new-meeting-time-proposals.md
+          - text: Can't move a meeting between calendars
+            url: ./calendars/cannot-move-meetings-between-calendars.md
+
+  - title: Connectivity
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: How to suppress Microsoft 365 AutoDiscover redirect warning
+            url: /microsoft-365-apps/outlook/connectivity/suppress-autodiscover-redirect-warning-mac
+          - text: Outlook 2016 for Mac crashes when a Proxy Auto Configuration file is used
+            url: ./connectivity/outlook-2016-for-mac-crashes-using-proxy-auto-configuration-file.md

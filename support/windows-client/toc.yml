@@ -545,7 +545,7 @@ items:
       href: ./performance/view-system-registry-with-64-bit-windows.md
     - name: Windows 10 causes issues when it calls CreateWindowEx
       href: ./performance/issues-when-calls-createwindowex-32-bit-applications.md
-  - name: Blue Screen/Bugcheck
+  - name: Bugcheck/Stop code errors
     items:
     - name: Bug check 0x124 after a Windows in-place upgrade on Apple devices
       href: ./performance/bug-check-0x124-windows-upgrade-boot-camp-apple-devices.md
@@ -573,8 +573,8 @@ items:
       href: ./performance/stop-error-7b-or-inaccessible-boot-device-troubleshooting.md
     - name: Stop error on Lenovo ThinkPad with KB4568831 update
       href: ./performance/stop-error-lenovo-thinkpad-kb4568831-uefi.md
-    - name: Stop error or blue screen error troubleshooting
-      href: ./performance/stop-error-or-blue-screen-error-troubleshooting.md
+    - name: Stop code error troubleshooting
+      href: ./performance/stop-code-error-troubleshooting.md
     - name: Stop error when updating in-box Broadcom network adapter driver
       href: ./performance/stop-error-broadcom-network-driver-update.md
     - name: Tablet device creates only a minidump file
@@ -1321,6 +1321,8 @@ items:
       href: ./installing-updates-features-roles/updates-automatically-downloaded.md
   - name: Failure to install Windows Updates
     items:
+    - name: Determine whether WSUS configuration causes WU issues
+      href: installing-updates-features-roles/determine-whether-wsus-configuration-causes-wu-issue.md
     - name: 'Troubleshooting guidance: Windows Update'
       href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
     - name: How to downgrade from Windows 8

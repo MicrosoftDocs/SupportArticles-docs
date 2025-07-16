@@ -14,5 +14,3 @@
     href: runbooks/troubleshoot-runbook-execution-issues.md
   - name: Troubleshoot runbook execution issues when using PowerShell
     href: runbooks/powershell-job-script-cmdlets-not-working.md
-  - name: Troubleshoot hybrid runbook worker job failures
-    href: runbooks/runbook-fails-on-hybrid-worker.md

@@ -1,0 +1,86 @@
+### YamlMime:Landing
+
+title: SharePoint Online troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using SharePoint Online. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: SharePoint Online troubleshooting
+  description: Documentation for troubleshooting common issues with SharePoint Online.
+  ms.service: sharepoint-online
+  ms.topic: landing-page
+  author: Cloud-Writer
+  ms.author: meerak
+  ms.date: 12/17/2023
+  hideEdit: true
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Errors when you use SharePoint Online or OneDrive
+            url: ./administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md
+          - text: Unable to access SharePoint Online
+            url: ./administration/sharepoint-online-inaccessible.md
+          - text: Profile picture not shown in SharePoint Online
+            url: ./administration/profile-picture-not-showing.md
+          - text: Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive 
+            url: ./diagnostics/sharepoint-and-onedrive-diagnostics.md  
+          
+  # Card
+  - title: Sharing and permissions
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Error when accepting an online invitation with another account
+            url: ./sharing-and-permissions/error-when-external-user-accepts-an-invitation-by-using-another-account.md
+          - text: '"Your organization policies do not allow you to share with these users" error'
+            url: ./sharing-and-permissions/organization-policies-do-not-allow-you-to-share-with-users-error.md
+          - text: Sharing options are greyed out
+            url: ./sharing-and-permissions/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive.md  
+
+ # Card
+  - title: Lists and libraries
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Number of items exceeds the list view threshold
+            url: ./lists-and-libraries/items-exceeds-list-view-threshold.md
+          - text: 'Issues when using "View in File Explorer"'
+            url: ./lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md
+          - text: Troubleshoot mapped network drives
+            url: ./lists-and-libraries/troubleshoot-mapped-network-drives.md  
+          
+ # Card
+  - title: Sites
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: An invalid policy blocks site deletion
+            url: ./sites/compliance-policy-blocking-site-deletion.md
+          - text: SharePoint or OneDrive read-only error messages
+            url: ./sites/site-is-read-only.md
+ # Card
+  - title: Security
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: There is a problem with your account when opening documents
+            url: ./security/problem-with-your-account.md
+          - text: Handling ransomware in SharePoint Online
+            url: ./security/handling-ransomware-in-sharepoint-online.md 
+ # Card
+  - title: Search
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Classic site collection search usage reports
+            url: ./search/classic-site-collection-search-usage-reports.md
+          - text: Search results are missing
+            url: ./search/search-results-missing.md
+          - text: Search results aren't returned
+            url: ./search/search-results-not-return.md
+            

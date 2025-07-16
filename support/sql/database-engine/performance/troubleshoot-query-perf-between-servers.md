@@ -4,7 +4,7 @@ description: Provides troubleshooting steps for an issue where a query shows sig
 ms.date: 06/10/2022
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
-ms.reviewer: shaunbe, haiyingyu
+ms.reviewer: shaunbe, aartigoyle
 author: pijocoder
 ms.author: jopilov
 ---

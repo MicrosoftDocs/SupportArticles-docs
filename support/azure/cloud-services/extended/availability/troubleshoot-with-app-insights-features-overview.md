@@ -4,7 +4,7 @@ description: This article provides an overview of Application Insights features 
 ms.topic: article
 ms.service: azure-cloud-services-extended-support
 author: JerryZhangMS
-ms.author: genli
+ms.author: jarrettr
 ms.reviewer: Maheshallu;Wu.Ping;prpillai
 ms.date: 04/01/2024
 ms.custom: sap:Service Availability and Performance

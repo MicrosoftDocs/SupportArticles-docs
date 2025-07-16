@@ -1,0 +1,74 @@
+### YamlMime:Landing
+
+title: Skype for Business Server troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Skype for Business Server. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Skype for Business Server troubleshooting
+  description: Documentation for troubleshooting common issues with Skype for Business Server.
+  ms.service: skype-for-business-server
+  ms.topic: landing-page
+  author: Cloud-Writer
+  ms.author: meerak
+  ms.date: 07/26/2022
+  hideEdit: true
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Sign-in
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't sign in
+            url: ./server-sign-in/unable-to-sign-in-to-sfb.md
+          - text: Client not start when click meeting link in Chrome
+            url: ./server-sign-in/client-not-start-click-meeting-link.md
+          - text: Issues in mobile client for Google Android
+            url: ./server-sign-in/issues-mobile-client-for-android.md
+  # Card
+  - title: Conferencing
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Skype for Business broadcasts a dial tone
+            url: ./server-conferencing/sfb-play-dial-tone-teams-call.md
+          - text: Enable the Conferencing Add-in for Outlook
+            url: ./server-conferencing/enable-conferencing-add-in-for-outlook.md
+          - text: Can't connect conferencing modalities
+            url: ./server-conferencing/cannot-connect-conferencing-modalities.md
+ # Card
+  - title: Meetings
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: "Error 12029: We couldn't connect you to this meeting"
+            url: ./server-meetings/cannot-connect-you-to-this-meeting.md
+          - text: Black screen during desktop sharing on macOS High Sierra
+            url: ./server-meetings/desktop-sharing-black-screen-macos-high-sierra.md
+          - text: Enable Online Meeting Add-in for Lync 2010 in Outlook
+            url: ./server-meetings/enable-online-meeting-add-in-for-lync-2010.md
+ # Card
+  - title: Install/Uninstall
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Clean uninstallation on Mac
+            url: ./server-install-or-uninstall/clean-uninstallation.md
+          - text: '"Get-VM" is not recognized during install of Cloud Connector Edition'
+            url: ./server-install-or-uninstall/get-vm-not-recognized-during-install-cloud-connector.md
+          - text: The installation (MSI) of Lync 2010 not complete
+            url: ./server-install-or-uninstall/lync-2010-msi-installation-not-complete.md          
+ # Card
+  - title: Phone system
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: New features of firmware update for Polycom VVX Phone 
+            url: ./server-phone-system/new-features-in-firmware-update.md
+          - text: Disable CallKit integration
+            url: ./server-phone-system/disable-callkit-integration.md
+          - text: Calls to Subscriber Access or Auto Attendant fail 
+            url: ./server-phone-system/call-to-subscriber-access-auto-attendan-fail.md
+            
