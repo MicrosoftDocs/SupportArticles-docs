@@ -16,8 +16,6 @@ items:
     href: ./framework/general/open-database-by-sql-server-dotnet-data-provider.md
   - name: Query XPathDocument with an XPath expression
     href: ./framework/general/query-xpathdocument-xpath-csharp.md
-  - name: Secure applications
-    href: ./framework/general/secure-applications.md
   - name: Text rendering issues on a TextBlock that's a child of a Viewbox
     href: ./framework/general/text-rendered-custom-textblock-defects-remaining-image.md
   - name: Time-out occurs when an application calls the Poll method
@@ -30,6 +28,8 @@ items:
   items:
   - name: Deploy applications
     href: ./framework/installation/deploy-applications.md
+  - name: Secure applications
+    href: ./framework/general/secure-applications.md
   - name: Repair an installation
     href: ./framework/installation/repair-installation.md
 - name: WCF
