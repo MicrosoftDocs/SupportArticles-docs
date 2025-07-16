@@ -6,6 +6,7 @@ ms.reviewer: v-liuamson
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
+
 # Diagnostic Settings Transition from Legacy Solutions
 
 ## Resolve Transition Issues from Legacy Azure Activity Log Solutions
