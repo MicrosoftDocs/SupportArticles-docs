@@ -97,7 +97,6 @@ items:
     items:
     - name: New
       href: log-analytics/configure-and-manage-log-analytics-tables/new.md
-  items:
   - name: Log Analytics workspaces
     items:
     - name: Error code 0x80090016 - keyset doesn't exist
