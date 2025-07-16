@@ -43,7 +43,7 @@ For more information about how to enable and disable ASP.NET functionality for v
 
 ## Custom error messages
 
-Many sites change IIS default error message to display a user-friendly page or to notify an administrator. If a server that runs IIS 5.0 has custom error messages, and an ASP Web application that is built on .NET Framework is deployed to that server, errors in the ASP.NET application don't use IIS 5.0 custom error messages unless the application is configured to do this.
+Many sites change IIS default error message to display a user-friendly page or to notify an administrator. By default, if errors occur in an ASP.NET application that's built on .NET Framework and deployed to a server that has IIS 5.0 custom error messages, the errors don't trigger the custom messages. However, you can configure the application to return the custom messages.
 
 For more information about how to configure custom error messages for ASP applications that are built on .NET Framework, see [Create custom error reporting pages in ASP.NET by using Visual Basic .NET](/troubleshoot/developer/webapps/aspnet/development/custom-error-reporting-page).
 
@@ -53,7 +53,7 @@ The most common way to override system defaults for a whole ASP.NET application 
 
 - Add the `<location>` configuration element to the `Machine.config` file or the `Web.config` file
 
-- Add additional `Web.config` files to subfolders
+- Add more `Web.config` files to subfolders
 
 For more information about how to apply changes that affect specific applications and directories, see [Make application and directory-specific configuration settings in an ASP.NET application](/troubleshoot/developer/webapps/aspnet/development/application-directory-configuration).
 
@@ -87,7 +87,12 @@ For more information, see [Deploy an ASP.NET web application by using Xcopy depl
 
 ## Set up multiple server ASP.NET web applications and web services
 
-For most uses of ASP.NET, a single server can handle all requests quickly. However, many environments require that you deploy multiple servers to handle consistently high traffic volumes, support processor-intensive applications, respond to sudden bursts in traffic, or meet redundancy requirements.
+For most uses of ASP.NET, a single server can handle all requests quickly. However, many environments require that you deploy multiple servers for the following uses:
+
+- Handle consistently high traffic volumes
+- Support processor-intensive applications
+- Respond to sudden bursts in traffic
+- Meet redundancy requirements
 
 ## Related content
 
