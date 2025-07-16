@@ -1,51 +1,41 @@
 ---
-title: Exporting Directory Level Activity Logs to Event Hub
-description: Provides guidance on exporting directory-level activity logs to an Event Hub using Azure's management group level diagnostic settings.
+title: Exporting Directory-Level Activity Logs to Event Hubs
+description: Provides guidance for exporting directory-level activity logs to Event Hubs by using Azure management group-level diagnostic settings.
 ms.date: 07/16/2025
 ms.reviewer: v-liuamson; v-gsitser; v-sisidhu
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
 
-# Exporting Directory Level Activity Logs to Event Hub
+# Export directory-level activity logs to Event Hubs
 
-This article provides guidance on exporting directory-level activity logs to an Event Hub using Azure's management group level diagnostic settings. This process is essential for users who need to monitor and analyze activity logs efficiently.
+This article provides guidance to export directory-level activity logs to Event Hubs by using Microsoft Azure management group-level diagnostic settings. This process is essential for users who have to monitor and analyze activity logs efficiently.
 
 ## Introduction
 
-Exporting directory-level activity logs to an Event Hub can be achieved through an API call that creates management group level diagnostic settings. This solution is particularly useful for organizations looking to centralize their log data for better analysis and monitoring.
+You can export directory-level activity logs to an event hub through an API call that creates management group-level diagnostic settings. This solution is particularly useful for organizations that want to centralize their log data for better analysis and monitoring.
 
-### Step-by-step instructions to export logs
+### Instructions to export logs
 
-1. **Access Azure Portal**
-   - Navigate to the Azure portal and sign in with your credentials.
+1. **Access the Azure portal**: Navigate to the Azure portal, and sign in by using your credentials.
 
-2. **Locate Diagnostic Settings**
-   - Go to the **Azure Monitor** section.
-   - Select **Diagnostic settings** from the menu.
+2. **Locate diagnostic settings**: Go to the **Azure Monitor** section, and select **Diagnostic settings** on the menu.
 
-3. **Create or Update Diagnostic Settings**
-   - Click on **Add diagnostic setting**.
-   - Choose the resource for which you want to export logs.
+3. **Create or update diagnostic settings**: Select **Add diagnostic setting**, and select the resource that you want to export logs for.
 
-4. **Configure Export to Event Hub**
-   - Under **Destination details**, select **Event Hub**.
-   - Provide the necessary **Event Hub namespace** and **Event Hub name**.
-   - Ensure the **Event Hub key ID** is correctly entered.
+4. **Configure export to event hub**: Under **Destination details**, select **Event Hub**. Provide the necessary **Event Hub namespace** and **Event Hub name** values. Make sure that the **Event Hub key ID** value is entered correctly.
 
-5. **Save and Verify**
-   - Click **Save** to apply the settings.
-   - Verify that logs are being exported by checking the Event Hub for incoming data.
+5. **Save and verify**: Select **Save** to apply the settings. Check the event hub for incoming data to verify that the logs are exported.
 
-### Common Issues and Solutions
+### Common issues and solutions
 
-- **Issue:** Logs are not appearing in Event Hub.
-  - **Solution:** Double-check the Event Hub configuration and ensure the correct namespace and key ID are used.
+- **Issue:** Logs don't appear in Event Hubs.
+  - **Solution:** Double-check the event hub configuration to make sure that the correct namespace and key ID are used.
 
-- **Issue:** Permission errors when setting up diagnostic settings.
-  - **Solution:** Ensure you have the necessary permissions to create or update diagnostic settings in Azure.
+- **Issue:** Permission errors occur when making diagnostic settings.
+  - **Solution:** Make sure that you have the necessary permissions to create or update diagnostic settings in Azure.
 
-## Reference
+## References
 
 - [Azure Monitor Documentation](https://learn.microsoft.com/azure/monitoring/)
 - [Event Hubs Documentation](https://learn.microsoft.com/azure/event-hubs/)
