@@ -208,9 +208,9 @@ Use the following index to navigate directly to the corresponding section:
 
 Select the tab of an EUS image type to see the corresponding instructions.
 
-###### [RHEL 8.x - EUS](#tab/rhel8-eus)
+###### <a id="tab/rhel8-eus"></a>[RHEL 8.x - EUS](#tab/rhel8-eus)
 
-<a id="tab/rhel8-eus"></a>tabq
+
 
 1. Create a config file by using this command.
 
@@ -242,9 +242,9 @@ Select the tab of an EUS image type to see the corresponding instructions.
    sudo rhel8-eus.config
    ```
 
-###### [RHEL 9.x - EUS](#tab/rhel9-eus)
+###### <a id="tab/rhel9-eus"></a>[RHEL 9.x - EUS](#tab/rhel9-eus)
 
-<a id="tab/rhel9-eus"></a> tab2
+
 
 1. Create a config file by using this command:
 
