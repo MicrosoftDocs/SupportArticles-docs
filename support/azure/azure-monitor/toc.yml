@@ -11,8 +11,8 @@ items:
         href: activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md
       - name: Diagnostic Settings Transition from Legacy Solutions
         href: activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md
-      - name: New
-        href: activity-logs/config-export/new.md
+      - name: Understanding and Managing Diagnostic Settings Retention
+        href: activity-logs/config-export/understanding-and-managing-diagnostic-settings-retention.md
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
