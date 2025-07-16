@@ -13,7 +13,7 @@ This article provides guidance to export directory-level activity logs to Event 
 
 ## Introduction
 
-You can export directory-level activity logs to an event hub through an API call that creates management group-level diagnostic settings. This solution is particularly useful for organizations that want to centralize their log data for better analysis and monitoring.
+You can export directory-level activity logs to an event hub through an API call that creates management group-level diagnostic settings. This solution is useful for organizations that want to centralize their log data for better analysis and monitoring.
 
 ### Instructions to export logs
 
