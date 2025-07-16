@@ -15,12 +15,10 @@ ms.reviewer: shadans, sathyana, meerak, v-shorestris
 appliesto:
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 05/05/2025
+ms.date: 07/16/2025
 ---
 
 # Self-help diagnostics for Microsoft Purview
-
-<!-- This article has been reviewed and approved for the specific use of global admin perms. -->
 
 You can run diagnostics to identify and resolve issues in Microsoft Purview. The diagnostics offer insights into known issues and provide instructions to fix them. Although the diagnostics can fix some configuration issues, they don't make changes to your tenant without your consent.
 
@@ -55,7 +53,7 @@ You can find these diagnostics on the following portal pages:
 
 The following table lists the available diagnostics on **Solutions** pages. You can access the diagnostics by selecting the associated link in the third column. When you're prompted, sign in to the Microsoft Purview portal.
 
-**Note**: To run these diagnostics, you must be a Microsoft 365 global administrator.
+**Note**: To run these diagnostics, the minimum requirement is that you're an administrator with the Organization Configuration role assigned to you.
 
 | **Issue** | **Checks performed** | **Solutions page** |
 |-|-|-|
