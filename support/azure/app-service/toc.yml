@@ -1,35 +1,38 @@
 - name: Azure App Service
   items:
-    - name: Connection issues with SSL or TLS
-      items:
-        - name: Using Azure App Service Certificate with Azure Front Door
-          href: ./connection-issues-with-ssl-or-tls/using-azure-app-service-certificate-with-azure-front-door.md
-    - name: Troubleshoot Azure App Service
-      href: ./welcome-app-service.yml
-    - name: Capture memory dumps in Azure App Service
-      href: ./capture-memory-dumps-app-service.md
-    - name: Create or delete web apps FAQs
-      href: ./create-delete-resources-faq.yml
-    - name: App service security FAQs
-      href: faqs-web-app-security.md
-    - name: Availability, performance, and application FAQs
-      href: web-apps-performance-faqs.md
-    - name: App Service Compliance with PCI Standards 3.0 and 3.1
-      href: app-service-compliance-wit.md
-    - name: Backing up, restoring, and cloning
-      href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
-    - name: Built-in Linux containers FAQs
-      href: faqs-app-service-linux.yml
-    - name: Deployment FAQs for Web Apps
-      href: web-apps-deployment-faqs.md
-    - name: FAQs about App Service Environment migration
-      href: ase-migration-faq.yml
-    - name: FAQs about scaling web apps
-      href: ./scaling-web-app-faq.yml
-    - name: Map your own custom domain
-      href: /azure/app-service/app-service-web-tutorial-custom-domain
-    - name: Open-source technologies FAQs for Web Apps
-      href: web-apps-open-source-technologies-faqs.md
-    - name: Troubleshoot temporary storage
-      href: temporary-storage-for-azure-app-service.md
-
+  - name: Connection issues with SSL or TLS
+    items:
+    - name: Using Azure App Service Certificate with Azure Front Door
+      href: ./connection-issues-with-ssl-or-tls/using-azure-app-service-certificate-with-azure-front-door.md
+  - name: Troubleshoot Azure App Service
+    href: ./welcome-app-service.yml
+  - name: Capture memory dumps in Azure App Service
+    href: ./capture-memory-dumps-app-service.md
+  - name: Create or delete web apps FAQs
+    href: ./create-delete-resources-faq.yml
+  - name: App service security FAQs
+    href: faqs-web-app-security.md
+  - name: Availability, performance, and application FAQs
+    href: web-apps-performance-faqs.md
+  - name: App Service Compliance with PCI Standards 3.0 and 3.1
+    href: app-service-compliance-wit.md
+  - name: Backing up, restoring, and cloning
+    href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
+  - name: Built-in Linux containers FAQs
+    href: faqs-app-service-linux.yml
+  - name: Deployment FAQs for Web Apps
+    href: web-apps-deployment-faqs.md
+  - name: FAQs about App Service Environment migration
+    href: ase-migration-faq.yml
+  - name: FAQs about scaling web apps
+    href: ./scaling-web-app-faq.yml
+  - name: Map your own custom domain
+    href: /azure/app-service/app-service-web-tutorial-custom-domain
+  - name: Open-source technologies FAQs for Web Apps
+    href: web-apps-open-source-technologies-faqs.md
+  - name: Troubleshoot temporary storage
+    href: temporary-storage-for-azure-app-service.md
+  - name: Troubleshoot instance-related issues
+    href: troubleshoot-instance-related-issues-on-azure-app-service.md
+  - name: Troubleshoot virtual network integration
+    href: troubleshoot-vnet-integration-apps.md
