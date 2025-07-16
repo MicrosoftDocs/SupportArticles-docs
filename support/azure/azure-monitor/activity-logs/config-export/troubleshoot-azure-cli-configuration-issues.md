@@ -18,26 +18,22 @@ This article addresses issues related to configuring the export of Azure Activit
 
 ### Step-by-Step Instructions to Resolve Configuration Issues
 
-#### 1. Verify Proxy Settings
+1. **Verify Proxy Settings:**
+   - Navigate to the **Network & Internet** settings on your system.
+   - Ensure that the proxy settings are correctly configured to allow PowerShell access.
 
-- Navigate to the **Network & Internet** settings on your system.
-- Ensure that the proxy settings are correctly configured to allow PowerShell access.
+2. **Install Proxy Certificates:**
+   - Download the necessary proxy certificates from your network administrator.
+   - Open the **Certificates Manager** by typing `certmgr.msc` in the Windows search bar.
+   - Import the downloaded certificates into the **Trusted Root Certification Authorities** store.
 
-#### 2. Install Proxy Certificates
+3. **Test PowerShell Command Execution:**
+   - Open PowerShell and run a test command to verify if the issue is resolved.
+   - Example command: `Get-AzActivityLog -MaxRecord 5`
 
-- Download the necessary proxy certificates from your network administrator.
-- Open the **Certificates Manager** by typing `certmgr.msc` in the Windows search bar.
-- Import the downloaded certificates into the **Trusted Root Certification Authorities** store.
-
-#### 3. Test PowerShell Command Execution
-
-- Open PowerShell and run a test command to verify if the issue is resolved.
-- Example command: `Get-AzActivityLog -MaxRecord 5`
-
-#### 4. Check Azure CLI Configuration
-
-- Ensure that the Azure CLI is updated to the latest version by running `az upgrade`.
-- Verify that the CLI is configured correctly by executing `az configure`.
+4. **Check Azure CLI Configuration:**
+   - Ensure that the Azure CLI is updated to the latest version by running `az upgrade`.
+   - Verify that the CLI is configured correctly by executing `az configure`.
 
 ## Reference
 
