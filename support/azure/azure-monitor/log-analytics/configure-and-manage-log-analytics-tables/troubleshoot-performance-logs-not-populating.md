@@ -19,25 +19,20 @@ When setting up alerts for VM insights using Data Collection Rules (DCR) in Azur
 
 ### Step-by-Step Instructions to Resolve Performance Log Issues
 
-#### 1. Access Azure Monitor
+1. **Access Azure Monitor**:
+   - Navigate to the Azure portal and select **Azure Monitor** from the services list.
 
-- Navigate to the Azure portal and select **Azure Monitor** from the services list.
+2. **Create or Edit an Alert**:
+   - Go to **Alerts** and choose to create a new alert rule or edit an existing one.
 
-#### 2. Create or Edit an Alert
+3. **Set the Correct Scope**:
+   - In the alert rule configuration, ensure the **Scope** is set to the Log Analytics workspace, not the DCR. This allows the query to access the necessary data tables.
 
-- Go to **Alerts** and choose to create a new alert rule or edit an existing one.
+4. **Verify Query Execution**:
+   - Test the query directly in the Log Analytics workspace to ensure it runs successfully without errors.
 
-#### 3. Set the Correct Scope
-
-- In the alert rule configuration, ensure the **Scope** is set to the Log Analytics workspace, not the DCR. This allows the query to access the necessary data tables.
-
-#### 4. Verify Query Execution
-
-- Test the query directly in the Log Analytics workspace to ensure it runs successfully without errors.
-
-#### 5. Save and Test the Alert
-
-- Save the alert configuration and test it to confirm that performance logs are now populating correctly.
+5. **Save and Test the Alert**:
+   - Save the alert configuration and test it to confirm that performance logs are now populating correctly.
 
 ## Reference
 
