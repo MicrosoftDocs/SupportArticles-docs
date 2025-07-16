@@ -208,7 +208,7 @@ Use the following index to navigate directly to the corresponding section:
 
 Select the tab of an EUS image type to see the corresponding instructions.
 
-###### <a id="tab/rhel8-eus"></a>[RHEL 8.x - EUS](#tab/rhel8-eus)
+<a id="tab/rhel8-eus"></a> ###### [RHEL 8.x - EUS](#tab/rhel8-eus)
 
 
 1. Create a config file by using this command.
