@@ -2,7 +2,7 @@
 title: Detailed Guidance for Pushing Subscription Activity Logs to Sentinel
 description: Provides detailed instructions for pushing subscription activity logs to Sentinel.
 ms.date: 07/16/2025
-ms.reviewer: v-liuamson; v-gsitser
+ms.reviewer: v-liuamson; v-gsitser; v-sisidhu
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
