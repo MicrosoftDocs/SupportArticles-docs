@@ -18,7 +18,7 @@ Microsoft Azure Front Door (Standard and Premium) is a modern global load balanc
 
 Azure App Service Certificates provide a simple, integrated way to purchase, provision, and manage SSL/TLS certificates. These certificates are issued by trusted Certificate Authorities (such as DigiCert) and work together with App Services. They can also be extended to secure traffic that's routed through Azure Front Door.
 
-To purchase a certificate, see [Buy and configure an App Service Certificate](https://learn.microsoft.com/en-us/azure/app-service/configure-ssl-app-service-certificate?tabs=portal#buy-and-configure-an-app-service-certificate).
+To purchase a certificate, see [Buy and configure an App Service Certificate](https://learn.microsoft.com/azure/app-service/configure-ssl-app-service-certificate?tabs=portal#buy-and-configure-an-app-service-certificate).
 
 > [!IMPORTANT]
 > After you purchase a certificate, you must manually complete the **Store** step in the **Certificate Configuration** blade to import the certificate into Azure Key Vault. This step is required before the certificate can be used together with other Azure services.
@@ -34,7 +34,7 @@ A managed identity enables Azure Front Door to securely retrieve the certificate
    - **User-assigned** (Optional): For reuse across multiple services
 4. Select **Save**.
 
-For more information, see [Use managed identities to access Azure Key Vault certificates](https://learn.microsoft.com/en-us/azure/frontdoor/managed-identity).
+For more information, see [Use managed identities to access Azure Key Vault certificates](https://learn.microsoft.com/azure/frontdoor/managed-identity).
 
 ### Step 2: Configure Key Vault Access for Front Door
 
@@ -79,7 +79,7 @@ To retrieve the identity object ID:
 
 ### Step 3: Add certificate as a secret in Azure Front Door
 
-Before you do this step, make sure that the App Service Certificate is successfully stored in Azure Key Vault through the App Service Certificate blade. For more information, see [Buy and configure an App Service Certificate](https://learn.microsoft.com/en-us/azure/app-service/configure-ssl-app-service-certificate?tabs=portal#buy-and-configure-an-app-service-certificate).
+Before you do this step, make sure that the App Service Certificate is successfully stored in Azure Key Vault through the App Service Certificate blade. For more information, see [Buy and configure an App Service Certificate](https://learn.microsoft.com/azure/app-service/configure-ssl-app-service-certificate?tabs=portal#buy-and-configure-an-app-service-certificate).
 
 To add the certificate:
 
@@ -90,10 +90,10 @@ To add the certificate:
 5. Select **Add**.
 
 > [!NOTE]
-> Azure Front Door supports automatic certificate renewal when you reference the `Latest` version. Updates in Key Vault are reflected in Front Door within 72 hours. For more information, see [Renew customer-managed TLS certificates](https://learn.microsoft.com/en-us/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell#renew-customer-managed-tls-certificates).
+> Azure Front Door supports automatic certificate renewal when you reference the `Latest` version. Updates in Key Vault are reflected in Front Door within 72 hours. For more information, see [Renew customer-managed TLS certificates](https://learn.microsoft.com/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell#renew-customer-managed-tls-certificates).
 
 > [!IMPORTANT]
-> Certificates must be stored in a Key Vault within the same subscription and must include a complete certificate chain that uses supported algorithms. For more information, see [Use your own certificate with Azure Front Door](https://learn.microsoft.com/en-us/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell#use-your-own-certificate).
+> Certificates must be stored in a Key Vault within the same subscription and must include a complete certificate chain that uses supported algorithms. For more information, see [Use your own certificate with Azure Front Door](https://learn.microsoft.com/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell#use-your-own-certificate).
 
 ### Step 4: Configure a custom domain with BYOC
 
@@ -110,7 +110,7 @@ To add the certificate:
     - **TLS policy**: Select a supported policy (for example, `TLS 1.2_2023`)
 5. Select **Add** to finish the setup.
 
-After verification is made, Front Door serves traffic securely by using the certificate from Azure Key Vault. For more information, see [Add a custom domain in Azure Front Door](https://learn.microsoft.com/en-us/azure/frontdoor/standard-premium/how-to-add-custom-domain).
+After verification is made, Front Door serves traffic securely by using the certificate from Azure Key Vault. For more information, see [Add a custom domain in Azure Front Door](https://learn.microsoft.com/azure/frontdoor/standard-premium/how-to-add-custom-domain).
 
 ## Summary
 
@@ -123,7 +123,7 @@ After verification is made, Front Door serves traffic securely by using the cert
 
 ## References
 
-- [Configure HTTPS custom domain (Front Door)](https://learn.microsoft.com/en-us/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell)
-- [Add custom domain in Front Door](https://learn.microsoft.com/en-us/azure/frontdoor/standard-premium/how-to-add-custom-domain)
-- [Azure Front Door managed identity access](https://learn.microsoft.com/en-us/azure/frontdoor/managed-identity)
-- [Buy and configure an App Service Certificate](https://learn.microsoft.com/en-us/azure/app-service/configure-ssl-app-service-certificate?tabs=portal)
+- [Configure HTTPS custom domain (Front Door)](https://learn.microsoft.com/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell)
+- [Add custom domain in Front Door](https://learn.microsoft.com/azure/frontdoor/standard-premium/how-to-add-custom-domain)
+- [Azure Front Door managed identity access](https://learn.microsoft.com/azure/frontdoor/managed-identity)
+- [Buy and configure an App Service Certificate](https://learn.microsoft.com/azure/app-service/configure-ssl-app-service-certificate?tabs=portal)
