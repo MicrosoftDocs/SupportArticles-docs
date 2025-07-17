@@ -116,6 +116,26 @@ To resolve this issue, verify your Windows Server has the following updates inst
 - Windows Server 2016 [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=cumulative%20windows%20server%202016) (latest cumulative update)
 - Windows Server 2019 [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=cumulative%20windows%20server%202019) (latest cumulative update)
   - Cumulative updates are released monthly. To deploy the latest update, users can either use Windows Update or manually download it from the [Microsoft Update Catalog](https://catalog.update.microsoft.com). If installing manually, users should review the associated KB article to ensure all prerequisites are met.​ ​​If the Windows Updates aren't installed prior to installing the Azure File Sync agent, the Storage Sync Agent service (FileSyncSvc) will fail to start.
+    
+## Auto Update Not Upgrading ‘To Be Expired’ or Expired Azure File Sync Agent
+
+If Auto Update is not upgrading your ‘to be expired’ or expired Azure File Sync agent, check if the agent expiration information is properly applied to the server. The expiration metadata is required for Auto Update to function as expected.
+
+To verify whether the `AgentExpirationDate` is set, run the following command from an elevated PowerShell session:
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Get-StorageSyncServer
+```
+If the AgentExpirationDate value is not set or is empty, there may be a networking issue preventing the server from receiving expiration data. To test network connectivity, run the following command:
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Test-StorageSyncNetworkConnectivity
+```
+If network connectivity issues are reported, manually update the agent.
+
+If no connectivity issues are found and the `AgentExpirationDate` is still not set, contact Azure File Sync support for further assistance.
 
 ## High memory usage on the server
 
