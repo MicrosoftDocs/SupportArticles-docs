@@ -127,7 +127,7 @@ To verify whether the `AgentExpirationDate` is set, run the following command fr
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Get-StorageSyncServer
 ```
-If the AgentExpirationDate value is not set or is empty, there may be a networking issue preventing the server from receiving expiration data. To test network connectivity, run the following command:
+If the `AgentExpirationDate` value isn't set or is empty, there might be a networking issue preventing the server from receiving expiration data. To test network connectivity, run the following command:
 
 ```powershell
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
