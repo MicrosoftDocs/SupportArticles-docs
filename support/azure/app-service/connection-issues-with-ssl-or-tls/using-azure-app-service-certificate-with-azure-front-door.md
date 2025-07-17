@@ -11,7 +11,7 @@ ms.custom: Connection issues with SSL or TLS
 
 # Use Azure App Service Certificate with Azure Front Door
 
-Microsoft Azure Front Door (Standard and Premium) is a modern global load balancer and application delivery network that supports custom TLS certificates through Azure Key Vault. This article discusses how to securely use an Azure App Service Certificate together with Microsoft Azure Front Door by using managed identities and Bring Your Own Certificate (BYOC) support. This integration enables you to deliver encrypted traffic that has automatic renewal, enterprise-grade performance, and global scale.
+Microsoft Azure Front Door (Standard and Premium) is a modern global load balancer and application delivery network that supports custom TLS certificates through Azure Key Vault. This article discusses how to use an Azure App Service Certificate securely together with Microsoft Azure Front Door by using managed identities and Bring Your Own Certificate (BYOC) support. This integration enables you to deliver encrypted traffic that has automatic renewal, enterprise-grade performance, and global scale.
 
 
 ## Overview
@@ -75,7 +75,7 @@ To retrieve the identity object ID:
 5. Save the access policy.
 
 > [!NOTE]
-> This method is suitable for legacy scenarios or if RBAC is not enabled.
+> This method is suitable for legacy scenarios or if RBAC isn't enabled.
 
 ### Step 3: Add certificate as a secret in Azure Front Door
 
@@ -116,7 +116,7 @@ After verification is made, Front Door serves traffic securely by using the cert
 
 | Task | Tool | Notes
 | --- | --- | ---
-| Enable identity | Azure Portal or CLI | System-assigned identity is recommended
+| Enable identity | Azure portal or CLI | System-assigned identity is recommended
 | Grant access | IAM Role or Access Policy | Use `Key Vault Secrets User` or equivalent
 | Add secret | Azure portal | Reference `-latest` to enable autorotation
 | Bind domain | Azure portal | Validate domain and configure HTTPS
