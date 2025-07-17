@@ -170,7 +170,7 @@ Set-AzStorageSyncServerEndpointPermission -ResourceGroupName <string> -StorageSy
 > The `-Name` parameter is the name of the server endpoint. It's a GUID, not the friendly name that's displayed in the Azure portal. To get the server endpoint name, run the [Get-AzStorageSyncServerEndpoint](/powershell/module/az.storagesync/get-azstoragesyncserverendpoint) cmdlet.
 
 
-### Server Endpoint Connection issue with ECS_E_AUTH_IDENTITY_NOT_FOUND error
+### Sync Session fails with ECS_E_AUTH_IDENTITY_NOT_FOUND error
 
 The `ECS_E_AUTH_IDENTITY_NOT_FOUND` error occurs when the server's managed identity used to communicate with the Azure File Sync service has changed, but the Azure File Sync service is still expecting the previous identity. This can result in authentication failures.
 
