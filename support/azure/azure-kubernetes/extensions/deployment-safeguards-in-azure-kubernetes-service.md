@@ -51,7 +51,7 @@ To disable deployment safeguards entirely, run the following command:
 Deployment Safeguards uses Azure Policy as an implementation detail. To turn on Deployment Safeguards on an AKS cluster, you don't have to have the
 correct permissions to assign or delete Azure Policies.
 
-## 4. Why does my deployment resource get admitted even though it doesn\'t follow best practices?
+### Why does my deployment resource get admitted even though it doesn\'t follow best practices?
 
 Deployment safeguards enforce best practice standards through Azure Policy controls. It has policies that validate against Kubernetes resources. To evaluate and enforce cluster components, Azure Policy extends [Gatekeeper](https://open-policy-agent.github.io/gatekeeper/website/). Gatekeeper enforcement also currently operates in a [fail-open model](https://open-policy-agent.github.io/gatekeeper/website/docs/failing-closed/#considerations). There are no guarantees that Gatekeeper will respond to our networking call. Therefore, we make sure that the validation doesn't run in such cases so that the denial doesn't block your deployments.
 
