@@ -1,6 +1,6 @@
 ---
-title: Using Azure App Service Certificate with Application Gateway:Detailed Guide
-description: Get detailed steps on how to use Azure App Service certificate with application gateway.
+title: Using Azure App Service Certificate with Application Gateway: Detailed Guide
+description: Provides detailed steps to use Azure App Service certificate together with Application Gateway.
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-app-service
@@ -9,61 +9,38 @@ ms.reviewer: v-liuamson; v-gsitser
 ms.custom: Connection issues with SSL or TLS
 ---
 
-# Using Azure App Service Certificate with Application Gateway: Detailed Guide
+# Use Azure App Service Certificate with Application Gateway
 
-Azure provides various tools and services to secure your web
-applications with SSL/TLS certificates. One such offering is the **Azure
-App Service Certificate**, which is tightly integrated with Azure App
-Services. However, many organizations use **Azure Application Gateway**
-as a reverse proxy, load balancer, and Web Application Firewall (WAF),
-and naturally want to use the same certificate across services. This
-blog provides a comprehensive guide on how to use App Service
-Certificates in Application Gateway, outlining the usage steps,
-restrictions, and best practices.
+Azure provides various tools and services to secure your web applications by using SSL/TLS certificates. One such offering, the **Azure App Service Certificate**, is tightly integrated with Azure App Services. However, many organizations use **Azure Application Gateway** as a reverse proxy, load balancer, and Web Application Firewall (WAF). Understandably, such organizations want to use the same certificate across all services. 
 
-## What is an App Service Certificate?
+This article provides a comprehensive guide for using App Service Certificates in Application Gateway, including usage steps, restrictions, and best practices.
 
-Azure App Service Certificate is a first-party SSL certificate issued by
-DigiCert or GoDaddy and designed for use with Azure App Services. It is
-stored securely in an Azure Key Vault and supports auto-renewal when
-integrated properly.
+## About App Service Certificate
+
+Azure App Service Certificate is a first-party SSL certificate that's issued by DigiCert or GoDaddy and is designed for use together with Azure App Services. The certificate is stored securely in an Azure key vault and supports auto-renewal if it's integrated correctly.
 
 Key Characteristics:
 
 - Domain-validated SSL certificate
 - Designed primarily for Azure App Services
-- Stored in Key Vault for secure usage
-- Auto-renewal supported when linked properly
+- Stored in a key vault for secure usage
+- Auto-renewal supported if linked correctly
 
-However, **App Service Certificates are not directly usable in
-Application Gateway** without additional steps.
+However, App Service Certificates are not directly usable in Application Gateway unless you take additional steps.
 
-## Can You Use App Service Certificate in Application Gateway?
+## How to use App Service Certificate in Application Gateway
 
-Yes, but not directly. Azure Application Gateway requires a
-certificate in **PFX format (with a private key)** to configure HTTPS
-listeners. App Service Certificates are not exposed as downloadable PFXs
-by default, so you need to follow specific steps to extract and
-configure them.
+You can use App Service Certificate in Azure Application Gateway, but not directly. Application Gateway requires a certificate in `.pfx` format (having a private key) to configure HTTPS listeners. App Service Certificates are not exposed as downloadable PFXs by default. Therefore, you have to follow specific steps to extract and configure them.
 
-## How to Use App Service Certificate in Application Gateway
+## How to use App Service Certificate in Application Gateway
 
-### Option 1: Manual Export and Upload
+### Option 1: Manual export and upload
 
-1. **Purchase and Configure the Certificate**
+1. **Purchase and configure the certificate**: Buy and verify an App Service Certificate through Azure App Service.
 
-    - Buy and verify an App Service Certificate via Azure App Service.
+2. **Import into Key Vault**: Navigate to the App Service Certificate resource. Then, use the **Key Vault** blade to store the certificate in a key vault of your choice.
 
-2. **Import into Key Vault**
-
-    - Navigate to the App Service Certificate resource.
-    - Use the **Key Vault** blade to store the certificate in a Key Vault
-      of your choice.
-
-3. **Export as PFX from Key Vault**
-
-    - Use Azure PowerShell or Azure CLI to download the certificate as a
-      `.pfx` file with a private key.
+3. **Export as .pfx from Key Vault**: Use Azure PowerShell or Azure CLI to download the certificate as a `.pfx` file that has a private key.
 
     - Example using Azure CLI:
 
@@ -75,39 +52,23 @@ configure them.
         --encoding base64
     ```
 
-4. **Upload to Application Gateway**
+4. **Upload to Application Gateway**: Go to Application Gateway \> Listeners \> + Add Listener. Select **HTTPS**, upload the `.pfx` file, and then enter the password.
 
-    - Go to Application Gateway \> Listeners \> + Add Listener.
-    - Choose HTTPS, upload the `.pfx` file, and enter the password.
+5. **Associate with a rule**: Create a routing rule, and link it to the HTTPS listener. For detailed steps, see [Create a routing rule in Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/configuration-request-routing-rules)
 
-5. **Associate with a Rule**
-
-    - Create a routing rule and link it to the HTTPS listener. For
-      detailed steps, refer to the official documentation: [Create a
-      routing rule in Application
-      Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/configuration-request-routing-rules)
-
-### Option 2: Use Key Vault Reference (Recommended)
+### Option 2: Use Key Vault Reference (recommended)
 
 1. **Store App Service Certificate in Key Vault** (same as above).
 
-2. **Enable Managed Identity for Application Gateway**
+2. **Enable Managed Identity for Application Gateway**: Enable user-assigned or system-assigned managed identity.
 
-    - Enable user-assigned or system-assigned managed identity.
-
-3. **Grant Access to Key Vault**
-
-    - In the Key Vault, go to Access Policies.
-    - Add policy for Application Gateway identity with `get`, `list`,
+3. **Grant Access to Key Vault**: In the key vault, go to **Access Policies**, and add a policy for Application Gateway identity that has `get`, `list`,
       and `secret management` permissions.
 
-4. **Reference Certificate from Key Vault**
-
-    - In Application Gateway \> Listeners \> + Add Listener
-    - Choose HTTPS and select **Key Vault certificate**.
+4. **Reference Certificate from Key Vault**: Go to **Application Gateway** \> **Listeners** \> **+ Add Listener**, select **HTTPS**, and then select **Key Vault certificate**.
 
 > [!NOTE]
-> As of writing, Key Vault integration only supports certificates with the private key in `.pfx` format.
+> Currently, Key Vault integration supports only certificates that have the private key in `.pfx` format.
 
 ## Limitations and Considerations
 
