@@ -274,8 +274,6 @@ items:
       href: ./teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced.md
     - name: Teams Rooms app doesn't start automatically after updates
       href: ./teams-rooms-and-devices/teams-rooms-not-auto-start-after-windows-updates.md
-    - name: Teams Rooms devices can't fetch calendar
-      href: ./teams-rooms-and-devices/mtr-device-cannot-fetch-calendar.md
     - name: Teams Rooms Pro Management
       items:
       - name: Get support for Teams Rooms Pro Management
