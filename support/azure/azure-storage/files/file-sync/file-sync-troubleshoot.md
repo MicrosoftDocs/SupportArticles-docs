@@ -133,9 +133,10 @@ If the AgentExpirationDate value is not set or is empty, there may be a networki
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Test-StorageSyncNetworkConnectivity
 ```
-If network connectivity issues are reported, manually update the agent.
+If network connectivity issues are reported, you can manually update the agent by downloading it from the [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=azure%20file%20sync).
+After downloading the appropriate agent version, refer to the specific **Knowledge Base** article listed in the catalog for step-by-step installation instructions.
 
-If no connectivity issues are found and the `AgentExpirationDate` is still not set, contact Azure File Sync support for further assistance.
+If connectivity issues are not found and the `AgentExpirationDate` is still not set, contact Azure File Sync support for further assistance.
 
 ## High memory usage on the server
 
