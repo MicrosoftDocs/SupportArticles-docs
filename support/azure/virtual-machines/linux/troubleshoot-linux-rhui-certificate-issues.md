@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft, pagienge, navpreetkaur, v-weizhu
 editor: v-jsitser
-ms.date: 07/15/2025
+ms.date: 07/17/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
