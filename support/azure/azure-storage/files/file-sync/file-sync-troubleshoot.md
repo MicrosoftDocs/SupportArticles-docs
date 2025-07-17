@@ -89,7 +89,7 @@ To run AFSDiag, perform the steps below:
 
 ## Storage Sync Agent service (FileSyncSvc) fails to start
 
-After installing or upgrading the Azure File Sync agent (v18 or later), you may experience one of the following symptoms:
+After installing or upgrading the Azure File Sync agent (v18 or later), you might experience one of the following symptoms:
 
 - The Storage Sync Agent service (FileSyncSvc) fails to start with the following error: 
 
