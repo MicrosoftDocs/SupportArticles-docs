@@ -17,20 +17,20 @@ This article provides a comprehensive guide for using App Service Certificates i
 
 ## About App Service Certificate
 
-Azure App Service Certificate is a first-party SSL certificate that's issued by DigiCert or GoDaddy and is designed for use together with Azure App Services. The certificate is stored securely in Azure Key Vault and supports auto-renewal if it's integrated correctly.
+Azure App Service Certificate is a first-party SSL certificate that's issued by DigiCert or GoDaddy and is designed for use together with Azure App Services. The certificate is stored securely in Azure Key Vault and supports autorenewal if it's integrated correctly.
 
 Key Characteristics:
 
 - Domain-validated SSL certificate
 - Designed primarily for Azure App Services
 - Stored in a key vault for secure usage
-- Auto-renewal supported if linked correctly
+- Autorenewal supported if linked correctly
 
-However, App Service Certificates are not directly usable in Application Gateway unless you take additional steps.
+However, App Service Certificates aren't directly usable in Application Gateway unless you take additional steps.
 
 ## How to use App Service Certificate in Application Gateway
 
-You can use App Service Certificate in Azure Application Gateway, but not directly. Application Gateway requires a certificate in `.pfx` format (having a private key) to configure HTTPS listeners. App Service Certificates are not exposed as downloadable PFXs by default. Therefore, you have to follow specific steps to extract and configure them.
+You can use App Service Certificate in Azure Application Gateway, but not directly. Application Gateway requires a certificate in `.pfx` format (having a private key) to configure HTTPS listeners. App Service Certificates aren't exposed as downloadable PFXs by default. Therefore, you have to follow specific steps to extract and configure them.
 
 ### Option 1: Manual export and upload
 
@@ -78,10 +78,10 @@ You can use App Service Certificate in Azure Application Gateway, but not direct
 
     - You must extract the `.pfx` format from Key Vault before you can use it in Application Gateway (if you're not using a Key Vault reference).
 
-3. **Auto-renewal challenges:**
+3. **Autorenewal challenges:**
 
-    - App Service Certificates support auto-renewal only for App Services.
-    - When used in Application Gateway, auto-renewal does not automatically propagate.
+    - App Service Certificates support autorenewal only for App Services.
+    - When used in Application Gateway, autorenewal doesn't automatically propagate.
     - You must manually update the certificate in Application Gateway after you renew it.
     - We recommend that you use **Azure Automation** or **Logic App** to automate this update process. See [Renew certificates in Application Gateway](https://learn.microsoft.com/en-us/azure/application-gateway/renew-certificates).
 
@@ -104,7 +104,7 @@ You can use App Service Certificate in Azure Application Gateway, but not direct
 | Feature | App Service | Application Gateway
 | --- | --- | ---
 | Certificate Format | Managed by platform | Requires `.pfx`
-| Auto-Renewal | Supported | Manual (requires automation)
+| Autorenewal | Supported | Manual (requires automation)
 | Key Vault Integration | Built in | Supported (requires setup)
 | Direct Use of App Service Certificate | ✅ App Service only | ❌ Not supported
 
