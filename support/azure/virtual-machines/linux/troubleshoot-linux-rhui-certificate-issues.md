@@ -153,13 +153,13 @@ Use the following table to determine the correct RHUI package type based on your
 
 | Image type     | Support model         | Applicable version                      | RHUI package prefix            | Using `releasever`? |
 |--------------------|---------------------------|----------------------------------------------|------------------------------------|-------------------------|
-| Generic RHEL       | Non-EUS                   | 8.10, 9.8, 10.0                               | `rhui-azure-rhelX`                 | No                      |
-| Generic RHEL       | EUS                       | 8.2, 8.4, 8.6, 8.8, 9.2, 9.4, 9.6             | `rhui-azure-rhelX-eus`             | Yes                     |
+| Generic RHEL       | Non-EUS                   | 7.9, 8.10, 9.8, 10.0                          | `rhui-azure-rhelX`                 | No                      |
+| Generic RHEL       | EUS                       | 8.6, 8.8, 9.2, 9.4, 9.6                       | `rhui-azure-rhelX-eus`             | Yes                     |
 | RHEL-SAP-APPS      | EUS                       | 8.6, 8.8, 9.2, 9.4, 9.6                       | `rhui-azure-rhelX-sapapps`         | Yes                     |
 | RHEL-SAP-APPS      | Base (no EUS available)   | 7.9, 8.10                                     | `rhui-azure-rhelX-base-sap-apps`   | No                      |
-| RHEL-SAP-HA        | E4S                       | 8.6, 8.8, 9.0, 9.2, 9.4, 9.6                  | `rhui-azure-rhelX-sap-ha`          | Yes                     |
-| RHEL-SAP-HA        | Base (no E4S available)   | 7.9, 8.10,                                    | `rhui-azure-rhelX-base-sap-ha`     | No                      |
-| RHEL-HA            | EUS                       | 8.6, 9.4                                      | `rhui-azure-rhelX-ha`              | Yes                     |
+| RHEL-SAP-HA        | E4S                       | 8.6, 8.8, 9.2, 9.4, 9.6                       | `rhui-azure-rhelX-sap-ha`          | Yes                     |
+| RHEL-SAP-HA        | Base (no E4S available)   | 7.9, 8.10                                     | `rhui-azure-rhelX-base-sap-ha`     | No                      |
+| RHEL-HA            | EUS                       | 8.6, 8.8, 9.4, 9.6                            | `rhui-azure-rhelX-ha`              | Yes                     |
 | RHEL-HA            | Base (no EUS available)   | 7.9, 8.10                                     | `rhui-azure-rhelX-base-ha`         | No                      |
 
 > [!NOTE]
@@ -174,7 +174,7 @@ Use the following index to navigate directly to the corresponding section:
 
 - [EUS RHUI package installation](#eus)
 - [Non-EUS RHUI package installation](#non-eus)
-- [RHEL 7 SAP/E4S RHUI package installation](#rhel79sap)
+- [RHEL 7 SAP RHUI package installation](#rhel79sap)
 - [RHEL 8 SAP/E4S/HA RHUI package installation](#rhel8sap)
 - [RHEL 9 SAP/E4S/HA RHUI package installation](#rhel9sap)
 
@@ -404,7 +404,7 @@ Select the tab of an Non-EUS image type to see the corresponding instructions.
 >
 > Replace `rhelX-XX-XX.config` and `rhui-azure-rhel-X-X-X` with the actual values, as appropriate.
 
-##### <a id="rhel79sap"></a> RHEL 7 SAP/E4S/HANA RHUI package installation
+##### <a id="rhel79sap"></a> RHEL 7 SAP RHUI package installation
 
 Select the tab of an SAP image type to see the corresponding instructions.
 
@@ -488,7 +488,7 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
 > ```
 > Replace `rhelX-XX-XX.config` and `rhui-azure-rhel-X-X-X` with the actual values, as appropriate.
 
-##### <a id="rhel8sap"></a> RHEL 8 SAP/E4S/HANA RHUI package installation
+##### <a id="rhel8sap"></a> RHEL 8 SAP/E4S/HA RHUI package installation
 
 Select the tab of an SAP image type to see the corresponding instructions.
 
