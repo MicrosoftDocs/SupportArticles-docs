@@ -16,7 +16,7 @@ _Applies to:_ .NET Core
 
 ## Symptoms
 
-A time-out occurs when you run an application that's using the `System.Net.Security.SslStream` class and that calls the `System.Net.Socket.Poll` method to check data on the underlying socket. When this issue occurs, the `Poll` method returns false.
+A time-out occurs when you run an application that's using the `System.Net.Security.SslStream` class and that calls the `System.Net.Socket.Poll` method to check data on the underlying socket. When this issue occurs, the `Poll` method returns a value of false.
 
 ## Cause
 
@@ -27,4 +27,4 @@ The `SslStream` class is reading data from the socket faster than the applicatio
 To work around this issue, use one of the following methods:
 
 - Don't use the `Poll` method in the application. Instead, use the [Asynchronous Programming Model (APM)](/dotnet/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm) pattern to get callbacks when data arrives.
-- If you must use the `Poll` method, when the method returns true, make sure that all the stream buffer data was read before you enter another `Poll` call.
+- If you must use the `Poll` method, when the method returns a value of true, make sure that all the stream buffer data was read before you enter another `Poll` call.

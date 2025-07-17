@@ -65,4 +65,4 @@ HResult: 80004005
 
 ## Solution
 
-To work around this issue, don't retrieve a pointer to the `WeakReference<T>.Create` method. This method is private to the `WeakReference<T>` class. Therefore, invoking this method might cause undefined behavior even if you get a pointer to the function.
+To work around this issue, don't retrieve a pointer to the `WeakReference<T>.Create` method. This is a private method of the `WeakReference<T>` class. Therefore, invoking this method might cause undefined behavior even if you get a pointer to the function.
