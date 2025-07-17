@@ -3,7 +3,7 @@ title: Troubleshoot Azure File Sync managed identity issues
 description: Troubleshoot common issues when your Azure File Sync deployment is configured to use managed identities.
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/09/2025
+ms.date: 07/16/2025
 author: khdownie
 ms.author: kendownie
 ---
@@ -168,6 +168,25 @@ Set-AzStorageSyncServerEndpointPermission -ResourceGroupName <string> -StorageSy
 
 > [!NOTE]
 > The `-Name` parameter is the name of the server endpoint. It's a GUID, not the friendly name that's displayed in the Azure portal. To get the server endpoint name, run the [Get-AzStorageSyncServerEndpoint](/powershell/module/az.storagesync/get-azstoragesyncserverendpoint) cmdlet.
+
+
+### Server Endpoint Connection issue with ECS_E_AUTH_IDENTITY_NOT_FOUND error
+
+The `ECS_E_AUTH_IDENTITY_NOT_FOUND` error occurs when the server's managed identity used to communicate with the Azure File Sync service has changed, but the Azure File Sync service is still expecting the previous identity. This can result in authentication failures.
+
+You can identify this issue by checking for **Event ID 9530** in the **Telemetry** event log within **Event Viewer**. This event indicates that the managed identity's `applicationId` has changed.
+
+Common scenarios that can trigger this issue include:
+- Azure Arc resource deletion and recreation
+- Toggling the system-assigned managed identity on an Azure VM off and then back on
+
+When the managed identity changes, the File Sync agent will attempt to use the new identity, but the Azure File Sync service is still configured to authorize the previous one. This mismatch causes requests to fail with the `ECS_E_AUTH_IDENTITY_NOT_FOUND` error.
+
+To resolve this issue, run the following PowerShell command:
+
+```powershell
+Set-AzStorageSyncServer -ResourceGroupName <ResourceGroupName> -StorageSyncServiceName <StorageSyncServiceName> -Identity
+```
 
 ### Test-NetworkConnectivity cmdlet fails with error 0x80190193 (HTTP_E_STATUS_FORBIDDEN)
 
