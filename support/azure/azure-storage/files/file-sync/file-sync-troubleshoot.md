@@ -119,7 +119,7 @@ To resolve this issue, verify your Windows Server has the following updates inst
     
 ## Auto Update not upgrading ‘to be expired’ or expired Azure File Sync Agent
 
-If Auto Update is not upgrading your ‘to be expired’ or expired Azure File Sync agent, check if the agent expiration information is properly applied to the server. The expiration metadata is required for Auto Update to function as expected.
+If Auto Update isn't upgrading your ‘to be expired’ or expired Azure File Sync agent, check if the agent expiration information is properly applied to the server. The expiration metadata is required for Auto Update to function as expected.
 
 To verify whether the `AgentExpirationDate` is set, run the following command from an elevated PowerShell session:
 
