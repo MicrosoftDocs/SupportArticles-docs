@@ -110,7 +110,7 @@ After installing or upgrading the Azure File Sync agent (v18 or later), you migh
   Exception occurred while configuring MitigationRedirection policy. This could indicate that required windows updates not installed on the computer.
   ```
 
-These issues occur because the Azure File Sync agent has a dependency on a Windows security feature and updates for this security feature are not installed.
+These issues occur because the Azure File Sync agent has a dependency on a Windows security feature and updates for this security feature aren't installed.
 
 To resolve this issue, verify your Windows Server has the following updates installed:
 - Windows Server 2016 [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=cumulative%20windows%20server%202016) (latest cumulative update)
