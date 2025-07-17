@@ -55,7 +55,7 @@ You can find these diagnostics on the following portal pages:
 
 The following table lists the available diagnostics on **Solutions** pages. You can access the diagnostics by selecting the associated link in the third column. When you're prompted, sign in to the Microsoft Purview portal.
 
-**Note**: To run these diagnostics, you must be a Microsoft 365 global administrator.
+**Note**: Admins with the Organization Configuration role assigned have the necessary permissions to run these diagnostics.
 
 | **Issue** | **Checks performed** | **Solutions page** |
 |-|-|-|
