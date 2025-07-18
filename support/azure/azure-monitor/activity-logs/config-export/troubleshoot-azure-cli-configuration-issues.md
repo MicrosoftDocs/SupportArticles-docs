@@ -4,38 +4,38 @@ description: Troubleshooting guide for Azure CLI configuration issues.
 ms.date: 07/17/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
-ms.custom: I can’t configure export of Activity Logs
+ms.custom: I can’t configure export of activity logs
 ---
 
-# Troubleshoot Azure CLI Configuration Issues
+# Troubleshoot Azure CLI configuration issues
 
-This article addresses issues related to configuring the export of Azure Activity Logs using PowerShell or CLI. Users may encounter difficulties executing PowerShell commands due to missing proxy certificates.
+This article discusses issues that are related to configuring Microsoft Azure to export activity logs by using PowerShell or CLI. Because of missing proxy certificates, users might experience difficulties when they try to run PowerShell commands.
 
-## Common Issues and Solutions
+## Common issues and solutions
 
-- **Issue:** PowerShell commands fail to execute.
-- **Root Cause:** Missing proxy certificates required for command execution.
+- **Issue:** PowerShell commands don't run.
+- **Root Cause:** Missing proxy certificates that are required for command execution.
 
-### Step-by-Step Instructions to Resolve Configuration Issues
+### Instructions to resolve configuration issues
 
-1. **Verify Proxy Settings:**
+1. **Verify proxy settings:**
    - Navigate to the **Network & Internet** settings on your system.
-   - Ensure that the proxy settings are correctly configured to allow PowerShell access.
+   - Make sure that the proxy settings are configured correctly to allow PowerShell access.
 
-2. **Install Proxy Certificates:**
+2. **Install proxy certificates:**
    - Download the necessary proxy certificates from your network administrator.
-   - Open the **Certificates Manager** by typing `certmgr.msc` in the Windows search bar.
+   - Open the **Certificates Manager** snap-in by typing `certmgr.msc` in the Windows search bar.
    - Import the downloaded certificates into the **Trusted Root Certification Authorities** store.
 
-3. **Test PowerShell Command Execution:**
-   - Open PowerShell and run a test command to verify if the issue is resolved.
-   - Example command: `Get-AzActivityLog -MaxRecord 5`
+3. **Test PowerShell command execution:**
+   - Open PowerShell and run a test command to check whether the issue is resolved.
+   - Example command: `Get-AzActivityLog -MaxRecord 5`.
 
-4. **Check Azure CLI Configuration:**
-   - Ensure that the Azure CLI is updated to the latest version by running `az upgrade`.
-   - Verify that the CLI is configured correctly by executing `az configure`.
+4. **Check Azure CLI configuration:**
+   - Run `az upgrade` to verify that the Azure CLI is updated to the latest version.
+   - Run `az configure` to verify that the CLI is configured correctly.
 
-## Reference
+## References
 
 - [Azure CLI Documentation](https://learn.microsoft.com/azure/cli/)
 - [PowerShell Documentation](https://learn.microsoft.com/powershell/)
