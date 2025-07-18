@@ -3,8 +3,8 @@ title: Azure region access request process
 description: Describes the process to request access for certain Azure regions.
 ms.date: 11/25/2024
 ms.service: azure-common-issues-support
-ms.author: genli
-author: genlin
+ms.author: jarrettr
+author: JarrettRenshaw
 ms.reviewer: 
 ---
 # Azure region access request process  
@@ -58,7 +58,7 @@ The support request will be routed back to you once complete, letting you know o
 
 ## Reserved access regions
 
-To view which regions are access restricted, see [Azure paired regions](/azure/reliability/cross-region-replication-azure#azure-paired-regions).
+To view which regions are access restricted, see [Azure regions list](/azure/reliability/regions-list).
 
 To request the access for the reserved access regions, follow these steps:
 

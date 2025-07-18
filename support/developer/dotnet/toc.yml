@@ -1,4 +1,4 @@
-
+﻿
 items:
 - name: Welcome
   href: welcome-dotnet-landing.yml
@@ -6,178 +6,32 @@ items:
   items:
   - name: Printing a range of pages may fail when you use a WPF application
     href: ./framework/general/Printing-process-fails-using-WPF-application-Win10.md
-  - name: 501 syntax error when you use FtpWebRequest
-    href: ./framework/general/ftpwebrequest-behavior.md
-  - name: Developer Pack and language packs
-    href: ./framework/general/developer-language-pack.md
-  - name: Event ID 1101 after Domain Controller promotion
-    href: ./framework/general/runtime-event-1101.md
-  - name: Access violation when you call Ping
-    href: ./framework/general/access-violation-call-ping-send-repeatedly.md
   - name: Can't trigger PreviewKeyDown event by IME
     href: ./framework/general/cannot-trigger-event-in-wpf-with-ime.md
-  - name: ArgumentException when you select rows
-    href: ./framework/general/argumentexception-select-row-wpf-datagrid.md
-  - name: Build error MC6017 when you define a class
-    href: ./framework/general/error-mc6017-define-class-xaml.md
-  - name: Break on Memory Leaks runtime check fails
-    href: ./framework/general/break-memory-leak-debugbreak-wpf.md
-  - name: Can't build projects on MSBuild
-    href: ./framework/general/sgen-mixed-mode-assembly-built-v2-0-50727.md
-  - name: Can't build a .NET Framework-based project
-    href: ./framework/general/cannot-load-interop-assembly.md
-  - name: Can't consume web services
-    href: ./framework/general/cannot-consume-web-service-via-http-proxy.md
-  - name: Can't call COM with multiple AppDomains
-    href: ./framework/general/fatalexecutionengineerror-call-com-multilpe-appdomains.md
-  - name: Can't get security descriptor of a class
-    href: ./framework/general/error-security-descriptor-native-image-module.md
-  - name: Can't parse XML that contains special characters
-    href: ./framework/general/xml-parser-invalid-character.md
-  - name: Changes in the TSAware behavior
-    href: ./framework/general/change-tsaware.md
-  - name: COMException in WPF applications
-    href: ./framework/general/comexception-error-from-wpf-app.md
   - name: COMException when you create WeakReference<T> object
     href: ./framework/general/comexception-weakreference-object.md
-  - name: Compatibility when you use RIA Services
-    href: ./framework/general/compatibility-issue-ria-sp2-ef-5.md
-  - name: Computer stops responding
-    href: ./framework/general/computer-stops-responding-mscorsvw.md
-  - name: Create a summary row for DataGrid
-    href: ./framework/general/create-summary-row-datagrid.md
-  - name: Data on the clipboard is unavailable
-    href: ./framework/general/data-clipboard-from-winform-app-unavailable.md
-  - name: Different WebExceptionStatus are thrown
-    href: ./framework/general/httpwebrequest-different-webexceptionstatus.md
-  - name: Endpoints of an arc aren't drawn correctly
-    href: ./framework/general/arc-endpoints-not-be-drawn-correctly.md
-  - name: Error or high CPU utilization when running a WPF-based application
-    href: ./framework/general/error-high-cpu-utilization-running-wpf-based-application.md
-  - name: Error when applications connect to an instance
-    href: ./framework/general/error-applications-connect-instance-same-computer.md
-  - name: Explain DefaultValueAttribute
-    href: ./framework/general/confusing-defaultvalueattribute.md
-  - name: Event handle leaks in an application
-    href: ./framework/general/event-handle-leaks.md
-  - name: Exception when you instantiate a WPF window
-    href: ./framework/general/executionengine-exception-wpf-window.md
-  - name: Exception when you applications with UI automation
-    href: ./framework/general/exception-run-app-with-ui-automation.md
-  - name: Form height and width changes
-    href: ./framework/general/wrong-winform-height-width.md
-  - name: Full-screen applications don't receive touch input events
-    href: ./framework/general/full-screen-wpf-apps-not-receive-touch-input-events.md
-  - name: High CPU or memory usage in applications on VMs
-    href: ./framework/general/long-spin-wait-loops-high-cpu.md
-  - name: High memory usage when you use EnlistDurable
-    href: ./framework/general/high-memory-usage-enlistdurable.md
   - name: Incorrect code lookups on past dates
     href: ./framework/general/2998527-incorrect-time-timezoneinfo.md
-  - name: Information collected by PerfView
-    href: ./framework/general/perfview-diagnostic-information.md
-  - name: Initialize controls before accessing LocalDataStore
-    href: ./framework/general/initialize-winform-control-access-localdatastore.md
-  - name: Install an assembly in global assembly cache
-    href: ./framework/general/install-assembly-global-assembly-cache.md
-  - name: InvokeMember throws AmbigousMatchException
-    href: ./framework/general/invokemember-ambigousmatchexception.md
-  - name: Known issues for .NET Framework 4.5.1 Preview
-    href: ./framework/general/issues-dotnet-framework-451-preview.md
-  - name: Memory corruption in the managed process
-    href: ./framework/general/citrix-virtual-memory-optimization-80131506-error.md
-  - name: Memory optimization for HTTP POST or PUT
-    href: ./framework/general/memory-optimization-large-httpwebrequest.md
-  - name: MSDTC transaction requires Full Trust
-    href: ./framework/general/msdtc-transaction-requires-full-trust.md
-  - name: No events are received from COM
-    href: ./framework/general/no-events-from-com-object.md
   - name: Open databases by using Visual Basic .NET
     href: ./framework/general/open-database-by-sql-server-dotnet-data-provider.md
-  - name: OutOfMemory exception in a managed application
-    href: ./framework/general/out-of-memory-dotnet-framework-461.md
-  - name: Passwords can't be passed to a WCF service
-    href: ./framework/general/password-icredentials-cannot-pass-wcf-service.md
-  - name: Password field is empty
-    href: ./framework/general/password-empty-networkcredential-deserialized-wcf.md
-  - name: Ports run out when you use ConnectionGroupName
-    href: ./framework/general/ports-run-out-use-connectiongroupname.md
-  - name: POST and PUT requests fail
-    href: ./framework/general/post-put-request-fail-httpwebrequest.md
   - name: Query XPathDocument with an XPath expression
     href: ./framework/general/query-xpathdocument-xpath-csharp.md
-  - name: RemotingException when you use binary format
-    href: ./framework/general/remotingexception-binary-format-message.md
-  - name: RSS20FeedFormatter throws an exception
-    href: ./framework/general/rss20feedformatter-throw-exception.md
-  - name: Secure applications
-    href: ./framework/general/secure-applications.md
-  - name: Serialization causes recursion
-    href: ./framework/general/serialization-onassemblyresolve-event-causes-recursion.md
-  - name: StackOverflowException in DataGridView
-    href: ./framework/general/stackoverflowexception-datagridview-tablet.md
-  - name: System.Net SDP package information
-    href: ./framework/general/system-dotnet-sdp-package-information.md
-  - name: System.Net and WCF diagnostics
-    href: ./framework/general/system-dotnet-wcf-diagnostics.md
-  - name: TableLayoutPanel is displayed with large spaces
-    href: ./framework/general/nested-tablelayoutpanel-large-empty-spaces.md
   - name: Text rendering issues on a TextBlock that's a child of a Viewbox
     href: ./framework/general/text-rendered-custom-textblock-defects-remaining-image.md
-  - name: Text is lost when you render an XPS DocumentPage
-    href: ./framework/general/far-eastern-fonts-text-lost-on-images-xps.md
   - name: Time-out occurs when an application calls the Poll method
     href: ./framework/general/timeout-when-application-calls-poll-method.md
   - name: Use AssemblyVersion and AssemblyFileVersion
     href: ./framework/general/assembly-version-assembly-file-version.md
-  - name: Windows Forms applications don't release memory
-    href: ./framework/general/winform-app-use-settooltip-not-release-memory.md
-  - name: Windows Forms applications throw SecurityException
-    href: ./framework/general/winform-app-securityexception.md
-  - name: WPF application hangs when you use fonts over 100 pts in size
-    href: ./framework/general/wpf-application-hangs-using-fonts-over-100pts.md
   - name: WPF render thread failures
     href: ./framework/general/wpf-render-thread-failures.md
-  - name: WPF XBAPs crash during startup
-    href: ./framework/general/wpf-browser-hosted-applications-xbaps-crash.md
-  - name: Build fails when you deploy a component
-    href: ./framework/general/build-fails-deploy-component-system-text-encoding.md
 - name: Installation and Deployment
   items:
-  - name: A ClickOnce application fails to run
-    href: ./framework/installation/manifest-definitions-do-not-match-reference.md
-  - name: Applications crash at startup
-    href: ./framework/installation/applications-crash-at-startup.md
-  - name: Can't deploy applications in Terminal Server
-    href: ./framework/installation/clickonce-cannot-deploy-app-terminal-server.md
-  - name: Can't install PFX files by using X509Certificate
-    href: ./framework/installation/install-pfx-file-using-x509certificate.md
-  - name: Can't run .NET Framework based applications
-    href: ./framework/installation/cannot-run-dotnet-framework-based-applications.md
-  - name: Can't run programs after an upgrade
-    href: ./framework/installation/cannot-run-programs-after-upgrade.md
-  - name: ClickOnce applications fail to update
-    href: ./framework/installation/clickonce-application-fails-update.md
-  - name: ClickOnce deployment isn't supported with Roaming Profiles
-    href: ./framework/installation/clickonce-not-support-roaming-profiles.md
-  - name: ClickOnce Manifest signing is required
-    href: ./framework/installation/require-clickonce-manifest-signing.md
   - name: Deploy applications
     href: ./framework/installation/deploy-applications.md
-  - name: Determine versions and service pack levels
-    href: ./framework/installation/determine-dotnet-versions-service-pack-levels.md
-  - name: Fail to publish ClickOnce applications
-    href: ./framework/installation/publishing-clickonce-fails.md
-  - name: New Japanese era updates
-    href: ./framework/installation/new-japanese-era-updates.md
-  - name: Patching fails
-    href: ./framework/installation/patching-framework-fails.md
-  - name: Published ClickOnce applications fail to install
-    href: ./framework/installation/clickonce-app-install-launch-fail.md
+  - name: Secure applications
+    href: ./framework/general/secure-applications.md
   - name: Repair an installation
     href: ./framework/installation/repair-installation.md
-  - name: Setup diagnostics
-    href: ./framework/installation/setup-diagnostics.md
 - name: WCF
   items:
   - name: .NET 4.5 service throws exception

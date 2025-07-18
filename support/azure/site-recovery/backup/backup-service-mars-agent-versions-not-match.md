@@ -3,8 +3,8 @@ title: Azure Backup service version and Microsoft Azure Recovery Services Agent 
 description: Provides a solution to an issue in which Azure Backup service and Microsoft Azure Recovery Services Agent versions do not match (0x1FBD3).
 ms.date: 08/14/2020
 ms.service: azure-site-recovery
-ms.author: genli
-author: genlin
+ms.author: jarrettr
+author: JarrettRenshaw
 ms.reviewer: 
 ms.custom: sap:I need help with Azure Backup
 ---

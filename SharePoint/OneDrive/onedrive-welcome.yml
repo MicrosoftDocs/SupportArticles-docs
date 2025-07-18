@@ -1,0 +1,80 @@
+### YamlMime:Landing
+
+title: OneDrive for Business troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using OneDrive for Business. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: OneDrive for Business troubleshooting
+  description: Documentation for troubleshooting common issues with OneDrive for Business.
+  ms.service: one-drive
+  ms.topic: landing-page
+  author: Cloud-Writer
+  ms.author: meerak
+  ms.date: 12/17/2023
+  hideEdit: true
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Top OneDrive for Business troubleshooting articles
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"There is a problem with your account, please try again later" when you open Office documents from OneDrive for Business or SharePoint Online'
+            url: ../SharePointOnline/Security/problem-with-your-account.md
+          - text: OneDrive for Business sync returns the error "We can't connect to the specified SharePoint site"
+            url: ./sync/enable-co-authoring-for-onedrive-synced-file.md
+          - text: Can't open online-only file error when opening a file in OneDrive
+            url: ./lists-and-libraries/cant-open-online-only-file.md
+          - text: Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage
+            url: ../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md
+
+  - title: Other OneDrive for Business content
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: OneDrive for work or school help
+            url: https://support.microsoft.com/office/1eaa32e9-3229-47c2-b363-0a5306cb8c37
+          - text: Troubleshooting documentation for end users
+            url: https://support.microsoft.com/office/36110213-f3f6-490d-8cb7-3833539def0b
+          - text: OneDrive administrator documentation
+            url: /onedrive/onedrive
+          - text: OneDrive for Business training
+            url: https://support.microsoft.com/office/b30da4eb-ddd2-44b6-943b-e6fbfc6b8dde
+
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Error when accessing OneDrive or Sharepoint
+            url: ./administration/error-accessing-onedrive-sharepoint.md
+
+  - title: List and Libraries
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: 401 error when Graph API access OneDrive data
+            url: ./lists-and-libraries/401-error-when-using-graph-api-to-access-data.md
+          - text: Can't open online-only file error when opening a file in OneDrive
+            url: ./lists-and-libraries/cant-open-online-only-file.md
+          - text: Can't open OneDrive on images using Sysprep
+            url: ./lists-and-libraries/cannot-open-onedrive-on-images-using-sysprep.md
+
+  - title: Security
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Documents deleted by retention policy after workload is removed
+            url: ./security/retention-policies-deleting-documents-after-workload-removal.md
+          - text: There is a problem with your account when opening documents
+            url: ../SharePointOnline/Security/problem-with-your-account.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+
+  - title: Search
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Search doesn't provide results from another language
+            url: ../SharePointOnline/Search/no-search-results-from-another-language.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+          - text: Searching private content
+            url: ./search/search-private-content.md

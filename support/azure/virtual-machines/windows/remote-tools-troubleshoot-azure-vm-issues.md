@@ -2,7 +2,7 @@
 title: Use remote tools to troubleshoot Azure VM issues
 description: Learn about PsExec, PowerShell scripts, and other remote tools you can use to troubleshoot remote Azure VM issues without using RDP.
 services: virtual-machines
-author: Deland-Han
+author: kaushika-msft
 manager: dcscontentpm
 tags: ''
 ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurepowershell
@@ -12,7 +12,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 07/22/2024
-ms.author: delhan
+ms.author: kaushika
 ms.service: azure-virtual-machines
 ---
 

@@ -4,7 +4,7 @@ description: Describes an issue in which you can't enroll a macOS device in Micr
 ms.date: 02/11/2025
 search.appverid: MET150
 ms.custom: sap:Enroll Devices - macOS\Advisory
-ms.reviewer: kaushika, luche
+ms.reviewer: kaushika, meerak
 ---
 # Keychain error -25244 (errSecInvalidOwnerEdit) when you enroll a macOS device in Intune
 

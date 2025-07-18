@@ -2,7 +2,7 @@
 title: Certificate in the connection information has expired when accessing an AVD VM
 description: Helps resolve the error certificate in the connection information has expired when accessing an AVD VM by using the Remote Desktop client for Windows.
 manager: dcscontentpm
-ms.date: 01/15/2025
+ms.date: 07/03/2025
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-nehaborkar, jasone, v-lianna
@@ -39,6 +39,6 @@ To fix this issue, follow these steps:
 	:::image type="content" source="./media/error-certificate-connection-information-expired/remote-desktop-reset-user-data.png" alt-text="Screenshot of the Remote Desktop client with the Reset button which you can reset user data.":::
 
 2.	Close and uninstall the client.
-3.	Install [the latest version of the client](/azure/virtual-desktop/whats-new-client-windows).
+3.	Install [the latest version of the client](/windows-server/remote/remote-desktop-services/web-client-whats-new).
 
 For proper functionality, make sure that safe URLs are not subject to Secure Sockets Layer (SSL) inspection from the perspective of the Remote Desktop client. Also, verify that no blocking mechanisms are interfering with the safe URLs listed for the Remote Desktop client. If the above method doesn't work, try to disable or uninstall the antivirus software.

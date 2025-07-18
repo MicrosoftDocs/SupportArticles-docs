@@ -1,7 +1,7 @@
 ---
-author: genlin
+author: JarrettRenshaw
 description: This article describes how to unlock an encrypted disk attached to a repair VM.
-ms.author: genli
+ms.author: jarrettr
 ms.date: 07/16/2021
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurepowershell

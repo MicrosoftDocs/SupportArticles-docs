@@ -5,7 +5,7 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, AshishSu, luche, LavinK, v-jesits
+ms.reviewer: kaushika, AshishSu, meerak, LavinK, v-jesits
 ms.custom:
 - sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
 - pcy:WinComm Directory Services

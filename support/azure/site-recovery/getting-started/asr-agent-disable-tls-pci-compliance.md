@@ -3,8 +3,8 @@ title: How to resolve Azure Site Recovery agent issues after disabling TLS 1.0 f
 description: Describes how to resolve issues that you may encounter when you use Azure Site Recovery if the TLS 1.0 security protocol is disabled and only TLS 1.1 and TLS 1.2 are enabled to achieve security hardening for PCI compliance.
 ms.date: 08/14/2020
 ms.service: azure-site-recovery
-ms.author: genli
-author: genlin
+ms.author: jarrettr
+author: JarrettRenshaw
 ms.reviewer: manayar, anoopkv
 ms.custom: sap:I need help getting started with Site Recovery
 ---

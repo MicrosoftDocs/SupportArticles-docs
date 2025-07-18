@@ -3,8 +3,8 @@ title: Autoscale is not triggered for FileUploader role
 description: Provides information about troubleshooting issues in which autoscale is not triggered for FileUploader role although CPU utilization in one of the instances always stays at 100%.
 ms.date: 03/13/2024
 ms.reviewer: 
-author: genlin
-ms.author: genli
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.service: azure-cloud-services-classic
 ms.custom: sap:Development
 ---

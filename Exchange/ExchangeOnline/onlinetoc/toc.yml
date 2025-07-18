@@ -1,0 +1,690 @@
+items:
+- name: Exchange Online Troubleshooting
+  href: ../exchange-online-welcome.yml
+  items:
+    - name: Administration
+      items:
+        - name: 554 5.4.14 Hop Count exceeded
+          href: ../administration/hop-count-exceeded-ndr.md
+        - name: A certificate error when releasing a message
+          href: ../administration/release-messages-prompted-client-certificate.md
+        - name: A remote mailbox created in AD DS isn't ACLable
+          href: ../administration/remote-mailbox-created-in-ad-ds-not-aclable.md
+        - name: Access denied when using remote Windows PowerShell
+          href: ../administration/access-denied-connect-powershell.md
+        - name: Bad Request when connecting to Exchange Online PowerShell
+          href: ../administration/bad-request-error-when-connecting-to-exchange-online-powershell.md
+        - name: Can't connect to Exchange Online
+          href: ../administration/incorrect-settings.md
+        - name: Can't connect to Outlook using POP/IMAP
+          href: ../administration/cannot-connect-mailbox-pop-imap-outlook.md
+        - name: Can't connect to Security & Compliance PowerShell
+          href: ../administration/cannot-connect-to-security-compliance-powershell.md
+        - name: Can't disable the Enable Forwarding option
+          href: ../administration/convert-value-error-disabling-enable-forwarding-option.md
+        - name: Can't manage Send on Behalf permissions
+          href: ../administration/send-on-behalf-for-shared-mailbox.md
+        - name: Can't set up an organization relationship
+          href: ../administration/create-organization-relationships-error.md
+        - name: Can't add new apps to Outlook Web App
+          href: ../administration/office-365-users-cannot-add-new-apps-to-outlook-web-app.md
+        - name: Can't browse groups in OWA
+          href: ../administration/cannot-browse-groups-in-owa.md
+        - name: Can't connect to Exchange Online or create new profiles
+          href: ../administration/cannot-connect-to-exchange-online-or-create-new-profiles.md
+        - name: Can't disable Facebook contact sync for Microsoft 365 organization
+          href: ../administration/cannot-disable-facebook-contact-sync-for-organization.md
+        - name: Can't establish TLS connection to remote mail server
+          href: ../administration/cannot-establish-tls-connection-to-remote-mail-server.md
+        - name: Can't import a trusted publishing domain from RMS Online
+          href: ../administration/unable-to-import-trusted-publishing-domain-from-rms-online.md
+        - name: Can't view free/busy after setting organization relationship
+          href: ../administration/cannot-view-freebusy-info-after-setting-organization-relationship.md
+        - name: Can't view free/busy information
+          href: ../administration/cannot-view-freebusy-information.md
+        - name: Changes to msExchangeHiddenFromAddressList not updated
+          href: ../administration/changes-to-msexchangehiddenfromaddresslist-not-updated-against-recipient.md
+        - name: Cisco Unity duplicate voicemails in mailbox hosted in Exchange Online
+          href: ../administration/cisco-unity-duplicate-voicemails-in-mailbox-hosted-in-exchange-online.md
+        - name: Data in the command exceeded the maximum permitted by the session error
+          href: ../administration/data-in-the-command-exceeded-the-maximum-permitted-error.md
+        - name: Description of the Files folder in Microsoft 365
+          href: ../administration/description-of-the-files-folder-in-office-365.md
+        - name: Don't have permissions to update options specified error
+          href: ../administration/you-dont-have-permissions-to-update-the-options-you-specified-error.md
+        - name: EAC delays when displaying Recipients list 
+          href: ../administration/eac-slow-to-display-recipients-if-powershell-transcription-is-turned-on.md
+        - name: Email items missing on Exchange ActiveSync client
+          href: ../administration/items-missing-on-exchange-activesync-client.md
+        - name: Error when recovering inactive mailboxes
+          href: ../administration/recover-inactive-mailboxes-error.md
+        - name: Event ID 1014 when connecting to Exchange Online mailbox
+          href: ../administration/event-id-1014-when-connecting-to-exchange-online-mailbox.md
+        - name: Federated users can't connect to an online mailbox
+          href: ../administration/federated-users-cannot-connect-to-exchange-online-mailbox.md
+        - name: Format of the Exchange object version is wrong
+          href: ../administration/wrong-format-exchange-object-version.md
+        - name: GetFolder requests return wrong TotalCount values
+          href: ../administration/getfolder-requests-return-wrong-totalcount-values.md
+        - name: How to change your user photo
+          href: ../administration/how-to-change-your-user-photo.md
+        - name: How to create an organizational forms library
+          href: ../administration/how-to-create-organizational-forms-library.md
+        - name: How to disable Exchange ActiveSync for users
+          href: ../administration/how-to-disable-exchange-activesync-for-users.md
+        - name: How to migrate AD RMS to Azure RMS in Exchange Online
+          href: ../administration/migrate-ad-rms-to-azure.md
+        - name: How to use PowerShell to grant admin access to all mailboxes
+          href: ../administration/how-to-use-powershell-to-grant-admin-access-to-all-mailboxes.md
+        - name: Imported PST file content hidden in archive mailbox
+          href: ../administration/imported-pst-file-content-hidden-in-archive-mailbox.md
+        - name: InvalidShellID error in Remote PowerShell
+          href: ../administration/invalidshellid-error-in-rps.md
+        - name: Mailbox quotas for qualifying license types not automatically increased
+          href: ../administration/mailbox-quotas-not-increased-automatically-for-qualifing-licenses.md
+        - name: MailNickname or Alias attribute in Exchange Online doesn't match Exchange on-premises settings
+          href: ../administration/mailnickname-alias-exchange-online-not-match-on-premises.md
+        - name: Manage a mailbox in the on-premises environment
+          href: ../administration/manage-mailbox-on-premises.md
+        - name: Mobile device can't connect via ActiveSync
+          href: ../administration/mobile-device-cannot-connect-via-activesync.md
+        - name: New address lists don't contain all recipients
+          href: ../administration/new-address-lists-not-contains-all-recipients.md
+        - name: Number of proxy addresses exceeds the current limit
+          href: ../administration/too-many-proxy-addresses-error.md
+        - name: Object doesn't match target type
+          href: ../administration/object-not-match-target-type.md
+        - name: ObjectClass property returns Unknown value
+          href: ../administration/objectclass-returns-unknown-value.md
+        - name: Outlook for Mac 2011 doesn't connect to Exchange Online
+          href: ../administration/outlook-for-mac-2011-not-connect-exchange-online.md
+        - name: Outlook can't connect through file-based PAC proxy
+          href: ../administration/outlook-cannot-connect-via-proxy-set-by-pac.md
+        - name: POP/IMAP client authentication fails
+          href: ../administration/pop-imap-auth-fails-if-x-ms-client-application-is-microsoft-exchange-popimap.md
+        - name: Public folder permissions in EAC show GUID instead of name
+          href: ../administration/public-folder-permissions-in-exchange-admin-center-show-guid-not-name.md
+        - name: Repeated calls against the same folder are slow
+          href: ../administration/slow-repeated-calls-against-same-folder.md
+        - name: Self-help diagnostics
+          href: ../administration/self-help-diagnostics.md
+        - name: Site mailbox retirement
+          href: ../administration/site-mailbox-retirement-faq.md
+        - name: The length of the property is too long error
+          href: ../administration/the-length-of-the-property-is-too-long-error.md
+        - name: TooManyBadItemsPermanentException during migration
+          href: ../administration/toomanybaditemspermanentexception-during-migration.md
+        - name: Transition from D/ITAR to vNext
+          href: ../administration/modern-authentication-configuration.md
+        - name: Troubleshoot Windows PowerShell issues for Exchange Online
+          href: ../administration/troubleshoot-windows-powershell-issues-for-exchange-online.md
+        - name: Unsecure redirect warning
+          href: ../administration/get-federationinformation-cmdlet-unsecure-redirect-warning.md
+        - name: Update contact information
+          href: ../administration/update-contact-information.md
+        - name: Updates to Client Access Rules
+          href: ../administration/update-of-client-access-rules-for-office-365-customers.md
+        - name: UsageLocation validation error about Enable-UMMailbox
+          href: ../administration/enable-ummailbox-cannot-be-performed-error.md
+        - name: Resolve validation errors for an archive mailbox
+          href: ../administration/validation-errors-for-mailbox-archive-guid.md
+        - name: View and update address list membership
+          href: ../administration/view-update-address-list-membership.md
+        - name: Voice mail settings are missing from Options
+          href: ../administration/voice-mail-settings-missing-from-options.md
+        - name: Windows Mail app not blocked by ActiveSync settings
+          href: ../administration/windows-mail-app-not-blocked.md
+        - name: WinRM client cannot process the request
+          href: ../administration/winrm-cannot-process-request.md
+        - name: Wrong output if running Get-CASMailbox for HasActiveSyncDevicePartnership
+          href: ../administration/incorrect-output-when-running-get-casmailbox.md
+    - name: Antispam and protection
+      items:
+        - name: Can't send emails to an external recipient
+          href: ../antispam-and-protection/cannot-send-emails-to-external-recipients.md
+        - name: Cautions against bypassing spam filters
+          href: ../antispam-and-protection/cautions-against-bypassing-spam-filters.md
+        - name: Recoverable Items aren't moved to archive
+          href: ../antispam-and-protection/recoverable-items-folder-full.md
+        - name: SMTPSEND.BareLineFeedsAreIllegal NDR when tracing a message
+          href: ../antispam-and-protection/smtpsend-barelinefeedsareillegal-when-tracing-messages.md
+    - name: Calendars
+      items:
+        - name: ActiveSync can't download attachments to Calendar items
+          href: ../calendars/activesync-not-downloading-attachments-to-calendar-items.md
+        - name: Attendees receive multiple meeting invitations
+          href: ../calendars/attendees-receive-multiple-meeting-invitations.md
+        - name: Calendar on mobile device isn't synced to Online mailbox
+          href: ../calendars/calendar-on-mobile-device-not-synced-to-online-mailbox.md
+        - name: Can't accept a meeting invitation for a room mailbox
+          href: ../calendars/cannot-accept-meeting-invitation-for-room-mailbox.md
+        - name: Can't access shared calendar for hidden mailbox
+          href: ../calendars/cannot-access-shared-calendar-for-hidden-mailbox.md
+        - name: Can't remove calendar items or emails
+          href: ../calendars/cannot-remove-items.md
+        - name: Can't view a room list in Outlook or OWA
+          href: ../calendars/room-list-not-viewable-in-outlook.md
+        - name: Can't view other user's free/busy information
+          href: ../calendars/cannot-view-another-user-calendar-free-busy-information.md
+        - name: Can't view user's free/busy information in Scheduling Assistant
+          href: ../calendars/no-free-busy-information-retrieved.md
+        - name: Default calendar isn't returned by Graph REST API
+          href: ../calendars/default-calendar-not-returned-by-graph-rest-api.md
+        - name: Delegate can't accept meeting request in OWA
+          href: ../calendars/delegate-cannot-accept-meeting-request-using-owa.md
+        - name: Delegate only sees free/busy if manager in another forest
+          href: ../calendars/delegate-only-sees-freebusy-info-if-manager-is-in-another-forest.md
+        - name: Delegates accept meetings automatically
+          href: ../calendars/delegates-accept-meetings-automatically.md
+        - name: Calendar diagnostic logs (CDL)
+          items:
+            - name: Use Calendar diagnostic logs
+              href: ../calendars/cdl/use-calendar-diagnostic-logs.md
+            - name: Get Calendar diagnostic logs
+              href: ../calendars/cdl/get-calendar-diagnostic-logs.md
+            - name: Analyze Calendar diagnostic logs
+              href: ../calendars/cdl/analyze-calendar-diagnostic-logs.md
+            - name: Get the ID of a meeting
+              href: ../calendars/cdl/get-meeting-id.md
+        - name: Meeting requests added to resource delegate's calendar
+          href: ../calendars/meeting-requests-sent-to-resource-mailbox-added-to-resource-delegate-calendar.md
+        - name: Message store has reached its maximum size
+          href: ../calendars/store-reached-maximum-size.md
+        - name: No conference rooms with Room Finders
+          href: ../calendars/conference-rooms-not-displayed.md
+        - name: No confirmation after successfully booking a meeting
+          href: ../calendars/not-receive-confirmation-after-booking-meeting.md
+        - name: Only see basic free/busy mailbox information
+          href: ../calendars/users-can-see-only-basic-freebusy-mailbox-information.md
+        - name: Public folder meetings cannot be modified in OWA
+          href: ../calendars/public-folder-meetings-not-modified-in-owa.md
+        - name: Resource doesn't respond to meeting requests
+          href: ../calendars/resource-doesnt-respond-to-meeting-requests-when-using-booking.md
+        - name: Room mailbox can't auto accept/decline meetings
+          href: ../calendars/meeting-requests-routed-through-third-party-service-not-auto-processed.md
+        - name: Room mailbox doesn't process a meeting request
+          href: ../calendars/room-mailbox-not-process-meeting-request.md
+        - name: Shared calendar in delegate's Online Archive
+          href: ../calendars/shared-calendar-in-delegate-online-archive.md
+        - name: Still can reserve a meeting room even if it's reserved
+          href: ../calendars/you-still-can-reserve-a-meeting-room-even-if-it-is-reserved.md
+        - name: Use Resource Booking Attendant logs
+          href: ../calendars/use-resource-booking-attendant-logs.md
+    - name: Development
+      items:
+        - name: POX Autodiscover not supported with OAuth client credentials grant
+          href: ../development/pox-autodiscover-not-supported-oauth-client-credentials-grant.md
+    - name: Email Alias
+      items:
+        - name: Proxy address conflict when adding an email address
+          href: ../email-alias/proxy-address-being-used.md
+        - name: Recipient's address isn't autocompleted or suggested
+          href: ../email-alias/address-not-autocompleted-or-suggested.md
+        - name: Remove an alias from a contact
+          href: ../email-alias/remove-an-alias-from-a-contact.md
+        - name: Remove an alias from a distribution list
+          href: ../email-alias/remove-an-alias-from-a-distribution-list.md
+        - name: Remove an alias from a group
+          href: ../email-alias/remove-an-alias-from-a-group.md
+        - name: Remove an alias from a mail-enabled security group
+          href: ../email-alias/remove-an-alias-from-a-mail-enabled-security-group.md
+        - name: Remove an alias from a shared mailbox
+          href: ../email-alias/remove-an-alias-from-a-shared-mailbox.md
+        - name: Remove an email alias
+          href: ../email-alias/remove-an-email-alias.md
+    - name: Email Delivery
+      items:
+        - name: Administrative limit for this request was exceeded error
+          href: ../email-delivery/administrative-limit-for-this-request-was-exceeded-error.md
+        - name: Automatically forward email in transport rule
+          href: ../email-delivery/autoforward-mail-exclusions-not-honored-transport-rule.md
+        - name: Can't create too large transport rules
+          href: ../email-delivery/transport-rule-not-created-because-too-large.md
+        - name: Can't validate an outbound connector
+          href: ../email-delivery/cannot-validate-outbound-connector.md
+        - name: Configure Proofpoint Email Protection with Exchange Online
+          href: ../email-delivery/configure-proofpoint-with-exchange.md
+        - name: Custom messages are replaced by default system messages
+          href: ../email-delivery/custom-messages-replaced-by-default-system-messages.md
+        - name: Delivery receipts aren't generated for messages sent to external
+          href: ../email-delivery/delivery-receipts-are-not-generated.md
+        - name: Email sent to EXO deferred with ATTR35
+          href: ../email-delivery/wrong-office-365-region-exo.md
+        - name: Emails aren't received for a new domain
+          href: ../email-delivery/emails-not-received-for-new-domain.md
+        - name: Errors when sending/receiving emails
+          href: ../email-delivery/send-receive-emails-socketerror.md
+        - name: External recipients can't get distribution group emails
+          href: ../email-delivery/external-recipients-not-receiving-distribution-group-emails.md
+        - name: Find and fix email delivery issues
+          href: ../email-delivery/email-delivery-issues.md
+        - name: How to block message send or receive
+          href: ../email-delivery/how-to-block-message-from-being-sent-or-received.md
+        - name: IMCEAEX non-delivery report
+          href: ../email-delivery/imceaex-ndr.md
+        - name: Important notice for Microsoft 365
+          href: ../email-delivery/office-365-notice.md
+        - name: Issues with printers, scanners, and LOB apps that send email
+          href: ../email-delivery/fix-issues-with-printers-scanners-and-lob-applications-that-send-email-using-off.md
+        - name: Length of the property is too long
+          href: ../email-delivery/property-length-too-long-error.md
+        - name: Messages with attachments not delivered
+          href: ../email-delivery/messages-with-attachments-are-not-delivered.md
+        - name: NDR when external users send email to a Microsoft 365 group
+          href: ../email-delivery/ndr-when-external-users-send-email-to-microsoft-365-group.md
+        - name: Non-delivery report (NDR)
+          items:
+            - name: NDR and SMTP errors
+              href: ../email-delivery/ndr/non-delivery-reports-in-exchange-online.md
+            - name: 450 4.4.317 Cannot connect to remote server [Message=UntrustedRoot]
+              href: ../email-delivery/ndr/fix-error-code-450-4-4-317-untrusted-root.md
+            - name: 451 4.7.500-699 (ASxxx)
+              href: ../email-delivery/ndr/fix-error-code-451-4-7-500-699-asxxx-in-exchange-online.md
+            - name: 5.4.6 or 5.4.14
+              href: ../email-delivery/ndr/fix-error-code-5-4-6-through-5-4-20-in-exchange-online.md
+            - name: 5.7.1. Unable To Relay
+              href: ../email-delivery/ndr/unable-to-relay-blocked-by-allow-list.md
+            - name: 550 4.4.7
+              href: ../email-delivery/ndr/fix-error-code-550-4-4-7-in-exchange-online.md
+            - name: 550 5.0.350
+              href: ../email-delivery/ndr/fix-error-code-550-5-0-350-in-exchange-online.md
+            - name: 550 x-dg-ref header is too long
+              href: ../email-delivery/ndr/550-x-dg-ref-header-too-long-ndr.md
+            - name: 550 5.1.0
+              href: ../email-delivery/ndr/fix-error-code-550-5-1-0-in-exchange-online.md
+            - name: 550 5.1.1 RESOLVER.ADR.ExRecipNotFound
+              href: ../email-delivery/ndr/exrecipnotfound-ndr.md
+            - name: 550 5.1.1 through 550 5.1.20
+              href: ../email-delivery/ndr/fix-error-code-550-5-1-1-through-5-1-20-in-exchange-online.md
+            - name: 550 5.1.8 Access denied
+              href: https://support.microsoft.com/topic/e323f21d-4460-4be1-999c-c9c0cc6be4b4
+            - name: 550 5.1.10
+              href: ../email-delivery/ndr/fix-error-code-550-5-1-10-in-exchange-online.md
+            - name: 550 5.1.10 RESOLVER.ADR.RecipientNotFound
+              href: ../email-delivery/ndr/recipientnotfound-ndr.md
+            - name: 550 5.1.20 Multiple From addresses
+              href: ../email-delivery/ndr/fix-error-code-550-5-1-20-multiple-from-addresses.md
+            - name: 550 5.2.0 RESOLVER.ADR.BadPrimary
+              href: ../email-delivery/ndr/badprimary-ndr.md
+            - name: 550 5.4.1
+              href: https://support.microsoft.com/topic/c0e98a8e-81db-49c2-9bf1-32a1734d3e77
+            - name: 550 5.6.0 APPROVAL.InvalidExpiry
+              href: ../email-delivery/ndr/550-5-6-0-approval-invalidexpiry-cannot-read-expiry-poilcy-error.md
+            - name: 550 5.6.11
+              href: ../email-delivery/ndr/fix-error-code-550-5-6-11-in-exchange-online.md
+            - name: 550 5.7.1
+              href: ../email-delivery/ndr/fix-error-code-550-5-7-1-in-exchange-online.md
+            - name: 550 5.7.12 or 5.7.12
+              href: ../email-delivery/ndr/fix-error-code-5-7-12-in-exchange-online.md
+            - name: 550 5.7.13 or 550 5.7.135
+              href: ../email-delivery/ndr/fix-error-code-5-7-13-or-5-7-135-in-exchange-online.md
+            - name: 550 5.7.23
+              href: ../email-delivery/ndr/fix-error-code-5-7-23-in-exchange-online.md
+            - name: 550 5.7.57
+              href: ../email-delivery/ndr/fix-error-code-5-7-57-in-exchange-online.md
+            - name: 550 5.7.64
+              href: ../email-delivery/ndr/fix-error-code-5-7-64-in-exchange-online.md
+            - name: 550 5.7.64 TenantAttribution when sending emails externally
+              href: ../email-delivery/ndr/relay-access-denied-smtp.md
+            - name: 550 5.7.64 TenantAttribution when sending emails through EOP
+              href: ../email-delivery/ndr/tenantattribution-ndr.md
+            - name: 550 5.7.124 or 5.7.124
+              href: ../email-delivery/ndr/fix-error-code-5-7-124-in-exchange-online.md
+            - name: 550 5.7.133
+              href: ../email-delivery/ndr/fix-error-code-5-7-133-in-exchange-online.md
+            - name: 550 5.7.134
+              href: ../email-delivery/ndr/fix-error-code-5-7-134-in-exchange-online.md
+            - name: 550 5.7.136
+              href: ../email-delivery/ndr/fix-error-code-5-7-136-in-exchange-online.md
+            - name: 550 5.7.700 through 550 5.7.750
+              href: https://support.microsoft.com/topic/f5675801-1846-4d1c-9599-5b4e26a9175d
+            - name: 554 4.3.2 mailbox busy
+              href: ../email-delivery/ndr/remote-server-returned-mailbox-busy.md
+            - name: 554 5.2.0 STOREDRV.Deliver.Exception
+              href: ../email-delivery/ndr/mapiexceptionnotfound-ndr.md
+            - name: 554 5.2.2 mailbox full
+              href: ../email-delivery/ndr/cannot-send-mail-mepf.md
+            - name: 554 5.6.0 Invalid message content
+              href: ../email-delivery/ndr/invalid-message-ndr.md
+            - name: AggregateGroupMailbox is full
+              href: ../email-delivery/ndr/ndr-received-send-emails-microsoft365-groups.md
+            - name: Error 'the sender's submission quota was exceeded'
+              href: ../email-delivery/ndr/fix-error-for-submission-quota-exceeded-in-exchange-online.md
+    - name: Groups and Distribution Lists
+      items:
+        - name: A MailTip displays wrong number of recipients
+          href: ../groups-and-distribution-lists/mailtip-shows-wrong-number-of-recipients.md
+        - name: Can't determine group type
+          href: ../groups-and-distribution-lists/cannot-determine-group-type-error.md
+        - name: Can't empty Deleted Items folder in Microsoft 365 Groups
+          href: ../groups-and-distribution-lists/cannot-empty-deleted-items-folder-in-groups.md
+        - name: Can't manage a group hidden from GAL
+          href: ../groups-and-distribution-lists/cannot-manage-hidden-group.md
+        - name: Can't remove members that exceed the limit
+          href: ../groups-and-distribution-lists/cannot-remove-members-exceeding-limit.md
+        - name: Can't upgrade distribution lists to Microsoft 365 groups
+          href: ../groups-and-distribution-lists/cannot-upgrade-distribution-lists-to-office-365-groups.md
+        - name: Common tasks to manage Microsoft 365 groups
+          href: ../groups-and-distribution-lists/o365-group-tasks.md
+        - name: Inconsistent performance with contacts
+          href: ../groups-and-distribution-lists/inconsistent-performance-with-contacts.md
+        - name: Mail-enabled groups aren't synced to O365
+          href: ../groups-and-distribution-lists/mail-enabled-groups-not-synchronized.md
+        - name: Microsoft 365 group doesn't appear in Outlook
+          href: ../groups-and-distribution-lists/microsoft-365-group-does-not-appear-in-outlook.md
+        - name: Prevent users from creating and managing group
+          href: ../groups-and-distribution-lists/prevent-users-create-manage-dg.md
+        - name: Problem adding a guest user to a Microsoft 365 group
+          href: ../groups-and-distribution-lists/problem-adding-guest-user-to-group.md
+        - name: You don't have sufficient permissions
+          href: ../groups-and-distribution-lists/no-sufficient-permissions-moving-dg.md
+    - name: Mobile Devices
+      items:
+        - name: Can't remove a mobile device partnership
+          href: ../mobile-devices/cannot-remove-mobile-device-partnership.md
+        - name: Can't create mail profile on iOS device via Autodiscover
+          href: ../mobile-devices/cannot-create-mail-profile-on-ios-device-via-autodiscover.md
+        - name: Duplicate Outlook contacts in iOS Contacts app
+          href: ../mobile-devices/duplicate-contacts-in-ios-contacts-app.md
+        - name: Issues for mobile devices
+          href: ../mobile-devices/issues-for-mobile-devices.md
+        - name: Mobile devices aren't quarantined as expected
+          href: ../mobile-devices/mobile-devices-not-quarantined-as-expected.md
+        - name: Some Android devices don't redirect to Exchange Online
+          href: ../mobile-devices/some-android-devices-do-not-redirect-to-exchange-online.md
+        - name: Use Outlook Web App to remotely wipe an ActiveSync device
+          href: ../mobile-devices/how-to-use-owa-remotely-wipe-mobile-device.md
+    - name: Move/Migrate Mailboxes
+      items:
+        - name: A different type of Active Directory object already exists error
+          href: ../move-or-migrate-mailboxes/different-type-of-active-directory-object-already-exists-error.md
+        - name: GooglePermanentWebException error in a Google Workspace migration
+          href: ../move-or-migrate-mailboxes/googlepermanentwebexception-in-google-workspace-migration.md
+        - name: Can't migrate Google Workspace mailboxes
+          href: ../move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail.md
+        - name: Can't migrate IMAP mailboxes
+          href: ../move-or-migrate-mailboxes/imap-mailbox-migration-fails.md
+        - name: Can't see free/busy information
+          href: ../move-or-migrate-mailboxes/cannot-see-free-busy-information.md
+        - name: Can't view mailbox folders after an IMAP migration
+          href: ../move-or-migrate-mailboxes/cannot-view-mailbox-folders-after-imap-migration.md
+        - name: Favorites folders are missing after migration to Exchange Online
+          href: ../move-or-migrate-mailboxes/favorites-folders-missing-after-migration.md
+        - name: How to manage the maximum concurrent migration batches
+          href: ../move-or-migrate-mailboxes/how-to-manage-maximum-concurrent-migration-batches.md
+        - name: Issue with Add-RecipientPermission
+          href: ../move-or-migrate-mailboxes/issue-with-add-recipientpermission-cmdlet.md
+        - name: Mailboxes can't be migrated because they contain errors
+          href: ../move-or-migrate-mailboxes/cannot-perform-stage-migration.md
+        - name: MapiFxProxyTransientException when doing migration
+          href: ../move-or-migrate-mailboxes/stalledduetotarget-processor-error-during-migration.md
+        - name: Migrate data with Admin Center
+          href: ../move-or-migrate-mailboxes/migrate-data-with-admin-center.md
+        - name: No smtp proxy matching
+          href: ../move-or-migrate-mailboxes/no-smtp-proxy-matching.md
+        - name: Not a valid SMTP address in a cutover migration
+          href: ../move-or-migrate-mailboxes/cutover-migration-invalid-smtp-address.md
+        - name: Remote mailbox isn't moved when the move shows as Completed
+          href: ../move-or-migrate-mailboxes/remote-mailbox-not-moved-when-move-shows-completed.md
+        - name: Resource CiAgeOfLastNotification(System) is unhealthy error
+          href: ../move-or-migrate-mailboxes/resource-ciageoflastnotification-system-is-unhealthy-error.md
+        - name: Restore missing folder data after a remote move migration
+          href: ../move-or-migrate-mailboxes/restore-missing-folder-data-after-migration.md
+        - name: Server name doesn't update in a new region
+          href: ../move-or-migrate-mailboxes/server-name-not-update-after-moved-new-region.md
+        - name: StoragePermanentException during a mailbox migration
+          href: ../move-or-migrate-mailboxes/storagepermanentexception-during-mailbox-migration.md
+        - name: Target mailbox unlock operation was not replicated error
+          href: ../move-or-migrate-mailboxes/target-mailbox-unlock-operation-was-not-replicated-error.md
+        - name: This mailbox exceeded the maximum number of large items
+          href: ../move-or-migrate-mailboxes/mailbox-exceeded-maximum-number-of-large-itmes.md
+        - name: TransientException errors when moving mailboxes
+          href: ../move-or-migrate-mailboxes/transientexception-errors-when-moving-mailboxes.md
+        - name: Troubleshoot issues with IMAP mailbox migration
+          href: ../move-or-migrate-mailboxes/troubleshoot-issues-with-imap-mailbox-migration.md
+        - name: Troubleshoot mailbox migration issues
+          href: ../move-or-migrate-mailboxes/troubleshoot-migration-issues-in-exchange-hybrid.md
+        - name: We weren't able to connect to the remote server error
+          href: ../move-or-migrate-mailboxes/we-werent-able-to-connect-to-the-remote-server-error.md
+        - name: WhenCreated date is changed
+          href: ../move-or-migrate-mailboxes/whencreated-date-changed.md
+    - name: Outlook Issues
+      items:
+        - name: All users' free/busy data of a group is displayed
+          href: ../outlook-issues/group-calendar-shows-all-user-free-busy-info.md
+        - name: Blank lines are truncated
+          href: ../outlook-issues/blank-lines-truncated-when-moved-to-pst-file.md
+        - name: Can't edit a Microsoft 365 Kiosk user's calendar
+          href: ../outlook-issues/cannot-edit-o365-kiosk-user-calendar.md
+        - name: Can't set up profile with Autodiscover
+          href: ../outlook-issues/cannot-set-up-profile-autodiscover.md
+        - name: Can't add public folder permissions
+          href: ../outlook-issues/one-or-more-users-cannot-be-added-to-the-folder-access-list-error.md
+        - name: Can't find a user in the offline address book
+          href: ../outlook-issues/cannot-find-user-in-offline-address-book.md
+        - name: Can't view Outlook Delegates page
+          href: ../outlook-issues/cannot-view-outlook-delegates-page.md
+        - name: Connection to Microsoft Exchange is unavailable error
+          href: ../outlook-issues/connection-to-microsoft-exchange-is-unavailable-error.md
+        - name: Emails sent to wrong account if profile has many accounts
+          href: ../outlook-issues/emails-sent-to-wrong-account-if-has-many-accounts.md
+        - name: Encrypted connection unavailable
+          href: ../outlook-issues/encrypted-connection-unavailable.md
+        - name: Error viewing delegates in Outlook
+          href: ../outlook-issues/no-delegate-permissions-after-migration.md
+        - name: Issues with crash or stop responding
+          href: ../outlook-issues/crash-issues.md
+        - name: Issues when using Autodiscover service
+          href: ../outlook-issues/issues-when-using-autodiscover-service.md
+        - name: Mailbox named properties quota exceeded
+          href: ../outlook-issues/named-property-quota-exceeded.md
+        - name: No permissions error when accessing another user's mailbox folder
+          href: ../outlook-issues/cannot-access-another-mailbox-folder.md
+        - name: Outlook can't set up a Microsoft 365 account
+          href: ../outlook-issues/outlook-cannot-setup-microsoft-365-account.md
+        - name: Outlook client displays incorrect policy
+          href: ../outlook-issues/outlook-client-displays-incorrect-policy.md
+        - name: Outlook not responding when connecting to Exchange Online
+          href: ../outlook-issues/outlook-not-responding-when-it-connects-to-exchange-online-mailbox.md
+        - name: Outlook connectivity issues when SPI is enabled
+          href: ../outlook-issues/outlook-connectivity-issues-when-spi-enabled-on-router.md
+        - name: Resolve Inbox rule issues
+          href: ../outlook-issues/resolve-inbox-rule-issues.md
+        - name: Resources to fix connection issues
+          href: ../outlook-issues/office-365-troubleshooting-resources.md
+        - name: Self-help diagnostics
+          href: /troubleshoot/exchange/administration/self-help-diagnostics?context=/troubleshoot/exchange/context/online-context
+        - name: Sending and receiving email
+          href: ../outlook-issues/outlook-connection-issues.md
+        - name: Room Finder doesn't display Show a Room list option
+          href: ../outlook-issues/show-a-room-list-option-not-displayed-in-room-finder.md
+        - name: This message could not be sent error if sending emails with Send as permission
+          href: ../outlook-issues/this-message-could-not-be-sent-error-when-sending-emails.md
+        - name: We can't show MailTips right now warning
+          href: ../outlook-issues/we-cant-show-mailtips-right-now-warning.md
+    - name: Outlook on the web Issues
+      items:
+        - name: '"Send updates" prompt not displayed'
+          href: /troubleshoot/outlook/calendaring/send-updates-prompt-not-displayed?context=/troubleshoot/exchange/context/online-context
+        - name: Archive mailbox doesn't appear in Outlook or Outlook on the web
+          href: ../outlook-on-the-web-issues/archive-mailbox-not-visible.md
+        - name: Can't create a new message by using OWA
+          href: ../outlook-on-the-web-issues/cannot-create-new-message-in-owa.md
+        - name: Can't edit an Office document directly from an email message
+          href: ../outlook-on-the-web-issues/cannot-edit-attached-document-directly-from-message.md
+        - name: Can't localize the default folders error when changing default folder names
+          href: ../outlook-on-the-web-issues/cannot-localize-the-default-folders-error.md
+        - name: Can't open a calendar from a sharing invitation
+          href: ../outlook-on-the-web-issues/cannot-open-calendar-from-sharing-invitation.md
+        - name: Can't open or view attachments
+          href: ../outlook-on-the-web-issues/cannot-open-attachments.md
+        - name: Can't share calendar from another mailbox
+          href: ../outlook-on-the-web-issues/cannot-share-calendar-from-another-mailbox.md
+        - name: Can't sign in  to OWA and 403 error occurs
+          href: ../outlook-on-the-web-issues/403-sorry-access-denied-error-when-sign-in-owa.md
+        - name: Can't input text in emails in Outlook on the web
+          href: ../outlook-on-the-web-issues/cannot-enter-text-in-emails-in-outlook-on-the-web.md
+        - name: Can't open documents on a network file share
+          href: ../outlook-on-the-web-issues/cannot-open-documents-on-network-file-share.md
+        - name: Can't save templates in My Templates in OWA
+          href: ../outlook-on-the-web-issues/cannot-save-template-in-owa.md
+        - name: Incorrect time zone in read receipt
+          href: ../outlook-on-the-web-issues/read-receipt-incorrect-timezone.md
+        - name: Meeting attendee has an incorrect time zone
+          href: ../outlook-on-the-web-issues/meeting-attendee-has-an-incorrect-time-zone.md
+        - name: Missing search results items
+          href: ../outlook-on-the-web-issues/items-missing-search-results.md
+        - name: OWA unexpectedly opens in the light version
+          href: ../outlook-on-the-web-issues/outlook-web-app-unexpectedly-opens-in-the-light-version.md
+        - name: Participant must have email address and routing type for use in rules error
+          href: ../outlook-on-the-web-issues/participant-must-have-email-address-and-routing-type-for-user-in-rules-error.md
+        - name: Publish Calendar option is missing from Calendar settings
+          href: ../outlook-on-the-web-issues/publish-calendar-option-missing-from-calendar-settings.md
+        - name: Some folders aren't visible in Outlook on the web
+          href: ../outlook-on-the-web-issues/some-folders-not-visible-in-outlook-on-the-web.md
+        - name: There are multiple recipients matching the identity error
+          href: ../outlook-on-the-web-issues/there-are-multiple-recipients-matching-the-identity-error.md
+        - name: This calendar isn't available error when accessing calendar
+          href: ../outlook-on-the-web-issues/this-calendar-not-available-error-when-accessing-calendar.md
+        - name: Time zone setting for shared mailboxes
+          href: ../outlook-on-the-web-issues/shared-mailboxes-time-zone-setting.md
+    - name: Public Folders
+      items:
+        - name: '"550 5.7.1" AuthRequired NDR'
+          href: ../public-folders/authrequired-ndr.md
+        - name: '"550 5.7.13" error when sending emails to MEPF'
+          href: ../public-folders/cannot-send-emails-to-mail-enabled-public-folder.md
+        - name: Auto-replies are sent from an incorrect email address
+          href: ../public-folders/public-folder-auto-replies-incorrect-email-address.md
+        - name: Can't access contact list from public folder
+          href: ../public-folders/cannot-access-contact-list.md
+        - name: Can't add or expand public folders
+          href: ../public-folders/cannot-expand-add-public-folder.md
+        - name: Can't add reviewer permission to calendars
+          href: ../public-folders/add-reviewer-permission-public-folder-calendar-powershell.md
+        - name: Can't copy, move, or import more than 1,000 items to public folders
+          href: ../public-folders/cannot-copy-move-import-items.md
+        - name: Can't create migration endpoint
+          href: ../public-folders/error-create-migration-endpoint.md
+        - name: Can't create public folder mailbox in Exchange Online
+          href: ../public-folders/cannot-create-public-folder-mailbox.md
+        - name: Can't delete items
+          href: ../public-folders/cannot-delete-items-public-folder.md
+        - name: Can't delete mail-enabled public folder
+          href: ../public-folders/cannot-delete-public-folder.md
+        - name: Can't expand or view the content of a public folder
+          href: ../public-folders/cannot-expand-or-view-content-of-public-folder.md
+        - name: Can't finalize a public folder batch migration
+          href: ../public-folders/cannot-finalize-migration-batch.md
+        - name: Can't restore a deleted Outlook form
+          href: ../public-folders/cannot-restore-deleted-outlook-form.md
+        - name: Can't send email to public folder contact list
+          href: ../public-folders/cannot-send-email-to-contact-list-public-folder.md
+        - name: Can't send emails to mail-enabled public folder
+          href: ../public-folders/send-emails-to-mail-enabled-public-folder-error.md
+        - name: DataExportTransientException migration error
+          href: ../public-folders/dataexporttransientexception-in-public-folder-migration.md
+        - name: Duplicate PF mailbox migration requests
+          href: ../public-folders/duplicate-public-folder-mailbox-migration-request.md
+        - name: Emails with the "HierarchySync_" subject
+          href: ../public-folders/pf-hierarchy-sync-emails.md
+        - name: Error when creating public folder migration endpoint
+          href: ../public-folders/new-migrationendpoint-returns-error.md
+        - name: '"Error executing cmdlet" message in the EAC'
+          href: ../public-folders/error-executing-cmdlet-message-in-eac.md
+        - name: MEPF synchronization issues
+          href: ../public-folders/mepf-sync-failures-script.md
+        - name: Migration errors due to orphaned objects
+          href: ../public-folders/public-folder-migration-errors.md
+        - name: Migration fails with mailbox GUID
+          href: ../public-folders/pf-migration-fails-sourcepfprimarymailboxguid.md
+        - name: '"Number of public folder mailboxes cannot exceed more than 100" error'
+          href: ../public-folders/migration-batch-error-too-many-public-folders.md
+        - name: Permissions and settings don't propagate to all subfolders
+          href: ../public-folders/permissions-settings-not-propagate-eac.md
+        - name: Public folder couldn't be mail-enabled
+          href: ../public-folders/public-folder-not-be-mail-enabled.md
+        - name: Public folder users can't manage subfolders
+          href: ../public-folders/public-folder-users-cannot-manage-subfolders.md
+        - name: Read receipt isn't sent from public folder
+          href: ../public-folders/public-folder-not-send-read-receipt.md
+        - name: Restored folders cause a migration batch failure
+          href: ../public-folders/public-folder-migration-batch-error.md
+        - name: Security group can't access a public folder
+          href: ../public-folders/security-group-cannot-access-public-folder.md
+        - name: Show up in address list after removing
+          href: ../public-folders/public-folders-display-gal-clean-up.md
+        - name: SizeExceeds error in migration of public folders
+          href: ../public-folders/public-folder-size-exceeds.md
+        - name: Public folder mailbox not found in multi-geo environment
+          href: ../public-folders/mailbox-not-found-local-forest-public-folder.md
+        - name: Troubleshoot public folder permission issues
+          href: ../public-folders/public-folder-permission-issues.md
+        - name: Unable to copy or move public folders
+          href: ../public-folders/cannot-copy-or-move-pfs.md
+        - name: Unable to expand public folder trees
+          href: ../public-folders/unable-expand-public-folder-tree.md
+    - name: Send Emails
+      items:
+        - name: Can't receive Out of Office notifications
+          href: ../send-emails/senders-not-receiving-out-of-office-notifications.md
+        - name: Change the message format to prevent Winmail.dat attachments
+          href: ../send-emails/how-to-specify-email-message-format.md
+        - name: Changes in message store
+          href: ../send-emails/smtp-submission-improvements.md
+        - name: Error occurs when connecting via SMTP client
+          href: ../send-emails/error-when-connecting-to-exchange-online-via-smtp-client.md
+        - name: EWS API can't access Teams data
+          href: ../send-emails/ews-not-support-access-teams-data.md
+        - name: How to set IIS SMTP for outgoing TLS authentication
+          href: /exchange/mail-flow-best-practices/use-connectors-to-configure-mail-flow/set-up-connectors-to-route-mail
+        - name: Inline UUEncoded attachments are garbled or unreadable
+          href: ../send-emails/inline-uuencoded-attachments-garbled-unreadable.md
+        - name: Issues with OOF replies
+          href: ../email-delivery/understand-troubleshoot-oof-replies.md
+    - name: User and Shared Mailboxes
+      items:
+        - name: Can't access a shared mailbox using OWA
+          href: ../user-and-shared-mailboxes/blank-page-access-shared-mailbox.md
+        - name: Can't access mailbox after a remote mailbox move to Microsoft 365
+          href: ../user-and-shared-mailboxes/cannot-access-mailbox-after-remote-mailbox-moves-to-office-365.md
+        - name: Can't connect to the mailbox when running Search-Mailbox
+          href: ../user-and-shared-mailboxes/cannot-connect-to-the-mailbox-error-when-running-search-mailbox.md
+        - name: Can't remove mailbox permissions
+          href: ../user-and-shared-mailboxes/cannot-remove-mailbox-permission-office-365.md
+        - name: Couldn't find database when running cmdlets for a different region mailbox
+          href: ../user-and-shared-mailboxes/could-not-find-database-running-cmdlets-for-different-region-mailbox.md
+        - name: Enable or disable POP3, IMAP, MAPI, OWA or ActiveSync
+          href: ../user-and-shared-mailboxes/pop3-imap-owa-activesync-office-365.md
+        - name: Errors after unassigning a user license
+          href: ../user-and-shared-mailboxes/litigation-hold-mailbox-not-turn-into-inactive.md
+        - name: How to access other user's mailboxes
+          href: ../user-and-shared-mailboxes/how-to-access-other-mailboxes.md
+        - name: How to create and manage resource mailboxes
+          href: ../user-and-shared-mailboxes/create-and-manage-resource-mailboxes.md
+        - name: HTTP 500 error when publishing calendar of a shared mailbox
+          href: ../user-and-shared-mailboxes/http-500-error-when-publishing-calendar-of-shared-mailbox.md
+        - name: Item count from Get-MailboxStatistics shows more items
+          href: ../user-and-shared-mailboxes/item-count-from-get-mailboxstatistics-shows-more-than-mailboxfolderstatistics.md
+        - name: Increase or customize mailbox size
+          href: ../user-and-shared-mailboxes/increase-or-customize-mailbox-size.md
+        - name: Mailbox provision delays
+          href: ../user-and-shared-mailboxes/delays-provision-mailbox-sync-changes.md
+        - name: Can't access the mailbox of an unlicensed user
+          href: ../user-and-shared-mailboxes/no-soft-deleted-mailbox-after-license-removal.md
+        - name: Microsoft 365 groups aren't visible from a shared mailbox
+          href: ../user-and-shared-mailboxes/office-365-groups-not-visible-from-shared-mail.md
+        - name: On behalf of reply from resource delegate to meeting organizer
+          href: ../user-and-shared-mailboxes/on-behalf-of-reply-from-resource-delegate-to-meeting-organizer.md
+        - name: Private items aren't displayed
+          href: ../user-and-shared-mailboxes/private-items-not-display.md
+        - name: REST API is not yet supported for this mailbox error
+          href: ../user-and-shared-mailboxes/rest-api-is-not-yet-supported-for-this-mailbox-error.md
+        - name: Sent items aren't saved
+          href: ../user-and-shared-mailboxes/sent-mail-is-not-saved.md
+        - name: Set automatic replies
+          href: ../user-and-shared-mailboxes/set-automatic-replies.md
+        - name: The Read status of email messages isn't updated
+          href: ../user-and-shared-mailboxes/email-message-read-status-not-update.md
+        - name: Time zone settings are incorrect or missing for multiple mailboxes
+          href: ../user-and-shared-mailboxes/incorrect-missing-time-zone-settings.md

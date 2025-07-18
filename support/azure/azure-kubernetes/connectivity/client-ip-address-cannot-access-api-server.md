@@ -5,8 +5,9 @@ ms.date: 10/08/2024
 ms.reviewer: rissing, chiragpa, jaewonpark, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want the AKS API server to allow access to my client IP address so that I can successfully connect to my AKS cluster.
-ms.custom: sap:Connectivity
+ms.custom: sap:Connectivity, innovation-engine
 ---
+
 # Client IP address can't access the API server
 
 This article describes how to fix issues that occur when you can't connect to an Azure Kubernetes Service (AKS) cluster because your client IP address can't access the AKS API server.
@@ -47,8 +48,8 @@ Unable to connect to the server: dial tcp <API-SERVER-IP>:443: connectex: A conn
 [API server-authorized IP ranges](/azure/aks/api-server-authorized-ip-ranges) may have been enabled on the cluster's API server, but the client's IP address wasn't included in the IP ranges. To check whether this feature has been enabled, see if the following [az aks show](/cli/azure/aks#az-aks-show) command in Azure CLI produces a list of IP ranges:
 
 ```azurecli
-az aks show --resource-group <cluster-resource-group> \
-    --name <cluster-name> \
+az aks show --resource-group ${RG_NAME} \
+    --name ${CLUSTER_NAME} \
     --query apiServerAccessProfile.authorizedIpRanges
 ```
 
@@ -76,18 +77,46 @@ Look at the cluster's API server-authorized ranges, and add your client's IP add
 
 1. Get your client IP address by running this [curl](https://curl.se/docs/manpage.html) command:
 
+    ```azurecli
+    export CLIENT_IP=$(curl --silent https://ipinfo.io/ip | tr -d '\n')
+    echo $CLIENT_IP
+    ```
+
+    Results:
+
+    <!-- expected_similarity=0.3 -->
+
     ```output
-    $ curl --silent checkip.dyndns.org
-    <html><head><title>Current IP Check</title></head><body>Current IP Address: 0.255.127.63</body></html>
+    0.255.127.63
     ```
 
 2. Update the API server-authorized range with the [az aks update](/cli/azure/aks#az-aks-update) command in Azure CLI, using your client IP address:
 
     ```azurecli
-    az aks update --resource-group <cluster-resource-group> \
-        --name <cluster-name> \
-        --api-server-authorized-ip-ranges <ip-ranges-that-include-your-client-ip-address>
+    az aks update --resource-group $RG_NAME \
+        --name $CLUSTER_NAME \
+        --api-server-authorized-ip-ranges $CLIENT_IP
     ```
+
+    Results:
+
+    <!-- expected_similarity=0.3 -->
+
+    ```output
+    {
+      "apiServerAccessProfile": {
+        "authorizedIpRanges": [
+          "0.255.127.63/32"
+        ],
+        ...
+      },
+      ...
+      "name": "aks-cluster-xxx",
+      "resourceGroup": "aks-rg-xxx",
+      ...
+    }
+    ```
+
 ---
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

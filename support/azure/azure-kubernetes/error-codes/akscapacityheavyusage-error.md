@@ -28,8 +28,6 @@ You're trying to create a cluster in a region that has limited capacity.
 
 When you create an AKS cluster, Microsoft Azure allocates compute resources to your subscription. You might occasionally experience the `AksCapacityHeavyUsage` error because of significant growth in demand for Azure Kubernetes Service in specific regions.
 
-The `KubernetesAPICallFailed` error message indicates that the AKS cluster didn't start and doesn't have an associated control plane. Therefore, calls to the API server are failing. In this case, you have to retry the Start operation.
-
 ## Resolution
 
 ### Solution 1: Select a different region
