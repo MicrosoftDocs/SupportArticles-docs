@@ -7,36 +7,36 @@ ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
 
-# Troubleshooting Activity Log Download Issues
+# Troubleshooting Activity Log download issues
 
-When attempting to download activity logs from Azure, users may encounter errors indicating a failure to prepare the CSV file. This issue often arises when the requested logs exceed a certain volume, causing the process to fail. Understanding the root cause and implementing the right solutions can help resolve this problem efficiently.
+When users try to download activity logs from Microsoft Azure, they might receive error messages that indicate that the CSV file wasn't prepared. This issue often occurs if the requested logs exceed a certain volume and cause the process to fail. Understanding the root cause and implementing the right solutions can help resolve this issue efficiently.
 
-## Common Issues and Solutions
+## Common issues and solutions
 
-- **Issue**: The download process fails due to an excessive number of logs being requested, resulting in a "file not found" error.
-- **Solution**: Reduce the range of time for which logs are being requested to minimize the volume and prevent errors.
+- **Issue**: The download process fails because an excessive number of logs are requested. This activity generates a "file not found" error.
+- **Solution**: Reduce the range of time during which logs are requested to minimize the volume and prevent errors.
 
-### Step-by-Step Instructions to Resolve Download Failures
+### Instructions to resolve download failures
 
-1. **Identify the Error**: Check the error message to confirm it relates to the CSV file preparation failure.
-2. **Adjust Time Range**: Navigate to the Azure portal and access the Activity Logs section. Reduce the time range for which you are attempting to download logs. This can help decrease the number of logs being processed.
-3. **Clear Cache**: Clear your browser cache to ensure no outdated data is causing issues.
-4. **Request Fewer Logs**: If possible, break down the log requests into smaller batches to avoid overwhelming the system.
-5. **Check Storage Account**: Ensure that the storage account where logs are being stored is reachable and properly configured.
+1. **Identify the error**: Check the error message to verify that it relates to the CSV file preparation failure.
+2. **Adjust the time range**: Navigate to the Azure portal, and access the Activity Logs section. Reduce the time range that you're trying to download logs for. This can help decrease the number of logs that are processed.
+3. **Clear the cache**: Clear your browser cache to make sure that no outdated data is causing issues.
+4. **Request fewer logs**: If possible, break down the log requests into smaller batches to avoid overwhelming the system.
+5. **Check storage account**: Make sure that the storage account where logs are stored is reachable and correctly configured.
 
-## FAQ: Azure Activity Log Download
+## FAQ: Azure Activity Log download
 
 - **Why does the download fail?**
-  The download may fail if the number of logs requested is too large, causing the system to be unable to process them.
+  The download might fail if the number of requested logs is too large and prevents the system from being able to process them.
 
 - **How can I prevent this issue?**
-  By reducing the time range and requesting logs in smaller batches, you can prevent the system from being overwhelmed.
+You can prevent the issue by preventing system from being overwhelmed. To do this, reduce the time range, and request logs in smaller batches.
 
-## Reference
+## References
 
 - [Azure Activity Logs Overview](https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log)
 - [Troubleshooting Azure Storage Issues](https://learn.microsoft.com/azure/storage/common/storage-troubleshooting)
 - [Azure Monitor Documentation](https://learn.microsoft.com/azure/azure-monitor/)
 - [Azure Portal Guide](https://learn.microsoft.com/azure/azure-portal/)
 
-If the issue persists after following the solution steps, please open a support case for further assistance.
+If the issue persists after you follow these steps, open a support case for further assistance.
