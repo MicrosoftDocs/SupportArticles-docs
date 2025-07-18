@@ -16,7 +16,7 @@ This article discusses a problem in which you can't successfully print large doc
 
 Consider the following scenario:
 
-1. You use a WPF application in Windows 10 or later to print a range of pages.
+1. You use a WPF application in Windows 10 or later versions to print a range of pages.
 1. You run the `XpsDocument` object to process the print job by using `VisualsToXpsDocument`, `DocumentPaginator`, or another method.
 
 In this scenario, the print process fails after you print some pages.
