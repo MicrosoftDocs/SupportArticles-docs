@@ -13764,32 +13764,32 @@
     },
     {
       "source_path": "support/sql/database-engine/install/windows/install-reporting-service.md",
-      "redirect_url": "/previous-versions/troubleshoot/sql/database-engine/install/windows/install-reporting-service",
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/install-reporting-service",
       "redirect_document_id": false
     },
     {
       "source_path": "support/sql/database-engine/install/windows/issues-install-sql-server.md",
-      "redirect_url": "/previous-versions/troubleshoot/sql/database-engine/install/windows/issues-install-sql-server",
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/issues-install-sql-server",
       "redirect_document_id": false
     },
     {
       "source_path": "support/sql/database-engine/install/windows/sql-server-2008-setup-issues.md",
-      "redirect_url": "/previous-versions/troubleshoot/sql/database-engine/install/windows/sql-server-2008-setup-issues",
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/sql-server-2008-setup-issues",
       "redirect_document_id": false
     },
     {
       "source_path": "support/sql/database-engine/install/windows/sql-server-2012-setup-issues.md",
-      "redirect_url": "/previous-versions/troubleshoot/sql/database-engine/install/windows/sql-server-2012-setup-issues",
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/sql-server-2012-setup-issues",
       "redirect_document_id": false
     },
     {
       "source_path": "support/sql/database-engine/security/instructions-in-fips-140-2-compliant-mode.md",
-      "redirect_url": "/previous-versions/troubleshoot/sql/database-engine/security/instructions-in-fips-140-2-compliant-mode",
+      "redirect_url": "/previous-versions/troubleshoot/sql/security/instructions-in-fips-140-2-compliant-mode",
       "redirect_document_id": false
     },
     {
       "source_path": "support/sql/database-engine/security/sql-2014-fips-140-2-compliant-mode.md",
-      "redirect_url": "/previous-versions/troubleshoot/sql/database-engine/security/sql-2014-fips-140-2-compliant-mode",
+      "redirect_url": "/previous-versions/troubleshoot/sql/security/sql-2014-fips-140-2-compliant-mode",
       "redirect_document_id": false
     },
     {
