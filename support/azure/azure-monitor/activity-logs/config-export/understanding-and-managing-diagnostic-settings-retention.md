@@ -13,7 +13,7 @@ When you manage Azure resources, you might experience issues that are related to
 
 ## Common issues and solutions
 
-- **Issue**: Users might notice that templates are not displayed when they try to verify resources that are affected by the transition from legacy solutions to diagnostic settings.
+- **Issue**: Users might notice that templates aren't displayed when they try to verify resources that are affected by the transition from legacy solutions to diagnostic settings.
 - **Root cause**: The automatic switch from activity log solutions to diagnostic settings might cause confusion if they're not well understood.
 
 ### Instructions to resolve diagnostic settings issues
@@ -34,7 +34,7 @@ When you manage Azure resources, you might experience issues that are related to
      }
      ```
 
-   - If no output is returned, legacy solutions are not in use, and no further action is required.
+   - If no output is returned, legacy solutions aren't in use, and no further action is required.
 
 3. **Automatic Transition**:
    - Understand that the transition to diagnostic settings is automatic. If your environment is already using diagnostic settings, no additional steps are necessary.
