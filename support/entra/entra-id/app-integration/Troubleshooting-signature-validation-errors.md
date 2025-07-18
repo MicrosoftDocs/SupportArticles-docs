@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot Access Token Signature Validation Errors
-description: Describes the most common scenarios that lead to such errors and provides solutions.
-ms.date: 07/17/2025
-ms.reviewer: willfid, v-weizhu
+description: Helps you troubleshoot access token signature validation errors and provides solutions in some scenarios.
+ms.date: 07/18/2025
+ms.reviewer: willfid
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
@@ -22,9 +22,9 @@ When an Azure resource provider, other than Microsoft Entra ID, validate an acce
     > [!NOTE]
     > You can decode access tokens using [https://jwt.ms](https://jwt.ms).
 
-## Step 2: Validate the aud claim of the access token
+## Step 2: Validate the audience claim of the access token
 
-If you send a Microsoft Graph access token to a non-Microsoft Graph resource provider, you will get a signature validation error. Only Microsoft Graph can validate these tokens. The value of a Microsoft Graph token's `aud` claim is one of the following:
+If you send a Microsoft Graph access token to a non-Microsoft Graph resource provider, you will get a signature validation error. Only Microsoft Graph can validate such token. The value of a Microsoft Graph token's `aud` claim is one of the following:
 
 - `https://graph.microsoft.us`
 - `https://graph.microsoft.us/`
@@ -36,15 +36,15 @@ If you send a Microsoft Graph access token to a non-Microsoft Graph resource pro
 
 To resolve the signature validation error, ensure the correct access token is acquired for the resource provider and its `aud` claim is expected by the resource provider.
 
-The audience of an access token is determined by the scope parameter that's sent in the request when acquiring access tokens. For example, to get an access token for `https://api.contoso.com`, use a scope like `https://api.contoso.com/read`. 
+The audience claim of an access token is determined by the `scope` parameter that's sent in the request when acquiring access tokens. For example, to get an access token for `https://api.contoso.com`, use a scope like `https://api.contoso.com/read`.
 
 For more information, see [Configure an application to expose a web API](/entra/identity-platform/quickstart-configure-app-expose-web-apis).
 
 ## Step 3: Validate the signing key
 
-For other scenarios, the resource provider determines where to get the signing keys based on the OpenId Connect Metadata configuration and which signing key to use based on the `kid` claim of an access token. You can configure them on the resource provider such as your custom API or API Authentication layer.
+For other scenarios, the resource provider determines where to get the signing keys based on the OpenId Connect Metadata configuration and which signing key to use based on the `kid` claim of an access token. You can configure the OpenId Connect Metadata on the resource provider such as your custom API or API Authentication layer.
 
-If you use a Microsoft Authentication library like Microsoft Authentication Library (MSAL) or Microsoft Identity Web to authenticate an application, the default `MetadataAddress` that points to the OpenId Connect Metadata configuration is like `https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`.
+If you use a Microsoft authentication library like Microsoft Authentication Library (MSAL) or Microsoft Identity Web to authenticate an application, the default `MetadataAddress` that points to the OpenId Connect Metadata configuration is like `https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`.
 
 If you have configured a tenant ID, the `MetadataAddress` would be `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`. If you have configured an `Authority` like `https://login.microsoftonline.us/{tenant-id}`, the `MetadataAddress` would be `https://login.microsoftonline.us/{tenant-id}/v2.0/.well-known/openid-configuration`.
 
@@ -56,7 +56,7 @@ The OpenId Connect Metadata endpoint includes the `jwks_uri` property (also know
 | `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`| `https://login.microsoftonline.com/{tenant-id}/discovery/v2.0/keys` |
 | `https://contosob2c.b2clogin.com/{tenant-id}/{policy}/v2.0/.well-known/openid-configuration` | `https://contosob2c.b2clogin.com/{tenant-id}/{policy}/discovery/v2.0/keys` |
 
-The discovery keys endpoint includes multiple signing keys. If you search for a specific key or cached keys manually instead of the signing key provided by the access token, the signature validation might not succeed due to regular key rotations. For more details, see [Signing key rollover in the Microsoft identity platform](/entra/identity-platform/signing-key-rollover).
+The discovery keys endpoint includes multiple signing keys. If you use a specific key manually instead of the signing key provided in the access token, or your cached key, the signature validation might not succeed due to regular key rotations. For more details, see [Signing key rollover in the Microsoft identity platform](/entra/identity-platform/signing-key-rollover).
 
 The content of discovery keys endpoint looks like this:
 
@@ -76,18 +76,18 @@ The content of discovery keys endpoint looks like this:
 		},
 ```
 
-The `kid` claim in the access token must match one of the keys available on the discovery keys endpoint based on the `kid` property. If it doesn't match, there are two possible reasons:
+The `kid` claim of the access token must match one of the keys available on the discovery keys endpoint based on the `kid` property. If it doesn't match, there are two possible reasons:
 
-- [Microsoft Entra ID and Azure Active Directory (AD) B2C uses different signing keys](#scenario-1-microsoft-entra-id-and-azure-ad-b2c-uses-different-signing-keys).
-- [The application is enabled for Security Assertion Markup Language (SAML) Single Sign-On (SSO)](#scenario-2-the-application-is-enabled-for-saml-sso).
+- Microsoft Entra ID and Azure Active Directory (AD) B2C uses different signing keys.
+- The application is enabled for Security Assertion Markup Language (SAML) Single Sign-On (SSO).
 
-To resolve this mismatch, go to [Step 3: Validate the iss claim of the access token](#step-3-validate-the-iss-claim-of-the-access-token).
+To resolve this mismatch, go to [Step 4: Validate the iss claim of the access token](#step-4-validate-the-iss-claim-of-the-access-token).
 
-## Step 3: Validate the iss claim of the access token
+## Step 4: Validate the iss claim of the access token
 
 ### Scenario 1: Microsoft Entra ID and Azure AD B2C uses different signing keys
 
-The `iss` claim indicates who issued the token:
+Check the `iss` claim of the access token. The `iss` claim indicates who issued the token:
 
 - For Microsoft Entra ID-issued tokens, the `iss` claim has one of these formats:
 
@@ -98,7 +98,7 @@ The `iss` claim indicates who issued the token:
 
     `https://{your-domain}.b2clogin.com/tfp/{tenant-id}/{policy-id}/v2.0/`
 
-Check the `iss` claim of the access token and make sure your OpenId Connect Metadata configuration on the resource provider is configured correctly:
+To avoid signature validation errors, configure your OpenID Connect Metadata correctly based on the token issuer:
 
 - For Microsoft Entra ID-issued tokens, make sure the OpenId Connect Metadata configuration looks like `https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`.
 
@@ -110,22 +110,23 @@ Check the `iss` claim of the access token and make sure your OpenId Connect Meta
 
 ### Scenario 2: The application is enabled for SAML SSO
 
-Assume that the access token is issued from Microsoft Entra ID instead of Azure AD B2C. When an application in Microsoft Entra ID is enabled for SAML SSO, the signing key used to sign tokens is the SAML signing certificate that's generated. So, when you look for the `kid` claim from the access token on the default discovery keys endpoint, usually `https://login.microsoftonline.com/common/discovery/v2.0/keys`, it might not be listed.
+Assume that the access token is issued from Microsoft Entra ID instead of Azure AD B2C. When an application in Microsoft Entra ID is enabled for SAML SSO, the signing key used to sign tokens is the SAML signing certificate. So, when you look for the `kid` claim from the access token on the default discovery keys endpoint, usually `https://login.microsoftonline.com/common/discovery/v2.0/keys`, it might not be listed.
 
 We don't recommend using both OAuth2 and SAML for the same application. To resolve this issue, keep your application separate for OAuth2 and SAML by using one of the following methods:
 
-- Create a new app registration for OAuth2 (recommended solution)
-- Convert the Enterprise App to use OAuth2 only.
+- Create a new app registration for OAuth2 (recommended method)
+- Convert the enterprise application to use OAuth2 only.
 
     To do so, disable SAML SSO by setting the `preferredSingleSignOnMode` property on the `servicePrincipal` to `null` or `oidc`.
+
 - Update the OpenId Connect Metadata configuration of the resource provider to include `?appid={application-id}`, like `https://login.microsoftonline.us/<tenant-id>/v2.0/.well-known/openid-configuration?appid=<application-id>`.
 
     > [!NOTE]
     > This solution is hard to implement and might not be possible depending on the resource provider.
 
-## Step 4: Validate OpenId Connect Metadata configuration
+## Examples of OpenId Connect Metadata configurations
 
-Make sure you set the OpenId Connect Metadata configuration based on whether the token is issued from Microsoft Entra ID or Azure AD B2C, or if adding `?appid={application-id}`.
+Make sure you set the OpenId Connect Metadata configuration based on whether the access token is issued from Microsoft Entra ID or Azure AD B2C, or if adding `?appid={application-id}`.
 
 Generally configuring the Microsoft Entra ID `Instance` and `Tenant`, or `Authority` correctly can resolve signature validation errors.
 
@@ -145,13 +146,9 @@ Generally configuring the Microsoft Entra ID `Instance` and `Tenant`, or `Author
 
     So, `Authority` would be like `https://login.microsoftonline.com/contoso.onmicrosoft.com`.
 
-## Step 5: Validate the MetadataAddress that points to the OpenId Connect Metadata configuration
+Generally the `MetadataAddress` is built based on the `Instance`/`Tenant`/`Authority` configuration and will automatically concatenate `/.well-known/openid-configuration` at the end. The following sections provide examples of manually specifying the `MetadataAddress`.
 
-Generally the `MetadataAddress` is built based on the `Instance`/`Tenant`/`Authority` configuration and will automatically concatenate `/.well-known/openid-configuration` at the end.
-
-The following sections provide examples of manually specifying the Metadata Address.
-
-#### Use Microsoft Identity Web
+### Example 1: Use Microsoft Identity Web
 
 ```csharp
 services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
@@ -169,11 +166,11 @@ services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
 
 For more details, see [Microsoft Identity Web customization](https://github.com/AzureAD/microsoft-identity-web/wiki/customization).
 
-#### Use ASP.NET standard framework
+### Example 2: Use ASP.NET standard framework
 
 - `UseWindowsAzureActiveDirectoryBearerAuthentication`
 
-    Set the Metadata to `https://login.microsoftonline.com/{tenant-id}/.well-known/openid-configuration`.
+    Set the metadata to `https://login.microsoftonline.com/{tenant-id}/.well-known/openid-configuration`.
 
     ```csharp
     app.UseWindowsAzureActiveDirectoryBearerAuthentication(
@@ -185,7 +182,7 @@ For more details, see [Microsoft Identity Web customization](https://github.com/
 
 - `UseOpenIdConnectAuthentication`
 
-    You can either set the Authority to `https://login.microsoftonline.com/{tenant-id}/v2.0`:
+    You can either set the `Authority` to `https://login.microsoftonline.com/{tenant-id}/v2.0`:
 
     ```csharp
     public void Configuration(IAppBuilder app)
@@ -201,7 +198,7 @@ For more details, see [Microsoft Identity Web customization](https://github.com/
                 Authority = authority,
     ```
 
-    Or set the Metadata Address to `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`:
+    Or set the `MetadataAddress` to `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`:
 
     ```csharp
      public void Configuration(IAppBuilder app)
@@ -217,11 +214,11 @@ For more details, see [Microsoft Identity Web customization](https://github.com/
                 MetadataAddress = metadataAddress,
     ```
 
-#### Use Azure App Service authentication
+### Example 3: Use Azure App Service authentication
 
 Refer to [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad).
 
-#### Use Azure API Management
+### Exempale 4: Use Azure API Management
 
 Refer to [Secure an Azure API Management API with Azure AD B2C](/azure/active-directory-b2c/secure-api-management?tabs=app-reg-ga).
 
