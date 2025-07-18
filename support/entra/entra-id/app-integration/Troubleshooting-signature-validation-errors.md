@@ -1,16 +1,16 @@
 ---
-title: Troubleshoot signature validation errors
+title: Troubleshoot Access Token Signature Validation Errors
 description: Describes the most common scenarios that lead to such errors and provides solutions.
 ms.date: 07/17/2025
 ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
-# Troubleshoot signature validation errors
+# Troubleshoot access token signature validation errors
 
-When an Azure resource provider, other than Microsoft Entra ID, validate an access token's signature, signature validation errors occur. These errors might result from the signing key being unavailable or failing to validate the signature. This article describes the most common scenarios that lead to such errors and provides solutions. While the root cause remains consistent, approaches to token validation might differ across developers and vendors.
+When an Azure resource provider, other than Microsoft Entra ID, validate an access token's signature, signature validation errors occur. These errors might result from the signing key being unavailable or failing to validate the signature. This article helps you troubleshoot such errors and provides solutions in some scenarios.
 
-## Before troubleshooting
+## Step 1: Decode the access token
 
 1. Get the access token being sent to the resource provider.
 1. Decode the access token and review the following claims:
@@ -22,9 +22,9 @@ When an Azure resource provider, other than Microsoft Entra ID, validate an acce
     > [!NOTE]
     > You can decode access tokens using [https://jwt.ms](https://jwt.ms).
 
-## Scenario: Send a Microsoft Graph access token to a non-Microsoft Graph resource provider
+## Step 2: Validate the aud claim of the access token
 
-If you send a Microsoft Graph access token to a non-Microsoft Graph resource provider, you will get a signature validation error. Only Microsoft Graph can validate these tokens. For Microsoft Graph tokens, the value of its `aud` claim is one of the following:
+If you send a Microsoft Graph access token to a non-Microsoft Graph resource provider, you will get a signature validation error. Only Microsoft Graph can validate these tokens. The value of a Microsoft Graph token's `aud` claim is one of the following:
 
 - `https://graph.microsoft.us`
 - `https://graph.microsoft.us/`
@@ -36,24 +36,27 @@ If you send a Microsoft Graph access token to a non-Microsoft Graph resource pro
 
 To resolve the signature validation error, ensure the correct access token is acquired for the resource provider and its `aud` claim is expected by the resource provider.
 
-The audience of access tokens is determined by the scope parameter that's sent in the request when acquiring access tokens. For example, to get an access token for `https://api.contoso.com`, use a scope like `https://api.contoso.com/read`. For more information, see [Configure an application to expose a web API](/entra/identity-platform/quickstart-configure-app-expose-web-apis).
+The audience of an access token is determined by the scope parameter that's sent in the request when acquiring access tokens. For example, to get an access token for `https://api.contoso.com`, use a scope like `https://api.contoso.com/read`. 
 
-## Other scenarios
+For more information, see [Configure an application to expose a web API](/entra/identity-platform/quickstart-configure-app-expose-web-apis).
 
-As for other scenarios, the resource provider determines where to get the signing keys based on the OpenId Connect Metadata configuration and which signing key to use based on the `kid` claim in the access token. You can configure this on the resource provider such as your custom API or API Authentication layer. If you use a Microsoft Authentication library like Microsoft Authentication Library (MSAL) or Microsoft Identity Web, the default configuration is like `https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`.
+## Step 3: Validate the signing key
 
-If you have configured a tenant ID, the `MetadataAddress` would be `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`. If you have configured an `Authority` like `https://login.microsoftonline.us/{tenant-id}`, then the `MetadataAddress` would be `https://login.microsoftonline.us/{tenant-id}/v2.0/.well-known/openid-configuration`.
+For other scenarios, the resource provider determines where to get the signing keys based on the OpenId Connect Metadata configuration and which signing key to use based on the `kid` claim of an access token. You can configure them on the resource provider such as your custom API or API Authentication layer.
 
-The OpenId Connect Metadata endpoint includes a `jwks_uri` property (also known as discovery keys endpoint), which specifies the location of signing keys. Depending on which OpenId Connect Metadata endpoint is used, it will return a URL for the `jwks_uri`. Here's a table that provides a few examples:
+If you use a Microsoft Authentication library like Microsoft Authentication Library (MSAL) or Microsoft Identity Web to authenticate an application, the default `MetadataAddress` that points to the OpenId Connect Metadata configuration is like `https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`.
+
+If you have configured a tenant ID, the `MetadataAddress` would be `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`. If you have configured an `Authority` like `https://login.microsoftonline.us/{tenant-id}`, the `MetadataAddress` would be `https://login.microsoftonline.us/{tenant-id}/v2.0/.well-known/openid-configuration`.
+
+The OpenId Connect Metadata endpoint includes the `jwks_uri` property (also known as discovery keys endpoint), which specifies the location of signing keys. Depending on which OpenId Connect Metadata endpoint is used, it will return a different URL for the `jwks_uri` property. Here's a table that provides a few examples:
 
 | Metadata endpoint | Discovery keys endpoint |
 | --- | --- |
 | `https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration` | `https://login.microsoftonline.com/common/discovery/v2.0/keys` |
 | `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`| `https://login.microsoftonline.com/{tenant-id}/discovery/v2.0/keys` |
-| `https://login.microsoftonline.us/{tenant-id}/v2.0/.well-known/openid-configuration`| `https://login.microsoftonline.us/{tenant-id}/discovery/v2.0/keys` |
 | `https://contosob2c.b2clogin.com/{tenant-id}/{policy}/v2.0/.well-known/openid-configuration` | `https://contosob2c.b2clogin.com/{tenant-id}/{policy}/discovery/v2.0/keys` |
 
-The discovery keys endpoint can include multiple signing keys. If you search for a specific key or cached keys manually instead of the signing key provided by the access token, the signature validation might not succeed due to regular key rotations. For more details, see [Signing key rollover in the Microsoft identity platform](/entra/identity-platform/signing-key-rollover).
+The discovery keys endpoint includes multiple signing keys. If you search for a specific key or cached keys manually instead of the signing key provided by the access token, the signature validation might not succeed due to regular key rotations. For more details, see [Signing key rollover in the Microsoft identity platform](/entra/identity-platform/signing-key-rollover).
 
 The content of discovery keys endpoint looks like this:
 
@@ -73,74 +76,78 @@ The content of discovery keys endpoint looks like this:
 		},
 ```
 
-The `kid` claim in the access token must match one of the keys available on the discovery keys endpoint based on the `kid` property. If the `kid` doesn't match, there are two possible reasons:
+The `kid` claim in the access token must match one of the keys available on the discovery keys endpoint based on the `kid` property. If it doesn't match, there are two possible reasons:
 
-- Microsoft Entra ID and Azure Active Directory (AD) B2C uses different signing keys.
-- The application is enabled for Security Assertion Markup Language (SAML) Single Sign-On (SSO).
+- [Microsoft Entra ID and Azure Active Directory (AD) B2C uses different signing keys](#scenario-1-microsoft-entra-id-and-azure-ad-b2c-uses-different-signing-keys).
+- [The application is enabled for Security Assertion Markup Language (SAML) Single Sign-On (SSO)](#scenario-2-the-application-is-enabled-for-saml-sso).
 
-### Microsoft Entra ID and Azure AD B2C uses different signing keys
+To resolve this mismatch, go to [Step 3: Validate the iss claim of the access token](#step-3-validate-the-iss-claim-of-the-access-token).
 
-Check the `iss` claim of the access token.
+## Step 3: Validate the iss claim of the access token
 
-For Microsoft Entra ID-issued tokens, the `iss` claim has one of these formats:
+### Scenario 1: Microsoft Entra ID and Azure AD B2C uses different signing keys
 
-- `https://sts.windows.net/{tenant-id}` (used for v1.0 tokens)
-- `https://login.microsoftonline.com/{tenant-id}/v2.0` (used for v2.0 tokens)
+The `iss` claim indicates who issued the token:
 
-For Azure AD B2C-issued tokens, the `iss` claim follows this format:
+- For Microsoft Entra ID-issued tokens, the `iss` claim has one of these formats:
 
-`https://{your-domain}.b2clogin.com/tfp/{tenant-id}/{policy-id}/v2.0/`
+  - `https://sts.windows.net/{tenant-id}` (used for v1.0 tokens)
+  - `https://login.microsoftonline.com/{tenant-id}/v2.0` (used for v2.0 tokens)
 
-Make sure your OpenId Connect Metadata configuration on the resource provider is configured correctly:
+- For Azure AD B2C-issued tokens, the `iss` claim has this format:
 
-For Microsoft Entra ID-issued tokens, make sure the OpenId Connect Metadata configuration looks like `https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`.
+    `https://{your-domain}.b2clogin.com/tfp/{tenant-id}/{policy-id}/v2.0/`
 
-For more information, see [OpenID Connect on the Microsoft identity platform](/entra/identity-platform/v2-protocols-oidc).
+Check the `iss` claim of the access token and make sure your OpenId Connect Metadata configuration on the resource provider is configured correctly:
 
-For Azure AD B2C-issued tokens, make sure the OpenId Connect Metadata configuration looks like `<https://{your-domain}.b2clogin.com/{tenant-id}/{b2c-policy}/v2.0/.well-known/openid-configuration`.
+- For Microsoft Entra ID-issued tokens, make sure the OpenId Connect Metadata configuration looks like `https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`.
 
-For more information, see [Web sign in with OpenID Connect in Azure Active Directory B2C](/azure/active-directory-b2c/openid-connect).
+    For more information, see [OpenID Connect on the Microsoft identity platform](/entra/identity-platform/v2-protocols-oidc).
 
-### The application is enabled for SAML SSO
+- For Azure AD B2C-issued tokens, make sure the OpenId Connect Metadata configuration looks like `<https://{your-domain}.b2clogin.com/{tenant-id}/{b2c-policy}/v2.0/.well-known/openid-configuration`.
 
-Assume that the token is issued from Microsoft Entra ID instead of Azure AD B2C. When an application in Microsoft Entra ID is enabled for SAML SSO, the signing key used to sign tokens is the SAML signing certificate that is generated when SAML SSO is enabled. When you look for the `kid` from the access token on the default discovery keys endpoint, `https://login.microsoftonline.com/common/discovery/v2.0/keys`, it might not be listed.
+    For more information, see [Web sign in with OpenID Connect in Azure Active Directory B2C](/azure/active-directory-b2c/openid-connect).
 
-To resolve this issue, keep your apps separate for OAuth2 and SAML. We don't recommend using the same app that performs both OAuth2 and SAML.
+### Scenario 2: The application is enabled for SAML SSO
 
-- Create a new app registration and don't enable SAML SSO (recommended solution)
+Assume that the access token is issued from Microsoft Entra ID instead of Azure AD B2C. When an application in Microsoft Entra ID is enabled for SAML SSO, the signing key used to sign tokens is the SAML signing certificate that's generated. So, when you look for the `kid` claim from the access token on the default discovery keys endpoint, usually `https://login.microsoftonline.com/common/discovery/v2.0/keys`, it might not be listed.
+
+We don't recommend using both OAuth2 and SAML for the same application. To resolve this issue, keep your application separate for OAuth2 and SAML by using one of the following methods:
+
+- Create a new app registration for OAuth2 (recommended solution)
 - Convert the Enterprise App to use OAuth2 only.
 
-    To do so, disable SAML SSO by setting the `preferredSingleSignOnMode` property on the `servicePrincipal` to null or `oidc`.
+    To do so, disable SAML SSO by setting the `preferredSingleSignOnMode` property on the `servicePrincipal` to `null` or `oidc`.
 - Update the OpenId Connect Metadata configuration of the resource provider to include `?appid={application-id}`, like `https://login.microsoftonline.us/<tenant-id>/v2.0/.well-known/openid-configuration?appid=<application-id>`.
 
     > [!NOTE]
     > This solution is hard to implement and might not be possible depending on the resource provider.
 
-### Configure OpenID Connect Metadata
+## Step 4: Validate OpenId Connect Metadata configuration
 
-Make sure you set the OpenId Connect Metadata configuration based on whether the token is issued from Microsoft Entra ID or Azure AD B2C or if you need to add `?appid={application-id}`.
+Make sure you set the OpenId Connect Metadata configuration based on whether the token is issued from Microsoft Entra ID or Azure AD B2C, or if adding `?appid={application-id}`.
 
-To resolve your issue, configure the Microsoft Entra instance and tenant, or authority correctly:
+Generally configuring the Microsoft Entra ID `Instance` and `Tenant`, or `Authority` correctly can resolve signature validation errors.
 
-- Instance
+- `Instance`
 
-    Microsoft Entra instance would be `https://login.microsoftonline.com`. For more information about Microsoft Entra instances, see [National clouds](/entra/identity-platform/authentication-national-cloud).
+    Microsoft Entra ID instance would be `https://login.microsoftonline.com`. For more information about Microsoft Entra ID instances, see [National clouds](/entra/identity-platform/authentication-national-cloud).
 
-- Tenant
+- `Tenant`
 
     Tenant would be `contoso.onmicrosoft.com`. You can also use the Directory ID or any verified domain. We recommend using the Directory ID or the initial domain provided by Microsoft Entra ID (such as `contoso.onmicrosoft.com`).
 
-- Authority
+- `Authority`
 
-    If you configure an Authority, Instance and Tenant isn't needed as Authority follows this format:
+    If you configure an `Authority`, `Instance` and `Tenant` isn't needed as `Authority` follows this format:
 
     `{Instance}/{Tenant}`
 
-    So, Authority would be like `https://login.microsoftonline.com/contoso.onmicrosoft.com`.
+    So, `Authority` would be like `https://login.microsoftonline.com/contoso.onmicrosoft.com`.
 
-### Specify the Metadata Address
+## Step 5: Validate the MetadataAddress that points to the OpenId Connect Metadata configuration
 
-Generally the Metadata Address is built based on the Instance/Tenant/Authority configuration and will automatically concatenate `/.well-known/openid-configuration` at the end.
+Generally the `MetadataAddress` is built based on the `Instance`/`Tenant`/`Authority` configuration and will automatically concatenate `/.well-known/openid-configuration` at the end.
 
 The following sections provide examples of manually specifying the Metadata Address.
 
