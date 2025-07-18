@@ -1,7 +1,7 @@
 ---
 title: Accounts Have the LastLogonTimestamp Value Set to Future
 description: Helps resolve an issue in which user or computer accounts have the lastLogonTimestamp value set to a future time.
-ms.date: 07/17/2025
+ms.date: 07/18/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
