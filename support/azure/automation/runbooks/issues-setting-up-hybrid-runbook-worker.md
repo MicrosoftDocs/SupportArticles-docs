@@ -16,7 +16,7 @@ This article describes common issues you might experience when you set up runboo
 
 ## Troubleshoot tools
 
-- Connectivity problems are a common cause of issues with Hybrid Runbook Workers. Use the [Test Cloud Connectivity tool](azure/azure-monitor/agents/agent-windows-troubleshoot?tabs=UpdateMMA#connectivity-issues) to verify that your environment is correctly configured.
+- Connectivity problems are a common cause of issues with Hybrid Runbook Workers. Use the [Test Cloud Connectivity tool](/azure/azure-monitor/agents/agent-windows-troubleshoot?tabs=UpdateMMA#connectivity-issues) to verify that your environment is correctly configured.
 
 - Run the offline version of the [agent registration script](/azure/azure-monitor/agents/agent-windows-troubleshoot?tabs=UpdateMMA#log-analytics-troubleshooting-tool) to troubleshoot hybrid worker prerequisites. Although the script includes some checks specific to update management, most of the requirements also apply to hybrid workers.
 
