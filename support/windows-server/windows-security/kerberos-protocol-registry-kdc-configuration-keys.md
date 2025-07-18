@@ -1,7 +1,7 @@
 ---
 title: Registry entries about Kerberos protocol and Key Distribution Center (KDC)
 description: Lists the registry entries in Windows Server that can be used for Kerberos protocol testing and troubleshooting Kerberos authentication issues.
-ms.date: 07/17/2025
+ms.date: 07/18/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
