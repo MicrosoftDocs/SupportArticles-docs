@@ -47,8 +47,6 @@ For more information about the requirements for a Windows Server 2008 R2 domain 
 
     - The certificate template must have an extension that has the basic metabolic panel (BMP) data value **DomainController**.
 
-      > [!NOTE]
-      > The **dsstore.exe -dcmon** command does not recognize the certificate without one of these extensions.
     - You must use the Schannel cryptographic service provider (CSP) to generate the key.
 - The domain controller certificate must be installed in the local computer's certificate store.
 
