@@ -9,7 +9,7 @@ ms.topic: troubleshooting-problem-resolution
 ---
 # Update 2998527 causes incorrect code lookups on past dates
 
-This article explains a problem in [Microsoft Knowledge Base article 2998527](https://support.microsoft.com/help/2998527) that causes incorrect code lookups on past dates when you use the `TimeZoneInfo` class in an application.
+This article describes an issue where installing the [Microsoft KB 2998527](https://support.microsoft.com/help/2998527) update can cause the `TimeZoneInfo` class to return incorrect results for past date lookups in applications.
 
 _Applies to:_ .NET Framework 4.6, 4.5
 
