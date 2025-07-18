@@ -1,5 +1,5 @@
 ---
-title: Centralized Configuration of Activity Logs to Event Hub
+title: Centralized Configuration of Activity Logs to Event Hubs
 description: Provides guidance to set up Azure Activity Logs to be centrally exported to a single Event Hub.
 ms.date: 07/17/2025
 ms.reviewer: v-liuamson; v-gsitser
@@ -7,7 +7,7 @@ ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
 
-# Centralized Configuration of Aactivity Logs to Event Hub
+# Centralized Configuration of Activity Logs to Event Hubs
 
 ## Introduction
 
@@ -35,7 +35,7 @@ Organizations often require a centralized approach to manage Activity Logs acros
 
 5. **Monitor and adjust:**
    - Regularly monitor the event hub performance and log flow.
-   - Adjust configurations as neecessary to optimize performance and cost.
+   - Adjust configurations as necessary to optimize performance and cost.
 
 ## Common issues and solutions
 
