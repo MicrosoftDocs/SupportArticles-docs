@@ -42,26 +42,29 @@ There are many reasons why the outbound traffic might be blocked. The best way t
 
 ### Check if Azure network resources are blocking traffic to the endpoint
 
-To determine if traffic is blocked to the endpoint due to Azure network resources, run a connectivity analysis from your AKS cluster nodes to the endpoint using the [Azure Virtual Network Verifier (Preview)](/azure/virtual-network-manager/concept-virtual-network-verifier) tool. The connectivity analysis covers the following resources:
+To determine if traffic is blocked to the endpoint due to Azure network resources, run a connectivity analysis from your AKS cluster nodes to the endpoint using the [Azure Virtual Network Verifier (Preview)](/azure/virtual-network-manager/concept-virtual-network-verifier#supported-features-of-the-reachability-analysis) tool. The connectivity analysis covers the following resources:
 
 - Azure Load Balancer
 - Azure Firewall
 - A network address translation (NAT) gateway
 - Network security group (NSG)
 - Network policy
+- User defined routes (route tables)
+- Virtual network peering
 
 > [!NOTE]
 >
-> Azure Virtual Network Verifier (Preview) doesn't look at any external or third-party networking resources, such as a custom firewall. After running the connectivity analysis, we recommend that you perform a manual check of any external networking to cover all hops in the traffic flow.
+> Azure Virtual Network Verifier (Preview) can't access any external or third-party networking resources, such as a custom firewall. If the connectivity analysis doesn't detect any blocked traffic, we recommend that you perform a manual check of any external networking to cover all hops in the traffic flow.
 > 
 > Currently, clusters using Azure CNI Overlay aren't supported for this feature. Support for CNI Overlay is planned for August 2025.
 
 1. Navigate to your cluster in the Azure portal. In the sidebar, navigate to the Settings -> Node pools blade.
-1. Identify the nodepool you want to run a connectivity analysis from. Click on the nodepool to select it as the scope.
-1. Click on the three dots "..." in the toolbar at the top of the page. In the expanded menu, select "Connectivity analysis (Preview)."<img width="626" alt="image" src="https://github.com/user-attachments/assets/b2f05947-f753-49b9-9536-98d0b998ab52" />
-1. Select a Virtual Machine Scale Set (VMSS) instance as the source. The source IP addresses are generated automatically.
-1. Select a public domain name/endpoint as the destination for the analysis. The destination IP addresses are also generated automatically.
-1. Run the analysis and wait up to 2 minutes for the results. In the resulting diagram, identify the associated Azure network resources and where traffic is blocked. Click on the icons to show the detailed analysis output.
+2. Identify the nodepool you want to run a connectivity analysis from. Click on the nodepool to select it as the scope.
+3. Select "Connectivity analysis (Preview)" from the toolbar at the top of the page. If you don't see it, click on the three dots "..." in the toolbar at the top of the page to open the expanded menu. <img width="626" alt="image" src="https://github.com/user-attachments/assets/b2f05947-f753-49b9-9536-98d0b998ab52" />
+4. Select a Virtual Machine Scale Set (VMSS) instance as the source. The source IP addresses are populated automatically.
+5. Select a public domain name/endpoint as the destination for the analysis, one example is `mcr.microsoft.com`. The destination IP addresses are also populated automatically.
+6. Run the analysis and wait up to 2 minutes for the results. In the resulting diagram, identify the associated Azure network resources and where traffic is blocked. To view the detailed analysis output, click on the "JSON output" tab or click into the arrows in the diagram.
+
 
 ### Manual troubleshooting
 

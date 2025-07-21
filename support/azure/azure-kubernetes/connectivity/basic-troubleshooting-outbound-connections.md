@@ -132,17 +132,19 @@ For basic troubleshooting for egress traffic from an AKS cluster, follow these s
 
 #### Check if Azure network resources are blocking traffic to the endpoint
 
-To determine if traffic is blocked to the endpoint due to Azure network resources, run a connectivity analysis from your AKS cluster nodes to the endpoint using the Azure Virtual Network Verifier (Preview) tool. The connectivity analysis covers the following resources:
+To determine if traffic is blocked to the endpoint due to Azure network resources, run a connectivity analysis from your AKS cluster nodes to the endpoint using the [Azure Virtual Network Verifier (Preview)](/azure/virtual-network-manager/concept-virtual-network-verifier#supported-features-of-the-reachability-analysis) tool. The connectivity analysis covers the following resources:
 
 - Azure Load Balancer
 - Azure Firewall
 - A network address translation (NAT) gateway
 - Network security group (NSG)
 - Network policy
+- User defined routes (route tables)
+- Virtual network peering
 
 > [!NOTE]
 >
-> Azure Virtual Network Verifier (Preview) doesn't look at any external or third-party networking resources, such as a custom firewall. If the connectivity analysis doesn't detect any blocked traffic, we recommend that you perform a manual check of any external networking to cover all hops in the traffic flow.
+> Azure Virtual Network Verifier (Preview) can't access any external or third-party networking resources, such as a custom firewall. If the connectivity analysis doesn't detect any blocked traffic, we recommend that you perform a manual check of any external networking to cover all hops in the traffic flow.
 > 
 > Currently, clusters using Azure CNI Overlay aren't supported for this feature. Support for CNI Overlay is planned for August 2025.
 
