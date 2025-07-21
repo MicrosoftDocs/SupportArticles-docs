@@ -76,8 +76,6 @@
           items:
             - name: Errors when running desktop flows including Excel actions
               href: desktop-flows/office-automation/excel/troubleshoot-excel-errors.md
-            - name: Launch Excel action errors
-              href: desktop-flows/office-automation/excel/launch-excel-action-failures.md
         - name: Outlook
           items:
             - name: Retrieve email messages from Outlook doesn't work as expected
