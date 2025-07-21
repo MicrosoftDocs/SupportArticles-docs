@@ -46,7 +46,7 @@ When you view the search result statistics in the *Export Summary \<timestamp\>.
 
 An estimate of the search results is just that: It's an estimate and not an actual count of items that meet the search query criteria. For more information about why estimated and downloaded search results can differ, see [Differences between estimated and actual eDiscovery search results](/microsoft-365/compliance/ediscovery-differences-between-estimated-and-actual-search-results).
 
-[Back to top](#resolve-search-errors-in-ediscovery-standard)
+[Back to top](#resolve-search-errors-in-ediscovery)
 
 ## Search error: "Location is ambiguous"
 
@@ -58,7 +58,7 @@ When you run an [eDiscovery search](/microsoft-365/compliance/ediscovery-search-
 
 ### Cause
 
-The locations specified in the error message are invalid. The mailbox identifier for each invalid location is used by duplicate or conflicting objects in Exchange Online Protection (EOP).
+The locations that are specified in the error message are invalid. The mailbox identifier for each invalid location is used by duplicate or conflicting objects in Exchange Online Protection (EOP).
 
 ### Resolution
 
@@ -74,7 +74,7 @@ For each invalid location, follow these steps:
 
 3. Remove the duplicate or conflicting object.
 
-[Back to top](#resolve-search-errors-in-ediscovery-standard)
+[Back to top](#resolve-search-errors-in-ediscovery)
 
 ## Search error: "Recipient not found"
 
@@ -100,7 +100,7 @@ The system can't find one of the [recipients](/powershell/module/exchange/new-ma
 
 4. After you verify that the recipient is synced in EOP, retry your search.
 
-[Back to top](#resolve-search-errors-in-ediscovery-standard)
+[Back to top](#resolve-search-errors-in-ediscovery)
 
 ## Search error: CS007
 
@@ -134,7 +134,7 @@ Your [eDiscovery search](/microsoft-365/compliance/ediscovery-search-for-content
 
 Retry your search. If your search still fails, split your search into smaller searches. For example, use date ranges or limit the number of search locations to return smaller result sets.
 
-[Back to top](#resolve-search-errors-in-ediscovery-standard)
+[Back to top](#resolve-search-errors-in-ediscovery)
 
 ## Search or export error: "Maximum number of jobs for your organization are currently running"
 
@@ -187,7 +187,7 @@ To resolve the error, use the following procedure:
 
 2. Retry your search or export operation.
 
-[Back to top](#resolve-search-errors-in-ediscovery-standard)
+[Back to top](#resolve-search-errors-in-ediscovery)
 
 ## Export error: "Item has been moved or deleted" or "Unable to retrieve item due to timeout"
 
@@ -207,7 +207,7 @@ These "FailedToExportItem" error messages indicate that the system didn't export
 
 Wait for the system to retrieve and export the original mailbox items that are associated with the temporary backups.
 
-[Back to top](#resolve-search-errors-in-ediscovery-standard)
+[Back to top](#resolve-search-errors-in-ediscovery)
 
 ## Export error: "File wasn't exported because it doesn't exist" or "File not found"
 
@@ -227,7 +227,7 @@ You might see this error message if the eDiscovery search includes Microsoft Sha
 
 To resolve the issue, reindex the SharePoint Online or OneDrive for Business location by using one of the procedures that are provided in [Manually request crawling and reindexing of a site, a library or a list](/sharepoint/crawl-site-content). If you want the search results to include the renamed or moved files, rerun the eDiscovery search.
 
-[Back to top](#resolve-search-errors-in-ediscovery-standard)
+[Back to top](#resolve-search-errors-in-ediscovery)
 
 ## Export download issue: eDiscovery export doesn't download any files
 
@@ -247,7 +247,7 @@ The issue can occur for any of the following reasons:
 
 If you're experiencing issues that affect the download, see [Best practices for downloading export packages](/purview/edisc-search-export).
 
-[Back to top](#resolve-search-errors-in-ediscovery-standard)
+[Back to top](#resolve-search-errors-in-ediscovery)
 
 ## Export download error: "Search result was not downloaded as it is a folder"
 
@@ -265,4 +265,4 @@ You might see this error message if your search includes Microsoft SharePoint On
 
 No resolution is required. You can safely ignore the error message.
 
-[Back to top](#resolve-search-errors-in-ediscovery-standard)
+[Back to top](#resolve-search-errors-in-ediscovery)
