@@ -4,7 +4,7 @@ description: Provides detailed steps to use Azure App Service Certificate togeth
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-app-service
-ms.date: 07/16/2025
+ms.date: 07/21/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.custom: Connection issues with SSL or TLS
 ---
@@ -12,7 +12,6 @@ ms.custom: Connection issues with SSL or TLS
 # Use Azure App Service Certificate with Azure Front Door
 
 Microsoft Azure Front Door (Standard and Premium) is a modern global load balancer and application delivery network that supports custom TLS certificates through Azure Key Vault. This article discusses how to use an Azure App Service Certificate securely together with Microsoft Azure Front Door by using managed identities and Bring Your Own Certificate (BYOC) support. This integration enables you to deliver encrypted traffic that has automatic renewal, enterprise-grade performance, and global scale.
-
 
 ## Overview
 
@@ -32,7 +31,7 @@ A managed identity enables Azure Front Door to securely retrieve the certificate
    - **System-assigned** (Recommended): Tied to the Front Door
      lifecycle
    - **User-assigned** (Optional): For reuse across multiple services
-4. Select **Save**.
+3. Select **Save**.
 
 For more information, see [Use managed identities to access Azure Key Vault certificates](https://learn.microsoft.com/azure/frontdoor/managed-identity).
 
@@ -91,7 +90,6 @@ To add the certificate:
 
 > [!NOTE]
 > Azure Front Door supports automatic certificate renewal when you reference the `Latest` version. Updates in Key Vault are reflected in Front Door within 72 hours. For more information, see [Renew customer-managed TLS certificates](https://learn.microsoft.com/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell#renew-customer-managed-tls-certificates).
-
 > [!IMPORTANT]
 > Certificates must be stored in a Key Vault within the same subscription and must include a complete certificate chain that uses supported algorithms. For more information, see [Use your own certificate with Azure Front Door](https://learn.microsoft.com/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell#use-your-own-certificate).
 
