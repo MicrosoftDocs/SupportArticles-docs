@@ -2,6 +2,8 @@
   items:
   - name: Connection issues with SSL or TLS
     items:
+    - name: Use Azure App Service Certificate with Azure Front Door
+      href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-azure-front-door.md
     - name: Use Azure App Service Certificate with Application Gateway
       href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-application-gateway.md
   - name: Troubleshoot Azure App Service

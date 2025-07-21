@@ -1,5 +1,5 @@
 ---
-title: Use Azure App Service Certificate with Application Gateway: Detailed Guide
+title: Use Azure App Service Certificate with Application Gateway
 description: Provides detailed steps to use Azure App Service Certificate together with Application Gateway.
 author: JarrettRenshaw
 ms.author: jarrettr
@@ -52,7 +52,7 @@ You can use App Service Certificate in Azure Application Gateway, but not direct
 
 4. **Upload to Application Gateway**: Go to Application Gateway \> Listeners \> + Add Listener. Select **HTTPS**, upload the `.pfx` file, and then enter the password.
 
-5. **Associate with a rule**: Create a routing rule, and link it to the HTTPS listener. For detailed steps, see [Create a routing rule in Application Gateway](https://learn.microsoft.com/azure/application-gateway/configuration-request-routing-rules)
+5. **Associate with a rule**: Create a routing rule, and link it to the HTTPS listener. For detailed steps, see [Create a routing rule in Application Gateway](/azure/application-gateway/configuration-request-routing-rules)
 
 ### Option 2: Use Key Vault reference (recommended)
 
@@ -83,14 +83,14 @@ You can use App Service Certificate in Azure Application Gateway, but not direct
     - App Service Certificates support autorenewal only for App Services.
     - When used in Application Gateway, autorenewal doesn't automatically propagate.
     - You must manually update the certificate in Application Gateway after you renew it.
-    - We recommend that you use **Azure Automation** or **Logic App** to automate this update process. See [Renew certificates in Application Gateway](https://learn.microsoft.com/azure/application-gateway/renew-certificates).
+    - We recommend that you use **Azure Automation** or **Logic App** to automate this update process. See [Renew certificates in Application Gateway](/azure/application-gateway/renew-certificates).
 
 4. **Certificate format restrictions:**
 
     - Application Gateway accepts only `.pfx` files.
     - Application Gateway rejects `.cer` and `.pem` files.
     - Self-signed certificates are supported but must be uploaded as `.pfx`.
-    - See [Self-signed certificates for Application Gateway](https://learn.microsoft.com/azure/application-gateway/self-signed-certificates).
+    - See [Self-signed certificates for Application Gateway](/azure/application-gateway/self-signed-certificates).
 
 ## Best practices
 
@@ -110,10 +110,10 @@ You can use App Service Certificate in Azure Application Gateway, but not direct
 
 ## Useful links
 
-- [Renew certificates in Application Gateway](https://learn.microsoft.com/azure/application-gateway/renew-certificates)
-- [SSL certificates overview - Application Gateway](https://learn.microsoft.com/azure/application-gateway/ssl-overview)
-- [Use self-signed certificates in Application Gateway](https://learn.microsoft.com/azure/application-gateway/self-signed-certificates)
-- [Configure App Service Certificate](https://learn.microsoft.com/azure/app-service/configure-ssl-app-service-certificate?tabs=portal)
-- [Create a routing rule in Application Gateway](https://learn.microsoft.com/azure/application-gateway/configuration-request-routing-rules)
+- [Renew certificates in Application Gateway](/azure/application-gateway/renew-certificates)
+- [SSL certificates overview - Application Gateway](/azure/application-gateway/ssl-overview)
+- [Use self-signed certificates in Application Gateway](/azure/application-gateway/self-signed-certificates)
+- [Configure App Service Certificate](/azure/app-service/configure-ssl-app-service-certificate?tabs=portal)
+- [Create a routing rule in Application Gateway](/azure/application-gateway/configuration-request-routing-rules)
 
 [!INCLUDE [third-party-information-disclaimer](../../../../includes/third-party-information-disclaimer.md)]
