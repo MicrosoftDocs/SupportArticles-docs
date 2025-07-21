@@ -1,4 +1,4 @@
-``---
+---
 title: Using Azure App Service Certificate with Application Gateway: Detailed Guide
 description: Provides detailed steps to use Azure App Service Certificate together with Application Gateway.
 author: JarrettRenshaw
@@ -11,7 +11,7 @@ ms.custom: Connection issues with SSL or TLS
 
 # Use Azure App Service Certificate with Application Gateway
 
-Microsoft Azure provides various tools and services to secure your web applications by using SSL/TLS certificates. One such offering, the **Azure App Service Certificate**, is tightly integrated with Azure App Services. However, many organizations use **Azure Application Gateway** as a reverse proxy, load balancer, and Web Application Firewall (WAF). Understandably, such organizations want to use the same certificate across all services. 
+Microsoft Azure provides various tools and services to secure your web applications by using SSL/TLS certificates. One such offering, the **Azure App Service Certificate**, is tightly integrated with Azure App Services. However, many organizations use **Azure Application Gateway** as a reverse proxy, load balancer, and Web Application Firewall (WAF). Understandably, such organizations want to use the same certificate across all services.
 
 This article provides a comprehensive guide for using App Service Certificates in Application Gateway, including usage steps, restrictions, and best practices. By understanding the limitations and using the Azure Key Vault service effectively, you can build a robust certificate management workflow across both App Services and Application Gateway.
 
@@ -56,7 +56,7 @@ You can use App Service Certificate in Azure Application Gateway, but not direct
 
 ### Option 2: Use Key Vault reference (recommended)
 
-1. **Store App Service Certificate in Key Vault** (same as above).
+1. **Store App Service Certificate in Key Vault**: Navigate to the App Service Certificate resource. Then, use the **Key Vault** blade to store the certificate in a key vault of your choice.
 
 2. **Enable Managed Identity for Application Gateway**: Enable user-assigned or system-assigned managed identity.
 
@@ -116,4 +116,4 @@ You can use App Service Certificate in Azure Application Gateway, but not direct
 - [Configure App Service Certificate](https://learn.microsoft.com/azure/app-service/configure-ssl-app-service-certificate?tabs=portal)
 - [Create a routing rule in Application Gateway](https://learn.microsoft.com/azure/application-gateway/configuration-request-routing-rules)
 
-[!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [third-party-information-disclaimer](../../../includes/ third-party-information-disclaimer.md)]
