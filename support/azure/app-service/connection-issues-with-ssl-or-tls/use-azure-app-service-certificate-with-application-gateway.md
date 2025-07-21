@@ -40,7 +40,7 @@ You can use App Service Certificate in Azure Application Gateway, but not direct
 
 3. **Export as .pfx from Key Vault**: Use Azure PowerShell or Azure CLI to download the certificate as a `.pfx` file that has a private key.
 
-    - Example using Azure CLI:
+    - Example that uses Azure CLI:
 
     ```bash
         az keyvault secret download \
