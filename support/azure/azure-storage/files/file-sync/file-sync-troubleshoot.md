@@ -119,7 +119,7 @@ To resolve this issue, verify your Windows Server has the following updates inst
   
     Cumulative updates are released monthly. To deploy the latest update, you can use Windows Update or download it from the [Microsoft Update Catalog](https://catalog.update.microsoft.com). Before manual installation, review the associated Knowledge Base (KB) article to ensure all prerequisites are met.​ ​​If Windows updates aren't installed before installing the Azure File Sync agent, the Storage Sync Agent service (FileSyncSvc) will fail to start.
 
-## Auto Update can't upgrade an "to be expired" or expired Azure File Sync agent
+## Auto Update can't upgrade a "to be expired" or expired Azure File Sync agent
 
 If Auto Update doesn't upgrade your Azure File Sync agent that is about to expire or has expired, verify that the agent expiration information is properly applied to the server. The expiration metadata is required for Auto Update to function as expected.
 
