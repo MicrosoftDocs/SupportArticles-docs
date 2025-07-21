@@ -13761,6 +13761,10 @@
     {
       "source_path": "support/windows-client/performance/stop-error-or-blue-screen-error-troubleshooting.md",
       "redirect_url": "/troubleshoot/windows-client/performance/stop-code-error-troubleshooting"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/office-automation/excel/launch-excel-action-failures.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/office-automation/excel/troubleshoot-excel-errors"
     }
   ]
 }
