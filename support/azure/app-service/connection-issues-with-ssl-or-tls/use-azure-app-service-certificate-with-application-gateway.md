@@ -1,5 +1,5 @@
 ---
-title: Use Azure App Service Certificate with Application Gateway: Detailed Guide
+title: Use Azure App Service Certificate with Application Gateway:Detailed Guide
 description: Provides detailed steps to use Azure App Service Certificate together with Application Gateway.
 author: JarrettRenshaw
 ms.author: jarrettr

@@ -122,6 +122,6 @@ After verification is made, Front Door serves traffic securely by using the cert
 ## References
 
 - [Configure HTTPS custom domain (Front Door)](/azure/frontdoor/standard-premium/how-to-configure-https-custom-domain?tabs=powershell)
-- [Add custom domain in Front Door](https://learn.microsoft.com/azure/frontdoor/standard-premium/how-to-add-custom-domain)
+- [Add custom domain in Front Door](/azure/frontdoor/standard-premium/how-to-add-custom-domain)
 - [Azure Front Door managed identity access](/azure/frontdoor/managed-identity)
 - [Buy and configure an App Service Certificate](/azure/app-service/configure-ssl-app-service-certificate?tabs=portal)
