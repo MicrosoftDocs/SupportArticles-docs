@@ -1,5 +1,5 @@
 ---
-title: Using Azure App Service Certificate with Azure Front Door
+title: Use Azure App Service Certificate with Azure Front Door
 description: Provides detailed steps to use Azure App Service Certificate together with Azure Front Door.
 author: JarrettRenshaw
 ms.author: jarrettr
