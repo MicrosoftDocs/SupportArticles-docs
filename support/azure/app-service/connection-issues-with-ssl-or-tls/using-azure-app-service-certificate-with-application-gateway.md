@@ -116,4 +116,4 @@ You can use App Service Certificate in Azure Application Gateway, but not direct
 - [Configure App Service Certificate](https://learn.microsoft.com/azure/app-service/configure-ssl-app-service-certificate?tabs=portal)
 - [Create a routing rule in Application Gateway](https://learn.microsoft.com/azure/application-gateway/configuration-request-routing-rules)
 
-[!INCLUDE [third-party-information-disclaimer](../../../includes/ third-party-information-disclaimer.md)]
+[!INCLUDE [third-party-information-disclaimer](../../../../includes/third-party-information-disclaimer.md)]
