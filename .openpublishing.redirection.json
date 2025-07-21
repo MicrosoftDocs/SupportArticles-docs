@@ -13763,6 +13763,10 @@
       "redirect_url": "/troubleshoot/windows-client/performance/stop-code-error-troubleshooting"
     },
     {
+      "source_path": "support/power-platform/power-automate/desktop-flows/office-automation/excel/launch-excel-action-failures.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/office-automation/excel/troubleshoot-excel-errors"
+    },
+    {
       "source_path": "support/sql/database-engine/install/windows/install-reporting-service.md",
       "redirect_url": "/previous-versions/troubleshoot/sql/install/install-reporting-service",
       "redirect_document_id": false
