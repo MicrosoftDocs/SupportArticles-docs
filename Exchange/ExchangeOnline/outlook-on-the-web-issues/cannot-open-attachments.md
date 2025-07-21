@@ -14,8 +14,8 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 07/01/2025
-ms.reviewer: v-six
+ms.date: 07/15/2025
+ms.reviewer: fernandog
 ---
 # Can't open or view attachments in Outlook on the web
 
@@ -30,7 +30,7 @@ When Microsoft 365 users try to open or view attachments in email messages in Ou
 
 This issue occurs if the attachment is blocked by Outlook on the web. By default, Outlook on the web blocks attachments that have the following file name extensions:
 
-`.ade`,`.adp`,`.apk`,`.app`,`.appx`,`.appcontent-ms`,`.application`,`.appref-ms`,`.asp`,`.aspx`,`.asx`,`.bas`,`.bat`,`.bgi`,`.cab`,`.cdxml`,`.cer`,`.chm`,`.cmd`,`.cnt`,`.com`,`.cpl`,`.crt`,`.csh`,`.der`,`.diagcab`,`.exe`,`.fxp`,`.gadget`,`.grp`,`.hlp`,`.hpj`,`.hta`,`.htc`,`.img`,`.inf`,`.ins`,`.iso`,`.isp`,`.its`,`.jar`,`.jnlp`,`.js`,`.jse`,`.ksh`,`.lnk`,`.mad`,`.maf`,`.mag`,`.mam`,`.maq`,`.mar`,`.mas`,`.mat`,`.mau`,`.mav`,`.maw`,`.mcf`,`.mda`,`.mdb`,`.mde`,`.mdt`,`.mdw`,`.mdz`,`.mht`,`.mhtml`,`.msc`,`.msh`,`.msh1`,`.msh1xml`,`.msh2`,`.msh2xml`,`.mshxml`,`.msi`,`.msp`,`.mst`,`.msu`,`.ops`,`.osd`,`.pcd`,`.pif`,`.pl`,`.plg`,`.prf`,`.prg`,`.printerexport`,`.ps1`,`.ps1xml`,`.ps2`,`.ps2xml`,`.psc1`,`.psc2`,`.psd1`,`.psdm1`,`.pssc`,`.pst`,`.py`,`.pyc`,`.pyo`,`.pyw`,`.pyz`,`.pyzw`,`.reg`,`.scf`,`.scr`,`.sct`,`.settingcontent-ms`,`.shb`,`.shs`,`.theme`,`.tmp`,`.udl`,`.url`,`.vb`,`.vbe`,`.vbp`,`.vbs`,`.vhd`,`.vhdx`,`.vsmacros`,`.vsw`,`.webpnp`,`.website`,`.ws`,`.wsb`,`.wsc`,`.wsf`,`.wsh`,`.xbap`,`.xll`,`.xnk`,`.library-ms`,`.search-ms`
+`.ade`,`.adp`,`.apk`,`.app`,`.appx`,`.appcontent-ms`,`.application`,`.appref-ms`,`.asp`,`.aspx`,`.asx`,`.bas`,`.bat`,`.bgi`,`.cab`,`.cdxml`,`.cer`,`.chm`,`.cmd`,`.cnt`,`.com`,`.cpl`,`.crt`,`.csh`,`.der`,`.diagcab`,`.exe`,`.fxp`,`.gadget`,`.grp`,`.hlp`,`.hpj`,`.hta`,`.htc`,`.img`,`.inf`,`.ins`,`.iso`,`.isp`,`.its`,`.jar`,`.jnlp`,`.js`,`.jse`,`.ksh`,`.library-ms`,`.lnk`,`.mad`,`.maf`,`.mag`,`.mam`,`.maq`,`.mar`,`.mas`,`.mat`,`.mau`,`.mav`,`.maw`,`.mcf`,`.mda`,`.mdb`,`.mde`,`.mdt`,`.mdw`,`.mdz`,`.mht`,`.mhtml`,`.msc`,`.msh`,`.msh1`,`.msh1xml`,`.msh2`,`.msh2xml`,`.mshxml`,`.msi`,`.msp`,`.mst`,`.msu`,`.ops`,`.osd`,`.pcd`,`.pif`,`.pl`,`.plg`,`.prf`,`.prg`,`.printerexport`,`.ps1`,`.ps1xml`,`.ps2`,`.ps2xml`,`.psc1`,`.psc2`,`.psd1`,`.psdm1`,`.pssc`,`.pst`,`.py`,`.pyc`,`.pyo`,`.pyw`,`.pyz`,`.pyzw`,`.reg`,`.scf`,`.scr`,`.search-ms`,`.sct`,`.settingcontent-ms`,`.shb`,`.shs`,`.theme`,`.tmp`,`.udl`,`.url`,`.vb`,`.vbe`,`.vbp`,`.vbs`,`.vhd`,`.vhdx`,`.vsmacros`,`.vsw`,`.webpnp`,`.website`,`.ws`,`.wsb`,`.wsc`,`.wsf`,`.wsh`,`.xbap`,`.xll`,`.xnk`
 
 ## Resolution
 
