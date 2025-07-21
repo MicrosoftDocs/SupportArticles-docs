@@ -117,11 +117,11 @@ To resolve this issue, verify your Windows Server has the following updates inst
 - Windows Server 2016 [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=cumulative%20windows%20server%202016) (latest cumulative update)
 - Windows Server 2019 [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=cumulative%20windows%20server%202019) (latest cumulative update)
   
-    Cumulative updates are released monthly. To deploy the latest update, you can use Windows Update or download it from the [Microsoft Update Catalog](https://catalog.update.microsoft.com). Before manual installation, review the associated Knowledge Base (KB) article to ensure all prerequisites are met.​ ​​If Windows Updates aren't installed before installing the Azure File Sync agent, the Storage Sync Agent service (FileSyncSvc) will fail to start.
+    Cumulative updates are released monthly. To deploy the latest update, you can use Windows Update or download it from the [Microsoft Update Catalog](https://catalog.update.microsoft.com). Before manual installation, review the associated Knowledge Base (KB) article to ensure all prerequisites are met.​ ​​If Windows updates aren't installed before installing the Azure File Sync agent, the Storage Sync Agent service (FileSyncSvc) will fail to start.
 
-## Auto Update doesn't upgrade "to be expired" or expired Azure File Sync Agent
+## Auto Update can't upgrade an "to be expired" or expired Azure File Sync agent
 
-If Auto Update doesn't upgrade your "to be expired" or expired Azure File Sync agent, check if the agent expiration information is properly applied to the server. The expiration metadata is required for Auto Update to function as expected.
+If Auto Update doesn't upgrade your Azure File Sync agent that is about to expire or has expired, verify that the agent expiration information is properly applied to the server. The expiration metadata is required for Auto Update to function as expected.
 
 To verify whether the `AgentExpirationDate` metadata is set, run the following command from an elevated PowerShell session:
 
@@ -130,7 +130,7 @@ Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.Se
 Get-StorageSyncServer
 ```
 
-If the `AgentExpirationDate` metadata isn't set or its value is empty, there might be a networking issue that prevents the server from receiving expiration data. To test network connectivity, run the following command:
+If the `AgentExpirationDate` metadata isn't set or its value is empty, there might be a networking issue that prevents the server from receiving the expiration data. To test network connectivity, run the following command:
 
 ```powershell
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
@@ -141,7 +141,7 @@ If network connectivity issues are reported, you can manually update the agent b
 
 After downloading the appropriate agent version, refer to the specific KB article in the catalog for step-by-step installation instructions.
 
-If there are no connectivity issues and the `AgentExpirationDate` is still not set, contact Azure File Sync support for further assistance.
+If there are no connectivity issues and the `AgentExpirationDate` metadata is still not set, contact Azure File Sync support for further assistance.
 
 ## High memory usage on the server
 
