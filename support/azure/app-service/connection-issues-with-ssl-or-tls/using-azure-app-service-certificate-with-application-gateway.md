@@ -4,7 +4,7 @@ description: Provides detailed steps to use Azure App Service Certificate togeth
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.service: azure-app-service
-ms.date: 07/16/2025
+ms.date: 07/21/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.custom: Connection issues with SSL or TLS
 ---
