@@ -4,7 +4,7 @@ description: Troubleshoot common issues that you might encounter with Azure File
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 07/16/2025
+ms.date: 07/21/2025
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -113,30 +113,35 @@ After installing or upgrading the Azure File Sync agent (v18 or later), you migh
 These issues occur because the Azure File Sync agent has a dependency on a Windows security feature and updates for this security feature aren't installed.
 
 To resolve this issue, verify your Windows Server has the following updates installed:
+
 - Windows Server 2016 [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=cumulative%20windows%20server%202016) (latest cumulative update)
 - Windows Server 2019 [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=cumulative%20windows%20server%202019) (latest cumulative update)
-  - Cumulative updates are released monthly. To deploy the latest update, users can either use Windows Update or manually download it from the [Microsoft Update Catalog](https://catalog.update.microsoft.com). If installing manually, users should review the associated KB article to ensure all prerequisites are met.​ ​​If the Windows Updates aren't installed prior to installing the Azure File Sync agent, the Storage Sync Agent service (FileSyncSvc) will fail to start.
-    
-## Auto Update not upgrading ‘to be expired’ or expired Azure File Sync Agent
+  
+    Cumulative updates are released monthly. To deploy the latest update, you can use Windows Update or download it from the [Microsoft Update Catalog](https://catalog.update.microsoft.com). Before manual installation, review the associated Knowledge Base (KB) article to ensure all prerequisites are met.​ ​​If Windows Updates aren't installed before installing the Azure File Sync agent, the Storage Sync Agent service (FileSyncSvc) will fail to start.
 
-If Auto Update isn't upgrading your ‘to be expired’ or expired Azure File Sync agent, check if the agent expiration information is properly applied to the server. The expiration metadata is required for Auto Update to function as expected.
+## Auto Update doesn't upgrade "to be expired" or expired Azure File Sync Agent
 
-To verify whether the `AgentExpirationDate` is set, run the following command from an elevated PowerShell session:
+If Auto Update doesn't upgrade your "to be expired" or expired Azure File Sync agent, check if the agent expiration information is properly applied to the server. The expiration metadata is required for Auto Update to function as expected.
+
+To verify whether the `AgentExpirationDate` metadata is set, run the following command from an elevated PowerShell session:
 
 ```powershell
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Get-StorageSyncServer
 ```
-If the `AgentExpirationDate` value isn't set or is empty, there might be a networking issue preventing the server from receiving expiration data. To test network connectivity, run the following command:
+
+If the `AgentExpirationDate` metadata isn't set or its value is empty, there might be a networking issue that prevents the server from receiving expiration data. To test network connectivity, run the following command:
 
 ```powershell
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Test-StorageSyncNetworkConnectivity
 ```
-If network connectivity issues are reported, you can manually update the agent by downloading it from the [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=azure%20file%20sync).
-After downloading the appropriate agent version, refer to the specific **Knowledge Base** article listed in the catalog for step-by-step installation instructions.
 
-If connectivity issues aren't found and the `AgentExpirationDate` is still not set, contact Azure File Sync support for further assistance.
+If network connectivity issues are reported, you can manually update the agent by downloading it from the [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=azure%20file%20sync).
+
+After downloading the appropriate agent version, refer to the specific KB article in the catalog for step-by-step installation instructions.
+
+If there are no connectivity issues and the `AgentExpirationDate` is still not set, contact Azure File Sync support for further assistance.
 
 ## High memory usage on the server
 
