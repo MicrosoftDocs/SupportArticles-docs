@@ -28,7 +28,7 @@ Users might experience permission-related issues that prevent successful log tra
 2. Check the role assignments:
    1. Go to **Access Control (IAM)** on the event hub namespace or resource group.
    1. Look for any Microsoft Insights or Azure Monitor-related identities that have the **Azure Event Hubs Data Sender** role.
-   1. Run the following command in Azure CLI to list role assignments:
+   1. To list role assignments, run the following command in Azure CLI:
 
     ```bash
      az role assignment list --scope <EventHubNamespaceResourceID> --output table
@@ -36,7 +36,7 @@ Users might experience permission-related issues that prevent successful log tra
 
 3. Verify data ingestion:
    1. Make sure that data is being ingested into the event hub as expected.
-   1. If issues persists, consider scheduling a remote session for further investigation.
+   1. If the issue persists, consider scheduling a remote session for further investigation.
 
 ## References
 
