@@ -45,16 +45,8 @@ items:
   href: service-not-start-after-patch-installed.md
 - name: Setup stops responding when you upgrade
   href: setup-stops-responding-upgrade.md
-- name: SQL on Windows 7 or Windows Server 2008 R2
-  href: issues-install-sql-server.md
-- name: SQL Server 2008 R2 and SQL Server 2008 Setup issues 
-  href: sql-server-2008-setup-issues.md
-- name: SQL Server 2012 Setup issues
-  href: sql-server-2012-setup-issues.md
 - name: SQL Server setup fails in DMZ
   href: cannot-install-sql-when-only-rodc-available.md
-- name: SxS install of X64 and X86 version of SSRS 2008
-  href: install-reporting-service.md
 - name: Troubleshoot common SQL Server Cumulative Update installation issues
   href: sqlserver-patching-issues.md
 - name: Update or Slipstream installation for SQL Server 2008

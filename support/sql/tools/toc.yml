@@ -15,8 +15,6 @@ items:
   href: replay-markup-language-utility.md
 - name: Request failed or the service did not respond in a timely fashion error when you start SQL Agent
   href: error-use-configuration-manager-restart-agent-service.md
-- name: The SQLDMO Application object failed to initialize when using Sqlmaint
-  href: error-you-run-sqlmaint-utility.md
 - name: Troubleshoot Database Mail issues
   href: troubleshoot-database-mail-issues.md
 - name: Troubleshooting and diagnostic tools for SQL Server on-premises and hybrid
