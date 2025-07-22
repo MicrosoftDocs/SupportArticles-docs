@@ -41,6 +41,7 @@ ms.date: 07/22/2025
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
+|Unable to extract log files.|You're trying to extract a log file but either the log files are empty or you see an error message. This behavior can occur when the logs contain partially corrupted zip files or log files.|Contact Microsoft Support by filing a request at [SERVICENOW](https://microsoft.service-now.com/sp?id=sc_cat_item&sys_id=0baac5bcdb0ca414b720f337689619ce&sysparm_category=8b859929136eea002620b0912244b066).|
 
 ## Issues with Teams phones
 
@@ -51,7 +52,6 @@ ms.date: 07/22/2025
 |Can't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | End the call made by using the **Consult first** option and then resume the original call.|
 |Unable to assign speed dial to line keys on a sidecar|When you assign speed dial contacts to line keys on the sidecar that is connected to a touch phone device, they don't work.|No workaround is available for the speed dial contacts that you assigned by using the sidecar. However the speed dial contacts that're already set up and shared line delegates and other groups are automatically pinned on the sidecar.|
 |Speed dial line key doesn't transfer an active call.|In older Teams Phones versions, you could transfer an active call by selecting a line key that is configured as a speed dial for a specific contact.<br/><br/>Beginning with Teams Phones version 1.7.0 1449/1.0.94.2025165302, you're only able to make an outgoing call to the speed dial after you select it from the **Transfer** menu.|If you want to transfer active calls to specific contacts, configure line keys as speed dials for those contacts and assign the **Transfer** and **Consult Transfer** menu options to the appropriate line keys.|
-|Unable to extract log files.|You're trying to extract a log file but either the log files are empty or you see an error message. This behavior can occur when the logs contain partially corrupted zip files or log files.|Contact Microsoft Support by filing a request at [SERVICENOW](https://microsoft.service-now.com/sp?id=sc_cat_item&sys_id=0baac5bcdb0ca414b720f337689619ce&sysparm_category=8b859929136eea002620b0912244b066).|
 
 ## Limitations
 
