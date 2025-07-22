@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Activity Log Download Issues
 description: Troubleshooting guide for Azure Activity Log Download Issues
-ms.date: 07/17/2025
+ms.date: 07/22/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
@@ -34,9 +34,9 @@ You can prevent the issue by preventing system from being overwhelmed. To do thi
 
 ## References
 
-- [Azure Activity Logs Overview](https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log)
-- [Troubleshooting Azure Storage Issues](https://learn.microsoft.com/azure/storage/common/storage-troubleshooting)
-- [Azure Monitor Documentation](https://learn.microsoft.com/azure/azure-monitor/)
-- [Azure portal Guide](https://learn.microsoft.com/azure/azure-portal/)
+- [Azure Activity Logs Overview](/azure/azure-monitor/essentials/activity-log)
+- [Azure Storage Documentation](/azure/storage/)
+- [Azure Monitor Documentation](/azure/azure-monitor/)
+- [Azure portal Guide](/azure/azure-portal/)
 
 If the issue persists after you follow these steps, open a support case for further assistance.
