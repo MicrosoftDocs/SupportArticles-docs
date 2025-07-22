@@ -9,7 +9,7 @@ ms.custom: Configure and Manage Log analytics tables
 
 # Troubleshoot custom table creation errors in Azure
 
-Users might receiev an error message that indicates that properties of undefined cannot be read when they try to create a custom table in Microsoft Azure. This issue can occur because of temporary glitches or misconfigurations. This article helps you determine the root cause of the errors and troubleshoot this issue efficiently.
+Users might receive an error message that indicates that properties of undefined can't be read when they try to create a custom table in Microsoft Azure. This issue can occur because of temporary glitches or misconfigurations. This article helps you determine the root cause of the errors and troubleshoot this issue efficiently.
 
 ## Common issues and solutions
 
