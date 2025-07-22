@@ -9,7 +9,7 @@ ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\
 ---
 # Troubleshoot common issues when using the wrap feature
 
-This guide provides solutions to common issues encountered when using the [wrap](/power-apps/maker/common/wrap/overview) feature in Microsoft Power Apps.
+This guide provides solutions to common issues you might encounter when using the [wrap](/power-apps/maker/common/wrap/overview) feature in Microsoft Power Apps.
 
 ## Issue 1: Wrap build fails
 
@@ -17,7 +17,7 @@ If your wrap build fails, try the following actions:
 
 ### Verify image formats
 
-All images in your wrap project must be in PNG format. Using other formats causes the build to fail. Use an image converter to convert images to `.png`.
+Ensure that all images in your wrap project are in PNG format. Using other formats can cause the build to fail. Use an image converter to convert images to `.png`.
 
 > [!IMPORTANT]  
 > Renaming a file extension to `.png` doesn't convert the image to PNG format.
@@ -36,7 +36,7 @@ Your key vault must contain:
 
 ## Issue 2: Wrap button is disabled
 
-You can only wrap apps if you have edit permissions. Confirm you have the correct permissions for the app and try again.
+Confirm you have edit permissions for the app and try again. For a list of requirements, see [Permission and access requirements for wrap](/power-apps/maker/common/wrap/prerequisites#permissions-and-access-requirements).
 
 ---
 
@@ -95,15 +95,11 @@ If you can't sign in or see data in your wrapped app, try the following actions:
 
 ## Other issues
 
-If your issue isn't covered here, or if the preceding steps don't resolve your problem, see [Next steps](#next-steps) to report your issue. Be prepared to provide detailed steps to reproduce the problem.
+If your issue isn't covered here, or if the preceding steps don't resolve your problem, [search for more support resources](https://powerapps.microsoft.com/support) or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support) and provide detailed steps to reproduce the problem.
 
 ### Collecting diagnostic information
 
-For troubleshooting sign-in issues, you can collect session details:
+For sign-in issues, you can collect session details and include it when you contact Microsoft support:
 
 - For wrap wizard: On the sign-in screen, tap the gear icon in the upper-right corner and select **Session Details**.
 - For mobile devices: After opening the app, press and hold the screen, and then select **Session Details**.
-
-## Next steps
-
-If your issue still persists, [search for more support resources](https://powerapps.microsoft.com/support) or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support).
