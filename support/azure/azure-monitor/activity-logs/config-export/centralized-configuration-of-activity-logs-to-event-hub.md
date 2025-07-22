@@ -1,7 +1,7 @@
 ---
 title: Centralized Configuration of Activity Logs to Event Hubs
 description: Provides guidance to set up Azure Activity Logs to be centrally exported to a single Event Hub.
-ms.date: 07/17/2025
+ms.date: 07/22/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
@@ -44,7 +44,7 @@ Organizations often require a centralized approach to manage Activity Logs acros
 
 ## Reference
 
-- [Azure Policy Assignment to Enable Activity Log on Subscription](https://learn.microsoft.com/azure/policy-assignment-to-enable-activity-log-on-subscription)
-- [Azure Event Hubs Overview](https://learn.microsoft.com/azure/event-hubs/event-hubs-about)
+- [Azure Policy Assignment to Enable Activity Log on Subscription](/azure/policy-assignment-to-enable-activity-log-on-subscription)
+- [Azure Event Hubs Overview](/azure/event-hubs/event-hubs-about)
 
 If the issue persists after you follow these steps, open a support case for further assistance.
