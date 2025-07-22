@@ -7,39 +7,38 @@ ms.service: azure-monitor
 ms.custom: Configure and Manage Log analytics tables
 ---
 
-# Troubleshoot Custom Table Creation Errors in Azure
+# Troubleshoot custom table creation errors in Azure
 
-When attempting to create a custom table in Azure, users may encounter an error message indicating that properties of undefined cannot be read. This issue can arise due to temporary glitches or misconfigurations. Understanding the root cause and following the appropriate troubleshooting steps can help resolve this problem efficiently.
+Users might receiev an error message that indicates that properties of undefined cannot be read when they try to create a custom table in Microsoft Azure. This issue can occur because of temporary glitches or misconfigurations. This article helps you determine the root cause of the errors and troubleshoot this issue efficiently.
 
-## Step-by-Step Instructions to Resolve Custom Table Creation Errors
+## Common issues and solutions
 
-1. **Verify JSON File Validity**
-   - Ensure that the JSON file used for table creation is correctly formatted and contains all necessary fields.
-   - Use tools like *JSONLint* to validate the JSON structure.
+- **Temporary Glitches**: Often, errors are temporary. You might be able to resolve the issue by trying the process again after a short time.
+- **Configuration Errors**: Make sure that all configurations and permissions are correctly set in Azure.
 
-2. **Check Azure Logs**
-   - Navigate to **Azure Monitor** and access the **Logs** section.
-   - Review the ARM logs for any error messages related to the custom table creation process.
+### Instructions to resolve custom table creation errors
 
-3. **Reattempt Table Creation**
-   - Retry the table creation process using the Azure portal or Azure CLI.
-   - If the error persists, consider using a different browser or clearing the browser cache.
+1. Verify JSON file validity:
+   1. Make sure that the JSON file that's used for table creation is correctly formatted and contains all the required fields.
+   1. Use tools such as *JSONLint* to validate the JSON structure.
 
-4. **Collect Diagnostic Information**
-   - Gather HAR files and console logs to identify any frontend issues.
-   - Use the Azure portal to capture network activity during the table creation attempt.
+2. Check the Azure logs:
+   1. Navigate to **Azure Monitor**, and access the **Logs** section.
+   1. Review the ARM logs for any error messages that are related to the custom table creation process.
 
-5. **Consult Azure Documentation**
-   - Refer to the [Azure Custom Tables Documentation](https://learn.microsoft.com/azure/monitoring-and-diagnostics/monitoring-custom-tables) for detailed guidance on creating custom tables.
+3. Try again to create tables:
+   1. Run the table creation process again by using the Azure portal or Azure CLI.
+   1. If the error persists, consider using a different browser or clearing the browser cache.
 
-### Common Issues and Solutions
+4. Collect diagnostic information:
+   1. Gather HAR files and console logs to identify any front-end issues.
+   1. Use the Azure portal to capture network activity during the table creation process.
 
-- **Temporary Glitches**: Often, errors may be temporary. Reattempting the process after a short interval can resolve the issue.
-- **Configuration Errors**: Ensure all configurations and permissions are correctly set in Azure.
+5. Consult Azure documentation: For detailed guidance to create custom tables, see [Azure Custom Tables Documentation](https://learn.microsoft.com/azure/monitoring-and-diagnostics/monitoring-custom-tables).
 
-## Reference
+## References
 
-- [Azure Monitor Overview](https://learn.microsoft.com/azure/azure-monitor/overview)
+- [Azure Monitor Overview]([https://learn.microsoft.com/azure/azure-monitor/fundamentals/overview]
 - [Troubleshooting Azure Issues](https://learn.microsoft.com/azure/azure-supportability/troubleshooting-azure-issues)
 
-If the issue persists after following the solution steps, please open a support case for further assistance.
+If the issue persists after you following these steps, open a support case for further assistance.
