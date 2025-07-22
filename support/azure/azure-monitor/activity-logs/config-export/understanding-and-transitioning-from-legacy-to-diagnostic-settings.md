@@ -39,7 +39,7 @@ Azure is retiring the legacy solution for forwarding activity logs and replacing
 ## Reference
 
 - [Azure Monitor Documentation](/azure/azure-monitor/platform/activity-log?tabs=powershell#managing-legacy-log-profiles---retiring)
-- [Get-AzLogProfile Command](/powershell/module/az.monitor/get-azlogprofile?view=azps-14.0.0)
-- [Azure CLI Log Profiles](/cli/azure/monitor/log-profiles?view=azure-cli-latest#az-monitor-log-profiles-list)
+- [Get-AzLogProfile Command](/powershell/module/az.monitor/get-azlogprofile?view=azps-14.0.0&preserve-view=true)
+- [Azure CLI Log Profiles](/cli/azure/monitor/log-profiles?view=azure-cli-latest#az-monitor-log-profiles-list&preserve-view=true)
 
 If the issue persists after following the solution steps, please open a support case for further assistance.
