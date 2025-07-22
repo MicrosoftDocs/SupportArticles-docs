@@ -13,7 +13,7 @@ Users might experience permission errors when they configure the Azure Activity 
 
 ## Common issues and solutions
 
-- **Authorization Failed**: This error indicates that the user does not have the necessary permissions to perform the action. Verify that the correct permissions are assigned and that the scope is set correctly.
+- **Authorization Failed**: This error indicates that the user doesn't have the necessary permissions to perform the action. Verify that the correct permissions are assigned and that the scope is set correctly.
 
 ### Instructions to resolve permission errors
 
