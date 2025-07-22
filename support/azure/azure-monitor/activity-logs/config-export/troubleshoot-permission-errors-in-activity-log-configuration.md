@@ -34,7 +34,7 @@ Users might experience permission errors when they configure the Azure Activity 
 
 ## References
 
-- [Azure Analysis Services Overview](/analysis-services/azure-analysis-services/analysis-services-overview?view=asallproducts-allversions)
+- [Azure Analysis Services Overview](/analysis-services/azure-analysis-services/analysis-services-overview?view=asallproducts-allversions&preserve-view=true)
 - [Log Analytics Contributor Role](/azure/role-based-access-control/built-in-roles/analytics#log-analytics-contributor)
 - [Azure Monitor Activity Log](/azure/azure-monitor/platform/activity-log?tabs=powershell)
 
