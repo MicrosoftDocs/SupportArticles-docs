@@ -7,12 +7,18 @@ items:
     items: 
     - name: Configuring Export in Azure Portal
       items: 
-      - name: Understanding and Transitioning from Legacy to Diagnostic Settings for Azure Activity Logs
+      - name: Understanding and Transitioning from Legacy to Diagnostic Settings for Activity Logs
         href: activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md
       - name: Diagnostic Settings Transition from Legacy Solutions
         href: activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md
+      - name: Detailed Guide on Pushing Subscription Activity Logs to Sentinel
+        href: activity-logs/config-export/pushing-subscription-activity-logs-to-sentinel.md
+      - name: Exporting Directory Level Activity Logs to Event Hub
+        href: activity-logs/config-export/exporting-directory-level-activity-logs-to-event-hub.md
+      - name: Resolving Log Limit Issues in Azure Function Apps
+        href: activity-logs/config-export/resolving-log-limit-issues-in-azure-function-apps.md
       - name: Understanding and Managing Diagnostic Settings Retention
-        href: activity-logs/config-export/understanding-and-managing-diagnostic-settings-retention.md
+        href: activity-logs/config-export/understanding-and-managing-diagnostic-settings-retention.md  
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting

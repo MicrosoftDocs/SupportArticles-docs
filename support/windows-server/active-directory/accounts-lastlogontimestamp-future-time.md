@@ -1,7 +1,7 @@
 ---
 title: Accounts Have the LastLogonTimestamp Value Set to Future
 description: Helps resolve an issue in which user or computer accounts have the lastLogonTimestamp value set to a future time.
-ms.date: 03/11/2025
+ms.date: 07/18/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -34,7 +34,7 @@ For previous versions of Windows, the approaches to resolve the issue are to:
 - Ignore the `lastLogonTimestamp` value and use other metrics to identify orphaned accounts.
 - Delete the affected accounts and create new ones.
 
-In Windows Server 2025, there's a new facility to repair broken objects as specified in [[MS-ADTS]: fixupObjectState](/openspecs/windows_protocols/ms-adts/37294765-9e7d-41a1-aded-2d6f744eee8c).
+In Windows Server 2022 and Windows Server 2025, there's a new facility to repair broken objects as specified in [[MS-ADTS]: fixupObjectState](/openspecs/windows_protocols/ms-adts/37294765-9e7d-41a1-aded-2d6f744eee8c).
 
 > [!NOTE]
 > There's functionality to correct missing `sAMAccountType` and `objectCategory` attributes. For more information, see [Can't edit or delete an AD object and receive the error "attribute is owned by the Security Accounts Manager (SAM)" or "The specified account does not exist"](cannot-edit-delete-ad-object-error-sam.md).
