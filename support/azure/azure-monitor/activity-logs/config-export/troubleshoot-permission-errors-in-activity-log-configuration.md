@@ -17,20 +17,20 @@ Users might experience permission errors when they configure the Azure Activity 
 
 ### Instructions to resolve permission errors
 
-**Step 1: Verify role assignments**
+1. Verify the role assignments:
    1. Navigate to the Azure portal.
    1. Go to **Subscriptions** and select the relevant subscription.
    1. Select **Access Control (IAM)** > **Role assignments**.
    1. Make sure that the custom role is assigned to the account that's responsible for creating the diagnostic settings.
 
-**Step 2: Assign necessary permissions**
+2. Assign the necessary permissions:
    1. Duplicate the **Log Analytics Contributor** role.
    1. Remove any unnecessary permissions.
    1. Make sure that the **Microsoft.Insights/diagnosticSettings/write** permission is included.
 
-**Step 3: Set scope appropriately** - Make sure that the scope is set to the **subscription level** instead of the resource group level.
+3. Make sure that the scope is set appropriately to the **subscription level** instead of the resource group level.
 
-**Step 4: Update credentials** - If access was recently granted, update the credentials to reflect the changes.
+4. If access was recently granted, update the credentials to reflect the changes.
 
 ## References
 
