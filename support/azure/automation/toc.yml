@@ -2,6 +2,8 @@
   href: welcome-automation.yml
 - name: Runbook not working as expected
   items:
+  - name: Common runbook creation problems
+    href: runbooks/issues-setting-up-hybrid-runbook-worker.md
   - name: Hybrid Runbook Worker job isn't working
     href: runbooks/runbook-fails-on-hybrid-worker.md
   - name: Runbook jobs get suspended
@@ -18,3 +20,5 @@
     href: runbooks/powershell-job-script-cmdlets-not-working.md
   - name: Troubleshoot Hybrid Runbook Worker Job Failures
     href: runbooks/troubleshoot-runbook-execution-issues.md
+
+
