@@ -1,7 +1,7 @@
 ---
 title: Understanding and Managing Diagnostic Settings Retention
 description: Provides guidance for understanding and managing diagnostic settings retention.
-ms.date: 07/17/2025
+ms.date: 07/22/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
@@ -26,7 +26,7 @@ When you manage Azure resources, you might experience issues that are related to
 
 2. **Check for legacy solutions**:
    - To determine whether legacy solutions are in use, run the following PowerShell command:
-     
+
      ```powershell
      $WorkspaceName = Get-AzOperationalInsightsWorkspace
      foreach ($Name in $WorkspaceName) {
@@ -41,7 +41,7 @@ When you manage Azure resources, you might experience issues that are related to
 
 ## References
 
-- [Azure Monitor Activity Logs](https://learn.microsoft.com/azure/azure-monitor/platform/activity-log?tabs=powershell#legacy-collection-methods)
-- [Azure Storage Lifecycle Management](https://learn.microsoft.com/azure/storage/blobs/storage-lifecycle-management-concepts)
+- [Azure Monitor Activity Logs](/azure/azure-monitor/platform/activity-log?tabs=powershell#legacy-collection-methods)
+- [Azure Storage Lifecycle Management](/azure/storage/blobs/storage-lifecycle-management-concepts)
 
 If the issue persists after you follow these steps, open a support case for further assistance.
