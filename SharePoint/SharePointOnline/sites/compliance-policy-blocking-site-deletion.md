@@ -68,5 +68,5 @@ If the test finds that the eDiscovery hold is within the 30-day grace period, yo
 
 ## More information
 
-To resolve the error in Scenario 4, manage holds using [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy) or the Purview portal and ensure the location is released from the case hold policy before attempting deletion. If the hold is not released, use [Set-CaseHoldPolicy](/powershell/module/exchange/set-caseholdpolicy) to release it, and if the policy cannot be found through Get-CaseHoldPolicy or the Purview portal, use the diagnostic tool [Invoke-HoldRemovalAction](/powershell/module/exchange/invoke-holdremovalaction) to clean up the orphan hold.
+To resolve the error in Scenario 4, manage holds using the [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy) command or the Microsoft Purview portal and ensure the location is released from the case hold policy before attempting deletion. If the hold is not released, use the [Set-CaseHoldPolicy](/powershell/module/exchange/set-caseholdpolicy) command to release it, and if the policy cannot be found by using the Get-CaseHoldPolicy commnad or the Purview portal, use the [Invoke-HoldRemovalAction](/powershell/module/exchange/invoke-holdremovalaction) command to clean up the orphan hold.
 
