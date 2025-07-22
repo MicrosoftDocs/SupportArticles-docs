@@ -4,7 +4,7 @@ description: Provides a fix for errors that occur when you try to delete a Share
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
-ms.date: 12/17/2023
+ms.date: 07/22/2025
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -48,12 +48,12 @@ Each of these error messages is generated when you try to delete a SharePoint or
 
 ## Resolution
 
-Verify the validity of the retention policy or determine whether the eDiscovery hold is within the grace period. To do this, run the following test in the Microsoft 365 admin center. You must have **Global** or **Compliance** administrator permissions to use these steps.
+Verify the validity of the retention policy or determine whether the eDiscovery hold is within the grace period. To do this, run the following diagnostic in the Microsoft 365 admin center. You must have at least Compliance administrator permissions to use these steps.
 
 > [!NOTE]
 > This diagnostic isn't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
 
-1. Select the **Run Tests: Invalid Retention or grace eDiscovery Hold** button to populate the associated test in the Microsoft 365 admin center:
+1. Select the **Run Tests: Invalid Retention or grace eDiscovery Hold** button to populate the associated diagnostic in the Microsoft 365 admin center:
 
    > [!div class="nextstepaction"]
    > [Run Tests: Invalid Retention or grace eDiscovery Hold](https://aka.ms/PillarInvalidRetention)
@@ -62,11 +62,9 @@ Verify the validity of the retention policy or determine whether the eDiscovery 
 
 3. Select **Run Tests**.
 
-If the test finds an invalid retention policy that might be blocking the deletion, you can choose to remove the policy. 
+If the diagnostic finds an invalid retention policy that might be blocking the deletion, you can choose to remove the policy. 
 
 If the test finds that the eDiscovery hold is within the 30-day grace period, you can choose to remove the hold.
 
-## More information
-
-To resolve the error in Scenario 4, manage holds using the [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy) command or the Microsoft Purview portal and ensure the location is released from the case hold policy before attempting deletion. If the hold is not released, use the [Set-CaseHoldPolicy](/powershell/module/exchange/set-caseholdpolicy) command to release it, and if the policy cannot be found by using the Get-CaseHoldPolicy commnad or the Purview portal, use the [Invoke-HoldRemovalAction](/powershell/module/exchange/invoke-holdremovalaction) command to clean up the orphan hold.
+**Note**: To resolve the error in Scenario 4, manage holds by using the [Get-CaseHoldPolicy](/powershell/module/exchange/get-caseholdpolicy) command or the Microsoft Purview portal and ensure the location is released from the case hold policy before attempting deletion. If the hold is not released, use the [Set-CaseHoldPolicy](/powershell/module/exchange/set-caseholdpolicy) command to release it, and if the policy cannot be found by using the Get-CaseHoldPolicy command or the Purview portal, use the [Invoke-HoldRemovalAction](/powershell/module/exchange/invoke-holdremovalaction) command to clean up the orphan hold.
 
