@@ -18,7 +18,7 @@ Users might experience permission errors when they configure the Azure Activity 
 ### Instructions to resolve permission errors
 
 **Step 1: Verify role assignments**
-   1. Navigate to **Azure Portal**.
+   1. Navigate to the Azure portal.
    1. Go to **Subscriptions** and select the relevant subscription.
    1. Select **Access Control (IAM)** > **Role assignments**.
    1. Make sure that the custom role is assigned to the account that's responsible for creating the diagnostic settings.
