@@ -9,7 +9,7 @@ ms.custom: sap:Desktop flows\Office automation
 ---
 # Errors when running desktop flows that include Excel actions
 
-This article outlines steps to mitigate errors that may occur when using [Excel actions](/power-automate/desktop-flows/actions-reference/excel) in Power automate desktop flows. Some of these errors might occur when you try to open a blank or existing Excel file using the Launch Excel action. Most errors occur in the context of multiple Excel actions, and there is no one-to-one mapping between specific errors and actions.
+This article outlines steps to mitigate errors that might occur when using [Excel actions](/power-automate/desktop-flows/actions-reference/excel) in Power Automate desktop flows. Some of these errors might occur when you try to open a blank or existing Excel file using the **Launch Excel** action. Most errors occur in the context of multiple Excel actions, and there's no one-to-one mapping between specific errors and actions.
 
 ## More information
 
