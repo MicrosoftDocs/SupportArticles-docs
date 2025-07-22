@@ -12,7 +12,7 @@ Process automation in Azure Automation allows you to create and manage PowerShel
 
 ## Service-level agreement (SLA)
 
-The SLA for runbook automation is 30 minutes. It's expected that 99.999 percent of runbooks start within five minutes of the scheduled time. For more information, see [SLAs for Online Services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
+The SLA for runbook automation is 30 minutes. It's expected that 99.9 percent of runbooks start within 30 minutes of the planned start time. For more information, see [SLAs for Online Services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
 
 The *SLA for the Automation Service - Process Automation* defines the following terms:
 
