@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure CLI Configuration Issues
 description: Troubleshooting guide for Azure CLI configuration issues.
-ms.date: 07/17/2025
+ms.date: 07/22/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of activity logs
@@ -37,8 +37,8 @@ This article discusses issues that are related to configuring Microsoft Azure to
 
 ## References
 
-- [Azure CLI Documentation](https://learn.microsoft.com/azure/cli/)
-- [PowerShell Documentation](https://learn.microsoft.com/powershell/)
-- [Azure Activity Logs Overview](https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log)
+- [Azure CLI Documentation](/azure/cli/)
+- [PowerShell Documentation](/powershell/)
+- [Azure Activity Logs Overview](/azure/azure-monitor/essentials/activity-log)
 
 If the issue persists after you follow these steps, open a support case for further assistance.
