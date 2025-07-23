@@ -3,9 +3,9 @@ title: Troubleshoot API server and etcd problems in AKS
 description: Provides a troubleshooting guide for API server and etcd problems in Azure Kubernetes Services.
 author: seguler
 ms.author: segule
-ms.date: 11/15/2024
+ms.date: 07/22/2025
 ms.service: azure-kubernetes-service
-ms.reviewer: mikerooney, v-weizhu, axelg, josebl, aritraghosh, v-leedennis
+ms.reviewer: kthakar1990, v-weizhu, axelg, josebl, aritraghosh, v-leedennis, v-liuamson
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot API server and etcd problems in Azure Kubernetes Services
@@ -16,7 +16,7 @@ Microsoft has tested the reliability and performance of the API server at a scal
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli).
+- The [Azure CLI](/cli/azure/install-azure-cli).
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool. To install kubectl by using Azure CLI, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
@@ -89,7 +89,40 @@ Although it's helpful to know which clients generate the highest request volume,
 
 ### Step 2: Identify and chart the average latency of API server requests per user agent
 
-To identify the average latency of API server requests per user agent as plotted on a time chart, run the following query:
+**1.a.** Use the API Server Resource Intensive Listing Detector in Azure Portal
+
+> **New:** Azure Kubernetes Service now provides a built-in analyzer to help you identify agents making resource-intensive LIST calls, which are a leading cause of API server and etcd performance issues.
+
+**How to access the detector:**
+
+1. Open your AKS cluster in the Azure portal.
+2. Go to **Diagnose and solve problems**.
+3. Click **Cluster and Control Plane Availability and Performance**.
+4. Select **API server resource intensive listing detector**.
+
+This detector analyzes recent API server activity and highlights agents or workloads generating large or frequent LIST calls. It provides a summary of potential impacts, such as request timeouts, increased 408/503 errors, node instability, health probe failures, and OOM-Kills in API server or etcd.
+
+#### How to interpret the detector output
+
+- **Summary:**  
+  Indicates if resource-intensive LIST calls were detected and describes possible impacts on your cluster.
+- **Analysis window:**  
+  Shows the 30-minute window analyzed, with peak memory and CPU usage.
+- **Read types:**  
+  Explains whether LIST calls were served from the API server cache (preferred) or required fetching from etcd (most impactful).
+- **Charts and tables:**  
+  Identify which agents, namespaces, or workloads are generating the most resource-intensive LIST calls.
+
+> Only successful LIST calls are counted. Failed or throttled calls are excluded.
+
+The analyzer also provides actionable recommendations directly in the Azure portal, tailored to the detected patterns, to help you remediate and optimize your cluster.
+
+> [!NOTE]
+> The API server resource intensive listing detector is available to all users with access to the AKS resource in the Azure portal. No special permissions or prerequisites are required.
+> 
+> After identifying the offending agents and applying the above recommendations, you can further use [Priority and Fairness](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/) or refer to [this section](/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/troubleshoot-apiserver-etcd?branch=pr-en-us-9260&tabs=resource-specific#cause-3-an-offending-client-makes-excessive-list-or-put-calls) to throttle or isolate problematic clients.
+
+**1.b.** Additionally, you can also run following query to identify the average latency of API server requests per user agent as plotted on a time chart:
 
 ### [Resource-specific](#tab/resource-specific)
 
