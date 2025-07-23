@@ -21,6 +21,9 @@ items:
         href: activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hub.md
       - name: Troubleshoot Azure CLI Configuration Issues
         href: activity-logs/config-export/troubleshoot-azure-cli-configuration-issues.md
+      - name: Resolve Issues Configuring Long-Term Storage for Azure Activity Logs
+        href: activity-logs/config-export/resolve-issues-configuring-long-term-storage-for-azure-activity-logs.md
+
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
