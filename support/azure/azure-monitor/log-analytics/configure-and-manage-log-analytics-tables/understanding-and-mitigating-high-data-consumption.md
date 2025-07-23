@@ -1,53 +1,44 @@
 ---
 title: Understanding and Mitigating High Data Consumption in Log Analytics
-description: Provides step-by-step instructions on how to resolve high data usage in Log Analytics.
+description: Provides instructions to resolve high data usage in Log Analytics.
 ms.date: 07/23/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: Configure and Manage Log analytics tables
 ---
 
-# Understanding and Mitigating High Data Consumption in Log Analytics
+# Understand and mitigate high data consumption in Log Analytics
 
-## Introduction
+This article discusses high data consumption that occurs in Log Analytics workspaces, and focuses on tables such as `AzureDiagnostics`. This article also provides insights into the costs that are associated with data usage, and offers steps to optimize and reduce these costs.
 
-This article addresses the issue of high data consumption in Log Analytics workspaces, specifically focusing on tables like `AzureDiagnostics`. It provides insights into understanding the costs associated with data usage and offers steps to optimize and reduce these costs.
+## Common issues and solutions
 
-## Common Issues and Solutions
+- **Data retention**: Make sure that data retention settings are configured appropriately to avoid unnecessary storage costs.
+- **Data filtering**: Implement data filtering to collect only necessary data and reduce the volume of data ingested.
 
-- **Data Retention**: Ensure that data retention settings are configured appropriately to avoid unnecessary storage costs.
-- **Data Filtering**: Implement data filtering to only collect necessary data, reducing the volume of data ingested.
+### Instructions to resolve high data usage
 
-### Step-by-Step Instructions to Resolve High Data Usage
+1. Identify high data tables:
 
-1. **Identify High Data Tables:**
-
-    - Use the `AzureDiagnostics` table to determine which Reference are sending large amounts of data.
-    - Run the following query in your Log Analytics workspace:
+   1. Use the `AzureDiagnostics` table to determine which listed references are sending large amounts of data.
+   1. To identify the reference that's contributing to high data usage, run the following query in your Log Analytics workspace:
 
         ```plaintext
         AzureDiagnostics | distinct _ResourceId
         ```
+2. Review the diagnostic settings:
 
-    - This will help you identify the Reference contributing to high data usage.
+   1. Navigate to the diagnostic settings of the identified reference.
+   1. Remove unnecessary diagnostic settings if the data is not required. This step stops the data from being sent to the AzureDiagnostics table.
 
-2. **Review Diagnostic Settings:**
+3. Review the articles in the ["References" section](#reference) to understand the costs that are associated with your Log Analytics workspace.
 
-    - Navigate to the diagnostic settings of the identified Reference.
-    - Remove unnecessary diagnostic settings if the data is not needed. This will stop the data from being sent to the AzureDiagnostics table.
+4. Follow the best practices that are outlined in the "References" section to optimize data usage and reduce costs.
 
-3. **Understand Cost Implications:**
-
-    Review the articles in the [reference section](#reference) to understand the costs associated with your Log Analytics workspace.
-
-4. **Implement Cost Optimization Strategies**:
-
-    - Follow the best practices outlined in the Reference to optimize data usage and reduce costs.
-
-## Reference
+## References
 
 - [Understand Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/)
 - [Best Practices for Cost Management](/azure/azure-monitor/fundamentals/best-practices-cost)
 - [Cost Management for Logs](/azure/azure-monitor/logs/cost-logs)
 
-If the issue persists after following the solution steps, please open a support case for further assistance.
+If the issue persists after you follow the solution steps, open a support case for further assistance.
