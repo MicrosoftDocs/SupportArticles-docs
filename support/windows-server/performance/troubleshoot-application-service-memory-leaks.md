@@ -1,5 +1,5 @@
 ---
-title: Aplication or service memory leaks troubleshooting guidance
+title: Application or service memory leaks troubleshooting guidance
 description: Provides guidance on how to troubleshoot application or service memory leaks.
 ms.date: 07/22/2025
 manager: dcscontentpm
@@ -22,7 +22,7 @@ Apart from this event, you also notice high memory consumption by checking live 
 
 The following troubleshooting process is helpful for both scenarios where first-party and third-party processes might be leaking memory. For first-party processes, you can use the public symbol store available. However, if you can't see the actual function in a third-party process, you can engage the vendor for further checking. Even if the function doesn't show, the allocation stack should indicate a third-party module.
 
-A few SysInternals tools and Windows Performance Toolkit will be used.
+A few SysInternals tools and Windows Performance Toolkit are used.
 
 ## Before you begin
 
@@ -42,15 +42,15 @@ Description:
 Windows successfully diagnosed a low virtual memory condition. The following programs consumed the most virtual memory:wpa.exe (9844) consumed 13714722816 bytes, msedgewebview2.exe (112572) consumed 3037757440 bytes, and EngHost.exe (37280) consumed 2619834368 bytes.
 ```
 
-:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/task-manager-testlimit.png" alt-text="Screenshot of Task Manager showing the Testlimit process with high memory consumption.":::
+:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/task-manager-test-limit.png" alt-text="Screenshot of Task Manager showing the process with high memory consumption.":::
 
 The memory shown in the default list of columns isn't the one that should be focused on, since it represents the memory privately used by the process but backed by physical memory (working set). You need to verify virtual memory that is used by the operating system for its operation regardless of the way the virtual memory is backed (RAM or pagefile). In this case, you need to verify **Commit size**.
 
-Here're some examples:
+Here are some examples:
 
-:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/task-manager-testlimit-commit-size.png" alt-text="Screenshot of Task Manager showing the Testlimit process with high commit size.":::
+:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/task-manager-test-limit-commit-size.png" alt-text="Screenshot of Task Manager showing the process with high commit size.":::
 
-:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/task-manager-virtmem-commit-size.png" alt-text="Screenshot of Task Manager showing the VirtMemTest32 process with high commit size.":::
+:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/task-manager-virtual-memory-commit-size.png" alt-text="Screenshot of Task Manager showing the VirtMemTest32 process with high commit size.":::
 
 You can use [VMMap](/sysinternals/downloads/vmmap) and [Windows Performance Toolkit](/windows-hardware/test/wpt) for the troubleshooting.
 
@@ -58,7 +58,7 @@ VMMap is used to determine the type of memory leaks. The Windows Performance Too
 
 ## Gather data
 
-During this stage, if the memory usage is growing over time and not releasing, which indicates a leak pattern. The increase doesn't need to be a straight line to fall into this pattern, what matters is that the memory usage keeps on increasing over time.
+During this stage, if the memory usage is growing over time and not releasing, which indicates a leak pattern. The increase doesn't need to be a straight line to fall into this pattern, the key point is that the memory usage keeps on increasing over time.
 
 :::image type="content" source="./media/troubleshoot-application-service-memory-leaks/increase-leak-pattern.png" alt-text="Screenshot of the memory usage with an increase pattern.":::
 
@@ -68,7 +68,7 @@ At this point, with a leak pattern, you need to determine the leaking memory typ
 
 When virtual allocation memory is leaked, it's represented in VMMap as **Private Data**:
 
-:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/vmmap-private-data.png" alt-text="Screenshot of the virtual allocation memory leaks represented as Private Data in VMMap.":::
+:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/virtual-memory-private-data.png" alt-text="Screenshot of the virtual allocation memory leaks represented as Private Data in VMMap.":::
 
 If you have a memory dump of the process, you can run the following command to see the memory layout. Virtual allocation shows as `<unknown>`:
 
@@ -92,7 +92,7 @@ PEB32                                     1        0`00001000 (   4.000 kB)   0.
 
 When heap allocation memory is leaked, it's represented with **Heap**:
 
-:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/virtmem-heap-allocation.png" alt-text="Screenshot of the VirMemTest32 process with the heap allocation memory leaks represented as Heap in VMMap.":::
+:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/virtual-memory-heap-allocation.png" alt-text="Screenshot of the VirMemTest32 process with the heap allocation memory leaks represented as Heap in VMMap.":::
 
 If you have a memory dump of the process, you can run the following command to see the memory layout. Heap allocation shows as `Heap`:
 
@@ -119,7 +119,7 @@ PEB32                                     1        0`00001000 (   4.000 kB)   0.
 
 With the way to identify the leaking memory, the next step is to collect reproducible data to determine the driver responsible for the leaking allocations.
 
-Use the following command to collect data when the process shows the behavior. Note that **WPR.exe** is included natively on operating systems after Windows 10 or Windows Server 2016.
+Use the following command to collect data when the process shows the behavior. **WPR.exe** is included natively on operating systems after Windows 10 or Windows Server 2016.
 
 Run the following command from a command prompt as an administrator:
 
@@ -129,7 +129,7 @@ C:\>wpr -start VirtualAllocation
 
 Allow the process to run for some time. You can monitor the growth of memory consumption with Task Manager (**Commit size**).
 
-Since it only collects virtual allocation data, the trace file won't grow that big, so you can let it run for several minutes. Once you see enough leaked memory, stop the trace by using the following command:
+Since it only collects virtual allocation data, the trace file won't grow that large, so you can let it run for several minutes. Once you see enough leaked memory, stop the trace by using the following command:
 
 ```console
 C:\>wpr -stop virtalloc.etl
@@ -137,7 +137,7 @@ C:\>wpr -stop virtalloc.etl
 
 ### Collect trace data for heap allocation memory
 
-Like virtual allocation, you can also leverage WPR for heap tracing.
+Like virtual allocation, you can also use WPR for heap tracing.
 
 However, a registry modification is required to enable the heap tracing. You can manually modify the registry or run the following command to enable heap tracing for the target process (for example, **VirtMemTest32.exe**).
 
@@ -161,7 +161,7 @@ Value data: `0x00000001 (1)`
 
 You can delete the registry key after the troubleshooting or set the value to `0`.
 
-Use the following command to collect data when the process shows the behavior. Note that WPR.exe is included natively on operating systems after Windows 10 or Windows Server 2016.
+Use the following command to collect data when the process shows the behavior. **WPR.exe** is included natively on operating systems after Windows 10 or Windows Server 2016.
 
 Run the following command from a command prompt as an administrator:
 
@@ -171,7 +171,7 @@ C:\>wpr -start Heap
 
 Allow the process to run for some time. You can monitor the growth of memory consumption with Task Manager (**Commit size**).
 
-Since it only collects heap data, the trace file won't grow that big, so you can let it run for several minutes. Once you see enough leaked memory, stop the trace by using the following command:
+Since it only collects heap data, the trace file won't grow that large, so you can let it run for several minutes. Once you see enough leaked memory, stop the trace by using the following command:
 
 ```console
 C:\>wpr -stop Heap.etl
