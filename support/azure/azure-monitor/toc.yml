@@ -23,6 +23,8 @@ items:
         href: activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hub.md
       - name: Troubleshoot Azure CLI Configuration Issues
         href: activity-logs/config-export/troubleshoot-azure-cli-configuration-issues.md
+      - name: Troubleshoot Export of Audit Logs to Another Tenant
+        href: activity-logs/config-export/troubleshoot-export-of-audit-logs-to-another-tenant.md
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
