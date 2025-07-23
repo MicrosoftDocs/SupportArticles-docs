@@ -27,6 +27,8 @@ items:
         href: activity-logs/config-export/troubleshoot-export-of-audit-logs-to-another-tenant.md
       - name: Troubleshoot Activity Log Download Issues
         href: activity-logs/config-export/troubleshoot-activity-log-download-issues.md
+      - name: Troubleshoot Permission Errors in Activity Log Configuration
+        href: activity-logs/config-export/troubleshoot-permission-errors-in-activity-log-configuration.md
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
