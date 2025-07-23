@@ -95,8 +95,8 @@ items:
   items:
   - name: Configure and Manage Log analytics tables
     items:
-    - name: Understanding and Mitigating High Data Consumption in Log Analytics
-      href: log-analytics/configure-and-manage-log-analytics-tables/understanding-and-mitigating-high-data-consumption.md
+    - name: Understand and mitigate high data consumption in Log Analytics
+      href: log-analytics/configure-and-manage-log-analytics-tables/understand-and-mitigate-high-data-consumption-log-analytics.md
   - name: Log Analytics workspaces
     items:
     - name: Error code 0x80090016 - keyset doesn't exist
