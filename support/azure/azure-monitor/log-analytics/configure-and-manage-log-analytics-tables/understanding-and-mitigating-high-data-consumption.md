@@ -46,7 +46,7 @@ This article addresses the issue of high data consumption in Log Analytics works
 
 ## Reference
 
-- [Understand Azure Monitor pricing](https://azure.microsoft.com/en-us/pricing/details/monitor/)
+- [Understand Azure Monitor pricing](https://azure.microsoft.com/pricing/details/monitor/)
 - [Best Practices for Cost Management](/azure/azure-monitor/fundamentals/best-practices-cost)
 - [Cost Management for Logs](/azure/azure-monitor/logs/cost-logs)
 
