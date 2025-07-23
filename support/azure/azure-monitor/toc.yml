@@ -25,6 +25,8 @@ items:
         href: activity-logs/config-export/troubleshoot-azure-cli-configuration-issues.md
       - name: Troubleshoot Export of Audit Logs to Another Tenant
         href: activity-logs/config-export/troubleshoot-export-of-audit-logs-to-another-tenant.md
+      - name: Troubleshoot Activity Log Download Issues
+        href: activity-logs/config-export/troubleshoot-activity-log-download-issues.md
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
