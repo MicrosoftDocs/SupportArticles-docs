@@ -62,7 +62,7 @@ During this stage, if the memory usage is growing over time and not releasing, w
 
 At this point, with a leak pattern, you need to determine the leaking memory type. Open VMMap and select the process that has been identified as the leaking memory.
 
-### Determin the memory type
+### Determine the memory type
 
 When virtual allocation memory is leaked, it's represented in VMMap as **Private Data**:
 
