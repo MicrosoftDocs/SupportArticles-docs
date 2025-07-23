@@ -30,7 +30,7 @@ Any one of the following factors might cause the stop error:
 - Corrupted files in the Boot partition (for example, corruption in the volume that's labeled **SYSTEM** when you run the `diskpart` > `list vol` command)
 - If there's a blank GPT entry before the entry of the Boot partition
 
-## Troubleshoot this error
+## Troubleshoot Inaccessible_Boot_Device stop error
 
 Start the computer in [Windows Recovery Mode (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference#span-identrypointsintowinrespanspan-identrypointsintowinrespanspan-identrypointsintowinrespanentry-points-into-winre) by following these steps.
 
