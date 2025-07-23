@@ -1,7 +1,7 @@
 ---
 title: Understanding and Mitigating High Data Consumption in Log Analytics
 description: Provides step-by-step instructions on how to resolve high data usage in Log Analytics.
-ms.date: 07/16/2025
+ms.date: 07/23/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: Configure and Manage Log analytics tables
@@ -38,11 +38,7 @@ This article addresses the issue of high data consumption in Log Analytics works
 
 3. **Understand Cost Implications:**
 
-    Review the following Reference to understand the costs associated with your Log Analytics workspace:
-
-    - [Understand Log Analytics Workspace Billing](https://learn.microsoft.com/azure/azure-monitor/log-analytics/billing/understand-log-analytics-workspace-bill)
-    - [Best Practices for Cost Management](https://learn.microsoft.com/azure/azure-monitor/fundamentals/best-practices-cost)
-    - [Cost Management for Logs](https://learn.microsoft.com/azure/azure-monitor/logs/cost-logs)
+    Review the articles in the [reference section](#reference) to understand the costs associated with your Log Analytics workspace.
 
 4. **Implement Cost Optimization Strategies**:
 
@@ -50,8 +46,8 @@ This article addresses the issue of high data consumption in Log Analytics works
 
 ## Reference
 
-- [Understand Log Analytics Workspace Billing](https://learn.microsoft.com/azure/azure-monitor/log-analytics/billing/understand-log-analytics-workspace-bill)
-- [Best Practices for Cost Management](https://learn.microsoft.com/azure/azure-monitor/fundamentals/best-practices-cost)
-- [Cost Management for Logs](https://learn.microsoft.com/azure/azure-monitor/logs/cost-logs)
+- [Understand Azure Monitor pricing](https://azure.microsoft.com/en-us/pricing/details/monitor/)
+- [Best Practices for Cost Management](/azure/azure-monitor/fundamentals/best-practices-cost)
+- [Cost Management for Logs](/azure/azure-monitor/logs/cost-logs)
 
 If the issue persists after following the solution steps, please open a support case for further assistance.
