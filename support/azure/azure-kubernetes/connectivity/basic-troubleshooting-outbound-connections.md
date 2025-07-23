@@ -1,8 +1,8 @@
 ---
 title: Basic troubleshooting of outbound connections from an AKS cluster
 description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/28/2024
-ms.reviewer: chiragpa, rissing, jopalhei, jaewonpark, v-leedennis, v-weizhu, juliayin
+ms.date: 07/23/2025
+ms.reviewer: chiragpa, rissing, jopalhei, jaewonpark, v-leedennis, v-weizhu, juliayin, v-liuamson
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to perform basic troubleshooting of outbound connections from an Azure Kubernetes Service (AKS) cluster so that I don't experience connection issues when I use AKS.
