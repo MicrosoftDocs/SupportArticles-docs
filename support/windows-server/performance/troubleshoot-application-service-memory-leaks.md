@@ -157,7 +157,7 @@ Value name: `Tracing Flags`
 Value type: `REG_DWORD`  
 Value data: `0x00000001 (1)`
 
-You can delete the registry key after the troubleshooting or set the value to `0`.
+You can delete the registry key or set the value to `0` after the troubleshooting.
 
 Use the following command to collect data when the process shows the behavior. **WPR.exe** is included natively on operating systems after Windows 10 or Windows Server 2016.
 
