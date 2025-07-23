@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot Activity Log Download Issues
-description: Troubleshooting guide for Azure Activity Log Download Issues
+description: Troubleshooting guide for Azure activity log download issues
 ms.date: 07/22/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
 
-# Troubleshooting Activity Log download issues
+# Troubleshooting activity log download issues
 
 When users try to download activity logs from Microsoft Azure, they might receive error messages that indicate that the CSV file wasn't prepared. This issue often occurs if the requested logs exceed a certain volume and cause the process to fail. Understanding the root cause and implementing the right solutions can help resolve this issue efficiently.
 
@@ -18,25 +18,27 @@ When users try to download activity logs from Microsoft Azure, they might receiv
 
 ### Instructions to resolve download failures
 
-1. **Identify the error**: Check the error message to verify that it relates to the CSV file preparation failure.
-2. **Adjust the time range**: Navigate to the Azure portal, and access the Activity Logs section. Reduce the time range that you're trying to download logs for. This change can help decrease the number of logs that are processed.
-3. **Clear the cache**: Clear your browser cache to make sure that no outdated data is causing issues.
-4. **Request fewer logs**: If possible, break down the log requests into smaller batches to avoid overwhelming the system.
-5. **Check storage account**: Make sure that the storage account where logs are stored is reachable and correctly configured.
+1. Check the error message to verify that it relates to the CSV file preparation failure.
+2. Navigate to the Azure portal, and access the **Activity Logs** section. Reduce the time range that you're trying to download logs for. This change can help decrease the number of logs that are processed.
+3. Clear your browser cache to make sure that no outdated data is causing issues.
+4. If possible, break down the log requests into smaller batches to avoid overwhelming the system.
+5. Make sure that the storage account where the logs are stored is reachable and correctly configured.
 
-## FAQ: Azure Activity Log download
+## FAQ: Azure activity log download
 
-- **Why does the download fail?**
-  The download might fail if the number of requested logs is too large and prevents the system from being able to process them.
+**Q1: Why does the download fail?**
 
-- **How can I prevent this issue?**
-You can prevent the issue by preventing system from being overwhelmed. To do this, reduce the time range, and request logs in smaller batches.
+**A1:** The download might fail if the number of requested logs is excessive and prevents the system from being able to process the logs.
+
+**Q2: How can I avoid download failures?**
+
+**A2:** To avoid this issue, prevent the system from being overwhelmed. To do this, reduce the time range for the download, and request logs in smaller batches.
 
 ## References
 
 - [Azure Activity Logs Overview](/azure/azure-monitor/essentials/activity-log)
-- [Azure Storage Documentation](/azure/storage/)
-- [Azure Monitor Documentation](/azure/azure-monitor/)
-- [Azure portal Guide](/azure/azure-portal/)
+- [Azure Storage documentation](/azure/storage/)
+- [Azure Monitor documentation](/azure/azure-monitor/)
+- [Azure portal guide](/azure/azure-portal/)
 
 If the issue persists after you follow these steps, open a support case for further assistance.
