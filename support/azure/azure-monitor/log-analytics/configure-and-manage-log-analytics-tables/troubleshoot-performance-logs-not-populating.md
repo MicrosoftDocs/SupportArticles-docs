@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Performance Logs Not Populating in Azure Government
 description: Troubleshooting guide for performance logs not populating in Azure Government.
-ms.date: 07/16/2025
+ms.date: 07/23/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: Configure and Manage Log analytics tables
@@ -36,8 +36,8 @@ When setting up alerts for VM insights using Data Collection Rules (DCR) in Azur
 
 ## Reference
 
-- [Azure Monitor Documentation](https://learn.microsoft.com/azure/azure-monitor/)
-- [Log Analytics Workspace Overview](https://learn.microsoft.com/azure/azure-monitor/logs/log-analytics-workspace-overview)
-- [Creating and Managing Alerts in Azure](https://learn.microsoft.com/azure/azure-monitor/alerts/alerts-overview)
+- [Azure Monitor Documentation](/azure/azure-monitor/)
+- [Log Analytics Workspace Overview](/azure/azure-monitor/logs/log-analytics-workspace-overview)
+- [Creating and Managing Alerts in Azure](/azure/azure-monitor/alerts/alerts-overview)
 
 If the issue persists after following the solution steps, please open a support case for further assistance.
