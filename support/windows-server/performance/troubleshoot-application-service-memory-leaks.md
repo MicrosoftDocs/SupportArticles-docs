@@ -22,8 +22,6 @@ Apart from this event, you also notice high memory consumption by checking live 
 
 The following troubleshooting process is helpful for both scenarios where first-party and third-party processes might be leaking memory. For first-party processes, you can use the public symbol store available. However, if you can't see the actual function in a third-party process, you can engage the vendor for further checking. Even if the function doesn't show, the allocation stack should indicate a third-party module.
 
-A few SysInternals tools and Windows Performance Toolkit are used.
-
 ## Before you begin
 
 You might see the following examples in the system event log and Task Manager.
@@ -64,7 +62,7 @@ During this stage, if the memory usage is growing over time and not releasing, w
 
 At this point, with a leak pattern, you need to determine the leaking memory type. Open VMMap and select the process that has been identified as the leaking memory.
 
-### Determining the memory type
+### Determin the memory type
 
 When virtual allocation memory is leaked, it's represented in VMMap as **Private Data**:
 
@@ -154,9 +152,9 @@ Heap tracing was successfully enabled for process **VirtMemTest64.exe**.
 
 The result is:
 
-Registry key: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Image File Execution Options\VirtMemTest32.exe`
-Value name: `Tracing Flags`
-Value type: `REG_DWORD`
+Registry key: `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Image File Execution Options\VirtMemTest32.exe`  
+Value name: `Tracing Flags`  
+Value type: `REG_DWORD`  
 Value data: `0x00000001 (1)`
 
 You can delete the registry key after the troubleshooting or set the value to `0`.
@@ -193,9 +191,9 @@ Replicate the following view by replacing the process with the one you've identi
 
 Replicate the following view by replacing the process with the one you've already identified as relevant. Ensure that the **Handle** and **Stack** columns are on the left of the gold/yellow line. Drill down by expanding the stack, and you'll see the function that shows the allocation of heap memory. The driver listed before (up) the function is the one calling to that operation.
 
+> [!NOTE]
+> If you don't see the heap allocation graph, it's because the registry key isn't set correctly. Review the steps.
+
 :::image type="content" source="./media/troubleshoot-application-service-memory-leaks/trace-data-heap-allocation.png" alt-text="Screenshot of the analysis of the trace data for heap allocation memory." lightbox="./media/troubleshoot-application-service-memory-leaks/trace-data-heap-allocation.png":::
 
 :::image type="content" source="./media/troubleshoot-application-service-memory-leaks/heap-allocation-function-driver.png" alt-text="Screenshot of the analysis of the trace data for heap allocation memory with the drive listed." lightbox="./media/troubleshoot-application-service-memory-leaks/heap-allocation-function-driver.png":::
-
-> [!NOTE]
-> If you don't see the heap allocation graph, it's because the registry key isn't set correctly. Review the steps.
