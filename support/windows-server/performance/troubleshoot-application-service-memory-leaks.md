@@ -187,15 +187,15 @@ Open WPA and set up the symbol path. In the menu, select **Trace** > **Configure
 
 Replicate the following view by replacing the process with the one you've identified as relevant. Ensure that the **Commit Stack** column is on the left of the gold/yellow line. Drill down by expanding the stack, and you'll see the function that shows the allocation of virtual memory. The driver listed before (up) the function is the one calling to that operation.
 
-:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/trace-data-virtual-allocation.png" alt-text="Screenshot of the analysis trace data for virtual allocation memory.":::
+:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/trace-data-virtual-allocation.png" alt-text="Screenshot of the analysis trace data for virtual allocation memory." lightbox="./media/troubleshoot-application-service-memory-leaks/trace-data-virtual-allocation.png":::
 
 ### Analyze trace data for heap allocation memory
 
 Replicate the following view by replacing the process with the one you've already identified as relevant. Ensure that the **Handle** and **Stack** columns are on the left of the gold/yellow line. Drill down by expanding the stack, and you'll see the function that shows the allocation of heap memory. The driver listed before (up) the function is the one calling to that operation.
 
-:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/trace-data-heap-allocation.png" alt-text="Screenshot of the analysis of the trace data for heap allocation memory.":::
+:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/trace-data-heap-allocation.png" alt-text="Screenshot of the analysis of the trace data for heap allocation memory." lightbox="./media/troubleshoot-application-service-memory-leaks/trace-data-heap-allocation.png":::
 
-:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/heap-allocation-function-driver.png" alt-text="Screenshot of the analysis of the trace data for heap allocation memory with the drive listed.":::
+:::image type="content" source="./media/troubleshoot-application-service-memory-leaks/heap-allocation-function-driver.png" alt-text="Screenshot of the analysis of the trace data for heap allocation memory with the drive listed." lightbox="./media/troubleshoot-application-service-memory-leaks/heap-allocation-function-driver.png":::
 
 > [!NOTE]
 > If you don't see the heap allocation graph, it's because the registry key isn't set correctly. Review the steps.
