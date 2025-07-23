@@ -9,7 +9,7 @@ ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\
 ---
 # Azure key vault errors in wrap for Power Apps
 
-This article provides step-by-step solutions for Azure Key Vault errors you might encounter when using the [wrap wizard](https://learn.microsoft.com/en-us/power-apps/maker/common/wrap/wrap-how-to) to build your mobile app.
+This article provides step-by-step solutions for Azure Key Vault errors you might encounter when using the [wrap wizard](/power-apps/maker/common/wrap/wrap-how-to) to build your mobile app.
 
 | Error code | Error message |
 |------------|-------------|
@@ -232,6 +232,7 @@ For more information, see [Step 2: Target platform](/power-apps/maker/common/wra
 
 If your issue isn't covered here, or if the preceding steps don't resolve your problem, [search for more support resources](https://powerapps.microsoft.com/support) or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support) and provide detailed steps to reproduce the problem.
 
-## Next steps
+## Related information
 
-If your issue still persists, [search for more support resources](https://powerapps.microsoft.com/support) or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support).
+- ["Something went wrong" error that occurs when using the wrap feature](something-went-wrong-error-codes.md)
+- [Troubleshoot common issues when using the wrap feature](wrap-issues.md)

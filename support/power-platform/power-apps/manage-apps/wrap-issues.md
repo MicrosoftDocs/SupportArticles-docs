@@ -87,9 +87,11 @@ If you can't sign in or see data in your wrapped app, try the following actions:
 
 1. Ensure the user has access to the app. For more information, see [Share a canvas app with your organization](/power-apps/maker/canvas-apps/share-app).
 
-2. If the user has app access but still can't sign in, check the [conditional Access policies in Microsoft Entra admin center](/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies).
+2. If the user has app access but still can't sign in, check the [Conditional Access policies in Microsoft Entra admin center](/entra/identity/monitoring-health/how-to-view-applied-conditional-access-policies).
 
-3. Use the correlation ID from the failed sign-in screen for further troubleshooting.
+3. To troubleshoot sign-in errors, copy the correlation ID from the mobile screen where the sign-in is failing and refer [How to troubleshoot Microsoft Entra sign-in errors](/entra/identity/monitoring-health/howto-troubleshoot-sign-in-errors) to understand the error and the failing policies.
+
+4. Check [Microsoft Entra authentication and authorization error codes](/entra/identity-platform/reference-error-codes).
 
 ---
 

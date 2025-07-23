@@ -22,7 +22,7 @@ The APK is signed with a different key than the one registered in the Microsoft 
 - A different keystore is used during the build process.
 - The registered hash key is incorrectly generated or copied (for example, it includes extra spaces or invalid characters.)
 
-To fix this issue, you need to verify the Signature Hash Key:
+To resolve this issue, verify that the Signature Hash Key is correct:
 
 1. [Generate the correct hash key](/power-apps/maker/common/wrap/code-sign-android#generate-keys) from the keystore used to sign the app.
 
@@ -43,7 +43,7 @@ The redirect URI being used by the app doesn't match what's registered in the po
 - Redirect URIs are case-sensitive. Mismatches might occur if the Bundle ID or URI is entered with incorrect casing.
 - Special characters in the URI (such as `%2F`, `%3D`) must be properly encoded and match exactly what is registered in Microsoft Entra ID.
 
-To fix this issue, you need to check the Redirect URI:
+To resolve this issue, verify that the Redirect URI is correct:
 
 1. Install [Android Studio](https://developer.android.com/studio) and set up an emulator.
 
