@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Custom Log Table Creation in Azure
 description: Troubleshooting guide for custom log table creation in Azure.
-ms.date: 07/16/2025
+ms.date: 07/23/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: Configure and Manage Log analytics tables
@@ -25,7 +25,7 @@ Users might receive an error message that states "Cannot read properties of unde
    1. Navigate to the Azure portal > **Log Analytics Workspace**.
    1. Create a DCR specifically for the custom log table. Avoid using an existing DCR that collects other types of data because this action can cause configuration conflicts.
 
-3. Follow the steps that are outlined in the [Azure documentation](https://learn.microsoft.com/azure/azure-monitor/vm/data-collection-log-json#create-custom-table) to create the custom table by using a PowerShell script. This method allows you to specify the file pattern and verify the DCR configuration after the creation is finished.
+3. Follow the steps that are outlined in the [Azure documentation](/azure/azure-monitor/vm/data-collection-log-json#create-custom-table) to create the custom table by using a PowerShell script. This method allows you to specify the file pattern and verify the DCR configuration after the creation is finished.
 
 4. To be able to perform these actions, make sure that you have at least the Contributor role in the relevant Azure Workspace.
 
@@ -33,7 +33,7 @@ Users might receive an error message that states "Cannot read properties of unde
 
 ## Reference
 
-- [Create Custom Table in Azure](https://learn.microsoft.com/azure/azure-monitor/vm/data-collection-log-json#create-custom-table)
-- [Data Collection Rule Best Practices](https://learn.microsoft.com/azure/azure-monitor/data-collection/data-collection-rule-best-practices)
+- [Create Custom Table in Azure](/azure/azure-monitor/vm/data-collection-log-json#create-custom-table)
+- [Data Collection Rule Best Practices](/azure/azure-monitor/data-collection/data-collection-rule-best-practices)
 
 If the issue persists after you follow these steps, please open a support case for further assistance.
