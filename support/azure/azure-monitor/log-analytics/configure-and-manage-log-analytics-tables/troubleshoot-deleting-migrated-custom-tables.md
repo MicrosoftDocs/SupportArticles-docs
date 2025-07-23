@@ -1,32 +1,32 @@
 ---
 title: Troubleshoot Deleting Migrated Custom Tables in Log Analytics
-description: Step-by-step guide on how to resolve issues with deleting migrated custom tables in Log Analytics.
+description: Troubleshooting guide to deleting migrated custom tables in Log Analytics.
 ms.date: 07/23/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
-ms.custom: Configure and Manage Log analytics tables
+ms.custom: Configure and manage Log Analytics tables
 ---
 
-# Troubleshoot Deleting Migrated Custom Tables in Log Analytics
+# Troubleshoot deleting migrated custom tables in Log Analytics
 
-When attempting to delete a custom log table in Log Analytics, users may encounter issues due to the table being migrated. This guide provides a solution to effectively resolve this problem.
+Users might experience issues when they try to delete custom log tables in Log Analytics if the tables were migrated. This guide provides a solution to effectively resolve these issues.
 
-## Common Issues and Solutions
+## Common issues and solutions
 
-- **API Access Issues**: Ensure you have the necessary permissions to use the API.
-- **Table Not Found**: Confirm the correct table name and workspace details.
+- **API Access Issues**: Make sure that you have the necessary permissions to use the API.
+- **Table Not Found**: Verify the correct table name and workspace details.
 
 ### Solution: Use Azure Log Analytics API
 
-To delete a migrated custom table, follow these steps using the Azure Log Analytics API:
+To delete a migrated custom table, follow these steps by using the Azure Log Analytics API:
 
-1. **Access Azure Portal**: Navigate to the [Azure portal](https://portal.azure.com) and login to your Azure account.
-2. **Locate Log Analytics Workspace**: Access the **Log Analytics workspaces** section and select the workspace containing the table you wish to delete.
-3. **Use API for Deletion**: Use the **Tables - Delete** API to remove the table. Refer to the link in the [reference section](#reference) for detailed instructions.
-4. **Verify Deletion**: After executing the API call, confirm that the table has been successfully deleted by checking the workspace.
+1. Navigate to the [Azure portal](https://portal.azure.com), and log in to your Azure account.
+2. Access the **Log Analytics workspaces** section, and select the workspace that contains the table that you want to delete.
+3. Use the **Tables - Delete** API to remove the table. For detailed instructions, refer to the ["References" section](#reference).
+4. After you run the API call, check the workspace to verify that the table is successfully deleted.
 
-## Reference
+## References
 
-- [Azure Log Analytics API Documentation](/rest/api/loganalytics/)
+- [Azure Log Analytics API documentation](/rest/api/loganalytics/)
 
-If the issue persists after following the solution steps, please open a support case for further assistance.
+If the issue persists after you follow these steps, open a support case for further assistance.
