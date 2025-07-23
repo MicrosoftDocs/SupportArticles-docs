@@ -32,7 +32,7 @@
       href: create-and-use-apps/filter-blank-records.md
     - name: '"Something went wrong" error when using the wrap feature' 
       href: manage-apps/something-went-wrong-error-codes.md
-    - name: Troubleshoot common issues when using the wrap feature
+    - name: Troubleshoot common wrap issues
       href: manage-apps/wrap-issues.md
     - name: Troubleshoot Azure key vault errors in the wrap wizard
       href: manage-apps/azure-key-vault-errors.md

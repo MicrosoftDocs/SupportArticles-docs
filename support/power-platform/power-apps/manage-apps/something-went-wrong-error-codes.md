@@ -4,7 +4,7 @@ description: Provides solutions to the error messages that occur when using the 
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 07/17/2025
+ms.date: 07/23/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # "Something went wrong" error that occurs when using the wrap feature
@@ -15,27 +15,14 @@ This article provides solutions to the error messages that occur when using the 
 
 This issue might occur due to a Signature Hash Key mismatch or a Redirect URI mismatch during the app authentication process.
 
-#### Common root causes
-
-##### Cause 1: Signature Hash Key mismatch
+#### Cause 1: Signature Hash Key mismatch
 
 The APK is signed with a different key than the one registered in the Microsoft Entra ID application. This might occur if:
 
 - A different keystore is used during the build process.
-
 - The registered hash key is incorrectly generated or copied (for example, it includes extra spaces or invalid characters.)
 
-##### Cause 2: Redirect URI mismatch
-
-The redirect URI being used by the app doesn't match what's registered in the portal:
-
-- Redirect URIs are case-sensitive. Mismatches might occur if the Bundle ID or URI is entered with incorrect casing.
-
-- Special characters in the URI (such as `%2F`, `%3D`) must be properly encoded and match exactly what is registered in Microsoft Entra ID.
-
-#### How to fix the issue
-
-##### Verify the Signature Hash Key
+To fix this issue, you need to verify the Signature Hash Key:
 
 1. [Generate the correct hash key](/power-apps/maker/common/wrap/code-sign-android#generate-keys) from the keystore used to sign the app.
 
@@ -49,7 +36,14 @@ The redirect URI being used by the app doesn't match what's registered in the po
 
 6. If the hash key is missing or incorrect, add or update it as needed, and then save your changes.
 
-##### Check the Redirect URI
+#### Cause 2: Redirect URI mismatch
+
+The redirect URI being used by the app doesn't match what's registered in the portal:
+
+- Redirect URIs are case-sensitive. Mismatches might occur if the Bundle ID or URI is entered with incorrect casing.
+- Special characters in the URI (such as `%2F`, `%3D`) must be properly encoded and match exactly what is registered in Microsoft Entra ID.
+
+To fix this issue, you need to check the Redirect URI:
 
 1. Install [Android Studio](https://developer.android.com/studio) and set up an emulator.
 
@@ -73,7 +67,7 @@ The redirect URI being used by the app doesn't match what's registered in the po
 
 11. If manually entering the Bundle ID in the portal, double-check for case consistency.
 
-#### Recommended practices
+### Recommended practices
 
 To avoid this error in the future:
 
@@ -86,7 +80,7 @@ To avoid this error in the future:
 
 The error might occur when the app registration isn't configured to support [multitenant accounts](/security/zero-trust/develop/identity-supported-account-types#accounts-in-any-organizational-directory-only---multitenant).
 
-#### Common root causes
+#### Cause
 
 This error typically occurs when the app registration is created using the wrap wizard, which by default sets the app to single-tenant mode. If the user doesn't manually update this setting or accidentally selects single tenant during manual app registration, wrap app is unable to authenticate, resulting in error code 9n155.
 
@@ -100,15 +94,9 @@ This error typically occurs when the app registration is created using the wrap 
 
 ## Other issues
 
-If your issue isn't covered here, or if the preceding steps don't resolve your problem, see [Next steps](#next-steps) to report your issue. Be prepared to provide detailed steps to reproduce the problem.
+If your issue isn't covered here, or if the preceding steps don't resolve your problem, [search for more support resources](https://powerapps.microsoft.com/support) or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support) and provide detailed steps to reproduce the problem.
 
-### Collecting diagnostic information
+## Related information
 
-For troubleshooting sign-in issues, you can collect session details:
-
-- For wrap wizard: On the sign-in screen, tap the gear icon in the upper-right corner and select **Session Details**.
-- For mobile devices: After opening the app, press and hold the screen, and then select **Session Details**.
-
-## Next steps
-
-If your issue still persists, [search for more support resources](https://powerapps.microsoft.com/support) or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support).
+- [Azure key vault errors in wrap for Power Apps](azure-key-vault-errors.md)
+- [Troubleshoot common issues when using the wrap feature](wrap-issues.md)

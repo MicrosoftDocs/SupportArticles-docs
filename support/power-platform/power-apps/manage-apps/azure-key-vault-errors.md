@@ -4,12 +4,12 @@ description: Provides solutions to the Azure key vault errors that occur when us
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 07/17/2025
+ms.date: 07/23/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Azure key vault errors in wrap for Power Apps
 
-You might encounter these error codes in the wrap wizard:
+This article provides step-by-step solutions for Azure Key Vault errors you might encounter when using the [wrap wizard](https://learn.microsoft.com/en-us/power-apps/maker/common/wrap/wrap-how-to) to build your mobile app.
 
 | Error code | Error message |
 |------------|-------------|
@@ -26,7 +26,7 @@ You might encounter these error codes in the wrap wizard:
 
 ## Error code 1000118
 
-Erroe message: Default subscription not found, or missing access permissions.
+Error message: Default subscription not found, or missing access permissions.
 
 #### Resolution steps
 
@@ -230,14 +230,7 @@ For more information, see [Step 2: Target platform](/power-apps/maker/common/wra
 
 ## Other issues
 
-If your issue isn't covered here, or if the preceding steps don't resolve your problem, see [Next steps](#next-steps) to report your issue. Be prepared to provide detailed steps to reproduce the problem.
-
-### Collecting diagnostic information
-
-For troubleshooting sign-in issues, you can collect session details:
-
-- For wrap wizard: On the sign-in screen, tap the gear icon in the upper-right corner and select **Session Details**.
-- For mobile devices: After opening the app, press and hold the screen, and then select **Session Details**.
+If your issue isn't covered here, or if the preceding steps don't resolve your problem, [search for more support resources](https://powerapps.microsoft.com/support) or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support) and provide detailed steps to reproduce the problem.
 
 ## Next steps
 
