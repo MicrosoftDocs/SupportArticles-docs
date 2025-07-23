@@ -181,7 +181,7 @@ C:\>wpr -stop Heap.etl
 
 Use **WPA.exe** to open the trace. WPA can be downloaded via the Assessment and Deployment Kit (ADK) package for the Windows Performance Toolkit.
 
-Open WPA and set up the symbol path. In the menu, select **Trace** > **Configure Symbol Paths**. Configure symbols by adding the public symbol path as **srv*C:\LocalPubSymbols*https://msdl.microsoft.com/download/symbols**, so you can load symbols (in the menu, select **Trace** > **Load Symbols**) before checking the trace.
+Open WPA and set up the symbol path. In the menu, select **Trace** > **Configure Symbol Paths**. Configure symbols by adding the public symbol path as `srv*C:\LocalPubSymbols*https://msdl.microsoft.com/download/symbols`, so you can load symbols (in the menu, select **Trace** > **Load Symbols**) before checking the trace.
 
 ### Analyze trace data for virtual allocation memory
 
