@@ -14,18 +14,17 @@ When you manage Azure resources, you might experience issues that are related to
 ## Common issues and solutions
 
 - **Issue**: Users might notice that templates aren't displayed when they try to verify resources that are affected by the transition from legacy solutions to diagnostic settings.
-- **Root cause**: The automatic switch from activity log solutions to diagnostic settings might cause confusion if they're not well understood.
+- **Root cause**: The automatic switch from activity log solutions to diagnostic settings might cause confusion if users don't fully understand diagnostic settings retention.
 
 ### Instructions to resolve diagnostic settings issues
 
-1. **Verify resource effect**:
-   - Navigate to the Azure portal > **All Services**.
-   - Select **Resource Manager**.
-   - Select **Deploy**, and then select **Templates** in the left pane.
-   - Check whether any resources are affected by the transition.
+1. Determine how resources are affected:
+   1. Navigate to the Azure portal > **All Services**.
+   1. Select **Resource Manager**.
+   1. Select **Deploy**, and then select **Templates** in the left pane.
+   1. Check whether any resources are affected by the transition.
 
-2. **Check for legacy solutions**:
-   - To determine whether legacy solutions are in use, run the following PowerShell command:
+2. To determine whether legacy solutions are in use, run the following PowerShell command:
 
      ```powershell
      $WorkspaceName = Get-AzOperationalInsightsWorkspace
@@ -34,14 +33,13 @@ When you manage Azure resources, you might experience issues that are related to
      }
      ```
 
-   - If no output is returned, legacy solutions aren't in use, and no further action is required.
+   If no output is returned, legacy solutions aren't in use, and no further action is required.
 
-3. **Automatic Transition**:
-   - Understand that the transition to diagnostic settings is automatic. If your environment is already using diagnostic settings, no additional steps are necessary.
+3. Understand that the transition to diagnostic settings is automatic. If your environment is already using diagnostic settings, no additional steps are necessary.
 
 ## References
 
-- [Azure Monitor Activity Logs](/azure/azure-monitor/platform/activity-log?tabs=powershell#legacy-collection-methods)
-- [Azure Storage Lifecycle Management](/azure/storage/blobs/storage-lifecycle-management-concepts)
+- [Azure Monitor activity logs](/azure/azure-monitor/platform/activity-log?tabs=powershell#legacy-collection-methods)
+- [Azure Storage lifecycle management](/azure/storage/blobs/storage-lifecycle-management-concepts)
 
 If the issue persists after you follow these steps, open a support case for further assistance.
