@@ -7,37 +7,32 @@ ms.service: azure-monitor
 ms.custom: Configure and Manage Log analytics tables
 ---
 
-# Troubleshoot Performance Logs Not Populating in Azure Government
+# Troubleshoot performance logs not populating in Azure Government
 
-When setting up alerts for VM insights using Data Collection Rules (DCR) in Azure Government, users may encounter issues where performance logs fail to populate. This problem typically arises when creating alerts through DCR, as opposed to executing queries directly in the Log Analytics workspace.
+Users might experience issues if performance logs don't populate in Azure Government when they set up alerts for virtual machine (VM) insights by using Data Collection Rules (DCR). This issue typically occurs when users create alerts through DCR inistead of running queries directly in the Log Analytics workspace.
 
-## Common Issues and Solutions
+## Common issues and solutions
 
-- **Issue**: Alerts fail to populate performance logs when using DCR.
-- **Root Cause**: The custom KQL query is executed against the DCR, which lacks access to necessary data tables. The scope defaults to DCR, preventing data retrieval.
-- **Solution**: Set the alert scope to the Log Analytics workspace associated with the DCR.
+- **Issue**: Alerts don't populate performance logs when you use DCR.
+- **Root Cause**: The custom KQL query is run against the DCR, but the DCR lacks access to the required data tables. In this situation, the alert scope defaults to DCR. This action prevents data retrieval.
+- **Solution**: Set the alert scope to the Log Analytics workspace that's associated with the DCR.
 
-### Step-by-Step Instructions to Resolve Performance Log Issues
+### Instructions to resolve performance log issues
 
-1. **Access Azure Monitor**:
-   - Navigate to the Azure portal and select **Azure Monitor** from the services list.
+1. Navigate to the Azure portal, and select **Azure Monitor** on the services list.
 
-2. **Create or Edit an Alert**:
-   - Go to **Alerts** and choose to create a new alert rule or edit an existing one.
+2. Go to **Alerts** and select the option to either create an alert rule or edit an existing rule.
 
-3. **Set the Correct Scope**:
-   - In the alert rule configuration, ensure the **Scope** is set to the Log Analytics workspace, not the DCR. This allows the query to access the necessary data tables.
+3. In the alert rule configuration, make sure that the **Scope** value is set to the Log Analytics workspace, not to the DCR. This setting enables the query to access the required data tables.
 
-4. **Verify Query Execution**:
-   - Test the query directly in the Log Analytics workspace to ensure it runs successfully without errors.
+4. Verify that the query runs successfully without errors by testing it directly in the Log Analytics workspace.
 
-5. **Save and Test the Alert**:
-   - Save the alert configuration and test it to confirm that performance logs are now populating correctly.
+5. Save the alert configuration, and test it to verify that performance logs are now populating correctly.
 
-## Reference
+## References
 
 - [Azure Monitor Documentation](/azure/azure-monitor/)
 - [Log Analytics Workspace Overview](/azure/azure-monitor/logs/log-analytics-workspace-overview)
 - [Creating and Managing Alerts in Azure](/azure/azure-monitor/alerts/alerts-overview)
 
-If the issue persists after following the solution steps, please open a support case for further assistance.
+If the issue persists after you following these steps, open a support case for further assistance.
