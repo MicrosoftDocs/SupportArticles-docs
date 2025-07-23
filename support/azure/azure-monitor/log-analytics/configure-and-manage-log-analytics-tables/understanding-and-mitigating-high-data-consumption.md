@@ -29,11 +29,11 @@ This article discusses high data consumption that occurs in Log Analytics worksp
 2. Review the diagnostic settings:
 
    1. Navigate to the diagnostic settings of the identified reference.
-   1. Remove unnecessary diagnostic settings if the data is not required. This step stops the data from being sent to the AzureDiagnostics table.
+   1. Remove unnecessary diagnostic settings if the data isn't required. This step stops the data from being sent to the AzureDiagnostics table.
 
 3. Review the articles in the ["References" section](#reference) to understand the costs that are associated with your Log Analytics workspace.
 
-4. Follow the best practices that are outlined in the "References" section to optimize data usage and reduce costs.
+4. To optimize data usage and reduce costs, follow the best practices that are outlined in the "References" section.
 
 ## References
 
