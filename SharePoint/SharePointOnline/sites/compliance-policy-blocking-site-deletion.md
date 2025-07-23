@@ -35,6 +35,9 @@ You might experience one of the following scenarios.
 **Scenario 2:** When you try to delete a version of a document that's on a SharePoint site or on a Microsoft OneDrive site, you receive the following error message:
 
 > Versions of this item cannot be deleted because it is on hold or retention policy.
+ 
+> [!NOTE]
+> This error message should read, "Versions of this item cannot be deleted because the item is on hold or is subject to a retention policy."
 
 **Scenario 3:** You exclude or remove a SharePoint or a OneDrive site from a retention policy. More than 24 hours after you make these updates, you try to delete the site or a version of a document on the site. However, the attempt is unsuccessful, and you receive one of the error messages that are mentioned in scenarios 1 and 2.
 
