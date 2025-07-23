@@ -9,12 +9,12 @@ ms.custom: Configure and Manage Log analytics tables
 
 # Troubleshoot performance logs not populating in Azure Government
 
-Users might experience issues if performance logs don't populate in Azure Government when they set up alerts for virtual machine (VM) insights by using Data Collection Rules (DCR). This issue typically occurs when users create alerts through DCR inistead of running queries directly in the Log Analytics workspace.
+Users might experience issues if performance logs don't populate in Azure Government when they set up alerts for virtual machine (VM) insights by using Data Collection Rules (DCR). This issue typically occurs when users create alerts through DCR instead of running queries directly in the Log Analytics workspace.
 
 ## Common issues and solutions
 
 - **Issue**: Alerts don't populate performance logs when you use DCR.
-- **Root Cause**: The custom KQL query is run against the DCR, but the DCR lacks access to the required data tables. In this situation, the alert scope defaults to DCR. This action prevents data retrieval.
+- **Root Cause**: The custom KQL query is run against the DCR, but the DCR can't access to the required data tables. In this situation, the alert scope defaults to DCR. This action prevents data retrieval.
 - **Solution**: Set the alert scope to the Log Analytics workspace that's associated with the DCR.
 
 ### Instructions to resolve performance log issues
@@ -31,8 +31,8 @@ Users might experience issues if performance logs don't populate in Azure Govern
 
 ## References
 
-- [Azure Monitor Documentation](/azure/azure-monitor/)
-- [Log Analytics Workspace Overview](/azure/azure-monitor/logs/log-analytics-workspace-overview)
-- [Creating and Managing Alerts in Azure](/azure/azure-monitor/alerts/alerts-overview)
+- [Azure Monitor documentation](/azure/azure-monitor/)
+- [Log Analytics workspace overview](/azure/azure-monitor/logs/log-analytics-workspace-overview)
+- [Create and manage alerts in Azure](/azure/azure-monitor/alerts/alerts-overview)
 
-If the issue persists after you following these steps, open a support case for further assistance.
+If the issue persists after you follow these steps, open a support case for further assistance.
