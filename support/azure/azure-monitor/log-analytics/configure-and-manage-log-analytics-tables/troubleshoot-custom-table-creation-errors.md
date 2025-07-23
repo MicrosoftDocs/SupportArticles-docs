@@ -34,11 +34,11 @@ Users might receive an error message that indicates that properties of undefined
    1. Gather HAR files and console logs to identify any front-end issues.
    1. Use the Azure portal to capture network activity during the table creation process.
 
-5. Consult Azure documentation: For detailed guidance to create custom tables, see [Azure Custom Tables Documentation](https://learn.microsoft.com/azure/monitoring-and-diagnostics/monitoring-custom-tables).
+5. Consult Azure documentation: For detailed guidance on custom tables, see [Manage tables in a Log Analytics workspace](/azure/azure-monitor/logs/manage-logs-tables?tabs=azure-portal).
 
 ## References
 
-- [Azure Monitor Overview]([/azure/azure-monitor/fundamentals/overview])
+- [Azure Monitor Overview](/azure/azure-monitor/fundamentals/overview)
 - [Create an Azure support request](/azure/azure-portal/supportability/how-to-create-azure-support-request)
 
 If the issue persists after you following these steps, open a support case for further assistance.
