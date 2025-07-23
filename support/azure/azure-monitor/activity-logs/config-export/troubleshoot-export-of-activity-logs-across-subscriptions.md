@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Export of Activity Logs across Azure Subscriptions
 description: Troubleshooting guide for resolving issues that affect exporting activity logs across Azure subscriptions.
-ms.date: 07/17/2025
+ms.date: 07/23/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
@@ -40,6 +40,6 @@ Users might experience permission-related issues that prevent successful log tra
 
 ## References
 
-- [Authorize access to Azure Event Hubs](https://learn.microsoft.com/azure/event-hubs/authorize-access-event-hubs)
-- [Diagnostic settings in Azure](https://learn.microsoft.com/azure/azure-monitor/essentials/diagnostic-settings)
-- [Azure CLI Documentation](https://learn.microsoft.com/cli/azure)
+- [Authorize access to Azure Event Hubs](/azure/event-hubs/authorize-access-event-hubs)
+- [Diagnostic settings in Azure](/azure/azure-monitor/essentials/diagnostic-settings)
+- [Azure CLI Documentation](/cli/azure)
