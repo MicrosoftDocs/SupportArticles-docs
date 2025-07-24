@@ -16,7 +16,7 @@ For information on VM image related errors:
 For information on network connection related errors:
 
 - [Errors related to network connection](/graph/api/resources/cloudpconpremisesconnectionhealthcheck#cloudpconpremisesconnectionhealthcheckerrortype-values) that's used in a hosted machine.
-- Specific to issues with object synchronization when configuring Microsoft Entra join, please refer to [cloud sync troubleshooting](entra/identity/hybrid/cloud-sync/how-to-troubleshoot) and [troubleshoot an object that is not synchronizing with Microsoft Entra ID](/entra/identity/hybrid/connect/tshoot-connect-object-not-syncing)
+- Specific to issues with object synchronization when configuring Microsoft Entra join, please refer to [cloud sync troubleshooting](/entra/identity/hybrid/cloud-sync/how-to-troubleshoot) and [troubleshoot an object that is not synchronizing with Microsoft Entra ID](/entra/identity/hybrid/connect/tshoot-connect-object-not-syncing)
 
 The following table provides information about hosted machine provisioning errors and the steps to mitigate such errors.
 
