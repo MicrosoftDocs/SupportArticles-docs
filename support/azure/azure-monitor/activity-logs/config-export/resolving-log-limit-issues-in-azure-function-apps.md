@@ -9,7 +9,7 @@ ms.custom: I can’t configure export of Activity Logs
 
 # Resolve log limit issues in Azure Function Apps
 
-This article discusses the issue of Azure Function Apps reaching their daily log limit. This condition prevents additional logs from being sent and affects the application's performance and monitoring capabilities. The issue might occur if the log volume exceeds the configured quota. 
+This article discusses the issue of Azure Function Apps reaching their daily log limit. This condition prevents additional logs from being sent and affects the application's performance and monitoring capabilities. The issue might occur if the log volume exceeds the configured quota.
 
 ## Instructions to resolve log limit issues
 

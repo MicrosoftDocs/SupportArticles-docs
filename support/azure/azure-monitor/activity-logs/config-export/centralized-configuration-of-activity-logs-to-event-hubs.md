@@ -42,7 +42,7 @@ Organizations often require a centralized approach to manage Activity Logs acros
 - **Performance concerns:** If the event hub experiences difficulty in handling the log volume, consider upgrading the tier or distributing logs across multiple hubs.
 - **Policy limitations:** Azure Policy might require manual steps for each subscription. Make sure that all configurations are correctly applied.
 
-## Reference
+## References
 
 - [Azure Policy Assignment to enable Activity Log on Subscription](https://techcommunity.microsoft.com/discussions/azure/policy-assignment-to-enable-activity-log-on-subscription/2471006)
 - [Azure Event Hubs Overview](/azure/event-hubs/event-hubs-about)

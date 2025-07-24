@@ -36,7 +36,7 @@ Azure is retiring the legacy solution for forwarding activity logs and replacing
    1. For users with legacy log profiles, manually transition to diagnostic settings by following the steps outlined in the Azure documentation.
    1. Ensure all configurations are updated before the retirement date to avoid disruptions.
 
-## Reference
+## References
 
 - [Azure Monitor Documentation](/azure/azure-monitor/platform/activity-log?tabs=powershell#managing-legacy-log-profiles---retiring)
 - [Get-AzLogProfile Command](/powershell/module/az.monitor/get-azlogprofile?view=azps-14.0.0&preserve-view=true)
