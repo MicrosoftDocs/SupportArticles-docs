@@ -87,7 +87,7 @@ This article provides instructions to configure custom DNS servers and search do
 
     :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-1.png" alt-text="Screenshot of default resolv.conf file in Ubuntu.":::
 
-2. Starting with Ubuntu20.04, `resolv.conf` file is a symbolic link to `/run/systemd/resolve/stub-resolv.conf`. For more information about this stub file, significance and usage of different `resolv.conf` files, and `systemd-resolved` service, see: https://manpages.ubuntu.com/manpages/bionic/man8/systemd-resolved.service.8.html#:~:text=systemd%2Dresolved%20is%20a%20system,an%20LLMNR%20resolver%20and%20responder.
+2. Starting with Ubuntu 20.04, `resolv.conf` file is a symbolic link to `/run/systemd/resolve/stub-resolv.conf`. For more information about this stub file, significance and usage of different `resolv.conf` files, and `systemd-resolved` service, see [systemd-resolved](https://manpages.ubuntu.com/manpages/bionic/man8/systemd-resolved.service.8.html#:~:text=systemd%2Dresolved%20is%20a%20system,an%20LLMNR%20resolver%20and%20responder)
    
     :::image type="content" source="./media/custom-dns-config-images/ubuntu-dns-2.png" alt-text="Screenshot of resolv.conf file linked to stub-resolv.conf file":::
 
