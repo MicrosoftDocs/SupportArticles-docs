@@ -14,26 +14,28 @@ This article discusses issues that are related to configuring Microsoft Azure to
 ## Common issues and solutions
 
 - **Issue:** PowerShell commands don't run.
-- **Root Cause:** Missing proxy certificates that are required for command execution.
+- **Root cause:** Missing proxy certificates that are required for command execution.
 
 ### Instructions to resolve configuration issues
 
-1. **Verify proxy settings:**
+1. Verify proxy settings:
    1. Navigate to the **Network & Internet** settings on your system.
    1. Make sure that the proxy settings are configured correctly to allow PowerShell access.
 
-2. **Install proxy certificates:**
+2. Install proxy certificates:
    1. Download the necessary proxy certificates from your network administrator.
    1. Open the **Certificates Manager** snap-in by typing `certmgr.msc` in the Windows search bar.
    1. Import the downloaded certificates into the **Trusted Root Certification Authorities** store.
 
-3. **Test PowerShell command execution:**
-   1. Open PowerShell and run a test command to check whether the issue is resolved.
-   1. Example command: `Get-AzActivityLog -MaxRecord 5`.
+3. Open PowerShell, and run a test command to check whether the issue is resolved. For example, run the following command:
 
-4. **Check Azure CLI configuration:**
-   1. Run `az upgrade` to verify that the Azure CLI is updated to the latest version.
-   1. Run `az configure` to verify that the CLI is configured correctly.
+      ```powershell
+      `Get-AzActivityLog -MaxRecord 5`
+      ```
+
+4. Check the Azure CLI configuration:
+   1. To verify that the Azure CLI is updated to the latest version, run `az upgrade`.
+   1. To verify that the CLI is configured correctly, run `az configure`.
 
 ## References
 
