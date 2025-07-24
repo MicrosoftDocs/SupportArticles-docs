@@ -11,7 +11,7 @@ ms.custom: I can’t configure export of Activity Logs
 
 ## Resolve transition issues from legacy Azure Activity Log solutions
 
-This article discusses the transition from legacy solutions to new diagnostic settings that you can make to forward Azure activity logs. The legacy solution will be retired on September 30, 2026. This change will occur automatically without disrupting your workflow. However, if you have automation that uses the legacy API, you must update it.
+This article discusses the transition from legacy solutions to new diagnostic settings that you can make to forward Azure activity logs. The legacy solution will be retired on September 30, 2026. This change occurs automatically without disrupting your workflow. However, if you have automation that uses the legacy API, you must update it.
 
 ### Instructions to resolve transition issues
 
@@ -20,9 +20,9 @@ This article discusses the transition from legacy solutions to new diagnostic se
    1. Go to **Monitor** > **Activity Log** > **Export Activity Log**.
    1. Select your subscription from the list, and make sure that a diagnostic setting is configured.
 
-2. Update automation scripts:
-   1. If you have scripts that use the legacy API, update them by September 30, 2026, to use the **diagnostic settings API**.
-   1. For more guidance, see [Azure Diagnostic Settings API Documentation](/azure/azure-monitor/essentials/activity-log?tabs=powershell#legacy-collection-methods).
+2. If you have scripts that use the legacy API, update them by September 30, 2026, to use the **diagnostic settings API**.
+
+   For more information, see [Azure Diagnostic Settings API Documentation](/azure/azure-monitor/essentials/activity-log?tabs=powershell#legacy-collection-methods).
 
 3. Check the Log Analytics workspace:
    1. Make sure that the destination Log Analytics workspace is active.
