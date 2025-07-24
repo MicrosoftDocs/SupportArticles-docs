@@ -7,10 +7,30 @@ items:
     items: 
     - name: Configuring Export in Azure Portal
       items: 
+      - name: Understanding and Transitioning from Legacy to Diagnostic Settings for Activity Logs
+        href: activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md
       - name: Diagnostic Settings Transition from Legacy Solutions
         href: activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md
-      - name: Understanding and Transitioning from Legacy to Diagnostic Settings for Azure Activity Logs
-        href: activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md
+      - name: Push subscription activity logs to Sentinel
+        href: activity-logs/config-export/pushing-subscription-activity-logs-to-sentinel.md
+      - name: Export directory-level activity logs to Event Hubs
+        href: activity-logs/config-export/exporting-directory-level-activity-logs-to-event-hub.md
+      - name: Resolve log limit issues in Azure Function Apps
+        href: activity-logs/config-export/resolving-log-limit-issues-in-azure-function-apps.md
+      - name: Understanding and managing diagnostic settings retention
+        href: activity-logs/config-export/understanding-and-managing-diagnostic-settings-retention.md  
+      - name: Centralized Configuration of Activity Logs to Event Hubs
+        href: activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hub.md
+      - name: Troubleshoot Azure CLI configuration issues
+        href: activity-logs/config-export/troubleshoot-azure-cli-configuration-issues.md
+      - name: Troubleshoot export of audit logs to another tenant
+        href: activity-logs/config-export/troubleshoot-export-of-audit-logs-to-another-tenant.md
+      - name: Troubleshooting activity log download issues
+        href: activity-logs/config-export/troubleshoot-activity-log-download-issues.md
+      - name: Troubleshoot permission errors in Activity Log configuration
+        href: activity-logs/config-export/troubleshoot-permission-errors-in-activity-log-configuration.md
+      - name: Troubleshoot the export of activity logs across Azure subscriptions
+        href: activity-logs/config-export/troubleshoot-export-of-activity-logs-across-subscriptions.md
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
@@ -97,6 +117,10 @@ items:
     items:
     - name: Understand and mitigate high data consumption in Log Analytics
       href: log-analytics/configure-and-manage-log-analytics-tables/understand-and-mitigate-high-data-consumption-log-analytics.md
+    - name: Troubleshoot custom table creation errors in Azure
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-table-creation-errors.md
+    - name: Troubleshoot custom log table creation in Azure
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-log-table-creation.md
   - name: Log Analytics workspaces
     items:
     - name: Error code 0x80090016 - keyset doesn't exist
