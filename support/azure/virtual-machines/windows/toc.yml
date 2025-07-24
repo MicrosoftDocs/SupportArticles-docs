@@ -226,6 +226,8 @@
     href: in-place-system-upgrade.md
   - name: Upgrade VM to contain more than 64 vCPUs
     href: vm-cannot-upgrade-64-vcpu.md
+  - name: Windows update errors requiring in-place upgrades
+    href: windows-update-errors-requiring-in-place-upgrade.md
   - name: Known errors and issues
     items:
     - name: Error code 0x80070002
