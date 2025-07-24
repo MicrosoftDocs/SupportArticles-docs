@@ -1,7 +1,7 @@
 ---
 title: Understand and Mitigate High Data Consumption in Log Analytics
 description: Provides instructions to resolve high data usage in Log Analytics.
-ms.date: 07/23/2025
+ms.date: 07/24/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: Configure and Manage Log analytics tables
@@ -26,6 +26,7 @@ This article discusses high data consumption that occurs in Log Analytics worksp
         ```plaintext
         AzureDiagnostics | distinct _ResourceId
         ```
+
 2. Review the diagnostic settings:
 
    1. Navigate to the diagnostic settings of the identified reference.
