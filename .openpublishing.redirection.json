@@ -13800,6 +13800,10 @@
       "source_path": "support/sql/tools/error-you-run-sqlmaint-utility.md",
       "redirect_url": "/previous-versions/troubleshoot/sql/tools/error-you-run-sqlmaint-utility",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hub.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hubs"
     }
   ]
 }

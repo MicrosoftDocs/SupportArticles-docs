@@ -83,6 +83,6 @@ This article addresses the transition from legacy solutions for forwarding Azure
 ## References
 
 - [Azure Diagnostic Settings Documentation](/azure/azure-monitor/essentials/activity-log?tabs=powershell#legacy-collection-methods)
-- [Azure Monitor Overview](/azure-monitor/overview)
+- [Azure Monitor Overview](/azure/azure-monitor/overview)
 
 If the issue persists after following the solution steps, please open a support case for further assistance.
