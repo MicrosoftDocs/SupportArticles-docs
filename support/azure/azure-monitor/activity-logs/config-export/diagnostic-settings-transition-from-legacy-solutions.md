@@ -1,6 +1,6 @@
 ---
 title: Diagnostic Settings Transition from Legacy Solutions
-description: Provides guidance for how to make diagnostic settings to transition from legacy solutions.
+description: Provides guidance to make diagnostic settings to transition from legacy solutions.
 ms.date: 07/16/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
@@ -11,11 +11,11 @@ ms.custom: I can’t configure export of Activity Logs
 
 ## Resolve transition issues from legacy Azure Activity Log solutions
 
-This article discusses the transition from legacy solutions to new diagnostic settings that you can make to forward Azure activity logs. The legacy solution will be retired on September 30, 2026, and this change will occur automatically without disrupting your workflow. However, if you have automation that uses the legacy API, you must update it.
+This article discusses the transition from legacy solutions to new diagnostic settings that you can make to forward Azure activity logs. The legacy solution will be retired on September 30, 2026. This change will occur automatically without disrupting your workflow. However, if you have automation that uses the legacy API, you must update it.
 
 ### Instructions to resolve transition issues
 
-1. Verify current configuration:
+1. Verify the current configuration:
    1. Navigate to the Azure portal.
    1. Go to **Monitor** > **Activity Log** > **Export Activity Log**.
    1. Select your subscription from the list, and make sure that a diagnostic setting is configured.
@@ -24,13 +24,13 @@ This article discusses the transition from legacy solutions to new diagnostic se
    1. If you have scripts that use the legacy API, update them by September 30, 2026, to use the **diagnostic settings API**.
    1. For more guidance, see [Azure Diagnostic Settings API Documentation](/azure/azure-monitor/essentials/activity-log?tabs=powershell#legacy-collection-methods).
 
-3. Check Log Analytics workspace:
+3. Check the Log Analytics workspace:
    1. Make sure that the destination Log Analytics workspace is active.
    1. If the workspace is inactive, change the destination to an active subscription.
 
-4. Run PowerShell script to list diagnostic settings:
+4. Run a PowerShell script to list diagnostic settings:
    1. Open **Azure Cloud Shell** or any PowerShell terminal that's connected to your tenant.
-   1. Run the following script to list all diagnostic settings across your subscriptions:
+   1. To list all diagnostic settings across your subscriptions, run the following script:
   
    ```powershell
         # Install and login with Connect-AzAccount
@@ -85,4 +85,4 @@ This article discusses the transition from legacy solutions to new diagnostic se
 - [Azure diagnostic settings documentation](/azure/azure-monitor/essentials/activity-log?tabs=powershell#legacy-collection-methods)
 - [Azure Monitor overview](/azure/azure-monitor/overview)
 
-If the issue persists after following the solution steps, please open a support case for further assistance.
+If the issue persists after you follow these steps, open a support case for further assistance.
