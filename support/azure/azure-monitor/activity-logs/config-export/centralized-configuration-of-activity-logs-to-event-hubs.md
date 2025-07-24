@@ -34,7 +34,7 @@ Organizations often require a centralized approach to manage Activity Logs acros
 
 4. Verify event hub configuration:
    1. Make sure that the event hub is configured to handle the expected log volume from all subscriptions.
-   1. Review performance benchmarks and adjust the event hub tier if it's necessary to manage logs efficiently.
+   1. Review performance benchmarks. Adjust the event hub tier as necessary to manage logs efficiently.
 
 5. Monitor and adjust:
    1. Regularly monitor the event hub performance and log flow.
