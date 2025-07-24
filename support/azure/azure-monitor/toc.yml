@@ -113,6 +113,10 @@ items:
       href: app-insights/agent/change-analysis-troubleshoot.md
 - name: Log Analytics
   items:
+  - name: Configure and Manage Log analytics tables
+    items:
+    - name: Troubleshoot custom table creation errors in Azure
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-table-creation-errors.md
   - name: Log Analytics workspaces
     items:
     - name: Error code 0x80090016 - keyset doesn't exist
