@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Issues with Runbook Execution Start Time
 description: Discusses an issue where jobs don't start as expected in Azure Automation.
-ms.date: 06/27/2025
+ms.date: 07/23/2025
 ms.reviewer: adoyle, v-weizhu
 ms.service: azure-automation
 ms.custom: sap:Runbook not working as expected
@@ -12,7 +12,7 @@ Process automation in Azure Automation allows you to create and manage PowerShel
 
 ## Service-level agreement (SLA)
 
-The SLA for runbook automation is 30 minutes. It's expected that 99.999 percent of runbooks start within five minutes of the scheduled time. For more information, see [SLAs for Online Services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
+The SLA for runbook automation is 30 minutes. It's expected that 99.9 percent of runbooks start within 30 minutes of the planned start time. For more information, see [SLAs for Online Services](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
 
 The *SLA for the Automation Service - Process Automation* defines the following terms:
 

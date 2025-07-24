@@ -4,7 +4,7 @@ description: Troubleshoot common issues that you might encounter with Azure File
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 01/13/2025
+ms.date: 07/21/2025
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
@@ -89,7 +89,7 @@ To run AFSDiag, perform the steps below:
 
 ## Storage Sync Agent service (FileSyncSvc) fails to start
 
-After installing or upgrading the Azure File Sync agent (v17.3 or later), you may experience one of the following symptoms:
+After installing or upgrading the Azure File Sync agent (v18 or later), you might experience one of the following symptoms:
 
 - The Storage Sync Agent service (FileSyncSvc) fails to start with the following error: 
 
@@ -110,12 +110,38 @@ After installing or upgrading the Azure File Sync agent (v17.3 or later), you ma
   Exception occurred while configuring MitigationRedirection policy. This could indicate that required windows updates not installed on the computer.
   ```
 
-This issue occurs because the Azure File Sync agent has a dependency on a Windows security feature and updates for this security feature are not installed.
+These issues occur because the Azure File Sync agent has a dependency on a Windows security feature and updates for this security feature aren't installed.
 
 To resolve this issue, verify your Windows Server has the following updates installed:
-- Windows Server 2012 R2: [KB5021653](https://support.microsoft.com/topic/kb5021653-out-of-band-update-for-windows-server-2012-r2-november-17-2022-8e6ec2e9-6373-46d7-95bc-852f992fd1ff)
-- Windows Server 2016: [KB5040562](https://support.microsoft.com/topic/kb5040562-servicing-stack-update-for-windows-10-version-1607-and-server-2016-july-9-2024-281c97b9-c566-417e-8406-a84efd30f70c)
-- Windows Server 2019: [KB5005112](https://support.microsoft.com/topic/kb5005112-servicing-stack-update-for-windows-10-version-1809-august-10-2021-df6a9e0d-8012-41f4-ae74-b79f1c1940b2) and [KB5040430](https://support.microsoft.com/topic/july-9-2024-kb5040430-os-build-17763-6054-0bb10c24-db8c-47eb-8fa9-9ebc06afa4e7)
+
+- Windows Server 2016 [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=cumulative%20windows%20server%202016) (latest cumulative update)
+- Windows Server 2019 [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=cumulative%20windows%20server%202019) (latest cumulative update)
+  
+    Cumulative updates are released monthly. To deploy the latest update, you can use Windows Update or download it from the [Microsoft Update Catalog](https://catalog.update.microsoft.com). Before manual installation, review the associated Knowledge Base (KB) article to ensure all prerequisites are met.​ ​​If Windows updates aren't installed before installing the Azure File Sync agent, the Storage Sync Agent service (FileSyncSvc) will fail to start.
+
+## Auto Update can't upgrade a "to be expired" or expired Azure File Sync agent
+
+If Auto Update fails to upgrade your Azure File Sync agent that is about to expire or has expired, verify that the agent expiration information is properly applied to the server. The expiration metadata is required for Auto Update to function as expected.
+
+To verify whether the `AgentExpirationDate` metadata is set, run the following command from an elevated PowerShell session:
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Get-StorageSyncServer
+```
+
+If the `AgentExpirationDate` metadata isn't set or its value is empty, there might be a networking issue that prevents the server from receiving the expiration data. To test network connectivity, run the following command:
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Test-StorageSyncNetworkConnectivity
+```
+
+If network connectivity issues are reported, you can manually update the agent by downloading it from the [Microsoft Update Catalog](https://catalog.update.microsoft.com/Search.aspx?q=azure%20file%20sync).
+
+After downloading the appropriate agent version, refer to the specific KB article in the catalog for step-by-step installation instructions.
+
+If there are no connectivity issues and the `AgentExpirationDate` metadata is still not set, contact Azure File Sync support for further assistance.
 
 ## High memory usage on the server
 
