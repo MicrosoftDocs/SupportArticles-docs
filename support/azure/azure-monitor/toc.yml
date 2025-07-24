@@ -115,6 +115,8 @@ items:
   items:
   - name: Configure and Manage Log analytics tables
     items:
+    - name: Understand and mitigate high data consumption in Log Analytics
+      href: log-analytics/configure-and-manage-log-analytics-tables/understand-and-mitigate-high-data-consumption-log-analytics.md
     - name: Troubleshoot custom table creation errors in Azure
       href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-table-creation-errors.md
     - name: Troubleshoot custom log table creation in Azure
