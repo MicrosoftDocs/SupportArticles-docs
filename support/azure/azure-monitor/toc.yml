@@ -95,7 +95,7 @@ items:
   items:
   - name: Configure and Manage Log analytics tables
     items:
-    - name: Troubleshoot Deleting Migrated Custom Tables in Log Analytics
+    - name: Troubleshoot deleting migrated custom tables in Log Analytics
       href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-deleting-migrated-custom-tables.md
   - name: Log Analytics workspaces
     items:
