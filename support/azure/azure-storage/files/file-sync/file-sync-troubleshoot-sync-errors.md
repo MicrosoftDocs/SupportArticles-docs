@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/19/2025
+ms.date: 07/24/2025
 ms.author: kendownie
 ms.custom: sap:File Sync, devx-track-azurepowershell
 ms.reviewer: v-weizhu, vritikanaik
@@ -180,6 +180,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80c80018 | -2134376424 | ECS_E_SYNC_FILE_IN_USE | The file can't be synced because it's in use. The file will be synced when it's no longer in use. | No action required. Azure File Sync creates a temporary VSS snapshot once a day on the server to sync files that have open handles. |
 | 0x80c86013 | -2134351853 | ECS_E_SYNC_CLOUD_FILE_IN_USE | The cloud file can't be synced because it's in use. This error occurs when an application holds an open handle to a file in the cloud, preventing sync operations from being performed until the application releases the handle. | Check the open file handles and close them if they're no longer needed. For more information, see [List Handles](/rest/api/storageservices/list-handles) and [Force Close Handles](/rest/api/storageservices/force-close-handles). |
 | 0x80c8031d | -2134375651 | ECS_E_CONCURRENCY_CHECK_FAILED | The file has changed, but the change hasn't yet been detected by sync. Sync will recover after this change is detected. | No action required. |
+| 0x80F2019F | -2160590943 | ECS_E_AZURE_FILE_PATH_TOO_LONG | File path is longer than azure files supported path length. | Run  run the FileSyncErrorsReport.ps1 PowerShell script (located in the agent installation directory of the Azure File Sync agent) to identify failing file paths, then use [ScanUnsupportedChars](?tabs=portal1%252cazure-portal#handling-unsupported-characters) |
 | 0x80070002 | -2147024894 | ERROR_FILE_NOT_FOUND | The file was deleted and sync isn't aware of the change. | No action required. Sync will stop logging this error once change detection detects the file was deleted. |
 | 0x80070003 | -2147024893 | ERROR_PATH_NOT_FOUND | Deletion of a file or directory can't be synced because the item was already deleted in the destination and sync isn't aware of the change. | No action required. Sync will stop logging this error once change detection runs on the destination and sync detects the item was deleted. |
 | 0x80c80205 | -2134375931 | ECS_E_SYNC_ITEM_SKIP | The file or directory was skipped but will be synced during the next sync session. If this error is reported when downloading the item, the file or directory name is more than likely invalid. | No action required if this error is reported when uploading the file. If the error is reported when downloading the file, rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
