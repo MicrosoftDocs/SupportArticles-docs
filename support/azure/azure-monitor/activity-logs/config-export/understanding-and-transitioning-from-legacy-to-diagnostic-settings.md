@@ -11,7 +11,7 @@ ms.custom: I can’t configure export of Activity Logs
 
 When Microsoft announced the transition from legacy solutions to diagnostic settings for forwarding activity logs in Microsoft Azure, users received notifications about necessary updates. This article provides guidance to manage this transition effectively.
 
-We're retiring the Azure legacy solution for forwarding activity logs, and replacing it with diagnostic settings. This change is automatic. However, users who have automation that relies on the legacy API must update their configurations. This guide helps you verify your current setup and make necessary adjustments.
+We're retiring the Azure legacy solution for forwarding activity logs, and replacing it with diagnostic settings. This change is automatic. However, users who have automation that relies on the legacy API must update their configurations. This article helps you verify your current setup and make necessary adjustments.
 
 ## Common issues and solutions
 
