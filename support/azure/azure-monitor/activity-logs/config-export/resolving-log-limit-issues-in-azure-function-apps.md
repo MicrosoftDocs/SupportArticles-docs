@@ -1,6 +1,6 @@
 ---
-title: Resolving Log Limit Issues in Azure Function Apps
-description: Provides step-by-step instructions to resolve log limit issues in Azure Functions apps.
+title: Resolving Log Limit Issues in Azure Functions Apps
+description: Provides instructions to resolve log limit issues in Azure Functions apps.
 ms.date: 07/16/2025
 ms.reviewer: v-liuamson; v-gsitser; v-sisidhu
 ms.service: azure-monitor
