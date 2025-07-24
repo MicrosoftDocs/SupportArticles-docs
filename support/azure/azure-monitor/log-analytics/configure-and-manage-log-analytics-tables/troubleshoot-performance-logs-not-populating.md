@@ -14,7 +14,7 @@ Users might experience issues if performance logs don't populate in Azure Govern
 ## Common issues and solutions
 
 - **Issue**: Performance logs don't populate when you use DCR to set up alerts.
-- **Root Cause**: The custom KQL query is run against the DCR, but the DCR can't access to the required data tables. In this situation, the alert scope defaults to DCR. This action prevents data retrieval.
+- **Root cause**: The custom KQL query is run against the DCR, but the DCR can't access the required data tables. In this situation, the alert scope defaults to DCR. This action prevents data retrieval.
 - **Solution**: Set the alert scope to the Log Analytics workspace that's associated with the DCR.
 
 ### Instructions to resolve performance log issues
