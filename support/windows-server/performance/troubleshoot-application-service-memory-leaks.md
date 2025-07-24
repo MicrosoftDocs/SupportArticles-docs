@@ -1,7 +1,7 @@
 ---
-title: Application or service memory leaks troubleshooting guidance
+title: Application or Service Memory Leaks Troubleshooting Guidance
 description: Provides guidance on how to troubleshoot application or service memory leaks.
-ms.date: 07/22/2025
+ms.date: 07/24/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Application or service memory leaks troubleshooting guidance
 
-This article provides guidance to troubleshoot applications or services with memory leak behaviors and how to proceed.
+This article provides guidance on troubleshooting applications or services with memory leak behaviors and how to proceed.
 
 _Applies to:_ &nbsp; All supported versions of Windows Server and Windows Client
 
@@ -20,7 +20,7 @@ You see Event ID 2004 repeatedly in the system log. As the event source mentions
 
 Apart from this event, you also notice high memory consumption by checking live or historical data from monitoring tools, or by using the Windows Task Manager.
 
-The following troubleshooting process is helpful for both scenarios where first-party and third-party processes might be leaking memory. For first-party processes, you can use the public symbol store available. However, if you can't see the actual function in a third-party process, you can engage the vendor for further checking. Even if the function doesn't show, the allocation stack should indicate a third-party module.
+The following troubleshooting process is helpful for both scenarios where first-party and third-party processes might be leaking memory. For first-party processes, you can use the public symbol store available. However, if you can't see the actual function in a third-party process, you can engage the vendor for further check. Even if the function doesn't show, the allocation stack should indicate a third-party module.
 
 ## Before you begin
 
@@ -50,17 +50,17 @@ Here are some examples:
 
 :::image type="content" source="./media/troubleshoot-application-service-memory-leaks/task-manager-virtual-memory-commit-size.png" alt-text="Screenshot of Task Manager showing the VirtMemTest32 process with high commit size.":::
 
-You can use [VMMap](/sysinternals/downloads/vmmap) and [Windows Performance Toolkit](/windows-hardware/test/wpt) for the troubleshooting.
+You can use [VMMap](/sysinternals/downloads/vmmap) and [Windows Performance Toolkit](/windows-hardware/test/wpt) for troubleshooting.
 
 VMMap is used to determine the type of memory leaks. The Windows Performance Toolkit includes the Windows Performance Recorder (WPR) tool and the Windows Performance Analyzer (WPA) tool, which are used to collect and analyze data.
 
 ## Gather data
 
-During this stage, if the memory usage is growing over time and not releasing, which indicates a leak pattern. The increase doesn't need to be a straight line to fall into this pattern, the key point is that the memory usage keeps on increasing over time.
+During this stage, if the memory usage is growing over time and isn't released, it indicates a leak pattern. The increase doesn't need to be a straight line to fall into this pattern. The key point is that the memory usage keeps on increasing over time.
 
 :::image type="content" source="./media/troubleshoot-application-service-memory-leaks/increase-leak-pattern.png" alt-text="Screenshot of the memory usage with an increase pattern.":::
 
-At this point, with a leak pattern, you need to determine the leaking memory type. Open VMMap and select the process that has been identified as the leaking memory.
+At this point, with a leak pattern, you need to determine the leaking memory type. Open VMMap and select the process that is identified as the leaking memory.
 
 ### Determine the memory type
 
@@ -115,7 +115,7 @@ PEB32                                     1        0`00001000 (   4.000 kB)   0.
 
 ### Collect trace data for virtual allocation memory
 
-With the way to identify the leaking memory, the next step is to collect reproducible data to determine the driver responsible for the leaking allocations.
+Since you have the way to identify the leaking memory, the next step is to collect reproducible data to determine the driver responsible for the leaking allocations.
 
 Use the following command to collect data when the process shows the behavior. **WPR.exe** is included natively on operating systems after Windows 10 or Windows Server 2016.
 
@@ -127,7 +127,7 @@ C:\>wpr -start VirtualAllocation
 
 Allow the process to run for some time. You can monitor the growth of memory consumption with Task Manager (**Commit size**).
 
-Since it only collects virtual allocation data, the trace file won't grow that large, so you can let it run for several minutes. Once you see enough leaked memory, stop the trace by using the following command:
+Since it only collects virtual allocation data, the trace file doesn't grow so large, so you can leave it running for several minutes. Once you see enough leaked memory, stop the trace by using the following command:
 
 ```console
 C:\>wpr -stop virtalloc.etl
@@ -148,7 +148,7 @@ C:\>wpr -heaptracingconfig VirtMemTest32.exe enable
 > [!NOTE]
 > If the process is running when you run the command, restart the process for the setting to be enabled.
 
-Heap tracing was successfully enabled for process **VirtMemTest64.exe**.
+Heap tracing is successfully enabled for process **VirtMemTest64.exe**.
 
 The result is:
 
@@ -157,7 +157,7 @@ Value name: `Tracing Flags`
 Value type: `REG_DWORD`  
 Value data: `0x00000001 (1)`
 
-You can delete the registry key or set the value to `0` after the troubleshooting.
+You can delete the registry key or set the value to `0` after troubleshooting.
 
 Use the following command to collect data when the process shows the behavior. **WPR.exe** is included natively on operating systems after Windows 10 or Windows Server 2016.
 
@@ -169,7 +169,7 @@ C:\>wpr -start Heap
 
 Allow the process to run for some time. You can monitor the growth of memory consumption with Task Manager (**Commit size**).
 
-Since it only collects heap data, the trace file won't grow that large, so you can let it run for several minutes. Once you see enough leaked memory, stop the trace by using the following command:
+Since it only collects heap data, the trace file doesn't grow so large, so you can leave it running for several minutes. Once you see enough leaked memory, stop the trace by using the following command:
 
 ```console
 C:\>wpr -stop Heap.etl
@@ -183,13 +183,13 @@ Open WPA and set up the symbol path. In the menu, select **Trace** > **Configure
 
 ### Analyze trace data for virtual allocation memory
 
-Replicate the following view by replacing the process with the one you've identified as relevant. Ensure that the **Commit Stack** column is on the left of the gold/yellow line. Drill down by expanding the stack, and you'll see the function that shows the allocation of virtual memory. The driver listed before (up) the function is the one calling to that operation.
+Replicate the following view by replacing the process with the one you've identified as relevant. Ensure that the **Commit Stack** column is on the left of the gold/yellow line. Drill down by expanding the stack, and you see the function that shows the allocation of virtual memory. The driver listed before (up) the function is the one calling to that operation.
 
 :::image type="content" source="./media/troubleshoot-application-service-memory-leaks/trace-data-virtual-allocation.png" alt-text="Screenshot of the analysis trace data for virtual allocation memory." lightbox="./media/troubleshoot-application-service-memory-leaks/trace-data-virtual-allocation.png":::
 
 ### Analyze trace data for heap allocation memory
 
-Replicate the following view by replacing the process with the one you've already identified as relevant. Ensure that the **Handle** and **Stack** columns are on the left of the gold/yellow line. Drill down by expanding the stack, and you'll see the function that shows the allocation of heap memory. The driver listed before (up) the function is the one calling to that operation.
+Replicate the following view by replacing the process with the one you've already identified as relevant. Ensure that the **Handle** and **Stack** columns are on the left of the gold/yellow line. Drill down by expanding the stack, and you see the function that shows the allocation of heap memory. The driver listed before (up) the function is the one calling to that operation.
 
 > [!NOTE]
 > If you don't see the heap allocation graph, it's because the registry key isn't set correctly. Review the steps.
