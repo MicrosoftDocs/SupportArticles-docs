@@ -9,20 +9,20 @@ ms.custom: I can’t configure export of Activity Logs
 
 # Troubleshoot the export of activity logs across Azure subscriptions
 
-Users might experience permission-related issues that prevent successful log transfer when they try to export activity logs from one Microsoft Azure subscription to another. This guide provides troubleshooting steps to resolve these issues and successfully export logs between subscriptions.
+Users might experience permission-related issues that prevent successful log transfer when they try to export activity logs from one Microsoft Azure subscription to another. This guide provides troubleshooting steps to resolve these issues and be able to successfully export logs between subscriptions.
 
 ## Common issues and solutions
 
-- **Permission Configuration**: Make sure that the shared access policy for the event hub namespace includes **Manage**, **Send**, and **Listen** permissions. These permissions are crucial for streaming logs to Event Hubs.
-- **Diagnostic Settings**: Verify that the diagnostic settings are correctly configured to use the appropriate event hubs policy name. Navigate to the diagnostic settings, note the event hub policy name, and check the permissions in the event hub namespace.
+- **Permission Configuration**: Make sure that the shared access policy for the event hub namespace includes **Manage**, **Send**, and **Listen** permissions. These permissions are critical to streaming logs to Event Hubs.
+- **Diagnostic Settings**: Verify that the diagnostic settings are correctly configured to use the appropriate event hub policy name. Navigate to the diagnostic settings, note the event hub policy name, and check the permissions in the event hub namespace.
 - **Role Assignment**: Verify that the Azure system-assigned managed identity has the necessary role assignments. Use the Azure CLI to list role assignments and verify that the **Azure Event Hubs Data Sender** role is assigned.
 
 ### Instructions to resolve export issues
 
-1. Verify shared access policy permissions:
+1. Verify the shared access policy permissions:
    1. Open the diagnostic settings in Azure.
    1. Note the event hub policy name that's used.
-   1. Navigate to the event hub namespace and open the **Shared Access Policy** tab.
+   1. Navigate to the event hub namespace, and open the **Shared Access Policy** tab.
    1. Make sure that the **Manage**, **Send**, and **Listen** permissions are selected.
 
 2. Check the role assignments:
@@ -42,6 +42,6 @@ Users might experience permission-related issues that prevent successful log tra
 
 - [Authorize access to Azure Event Hubs](/azure/event-hubs/authorize-access-event-hubs)
 - [Diagnostic settings in Azure](/azure/azure-monitor/essentials/diagnostic-settings)
-- [Azure CLI Documentation](/cli/azure)
+- [Azure CLI documentation](/cli/azure)
 
 If the issue persists after you follow these steps, open a support case for further assistance.
