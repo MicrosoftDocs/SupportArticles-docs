@@ -8,7 +8,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ---
 # Troubleshoot the OutboundConnFailVMExtensionError error code (50)
 
-This article describes how to identify and resolve the `OutboundConnFailVMExtensionError` error (also known as error code `ERR_OUTBOUND_CONN_FAIL`, error number 50) that might occur if you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article describes how to identify and resolve the `OutboundConnFailVMExtensionError` error (also known as error code `ERR_OUTBOUND_CONN_FAIL`, error number 50) that might occur if you create, start, scale, or upgrade a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ This article describes how to identify and resolve the `OutboundConnFailVMExtens
 
 ## Symptoms
 
-When you try to start or create an AKS cluster, you receive the following error message:
+When you try to create, scale, or upgrade an AKS cluster, you may receive the following error message:
 
 > Unable to establish outbound connection from agents, please see <https://aka.ms/aks-required-ports-and-addresses> for more information.
 >
@@ -32,11 +32,43 @@ When you try to start or create an AKS cluster, you receive the following error 
 >
 > Error details : "vmssCSE error messages : {**vmssCSE exit status=50, output=pt/apt.conf.d/95proxy**...}
 
+This error may also cause your running nodes to become NotReady or cause image pull failures because outbound connectivity is blocked from some or all nodes in your cluster.
+
 ## Cause
 
 The custom script extension that downloads the necessary components to provision the nodes couldn't establish the necessary outbound connectivity to obtain packages. For public clusters, the nodes try to communicate with the Microsoft Container Registry (MCR) endpoint (`mcr.microsoft.com`) on port 443.
 
-There are many reasons why the traffic might be blocked. In any of these situations, the best way to test connectivity is to use the Secure Shell protocol (SSH) to connect to the node. To make the connection, follow the instructions in [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access). Then, test the connectivity on the cluster by following these steps:
+There are many reasons why the outbound traffic might be blocked. The best way to troubleshoot outbound connectivity failures is by running a connectivity analysis with [Azure Virtual Network Verifier (Preview)](/azure/virtual-network-manager/concept-virtual-network-verifier). By running a connectivity analysis, you can visualize the hops within the traffic flow and any misconfigurations within Azure networking resources that are blocking traffic. To manually troubleshoot outbound connectivity failures, you can use the Secure Shell protocol (SSH) to connect to the node. This section covers instructions for both types of investigations:
+
+### Check if Azure network resources are blocking traffic to the endpoint
+
+To determine if traffic is blocked to the endpoint due to Azure network resources, run a connectivity analysis from your AKS cluster nodes to the endpoint using the [Azure Virtual Network Verifier (Preview)](/azure/virtual-network-manager/concept-virtual-network-verifier#supported-features-of-the-reachability-analysis) tool. The connectivity analysis covers the following resources:
+
+- Azure Load Balancer
+- Azure Firewall
+- A network address translation (NAT) gateway
+- Network security group (NSG)
+- Network policy
+- User defined routes (route tables)
+- Virtual network peering
+
+> [!NOTE]
+>
+> Azure Virtual Network Verifier (Preview) can't access any external or third-party networking resources, such as a custom firewall. If the connectivity analysis doesn't detect any blocked traffic, we recommend that you perform a manual check of any external networking to cover all hops in the traffic flow.
+> 
+> Currently, clusters using Azure CNI Overlay aren't supported for this feature. Support for CNI Overlay is planned for August 2025.
+
+1. Navigate to your cluster in the Azure portal. In the sidebar, navigate to the Settings -> Node pools blade.
+2. Identify the nodepool you want to run a connectivity analysis from. Click on the nodepool to select it as the scope.
+3. Select "Connectivity analysis (Preview)" from the toolbar at the top of the page. If you don't see it, click on the three dots "..." in the toolbar at the top of the page to open the expanded menu. <img width="626" alt="image" src="https://github.com/user-attachments/assets/b2f05947-f753-49b9-9536-98d0b998ab52" />
+4. Select a Virtual Machine Scale Set (VMSS) instance as the source. The source IP addresses are populated automatically.
+5. Select a public domain name/endpoint as the destination for the analysis, one example is `mcr.microsoft.com`. The destination IP addresses are also populated automatically.
+6. Run the analysis and wait up to 2 minutes for the results. In the resulting diagram, identify the associated Azure network resources and where traffic is blocked. To view the detailed analysis output, click on the "JSON output" tab or click into the arrows in the diagram.
+
+
+### Manual troubleshooting
+
+If the Azure Virtual Network Verifier (Preview) tool doesn't provide enough insight into the issue, you can manually troubleshoot outbound connectivity failures by using the Secure Shell protocol (SSH) to connect to the node. To make the connection, follow the instructions in [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access). Then, test the connectivity on the cluster by following these steps:
 
 1. After you connect to the node, run the `nc` and `dig` commands:
 
@@ -109,13 +141,14 @@ There are many reasons why the traffic might be blocked. In any of these situati
    >     --output json \
    >     --scripts "dig mcr.microsoft.com 443"
    > ```
+
 ## Solution
 
 The following table lists specific reasons why traffic might be blocked, and the corresponding solution for each reason:
 
 | Issue | Solution |
 | ----- | -------- |
-| Traffic is blocked by firewall rules, a proxy server or Network Security Group (NSG) | This issue occurs when the AKS required ports or Fully Qualified Domain Names (FQDNs) are blocked by a firewall, proxy server, or NSG. Ensure these ports and FQDNs are allowed. To determine what's blocked, check the connectivity provided in the preceding [Cause](#cause) section. For more information about AKS required ports and FQDNs, see [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress).|
+| Traffic is blocked by firewall rules, a proxy server, or Network Security Group (NSG) | This issue occurs when the AKS required ports or Fully Qualified Domain Names (FQDNs) are blocked by a firewall, proxy server, or NSG. Ensure these ports and FQDNs are allowed. To determine what's blocked, check the connectivity provided in the preceding [Cause](#cause) section. For more information about AKS required ports and FQDNs, see [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress).|
 | The AAAA (IPv6) record is blocked on the firewall | On your firewall, verify that nothing exists that would block the endpoint from resolving in Azure DNS. |
 | Private cluster can't resolve internal Azure resources | In private clusters, the Azure DNS IP address (`168.63.129.16`) must be added as an upstream DNS server if custom DNS is used. Verify that the address is set on your DNS servers. For more information, see [Create a private AKS cluster](/azure/aks/private-clusters) and [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16). |
 
