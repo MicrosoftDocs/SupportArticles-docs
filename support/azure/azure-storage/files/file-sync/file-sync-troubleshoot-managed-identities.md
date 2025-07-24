@@ -183,7 +183,22 @@ This issue often occurs in the following situations:
 
 When the managed identity changes, the File Sync agent tries to use the new identity, but the Azure File Sync service is still configured to authorize the previous one. This mismatch causes requests to fail with the `ECS_E_AUTH_IDENTITY_NOT_FOUND` error.
 
-To resolve this issue, run the following PowerShell command:
+To resolve this issue: 
+
+First, ensure the server is configured to use a managed identity. 
+
+You can verify this by:
+- Checking the **Settings** > **Managed identities** details in your storage sync service, or
+- Running the following PowerShell command:
+
+```powershell
+Get-AzStorageSyncServer -ResourceGroupName <ResourceGroupName> -StorageSyncServiceName <StorageSyncServiceName>
+```
+> [!NOTE]
+> This error can occur whether the server is using managed identity (MI) or certificate-based authentication, so confirming the identity type is important.
+
+
+If the server is using managed identity and the identity has changed, run the following command to update the server registration:
 
 ```powershell
 Set-AzStorageSyncServer -ResourceGroupName <ResourceGroupName> -StorageSyncServiceName <StorageSyncServiceName> -Identity
