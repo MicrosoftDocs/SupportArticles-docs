@@ -25,7 +25,7 @@ items:
         href: activity-logs/config-export/troubleshoot-azure-cli-configuration-issues.md
       - name: Troubleshoot export of audit logs to another tenant
         href: activity-logs/config-export/troubleshoot-export-of-audit-logs-to-another-tenant.md
-      - name: Troubleshooting Activity Log download issues
+      - name: Troubleshoot Activity Log download issues
         href: activity-logs/config-export/troubleshoot-activity-log-download-issues.md
       - name: Troubleshoot permission errors in Activity Log configuration
         href: activity-logs/config-export/troubleshoot-permission-errors-in-activity-log-configuration.md
