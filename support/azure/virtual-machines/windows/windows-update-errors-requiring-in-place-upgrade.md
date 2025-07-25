@@ -11,14 +11,14 @@ ms.custom:
 - pcy:WinComm Devices Deploy
 ---
 
-# Troubleshoot Windows upgrade error that require in-place upgrades for Azure VMs
+# Troubleshoot Windows upgrade errors that require in-place upgrades for Azure VMs
 
 > [!IMPORTANT]
 > This article covers the Windows Server upgrade process for Microsoft Azure servers and virtual machines (VMs) only. To upgrade an instance of Windows Server that isn't running on an Azure VM, see [In-place upgrade for VMs not running Windows Server in Azure](/windows-server/get-started/perform-in-place-upgrade).
 > [!IMPORTANT]
 > This article doesn't cover Windows Client scenarios.
 
-For Virtual Machines (VMs) that are running on Azure, certain Windows Update errors require an in-place upgrade of the OS to restore the servicing stack to a healthy condition on which updates can be installed. Other options, such as WinRE, are available to possibly mitigate this issue. However, such processes aren't possible unless the VM is connected to a nested virtualization environment, as described in [Troubleshoot a faulty Azure VM by using nested virtualization in Azure](/troubleshoot/azure/virtual-machines/windows/troubleshoot-vm-by-use-nested-virtualization). Although you'll be doing an in-place upgrade, you'll be using the installation media of the current OS to reinstall the system. This article provides the steps to identify the specific upgrade errors that require this action.
+For Virtual Machines (VMs) that are running on Azure, certain Windows Update errors require an in-place upgrade of the OS to restore the servicing stack to a healthy condition in which updates can be installed. Other options, such as WinRE, are available to possibly mitigate this issue. However, such processes aren't possible unless the VM is connected to a nested virtualization environment, as described in [Troubleshoot a faulty Azure VM by using nested virtualization in Azure](/troubleshoot/azure/virtual-machines/windows/troubleshoot-vm-by-use-nested-virtualization). Although you'll do an in-place upgrade, you'll use the installation media of the current OS to reinstall the system. This article provides the steps to identify the specific upgrade errors that require this action.
 
 ## Prerequisites
 
@@ -54,7 +54,7 @@ To identify upgrade errors, check the `C:\Windows\Logs\CBS` file path for **CBS.
 | 800F0905   | CBS_E_NO_ACTIVE_EDITION                | E_DO_INHERITANCE_CONTEXT_NEEDE                                                |
 | 8007371B   | ERROR_SXS_TRANSACTION_CLOSURE_INCOMPLETE | Servicing operation is incomplete or aborted.                               |
 | 80242016   | WU_E_UH_POSTREBOOTUNEXPECTEDSTATE      | The state of the update after its post-reboot operation was completed is unexpected. |
-| 800F0911  | CBS_E_SOURCE_MODIFIED                   | The package sources have been modified or moved in a previous session and must be redownloaded. |
+| 800F0911  | CBS_E_SOURCE_MODIFIED                   | The package sources were modified or moved in a previous session and must be redownloaded. |
 | 80071AB1  | ERROR_LOG_GROWTH_FAILED                 | An attempt to create space in the transactional resource manager's log failed. |
 
 ```output
@@ -102,7 +102,7 @@ To resolve this issue, we recommend that you perform an in-place upgrade of Wind
     1. At an elevated command prompt, change to **drive with ISO**.
     1. Enter setup.exe /auto upgrade /dynamicupdate disable.
     1. When you're prompted, select **Keep personal files and apps**.
-    1. Follow the on-screen instructions to complete the upgrade.
+    1. To complete the upgrade, follow the on-screen instructions.
 
 6. Post-upgrade checks
    1. Verify system functionality.
