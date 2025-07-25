@@ -29,7 +29,7 @@ This article discusses the transition from legacy solutions to new diagnostic se
    1. If the workspace is inactive, change the destination to an active subscription.
 
 4. Run a PowerShell script to list diagnostic settings:
-   1. Open **Azure Cloud Shell** or any PowerShell terminal that's connected to your tenant.
+   1. Open **Azure Cloud Shell** or any PowerShell that's connected to your tenant.
    1. To list all diagnostic settings across your subscriptions, run the following script:
   
    ```powershell
