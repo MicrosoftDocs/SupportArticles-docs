@@ -1,5 +1,52 @@
 {
   "redirections": [
-    
+    {
+      "source_path": "Viva/Connections/cant-find-app-in-teams-admin-center.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     },
+    {
+      "source_path": "Viva/Connections/viva-connections-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     },
+    {
+      "source_path": "Viva/Engage/error-select-the-viva-engage-tile-in-microsoft-365.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     },
+    {
+      "source_path": "Viva/Engage/help-users-log-in-to-viva-engage-on-android-devices.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     },
+    {
+      "source_path": "Viva/Engage/troubleshoot-native-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     },
+    {
+      "source_path": "Viva/Engage/viva-engage-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     },
+    {
+      "source_path": "Viva/Pulse/fix-setup-error-messages.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     },
+    {
+      "source_path": "Viva/Pulse/viva-pulse-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     },
+    {
+      "source_path": "Viva/Viva-suite-administration/viva-self-help-diagnostics.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     },
+    {
+      "source_path": "Viva/Viva-suite-administration/viva-suite-administration-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     },
+    {
+      "source_path": "Viva/Learning/viva-learning-welcome.yml",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     },
+    {
+      "source_path": "Viva/Insights/viva-insights-errors.md",
+      "redirect_url": "/troubleshoot/viva/insights/error-messages/viva-insights-errors"
+     }
   ]
 }
