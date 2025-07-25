@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows Update Errors That Require In-Place Upgrades for Azure Virtual Machines
-description: Learn how to resolve Windows update errors that require in-place upgrades for Azure Virtual Machines.
+description: Learn how to resolve Windows Update errors that require in-place upgrades for Azure Virtual Machines.
 ms.date: 07/24/2025
 manager: dcscontentpm
 audience: itpro
@@ -11,7 +11,7 @@ ms.custom:
 - pcy:WinComm Devices Deploy
 ---
 
-# Troubleshoot Windows upgrade errors that require in-place upgrades for Azure VMs
+# Troubleshoot Windows Update errors that require in-place upgrades for Azure VMs
 
 > [!IMPORTANT]
 > This article covers the Windows Server upgrade process for Microsoft Azure servers and virtual machines (VMs) only. To upgrade an instance of Windows Server that isn't running on an Azure VM, see [In-place upgrade for VMs not running Windows Server in Azure](/windows-server/get-started/perform-in-place-upgrade).
@@ -26,7 +26,7 @@ Make sure that you have administrative access to perform in-place upgrades.
 
 ## How to identify the errors
 
-To identify upgrade errors, check the `C:\Windows\Logs\CBS` file path for **CBS.log**, **CbsPersist_XXXXXXXXXXXXXX.log**, or the **CbsPersist_XXXXXXXXXXXXXX.cab** file for one of the following error entries.
+To identify Windows Update errors, check the `C:\Windows\Logs\CBS` file path for **CBS.log**, **CbsPersist_XXXXXXXXXXXXXX.log**, or the **CbsPersist_XXXXXXXXXXXXXX.cab** file for one of the following error entries.
 
 | Error code | Symbolic name                          | Description / Notes                                                           |
 |------------|----------------------------------------|-------------------------------------------------------------------------------|
