@@ -18,7 +18,7 @@ ms.custom:
 > [!IMPORTANT]
 > This article doesn't cover Windows Client scenarios.
 
-For Virtual Machines (VMs) that are running on Azure, certain Windows Update errors require an in-place upgrade of the OS to restore the servicing stack to a healthy condition in which updates can be installed. Other options, such as WinRE, are available to possibly mitigate this issue. However, such processes aren't possible unless the VM is connected to a nested virtualization environment, as described in [Troubleshoot a faulty Azure VM by using nested virtualization in Azure](/troubleshoot/azure/virtual-machines/windows/troubleshoot-vm-by-use-nested-virtualization). Although you'll do an in-place upgrade, you'll use the installation media of the current OS to reinstall the system. This article provides the steps to identify the specific upgrade errors that require this action.
+For Virtual Machines (VMs) that are running on Azure, certain Windows Update errors require an in-place upgrade of the OS to restore the servicing stack to a healthy condition in which updates can be installed. Other options, such as WinRE, are available to possibly mitigate this issue. However, such processes aren't possible unless the VM is connected to a nested virtualization environment, as described in [Troubleshoot a faulty Azure VM by using nested virtualization in Azure](/troubleshoot/azure/virtual-machines/windows/troubleshoot-vm-by-use-nested-virtualization). Although you do an in-place upgrade, you use the installation media of the current OS to reinstall the system. This article provides the steps to identify the specific upgrade errors that require this action.
 
 ## Prerequisites
 
