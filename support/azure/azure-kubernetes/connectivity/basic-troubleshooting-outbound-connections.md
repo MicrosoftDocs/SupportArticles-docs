@@ -150,7 +150,7 @@ To determine if traffic is blocked to the endpoint due to Azure network resource
 
 1. Navigate to your cluster in the Azure portal. In the sidebar, navigate to the Settings -> Node pools blade.
 2. Identify the nodepool you want to run a connectivity analysis from. Click on the nodepool to select it as the scope.
-3. Select "Connectivity analysis (Preview)" from the toolbar at the top of the page. If you don't see it, click on the three dots "..." in the toolbar at the top of the page to open the expanded menu. <img width="626" alt="image" src="https://github.com/user-attachments/assets/b2f05947-f753-49b9-9536-98d0b998ab52" />
+3. Select "Connectivity analysis (Preview)" from the toolbar at the top of the page. If you don't see it, click on the three dots "..." in the toolbar at the top of the page to open the expanded menu.
 4. Select a Virtual Machine Scale Set (VMSS) instance as the source. The source IP addresses are populated automatically.
 5. Select a public domain name/endpoint as the destination for the analysis, one example is `mcr.microsoft.com`. The destination IP addresses are also populated automatically.
 6. Run the analysis and wait up to 2 minutes for the results. In the resulting diagram, identify the associated Azure network resources and where traffic is blocked. To view the detailed analysis output, click on the "JSON output" tab or click into the arrows in the diagram.
