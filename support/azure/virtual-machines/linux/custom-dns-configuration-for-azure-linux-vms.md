@@ -79,7 +79,7 @@ This article provides instructions to configure custom DNS servers and search do
 
     :::image type="content" source="./media/custom-dns-config-images/rhel-dns-6.png" alt-text="Screenshot showing the search domain.":::
 
-## [RHEL 10](#tab/RHEL)
+## [RHEL 10](#tab/RHEL10)
 
 Guidance for configuring custom DNS on **RHEL 10** is currently being developed in collaboration with Red Hat. This section will be updated once validated instructions are available. Please check back for the latest information.
 
