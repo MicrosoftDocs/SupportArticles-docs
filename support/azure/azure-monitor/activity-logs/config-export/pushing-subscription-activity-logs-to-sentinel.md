@@ -47,9 +47,9 @@ Users might encounter challenges when they try to push subscription activity log
 
 ## References
 
-- [Azure Sentinel Data Connectors Reference](https://learn.microsoft.com/azure/sentinel/data-connectors-reference)
-- [Azure Monitor Diagnostic Settings](https://learn.microsoft.com/azure/azure-monitor/platform/diagnostic-settings?tabs=CMD)
-- [Connect Services via Diagnostic Setting-Based Connector](https://learn.microsoft.com/azure/sentinel/connect-services-diagnostic-setting-based#connect-via-a-diagnostic-setting-based-connector-managed-by-azure-policy)
-- [Diagnostic settings in Azure Monitor](https://learn.microsoft.com/azure/azure-monitor/platform/diagnostic-settings#time-before-telemetry-gets-to-destination)
+- [Azure Sentinel Data Connectors Reference](/azure/sentinel/data-connectors-reference)
+- [Azure Monitor Diagnostic Settings](/azure/azure-monitor/platform/diagnostic-settings?tabs=CMD)
+- [Connect Services via Diagnostic Setting-Based Connector](/azure/sentinel/connect-services-diagnostic-setting-based#connect-via-a-diagnostic-setting-based-connector-managed-by-azure-policy)
+- [Diagnostic settings in Azure Monitor](/azure/azure-monitor/platform/diagnostic-settings#time-before-telemetry-gets-to-destination)
 
 If the issue persists after following the solution steps, please open a support case for further assistance.
