@@ -13805,5 +13805,30 @@
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hub.md",
       "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hubs"
     }
+    ,
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/exporting-directory-level-activity-logs-to-event-hub.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/export-directory-level-activity-logs-to-event-hubs"
+    }
+    ,
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/pushing-subscription-activity-logs-to-sentinel.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/push-subscription-activity-logs-to-sentinel"
+    }
+    ,
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/resolving-log-limit-issues-in-azure-function-apps.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/resolve-log-limit-issues-in-azure-functions-apps"
+    }
+    ,
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/understanding-and-managing-diagnostic-settings-retention.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/understand-and-manage-diagnostic-settings-retention"
+    }
+    ,
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/transition-from-legacy-to-diagnostic-settings"
+    }
   ]
 }
