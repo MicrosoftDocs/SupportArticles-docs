@@ -1,5 +1,5 @@
 ---
-title: Detailed Guidance for Pushing Subscription Activity Logs to Sentinel
+title: Push Subscription Activity Logs to Sentinel
 description: Provides detailed instructions for pushing subscription activity logs to Sentinel.
 ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser; v-sisidhu
@@ -7,7 +7,7 @@ ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
 
-# Push subscription activity logs to Sentinel
+# Push subscription Activity Logs to Sentinel
 
 This article provides guidance for how to push subscription activity logs to Microsoft Sentinel by using Microsoft Azure Diagnostic Settings. This process is essential to  monitor and analyze activity logs effectively.
 

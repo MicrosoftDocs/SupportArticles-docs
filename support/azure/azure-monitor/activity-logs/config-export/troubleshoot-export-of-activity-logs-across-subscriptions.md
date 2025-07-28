@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot Export of Activity Logs across Azure Subscriptions
+title: Troubleshoot the Export of Activity Logs across Azure Subscriptions
 description: Troubleshooting guide for resolving issues that affect exporting activity logs across Azure subscriptions.
-ms.date: 07/23/2025
+ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
 
-# Troubleshoot the export of activity logs across Azure subscriptions
+# Troubleshoot the export of Activity Logs across Azure subscriptions
 
 Users might experience permission-related issues that prevent successful log transfer when they try to export activity logs from one Microsoft Azure subscription to another. This guide provides troubleshooting steps to resolve these issues and be able to successfully export logs between subscriptions.
 

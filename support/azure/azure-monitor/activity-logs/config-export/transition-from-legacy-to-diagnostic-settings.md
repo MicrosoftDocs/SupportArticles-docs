@@ -1,7 +1,7 @@
 ---
-title: Understanding and Transitioning from Legacy to Diagnostic Settings for Activity Logs
+title: Transition from Legacy to Diagnostic Settings for Activity Logs
 description: Provides instructions to transition from legacy to diagnostic settings.
-ms.date: 07/22/2025
+ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs

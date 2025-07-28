@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot Export of Audit Logs to Another Tenant
+title: Troubleshoot the Export of Audit Logs to Another Tenant
 description: This article provides guidance to resolve permissions-related errors when you export audit logs to another tenant.
-ms.date: 07/22/2025
+ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
 
-# Troubleshoot export of audit logs to another tenant
+# Troubleshoot the export of audit logs to another tenant
 
 When users try to export audit logs from one tenant to another by using Microsoft Azure Lighthouse, they might experience permissions-related errors. This article provides guidance to resolve these issues.
 

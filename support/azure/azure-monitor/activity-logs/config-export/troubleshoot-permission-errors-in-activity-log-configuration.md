@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Permission Errors in Activity Log Configuration
 description: Troubleshooting guide for permission errors in Activity Log configuration.
-ms.date: 07/22/2025
+ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs

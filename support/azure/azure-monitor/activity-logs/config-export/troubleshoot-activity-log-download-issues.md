@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot Activity Log Download Issues
 description: Troubleshooting guide for Azure activity log download issues
-ms.date: 07/22/2025
+ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
 
-# Troubleshoot activity log download issues
+# Troubleshoot Activity Log download issues
 
 When users try to download activity logs from Microsoft Azure, they might receive error messages that indicate that the CSV file wasn't prepared. This issue often occurs if the requested logs exceed a certain volume and cause the process to fail. Understanding the root cause and implementing the right solutions can help resolve this issue efficiently.
 

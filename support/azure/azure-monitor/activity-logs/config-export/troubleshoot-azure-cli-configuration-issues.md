@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Azure CLI Configuration Issues
 description: Troubleshooting guide for Azure CLI configuration issues.
-ms.date: 07/22/2025
+ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of activity logs

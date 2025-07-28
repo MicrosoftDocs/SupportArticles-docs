@@ -1,13 +1,13 @@
 ---
-title: Understanding and Managing Diagnostic Settings Retention
+title: Understand and Manage Diagnostic Settings Retention
 description: Provides guidance for understanding and managing diagnostic settings retention.
-ms.date: 07/22/2025
+ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
 
-# Understanding and managing diagnostic settings retention
+# Understand and manage diagnostic settings retention
 
 When you manage Azure resources, you might experience issues that are related to the transition from diagnostic settings storage retention to Azure Storage lifecycle management. This article provides guidance to handle these issues effectively.
 

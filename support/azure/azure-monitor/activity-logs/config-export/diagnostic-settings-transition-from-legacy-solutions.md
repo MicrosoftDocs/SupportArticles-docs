@@ -1,5 +1,5 @@
 ---
-title: Diagnostic Settings Transition from Legacy Solutions
+title: Manage Diagnostic Settings to Transition from Legacy Solutions
 description: Provides guidance to make diagnostic settings to transition from legacy solutions.
 ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser
@@ -86,4 +86,3 @@ This article discusses the transition from legacy solutions to new diagnostic se
 - [Azure Monitor overview](/azure/azure-monitor/overview)
 
 If the issue persists after you follow these steps, open a support case for further assistance.
-
