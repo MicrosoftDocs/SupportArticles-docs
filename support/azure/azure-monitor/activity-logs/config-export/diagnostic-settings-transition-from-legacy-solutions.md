@@ -22,7 +22,7 @@ This article addresses the transition from legacy solutions for forwarding Azure
 
 2. **Update Automation Scripts**
    - If you have scripts using the legacy API, update them to use the **diagnostic settings API** by September 30, 2026.
-   - Refer to the [Azure Diagnostic Settings API Documentation](https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log?tabs=powershell#legacy-collection-methods) for guidance.
+   - Refer to the [Azure Diagnostic Settings API Documentation](/azure/azure-monitor/essentials/activity-log?tabs=powershell#legacy-collection-methods) for guidance.
 
 3. **Check Log Analytics Workspace**
    - Ensure the destination Log Analytics Workspace is active.
@@ -81,7 +81,7 @@ This article addresses the transition from legacy solutions for forwarding Azure
 ```
 
 ## Reference
-- [Azure Diagnostic Settings Documentation](https://learn.microsoft.com/azure/azure-monitor/essentials/activity-log?tabs=powershell#legacy-collection-methods)
-- [Azure Monitor Overview](https://learn.microsoft.com/azure/azure-monitor/overview)
+- [Azure Diagnostic Settings Documentation](/azure/azure-monitor/essentials/activity-log?tabs=powershell#legacy-collection-methods)
+- [Azure Monitor Overview](/azure/azure-monitor/overview)
 
 If the issue persists after following the solution steps, please open a support case for further assistance.
