@@ -1,30 +1,30 @@
 ---
-title: Something Went Wrong Error Codes In Power Apps
-description: Provides solutions to the error messages that occur when using the wrap feature in Power Apps.
+title: Something Went Wrong Error Codes in Power Apps
+description: Provides solutions to error messages that occur when using the wrap feature in Power Apps.
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 07/23/2025
+ms.date: 07/28/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # "Something went wrong" error that occurs when using the wrap feature
 
-This article provides solutions to the error messages that occur when using the [wrap](/power-apps/maker/common/wrap/overview) feature in Microsoft Power Apps.
+This article provides solutions to error messages that occur when using the [wrap](/power-apps/maker/common/wrap/overview) feature in Microsoft Power Apps.
 
 ## Error message: "Something went wrong. [5objp]"
 
-This issue might occur due to a Signature Hash Key mismatch or a Redirect URI mismatch during the app authentication process.
+This issue might occur due to a signature hash key mismatch or a redirect URI mismatch during the app authentication process.
 
-#### Cause 1: Signature Hash Key mismatch
+#### Cause 1: Signature hash key mismatch
 
-The APK is signed with a different key than the one registered in the Microsoft Entra ID application. This might occur if:
+The APK is signed with a different key than the one registered in the Microsoft Entra ID application. This issue might occur if:
 
 - A different keystore is used during the build process.
-- The registered hash key is incorrectly generated or copied (for example, it includes extra spaces or invalid characters.)
+- The registered hash key is incorrectly generated or copied (for example, it includes extra spaces or invalid characters).
 
-To resolve this issue, verify that the Signature Hash Key is correct:
+To resolve this issue, verify that the signature hash key is correct:
 
-1. [Generate the correct hash key](/power-apps/maker/common/wrap/code-sign-android#generate-keys) from the keystore used to sign the app.
+1. [Generate the correct hash key](/power-apps/maker/common/wrap/code-sign-android#generate-key-and-signature-hash) from the keystore used to sign the app.
 
 2. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **App registrations** and select your app.
 
@@ -32,7 +32,7 @@ To resolve this issue, verify that the Signature Hash Key is correct:
 
 4. Under the **Platform configurations** section, locate the **Android** platform.
 
-5. Check that your app's Signature Hash Key is listed and matches the hash key generated from your keystore.
+5. Check if your app's signature hash key is listed and matches the hash key generated from your keystore.
 
 6. If the hash key is missing or incorrect, add or update it as needed, and then save your changes.
 
@@ -41,9 +41,9 @@ To resolve this issue, verify that the Signature Hash Key is correct:
 The redirect URI being used by the app doesn't match what's registered in the portal:
 
 - Redirect URIs are case-sensitive. Mismatches might occur if the Bundle ID or URI is entered with incorrect casing.
-- Special characters in the URI (such as `%2F`, `%3D`) must be properly encoded and match exactly what is registered in Microsoft Entra ID.
+- Special characters in the URI (such as `%2F` and `%3D`) must be properly encoded and match exactly what's registered in Microsoft Entra ID.
 
-To resolve this issue, verify that the Redirect URI is correct:
+To resolve this issue, verify that the redirect URI is correct:
 
 1. Install [Android Studio](https://developer.android.com/studio) and set up an emulator.
 
@@ -53,17 +53,17 @@ To resolve this issue, verify that the Redirect URI is correct:
 
 4. On the error screen, locate the redirect URI being used.
 
-5. If the hash key in the URI contains encoded characters (for example, `%2F`), decode them (`%2F` becomes `/`) to get the Signature Hash Key.
+5. If the hash key in the URI contains encoded characters (for example, `%2F`), decode them (`%2F` becomes `/`) to get the signature hash key.
 
-6. Copy the decoded Signature Hash Key.
+6. Copy the decoded signature hash key.
 
 7. In the [Microsoft Entra admin center](https://entra.microsoft.com/), go to **App registrations** and select your app.
 
 8. Under **Authentication**, review the configured [redirect URIs](/entra/identity-platform/how-to-add-redirect-uri#add-a-redirect-uri).
 
-9. If the redirect URI is missing, add it with the correct Bundle ID and Signature Hash Key, and then save your changes.
+9. If the redirect URI is missing, add it with the correct Bundle ID and signature hash key, and then save your changes.
 
-10. Compare the existing redirect URI character-by-character (including case and encoding) with the one registered in Microsoft Entra ID.
+10. Compare the existing redirect URI character by character (including case and encoding) with the one registered in Microsoft Entra ID.
 
 11. If manually entering the Bundle ID in the portal, double-check for case consistency.
 
@@ -82,7 +82,7 @@ The error might occur when the app registration isn't configured to support [mul
 
 #### Cause
 
-This error typically occurs when the app registration is created using the wrap wizard, which by default sets the app to single-tenant mode. If the user doesn't manually update this setting or accidentally selects single tenant during manual app registration, wrap app is unable to authenticate, resulting in error code 9n155.
+This error typically occurs when the app registration is created using the wrap wizard, which, by default, sets the app to single-tenant mode. If the user doesn't manually update this setting or accidentally selects single tenant during manual app registration, the wrap app is unable to authenticate, resulting in error code 9n155.
 
 #### Resolution
 
@@ -94,7 +94,7 @@ This error typically occurs when the app registration is created using the wrap 
 
 ## Other issues
 
-If your issue isn't covered here, or if the preceding steps don't resolve your problem, [search for more support resources](https://powerapps.microsoft.com/support) or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support) and provide detailed steps to reproduce the problem.
+If your issue isn't covered here, or if the preceding steps don't resolve your problem, [search for more support resources](https://powerapps.microsoft.com/support) or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support) with detailed steps to reproduce the problem.
 
 ## Related information
 
