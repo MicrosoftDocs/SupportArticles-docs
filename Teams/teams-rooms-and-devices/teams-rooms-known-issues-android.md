@@ -35,6 +35,7 @@ ms.date: 07/22/2025
 | --- | --- | --- |
 |Unable to pair Yealink MeetingBar A40 device with CTP25 touch panel.|You might experience intermittent or failed pairing attempts between a Yealink MeetingBar A40 device and a CTP25 touch panel that are running the following firmware versions:<br/><br/>A40 device: 289.320.0.60<br/>CTP25 touch panel: 311.320.0.55<br/><br/>In some instances, the device might revert to an unpaired state shortly after initialization, or the touch panel might remain stuck on the pairing screen without displaying a code.|No workaround is available at this time.|
 |Logitech Rally Bar device is failing during remote login authentication.|You're able to sign in to a LogiTech VR1009 Rally Bar device locally but it signs out if an attempt is made to log in remotely. In this situation you might see Entra ID error codes 530003, 530002, and others.|No workaround is available at this time.|
+|Touch console not able to pair with Teams Rooms device.|The touch console that is paired with a Teams Rooms for Android device is unable to stay paired with the Front of Room device, and keeps re-trying the pairing process in a loop. Occasionally, you might see the following error message:<br/><br/>**Can't connect to device**|To fix the issue, make sure that the Teams Rooms for Android device has the latest updates installed, and both the device and the touch console are running the same version of the Teams Rooms for Android app.|
 
 ## Issues affecting multiple devices
 

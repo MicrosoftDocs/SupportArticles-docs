@@ -4,4 +4,4 @@
     - name: Error messages
       items:
         - name: Resolve errors
-          href: viva-insights-errors.md
+          href: ./error-messages/viva-insights-errors.md

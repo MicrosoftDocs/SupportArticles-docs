@@ -1,10 +1,10 @@
 ---
 title: Resolving Log Limit Issues in Azure Functions Apps
 description: Provides instructions to resolve log limit issues in Azure Functions apps.
-ms.date: 07/16/2025
+ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser; v-sisidhu
 ms.service: azure-monitor
-ms.custom: I can’t configure export of Activity Logs
+ms.custom: I can't configure export of Activity Logs
 ---
 
 # Resolve log limit issues in Azure Functions apps
@@ -36,7 +36,7 @@ To resolve log limit issues in Azure Functions apps, follow these steps:
 
 ## References
 
-- [Azure Monitor Documentation](/azure/azure-monitor/)
+- [Azure Monitor documentation](/azure/azure-monitor/)
 - [Application Insights quota management](/azure/azure-monitor/app/pricing)
 - [Log Analytics workspace management](/azure/azure-monitor/logs/manage-cost-storage)
 

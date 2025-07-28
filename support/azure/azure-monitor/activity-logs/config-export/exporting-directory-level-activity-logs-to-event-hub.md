@@ -1,7 +1,7 @@
 ---
 title: Exporting Directory-Level Activity Logs to Event Hubs
 description: Provides guidance for exporting directory-level activity logs to Event Hubs by using Azure management group-level diagnostic settings.
-ms.date: 07/16/2025
+ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser; v-sisidhu
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs

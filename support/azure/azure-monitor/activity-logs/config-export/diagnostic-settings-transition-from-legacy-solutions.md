@@ -1,7 +1,7 @@
 ---
 title: Diagnostic Settings Transition from Legacy Solutions
 description: Provides guidance to make diagnostic settings to transition from legacy solutions.
-ms.date: 07/16/2025
+ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
@@ -20,9 +20,9 @@ This article discusses the transition from legacy solutions to new diagnostic se
    1. Go to **Monitor** > **Activity Log** > **Export Activity Log**.
    1. Select your subscription from the list, and make sure that a diagnostic setting is configured.
 
-2. If you have scripts that use the legacy API, update them by September 30, 2026, to use the **diagnostic settings API**.
-
-   For more information, see [Azure Diagnostic Settings API Documentation](/azure/azure-monitor/essentials/activity-log?tabs=powershell#legacy-collection-methods).
+2. Update Automation Scripts
+   1. If you have scripts using the legacy API, update them to use the **diagnostic settings API** by September 30, 2026.
+   1. Refer to the [Azure Diagnostic Settings API Documentation](/azure/azure-monitor/essentials/activity-log?tabs=powershell#legacy-collection-methods) for guidance.
 
 3. Check the Log Analytics workspace:
    1. Make sure that the destination Log Analytics workspace is active.
@@ -86,3 +86,4 @@ This article discusses the transition from legacy solutions to new diagnostic se
 - [Azure Monitor overview](/azure/azure-monitor/overview)
 
 If the issue persists after you follow these steps, open a support case for further assistance.
+
