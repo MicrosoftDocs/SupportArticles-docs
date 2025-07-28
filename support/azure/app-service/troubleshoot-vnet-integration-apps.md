@@ -1,7 +1,7 @@
 ---
 title: Azure App Service virtual network integration troubleshooting guide
 description: How to troubleshoot virtual network integration on Windows and Linux apps.
-ms.date: 01/08/2024
+ms.date: 07/28/2025
 ms.service: azure-app-service
 ms.custom: linux-related-content
 author: hepiet
