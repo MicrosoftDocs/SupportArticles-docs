@@ -1,10 +1,10 @@
 ---
-title: Azure Key Vault Errors In Wrap For Power Apps
-description: Provides solutions to the Azure key vault errors that occur when using the wrap feature in Power Apps.
+title: Azure Key Vault Errors in Wrap For Power Apps
+description: Provides solutions for the Azure key vault errors that occur when using the wrap feature in Power Apps.
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 07/23/2025
+ms.date: 07/29/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Azure key vault errors in wrap for Power Apps
@@ -96,7 +96,7 @@ Error message: No organization ID tags found on key vault. Ensure that the tag {
 
 2. Copy the **Organization ID**.
 
-   :::image type="content" source="media/azure-key-vault-errors/organization-id.png" alt-text="Screenshot that shows the organization ID that you can find in your environment in Power Platform admin center.":::
+   :::image type="content" source="media/azure-key-vault-errors/organization-id.png" alt-text="Screenshot that shows the organization ID you can find in your environment in Power Platform admin center.":::
 
 3. In your key vault, go to **Tags** and create a tag named **organization-id** with your organization ID as the value.
 
@@ -235,4 +235,4 @@ If your issue isn't covered here, or if the preceding steps don't resolve your p
 ## Related information
 
 - ["Something went wrong" error that occurs when using the wrap feature](something-went-wrong-error-codes.md)
-- [Troubleshoot common issues when using the wrap feature](wrap-issues.md)
+- [Troubleshoot wrap feature issues in Power Apps](wrap-issues.md)
