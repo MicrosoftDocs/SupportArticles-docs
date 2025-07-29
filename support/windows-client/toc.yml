@@ -345,6 +345,8 @@ items:
       href: ./networking/error-access-network-drive-mapped-web-share.md
   - name: DNS
     items:
+    - name: Clearing the "Register this connection's addresses in DNS" option does not remove DNS record
+      href: ./networking/clear-register-addresses-not-remove-dns-records.md
     - name: Configure a domain suffix search list on the Domain Name System clients
       href: ./networking/configure-domain-suffix-search-list-domain-name-system-clients.md
     - name: DNS requests appear to be random
@@ -549,6 +551,8 @@ items:
     items:
     - name: Bug check 0x124 after a Windows in-place upgrade on Apple devices
       href: ./performance/bug-check-0x124-windows-upgrade-boot-camp-apple-devices.md
+    - name: Cannot scan from a scanning device connected through USB
+      href: ./performance/cannot-scan-device-connected-usb.md
     - name: Computers crash with error code 0x113
       href: ./performance/error-0x113-intel-amd-graphics-adapters.md
     - name: Configure system failure and recovery options
@@ -629,6 +633,8 @@ items:
       href: ./performance/pbr-reset-fails-language-resources-missing.md
   - name: Shutdown is slow or hangs
     items:
+    - name: Application error when you shut down or restart Windows
+      href: ./performance/application-error-explorer-shut-down.md
     - name: Shuts down slowly when set to clear the virtual memory pagefile
       href: ./performance/windows-shuts-down-slowly-when-set-to-clear-virtual-memory-pagefile.md
   - name: Slow Performance
@@ -765,6 +771,8 @@ items:
       href: ./setup-upgrade-and-drivers/non-compliant-usb-3-devices-not-function.md
     - name: Power Management tab isn't visible
       href: ./setup-upgrade-and-drivers/power-management-not-visible-in-aoac-platform.md
+    - name: Prevent users from connecting to a USB storage device
+      href: ./setup-upgrade-and-drivers/prevent-users-connect-usb.md      
     - name: Running TPM Management console fails
       href: ./setup-upgrade-and-drivers/cannot-load-tpm-management-console.md
     - name: '"The operation timed out" error'
@@ -929,6 +937,8 @@ items:
       href: ./shell-experience/issues-autoplay-disabled-group-policy.md
     - name: Notifications don't show in the action or notification center
       href: ./shell-experience/notifications-not-show-action-notification-center.md
+    - name: Operation to change a personal folder location fails
+      href: ./shell-experience/change-personal-folder-location-fails.md
     - name: Taskbar calendar doesn't open
       href: ./shell-experience/taskbar-calendar-does-not-open.md
     - name: UPX is displayed in the UI on managed device
@@ -1081,6 +1091,8 @@ items:
       href: ./system-management-components/error-task-xml-missing-required-element-attribute.md
     - name: Run programs automatically when a user logs on
       href: ./system-management-components/run-programs-automatically.md
+    - name: Scheduled task cannot run an .exe file on a share folder
+      href: ./system-management-components/scheduled-task-cannot-run.md
     - name: Scheduled tasks fail with "Task schedular service is not available"
       href: ./system-management-components/task-schedular-service-is-not-available.md
     - name: Task scheduler runs tasks as background processes
@@ -1293,6 +1305,8 @@ items:
       href: ./windows-security/clear-tpm-fails-error-code-0x80290300.md
     - name: TPM isn't recognized as a compatible device
       href: ./windows-security/tpm-is-not-recognized.md
+    - name: UEFI mode system cannot boot
+      href: ./windows-security/uefi-mode-system-cannot-boot.md
   - name: TPM
     items:
     - name: Events 14 and 17 for TPM command failure or non-recoverable error
