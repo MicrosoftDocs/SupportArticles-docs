@@ -2,7 +2,7 @@
 title: Troubleshoot hosted machines in Power Automate for desktop
 description: This article provides suggestions for how to troubleshoot hosted machine issues in Power Automate for desktop.
 ms.reviewer: kenseongtan, pefelesk, tapanm
-ms.date: 07/25/2025
+ms.date: 07/29/2025
 ms.custom: sap:Desktop flows\Installation issues
 ---
 # Troubleshoot hosted machines in Power Automate for desktop
