@@ -158,4 +158,4 @@ You may access the logs under:
 ## References
 
 - [Conversational Diagnostics](https://techcommunity.microsoft.com/blog/appsonazureblog/the-power-of-conversational-diagnostics-public-preview-and-diagnostic-workflows/4288668)
-- [Troubleshoot virtual network integration with Azure App Service](/azure/app-service/troubleshoot-vnet-integration-apps#network-troubleshooter)
+- [Troubleshoot virtual network integration with Azure App Service](../app-service/troubleshoot-vnet-integration-apps.md)
