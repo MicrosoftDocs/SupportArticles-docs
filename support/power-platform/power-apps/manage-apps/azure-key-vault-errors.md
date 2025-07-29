@@ -235,4 +235,4 @@ If your issue isn't covered here, or if the preceding steps don't resolve your p
 ## Related information
 
 - ["Something went wrong" error that occurs when using the wrap feature](something-went-wrong-error-codes.md)
-- [Troubleshoot wrap feature issues in Power Apps](wrap-issues.md)
+- [Troubleshoot common issues when using the wrap feature](wrap-issues.md)
