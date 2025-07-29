@@ -69,7 +69,7 @@ One major change between SLES 12 and SLES 15 is that High-Performance Computing 
 
 ### Resolution
 
-To resolve this issue, remove the HPC module before you start the migration. To d this, run the following command:
+To resolve this issue, remove the HPC module before you start the migration. Run the following command:
 
 ```bash
 sudo zypper rm sle-module-hpc-release-POOL sle-module-hpc-release
@@ -77,7 +77,7 @@ sudo zypper rm sle-module-hpc-release-POOL sle-module-hpc-release
 
 ### Workaround
 
-To work around this issue, move `sle-module-hpc.prod` from the `/etc/products.d/` directory to a temporary location, and try again to perform the migration. To do this, run the following commands:
+To work around this issue, move `sle-module-hpc.prod` from the `/etc/products.d/` directory to a temporary location, and try again to perform the migration. Run the following commands:
 
 ```bash
 cd /etc/products.d
@@ -511,7 +511,7 @@ Some issues occur during VM migration, For example, the VM stops responding, boo
 
 ### Resolution
 
-We recommend that you disable any third-party repositories and security tools on the system before you proceed to run the SUSE migration. It's critical that you disable these items during the migration to prevent dependency conflicts, ensure system stability, maintain consistency with official packages, simplify troubleshooting, and provide a smoother upgrade process.
+We recommend that you disable any third-party repositories and security tools on the system before you proceed to run the SUSE migration. Taking this action helps to prevent dependency conflicts, ensure system stability, maintain consistency with official packages, simplify troubleshooting, and provide a smoother upgrade process.
 
 ## Scenario 12: Successful Migration from SLES12 SP5 to SLES15 SP3, but SLES15 SP3 to SP6 Upgrade Fails with Error
 
@@ -617,7 +617,7 @@ gpg-pubkey-39db7c82-66c5d91a
 gpg-pubkey-50a3dd1c-50f35137
 gpg-pubkey-3fa1d6ce-63c9481c
 ```
-6. Initiate a migration:
+6. Start a migration:
 
 ```bash
 sudo zypper migration -v
@@ -922,20 +922,20 @@ There are running programs which still use files and libraries deleted or update
 Since the last system boot core libraries or services have been updated.
 Reboot is suggested to ensure that your system benefits from these updates.
 ```
-7. Verify the successful execution of the migration by running the following command. In the example below, an output of `0` indicates that the migration completed successfully. A non-zero return value signifies that an issue occurred. You can also review `/var/log/zypper.log` for detailed status and error messages.
+7. Verify a successful migration by running the following command. In the following example, an output of `0` indicates that the migration finished successfully. A nonzero return value signifies that an issue occurred. You can also review `/var/log/zypper.log` for detailed status and error messages.
+
 ```bash
 sudo echo $?
 ```
 ```output
 0
 ```
-8. Reboot the VM.
+8. Restart the VM:
+
 ```bash
 sudo reboot
 ```
-After reboot, the VM will be successfully migrated to SLES 15 SP6.
-
-
+After the restart, the VM will be successfully migrated to SLES 15 SP6.
 
 ## Next steps
 
