@@ -392,7 +392,7 @@ items:
   - name: Remote access
     items:
     - name: Change default MTU Size Settings
-      href: ./networking/default-maximum-transfer-unit-network-topologies.md
+      href: ./networking/change-default-mtu-size-for-ppp-vpn-connection.md
     - name: Default gateway route doesn't appear in Routing Table
       href: ./networking/default-gateway-route-not-appear.md
     - name: DirectAccess clients can't connect by IP-HTTPS

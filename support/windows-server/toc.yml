@@ -1631,7 +1631,7 @@ items:
     - name: Configure SNMP Service
       href: ./networking/configure-snmp-service.md
     - name: Default MTU sizes for different network topologies
-      href: ./networking/default-mtu-size-network-topologies.md
+      href: ./networking/default-maximum-transfer-unit-network-topologies.md
     - name: DirectAccess clients unable to connect when a static proxy is configured
       href: ./networking/directaccess-clients-unable-connect-static-proxy-configured.md
     - name: Direct host SMB over TCP/IP
