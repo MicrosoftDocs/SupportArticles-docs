@@ -125,7 +125,7 @@ For diagnostics, run these queries in Application Insights:
 
 ## Network validator tool
 
-If your app shows errors such as `FAILED TO INITIALIZE RUN FROM PACKAGE.txt` or `host.json not found`, refer to the [Troubleshoot virtual network integration with Azure App Service](/azure/app-service/troubleshoot-vnet-integration-apps#network-troubleshooter) article for further guidance.
+If your app shows errors such as `FAILED TO INITIALIZE RUN FROM PACKAGE.txt` or `host.json not found`, refer to the [Troubleshoot virtual network integration with Azure App Service](../app-service/troubleshoot-vnet-integration-apps.md) article for further guidance.
 
 > [!NOTE]
 > This applies to all hosting plans, with the exception of the Windows and Linux Consumption plans.
