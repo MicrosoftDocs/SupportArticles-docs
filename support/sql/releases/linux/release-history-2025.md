@@ -5,6 +5,7 @@ author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
 ms.date: 06/17/2025
+ms.update-cycle: 1095-days
 appliesto:
   - SQL Server 2025 Preview
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, linux-related-content

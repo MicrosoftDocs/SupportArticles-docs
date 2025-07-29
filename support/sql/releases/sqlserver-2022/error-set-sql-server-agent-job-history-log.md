@@ -2,6 +2,7 @@
 title: Error may occur when setting the SQL Server Agent job history log
 description: Fixes an error that occurs when setting or changing the maximum number of job history log rows and job history rows per job.
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5024352
 ms.reviewer: derekw, pcaronauger, v-qianli2
 appliesto:

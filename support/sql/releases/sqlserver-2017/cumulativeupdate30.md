@@ -2,6 +2,7 @@
 title: Cumulative update 30 for SQL Server 2017 (KB5013756)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 30 (KB5013756).
 ms.date: 03/20/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5013756, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows

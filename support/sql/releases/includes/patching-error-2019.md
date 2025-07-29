@@ -2,6 +2,7 @@
 ms.author: jaferebe
 author: JamesFerebee
 ms.date: 04/30/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen
 ---
 SQL Server 2019 CU27 introduced fix [2994446](../sqlserver-2019/cumulativeupdate27.md#2994446) to make secondary databases in an availability group (AG) startup more reliably. However, this fix causes a problem where AG databases don't start recovery if SQL Server is running in single-user mode. SQL Server Setup runs in single-user mode. As a result of this, if you run Setup and also have SQL replication or change data capture (CDC) enabled on a database in the AG, when the catalog upgrade scripts try to run but can't access the database, setup fails.
