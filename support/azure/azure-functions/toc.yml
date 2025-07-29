@@ -1,6 +1,8 @@
 items:
 - name: Welcome
   href: welcome-azure-functions.yml
+- name: Troubleshoot Azure Functions App issues
+  href: functions-troubleshoot-issues.md  
 - name: Application Code Deployment
   items:
     - name: Application issues post deployment
