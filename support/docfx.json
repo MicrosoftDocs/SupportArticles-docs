@@ -171,7 +171,8 @@
         "sales-copilot/**/*.md": "CEnSKM-ai-copilot"
       },
        "ms.update-cycle": {
-        "power-platform/ai-builder/**/*.md": "180-days"
+        "power-platform/ai-builder/**/*.md": "180-days",
+        "sales-copilot/**/*.md": "180-days"
       },
       "ms.author": {
         "**/*.md": "dcscontentpm",
