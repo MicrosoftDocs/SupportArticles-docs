@@ -47,8 +47,6 @@
       href: ../administration/information-about-uls-log-access.md
     - name: Profile picture not shown in SharePoint Online
       href: ../administration/profile-picture-not-showing.md
-    - name: Remove assembly reference from Sandbox solution
-      href: ../../SharePointServer/administration/change-sandbox-solution.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: SharePoint Online PowerShell command doesn't work correctly
       href: ../administration/sharepoint-online-powershell-command-does-not-work-correctly.md
     - name: SharePoint Online out of storage space
@@ -103,8 +101,6 @@
       href: ../lists-and-libraries/sync-sharepoint-list-error-0x80070005.md
     - name: Can't delete Teams channel folders
       href: ../lists-and-libraries/deleted-teams-standard-channel-folder-deletion-fails.md
-    - name: Can't open documents in a local client from Chrome
-      href: ../../SharePointServer/lists-and-libraries/cant-open-sp-documents-from-chrome.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Can't share/break inheritance of a folder, list, or library
       href: ../lists-and-libraries/error-share-break-inheritance.md
     - name: Can't sync files or folders
@@ -211,8 +207,6 @@
       href: ../search/search-results-dont-appear-for-group-owners.md
   - name: Security
     items:
-    - name: Documents deleted by retention policy after workload is removed
-      href: ../../OneDrive/security/retention-policies-deleting-documents-after-workload-removal.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Handling ransomware in SharePoint Online
       href: ../security/handling-ransomware-in-sharepoint-online.md
     - name: Migrated accounts aren't resolved
@@ -249,8 +243,6 @@
       href: ../sharing-and-permissions/anonymous-users-are-prompted-for-credentials-in-library.md
     - name: Can't add external users to a SharePoint Online External Content Type
       href: ../sharing-and-permissions/cannot-add-external-users-to-content-type.md
-    - name: Can't share/break inheritance of a folder, list, or library
-      href: ../lists-and-libraries/error-share-break-inheritance.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Email invitation isn't received
       href: ../sharing-and-permissions/everyone-group-not-receive-email-invitation.md
     - name: Error when accepting an online invitation with another account
@@ -321,8 +313,6 @@
       href: ../Sites/save-site-as-template.md
     - name: Issue with "New Navigation Link" or "Save site as template" option
       href: ../Sites/new-navigation-link-save-site-as-template.md
-    - name: Modified dates on the SharePoint site contents page aren't accurate
-      href: ../../SharePointServer/lists-and-libraries/modified-date-site-contents-not-accurate.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Notifications not received by group connected to SharePoint site
       href: ../sites/notification-email-not-received.md
     - name: Public websites are discontinued
@@ -345,8 +335,6 @@
     items:
     - name: A synchronized file is moved to the recycle bin
       href: ../Sync/synced-file-moved-to-recycle-bin.md
-    - name: SharePoint Workspace doesn't always sync automatically
-      href: ../../SharePointServer/sync/sharepoint-workspace-not-sync-with-online.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Video
     items:
     - name: Can't view embedded Stream video in Teams app
@@ -355,8 +343,6 @@
     items:
     - name: An online Web Part doesn't display
       href: ../Web-parts/fails-displaying-web-part-including-xslt-code.md
-    - name: Issue on a site page with pages library web part
-      href: ../../SharePointServer/web-parts/sorry-something-went-wrong-error-on-site-page-with-pages-library-web-part.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Issue when changing Summary Links Web Part
       href: ../Web-parts/change-summary-link-web-part.md
     - name: Non-CDN-enabled Picture Library Slideshow web part not working
