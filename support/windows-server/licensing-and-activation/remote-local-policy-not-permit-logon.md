@@ -65,7 +65,7 @@ Also, make sure that the Remote Desktop Users group has sufficient permissions t
 
 ### Did this fix the problem?
 
-Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](http://support.microsoft.com/contactus).
+Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus).
 
 We would appreciate your feedback. To provide feedback or to report any issues with this solution, leave a comment on the "Fix it for me" blog or send us an
 email.

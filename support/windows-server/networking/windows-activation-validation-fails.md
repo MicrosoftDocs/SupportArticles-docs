@@ -30,7 +30,7 @@ These problems may occur when you connect to the Internet through a proxy server
 If you experience other errors than those mentioned above when you try to activate Windows, go to the following Windows websites for more troubleshooting information:
 
 - [Get help with activation errors](https://support.microsoft.com/windows/get-help-with-windows-activation-errors-09d8fb64-6768-4815-0c30-159fa7d89d85)
-- [Why can't I activate Windows?](http://windows.microsoft.com/windows-8/why-activate-windows) 
+- [Why can't I activate Windows?](https://windows.microsoft.com/windows-8/why-activate-windows)
 
 ## Workaround
 
@@ -82,4 +82,4 @@ For more information about Windows Vista Volume Activation 2.0, see [Volume acti
 
 For more information how to troubleshoot Volume Activation error codes, see [Troubleshoot Windows activation error codes](/troubleshoot/windows-server/licensing-and-activation/troubleshoot-activation-error-codes).
 
-If these articles don't help you resolve the problem, search the Microsoft Knowledge Base for more information. To search the Microsoft Knowledge Base, go to [Microsoft Support](http://support.microsoft.com). Type the text of the error message that you receive, or type a description of the problem.
+If these articles don't help you resolve the problem, search the Microsoft Knowledge Base for more information. To search the Microsoft Knowledge Base, go to [Microsoft Support](https://support.microsoft.com). Type the text of the error message that you receive, or type a description of the problem.

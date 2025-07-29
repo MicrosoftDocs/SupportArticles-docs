@@ -71,11 +71,10 @@ When you do this, the USB storage device doesn't work when the user connects the
 
 Did this fix the problem?
 
-Check whether the problem is fixed. If the problem is fixed, you're finished with this article. If the problem isn't fixed, you can [contact support](http://support.microsoft.com/contactus).
+Check whether the problem is fixed. If the problem is fixed, you're finished with this article. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus).
 
 ## More information
 
-Contact the vendor of your USB device to ask about a newer driver. For information about your hardware manufacturer, visit the following Web site:
-http://support.microsoft.com/gp/vendors/en-us
+Contact the vendor of your USB device to ask about a newer driver.
 
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information.

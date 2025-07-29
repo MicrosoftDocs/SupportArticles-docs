@@ -20,8 +20,6 @@ The retransmission timer is initialized to three seconds when a TCP connection i
 
 By default, after the retransmission timer hits 240 seconds, it uses that value for retransmission of any segment that has to be retransmitted. This can cause long delays for a client to time-out on a slow link.
 
-For more information about the latest service pack for Windows 2000, see [260910 How to obtain the latest Windows 2000 service pack](http://support.microsoft.com/en-us/help/260910).
-
 ## More information
 
 > [!Important]
@@ -74,10 +72,5 @@ For example, the value data of "5000 decimal" sets the initial retransmit time t
 The Initial RTO in Windows Server 2008 R2 and Windows 7 can be controlled by using the `netsh` command by initialRTO.
 
 For prerequisites and more information, see [You can't customize some TCP configurations by using the netsh command in Windows Server 2008 R2](https://support.microsoft.com/topic/you-cannot-customize-some-tcp-configurations-by-using-the-netsh-command-in-windows-server-2008-r2-c1feebea-82a8-cb05-83c7-46ffb5fd9cec).
-
-For more information about retransmit time, see:
-
-[TCP/IP may retransmit packets prematurely](http://support.microsoft.com/help/232512)
-[TCP Initial retransmission timer adjustment added to Windows NT](http://support.microsoft.com/help/223450)
 
 For more information, search the web for "RFC 793 (Section 3.7) TCP Protocol Specification."

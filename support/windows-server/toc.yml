@@ -1727,7 +1727,7 @@ items:
     - name: Troubleshoot Web Application Proxy
       href: ./networking/troubleshoot-web-application-proxy.md
     - name: Use TRACERT to troubleshoot TCP/IP problems
-      href: ./networking/tracert-troubleshoot-tcp-ip-problems.md
+      href: ./networking/trace-route-troubleshoot-tcp-ip-problems.md
     - name: Use WHOIS to research Internet domains
       href: ./networking/research-internet-domains-with-whois.md
     - name: Using the PortQry command-line tool
@@ -1735,7 +1735,7 @@ items:
     - name: Virtual machines lose network connectivity
       href: ./networking/vm-lose-network-connectivity-broadcom.md
     - name: Windows activation or validation fails with error code 0x8004FE33
-      href: ./networking/windows-activation-validation-fails-0x8004fe33.md
+      href: ./networking/windows-activation-validation-fails.md
     - name: WSAEMSGSIZE - Error 10040 in Winsock 2.0
       href: ./networking/wsaemsgsize-error-10040-in-winsock-2.md
   - name: Webwindows-client and WebDAV
