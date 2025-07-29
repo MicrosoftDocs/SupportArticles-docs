@@ -61,6 +61,8 @@ This article lists common error messages that you might receive when you change 
 
 **Note:** You might encounter different errors about individual site renaming if the actions fail as part of the domain renaming. For more information, see [Errors when you rename a SharePoint site address](https://support.microsoft.com/office/errors-when-you-rename-a-sharepoint-site-address-165b7c11-1325-4813-b160-ecbe87bc1a86).
 
+**Note for Tenant Renames for more than 100k sites**: The Start-SPOTenantRename cmdlet may timeout with the following message: _It looks like the command has timed out. Please do not retry at this time. Continue monitoring the status using `Get-SPOTenantRenameStatus`_." - In such scenarios please avoid retrying Start-SPOTenantRename. You can continue checking the status using Get-SPOTenantRenameStatus. Details of the Rename will be available in this cmdlet output once the scheduling goes through. If the status does not update after a couple of hours or you observe unexpected behavior, please reach out to Microsoft Support for assistance.
+
 ## References
 
 - [Frequently asked questions about SharePoint Domain renames](domain-rename-faq.md)
