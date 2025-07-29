@@ -2,6 +2,7 @@
 title: Cumulative Update 2 for SQL Server 2019 (KB4536075)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 2 (KB4536075).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4536075
 ms.reviewer: v-qianli2
 appliesto:

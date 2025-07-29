@@ -2,6 +2,7 @@
 title: SQL Server 2016 Service Pack 3 release information (KB5003279)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 Service Pack 3 release information (KB5003279).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5003279
 appliesto:
 - SQL Server 2016

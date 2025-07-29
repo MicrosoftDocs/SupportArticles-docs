@@ -2,6 +2,7 @@
 title: Cumulative update 20 for SQL Server 2022 (KB5059390)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2022 cumulative update 20 (KB5059390).
 ms.date: 07/10/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5059390
 ms.reviewer: v-qianli2
 appliesto:

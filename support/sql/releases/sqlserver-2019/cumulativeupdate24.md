@@ -2,6 +2,7 @@
 title: Cumulative update 24 for SQL Server 2019 (KB5031908)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 24 (KB5031908).
 ms.date: 05/30/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5031908
 ms.reviewer: v-qianli2
 appliesto:

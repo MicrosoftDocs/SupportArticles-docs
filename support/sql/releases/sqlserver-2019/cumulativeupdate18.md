@@ -2,6 +2,7 @@
 title: Cumulative update 18 for SQL Server 2019 (KB5017593)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 18 (KB5017593).
 ms.date: 05/30/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5017593
 ms.reviewer: v-cuichen
 appliesto:

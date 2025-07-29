@@ -2,6 +2,7 @@
 title: SQL Server 2014 build versions (KB2936603)
 description: This article lists cumulative update builds for SQL Server 2014.
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB2936603
 appliesto:
 - SQL Server 2014
