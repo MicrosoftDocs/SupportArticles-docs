@@ -17,29 +17,38 @@ Azure Activity Logs are retained for 90 days by default. This guide provides ste
 
 ### Step-by-Step Instructions to Configure Long-Term Storage
 
-1. **Create a Diagnostic Setting**:
-   - Navigate to the Azure portal and select **Monitor**.
-   - Under **Settings**, choose **Diagnostic settings**.
-   - Click on **Add diagnostic setting**.
-   - Select the **Activity Log** you wish to configure.
+#### Create a Diagnostic Setting
 
-2. **Specify the Destination**:
-   - Choose the destination for your logs. Options include **Log Analytics**, **Event Hubs**, or **Azure Storage**.
-   - Ensure the destination resource is configured to retain logs for more than 90 days.
+1. Navigate to the [Azure portal](https://ms.portal.azure.com/auth/login/) and select **Monitor**.
+1. Under **Settings**, choose **Diagnostic settings**.
+1. Select **Add diagnostic setting**.
+1. Select the **Activity Log** you wish to configure.
 
-3. **Configure Retention Settings**:
-   - If using Azure Storage, navigate to the **Storage Account**.
-   - Under **Data Management**, select **Lifecycle Management**.
-   - Set the retention period to your desired duration.
+#### Specify the Destination
 
-4. **Verify Configuration**:
-   - Return to the **Diagnostic settings** and ensure your settings are saved.
-   - Check the destination resource to confirm logs are being stored as expected.
+1. Choose the destinations for your logs from **Log Analytic**, **Event Hubs**, **Azure Storage.**
+1. Ensure the destination resource is configured to retain logs for more than 90 days.
 
-### Common Issues and Solutions
+#### Configure Retention Settings
 
-- **Logs Not Appearing in Destination**: Ensure the diagnostic setting is correctly configured and the destination resource is active.
-- **Retention Period Not Applied**: Verify that the retention settings in the destination resource are correctly set.
+1. If using Azure Storage, navigate to the **Storage Account**.
+1. Under **Data Management**, select **Lifecycle Management**.
+1. Set the retention period to your desired duration.
+
+#### Verify Configuration
+
+1. Return to the **Diagnostic settings** and ensure your settings are saved.
+1. Check the destination resource to confirm logs are being stored as expected.
+
+### Frequenctly Asked Questions
+
+**Why aren’t the logs appearing in the destination?**
+
+Ensure the diagnostic setting is correctly configured and the destination resource is active.
+
+**Why is the retention period not applied?d**
+
+Verify that the retention settings in the destination resource are correctly set.
 
 ## Reference
 
