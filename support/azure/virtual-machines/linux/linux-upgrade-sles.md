@@ -20,7 +20,7 @@ This article discusses issues that occur during SUSE Linux Enterprise server (SL
 - This [Distribution Migration System (DMS)](https://documentation.suse.com/suse-distribution-migration-system/15/single-html/distribution-migration-system/index.html) guide provides general guidance about how to upgrade SLES 12 to SLES 15 for an Azure VM. For more information, see [Upgrading SUSE Linux Enterprise in the Public Cloud](https://www.suse.com/c/upgrading-suse-linux-enterprise-in-the-public-cloud/) and [SUSE Product Lifecycle](https://www.suse.com/lifecycle).
 - Because the migration requires the VM to restart, plan the migration activity per the approved downtime window. 
 - Take a complete backup or snapshot of the VM before you perform the migration.
-- [Check whether the VM is generation V1 or V2](#check-the-generation-version-for-a-vm).
+- [Check whether the VM is generation V1 or V2](#check-the-generation-version-of-a-vm).
 
 ### Check the generation version of a VM
 
