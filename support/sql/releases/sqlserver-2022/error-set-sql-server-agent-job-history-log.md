@@ -36,7 +36,7 @@ This problem is fixed in the following cumulative updates for SQL Server:
 Each new cumulative update for SQL Server contains all the hotfixes and security fixes that were in the previous build. We recommend that you install the latest build for your version of SQL Server:
 
 - [Latest cumulative update for SQL Server 2022](build-versions.md)
-- [Latest cumulative update for SQL Server 2019](https://support.microsoft.com/help/4518398)
+- [Latest cumulative update for SQL Server 2019](../sqlserver-2019/build-versions.md)
 
 ## Status
 
