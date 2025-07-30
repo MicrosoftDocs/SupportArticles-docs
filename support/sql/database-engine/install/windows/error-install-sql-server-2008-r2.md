@@ -4,7 +4,7 @@ description: This article outlines some common installation errors and provides 
 ms.date: 05/06/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ---
-# SQL Server installation errors
+# SQL Server Installation Errors
 
  This article can help you resolve some common SQL Server installation errors.
 
