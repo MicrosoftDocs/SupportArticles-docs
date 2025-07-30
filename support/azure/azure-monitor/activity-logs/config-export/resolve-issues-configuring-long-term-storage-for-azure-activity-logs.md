@@ -36,7 +36,7 @@ This article discusses how to configure long-term storage for Azure Activity Log
 1. Return to **Diagnostic settings**, and make sure that your settings are saved.
 1. Check the destination resource to verify that logs are stored as expected.
 
-### Frequenctly asked questions
+### Frequently asked questions
 
 **Q1: Why don't the logs appear in the destination?**
 
