@@ -1,58 +1,54 @@
 ---
 title: Resolve Issues Configuring Long-Term Storage for Azure Activity Logs
-description: This article addresses the issue of configuring long-term storage for Azure Activity Logs, which by default are retained for 90 days. Users may need to store logs for a longer period for compliance or analysis purposes.
+description: Discusses how to configure long-term storage for Azure Activity Logs past the default 90 days. 
 ms.date: 07/23/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
 
-# Resolve Issues Configuring Long-Term Storage for Azure Activity Logs
+# Configure long-term storage for Azure Activity Logs
 
-This article addresses the issue of configuring long-term storage for Azure Activity Logs, which by default are retained for 90 days. Users may need to store logs for a longer period for compliance or analysis purposes.
+This article discusses how to configure long-term storage for Azure Activity Logs. By default, Activity Logs are retained for 90 days. Users might have to store logs for a longer time for compliance or extended analysis.
 
-## Introduction
+## Configure long-term storage
 
-Azure Activity Logs are retained for 90 days by default. This guide provides steps to configure long-term storage for these logs, ensuring they are available for extended analysis or compliance needs.
+### Step 1: Create a diagnostic setting
 
-### Step-by-Step Instructions to Configure Long-Term Storage
-
-#### Create a Diagnostic Setting
-
-1. Navigate to the [Azure portal](https://ms.portal.azure.com/auth/login/) and select **Monitor**.
-1. Under **Settings**, choose **Diagnostic settings**.
+1. Go to the [Azure portal](https://ms.portal.azure.com/auth/login/) > **Monitor**.
+1. Under **Settings**, select **Diagnostic settings**.
 1. Select **Add diagnostic setting**.
-1. Select the **Activity Log** you wish to configure.
+1. Under **Activity Log**, select the log that you want to configure.
 
-#### Specify the Destination
+### Step 2: Specify the destination
 
-1. Choose the destinations for your logs from **Log Analytic**, **Event Hubs**, **Azure Storage.**
-1. Ensure the destination resource is configured to retain logs for more than 90 days.
+1. Got to **Log Analytic** > **Event Hubs** > **Azure Storage**, and select the destinations for your logs. 
+1. Set the destination resource to retain logs for more than 90 days.
 
-#### Configure Retention Settings
+### Step 3: Configure the retention settings
 
-1. If using Azure Storage, navigate to the **Storage Account**.
+1. If you use Azure Storage, navigate to the **Storage Account**.
 1. Under **Data Management**, select **Lifecycle Management**.
 1. Set the retention period to your desired duration.
 
-#### Verify Configuration
+### Step 4: Verify the configuration
 
-1. Return to the **Diagnostic settings** and ensure your settings are saved.
-1. Check the destination resource to confirm logs are being stored as expected.
+1. Return to **Diagnostic settings**, and make sure that your settings are saved.
+1. Check the destination resource to verify that logs are stored as expected.
 
-### Frequenctly Asked Questions
+### Frequenctly asked questions
 
-**Why aren’t the logs appearing in the destination?**
+**Q1: Why don't the logs appear in the destination?**
 
-Ensure the diagnostic setting is correctly configured and the destination resource is active.
+**A1:** Make sure that the diagnostic setting is correctly configured and the destination resource is active.
 
-**Why is the retention period not applied?d**
+**Q2: Why is the retention period not applied?**
 
-Verify that the retention settings in the destination resource are correctly set.
+**A2** Verify that the retention settings in the destination resource are set correctly.
 
-## Reference
+## References
 
 - [Azure Monitor Documentation](/azure/azure-monitor/platform/activity-log?tabs=powershell)
 - [Azure Storage Lifecycle Management](/azure/storage/blobs/storage-lifecycle-management-concepts)
 
-If the issue persists after following the solution steps, please open a support case for further assistance.
+If the issue persists after you follow these steps, open a support case for further assistance.
