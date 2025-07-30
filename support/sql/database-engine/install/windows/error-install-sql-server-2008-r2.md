@@ -128,6 +128,6 @@ The error messages that are mentioned in the [Symptoms](#symptoms) section may h
 
 For additional guidance, refer to
 
-[SQL Server installation guide](/sql/database-engine/install-windows/install-sql-server?view=sql-server-ver17)
+[SQL Server installation guide](/sql/database-engine/install-windows/install-sql-server?)
 
-[Repair a failed SQL Server installation](/sql/database-engine/install-windows/repair-a-failed-sql-server-installation?view=sql-server-ver17)
+[Repair a failed SQL Server installation](/sql/database-engine/install-windows/repair-a-failed-sql-server-installation?)
