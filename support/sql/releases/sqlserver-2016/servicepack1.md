@@ -41,7 +41,7 @@ After you install SQL Server 2016 SP1, the DCOM permissions for launching and ac
 
 ### ODBC Driver 13.1
 
-With the default installation of SQL Server 2016, ODBC Driver 13.0 is installed on the server which is used by SQL Agent and SSMS (installed on server) to connect to the SQL Server instance. If you have installed ODBC Driver 13.1 on your server for any reason, SQL Server 2016 SP1 installation overrides the ODBC Driver 13.1 installation and the fixes introduced in 13.1 like [KB 3185365](../../ssms/error-you-try-to-read-error-log.md) may be lost. In this case post installation of SQL Server 2016 SP1, it's recommended to uninstall the ODBC Driver installed by SQL Server 2016 SP1 and install [ODBC Driver 13.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-2016#131).
+With the default installation of SQL Server 2016, ODBC Driver 13.0 is installed on the server which is used by SQL Agent and SSMS (installed on server) to connect to the SQL Server instance. If you have installed ODBC Driver 13.1 on your server for any reason, SQL Server 2016 SP1 installation overrides the ODBC Driver 13.1 installation and the fixes introduced in 13.1 like [KB 3185365](../../ssms/error-you-try-to-read-error-log.md) may be lost. In this case post installation of SQL Server 2016 SP1, it's recommended to uninstall the ODBC Driver installed by SQL Server 2016 SP1 and install [ODBC Driver 13.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#131).
 
 To check for ODBC Driver installed on the server, you can go to Control Panel of the server -> Programs and Features -> Search for ODBC. The version number of ODBC Driver 13.1 is 13.1.811.168 as shown below:
 
