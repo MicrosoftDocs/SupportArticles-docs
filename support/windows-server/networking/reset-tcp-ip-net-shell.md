@@ -31,7 +31,7 @@ Windows Vista, Windows XP, Windows Server 2008, or Windows Server 2003
 
 To manually reset TCP/IP, follow these steps:
 
-### [Windows 8 and Windows 8.1](#tab/windows-8-and-windows-81)
+### Windows 8 and Windows 8.1
 
 1. On the **Start** screen, type **CMD**. In the search results, right-click **Command Prompt**, and then select **Run as administrator**.
 2. At the command prompt, enter the following command, and then press <kbd>Enter</kbd>:
@@ -45,7 +45,7 @@ To manually reset TCP/IP, follow these steps:
 
 3. Restart the computer.
 
-### [Windows 7 and Windows Vista](#tab/#windows-7-and-windows-vista)
+### Windows 7 and Windows Vista
 
 1. To open a command prompt, select **Start** and then type **cmd** in the **Search programs and files** box.
 2. Under **Programs**, right-click the **CMD.exe** icon, and then select **Run as administrator**.
@@ -61,7 +61,7 @@ To manually reset TCP/IP, follow these steps:
 
 5. Restart the computer.
 
-### [Windows XP](#tab/#windows-xp)
+### Windows XP
 
 1. To open a command prompt, select **Start** > **Run**. In the **Open** box, enter the following command, and then press <kbd>Enter</kbd>:
 
@@ -73,8 +73,6 @@ To manually reset TCP/IP, follow these steps:
     > If you don't want to specify a directory path for the log file, run the following command instead: `netsh int ip reset resetlog.txt`.
 
 2. Restart the computer.
-
----
 
 When you run the reset command, it overwrites the following registry keys, both of which are used by TCP/IP:
 
