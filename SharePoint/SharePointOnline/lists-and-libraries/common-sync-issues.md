@@ -28,13 +28,12 @@ This document contains troubleshooting steps for common issues with syncing list
 <details>
 <summary><b>Sync icon doesn't appear</b></summary>
 
-1. Open the Windows task manager and look for “Microsoft SharePoint (Microsoft.SharePoint.exe)” under **Processes** > **Background Processes**.
+1. Open the Windows task manager and look for “__Microsoft OneDrive Sync Service__ (__OneDrive.Sync.Service.exe__)” under **Processes** > **Background Processes**.  
+![User's image](media/common-sync-issues/image.png)
 
-    :::image type="content" source="./media/common-sync-issues/background-processes.png" alt-text="Microsoft SharePoint shows as a background process.":::
-
-    - If SharePoint is running, continue to step 2.
-    - If SharePoint isn't running, List sync isn't running. Your orgnization might have prevented it from synching, see [Lists sync policies](/sharepoint/lists-sync-policies). 
-
+   - If __Microsoft OneDrive Sync Service__  is running, continue to step 2.
+   - If __Microsoft OneDrive Sync Service__ isn't running, List sync isn't running. Your orgnization might have prevented it from synching, see [Lists sync policies](/sharepoint/lists-sync-policies). 
+      
 1. <a href=#logging>Enable Web App Logging</a>.  
 1. Check the console log for a line that includes "Found list". It will look similar to this example:
 
@@ -43,7 +42,7 @@ This document contains troubleshooting steps for common issues with syncing list
     - If there is no log line starting with “Found list”, it might mean the List sync process hasn't synced the list yet. Wait for silent configuration or syncing to occur.
     - If the line with "Found list" shows “unsynced:true", the list is currently unsynced because List sync doesn’t support it. This is by design, and List sync will be extending our support for lists in future versions. See the "Current Limitations of List sync" section in [Edit lists offline](https://support.microsoft.com/office/41403c3e-1795-4e07-b56b-ae591cbde2f9).
 
-1. If Microsoft.SharePoint.exe is running, and there is a “Found list” log line that does not show "unsynced",  it could be a client issue. See <a href=#support>Contacting Support</a>.  
+1. If __OneDrive.Sync.Service.exe__ is running, and there is a “Found list” log line that does not show "unsynced",  it could be a client issue. See <a href=#support>Contacting Support</a>.  
 
 </details>
 <br/>
@@ -132,4 +131,5 @@ Select **Contact Support**.
 ## References
 
 - [Edit lists offline](https://support.microsoft.com/office/41403c3e-1795-4e07-b56b-ae591cbde2f9)
+
 - [Lists sync policies](/sharepoint/lists-sync-policies)
