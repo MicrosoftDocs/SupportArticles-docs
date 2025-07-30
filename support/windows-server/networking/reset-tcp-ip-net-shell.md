@@ -88,7 +88,7 @@ This has the same effect as removing and reinstalling TCP/IP. To run the manual 
 
 ## More information
 
-Did this fix the problem? Check whether the problem is fixed. If it is, you're finished with this article. If the problem isn't fixed, you can [contact Support](http://support.microsoft.com/contactus).
+Did this fix the problem? Check whether the problem is fixed. If it is, you're finished with this article. If the problem isn't fixed, you can [contact Support](https://support.microsoft.com/contactus).
 
 ### Sample log file for Netsh int IP reset
 
