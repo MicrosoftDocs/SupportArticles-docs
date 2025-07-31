@@ -6,7 +6,7 @@ ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ---
 # SQL Server Installation Errors
 
- This article can help you resolve some common SQL Server installation errors.
+This article can help you resolve some common SQL Server installation errors.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2449398
