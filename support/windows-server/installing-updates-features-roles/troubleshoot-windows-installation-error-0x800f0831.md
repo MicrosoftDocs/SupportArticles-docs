@@ -1,7 +1,7 @@
 ---
 title: Update Installation Error 0x800f0831 CBS E STORE CORRUPTION_Windows
-description: Learn how to resolve Windows Update error 0x8024002E, indicating that access to an unmanaged server isn't allowed.
-ms.date: 07/32/2025
+description: Learn how to resolve Windows Update error 0x800f0831, indicating that access to an unmanaged server isn't allowed.
+ms.date: 07/31/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -10,10 +10,11 @@ ms.custom:
 - sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
 - pcy:WinComm Devices Deploy
 ---
+
+# Troubleshoot Windows Update error 0x800f0831
+
 > [!WARNING]
 > This error has been flagged to have an IPU performed to recover the VM if the instructions below do not resolve the issue.
-
-# Troubleshoot Windows Update error 0x80070002
 
 The Windows Update error 0x80070002 typically occurs because of missing or corrupt files necessary for the update or incomplete previous updates. Understanding the root causes and following the appropriate troubleshooting steps can help resolve this issue effectively.
 
@@ -24,11 +25,11 @@ This TSG is designed to mitigate this issue and be able to install the updates n
 ## Symptom
 When you try to install any patch using the standalone installer (.msu) or Windows Update and the update was not installed:
 
-:::image type="content" source="../../../SharePoint/SharePointOnline/Media/Download and Install Updates Screenshot.jpg" alt-text="Download and install updates screenshot":::
+:::image type="content" source="../../../SharePoint/SharePointOnline/Media/download and install updates .jpg" alt-text="download and install updates":::
 
-:::image type="content" source="../../../SharePoint/SharePointOnline/Media/Windows updates screenshot.jpg" alt-text="Windows update screenshot":::
+:::image type="content" source="../../../SharePoint/SharePointOnline/Media/windows updates.jpg" alt-text="windows update":::
 
-:::image type="content" source="../../../SharePoint/SharePointOnline/Media/Retry screenshot.jpg" alt-text="Retry screenshot":::
+:::image type="content" source="../../../SharePoint/SharePointOnline/Media/retry .jpg" alt-text="retry":::
 
 ## Root cause
 
