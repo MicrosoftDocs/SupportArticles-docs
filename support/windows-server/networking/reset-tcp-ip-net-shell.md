@@ -12,7 +12,7 @@ ms.custom:
 ---
 # How to reset TCP/IP by using the NetShell utility
 
-You can try to reset TCP/IP if you have Internet connection issues. This article describes two ways to reset TCP/IP. To have us reset TCP/IP for you, go to the "Here's an easy fix" section. If you prefer to reset TCP/IP manually, go to the "Let me fix it myself" section.
+You can try to reset TCP/IP if you have Internet connection issues. This article describes two ways to reset TCP/IP.
 
 ## Reset TCP/IP automatically
 

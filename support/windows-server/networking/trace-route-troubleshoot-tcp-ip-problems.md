@@ -86,8 +86,8 @@ tracert -d -h maximum_hops -j host-list -w timeout target_host
 
 What the parameters do:
 
-`-d`: Specifies to not resolve addresses to host names.
-`-h maximum_hops`: Specifies the maximum number of hops to search for the target.
-`-j host-list`: Specifies loose source route along the host-list.
-`-w timeout`: Waits the number of milliseconds specified by timeout for each reply.
-`target_host`: Specifies the name or IP address of the target host.
+- `-d`: Specifies to not resolve addresses to host names.
+- `-h maximum_hops`: Specifies the maximum number of hops to search for the target.
+- `-j host-list`: Specifies loose source route along the host-list.
+- `-w timeout`: Waits the number of milliseconds specified by timeout for each reply.
+- `target_host`: Specifies the name or IP address of the target host.

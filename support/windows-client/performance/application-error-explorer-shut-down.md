@@ -32,7 +32,3 @@ To work around this issue, use the Settings charm to shut down or restart Window
 ## Cause
 
 This error occurs because the **Explorer.exe** process accesses memory that has already been freed during the shutdown process.
-
-## Status
-
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.

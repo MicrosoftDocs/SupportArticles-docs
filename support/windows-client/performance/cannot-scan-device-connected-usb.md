@@ -34,8 +34,7 @@ Description: The computer has rebooted from a bugcheck. The bugcheck was: 0x0000
 
 ## Workaround
 
-> [!Important]
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) in case problems occur.
+[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
 To have us fix this problem for you, go to the "Fix it for me" section. If you prefer to fix this problem yourself, go to the "Let me fix it myself" section.
 

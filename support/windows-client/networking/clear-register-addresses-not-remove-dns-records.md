@@ -66,9 +66,10 @@ For DHCP clients, we recommend that you follow these steps:
     ipconfig /renew
     ```
 
-For more information, see [DNS Processes and Interactions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197552(v=ws.10)).
+For more information, see:
 
-For more information about IPv4 and IPv6 advanced DNS tab, see [General information about IPv4 and IPv6 advanced DNS tab](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754143(v=ws.11)).
+- [DNS Processes and Interactions](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197552(v=ws.10)).
+- [General information about IPv4 and IPv6 advanced DNS tab](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754143(v=ws.11)).
 
 ## More Information
 

@@ -51,8 +51,7 @@ When you do this, users can't install a USB storage device on the computer. To a
 
 If a USB storage device is already installed on the computer, you can change the registry to make sure that the device doesn't work when the user connects to the computer.
 
-> [!IMPORTANT]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
+[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
 If a USB storage device is already installed on the computer, set the `Start` value in the following registry key to `4`:
 

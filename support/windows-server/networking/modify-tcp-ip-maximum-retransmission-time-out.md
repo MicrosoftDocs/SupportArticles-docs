@@ -22,10 +22,7 @@ By default, after the retransmission timer hits 240 seconds, it uses that value 
 
 ## More information
 
-> [!Important]
-> This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see:
->
-> [322756 How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692)
+[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
 The `TcpMaxDataRetransmissions` registry value controls the number of times that TCP retransmits an individual data segment before it aborts the connection. This value isn't configured by default, but it can be entered to change the default number of retries.
 
