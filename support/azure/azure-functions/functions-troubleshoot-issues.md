@@ -65,7 +65,7 @@ The diagnostic workflow evaluates the following aspects of your Azure Functions 
     - Offline history analysis for unexpected downtimes
 
 - **Recent deployments:**
-    - Highlights deployments that may have impacted the app.
+    - Highlights deployments that might affect the app.
 
 - **Runtime and language version validation:**
     - Confirms use of supported versions
@@ -88,7 +88,7 @@ The diagnostic workflow evaluates the following aspects of your Azure Functions 
 
 - **Execution health detects:**
     - Execution failures
-    - Non-triggering functions
+    - Nontriggering functions
     - Stuck or long-running executions
 
 - **AI-powered analysis:**
@@ -130,7 +130,7 @@ For diagnostics, run these queries in Application Insights:
 If your app shows error entries such as `FAILED TO INITIALIZE RUN FROM PACKAGE.txt` or `host.json not found`, see [Troubleshoot virtual network integration with Azure App Service](../app-service/troubleshoot-vnet-integration-apps.md).
 
 > [!NOTE]
-> This error applies to all hosting plans, with the exception of the Windows and Linux Consumption plans.
+> This error applies to all hosting plans, except for the Windows and Linux Consumption plans.
 
 - To access this tool, follow these steps:
     1. Sign in to the [Azure portal](https://portal.azure.com).
@@ -155,7 +155,7 @@ You can access the logs at:
 - **System-level logs:** `%HOME%\LogFiles\Eventlog.xml`
 
 > [!NOTE]
-> This log access applies to all hosting plans, with the exception of the Linux Consumption and Flex Consumption plans.
+> This log access applies to all hosting plans, except for the Linux Consumption and Flex Consumption plans.
 
 ## References
 
