@@ -47,7 +47,3 @@ To work around this problem, use Registry Editor to remove `WmsImageFilter` from
 3. In the right pane, right-click the multi-string value named `UpperFilters`, and then select **Modify…**.
 4. Locate `WmsImageFilter` in the box under **Value Data**, and then remove it from the list.
 5. Select **OK** to save the changes, and then close Registry Editor.
-
-## Status
-
-Microsoft has confirmed that this is a problem in the Microsoft products.
