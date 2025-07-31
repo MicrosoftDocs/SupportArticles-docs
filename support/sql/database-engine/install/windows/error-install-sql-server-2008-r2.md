@@ -126,8 +126,6 @@ To resolve the problem, use one of the following methods:
 
 The error messages that are mentioned in the [Symptoms](#symptoms) section may have other causes. If the steps in the [Resolution](#resolution) section do not resolve the problem, you may be experiencing a different problem.
 
-For additional guidance, refer to
-
-[SQL Server installation guide](/sql/database-engine/install-windows/install-sql-server)
-
-[Repair a failed SQL Server installation](/sql/database-engine/install-windows/repair-a-failed-sql-server-installation)
+For additional guidance, refer to:
+- [SQL Server installation guide](/sql/database-engine/install-windows/install-sql-server)
+- [Repair a failed SQL Server installation](/sql/database-engine/install-windows/repair-a-failed-sql-server-installation)
