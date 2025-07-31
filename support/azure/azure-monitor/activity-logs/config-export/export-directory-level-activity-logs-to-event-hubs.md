@@ -37,6 +37,6 @@ You can export directory-level activity logs to an event hub through an API call
 
 - [Azure Monitor documentation](/azure/monitoring/)
 - [Event Hubs documentation](/azure/event-hubs/)
-- [Diagnostic settings in Azure Monitor](/azure/azure-monitor/platform/diagnostic-settings#time-before-telemetry-gets-to-destination)
+- [Time before telemetry gets to destination](/azure/azure-monitor/platform/diagnostic-settings#time-before-telemetry-gets-to-destination)
 
 [!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]
