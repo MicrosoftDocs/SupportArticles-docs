@@ -9,7 +9,7 @@ items:
   href: sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled.md
 - name: Description of the Update Cache folder
   href: description-update-cache-folder.md
-- name: Different errors when installing SQL Server 2008 R2
+- name: Errors when installing SQL Server
   href: error-install-sql-server-2008-r2.md
 - name: Issues when upgrading to SQL Server 2022
   href: issues-upgrading-sql-server-2022.md
