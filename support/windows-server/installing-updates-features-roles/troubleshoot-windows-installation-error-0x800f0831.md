@@ -11,7 +11,7 @@ ms.custom:
 - pcy:WinComm Devices Deploy
 ---
 
-# Troubleshoot Windows Update error 0x800f0831
+# Troubleshoot Windows Installation Error 0x800f0831
 
 > [!WARNING]
 > This error is flagged to have an IPU performed to recover the VM if the instructions do not resolve the issue.
@@ -19,10 +19,12 @@ ms.custom:
 The Windows Update error 0x80070002 typically occurs because of missing or corrupt files necessary for the update or incomplete previous updates. Understanding the root causes and following the appropriate troubleshooting steps can help resolve this issue effectively.
 
 ## Summary
+
 When you install an update, you can get the following error 0x800f0831 (CBS_E_STORE_CORRUPTION.). This error occurs because an update did not install properly some mandatory manifest files for the package.
 This TSG is designed to mitigate this issue and be able to install the updates needed.
 
 ## Symptom
+
 When you try to install any patch using the standalone installer (.msu) or Windows Update and the update was not installed:
 
 ## Root cause
@@ -41,21 +43,20 @@ In order to see exactly what is happening, we need to open and check the CBS.log
 2017-11-15 12:40:00, Info CBS Failed to resolve package [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTION]
 ```
 
-- For this specific scenario, it happens because there is an assembly missing or corrupted from the KB3192392, specifically "Package_123_for_KB3192392~31bf3856ad364e35~amd64~~6.3.1.4" these packages are located into the registy path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages. An update may not have been installed at all, or it may have been installed without some packages being applied to the registry.
+- For this specific scenario, it happens because there is an assembly missing or corrupted from the KB3192392, specifically "Package_123_for_KB3192392~31bf3856ad364e35~amd64~~6.3.1.4" these packages are located into the registy path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages. An update either was not installed at all, or it was installed without applying some packages to the registry.
 
 > [!IMPORTANT]
 > This issue may vary depending on each case but the baseline of the issue is the same.
 
 > [!NOTE]
-> To get the CBS.log or logs you can use the TSSv2 to collect all the logs  you need for such cases. The information in how to do it is be in https://aka.ms/dndlogs
+> To get the CBS.log or logs, you can use the TSSv2 to collect all the logs  you need for such cases. The information about how to do it is in https://aka.ms/dndlogs.
 
 ## Mitigation
 
 ### Backup
-Before proceeding with the mitigation of this document, please follow the process to backup the OS disk: Back up OS Disk
+Before proceeding with the mitigation of this document, follow the process to backup the OS disk: Back up OS Disk
 
 ## Online Mitigation
-
 
 ### Mitigation 1
 
@@ -68,13 +69,13 @@ We need to move to the plan, to either add or remove the culprit KB manually fro
 
 ### Instructions
 
-1. Reproduce the issue by trying to install the patch or the feature with issues (we need to do this step to ensure that the latest data is logged into the latest CBS.log).
-1. After identifying the package that the CBS process is complaining about, ensure you verify the KB as well.
-1. Now in any web browser, go the Microsoft Update Catalog: https://www.catalog.update.microsoft.com/Home.aspx 
+1. Reproduce the issue by trying to install the patch or the feature with issues. We need to do this step to ensure that the latest data is logged into the latest CBS.log.
+1. Identify the package that the CBS process is complaining about, ensure you verify the KB as well.
+1. In any web browser, go the Microsoft Update Catalog: https://www.catalog.update.microsoft.com/Home.aspx 
 1. Search for the  identified KB number. 
 1. Select and download the proper KB depending on the OS version and architecture
-1. Once you download the KB, paste it into a temp folder in the C drive C:\temp
-1. Once we have the KB there, we need to run the command in cmd as admin navigating to the folder itself
+1. When you download the KB, paste it into a temp folder in the C drive C:\temp
+1. When we have the KB there, we need to run the command in cmd as admin navigating to the folder itself
 
 ```output
 cd \
@@ -83,9 +84,9 @@ expand -F:* windows10.0-kb4462937-x64_9e250691ae6d00cdf677707e83435a612c3264ea.m
 ```
 
 > [!NOTE]
-> The file name is just an example, use the name of the file downloaded.
+> The file name is just an example. Use the name of the file downloaded.
 
-8. Once you expand it, you can see several packages that are coming from the main package. Check the .cab file with the format "windows 10.0-KBxxxxxxx-x64.cab" (this file can vary depending on the OS version).
+8. When you expand it, you can see several packages that are coming from the main package. Check the .cab file with the format "windows 10.0-KBxxxxxxx-x64.cab" (this file can vary depending on the OS version).
 9. Then we need to run the command in cmd as admin:
 
 ```output
@@ -107,8 +108,8 @@ Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
 ### If KB was not installed:
 
 1. Download the KB that we identified from the Microsoft update catalog: https://www.catalog.update.microsoft.com/Home.aspx 
-1. Once you have it move it to a temp folder in the C drive C:\temp
-1. Once we have it, we need to run the command in cmd as admin navigating to the folder itself.
+1. When you have it move it to a temp folder in the C drive C:\temp
+1. When we have it, we need to run the command in cmd as admin navigating to the folder itself.
 
 ```output
 cd \
@@ -119,7 +120,7 @@ expand -F:* windows10.0-kb4462937-x64_9e250691ae6d00cdf677707e83435a612c3264ea.m
 > [!NOTE]
 > The file name is just an example, use the name of the file downloaded.
 
-4. Once you expand it, you can see several packages that are coming from the main package.
+4. When you expand it, you can see several packages that are coming from the main package.
 5. Then we need to run the command in cmd as admin:
 
 ```output
@@ -131,4 +132,4 @@ Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
 
 ### IPU Process (In-place Upgrade)
 
-**Awareness: If the mitigations given did not fix the issue, this specific Windows Update (WU) error code have been identified that may require an In-Place Upgrade (IPU) to recover the virtual machine (VM). For Windows on Azure (WOA) scenarios—especially in alignment with efforts to reduce days to closure—these WU errors have been reviewed and approved as eligible for IPU as a simplified recovery path. Customers encountering these specific issues can be confidently offered the in-place upgrade option as an effective resolution."**
+**Awareness: If the mitigations given did not fix the issue, this specific Windows Update (WU) error code is identified that may require an In-Place Upgrade (IPU) to recover the virtual machine (VM). For Windows on Azure (WOA) scenarios—especially in alignment with efforts to reduce days to closure—these WU errors are reviewed and approved as eligible for IPU as a simplified recovery path. Customers encountering these specific issues can be confidently offered the in-place upgrade option as an effective resolution."**
