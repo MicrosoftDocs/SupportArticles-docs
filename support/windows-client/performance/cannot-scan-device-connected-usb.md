@@ -38,18 +38,6 @@ Description: The computer has rebooted from a bugcheck. The bugcheck was: 0x0000
 
 To have us fix this problem for you, go to the "Fix it for me" section. If you prefer to fix this problem yourself, go to the "Let me fix it myself" section.
 
-## Fix it for me
-
-To fix this problem automatically, select the **Fix it** button or link. Then select **Run** in the **File Download** dialog box, and follow the steps in the Fix it wizard.
-
-> [!Note]
->
-> - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
-> - If you are not on the computer that has the problem, save the Fix it solution to a flash drive or a CD and then run it on the computer that has the problem.
-> - We would appreciate your feedback. To provide feedback or to report any issues with this solution, please leave a comment on the "Fix it for me" blog or send us an email message.
-
-## Let me fix it myself
-
 To work around this problem, use Registry Editor to remove `WmsImageFilter` from the `UpperFilters` registry key. To do this, follow these steps:
 
 1. Open Registry Editor.
