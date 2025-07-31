@@ -1,21 +1,21 @@
 ---
-title: Error when you install SQL Server
-description: This article provides a resolution for various errors that occur when you try to install SQL Server.
+title: SQL Server Installation Errors
+description: This article outlines some common installation errors and provides a solution to complete a successful installation. 
 ms.date: 05/06/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ---
-# Error message when you try to install SQL Server
+# SQL Server installation errors
 
-This article helps you resolve various errors that occurs when you try to install SQL Server.
+This article can help you resolve some common SQL Server installation errors.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2449398
 
 ## Symptoms
 
-When you try to install Microsoft SQL Server, you receive one or more of the following error messages or experience one or more of the following symptoms. Additionally, you cannot continue with the setup.
+When you try to install Microsoft SQL Server, you receive one or more of the following error messages or experience one or more of the following symptoms. Additionally, you can't continue the setup.
 
-Setup error messages or symptoms
+### Setup error messages and symptoms
 
 - Error message 1
 
@@ -47,16 +47,16 @@ Setup error messages or symptoms
 
 - Symptom 1
 
-  You cannot select x64 bit installation.
+  You cannot select the 64-bit installation.
 
 - Symptom 2
 
   Some components are missing on the Select Component page of Setup.
 
-Error messages in SQL Server Setup log files
+### Error messages in SQL Server Setup log files
 
 > [!NOTE]
-> For more information about SQL Server Setup log files, see the topic in SQL Server Books Online: [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+> For more information about SQL Server Setup log files, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 - Error message 1
 
@@ -88,7 +88,7 @@ Error messages in SQL Server Setup log files
 
 ## Cause
 
-This problem may occur for one of the following reasons:
+This problem might occur for one of the following reasons:
 
 - The installation media is damaged.
 - The installation source is corrupted.
@@ -101,29 +101,32 @@ To resolve the problem, use one of the following methods:
 
 - If you installed SQL Server over a computer network, install it again from a local drive, and then rerun the Setup program.
 
-- Rename the *Setup.rll* file. To do this, follow these steps:
+- Rename the *Setup.rll* file. Follow these steps:
 
-    1. Open Windows Explorer. To do this, click **Start**, click **All Programs**, click **Accessories**, and then click **Windows Explorer**.
+    1. Open Windows Explorer (select **Start** > **All Programs** > **Accessories** > **Windows Explorer**).
 
-    2. Locate and then click the folder: `C:\Program Files\Microsoft SQL Server\1XX\Setup Bootstrap\SQLXXX\resources\1033`.
+    2. Locate and select the following folder:
 
-    3. Right-click Setup.rll, and then click **Rename**.
+       `C:\Program Files\Microsoft SQL Server\1XX\Setup Bootstrap\SQLXXX\resources\1033`
 
-       See image
+    3. Right-click Setup.rll, and then select **Rename**.
 
        :::image type="content" source="media/error-install-sql-server-2008-r2/rename.png" alt-text="Screenshot shows the Rename option of Setup.rll in Windows Explorer." border="false":::
 
-    4. Type *setup.rll.old*, and then press **Enter**.
+    4. Enter *setup.rll.old*, and then press **Enter**.
 
     5. Rerun the Setup program.
 
-- If you are using a localized version of SQL Server, you can change the operating system settings to support localized versions. For more information about how to change the operating system settings, see [How to: Change Operating System Settings to Support Localized Versions](/previous-versions/sql/sql-server-2008-r2/ms144258(v=sql.105)).
+- If you use a localized version of SQL Server, you can change the operating system settings to support localized versions. For more information about how to change the operating system settings, see [Local Language Versions in SQL Server](/sql/sql-server/install/local-language-versions-in-sql-server).
 
   > [!IMPORTANT]
-  > Installations of different language versions of SQL Server instances on the same computer are not supported.
+  > Installations of different language versions of SQL Server instances on the same computer aren't supported.
 
 ## More information
 
-The error messages that are mentioned in the [Symptoms](#symptoms) section may have other causes. If the steps in the [Resolution](#resolution) section do not resolve the problem, you may be experiencing a different problem.
+The error messages that are mentioned in the [Symptoms](#symptoms) section might have other causes. If the steps in the [Resolution](#resolution) section don't resolve the problem, you might be experiencing a different problem. See the [References](#references) section for additional guidance and considerations when installing SQL Server.
 
-[SQL Server installation guide](/sql/database-engine/install-windows/install-sql-server)
+## References
+
+- [SQL Server installation guide](/sql/database-engine/install-windows/install-sql-server)
+- [Repair a failed SQL Server installation](/sql/database-engine/install-windows/repair-a-failed-sql-server-installation)
