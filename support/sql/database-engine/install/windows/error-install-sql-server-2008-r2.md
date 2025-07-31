@@ -56,7 +56,7 @@ When you try to install Microsoft SQL Server, you receive one or more of the fol
 ### Error messages in SQL Server Setup log files
 
 > [!NOTE]
-> For more information about SQL Server Setup log files, see: [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+> For more information about SQL Server Setup log files, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 - Error message 1
 
