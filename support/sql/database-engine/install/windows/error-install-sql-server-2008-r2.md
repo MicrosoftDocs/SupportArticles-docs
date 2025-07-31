@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2449398
 
 ## Symptoms
 
-When you try to install Microsoft SQL Server, you receive one or more of the following error messages or experience one or more of the following symptoms. Additionally, you cannot continue the setup.
+When you try to install Microsoft SQL Server, you receive one or more of the following error messages or experience one or more of the following symptoms. Additionally, you can't continue the setup.
 
 ### Setup error messages and symptoms
 
@@ -120,7 +120,7 @@ To resolve the problem, use one of the following methods:
 - If you use a localized version of SQL Server, you can change the operating system settings to support localized versions. For more information about how to change the operating system settings, see [Local Language Versions in SQL Server](/sql/sql-server/install/local-language-versions-in-sql-server).
 
   > [!IMPORTANT]
-  > Installations of different language versions of SQL Server instances on the same computer are not supported.
+  > Installations of different language versions of SQL Server instances on the same computer aren't supported.
 
 ## More information
 
