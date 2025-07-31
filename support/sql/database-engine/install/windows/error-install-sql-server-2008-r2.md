@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2449398
 
 When you try to install Microsoft SQL Server, you receive one or more of the following error messages or experience one or more of the following symptoms. Additionally, you cannot continue with the setup.
 
-**Setup error messages or symptoms**
+### Setup error messages or symptoms
 
 - Error message 1
 
@@ -53,7 +53,7 @@ When you try to install Microsoft SQL Server, you receive one or more of the fol
 
   Some components are missing on the Select Component page of Setup.
 
-**Error messages in SQL Server Setup log files**
+### Error messages in SQL Server Setup log files
 
 > [!NOTE]
 > For more information about SQL Server Setup log files, see: [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
@@ -117,7 +117,7 @@ To resolve the problem, use one of the following methods:
 
     5. Rerun the Setup program.
 
-- If you are using a localized version of SQL Server, you can change the operating system settings to support localized versions. For more information about how to change the operating system settings, see [Local Language Versions in SQL Server](/en-us/sql/sql-server/install/local-language-versions-in-sql-server).
+- If you are using a localized version of SQL Server, you can change the operating system settings to support localized versions. For more information about how to change the operating system settings, see [Local Language Versions in SQL Server](/sql/sql-server/install/local-language-versions-in-sql-server).
 
   > [!IMPORTANT]
   > Installations of different language versions of SQL Server instances on the same computer are not supported.
@@ -128,6 +128,6 @@ The error messages that are mentioned in the [Symptoms](#symptoms) section may h
 
 For additional guidance, refer to
 
-[SQL Server installation guide](/sql/database-engine/install-windows/install-sql-server?)
+[SQL Server installation guide](/sql/database-engine/install-windows/install-sql-server)
 
-[Repair a failed SQL Server installation](/sql/database-engine/install-windows/repair-a-failed-sql-server-installation?)
+[Repair a failed SQL Server installation](/sql/database-engine/install-windows/repair-a-failed-sql-server-installation)
