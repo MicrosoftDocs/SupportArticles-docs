@@ -40,4 +40,4 @@ To resolve log limit issues in Azure Functions apps, follow these steps:
 - [Application Insights quota management](/azure/azure-monitor/app/pricing)
 - [Log Analytics workspace management](/azure/azure-monitor/logs/manage-cost-storage)
 
-If the issue persists after you follow these steps, open a support case for further assistance.
+[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]

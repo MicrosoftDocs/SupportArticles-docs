@@ -45,4 +45,4 @@ Organizations often require a centralized approach to manage Activity Logs acros
 - [Azure Policy Assignment to enable Activity Log on subscription](https://techcommunity.microsoft.com/discussions/azure/policy-assignment-to-enable-activity-log-on-subscription/2471006)
 - [Azure Event Hubs overview](/azure/event-hubs/event-hubs-about)
 
-If the issue persists after you follow these steps, open a support case for further assistance.
+[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]

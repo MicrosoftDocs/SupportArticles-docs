@@ -85,4 +85,4 @@ This article discusses the transition from legacy solutions to new diagnostic se
 - [Azure diagnostic settings documentation](/azure/azure-monitor/essentials/activity-log?tabs=powershell#legacy-collection-methods)
 - [Azure Monitor overview](/azure/azure-monitor/overview)
 
-If the issue persists after you follow these steps, open a support case for further assistance.
+[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]

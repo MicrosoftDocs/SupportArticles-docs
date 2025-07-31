@@ -43,4 +43,4 @@ This article discusses issues that are related to configuring Microsoft Azure to
 - [PowerShell Documentation](/powershell/)
 - [Azure Activity Logs Overview](/azure/azure-monitor/essentials/activity-log)
 
-If the issue persists after you follow these steps, open a support case for further assistance.
+[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]

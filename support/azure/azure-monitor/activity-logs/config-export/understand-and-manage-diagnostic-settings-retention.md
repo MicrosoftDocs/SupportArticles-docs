@@ -42,4 +42,4 @@ When you manage Azure resources, you might experience issues that are related to
 - [Azure Monitor activity logs](/azure/azure-monitor/platform/activity-log?tabs=powershell#legacy-collection-methods)
 - [Azure Storage lifecycle management](/azure/storage/blobs/storage-lifecycle-management-concepts)
 
-If the issue persists after you follow these steps, open a support case for further assistance.
+[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]

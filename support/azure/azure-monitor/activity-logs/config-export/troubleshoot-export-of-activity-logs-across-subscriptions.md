@@ -44,4 +44,4 @@ Users might experience permission-related issues that prevent successful log tra
 - [Diagnostic settings in Azure](/azure/azure-monitor/essentials/diagnostic-settings)
 - [Azure CLI documentation](/cli/azure)
 
-If the issue persists after you follow these steps, open a support case for further assistance.
+[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]
