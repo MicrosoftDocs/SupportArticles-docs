@@ -124,7 +124,7 @@ To resolve the problem, use one of the following methods:
 
 ## More information
 
-The error messages that are mentioned in the [Symptoms](#symptoms) section might have other causes. If the steps in the [Resolution](#resolution) section don't resolve the problem, you might be experiencing a different problem.
+The error messages that are mentioned in the [Symptoms](#symptoms) section might have other causes. If the steps in the [Resolution](#resolution) section don't resolve the problem, you might be experiencing a different problem. See the [References](#references) section for additional guidance and considerations when installing SQL Server.
 
 ## References
 
