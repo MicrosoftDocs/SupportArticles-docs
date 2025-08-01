@@ -26,7 +26,7 @@ When installing a Windows update or during an OS upgrade, if the error code 0x80
 
 The error code 0x8007045b is an exception that signals an ongoing shutdown process. The root cause of the installation failure may vary, often involving a CBS Hang or a third-party component.
 
-picture
+:::image type="content" source="../../azure/virtual-machines/windows/media/windows-could-not-configure-system/windows-error-configure.png" alt-text="Windows error":::
 
 ## Symptom 1
 
