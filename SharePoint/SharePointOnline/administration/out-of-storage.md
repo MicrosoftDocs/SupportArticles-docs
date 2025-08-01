@@ -22,7 +22,7 @@ ms.date: 05/08/2025
 
 ## Symptoms
 
-As a Global admin, you receive an email message that contains one of the following messages:
+As a Global or SharePoint admin, you receive an email message that contains one of the following messages:
 
 > SharePoint Online is out of storage space.
 > 
