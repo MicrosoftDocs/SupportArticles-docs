@@ -13803,7 +13803,7 @@
     },
     {
       "source_path": "support/sql/database-engine/install/windows/error-install-sql-server-2008-r2.md",
-      "redirect_url": "troubleshoot/sql/database-engine/install/windows/error-install-sql-server"
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-install-sql-server"
     }
   ]
 }
