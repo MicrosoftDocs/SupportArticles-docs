@@ -1,5 +1,5 @@
 ---
-title: Update Installation Error 0x800f0831 CBS E STORE CORRUPTION_Windows
+title: Troubleshoot Windows Installation Error 0x800f0831
 description: Learn how to resolve Windows installation error 0x800f0831.
 ms.date: 07/31/2025
 manager: dcscontentpm
@@ -25,6 +25,12 @@ This TSG is designed to mitigate this issue and be able to install the updates n
 
 ## Symptom
 
+:::image type="content" source="../../../SharePoint/SharePointOnline/Media/download-and-install-updates .jpg" alt-text="Download and install error":::
+
+:::image type="content" source="../../../SharePoint/SharePointOnline/Media/windows-update.jpg" alt-text="Windows update error message"::::
+
+:::image type="content" source="../../../SharePoint/SharePointOnline/Media/retry-deba.jpg" alt-text="Retry screenshot":::
+
 When you try to install any patch using the standalone installer (.msu) or Windows Update and the update was not installed:
 
 ## Root cause
@@ -49,11 +55,11 @@ In order to see exactly what is happening, we need to open and check the CBS.log
 > This issue may vary depending on each case but the baseline of the issue is the same.
 
 > [!NOTE]
-> To get the CBS.log or logs, you can use the TSSv2 to collect all the logs  you need for such cases. The information about how to do it is in https://aka.ms/dndlogs.
+> To get the CBS.log or logs, you can use the TSSv2 to collect all the logs  you need for such cases. For more information see, [CBS logs](https://aka.ms/dndlogs).
 
 ## Mitigation
 
-### Backup
+Backup
 Before proceeding with the mitigation of this document, follow the process to backup the OS disk: Back up OS Disk
 
 ## Online Mitigation
@@ -71,7 +77,7 @@ We need to move to the plan, to either add or remove the culprit KB manually fro
 
 1. Reproduce the issue by trying to install the patch or the feature with issues. We need to do this step to ensure that the latest data is logged into the latest CBS.log.
 1. Identify the package that the CBS process is complaining about, ensure you verify the KB as well.
-1. In any web browser, go the Microsoft Update Catalog: https://www.catalog.update.microsoft.com/Home.aspx 
+1. In any web browser, go to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx).
 1. Search for the  identified KB number. 
 1. Select and download the proper KB depending on the OS version and architecture
 1. When you download the KB, paste it into a temp folder in the C drive C:\temp
@@ -107,7 +113,7 @@ Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
 
 ### If KB was not installed:
 
-1. Download the KB that we identified from the Microsoft update catalog: https://www.catalog.update.microsoft.com/Home.aspx 
+1. Download the KB that we identified from [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx).
 1. When you have it move it to a temp folder in the C drive C:\temp
 1. When we have it, we need to run the command in cmd as admin navigating to the folder itself.
 
@@ -132,4 +138,5 @@ Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
 
 ### IPU Process (In-place Upgrade)
 
-**Awareness: If the mitigations given did not fix the issue, this specific Windows Update (WU) error code is identified that may require an In-Place Upgrade (IPU) to recover the virtual machine (VM). For Windows on Azure (WOA) scenarios—especially in alignment with efforts to reduce days to closure—these WU errors are reviewed and approved as eligible for IPU as a simplified recovery path. Customers encountering these specific issues can be confidently offered the in-place upgrade option as an effective resolution."**
+> [!NOTE]
+> Awareness: If the mitigations given did not fix the issue, this specific Windows Update (WU) error code is identified that may require an In-Place Upgrade (IPU) to recover the virtual machine (VM). For Windows on Azure (WOA) scenarios—especially in alignment with efforts to reduce days to closure—these WU errors are reviewed and approved as eligible for IPU as a simplified recovery path. Customers encountering these specific issues can be confidently offered the in-place upgrade option as an effective resolution.
