@@ -19,8 +19,6 @@ items:
         href: activity-logs/config-export/resolve-log-limit-issues-in-azure-functions-apps.md
       - name: Understand and manage diagnostic settings retention
         href: activity-logs/config-export/understand-and-manage-diagnostic-settings-retention.md  
-      - name: Set up centralized configuration of Activity Logs to Event Hubs
-        href: activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hubs.md
       - name: Troubleshoot Azure CLI configuration issues
         href: activity-logs/config-export/troubleshoot-azure-cli-configuration-issues.md
       - name: Troubleshoot the export of audit logs to another tenant
