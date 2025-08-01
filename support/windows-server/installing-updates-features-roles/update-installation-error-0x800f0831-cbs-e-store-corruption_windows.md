@@ -98,6 +98,7 @@ Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
 ```
 > [!NOTE]
 > We are using KB4462937 as an example. Remember to use the KB extracted into the c:\temp folder
+
 7. Reboot the machine.
 8. Try again to install the update or the feature.
 > [!NOTE]
