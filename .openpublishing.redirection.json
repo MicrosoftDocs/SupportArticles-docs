@@ -13800,6 +13800,10 @@
       "source_path": "support/sql/tools/error-you-run-sqlmaint-utility.md",
       "redirect_url": "/previous-versions/troubleshoot/sql/tools/error-you-run-sqlmaint-utility",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/error-install-sql-server-2008-r2.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-install-sql-server"
     }
   ]
 }
