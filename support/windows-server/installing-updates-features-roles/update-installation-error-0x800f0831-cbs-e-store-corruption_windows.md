@@ -14,14 +14,14 @@ ms.custom:
 Windows Update error 0x800f0831 (CBS_E_STORE_CORRUPTION) typically occurs when an update fails to install required package files properly.
 This article helps you understand the root cause and the necessary steps required to mitigate the issue and install the updates effectively.
 > [!WARNING]
-> This error has been flagged to have an IPU performed to recover the VM if the instructions below do not resolve the issue."
+> This error has been flagged to have an IPU performed to recover the VM if the instructions below don't resolve the issue."
 
 ## Prerequisites
 Before proceeding with the mitigation of this document, please follow the process to backup the OS disk: [Backup OS Disk](https://supportability.visualstudio.com/AzureIaaSVM/_wiki/wikis/AzureIaaSVM/495352/Network-Level-Authentication_RDP-SSH?anchor=%3Cspan-class%3D%22mw-customtoggle-mydivision%22%3Ebackup-os-disk%3C/span%3E)
 
 ## Symptom
 
-There following error message appears when you try to install any patch using the standalone installer (.msu) or try to install a Windows update:
+The following error message appears when you try to install any patch using the standalone installer (.msu) or try to install a Windows update:
 
 :::image type="content" source="media/following-updates-were-not-installed.png" alt-text="screenshot of installation error":::
 
@@ -40,9 +40,9 @@ Info CBS Mark store corruption flag because of package: Package_123_for_KB319239
 
 sInfo CBS Failed to resolve package [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTION]
 ```
-The  issue can occure due to the following scenarios: 
+The  issue can occur due to the following scenarios: 
 - This issue is occurring due to a missing or corrupted assembly from KB3192392, specifically: "Package_123_for_KB3192392~31bf3856ad364e35~amd64~~6.3.1.4"
-- This can also happen if the update was never installed and in some cases even if the installation happened, some packages were not applied to the registry. 
+- This can also happen if the update was never installed and in some cases even if the installation happened, some packages weren't applied to the registry. 
 
 To locate these packages in the system: Go the registry path:
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages
@@ -68,14 +68,14 @@ expand -F:* windows10.0-kb4462937-x64_9e250691ae6d00cdf677707e83435a612c3264ea.m
 ```
 > [!NOTE]
 > This is just an example of how you should name the file. In your case, use the name of downloaded file. 
-7. On expanding, you’ll see several packages coming from the main package.  Check the **.cab** file with the format "windows 10.0-KBxxxxxxx-x64.cab" (this file can vary depending on the OS version).
+7. On expanding, you’ll see several packages coming from the main package. Check the **.cab** file with the format "windows 10.0-KBxxxxxxx-x64.cab" (this file can vary depending on the OS version).
 8. Run the following command in cmd as admin:
 ```output
 Dism /online /remove-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
 ```
 > [!NOTE]
-> We are using KB4462937 as an example here. Remember to use the KB extracted into the c:\temp folder
-9. If you are asked to reboot, please do it and then run the following command in a **cmd** with administrator privileges. If the reboot is not required, just run the following command in a cmd with administrator privileges:
+> We're using KB4462937 as an example here. Remember to use the KB extracted into the c:\temp folder
+9. If you're asked to reboot, please do it and then run the following command in a **cmd** with administrator privileges. If the reboot isn't  required, just run the following command in a cmd with administrator privileges:
 ```output
 Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
 ```
@@ -97,9 +97,9 @@ expand -F:* windows10.0-kb4462937-x64_9e250691ae6d00cdf677707e83435a612c3264ea.m
 Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
 ```
 > [!NOTE]
-> We are using KB4462937 as an example. Remember to use the KB extracted into the c:\temp folder
+> We're using KB4462937 as an example. Remember to use the KB extracted into the c:\temp folder
 
 7. Reboot the machine.
 8. Try again to install the update or the feature.
 > [!NOTE]
-> IPU Process (In-place Upgrade): If the recommended mitigations do not resolve the issue, a specific Windows Update (WU) error code has been identified that may require an In-Place Upgrade (IPU) to restore the virtual machine (VM). In Windows on Azure (WOA) scenarios, in alignment with efforts to reduce days to closure — these WU errors have been reviewed and approved as eligible for IPU as a simplified recovery path. Customers encountering these specific issues can be confidently offered the in-place upgrade option as an effective resolution.
+> IPU Process (In-place Upgrade): If the recommended mitigations don't resolve the issue, a specific Windows Update (WU) error code has been identified that may require an In-Place Upgrade (IPU) to restore the virtual machine (VM). In Windows on Azure (WOA) scenarios, in alignment with efforts to reduce days to closure, these WU errors have been reviewed and approved as eligible for IPU as a simplified recovery path. Customers encountering these specific issues can be confidently offered the in-place upgrade option as an effective resolution.
