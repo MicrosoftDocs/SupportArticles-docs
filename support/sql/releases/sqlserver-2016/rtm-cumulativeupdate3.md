@@ -2,6 +2,7 @@
 title: Cumulative update 3 for SQL Server 2016 (KB3205413)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 cumulative update 3 (KB3205413).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB3205413
 appliesto:
 - SQL Server 2016 Developer

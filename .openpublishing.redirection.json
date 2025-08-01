@@ -13830,5 +13830,10 @@
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md",
       "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/transition-from-legacy-to-diagnostic-settings"
     }
+    ,
+    {
+      "source_path": "support/sql/database-engine/install/windows/error-install-sql-server-2008-r2.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-install-sql-server"
+    }
   ]
 }

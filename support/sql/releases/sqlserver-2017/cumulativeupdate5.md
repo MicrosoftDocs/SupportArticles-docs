@@ -2,6 +2,7 @@
 title: Cumulative update 5 for SQL Server 2017 (KB4092643)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 5 (KB4092643).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4092643, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows
