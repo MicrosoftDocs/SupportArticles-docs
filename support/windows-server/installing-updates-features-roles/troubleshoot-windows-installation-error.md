@@ -139,4 +139,4 @@ Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
 ### IPU Process (In-place Upgrade)
 
 > [!NOTE]
-> Awareness: If the mitigations given did'nt fix the issue, this specific Windows Update (WU) error code is identified that may require an In-Place Upgrade (IPU) to recover the virtual machine (VM). For Windows on Azure (WOA) scenarios—especially in alignment with efforts to reduce days to closure—these WU errors are reviewed and approved as eligible for IPU as a simplified recovery path. Customers encountering these specific issues can be confidently offered the in-place upgrade option as an effective resolution.
+> Awareness: If the mitigations given didn't fix the issue, this specific Windows Update (WU) error code is identified that may require an In-Place Upgrade (IPU) to recover the virtual machine (VM). For Windows on Azure (WOA) scenarios—especially in alignment with efforts to reduce days to closure—these WU errors are reviewed and approved as eligible for IPU as a simplified recovery path. Customers encountering these specific issues can be confidently offered the in-place upgrade option as an effective resolution.
