@@ -3,7 +3,7 @@ title: Common issues syncing SharePoint lists offline
 ms.author: meerak
 author: Cloud-Writer
 manager: dcscontentpm
-ms.date: 12/17/2023
+ms.date: 07/30/2025
 audience: Admin
 ms.topic: troubleshooting
 search.appverid: 
@@ -15,8 +15,8 @@ ms.custom:
   - sap:Lists and Libraries\Lists Offline sync
   - CI 157491
   - CSSTroubleshoot
-ms.reviewer: prbalusu, sharepoint_triage
-description: Resolutions for some common issues with syncing SharePoint lists offline.
+ms.reviewer: prbalusu; nirupme
+description: Provides resolutions for some common issues with syncing SharePoint lists offline.
 ---
 
 # Common issues syncing Microsoft SharePoint lists offline
@@ -28,11 +28,10 @@ This document contains troubleshooting steps for common issues with syncing list
 <details>
 <summary><b>Sync icon doesn't appear</b></summary>
 
-1. Open the Windows task manager and look for “__Microsoft OneDrive Sync Service__ (__OneDrive.Sync.Service.exe__)” under **Processes** > **Background Processes**.  
-![User's image](media/common-sync-issues/image.png)
+1. Open Windows task manager and look for “__Microsoft OneDrive Sync Service__ (__OneDrive.Sync.Service.exe__)” under **Processes** > **Background Processes**.  
 
    - If __Microsoft OneDrive Sync Service__  is running, continue to step 2.
-   - If __Microsoft OneDrive Sync Service__ isn't running, List sync isn't running. Your orgnization might have prevented it from synching, see [Lists sync policies](/sharepoint/lists-sync-policies). 
+   - If __Microsoft OneDrive Sync Service__ isn't running, List sync isn't running. Your organization might have prevented it from syncing, see [Lists sync policies](/sharepoint/lists-sync-policies). 
       
 1. <a href=#logging>Enable Web App Logging</a>.  
 1. Check the console log for a line that includes "Found list". It will look similar to this example:
