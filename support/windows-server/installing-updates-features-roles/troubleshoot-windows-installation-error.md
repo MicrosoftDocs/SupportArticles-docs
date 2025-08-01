@@ -22,11 +22,11 @@ This article helps you understand the root cause and the necessary steps require
 
 ## Prerequisites
 
-Before proceeding with the mitigation of this document, follow the process to backup the OS disk: Back up OS Disk.
+Before proceeding with the mitigation of this document, follow the process to back up the OS disk: Back up OS Disk.
 
 ## Symptom
 
-The following error message appears when you try to install any patch using the standalone installer (.msu) or try to install a Windows update::
+The following error message appears when you try to install any patch using the standalone installer (.msu) or try to install a Windows update:
 
 :::image type="content" source="media/install-error-new.jpg" alt-text="Install error":::
 
@@ -55,7 +55,7 @@ Info CBS Failed to resolve package [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTIO
 The  issue can occure due to the following scenarios:
 
 - This issue is occurring due to a missing or corrupted assembly from KB3192392, specifically: "Package_123_for_KB3192392~31bf3856ad364e35~amd64~~6.3.1.4"
-- This can also happen if the update was never installed and in some cases even if the installation happened, some packages were not applied to the registry.
+- This can also happen if the update was never installed. In some cases even if the installation happened, some packages were'nt applied to the registry.
 
 To locate these packages in the system: Go the registry path:
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages
@@ -69,16 +69,16 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Ser
 
 ## Adding or removing the culprit KB manually
 
-Add or remove the culprit KB manually from the OS. You’ll have to consider if the update has been installed before or not:  
+Add or remove the culprit KB manually from the OS. You have to consider if the update has been installed before or not:  
 
 ### If KB was installed:
 
-1. Reproduce the issue by trying to install the patch or the feature with issues. This ensures that the latest data is logged into the latest CBS.log.
+1. Reproduce the issue by trying to install the patch or the feature with issues. This action ensures that the latest data is logged into the latest CBS.log.
 1. Verify the KB after you have identified the package that the CBS process is complaining about.
 1. Navigate to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx) and search for the KB number you have identified.
 1. Select the KB and download it, depending on the OS version and architecture.
 1. Paste the downloaded KB into a temporary folder in the C drive: C:\temp.
-1. Run the following command in cmd as admin navigating to the folder. 
+1. Run the following command in cmd as admin navigating to the folder.
 
 ```output
 cd \
@@ -123,7 +123,7 @@ expand -F:* windows10.0-kb4462937-x64_9e250691ae6d00cdf677707e83435a612c3264ea.m
 > [!NOTE]
 > This is just an example of how you should name the file. In your case, use the name of downloaded file.
 
-4. On expanding, you can see several packages that are coming from the main package.
+4. On expanding, you can see several packages coming from the main package.
 5. Run the following command in cmd as admin:
 
 ```output
@@ -131,7 +131,7 @@ Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
 ```
 
 > [!NOTE]
-> We are using KB4462937 as an example. Remember to use the KB extracted into the c:\temp folder 
+> We're using KB4462937 as an example. Remember to use the KB extracted into the c:\temp folder 
 
 7. Reboot the machine
 
