@@ -10,7 +10,7 @@ items:
 - name: Description of the Update Cache folder
   href: description-update-cache-folder.md
 - name: Errors when installing SQL Server
-  href: error_install_sql_server.md
+  href: error-install-sql-server.md
 - name: Issues when upgrading to SQL Server 2022
   href: issues-upgrading-sql-server-2022.md
 - name: Driver installation check
