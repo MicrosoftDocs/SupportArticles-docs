@@ -17,7 +17,7 @@ _Version:_ &nbsp; 16.0.4205.1
 
 ## Summary
 
-This article describes Cumulative Update package 20 (CU20) for Microsoft SQL Server 2022. This update contains 10 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 19 and it updates components in the following builds:
+This article describes Cumulative Update package 20 (CU20) for Microsoft SQL Server 2022. This update contains 11 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 19 and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4205.1**, file version: **2022.160.4205.1**
 - Analysis Services - Product version: **16.0.43.247**, file version: **2022.160.43.247**
@@ -48,6 +48,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 |<a id=4053244>[4053244](#4053244) </a> | 	Fixes an issue in which uninitialized memory can be read in some rare cases when using variable length parameters.| 	SQL Server Engine | Query Execution | All |
 |<a id=4104525>[4104525](#4104525) </a> | Fixes an access violation that you encounter when a query calls a multi-statement table-valued function (MSTVF) that has a common language runtime (CLR) expression in its parameter and triggers interleaved execution.| 	SQL Server Engine | Query Optimizer | All |
 |<a id=4317961>[4317961](#4317961) </a> | Adds support for "**WITH SID=sid, TYPE=[E\|X]**" in the `CREATE USER` syntax in SQL Server 2022 by using trace flag 11953. For more information, see [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql#syntax). | SQL Server Engine | SQL Server Engine | All |
+|<a id=4167049>[4167049](#4167049) </a> | Fixes a non-yielding scheduler dump issue with qds!CDBQDS::AbortQdsBackgroundTask that may occur when the list of QDS background tasks is large and either QDS is disabled or SQL Server shuts down. In addition to the dump, you would see the following error messages: </br></br> Error: 1222, Severity: 16, State: 111.</br>Lock request time out period exceeded.</br>Error: 12412, Severity: 16, State: 1.</br>Internal table access error: failed to access the Query Store internal table with HRESULT: 0x80004005| SQL Server Engine | High Availability and Disaster Recovery | All |
 |<a id=4044263>[4044263](#4044263) </a> | Fixes an issue introduced by a previous Windows update that causes restarts and even prevents setup from continuing. After applying this fix, the value of the `PendingFileRenameOperations` registry key is deleted when applying updates to SQL Server. | SQL Setup | Patching| 	Windows |
 
 ## How to obtain or download this or the latest cumulative update package
