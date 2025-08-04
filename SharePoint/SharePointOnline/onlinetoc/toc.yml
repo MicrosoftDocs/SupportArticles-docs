@@ -217,6 +217,8 @@
       href: ../Security/session-has-expired.md
     - name: There's a problem with your account when opening documents
       href: ../Security/problem-with-your-account.md
+    - name: SharePoint malware false positive guide
+      href: ../Security/sharepoint-malware-false-positive-guide.md
   - name: Sharing and Permissions
     items:
     - name: '"Access Denied due to organizational policies" error'
