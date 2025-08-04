@@ -16,19 +16,19 @@ This article helps you resolve issues where diagnostic settings are missing or n
 ## Symptoms
 
 - After moving, renaming, or recreating a resource, expected diagnostic settings are missing.
-- Log and metric data is not being collected or forwarded as previously configured.
-- Diagnostic settings do not appear on the resource after migration or recreation.
+- Log and metric data isn't being collected or forwarded as previously configured.
+- Diagnostic settings don't appear on the resource after migration or recreation.
 
 ## Cause
 
-When you move, rename, or migrate a resource across resource groups or subscriptions, diagnostic settings are not always moved with the resource. If you delete a resource and then recreate it with the same name, the diagnostic settings from the deleted resource might be automatically included with the new resource, depending on the resource type and configuration. This can result in either missing diagnostic settings or unexpected settings being applied.
+When you move, rename, or migrate a resource across resource groups or subscriptions, diagnostic settings aren't always moved with the resource. If you delete a resource and then recreate it with the same name, the diagnostic settings from the deleted resource might be automatically included with the new resource, depending on the resource type and configuration. This can result in either missing diagnostic settings or unexpected settings being applied.
 
 ## Solution
 
 To ensure diagnostic settings behave as expected when moving, renaming, or recreating resources:
 
 1. **Before moving, renaming, or deleting a resource:**
-    - Go to the [Azure Portal](https://portal.azure.com) and sign in.
+    - Go to the [Azure portal](https://portal.azure.com) and sign in.
     - Locate the resource you plan to move, rename, or delete.
     - In the left-hand menu, select **Diagnostic settings** under the **Monitoring** section.
     - Review and delete all diagnostic settings associated with the resource.
