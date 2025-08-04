@@ -6,6 +6,7 @@ ms.author: kkendrick
 ms.service: partner-services
 ms.topic: troubleshooting-general
 ms.date: 08/04/2025
+ai.usage: ai-assisted
 
 #customer intent: As an Azure administrator, I want to understand and resolve issues with log emission and diagnostic settings for partner service integrations so that I can ensure logs are properly sent and monitored.
 
@@ -24,7 +25,7 @@ This article helps you identify and resolve issues that prevent Azure resources 
 ## Potential quick workarounds
 
 1. Remove unused diagnostic settings if the resource has reached the maximum allowed.
-2. Confirm that the resource type supports diagnostic settings and log categories.
+1. Confirm that the resource type supports diagnostic settings and log categories.
 
 ## Troubleshooting checklist
 
@@ -50,16 +51,18 @@ This article helps you identify and resolve issues that prevent Azure resources 
 Some Azure resource types do not emit logs because they lack monitoring log categories.
 
 **Solution:**
+
 1. Review the [Azure Monitor supported resource log categories](/azure/azure-monitor/essentials/resource-logs-categories).
-2. If your resource is not listed, it cannot emit logs to partner services.
+1. If your resource is not listed, it cannot emit logs to partner services.
 
 ### Cause: Diagnostic settings limit reached
 
 Each resource can have a maximum of five diagnostic settings.
 
 **Solution:**
+
 1. Remove unused diagnostic settings from the resource.
-2. Add a new diagnostic setting for the partner service.
+1. Add a new diagnostic setting for the partner service.
 
 ### Cause: Metrics data not exported
 
