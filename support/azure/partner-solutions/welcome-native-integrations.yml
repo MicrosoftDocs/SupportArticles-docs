@@ -25,7 +25,23 @@ landingContent:
             url: marketplace-purchases-errors.md
 
 # Card
-  - title:  Azure Native New Relic Service
+  - title: Observability partners
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Diagnostic settings manual update
+            url: diagnostic-settings-manual-update.md
+          - text: Diagnostic settings not created
+            url: diagnostic-settings.md
+          - text: Log forwarding persists
+            url: log-forwarding-persists.md
+          - text: Log limitations
+            url: log-limitations.md
+          - text: Single sign-on errors
+            url: single-sign-on-errors.md
+
+# Card
+  - title:  New Relic
     linkLists:
       - linkListType: how-to-guide
         links:
