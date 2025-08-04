@@ -7,8 +7,6 @@ ms.service: partner-solutions
 ms.topic: troubleshooting-problem-resolution 
 ms.date: 08/04/2025
 ai-usage: ai-assisted
-
-<!--As an Azure Native Integrations customer, I want to stop log forwarding after disabling a service so that I can prevent unnecessary data flow.-->
 ---
 
 # Log Forwarding Persists After Service Is Disabled

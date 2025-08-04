@@ -8,18 +8,24 @@
       href: diagnostic-settings.md
     - name: Log forwarding persists
       href: log-forwarding-persists.md
+    - name: Log limitations
+      href: log-limitations.md
 - name: Dynatrace
   items: 
     - name: Diagnostic settings not created
       href: diagnostic-settings.md
     - name: Log forwarding persists
       href: log-forwarding-persists.md
+    - name: Log limitations
+      href: log-limitations.md
 - name: Elastic
   items: 
     - name: Diagnostic settings not created
       href: diagnostic-settings.md
     - name: Log forwarding persists
       href: log-forwarding-persists.md
+    - name: Log limitations
+      href: log-limitations.md
 - name: New Relic
   items:
     - name: Diagnostic settings not created
@@ -28,4 +34,6 @@
       href: ingestion-key-rotation-log-flow.md
     - name: Log forwarding persists
       href: log-forwarding-persists.md
+    - name: Log limitations
+      href: log-limitations.md
 
