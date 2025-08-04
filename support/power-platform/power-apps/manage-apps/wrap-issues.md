@@ -4,7 +4,7 @@ description: Provides solutions to common issues when using the wrap feature in 
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 07/23/2025
+ms.date: 08/04/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Troubleshoot common issues when using the wrap feature

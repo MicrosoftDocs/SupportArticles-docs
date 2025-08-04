@@ -4,12 +4,12 @@ description: Provides solutions to error messages that occur when using the wrap
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 07/28/2025
+ms.date: 08/04/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # "Something went wrong" error that occurs when using the wrap feature
 
-This article provides solutions to error messages that occur when using the [wrap](/power-apps/maker/common/wrap/overview) feature in Microsoft Power Apps.
+This article provides solutions to error messages that occur when using the [wrap](/power-apps/maker/common/wrap/overview) feature in Microsoft Power Apps. These errors often occur when steps in the wrap wizard, such as permissions or registration, are missed, even if the build succeeds but login fails.
 
 ## Error message: "Something went wrong. [5objp]"
 

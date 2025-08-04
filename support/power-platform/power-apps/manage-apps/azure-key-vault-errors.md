@@ -4,7 +4,7 @@ description: Provides solutions for the Azure key vault errors that occur when u
 ms.reviewer: sitaramp, koagarwa
 ms.author: arijitba
 author: arijitba
-ms.date: 07/29/2025
+ms.date: 08/04/2025
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Azure key vault errors in wrap for Power Apps
@@ -59,7 +59,7 @@ Error message: Default subscription not found, or missing access permissions.
 
 ## Error code 1000119
 
-Error message: Key vault doesn't exist, or Key vault is missing access privileges.
+Error message: Key vault doesn't exist or is missing access privileges.
 
 ### Resolution steps
 
@@ -163,7 +163,7 @@ Error message: Missing access key required to access the Azure Blob Storage loca
 
 Add your access key from the Azure Blob storage account to the Azure key vault.
 
-For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
+For more information, see [Step 3: Choose target platform](/power-apps/maker/common/wrap/wrap-how-to#3-choose-target-platform).
 
 ## Error code 1000130
 
@@ -175,7 +175,7 @@ Error message: Missing default value: The required environment variable for sett
 
 2. Confirm that the specified resource ID includes all required tags associated with the Bundle ID defined in the wrap wizard.
 
-For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
+For more information, see [Step 3: Choose target platform](/power-apps/maker/common/wrap/wrap-how-to#3-choose-target-platform).
 
 ## Error code 1000131
 
@@ -226,7 +226,7 @@ Error message: Missing environment variable 'PA_Wrap_KV_ResourceID' for the targ
 
 2. Ensure the name follows the correct naming convention without typos or formatting errors.
 
-For more information, see [Step 2: Target platform](/power-apps/maker/common/wrap/wrap-how-to#step-2-target-platform).
+For more information, see [Step 3: Choose target platform](/power-apps/maker/common/wrap/wrap-how-to#3-choose-target-platform).
 
 ## Other issues
 
