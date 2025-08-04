@@ -2,6 +2,7 @@
 title: Cumulative update 10 for SQL Server 2019 (KB5001090)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 10 (KB5001090).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5001090
 ms.reviewer: v-cuichen
 appliesto:

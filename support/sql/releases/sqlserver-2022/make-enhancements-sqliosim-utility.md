@@ -2,6 +2,7 @@
 title: Make several enhancements to the SQLIOSim utility
 description: Describes the improvement that makes several enhancements to the SQLIOSim utility.
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5028786
 ms.reviewer: v-cuichen, rdorr
 appliesto:

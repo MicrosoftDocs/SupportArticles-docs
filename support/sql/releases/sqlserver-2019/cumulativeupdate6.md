@@ -2,6 +2,7 @@
 title: Cumulative update 6 for SQL Server 2019 (KB4563110)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 6 (KB4563110).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4563110
 ms.reviewer: v-cuichen
 appliesto:

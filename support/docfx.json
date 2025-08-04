@@ -170,6 +170,10 @@
         "power-platform/ai-builder/**/*.md": "CEnSKM-ai-copilot",
         "sales-copilot/**/*.md": "CEnSKM-ai-copilot"
       },
+       "ms.update-cycle": {
+        "power-platform/ai-builder/**/*.md": "180-days",
+        "sales-copilot/**/*.md": "180-days"
+      },
       "ms.author": {
         "**/*.md": "dcscontentpm",
         "azure/virtual-desktop/**/*.*": "kaushika",

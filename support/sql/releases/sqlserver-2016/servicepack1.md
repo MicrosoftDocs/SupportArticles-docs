@@ -2,6 +2,7 @@
 title: SQL Server 2016 Service Pack 1 release information (KB3182545)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 Service Pack 1 release information (KB3182545).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB3182545
 appliesto:
 - SQL Server 2016 Developer
@@ -40,7 +41,7 @@ After you install SQL Server 2016 SP1, the DCOM permissions for launching and ac
 
 ### ODBC Driver 13.1
 
-With the default installation of SQL Server 2016, ODBC Driver 13.0 is installed on the server which is used by SQL Agent and SSMS (installed on server) to connect to the SQL Server instance. If you have installed ODBC Driver 13.1 on your server for any reason, SQL Server 2016 SP1 installation overrides the ODBC Driver 13.1 installation and the fixes introduced in 13.1 like [KB 3185365](../../ssms/error-you-try-to-read-error-log.md) may be lost. In this case post installation of SQL Server 2016 SP1, it's recommended to uninstall the ODBC Driver installed by SQL Server 2016 SP1 and install [ODBC Driver 13.1](https://www.microsoft.com/download/details.aspx?id=53339).
+With the default installation of SQL Server 2016, ODBC Driver 13.0 is installed on the server which is used by SQL Agent and SSMS (installed on server) to connect to the SQL Server instance. If you have installed ODBC Driver 13.1 on your server for any reason, SQL Server 2016 SP1 installation overrides the ODBC Driver 13.1 installation and the fixes introduced in 13.1 like [KB 3185365](../../ssms/error-you-try-to-read-error-log.md) may be lost. In this case post installation of SQL Server 2016 SP1, it's recommended to uninstall the ODBC Driver installed by SQL Server 2016 SP1 and install [ODBC Driver 13.1](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#131).
 
 To check for ODBC Driver installed on the server, you can go to Control Panel of the server -> Programs and Features -> Search for ODBC. The version number of ODBC Driver 13.1 is 13.1.811.168 as shown below:
 
@@ -62,7 +63,7 @@ For more information about the bugs that are fixed in SQL Server 2016 SP1, go to
 | Bug reference | Description |
 |---|---|
 | <a id=7778636>[7778636](#7778636)</a> | [An update is available that extends the Trace extended event with security protocol handshake information in SQL Server 2016 (KB3191296)](https://support.microsoft.com/help/3191296) |
-| <a id=7898693>[7898693](#7898693)</a> | [How to use DBCC CLONEDATABASE to generate a schema and statistics-only copy of a user database in SQL Server 2014 SP2 and SQL Server 2016 SP1 (KB3177838)](https://support.microsoft.com/help/3177838) |
+| <a id=7898693>[7898693](#7898693)</a> | [How to use DBCC CLONEDATABASE to generate a schema and statistics-only copy of a user database in SQL Server 2014 SP2 and SQL Server 2016 SP1 (KB3177838)](https://support.microsoft.com/topic/ee504afc-02c6-5caf-3648-1ba78ce9664d) |
 | <a id=7994008>[7994008](#7994008)</a> | [Supports DROP TABLE DDL for articles that are included in transactional replication in SQL Server 2014 or in SQL Server 2016 SP1 (KB3170123)](https://support.microsoft.com/help/3170123) |
 | <a id=8024963>[8024963](#8024963)</a> | [Update to add a memory grant warning to the Showplan XML in SQL Server 2014 or 2016 (KB3172997)](https://support.microsoft.com/help/3172997) |
 | <a id=8024978>[8024978](#8024978)</a> | [Update to add DMF sys.dm_db_incremental_stats_properties in SQL Server 2014 or 2016 (KB3170114)](https://support.microsoft.com/help/3170114) |
