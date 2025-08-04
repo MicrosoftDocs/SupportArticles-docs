@@ -30,7 +30,7 @@ The following error message appears when you try to install any patch using the 
 ## Root Cause
 
 To identify the cause of the issue, check the CBS.log file located at C:\Windows\Logs\CBS. This log contains detailed information about update-related errors and will help determine what’s causing the error.
-## CBS.log:
+## CBS.log
 ```output
 Info CBS Store corruption, manifest missing for package: Package_123_for_KB3192392~31bf3856ad364e35~amd64~~6.3.1.4
 
@@ -91,15 +91,16 @@ expand -F:* windows10.0-kb4462937-x64_9e250691ae6d00cdf677707e83435a612c3264ea.m
 ```
 > [!NOTE]
 > This is just an example of how you should name the file. In your case, use the name of downloaded file.
-5. On expanding, you’ll see several packages coming from the main package.
-6. Run the following command in cmd as admin: 
+
+4. On expanding, you’ll see several packages coming from the main package.
+5. Run the following command in cmd as admin: 
  ```output
 Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
 ```
 > [!NOTE]
 > We're using KB4462937 as an example. Remember to use the KB extracted into the c:\temp folder
 
-7. Reboot the machine.
-8. Try again to install the update or the feature.
+6. Reboot the machine.
+7. Try again to install the update or the feature.
 > [!NOTE]
 > IPU Process (In-place Upgrade): If the recommended mitigations don't resolve the issue, a specific Windows Update (WU) error code has been identified that may require an In-Place Upgrade (IPU) to restore the virtual machine (VM). In Windows on Azure (WOA) scenarios, in alignment with efforts to reduce days to closure, these WU errors have been reviewed and approved as eligible for IPU as a simplified recovery path. Customers encountering these specific issues can be confidently offered the in-place upgrade option as an effective resolution.
