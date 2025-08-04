@@ -3,7 +3,7 @@ title: Single sign-on errors for Azure Native Integrations partner services.
 description: "Troubleshoot common single sign-on (SSO) errors when integrating Azure Native Integrations with Azure AD."
 author: ProfessorKendrick
 ms.author: kkendrick
-ms.service: partner-solutions
+ms.service: partner-services
 ms.topic: error-reference 
 ms.date: 08/04/2025
 ai-usage: ai-assisted

@@ -3,7 +3,7 @@ title: Log Emission and Diagnostic Settings Limitations for Partner Service Inte
 description: "Understand which Azure resources emit logs to the partner service, how to verify log emission, and the limitations of diagnostic settings for partner solutions."
 author: ProfessorKendrick
 ms.author: kkendrick
-ms.service: partner-solutions
+ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
 ms.date: 08/04/2025
 ai-usage: ai-assisted

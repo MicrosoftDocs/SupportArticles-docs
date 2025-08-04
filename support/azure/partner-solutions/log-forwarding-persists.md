@@ -3,7 +3,7 @@ title: Log Forwarding Persists After Service Is Disabled
 description: "Learn how to resolve persistent log forwarding in Azure when a service is disabled but diagnostic settings remain active due to a delete lock."
 author: ProfessorKendrick
 ms.author: kkendrick
-ms.service: partner-solutions
+ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution 
 ms.date: 08/04/2025
 ai-usage: ai-assisted

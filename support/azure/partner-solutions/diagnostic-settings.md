@@ -3,7 +3,7 @@ title: Diagnostic Settings Not Created as Expected After Moving a Resource
 description: "Resolve issues where diagnostic settings are missing or not created as expected after moving, renaming, or recreating Azure resources."
 author: ProfessorKendrick
 ms.author: kkendrick
-ms.service: partner-solutions
+ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
 ms.date: 08/04/2025
 ai-usage: ai-assisted
