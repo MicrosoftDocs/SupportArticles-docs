@@ -17,7 +17,9 @@ items:
   items:
     - name: Application Insights logs missing or incorrect
       href: monitoring/functions-monitoring-appinsightslogs.md
-- name: Troubleshoot Azure Functions App issues
+- name: Availability
   items:
-    - name: Troubleshoot Function App Down or Reporting Errors
-      href: issues/functions-troubleshoot-issues.md  
+    - name: Function App Down or Reporting Errors
+      items:
+        - name: Function App Down or Reporting Errors Diagnostic Tool - Overview
+          href: availabilty/functions-troubleshoot-issues.md  
