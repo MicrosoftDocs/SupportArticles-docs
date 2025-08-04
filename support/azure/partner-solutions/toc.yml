@@ -2,8 +2,22 @@
   href: welcome-native-integrations.yml
 - name: Marketplace purchase errors
   href: marketplace-purchases-errors.md
-- name: Azure Native New Relic Service
+- name: Datadog
+  items: 
+    - name: Log forwarding persists after disabling service
+      href: log_forwarding_persists.md
+- name: Dynatrace
+  items: 
+    - name: Log forwarding persists after disabling service
+      href: log_forwarding_persists.md
+- name: Elastic
+  items: 
+    - name: Log forwarding persists after disabling service
+      href: log_forwarding_persists.md
+- name: New Relic
   items:
     - name: Ingestion key rotation resolution
       href: ingestion-key-rotation-log-flow.md
+    - name: Log forwarding persists after disabling service
+      href: log_forwarding_persists.md
 
