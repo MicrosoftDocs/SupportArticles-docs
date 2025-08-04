@@ -14,9 +14,9 @@ ms.custom:
 
 ## Symptoms
 
-When you install a Windows update, or during an OS upgrade, error code 0x8007045b (ERROR_SHUTDOWN_IN_PROGRESS) is logged in the Component-Based Servicing (CBS) log, ```output(%windir%\logs\CBS\CBS.log)``` or ```output%windir%\Windows~BT\sources\panther\setupact.log```.
+When you install a Windows update, or during an OS upgrade, error code 0x8007045b (ERROR_SHUTDOWN_IN_PROGRESS) is logged in the Component-Based Servicing (CBS) log, ```output(%windir%\logs\CBS\CBS.log)```, or in the Setact log, ```output%windir%\Windows~BT\sources\panther\setupact.log```.
 
-These log entries indicate that the installer or a component has detected an ongoing shutdown process. The troubleshooting steps in this article can help you resolve this issue effectively.
+These log entries indicate that the installer or a component detected an ongoing shutdown process. The troubleshooting steps in this article can help you resolve this issue effectively.
 
 ### Symptom 1: Unresponsive installation
 
