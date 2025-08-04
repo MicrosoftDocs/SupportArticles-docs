@@ -15,6 +15,6 @@ This article lists common error scenarios and troubleshooting steps for single s
 
 | Error message | Details |
 | --- | --- |
-| Single sign-on configuration indicates lack of permissions | The user configuring SSO doesn't have "Manage users" permissions for the Dynatrace account. [Learn how to configure permissions](https://docs.dynatrace.com/docs/manage/users-and-groups/user-management). |
+| Single sign-on configuration indicates lack of permissions | The user configuring SSO doesn't have "Manage users" permissions for the Dynatrace account. |
 | Unable to save single sign-on settings | Another Enterprise app is using the Dynatrace SAML identifier. In Azure AD, select **Edit** on the Basic SAML configuration section to find the conflicting app. Disable the other app or use it to set up SAML SSO. |
 | App not showing in Single sign-on settings page | Search for the application ID. If not found, check the app's SAML settings. Only apps with correct SAML configuration appear in the grid. |
