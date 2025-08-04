@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Shutdown in Progress Windows Error 0x8007045b 
-description: Learn how to resolve Windows update error 0x8007045b, indicating that access to an unmanaged server isn't allowed.
+description: Learn how to resolve Windows update error 0x8007045b that indicates that access to an unmanaged server isn't allowed.
 ms.date: 08/01/2025
 manager: dcscontentpm
 audience: itpro
@@ -10,23 +10,19 @@ ms.custom:
 - sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
 - pcy:WinComm Devices Deploy
 ---
-# Troubleshoot Shutdown in Progress Windows Error 0x8007045b
+# Troubleshoot "Shutdown in Progress" Windows error 0x8007045b
 
-When installing a Windows update or during an OS upgrade, you may see the error code 0x8007045b (ERROR_SHUTDOWN_IN_PROGRESS) in the CBS log ```output(%windir%\logs\CBS\CBS.log)``` or ```output%windir%\Windows~BT\sources\panther\setupact.log.```
+## Symptoms
 
-It indicates that the installer or a component has detected an ongoing shutdown process. This behavior is by design and not an error but an exception. The actual issue may differ, commonly related to a CBS Hang or interference from a third-party component. Following the appropriate troubleshooting steps can help resolve this issue effectively.
+When you install a Windows update, or during an OS upgrade, error code 0x8007045b (ERROR_SHUTDOWN_IN_PROGRESS) is logged in the Component-Based Servicing (CBS) log, ```output(%windir%\logs\CBS\CBS.log)``` or ```output%windir%\Windows~BT\sources\panther\setupact.log```.
 
-## Root Cause
+These log entries indicate that the installer or a component has detected an ongoing shutdown process. The troubleshooting steps in this article can help you resolve this issue effectively.
 
-The error code 0x8007045b is an exception that signals an ongoing shutdown process. The root cause of the installation failure may vary, often involving a CBS Hang or a third-party component.
+### Symptom 1: Unresponsive installation
 
-:::image type="content" source="../../azure/virtual-machines/windows/media/windows-could-not-configure-system/windows-error-configure.png" alt-text="Windows error":::
+The installation might experience a 15-minute time-out that causes the Trusted Installer to initiate a restart because of "CBS hang" detection. Upon restart, the installation is typically rolled back. When this issue occurs, the following entries are logged in the CBS log:
 
-## Symptom 1: CBS Hang Detect
-
- The installation may encounter a 15-minute timeout, leading the Trusted Installer to initiate a reboot due to CBS hang detection. Upon restart, the installation is typically rolled back.
-
-**%windir%\logs\CBS\CBS.log**:
+**%windir%\logs\CBS\CBS.log**
 
 ```output
 Info CBS Setting HangDetect value to 3 
@@ -36,17 +32,13 @@ Info CBS Startup: restart attempt failed, allowing the user to logon.
 Info CBS Startup: A system shutdown was initiated while waiting for startup to complete
 ```
 
-### Error 0x8007045b
+**Error 0x8007045b**
 
 ```outputERROR_SHUTDOWN_IN_PROGRESS winerror.h```: A system shutdown is in progress.
 
-### Mitigation 1
+### Symptom 2: Third-party service interference
 
-The primary issue is the CBS Hang detect, represented by error code 0x800f0920. This can be addressed by increasing the TrustedInstaller timeout. For more information,  go to [CBS HangDetect](https://supportability.visualstudio.com/AzureIaaSVM/_wiki/wikis/AzureIaaSVM/1511786/Update-Installation-Error-0x800f0920-CBS_E_HANG_DETECTED?anchor=mitigation-1)
-
-## Symptom 2:Third-party Service Interference
-
- A third-party service may trigger reboots during the Windows OS upgrade setup process.
+A third-party service triggers a restart during a Windows OS upgrade. When this issue occurs, the following entry is logged in the Setupact log:
 
 **%windir%\Windows~BT\sources\panther\setupact.log**:
 
@@ -61,9 +53,25 @@ Information MM/dd /YYYY HH:mm:ss PM EventLog 6006 None
 The Event log service was stopped.
 ```
 
-### Mitigation 2
+## Cause
 
-Review the setupact logs to identify the third-party service causing the reboots. Prevent further system reboots by disabling or stopping the identified service.
+This behavior is by design. It's not an error but an exception. This issue commonly occurs if the installation stops responding or experiences interference from a third-party component.
 
-> [!NOTE]
->The error code 0x8007045b can be disregarded, and the focus should be on identifying the original error that precedes this code.
+:::image type="content" source="../../azure/virtual-machines/windows/media/windows-could-not-configure-system/windows-error-configure.png" alt-text="Windows error":::
+
+## Resolution
+
+To resolve this issue, use the following methods, as appropriate:
+
+- Resolution 1: Nonresponsive system
+
+   If the system stops responding, try to increase the TrustedInstaller time-out value. For more information,  see the following Azure DevOps Blog article:
+
+   [Update Installation Error 0x800f0920](https://supportability.visualstudio.com/AzureIaaSVM/_wiki/wikis/AzureIaaSVM/1511786/Update-Installation-Error-0x800f0920-CBS_E_HANG_DETECTED?anchor=mitigation-1)
+
+- Resolution 2: Third-party service interference
+
+   Review the Setupact.log file to determine which third-party service causes the restarts. To prevent further system restarts, disable or stop the identified service.
+
+   > [!NOTE]
+   > Error code 0x8007045b can be safely ignored. Your troubleshooting focus should be on identifying the original error that precedes this code (error code 0x800f0920).
