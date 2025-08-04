@@ -4,6 +4,8 @@
   href: marketplace-purchases-errors.md
 - name: Datadog
   items: 
+    - name: Diagnostic settings manual update
+      href: diagnostic-settings-manual-update.md
     - name: Diagnostic settings not created
       href: diagnostic-settings.md
     - name: Log forwarding persists
@@ -12,6 +14,8 @@
       href: log-limitations.md
 - name: Dynatrace
   items: 
+    - name: Diagnostic settings manual update
+      href: diagnostic-settings-manual-update.md
     - name: Diagnostic settings not created
       href: diagnostic-settings.md
     - name: Log forwarding persists
@@ -19,7 +23,9 @@
     - name: Log limitations
       href: log-limitations.md
 - name: Elastic
-  items: 
+  items:
+    - name: Diagnostic settings manual update
+      href: diagnostic-settings-manual-update.md 
     - name: Diagnostic settings not created
       href: diagnostic-settings.md
     - name: Log forwarding persists
@@ -28,6 +34,8 @@
       href: log-limitations.md
 - name: New Relic
   items:
+    - name: Diagnostic settings manual update
+      href: diagnostic-settings-manual-update.md
     - name: Diagnostic settings not created
       href: diagnostic-settings.md
     - name: Ingestion key rotation resolution
