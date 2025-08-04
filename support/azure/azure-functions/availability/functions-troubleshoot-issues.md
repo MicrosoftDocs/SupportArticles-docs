@@ -185,7 +185,7 @@ For more info, check [Analyze Azure Functions telemetry in Application Insights]
 > [!NOTE]
 > This applies to all hosting plans, with the exception of the Windows and Linux Consumption plans.
 
-If your app shows errors such as `FAILED TO INITIALIZE RUN FROM PACKAGE.txt` or `host.json not found`, use the [Network troubleshooter](../../app-service/troubleshoot-vnet-integration-apps#network-troubleshooter) to resolve.
+If your app shows errors such as `FAILED TO INITIALIZE RUN FROM PACKAGE.txt` or `host.json not found`, use the [Network troubleshooter](../../app-service/troubleshoot-vnet-integration-apps#network-troubleshooter.md) to resolve.
 
 **To access:**
 
