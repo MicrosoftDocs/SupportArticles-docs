@@ -22,7 +22,7 @@ This article discusses how to configure long-term storage for Azure Activity Log
 
 ### Step 2: Specify the destination
 
-1. Got to **Log Analytic** > **Event Hubs** > **Azure Storage**, and select the destinations for your logs. 
+1. Got to **Log Analytic** > **Event Hubs** > **Azure Storage**, and select the destinations for your logs.
 1. Set the destination resource to retain logs for more than 90 days.
 
 ### Step 3: Configure the retention settings
@@ -51,4 +51,6 @@ This article discusses how to configure long-term storage for Azure Activity Log
 - [Azure Monitor Documentation](/azure/azure-monitor/platform/activity-log?tabs=powershell)
 - [Azure Storage Lifecycle Management](/azure/storage/blobs/storage-lifecycle-management-concepts)
 
-If the issue persists after you follow these steps, open a support case for further assistance.
+## Contact us for help
+
+If you have questions or need help, create a [support request](https://ms.portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview?DMC=troubleshoot), or ask [Azure community support](/answers/tags/133/azure). You can also submit product feedback to [Azure feedback community](https://feedback.azure.com/d365community).
