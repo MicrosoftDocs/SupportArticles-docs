@@ -1,5 +1,5 @@
 ---
-title: Function App Down or Reporting Errors
+title: Troubleshoot Function App Down or Reporting Errors
 description: Describes how to troubleshoot the Azure Functions app if it's down or reporting errors.
 ms.date: 08/04/2025
 ms.reviewer: v-liuamson; v-gsitser

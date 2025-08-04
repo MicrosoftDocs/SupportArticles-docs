@@ -1,10 +1,6 @@
 items:
 - name: Welcome
   href: welcome-azure-functions.yml
-- name: Troubleshoot Azure Functions App issues
-  items:
-    - name: Function App Down or Reporting Errors
-      href: functions-troubleshoot-issues.md  
 - name: Application Code Deployment
   items:
     - name: Application issues post deployment
@@ -21,3 +17,7 @@ items:
   items:
     - name: Application Insights logs missing or incorrect
       href: monitoring/functions-monitoring-appinsightslogs.md
+- name: Troubleshoot Azure Functions App issues
+  items:
+    - name: Troubleshoot Function App Down or Reporting Errors
+      href: functions-troubleshoot-issues.md  
