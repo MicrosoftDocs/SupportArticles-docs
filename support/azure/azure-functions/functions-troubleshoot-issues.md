@@ -1,12 +1,12 @@
 ---
-title: Troubleshoot Azure Functions App issues
+title: Function App Down or Reporting Errors
 description: Describes how to troubleshoot the Azure Functions app if it's down or reporting errors.
-ms.date: 07/29/2025
+ms.date: 08/04/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.custom: sap:Function app down or reporting errors
 ---
 
-# Troubleshoot Azure Functions App issues
+# Troubleshoot Function App Down or Reporting Errors
 
 The Azure portal provides several powerful tools that can help you quickly diagnose and resolve issues if your Azure Functions app is not responding or reports errors. This article highlights the most effective tools that you might want to consider.
 
@@ -35,64 +35,64 @@ The Function App Down or Reporting Errors tool (Preview) provides the following 
 Azure Functions App downtime or errors typically belong to either of the following categories:
 
 - **Configuration issues:**
-    - Misconfigured application settings
-    - Incorrect or unreachable storage account configuration
-    - Key Vault access or permission issues
-    - Managed identity authentication problems
-    - Binding or trigger misconfiguration
-    - Network connectivity issues
+  - Misconfigured application settings
+  - Incorrect or unreachable storage account configuration
+  - Key Vault access or permission issues
+  - Managed identity authentication problems
+  - Binding or trigger misconfiguration
+  - Network connectivity issues
 
 - **Code and runtime resource issues:**
-    - High CPU or memory consumption
-    - SNAT port exhaustion
-    - TCP connection exhaustion
-    - Long-running or stuck functions
-    - Runtime exceptions and failures
-    - Poor error handling or retry logic
+  - High CPU or memory consumption
+  - SNAT port exhaustion
+  - TCP connection exhaustion
+  - Long-running or stuck functions
+  - Runtime exceptions and failures
+  - Poor error handling or retry logic
 
 ### Diagnostic checks performed
 
 The diagnostic workflow evaluates the following aspects of your Azure Functions app:
 
 - **General information:**
-    - Hosting plan type (Consumption, Premium, Dedicated, Flex)
-    - Runtime version
-    - Platform (Linux or Windows)
-    - Trigger types and bindings
+  - Hosting plan type (Consumption, Premium, Dedicated, Flex)
+  - Runtime version
+  - Platform (Linux or Windows)
+  - Trigger types and bindings
 
 - **Startup issues:**
-    - Diagnostic events during app startup
-    - Offline history analysis for unexpected downtimes
+  - Diagnostic events during app startup
+  - Offline history analysis for unexpected downtimes
 
 - **Recent deployments:**
-    - Highlights deployments that might affect the app.
+  - Highlights deployments that might affect the app.
 
 - **Runtime and language version validation:**
-    - Confirms use of supported versions
+  - Confirms use of supported versions
 
 - **Configuration checks:**
-    - Confirms mandatory app settings
-    - Confirms Key Vault and managed identity configuration
-    - Checks for **SyncTrigger** issues
-    - Detects Azure Functions host name collisions
+  - Confirms mandatory app settings
+  - Confirms Key Vault and managed identity configuration
+  - Checks for **SyncTrigger** issues
+  - Detects Azure Functions host name collisions
 
 - **Extension versions:**
-    - Identifies outdated or unsupported extensions
+  - Identifies outdated or unsupported extensions
 
 - **Hosting plan setup:**
-    - Analyzes configuration and scaling behavior
-    - Checks for SNAT port exhaustion, high CPU, and memory issues
-    - Includes risk alerts:
-        - For Dedicated plans: Risk alert validates **AlwaysOn** is enabled
-        - For Elastic Premium plans: Risk alert checks for VNet routing and scaling
+  - Analyzes configuration and scaling behavior
+  - Checks for SNAT port exhaustion, high CPU, and memory issues
+  - Includes risk alerts:
+    - For Dedicated plans: Risk alert validates **AlwaysOn** is enabled
+    - For Elastic Premium plans: Risk alert checks for VNet routing and scaling
 
 - **Execution health detects:**
-    - Execution failures
-    - Nontriggering functions
-    - Stuck or long-running executions
+  - Execution failures
+  - Nontriggering functions
+  - Stuck or long-running executions
 
 - **AI-powered analysis:**
-    - Uses OpenAI to detect issue patterns and provide contextual recommendations
+  - Uses OpenAI to detect issue patterns and provide contextual recommendations
 
 ## Application Insights queries
 
@@ -138,13 +138,13 @@ If your app shows error entries such as `FAILED TO INITIALIZE RUN FROM PACKAGE.t
     1. Search for **Connectivity Troubleshooter**.
 
 - The tool checks for:
-    - DNS resolution
-    - Storage and Key Vault access
-    - Outbound restrictions (VNet, NSG, firewalls)
+  - DNS resolution
+  - Storage and Key Vault access
+  - Outbound restrictions (VNet, NSG, firewalls)
 
 - Make sure that:
-    - VNet integration is configured correctly.
-    - No endpoint or firewall blocks are configured.
+  - VNet integration is configured correctly.
+  - No endpoint or firewall blocks are configured.
 
 ## Kudu logs (SCM)
 
