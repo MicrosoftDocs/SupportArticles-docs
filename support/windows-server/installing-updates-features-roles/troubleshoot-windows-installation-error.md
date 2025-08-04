@@ -11,36 +11,48 @@ ms.custom:
 - pcy:WinComm Devices Deploy
 ---
 
-# Troubleshoot Windows Installation Error 0x800f0831
+# Troubleshoot Windows installation error 0x800f0831
 
 > [!WARNING]
-> This error is flagged to have an IPU performed to recover the VM if the instructions don't resolve the issue.
+> This error is flagged to prompt an in-place upgrade to recover the virtual machine (VM) if these instructions don't resolve the issue.
 
-The Windows Update error 0x800f0831 typically occurs when an update fails to install required manifest files correctly. Understanding the root causes and following the appropriate troubleshooting steps can help resolve this issue effectively.
-
-This article helps you understand the root cause and the necessary steps required to mitigate the issue and install the updates effectively.
+ Windows Update error 0x800f0831 typically occurs if an update doesn't install the required manifest files correctly. Understanding the root cause of this issue and following the appropriate troubleshooting steps can help resolve this issue effectively.
 
 ## Prerequisites
 
-Before proceeding with the mitigation of this document, follow the process to back up the OS disk: Back up OS Disk.
+Before you troubleshoot, follow the steps in this article to back up the OS disk.
 
-## Symptom
+## Symptoms
 
-The following error message appears when you try to install any patch using the standalone installer (.msu) or try to install a Windows update:
+When you try to install any update by using the standalone installer (.msu), or you try to install a Windows update, you receive one of the following error messages:
 
-:::image type="content" source="media/install-error-new.jpg" alt-text="Install error":::
+> Some updates were not installed
 
-:::image type="content" source="media/windows-update-new.jpg" alt-text="Windows update error":::
+:::image type="content" source="media/install-error-new.jpg" alt-text="Screenshot of the installation error message.":::
 
-:::image type="content" source="media/retry-deba-new.jpg" alt-text="Retry screenshot":::
+> Updates failed
 
-## Root cause
+:::image type="content" source="media/windows-update-new.jpg" alt-text="Screenshot of the Windows update error message.":::
 
-See exactly what is happening, we need to open and check the CBS.log (location C:\windows\logs\CBS) it looks similar to the following output:
+> Retry
 
-Navigate to C:\windows\logs\CBS to open and check the CBS.log. You’ll be able to find out what’s causing the error. 
+:::image type="content" source="media/retry-deba-new.jpg" alt-text="Screenshot of the Retry error message.":::
 
-## CBS logs
+## Cause
+
+The issue might occur for one of the following reasons:
+
+- An assembly from the KB3192392 update (specifically: "Package_123_for_KB3192392~31bf3856ad364e35~amd64~~6.3.1.4") is missing or corrupted.
+- The update was never installed. Or, the update is installed but some packages aren't applied to the registry.
+
+To locate the installation packages in the system, search for the following registry subkey:
+
+    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages
+ 
+> [!IMPORTANT]
+> This issue might vary depending on each case, but the baseline of the issue remains the same.
+
+To investigate the cause further, examine the CBS.log file (C:\windows\logs\CBS), and search for output that resembles the following example:
 
 ```output
 Info CBS Store corruption, manifest missing for package: Package_123_for_KB3192392~31bf3856ad364e35~amd64~~6.3.1.4
@@ -52,93 +64,81 @@ Info CBS Mark store corruption flag because of package: Package_123_for_KB319239
 Info CBS Failed to resolve package [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTION]
 ```
 
-The  issue can occure due to the following scenarios:
+> [!NOTE]
+> For more information about how to collect the CBS.log file or any log that uses the TroubleShootingScript (TSS) tool version 2, see, [CBS logs](https://aka.ms/dndlogs).
 
-- This issue is occurring due to a missing or corrupted assembly from KB3192392, specifically: "Package_123_for_KB3192392~31bf3856ad364e35~amd64~~6.3.1.4"
-- This can also happen if the update was never installed. In some cases even if the installation happened, some packages were'nt applied to the registry.
+## Resolution
 
-To locate these packages in the system: Go the registry path:
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages
- 
+To resolve this issue, manually add the problematic update to the system or or remove it from the system, depending on whether the update is installed. 
 
-> [!IMPORTANT]
-> This issue may vary depending on each case, but the baseline of the issue remains the same.
+### If the update is installed
+
+1. Reproduce the issue by trying to install the update or feature that's experiencing issues. This action logs the latest data into the CBS log.
+1. Verify that you have the correct update after you identify the package that the CBS process is calling out.
+1. Navigate to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx), and search for the KB number that you have identified.
+1. Select the appropriate KB version for the OS version and architecture, and then download the file to a temporary folder ("temp") on drive C.
+1. Open an administrative Command Prompt window, and run the following command on the folder:
+
+   ```output
+   cd \
+   cd temp
+   expand -F:* windows10.0-kb4462937-x64_9e250691ae6d00cdf677707e83435a612c3264ea.msu C:\temp
+   ```
+
+   **Note:** In this command, substitute the actual name of the downloaded file.
+
+1. In the expanded packages, locate the .cab file that uses the following format, depending on the OS version:
+
+      windows 10.0-KB*xxxxxxx*-x64.cab
+   
+1. Run the following command at an administrative command prompt:
+
+   ```output
+   Dism /online /remove-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
+   ```
+
+   **Note:** In this command, substitute the actual name of the .cab file.
+
+1. Restart the computer if you're prompted to do that.
+2. Run the following command at an administrative command prompt:
+
+   ```output
+   Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
+   ```
+
+1. Restart the computer.
+1. Try again to install the update or feature.
+
+### If the update isn't installed
+
+1. Navigate to the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx), and download the update to a temporary folder ("temp") on drive C.
+1. At an administrative command prompt, run the following command on the folder:
+
+   ```output
+   cd \
+   cd temp
+   expand -F:* windows10.0-kb4462937-x64_9e250691ae6d00cdf677707e83435a612c3264ea.msu C:\temp 
+   ```
+
+   **Note:** In this command, substitute the actual name of the downloaded file.
+   
+1. In the expanded packages, locate the .cab file that uses the following format, depending on the OS version:
+
+      windows 10.0-KB*xxxxxxx*-x64.cab
+   
+1. At an administrative command prompt, run the following command:
+
+   ```output
+   Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
+   ```
+
+   **Note:** In this command, substitute the actual name of the .cab file.
+
+1. Restart the computer.
+
+1. Try again to install the update or feature.
+
+### In-place upgrade process
 
 > [!NOTE]
-> For more information on how to collect the CBS.log or just logs using TSSv2, see, [CBS logs](https://aka.ms/dndlogs).
-
-## Adding or removing the culprit KB manually
-
-Add or remove the culprit KB manually from the OS. You have to consider if the update has been installed before or not:  
-
-### If KB was installed:
-
-1. Reproduce the issue by trying to install the patch or the feature with issues. This action ensures that the latest data is logged into the latest CBS.log.
-1. Verify the KB after you have identified the package that the CBS process is complaining about.
-1. Navigate to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx) and search for the KB number you have identified.
-1. Select the KB and download it, depending on the OS version and architecture.
-1. Paste the downloaded KB into a temporary folder in the C drive: C:\temp.
-1. Run the following command in cmd as admin navigating to the folder.
-
-```output
-cd \
-cd temp
-expand -F:* windows10.0-kb4462937-x64_9e250691ae6d00cdf677707e83435a612c3264ea.msu C:\temp
-```
-
-> [!NOTE]
-> This is just an example of how you should name the file. In your case, use the name of downloaded file.
-
-8. On expanding, you’ll see several packages coming from the main package.  Check the .cab file with the format "windows 10.0-KBxxxxxxx-x64.cab" (this file can vary depending on the OS version).
-9. Run the below following command in cmd as admin:
-
-```output
-Dism /online /remove-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
-```
-
-> [!NOTE]
-> We're using KB4462937 as an example. Remember to use the KB extracted into the c:\temp folder.
-
-10. If you're asked to reboot, do it and then run the command in a cmd with administrator privileges. If the reboot  isn't required, just run the command in a cmd with administrator privileges:
-
-```output
-Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
-```
-
-11. Reboot the machine
-12. Try again to install the update or feature
-
-### If KB isn't installed:
-
-1. Download the KB that we identified from [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx).
-1. Paste the downloaded KB into a temporary folder in the C drive: C:\temp.
-1. Run the following command in cmd as admin navigating to the folder..
-
-```output
-cd \
-cd temp
-expand -F:* windows10.0-kb4462937-x64_9e250691ae6d00cdf677707e83435a612c3264ea.msu C:\temp 
-```
-
-> [!NOTE]
-> This is just an example of how you should name the file. In your case, use the name of downloaded file.
-
-4. On expanding, you can see several packages coming from the main package.
-5. Run the following command in cmd as admin:
-
-```output
-Dism /online /add-package /packagepath:C:\temp\windows10.0-kb4462937-x64.cab
-```
-
-> [!NOTE]
-> We're using KB4462937 as an example. Remember to use the KB extracted into the c:\temp folder 
-
-7. Reboot the machine
-
-8. Try again to install the update or feature.
-
-### IPU Process (In-place Upgrade)
-
-> [!NOTE]
-> Awareness: If the suggested fixes don’t resolve the issue, this specific Windows Update (WU) error code may require an In-Place Upgrade (IPU) to recover the virtual machine (VM). For Windows on Azure (WOA) scenarios, especially when trying to resolve issues quickly, these types of WU errors are reviewed and approved as eligible for IPU.
-> This means that if customers face this error, you can confidently recommend an In-Place Upgrade as a simple and effective solution.
+> If the suggested fixes don’t resolve the issue, this specific Windows Update (WU) error code might require an in-place upgrade (IPU) as a simple and effective solution to recover the VM. For Windows on Azure (WOA) scenarios, these kinds of WU errors are reviewed and approved as eligible for IPU. This is especially true if you're trying to resolve issues quickly.
