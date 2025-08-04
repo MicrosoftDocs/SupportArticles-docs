@@ -1,7 +1,7 @@
 ---
 title: Export Directory-Level Activity Logs to Event Hubs
 description: Provides guidance for exporting directory-level activity logs to Event Hubs by using Azure management group-level diagnostic settings.
-ms.date: 07/28/2025
+ms.date: 08/04/2025
 ms.reviewer: v-liuamson; v-gsitser; v-sisidhu
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
@@ -16,7 +16,7 @@ You can export directory-level activity logs to an event hub through an API call
 ## Common issues and solutions
 
 - **Issue:** Logs don't appear in Event Hubs.
-  - **Solution:** Double-check the event hub configuration to make sure that the correct namespace and key ID are used.
+  - **Solution:** Double-check the event hub configuration to make sure that the correct namespace is used.
 
 - **Issue:** Permission errors occur when making diagnostic settings.
   - **Solution:** Make sure that you have the necessary permissions to create or update diagnostic settings in Azure.
@@ -29,7 +29,7 @@ You can export directory-level activity logs to an event hub through an API call
 
 3. Select **Add diagnostic setting**, and select the resource that you want to export logs for.
 
-4. Under **Destination details**, select **Event Hub**, and then provide the required **Event Hub namespace** and **Event Hub name** values. Make sure that the **Event Hub key ID** value is entered correctly.
+4. Under **Destination details**, select **Event Hubs**, and then provide the required **Event Hubs namespace** and **Event Hubs name** values.
 
 5. Select **Save** to apply the settings. Check the event hub for incoming data to verify that the logs are exported.
 

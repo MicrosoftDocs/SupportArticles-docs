@@ -1,19 +1,19 @@
 ---
-title: Push Subscription Activity Logs to Sentinel
+title: Troubleshoot Pushing Subscription Level Activity Logs to Sentinel
 description: Provides detailed instructions for pushing subscription activity logs to Sentinel.
-ms.date: 07/28/2025
+ms.date: 08/04/2025
 ms.reviewer: v-liuamson; v-gsitser; v-sisidhu
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
 
-# Push subscription Activity Logs to Sentinel
+# Troubleshoot pushing subscription level Activity Logs to Sentinel
 
 This article provides guidance for how to push subscription activity logs to Microsoft Sentinel by using Microsoft Azure Diagnostic Settings. This process is essential to  monitor and analyze activity logs effectively.
 
 Users might encounter challenges when they try to push subscription activity logs to Sentinel. This guide outlines the steps to configure Azure Diagnostic Settings to achieve seamless data transfer to Sentinel.
 
-### Common issues and solutions
+## Common issues and solutions
 
 - **Issue**: Logs aren't appearing in Sentinel.
   - **Solution**: Make sure that the correct Log Analytics workspace is selected and that the diagnostic settings are correctly configured.
@@ -22,26 +22,28 @@ Users might encounter challenges when they try to push subscription activity log
 
 1. Navigate to the Azure portal.
 
-2. Open Diagnostic Settings:
+1. Open Diagnostic Settings:
    1. Go to the **Azure Monitor** section.
    1. On the menu, select **Diagnostic Settings**.
 
-3. **Configure Diagnostic Settings**:
-   1. Select the resource that you want to configure the logs for.
-   1. Select **Add Diagnostic Setting**.
-   1. Name your setting, and select the logs that you want to send to Sentinel.
+1. **Configure Diagnostic Settings**:
+   1. Select the resource that you want to verify the logs for.
+   1. Select **Edit Diagnostic Setting**.
+   1. Review the diagnostic settings are set correctly.
 
-4. **Select Log Analytics workspace**:
-   1. Under **Destination details**, select **Send to Log Analytics**.
-   1. Select the appropriate Log Analytics workspace that you want to send the logs to.
+1. **Select Log Analytics workspace**:
+   1. Under **Destination details**, select **Log Analytics**.
+   1. Verify the correct Log Analytics workspace is selected.
 
-5. Review your settings, and select **Save** to apply the changes.
+1. Review your settings, and select **Save** to apply the changes.
 
-6. To verify the data transfer, run the following query in your Log Analytics workspace:
+1. To verify the data transfer, run the following query in your Log Analytics workspace:
 
    ```plaintext
    AzureActivity | where SubscriptionId contains "<YourSubscriptionId>"
    ```
+
+1. Validate your [connector settings](/azure/sentinel/connect-services-diagnostic-setting-based#prerequisites).
 
 ## References
 

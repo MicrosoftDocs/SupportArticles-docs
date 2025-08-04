@@ -11,12 +11,10 @@ items:
         href: activity-logs/config-export/transition-from-legacy-to-diagnostic-settings.md
       - name: Manage diagnostic settings to transition from legacy solutions
         href: activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md
-      - name: Push subscription Activity Logs to Sentinel
+      - name: Troubleshoot pushing subscription level Activity Logs to Sentinel
         href: activity-logs/config-export/push-subscription-activity-logs-to-sentinel.md
       - name: Export directory-level Activity Logs to Event Hubs
         href: activity-logs/config-export/export-directory-level-activity-logs-to-event-hubs.md
-      - name: Resolve log limit issues in Azure Functions apps
-        href: activity-logs/config-export/resolve-log-limit-issues-in-azure-functions-apps.md
       - name: Understand and manage diagnostic settings retention
         href: activity-logs/config-export/understand-and-manage-diagnostic-settings-retention.md  
       - name: Troubleshoot Azure CLI configuration issues
@@ -55,6 +53,8 @@ items:
       href: app-insights/telemetry/auto-instrumentation-troubleshoot.md
     - name: Troubleshoot high data ingestion
       href: app-insights/telemetry/troubleshoot-high-data-ingestion.md
+    - name: Resolve log limit issues in Azure Functions apps
+      href: activity-logs/config-export/resolve-log-limit-issues-in-azure-functions-apps.md
     - name: Application Insights classic SDK troubleshooting
       items:
       - name: SDK support guidance
