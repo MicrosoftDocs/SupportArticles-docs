@@ -60,6 +60,9 @@ The following table lists the available diagnostics on **Solutions** pages. You 
 | Email encryption isn't working as expected. Are there any issues with my licenses or settings? | Checks license availability for sensitivity labels. Also checks information protection settings for your tenant, including Information Rights Management (IRM) and transport rule settings. Validates encryption settings. | [Information Protection diagnostics](https://purview.microsoft.com/informationprotection/diagnostics) |
 | A user can't find the sensitivity label they need. Does the label policy apply to them? | Checks which sensitivity labels are available to the user. Diagnostic results include information such as the label names, settings, and where the labels are available. | [Information Protection diagnostics](https://purview.microsoft.com/informationprotection/diagnostics) |
 | A DLP rule isn't enforced for a particular user. Is this user included in the DLP policy? | Checks which DLP policies apply to a user. Diagnostic results include the policy names and where the policies apply. | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+| Endpoint DLP not working? | We 'll check for policy sync issues and recommendations on how to resolve them. | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+| Alerts not working for a DLP rule | Search for alerts and determine if there are any issues with how the Data Loss Prevention rule is set up. | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
+| Can't find an alert for an activity or an audit event | Find the alert for an activity or audited event, or figure out why the alert could be missing. | [DLP diagnostics](https://purview.microsoft.com/datalossprevention/diagnostics) |
 
 ## Diagnostics on the Help pane
 
