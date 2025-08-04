@@ -9,9 +9,6 @@ ms.date: 08/04/2025
 ai-usage: ai-assisted
 ---
 
-> **Customer intent:**  
-> I want to know why diagnostic settings are missing or not created as expected after I move, rename, or recreate an Azure resource, and how to prevent or resolve this issue.
-
 # Diagnostic Settings Not Created as Expected After Moving a Resource
 
 This article helps you resolve issues where diagnostic settings are missing or not created as expected after moving, renaming, or recreating an Azure resource.
