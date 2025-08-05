@@ -3134,8 +3134,8 @@ items:
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
       href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
-    - name: Troubleshoot Windows Update Installation Error 0x800f0831 CBS_STORE_CORRUPTION
-      href: ./installing-updates-features-roles/troubleshoot-windows-update-installation-error-0x800f0831-cbs-e-store-corruption.md
+    - name: Troubleshoot Windows Update Installation Error CBS_STORE_CORRUPTION
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-installation-error-cbs-e-store-corruption.md
   - name: Windows Update for Business Reports
     items:
     - name: Initial service configuration and Onboarding
