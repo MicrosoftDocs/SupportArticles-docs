@@ -152,6 +152,8 @@
     href: load-bal-ingress-c/create-unmanaged-ingress-controller.md
   - name: Troubleshoot Application Gateway Ingress Controller connectivity
     href: load-bal-ingress-c/troubleshoot-app-gateway-ingress-controller-connectivity-issues.md
+  - name: Troubleshoot Performance Issues with the Managed NGINX Ingress Controller in AKS
+    href: load-bal-ingress-c/tshoot-performance-ingress.md
 
 - name: Troubleshoot Kubernetes control plane
   items:
