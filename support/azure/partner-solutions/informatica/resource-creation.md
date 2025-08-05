@@ -52,8 +52,6 @@ User profile needs to be updated with key business information for Informatica r
 
     :::image type="content" source="media/user-info.png" alt-text="User information in the Azure portal.":::
 
-## Related content
 
-- [Troubleshoot Informatica integration issues](link.md)
 -
 
