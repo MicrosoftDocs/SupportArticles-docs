@@ -50,6 +50,6 @@ Check the current provisioning state of the VNET:
 \"provisioningState\" -o tsv*
 
 If the command returns **Succeeded**, retry your AKS operation. If it
-returns any other value. For more guidance, you may follow the troubleshooting steps described in [Troubleshoot Azure Microsoft.Network failed provisioning state](azure/networking/troubleshoot-failed-state).
+returns any other value. For more guidance, you may follow the troubleshooting steps described in [Troubleshoot Azure Microsoft.Network failed provisioning state](/azure/networking/troubleshoot-failed-state).
 
 [!INCLUDE [azure-help-support](../../../includes/azure-help-support.md)]
