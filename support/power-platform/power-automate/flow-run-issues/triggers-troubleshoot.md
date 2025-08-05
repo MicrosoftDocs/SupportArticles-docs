@@ -25,7 +25,7 @@ Here are some tips and tricks for troubleshooting issues with triggers.
 
 ## Identify specific flow run
 
-Sometimes, you might need to [Identify specific flow runs](./fix-flow-failures.md#identify-specific-flow-runs) to troubleshoot your flows.
+Sometimes, you might need to [Identify specific flow runs](/power-automate/fix-flow-failures#identify-specific-flow-runs) to troubleshoot your flows.
 
 ## My trigger doesn’t fire
 
@@ -42,13 +42,13 @@ Sometimes, you might need to [Identify specific flow runs](./fix-flow-failures.m
    1. On the navigation menu to the left, select **My flows**, and then select your flow.
    1. Review the details page. Do you see the following error in the **Details**?
 
-       :::image type="content" source="./media/triggers-introduction/fix-trigger.png" alt-text="Screenshot of an error message about the flow's trigger.":::
+       :::image type="content" source="./media/triggers-troubleshoot/fix-trigger.png" alt-text="Screenshot of an error message about the flow's trigger.":::
 
    This error means that Power Automate tried multiple times to establish a connection to register the trigger and failed. Your flow doesn't trigger until this problem is resolved.
 
    One of the common reasons for this failure is that the Power Automate service endpoints aren't part of the allowlist. To fix it, confirm that your IT department added these endpoints to the allowlist.
 
-   Here's the list of [IP addresses and domains](ip-address-configuration.md) that need to be added to your allowlist.
+   Here's the list of [IP addresses and domains](/power-automate/ip-address-configuration) that need to be added to your allowlist.
 
    Learn more about how to fix issues with triggers in [There is a problem with the flow's trigger](/troubleshoot/power-platform/power-automate/flow-run-issues/there-is-a-problem-with-the-flows-trigger).
 
@@ -65,14 +65,14 @@ Follow these steps to verify if your connections are broken:
 1. Find the connection that your flow uses.
 1. To fix a broken connection, select the link next to the **Status** column and follow the instructions.
 
-   ![A screenshot that displays a link to fix a broken connection.](./media/triggers-introduction/fix-link.png)
+   ![A screenshot that displays a link to fix a broken connection.](./media/triggers-troubleshoot/fix-link.png)
 
 ### Verify if the flow uses a premium connector trigger
 
 1. Edit your flow to find the connector name for the trigger.
 1. Go to the [list of connectors](https://make.powerautomate.com/connectors) and then search for that connector. If the connector is a premium connector, **PREMIUM** displays below the name of the connector.
 
-    :::image type="content" source="./media/triggers-introduction/premium-connector.png" alt-text="Screenshot of a premium connector.":::
+    :::image type="content" source="./media/triggers-troubleshoot/premium-connector.png" alt-text="Screenshot of a premium connector.":::
 
 A standalone Power Apps or Power Automate license is required to access all premium, on-premises, and custom connectors. You can [purchase licenses](https://make.powerautomate.com/pricing) at any time.
 
@@ -92,7 +92,7 @@ You just completed an event. For example, you added a new list item or sent an e
 1. On the navigation menu to the left, select **My flows**, and then select the flow.
 1. In the **28-day run history**, select **All runs**.
 
-    :::image type="content" source="./media/triggers-introduction/all-runs.png" alt-text="Screenshot showing all runs.":::
+    :::image type="content" source="./media/triggers-troubleshoot/all-runs.png" alt-text="Screenshot showing all runs.":::
 
 If you expect the flow to run but it didn’t run, verify if it shows the trigger check was skipped at that time. If the trigger check was skipped, it means that the trigger condition wasn't met for the flow to trigger. Verify the flow the inputs and trigger conditions to confirm if you're using the latest configuration to trigger the flow.
 
@@ -100,7 +100,7 @@ If you expect the flow to run but it didn’t run, verify if it shows the trigge
 
 Sometimes, the inputs and trigger conditions might cause failures. Follow these steps to verify your inputs and conditions.
 
-[!INCLUDE[designer-tab-experience](./includes/designer-tab-experience.md)]
+Power Automate allows you to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. Learn more (with examples) in [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
 
 # [New designer](#tab/new-designer)
 
@@ -109,7 +109,7 @@ Sometimes, the inputs and trigger conditions might cause failures. Follow these 
 1. On the command bar, select **Edit**.
 1. Select the first card to see what folders, sites, mailboxes, and others are used in the trigger in the configuration pane.
 
-    :::image type="content" source="./media/triggers-introduction/copilot-triggers.png" alt-text="Screenshot that shows trigger site in Copilot.":::
+    :::image type="content" source="./media/triggers-troubleshoot/copilot-triggers.png" alt-text="Screenshot that shows trigger site in Copilot.":::
 
 1. In the configuration pane, select the **Settings** tab.
 1. Find **Trigger conditions**.
@@ -118,7 +118,7 @@ Sometimes, the inputs and trigger conditions might cause failures. Follow these 
 
    If there are other customizations in **Trigger Conditions**, confirm that you're using the expected or correct inputs to trigger the flow.
 
-    :::image type="content" source="./media/triggers-introduction/copilot-trigger-conditions.png" alt-text="Screenshot that shows trigger conditions in Copilot.":::
+    :::image type="content" source="./media/triggers-troubleshoot/copilot-trigger-conditions.png" alt-text="Screenshot that shows trigger conditions in Copilot.":::
 
 # [Classic designer](#tab/classic-designer)
 
@@ -133,7 +133,7 @@ Sometimes, the inputs and trigger conditions might cause failures. Follow these 
 
    If there are other customizations in **Trigger Conditions**, confirm that you're using the expected or correct inputs to trigger the flow.
 
-    :::image type="content" source="./media/triggers-introduction/trigger-conditions.png" alt-text="Screenshot that shows trigger conditions.":::
+    :::image type="content" source="./media/triggers-troubleshoot/trigger-conditions.png" alt-text="Screenshot that shows trigger conditions.":::
 
 ---
 
@@ -160,7 +160,7 @@ If everything looks good but your flow is still not triggering, verify if your f
 1. Remove, and then re-add the trigger.
 1. Switch the connection.
 1. Turn off, and then turn on the flow.
-1. [Export](./export-flow-solution.md), and then [import](./import-flow-solution.md) the flow.
+1. [Export](/power-automate/export-flow-solution), and then [import](/power-automate/import-flow-solution) the flow.
 1. Create a copy of the flow.
 1. If the trigger uses special conditions, like when an email arrives in a specific folder, remove the folder, and then add it again.
 
@@ -181,24 +181,24 @@ Refer to the following table to understand how your flow responds when it is tur
 
 Follow these steps to determine the type of trigger that your flow uses.
 
-[!INCLUDE[designer-tab-experience](./includes/designer-tab-experience.md)]
+Power Automate allows you to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. Learn more (with examples) in [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
 
 # [New designer](#tab/new-designer)
 
 1. In the configuration pane to the left, select **Code View**.
 1. Find the `recurrence` section with an interval `frequency` element. If this section is available, the trigger is a *polling* trigger.
 
-    :::image type="content" source="./media/triggers-introduction/copilot-recurrence.png" alt-text="Screenshot of the recurrence section in Copilot.":::
+    :::image type="content" source="./media/triggers-troubleshoot/copilot-recurrence.png" alt-text="Screenshot of the recurrence section in Copilot.":::
 
 # [Classic designer](#tab/classic-designer)
 
 1. On the title bar, select the ellipsis (**...**) > **Peek code**.
 
-    :::image type="content" source="./media/triggers-introduction/peek-code.png" alt-text="Screenshot of peek code.":::
+    :::image type="content" source="./media/triggers-troubleshoot/peek-code.png" alt-text="Screenshot of peek code.":::
 
 1. Find the `recurrence` section with an interval `frequency` element. If this section is available, the trigger is a *polling* trigger.
 
-    :::image type="content" source="./media/triggers-introduction/frequency.png" alt-text="Screenshot of the recurrence section.":::
+    :::image type="content" source="./media/triggers-troubleshoot/frequency.png" alt-text="Screenshot of the recurrence section.":::
 
 ---
 
@@ -228,7 +228,7 @@ If your license is the **Flow for Office 365** plan (from your Enterprise licens
 
 Follow these steps to check the trigger wake-up frequency.
 
-[!INCLUDE[designer-tab-experience](./includes/designer-tab-experience.md)]
+Power Automate allows you to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. Learn more (with examples) in [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
 
 # [New designer](#tab/new-designer)
 
@@ -239,7 +239,7 @@ Follow these steps to check the trigger wake-up frequency.
 1. In the configuration tab, select the **Code view** tab.
 1. Find the interval frequency.
 
-    :::image type="content" source="./media/triggers-introduction/copilot-recurrence.png" alt-text="Screenshot of the frequency element in Copilot.":::
+    :::image type="content" source="./media/triggers-troubleshoot/copilot-recurrence.png" alt-text="Screenshot of the frequency element in Copilot.":::
 
 # [Classic designer](#tab/classic-designer)
 
@@ -248,11 +248,11 @@ Follow these steps to check the trigger wake-up frequency.
 1. On the command bar, select **Edit**.
 1. On your flow trigger, select the ellipsis (**...**) > **Peek code**.
 
-    :::image type="content" source="./media/triggers-introduction/peek-code.png" alt-text="Screenshot of the peek code setting.":::
+    :::image type="content" source="./media/triggers-troubleshoot/peek-code.png" alt-text="Screenshot of the peek code setting.":::
 
 1. Find the interval frequency.
 
-    :::image type="content" source="./media/triggers-introduction/frequency.png" alt-text="Screenshot of the frequency element.":::
+    :::image type="content" source="./media/triggers-troubleshoot/frequency.png" alt-text="Screenshot of the frequency element.":::
 
 ---
 
@@ -260,9 +260,9 @@ If it's taking longer than expected for your flow to trigger, here are the two m
 
 1. There were too many calls to the connector or flow, causing it to be throttled. To verify if your flow is being throttled, manually test the flow to see if it triggers immediately. If it triggers immediately, it isn't throttled.
 
-   You can check the [Power Automate analytics](./admin-analytics-report.md) to learn more about your flows.
+   You can check the [Power Automate analytics](/power-automate/admin-analytics-report) to learn more about your flows.
 
-   If your flow is frequently throttled, redesign your flow to use fewer actions. Learn more in [Understand platform limits and avoid throttling](guidance/coding-guidelines/understand-limits.md).
+   If your flow is frequently throttled, redesign your flow to use fewer actions. Learn more in [Understand platform limits and avoid throttling](/power-automate/guidance/coding-guidelines/understand-limits).
 
    More tips:
 
