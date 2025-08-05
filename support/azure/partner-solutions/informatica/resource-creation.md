@@ -32,7 +32,7 @@ The Informatica integration must be set up by users who have _Owner_ access on t
 ### Solution 1
 
 1. Verify your access level on the Azure subscription.
-2. If you do not have **Owner** access, contact your Azure administrator to grant you the required permissions before starting the integration setup.
+1. If you do not have **Owner** access, contact your Azure administrator to grant you the required permissions before starting the integration setup.
 
 ## Cause 2: Missing details in user profile
 
@@ -44,13 +44,13 @@ User profile needs to be updated with key business information for Informatica r
 
     :::image type="content" source="media/user.png" alt-text="User resource provider in the Azure portal.":::
 
-2. Search for your **UserName** in the users interface.
+1. Search for your **UserName** in the users interface.
 
-:::image type="content" source="media/user-search.png" alt-text="Searching for user in the Azure portal.":::
+    :::image type="content" source="media/user-search.png" alt-text="Searching for user in the Azure portal.":::
 
-3. Edit **UserInformation** and ensure all required fields are completed.
+1. Edit **UserInformation** and ensure all required fields are completed.
 
-:::image type="content" source="media/user-info.png" alt-text="User information in the Azure portal.":::
+    :::image type="content" source="media/user-info.png" alt-text="User information in the Azure portal.":::
 
 ## Related content
 
