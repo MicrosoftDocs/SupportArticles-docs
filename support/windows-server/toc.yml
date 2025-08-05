@@ -2752,6 +2752,8 @@ items:
       href: ./virtualization/degraded-integration-services-message.md
     - name: Hyper-V Time Synchronization doesn't adjust the VM system clock
       href: ./virtualization/virtual-machine-time-not-synced.md
+    - name: Troubleshoot Linux virtual machine issues on Hyper-V
+      href: ./virtualization/linux-virtual-machine-issue-hyper-v.md  
     - name: Unknown devices in Device manager
       href: ./virtualization/unknown-device-vmbus-virtual-machine.md
     - name: Uptime value of Hyper-V Management console changes to the resume time
