@@ -48,7 +48,7 @@ For more information, see the following resources:
 
 ### Typical error messages
 
-You may experience common errors such as the following:
+You might experience common errors such as the following:
 
 - **Azure Functions runtime is unreachable.**
 
@@ -126,7 +126,7 @@ The diagnostic workflow evaluates the following aspects of your function spp:
   - Diagnostic events during app startup
   - Offline history analysis for unexpected downtimes
 - **Recent deployments**
-  - Highlights deployments that may have impacted the app
+  - Highlights deployments that might have affected the app
 - **Runtime and language version validation**
   - Confirms use of supported versions
 - **Configuration checks**
@@ -145,7 +145,7 @@ The diagnostic workflow evaluates the following aspects of your function spp:
 - **Execution health**
   - Detects:
     - Execution failures
-    - Non-triggering functions
+    - Nontriggering functions
     - Stuck or long-running executions
 - **AI-powered analysis**
   - Uses OpenAI to detect issue patterns and provide contextual recommendations
@@ -217,7 +217,7 @@ For more information, see the following resources:
 > [!NOTE]
 > This tool applies to all hosting plans, except for the Linux Consumption and Flex Consumption plans.
 
-### Additional logs
+### Other logs
 
 - **Host Logs**: `%HOME%\LogFiles\Application\Functions\Host`
 - **Functions log**: `%HOME%\LogFiles\Application\Functions\Function\<your_triggername>`
