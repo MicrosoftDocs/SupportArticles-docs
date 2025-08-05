@@ -87,7 +87,7 @@ If the client device is online, and the sync icon shows for more than 10 minutes
 <summary><b>Enable web app logging</b></summary>
 
 1. Open the browser, and navigate to the list that you're working with.  
-1. Make sure that you use Microsoft Edge, Google Chrome, or Mozilla FireFox. These three are the only currently supported browsers. Also, make sure that you're on a device that's running Windows 10 or a later version.  
+1. Make sure that you use Microsoft Edge, Google Chrome, or Mozilla FireFox. These browsers are the only ones that are currently supported. Also, make sure that you're on a device that's running Windows 10 or a later version.  
 1. Press F12 to open the browser tools.
 1. Switch to the **Application** tab.
 1. On the left side of the pane, locate a list of local storage domains. Expand the **Local Storage** category, and select the item that corresponds to the list URL. For example, if you're viewing `https://contoso.sharepoint.com/teams/teamSite/Lists/Number%20List/AllItems.aspx`, select `https://contoso.sharepoint.com`.  
