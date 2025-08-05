@@ -60,27 +60,27 @@ Since the managed namespace is managed by Microsoft Azure Resource Manager (ARM)
 
 Modifications must be made through the ARM API to ensure consistency with the managed state. 
 
-### edit a managed namespace
+### Can't edit a managed namespace using the Kubernetes API
 
 When attempting to edit a managed namespace using the command: `kubectl edit ns <namespace-name>`, the user should encounter an error along the lines of `Updating/deleting namespace ns1 labels is not allowed because it is managed by ARM. Please update this namespace through the ARM API.`.
 
-### delete a defaultresourcequota
+### Can't edit or delete the defaultresourcequota
 
 When attempting to edit a defaultresourcequota using the command: `kubectl delete resourcequota defaultresourcequota --namespace <namespace-name>` the user will encounter the following error: `Updating resource quota defaultresourcequota is not allowed because it is managed by ARM. Please update this resource quota though ARM api.`
 
-### edit defaultnetworkpolicy
+### Can't edit or delete the  defaultnetworkpolicy
 
 When attempting to edit a defaultnetworkpolicy using the command: `kubectl delete networkpolicy defaultnetworkpolicy --namespace <namespace-name>` the user will encounter the following error: `Updating default network policy defaultnetworkpolicy is not allowed because it is managed by ARM. Please update this network policy though ARM api`.
 
-### delete a kubernetes namespace
+### Can't delete a namespace using the Kubernetes API
 
 When attempting to delete a Kubernetes namespace using the command: `kubectl delete ns <namespace name>` the user will encounter the following error: `Deleting namespace ns1 is not allowed because it is managed by ARM. Please delete this namespace though ARM api.`
 
-## delete a defaultresourcequota
+## Can't edit or delete the defaultresourcequota
 
 When attempting to delete a defaultresourcequota using the command: `kubectl delete resourcequota defaultresourcequota --namespace <namespace-name>` the user will encounter the following error: `Deleting resource quota defaultresourcequota is not allowed because it is managed by ARM.`
 
-## delete defaultnetworkpolicy
+## Can't edit or delete the defaultnetworkpolicy
 
 When attempting to delete a defaultnetworkpolicy using the command: `kubectl delete networkpolicy defaultnetworkpolicy --namespace <namespace-name>` You will encounter the following error: `Deleting default network policy defaultnetworkpolicy is not allowed because it is managed by ARM.`
 
