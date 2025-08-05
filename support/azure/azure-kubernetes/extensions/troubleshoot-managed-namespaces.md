@@ -41,6 +41,8 @@ Users are not allowed to make change on certain namespaces or create a managed n
 
 default, kube-system, kube-node-lease, kube-public, gatekeeper-system, cert-manager, calico-system, tigera-system, app-routing-system,aks-istio-system, istio-system, dapr-system, flux-system, prometheus-system, eraser-system
 
+If a user attempts to create a namespace using one of these names, they will receive an error stating `The namespace name cannot be the same as the name of a system namespace.`.
+
 ## Issue 4 - I can't update or delete my namespaces
 
 Users are not allowed to create, update, or delete managed namespaces when the managed cluster is not in a running state. This behavior is expected and normal.
