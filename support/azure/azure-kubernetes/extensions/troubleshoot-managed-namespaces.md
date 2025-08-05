@@ -29,32 +29,17 @@ To verify the registration status, use the az feature show command:
 
 `az feature show --namespace Microsoft.ContainerService -n ManagedNamespacePreview`
 
-## Issue 2 - I don't recall what managed namespaces I have created.
-
-You can use an `az aks` command to show or list all of the managed namespaces you have created.
-
-To get more details and/or to identify namespaces at the nodepool level, show managed namespace(s):
-
-`az aks namespace show --resource-group=<resource-group-name> --cluster-name=<cluster-name> --name=<nodepool-name>`
-
-Alternatively, you can get a simplified list of managed namespace(s) in your cluster:
-
-`az aks namespace list --resource-group=<resource-group-name> --cluster-name=<cluster-name> -o json
-az aks namespace list --resource-group=<resource-group-name> --cluster-name=<cluster-name> -otable`
-
-or at the subscription (`az aks namespace list`) or resource group (`az aks namespace list --resource-group=<resource-group-name>`) level.
-
-## Issue 3 - Some namespaces can't be changed/certain names can't be used
+## Issue 2 - Some namespaces can't be changed/certain names can't be used
 
 Users are not allowed to make change on certain namespaces, as they are utilized by system components/resources. These namespaces are: 
 
 default, kube-system, kube-node-lease, kube-public, gatekeeper-system, cert-manager, calico-system, tigera-system, app-routing-system,aks-istio-system, istio-system, dapr-system, flux-system, prometheus-system, eraser-system
 
-## Issue 4 - I can't update or delete my namespaces
+## Issue 3 - I can't update or delete my namespaces
 
 Users are not allowed to create, update, or delete managed namespaces when the managed cluster is not in a running state. This behavior is expected and normal.
 
-## Issue 5 - I can't do ______ via `kubectl`
+## Issue 4 - I can't do ______ via `kubectl`
 
 Since the managed namespace is managed by Microsoft Azure Resource Manager (ARM), changes to its metadata (e.g. labels/annotations) are restricted.
 
