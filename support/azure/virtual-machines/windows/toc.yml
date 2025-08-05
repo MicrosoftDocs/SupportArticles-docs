@@ -240,7 +240,7 @@
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md
 
   - name: My VM is not booting
-  items:
+  
   - name: Boot diagnostics
     href: boot-diagnostics.md
   - name: Common issues
