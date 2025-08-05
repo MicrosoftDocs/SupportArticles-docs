@@ -62,6 +62,6 @@ nodepool again using the az aks nodepool add command.
 
 You may refer to this article for some more examples:
 
-- [az aks nodepool examples](/cli/azure/aks/nodepool?view=azure-cli-latest#az-aks-nodepool-add-examples).
+- [az aks nodepool examples](/cli/azure/aks/nodepool?view=azure-cli-latest#az-aks-nodepool-add-examples&preserve-view=true).
 
 [!INCLUDE [azure-help-support](../../../includes/azure-help-support.md)]
