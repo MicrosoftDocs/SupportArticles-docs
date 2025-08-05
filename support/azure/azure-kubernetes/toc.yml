@@ -455,5 +455,5 @@
     href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-codes/zonalallocation-allocationfailed-error.md
-  - name: Troubleshoot the VirtualNetworkNotInSucceededState error code
+  - name: VirtualNetworkNotInSucceededState error 
     href: error-codes/virtualnetworknotinsucceededstate-error.md
