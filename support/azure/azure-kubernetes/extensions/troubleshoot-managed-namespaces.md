@@ -84,6 +84,6 @@ When attempting to delete a defaultresourcequota using the command: `kubectl del
 
 When attempting to delete a defaultnetworkpolicy using the command: `kubectl delete networkpolicy defaultnetworkpolicy --namespace <namespace-name>` You will encounter the following error: `Deleting default network policy defaultnetworkpolicy is not allowed because it is managed by ARM.`
 
-[!INCLUDE Third-party disclaimer]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE Azure Help Support]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
