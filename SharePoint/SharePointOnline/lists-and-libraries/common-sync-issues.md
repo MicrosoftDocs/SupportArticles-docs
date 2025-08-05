@@ -32,7 +32,7 @@ This article helps you troubleshoot common issues that occur when you try to syn
    __Microsoft OneDrive Sync Service__ (__OneDrive.Sync.Service.exe__)  
 
    - If __Microsoft OneDrive Sync Service__  is running, continue to step 2.
-   - If __Microsoft OneDrive Sync Service__ isn't running, the List sync process isn't running. Your organization might have prevented it from running. For more information, see [Lists sync policies](/sharepoint/lists-sync-policies). 
+   - If __Microsoft OneDrive Sync Service__ isn't running, the List sync process isn't running. Your organization might be preventing it from running. For more information, see [Lists sync policies](/sharepoint/lists-sync-policies). 
       
 1. <a href=#logging>Enable Web App Logging</a>.  
 1. Check the console log for a line that starts with "Found list" in the text. The line should resemble the following screenshot.
@@ -40,9 +40,9 @@ This article helps you troubleshoot common issues that occur when you try to syn
     :::image type="content" source="./media/common-sync-issues/console.png" alt-text="Screenshot that shows a console log line that starts with found list":::
 
     - If there's no log line that starts with “Found list,” the List sync process might not have synced the list yet. Wait for silent configuration or syncing to occur.
-    - If the line with "Found list" shows “unsynced:true", the list is currently unsynced because List sync doesn’t support it. This is by design. We expect to extend support for lists to future versions of List sync. For more information, see the "Current Limitations of List sync" section in [Edit lists offline](https://support.microsoft.com/office/41403c3e-1795-4e07-b56b-ae591cbde2f9).
+    - If the line with "Found list" shows "unsynced:true" in the text, the list is currently unsynced because List sync doesn’t support it. This is by design. We expect to extend support for lists to future versions of List sync. For more information, see the "Current Limitations of List sync" section in [Edit lists offline](https://support.microsoft.com/office/41403c3e-1795-4e07-b56b-ae591cbde2f9).
 
-1. If __OneDrive.Sync.Service.exe__ is running, and the log contains a “Found list” line that doesn't show "unsynced," you might be experiencing a client issue. Go to <a href=#support>Contacting Support</a>.  
+1. If __OneDrive.Sync.Service.exe__ is running, and the log contains a "Found list" line that doesn't show "unsynced," you might be experiencing a client issue. Go to <a href=#support>Contacting Support</a>.  
 
 </details>
 <details>
@@ -52,7 +52,7 @@ The sync icon is often in the "on" state for a few minutes. It appears next to t
 
 :::image type="content" source="./media/common-sync-issues/sync-icon.png" alt-text="Screenshot that shows the sync icon next to the list name.":::
 
-If the icon stays on for more than 10 minutes, make sure that the client device is online. If it's offline, the sync icon will stay on.
+If the icon stays on for more than 10 minutes, make sure that the client device is online. If it's offline, the sync icon stays on.
 If the client device is online, and the sync icon shows for more than 10 minutes, go to <a href=#support>Contacting Support</a>.
 
 </details>
@@ -74,11 +74,11 @@ If the client device is online, and the sync icon shows for more than 10 minutes
 <summary><b>Information required to open a Microsoft support request</b></summary>
 
 - **Required:** The email address that's used to sign in to the List web app.
-- **Required:** A general time stamp of when the issue occurred (a time that's within a few hours is usually sufficient).
+- **Required:** A general time stamp of when the issue occurred (a time that's within a few hours is sufficient).
 - **Required:** A description of the issue.
-- **Required:** Web browser that's used (Edge, Chrome, and so on).
-- **Optional:** Screenshots of the issue. The more detail that's included in the request, the more likely that the Microsoft team will be able to quickly respond.
-- **Optional:** If you enabled web app logging during debugging, send a copy of the console logs. You can right-click the console in the browser tools, and then select “Save as” to generate a file.  
+- **Required:** Web browser that you use (Edge, Chrome, Firefox).
+- **Optional:** Screenshots of the issue. The more detail that you include in the request, the more likely that the Microsoft team can respond quickly.
+- **Optional:** If you enabled web app logging during debugging, send a copy of the console logs. You can right-click the console in the browser tools, and then select "Save as" to generate a file.  
 - **Optional:** The ticket might require client logs to be collected separately. Go to <a href=#collect>Collect Microsoft SharePoint client logs</a>.
 
 </details>
@@ -87,7 +87,7 @@ If the client device is online, and the sync icon shows for more than 10 minutes
 <summary><b>Enable web app logging</b></summary>
 
 1. Open the browser, and navigate to the list that you're working with.  
-1. Make sure you use Microsoft Edge, Google Chrome, or Mozilla FireFox. These are the only currently supported browsers. Also, make sure you're on a device that's running Windows 10 or a later version.  
+1. Make sure that you use Microsoft Edge, Google Chrome, or Mozilla FireFox. These three are the only currently supported browsers. Also, make sure that you're on a device that's running Windows 10 or a later version.  
 1. Press F12 to open the browser tools.
 1. Switch to the **Application** tab.
 1. On the left side of the pane, locate a list of local storage domains. Expand the **Local Storage** category, and select the item that corresponds to the list URL. For example, if you're viewing `https://contoso.sharepoint.com/teams/teamSite/Lists/Number%20List/AllItems.aspx`, select `https://contoso.sharepoint.com`.  
