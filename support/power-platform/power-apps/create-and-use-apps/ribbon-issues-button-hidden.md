@@ -17,18 +17,41 @@ A button can be hidden due to an [enable rule](/powerapps/developer/model-driven
 > [!WARNING]
 >
 > - Any display rule of the **EntityPrivilegeRule** type with a **PrivilegeType** value of one of the following (**Create**, **Write**, **Delete**, **Assign**, **Share**) will evaluate to false if the entity has the **Read-Only in Mobile** option enabled, which will force the entity to only permit **Read** privilege. Examples of some of the most common default system rules that will evaluate to false when the **Read-Only in Mobile** flag is enabled on the entity, are as follows, but not limited only to this list (`Mscrm.CreateSelectedEntityPermission`, `Mscrm.CanSavePrimary`, `Mscrm.CanWritePrimary`, `Mscrm.CanWriteSelected`, `Mscrm.WritePrimaryEntityPermission`, `Mscrm.WriteSelectedEntityPermission`, `Mscrm.CanDeletePrimary`, `Mscrm.DeletePrimaryEntityPermission`, `Mscrm.DeleteSelectedEntityPermission`, `Mscrm.AssignSelectedEntityPermission`, `Mscrm.SharePrimaryPermission`, `Mscrm.ShareSelectedEntityPermission`). You can edit the entity and uncheck the **Read-Only in Mobile** option to permit these rules to evaluate to true, provided the privilege being tested by the rule is also granted to the user.
-> - Do not remove the `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and may not work correctly.
+> - Do not remove the `Mscrm.HideOnModern` display rule from a command to force a button to appear in the Unified Interface. Commands that have the `Mscrm.HideOnModern` display rule are intended for the legacy Web Client interface and are not supported in the Unified Interface, and might not work correctly.
 
 1. [Enable Command checker and select the command button to inspect](ribbon-issues.md#use-command-checker).
 1. The following example shows the **New** button on the contact entity's grid page isn't visible and is represented by an item labeled **New (hidden)**.
 
     > [!NOTE]
-    > If your button isn't listed, it could be due to a [HideCustomAction](/powerapps/developer/model-driven-apps/define-custom-actions-modify-ribbon#hide-custom-actions) customization that may have been installed, or the associated command has a `Mscrm.HideOnModern` display rule. At the time of writing this guide, the Command Checker tool does not list buttons that have been hidden by a `HideCustomAction` or `Mscrm.HideOnModern` display rule. We are currently working to augment this listing to include this information in a future update.
+    > If your button doesn't appear in the list, it might be hidden for one of the following reasons:
+    >
+    > 1. **HideCustomAction customization:**
+    >    - In the left navigation panel, look for the `HideCustomAction` section at the top.
+    >    - Expand the list and review each item. Check the location properties for a match with your button's name.
+    >    - If a match is found, this is likely why your button is hidden. To resolve, follow the [Repair Options](#repair-options) instructions below, but apply them to the `HideCustomAction` instead of a command.
+    >
+    > 2. **Mscrm.HideOnModern display rule:**
+    >    - The associated command might have a `Mscrm.HideOnModern` display rule, which hides the button in Unified Interface applications.
+    >    - Currently, the Command Checker tool doesn't list buttons hidden by this rule. This limitation is being addressed in a future update.
+    >
+    > 3. **Manually hidden in the command bar designer:**
+    >    - Open the [command bar designer](/power-apps/maker/model-driven-apps/use-command-designer) for your app.
+    >    - Locate your button and check the properties pane.
+    >    - At the bottom, verify that the **Hidden** field isn't checked.
 
     :::image type="content" source="media/ribbon-issues-button-hidden/new-hidden.png" alt-text="Screenshot shows the New button on the contact entity's grid page isn't visible and is represented by an item labeled New (hidden).":::
 
     > [!NOTE]
-    > If the button is still hidden when all rules evaluate to **True**, it may be due to [context sensitive commands in grids](https://support.microsoft.com/topic/1100b6b5-ab64-6047-82c5-924a2b38296a). When records are selected on a grid, all buttons without a `SelectionCountRule` element will be considered not relevant to the selected record(s). And they're hidden even if their rule evaluation is **True**. Note that flyouts aren't affected since flyout children might still have record based commands.
+    > If the button remains hidden even when all rules evaluate to **True**, check the hidden reason in the navigation panel:
+    >
+    > - **Hidden by selection:**
+    >   - This means the button is hidden due to [context sensitive commands in grids](../../../dynamics-365/sales/button-in-command-bar-not-appear-after-grid-item-selection.md#cause).
+    >   - When records are selected in a grid, any button without a `SelectionCountRule` element is considered not relevant to the selected record(s) and will be hidden, even if its rule evaluation is **True**.
+    >   - Note that flyouts aren't affected, as flyout children might still have record-based commands.
+    >
+    > - **Hidden offline:**
+    >   - The command is hidden because you are offline, or the app is set to offline by default.
+    >   - This command isn't supported in offline mode. You can adjust your app's [offline settings](/power-apps/mobile/mobile-offline-overview) and disable offline-first if needed.
 
 1. Select the **Command Properties** tab to display the details of the command for this button. This will show the enable rules and display rules, along with the result (**True**, **False**, **Skipped**) of each rule evaluation. The following example shows the **New (hidden)** button's command to be `Mscrm.NewRecordFromGrid` and there's an enable rule named `new.contact.EnableRule.EntityRule` that has evaluated to **False**, as a result the button will be hidden.
 
