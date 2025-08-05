@@ -15,12 +15,12 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 This article requires Azure CLI version 2.67.0 or a later version. \
 To find the version number, run az \--version. If you have to install or
 upgrade Azure CLI, see [How to install the Azure
-CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli).
+CLI](/cli/azure/install-azure-cli).
 
 For more detailed information about the upgrade process, see the
 \"Upgrade an AKS cluster\" section in [Upgrade an Azure Kubernetes
 Service (AKS)
-cluster](https://learn.microsoft.com/en-us/azure/aks/upgrade-cluster#upgrade-an-aks-cluster).
+cluster](/azure/aks/upgrade-cluster#upgrade-an-aks-cluster).
 
 ## Symptoms
 
