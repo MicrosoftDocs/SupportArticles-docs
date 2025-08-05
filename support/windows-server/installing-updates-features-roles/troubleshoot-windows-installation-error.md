@@ -13,9 +13,6 @@ ms.custom:
 
 # Troubleshoot Windows Update installation error 0x800f0831
 
-> [!WARNING]
-> This error is flagged to prompt an in-place upgrade to recover the virtual machine (VM) if these instructions don't resolve the issue.
-
 Windows Update error 0x800f0831 typically occurs if an update doesn't install the required manifest files correctly. This article helps you understand the root cause of the issue and the necessary steps to resolve it effectively.
 
 ## Prerequisites
@@ -28,15 +25,15 @@ When you try to install any update by using the standalone installer (.msu), or 
 
 > Some updates were not installed
 
-:::image type="content" source="media/install-error-new.jpg" alt-text="Screenshot of the installation error message.":::
+:::image type="content" source="media/install-error-deba.jpg" alt-text="install error screenshot":::
 
 > Updates failed
 
-:::image type="content" source="media/windows-update-new.jpg" alt-text="Screenshot of the Windows Update error message.":::
+:::image type="content" source="media/windows-update-deba.jpg" alt-text="windows update screenshot":::
 
 > Retry
 
-:::image type="content" source="media/try-new-deba-new.jpg" alt-text="new screenshot for try":::
+:::image type="content" source="media/image-deba.jpg" alt-text="last screenshot":::
 
 ## Cause
 
