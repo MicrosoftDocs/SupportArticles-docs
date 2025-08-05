@@ -237,7 +237,7 @@
     - name: Error code 0x80070490
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Troubleshoot Windows Update Installation Error CBS_STORE_CORRUPTION
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-cbs-e-store-corruption.md
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-cbs-store-corruption.md
 
 - name: My VM is not booting
   items:
