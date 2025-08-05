@@ -17,29 +17,35 @@ Please make sure the following tools are installed and configured:
 - [Azure CLI](/cli/azure/install-azure-cli)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), the Kubernetes command-line client
 
-## Issue 1 - I get an error when I try to create a managed namespace or I'm unable to create a managed namespace. 
+## Issue 1 - I get a `FeatureNotFound` error when I try to registry the managed namespace flag  
  
-This can be because you haven't registered the feature flag yet. 
+If you receive an error like `(FeatureNotFound) The feature '<feature_name>' could not be found.`
 
-You can run az feature register command to register this preview feature:
+Please ensure that the command is entered properly and the spelling is correct.
+
+You can run az feature register command to register this preview feature.
 
 `az feature register --namespace Microsoft.containerService -n ManagedNamespacePreview`
 
-To verify the registration status, use the az feature show command:
+## Issue 2 - I get an error when I try to create a managed namespace or I'm unable to create a managed namespace. 
+ 
+If you get a `(BadRequest) Managed namespace requires feature flag Microsoft.ContainerService/ManagedNamespacePreview to be registered.` error, that means the feature flag is not yet registered. If you're already ran the command to register the flag, verify the registration status
+
+To verify the registration status, use the az feature show command.
 
 `az feature show --namespace Microsoft.ContainerService -n ManagedNamespacePreview`
 
-## Issue 2 - Some namespaces can't be changed/certain names can't be used
+## Issue 3 - Some namespaces can't be changed/certain names can't be used
 
 Users are not allowed to make change on certain namespaces, as they are utilized by system components/resources. These namespaces are: 
 
 default, kube-system, kube-node-lease, kube-public, gatekeeper-system, cert-manager, calico-system, tigera-system, app-routing-system,aks-istio-system, istio-system, dapr-system, flux-system, prometheus-system, eraser-system
 
-## Issue 3 - I can't update or delete my namespaces
+## Issue 4 - I can't update or delete my namespaces
 
 Users are not allowed to create, update, or delete managed namespaces when the managed cluster is not in a running state. This behavior is expected and normal.
 
-## Issue 4 - I can't do ______ via `kubectl`
+## Issue 5 - I can't ______ via `kubectl`
 
 Since the managed namespace is managed by Microsoft Azure Resource Manager (ARM), changes to its metadata (e.g. labels/annotations) are restricted.
 
