@@ -62,13 +62,13 @@ Info CBS Failed to resolve package [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTIO
 
 ## Resolution
 
-To resolve this issue, manually add the problematic update to the system or or remove it from the system, depending on whether the update is installed. 
+To resolve this issue, manually add the problematic update to the system or remove it from the system, depending on whether the update is installed. 
 
 ### If the update is installed
 
 1. Reproduce the issue by trying to install the update or feature that's experiencing issues. This action logs the latest data into the CBS log.
 1. Verify that you have the correct update after you identify the package that the CBS process is calling out.
-1. Navigate to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx), and search for the KB number that you have identified.
+1. Navigate to [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Home.aspx), and search for the KB number that you identified.
 1. Select the appropriate KB version for the OS version and architecture, and then download the file to a temporary folder ("temp") on drive C.
 1. Open an administrative Command Prompt window, and run the following command on the folder:
 
