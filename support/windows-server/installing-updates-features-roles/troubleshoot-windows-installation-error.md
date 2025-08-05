@@ -25,15 +25,15 @@ When you try to install any update by using the standalone installer (.msu), or 
 
 > Some updates were not installed
 
-:::image type="content" source="media/install-error-deba.jpg" alt-text="install error screenshot":::
+:::image type="content" source="media/first-screenshot.jpg" alt-text="first screenshot":::
 
 > Updates failed
 
-:::image type="content" source="media/windows-update-deba.jpg" alt-text="windows update screenshot":::
+:::image type="content" source="media/second-screenshot.jpg" alt-text="second screenshot":::
 
 > Retry
 
-:::image type="content" source="media/image-deba.jpg" alt-text="last screenshot":::
+:::image type="content" source="media/third-screenshot.jpg" alt-text="third screenshot":::
 
 ## Cause
 
