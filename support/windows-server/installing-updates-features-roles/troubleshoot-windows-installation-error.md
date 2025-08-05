@@ -36,7 +36,7 @@ When you try to install any update by using the standalone installer (.msu), or 
 
 > Retry
 
-:::image type="content" source="media/retry-deba-new.jpg" alt-text="Screenshot of the Retry error message.":::
+:::image type="content" source="media/try-new-deba-new.jpg" alt-text="new screenshot for try":::
 
 ## Cause
 
@@ -47,8 +47,10 @@ The issue might occur for one of the following reasons:
 
 To locate the installation packages in the system, search for the following registry subkey:
 
+```
     HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages
- 
+ ```
+
 > [!IMPORTANT]
 > This issue might vary depending on each case, but the baseline of the issue remains the same.
 
