@@ -25,7 +25,14 @@ landingContent:
             url: marketplace-purchases-errors.md
 
 # Card
-  - title:  Azure Native New Relic Service
+  - title:  Informatica
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Issues creating Informatica resources in Azure
+            url: informatica/resource-creation.md 
+# Card
+  - title:  New Relic
     linkLists:
       - linkListType: how-to-guide
         links:

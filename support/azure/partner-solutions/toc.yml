@@ -2,8 +2,13 @@
   href: welcome-native-integrations.yml
 - name: Marketplace purchase errors
   href: marketplace-purchases-errors.md
-- name: Azure Native New Relic Service
+- name: Informatica
+  items:
+    - name: Issues creating Informatica resources in Azure
+      href: resource-creation.md
+- name: New Relic
   items:
     - name: Ingestion key rotation resolution
       href: ingestion-key-rotation-log-flow.md
+
 
