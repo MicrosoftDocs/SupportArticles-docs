@@ -28,7 +28,7 @@ A button can be hidden due to an [enable rule](/powerapps/developer/model-driven
     > 1. **HideCustomAction customization:**
     >    - In the left navigation panel, look for the `HideCustomAction` section at the top.
     >    - Expand the list and review each item. Check the location properties for a match with your button's name.
-    >    - If a match is found, this is likely why your button is hidden. To resolve, follow the [Repair Options](#repair-options) instructions below, but apply them to the `HideCustomAction` instead of a command.
+    >    - If a match is found, this is likely why your button is hidden. To resolve the issue, follow the [Repair Options](#repair-options) instructions, but apply them to the `HideCustomAction` instead of a command.
     >
     > 2. **Mscrm.HideOnModern display rule:**
     >    - The associated command might have a `Mscrm.HideOnModern` display rule, which hides the button in Unified Interface applications.
@@ -45,7 +45,7 @@ A button can be hidden due to an [enable rule](/powerapps/developer/model-driven
     > If the button remains hidden even when all rules evaluate to **True**, check the hidden reason in the navigation panel:
     >
     > - **Hidden by selection:**
-    >   - This means the button is hidden due to [context sensitive commands in grids](../../../dynamics-365/sales/button-in-command-bar-not-appear-after-grid-item-selection.md#cause).
+    >   - It means that the button is hidden due to [context sensitive commands in grids](../../../dynamics-365/sales/button-in-command-bar-not-appear-after-grid-item-selection.md#cause).
     >   - When records are selected in a grid, any button without a `SelectionCountRule` element is considered not relevant to the selected record(s) and will be hidden, even if its rule evaluation is **True**.
     >   - Note that flyouts aren't affected, as flyout children might still have record-based commands.
     >
