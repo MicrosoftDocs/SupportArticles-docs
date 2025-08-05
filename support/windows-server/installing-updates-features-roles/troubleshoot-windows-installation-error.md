@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows Installation Error 0x800f0831
-description: Learn how to resolve Windows installation error 0x800f0831.
+description: Learn how to resolve Windows Update installation error 0x800f0831.
 ms.date: 07/31/2025
 manager: dcscontentpm
 audience: itpro
@@ -11,16 +11,16 @@ ms.custom:
 - pcy:WinComm Devices Deploy
 ---
 
-# Troubleshoot Windows installation error 0x800f0831
+# Troubleshoot Windows Update installation error 0x800f0831
 
 > [!WARNING]
 > This error is flagged to prompt an in-place upgrade to recover the virtual machine (VM) if these instructions don't resolve the issue.
 
- Windows Update error 0x800f0831 typically occurs if an update doesn't install the required manifest files correctly. Understanding the root cause of this issue and following the appropriate troubleshooting steps can help resolve this issue effectively.
+Windows Update error 0x800f0831 typically occurs if an update doesn't install the required manifest files correctly. This article helps you understand the root cause of the issue and the necessary steps to resolve it effectively.
 
 ## Prerequisites
 
-Before you troubleshoot, follow the steps in this article to back up the OS disk.
+Before you troubleshoot, follow the steps in [this article](https://supportability.visualstudio.com/AzureIaaSVM/_wiki/wikis/AzureIaaSVM/495352/Network-Level-Authentication_RDP-SSH?anchor=%3Cspan-class%3D%22mw-customtoggle-mydivision%22%3Ebackup-os-disk%3C/span%3E) to back up the OS disk.
 
 ## Symptoms
 
@@ -32,7 +32,7 @@ When you try to install any update by using the standalone installer (.msu), or 
 
 > Updates failed
 
-:::image type="content" source="media/windows-update-new.jpg" alt-text="Screenshot of the Windows update error message.":::
+:::image type="content" source="media/windows-update-new.jpg" alt-text="Screenshot of the Windows Update error message.":::
 
 > Retry
 
