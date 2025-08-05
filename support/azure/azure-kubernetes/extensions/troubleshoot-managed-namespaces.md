@@ -37,7 +37,7 @@ To verify the registration status, use the az feature show command.
 
 ## Issue 3 - Some namespaces can't be changed/certain names can't be used
 
-Users are not allowed to make change on certain namespaces, as they are utilized by system components/resources. These namespaces are: 
+Users are not allowed to make change on certain namespaces or create a managed namespaces under certain names, as they are utilized by system components/resources. These namespaces are: 
 
 default, kube-system, kube-node-lease, kube-public, gatekeeper-system, cert-manager, calico-system, tigera-system, app-routing-system,aks-istio-system, istio-system, dapr-system, flux-system, prometheus-system, eraser-system
 
