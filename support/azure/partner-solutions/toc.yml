@@ -5,7 +5,7 @@
 - name: Informatica
   items:
     - name: Issues creating Informatica resources in Azure
-      href: resource-creation.md
+      href: informatica/resource-creation.md
 - name: New Relic
   items:
     - name: Ingestion key rotation resolution
