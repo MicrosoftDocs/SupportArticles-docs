@@ -210,7 +210,7 @@ Follow these steps:
     1. Check the **NativeMessagingUserLevelHosts** policy. If **NativeMessagingUserLevelHosts** is disabled, enable it or make sure that `com.robin.messagehost` for the legacy browser extension and `com.microsoft.pad.messagehost` for the default browser extension are added to your **NativeMessagingAllowlist** policy in HKLM (Local Machine level).
 
 > [!NOTE]
-> **NativeMessagingUserLevelHosts** should always be enabled in case you are using the Microsoft Store version (MSIX) of Power Automate Desktop.
+> **NativeMessagingUserLevelHosts** should always be enabled in case you are using the Microsoft Store version (MSIX) of Power Automate for Desktop.
 
 ### Check whether the message host points to the correct location
 
