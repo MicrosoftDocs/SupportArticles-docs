@@ -455,3 +455,5 @@
     href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-codes/zonalallocation-allocationfailed-error.md
+  - name: UpgradeFailed error
+    href: error-codes/upgradefailed-error.md
