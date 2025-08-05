@@ -13,8 +13,6 @@ ms.custom:
 # Troubleshoot Windows Update installation error 0x800f0831 CBS_E_STORE_CORRUPTION
 Windows Update error 0x800f0831 (CBS_E_STORE_CORRUPTION) typically occurs if an update doesn't install the required package files correctly. This article helps you understand the root cause of the issue and the necessary steps to resolve it effectively.
 
-> [!WARNING]
-> This error is flagged to prompt an in-place upgrade to recover the virtual machine (VM) if these instructions don't resolve the issue.
 
 ## Prerequisites
 Before you troubleshoot, follow the steps in [this article](https://supportability.visualstudio.com/AzureIaaSVM/_wiki/wikis/AzureIaaSVM/495352/Network-Level-Authentication_RDP-SSH?anchor=%3Cspan-class%3D%22mw-customtoggle-mydivision%22%3Ebackup-os-disk%3C/span%3E) to back up the OS disk.
@@ -40,10 +38,7 @@ The issue might occur for one of the following reasons:
 
 To locate the installation packages in the system, search for the following registry subkey:
 
-    HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages
- 
-> [!IMPORTANT]
-> This issue might vary depending on each case, but the baseline of the issue remains the same.
+```output HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages```
 
 To investigate the cause further, examine the CBS.log file (C:\windows\logs\CBS), and search for output that resembles the following example:
 
