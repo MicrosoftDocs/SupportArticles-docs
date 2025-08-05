@@ -3136,8 +3136,6 @@ items:
       href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
     - name: Troubleshoot Windows Installation Error 0x800f0831
       href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
-    - name: Troubleshoot Shutdown in Progress Windows Error 0x8007045bTroubleshoot Shutdown in Progress Windows Error 0x8007045b
-      href: ./installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
     - name: Windows Update for Business Reports
       items:
     - name: Initial service configuration and Onboarding
