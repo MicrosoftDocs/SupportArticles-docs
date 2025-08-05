@@ -1,26 +1,28 @@
 ---
-title: Tools to Troubleshoot Azure Functions App Issues
+title: Resolve Function App Down or Reporting Errors
 description: Describes how to troubleshoot the Azure Functions app if it's down or reporting errors.
-ms.date: 08/04/2025
+ms.date: 08/05/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.custom: sap:Function app down or reporting errors
 ---
 
-# Tools to troubleshoot Azure Functions App issues
+# Resolve Function App Down or Reporting Errors
+
+## Common scenarios, error messages, and symptoms
 
 Function App failures typically fall into three major categories, which are configuration issues, customer code issues, and platform issues. This article explores these issues in detail and introduces the appropiate diagnostic tools for troubleshooting.
 
-## Configuration issues
+### Configuration issues
 
 These are the most frequent and include:
 
 - Missing or incorrect application settings such as `AzureWebJobsStorage`, `FUNCTIONS_WORKER_RUNTIME`, or binding-specific configurations. For more info, check the [App settings reference for Azure Functions](/azure/azure-functions/functions-app-settings).
-- Storage account misconfigurations, including deleted accounts, rotated keys, or firewall restrictions. For more info, check [Storage considerations for Azure Functions](/azure/azure-functions/storage-considerations?tabs=azure-cli).
-- Key Vault and Managed Identity access problems due to misconfigured permissions or missing identity assignments. Check the resources below for more info:
+- Storage account misconfigurations, including deleted accounts, rotated keys, or firewall restrictions. For more info, check the [Storage considerations for Azure Functions](/azure/azure-functions/storage-considerations?tabs=azure-cli).
+- Key Vault and Managed Identity access problems due to misconfigured permissions or missing identity assignments. Check the following resources for more info:
   - [Use Key Vault references as app settings - Azure App Service](/azure/app-service/app-service-key-vault-references?tabs=azure-cli#troubleshoot-key-vault-references)
   - [Create a function app without default storage secrets in its definition - Azure Functions](/azure/azure-functions/functions-identity-based-connections-tutorial)
 
-## Customer code issues
+### Customer code issues
 
 These issues originate from:
 
@@ -33,7 +35,7 @@ Check the following resources for more info:
 - [Improve Azure Functions performance and reliability](/azure/azure-functions/performance-reliability)
 - [Manage connections in Azure Functions](/azure/azure-functions/manage-connections?tabs=csharp)
 
-## Platform issues
+### Platform issues
 
 Less frequent but impactful:
 
@@ -44,7 +46,7 @@ Check the following resources for more info:
 
 - Host startup failures, including placeholder site specialization errors or container allocation issues.
 
-## Typical error messages
+### Typical error messages
 
 You may encounter common errors such as:
 
@@ -57,7 +59,7 @@ You may encounter common errors such as:
 
 - **HTTP 5xx errors**: 503, 502, 500, or timeouts.
 
-## Symptoms to watch
+### Symptoms to watch
 
 - Function not triggering or executing. [Analyze Azure Functions telemetry in Application Insights](/azure/azure-functions/analyze-telemetry-data#viewing-telemetry-in-monitor-tab)
 
@@ -204,6 +206,11 @@ If your app shows errors such as `FAILED TO INITIALIZE RUN FROM PACKAGE.txt` or 
 - VNet integration is correctly configured.
 - No endpoint or firewall blocks are in place.
 
+Check the following resources for more info:
+
+- [Azure Functions networking options](/azure/azure-functions/functions-networking-options?tabs=azure-portal#troubleshooting)
+- [Frequently asked questions about networking in Azure Functions](/azure/azure-functions/functions-networking-faq)
+
 ### Kudu logs (SCM)
 
 > [!NOTE]
@@ -216,8 +223,3 @@ Access logs under:
 - **System-level log**: `%HOME%\LogFiles\Eventlog.xml`
 
 For more info, check [Understanding the Azure App Service file system](https://github.com/projectkudu/kudu/wiki/understanding-the-azure-app-service-file-system).
-
-## References
-
-- [Azure Functions networking options](/azure/azure-functions/functions-networking-options?tabs=azure-portal#troubleshooting)
-- [Frequently asked questions about networking in Azure Functions](/azure/azure-functions/functions-networking-faq)

@@ -4,9 +4,7 @@ items:
 - name: Availability
   items:
     - name: Function App Down or Reporting Errors
-      items:
-        - name: Function App Down or Reporting Errors Diagnostic Tool - Overview
-          href: availability/functions-troubleshoot-issues.md  
+      href: availability/functions-troubleshoot-issues.md  
 - name: Application Code Deployment
   items:
     - name: Application issues post deployment
