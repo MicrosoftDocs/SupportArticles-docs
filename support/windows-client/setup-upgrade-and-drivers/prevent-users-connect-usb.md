@@ -14,7 +14,7 @@ ms.custom:
 
 ## Problem description
 
-Assume that you want to prevent users from connecting to a USB storage device that is connected to a computer that is running Windows XP, Windows Server 2003, or Windows 2000. This article discusses two methods that you can use to do this.
+Assume that you want to prevent users from connecting to a USB storage device that is connected to a computer that is running Windows. This article discusses two methods that you can use to do this.
 
 ## Resolution
 

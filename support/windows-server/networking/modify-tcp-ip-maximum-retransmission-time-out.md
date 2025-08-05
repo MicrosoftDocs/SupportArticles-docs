@@ -26,7 +26,7 @@ By default, after the retransmission timer hits 240 seconds, it uses that value 
 
 The `TcpMaxDataRetransmissions` registry value controls the number of times that TCP retransmits an individual data segment before it aborts the connection. This value isn't configured by default, but it can be entered to change the default number of retries.
 
-Change the following subkey in Windows 7, Windows 2008 R2, Windows 2008, Windows 2000, Windows Vista, Windows 2003, and Windows XP:
+Change the following subkey in Windows:
 
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters`
 
@@ -39,7 +39,7 @@ Description: This parameter controls the number of times TCP retransmits an indi
 
 Windows provides a mechanism to control the initial retransmit time, and the retransmit time is then dynamically self-tuned. To change the initial retransmit time, modify the following registry values.
 
-Change the following subkey in Windows 2003, Windows XP, and Windows 2000:
+Change the following subkey in Windows:
 
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\ID for Adapter`
 
@@ -53,7 +53,7 @@ Description: This parameter controls the initial retransmission time-out that is
 > [!NOTE]
 > You can increase the value only for the initial time-out. Decreasing the value isn't supported.
 
-Change the following key in Windows NT 4.0:
+Change the following key in Windows:
 
 `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters`
 
@@ -66,7 +66,7 @@ Description: This parameter controls the initial retransmission time-out used by
 
 For example, the value data of "5000 decimal" sets the initial retransmit time to five seconds.
 
-The Initial RTO in Windows Server 2008 R2 and Windows 7 can be controlled by using the `netsh` command by initialRTO.
+The Initial RTO in Windows can be controlled by using the `netsh` command by initialRTO.
 
 For prerequisites and more information, see [You can't customize some TCP configurations by using the netsh command in Windows Server 2008 R2](https://support.microsoft.com/topic/you-cannot-customize-some-tcp-configurations-by-using-the-netsh-command-in-windows-server-2008-r2-c1feebea-82a8-cb05-83c7-46ffb5fd9cec).
 

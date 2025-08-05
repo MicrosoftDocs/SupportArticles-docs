@@ -38,15 +38,8 @@ If you experience other errors than those mentioned above when you try to activa
 
 Use the Windows Activation Wizard to activate Windows through the automated telephone system. To do this, follow these steps for your version of the operating system.  
 
-Windows 8 and later versions:
-
 1. Swipe in from the right edge of the screen, and then tap **Search**. Or, if you're using a mouse, point to the lower-right corner of the screen, and then select **Search**.
 2. Type **SLUI 04**, and then tap or select the displayed icon to open the wizard.
-
-Windows Vista and Windows 7:
-
-1. Select **Start**, and then select **Run**.
-2. Type **SLUI 04**, and then select **OK** to open the wizard.
 
 ### Method 2: Configure the proxy server to disable Basic authentication
 
@@ -78,8 +71,9 @@ For information about how to use this method, see the documentation that is incl
 
 ## More information
 
-For more information about Windows Vista Volume Activation 2.0, see [Volume activation for Windows](/windows/deployment/volume-activation/volume-activation-windows).
+For more information, see:
 
-For more information how to troubleshoot Volume Activation error codes, see [Troubleshoot Windows activation error codes](/troubleshoot/windows-server/licensing-and-activation/troubleshoot-activation-error-codes).
+- [Volume activation for Windows](/windows/deployment/volume-activation/volume-activation-windows).
+- [Troubleshoot Windows activation error codes](/troubleshoot/windows-server/licensing-and-activation/troubleshoot-activation-error-codes).
 
 If these articles don't help you resolve the problem, search the Microsoft Knowledge Base for more information. To search the Microsoft Knowledge Base, go to [Microsoft Support](https://support.microsoft.com). Type the text of the error message that you receive, or type a description of the problem.

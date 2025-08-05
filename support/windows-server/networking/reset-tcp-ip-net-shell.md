@@ -18,10 +18,6 @@ You can try to reset TCP/IP if you have Internet connection issues. This article
 
 To reset TCP/IP automatically, select the **Download** button. In the **File Download** dialog box, select **Run** or **Open**, and then follow the steps in the easy fix wizard.
 
-Windows 8.1, Windows 8, Windows RT, Windows 7, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
-
-Windows Vista, Windows XP, Windows Server 2008, or Windows Server 2003
-
 > [!NOTE]
 >
 > - This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
@@ -31,9 +27,7 @@ Windows Vista, Windows XP, Windows Server 2008, or Windows Server 2003
 
 To manually reset TCP/IP, follow these steps:
 
-### Windows 8 and Windows 8.1
-
-1. On the **Start** screen, type **CMD**. In the search results, right-click **Command Prompt**, and then select **Run as administrator**.
+1. On the **Start** screen, type **cmd**. In the search results, right-click **Command Prompt**, and then select **Run as administrator**.
 2. At the command prompt, enter the following command, and then press <kbd>Enter</kbd>:
 
     ```console
@@ -41,38 +35,9 @@ To manually reset TCP/IP, follow these steps:
     ```
 
     > [!NOTE]
-    > If you don't want to specify a directory path for the log file, run the following command instead: `netsh int ip reset`.
+    > If you don't want to specify a directory path for the log file, run the following command instead: `netsh int ip reset resetlog.txt`.
 
 3. Restart the computer.
-
-### Windows 7 and Windows Vista
-
-1. To open a command prompt, select **Start** and then type **cmd** in the **Search programs and files** box.
-2. Under **Programs**, right-click the **CMD.exe** icon, and then select **Run as administrator**.
-3. When the **User Account Control** box appears, select **Yes**.
-4. At the command prompt, enter the following command, and then press <kbd>Enter</kbd>:
-
-    ```console
-    netsh int ip reset c:\resetlog.txt
-    ```
-
-    > [!NOTE]
-    > If you don't want to specify a directory path for the log file, run the following command instead: `netsh int ip reset resetlog.txt`.
-
-5. Restart the computer.
-
-### Windows XP
-
-1. To open a command prompt, select **Start** > **Run**. In the **Open** box, enter the following command, and then press <kbd>Enter</kbd>:
-
-    ```console
-    netsh int ip reset c:\resetlog.txt
-    ```
-
-    > [!NOTE]
-    > If you don't want to specify a directory path for the log file, run the following command instead: `netsh int ip reset resetlog.txt`.
-
-2. Restart the computer.
 
 When you run the reset command, it overwrites the following registry keys, both of which are used by TCP/IP:
 
@@ -203,10 +168,10 @@ deleted SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\EnableIcmpRedirect
 deleted SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\EnableSecurityFilters
 deleted SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\SearchList
 deleted SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\UseDomainNameDevolution
-<completed> Note In Windows Server 2003 Service Pack 1, you can use the netsh winsock reset command to repair Winsock.
+<completed>
 ```
 
 For more information, see:
 
 - [Chapter 16 – Troubleshooting TCP/IP](/previous-versions/tn-archive/bb727023(v=technet.10)?redirectedfrom=MSDN)
-- [TCP/IP and NBT configuration parameters for Windows XP](/troubleshoot/windows-client/networking/tcpip-and-nbt-configuration-parameters)
+- [TCP/IP and NBT configuration parameters for Windows](/troubleshoot/windows-client/networking/tcpip-and-nbt-configuration-parameters)
