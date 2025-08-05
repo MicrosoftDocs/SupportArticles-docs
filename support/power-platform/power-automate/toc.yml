@@ -274,6 +274,8 @@
       href: flow-run-issues/there-is-a-problem-with-the-flows-trigger.md
     - name: Troubleshoot slow running flows
       href: flow-run-issues/troubleshoot-slow-running-flows.md
+    - name: Troubleshoot common issues with triggers
+      href: flow-run-issues/triggers-troubleshoot.md
 - name: Process Mining
   items:
     - name: '"The user has not been assigned any license" error when accessing a process'
