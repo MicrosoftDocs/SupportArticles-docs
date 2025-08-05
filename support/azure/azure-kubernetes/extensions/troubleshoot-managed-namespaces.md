@@ -6,7 +6,7 @@ ms.reviewer: jackjiang
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, references_regions
 ---
-# Troubleshoot AKS AI toolchain operator add-on errors
+# Troubleshoot Managed Namespace Errors
 
 This article provides guidance on resolving errors when using Managed Namespaces (Preview) on Microsoft Azure Kubernetes Service (AKS).
 
