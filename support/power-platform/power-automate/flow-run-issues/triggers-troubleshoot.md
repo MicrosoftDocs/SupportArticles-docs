@@ -11,8 +11,7 @@ ms.date: 08/06/2025
 ms.custom: sap:Flow run issues\Triggers
 ms.update-cycle: 180-days
 ms.author: kenseongtan
-ms.reviewer: angieandrews
-ms.collection: bap-ai-copilot
+ms.reviewer: angieandrews, kenseongtan, kisubedi
 search.audienceType: 
   - flowadmin
 ---
@@ -313,13 +312,13 @@ For triggers, the value of expressions is calculated only when the flow is saved
 ## Changes to HTTP or Teams Webhook trigger flows
 
 > [!IMPORTANT]
-> Starting at the end of August 2025, Power Automate flows that use [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) will use a different URL. You'll see the new URL in the request trigger when you open the flow in the designer. Existing flows that use these triggers will require user action to continue functioning after November 30, 2025.
+> Starting at the end of August 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL will move to a new URL. You'll see the new URL in the `HTTP URL` field of the flow's trigger when you open the flow in the designer. Existing flows that use these triggers will require user action to continue functioning after November 30, 2025.
 
 ### Key changes
 
 - **Updated trigger URL**: The URL displayed on the HTTP trigger card in your flow's designer will reflect a new URL. This new URL is required for your flows to function correctly.
 - **Length of the new URL**: The updated URL might exceed 255 characters, especially when [Shared Access Signature (SAS) authentication](/azure/storage/common/storage-sas-overview) is configured. Verify that your destination system supports URLs longer than 255 characters and adjust its configuration if necessary.
-- A warning banner will appear on your flow details page or within the designer, displaying the old URL that has been replaced. This serves as a reminder to update any references to the outdated URL with the new URL.
+- **Warning banner**: A warning banner will appear on your flow details page or within the designer, displaying the old URL that has been replaced. This serves as a reminder to update any references to the outdated URL with the new URL.
 
 ### Required actions
 
@@ -339,3 +338,4 @@ To ensure your flows continue to function as expected, follow these steps:
 
    - If your trigger URL uses a relative path parameter, ensure there are no beginning slashes in the field to avoid double slash errors.
    - Modify the relative path as needed and validate the trigger URL for correctness.
+
