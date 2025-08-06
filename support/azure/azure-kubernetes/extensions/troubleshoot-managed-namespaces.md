@@ -58,7 +58,7 @@ Since the managed namespace is managed by Microsoft Azure Resource Manager (ARM)
 
 When attempting any action that modifies a managed namespace via kubectl, users will the error `Updating resource quota defaultresourcequota is not allowed because it is managed by ARM. Please update this resource quota though ARM api.`
 
-Modifications must be made through the ARM API to ensure consistency with the managed state. Users can manage their managed namespaces in the Azure portal, or via [CLI commands](https://learn.microsoft.com/en-us/cli/azure/aks/namespace?view=azure-cli-latest)
+Modifications must be made through the ARM API to ensure consistency with the managed state. Users can manage their managed namespaces in the Azure portal, or via [CLI commands](/cli/azure/aks/namespace)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
