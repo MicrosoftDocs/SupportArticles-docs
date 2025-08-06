@@ -85,7 +85,7 @@ Make sure that the VMs use operating systems that support GPU passthrough.
   - Windows 10 or later
   - Windows Server 2016 or later
 
-  For more information about non-Windows VMs, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows Server and Windows](../supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows.md).
+  For more information about non-Windows VMs, see [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows Server and Windows](/windows-server/virtualization/hyper-v/supported-linux-and-freebsd-virtual-machines-for-hyper-v-on-windows).
 
 - GPU-P is supported for Generation 2 VMs that use the following operating systems:
   - Windows 10 or later
