@@ -6,7 +6,7 @@ editor: v-jsitser
 ms.reviewer: v-liuamson
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the SubnetIsDelegated error so that I can successfully create a node pool.
-ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or )
 ---
 # Troubleshoot the "SubnetIsDelegated" error
 
@@ -18,7 +18,7 @@ Azure CLI (version 2.0.59 or a later version)
 
 ## Symptoms  
 
-When you try to create a nodepool in an AKS cluster, you receive the following error message:
+When you try to create a node pool in an AKS cluster, you receive the following error message:
 
 **Code:** **SubnetIsDelegated**
 
@@ -26,7 +26,7 @@ When you try to create a nodepool in an AKS cluster, you receive the following e
 
 ## Cause
 
-If you try to create a nodepool by using a subnet, and the subnet is delegation-enabled for a particular Azure service, the new nodepool can't be
+If you try to create a  by using a subnet, and the subnet is delegation-enabled for a particular Azure service, the new  can't be
 integrated with the AKS service.
 
 ## Resolution
@@ -48,10 +48,10 @@ To resolve this issue, follow these steps:
    \--vnet-name \$VNET_NAME  \--name \$SUBNET_NAME \--delegations
    Microsoft.ContainerService/managedClusters
 
-1. After the subnet delegation is removed, try again to create the nodepool by using the `az aks nodepool add` command.
+1. After the subnet delegation is removed, try again to create the by using the `az aks nodepool add` command.
 
 ## References
 
-[az aks nodepool examples](/cli/azure/aks/nodepool?view=azure-cli-latest#az-aks-nodepool-add-examples&preserve-view=true)
+[az aks node pool examples](/cli/azure/aks/nodepool?view=azure-cli-latest#az-aks-nodepool-add-examples&preserve-view=true)
 
 [!INCLUDE [azure-help-support](../../../includes/azure-help-support.md)]
