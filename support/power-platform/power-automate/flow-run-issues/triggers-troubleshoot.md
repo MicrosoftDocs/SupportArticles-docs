@@ -312,7 +312,7 @@ For triggers, the value of expressions is calculated only when the flow is saved
 ## Changes to HTTP or Teams Webhook trigger flows
 
 > [!IMPORTANT]
-> Starting at the end of August 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL will move to a new URL. You'll see the new URL in the `HTTP URL` field of the flow's trigger when you open the flow in the designer. Existing flows that use these triggers will require user action to continue functioning after November 30, 2025.
+> Starting at the end of August 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL will move to a new URL. You'll see the new URL in the **HTTP URL** field of the flow's trigger when you open the flow in the designer. Existing flows that use these triggers will require user action to continue functioning after November 30, 2025.
 
 ### Key changes
 
@@ -338,4 +338,5 @@ To ensure your flows continue to function as expected, follow these steps:
 
    - If your trigger URL uses a relative path parameter, ensure there are no beginning slashes in the field to avoid double slash errors.
    - Modify the relative path as needed and validate the trigger URL for correctness.
+
 
