@@ -7,10 +7,7 @@ contributors:
   - kisubedi
   - kenseongtan
   - v-aangie
-ms.service: power-automate
-ms.subservice: cloud-flow
-ms.topic: troubleshooting-general
-ms.date: 07/22/2025
+ms.date: 08/06/2025
 ms.update-cycle: 180-days
 ms.author: kenseongtan
 ms.reviewer: angieandrews
@@ -18,7 +15,6 @@ ms.collection: bap-ai-copilot
 search.audienceType: 
   - flowadmin
 ---
-
 # Troubleshoot common issues with triggers
 
 Here are some tips and tricks for troubleshooting issues with triggers.
@@ -312,3 +308,4 @@ To resolve this issue, edit each flow and save it. The triggers should start fir
 ## Triggers aren't respecting expressions used in them
 
 For triggers, the value of expressions is calculated only when the flow is saved. For example, if your trigger uses `utcNow()` in an input, `utcNow()` is calculated when you save the flow, and the current UTC time is inserted into the trigger definition as a hardcoded value. `utcNow()` isn't recalculated every time the flow is triggered.
+
