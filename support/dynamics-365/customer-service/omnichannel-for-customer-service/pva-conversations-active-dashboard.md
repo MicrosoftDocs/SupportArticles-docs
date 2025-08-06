@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where Copilot Studio agent conv
 ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 12/12/2024
+ms.update-cycle: 180-days
 ms.custom: sap:Copilot Studio\End conversation
 ms.collection: CEnSKM-ai-copilot
 ---

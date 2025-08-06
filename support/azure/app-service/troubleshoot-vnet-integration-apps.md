@@ -1,7 +1,7 @@
 ---
 title: Azure App Service virtual network integration troubleshooting guide
 description: How to troubleshoot virtual network integration on Windows and Linux apps.
-ms.date: 01/08/2024
+ms.date: 07/28/2025
 ms.service: azure-app-service
 ms.custom: linux-related-content
 author: hepiet
@@ -163,9 +163,6 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 ## Collect network traces
 
 Collecting network traces can be helpful in analyzing issues. In Azure App Services, network traces are taken from the application process. To obtain accurate information, reproduce the issue while starting the network trace collection.
-
-> [!NOTE]
-> The virtual network traffic isn't captured in network traces.
 
 ### Windows App Services
 

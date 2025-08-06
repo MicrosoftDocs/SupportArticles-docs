@@ -3,7 +3,7 @@ title: Troubleshoot Azure File Sync managed identity issues
 description: Troubleshoot common issues when your Azure File Sync deployment is configured to use managed identities.
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/09/2025
+ms.date: 07/31/2025
 author: khdownie
 ms.author: kendownie
 ---
@@ -101,7 +101,7 @@ Cloud endpoint:
 - Storage Sync Service managed identity must be a member of the **Storage File Data Privileged Contributor** role on an Azure file share.
 
 Server endpoint:
-- Register server managed identity must be a member of the **Storage File Data Privileged Contributor** role on an Azure file share.
+- Registered server managed identity must be a member of the **Storage File Data Privileged Contributor** role on an Azure file share.
 
 When you run the `Set-AzStorageSyncServiceIdentity` cmdlet or create new cloud and server endpoints, these permissions are granted. If these permissions are removed, operations fail with the errors listed in the following section.
 
@@ -168,6 +168,40 @@ Set-AzStorageSyncServerEndpointPermission -ResourceGroupName <string> -StorageSy
 
 > [!NOTE]
 > The `-Name` parameter is the name of the server endpoint. It's a GUID, not the friendly name that's displayed in the Azure portal. To get the server endpoint name, run the [Get-AzStorageSyncServerEndpoint](/powershell/module/az.storagesync/get-azstoragesyncserverendpoint) cmdlet.
+
+### Sync Session fails with the ECS_E_AUTH_IDENTITY_NOT_FOUND error
+
+The `ECS_E_AUTH_IDENTITY_NOT_FOUND` error occurs when the server's managed identity used to communicate with the Azure File Sync service has changed, but the Azure File Sync service is still expecting the previous one, causing authentication to fail.
+
+You can identify this issue by checking for **Event ID 9530** in the **Telemetry** event log within **Event Viewer**. This event indicates that the `applicationId` of the managed identity has changed.
+
+This issue often occurs in the following situations:
+
+- Azure Arc resource deletion and recreation.
+- Turning off and then re-enabling the system-assigned managed identity on an Azure virtual machine.
+
+When the managed identity changes, the File Sync agent tries to use the new identity, but the Azure File Sync service is still configured to authorize the previous one. This mismatch causes requests to fail and return the `ECS_E_AUTH_IDENTITY_NOT_FOUND` error.
+
+To resolve this issue: 
+
+Make sure that the server is configured to use a managed identity. 
+
+To verify this configuration:
+- Check the **Settings** > **Managed identities** details in your storage sync service, or
+- Run the following PowerShell command:
+
+```powershell
+Get-AzStorageSyncServer -ResourceGroupName <ResourceGroupName> -StorageSyncServiceName <StorageSyncServiceName>
+```
+
+> [!NOTE]
+> This error can occur whether the server is using managed identity (MI) or certificate-based authentication. Therefore, it's important to verify the identity type.
+
+If the server uses managed identity and the identity was changed, run the following command to update the server registration:
+
+```powershell
+Set-AzStorageSyncServer -ResourceGroupName <ResourceGroupName> -StorageSyncServiceName <StorageSyncServiceName> -Identity
+```
 
 ### Test-NetworkConnectivity cmdlet fails with error 0x80190193 (HTTP_E_STATUS_FORBIDDEN)
 

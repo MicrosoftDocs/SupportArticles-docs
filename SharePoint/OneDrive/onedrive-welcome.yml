@@ -21,14 +21,10 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: '"There is a problem with your account, please try again later" when you open Office documents from OneDrive for Business or SharePoint Online'
-            url: ../SharePointOnline/Security/problem-with-your-account.md
           - text: OneDrive for Business sync returns the error "We can't connect to the specified SharePoint site"
             url: ./sync/enable-co-authoring-for-onedrive-synced-file.md
           - text: Can't open online-only file error when opening a file in OneDrive
             url: ./lists-and-libraries/cant-open-online-only-file.md
-          - text: Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage
-            url: ../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md
 
   - title: Other OneDrive for Business content
     linkLists:
@@ -67,14 +63,10 @@ landingContent:
         links:
           - text: Documents deleted by retention policy after workload is removed
             url: ./security/retention-policies-deleting-documents-after-workload-removal.md
-          - text: There is a problem with your account when opening documents
-            url: ../SharePointOnline/Security/problem-with-your-account.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
 
   - title: Search
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Search doesn't provide results from another language
-            url: ../SharePointOnline/Search/no-search-results-from-another-language.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
           - text: Searching private content
             url: ./search/search-private-content.md

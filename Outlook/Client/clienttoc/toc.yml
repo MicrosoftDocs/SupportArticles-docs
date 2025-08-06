@@ -9,8 +9,6 @@
           href: ../authentication/outlook-shows-disconnected-after-enabling-modern-authentication.md
         - name: Doesn't use Modern Authentication to connect Microsoft 365
           href: ../authentication/outlook-prompt-password-modern-authentication-enabled.md
-        - name: Outlook doesn't connect when using Modern authentication
-          href: /troubleshoot/exchange/administration/outlook-does-not-connect-with-modern-authentication?context=/troubleshoot/outlook/context/client-context
         - name: Outlook prompts for credentials
           href: ../authentication/outlook-prompts-credentials.md
         - name: Outlook asks for password repeatedly when using MAPI over HTTP
@@ -43,8 +41,6 @@
           href: ../calendaring/cannot-send-response-to-meeting-request.md
         - name: Can't add an Internet calendar
           href: ../calendaring/cannot-add-an-internet-calendar.md
-        - name: Create and book a workspace in Outlook
-          href: /troubleshoot/exchange/outlook-issues/create-book-workspace-outlook?context=/troubleshoot/outlook/context/client-context
         - name: Delegate can't create Skype or Teams meeting
           href: ../calendaring/operation-cannot-be-performed-error.md
         - name: Delegate gets multiple or duplicate meeting requests
@@ -83,8 +79,6 @@
           href: ../calendaring/room-finder-is-not-available-shared-calendars-outlook.md
         - name: Room Finder doesn't show conference rooms
           href: ../calendaring/outlook-room-finder-not-show-conference-room.md
-        - name: Shared calendar in delegate's Online Archive
-          href: /troubleshoot/exchange/calendars/shared-calendar-in-delegate-online-archive?context=/troubleshoot/outlook/context/client-context
         - name: Specific users can't receive meeting requests
           href: ../calendaring/specific-users-not-receive-meeting-requests.md
         - name: The From field in a meeting request doesn't list all accounts
@@ -139,8 +133,6 @@
           href: ../contacts/contact-card-not-showing-user-details-or-presence.md
         - name: Contacts folder empty and contacts are in another folder
           href: ../contacts/contacts-folder-empty-and-contacts-are-in-different-folder.md
-        - name: Inconsistent performance with contacts
-          href: /troubleshoot/exchange/groups-and-distribution-lists/inconsistent-performance-with-contacts?context=/troubleshoot/outlook/context/client-context
         - name: Offline Address Book (OAB) does not display the Global Address List by default
           href: ../contacts/offline-address-book-not-display-global-address-list.md
         - name: Unknown is displayed in group name when expanding
@@ -265,8 +257,6 @@
           href: ../message-body/specified-message-identity-is-invalid-error-when-opening-delivery-reports.md
         - name: The Linked image can't be displayed error
           href: ../message-body/the-linked-image-cannot-be-displayed-error.md
-        - name: User info in @mentions doesn't resolve
-          href: /troubleshoot/office/excel/mentions-not-resolve-user-information?context=/troubleshoot/outlook/context/client-context
     - name: Performance
       items:
         - name: '"The time limit for logging on was reached" error'
@@ -293,8 +283,6 @@
           href: ../performance/enable-and-collect-logs-for-profile-creation-issues.md
         - name: Information about the Sniffer functionality
           href: ../performance/information-about-outlook-sniffer-functionality.md
-        - name: Install SaRA from network share
-          href: /troubleshoot/microsoft-365/installation/install-sara-from-network-share?context=/troubleshoot/outlook/context/client-context
         - name: Insufficient memory to display a folder
           href: ../performance/outlook-folder-fails-displaying.md
         - name: Outlook crashes with event ID 1000 crash signatures
@@ -341,8 +329,6 @@
           href: ../profiles-and-accounts/operation-failed-send-email-outlook.md
         - name: Additional RSS feeds appear
           href: ../profiles-and-accounts/additional-rss-feeds-appear.md
-        - name: Archive mailbox doesn't display in Outlook or Outlook on the web
-          href: /troubleshoot/exchange/outlook-on-the-web-issues/archive-mailbox-not-visible?context=/troubleshoot/outlook/context/client-context
         - name: Can't send email with Metered Connection Warning
           href: ../profiles-and-accounts/metered-connection-warning.md
         - name: Can't subscribe to an RSS feed that needs authentication
@@ -359,8 +345,6 @@
           href: ../profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile.md
         - name: Need a new app to open this osf-roaming.16 message
           href: ../profiles-and-accounts/you-ll-need-a-new-app-to-open-this-osf-roaming-16.md
-        - name: Outlook can't set up a Microsoft 365 account
-          href: /troubleshoot/exchange/outlook-issues/outlook-cannot-setup-microsoft-365-account?context=/troubleshoot/outlook/context/client-context
         - name: Outlook crashes when sending emails with a nonexistent delivery location setting
           href: ../profiles-and-accounts/outlook-crashes-when-sending-emails.md
         - name: Outlook displays error message on first start
@@ -525,8 +509,6 @@
           href: ../user-interface/smtp-address-in-users-profile-not-change.md
         - name: Some instant messaging client features aren't available
           href: ../user-interface/some-instant-messaging-client-features-not-available.md
-        - name: Support limitations for open standards
-          href: /troubleshoot/exchange/development/public-protocols-support-limitations?context=/troubleshoot/outlook/context/client-context
         - name: WebBrowser control content isn't displayed correctly
           href: ../user-interface/wpf-webbrowser-control-content-not-display-correctly.md
         - name: Windows Search service setting results in no matches found

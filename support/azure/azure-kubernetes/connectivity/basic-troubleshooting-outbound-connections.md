@@ -1,8 +1,8 @@
 ---
 title: Basic troubleshooting of outbound connections from an AKS cluster
 description: Do basic troubleshooting of outbound connections that originate from an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/28/2024
-ms.reviewer: chiragpa, rissing, jopalhei, jaewonpark, v-leedennis, v-weizhu
+ms.date: 07/23/2025
+ms.reviewer: chiragpa, rissing, jopalhei, jaewonpark, v-leedennis, v-weizhu, juliayin, v-liuamson
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to perform basic troubleshooting of outbound connections from an Azure Kubernetes Service (AKS) cluster so that I don't experience connection issues when I use AKS.
@@ -24,13 +24,13 @@ This article discusses how to do basic troubleshooting of outbound connections f
 
 ## Scenarios for outbound traffic in Azure Kubernetes Service
 
-Traffic that originates from within the AKS cluster, whether it's from a pod or a worker node, is considered the outbound traffic from the cluster. What if there's an issue in the outbound flow for an AKS cluster? Before you troubleshoot, first look at the scenarios for outbound traffic flow.
+Traffic that originates from within the AKS cluster, whether it's from a pod or a worker node, is considered as outbound traffic from the cluster. If there's an issue in the outbound flow for an AKS cluster, before you troubleshoot, first look at the scenarios for outbound traffic flow.
 
 The outbound traffic from an AKS cluster can be classified into the following categories:
 
 1. [Traffic to a pod or service in the same cluster (internal traffic)](#internal-traffic).
 
-1. Traffic to a device or endpoint in the same virtual network or a different virtual network that uses virtual network peering.
+1. Traffic to a network resource or endpoint in the same virtual network or a different virtual network that uses virtual network peering.
 
 1. Traffic to an on-premises environment through a VPN connection or an Azure ExpressRoute connection.
 
@@ -40,7 +40,7 @@ The outbound traffic from an AKS cluster can be classified into the following ca
 
 #### Internal traffic
 
-A basic request flow for internal traffic from an AKS cluster resembles the flow that's shown in the following diagram.
+A basic request flow for internal traffic from an AKS cluster resembles the flow shown in the following diagram.
 
 :::image type="content" source="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" alt-text="Diagram of a basic request flow for internal traffic from an AKS cluster." lightbox="./media/basic-troubleshooting-outbound-connections/internal-traffic-aks-cluster.svg" border="false":::
 
@@ -62,37 +62,37 @@ It's important to understand the nature of egress flow for your cluster so that 
 
 ## Considerations when troubleshooting
 
-#### Check your egress device
+#### Check your network resources within traffic flow
 
-When you troubleshoot outbound traffic in AKS, it's important to know what your egress device is (that is, the device through which the traffic passes). Here, the egress device could be one of the following components:
+When you troubleshoot outbound traffic in AKS, it's important to know what network resources are present (that is, the hops through which the traffic passes). Here, the network resource could be one of the following components:
 
 - Azure Load Balancer
 - Azure Firewall or a custom firewall
 - A network address translation (NAT) gateway
 - A proxy server
+- Network security group (NSG)
+- Network policy
 
-The flow could also differ based on the destination. For example, internal traffic (that is, within the cluster) doesn't go through the egress device. The internal traffic would use only the cluster networking. For public outbound traffic, determine if there's an egress device passing through and check that device.
+The flow could also differ based on the destination. For example, internal traffic (that is, within the cluster) doesn't go through the external network resources and only uses the cluster networking. For public outbound traffic, determine which network resources are implemented for your cluster.
 
-#### Check each hop within traffic flow
+#### Check outbound connectivity path and blockers with Azure Virtual Network Verifier (Preview)
+To check where traffic is blocked within your network resources to specific endpoints (for example, `mcr.microsoft.com`), you can use the [Azure Virtual Network Verifier (Preview)](/azure/virtual-network-manager/concept-virtual-network-verifier) tool. By running a connectivity analysis, you can visualize the hops within the traffic flow and any misconfigurations within Azure networking resources that are blocking traffic. We recommend using the Virtual Network Verifier tool as a first step in troubleshooting outbound connectivity issues to isolate the issue and detect problematic network configuration. For more instructions, [check if Azure network resources are blocking traffic to the endpoint using Azure Virtual Network Verifier (Preview)](#check-if-azure-network-resources-are-blocking-traffic-to-the-endpoint).
 
-After identifying the egress device, check the following factors:
+#### Manual troubleshooting
+For manual troubleshooting, we recommend you check the following items:
 
 - The source and the destination for the request.
 - The hops in between the source and the destination.
 - The request-response flow.
-- The hops that are enhanced by extra security layers, such as the following layers:
+- The hops enhanced by extra security layers, such as the following layers:
 
   - Firewall
   - Network security group (NSG)
   - Network policy
 
-To identify a problematic hop, check the response codes before and after it. To check whether the packets arrive properly in a specific hop, you can proceed with packet captures.
+To identify a problematic hop, [check the HTTP response codes before and after it](get-and-analyze-http-response-codes.md). These codes are useful to identify the nature of the issue. The codes are especially helpful in scenarios in which the application responds to HTTP requests. To check whether the packets arrive properly in a specific hop, you can proceed with packet captures.
 
-##### Check HTTP response codes
-
-When you check each component, [get and analyze HTTP response codes](get-and-analyze-http-response-codes.md). These codes are useful to identify the nature of the issue. The codes are especially helpful in scenarios in which the application responds to HTTP requests.
-
-##### Take packet captures from the client and server
+#### Take packet captures from the client and server
 
 If other troubleshooting steps don't provide any conclusive outcome, take packet captures from the client and server. Packet captures are also useful when non-HTTP traffic is involved between the client and server. For more information about how to collect packet captures for AKS environment, see the following articles in the data collection guide:
 
@@ -106,7 +106,9 @@ If other troubleshooting steps don't provide any conclusive outcome, take packet
 
 For basic troubleshooting for egress traffic from an AKS cluster, follow these steps:
 
-1. [Make sure that the Domain Name System (DNS) resolution for the endpoint works correctly](#check-whether-the-pod-and-node-can-reach-the-endpoint).
+1. [Check if Azure network resources are blocking traffic to the endpoint using Azure Virtual Network Verifier (Preview)](#check-if-azure-network-resources-are-blocking-traffic-to-the-endpoint).
+
+1. [Make sure that the Domain Name System (DNS) resolution for the endpoint works correctly](#check-that-the-domain-name-service-dns-resolution-for-the-endpoint-works-correctly).
 
 1. Make sure that you can reach the endpoint through an IP address.
 
@@ -128,19 +130,45 @@ For basic troubleshooting for egress traffic from an AKS cluster, follow these s
 >
 > Assumes no service mesh when you do basic troubleshooting. If you use a service mesh such as Istio, it produces unusual outcomes for TCP based traffic.
 
-#### Check whether the pod and node can reach the endpoint
+#### Check if Azure network resources are blocking traffic to the endpoint
 
-From within the pod, you can run a DNS lookup to the endpoint.
+To determine if traffic is blocked to the endpoint due to Azure network resources, run a connectivity analysis from your AKS cluster nodes to the endpoint using the [Azure Virtual Network Verifier (Preview)](/azure/virtual-network-manager/concept-virtual-network-verifier#supported-features-of-the-reachability-analysis) tool. The connectivity analysis covers the following resources:
 
-What if you can't run the [kubectl exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) command to connect to the pod and install the DNS Utils package? In this situation, you can [start a test pod in the same namespace as the problematic pod](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/#create-a-simple-pod-to-use-as-a-test-environment), and then run the tests.
+- Azure Load Balancer
+- Azure Firewall
+- A network address translation (NAT) gateway
+- Network security group (NSG)
+- Network policy
+- User defined routes (route tables)
+- Virtual network peering
+
+> [!NOTE]
+>
+> Azure Virtual Network Verifier (Preview) can't access any external or third-party networking resources, such as a custom firewall. If the connectivity analysis doesn't detect any blocked traffic, we recommend that you perform a manual check of any external networking to cover all hops in the traffic flow.
+> 
+> Currently, clusters using Azure CNI Overlay aren't supported for this feature. Support for CNI Overlay is planned for August 2025.
+
+1. Navigate to your cluster in the Azure portal. In the sidebar, navigate to the Settings -> Node pools blade.
+2. Identify the nodepool you want to run a connectivity analysis from. Click on the nodepool to select it as the scope.
+3. Select "Connectivity analysis (Preview)" from the toolbar at the top of the page. If you don't see it, click on the three dots "..." in the toolbar at the top of the page to open the expanded menu.
+4. Select a Virtual Machine Scale Set (VMSS) instance as the source. The source IP addresses are populated automatically.
+5. Select a public domain name/endpoint as the destination for the analysis, one example is `mcr.microsoft.com`. The destination IP addresses are also populated automatically.
+6. Run the analysis and wait up to 2 minutes for the results. In the resulting diagram, identify the associated Azure network resources and where traffic is blocked. To view the detailed analysis output, click on the "JSON output" tab or click into the arrows in the diagram.
+
+
+#### Check that the Domain Name Service (DNS) resolution for the endpoint works correctly
+
+You can run a DNS lookup to the endpoint by running a debugging pod on one of your AKS nodes. If the issue is isolated to a specific problematic pod or namespace, run the DNS lookup from within the same namespace where you notice the problem.
+
+If you can't run the [kubectl exec](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec) command to connect to an existing pod, you can [start a test pod in the same namespace as the problematic pod](https://kubernetes.io/docs/tasks/administer-cluster/dns-debugging-resolution/#create-a-simple-pod-to-use-as-a-test-environment) to run the tests.
 
 > [!NOTE]
 >
 > If the DNS resolution or egress traffic doesn't let you install the necessary network packages, you can use the `rishasi/ubuntu-netutil:1.0` docker image. In this image, the required packages are already installed.
 
-##### Example procedure for checking DNS resolution of a Linux pod
+##### Example procedure for checking DNS resolution
 
-1. Start a test pod in the same namespace as the problematic pod:
+1. Start a test pod in the problematic namespace:
 
    ```bash
    kubectl run -it --rm aks-ssh --namespace <namespace> --image=debian:stable --overrides='{"spec": { "nodeSelector": {"kubernetes.io/os": "linux"}}}'
@@ -198,9 +226,9 @@ Sometimes, there's a problem with the endpoint itself rather than a cluster DNS.
    curl -Ivm5 https://kubernetes.io
    ```
 
-To verify that the endpoint is reachable from the node where the problematic pod is in and then verify the DNS settings, follow these steps:
+To verify that the endpoint is reachable and DNS is functioning from the node hosting the problematic pod, follow these steps:
 
-1. Enter the node where the problematic pod is in through the debug pod. For more information about how to do this, see [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access).
+1. Enter the node hosting the problematic pod using the debug pod. For more information, see [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access).
 
 1. Test the DNS resolution to the endpoint:
 

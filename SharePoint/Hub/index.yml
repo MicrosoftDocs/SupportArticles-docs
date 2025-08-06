@@ -88,24 +88,10 @@ productDirectory:
     - title: Microsoft Viva
       imageSrc: /support/media/hub-landing/logo-viva.png
       links:
-        - url: /troubleshoot/viva/connections/viva-connections-welcome
-          text: Microsoft Viva Connections
-        - url: /troubleshoot/viva/engage/viva-engage-welcome
-          text: Microsoft Viva Engage
         - url: /troubleshoot/viva/glint/viva-glint-welcome
           text: Microsoft Viva Glint
         - url: /troubleshoot/viva/insights/viva-insights-welcome
           text: Microsoft Viva Insights
-   # Card
-    - title: Microsoft Viva
-      imageSrc: /support/media/hub-landing/logo-viva.png
-      links:
-        - url: /troubleshoot/viva/learning/viva-learning-welcome
-          text: Microsoft Viva Learning
-        - url: /troubleshoot/viva/pulse/viva-pulse-welcome
-          text: Microsoft Viva Pulse  
-        - url: /troubleshoot/viva/viva-suite-administration/viva-suite-administration-welcome
-          text: Microsoft Viva Suite Administration  
 
 # additionalContent section (optional)
 # Card with summary style

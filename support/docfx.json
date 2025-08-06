@@ -128,7 +128,7 @@
         "azure/virtual-desktop/**/*.md": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/idb-p/AzureVirtualDesktop"
       },
       "layout": {
-        "**/index.yml": "LandingPage"
+        "**/index.yml": "landing-page"
       },
       "manager": {
         "**/*.md": "dcscontentpm"
@@ -152,8 +152,8 @@
         "windows-client/**/*.md": "kaushika-msft",
         "windows-server/**/*.md": "kaushika-msft",
         "windows-365/**/*.md": "kaushika-msft",
-        "mem/**/*.md": "Cloud-Writer",
-        "system-center/**/*.md": "Cloud-Writer",
+        "mem/**/*.md": "kaushika-msft",
+        "system-center/**/*.md": "JarrettRenshaw",
         "dynamics-365/customer-insights/**/*.md": "m-hartmann",
         "dynamics-365/supply-chain/costing/*.md": "JennySong-SH",
         "dynamics-365/supply-chain/inventory/*.md": "sherry-zheng",
@@ -169,6 +169,10 @@
       "ms.collection": {
         "power-platform/ai-builder/**/*.md": "CEnSKM-ai-copilot",
         "sales-copilot/**/*.md": "CEnSKM-ai-copilot"
+      },
+       "ms.update-cycle": {
+        "power-platform/ai-builder/**/*.md": "180-days",
+        "sales-copilot/**/*.md": "180-days"
       },
       "ms.author": {
         "**/*.md": "dcscontentpm",
@@ -186,8 +190,8 @@
         "windows-client/**/*.md": "kaushika",
         "windows-server/**/*.md": "kaushika",
         "windows-365/**/*.md": "kaushika",
-        "mem/**/*.md": "meerak",
-        "system-center/**/*.md": "meerak",
+        "mem/**/*.md": "kaushika",
+        "system-center/**/*.md": "jarrettr",
         "dynamics-365/customer-insights/**/*.md": "mhart",
         "dynamics-365/supply-chain/costing/*.md": "yanansong",
         "dynamics-365/supply-chain/inventory/*.md": "chuzheng",

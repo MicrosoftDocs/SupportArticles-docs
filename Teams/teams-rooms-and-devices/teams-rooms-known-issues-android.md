@@ -23,17 +23,26 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 07/01/2025
+ms.date: 07/22/2025
 ---
 # Known issues with Teams Rooms on Android
 
 <!-- If you get word that one of these issues no longer applies, contact meerak@microsoft.com to EoL the corresponding KB.  -->
+
+## Issues affecting Teams meeting room devices
+
+| Issue  |  Description | Workaround |
+| --- | --- | --- |
+|Unable to pair Yealink MeetingBar A40 device with CTP25 touch panel.|You might experience intermittent or failed pairing attempts between a Yealink MeetingBar A40 device and a CTP25 touch panel that are running the following firmware versions:<br/><br/>A40 device: 289.320.0.60<br/>CTP25 touch panel: 311.320.0.55<br/><br/>In some instances, the device might revert to an unpaired state shortly after initialization, or the touch panel might remain stuck on the pairing screen without displaying a code.|No workaround is available at this time.|
+|Logitech Rally Bar device is failing during remote login authentication.|You're able to sign in to a LogiTech VR1009 Rally Bar device locally but it signs out if an attempt is made to log in remotely. In this situation you might see Entra ID error codes 530003, 530002, and others.|No workaround is available at this time.|
+|Touch console not able to pair with Teams Rooms device.|The touch console that is paired with a Teams Rooms for Android device is unable to stay paired with the Front of Room device, and keeps re-trying the pairing process in a loop. Occasionally, you might see the following error message:<br/><br/>**Can't connect to device**|To fix the issue, make sure that the Teams Rooms for Android device has the latest updates installed, and both the device and the touch console are running the same version of the Teams Rooms for Android app.|
 
 ## Issues affecting multiple devices
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
+|Unable to extract log files.|You're trying to extract a log file but either the log files are empty or you see an error message. This behavior can occur when the logs contain partially corrupted zip files or log files.|Contact Microsoft Support by filing a request at [SERVICENOW](https://microsoft.service-now.com/sp?id=sc_cat_item&sys_id=0baac5bcdb0ca414b720f337689619ce&sysparm_category=8b859929136eea002620b0912244b066).|
 
 ## Issues with Teams phones
 
@@ -65,6 +74,6 @@ For issues with Teams devices offered by third-party providers, contact their in
 - Logitech: [Logitech Support](https://support.logi.com/hc/)
 - Crestron: [Crestron Support](https://support.crestron.com/)
 - Poly: [Poly Support](https://www.poly.com/us/support)
-- Yealink: [Yealink Support](https://support.yealink.com/portal/home)
+- Yealink: [Yealink Support](https://support.yealink.com/us/portal/home)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]

@@ -2,6 +2,7 @@
 title: Database is suspended incorrectly when you run ALTER SERVER CONFIGURATION
 description: Fixes an issue where database is in an incorrect suspended state after errors occur when you run ALTER SERVER CONFIGURATION to suspend the server for a snapshot backup.
 ms.date: 11/14/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5048510
 ms.reviewer: rvuppula, nicolasbruno, v-cuichen
 appliesto:

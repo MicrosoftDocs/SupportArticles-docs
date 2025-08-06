@@ -2,6 +2,7 @@
 title: Database accessibility issues with high-volume customer workloads
 description: Fixes an issue where high-volume customer workloads using Extensible Key Management (EKM) for encryption and key generation experience database accessibility issues.
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5023236
 appliesto:
 - SQL Server 2022 on Windows
@@ -49,7 +50,7 @@ SELECT * FROM sys.dm_database_encryption_keys
 Each new cumulative update for SQL Server contains all the hotfixes and security fixes that were in the previous build. We recommend that you install the latest build for your version of SQL Server:
 
 - [Latest cumulative update for SQL Server 2022](build-versions.md)
-- [Latest cumulative update for SQL Server 2019](https://support.microsoft.com/help/4518398)
+- [Latest cumulative update for SQL Server 2019](../sqlserver-2019/build-versions.md)
 
 ## Status
 

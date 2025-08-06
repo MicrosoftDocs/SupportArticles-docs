@@ -4,6 +4,7 @@ description: Provides a resolution for the required variables and actions that a
 ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 12/12/2024
+ms.update-cycle: 180-days
 ms.custom: sap:Copilot Studio\Agent transfer
 ms.collection: CEnSKM-ai-copilot
 ---
