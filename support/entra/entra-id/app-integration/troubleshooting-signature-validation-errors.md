@@ -1,14 +1,14 @@
 ---
 title: Troubleshoot Access Token Signature Validation Errors
 description: Helps you troubleshoot access token signature validation errors and provides solutions in some scenarios.
-ms.date: 07/18/2025
+ms.date: 08/06/2025
 ms.reviewer: willfid
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 ---
 # Troubleshoot access token signature validation errors
 
-When an Azure resource provider, other than Microsoft Entra ID, validate an access token's signature, signature validation errors occur. These errors might result from the signing key being unavailable or failing to validate the signature. This article helps you troubleshoot such errors and provides solutions in some scenarios.
+When a resource provider validates an access token's signature, signature validation errors occur. These errors might result from the signing key being unavailable or failing to validate the signature. This article helps you troubleshoot such errors and provides solutions in some scenarios.
 
 ## Step 1: Decode the access token
 
@@ -94,6 +94,10 @@ Check the `iss` claim of the access token. The `iss` claim indicates who issued 
   - `https://sts.windows.net/{tenant-id}` (used for v1.0 tokens)
   - `https://login.microsoftonline.com/{tenant-id}/v2.0` (used for v2.0 tokens)
 
+- For Microsoft Entra External ID-issued tokens, the `iss` claim has this format:
+
+    `https://{your-domain}.ciamlogin.com/{tenant-id}/v2.0/`
+
 - For Azure AD B2C-issued tokens, the `iss` claim has this format:
 
     `https://{your-domain}.b2clogin.com/tfp/{tenant-id}/{policy-id}/v2.0/`
@@ -103,6 +107,10 @@ To avoid signature validation errors, configure your OpenID Connect Metadata cor
 - For Microsoft Entra ID-issued tokens, make sure the OpenId Connect Metadata configuration looks like `https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration`.
 
     For more information, see [OpenID Connect on the Microsoft identity platform](/entra/identity-platform/v2-protocols-oidc).
+
+- For Microsoft Entra External ID-issued tokens, make sure the OpenId Connect Metadata configuration looks like `https://{tenant-domain}.ciamlogin.com/{tenant-id}/v2.0/.well-known/openid-configuration`.
+
+    For more information, see [Set up your OpenID Connect identity provider](/entra/external-id/customers/how-to-custom-oidc-federation-customers#set-up-your-openid-connect-identity-provider).
 
 - For Azure AD B2C-issued tokens, make sure the OpenId Connect Metadata configuration looks like `<https://{your-domain}.b2clogin.com/{tenant-id}/{b2c-policy}/v2.0/.well-known/openid-configuration`.
 
