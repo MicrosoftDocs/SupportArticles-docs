@@ -217,7 +217,7 @@ For more information, see the following resources:
 > [!NOTE]
 > This tool applies to all hosting plans, except for the Linux Consumption and Flex Consumption plans.
 
-For how to access and use Kudu logs (SCM), see [Access Kudu for your app](/azure/app-service/resources-kudu#access-kudu-for-your-app).
+For information about how to access and use Kudu logs (SCM), see [Access Kudu for your app](/azure/app-service/resources-kudu#access-kudu-for-your-app).
 
 ### Other logs
 
