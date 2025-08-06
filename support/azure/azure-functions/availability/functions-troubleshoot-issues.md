@@ -1,12 +1,12 @@
 ---
-title: Resolve Function App Not Responding or Reporting Errors
+title: Resolve Function App Down or Reporting Errors
 description: Describes how to troubleshoot Azure Functions app if it's not responding or reports errors.
 ms.date: 08/05/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.custom: sap:Function app down or reporting errors
 ---
 
-# Resolve function app not responding or reporting errors
+# Resolve function app down or reporting errors
 
 ## Common scenarios, error messages, and symptoms
 
@@ -52,7 +52,7 @@ You might experience common errors such as the following:
 
 - **Azure Functions runtime is unreachable.**
 
-    See [Troubleshoot error: Azure Functions runtime is unreachable](/azure/azure-functions/functions-recover-storage-account).
+  - See [Troubleshoot error: Azure Functions runtime is unreachable](/azure/azure-functions/functions-recover-storage-account).
 
 - **Function host not running.**
 
@@ -216,6 +216,8 @@ For more information, see the following resources:
 
 > [!NOTE]
 > This tool applies to all hosting plans, except for the Linux Consumption and Flex Consumption plans.
+
+For how to access and use Kudu logs (SCM), see [Access Kudu for your app](/azure/app-service/resources-kudu#access-kudu-for-your-app).
 
 ### Other logs
 
