@@ -2798,6 +2798,8 @@ items:
       href: ./virtualization/troubleshoot-guarded-fabric-hgs.md
     - name: Troubleshoot using the Guarded Fabric Diagnostic Tool
       href: ./virtualization/troubleshoot-guarded-fabric-diagnostics.md
+    - name: Troubleshoot vTPM, shielded VM, and Host Guardian Service issues
+      href: ./virtualization/virtual-shielded-host-guardian-service.md
   - name: Snapshots, checkpoints, and differencing disks
     items:
     - name: Can't delete a recovery checkpoint for a VM in DPM
