@@ -51,41 +51,14 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
 - "HasPrivateSigningKey = False" after guardian import.
 - Cluster logs showing "Catastrophic failure (0x8000FFFF)."
 
-## Cause 1. Certificate and key protector issues
+## Cause 1: Certificate and key protector issues
 
 - Missing or mismatched certificates: vTPM and shielded VMs require signing and encryption certificates. Problems arise if certificates are missing or improperly restored during migration or export/import processes.
 - Untrusted or broken key protectors/guardians: Guardian misconfigurations or missing private keys can block VM operations.
 - Deleted or unrestored certificates: Shielded VM certificates that are accidentally deleted or not restored render VMs nonoperational.
 - Certificate Subject Alternative Name (SAN) or trust issues: HGS over HTTPS fails if certificates lack required SANs or if there are trust issues.
 
-## Cause 2. TPM, hardware, driver, and firmware incompatibilities
-
-- TPM model or firmware incompatibility: Earlier TPM models, such as HPE Gen9/Gen10, might lack support for required algorithms like RSAPSS.
-- Outdated storage drivers/firmware: Encryption features often require updated drivers and firmware.
-- Central processing unit (CPU) compatibility issues: Live migration might fail if CPU compatibility isn't configured across cluster nodes.
-
-## Cause 3. Configuration and script errors
-
-- Improper PowerShell script usage: Errors in automation scripts for enabling vTPM or shielded VM features can create issues.
-- Misconfiguration in HGS or cluster setup: Problems occur when required Windows features aren't enabled, or HGS registration is incorrect.
-- Mixing management tools: Concurrent modifications using tools like System Center Virtual Machine Manager (SCVMM), Failover Cluster Manager, and PowerShell can corrupt VM configurations.
-
-## Cause 4. File system and cluster configuration corruption
-
-- Corrupted `.vmcx` (VM configuration) files: Cluster-aware updating (CAU) or failovers might corrupt VM configuration files.
-- Guarded fabric/cluster node inconsistencies: Shielded VMs must be hosted on the same guarded fabric to function correctly.
-
-## Cause 5. Networking and security protocol issues
-
-- Networking changes/disruptions: Network reconfigurations can temporarily interrupt HGS attestation.
-- TLS/protocol mismatches: HGS might default to older TLS versions, and disabling TLS 1.0 without enabling TLS 1.2 can cause failures.
-
-## Cause 6. Supportability and documentation gaps
-
-- Unsupported HGS cluster expansion: Adding nodes with differing hardware models to an HGS cluster is unsupported.
-- Documentation gaps: Lack of guidance for certain PowerShell or WMI methods can lead to configuration errors.
-
-## Resolution 1. Certificate and key protector resolution
+### Resolution: Certificate and key protector resolution
 
 1. Export and import certificates with private keys:
 
@@ -113,7 +86,13 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
 3. Update signing and encryption certificates: Use `Set-VMKeyProtector` to assign the correct certificates.
 4. Resolve missing certificates: Create a new VM using the original VHDX file and configure vTPM and key protector.
 
-## Resolution 2. Firmware, driver, and hardware remediation
+## Cause 2: TPM, hardware, driver, and firmware incompatibilities
+
+- TPM model or firmware incompatibility: Earlier TPM models, such as HPE Gen9/Gen10, might lack support for required algorithms like RSAPSS.
+- Outdated storage drivers/firmware: Encryption features often require updated drivers and firmware.
+- Central processing unit (CPU) compatibility issues: Live migration might fail if CPU compatibility isn't configured across cluster nodes.
+
+### Resolution: Firmware, driver, and hardware remediation
 
 1. Update storage and TPM firmware: Work with hardware vendors to apply the latest updates.
 2. Check TPM support for required algorithms:
@@ -124,7 +103,13 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
     Get-WmiObject -Namespace "Root\CIMV2\Security\MicrosoftTpm" -Class Win32_Tpm
     ```
 
-## Resolution 3. Configuration, script, and management fixes
+## Cause 3: Configuration and script errors
+
+- Improper PowerShell script usage: Errors in automation scripts for enabling vTPM or shielded VM features can create issues.
+- Misconfiguration in HGS or cluster setup: Problems occur when required Windows features aren't enabled, or HGS registration is incorrect.
+- Mixing management tools: Concurrent modifications using tools like System Center Virtual Machine Manager (SCVMM), Failover Cluster Manager, and PowerShell can corrupt VM configurations.
+
+### Resolution: Configuration, script, and management fixes
 
 1. Correct PowerShell scripts: Ensure scripts appropriately handle vTPM enabling and verification.
 2. Fix VM configuration corruption: Recreate VM shells with existing VHDX files and reassign key protectors.
@@ -136,18 +121,33 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
 
 4. Maintain guarded fabric consistency: Import VMs onto hosts within the same guarded fabric.
 
-## Resolution 4. Permissions, registry, and file system checks
+## Cause 4: File system and cluster configuration corruption
+
+- Corrupted `.vmcx` (VM configuration) files: Cluster-aware updating (CAU) or failovers might corrupt VM configuration files.
+- Guarded fabric/cluster node inconsistencies: Shielded VMs must be hosted on the same guarded fabric to function correctly.
+
+### Resolution: Permissions, registry, and file system checks
 
 1. Check file and folder permissions: Verify access rights for VM configurations and VHDX files.
 2. Validate registry settings: Confirm settings for virtualization-based security, TPM, and HGS.
 
-## Resolution 5. HGS attestation, protocol, and networking steps
+## Cause 5: Networking and security protocol issues
+
+- Networking changes/disruptions: Network reconfigurations can temporarily interrupt HGS attestation.
+- TLS/protocol mismatches: HGS might default to older TLS versions, and disabling TLS 1.0 without enabling TLS 1.2 can cause failures.
+
+### Resolution: HGS attestation, protocol, and networking steps
 
 1. Configure TLS protocols: Update registry settings to enable TLS 1.2 and disable TLS 1.0.
 2. Resolve HTTPS certificate issues: Ensure certificates include required SANs for all nodes.
 3. Troubleshoot attestation failures: Test network connectivity using `Test-NetConnection`.
 
-## Resolution 6. Best practices and documentation
+## Cause 6: Supportability and documentation gaps
+
+- Unsupported HGS cluster expansion: Adding nodes with differing hardware models to an HGS cluster is unsupported.
+- Documentation gaps: Lack of guidance for certain PowerShell or WMI methods can lead to configuration errors.
+
+### Resolution: Best practices and documentation
 
 1. HGS cluster expansion: Add only identical hardware nodes to HGS clusters.
 2. Shielding existing VMs: Use WMI's `PrepareSpecializedMachine` method to shield VMs.
