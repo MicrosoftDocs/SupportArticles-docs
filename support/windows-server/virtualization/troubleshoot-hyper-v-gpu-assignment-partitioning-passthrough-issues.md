@@ -1,5 +1,5 @@
 ---
-title: Troublehooting guidance for Hyper-V GPU assignment, partitioning, and passthrough
+title: Troubleshooting guidance for Hyper-V GPU assignment, partitioning, and passthrough
 description: Troubleshoot issues that occur when configuring GPU passthrough for virtual machines by using either Direct Device Assignment (DDA) or GPU partitioning (GPU-P).
 ms.date: 08/11/2025
 manager: dcscontentpm
@@ -26,11 +26,11 @@ The following checklist provides the general troubleshooting steps that you shou
 
 - If you want to use failover clusters and deploy GPUs by using DDA, you have to use Windows Server 2025. For more information, see [Use GPUs with Discrete Device Assignment in clustered VMs](/windows-server/virtualization/hyper-v/deploy/use-gpu-with-clustered-vm?tabs=windows-admin-center&pivots=windows-server).
 
-- You cannot assign the same GPU by using both DDA and GPU-P.
+- You can't assign the same GPU by using both DDA and GPU-P.
 
-- If you want to monitor GPU usage in Task Manager, the host computer must run Windows Server 2022 or a later verion.
+- If you want to monitor GPU usage in Task Manager, the host computer must run Windows Server 2022 or a later version.
 
-- DDA and GPU-P are not supported on desktop-class hardware or client operating systems such as Windows 10 or 11 Pro.
+- DDA and GPU-P aren't supported on desktop-class hardware or client operating systems such as Windows 10 or 11 Pro.
 
 - If you want to use DDA to assign GPUs, the host computer has to run Windows Server 2016 or a newer version.
 
@@ -38,7 +38,7 @@ The following checklist provides the general troubleshooting steps that you shou
 
 - Currently, you can assign only a single GPU partition to a VM. Both the VM and the GPU partition have to be on the same host computer.
 
-### Step 2: Check that server and GPU hardware support GPU passthrough
+### Step 2: Check that the server and GPU hardware support GPU passthrough
 
 Make sure that the host computer uses server-class hardware and includes a supported CPU, motherboard, and GPU. If you're using GPU-P on clustered host computers, the processors must be capable of Input/Output Memory Management Unit (IOMMU) DMA bit tracking (this requirement includes processors that support Intel VT-D or AMD-Vi).
 
@@ -65,7 +65,7 @@ For more information about host computer prerequisites for DDA, see [Deploy grap
 
 For more information about host computer prerequisites for GPU-P, see [GPU Partitioning: Requirements](/windows-server/virtualization/hyper-v/gpu-partitioning#requirements).
 
-If your hardware does not support the GPU passthrough method that you want to use, take steps to upgrade the hardware. Incompatible hardware can cause a variety of issues when you try to configure or use GPUs.
+If your hardware doesn't support the GPU passthrough method that you want to use, take steps to upgrade the hardware. Incompatible hardware can cause a variety of issues when you try to configure or use GPUs.
 
 ### Step 2: Check the host computer operating system and BIOS or UEFI settings
 
@@ -105,22 +105,22 @@ To use GPU passthrough, you have to have the correct software and the correct li
 
 License or driver problems can cause a variety of symptoms, including the following:
 
-- The Hyper-V or Windows Admin Center does not list GPUs as available for provisioning.
+- The Hyper-V or Windows Admin Center doesn't list GPUs as available for provisioning.
 - The Hyper-V or Windows Admin Center lists GPUs as "Ready for DDA assignment," but not for GPU-P.
 - Device manager on the VMs or host computer lists the GPUs as disabled or unrecognized.
-- You see error message that include error code 48F or error code 003.
-- You cannot configure a GPU pool for GPU-P.
+- You see error message that includes error code 48F or error code 003.
+- You can't configure a GPU pool for GPU-P.
 
 To check the drivers and licensing, follow these steps:
 
 1. Review the GPU vendor documentation and confirm that you have the correct and most recent GPU drivers installed on both the host computer and the VMs.
 
    > [!IMPORTANT]  
-   > NVIDIA's vGPU drivers do not update or replace datacenter version drivers (non-vGPU drivers) installed on the host computer. To use GPU-P, you have to manually remove any NVIDIA datacenter version drivers before you install the vGPU software.
+   > NVIDIA's vGPU drivers don't update or replace datacenter version drivers (non-vGPU drivers) installed on the host computer. To use GPU-P, you have to manually remove any NVIDIA datacenter version drivers before you install the vGPU software.
 
 1. If you have to make any driver changes, follow these steps:
 
-   1. Uninstall any incorrect drivers. For example, if you want to use GPU-P together with NVidia vGPU hardware, uninstall all non-vGPU NVidia drivers.
+   1. Uninstall any incorrect drivers. For example, if you want to use GPU-P together with NVIDIA vGPU hardware, uninstall all non-vGPU NVIDIA drivers.
    1. Install the correct drivers.
    1. Restart the affected computer (host computer or VM).
 
@@ -207,14 +207,14 @@ To resolve this issue, follow these steps:
 
 ### After you update Windows, the GPU doesn't function or appears as an unknown device
 
-In this case, a VM suddenly can't use a GPU. Device Manager might list the GPU as disabled or as an unknown device. You might also see error message that include error code 48F or error code 003.
+In this case, a VM suddenly can't use a GPU. Device Manager might list the GPU as disabled or as an unknown device. You might also see error message that includes error code 48F or error code 003.
 
 This situation typically means that a driver is corrupted, or a stale version of the driver was installed during the update. Simply reinstalling the correct driver might not resolve the problem, because stale or incorrect information might remain in the registry or system files.
 
 > [!IMPORTANT]  
 >
 > - First, make sure that you have already completed the steps described in the [Troubleshooting Checklist](#troubleshooting-checklist) section. If the issue persists, then use the following procedure.
-> - Before you use this procedure, check with your vendor to ensure that cleaning up registry information or system files is advised in your situation. If it is not, skip those steps.
+> - Before you use this procedure, check with your vendor to ensure that cleaning up registry information or system files is advised in your situation. If it isn't, skip those steps.
 > - You must have administrative permissions to use this procedure.
 
 To clean up this information and resolve this issue, follow these steps on the affected VM:
@@ -229,7 +229,7 @@ To clean up this information and resolve this issue, follow these steps on the a
 
 1. To remove the old drivers and clean up related system files and registry entries, follow these steps:
 
-   1. Uninstall any incorrect drivers. For example, if you want to use GPU-P together with NVidia vGPU hardware, uninstall all non-vGPU NVidia drivers. To do this, run the following command at the command prompt:
+   1. Uninstall any incorrect drivers. For example, if you want to use GPU-P together with NVIDIA vGPU hardware, uninstall all non-vGPU NVIDIA drivers. To do this, run the following command at the command prompt:
 
       ```console
       pnputil /delete-driver <Published Name> /uninstall /force
@@ -257,15 +257,15 @@ To clean up this information and resolve this issue, follow these steps on the a
    Get-VMHostPartitionableGpu
    ```
 
-### Cannot assign a GPU to a VM because of insufficient resources
+### Can't assign a GPU to a VM because of insufficient resources
 
-When you are assigning a GPU to a VM, you might see errors such as the following messages:
+When you're assigning a GPU to a VM, you might see errors such as the following messages:
 
 > This Device Cannot Find Enough Free Resources to Use (Code:12)
 
 > GPU Partition: Error Insufficient system resources exist to complete the requested service.
 
-Such messages indicate that the VM does not have enough allocated Memory-Mapped IO (MMIO) space, or is otherwise misconfigured. For information about how to calculate and configure the resources that VMs need, see the following articles:
+Such messages indicate that the VM doesn't have enough allocated Memory-Mapped IO (MMIO) space, or is otherwise misconfigured. For information about how to calculate and configure the resources that VMs need, see the following articles:
 
 - For DDA, see [Deploy devices by using Discrete Device Assignment: MMIO space](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment#mmio-space).
 - For GPU-P, see [Partition and assign GPUs to a virtual machine](/windows-server/virtualization/hyper-v/partition-assign-vm-gpu?tabs=windows-admin-center) and your NVIDIA vGPU documentation.
