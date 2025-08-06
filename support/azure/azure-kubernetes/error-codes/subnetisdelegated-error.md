@@ -26,8 +26,7 @@ When you try to create a node pool in an AKS cluster, you receive the following 
 
 ## Cause
 
-If you try to create a  by using a subnet, and the subnet is delegation-enabled for a particular Azure service, the new  can't be
-integrated with the AKS service.
+If you try to create a node pool by using a subnet, and the subnet is delegation-enabled for a particular Azure service, the new node pool can't be integrated with the AKS service.
 
 ## Resolution
 
@@ -48,7 +47,7 @@ To resolve this issue, follow these steps:
    \--vnet-name \$VNET_NAME  \--name \$SUBNET_NAME \--delegations
    Microsoft.ContainerService/managedClusters
 
-1. After the subnet delegation is removed, try again to create the by using the `az aks nodepool add` command.
+1. After the subnet delegation is removed, try again to create the node pool by using the `az aks nodepool add` command.
 
 ## References
 
