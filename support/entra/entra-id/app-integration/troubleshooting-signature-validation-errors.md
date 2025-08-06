@@ -65,12 +65,12 @@ The content of discovery keys endpoint looks like this:
 		{
 			"kty": "RSA",
 			"use": "sig",
-			"kid": "nOo3ZDrODXEK1jKWhXslHR_KXEg",
-			"x5t": "nOo3ZDrODXEK1jKWhXslHR_KXEg",
-			"n": "oaLLT9hkcSj2tGf...",
-			"e": "AQAB",
+			"kid": "<kid-value>",
+			"x5t": "<x5t-value>",
+			"n": "<n-value>",
+			"e": "<e-value>",
 			"x5c": [
-				"MIIDBTCCAe..."
+				"<x5c-value>"
 			],
 			"issuer": "https://login.microsoftonline.com/{tenant-id}/v2.0"
 		},
