@@ -1,7 +1,7 @@
 ---
 title: Operation to Change a Personal Folder Location Fails
 description: Provides a workaround to an issue in which you fail the operation to change the location of a personal folder.
-ms.date: 07/25/2025
+ms.date: 08/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

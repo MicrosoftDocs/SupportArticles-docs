@@ -1,7 +1,7 @@
 ---
 title: Event ID 1530 Is Logged in the Application Log
 description: Provides information about Event ID 1530 that might be logged in the application log.
-ms.date: 07/25/2025
+ms.date: 08/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

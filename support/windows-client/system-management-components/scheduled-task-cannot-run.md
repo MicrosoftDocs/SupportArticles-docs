@@ -1,7 +1,7 @@
 ---
 title: Scheduled Task Can't Run an Exe File on a Share Folder
 description: Provides a workaround to an issue in which scheduled task can't run an .exe file on a share folder in Windows.
-ms.date: 07/25/2025
+ms.date: 08/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

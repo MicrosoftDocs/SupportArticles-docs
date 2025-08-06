@@ -1,7 +1,7 @@
 ---
 title: Local Policy of This System Doesn't Permit to Logon Interactively
 description: Provides a resolution to a remote desktop connection error "The local policy of this system does not permit you to logon interactively."
-ms.date: 07/25/2025
+ms.date: 08/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

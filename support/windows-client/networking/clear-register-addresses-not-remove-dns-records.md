@@ -1,7 +1,7 @@
 ---
 title: Clearing the "Register This Connection's Addresses in DNS" Option Doesn't Remove DNS Records
 description: Provides a resolution to an issue in which a client doesn't remove its Domain Name System (DNS) records from the server after you clear the Register this connection's addresses in DNS checkbox on the client computer.
-ms.date: 07/25/2025
+ms.date: 08/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: UEFI Mode System Can't Boot After Maintenance or Servicing Activity
 description: Helps resolve the issue in which a UEFI mode system can't boot after maintenance or servicing activity.
-ms.date: 07/25/2025
+ms.date: 08/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Default MTU Sizes for Different Network Topologies
 description: Provides information about the default maximum transfer unit (MTU) sizes for different network topologies.
-ms.date: 07/25/2025
+ms.date: 08/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

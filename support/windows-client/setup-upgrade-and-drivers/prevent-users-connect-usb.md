@@ -1,7 +1,7 @@
 ---
 title: Prevent Users From Connecting to a USB Storage Device
 description: Provides a resolution to prevent users from connecting to a USB storage device.
-ms.date: 07/25/2025
+ms.date: 08/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

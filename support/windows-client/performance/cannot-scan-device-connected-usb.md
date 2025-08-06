@@ -1,7 +1,7 @@
 ---
 title: Can't Scan From a Scanning Device Connected Through USB
 description: Provides a workaround to an issue in which you can't scan from a scanning device connected through USB to a USB-zero-client-connected station.
-ms.date: 07/25/2025
+ms.date: 08/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

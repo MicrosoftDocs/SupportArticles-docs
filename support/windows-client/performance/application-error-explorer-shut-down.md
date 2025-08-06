@@ -1,7 +1,7 @@
 ---
 title: Application Error in Explorer.exe When You Shut Down or Restart Windows
 description: Provides a workaround to an application error in Explorer.exe when you shut down or restart Windows.
-ms.date: 07/25/2025
+ms.date: 08/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

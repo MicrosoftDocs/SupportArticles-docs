@@ -1,7 +1,7 @@
 ---
 title: Reset TCP/IP by Using the NetShell Utility
 description: Provides information about how to reset TCP/IP by using the NetShell utility.
-ms.date: 07/25/2025
+ms.date: 08/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

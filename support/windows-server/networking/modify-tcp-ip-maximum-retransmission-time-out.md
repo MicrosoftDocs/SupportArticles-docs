@@ -1,7 +1,7 @@
 ---
 title: Modify the TCP/IP Maximum Retransmission Time-out
 description: Provides information about how to modify the TCP/IP maximum retransmission time-out.
-ms.date: 07/25/2025
+ms.date: 08/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
