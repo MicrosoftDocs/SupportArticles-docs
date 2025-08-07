@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jeffhugh, v-appelgatet
 ms.custom:
-- sap:virtualization and hyper-v\high availability virtual machines
+- sap:virtualization and hyper-v\discrete device assignment gpu
 - pcy:WinComm Storage High Avail
 ---
 # Hyper-V GPU assignment, partitioning, and passthrough troubleshooting guidance
