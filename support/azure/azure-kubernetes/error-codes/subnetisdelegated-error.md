@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot the SubnetIsDelegated Error Code
+title: Troubleshoot the SubnetIsDelegated error code
 description: Learn how to troubleshoot the SubnetIsDelegated error when you try to create a node pool.
 ms.date: 08/07/2025
 editor: v-jsitser
@@ -8,7 +8,7 @@ ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the SubnetIsDelegated error so that I can successfully create a node pool.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the SubnetIsDelegated error
+# Troubleshoot the SubnetIsDelegated error code
 
 This article discusses how to identify and resolve the SubnetIsDelegated error that occurs when you try to create a node pool.
 
