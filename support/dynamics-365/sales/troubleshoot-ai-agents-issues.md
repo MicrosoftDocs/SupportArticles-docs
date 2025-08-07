@@ -13,19 +13,20 @@ This article helps you troubleshoot and resolve issues related to AI agents in M
 
 ## Sales AI agent is stuck during the activation process
 
-Symptoms: 
+### Symptoms 
 
 - When you try to test or start the agent, or apply changes after editing the agent configuration, the agent is stuck in the **Starting Agent**, **Starting Test**, or **Applying changes** state for more than 10 minutes.
 - You see an error message that says "Something went wrong. Please try again." or "Couldn't start the agent. Please try again."
 - You see that the agent state is reset to its previous state, such as **Draft** or **On**.
 
 
-Cause:
+### Cause
+
 The agent is unable to start the Power Automate flow that activates the agent. To identify if the issue is related to the Power Automate flow, go to `<ORGURL>/api/data/v9.0/callbackregistrations?$filter=entityname eq 'msdyn_salesagentprofile'&$select=name,filteringattributes,softdeletestatus`
 
 If there are no results OR if `softdeletestatus` is 1, then the issue is related to the Power Automate flow.
 
-Resolution:
+### Resolution
 
 1. Go to the [Power Automate portal](https://make.powerautomate.com).
 2. Select the environment in which the agent is being published.
