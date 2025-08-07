@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot the UpgradeFailed Error
-description: Learn how to troubleshoot the UpgradeFailed error when you try to upgrade an AKS cluster by using the Azure CLI.
-ms.date: 08/05/2025
+title: Troubleshoot a failed AKS cluster upgrade
+description: Learn how to troubleshoot error codes related to upgrade failure when you try to upgrade an AKS cluster by using the Azure CLI.
+ms.date: 08/07/2025
 editor: v-jsitser
 ms.reviewer: v-liuamson
 ms.service: azure-kubernetes-service
@@ -43,16 +43,20 @@ To understand more about these errors, see [AKS supported Kubernetes versions](h
 ## Resolution
 
 To resolve this issue, follow these steps.
- 
+
 **Step 1:** Verify the current version and available upgrade paths. To view the current Kubernetes version and supported upgrade targets, run the following command:
 
-> az aks get-upgrades \--resource-group \<RG\> \--name \<ClusterName\> \--output table
+```azurecli
+az aks get-upgrades --resource-group <RG> --name <ClusterName> --output table
+```
 
 If only newer versions, such as 1.29.*x*, are listed, and intermediate versions, such as 1.27.*x*, 1.26.*x*, or 1.25.*x*, are missing, the missing versions are deprecated in your region.
 
 **Step 2:** Try to run a full upgrade (control plane and node pool together). Because of the version skew policy (control planes can't be more than three minor versions ahead of node pools), a separate control plane-only upgrade might fail. Instead, upgrade both the control plane and node pool together:
 
-> az aks upgrade \--resource-group \<RG\> \--name \<ClusterName\> \--kubernetes-version \<available upgrade version\> \--yes
+```azurecli
+az aks upgrade \--resource-group \<RG\> \--name \<ClusterName\> \--kubernetes-version \<available upgrade version\> \--yes
+```
 
 This action ensures compliance with the version skew policy by coordinating a supported Kubernetes version and an upgrade of both components.
 
@@ -60,7 +64,9 @@ This action ensures compliance with the version skew policy by coordinating a su
 
 - Always verify the supported versions in your region by running the following command:
 
-   > az aks get-versions \--location \<region\> \--output table
+```azurecli
+az aks get-versions \--location \<region\> \--output table
+```
 
 - Avoid trying to upgrade to deprecated versions. AKS might enforce immediate skips of supported long-term versions (for example, 1.29).
 
