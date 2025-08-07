@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot live migration issues
 description: Provides information on solving the problem of live migration in windows server 2016.
-ms.date: 01/15/2025
+ms.date: 08/07/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: adjudele, cpuckett, kaushika, shsadash, rblume
+ms.reviewer: adjudele, cpuckett, kaushika, shsadash, sbathija, rblume
 ms.custom:
 - sap:clustering and high availability\hyper-v clusters and vm mobility (migration)
 - pcy:WinComm Storage High Avail
@@ -128,7 +128,7 @@ Get-ClusterNetwork
 
 :::image type="content" source="media/troubleshoot-live-migration-issues/get-clusternetwork.png" alt-text="Screenshot of the Get-ClusterNetwork command result." border="false":::
 
-Make sure the cluster network isn't configured and that **Allow cluster network communication on this network** is selected. For more information, see [Configuring Network Prioritization on a Failover Cluster](https://techcommunity.microsoft.com/t5/failover-clustering/configuring-network-prioritization-on-a-failover-cluster/ba-p/371683).  
+Make sure the cluster network is configured and **Allow cluster network communication on this network** is selected. For more information, see [Configuring Network Prioritization on a Failover Cluster](https://techcommunity.microsoft.com/t5/failover-clustering/configuring-network-prioritization-on-a-failover-cluster/ba-p/371683).  
 
 **Workaround**
 
