@@ -1,7 +1,7 @@
 ---
 title: Errors When Enabling Salesforce with Server-to-Server Flow
 description: Troubleshoot errors that might occur when enabling Salesforce with a server-to-server flow in Microsoft Copilot for Sales.
-ms.date: 08/04/2025
+ms.date: 08/07/2025
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
@@ -39,7 +39,7 @@ During the Salesforce server-to-server flow setup, a connected app is deployed t
 
 To resolve this issue:
 
-1. In Salesforce, search for the `Copilot for Sales Integration User` user.
+1. In Salesforce, search for the **Copilot for Sales Integration User** user.
 
 2. Confirm the user is active.  
    - If inactive, set the user status to active.
@@ -92,7 +92,7 @@ During the Salesforce server-to-server flow setup, a connected app is deployed t
 To resolve this issue, retry the operation. If the issue persists, gather the error details and contact [Microsoft support](/microsoft-sales-copilot/get-support).
 
 > [!NOTE]
-> You might also see an error message that is not listed in symptoms. This could be due to various reasons, such as a validation rule in Salesforce that enforces certain values for users. To resolve this, disable the validation rule temporarily to allow the integration user to be created. 
+> You might encounter an error message that's not listed above. This issue can happen for several reasons. For example, your Salesforce organization might have a validation rule that requires specific values for user records. If this prevents the integration user from being created, try temporarily disabling the validation rule. Once the integration user is created, you can re-enable the rule.
 
 ## No changes were made
 
