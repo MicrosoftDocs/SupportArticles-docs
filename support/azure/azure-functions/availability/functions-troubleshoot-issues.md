@@ -6,7 +6,7 @@ ms.reviewer: v-liuamson; v-gsitser
 ms.custom: sap:Function app down or reporting errors
 ---
 
-# Resolve "Function App Down or Reporting Errors (Preview)" error
+# Resolve "Function App Down or Reporting Errors" issues
 
 ## Common scenarios, error messages, and symptoms
 
