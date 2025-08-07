@@ -2718,10 +2718,12 @@ items:
     items:
     - name: API call of performance counters is delayed
       href: ./virtualization/api-call-performance-counters-delay-container.md
-  - name: High availability virtual machines
+  - name: GPU passthrough
     items:
     - name: "Troubleshooting Guidance: Hyper-V GPU assignment, partitioning, and passthrough"
       href: ./virtualization/troubleshoot-hyper-v-gpu-assignment-partitioning-passthrough-issues.md
+  - name: High availability virtual machines
+    items:
     - name: Can't change the ConfigStoreRootPath value of a Hyper-V cluster
       href: ./virtualization/cannot-change-configstorerootpath-value-hyperv-cluster.md
     - name: Users can't connect to virtual server after failover
