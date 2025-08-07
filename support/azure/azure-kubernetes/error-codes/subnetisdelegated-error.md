@@ -1,12 +1,12 @@
 ---
-title: Troubleshoot the SubnetIsDelegated Error
+title: Troubleshoot the SubnetIsDelegated Error Code
 description: Learn how to troubleshoot the SubnetIsDelegated error when you try to create a node pool.
-ms.date: 08/05/2025
+ms.date: 08/07/2025
 editor: v-jsitser
 ms.reviewer: v-liuamson
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the SubnetIsDelegated error so that I can successfully create a node pool.
-ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or )
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot the "SubnetIsDelegated" error
 
@@ -34,23 +34,32 @@ To resolve this issue, follow these steps:
 
 1. Verify that the subnet is correctly delegated:
 
-   ```
-   az network vnet subnet show \\  \--resource-group \$RESOURCE_GROUP \--vnet-name \$VNET_NAME  \--name \$SUBNET_NAME  \--query delegations
+      ```bash
+      az network vnet subnet show \
+        --resource-group $RESOURCE_GROUP \
+        --vnet-name $VNET_NAME \
+        --name $SUBNET_NAME \
+        --query delegations
+      ```
+
+1. Make sure that the output shows **Microsoft.ContainerService/managedClusters** as the delegated service or no delegated service. If the output shows any other Azure service delegation, remove it by running the following command:
+
+   ```bash
+   az network vnet subnet update \
+     --resource-group $RESOURCE_GROUP \
+     --vnet-name $VNET_NAME \
+     --name $SUBNET_NAME \
+     --remove delegations 0
    ```
 
-1. Make sure that the output shows **Microsoft.ContainerService/managedClusters** as the delegated service or no delegated service. If the output shows any Azure service delegation, you have to remove it by running the following command:
-
-   ```
-   az network vnet subnet update  \--resource-group \$RESOURCE_GROUP
-   \--vnet-name \$VNET_NAME  \--name \$SUBNET_NAME \--remove delegations 0
-   ```
-   
 1. Run the following command to add Managed Cluster delegation:
 
-   ```
-   az network vnet subnet update  \--resource-group \$RESOURCE_GROUP
-   \--vnet-name \$VNET_NAME  \--name \$SUBNET_NAME \--delegations
-   Microsoft.ContainerService/managedClusters
+   ```bash
+   az network vnet subnet update \
+     --resource-group $RESOURCE_GROUP \
+     --vnet-name $VNET_NAME \
+     --name $SUBNET_NAME \
+     --delegations Microsoft.ContainerService/managedClusters
    ```
 
 1. After the subnet delegation is removed, try again to create the node pool by using the `az aks nodepool add` command.
