@@ -7,18 +7,14 @@ contributors:
   - kisubedi
   - kenseongtan
   - v-aangie
-ms.service: power-automate
-ms.subservice: cloud-flow
-ms.topic: troubleshooting-general
-ms.date: 07/22/2025
+ms.date: 08/07/2025
+ms.custom: sap:Flow run issues\Triggers
 ms.update-cycle: 180-days
 ms.author: kenseongtan
-ms.reviewer: angieandrews
-ms.collection: bap-ai-copilot
+ms.reviewer: angieandrews, kenseongtan, kisubedi
 search.audienceType: 
   - flowadmin
 ---
-
 # Troubleshoot common issues with triggers
 
 Here are some tips and tricks for troubleshooting issues with triggers.
@@ -312,3 +308,38 @@ To resolve this issue, edit each flow and save it. The triggers should start fir
 ## Triggers aren't respecting expressions used in them
 
 For triggers, the value of expressions is calculated only when the flow is saved. For example, if your trigger uses `utcNow()` in an input, `utcNow()` is calculated when you save the flow, and the current UTC time is inserted into the trigger definition as a hardcoded value. `utcNow()` isn't recalculated every time the flow is triggered.
+
+## Changes to HTTP or Teams Webhook trigger flows
+
+> [!IMPORTANT]
+> Starting in August 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL will move to a new URL. You'll see the new URL in the **HTTP URL** field of the flow's trigger when you open the flow in the designer. To ensure that existing flows using these triggers continue to work, complete the following actions by November 30, 2025. After this date, the old URLs will no longer work and flows will fail to trigger.
+
+### Key changes
+
+- **Updated trigger URL**: The URL displayed on the HTTP trigger card in your flow's designer will reflect a new URL. This new URL is required for your flows to function correctly.
+- **Length of the new URL**: The updated URL might exceed 255 characters, especially when [Shared Access Signature (SAS) authentication](/azure/storage/common/storage-sas-overview) is configured. Verify that your destination system supports URLs longer than 255 characters and adjust its configuration if necessary.
+- **Warning banner**: A warning banner will appear on your flow details page or within the designer, displaying the old URL that has been replaced. This serves as a reminder to update any references to the outdated URL with the new URL.
+
+  :::image type="content" source="./media/triggers-troubleshoot/http-trigger-url.png" alt-text="Screenshot of the warning banner reminding you to update the old URL.":::
+
+### Required actions
+
+To ensure your flows continue to function as expected, follow these steps:
+
+1. Update URL references:
+
+   - Identify all client applications and systems (such as web apps, Power Apps, and others) that reference the old trigger URL.
+   - Replace the old trigger URL with the updated URL displayed in the trigger card of your flow's designer.
+
+2. Validate the new URL:
+
+   - Verify that the updated URL works as expected by triggering the flow and checking for successful execution.
+   - If using SAS authentication, confirm that the destination system supports URLs longer than 255 characters.
+
+3. Check the relative path parameter:
+
+   - If your trigger URL uses a relative path parameter, ensure there are no beginning slashes in the field to avoid double slash errors.
+   - Modify the relative path as needed and validate the trigger URL for correctness.
+
+
+
