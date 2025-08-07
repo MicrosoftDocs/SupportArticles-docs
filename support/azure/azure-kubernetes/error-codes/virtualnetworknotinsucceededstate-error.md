@@ -38,6 +38,6 @@ Check the current provisioning state of the VNet:
 az network vnet show -g \<resource-group\> -n \<vnet-name\> \--query \"provisioningState\" -o tsv
 ```
 
-If the command returns **Succeeded**, retry your AKS operation: this means the VNet is fully set up and ready for use. If it returns any other value, the VNet may be in a failed or pending state that requires manual intervention. For more guidance, follow the troubleshooting steps in [Troubleshoot Azure Microsoft.Network failed provisioning state](/azure/networking/troubleshoot-failed-state).
+If the command returns **Succeeded**, the VNet is fully set up and ready for use, and you can retry your AKS operation. If it returns any other value, the VNet might be in a failed or pending state that requires manual intervention. For more guidance, follow the troubleshooting steps in [Troubleshoot Azure Microsoft.Network failed provisioning state](/azure/networking/troubleshoot-failed-state).
 
 [!INCLUDE [azure-help-support](../../../includes/azure-help-support.md)]
