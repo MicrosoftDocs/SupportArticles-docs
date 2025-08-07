@@ -7,7 +7,7 @@ contributors:
   - kisubedi
   - kenseongtan
   - v-aangie
-ms.date: 08/06/2025
+ms.date: 08/07/2025
 ms.custom: sap:Flow run issues\Triggers
 ms.update-cycle: 180-days
 ms.author: kenseongtan
@@ -319,6 +319,8 @@ For triggers, the value of expressions is calculated only when the flow is saved
 - **Updated trigger URL**: The URL displayed on the HTTP trigger card in your flow's designer will reflect a new URL. This new URL is required for your flows to function correctly.
 - **Length of the new URL**: The updated URL might exceed 255 characters, especially when [Shared Access Signature (SAS) authentication](/azure/storage/common/storage-sas-overview) is configured. Verify that your destination system supports URLs longer than 255 characters and adjust its configuration if necessary.
 - **Warning banner**: A warning banner will appear on your flow details page or within the designer, displaying the old URL that has been replaced. This serves as a reminder to update any references to the outdated URL with the new URL.
+
+  :::image type="content" source="./media/triggers-troubleshoot/http-trigger-url.png" alt-text="Screenshot of the warning banner reminding you to update the old URL.":::
 
 ### Required actions
 
