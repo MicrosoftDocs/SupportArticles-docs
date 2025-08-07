@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the VirtualNetworkNotInSucceededState Error Code
 description: Learn how to troubleshoot the VirtualNetworkNotInSucceededState error when you create, upgrade, or scale an Azure Kubernetes Service (AKS) cluster or node pool.
-ms.date: 08/05/2025
+ms.date: 08/07/2025
 editor: v-jsitser
 ms.reviewer: v-liuamson
 ms.service: azure-kubernetes-service
@@ -12,8 +12,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 ## Symptoms
 
-When you create, upgrade, or scale an Azure Kubernetes Service (AKS) cluster or node pool, the deployment fails and returns an error message that resembles the
-following message:
+When you create, upgrade, or scale an Azure Kubernetes Service (AKS) cluster or node pool, the deployment fails and returns an error message that resembles the following message:
 
 *Status=400 Code=\"VirtualNetworkNotInSucceededState\"*
 
@@ -29,14 +28,16 @@ AKS can set ownership on a virtual network only if the `provisioningState` of th
 
 - A previous network operation failed and left the VNet in the **Failed** state.
 
-- Multiple parallel cluster or node‑pool deployments are trying to modify the same VNet at the same time.
+- Multiple parallel cluster or node pool deployments are trying to modify the same VNet at the same time.
 
 ## Resolution
 
-Check the current provisioning state of the VNET:
+Check the current provisioning state of the VNet:
 
-*az network vnet show -g \<resource-group\> -n \<vnet-name\> \--query \"provisioningState\" -o tsv*
+```dotnetcli
+az network vnet show -g \<resource-group\> -n \<vnet-name\> \--query \"provisioningState\" -o tsv
+```
 
-If the command returns **Succeeded**, retry your AKS operation. If it returns any other value. For more guidance, follow the troubleshooting steps in [Troubleshoot Azure Microsoft.Network failed provisioning state](/azure/networking/troubleshoot-failed-state).
+If the command returns **Succeeded**, retry your AKS operation: this means the VNet is fully set up and ready for use. If it returns any other value, the VNet may be in a failed or pending state that requires manual intervention. For more guidance, follow the troubleshooting steps in [Troubleshoot Azure Microsoft.Network failed provisioning state](/azure/networking/troubleshoot-failed-state).
 
 [!INCLUDE [azure-help-support](../../../includes/azure-help-support.md)]
