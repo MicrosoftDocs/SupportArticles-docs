@@ -32,7 +32,7 @@ The upgrade failures occur for one or more of the following reasons:
 
 - The target Kubernetes version (for example, 1.26 or 1.25) is no longer supported in the selected Azure region.
 
-- A minor version is skipped. Skipping minor versions during upgrades (for example, from 1.24.*x* to 1.26.*x* or 1.27.*x*) is not allowed unless the current version is unsupported.
+- A minor version is skipped. Skipping minor versions during upgrades (for example, from 1.24.*x* to 1.26.*x* or 1.27.*x*) isn't allowed unless the current version is unsupported.
 
 - A control plane and node pool version skew occurs when you try to upgrade only the control plane. This condition causes the following version skew  error:
 
@@ -64,16 +64,16 @@ This action ensures compliance with the version skew policy by coordinating a su
 
 - Avoid trying to upgrade to deprecated versions. AKS might enforce immediate skips of supported long-term versions (for example, 1.29).
 
-- For AKS clusters that are running significantly outdated Kubernetes versions, the recommended best practices include:  
+- For AKS clusters that are running outdated Kubernetes versions, the recommended best practices include:  
 
    **Create a new cluster:** Create an AKS cluster that has a supported Kubernetes version.  
 
-   **Migrate workloads:** Transfer your workloads to the new cluster to make sure that they run on supported versions.  
+   **Migrate workloads:** To make sure that your workloads run on supported versions, transfer the workloads to the new cluster.
 
    **Avoid upgrading across multiple versions:** Instead of upgrading through several minor versions, move to a new cluster to minimize complexity and potential issues.  
 
    **Back up and verify data:** Make sure that all data is backed up and verified before the migration.  
 
-   **Test thoroughly:** Perform thorough testing in a staging environment to identify and resolve any compatibility issues.  
+   **Test thoroughly:** To identify and resolve any compatibility issues, perform thorough testing in a staging environment.
 
 [!INCLUDE [azure-help-support](../../../includes/azure-help-support.md)]
