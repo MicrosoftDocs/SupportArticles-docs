@@ -366,6 +366,8 @@
     href: extensions/troubleshoot-failed-kubernetes-deployment-offer.md
   - name: Troubleshoot network isolated clusters
     href: extensions/troubleshoot-network-isolated-cluster.md
+  - name: Troubleshoot managed namespaces
+    href: extensions/troubleshoot-managed-namespaces.md
   - name: KEDA add-on
     items:
     - name: Troubleshoot KEDA add-on
