@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot live migration issues
 description: Provides information on solving the problem of live migration in windows server 2016.
-ms.date: 08/07/2025
+ms.date: 08/08/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
