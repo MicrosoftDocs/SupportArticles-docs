@@ -7,7 +7,7 @@ contributors:
   - kisubedi
   - kenseongtan
   - v-aangie
-ms.date: 08/07/2025
+ms.date: 08/08/2025
 ms.custom: sap:Flow run issues\Triggers
 ms.update-cycle: 180-days
 ms.author: kenseongtan
@@ -23,7 +23,7 @@ Here are some tips and tricks for troubleshooting issues with triggers.
 
 Sometimes, you might need to [Identify specific flow runs](/power-automate/fix-flow-failures#identify-specific-flow-runs) to troubleshoot your flows.
 
-## My trigger doesn’t fire
+## My trigger doesn't fire
 
 1. A data loss prevention policy could be to blame.
 
@@ -31,14 +31,15 @@ Sometimes, you might need to [Identify specific flow runs](/power-automate/fix-f
 
    If your flow violates a DLP policy, it's suspended, causing the trigger to not fire. To know if your flow is suspended, try to edit the flow and save it. The flow checker reports it if the flow violates a DLP policy. Your admin can change the DLP policy.
 
-1. The trigger might be failing.
-   Follow these steps to confirm:
+1. The trigger might be failing. Follow these steps to confirm:
 
    1. Sign in to [Power Automate](https://make.powerautomate.com).
    1. On the navigation menu to the left, select **My flows**, and then select your flow.
    1. Review the details page. Do you see the following error in the **Details**?
 
-       :::image type="content" source="./media/triggers-troubleshoot/fix-trigger.png" alt-text="Screenshot of an error message about the flow's trigger.":::
+      > There's a problem with the flow's trigger. Fix the trigger.
+
+       :::image type="content" source="./media/triggers-troubleshoot/fix-trigger.png" alt-text="Screenshot of an error message about the flow's trigger." lightbox="media/triggers-troubleshoot/fix-trigger.png":::
 
    This error means that Power Automate tried multiple times to establish a connection to register the trigger and failed. Your flow doesn't trigger until this problem is resolved.
 
@@ -61,14 +62,14 @@ Follow these steps to verify if your connections are broken:
 1. Find the connection that your flow uses.
 1. To fix a broken connection, select the link next to the **Status** column and follow the instructions.
 
-   ![A screenshot that displays a link to fix a broken connection.](./media/triggers-troubleshoot/fix-link.png)
+   :::image type="content" source="./media/triggers-troubleshoot/fix-link.png" alt-text="The Fix connection link to fix a broken connection." lightbox="media/triggers-troubleshoot/fix-link.png":::
 
 ### Verify if the flow uses a premium connector trigger
 
 1. Edit your flow to find the connector name for the trigger.
 1. Go to the [list of connectors](https://make.powerautomate.com/connectors) and then search for that connector. If the connector is a premium connector, **PREMIUM** displays below the name of the connector.
 
-    :::image type="content" source="./media/triggers-troubleshoot/premium-connector.png" alt-text="Screenshot of a premium connector.":::
+    :::image type="content" source="./media/triggers-troubleshoot/premium-connector.png" alt-text="Screenshot of a premium connector." lightbox="media/triggers-troubleshoot/premium-connector.png":::
 
 A standalone Power Apps or Power Automate license is required to access all premium, on-premises, and custom connectors. You can [purchase licenses](https://make.powerautomate.com/pricing) at any time.
 
@@ -88,7 +89,7 @@ You just completed an event. For example, you added a new list item or sent an e
 1. On the navigation menu to the left, select **My flows**, and then select the flow.
 1. In the **28-day run history**, select **All runs**.
 
-    :::image type="content" source="./media/triggers-troubleshoot/all-runs.png" alt-text="Screenshot showing all runs.":::
+    :::image type="content" source="./media/triggers-troubleshoot/all-runs.png" alt-text="Screenshot showing all runs." lightbox="media/triggers-troubleshoot/all-runs.png":::
 
 If you expect the flow to run but it didn’t run, verify if it shows the trigger check was skipped at that time. If the trigger check was skipped, it means that the trigger condition wasn't met for the flow to trigger. Verify the flow the inputs and trigger conditions to confirm if you're using the latest configuration to trigger the flow.
 
@@ -105,7 +106,7 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 1. On the command bar, select **Edit**.
 1. Select the first card to see what folders, sites, mailboxes, and others are used in the trigger in the configuration pane.
 
-    :::image type="content" source="./media/triggers-troubleshoot/copilot-triggers.png" alt-text="Screenshot that shows trigger site in Copilot.":::
+    :::image type="content" source="./media/triggers-troubleshoot/copilot-triggers.png" alt-text="Screenshot that shows trigger site in Copilot." lightbox="media/triggers-troubleshoot/copilot-triggers.png":::
 
 1. In the configuration pane, select the **Settings** tab.
 1. Find **Trigger conditions**.
@@ -114,7 +115,7 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 
    If there are other customizations in **Trigger Conditions**, confirm that you're using the expected or correct inputs to trigger the flow.
 
-    :::image type="content" source="./media/triggers-troubleshoot/copilot-trigger-conditions.png" alt-text="Screenshot that shows trigger conditions in Copilot.":::
+    :::image type="content" source="./media/triggers-troubleshoot/copilot-trigger-conditions.png" alt-text="Screenshot that shows trigger conditions in Copilot." lightbox="media/triggers-troubleshoot/copilot-trigger-conditions.png":::
 
 # [Classic designer](#tab/classic-designer)
 
@@ -129,7 +130,7 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 
    If there are other customizations in **Trigger Conditions**, confirm that you're using the expected or correct inputs to trigger the flow.
 
-    :::image type="content" source="./media/triggers-troubleshoot/trigger-conditions.png" alt-text="Screenshot that shows trigger conditions.":::
+    :::image type="content" source="./media/triggers-troubleshoot/trigger-conditions.png" alt-text="Screenshot that shows trigger conditions." lightbox="media/triggers-troubleshoot/trigger-conditions.png":::
 
 ---
 
@@ -184,17 +185,17 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 1. In the configuration pane to the left, select **Code View**.
 1. Find the `recurrence` section with an interval `frequency` element. If this section is available, the trigger is a *polling* trigger.
 
-    :::image type="content" source="./media/triggers-troubleshoot/copilot-recurrence.png" alt-text="Screenshot of the recurrence section in Copilot.":::
+    :::image type="content" source="./media/triggers-troubleshoot/copilot-recurrence.png" alt-text="Screenshot of the recurrence section in Copilot." lightbox="media/triggers-troubleshoot/copilot-recurrence.png":::
 
 # [Classic designer](#tab/classic-designer)
 
 1. On the title bar, select the ellipsis (**...**) > **Peek code**.
 
-    :::image type="content" source="./media/triggers-troubleshoot/peek-code.png" alt-text="Screenshot of peek code.":::
+    :::image type="content" source="./media/triggers-troubleshoot/peek-code.png" alt-text="Screenshot of peek code." lightbox="media/triggers-troubleshoot/peek-code.png":::
 
 1. Find the `recurrence` section with an interval `frequency` element. If this section is available, the trigger is a *polling* trigger.
 
-    :::image type="content" source="./media/triggers-troubleshoot/frequency.png" alt-text="Screenshot of the recurrence section.":::
+    :::image type="content" source="./media/triggers-troubleshoot/frequency.png" alt-text="Screenshot of the recurrence section." lightbox="media/triggers-troubleshoot/frequency.png":::
 
 ---
 
@@ -235,7 +236,7 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 1. In the configuration tab, select the **Code view** tab.
 1. Find the interval frequency.
 
-    :::image type="content" source="./media/triggers-troubleshoot/copilot-recurrence.png" alt-text="Screenshot of the frequency element in Copilot.":::
+    :::image type="content" source="./media/triggers-troubleshoot/copilot-recurrence.png" alt-text="Screenshot of the frequency element in Copilot." lightbox="media/triggers-troubleshoot/copilot-recurrence.png":::
 
 # [Classic designer](#tab/classic-designer)
 
@@ -244,11 +245,11 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 1. On the command bar, select **Edit**.
 1. On your flow trigger, select the ellipsis (**...**) > **Peek code**.
 
-    :::image type="content" source="./media/triggers-troubleshoot/peek-code.png" alt-text="Screenshot of the peek code setting.":::
+    :::image type="content" source="./media/triggers-troubleshoot/peek-code.png" alt-text="Screenshot of the peek code setting." lightbox="media/triggers-troubleshoot/peek-code.png":::
 
 1. Find the interval frequency.
 
-    :::image type="content" source="./media/triggers-troubleshoot/frequency.png" alt-text="Screenshot of the frequency element.":::
+    :::image type="content" source="./media/triggers-troubleshoot/frequency.png" alt-text="Screenshot of the frequency element." lightbox="media/triggers-troubleshoot/frequency.png":::
 
 ---
 
@@ -320,7 +321,9 @@ For triggers, the value of expressions is calculated only when the flow is saved
 - **Length of the new URL**: The updated URL might exceed 255 characters, especially when [Shared Access Signature (SAS) authentication](/azure/storage/common/storage-sas-overview) is configured. Verify that your destination system supports URLs longer than 255 characters and adjust its configuration if necessary.
 - **Warning banner**: A warning banner will appear on your flow details page or within the designer, displaying the old URL that has been replaced. This serves as a reminder to update any references to the outdated URL with the new URL.
 
-  :::image type="content" source="./media/triggers-troubleshoot/http-trigger-url.png" alt-text="Screenshot of the warning banner reminding you to update the old URL.":::
+  > Click here to copy the new trigger URL. The old trigger URL \<trigger URL> will stop working on November 30, 2025. Your tools that use this flow WILL break unless you update them with the new URL.
+
+  :::image type="content" source="./media/triggers-troubleshoot/http-trigger-url.png" alt-text="Screenshot of the warning banner reminding you to update the old URL." lightbox="media/triggers-troubleshoot/http-trigger-url.png":::
 
 ### Required actions
 
@@ -340,6 +343,3 @@ To ensure your flows continue to function as expected, follow these steps:
 
    - If your trigger URL uses a relative path parameter, ensure there are no beginning slashes in the field to avoid double slash errors.
    - Modify the relative path as needed and validate the trigger URL for correctness.
-
-
-
