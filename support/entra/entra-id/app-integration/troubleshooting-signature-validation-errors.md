@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Access Token Signature Validation Errors
 description: Helps you troubleshoot access token signature validation errors and provides solutions in some scenarios.
-ms.date: 08/06/2025
+ms.date: 08/08/2025
 ms.reviewer: willfid
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
@@ -24,7 +24,7 @@ When a resource provider validates an access token's signature, signature valida
 
 ## Step 2: Validate the audience claim of the access token
 
-If you send a Microsoft Graph access token to a non-Microsoft Graph resource provider, you will get a signature validation error. Only Microsoft Graph can validate such token. The value of a Microsoft Graph token's `aud` claim is one of the following:
+If you send a Microsoft Graph access token to a non-Microsoft Graph resource provider, you get a signature validation error. Only Microsoft Graph can validate such token. The value of a Microsoft Graph token's `aud` claim is one of the following:
 
 - `https://graph.microsoft.us`
 - `https://graph.microsoft.us/`
@@ -48,7 +48,7 @@ If you use a Microsoft authentication library like Microsoft Authentication Libr
 
 If you have configured a tenant ID, the `MetadataAddress` would be `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`. If you have configured an `Authority` like `https://login.microsoftonline.us/{tenant-id}`, the `MetadataAddress` would be `https://login.microsoftonline.us/{tenant-id}/v2.0/.well-known/openid-configuration`.
 
-The OpenId Connect Metadata endpoint includes the `jwks_uri` property (also known as discovery keys endpoint), which specifies the location of signing keys. Depending on which OpenId Connect Metadata endpoint is used, it will return a different URL for the `jwks_uri` property. Here's a table that provides a few examples:
+The OpenId Connect Metadata endpoint includes the `jwks_uri` property (also known as discovery keys endpoint), which specifies the location of signing keys. Depending on which OpenId Connect Metadata endpoint is used, it returns a different URL for the `jwks_uri` property. Here's a table that provides a few examples:
 
 | Metadata endpoint | Discovery keys endpoint |
 | --- | --- |
@@ -122,7 +122,7 @@ Assume that the access token is issued from Microsoft Entra ID instead of Azure 
 
 We don't recommend using both OAuth2 and SAML for the same application. To resolve this issue, keep your application separate for OAuth2 and SAML by using one of the following methods:
 
-- Create a new app registration for OAuth2 (recommended method)
+- Create a new app registration for OAuth2 (recommended method).
 - Convert the enterprise application to use OAuth2 only.
 
     To do so, disable SAML SSO by setting the `preferredSingleSignOnMode` property on the `servicePrincipal` to `null` or `oidc`.
@@ -136,7 +136,7 @@ We don't recommend using both OAuth2 and SAML for the same application. To resol
 
 Make sure you set the OpenId Connect Metadata configuration based on whether the access token is issued from Microsoft Entra ID or Azure AD B2C, or if adding `?appid={application-id}`.
 
-Generally configuring the Microsoft Entra ID `Instance` and `Tenant`, or `Authority` correctly can resolve signature validation errors.
+Generally, configuring the Microsoft Entra ID `Instance` and `Tenant`, or `Authority` correctly can resolve signature validation errors.
 
 - `Instance`
 
@@ -154,7 +154,7 @@ Generally configuring the Microsoft Entra ID `Instance` and `Tenant`, or `Author
 
     So, `Authority` would be like `https://login.microsoftonline.com/contoso.onmicrosoft.com`.
 
-Generally the `MetadataAddress` is built based on the `Instance`/`Tenant`/`Authority` configuration and will automatically concatenate `/.well-known/openid-configuration` at the end. The following sections provide examples of manually specifying the `MetadataAddress`.
+Generally, the `MetadataAddress` is built based on the `Instance`/`Tenant`/`Authority` configuration and will automatically concatenate `/.well-known/openid-configuration` at the end. The following sections provide examples of manually specifying the `MetadataAddress`.
 
 ### Example 1: Use Microsoft Identity Web
 
@@ -226,7 +226,7 @@ For more details, see [Microsoft Identity Web customization](https://github.com/
 
 Refer to [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad).
 
-### Exempale 4: Use Azure API Management
+### Example 4: Use Azure API Management
 
 Refer to [Secure an Azure API Management API with Azure AD B2C](/azure/active-directory-b2c/secure-api-management?tabs=app-reg-ga).
 
@@ -235,3 +235,4 @@ Refer to [Secure an Azure API Management API with Azure AD B2C](/azure/active-di
 [Validate tokens](/entra/identity-platform/access-tokens#validate-tokens)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
