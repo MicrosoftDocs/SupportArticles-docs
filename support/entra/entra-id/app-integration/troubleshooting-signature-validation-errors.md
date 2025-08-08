@@ -78,14 +78,14 @@ The content of discovery keys endpoint looks like this:
 
 The `kid` claim of the access token must match one of the keys available on the discovery keys endpoint based on the `kid` property. If it doesn't match, there are two possible reasons:
 
-- Microsoft Entra ID and Azure Active Directory (AD) B2C uses different signing keys.
+- Microsoft Entra ID and Azure Active Directory (AD) B2C use different signing keys.
 - The application is enabled for Security Assertion Markup Language (SAML) Single Sign-On (SSO).
 
 To resolve this mismatch, go to [Step 4: Validate the iss claim of the access token](#step-4-validate-the-iss-claim-of-the-access-token).
 
 ## Step 4: Validate the iss claim of the access token
 
-### Scenario 1: Microsoft Entra ID and Azure AD B2C uses different signing keys
+### Scenario 1: Microsoft Entra ID and Azure AD B2C use different signing keys
 
 Check the `iss` claim of the access token. The `iss` claim indicates who issued the token:
 
@@ -148,7 +148,7 @@ Generally, configuring the Microsoft Entra ID `Instance` and `Tenant`, or `Autho
 
 - `Authority`
 
-    If you configure an `Authority`, `Instance` and `Tenant` isn't needed as `Authority` follows this format:
+    If you configure an `Authority`, `Instance` and `Tenant` aren't needed as `Authority` follows this format:
 
     `{Instance}/{Tenant}`
 
@@ -235,4 +235,5 @@ Refer to [Secure an Azure API Management API with Azure AD B2C](/azure/active-di
 [Validate tokens](/entra/identity-platform/access-tokens#validate-tokens)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
 
