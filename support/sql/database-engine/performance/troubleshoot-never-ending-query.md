@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot queries that seem to never complete in SQL Server
 description: Provides steps to help you identify and resolve issues where a query runs for a long time in SQL Server.
-ms.date: 01/17/2025
+ms.date: 08/08/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: shaunbe, v-jayaramanp, jopilov
 author: pijocoder
@@ -14,91 +14,119 @@ This article describes the troubleshooting steps for the issue where you have a 
 
 ## What is a never-ending query?
 
-This document focuses on queries that continue to execute or compile, that is, their CPU continues to increase. It doesn't apply to queries that are blocked or waiting on some resource that is never released (the CPU remains constant or changes very little).
+This document focuses on queries that continue to execute or compile, that is, their CPU continues to increase. It doesn't apply to queries that are blocked or waiting on some resource that is never released. In those cases the CPU remains constant or changes slightly.
 
 > [!IMPORTANT]
 > If a query is left to finish its execution, it will eventually complete. It could take just a few seconds, or it could take several days.
 
 The term never-ending is used to describe the perception of a query not completing when in fact, the query will eventually complete.
 
-### Identify a never-ending query
+## Cause
 
-To identify whether a query is continuously executing or stuck on a bottleneck, follow these steps:
+Common causes for long-running (never ending) queries include:
 
-1. Run the following query:
+1. **Nested Loop joins on very large tables**  Queries that process lots of rows of data and typically join multiple tables. One common example is a query that involves Nested Loop (NL) joins. Due to the nature of NL joins a query that joins tables with lots of rows might run for a long time. There are some cases (TOP, FAST - row goal), where no other type of join can be used by a query but NL joins. Therefore, even if a Hash match or a Merge Join might be faster, the optimizer can't use them due to the nature of row goal.
+1. **Out-of-date statistics:** Queries that pick a plan based on outdated statistics might be suboptimal and take a long time to run.
+1. **Endless loops:** T-SQL queries that use WHILE loops might sometimes be incorrectly written. The result may be code that never leaves the loop and runs endlessly. These queries are truly never-ending and run until they're killed manually.
+1. **Complex queries with many joins and large tables:** Queries that involve many joined tables would typically result in complex query plans that might take a long time to execute. Especially common are analytical queries that don't filter rows out and involve a large number of tables.
+1. **Missing indexes:** Queries can be made to run faster when appropriate indexes are used on tables. Indexes allow for a subset of the data to be selected or to get to the data faster.
 
-    ```sql
-    DECLARE @cntr int = 0
+## Step 1. Identify a never-ending query
+
+First find out if there's a never-ending query on the system. Also, to identify whether a query is taking a long time you need to understand whether it has
+
+- long execution time
+- long wait time (stuck on a bottleneck)
+- long compilation time
+
+Follow these steps:
+
+### 1.1 Identify if there's a never-ending query
+
+Run the following diagnostic query on your SQL Server instance where the never-ending query is active:
+
+```sql
+DECLARE @cntr int = 0
+
+WHILE (@cntr < 3)
+BEGIN
+    SELECT TOP 10 s.session_id,
+                    r.status,
+                    CAST(r.cpu_time / (1000 * 60.0) AS DECIMAL(10,2)) AS cpu_time_minutes,
+                    CAST(r.total_elapsed_time / (1000 * 60.0) AS DECIMAL(10,2)) AS elapsed_minutes,
+                    r.logical_reads,
+                    r.wait_time,
+                    r.wait_type,
+                    r.wait_resource,
+                    r.reads,
+                    r.writes,
+                    SUBSTRING(st.TEXT, (r.statement_start_offset / 2) + 1,
+                    ((CASE r.statement_end_offset
+                        WHEN -1 THEN DATALENGTH(st.TEXT)
+                        ELSE r.statement_end_offset
+                    END - r.statement_start_offset) / 2) + 1) AS statement_text,
+                    COALESCE(QUOTENAME(DB_NAME(st.dbid)) + N'.' + QUOTENAME(OBJECT_SCHEMA_NAME(st.objectid, st.dbid)) 
+                    + N'.' + QUOTENAME(OBJECT_NAME(st.objectid, st.dbid)), '') AS command_text,
+                    r.command,
+                    s.login_name,
+                    s.host_name,
+                    s.program_name,
+                    s.last_request_end_time,
+                    s.login_time,
+                    r.open_transaction_count,
+                    atrn.name as transaction_name,
+                    atrn.transaction_id,
+                    atrn.transaction_state
+        FROM sys.dm_exec_sessions AS s
+        JOIN sys.dm_exec_requests AS r ON r.session_id = s.session_id 
+                CROSS APPLY sys.Dm_exec_sql_text(r.sql_handle) AS st
+        LEFT JOIN (sys.dm_tran_session_transactions AS stran 
+                JOIN sys.dm_tran_active_transactions AS atrn
+                ON stran.transaction_id = atrn.transaction_id)
+        ON stran.session_id =s.session_id
+        WHERE r.session_id != @@SPID
+        ORDER BY r.cpu_time DESC
     
-    WHILE (@cntr < 3)
-    BEGIN
-        SELECT TOP 10 s.session_id,
-                        r.status,
-                        r.wait_time,
-                        r.wait_type,
-                        r.wait_resource,
-                        r.cpu_time,
-                        r.logical_reads,
-                        r.reads,
-                        r.writes,
-                        r.total_elapsed_time / (1000 * 60) 'Elaps M',
-                        SUBSTRING(st.TEXT, (r.statement_start_offset / 2) + 1,
-                        ((CASE r.statement_end_offset
-                            WHEN -1 THEN DATALENGTH(st.TEXT)
-                            ELSE r.statement_end_offset
-                        END - r.statement_start_offset) / 2) + 1) AS statement_text,
-                        COALESCE(QUOTENAME(DB_NAME(st.dbid)) + N'.' + QUOTENAME(OBJECT_SCHEMA_NAME(st.objectid, st.dbid)) 
-                        + N'.' + QUOTENAME(OBJECT_NAME(st.objectid, st.dbid)), '') AS command_text,
-                        r.command,
-                        s.login_name,
-                        s.host_name,
-                        s.program_name,
-                        s.last_request_end_time,
-                        s.login_time,
-                        r.open_transaction_count,
-                        atrn.name as transaction_name,
-                        atrn.transaction_id,
-                        atrn.transaction_state
-            FROM sys.dm_exec_sessions AS s
-            JOIN sys.dm_exec_requests AS r ON r.session_id = s.session_id 
-                    CROSS APPLY sys.Dm_exec_sql_text(r.sql_handle) AS st
-            LEFT JOIN (sys.dm_tran_session_transactions AS stran 
-                 JOIN sys.dm_tran_active_transactions AS atrn
-                    ON stran.transaction_id = atrn.transaction_id)
-            ON stran.session_id =s.session_id
-            WHERE r.session_id != @@SPID
-            ORDER BY r.cpu_time DESC
-        
-        SET @cntr = @cntr + 1
-    WAITFOR DELAY '00:00:05'
-    END
-    ```
+    SET @cntr = @cntr + 1
+WAITFOR DELAY '00:00:05'
+END
+```
 
-1. Check the sample output.
+### 1.2 Examine the output to identify why query is taking long
 
-    - The troubleshooting steps in this article are specifically applicable when you notice an output similar to the following one where the CPU is increasing proportionately with the elapsed time, without significant wait times. It's important to note that changes in `logical_reads` aren't relevant in this case as some CPU-bound T-SQL requests might not do any logical reads at all (for example performing computations or a `WHILE` loop).
+There are a few scenarios that can lead to a query not completing for a long time: long execution , long wait, long compilation. For more information on this topic, see [Running vs. Waiting: why are queries slow?](troubleshoot-slow-running-queries.md#running-vs-waiting-why-are-queries-slow)
 
-        session_id|status| cpu_time | logical_reads |wait_time|wait_type|
-        |--|--|--|--|--|--|
-        |56 |running | 7038 |101000 |0 |NULL|
-        |56 |runnable  | 12040 |301000 |0 |NULL|
-        |56 |running | 17020 |523000|0 |NULL|
+#### Long execution time
 
-    - This article isn't applicable if you observe a wait scenario similar to the following one where the CPU doesn't change or changes very slightly, and the session is waiting on a resource.
+The troubleshooting steps in this article are applicable when you notice an output similar to the following one where the CPU is increasing proportionately to the elapsed time, without significant wait times.
 
-        session_id|status| cpu_time | logical_reads |wait_time|wait_type|
-        |--|--|--|--|--|--|
-        |56 |suspended|0 |3|8312 |LCK_M_U|
-        |56 |suspended|0|3|13318  |LCK_M_U|
-        |56 |suspended|0|5|18331 |LCK_M_U|
+session_id|status| cpu_time_minutes | elapsed_time_minutes|logical_reads |wait_time_minutes|wait_type|
+|--|--|--|--|--|--|--|
+|56 |running | 64.40 |23.50|0 |0.00|NULL|
 
-    For more information, see [Diagnose waits or bottlenecks](#diagnose-waits-or-bottlenecks).
+An increasing CPU time for the query under investigation with a status of `running` or `runnable` and minimal or zero wait time, and no wait_type all mean that this query is continuously executing. In other words, it's reading rows, joining, processing results, calculating, formatting which all examples of CPU-bound actions. Changes in `logical_reads` aren't relevant in this case as some CPU-bound T-SQL requests might not do any logical reads at all (for example performing computations or a `WHILE` loop). If you observe a query of this category that means you need to focus on reducing it's execution time. Typically, reducing execution time involves reducing the rows the query needs to process throughout its life by applying indexes, rewriting the query, updating statistics. For more information, see the [Resolution](#step-4-resolution) section.
 
-### Long compilation time
+#### Long wait time
 
-On rare occasions, you might observe that the CPU is increasing continuously over time but that's not driven by query execution. Instead, it could be driven by an excessively long compilation (the parsing and compiling of a query). In those cases, check the **transaction_name** output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
+This article isn't applicable if you observe a wait scenario similar to the following one where the CPU doesn't change or changes slightly, and the session is waiting on a resource.
 
-## Collect diagnostic data
+session_id|status| cpu_time_minutes | elapsed_time_minutes|logical_reads |wait_time_minutes|wait_type|
+|--|--|--|--|--|--|--|
+|56 |suspended | 0.03 |4.20|50 |4.10|LCK_M_U|
+
+The wait type indicates that the session is waiting on a resource. The long elapsed time associated with similar wait time indicates that the session has been waiting for most its life on this resource. Тhe low CPU time indicates little processing, mostly waiting.
+
+For more information, on how to diagnose waits, see [Diagnose waits or bottlenecks](#diagnose-waits-or-bottlenecks).
+
+#### Long compilation time
+
+On rare occasions, you might observe that the CPU is increasing continuously over time but that's not driven by query execution. Instead, it could be caused by an excessively long compilation (the parsing and compiling of a query). In those cases, check the **transaction_name** output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
+
+## Step 2. Collect diagnostic logs
+
+Once you have established that there's a never-ending query on the system, you can collect query plan data for the long-running query to troubleshoot further. Use one of the methods below, depending on the SQL Server version you have to do this collection.
+
+### Manual steps to collect diagnostic logs
 
 # [SQL Server 2008 - SQL Server 2014 (prior to SP2)](#tab/2008-2014)
 
@@ -196,7 +224,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
    SET SHOWPLAN_XML OFF
    ```
 
-1. Using the node ID with the highest row count identified by the query in step 3, find the same node in the estimated query plan. This step will help understand which operator in the plan is the main cause of the long execution time.
+1. Using the node ID with the highest row count identified by the query in step 3, find the same node in the estimated query plan. This step helps understand which operator in the plan is the main cause of the long execution time.
 
 1. Stop the XEvent by running the following command:
 
@@ -300,9 +328,21 @@ To identify the slow steps in the query, follow these steps:
 
 ---
 
-## Method to review the collected plans
+### Use SQL LogScout to capture never-ending queries
 
-This section will illustrate how to review the collected data. It will use the multiple XML query plans (using extension **.sqlplan*) collected in SQL Server 2016 SP1 and later builds and versions.
+You can use [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases) to capture logs while a never-ending query is running. To that, use the [never ending query scenario](https://github.com/microsoft/SQL_LogScout?tab=readme-ov-file#15-never-ending-query). Here's a command you can use to run:
+
+```powershell
+.\SQL_LogScout.ps1 -Scenario "NeverEndingQuery" -ServerName "."
+```
+
+Note, that this log capture requires that the long query has consumed at least 60 seconds of CPU, in order to capture logs.
+
+SQL LogScout captures, among other things, at least three query plans for each high-CPU consuming query. You can find file names titled similar to this `servername_datetime_NeverEnding_statistics_QueryPlansXml_Startup_sessionId_#.sqlplan`. You can use these files in the next step when you review plans to identify the reason for long query execution.
+
+## Step 3. Review the collected plans
+
+This section illustrates how to review the collected data. It uses the multiple XML query plans (using extension **.sqlplan*) collected in SQL Server 2016 SP1 and later builds and versions.
 
 Follow these steps to [compare execution plans](/sql/relational-databases/performance/compare-execution-plans#to-compare-execution-plans):
 
@@ -320,19 +360,19 @@ Follow these steps to [compare execution plans](/sql/relational-databases/perfor
 
    :::image type="content" source="media/troubleshoot-never-ending-query/query-plan-comparison.png" alt-text="Compare query plans in SSMS." lightbox="media/troubleshoot-never-ending-query/query-plan-comparison.png":::
 
-## Resolution
+## Step 4. Resolution
 
 1. Ensure that statistics are updated for the tables used in the query.
 
 1. Look for a missing index recommendation in the query plan and apply any.
 
-1. Rewrite the query with the goal to simplify it:
+1. Rewrite the query to simplify it:
 
    - Use more selective `WHERE` predicates to reduce the data processed up-front.
    - Break it apart.
    - Select some parts into temp tables, and join them later.
-   - Remove `TOP`, `EXISTS`, and `FAST` (T-SQL) in the queries that run for a very long time due to [optimizer row goal](https://techcommunity.microsoft.com/t5/sql-server-blog/more-showplan-enhancements-8211-row-goal/ba-p/385839). Alternatively, you can use the `DISABLE_OPTIMIZER_ROWGOAL` [hint](/sql/t-sql/queries/hints-transact-sql-query#use_hint). For more information, see [Row Goals Gone Rogue](/archive/blogs/bartd/row-goals-gone-rogue).
-   - Avoid using Common Table Expressions (CTEs) in such cases as they combine statements into a single big query.
+   - Remove `TOP`, `EXISTS`, and `FAST` (T-SQL) in the queries that run for a long time due to [optimizer row goal](https://techcommunity.microsoft.com/t5/sql-server-blog/more-showplan-enhancements-8211-row-goal/ba-p/385839). Alternatively, you can use the `DISABLE_OPTIMIZER_ROWGOAL` [hint](/sql/t-sql/queries/hints-transact-sql-query#use_hint). For more information, see [Row Goals Gone Rogue](/archive/blogs/bartd/row-goals-gone-rogue).
+   - Avoid using Common Table Expressions (CTEs) in such cases as they combine statements into a single large query.
 
 1. Try using [query hints](/sql/t-sql/queries/hints-transact-sql-query) to produce a better plan:
 
