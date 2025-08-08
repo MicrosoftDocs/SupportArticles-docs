@@ -209,8 +209,8 @@ Follow these steps:
 
     1. Check the [NativeMessagingUserLevelHosts](/deployedge/microsoft-edge-browser-policies/nativemessaginguserlevelhosts) policy. If **NativeMessagingUserLevelHosts** is disabled, enable it or make sure that `com.robin.messagehost` for the legacy browser extension and `com.microsoft.pad.messagehost` for the default browser extension are added to your **NativeMessagingAllowlist** policy in HKLM (Local Machine level).
 
-    > [!NOTE]
-    > **NativeMessagingUserLevelHosts** must be enabled when using the [Microsoft Store (MSIX) version of Power Automate for desktop](/power-automate/desktop-flows/install#install-power-automate-from-microsoft-store).
+      > [!NOTE]
+      > **NativeMessagingUserLevelHosts** must be enabled when using the [Microsoft Store (MSIX) version of Power Automate for desktop](/power-automate/desktop-flows/install#install-power-automate-from-microsoft-store).
 
 ### Check whether the message host points to the correct location
 
