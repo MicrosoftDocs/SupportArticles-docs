@@ -7,7 +7,7 @@ contributors:
   - kisubedi
   - kenseongtan
   - v-aangie
-ms.date: 08/07/2025
+ms.date: 08/08/2025
 ms.custom: sap:Flow run issues\Triggers
 ms.update-cycle: 180-days
 ms.author: kenseongtan
@@ -340,6 +340,7 @@ To ensure your flows continue to function as expected, follow these steps:
 
    - If your trigger URL uses a relative path parameter, ensure there are no beginning slashes in the field to avoid double slash errors.
    - Modify the relative path as needed and validate the trigger URL for correctness.
+
 
 
 
