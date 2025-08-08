@@ -32,6 +32,12 @@ This issue usually appears because there's a problem with the conditional access
 
 To solve this issue, before signing in to the Azure portal, the admin first needs to sign in to SharePoint and accept the Terms of Use. After that, they should be able to sign in to the Azure portal like normal.
 
+## Error: Assigning a user-assigned managed identity to a host pool doesn't propagate the assignment to the managed identity object
+
+If you configure a host pool to use a user-assigned managed identity object through Azure PowerShell or REST API, you may [view associated Azure resources for a user-assigned managed identity](/entra/identity/managed-identities-azure-resources/how-to-view-associated-resources-for-an-identity) and notice that the host pool object is not linked.
+
+This issue occurs due to an error in the assignment of the user-assigned managed identity. Double check the ID of the user-assigned managed identity (in the form of "/subscriptions/<subId>/resourcegroups/<resourceGroupName>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<managedIdentityName>"). Currently, the host pool APis will accept the parameter even if there is a missing "/" at the start of the ID.
+
 ## Next steps
 
 To review common error scenarios that the diagnostics feature can identify for you, see [Identify and diagnose issues](/azure/virtual-desktop/./troubleshoot-set-up-overview).
