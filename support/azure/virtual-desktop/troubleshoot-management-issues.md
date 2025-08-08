@@ -36,7 +36,7 @@ To solve this issue, before signing in to the Azure portal, the admin first need
 
 If you configure a host pool to use a user-assigned managed identity object through Azure PowerShell or REST API, you may [view associated Azure resources for a user-assigned managed identity](/entra/identity/managed-identities-azure-resources/how-to-view-associated-resources-for-an-identity) and notice that the host pool object is not linked.
 
-This issue occurs due to an error in the assignment of the user-assigned managed identity. Double check the ID of the user-assigned managed identity (in the form of "/subscriptions/subscriptionId/resourcegroups/resourceGroupName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/managedIdentityName"). Currently, the host pool APis will accept the parameter even if there is a missing "/" at the start of the ID.
+This issue occurs due to an error in the assignment of the user-assigned managed identity. Double check the ID of the user-assigned managed identity (in the form of "/subscriptions/subscriptionId/resourcegroups/resourceGroupName/providers/Microsoft.ManagedIdentity/userAssignedIdentities/managedIdentityName"). Currently, the host pool API will accept the parameter even if the ID missing a leading "/".
 
 ## Next steps
 
