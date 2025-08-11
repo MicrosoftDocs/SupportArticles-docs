@@ -22,7 +22,7 @@ This guide consolidates real-world failure scenarios, symptoms, root causes, and
 - Replication health states displayed as "Critical," "Paused," or "Resynchronization Required."
 - Virtual machines unexpectedly shutting down or becoming unavailable.
 
-## Technical/system symptoms
+## Technical or system symptoms
 
 - Replication is stuck at 1%, paused, or not progressing.
 - The Replica Broker or Replica role fails to come online in a cluster.
