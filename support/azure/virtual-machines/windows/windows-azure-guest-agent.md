@@ -170,7 +170,12 @@ Make sure that *WaAppAgent.exe* is running on the VM. If it isn't running, resta
 
 If Solution A doesn't resolve the issue, remove the currently installed version, and then [install the latest version of the agent manually](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#manual-installation).
 
+</details>
+
 ## The Npcap loopback adapter is installed
+
+<details>
+<summary>Click here for troubleshooting details</summary>
 
 You notice the following error entries in the *WaAppAgent.log* file:
 
