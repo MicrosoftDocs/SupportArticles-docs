@@ -138,7 +138,7 @@
       },
       "author": {
         "**/*.md": "JarrettRenshaw",
-        "azure/virtual-desktop/**/*.*": "kaushika-msft",
+        "azure/virtual-desktop/*.md": "kaushika-msft",
         "azure/**/*.md": "JarrettRenshaw",
         "entra/**/*.md": "JarrettRenshaw",
         "developer/**/*.md": "aartig13",
@@ -164,7 +164,7 @@
       },
       "ms.author": {
         "**/*.md": "dcscontentpm",
-        "azure/virtual-desktop/**/*.*": "kaushika",
+        "azure/virtual-desktop/*.md": "kaushika",
         "azure/**/*.md": "jarrettr",
         "entra/**/*.md": "jarrettr",
         "developer/**/*.md": "aartigoyle",
