@@ -457,3 +457,5 @@
     href: error-codes/zonalallocation-allocationfailed-error.md
   - name: SubnetIsDelegated error
     href: error-codes/subnetisdelegated-error.md
+  - name: VirtualNetworkNotInSucceededState error 
+    href: error-codes/virtualnetworknotinsucceededstate-error.md
