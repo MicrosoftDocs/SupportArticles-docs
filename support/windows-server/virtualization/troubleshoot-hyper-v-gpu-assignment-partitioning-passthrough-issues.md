@@ -24,17 +24,17 @@ The following checklist provides the general troubleshooting steps that you shou
 
 Make sure that your environment is supported for the specific method that you want to use. Follow these guidelines:
 
-- If you want to use live migration for VMs that use GPU acceleration, you have to use GPU-P and Windows Server 2025 or a newer version on the host computer. For more information about the differences in capabilities between Discrete Device Assignment (DDA) and GPU-P, see [Plan for GPU acceleration in Windows Server](/windows-server/virtualization/hyper-v/plan/plan-for-gpu-acceleration-in-windows-server).
+- To use live migration for VMs that use GPU acceleration, you have to use GPU-P and Windows Server 2025 or a newer version on the host computer. For more information about the differences in capabilities between Discrete Device Assignment (DDA) and GPU-P, see [Plan for GPU acceleration in Windows Server](/windows-server/virtualization/hyper-v/plan/plan-for-gpu-acceleration-in-windows-server).
 
-- If you want to use failover clusters and deploy GPUs by using DDA, you have to use Windows Server 2025. For more information, see [Use GPUs with Discrete Device Assignment in clustered VMs](/windows-server/virtualization/hyper-v/deploy/use-gpu-with-clustered-vm?tabs=windows-admin-center&pivots=windows-server).
+- To use failover clusters and deploy GPUs by using DDA, you have to use Windows Server 2025. For more information, see [Use GPUs with Discrete Device Assignment in clustered VMs](/windows-server/virtualization/hyper-v/deploy/use-gpu-with-clustered-vm?tabs=windows-admin-center&pivots=windows-server).
 
 - You can't assign the same GPU by using both DDA and GPU-P.
 
-- If you want to monitor GPU usage in Task Manager, the host computer must run Windows Server 2022 or a later version.
+- To monitor GPU usage in Task Manager, the host computer must run Windows Server 2022 or a later version.
 
 - DDA and GPU-P aren't supported on desktop-class hardware or client operating systems such as Windows 10 or 11 Pro.
 
-- If you want to use DDA to assign GPUs, the host computer has to run Windows Server 2016 or a newer version.
+- To use DDA to assign GPUs, the host computer has to run Windows Server 2016 or a newer version.
 
 - If you want to use GPU-P, the host computer has to run Windows Server 2025 or a newer version.
 
@@ -67,7 +67,7 @@ For more information about host computer prerequisites for DDA, see [Deploy grap
 
 For more information about host computer prerequisites for GPU-P, see [GPU Partitioning: Requirements](/windows-server/virtualization/hyper-v/gpu-partitioning#requirements).
 
-If your hardware doesn't support the GPU passthrough functionality that you want to use, upgrade the hardware. Incompatible hardware can cause a variety of issues when you try to configure or use GPUs.
+If your hardware doesn't support the GPU passthrough functionality that you want to use, upgrade the hardware. Incompatible hardware can cause various issues when you try to configure or use GPUs.
 
 ### Step 2: Check the host computer operating system and BIOS or UEFI settings
 
@@ -103,14 +103,14 @@ If you install any updates, restart the affected computers.
 
 ### Step 6: Check the drivers and GPU licensing
 
-To use GPU passthrough, you must have the correct software and correct license. The drivers that you need might differ depending on whether you're using DDA or GPU-P, and also depend on the functionality that you want to use. For example, to use live migration with GPU-P, you must use the driver that's included in the NVIDIA vGPU Software v18.*x* or a later version, and you must have a license that supports GPU-P.
+To use GPU passthrough, you must have the correct software and correct license. The drivers that you need might differ depending on whether you're using DDA or GPU-P, and also depend on the functionality that you want to use. For example, to use live migration together with GPU-P, you must use the driver that's included in the NVIDIA vGPU Software v18.*x* or a later version. Also, you must have a license that supports GPU-P.
 
-License or driver problems can cause a variety of symptoms, including the following:
+License or driver problems can cause the following symptoms, among others:
 
 - The Hyper-V or Windows Admin Center doesn't list GPUs as available for provisioning.
 - The Hyper-V or Windows Admin Center lists GPUs as "Ready for DDA assignment," but not for GPU-P.
 - Device manager on the VMs or host computer lists the GPUs as disabled or unrecognized.
-- You see error messages that includes error code 48F or error code 003.
+- You see error messages that include error code 48F or error code 003.
 - You can't configure a GPU pool for GPU-P.
 
 To check the drivers and licensing, follow these steps:
@@ -143,9 +143,9 @@ To check the drivers and licensing, follow these steps:
 ### Step 7 Check your administration tools
 
 - Windows Admin Center:
-  - Make sure that you've installed the latest version of Windows Admin Center.
-  - Make sure that you've installed the **GPUs** extension, version 2.8.0 or later.
-- Windows Powershell: Make sure that you've installed the Hyper-V module.
+  - Install the latest version of Windows Admin Center.
+  - Install the **GPUs** extension, version 2.8.0 or later.
+- Windows PowerShell: Install the Hyper-V module.
 
 ### Step 8 Check the VM configuration
 
@@ -188,11 +188,11 @@ Consider the following scenario:
 - The VMs are configured to use GPUs.
 - You open Task Manager to check the GPU processes.
 
-In this scenario, the **GPU** column is not displayed on the **Processes** tab and is not available on the columns menu. In such cases, the VMs default to using [Windows Display Driver Model](/windows-hardware/drivers/display/windows-vista-display-driver-model-design-guide) (WDDM) 1.*x*. This model doesn't support GPU monitoring in Task Manager.
+In this scenario, you don't see the **GPU** column on the **Processes** tab or on the columns menu. In such cases, the VMs default to using [Windows Display Driver Model](/windows-hardware/drivers/display/windows-vista-display-driver-model-design-guide) (WDDM) 1.*x*. This model doesn't support GPU monitoring in Task Manager.
 
 To resolve this issue, follow these steps:
 
-1. If you haven't already done so, make sure that the host computer and all VMs all have relevant Windows updates.
+1. Make sure that the host computer and all VMs have relevant Windows updates installed.
 
    If you install any updates, restart the affected computers.
 
@@ -237,7 +237,7 @@ To clean up this information and resolve this issue, follow these steps on the a
 
 1. To remove the old drivers and clean up related system files and registry entries, follow these steps:
 
-   1. Uninstall any incorrect drivers. For example, if you want to use GPU-P together with NVIDIA vGPU hardware, uninstall all non-vGPU NVIDIA drivers. To do this, run the following command at the command prompt:
+   1. Uninstall any incorrect drivers. For example, if you want to use GPU-P together with NVIDIA vGPU hardware, uninstall all non-vGPU NVIDIA drivers. To uninstall the driver, run the following command at the command prompt:
 
       ```console
       pnputil /delete-driver <Published Name> /uninstall /force
@@ -267,13 +267,13 @@ To clean up this information and resolve this issue, follow these steps on the a
 
 ### Can't assign a GPU to a VM because of insufficient resources
 
-When you're assigning a GPU to a VM, you might see error messages such as the following:
+When you're assigning a GPU to a VM, you might see error messages such as the following messages:
 
 > This Device Cannot Find Enough Free Resources to Use (Code:12)
 
 > GPU Partition: Error Insufficient system resources exist to complete the requested service.
 
-Such messages indicate that the VM doesn't have enough allocated Memory-Mapped IO (MMIO) space, or is otherwise misconfigured. For information about how to calculate and configure the resources that VMs need, see the following articles:
+Such messages indicate that the VM has insufficient allocated Memory-Mapped IO (MMIO) space, or is otherwise misconfigured. For information about how to calculate and configure the resources that VMs need, see the following articles:
 
 - For DDA, see [Deploy devices by using Discrete Device Assignment: MMIO space](/windows-server/virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment#mmio-space).
 - For GPU-P, see [Partition and assign GPUs to a virtual machine](/windows-server/virtualization/hyper-v/partition-assign-vm-gpu?tabs=windows-admin-center) and your NVIDIA vGPU documentation.
@@ -294,7 +294,7 @@ If you still can't resolve your issue, contact Microsoft Support or your vGPU ve
   Get-VMHostPartitionableGpu | FL Name, ValidPartitionCounts
    ```
 
-- If you haven't already done this, note the **Driver Model** information on the **Display** tab of the DirectX Diagnostic Tool.
+- Note the **Driver Model** information on the **Display** tab of the DirectX Diagnostic Tool.
 - In Device Manager, note the properties of the affected GPU from the **General**, **Driver,** and **Location Path** tabs.
 - In Windows Admin Center, note the GPU status.
 - Note any applicable load information that you see in Task Manager and `nvidia-smi`.
