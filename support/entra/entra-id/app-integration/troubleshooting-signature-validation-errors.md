@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Access Token Signature Validation Errors
 description: Helps you troubleshoot access token signature validation errors and provides solutions in some scenarios.
-ms.date: 08/08/2025
+ms.date: 08/11/2025
 ms.reviewer: willfid
 ms.service: entra-id
 ms.custom: sap:Developing or Registering apps with Microsoft identity platform
@@ -235,5 +235,6 @@ Refer to [Secure an Azure API Management API with Azure AD B2C](/azure/active-di
 [Validate tokens](/entra/identity-platform/access-tokens#validate-tokens)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
 
 
