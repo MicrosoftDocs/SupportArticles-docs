@@ -23,6 +23,14 @@ Machines running Windows 2003 will no longer receive Microsoft support and may n
 
 Migrating your applications to Azure instances running a newer version of Windows Server is the recommended approach to ensure that you are effectively leveraging the flexibility and reliability of the Azure cloud. Pre-configured images with different combinations of Windows and SQL Server are available in the Marketplace and enable you to run any compatible solution on our cost-effective, high-performance, reliable cloud computing platform. For more information, see [Windows Server 2003 migration strategy](https://www.microsoft.com/cloud-platform/windows-server-2003).
 
+> [!CAUTION]
+> This article references Windows Server versions that have reached End of Support (EOS).Microsoft has officially ended support for the following operating systems:
+> - Windows Server 2003
+> - Windows Server 2008 (including SP2 and R2 SP1)
+> - Windows Server 2012
+> - Windows Server 2012 R2
+As a result, Azure Migrate doesn’t guarantee consistent or reliable outcomes for these OS versions. Customers may face problems and are strongly advised to upgrade to a supported Windows Server version before starting migration.
+
 ## Frequently asked questions
 
 **When does extended support for Windows Server 2003 end?**
