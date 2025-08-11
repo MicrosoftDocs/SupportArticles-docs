@@ -48,8 +48,8 @@ To locate the installation packages in the system, search for the following regi
     HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages
  ```
 
-> [!IMPORTANT]
-> This issue might vary depending on each case, but the baseline of the issue remains the same.
+> [!NOTE]
+> The symptoms might vary depending on each case, but the cause of this issue remains the same.
 
 To investigate the cause further, examine the CBS.log file (C:\windows\logs\CBS), and search for output that resembles the following example:
 
