@@ -103,64 +103,13 @@ Check the following log locations for any notable errors:
 
 Compare any errors that you find to the following common scenarios that can cause the Azure VM Agent to show a **Not ready** status or stop working as expected.
 
-## Cause 1: Windows VMs that use Azure VM agent version 2.7.41491.1004 experience issues involving Sysprep
 
-Running Sysprep on these VMs might cause the following errors:
+## Can't connect to WireServer IP (168.63.129.16)
 
-- When you run Sysprep for the first time, you see the following error message:
+<details>
+<summary>Click here for troubleshooting details</summary>
 
-  > ADMINISTRATOR: Error Handler
-
-- When you run Sysprep more than one time, you see the following error message:
-
-  > A fatal error occurred while trying to sysprep the VM
-
-### Solution 1: Reset the Sysprep state of the VM, and then upgrade the Azure VM Agent to a later version
-
-[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
-
-First, reset the Sysprep state of the VM. The reset involves [modifying some registry keys](https://www.wintips.org/fix-sysprep-fatal-error-dwret-31-machine-invalid-state-couldnt-update-recorded-state/). Then, you can upgrade the Azure VM Agent to a later version. Because the issue occurs only in version 2.7.41491.1004, you can try upgrading the agent to the latest agent version.
-
-## Cause 2: Agent is stuck in the "Starting" process
-
-In the *WaAppAgent.log* file, you can see that the agent is stuck in the "Starting" process and can't start:
-
-```output
-[00000007] [05/28/2019 12:58:50.90] [INFO] WindowsAzureGuestAgent starting. Version 2.7.41491.901
-```
-
-The VM is still running the older version of Azure VM Agent. In the *C:\\WindowsAzure* folder, you might notice that many Azure VM Agent instances are installed, including several instances that have the same version. Because more than one agent instance is installed, the VM doesn't start the latest version of Azure VM Agent.
-
-### Solution 2: Manually uninstall and reinstall the Azure VM Agent
-
-Manually uninstall the Azure VM Agent, and then reinstall it by following these steps:
-
-1. Open **Control Panel** > **Programs and Features**, and uninstall Azure VM Agent.
-1. Start Task Manager, and then stop the following services:
-
-   - Azure VM Agent service
-   - RdAgent service
-   - Windows Azure Telemetry service
-   - Windows Azure Network Agent service
-
-1. Under *C:\\WindowsAzure*, create a folder that's named *OLD*.
-1. Move any folders that are named *Packages* or *GuestAgent* to the *OLD* folder. Also, move any of the *GuestAgent* folders in *C:\\WindowsAzure\\logs* that start as *GuestAgent_x.x.xxxxx* to the *OLD* folder.
-1. Download and install the latest version of the Windows Installer (MSI) agent from [the GitHub page for Azure Windows VM Agent releases](https://github.com/Azure/WindowsVMAgent/releases). You must have administrator rights to complete the installation.
-1. Install Guest Agent by running the following [msiexec](/windows-server/administration/windows-commands/msiexec) command:
-
-    ```cmd
-    msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log
-    ```
-
-1. Verify that the RdAgent, Azure VM Agent, and Windows Azure Telemetry services are now running.
-
-1. Check the *WaAppAgent.log* file to make sure that the latest version of Azure VM Agent is running.
-
-1. Delete the *OLD* folder under *C:\\WindowsAzure*.
-
-## Cause 3: Can't connect to WireServer IP (Host IP)
-
-You notice the following error entries in the *WaAppAgent.log* and *Telemetry.log* files:
+You notice the following error entries in the *WaAppAgent.log*:
 
 ```output
 [ERROR] GetVersions() failed with exception: Microsoft.ServiceModel.Web.WebProtocolException: Server Error: Service Unavailable (ServiceUnavailable) ---> 
@@ -179,29 +128,23 @@ at Microsoft.GuestAgentHostPlugin.Client.GuestInformationServiceClient.GetVersio
 at Microsoft.WindowsAzure.GuestAgent.ContainerStateMachine.HostGAPluginUtility.UpdateHostGAPluginAvailability()`
 ```
 
-These error entries indicate that VM can't reach the WireServer host server.
+These error entries indicate that VM can't reach the WireServer IP address 168.63.129.16.
 
-### Solution 3: Enable DHCP, and make sure that the server isn't blocked by firewalls, proxies, or other sources
+### Solution: Enable DHCP, and make sure that the server isn't blocked by firewalls, proxies, or other sources
 
-1. Because WireServer isn't reachable, connect to the VM by using Remote Desktop, and then try to access the URL, `http://168.63.129.16/?comp=versions`, in a web browser.
-1. If you can't reach the URL from step 1, check the network interface to determine whether it is enabled to use the Dynamic Host Configuration Protocol (DHCP) and has DNS. To check the DHCP status of the network interface, run the following [network shell](/windows-server/networking/technologies/netsh/netsh) (`netsh`) interface IP command for [show config](/previous-versions/windows/it-pro/windows-server-2003/cc738592(v=ws.10)#show-config):
-
-   ```cmd
-   netsh interface ip show config
-   ```
-
-1. If DHCP is disabled, run the following `netsh` interface IP command for [set address](/previous-versions/windows/it-pro/windows-server-2003/cc738592(v=ws.10)#set-address):
-
-   ```cmd
-   netsh interface ip set address name="<name-of-the-interface>" source=dhcp
-   ```
-
-   **Note:** In this command, change the placeholder value to the name of your interface.
+1. Connect to the VM by using Remote Desktop, and then test connectivity to 168.63.129.16. See the [Troubleshoot connectivity](https://learn.microsoft.com/en-us/azure/virtual-network/what-is-ip-address-168-63-129-16#troubleshoot-connectivity) section of What is IP address [168.63.129.16](https://learn.microsoft.com/en-us/azure/virtual-network/what-is-ip-address-168-63-129-16).
+1. If you only have one private IP on your VM's NIC, then we highly recommend having DHCP enabled in the guest VM.  If you need a static private IP address, you should configure it through the Azure portal or PowerShell, and make sure the DHCP option inside the VM is enabled. [Learn more](/azure/virtual-network/ip-services/virtual-networks-static-private-ip-arm-ps) about setting up a static IP address by using PowerShell. This will ensure that the IP configuration will always match what is configured on the VM in Azure.
+1. If you have multiple private IPs assigned to your VM's NIC, then ensure that you carefully follow the steps to [assign the IP configurations correctly](/azure/virtual-network/ip-services/virtual-network-multiple-ip-addresses-portal#os-config). After this, if the Guest Agent isn't able to communicate with 168.63.129.16, then please check that the primary IP in Windows [matches the primary IP in your VM's NIC in Azure](/troubleshoot/azure/virtual-machines/windows/no-internet-access-multi-ip).
 
 1. Check for any issues that a firewall, a proxy, or another source might cause that could block access to the IP address, `168.63.129.16`.
 1. Check whether Windows Firewall or a third-party firewall is blocking access to ports `80` and `32526`. For more information about why this address shouldn't be blocked, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16)
 
-## Cause 4: Guest Agent is stuck in the "Stopping" process  
+</details>
+
+## Guest Agent is stuck in the "Stopping" process  
+
+<details>
+<summary>Click here for troubleshooting details</summary>
 
 You notice the following error entries in the *WaAppAgent.log* file:
 
@@ -219,15 +162,20 @@ at Microsoft.WindowsAzure.GuestAgent.AgentCore.AgentService.<>c__DisplayClass2.<
 
 These error entries indicate that the Azure VM Agent is stuck in the "Stopping" process.
 
-### Solution 4a: Start WaAppAgent.exe and stop WindowsAzureGuest.exe
+### Solution A: Start WaAppAgent.exe and stop WindowsAzureGuest.exe
 
 Make sure that *WaAppAgent.exe* is running on the VM. If it isn't running, restart the RdAgent service, and then wait five minutes. After *WaAppAgent.exe* starts running, end the *WindowsAzureGuest.exe* process.
 
-### Solution 4b: Upgrade to the latest version of the Azure VM agent
+### Solution B: Upgrade to the latest version of the Azure VM agent
 
-If Solution 4a doesn't resolve the issue, remove the currently installed version, and then install the latest version of the agent manually.
+If Solution A doesn't resolve the issue, remove the currently installed version, and then [install the latest version of the agent manually](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#manual-installation).
 
-## Cause 5: The Npcap loopback adapter is installed
+</details>
+
+## The Npcap loopback adapter is installed
+
+<details>
+<summary>Click here for troubleshooting details</summary>
 
 You notice the following error entries in the *WaAppAgent.log* file:
 
@@ -239,11 +187,16 @@ You notice the following error entries in the *WaAppAgent.log* file:
 
 These error entries indicate that [Wireshark](https://www.wireshark.org) installed the packet capture ([Npcap](https://npcap.com)) loopback adapter of the Network Mapper ([Nmap](https://nmap.org)) Project on the VM. Wireshark is an open-source tool for profiling network traffic and analyzing packets. Such a tool is often referred to as a network analyzer, network protocol analyzer, or sniffer.
 
-### Solution 5: Disable the Npcap loopback adapter
+### Solution: Disable the Npcap loopback adapter
 
 Try to disable the Npcap loopback adapter, and then check whether the problem is resolved.
 
-## Cause 6: Remote Procedure Call (RPC) issues
+</details>
+
+## Remote Procedure Call (RPC) issues - RdCrypt Initialization failed
+
+<details>
+<summary>Click here for troubleshooting details</summary>
 
 You notice the following error entries in the *WaAppAgent.log* file:
 
@@ -258,7 +211,7 @@ Microsoft.Cis.Fabric.CertificateServices.RdCertificateFactory.Shutdown()
 
 These error entries are probably caused by Remote Procedure Call (RPC) issues. For example, the RPC endpoint might not be listening, or the RPC process might be missing on the opposite end.
 
-### Solution 6: Start the CNG Key Isolation service
+### Solution: Start the CNG Key Isolation service
 
 Check whether the [Cryptography Next Generation (CNG) Key Isolation](/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#cng-key-isolation) (`CNGKEYISO`) Windows service is in the list of RPC endpoints by running the following [portqry](../../../windows-server/networking/portqry-command-line-port-scanner-v2.md) command:
 
@@ -268,7 +221,12 @@ portqry -n <VMName> -e 135
 
 If you don't see the `CNGKEYISO` process, start it from the Windows Services console (CNG Key Isolation = `KeyIso`), and then restart *WaAppAgent.exe* or *WindowsAzureGuestAgent.exe*.
 
-## Cause 7: PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86
+</details>
+
+## PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86
+
+<details>
+<summary>Click here for troubleshooting details</summary>
 
 Windows Guest Agent is running, but extensions aren't working. You notice the following error entries in the *WaAppAgent.log* file:
 
@@ -281,7 +239,7 @@ PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86
 
 These error entries are probably caused by a lack of permissions on the *Crypto* folders for the SYSTEM account. If you collect a [Process Monitor](/sysinternals/downloads/procmon) (ProcMon) trace while you restart the Guest Agent services (RdAgent or WindowsAzureGuestAgent), you should be able to see some "Access Denied" errors.
 
-### Solution 7: Add full control of Crypto folders to the SYSTEM account
+### Solution: Add full control of Crypto folders to the SYSTEM account
 
 Make sure that the SYSTEM account has **Full Control** permissions on the following folders:
 
@@ -291,7 +249,12 @@ Make sure that the SYSTEM account has **Full Control** permissions on the follow
 
 - *C:\\ProgramData\\Microsoft\\Crypto\\SystemKeys*
 
-## Cause 8: System.BadImageFormatException: An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+</details>
+
+## System.BadImageFormatException: An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+
+<details>
+<summary>Click here for troubleshooting details</summary>
 
 You notice the following error entries in the *WaAppAgent.log* file that indicate that Guest Agent isn't responding:
 
@@ -307,7 +270,7 @@ Most likely, these error entries occur because a third-party application was ins
 
 A `BadImageFormatException` error occurs when a 64-bit application is loading a 32-bit DLL.
 
-### Solution 8: Set the Enable64Bit registry entry for .NET Framework and restart the VM
+### Solution: Set the Enable64Bit registry entry for .NET Framework and restart the VM
 
 [!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
@@ -317,7 +280,12 @@ If the **Enable64Bit** registry entry is set to **0**, then 64-bit .NET applicat
 
 The solution is to set the **Enable64Bit** key to **1**, and then restart the VM.
 
-## Cause 9: Windows Guest Agent doesn't start because of a ConfigurationErrorsException or TypeInitializationException error
+</details>
+
+## Windows Guest Agent doesn't start because of a ConfigurationErrorsException or TypeInitializationException error
+
+<details>
+<summary>Click here for troubleshooting details</summary>
 
 Windows Guest Agent stops responding upon startup, and the following Application log entries are displayed:
 
@@ -364,7 +332,7 @@ Exception Info: System.TypeInitializationException
 
 This issue might occur if the *C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\Config\\machine.config* file is missing or corrupted.
 
-### Solution 9: Copy a working machine.config file to the VM, and then restart the Guest Agent services
+### Solution: Copy a working machine.config file to the VM, and then restart the Guest Agent services
 
 To resolve the issue, follow these steps:
 
@@ -378,6 +346,179 @@ To resolve the issue, follow these steps:
    net start RdAgent
    net start WindowsAzureGuestAgent
    ```
+
+</details>
+
+## Installing the Guest Agent fails
+
+<details>
+<summary>Click here for troubleshooting details</summary>
+
+If installing the Guest Agent is failing, first ensure all [prerequisites for the Guest Agent](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#prerequisites) are satisfied.
+
+### Uninstall & Install Windows Guest Agent
+
+1. Check if Guest Agent is installed in Add/Remove Programs.  <b>PLEASE NOTE:</b>  If the Guest Agent was installed manually via the .MSI installer then the agent will show up in Add/Remove Programs.  If the Guest Agent was installed during image provisioning then it will not be seen in Add/Remove Programs.
+1. If the Guest Agent is present in Add/Remove programs, uninstall it from there, then you may install via .msi using command line arguments below.
+1. If it's been installed, but does not show up in Add/Remove programs, proceed to use the command line process to remove and install via direct execution of the .msi
+   1. Open an elevated command prompt.
+   1. Stop the Guest Agent Services, *if the services will not stop you will need to set the services to manual start up and restart the VM*
+     ```
+     net stop rdagent
+     net stop WindowsAzureGuestAgent
+     ```
+   1. Delete the Guest Agent Services
+     ```
+     sc delete rdagent
+     sc delete WindowsAzureGuestAgent
+     ```
+   1. Under C:\WindowsAzure create a folder that is named OLD.
+   1. Move any folders that are named Packages or GuestAgent into the OLD folder.
+   1. Create a new folder for the .msi install location (C:\VMAgentMSI)
+1. Download latest [MSI](https://github.com/Azure/WindowsVMAgent/releases) from the Github Releases for the Windows Guest Agent.
+1. Install guest agent using the MSI command line + arguments
+     ```
+     msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /L*v C:\Windows\Panther\msiexec.log
+     ```
+1. If the installation fails please collect the following files to investigate why it failed.
+    1. C:\Windows\Panther\msiexec.log
+    2. C:\Windows\Panther\VmAgentInstaller.xml
+
+</details>
+
+## Guest Agent install fails due to faulty WMI
+
+<details>
+<summary>Click here for troubleshooting details</summary>
+
+1. Download latest [MSI](https://github.com/Azure/WindowsVMAgent/releases) from the Github Releases for the Windows Guest Agent.
+1. Install guest agent using the MSI command line + arguments
+     ```
+     msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /L*v C:\Windows\Panther\msiexec.log
+     ```
+1. If the installation fails please collect the following files to investigate why it failed.
+    1. C:\Windows\Panther\msiexec.log
+    2. C:\Windows\Panther\VmAgentInstaller.xml
+
+You could find the error messages below on MSIEXEC.log and VmAgentInstaller.xml when trying to install the Guest Agent.
+
+MSIEXEC.log:
+```
+Action start 12:11:03: CA2.
+MSI (s) (7C:A8) [12:27:20:328]: Note: 1: 1722 2: CA2 3: wscript.exe 4: "C:\Program Files\Windows Azure VM Agent v2.7.41491.949\\InstallOrUpdateGA.vbs"
+MSI (s) (7C:A8) [12:27:20:328]: Note: 1: 2205 2:  3: Error
+MSI (s) (7C:A8) [12:27:20:328]: Note: 1: 2228 2:  3: Error 4: SELECT `Message` FROM `Error` WHERE `Error` = 1722
+CustomAction CA2 returned actual error code 1 (note this may not be 100% accurate if translation happened inside sandbox)
+MSI (s) (7C:A8) [12:27:22:707]: Note: 1: 2205 2:  3: Error
+MSI (s) (7C:A8) [12:27:22:707]: Note: 1: 2228 2:  3: Error 4: SELECT `Message` FROM `Error` WHERE `Error` = 1709
+MSI (s) (7C:A8) [12:27:22:707]: Product: Windows Azure VM Agent - 2.7.41491.949 -- Error 1722. There is a problem with this Windows Installer package. A program run as part of the setup did not finish as expected. Contact your support personnel or package vendor.  Action CA2, location: wscript.exe, command: "C:\Program Files\Windows Azure VM Agent v2.7.41491.949\\InstallOrUpdateGA.vbs"
+```
+
+C:\Windows\Panther\VmAgentInstaller.xml:  
+```
+Event time="2019-12-12T12:49:05.123Z" category="INFO" source="GuestAgent"><SetRdAgentServicePathInRegistry ServiceName="RdAgent" ServiceImagePath="C:\WindowsAzure\Packages_20191212_124856\WaAppAgent.exe"/></Event>
+<Event time="2019-12-12T12:49:05.163Z" category="ERROR" source="GuestAgent"><UnhandledError><Message>Setting the new RdAgent service path in registry failed.</Message><Number>424</Number><Description>Object required</Description><Source>Microsoft VBScript runtime error</Source></UnhandledError></Event>
+<Event time="2019-12-12T12:49:05.203Z" category="ERROR" source="GuestAgent"><ConfigureRdAgentService/></Event>
+<Event time="2019-12-12T12:49:05.258Z" category="ERROR" source="GuestAgent"><UnhandledError><Message>Installing the RdAgent service failed.</Message><Number>-2147467259</Number><Description>This name may not contain the ' ' character:
+```
+
+The VM agent MSI uses WMI StdRegProv to access the registry. If WMI is not working properly the MSI cannot set the RdAgent service path from the registry and the MSI install fails.
+
+### Solution
+
+1. Launch an elevated CMD prompt.
+2. Run this WMIC command to test if WMI StdRegProv is working. Copy the output to a text file. If you're usin g
+```
+wmic /namespace:\\root\default Class StdRegProv Call GetDWORDValue hDefKey="&H80000002" sSubKeyName="SYSTEM\CurrentControlSet\Services\Winmgmt" sValueName=Start
+```
+If you're using Windows Server 2025 or higher and you haven't manually installed WMIC then instead open an elevated PowerShell prompt to test StdRegProv:
+
+```
+Invoke-CimMethod -ClassName StdRegProv -MethodName GetDWORDValue -Arguments @{sSubKeyName = 'SYSTEM\CurrentControlSet\Services\Winmgmt';sValueName = 'Start'}
+```
+3.  Run this WINMGMT command to verify the WMI repository.  Copy the output to a text file.
+
+```
+winmgmt /verifyrepository
+```
+4. Backup the WMI repository.
+
+```
+xcopy c:\windows\system32\wbem\repository c:\windows\system32\wbem\repository.bak /e /i
+```
+5. Run the following command to fix the WMI issue. Copy the output to a text file.
+```
+winmgmt /salvagerepository
+```
+6. Try the VM agent MSI install again. If it completes successfully, after a minute or two check if the **RdAgent** service is running.
+```
+wmic service rdagent list brief
+```
+7. If the **WMIC** command shows **RdAgent** is running, the issue should be resolved. If the **WMIC** command fails or shows that **RdAgent** is not running, continue with the next steps.
+8. Run the following three commands to reset the WMI repository.
+
+```
+net stop winmgmt /y
+winmgmt /resetrepository
+net start winmgmt
+```
+9. Try the VM agent MSI install again. If it completes successfully, after a minute or two check if the **RdAgent** service is running.
+```
+wmic service rdagent list brief
+```
+10. At this point if the **WMIC** command still fails, or still doesn't show that **RdAgent** is running, send the **C:\Windows\Panther\VMAgentInstall.xml** file to support for review.
+
+</details>
+
+## Windows Azure Guest Agent service and/or the RdAgent service are crashing on startup 
+
+<details>
+<summary>Click here for troubleshooting details</summary>
+
+You'll notice System Event errors 7031 and/or 7034 and the C:\WindowsAzure\logs\TransparentInstaller.log shows the following:
+```
+[ERROR] System.Configuration.ConfigurationErrorsException: The type 'Microsoft.VisualStudio.Diagnostics.ServiceModelSink.Behavior, Microsoft.VisualStudio.Diagnostics.ServiceModelSink, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' registered for extension 'Microsoft.VisualStudio.Diagnostics.ServiceModelSink.Behavior' could not be loaded.
+
+(C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config line 242)
+```
+
+### Solution
+
+This may occur if Windows Communication Framework (WCF) profiling is enabled. WCF profiling should only be enabled while debugging a WCF issue. It should not be left enabled while running a production workload.
+
+To disable WCF profiling:
+
+ - Launch an elevated CMD prompt.
+ - Run the following commands to backup the existing `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config` file:  
+```
+cd C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config
+copy machine.config machine.config.bak
+```
+
+ - Run `notepad machine.config` to edit the file in Notepad.  
+Remove this text, being careful not to also remove any additional text that may be on the same line:  
+```
+<add name="Microsoft.VisualStudio.Diagnostics.ServiceModelSink.Behavior" type="Microsoft.VisualStudio.Diagnostics.ServiceModelSink.Behavior, Microsoft.VisualStudio.Diagnostics.ServiceModelSink, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+```
+
+Also remove this text, being careful not to also remove any additional text that may be on the same line:
+```
+<commonBehaviors><endpointBehaviors><Microsoft.VisualStudio.Diagnostics.ServiceModelSink.Behavior/></endpointBehaviors><serviceBehaviors><Microsoft.VisualStudio.Diagnostics.ServiceModelSink.Behavior/></serviceBehaviors></commonBehaviors>
+```
+
+ - Save and close the file.
+ - Restart the guest agent services:
+
+```cmd
+net stop Rdagent
+net stop WindowsAzureGuestAgent
+
+net start Rdagent
+net start WindowsAzureGuestAgent
+```
+ - In some cases the VM may need to be restarted for the WCF disablement to take affect.
+
+</details>
 
 ## Next steps
 
