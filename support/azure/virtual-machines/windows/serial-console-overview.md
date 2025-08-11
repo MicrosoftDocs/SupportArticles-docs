@@ -9,7 +9,7 @@ ms.service: azure-virtual-machines
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 07/23/2025
+ms.date: 07/29/2025
 ms.reviewer: mbifeld, v-weizhu
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
@@ -99,7 +99,7 @@ To access the Serial Console on your VM or virtual machine scale set instance, y
 - Serial Console is not supported when the storage account has **Allow storage account key access** disabled.
 
 > [!IMPORTANT]
-> Serial Console is now compatible with [managed boot diagnostics storage accounts](boot-diagnostics.md) and custom storage account firewalls.
+> By the end of 2025, Azure Serial Console will no longer utilize boot diagnostics storage accounts for establishing a connection. This change does not affect serial logs or screenshots.
 
 ## Get started with Serial Console
 
