@@ -3,7 +3,7 @@ title: Http.sys registry settings for Windows
 description: Registry values can be added to control Http.sys behavior.
 ms.date: 04/16/2020
 ms.custom: sap:Health, Diagnostic, and Performance Features\IIS logging
-ms.topic: article
+ms.topic: concept-article
 ---
 # Http.sys registry settings for Windows
 

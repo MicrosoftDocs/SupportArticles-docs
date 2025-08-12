@@ -4,7 +4,6 @@ description: This article describes a problem that triggers duplicate ASP.NET ev
 ms.date: 04/07/2020
 ms.custom: sap:Health, Diagnostic, and Performance Features\IIS ETW tracing providers
 ms.reviewer: amymcel, kaorif
-ms.topic: article
 ---
 # Child requests generate duplicate ASP.NET events in IIS
 

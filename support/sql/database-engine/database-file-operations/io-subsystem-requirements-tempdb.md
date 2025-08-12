@@ -4,7 +4,7 @@ description: This article describes the I/O subsystem requirements for the tempd
 ms.date: 06/12/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
 ms.reviewer: rdorr, jopilov
-ms.topic: article
+ms.topic: concept-article
 ---
 # Microsoft SQL Server I/O subsystem requirements for the tempdb database
 

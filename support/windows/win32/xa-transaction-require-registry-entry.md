@@ -3,7 +3,6 @@ title: XA transaction support requires registry entries
 description: This article explains about how to create registry values for all XA DLLs you intend to use in order to use Microsoft Distributed Transaction Coordinator (MS DTC), starting with Windows Server 2003.
 ms.date: 06/11/2025
 ms.custom: sap:Distributed Transactions\DTC programming and runtime
-ms.topic: article
 ---
 # Registry entries are required for XA transaction support
 
