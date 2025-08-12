@@ -1,7 +1,0 @@
-- name: Viva Insights troubleshooting
-  href: viva-insights-welcome.yml
-  items:
-    - name: Error messages
-      items:
-        - name: Resolve errors
-          href: ./error-messages/viva-insights-errors.md
