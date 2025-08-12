@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Virtual TPM, Shielded VM, and Host Guardian Service Issues
-description: Helps troubleshoot Virtual TPM (vTPM), shielded virtual machine (VM), and Host Guardian Service (HGS) issues in Hyper-V clusters.
-ms.date: 08/06/2025
+description: Helps troubleshoot virtual TPM (vTPM), shielded virtual machine (VM), and Host Guardian Service (HGS) issues in Hyper-V clusters.
+ms.date: 08/12/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,22 +13,22 @@ ai-usage: ai-assisted
 ---
 # Troubleshoot vTPM, shielded VM, and HGS issues in Hyper-V clusters
 
-This guide provides a structured approach to resolving issues with Virtual TPM (vTPM), shielded virtual machine (VM), and Host Guardian Service (HGS) in Hyper-V clusters. Always test changes in a nonproduction environment and maintain backups before implementing solutions. For unresolved issues, consult your hardware vendor or Microsoft support.
+This guide provides a structured approach to resolving issues with virtual Trusted Platform Module (vTPM), shielded virtual machine (VM), and Host Guardian Service (HGS) in Hyper-V clusters. Always test changes in a nonproduction environment and maintain backups before implementing solutions. For unresolved issues, consult your hardware vendor or Microsoft support.
 
 VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially for ensuring secure virtual environments and compliance with modern operating system requirements, such as Windows 11. However, issues with these features can arise due to misconfigurations, hardware or firmware incompatibilities, or software errors. These problems might impact VM startup, migration, or security configuration, causing significant disruptions. This guide consolidates common scenarios, their causes, and resolutions to help restore secure VM operations efficiently.
 
 ## End-user and technical symptoms
 
 - VMs with vTPM enabled fail to start or migrate between cluster nodes.
-- VMs remain operational only on their original host and can't fail over.
+- VMs remain operational only on their original hosts and can't fail over.
 - Shielded VMs can't start, migrate, or fail over.
 - Shield icons persist in management tools even after disabling shielding.
 - Attestation or key unwrap operations fail when using HGS over HTTPS.
 - VMs disappear from the cluster or management tools after cluster-aware updating or patching.
-- BitLocker enablement fails, or device encryption reports as unsupported.
+- BitLocker enablement fails, or device encryption is reported as unsupported.
 - HGS attestation fails on all or some guarded hosts.
 - VMs fail to start after enabling TPM or upgrading the operating system.
-- Expanding the HGS cluster with nodes of differing hardware models fails.
+- Expanding an HGS cluster with nodes of differing hardware models fails.
 - Device encryption support reports errors such as "Feature is not available," "winre is not configured," or "hardware security test interface failed."
 
 ## Specific error messages and event IDs
@@ -55,8 +55,8 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
 
 - Missing or mismatched certificates: vTPM and shielded VMs require signing and encryption certificates. Problems arise if certificates are missing or improperly restored during migration or export/import processes.
 - Untrusted or broken key protectors/guardians: Guardian misconfigurations or missing private keys can block VM operations.
-- Deleted or unrestored certificates: Shielded VM certificates that are accidentally deleted or not restored render VMs nonoperational.
-- Certificate Subject Alternative Name (SAN) or trust issues: HGS over HTTPS fails if certificates lack required SANs or if there are trust issues.
+- Deleted or unrestored certificates: Shielded VM certificates that are accidentally deleted or not restored cause VMs to become nonoperational.
+- Certificate Subject Alternative Name (SAN) or trust issues: HGS over HTTPS fails if certificates lack the required SANs or if there are trust issues.
 
 ### Resolution: Certificate and key protector resolution
 
@@ -65,7 +65,7 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
     - Export certificates from the source host using **certlm.msc** or PowerShell:
 
         ```powershell
-           Export-PfxCertificate -Cert (Get-ChildItem -Path Cert:\LocalMachine\My<thumbprint>) -FilePath C:\path\to\export.pfx -Password (ConvertTo-SecureString -String '' -AsPlainText -Force)
+        Export-PfxCertificate -Cert (Get-ChildItem -Path Cert:\LocalMachine\My<thumbprint>) -FilePath C:\path\to\export.pfx -Password (ConvertTo-SecureString -String '' -AsPlainText -Force)
         ```
 
     - Import certificates on the destination host:
@@ -84,7 +84,7 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
     ```
 
 3. Update signing and encryption certificates: Use `Set-VMKeyProtector` to assign the correct certificates.
-4. Resolve missing certificates: Create a new VM using the original VHDX file and configure vTPM and key protector.
+4. Resolve missing certificates. Create a new VM using the original VHDX file and configure the vTPM and key protector settings.
 
 ## Cause 2: TPM, hardware, driver, and firmware incompatibilities
 
@@ -105,21 +105,21 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
 
 ## Cause 3: Configuration and script errors
 
-- Improper PowerShell script usage: Errors in automation scripts for enabling vTPM or shielded VM features can create issues.
+- Improper PowerShell script usage: Errors in automation scripts for enabling vTPM or shielded VM features can cause issues.
 - Misconfiguration in HGS or cluster setup: Problems occur when required Windows features aren't enabled, or HGS registration is incorrect.
 - Mixing management tools: Concurrent modifications using tools like System Center Virtual Machine Manager (SCVMM), Failover Cluster Manager, and PowerShell can corrupt VM configurations.
 
 ### Resolution: Configuration, script, and management fixes
 
-1. Correct PowerShell scripts: Ensure scripts appropriately handle vTPM enabling and verification.
-2. Fix VM configuration corruption: Recreate VM shells with existing VHDX files and reassign key protectors.
+1. Correct PowerShell scripts. Ensure scripts appropriately handle vTPM enabling and verification.
+2. Fix VM configuration corruption. Re-create VM shells with existing VHDX files and reassign key protectors.
 3. Enable required Windows features:
 
     ```powershell
     Enable-WindowsOptionalFeature -Online -FeatureName IsolatedUserMode
     ```
 
-4. Maintain guarded fabric consistency: Import VMs onto hosts within the same guarded fabric.
+4. Maintain guarded fabric consistency. Import VMs onto hosts within the same guarded fabric.
 
 ## Cause 4: File system and cluster configuration corruption
 
@@ -128,8 +128,8 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
 
 ### Resolution: Permissions, registry, and file system checks
 
-1. Check file and folder permissions: Verify access rights for VM configurations and VHDX files.
-2. Validate registry settings: Confirm settings for virtualization-based security, TPM, and HGS.
+1. Check file and folder permissions. Verify access rights for VM configurations and VHDX files.
+2. Validate registry settings. Confirm settings for virtualization-based security, TPM, and HGS.
 
 ## Cause 5: Networking and security protocol issues
 
@@ -138,9 +138,9 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
 
 ### Resolution: HGS attestation, protocol, and networking steps
 
-1. Configure TLS protocols: Update registry settings to enable TLS 1.2 and disable TLS 1.0.
-2. Resolve HTTPS certificate issues: Ensure certificates include required SANs for all nodes.
-3. Troubleshoot attestation failures: Test network connectivity using `Test-NetConnection`.
+1. Configure TLS protocols. Update registry settings to enable TLS 1.2 and disable TLS 1.0.
+2. Resolve HTTPS certificate issues. Ensure certificates include the required SANs for all nodes.
+3. Troubleshoot attestation failures. Test network connectivity using `Test-NetConnection`.
 
 ## Cause 6: Supportability and documentation gaps
 
@@ -167,5 +167,5 @@ To gather data for troubleshooting:
 
 ## References
 
-- [PrepareSpecializedMachine Method](/previous-versions/windows/desktop/mspsserviceprov/msps-provisioningservice-preparespecializedmachine)
-- Hyper-V and HGS official documentation on configuration and troubleshooting.
+- [PrepareSpecializedMachine method of the Msps_ProvisioningService class](/previous-versions/windows/desktop/mspsserviceprov/msps-provisioningservice-preparespecializedmachine)
+- Hyper-V and HGS official documentation on configuration and troubleshooting
