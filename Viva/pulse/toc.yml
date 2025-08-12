@@ -4,4 +4,4 @@
     - name: Setup errors
       items:
         - name: Resolve setup errors
-          href: fix-setup-error-messages.md
+          href: ./setup-errors/fix-setup-error-messages.md

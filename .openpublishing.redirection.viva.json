@@ -39,6 +39,10 @@
     {
       "source_path": "Viva/Insights/viva-insights-errors.md",
       "redirect_url": "/troubleshoot/viva/insights/error-messages/viva-insights-errors"
+     },
+    {
+      "source_path": "Viva/pulse/fix-setup-error-messages.md",
+      "redirect_url": "/troubleshoot/viva/pulse/setup-errors/fix-setup-error-messages"
      }
   ]
 }
