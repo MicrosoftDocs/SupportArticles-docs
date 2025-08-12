@@ -83,7 +83,7 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
     Enable-VMTPM -VMName
     ```
 
-3. Update signing and encryption certificates: Use `Set-VMKeyProtector` to assign the correct certificates.
+3. Update signing and encryption certificates. Use `Set-VMKeyProtector` to assign the correct certificates.
 4. Resolve missing certificates. Create a new VM using the original VHDX file and configure the vTPM and key protector settings.
 
 ## Cause 2: TPM, hardware, driver, and firmware incompatibilities
@@ -94,7 +94,7 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
 
 ### Resolution: Firmware, driver, and hardware remediation
 
-1. Update storage and TPM firmware: Work with hardware vendors to apply the latest updates.
+1. Update storage and TPM firmware. Work with hardware vendors to apply the latest updates.
 2. Check TPM support for required algorithms:
 
     Verify RSAPSS support using:
@@ -106,7 +106,7 @@ VTPM, shielded VM, and HGS are vital features in Hyper-V clusters, especially fo
 ## Cause 3: Configuration and script errors
 
 - Improper PowerShell script usage: Errors in automation scripts for enabling vTPM or shielded VM features can cause issues.
-- Misconfiguration in HGS or cluster setup: Problems occur when required Windows features aren't enabled, or HGS registration is incorrect.
+- Misconfiguration in HGS or cluster setup: Problems occur when required Windows features aren't enabled or HGS registration is incorrect.
 - Mixing management tools: Concurrent modifications using tools like System Center Virtual Machine Manager (SCVMM), Failover Cluster Manager, and PowerShell can corrupt VM configurations.
 
 ### Resolution: Configuration, script, and management fixes
