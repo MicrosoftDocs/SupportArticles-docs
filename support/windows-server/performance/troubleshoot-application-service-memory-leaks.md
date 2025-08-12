@@ -1,11 +1,11 @@
 ---
 title: Application or Service Memory Leaks Troubleshooting Guidance
 description: Provides guidance on how to troubleshoot application or service memory leaks.
-ms.date: 07/24/2025
+ms.date: 08/12/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, warrenw, v-lianna
+ms.reviewer: kaushika, warrenw, vjulio, v-lianna
 ms.custom:
 - sap:system performance\app,process,service performance (slow,unresponsive)
 - pcy:WinComm Performance
