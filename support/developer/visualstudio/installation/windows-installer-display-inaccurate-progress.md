@@ -4,7 +4,6 @@ description: This article describes that the percentage, progress bar, and time 
 ms.date: 01/04/2021
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ms.reviewer: 
-ms.topic: article
 ---
 # Windows Installer Packages may display inaccurate progress during Install and Uninstall
 

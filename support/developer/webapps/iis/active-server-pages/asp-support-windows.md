@@ -3,7 +3,7 @@ title: Active Server Pages (ASP) support in Windows
 description: This article introduces ASP support in Windows and its support lifetime.
 ms.date: 02/27/2020
 ms.reviewer: mlaing
-ms.topic: article
+ms.topic: concept-article
 ms.custom: sap:Active Server Pages
 ---
 # Active Server Pages (ASP) support in Windows

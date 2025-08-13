@@ -3,7 +3,6 @@ title: IVssBackupComponents returns a value of 0x1 or S_FALSE
 description: "This article describes an issue where the IVssBackupComponents::Query method may return a value of 0x1 or S_FALSE."
 ms.date: 01/04/2021
 ms.reviewer: chrit
-ms.topic: article
 ms.custom: sap:Other Driver
 ---
 # IVssBackupComponents::Query returns a value of 0x1 or S_FALSE

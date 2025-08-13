@@ -4,7 +4,6 @@ description: This article describes some of the changes that were introduced in 
 ms.date: 12/18/2024
 ms.custom: sap:FTP Service and Svchost or Inetinfo Process Operation\Service configuration
 ms.reviewer: kaorif, mlaing, robmcm, dougste, zixie
-ms.topic: article
 ---
 # Changes in Microsoft FTP
 
