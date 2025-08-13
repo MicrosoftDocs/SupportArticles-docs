@@ -14,7 +14,7 @@ This article discusses methods for troubleshooting memory saturation issues. Mem
 ## Prerequisites
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
-- The open source project [Inspektor Gadget](../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget) for advanced process level memory analysis. For more information, see [How to install Inspektor Gadget in an AKS cluster](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster). 
+- The open source project [Inspektor Gadget](../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget) for advanced process level memory analysis. For more information, see [How to install Inspektor Gadget in an AKS cluster](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster).
 
 ## Symptoms
 
@@ -25,7 +25,7 @@ The following table outlines the common symptoms of memory saturation.
 | Unschedulable pods | Additional pods can't be scheduled if the node is close to its set memory limit. |
 | Pod eviction | If a node is running out of memory, the kubelet can evict pods. Although the control plane tries to reschedule the evicted pods on other nodes that have resources, there's no guarantee that other nodes have sufficient memory to run these pods. |
 | Node not ready | Memory saturation can cause `kubelet` and `containerd` to become unresponsive, eventually causing node readiness issues. |
-| Out-of-memory (OOM) kill | An OOM problem occurs if the pod eviction can't prevent a node issue. |
+| Out-of-memory (OOM) kill | An OOM problem occurs if the pod eviction can't prevent a node issue. For more information, see [Troubleshoot OOMkilled in AKS clusters](./troubleshoot-oomkilled-in-aks-clusters.md).|
 
 ## Troubleshooting checklist
 

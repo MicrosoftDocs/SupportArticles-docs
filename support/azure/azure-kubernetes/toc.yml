@@ -176,6 +176,8 @@
     href: availability-performance/cluster-service-health-probe-mode-issues.md
   - name: Troubleshoot pod scheduler errors 
     href: availability-performance/troubleshoot-pod-scheduler-errors.md
+  - name: Troubleshoot OOMkilled in AKS clusters
+    href: availability-performance/troubleshoot-oomkilled-in-aks-clusters.md
   - name: Troubleshoot node not ready
     items:
     - name: Basic troubleshooting
