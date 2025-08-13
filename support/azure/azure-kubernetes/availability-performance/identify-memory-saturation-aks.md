@@ -25,7 +25,7 @@ The following table outlines the common symptoms of memory saturation.
 | Unschedulable pods | Additional pods can't be scheduled if the node is close to its set memory limit. |
 | Pod eviction | If a node is running out of memory, the kubelet can evict pods. Although the control plane tries to reschedule the evicted pods on other nodes that have resources, there's no guarantee that other nodes have sufficient memory to run these pods. |
 | Node not ready | Memory saturation can cause `kubelet` and `containerd` to become unresponsive, eventually causing node readiness issues. |
-| Out-of-memory (OOM) kill | An OOM problem occurs if the pod eviction can't prevent a node issue. For more information, see [Troubleshoot OOMkilled in AKS clusters](./troubleshoot-oomkilled-in-aks-clusters.md).|
+| Out-of-memory (OOM) kill | An OOM problem occurs if the pod eviction can't prevent a node issue. For more information, see [Troubleshoot OOMkilled in AKS clusters](./troubleshoot-oomkilled-aks-clusters.md).|
 
 ## Troubleshooting checklist
 

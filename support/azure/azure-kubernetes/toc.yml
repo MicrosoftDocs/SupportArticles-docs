@@ -177,7 +177,7 @@
   - name: Troubleshoot pod scheduler errors 
     href: availability-performance/troubleshoot-pod-scheduler-errors.md
   - name: Troubleshoot OOMkilled in AKS clusters
-    href: availability-performance/troubleshoot-oomkilled-in-aks-clusters.md
+    href: availability-performance/troubleshoot-oomkilled-aks-clusters.md
   - name: Troubleshoot node not ready
     items:
     - name: Basic troubleshooting

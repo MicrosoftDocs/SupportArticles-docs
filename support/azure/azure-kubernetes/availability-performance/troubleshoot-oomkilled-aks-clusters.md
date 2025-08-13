@@ -175,7 +175,7 @@ User pods may be OOMKilled due to insufficient memory limits or excessive memory
 
 ### Cause 1: User workloads may be running in a system node pools
 
-It is recommended to create user node pools for user workloads. For more information, see: [Manage system node pools in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/use-system-pools).
+It is recommended to create user node pools for user workloads. For more information, see: [Manage system node pools in Azure Kubernetes Service (AKS)](/azure/aks/use-system-pools).
 
 ### Cause 2: Application pod keeps restarting due to OOMkilled
 
@@ -184,7 +184,7 @@ to it and it requires more, which will cause the pod to constantly
 restart.
 
 To solve, review request and limits documentation to understand how to modify
-your deployment accordingly. For more information, see [Resource Management for Pods and Containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/%22%20/l%20%22requests-and-limits).
+your deployment accordingly. For more information, see [Resource Management for Pods and Containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits).
 
 `kubectl set resources deployment \<deployment-name\>
 \--limits=memory=\<LIMITS\>Mi ---requests=memory=\<MEMORY\>Mi`
