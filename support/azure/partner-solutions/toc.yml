@@ -12,8 +12,6 @@
       href: log-forwarding-persists.md
     - name: Log limitations
       href: log-limitations.md
-    - name: Single sign-on errors
-      href: single-sign-on-errors.md
 - name: Dynatrace
   items: 
     - name: Diagnostic settings manual update
