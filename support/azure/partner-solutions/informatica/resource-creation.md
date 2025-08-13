@@ -1,5 +1,5 @@
-    ---
-title: Troubleshoot Informatica resource creation in Azure
+---
+title: Troubleshoot Informatica Resource Creation in Azure
 description: Learn how to resolve issues when creating Informatica resources in Azure, including permission and user profile requirements.
 author: ProfessorKendrick
 ms.author: kkendrick
@@ -9,8 +9,8 @@ ms.date: 08/04/2025
 ai-usage: ai-assisted
 
 #customer intent: As an Azure administrator or user, I want to resolve issues when I create Informatica resources so that I can successfully set up Informatica integration.
-
 ---
+
 # Can't create Informatica resource in Azure
 
 This article helps you resolve common issues that you might encounter when you try to create Informatica resources in Microsoft Azure. These issues include permission errors and missing user profile information.
@@ -27,7 +27,7 @@ This article helps you resolve common issues that you might encounter when you t
 
 ## Cause 1: Not a subscription owner
 
-The Informatica integration must be set up by users who have _Owner_ access on the Azure subscription.
+Only users who have _Owner_ access on the Azure subscription can set up the Informatica integration.
 
 ### Solution 1
 
