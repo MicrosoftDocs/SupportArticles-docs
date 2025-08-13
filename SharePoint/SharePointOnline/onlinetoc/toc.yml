@@ -207,6 +207,8 @@
       href: ../search/search-results-dont-appear-for-group-owners.md
   - name: Security
     items:
+    - name: Resolve false positive malware detections
+      href: ../security/false-positive-mailware-detections.md
     - name: Handling ransomware in SharePoint Online
       href: ../security/handling-ransomware-in-sharepoint-online.md
     - name: Migrated accounts aren't resolved
@@ -217,8 +219,6 @@
       href: ../Security/session-has-expired.md
     - name: There's a problem with your account when opening documents
       href: ../Security/problem-with-your-account.md
-    - name: SharePoint malware false positive guide
-      href: ../Security/sharepoint-malware-false-positive-guide.md
   - name: Sharing and Permissions
     items:
     - name: '"Access Denied due to organizational policies" error'
