@@ -524,4 +524,4 @@ $
 
 For more information about special characters to avoid using when you work with the database object names or the field names in all versions of Access, see the following Microsoft Knowledge Base article.
 
-[826763](https://support.microsoft.com/help/826763) Special characters you must avoid when you work with Access databases
+[826763](https://support.microsoft.com/help/826763) Error message when you use special characters in Access databases
