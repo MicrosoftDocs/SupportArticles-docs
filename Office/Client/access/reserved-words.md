@@ -318,7 +318,6 @@ The following is a list of reserved words to avoid when choosing identifiers.
     OFF
     OFFSET
     OFFSETS
-    OFOLEOBJECT
     OLEOBJECT
     ON
     ONONLY
