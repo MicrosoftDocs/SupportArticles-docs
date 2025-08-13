@@ -2792,8 +2792,6 @@ items:
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
     - name: Troubleshoot live migration issues
       href: ./virtualization/troubleshoot-live-migration-issues.md
-    - name: Windows 11 virtual machine doesn't start after you migrate it from VMware to Hyper-V
-      href: ./virtualization/windows-11-vm-wont-start-after-migrating-from-vmware-to-hyper-v.md
   - name: Shielded VMs
     items:
     - name: Troubleshoot a guarded fabric
@@ -2838,8 +2836,10 @@ items:
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
-    - name: virtual machine shutdown actions don't run
+    - name: Virtual machine shutdown actions don't run
       href: ./virtualization/vm-shutdown-actions-not-run.md
+    - name: Windows 11 virtual machine doesn't start after you migrate it from VMware to Hyper-V
+      href: ./virtualization/windows-11-vm-wont-start-after-migrating-from-vmware-to-hyper-v.md
   - name: Virtual machine will not boot
     items:
     - name: 0x8000FFFF error when you start VM

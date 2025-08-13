@@ -7,8 +7,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
 ms.custom:
-- sap:virtualization and hyper-v\migration
-- pcy:WinComm 
+- sap:virtualization and hyper-v\virtual machine state
+- pcy:WinComm Storage High avail
 ---
 
 # Windows 11 virtual machine doesn't start after you migrate it from VMware to Hyper-V
