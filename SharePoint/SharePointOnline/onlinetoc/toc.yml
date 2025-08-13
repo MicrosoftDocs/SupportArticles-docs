@@ -208,7 +208,7 @@
   - name: Security
     items:
     - name: Resolve false positive malware detections
-      href: ../security/false-positive-mailware-detections.md
+      href: ../security/false-positive-malware-detections.md
     - name: Handling ransomware in SharePoint Online
       href: ../security/handling-ransomware-in-sharepoint-online.md
     - name: Migrated accounts aren't resolved
