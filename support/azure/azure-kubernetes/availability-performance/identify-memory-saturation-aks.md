@@ -22,7 +22,7 @@ The following table outlines the common symptoms of memory saturation.
 
 | Symptom | Description |
 |---|---|
-| Unschedulable pods | Additional pods can't be scheduled if the node is close to its set memory limit. |
+| Unschedulable pods | More pods can't be scheduled if the node is close to its set memory limit. |
 | Pod eviction | If a node is running out of memory, the kubelet can evict pods. Although the control plane tries to reschedule the evicted pods on other nodes that have resources, there's no guarantee that other nodes have sufficient memory to run these pods. |
 | Node not ready | Memory saturation can cause `kubelet` and `containerd` to become unresponsive, eventually causing node readiness issues. |
 | Out-of-memory (OOM) kill | An OOM problem occurs if the pod eviction can't prevent a node issue. For more information, see [Troubleshoot OOMkilled in AKS clusters](./troubleshoot-oomkilled-aks-clusters.md).|
@@ -157,11 +157,11 @@ This procedure uses the kubectl commands in a console. It displays only the curr
    ```
 
     > [!NOTE]
-    > The percentage of CPU or memory usage for the node is based on the allocatable resources on the node rather than the actual node capacity.
+    > The percentage of CPU or memory usage for the node is based on the allocatable resources on the node instead of on the actual node capacity.
 
 ---
 
-Now that you've identified the pods that are using high memory, you can identify the applications that are running on the pod or identify processes that may be consuming excess memory.
+Now that you've identified the pods that are using high memory, you can identify the applications that are running on the pod or identify processes that might be consuming excess memory.
 
 ### Step 2: Identify process level memory usage
 
@@ -195,7 +195,7 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
         kubectl gadget run top_process --sort -memoryRelative --filter k8s.podName==<pod-name>
         ```
 
-   The output of the Inspektor Gadget `top_process` command resembles the following:
+   The output of the Inspektor Gadget `top_process` command resembles the following output:
 
    ```output
 
@@ -207,8 +207,7 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
 
    ```   
 
-You can use this output to identify the processes that are consuming the most memory on the node. The output can include the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU and memory usage, check [the documentation](https://aka.ms/igtopprocess) for more details.
-
+You can use this output to identify the processes that are consuming the most memory on the node. The output can include the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU, and memory usage. For more details, see [the documentation](https://aka.ms/igtopprocess).
 
 ### Step 3: Review best practices to avoid memory saturation
 
@@ -216,9 +215,9 @@ Review the following table to learn how to implement best practices for avoiding
 
 | Best practice | Description |
 |---|---|
-| Use memory [requests and limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits) | Kubernetes provides options to specify the minimum memory size (*request*) and the maximum memory size (*limit*) for a container. By configuring limits on pods, you can avoid memory pressure on the node. Make sure that the aggregate limits for all pods that are running doesn't exceed the node's available memory. This situation is called *overcommitting*. The Kubernetes scheduler allocates resources based on set requests and limits through [Quality of Service](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/) (QoS). Without appropriate limits, the scheduler might schedule too many pods on a single node. This might eventually bring down the node. Additionally, while the kubelet is evicting pods, it prioritizes pods in which the memory usage exceeds their defined requests. We recommend that you set the memory request close to the actual usage. |
+| Use memory [requests and limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits) | Kubernetes provides options to specify the minimum memory size (*request*) and the maximum memory size (*limit*) for a container. By configuring limits on pods, you can avoid memory pressure on the node. Make sure that the aggregate limits for all pods that are running doesn't exceed the node's available memory. This situation is called *overcommitting*. The Kubernetes scheduler allocates resources based on set requests and limits through [Quality of Service](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/) (QoS). Without appropriate limits, the scheduler might schedule too many pods on a single node. This situation might eventually bring down the node. Additionally, while the kubelet is evicting pods, it prioritizes pods in which the memory usage exceeds their defined requests. We recommend that you set the memory request close to the actual usage. |
 | Enable the [horizontal pod autoscaler](/azure/aks/tutorial-kubernetes-scale?tabs=azure-cli#autoscale-pods) | By scaling the cluster, you can balance the requests across many pods to prevent memory saturation. This technique can reduce the memory footprint on the specific node. |
-| Use [anti-affinity tags](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity) | For scenarios in which memory is unbounded by design, you can use node selectors and affinity or anti-affinity tags, which can isolate the workload to specific nodes. By using anti-affinity tags, you can prevent other workloads from scheduling pods on these nodes. This reduces the memory saturation problem. |
+| Use [anti-affinity tags](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity) | For scenarios in which memory is unbounded by design, you can use node selectors and affinity or anti-affinity tags, which can isolate the workload to specific nodes. By using anti-affinity tags, you can prevent other workloads from scheduling pods on these nodes and reduce the memory saturation problem. |
 | Choose [higher SKU VMs](https://azure.microsoft.com/pricing/details/virtual-machines/linux/) | VMs that have more random-access memory (RAM) are better suited to handle high memory usage. To use this option, you must create a new node pool, cordon the nodes (make them unschedulable), and drain the existing node pool. |
 | Isolate [system and user workloads](/azure/aks/use-system-pools#system-and-user-node-pools) | We recommend that you run your applications on a user node pool. This configuration makes sure that you can isolate the Kubernetes-specific pods to the system node pool and maintain the cluster performance. |
 
