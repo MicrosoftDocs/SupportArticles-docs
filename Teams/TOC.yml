@@ -166,6 +166,8 @@ items:
       href: /troubleshoot/office/onenote/temp-change-onenote-file-size-download?context=/troubleshoot/MicrosoftTeams/context/context
   - name: Phone System
     items:
+    - name: 10 Digit Long Code campaign rejections
+      href: ./phone-system/sms-calling-errors.md
     - name: Issues when using SIP devices
       href: ./phone-system/sip-gateway-issues.md
     - name: Dial Plans
