@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 ---
 # Can't create Informatica resource in Azure
 
-This article helps you resolve common issues, such as permission errors or missing user profile information, that you might encounter when you create Informatica resources in Microsoft Azure.
+This article helps you resolve common issues that you might encounter when you try to create Informatica resources in Microsoft Azure. These issues include permission errors and missing user profile information.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ The Informatica integration must be set up by users who have _Owner_ access on t
 
 ## Cause 2: Missing details in user profile
 
-You user profile has to be updated to include key business information for Informatica resource creation.
+Your user profile has to be updated to include key business information for Informatica resource creation.
 
 ### Solution 2
 
