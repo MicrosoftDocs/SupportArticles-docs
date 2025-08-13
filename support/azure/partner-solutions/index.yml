@@ -37,8 +37,6 @@ landingContent:
             url: log-forwarding-persists.md
           - text: Log limitations
             url: log-limitations.md
-          - text: Single sign-on errors
-            url: single-sign-on-errors.md
 
 # Card
   - title:  New Relic
