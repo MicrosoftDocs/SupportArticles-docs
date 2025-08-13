@@ -123,7 +123,7 @@ The following is a list of reserved words to avoid when choosing identifiers.
     CREATEFIELD
     CREATEGROUP
     CREATEINDEX
-    CREATOBJECT
+    CREATEOBJECT
     CREATEPROPERTY
     CREATERELATION
     CREATETABLEDEF
