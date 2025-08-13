@@ -2728,6 +2728,8 @@ items:
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
   - name: Configuration of virtual machine settings
     items:
+    - name: Can't access Hyper-V virtual machines via VMConnect
+      href: ./virtualization/cannot-access-hyper-v-virtual-machine-connect.md
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
       href: ./virtualization/copy-paste-not-work-hyper-v-vm-vmconnect-enhanced-session-mode.md
     - name: Hyper-V limits the maximum number of processors
