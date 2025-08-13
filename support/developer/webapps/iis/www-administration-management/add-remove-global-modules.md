@@ -4,7 +4,7 @@ description: This article describes how to add and remove global modules at both
 ms.date: 03/19/2020
 ms.custom: sap:WWW Administration and Management\General configuration settings
 ms.reviewer: mlaing
-ms.topic: article
+ms.topic: concept-article
 ---
 # Global Modules should be added and removed at both the server level and child level configuration in IIS
 
