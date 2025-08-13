@@ -134,7 +134,7 @@ The following is a list of reserved words to avoid when choosing identifiers.
     CURRENT
     CURRENT_DATE
     CURRENT_TIME
-    CURRENT_TIMESTAMPE
+    CURRENT_TIMESTAMP
     CURRENT_USER
     CURSOR
 -D
