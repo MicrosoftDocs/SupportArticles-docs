@@ -15,20 +15,20 @@ This article provides troubleshooting guidance for issues where a SQL query seem
 
 ## Symptoms
 
-This document focuses on queries that continue to execute or compile, that is, their CPU usage continues to increase. It doesn't apply to queries that are blocked or waiting on a resource that is never released. In those cases the CPU remains constant or changes only slightly.
+This document focuses on queries that continue to execute or compile, that is, their CPU usage continues to increase. It doesn't apply to queries that are blocked or waiting on a resource that is never released. In those cases, the CPU usage remains constant or changes only slightly.
 
 > [!IMPORTANT]
-> If a query is left to finish its execution, it may eventually complete. It could take just a few seconds, or it could take several days.
-> The term "never-ending" is used to describe the perception of a query not completing, even though the query may eventually complete.
+> If a query is left to finish its execution, it might eventually complete. It could take just a few seconds, or it could take several days.
+> The term "never-ending" is used to describe the perception of a query not completing, even though the query might eventually complete.
 
 ## Cause
 
 Common causes for long-running (never-ending) queries include:
 
-1. **Nested Loop joins on very large tables**  One common cause is a query that involves Nested Loop (NL) joins. Due to the nature of NL joins, a query that joins tables with lots of rows might run for a long time. There are some cases (`TOP`, `FAST`, other row goals), where no other type of join can be used by a query but NL joins. Therefore, even if a Hash match or a Merge join might be faster, the optimizer can't use them due to the row goal.
+1. **Nested Loop joins on very large tables**  One common cause is a query that involves Nested Loop (NL) joins. Due to the nature of NL joins, a query that joins tables with lots of rows might run for a long time. There are some cases (`TOP`, `FAST`, other row goals), when a query must use NL joins. Therefore, even if a Hash match or a Merge join might be faster, the optimizer can't use them due to the row goal.
 1. **Out-of-date statistics:** Queries that pick a plan based on outdated statistics might be suboptimal and take a long time to run.
-1. **Endless loops:** T-SQL queries that use WHILE loops may be incorrectly written, resulting in code that never leaves the loop and runs endlessly. These queries are truly never-ending and run until they're killed manually.
-1. **Complex queries with many joins and large tables:** Queries that involve many joined tables would typically result in complex query plans that might take a long time to execute. This is common with analytical queries that don't filter rows out and involve a large number of tables.
+1. **Endless loops:** T-SQL queries that use WHILE loops might be incorrectly written, resulting in code that never leaves the loop and runs endlessly. These queries are truly never-ending and run until they're killed manually.
+1. **Complex queries with many joins and large tables:** Queries that involve many joined tables would typically result in complex query plans that might take a long time to execute. This scenario is common with analytical queries that don't filter rows out and involve a large number of tables.
 1. **Missing indexes:** Queries can be made to run faster when appropriate indexes are used on tables. Indexes allow for a subset of the data to be selected and for faster access to the data.
 
 ## Solution
@@ -90,7 +90,7 @@ END
 
 #### 1.2 Examine the output to identify why the query is slow
 
-There are several scenarios that can lead to a query not completing for a long time: long execution, long wait, or long compilation. For more information on this topic, see [Running vs. Waiting: why are queries slow?](troubleshoot-slow-running-queries.md#running-vs-waiting-why-are-queries-slow)
+There are several scenarios that can lead to a query not completing for a long time: long execution, long wait, or long compilation. For more information on why query might be slow, see [Running vs. Waiting: why are queries slow?](troubleshoot-slow-running-queries.md#running-vs-waiting-why-are-queries-slow)
 
 ##### Long execution time
 
@@ -107,7 +107,7 @@ If the slow query has:
 - Minimal or zero wait time
 - No wait_type
 
-Then the query is continuously executing. In other words, it's reading rows, joining, processing results, calculating, or formatting which are all CPU-bound actions.
+Then the query is continuously executing. In other words, it's reading rows, joining, processing results, calculating, or formatting all of which are CPU-bound actions.
 
 > [!NOTE]
 > Changes in `logical_reads` aren't relevant in this case as some CPU-bound T-SQL requests might not do any logical reads at all, for example performing computations or a `WHILE` loop.
@@ -116,7 +116,7 @@ If the slow query meets these criteria, then focus on reducing it's execution ti
 
 ##### Long wait time
 
-This article isn't applicable if you observe a wait scenario similar to the following one where the CPU doesn't change or changes slightly, and the session is waiting on a resource.
+This article isn't applicable for wait scenarios. In a wait scenario, you might receive an output similar to the following, where the CPU doesn't change or changes slightly and the session is waiting on a resource.
 
 |session_id|status| cpu_time_minutes | elapsed_time_minutes|logical_reads |wait_time_minutes|wait_type|
 |--|--|--|--|--|--|--|
@@ -128,11 +128,11 @@ For more information, on how to diagnose waits, see [Diagnose waits or bottlenec
 
 ##### Long compilation time
 
-On rare occasions, you might observe that the CPU usage is increasing continuously over time but it's not driven by query execution. Instead, it can be caused by an excessively long compilation (the parsing and compiling of a query). In these cases, check the `transaction_name` output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
+On rare occasions, you might observe that the CPU usage is increasing continuously over time but not driven by query execution. Instead, an excessively long compilation (the parsing and compiling of a query) might be the cause. In these cases, check the `transaction_name` output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
 
 ### 2. Collect diagnostic logs
 
-Once you have determined that there's a never-ending query on the system, you can collect the query's plan data to troubleshoot further. Use one of the following methods, depending on your version of SQL Server, to do this collection:
+Once you determine that there's a never-ending query on the system, you can collect the query's plan data to troubleshoot further. Use one of the following methods, depending on your version of SQL Server, to do this collection:
 
 #### Manual steps to collect diagnostic logs
 
@@ -326,7 +326,7 @@ To identify the slow steps in the query, follow these steps:
 1. Select the XML link under the `query_plan` column. Once the graphical query plan opens in a new window, right-click on it and select **Save Execution Plan As...**. Repeat the steps to capture three or four snapshots, spaced one minute apart, to give you sufficient data for analysis. Specifically, you can compare the row count (actual number of rows) for each operator over time and see which of the operators is showing a significant increase in row count (by million or more).
 
     > [!NOTE]
-    > If you aren't getting any output from `sys.dm_exec_query_statistics_xml`, you can check whether the database option `LAST_QUERY_PLAN_STATS` has been disabled by running the following command:
+    > If you aren't getting any output from `sys.dm_exec_query_statistics_xml`, you can check whether the database option `LAST_QUERY_PLAN_STATS` is disabled by running the following command:
     >
     > ```sql
     > SELECT name, value, value_for_secondary, is_value_default 
@@ -347,7 +347,7 @@ You can use [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases) t
 ```
 
 > [!NOTE]
-> This log capture requires that the long query has consumed at least 60 seconds of CPU, in order to capture logs.
+> This log capture requires that the long query consumes at least 60 seconds of CPU, in order to capture logs.
 
 SQL LogScout captures at least three query plans for each high-CPU consuming query. You can find file names titled similar to `servername_datetime_NeverEnding_statistics_QueryPlansXml_Startup_sessionId_#.sqlplan`. You can use these files in the next step when you review plans to identify the reason for long query execution.
 
