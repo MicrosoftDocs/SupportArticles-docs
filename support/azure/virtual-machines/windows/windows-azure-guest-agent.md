@@ -7,10 +7,10 @@ ms.collection: windows
 author: kegregoi
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 03/17/2025
+ms.date: 08/14/2025
 ms.author: kegregoi
 editor: v-jsitser
-ms.reviewer: v-leedennis, scotro
+ms.reviewer: v-leedennis, scotro, v-liuamson
 ms.custom: sap:VM Extensions not operating correctly
 ---
 # Troubleshoot Azure Windows VM Agent issues
@@ -132,7 +132,7 @@ These error entries indicate that VM can't reach the WireServer IP address 168.6
 
 ### Solution: Enable DHCP, and make sure that the server isn't blocked by firewalls, proxies, or other sources
 
-1. Connect to the VM by using Remote Desktop, and then test connectivity to 168.63.129.16. See the [Troubleshoot connectivity](https://learn.microsoft.com/en-us/azure/virtual-network/what-is-ip-address-168-63-129-16#troubleshoot-connectivity) section of What is IP address [168.63.129.16](https://learn.microsoft.com/en-us/azure/virtual-network/what-is-ip-address-168-63-129-16).
+1. Connect to the VM by using Remote Desktop, and then test connectivity to 168.63.129.16. See the [Troubleshoot connectivity](/azure/virtual-network/what-is-ip-address-168-63-129-16#troubleshoot-connectivity) section of What is IP address [168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 1. If you only have one private IP on your VM's NIC, then we highly recommend having DHCP enabled in the guest VM.  If you need a static private IP address, you should configure it through the Azure portal or PowerShell, and make sure the DHCP option inside the VM is enabled. [Learn more](/azure/virtual-network/ip-services/virtual-networks-static-private-ip-arm-ps) about setting up a static IP address by using PowerShell. This will ensure that the IP configuration will always match what is configured on the VM in Azure.
 1. If you have multiple private IPs assigned to your VM's NIC, then ensure that you carefully follow the steps to [assign the IP configurations correctly](/azure/virtual-network/ip-services/virtual-network-multiple-ip-addresses-portal#os-config). After this, if the Guest Agent isn't able to communicate with 168.63.129.16, then please check that the primary IP in Windows [matches the primary IP in your VM's NIC in Azure](/troubleshoot/azure/virtual-machines/windows/no-internet-access-multi-ip).
 
@@ -168,7 +168,7 @@ Make sure that *WaAppAgent.exe* is running on the VM. If it isn't running, resta
 
 ### Solution B: Upgrade to the latest version of the Azure VM agent
 
-If Solution A doesn't resolve the issue, remove the currently installed version, and then [install the latest version of the agent manually](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#manual-installation).
+If Solution A doesn't resolve the issue, remove the currently installed version, and then [install the latest version of the agent manually](/azure/virtual-machines/extensions/agent-windows#manual-installation).
 
 </details>
 
@@ -354,7 +354,7 @@ To resolve the issue, follow these steps:
 <details>
 <summary>Click here for troubleshooting details</summary>
 
-If installing the Guest Agent is failing, first ensure all [prerequisites for the Guest Agent](https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/agent-windows#prerequisites) are satisfied.
+If installing the Guest Agent is failing, first ensure all [prerequisites for the Guest Agent](/azure/virtual-machines/extensions/agent-windows#prerequisites) are satisfied.
 
 ### Uninstall & Install Windows Guest Agent
 
