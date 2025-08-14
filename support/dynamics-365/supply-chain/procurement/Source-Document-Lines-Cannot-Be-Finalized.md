@@ -23,5 +23,5 @@ The state of the source document or source document line could not be updated.
    **Procurement and sourcing > Periodic tasks > Clean up > Purchase order distribution reset**
 2. Input the **Purchase Order (PO) number**.
 3. Click **OK**.
-4. The status of the PO will be updated to **Draft**.
+4. The status of the PO updates to **Draft**.
 5. Submit the workflow and confirm the PO again.
