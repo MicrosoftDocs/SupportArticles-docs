@@ -3158,8 +3158,10 @@ items:
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
       href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
-  - name: Windows Update for Business Reports
-    items:
+    - name: Troubleshoot Windows Installation Error 0x800f0831
+      href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
+    - name: Windows Update for Business Reports
+      items:
     - name: Initial service configuration and Onboarding
       items:
       - name: 'Troubleshooting guidance: Windows Update for Business reports'
