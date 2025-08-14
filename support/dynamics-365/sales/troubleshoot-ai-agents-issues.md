@@ -11,6 +11,8 @@ This article provides guidance to resolve issues where the AI agents ([Sales Qua
 
 ## Symptoms
 
+As an administrator, you may encounter the following symptoms when you try to configure or activate AI agents:
+
 - When you try to test, start, or update the agent's configuration, it remains in the **Starting Agent**, **Starting Test**, or **Applying changes** state for more than 10 minutes.
 - You receive error messages, such as:
   - > Something went wrong. Please try again.
