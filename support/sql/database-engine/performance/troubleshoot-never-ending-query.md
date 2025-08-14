@@ -355,7 +355,7 @@ SQL LogScout captures at least three query plans for each high-CPU consuming que
 
 This section describes how to review the collected data. It uses the multiple XML query plans (using extension `.sqlplan`) collected in SQL Server 2016 SP1 and later builds and versions.
 
-Follow these steps to [compare execution plans](/sql/relational-databases/performance/compare-execution-plans#to-compare-execution-plans):
+[Compare execution plans](/sql/relational-databases/performance/compare-execution-plans#to-compare-execution-plans) using the following steps:
 
 1. Open a previously saved query execution plan file (`.sqlplan`).
 
@@ -377,7 +377,7 @@ Follow these steps to [compare execution plans](/sql/relational-databases/perfor
 
 1. Look for a missing index recommendation in the query plan and apply any.
 
-1. Rewrite the query to simplify it:
+1. Simplify the query:
 
    - Use more selective `WHERE` predicates to reduce the data processed up-front.
    - Break it apart.
