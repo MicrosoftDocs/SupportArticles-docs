@@ -168,6 +168,8 @@ items:
     items:
     - name: Issues when using SIP devices
       href: ./phone-system/sip-gateway-issues.md
+    - name: Issues with port orders
+      href: ./phone-system/issues-with-port-orders.md
     - name: Dial Plans
       items: 
       - name: Errors when trying to manage dial plans
