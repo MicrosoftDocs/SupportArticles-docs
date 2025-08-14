@@ -4,7 +4,6 @@ description: This article describes the behavior of compressed backups when appe
 ms.date: 10/11/2020
 ms.custom: sap:Database Backup and Restore
 ms.reviewer: denzilr
-ms.topic: article
 ---
 # Behavior of compressed backups when you append backups to an existing media set
 

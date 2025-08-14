@@ -4,7 +4,6 @@ description: This article describes Microsoft support policy when you use third-
 ms.date: 09/03/2020
 ms.custom: sap:Queries, stored procedures, views, functions, triggers (T-SQL)\Queries, stored procedures, views, functions, triggers (T-SQL)
 ms.reviewer: rdorr
-ms.topic: article
 ---
 # Detours or similar techniques may cause unexpected behaviors with SQL Server
 
