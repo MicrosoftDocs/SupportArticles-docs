@@ -1,8 +1,6 @@
 ---
 title: Troubleshoot Activation Issues With Dynamics 365 Sales AI Agents
 description: Solves activation issues related to Sales Qualification Agent and Opportunity Research Agent in Microsoft Dynamics 365 Sales.
-author:
-ms.author: 
 ms.reviewer: aam, lavanyakr, pachatte
 ms.date: 08/14/2025
 ms.custom: 
