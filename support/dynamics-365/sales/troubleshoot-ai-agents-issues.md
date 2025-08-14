@@ -2,8 +2,8 @@
 title: Troubleshoot Activation Issues With Dynamics 365 Sales AI Agents
 description: Solves activation issues related to Sales Qualification Agent and Opportunity Research Agent in Microsoft Dynamics 365 Sales.
 author:
-ms.author: pachatte
-ms.reviewer: aam, lavanyakr
+ms.author: 
+ms.reviewer: aam, lavanyakr, pachatte
 ms.date: 08/14/2025
 ms.custom: 
 ---
@@ -27,7 +27,7 @@ This issue occurs when the agent can't start the Power Automate flow required fo
 
 If the query returns no results or if `softdeletestatus` is set to **1**, the issue is related to the Power Automate flow.
 
-[Learn more about callbackregistration EntityType](/power-apps/developer/data-platform/webapi/reference/callbackregistration?view=dataverse-latest).
+[Learn more about callbackregistration EntityType](/power-apps/developer/data-platform/webapi/reference/callbackregistration).
 
 ## Solution
 
