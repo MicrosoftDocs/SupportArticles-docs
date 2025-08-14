@@ -6,42 +6,38 @@ ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: shaunbe, v-jayaramanp, jopilov
 author: pijocoder
 ms.author: jopilov
+ms.topic: troubleshooting-problem-resolution
 ---
 
 # Troubleshoot queries that seem to never end in SQL Server
 
-This article describes the troubleshooting steps for the issue where you have a query that seems to never complete, or getting it to complete may take many hours or days.
+This article provides troubleshooting guidance for issues where a SQL query seems to never complete or takes an excessive amount of time to complete (hours or days).
 
-## What is a never-ending query?
+## Symptoms
 
-This document focuses on queries that continue to execute or compile, that is, their CPU continues to increase. It doesn't apply to queries that are blocked or waiting on some resource that is never released. In those cases the CPU remains constant or changes slightly.
+This document focuses on queries that continue to execute or compile, that is, their CPU usage continues to increase. It doesn't apply to queries that are blocked or waiting on a resource that is never released. In those cases the CPU remains constant or changes only slightly.
 
 > [!IMPORTANT]
-> If a query is left to finish its execution, it will eventually complete. It could take just a few seconds, or it could take several days.
-
-The term never-ending is used to describe the perception of a query not completing when in fact, the query will eventually complete.
+> If a query is left to finish its execution, it may eventually complete. It could take just a few seconds, or it could take several days.
+> The term "never-ending" is used to describe the perception of a query not completing, even though the query may eventually complete.
 
 ## Cause
 
-Common causes for long-running (never ending) queries include:
+Common causes for long-running (never-ending) queries include:
 
-1. **Nested Loop joins on very large tables**  Queries that process lots of rows of data and typically join multiple tables. One common example is a query that involves Nested Loop (NL) joins. Due to the nature of NL joins a query that joins tables with lots of rows might run for a long time. There are some cases (TOP, FAST - row goal), where no other type of join can be used by a query but NL joins. Therefore, even if a Hash match or a Merge Join might be faster, the optimizer can't use them due to the nature of row goal.
+1. **Nested Loop joins on very large tables**  One common cause is a query that involves Nested Loop (NL) joins. Due to the nature of NL joins, a query that joins tables with lots of rows might run for a long time. There are some cases (`TOP`, `FAST`, other row goals), where no other type of join can be used by a query but NL joins. Therefore, even if a Hash match or a Merge join might be faster, the optimizer can't use them due to the row goal.
 1. **Out-of-date statistics:** Queries that pick a plan based on outdated statistics might be suboptimal and take a long time to run.
-1. **Endless loops:** T-SQL queries that use WHILE loops might sometimes be incorrectly written. The result may be code that never leaves the loop and runs endlessly. These queries are truly never-ending and run until they're killed manually.
-1. **Complex queries with many joins and large tables:** Queries that involve many joined tables would typically result in complex query plans that might take a long time to execute. Especially common are analytical queries that don't filter rows out and involve a large number of tables.
-1. **Missing indexes:** Queries can be made to run faster when appropriate indexes are used on tables. Indexes allow for a subset of the data to be selected or to get to the data faster.
+1. **Endless loops:** T-SQL queries that use WHILE loops may be incorrectly written, resulting in code that never leaves the loop and runs endlessly. These queries are truly never-ending and run until they're killed manually.
+1. **Complex queries with many joins and large tables:** Queries that involve many joined tables would typically result in complex query plans that might take a long time to execute. This is common with analytical queries that don't filter rows out and involve a large number of tables.
+1. **Missing indexes:** Queries can be made to run faster when appropriate indexes are used on tables. Indexes allow for a subset of the data to be selected and for faster access to the data.
 
-## Step 1. Identify a never-ending query
+## Solution
 
-First find out if there's a never-ending query on the system. Also, to identify whether a query is taking a long time you need to understand whether it has
+### Step 1. Identify a never-ending query
 
-- long execution time
-- long wait time (stuck on a bottleneck)
-- long compilation time
+First, identify if there's a never-ending query on the system. To identify whether a query is taking a long time you need to determine if it has long execution time, long wait time (stuck on a bottleneck), or long compilation time.
 
-Follow these steps:
-
-### 1.1 Identify if there's a never-ending query
+#### 1.1 Identify if there's a never-ending query
 
 Run the following diagnostic query on your SQL Server instance where the never-ending query is active:
 
@@ -92,41 +88,53 @@ WAITFOR DELAY '00:00:05'
 END
 ```
 
-### 1.2 Examine the output to identify why query is taking long
+#### 1.2 Examine the output to identify why the query is slow
 
-There are a few scenarios that can lead to a query not completing for a long time: long execution , long wait, long compilation. For more information on this topic, see [Running vs. Waiting: why are queries slow?](troubleshoot-slow-running-queries.md#running-vs-waiting-why-are-queries-slow)
+There are several scenarios that can lead to a query not completing for a long time: long execution, long wait, or long compilation. For more information on this topic, see [Running vs. Waiting: why are queries slow?](troubleshoot-slow-running-queries.md#running-vs-waiting-why-are-queries-slow)
 
-#### Long execution time
+##### Long execution time
 
-The troubleshooting steps in this article are applicable when you notice an output similar to the following one where the CPU is increasing proportionately to the elapsed time, without significant wait times.
+The troubleshooting steps in this article are applicable when you receive an output similar to the following, where the CPU time is increasing proportionately to the elapsed time, without significant wait times.
 
-session_id|status| cpu_time_minutes | elapsed_time_minutes|logical_reads |wait_time_minutes|wait_type|
+|session_id|status| cpu_time_minutes | elapsed_time_minutes|logical_reads |wait_time_minutes|wait_type|
 |--|--|--|--|--|--|--|
 |56 |running | 64.40 |23.50|0 |0.00|NULL|
 
-An increasing CPU time for the query under investigation with a status of `running` or `runnable` and minimal or zero wait time, and no wait_type all mean that this query is continuously executing. In other words, it's reading rows, joining, processing results, calculating, formatting which all examples of CPU-bound actions. Changes in `logical_reads` aren't relevant in this case as some CPU-bound T-SQL requests might not do any logical reads at all (for example performing computations or a `WHILE` loop). If you observe a query of this category that means you need to focus on reducing it's execution time. Typically, reducing execution time involves reducing the rows the query needs to process throughout its life by applying indexes, rewriting the query, updating statistics. For more information, see the [Resolution](#step-4-resolution) section.
+If the slow query has:
 
-#### Long wait time
+- An increasing CPU time
+- A status of `running` or `runnable`
+- Minimal or zero wait time
+- No wait_type
+
+Then the query is continuously executing. In other words, it's reading rows, joining, processing results, calculating, or formatting which are all CPU-bound actions.
+
+> [!NOTE]
+> Changes in `logical_reads` aren't relevant in this case as some CPU-bound T-SQL requests might not do any logical reads at all, for example performing computations or a `WHILE` loop.
+
+If the slow query meets these criteria, then focus on reducing it's execution time. Typically, reducing execution time involves reducing the rows the query needs to process throughout its life by applying indexes, rewriting the query, updating statistics. For more information, see the [Resolution](#step-4-resolution) section.
+
+##### Long wait time
 
 This article isn't applicable if you observe a wait scenario similar to the following one where the CPU doesn't change or changes slightly, and the session is waiting on a resource.
 
-session_id|status| cpu_time_minutes | elapsed_time_minutes|logical_reads |wait_time_minutes|wait_type|
+|session_id|status| cpu_time_minutes | elapsed_time_minutes|logical_reads |wait_time_minutes|wait_type|
 |--|--|--|--|--|--|--|
 |56 |suspended | 0.03 |4.20|50 |4.10|LCK_M_U|
 
-The wait type indicates that the session is waiting on a resource. The long elapsed time associated with similar wait time indicates that the session has been waiting for most its life on this resource. Тhe low CPU time indicates little processing, mostly waiting.
+The wait type indicates that the session is waiting on a resource. A long elapsed and wait time indicates that the session has been waiting for most its life on this resource. Тhe low CPU time indicates little time was spend actually processing the query.
 
 For more information, on how to diagnose waits, see [Diagnose waits or bottlenecks](#diagnose-waits-or-bottlenecks).
 
-#### Long compilation time
+##### Long compilation time
 
-On rare occasions, you might observe that the CPU is increasing continuously over time but that's not driven by query execution. Instead, it could be caused by an excessively long compilation (the parsing and compiling of a query). In those cases, check the **transaction_name** output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
+On rare occasions, you might observe that the CPU usage is increasing continuously over time but it's not driven by query execution. Instead, it can be caused by an excessively long compilation (the parsing and compiling of a query). In these cases, check the `transaction_name` output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
 
-## Step 2. Collect diagnostic logs
+### 2. Collect diagnostic logs
 
-Once you have established that there's a never-ending query on the system, you can collect query plan data for the long-running query to troubleshoot further. Use one of the methods below, depending on the SQL Server version you have to do this collection.
+Once you have determined that there's a never-ending query on the system, you can collect the query's plan data to troubleshoot further. Use one of the following methods, depending on your version of SQL Server, to do this collection:
 
-### Manual steps to collect diagnostic logs
+#### Manual steps to collect diagnostic logs
 
 # [SQL Server 2008 - SQL Server 2014 (prior to SP2)](#tab/2008-2014)
 
@@ -142,13 +150,13 @@ To collect diagnostic data by using [SQL Server Management Studio](/sql/ssms/sql
     - Table spools.
     - Functions in the `SELECT` list that take a long time to process each row.
 
-1. If the query runs fast at any time, you can capture the "fast" executions [Actual XML Execution Plan](/sql/relational-databases/performance/display-an-actual-execution-plan) to compare.
+1. If the query runs quicker at any time, you can capture the "fast" executions [Actual XML Execution Plan](/sql/relational-databases/performance/display-an-actual-execution-plan) to compare.
 
 # [SQL Server 2014 (after SP2) and SQL Server 2016 (prior to SP1)](#tab/2014-2016)
 
-[The lightweight Query Profiling Infrastructure](/sql/relational-databases/performance/query-profiling-infrastructure#lwp) was introduced in these versions of SQL Server. It allows you to capture actual statistics during the execution of a slow query. This troubleshooting feature allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query.
+[The lightweight Query Profiling Infrastructure](/sql/relational-databases/performance/query-profiling-infrastructure#lwp) was introduced in SQL Server 2014. It allows you to capture actual statistics during the execution of a slow query. This troubleshooting feature allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query.
 
-To identify the slow steps in the query by using [Lightweight query execution statistics profiling infrastructure v1](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v1), follow these steps:
+To identify the slow steps in the query using [Lightweight query execution statistics profiling infrastructure v1](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v1), follow these steps:
 
 1. Run the following commands to enable the `query_thread_profile` XEvent:
 
@@ -171,9 +179,9 @@ To identify the slow steps in the query by using [Lightweight query execution st
     ALTER EVENT SESSION [NodePerfStats] ON SERVER STATE = START
     ```
 
-1. Start the affected never-ending query from application.
+1. Start the affected never-ending query from the application.
 
-1. Run the following command multiple times a minute or so apart to check the run-time execution statistics for the query plan operators:
+1. Run the following command multiple times, a minute or so apart, to check the run-time execution statistics for the query plan operators:
 
     ```sql
     SELECT CONVERT (varchar(30), getdate(), 126) as runtime,
@@ -212,7 +220,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
     OPTION (max_grant_percent = 3, MAXDOP 1)
     ```
 
-1. Capture three or four snapshots spaced one minute apart to give you sufficient data for analysis. Specifically, you can compare the `row_count` numbers for each operator over time and see which shows a significant increase in row count (million or more).
+1. Capture three or four snapshots, spaced one minute apart, to give you sufficient data for analysis. Specifically, you can compare the `row_count` numbers for each operator over time and see which shows a significant increase in row count (by a million or more).
 
 1. In a new query window in SSMS, capture an estimated query plan for the problem query by running the following commands:
 
@@ -224,7 +232,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
    SET SHOWPLAN_XML OFF
    ```
 
-1. Using the node ID with the highest row count identified by the query in step 3, find the same node in the estimated query plan. This step helps understand which operator in the plan is the main cause of the long execution time.
+1. Using the node ID with the highest row count identified by the query in step 3, find the same node in the estimated query plan. This step helps identify which operator in the plan is the main cause of the long execution time.
 
 1. Stop the XEvent by running the following command:
 
@@ -234,11 +242,11 @@ To identify the slow steps in the query by using [Lightweight query execution st
 
 # [SQL Server 2016 (after SP1) and SQL Server 2017](#tab/2016-2017)
 
-You can use the [Lightweight query execution statistics profiling infrastructure v2](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v2) to capture live query plans with actual values for row count. This profiling infrastructure allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query.
+You can use the [Lightweight query execution statistics profiling infrastructure v2](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v2) to capture live query plans with actual row counts. This profiling infrastructure allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query.
 
 To identify the slow steps in the query, follow these steps:
 
-1. To enable the lightweight infrastructure on these versions of SQL Server, use one of the following methods:
+1. To enable the lightweight infrastructure, use one of the following methods:
 
    - Enable [trace flag](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) 7412 by running the following command:
 
@@ -277,7 +285,9 @@ To identify the slow steps in the query, follow these steps:
    CROSS APPLY sys.dm_exec_sql_text (req.sql_handle) as t
    ```
 
-1. Run the following command three or four times spaced one minute apart to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more). Replace `<session_id>` with the integer value you found in the previous step 3.
+1. Run the following command three or four times, spaced one minute apart, to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time.
+
+   Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (by a million or more). Replace `<session_id>` with the integer value you found in the previous step.
 
     ```sql
     SELECT * FROM sys.dm_exec_query_statistics_xml (<session_id>)
@@ -293,7 +303,7 @@ To identify the slow steps in the query, follow these steps:
 
 # [SQL Server 2019 and later versions](#tab/2019)
 
-You can use the [Lightweight query execution statistics profiling infrastructure v3](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v3) to capture live query plans with actual values for row count. This profiling infrastructure allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query. Lightweight profiling is enabled by default on SQL Server 2019.
+You can use the [Lightweight query execution statistics profiling infrastructure v3](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v3) to capture live query plans with actual row counts. This profiling infrastructure allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query. Lightweight profiling is enabled by default on SQL Server 2019.
 
 To identify the slow steps in the query, follow these steps:
 
@@ -307,13 +317,13 @@ To identify the slow steps in the query, follow these steps:
    CROSS APPLY sys.dm_exec_sql_text (req.sql_handle) as t
    ```
 
-1. Run the following command three or four times to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time. Replace `<session_id>` with the integer value you found in the previous step 3.
+1. Run the following command to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time. Replace `<session_id>` with the integer value you found in the previous step.
 
     ```sql
     SELECT * FROM sys.dm_exec_query_statistics_xml (<session_id>)
     ```
 
-1. Specifically, select the XML link under the **query_plan** column. Once the graphical query plan opens in a new window, right-click on it and select **Save Execution Plan As...**. Repeat the steps to capture three or four snapshots spaced one minute apart to give you sufficient data for analysis. Specifically, you can compare the row count (actual number of rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more).
+1. Select the XML link under the `query_plan` column. Once the graphical query plan opens in a new window, right-click on it and select **Save Execution Plan As...**. Repeat the steps to capture three or four snapshots, spaced one minute apart, to give you sufficient data for analysis. Specifically, you can compare the row count (actual number of rows) for each operator over time and see which of the operators is showing a significant increase in row count (by million or more).
 
     > [!NOTE]
     > If you aren't getting any output from `sys.dm_exec_query_statistics_xml`, you can check whether the database option `LAST_QUERY_PLAN_STATS` has been disabled by running the following command:
@@ -328,39 +338,40 @@ To identify the slow steps in the query, follow these steps:
 
 ---
 
-### Use SQL LogScout to capture never-ending queries
+#### Use SQL LogScout to capture never-ending queries
 
-You can use [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases) to capture logs while a never-ending query is running. To that, use the [never ending query scenario](https://github.com/microsoft/SQL_LogScout?tab=readme-ov-file#15-never-ending-query). Here's a command you can use to run:
+You can use [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases) to capture logs while a never-ending query is running. Use the [never ending query scenario](https://github.com/microsoft/SQL_LogScout?tab=readme-ov-file#15-never-ending-query) with the following command:
 
 ```powershell
 .\SQL_LogScout.ps1 -Scenario "NeverEndingQuery" -ServerName "."
 ```
 
-Note, that this log capture requires that the long query has consumed at least 60 seconds of CPU, in order to capture logs.
+> [!NOTE]
+> This log capture requires that the long query has consumed at least 60 seconds of CPU, in order to capture logs.
 
-SQL LogScout captures, among other things, at least three query plans for each high-CPU consuming query. You can find file names titled similar to this `servername_datetime_NeverEnding_statistics_QueryPlansXml_Startup_sessionId_#.sqlplan`. You can use these files in the next step when you review plans to identify the reason for long query execution.
+SQL LogScout captures at least three query plans for each high-CPU consuming query. You can find file names titled similar to `servername_datetime_NeverEnding_statistics_QueryPlansXml_Startup_sessionId_#.sqlplan`. You can use these files in the next step when you review plans to identify the reason for long query execution.
 
-## Step 3. Review the collected plans
+### Step 3. Review the collected plans
 
-This section illustrates how to review the collected data. It uses the multiple XML query plans (using extension **.sqlplan*) collected in SQL Server 2016 SP1 and later builds and versions.
+This section describes how to review the collected data. It uses the multiple XML query plans (using extension `.sqlplan`) collected in SQL Server 2016 SP1 and later builds and versions.
 
 Follow these steps to [compare execution plans](/sql/relational-databases/performance/compare-execution-plans#to-compare-execution-plans):
 
-1. Open a previously saved query execution plan file (*.sqlplan*).
+1. Open a previously saved query execution plan file (`.sqlplan`).
 
 1. Right-click in a blank area of the execution plan and select **Compare Showplan**.
 
 1. Choose the second query plan file that you would like to compare.
 
-1. Look for thick arrows that indicate a large number of rows flowing between operators. Then select the operator before or after the arrow, and compare the number of **actual** rows across two plans.
+1. Look for thick arrows that indicate a large number of rows flowing between operators. Then select the operator before or after the arrow, and compare the number of **actual** rows across the two plans.
 
 1. Compare the second and third plans to see if the largest flow of rows happens in the same operators.
 
-   Here's an example:
+   For example:
 
    :::image type="content" source="media/troubleshoot-never-ending-query/query-plan-comparison.png" alt-text="Compare query plans in SSMS." lightbox="media/troubleshoot-never-ending-query/query-plan-comparison.png":::
 
-## Step 4. Resolution
+### Step 4. Resolution
 
 1. Ensure that statistics are updated for the tables used in the query.
 
@@ -371,7 +382,8 @@ Follow these steps to [compare execution plans](/sql/relational-databases/perfor
    - Use more selective `WHERE` predicates to reduce the data processed up-front.
    - Break it apart.
    - Select some parts into temp tables, and join them later.
-   - Remove `TOP`, `EXISTS`, and `FAST` (T-SQL) in the queries that run for a long time due to [optimizer row goal](https://techcommunity.microsoft.com/t5/sql-server-blog/more-showplan-enhancements-8211-row-goal/ba-p/385839). Alternatively, you can use the `DISABLE_OPTIMIZER_ROWGOAL` [hint](/sql/t-sql/queries/hints-transact-sql-query#use_hint). For more information, see [Row Goals Gone Rogue](/archive/blogs/bartd/row-goals-gone-rogue).
+   - Remove `TOP`, `EXISTS`, and `FAST` (T-SQL) in the queries that run for a long time due to [optimizer row goal](https://techcommunity.microsoft.com/t5/sql-server-blog/more-showplan-enhancements-8211-row-goal/ba-p/385839).
+      - Alternatively, you can use the `DISABLE_OPTIMIZER_ROWGOAL` [hint](/sql/t-sql/queries/hints-transact-sql-query#use_hint). For more information, see [Row Goals Gone Rogue](/archive/blogs/bartd/row-goals-gone-rogue).
    - Avoid using Common Table Expressions (CTEs) in such cases as they combine statements into a single large query.
 
 1. Try using [query hints](/sql/t-sql/queries/hints-transact-sql-query) to produce a better plan:
