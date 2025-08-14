@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot queries that seem to never complete in SQL Server
-description: Provides steps to help you identify and resolve issues where a query runs for a long time in SQL Server.
+title: Troubleshoot Queries That Seem Never to End in SQL Server
+description: Provides steps to help you identify and resolve issues in which a query runs for a long time in SQL Server.
 ms.date: 08/08/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: shaunbe, v-jayaramanp, jopilov
@@ -9,35 +9,35 @@ ms.author: jopilov
 ms.topic: troubleshooting-problem-resolution
 ---
 
-# Troubleshoot queries that seem to never end in SQL Server
+# Troubleshoot queries that seem to run endlessly in SQL Server
 
-This article provides troubleshooting guidance for issues where a SQL query seems to never complete or takes an excessive amount of time to complete (hours or days).
+This article provides troubleshooting guidance for issues in which a Microsoft SQL Server query takes an excessive amount of time to end (hours or days).
 
 ## Symptoms
 
-This document focuses on queries that continue to execute or compile, that is, their CPU usage continues to increase. It doesn't apply to queries that are blocked or waiting on a resource that is never released. In those cases, the CPU usage remains constant or changes only slightly.
+This article focuses on queries that seem to run or compile without end. That is, their CPU usage continues to increase. This article doesn't apply to queries that are blocked or waiting on a resource that is never released. In those cases, the CPU usage remains constant or changes only slightly.
 
 > [!IMPORTANT]
-> If a query is left to finish its execution, it might eventually complete. It could take just a few seconds, or it could take several days.
-> The term "never-ending" is used to describe the perception of a query not completing, even though the query might eventually complete.
+> If a query is left to finish its run, it might eventually finish. This process could take just a few seconds or several days.
+> The term "never-ending" is used here to describe the perception of a query that doesn't finish.
 
 ## Cause
 
-Common causes for long-running (never-ending) queries include:
+Common causes of long-running (never-ending) queries include:
 
-1. **Nested Loop joins on very large tables**  One common cause is a query that involves Nested Loop (NL) joins. Due to the nature of NL joins, a query that joins tables with lots of rows might run for a long time. There are some cases (`TOP`, `FAST`, other row goals), when a query must use NL joins. Therefore, even if a Hash match or a Merge join might be faster, the optimizer can't use them due to the row goal.
-1. **Out-of-date statistics:** Queries that pick a plan based on outdated statistics might be suboptimal and take a long time to run.
-1. **Endless loops:** T-SQL queries that use WHILE loops might be incorrectly written, resulting in code that never leaves the loop and runs endlessly. These queries are truly never-ending and run until they're killed manually.
-1. **Complex queries with many joins and large tables:** Queries that involve many joined tables would typically result in complex query plans that might take a long time to execute. This scenario is common with analytical queries that don't filter rows out and involve a large number of tables.
-1. **Missing indexes:** Queries can be made to run faster when appropriate indexes are used on tables. Indexes allow for a subset of the data to be selected and for faster access to the data.
+- **Nested Loop (NL) joins on very large tables:** Because of the nature of NL joins, a query that joins tables that have lots of rows might run for a long time. In some cases, including `TOP`, `FAST`, and other row goals, the query must use NL joins. Therefore, even if a hash match or a Merge join might be faster, the optimizer can't use either process because of the row goal.
+- **Out-of-date statistics:** Queries that pick a plan based on outdated statistics might be suboptimal and take a long time to run.
+- **Endless loops:** T-SQL queries that use WHILE loops might be incorrectly written. The resulting code never leaves the loop and runs endlessly. These queries are truly never-ending. They run until they're killed manually.
+- **Complex queries that have many joins and large tables:** Queries that involve many joined tables would typically have complex query plans that might take a long time to run. This scenario is common in analytical queries that don't filter out rows and that involve a large number of tables.
+- **Missing indexes:** Queries can be accelerated if appropriate indexes are used on tables. Indexes let a subset of the data be selected, thereby providing faster access to the data.
 
-## Solution
+## Resolution
 
-### Step 1. Identify a never-ending query
+### Step 1. Discover never-ending queries
 
-First, identify if there's a never-ending query on the system. To identify whether a query is taking a long time you need to determine if it has long execution time, long wait time (stuck on a bottleneck), or long compilation time.
+Look for a never-ending query that's running on the system. You have to determine whether a query has a long execution time, a long wait time (stuck on a bottleneck), or a long compilation time.
 
-#### 1.1 Identify if there's a never-ending query
+#### 1.1  Run a diagnostic
 
 Run the following diagnostic query on your SQL Server instance where the never-ending query is active:
 
@@ -88,9 +88,9 @@ WAITFOR DELAY '00:00:05'
 END
 ```
 
-#### 1.2 Examine the output to identify why the query is slow
+#### 1.2 Examine the output
 
-There are several scenarios that can lead to a query not completing for a long time: long execution, long wait, or long compilation. For more information on why query might be slow, see [Running vs. Waiting: why are queries slow?](troubleshoot-slow-running-queries.md#running-vs-waiting-why-are-queries-slow)
+There are several scenarios that can cause a query to run for a long time: long execution, long wait, and long compilation. For more information about why a query might run slowly, see [Running vs. Waiting: why are queries slow?](troubleshoot-slow-running-queries.md#running-vs-waiting-why-are-queries-slow)
 
 ##### Long execution time
 
@@ -277,7 +277,7 @@ To identify the slow steps in the query, follow these steps:
 
 1. Start the affected never-ending query from the application.
 
-1. Use a command similar to the following one to identify the `Session_id` of your never-ending query that is running:
+1. Run a command that resembles the following command to identify the `Session_id` of your never-ending query that's running:
 
    ```sql
    SELECT t.text, session_id 
@@ -285,9 +285,9 @@ To identify the slow steps in the query, follow these steps:
    CROSS APPLY sys.dm_exec_sql_text (req.sql_handle) as t
    ```
 
-1. Run the following command three or four times, spaced one minute apart, to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time.
+1. To examine the query plan and actual statistics in the plan, run the following command three or four times, each instance one minute apart. Make sure that you save the query plan every time so you can compare the plans and establish which query operator is consuming most of the CPU time.
 
-   Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (by a million or more). Replace `<session_id>` with the integer value you found in the previous step.
+   Specifically, you can compare the row count (Actual Number of Rows) for each operator over time to see which of the operators is showing a significant increase in row count (by a million or more). Replace `<session_id>` with the integer value that you found in the previous step.
 
     ```sql
     SELECT * FROM sys.dm_exec_query_statistics_xml (<session_id>)
