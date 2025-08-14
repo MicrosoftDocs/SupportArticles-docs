@@ -107,7 +107,7 @@ If the slow query has:
 - Minimal or zero wait time
 - No wait_type
 
-Then the query is continuously executing. In other words, it's reading rows, joining, processing results, calculating, or formatting all of which are CPU-bound actions.
+Then the query is continuously executing. In other words, it's reading rows, joining, processing results, calculating, or formatting, all of which are CPU-bound actions.
 
 > [!NOTE]
 > Changes in `logical_reads` aren't relevant in this case as some CPU-bound T-SQL requests might not do any logical reads at all, for example performing computations or a `WHILE` loop.
