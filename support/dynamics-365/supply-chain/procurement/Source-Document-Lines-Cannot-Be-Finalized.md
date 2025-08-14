@@ -1,6 +1,6 @@
 ---
-title: Source Document Lines Cannot Be Finalized
-description: Provides a resolution for the issue that a Source Document Lines Cannot Be Finalized.
+title: Source Document Lines Can't Be Finalized
+description: Provides a resolution for the issue that a Source Document Lines Can't Be Finalized.
 author: Sumit
 ms.date: 08/14/2025
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
@@ -12,11 +12,11 @@ ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 ---
-# Troubleshooting Guide: Source Document Lines Cannot Be Finalized
+# Troubleshooting Guide: Source Document Lines Can't Be Finalized
 
 ## Symptom
-The source document lines cannot be finalized until the status is **Confirmed**.  
-The state of the source document or source document line could not be updated.
+The source document lines can't be finalized until the status is **Confirmed**.  
+The state of the source document or source document line couldn't be updated.
 
 ## Resolution
 1. Navigate to:  
