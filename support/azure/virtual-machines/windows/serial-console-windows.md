@@ -8,10 +8,9 @@ manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.collection: windows
-ms.topic: article
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
-ms.date: 04/29/2025
+ms.date: 07/29/2025
 ms.author: mbifeld
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
@@ -141,6 +140,13 @@ By default, all subscriptions have serial console access enabled. You can disabl
 ## Serial Console security
 
 ### Use Serial Console with custom boot diagnostics storage account firewall enabled
+
+> [!CAUTION]
+> There's a known issue where Azure Serial Console might fail to connect when a custom boot diagnostics storage account has firewall restrictions. This issue occurs because Azure Serial Console runs in Microsoft's internal tenant, and firewall rules on the customer-managed storage account might block its access, even with correct permissions.
+> To avoid connectivity issues, [switch to managed boot diagnostics](boot-diagnostics.md#enable-boot-diagnostics-on-existing-virtual-machine) (recommended) or remove the firewall on the custom boot diagnostics storage account.
+
+> [!IMPORTANT]
+> By the end of 2025, Azure Serial Console will no longer utilize boot diagnostics storage accounts for establishing a connection. No customer action is required for this change. This change doesn't affect serial logs or screenshots.
 
 Serial Console uses the storage account configured for boot diagnostics in its connection workflow. When a firewall is enabled on this storage account, the Serial Console service IPs must be added as exclusions. To do this, follow these steps:
 

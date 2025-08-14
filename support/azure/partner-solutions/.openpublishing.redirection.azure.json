@@ -1,0 +1,9 @@
+{
+    "redirections": [
+      {
+        "source_path": "welcome-native-integrations.yml",
+        "redirect_url": "index.yml",
+        "redirect_document_id": false
+      }
+    ]
+}

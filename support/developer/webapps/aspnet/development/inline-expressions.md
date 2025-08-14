@@ -4,7 +4,7 @@ description: This article introduces the usage of ASP.NET inline expressions in 
 ms.date: 03/26/2020
 ms.custom: sap:General Development
 ms.reviewer: wawang
-ms.topic: article
+ms.topic: concept-article
 ---
 # ASP.NET inline expressions in the .NET Framework
 
