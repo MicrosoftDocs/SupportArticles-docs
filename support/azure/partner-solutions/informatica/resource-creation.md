@@ -2,10 +2,11 @@
 title: Troubleshoot Informatica Resource Creation in Azure
 description: Learn how to resolve issues when creating Informatica resources in Azure, including permission and user profile requirements.
 author: ProfessorKendrick
-ms.author: kkendrick
+ms.author: jarrettr
+ms.reviewer: kkendrick
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution 
-ms.date: 08/04/2025
+ms.date: 08/14/2025
 ai-usage: ai-assisted
 
 #customer intent: As an Azure administrator or user, I want to resolve issues when I create Informatica resources so that I can successfully set up Informatica integration.
