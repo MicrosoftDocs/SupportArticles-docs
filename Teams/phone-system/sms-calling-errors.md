@@ -41,7 +41,7 @@ The error codes that are presented in this section are organized by parameters, 
 | CallToActionMissingExplicitConsent | The Call to Action doesn't express explicit or written consent. | Add language that clearly obtains user consent. |
 | CallToActionMissingExpressWrittenConsent | The Call to Action doesn't obtain express written consent for promotional message content. | Add a checkbox or statement for express written consent. |
 | CallToActionMissingHelpInstructions | The Call to Action doesn't include HELP instructions. | Add HELP instructions for user support. |
-| CallToActionMissingMessageFrequencyDisclosure | The Call to Action doesn't include the frequency at which messages will be sent. | Add a statement about message frequency. |
+| CallToActionMissingMessageFrequencyDisclosure | The Call to Action doesn't include the frequency at which messages are sent. | Add a statement about message frequency. |
 | CallToActionMissingPrivacyPolicyLink | The Call to Action or the opt-in form doesn't include a link to the privacy policy. | Add a link to the privacy policy or a statement about data sharing. |
 | CallToActionMissingStopInstructions | The Call to Action doesn't contain STOP instructions. | Add STOP instructions to enable users to opt out. |
 | CallToActionMissingTermsAndConditions | The Call to Action doesn't contain full terms and conditions or a link to them. | Add the full terms or a link to them. |
@@ -117,7 +117,7 @@ The error codes that are presented in this section are organized by parameters, 
 |-------|-------------|--------------------|
 | CampaignAttributesMissingOrInvalid | The campaign attributes are missing or invalid or not configured correctly. | Review the campaign attributes and make sure that all required fields are filled correctly. |
 | CampaignAttributesNotMatchingCampaignDescription | The campaign attributes phone number or link is set to False, but the campaign description indicates a phone number or link. | Update the campaign attributes to match the description, especially regarding phone numbers and links. |
-| CampaignContainsDisallowedContent | The campaign description includes disallowed content such as gambling, high-risk financial services, illegal substances, or SHAFT content. | Remove any content that's related to SHAFT or other prohibited categories. Review CTA guidelines for compliance. |
+| CampaignContainsDisallowedContent | The campaign description includes disallowed content such as gambling, high-risk financial services, illegal substances, or SHAFT content. | Remove any SHAFT content or other prohibited categories. Review CTA guidelines for compliance. |
 | CampaignDescriptionNotMatchingBrandName | The submitted legal company name doesn't match the provided tax ID. | Make sure that the brand name matches the legal entity and tax ID records. |
 | CampaignDescriptionNotMatchingUseCase | The campaign description doesn't sufficiently describe the service or doesn't match the declared use cases. | Update the campaign description to clearly describe the service and align the description with the declared use cases. |
 | CampaignDescriptionNotUnique | The campaign description isn't unique or is a duplicate. | Modify the campaign description to be unique and specific to the brand's use case. |
