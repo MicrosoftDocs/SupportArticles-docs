@@ -21,7 +21,7 @@ You repeatedly receive an authentication error message:
 
 > Local security authority cannot be contacted.
 
-After about 20 days, you can't connect to any virtual machines, regardless of the operating system (Windows or Linux), via VMConnect.
+You can't connect to any virtual machines, regardless of the operating system (Windows or Linux), via VMConnect.
 
 ## Missing TLS cryptography registry keys
 
