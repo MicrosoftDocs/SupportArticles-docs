@@ -347,7 +347,7 @@ You can use [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases) t
 ```
 
 > [!NOTE]
-> This log capture requires that the long query consumes at least 60 seconds of CPU, in order to capture logs.
+> This log capture requires that the long query consumes at least 60 seconds of CPU time, in order to capture logs.
 
 SQL LogScout captures at least three query plans for each high-CPU consuming query. You can find file names titled similar to `servername_datetime_NeverEnding_statistics_QueryPlansXml_Startup_sessionId_#.sqlplan`. You can use these files in the next step when you review plans to identify the reason for long query execution.
 
