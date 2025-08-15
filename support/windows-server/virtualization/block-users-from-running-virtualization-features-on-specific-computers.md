@@ -13,7 +13,7 @@ ms.custom:
 
 # How to block users from running Hyper-V and VMware virtual machines on workstation-class computers
 
-This article provides guidance on how to use Windows PowerShell or Group Policy to block users from running virtualization software, such as Hyper-V and VMware, on workstation-class computers. These procedures apply to scenarios in which the you want to prevent such software from running, regardless of a user's administrative rights, on both domain-joined and non-domain-joined computers.
+This article provides guidance on how to use Windows PowerShell or Group Policy to block users from running virtualization software, such as Hyper-V and VMware, on workstation-class computers. These procedures apply to scenarios in which you want to prevent such software from running, regardless of a user's administrative rights, on both domain-joined and non-domain-joined computers.
 
 *Applies to:* Hyper-V Server 2019
 
@@ -63,7 +63,7 @@ To block users from running VMware Workstation, follow these steps:
 
    1. If there aren't any software restriction policies, right-click **Software Restriction Policies**, and then select **New Software Restriction Policies**.
    1. Right-click **Additional Rules**, and then select **New path rule**.
-   1. In the **Path** box, pecify the path to the VMware executable files (for example, type *C:\\Program Files (x86)\\VMware\\*, or type the path to specific .exe files).
+   1. In the **Path** box, specify the path to the VMware executable files (for example, type *C:\\Program Files (x86)\\VMware\\*, or type the path to specific .exe files).
    1. Select **Security level**, and then select **Disallowed**.
    1. Select **OK**.
 1. To propagate the policy change, restart all of the target computers.
