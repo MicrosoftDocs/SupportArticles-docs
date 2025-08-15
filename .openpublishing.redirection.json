@@ -13803,27 +13803,27 @@
     },
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hub.md",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hubs"
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
     }
     ,
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/exporting-directory-level-activity-logs-to-event-hub.md",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/export-directory-level-activity-logs-to-event-hubs"
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
     }
     ,
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/pushing-subscription-activity-logs-to-sentinel.md",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
+      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/push-subscription-activity-logs-to-sentinel.md"
     }
     ,
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/resolving-log-limit-issues-in-azure-function-apps.md",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
+      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/resolve-log-limit-issues-in-azure-functions-apps"
     }
     ,
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/understanding-and-managing-diagnostic-settings-retention.md",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitorn"
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
     }
     ,
     {
