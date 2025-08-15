@@ -70,6 +70,10 @@
       href: troubleshoot-sales-premium-issues.md
     - name: Troubleshoot relationship intelligence
       href: troubleshoot-relationship-intelligence.md
+- name: Sales Qualification Agent
+  items: 
+    - name: Dynamics 365 Sales AI agent is stuck during activation
+      href: troubleshoot-ai-agents-issues.md
 - name: Teams Dialer
   items:
     - name: Can't enable Teams dialer
