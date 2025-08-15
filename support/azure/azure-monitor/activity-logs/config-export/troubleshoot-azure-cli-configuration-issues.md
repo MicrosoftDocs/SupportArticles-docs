@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot Azure CLI Configuration Issues
-description: Troubleshooting guide for Azure CLI configuration issues.
-ms.date: 07/28/2025
+title: Troubleshoot Azure CLI configuration due to proxy issues
+description: Troubleshooting guide for Azure CLI configuration issues due to proxy issues.
+ms.date: 08/15/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of activity logs
 ---
 
-# Troubleshoot Azure CLI configuration issues
+# Troubleshoot Azure CLI configuration due to proxy issues
 
 This article discusses issues that are related to configuring Microsoft Azure to export activity logs by using PowerShell or CLI. Because of missing proxy certificates, users might experience difficulties when they try to run PowerShell commands.
 
