@@ -29,7 +29,7 @@ Common causes of long-running (never-ending) queries include:
 - **Out-of-date statistics:** Queries that pick a plan based on outdated statistics might be suboptimal and take a long time to run.
 - **Endless loops:** T-SQL queries that use WHILE loops might be incorrectly written. The resulting code never leaves the loop and runs endlessly. These queries are truly never-ending. They run until they're killed manually.
 - **Complex queries that have many joins and large tables:** Queries that involve many joined tables would typically have complex query plans that might take a long time to run. This scenario is common in analytical queries that don't filter out rows and that involve a large number of tables.
-- **Missing indexes:** Queries can be accelerated if appropriate indexes are used on tables. Indexes let a subset of the data be selected, thereby providing faster access to the data.
+- **Missing indexes:** Queries can be accelerated if appropriate indexes are used on tables. Indexes enable the selection of a subset of the data to provide faster access.
 
 ## Resolution
 
@@ -112,7 +112,7 @@ In this situation, the query is reading rows, joining, processing results, calcu
 > [!NOTE]
 > Changes in `logical_reads` aren't relevant in this case because some CPU-bound T-SQL requests, such as performing computations or a `WHILE` loop, might not do any logical reads at all.
 
-If the slow query meets these criteria, focus on reducing its runtime. Typically, reducing runtime involves reducing thenumber of rows that the query has to process throughout its life by applying indexes, rewriting the query, or updating statistics. For more information, see the [Resolution](#step-4-resolution) section.
+If the slow query meets these criteria, focus on reducing its runtime. Typically, reducing runtime involves reducing the number of rows that the query has to process throughout its life by applying indexes, rewriting the query, or updating statistics. For more information, see the [Resolution](#step-4-resolution) section.
 
 #### Long wait time
 
@@ -132,13 +132,13 @@ For more information about how to diagnose waits, see [Diagnose waits or bottlen
 
 #### Long compilation time
 
-On rare occasions, you might observe that the CPU usage increases continuously over time but is not driven by the query run. Instead, an excessively long compilation (the parsing and compiling of a query) might be the cause. In these cases, check the `transaction_name` output column for a value of `sqlsource_transform`. This transaction name indicates a compilation.
+On rare occasions, you might observe that the CPU usage increases continuously over time but isn't driven by the query run. Instead, an excessively long compilation (the parsing and compiling of a query) might be the cause. In these cases, check the `transaction_name` output column for a value of `sqlsource_transform`. This transaction name indicates a compilation.
 
 ### 2. Collect diagnostic logs manually
 
 After you determine that a never-ending query exists on the system, you can collect the query's plan data to troubleshoot further. To collect the data, use one of the following methods, depending on your version of SQL Server.
 
-#### [SQL Server 2008 - SQL Server 2014 (prior to SP2)](#tab/2008-2014)
+#### [SQL Server 2008 - SQL Server 2014 (earlier than SP2)](#tab/2008-2014)
 
 To collect diagnostic data by using [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) (SSMS), follow these steps:
 
@@ -154,9 +154,9 @@ To collect diagnostic data by using [SQL Server Management Studio](/sql/ssms/sql
 
 1. If the query runs quicker at any time, you can capture the "fast" runs ([actual XML execution plan](/sql/relational-databases/performance/display-an-actual-execution-plan)) to compare results.
 
-#### [SQL Server 2014 (after SP2) and SQL Server 2016 (prior to SP1)](#tab/2014-2016)
+#### [SQL Server 2014 (later than SP2) and SQL Server 2016 (earlier than SP1)](#tab/2014-2016)
 
-[The lightweight Query Profiling Infrastructure](/sql/relational-databases/performance/query-profiling-infrastructure#lwp) was introduced in Microsoft SQL Server 2014. It lets you to capture actual statistics while a slow query runs. This troubleshooting feature enables you to examine query operators in a query plan at runtime and understand where most of the time is spent in a query.
+[The lightweight Query Profiling Infrastructure](/sql/relational-databases/performance/query-profiling-infrastructure#lwp) was introduced in Microsoft SQL Server 2014. It lets you capture actual statistics while a slow query runs. This troubleshooting feature enables you to examine query operators in a query plan at runtime and understand where most of the time is spent in a query.
 
 To identify the slow steps in the query nu using [Lightweight query execution statistics profiling infrastructure v1](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v1), follow these steps:
 
@@ -242,7 +242,7 @@ To identify the slow steps in the query nu using [Lightweight query execution st
     ALTER EVENT SESSION [NodePerfStats] ON SERVER STATE = STOP
     ```
 
-#### [SQL Server 2016 (after SP1) and SQL Server 2017](#tab/2016-2017)
+#### [SQL Server 2016 (later than SP1) and SQL Server 2017](#tab/2016-2017)
 
 You can use the [Lightweight query execution statistics profiling infrastructure v2](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v2) to capture live query plans that include actual row counts. This profiling infrastructure lets you examine query operators in a query plan at runtime and learn where most of the time is spent in a query.
 
@@ -347,7 +347,7 @@ You can use [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases) t
 ```
 
 > [!NOTE]
-> This log capture process requires that the long query consume at least 60 seconds of CPU time.
+> This log capture process requires the long query to consume at least 60 seconds of CPU time.
 
 SQL LogScout captures at least three query plans for each high-CPU-consuming query. You can find file names that resemble `servername_datetime_NeverEnding_statistics_QueryPlansXml_Startup_sessionId_#.sqlplan`. You can use these files in the next step when you review plans to identify the reason for long query execution.
 
@@ -365,7 +365,7 @@ This section discusses how to review the collected data. It uses the multiple XM
 
 1. Look for thick arrows that indicate a large number of rows flowing between operators. Then, select the operator before or after the arrow, and compare the number of **actual** rows across the two plans.
 
-1. Compare the second and third plans to learn whether the largest flow of rows occurrs in the same operators.
+1. Compare the second and third plans to learn whether the largest flow of rows occurs in the same operators.
 
    For example:
 
