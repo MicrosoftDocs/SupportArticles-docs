@@ -45,8 +45,6 @@ items:
       href: app-insights/telemetry/auto-instrumentation-troubleshoot.md
     - name: Troubleshoot high data ingestion
       href: app-insights/telemetry/troubleshoot-high-data-ingestion.md
-    - name: Resolve log limit issues in Azure Functions apps
-      href: activity-logs/config-export/resolve-log-limit-issues-in-azure-functions-apps.md
     - name: Application Insights classic SDK troubleshooting
       items:
       - name: SDK support guidance
