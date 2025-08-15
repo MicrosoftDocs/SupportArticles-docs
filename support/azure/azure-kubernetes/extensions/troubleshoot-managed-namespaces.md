@@ -1,64 +1,108 @@
 ---
 title: Troubleshoot Managed Namespaces Errors
-description: Learn how to resolve errors that occur when you try to enable Managed Namespaces on AKS.
+description: Learn how to resolve errors that occur when you try to enable managed namespaces on AKS.
 ms.date: 08/05/2025
 ms.reviewer: jackjiang
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, references_regions
 ---
-# Troubleshoot Managed Namespace Errors
+# Troubleshoot managed namespace errors
 
-This article provides guidance on resolving errors when using Managed Namespaces (Preview) on Microsoft Azure Kubernetes Service (AKS).
+This article provides guidance for resolving errors that occur in Microsoft Azure Kubernetes Service (AKS) when you use the `ManagedNamespacePreview` flag.
 
 ## Prerequisites
 
-Please make sure the following tools are installed and configured:
+The following tools must be installed and configured:
 
 - [Azure CLI](/cli/azure/install-azure-cli)
 - [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/), the Kubernetes command-line client
 
-## Issue 1 - I get a `FeatureNotFound` error when I try to registry the managed namespace flag  
+## Error 1: Feature not found
+
+### Symptom
+
+When you try to register the `ManagedNamespacePreview` flag, you receive the following error message:
+
+*(FeatureNotFound) The feature '<feature_name>' could not be found.*
+
+### Resolution
  
-If you receive an error like `(FeatureNotFound) The feature '<feature_name>' could not be found.`
+Make sure that the command is entered correctly and uses correct spelling.
 
-Please ensure that the command is entered properly and the spelling is correct.
-
-You can run az feature register command to register this preview feature.
+To register this preview feature, run the `as feature register` command:
 
 `az feature register --namespace Microsoft.containerService -n ManagedNamespacePreview`
 
-## Issue 2 - I get an error when I try to create a managed namespace or I'm unable to create a managed namespace. 
- 
-If you get a `(BadRequest) Managed namespace requires feature flag Microsoft.ContainerService/ManagedNamespacePreview to be registered.` error, that means the feature flag is not yet registered. If you're already ran the command to register the flag, verify the registration status
+## Error 2 - Can't create a managed namespace
 
-To verify the registration status, use the az feature show command.
+### Symptom
+
+When you try to create a managed namespace, you receive the following error message:
+
+*(BadRequest) Managed namespace requires feature flag Microsoft.ContainerService/ManagedNamespacePreview to be registered.*
+
+### Resolution
+ 
+This message indicates that the feature flag is not yet registered. If you already ran the command to register the flag, verify the registration status by running the the `az feature show` command:
 
 `az feature show --namespace Microsoft.ContainerService -n ManagedNamespacePreview`
 
-## Issue 3 - Some namespaces can't be changed/certain names can't be used
+## Error 3: Can't use or change some namespaces
 
-Users are not allowed to make change on certain namespaces or create a managed namespaces under certain names, as they are utilized by system components/resources. These namespaces are: 
+### Symptom
 
-default, kube-system, kube-node-lease, kube-public, gatekeeper-system, cert-manager, calico-system, tigera-system, app-routing-system,aks-istio-system, istio-system, dapr-system, flux-system, prometheus-system, eraser-system
+You receive the following error message:
 
-If a user attempts to create a namespace using one of these names, they will receive an error stating `The namespace name cannot be the same as the name of a system namespace.`.
+*The namespace name cannot be the same as the name of a system namespace.*
 
-## Issue 4 - I can't update or delete my namespaces
+### Resolution
 
-Users are not allowed to create, update, or delete managed namespaces when the managed cluster is not in a running state. This behavior is expected and normal.
+Users are not allowed to change certain namespaces or create managed namespaces that use certain names because the names are used by system components or resources. This list includes the following namespaces: 
 
-## Issue 5 - I can't ______ via `kubectl`
+- default
+- kube-system
+- kube-node-lease
+- kube-public
+- gatekeeper-system
+- cert-manager
+- calico-system
+- tigera-system
+- app-routing-system
+- aks-istio-system
+- istio-system
+- dapr-system
+- flux-system
+- prometheus-system
+- eraser-system
 
-Since the managed namespace is managed by Microsoft Azure Resource Manager (ARM), changes to its metadata (e.g. labels/annotations) are restricted. Kubectl commands that are not allowed are inclusive of, but not limited to editing or deleting:
+## Error 4 - Can't update or delete managed namespaces
 
-- A managed namespace via `kubectl edit ns <namespace-name>` or `kubectl delete ns <namespace name>`
-- A namespace via `kubectl delete resourcequota defaultresourcequota --namespace <namespace-name>`
-- A defaultresourcequota via `kubectl delete resourcequota defaultresourcequota --namespace <namespace-name>`
-- A defaultnetworkpolicy via `kubectl delete networkpolicy defaultnetworkpolicy --namespace <namespace-name>`
+### Symptom
 
-When attempting any action that modifies a managed namespace via kubectl, users will the error `Updating resource quota defaultresourcequota is not allowed because it is managed by ARM. Please update this resource quota though ARM api.`
+You can't create, update, or delete managed namespaces.
 
-Modifications must be made through the ARM API to ensure consistency with the managed state. Users can manage their managed namespaces in the Azure portal, or via [CLI commands](/cli/azure/aks/namespace)
+### Resolution
+ 
+This behavior is by design. Users are not allowed to create, update, or delete managed namespaces if the managed cluster is not in a running state. 
+
+## Error 5: Can't use some kubectl commands
+
+### Symptom
+
+When you try to modify a managed namespace through kubectl, you receive the following error message:
+
+*Updating resource quota defaultresourcequota is not allowed because it is managed by ARM. Please update this resource quota though ARM api.*
+
+### Resolution
+ 
+Because a managed namespace is managed by Microsoft Azure Resource Manager (ARM), changes to its metadata (labels and annotations) through kubectl commands are restricted. The affected actions include, but are not limited to, edits and deletions to:
+
+- A managed namespace through `kubectl edit ns <namespace-name>` or `kubectl delete ns <namespace name>`
+- A namespace through `kubectl delete resourcequota defaultresourcequota --namespace <namespace-name>`
+- A defaultresourcequota through `kubectl delete resourcequota defaultresourcequota --namespace <namespace-name>`
+- A defaultnetworkpolicy through `kubectl delete networkpolicy defaultnetworkpolicy --namespace <namespace-name>`
+
+Modifications to namespaces must be made through the ARM API to maintain consistency with the managed state. You can manage your managed namespaces in the Azure portal or through [CLI commands](/cli/azure/aks/namespace).
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
