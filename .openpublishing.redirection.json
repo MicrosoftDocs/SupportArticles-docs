@@ -13813,22 +13813,27 @@
     ,
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/pushing-subscription-activity-logs-to-sentinel.md",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/push-subscription-activity-logs-to-sentinel"
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
     }
     ,
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/resolving-log-limit-issues-in-azure-function-apps.md",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/resolve-log-limit-issues-in-azure-functions-apps"
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
     }
     ,
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/understanding-and-managing-diagnostic-settings-retention.md",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/understand-and-manage-diagnostic-settings-retention"
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitorn"
     }
     ,
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/transition-from-legacy-to-diagnostic-settings"
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
+    }
+    ,
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
     }
     ,
     {
