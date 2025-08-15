@@ -7,13 +7,13 @@ ms.author: zmazieva
 author: Zarina Mazieva
 ms.reviewer: 
 ---
-# Zonal enablement request for restricted VM series  
+# Zonal enablement request for restricted virtual machine series  
 
-Zonal enablement requests allow customers to select preferred zones in a region when requesting access to restricted VM series. 
+Zonal enablement requests allow customers to select specific zones in a region when requesting access to restricted virtual machine series. 
 
 ## Step 1: Create a support request
 
-This guide explains how to request restricted VM series in a zone using Help + Support path in Azure Portal.
+This guide explains how to request restricted virtual machine series in a specific zone using Help + Support path in the **Azure Portal**.
 
 1. Log into the [Azure Portal](https://portal.azure.com) and navigate to **Help + support**, then select **Create a support request**.
 1. Type in **quotas** in the **Describe your issue** search bar.
@@ -41,7 +41,7 @@ This guide explains how to request restricted VM series in a zone using Help + S
 
 ## Request processing
 
-Once you create the support request, the ticket follows our standard process. The confirmation, including your support ticket number, will be sent to your registered email address. If the support team has additional questions, they will contact you using the communication method you specified in your request.
+Once you create the support request, the ticket follows our standard process. The confirmation, including your support ticket number, will be sent to your registered email address. If the support team has other questions, they contact you using the communication method you specified in your request.
 
 ## Tracking request status
 
