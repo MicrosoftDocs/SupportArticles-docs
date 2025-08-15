@@ -2,7 +2,7 @@
 title: IIS Express isn't supported in production
 description: This article describes that Internet Information Services Express isn't supported in a production environment.
 ms.date: 07/17/2020
-ms.topic: article
+ms.topic: concept-article
 ms.custom: sap:IIS Extensions, Tools, and Add-Ons\Unlisted
 ---
 # Internet Information Services Express isn't supported in a production environment

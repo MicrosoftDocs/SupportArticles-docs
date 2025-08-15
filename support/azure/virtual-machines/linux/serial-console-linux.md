@@ -9,7 +9,6 @@ tags: azure-resource-manager
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.service: azure-virtual-machines
 ms.collection: linux
-ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
 ms.date: 07/29/2025

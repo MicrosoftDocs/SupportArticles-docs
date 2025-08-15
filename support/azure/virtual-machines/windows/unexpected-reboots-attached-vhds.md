@@ -7,7 +7,6 @@ author: JarrettRenshaw
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
 ms.service: azure-virtual-machines
-ms.topic: article
 ms.date: 11/01/2018
 ms.author: jarrettr
 ms.custom: sap:VM restarted or stopped unexpectedly
