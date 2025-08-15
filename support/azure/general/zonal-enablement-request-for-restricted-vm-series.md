@@ -4,15 +4,12 @@ description: Guidance to request access to restricted vm series in selected zone
 ms.date: 08/06/2025
 ms.service: azure-common-issues-support
 ms.author: zmazieva
-author: ZarinaMazieva
+author: Zarina Mazieva
 ms.reviewer: 
 ---
 # Zonal enablement request for restricted VM series  
 
 Zonal enablement requests allow customers to select preferred zones in a region when requesting access to restricted VM series. 
-
-_Original product version:_ &nbsp;  
-_Original KB number:_ &nbsp; 
 
 ## Step 1: Create a support request
 
