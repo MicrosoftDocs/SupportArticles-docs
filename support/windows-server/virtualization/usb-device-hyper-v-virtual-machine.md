@@ -1,7 +1,7 @@
 ---
 title: YubiKey USB Device Doesn't Appear in a Hyper-V Virtual Machine
-description: Help resolve the issue where YubiKey USB device doesn't appear in a Hyper-V virtual machine (VM). Provides guidance on using a YubiKey USB device for hardware encryption in a Hyper-V VM.
-ms.date: 08/14/2025
+description: Resolves an issue where a YubiKey USB device doesn't appear in a Hyper-V VM. Provides guidance on using a YubiKey USB device for hardware encryption in a Hyper-V VM.
+ms.date: 08/18/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,21 +12,21 @@ ms.custom:
 ---
 # YubiKey USB device doesn't appear in a Hyper-V virtual machine
 
-This article helps resolve the issue where YubiKey USB device doesn't appear in a Hyper-V virtual machine (VM). It provides guidance on using a YubiKey USB device for hardware encryption in a Hyper-V VM. It explains how to achieve USB passthrough in Hyper-V, which is a feature not natively supported. It also provides alternative methods to enable this functionality.
+This article helps resolve an issue where a YubiKey USB device doesn't appear in a Hyper-V virtual machine (VM) and provides guidance on using a YubiKey USB device for hardware encryption in a Hyper-V VM. It explains how to achieve USB passthrough in Hyper-V, a feature not natively supported, and offers alternative methods to enable this functionality.
 
 > [!NOTE]
-> Before proceeding with the following procedures in this article, ensure the following items:
+> Before proceeding, confirm:
 >
 > * You have administrative access to both the Hyper-V host and the VM.
 > * The YubiKey USB device is connected to the Hyper-V host.
-> * The VM is running an operating system that supports the YubiKey.
+> * The VM is running an operating system that supports YubiKey.
 > * Remote Desktop Protocol (RDP) is enabled on the VM if you use the RDP method.
 
-When you use Hyper-V, the YubiKey USB device doesn't appear in the VM or can't be accessed, even though it's connected to the Hyper-V host.
+When you use Hyper-V, a YubiKey USB device doesn't appear in the VM or can't be accessed, even though it's connected to the Hyper-V host.
 
-## Hyper-V doesn't natively support USB passthrough to virtual machines
+## Hyper-V doesn't natively support USB passthrough to VMs
 
-This issue occurs because Hyper-V doesn't include built-in support for USB passthrough. This limitation prevents USB devices connected to the host from being directly accessed by the VM. If you're accustomed to this functionality in other virtualization platforms, such as VMware, you might need clarification on how to achieve similar results in Hyper-V.
+This issue occurs because Hyper-V doesn't include built-in support for USB passthrough. This limitation prevents VMs from being directly accessing USB devices connected to the host. If you're accustomed to this functionality on other virtualization platforms, such as VMware, you might need clarification on how to achieve similar results in Hyper-V.
 
 ## Resolution 1: Use Enhanced Session Mode
 
@@ -49,7 +49,7 @@ Enhanced Session Mode enables interaction between the host and the VM, allowing 
 
 The YubiKey should now be accessible in the VM.
 
-## Resolution 2: Use Remote Desktop Protocol (RDP)
+## Resolution 2: Use RDP
 
 RDP allows USB devices connected to the host to be redirected to the VM. To use RDP, follow these steps:
 
@@ -67,7 +67,7 @@ RDP allows USB devices connected to the host to be redirected to the VM. To use 
 
 Once connected via RDP, the YubiKey will be redirected and available in the VM.
 
-If neither solution resolves the issue, consider the following items:
+If neither solution resolves the issue, consider the following points:
 
 * Verify that the YubiKey is supported by the VM's operating system.
 * Ensure that the USB device is functioning correctly on the host machine.
