@@ -4,16 +4,16 @@ description: Provides guidance for resolving issues related to configuring the e
 ms.date: 08/18/2025
 ms.reviewer: v-liuamson; v-gsitser; v-sisidhu
 ms.service: azure-monitor
-ms.custom: I can’t configure export of Activity logs
+ms.custom: I can’t configure export of activity logs
 ---
 
-# Configure Azure Activity log export
+# Configure Azure activity log export
 
-This article outlines the steps to successfully configure Azure Activity log export. This article also provides solutions to common issues that you might experience, especially if you're transitioning from older methods.
+This article outlines the steps to successfully configure Azure activity log export. This article also provides solutions to common issues that you might experience, especially if you're transitioning from older methods.
 
-## Configuring Activity log export
+## Configuring activity log export
 
-To configure Azure Activity log export, follow these steps.
+To configure Azure activity log export, follow these steps.
 
 ### Step 1: Verify current configuration
 
