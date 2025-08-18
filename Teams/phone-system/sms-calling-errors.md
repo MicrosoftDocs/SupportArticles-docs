@@ -1,7 +1,7 @@
 ---
-title: Ten-Digit Long Code Campaign Rejections
-description: Provides a comprehensive list of potential 10DLC campaign rejection errors, together with clear descriptions and actionable recommendations.
-ms.date: 08/14/2025
+title: Resolve 10DLC campaign rejection errors
+description: Provides a list of potential 10DLC campaign rejection errors, and guidance to resolve them.
+ms.date: 08/18/2025
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -10,26 +10,15 @@ appliesto:
 ms.custom: 
   - sap:Teams Calling (PSTN)
   - CI 7095
-ms.reviewer: revaldiv
+ms.reviewer: julienp, revaldiv
 ---
-# Troubleshoot 10DLC campaign rejections in Microsoft Teams SMS
+# Resolve 10DLC campaign rejection errors
 
-This article is designed for IT administrators and professionals who are enabling Short Message Service (SMS) in Microsoft Teams and have to troubleshoot and resubmit campaigns that were rejected during the 10-digit-long code (10DLC) review process.
+When you enable the [Short Message Service (SMS)](/microsoftteams/sms-overview) feature in Microsoft Teams, you might need to troubleshoot and resubmit [campaigns](/microsoftteams/sms-setup-campaign) that were rejected during the 10-digit-long code (10DLC) review process. After a campaign is submitted, Microsoft and 10DLC operators evaluate it for compliance with Mobile Network Operator (MNO) and industry standards. If the campaign doesn't meet these requirements, it's rejected and generates one or more error codes.
 
-Before you proceed, review the following articles:
+The following sections provide a comprehensive list of potential rejection errors, together with clear descriptions and actionable recommendations to help you resolve issues and successfully resubmit your campaign. The sections are organized by the categories of information that you submit to register a campaign.
 
-- [Plan for SMS in Teams](/microsoftteams/sms-overview)
-- [Set up a Campaign for SMS in Microsoft Teams](/microsoftteams/sms-setup-campaign)
-
-After a campaign is submitted, Microsoft and 10DLC operators evaluate it for compliance with Mobile Network Operator (MNO) and industry standards. If the campaign doesn't meet these requirements, it's rejected and generates one or more error codes.
-
-This article provides a comprehensive list of potential rejection errors, together with clear descriptions and actionable recommendations to help you resolve issues and successfully resubmit your campaign.
-
-## Campaign rejection errors
-
-The error codes that are presented in this section are organized by parameters, such as brand information and Call to Action.
-
-### Call to Action
+## Call to Action 
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -50,7 +39,7 @@ The error codes that are presented in this section are organized by parameters, 
 | CallToActionMissingMessageType | The Call to Action doesn't mention the kinds of messages that a customer can expect. | Specify the kinds of messages that users might receive. |
 | CallToActionInvalidOrIncomplete | The Call to Action is noncompliant or incomplete. | Make sure that all required elements are present: brand name, HELP, STOP, frequency, fees, privacy policy. |
 
-### Terms and conditions
+## Terms and conditions 
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -63,14 +52,14 @@ The error codes that are presented in this section are organized by parameters, 
 | TermsAndConditionsMissingProgramDescription | The terms and conditions document doesn't contain a description of the message program. | Add a description of the message program's purpose. |
 | TermsAndConditionsMissingSweepstakesTerms | The terms and conditions document doesn't contain sweepstakes terms, as applicable. | Add sweepstakes terms if the campaign involves sweepstakes. |
 
-### Privacy policy
+## Privacy policy
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
 | PrivacyPolicyDataSharingIssue | The privacy policy indicates that mobile opt-in data might be shared with third parties. | Update the policy to explicitly state that data isn't shared with third parties. |
 | PrivacyPolicyMissingOrInvalid | The privacy policy URL is invalid or is missing required elements. | Provide a valid URL and make sure that all required elements are included. |
 
-### Opt-in message
+## Opt-in message
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -82,7 +71,7 @@ The error codes that are presented in this section are organized by parameters, 
 | OptInMessageMissingOptOutInstructions | The opt-in message doesn't include opt-out instructions. | Add STOP instructions. |
 | MandatoryMessageTerminologyMissing | Required message terminology is missing. | Add all mandatory terms: brand name, HELP, STOP, frequency, fees. |
 
-### Opt-out message
+## Opt-out message
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -91,7 +80,7 @@ The error codes that are presented in this section are organized by parameters, 
 | OptOutMessageMissingConfirmation | The opt-out message doesn't confirm that no further messages will be sent. | Add confirmation that messaging will stop. |
 | MandatoryMessageTerminologyMissing | Required message terminology is missing. | Add brand name, STOP, confirmation, and fee disclosures. |
 
-### Help message
+## Help message
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -100,7 +89,7 @@ The error codes that are presented in this section are organized by parameters, 
 | HelpMessageMissingSupportContact | The HELP message doesn't include customer support contact information. | Add customer support contact details. |
 | MandatoryMessageTerminologyMissing | Required message terminology is missing. | Add brand name, HELP, STOP, frequency, fees. |
 
-### Sample messages
+## Sample messages
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -111,7 +100,7 @@ The error codes that are presented in this section are organized by parameters, 
 | SampleMessageMissingOptOutInstructions | The sample messages don't contain opt-out instructions. | Add STOP instructions to each sample message. |
 | SampleMessageUseCaseMismatch | The sample messages don't match the declared use cases. | Make sure that sample messages reflect the declared use case accurately. |
 
-### Campaign (use case, description, and attributes)
+## Campaign (use case, description, and attributes)
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
@@ -122,7 +111,7 @@ The error codes that are presented in this section are organized by parameters, 
 | CampaignDescriptionNotMatchingUseCase | The campaign description doesn't sufficiently describe the service or doesn't match the declared use cases. | Update the campaign description to clearly describe the service and align the description with the declared use cases. |
 | CampaignDescriptionNotUnique | The campaign description isn't unique or is a duplicate. | Modify the campaign description to be unique and specific to the brand's use case. |
 
-### Brand
+## Brand
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
