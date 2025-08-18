@@ -18,18 +18,18 @@ This article provides troubleshooting guidance for issues in which a Microsoft S
 This article focuses on queries that seem to run or compile without end. That is, their CPU usage continues to increase. This article doesn't apply to queries that are blocked or waiting on a resource that's never released. In those cases, the CPU usage remains constant or changes only slightly.
 
 > [!IMPORTANT]
-> If a query is left to continue running, it might eventually finish. This process could take just a few seconds or several days.
+> If a query is left to continue running, it might eventually finish. This process could take just a few seconds or several days. One exception is an endless run where a [WHILE](sql/t-sql/language-elements/while-transact-sql) loop doesn't exit.
 > The term "never-ending" is used here to describe the perception of a query that doesn't finish.
 
 ## Cause
 
 Common causes of long-running (never-ending) queries include:
 
-- **Nested Loop (NL) joins on very large tables:** Because of the nature of NL joins, a query that joins tables that have lots of rows might run for a long time. In some cases, including `TOP`, `FAST`, and other row goals, the query must use NL joins. Therefore, even if a hash match or a Merge join might be faster, the optimizer can't use either process because of the row goal.
+- **Nested Loop (NL) joins on very large tables:** Because of the nature of NL joins, a query that joins tables that have lots of rows might run for a long time. One example where NL joins is the only choice for query optimizer is the use of `TOP`, `FAST`, or `EXISTS`. Even if a Hash join or a Merge join might be faster, the optimizer can't use either operator because of the row goal. Another scenario where NL join is the only choice is where an inequality join predicate is used in a query. For example, `SELECT .. FROM tab1 AS a JOIN tab 2 AS b ON a.id > b.id`.  Merge and Hash joins are not a possible query optimizer choice here. For more information, see [Joins](/sql/relational-databases/performance/joins)
 - **Out-of-date statistics:** Queries that pick a plan based on outdated statistics might be suboptimal and take a long time to run.
 - **Endless loops:** T-SQL queries that use WHILE loops might be incorrectly written. The resulting code never leaves the loop and runs endlessly. These queries are truly never-ending. They run until they're killed manually.
 - **Complex queries that have many joins and large tables:** Queries that involve many joined tables would typically have complex query plans that might take a long time to run. This scenario is common in analytical queries that don't filter out rows and that involve a large number of tables.
-- **Missing indexes:** Queries can be accelerated if appropriate indexes are used on tables. Indexes enable the selection of a subset of the data to provide faster access.
+- **Missing indexes:** Queries can run significantly faster if appropriate indexes are used on tables. Indexes enable the selection of a subset of the data to provide faster access.
 
 ## Solution
 
@@ -42,7 +42,7 @@ Look for a never-ending query that's running on the system. You have to determin
 Run the following diagnostic query on your SQL Server instance where the never-ending query is active:
 
 ```sql
-DECLARE @cntr int = 0
+DECLARE @cntr INT = 0
 
 WHILE (@cntr < 3)
 BEGIN
@@ -116,7 +116,7 @@ If the slow query meets these criteria, focus on reducing its runtime. Typically
 
 ##### Long wait time
 
-This article isn't applicable for long wait scenarios. In a wait scenario, you might receive an output that resembles the following example in which the CPU usage doesn't change or changes slightly because the session is waiting on a resource:
+This article isn't applicable to long wait scenarios. In a wait scenario, you might receive an output that resembles the following example in which the CPU usage doesn't change or changes slightly because the session is waiting on a resource:
 
 |session_id|status| cpu_time_minutes | elapsed_time_minutes|logical_reads |wait_time_minutes|wait_type|
 |--|--|--|--|--|--|--|
@@ -128,7 +128,7 @@ To troubleshoot queries that are long because of waits, see [Troubleshoot slow-r
 
 ##### Long compilation time
 
-On rare occasions, you might observe that the CPU usage increases continuously over time but isn't driven by the query run. Instead, an excessively long compilation (the parsing and compiling of a query) might be the cause. In these cases, check the `transaction_name` output column for a value of `sqlsource_transform`. This transaction name indicates a compilation.
+On rare occasions, you might observe that the CPU usage increases continuously over time but isn't driven by the query execution. Instead, an excessively long compilation (the parsing and compiling of a query) might be the cause. In these cases, check the `transaction_name` output column for a value of `sqlsource_transform`. This transaction name indicates a compilation.
 
 ### Step 2: Collect diagnostic logs manually
 
@@ -339,7 +339,7 @@ To identify the slow steps in the query, follow these steps:
 You can use [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases) to capture logs while a never-ending query is running. Use the [never ending query scenario](https://github.com/microsoft/SQL_LogScout?tab=readme-ov-file#15-never-ending-query) with the following command:
 
 ```powershell
-.\SQL_LogScout.ps1 -Scenario "NeverEndingQuery" -ServerName "."
+.\SQL_LogScout.ps1 -Scenario "NeverEndingQuery" -ServerName "SQLInstance"
 ```
 
 > [!NOTE]
