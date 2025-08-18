@@ -25,19 +25,22 @@ This article provides a comprehensive guide to troubleshoot common issues encoun
 
 ## Technical/system symptoms
 
-- Error messages or event IDs:
+- Error messages:
 
   - > Failed to remove checkpoint. (Virtual machine ID …)
   - > Virtual machine failed to generate VHD tree: Catastrophic failure (0x8000FFFF)
   - > Cannot delete checkpoint: Catastrophic failure (0x8000FFFF)
   - > The system cannot find the file specified.
+
+- Event IDs:
+
   - Event ID 1069 (Failover Clustering): Cluster resource failure.
   - Event ID 41 (Kernel-Power): System rebooted without a clean shutdown.
   - Event ID 18502 (Hyper-V-Worker): VM was turned off.
   - Event ID 3056 (Hyper-V-Worker): NUMA topology mismatch warning.
   - Event ID 1106 (Hyper-V VMMS): Access violation (c0000005) during live migration.
-  - Reliability Monitor shows repeated System Center Virtual Machine Manager (SCVMM) agent crashes.
 
+- Reliability Monitor shows repeated System Center Virtual Machine Manager (SCVMM) agent crashes.
 - Inability to uninstall VMware Tools after migration to Hyper-V.
 - VMs hang or become unresponsive, with high CPU usage by services like Windows Management Instrumentation (WMI) or Local Security Authority Subsystem Service (LSASS).
 - Hyper-V Manager displays orphaned checkpoints that block backups.
