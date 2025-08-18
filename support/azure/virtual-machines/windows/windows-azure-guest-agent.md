@@ -134,8 +134,8 @@ These error entries indicate that the VM can't reach the WireServer IP address, 
 ### Solution: Enable DHCP, and make sure that the server isn't blocked by firewalls, proxies, or other sources
 
 1. Connect to the VM by using Remote Desktop, and then test connectivity to 168.63.129.16. See the [Troubleshoot connectivity](/azure/virtual-network/what-is-ip-address-168-63-129-16?tabs=windows#troubleshoot-azure-ip-connectivity) section of [Azure IP address 168.63.129.16 overview](/azure/virtual-network/what-is-ip-address-168-63-129-16).
-1. If you have only one private IP on your VM's network adapter, we highly recommend that you have DHCP enabled on the guest VM. If you need a static private IP address, you should configure it through the Azure portal or PowerShell, and make sure the DHCP option inside the VM is enabled. [Learn more](/azure/virtual-network/ip-services/virtual-networks-static-private-ip-arm-ps) about how to set up a static IP address by using PowerShell to make sure that the IP configuration always matches what's configured on the VM in Azure.
-1. If you have multiple private IPs assigned to your VM's network adapter, make sure that you carefully follow the steps to [assign the IP configurations correctly](/azure/virtual-network/ip-services/virtual-network-multiple-ip-addresses-portal#os-config). After this, if Guest Agent can't communicate with 168.63.129.16, check that the primary IP in Windows [matches the primary IP in your VM's network adapter in Azure](/troubleshoot/azure/virtual-machines/windows/no-internet-access-multi-ip).
+1. If you have only one private IP on your VM's network adapter, we highly recommend that you have DHCP enabled on the guest VM. If you need a static private IP address, you should configure it through the Azure portal or PowerShell, and make sure the DHCP option inside the VM is enabled. To make sure that the IP configuration always matches what's configured on the VM in Azure, [Learn more](/azure/virtual-network/ip-services/virtual-networks-static-private-ip-arm-ps) about how to set up a static IP address by using PowerShell.
+1. If you have multiple private IPs assigned to your VM's network adapter, make sure that you carefully follow the steps to [assign the IP configurations correctly](/azure/virtual-network/ip-services/virtual-network-multiple-ip-addresses-portal#os-config). After you finish the steps, if Guest Agent can't communicate with 168.63.129.16, check that the primary IP in Windows [matches the primary IP in your VM's network adapter in Azure](/troubleshoot/azure/virtual-machines/windows/no-internet-access-multi-ip).
 1. Check for any issues that a firewall, a proxy, or another source might cause that could block access to IP address `168.63.129.16`.
 1. Check whether Windows Firewall or a third-party firewall is blocking access to ports `80` and `32526`. For more information about why this address shouldn't be blocked, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16)
 
@@ -209,7 +209,7 @@ Microsoft.Cis.Fabric.CertificateServices.RdCertificateFactory.Shutdown()
 -2147023143 = 0x6d9 = EPT_S_NOT_REGISTERED
 ```
 
-These error entries are probably caused by Remote Procedure Call (RPC) issues. For example, the RPC endpoint might not be listening, or the RPC process might be missing on the opposite end.
+These errors probably occur because of Remote Procedure Call (RPC) issues. For example, the RPC endpoint might not be listening, or the RPC process might be missing on the opposite end.
 
 ### Solution: Start the CNG Key Isolation service
 
@@ -237,7 +237,7 @@ PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86
 [00000003] [10/21/2020 02:37:45.98] [ERROR] Installing certificates in the LocalMachine store failed with exception: Microsoft.WindowsAzure.GuestAgent.CertificateManager.CryptographyNative+PInvokeException: PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86.
 ```
 
-These errors are probably caused by a lack of permissions on the *Crypto* folders for the SYSTEM account. If you collect a [Process Monitor](/sysinternals/downloads/procmon) (ProcMon) trace while you restart the Guest Agent services (RdAgent or WindowsAzureGuestAgent), you should be able to see some "Access Denied" errors.
+These errors probably occur because of a lack of permissions on the *Crypto* folders for the SYSTEM account. If you collect a [Process Monitor](/sysinternals/downloads/procmon) (ProcMon) trace while you restart the Guest Agent services (RdAgent or WindowsAzureGuestAgent), you should be able to see some "Access Denied" errors.
 
 ### Solution: Add full control of Crypto folders to the SYSTEM account
 
@@ -362,9 +362,9 @@ If trying to install Guest Agent fails, make sure that all [prerequisites for Gu
 
 **Note:**  If Guest Agent was installed manually through the .msi installer, the agent appears in Add/Remove Programs. If Guest Agent was installed during image provisioning, the agent doesn't appear in Add/Remove Programs.
 1. If Guest Agent exists in Add/Remove programs, uninstall it from there. Then, you can install it through the .msi file by using the command line arguments in this step.
-1. If the agent is installed but doesn't appear in Add/Remove programs, use the command line process to remove and install by directly running the .msi file.
+1. If the agent is installed but doesn't appear in Add/Remove programs, follow these steps:
    1. Open an elevated Command Prompt window.
-   1. Stop the Guest Agent Services. If the services won't stop, you must set the services to manual startup, and then restart the VM:
+   1. Stop the Guest Agent Services. If the services don't stop, you must set the services to manual startup, and then restart the VM:
 
      ```
      net stop rdagent
@@ -379,8 +379,8 @@ If trying to install Guest Agent fails, make sure that all [prerequisites for Gu
    1. Under C:\WindowsAzure, create a folder that's named OLD.
    1. Move any folders that are named Packages or GuestAgent into the OLD folder.
    1. Create a new folder for the .msi install location (C:\VMAgentMSI).
-1. Download the latest [MSI](https://github.com/Azure/WindowsVMAgent/releases) from the Github Releases for Windows Guest Agent.
-1. Install Guest Agent by using the MSI command line + arguments:
+1. Download the latest [.msi file](https://github.com/Azure/WindowsVMAgent/releases) from the GitHub Releases for Windows Guest Agent.
+1. Install Guest Agent by using the .msiexec command line + arguments:
 
      ```
      msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /L*v C:\Windows\Panther\msiexec.log
@@ -397,8 +397,8 @@ If trying to install Guest Agent fails, make sure that all [prerequisites for Gu
 <details>
 <summary>Click here for troubleshooting details</summary>
 
-1. Download the latest [MSI](https://github.com/Azure/WindowsVMAgent/releases) from the Github Releases for Windows Guest Agent.
-1. Install Guest Agent by using the MSI command line + arguments
+1. Download the latest [.msi file](https://github.com/Azure/WindowsVMAgent/releases) from the GitHub Releases for Windows Guest Agent.
+1. Install Guest Agent by using the msiexec command line + arguments
 
      ```
      msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /L*v C:\Windows\Panther\msiexec.log
@@ -430,16 +430,17 @@ Event time="2019-12-12T12:49:05.123Z" category="INFO" source="GuestAgent"><SetRd
 <Event time="2019-12-12T12:49:05.258Z" category="ERROR" source="GuestAgent"><UnhandledError><Message>Installing the RdAgent service failed.</Message><Number>-2147467259</Number><Description>This name may not contain the ' ' character:
 ```
 
-The VM agent MSI uses WMI StdRegProv to access the registry. If WMI is not working correctly, the MSI cannot set the RdAgent service path from the registry. Therefore, the MSI installation fails.
+The VM agent .msi file uses WMI StdRegProv to access the registry. If WMI isn't working correctly, the .msi file can't set the RdAgent service path from the registry. Therefore, the .msi file installation fails.
 
 ### Solution
 
 1. Open an elevated Command Prompt window.
 2. To test whether WMI StdRegProv is working, run the following WMIC command, and copy the output to a text file:
+
 ```
 wmic /namespace:\\root\default Class StdRegProv Call GetDWORDValue hDefKey="&H80000002" sSubKeyName="SYSTEM\CurrentControlSet\Services\Winmgmt" sValueName=Start
 ```
-If you're using Windows Server 2025 or later, and you haven't manually installed WMIC, instead open an elevated PowerShell prompt to test StdRegProv:
+If you're using Windows Server 2025 or later, and you didn't manually install WMIC, open an elevated PowerShell window to test StdRegProv:
 
 ```
 Invoke-CimMethod -ClassName StdRegProv -MethodName GetDWORDValue -Arguments @{sSubKeyName = 'SYSTEM\CurrentControlSet\Services\Winmgmt';sValueName = 'Start'}
@@ -463,13 +464,13 @@ xcopy c:\windows\system32\wbem\repository c:\windows\system32\wbem\repository.ba
 winmgmt /salvagerepository
 ```
 
-6. Try the VM agent MSI installation again. If it finishes successfully, wait for a minute or two, and then check whether the **RdAgent** service is running.
+6. Try the VM agent .msi installation again. If it finishes successfully, wait for a minute or two, and then check whether the **RdAgent** service is running.
 
 ```
 wmic service rdagent list brief
 ```
 
-7. If the **WMIC** command shows **RdAgent** is running, the issue should be resolved. If the **WMIC** command fails or shows that **RdAgent** is not running, go to the next step.
+7. If the **WMIC** command shows **RdAgent** is running, the issue should be resolved. If the **WMIC** command fails or shows that **RdAgent** isn't running, go to the next step.
 
 8. Run the following commands to reset the WMI repository:
 
@@ -479,7 +480,7 @@ winmgmt /resetrepository
 net start winmgmt
 ```
 
-9. Try the VM agent MSI installation again. If it finishes successfully, wait for a minute or two, and then check whether the **RdAgent** service is running:
+9. Try the VM agent .msi installation again. If it finishes successfully, wait for a minute or two, and then check whether the **RdAgent** service is running:
 
 ```
 wmic service rdagent list brief
@@ -504,7 +505,7 @@ System event errors 7031 or 7034 is logged, and the C:\WindowsAzure\logs\Transpa
 
 ### Solution
 
-This issue might occur if Windows Communication Framework (WCF) profiling is enabled. WCF profiling should be enabled only while you debug a WCF issue. It should not be left enabled while you run a production workload.
+This issue might occur if Windows Communication Framework (WCF) profiling is enabled. WCF profiling should be enabled only while you debug a WCF issue. It shouldn't be left enabled while you run a production workload.
 
 To disable WCF profiling:
 
@@ -516,13 +517,13 @@ cd C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config
 copy machine.config machine.config.bak
 ```
 
- - To edit the file in Notepad, Run `notepad machine.config`. Remove the following text (but be careful not to also remove any additional text that might be on the same line):
+ - To edit the file in Notepad, Run `notepad machine.config`. Remove the following text (but be careful not to also remove any other text that might be on the same line):
 
 ```
 <add name="Microsoft.VisualStudio.Diagnostics.ServiceModelSink.Behavior" type="Microsoft.VisualStudio.Diagnostics.ServiceModelSink.Behavior, Microsoft.VisualStudio.Diagnostics.ServiceModelSink, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
 ```
 
-Remove the following text (but be careful not to also remove any additional text that might be on the same line):
+Remove the following text (but be careful not to also remove any other text that might be on the same line):
 
 ```
 <commonBehaviors><endpointBehaviors><Microsoft.VisualStudio.Diagnostics.ServiceModelSink.Behavior/></endpointBehaviors><serviceBehaviors><Microsoft.VisualStudio.Diagnostics.ServiceModelSink.Behavior/></serviceBehaviors></commonBehaviors>
