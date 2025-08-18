@@ -1,58 +1,60 @@
 ---
 title: Configuring Azure Activity Log Export
-description: Provides guidance on resolving issues related to configuring the export of Azure Activity Logs
+description: Provides guidance for resolving issues related to configuring the export of Azure Activity logs
 ms.date: 08/18/2025
 ms.reviewer: v-liuamson; v-gsitser; v-sisidhu
 ms.service: azure-monitor
-ms.custom: I can’t configure export of Activity Logs
+ms.custom: I can’t configure export of Activity logs
 ---
 
-# Configuring Azure Activity Log Export
+# Configure Azure Activity log export
 
-When configuring Azure Activity Log exports, you might face issues, especially when transitioning from older methods. This guide outlines the steps to ensure a smooth configuration process, addressing common issues and providing actionable solutions.
+This article outlines the steps to successfully configure Azure Activity log export. This article also provides solutions to common issues that you might experience, especially if you're transitioning from older methods.
 
-## Configure Azure Activity Log Export
+## Configuring Activity log export
 
-### Step 1: Verify Current Configuration
+To configure Azure Activity log export, follow these steps.
 
-1. Go to the [Azure portal](https://ms.portal.azure.com/auth/login/) and access the **Activity Logs** section.
-1. Check the current export settings to ensure they align with your requirements.
+### Step 1: Verify current configuration
 
-### Step 2: Update Legacy Methods
+1. Go to the [Azure portal](https://ms.portal.azure.com/auth/login/), and access the **Activity Logs** section.
+1. Check the current export settings to make sure that they align with your requirements.
 
-1. If you are using legacy APIs or PowerShell commands, update them to the latest versions.
-1. Use the command `Get-AzOperationalInsightsDataSource` to verify existing data sources.
+### Step 2: Update legacy methods
 
-### Step 3: Configure New Export Settings
+1. If you're using legacy APIs or PowerShell commands, update them to the latest versions.
+1. Use the `Get-AzOperationalInsightsDataSource` command to verify existing data sources.
 
-1. Go to **Azure Monitor** and select **Diagnostic settings**.
-1. Create a new setting by specifying the **Log Analytics workspace** and **Event Hub** as destinations.
+### Step 3: Configure new export settings
 
-### Step 4: Test the Configuration
+1. Go to **Azure Monitor**, and select **Diagnostic settings**.
+1. Create a setting by specifying the **Log Analytics workspace** and **Event Hub** as destinations.
+
+### Step 4: Test the new configuration
 
 1. Make sure to test the configuration by generating sample logs.
 1. Check the destination to verify that logs are exported as expected.
 
-### Step 5: Monitor and Adjust
+### Step 5: Monitor and adjust
 
-1. Regularly monitor the logs to ensure they are being exported correctly.
-1. Adjust the settings as necessary based on the log data and performance.
+1. Regularly monitor the logs to make sure that they're exported correctly.
+1. Adjust the settings as necessary, based on the log data and performance.
 
-**Frequently asked questions**
+## Frequently asked questions
 
 **Q1: Why don't the logs appear in the destination?**
 
-**A1:** Make sure the network is well connected, and verify the permissions for Log Analytics workspace.
+**A1:** Make sure that the network is well connected, and verify the permissions for Log Analytics workspace.
 
-**Q2: Why are errors appearing in the PowerShell commands?**
+**Q2: Why do errors appear in the PowerShell commands?**
 
-**A2:** Make sure you are using the latest Azure PowerShell module.
+**A2:** Make sure that you're using the latest Azure PowerShell module.
 
 ## References
 
-- [Azure Monitor Documentation](/azure/azure-monitor/fundamentals/overview)
-- [Azure Activity Logs Overview](/azure/azure-monitor/fundamentals/data-sources)
-- [Configure Diagnostic Settings](/azure/azure-monitor/platform/diagnostic-settings?tabs=portal)
+- [Azure Monitor documentation](/azure/azure-monitor/fundamentals/overview)
+- [Azure Activity logs overview](/azure/azure-monitor/fundamentals/data-sources)
+- [Configure diagnostic settings](/azure/azure-monitor/platform/diagnostic-settings?tabs=portal)
 
 ## Contact us for help
 
