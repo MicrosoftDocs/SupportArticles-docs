@@ -50,29 +50,30 @@ This article provides a comprehensive guide to troubleshoot common issues encoun
 
 ### Resolution: Input and device integration issues
 
-#### A. Mouse or keyboard issues in guest VMs
+#### Mouse or keyboard issues in guest VMs
 
-- For inverted mouse input in Linux guest VMs on Windows 11, version 24H2, revert the host OS to Windows 11, version 23H2 until a permanent fix is available.
-- To resolve Enhanced Session Mode input loss in Windows 11 VMs, follow these steps:
+For inverted mouse input in Linux guest VMs on Windows 11, version 24H2, revert the host OS to Windows 11, version 23H2 until a permanent fix is available.
 
-    1. Open **Hyper-V Manager**.
-    2. Navigate to **Hyper-V Settings** > **Enhanced Session Mode Policy**.
-    3. Uncheck **Allow enhanced session mode** to disable the feature.
-    4. Test input functionality in standard session mode.
+To resolve Enhanced Session Mode input loss in Windows 11 VMs, follow these steps:
 
-#### B. USB or GPU passthrough after VMware migration
+1. Open **Hyper-V Manager**.
+2. Navigate to **Hyper-V Settings** > **Enhanced Session Mode Policy**.
+3. Uncheck **Allow enhanced session mode** to disable the feature.
+4. Test input functionality in standard session mode.
+
+#### USB or GPU passthrough after VMware migration
 
 - USB devices:
 
   - Use Remote Desktop USB redirection or Enhanced Session Mode for supported OSs.
   - Alternatively, configure a network USB solution as Hyper-V doesn't natively support direct USB passthrough.
 
-- GPU assignment: Use Discrete Device Assignment (DDA):
+- GPU assignment:
 
-  - Follow guidance from [Deploying graphics devices using DDA](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda#configure-the-vm-for-dda).
+  - Follow guidance from [Deploying graphics devices using Discrete Device Assignment (DDA)](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda#configure-the-vm-for-dda).
   - Confirm hardware, drivers, and VM configuration support for DDA.
 
-#### C. Uninstalling VMware tools
+#### Uninstalling VMware tools
 
 Use PowerShell scripts, like **Uninstall-VMwareTools.ps1** from GitHub, to forcibly remove VMware tools and associated services after migration.
 
@@ -85,7 +86,7 @@ Use PowerShell scripts, like **Uninstall-VMwareTools.ps1** from GitHub, to forci
 
 ### Resolution: Migration and cluster issues
 
-#### A. TPM/shielded VM migration failures
+#### TPM/shielded VM migration failures
 
 1. On the source node, list shielded VM certificates by using the following command:
 
@@ -106,13 +107,13 @@ Use PowerShell scripts, like **Uninstall-VMwareTools.ps1** from GitHub, to forci
     bashcertutil -importPFX "Shielded VM Local Certificates" c:\cert-VMEncryption.pfxcertutil -importPFX "Shielded VM Local Certificates" c:\cert-VMSigning.pfx
     ```
 
-#### B. VLAN/network connectivity
+#### VLAN/network connectivity
 
 - Configure physical switch ports as trunk ports to allow all VLANs.
 - Replace legacy LBFO (Load Balancing and Failover) teams with Switch Embedded Teaming (SET) for physical NICs.
 - Assign VLAN IDs and verify connectivity for each physical interface.
 
-#### C. VM configuration version
+#### VM configuration version
 
 Update the VM configuration by using the following cmdlet:
 
@@ -122,7 +123,7 @@ Update-VMVersion -Name <VMName>
 
 After the updating, test live migration. If issues persist, shut down the VM, perform a quick migration, and then restart.
 
-#### D. Cluster/heartbeat-related reboots
+#### Cluster/heartbeat-related reboots
 
 If VMs are rebooted due to heartbeat failures, follow these steps:
 
@@ -160,15 +161,15 @@ If VMs are rebooted due to heartbeat failures, follow these steps:
 
 ## Cause 4: Application-level and third-party integration
 
-- Monitoring/agent crashes: Third-party monitoring or agent software (such as SCVMM or Zenoss) might fail due to changes in Hyper-V or Windows Server. These failures often occur without a direct impact unless associated with failed operations.
+Monitoring/agent crashes: Third-party monitoring or agent software (such as SCVMM or Zenoss) might fail due to changes in Hyper-V or Windows Server. These failures often occur without a direct impact unless associated with failed operations.
 
 ### Resolution: Application-level and third-party integration issues
 
-- If monitoring or agent integration fails:
+If monitoring or agent integration fails:
 
-  - Verify WMI and WINRM configurations on hosts.
-  - Review application logs for authentication errors, such as GSS challenge failures.
-  - If Hyper-V and WMI are functional, escalate to the third-party vendor for further support.
+- Verify WMI and WINRM configurations on hosts.
+- Review application logs for authentication errors, such as GSS challenge failures.
+- If Hyper-V and WMI are functional, escalate to the third-party vendor for further support.
 
 ## General remediation and prevention
 
@@ -177,9 +178,9 @@ If VMs are rebooted due to heartbeat failures, follow these steps:
 - Maintain up-to-date documentation of VM configurations, certificates, and network settings.
 - For security vulnerabilities, ensure correct revocation policies and registry settings by using the following command:
 
-    ```console
-    bashSet-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard" -Name EnableVirtualizationBasedSecurity -Value 0 -Type DWordRestart-Computer
-    ```
+  ```console
+  bashSet-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard" -Name EnableVirtualizationBasedSecurity -Value 0 -Type DWordRestart-Computer
+  ```
 
 ## Data collection
 
