@@ -1,6 +1,6 @@
 ---
-title:  Configuring Azure Activity Log Export: A Comprehensive Guide
-description: This article provides guidance on resolving issues related to configuring the export of Azure Activity Logs. This is particularly useful for users who encounter difficulties in setting up or migrating from legacy methods of log export.
+title: Configuring Azure Activity Log Export
+description: Provides guidance on resolving issues related to configuring the export of Azure Activity Logs
 ms.date: 08/18/2025
 ms.reviewer: v-liuamson; v-gsitser; v-sisidhu
 ms.service: azure-monitor
