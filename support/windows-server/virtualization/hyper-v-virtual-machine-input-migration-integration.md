@@ -217,5 +217,5 @@ To collect logs and information:
 
 ## References
 
-- [Deploying graphics devices using DDA](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda#configure-the-vm-for-dda)
+- [Deploying graphics devices using DDA](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda#configure-the-vm-for-dda)
 - Check Microsoft advisories for relevant updates and patches.
