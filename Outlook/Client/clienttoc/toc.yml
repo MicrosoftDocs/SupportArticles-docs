@@ -273,6 +273,8 @@
           href: ../performance/cannot-open-word-documents-or-excel-spreadsheets.md
         - name: Can't start Outlook in cached mode or create a profile
           href: ../performance/cannot-start-outlook-in-cached-mode-or-create-profile.md
+        - name: Collect performance trace
+          href: ../performance/collect-performance-trace.md
         - name: Crashes after installing language packs
           href: ../performance/outlook-2016-crash-event-1000.md
         - name: Error when you copy MSG email message files in Outlook containing multiple attachments or recipients
