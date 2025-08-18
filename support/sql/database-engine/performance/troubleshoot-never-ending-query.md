@@ -128,8 +128,6 @@ To troubleshoot queries that are long because of waits, see the following articl
 
 [!INCLUDE [collect query data and logical reads](../../includes/performance/diagnose-waits-or-bottlenecks.md)]
 
-For more information about how to diagnose waits, see [Diagnose waits or bottlenecks](#diagnose-waits-or-bottlenecks).
-
 #### Long compilation time
 
 On rare occasions, you might observe that the CPU usage increases continuously over time but isn't driven by the query run. Instead, an excessively long compilation (the parsing and compiling of a query) might be the cause. In these cases, check the `transaction_name` output column for a value of `sqlsource_transform`. This transaction name indicates a compilation.
