@@ -1,13 +1,13 @@
 --- 
 title: Troubleshoot OOMkilled in AKS clusters
 description: Troubleshoot and resolve out-of-memory (OOMkilled) issues in Azure Kubernetes Service (AKS) clusters.
-ms.date: 08/13/2025
+ms.date: 08/18/2025
 editor: v-jsitser
 ms.reviewer: v-liuamson
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
 ---
-# Troubleshooting OOMKilled in AKS clusters 
+# Troubleshooting OOMKilled in AKS clusters
 
 ## Understanding OOM Kills
 
@@ -96,29 +96,29 @@ You can use one of these various methods to identify the POD which is killed due
 
 Use the following command to check the status of all pods in a namespace:
 
-- `kubectl get pods -n \<namespace\>`
+- `kubectl get pods -n <namespace>`
 
 Look for pods with statuses of OOMKilled.
 
 ### Describe the Pod
 
-Use `kubectl describe pod \<pod-name\>` to get detailed information about the pod.
+Use `kubectl describe pod <pod-name>` to get detailed information about the pod.
 
-- `kubectl describe pod \<pod-name\> -n \<namespace\>`
+- `kubectl describe pod <pod-name> -n <namespace>`
 
 In the output, check the Container Statuses section for indications of OOM kills.
 
 ### Pod Logs
 
-Review pod logs using `kubectl logs \<pod-name\>` to identify memory-related issues.
+Review pod logs using `kubectl logs <pod-name>` to identify memory-related issues.
 
 To view the logs of the pod, use:
 
-- `kubectl logs \<pod-name\> -n \<namespace\>`
+- `kubectl logs <pod-name> -n <namespace>`
 
 If the pod has restarted, check the previous logs:
 
-- `kubectl logs \<pod-name\> -n \<namespace\> \--previous`
+- `kubectl logs <pod-name> -n <namespace> --previous`
 
 ### Node Logs
 
@@ -126,17 +126,17 @@ You can [review the kubelet logs](/azure/aks/kubelet-logs) on the node to see if
 
 Alternatively, you can [SSH into the node](/azure/aks/node-access) where the pod was running and check the kernel logs for any OOM messages. This command will display which processes the OOM killer terminated:
 
-`chroot /host \# access the node session`
+`chroot /host # access the node session`
 
-`grep -i \"Memory cgroup out of memory\" /var/log/syslog`
+`grep -i "Memory cgroup out of memory" /var/log/syslog`
 
 ### Events
 
-- Use `kubectl get events \--sort-by=.lastTimestamp -n \<namespace\>` to find OOMKilled pods.
+- Use `kubectl get events --sort-by=.lastTimestamp -n <namespace>` to find OOMKilled pods.
 
 - Use the events section from the pod description to look for OOM-related messages:
 
-  - `kubectl describe pod \<pod-name\> -n \<namespace\>`
+  - `kubectl describe pod <pod-name> -n <namespace>`
 
 ## Handling OOMKilled for system pods
 
@@ -186,8 +186,8 @@ restart.
 To solve, review request and limits documentation to understand how to modify
 your deployment accordingly. For more information, see [Resource Management for Pods and Containers](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits).
 
-`kubectl set resources deployment \<deployment-name\>
-\--limits=memory=\<LIMITS\>Mi ---requests=memory=\<MEMORY\>Mi`
+`kubectl set resources deployment <deployment-name>
+--limits=memory=<LIMITS>Mi ---requests=memory=<MEMORY>Mi`
 
 Setting resource requests and limits to the recommended amount for the
 application pod.
@@ -201,24 +201,22 @@ Confirm the Memory Pressure at the pod level:
 
 Use kubectl top to check memory usage:
 
-`kubectl top pod \<pod-name\> -n \<namespace\>`
+`kubectl top pod <pod-name> -n <namespace>`
 
 If metrics are unavailable, you can inspect cgroup stats directly:
 
-`kubectl exec -it \<pod-name\> -n \<namespace\> \-- cat
-/sys/fs/cgroup/memory.current`
+`kubectl exec -it <pod-name> -n <namespace> -- cat /sys/fs/cgroup/memory.current`
 
 Or you can use this to see the value in MB:
 
-`kubectl exec -it \<pod-name\> -n \<namespace\> \-- cat
-/sys/fs/cgroup/memory.current \| awk \'{print \$1/1024/1024 \" MB\"}\'`
+`kubectl exec -it <pod-name> -n <namespace> -- cat /sys/fs/cgroup/memory.current | awk '{print $1/1024/1024 " MB"}'`
 
 This helps to confirm whether the pod is approaching or exceeding its
 memory limits.
 
 - Check for OOMKilled Events
 
-`kubectl get events \--sort-by=\'.lastTimestamp\' -n \<namespace\>`
+`kubectl get events --sort-by='.lastTimestamp' -n <namespace>`
 
 To resolve, engage the application vendor. If the app is from a third party, check
 if they have known issues or memory tuning guides. Also, depending on the application framework, ask the vendor to verify whether they are using the latest version of Java or .Net as recommended in [Memory saturation occurs in pods after cluster upgrade to Kubernetes 1.25](../create-upgrade-delete/aks-memory-saturation-after-upgrade.md).
