@@ -44,9 +44,9 @@ When configuring Azure Activity Log exports, you might face issues, especially w
 
 **A1:** Make sure the network is well connected, and verify the permissions for Log Analytics workspace.
 
-**Q1: Why are errors appearing in the PowerShell commands?**
+**Q2: Why are errors appearing in the PowerShell commands?**
 
-**A1:** Make sure you are using the latest Azure PowerShell module.
+**A2:** Make sure you are using the latest Azure PowerShell module.
 
 ## References
 
