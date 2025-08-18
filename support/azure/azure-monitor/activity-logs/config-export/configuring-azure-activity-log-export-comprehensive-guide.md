@@ -13,27 +13,27 @@ When configuring Azure Activity Log exports, you might face issues, especially w
 
 ## Configure Azure Activity Log Export
 
-**Step 1: Verify Current Configuration**
+### Step 1: Verify Current Configuration
 
 1. Go to the [Azure portal](https://ms.portal.azure.com/auth/login/) and access the **Activity Logs** section.
 1. Check the current export settings to ensure they align with your requirements.
 
-**Step 2: Update Legacy Methods**
+### Step 2: Update Legacy Methods
 
 1. If you are using legacy APIs or PowerShell commands, update them to the latest versions.
 1. Use the command `Get-AzOperationalInsightsDataSource` to verify existing data sources.
 
-**Step 3: Configure New Export Settings**
+### Step 3: Configure New Export Settings
 
 1. Go to **Azure Monitor** and select **Diagnostic settings**.
 1. Create a new setting by specifying the **Log Analytics workspace** and **Event Hub** as destinations.
 
-**Step 4: Test the Configuration**
+### Step 4: Test the Configuration
 
 1. Make sure to test the configuration by generating sample logs.
 1. Check the destination to verify that logs are exported as expected.
 
-**Step 5: Monitor and Adjust**:
+### Step 5: Monitor and Adjust
 
 1. Regularly monitor the logs to ensure they are being exported correctly.
 1. Adjust the settings as necessary based on the log data and performance.
