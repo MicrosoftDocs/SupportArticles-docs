@@ -6,7 +6,7 @@ ms.service: azure-file-storage
 ms.topic: troubleshooting
 ms.date: 07/21/2025
 ms.author: kendownie
-ms.custom: sap:File Sync
+ms.custom: sap:File Sync, copilot-scenario-highlight
 ---
 # Troubleshoot Azure File Sync
 
