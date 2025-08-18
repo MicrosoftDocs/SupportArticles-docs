@@ -1,7 +1,7 @@
 ---
 title: Can't Access Hyper-V Virtual Machines Via VMConnect
-description: Addresses an issue where you can't connect to Hyper-V virtual machines (VMs) through Virtual Machine Connection (VMConnect) after you repeatedly receive an authentication error.
-ms.date: 08/13/2025
+description: Addresses an issue where you can't connect to Hyper-V virtual machines (VMs) through VMConnect after you repeatedly receive an authentication error.
+ms.date: 08/18/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -54,12 +54,12 @@ After you complete these steps, the missing TLS cryptography registry keys are r
 
 ## Other potential causes
 
-If the issue persists, further investigation might be required to confirm whether additional configuration settings or system updates are impacting the VM connection process. For example, network configuration issues or outdated system components should be examined.
+If the issue persists, further investigation might be required to confirm whether other configuration settings or system updates are impacting the VM connection process. For example, network configuration issues or outdated system components should be examined.
 
 You can verify the network and system configurations by using the following steps:
 
 1. Check the server's network connectivity to ensure there are no interruptions.
 2. Ensure all system updates and patches are applied to both the host and guest operating systems.
-3. Review event logs for additional error messages that might provide insights into the issue.
+3. Review event logs for other error messages that might provide insights into the issue.
 
 If further assistance is required, consider contacting Microsoft Support for advanced troubleshooting.
