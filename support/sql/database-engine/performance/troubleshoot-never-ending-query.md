@@ -31,13 +31,13 @@ Common causes of long-running (never-ending) queries include:
 - **Complex queries that have many joins and large tables:** Queries that involve many joined tables would typically have complex query plans that might take a long time to run. This scenario is common in analytical queries that don't filter out rows and that involve a large number of tables.
 - **Missing indexes:** Queries can be accelerated if appropriate indexes are used on tables. Indexes enable the selection of a subset of the data to provide faster access.
 
-## Resolution
+## Solution
 
-### Step 1. Discover never-ending queries
+### Step 1: Discover never-ending queries
 
 Look for a never-ending query that's running on the system. You have to determine whether a query has a long execution time, a long wait time (stuck on a bottleneck), or a long compilation time.
 
-#### 1.1  Run a diagnostic
+#### 1.1 Run a diagnostic
 
 Run the following diagnostic query on your SQL Server instance where the never-ending query is active:
 
@@ -92,7 +92,7 @@ END
 
 There are several scenarios that can cause a query to run for a long time: long execution, long wait, and long compilation. For more information about why a query might run slowly, see [Running vs. Waiting: why are queries slow?](troubleshoot-slow-running-queries.md#running-vs-waiting-why-are-queries-slow)
 
-#### Long execution time
+##### Long execution time
 
 The troubleshooting steps in this article are applicable when you receive an output similar to the following, where the CPU time is increasing proportionately to the elapsed time without significant wait times.
 
@@ -114,7 +114,7 @@ In this situation, the query is reading rows, joining, processing results, calcu
 
 If the slow query meets these criteria, focus on reducing its runtime. Typically, reducing runtime involves reducing the number of rows that the query has to process throughout its life by applying indexes, rewriting the query, or updating statistics. For more information, see the [Resolution](#step-4-resolution) section.
 
-#### Long wait time
+##### Long wait time
 
 This article isn't applicable for long wait scenarios. In a wait scenario, you might receive an output that resembles the following example in which the CPU usage doesn't change or changes slightly because the session is waiting on a resource:
 
@@ -124,15 +124,11 @@ This article isn't applicable for long wait scenarios. In a wait scenario, you m
 
 The wait type indicates that the session is waiting on a resource. A long elapsed time and a long wait time indicate that the session is waiting for most its life for this resource. Тhe short CPU time indicates that little time was spent actually processing the query.
 
-To troubleshoot queries that are long because of waits, see the following article:
-
-[!INCLUDE [collect query data and logical reads](../../includes/performance/diagnose-waits-or-bottlenecks.md)]
-
-#### Long compilation time
+##### Long compilation time
 
 On rare occasions, you might observe that the CPU usage increases continuously over time but isn't driven by the query run. Instead, an excessively long compilation (the parsing and compiling of a query) might be the cause. In these cases, check the `transaction_name` output column for a value of `sqlsource_transform`. This transaction name indicates a compilation.
 
-### 2. Collect diagnostic logs manually
+### Step 2: Collect diagnostic logs manually
 
 After you determine that a never-ending query exists on the system, you can collect the query's plan data to troubleshoot further. To collect the data, use one of the following methods, depending on your version of SQL Server.
 
@@ -349,7 +345,7 @@ You can use [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases) t
 
 SQL LogScout captures at least three query plans for each high-CPU-consuming query. You can find file names that resemble `servername_datetime_NeverEnding_statistics_QueryPlansXml_Startup_sessionId_#.sqlplan`. You can use these files in the next step when you review plans to identify the reason for long query execution.
 
-### Step 3. Review the collected plans
+### Step 3: Review the collected plans
 
 This section discusses how to review the collected data. It uses the multiple XML query plans (using extension `.sqlplan`) that are collected in Microsoft SQL Server 2016 SP1 and later builds and versions.
 
@@ -369,7 +365,7 @@ This section discusses how to review the collected data. It uses the multiple XM
 
    :::image type="content" source="media/troubleshoot-never-ending-query/query-plan-comparison.png" alt-text="Screenshot that shows comparing query plans in SSMS." lightbox="media/troubleshoot-never-ending-query/query-plan-comparison.png":::
 
-### Step 4. Resolution
+### Step 4: Resolution
 
 1. Make sure that statistics are updated for the tables that are used in the query.
 
@@ -393,3 +389,8 @@ This section discusses how to review the collected data. It uses the multiple XM
    - USE `PLAN N'<xml_plan>'` (if you have a fast query plan that you can force)
 
 1. Use Query Store (QDS) to force a good known plan if such a plan exists and if your SQL Server version supports Query Store.
+
+## Related content
+
+- [Troubleshoot slow-running queries in SQL Server](/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries)
+- [Troubleshoot a query that shows a significant performance difference between two servers](/troubleshoot/sql/database-engine/performance/troubleshoot-query-perf-between-servers)
