@@ -168,6 +168,8 @@
     href: availability-performance/identify-high-cpu-consuming-containers-aks.md
   - name: Identify containers facing high CPU pressure and throttling
     href: availability-performance/troubleshoot-node-cpu-pressure-psi.md
+  - name: Identify nodes and containers creating high disk latency
+    href: availability-performance/identify-high-disk-io-latency-containers-aks.md
   - name: Identify memory saturation in AKS clusters
     href: availability-performance/identify-memory-saturation-aks.md
   - name: Troubleshoot high memory consumption in disk-intensive applications
