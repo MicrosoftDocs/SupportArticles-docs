@@ -134,7 +134,7 @@ These error entries indicate that the VM can't reach the WireServer IP address, 
 ### Solution: Enable DHCP, and make sure that the server isn't blocked by firewalls, proxies, or other sources
 
 1. Connect to the VM by using Remote Desktop, and then test connectivity to 168.63.129.16. See the [Troubleshoot connectivity](/azure/virtual-network/what-is-ip-address-168-63-129-16?tabs=windows#troubleshoot-azure-ip-connectivity) section of [Azure IP address 168.63.129.16 overview](/azure/virtual-network/what-is-ip-address-168-63-129-16).
-1. If you have only one private IP on your VM's network adapter, we highly recommend that you have DHCP enabled on the guest VM. If you need a static private IP address, you should configure it through the Azure portal or PowerShell, and make sure the DHCP option inside the VM is enabled. To make sure that the IP configuration always matches what's configured on the VM in Azure, [Learn more](/azure/virtual-network/ip-services/virtual-networks-static-private-ip-arm-ps) about how to set up a static IP address by using PowerShell.
+1. If you have only one private IP on your VM's network adapter, we highly recommend that you have DHCP enabled on the guest VM. If you need a static private IP address, you should configure it through the Azure portal or PowerShell, and make sure the DHCP option inside the VM is enabled. To make sure that the IP configuration always matches the configuration on the VM in Azure, [learn how to set up a static IP address](/azure/virtual-network/ip-services/virtual-networks-static-private-ip-arm-ps) by using PowerShell.
 1. If you have multiple private IPs assigned to your VM's network adapter, make sure that you carefully follow the steps to [assign the IP configurations correctly](/azure/virtual-network/ip-services/virtual-network-multiple-ip-addresses-portal#os-config). After you finish the steps, if Guest Agent can't communicate with 168.63.129.16, check that the primary IP in Windows [matches the primary IP in your VM's network adapter in Azure](/troubleshoot/azure/virtual-machines/windows/no-internet-access-multi-ip).
 1. Check for any issues that a firewall, a proxy, or another source might cause that could block access to IP address `168.63.129.16`.
 1. Check whether Windows Firewall or a third-party firewall is blocking access to ports `80` and `32526`. For more information about why this address shouldn't be blocked, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16)
@@ -376,11 +376,11 @@ If trying to install Guest Agent fails, make sure that all [prerequisites for Gu
      sc delete rdagent
      sc delete WindowsAzureGuestAgent
      ```
-   1. Under C:\WindowsAzure, create a folder that's named OLD.
+   1. Under C:\WindowsAzure, create a folder, and name it OLD.
    1. Move any folders that are named Packages or GuestAgent into the OLD folder.
    1. Create a new folder for the .msi install location (C:\VMAgentMSI).
 1. Download the latest [.msi file](https://github.com/Azure/WindowsVMAgent/releases) from the GitHub Releases for Windows Guest Agent.
-1. Install Guest Agent by using the .msiexec command line + arguments:
+1. Install Guest Agent by using the msiexec command line + arguments:
 
      ```
      msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /L*v C:\Windows\Panther\msiexec.log
@@ -495,7 +495,7 @@ wmic service rdagent list brief
 <details>
 <summary>Click here for troubleshooting details</summary>
 
-System event errors 7031 or 7034 is logged, and the C:\WindowsAzure\logs\TransparentInstaller.log shows the following entry:
+System event error 7031 or 7034 is logged, and the C:\WindowsAzure\logs\TransparentInstaller.log shows the following entry:
 
 ```
 [ERROR] System.Configuration.ConfigurationErrorsException: The type 'Microsoft.VisualStudio.Diagnostics.ServiceModelSink.Behavior, Microsoft.VisualStudio.Diagnostics.ServiceModelSink, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' registered for extension 'Microsoft.VisualStudio.Diagnostics.ServiceModelSink.Behavior' could not be loaded.
