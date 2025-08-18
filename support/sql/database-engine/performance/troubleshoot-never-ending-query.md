@@ -126,7 +126,7 @@ The wait type indicates that the session is waiting on a resource. A long elapse
 
 To troubleshoot queries that are long because of waits, see the following article:
 
-[!INCLUDE [collect query data and logical reads](../../includes/performance/diagnose-waits-or-bottlenecks.md)]
+#### [!INCLUDE [collect query data and logical reads](../../includes/performance/diagnose-waits-or-bottlenecks.md)]
 
 #### Long compilation time
 
