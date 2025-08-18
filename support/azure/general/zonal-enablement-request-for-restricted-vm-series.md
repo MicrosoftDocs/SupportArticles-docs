@@ -4,8 +4,8 @@ description: Guidance to request access to restricted vm series in selected zone
 ms.date: 08/06/2025
 ms.service: azure-common-issues-support
 ms.author: zmazieva
-author: Zarina Mazieva
-ms.reviewer: 
+author: zmazieva78MS
+ms.reviewer: v-liuamson
 ---
 # Zonal enablement request for restricted virtual machine series  
 
