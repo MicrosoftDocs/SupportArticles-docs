@@ -236,8 +236,11 @@
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070490
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: My VM is not booting
-  
+    - name: Error Code 0x8007045b
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
+
+- name: My VM is not booting
+  items:
   - name: Boot diagnostics
     href: boot-diagnostics.md
   - name: Common issues
