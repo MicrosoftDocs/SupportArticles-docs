@@ -53,7 +53,7 @@ To configure Azure activity log export, follow these steps.
 ## References
 
 - [Azure Monitor documentation](/azure/azure-monitor/fundamentals/overview)
-- [Azure Activity logs overview](/azure/azure-monitor/fundamentals/data-sources)
+- [Azure activity logs overview](/azure/azure-monitor/fundamentals/data-sources)
 - [Configure diagnostic settings](/azure/azure-monitor/platform/diagnostic-settings?tabs=portal)
 
 ## Contact us for help
