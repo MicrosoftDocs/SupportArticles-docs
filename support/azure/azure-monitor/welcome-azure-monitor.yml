@@ -20,11 +20,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Understanding and Transitioning from Legacy to Diagnostic Settings for Azure Activity Logs
-            url: ./activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md
-          - text: Diagnostic Settings Transition from Legacy Solutions
-            url: ./activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md
-  
+          - text: Troubleshoot the export of Activity Logs across Azure subscriptions
+            url: ./activity-logs/config-export/troubleshoot-export-of-activity-logs-across-subscriptions.md
+
   - title: Troubleshoot Azure Application Insights issues
     linkLists:
       - linkListType: how-to-guide

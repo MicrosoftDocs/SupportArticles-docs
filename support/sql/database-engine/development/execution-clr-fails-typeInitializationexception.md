@@ -3,7 +3,6 @@ title: Execution of CLR fails with TypeInitializationException
 description: This article provides workarounds for the problem where the execution of SQL Server CLR objects fails and returns a System.TypeInitializationException exception.
 ms.date: 01/15/2021
 ms.custom: sap:Database or Client application Development
-ms.topic: article 
 ---
 # Execution of SQL Server CLR fails with TypeInitializationException
 

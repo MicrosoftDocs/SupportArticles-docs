@@ -1222,6 +1222,8 @@ items:
       href: ./licensing-and-activation/change-volume-licensing-product-key.md
     - name: How to rebuild the Tokens.dat file
       href: ./licensing-and-activation/rebuild-tokens-dotdat-file.md
+    - name: Local policy of this system does not permit you to logon interactively
+      href: ./licensing-and-activation/remote-local-policy-not-permit-logon.md
     - name: Specified database is not a valid VAMT database error
       href: ./licensing-and-activation/specified-database-not-valid-vamt-error.md
     - name: Troubleshoot ADBA clients that don't activate
@@ -1628,6 +1630,8 @@ items:
       href: ./networking/configure-proxy-server-settings.md
     - name: Configure SNMP Service
       href: ./networking/configure-snmp-service.md
+    - name: Default MTU sizes for different network topologies
+      href: ./networking/default-maximum-transfer-unit-network-topologies.md
     - name: DirectAccess clients unable to connect when a static proxy is configured
       href: ./networking/directaccess-clients-unable-connect-static-proxy-configured.md
     - name: Direct host SMB over TCP/IP
@@ -1644,6 +1648,8 @@ items:
       href: ./networking/0x2afc-0x274d-error-directaccess-clients-connect-ip-https.md
     - name: Error 10013 when binding excluded port again
       href: ./networking/error-10013-wsaeacces-is-returned.md
+    - name: Error message when you open the properties of a network connection
+      href: ./networking/network-connection-unexpected-error.md      
     - name: Error message when you set an IP address
       href: ./networking/error-message-when-you-set-ip-address.md
     - name: Event 1500 when SNMP is enabled
@@ -1678,6 +1684,8 @@ items:
       href: ./networking/ip-default-gateway-settings-assigned-incorrectly.md
     - name: Multiple default gateways cause connectivity problems
       href: ./networking/connectivity-issues-multiple-default-gateways.md
+    - name: Modify the TCP/IP maximum retransmission time-out
+      href: ./networking/modify-tcp-ip-maximum-retransmission-time-out.md
     - name: Net Commands Operating Systems
       href: ./networking/net-commands-on-operating-systems.md
     - name: OS compatibility with DNSSEC enabled root servers
@@ -1694,6 +1702,8 @@ items:
       href: ./networking/receive-window-auto-tuning-for-http.md
     - name: Reserve a range of ephemeral ports
       href: ./networking/reserve-a-range-of-ephemeral-ports.md
+    - name: Reset TCP/IP by using the NetShell utility
+      href: ./networking/reset-tcp-ip-net-shell.md
     - name: Service overview and network port requirements
       href: ./networking/service-overview-and-network-port-requirements.md
     - name: Slow performance occurs when you copy data to a TCP server
@@ -1716,12 +1726,16 @@ items:
       href: ./networking/default-dynamic-port-range-tcpip-chang.md
     - name: Troubleshoot Web Application Proxy
       href: ./networking/troubleshoot-web-application-proxy.md
+    - name: Use TRACERT to troubleshoot TCP/IP problems
+      href: ./networking/trace-route-troubleshoot-tcp-ip-problems.md
     - name: Use WHOIS to research Internet domains
       href: ./networking/research-internet-domains-with-whois.md
     - name: Using the PortQry command-line tool
       href: ./networking/portqry-command-line-port-scanner-v2.md
     - name: Virtual machines lose network connectivity
       href: ./networking/vm-lose-network-connectivity-broadcom.md
+    - name: Windows activation or validation fails with error code 0x8004FE33
+      href: ./networking/windows-activation-validation-fails.md
     - name: WSAEMSGSIZE - Error 10040 in Winsock 2.0
       href: ./networking/wsaemsgsize-error-10040-in-winsock-2.md
   - name: Webwindows-client and WebDAV
@@ -1786,6 +1800,8 @@ items:
     items:
     - name: 'Troubleshooting guidance: Application or service crashing behavior'
       href: ./performance/troubleshoot-application-service-crashing-behavior.md
+    - name: 'Troubleshooting guidance: Application or service memory leaks'
+      href: ./performance/troubleshoot-application-service-memory-leaks.md
     - name: Cannot set page files on a partition larger than 2 terabytes
       href: ./performance/cannot-set-page-files-on-partition-larger-than-2-tb.md
     - name: Compatibility for 32-bit programs on 64-bit versions of Windows
@@ -2644,6 +2660,8 @@ items:
     href: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
   - name: Folder redirection
     items:
+    - name: Event ID 1530 may be logged in the application log
+      href: ./user-profiles-and-logon/event-1530-application-log.md
     - name: Fail to set up Folder Redirection with Group Policy
       href: ./user-profiles-and-logon/event-101-1000-with-folder-redirection.md
     - name: Folder Redirection fails with ERROR_SEM_TIMEOUT
@@ -2718,6 +2736,10 @@ items:
     items:
     - name: API call of performance counters is delayed
       href: ./virtualization/api-call-performance-counters-delay-container.md
+  - name: GPU passthrough
+    items:
+    - name: "Troubleshooting Guidance: Hyper-V GPU assignment, partitioning, and passthrough"
+      href: ./virtualization/troubleshoot-hyper-v-gpu-assignment-partitioning-passthrough-issues.md
   - name: High availability virtual machines
     items:
     - name: Can't change the ConfigStoreRootPath value of a Hyper-V cluster
@@ -3136,8 +3158,10 @@ items:
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
       href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
-  - name: Windows Update for Business Reports
-    items:
+    - name: Troubleshoot Windows Installation Error 0x800f0831
+      href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
+    - name: Windows Update for Business Reports
+      items:
     - name: Initial service configuration and Onboarding
       items:
       - name: 'Troubleshooting guidance: Windows Update for Business reports'

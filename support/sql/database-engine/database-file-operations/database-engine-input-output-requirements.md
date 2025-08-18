@@ -3,7 +3,6 @@ title: Database Engine Input/Output requirements
 description: This article describes the SQL Server Database Engine Disk I/O requirements.
 ms.date: 11/04/2022
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
-ms.topic: article
 ---
 # SQL Server Database Engine Disk Input/Output (I/O) requirements
 
