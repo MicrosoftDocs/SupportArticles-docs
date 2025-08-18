@@ -1,6 +1,6 @@
 ---
 title: Collect Performance Trace in New Outlook for Windows
-description: Describes how to collect performance traces by using different options in New Outlook for Windows.
+description: Provides guidance to collect performance and network traces in new Outlook for Windows.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -36,8 +36,8 @@ To collect and access a trace, follow these steps:
 
 3. To access the trace files, open File Explorer, and then navigate to **%localappdata%\Microsoft\Olk\Feedback\Traces**.
 
-    The file name of a trace uses the following format: **WebviewTrace_\<TraceType_n_yyyymmdd_hhmmSSss>.json**
+   The file name of a trace uses the following format: **WebviewTrace_\<TraceType_n_yyyymmdd_hhmmSSss>.json**
 
-    For example: **WebviewTrace_Performance_1_20250324_215740833.json**
+   For example: **WebviewTrace_Performance_1_20250324_215740833.json**
 
 If you're on the phone with Microsoft Support, and you're asked to share the trace files, navigate to **Help** > **Get Diagnostics**, and then select the **Send diagnostics** button. Provide the displayed Support ID so that the Support agent can access the trace information that you collected.
