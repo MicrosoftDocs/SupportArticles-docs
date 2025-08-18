@@ -19,6 +19,9 @@ items:
         href: activity-logs/config-export/troubleshoot-permission-errors-in-activity-log-configuration.md
       - name: Troubleshoot the export of Activity Logs across Azure subscriptions
         href: activity-logs/config-export/troubleshoot-export-of-activity-logs-across-subscriptions.md
+      - name: Configuring Azure Activity Log Export
+        href: activity-logs/config-export/configuring-azure-activity-log-export-comprehensive-guide.md
+
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
