@@ -10,7 +10,7 @@ ms.custom: sap:VM Admin - Windows (Guest OS)
 # Windows Server 2003 and later versions End Of Support (EOS)
 
 > [!IMPORTANT]
-> This article applies to Windows Server versions that have reached End of Support (EOS).Microsoft has officially ended support for the following operating systems:
+> This article applies to Windows Server versions that have reached End of Support (EOS). Microsoft has officially ended support for the following operating systems:
 > - Windows Server 2003
 > - Windows Server 2008/R2
 
