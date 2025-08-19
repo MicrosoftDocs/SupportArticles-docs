@@ -2754,6 +2754,8 @@ items:
     items:
     - name: Antivirus exclusions for Hyper-V hosts
       href: ./virtualization/antivirus-exclusions-for-hyper-v-hosts.md
+    - name: Block users from running Hyper-V and VMware virtual machines on workstation-class computers
+      href: ./virtualization/block-users-from-running-virtualization-features-on-specific-computers.md
     - name: Issues when starting VM or installing Hyper-V
       href: ./virtualization/bios-update-for-hyper-v.md
     - name: Run programs on non-Microsoft hardware virtualization software
