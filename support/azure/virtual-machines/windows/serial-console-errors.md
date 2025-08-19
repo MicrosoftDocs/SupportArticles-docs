@@ -7,7 +7,6 @@ author: JarrettRenshaw
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
-ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
 ms.date: 07/29/2025

@@ -8,7 +8,6 @@ manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.collection: windows
-ms.topic: article
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
 ms.date: 08/14/2018
