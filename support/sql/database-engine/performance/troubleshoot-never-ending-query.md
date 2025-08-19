@@ -18,14 +18,15 @@ This article provides troubleshooting guidance for issues in which a Microsoft S
 This article focuses on queries that seem to run or compile without end. That is, their CPU usage continues to increase. This article doesn't apply to queries that are blocked or waiting on a resource that's never released. In those cases, the CPU usage remains constant or changes only slightly.
 
 > [!IMPORTANT]
-> If a query is left to continue running, it might eventually finish. This process could take just a few seconds or several days. One exception is an endless run where a [WHILE](sql/t-sql/language-elements/while-transact-sql) loop doesn't exit.
-> The term "never-ending" is used here to describe the perception of a query that doesn't finish.
+> If a query is left to continue running, it might eventually finish. This process could take just a few seconds or several days. In some situations, the query might really be endless, for example when a [WHILE](/sql/t-sql/language-elements/while-transact-sql) loop doesn't exit. The term "never-ending" is used here to describe the perception of a query that doesn't finish.
 
 ## Cause
 
 Common causes of long-running (never-ending) queries include:
 
-- **Nested Loop (NL) joins on very large tables:** Because of the nature of NL joins, a query that joins tables that have lots of rows might run for a long time. One example where NL joins is the only choice for query optimizer is the use of `TOP`, `FAST`, or `EXISTS`. Even if a Hash join or a Merge join might be faster, the optimizer can't use either operator because of the row goal. Another scenario where NL join is the only choice is where an inequality join predicate is used in a query. For example, `SELECT .. FROM tab1 AS a JOIN tab 2 AS b ON a.id > b.id`.  Merge and Hash joins are not a possible query optimizer choice here. For more information, see [Joins](/sql/relational-databases/performance/joins)
+- **Nested Loop (NL) joins on very large tables:** Because of the nature of NL joins, a query that joins tables that have lots of rows might run for a long time. For more information, see [Joins](/sql/relational-databases/performance/joins).
+  - One example of an NL join is the use of `TOP`, `FAST`, or `EXISTS`. Even if a Hash or Merge join might be faster, the optimizer can't use either operator because of the row goal.
+  - Another example of an NL join is the use of an inequality join predicate in a query. For example, `SELECT .. FROM tab1 AS a JOIN tab 2 AS b ON a.id > b.id`. The optimizer can't use a Merge or Hash joins here either.
 - **Out-of-date statistics:** Queries that pick a plan based on outdated statistics might be suboptimal and take a long time to run.
 - **Endless loops:** T-SQL queries that use WHILE loops might be incorrectly written. The resulting code never leaves the loop and runs endlessly. These queries are truly never-ending. They run until they're killed manually.
 - **Complex queries that have many joins and large tables:** Queries that involve many joined tables would typically have complex query plans that might take a long time to run. This scenario is common in analytical queries that don't filter out rows and that involve a large number of tables.
