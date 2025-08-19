@@ -17,7 +17,7 @@ This article provides steps to make sure that a migrated Windows 11 virtual mach
 
 ## Symptoms
 
-After you migrate a VM from VMware to Hyper-V, the virtual machine doesn't start. When this issue occurs, you don't see any specific error codes.
+After you migrate a VM from VMware to Hyper-V, the VM doesn't start. When this issue occurs, you don't see any specific error codes.
 
 ## Cause
 
