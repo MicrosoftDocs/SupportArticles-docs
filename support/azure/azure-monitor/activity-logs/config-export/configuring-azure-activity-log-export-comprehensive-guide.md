@@ -56,6 +56,4 @@ To configure Azure activity log export, follow these steps.
 - [Azure activity logs overview](/azure/azure-monitor/fundamentals/data-sources)
 - [Configure diagnostic settings](/azure/azure-monitor/platform/diagnostic-settings?tabs=portal)
 
-## Contact us for help
-
-If you have questions or need help, create a [support request](https://ms.portal.azure.com/#view/Microsoft_Azure_Support/HelpAndSupportBlade/~/overview?DMC=troubleshoot), or ask [Azure community support](/answers/tags/133/azure). You can also submit product feedback to [Azure feedback community](https://feedback.azure.com/d365community)
+[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]
