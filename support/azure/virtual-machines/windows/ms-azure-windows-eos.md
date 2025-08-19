@@ -1,15 +1,20 @@
 ---
-title: Running Windows Server 2003 on Microsoft Azure
-description: Provides information about Windows Server 2003 support and answers some of the most common questions about running Windows Server 2003 on Microsoft Azure.
-ms.date: 07/21/2020
-ms.reviewer: 
+title: Windows Server 2003 and later versions End Of Support (EOS)
+description: Provides information about Windows Server 2003 and later versions End Of Support (EOS).
+ms.date: 08/19/2025
+ms.reviewer: v-liuamson 
 ms.service: azure-virtual-machines
 ms.collection: windows
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
-# Running Windows Server 2003 on Microsoft Azure
+# Windows Server 2003 and later versions End Of Support (EOS)
 
-**Applies to:** :heavy_check_mark: Windows VMs
+> [!IMPORTANT]
+> This article applies to Windows Server versions that have reached End of Support (EOS).Microsoft has officially ended support for the following operating systems:
+> - Windows Server 2003
+> - Windows Server 2008/R2
+
+**Applies to:** Windows VMs
 
 _Original KB number:_ &nbsp; 4010166
 
@@ -22,14 +27,6 @@ Microsoft ended extended support for Windows Server 2003 on July 14, 2015. If yo
 Machines running Windows 2003 will no longer receive Microsoft support and may not receive further security updates. Additionally, many compliance requirements include being on a currently supported operating system.
 
 Migrating your applications to Azure instances running a newer version of Windows Server is the recommended approach to ensure that you are effectively leveraging the flexibility and reliability of the Azure cloud. Pre-configured images with different combinations of Windows and SQL Server are available in the Marketplace and enable you to run any compatible solution on our cost-effective, high-performance, reliable cloud computing platform. For more information, see [Windows Server 2003 migration strategy](https://www.microsoft.com/cloud-platform/windows-server-2003).
-
-> [!CAUTION]
-> This article references Windows Server versions that have reached End of Support (EOS).Microsoft has officially ended support for the following operating systems:
-> - Windows Server 2003
-> - Windows Server 2008 (including SP2 and R2 SP1)
-> - Windows Server 2012
-> - Windows Server 2012 R2
-As a result, Azure Migrate doesn’t guarantee consistent or reliable outcomes for these OS versions. Customers may face problems and are strongly advised to upgrade to a supported Windows Server version before starting migration.
 
 ## Frequently asked questions
 

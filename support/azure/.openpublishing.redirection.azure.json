@@ -6373,6 +6373,10 @@
         {
         "source_path": "automation/runbooks/reinstall-oms-agent-linux.md",
         "redirect_url": "/troubleshoot/azure/automation/welcome-automation"
+      },
+        {
+        "source_path": "virtual-machines/windows/run-win-server-2003.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/ms-azure-windows-eos"
       }
   ]
 }
