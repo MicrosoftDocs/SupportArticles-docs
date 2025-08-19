@@ -41,7 +41,7 @@ The following procedure provides steps that are specific to VMs that run Windows
 To configure the security settings for the migrated VM, follow these steps:
 
 1. In Hyper-V Manager, right-click the VM, and then select **Settings**.
-1. Select **Security**, open the **Security** page, and then make sure that the following settings are selected:
+1. Select **Security**. On the **Security** page, make sure that the following settings are selected:
 
    - **Secure Boot**
    - **Trusted Platform Module (TPM)**
