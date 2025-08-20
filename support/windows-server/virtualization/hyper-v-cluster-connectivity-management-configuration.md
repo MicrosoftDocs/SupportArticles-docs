@@ -33,7 +33,7 @@ This article provides a comprehensive guide to troubleshooting various issues re
   - > The operation on computer failed: WinRM process the request. The error code 0x80090311 occurred while using Kerberos authentication.
   - > SEC_E_NO_AUTHENTICATING_AUTHORITY: No authority could be contacted for authentication.
   - > Start-VM: Hyper-V encountered an error trying to access an object on computer [host] because the object was not found.
-  - > get-vm: The paging file is too small for this operation to complete.
+  - > Get-vm: The paging file is too small for this operation to complete.
 
 - Hyper-V Manager becomes unresponsive or doesn't display any VMs.
 - VMConnect fails from certain remote hosts but succeeds from others.
@@ -98,7 +98,7 @@ Here are the resolutions for each scenario respectively:
     1. Ensure users are members of:
        - Hyper-V Administrators
        - Remote Management Users
-       - Storage Replica Administrators (if applicable).
+       - Storage Replica Administrators (if applicable)
     1. Remove affected users from the default Users group if necessary.
 
 1. Update Group Policy and WinRM settings:
@@ -127,7 +127,7 @@ Here are the resolutions for each scenario respectively:
         - Remote Administration
         - Remote Desktop
         - Remote Volume Management
-        - Windows Management Instrumentation (WMI).
+        - Windows Management Instrumentation (WMI)
 
 ## Scenario 2: Virtual machine fails to migrate, start, or is inaccessible after upgrade
 
