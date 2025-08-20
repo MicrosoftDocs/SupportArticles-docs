@@ -39,8 +39,8 @@ Or
 
 **NodePoolMcVersionIncompatible:** Node pool version 1.24.9 and control
 plane version 1.29.15 is incompatible. Minor version of node pool cannot
-be more than 3 versions less than control plane's version. Minor
-version of node pool is 24 and control plane is 29. For more information, see
+be more than 3 versions less than control plane's version. Minor version
+of node pool is 24 and control plane is 29. For more information, see
 [AKS upgrade version skew policy](https://aka.ms/aks/UpgradeVersionRules).
 
 ## Cause
@@ -68,20 +68,17 @@ Run the following command to view the current Kubernetes version and supported u
 az aks get-upgrades --resource-group <RG> --name <ClusterName> --output table
 ```
 
-If only newer versions such as 1.29.x are listed, and intermediate versions like 1.25.x, 1.26.x, or 1.27.x are missing, this indicates that
-those versions are deprecated in your region.
+If only newer versions such as 1.29.x are listed, and intermediate versions like 1.25.x, 1.26.x, or 1.27.x are missing, this indicates that those versions are deprecated in your region.
 
 ### Step 2: Attempt full upgrade (control plane and node pool together)
 
-Due to the version skew policy (**control planes cannot be more than 3 minor versions ahead of node pools**),
-a separate control-plane-only upgrade may not be allowed. Instead, upgrade both the control plane and node pool together:
+Due to the version skew policy (**control planes cannot be more than 3 minor versions ahead of node pools**), a separate control-plane-only upgrade may not be allowed. Instead, upgrade both the control plane and node pool together:
 
 ```azurecli
 az aks upgrade --resource-group <RG> --name <ClusterName> --kubernetes-version <available upgrade version> --yes
 ```
 
-This will ensure compliance with the version skew policy, use of a supported Kubernetes version and upgrade of both components in a
-coordinated manner.
+This will ensure compliance with the version skew policy, use of a supported Kubernetes version and upgrade of both components in a coordinated manner.
 
 ### Additional Tips
 
