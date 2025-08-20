@@ -13,7 +13,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 ## Prerequisites
 
 This article requires Azure CLI version 2.67.0 or a later version.
-To find the version number, run `az --version`. If you have to install or
+To find the version number, run `az --version`. If you need to install or
 upgrade Azure CLI, see [How to install the Azure CLI](/cli/azure/install-azure-cli).
 
 For more detailed information about the upgrade process, see the "Upgrade an AKS cluster" section in
@@ -51,9 +51,7 @@ The upgrade is not allowed due to one or more of the following reasons:
 
 - Skipping minor versions during upgrades (e.g., from 1.24.x to 1.26.x or 1.27.x) is not allowed unless the current version is unsupported.
 
-- A control plane and node pool version skew (**NodePoolMcVersionIncompatible**) occurred when attempting to
-  upgrade only the control plane while the nodepool version is too far behind causing a big gap such that the
-  node pool version is more than three minor versions behind the control plane version.
+- A control plane and node pool version skew (**NodePoolMcVersionIncompatible**) occurred when attempting to upgrade only the control plane while the nodepool version is too far behind causing a big gap such that the node pool version is more than three minor versions behind the control plane version.
 
 To understand more about these errors, you can refer to following articles:
 
@@ -67,7 +65,7 @@ To understand more about these errors, you can refer to following articles:
 Run the following command to view the current Kubernetes version and supported upgrade targets:
 
 ```azurecli
-az aks get-upgrades --resource-group <RG> --name <ClusterName> --output table`
+az aks get-upgrades --resource-group <RG> --name <ClusterName> --output table
 ```
 
 If only newer versions such as 1.29.x are listed, and intermediate versions like 1.25.x, 1.26.x, or 1.27.x are missing, this indicates that
@@ -75,12 +73,11 @@ those versions are deprecated in your region.
 
 ### Step 2: Attempt full upgrade (control plane and node pool together)
 
-Due to the version skew policy (**control planes cannot be more than three minor versions ahead of node pools**),
+Due to the version skew policy (**control planes cannot be more than 3 minor versions ahead of node pools**),
 a separate control-plane-only upgrade may not be allowed. Instead, upgrade both the control plane and node pool together:
 
 ```azurecli
-az aks upgrade --resource-group <RG> --name <ClusterName>
---kubernetes-version <available upgrade version> --yes
+az aks upgrade --resource-group <RG> --name <ClusterName> --kubernetes-version <available upgrade version> --yes
 ```
 
 This will ensure compliance with the version skew policy, use of a supported Kubernetes version and upgrade of both components in a
