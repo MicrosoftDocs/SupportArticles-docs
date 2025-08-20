@@ -28,4 +28,4 @@ This article provides troubleshooting information for the combination of the SIP
 - Microsoft response code: **540415**
 - SIP response code: **415**
 - Suggested actions:  
-  - This error indicates that either the SBC offer is missing or it contains an unsupported media type. For example, the CONTENT-TYPE might be missing or the SBC offer has unsupported data such as information about the application, or pidf+xml. Check the SBC configuration to fix the problem.
+  - This error indicates that either the SBC offer is missing or it contains an unsupported media type. For example, the CONTENT-TYPE might be missing or the SBC offer has unsupported data such as `CONTENT-TYPE : application/pidf+xml`. Check the SBC configuration to fix the problem.

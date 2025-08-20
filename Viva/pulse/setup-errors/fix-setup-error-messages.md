@@ -1,10 +1,10 @@
 ---
-title: Resolve setup errors in Viva Pulse
-description: Fix error messages that you might experience when you navigate the setup process in Microsoft Viva Pulse.
+title: Resolve error messages during Viva Pulse setup
+description: Fix error messages that you might experience when you navigate the setup process in Viva Pulse.
 manager: dcscontentpm
-ms.author: michellehu
-ms.reviewer: michellehu
-ms.date: 11/06/2023
+ms.author: meerak
+ms.reviewer: michellehu, jjaworsk
+ms.date: 08/19/2025
 audience: ITPro
 f1.keywords: NOCSH
 ms.topic: troubleshooting
@@ -12,12 +12,13 @@ search.appverid: MET150
 ms.custom: 
   - CSSTroubleshoot
   - CI 183792
+  - CI 7092
 ms.service: viva-pulse
 ---
 
-# Resolve error messages during setup
+# Resolve error messages during Viva Pulse setup
 
-As you navigate the setup process in Microsoft Viva Pulse, you might experience errors. The following table outlines the error messages you might see, a description of when they're displayed, and the next steps you can take to resolve those errors. This isn't an exhaustive list, and more error messages may be added in the future.
+As you navigate the setup process in Microsoft Viva Pulse, you might experience errors. The following table outlines the error messages you might see, a description of when they're displayed, and how to resolve the errors.
 
 | Error Message | Where the error appears | How to fix it |
 | ----------- | ----------- | ----------- |
