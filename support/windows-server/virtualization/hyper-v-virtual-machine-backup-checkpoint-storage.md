@@ -14,7 +14,19 @@ ms.custom:
 
 This article provides a comprehensive guide to troubleshooting common issues encountered with Hyper-V virtual machine (VM) backup, checkpoint management, and storage failures in Windows Server environments (Windows Server 2016, Windows Server 2019, and Windows Server 2022). These issues often arise during backup or restore operations, checkpoint creation or merging, VM startup, and storage connectivity. They can impact both production and disaster recovery workflows in standalone Hyper-V hosts, clustered setups, and environments integrated with third-party backup tools. Timely identification and resolution are critical to maintaining VM availability, data integrity, and backup reliability.
 
-You might encounter the following symptoms in affected environments:
+You might experience:
+
+- Inability to perform backups or restores, leading to potential data loss.
+- Unexpected VM downtime or loss of access.
+- Orphaned disk files causing storage exhaustion.
+- Persistent warning or error states in management consoles.
+
+In addition, you might encounter the following symptoms in affected environments:
+
+- [Backup and restore failures](#backup-and-restore-failures)
+- [Checkpoint and snapshot issues](#checkpoint-and-snapshot-issues)
+- [VM startup or migration failures](#vm-startup-or-migration-failures)
+- [Storage and file system errors](#storage-and-file-system-errors)
 
 ## Backup and restore failures
 
@@ -58,14 +70,15 @@ You might encounter the following symptoms in affected environments:
   - > Cannot connect to virtual machine configuration storage
   - > The virtual machine is not in a valid state to perform the operation.
 
-## User experience
+The root causes of these issues can be grouped into the following categories with corresponding resolutions provided:
 
-- Inability to perform backups or restores, leading to potential data loss.
-- Unexpected VM downtime or loss of access.
-- Orphaned disk files causing storage exhaustion.
-- Persistent warning or error states in management consoles.
+- [Checkpoint and VSS-related issues](#checkpoint-and-vss-related-issues)
+- [File system and storage problems](#file-system-and-storage-problems)
+- [Permissions and policy misconfiguration](#permissions-and-policy-misconfiguration)
+- [Cluster and configuration issues](#cluster-and-configuration-issues)
 
-The root causes of these issues can be grouped into the following categories, with corresponding resolutions provided.
+> [!NOTE]
+> Always back up critical VMs before performing file merges, deletions, or major configuration changes. For further assistance, consult Microsoft Support or your backup vendor.
 
 ## Checkpoint and VSS-related issues
 
@@ -186,7 +199,7 @@ The root causes of these issues can be grouped into the following categories, wi
    In Hyper-V Manager, use **Import Virtual Machine** and locate the exported/imported files.
 3. Update VM configuration version:
 
-   In Hyper-V Manager, right-click the VM, and select **Upgrade Configuration Version**. Or use the folowing PowerShell cmdlet:
+   In Hyper-V Manager, right-click the VM, and select **Upgrade Configuration Version**. Or use the following PowerShell cmdlet:
 
    ```powershell
    Update-VMVersion
@@ -225,6 +238,3 @@ To assist with troubleshooting, collect the following items:
 - [Backing up and restoring virtual machines](/windows/win32/hyperv_v2/backing-up-and-restoring-virtual-machines)
 - [Antivirus exclusions for Hyper-V](antivirus-exclusions-for-hyper-v-hosts.md)
 - [PowerShell Hyper-V cmdlets](/powershell/module/hyper-v/)
-
-> [!NOTE]
-> Always back up critical VMs before performing file merges, deletions, or major configuration changes. For further assistance, consult Microsoft Support or your backup vendor.

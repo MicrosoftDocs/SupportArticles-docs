@@ -2726,6 +2726,8 @@ items:
       href: ./virtualization/back-up-restore-hyper-v-vm-bmr-data-backup.md
     - name: Back up virtual machines from parent partition
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
+    - name: Troubleshoot Hyper-V virtual machine backup, checkpoint, and storage failures
+      href: ./virtualization/hyper-v-virtual-machine-backup-checkpoint-storage.md
   - name: Configuration of virtual machine settings
     items:
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
