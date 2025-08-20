@@ -42,7 +42,7 @@ WAM relies on the active user session to load its plugins and to access cryptogr
 
 For security, you shouldn't use the `RunAs` option to run PowerShell commands. This method bypasses key protections and introduces risks that are associated with impersonation and session isolation.
 
-Run PowerShell only in the same context as that of the signed-in Windows user to ensure compatibility with WAM. You can disable WAM temporarily by using the DisableWAM parameter with the `Connect-ExchangeOnline` PowerShell command to connect to Exchange Online and then re-enable WAM.
+Run PowerShell only in the same context as that of the signed-in Windows user to ensure compatibility with WAM. You can disable WAM temporarily by using the DisableWAM parameter together with the `Connect-ExchangeOnline` PowerShell command to connect to Exchange Online and then re-enable WAM.
 
 ## Scenario: Running GDAP flows
 
