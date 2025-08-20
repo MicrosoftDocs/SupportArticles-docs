@@ -104,23 +104,23 @@ Here are the resolutions for each scenario respectively:
 1. Update Group Policy and WinRM settings:
     1. Enable PowerShell remoting by using the following cmdlet:
 
-      ```powershell
-      Enable-PSRemoting
-      ```
+       ```powershell
+       Enable-PSRemoting
+       ```
 
     1. Configure CredSSP for authentication by using the following cmdlet:
 
-      ```powershell
-      Enable-WSManCredSSP -Role serverEnable-WSManCredSSP -Role client -DelegateComputer "<Hyper-V host>"
-      ```
+       ```powershell
+       Enable-WSManCredSSP -Role serverEnable-WSManCredSSP -Role client -DelegateComputer "<Hyper-V host>"
+       ```
 
 1. Adjust trusted hosts and firewall rules:
 
     1. Set trusted hosts for WinRM by using the following cmdlet:
 
-      ```powershell
-      Set-Item wsman:localhost\client\trustedhosts <Hyper-V host IP>
-      ```
+       ```powershell
+       Set-Item wsman:localhost\client\trustedhosts <Hyper-V host IP>
+       ```
 
     1. Enable relevant firewall rules:
 
