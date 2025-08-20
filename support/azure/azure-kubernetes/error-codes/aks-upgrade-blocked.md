@@ -20,27 +20,27 @@ For more detailed information about the upgrade process, see the "Upgrade an AKS
 
 When you try to upgrade an AKS cluster by using the Azure CLI, the upgrade operation is blocked and returns one or more of the following error messages.
 
-**Error message 1**
+**Error message 1: K8sVersionNotSupported**
 
-**K8sVersionNotSupported:** Managed cluster `<ClusterName>` is on version 1.25.6 which is not supported in this region. Please use the `[azaks get-versions]` command to get the supported version list in this region. For more information, see [Supported Kubernetes versions in Azure Kubernetes Service (AKS)](https://aka.ms/supported-version-list).
+> `<ClusterName>` is on version 1.25.6 which is not supported in this region. Please use the `[azaks get-versions]` command to get the supported version list in this region. For more information, see [Supported Kubernetes versions in Azure Kubernetes Service (AKS)](https://aka.ms/supported-version-list).
 
-**Error message 2**
+**Error message 2: OperationNotAllowed**
 
-**OperationNotAllowed:** Upgrading Kubernetes version 1.24.9 to 1.26.6 is not allowed. Available upgrades: [1.29.15 1.29.14 1.29.13 1.29.12 1.29.11 1.29.10 1.29.9 1.29.8 1.29.7 1.29.6 1.29.5 1.29.4 1.29.2 1.29.0]. For more information, see [AKS supported Kubernetes versions](https://aka.ms/aks-supported-k8s-ver) for version details.
+> Upgrading Kubernetes version 1.24.9 to 1.26.6 is not allowed. Available upgrades: [1.29.15 1.29.14 1.29.13 1.29.12 1.29.11 1.29.10 1.29.9 1.29.8 1.29.7 1.29.6 1.29.5 1.29.4 1.29.2 1.29.0]. For more information, see [AKS supported Kubernetes versions](https://aka.ms/aks-supported-k8s-ver) for version details.
 
-**Error message 3**
+**Error message 3: NodePoolMcVersionIncompatible**
 
-**NodePoolMcVersionIncompatible:** Node pool version 1.24.9 and control plane version 1.29.15 is incompatible. Minor version of node pool cannot be more than 3 versions less than control plane's version. Minor version of node pool is 24 and control plane is 29. For more information, see [AKS upgrade version skew policy](https://aka.ms/aks/UpgradeVersionRules).
+> Node pool version 1.24.9 and control plane version 1.29.15 is incompatible. Minor version of node pool cannot be more than 3 versions less than control plane's version. Minor version of node pool is 24 and control plane is 29. For more information, see [AKS upgrade version skew policy](https://aka.ms/aks/UpgradeVersionRules).
 
 ## Cause
 
-The upgrade is not allowed for one or more of the following reasons:
+The upgrade isn't allowed for one or more of the following reasons:
 
 - The target Kubernetes version (for example, 1.26 or 1.25) is no longer supported in the selected Azure region.
 
-- Skipping minor versions during upgrades (for example, from 1.24.*x* to 1.26.*x* or 1.27.*x*) is not allowed unless the current version is unsupported.
+- You aren't allowed to skip minor versions during upgrades (for example, from 1.24.*x* to 1.26.*x* or 1.27.*x*) unless the current version is unsupported.
 
-- A control plane and node pool version skew (**NodePoolMcVersionIncompatible**) occurs if you try to upgrade only the control plane. In this situation, the node pool version becomes more than three minor versions behind the control plane version. A gap of this size or greater causes the error.
+- A version skew between the control plane and node pool (**NodePoolMcVersionIncompatible**) occurs if you try to upgrade only the control plane. In this situation, the node pool version becomes more than three minor versions behind the control plane version. A gap of this size or greater causes the error.
 
 To understand more about these errors, refer to following articles:
 
@@ -62,7 +62,7 @@ those versions are deprecated in your region.
 
 ### Step 2: Try a full upgrade (control plane and node pool together)
 
-Because of the version skew policy ("control planes cannot be more than 3 minor versions ahead of node pools"),
+Because the version skew policy dictates that control planes can't be more than three minor versions ahead of node pools,
 a separate control-plane-only upgrade might not be allowed. Instead, upgrade both the control plane and node pool together:
 
 ```azurecli
@@ -85,16 +85,16 @@ az aks get-versions --location <region> --output table
 
 - Avoid trying to upgrade to deprecated versions. In this situation, AKS might enforce an immediate skip to a supported long-term version (for example, to version 1.29).
 
-- In the case of AKS clusters that are running significantly outdated Kubernetes versions, the recommended best practices are as follows:
+- If AKS clusters are running outdated Kubernetes versions that violate the skew policy, the recommended best practices are as follows:
 
   - **Create a new cluster:** create an AKS cluster by using a supported Kubernetes version.
 
-  - **Migrate workloads:** Transfer your workloads to the new cluster to make sure that they run on supported versions.
+  - **Migrate workloads:** To make sure that your workloads run on supported versions, transfer them to the new cluster.
 
   - **Avoid upgrading across multiple versions:** Instead of upgrading through several minor versions, move to a new cluster to minimize complexity and avoid potential issues.
 
   - **Back up and validate data:** Make sure that all data is backed up and validated before a migration.
 
-  - **Test thoroughly:** Perform thorough testing in a staging environment to identify and resolve any compatibility issues.
+  - **Test thoroughly:** To identify and resolve any compatibility issues, perform thorough testing in a staging environment.
 
 [!INCLUDE [azure-help-support](../../../includes/azure-help-support.md)]
