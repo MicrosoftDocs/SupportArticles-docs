@@ -28,6 +28,16 @@ In addition, you might encounter the following symptoms in affected environments
 - [VM startup or migration failures](#vm-startup-or-migration-failures)
 - [Storage and file system errors](#storage-and-file-system-errors)
 
+The root causes of these issues can be grouped into the following categories with corresponding resolutions provided:
+
+- [Checkpoint and VSS-related issues](#checkpoint-and-vss-related-issues)
+- [File system and storage problems](#file-system-and-storage-problems)
+- [Permissions and policy misconfiguration](#permissions-and-policy-misconfiguration)
+- [Cluster and configuration issues](#cluster-and-configuration-issues)
+
+> [!NOTE]
+> Always back up critical VMs before performing file merges, deletions, or major configuration changes. For further assistance, consult Microsoft Support or your backup vendor.
+
 ## Backup and restore failures
 
 - Backups fail to complete or hang indefinitely.
@@ -70,16 +80,6 @@ In addition, you might encounter the following symptoms in affected environments
   - > Cannot connect to virtual machine configuration storage
   - > The virtual machine is not in a valid state to perform the operation.
 
-The root causes of these issues can be grouped into the following categories with corresponding resolutions provided:
-
-- [Checkpoint and VSS-related issues](#checkpoint-and-vss-related-issues)
-- [File system and storage problems](#file-system-and-storage-problems)
-- [Permissions and policy misconfiguration](#permissions-and-policy-misconfiguration)
-- [Cluster and configuration issues](#cluster-and-configuration-issues)
-
-> [!NOTE]
-> Always back up critical VMs before performing file merges, deletions, or major configuration changes. For further assistance, consult Microsoft Support or your backup vendor.
-
 ## Checkpoint and VSS-related issues
 
 - Orphaned or unmerged checkpoints: Caused by incomplete backup operations, hidden/invisible checkpoints, or AVHDX chain corruption.
@@ -101,11 +101,10 @@ The root causes of these issues can be grouped into the following categories wit
 2. Merge orphaned AVHDX files:
 
     1. Shut down the affected VM.
-    2. In Hyper-V Manager:
+    2. In Hyper-V Manager， select the VM, and then select **Actions** > **Edit Disk** to open the **Edit Virtual Hard Disk Wizard** window.
+    3. On the **Locate Disk** tab, select **Browse** to locate the AVHDX file, then select **Next**.
+    4. On the **Choose Action** tab, select **Merge** > **To the parent virtual hard disk**, then select **Next** to complete the wizard.
 
-       1. Go to **Actions** > **Edit Disk**
-       2. Select **AVHDX** > **Merge** > **To Parent Disk**.
-       3. Repeat the process until only the parent VHDX file remains.
 3. Advanced PowerShell merge (if needed):
 
     ```powershell
