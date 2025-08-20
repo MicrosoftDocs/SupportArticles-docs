@@ -240,8 +240,6 @@
         href: connectivity/cannot-view-resources-kubernetes-resource-viewer-portal.md
       - name: '"Error from server: error dialing backend: dial tcp" messages'
         href: connectivity/error-from-server-error-dialing-backend-dial-tcp.md
-      - name: Microsoft Entra Pod Identity NMI returns 500 Internal Server Error
-        href: connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md
       - name: InsufficientSubnetSize error
         href: connectivity/insufficientsubnetsize-error-advanced-networking.md
       - name: TCP time-outs such as 10250 I/O
@@ -366,6 +364,8 @@
     href: extensions/troubleshoot-failed-kubernetes-deployment-offer.md
   - name: Troubleshoot network isolated clusters
     href: extensions/troubleshoot-network-isolated-cluster.md
+  - name: Troubleshoot managed namespaces
+    href: extensions/troubleshoot-managed-namespaces.md
   - name: KEDA add-on
     items:
     - name: Troubleshoot KEDA add-on
@@ -455,5 +455,9 @@
     href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-codes/zonalallocation-allocationfailed-error.md
-  - name: UpgradeFailed error
-    href: error-codes/upgradefailed-error.md
+  - name: AKS upgrade not allowed or blocked due to unsupported Kubernetes version or node pool version skew
+    href: error-codes/aks-upgrade-blocked.md
+  - name: SubnetIsDelegated error
+    href: error-codes/subnetisdelegated-error.md
+  - name: VirtualNetworkNotInSucceededState error 
+    href: error-codes/virtualnetworknotinsucceededstate-error.md

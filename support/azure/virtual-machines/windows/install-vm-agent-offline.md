@@ -8,7 +8,6 @@ ms.service: azure-virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
-ms.topic: article
 ms.date: 10/15/2024
 ms.author: jarrettr
 ms.custom: sap:VM Extensions not operating correctly

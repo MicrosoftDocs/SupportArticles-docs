@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows Update Errors That Require In-Place Upgrades for Azure VMs
 description: Learn how to resolve Windows Update errors that require in-place upgrades for Azure VMs.
-ms.date: 07/24/2025
+ms.date: 08/08/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -30,32 +30,32 @@ To identify Windows Update errors, check the `C:\Windows\Logs\CBS` file path for
 
 | Error code | Symbolic name                          | Description / Notes                                                           |
 |------------|----------------------------------------|-------------------------------------------------------------------------------|
-| 8007000D   | ERROR_INVALID_DATA                     | The data is invalid. Typically caused by corrupted Windows Update metadata.   |
-| 800705B9   | ERROR_XML_PARSE_ERROR                  | XML parsing error. Can be related to servicing stack corruption.              |
-| 800736B3   | ERROR_SXS_ASSEMBLY_NOT_FOUND           | Assembly not found. Commonly caused by component store corruption.            |
-| 80073701   | ERROR_SXS_ASSEMBLY_MISSING             | A component is missing. Typical for servicing or component store errors.      |
-| 80073712   | ERROR_SXS_COMPONENT_STORE_CORRUPT      | Component store is corrupted.                                                 |
-| 800F080D   | CBS_E_MANIFEST_INVALID_ITEM            | Invalid CBS manifest. Points to component corruption.                         |
-| 800F081F   | CBS_E_SOURCE_MISSING                   | Missing source files. Windows can't find the files to complete the update.    |
-| 800F0830   | CBS_E_IMAGE_UNSERVICEABLE              | Image unserviceable. Often requires a repair or IPU.                          |
-| 800F0831   | CBS_E_STORE_CORRUPTION                 | Update package corruption (particularly in the component store).              |
-| 800F0900   | CBS_E_XML_PARSER_FAILURE               | Generic XML parsing failure. Might indicate serious servicing issues.         |
-| 800F0904   | CBS_E_MORE_THAN_ONE_ACTIVE_EDITION     | Invalid configuration in update metadata.                                     |
-| 800F0982   | PSFX_E_MATCHING_COMPONENT_NOT_FOUND    | Often associated with cumulative update failures.                             |
-| 800F0984   | PSFX_E_MATCHING_BINARY_MISSING         | Matching component directory exists but binary is missing.                    |
-| 800F0985   | PSFX_E_APPLY_REVERSE_DELTA_FAILED      | Possibly related to missing manifests or payloads.                            |
-| 800F0986   | PSFX_E_APPLY_FORWARD_DELTA_FAILED      | Often requires servicing stack repair or IPU.                                 |
-| 800F0987   | PSFX_E_NULL_DELTA_HYDRATION_FAILED     | Package corruption or integration failure.                                    |
-| 800F0988   | PSFX_E_INVALID_DELTA_COMBINATION       | Possibly related to specific update branch or delta patch issues.             |
-| 800F0989   | PSFX_E_REVERSE_DELTA_MISSING           | Seen during cumulative update failures. IPU might be the only resolution.     |
-| 800F0922   | CBS_E_INSTALLERS_FAILED                | Processing advanced installers and generic commands failed.                   |
-| 800F0805   | CBS_E_INVALID_PACKAGE                  | Package is invalid. Typically a download or metadata corruption issue.        |
-| 800F0991   | PSFX_E_MISSING_PAYLOAD_FILE            | Associated with update sequencing or dependency errors.                       |
-| 800F0905   | CBS_E_NO_ACTIVE_EDITION                | E_DO_INHERITANCE_CONTEXT_NEEDE                                                |
-| 8007371B   | ERROR_SXS_TRANSACTION_CLOSURE_INCOMPLETE | Servicing operation is incomplete or aborted.                               |
-| 80242016   | WU_E_UH_POSTREBOOTUNEXPECTEDSTATE      | The state of the update after its post-reboot operation was completed is unexpected. |
-| 800F0911  | CBS_E_SOURCE_MODIFIED                   | The package sources were modified or moved in a previous session and must be redownloaded. |
-| 80071AB1  | ERROR_LOG_GROWTH_FAILED                 | An attempt to create space in the transactional resource manager's log failed. |
+| 0x8007000D   | ERROR_INVALID_DATA                     | The data is invalid. Typically caused by corrupted Windows Update metadata.   |
+| 0x800705B9   | ERROR_XML_PARSE_ERROR                  | XML parsing error. Can be related to servicing stack corruption.              |
+| 0x800736B3   | ERROR_SXS_ASSEMBLY_NOT_FOUND           | Assembly not found. Commonly caused by component store corruption.            |
+| 0x80073701   | ERROR_SXS_ASSEMBLY_MISSING             | A component is missing. Typical for servicing or component store errors.      |
+| 0x80073712   | ERROR_SXS_COMPONENT_STORE_CORRUPT      | Component store is corrupted.                                                 |
+| 0x800F080D   | CBS_E_MANIFEST_INVALID_ITEM            | Invalid CBS manifest. Points to component corruption.                         |
+| 0x800F081F   | CBS_E_SOURCE_MISSING                   | Missing source files. Windows can't find the files to complete the update.    |
+| 0x800F0830   | CBS_E_IMAGE_UNSERVICEABLE              | Image unserviceable. Often requires a repair or IPU.                          |
+| 0x800F0831   | CBS_E_STORE_CORRUPTION                 | Update package corruption (particularly in the component store).              |
+| 0x800F0900   | CBS_E_XML_PARSER_FAILURE               | Generic XML parsing failure. Might indicate serious servicing issues.         |
+| 0x800F0904   | CBS_E_MORE_THAN_ONE_ACTIVE_EDITION     | Invalid configuration in update metadata.                                     |
+| 0x800F0982   | PSFX_E_MATCHING_COMPONENT_NOT_FOUND    | Often associated with cumulative update failures.                             |
+| 0x800F0984   | PSFX_E_MATCHING_BINARY_MISSING         | Matching component directory exists but binary is missing.                    |
+| 0x800F0985   | PSFX_E_APPLY_REVERSE_DELTA_FAILED      | Possibly related to missing manifests or payloads.                            |
+| 0x800F0986   | PSFX_E_APPLY_FORWARD_DELTA_FAILED      | Often requires servicing stack repair or IPU.                                 |
+| 0x800F0987   | PSFX_E_NULL_DELTA_HYDRATION_FAILED     | Package corruption or integration failure.                                    |
+| 0x800F0988   | PSFX_E_INVALID_DELTA_COMBINATION       | Possibly related to specific update branch or delta patch issues.             |
+| 0x800F0989   | PSFX_E_REVERSE_DELTA_MISSING           | Seen during cumulative update failures. IPU might be the only resolution.     |
+| 0x800F0922   | CBS_E_INSTALLERS_FAILED                | Processing advanced installers and generic commands failed.                   |
+| 0x800F0805   | CBS_E_INVALID_PACKAGE                  | Package is invalid. Typically a download or metadata corruption issue.        |
+| 0x800F0991   | PSFX_E_MISSING_PAYLOAD_FILE            | Associated with update sequencing or dependency errors.                       |
+| 0x800F0905   | CBS_E_NO_ACTIVE_EDITION                | E_DO_INHERITANCE_CONTEXT_NEEDE                                                |
+| 0x8007371B   | ERROR_SXS_TRANSACTION_CLOSURE_INCOMPLETE | Servicing operation is incomplete or aborted.                               |
+| 0x80242016   | WU_E_UH_POSTREBOOTUNEXPECTEDSTATE      | The state of the update after its post-reboot operation was completed is unexpected. |
+| 0x800F0911  | CBS_E_SOURCE_MODIFIED                   | The package sources were modified or moved in a previous session and must be redownloaded. |
+| 0x80071AB1  | ERROR_LOG_GROWTH_FAILED                 | An attempt to create space in the transactional resource manager's log failed. |
 
 ```output
 Example of error 0x80073712 - ERROR_SXS_COMPONENT_STORE_CORRUPT

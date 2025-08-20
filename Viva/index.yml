@@ -92,6 +92,8 @@ productDirectory:
           text: Microsoft Viva Glint
         - url: ./insights/viva-insights-welcome.yml
           text: Microsoft Viva Insights
+        - url: ./pulse/viva-pulse-welcome.yml
+          text: Microsoft Viva Pulse
 
 # additionalContent section (optional)
 # Card with summary style

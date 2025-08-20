@@ -2,7 +2,7 @@
 title: Updates to the Microsoft Update detection logic 
 description: This article describes the updates to the Microsoft Update detection logic for SQL Service servicing.
 ms.date: 03/21/2025
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: jeffwil 
 ---

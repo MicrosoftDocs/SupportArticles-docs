@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot Export of Audit Logs to Another Tenant
-description: This article provides guidance to resolve permissions-related errors when you export audit logs to another tenant.
-ms.date: 07/22/2025
+title: Troubleshoot the export of audit logs to another tenant when using Azure Lighthouse
+description: This article provides guidance to resolve permissions-related errors when you export audit logs to another tenant when using Azure Lighthouse.
+ms.date: 08/15/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
 ---
 
-# Troubleshoot export of audit logs to another tenant
+# Troubleshoot the export of audit logs to another tenant when using Azure Lighthouse
 
 When users try to export audit logs from one tenant to another by using Microsoft Azure Lighthouse, they might experience permissions-related errors. This article provides guidance to resolve these issues.
 
@@ -43,4 +43,4 @@ When users try to export audit logs from one tenant to another by using Microsof
 - [Manage Access to Log Analytics workspaces](/azure/azure-monitor/logs/manage-access?tabs=portal#workspace-permissions)
 - [Azure role assignments](/azure/role-based-access-control/role-assignments-portal)
 
-If the issue persists after you follow these steps, open a support case for further assistance.
+[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]

@@ -1,9 +1,9 @@
 ---
-title: Common issues syncing SharePoint lists offline
+title: Common Issues Syncing SharePoint Lists Offline
 ms.author: meerak
 author: Cloud-Writer
 manager: dcscontentpm
-ms.date: 12/17/2023
+ms.date: 07/30/2025
 audience: Admin
 ms.topic: troubleshooting
 search.appverid: 
@@ -15,115 +15,107 @@ ms.custom:
   - sap:Lists and Libraries\Lists Offline sync
   - CI 157491
   - CSSTroubleshoot
-ms.reviewer: prbalusu, sharepoint_triage
-description: Resolutions for some common issues with syncing SharePoint lists offline.
+ms.reviewer: prbalusu; nirupme
+description: Provides resolutions for some common issues that affect syncing SharePoint lists offline.
 ---
 
 # Common issues syncing Microsoft SharePoint lists offline
 
-This document contains troubleshooting steps for common issues with syncing lists offline.
+This article helps you troubleshoot common issues that occur when you try to sync Microsoft SharePoint lists offline.
 
 ## Troubleshooting
-<br/>
 <details>
 <summary><b>Sync icon doesn't appear</b></summary>
 
-1. Open the Windows task manager and look for “Microsoft SharePoint (Microsoft.SharePoint.exe)” under **Processes** > **Background Processes**.
+1. Open Windows Task Manager, and locate the following process under **Background Processes**:
 
-    :::image type="content" source="./media/common-sync-issues/background-processes.png" alt-text="Microsoft SharePoint shows as a background process.":::
+   __Microsoft OneDrive Sync Service__ (__OneDrive.Sync.Service.exe__)  
 
-    - If SharePoint is running, continue to step 2.
-    - If SharePoint isn't running, List sync isn't running. Your orgnization might have prevented it from synching, see [Lists sync policies](/sharepoint/lists-sync-policies). 
-
+   - If __Microsoft OneDrive Sync Service__  is running, continue to step 2.
+   - If __Microsoft OneDrive Sync Service__ isn't running, the List sync process isn't running. Your organization might be preventing it from running. For more information, see [Lists sync policies](/sharepoint/lists-sync-policies). 
+      
 1. <a href=#logging>Enable Web App Logging</a>.  
-1. Check the console log for a line that includes "Found list". It will look similar to this example:
+1. Check the console log for a line that starts with "Found list" in the text. The line should resemble the following screenshot.
 
-    :::image type="content" source="./media/common-sync-issues/console.png" alt-text="Console log line that starts with Found List":::
+    :::image type="content" source="./media/common-sync-issues/console.png" alt-text="Screenshot that shows a console log line that starts with found list":::
 
-    - If there is no log line starting with “Found list”, it might mean the List sync process hasn't synced the list yet. Wait for silent configuration or syncing to occur.
-    - If the line with "Found list" shows “unsynced:true", the list is currently unsynced because List sync doesn’t support it. This is by design, and List sync will be extending our support for lists in future versions. See the "Current Limitations of List sync" section in [Edit lists offline](https://support.microsoft.com/office/41403c3e-1795-4e07-b56b-ae591cbde2f9).
+    - If there's no log line that starts with “Found list,” the List sync process might not have synced the list yet. Wait for silent configuration or syncing to occur.
+    - If the line with "Found list" shows "unsynced:true" in the text, the list is currently unsynced because List sync doesn’t support it. This is by design. We expect to extend support for lists to future versions of List sync. For more information, see the "Current Limitations of List sync" section in [Edit lists offline](https://support.microsoft.com/office/41403c3e-1795-4e07-b56b-ae591cbde2f9).
 
-1. If Microsoft.SharePoint.exe is running, and there is a “Found list” log line that does not show "unsynced",  it could be a client issue. See <a href=#support>Contacting Support</a>.  
+1. If __OneDrive.Sync.Service.exe__ is running, and the log contains a "Found list" line that doesn't show "unsynced," you might be experiencing a client issue. Go to <a href=#support>Contacting Support</a>.  
 
 </details>
-<br/>
 <details>
 <summary><b>Sync icon stays on for more than 10 minutes</b></summary>
 
-The sync icon will often be on for a few minutes, appearing next to the list name:
+The sync icon is often in the "on" state for a few minutes. It appears next to the list name, as shown in the following screenshot.
 
-:::image type="content" source="./media/common-sync-issues/sync-icon.png" alt-text="The sync icon appears next to the list name.":::
+:::image type="content" source="./media/common-sync-issues/sync-icon.png" alt-text="Screenshot that shows the sync icon next to the list name.":::
 
-If the icon stays on for more than 10 minutes, first make sure that the client device is online. If it is offline, the sync icon will stay on.
-If the client device is online, and the sync icon shows for more than 10 minutes, see <a href=#support>Contacting Support</a>.
+If the icon stays on for more than 10 minutes, make sure that the client device is online. If it's offline, the sync icon stays on.
+If the client device is online, and the sync icon shows for more than 10 minutes, go to <a href=#support>Contacting Support</a>.
 
 </details>
-<br/>
 <details>
 <summary><b>Local changes not synced</b></summary>
 
-1. See if there are any conflicts or failed uploads. Navigate to **View** > **All items** > **Items that need attention**.
+1. Check whether there are any conflicts or failed uploads. Open **View** > **All items** > **Items that need attention**.
 
-    :::image type="content" source="./media/common-sync-issues/conflicts.png" alt-text="Conflicts are shown in the menu.":::
+    :::image type="content" source="./media/common-sync-issues/conflicts.png" alt-text="Screenshot that shows conflicts in the menu.":::
 
-1. If there are conflicts, refresh the page and try the update again.
-1. If there are no conflicts, or the conflicts continue to appear after step 2, see <a href=#support>Contacting Support</a>.
+1. If there are conflicts, refresh the page, and then try again to run the update.
+1. If there are no conflicts, or the conflicts continue to appear after step 2, go to <a href=#support>Contacting Support</a>.
 
 </details>
 <div id="support"></div>
 
 ## Contacting support
-<br/>
 <details>
-<summary><b>Information needed to open a Microsoft support request</b></summary>
+<summary><b>Information required to open a Microsoft support request</b></summary>
 
-- **Required** The email address used to log into the List web app.
-- **Required** A general time stamp of when the issue occurred (within a few hours is usually enough).
-- **Required** A description of the issue.
-- **Required** Browser type (Edge, Chrome, etc).
-- **Optional** Screenshots of the issue. The more detail in the request, the more likely Microsoft team will be able to quickly assist and won’t need to ask for more information.
-- **Optional** If you enabled web app logging during debugging, send a copy of the console logs. You can right-click the console in the browser tools and select “Save as” to generate a file.  
-- **Optional** The ticket might require client logs to be collected separately. See “Collect Microsoft SharePoint client logs” below.
+- **Required:** The email address that's used to sign in to the List web app.
+- **Required:** A general time stamp of when the issue occurred (a time that's within a few hours is sufficient).
+- **Required:** A description of the issue.
+- **Required:** Web browser that you use (Edge, Chrome, Firefox).
+- **Optional:** Screenshots of the issue. The more detail that you include in the request, the more likely that the Microsoft team can respond quickly.
+- **Optional:** If you enabled web app logging during debugging, send a copy of the console logs. You can right-click the console in the browser tools, and then select "Save as" to generate a file.  
+- **Optional:** The ticket might require client logs to be collected separately. Go to <a href=#collect>Collect Microsoft SharePoint client logs</a>.
+
 </details>
-<br/>
 <div id="logging"></div>
 <details>
 <summary><b>Enable web app logging</b></summary>
 
-1. Open the browser and navigate to the list in question.  
-1. Make sure you are using Microsoft Edge, Google Chrome, or Mozilla FireFox. These are the only currently supported browsers. Also make sure you are on a device running Windows 10 or later.  
+1. Open the browser, and navigate to the list that you're working with.  
+1. Make sure that you use Microsoft Edge, Google Chrome, or Mozilla FireFox. These browsers are the only ones that are currently supported. Also, make sure that you're on a device that's running Windows 10 or a later version.  
 1. Press F12 to open the browser tools.
 1. Switch to the **Application** tab.
-1. On the left side of the pane should be a list of Local Storage domains. Expand the **Local Storage** category and select the one that corresponds to the list URL. For example, if you were viewing `https://contoso.sharepoint.com/teams/teamSite/Lists/Number%20List/AllItems.aspx` you would pick `https://contoso.sharepoint.com`.  
+1. On the left side of the pane, locate a list of local storage domains. Expand the **Local Storage** category, and select the item that corresponds to the list URL. For example, if you're viewing `https://contoso.sharepoint.com/teams/teamSite/Lists/Number%20List/AllItems.aspx`, select `https://contoso.sharepoint.com`.  
 
-1. Add `sharepoint.datasync.nucleus.logToConsole` in the right pane by selecting an empty line. Set the value to **true**.
+1. In the right pane, add `sharepoint.datasync.nucleus.logToConsole`. To do this, select an empty line, and then set the value to **true**.
 
-    :::image type="content" source="./media/common-sync-issues/logto.png" alt-text="sharepoint.datasync.List sync.logToConsole is added with the value set to True.":::
+    :::image type="content" source="./media/common-sync-issues/logto.png" alt-text="Screenshot that shows that sharepoint.datasync.List sync.logToConsole is added and the value is set to true.":::
 
-1. With the browser tools still open, switch to the **Console** tab and press F5 to refresh the page.
-1. The console will contain useful logging for web app issues.
+1. While the browser tools are still open, switch to the **Console** tab, and then press F5 to refresh the page. The console contains useful logging for web app issues.
 </details>
-<br/>
+<div id="collect"></div>
 <details>
 <summary><b>Collect Microsoft SharePoint client logs</b></summary>
 
-1. Open File Explorer.  
+1. Open File Explorer.
 1. Navigate to `%localappdata%\Microsoft\OneDrive\logs\ListSync`.
-1. Right-click the “Business1” folder and then select **Send To** > **Compressed (zipped) folder**.
-1. Send that zip file to Microsoft support.  
+1. Right-click the “Business1” folder, and then select **Send To** > **Compressed (zipped) folder**.
+1. Send that compressed folder to Microsoft Support.  
 
 </details>
-<br/>
 <details>
 <summary><b>Create a support request</b></summary>
 
-Microsoft 365 admin users have access to create support requests.
-
-Select the link below, which will populate the pane in the Microsoft 365 Admin Center.
+Microsoft 365 administrative users have access to create support requests. Select the following link to populate the pane in the Microsoft 365 Admin Center:
 
 [Run query: Issues with editing Microsoft Lists offline](https://aka.ms/editlistofflineIssue)
 
-Fill in the Description field with the **Information needed to open a Microsoft support request**, above.
+Complete the **Description** field by using the information that you gathered in the "Information required to open a Microsoft support request" section.
 
 Select **Contact Support**.
 
@@ -131,5 +123,6 @@ Select **Contact Support**.
 
 ## References
 
-- [Edit lists offline](https://support.microsoft.com/office/41403c3e-1795-4e07-b56b-ae591cbde2f9)
-- [Lists sync policies](/sharepoint/lists-sync-policies)
+[Edit lists offline](https://support.microsoft.com/office/41403c3e-1795-4e07-b56b-ae591cbde2f9)
+
+[Lists sync policies](/sharepoint/lists-sync-policies)
