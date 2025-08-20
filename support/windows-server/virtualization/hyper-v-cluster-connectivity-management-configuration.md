@@ -141,11 +141,13 @@ Here are the resolutions for each scenario respectively:
 1. Investigate VM state and configuration files:
 
     If a VM is unresponsive:
-        1. Shut down all healthy VMs.
-        1. Reboot the Hyper-V host.
-        1. Delete the problematic VM from Hyper-V Manager (retain the VHDX file).
-        1. Back up and, if needed, delete/rename the `.vmcx` and `.vmrs` files.
-        1. Recreate the VM using the existing VHDX disk.
+
+    1. Shut down all healthy VMs.
+    1. Reboot the Hyper-V host.
+    1. Delete the problematic VM from Hyper-V Manager (retain the VHDX file).
+    1. Back up and, if needed, delete/rename the `.vmcx` and `.vmrs` files.
+    1. Recreate the VM using the existing VHDX disk.
+
 1. Repair corrupted files:
     1. Collect a process dump and analyze for VMMS deadlocks.
     1. Use tools like Process Explorer or TSS scripts (from [aka.ms/getTSS](https://aka.ms/getTSS)) to collect logs and terminate stuck processes.
