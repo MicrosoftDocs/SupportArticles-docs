@@ -101,7 +101,7 @@ The root causes of these issues can be grouped into the following categories wit
 2. Merge orphaned AVHDX files:
 
     1. Shut down the affected VM.
-    2. In Hyper-V Manager， select the VM, and then select **Actions** > **Edit Disk** to open the **Edit Virtual Hard Disk Wizard** window.
+    2. In Hyper-V Manager, select the VM, and then select **Actions** > **Edit Disk** to open the **Edit Virtual Hard Disk Wizard** window.
     3. On the **Locate Disk** tab, select **Browse** to locate the AVHDX file, then select **Next**.
     4. On the **Choose Action** tab, select **Merge** > **To the parent virtual hard disk**, then select **Next** to complete the wizard.
 
