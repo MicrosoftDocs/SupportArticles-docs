@@ -41,15 +41,15 @@ Update 1 for Team Foundation Server 2015 is planned to restore the ability to ch
 
 Fields that are marked as _syncnamechanges=false_ through identity rules cause issues for the client object model.
 
-In Team Foundation Server 2015, we introduced the concept of an _identity field_. A field is considered to be an identity field if it has any rules on it that relate to identities, such as \<ValidUser />. This concept enables us to fix issues that involve duplicate display names. Previously, if two users had the same name, you couldn't differentiate between them. Identity fields let us store the DisplayPart as 'display name \<email or domain\alias>.' For example, instead of 'Sean Contoso', the DisplayPart is now stored as 'Sean Contoso \<scontoso@microsoft.com>.'
+In Team Foundation Server 2015, we introduced the concept of an _identity field_. A field is considered to be an identity field if it has any rules on it that relate to identities, such as \<ValidUser />. This concept enables us to fix issues that involve duplicate display names. Previously, if two users had the same name, you couldn't differentiate between them. Identity fields let us store the DisplayPart as "display name \<email or domain\alias>." For example, instead of "Sean Contoso," the DisplayPart is now stored as "Sean Contoso \<scontoso@microsoft.com>."
 
-If _syncnamechanges=true_ is set for a field, we store the Constant ID of the value instead of the actual string value for the field. If _syncnamechanges=false_ is set, the string value is directly stored on the work item. Identity fields experience an issue that affects the client object model. Because the string value is stored, we're returning that string value as is to the client. This causes the client-side rule engine to treat the field as invalid because it isn't expecting the value in the format of 'Sean Contoso \<scontoso@microsoft.com>.'
+If _syncnamechanges=true_ is set for a field, we store the Constant ID of the value instead of the actual string value for the field. If _syncnamechanges=false_ is set, the string value is directly stored on the work item. Identity fields experience an issue that affects the client object model. Because the string value is stored, we're returning that string value as is to the client. The client-side rule engine then treats the field as invalid because it isn't expecting the value in the format of "Sean Contoso \<scontoso@microsoft.com>."
 
 ### Workaround
 
 To work around this issue, use the following methods:
 
-- Before you upgrade the program, identify any templates that have the `syncnamechanges` property set to **false** for fields that have identity rules, and then set the property to **true**. You must do this before you upgrade because the ability to change the state of the `syncnamechanges` property is removed from Team Foundation Server 2015.
+- Before you upgrade the program, identify any templates that have the `syncnamechanges` property set to **false** for fields that have identity rules, and then set the property to **true**. You must make this change before you upgrade because the ability to change the state of the `syncnamechanges` property is removed from Team Foundation Server 2015.
 
 - Add an \<AllowExistingValue /> rule on any identity field that has the `syncnamechanges` property set to **false**. This action enables the client object model rule engine to accept the existing value. Adding this rule unblocks customers until we can provide a script that can convert fields that have their `syncnamechanges` property set to **false** to fields that have the property set to **true**.  
 
