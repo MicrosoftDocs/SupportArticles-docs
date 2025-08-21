@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jeffhugh, v-lianna
 ms.custom:
-- sap:virtualization and hyper-v\integration components
+- sap:virtualization and hyper-v\remote administration of the hyper-v role
 - pcy:WinComm Storage High Avail
 ---
 # Troubleshoot Hyper-V cluster connectivity, management, and configuration failures
