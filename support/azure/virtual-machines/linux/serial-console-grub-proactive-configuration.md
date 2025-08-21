@@ -56,7 +56,7 @@ The more experienced Linux/Unix sys admins will appreciate the **single user** a
 
 The method of recovery depends on the problem being experienced, for example a lost or misplaced password can be reset through Azure portal options ->  **Reset Password**. The **Reset Password** feature is known as an Extension and  communicates with the Linux Guest agent.
 
-Other extensions such as Custom Script are available however these options require that the Linux **waagent** be up and in a healthy state which is not always the case.
+Other extensions such as Custom Script are available however these options require that the Linux **waagent** be up and in a healthy state which isn't always the case.
 
 :::image type="content" source="media/serial-console-grub-proactive-configuration/agent-status.png" alt-text="Screenshot of the Agent status in the Properties page in Azure portal.":::
 
@@ -74,11 +74,11 @@ Ensuring you have access to the Azure Serial Console and GRUB means that a passw
 
 ## Disk Swap Video
 
-If you do not have access to GRUB watch [this](https://youtu.be/m5t0GZ5oGAc) video and see, how you can easily automate the disk swap procedure to recover your VM
+If you don't have access to GRUB watch [this](https://youtu.be/m5t0GZ5oGAc) video and see, how you can easily automate the disk swap procedure to recover your VM
 
 ## Challenges
 
-Not all Linux Azure VMs are configured by default for GRUB access and neither are they all configured to be interrupted with the sysrq commands. Some older distros such as SLES 11 are not configured to display Login prompt in the Azure Serial Console
+Not all Linux Azure VMs are configured by default for GRUB access and neither are they all configured to be interrupted with the sysrq commands. Some older distros such as SLES 11 aren't configured to display Login prompt in the Azure Serial Console
 
 In this article, we'll review various Linux distributions and document configurations on how to make GRUB available.
 
@@ -102,7 +102,7 @@ To configure the kernel parameter dynamically
 
 `sysctl -w kernel.sysrq=1`
 
-If you do not have **root** access or sudo is broken, it will not be possible configure sysrq from a shell prompt.
+If you don't have **root** access or sudo is broken, it will not be possible configure sysrq from a shell prompt.
 
 You can enable sysrq in this scenario using the Azure portal. This method can be beneficial if the  **sudoers.d/waagent** file has become broken or has been deleted.
 
@@ -128,12 +128,12 @@ The system should log a reset message such as this
 
 ## Ubuntu GRUB configuration
 
-By default you should be able to access GRUB by holding down **Esc** key during the VM boot, if the GRUB menu is not presented you can force and keep the GRUB menu on screen in the Azure Serial Console by using one of these  options.
+By default you should be able to access GRUB by holding down **Esc** key during the VM boot, if the GRUB menu isn't presented you can force and keep the GRUB menu on screen in the Azure Serial Console by using one of these  options.
 
 **Option 1** - Forces GRUB to be displayed on Screen
 
 Update the file /etc/default/grub.d/50-cloudimg-settings.cfg to keep the GRUB menu on screen for the specified TIMEOUT.
-You are not required to hit **Esc** as GRUB will be displayed immediately.
+You aren't required to hit **Esc** as GRUB will be displayed immediately.
 
 ```console
 GRUB_TIMEOUT=5
@@ -160,8 +160,8 @@ GRUB_TIMEOUT_STYLE=countdown
 
 ## Ubuntu 12\.04
 
-Ubuntu 12.04 will allow access to serial console but does not offer the ability to interact.
-A **login:** prompt is not seen
+Ubuntu 12.04 will allow access to serial console but doesn't offer the ability to interact.
+A **login:** prompt isn't seen
 
 For 12.04 to obtain a **login:** prompt:
 
@@ -199,7 +199,7 @@ Select Advanced Options for Ubuntu and press enter
 
 :::image type="content" source="media/serial-console-grub-proactive-configuration/advanced-option-ubuntu.png" alt-text="Screenshot shows the Serial console with Advanced options for Ubuntu selected.":::
 
-Select the line displaying *(recovery mode)* do not press enter but press "e"
+Select the line displaying *(recovery mode)* don't press enter but press "e"
 
 :::image type="content" source="media/serial-console-grub-proactive-configuration/recovery-mode-ubuntu.png" alt-text="Screenshot shows the Serial console with a recovery mode version selected.":::
 
@@ -355,7 +355,7 @@ Recreate the grub.cfg
 
 ## SLES 11 SP4
 
-The Serial Console appears and displays boot messages but does not display a **login:** prompt
+The Serial Console appears and displays boot messages but doesn't display a **login:** prompt
 
 Open an ssh session into the VM and update the file **/etc/inittab** by un-commenting this line:
 
@@ -390,7 +390,7 @@ You will gain access to a shell without having to enter a password. You can then
 ## Force the kernel to a bash prompt
 
 Having access to GRUB allows you to interrupt the initialization process this interaction is useful for many recovery procedures.
-If you do not have root password and single user requires you to have a root password, you can boot the kernel replacing the init program with a bash prompt – this interrupt can be achieved by appending init=/bin/bash to the kernel boot line
+If you don't have root password and single user requires you to have a root password, you can boot the kernel replacing the init program with a bash prompt – this interrupt can be achieved by appending init=/bin/bash to the kernel boot line
 
 :::image type="content" source="media/serial-console-grub-proactive-configuration/bash-kernel-boot.png" alt-text="Screenshot shows a console with the updated boot line.":::
 
