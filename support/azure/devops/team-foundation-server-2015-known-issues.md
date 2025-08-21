@@ -22,7 +22,7 @@ To see the full list of Team Foundation Server 2015 products and to select a pro
 
 To discover what is new in Team Foundation Server 2015, see the [Team Foundation Server 2015 Release Notes](/visualstudio/releasenotes/tfs2015-rtm-vs).
 
-- You cannot change the `syncnamechanges` property.
+- You can't change the `syncnamechanges` property.
 
     In Team Foundation Server 2015, we deprecated the ability to change the `syncnamechanges` property on a field. Therefore, you can no longer create projects that use the `OOB` templates in new collections for which the following conditions are true:
 
@@ -30,16 +30,16 @@ To discover what is new in Team Foundation Server 2015, see the [Team Foundation
   - The `syncnamechanges` property is false for that field.
   - You created a project by using the custom process template.
 
-  In Update 1, we will restore the ability to change the `syncnamechanges` property. In the meantime, you can try one of these workarounds:
+  In Update 1, we'll restore the ability to change the `syncnamechanges` property. In the meantime, you can try one of these workarounds:
 
   - Update the custom process template to match the `syncnamechanges` property of the `OOB` template, and upload it to a new collection.
   - Contact Customer Support to have them to provide a script to fix the conflicting fields.
 
 - Fields marked as _syncnamechanges=false_ through identity rules cause issues for the client object model.
 
-    In Team Foundation Server 2015, we introduced the concept of an _identity field_. A field is considered to be an identity field if it has any rules on it that relate to identities, such as \<ValidUser />. This enables us to fix issues that involve duplicate display names. Previously, if two users had the same name, you couldn't differentiate between them. Now that we have identity fields, we store the DisplayPart as 'display name \<email or domain\alias>'. For example, instead of 'Sean Contoso', the DisplayPart is now stored as 'Sean Contoso \<scontoso@microsoft.com>'.
+    In Team Foundation Server 2015, we introduced the concept of an _identity field_. A field is considered to be an identity field if it has any rules on it that relate to identities, such as \<ValidUser />. This concept enables us to fix issues that involve duplicate display names. Previously, if two users had the same name, you couldn't differentiate between them. Now that we have identity fields, we store the DisplayPart as 'display name \<email or domain\alias>.' For example, instead of 'Sean Contoso', the DisplayPart is now stored as 'Sean Contoso \<scontoso@microsoft.com>.'
 
-- If _syncnamechanges=true_ is set for a field, we store the Constant ID of the value instead of the actual string value for the field. If _syncnamechanges=false_ is set, the string value is directly stored on the work item. For identity fields, there is an issue that affects the client object model. Because the string value is stored, we are returning that string value as-is to the client. This causes the client-side rule engine to treat the field as invalid because it isn't expecting the value in the format of 'Sean Contoso \<scontoso@microsoft.com>'.
+- If _syncnamechanges=true_ is set for a field, we store the Constant ID of the value instead of the actual string value for the field. If _syncnamechanges=false_ is set, the string value is directly stored on the work item. For identity fields, there's an issue that affects the client object model. Because the string value is stored, we're returning that string value as-is to the client. This causes the client-side rule engine to treat the field as invalid because it isn't expecting the value in the format of 'Sean Contoso \<scontoso@microsoft.com>.'
 
 - Workaround options:
 
