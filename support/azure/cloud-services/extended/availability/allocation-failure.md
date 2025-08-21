@@ -1,5 +1,5 @@
 ---
-title: Allocation failure in Azure Cloud Services
+title: Allocation Failure in Azure Cloud Services
 description: Provides troubleshooting help for allocation failure in Azure Cloud Services (extended support).
 ms.service: azure-cloud-services-extended-support
 author: surbhijain16
