@@ -14,11 +14,11 @@ This article helps you troubleshoot problems that affect autoinstrumentation in 
 
 ## Telemetry data isn't reported after you enable autoinstrumentation
 
-If you've enabled Application Insights autoinstrumentation for your app service but don't see telemetry data reported, review the common scenarios in the following sections.
+If you enabled Application Insights autoinstrumentation for your app service but don't see telemetry data reported, review the common scenarios in the following sections.
 
 ### The Application Insights SDK was previously installed
 
-Autoinstrumentation fails if .NET and .NET Core apps are already have the Application Insights SDK installed.
+Autoinstrumentation fails if .NET and .NET Core apps already have the Application Insights SDK installed.
 
 To be able to autoinstrument your app, remove the Application Insights SDK.
 
