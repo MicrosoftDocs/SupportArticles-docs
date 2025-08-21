@@ -14,12 +14,12 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 08/20/2025
-ms.reviewer: ninob, klahari, vivepai, bravirao
+ms.date: 08/21/2025
+ms.reviewer: vivepai, ninob
 ---
 # Resolve issues in Exchange Online PowerShell module after WAM integration
 
-Beginning in Exchange Online PowerShell module version 3.7.0, Microsoft is implementing Web Account Manager (WAM) as the default authentication broker for user authentication. Although WAM offers improved security and a streamlined user experience, it might cause compatibility challenges in some situations. This article discusses these situations and provides resolutions or workarounds for them, as appropriate.
+Beginning in Exchange Online PowerShell module version 3.7.0, Microsoft is implementing Web Account Manager (WAM) as the default authentication broker for user authentication. Although WAM offers improved security and a streamlined user experience, it might cause compatibility challenges in some situations. This article discusses these situations and provides workarounds for them.
 
 > [!NOTE]
 > Although you can use the **DisableWAM** switch together with the [Connect-ExchangeOnline](/powershell/module/exchangepowershell/connect-exchangeonline) command to disable WAM when you connect to Exchange Online PowerShell, you should use this option only as a temporary method. If you require assistance to resolve issues without having to disable WAM, contact Microsoft Support at [exo_wamissue@service.microsoft.com](mailto:exo_wamissue@service.microsoft.com).
