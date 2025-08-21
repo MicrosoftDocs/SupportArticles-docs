@@ -1,5 +1,5 @@
 ---
-title: AKS upgrade not allowed or blocked because of unsupported Kubernetes version or node pool version skew
+title: Troubleshoot AKS upgrade errors because of version skew, incompatibility, or lack of support
 description: Learn how to troubleshoot AKS upgrade not allowed or blocked because of unsupported Kubernetes version or node pool version skew.
 ms.date: 08/21/2025
 editor: v-jsitser
