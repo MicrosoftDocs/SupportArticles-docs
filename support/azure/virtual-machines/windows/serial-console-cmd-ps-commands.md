@@ -151,7 +151,7 @@ When limited to methods available in Windows by default, PowerShell can be a bet
 
 `netsh advfirewall set allprofiles state off`
 
-You can use this command when troubleshooting to temporarily rule out the Windows Firewall. It will be enable on next restart or when you enable it using the command below. Do not stop the Windows Firewall service (MPSSVC) or Base Filtering Engine (BFE) service as way to rule out the Windows Firewall. Stopping MPSSVC or BFE will result in all connectivity being blocked.
+You can use this command when troubleshooting to temporarily rule out the Windows Firewall. It will be enable on next restart or when you enable it using the following command. Do not stop the Windows Firewall service (MPSSVC) or Base Filtering Engine (BFE) service as a way to rule out the Windows Firewall. Stopping MPSSVC or BFE will result in all connectivity being blocked.
 
 ### Enable Windows Firewall
 
@@ -171,7 +171,7 @@ You can use this command when troubleshooting to temporarily rule out the Window
 
 `net user <username> | find /i "active"`
 
-Azure VMs created from generalized image will have the local administrator account renamed to the name specified during VM provisioning. So it will usually not be `Administrator`.
+Azure VMs created from generalized image will have the local administrator account renamed to the name specified during VM provisioning. So it won't usually be `Administrator`.
 
 ### Enable user account
 

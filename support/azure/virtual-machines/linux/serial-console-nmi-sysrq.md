@@ -87,7 +87,7 @@ From the SysRq Admin Guide above:
 
 ### Distribution-specific documentation ###
 
-For distribution-specific documentation on SysRq and steps to configure Linux to create a crash dump when it receives a SysRq "Crash" command, see the links below:
+For distribution-specific documentation on SysRq and steps to configure Linux to create a crash dump when it receives a SysRq "Crash" command, see the following links:
 
 #### Ubuntu ####
 
@@ -108,9 +108,9 @@ For distribution-specific documentation on SysRq and steps to configure Linux to
 
 ## Non-Maskable Interrupt (NMI)
 
-A non-maskable interrupt (NMI) is designed to create a signal that software on a virtual machine will not ignore. Historically, NMIs have been used to monitor for hardware issues on systems that required specific response times.  Today, programmers and system administrators often use NMI as a mechanism to debug or troubleshoot systems that are not responding.
+A non-maskable interrupt (NMI) is designed to create a signal that software on a virtual machine will not ignore. Historically, NMIs have been used to monitor for hardware issues on systems that required specific response times. Today, programmers and system administrators often use NMI as a mechanism to debug or troubleshoot systems that are not responding.
 
-The Serial Console can be used to send a NMI to an Azure virtual machine using the keyboard icon in the command bar shown below. Once the NMI is delivered, the virtual machine configuration will control how the system responds.  Linux operating systems can be configured to crash and create a memory dump the operating system receives an NMI.
+The Serial Console can be used to send a NMI to an Azure virtual machine using the keyboard icon in the command bar shown below. Once the NMI is delivered, the virtual machine configuration will control how the system responds. Linux operating systems can be configured to crash and create a memory dump the operating system receives an NMI.
 
 :::image type="content" source="media/serial-console-nmi-sysrq/command-menu.png" alt-text="Screenshot of the Serial Console. The keyboard icon is highlighted, and its menu is visible. That menu contains a Send Non-Maskable Interrupt item.":::
 
