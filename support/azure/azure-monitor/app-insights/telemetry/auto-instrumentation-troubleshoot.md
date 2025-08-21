@@ -26,7 +26,7 @@ Remove the Application Insights SDK if you want to auto-instrument your app.
 
 Verify that a supported version of .NET or .NET Core was used to build and publish applications.
 
-See the .NET or .NET Core documentation to determine if your version is supported:
+To determine if your version is upported, see the .NET or .NET Core documentation:
 
 - [Application monitoring for Azure App Service and ASP.NET](/azure/azure-monitor/app/azure-web-apps-net#application-monitoring-for-azure-app-service-and-aspnet)
 - [Application monitoring for Azure App Service and ASP.NET Core](/azure/azure-monitor/app/azure-web-apps-net-core#application-monitoring-for-azure-app-service-and-aspnet-core)

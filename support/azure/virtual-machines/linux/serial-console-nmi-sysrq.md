@@ -22,23 +22,23 @@ ms.author: jarrettr
 
 ## System Request (SysRq)
 
-A SysRq is a sequence of keys understood by the Linux operation system kernel, which can trigger a set of pre-defined actions. These commands are often used when virtual machine troubleshooting or recovery can't be performed through traditional administration (for example, if the VM is not responding). Using the SysRq feature of Azure Serial Console will mimic pressing of the SysRq key and characters entered on a physical keyboard.
+A SysRq is a sequence of keys understood by the Linux operation system kernel, which can trigger a set of pre-defined actions. These commands are often used when virtual machine troubleshooting or recovery can't be performed through traditional administration (for example, if the VM isn't responding). Using the SysRq feature of Azure Serial Console mimics pressing of the SysRq key and characters entered on a physical keyboard.
 
 Once the SysRq sequence is delivered, the kernel configuration will control how the system responds. For information on enabling and disabling SysRq, see the *SysRq Admin Guide* [text](https://aka.ms/kernelorgsysreqdoc) | [markdown](https://aka.ms/linuxsysrq).
 
-The Azure Serial Console can be used to send a SysRq to an Azure virtual machine using the keyboard icon in the command bar shown below.
+The Azure Serial Console can be used to send a SysRq to an Azure virtual machine using the keyboard icon in the following command bar.
 
 :::image type="content" source="media/serial-console-nmi-sysrq/command-menu.png" alt-text="Screenshot of the Azure Serial Console. The keyboard icon is highlighted, and its menu is visible. That menu contains a Send SysRq Command item.":::
 
-Choosing "Send SysRq Command" will open a dialog, which will provide common SysRq options or accept a sequence of SysRq commands entered into the dialog.  This allows for series of SysRq's to perform a high-level operation such as a safe reboot using: `REISUB`.
+Choosing "Send SysRq Command" opens a dialog, which provides common SysRq options or accept a sequence of SysRq commands entered into the dialog.  This allows for series of SysRq's to perform a high-level operation such as a safe reboot using: `REISUB`.
 
-:::image type="content" source="media/serial-console-nmi-sysrq/sysreq-ui.png" alt-text="Screenshot of the Send SysRq Command to Guest dialog box when the entering key option is selected and REISUB is input into the field below." border="false":::
+:::image type="content" source="media/serial-console-nmi-sysrq/sysreq-ui.png" alt-text="Screenshot of the Send SysRq Command to Guest dialog box when the entering key option is selected and REISUB is input into the following field." border="false":::
 
-The SysRq command can't be used on virtual machines that are stopped or whose kernel is in a non-responsive state. (for example a kernel panic).
+The SysRq command can't be used on virtual machines that are stopped or whose kernel is in a non-responsive state. (For example a kernel panic).
 
 ### Enable SysRq
 
-As described in the *SysRq Admin Guide* above, SysRq can be configured such that all, none, or only certain commands are available. You can enable all SysRq commands using the step below but it will not survive a reboot:
+As described in the *SysRq Admin Guide*, SysRq can be configured such that all, none, or only certain commands are available. You can enable all SysRq commands using the following step, but it will not survive a reboot:
 
 ```console
 echo "1" >/proc/sys/kernel/sysrq
@@ -53,7 +53,7 @@ To make the SysReq configuration persistent, you can do the following to enable 
 
 ### Command Keys
 
-From the SysRq Admin Guide above:
+From the SysRq Admin Guide:
 
 |Command| Function
 | ------| ----------- |
@@ -108,9 +108,9 @@ For distribution-specific documentation on SysRq and steps to configure Linux to
 
 ## Non-Maskable Interrupt (NMI)
 
-A non-maskable interrupt (NMI) is designed to create a signal that software on a virtual machine will not ignore. Historically, NMIs have been used to monitor for hardware issues on systems that required specific response times. Today, programmers and system administrators often use NMI as a mechanism to debug or troubleshoot systems that are not responding.
+A non-maskable interrupt (NMI) is designed to create a signal that software on a virtual machine won't ignore. Historically, NMIs have been used to monitor for hardware issues on systems that required specific response times. Today, programmers and system administrators often use NMI as a mechanism to debug or troubleshoot systems that aren't responding.
 
-The Serial Console can be used to send a NMI to an Azure virtual machine using the keyboard icon in the command bar shown below. Once the NMI is delivered, the virtual machine configuration will control how the system responds. Linux operating systems can be configured to crash and create a memory dump the operating system receives an NMI.
+The Serial Console can be used to send a NMI to an Azure virtual machine using the keyboard icon in the command bar shown below. Once the NMI is delivered, the virtual machine configuration controls how the system responds. Linux operating systems can be configured to crash and create a memory dump the operating system receives an NMI.
 
 :::image type="content" source="media/serial-console-nmi-sysrq/command-menu.png" alt-text="Screenshot of the Serial Console. The keyboard icon is highlighted, and its menu is visible. That menu contains a Send Non-Maskable Interrupt item.":::
 
