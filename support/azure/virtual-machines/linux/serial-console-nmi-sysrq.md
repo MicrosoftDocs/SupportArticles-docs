@@ -18,7 +18,7 @@ ms.author: jarrettr
 
 # Use the Azure Serial Console for SysRq and NMI calls
 
-**Applies to:** :heavy_check_mark: Linux virtual Machines(VMs)
+**Applies to:** :heavy_check_mark: Linux Virtual Machines(VMs)
 
 ## System Request (SysRq)
 
@@ -34,7 +34,7 @@ Choosing "Send SysRq Command" opens a dialog, which provides common SysRq option
 
 :::image type="content" source="media/serial-console-nmi-sysrq/sysreq-ui.png" alt-text="Screenshot of the Send SysRq Command to Guest dialog box when the entering key option is selected and REISUB is input into the following field." border="false":::
 
-The SysRq command can't be used on virtual machines that are stopped or whose kernel is in a non-responsive state. For example a kernel panic.
+The SysRq command can't be used on virtual machines that are stopped or whose kernel is in a non-responsive state. For example, a kernel panic.
 
 ### Enable SysRq
 
@@ -63,7 +63,7 @@ From the SysRq Admin Guide:
 |``e``  |   Send a SIGTERM to all processes, except for init.
 |``f``  |   Will call the oom killer to kill a memory hog process, but don't panic if nothing can be killed.
 |``g``  |   Used by kgdb (kernel debugger)
-|``h``  |   Will display help (any other key than those listed here will also display help, but ``h`` is easy to remember :-)
+|``h``  |   Will display help (any other key than those listed here also displays help, but ``h`` is easy to remember :-)
 |``i``  |    Send a SIGKILL to all processes, except for init.
 |``j``  |    Forcibly "Just thaw it" - filesystems frozen by the FIFREEZE ioctl.
 |``k``  |    Secure Access Key (SAK) Kills all programs on the current virtual console. NOTE: See important comments in the following SAK section.
@@ -83,7 +83,7 @@ From the SysRq Admin Guide:
 |``x``  |    Used by xmon interface on ppc/powerpc platforms. Show global PMU Registers on sparc64. Dump all TLB entries on MIPS.
 |``y``  |    Show global CPU Registers [SPARC-64 specific]
 |``z``  |    Dump the ftrace buffer
-|``0``-``9`` | Sets the console log level, controlling which kernel messages will be printed to your console. (``0``, for example would make it so that only emergency messages like PANICs or OOPSes would make it to your console.)
+|``0``-``9`` | Sets the console log level, controlling which kernel messages are printed to your console. (``0``, for example would make it so that only emergency messages like PANICs or OOPSes would make it to your console.)
 
 ### Distribution-specific documentation ###
 
