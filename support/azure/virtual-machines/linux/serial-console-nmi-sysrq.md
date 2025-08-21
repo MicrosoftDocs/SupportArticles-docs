@@ -18,7 +18,7 @@ ms.author: jarrettr
 
 # Use the Azure Serial Console for SysRq and NMI calls
 
-**Applies to:** :heavy_check_mark: Linux VMs
+**Applies to:** :heavy_check_mark: Linux virtual Machines(VMs)
 
 ## System Request (SysRq)
 
@@ -38,7 +38,7 @@ The SysRq command can't be used on virtual machines that are stopped or whose ke
 
 ### Enable SysRq
 
-As described in the *SysRq Admin Guide*, SysRq can be configured such that all, none, or only certain commands are available. You can enable all SysRq commands using the following step, but it won't survive a reboot:
+As described in the *SysRq Admin Guide*, SysRq can be configured such that all, none, or only certain commands are available. You can enable all SysRq commands using the following step, but it doesn't survive a reboot:
 
 ```console
 echo "1" >/proc/sys/kernel/sysrq
@@ -66,7 +66,7 @@ From the SysRq Admin Guide:
 |``h``  |   Will display help (any other key than those listed here will also display help, but ``h`` is easy to remember :-)
 |``i``  |    Send a SIGKILL to all processes, except for init.
 |``j``  |    Forcibly "Just thaw it" - filesystems frozen by the FIFREEZE ioctl.
-|``k``  |    Secure Access Key (SAK) Kills all programs on the current virtual console. NOTE: See important comments in the follwoing  SAK section.
+|``k``  |    Secure Access Key (SAK) Kills all programs on the current virtual console. NOTE: See important comments in the following SAK section.
 |``l``  |    Shows a stack backtrace for all active CPUs.
 |``m``  |    Will dump current memory info to your console.
 |``n``  |    Used to make RT tasks nice-able
