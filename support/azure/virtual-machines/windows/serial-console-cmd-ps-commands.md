@@ -47,7 +47,7 @@ The second key (under \Policies) will only exist if the relevant group policy se
 
 `reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections /t REG_DWORD /d 0`
 
-The second key (under \Policies) would only be needed if the relevant group policy setting had been configured. Value will be rewritten at next group policy refresh if it is configured in group policy.
+The second key (under \Policies) would only be needed if the relevant group policy setting is configured. Value will be rewritten at next group policy refresh if it's configured in group policy.
 
 ## Manage Windows Services using CMD
 
@@ -137,7 +137,7 @@ To remove the telnet client
 
 `dism /online /Disable-Feature /FeatureName:TelnetClient`
 
-When limited to methods available in Windows by default, PowerShell can be a better approach for testing port connectivity. See the PowerShell section below for examples.
+When limited to methods available in Windows by default, PowerShell can be a better approach for testing port connectivity. See the following PowerShell section for examples.
 
 ### Test DNS name resolution
 
@@ -151,7 +151,7 @@ When limited to methods available in Windows by default, PowerShell can be a bet
 
 `netsh advfirewall set allprofiles state off`
 
-You can use this command when troubleshooting to temporarily rule out the Windows Firewall. It will be enable on next restart or when you enable it using the following command. Don't stop the Windows Firewall service (MPSSVC) or Base Filtering Engine (BFE) service as a way to rule out the Windows Firewall. Stopping MPSSVC or BFE will result in all connectivity being blocked.
+You can use this command when troubleshooting to temporarily rule out the Windows Firewall. It will be enable on next restart or when you enable it using the following command. Don't stop the Windows Firewall service (MPSSVC) or Base Filtering Engine (BFE) service as a way to rule out the Windows Firewall. Stopping MPSSVC or BFE results in all connectivity being blocked.
 
 ### Enable Windows Firewall
 
@@ -171,7 +171,7 @@ You can use this command when troubleshooting to temporarily rule out the Window
 
 `net user <username> | find /i "active"`
 
-Azure VMs created from generalized image will have the local administrator account renamed to the name specified during VM provisioning. So it won't usually be `Administrator`.
+Azure VMs created from generalized image will have the local administrator account renamed to the name specified during VM provisioning. It won't usually be `Administrator`.
 
 ### Enable user account
 
@@ -333,7 +333,7 @@ or
 
 `shutdown /r /t 0`
 
-Adding `/f` will force running applications to close without warning users.
+Adding `/f` forces running applications to close without warning users.
 
 ### Detect Safe Mode boot
 
@@ -346,15 +346,15 @@ To run PowerShell in SAC, after you reach a CMD prompt, type:
 `powershell <enter>`
 
 > [!CAUTION]
-> Remove the PSReadLine module from the PowerShell session before running any other PowerShell commands. there's a known issue where extra characters may be introduced in text pasted from the clipboard if PSReadLine is running in a PowerShell session in SAC.
+> Remove the PSReadLine module from the PowerShell session before running any other PowerShell commands. here's a known issue where extra characters may be introduced in text pasted from the clipboard if PSReadLine is running in a PowerShell session in SAC.
 
-First check if PSReadLine is loaded. It's loaded by default on Windows Server 2016, Windows 10, and later versions of Windows. It would only be present on earlier Windows versions if it had been manually installed.
+First check if PSReadLine is loaded. It's loaded by default on Windows Server 2016, Windows 10, and later versions of Windows. It would only be present on earlier Windows versions if it's  manually installed.
 
 If this command returns to a prompt with no output, then the module wasn't loaded and you can continue using the PowerShell session in SAC as normal.
 
 `get-module psreadline`
 
-If the above command returns the PSReadLine module version, run the following command to unload it. This command doesn't delete or uninstall the module, it only unloads it from the current PowerShell session.
+If the above command returns the PSReadLine module version, run the following command to unload it. This command doesn't delete or uninstall the module. It only unloads it from the current PowerShell session.
 
 `remove-module psreadline`
 
@@ -366,7 +366,7 @@ If the above command returns the PSReadLine module version, run the following co
 
 `get-itemproperty -path 'hklm:\software\policies\microsoft\windows nt\terminal services' -name 'fdenytsconNections'`
 
-The second key (under \Policies) will only exist if the relevant group policy setting is configured.
+The second key (under \Policies)  only exists if the relevant group policy setting is configured.
 
 ### Enable RDP
 
@@ -453,7 +453,7 @@ or
 
 `get-wmiobject Win32_PingStatus -Filter 'Address="8.8.8.8"' | format-table -autosize IPV4Address,ReplySize,ResponseTime`
 
-`Test-Netconnection` without any parameters will try to ping `internetbeacon.msedge.net`. It's available on 2012+. For 2008R2 use `Get-WmiObject` as in the second example.
+`Test-Netconnection` without any parameters try to ping `internetbeacon.msedge.net`. It's available on 2012+. For 2008R2 use `Get-WmiObject` as in the second example.
 
 ### Port Ping
 
@@ -611,13 +611,13 @@ Returns uptime as `<days>:<hours>:<minutes>:<seconds>:<milliseconds>`, for examp
 
 `restart-computer`
 
-Adding `-force` will force running applications to close without warning users.
+Adding `-force` forces running applications to close without warning users.
 
 ## Instance Metadata
 
 You can query Azure instance metadata from within your Azure VM to view details such as osType, Location, vmSize, vmId, name, resourceGroupName, subscriptionId, privateIpAddress, and publicIpAddress.
 
-Querying instance metadata requires healthy guest network connectivity, because it makes a REST call through the Azure host to the instance metadata service. So if you're able to query instance metadata, that tells you the guest is able to communicate over the network to an Azure-hosted service.
+Querying instance metadata requires healthy guest network connectivity, because it makes a REST call through the Azure host to the instance metadata service. So if you're able to query instance metadata that tells you the guest is able to communicate over the network to an Azure-hosted service.
 
 For more information, see [Azure Instance Metadata service](/azure/virtual-machines/windows/instance-metadata-service).
 
