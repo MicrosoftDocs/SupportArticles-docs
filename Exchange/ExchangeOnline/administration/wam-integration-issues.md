@@ -1,6 +1,6 @@
 ---
-title: Issues in Exchange Online PowerShell Module after WAM Integration
-description: Resolves compatibility issues in Exchange Online PowerShell module after Web Account Manager integration.
+title: Resolve Issues in Exchange Online PowerShell Module after WAM Integration
+description: Resolves compatibility issues when using Exchange Online PowerShell after Web Account Manager integration.
 author: cloud-writer
 ms.author: meerak
 audience: ITPro
