@@ -23,7 +23,7 @@ This section includes example commands for performing common tasks in scenarios 
 
 SAC has been included in all versions of Windows since Windows Server 2003 but is disabled by default. SAC relies on the `sacdrv.sys` kernel driver, the `Special Administration Console Helper` service (`sacsvr`), and the `sacsess.exe` process. For more information, see [Emergency Management Services Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc787940(v%3dws.10)).
 
-SAC allows you to connect to your running OS via serial port. When you launch CMD from SAC, `sacsess.exe` launches `cmd.exe` within your running OS. You can see that in Task Manager if you RDP to your VM at the same time you are connected to SAC via the serial console feature. The CMD you access via SAC is the same `cmd.exe` you use when connected via RDP. All the same commands and tools are available, including the ability to launch PowerShell from that CMD instance. That is a major difference between SAC and the Windows Recovery Environment (WinRE) in that SAC is letting you manage your running OS, where WinRE boots into a different, minimal OS. While Azure VMs do not support the ability to access WinRE, with the serial console feature, Azure VMs can be managed via SAC.
+SAC allows you to connect to your running OS via serial port. When you launch CMD from SAC, `sacsess.exe` launches `cmd.exe` within your running OS. You can see that in Task Manager if you RDP to your VM at the same time you're connected to SAC via the serial console feature. The CMD you access via SAC is the same `cmd.exe` you use when connected via RDP. All the same commands and tools are available, including the ability to launch PowerShell from that CMD instance. That is a major difference between SAC and the Windows Recovery Environment (WinRE) in that SAC is letting you manage your running OS, where WinRE boots into a different, minimal OS. While Azure VMs don't support the ability to access WinRE, with the serial console feature, Azure VMs can be managed via SAC.
 
 Because SAC is limited to an 80x24 screen buffer with no scroll back, add `| more` to commands to display the output one page at a time. Use `<spacebar>` to see the next page, or `<enter>` to see the next line.
 
@@ -151,7 +151,7 @@ When limited to methods available in Windows by default, PowerShell can be a bet
 
 `netsh advfirewall set allprofiles state off`
 
-You can use this command when troubleshooting to temporarily rule out the Windows Firewall. It will be enable on next restart or when you enable it using the following command. Do not stop the Windows Firewall service (MPSSVC) or Base Filtering Engine (BFE) service as a way to rule out the Windows Firewall. Stopping MPSSVC or BFE will result in all connectivity being blocked.
+You can use this command when troubleshooting to temporarily rule out the Windows Firewall. It will be enable on next restart or when you enable it using the following command. Don't stop the Windows Firewall service (MPSSVC) or Base Filtering Engine (BFE) service as a way to rule out the Windows Firewall. Stopping MPSSVC or BFE will result in all connectivity being blocked.
 
 ### Enable Windows Firewall
 
@@ -219,9 +219,9 @@ Change `/c:10` to the desired number of events to return, or move it to return a
 
 `wevtutil qe system /c:1 /f:text /q:"Event[System[Provider[@Name='Microsoft-Windows-Hyper-V-Netvsc'] and EventID=11 and TimeCreated[timediff(@SystemTime) <= 86400000]]]"`
 
-Use `604800000` to look back 7 days instead of 24 hours.
+Use `604800000` to look back seven days instead of 24 hours.
 
-### Query event log by Event ID, Provider, and EventData in the last 7 days
+### Query event log by Event ID, Provider, and EventData in the last seven days
 
 `wevtutil qe security /c:1 /f:text /q:"Event[System[Provider[@Name='Microsoft-Windows-Security-Auditing'] and EventID=4624 and TimeCreated[timediff(@SystemTime) <= 604800000]] and EventData[Data[@Name='TargetUserName']='<username>']]" | more`
 
@@ -346,15 +346,15 @@ To run PowerShell in SAC, after you reach a CMD prompt, type:
 `powershell <enter>`
 
 > [!CAUTION]
-> Remove the PSReadLine module from the PowerShell session before running any other PowerShell commands. There is a known issue where extra characters may be introduced in text pasted from the clipboard if PSReadLine is running in a PowerShell session in SAC.
+> Remove the PSReadLine module from the PowerShell session before running any other PowerShell commands. there's a known issue where extra characters may be introduced in text pasted from the clipboard if PSReadLine is running in a PowerShell session in SAC.
 
-First check if PSReadLine is loaded. It is loaded by default on Windows Server 2016, Windows 10, and later versions of Windows. It would only be present on earlier Windows versions if it had been manually installed.
+First check if PSReadLine is loaded. It's loaded by default on Windows Server 2016, Windows 10, and later versions of Windows. It would only be present on earlier Windows versions if it had been manually installed.
 
-If this command returns to a prompt with no output, then the module was not loaded and you can continue using the PowerShell session in SAC as normal.
+If this command returns to a prompt with no output, then the module wasn't loaded and you can continue using the PowerShell session in SAC as normal.
 
 `get-module psreadline`
 
-If the above command returns the PSReadLine module version, run the following command to unload it. This command does not delete or uninstall the module, it only unloads it from the current PowerShell session.
+If the above command returns the PSReadLine module version, run the following command to unload it. This command doesn't delete or uninstall the module, it only unloads it from the current PowerShell session.
 
 `remove-module psreadline`
 
@@ -374,7 +374,7 @@ The second key (under \Policies) will only exist if the relevant group policy se
 
 `set-itemproperty -path 'hklm:\software\policies\microsoft\windows nt\terminal services' -name 'fdenytsconNections' 0 -type dword`
 
-The second key (under \Policies) would only be needed if the relevant group policy setting had been configured. Value will be rewritten at next group policy refresh if it is configured in group policy.
+The second key (under \Policies) would only be needed if the relevant group policy setting had been configured. Value will be rewritten at next group policy refresh if it's configured in group policy.
 
 ## Manage Windows Services using PowerShell
 
@@ -453,7 +453,7 @@ or
 
 `get-wmiobject Win32_PingStatus -Filter 'Address="8.8.8.8"' | format-table -autosize IPV4Address,ReplySize,ResponseTime`
 
-`Test-Netconnection` without any parameters will try to ping `internetbeacon.msedge.net`. It is available on 2012+. For 2008R2 use `Get-WmiObject` as in the second example.
+`Test-Netconnection` without any parameters will try to ping `internetbeacon.msedge.net`. It's available on 2012+. For 2008R2 use `Get-WmiObject` as in the second example.
 
 ### Port Ping
 
@@ -475,11 +475,11 @@ or
 
 `Resolve-DnsName` is available on 2012+. For 2008R2 use `System.Net.DNS`.
 
-### Show Windows firewall rule by name
+### Show Windows Firewall rule by name
 
 `get-netfirewallrule -name RemoteDesktop-UserMode-In-TCP`
 
-### Show Windows firewall rule by port
+### Show Windows Firewall rule by port
 
 `get-netfirewallportfilter | where {$_.localport -eq 3389} | foreach {Get-NetFirewallRule -Name $_.InstanceId} | format-list Name,Enabled,Profile,Direction,Action`
 
@@ -489,7 +489,7 @@ or
 
 `Get-NetFirewallPortFilter` is available on 2012+. For 2008R2 use the `hnetcfg.fwpolicy2` COM object.
 
-### Disable Windows firewall
+### Disable Windows Firewall
 
 `Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False`
 
@@ -557,9 +557,9 @@ Change `/c:10` to the desired number of events to return, or move it to return a
 
 `get-winevent -logname system -maxevents 1 -filterxpath "*[System[Provider[@Name='Microsoft-Windows-Hyper-V-Netvsc'] and EventID=11 and TimeCreated[timediff(@SystemTime) <= 86400000]]]"`
 
-Use `604800000` to look back 7 days instead of 24 hours. |
+Use `604800000` to look back seven days instead of 24 hours. |
 
-### Query event log by Event ID, Provider, and EventData in the last 7 days
+### Query event log by Event ID, Provider, and EventData in the last seven days
 
 `get-winevent -logname system -maxevents 1 -filterxpath "*[System[Provider[@Name='Microsoft-Windows-Security-Auditing'] and EventID=4624 and TimeCreated[timediff(@SystemTime) <= 604800000]] and EventData[Data[@Name='TargetUserName']='<username>']]" | more`
 
@@ -617,7 +617,7 @@ Adding `-force` will force running applications to close without warning users.
 
 You can query Azure instance metadata from within your Azure VM to view details such as osType, Location, vmSize, vmId, name, resourceGroupName, subscriptionId, privateIpAddress, and publicIpAddress.
 
-Querying instance metadata requires healthy guest network connectivity, because it makes a REST call through the Azure host to the instance metadata service. So if you are able to query instance metadata, that tells you the guest is able to communicate over the network to an Azure-hosted service.
+Querying instance metadata requires healthy guest network connectivity, because it makes a REST call through the Azure host to the instance metadata service. So if you're able to query instance metadata, that tells you the guest is able to communicate over the network to an Azure-hosted service.
 
 For more information, see [Azure Instance Metadata service](/azure/virtual-machines/windows/instance-metadata-service).
 
