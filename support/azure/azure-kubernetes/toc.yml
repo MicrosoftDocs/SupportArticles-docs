@@ -1,3 +1,4 @@
+items:
 - name: Welcome
   href: welcome-azure-kubernetes.yml
 
@@ -455,7 +456,7 @@
     href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-codes/zonalallocation-allocationfailed-error.md
-  - name: AKS upgrade not allowed or blocked due to unsupported Kubernetes version or node pool version skew
+  - name: AKS upgrade errors because of version skew, incompatibility, or lack of support
     href: error-codes/aks-upgrade-blocked.md
   - name: SubnetIsDelegated error
     href: error-codes/subnetisdelegated-error.md
