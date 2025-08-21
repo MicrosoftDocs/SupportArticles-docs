@@ -11,7 +11,7 @@ ms.custom: sap:Service Availability and Performance
 
 # Troubleshoot allocation failure in Azure Cloud Services (extended support)
 
-When you deploy instances to a Cloud Service (extended support) or add new web or worker role instances, Microsoft Azure allocates compute resources. You might occasionally receive error messages when you perform these operations. This can occur even before you reach the Azure subscription limits. This article explains the causes of some of the common allocation failures and suggests possible solutions. This information might also be useful when you plan the deployment of your services.
+When you deploy instances to a Cloud Service (extended support) or add new web or worker role instances, Microsoft Azure allocates compute resources. You might occasionally receive error messages when you perform these operations. Allocation errors can occur even before you reach the Azure subscription limits. This article explains the causes of some of the common allocation failures and suggests possible solutions. This information might also be useful when you plan the deployment of your services.
 
 ## How allocation works
 
@@ -21,9 +21,9 @@ Diagram 1 illustrates the case of a normal allocation that's tried in multiple c
 
    :::image type="content" source="media/allocation-failure/allocation-failure-1.png" alt-text="Screenshot that shows cluster allocation":::
 
-## Why allocation failure occur
+## Why allocation failure occurs
 
-If an allocation request is pinned to a cluster, the possibility that the request can't find free resources increases because the available resource pool is limited to a cluster. Also, if your allocation request is pinned to a cluster but the type of resource that you requested isn't supported by that cluster, your request fails even if the cluster has free resources. 
+If an allocation request is pinned to a cluster, the possibility that the request can't find free resources increases because the available resource pool is limited to a cluster. Also, if your allocation request is pinned to a cluster, but the type of resource that you requested isn't supported by that cluster, your request fails even if the cluster has free resources. 
 
 Diagram 3 illustrates the case in which a pinned allocation fails because the only candidate cluster doesn't have free resources. Diagram 4 illustrates the case in which a pinned allocation fails because the only candidate cluster doesn't support the requested virtual machine (VM) size, even though the cluster has free resources.
 
@@ -54,7 +54,7 @@ The following common allocation scenarios cause an allocation request to be pinn
    3. After traffic stops going to the old site, you can delete the old cloud service. This solution should incur zero downtime.
 - Delete swappable cloud services: This solution preserves your existing DNS name, but creates downtime for your application. Follow these steps:
    1. Delete both cloud services that are swappable with each other.
-   2. Create a new deployment for both cloud services. This triggers a new attempt to allocate on all clusters in the region.
+   2. Create a new deployment for both cloud services. This action triggers a new attempt to allocate on all clusters in the region.
 
 ## Next steps
 
