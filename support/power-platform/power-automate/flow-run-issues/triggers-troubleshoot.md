@@ -47,7 +47,7 @@ Sometimes, you might need to [Identify specific flow runs](/power-automate/fix-f
 
    Here's the list of [IP addresses and domains](/power-automate/ip-address-configuration) that need to be added to your allowlist.
 
-   Learn more about how to fix issues with triggers in [There is a problem with the flow's trigger](/troubleshoot/power-platform/power-automate/flow-run-issues/there-is-a-problem-with-the-flows-trigger).
+   Learn more about how to fix issues with triggers in [There is a problem with the flow's trigger](there-is-a-problem-with-the-flows-trigger.md).
 
 After the problem is resolved, modify the flow and then save it. You can then change it back to its original state, and then save it again. The flow becomes aware that its configuration changed, and it tries to register its trigger again.
 
