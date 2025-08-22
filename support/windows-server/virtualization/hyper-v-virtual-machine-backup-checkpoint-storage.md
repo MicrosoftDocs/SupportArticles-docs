@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Hyper-V Virtual Machine Backup, Checkpoint, and Storage Failures
-description: Provides a comprehensive guide to troubleshooting common issues encountered with Hyper-V virtual machine (VM) backup, checkpoint management, and storage failures in Windows Server environments.
-ms.date: 08/19/2025
+description: Provides a comprehensive guide to troubleshooting common issues with Hyper-V VM backup, checkpoint management, and storage failures in Windows Server environments.
+ms.date: 08/22/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Troubleshoot Hyper-V virtual machine backup, checkpoint, and storage failures
 
-This article provides a comprehensive guide to troubleshooting common issues encountered with Hyper-V virtual machine (VM) backup, checkpoint management, and storage failures in Windows Server environments (Windows Server 2016, Windows Server 2019, and Windows Server 2022). These issues often arise during backup or restore operations, checkpoint creation or merging, VM startup, and storage connectivity. They can impact both production and disaster recovery workflows in standalone Hyper-V hosts, clustered setups, and environments integrated with third-party backup tools. Timely identification and resolution are critical to maintaining VM availability, data integrity, and backup reliability.
+This article provides a comprehensive guide to troubleshooting common issues encountered with Hyper-V virtual machine (VM) backup, checkpoint management, and storage failures in Windows Server environments (Windows Server 2016, Windows Server 2019, and Windows Server 2022). These issues often arise during backup or restore operations, checkpoint creation or merging, VM startup, and storage connectivity. They can impact both production and disaster recovery workflows in standalone Hyper-V hosts, clustered setups, and environments integrated with third-party backup tools. Timely identifying and resolving these issues is critical to maintaining VM availability, data integrity, and backup reliability.
 
 You might experience:
 
@@ -28,7 +28,7 @@ In addition, you might encounter the following symptoms in affected environments
 - [VM startup or migration failures](#vm-startup-or-migration-failures)
 - [Storage and file system errors](#storage-and-file-system-errors)
 
-The root causes of these issues can be grouped into the following categories with corresponding resolutions provided:
+The root causes of these issues can be grouped into the following categories, with corresponding resolutions provided:
 
 - [Checkpoint and VSS-related issues](#checkpoint-and-vss-related-issues)
 - [File system and storage problems](#file-system-and-storage-problems)
@@ -42,22 +42,22 @@ The root causes of these issues can be grouped into the following categories wit
 
 - Backups fail to complete or hang indefinitely.
 - Restore operations from checkpoints or images fail.
-- Error messages from backup software (such as Veeam, Druva, Rubrik, or Veritas) including:
+- Error messages from backup software (such as Veeam, Druva, Rubrik, or Veritas) include:
 
   - > Failed to create VM recovery checkpoint … error code: 32768
   - > Could not create backup checkpoint for virtual machine - Error -0x800423F2
   - > There was a problem recovering your PC
   - > Import failed. … The process cannot access the file because it is being used by another process. (0x80070020)
 
-- Event log entries such as Event ID 8229 (host) and 12293 (guest) indicating Volume Shadow Copy Service (VSS) writer errors.
+- Event log entries, such as Event ID 8229 (host) and 12293 (guest), indicate Volume Shadow Copy Service (VSS) writer errors.
 
 ## Checkpoint and snapshot issues
 
 - Unable to create new checkpoints or merge existing ones.
-- Accumulation of AVHDX files on disk, even when not visible in Hyper-V Manager.
+- VHDX files accumulate on disk, even when not visible in Hyper-V Manager.
 - Errors such as: "The process cannot access the file because it is being used by another process. (0x80070020)".
-- Orphaned or hidden checkpoints blocking backup or VM operations.
-- VMs stuck in saved, paused, or critical states.
+- Orphaned or hidden checkpoints block backup or VM operations.
+- VMs are stuck in saved, paused, or critical states.
 
 ## VM startup or migration failures
 
@@ -67,14 +67,14 @@ The root causes of these issues can be grouped into the following categories wit
   - > The system cannot find the file specified. (0x2)
   - > An error occurred while attempting to start the selected VM. Unavailable could not initialize and update VM configuration failed.
 
-- VMs not visible in Hyper-V Manager or Failover Cluster Manager.
+- VMs aren't visible in Hyper-V Manager or Failover Cluster Manager.
 - VM migration, export, or import fails due to missing or corrupted files.
 
 ## Storage and file system errors
 
-- Event logs showing IDs 9, 39, 129, 3280, 55, 51, or 513 related to storage, disk, or file system corruption.
-- Storage volume running out of space due to large AVHDX files.
-- VHD/VHDX files missing, inaccessible, or corrupted.
+- Event logs show IDs 9, 39, 129, 3280, 55, 51, or 513 related to storage, disk, or file system corruption.
+- Storage volume runs out of space due to large AVHDX files.
+- VHD/VHDX files are missing, inaccessible, or corrupted.
 - Errors such as:
 
   - > Cannot connect to virtual machine configuration storage
@@ -83,7 +83,7 @@ The root causes of these issues can be grouped into the following categories wit
 ## Checkpoint and VSS-related issues
 
 - Orphaned or unmerged checkpoints: Caused by incomplete backup operations, hidden/invisible checkpoints, or AVHDX chain corruption.
-- VSS writer failures or timeouts: VSS writers in failed or timed-out states, often due to overlapping backup jobs or VSS operations.
+- VSS writer failures or timeouts: VSS writers in failed or timeout states, often due to overlapping backup jobs or VSS operations.
 - Third-party backup integration: Misconfigurations or incompatibilities between Hyper-V and backup tools such as Veeam, Druva, or Veritas.
 
 ### Resolution: Checkpoint and AVHDX file management
@@ -102,8 +102,8 @@ The root causes of these issues can be grouped into the following categories wit
 
     1. Shut down the affected VM.
     2. In Hyper-V Manager, select the VM, and then select **Actions** > **Edit Disk** to open the **Edit Virtual Hard Disk Wizard** window.
-    3. On the **Locate Disk** tab, select **Browse** to locate the AVHDX file, then select **Next**.
-    4. On the **Choose Action** tab, select **Merge** > **To the parent virtual hard disk**, then select **Next** to complete the wizard.
+    3. On the **Locate Disk** tab, select **Browse** to locate the AVHDX file, and then select **Next**.
+    4. On the **Choose Action** tab, select **Merge** > **To the parent virtual hard disk**, and then select **Next** to complete the wizard.
 
 3. Advanced PowerShell merge (if needed):
 
@@ -175,16 +175,16 @@ The root causes of these issues can be grouped into the following categories wit
 
 1. Assign required rights:
 
-    Ensure **NT Virtual Machine\\Virtual Machines** has **Log on as a Service** rights via Group Policy or Local Security Policy.
+    Ensure the **NT Virtual Machine\\Virtual Machines** account has **Log on as a Service** rights via Group Policy or Local Security Policy.
 2. Update NTFS permissions:
 
    Use `icacls` to verify and grant **Full Control** to VM service accounts.
-3. Configure antivirus exclusions by following the [Microsoft antivirus exclusions for Hyper-V](antivirus-exclusions-for-hyper-v-hosts.md).
+3. Configure antivirus exclusions by following the [Microsoft antivirus exclusions for Hyper-V hosts](antivirus-exclusions-for-hyper-v-hosts.md).
 
 ## Cluster and configuration issues
 
 - Cluster role or metadata corruption: Caused by improper failovers, role removal, or unsynchronized cluster states.
-- Configuration version mismatch: VM config versions below the required minimum after migrations or upgrades.
+- Configuration version mismatch: VM configuration versions below the required minimum after migrations or upgrades.
 - Incorrect VM or storage path settings: Misconfigured paths or mismatched network adapters after a migration.
 
 ### Resolution: Cluster and VM configuration fixes
@@ -196,9 +196,9 @@ The root causes of these issues can be grouped into the following categories wit
 2. Restore or import missing VMs:
 
    In Hyper-V Manager, use **Import Virtual Machine** and locate the exported/imported files.
-3. Update VM configuration version:
+3. Update the VM configuration version:
 
-   In Hyper-V Manager, right-click the VM, and select **Upgrade Configuration Version**. Or use the following PowerShell cmdlet:
+   In Hyper-V Manager, right-click the VM and select **Upgrade Configuration Version**. Or use the following PowerShell cmdlet:
 
    ```powershell
    Update-VMVersion
@@ -216,8 +216,8 @@ The root causes of these issues can be grouped into the following categories wit
 
 ## Other repairs and checks
 
-1. Clean up saved states: Delete `.vmrs` and `.vmgs` files in the VM folder if stuck in a "Saved" state.
-2. Check and fix cluster resource states: Use PowerShell cmdlets like `Get-ClusterResource` to inspect and repair cluster roles.
+1. Clean up saved states. Delete `.vmrs` and `.vmgs` files in the VM folder if stuck in a "Saved" state.
+2. Check and fix cluster resource states. Use PowerShell cmdlets like `Get-ClusterResource` to inspect and repair cluster roles.
 3. Restart the host to clear stale file locks if needed.
 
 ## Data collection
@@ -225,8 +225,8 @@ The root causes of these issues can be grouped into the following categories wit
 To assist with troubleshooting, collect the following items:
 
 - Event logs: Application, system, and Hyper-V-specific logs.
-- PowerShell diagnostic cmdlets: `Get-VHDChain`, `Get-VMSnapshot`, `Get-VM`, `Update-VMVersion`, `icacls`, `Merge-VHD`, `Set-VHD`.
-- VSS tools: `vssadmin list writers`, `vssadmin list providers`.
+- PowerShell diagnostic cmdlets: `Get-VHDChain`, `Get-VMSnapshot`, `Get-VM`, `Update-VMVersion`, `icacls`, `Merge-VHD`, and `Set-VHD`.
+- VSS tools: `vssadmin list writers` and `vssadmin list providers`.
 - Diagnostic tools: Process Monitor (Procmon), **Handle.exe**, Process Explorer, and Troubleshooting Support Script (TSS).
 - Cluster logs: Failover clustering logs and System Center Virtual Machine Manager (SCVMM) job history.
 - Vendor-specific tools for checkpoint/snapshot cleanup.
@@ -235,5 +235,5 @@ To assist with troubleshooting, collect the following items:
 
 - [Export and import virtual machines](/windows-server/virtualization/hyper-v/deploy/export-and-import-virtual-machines)
 - [Backing up and restoring virtual machines](/windows/win32/hyperv_v2/backing-up-and-restoring-virtual-machines)
-- [Antivirus exclusions for Hyper-V](antivirus-exclusions-for-hyper-v-hosts.md)
+- [Antivirus exclusions for Hyper-V hosts](antivirus-exclusions-for-hyper-v-hosts.md)
 - [PowerShell Hyper-V cmdlets](/powershell/module/hyper-v/)
