@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Troubleshoot Hyper-V virtual machine start, state, and access failures in clustered and standalone environments
 
-This article provides a detailed troubleshooting guide to help you resolve issues related to Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments. Common causes include VM configuration file corruption, storage or network problems, process lockups, checkpoint or AVHDX (automatic virtual hard disk) issues, and permission or driver errors. Timely identification and resolution of these problems are essential to minimize VM downtime, prevent business disruption, and avoid data loss in production environments.
+This article provides a detailed troubleshooting guide to help you resolve issues related to Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments. Common causes include VM configuration file corruption, storage or network problems, process lockups, checkpoint or automatic virtual hard disk (AVHDX) issues, and permission or driver errors. Timely identification and resolution of these problems are essential to minimize VM downtime, prevent business disruption, and avoid data loss in production environments.
 
 You might encounter various symptoms when dealing with Hyper-V VM issues, including the following items:
 
