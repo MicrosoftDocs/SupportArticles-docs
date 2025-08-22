@@ -102,6 +102,10 @@ Although it's helpful to know which clients generate the highest request volume,
 
 This detector analyzes recent API server activity and highlights agents or workloads generating large or frequent LIST calls. It provides a summary of potential impacts, such as request timeouts, increased 408/503 errors, node instability, health probe failures, and OOM-Kills in API server or etcd.
 
+ :::image type="content" source="media/troubleshoot-apiserver-etcd/cluster-control-plane-availability-performance.png" alt-text="Screenshot that shows the 'Cluster and Control Plane Availability and Performance' category." lightbox="media/troubleshoot-apiserver-etcd/resource-intensive-listing-analyzer-1.png":::
+
+:::image type="content" source="media/troubleshoot-apiserver-etcd/cluster-control-plane-availability-performance.png" alt-text="Screenshot that shows the 'Cluster and Control Plane Availability and Performance' category." lightbox="media/troubleshoot-apiserver-etcd/resource-intensive-listing-analyzer-2.png":::
+
 #### How to interpret the detector output
 
 - **Summary:**  
@@ -325,6 +329,68 @@ In this example, the validating webhook is blocking the creation of some API ser
 ### Solution 4: Delete webhook configurations
 
 To fix this problem, delete the validating and mutating webhook configurations. To delete these webhook configurations in Kyverno, review the [Kyverno troubleshooting article](https://kyverno.io/docs/troubleshooting/).
+
+## Cause 5: High etcd memory usage triggered by alert
+
+If you receive an alert that etcd memory usage exceeds 20 GiB, this indicates that your cluster is experiencing intensive API server load that has cascaded to overwhelm etcd memory capacity. This can lead to performance degradation or potential outages if not addressed promptly.
+
+To check the current etcd memory usage and understand the specific factors contributing to the high memory consumption, navigate to **Diagnose and Solve Problems** in the Azure portal. Run the **Etcd Performance Analyzer** by searching for "_etcd performance_" in the search box. The analyzer shows you the memory usage breakdown and helps identify whether the issue is caused by high request rates, large object counts, or large object sizes.
+
+:::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-performance-analyzer.png" alt-text="Azure portal screenshot of AKS Diagnose and solve problems showing the Etcd Performance Analyzer with memory usage breakdown and top contributors." lightbox="media/troubleshoot-apiserver-etcd/etcd-performance-analyzer.png":::
+
+The root cause of high etcd memory usage is typically intensive API server load. Since this problem overlaps with other causes already covered in this troubleshooting guide, use the following approach to identify the specific issue affecting your cluster:
+
+### Solution 5: Use existing diagnostic tools to identify and resolve the underlying cause
+
+**Step 1: Determine the primary contributing factor**
+
+The etcd memory alert can be triggered by any combination of three factors. Use these diagnostic tools to identify which factor is most problematic in your situation:
+
+- **For high request rates**: Use the **API Server Resource Intensive Listing Analyzer** described in [Step 2](#step-2-identify-and-chart-the-average-latency-of-api-server-requests-per-user-agent) above to identify agents making excessive LIST calls
+- **For object count and size issues**: Use the **Etcd Performance Analyzer** and **Etcd Capacity Analyzer** in the Azure portal
+
+#### How to use the Etcd Performance Analyzer
+
+Use this analyzer to quickly assess whether the etcd memory alert is driven by large objects, excessive object counts, or high request rates:
+
+1. Open your AKS cluster in the Azure portal.
+2. Go to **Diagnose and solve problems**.
+3. In the search box, type "etcd performance" and open the **Etcd Performance Analyzer**.
+
+What you get:
+- A breakdown of current etcd memory usage.
+- Indicators of heavy payloads (for example, large objects or high request rates).
+
+Next steps based on results:
+- If high request rates are indicated, run the **API Server Resource Intensive Listing Analyzer** (see Step 2 earlier in this guide) to identify offending agents and LIST patterns.
+- If large objects or many objects are indicated, run the **Etcd Capacity Analyzer** and follow [Cause 2](#cause-2-an-offending-client-leaks-etcd-objects-and-results-in-a-slowdown-of-etcd).
+
+**Step 2: Apply the appropriate solution based on your findings**
+
+Once you've identified the primary cause, apply the relevant solution from this troubleshooting guide:
+
+- **If excessive LIST or PUT calls are identified**: Follow [Cause 3](#cause-3-an-offending-client-makes-excessive-list-or-put-calls) solutions to tune API call patterns or throttle problematic clients
+- **If too many objects are stored in etcd**: Follow [Cause 2](#cause-2-an-offending-client-leaks-etcd-objects-and-results-in-a-slowdown-of-etcd) solutions to clean up objects and implement retention policies
+- **If large objects are consuming excessive memory**: Focus on the object size reduction techniques below
+
+**Additional mitigation for large object sizes:**
+- Move environment variables from pod specifications into ConfigMaps to reduce pod specification sizes
+- Split large secrets or ConfigMaps into smaller, more manageable pieces
+- Review and optimize resource specifications in your applications
+
+```bash
+# Example: Clean up completed jobs that may have large specifications
+kubectl delete jobs --field-selector status.successful=1
+
+# Example: Clean up failed pods that may be consuming memory
+kubectl delete pods --field-selector status.phase=Failed
+```
+
+> [!TIP]
+> The etcd memory alert often indicates a combination of factors. Start with the **API Server Resource Intensive Listing Analyzer** to identify immediate request rate issues, then use the **Etcd Performance Analyzer** and **Etcd Capacity Analyzer** to understand object-related contributions to memory usage.
+
+> [!IMPORTANT]
+> If the API server becomes unresponsive due to severe etcd memory pressure and you cannot perform the diagnostic steps above, contact Azure support immediately to request assistance with cleaning up problematic objects or throttling excessive requests.
 
 [!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
