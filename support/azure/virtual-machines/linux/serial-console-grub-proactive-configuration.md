@@ -75,14 +75,14 @@ If you don't have access to GRUB, watch [this video](https://youtu.be/m5t0GZ5oGA
 
 ## Configuration methods and challenges
 
-By default, not all Linux Azure VMs are configured for GRUB access or to be interrupted by the SysRq commands. Some older distros, such as LES 11, aren't configured to display a sign-in prompt in the Azure Serial Console. The following sections review various Linux distributions and discuss configurations that make GRUB available.
+By default, not all Linux Azure VMs are configured for GRUB access or can be interrupted by the SysRq commands. Some older distros, such as LES 11, aren't configured to display a sign-in prompt in the Azure Serial Console. The following sections review various Linux distributions and discuss configurations that make GRUB available.
 
 ### How to configure Linux VM to accept SysRq keys
 
 By default, the SysRq key is enabled on some newer Linux distros. On other distros, it might be configured for accepting values only for certain SysRq functions.
 On older distros, it might be disabled completely.
 
-The SysRq feature is useful for restarting a non-responding VM directly from the Azure Serial Console. It's also helpful to gain access to the GRUB menu. Aalternatively, restarting a VM from another portal window or SSH session might drop your current console connection and end GRUB timeouts that previously displayed the GRUB menu.
+The SysRq feature is useful for restarting a nonresponding VM directly from the Azure Serial Console. It's also helpful to gain access to the GRUB menu. Alternatively, restarting a VM from another portal window or SSH session might drop your current console connection and end GRUB timeouts that previously displayed the GRUB menu.
 
 The VM must be configured to accept a value of **1** for the kernel parameter. This setting enables all functions of SysRq or 128 for restart and power off processes.
 
@@ -150,7 +150,7 @@ Ubuntu 12.04 allows access to the serial console but doesn't offer the ability t
 
 For Ubuntu 12.04 to obtain a **login:** prompt, follow these steps:
 
-1. Create a file that's named /etc/init/ttyS0.conf and that contains the following text:
+1. Create a file, and name it /etc/init/ttyS0.conf. The file should contain the following text:
 
     ```console
     # ttyS0 - getty
@@ -187,13 +187,15 @@ If you don't configure the kernel boot parameter, the Recovery menu is automatic
 
 :::image type="content" source="media/serial-console-grub-proactive-configuration/recovery-mode-ubuntu.png" alt-text="Screenshot that shows the Serial console and a recovery mode version selected.":::
 
-1. Locate the line that loads the kernel. Replace the last parameter, **nomodeset**, with the destination, as **console=ttyS0**:
+1. Locate the line that loads the kernel:
 
 ```console
 linux /boot/vmlinuz-4.15.0-1023-azure root=UUID=21b294f1-25bd-4265-9c4e-d6e4aeb57e97 ro recovery nomodeset
+```
 
-change to
+Replace the last parameter, **nomodeset**, with the destination, as **console=ttyS0**:
 
+```console
 linux /boot/vmlinuz-4.15.0-1023-azure root=UUID=21b294f1-25bd-4265-9c4e-d6e4aeb57e97 ro recovery console=ttyS0
 ```
 
@@ -250,7 +252,7 @@ GRUB_TIMEOUT=1
 GRUB_TERMINAL_OUTPUT="console"
 ```
 
-Change these to the following:
+Change these lines to the following lines:
 
 ```console
 GRUB_TIMEOUT=5
@@ -290,7 +292,7 @@ Alternatively, you can configure GRUB and SysRq by using a single line, either i
 
 #### Red Hat 6\.*x* GRUB configuration
 
-The file to modify is /boot/grub/grub.conf. The `timeout` value will determine how long GRUB is dispplayed.
+The file to modify is /boot/grub/grub.conf. The `timeout` value determines how long GRUB is displayed.
 
 ```console
 #boot=/dev/vda1
@@ -303,7 +305,7 @@ terminal serial
 terminal --timeout=5 serial console
 ```
 
-The last line, *terminal –-timeout=5 serial console*, further increases the **GRUB** timeout value by adding a prompt of five seconds duration that displays the message, **Press any key to continue.**
+The last line, *terminal –-timeout=5 serial console*, further increases the **GRUB** timeout value by adding a five-second prompt that displays the message, **Press any key to continue.**
 
 :::image type="content" source="media/serial-console-grub-proactive-configuration/press-any-key-to-continue.png" alt-text="Screenshot that shows console output.":::
 
@@ -363,7 +365,7 @@ kernel /boot/vmlinuz-3.0.101-108.74-default root=/dev/disk/by-uuid/ab6b62bb--
 1a8c-45eb-96b1-1fbc535b9265 disk=/dev/sda  USE_BY_UUID_DEVICE_NAMES=1 earlyprinttk=ttyS0 console=ttyS0 showopts vga=0x314
 ```
 
-This configuration triggers a prompt of five seconds duration on the console that displays the message, **Press any key to continue.**
+This configuration triggers a prompt on the console that displays a five-second message, **Press any key to continue.**
 
 It then displays the GRUB menu for an additional five seconds. Press the down arrow to interrupt the counter, and then select a kernel that you want to start. You can make either of the following changes:
 
