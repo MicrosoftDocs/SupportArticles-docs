@@ -195,4 +195,4 @@ Gather the following logs and diagnostics to assist with troubleshooting:
 ## References
 
 - [Hyper-V performance tuning guide](/windows-server/virtualization/hyper-v)
-- [Failover cluster troubleshooting](/windows-server/failover-clustering)
+- [Failover cluster troubleshooting](/sql/sql-server/failover-clusters/windows/failover-cluster-troubleshooting)
