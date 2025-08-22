@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Hyper-V Virtual Machine Input, Migration, and Device Integration Issues
-description: Provides a comprehensive guide to troubleshoot common issues encountered with Hyper-V virtual machines (VMs).
-ms.date: 08/18/2025
+description: Provides a comprehensive guide to troubleshoot common issues with Hyper-V virtual machines (VMs).
+ms.date: 08/22/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -124,7 +124,7 @@ Update the VM configuration by using the following cmdlet:
 Update-VMVersion -Name <VMName>
 ```
 
-After the updating, test live migration. If issues persist, shut down the VM, perform a quick migration, and then restart.
+After the update, test live migration. If issues persist, shut down the VM, perform a quick migration, and then restart.
 
 #### Cluster/heartbeat-related reboots
 
@@ -152,7 +152,7 @@ If VMs are rebooted due to heartbeat failures, follow these steps:
 1. Create a new checkpoint for the affected VM.
 2. Export the latest checkpoint to a safe location.
 3. Delete the VM from Hyper-V Manager.
-4. Import the VM back into Hyper-V using the restore option. For clusters, remove the VM from the cluster, recreate it with the same configuration, attach the existing VHD/VHDX, and add it back to the cluster.
+4. Import the VM back into Hyper-V using the restore option. For clusters, remove the VM from the cluster, re-create it with the same configuration, attach the existing VHD/VHDX, and add it back to the cluster.
 5. Inspect checkpoints using PowerShell:
 
     ```powershell
@@ -221,5 +221,5 @@ To collect logs and information:
 
 ## References
 
-- [Deploying graphics devices using DDA](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda#configure-the-vm-for-dda)
+- [Deploy graphics devices using DDA](/windows-server/virtualization/hyper-v/deploy/deploying-graphics-devices-using-dda#configure-the-vm-for-dda)
 - Check Microsoft advisories for relevant updates and patches.
