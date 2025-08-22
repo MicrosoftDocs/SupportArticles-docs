@@ -132,6 +132,8 @@ items:
           href: ../administration/view-update-address-list-membership.md
         - name: Voice mail settings are missing from Options
           href: ../administration/voice-mail-settings-missing-from-options.md
+        - name: WAM integration issues
+          href: ../administration/wam-integration-issues.md
         - name: Windows Mail app not blocked by ActiveSync settings
           href: ../administration/windows-mail-app-not-blocked.md
         - name: WinRM client cannot process the request
