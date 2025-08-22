@@ -51,11 +51,12 @@ Hyper-V VM failures might originate from several root causes categorized as foll
 - [Cause 4: Permissions, security, and driver problems](#cause-4-permissions-security-and-driver-problems)
 - [Cause 5: Cluster, network, and failover issues](#cause-5-cluster-network-and-failover-issues)
 
-> [!NOTE]
-> To resolve these issues, perform the initial checks using the following steps:
->
-> 1. Identify error messages, event IDs, and affected VMs using Hyper-V Manager, Failover Cluster Manager, or PowerShell.
-> 2. Review system logs, Hyper-V logs, and cluster event logs for relevant entries.
+## Initial checks before proceeding
+
+To resolve these issues, perform the initial checks using the following steps:
+
+1. Identify error messages, event IDs, and affected VMs using Hyper-V Manager, Failover Cluster Manager, or PowerShell.
+2. Review system logs, Hyper-V logs, and cluster event logs for relevant entries.
 
 ## Cause 1: Configuration and metadata corruption
 
@@ -63,6 +64,8 @@ Hyper-V VM failures might originate from several root causes categorized as foll
 - Checkpoint (AVHDX) chain corruption or missing differencing disks prevent the VM from starting.
 - Orphaned checkpoints, incomplete merges, or invalid entries in configuration files block VM operations.
 - Duplicate VM GUIDs or object entries, particularly with System Center Virtual Machine Manager (SCVMM), can cause "already exists" errors and prevent VM imports or starts.
+
+To resolve this issue, see [File system and storage checks](#resolution-file-system-and-storage-checks).
 
 ## Cause 2: Storage and file system issues
 
@@ -145,7 +148,7 @@ Hyper-V VM failures might originate from several root causes categorized as foll
 - Improper cluster configurations or inconsistent patching across nodes cause instability.
 - Live migration or failover failures occur due to insufficient memory, incompatible settings, or node misconfigurations.
 
-### Resolution: Cluster and network remediation
+### Resolution 1: Cluster and network remediation
 
 1. Validate cluster health and configuration using the cluster validation wizard or:
 
@@ -161,7 +164,7 @@ Hyper-V VM failures might originate from several root causes categorized as foll
 
 3. Ensure consistent patching and proper network/storage configurations across nodes.
 
-### Resolution: VM configuration repairs and rebuilds
+### Resolution 2: VM configuration repairs and rebuilds
 
 1. For corrupt configuration files, edit the `.VMCX` file or create a new VM with existing disks.
 2. Address saved state or checkpoint issues by removing invalid checkpoints or reattaching disks.
