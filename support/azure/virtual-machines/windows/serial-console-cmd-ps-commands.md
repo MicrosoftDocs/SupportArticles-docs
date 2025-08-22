@@ -15,109 +15,111 @@ ms.author: jarrettr
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
-# Windows Commands - CMD and PowerShell
+# How to use CMD and PowerShell Windows commands
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This section includes example commands for performing common tasks in scenarios where you may need to use SAC to access your Windows VM, such as when you need to troubleshoot RDP connection failures.
+This article provides example commands to perform common tasks in scenarios in which you have to use the Special Administration Console (SAC) to access your Windows virtual machine (VM). For example, you might have to use SAC to troubleshoot RDP connection failures.
 
-SAC has been included in all versions of Windows since Windows Server 2003 but is disabled by default. SAC relies on the `sacdrv.sys` kernel driver, the `Special Administration Console Helper` service (`sacsvr`), and the `sacsess.exe` process. For more information, see [Emergency Management Services Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc787940(v%3dws.10)).
+SAC is included in all versions of Windows since Windows Server 2003. By default, however, it's disabled. SAC relies on the `sacdrv.sys` kernel driver, the `Special Administration Console Helper` service (`sacsvr`), and the `sacsess.exe` process. For more information, see [Emergency Management Services Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc787940(v%3dws.10)).
 
-SAC allows you to connect to your running OS via serial port. When you launch CMD from SAC, `sacsess.exe` launches `cmd.exe` within your running OS. You can see that in Task Manager if you RDP to your VM at the same time you're connected to SAC via the serial console feature. The CMD you access via SAC is the same `cmd.exe` you use when connected via RDP. All the same commands and tools are available, including the ability to launch PowerShell from that CMD instance. That is a major difference between SAC and the Windows Recovery Environment (WinRE) in that SAC is letting you manage your running OS, where WinRE boots into a different, minimal OS. While Azure VMs don't support the ability to access WinRE, with the serial console feature, Azure VMs can be managed via SAC.
+SAC enables you to connect to your running OS through a serial port. When you open a Command Prompt window in SAC, `sacsess.exe` starts `cmd.exe` within your running OS. In Task Manager, you can see that if you connect through RDP to your VM at the same time as you're connected to SAC through the serial console feature. The CMD window that you access through SAC is the same as the `cmd.exe` window that you use when you connect through RDP. All the same commands and tools are available, including the ability to start PowerShell from that CMD instance. The major difference between SAC and the Windows Recovery Environment (WinRE) is that SAC lets you manage your running OS, but WinRE starts up into a different, minimal OS. Although Azure VMs don't support the ability to access WinRE, they can be managed through SAC.
 
-Because SAC is limited to an 80x24 screen buffer with no scroll back, add `| more` to commands to display the output one page at a time. Use `<spacebar>` to see the next page, or `<enter>` to see the next line.
+Because SAC is limited to an 80x24 pixel screen buffer that has no scroll back capability, add `| more` to commands to display the output one page at a time. Use `<spacebar>` to see the next page, or `<enter>` to see the next line.
 
-`SHIFT+INSERT` is the paste shortcut for the serial console window.
+The paste shortcut for the serial console window is `SHIFT+INSERT`.
 
-Because of SAC's limited screen buffer, longer commands may be easier to type out in a local text editor and then pasted into SAC.
+Because of SAC's limited screen buffer, it might be easier to manage longer commands by copying them from a local text editor to SAC.
 
-## View and Edit Windows Registry Settings using CMD
+## Use CMD for Windows registry settings
 
-### Verify RDP is enabled
+To view and edit Windows registry csettings by using CMD, follow these steps:
 
-`reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections`
+1. Verify that RDP is enabled by running the following commands:
 
-`reg query "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections`
+reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections
 
-The second key (under \Policies) will only exist if the relevant group policy setting is configured.
+reg query "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections
 
-### Enable RDP
+**Note:** The second key (under \Policies) exists only if the relevant Group Ppolicy setting is configured.
 
-`reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0`
+1. Enable RDP by running the following commands:
 
-`reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections /t REG_DWORD /d 0`
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0
 
-The second key (under \Policies) would only be needed if the relevant group policy setting is configured. Value will be rewritten at next group policy refresh if it's configured in group policy.
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections /t REG_DWORD /d 0
 
-## Manage Windows Services using CMD
+**Note:** The second key (under \Policies) is necessary only if the relevant Group Policy setting is configured. The value will be rewritten at next Group Policy refresh if it's configured in Group Policy.
 
-### View service state
+## Use CMD to manage Windows services
+
+To manage Windows services by usign CMD< follow these steps:
+
+1. View the service state:
 
 `sc query termservice`
 
-### View service logon account
+1. View the service logon account:
 
 `sc qc termservice`
 
-### Set service logon account
+1. Set the service logon account:
 
 `sc config termservice obj= "NT Authority\NetworkService"`
 
-A space is required after the equals sign.
+**Note:** A space is required after the equal sign.
 
-### Set service start type
+1. Set service start type:
 
 `sc config termservice start= demand`
 
-A space is required after the equals sign. Possible start values include `boot`, `system`, `auto`, `demand`, `disabled`, `delayed-auto`.
+**Note:** A space is required after the equal sign. Possible start values include: `boot`, `system`, `auto`, `demand`, `disabled`, and `delayed-auto`.
 
-### Set service dependencies
+1. Set service dependencies:
 
 `sc config termservice depend= RPCSS`
 
-A space is required after the equals sign.
+**Note:** A space is required after the equal sign.
 
-### Start service
+1. Start service by running either of the following commands:
 
 `net start termservice`
 
-or
-
 `sc start termservice`
 
-### Stop service
+1. Stop the service by running either of the following commands:
 
 `net stop termservice`
 
-or
-
 `sc stop termservice`
 
-## Manage Networking Features using CMD
+## Use CMD to manage networking features
 
-### Show NIC properties
+Use manage networking features by using CMD, follow these steps:
 
-`netsh interface show interface`
+1. Show the network shell (netsh) properties:
 
-### Show IP properties
+> `netsh interface show interface`
 
-`netsh interface ip show config`
+1. Show IP properties:
 
-### Show IPSec configuration
+> `netsh interface ip show config`
+
+1. Show IPSec configuration:
 
 `netsh nap client show configuration`
 
-### Enable NIC
+1. Enable the network shell interface:
 
 `netsh interface set interface name="<interface name>" admin=enabled`
 
-### Set NIC to use DHCP
+1. Set the netsh interface to use DHCP:
 
 `netsh interface ip set address name="<interface name>" source=dhcp`
 
-For more information about `netsh`, [click here](/windows-server/networking/technologies/netsh/netsh-contexts).
+For more information about `netsh`, see [Network shell (netsh)](/windows-server/networking/technologies/netsh/netsh-contexts).
 
-Azure VMs should always be configured in the guest OS to use DHCP to obtain an IP address. The Azure static IP setting still uses DHCP to give the static IP to the VM.
+Azure VMs should always be configured in the Guest OS to use DHCP to get an IP address. The Azure static IP setting still uses DHCP to give the static IP to the VM.
 
 ### Ping
 
