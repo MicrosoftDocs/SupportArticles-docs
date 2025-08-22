@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AKS upgrade errors because of version skew, incompatibility, or lack of support
 description: Learn how to troubleshoot AKS upgrade not allowed or blocked because of unsupported Kubernetes version or node pool version skew.
-ms.date: 08/21/2025
+ms.date: 08/22/2025
 editor: v-jsitser
 ms.reviewer: v-liuamson
 ms.service: azure-kubernetes-service
@@ -22,7 +22,7 @@ When you try to upgrade an AKS cluster by using the Azure CLI, the upgrade opera
 
 **Error message 1: K8sVersionNotSupported**
 
-> `<ClusterName>` is on version 1.25.6 which is not supported in this region. Please use the `[azaks get-versions]` command to get the supported version list in this region. For more information, see [Supported Kubernetes versions in Azure Kubernetes Service (AKS)](https://aka.ms/supported-version-list).
+> `<ClusterName>` is on version 1.25.6 which is not supported in this region. Please use the `[az aks get-versions]` command to get the supported version list in this region. For more information, see [Supported Kubernetes versions in Azure Kubernetes Service (AKS)](https://aka.ms/supported-version-list).
 
 **Error message 2: OperationNotAllowed**
 
