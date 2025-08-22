@@ -1,6 +1,6 @@
 ---
 title: Identify containers causing high disk I/O latency in AKS clusters
-description: Learn how to use Inspektor Gadget to identify which containers and pods are causing high disk I/O latency in Azure Kubernetes Service clusters.
+description: Learn how to identify which containers and pods are causing high disk I/O latency in your Azure Kubernetes Service clusters to easily troubleshoot issues using the open source project Inspektor Gadget.
 ms.date: 07/16/2025
 ms.author: burakok
 ms.reviewer: burakok, mayasingh
@@ -35,7 +35,7 @@ You may suspect disk I/O latency issues when you observe the following behaviors
 
 ### Step 1: Profile disk I/O latency with `profile_blockio`
 
-The `profile_blockio` gadget gathers information about block device I/O usage and generates a histogram distribution of I/O latency when the gadget is stopped. This helps you visualize disk I/O performance and identify latency patterns.
+The `profile_blockio` gadget gathers information about block device I/O usage and generates a histogram distribution of I/O latency when the gadget is stopped. This helps you visualize disk I/O performance and identify latency patterns. We can use this information to gather evidence to support or refute the hypothesis that the symptoms we are seeing are due to disk I/O issues. 
 
 ```console
 kubectl gadget run profile_blockio --node <node-name>
