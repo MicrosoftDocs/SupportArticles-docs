@@ -2836,6 +2836,8 @@ items:
     items:
     - name: Get-VMNetworkAdapter command doesn't report IP addresses
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
+    - name: Troubleshoot Hyper-V virtual machine start, state, and access failures
+      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
     - name: Virtual machine shutdown actions don't run
