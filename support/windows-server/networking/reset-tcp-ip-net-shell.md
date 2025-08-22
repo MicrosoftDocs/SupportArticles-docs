@@ -174,4 +174,4 @@ deleted SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\UseDomainNameDevoluti
 For more information, see:
 
 - [Chapter 16 – Troubleshooting TCP/IP](/previous-versions/tn-archive/bb727023(v=technet.10)?redirectedfrom=MSDN)
-- [TCP/IP and NBT configuration parameters for Windows](/troubleshoot/windows-client/networking/tcpip-and-nbt-configuration-parameters)
+- [TCP/IP and NBT configuration parameters for Windows](../../windows-client/networking/tcpip-and-nbt-configuration-parameters.md)

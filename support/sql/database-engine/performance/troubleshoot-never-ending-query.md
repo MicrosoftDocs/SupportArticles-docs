@@ -125,7 +125,7 @@ This article isn't applicable to long wait scenarios. In a wait scenario, you mi
 
 The wait type indicates that the session is waiting on a resource. A long elapsed time and a long wait time indicate that the session is waiting for most its life for this resource. Тhe short CPU time indicates that little time was spent actually processing the query.
 
-To troubleshoot queries that are long because of waits, see [Troubleshoot slow-running queries in SQL Server](/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries).
+To troubleshoot queries that are long because of waits, see [Troubleshoot slow-running queries in SQL Server](troubleshoot-slow-running-queries.md).
 
 ##### Long compilation time
 
@@ -395,4 +395,4 @@ This section discusses how to review the collected data. It uses the multiple XM
 
 ## Related content
 
-- [Troubleshoot a query that shows a significant performance difference between two servers](/troubleshoot/sql/database-engine/performance/troubleshoot-query-perf-between-servers)
+- [Troubleshoot a query that shows a significant performance difference between two servers](troubleshoot-query-perf-between-servers.md)
