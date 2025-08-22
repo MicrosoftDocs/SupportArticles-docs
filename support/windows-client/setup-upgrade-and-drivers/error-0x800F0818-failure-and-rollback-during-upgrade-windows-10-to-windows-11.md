@@ -1,5 +1,5 @@
 ---
-title: Error 0x800F0818 Failure and Rollback Occurs during Upgrade from Windows 10 to Windows 11
+title: Error 0x800F0818 - 0x20003 Occurs during Upgrade from Windows 10 to Windows 11
 description: 
 ms.date: 08/28/2025
 manager: dcscontentpm
@@ -11,9 +11,9 @@ ms.custom:
 - pcy:WinComm Devices Deploy
 ---
 
-# Error 0x800F0818 failure and rollback occurs during upgrade from Windows 10 to Windows 11
+# Error 0x800F0818 - 0x20003 occurs during upgrade from Windows 10 to Windows 11
 
-This article resolves a Windows 11 upgrade failure that's caused by legacy configuration files and registry entries.
+This article provides a solution for an error that occurs on some computers when you upgrade them from Windows 10 to Windows 11.
 
 ## Symptoms
 
@@ -23,7 +23,7 @@ You use one of the following systems to service Windows client computers:
 - Windows Server Update Services (WSUS)
 - Windows Update for Business
 
-A feature update update from Windows 10 22H2 to Windows 11 23H2 or 24H2 fails in the Safe_OS phase, and generates error 0x800F0818 - 0x20003. The update rolls back.
+A feature update from Windows 10 22H2 to Windows 11 23H2 or 24H2 fails in the Safe_OS phase, and generates error 0x800F0818 - 0x20003. The update rolls back.
 
 If you run a diagnostic tool such as [SetupDiag](/windows/deployment/upgrade/setupdiag), it returns the same error code.
 
@@ -41,7 +41,7 @@ YYYY-MM-DD HH:MM:SS, Info MOUPG ImageExit: Initializing SQM: [FALSE]
 YYYY-MM-DD HH:MM:SS, Info MOUPG ImageExit: Initializing PostReboot: [TRUE]
 ```
 
-If you search the C:\\$Windows.~BT\\Sources\\Panther\\setupact.log file, you  find statements that resembles the following excerpts:
+If you search the C:\\$Windows.~BT\\Sources\\Panther\\setupact.log file, you  find statements that resemble the following excerpts:
 
 ```output
 YYYY-MM-DD HH:MM:SS, Info MOUPG SetupHost::Initialize: CmdLine = [/Product Client /PreDownload /Package /Priority Normal /Quiet /ReportId 96CEE****************3-2D4E1B1306F5.1 /FlightData "RS:24944" "/CancelId" "C-757a2**********************4256ca34" "/PauseId" "P-757a20**********************" "/CorrelationVector" "otIKT***B0mTOyAl.1.1.28.4" "/DownloadSizeInMB" "3046" /InstallLangPacks C:\ProgramData\Temp\Inplaceupgrade\W10_22H2\LP /PostOOBE C:\ProgramData\Temp\Inplaceupgrade\W10_22H2\Scripts\SetupComplete.cmd /PostRollback C:\ProgramData\Temp\Inplaceupgrade\W10_22H2\Scripts\ErrorHandler.cmd /DynamicUpdate Disable /Compat IgnoreWarning]
@@ -64,7 +64,7 @@ YYYY-MM-DD HH:MM:SS, Info CBS Failed to check capability logic [HRESULT = 0x800f
 This issue affects devices that have one of the following histories:
 
 - The device previously received a Windows 10 feature update that used a custom SetupConfig.ini file.
-- Earlier updates or upgrades to the device used language packs or post-upgrade scripts that where manually configured or deployed.
+- Earlier updates or upgrades to the device used language packs or post-upgrade scripts that were manually configured or deployed.
 
 The upgrade failed because of a legacy SetupConfig.ini file that contains hard-coded paths to outdated language packs and scripts. Those language packs and scripts aren't compatible with Windows 11. The path to the legacy file typically is C:\Users\Default\AppData\Local\Microsoft\Windows\WSUS\SetupConfig.ini. The contents of the file resemble the following excerpt:
 
