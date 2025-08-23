@@ -105,13 +105,13 @@ For distribution-specific documentation about SysRq and the steps to configure L
 
 - [Collecting crash logs](https://github.com/coreos/docs/blob/master/os/collecting-crash-logs.md)
 
-## Non-maskable interrupt (NMI)
+## Nonmaskable interrupt (NMI)
 
-A non-maskable interrupt (NMI) creates a signal that software on a VM doesn't ignore. Historically, NMIs are used to monitor for hardware issues on systems that require specific response times. Today, programmers, and system administrators often use NMI as a mechanism to debug or troubleshoot systems that aren't responding.
+A nonmaskable interrupt (NMI) creates a signal that software on a VM doesn't ignore. Historically, NMIs are used to monitor for hardware issues on systems that require specific response times. Today, programmers, and system administrators often use NMI as a mechanism to debug or troubleshoot systems that aren't responding.
 
 You can use the Serial Console to send an NMI to an Azure VM by using the keyboard icon on the Command bar. After the NMI is delivered, the VM configuration controls how the system responds. Linux systems can be configured to stop responding and create a memory dump file that the OS receives as an NMI.
 
-:::image type="content" source="media/serial-console-nmi-sysrq/command-menu.png" alt-text="Screenshot of the Serial Console. The keyboard icon is highlighted, and its menu is visible. That menu contains a Send Non-Maskable Interrupt item.":::
+:::image type="content" source="media/serial-console-nmi-sysrq/command-menu.png" alt-text="Screenshot of the Serial Console. The keyboard icon is highlighted, and its menu is visible. That menu contains a send nonmaskable interrupt item.":::
 
 ### Enable NMI
 
