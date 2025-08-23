@@ -119,7 +119,7 @@ Use manage networking features by using CMD, follow these steps:
 
 For more information about `netsh`, see [Network shell (netsh)](/windows-server/networking/technologies/netsh/netsh-contexts).
 
-Azure VMs should always be configured in the Guest OS to use DHCP to get an IP address. The Azure static IP setting still uses DHCP to give the static IP to the VM.
+Azure VMs should always be configured in the guest OS to use DHCP to get an IP address. The Azure static IP setting still uses DHCP to give the static IP to the VM.
 
 ### Ping
 
