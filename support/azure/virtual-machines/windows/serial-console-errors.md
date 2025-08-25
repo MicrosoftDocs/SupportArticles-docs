@@ -9,7 +9,7 @@ tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 07/29/2025
+ms.date: 8/26/2025
 ms.author: jarrettr
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---

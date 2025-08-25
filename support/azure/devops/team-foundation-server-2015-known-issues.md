@@ -1,7 +1,7 @@
 ---
 title: Team Foundation Server 2015 Known Issues
 description: This article discusses known issues in Team Foundation Server 2015.
-ms.date: 08/14/2020
+ms.date: 8/26/2025
 ms.custom: sap:Server Administration
 ms.service: azure-devops-server
 ---
@@ -22,11 +22,11 @@ To discover what's new in Team Foundation Server 2015, see the [Team Foundation 
 
 You can't change the `syncnamechanges` property.
 
-    In Team Foundation Server 2015, we deprecated the ability to change the `syncnamechanges` property on a field. Therefore, you can no longer create projects that use the `OOB` templates in new collections for which the following conditions are true:
+In Team Foundation Server 2015, we deprecated the ability to change the `syncnamechanges` property on a field. Therefore, you can no longer create projects that use the `OOB` templates in new collections for which the following conditions are true:
 
-  - You upload a custom process to a new collection that has a field that shares the same reference name as an `OOB` template field.
-  - The `syncnamechanges` property is false for that field.
-  - You create a project by using the custom process template.
+- You upload a custom process to a new collection that has a field that shares the same reference name as an `OOB` template field.
+- The `syncnamechanges` property is false for that field.
+- You create a project by using the custom process template.
 
 ### Workaround
 

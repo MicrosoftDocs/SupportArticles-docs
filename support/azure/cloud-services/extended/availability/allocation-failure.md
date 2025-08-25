@@ -5,7 +5,7 @@ ms.service: azure-cloud-services-extended-support
 author: surbhijain16
 ms.author: surbhijain
 ms.reviewer: surbhijain16
-ms.date: 04/01/2024
+ms.date: 08/26/2025
 ms.custom: sap:Service Availability and Performance
 ---
 
