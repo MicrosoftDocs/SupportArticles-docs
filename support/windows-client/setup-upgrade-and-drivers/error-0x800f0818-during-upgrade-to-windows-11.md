@@ -23,7 +23,7 @@ You use one of the following systems to service Windows client computers:
 - Windows Server Update Services (WSUS)
 - Windows Update for Business
 
-A feature update from Windows 10 22H2 to Windows 11 23H2 or 24H2 fails in the Safe_OS phase, and generates error 0x800F0818 - 0x20003. After the failure occur, the update rolls back.
+A feature update from Windows 10 22H2 to Windows 11 23H2 or 24H2 fails in the Safe_OS phase, and generates error 0x800F0818 - 0x20003. After the failure occurs, the update rolls back.
 
 If you run a diagnostic tool such as [SetupDiag](/windows/deployment/upgrade/setupdiag), the tool returns the same error code.
 
@@ -41,7 +41,7 @@ YYYY-MM-DD HH:MM:SS, Info MOUPG ImageExit: Initializing SQM: [FALSE]
 YYYY-MM-DD HH:MM:SS, Info MOUPG ImageExit: Initializing PostReboot: [TRUE]
 ```
 
-Additionally, multiple error entries are logged in the C:\\$Windows.~BT\\Sources\\Panther\\setupact.log file that contain texts that resemble the following excerpts:
+Additionally, multiple error entries are logged in the C:\\$Windows.~BT\\Sources\\Panther\\setupact.log file. The contents of these entries resemble the following excerpts:
 
 ```output
 YYYY-MM-DD HH:MM:SS, Info MOUPG SetupHost::Initialize: CmdLine = [/Product Client /PreDownload /Package /Priority Normal /Quiet /ReportId 96CEE****************3-2D4E1B1306F5.1 /FlightData "RS:24944" "/CancelId" "C-757a2**********************4256ca34" "/PauseId" "P-757a20**********************" "/CorrelationVector" "otIKT***B0mTOyAl.1.1.28.4" "/DownloadSizeInMB" "3046" /InstallLangPacks C:\ProgramData\Temp\Inplaceupgrade\W10_22H2\LP /PostOOBE C:\ProgramData\Temp\Inplaceupgrade\W10_22H2\Scripts\SetupComplete.cmd /PostRollback C:\ProgramData\Temp\Inplaceupgrade\W10_22H2\Scripts\ErrorHandler.cmd /DynamicUpdate Disable /Compat IgnoreWarning]
