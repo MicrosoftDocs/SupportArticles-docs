@@ -1,5 +1,5 @@
 ---
-title: Error 0x800F0818 - 0x20003 Occurs during Upgrade from Windows 10 to Windows 11
+title: Error 0x800F0818 - 0x20003 Occurs During Upgrade from Windows 10 to Windows 11
 description: Provides a solution for error 0x800F0818 - 0x20003. This error occurs on some computers when you upgrade from Windows 10 to Windows 11.
 ms.date: 08/28/2025
 manager: dcscontentpm
