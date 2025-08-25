@@ -85,6 +85,8 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
+          - text: Create an effective Power Automate support request
+            url: /power-automate/support-service-request.md
           - text: Power Automate support
             url: https://powerautomate.microsoft.com/support/
           - text: Power Automate Community forum
