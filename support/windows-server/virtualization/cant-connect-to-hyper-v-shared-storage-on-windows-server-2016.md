@@ -1,11 +1,11 @@
 ---
 title: Can't connect to Hyper-V shared storage on Windows Server 2016
 description: Provides guidance for troubleshooting connection issues that involve shared storage in a Windows Server 2016 Hyper-V environment.
-ms.date: 01/15/2025
+ms.date: 08/26/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, rblume, v-lianna
+ms.reviewer: kaushika, simonw, v-appelgate
 ms.custom:
 - sap:virtualization and hyper-v\storage configuration
 - pcy:WinComm Storage High Avail
