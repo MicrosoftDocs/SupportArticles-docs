@@ -11,7 +11,7 @@ ms.custom:
 - pcy:WinComm Devices Deploy
 ---
 
-# Error 0x800F0818 - 0x20003 occurs during upgrade from Windows 10 to Windows 11
+# "0x800F0818 - 0x20003" error during upgrade from Windows 10 to Windows 11
 
 This article provides a solution for an error that occurs on some computers when you upgrade them from Windows 10 to Windows 11.
 
