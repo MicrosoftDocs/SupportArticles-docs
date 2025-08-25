@@ -1,6 +1,6 @@
 ---
 title: Error 0x800F0818 - 0x20003 Occurs during Upgrade from Windows 10 to Windows 11
-description: provides a solution for error 0x800F0818 - 0x20003. This error occurs on some computers when you upgrade them from Windows 10 to Windows 11.
+description: Provides a solution for error 0x800F0818 - 0x20003. This error occurs on some computers when you upgrade from Windows 10 to Windows 11.
 ms.date: 08/28/2025
 manager: dcscontentpm
 audience: itpro
@@ -23,11 +23,11 @@ You use one of the following systems to service Windows client computers:
 - Windows Server Update Services (WSUS)
 - Windows Update for Business
 
-A feature update from Windows 10 22H2 to Windows 11 23H2 or 24H2 fails in the Safe_OS phase, and generates error 0x800F0818 - 0x20003. The update rolls back.
+A feature update from Windows 10 22H2 to Windows 11 23H2 or 24H2 fails in the Safe_OS phase, and generates error 0x800F0818 - 0x20003. After the failure occur, the update rolls back.
 
-If you run a diagnostic tool such as [SetupDiag](/windows/deployment/upgrade/setupdiag), it returns the same error code.
+If you run a diagnostic tool such as [SetupDiag](/windows/deployment/upgrade/setupdiag), the tool returns the same error code.
 
-If you search the C:\\$Windows.~BT\\Sources\\Rollback\\setupact_rollback.log file, you find a statement that resembles the following excerpt:
+An error entry is logged in the C:\\$Windows.~BT\\Sources\\Rollback\\setupact_rollback.log file that contains text that resembles the following excerpt:
 
 ```output
 YYYY-MM-DD HH:MM:SS, Info MOUPG InitializeRoutine: MOSETUP_ACTION_IMAGE_EXIT
@@ -41,7 +41,7 @@ YYYY-MM-DD HH:MM:SS, Info MOUPG ImageExit: Initializing SQM: [FALSE]
 YYYY-MM-DD HH:MM:SS, Info MOUPG ImageExit: Initializing PostReboot: [TRUE]
 ```
 
-If you search the C:\\$Windows.~BT\\Sources\\Panther\\setupact.log file, you  find statements that resemble the following excerpts:
+Additionally, multiple error entries are logged in the C:\\$Windows.~BT\\Sources\\Panther\\setupact.log file that contain texts that resemble the following excerpts:
 
 ```output
 YYYY-MM-DD HH:MM:SS, Info MOUPG SetupHost::Initialize: CmdLine = [/Product Client /PreDownload /Package /Priority Normal /Quiet /ReportId 96CEE****************3-2D4E1B1306F5.1 /FlightData "RS:24944" "/CancelId" "C-757a2**********************4256ca34" "/PauseId" "P-757a20**********************" "/CorrelationVector" "otIKT***B0mTOyAl.1.1.28.4" "/DownloadSizeInMB" "3046" /InstallLangPacks C:\ProgramData\Temp\Inplaceupgrade\W10_22H2\LP /PostOOBE C:\ProgramData\Temp\Inplaceupgrade\W10_22H2\Scripts\SetupComplete.cmd /PostRollback C:\ProgramData\Temp\Inplaceupgrade\W10_22H2\Scripts\ErrorHandler.cmd /DynamicUpdate Disable /Compat IgnoreWarning]
@@ -76,7 +76,7 @@ PostRollback=C:\ProgramData\Temp\Inplaceupgrade\W10_22H2\Scripts\ErrorHandler.cm
 DynamicUpdate=Disable
 ```
 
-These outdated references cause identity mismatches during the upgrade process. As a result, the upgrade fails and rolls back.
+These outdated references cause identity mismatches during the upgrade process. Therefore, the upgrade fails and rolls back.
 
 ## Resolution
 
@@ -88,7 +88,7 @@ To remove the legacy information, follow these steps:
    > [!NOTE]  
    > If you can't see the AppData folder, select **View** > **Show**, then select **Hidden items** to view hidden files and folders.
 
-1. Delete the SetupConfig.ini file
+1. Delete the SetupConfig.ini file.
 
 1. Open Registry Editor, and then go to the `HKEY_LOCAL_MACHINE\SYSTEM\Setup` subkey.
 
