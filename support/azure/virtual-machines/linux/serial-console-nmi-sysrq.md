@@ -52,7 +52,7 @@ To make the SysReq configuration persistent, follow these steps to enable all Sy
 
 ### Command keys
 
-From the SysRq Admin Guide:
+This command key table is taken from the SysRq Admin Guide.
 
 |Command| Function
 | ------| ----------- |
@@ -68,7 +68,7 @@ From the SysRq Admin Guide:
 |``k``  |   Secure Access Key (SAK) that kills all programs on the current virtual console.
 |``l``  |   Shows a stack backtrace for all active CPUs.
 |``m``  |   Dumps current memory information to your console.
-|``n``  |   Allows real-time (RT) tasks to be reprioritized using the nice value. NOTE: The nice value controls a process's priority for CPU scheduling, where lower values indicate higher priority.
+|``n``  |   Allows real-time (RT) tasks to be reprioritized by using the "nice" value. NOTE: The "nice" value controls a process's priority for CPU scheduling, where lower values indicate higher priority.
 |``o``  |   Shuts off your system (if configured and supported).
 |``p``  |   Dumps the current registers and flags to your console.
 |``q``  |   Dumps CPU lists of all armed hrtimers (but not regular timer_list timers) and detailed information about all clockevent devices.
