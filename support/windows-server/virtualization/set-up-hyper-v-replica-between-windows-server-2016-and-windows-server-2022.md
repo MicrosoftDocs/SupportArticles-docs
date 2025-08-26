@@ -26,9 +26,9 @@ This article provides guidance for setting up a Hyper-V replica when the source 
 Before you use the procedures in this article, make sure that your host computers and VMs meet the following requirements:
 
 - Make sure that you have Administrator-level access to both host computers.
-- Make sure that you've installed and configured the Hyper-V role on both the source (Windows Server 2016) and destination (Windows Server 2022) host computers.
+- Make sure that the Hyper-V role is configured on both the source (Windows Server 2016) and destination (Windows Server 2022) host computers.
 - Make sure that the source and destination host computers are on the same network or on connected networks.
-- Make sure that the appropriate firewall rules are in place to allow Hyper-V replication traffic. For information about the ports that are involved in Hyper-V replication, see "Hyper-V service" in [Service overview and network port requirements for Windows](../../networking/service-overview-and-network-port-requirements#hyper-v-service).
+- Make sure that the appropriate firewall rules are in place to allow Hyper-V replication traffic. For information about the ports that are involved in Hyper-V replication, see "Hyper-V service" in [Service overview and network port requirements for Windows]../networking/service-overview-and-network-port-requirements#hyper-v-service).
 - Make sure that both host computers have sufficient storage and compute resources for the VM replicas.
 - Make sure that the source VM (on Windows Server 2016) and the destination VM (on Windows Server 2022) are of the same generation (both are Generation 1, or both are Generation 2).
 
@@ -55,7 +55,7 @@ Before you deploy this configuration into a production environment, test the fol
 
 ## Troubleshooting replication issues
 
-Incorrect settings on either the source or destination server can prevent replication. If your system does not replicate, check the following settings:
+Incorrect settings on either the source or destination server can prevent replication. If your system doesn't replicate, check the following settings:
 
 - The Hyper-V Replica settings (including the authentication settings) on both the host and destination computers.
 - The port rules in all firewalls between the source VM and the destination VM.
