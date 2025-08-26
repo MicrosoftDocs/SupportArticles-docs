@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Hyper-V Cluster Connectivity, Management, and Configuration Failures
 description: Provides a comprehensive guide to troubleshooting various issues related to Hyper-V clusters and management environments on Windows Server 2019 and Windows Server 2022.
-ms.date: 08/20/2025
+ms.date: 08/26/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -20,7 +20,7 @@ This article provides a comprehensive guide to troubleshooting various issues re
 - Failures in remote VM management operations (for example, start, stop, or migrate) from certain hosts or accounts.
 - Virtual machines fail to migrate between cluster nodes or become inaccessible after migration or upgrade.
 - Hyper-V Manager displays "Loading virtual machines…" or "Connecting to Virtual Machine Management service…".
-- Certain user accounts can't perform administrative actions, while built-in administrators succeed.
+- Certain user accounts can't perform administrative actions while built-in administrators succeed.
 - Backup or cluster operations hang, fail, or report errors.
 - VMs report duplicate universally unique identifiers (UUIDs) detected by third-party tools.
 
@@ -82,7 +82,7 @@ Failover Cluster GUI/console issues: Misconfigurations or duplicate case scenari
 
 Here are the resolutions for each scenario respectively:
 
-## Scenario 1: Cluster or Hyper-V Manager console fails to connect/authenticate
+## Scenario 1: Cluster or Hyper-V Manager console fails to connect or authenticate
 
 1. Verify network connectivity and firewall rules:
 
@@ -145,8 +145,8 @@ Here are the resolutions for each scenario respectively:
     1. Shut down all healthy VMs.
     1. Reboot the Hyper-V host.
     1. Delete the problematic VM from Hyper-V Manager (retain the VHDX file).
-    1. Back up and, if needed, delete/rename the `.vmcx` and `.vmrs` files.
-    1. Recreate the VM using the existing VHDX disk.
+    1. Back up and, if needed, delete or rename the `.vmcx` and `.vmrs` files.
+    1. Re-create the VM using the existing VHDX disk.
 
 1. Repair corrupted files:
     1. Collect a process dump and analyze for VMMS deadlocks.
@@ -166,7 +166,7 @@ Here are the resolutions for each scenario respectively:
 
 - For Hyper-V:
 
-  1. Use a third-party tool to randomize/update the BIOS GUID.
+  1. Use a third-party tool to randomize or update the BIOS GUID.
   2. If not feasible, create a new VM from scratch to ensure a unique UUID.
 
 ## Scenario 5: Cluster or Hyper-V role installation fails
