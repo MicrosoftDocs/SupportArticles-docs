@@ -62,7 +62,7 @@ This command key table is taken from the SysRq Admin Guide.
 |``e``  |   Sends a SIGTERM to all processes, except for init.
 |``f``  |   Calls the oom killer to kill a memory-intensive process.
 |``g``  |   Used by kgdb (kernel debugger).
-|``h``  |   Displays help. (Any key other than those that are listed here also displays help, but "h" is easy to remember.)
+|``h``  |   Displays help. (Any key other than the keys that are listed here also displays help, but "h" is easy to remember.)
 |``i``  |   Send a SIGKILL to all processes, except for init.
 |``j``  |   Forcibly thaws filesystems that are frozen by the FIFREEZE ioctl.
 |``k``  |   Secure Access Key (SAK) that kills all programs on the current virtual console.
