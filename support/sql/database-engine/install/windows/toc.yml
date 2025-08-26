@@ -11,6 +11,8 @@ items:
   href: description-update-cache-folder.md
 - name: Errors when installing SQL Server
   href: error-install-sql-server.md
+- name: RPC server is unavailable error during setup
+  href: error-rpc-server-unavailable-provisioning-account.md
 - name: Issues when upgrading to SQL Server 2022
   href: issues-upgrading-sql-server-2022.md
 - name: Driver installation check
