@@ -88,7 +88,7 @@ The VM must be configured to accept a value of **1** for the kernel parameter. T
 
 [Enable SysRq video](https://youtu.be/0doqFRrHz_Mc)
 
-To configure the VM to accept a restart through a SysRq commands on the Azure portal, you have to set a value of **1** for the kernel parameter, kernel.sysrq. To ensure this configuration persists after a restart, add an entry to the **Sysctl.conf** file:
+To configure the VM to accept a restart through a SysRq commands on the Azure portal, you have to set a value of **1** for the kernel parameter, kernel.sysrq. To make sure that this configuration persists after a restart, add an entry to the **Sysctl.conf** file:
 
 `echo kernel.sysrq = 1 >> /etc/sysctl.conf`
 
@@ -164,7 +164,7 @@ For Ubuntu 12.04 to obtain a **login:** prompt, follow these steps:
     exec /sbin/getty -L 115200 ttyS0 vt102
     ```  
 
-2. Run the following command to start the getty service using Upstart:
+2. To start the getty service by using Upstart, run the following command:
 
     ```console
     sudo start ttyS0
@@ -211,7 +211,7 @@ If all goes well, the Recovery menu now displays additional options that can hel
 
 #### Red Hat 7\.4\+ GRUB configuration
 
-For Red Hat 7.4 and later, the default `/etc/default/grub` configuration includes the necessary settings for serial console access and recovery. Unless you've made customizations to it, no further modifications are required.
+For Red Hat 7.4 and later, the default `/etc/default/grub` configuration includes the necessary settings for serial console access and recovery. Unless you've customized the default settings, no further modifications are required.
 
 On standard installations, the configuration appears as:
 
@@ -411,4 +411,4 @@ Learn more about [Azure Serial Console](./serial-console-linux.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
-[!INCLUDE [Third-Party Disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-Party Disclaimer](../../../includes/third-party-contact-disclaimer.md)]
