@@ -23,7 +23,7 @@ This article provides example commands to perform common tasks in scenarios in w
 
 SAC is included in all versions of Windows since Windows Server 2003. By default, however, it's disabled. SAC relies on the `sacdrv.sys` kernel driver, the `Special Administration Console Helper` service (`sacsvr`), and the `sacsess.exe` process. For more information, see [Emergency Management Services Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc787940(v%3dws.10)).
 
-SAC enables you to connect to your running OS through a serial port. When you open a Command Prompt window in SAC, `sacsess.exe` starts `cmd.exe` within your running OS. In Task Manager, you can see that if, at the same time, you also connect through RDP to your VM, you're now connected to SAC through the serial console feature. The CMD window that you access through SAC is the same as the `cmd.exe` window that you use when you connect through RDP. All the same commands and tools are available, including the ability to start PowerShell from that CMD instance. The major difference between SAC and the Windows Recovery Environment (WinRE) is that SAC lets you manage your running OS, but WinRE starts up into a different, minimal OS. Although Azure VMs don't support the ability to access WinRE, they can be managed through SAC.
+SAC enables you to connect through a serial port to the running OS. When you open a Command Prompt window in SAC, `sacsess.exe` starts `cmd.exe` within your running OS. In Task Manager, you can see that if, at the same time, you also connect through RDP to your VM, you're now connected to SAC through the serial console feature. The CMD window that you access through SAC is the same as the `cmd.exe` window that you use when you connect through RDP. All the same commands and tools are available, including the ability to start PowerShell from that CMD instance. The major difference between SAC and the Windows Recovery Environment (WinRE) is that SAC lets you manage your running OS, but WinRE starts up into a different, minimal OS. Although Azure VMs don't support the ability to access WinRE, they can be managed through SAC.
 
 Because SAC is limited to an 80x24 pixel screen buffer that has no scroll back capability, add `| more` to commands to display the output one page at a time. Use `<spacebar>` to see the next page, or `<enter>` to see the next line.
 
@@ -49,7 +49,7 @@ To view and edit Windows registry settings by using CMD, follow these steps:
 
     reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections /t REG_DWORD /d 0
 
-    **Note:** The second key (under \Policies) is necessary only if the relevant Group Policy setting is configured. The value will be rewritten at next Group Policy refresh if it's configured in Group Policy.
+    **Note:** The second key (under \Policies) is necessary only if the relevant Group Policy setting is configured. The value is rewritten at next Group Policy refresh if it's configured in Group Policy.
 
 ## Use CMD to manage Windows services
 
@@ -153,7 +153,7 @@ When limited to methods available in Windows by default, PowerShell can be a bet
 
 `netsh advfirewall set allprofiles state off`
 
-You can use this command when troubleshooting to temporarily rule out the Windows Firewall. It will be enable on next restart or when you enable it using the following command. Don't stop the Windows Firewall service (MPSSVC) or Base Filtering Engine (BFE) service as a way to rule out the Windows Firewall. Stopping MPSSVC or BFE results in all connectivity being blocked.
+You can use this command when you troubleshoot to temporarily rule out Windows Firewall. Firewall will be enabled at the next restart or when you enable it by using the command in the next section. Don't stop the Windows Firewall service (MPSSVC) or Base Filtering Engine (BFE) service as a method to rule out the Windows Firewall. Stopping MPSSVC or BFE causes all connectivity to be blocked.
 
 ### Enable Windows Firewall
 
@@ -173,7 +173,7 @@ You can use this command when troubleshooting to temporarily rule out the Window
 
 `net user <username> | find /i "active"`
 
-Azure VMs created from generalized image will have the local administrator account renamed to the name specified during VM provisioning. It won't usually be `Administrator`.
+Azure VMs that are created from a generalized image have the local administrator account renamed to the name that's specified during VM provisioning. Usually, the name isn't `Administrator`.
 
 ### Enable user account
 
@@ -229,7 +229,7 @@ Use `604800000` to look back seven days instead of 24 hours.
 
 `wevtutil qe security /c:1 /f:text /q:"Event[System[Provider[@Name='Microsoft-Windows-Security-Auditing'] and EventID=4624 and TimeCreated[timediff(@SystemTime) <= 604800000]] and EventData[Data[@Name='TargetUserName']='<username>']]" | more`
 
-## View or Remove Installed Applications using CMD
+## View or remove installed applications by using CMD
 
 ### List installed applications
 
@@ -241,7 +241,7 @@ The `sort /r` command sorts results in descending order by install date, making 
 
 `wmic path win32_product where name="<name>" call uninstall`
 
-Replace `<name>` with the name returned in the above command for the application you want to remove.
+Replace `<name>` with the name that's returned in the previous command for the application that you want to remove.
 
 ## File System Management using CMD
 
@@ -249,7 +249,7 @@ Replace `<name>` with the name returned in the above command for the application
 
 `wmic datafile where "drive='C:' and path='\\windows\\system32\\drivers\\' and filename like 'netvsc%'" get version /format:list`
 
-This example returns the file version of the virtual NIC driver, which is netvsc.sys, netvsc63.sys, or netvsc60.sys depending on the Windows version.
+This example returns the file version of the virtual network adapter driver, which is netvsc.sys, netvsc63.sys, or netvsc60.sys depending on the Windows version.
 
 ### Scan for system file corruption
 
@@ -288,9 +288,9 @@ When using `/restore`, specify the parent folder of the one used in
 
 ## Manage Devices
 
-### Remove non-present PNP devices
+### Remove entries for nonexistent PNP devices 
 
-This command cleans up device entries for hardware no longer present on the system:
+This command cleans up device entries for hardware that no longer exists on the system:
 
 `%windir%\System32\RUNDLL32.exe %windir%\System32\pnpclean.dll,RunDLL_PnpClean /Devices /Maxclean`
 
@@ -361,13 +361,13 @@ If this command returns to a prompt with no output, then the module wasn't loade
 
 `get-module psreadline`
 
-If the above command returns the PSReadLine module version, run the following command to unload it. This command doesn't delete or uninstall the module. It only unloads it from the current PowerShell session.
+If the previous command returns the PSReadLine module version, run the following command to unload it. This command doesn't delete or uninstall the module. It only unloads it from the current PowerShell session.
 
 `remove-module psreadline`
 
-If PSReadLine is loaded, it may introduce extra characters when pasting text. To avoid this, unload the module using `remove-module psreadline`.
+If PSReadLine is loaded, it may introduce extra characters when you paste text. To avoid this, unload the module by using `remove-module psreadline`.
 
-## View and Edit Windows Registry Settings using PowerShell
+## View and Edit Windows Registry Settings by using PowerShell
 
 ### Verify RDP is enabled
 
@@ -383,7 +383,7 @@ The second key under `\Policies` exists only if the relevant Group Policy settin
 
 `set-itemproperty -path 'hklm:\software\policies\microsoft\windows nt\terminal services' -name 'fdenytsconNections' 0 -type dword`
 
-The second key (under \Policies) would be needed only if the relevant group policy setting had been configured. Value will be rewritten at next group policy refresh if it's configured in group policy.
+The second key (under \Policies) would be needed only if the relevant group policy setting was configured. The value will be rewritten at next group policy refresh if it's configured in group policy.
 
 ## Manage Windows Services using PowerShell
 
@@ -419,7 +419,7 @@ When using a service account other than `NT AUTHORITY\LocalService`, `NT AUTHORI
 
 ## Manage Networking Features using PowerShell
 
-### Show NIC properties
+### Show network adapter properties
 
 `get-netadapter | where {$_.ifdesc.startswith('Microsoft Hyper-V Network Adapter')} |  format-list status,name,ifdesc,macadDresS,driverversion,MediaConNectState,MediaDuplexState`
 
@@ -458,7 +458,7 @@ or
 > [!NOTE]
 > The Write-Progress cmdlet might not work by using this command. As a mitigation, you can run `$ProgressPreference = "SilentlyContinue"` in PowerShell to disable the progress bar.
 
-or
+Or 
 
 `get-wmiobject Win32_PingStatus -Filter 'Address="8.8.8.8"' | format-table -autosize IPV4Address,ReplySize,ResponseTime`
 
@@ -468,7 +468,7 @@ or
 
 `test-netconnection -ComputerName bing.com -Port 80`
 
-or
+Or 
 
 `(new-object Net.Sockets.TcpClient).BeginConnect('bing.com','80',$null,$null).AsyncWaitHandle.WaitOne(300)`
 
@@ -478,7 +478,7 @@ or
 
 `resolve-dnsname bing.com`
 
-or
+Or 
 
 `[System.Net.Dns]::GetHostAddresses('bing.com')`
 
@@ -492,7 +492,7 @@ or
 
 `get-netfirewallportfilter | where {$_.localport -eq 3389} | foreach {Get-NetFirewallRule -Name $_.InstanceId} | format-list Name,Enabled,Profile,Direction,Action`
 
-or
+Or 
 
 `(new-object -ComObject hnetcfg.fwpolicy2).rules | where {$_.localports -eq 3389 -and $_.direction -eq 1} | format-table Name,Enabled`
 
@@ -502,7 +502,7 @@ or
 
 `Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False`
 
-`Set-NetFirewallProfile` is available in 2012 and later versions. For 2008 R2, use `netsh advfirewall` as referenced in the CMD section above.
+`Set-NetFirewallProfile` is available in 2012 and later versions. For 2008 R2, use `netsh advfirewall` as referenced in the CMD section earlier in this article.
 
 ## Manage Users and Groups using PowerShell
 
@@ -514,11 +514,11 @@ or
 
 `(get-localuser | where {$_.SID -like "S-1-5-21-*-500"}).Enabled`
 
-or
+Or 
 
 `(get-wmiobject Win32_UserAccount -Namespace "root\cimv2" -Filter "SID like 'S-1-5-%-500'").Disabled`
 
-`Get-LocalUser` is available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`. This example shows the built-in local administrator account, which always has SID `S-1-5-21-*-500`. Azure VMs created from generalized image will have the local administrator account renamed to the name specified during VM provisioning. So it will usually not be `Administrator`.
+`Get-LocalUser` is available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`. This example shows the built-in local administrator account. This account always has SID `S-1-5-21-*-500`. Azure VMs that are created from a generalized image have the local administrator account renamed to the name that's specified during VM provisioning. Usually, the name isn't `Administrator`.
 
 ### Add local user to local group
 
@@ -528,17 +528,17 @@ or
 
 `get-localuser | where {$_.SID -like "S-1-5-21-*-500"} | enable-localuser`
 
-This example enables the built-in local administrator account, which always has SID `S-1-5-21-*-500`. Azure VMs created from generalized image will have the local administrator account renamed to the name specified during VM provisioning. So it will usually not be `Administrator`.
+This example enables the built-in local administrator account. This account always has SID `S-1-5-21-*-500`. Azure VMs that are created from a generalized image have the local administrator account renamed to the name specified during VM provisioning. Usually, the name isn't `Administrator`.
 
 ### View user account properties
 
 `get-localuser | where {$_.SID -like "S-1-5-21-*-500"} | format-list *`
 
-or
+Or 
 
 `get-wmiobject Win32_UserAccount -Namespace "root\cimv2" -Filter "SID like 'S-1-5-%-500'" |  format-list Name,Disabled,Status,Lockout,Description,SID`
 
-`Get-LocalUser` is available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`. This example shows the built-in local administrator account, which always has SID `S-1-5-21-*-500`.
+`Get-LocalUser` is available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`. This example shows the built-in local administrator account. This account always has SID `S-1-5-21-*-500`.
 
 ### View local groups
 
@@ -572,7 +572,7 @@ Use `604800000` to look back seven days instead of 24 hours. |
 
 `get-winevent -logname system -maxevents 1 -filterxpath "*[System[Provider[@Name='Microsoft-Windows-Security-Auditing'] and EventID=4624 and TimeCreated[timediff(@SystemTime) <= 604800000]] and EventData[Data[@Name='TargetUserName']='<username>']]" | more`
 
-## View or Remove Installed Applications using PowerShell
+## View or remove iInstalled applications by using PowerShell
 
 ### List installed software
 
@@ -582,7 +582,7 @@ Use `604800000` to look back seven days instead of 24 hours. |
 
 `(get-wmiobject win32_product -filter "Name='<name>'").Uninstall()`
 
-## File System Management using PowerShell
+## File System Management by using PowerShell
 
 ### Get file version
 
@@ -622,11 +622,11 @@ Returns uptime as `<days>:<hours>:<minutes>:<seconds>:<milliseconds>`, for examp
 
 Adding `-force` forces running applications to close without warning users.
 
-## Instance Metadata
+## Instance metadata
 
 You can query Azure instance metadata from within your Azure VM to view details such as osType, Location, vmSize, vmId, name, resourceGroupName, subscriptionId, privateIpAddress, and publicIpAddress.
 
-Querying instance metadata requires healthy guest network connectivity because it makes a REST call through the Azure host to the instance metadata service. If you're able to query instance metadata, that means that the guest can communicate over the network to an Azure-hosted service.
+Querying instance metadata requires healthy guest network connectivity because it makes a REST call through the Azure host to the instance metadata service. If you can query instance metadata, then the guest can communicate over the network to an Azure-hosted service.
 
 For more information, see [Azure Instance Metadata service](/azure/virtual-machines/windows/instance-metadata-service).
 
