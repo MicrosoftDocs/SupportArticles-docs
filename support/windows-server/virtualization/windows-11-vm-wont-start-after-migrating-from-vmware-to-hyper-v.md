@@ -1,11 +1,11 @@
 ---
 title: Windows 11 Virtual Machine Doesn't Start After Migration From VMware to Hyper-V
 description: Describes how to configure a Windows 11 virtual machine after you migrate it from VMware to Hyper-V.
-ms.date: 08/15/2025
+ms.date: 08/26/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, warrenw, v-appelgatet
 ms.custom:
 - sap:virtualization and hyper-v\virtual machine state
 - pcy:WinComm Storage High avail

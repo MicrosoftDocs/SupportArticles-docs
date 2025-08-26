@@ -745,6 +745,8 @@ items:
       href: ./setup-upgrade-and-drivers/dynamic-link-library.md
     - name: Error when you access a USB storage device
       href: ./setup-upgrade-and-drivers/error-when-you-access-usb-storage-device.md
+    - name: Error 0x800F0818 - 0x20003 Occurs during Upgrade from Windows 10 to Windows 11
+      href: ./setup-upgrade-and-drivers/error-0x800f0818-during-upgrade-to-windows-11.md
     - name: Event ID 219 when a device is plugged into a Windows system
       href: ./setup-upgrade-and-drivers/event-id-219-when-device-plugged-in-windows-system.md
     - name: Event ID 7000 or 7026 after starting a computer
