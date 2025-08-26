@@ -33,23 +33,23 @@ Because of SAC's limited screen buffer, it might be easier to manage longer comm
 
 ## Use CMD for Windows registry settings
 
-To view and edit Windows registry settings by using CMD, follow these steps:
+To view and edit Windows registry settings by using CMD, follow these steps:  
 
-1. Verify that RDP is enabled by running the following commands:
+1. Verify that RDP is enabled. Run the following commands:
 
-reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections
+    reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections
 
-reg query "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections
+    reg query "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections
 
-**Note:** The second key (under \Policies) exists only if the relevant Group Policy setting is configured.
+    **Note:** The second key (under \Policies) exists only if the relevant Group Policy setting is configured.
 
 1. Enable RDP by running the following commands:
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0
+    reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0
 
-reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections /t REG_DWORD /d 0
+    reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections /t REG_DWORD /d 0
 
-**Note:** The second key (under \Policies) is necessary only if the relevant Group Policy setting is configured. The value will be rewritten at next Group Policy refresh if it's configured in Group Policy.
+    **Note:** The second key (under \Policies) is necessary only if the relevant Group Policy setting is configured. The value will be rewritten at next Group Policy refresh if it's configured in Group Policy.
 
 ## Use CMD to manage Windows services
 
@@ -57,65 +57,65 @@ To manage Windows services by using CMD, follow these steps:
 
 1. View the service state:
 
-`sc query termservice`
+    `sc query termservice`
 
 1. View the service logon account:
 
-`sc qc termservice`
+    `sc qc termservice`
 
 1. Set the service logon account:
 
-`sc config termservice obj= "NT Authority\NetworkService"`
+    `sc config termservice obj= "NT Authority\NetworkService"`
 
-**Note:** A space is required after the equal sign.
+    **Note:** A space is required after the equal sign.
 
 1. Set service start type:
 
-`sc config termservice start= demand`
+    `sc config termservice start= demand`
 
-**Note:** A space is required after the equal sign. Possible start values include: `boot`, `system`, `auto`, `demand`, `disabled`, and `delayed-auto`.
+    **Note:** A space is required after the equal sign. Possible start values include: `boot`, `system`, `auto`, `demand`, `disabled`, and `delayed-auto`.
 
 1. Set service dependencies:
 
-`sc config termservice depend= RPCSS`
+    `sc config termservice depend= RPCSS`
 
-**Note:** A space is required after the equal sign.
+    **Note:** A space is required after the equal sign.
 
 1. Start service by running either of the following commands:
 
-`net start termservice`
+    `net start termservice`
 
-`sc start termservice`
+    `sc start termservice`
 
 1. Stop the service by running either of the following commands:
 
-`net stop termservice`
+    `net stop termservice`
 
-`sc stop termservice`
+    `sc stop termservice`
 
 ## Use CMD to manage networking features
 
 To manage networking features using CMD, follow these steps:
-
+   
 1. Show the network shell (netsh) properties:
 
-`netsh interface show interface`
+    `netsh interface show interface`
 
 1. Show IP properties:
 
-`netsh interface ip show config`
+    `netsh interface ip show config`
 
 1. Show IPSec configuration:
 
-`netsh nap client show configuration`
+    `netsh nap client show configuration`
 
 1. Enable the network shell interface:
 
-`netsh interface set interface name="<interface name>" admin=enabled`
+    `netsh interface set interface name="<interface name>" admin=enabled`
 
 1. Set the netsh interface to use DHCP:
 
-`netsh interface ip set address name="<interface name>" source=dhcp`
+    `netsh interface ip set address name="<interface name>" source=dhcp`
 
 For more information about `netsh`, see [Network shell (netsh)](/windows-server/networking/technologies/netsh/netsh-contexts).
 
@@ -383,7 +383,7 @@ The second key under `\Policies` exists only if the relevant Group Policy settin
 
 `set-itemproperty -path 'hklm:\software\policies\microsoft\windows nt\terminal services' -name 'fdenytsconNections' 0 -type dword`
 
-The second key (under \Policies) would only be needed if the relevant group policy setting had been configured. Value will be rewritten at next group policy refresh if it's configured in group policy.
+The second key (under \Policies) would be needed only if the relevant group policy setting had been configured. Value will be rewritten at next group policy refresh if it's configured in group policy.
 
 ## Manage Windows Services using PowerShell
 
@@ -427,13 +427,13 @@ or
 
 `get-wmiobject win32_networkadapter -filter "servicename='netvsc'" |  format-list netenabled,name,macaddress`
 
-`Get-NetAdapter` is available in 2012+, for 2008R2 use `Get-WmiObject`.
+`Get-NetAdapter` is available in 2012 and later versions, for 2008 R2, use `Get-WmiObject`.
 
 ### Show IP properties
 
 `get-wmiobject Win32_NetworkAdapterConfiguration -filter "ServiceName='netvsc'" |  format-list DNSHostName,IPAddress,DHCPEnabled,IPSubnet,DefaultIPGateway,MACAddress,DHCPServer,DNSServerSearchOrder`
 
-### Enable NIC
+### Enable network adapter
 
 `get-netadapter | where {$_.ifdesc.startswith('Microsoft Hyper-V Network Adapter')} | enable-netadapter`
 
@@ -441,30 +441,30 @@ or
 
 `(get-wmiobject win32_networkadapter -filter "servicename='netvsc'").enable()`
 
-`Get-NetAdapter` is available in 2012+, for 2008R2 use `Get-WmiObject`.
+`Get-NetAdapter` is available in 2012 and later versions, for 2008 R2, use `Get-WmiObject`.
 
-### Set NIC to use DHCP
+### Set network adapter to use DHCP
 
 `get-netadapter | where {$_.ifdesc.startswith('Microsoft Hyper-V Network Adapter')} | Set-NetIPInterface -DHCP Enabled`
 
 `(get-wmiobject Win32_NetworkAdapterConfiguration -filter "ServiceName='netvsc'").EnableDHCP()`
 
-`Get-NetAdapter` is available on 2012+. For 2008R2 use `Get-WmiObject`. Azure VMs should always be configured in the guest OS to use DHCP to obtain an IP address. The Azure static IP setting still uses DHCP to give the IP to the VM.
+`Get-NetAdapter` is available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`. Azure VMs should always be configured in the guest OS to use DHCP to obtain an IP address. The Azure static IP setting still uses DHCP to give the IP to the VM.
 
 ### Ping
 
 `test-netconnection`
 
 > [!NOTE]
-> The Write-Progress cmdlet may not work with this command. As a mitigation, you can run `$ProgressPreference = "SilentlyContinue"` in PowerShell to disable the progress bar.
+> The Write-Progress cmdlet might not work by using this command. As a mitigation, you can run `$ProgressPreference = "SilentlyContinue"` in PowerShell to disable the progress bar.
 
 or
 
 `get-wmiobject Win32_PingStatus -Filter 'Address="8.8.8.8"' | format-table -autosize IPV4Address,ReplySize,ResponseTime`
 
-`Test-Netconnection` without any parameters try to ping `internetbeacon.msedge.net`. It's available on 2012+. For 2008R2 use `Get-WmiObject` as in the second example.
+`Test-Netconnection` without any parameters, try to ping `internetbeacon.msedge.net`. It's available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`, as in the second example.
 
-### Port Ping
+### Port ping
 
 `test-netconnection -ComputerName bing.com -Port 80`
 
@@ -472,7 +472,7 @@ or
 
 `(new-object Net.Sockets.TcpClient).BeginConnect('bing.com','80',$null,$null).AsyncWaitHandle.WaitOne(300)`
 
-`Test-NetConnection` is available on 2012+. For 2008R2 use `Net.Sockets.TcpClient`
+`Test-NetConnection` is available in 2012 and later versions. For 2008 R2, use `Net.Sockets.TcpClient`.
 
 ### Test DNS name resolution
 
@@ -482,7 +482,7 @@ or
 
 `[System.Net.Dns]::GetHostAddresses('bing.com')`
 
-`Resolve-DnsName` is available on 2012+. For 2008R2 use `System.Net.DNS`.
+`Resolve-DnsName` is available in 2012 and later versions. For 2008 R2, use `System.Net.DNS`.
 
 ### Show Windows Firewall rule by name
 
@@ -496,13 +496,13 @@ or
 
 `(new-object -ComObject hnetcfg.fwpolicy2).rules | where {$_.localports -eq 3389 -and $_.direction -eq 1} | format-table Name,Enabled`
 
-`Get-NetFirewallPortFilter` is available on 2012+. For 2008R2 use the `hnetcfg.fwpolicy2` COM object.
+`Get-NetFirewallPortFilter` is available in 2012 and later versions. For 2008 R2, use the `hnetcfg.fwpolicy2` COM object.
 
 ### Disable Windows Firewall
 
 `Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False`
 
-`Set-NetFirewallProfile` is available on 2012+. For 2008R2 use `netsh advfirewall` as referenced in the CMD section above.
+`Set-NetFirewallProfile` is available in 2012 and later versions. For 2008 R2, use `netsh advfirewall` as referenced in the CMD section above.
 
 ## Manage Users and Groups using PowerShell
 
@@ -518,7 +518,7 @@ or
 
 `(get-wmiobject Win32_UserAccount -Namespace "root\cimv2" -Filter "SID like 'S-1-5-%-500'").Disabled`
 
-`Get-LocalUser` is available on 2012+. For 2008R2 use `Get-WmiObject`. This example shows the built-in local administrator account, which always has SID `S-1-5-21-*-500`. Azure VMs created from generalized image will have the local administrator account renamed to the name specified during VM provisioning. So it will usually not be `Administrator`.
+`Get-LocalUser` is available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`. This example shows the built-in local administrator account, which always has SID `S-1-5-21-*-500`. Azure VMs created from generalized image will have the local administrator account renamed to the name specified during VM provisioning. So it will usually not be `Administrator`.
 
 ### Add local user to local group
 
@@ -538,13 +538,13 @@ or
 
 `get-wmiobject Win32_UserAccount -Namespace "root\cimv2" -Filter "SID like 'S-1-5-%-500'" |  format-list Name,Disabled,Status,Lockout,Description,SID`
 
-`Get-LocalUser` is available on 2012+. For 2008R2 use `Get-WmiObject`. This example shows the built-in local administrator account, which always has SID `S-1-5-21-*-500`.
+`Get-LocalUser` is available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`. This example shows the built-in local administrator account, which always has SID `S-1-5-21-*-500`.
 
 ### View local groups
 
 `(get-localgroup).name | sort` `(get-wmiobject win32_group).Name | sort`
 
-`Get-LocalUser` is available on 2012+. For 2008R2 use `Get-WmiObject`.
+`Get-LocalUser` is available in 2012 and later versions. For 2008 R2, use `Get-WmiObject`.
 
 ## Manage the Windows Event Log using PowerShell
 
@@ -596,7 +596,7 @@ This example returns the file version of the virtual NIC driver, which is named 
 
 This example creates a `c:\bin` folder, then downloads and extracts the Sysinternals suite of tools into `c:\bin`.
 
-## Miscellaneous Tasks using PowerShell
+## Miscellaneous tasks that use PowerShell
 
 ### Show OS version
 
@@ -626,7 +626,7 @@ Adding `-force` forces running applications to close without warning users.
 
 You can query Azure instance metadata from within your Azure VM to view details such as osType, Location, vmSize, vmId, name, resourceGroupName, subscriptionId, privateIpAddress, and publicIpAddress.
 
-Querying instance metadata requires healthy guest network connectivity, because it makes a REST call through the Azure host to the instance metadata service. So if you're able to query instance metadata that tells you the guest is able to communicate over the network to an Azure-hosted service.
+Querying instance metadata requires healthy guest network connectivity because it makes a REST call through the Azure host to the instance metadata service. If you're able to query instance metadata, that means that the guest can communicate over the network to an Azure-hosted service.
 
 For more information, see [Azure Instance Metadata service](/azure/virtual-machines/windows/instance-metadata-service).
 
