@@ -33,7 +33,7 @@ Because of SAC's limited screen buffer, it might be easier to manage longer comm
 
 ## Use CMD for Windows registry settings
 
-To view and edit Windows registry csettings by using CMD, follow these steps:
+To view and edit Windows registry settings by using CMD, follow these steps:
 
 1. Verify that RDP is enabled by running the following commands:
 
@@ -41,7 +41,7 @@ reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConn
 
 reg query "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDenyTSConnections
 
-**Note:** The second key (under \Policies) exists only if the relevant Group Ppolicy setting is configured.
+**Note:** The second key (under \Policies) exists only if the relevant Group Policy setting is configured.
 
 1. Enable RDP by running the following commands:
 
@@ -53,7 +53,7 @@ reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services" /v fDeny
 
 ## Use CMD to manage Windows services
 
-To manage Windows services by usign CMD< follow these steps:
+To manage Windows services by using CMD, follow these steps:
 
 1. View the service state:
 
@@ -95,15 +95,15 @@ To manage Windows services by usign CMD< follow these steps:
 
 ## Use CMD to manage networking features
 
-Use manage networking features by using CMD, follow these steps:
+To manage networking features using CMD, follow these steps:
 
 1. Show the network shell (netsh) properties:
 
-> `netsh interface show interface`
+`netsh interface show interface`
 
 1. Show IP properties:
 
-> `netsh interface ip show config`
+`netsh interface ip show config`
 
 1. Show IPSec configuration:
 
@@ -169,7 +169,7 @@ You can use this command when troubleshooting to temporarily rule out the Window
 
 `net localgroup Administrators <username> /add`
 
-### Verify user account is enabled
+### Verify that the user account is enabled
 
 `net user <username> | find /i "active"`
 
@@ -185,17 +185,19 @@ Azure VMs created from generalized image will have the local administrator accou
 
 Example lines of interest from a local admin account:
 
-`Account active Yes`
+```text
+Account active          Yes
 
-`Account expires Never`
+Account expires         Never
 
-`Password expires Never`
+Password expires        Never
 
-`Workstations allowed All`
+Workstations allowed    All
 
-`Logon hours allowed All`
+Logon hours allowed     All
 
-`Local Group Memberships *Administrators`
+Local Group Memberships *Administrators
+```
 
 ### View local groups
 
@@ -233,7 +235,7 @@ Use `604800000` to look back seven days instead of 24 hours.
 
 `wmic product get Name,InstallDate | sort /r | more`
 
-The `sort /r` sorts descending by install date to make it easy to see what was recently installed. Use `<spacebar>` to advance to the next page of output, or `<enter>` to advance one line.
+The `sort /r` command sorts results in descending order by install date, making it easier to identify recently installed applications. Use `<spacebar>` to advance to the next page of output, or `<enter>` to advance one line.
 
 ### Uninstall an application
 
@@ -273,7 +275,8 @@ See also [Repair a Windows Image](/windows-hardware/manufacture/desktop/repair-a
 
 `icacls %programdata%\Microsoft\Crypto\RSA /save %temp%\MachineKeys_permissions_before.aclfile /t`
 
-The path when using `/restore` needs to be the parent folder of the folder you specified when using `/save`. In this example, `\RSA` is the parent of the `\MachineKeys` folder specified in the `/save` example above.
+When using `/restore`, specify the parent folder of the one used in
+ `/save`. For example, use `\RSA` if you previously saved permissions for `\MachineKeys`.
 
 ### Take NTFS ownership of a folder
 
@@ -287,11 +290,13 @@ The path when using `/restore` needs to be the parent folder of the folder you s
 
 ### Remove non-present PNP devices
 
+This command cleans up device entries for hardware no longer present on the system:
+
 `%windir%\System32\RUNDLL32.exe %windir%\System32\pnpclean.dll,RunDLL_PnpClean /Devices /Maxclean`
 
 ## Manage Group Policy
 
-### Force group policy update
+### Force a Group Policy update
 
 `gpupdate /force /wait:-1`
 
@@ -348,7 +353,7 @@ To run PowerShell in SAC, after you reach a CMD prompt, type:
 `powershell <enter>`
 
 > [!CAUTION]
-> Remove the PSReadLine module from the PowerShell session before running any other PowerShell commands. here's a known issue where extra characters may be introduced in text pasted from the clipboard if PSReadLine is running in a PowerShell session in SAC.
+> Remove the PSReadLine module from the PowerShell session before running any other PowerShell commands. There's a known issue where extra characters may be introduced in text pasted from the clipboard if PSReadLine is running in a PowerShell session in SAC.
 
 First check if PSReadLine is loaded. It's loaded by default on Windows Server 2016, Windows 10, and later versions of Windows. It would only be present on earlier Windows versions if it's  manually installed.
 
@@ -360,6 +365,8 @@ If the above command returns the PSReadLine module version, run the following co
 
 `remove-module psreadline`
 
+If PSReadLine is loaded, it may introduce extra characters when pasting text. To avoid this, unload the module using `remove-module psreadline`.
+
 ## View and Edit Windows Registry Settings using PowerShell
 
 ### Verify RDP is enabled
@@ -368,7 +375,7 @@ If the above command returns the PSReadLine module version, run the following co
 
 `get-itemproperty -path 'hklm:\software\policies\microsoft\windows nt\terminal services' -name 'fdenytsconNections'`
 
-The second key (under \Policies)  only exists if the relevant group policy setting is configured.
+The second key under `\Policies` exists only if the relevant Group Policy setting is configured.
 
 ### Enable RDP
 
@@ -545,7 +552,7 @@ or
 
 `get-winevent -logname system -maxevents 1 -filterxpath "*[System[Level=2]]" | more`
 
-Change `/c:10` to the desired number of events to return, or move it to return all events matching the filter.
+Change `/c:10` to the desired number of events to return, or remove it to return all matching events.
 
 ### Query event log by Event ID
 

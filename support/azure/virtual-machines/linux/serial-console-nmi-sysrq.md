@@ -65,10 +65,10 @@ From the SysRq Admin Guide:
 |``h``  |   Displays help. (Any key other than those that are listed here also displays help, but "h" is easy to remember.)
 |``i``  |   Send a SIGKILL to all processes, except for init.
 |``j``  |   Forcibly thaws filesystems that are frozen by the FIFREEZE ioctl.
-|``k``  |   Secure Access Key (SAK) that kills all programs on the current virtual console. NOTE: See important comments in the following SAK section.
+|``k``  |   Secure Access Key (SAK) that kills all programs on the current virtual console.
 |``l``  |   Shows a stack backtrace for all active CPUs.
 |``m``  |   Dumps current memory information to your console.
-|``n``  |   Used to make RT tasks nice-able.
+|``n``  |   Allows real-time (RT) tasks to be reprioritized using the nice value. NOTE: The nice value controls a process’s priority for CPU scheduling, where lower values indicate higher priority.
 |``o``  |   Shuts off your system (if configured and supported).
 |``p``  |   Dumps the current registers and flags to your console.
 |``q``  |   Dumps CPU lists of all armed hrtimers (but not regular timer_list timers) and detailed information about all clockevent devices.

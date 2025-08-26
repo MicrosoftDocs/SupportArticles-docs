@@ -29,8 +29,8 @@ You might have to perform a VM recovery for any of the following reasons:
 - Incorrect GRUB kernel parameters
 - Incorrect fstab configuration
 - Lost password
-- Firewall configuration
-- Networking configuration
+- Incorrect firewall configuration
+- Incorrect networking configuration
 
 Many other scenarios are also possible, as detailed in the "Common scenarios for accessing the Serial Console" section of [Azure Serial Console for Linux](./serial-console-linux.md#common-scenarios-for-accessing-the-serial-console). Refer to this article for more help if you're a new user of the Serial Console.
 
@@ -88,7 +88,7 @@ The VM must be configured to accept a value of **1** for the kernel parameter. T
 
 [Enable SysRq video](https://youtu.be/0doqFRrHz_Mc)
 
-To configure the VM to accept a restart through a SysRq commands on the Azure portal, you have to set a value of **1** for the kernel parameter, kernel.sysrq. For this configuration to persist a restart, add an entry to the **Sysctl.conf** file:
+To configure the VM to accept a restart through a SysRq commands on the Azure portal, you have to set a value of **1** for the kernel parameter, kernel.sysrq. To ensure this configuration persists after a restart, add an entry to the **Sysctl.conf** file:
 
 `echo kernel.sysrq = 1 >> /etc/sysctl.conf`
 
@@ -164,7 +164,7 @@ For Ubuntu 12.04 to obtain a **login:** prompt, follow these steps:
     exec /sbin/getty -L 115200 ttyS0 vt102
     ```  
 
-2. Ask upstart to start the getty:
+2. Run the following command to start the getty service using Upstart:
 
     ```console
     sudo start ttyS0
@@ -211,7 +211,9 @@ If all goes well, the Recovery menu now displays additional options that can hel
 
 #### Red Hat 7\.4\+ GRUB configuration
 
-The default /etc/default/grub configuration on these versions is adequately configured
+For Red Hat 7.4 and later, the default `/etc/default/grub` configuration includes the necessary settings for serial console access and recovery. Unless you've made customizations to it, no further modifications are required.
+
+On standard installations, the configuration appears as:
 
 ```console
 GRUB_TIMEOUT=5
@@ -375,7 +377,7 @@ It then displays the GRUB menu for an additional five seconds. Press the down ar
 
 #### Force the kernel to a bash prompt
 
-Having access to GRUB allows you to interrupt the initialization process. This interaction is useful for many recovery procedures. If you don't have a root password (as required by Single User mode), you can start the kernel by replacing the init program with a bash prompt. 
+Having access to GRUB allows you to interrupt the initialization process. This interaction is useful for many recovery procedures. If you don't have a root password (as required by Single User mode), you can start the kernel by replacing the init program with a bash prompt.
 
 1. To trigger the interruption, append `init=/bin/bash` to the kernel boot line.
 
@@ -401,10 +403,12 @@ You might have to access the VM in Single User or Emergency mode. Select the ker
 
 For more information about how to access Single User mode, see [Use Serial Console to access GRUB and single-user mode](./serial-console-grub-single-user-mode.md#general-single-user-mode-access)
 
-:::image type="content" source="media/serial-console-grub-proactive-configuration/single-user-ubuntu.png" alt-text="Screenshot of the *Ubuntu entry in the boot the selected OS screen in GRUB.":::
+:::image type="content" source="media/serial-console-grub-proactive-configuration/single-user-ubuntu.png" alt-text="Screenshot of the GRUB boot menu showing Ubuntu selected (indicated by an asterisk).":::
 
 ## Next steps
 
-Learn more about [Azure Serial Console](./serial-console-linux.md)
+Learn more about [Azure Serial Console](./serial-console-linux.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
+[!INCLUDE [Third-Party Disclaimer](../../../includes/third-party-disclaimer.md)]
