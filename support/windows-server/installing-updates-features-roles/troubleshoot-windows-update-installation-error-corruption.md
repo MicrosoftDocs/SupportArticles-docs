@@ -31,16 +31,17 @@ When you try to install any update by using the standalone installer (.msu), or 
 
 ## Cause
 
-The issue might occur for one of the following reasons:
+This error can occur for one of the following reasons:
 
-- An assembly from the KB3192392 update (specifically: "Package_123_for_KB3192392~31bf3856ad364e35~amd64~~6.3.1.4") is missing or corrupted.
-- The update was never installed. Or, the update is installed but some packages aren't applied to the registry.
+- The update was never installed.
+- The update is installed but some packages aren't applied to the registry.
+
 
 To locate the installation packages in the system, search for the following registry subkey:
 
 ```output HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages```
 
-To investigate the cause further, examine the CBS.log file (C:\windows\logs\CBS), and search for output that resembles the following example:
+To investigate the cause further, examine the CBS.log file (C:\windows\logs\CBS), and search for output that similar to the following example:
 
 ```output
 Info CBS Store corruption, manifest missing for package: Package_123_for_KB3192392~31bf3856ad364e35~amd64~~6.3.1.4
@@ -51,15 +52,17 @@ Info CBS Mark store corruption flag because of package: Package_123_for_KB319239
 
 Info CBS Failed to resolve package [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTION]
 ```
-
+> [!NOTE]
+> The package and error details may vary depending on the OS version and the KB update. However, when this error is logged, the recommended solution in this article will apply.
 > [!NOTE]
 > For more information about how to collect the CBS.log file or any log that uses the TroubleShootingScript (TSS) tool version 2, see, [CBS logs](https://aka.ms/dndlogs).
 
 ## Resolution
 
-To resolve this issue, manually add the problematic update to the system or remove it from the system, depending on whether the update is installed. 
+If the update is installed, remove and reinstall it. If the update is not installed install it.
 
-### If the update is installed
+
+### Here are the steps to remove and install the update
 
 1. Reproduce the issue by trying to install the update or feature that's experiencing issues. This action logs the latest data into the CBS log.
 1. Verify that you have the correct update after you identify the package that the CBS process is calling out.
@@ -129,4 +132,4 @@ To resolve this issue, manually add the problematic update to the system or remo
 ### In-place upgrade process
 
 > [!NOTE]
-> If the suggested fixes don’t resolve the issue, this specific Windows Update (WU) error code might require an in-place upgrade (IPU) as a simple and effective solution to recover the VM. For Windows on Azure (WOA) scenarios, these kinds of WU errors are reviewed and approved as eligible for IPU. This is especially true if you're trying to resolve issues quickly.
+> If the suggested fixes don’t resolve the issue, this specific Windows Update (WU) error code might require an in-place upgrade (IPU) as a simple and effective solution to recover the VM. For Windows on Azure (WOA) scenarios, these kinds of WU errors are reviewed and approved as eligible for In-place updgrade. This is especially true if you're trying to resolve issues quickly.
