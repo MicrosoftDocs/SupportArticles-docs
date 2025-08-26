@@ -2816,6 +2816,8 @@ items:
     items:
     - name: Can't add a second Fibre Channel adapter
       href: ./virtualization/cannot-add-second-fibre-channel-adapter-hyperv.md
+    - name: "Can't connect to Hyper-V shared storage on Windows Server 2016"
+      href: ./virtualization/cant-connect-to-hyper-v-shared-storage-on-windows-server-2016.md
     - name: Error message after you put the page file on another drive other than the drive C
       href: ./virtualization/error-message-page-file-another-drive-guest-operating-system.md
     - name: FCoE IO failures on Hyper-V guests
