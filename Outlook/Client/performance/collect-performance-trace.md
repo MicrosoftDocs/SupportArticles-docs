@@ -1,5 +1,5 @@
 ---
-title: Collect Performance Trace in New Outlook for Windows
+title: Collect a Performance Trace in New Outlook for Windows
 description: Provides guidance to collect performance and network traces in new Outlook for Windows.
 author: cloud-writer
 ms.author: meerak
@@ -14,7 +14,7 @@ ms.reviewer: caithart
 appliesto: 
   - New Outlook for Windows
 search.appverid: MET150
-ms.date: 08/18/2025
+ms.date: 08/27/2025
 ---
 # Collect a performance trace in new Outlook for Windows
 
