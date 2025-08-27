@@ -49,4 +49,4 @@ If the mailbox resides in a different Microsoft 365 tenant, you must configure a
 
 Refer to the following documentation:
 
-[Configure cross-tenant synchronization](https://learn.microsoft.com/entra/identity/multi-tenant-organizations/cross-tenant-synchronization-configure?pivots=same-cloud-synchronization)
+[Configure cross-tenant synchronization](https://learn.microsoft.com/power-platform/admin/connect-exchange-online-server-profile-oauth)
