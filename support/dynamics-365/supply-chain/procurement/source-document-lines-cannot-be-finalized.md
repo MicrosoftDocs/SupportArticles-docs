@@ -1,5 +1,5 @@
 ---
-title: Source Document Lines Can't Be Finalized
+title: Purchase Order Can't Be Finalized
 description: Provides a resolution for the issue that a Source Document Lines Can't Be Finalized.
 author: Sumit
 ms.date: 08/14/2025
@@ -14,9 +14,11 @@ ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orde
 ---
 # Troubleshooting Guide: Source Document Lines Can't Be Finalized
 
+## Cause 
+Document accounting status in the related Purchase Requisition (PR) is not completed or confirmed.
+
 ## Symptom
-The source document lines can't be finalized until the status is **Confirmed**.  
-The state of the source document or source document line couldn't be updated.
+An error message is shown in F&O stating that the source document lines cannot be finalized until the status is Confirmed' encountered when trying to finalize a purchase order.
 
 ## Resolution
 1. Navigate to:  
@@ -25,3 +27,6 @@ The state of the source document or source document line couldn't be updated.
 3. Click **OK**.
 4. The status of the PO updates to **Draft**.
 5. Submit the workflow and confirm the PO again.
+
+## More information 
+ Triggering Purchase order distribution reset initiates a data check to ensure that the selected purchase order is in the correct state for the tool to run.
