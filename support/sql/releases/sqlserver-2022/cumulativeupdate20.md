@@ -17,7 +17,7 @@ _Version:_ &nbsp; 16.0.4205.1
 
 ## Summary
 
-This article describes Cumulative Update package 20 (CU20) for Microsoft SQL Server 2022. This update contains 10 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 19 and it updates components in the following builds:
+This article describes Cumulative Update package 20 (CU20) for Microsoft SQL Server 2022. This update contains 11 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 19 and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4205.1**, file version: **2022.160.4205.1**
 - Analysis Services - Product version: **16.0.43.247**, file version: **2022.160.43.247**
@@ -43,6 +43,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 |<a id=4100859>[4100859](#4100859) </a> | Fixes an assertion failure (Location:"sql\\ntdbms\\storeng\\dfs\\manager\\blobaccess.cpp":9441; Expression:filepos > protocolHandler->m_maxFilePosSoFar) that you encounter when backing up to S3-compatible object storage fails and then having 20 retries. | SQL Server Engine | Backup Restore| All |
 |<a id=4123934>[4123934](#4123934) </a> | Fixes a deadlock issue that results in a non-yielding scheduler and causes the SQL Server instance to stop responding when `control.alternatewritethrough` is set to `1` under low vCPU conditions. | 	SQL Server Engine | Linux | Linux |
 |<a id=4297001>[4297001](#4297001) </a> | Adds memory limit support for Control Groups (cgroups) v2 in Platform Abstraction Layer (SQLPAL). | SQL Server Engine | Linux | Linux |
+|<a id=4167049>[4167049](#4167049) </a> | Fixes a non-yielding scheduler dump issue with `qds!CDBQDS::AbortQdsBackgroundTask` that may occur when the list of Query Store (QDS) background tasks is large and either QDS is disabled or SQL Server shuts down. In addition to the dump, you would see the following error messages: </br></br> Error: 1222, Severity: 16, State: 111.</br>Lock request time out period exceeded.</br>Error: 12412, Severity: 16, State: 1.</br>Internal table access error: failed to access the Query Store internal table with HRESULT: 0x80004005| SQL Server Engine | High Availability and Disaster Recovery | All |
 |<a id=4257781>[4257781](#4257781) </a> | 	Fixes an issue in which uninitialized memory is returned in some rare cases when using limited length parameters with `REPLACE` function. | SQL Server Engine | Programmability | All |
 |<a id=4277598>[4277598](#4277598) </a> | 	Fixes an issue in which an access violation dump occurs instead of returning the correct error message when using `PARSE` or `TRY_PARSE` with special floating-point values such as NaN (Not-a-Number) or Infinity as input.| 	SQL Server Engine | Programmability | All |
 |<a id=4053244>[4053244](#4053244) </a> | 	Fixes an issue in which uninitialized memory can be read in some rare cases when using variable length parameters.| 	SQL Server Engine | Query Execution | All |

@@ -20,7 +20,7 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 480
 
-This article provides troubleshooting information for various combinations of the SIP "480" error and Microsoft response codes.
+This article provides troubleshooting information for various combinations of the SIP "480" error and various Microsoft response codes.
 
 ## 10037 480 No callee endpoints were found
 

@@ -124,8 +124,8 @@ The registry entries that are listed in this section must be added to the follow
 
 - Entry: StronglyEncryptDatagram
 
-  - Type: REG_BOOL
-  - Default value: FALSE
+  - Type: REG_DWORD
+  - Default value: 0 (FALSE). Starting in Windows Server 2025 and Windows 11 24H2, the default value is 1 (TRUE)
 
     This value contains a flag that indicates whether to use 128-bit encryption for datagram packets.
 

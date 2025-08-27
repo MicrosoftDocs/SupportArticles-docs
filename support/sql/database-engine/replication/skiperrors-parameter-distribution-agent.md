@@ -3,7 +3,6 @@ title: SkipErrors parameter in Distribution Agent
 description: This article describes the usage of -SkipErrors parameter in Distribution Agent.
 ms.date: 09/22/2020
 ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
-ms.topic: article
 ---
 # Use the -SkipErrors parameter in Distribution Agent
 

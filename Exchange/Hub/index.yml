@@ -92,6 +92,8 @@ productDirectory:
           text: Microsoft Viva Glint
         - url: /troubleshoot/viva/insights/viva-insights-welcome
           text: Microsoft Viva Insights
+        - url: /troubleshoot/viva/pulse/viva-pulse-welcome
+          text: Microsoft Viva Pulse
 
 # additionalContent section (optional)
 # Card with summary style
