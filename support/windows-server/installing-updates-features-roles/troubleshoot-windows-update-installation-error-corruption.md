@@ -59,10 +59,10 @@ Info CBS Failed to resolve package [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTIO
 
 ## Resolution
 
-If the update is installed, remove and reinstall it. If the update is not installed install it.
+If the update is installed, remove and reinstall it. If the update is not installed, install it.
 
 
-### Here are the steps to remove and install the update
+### Here are the steps to remove and install the update:
 
 1. Reproduce the issue by trying to install the update or feature that's experiencing issues. This action logs the latest data into the CBS log.
 1. Verify that you have the correct update after you identify the package that the CBS process is calling out.
@@ -132,4 +132,4 @@ If the update is installed, remove and reinstall it. If the update is not instal
 ### In-place upgrade process
 
 > [!NOTE]
-> If the suggested fixes don’t resolve the issue, this specific Windows Update (WU) error code might require an in-place upgrade (IPU) as a simple and effective solution to recover the VM. For Windows on Azure (WOA) scenarios, these kinds of WU errors are reviewed and approved as eligible for In-place updgrade. This is especially true if you're trying to resolve issues quickly.
+> If the suggested fixes don’t resolve the issue, this specific Windows Update (WU) error code might require an In-place upgrade as a simple and effective solution to recover the VM. For Windows on Azure (WOA) scenarios, these kinds of WU errors are reviewed and approved as eligible for In-place updgrade. This is especially true if you're trying to resolve issues quickly.
