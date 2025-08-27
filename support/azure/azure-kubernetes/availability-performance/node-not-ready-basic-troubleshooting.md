@@ -33,7 +33,7 @@ Compared to updates to the *.status* of a `Node`, a `Lease` is a lightweight res
 
 The [kubelet](https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/) is responsible for creating and updating the *.status* for `Node` objects. It's also responsible for updating the `Lease` objects that are related to the `Node` objects.
 
-- The kubelet updates the node `.status` when there's a change in status or if there has been no update for a configured interval. The default interval for `.status` updates to nodes is five minutes, which is much longer than the 40-second default time-out for unreachable nodes.
+- The kubelet updates the node `.status` when there's a change in status or if there has been no update for a configured interval. The default interval for `.status` updates to nodes is 5 minutes, which is much longer than the 40-second default time-out for unreachable nodes.
 - The kubelet creates and then updates its `Lease` object every 10 seconds (the default update interval). `Lease` updates occur independently from updates to the node `.status`. If the `Lease` update fails, the kubelet retries, using an exponential backoff that starts at 200 milliseconds and is capped at seven seconds.
 
 You can't schedule a pod on a node that has a status of `NotReady` or `Unknown`. You can schedule a pod only on nodes that are in the `Ready` state.
