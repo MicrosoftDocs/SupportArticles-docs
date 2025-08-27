@@ -16,8 +16,9 @@ ms.custom:
   - sap:Teams Calling (PSTN)\Direct Routing
   - CI166247
   - CI173631
+  - CI 6328
   - CSSTroubleshoot
-ms.reviewer: rishire, teddygyabaah
+ms.reviewer: rishire, teddygyabaah, mikebis
 ---
 
 # Microsoft and SIP response codes
@@ -45,11 +46,13 @@ For more information about the most common errors and suggested actions to furth
 - [408 Request Timeout](./microsoft-sip-response-codes-408.md)
 - [410 Gone](./microsoft-sip-response-codes-410.md)
 - [412 Conditional Request Failed](./microsoft-sip-response-codes-412.md)
+- [415 Unsupported Media Type](./microsoft-sip-response-codes-415.md)
 - [420 Bad Extension](./microsoft-sip-response-codes-420.md)
+- [422 Session Interval Too Small](./microsoft-sip-response-codes-422.md)
 - [480 Temporarily Unavailable](./microsoft-sip-response-codes-480.md)
 - [484 Address Incomplete](./microsoft-sip-response-codes-484.md)
 - [486 Busy Here](./microsoft-sip-response-codes-486.md)
 - [488 Not Acceptable Here](./microsoft-sip-response-codes-488.md)
-- [500 Server Internal Error](./microsoft-sip-response-codes-500.md)
+- [500 Internal Server Error](./microsoft-sip-response-codes-500.md)
 - [503 Service Unavailable](./microsoft-sip-response-codes-503.md)
 - [504 Server Time-out](./microsoft-sip-response-codes-504.md)

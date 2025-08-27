@@ -23,8 +23,27 @@ The following table lists the release history for [!INCLUDE [sql-server-2025](..
 
 | Release | Version | Release date |
 | --- | --- | --- |
+| [RC 0](#RC0) | 17.0.900.7 | 2025-08-20 |
 | [CTP 2.1](#CTP2.1) | 17.0.800.3 | 2025-06-16 |
 | [CTP 2.0](#CTP2.0) | 17.0.700.9 | 2025-05-19 |
+
+<a id="RC0"></a>
+
+## RC 0 (August 2025)
+
+This is the RC 0 of [!INCLUDE [sql-server-2025](../../includes/versions/sql-server-2025.md)]. This is a prerelease version of [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 17.0.900.7.
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 9.x RPM packages** | 17.0.900.7-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/9/mssql-server-preview/Packages/m/mssql-server-17.0.900.7-2.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/9/mssql-server-preview/Packages/m/mssql-server-extensibility-17.0.900.7-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/9/mssql-server-preview/Packages/m/mssql-server-fts-17.0.900.7-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/9/mssql-server-preview/Packages/m/mssql-server-ha-17.0.900.7-2.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/9/mssql-server-preview/Packages/m/mssql-server-polybase-17.0.900.7-2.x86_64.rpm) |
+| **SLES 15 RPM packages** | N/A | Not currently available |
+| **Ubuntu 24.04 Debian packages (in preview)**<br /><br />(Get Debian packages for [Ubuntu 22.04](https://packages.microsoft.com/ubuntu/22.04/mssql-server-preview/pool/main/m/mssql-server/)) | 17.0.900.7-2 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_17.0.900.7-2-preview_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_17.0.900.7-2-preview_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_17.0.900.7-2-preview_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_17.0.900.7-2-preview_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/24.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_17.0.900.7-2-preview_amd64.deb) |
+
+Go back to the [release history](#release-history).
 
 <a id="CTP2.1"></a>
 

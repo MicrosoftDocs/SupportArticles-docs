@@ -20,7 +20,7 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 503
 
-This article provides troubleshooting information for various combinations of the SIP 503 error and Microsoft response codes.
+This article provides troubleshooting information for various combinations of the SIP 503 error and various Microsoft response codes.
 
 ## 10320 503 Bot is unreachable or unable to answer before timeout
 

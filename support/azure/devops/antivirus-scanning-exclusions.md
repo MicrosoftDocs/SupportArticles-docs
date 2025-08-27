@@ -4,7 +4,6 @@ description: This article describes the system processes that you should conside
 ms.date: 03/25/2024
 ms.custom: sap:Installation, Migration, and Move
 ms.reviewer: vimalt, manojm
-ms.topic: article
 ms.service: azure-devops-server
 ---
 # Antivirus exclusions for Azure DevOps

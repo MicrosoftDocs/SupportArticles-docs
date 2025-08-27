@@ -20,7 +20,7 @@ ms.reviewer: teddygyabaah
 
 # SIP response code 504
 
-This article provides troubleshooting information for various combinations of the SIP 504 error and Microsoft response codes.
+This article provides troubleshooting information for various combinations of the SIP 504 error and various Microsoft response codes.
 
 ## 549002 504 Unable to deliver INVITE: TlsTransport is not connected, State=Disconnected
 

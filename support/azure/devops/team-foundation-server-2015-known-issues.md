@@ -3,7 +3,6 @@ title: Team Foundation Server 2015 known issues
 description: This article describes the known issues in Team Foundation Server 2015.
 ms.date: 08/14/2020
 ms.custom: sap:Server Administration
-ms.topic: article
 ms.service: azure-devops-server
 ---
 # Team Foundation Server 2015 known issues

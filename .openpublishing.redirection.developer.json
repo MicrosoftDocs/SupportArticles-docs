@@ -6718,6 +6718,102 @@
     {
       "source_path": "support/developer/dotnet/framework/installation/patching-framework-fails.md",
       "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/patching-framework-fails"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/service-throws-exception.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/service-throws-exception"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/asynchronous-service-use-wrong-impersonation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/asynchronous-service-use-wrong-impersonation"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/call-timed-out-aspnet-mvc-controller.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/call-timed-out-aspnet-mvc-controller"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/cannot-validate-run-workflow.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/cannot-validate-run-workflow"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/wcf-extensions-concurrent-request-run-sequentially.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/wcf-extensions-concurrent-request-run-sequentially"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/disconnects-http-bindings.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/disconnects-http-bindings"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/endpoint-address-use-the-discovery-client-channel.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/endpoint-address-use-the-discovery-client-channel"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/error-create-performance-counters.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/error-create-performance-counters"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/error-occurs-remove-an-appfabric-cluster-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/error-occurs-remove-an-appfabric-cluster-server"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/error-disable-non-http-activation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/error-disable-non-http-activation"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/error-service-use-activation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/error-service-use-activation"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/error-discovery-udp.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/error-discovery-udp"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/fail-install-wif.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/fail-install-wif"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/kerberos-not-used-call-service.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/kerberos-not-used-call-service"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/precompiled-workflow-activation-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/precompiled-workflow-activation-fails"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/rest-generate-metadata-wsdl.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/rest-generate-metadata-wsdl"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/service-does-not-start-automatically.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/service-does-not-start-automatically"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/service-scale-up-slowly.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/service-scale-up-slowly"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/service-operations-use-wrong-impersonation-context.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/service-operations-use-wrong-impersonation-context"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/service-use-a-non-default-etw-provider-id.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/service-use-a-non-default-etw-provider-id"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/socketexception-connection-pooling.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/socketexception-connection-pooling"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/x509certificatevalidator-service-certificate.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/x509certificatevalidator-service-certificate"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/wcf-net-tcp-service-stop-response.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/wcf-net-tcp-service-stop-response"
+    },
+    {
+      "source_path": "support/developer/dotnet/wcf/workflow-service-cannot-receive-messages-in-order.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/wcf/workflow-service-cannot-receive-messages-in-order"
     }
   ]
 }

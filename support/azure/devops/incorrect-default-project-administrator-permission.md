@@ -3,7 +3,6 @@ title: Incorrect default project administrator permissions
 description: This article introduces that when Team Foundation Server creates a new project, a set of default permissions is applied. Certain versions of Team Foundation Server 2015 incorrectly set the permissions to bypass branch policy for Git repos on project administrators.
 ms.date: 08/14/2020
 ms.custom: sap:Server Administration
-ms.topic: article
 ms.service: azure-devops-server
 ---
 # Incorrect default project administrator permissions in Team Foundation Server 2015
