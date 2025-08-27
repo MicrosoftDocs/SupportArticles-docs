@@ -1,0 +1,53 @@
+---
+title: Test and Enable fails due to unrecognized Microsoft 365 User Email Address
+description: Provides solution information for Test and Enable failures caused by unrecognized email addresses.
+ms.date: 08/27/2025
+ms.custom: sap:Email and Exchange Synchronization\Set up and configuration of server-side synchronization
+author: debrau
+ms.author: debrau
+---
+
+# Test and Enable fails due to unrecognized Microsoft 365 User Email Address
+
+## Symptoms
+
+When attempting to perform Test and Enable on a mailbox in Dataverse, users may encounter the following error message:
+
+>Test and Enable failed because no user was found with the email address "<user@domain.com>" in the Microsoft 365 tenant associated with this mailbox's Email Server Profile. Verify the user exists in the Microsoft 365 tenant and that the email address is set as a UPN, SMTP or Mail address on the intended user. If you are connecting to mailbox in a separate Microsoft 365 tenant, verify you have configured a Cross Tenant Email Server Profile.
+
+## Cause
+
+This error typically occurs when:
+
+ - The specified email address does not exist in the Microsoft 365 tenant linked to the mailbox's Email Server Profile.
+ - The email address is not properly configured as a User Principal Name (UPN), SMTP address, or Mail address on the user object.- 
+ - The mailbox belongs to a different Microsoft 365 tenant, and a Cross Tenant Email Server Profile has not been configured.
+
+##Resolution
+
+Step 1: Validate User Existence and Email Address Configuration
+
+An administrator should verify that the user exists in the correct Microsoft 365 tenant and that the email address is properly configured.
+
+To validate UPN, SMTP, or Mail address:
+1.	Sign in to the Microsoft 365 Admin Center.
+2.	Navigate to Users > Active Users.
+3.	Search for the user using the email address in question.
+4.	Open the user profile and confirm the user has at least one email address matching the email address in the Dataverse mailbox record: 
+
+o	User Principal Name (UPN) or Username matches the email address.
+
+o	In the Mail tab, click Edit Exchange properties. In Manage mailboxes, open the mailbox. On the General tab, confirm the User ID or the Email addresses properties contain the email address. 
+
+Note: If a matching address is found in the Email addresses, click “Manage email address types” to confirm the address type is “SMTP”.
+
+If the user exists in the same tenant as your Dataverse instance but does not have a matching UPN, SMTP, or Mail email address then update the Dataverse mailbox record to a valid email address for the user. 
+
+If the user does not exist in the same tenant as your Dataverse instance, proceed to Step 2.
+
+Step 2: Configure Cross Tenant Email Server Profile
+If the mailbox resides in a different Microsoft 365 tenant, you must configure a Cross Tenant Email Server Profile.
+
+Refer to the below documentation:
+
+https://learn.microsoft.com/entra/identity/multi-tenant-organizations/cross-tenant-synchronization-configure?pivots=same-cloud-synchronization
