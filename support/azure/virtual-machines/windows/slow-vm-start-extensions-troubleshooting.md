@@ -23,7 +23,7 @@ VM extensions are software components that run inside the VM to enable configura
 
 If a VM has one or more extensions in a **Failed** state, delays can occur in other VM operations, such as **Start** or **Redeploy**. This issue occurs because the Azure platform tries to provision the failed extensions again before it completes the operation. Therefore, the VMs show a **Starting** status for an extended period.
 
-## Workaround
+## More information
 
 To mitigate this issue, follow these steps:
 
@@ -44,7 +44,7 @@ To mitigate this issue, follow these steps:
 
 1. Stop and then restart the VM to verify that the extension provisioning succeeds and the VM Start operation finishes faster. You can use the Azure portal, PowerShell, CLI, or REST API to do these operations.
 
-## More information
+## References
 
 For more guidance to troubleshoot the Azure VM Guest Agent and extension issues, see:
 
