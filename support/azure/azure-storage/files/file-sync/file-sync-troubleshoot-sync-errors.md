@@ -754,7 +754,7 @@ Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncSer
 
 This error might occur due to the following reasons:
 
-- The server’s managed identity tenant ID does not match the tenant ID of the Storage Sync Service or the storage account.
+- The server’s managed identity tenant ID doesn't match the tenant ID of the Storage Sync Service or the storage account.
 - The server was recently re-registered or its managed identity configuration changed, but the update has not propagated yet.
  
 
