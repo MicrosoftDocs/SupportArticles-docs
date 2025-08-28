@@ -2838,6 +2838,8 @@ items:
     items:
     - name: Get-VMNetworkAdapter command doesn't report IP addresses
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
+    - name: Hyper-V environment experience frequent power-offs and rapid disk space consumption
+      href: ./virtualization/hyper-v-power-off-rapid-disk-space-consumption.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
     - name: Virtual machine shutdown actions don't run
