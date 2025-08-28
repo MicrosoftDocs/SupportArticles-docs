@@ -3,13 +3,13 @@ title: Identify containers causing high disk I/O latency in AKS clusters
 description: Learn how to identify which containers and pods are causing high disk I/O latency in your Azure Kubernetes Service clusters to easily troubleshoot issues using the open source project Inspektor Gadget.
 ms.date: 07/16/2025
 ms.author: burakok
-ms.reviewer: burakok, mayasingh
+ms.reviewer: burakok, mayasingh, blanquicet
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot high disk I/O latency in AKS clusters
 
-Disk I/O latency can severely impact the performance and reliability of workloads running in AKS clusters.This article shows how to use the open source project [Inspektor Gadget](https://inspektor-gadget.io/) to identify which containers and pods are causing high disk I/O latency in Azure Kubernetes Service (AKS).
+Disk I/O latency can severely impact the performance and reliability of workloads running in Azure Kubernetes Service (AKS) clusters. This article shows how to use the open source project [Inspektor Gadget](https://aka.ms/ig-website) to identify which containers and pods are causing high disk I/O latency in AKS.
 
 Inspektor Gadget provides eBPF-based gadgets that help you observe and troubleshoot disk I/O issues in Kubernetes environments.
 
@@ -35,7 +35,7 @@ You may suspect disk I/O latency issues when you observe the following behaviors
 
 ### Step 1: Profile disk I/O latency with `profile_blockio`
 
-The `profile_blockio` gadget gathers information about block device I/O usage and generates a histogram distribution of I/O latency when the gadget is stopped. This helps you visualize disk I/O performance and identify latency patterns. We can use this information to gather evidence to support or refute the hypothesis that the symptoms we are seeing are due to disk I/O issues. 
+The [`profile_blockio`](https://aka.ms/ig-profile-blockio) gadget gathers information about block device I/O usage and generates a histogram distribution of I/O latency when the gadget is stopped. This helps you visualize disk I/O performance and identify latency patterns. We can use this information to gather evidence to support or refute the hypothesis that the symptoms we are seeing are due to disk I/O issues. 
 
 ```console
 kubectl gadget run profile_blockio --node <node-name>
@@ -78,7 +78,7 @@ latency
   33554432 -> 67108864   : 0        |                                        |
 ```
 
-**High disk I/O stress example** (with stress-ng --hdd 10 --io 10 running):
+**High disk I/O stress example** (with `stress-ng --hdd 10 --io 10` running to simulate I/O load):
 
 ```
 latency
@@ -112,7 +112,7 @@ latency
   33554432 -> 67108864   : 0        |                                        |
 ```
 
-**Interpreting the results**: Compare the baseline vs. stress scenarios:
+**Interpreting the results**: To identify which node has I/O pressure you can compare the baseline vs. stress scenarios:
 - **Baseline**: Most operations (4,211 count) in the 16-32ms range, typical for normal system activity
 - **Under stress**: Significantly more operations in higher latency ranges (9,552 operations in 131-262ms, 6,778 in 262-524ms)
 - **Performance degradation**: The stress test shows operations extending into the 500ms-2s range, indicating disk saturation
@@ -120,10 +120,10 @@ latency
 
 ### Step 2: Find top disk I/O consumers with `top_blockio`
 
-The `top_blockio` gadget provides a periodic list of pods and containers with the highest disk I/O operations. This gadget requires kernel version 6.5 or higher (available on Azure Linux 3).
+The [`top_blockio`](https://aka.ms/ig-top-blockio) gadget provides a periodic list of containers with the highest disk I/O operations. Optionally we can limit the tracing to the node we identified in Step 1. This gadget requires kernel version 6.5 or higher (available on [Azure Linux Container Host clusters](/azure/aks/use-azure-linux)).
 
 ```console
-kubectl gadget run top_blockio --namespace <namespace>
+kubectl gadget run top_blockio --namespace <namespace> [--node <node-name>]
 ```
 
 Sample output:
@@ -134,14 +134,14 @@ aks-nodepool1-…99-vmss000000                                                  
 aks-nodepool1-…99-vmss000000                                                              0     0   8     0     24576      1549       6   read
 ```
 
-Identify containers with unusually high BYTES, US (time spent in microseconds), or IO counts which may indicate high disk activity. In this example, we can see significant write activity (173MB) with considerable time spent (~154 seconds total).
+From the output, we can identify containers with unusually high number of bytes read/written into the disk (`BYTES` column), time spent on reading/writing operations (`US` column), or number of IO operations (`IO` column) which may indicate high disk activity. In this example, we can see significant write activity (173MB) with considerable time spent (~154 seconds total).
 
 > [!NOTE]
 > Empty K8S.NAMESPACE, K8S.PODNAME, and K8S.CONTAINERNAME fields can occur during kernel space initiated operations or high-volume I/O. You can still use the `top_file` gadget for detailed process information when these fields are empty.
 
 ### Step 3: Identify files causing high disk activity with `top_file`
 
-The `top_file` gadget reports periodically the read/write activity by file, helping you identify specific files that are causing high disk activity.
+The [`top_file`](https://aka.ms/ig-top-file) gadget reports periodically the read/write activity by file, helping you identify specific processes in which containers are causing high disk activity.
 
 ```console
 kubectl gadget run top_file --namespace <namespace>
@@ -158,14 +158,14 @@ aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd        
 ...
 ```
 
-This output shows which files are being accessed most frequently, helping you pinpoint specific files contributing to disk latency. In this example, the stress-hdd pod is creating multiple temporary files with significant write activity (18-23MB each).
+This output shows which files are being accessed most frequently, helping you pinpoint what specific file a given process is reading/writing the most. In this example, the stress-hdd pod is creating multiple temporary files with significant write activity (18-23MB each)
 
 ### Root cause analysis workflow
 
 By combining all three gadgets, you can trace disk latency issues from symptoms to root cause:
 
-1. **`profile_blockio`** identifies that disk latency exists (high counts in 100ms+ ranges)
-2. **`top_blockio`** shows which processes are consuming the most disk I/O (173MB writes with 154 seconds total time spent)
+1. **`profile_blockio`** identifies that disk latency exists in a given node (high counts in 100ms+ ranges)
+2. **`top_blockio`** shows which processes are generating the most disk I/O (173MB writes with 154 seconds total time spent)
 3. **`top_file`** reveals the specific files and commands causing the issue (stress command creating /stress.* files)
 
 This complete visibility allows you to:
@@ -180,14 +180,9 @@ With this information, you can take targeted action rather than making broad sys
 
 Based on the results from these gadgets, you can take the following actions:
 
-- **High latency in `profile_blockio`**: Investigate the underlying disk performance, consider using premium SSD or Ultra disk storage
+- **High latency in `profile_blockio`**: Investigate the underlying disk performance and if the workload needs better disk performance, consider using [storage optimized nodes](/azure/virtual-machines/sizes/overview#storage-optimized)
 - **High I/O operations in `top_blockio`**: Review application logic to optimize disk access patterns or implement caching
 - **Specific files in `top_file`**: Analyze if files can be moved to faster storage, cached, or if application logic can be optimized
-
-For further troubleshooting:
-- Move disk-intensive workloads to dedicated node pools with faster storage
-- Implement application-level caching to reduce disk I/O
-- Consider using Azure managed services (like Azure Database) for data-intensive operations
 
 ## Related content
 
