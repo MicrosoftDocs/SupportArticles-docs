@@ -381,6 +381,8 @@ items:
     href: restart-resize-error-troubleshooting.md
   - name: Restarting, shutting down, or stopping services
     href: boot-error-troubleshoot-windows.md
+  - name: Slow VM start caused by extensions troubleshooting
+    href: slow-vm-start-extensions-troubleshooting.md
 
 - name: VM restarts or stops unexpectedly
   items:
