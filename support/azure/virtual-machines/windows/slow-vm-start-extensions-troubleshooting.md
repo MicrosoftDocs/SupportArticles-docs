@@ -74,5 +74,5 @@ For more guidance on how to troubleshoot Azure VM guest agent and
 extension issues, see:
 
 - [Troubleshooting Windows VM extension failures](/azure/virtual-machines/extensions/troubleshoot)
-- [Troubleshoot Azure Windows VM Agent issues](/azure/virtual-machines/windows-azure-guest-agent)
-- [Troubleshoot the Azure Linux Agent](/azure/virtual-machines/linux-azure-guest-agent)
+- [Troubleshoot Azure Windows VM Agent issues](windows-azure-guest-agent.md)
+- [Troubleshoot the Azure Linux Agent](../linux/linux-azure-guest-agent.md)
