@@ -54,8 +54,9 @@ To resolve the issue, follow these steps:
 
    If disk space on volume D remains insufficient, consider adding a larger disk to the host to accommodate the storage requirements.
 
-## Tips for long-term management
-
-* Regularly monitor and manage checkpoints to avoid accumulation.
-* Schedule periodic backups to safeguard VM data.
-* Allocate additional disk storage in advance to prevent rapid consumption.
+> [!TIP]
+> Tips for long-term management:
+>
+> * Regularly monitor and manage checkpoints to avoid accumulation.
+> * Schedule periodic backups to safeguard VM data.
+> * Allocate additional disk storage in advance to prevent rapid consumption.
