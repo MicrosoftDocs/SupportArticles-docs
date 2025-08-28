@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot Hyper-V Virtual Machine Start, State, and Access Failures
-description: Provides a detailed troubleshooting guide to help you resolve issues related to Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states, or become inaccessible in both clustered and standalone environments.
-ms.date: 08/22/2025
+title: Troubleshoot Hyper-V Virtual Machine Startup, State, and Access Failures
+description: Helps resolve issues related to Hyper-V VMs that fail to start, become stuck in transitional states, or become inaccessible in clustered and standalone environments.
+ms.date: 08/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -10,22 +10,22 @@ ms.custom:
 - sap:virtualization and hyper-v\virtual machine state
 - pcy:WinComm Storage High Avail
 ---
-# Troubleshoot Hyper-V virtual machine start, state, and access failures in clustered and standalone environments
+# Troubleshoot Hyper-V virtual machine startup, state, and access failures in clustered and standalone environments
 
-This article provides a detailed troubleshooting guide to help you resolve issues related to Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments. Common causes include VM configuration file corruption, storage or network problems, process lockups, checkpoint or automatic virtual hard disk (AVHDX) issues, and permission or driver errors. Timely identification and resolution of these problems are essential to minimize VM downtime, prevent business disruption, and avoid data loss in production environments.
+This article provides a detailed troubleshooting guide to help you resolve issues related to Hyper-V virtual machines (VMs) that fail to start, become stuck in transitional states (such as starting, stopping, saved, or paused), or become inaccessible in both clustered and standalone environments. Common causes include VM configuration file corruption, storage or network problems, process lockups, checkpoint or automatic virtual hard disk (AVHDX) issues, and permission or driver errors. Timely identifying and resolving these problems is essential to minimizing VM downtime, preventing business disruption, and avoiding data loss in production environments.
 
-You might encounter various symptoms when dealing with Hyper-V VM issues, including the following items:
+When dealing with Hyper-V VM issues, you might encounter various symptoms, including:
 
 ## End-user and technical symptoms
 
 - VMs fail to start or power on in Hyper-V Manager or Failover Cluster Manager.
 - VMs are stuck in states like "starting," "stopping," "saved-critical," "paused," or "restoring."
-- VMs are missing or not visible in Hyper-V Manager or the output of `Get-VM`.
+- VMs are missing or invisible in Hyper-V Manager or the output of `Get-VM`.
 - VM states are displayed as "running critical," "stopping," or "online pending."
 - VM consoles are inaccessible, and remote desktop connections are unavailable.
 - VMs fail to migrate successfully between cluster nodes.
 - Hyper-V Manager or Failover Cluster Manager can't change VM states or report their status.
-- Virtual machine management service (VMMS) or VMM services are stuck in a "Stopping" state.
+- The virtual machine management service (VMMS) or VMM services are stuck in a "Stopping" state.
 - Storage volumes, such as Cluster Shared Volumes (CSVs), appear as RAW or offline, and VHDX files are inaccessible or locked.
 
 ## Error messages, event logs, and codes
@@ -40,10 +40,10 @@ You might encounter various symptoms when dealing with Hyper-V VM issues, includ
   - > The file or directory is corrupted and unreadable. (0x80070570)
 
 - Event IDs: 21502, 1069, 1205, 5120, 1135, 225, 15500, 1793, 1795, 7034, 7031, 7036, 16300, 14102, 4092, 18012, 18016, 20848, 20864, 12620, 12240, 153, 20848, 18524, 1146, 1230.
-- Cluster resources stuck in "online pending" or "failed" states.
+- Cluster resources are stuck in "online pending" or "failed" states.
 - VMs are unavailable after patching, host restarts, or storage and network events.
 
-Hyper-V VM failures might originate from several root causes categorized as follows, and corresponding resolutions are provided respectively:
+Hyper-V VM failures might originate from several root causes, which are categorized as follows, along with their respective resolutions:
 
 - [Cause 1: Configuration and metadata corruption](#cause-1-configuration-and-metadata-corruption)
 - [Cause 2: Storage and file system issues](#cause-2-storage-and-file-system-issues)
@@ -60,7 +60,7 @@ To resolve these issues, perform the initial checks using the following steps:
 
 ## Cause 1: Configuration and metadata corruption
 
-- Corrupt or missing VM configuration files (for example, `.VMCX`, `.XML`) prevent the VM from being recognized or started by Hyper-V, often after failed migrations, storage issues, or abrupt shutdowns.
+- Corrupt or missing VM configuration files (for example, `.VMCX` and `.XML`) prevent Hyper-V from recognizing or starting the VM, often after failed migrations, storage issues, or abrupt shutdowns.
 - Checkpoint (AVHDX) chain corruption or missing differencing disks prevent the VM from starting.
 - Orphaned checkpoints, incomplete merges, or invalid entries in configuration files block VM operations.
 - Duplicate VM GUIDs or object entries, particularly with System Center Virtual Machine Manager (SCVMM), can cause "already exists" errors and prevent VM imports or starts.
@@ -71,8 +71,8 @@ To resolve this issue, see [File system and storage checks](#resolution-file-sys
 
 - CSVs or volumes are offline, RAW, or inaccessible due to storage subsystem failures, disk corruption, or drive letter conflicts.
 - VHD or VHDX files are locked or in use by another process, such as a backup or antivirus program.
-- Missing or corrupted VM runtime state files (VMRS) impede VM operations.
-- BitLocker-locked disks prevent VMs from starting after patching or reboots.
+- Missing or corrupt VM runtime state files (VMRS) impede VM operations.
+- BitLocker-locked disks prevent VMs from starting after patching or rebooting.
 
 ### Resolution: File system and storage checks
 
@@ -106,7 +106,7 @@ To resolve this issue, see [File system and storage checks](#resolution-file-sys
 ## Cause 3: Process and service lockups
 
 - Stale VM Worker Process (VMWP) or VMMS processes are stuck due to storage or network issues or deadlocks.
-- Failed attempts to terminate VM processes via Task Manager, taskkill, or Process Explorer persist due to kernel or resource locks.
+- Failed attempts to terminate VM processes via Task Manager, `taskkill`, or Process Explorer persist due to kernel or resource locks.
 
 ### Resolution: Process and service recovery
 
@@ -150,13 +150,13 @@ To resolve this issue, see [File system and storage checks](#resolution-file-sys
 
 ### Resolution 1: Cluster and network remediation
 
-1. Validate cluster health and configuration using the cluster validation wizard or:
+1. Validate the cluster health and configuration using the cluster validation wizard or:
 
    ```powershell
    Test-Cluster
    ```
 
-2. Resolve network issues by reviewing Event IDs (for example, 5120, 1135) and adjusting parameters:
+2. Resolve network issues by reviewing event IDs (for example, 5120 and 1135) and adjusting parameters:
 
    ```powershell
    (Get-Cluster).SameSubnetThreshold = <value></value>
@@ -171,11 +171,11 @@ To resolve this issue, see [File system and storage checks](#resolution-file-sys
 
 ## Escalation and bug reference
 
-If known bugs or product defects are involved (for example, UEFI firmware bugs or cluster communication issues), review vendor advisories and apply recommended updates or fixes.
+If known bugs or product defects are involved (for example, UEFI firmware bugs or cluster communication issues), review vendor advisories and apply the recommended updates or fixes.
 
 ## Data collection
 
-Gather the following logs and diagnostics to assist with troubleshooting:
+Gather the following logs and diagnostic information to assist with troubleshooting:
 
 - Hyper-V event logs:
 
