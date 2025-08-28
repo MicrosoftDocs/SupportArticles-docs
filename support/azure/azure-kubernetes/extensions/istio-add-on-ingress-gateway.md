@@ -29,6 +29,8 @@ The add-on deploys Istio ingress gateway pods and deployments per revision. If y
 
 Verify that you don't have firewall or [Network Security Group (NSG) rules](/azure/virtual-network/network-security-groups-overview) that block traffic to the ingress gateway. You have to explicitly add a Destination Network Address Translation (DNAT) rule to [allow inbound traffic](/azure/aks/limit-egress-traffic#allow-inbound-traffic-through-azure-firewall) through Azure Firewall to the ingress gateway.
 
+Double check if you have set restrictions to only allow traffic to the subnet(s) of your user node pool(s). If the ingress gateway pods are scheduled onto [system node pools](/azure/aks/use-system-pools?tabs=azure-cli), then incoming traffic to these pods could be blocked. You can address this by allowing traffic to the subnet(s) of your system node pool(s).
+
 ### Step 2: Configure gateways, virtual services, and destination rules correctly
 
 When you configure gateways, virtual services, and destination rules for traffic routing through the ingress gateway, follow these steps:

@@ -50,6 +50,8 @@ In some cases, traffic from Azure Load Balancer to the Istio Gateway API Deploym
 
 Verify that the there aren't any [firewall](/azure/firewall/protect-azure-kubernetes-service) or [Network Security Group (NSG) rules](/azure/virtual-network/network-security-groups-overview) that block traffic to the ingress gateway.
 
+Double check if you have set restrictions to only allow traffic to the subnet(s) of your user node pool(s). If the Gateway API pods are scheduled onto [system node pools](/azure/aks/use-system-pools?tabs=azure-cli), then incoming traffic to these pods could be blocked. You can address this by allowing traffic to the subnet(s) of your system node pool(s).
+
 ## Gateway configuration troubleshooting
 
 ### Step 1: Make sure the gatewayClassName is set to `istio`
