@@ -6,7 +6,6 @@ ms.custom: sap:Email and Exchange Synchronization\Set up and configuration of se
 author: debrau
 ms.author: debrau
 ---
-
 # Test and Enable fails due to unrecognized Microsoft 365 User Email Address
 
 ## Symptoms
@@ -49,4 +48,4 @@ If the mailbox resides in a different Microsoft 365 tenant, you must configure a
 
 Refer to the following documentation:
 
-[Configure cross-tenant synchronization](https://learn.microsoft.com/power-platform/admin/connect-exchange-online-server-profile-oauth)
+[Configure cross-tenant synchronization](/power-platform/admin/connect-exchange-online-server-profile-oauth)
