@@ -77,7 +77,7 @@ To resolve Windows Update corruptions and address update installation failures, 
     ```console
     DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:\\<servername>\c$\windows /LimitAccess
     ```
-    
+
     > [!NOTE]
     > Replace \<servername\> with the computer name of the computer you are using as a repair source. The repair source computer must be running the same operating system version. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)). If the scan result is "The restore operation completed successfully", go to the next step. If not, try to [analyze the CBS.log file](#step-1-analyze-the-cbslog-file) and fix errors.
 
