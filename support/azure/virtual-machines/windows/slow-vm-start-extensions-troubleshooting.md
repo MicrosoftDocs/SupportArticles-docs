@@ -30,13 +30,13 @@ To mitigate this issue, follow these steps:
 1. To determine the root cause of the failure, review the extension status and logs for the VM.
 
    To check the status of the extensions that are installed on the VM, go to the VM blade, and then select the **extensions + applications** option under
-      **Settings** in the left pane. If the status is not **Provisioning Succeeded**, the extension might have to be removed or investigated further.
+      **Settings** in the left pane. If the status isn't **Provisioning Succeeded**, the extension might have to be removed or investigated further.
 
       :::image type="content" source="media/slow-vm-start-extensions-troubleshooting/extensions-applications-status.png" alt-text="Screenshot of the portal showing the extensions and applications statuses. Status is highlighted.":::
 
     - Logs for the extensions can be found within the Guest OS of the VM. For more information, see the [Further Troubleshooting section](#further-troubleshooting).
 
-1. Check the status of the VM "Guest Agent" that's responsible for provisioning the extensions. If the "Guest Agent" is not in a ready state, a review might be required. For further guidance, refer to the documents that are mentioned in the [Further Troubleshooting section](#further-troubleshooting).
+1. Check the status of the VM "Guest Agent" that's responsible for provisioning the extensions. If the "Guest Agent" isn't in a ready state, a review might be required. For more guidance, refer to the documents that are mentioned in the [Further Troubleshooting section](#further-troubleshooting).
 
       :::image type="content" source="media/slow-vm-start-extensions-troubleshooting/agent-status-version.png" alt-text="Screenshot of the portal showing the VM overview. Agent status and Agent version are highlighted.":::
 
@@ -46,7 +46,7 @@ To mitigate this issue, follow these steps:
 
 ## More information
 
-For additional guidance to troubleshoot the Azure VM Guest Agent and extension issues, see:
+For more guidance to troubleshoot the Azure VM Guest Agent and extension issues, see:
 
 - [Troubleshooting Azure Windows VM extension failures](/azure/virtual-machines/extensions/troubleshoot)
 - [Troubleshoot Azure Windows VM Agent issues](windows-azure-guest-agent.md)
