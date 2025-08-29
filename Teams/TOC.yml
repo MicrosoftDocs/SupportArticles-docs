@@ -206,8 +206,12 @@ items:
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-410.md
         - name: SIP response code 412
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-412.md
+        - name: SIP response code 415
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-415.md  
         - name: SIP response code 420
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-420.md
+        - name: SIP response code 422
+          href: ./phone-system/direct-routing/microsoft-sip-response-codes-422.md  
         - name: SIP response code 480
           href: ./phone-system/direct-routing/microsoft-sip-response-codes-480.md
         - name: SIP response code 484
