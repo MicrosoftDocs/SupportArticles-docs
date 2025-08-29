@@ -28,7 +28,7 @@ Before you use the procedures in this article, make sure that your host computer
 - You have administrator-level access to both host computers.
 - The Hyper-V role is configured on both the source (Windows Server 2016) and destination (Windows Server 2022) host computers.
 - The source and destination host computers are on the same network or on connected networks.
-- The appropriate firewall rules exist to allow Hyper-V replication traffic. For information about the ports that are involved in Hyper-V replication, see "Hyper-V service" in [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements#hyper-v-service).
+- The appropriate firewall rules exist to allow Hyper-V replication traffic. For information about the ports that are involved in Hyper-V replication, see "Hyper-V service" in [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md#hyper-v-service).
 - Both host computers have sufficient storage and compute resources for the VM replicas.
 - The source VM (on Windows Server 2016) and the destination VM (on Windows Server 2022) are of the same generation (both are Generation 1, or both are Generation 2).
 
