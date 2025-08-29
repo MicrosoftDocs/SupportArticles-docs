@@ -189,4 +189,42 @@ We recommend that you use an Azure Virtual Network NAT configuration for outboun
 
 However, if there's a requirement to block all internet traffic, make sure that you deny outbound internet access by using a network security group (NSG) rule on the subnet of the VM that you have to activate. Notice that operating system activation traffic to the KMS IPs on port 1688 remains enabled because of platform internal rules.
 
+## Solution 3: (For Internal Load Balancer) Centralized egress via Azure Firewall — no forced tunneling
+
+As mentioned in Solution 2, to overcome SNAT (Source Network Address Translation) port limitations for outbound connectivity, we recommend using an Azure Virtual Network NAT configuration for scalable and resilient outbound traffic management.
+
+However, if your deployment uses an Internal Load Balancer (ILB) and all outbound traffic is routed through Azure Firewall, this solution applies. It is suitable when:
+
+- You want centralized control of outbound traffic.
+- You do not require forced tunneling to on-premises.
+- You do not need a NAT Gateway, unless SNAT port exhaustion is observed.
+
+This pattern is common in environments where backend VMs behind an ILB need to reach external services (e.g., KMS servers) through Azure Firewall, while maintaining internal routing simplicity. [Integrate Azure Firewall with Azure Standard Internal Load Balancer](/azure/firewall/integrate-lb#internal-load-balancer).
+
+Flow Summary
+- Inbound: Client → ILB → Backend VM → Client
+- Outbound: Backend VM → UDR (0.0.0.0/0) → Azure Firewall → Internet
+
+Steps to Perform Windows Activation via Azure Firewall
+
+1. Confirm outbound routing: Ensure that outbound traffic from the VM subnet is routed to Azure Firewall using a UDR: 0.0.0.0/0 → Azure Firewall.
+2. Add a network rule on Azure Firewall to allow outbound traffic to the KMS server:
+
+| Field | Value |
+|--|--|
+| Destination | FQDN azkms.core.windows.net **or** _20.118.99.224_, _40.83.235.53,23.102.135.246_ (for `azkms.core.windows.net`), or the IP of the appropriate KMS endpoint that applies to your region |
+| Port |1688 |
+| Protocol | TCP |
+| Action| Allow |
+
+3. Ensure DNS resolution from the VM is successful and is returning the correct IP addresses.
+4. Attempt Windows activation from an elevated command prompt:
+   ```cmd
+   slmgr.vbs /ato
+5. If activation fails, review Azure Firewall diagnostics:
+
+- Check network rule logs to confirm traffic to port 1688 is allowed.
+- Validate that the rule matches the resolved IP, port, and protocol.
+- Ensure there are no implicit denies or misconfigured rule priorities.
+
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
