@@ -2750,6 +2750,8 @@ items:
     items:
     - name: Feature and performance optimization of HVR
       href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
+    - name: Set Up HVR between Windows Server 2016 and Windows Server 2022
+      href: ./virtualization/set-up-hyper-v-replica-between-windows-server-2016-and-windows-server-2022.md
   - name: Installation and configuration of Hyper-V
     items:
     - name: Antivirus exclusions for Hyper-V hosts
