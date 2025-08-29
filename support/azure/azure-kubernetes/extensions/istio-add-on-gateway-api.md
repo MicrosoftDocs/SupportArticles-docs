@@ -105,7 +105,9 @@ Ensure that the customizations for both `GatewayClass`-level ConfigMaps and `Gat
 
 ### Step 2: Ensure GatewayClass-level ConfigMap is configured correctly
 
-The `GatewayClass`-level ConfigMap `istio-gateway-class-defaults` is automatically deployed in the `aks-istio-system` namespace by the Istio add-on when the Managed Gateway API installation is enabled on the cluster. If you are editing this ConfigMap, ensure that you keep the `gateway.istio.io/defaults-for-class` label set to `istio`. You can only have one `GatewayClass`-level ConfigMap deployed at a time.
+The `GatewayClass`-level ConfigMap `istio-gateway-class-defaults` is automatically deployed in the `aks-istio-system` namespace by the Istio add-on when the Managed Gateway API installation is enabled on the cluster. Note that it could take up to ~5 minutes for the `istio-gateway-class-defaults` ConfigMap to get deployed after installing the Managed Gateway API CRDs. 
+
+If you are editing this ConfigMap, ensure that you keep the `gateway.istio.io/defaults-for-class` label set to `istio`. You can only have one `GatewayClass`-level ConfigMap deployed at a time.
 
 ### Step 3: Verify Gateway-level ConfigMap customizations
 
