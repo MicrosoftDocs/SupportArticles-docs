@@ -11,7 +11,7 @@ ms.custom:
 - pcy:WinComm Storage High Avail
 ---
 
-# Set up Hyper-V Replica between Windows Server 2016 and 2022
+# How to set up Hyper-V Replica between Windows Server 2016 and 2022
 
 This article provides guidance for setting up a Hyper-V replica if the source virtual machine (VM) resides on Windows Server 2016 and the destination VM resides on Windows Server 2022.
 
@@ -34,9 +34,9 @@ Before you use the procedures in this article, make sure that your host computer
 
 ## Configure replication
 
-To configure the Hyper-V replica, follow these steps:
+To configure Hyper-V Replica, follow these steps:
 
-1. Configure the Hyper-V replica on the source host computer by following these steps:
+1. Configure  Hyper-V Replica on the source host computer by following these steps:
 
    1. On the Windows Server 2016 host computer, open **Hyper-V Manager**.
    1. Right-click the VM that you want to replicate, and then select **Enable Replication**.
@@ -51,7 +51,7 @@ Before you deploy this configuration in a production environment, test the follo
 
 1. Start replication from the source host computer to the destination host computer, and then monitor the replication status in Hyper-V Manager to make sure that the process finishes successfully.
 1. Trigger a planned failover, and verify that the destination host computer can host the VM if the source host computer fails.
-1. Start the failback process, and verify that the VM returns when the source host computer becomes operational.
+1. Start the failback process, and verify that when the source host computer becomes operational, the VM returns to it.
 
 ## Troubleshooting replication issues
 
@@ -63,6 +63,6 @@ Incorrect settings on either the source or destination server can prevent replic
 
 Additionally, verify that the source and destination host computers connect successfully.
 
-##  References
+## References
 
 For a detailed discussion about Hyper-V Replica settings, see [Set up Hyper-V Replica](/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica).
