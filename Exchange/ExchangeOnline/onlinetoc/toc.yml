@@ -106,6 +106,8 @@ items:
           href: ../administration/public-folder-permissions-in-exchange-admin-center-show-guid-not-name.md
         - name: Repeated calls against the same folder are slow
           href: ../administration/slow-repeated-calls-against-same-folder.md
+        - name: Resolve validation errors for an archive mailbox
+          href: ../administration/validation-errors-for-mailbox-archive-guid.md          
         - name: Self-help diagnostics
           href: ../administration/self-help-diagnostics.md
         - name: Site mailbox retirement
@@ -126,8 +128,6 @@ items:
           href: ../administration/update-of-client-access-rules-for-office-365-customers.md
         - name: UsageLocation validation error about Enable-UMMailbox
           href: ../administration/enable-ummailbox-cannot-be-performed-error.md
-        - name: Resolve validation errors for an archive mailbox
-          href: ../administration/validation-errors-for-mailbox-archive-guid.md
         - name: View and update address list membership
           href: ../administration/view-update-address-list-membership.md
         - name: Voice mail settings are missing from Options
