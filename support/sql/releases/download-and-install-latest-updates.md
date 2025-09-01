@@ -1,7 +1,7 @@
 ---
 title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
-ms.date: 08/12/2025
+ms.date: 09/09/2025
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen
 ms.reviewer: v-six
@@ -58,6 +58,8 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update    | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|-----------|-------------------------------------------------------|--------------------|
+| 16.0.4212.1             | None         | CU20 + GDR| [KB5065220](https://support.microsoft.com/help/5065220) | Septemebr 09, 2025    |
+| 16.0.4212.1             | None         | GDR       | [KB5065221](https://support.microsoft.com/help/5065221) | September 09, 2025    |
 | 16.0.4210.1             | None         | CU20 + GDR| [KB5063814](https://support.microsoft.com/help/5063814) | August 12, 2025    |
 | 16.0.1145.1             | None         | GDR       | [KB5063756](https://support.microsoft.com/help/5063756) | August 12, 2025    |
 | 16.0.4205.1            | None         | CU20| [KB5059390](sqlserver-2022/cumulativeupdate20.md) | July 10, 2025    |
@@ -103,6 +105,8 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update     | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|------------|-------------------------------------------------------|--------------------|
+| 15.0.4445.1             | None         | CU32 + GDR | [KB5065222](https://support.microsoft.com/help/5065222)       | September 09, 2025  |
+| 15.0.4445.1             | None         | GDR        | [KB5065223](https://support.microsoft.com/help/5065223)       | September 09, 2025  |
 | 15.0.4440.1             | None         | CU32 + GDR | [KB5063757](https://support.microsoft.com/help/5063757)       | August 12, 2025  |
 | 15.0.2140.1             | None         | GDR        | [KB5063758](https://support.microsoft.com/help/5063758)       | August 12, 2025  |
 | 15.0.4435.7             | None         | CU32 + GDR | [KB5058722](https://support.microsoft.com/help/5058722)       | July 08, 2025  |
@@ -164,6 +168,8 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update     | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|------------|-------------------------------------------------------|--------------------|
+| 14.0.3505.1             | None         | CU31 + GDR | [KB5065225](https://support.microsoft.com/help/5065225) | September 09, 2025   |
+| 14.0.2085.1             | None         | GDR        | [KB5065224](https://support.microsoft.com/help/5065224) | September 09, 2025   |
 | 14.0.3500.1             | None         | CU31 + GDR | [KB5063759](https://support.microsoft.com/help/5063759) | August 12, 2025   |
 | 14.0.2080.1             | None         | GDR        | [KB5063760](https://support.microsoft.com/help/5063760) | August 12, 2025   |
 | 14.0.3495.9             | None         | CU31 + GDR | [KB5058714](https://support.microsoft.com/help/5058714) | July 08, 2025   |
@@ -230,6 +236,8 @@ Each of the following links provides information for all of the applicable produ
 
 | Build number or version | Service pack | Update                   | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|--------------------------|-------------------------------------------------------|--------------------|
+| 13.0.7065.1             | None         | Azure Connect Pack + GDR | [KB5065227](https://support.microsoft.com/help/5065227) | September 09, 2025   |
+| 13.0.6470.1             | None         | SP3 + GDR                | [KB5065226](https://support.microsoft.com/help/5065226) | September 09, 2025   |
 | 13.0.7060.1             | None         | Azure Connect Pack + GDR | [KB5063761](https://support.microsoft.com/help/5063761) | August 12, 2025   |
 | 13.0.6465.1             | None         | SP3 + GDR                | [KB5063762](https://support.microsoft.com/help/5063762) | August 12, 2025   |
 | 13.0.7055.9             | None         | Azure Connect Pack + GDR | [KB5058717](https://support.microsoft.com/help/5058717) | July 08, 2025   |
