@@ -289,7 +289,7 @@
 - name: Support resources
   items:
     - name: Create an effective Power Automate support request
-      href: /power-automate/support-service-request.md
+      href: /power-automate/support-service-request
     - name: Power Automate support
       href: https://powerautomate.microsoft.com/support/
     - name: Power Automate Community forum

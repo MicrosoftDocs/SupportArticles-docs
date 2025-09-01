@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 07/24/2025
+ms.date: 08/25/2025
 ms.author: kendownie
 ms.custom: sap:File Sync, devx-track-azurepowershell
 ms.reviewer: v-weizhu, vritikanaik
@@ -754,8 +754,9 @@ Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncSer
 
 This error might occur due to the following reasons:
 
-- A new server certificate is generated on the Azure File Sync server, and the old certificate is still cached. This error will be resolved within a few hours once the server cache is refreshed.
-- The server endpoint deletion failed, leaving the endpoint in a partially deleted state. To resolve this issue, retry deleting the server endpoint.
+- The server’s managed identity tenant ID doesn't match the tenant ID of the Storage Sync Service or the storage account.
+- The server was recently re-registered or its managed identity configuration changed, but the update hasn't propagated yet.
+ 
 
 
 <a id="-1906441711"></a><a id="-2134375654"></a><a id="doesnt-have-enough-free-space"></a>**The volume where the server endpoint is located is low on disk space.**  
