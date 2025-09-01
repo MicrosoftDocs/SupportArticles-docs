@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Hyper-V Cluster Connectivity, Management, and Configuration Failures
 description: Provides a comprehensive guide to troubleshooting various issues related to Hyper-V clusters and management environments on Windows Server 2019 and Windows Server 2022.
-ms.date: 08/26/2025
+ms.date: 09/01/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Troubleshoot Hyper-V cluster connectivity, management, and configuration failures
 
-This article provides a comprehensive guide to troubleshooting various issues related to Hyper-V clusters and management environments on Windows Server 2019 and Windows Server 2022. These issues can manifest as failures in cluster management consoles, virtual machine (VM) migration, remote administration, authentication, storage configuration, and network connectivity. The guide identifies symptoms and root causes, offering actionable resolution steps to address the problems. Effective troubleshooting of these issues is critical to maintaining high availability, business continuity, and compliance in enterprise virtualization environments.
+This article provides a comprehensive guide to troubleshooting various issues related to Hyper-V clusters and management environments on Windows Server 2019, Windows Server 2022, and Windows Server 2025. These issues can manifest as failures in cluster management consoles, virtual machine (VM) migration, remote administration, authentication, storage configuration, and network connectivity. The guide identifies symptoms and root causes, offering actionable resolution steps to address the problems. Effective troubleshooting of these issues is critical to maintaining high availability, business continuity, and compliance in enterprise virtualization environments.
 
 ## End-user symptoms
 
