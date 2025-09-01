@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Virtual TPM, Shielded VM, and Host Guardian Service Issues
 description: Helps troubleshoot virtual TPM (vTPM), shielded virtual machine (VM), and Host Guardian Service (HGS) issues in Hyper-V clusters.
-ms.date: 08/12/2025
+ms.date: 09/01/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -165,7 +165,6 @@ To gather data for troubleshooting:
 
 - Use network diagnostic tools like `Test-NetConnection` and Wireshark.
 
-## References
+## Reference
 
-- [PrepareSpecializedMachine method of the Msps_ProvisioningService class](/previous-versions/windows/desktop/mspsserviceprov/msps-provisioningservice-preparespecializedmachine)
-- Hyper-V and HGS official documentation on configuration and troubleshooting
+[PrepareSpecializedMachine method of the Msps_ProvisioningService class](/previous-versions/windows/desktop/mspsserviceprov/msps-provisioningservice-preparespecializedmachine)
