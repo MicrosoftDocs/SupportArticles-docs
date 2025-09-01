@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Hyper-V Virtual Machine Startup, State, and Access Failures
 description: Helps resolve issues related to Hyper-V VMs that fail to start, become stuck in transitional states, or become inaccessible in clustered and standalone environments.
-ms.date: 08/28/2025
+ms.date: 09/01/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
