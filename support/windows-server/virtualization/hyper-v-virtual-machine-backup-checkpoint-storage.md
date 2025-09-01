@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Hyper-V Virtual Machine Backup, Checkpoint, and Storage Failures
 description: Provides a comprehensive guide to troubleshooting common issues with Hyper-V VM backup, checkpoint management, and storage failures in Windows Server environments.
-ms.date: 08/22/2025
+ms.date: 09/01/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Troubleshoot Hyper-V virtual machine backup, checkpoint, and storage failures
 
-This article provides a comprehensive guide to troubleshooting common issues encountered with Hyper-V virtual machine (VM) backup, checkpoint management, and storage failures in Windows Server environments (Windows Server 2016, Windows Server 2019, and Windows Server 2022). These issues often arise during backup or restore operations, checkpoint creation or merging, VM startup, and storage connectivity. They can impact both production and disaster recovery workflows in standalone Hyper-V hosts, clustered setups, and environments integrated with third-party backup tools. Timely identifying and resolving these issues is critical to maintaining VM availability, data integrity, and backup reliability.
+This article provides a comprehensive guide to troubleshooting common issues encountered with Hyper-V virtual machine (VM) backup, checkpoint management, and storage failures in Windows Server environments (Windows Server 2016, Windows Server 2019, Windows Server 2022, and Windows Server 2025). These issues often arise during backup or restore operations, checkpoint creation or merging, VM startup, and storage connectivity. They can impact both production and disaster recovery workflows in standalone Hyper-V hosts, clustered setups, and environments integrated with third-party backup tools. Timely identifying and resolving these issues is critical to maintaining VM availability, data integrity, and backup reliability.
 
 You might experience:
 
