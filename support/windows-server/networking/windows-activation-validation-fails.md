@@ -74,6 +74,6 @@ For information about how to use this method, see the documentation that is incl
 For more information, see:
 
 - [Volume activation for Windows](/windows/deployment/volume-activation/volume-activation-windows).
-- [Troubleshoot Windows activation error codes](/troubleshoot/windows-server/licensing-and-activation/troubleshoot-activation-error-codes).
+- [Troubleshoot Windows activation error codes](../licensing-and-activation/troubleshoot-activation-error-codes.md).
 
 If these articles don't help you resolve the problem, search the Microsoft Knowledge Base for more information. To search the Microsoft Knowledge Base, go to [Microsoft Support](https://support.microsoft.com). Type the text of the error message that you receive, or type a description of the problem.

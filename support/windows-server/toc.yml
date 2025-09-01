@@ -2750,10 +2750,14 @@ items:
     items:
     - name: Feature and performance optimization of HVR
       href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
+    - name: Set Up HVR between Windows Server 2016 and Windows Server 2022
+      href: ./virtualization/set-up-hyper-v-replica-between-windows-server-2016-and-windows-server-2022.md
   - name: Installation and configuration of Hyper-V
     items:
     - name: Antivirus exclusions for Hyper-V hosts
       href: ./virtualization/antivirus-exclusions-for-hyper-v-hosts.md
+    - name: Block users from running Hyper-V and VMware virtual machines on workstation-class computers
+      href: ./virtualization/block-users-from-running-virtualization-features-on-specific-computers.md
     - name: Issues when starting VM or installing Hyper-V
       href: ./virtualization/bios-update-for-hyper-v.md
     - name: Run programs on non-Microsoft hardware virtualization software
@@ -2776,6 +2780,8 @@ items:
       href: ./virtualization/virtual-machine-time-not-synced.md
     - name: Hyper-V virtual machine input, migration, and device integration issues
       href: ./virtualization/hyper-v-virtual-machine-input-migration-integration.md
+    - name: Troubleshoot Linux virtual machine issues on Hyper-V
+      href: ./virtualization/linux-virtual-machine-issue-hyper-v.md  
     - name: Unknown devices in Device manager
       href: ./virtualization/unknown-device-vmbus-virtual-machine.md
     - name: Uptime value of Hyper-V Management console changes to the resume time
@@ -2816,6 +2822,8 @@ items:
     items:
     - name: Can't add a second Fibre Channel adapter
       href: ./virtualization/cannot-add-second-fibre-channel-adapter-hyperv.md
+    - name: "Can't connect to Hyper-V shared storage on Windows Server 2016"
+      href: ./virtualization/cant-connect-to-hyper-v-shared-storage-on-windows-server-2016.md
     - name: Error message after you put the page file on another drive other than the drive C
       href: ./virtualization/error-message-page-file-another-drive-guest-operating-system.md
     - name: FCoE IO failures on Hyper-V guests
@@ -2838,8 +2846,10 @@ items:
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
-    - name: virtual machine shutdown actions don't run
+    - name: Virtual machine shutdown actions don't run
       href: ./virtualization/vm-shutdown-actions-not-run.md
+    - name: Windows 11 virtual machine doesn't start after you migrate it from VMware to Hyper-V
+      href: ./virtualization/windows-11-vm-wont-start-after-migrating-from-vmware-to-hyper-v.md
   - name: Virtual machine will not boot
     items:
     - name: 0x8000FFFF error when you start VM
