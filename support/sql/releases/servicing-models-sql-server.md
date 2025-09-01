@@ -3,7 +3,7 @@ title: Servicing models for SQL Server
 description: This article describes the information regarding servicing channels for currently supported versions of SQL Server.
 ms.date: 04/08/2025
 ms.reviewer: jopilov, ramakoni, v-sidong
-ms.topic: conceptual
+ms.topic: concept-article
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ---
 

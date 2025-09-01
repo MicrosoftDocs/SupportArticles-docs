@@ -1800,6 +1800,8 @@ items:
     items:
     - name: 'Troubleshooting guidance: Application or service crashing behavior'
       href: ./performance/troubleshoot-application-service-crashing-behavior.md
+    - name: 'Troubleshooting guidance: Application or service memory leaks'
+      href: ./performance/troubleshoot-application-service-memory-leaks.md
     - name: Cannot set page files on a partition larger than 2 terabytes
       href: ./performance/cannot-set-page-files-on-partition-larger-than-2-tb.md
     - name: Compatibility for 32-bit programs on 64-bit versions of Windows
@@ -2734,6 +2736,10 @@ items:
     items:
     - name: API call of performance counters is delayed
       href: ./virtualization/api-call-performance-counters-delay-container.md
+  - name: GPU passthrough
+    items:
+    - name: "Troubleshooting Guidance: Hyper-V GPU assignment, partitioning, and passthrough"
+      href: ./virtualization/troubleshoot-hyper-v-gpu-assignment-partitioning-passthrough-issues.md
   - name: High availability virtual machines
     items:
     - name: Can't change the ConfigStoreRootPath value of a Hyper-V cluster
@@ -2746,10 +2752,14 @@ items:
       href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
     - name: Hyper-V Replica troubleshooting guide
       href: ./virtualization/hyper-v-replica-troubleshooting-guide.md
+    - name: Set Up HVR between Windows Server 2016 and Windows Server 2022
+      href: ./virtualization/set-up-hyper-v-replica-between-windows-server-2016-and-windows-server-2022.md
   - name: Installation and configuration of Hyper-V
     items:
     - name: Antivirus exclusions for Hyper-V hosts
       href: ./virtualization/antivirus-exclusions-for-hyper-v-hosts.md
+    - name: Block users from running Hyper-V and VMware virtual machines on workstation-class computers
+      href: ./virtualization/block-users-from-running-virtualization-features-on-specific-computers.md
     - name: Issues when starting VM or installing Hyper-V
       href: ./virtualization/bios-update-for-hyper-v.md
     - name: Run programs on non-Microsoft hardware virtualization software
@@ -2810,6 +2820,8 @@ items:
     items:
     - name: Can't add a second Fibre Channel adapter
       href: ./virtualization/cannot-add-second-fibre-channel-adapter-hyperv.md
+    - name: "Can't connect to Hyper-V shared storage on Windows Server 2016"
+      href: ./virtualization/cant-connect-to-hyper-v-shared-storage-on-windows-server-2016.md
     - name: Error message after you put the page file on another drive other than the drive C
       href: ./virtualization/error-message-page-file-another-drive-guest-operating-system.md
     - name: FCoE IO failures on Hyper-V guests
@@ -2832,8 +2844,10 @@ items:
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
-    - name: virtual machine shutdown actions don't run
+    - name: Virtual machine shutdown actions don't run
       href: ./virtualization/vm-shutdown-actions-not-run.md
+    - name: Windows 11 virtual machine doesn't start after you migrate it from VMware to Hyper-V
+      href: ./virtualization/windows-11-vm-wont-start-after-migrating-from-vmware-to-hyper-v.md
   - name: Virtual machine will not boot
     items:
     - name: 0x8000FFFF error when you start VM
@@ -3148,12 +3162,16 @@ items:
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
     - name: Troubleshoot Windows Update error 0x80070490
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
+    - name: Troubleshoot "Shutdown in Progress" Windows error 0x8007045b
+      href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md    
     - name: Troubleshoot Windows Update error 0x8024002E
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
       href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
-  - name: Windows Update for Business Reports
-    items:
+    - name: Troubleshoot Windows Installation Error 0x800f0831
+      href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
+    - name: Windows Update for Business Reports
+      items:
     - name: Initial service configuration and Onboarding
       items:
       - name: 'Troubleshooting guidance: Windows Update for Business reports'

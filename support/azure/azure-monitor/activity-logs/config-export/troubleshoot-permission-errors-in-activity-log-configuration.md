@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Permission Errors in Activity Log Configuration
 description: Troubleshooting guide for permission errors in Activity Log configuration.
-ms.date: 07/22/2025
+ms.date: 07/28/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-monitor
 ms.custom: I can’t configure export of Activity Logs
@@ -38,4 +38,4 @@ Users might experience permission errors when they configure the Azure Activity 
 - [Log Analytics Contributor Role](/azure/role-based-access-control/built-in-roles/analytics#log-analytics-contributor)
 - [Azure Monitor Activity Log](/azure/azure-monitor/platform/activity-log?tabs=powershell)
 
-If the issue persists after you follow these steps, open a support case for further assistance.
+[!INCLUDE [azure-help-support](../../../../includes/azure-help-support.md)]

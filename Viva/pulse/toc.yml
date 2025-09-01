@@ -1,0 +1,7 @@
+- name: Viva Pulse troubleshooting
+  href: viva-pulse-welcome.yml
+  items:
+    - name: Setup errors
+      items:
+        - name: Resolve setup errors
+          href: ./setup-errors/fix-setup-error-messages.md

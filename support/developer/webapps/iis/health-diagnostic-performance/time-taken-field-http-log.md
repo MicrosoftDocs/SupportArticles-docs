@@ -4,7 +4,7 @@ description: This article describes the functionality of the time-taken field in
 ms.date: 08/13/2024
 ms.custom: sap:Health, Diagnostic, and Performance Features\IIS logging
 ms.reviewer: mlaing
-ms.topic: article
+ms.topic: concept-article
 ---
 # Description of the time-taken field in IIS 7 HTTP logging
 

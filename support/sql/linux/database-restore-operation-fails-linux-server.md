@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem where a SQL data
 ms.date: 01/15/2021
 ms.custom: sap:SQL Server on Linux, linux-related-content
 ms.reviewer: houdu, pradm, mikehab, ramakoni
-ms.topic: article 
 ---
 # SQL database restore operation fails on Linux servers
 

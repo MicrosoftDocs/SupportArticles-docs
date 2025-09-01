@@ -3,7 +3,6 @@ title: Not enough capacity could be found
 description: Provides a resolution to solve the "Production order %1 could not be scheduled. Not enough capacity could be found" scheduling engine error.
 author: t-benebo
 ms.date: 07/29/2021
-ms.topic: article
 ms.search.form: ProdTable
 audience: Application User
 ms.reviewer: kamaybac

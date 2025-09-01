@@ -1,3 +1,4 @@
+items:
 - name: Welcome
   href: welcome-virtual-machines-windows.yml
 
@@ -35,8 +36,8 @@
         href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
       - name: Upgrade Windows Server 2008/2008 R2
         href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Windows 2003 Server
-    href: run-win-server-2003.md
+  - name: Windows Server 2003 and later versions End Of Support (EOS)
+    href: ms-azure-windows-eos.md
   - name: 32-bit operating systems
     href: support-32-bit-operating-systems-virtual-machines.md
   - name: Hybrid use benefit images are retired
@@ -236,6 +237,10 @@
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070490
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error Code 0x8007045b
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
+    - name: Error Code 0x800f0831
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md
 
 - name: My VM is not booting
   items:
