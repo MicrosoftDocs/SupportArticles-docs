@@ -36,7 +36,7 @@ If a specific HTTP redirection is expected in your organization, you can suppres
 
 ## Configure Outlook to allow connection to a specific endpoint
 
-[!INCLUDE [Important registry alert](../../includes/registry-important-alert.md)]
+[!INCLUDE [Important registry alert](../../../includes/registry-important-alert.md)]
 
 To configure the Outlook behavior when HTTP redirection occurs, you can set or deploy a registry value. Use the following steps:
 
