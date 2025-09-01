@@ -109,6 +109,8 @@
           href: ../connectivity/outlook-displays-disconnected-in-status.md
         - name: Doesn't connect Exchange using MAPI over HTTP
           href: ../connectivity/outlook-not-connect-exchange-use-mapi-over-http.md
+        - name: How to suppress AutoDiscover redirect warning
+          href: ../connectivity/suppress-autodiscover-redirect-warning.md
         - name: Proxy server causes errors with Free/Busy, OOF, and Mailtips
           href: ../connectivity/proxy-server-causes-issues-with-freebusy-oof-mailtips.md
         - name: Repeatedly disconnects and reconnects
@@ -117,6 +119,8 @@
           href: ../connectivity/outlook-send-receive-errors-http-0-http-404-http-500.md
         - name: Sending attachment outside of Outlook fails
           href: ../connectivity/event-27-mapisentmail-error-send-attachments.md
+        - name: Suppress AutoDiscover mismatch warning
+          href: ../connectivity/suppress-autodiscover-mismatch-warning.md
     - name: Contacts
       items:
         - name: 0x8007007A error when downloading Offline Address Book
@@ -199,6 +203,8 @@
           href: ../email-management/message-automatically-moved-deleted-items-folder.md
         - name: Messages move from the Inbox to a renamed folder
           href: ../email-management/messages-move-from-inbox-to-renamed-folder.md
+        - name: Remove duplicate folders when connected to an Exchange Server mailbox
+          href: ../email-management/remove-duplicate-folders.md
         - name: Some rules are disabled and can't be re-enabled
           href: ../email-management/rules-not-be-uploaded-to-exchange-server.md
         - name: Unintentional email messages received

@@ -19,6 +19,118 @@
     {
       "source_path": "Outlook/Mobile/exchange-connectivity/outlook-for-ios-and-android-with-abq-rules-are-quarantined.md",
       "redirect_url": "/previous-versions/troubleshoot/outlook/outlook-for-ios-and-android-with-abq-rules-are-quarantined"
+    },
+    {
+      "source_path": "Outlook/Mac/calendars/meetings-incorrectly-display-utc-timezone.md",
+      "redirect_url": "/troubleshoot/outlook/calendars/meetings-incorrectly-display-utc-timezone"
+    },
+    {
+      "source_path": "Outlook/Mac/calendars/no-meeting-reminders-for-delegates.md",
+      "redirect_url": "/troubleshoot/outlook/calendars/no-meeting-reminders-for-delegates"
+    },
+    {
+      "source_path": "Outlook/Mac/calendars/cannot-propose-a-new-time-for-a-meeting.md",
+      "redirect_url": "/troubleshoot/outlook/calendars/cannot-propose-a-new-time-for-a-meeting"
+    },
+    {
+      "source_path": "Outlook/Mac/calendars/cannot-save-meeting-as-draft-in-outlook-for-mac.md",
+      "redirect_url": "/troubleshoot/outlook/calendars/cannot-save-meeting-as-draft-in-outlook-for-mac"
+    },
+    {
+      "source_path": "Outlook/Mac/calendars/cannot-open-another-calendar-with-freebusy-permission.md",
+      "redirect_url": "/troubleshoot/outlook/calendars/cannot-open-another-calendar-with-freebusy-permission"
+    },
+    {
+      "source_path": "Outlook/Mac/calendars/cannot-open-shared-calendar.md",
+      "redirect_url": "/troubleshoot/outlook/calendars/cannot-open-shared-calendar"
+    },
+    {
+      "source_path": "Outlook/Mac/calendars/cannot-open-a-shared-calendar-in-outlook-2016.md",
+      "redirect_url": "/troubleshoot/outlook/calendars/cannot-open-a-shared-calendar-in-outlook-2016"
+    },
+    {
+      "source_path": "Outlook/Mac/calendars/cannot-accept-new-meeting-time-proposals.md",
+      "redirect_url": "/troubleshoot/outlook/calendars/cannot-accept-new-meeting-time-proposals"
+    },
+    {
+      "source_path": "Outlook/Mac/calendars/cannot-move-meetings-between-calendars.md",
+      "redirect_url": "/troubleshoot/outlook/calendars/cannot-move-meetings-between-calendars"
+    },
+    {
+      "source_path": "Outlook/Mac/calendars/access-denied-change-shared-calendar-permissions.md",
+      "redirect_url": "/troubleshoot/outlook/calendars/access-denied-change-shared-calendar-permissions"
+    },
+    {
+      "source_path": "Outlook/Mac/attachments/you-cannot-save-this-document-with-extension-jpg-error.md",
+      "redirect_url": "/troubleshoot/outlook/attachments/you-cannot-save-this-document-with-extension-jpg-error"
+    },
+    {
+      "source_path": "Outlook/Mac/sign-in/repeated-prompts-authentication.md",
+      "redirect_url": "/troubleshoot/outlook/sign-in/repeated-prompts-authentication"
+    },
+    {
+      "source_path": "Outlook/Mac/send-receive-emails/outlook-mac-security-groups-cannot-send-emails.md",
+      "redirect_url": "/troubleshoot/outlook/send-receive-emails/outlook-mac-security-groups-cannot-send-emails"
+    },
+    {
+      "source_path": "Outlook/Mac/send-receive-emails/prompted-for-credentials-modern-authentication.md",
+      "redirect_url": "/troubleshoot/outlook/send-receive-emails/prompted-for-credentials-modern-authentication"
+    },
+    {
+      "source_path": "Outlook/Mac/send-receive-emails/email-stuck-in-outbox-outlook-2016-mac.md",
+      "redirect_url": "/troubleshoot/outlook/send-receive-emails/email-stuck-in-outbox-outlook-2016-mac"
+    },
+    {
+      "source_path": "Outlook/Mac/search/cannot-open-email-from-sportlight-search-results.md",
+      "redirect_url": "/troubleshoot/outlook/cannot-open-email-from-sportlight-search-results"
+    },
+    {
+      "source_path": "Outlook/Mac/installation/outlook-2016-for-mac-crashes-immediately-after-startup.md",
+      "redirect_url": "/troubleshoot/outlook/installation/outlook-2016-for-mac-crashes-immediately-after-startup"
+    },
+    {
+      "source_path": "Outlook/Mac/installation/outlook-for-mac-is-a-locally-cached-email-client.md",
+      "redirect_url": "/troubleshoot/outlook/installation/outlook-for-mac-is-a-locally-cached-email-client"
+    },
+    {
+      "source_path": "Outlook/Mac/import-and-export/permissions-error-when-importing-outlook-2011-identity.md",
+      "redirect_url": "/troubleshoot/outlook/import-and-export/permissions-error-when-importing-outlook-2011-identity"
+    },
+    {
+      "source_path": "Outlook/Mac/import-and-export/cannot-import-ansi-pst-file.md",
+      "redirect_url": "/troubleshoot/outlook/import-and-export/cannot-import-ansi-pst-file"
+    },
+    {
+      "source_path": "Outlook/Mac/files-and-folders/outlook-2016-for-mac-freezes-on-email-folders.md",
+      "redirect_url": "/troubleshoot/outlook/files-and-folders/outlook-2016-for-mac-freezes-on-email-folders"
+    },
+    {
+      "source_path": "Outlook/Mac/email-messages/font-size-may-differ-from-original-email.md",
+      "redirect_url": "/troubleshoot/outlook/email-messages/font-size-may-differ-from-original-email"
+    },
+    {
+      "source_path": "Outlook/Mac/delegation/delegate-permanently-deletes-emails-from-manager-inbox.md",
+      "redirect_url": "/troubleshoot/outlook/delegation/delegate-permanently-deletes-emails-from-manager-inbox"
+    },
+    {
+      "source_path": "Outlook/Mac/delegation/could-not-get-delegate-information-from-the-server-error.md",
+      "redirect_url": "/troubleshoot/outlook/delegation/could-not-get-delegate-information-from-the-server-error"
+    },
+    {
+      "source_path": "Outlook/Mac/connectivity/outlook-2016-for-mac-crashes-using-proxy-auto-configuration-file.md",
+      "redirect_url": "/troubleshoot/outlook/connectivity/outlook-2016-for-mac-crashes-using-proxy-auto-configuration-file"
+    },
+    {
+      "source_path": "Outlook/Mac/calendars/shared-calendar-shows-private-event-details.md",
+      "redirect_url": "/troubleshoot/outlook/calendars/shared-calendar-shows-private-event-details"
+    },
+    {
+      "source_path": "Outlook/Mac/calendars/you-do-not-have-permission-error.md",
+      "redirect_url": "/troubleshoot/outlook/calendars/you-do-not-have-permission-error"
+    },
+    {
+      "source_path": "Outlook/Mac/outlook-mac-welcome.yml",
+      "redirect_url": "/troubleshoot/outlook/legacy-outlook-mac-welcome"
     }
   ]
 }
