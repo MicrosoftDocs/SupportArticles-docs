@@ -232,10 +232,4 @@ The root causes vary depending on the symptom category:
 
 - Cluster creation and KMS activation defects:
 
-  Escalate unresolved issues to Microsoft Support with logs and configuration details.
-
-## References
-
-- [Administrative roles in Hyper-V](/windows-server/virtualization/hyper-v/administrative-roles-in-hyper-v)
-- [Hyper-V port usage documentation](/windows-server/networking/manage-reserved-ports)
-- [Microsoft support for Hyper-V](https://support.microsoft.com/)
+  Escalate unresolved issues to [Microsoft Support](https://support.microsoft.com/) with logs and configuration details.
