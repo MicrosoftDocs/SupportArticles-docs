@@ -1,6 +1,6 @@
 ---
 title: Vendors can't sign in to the Vendor Collaboration Portal after re-onboarding
-description: Steps to troubleshoot when vendors can't access the Vendor Collaboration Portal (VCP) after onboarding in Dynamics 365 Supply Chain Management.
+description: Steps to troubleshoot when vendors can't access the Vendor Collaboration Portal (VCP) after re-onboarding in Dynamics 365 Supply Chain Management.
 author: vermayashi
 ms.date: 09/02/2025
 ms.search.form:  PurchTable, PurchTablePart, PurchRFQTable
