@@ -1,6 +1,6 @@
 ---
-title: Suppress AutoDiscover mismatch warning in Outlook
-description: Provides information about how to suppress the AutoDiscover mismatch warning in Outlook 2007 and later versions.
+title: Resolve AutoDiscover mismatch warning in Outlook
+description: Describes the scenarios when the AutoDiscover mismatch warning occurs in Outlook 2016 and later versions, and provides workarounds that you can use.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -21,7 +21,7 @@ appliesto:
   - Outlook 2016
 ms.date: 03/31/2025
 ---
-# Suppress AutoDiscover mismatch warning in Outlook
+# Resolve AutoDiscover mismatch warning in Outlook
 
 _Original KB number:_ &nbsp; 2783881
 
