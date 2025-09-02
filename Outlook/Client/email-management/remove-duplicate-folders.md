@@ -1,5 +1,5 @@
 ---
-title: How to remove duplicate folders when connected to Exchange mailbox
+title: Remove duplicate folders when connected to an Exchange Server mailbox
 description: Provides a resolution to remove duplicate folders in Outlook when connected to an Exchange Server mailbox.
 manager: dcscontentpm
 audience: ITPro
@@ -16,7 +16,7 @@ author: cloud-writer
 ms.author: meerak
 ms.date: 03/19/2025
 ---
-# How to remove duplicate folders in Outlook when connected to an Exchange Server mailbox
+# Remove duplicate folders in Outlook when connected to an Exchange Server mailbox
 
 ## Symptoms
 
@@ -28,7 +28,7 @@ A mobile device or a third-party server application that synchronizes with the E
 
 ## Resolution
 
-The following steps may result in data loss if you do not follow them exactly as written. We recommend that you back up Outlook data or make sure that the Exchange Server mailbox has been backed up before you proceed with these steps.
+The following steps may result in data loss if you don't follow them exactly as written. We recommend that you back up Outlook data or make sure that the Exchange Server mailbox has been backed up before you proceed with these steps.
 
 To delete the duplicate items, follow these steps:
 
