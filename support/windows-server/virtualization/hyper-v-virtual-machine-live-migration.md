@@ -12,7 +12,7 @@ ms.custom:
 ---
 # Troubleshooting guide: Hyper-V virtual machine live migration
 
-Live migration in Hyper-V allows virtual machines (VMs) to be moved between hosts with minimal downtime—a critical feature for high availability and maintenance in Windows Server environments. Despite its capabilities, live migration can fail due to a wide array of factors—hardware incompatibility, authentication, network configuration, VM settings, and storage problems. Properly diagnosing and resolving live migration failures is vital for business continuity, especially in clustered and production settings. This guide provides a comprehensive troubleshooting process, detailed solutions for common migration issues, structured data collection procedures, and quick reference resources.
+Live migration in Hyper-V allows virtual machines (VMs) to be moved between hosts with minimal downtime—a critical feature for high availability and maintenance in Windows Server environments. Despite its capabilities, live migration can fail due to a wide array of factors—hardware incompatibility, authentication, network configuration, VM settings, and storage issues. Properly diagnosing and resolving live migration failures is vital for business continuity, especially in clustered and production settings. This guide provides a comprehensive troubleshooting process, detailed solutions for common migration issues, structured data collection procedures, and quick reference resources.
 
 ## Troubleshooting checklist
 
@@ -56,8 +56,6 @@ Here are common issues and their respective resolutions:
 
 ## Hardware or CPU incompatibility
 
-Symptoms:
-
 - Error message:
 
   > The virtual machine uses processor-specific features not supported on the physical computer
@@ -72,8 +70,6 @@ Symptoms:
 > Always start VMs for the first time on the oldest (least capable) CPU host.
 
 ## VM configuration version mismatch
-
-Symptoms:
 
 - Migration works one way but not in reverse (especially after moving to a newer OS).
 - Error message:
@@ -92,8 +88,6 @@ Symptoms:
 
 ## Network connectivity or configuration issues
 
-Symptoms:
-
 - Live migration fails before/during transfer.
 - Migration fails with: "The client cannot connect to the destination specified in the request" or "WinRM protocol errors."
 - Event IDs: 20406, 280
@@ -106,12 +100,10 @@ Symptoms:
 - Verify firewall allows necessary ports (default SMB, WinRM, and clustering ports).
 - Match network configurations (switch names/types, teaming) across hosts.
 
-## Authentication or delegation problems
-
-Symptoms:
+## Authentication or delegation issues
 
 - Error code: "General access denied error (0x80070005)"
-- Errors 0x8009030E, 0x8009030D (delegation/Kerberos/SPN problems)
+- Errors 0x8009030E, 0x8009030D (delegation/Kerberos/SPN issues)
 
 ### Resolution
 
@@ -121,8 +113,6 @@ Symptoms:
 - Purge old Kerberos tickets: `KLIST PURGE -li 0x3e7`
 
 ## Storage or shared disk issues
-
-Symptoms:
 
 - Migration fails for VMs with shared VHDX/shared disks
 - Error: Shared disk missing in migration options.
@@ -134,8 +124,6 @@ Symptoms:
 
 ## VTPM or shielded VM certificate issues
 
-Symptoms:
-
 - Error: "The key protector for the virtual machine could not be unwrapped."
 - Migration only fails for vTPM-protected VMs.
 
@@ -143,15 +131,9 @@ Symptoms:
 
 - Export shielding or key protector certificates from source host and import on destination.
 - Windows certificates snap-in (**certmgr.msc**) can be used.
-- PowerShell cmdlet:
-  
-  ```powershell
-  Export-PfxCertificate and Import-PfxCertificate
-  ```
+- PowerShell cmdlets: `Export-PfxCertificate` and `Import-PfxCertificate`.
 
-## State file or checkpoint problems
-
-Symptoms:
+## State file or checkpoint issues
 
 - Error message:
   
@@ -165,8 +147,6 @@ Symptoms:
 - Remove or merge corrupted checkpoints.
 
 ## Cluster or migration limit issues
-
-Symptoms:
 
 - Error message:
   
@@ -186,10 +166,7 @@ Symptoms:
 
 ## Code defects or bugs
 
-Symptoms:
-
-- VMs stuck in "Stopping" state after migration; orphaned vport reported in live dump analysis.
-- Case number: 2502260050001354003
+VMs stuck in "Stopping" state after migration; orphaned vport reported in live dump analysis.
 
 ### Resolution
 
@@ -226,12 +203,10 @@ Standard data collection checklist:
 | Live migration events show failures post-update | Patch/Firmware/Speculation setting | Ensure all nodes are updated/patched; check speculation control settings |
 | VM backs up forever, can't move/out/in "Backing up" state | Backup software lock | Restart backup service, VMMS service, or power on VM to merge checkpoints |
 
+Ensuring successful Hyper-V live migration requires diligent configuration management—including CPU, firmware, network, authentication, storage, and permissions—across all participating hosts. By following the troubleshooting checklist, addressing known root causes as outlined in the solutions section, and using targeted data collection, most migration failures can be swiftly resolved or appropriately escalated. Staying current with patches, standardizing cluster configurations, and understanding log outputs minimize downtime and operational risk for mission-critical virtual machine workloads.
+
 ## References
 
 - WinRM and `TrustedHosts` configuration: [Installation and configuration for Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management)
 - Cluster Shared Volumes and migration limits: [Cluster Shared Volumes overview](/windows-server/failover-clustering/failover-cluster-csvs)
 - SCVMM VMware-to-Hyper-V conversion: [Convert a VMware VM to Hyper-V in the VMM fabric](/system-center/vmm/vm-convert-vmware)
-
-## Summary
-
-Ensuring successful Hyper-V live migration requires diligent configuration management—including CPU, firmware, network, authentication, storage, and permissions—across all participating hosts. By following the troubleshooting checklist, addressing known root causes as outlined in the solutions section, and using targeted data collection, most migration failures can be swiftly resolved or appropriately escalated. Staying current with patches, standardizing cluster configurations, and understanding log outputs minimize downtime and operational risk for mission-critical virtual machine workloads.
