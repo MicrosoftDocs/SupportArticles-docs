@@ -348,7 +348,7 @@ The root cause of high etcd memory usage is typically intensive API server load.
 
 The etcd memory alert can be triggered by any combination of three factors. Use these diagnostic tools to identify which factor is most problematic in your situation:
 
-- **For high request rates**: Use the **API Server Resource Intensive Listing Analyzer** from [Step 2](#step-2-identify-and-chart-the-average-latency-of-api-server-requests-per-user-agent) to identify agents that make excessive LIST calls.
+- **For high request rates**: Use the **API Server Resource Intensive Listing Analyzer** from [Step 2](#step-2a-identify-and-chart-the-average-latency-of-api-server-requests-per-user-agent) to identify agents that make excessive LIST calls.
 - **For object count and size issues**: Use the **Etcd Performance Analyzer** and **Etcd Capacity Analyzer** in the Azure portal.
 
 #### How to use the Etcd Performance Analyzer
@@ -365,14 +365,14 @@ What you get:
 
 Next steps based on results:
 - If high request rates are indicated, run the **API Server Resource Intensive Listing Analyzer** (see Step 2 earlier in this article) to identify offending agents and LIST patterns.
-- If large objects or many objects are indicated, run the **Etcd Capacity Analyzer**, and follow [Cause 2](#cause-2-an-offending-client-leaks-etcd-objects-and-results-in-a-slowdown-of-etcd).
+- If large objects or many objects are indicated, run the **Etcd Capacity Analyzer**, and follow [Cause 2](#cause-2-an-offending-client-leaks-etcd-objects-and-causes-a-slowdown-of-etcd).
 
 **Step 2: Apply the appropriate solution based on your findings**
 
 After you identify the primary cause, apply the relevant solution from this troubleshooting guide:
 
 - **If excessive LIST or PUT calls are identified**: Follow the [Cause 3](#cause-3-an-offending-client-makes-excessive-list-or-put-calls) solution to tune API call patterns or throttle problematic clients.
-- **If too many objects are stored in etcd**: Follow the [Cause 2](#cause-2-an-offending-client-leaks-etcd-objects-and-results-in-a-slowdown-of-etcd) solution to clean up objects and implement retention policies.
+- **If too many objects are stored in etcd**: Follow the [Cause 2](#cause-2-an-offending-client-leaks-etcd-objects-and-causes-a-slowdown-of-etcd) solution to clean up objects and implement retention policies.
 - **If large objects are consuming excessive memory**: Focus on the following object size reduction techniques.
 
 **Additional mitigation for large object sizes:**
