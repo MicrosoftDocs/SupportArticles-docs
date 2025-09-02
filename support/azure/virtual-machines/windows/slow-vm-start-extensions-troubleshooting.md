@@ -1,7 +1,7 @@
 ---
 title: Slow Azure Virtual Machine Start Operations Caused by Extensions in failed state
 description: Troubleshooting guide for slow Azure Virtual Machine Start operations that are caused by the extensions being in a failed state.
-ms.date: 08/28/2025
+ms.date: 09/02/2025
 ms.reviewer: v-liuamson; v-gsitser
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -34,9 +34,9 @@ To mitigate this issue, follow these steps:
 
       :::image type="content" source="media/slow-vm-start-extensions-troubleshooting/extensions-applications-status.png" alt-text="Screenshot of the portal showing the extensions and applications statuses. Status is highlighted.":::
 
-    - Logs for the extensions can be found within the Guest OS of the VM. For more information, see the [Further Troubleshooting section](#further-troubleshooting).
+    - Logs for the extensions can be found within the Guest OS of the VM. For more information, see the [References section](#references).
 
-1. Check the status of the VM "Guest Agent" that's responsible for provisioning the extensions. If the "Guest Agent" isn't in a ready state, a review might be required. For more guidance, refer to the documents that are mentioned in the [Further Troubleshooting section](#further-troubleshooting).
+1. Check the status of the VM "Guest Agent" that's responsible for provisioning the extensions. If the "Guest Agent" isn't in a ready state, a review might be required. For more guidance, refer to the documents that are mentioned in the [References section](#references).
 
       :::image type="content" source="media/slow-vm-start-extensions-troubleshooting/agent-status-version.png" alt-text="Screenshot of the portal showing the VM overview. Agent status and Agent version are highlighted.":::
 
