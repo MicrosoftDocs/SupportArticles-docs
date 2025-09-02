@@ -19,6 +19,10 @@
     {
       "source_path": "Outlook/Mobile/exchange-connectivity/outlook-for-ios-and-android-with-abq-rules-are-quarantined.md",
       "redirect_url": "/previous-versions/troubleshoot/outlook/outlook-for-ios-and-android-with-abq-rules-are-quarantined"
+    },
+    {
+      "source_path": "Outlook/Mac/outlook-mac-welcome.yml",
+      "redirect_url": "/troubleshoot/outlook/legacy-outlook-mac-welcome"
     }
   ]
 }
