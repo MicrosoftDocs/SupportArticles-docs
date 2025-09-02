@@ -338,7 +338,7 @@ You might receive an alert that states that etcd memory usage exceeds 20 GiB. Th
 
 To check the current etcd memory usage and understand the specific factors that contribute to the high memory consumption, navigate to **Diagnose and Solve Problems** in the Azure portal. Run the **Etcd Performance Analyzer** by searching for "_etcd performance_" in the Search box. The analyzer shows you the memory usage breakdown and helps identify whether the cause of the problem is high request rates, large object counts, or large object sizes.
 
-:::image type="content" source="media/troubleshoot-apiserver-etcd/etcd-performance-analyzer.png" alt-text="Azure portal screenshot of AKS Diagnose and solve problems showing the Etcd Performance Analyzer with memory usage breakdown and top contributors." lightbox="media/troubleshoot-apiserver-etcd/etcd-performance-analyzer.png":::
+:::image type="content" source="media/troubleshoot-apiserver-etcd/ETCD-performance-analyzer.png" alt-text="Azure portal screenshot of AKS Diagnose and solve problems showing the Etcd Performance Analyzer with memory usage breakdown and top contributors." lightbox="media/troubleshoot-apiserver-etcd/ETCD-performance-analyzer.png":::
 
 The root cause of high etcd memory usage is typically intensive API server load. This problem overlaps the other causes that this article discusses. To identify the specific problem that's affecting your cluster, use the following solution.
 
