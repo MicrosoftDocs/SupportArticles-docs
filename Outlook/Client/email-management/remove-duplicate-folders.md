@@ -1,5 +1,5 @@
 ---
-title: Remove duplicate folders when connected to an Exchange Server mailbox
+title: Remove duplicate folders in Outlook when connected to an Exchange Server mailbox
 description: Provides a resolution to remove duplicate folders in Outlook when connected to an Exchange Server mailbox.
 manager: dcscontentpm
 audience: ITPro
