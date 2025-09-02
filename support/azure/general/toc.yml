@@ -1,3 +1,4 @@
+items:
 - name: Welcome
   href: welcome-general.yml
 
@@ -13,6 +14,8 @@
     href: secure-file-exchange-transfer-files.md
   - name: How to tell if an email from Support is genuine
     href: email-domains-support-agent.md
+  - name: Zonal enablement request for restricted VM series
+    href: zonal-enablement-request-for-restricted-vm-series.md
 
 - name: Other common issues
   items:
