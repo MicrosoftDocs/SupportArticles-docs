@@ -2804,6 +2804,10 @@ items:
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
     - name: Troubleshoot live migration issues
       href: ./virtualization/troubleshoot-live-migration-issues.md
+  - name: PowerShell cmdlets
+    items:
+    - name: Troubleshoot PowerShell, Hyper-V, storage, and cluster management issues
+      href: ./virtualization/hyper-v-storage-cluster-management.md
   - name: Remote administration of the Hyper-V role
     items:
     - name: Troubleshoot Hyper-V cluster connectivity, management, and configuration failures
