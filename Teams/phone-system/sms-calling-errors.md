@@ -1,6 +1,6 @@
 ---
-title: Resolve 10DLC campaign rejection errors
-description: Provides a list of potential 10DLC campaign rejection errors, and guidance to resolve them.
+title: Resolve campaign rejection errors for SMS in Microsoft Teams
+description: Provides a list of potential campaign rejection errors when setting up SMS in Teams, and guidance to resolve them.
 ms.date: 08/18/2025
 manager: dcscontentpm
 audience: Admin
@@ -12,7 +12,7 @@ ms.custom:
   - CI 7095
 ms.reviewer: julienp, revaldiv
 ---
-# Resolve 10DLC campaign rejection errors
+# Resolve campaign rejection errors for SMS in Microsoft Teams
 
 When you enable the [Short Message Service (SMS)](/microsoftteams/sms-overview) feature in Microsoft Teams, you might need to troubleshoot and resubmit [campaigns](/microsoftteams/sms-setup-campaign) that were rejected during the 10-digit-long code (10DLC) review process. After a campaign is submitted, Microsoft and 10DLC operators evaluate it for compliance with Mobile Network Operator (MNO) and industry standards. If the campaign doesn't meet these requirements, it's rejected and generates one or more error codes.
 
