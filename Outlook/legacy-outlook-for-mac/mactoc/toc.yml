@@ -1,5 +1,5 @@
-- name: Outlook for Mac Troubleshooting
-  href: ../outlook-mac-welcome.yml
+- name: Legacy Outlook for Mac Troubleshooting
+  href: ../legacy-outlook-mac-welcome.yml
   items:
     - name: Attachments
       items:
