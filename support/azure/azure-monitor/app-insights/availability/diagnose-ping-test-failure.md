@@ -59,10 +59,4 @@ If you can't connect from certain regions, the issue might be related to local r
 > - Connection establishment
 > - TLS transport
 
-## Next steps
-
-- Use [TrackAvailability](xref:Microsoft.ApplicationInsights.TelemetryClient.TrackAvailability%2A) to submit [custom availability tests](/azure/azure-monitor/app/availability-azure-functions).
-
-- Learn about [URL ping tests](/azure/azure-monitor/app/monitor-web-app-availability).
-
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
