@@ -13,14 +13,16 @@ ai-usage: ai-assisted
 ---
 # Troubleshoot PowerShell, Hyper-V, storage, and cluster management issues in Windows Server
 
-This article provides a comprehensive guide to troubleshooting common issues encountered in managing Hyper-V, Storage Spaces Direct (S2D), Failover Clustering, and PowerShell tasks in Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025, and Windows 10 Enterprise/Education. These issues often impact virtual machine operations, storage management, cluster communication, and automation, resulting in failures like VHD/VSS corruption and PowerShell command errors. This guide offers detailed solutions and diagnostic methodologies to resolve these challenges.
+This article provides a comprehensive guide to troubleshooting common issues encountered in managing Hyper-V, Storage Spaces Direct (S2D), Failover Clustering, and PowerShell tasks in Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025, and Windows 10 Enterprise/Education. These issues often impact virtual machine operations, storage management, cluster communication, and automation, resulting in failures like VHD/VSS corruption and PowerShell cmdlet errors. This guide offers detailed solutions and diagnostic methodologies to resolve these challenges.
 
 You might experience the following issues:
 
 ## Hyper-V/Virtualization
 
 - Virtual machine (VM) import or migration failures without explicit error messages.
-- Unbootable VMs after tasks such as Optimize-VHD, with error code 0x80070570: "The file or directory is corrupted and unreadable."
+- Unbootable VMs after tasks such as Optimize-VHD, with error code 0x80070570:
+  
+  > The file or directory is corrupted and unreadable.
 - Problems enabling processor compatibility or Promiscuous Mode via PowerShell.
 - Concerns with VM live migration between cluster nodes with different CPU models.
 - Failures in generating inventory or storage usage reports via PowerShell.
@@ -54,7 +56,7 @@ The root causes of these issues can be categorized as follows:
 
 ## Cause 1: Configuration or knowledge gaps
 
-- Incorrect or incomplete PowerShell command syntax.
+- Incorrect or incomplete PowerShell cmdlet syntax.
 - Limited understanding of retrieving storage or VM information using built-in tools.
 - Misunderstanding CPU compatibility requirements for VM migration across different hardware.
 
