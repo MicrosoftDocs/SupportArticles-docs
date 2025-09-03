@@ -17,7 +17,7 @@ This article provides a comprehensive guide to troubleshooting common issues enc
 
 You might experience the following issues:
 
-## Hyper-V/Virtualization
+## Hyper-V/Virtualization issues
 
 - Virtual machine (VM) import or migration failures without explicit error messages.
 - Unbootable VMs after tasks such as Optimize-VHD, with error code 0x80070570:
@@ -32,21 +32,21 @@ You might experience the following issues:
   - > The property MonitorMode cannot be found on this object. Verify that the property exists and can be set.
   - > connect-VIServer: Failed to connect: Could not load file or assembly VMware.Vim, Version=8.3.0.399...
 
-## Storage/S2D
+## Storage/S2D issues
 
 - `Get-PhysicalDisk` and `Get-VirtualDisk` return no output or incorrect data from some cluster nodes.
 - Disks appear as "unknown" or detached in PowerShell but show as healthy in Failover Cluster Manager.
 - Files in App-V packages display as **offline** or reparse points, and applications fail to launch.
 - Volume Shadow Copy Service (VSS) commands, such as `vssadmin list writers`, return empty or missing writer lists.
 
-## Cluster/Permissions
+## Cluster/Permissions issues
 
 - Scheduled tasks running PowerShell scripts with `Get-Cluster*` cmdlets fail on passive nodes with errors like:
 
   > Get-Cluster: You do not have administrative privileges on the cluster. Access is denied.
 - Intermittent restoration of permissions after toggling settings or restarting services.
 
-## General/Reporting
+## General/Reporting issues
 
 - Inability to enumerate disks, storage usage, or generate inventory reports via PowerShell.
 - Issues connecting to Azure subscriptions using PowerShell.
