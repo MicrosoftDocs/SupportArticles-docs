@@ -107,7 +107,7 @@ Follow these step-by-step solutions to address the described issues.
    - Export inventory:
 
      ```powershell
-     Get-VM | Select-Object -Property \* | Export-Csv -Path "C:\VMInventory.csv" -NoTypeInformation
+     Get-VM | Select-Object -Property * | Export-Csv -Path "C:\VMInventory.csv" -NoTypeInformation
      ```
 
 2. Enable VM processor compatibility
