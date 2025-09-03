@@ -59,7 +59,7 @@ Each of the following links provides information for all of the applicable produ
 | Build number or version | Service pack | Update    | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|-----------|-------------------------------------------------------|--------------------|
 | 16.0.4212.1             | None         | CU20 + GDR| [KB5065220](https://support.microsoft.com/help/5065220) | Septemebr 09, 2025    |
-| 16.0.4212.1             | None         | GDR       | [KB5065221](https://support.microsoft.com/help/5065221) | September 09, 2025    |
+| 16.0.1150.1             | None         | GDR       | [KB5065221](https://support.microsoft.com/help/5065221) | September 09, 2025    |
 | 16.0.4210.1             | None         | CU20 + GDR| [KB5063814](https://support.microsoft.com/help/5063814) | August 12, 2025    |
 | 16.0.1145.1             | None         | GDR       | [KB5063756](https://support.microsoft.com/help/5063756) | August 12, 2025    |
 | 16.0.4205.1            | None         | CU20| [KB5059390](sqlserver-2022/cumulativeupdate20.md) | July 10, 2025    |
@@ -106,7 +106,7 @@ Each of the following links provides information for all of the applicable produ
 | Build number or version | Service pack | Update     | Knowledge Base number                                            | Release date       |
 |-------------------------|--------------|------------|-------------------------------------------------------|--------------------|
 | 15.0.4445.1             | None         | CU32 + GDR | [KB5065222](https://support.microsoft.com/help/5065222)       | September 09, 2025  |
-| 15.0.4445.1             | None         | GDR        | [KB5065223](https://support.microsoft.com/help/5065223)       | September 09, 2025  |
+| 15.0.2145.1             | None         | GDR        | [KB5065223](https://support.microsoft.com/help/5065223)       | September 09, 2025  |
 | 15.0.4440.1             | None         | CU32 + GDR | [KB5063757](https://support.microsoft.com/help/5063757)       | August 12, 2025  |
 | 15.0.2140.1             | None         | GDR        | [KB5063758](https://support.microsoft.com/help/5063758)       | August 12, 2025  |
 | 15.0.4435.7             | None         | CU32 + GDR | [KB5058722](https://support.microsoft.com/help/5058722)       | July 08, 2025  |
