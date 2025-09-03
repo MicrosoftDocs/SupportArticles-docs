@@ -22,9 +22,9 @@ The following sections provide a comprehensive list of potential rejection error
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
-|CallToActionConsentNotOptional |  The opt-in form is used for purposes beyond SMS messaging, but SMS consent isn't optional. | If your opt-in form serves multiple purposes (for example, account creation, newsletter signup), make sure that SMS consent is optional. You can do this by either making the phone number field optional or including a clearly labeled checkbox to let users agree to receive SMS messages. Forced consent isn't permitted. |
+|CallToActionConsentNotOptional |  The opt-in form is used for purposes beyond SMS messaging, but SMS consent isn't optional. | If your opt-in form serves multiple purposes (for example, account creation, newsletter signup), make sure that SMS consent is optional. You can make this change either by making the phone number field optional or including a clearly labeled checkbox to let users agree to receive SMS messages. Forced consent isn't permitted. |
 |CallToActionContainsDisallowedContent | The Call to Action contains disallowed content. | Remove any prohibited content from the Call to Action. |
-|CallToActionCourtOrderedOptIn | Opt-in information implies consent is acquired through a court order. This is disallowed. | Remove any language suggesting that opt-in is obtained through a legal mandate or court order. Consent must be voluntary and user-initiated.|
+|CallToActionCourtOrderedOptIn | Opt-in information implies that consent is acquired through a court order. This statement is disallowed. | Remove any language that suggests that opt-in is obtained through a legal mandate or court order. Consent must be voluntary and user-initiated.|
 | CallToActionDoesNotContainRobustAgeGate | The Call to Action doesn't contain a robust age gate for age-restricted content. | Add a clear age verification step for age-restricted campaigns. |
 | CallToActionIsMissingOrInaccessible | The Call to Action is missing or inaccessible. | Make sure that the Call to Action is present and accessible to users. |
 | CallToActionMissingBrandName | The Call to Action doesn't contain the registered (DBA) brand name. | Add the brand name in the Call to Action. |
