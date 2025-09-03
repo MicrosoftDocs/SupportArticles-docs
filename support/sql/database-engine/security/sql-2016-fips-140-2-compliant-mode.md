@@ -18,6 +18,8 @@ _Original KB number:_ &nbsp; 4014354
 >   In this article, we use FIPS 140-2-compliant, FIPS 140-2 compliance, and FIPS 140-2-compliant mode to mean that SQL Server 2016 and later versions
 use only FIPS 140-2-validated instances of algorithms and hashing functions in all instances in which encrypted or hashed data is imported to or exported from SQL Server 2016 and later versions. Additionally, this means that SQL Server 2016 and later versons will manage keys in a secure manner, as is required of FIPS 140-2-validated cryptographic modules. The key-management process also includes both key generation and key storage.
 > - We use "certified" here to mean that the instance of the algorithm is FIPS 140-2 validated or that the operating system contains FIPS140-2-validated instances of algorithms.
+>
+> - SQL Server on Linux deployments are not FIPS compliant. This is also documented under the [unsupported features list for SQL Server on Linux](/sql/linux/sql-server-linux-editions-and-components-2025#unsupported-features-and-services).
 
 ## What is FIPS?
 
