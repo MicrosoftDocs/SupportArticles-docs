@@ -3,10 +3,14 @@ items:
   href: welcome-native-integrations.yml
 - name: Marketplace purchase errors
   href: marketplace-purchases-errors.md
-- name: Informatica
+- name: Astro
   items:
-    - name: Issues creating Informatica resources in Azure
-      href: informatica/resource-creation.md
+    - name: Issues creating Astro resources in Azure
+      href: astro/resource-creation.md
+    - name: Can't use personal email
+      href: astro/personal-email.md
+    - name: Issues with Single Sign On (SSO)
+      href: astro/single-sign-on.md
 - name: Datadog
   items: 
     - name: Diagnostic settings manual update
@@ -37,6 +41,10 @@ items:
       href: log-forwarding-persists.md
     - name: Log limitations
       href: log-limitations.md
+- name: Informatica
+  items:
+    - name: Issues creating Informatica resources in Azure
+      href: informatica/resource-creation.md
 - name: New Relic
   items:
     - name: Diagnostic settings manual update

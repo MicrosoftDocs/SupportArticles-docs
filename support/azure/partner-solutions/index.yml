@@ -25,7 +25,19 @@ landingContent:
             url: marketplace-purchases-errors.md
 
 # Card
-  - title:  Informatica
+- title: Astro 
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Issues creating Astro resources  
+          url: astro/resource-creation.md
+        - text: Can't use personal email
+          url: astro/personal-email.md
+        - text: Issues with Single Sign On (SSO)
+          url: astro/single-sign-on.md
+
+# Card
+  - title: Informatica
     linkLists:
       - linkListType: how-to-guide
         links:
