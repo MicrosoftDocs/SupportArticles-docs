@@ -12,21 +12,21 @@ ms.custom:
 ---
 # Troubleshooting guide: Hyper-V nested virtualization
 
-Nested virtualization allows you to run Hyper-V (or other hypervisors) within a virtual machine, enabling powerful development, testing, and learning scenarios where you need virtual machines inside other VMs. This is typically available on Windows Server 2016 or later, Windows 10/11 Pro and Enterprise (with Hyper-V), and supported Azure virtual machine series. Nested virtualization introduces complexity—networking, memory, CPU compatibility, host/guest configuration, and performance often require careful consideration. This guide provides a structured approach for troubleshooting nested virtualization issues in physical and cloud-based environments.
+Nested virtualization allows you to run Hyper-V (or other hypervisors) within a virtual machine, enabling powerful development, testing, and learning scenarios where you need virtual machines inside other VMs. This is typically available in Windows Server 2016 or later versions, Windows 10 or Windows 11 Pro and Enterprise (with Hyper-V), and supported Azure virtual machine series. Nested virtualization introduces complexity—networking, memory, CPU compatibility, host/guest configuration, and performance often require careful consideration. This guide provides a structured approach for troubleshooting nested virtualization issues in physical and cloud-based environments.
 
-## Troubleshooting Checklist
+## Troubleshooting checklist
 
 Before diving into specific issues, follow this checklist to ensure the environment is correctly set up for nested virtualization:
 
 1. Verify host compatibility
 
-    - Host is Windows Server 2016 and later versions, or Windows 10/11 Pro/Enterprise.
+    - Host is Windows Server 2016 or later version, Windows 10 or Windows 11 Pro or Enterprise.
     - Host CPU supports VT-x (Intel) or AMD-V (AMD); Hardware virtualization enabled in BIOS/UEFI.
 
 1. Confirm guest VM settings
 
     - Guest VM is Generation 2.
-    - Guest VM running compatible OS (Windows Server 2016, and later versions, Windows 10/11, and later versions, select Linux with Hyper-V support).
+    - Guest VM running compatible OS (Windows Server 2016, or later version, Windows 10, Windows 11, or later version, select Linux with Hyper-V support).
 
 1. Enable nested virtualization
 
