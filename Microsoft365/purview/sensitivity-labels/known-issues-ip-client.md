@@ -3,9 +3,9 @@
 
 title: Known issues for the information protection client
 description: Describes known issues with the Microsoft Purview Information Protection client.
-author: aashishr
-ms.author: aashishr
-manager: aashishr
+author: cloud-writer
+ms.author: meerak
+manager: dcscontentpm
 ms.date: 09/04/2025
 ms.topic: reference
 ms.collection: M365-security-compliance
