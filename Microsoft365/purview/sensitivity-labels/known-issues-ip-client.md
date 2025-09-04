@@ -9,7 +9,7 @@ manager: dcscontentpm
 ms.date: 09/04/2025
 ms.topic: troubleshooting
 ms.service: information-protection
-
+---
 # Known issues for the information protection client
 
 [!INCLUDE [looking-for-mip](../includes/looking-for-mip.md)]
