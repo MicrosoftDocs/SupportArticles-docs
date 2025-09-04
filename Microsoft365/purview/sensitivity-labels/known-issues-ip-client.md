@@ -38,7 +38,7 @@ Container files are files that include other files, with a typical example being
 
 You can classify and protect these container files, but the classification and protection isn't applied to each file inside the container.
 
-If you have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings. However, you can remove the protection for all files in supported container files by using the [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) cmdlet. 
+If you have a container file that includes classified and protected files, you must first extract the files to change their classification or protection settings. However, you can remove the protection for all files in supported container files by using the [Set-AIPFileLabel](/powershell/module/purviewinformationprotection/set-filelabel) cmdlet. 
 
 Encryption for .msg files is supported in the [MIP SDK](/information-protection/develop/concept-email) only.
 
@@ -127,7 +127,7 @@ The following features aren't supported or are partially supported when [coautho
 
 When users share external doc types, such as PDFs, across tenants, recipients receive a consent prompt that requires them to accept the sharing of the listed permissions. For example:
 
-:::image type="content" source="media/cross-tenant-consent.png" alt-text="Cross-tenant consent prompt.":::
+:::image type="content" source="media/known-issues-ip-client/cross-tenant-consent.png" alt-text="Cross-tenant consent prompt.":::
 
 Depending on your application, you might see this prompt repeatedly for the same document. When the prompt appears, select **Accept** to continue to the shared document.
 
@@ -167,7 +167,7 @@ Tracking and revoking document access using the unified labeling client has the 
 
 - [Documents accessed via SharePoint or OneDrive](#documents-accessed-via-sharepoint-or-onedrive)
 
-For more information, see the [Admin Guide](/purview/track-and-revoke-admin) and [User Guide](https://support.microsoft.com/office/1de9a543-c2df-44b6-9464-396b23018) procedures.
+For more information, see the [Admin Guide](/purview/track-and-revoke-admin) and [User Guide](https://support.microsoft.com/office/1de9a543-c2df-44b6-9464-396b23018f96) procedures.
 
 #### Password-protected documents
 
