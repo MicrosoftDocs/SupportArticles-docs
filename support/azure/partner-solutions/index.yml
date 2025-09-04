@@ -25,8 +25,8 @@ landingContent:
             url: marketplace-purchases-errors.md
 
 # Card
-- title: Astro 
-  linkLists:
+  - title: Astro 
+    linkLists:
     - linkListType: how-to-guide
       links:
         - text: Issues creating Astro resources  
