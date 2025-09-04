@@ -5,17 +5,19 @@ ms.reviewer: claudiogodoy
 ms.service: azure-kubernetes-service
 ms.date: 05/24/2025
 ---
-# Managed NGINX ingress controller guidance
+# Troubleshoot issues in Managed NGINX ingress controller 
 
-The [Managed NGINX ingress controller](/azure/aks/app-routing) is a routing add-on that enables routing HTTP and HTTPS traffic to applications that run on an [Azure Kubernetes Service (AKS)](/azure/aks/) cluster.
+The [Managed NGINX ingress controller](/azure/aks/app-routing) is a routing add-on that enables the routing of HTTP and HTTPS traffic to applications that run on an [Azure Kubernetes Service (AKS)](/azure/aks/) cluster.
 
-The routing system might be the root cause of performance-related problems. This article provides step-by-step guidance to troubleshoot NGINX ingress controller performance issues. This aricle also discusses common symptoms, root cause analysis, and configuration adjustments.
+The routing system might be the root cause of performance-related problems. This article provides step-by-step guidance to troubleshoot NGINX ingress controller performance issues. This article also discusses common symptoms, root cause analysis, and configuration adjustments.
 
 ## Prerequisites
 
 Before you start, make sure that you have the following tool installed:
 
-- **Kubernetes CLI (`kubectl`)**: Use Azure CLI, and run the `az aks install-cli` command.
+- Kubernetes CLI (`kubectl`)
+
+Use Azure CLI, and run the `az aks install-cli` command.
 
 ## Symptoms
 
@@ -57,14 +59,14 @@ To troubleshoot the issue, follow these steps.
     nginx   Deployment/nginx   cpu: 133%/70%        1         2         2          80m
     ```
 
-The **TARGETS** column shows the CPU threshold at which the `HPA` is triggered to scale up the pods. There are a few possibilities for this behavior:
+The **TARGETS** column shows the CPU threshold at which the `HPA` is triggered to scale up the pods. There are several possibile causes of this behavior:
 
-- `HPA` has reached the maximum number of pods.
+- The `HPA` reached the maximum number of pods.
 - No nodes are available to use to schedule the pods.
 
 ### Step 2: Look for pods in a pending state
 
-If your evaluation reveals that `NGINX HPA` hasn't reached the maximum number of pods, the [kube-scheduler](https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/#kube-scheduler) might not be able to find available nodes to use to schedule the `NGINX pods`. To find pending pods, run the following command:
+If your evaluation reveals that `NGINX HPA` didn't reach the maximum number of pods, the [kube-scheduler](https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/#kube-scheduler) might not be able to find available nodes to use to schedule the `NGINX pods`. To find pending pods, run the following command:
 
     ```console
     kubectl get pod --field-selector=status.phase=Pending -n app-routing-system
@@ -75,7 +77,7 @@ If your evaluation reveals that `NGINX HPA` hasn't reached the maximum number of
 
 ### Step 3: Check whether limits are applied to the NGINX deployment
 
-Any misconfiguration on the `NGINX` [resource limits or requests](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) can cause the `HPA` to scale up more pods than what's necessary. To check the limits, follow these steps:
+Any misconfiguration on the `NGINX` [resource limits or requests](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/) can cause the `HPA` to scale up more pods than it needs. To check the limits, follow these steps:
 
 1. Describe the NGINX deployment:
 
@@ -145,7 +147,7 @@ The following configuration options directly affect the `HPA` behavior.
     kubectl get hpa -n app-routing-system
     ```
 
-The HPA automatically updates based on your new configuration. The NGINX ingress controller scales according to the specified parameters.
+The HPA automatically updates, based on your new configuration. The NGINX ingress controller scales according to the specified parameters.
 
 ## References
 
