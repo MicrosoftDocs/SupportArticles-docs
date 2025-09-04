@@ -38,4 +38,3 @@ SSO issues can occur if you're using an incorrect email, haven't provided consen
 - Verify you're using the correct Microsoft Entra email for SSO.
 - Ensure you've consented to allow access for the Astronomer SaaS portal.
 - If you see both Admin and User consent screens during first-time login, check your tenant consent settings.
-- Refer to the [single sign-on documentation](/azure/partner-solutions/astronomer/manage) for additional troubleshooting steps.
