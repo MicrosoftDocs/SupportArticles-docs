@@ -79,7 +79,7 @@ Here are common issues and their respective resolutions:
 
 ### Resolution
 
-- Upgrade the VM configuration version when moving to a newer host (Hyper-V Manager: Action > Upgrade VM Configuration Version).
+- Upgrade the VM configuration version when moving to a newer host (Hyper-V Manager: **Action** > **Upgrade VM Configuration Version**).
 
   > [!NOTE]
   > This action can't be rolled back. VMs with the upgraded version can't be migrated back to older hosts.
@@ -199,8 +199,8 @@ Standard data collection checklist:
 | vTPM-enabled VM fails with "The key protector... could not be unwrapped." | Certificate/Shielded VM configuration | Export/import key protector certificates. |
 | Migration fails—the shared disk isn't available in the migration wizard. | Unsupported scenario | Manually reattach disks; follow the shared disk migration documentation. |
 | Live migration limit reached; VMs enter the "Saved" state in draining. | Low concurrency settings; improper drain | Raise the migration limit; drain roles before rebooting. |
-| "No matching virtual switch found..." | Inconsistent Network switch configuration | Ensure the identical virtual switch configuration on all hosts. |
-| Live migration events show failures post-update | Patch/Firmware/Speculation settings | Ensure all nodes are updated/patched; check speculation control settings. |
+| "No matching virtual switch found..." | Inconsistent network switch configuration | Ensure the identical virtual switch configuration on all hosts. |
+| Live migration events show failures post-update. | Patch/Firmware/Speculation settings | Ensure all nodes are updated/patched; check speculation control settings. |
 | VM backs up forever and can't move in/out of the "Backing up" state. | Backup software lock | Restart the backup service and VMMS service, or power on the VM to merge checkpoints. |
 
 Ensuring successful Hyper-V live migrations requires diligent configuration management—including CPU, firmware, network, authentication, storage, and permissions—across all participating hosts. By following the troubleshooting checklist, addressing the known root causes as outlined in the resolution sections, and using targeted data collection, most migration failures can be swiftly resolved or appropriately escalated. Staying current with patches, standardizing cluster configurations, and understanding log outputs minimizes downtime and operational risk for mission-critical VM workloads.
