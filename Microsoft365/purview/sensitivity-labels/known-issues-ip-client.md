@@ -7,20 +7,8 @@ author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
 ms.date: 09/04/2025
-ms.topic: reference
-ms.collection: M365-security-compliance
+ms.topic: troubleshooting
 ms.service: information-protection
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: esaggese
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: admin
----
 
 # Known issues for the information protection client
 
@@ -213,11 +201,3 @@ If a label contains any sub-labels in the [Microsoft Purview compliance portal](
 Similarly, AIP doesn't support labels that contain sub-labels as default labels, and you can't configure automatic labeling for these labels.
 
 Additionally, using a label with UDP (User Defined Permissions) as a default label isn't supported in the Unified Labeling Client. 
-
-## More information
-
-The following additional articles might be helpful in answering questions you have about Azure Information Protection:
-
-- [File types supported by the Azure Information Protection unified labeling client](/purview/information-protection-client#supported-file-types)
-- [Frequently asked questions about data protection in Azure Information Protection](/purview/azure-rights-management-learn-about#frequently-asked-questions)
-
