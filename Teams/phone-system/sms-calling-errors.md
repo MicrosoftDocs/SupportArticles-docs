@@ -1,7 +1,7 @@
 ---
 title: Resolve Campaign Rejection Errors for SMS in Microsoft Teams
 description: Provides a list of potential campaign rejection errors when setting up SMS in Teams, and guidance to resolve them.
-ms.date: 08/18/2025
+ms.date: 09/03/2025
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
