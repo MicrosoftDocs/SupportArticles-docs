@@ -1140,6 +1140,10 @@ items:
     items:
     - name: Error 0x80090327 when adding a node to a cluster
       href: ./high-availability/error-0x80090327-adding-node-to-cluster.md
+  - name: Nested virtualization
+    items:
+    - name: 'Troubleshooting guide: Hyper-V nested virtualization'
+      href: ./high-availability/hyper-v-nested-virtualization.md
   - name: Node removed from the cluster
     items:
     - name: Cluster IP address resources fail on both nodes when one node disconnects
