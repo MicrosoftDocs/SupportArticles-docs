@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jeffhugh, v-lianna
 ms.custom:
-- sap:virtualization and hyper-v\remote administration of the hyper-v role
+- sap:virtualization and hyper-v\powershell cmdlets
 - pcy:WinComm Storage High Avail
 ai-usage: ai-assisted
 ---
