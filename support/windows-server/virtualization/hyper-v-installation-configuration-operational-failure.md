@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Hyper-V Installation, Configuration, and Operational Failures
 description: Provides a comprehensive guide for diagnosing and resolving common installation, configuration, and operational issues related to Microsoft Hyper-V in both Windows Server and Windows client environments.
-ms.date: 09/01/2025
+ms.date: 09/04/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -28,7 +28,7 @@ You might encounter one or more of the following issues:
   - > The request to add or remove features on the specified server has failed.
   - > Hyper-V feature unknown.
 - CBS (Component-Based Servicing) logs: "ERROR_SXS_ASSEMBLY_MISSING."
-- Hyper-V role not visible after installation or server reboot.
+- Hyper-V role isn't visible after installation or server reboot.
 - Windows Management Instrumentation (WMI)-related errors:
   - > Error CSI 000000b5 (F) Logged (install online) $(runtime.System32)\WindowsVirtualization.V2.mof [gle=0x80004005].
   - > Error CSI 000000b6 (F) CMIADAPTER: Inner Error Message (0x1002): 0X80041002 Class, instance, or property CIM_RegisteredProfile was not found.
@@ -48,7 +48,7 @@ You might encounter one or more of the following issues:
 - VM fails to start error message:
 
   > Virtual machine failed to start due to insufficient memory.
-- VM stuck in a "saved state" or unable to boot after host upgrade/reboot.
+- VM is stuck in a "saved state" or unable to boot after host upgrade/reboot.
 - Virtual Machine Management Service (VMMS) fails to start.
 - Error message:
 
@@ -56,13 +56,13 @@ You might encounter one or more of the following issues:
 - Error message when Hyper-V Manager can't connect:
 
   > The WinRM client cannot process the request...
-- Enhanced Session Mode unavailable in audit mode.
+- Enhanced Session Mode is unavailable in audit mode.
 
 ## Networking and storage issues
 
-- Network adapters are disabled after Hyper-V installation; no IP address assigned, or IPv4 is unchecked.
+- Network adapters are disabled after Hyper-V installation; no IP address is assigned, or IPv4 is unchecked.
 - VM can't obtain an IP address or communicate with the network.
-- Hyper-V virtual switch stuck in an "unidentified" state.
+- Hyper-V virtual switch is stuck in an "unidentified" state.
 - VLAN tagging issues—only the native VLAN works.
 
 ## Other technical and security symptoms
