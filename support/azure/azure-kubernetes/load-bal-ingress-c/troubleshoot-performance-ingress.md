@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Performance Issues With the Managed NGINX Ingress Controller in AKS
+title: Troubleshoot Performance Issues in the Managed NGINX Ingress Controller in AKS
 description: Step-by-step guide to identify and resolve performance issues in the Managed NGINX Ingress Controller in AKS. 
 ms.reviewer: claudiogodoy
 ms.service: azure-kubernetes-service
@@ -59,7 +59,7 @@ To troubleshoot the issue, follow these steps.
     nginx   Deployment/nginx   cpu: 133%/70%        1         2         2          80m
     ```
 
-The **TARGETS** column shows the CPU threshold at which the `HPA` is triggered to scale up the pods. There are several possibile causes of this behavior:
+The **TARGETS** column shows the CPU threshold at which the `HPA` is triggered to scale up the pods. This behavior has several possible causes:
 
 - The `HPA` reached the maximum number of pods.
 - No nodes are available to use to schedule the pods.
