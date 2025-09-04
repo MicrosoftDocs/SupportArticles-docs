@@ -21,10 +21,9 @@ Use Azure CLI, and run the `az aks install-cli` command.
 
 ## Symptoms
 
-| Symptom | Description |
-| --- | --- |
-| **HTTP Gateway Errors** | Error codes like `502` and `504` can indicate an NGINX exhaustion problem. |
-| **High Response Time Difference** | Significant difference between your service response time and the end-to-end response time. There's a common latency added by NGINX. When it's too large, you might have an NGINX exhaustion problem. |
+You receive an HTTP gateway error code like `502` or `504` or a response time error message when you run the NGINX ingress controller. This can indicate an NGINX exhaustion problem.
+
+You encounter a significant difference between your service response time and the end-to-end response time. This can indicate a latency added by NGINX and an NGINX exhaustion problem. 
 
 ## Cause
 
@@ -68,12 +67,12 @@ The **TARGETS** column shows the CPU threshold at which the `HPA` is triggered t
 
 If your evaluation reveals that `NGINX HPA` didn't reach the maximum number of pods, the [kube-scheduler](https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/#kube-scheduler) might not be able to find available nodes to use to schedule the `NGINX pods`. To find pending pods, run the following command:
 
-    ```console
-    kubectl get pod --field-selector=status.phase=Pending -n app-routing-system
-    ```
+```console
+kubectl get pod --field-selector=status.phase=Pending -n app-routing-system
+```
 
 > [!NOTE]
-> If there are pending pods, the cluster might experience a resource exhaustion problem. For more information, see [Troubleshoot pod scheduler errors in Azure Kubernetes Service](azure/azure-kubernetes/availability-performance/troubleshoot-pod-scheduler-errors).
+> If there are pending pods, the cluster might experience a resource exhaustion problem. For more information, see [Troubleshoot pod scheduler errors in Azure Kubernetes Service](../availability-performance/troubleshoot-pod-scheduler-errors.md).
 
 ### Step 3: Check whether limits are applied to the NGINX deployment
 
