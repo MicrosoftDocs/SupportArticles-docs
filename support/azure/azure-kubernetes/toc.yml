@@ -398,24 +398,44 @@ items:
       href: error-codes/vmextensionerror-provisioningtimeout.md
   - name: General
     items:  
+      - name: InvalidParameter error
+        href: error-codes/invalidparameter-error.md
+      - name: InvalidResourceReference error
+        href: error-codes/invalidresourcereference-error.md
+      - name: MissingSubscriptionRegistration error
+        href: error-codes/missingsubscriptionregistration-error.md
   - name: Authorization and permission
     items:  
       - name: BadRequest or InvalidClientSecret error
         href: error-codes/bad-request-or-invalid-client-secret-error.md
       - name: CustomPrivateDNSZoneMissingPermissionError error
         href: error-codes/customprivatednszonemissingpermissions-error.md
+      - name: LinkedAuthorizationFailed error
+        href: error-codes/linkedauthorizationfailed-error.md
   - name: Quota and capacity
     items:
       - name: AvailabilityZoneNotSupported error
         href: error-codes/availabilityzonenotsupported-error.md
       - name: AksCapacityHeavyUsage error
         href: error-codes/akscapacityheavyusage-error.md
+      - name: OperationNotAllowed or PublicIPCountLimitReached error
+        href: error-codes/operationnotallowed-publicipcountlimitreached-error.md
+      - name: PublicIPCountLimitReached error
+        href: error-codes/publicipcountlimitreached-error.md
   - name: Networking
     items:
       - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
         href: error-codes/lb-pvtlinksvcwithpvtendptconn-error.md
       - name: CreateOrUpdateVirtualNetworkLinkFailed error
         href: error-codes/createorupdatevirtualnetworklinkfailed-error.md
+      - name: DnsServiceIpOutOfServiceCidr error
+        href: error-codes/dnsserviceipoutofservicecidr-error.md
+      - name: InUseRouteTableCannotBeDeleted error
+        href: error-codes/inuseroutetablecannotbedeleted-error.md
+      - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
+        href: error-codes/invalidloadbalancerprofileallocatedoutboundports-error.md
+      - name: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error
+        href: error-codes/networksecuritygroupinusebyvirtualmachinescaleset-error.md
   - name: Throttling
     items:
   - name: Windows
@@ -430,6 +450,8 @@ items:
     items:
   - name: Version upgrade
     items:
+      - name: NodePoolMcVersionIncompatible error
+        href: error-codes/nodepoolmcversionincompatible-error.md  
   - name: Pod Disruption Budgets
     items:
   - name: Application
@@ -442,28 +464,13 @@ items:
 
 
 
-  - name: DnsServiceIpOutOfServiceCidr error
-    href: error-codes/dnsserviceipoutofservicecidr-error.md
-  - name: InUseRouteTableCannotBeDeleted error
-    href: error-codes/inuseroutetablecannotbedeleted-error.md
-  - name: InvalidParameter error
-    href: error-codes/invalidparameter-error.md
-  - name: InvalidResourceReference error
-    href: error-codes/invalidresourcereference-error.md
-  - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
-    href: error-codes/invalidloadbalancerprofileallocatedoutboundports-error.md
-  - name: LinkedAuthorizationFailed error
-    href: error-codes/linkedauthorizationfailed-error.md
-  - name: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error
-    href: error-codes/networksecuritygroupinusebyvirtualmachinescaleset-error.md
-  - name: MissingSubscriptionRegistration error
-    href: error-codes/missingsubscriptionregistration-error.md
-  - name: NodePoolMcVersionIncompatible error
-    href: error-codes/nodepoolmcversionincompatible-error.md  
-  - name: OperationNotAllowed or PublicIPCountLimitReached error
-    href: error-codes/operationnotallowed-publicipcountlimitreached-error.md
-  - name: PublicIPCountLimitReached error
-    href: error-codes/publicipcountlimitreached-error.md
+
+
+
+  
+
+
+
   - name: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error
     href: error-codes/publicipaddr-inusesubnet-netsecgrp-error.md
   - name: QuotaExceeded or InsufficientVCPUQuota error
