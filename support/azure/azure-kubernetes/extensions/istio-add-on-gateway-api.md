@@ -85,7 +85,7 @@ If the `Gateway` has a programmed status of `failed` or `unknown`, you should in
 
 ### Step 4: Inspect `istiod` and `Gateway` logs for errors
 
-The `istiod` logs may also have additional details on `Gateway` programming-related errors. If the `Gateway` is programmed successfully and the Pod/Deployment are created, but is running into other issues, then you should try inspecting the `Gateway` Pod logs for any potential errors.
+The `istiod` logs may also have additional details on `Gateway` programming-related errors. If the `Gateway` is programmed successfully and the Pod/Deployment are created, but is running into other issues, then you should try inspecting the `Gateway` Pod logs for any potential errors. The `Gateway` pod / deployment name follow the format `<gateway-name>-istio`.
 
 ## Minor revision upgrades and revision label troubleshooting
 
