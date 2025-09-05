@@ -50,7 +50,7 @@ The following example log entry shows a failure that occurs during a service acc
 
 This log entry shows that the [System.DirectoryServices.DirectoryEntries.Find()](/dotnet/api/system.directoryservices.directoryentries.find) method fails and returns the error message, `The RPC server is unavailable`.
 
-You can look up the HResult error, `0x800706ba`, by using the `Certutil.exe` command line tool:
+You can look up the "HResult" error, `0x800706ba`, by using the Certutil.exe command line tool:
 
 ```cmd
 certutil /error 0x800706ba
