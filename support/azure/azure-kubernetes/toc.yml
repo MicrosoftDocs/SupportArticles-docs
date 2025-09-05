@@ -8,14 +8,8 @@ items:
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
-    - name: CniDownloadTimeoutVMExtensionError error (41)
-      href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
-    - name: ERR_VHD_FILE_NOT_FOUND error (65)
-      href: create-upgrade-delete/error-code-vhdfilenotfound.md
-    - name: InvalidParameter error
-      href: create-upgrade-delete/error-code-invalidparameter.md
-    - name: InvalidResourceReference error
-      href: create-upgrade-delete/error-code-invalidresourcereference.md
+
+
     - name: Known issues - Custom kubelet configuration on Windows
       href: create-upgrade-delete/known-issues-custom-kubelet-configuration.md
     - name: K8SAPIServerConnFailVMExtensionError error (51)
@@ -380,6 +374,10 @@ items:
   items:
   - name: VMExtension error codes
     items:
+    - name: CniDownloadTimeoutVMExtensionError error (41)
+      href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
+    - name: ERR_VHD_FILE_NOT_FOUND error (65)
+      href: create-upgrade-delete/error-code-vhdfilenotfound.md
     - name: OrasPullNetworkTimeoutVMExtensionError
       href: error-codes/vmextensionerror-oraspullnetworktimeout.md
     - name: OrasPullUnauthorizedVMExtensionError
@@ -401,7 +399,11 @@ items:
   - name: General
     items:  
       - name: InvalidParameter error
+        href: create-upgrade-delete/error-code-invalidparameter.md
+      - name: InvalidParameter error
         href: error-codes/invalidparameter-error.md
+      - name: InvalidResourceReference error
+        href: create-upgrade-delete/error-code-invalidresourcereference.md
       - name: InvalidResourceReference error
         href: error-codes/invalidresourcereference-error.md
       - name: MissingSubscriptionRegistration error
