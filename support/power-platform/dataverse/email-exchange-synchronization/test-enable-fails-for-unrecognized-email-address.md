@@ -21,9 +21,8 @@ When you attempt to [test and enable a mailbox](/power-platform/admin/connect-ex
 
 This error occurs if:
 
-- The specified email address doesn't exist in the Microsoft 365 tenant linked to the mailbox's email server profile.
-- The email address isn't properly configured as a User Principal Name (UPN), SMTP address, or mail address on the user object.
-- The mailbox belongs to a different Microsoft 365 tenant, and a cross-tenant email server profile isn't configured.
+- The specified email address doesn't exist as a User Principal Name (UPN), SMTP address, or mail address for any user in the Microsoft 365 tenant associated with the mailbox's email server profile.
+- The mailbox associated with the email address belongs to a different Microsoft 365 tenant, and a cross-tenant email server profile isn't configured.
 
 ## Resolution
 
@@ -35,9 +34,9 @@ To confirm the UPN, SMTP, or mail address for the user:
 
 2. Navigate to **Users** > **Active Users**.
 
-3. Search for the user using the email address in question.
+3. Find the intended user.
 
-4. Open the user profile and confirm the user has at least one email address matching the email address in the Dataverse mailbox record:
+4. Open the user profile and confirm the user has at least one qualifying email address matching the email address in the Dataverse mailbox record:
 
     - **User Principal Name (UPN)** or username matches the email address.
     - Under the **Mail** tab, select **Edit Exchange properties**. In **Manage mailboxes**, open the mailbox. On the **General** tab, confirm the **User ID** or **Email addresses** fields contain the email address.
