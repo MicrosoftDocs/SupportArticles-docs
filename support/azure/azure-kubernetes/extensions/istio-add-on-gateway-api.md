@@ -32,19 +32,36 @@ Before proceeding, take the following actions:
 
 ### Step 1: Make sure that Azure Load Balancer health probes are configured appropriately
 
-In some cases, traffic from Azure Load Balancer to the Istio Gateway API Deployment could be blocked due to failing health probes. You can address this by [customizing the Kubernetes service](#gateway-resource-customization-issues) for the `Gateway` - either via the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap - by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol:
+In some cases, traffic from Azure Load Balancer to the Istio Gateway API Deployment could be blocked due to failing health probes. You can address this by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-issues) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
 
-    ```yaml
-    apiVersion: gateway.networking.k8s.io/v1
-    kind: Gateway
+
+Gateway customization:
+
+```yaml
+apiVersion: gateway.networking.k8s.io/v1
+kind: Gateway
+metadata:
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path: "/healthz/ready"
+    service.beta.kubernetes.io/port_80_health-probe_protocol: http
+    service.beta.kubernetes.io/port_80_health-probe_port: "15021"
+```
+
+ConfigMap customization:
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+data:
+  service: |
     metadata:
       annotations:
         service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path: "/healthz/ready"
         service.beta.kubernetes.io/port_80_health-probe_protocol: http
         service.beta.kubernetes.io/port_80_health-probe_port: "15021"
-    ```
+```
 
-    You can also see whether health probes are failing by inspecting the `LoadBalancer` in the infrastructure resource group for the cluster on Azure Portal under `Settings/Properties`.
+You can also see whether health probes are failing by inspecting the `LoadBalancer` in the infrastructure resource group for the cluster on Azure Portal under `Settings/Properties`.
 
 ### Step 2: Make sure no firewall or NSG rules block ingress traffic
 
