@@ -150,7 +150,7 @@
       href: email-exchange-synchronization/troubleshooting-monitoring-server-side-synchronization.md 
     - name: '"Tracked to Dynamics 365" category is added to a mailbox'
       href: email-exchange-synchronization/tracked-to-dynamics-365-category-added.md
-    - name: "Test and Enable failed because no user was found" error
+    - name: '"Test and Enable failed because no user was found" error'
       href: email-exchange-synchronization/test-enable-fails-for-unrecognized-email-address.md  
     - name: Test Connection fails from Email Server Profile
       href: email-exchange-synchronization/test-connection-fails-email-server.md
