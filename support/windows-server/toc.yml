@@ -2800,6 +2800,8 @@ items:
     items:
     - name: 'Troubleshooting guidance: Live Migration'
       href: ./virtualization/troubleshoot-live-migration-guidance.md
+    - name: 'Troubleshooting guide: Hyper-V virtual machine live migration'
+      href: ./virtualization/hyper-v-virtual-machine-live-migration.md
     - name: Can't migrate a virtual machine from one host to another
       href: ./virtualization/unable-migrate-virtual-machine-processor-not-compatible-host.md
     - name: Starting or live migrating Hyper-V VMs fails
