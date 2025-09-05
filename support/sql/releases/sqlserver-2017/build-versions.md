@@ -15,7 +15,7 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 ## SQL Server 2017 Azure Connect Pack builds
 
 > [!NOTE]
-> Starting with [KB5063759](https://support.microsoft.com/help/5063759), all GDR releases of SQL Server 2017 automatically include the Azure Connect Feature Pack. This means you no longer need to install it separately to connect SQL Server with Azure SQL Managed Instance. In any earlier version, the Azure Connect Feature Pack is not included and must be installed manually if needed.
+> Starting with [KB5058714](https://support.microsoft.com/help/5058714), all GDR + CU releases of SQL Server 2017 automatically include the Azure Connect Feature Pack. This means you no longer need to install it separately to connect SQL Server with Azure SQL Managed Instance. In any earlier version, the Azure Connect Feature Pack is not included and must be installed manually if needed.
 
 | Cumulative update name | SQL Server product version | SQL Server (sqlservr.exe) file version | Analysis Services product version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |---------------|--------------|------------------|-------------|-----------------|------------------------------------|--------------------|
