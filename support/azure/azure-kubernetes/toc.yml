@@ -396,6 +396,8 @@ items:
       href: error-codes/vmextensionerror-vhdfilenotfound.md
     - name: VMExtensionError_ProvisioningTimeout error
       href: error-codes/vmextensionerror-provisioningtimeout.md
+    - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error
+      href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
   - name: General
     items:  
       - name: InvalidParameter error
@@ -412,6 +414,8 @@ items:
         href: error-codes/customprivatednszonemissingpermissions-error.md
       - name: LinkedAuthorizationFailed error
         href: error-codes/linkedauthorizationfailed-error.md
+      - name: ServicePrincipalValidationClientError error
+        href: error-codes/serviceprincipalvalidationclienterror-error.md
   - name: Quota and capacity
     items:
       - name: AvailabilityZoneNotSupported error
@@ -422,6 +426,10 @@ items:
         href: error-codes/operationnotallowed-publicipcountlimitreached-error.md
       - name: PublicIPCountLimitReached error
         href: error-codes/publicipcountlimitreached-error.md
+      - name: QuotaExceeded or InsufficientVCPUQuota error
+        href: error-codes/quota-exceeded-error.md
+      - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
+        href: error-codes/zonalallocation-allocationfailed-error.md
   - name: Networking
     items:
       - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
@@ -436,12 +444,32 @@ items:
         href: error-codes/invalidloadbalancerprofileallocatedoutboundports-error.md
       - name: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error
         href: error-codes/networksecuritygroupinusebyvirtualmachinescaleset-error.md
+      - name: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error
+        href: error-codes/publicipaddr-inusesubnet-netsecgrp-error.md
+      - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources
+        href: error-codes/subnetwithexternalresourcescannotbeusedbyotherresources-error.md
+      - name: ServiceCidrOverlapExistingSubnetsCidr error
+        href: error-codes/servicecidroverlapexistingsubnetscidr-error.md
+      - name: SubnetIsDelegated error
+        href: error-codes/subnetisdelegated-error.md
+      - name: SubnetIsFull error
+        href: error-codes/subnetisfull-error.md
+      - name: VirtualNetworkNotInSucceededState error 
+        href: error-codes/virtualnetworknotinsucceededstate-error.md
   - name: Throttling
     items:
+      - name: SubscriptionRequestsThrottled error
+        href: error-codes/subscriptionrequeststhrottled.md
+      - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error
+        href: error-codes/toomanyrequestsreceived-error.md
+      - name: Throttled error
+        href: error-codes/throttled-error.md
   - name: Windows
     items:
   - name: Policy
     items:
+      - name: RequestDisallowedByPolicy error
+        href: error-codes/requestdisallowedbypolicy-error.md
   - name: Operation
     items:
       - name: AKSOperationPreempted error
@@ -450,10 +478,14 @@ items:
     items:
   - name: Version upgrade
     items:
+      - name: AKS upgrade errors because of version skew, incompatibility, or lack of support
+        href: error-codes/aks-upgrade-blocked.md
       - name: NodePoolMcVersionIncompatible error
         href: error-codes/nodepoolmcversionincompatible-error.md  
   - name: Pod Disruption Budgets
     items:
+      - name: UnsatisfiablePDB error
+        href: error-codes/unsatisfiablepdb-error.md
   - name: Application
     items:
   - name: Security
@@ -471,35 +503,15 @@ items:
 
 
 
-  - name: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error
-    href: error-codes/publicipaddr-inusesubnet-netsecgrp-error.md
-  - name: QuotaExceeded or InsufficientVCPUQuota error
-    href: error-codes/quota-exceeded-error.md
-  - name: RequestDisallowedByPolicy error
-    href: error-codes/requestdisallowedbypolicy-error.md
-  - name: ServicePrincipalValidationClientError error
-    href: error-codes/serviceprincipalvalidationclienterror-error.md
-  - name: SubscriptionRequestsThrottled error
-    href: error-codes/subscriptionrequeststhrottled.md
-  - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources
-    href: error-codes/subnetwithexternalresourcescannotbeusedbyotherresources-error.md
-  - name: ServiceCidrOverlapExistingSubnetsCidr error
-    href: error-codes/servicecidroverlapexistingsubnetscidr-error.md
-  - name: SubnetIsFull error
-    href: error-codes/subnetisfull-error.md
-  - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error
-    href: error-codes/toomanyrequestsreceived-error.md
-  - name: Throttled error
-    href: error-codes/throttled-error.md
-  - name: UnsatisfiablePDB error
-    href: error-codes/unsatisfiablepdb-error.md
-  - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error
-    href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
-  - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
-    href: error-codes/zonalallocation-allocationfailed-error.md
-  - name: AKS upgrade errors because of version skew, incompatibility, or lack of support
-    href: error-codes/aks-upgrade-blocked.md
-  - name: SubnetIsDelegated error
-    href: error-codes/subnetisdelegated-error.md
-  - name: VirtualNetworkNotInSucceededState error 
-    href: error-codes/virtualnetworknotinsucceededstate-error.md
+
+
+
+
+
+
+
+
+
+
+
+
