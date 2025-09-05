@@ -1,22 +1,23 @@
 ---
-title: SQL Server setup fails with "The RPC server is unavailable" when provisioning service accounts
-description: This article helps you troubleshoot a problem where setting SQL Server instances fails when provisioning the service account.
+title: SQL Server Setup Fails With "The RPC server is unavailable" When Provisioning Service Accounts
+description: This article provides troubleshooting guidance for "The RPC server is unavailable" errors when provisioning service accounts during SQL Server setup.
 ms.date: 08/26/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.author: jopilov
+ms.topic: troubleshooting-problem-resolution
+
+#customer intent: As a developer or IT administrator, I want to resolve "The RPC server is unavailable" errors during SQL setup so that I can successfully setup SQL Server.
 ---
-# SQL Server setup fails with "The RPC server is unavailable" when provisioning service accounts
 
-This article helps you troubleshoot a problem where setting SQL Server instances fails when provisioning the service account.
+# "The RPC server is unavailable" error when provisioning service accounts during SQL Server setup
 
+This article helps you troubleshoot "The RPC server is unavailable" errors when setting up SQL Server instances. This error can occur during the service account provisioning phase of the SQL Server setup.
 
 ## Symptoms
- 
-You try to install SQL Server and during the service account provisioning phase, installation fails with error:
 
-`The RPC Server is unavailable.`
+During the service account provisioning phase of the SQL Server install, installation fails with the error: `The RPC Server is unavailable`
 
-This error happens when SQL Server setup provisions service accounts for the SQL Server services. Here are the entries in the setup log indicating where the failure occurred. Let’s assume that the account chosen for the SQL Server services is a domain account with name CONTOSO\SQLSvcAcct:
+The following example log indicates a failure during service account provisioning. In this example, the service account being provisioned is a domain account with the name `CONTOSO\SQLSvcAcct`:
 
 ```output
 (05) 2024-01-19 15:00:42 Slp: Sco.User.LookupADEntry - Attempting to find user account CONTOSO\SQLSvcAcct
@@ -47,15 +48,15 @@ This error happens when SQL Server setup provisions service accounts for the SQL
 (05) 2024-01-19 15:01:03 Slp: ----------------------------------------
 ```
 
-You can see from the log that [System.DirectoryServices.DirectoryEntries.Find()](/dotnet/api/system.directoryservices.directoryentries.find) method is failing with the error: The RPC server is unavailable.
+The log shows that the [System.DirectoryServices.DirectoryEntries.Find()](/dotnet/api/system.directoryservices.directoryentries.find) method is failing with the error: `The RPC server is unavailable`.
 
-You can look up the HResult error `0x800706ba` by using CertUtil.exe command line tool.
+You can look up the HResult error `0x800706ba` using the `certutil.exe` command line tool:
 
 ```cmd
 certutil /error 0x800706ba
 ```
 
-Result:
+You should receive the following output:
 
 ```output
 0x800706ba (WIN32: 1722 RPC_S_SERVER_UNAVAILABLE) -- 2147944122 (-2147023174)
@@ -63,44 +64,41 @@ Error message text: The RPC server is unavailable.
 CertUtil: -error command completed successfully.
 ```
 
-
 ## Cause
 
-This error is typically related to Windows issues. For more information, you can see [The system can't log you on with the following error: The RPC server is unavailable](../../../../windows-server/user-profiles-and-logon/not-log-on-error-rpc-server-unavailable.md). The article lists these reasons:
+An underlying Windows issue is typically the cause of this error, such as:
 
 - The "Remote Registry" service isn't running.
 - Incorrect DNS settings.
 - Incorrect Time and Time zone settings.
 - The "TCP/IP NetBIOS Helper" service isn't running.
 
-## Resolution
+For more information, see [The system can't log you on with the following error: The RPC server is unavailable](~/windows-server/user-profiles-and-logon/not-log-on-error-rpc-server-unavailable.md#cause).
 
-Troubleshoot the Windows error by following [The system can't log you on with the following error: The RPC server is unavailable](../../../../windows-server/user-profiles-and-logon/not-log-on-error-rpc-server-unavailable.md).
+### Verify that the SQL Server setup process isn't the issue
 
-## More information
+Using the following steps, you can build and run a test application to reproduce the `The RPC Server is unavailable` error and verify that the SQL Server setup process isn't the cause of failure:
 
-Here's a sample C# (.NET Framework) application that you can build yourself. The goal is to test the account that is having issues. The application is likely to reproduce the same `The RPC Server is unavailable.` error and eliminate SQL Setup process as a possible cause.
+#### Build the ADLookup application
 
-### Build an `ADLookup` application with .NET CLI
+1. Open a Command Prompt or PowerShell terminal.
 
-These steps provide command line instructions on how to build the application. Alternatively, you can use Visual Studio to accomplish the same result. 
- 
-1. Ensure the .NET SDK is installed on your machine
+1. Ensure the [.NET SDK](https://dotnet.microsoft.com/en-us/download) is installed on your machine:
 
    ```bash
    dotnet --version
    ```
 
-1. Open a Command Prompt or PowerShell terminal
+   If the .NET SDK is correctly installed, this command should output the SDK's version number.
 
-1. Create a Project Folder
+1. Create a project folder:
 
    ```bash
    md ADLookup
    cd ADLookup
    ```
 
-1. Initialize a Console project
+1. Initialize a console project:
 
    ```bash
    dotnet new console -n ADLookup
@@ -109,9 +107,7 @@ These steps provide command line instructions on how to build the application. A
 
    This step creates a basic console app structure.
 
-1. Replace the `Program.cs` contents with this code
-
-   You can copy-paste the code into the file using a text editor.
+1. Using a text editor, replace the contents of `Program.cs` with:
 
    ```csharp
    using System;
@@ -175,38 +171,35 @@ These steps provide command line instructions on how to build the application. A
    }
    ```
 
-  
-
-1. Add required References
-   The code uses `System.DirectoryServices`, which might require adding a reference.
+1. Add required references to the project:
 
    ```bash
    dotnet add package System.DirectoryServices
    ```
 
-1. Build the project
+1. Build the project:
 
    ```bash
    dotnet build --configuration Release
    ```
 
-   This compiles the code and generates an `.exe` in the `bin\Release\netX.X\` folder (depending on your .NET version).
+   This step compiles the code and generates an `ADLookup.exe` in the `bin\Release\net<VersionNumber>\` folder.
 
-### Run the application
+#### Run the ADLookup application
 
 1. Navigate to the directory where the executable is built:
 
    ```bash
-   cd bin\Release\netX.X\
+   cd bin\Release\net<VersionNumber>\
    ```
 
-1. Run the `ADLookup.exe` with the **domain** parameter to look up the domain name first:
+1. Run `ADLookup.exe` with the **domain** parameter to look up the domain name first:
 
    ```bash
    adlookup CONTOSO domain
    ```
 
-   Results might look like this:
+   The output should be similar to the following example:
 
    ```output
    Checking CONTOSO for type domain
@@ -222,9 +215,10 @@ These steps provide command line instructions on how to build the application. A
      adlookup CONTOSO/SQLSvcAcct user
      ```
 
-     Note: the forward slash, not back slash
+     > [!NOTE]
+     > You must use a forward slash to separate the domain and account name, not a backslash.
 
-     Possible output for the service account you're having issues with:
+    For a service account experiencing issues, the output should be similar to the following example:
 
      ```output
      Checking CONTOSO/SQLSvcAcct for type user
@@ -233,3 +227,7 @@ These steps provide command line instructions on how to build the application. A
      The path is invalid
      Press any key to quit
      ```
+
+## Solution
+
+To troubleshoot underlying Windows issues causing the SQL Server setup to fail, see [The system can't log you on with the following error: The RPC server is unavailable](~/windows-server/user-profiles-and-logon/not-log-on-error-rpc-server-unavailable.md#resolution).
