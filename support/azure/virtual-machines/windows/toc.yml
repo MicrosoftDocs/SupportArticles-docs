@@ -1,3 +1,4 @@
+items:
 - name: Welcome
   href: welcome-virtual-machines-windows.yml
 
@@ -35,8 +36,8 @@
         href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
       - name: Upgrade Windows Server 2008/2008 R2
         href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Windows 2003 Server
-    href: run-win-server-2003.md
+  - name: Windows Server 2003 and later versions End Of Support (EOS)
+    href: ms-azure-windows-eos.md
   - name: 32-bit operating systems
     href: support-32-bit-operating-systems-virtual-machines.md
   - name: Hybrid use benefit images are retired
@@ -380,6 +381,8 @@
     href: restart-resize-error-troubleshooting.md
   - name: Restarting, shutting down, or stopping services
     href: boot-error-troubleshoot-windows.md
+  - name: Slow VM start caused by extensions troubleshooting
+    href: slow-vm-start-extensions-troubleshooting.md
 
 - name: VM restarts or stops unexpectedly
   items:

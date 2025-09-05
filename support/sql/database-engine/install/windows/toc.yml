@@ -51,8 +51,6 @@ items:
   href: cannot-install-sql-when-only-rodc-available.md
 - name: Troubleshoot common SQL Server Cumulative Update installation issues
   href: sqlserver-patching-issues.md
-- name: Update or Slipstream installation for SQL Server 2008
-  href: update-or-slipstream-installation.md
 - name: Visual C++ Redistributable installed with SQL Server alerts end of life or obsolete
   href: visual-c-redistributable-installed-sql-server-flagged-end-of-life-obsolete.md
 - name: Wait on the Database Engine recovery handle failed

@@ -2726,6 +2726,8 @@ items:
       href: ./virtualization/back-up-restore-hyper-v-vm-bmr-data-backup.md
     - name: Back up virtual machines from parent partition
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
+    - name: Troubleshoot Hyper-V virtual machine backup, checkpoint, and storage failures
+      href: ./virtualization/hyper-v-virtual-machine-backup-checkpoint-storage.md
   - name: Configuration of virtual machine settings
     items:
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
@@ -2750,6 +2752,10 @@ items:
     items:
     - name: Feature and performance optimization of HVR
       href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
+    - name: Hyper-V Replica troubleshooting guide
+      href: ./virtualization/hyper-v-replica-troubleshooting-guide.md
+    - name: Set Up HVR between Windows Server 2016 and Windows Server 2022
+      href: ./virtualization/set-up-hyper-v-replica-between-windows-server-2016-and-windows-server-2022.md
   - name: Installation and configuration of Hyper-V
     items:
     - name: Antivirus exclusions for Hyper-V hosts
@@ -2766,6 +2772,8 @@ items:
       href: ./virtualization/support-and-installation-instructions-for-amd-epyc-9004-series-server-processors.md
     - name: Support Policy for NIC Teaming with Hyper-V
       href: ./virtualization/support-policy-nic-teaming.md
+    - name: Troubleshoot Hyper-V installation, configuration, and operational failures
+      href: ./virtualization/hyper-v-installation-configuration-operational-failure.md
     - name: Upgrade computers with Hyper-V role installed
       href: ./virtualization/upgrade-computers-hyper-v-role.md
     - name: Windows Server 2019 Hyper-V host minroot behavior
@@ -2776,6 +2784,10 @@ items:
       href: ./virtualization/degraded-integration-services-message.md
     - name: Hyper-V Time Synchronization doesn't adjust the VM system clock
       href: ./virtualization/virtual-machine-time-not-synced.md
+    - name: Hyper-V virtual machine input, migration, and device integration issues
+      href: ./virtualization/hyper-v-virtual-machine-input-migration-integration.md
+    - name: Troubleshoot Linux virtual machine issues on Hyper-V
+      href: ./virtualization/linux-virtual-machine-issue-hyper-v.md  
     - name: Unknown devices in Device manager
       href: ./virtualization/unknown-device-vmbus-virtual-machine.md
     - name: Uptime value of Hyper-V Management console changes to the resume time
@@ -2788,12 +2800,18 @@ items:
     items:
     - name: 'Troubleshooting guidance: Live Migration'
       href: ./virtualization/troubleshoot-live-migration-guidance.md
+    - name: 'Troubleshooting guide: Hyper-V virtual machine live migration'
+      href: ./virtualization/hyper-v-virtual-machine-live-migration.md
     - name: Can't migrate a virtual machine from one host to another
       href: ./virtualization/unable-migrate-virtual-machine-processor-not-compatible-host.md
     - name: Starting or live migrating Hyper-V VMs fails
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
     - name: Troubleshoot live migration issues
       href: ./virtualization/troubleshoot-live-migration-issues.md
+  - name: Remote administration of the Hyper-V role
+    items:
+    - name: Troubleshoot Hyper-V cluster connectivity, management, and configuration failures
+      href: ./virtualization/hyper-v-cluster-connectivity-management-configuration.md
   - name: Shielded VMs
     items:
     - name: Troubleshoot a guarded fabric
@@ -2806,6 +2824,8 @@ items:
       href: ./virtualization/troubleshoot-guarded-fabric-hgs.md
     - name: Troubleshoot using the Guarded Fabric Diagnostic Tool
       href: ./virtualization/troubleshoot-guarded-fabric-diagnostics.md
+    - name: Troubleshoot vTPM, shielded VM, and Host Guardian Service issues
+      href: ./virtualization/virtual-shielded-host-guardian-service.md
   - name: Snapshots, checkpoints, and differencing disks
     items:
     - name: Can't delete a recovery checkpoint for a VM in DPM
@@ -2838,6 +2858,8 @@ items:
     items:
     - name: Get-VMNetworkAdapter command doesn't report IP addresses
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
+    - name: Troubleshoot Hyper-V virtual machine start, state, and access failures
+      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
     - name: Virtual machine shutdown actions don't run

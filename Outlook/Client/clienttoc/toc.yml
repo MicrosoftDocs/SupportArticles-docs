@@ -113,10 +113,14 @@
           href: ../connectivity/proxy-server-causes-issues-with-freebusy-oof-mailtips.md
         - name: Repeatedly disconnects and reconnects
           href: ../connectivity/outlook-repeatedly-disconnects-and-reconnects.md
+        - name: Resolve AutoDiscover mismatch warning
+          href: ../connectivity/resolve-autodiscover-mismatch-warning.md          
         - name: Send receive errors HTTP 0 HTTP 404 HTTP 500
           href: ../connectivity/outlook-send-receive-errors-http-0-http-404-http-500.md
         - name: Sending attachment outside of Outlook fails
           href: ../connectivity/event-27-mapisentmail-error-send-attachments.md
+        - name: Suppress AutoDiscover redirect warning
+          href: ../connectivity/suppress-autodiscover-redirect-warning.md          
     - name: Contacts
       items:
         - name: 0x8007007A error when downloading Offline Address Book
@@ -199,6 +203,8 @@
           href: ../email-management/message-automatically-moved-deleted-items-folder.md
         - name: Messages move from the Inbox to a renamed folder
           href: ../email-management/messages-move-from-inbox-to-renamed-folder.md
+        - name: Remove duplicate folders when connected to an Exchange Server mailbox
+          href: ../email-management/remove-duplicate-folders.md
         - name: Some rules are disabled and can't be re-enabled
           href: ../email-management/rules-not-be-uploaded-to-exchange-server.md
         - name: Unintentional email messages received
@@ -273,6 +279,8 @@
           href: ../performance/cannot-open-word-documents-or-excel-spreadsheets.md
         - name: Can't start Outlook in cached mode or create a profile
           href: ../performance/cannot-start-outlook-in-cached-mode-or-create-profile.md
+        - name: Collect performance and network traces
+          href: ../performance/collect-performance-trace.md
         - name: Crashes after installing language packs
           href: ../performance/outlook-2016-crash-event-1000.md
         - name: Error when you copy MSG email message files in Outlook containing multiple attachments or recipients
