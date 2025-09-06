@@ -41,6 +41,18 @@ This could also happen if a CSP Provider created the subscription and then trans
 3. In the menu on the left side of the page, select **Resource provider**.
 4. Find and select **Microsoft.DesktopVirtualization**, and then select **Re-register**.
 
+## User sees a conditional access of error of "You don't have access to this"
+
+This error comes from Entra ID Conditional Access, and means that the user is subject to a conditional access policy that is blocking access to a specific Entra ID resource. This usually occurs for one of two reasons:
+
+- User is signing in through the **Windows App** but is not provided access to both the **Azure Virtual Desktop** and **Windows 365** applications.
+  > [!NOTE]
+  > Windows App will attempt to authenticate the user to both **Azure Virtual Desktop** and **Windows 366** applications, even if the user isn't assigned any Windows 365 Cloud PCs.
+
+- User is signing into a resource with Entra-based single sign-on configured but is not provided access to the **Windows Cloud Login** application.
+
+To verify the issue, check the [Entra ID sign-in logs](/entra/identity/monitoring-health/concept-sign-ins) and walkthrough the steps to [Enforce Microsoft Entra multifactor authentication for Azure Virtual Desktop using Conditional Access](/azure/virtual-desktop/set-up-mfa).
+
 ## Next steps
 
 - For an overview on troubleshooting Azure Virtual Desktop and the escalation tracks, see [Troubleshooting overview, feedback, and support](/azure/virtual-desktop/troubleshoot-set-up-overview).
