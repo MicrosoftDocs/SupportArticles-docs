@@ -1,12 +1,12 @@
 ---
 title: Error 0xC004F074 No Key Management Service (KMS) could be contacted
 description: Learn how to resolve the 0xC004F074 error scenario that occurs when you try to activate an Azure Windows virtual machine (VM).
-ms.date: 02/15/2024
+ms.date: 09/08/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ms.collection: windows
 editor: v-jsitser
-ms.reviewer: cwhitley, v-naqviadil, v-leedennis
+ms.reviewer: cwhitley, mumustafa, v-naqviadil, v-leedennis
 ---
 # Error 0xC004F074 "No Key Management Service (KMS) could be contacted"
 
@@ -188,5 +188,50 @@ If a standard internal load balancer blocks traffic, there are two different app
 We recommend that you use an Azure Virtual Network NAT configuration for outbound connectivity in production deployments. For more information about Azure NAT Gateway, see [What is Azure NAT Gateway?](/azure/nat-gateway/nat-overview)
 
 However, if there's a requirement to block all internet traffic, make sure that you deny outbound internet access by using a network security group (NSG) rule on the subnet of the VM that you have to activate. Notice that operating system activation traffic to the KMS IPs on port 1688 remains enabled because of platform internal rules.
+
+## Solution 3: (For standard internal load balancer) Centralized egress via Azure Firewall without forced tunneling
+
+As mentioned in [Solution 2](#solution-2-for-standard-internal-load-balancer-use-an-nat-gateway-or-a-standard-public-load-balancer), to overcome SNAT port limitations for outbound connectivity, we recommend using an Azure Virtual Network NAT configuration for scalable and resilient outbound traffic management.
+
+If your deployment uses an internal load balancer and routes all outbound traffic via Azure Firewall, this solution is applicable. Use it when:
+
+- Centralized outbound traffic control is needed.
+- Forced tunneling to on-premises isn't required.
+- NAT Gateway isn't necessary, unless SNAT port exhaustion occurs.
+
+This pattern is common in environments where backend VMs behind an internal load balancer need to access external services (such as KMS servers) via Azure Firewall, while maintaining internal routing simplicity. For more information, see [Integrate Azure Firewall with Azure Standard Internal Load Balancer](/azure/firewall/integrate-lb#internal-load-balancer).
+
+### Flow summary for inbound and outbound traffic
+
+- Inbound: Client → Internal load balancer → Backend VM → Client
+- Outbound: Backend VM → User Defined Route (`0.0.0.0/0`) → Azure Firewall → Internet
+
+### Steps to perform Windows Activation via Azure Firewall
+
+1. Verify outbound routing configuration.
+
+    Ensure that outbound traffic from the VM subnet is routed to Azure Firewall by using a User Defined Route: `0.0.0.0/0` → Azure Firewall.
+2. Add a network rule on Azure Firewall to allow outbound traffic to the KMS server:
+
+    | Field | Value |
+    |--|--|
+    | Destination | The fully qualified domain name (FQDN) of the KMS server: `azkms.core.windows.net`, or one of the IP addresses that `azkms.core.windows.net` resolves to: `20.118.99.224`, `40.83.235.53`, `23.102.135.246`, or the IP address of the appropriate KMS endpoint that applies to your region |
+    | Port |1688 |
+    | Protocol | TCP |
+    | Action| Allow |
+
+3. Verify that the DNS resolution from the VM completes successfully and returns the correct IP addresses.
+4. Activate Windows by running the following command in an elevated command prompt:
+
+    ```cmd
+    slmgr.vbs /ato
+    ```
+
+5. If activation fails, check Azure Firewall diagnostics:
+
+   - Check network rule logs to verify that traffic on port 1688 is allowed.
+   - Verify that the rule matches the resolved IP, port, and protocol.
+   - Verify that there are no implicit denies or misconfigured rule priorities.
+
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
