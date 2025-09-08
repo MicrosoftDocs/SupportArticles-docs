@@ -1,7 +1,7 @@
 ---
 title: Windows LAPS troubleshooting guidance
 description: Provides troubleshooting guidance for Windows LAPS using Windows events.
-ms.date: 01/15/2025
+ms.date: 06/20/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -144,7 +144,7 @@ LAPS failed to find the currently configured local administrator account
 
 Windows LAPS reads the local administrator's name from Group Policy or the Intune setting **Name of administrator account to manage**. If this setting isn't configured, it will look for the local account with a security identifier (SID) ending with 500 (administrator). If Windows LAPS can't find the account, Event ID 10013 is logged.
 
-In the current version of Windows LAPS, there's no feature to create the managed user.
+Starting with Windows 11, version 24H2 and Windows Server 2025, a feature to create the managed user has been added. For more information, see [Windows LAPS account management modes](/windows-server/identity/laps/laps-concepts-account-management-modes). For earlier versions, the account must already exist.
 
 ### Resolution
 
@@ -193,7 +193,7 @@ The device (Microsoft Entra joined or hybrid joined) that's configured with Wind
 
 ### Resolution
 
-1. Verify that you can connect successfully to the registration endpoint (`https://enterpriseregistration.windows.net`). If you open Microsoft Edge or Google Chrome and connect to the registration endpoint (`https://enterpriseregistration.windows.net`), you get a message "Endpoint not found". This message means you can connect to the Enterprise Registration Endpoint.
+1. Verify that you can connect successfully to the registration endpoint (`https://enterpriseregistration.windows.net`). If you open Microsoft Edge or Google Chrome and connect to the registration endpoint (`https://enterpriseregistration.windows.net`), you get a message "Unsupported method or endpoint." This message means you can connect to the Enterprise Registration Endpoint.
 2. If you're using a proxy server, verify that your proxy is configured under the system context. You can open an elevated command prompt and run the `netsh winhttp show proxy` command to display the proxy.
 
 ## Event ID 10026
@@ -437,7 +437,7 @@ This issue can also occur if you move the machine to a different organizational 
 1. If you haven't run the Windows LAPS PowerShell cmdlet to assign the Self Permission to the computer account, run the following cmdlet:
 
     ```PowerShell
-    Set-LapsADComputerSelfPermission -identity <OU Name>
+    Set-LapsADComputerSelfPermission -Identity <OU Name>
     ```
 
     For example:

@@ -3,15 +3,14 @@ title: Enable and disable the Azure Serial Console
 description: How to enable and disable the Azure Serial Console service
 services: virtual-machines
 documentationcenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
-ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
 ms.date: 08/07/2024
-ms.author: genli
+ms.author: jarrettr
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 

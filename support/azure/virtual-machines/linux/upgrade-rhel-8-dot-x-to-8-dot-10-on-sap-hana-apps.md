@@ -53,13 +53,19 @@ For more information about performing the upgrade process on custom, golden, and
     sudo rm /etc/yum/vars/releasever
     ```
 
-3. Install the *rhui-azure-rhel8-base-sap-ha* package:
+3. Create a config file by using this command:
+
+   ```bash
+   sudo tee rhel8-base-sap-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-base-sap-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-base-sap-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
+   ```
+   
+4. Install the *rhui-azure-rhel8-base-sap-ha* package:
 
     ```bash
-    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-base-sap-ha.config' install rhui-azure-rhel8-base-sap-ha
+    sudo dnf --config rhel8-base-sap-ha.config install rhui-azure-rhel8-base-sap-ha
     ```
 
-4. Verify that the corresponding repositories are available and show no errors:
+5. Verify that the corresponding repositories are available and show no errors:
 
     ```bash
     sudo dnf repolist
@@ -80,13 +86,13 @@ For more information about performing the upgrade process on custom, golden, and
     > [!IMPORTANT]
     > A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this case, all the preceding repositories are required. Optionally, you can modify the */etc/yum.repos.d/rh-cloud-base-sap-ha.repo* file based on your system's specific requirements.
 
-5. Upgrade the system to RHEL 8.10:
+6. Upgrade the system to RHEL 8.10:
 
     ```bash
     sudo dnf update
     ```
 
-6. Reboot the VM to complete the upgrade:
+7. Reboot the VM to complete the upgrade:
 
     ```bash
     sudo reboot 
@@ -105,14 +111,19 @@ For more information about performing the upgrade process on custom, golden, and
     ```bash
     sudo rm /etc/yum/vars/releasever
     ```
-
-3. Install the *rhui-azure-rhel8-base-sap-apps* package:
+3. Create a config file by using this command:
 
     ```bash
-    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-base-sapapps.config' install rhui-azure-rhel8-base-sap-apps
+    sudo tee rhel8-base-sap-apps.config > /dev/null <<< $'[rhui-microsoft-azure-rhel8-base-sap-apps]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-apps)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-base-sap-apps\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
+    ```
+    
+4. Install the *rhui-azure-rhel8-base-sap-apps* package:
+
+    ```bash
+    sudo dnf --config rhel8-base-sap-apps.config install rhui-azure-rhel8-base-sap-apps
     ```
 
-4. Verify that the corresponding repositories are available and show no errors:
+5. Verify that the corresponding repositories are available and show no errors:
 
     ```bash
     sudo dnf repolist
@@ -128,13 +139,13 @@ For more information about performing the upgrade process on custom, golden, and
     rhui-microsoft-azure-rhel8-base-sap-apps  Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-base-sap-apps)
     ```
 
-5. Upgrade the system to RHEL 8.10:
+6. Upgrade the system to RHEL 8.10:
 
     ```bash
     sudo dnf update
     ```
 
-6. Reboot the VM to complete the upgrade:
+7. Reboot the VM to complete the upgrade:
 
     ```bash
     sudo reboot 

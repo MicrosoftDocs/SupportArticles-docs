@@ -3,7 +3,7 @@ title: Error message when you log on to Microsoft Dynamics GP
 description: This article provides a resolution for the problem that occurs when you try to log on to Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "This login failed. Attempt to log in again or contact your system administrator" error when you log on to Microsoft Dynamics GP

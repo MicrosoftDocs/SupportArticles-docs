@@ -25,7 +25,7 @@ Consider either of the following scenarios:
 - You install a new Windows Server 2016 Certification Authority (CA).
 - You configure the compatibility settings of a certificate template by setting **Certification Authority** to **Windows Server 2016** and **Certificate recipient** to **Windows 10 / Windows Server 2016**.
 
-    :::image type="content" source="media/cannot-select-windows-server-2016-ca-compatible-certificate-templates/compatibility-settings-of-a-certificate-template.png" alt-text="Screenshot of the compatibility settings of a certificate template, showing the compatibility level set to Windows Server 2016 and Windows 10.":::
+    :::image type="content" source="media/cannot-select-windows-server-2016-ca-compatible-certificate-templates/compatibility-settings-certificate-template.png" alt-text="Screenshot of the compatibility settings of a certificate template, showing the compatibility level set to Windows Server 2016 and Windows 10.":::
 
 When Windows 10 users try to request certificates by using the CA Web enrollment page (the CEP URL), the certificate template that you configured as described here is not listed as an available template.
 
@@ -44,7 +44,7 @@ To work around this issue, follow these steps:
    - **Certificate Authority**: **Windows Server 2012 R2**  
    - **Certificate recipient**: **Windows 8.1 / Windows Server 2012 R2**  
 
-        :::image type="content" source="media/cannot-select-windows-server-2016-ca-compatible-certificate-templates/compatibility-settings-certificate-template-authority-recipient.png" alt-text="Screenshot of the compatibility settings of a certificate template, showing the compatibility level set to Windows Server 2012 R2 and Windows 8.1.":::
+        :::image type="content" source="media/cannot-select-windows-server-2016-ca-compatible-certificate-templates/certificate-template-authority-recipient.png" alt-text="Screenshot of the compatibility settings of a certificate template, showing the compatibility level set to Windows Server 2012 R2 and Windows 8.1.":::
 
 2. Wait 30 minutes for the CEP server to receive the updated template information (or use the IISReset tool to restart the server).
 3. On the client computer, clear the client-side Enrollment Policy Cache by using the following command in a Command Prompt window:

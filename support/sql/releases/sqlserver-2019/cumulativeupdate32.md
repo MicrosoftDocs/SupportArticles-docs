@@ -1,7 +1,8 @@
 ---
 title: Cumulative update 32 for SQL Server 2019 (KB5054833)
 description: This article contains the summary, known issues, improvements, fixes, and other information for SQL Server 2019 cumulative update 32 (KB5054833).
-ms.date: 02/27/2025
+ms.date: 06/11/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5054833
 ms.reviewer: v-qianli2
 appliesto:
@@ -23,13 +24,9 @@ This article describes Cumulative Update package 32 (CU32) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Access violation when session is reset
+### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
-
-- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
-
-- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 
@@ -38,11 +35,11 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 > [!NOTE]
 > Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
-For more information about the bug that is fixed in this cumulative update, see the following Microsoft Knowledge Base article.
+For more information about the bug that is fixed in this cumulative update, see the following table.
 
 | Bug reference| Description| Fix area | Component | Platform |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|----------|
-| <a id=3907024>[3907024](#3907024) </a> | Fixes an issue in which patching a read-scale availability group causes the availability group on the patched replica to be removed. For more information, see [issue two of SQL Server 2019 CU31](cumulativeupdate31.md#issue-two-patching-a-read-scale-availability-group-windows-or-linux-causes-the-availability-group-on-the-patched-replica-to-be-removed). | SQL Server Engine  | High Availability and Disaster Recovery | All |
+| <a id=3907024>[3907024](#3907024) </a> | Fixes an issue in which patching a read-scale availability group causes the availability group on the patched replica to be removed. For more information, see [issue two of SQL Server 2019 CU31](cumulativeupdate31.md#issue-two-patching-a-read-scale-availability-group-windows-or-linux-causes-the-availability-group-on-the-patched-replica-to-be-removed). </br></br>**Note**: If you have already installed SQL Server 2019 CU31 and encounter this issue, you need to re-create the availability group after installing this CU. | SQL Server Engine  | High Availability and Disaster Recovery | All |
 
 ## How to obtain or download this or the latest cumulative update package
 

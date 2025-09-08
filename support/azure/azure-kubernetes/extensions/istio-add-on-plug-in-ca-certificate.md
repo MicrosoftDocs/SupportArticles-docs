@@ -1,7 +1,7 @@
 ---
 title: Istio service mesh add-on plug-in CA certificate troubleshooting
 description: Learn how to do plug-in CA certificate troubleshooting on the Istio service mesh add-on for Azure Kubernetes Service (AKS).
-ms.date: 03/04/2025
+ms.date: 04/01/2025
 author: deveshdama
 ms.author: ddama
 editor: v-jsitser
@@ -64,28 +64,6 @@ For more information, see [Plug in CA certificates for Istio-based service mesh 
 ## Deployed resources
 
 As part of the add-on deployment for the plug-in certificates feature, the following resources are deployed onto the cluster:
-
-- The `cacerts` Kubernetes secret is created in the `aks-istio-system` namespace at the time of the add-on deployment. This secret contains synchronized Azure Key Vault secrets:
-
-  ```bash
-  kubectl describe secret cacerts --namespace aks-istio-system
-  ```
-
-  ```output
-  Name:         cacerts
-  Namespace:    aks-istio-system
-  Labels:       secrets-store.csi.k8s.io/managed=true
-  Annotations:  <none>
-
-  Type:  opaque
-
-  Data
-  ====
-  ca-cert.pem:     1968 bytes
-  ca-key.pem:      3272 bytes
-  cert-chain.pem:  3786 bytes
-  root-cert.pem:   3636 bytes
-  ```
 
 - The `istio-spc-asm-1-21` [SecretProviderClass object](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/getting-started/usage/#create-your-own-secretproviderclass-object) is created in the `aks-istio-system` namespace at the time of the add-on deployment. This resource contains Azure-specific parameters for the Secrets Store Container Storage Interface (CSI) driver:
 

@@ -3,9 +3,9 @@ title: Use diagnostic messages to troubleshoot issues in voice calls
 description: Learn how to interpret the error and warning messages that may appear when you have problems with your voice call.
 ms.author: araghunath
 author: araghunath08
-ms.reviewer: nenellim 
+ms.reviewer: nenellim, gandhamm 
 ms.collection: 
-ms.date: 03/03/2024
+ms.date: 06/27/2025
 ms.custom: sap:Voice channel
 ---
 # Use diagnostic messages to troubleshoot issues in voice calls
@@ -24,6 +24,7 @@ The following table lists the warning messages that appear when your agents have
 | Your network is causing poor call quality. Try switching to a better network, or moving closer to a Wi-Fi access point.  | Appears when the incoming streaming quality is poor.  | `networkReceiveQuality` |
 | Your network is causing poor call quality. Try switching to a better network, or moving closer to a Wi-Fi access point.  | Appears when the outgoing streaming quality is poor. | `networkSendQuality` |
 | There is a problem connecting to the network. Ensure firewall rules are correctly set up.  | Appears when there are problems with the network. | `networkRelaysNotReachable` |
+| The connection to the telephony system was lost. We're working on re-establishing the connection. | Appears when there are problems with your organization's firewall or VPN. To mitigate the issue, check your firewall configuration and make sure that you have connectivity to the required ports and IP addresses. For more details, see Azure Communication Services [firewall configuration](/azure/communication-services/concepts/voice-video-calling/network-requirements#firewall-configuration). |  |
 
 ## Troubleshoot device issues
 

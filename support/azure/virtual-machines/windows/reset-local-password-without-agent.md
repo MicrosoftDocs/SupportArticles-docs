@@ -3,7 +3,7 @@ title: Reset a local Windows password without Azure agent
 description: How to reset the password of a local Windows user account when the Azure guest agent is not installed or functioning on a VM
 services: virtual-machines
 documentationcenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
 ms.date: 07/08/2024
-ms.author: genli
+ms.author: jarrettr
 ms.custom: sap:Cannot connect to my VM
 ---
 # Reset local Windows password for Azure VM offline

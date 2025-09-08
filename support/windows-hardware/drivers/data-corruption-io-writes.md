@@ -4,7 +4,7 @@ description: This article describes data corruption on IO if the storage driver 
 ms.date: 09/01/2020
 ms.custom: sap:Storage Driver
 ms.reviewer: ronh
-ms.topic: article
+ms.topic: concept-article
 ---
 # Storage developer may experience what appears as data corruption on IO writes
 

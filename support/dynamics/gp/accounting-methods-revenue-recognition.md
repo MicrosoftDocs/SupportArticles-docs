@@ -2,7 +2,7 @@
 title: Accounting methods and revenue recognition
 description: Describes the different accounting methods and their effects on revenue recognition in Project Accounting.
 ms.reviewer: theley, ppeterso
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Project Accounting
 ---
 # Information about the accounting methods and revenue recognition process in Microsoft Dynamics GP Project Accounting

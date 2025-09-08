@@ -2,8 +2,8 @@
 title: Troubleshoot code coverage
 description: Learn how to resolve erroneous empty results messages when you expect Visual Studio to collect data for native and managed assemblies.
 ms.date: 02/23/2022
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ms.reviewer: mikejo
 ms.custom: sap:Integrated Development Environment (IDE)\Code Editor
 ---

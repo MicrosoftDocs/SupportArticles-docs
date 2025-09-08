@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Data API builder installation
 description: Troubleshoot common problems that might occur when you install the Data API builder for Azure databases.
-author: genlin
-ms.author: genli
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.reviewer: sidandrews
 ms.service: data-api-builder
 ms.date: 06/19/2024

@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot QuotaExceeded error code
-description: Learn how to troubleshoot the QuotaExceeded error when you try to upgrade an Azure Kubernetes Service cluster.
+title: Troubleshoot QuotaExceeded error
+description: Introduces how to troubleshoot the QuotaExceeded error when you try to upgrade an Azure Kubernetes Service cluster.
 ms.date: 09/16/2024
 editor: v-jsitser
 ms.reviewer: chiragpa, v-leedennis
@@ -9,7 +9,7 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a QuotaExceeded error code so that I can upgrade the cluster successfully.
 ---
 
-# Troubleshoot the "Quotaexceeded" error code
+# Troubleshoot the "Quotaexceeded" error
 
 This article discusses how to identify and resolve the "QuotaExceeded" error that occurs when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
 

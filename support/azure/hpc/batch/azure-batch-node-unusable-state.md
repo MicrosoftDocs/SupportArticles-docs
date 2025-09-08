@@ -1,7 +1,7 @@
 ---
 title: Azure Batch node gets stuck in the Unusable state because of configuration issues
 description: Provides solutions to issues that cause unusable Azure Batch nodes.
-ms.date: 02/29/2024
+ms.date: 05/23/2025
 author: SvenRandom
 ms.author: biny
 editor: v-jsitser

@@ -3,7 +3,6 @@ title: Can't post packing slip for a stopped a sales order line
 description: Provides a resolution for the issue that you cannot post a packing slip for a stopped sales order line.
 author: Mirzaab
 ms.date: 03/07/2022
-ms.topic: article
 ms.search.form: WHSLoadTable
 audience: Application User
 ms.reviewer: kamaybac

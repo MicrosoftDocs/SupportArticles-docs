@@ -3,7 +3,7 @@ title: Welcome email isn't sent when new customers are created
 description: This article provides troubleshooting guidance that can help if a welcome email notification isn't sent when a new customer is created in Microsoft Dynamics 365 Commerce.
 author: josaw1
 ms.author: josaw
-ms.date: 08/08/2023
+ms.date: 05/22/2025
 ms.custom: sap:Customer accounts and loyalty\Issues with customer account in e-commerce
 ---
 # Welcome email isn't sent when new customers are created

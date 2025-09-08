@@ -3,7 +3,7 @@ title: Key Segment not found
 description: Provides a solution to errors that occur when after installing a recent update or service pack for Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle, jolse
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Key Segment not found", "Error Registering table" or "Table open error" messages after a recent update was installed in Microsoft Dynamics GP

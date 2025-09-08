@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 01/23/2025
+ms.date: 08/25/2025
 ms.author: kendownie
 ms.custom: sap:File Sync, devx-track-azurepowershell
 ms.reviewer: v-weizhu, vritikanaik
@@ -176,9 +176,11 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x8007007b | -2147024773 | ERROR_INVALID_NAME | The file or directory name is invalid. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
 | 0x80070459 | -2147023783 | ERROR_NO_UNICODE_TRANSLATION | The file or directory name has unsupported surrogate pair characters. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
 | 0x80c80255 | -2134375851 | ECS_E_XSMB_REST_INCOMPATIBILITY | The file or directory name is invalid. | Rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
+| 0x80c8026d | -2134375827 | ECS_E_SYNC_ITEM_RESTRICTED_AT_ROOT | The specified item name is restricted at the root of the sync share and therefore can't be synchronized.  | No action required. For more information, see [File System Compatibility](/azure/storage/file-sync/file-sync-planning#file-system-compatibility). |
 | 0x80c80018 | -2134376424 | ECS_E_SYNC_FILE_IN_USE | The file can't be synced because it's in use. The file will be synced when it's no longer in use. | No action required. Azure File Sync creates a temporary VSS snapshot once a day on the server to sync files that have open handles. |
 | 0x80c86013 | -2134351853 | ECS_E_SYNC_CLOUD_FILE_IN_USE | The cloud file can't be synced because it's in use. This error occurs when an application holds an open handle to a file in the cloud, preventing sync operations from being performed until the application releases the handle. | Check the open file handles and close them if they're no longer needed. For more information, see [List Handles](/rest/api/storageservices/list-handles) and [Force Close Handles](/rest/api/storageservices/force-close-handles). |
 | 0x80c8031d | -2134375651 | ECS_E_CONCURRENCY_CHECK_FAILED | The file has changed, but the change hasn't yet been detected by sync. Sync will recover after this change is detected. | No action required. |
+| 0x80F2019F | -2160590943 | ECS_E_AZURE_FILE_PATH_TOO_LONG | File path is longer than Azure Files supported path length. | Run the FileSyncErrorsReport.ps1 PowerShell script (located in the agent installation directory of the Azure File Sync agent) to identify failing file paths, then use the [ScanUnsupportedChars](https://github.com/Azure-Samples/azure-files-samples/tree/master/ScanUnsupportedChars) script. |
 | 0x80070002 | -2147024894 | ERROR_FILE_NOT_FOUND | The file was deleted and sync isn't aware of the change. | No action required. Sync will stop logging this error once change detection detects the file was deleted. |
 | 0x80070003 | -2147024893 | ERROR_PATH_NOT_FOUND | Deletion of a file or directory can't be synced because the item was already deleted in the destination and sync isn't aware of the change. | No action required. Sync will stop logging this error once change detection runs on the destination and sync detects the item was deleted. |
 | 0x80c80205 | -2134375931 | ECS_E_SYNC_ITEM_SKIP | The file or directory was skipped but will be synced during the next sync session. If this error is reported when downloading the item, the file or directory name is more than likely invalid. | No action required if this error is reported when uploading the file. If the error is reported when downloading the file, rename the file or directory in question. See [Handling unsupported characters](?tabs=portal1%252cazure-portal#handling-unsupported-characters) for more information. |
@@ -190,6 +192,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80070005 | -2147024891 | ERROR_ACCESS_DENIED | The file has a delete pending state. | No action required. File will be deleted once all open file handles are closed. |
 | 0x80c86044 | -2134351804 | ECS_E_AZURE_AUTHORIZATION_FAILED | The file can't be synced because the firewall and virtual network settings on the storage account are enabled, and the server doesn't have access to the storage account. | Add the Server IP address or virtual network by following the steps documented in the [Configure firewall and virtual network settings](/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal#optional-configure-firewall-and-virtual-network-settings) section in the deployment guide. |
 | 0x8000ffff | -2147418113 | E_UNEXPECTED | The file can't be synced due to an unexpected error. | If the error persists for several days, please open a support case. |
+| 0x80c8308f | -2134364017 | ECS_E_ETAG_VERIFCATION_FAILED | The file can't be synced because ETag verification with the target has failed. | If the error persists for several days, please open a support case. |
 | 0x80070020 | -2147024864 | ERROR_SHARING_VIOLATION | The file can't be synced because it's in use. The file will be synced when it's no longer in use. | No action required. |
 | 0x80c80017 | -2134376425 | ECS_E_SYNC_OPLOCK_BROKEN | The file was changed during sync, so it needs to be synced again. | No action required. |
 | 0x80070017 | -2147024873 | ERROR_CRC | The file can't be synced due to CRC error. This error can occur if a tiered file was not recalled prior to deleting a server endpoint or if the file is corrupt. | To resolve this issue, see [Tiered files are not accessible on the server](file-sync-troubleshoot-cloud-tiering.md#tiered-files-are-not-accessible-on-the-server) to remove tiered files that are orphaned. If the error continues to occur after removing orphaned tiered files, run [chkdsk](/windows-server/administration/windows-commands/chkdsk) on the volume. |
@@ -212,6 +215,8 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80c80201 | -2134375935 | ECS_E_SYNC_UNPROCESSABLE_ITEM_REPARSEPOINT | The sync failed due to the presence of a reparse point. | Remove the reparse point or replace it with regular file content before attempting the sync again. |
 | 0x80c80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_TRAILING_DOT | The item failed to sync because one of its path components has trailing dots. | Rename the item by removing any trailing dots that appear in the path. |
 | 0x80c8024e | -2134375858 | ECS_E_SYNC_ITEM_SKIP_CONSTRAINT_CONFLICT_NOT_ALLOWED | This error indicates a constraint conflict that was detected but was unable to be reported. The item will be skipped. | If the error persists, create a support request. |
+| 0x80c80208 | -2134375928 | ECS_E_SYNC_ITEM_RECONCILIATION_SKIP | A file or directory was skipped during the synchronization process to rebuild the sync client's metadata. It will be synchronized in the next full synchronization attempt. | If the error persists for several days, create a support request. |
+
 
 ### Handling unsupported characters
 
@@ -749,8 +754,9 @@ Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncSer
 
 This error might occur due to the following reasons:
 
-- A new server certificate is generated on the Azure File Sync server, and the old certificate is still cached. This error will be resolved within a few hours once the server cache is refreshed.
-- The server endpoint deletion failed, leaving the endpoint in a partially deleted state. To resolve this issue, retry deleting the server endpoint.
+- The server’s managed identity tenant ID doesn't match the tenant ID of the Storage Sync Service or the storage account.
+- The server was recently re-registered or its managed identity configuration changed, but the update hasn't propagated yet.
+ 
 
 
 <a id="-1906441711"></a><a id="-2134375654"></a><a id="doesnt-have-enough-free-space"></a>**The volume where the server endpoint is located is low on disk space.**  
@@ -956,6 +962,17 @@ To resolve this issue, delete and recreate the sync group by performing the foll
 | **Remediation required** | No |
 
 No action is required. This error occurs because sync detected the replica has been restored to an older state. Sync will now enter a reconciliation mode, where it recreates the sync relationship by merging the contents of the Azure file share and the data on the server endpoint. When reconciliation mode is triggered, the process can be very time consuming, depending upon the namespace size. Regular synchronization doesn't happen until the reconciliation finishes, and files that are different (last modified time or size) between the Azure file share and server endpoint will result in file conflicts.
+
+<a id="-2134375775"></a>**Sync failed because the path for the server endpoint has changed**  
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80c802a1 |
+| **HRESULT (decimal)** | -2134375775 |
+| **Error string** | ECS_E_SYNC_ROOT_VOLUME_CHANGED |
+| **Remediation required** | No |
+
+This error occurs because the path where the server endpoint is provisioned is now on a different volume than it was originally provisioned. When this issue occurs, create a support request and we will contact you to help you resolve it.
 
 <a id="-2145844941"></a>**Sync failed because the HTTP request was redirected**  
 
@@ -1194,6 +1211,20 @@ If the error persists for more than a day, create a support request.
 | **Error string** | WININET_E_INCORRECT_HANDLE_STATE |
 | **Remediation required** | No |
 
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80c87093 |
+| **HRESULT (decimal)** | -2134347629 |
+| **Error string** | ECS_E_MGMT_DATA_PLANE_INTERNAL_ERROR |
+| **Remediation required** | No |
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80c87005 |
+| **HRESULT (decimal)** | -2134347771 |
+| **Error string** | ECS_E_MGMT_INTERNAL_ERROR |
+| **Remediation required** | No |
+
 No action required. This error should automatically resolve. If the error persists for several days, create a support request.
 
 <a id="-2146233079"></a>**An internal error occurred.**
@@ -1280,6 +1311,13 @@ No action required. This error should automatically resolve. If the error persis
 | **HRESULT** | 0x8007001f |
 | **HRESULT (decimal)** | -2147024865 |
 | **Error string** | ERROR_GEN_FAILURE |
+| **Remediation required** | Maybe |
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80041005 |
+| **HRESULT (decimal)** | -2147217403 |
+| **Error string** | SYNC_E_KNOWLEDGE_DECREASED |
 | **Remediation required** | Maybe |
 
 If the error persists for more than a day, create a support request.

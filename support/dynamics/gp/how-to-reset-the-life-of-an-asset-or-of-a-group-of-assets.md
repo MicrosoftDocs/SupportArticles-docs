@@ -3,7 +3,7 @@ title: How to reset the life of an asset or of a group of assets
 description: This article describes how to reset the life of a fixed asset in Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Fixed Assets
 ---
 # How to reset the life of an asset or of a group of assets in Fixed Asset Management in Microsoft Dynamics GP

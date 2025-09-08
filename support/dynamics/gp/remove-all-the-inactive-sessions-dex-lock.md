@@ -3,7 +3,7 @@ title: Remove all the inactive sessions
 description: Describes how to remove all the inactive sessions from the DEX_LOCK table in the TempDB database when you use Microsoft Dynamics GP together with Microsoft SQL Server.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to remove all the inactive sessions from the DEX_LOCK table in the TempDB database when you use Microsoft Dynamics GP together with Microsoft SQL Server

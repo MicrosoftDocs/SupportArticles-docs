@@ -2,8 +2,8 @@
 title: Troubleshoot issues with IntelliSense code snippets
 description: Learn how to troubleshoot problems with IntelliSense code snippets that are typically caused by bad content in the snippet file or a corrupt snippet file.
 ms.date: 11/04/2016
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ms.reviewer: tglee
 ms.custom: sap:Integrated Development Environment (IDE)\Code Editor
 ---

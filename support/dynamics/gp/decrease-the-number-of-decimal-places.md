@@ -2,7 +2,7 @@
 title: Decrease the number of decimal places in Currency Setup
 description: Describes an issue in which you receive an error message and you can't decrease the number of decimal places for a currency.
 ms.reviewer: theley
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - General Ledger
 ---
 # Can't decrease the number of decimal places in Currency Setup

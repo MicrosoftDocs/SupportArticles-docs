@@ -2,7 +2,7 @@
 title: Year-end closing procedures for GL
 description: Describes the recommended year-end closing procedures for General Ledger in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - General Ledger
 ---
 # Year-end closing procedures for General Ledger in Microsoft Dynamics GP

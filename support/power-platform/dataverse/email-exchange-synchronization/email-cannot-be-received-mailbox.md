@@ -2,7 +2,7 @@
 title: Email cannot be received for the mailbox
 description: Resolves the email server error code InvalidIncomingEmailServerProfileConfiguration HostNotFound when you test and enable a mailbox in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/31/2024
+ms.date: 04/17/2025
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # "The email server location or the incoming email port specified is incorrect" error in Dynamics 365

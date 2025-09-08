@@ -3,7 +3,7 @@ title: Can't unapply a payment when you transfer payment to history tables in Re
 description: Describes a problem that occurs in which you cannot unapply a payment that is in the history tables. You must remove the payment and the applied documents from the history tables or use the Transaction Unapply tool. Workarounds are provided.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # You cannot unapply a payment when you transfer the payment to the history tables in Receivables Management in Microsoft Dynamics GP

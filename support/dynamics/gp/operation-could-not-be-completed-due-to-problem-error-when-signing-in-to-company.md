@@ -3,7 +3,7 @@ title: The operation could not be completed due to a problem in the data provide
 description: Describes an error message you may receive in Management Reporter 2012. Provides a resolution.
 ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Management Reporter
 ---
 # "The operation could not be completed due to a problem in the data provider framework" error when signing in to a company

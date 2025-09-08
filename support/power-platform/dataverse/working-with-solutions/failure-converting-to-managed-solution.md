@@ -2,7 +2,7 @@
 title: Can't install a managed solution that's previously deployed as unmanaged in Power Apps
 description: Works around an issue that occurs when an unmanaged solution is already installed and you try to install a later version of it in managed mode in Microsoft Power Apps. 
 ms.reviewer: jdaly
-ms.date: 08/29/2023
+ms.date: 04/17/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Solution import - Other errors

@@ -4,8 +4,8 @@ description: This article introduces extra steps to set up integrated Windows au
 ms.date: 11/22/2023
 ms.custom: sap:WWW Authentication and Authorization\Windows Authentication
 ms.reviewer: aartigoyle, dili
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ---
 # Kerberos unconstrained double-hop authentication with Microsoft Edge (Chromium)
 

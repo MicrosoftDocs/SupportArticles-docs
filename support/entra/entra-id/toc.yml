@@ -49,16 +49,46 @@
   items:
   - name: Developing or registering apps
     items:
-      - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
-        href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
+      - name: 401 Unauthorized errors in ASP.NET Core Web API
+        href: app-integration/401-unauthorized-aspnet-core-web-api.md
+      - name: Applications using TLS 1.0/1.1 fail to authenticate
+        href: app-integration/application-using-tls-1dot0-1dot1-authentication-fail.md
       - name: Authentication fails after Android app is published to Google Play Store
         href: app-integration/android-app-authentication-fails-after-published-to-google-play-store.md
-      - name: WIF10201 No valid key mapping found
-        href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
-      - name: Get signed-in user groups from a group overage claim
-        href: app-integration/get-signed-in-users-groups-in-access-token.md
+      - name: Cookies are disabled error in MSAL.Net XBAP application
+        href: app-integration/customize-authentication-session-expiration.md
+      - name: Customize Middleware authentication ticket
+        href: app-integration/script-errors-running-msal-net-xbap-app.md
       - name: Enable MSAL4J logging in a Spring Boot web application
         href: app-integration/enable-msal4j-logging-spring-boot-webapp.md
+      - name: Error AADSTS7000218 - Invalid client
+        href: app-integration/confidential-client-application-authentication-error-aadsts7000218.md
+      - name: IDX10501 Error in ASP.NET Core with Azure B2C Custom Policy
+        href: app-integration/troubleshoot-error-idx10501-aspnet-b2c.md
+      - name: Infinite sign-in loop issue with ASP.NET applications
+        href: app-integration/asp-dot-net-application-infinite-sign-in-loop.md
+      - name: MsalClientException - Failed to get user name
+        href: app-integration/msal-client-exception-failed-to-get-user-name.md
+      - name: No account or login hint was passed to the AcquireTokenSilent
+        href: app-integration/no-account-login-hint-passed-acquire-token-silent.md
+      - name: Package Inspector for MSAL Android Native
+        href: app-integration/package-inspector-msal-android-native.md
+      - name: Unable to match key ID 
+        href: app-integration/idx10501-token-signature-validation-error.md
+      - name: Repeated login prompts in iOS MSAL implementation
+        href: app-integration/repeat-login-prompts-in-msal-ios-app.md
+      - name: Sign out of OpenID Connect/OAuth2 applications without a user selection prompt
+        href: app-integration/sign-out-of-openid-connect-oauth2-applications-without-user-selection-prompt.md
+      - name: Troubleshoot Cross-Origin Resource Sharing issues
+        href: app-integration/troubleshoot-cross-origin-resource-sharing-issues.md
+      - name: Troubleshoot protected Web API authentication or authorization errors with Serilog
+        href: app-integration/serilog-protected-web-api-authentication-authorization-errors.md
+      - name: Troubleshoot ASP.NET OWIN and ASP.NET Core authentication sign-in failures
+        href: app-integration/asp-dot-net-open-web-interface-for-dot-net-core-authentication-sign-in-failures.md
+      - name: Troubleshoot access token signature validation errors
+        href: app-integration/troubleshooting-signature-validation-errors.md
+      - name: WIF10201 No valid key mapping found
+        href: app-integration/troubleshoot-wif10201-no-validkey-securitytoken-mvc.md
 
   - name: Troubleshoot adding apps
     href: app-integration/troubleshoot-adding-apps.md
@@ -73,6 +103,9 @@
         href: app-integration/send-notification-details.md
   - name: Troubleshoot sign-in to apps
     items:
+      - name: AADSTS7500514 - A supported type of SAML response was not found
+        href: app-integration/error-code-aadsts7500514-supported-type-saml-response-not-found.md
+      - name: Error AADSTS220501 - Unable to download Certificate Revocation List
       - name: Error code AADSTS50173 - The provided grant has expired due to it being revoked
         href: app-integration/error-code-aadsts50173-grant-expired-revoked.md
       - name: Error AADSTS220501 - Unable to download Certificate Revocation List
@@ -92,12 +125,13 @@
       - name: Error AADSTS50057 - user account is disabled
         href: app-integration/error-code-aadsts50057-user-account-is-disabled.md
       - name: AADSTS500011 - Resource Principal Not Found
-        href: ./app-integration/error-code-aadsts500011-resource-principal-not-found.md
-        displayName: AADSTS500011
+        href: app-integration/error-code-aadsts500011-resource-principal-not-found.md
       - name: Error AADSTS500571 - guest user account is disabled
         href: app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md
       - name: Error AADSTS50105 - user not assigned a role
         href: app-integration/error-code-AADSTS50105-user-not-assigned-role.md
+      - name: Error AADSTS50107 - Guest invitation redemption fails
+        href: app-integration/error-aadsts50107-guest-redemption-fails.md
       - name: Error AADSTS650056 - misconfigured app
         href: app-integration/error-code-AADSTS650056-misconfigured-app.md
       - name: Error AADSTS70001 - app not found in directory
@@ -114,6 +148,12 @@
         href: app-integration/error-code-aadsts7000110-request-is-ambiguous.md
       - name: Error AADSTS7000112 - application is disabled
         href: app-integration/error-code-aadsts7000112-application-is-disabled.md
+      - name: Error AADSTS900439 - USGClientNotSupportedOnPublicEndpoint
+        href: app-integration/error-aadsts900439-usgclientnotsupportedonpublicendpoint.md
+      - name: Error AADSTS50000 - issuing a token or an issue with our sign-in service
+        href: app-integration/error-code-aadsts50000-issuing-token-sign-in-service.md
+      - name: Enable bundle consent for apps
+        href: app-integration/bundle-consent-application-registrations.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
         href: app-integration/troubleshoot-sign-in-saml-based-apps.md
       - name: Troubleshooting infinite redirection between OIDC app and Entra ID
@@ -122,12 +162,16 @@
         href: app-integration/reply-url-redirected-to-localhost.md
       - name: Nonce is null error in ASP.NET MVC with OpenID Connect
         href: app-integration/troubleshoot-validation-context-nonce-null-mvc.md
+      - name: Your browser is not supported or up-to-date error in MSAL app
+        href: app-integration/update-your-browser-error-when-using-apps-adal-msal.md
   - name: Troubleshoot app registrations
     items: 
       - name: Application and delegated permissions for access tokens
         href: app-integration/application-delegated-permission-access-tokens-identity-platform.md
       - name: Troubleshoot consent issues
         href: app-integration/troubleshoot-consent-issues.md
+- name: Use NetLog as an alternative to Fiddler and HAR captures
+  href: app-integration/use-netlog-capture-network-traffic.md
 - name: Business To Consumer (B2C) Tenants
   items:
   - name: Problem with app or API integration
@@ -245,8 +289,6 @@
       href: mfa/text-voice-call-verification-code-mfa-not-send.md
   - name: Passwords
     items:
-    - name: Authorization_RequestDenied error when changing password
-      href: mfa/authorization-request-denied-graph-api.md
     - name: Can't verify account when resetting password
       href: user-prov-sync/could-not-verify-account-reset-pwd.md
     - name: Federated user is forced to sign in
@@ -263,14 +305,50 @@
       href: mfa/cannot-verify-account-reset-pwd.md
 - name: Microsoft Graph Users, Groups, and Entra APIs
   items: 
-   - name: Handling errors in Graph API requests with Invoke-RestMethod
-     href: app-integration/graph-api-error-handling-invoke-restmethod.md
-   - name: Troubleshoot Authorization RequestDenied error
-     href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
+   - name: 403 error when adding a user to a group
+     href: users-groups-entra-apis/authorization-requestdenied-403-error-add-user-group.md
    - name: 404 error when managing objects
      href: app-integration/404-not-found-error-manage-objects-microsoft-graph.md
+   - name: Change enumeration is not supported for requested tenant
+     href: users-groups-entra-apis/delta-query-not-supported-for-aad-b2c-tenant.md
+   - name: Graph API request fails to get B2B users using UPN
+     href: users-groups-entra-apis/microsoft-graph-api-query-can-not-get-business-to-business-user.md
+   - name: Handling errors in Graph API requests with Invoke-RestMethod
+     href: app-integration/graph-api-error-handling-invoke-restmethod.md
+   - name: Only one user is returned when running List users API
+     href: users-groups-entra-apis/only-one-user-returned-by-microsoft-graph-list-users-api.md
+   - name: Troubleshoot Authorization RequestDenied error
+     href: app-integration/troubleshoot-authorization-requestdenied-graph-api.md
+   - name: The memberOf API returns null values for properties
+     href: users-groups-entra-apis/memberof-api-returns-null-properties.md
    - name: Use managed identities to call Graph APIs in VB.Net and C#
      href: users-groups-entra-apis/call-graph-api-using-managed-dentities.md
+   - name: Getting access denied errors (Authorization)
+     items:
+      - name: Add an owner to an application
+        href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
+      - name: Can't modify user mail or phone number attributes
+        href: users-groups-entra-apis/cannot-modify-user-mail-phone-attributes.md
+      - name: Error "The identity of the calling application could not be established"
+        href: users-groups-entra-apis/identity-of-calling-application-not-established.md
+      - name: Can't look up users using the /users endpoint
+        href: users-groups-entra-apis/cannot-look-up-users-using-microsoft-graph-users-endpoint.md
+      - name: Add an owner to an application
+        href: users-groups-entra-apis/add-owner-for-application-microsoft-graph.md
+      - name: NoPermissionsInAccessToken when calling me endpoint
+        href: users-groups-entra-apis/error-call-me-endpoint-microsoft-graph.md
+      - name: HTTP 403 authorization error when calling Microsoft Graph Security API
+        href: users-groups-entra-apis/403-error-when-calling-microsoft-graph-security-api.md
+      - name: Premium license error when querying sign-in activities
+        href: users-groups-entra-apis/b2c-or-tenant-premium-license-sign-in-activities.md
+   - name: Problem with using the Graph SDK - libraries
+     items:
+      - name: Enable logging for MSAL.NET and Microsoft Graph SDK
+        href: users-groups-entra-apis/enable-logging-for-msal-microsoft-graph.md
+      - name: IDX14102 error - Unable to decode the header
+        href: users-groups-entra-apis/unable-to-decode-header-error.md
+      - name: Python scripts making requests are detected as web crawlers
+        href: users-groups-entra-apis/python-scripts-microsoft-graph-requests-detected-as-web-crawler.md
 - name: Microsoft Entra User Provisioning and Synchronization
   items:
   - name: User Sign-in or password Problems
@@ -408,3 +486,13 @@
     - name: Yellow exclamation mark in Office 2013
       href: user-prov-sync/yellow-exclamation-mark-office2013.md
 
+- name: Capture SSL traffic
+  items:
+  - name: Capture HTTPS traffic with Fiddler
+    href: app-integration/capture-https-traffic-fiddler-entra-id-app.md
+  - name: Capture Python web app HTTPS traffic with Fiddler
+    href: app-integration/capture-https-traffic-fiddler-python-app.md
+  - name: Capture SSL traffic with Fiddler
+    href: app-integration/fiddler-capture-ssl-traffic.md
+  - name: Filter Fiddler traffic using domain names and client processes
+    href: app-integration/filter-fiddler-traffic-using-domain-name-client-process.md

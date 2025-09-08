@@ -1,0 +1,39 @@
+- name: Viva Glint troubleshooting
+  href: viva-glint-welcome.yml
+  items:
+    - name: Accessing the platform
+      items:
+        - name: Resolve issues when accessing survey results
+          href: ./access/manager-access-issues.md
+    - name: Contact support
+      href: ./contact-support/get-support-viva-glint.md
+    - name: Data file uploads
+      items:
+        - name: Handle data file upload warnings and errors
+          href: ./data-file-upload\data-file-upload-warnings-errors.md
+        - name: Resolve upload errors related to attributes
+          href: ./data-file-upload/fix-upload-attributes-errors.md
+        - name: Resolve upload errors related to derived attributes
+          href: ./data-file-upload/fix-upload-derivation-errors.md
+        - name: Resolve upload errors related to duplicate data
+          href: ./data-file-upload/fix-upload-duplicate-data-warnings.md
+        - name: Resolve upload errors and warnings related to invalid or unexpected values
+          href: ./data-file-upload/fix-upload-invalid-unexpected-values-warnings.md
+        - name: Resolve upload warnings related to manager hierarchy
+          href: ./data-file-upload/fix-upload-manager-hierarchy-warnings.md
+        - name: Resolve upload errors and warnings related to employee ID updates
+          href: ./data-file-upload/fix-employee-id-updates-errors-warnings.md
+    - name: Historical imports
+      items:
+        - name: Error "Duplicate entry"
+          href: ./historical-import/import-error-duplicate-entry.md
+        - name: Error "Exception date overlap"
+          href: ./historical-import/import-error-exception-date-overlap.md
+        - name: Error "missing required field"
+          href: ./historical-import/import-error-missing-required-field.md
+        - name: Error "User is not in client"
+          href: ./historical-import/import-error-user-is-not-in-client.md
+    - name: Provisioning and licensing
+      items:
+        - name: Tenant provisioning and licensing errors
+          href: ./provisioning-and-licensing/tenant-provisioning-licensing-errors.md         

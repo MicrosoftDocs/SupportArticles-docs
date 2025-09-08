@@ -1,9 +1,9 @@
 ---
 title: Support for network database files
 description: This article describes support for network database files in SQL Server and how to configure SQL Server to store a database on a networked server or on an NAS storage server.
-ms.date: 09/04/2023
+ms.date: 04/08/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
-ms.reviewer: SANJAYAN
+ms.reviewer: jopilov, saba
 ---
 # Description of support for network database files in SQL Server
 

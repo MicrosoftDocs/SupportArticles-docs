@@ -3,7 +3,7 @@ title: Azure VM startup is stuck at Windows Update
 description: Learn how to troubleshoot the issue when an Azure VM startup is stuck at Windows update.
 services: virtual-machines
 documentationCenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 editor: v-jesits
 ms.service: azure-virtual-machines
@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 10/09/2018
-ms.author: genli
+ms.author: jarrettr
 ms.custom: sap:My VM is not booting
 ---
 # Azure VM startup is stuck at Windows update

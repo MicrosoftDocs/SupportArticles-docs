@@ -1,7 +1,7 @@
 ---
 title: Use AssemblyVersion and AssemblyFileVersion
 description: This article describes how to use AssemblyVersion and AssemblyFileVersion attributes in the AssemblyInfo.cs file.
-ms.date: 04/14/2020
+ms.date: 06/30/2025
 ms.topic: how-to
 ms.custom: sap:Common Language Runtime (CLR)
 ---
@@ -14,17 +14,19 @@ _Original KB number:_ &nbsp; 556041
 
 ## Summary
 
-AssemblyInfo.cs provides two attributes to set two different types of versions. This tip shows how to use those two attributes.
+AssemblyInfo.cs provides two attributes to define different types of version numbers. This article explains how to use these attributes effectively.
 
-Microsoft .NET framework provides opportunity to set two different types of version numbers to each assembly.
+Microsoft .NET Framework allows you to set two different types of version numbers to each assembly.
 
 ## AssemblyVersion
 
-It's the version number used by framework during build and at runtime to locate, link, and load the assemblies. When you add reference to any assembly in your project, it's this version number that gets embedded. At runtime, Common Language Runtime (CLR) looks for assembly with this version number to load. But remember this version is used along with name, public key token and culture information only if the assemblies are strong-named signed. If assemblies aren't strong-named signed, only file names are used for loading.
+AssemblyVersion is the version number used by the framework during build and at runtime to locate, link, and load the assemblies. When you add a reference to an assembly in your project, this version number is embedded. At runtime, Common Language Runtime (CLR) uses this version number to load the assembly.
+
+Note: This version is used along with the assembly's name, public key token, and culture information only if the assembly is strong-named (signed). If the assembly isn't strong-named, only the file name is used for loading.
 
 ## AssemblyFileVersion
 
-It's the version number given to file as in file system. It's displayed by Windows Explorer, and never used by .NET framework or runtime for referencing.
+AssemblyFileVersion is the version number assigned to an assembly file as in file system. It's displayed by Windows Explorer, and never used by .NET Framework or runtime for referencing.
 
 ## Attributes in AssemblyInfo.cs
 
@@ -38,6 +40,10 @@ It's the version number given to file as in file system. It's displayed by Windo
 [assembly: AssemblyFileVersion("1.0.0.0")]
 ```
 
-Providing a (*) in place of absolute number makes compiler increase the number by one every time you build.
+Using an asterisk (*) in place of a specific number allows the compiler to auto-increment the value with each build.
 
-Suppose you're building a framework assembly for your project that is used by lot of developers while building the application assemblies. If you release new version of assembly frequently, say once every day, and if assemblies are strong named, Developers will have to change the reference every time you release new assembly. It can be cumbersome and may lead to wrong references also. A better option in such closed group and volatile scenarios would be to fix the `AssemblyVersion` and change only the `AssemblyFileVersion`. Use the assembly file version number to communicate the latest release of assembly. In this case, developers won't have to change the references and they can overwrite the assembly in reference path. In central or final release builds it makes more sense to change the `AssemblyVersion` and most keep the `AssemblyFileVersion` same as assembly version.
+For example, if you're building a framework assembly that is used by many developers, and you release new versions frequently (for example, daily), and the assemblies are strong-named, developers would need to update their references with each release. It can be cumbersome and may lead to wrong references.
+
+A better approach in such closed-group and volatile scenarios is to keep the `AssemblyVersion` fixed and update only the `AssemblyFileVersion`. It allows developers to overwrite the assembly in the reference path without changing their project references.
+
+For central or final release builds, it's recommended to update the `AssemblyVersion` to reflect significant changes. In these cases, the `AssemblyFileVersion` is typically updated to match the `AssemblyVersion` for consistency.

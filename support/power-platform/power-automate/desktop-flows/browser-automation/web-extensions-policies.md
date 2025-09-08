@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot issues in Power Automate browser extensions
 description: Provides a resolution for the Failed to assume control of browser (Internal error or communication failure) error or Get Extension message.
-ms.reviewer: nimoutzo, gtrantzas
-ms.date: 06/03/2024
+ms.reviewer: nimoutzo, gtrantzas, jspantouris 
+ms.date: 08/08/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Troubleshoot issues in Power Automate browser extensions
@@ -55,15 +55,14 @@ Follow these steps:
 
    1. Check whether the Power Automate web extension is installed and enabled. If it isn’t installed, see the [Prerequisites](#prerequisites) section.
 
-   1. If the extension is installed, run the [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter).
+   1. If the extension is installed, run the **Troubleshoot UI/Web automation issues** diagnostic in [Power Automate for desktop troubleshooter](/power-automate/desktop-flows/troubleshooter).
 
    1. Follow the steps that are suggested in the troubleshooter.
-
 
 ### Look for errors in the background script
 
 > [!NOTE]
-> This step is valid only for Microsoft Edge and Google Chrome. 
+> This step is valid only for Microsoft Edge and Google Chrome.
 
 Follow these steps:
 
@@ -208,7 +207,10 @@ Follow these steps:
 
        ---
 
-    1. Check the **NativeMessagingUserLevelHosts** policy. If **NativeMessagingUserLevelHosts** is disabled, enable it or make sure that `com.robin.messagehost` for the legacy browser extension and `com.microsoft.pad.messagehost` for the default browser extension are added to your **NativeMessagingAllowlist** policy in HKLM (Local Machine level).
+    1. Check the [NativeMessagingUserLevelHosts](/deployedge/microsoft-edge-browser-policies/nativemessaginguserlevelhosts) policy. If **NativeMessagingUserLevelHosts** is disabled, enable it or make sure that `com.robin.messagehost` for the legacy browser extension and `com.microsoft.pad.messagehost` for the default browser extension are added to your **NativeMessagingAllowlist** policy in HKLM (Local Machine level).
+
+        > [!NOTE]
+        > **NativeMessagingUserLevelHosts** must be enabled when using the [Microsoft Store (MSIX) version of Power Automate for desktop](/power-automate/desktop-flows/install#install-power-automate-from-microsoft-store).
 
 ### Check whether the message host points to the correct location
 
@@ -244,7 +246,7 @@ Follow these steps:
 
 1. Check the value of the registry key. The correct value is as follows:
 
-   - MSI: `C:\Program Files (x86)\Power Automate Desktop\PAD.ChromiumManifest.json`
+   - MSI: `C:\Program Files (x86)\Power Automate Desktop\dotnet\PAD.ChromiumManifest.json`
    - MSIX Windows 11: `C:\Program Files\WindowsApps\Microsoft.PowerAutomateDesktop_X.Y.Z.0_x64__8wekyb3d8bbwe\PAD.ChromiumManifest.json`
 
      To retrieve `X.Y.Z`:
@@ -266,6 +268,15 @@ Check whether the `ComSpec` variable exists in **Environment variable** under **
 
     > [!NOTE]
     > The system variables should include the `ComSpec` variable. The expected value for `ComSpec` is `C:\WINDOWS\system32\cmd.exe`.
+
+### Check if more than one browser profile exists
+
+To check if more than one profile exists, select the profile icon in the browser. A menu displaying the profiles should appear. The profile icon is usually located either on the top or right side of the browser window.
+
+If more than one browser profile exists:
+
+1. Uninstall the Power Automate web extension from each existing browser profile.
+1. Close the browser and [install the extension](/power-automate/desktop-flows/install-browser-extensions) only in the browser profile that will be used by the automation.
 
 ### Check for errors in Windows Event Viewer
 

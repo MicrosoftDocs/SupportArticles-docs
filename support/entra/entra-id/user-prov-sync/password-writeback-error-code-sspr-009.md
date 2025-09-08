@@ -1,10 +1,10 @@
 ---
 title: Microsoft Entra Administrators can't reset their own password from cloud
 description: "Troubleshoot error SSPR_009: You can't reset your own password because password reset isn't turned on for your organization."
-ms.date: 02/11/2022
+ms.date: 06/05/2025
 ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: entra-id
-ms.custom: sap:User Sign-in or password Problems, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: sap:User Sign-in or password Problems, no-azure-ad-ps-ref, azure-ad-ref-level-one-done
 keywords:
 #Customer intent: As a user with a Microsoft Entra Administrator role, I want to avoid SSPR_009 errors so that I can reset my own password from the cloud.
 ---
@@ -33,10 +33,16 @@ The old SSPR-A implementation is used when a Microsoft Entra account has an admi
 
 ## Solution
 
-Enable SSPR-A on the tenant by running the [Set-MsolCompanySettings](/powershell/module/msonline/set-msolcompanysettings) PowerShell cmdlet, as follows:
+Enable SSPR-A on the tenant by running the [Update-MgPolicyAuthorizationPolicy](/powershell/module/microsoft.graph.identity.signins/update-mgpolicyauthorizationpolicy) Microsoft Graph PowerShell cmdlet, as follows:
 
 ```powershell
-Set-MsolCompanySettings -SelfServePasswordResetEnabled $true
-```
+Import-Module Microsoft.Graph.Identity.SignIns
 
+$params = @{
+	allowedToUseSSPR = $true
+}
+
+Update-MgPolicyAuthorizationPolicy -BodyParameter $params
+```
+For more information, see [Get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started)
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

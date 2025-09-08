@@ -3,7 +3,7 @@ title: Troubleshoot Linux VM boot issues due to filesystem errors
 description: Describes how to troubleshoot Linux VM not starting issues that are caused by filesystem errors.
 services: virtual-machines
 documentationcenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 tags: ''
 ms.custom: sap:My VM is not booting, linux-related-content
@@ -13,8 +13,9 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 07/19/2022
-ms.author: genli
+ms.date: 05/20/2025
+ms.author: jarrettr
+ms.reviewer: maries, v-weizhu
 ---
 # Troubleshoot Linux virtual machine boot issues due to filesystem errors
 
@@ -328,11 +329,14 @@ or
 mount /home
 ```
 
-If the journaled changes aren't written when you mount filesystems, use the `-L` flag to discard the journal and mount the filesystem as if all changes are successfully completed. When the `-L` flag is used, data loss will occur because the log shows incomplete file operations are being discarded.  
+If the journaled changes aren't written when you mount filesystems, use the `-L` flag to discard the journal and mount the filesystem as if all changes are successfully completed. 
+
 
 ```bash
 xfs_repair -L /dev/rootvg/homelv /recovery
 ```
+> [!CAUTION]
+> The `-L` flag forces `xfs_repair` to clean entries in the transaction log journal, which often results in data loss.
 
 ### <a id="prevent-boot-failure"></a>Prevent boot failure
 

@@ -3,7 +3,7 @@ title: Recover Azure Linux VM from kernel-related boot issues
 description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot after applying kernel changes.
 author: divargas-msft
 ms.author: divargas
-ms.date: 04/15/2024
+ms.date: 07/08/2025
 ms.reviewer: jofrance
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot start or stop my VM, devx-track-azurecli, linux-related-content
@@ -270,6 +270,9 @@ Before rebooting a server, we recommend validating the GRUB configuration and `/
     ```
 
 ### <a id="missing-initramfs-alar"></a>Regenerate missing initramfs by using Azure Repair VM ALAR scripts
+
+> [!div class="nextstepaction"]
+> [Run in Linux](https://go.microsoft.com/fwlink/?linkid=2321843)
 
 1. Create a repair VM by running the following Bash command line with [Azure Cloud Shell](/azure/cloud-shell/overview). For more information, see [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM - initrd option](repair-linux-vm-using-ALAR.md#initrd).
 

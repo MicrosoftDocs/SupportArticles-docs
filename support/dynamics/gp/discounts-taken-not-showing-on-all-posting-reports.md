@@ -3,7 +3,7 @@ title: Discounts Taken not showing on all posting reports
 description: When automatically applying credit memos during the checkrun to invoices with payment terms, the resulting posting journals may not reflect all the discounts that were taken. This issue occurs because of how the discounts follow the payment documents.
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # Discounts Taken not showing on all posting reports in Payables Management for Microsoft Dynamics GP

@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot the failed deployment of a Kubernetes application offer
 description: Troubleshoot the failed deployment of a Kubernetes application offer that was made on the Azure Marketplace.
-ms.date: 01/24/2024
-ms.reviewer: chiragpa, atchub, v-leedennis
+ms.date: 04/22/2025
+ms.reviewer: chiragpa, atchub, v-leedennis, mnasser
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Marketplace user, I want to troubleshoot the failed deployment of a Kubernetes application after I accept an offer on the Marketplace.

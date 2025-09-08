@@ -151,6 +151,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x8002802b | -2147319765 | TYPE_E_ELEMENTNOTFOUND | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80072f00 | -2147012864 | WININET_E_FORCE_RETRY | A connection with the service could not be established. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80C86093 | -2134351785 | ECS_E_STABLEVERSION_SVID_CHECK_<br/>FAILED | The file can't be tiered due to a known issue. | No action required. Ignore the error and it will no longer appear once a fix is released. |
+| 0x80c83099 | -2134364007 | ECS_E_PRIVATE_ENDPOINT_ACCESS_<br/>BLOCKED | Private endpoint configuration access blocked. | Check the private endpoint configuration and allow access to the Azure File Sync service. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 
 ## How to troubleshoot files that fail to be recalled
 

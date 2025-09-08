@@ -2,7 +2,7 @@
 title: How to determine what cost is used for an inventory item in Microsoft Dynamics GP
 description: How to determine what cost is used for an inventory item in Microsoft Dynamics GP.
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.reviewer: theley
 ms.custom: sap:Distribution - Inventory
 ---

@@ -1,7 +1,6 @@
 ---
 title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
-ms.topic: conceptual
 ms.date: 02/20/2025
 editor: v-jsitser
 ms.reviewer: aaronmax, jeanbisutti, trstalna, toddfous, heya, v-leedennis
@@ -14,6 +13,8 @@ ms.custom: sap:Missing or Incorrect data after enabling Application Insights in 
 # Troubleshoot guide: Azure Monitor Application Insights for Java
 
 This article provides troubleshooting information to resolve common issues that might occur when you're instrumenting a Java application by using the Java agent for Application Insights. Application Insights is a feature of the Azure Monitor platform service.
+
+[!INCLUDE [Azure Help Support](../../../../includes/azure/application-insights-sdk-support.md)]
 
 ## Check the self-diagnostic log file
 

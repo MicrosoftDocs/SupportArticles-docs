@@ -4,7 +4,7 @@ description: Troubleshoot user creation and deletion issues in Microsoft Entra I
 ms.date: 12/15/2021
 ms.reviewer: tovascon, anhorta, v-leedennis
 ms.service: entra-id
-ms.custom: sap:Users, devx-track-azurecli, has-azure-ad-ps-ref
+ms.custom: sap:Users, devx-track-azurecli, no-azure-ad-ps-ref
 keywords:
 #Customer intent: As a Microsoft Entra Global Administrator or User Administrator, I want create and delete users so that I can manage the current user list and let users access Azure services.
 ---
@@ -58,7 +58,7 @@ For more information, see [Add or delete users - Microsoft Entra ID](/azure/acti
 
 ## [Microsoft Graph](#tab/microsoft-graph)
 
-To add a user in Microsoft Graph, use the [Create user API](/graph/api/user-post-users):
+To add a user in Microsoft Graph, use the [Create User API](/graph/api/user-post-users):
 
 ```http
 POST https://graph.microsoft.com/v1.0/users 
@@ -74,20 +74,16 @@ Content-type: application/json {
 }
 ```
 
-## [Azure PowerShell](#tab/azure-powershell)
+## [Microsoft Graph PowerShell](#tab/microsoft-graph-powerShell)
 
-To add a user in Azure PowerShell, run the [New-AzureADUser](/powershell/module/azuread/new-azureaduser) cmdlet:
+To add a user in Microsoft Graph PowerShell, run the [New-MgUser](/powershell/module/microsoft.graph.users/new-mguser?view=graph-powershell-1.0&preserve-view=true) cmdlet. To run this command, you must connect to Microsoft Graph with at least the `User.ReadWrite.All` permission.
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
-```powershell-interactive
-$PasswordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
-$PasswordProfile.Password = "<Password>"
-New-AzureADUser -AccountEnabled $true `
-    -DisplayName "<New User>" `
-    -MailNickName "<Newuser>" `
-    -PasswordProfile $PasswordProfile `
-    -UserPrincipalName "<NewUser@contoso.onmicrosoft.com>"
+```powershell
+$PasswordProfile = @{
+  Password = 'xWwvJ]6NMw+bWH-d'
+  }
+Connect-MgGraph -Scopes "User.ReadWrite.All"
+New-MgUser -DisplayName 'Rene Magi' -PasswordProfile $PasswordProfile -AccountEnabled -MailNickName 'ReneMagi' -UserPrincipalName 'ReneMagi@contoso.com'
 ```
 
 ## [Azure CLI](#tab/azure-cli)
@@ -141,12 +137,12 @@ For example, if you want to delete a user who has a principal name of `NewUser@c
 DELETE https://graph.microsoft.com/v1.0/users/NewUser@contoso.onmicrosoft.com
 ```
 
-## [Azure PowerShell](#tab/azure-powershell)
+## [Microsoft Graph PowerShell](#tab/microsoft-graph-powerShell)
 
-To delete a user in Azure PowerShell, run the [Remove-AzureADUser](/powershell/module/azuread/remove-azureaduser) cmdlet:
+To delete a user in Azure PowerShell, run the [Remove-MgUser](/powershell/module/microsoft.graph.users/remove-mguser?view=graph-powershell-1.0&preserve-view=true) cmdlet. To run this command, you must connect to Microsoft Graph with at least the `User.DeleteRestore.All` permission.
 
-```powershell-interactive
-Remove-AzureADUser -ObjectId "<NewUser@contoso.onmicrosoft.com>" 
+```powershell
+Remove-MgUser -UserId '5c442efb-5e66-484a-936a-91b6810bed14'
 ```
 
 ## [Azure CLI](#tab/azure-cli)
@@ -154,6 +150,7 @@ Remove-AzureADUser -ObjectId "<NewUser@contoso.onmicrosoft.com>"
 To delete a user in Azure CLI, run the [az ad user delete](/cli/azure/ad/user#az-ad-user-delete) command:
 
 ```azurecli-interactive
+Connect-MgGraph -Scopes "User.DeleteRestore.All"
 az ad user delete --id "<NewUser@contoso.onmicrosoft.com>"
 ```
 

@@ -3,7 +3,7 @@ title: Adjust the beginning balance entries after you perform a year-end closing
 description: Describes how to adjust the beginning balance entries after you perform a year-end closing in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - General Ledger
 ---
 # How to adjust the beginning balance entries after you perform a year-end closing in Microsoft Dynamics GP

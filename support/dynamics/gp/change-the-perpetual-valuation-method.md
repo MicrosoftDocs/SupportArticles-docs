@@ -3,7 +3,7 @@ title: Change the perpetual valuation method
 description: Describes how to change the perpetual valuation method and the periodic valuation method if Manufacturing is installed in Microsoft Dynamics GP.
 ms.reviewer: ttorgers, lmuelle, theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Manufacturing Series
 ---
 # How to change the perpetual valuation method and the periodic valuation method when Manufacturing in Microsoft Dynamics GP is installed

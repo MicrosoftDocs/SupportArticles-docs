@@ -3,7 +3,7 @@ title: MergeField wasn't found in header record
 description: Provides a solution to an error that occurs when you use the Letter Writing Assistant (LWA) to Prepare an Employee benefits.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Human Resources
 ---
 # Microsoft Dynamics GP hangs when selecting for payroll options for Benefit and deduction letters in LWA and/or get Invalid merge field error

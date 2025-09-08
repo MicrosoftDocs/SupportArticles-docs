@@ -2,7 +2,7 @@
 title: Batch status messages in the Batch Recovery window
 description: Discusses the different batch status messages in the Batch Recovery window in Microsoft Dynamics GP.
 ms.reviewer: theley,  
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # Batch status messages in the Batch Recovery window in Microsoft Dynamics GP

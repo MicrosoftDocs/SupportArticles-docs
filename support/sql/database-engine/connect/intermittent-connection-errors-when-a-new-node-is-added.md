@@ -4,7 +4,7 @@ description: This article helps you resolve the problem of intermittent connecti
 ms.date: 04/30/2024
 author: prmadhes-msft
 ms.author: prmadhes
-ms.reviewer: jopilov, haiyingyu, v-jayaramanp
+ms.reviewer: jopilov, aartigoyle, v-jayaramanp
 ms.custom: sap:Database Connectivity and Authentication
 ---
 

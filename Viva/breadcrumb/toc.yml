@@ -1,0 +1,34 @@
+items:
+- name: Learn
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Microsoft Viva
+    tocHref: /viva/
+    topicHref: /viva/index
+    items:
+    - name: Troubleshooting
+      tocHref: /troubleshoot/viva/
+      topicHref: /troubleshoot/viva/index
+      items:
+      - name: Viva Connections
+        tocHref: /troubleshoot/viva/connections/
+        topicHref: /troubleshoot/viva/connections/viva-connections-welcome
+      - name: Viva Engage
+        tocHref: /troubleshoot/viva/engage/
+        topicHref: /troubleshoot/viva/engage/viva-engage-welcome
+      - name: Viva Glint
+        tocHref: /troubleshoot/viva/glint/
+        topicHref: /troubleshoot/viva/glint/viva-glint-welcome
+      - name: Viva Insights
+        tocHref: /troubleshoot/viva/insights/
+        topicHref: /troubleshoot/viva/insights/viva-insights-welcome
+      - name: Viva Learning
+        tocHref: /troubleshoot/viva/learning/
+        topicHref: /troubleshoot/viva/learning/viva-learning-welcome 
+      - name: Viva Pulse
+        tocHref: /troubleshoot/viva/pulse/
+        topicHref: /troubleshoot/viva/pulse/viva-pulse-welcome
+      - name: Viva suite administration
+        tocHref: /troubleshoot/viva/viva-suite-administration
+        topicHref: /troubleshoot/viva/viva-suite-administration/viva-suite-administration-welcome

@@ -3,7 +3,7 @@ title: Dynamics.set unable to open file
 description: Provides a solution to an error that occurs when you try to update modified forms and modified reports in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Dynamics.set: unable to open file" Error message when you try to update modified forms and modified reports in Microsoft Dynamics GP

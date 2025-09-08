@@ -1,7 +1,7 @@
 ---
 title: Recommended and useful mountOptions settings on Azure Files
 description: Learn about the useful and recommended mountOptions settings when you configure the storage class object on Azure Files.
-ms.date: 09/14/2024
+ms.date: 04/27/2025
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to learn about mount option settings so that I can set up my Azure Files storage class object optimally on my Azure Kubernetes Service (AKS) cluster.
@@ -9,44 +9,60 @@ ms.custom: sap:Storage
 ---
 # Use mountOptions settings in Azure Files
 
-This article discusses the useful and recommended mounting options when you configure the storage class object on Azure Files. These mounting options help you to provision storage on your Kubernetes cluster.
+This article discusses recommended mount options when you configure the storage class object on Azure Files. These mounting options help you to provision storage on your Kubernetes cluster.
 
 ## Recommended settings
 
-The following `mountOptions` field settings are recommended for the Kubernetes version and the file and directory mode (permissions):
+The following `mountOptions` settings are recommended for Server Message Block (SMB) and Network File System (NFS) shares:
 
-| Setting                          | Recommended value |
-|----------------------------------|-------------------|
-| Kubernetes version               | 1.12.2 or later   |
-| `file_mode` and `dir_mode` value | `0777`            |
+- **SMB shares**
 
-The following configuration file is an example of how to set the file and directory permissions:
+    ```yaml
+    apiVersion: storage.k8s.io/v1
+    kind: StorageClass
+    metadata:
+      name: azurefile-csi
+    provisioner: file.csi.azure.com
+    allowVolumeExpansion: true
+    parameters:
+      skuName: Premium_LRS  # available values: Premium_LRS, Premium_ZRS, Standard_LRS, Standard_GRS, Standard_ZRS, Standard_RAGRS, Standard_RAGZRS
+    reclaimPolicy: Delete
+    volumeBindingMode: Immediate
+    mountOptions:
+      - dir_mode=0777  # modify this permission if you want to enhance the security
+      - file_mode=0777 # modify this permission if you want to enhance the security
+      - mfsymlinks    # support symbolic links
+      - cache=strict  # https://linux.die.net/man/8/mount.cifs
+      - nosharesock  # reduces probability of reconnect race
+      - actimeo=30  # reduces latency for metadata-heavy workload
+      - nobrl  # disable sending byte range lock requests to the server and for applications which have challenges with posix locks
+    ```
 
-```yaml
-kind: StorageClass
-apiVersion: storage.k8s.io/v1
-metadata:
-  name: azurefile
-provisioner: kubernetes.io/azure-file
-mountOptions:
-  - dir_mode=0777
-  - file_mode=0777
-  - uid=1000
-  - gid=1000
-  - mfsymlinks
-  - nobrl
-  - cache=none
-parameters:
-  skuName: Standard_LRS
-```
+- **NFS shares**
 
-## Other useful settings
+    ```yaml
+    apiVersion: storage.k8s.io/v1
+    kind: StorageClass
+    metadata:
+      name: azurefile-csi-nfs
+    provisioner: file.csi.azure.com
+    parameters:
+      protocol: nfs
+      skuName: Premium_LRS     # available values: Premium_LRS, Premium_ZRS
+    reclaimPolicy: Delete
+    volumeBindingMode: Immediate
+    allowVolumeExpansion: true
+    mountOptions:
+      - nconnect=4  # improves performance by enabling multiple connections to share
+      - noresvport  # improves availability
+      - actimeo=30  # reduces latency for metadata-heavy workloads
+    ```
 
-You might also find the following `mountOptions` settings useful:
+> [!NOTE]
+> The location for configuring mount options (`mountOptions`) depends on whether you provision dynamic or static persistent volumes. If you [dynamically provision a volume](/azure/aks/azure-csi-files-storage-provision#dynamically-provision-a-volume) with a storage class, specify the mount options on the storage class object (`kind: StorageClass`). If you [statically provision a volume](/azure/aks/azure-csi-files-storage-provision#statically-provision-a-volume), specify the mount options on the `PersistentVolume` object (`kind: PersistentVolume`). If you [mount the file share as an inline volume](/azure/aks/azure-csi-files-storage-provision#mount-file-share-as-an-inline-volume), specify the mount options on the `Pod` object (`kind: Pod`).
 
-| Setting | Description |
-|--|--|
-| `mfsymlinks` | This setting forces the Azure Files mount (Common Internet File System, or cifs) to support symbolic links. |
-| `nobrl` | This setting prevents sending byte range lock requests to the server. It's necessary for certain applications that break with cifs-style mandatory byte range locks. Most cifs servers don't yet support requesting advisory byte range locks. If an application doesn't use this setting and breaks with cifs-style mandatory byte range locks, error messages such as `Error: SQLITE_BUSY: database is locked` might occur. |
+## More information
+
+For Azure Files best practices, see [Provision Azure Files storage](/azure/aks/azure-csi-files-storage-provision#best-practices).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

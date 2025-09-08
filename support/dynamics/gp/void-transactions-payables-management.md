@@ -3,7 +3,7 @@ title: Void transactions in Payables Management
 description: Describes how to void Payables Management transactions in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # How to void transactions in Payables Management in Microsoft Dynamics GP

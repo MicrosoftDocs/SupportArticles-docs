@@ -2,8 +2,8 @@
 title: How to securely transfer files to Microsoft Support
 description: Provides information to help you fast and secure transfer files with Microsoft Support.
 ms.date: 10/10/2024
-author: genlin
-ms.author: genli
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.service: azure-common-issues-support
 ms.reviewer: 
 ---

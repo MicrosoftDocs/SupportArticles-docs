@@ -1,9 +1,9 @@
 ---
 title: Remove a partial installation of SQL Server
 description: This article describes the procedure to remove a partial installation of SQL Server.
-ms.date: 09/25/2020
+ms.date: 06/16/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
-ms.reviewer: amylewis
+ms.reviewer: prmadhes
 ms.topic: how-to
 ---
 
@@ -33,11 +33,33 @@ Use the following procedure to resolve the problem:
 1. Using an elevated command prompt, navigate to the location of 'setup.exe' for \<SQL Version upgrading to\> installation media directory and execute the command from Step 2.
 
     > [!NOTE]
-    > It's very important to ensure you are running the commands against the right instance or else you may end up uninstalling a working instance.
+    > It's very important to ensure you're running the commands against the right instance or else you may end up uninstalling a working instance.
 
 1. Launch the **Installation Center** wizard GUI from either the SQL Server Program group or by rerunning the setup program.
 
-1. Navigate to the **Tools** menu and select the **Installed SQL Server features discovery report** and verify there are no more \<instance name\>.INACTIVE instances shown in the report.
+1. Navigate to the **Tools** menu, select the **Installed SQL Server features discovery report**, and verify there are no more `<instance name>.INACTIVE` instances shown in the report.
+
+1. If there are inactive instances in the discovery report, follow these steps to remove them:
+
+   1. Open the corresponding XML file.
+   1. Find each `MSSQLSERVER.INACTIVE` entry.
+   1. Locate and note down the value of `ProductCode`. Here's an example:
+
+      ```xml
+      ProductCode="{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}"
+      ```
+   1. Open **Command Prompt** as an administrator and run the following command for each `ProductCode`:
+
+      ```cmd
+      msiexec /x {PRODUCT-CODE-GUID}
+      ```
+      
+      > [!NOTE]
+      > Repeat the command for each **ProductCode** linked to the inactive instance. Here's an example:
+      >
+      > ```cmd
+      > msiexec /x {9FFAE13C-6160-4DD0-A67A-DAC5994F81BD}
+      > ```
 
 1. Retry the setup program that was originally failing to complete.
 

@@ -2,8 +2,8 @@
 title: Troubleshoot failed requests using tracing in IIS 8.5
 description: Describes request-based tracing and how to troubleshoot failed requests with tracing in IIS 8.5.
 ms.date: 10/05/2023
-ms.author: haiyingyu
-author: HaiyingYu
+ms.author: aartigoyle
+author: aartig13
 ms.reviewer: johnhart, riande,
 ms.custom: sap:Health, Diagnostic, and Performance Features\Failed Request Tracing
 ---

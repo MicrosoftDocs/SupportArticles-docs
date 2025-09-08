@@ -3,7 +3,7 @@ title: Cannot select a project number in the Billing Entry window
 description: Explains that you receive the A billing transaction with an earlier cutoff date exists for this project error message when you select a project in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains 8.0.
 ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Project Accounting
 ---
 # "A billing transaction with an earlier cutoff date exists..." error when you select a project number in Billing Entry

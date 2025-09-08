@@ -9,18 +9,27 @@ metadata:
   ms.topic: landing-page # Required
   author: rahulmital #Required; your GitHub user alias, with correct capitalization.
   ms.author: rahulmital #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/22/2024
+  ms.date: 04/30/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+
 # Card
-- title: Bulk deleting data
+- title: Dynamics 365 App for Outlook
   linkLists:
     - linkListType: how-to-guide
-      links:
-        - text: Bulk operation errors
-          url: bulk-deleting-data/bulk-operation-errors.md
+      links:        
+        - text: App for Outlook authentication pop-up is blank and unable to sign in
+          url: d365-app-outlook/dynamics-app-for-outlook-authentication-pop-up-blank-cannot-proceed.md
+        - text: Dynamics 365 App for Outlook doesn't appear within Outlook
+          url: d365-app-outlook/app-does-not-appear-within-outlook.md
+        - text: '"Something went wrong during sign-in" error when accessing'
+          url: d365-app-outlook/app-does-not-appear-within-outlook.md
+        - text: '"Track and Set Regarding are currently disabled" error'
+          url: d365-app-outlook/something-went-wrong-during-sign.md
+        - text: You don't have required privilege (prvReadOrganization) error
+          url: d365-app-outlook/dynamics-app-for-outlook-authentication-pop-up-blank-cannot-proceed.md
 
 # Card
 - title: Dataverse Web API and SDK
@@ -33,12 +42,32 @@ landingContent:
           url: dataverse-web-api-and-sdk/web-api-client-errors.md
 
 # Card
-- title: Plug-in execution
+- title: Email and Exchange Synchronization
   linkLists:
     - linkListType: how-to-guide
       links:
-        - text: Dataverse plug-ins
-          url: plug-in-execution/dataverse-plug-ins-errors.md
+        - text: A Tracked to Dynamics 365 category is added to a user's mailbox
+          url: email-exchange-synchronization/tracked-to-dynamics-365-category-added.md
+        - text: 401 Unauthorized exception when using server-side synchronization
+          url: email-exchange-synchronization/exception-when-using-server-side-sync.md
+        - text: '"You are not part/member of organization; Account disabled; no instances found; Invalid User Authorization error"'
+          url: email-exchange-synchronization/error-when-signing-dynamics-365.md
+        - text: '"The account does not have permission to impersonate the requested user" error when selecting Test Connection'
+          url: email-exchange-synchronization/the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
+        - text: Troubleshoot and monitor server-side synchronization
+          url: email-exchange-synchronization/troubleshooting-monitoring-server-side-synchronization.md
+        - text: '"You cannot send email as the selected user" error when sending an email as another user'
+          url: email-exchange-synchronization/cannot-send-email-as-another-user.md
+
+# Card
+- title: Environment and app access
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Troubleshoot user access issues for different environments
+          url: environment-app-access/troubleshooting-user-needs-read-write-access-organization.md
+        - text: Troubleshoot missing environments
+          url: environment-app-access/troubleshoot-missing-environments.md   
 
 # Card
 - title: User permissions
@@ -49,23 +78,27 @@ landingContent:
           url: user-permissions/cleanup-inherited-access.md
         - text: Dataverse client errors
           url: user-permissions/client-errors.md
+
 # Card
 - title: Working with solutions
   linkLists:
     - linkListType: how-to-guide
       links:
-        - text: '"An entitykey with the selected attributes already exists" error'
-          url: working-with-solutions/entitykey-selected-attributes-already-exists.md    
-        - text: '"Failed deleting solution" error due to circular dependencies between solutions'
-          url: working-with-solutions/circular-dependencies-between-solutions.md
-        - text: '"Full formXml is expected to create a form" error'
-          url: working-with-solutions/full-formxml-expected-to-create-form-error.md
-        - text: '"PrimaryName attribute not found for entity" error'
-          url: working-with-solutions/primaryname-attribute-not-found.md
-        - text: '"Solution cannot be deleted due to dependencies" error'
-          url: working-with-solutions/solution-cannot-be-deleted-due-to-dependencies.md
-        - text: '"You cannot delete this form because it is the only fallback form" error'
-          url: working-with-solutions/you-cannot-delete-this-form-only-fallback.md
+        - text: Concurrent solution operation failures
+          url: working-with-solutions/concurrent-solution-operation-failures.md
+        - text: Changes aren't effective after solution import
+          url: working-with-solutions/changes-not-effective-solution-import.md
+        - text: Error code 80040203 (Invalid Argument) error when importing a solution
+          url: working-with-solutions/error-code-80040203-invalid-argument-error.md
+        - text: Missing dependencies error during solution import
+          url: working-with-solutions/missing-dependency-on-solution-import.md
+        - text: Maximum row size exceeds the allowed maximum during solution import
+          url: working-with-solutions/maximum-row-size-exceeds.md
+        - text: Solution import or application installation failure due to missing privileges
+          url: working-with-solutions/install-failure-priviledge-not-assigned.md
+        - text: '"The import of solution failed" error'
+          url: working-with-solutions/the-import-of-solution-failed-error-when-importing-solution.md
+
 
 # Card
 - title: Documentation and training

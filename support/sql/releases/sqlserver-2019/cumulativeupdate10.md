@@ -2,6 +2,7 @@
 title: Cumulative update 10 for SQL Server 2019 (KB5001090)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 10 (KB5001090).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5001090
 ms.reviewer: v-cuichen
 appliesto:
@@ -32,13 +33,15 @@ SELECT UDF1(UDF2());
 …
 ```
 
-A fix will be provided in a future cumulative update. To mitigate this problem, disable Scalar UDF inlining by using either of the following options:
+To mitigate this problem, disable Scalar UDF inlining by using either of the following options:
 
 - Change the definition of UDF2 by adding `WITH INLINE = OFF` to the definition.
 
 - Disable inlining on the database by using `ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = OFF`.
 
 For examples of disabling Scalar UDF inlining, see [Disable Scalar UDF Inlining without changing the compatibility level](/sql/relational-databases/user-defined-functions/scalar-udf-inlining#disable-scalar-udf-inlining-without-changing-the-compatibility-level).
+
+This issue is fixed in [SQL Server 2019 CU11](cumulativeupdate11.md#14066089).
 
 ## Improvements and fixes included in this update
 

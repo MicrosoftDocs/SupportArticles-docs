@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot installation and upgrade issues
 description: Introduces resolutions for common issues with Visual Studio installation and upgrade.
-ms.date: 04/15/2024
-author: HaiyingYu
-ms.author: haiyingyu
+ms.date: 04/17/2025
+author: aartig13
+ms.author: aartigoyle
 ms.reviewer: meghaanand, v-jayaramanp, jagbal
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---

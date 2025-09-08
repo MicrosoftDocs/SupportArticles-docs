@@ -3,7 +3,7 @@ title: User XX is busy with batch YYY
 description: Provides a solution to an error that occurs when trying to delete a Cashbook Bank Management batch using Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # "User XX is busy with batch YYY" Error message displays  when trying to delete a Cashbook Bank Management batch using Microsoft Dynamics GP

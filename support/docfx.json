@@ -49,7 +49,8 @@
       "searchScope": [
         "Troubleshoot"
       ],
-      "recommendations": true
+      "recommendations": true,
+      "uhfHeaderId": "Azure"
     },
     "fileMetadata": {
       "uhfHeaderId": {
@@ -127,7 +128,7 @@
         "azure/virtual-desktop/**/*.md": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/idb-p/AzureVirtualDesktop"
       },
       "layout": {
-        "**/index.yml": "LandingPage"
+        "**/index.yml": "landing-page"
       },
       "manager": {
         "**/*.md": "dcscontentpm"
@@ -136,62 +137,56 @@
         "**/*.md": "itpro"
       },
       "author": {
-        "**/*.md": "ChristySu",
-        "azure/virtual-desktop/**/*.*": "Deland-Han",
-        "azure/**/*.md": "genlin",
-        "entra/**/*.md": "genlin",
-        "azure/devops/**/*.md": "HaiyingYu",
-        "azure/azure-functions/**/*.md": "haiyingyu",
-        "azure/synapse-analytics/**/*.md": "HaiyingYu",
-        "azure/cosmos-db/**/*.md": "haiyingyu",
-        "developer/**/*.md": "HaiyingYu",
-        "sql/**/*.md": "HaiyingYu",
-        "windows/win32/**/*.md": "HaiyingYu",
-        "windows-hardware/drivers/**/*.md": "HaiyingYu",
-        "windows-client/**/*.md": "Deland-Han",
-        "windows-server/**/*.md": "Deland-Han",
-        "windows-365/**/*.md": "Deland-Han",
-        "mem/**/*.md": "helenclu",
-        "system-center/**/*.md": "helenclu",
-        "dynamics-365/customer-insights/**/*.md": "m-hartmann",
-        "dynamics-365/supply-chain/costing/*.md": "JennySong-SH",
-        "dynamics-365/supply-chain/inventory/*.md": "sherry-zheng",
-        "dynamics-365/supply-chain/planning/*.md": "t-benebo",
-        "dynamics-365/supply-chain/procurement/*.md": "GalynaFedorova",
-        "dynamics-365/supply-chain/production/*.md": "johanhoffmann",
-        "dynamics-365/supply-chain/products/*.md": "t-benebo",
-        "dynamics-365/supply-chain/rebates/*.md": "sherry-zheng",
-        "dynamics-365/supply-chain/sales/*.md": "Henrikan",
-        "dynamics-365/supply-chain/transportation/*.md": "Weijiesa",
-        "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab"
+        "**/*.md": "JarrettRenshaw",
+        "azure/virtual-desktop/*.md": "kaushika-msft",
+        "azure/**/*.md": "JarrettRenshaw",
+        "entra/**/*.md": "JarrettRenshaw",
+        "developer/**/*.md": "aartig13",
+        "sql/**/*.md": "aartig13",
+        "windows/win32/**/*.md": "aartig13",
+        "windows-hardware/drivers/**/*.md": "aartig13",
+        "windows-client/**/*.md": "kaushika-msft",
+        "windows-server/**/*.md": "kaushika-msft",
+        "windows-365/**/*.md": "kaushika-msft",
+        "mem/**/*.md": "kaushika-msft",
+        "system-center/**/*.md": "JarrettRenshaw",
+        "dynamics-365/**/*.md": "aartig13",
+        "dynamics/**/*.md": "aartig13",
+        "power-platform/**/*.md": "aartig13",
+        "sales-copilot/**/*.md": "aartig13"
       },
       "ms.collection": {
         "power-platform/ai-builder/**/*.md": "CEnSKM-ai-copilot",
         "sales-copilot/**/*.md": "CEnSKM-ai-copilot"
       },
+       "ms.update-cycle": {
+        "power-platform/ai-builder/**/*.md": "180-days",
+        "sales-copilot/**/*.md": "180-days"
+      },
       "ms.author": {
-        "**/*.md": "christys",
-        "azure/virtual-desktop/**/*.*": "delhan",
-        "azure/**/*.md": "genli",
-        "entra/**/*.md": "genli",
-        "azure/devops/**/*.md": "haiyingyu",
-        "azure/azure-functions/**/*.md": "haiyingyu",
-        "azure/synapse-analytics/**/*.md": "haiyingyu",
-        "azure/cosmos-db/**/*.md": "haiyingyu",
-        "developer/**/*.md": "haiyingyu",
-        "sql/**/*.md": "haiyingyu",
-        "windows/win32/**/*.md": "haiyingyu",
-        "windows-hardware/drivers/**/*.md": "haiyingyu",
-        "windows-client/**/*.md": "delhan",
-        "windows-server/**/*.md": "delhan",
-        "windows-365/**/*.md": "delhan",
-        "mem/**/*.md": "luche",
-        "system-center/**/*.md": "luche",
-        "dynamics-365/customer-insights/**/*.md": "mhart",
+        "**/*.md": "dcscontentpm",
+        "azure/virtual-desktop/*.md": "kaushika",
+        "azure/**/*.md": "jarrettr",
+        "entra/**/*.md": "jarrettr",
+        "developer/**/*.md": "aartigoyle",
+        "sql/**/*.md": "aartigoyle",
+        "windows/win32/**/*.md": "aartigoyle",
+        "windows-hardware/drivers/**/*.md": "aartigoyle",
+        "windows-client/**/*.md": "kaushika",
+        "windows-server/**/*.md": "kaushika",
+        "windows-365/**/*.md": "kaushika",
+        "mem/**/*.md": "kaushika",
+        "system-center/**/*.md": "jarrettr",
+        "dynamics-365/**/*.md": "aartigoyle",
+        "dynamics/**/*.md": "aartigoyle",
+        "power-platform/**/*.md": "aartigoyle",
+        "sales-copilot/**/*.md": "aartigoyle"
+      },
+      "ms.reviewer": {
         "dynamics-365/supply-chain/costing/*.md": "yanansong",
         "dynamics-365/supply-chain/inventory/*.md": "chuzheng",
         "dynamics-365/supply-chain/planning/*.md": "benebotg",
-        "dynamics-365/supply-chain/procurement/*.md": "gfedorova",
+        "dynamics-365/supply-chain/procurement/*.md": "henrikan",
         "dynamics-365/supply-chain/production/*.md": "johanho",
         "dynamics-365/supply-chain/products/*.md": "benebotg",
         "dynamics-365/supply-chain/rebates/*.md": "chuzheng",

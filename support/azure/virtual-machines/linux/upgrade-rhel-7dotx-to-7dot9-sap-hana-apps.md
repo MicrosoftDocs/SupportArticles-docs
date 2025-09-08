@@ -47,13 +47,18 @@ For more information about performing the upgrade process on custom, golden, or 
     ```bash
     sudo rm /etc/yum/vars/releasever
     ```
+3. Create a config file by using this command:
 
-3. Install the *rhui-azure-rhel7-base-sap-ha* package:
+   ```bash
+   sudo tee rhel7-base-sap-ha.config > /dev/null <<< $'[rhui-microsoft-azure-rhel7-base-sap-ha]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-base-sap-ha)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7-base-sap-ha\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
+   ```
+4. Install the *rhui-azure-rhel7-base-sap-ha* package:
 
     ```bash
-    sudo yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel7-base-sap-ha.config' install rhui-azure-rhel7-base-sap-ha
+    sudo yum --config rhel7-base-sap-ha.config install rhui-azure-rhel7-base-sap-ha
     ```
-4. Verify that the corresponding repositories are available and show no errors:
+    
+5. Verify that the corresponding repositories are available and show no errors:
 
     ```bash
     sudo yum repolist
@@ -77,12 +82,12 @@ For more information about performing the upgrade process on custom, golden, or 
     > [!IMPORTANT]
     > A single host can accommodate both SAP HANA and other SAP applications, such as NetWeaver. In this case, all the preceding repositories are required. Optionally, you can modify the */etc/yum.repos.d/rh-cloud-base-sap-ha.repo* file based on your system's specific requirements.
 
-5. Upgrade the system to RHEL 7.9:
+6. Upgrade the system to RHEL 7.9:
 
     ```bash
     sudo yum update
     ```
-6. Reboot the VM to complete the upgrade:
+7. Reboot the VM to complete the upgrade:
 
     ```bash
     sudo reboot 
@@ -100,14 +105,19 @@ For more information about performing the upgrade process on custom, golden, or 
     ```bash
     sudo rm /etc/yum/vars/releasever
     ```
+3. Create a config file by using this command:
 
-3. Install the *rhui-azure-rhel7-base-sap-apps* package:
+   ```bash
+   sudo tee rhel7-base-sap-apps.config > /dev/null <<< $'[rhui-microsoft-azure-rhel7-base-sap-apps]\nname=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-base-sap-apps)\nbaseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7-base-sap-apps\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc\nsslverify=1'
+   ```
+   
+4. Install the *rhui-azure-rhel7-base-sap-apps* package:
 
     ```bash
-    sudo yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel7-base-sapapps.config' install rhui-azure-rhel7-base-sap-apps
+    sudo yum --config rhel7-base-sap-apps.config install rhui-azure-rhel7-base-sap-apps
     ```
 
-4. Verify that the corresponding repositories are available and show no errors:
+5. Verify that the corresponding repositories are available and show no errors:
 
     ```bash
     sudo yum repolist
@@ -130,13 +140,13 @@ For more information about performing the upgrade process on custom, golden, or 
     repolist: 77,105
     ```
 
-5. Upgrade the system to RHEL 7.9:
+6. Upgrade the system to RHEL 7.9:
 
     ```bash
     sudo yum update
     ```
 
-6. Reboot the VM to complete the upgrade:
+7. Reboot the VM to complete the upgrade:
 
     ```bash
     sudo reboot

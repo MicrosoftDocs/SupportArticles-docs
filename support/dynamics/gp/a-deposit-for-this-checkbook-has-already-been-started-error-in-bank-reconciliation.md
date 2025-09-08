@@ -3,7 +3,7 @@ title: A deposit for this checkbook has already been started error in Bank Recon
 description: Error message - A deposit for this checkbook has already been started that occurs in Bank Reconciliation in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: theley, dbader
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Bank Reconciliation
 ---
 # "A deposit for this checkbook has already been started" error in Bank Reconciliation in Microsoft Dynamics GP

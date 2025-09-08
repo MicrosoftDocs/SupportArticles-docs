@@ -1,16 +1,16 @@
 ---
 title: Troubleshoot OperationNotAllowed or PublicIPCountLimitReached
-description: Learn how to troubleshoot the OperationNotAllowed or PublicIPCountLimitReached quota error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 10/28/2024
+description: Introduces how to troubleshoot the OperationNotAllowed or PublicIPCountLimitReached quota error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
+ms.date: 04/03/2024
 editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
+ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, dorinalecu
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OperationNotAllowed or PublicIPCountLimitReached quota error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
-# Troubleshoot the OperationNotAllowed or PublicIPCountLimitReached quota error
+# Troubleshoot the OperationNotAllowed or PublicIPCountLimitReached error
 
-This article describes how to identify and resolve the `OperationNotAllowed or PublicIPCountLimitReached` quota error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article describes how to identify and resolve the `OperationNotAllowed` or `PublicIPCountLimitReached` quota error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 

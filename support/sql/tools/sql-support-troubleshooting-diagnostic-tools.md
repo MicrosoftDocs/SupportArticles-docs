@@ -3,7 +3,7 @@ title: Troubleshooting and diagnostic tools for on-premises and hybrid scenarios
 description: This article describes which tools Microsoft technical support uses for troubleshooting SQL Server hybrid issues.
 ms.author: jopilov
 ms.reviewer: jopilov
-ms.date: 06/15/2023
+ms.date: 05/08/2025
 ms.custom: sap:SQL Server Management, Query and Data Tools
 author: PiJoCoder
 ---

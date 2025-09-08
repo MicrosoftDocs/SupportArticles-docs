@@ -1,7 +1,7 @@
 ---
 title: A TDE-enabled database might not recover
 description: This article provides a resolution for the problem where a TDE-enabled database might not recover when automatic encryption of the master key by the service master key is removed.
-ms.date: 01/14/2021
+ms.date: 05/06/2025
 ms.custom: sap:Database Backup and Restore
 ms.reviewer: VenCher, SureshKa 
 ---
@@ -9,12 +9,12 @@ ms.reviewer: VenCher, SureshKa
 
 This article helps you resolve the problem where a TDE-enabled database might not recover when automatic encryption of the master key by the service master key (SMK) is removed.
 
-_Applies to:_ &nbsp; SQL Server 2008 Enterprise, SQL Server 2008 R2 Enterprise  
+_Applies to:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2666213
 
 ## Symptoms
 
-In Microsoft SQL Server 2008 and in Microsoft SQL Server 2008 R2, a database that's enabled for transparent database encryption (TDE) may not recover. And, the following error message may be logged in the SQL Server error log:
+In Microsoft SQL Server, a database that's enabled for transparent database encryption (TDE) may not recover. And, the following error message may be logged in the SQL Server error log:
 
 > 2012-01-14 22:16:26.47 spid20s Error: 15581, Severity: 16, State: 3.  
 2012-01-14 22:16:26.47 spid20s Please create a master key in the database or open the master key in the session before performing this operation.
@@ -42,7 +42,7 @@ To resolve the issue, enable automatic decryption of the master key. To do this,
 ```sql
 USE MASTER
 GO
-OPEN MASTER KEY DECRYPTION BY PASSWORD = '<password>'
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '******'
 ```
 
 ```sql

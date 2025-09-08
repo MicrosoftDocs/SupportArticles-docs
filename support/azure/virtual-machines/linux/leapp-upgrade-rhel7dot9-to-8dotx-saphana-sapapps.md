@@ -2,7 +2,7 @@
 title: Leapp upgrade from RHEL 7.9 to RHEL 8.x on SAP-HANA and SAP-APPS pay-as-you-go VMs
 description: Describes how to perform a upgrade from RHEL 7.9 to RHEL 8.x on SAP-HANA and SAP-APPS pay-as-you-go virtual machines by using the Leapp tool.
 ms.reviewer: divargas, msaenzbo, v-weizhu
-ms.date: 09/14/2024
+ms.date: 06/27/2025
 ms.service: azure-virtual-machines
 ms.topic: how-to
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
@@ -41,6 +41,9 @@ System configuration   | Source OS version| Target version     |
 |SAP HANA              |   RHEL 7.9       | RHEL 8.10          | 
 |SAP NetWeaver and other SAP Applications | RHEL 7.9         | RHEL 8.8           |      
 |SAP NetWeaver and other SAP Applications |  RHEL 7.9         | RHEL 8.10 (default) |
+
+> [!NOTE]  
+> For more information, see [Supported in-place upgrade paths for Red Hat Enterprise Linux](https://access.redhat.com/articles/4263361).
 
 > [!NOTE]  
 > To update an SAP-HANA PAYG VM running on RHEL 7.7 or an earlier version, you must first upgrade it to RHEL 7.9. For detailed instructions, see [How to upgrade RHEL-SAP-HANA and RHEL-SAP-APPS pay-as-you-go virtual machines from 7.x to 7.9](upgrade-rhel-7dotx-to-7dot9-sap-hana-apps.md).

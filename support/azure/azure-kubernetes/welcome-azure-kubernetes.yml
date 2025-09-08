@@ -9,9 +9,9 @@ metadata:
   services: cloud-services
   ms.service: azure-kubernetes-service #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: genlin  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/08/2024
+  author: JarrettRenshaw  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jarrettr #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/30/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -182,9 +182,11 @@ landingContent:
             url: ./identify-memory-saturation-aks.md
 
  # Card 
-  - title: Troubleshoot Azure Linux container host issues
+  - title: Troubleshoot common issues
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot common issues with Azure Linux container hosts on AKS
             url: ./troubleshoot-common-azure-linux-aks.md
+          - text: Troubleshoot DNS resolution problems on AKS clusters
+            url: connectivity/dns/basic-troubleshooting-dns-resolution-problems.md

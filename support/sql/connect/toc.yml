@@ -5,8 +5,6 @@ items:
     href: 80020009-error-retrieve-data.md
   - name: Can't correctly translate character data
     href: cannot-correctly-translate-character-data.md
-  - name: Check for MDAC version
-    href: check-mdac-version.md
   - name: Error when you use client cursor to add record
     href: error-when-you-use-client-cursor-add-record.md
   - name: Fail to run a large batch of SQL statements
@@ -19,7 +17,5 @@ items:
     href: retrieve-values-stored-procedure.md
   - name: SQL Server clients may change protocols
     href: clients-change-protocols-when-connect-instance.md
-  - name: SQLDescribeCol returns the wrong column length
-    href: sqldescribecol-return-wrong-column-length.md
   - name: Use server name parameter in a connection string
     href: use-server-name-parameter-connection-string.md

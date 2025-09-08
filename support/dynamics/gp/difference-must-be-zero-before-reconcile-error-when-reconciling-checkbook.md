@@ -3,7 +3,7 @@ title: The difference must be zero before you can reconcile this checkbook error
 description: Fixes a problem that occurs when you reconcile the checkbook in Select Bank Transactions in Microsoft Dynamics GP, and you receive an error message that states the difference must be zero before you can reconcile this checkbook. Provides a resolution.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Bank Reconciliation
 ---
 # "The difference must be zero before you can reconcile this checkbook" error when reconciling the checkbook in Select Bank Transactions

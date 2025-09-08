@@ -7,7 +7,7 @@ ms.topic: troubleshooting
 ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
-ms.reviewer: dougeby,aaroncz
+ms.reviewer: dougeby
 audience: itpro
 ---
 # Windows 10 upgrade issues troubleshooting
@@ -87,8 +87,8 @@ When performing an operating system upgrade, Windows Setup uses phases described
 
     :::image type="content" source="media/windows-10-upgrade-issues-troubleshooting/upgrade-process.png" alt-text="Flow chart of the upgrade process." border="false":::
 
-    DU = Driver/device updates.  
-    OOBE = Out of box experience.  
+    DU = Driver/device updates.
+    OOBE = Out of box experience.
     WIM = Windows image (Microsoft)
 
 ## Data collection

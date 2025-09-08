@@ -1,7 +1,8 @@
 ---
 title: Cumulative update 16 for SQL Server 2019 (KB5011644)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 16 (KB5011644).
-ms.date: 07/26/2024
+ms.date: 05/30/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5011644
 ms.reviewer: v-cuichen
 appliesto:
@@ -23,13 +24,9 @@ This article describes Cumulative Update package 16 (CU16) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Access violation when session is reset
+### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the `SESSION` is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
-
-- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
-
-- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 
@@ -411,8 +408,8 @@ SQL Server 2019 Database Services Core Instance
 | Hkenggen.h                                 | n/a             | 16783     | 11-Apr-22 | 17:59 | n/a      |
 | Hkengine.dll                               | 2019.150.4223.1 | 5789624   | 11-Apr-22 | 17:59 | x64      |
 | Hkengine.lib                               | n/a             | 98282     | 11-Apr-22 | 17:59 | n/a      |
-| Hkgenlib.h                                 | n/a             | 57242     | 11-Apr-22 | 17:59 | n/a      |
-| Hkgenlib.lib                               | n/a             | 3004568   | 11-Apr-22 | 17:59 | n/a      |
+| Hkjarrettrb.h                                 | n/a             | 57242     | 11-Apr-22 | 17:59 | n/a      |
+| Hkjarrettrb.lib                               | n/a             | 3004568   | 11-Apr-22 | 17:59 | n/a      |
 | Hkrtdef.h                                  | n/a             | 9434      | 11-Apr-22 | 17:59 | n/a      |
 | Hkrtgen.h                                  | n/a             | 29067     | 11-Apr-22 | 17:59 | n/a      |
 | Hkruntime.dll                              | 2019.150.4223.1 | 182184    | 11-Apr-22 | 17:59 | x64      |

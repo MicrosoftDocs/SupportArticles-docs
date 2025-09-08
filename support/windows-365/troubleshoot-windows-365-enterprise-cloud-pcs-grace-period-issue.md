@@ -5,6 +5,9 @@ manager: dcscontentpm
 ms.date: 02/18/2025
 ms.topic: troubleshooting
 ms.reviewer: anwill
+ms.custom:
+- pcy:Provisioning\Grace Period Issues
+- sap:WinComm User Experience
 ---
 # Troubleshoot Windows 365 Enterprise Cloud PC grace period issues
 

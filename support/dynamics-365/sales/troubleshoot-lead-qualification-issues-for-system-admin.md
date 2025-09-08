@@ -4,7 +4,8 @@ description: Provides resolutions for the lead qualification issues for system a
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/28/2022
+ms.date: 04/17/2025
+ms.custom: sap:Lead
 ---
 
 # Troubleshoot issues with lead qualification for system administrators

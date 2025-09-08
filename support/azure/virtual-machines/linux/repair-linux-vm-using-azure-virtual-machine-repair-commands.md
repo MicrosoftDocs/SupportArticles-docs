@@ -3,7 +3,7 @@ title: Repair a Linux VM by using the Azure Virtual Machine repair commands
 description: This article details how to use Azure Virtual Machine repair commands to connect the disk to another Linux VM to fix any errors, then rebuild your original VM.
 services: virtual-machines
 documentationcenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 tags: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
@@ -13,8 +13,8 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 10/11/2021
-ms.author: genli
+ms.date: 04/29/2025
+ms.author: jarrettr
 ---
 
 # Repair a Linux VM by using the Azure Virtual Machine repair commands
@@ -32,6 +32,7 @@ If your Linux virtual machine (VM) in Azure encounters a boot or disk error, you
 > * The maximum time a script can run is 90 minutes, after which it will time out.
 > * Do not modify the tags that are created on the repair VM. The tags are neccessary for the restore command to function correctly.
 > * For VMs using Azure Disk Encryption, only managed disks encrypted with single pass encryption (with or without KEK) are supported.
+> * The VM Contributor role doesn't provide enough permissions to run the scripts, as they require permissions to read, write, and delete resources in the resource group that includes the target VM. Therefore roles such as Contributor or Owner at that resource group level is required.
 
 ## Repair process overview
 

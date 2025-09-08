@@ -3,8 +3,8 @@ title: Error when browsing your website over the default cloud service domain ur
 description: Provides information about troubleshooting issues in which you get an error (HTTP Error 503. The service is unavailable.) when accessing your cloud service application.
 ms.date: 09/26/2022
 ms.reviewer: 
-author: genlin
-ms.author: genli
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.service: azure-cloud-services-classic
 ms.custom: sap:Development
 ---

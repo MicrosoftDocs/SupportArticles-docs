@@ -8,7 +8,7 @@ ms.collection: highpri
 ms.custom:
 - sap:windows servicing,updates and features on demand\windows update configuration,settings and management
 - pcy:WinComm Devices Deploy
-ms.reviewer: dougeby,aaroncz
+ms.reviewer: dougeby
 audience: itpro
 ---
 # Windows Update - additional resources
@@ -50,7 +50,7 @@ If all else fails, try resetting the Windows Update Agent by running these comma
    ``` console
    net stop bits
    net stop wuauserv
-   net stop cryptsvc   
+   net stop cryptsvc
    ```
 
 3. Delete the *qmgr\*.dat* files. Type the following command at a command prompt, and then press Enter:
@@ -148,8 +148,8 @@ If all else fails, try resetting the Windows Update Agent by running these comma
 
    ``` console
    net start bits
-   net start wuauserv   
-   net start cryptsvc 
+   net start wuauserv
+   net start cryptsvc
    ```
 
 10. If you're running Windows Vista or Windows Server 2008, clear the BITS queue. Type the following command at a command prompt, and then press Enter:

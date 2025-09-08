@@ -2,7 +2,7 @@
 title: Sample BAI file for Microsoft Dynamics GP
 description: Provides a sample BAI file for Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # Sample BAI file for Microsoft Dynamics GP

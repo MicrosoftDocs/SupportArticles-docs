@@ -3,7 +3,7 @@ title: A user disappears in All Eligible Users
 description: When viewing the Dynamics 365 App for Outlook section within Settings, a user doesn't appear in the All Eligible Users list.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 04/17/2025
 ms.custom: sap:Dynamics 365 App for Outlook Add-in
 ---
 # A user doesn't appear in the All Eligible Users list within the Microsoft Dynamics 365 App for Outlook area

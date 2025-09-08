@@ -5,7 +5,9 @@ manager: dcscontentpm
 ms.date: 01/20/2025
 ms.topic: troubleshooting
 ms.reviewer: ivivano, erikje
-ms.custom: intune-azure, get-started
+ms.custom:
+- pcy:Configuration and Management\Managing Devices with Intune
+- sap:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

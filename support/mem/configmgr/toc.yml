@@ -251,6 +251,8 @@ items:
           href: os-deployment/in-place-upgrade-task-sequence-not-continue.md
         - name: Apply Driver Package task fails with error 80070057
           href: os-deployment/apply-driver-package-task-error-80070057.md
+        - name: Can't create bootable media with errors 80004005 and 0x8004101d
+          href: os-deployment/cannot-create-bootable-media-error-80004005-0x8004101d.md
         - name: Computer hangs during an OSD task sequence in debug mode
           href: os-deployment/computer-hangs-task-sequence-debug-mode.md
         - name: Dynamic Media can't get management point locations

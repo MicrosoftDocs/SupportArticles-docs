@@ -2,6 +2,7 @@
 title: Cumulative update 4 for SQL Server 2019 (KB4548597)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 4 (KB4548597).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4548597
 ms.reviewer: v-cuichen
 appliesto:
@@ -29,7 +30,7 @@ There's a known uninstallation issue that affects this SQL Server 2019 CU4 under
 
 To mitigate this issue, enable Trace Flag - T902 to bring SQL Server online. You don't have to uninstall the program again. To upgrade to a new CU, you must first remove this flag.
 
-SQL Server 2019 CU5 or any later CU release contains the fix.
+This issue is fixed in [SQL Server 2019 CU5](cumulativeupdate5.md#13543133).
 
 ## Improvements and fixes included in this update
 

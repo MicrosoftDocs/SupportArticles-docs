@@ -1,7 +1,7 @@
 ---
 title: Transfer or seize Operation Master roles
 description: Describes how you can use the Ntdsutil.exe utility to move or to seize Operation Master roles, formerly known as Flexible Single Master Operations (FSMO) roles.
-ms.date: 01/15/2025
+ms.date: 04/07/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -35,7 +35,9 @@ For more information about the Operation Master role holders and recommendations
 
 When a DC that has been acting as a role holder starts to run (for example, after a failure or a shutdown), it doesn't immediately resume behaving as the role holder. The DC waits until it receives inbound replication for its naming context (for example, the Schema master role owner waits to receive inbound replication of the Schema partition).
 
-The information that the DCs pass as part of Active Directory replication includes the identities of the current Operation Master role holders. When the newly started DC receives the inbound replication information, it verifies whether it's still the role holder. If it is, it resumes typical operations. If the replicated information indicates that another DC is acting as the role holder, the newly started DC relinquishes its role ownership. This behavior reduces the chance that the domain or forest will have duplicate Operation Master role holders.
+The information that the DCs pass as part of Active Directory replication includes the identities of the current Operation Master role holders. When the newly started DC receives the inbound replication information, it verifies whether it's still the role holder. The Active Directory Replication Engine resolves any potentially conflicting changes. For more information, see [Resolving conflicting changes](/previous-versions/windows/it-pro/windows-server-2003/cc736978(v=ws.10)#resolving-conflicting-changes).
+
+If the DC is the current Operations Master, it resumes typical operations. If the replicated information indicates that another DC is acting as the role holder, the newly started DC relinquishes its role ownership. This behavior reduces the chance that the domain or forest have duplicate Operation Master role holders.
 
 > [!IMPORTANT]
 > AD FS operations fail if they require a role holder and if the newly started role holder is, in fact, the role holder and it doesn't receive inbound replication.  
@@ -199,8 +201,8 @@ If it's possible, and if you're able to transfer the roles instead of seizing th
 When part of a domain or forest can't communicate with the rest of the domain or forest for an extended time, the isolated sections of domain or forest are known as replication islands. DCs in one island can't replicate with the DCs in other islands. Over multiple replication cycles, the replication islands fall out of sync. If each island has its own Operation Master role holders, you may have problems when you restore communication between the islands.
 
 > [!IMPORTANT]
-> In most cases, you can take advantage of the initial replication requirement (as described in this article) to weed out duplicate role holders. A restarted role holder should relinquish the role if it detects a duplicate role-holder.  
-> You may encounter circumstances that this behavior does not resolve. In such cases, the information in this section may be helpful.
+> In most cases, you can take advantage of the initial replication requirement (as described in this article) to weed out duplicate role holders. A restarted role holder will relinquish the role if it detects a duplicate role-holder through updates it receives on inbound replication.  
+> You may encounter circumstances that this behavior does not resolve the Operations Master conflict. In such cases, the information in this section may be helpful.
 
 The following table identifies the Operation Master roles that can cause problems if a forest or domain has multiple role-holders for that role:
 

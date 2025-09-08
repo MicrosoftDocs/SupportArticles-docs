@@ -1,7 +1,7 @@
 ---
 title: Active Directory Replication fails with Win32 error 8524
 description: Describes an issue that Active Directory Replications fail with Win32 error 8524 (The DSA operation is unable to proceed because of a DNS lookup failure).
-ms.date: 01/15/2025
+ms.date: 06/17/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -16,7 +16,8 @@ This article describes symptoms, cause, and resolution steps for AD operations t
 
 > The DSA operation is unable to proceed because of a DNS lookup failure.
 
-_Original KB number:_ &nbsp; 2021446
+_Original KB number:_ &nbsp; 2021446  
+_Applies to:_ &nbsp; All supported versions of Windows Server
 
 **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com).
 

@@ -1,8 +1,8 @@
 ---
 title: Slow attach and detach operations for an Azure disk
 description: Troubleshoot why attach and detach operations are slow when you use an Azure disk for storage on your Azure Kubernetes Service (AKS) clusters.
-ms.date: 11/25/2024
-ms.reviewer: jopalhei, chiragpa, nickoman, v-leedennis
+ms.date: 03/24/2025
+ms.reviewer: jopalhei, chiragpa, nickoman, v-leedennis, mariusbutuc
 ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why attach and detach operations are slow so that I can successfully use an Azure disk for storage on my AKS clusters.

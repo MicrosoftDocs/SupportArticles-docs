@@ -2,7 +2,7 @@
 title: Test Connection fails in email server profile
 description: Provides a solution to an issue where test connection fails from an email server profile in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 12/11/2024
+ms.date: 04/17/2025
 ms.custom: sap:Email and Exchange Synchronization
 ---
 # Test Connection fails with 401 or time-out error in email server profile in Microsoft Dynamics 365

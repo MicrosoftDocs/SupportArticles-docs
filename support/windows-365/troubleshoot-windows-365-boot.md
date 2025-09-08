@@ -1,12 +1,13 @@
 ---
-# required metadata
 title: Troubleshoot Windows 365 Boot
 description: Troubleshoot issues that occur when you set up or manage Windows 365 Boot devices.
 manager: dcscontentpm
 ms.date: 01/20/2025
 ms.topic: troubleshooting
 ms.reviewer: elluthra, erikje
-ms.custom: intune-azure, get-started
+ms.custom:
+- pcy:Windows 365 Boot
+- sap:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

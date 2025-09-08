@@ -1,7 +1,8 @@
 ---
 title: Cumulative update 4 for SQL Server 2022 (KB5026717)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 4 (KB5026717).
-ms.date: 07/26/2024
+ms.date: 05/30/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5026717
 ms.reviewer: v-qianli2
 appliesto:
@@ -37,6 +38,8 @@ If you try to create a new external table, you receive the following error messa
 
 To work around this issue, you can uninstall this cumulative update or add the Driver keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
 
+This issue is fixed in [SQL Server 2022 CU5](cumulativeupdate5.md#2398344).
+
 ### Issue two
 
 After you install this cumulative update, you may receive incorrect results from queries that meet all of the following conditions:
@@ -60,6 +63,12 @@ After you install this cumulative update, you may receive incorrect results from
     > The `IN` clause that has a single value doesn't have this issue.
 
 To work around this issue, you can either uninstall this cumulative update or enable trace flag (TF) 13166 and then run `DBCC FREEPROCCACHE`.
+
+This issue is fixed in [SQL Server 2022 CU5](cumulativeupdate5.md#2417020).
+
+### Issue three
+
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 

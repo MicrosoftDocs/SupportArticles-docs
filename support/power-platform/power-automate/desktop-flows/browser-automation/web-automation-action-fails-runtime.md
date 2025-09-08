@@ -2,7 +2,7 @@
 title: Web automation action fails during runtime
 description: Provides a resolution for the issue that a web automation action can't interact with a web element on runtime in Power Automate. 
 ms.reviewer: pefelesk
-ms.date: 09/21/2022
+ms.date: 04/09/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Can't interact with a web element on runtime
@@ -14,22 +14,21 @@ _Original KB number:_ &nbsp; 4599079
 
 ## Symptoms
 
-A web automation action (for example, "Click Link", "Populate text field", or "Get details of element") fails during runtime in Microsoft Power Automate.
-
-## Verifying issue
-
-During the initial development of the desktop flow, you can capture and interact with the web element.
+During the initial development of a desktop flow, you can capture and interact with web elements. However, during runtime, web automation actions like "Click Link", "Populate text field", or "Get details of element" fail to interact with the web element.
 
 ## Cause
 
 Some web pages change their underlying HTML structure dynamically. Therefore, the CSS selector initially used to locate the element is no longer applicable.
 
-## Resolution
+## Resolution 1
 
-To solve this issue, you can manually create a new robust CSS selector. It will be able to locate the element of interest even though the HTML structure changes.
+Try to [repair the CSS selector](/power-automate/desktop-flows/repair-selector).
+
+## Resolution 2
+
+Manually create a new robust CSS selector. It will be able to locate the element of interest even though the HTML structure changes.
 
 To achieve that, capture again the web element after the failure, and compare the new CSS selector with the old one.
-
 CSS selectors can be reviewed and edited through the **Selector builder** window:
 
 :::image type="content" source="media/web-automation-action-fails-runtime/selector-builder.png" alt-text="The Selector builder page that you can use to review and edit CSS selectors." lightbox="media/web-automation-action-fails-runtime/selector-builder.png":::
@@ -47,3 +46,5 @@ Examples:
 - The selector contains an element that has a class that is dynamic, such as `div[class="some_class123"]`. This can be modified to `div[class^="some_class"]` ("Starts with" operator).
 - The selector contains an element that has many dynamic attributes such as `div[class="some_class123"][id="some_id123"] > a[id="some_id"]`. This can be modified to `a[id="some_id"]` (omitting the first part completely).
 - The element of interest has some static text - the selector can be modified to include only that text. For example, `div[class="some_class123"][id="some_id123"] > a[id="some_id"]` could be modified to `a:contains("the_text_we_see_on_the_webpage")`.
+
+For more information, see [Build a custom selector](/power-automate/desktop-flows/build-custom-selectors).

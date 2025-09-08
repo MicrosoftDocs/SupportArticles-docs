@@ -1,11 +1,11 @@
 ---
 title: Terminal Server error messages 2200 to 2299
 description: Describes Terminal Server error messages 2200 to 2299.
-ms.date: 01/15/2025
+ms.date: 04/02/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: willgloy, kaushika
+ms.reviewer: willgloy, kaushika, warrenw
 ms.custom:
 - sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
 - pcy:WinComm User Experience
@@ -83,6 +83,9 @@ Action: No action is needed.
 ## Error 2208
 
 Error 2208 isn't a valid error message.
+
+> [!NOTE]
+> This error code is added for numerical completeness only. You won't see this error code.
 
 ## Error 2209
 

@@ -3,8 +3,6 @@ items:
   href: access-violations-memory-dump-files.md
 - name: A TDE-enabled database may not recover
   href: tde-enabled-database-not-recover.md
-- name: ASR Agent or non-component VSS Backup fails
-  href: asr-agent-vss-backup-fails.md
 - name: Azure Site Recovery jobs fail on servers hosting SQL servers
   href: revocery-jobs-fail-servers.md
 - name: Back up a database using a VSS backup application

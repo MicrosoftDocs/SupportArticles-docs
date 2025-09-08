@@ -9,9 +9,9 @@ metadata:
   services: azure
   ms.service: azure-batch
   ms.topic: landing-page # Required
-  author: genlin  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/26/2024
+  author: JarrettRenshaw  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: jarrettr #Required; microsoft alias of author; optional team alias.
+  ms.date: 05/23/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -24,12 +24,9 @@ landingContent:
         links:
           - text: Access denied when executing Azure Batch jobs
             url: access-denied-execute-azure-batch-job.md
-          - text: AccountEncryptionKeyUnavailable error when you try to list pools in Azure Batch
-            url: error-accountencryptionkeyunavailable.md
           - text: Batch node creation delays when restarting or reimaging
             url: batch-node-creation-delay-restart-reimage.md
           - text: Batch pool deletion failure
             url: azure-batch-pool-deletion-failure.md
           - text: Use managed identities in a Batch account or a Batch pool
             url: use-managed-identities-azure-batch-account-pool.md
-                                                                                 

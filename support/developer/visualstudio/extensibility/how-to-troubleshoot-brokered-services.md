@@ -2,8 +2,8 @@
 title: Troubleshoot brokered services
 description: Learn how to troubleshoot several common problems that can occur when you try to get a brokered service in the Visual Studio SDK.
 ms.date: 02/18/2022
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ms.reviewer: andarno
 ms.custom: sap:Extensibility - Visual Studio SDK (VS SDK)\Extension and add-in development
 ---

@@ -1,8 +1,8 @@
 ---
 title: Restore HTTPS functionality with .NET 8 in Data API builder
 description: Configures .NET 8 correctly to enable full HTTPS support when using Data API builder for Azure databases.
-author: genlin
-ms.author: genli
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.reviewer: sidandrews
 ms.service: data-api-builder
 ms.date: 06/25/2024

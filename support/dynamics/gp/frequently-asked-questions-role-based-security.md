@@ -2,7 +2,7 @@
 title: Frequently asked questions about role-based security
 description: This article describes answers for the frequently asked questions about role-based security in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Frequently asked questions about role-based security in Microsoft Dynamics GP

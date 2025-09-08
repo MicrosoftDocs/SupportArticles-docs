@@ -1,9 +1,9 @@
 ---
 title: An OS deployment task sequence doesn't continue
 description: Describes an issue in which a task sequence doesn't continue after Windows Setup or the in-place upgrade finishes if an OEM product key is used during Windows deployment.
-ms.date: 02/11/2025
+ms.date: 04/10/2025
 ms.custom: sap:Operating Systems Deployment (OSD)\Operating System In-place Upgrade Deployments
-ms.reviewer: kaushika, frankroj, Jowiswel
+ms.reviewer: kaushika, frankroj, Jowiswel, frankroj
 ---
 # An OSD task sequence doesn't continue after Windows Setup or an in-place upgrade finishes
 
@@ -36,7 +36,7 @@ These issues usually occur when you deploy a nonenterprise edition of Windows, s
 
 ## Cause
 
-These issues occur because an OEM product key is used during Windows deployment. When an OEM product key is used, **Setupcomplete.cmd** is disabled. This behavior occurs in both Windows 8.1 and Windows 10. See the following information from [Windows Deployment Issues](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825613(v=win.10)#windows-deployment-issues):
+These issues occur because an OEM product key is used during Windows deployment. When an OEM product key is used, **Setupcomplete.cmd** is disabled. This behavior occurs in all [currently supported versions of Windows](/windows/release-health/supported-versions-windows-client). For more information, see [Windows Deployment Issues](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825613(v=win.10)#windows-deployment-issues):
 
 - [September 2012] Changes in Out-Of-Box (OOBE) Experience
 

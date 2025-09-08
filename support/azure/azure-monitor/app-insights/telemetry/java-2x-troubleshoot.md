@@ -15,6 +15,8 @@ ms.custom: sap:Missing or Incorrect data after enabling Application Insights in 
 
 This article provides troubleshooting solutions to common issues in a Q&A format for Application Insights Java 2.x.
 
+[!INCLUDE [Azure Help Support](../../../../includes/azure/application-insights-sdk-support.md)]
+
 > [!CAUTION]
 > This document applies to Application Insights Java 2.x, which is no longer recommended.
 >

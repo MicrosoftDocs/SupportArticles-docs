@@ -4,7 +4,7 @@ description: Resolves an issue where a payment is settled in the Adyen portal im
 author: josaw1 
 ms.author: josaw
 ms.reviewer: rassadi, brstor
-ms.date: 09/04/2023
+ms.date: 05/22/2025
 ms.custom: sap:Payments\Issues with payment transactions
 ---
 # Payments are automatically settled before orders are invoiced or shipped

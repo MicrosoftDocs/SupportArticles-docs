@@ -4,7 +4,8 @@ description: Provides resolutions for the known issues that occur when you work 
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/28/2022
+ms.date: 04/17/2025
+ms.custom: sap:Sales app installation
 ---
  
 # Troubleshoot issues with Dynamics 365 Sales Professional

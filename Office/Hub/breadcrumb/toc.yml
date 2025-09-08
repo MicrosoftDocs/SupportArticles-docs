@@ -1,0 +1,7 @@
+- name: Microsoft 365
+  tocHref: /office/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Troubleshooting
+    tocHref: /troubleshoot/office/
+    topicHref: /troubleshoot/office/index

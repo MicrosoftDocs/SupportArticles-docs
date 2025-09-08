@@ -2,6 +2,7 @@
 title: Cumulative update 27 for SQL Server 2017 (KB5006944)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 27 (KB5006944).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5006944, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows

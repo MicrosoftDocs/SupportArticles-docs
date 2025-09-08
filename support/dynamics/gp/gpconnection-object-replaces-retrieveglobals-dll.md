@@ -2,7 +2,7 @@
 title: Information about the new connection object in Integration Manager for Microsoft Dynamics GP 10.0
 description: Discusses the new connection object that's available in Integration Manager for Microsoft Dynamics GP 10.0. This connection object replaces the RetrieveGlobals DLL.
 ms.reviewer: theley, kvogel
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Information about the new connection object in Integration Manager for Microsoft Dynamics GP 10.0
@@ -75,4 +75,4 @@ The Open method in the GPConnection object is **GPConnection.Open**. This method
 
 For more information about the RetrieveGlobals.dll and RetrieveGlobals9.dll files, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[913341](https://support.microsoft.com/help/913341) How to use the new RetrieveGlobals9.dll file in Integration Manager and in Microsoft Dynamics GP 9.0
+[How to use the new RetrieveGlobals9.dll file in Integration Manager and in Microsoft Dynamics GP 9.0](upgrade-apps-to-use-gpconndll-gpconnnetdll-file.md)

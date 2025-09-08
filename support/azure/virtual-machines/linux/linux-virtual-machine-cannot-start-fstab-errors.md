@@ -15,7 +15,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 02/26/2025
+ms.date: 07/08/2025
 ---
 
 # Troubleshoot Linux VM boot issues due to fstab errors
@@ -107,6 +107,9 @@ There are two ways to resolve the issue:
 If the VM serial console access isn't available, an alternative solution is to repair the VM offline. There are two ways to take an offline approach: 
 
 #### Use Azure Linux Auto Repair (ALAR)
+
+> [!div class="nextstepaction"]
+> [Run in Linux](https://go.microsoft.com/fwlink/?linkid=2321930)
 
 Azure Linux Auto Repair (ALAR) scripts are part of the VM repair extension described in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM](./repair-linux-vm-using-alar.md). ALAR covers the automation of multiple repair scenarios, including `/etc/fstab` issues.
 

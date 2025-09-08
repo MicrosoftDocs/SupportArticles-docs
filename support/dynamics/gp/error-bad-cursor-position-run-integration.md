@@ -3,7 +3,7 @@ title: Bad Cursor Position error when an integration is run in Integration Manag
 description: This article gives the steps to resolve an error message in Integration Manager for Microsoft Dynamics GP.
 ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error message when an integration is run in Integration Manager for Microsoft Dynamics GP 10.0: "Bad Cursor Position"

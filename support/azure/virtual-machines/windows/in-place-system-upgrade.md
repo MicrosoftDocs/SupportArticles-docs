@@ -1,7 +1,7 @@
 ---
 title: In-place upgrade for supported VMs running Windows in Azure
 description: Understand how to work around the unsupported in-place system upgrade on an Azure VM that runs Windows.
-ms.date: 3/18/2025
+ms.date: 05/09/2025
 ms.reviewer: joscon, scotro, azurevmcptcic, maulikshah, yogitagohel, v-weizhu
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -47,7 +47,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 ### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
 
-- Windows 10 and 11 Enterprise multi-session, all versions
+- Windows 10 and 11 Enterprise multi-session, all versions (upgrade from single-session)
 - Windows 8.1
 - Windows 7 Enterprise
    

@@ -1,12 +1,13 @@
 ---
-# required metadata
 title: Troubleshoot issues with the Windows 365 app
 description: Provides solutions, tips, or best practices to resolve the issues with the Windows 365 app.
 manager: dcscontentpm
 ms.date: 01/20/2025
 ms.topic: troubleshooting
 ms.reviewer: chbrinkhoff, erikje
-ms.custom: intune-azure, get-started
+ms.custom:
+- pcy:Configuration and Management\Application Issues
+- sap:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

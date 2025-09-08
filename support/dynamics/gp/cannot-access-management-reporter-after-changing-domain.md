@@ -3,7 +3,7 @@ title: Cannot access Management Reporter after making changes to domain
 description: Describes the steps to take that will give users access to Management Reporter after changing the domain.
 ms.reviewer: theley, erikjohn
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # No longer have permission to access Management Reporter after you make changes to your domain

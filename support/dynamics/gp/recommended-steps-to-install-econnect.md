@@ -3,7 +3,7 @@ title: Recommended steps to install eConnect for Dynamics GP in a Workgroup Envi
 description: The installation process requires that the eConnect service account be a Windows user. The installation fails because the user logged into the Workgroup computer does not have access to create SQL users or the account being used for the eConnect service account cannot be resolved. This article contains a workaround to the issue.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # The recommended steps to install eConnect for Microsoft Dynamics GP in a Workgroup Environment that will resolve the "Unable to add user to SQL" error message

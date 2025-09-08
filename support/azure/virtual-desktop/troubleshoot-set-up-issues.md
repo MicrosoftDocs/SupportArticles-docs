@@ -15,9 +15,12 @@ This article covers issues during the initial setup of the Azure Virtual Desktop
 
 Visit the [Azure Virtual Desktop Tech Community](https://techcommunity.microsoft.com/t5/azure-virtual-desktop/bd-p/AzureVirtualDesktopForum) to discuss the Azure Virtual Desktop service with the product team and active community members.
 
-## Acquire the Windows 10 Enterprise multi-session image
+## Acquire the Windows Enterprise multi-session image
 
-To use the Windows 10 Enterprise multi-session image, go to Azure Marketplace, select **Get Started** > **Microsoft Windows 10**, and select [Windows 10 Enterprise multi-session, Version 1809](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-10?tab=PlansAndPrice).
+To use the Windows Enterprise multi-session image, go to Azure Marketplace, and select the version that you want to deploy:
+
+- Windows 10 [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-US/marketplace/apps/microsoftwindowsdesktop.windows-10?tab=PlansAndPrice)
+- Windows 11 [Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-US/marketplace/apps/microsoftwindowsdesktop.windows-11?tab=PlansAndPrice)
 
 ## Issues with using the Azure portal to create host pools
 

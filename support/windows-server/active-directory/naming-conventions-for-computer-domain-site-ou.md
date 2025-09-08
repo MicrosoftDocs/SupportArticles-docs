@@ -1,11 +1,11 @@
 ---
 title: Name computers, domains, sites, and OUs
 description: Describes how to name computers, domains, sites, and organizational units in Active Directory.
-ms.date: 01/15/2025
+ms.date: 05/09/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika，herbertm
 ms.custom:
 - sap:active directory\user,computer,group,and object management
 - pcy:WinComm Directory Services
@@ -36,7 +36,7 @@ In that article, this naming convention applies to computer names, OU names, and
 
 ### NetBIOS computer names
 
-- **Allowed characters:** NetBIOS computer names can contain all alphanumeric characters except for the extended characters that appear in the following **Disallowed characters** list. Names can contain a period, but names can't start with a period.
+- **Allowed characters:** NetBIOS computer names can contain all alphanumeric characters except for the extended characters that appear in the following **Disallowed characters** list. Names can contain a period, but names can't start with a period. As the NetBIOS computer name is the same as the DNS host name, the DNS host name restrictions also apply.
 
   > [!NOTE]  
   > Microsoft Windows NT allows non-DNS names to have period. Periods shouldn't be used in Windows. If you're upgrading a computer whose NetBIOS name contains a period, change the computer name. For more information, see **Special characters** later in this section.
@@ -51,10 +51,12 @@ In that article, this naming convention applies to computer names, OU names, and
   - less than sign (<)
   - greater than sign (>)
   - vertical bar (|)
+  - comma (,)
   - Computers that are members of an Active Directory domain can't have names that contain only numerals. This is a DNS restriction.
 
   For more information about the NetBIOS name syntax, see [NetBIOS name syntax](/openspecs/windows_protocols/ms-nbte/6f06fa0e-1dc4-4c41-accb-355aaf20546d).
 
+- **Character case**: Although NetBIOS is case-sensitive, Windows uses only uppercase names, and in practice, the names aren't case-sensitive.
 - **Name length rules:**
     - Minimum name length: One character
     - Maximum name length: 15 characters

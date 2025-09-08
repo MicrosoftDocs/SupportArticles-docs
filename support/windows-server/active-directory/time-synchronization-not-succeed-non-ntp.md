@@ -1,7 +1,7 @@
 ---
 title: Time synchronization may not succeed
 description: Describes a problem that may occur when you try to use a non-Windows NTP time server as a time source. Provides steps to let you synchronize to the non-Windows NTP server.
-ms.date: 01/15/2025
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,7 +14,7 @@ ms.custom:
 
 When you try to synchronize a Windows-based computer to a Network Time Protocol (NTP) server that isn't running Windows, the synchronization may not succeed. This article provides a resolution to this issue.
 
-_Applies to:_ &nbsp; Supported versions of Windows Server  
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows Client (All supported versions)  
 _Original KB number:_ &nbsp; 875424
 
 ## Cause

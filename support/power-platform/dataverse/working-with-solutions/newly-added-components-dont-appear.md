@@ -2,7 +2,7 @@
 title: Newly added components don't show in the app after importing an update
 description: Provides a workaround for an issue where newly added components don't appear in the app after importing an update into the app.
 ms.reviewer: matp
-ms.date: 07/26/2023
+ms.date: 04/17/2025
 author: nhelgren
 ms.author: nhelgren
 ms.custom: sap:Working with Solutions\Solution import - Changes don't take effect

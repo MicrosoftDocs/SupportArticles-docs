@@ -1,14 +1,14 @@
 ---
 title: Recommended updates and configuration options
-description: This article includes a list of performance improvements and configuration options that are available for SQL Server 2012 and later versions.
-ms.date: 09/14/2020
+description: This article includes a list of performance improvements and configuration options that are available for SQL Server 2014 and 2012.
+ms.date: 06/12/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
-ms.reviewer: ramakoni, Sureshka
+ms.reviewer: ramakoni, Sureshka, jopilov
 ms.topic: how-to
 ---
-# Recommended updates and configuration options for SQL Server with high-performance workloads
+# Recommended updates and configuration options for SQL Server 2014 and 2012 with high-performance workloads
 
-This article includes a list of performance improvements and configuration options that are available for SQL Server 2012 and later versions.
+This article includes a list of performance improvements and configuration options that are available for SQL Server 2014 and SQL Server 2012.
 
 _Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012  
 _Original KB number:_ &nbsp; 2964518
@@ -73,7 +73,7 @@ Review the content in the Knowledge Base article/Books Online Resource column an
 | [Slow Performance on Windows Server when using the "Balanced" Power Plan](https://support.microsoft.com/help/2207548) |Review the article, and work with your Windows administrator to implement one of the solutions that are noted in the "Resolution" section of the article.|
 | |Manually assign NUMA nodes to K-groups. |
 | [Optimize for ad hoc workloads](/sql/database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option) [FORCED PARAMETERIZATION](/sql/relational-databases/query-processing-architecture-guide#ForcedParamGuide)| Entries in the plan cache are evicted because of growth in other caches or memory clerks. You might also encounter plan cache eviction when the cache reaches its maximum number of entries. In addition to trace flag 8032 discussed above, consider the [optimize for ad hoc workloads](/sql/database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option) server option and also the [FORCED PARAMETERIZATION](/sql/relational-databases/query-processing-architecture-guide#ForcedParamGuide) database option. |
-| [How to reduce paging of buffer pool memory in SQL Server](https://support.microsoft.com/help/918483) [Memory configuration and sizing considerations in SQL Server 2012 and later versions](https://support.microsoft.com/help/2663912/) |Assign the [Enable the Lock Pages in Memory Option (Windows)](/sql/database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows) user right to the SQL service Startup account. See [How to enable the "locked pages" feature in SQL Server 2012](https://support.microsoft.com/help/2659143/). Set maximum server memory to approximately 90 percent of total physical memory. Make sure that the [Server memory configuration options](/sql/database-engine/configure-windows/server-memory-server-configuration-options) setting accounts for memory from only the nodes that are configured to use affinity mask settings.|
+| [How to reduce paging of buffer pool memory in SQL Server](https://support.microsoft.com/help/918483) |Assign the [Lock Pages in Memory Option (Windows)](/sql/database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows) user right to the SQL service Startup account. Set maximum server memory to approximately 90 percent of total physical memory. Make sure that the [Server memory configuration options](/sql/database-engine/configure-windows/server-memory-server-configuration-options) setting accounts for memory from only the nodes that are configured to use affinity mask settings.|
 | [SQL Server and Large Pages Explained...](/archive/blogs/psssql/sql-server-and-large-pages-explained) [Tuning options for SQL Server when running in high performance workloads](https://support.microsoft.com/help/920093)| Consider enabling TF 834 if you have a server with a large amount of memory, particularly with an analytical or data warehousing workload. Keep in mind that [TF 834 is not recommended if you are using columnstore indexes](https://support.microsoft.com/kb/3210239). |
 | [Description of the "access check cache bucket count" and "access check cache quota" options that are available in the sp_configure stored procedure](/sql/database-engine/configure-windows/access-check-cache-server-configuration-options)|Use [access check cache Server Configuration Options](/sql/database-engine/configure-windows/access-check-cache-server-configuration-options) to configure these values per the recommendations in the Knowledge Base article. Recommended values for high-end systems are as follows:<br/>"access check cache bucket count": 256<br/>"access check cache quota": 1024<br/> <br/>|
 | [ALTER WORKLOAD GROUP](/sql/t-sql/statements/alter-workload-group-transact-sql) [Memory grant query hints](https://support.microsoft.com/help/3107401)| If you have many queries that are exhausting large memory grants, reduce `request_max_memory_grant_percent` for the default workload group in the resource governor configuration from the default 25 percent to a lower value. New query memory grant options are available (`min_grant_percent` and `max_grant_percent`) in SQL Server |

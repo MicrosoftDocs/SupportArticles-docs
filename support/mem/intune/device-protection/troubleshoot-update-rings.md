@@ -2,7 +2,7 @@
 title: Troubleshoot Update ring policies for Windows devices
 description: Provides troubleshooting guidance for configuring Update ring policies for Windows 10 and Windows 11 devices in Intune.
 ms.date: 02/11/2025
-ms.reviewer: v-cshields, luche, v-six
+ms.reviewer: v-cshields, meerak, v-six
 search.appverid: MET150
 ms.custom: sap:Manage Software Updates\Windows 10 update rings
 ---

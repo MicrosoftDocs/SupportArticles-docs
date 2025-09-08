@@ -3,7 +3,7 @@ title: Management Reporter 2012 Process Service stops unexpectedly
 description: Describe an issue where the Management Reporter Process Service will unexpectedly stop running. Provides a resolution.
 ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Management Reporter
 ---
 # The Management Reporter 2012 Process Service stops unexpectedly

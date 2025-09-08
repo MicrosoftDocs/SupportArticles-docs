@@ -1,11 +1,11 @@
 ---
 title: Remote desktop connection is stuck
 description: Fixes an issue when remote desktop may stick on the Securing remote connection screen.
-ms.date: 01/15/2025
+ms.date: 04/03/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, ryhayash, mmiura, jarrettr, v-isboua
+ms.reviewer: kaushika, ryhayash, mmiura, jarrettr, v-isboua, warrenw
 ms.custom:
 - sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
 - pcy:WinComm User Experience
@@ -30,9 +30,7 @@ Securing remote connection...
 
 Remote desktop connection uses the highest possible security level encryption method between the source and destination.
 
-In Windows 7 or later versions, the remote desktop connection uses the SSL (TLS 1.0) Protocol and the encryption is Certificate-based.
-
-It means the authentication is performed by using self-signed certificates (default), or a certificate issued by a certification authority installed on the remote session host server (Terminal Server).
+Authentication is performed by using self-signed certificates (default behavior), or a certificate issued by a certification authority installed on the Remote Desktop Session Host server (RD Session Host).
 
 If you use a self-signed certificate, the system tries to retrieve the trusted certification authority list from the Internet to check the publish and revocation status of the certificate. Therefore, the **Securing remote connection** screen may appear for a while.
 
@@ -78,10 +76,22 @@ To work around this behavior, use either of the following methods:
 
 ### Method 2
 
-Deploy a Group Policy Object to the client to turn off Automatic Root Certificates Update. To do it, follow these steps on a Windows Server 2012 R2-based computer:
+Deploy a Group Policy to the client to turn off Automatic Root Certificates Update. To create a Group Policy, follow these steps on a Windows Server computer that is used for Group Policy management in the same Active Directory domain as the RD Session Host and client:
 
-1. Open Group Policy Management Console. To do it, hold the Windows key and press the r key. Type *Gpmc.msc* in the **Run** box, and then select **OK**.
-2. Create a new Group Policy Object (GPO) or select an existing Group Policy Object (GPO) to change.
-3. Right-click the selected Group Policy Object (GPO) and then select **Edit** and browse to the following Group Policy:  
-    **Computer Configuration** > **Administrative Templates** > **System** > **Internet Communication Management** > **Internet Communication settings**
+1. Open the Group Policy Management Console (GPMC) by using the following steps:
+
+   1. Press the Windows key+<kbd>R</kbd> to open the **Run** box. 
+   2. Type **Gpmc.msc** in the **Run** box, and then select **OK**. 
+      
+      > [!NOTE]
+      > GPMC is installed by default on domain controllers and on any Windows Server or client that has the Remote Server Administration Tools installed.
+      
+2. Create a new Group Policy Object (GPO) or select an existing GPO to change.
+3. Right-click the selected GPO, select **Edit**, and browse to the following Group Policy:  
+
+   **Computer Configuration** > **Administrative Templates** > **System** > **Internet Communication Management** > **Internet Communication settings**
+
 4. In the details pane, double-click **Turn off Automatic Root Certificates Update**, and then select **Enabled**.
+
+    > [!WARNING]
+    > Turning off Automatic Root Certificates Update means you need to update any client or server when a new root certificate update is rolled out. 

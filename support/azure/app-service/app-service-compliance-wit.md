@@ -1,8 +1,8 @@
 ---
 title: Microsoft Web App Azure App Service Compliance with PCI Standards 3.0 and 3.1
 description: PCI DSS version 3.1 certification requires disabling TLS 1.0. If you are using App Service Environments or are willing to migrate your workload to App Service Environments, you can get greater control of your environment.
-author: genlin
-ms.author: genli
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.service: azure-app-service
 ms.date: 08/14/2020
 ms.reviewer: 

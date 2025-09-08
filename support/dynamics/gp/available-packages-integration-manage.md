@@ -2,7 +2,7 @@
 title: Available packages for Integration Manager
 description: Outlines the packages that are available for Integration Manager. Lists the items that are included in each package.
 ms.reviewer: theley, kvogel
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Packages that are available for Integration Manager for Microsoft Dynamics GP 10.0

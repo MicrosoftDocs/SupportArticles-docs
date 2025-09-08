@@ -3,7 +3,7 @@ title: Purchase Order Processing setup is missing
 description: Provides a solution to an error that occurs when you try to open the Purchase Order Entry window in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # "Purchase Order Processing setup information is missing or damaged" Error message when you try to open the Purchase Order Entry window in Microsoft Dynamics GP

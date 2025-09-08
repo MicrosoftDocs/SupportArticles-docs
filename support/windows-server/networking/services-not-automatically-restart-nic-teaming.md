@@ -14,7 +14,7 @@ ms.custom:
 
 This article helps to resolves a problem in which services do not automatically restart on a computer that uses NIC Teaming.
 
-_Applies to:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2022  
 _Original KB number:_ &nbsp; 4552864
 
 ## Symptoms

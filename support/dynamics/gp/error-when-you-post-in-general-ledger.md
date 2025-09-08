@@ -3,7 +3,7 @@ title: Error when you post in General Ledger in Microsoft Dynamics GP
 description: Provides a solution to an error that occurs when you post in General Ledger in Microsoft Dynamics GP.
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - General Ledger
 ---
 # Error message when you post in General Ledger in Microsoft Dynamics GP: Arithmetic overflow error for data type smallint, value = 35001

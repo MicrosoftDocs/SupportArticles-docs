@@ -1,8 +1,8 @@
 ---
 title: Microsoft Azure Service Fabric Logs
 description: Lists the Microsoft Azure Service Fabric logs and diagnostic information that is collected during troubleshooting.
-author: genlin
-ms.author: genli
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.service: azure-service-fabric
 ms.date: 08/14/2020
 ms.reviewer: 

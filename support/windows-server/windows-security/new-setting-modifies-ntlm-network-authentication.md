@@ -1,24 +1,24 @@
 ---
 title: NTLM network authentication changes
-description: Describes new behavior in Windows Server 2003 SP1 that affects NTLM password changes. After you install the service pack, domain users can change a password and still use their old password to authenticate. This setting can be changed in the registry.
-ms.date: 01/15/2025
+description: Describes a new behavior in Windows Server 2003 SP1 that affects NTLM password changes and how to use a registry to change the behavior.
+ms.date: 04/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika
+ms.reviewer: kaushika, maotori，herbertm
 ms.custom:
 - sap:windows security technologies\legacy authentication (ntlm)
 - pcy:WinComm Directory Services
 ---
-# New setting modifies NTLM network authentication behavior
+# Setting in NTLM network authentication behavior allows the use of the previous password
 
-This article describes new behavior that affects NTLM password changes and how to change this behavior by using a registry.
+This article describes a behavior that affects NTLM password changes and how to change this behavior by using a registry.
 
 _Original KB number:_ &nbsp; 906305
 
 ## Introduction
 
-Beginning with Microsoft Windows Server 2003 Service Pack 1 (SP1), there is a change to NTLM network authentication behavior. Domain users can use their old password to access the network for one hour after the password is changed. Existing components that are designed to use Kerberos for authentication are not affected by this change.
+There is an option in NTLM network authentication when a user password is changed. Domain users can use their old password to access the network for five minutes after the password is changed. Existing components that are designed to use Kerberos for authentication are not affected by this change.
 
 The goal of this change is to allow background processes such as services to continue running for some time until an administrator has the opportunity to update the credentials for the new password.
 
@@ -52,7 +52,7 @@ To do this, follow these steps:
 6. In the **Value data** box, type the value in minutes that you want to use, and then click **OK**.
 
     > [!NOTE]
-    > The lifetime period is set in minutes. If this registry value is not set, the default lifetime period for an old password is 60 minutes.
+    > The lifetime period is set in minutes. If this registry value is not set, the default lifetime period for an old password is five minutes.
 
 7. Quit Registry Editor.
 
@@ -72,4 +72,4 @@ To reset a user's password, follow these steps:
 5. Click to select the **User must change password at next logon** check box, and then click **OK**.
 
 > [!NOTE]
-> The behavior that is described in this article occurs only if the effective password policy on the domain controllers has **Enforce Password History** set to a value that specifies that two or more passwords will be remembered. The password policy should be set at the domain level. You can determine whether the policy has taken effect on the domain controllers by using the Secpol.msc snap-in.
+> The behavior that is described in this article occurs only if the effective password policy on the domain controllers has **Enforce Password History** set to a value that specifies that two or more passwords will be remembered. The password policy should be set at the domain level. You can determine whether the policy has taken effect on the domain controllers by using the Secpol.msc snap-in. Domain user password history can also be set using a [fine grained password policy](/windows-server/identity/ad-ds/get-started/adac/fine-grained-password-policies).

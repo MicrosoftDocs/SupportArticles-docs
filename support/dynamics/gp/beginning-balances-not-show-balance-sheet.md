@@ -3,7 +3,7 @@ title: Beginning balances don't show on Balance Sheet
 description: Provides a resolution for the issue that beginning balances don't display on the Advanced Financial Analysis Balance Sheet report in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - General Ledger
 ---
 # Beginning Balances don't appear correctly on the Balance Sheet

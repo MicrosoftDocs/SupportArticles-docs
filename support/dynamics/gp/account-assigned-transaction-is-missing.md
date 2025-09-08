@@ -3,7 +3,7 @@ title: Account assigned to transaction is missing
 description: Provides a solution to an error that occurs when you run the General Ledger Year-End Closing routine in Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - General Ledger
 ---
 # "Account assigned to a transaction is missing" Error message when you run the General Ledger Year-End Closing routine in Microsoft Dynamics GP

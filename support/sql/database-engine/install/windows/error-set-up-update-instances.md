@@ -1,9 +1,9 @@
 ---
 title: Attempted to perform an unauthorized operation error
 description: This article provides a resolution for the problem where setting up or updating SQL Server instances fails and returns an error message.
-ms.date: 01/15/2021
+ms.date: 04/08/2025
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall
-ms.reviewer:  
+ms.reviewer: jopilov
 ---
 # Attempted to perform an unauthorized operation error when you set up or update SQL Server instances
 

@@ -4,7 +4,7 @@ description: Resolves an issue where the taxes on online orders are incorrectly 
 author: josaw1 
 ms.author: josaw
 ms.reviewer: rassadi, brstor
-ms.date: 09/01/2023
+ms.date: 05/22/2025
 ms.custom: sap:Pricing, discounts, and taxes\Issues with taxes and charges in e-commerce storefront
 ---
 # Taxes on online orders are incorrectly calculated or the tax group on the sales line isn't correctly set

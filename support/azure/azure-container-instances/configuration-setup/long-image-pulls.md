@@ -1,12 +1,12 @@
 ---
 title: Image pull takes a long time to run
 description: Learn about troubleshooting steps that you can take if an image pull takes a long time to run on Azure Container Instances.
-ms.date: 12/28/2023
+ms.date: 04/14/2025
 ms.service: azure-container-instances
 author: tysonfms
 ms.author: tysonfreeman
 editor: v-jsitser
-ms.reviewer: v-leedennis
+ms.reviewer: edneto, v-leedennis
 ms.custom: sap:Configuration and Setup
 #Customer intent: As a user of Azure Container Instances, I want to learn why an image pull takes a long time to run so that I can create and use container groups successfully.
 ---

@@ -3,7 +3,7 @@ title: Remove Analytical Accounting from a computer that has Dynamics GP install
 description: Describes how to completely remove Analytical Accounting from a computer that has Microsoft Dynamics GP installed.
 ms.topic: how-to
 ms.reviewer: theley, ryanklev
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Analytical Accounting
 ---
 # How to remove Analytical Accounting from a computer that has Microsoft Dynamics GP installed

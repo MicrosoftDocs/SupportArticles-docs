@@ -3,7 +3,7 @@ title: Azure Files performance troubleshooting guide
 description: Troubleshoot performance issues with Azure file shares and discover potential causes and associated workarounds for these problems.
 ms.service: azure-file-storage
 ms.custom: sap:Performance, linux-related-content
-ms.date: 01/23/2025
+ms.date: 05/21/2025
 ms.reviewer: kendownie, v-weizhu
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
 ---
@@ -120,7 +120,7 @@ If you're using a premium file share, increase the provisioned file share size t
 
 If the majority of your requests are metadata-centric (such as `createfile`, `openfile`, `closefile`, `queryinfo`, or `querydirectory`), the latency will be worse than that of read/write operations.
 
-To determine whether most of your requests are metadata-centric, start by following steps 1-4 as previously outlined in Cause 1. For step 5, instead of adding a filter for **Response type**, add a property filter for **API name**.
+To determine whether most of your requests are metadata-centric, start by following steps 1-4 as previously outlined in Cause 1. For step 5, instead of adding a filter for **Response type**, add a property filter for **API name**. For more information, see [Monitor utilization by metadata IOPS](/azure/storage/files/analyze-files-metrics?tabs=azure-portal#monitor-utilization-by-metadata-iops).
 
 :::image type="content" source="media/files-troubleshoot-performance/metadata-metrics.png" alt-text="Screenshot that shows the 'API name' property filter.":::
 
@@ -239,17 +239,34 @@ It's possible you're experiencing throttling, and your requests are being sent t
 
 Ensure your app is within the [Azure Files scale targets](/azure/storage/files/storage-files-scale-targets#azure-files-scale-targets). If you're using standard Azure file shares, consider switching to premium.
 
+### Cause 3: Azure File Share reaches capacity
+
+If the Azure file share is close to reaching its capacity, an important step is to identify the largest files and directories in order to optimize storage. This step helps you to understand which files and folders are using the most space.
+
+### Workaround
+
+To get a comprehensive view of storage usage across the entire share, mount the root of the share. This action enables a thorough inspection of file and directory sizes. At the root of the file share, run the following commands to identify the largest files and directories:
+
+```bash
+	cd /path/to/mount/point
+	du -ah --max-depth=1 | sort -rh | head -n 20
+```
+
+This command displays the 20 largest files and directories in descending order of size. This display provides a clear overview of storage consumption.
+ 
+If you can't mount the root of the share, use Azure Storage Explorer or a third-party tool to analyze storage usage. These tools provide similar insights into file and directory sizes without requiring you to mount the share.
+
 ## Throughput on Linux clients is lower than that of Windows clients
 
 ### Cause
 
-This is a known issue with implementing the SMB client on Linux.
+This is a known issue that affects implementing the SMB client on Linux.
 
 ### Workaround
 
 - Spread the load across multiple VMs.
-- On the same VM, use multiple mount points with a `nosharesock` option, and spread the load across these mount points.
-- On Linux, try mounting with a `nostrictsync` option to avoid forcing an SMB flush on every `fsync` call. For Azure Files, this option doesn't interfere with data consistency, but it might result in stale file metadata on directory listings (`ls -l` command). Directly querying file metadata by using the `stat` command will return the most up-to-date file metadata.
+- On the same VM, use multiple mount points that have a `nosharesock` option, and spread the load across these mount points.
+- On Linux, try mounting by using a `nostrictsync` option to avoid forcing an SMB flush on every `fsync` call. For Azure Files, this option doesn't interfere with data consistency, but it might cause stale file metadata on directory listings (`ls -l` command). Directly querying file metadata by using the `stat` command returns the most up-to-date file metadata.
 
 ## High latencies for metadata-heavy workloads involving extensive open/close operations
 

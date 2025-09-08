@@ -5,7 +5,7 @@ author: cts-davean
 ms.author: davean
 ms.reviewer: mihayash, v-sidong
 ms.custom: sap:System Services Development\Process, thread, and DLL APIs
-ms.date: 12/19/2023
+ms.date: 06/11/2025
 ---
 
 # CreateProcessWithLogonW fails when called on a Microsoft Entra account

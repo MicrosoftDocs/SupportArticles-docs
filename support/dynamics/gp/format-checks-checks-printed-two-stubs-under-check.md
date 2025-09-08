@@ -3,7 +3,7 @@ title: Checks are printed with two stubs under the check
 description: This article describes how to format checks so that the checks are printed with two stubs under the check in Payables Management for Microsoft Dynamics GP and for Microsoft Business Solutions - Great Plains.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # Format checks so that the checks are printed with two stubs under the check in Payables Management for Microsoft Dynamics GP

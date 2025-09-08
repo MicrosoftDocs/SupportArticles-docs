@@ -2,7 +2,7 @@
 title: Can't access elements of a Java application
 description: Troubleshoot the issue that Power Automate for desktop can't access the elements of a Java desktop application.
 ms.reviewer: pefelesk
-ms.date: 10/29/2024
+ms.date: 04/29/2025
 ms.custom: sap:Desktop flows\UI or browser automation
 ---
 # Can't access the elements of a Java application
@@ -17,6 +17,18 @@ _Original KB number:_ &nbsp; 5014922
 Power Automate for desktop can't access the UI elements of a Java desktop application when you use either the [Recorder](/power-automate/desktop-flows/recording-flow) or the [Add UI element](/power-automate/desktop-flows/ui-elements) action in the flow designer.
 
 ## Troubleshooting steps
+
+To solve this issue, try the [troubleshooter](/power-automate/desktop-flows/troubleshooter) first.
+
+1. In Power Automate for desktop, navigate to **Help** > **Troubleshooter**, and then run the [troubleshooter](/power-automate/desktop-flows/troubleshooter).
+
+2. In the **Troubleshooter** window, select **Run** on the **Troubleshot UI/Web automation issues** panel.
+
+3. If an issue is found for **Java Automation**, expand the panel to see the details.
+
+4. If a **Fix** button is available, select it to apply the fix. Ensure all running **Java** applications are closed before applying the fix.
+
+If the issue persists after using the troubleshooter, follow these steps to manually troubleshoot the issue:
 
 1. Ensure that you have Java installed on your machine:
 
@@ -34,7 +46,7 @@ Power Automate for desktop can't access the UI elements of a Java desktop applic
 
    Go to **Control Panel** > **Ease of Access** > **Optimize visual display** > **Java Access Bridge from Oracle, Inc. Providing Assistive Technology access to Java applications**, and then disable the **Enable Java Access Bridge** option.
 
-   :::image type="content" source="media/cannot-access-java-application-elements/enable-java-access-bridge-option.png" alt-text="Screenshot of the Enable Java Access Bridge option in the Windows Control Panel.":::
+   :::image type="content" source="media/cannot-access-java-application-elements/enable-java-access-bridge-option.png" alt-text="Screenshot of the Enable Java Access Bridge option in the Windows Control Panel." lightbox="media/cannot-access-java-application-elements/enable-java-access-bridge-option.png":::
 
 3. Ensure that specific files exist in one or more Java folders of the machine after the Power Automate for desktop installation.
 

@@ -1,7 +1,7 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 02/11/2025
+ms.date: 04/14/2025
 search.appverid: MET150
 ms.reviewer: kaushika, madakeva, annovich, jerryabo
 ms.custom: sap:Set Up Intune\Set up administrators and manage roles
@@ -9,6 +9,12 @@ ms.custom: sap:Set Up Intune\Set up administrators and manage roles
 # Known issues
 
 This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, and a backlog of past known issues.
+
+## Apps deployed with Configuration Manager take a long time to load on the Windows apps page in Company Portal
+
+- **Status:** Active
+
+There's a known issue in Company Portal where Windows apps deployed with Configuration Manager might take multiple seconds (up to a few minutes) to load on the Windows apps page. Microsoft is investigating this issue and will update this article when more information becomes available.
 
 ## Azure enterprise applications aren't displayed in the Company Portal for Windows or the Intune Company Portal website
 

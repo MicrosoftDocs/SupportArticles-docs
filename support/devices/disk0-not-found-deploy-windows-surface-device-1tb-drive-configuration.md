@@ -5,7 +5,7 @@ ms.date: 05/12/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: delhan, v-lianna
+ms.reviewer: kaushika, v-lianna
 ms.custom: csstroubleshoot
 ms.subservice: windows
 ---

@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: padmagit77  
   ms.author: v-padmaj
-  ms.date: 02/13/2023
+  ms.date: 04/30/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -48,9 +48,9 @@ landingContent:
             url: health-diagnostic-performance/etw-log-diagnostic.md
           - text: Troubleshooting High CPU in an IIS application pool
             url: health-diagnostic-performance/troubleshoot-high-cpu-in-iis-app-pool.md
-          - text: Troubleshoot native memory leak in an IIS 7.x application pool
+          - text: Troubleshoot native memory leak in an IIS application pool
             url: health-diagnostic-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md
-          - text: Troubleshoot failed requests using tracing in IIS 8.5
+          - text: Troubleshoot failed requests using tracing in IIS
             url: health-diagnostic-performance/troubleshoot-failed-requests-using-tracing-in-iis-85.md
           - text: Troubleshoot PHP errors with Failed Request Tracing
             url: health-diagnostic-performance/troubleshoot-php-with-failed-request-tracing.md
@@ -99,7 +99,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Changes in Microsoft FTP 7.5
+          - text: Changes in Microsoft FTP
             url: ftp-service-svchost-inetinfo/changes-in-ftp-7-5.md
 
   - title: IIS Express
@@ -108,5 +108,3 @@ landingContent:
         links:
           - text: Impersonation fails when UAC is enabled
             url: www-authentication-authorization/impersonation-fails-uac-enabled.md
-
-

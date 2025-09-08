@@ -2,9 +2,9 @@
 title: Troubleshoot Dapr extension installation errors 
 description: Troubleshoot errors that occur while installing the Distributed Application Runtime (Dapr) extension for Azure Kubernetes Service (AKS) or Arc for Kubernetes.
 editor: v-jsitser
-ms.reviewer: nigreenf, v-leedennis
+ms.reviewer: nigreenf, v-leedennis, addobres
 ms.service: azure-kubernetes-service
-ms.date: 03/05/2025
+ms.date: 03/11/2025
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 

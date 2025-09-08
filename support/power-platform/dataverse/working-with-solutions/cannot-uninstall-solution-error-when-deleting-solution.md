@@ -3,7 +3,7 @@ title: Cannot Uninstall Solution error when removing solutions
 description: You may receive an error that states Cannot Uninstall Solution when you try to delete a solution in Microsoft Dynamics 365. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 04/17/2025
 ms.custom: sap:Working with Solutions
 ---
 # "Cannot Uninstall Solution" error occurs in Microsoft Dynamics 365

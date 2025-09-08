@@ -3,16 +3,15 @@ title: Azure Serial Console for Linux
 description: Bi-Directional Serial Console for Azure Virtual Machines and Virtual Machine Scale Sets using a Linux example.
 services: virtual-machines
 documentationcenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.service: azure-virtual-machines
 ms.collection: linux
-ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 03/11/2025
+ms.date: 07/29/2025
 ms.author: mbifeld
 ---
 
@@ -33,25 +32,18 @@ For Serial Console documentation for Windows, see [Serial Console for Windows](.
 > [!NOTE]
 > Serial Console is compatible with a managed boot diagnostics storage account.
 
-## Prerequisites
+## Prerequisites to access the Azure Serial Console
 
-- Your VM or virtual machine scale set instance must use the resource management deployment model. Classic deployments aren't supported.
+To access the Serial Console on your VM or virtual machine scale set instance, you will need the following:
 
-- Your account that uses serial console must have the [Virtual Machine Contributor role](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) for the VM and the [boot diagnostics](../windows/boot-diagnostics.md) storage account
+- Boot diagnostics must be enabled for the VM.
+- A user account that uses password authentication must exist within the VM. You can create a password-based user with the [reset password](/azure/virtual-machines/extensions/vmaccess#reset-password) function of the VM access extension. Select **Reset password** from the **Help** section.
+- The Azure account accessing Serial Console must have [Virtual Machine Contributor role](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) for both the VM and the [boot diagnostics](../windows/boot-diagnostics.md) storage account.
+- Classic deployments aren't supported. Your VM or virtual machine scale set instance must use the Azure Resource Manager deployment model.
+- Serial Console is not supported when the storage account has **Allow storage account key access** disabled.
 
-- Your VM or virtual machine scale set instance must have a password-based user. You can create one with the [reset password](/azure/virtual-machines/extensions/vmaccess#reset-password) function of the VM access extension. Select **Reset password** from the **Help** section.
-
-- Your VM or virtual machine scale set instance must have [boot diagnostics](../windows/boot-diagnostics.md) enabled.
-
-    :::image type="content" source="media/serial-console-linux/diagnostics-settings.png" alt-text="Screenshot of the Diagnostics settings page in Azure portal. The Boot diagnostics option is enabled.":::
-
-- For settings specific to Linux distributions, see [Serial console Linux distribution availability](#serial-console-linux-distribution-availability).
-
-- Your VM or virtual machine scale set instance must be configured for serial output on `ttys0`. This is the default for Azure images, but you will want to double check this on custom images. Details [below](#custom-linux-images).
-
-> [!NOTE]
-> The serial console requires a local user with a configured password. VMs or virtual machine scale sets configured only with an SSH public key won't be able to sign in to the serial console. To create a local user with a password, use the [VMAccess Extension](/azure/virtual-machines/extensions/vmaccess), which is available in the portal by selecting **Reset password** in the Azure portal, and create a local user with a password.
-> You can also reset the administrator password in your account by [using GRUB to boot into single user mode](./serial-console-grub-single-user-mode.md).
+> [!IMPORTANT]
+> Serial Console is now compatible with [managed boot diagnostics storage accounts](../windows/boot-diagnostics.md) and custom storage account firewalls.
 
 ## Serial Console Linux distribution availability
 
@@ -95,6 +87,13 @@ By default, all subscriptions have serial console access enabled. You can disabl
 ## Serial Console security
 
 ### Use Serial Console with custom boot diagnostics storage account firewall enabled
+
+> [!CAUTION]
+> There's a known issue where Azure Serial Console might fail to connect when a custom boot diagnostics storage account has firewall restrictions. This issue occurs because Azure Serial Console runs in Microsoft's internal tenant, and firewall rules on the customer-managed storage account might block its access, even with correct permissions.
+> To avoid connectivity issues, [switch to managed boot diagnostics](../windows/boot-diagnostics.md#enable-boot-diagnostics-on-existing-virtual-machine) (recommended) or remove the firewall on the custom boot diagnostics storage account.
+
+> [!IMPORTANT]
+> By the end of 2025, Azure Serial Console will no longer utilize boot diagnostics storage accounts for establishing a connection. No customer action is required for this change. This change doesn't affect serial logs or screenshots.
 
 Serial Console uses the storage account configured for boot diagnostics in its connection workflow. When a firewall is enabled on this storage account, the Serial Console service IPs must be added as exclusions. To do this, follow these steps:
 
@@ -143,7 +142,7 @@ After the IP addresses are successfully added to the storage account firewall, r
 
 ### Access security
 
-Access to the serial console is limited to users who have an access role of [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) or higher to the virtual machine. If your Microsoft Entra tenant requires multi-factor authentication (MFA), then access to the serial console will also need MFA because the serial console's access is through the [Azure portal](https://portal.azure.com).
+Access to the serial console is limited to users who have an access role of [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) or higher to the virtual machine. If your Microsoft Entra tenant requires multifactor authentication (MFA), then access to the serial console will also need MFA because the serial console's access is through the [Azure portal](https://portal.azure.com).
 
 ### Channel security
 

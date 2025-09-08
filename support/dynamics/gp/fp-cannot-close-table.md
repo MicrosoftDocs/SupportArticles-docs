@@ -3,7 +3,7 @@ title: FP cannot close table
 description: Provides a solution to an error that occurs when you print any report or open any window.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "FP Can't Close Table" Error message displays when accessing windows or reports in Microsoft Dynamics GP

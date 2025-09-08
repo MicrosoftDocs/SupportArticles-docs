@@ -123,7 +123,7 @@ To grant DCOM remote launch and activation permissions to a user or group manual
 3. In the **My Computer Properties** dialog, select the **COM Security** tab.
 4. Under **Launch and Activation Permissions**, select **Edit Limits**.
 5. In the **Launch and Activation Permission** dialog, select **Add** if your name or group doesn't appear in the **Group or user names** list. In the **Select Users, Computers, or Groups** dialog, add your name and group in the **Enter the object names to select** box, and then select **OK**.
-6. In the **Launch and Activation Permission** dialog, select your user and group in the **Group or user names** list. Under P**ermissions for \<user or group\>**, check **Allow** for the **Remote Launch** and **Remote Activation** permissions, and then select **OK**.
+6. In the **Launch and Activation Permission** dialog, select your user and group in the **Group or user names** list. Under **Permissions for \<user or group\>**, check **Allow** for the **Remote Launch** and **Remote Activation** permissions, and then select **OK**.
 
 The following procedure describes how to grant DCOM remote access permissions to certain users and groups. If computer A is connecting remotely to computer B, you can set these permissions on computer B to allow a user or group that's not part of the **Administrators** group on computer B to connect to computer B.
 

@@ -3,7 +3,7 @@ title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 01/21/2025
+ms.date: 07/02/2025
 ms.reviewer: kendownie
 ---
 
@@ -156,17 +156,7 @@ Unlike SMB, NFS doesn't have user-based authentication. The authentication for a
 
     :::image type="content" source="media/files-troubleshoot-linux-nfs/connectivity-using-private-endpoints.png" alt-text="Diagram of private endpoint connectivity." lightbox="media/files-troubleshoot-linux-nfs/connectivity-using-private-endpoints.png":::
 
-### Cause 2: Secure transfer required is enabled
-
-NFS Azure file shares don't currently support double encryption. Azure provides a layer of encryption for all data in transit between Azure datacenters using MACSec. You can only access NFS shares from trusted virtual networks and over VPN tunnels. No extra transport layer encryption is available on NFS shares.
-
-### Solution
-
-Disable **Secure transfer required** in your storage account's configuration blade.
-
-:::image type="content" source="media/files-troubleshoot-linux-nfs/disable-secure-transfer.png" alt-text="Screenshot that shows the storage account configuration blade, disabling secure transfer required." lightbox="media/files-troubleshoot-linux-nfs/disable-secure-transfer.png":::
-
-### Cause 3: nfs-utils, nfs-client or nfs-common package isn't installed
+### Cause 2: nfs-utils, nfs-client or nfs-common package isn't installed
 
 Before running the `mount` command, install the nfs-utils, nfs-client, or nfs-common package.
 
@@ -233,7 +223,7 @@ sudo apt install nfs-common
 
 ---
 
-### Cause 4: Firewall blocking port 2049
+### Cause 3: Firewall blocking port 2049
 
 The NFS protocol communicates to its server over port 2049. Make sure that this port is open to the storage account (the NFS server).
 
@@ -245,7 +235,7 @@ Verify that port 2049 is open on your client by running the following command. I
 sudo nc -zv <storageaccountnamehere>.file.core.windows.net 2049
 ```
 
-### Cause 5: Storage account deleted
+### Cause 4: Storage account deleted
 
 If you're unable to mount the file share due to **error: connection timed out**, the storage account containing the file share might be deleted accidentally.
 

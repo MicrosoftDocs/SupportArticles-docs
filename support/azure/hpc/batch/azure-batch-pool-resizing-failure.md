@@ -1,7 +1,7 @@
 ---
 title: Azure batch pool resizing failure
 description: An Azure batch pool resizing failure occurs. You can review the symptoms, understand the causes, and apply solutions to this problem.
-ms.date: 02/20/2024
+ms.date: 05/23/2025
 ms.reviewer: biny, v-weizhu
 ms.service: azure-batch
 ms.custom: sap:Azure Batch

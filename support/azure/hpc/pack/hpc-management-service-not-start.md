@@ -1,7 +1,7 @@
 ---
 title: HPC Management Service fails to initialize
 description: Provides a solution for an issue where HPC Management Service fails to start after you restore a corrupted database
-ms.date: 09/14/2022
+ms.date: 05/13/2025
 ms.service: hpcpack
 ms.reviewer: hclvteam, v-weizhu
 ms.custom: sap:HPC Pack

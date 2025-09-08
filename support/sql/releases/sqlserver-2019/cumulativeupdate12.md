@@ -2,6 +2,7 @@
 title: Cumulative update 12 for SQL Server 2019 (KB5004524)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 12 (KB5004524).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5004524
 ms.reviewer: v-cuichen
 appliesto:
@@ -25,8 +26,7 @@ This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Ser
 
 If a database in an Always On availability group has duplicate logical file names, either correct that situation or avoid using the automatic seeding functionality after you install SQL Server 2019 CU12.
 
-> [!NOTE]
-> This issue is resolved in [CU14](cumulativeupdate14.md).
+This issue is fixed in [SQL Server 2019 CU14](cumulativeupdate14.md).
 
 ## Improvements and fixes included in this update
 

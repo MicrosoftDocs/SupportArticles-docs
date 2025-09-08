@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting RDS Licensing
 description: Introduces general guidance for troubleshooting scenarios related to RDS Licensing.
-ms.date: 01/15/2025
+ms.date: 03/28/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -12,7 +12,7 @@ ms.custom:
 ---
 # RDS Licensing troubleshooting guidance
 
-<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806373" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Active Directory replication issues</span>
+<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806373" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Remote Desktop licensing problems </span>
 
 The listed resources in this article can help you resolve Remote Desktop Services (RDS) licensing issues.
 
@@ -85,7 +85,7 @@ Registry values:
 > [!Note]
 > This configuration will apply before the one that's mentioned in "Using GUI". This means that the "Using GUI" configuration will have no effect when a local policy is configured because the registry values will not be taken into account. In this situation, you can't use RDSM to configure the license servers and licensing mode.
 
-#### Using GPO
+#### Use Active Directory domain based Group Policy
 
 This method is similar to "Using local policy." The only difference is that this configuration is set by using a GPO that's configured in an Active Directory domain:  
 *Computer Configuration > Policies > Administrative Templates > Windows Components > Remote Desktop Services > Remote Desktop Session Host > Licensing*  

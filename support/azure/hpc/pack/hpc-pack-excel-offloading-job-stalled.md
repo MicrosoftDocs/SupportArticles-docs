@@ -1,7 +1,7 @@
 ---
 title: HPC Pack Excel offloading job is stalled
 description: HPC Pack Excel offloading job is stalled when you run the ConvertiblePricing_Complete.xlsb sample job.
-ms.date: 10/18/2022
+ms.date: 05/13/2025
 editor: v-jsitser
 ms.reviewer: cargonz, dandchen, v-leedennis
 ms.service: hpcpack

@@ -3,7 +3,7 @@ title: Gather a Dexterity Scriptlog in Microsoft Dynamics GP
 description: Describes how to gather a Dexterity Script Debugger log in Microsoft Dynamics GP.
 ms.topic: how-to
 ms.reviewer: theley, cwaswick
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to gather a Dexterity Scriptlog in Microsoft Dynamics GP

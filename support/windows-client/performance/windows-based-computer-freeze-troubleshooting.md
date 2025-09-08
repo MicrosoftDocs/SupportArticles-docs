@@ -8,7 +8,7 @@ ms.collection: highpri
 ms.custom:
 - sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
 - pcy:WinComm Performance
-ms.reviewer: dougeby, ntuttle,aaroncz
+ms.reviewer: dougeby, ntuttle
 audience: itpro
 ---
 # Advanced troubleshooting for Windows freezes
@@ -231,7 +231,7 @@ You can also use the built-in NMI feature through a [Debug-VM](/powershell/modul
 To debug the virtual machines on Hyper-V, run the following cmdlet in Windows PowerShell:
 
 ```powershell
-Debug-VM -Name "VM Name" -InjectNonMaskableInterrupt -ComputerName Hostname  
+Debug-VM -Name "VM Name" -InjectNonMaskableInterrupt -ComputerName Hostname
 ```
 
 #### VMware

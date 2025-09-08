@@ -2,7 +2,7 @@
 title: The Bin field and Quantity Selected field are unavailable in the Bin Quantity Entry window
 description: Describes an issue that occurs if the MOP_Bin_Issue table (MOP1027) contains an invalid-quantity unposted entry. Provides a resolution.
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.reviewer: theley
 ms.custom: sap:Manufacturing Series
 ---

@@ -1,24 +1,22 @@
 ---
 title: Create a statistics-only database using a generated statistics script  
 description: Learn how to generate a statistic script using metadata to create a statistics-only database in SQL Server. 
-ms.date: 08/18/2022
+ms.date: 06/12/2025
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: how-to
-ms.reviewer: ramakoni, v-jayaramanp
+ms.reviewer: ramakoni, v-jayaramanp, jopilov
 ---
 
 # How to generate a statistics script to create a statistics-only database in SQL Server
 
 In this article, you learn how to generate a statistics script using database metadata for creating a statistics-only database in SQL Server.
 
-_Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012, 
-SQL Server 2008
-
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp;914288
 
 ## Introduction
 
-The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15&preserve-view=true) is the preferred method to generate a schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use `DBCC CLONEDATABASE`.
+The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql) is the preferred method to generate a schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use `DBCC CLONEDATABASE`.
 
 The query optimizer in Microsoft SQL Server uses the following types of information to determine an optimal query plan:
 
@@ -165,9 +163,9 @@ The following tables help explain how the query optimizer uses this information 
 
 ## See also
 
-- [Script objects in SQL Server Management Studio](/sql/ssms/tutorials/scripting-ssms?view=sql-server-ver15&preserve-view=true)
+- [Script objects in SQL Server Management Studio](/sql/ssms/tutorials/scripting-ssms)
 
-- [Data-tier Applications](/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-ver15&preserve-view=true)
+- [Data-tier Applications](/sql/relational-databases/data-tier-applications/data-tier-applications)
 
 - [Use PowerShell to Script SQL Database Objects](https://devblogs.microsoft.com/scripting/use-powershell-to-script-sql-database-objects/)
 

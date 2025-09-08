@@ -3,7 +3,7 @@ title: Troubleshoot SSH connection issues to an Azure VM
 description: How to troubleshoot issues such as 'SSH connection failed' or 'SSH connection refused' for an Azure VM running Linux.
 keywords: ssh connection refused, ssh error, azure ssh, SSH connection failed
 services: virtual-machines
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
 ms.custom: sap:Cannot connect to my VM, devx-track-azurecli, linux-related-content
@@ -13,7 +13,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
 ms.date: 09/09/2024
-ms.author: genli
+ms.author: jarrettr
 ---
 # Troubleshoot SSH connections to an Azure Linux VM that fails, errors out, or is refused
 
@@ -81,7 +81,7 @@ Use Network Watcher's [Next hop](/azure/network-watcher/diagnose-vm-network-rout
 
 ## Use the Azure VM Serial Console
 
-The [Azure VM Serial Console](./serial-console-linux.md) provides access to a text-based console for Linux virtual machines. You can use the console to troubleshoot your SSH connection in an interactive shell. Ensure you have met the [prerequisites](./serial-console-linux.md#prerequisites) for using Serial Console and try the commands below to further troubleshoot your SSH connectivity.
+The [Azure VM Serial Console](./serial-console-linux.md) provides access to a text-based console for Linux virtual machines. You can use the console to troubleshoot your SSH connection in an interactive shell. Ensure you have met the [prerequisites](./serial-console-linux.md#prerequisites-to-access-the-azure-serial-console) for using Serial Console and try the commands below to further troubleshoot your SSH connectivity.
 
 ### Check that SSH service is running
 

@@ -2,10 +2,10 @@
 title: Solution can't be deleted due to dependencies from other components 
 description: Works around the Solution cannot be deleted due to dependencies from other components in the system message that occurs when you uninstall a solution.
 ms.reviewer: matp
-ms.date: 07/26/2023
+ms.date: 04/17/2025
 author: nhelgren
 ms.author: nhelgren
-ms.custom: sap:Working with Solutions\Dependencies prevent a solution uninstall
+ms.custom: sap:Working with Solutions
 ---
 # "Solution cannot be deleted due to dependencies from other components" message when you uninstall a solution
 

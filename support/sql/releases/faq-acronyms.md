@@ -7,7 +7,7 @@ ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: v-six
 ---
 
-<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "aartigoyle" for triage before making the further changes to the screenshots.
 --->
 
 # Frequently asked questions, used terms and acronyms

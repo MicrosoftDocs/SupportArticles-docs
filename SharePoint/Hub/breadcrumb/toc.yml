@@ -1,0 +1,11 @@
+- name: Learn
+  tocHref: /
+  topicHref: /
+  items:
+  - name: SharePoint
+    tocHref: /sharepoint/
+    topicHref: /sharepoint/index
+    items:
+    - name: Troubleshooting
+      tocHref: /troubleshoot/sharepoint/
+      topicHref: /troubleshoot/sharepoint/index

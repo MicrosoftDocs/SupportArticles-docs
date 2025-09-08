@@ -3,7 +3,7 @@ title: There is no check transaction type setup
 description: Provides a solution to an error that occurs when you upload Safe Pay Transactions in Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # "There is no check transaction type setup. Upload Aborted" Error message when you upload Safe Pay Transactions in Microsoft Dynamics GP

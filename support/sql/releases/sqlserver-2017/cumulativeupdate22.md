@@ -2,6 +2,7 @@
 title: Cumulative update 22 for SQL Server 2017 (KB4577467)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 22 (KB4577467).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4577467, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows

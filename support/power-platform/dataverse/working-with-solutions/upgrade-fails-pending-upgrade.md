@@ -2,7 +2,7 @@
 title: Solution upgrade fails due to a previously pending upgrade
 description: Works around the solution upgrade failure due to a previously pending upgrade in Power Apps.
 ms.reviewer: jdaly
-ms.date: 10/10/2023
+ms.date: 04/17/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Update, upgrade and stage for upgrade of solutions

@@ -2,7 +2,7 @@
 title: Home pages and area pages features
 description: Provides the answers to some of the most frequently asked questions about home pages and area pages in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Frequently asked questions about the home pages and area pages features in Microsoft Dynamics GP

@@ -3,7 +3,7 @@ title: Cannot create a receipt for this order
 description: Provides a solution to an error that occurs when creating Manufacturing Order Receipts in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Manufacturing Series
 ---
 # "You can't create a receipt for this manufacturing order. Another user or process is editing it." message when creating Manufacturing Order Receipts in Microsoft Dynamics GP

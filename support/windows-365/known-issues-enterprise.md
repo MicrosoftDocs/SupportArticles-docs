@@ -2,10 +2,12 @@
 title: Known issues for Windows 365 Enterprise and Frontline
 description: Learn about known issues for Windows 365 Enterprise.
 manager: dcscontentpm
-ms.date: 01/20/2025
+ms.date: 05/23/2025
 ms.topic: troubleshooting
-ms.reviewer: ivivano, erikje
-ms.custom: get-started
+ms.reviewer: ivivano, erikje, scottduf
+ms.custom:
+- pcy:Onboarding issues
+- sap:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2
@@ -255,13 +257,29 @@ For newly provisioned Cloud PCs, verify that WebRTC is available. If it's not, y
 
 The following are issues for Windows 365 Frontline:
 
-### Users must wait for about 90 seconds after Reset
+### Users may not be able to access Frontline Cloud PCs in shared mode
 
-When a user performs the **Reset** action on a Frontline Cloud PC in shared mode, the **Connect** button is grayed out for around 90 seconds. During this time, users can't connect to another Frontline Cloud PC.
+When Frontline Cloud PCs in shared mode are assigned to an Entra ID Group with more than 10,000 members, some users might not receive access and might not see the Cloud PC cards in the Windows app.
 
-### Users can select Connect while they're connected to a Frontline Cloud PC in shared mode
+#### Solution
 
-When a user is connected to a Frontline Cloud PC, the connect button in the Windows App remains blue and clickable. If the user selects connect, a new window opens and connects. The previous window remains open with a new connection notification dialog.
+Reduce the Entra ID group membership to be fewer than 10,000 users.
+
+### Number of cloud PCs for Frontline Cloud PCs in shared mode cannot be decreased when all Cloud PC provisioning fails
+
+If provisioning fails due to an Autopilot Device Preparation Profile (DPP) (Preview) failure and results in all Cloud PCs showing no successfully provisioned devices, admins will not be able to decrease the number of Cloud PCs in the reprovision assignments option.
+
+#### Solution
+
+Perform a reprovisioning action in the provisioning policy.
+
+### Scheduled reprovisioning doesn't recover if Frontline licenses are removed or expire from a tenant and then are added back
+
+If Frontline Cloud PCs are provisioned in shared mode and then licenses expire or are removed from the tenant, the Cloud PCs will be deprovisioned until valid licenses are added. After the licenses are added back, the Cloud PCs will be provisioned according to the configurations defined in the provisioning policy. If you have configured a scheduled reprovisioning for a provisioning policy, the scheduled reprovisioning won't be reactivated. Manual reprovisioning action also fails.
+
+#### Solution
+
+To recover full functionality of manual and scheduled reprovisioning after license expiration, remove the provisioning policy assignment and then add it again.
 
 ## Next steps
 

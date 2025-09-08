@@ -5,7 +5,7 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, scottmca, luche
+ms.reviewer: kaushika, scottmca, meerak
 ms.custom:
 - sap:windows activation\windows activation issues
 - pcy:WinComm Devices Deploy

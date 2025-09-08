@@ -1,7 +1,7 @@
 ---
 title: Azure Batch task fails due to permission issues
 description: Provides causes and solutions for issues where an Azure Batch task fails due to permission issues.
-ms.date: 02/23/2024
+ms.date: 05/23/2025
 ms.reviewer: biny, v-weizhu
 ms.service: azure-batch
 ms.custom: sap:HPC Pack

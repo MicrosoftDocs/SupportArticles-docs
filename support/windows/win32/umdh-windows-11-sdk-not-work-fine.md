@@ -1,7 +1,7 @@
 ---
 title: The UMDH Tool Generates Warnings
 description: Works around an issue where umdh.exe in the Windows SDK for Windows 11, the Windows Driver Kit for Windows 11, and the standalone toolsets doesn't work fine.
-ms.date: 02/28/2025
+ms.date: 06/11/2025
 ms.reviewer: hirotoh, v-sidong
 ms.custom: sap:System Services Development
 ---

@@ -2,6 +2,7 @@
 title: Errors after you apply a cumulative update to a contained availability group
 description: Fixes the errors that occur after you apply a cumulative update to an instance of SQL Server that has a contained availability group.
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5027331
 ms.reviewer: matteot, dliao, sureshka, jaferebe, v-cuichen
 appliesto:

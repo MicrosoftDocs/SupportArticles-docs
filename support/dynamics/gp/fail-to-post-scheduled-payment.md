@@ -2,7 +2,7 @@
 title: Error when you post a scheduled payment in Receivables Management
 description: Provides a solution to an error that occurs when you post a scheduled payment in Receivables Management in Microsoft Dynamics GP.
 ms.topic: troubleshooting
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.reviewer: theley
 ms.custom: sap:Financial - Receivables Management
 ---

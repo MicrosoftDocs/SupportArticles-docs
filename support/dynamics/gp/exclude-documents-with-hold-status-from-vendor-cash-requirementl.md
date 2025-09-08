@@ -3,7 +3,7 @@ title: Exclude documents that have a status of Hold from the Vendor Cash Require
 description: Describes how to exclude documents that have a status of Hold from the Vendor Cash Requirements report.
 ms.topic: how-to
 ms.reviewer: theley, v-kennh, lmueller
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Payables Management
 ---
 # How to exclude documents that have a status of Hold from the "Vendor Cash Requirements" report by using Report Writer in Microsoft Dynamics GP

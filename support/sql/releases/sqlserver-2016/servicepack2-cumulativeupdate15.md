@@ -2,6 +2,7 @@
 title: Cumulative update 15 for SQL Server 2016 SP2 (KB4577775)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 SP2 cumulative update 15 (KB4577775).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4577775
 appliesto:
 - SQL Server 2016 Developer

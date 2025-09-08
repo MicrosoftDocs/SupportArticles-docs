@@ -5,6 +5,7 @@ ms.date: 10/23/2023
 ms.reviewer: asaftzuk, ilanak
 author: t-ronioded
 ms.author: ronihemed
+ms.custom: sap:Teams Dialer
 ---
 # A Teams dialer call from a contact, account, or lead record fails
 

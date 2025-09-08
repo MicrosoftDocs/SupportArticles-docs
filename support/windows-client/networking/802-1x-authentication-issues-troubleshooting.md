@@ -8,7 +8,7 @@ ms.collection: highpri
 ms.custom:
 - sap:network connectivity and file sharing\wireless (802.1x,bluetooth,miracast,mobile broadband)
 - pcy:WinComm Networking
-ms.reviewer: dougeby,aaroncz
+ms.reviewer: dougeby
 audience: itpro
 ---
 # Advanced troubleshooting 802.1X authentication

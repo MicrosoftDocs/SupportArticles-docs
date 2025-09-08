@@ -8,29 +8,29 @@ ms.collection: highpri
 ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
-ms.reviewer: dougeby,aaroncz
+ms.reviewer: dougeby
 audience: itpro
 ---
 # Windows 10 upgrade resolution procedures
 
 _Applies to:_ &nbsp; Windows 10
 
-> [!NOTE]  
+> [!NOTE]
 > This is a 200 level topic (moderate).
->  
+>
 > For IT professionals, check more information in [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors).
 
 This article provides some common causes and solutions that are associated with specific upgrade error codes. If a Windows 10 upgrade fails, you can write down the error code that is displayed, or find the error code in the Windows [Event Log](/windows/deployment/upgrade/windows-error-reporting) or in the Windows Setup [log files](/windows/deployment/upgrade/log-files) (ex: *setuperr.log*) and review the cause and solutions provided here. You should also try running the free [SetupDiag](/windows/deployment/upgrade/setupdiag) tool provided by Microsoft, which can automatically find the reason for an upgrade failure.
 
 ## 0xC1900101
 
-A frequently observed [result code](/windows/deployment/upgrade/upgrade-error-codes#result-codes) is 0xC1900101. This result code can be thrown at any stage of the upgrade process, with the exception of the downlevel phase. 0xC1900101 is a generic rollback code, and usually indicates that an incompatible driver is present. The incompatible driver can cause blue screens, system hangs, and unexpected reboots. Analysis of supplemental log files is often helpful, such as:  
+A frequently observed [result code](/windows/deployment/upgrade/upgrade-error-codes#result-codes) is 0xC1900101. This result code can be thrown at any stage of the upgrade process, with the exception of the downlevel phase. 0xC1900101 is a generic rollback code, and usually indicates that an incompatible driver is present. The incompatible driver can cause blue screens, system hangs, and unexpected reboots. Analysis of supplemental log files is often helpful, such as:
 
 - The minidump file: *$Windows.~bt\\Sources\\Rollback\\setupmem.dmp*
 - Event logs: *$Windows.~bt\\Sources\\Rollback\*.evtx*
 - The device install log: *$Windows.~bt\Sources\Rollback\setupapi\setupapi.dev.log*
 
-The device install log is helpful if rollback occurs during the sysprep operation (extend code 0x30018).  
+The device install log is helpful if rollback occurs during the sysprep operation (extend code 0x30018).
 
 To resolve a rollback that was caused by driver conflicts, try running setup using a minimal set of drivers and startup programs by performing a [clean boot](https://support.microsoft.com/kb/929135) before initiating the upgrade process.
 

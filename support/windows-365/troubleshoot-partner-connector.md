@@ -1,12 +1,13 @@
 ---
-# required metadata
 title: Troubleshoot partner connectors in Windows 365
 description: Provides troubleshooting information to the issues related to partner connectors in Windows 365.
 manager: dcscontentpm
 ms.date: 01/20/2025
 ms.topic: troubleshooting
 ms.reviewer: aradinger, erikje
-ms.custom: intune-azure, get-started
+ms.custom:
+- pcy:Partner Solutions for W365
+- sap:WinComm User Experience
 ms.collection:
 - M365-identity-device-management
 - tier2

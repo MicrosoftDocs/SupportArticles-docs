@@ -2,7 +2,7 @@
 title: Microsoft Management Reporter 2012 Cumulative Update 14 (CU14) is available
 description: Lists the fixes of cumulative update 14 for Management Report 2012.
 ms.reviewer: theley, gbyer
-ms.date: 03/20/2024
+ms.date: 04/17/2025
 ms.custom: sap:Financial - Management Reporter
 ---
 # Microsoft Management Reporter 2012 Cumulative Update 14 (CU14) is available

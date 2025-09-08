@@ -1,9 +1,9 @@
 ---
 title: Current node count isn't in the autoscaler min and max range
 description: Troubleshoot why the current node count isn't in the autoscaler minimum and maximum range when you resume an Azure Kubernetes Service cluster after a stop operation.
-ms.date: 11/14/2024
+ms.date: 03/25/2025
 editor: v-jsitser
-ms.reviewer: chiragpa, nickoman, albarqaw, v-leedennis
+ms.reviewer: chiragpa, nickoman, albarqaw, v-leedennis, wonkilee
 ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why the current node count isn't in the autoscaler "min" and "max" range so that I can successfully resume my Azure Kubernetes Service (AKS) cluster after a stop operation.

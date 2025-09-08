@@ -1,13 +1,13 @@
 ---
 title: Logging and data storage algorithms
 description: This article discusses how SQL Server logging and data storage algorithms extend data reliability.
-ms.date: 10/10/2022
+ms.date: 06/12/2025
 ms.custom: sap:File, Filegroup, Database Operations or Corruption
-ms.reviewer: rdorr, bobward
+ms.reviewer: rdorr, bobward, jopilov
 ---
 # Description of logging and data storage algorithms that extend data reliability in SQL Server
 
-_Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012, SQL Server 2008, SQL Server 2005  
+_Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 230785
 
 ## Summary
@@ -185,7 +185,7 @@ Microsoft has performed testing on several SCSI and IDE drives by using the `SQL
 
 For more information about the `SQLIOSim` utility, see the following article in the Microsoft Knowledge Base:
 
-[How to use the SQLIOSim utility to simulate SQL Server activity on a disk subsystem](https://support.microsoft.com/help/231619)
+[How to use the SQLIOSim utility to simulate SQL Server activity on a disk subsystem](../../tools/sqliosim-utility-simulate-activity-disk-subsystem.md)
 
 Many computer manufacturers order the drives by having the write cache disabled. However, testing shows that this may not always be the case. Therefore, always test completely.
 
@@ -266,5 +266,5 @@ COMMIT TRAN
 GO
 ```
 
-SQL Server requires that systems support **guaranteed delivery to stable media**, as described in the [SQL Server I/O Reliability Program Review Requirements](https://download.microsoft.com/download/f/1/e/f1ecc20c-85ee-4d73-baba-f87200e8dbc2/sql_server_io_reliability_program_review_requirements.pdf) download document. For more information about the input and output requirements for the SQL Server database engine, see
-[Microsoft SQL Server Database Engine Input/Output Requirements](https://support.microsoft.com/help/967576).
+SQL Server requires that systems support **guaranteed delivery to stable media**. For more detailed information, see
+[Microsoft SQL Server Database Engine Input/Output Requirements](./database-engine-input-output-requirements.md).
