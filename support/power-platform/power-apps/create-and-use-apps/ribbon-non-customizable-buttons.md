@@ -9,7 +9,15 @@ ms.custom: sap:Configuring model-driven app commands\Command is not shown or hid
 
 _Applies to:_ &nbsp; Power Apps  
 
-The **Show Chart**, **Create view**, **Show as**, and **Open Dashboards** buttons on grids in the Unified Interface aren't implemented by ribbon customizations. The buttons are hardcoded by grid control code and unfortunately aren't customizable. Therefore, they aren't visible in Ribbon Workbench.
+The following buttons in the Unified Interface aren't implemented by ribbon customizations, they are hardcoded by internal platform code and unfortunately aren't customizable. Therefore, they aren't visible in Ribbon Workbench.
+
+- **Create view**
+- **Help**
+- **See all records**
+- **Share**
+- **Show as**
+- **Show Chart**
+- **Open Dashboards**  
 
 > [!NOTE]
 > The button with ID `Mscrm.HomepageGrid.{!EntityLogicalName}.ChangeDataSetControlButton` is a button intended only for Web client interface that is now deprecated and this is intentionally disabled in the Unified Interface. Any attempts to modify this button is not supported.
