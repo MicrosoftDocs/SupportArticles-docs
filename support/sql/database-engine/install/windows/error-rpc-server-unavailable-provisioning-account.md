@@ -17,7 +17,7 @@ This article helps you troubleshoot an "RPC server is unavailable" error when yo
 
 During the service account provisioning phase of a SQL Server installation, the installation fails and generates an "RPC Server is unavailable" error message.
 
-The following example log entry shows a failure that occurs during a service account provisioning. In this example, the service account is a domain account that's named `CONTOSO\SQLSvcAcct`.
+The following example log entry shows a failure that occurs during a service account provisioning. In this example, the service account is a domain account named `CONTOSO\SQLSvcAcct`.
 
 ```output
 (05) 2024-01-19 15:00:42 Slp: Sco.User.LookupADEntry - Attempting to find user account CONTOSO\SQLSvcAcct
@@ -213,7 +213,7 @@ To determine whether the SQL Server setup process itself is the cause of failure
    Press any key to quit
    ```
 
-1. Look up the account name using the the **user** parameter:
+1. Look up the account name using the **user** parameter:
 
      ```bash
      adlookup CONTOSO/SQLSvcAcct user
