@@ -77,7 +77,7 @@ For more information, see [The system can't log you on with the following error:
 
 ### Eliminate the SQL Server setup process as the issue
 
-To determine whether the SQL Server setup process itself is the cause of failure, use the following steps to build and run a test application that reproduces the `RPC Server is unavailable` error. 
+To determine whether the SQL Server setup process itself is the cause of failure, use the following steps to build and run a test application that reproduces the `RPC Server is unavailable` error.
 
 #### Step 1: Build the ADLookup application
 
@@ -104,9 +104,9 @@ To determine whether the SQL Server setup process itself is the cause of failure
    dotnet new console -n ADLookup
    cd ADLookup
    ```
-   
-  > [!NOTE]
-  > This step creates a basic console app structure.
+
+   > [!NOTE]
+   > This step creates a basic console app structure.
 
 1. Use a text editor to replace the contents of `Program.cs` with the following code:
 
@@ -184,8 +184,8 @@ To determine whether the SQL Server setup process itself is the cause of failure
    dotnet build --configuration Release
    ```
 
-  > [!NOTE]
-  > This step compiles the code and generates an `ADLookup.exe` in the `bin\Release\net<VersionNumber>\` folder.
+   > [!NOTE]
+   > This step compiles the code and generates an `ADLookup.exe` in the `bin\Release\net<VersionNumber>\` folder.
 
 #### Step 2: Run the ADLookup application
 
@@ -211,7 +211,7 @@ To determine whether the SQL Server setup process itself is the cause of failure
    Press any key to quit
    ```
 
-1. Look up the account name that has the **user** parameter:
+1. Look up the account name using the the **user** parameter:
 
      ```bash
      adlookup CONTOSO/SQLSvcAcct user
@@ -219,7 +219,7 @@ To determine whether the SQL Server setup process itself is the cause of failure
 
     You must use a forward slash, not a backslash, to separate the domain and account name.
 
-    For a service account that's experiencing issues, the output should resemble the following example:
+    For a service account that's experiencing RPC server issues, the output should resemble the following example:
 
      ```output
      Checking CONTOSO/SQLSvcAcct for type user
