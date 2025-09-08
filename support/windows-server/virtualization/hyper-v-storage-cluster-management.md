@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot PowerShell, Hyper-V, Storage, and Cluster Management Issues
-description: Provides a comprehensive guide to troubleshooting common issues encountered in managing Hyper-V, Storage Spaces Direct (S2D), Failover Clustering, and PowerShell tasks in Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025, and Windows 10 Enterprise/Education.
-ms.date: 09/03/2025
+description: Provides a comprehensive guide to troubleshooting common issues in managing Hyper-V, Storage Spaces Direct (S2D), Failover Clustering, and PowerShell tasks in Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025, and Windows 10 Enterprise/Education.
+ms.date: 09/08/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -87,10 +87,10 @@ Follow these step-by-step solutions to address the described issues.
 
 ## Resolution for PowerShell cmdlet and reporting issues
 
-1. Validate cmdlet syntax
+1. Validate cmdlet syntax:
 
    - Always verify PowerShell cmdlet syntax using official Microsoft documentation.
-   - Example for disk and storage usage:
+   - Examples for disk and storage usage:
 
      On Hyper-V host:
 
@@ -110,7 +110,7 @@ Follow these step-by-step solutions to address the described issues.
      Get-VM | Select-Object -Property * | Export-Csv -Path "C:\VMInventory.csv" -NoTypeInformation
      ```
 
-2. Enable VM processor compatibility
+2. Enable VM processor compatibility:
 
     ```powershell
     Set-VMProcessor -VMName <VMName> -CompatibilityForMigrationEnabled $true
@@ -118,12 +118,12 @@ Follow these step-by-step solutions to address the described issues.
     Get-VMProcessor -VMName <VMName> # Confirm settings
     ```
 
-3. Promiscuous mode/Monitor mode
+3. Promiscuous mode/Monitor mode:
 
    - Use correct property names (for example, AllowPacketDirect instead of MonitorMode for Hyper-V vSwitches).
    - Cross-check third-party documentation with official Microsoft sources.
 
-4. Azure PowerShell authentication
+4. Azure PowerShell authentication:
 
     ```powershell
     Install-Module Az -Scope CurrentUser
@@ -132,19 +132,19 @@ Follow these step-by-step solutions to address the described issues.
     Set-AzContext -Subscription "<subscription-name-or-id>"
     ```
 
-5. Resolve VMware PowerCLI errors
+5. Resolve VMware PowerCLI errors.
 
    Ensure PowerCLI is installed from the official source and check VMware support for missing assembly issues.
 
 ## Resolution for cluster and permission issues
 
-1. Resolve access denied errors
+1. Resolve access denied errors:
 
     - Use a domain service account with appropriate permissions for cluster management scripts.
     - If using SYSTEM, toggle permissions in Failover Cluster Manager:
-        - Remove and readd SYSTEM account with "Allow" permissions.
+        - Remove and re-add SYSTEM account with "Allow" permissions.
         - Restart cluster-related services.
-2. Fix storage cmdlet failures
+2. Fix storage cmdlet failures:
 
     - Reboot all cluster nodes to reset states and clear inconsistencies.
     - Collect diagnostic logs:
@@ -155,7 +155,7 @@ Follow these step-by-step solutions to address the described issues.
 
 ## Resolution for storage, file system, and VHD issues
 
-1. VHD corruption
+1. VHD corruption:
 
    - Install the June 2025 cumulative update to fix the **vhdmp.sys** bug.
    - Disable scheduled `Optimize-VHD` tasks until updates are applied.
@@ -165,7 +165,7 @@ Follow these step-by-step solutions to address the described issues.
      Get-HotFix | Sort-Object InstalledOn -Descending
      ```
 
-2. App-V Package File Issues
+2. App-V Package File Issues:
 
    - Analyze file attributes:
 
@@ -175,9 +175,7 @@ Follow these step-by-step solutions to address the described issues.
 
    - Disable third-party software causing interference.
 
-3. Resolve missing VSS writers
-
-   Restart the VSS service:
+3. Resolve missing VSS writers by restarting the VSS service:
 
    ```powershell
    Restart-Service -Name VSS
@@ -185,17 +183,17 @@ Follow these step-by-step solutions to address the described issues.
 
 ## Resolution for general configuration/registry/high availability issues
 
-1. Add registry keys
+1. Add registry keys:
 
    ```powershell
    Set-ItemProperty -Path "HKLM:\Software\<Path>" -Name "<Key>" -Value "<Value>"
    ```
 
-2. Handle cluster nodes with different CPUs
+2. Handle cluster nodes with different CPUs.
 
    Enable CPU compatibility for VMs during migration: VM **Settings** > **Processor** > **Migrate to a physical computer with a different processor version**.
 
-3. Avoid advanced configuration risks
+3. Avoid advanced configuration risks:
 
    - Test advanced NIC properties (such as SR-IOV) thoroughly before deployment.
    - Use modern browsers instead of disabling Internet Explorer Enhanced Security.
