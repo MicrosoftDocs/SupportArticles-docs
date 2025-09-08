@@ -232,3 +232,8 @@ To determine whether the SQL Server setup process itself is the cause of failure
 ## More information
 
 To troubleshoot underlying Windows issues that cause SQL Server Setup to fail, see [The system can't log you on with the following error: The RPC server is unavailable](~/windows-server/user-profiles-and-logon/not-log-on-error-rpc-server-unavailable.md#resolution).
+
+## Related content
+
+- [SQL Server installation errors](/troubleshoot/sql/database-engine/install/windows/error-install-sql-server)
+- [Remove a partial installation of SQL Server](/troubleshoot/sql/database-engine/install/windows/remove-partial-installation)
