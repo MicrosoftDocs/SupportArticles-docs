@@ -2,10 +2,10 @@
 title: The Source Document Lines Cannot Be Finalized Until the Status is Confirmed
 description: Provides a resolution for the Source document lines cannot be finalized error in Microsoft Dynamics 365.
 author: Sumit
-ms.date: 09/05/2025
+ms.date: 09/08/2025
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
-ms.reviewer: kamaybac
+ms.reviewer: kamaybac, shriramsiv
 ms.search.region: Global
 ms.author: sugaur
 ms.search.validFrom: 2021-05-31
