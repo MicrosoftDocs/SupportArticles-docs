@@ -8,48 +8,25 @@ items:
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
-
-
-    - name: Known issues - Custom kubelet configuration on Windows
-      href: create-upgrade-delete/known-issues-custom-kubelet-configuration.md
-    - name: K8SAPIServerConnFailVMExtensionError error (51)
-      href: create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md
-    - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
-      href: create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md
-    - name: LinkedAuthorizationFailed error
-      href: create-upgrade-delete/error-code-linkedauthorizationfailed.md
     - name: MissingSubscriptionRegistration error
       href: create-upgrade-delete/error-code-missingsubscriptionregistration.md
-    - name: OperationNotAllowed or PublicIPCountLimitReached error
-      href: create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md
-    - name: AKSOperationPreempted error
-      href: create-upgrade-delete/error-code-operationpreempted.md
-    - name: OutboundConnFailVMExtensionError error (50)
-      href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
-    - name: RequestDisallowedByPolicy error
-      href: create-upgrade-delete/error-code-requestdisallowedbypolicy.md
-    - name: ServicePrincipalValidationClientError error
-      href: create-upgrade-delete/error-code-serviceprincipalvalidationclienterror.md
-    - name: SubscriptionRequestsThrottled error (429)
-      href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
-    - name: Throttled error (429)
-      href: create-upgrade-delete/error-code-aksrequeststhrottled.md
-    - name: Troubleshoot the AKSCapacityError error code
-      href: create-upgrade-delete/akscapacityerror.md
-    - name: VMExtensionProvisioningTimeout error
-      href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
-    - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
-      href: create-upgrade-delete/windows-cse-error-check-api-server-connectivity.md
-    - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
-      href: create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed.md
-    - name: QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade
-      href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
+
+
+
+
+
+
+
+
+
+
+ 
+
+
   - name: Upgrade operations
     items:
-    - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
-      href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
-    - name: DnsServiceIpOutOfServiceCidr error
-      href: create-upgrade-delete/error-code-dnsserviceIpoutofservicecidr.md
+
+
     - name: NodePoolMcVersionIncompatible error
       href: create-upgrade-delete/nodepoolmcversionincompatible-error.md
     - name: PublicIPCountLimitReached error
@@ -370,6 +347,9 @@ items:
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
       href: extensions/changes-in-kubernetes-event-driven-autoscaling-add-on-214-215.md
 
+
+
+
 - name: Troubleshoot error codes
   items:
   - name: VMExtension error codes
@@ -378,10 +358,16 @@ items:
       href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
     - name: ERR_VHD_FILE_NOT_FOUND error (65)
       href: create-upgrade-delete/error-code-vhdfilenotfound.md
+    - name: K8SAPIServerConnFailVMExtensionError error (51)
+      href: create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md
+    - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
+      href: create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md
     - name: OrasPullNetworkTimeoutVMExtensionError
       href: error-codes/vmextensionerror-oraspullnetworktimeout.md
     - name: OrasPullUnauthorizedVMExtensionError
       href: error-codes/vmextensionerror-oraspullunauthorized.md
+    - name: OutboundConnFailVMExtensionError error (50)
+      href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
     - name: VMExtensionError_CniDownloadTimeout error
       href: error-codes/vmextensionerror-cnidownloadtimeout.md
     - name: VMExtensionError_OutboundConnFail error
@@ -394,8 +380,12 @@ items:
       href: error-codes/vmextensionerror-vhdfilenotfound.md
     - name: VMExtensionError_ProvisioningTimeout error
       href: error-codes/vmextensionerror-provisioningtimeout.md
+    - name: VMExtensionProvisioningTimeout error
+      href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
     - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error
       href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
+    - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
+      href: create-upgrade-delete/windows-cse-error-check-api-server-connectivity.md
   - name: General
     items:  
       - name: InvalidParameter error
@@ -410,14 +400,20 @@ items:
         href: error-codes/missingsubscriptionregistration-error.md
   - name: Authorization and permission
     items:  
+      - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
+        href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
       - name: BadRequest or InvalidClientSecret error
         href: error-codes/bad-request-or-invalid-client-secret-error.md
       - name: CustomPrivateDNSZoneMissingPermissionError error
         href: error-codes/customprivatednszonemissingpermissions-error.md
       - name: LinkedAuthorizationFailed error
+        href: create-upgrade-delete/error-code-linkedauthorizationfailed.md
+      - name: LinkedAuthorizationFailed error
         href: error-codes/linkedauthorizationfailed-error.md
       - name: ServicePrincipalValidationClientError error
         href: error-codes/serviceprincipalvalidationclienterror-error.md
+      - name: ServicePrincipalValidationClientError error
+        href: create-upgrade-delete/error-code-serviceprincipalvalidationclienterror.md
   - name: Quota and capacity
     items:
       - name: AvailabilityZoneNotSupported error
@@ -426,12 +422,20 @@ items:
         href: error-codes/akscapacityheavyusage-error.md
       - name: OperationNotAllowed or PublicIPCountLimitReached error
         href: error-codes/operationnotallowed-publicipcountlimitreached-error.md
+      - name: OperationNotAllowed or PublicIPCountLimitReached error
+        href: create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md
       - name: PublicIPCountLimitReached error
         href: error-codes/publicipcountlimitreached-error.md
       - name: QuotaExceeded or InsufficientVCPUQuota error
         href: error-codes/quota-exceeded-error.md
+      - name: QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade
+        href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
+      - name: Troubleshoot the AKSCapacityError error code
+        href: create-upgrade-delete/akscapacityerror.md
       - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
         href: error-codes/zonalallocation-allocationfailed-error.md
+      - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
+        href: create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed.md
   - name: Networking
     items:
       - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
@@ -440,6 +444,8 @@ items:
         href: error-codes/createorupdatevirtualnetworklinkfailed-error.md
       - name: DnsServiceIpOutOfServiceCidr error
         href: error-codes/dnsserviceipoutofservicecidr-error.md
+      - name: DnsServiceIpOutOfServiceCidr error
+        href: create-upgrade-delete/error-code-dnsserviceIpoutofservicecidr.md
       - name: InUseRouteTableCannotBeDeleted error
         href: error-codes/inuseroutetablecannotbedeleted-error.md
       - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
@@ -462,18 +468,28 @@ items:
     items:
       - name: SubscriptionRequestsThrottled error
         href: error-codes/subscriptionrequeststhrottled.md
+      - name: SubscriptionRequestsThrottled error (429)
+        href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
+      - name: Throttled error (429)
+        href: create-upgrade-delete/error-code-aksrequeststhrottled.md
       - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error
         href: error-codes/toomanyrequestsreceived-error.md
       - name: Throttled error
         href: error-codes/throttled-error.md
   - name: Windows
     items:
+      - name: Known issues - Custom kubelet configuration on Windows
+        href: create-upgrade-delete/known-issues-custom-kubelet-configuration.md
   - name: Policy
     items:
       - name: RequestDisallowedByPolicy error
         href: error-codes/requestdisallowedbypolicy-error.md
+      - name: RequestDisallowedByPolicy error
+        href: create-upgrade-delete/error-code-requestdisallowedbypolicy.md
   - name: Operation
     items:
+      - name: AKSOperationPreempted error
+        href: create-upgrade-delete/error-code-operationpreempted.md
       - name: AKSOperationPreempted error
         href: error-codes/aksoperationpreempted-error.md
   - name: Scaling
