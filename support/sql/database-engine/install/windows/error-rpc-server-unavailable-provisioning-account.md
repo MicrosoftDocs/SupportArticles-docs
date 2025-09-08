@@ -75,6 +75,8 @@ The cause of this error is typically an underlying Windows issue, such as:
 
 For more information, see [The system can't log you on with the following error: The RPC server is unavailable](~/windows-server/user-profiles-and-logon/not-log-on-error-rpc-server-unavailable.md#cause).
 
+## Solution
+
 ### Eliminate the SQL Server setup process as the issue
 
 To determine whether the SQL Server setup process itself is the cause of failure, use the following steps to build and run a test application that reproduces the `RPC Server is unavailable` error.
@@ -229,7 +231,7 @@ To determine whether the SQL Server setup process itself is the cause of failure
      Press any key to quit
      ```
 
-## More information
+### Resolve underlying Windows issues
 
 To troubleshoot underlying Windows issues that cause SQL Server Setup to fail, see [The system can't log you on with the following error: The RPC server is unavailable](~/windows-server/user-profiles-and-logon/not-log-on-error-rpc-server-unavailable.md#resolution).
 
