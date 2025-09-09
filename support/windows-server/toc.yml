@@ -2730,6 +2730,8 @@ items:
       href: ./virtualization/hyper-v-virtual-machine-backup-checkpoint-storage.md
   - name: Configuration of virtual machine settings
     items:
+    - name: Can't access Hyper-V virtual machines via VMConnect
+      href: ./virtualization/cannot-access-hyper-v-virtual-machine-connect.md
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
       href: ./virtualization/copy-paste-not-work-hyper-v-vm-vmconnect-enhanced-session-mode.md
     - name: Hyper-V limits the maximum number of processors
@@ -2778,6 +2780,8 @@ items:
       href: ./virtualization/upgrade-computers-hyper-v-role.md
     - name: Windows Server 2019 Hyper-V host minroot behavior
       href: ./virtualization/windows-server-hyper-v-host-minroot-behaviors.md
+    - name: YubiKey USB device doesn't appear in a Hyper-V virtual machine
+      href: ./virtualization/usb-device-hyper-v-virtual-machine.md
   - name: Integration components
     items:
     - name: Degraded integration services message for non-Windows guests
