@@ -1222,6 +1222,8 @@ items:
       href: ./licensing-and-activation/change-volume-licensing-product-key.md
     - name: How to rebuild the Tokens.dat file
       href: ./licensing-and-activation/rebuild-tokens-dotdat-file.md
+    - name: Local policy of this system does not permit you to logon interactively
+      href: ./licensing-and-activation/remote-local-policy-not-permit-logon.md
     - name: Specified database is not a valid VAMT database error
       href: ./licensing-and-activation/specified-database-not-valid-vamt-error.md
     - name: Troubleshoot ADBA clients that don't activate
@@ -1628,6 +1630,8 @@ items:
       href: ./networking/configure-proxy-server-settings.md
     - name: Configure SNMP Service
       href: ./networking/configure-snmp-service.md
+    - name: Default MTU sizes for different network topologies
+      href: ./networking/default-maximum-transfer-unit-network-topologies.md
     - name: DirectAccess clients unable to connect when a static proxy is configured
       href: ./networking/directaccess-clients-unable-connect-static-proxy-configured.md
     - name: Direct host SMB over TCP/IP
@@ -1644,6 +1648,8 @@ items:
       href: ./networking/0x2afc-0x274d-error-directaccess-clients-connect-ip-https.md
     - name: Error 10013 when binding excluded port again
       href: ./networking/error-10013-wsaeacces-is-returned.md
+    - name: Error message when you open the properties of a network connection
+      href: ./networking/network-connection-unexpected-error.md      
     - name: Error message when you set an IP address
       href: ./networking/error-message-when-you-set-ip-address.md
     - name: Event 1500 when SNMP is enabled
@@ -1678,6 +1684,8 @@ items:
       href: ./networking/ip-default-gateway-settings-assigned-incorrectly.md
     - name: Multiple default gateways cause connectivity problems
       href: ./networking/connectivity-issues-multiple-default-gateways.md
+    - name: Modify the TCP/IP maximum retransmission time-out
+      href: ./networking/modify-tcp-ip-maximum-retransmission-time-out.md
     - name: Net Commands Operating Systems
       href: ./networking/net-commands-on-operating-systems.md
     - name: OS compatibility with DNSSEC enabled root servers
@@ -1694,6 +1702,8 @@ items:
       href: ./networking/receive-window-auto-tuning-for-http.md
     - name: Reserve a range of ephemeral ports
       href: ./networking/reserve-a-range-of-ephemeral-ports.md
+    - name: Reset TCP/IP by using the NetShell utility
+      href: ./networking/reset-tcp-ip-net-shell.md
     - name: Service overview and network port requirements
       href: ./networking/service-overview-and-network-port-requirements.md
     - name: Slow performance occurs when you copy data to a TCP server
@@ -1716,12 +1726,16 @@ items:
       href: ./networking/default-dynamic-port-range-tcpip-chang.md
     - name: Troubleshoot Web Application Proxy
       href: ./networking/troubleshoot-web-application-proxy.md
+    - name: Use TRACERT to troubleshoot TCP/IP problems
+      href: ./networking/trace-route-troubleshoot-tcp-ip-problems.md
     - name: Use WHOIS to research Internet domains
       href: ./networking/research-internet-domains-with-whois.md
     - name: Using the PortQry command-line tool
       href: ./networking/portqry-command-line-port-scanner-v2.md
     - name: Virtual machines lose network connectivity
       href: ./networking/vm-lose-network-connectivity-broadcom.md
+    - name: Windows activation or validation fails with error code 0x8004FE33
+      href: ./networking/windows-activation-validation-fails.md
     - name: WSAEMSGSIZE - Error 10040 in Winsock 2.0
       href: ./networking/wsaemsgsize-error-10040-in-winsock-2.md
   - name: Webwindows-client and WebDAV
@@ -1786,6 +1800,8 @@ items:
     items:
     - name: 'Troubleshooting guidance: Application or service crashing behavior'
       href: ./performance/troubleshoot-application-service-crashing-behavior.md
+    - name: 'Troubleshooting guidance: Application or service memory leaks'
+      href: ./performance/troubleshoot-application-service-memory-leaks.md
     - name: Cannot set page files on a partition larger than 2 terabytes
       href: ./performance/cannot-set-page-files-on-partition-larger-than-2-tb.md
     - name: Compatibility for 32-bit programs on 64-bit versions of Windows
@@ -2210,6 +2226,8 @@ items:
       href: ./remote/no-connected-icon-in-notification-area.md
     - name: Remote Desktop tab in RDWEB is missing from Edge
       href: ./remote/edge-not-work-run-rdweb-require-activex-controls.md
+    - name: Remote Desktop Web Access troubleshooting
+      href: ./remote/remote-desktop-web-access-troubleshooting.yml
   - name: Redirection (not printer)
     items:
     - name: Caps Lock status change isn't synced to client computer
@@ -2642,6 +2660,8 @@ items:
     href: ./user-profiles-and-logon/userprofiles-and-logon-overview.md
   - name: Folder redirection
     items:
+    - name: Event ID 1530 may be logged in the application log
+      href: ./user-profiles-and-logon/event-1530-application-log.md
     - name: Fail to set up Folder Redirection with Group Policy
       href: ./user-profiles-and-logon/event-101-1000-with-folder-redirection.md
     - name: Folder Redirection fails with ERROR_SEM_TIMEOUT
@@ -2706,8 +2726,12 @@ items:
       href: ./virtualization/back-up-restore-hyper-v-vm-bmr-data-backup.md
     - name: Back up virtual machines from parent partition
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
+    - name: Troubleshoot Hyper-V virtual machine backup, checkpoint, and storage failures
+      href: ./virtualization/hyper-v-virtual-machine-backup-checkpoint-storage.md
   - name: Configuration of virtual machine settings
     items:
+    - name: Can't access Hyper-V virtual machines via VMConnect
+      href: ./virtualization/cannot-access-hyper-v-virtual-machine-connect.md
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
       href: ./virtualization/copy-paste-not-work-hyper-v-vm-vmconnect-enhanced-session-mode.md
     - name: Hyper-V limits the maximum number of processors
@@ -2716,6 +2740,10 @@ items:
     items:
     - name: API call of performance counters is delayed
       href: ./virtualization/api-call-performance-counters-delay-container.md
+  - name: GPU passthrough
+    items:
+    - name: "Troubleshooting Guidance: Hyper-V GPU assignment, partitioning, and passthrough"
+      href: ./virtualization/troubleshoot-hyper-v-gpu-assignment-partitioning-passthrough-issues.md
   - name: High availability virtual machines
     items:
     - name: Can't change the ConfigStoreRootPath value of a Hyper-V cluster
@@ -2726,10 +2754,16 @@ items:
     items:
     - name: Feature and performance optimization of HVR
       href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
+    - name: Hyper-V Replica troubleshooting guide
+      href: ./virtualization/hyper-v-replica-troubleshooting-guide.md
+    - name: Set Up HVR between Windows Server 2016 and Windows Server 2022
+      href: ./virtualization/set-up-hyper-v-replica-between-windows-server-2016-and-windows-server-2022.md
   - name: Installation and configuration of Hyper-V
     items:
     - name: Antivirus exclusions for Hyper-V hosts
       href: ./virtualization/antivirus-exclusions-for-hyper-v-hosts.md
+    - name: Block users from running Hyper-V and VMware virtual machines on workstation-class computers
+      href: ./virtualization/block-users-from-running-virtualization-features-on-specific-computers.md
     - name: Issues when starting VM or installing Hyper-V
       href: ./virtualization/bios-update-for-hyper-v.md
     - name: Run programs on non-Microsoft hardware virtualization software
@@ -2740,16 +2774,24 @@ items:
       href: ./virtualization/support-and-installation-instructions-for-amd-epyc-9004-series-server-processors.md
     - name: Support Policy for NIC Teaming with Hyper-V
       href: ./virtualization/support-policy-nic-teaming.md
+    - name: Troubleshoot Hyper-V installation, configuration, and operational failures
+      href: ./virtualization/hyper-v-installation-configuration-operational-failure.md
     - name: Upgrade computers with Hyper-V role installed
       href: ./virtualization/upgrade-computers-hyper-v-role.md
     - name: Windows Server 2019 Hyper-V host minroot behavior
       href: ./virtualization/windows-server-hyper-v-host-minroot-behaviors.md
+    - name: YubiKey USB device doesn't appear in a Hyper-V virtual machine
+      href: ./virtualization/usb-device-hyper-v-virtual-machine.md
   - name: Integration components
     items:
     - name: Degraded integration services message for non-Windows guests
       href: ./virtualization/degraded-integration-services-message.md
     - name: Hyper-V Time Synchronization doesn't adjust the VM system clock
       href: ./virtualization/virtual-machine-time-not-synced.md
+    - name: Hyper-V virtual machine input, migration, and device integration issues
+      href: ./virtualization/hyper-v-virtual-machine-input-migration-integration.md
+    - name: Troubleshoot Linux virtual machine issues on Hyper-V
+      href: ./virtualization/linux-virtual-machine-issue-hyper-v.md  
     - name: Unknown devices in Device manager
       href: ./virtualization/unknown-device-vmbus-virtual-machine.md
     - name: Uptime value of Hyper-V Management console changes to the resume time
@@ -2762,12 +2804,22 @@ items:
     items:
     - name: 'Troubleshooting guidance: Live Migration'
       href: ./virtualization/troubleshoot-live-migration-guidance.md
+    - name: 'Troubleshooting guide: Hyper-V virtual machine live migration'
+      href: ./virtualization/hyper-v-virtual-machine-live-migration.md
     - name: Can't migrate a virtual machine from one host to another
       href: ./virtualization/unable-migrate-virtual-machine-processor-not-compatible-host.md
     - name: Starting or live migrating Hyper-V VMs fails
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
     - name: Troubleshoot live migration issues
       href: ./virtualization/troubleshoot-live-migration-issues.md
+  - name: PowerShell cmdlets
+    items:
+    - name: Troubleshoot PowerShell, Hyper-V, storage, and cluster management issues
+      href: ./virtualization/hyper-v-storage-cluster-management.md
+  - name: Remote administration of the Hyper-V role
+    items:
+    - name: Troubleshoot Hyper-V cluster connectivity, management, and configuration failures
+      href: ./virtualization/hyper-v-cluster-connectivity-management-configuration.md
   - name: Shielded VMs
     items:
     - name: Troubleshoot a guarded fabric
@@ -2780,6 +2832,8 @@ items:
       href: ./virtualization/troubleshoot-guarded-fabric-hgs.md
     - name: Troubleshoot using the Guarded Fabric Diagnostic Tool
       href: ./virtualization/troubleshoot-guarded-fabric-diagnostics.md
+    - name: Troubleshoot vTPM, shielded VM, and Host Guardian Service issues
+      href: ./virtualization/virtual-shielded-host-guardian-service.md
   - name: Snapshots, checkpoints, and differencing disks
     items:
     - name: Can't delete a recovery checkpoint for a VM in DPM
@@ -2790,6 +2844,8 @@ items:
     items:
     - name: Can't add a second Fibre Channel adapter
       href: ./virtualization/cannot-add-second-fibre-channel-adapter-hyperv.md
+    - name: "Can't connect to Hyper-V shared storage on Windows Server 2016"
+      href: ./virtualization/cant-connect-to-hyper-v-shared-storage-on-windows-server-2016.md
     - name: Error message after you put the page file on another drive other than the drive C
       href: ./virtualization/error-message-page-file-another-drive-guest-operating-system.md
     - name: FCoE IO failures on Hyper-V guests
@@ -2810,10 +2866,14 @@ items:
     items:
     - name: Get-VMNetworkAdapter command doesn't report IP addresses
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
+    - name: Troubleshoot Hyper-V virtual machine start, state, and access failures
+      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
-    - name: virtual machine shutdown actions don't run
+    - name: Virtual machine shutdown actions don't run
       href: ./virtualization/vm-shutdown-actions-not-run.md
+    - name: Windows 11 virtual machine doesn't start after you migrate it from VMware to Hyper-V
+      href: ./virtualization/windows-11-vm-wont-start-after-migrating-from-vmware-to-hyper-v.md
   - name: Virtual machine will not boot
     items:
     - name: 0x8000FFFF error when you start VM
@@ -3128,12 +3188,16 @@ items:
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
     - name: Troubleshoot Windows Update error 0x80070490
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
+    - name: Troubleshoot "Shutdown in Progress" Windows error 0x8007045b
+      href: installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md    
     - name: Troubleshoot Windows Update error 0x8024002E
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
       href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
-  - name: Windows Update for Business Reports
-    items:
+    - name: Troubleshoot Windows Installation Error 0x800f0831
+      href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
+    - name: Windows Update for Business Reports
+      items:
     - name: Initial service configuration and Onboarding
       items:
       - name: 'Troubleshooting guidance: Windows Update for Business reports'

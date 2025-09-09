@@ -74,6 +74,38 @@
           "**/*.md",
           "**/**.yml"
         ],
+        "src": "legacy-outlook-for-mac",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "new-outlook-for-mac",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
         "src": "OutlookExperts",
         "dest": ".",
         "exclude": [
@@ -109,6 +141,7 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/troubleshoot/outlook/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
       "recommendations": true,
       "feedback_system": "Standard",
       "hideEdit": true,

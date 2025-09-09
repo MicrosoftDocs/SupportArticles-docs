@@ -6,7 +6,7 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: v-six, genli, christys, btalb, v-six
+ms.reviewer: v-six, jarrettr, aartigoyle, btalb, v-six
 ms.custom: 
   - sap:Mail Flow\Need help configuring Transport High Availability
   - Exchange Server

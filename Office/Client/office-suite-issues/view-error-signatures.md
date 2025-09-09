@@ -1,13 +1,13 @@
 ---
 title: View error signatures if Office programs experience a serious error and quits
 description: Explains how to view the error signatures when an Office program experiences a serious error and quits.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Reliability

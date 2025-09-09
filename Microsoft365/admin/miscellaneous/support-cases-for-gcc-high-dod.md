@@ -1,7 +1,7 @@
 ---
 title: Open Support cases for GCC High and DoD
 description: Describes that how to open Support cases for GCC High and DoD.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Microsoft 365
 ms.date: 10/20/2023

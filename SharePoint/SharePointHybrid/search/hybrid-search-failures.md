@@ -1,8 +1,8 @@
 ---
 title: Hybrid search fails to crawl or return results
 description: Hybrid search fails to crawl or return results. Or, it returns the error An existing connection was forcibly closed.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 search.appverid: 
   - MET150

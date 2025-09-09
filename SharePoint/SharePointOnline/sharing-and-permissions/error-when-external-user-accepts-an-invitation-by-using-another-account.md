@@ -1,13 +1,13 @@
 ---
 title: Error when a guest user accepts a SharePoint Online invitation by using another account
 description: Describes an issue in which you receive an error message when a guest user accepts a SharePoint Online invitation by using another account.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Sharing\Sharing with external
   - CSSTroubleshoot

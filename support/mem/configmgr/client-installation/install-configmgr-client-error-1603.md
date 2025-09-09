@@ -2,7 +2,7 @@
 title: Error 1603 installing Configuration Manager client
 description: Describes an issue in which installation of Configuration Manager client current branch version 1602 to 1702 or LSTB version 1606 fails on Windows Server 2008 SP2 clients.
 ms.date: 02/11/2025
-ms.reviewer: kaushika, cmkbreview, yohuang, delhan
+ms.reviewer: kaushika, cmkbreview, yohuang, kaushika
 ms.custom: sap:Client Installation, Registration and Assignment\Client Installation
 ---
 # Installation of Configuration Manager client version 1602 to 1710 or long-term servicing branch (LSTB) version 1606 fails in Windows Server 2008 SP2

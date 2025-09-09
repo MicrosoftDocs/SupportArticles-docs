@@ -1,7 +1,0 @@
-- name: Viva Connections troubleshooting
-  href: viva-connections-welcome.yml
-  items:
-    - name: Administration
-      items:
-        - name: Can't find the app in the Teams admin center
-          href: cant-find-app-in-teams-admin-center.md  

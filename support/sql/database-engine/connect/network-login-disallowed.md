@@ -2,7 +2,7 @@
 title: Problem with the user account's access to the network login
 description: This article provides the resolution steps when users have insufficient permissions to log in to a networked system.
 ms.date: 04/17/2024
-ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
+ms.reviewer: jopilov, aartigoyle, prmadhes, v-jayaramanp
 ms.custom: sap:Database Connectivity and Authentication
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: Set the Default Font for Office Applications
 description: Provides detailed steps for administrators to set the default font for Office applications, such as Word, Excel, and PowerPoint.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

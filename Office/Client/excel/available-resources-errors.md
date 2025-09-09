@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot available resources errors in Excel
 description: Provides methods to resolve memory errors in Microsoft Excel.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.custom:
   - Reliability
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Excel for Microsoft 365
   - Excel 2019

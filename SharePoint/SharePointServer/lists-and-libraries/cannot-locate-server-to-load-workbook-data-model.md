@@ -1,8 +1,8 @@
 ---
 title: Can't refresh or filter PivotTable in SharePoint
 description: Provides a workaround for an issue in which you receive an error message from a SharePoint site. This issue occurs when you refresh a PivotTable in a workbook that's created in Excel 2013.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

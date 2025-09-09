@@ -1,8 +1,8 @@
 ---
 title: Define relationships between tables in an Access database
 description: Describes table relationships and how to define relationships in a Microsoft Access database.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

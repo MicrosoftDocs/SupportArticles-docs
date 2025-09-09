@@ -1,8 +1,8 @@
 ---
 title: Outlook calendar scan with Microsoft Support and Recovery Assistant
 description: Describes available switches and conditions when using the Enterprise version of Microsoft Support and Recovery Assistant to scan Outlook calendar.
-author: helenclu    
-ms.author: luche
+author: Cloud-Writer    
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -8,7 +8,7 @@ ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---
 
-# VM startup is stuck on bug check 0x0000001A - IRQL_NOT_LESS_OR_EQUAL
+# Azure Windows VM displays bug check 0x0000001A - IRQL_NOT_LESS_OR_EQUAL
 
 **Applies to:** :heavy_check_mark: Windows VMs
 

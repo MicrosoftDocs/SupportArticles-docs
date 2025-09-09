@@ -1,8 +1,8 @@
 ---
 title: Switch user account in SharePoint Designer 2013
 description: Describes how to start SharePoint Designer 2013 as another SharePoint user.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

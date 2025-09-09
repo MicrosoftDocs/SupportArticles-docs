@@ -7,8 +7,8 @@ f1_keywords:
 - msvse_wcf.Err.AddSvcRefDlg_NothingSelectedOnGo
 - msvse_wcf.Err.ErrorOnOK
 - msvse_wcf.cfg.ConfigurationErrorsException
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ms.reviewer: ghogen
 ms.custom: sap:Integrated Development Environment (IDE)\Other
 ---

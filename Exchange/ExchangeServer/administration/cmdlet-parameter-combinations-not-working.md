@@ -10,7 +10,7 @@ ms.custom:
   - sap:OWA  And Exchange Admin Center\Issues connecting to Exchange Management Shell
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: genli, ralfle, v-six
+ms.reviewer: jarrettr, ralfle, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Enterprise Edition

@@ -1,7 +1,7 @@
 ---
 title: Your Browser is Not Supported or Up-to-Date Error in MSAL App
 description: This article describes how to resolve the "Your browser is not supported or up-to-date" error when you use an app that integrates with MSAL.
-author: genlin
+author: JarrettRenshaw
 ms.author: willfid
 ms.service: entra-id
 ms.date: 01/11/2025

@@ -1,11 +1,11 @@
 ---
 title: Not enough memory error when you copy formulas over large area
 description: Describes error messages that you may receive when you fill or copy formulas into a large area of a worksheet, or when you add formulas to a large worksheet. Provides steps to work around the source cell limit.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: PETEREE
 ms.custom: 
   - Editing\CopyOrPaste

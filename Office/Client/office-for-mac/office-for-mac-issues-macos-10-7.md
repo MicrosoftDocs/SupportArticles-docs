@@ -1,7 +1,7 @@
 ---
 title: Known issues with Office for Mac on macOS 10.7 (Lion) and Higher
 description: Lists Office for Mac issues under macOS 10.7 (Lion).
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Office for Mac 2004
   - Office for Mac 2008

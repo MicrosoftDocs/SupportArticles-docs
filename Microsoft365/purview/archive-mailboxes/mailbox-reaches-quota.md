@@ -1,8 +1,8 @@
 ---
 title: Your mailbox reaches its quota though it has an archive enabled
 description: Fixes an issue in which your mailbox reaches its quota even though an archive is enabled on the mailbox.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

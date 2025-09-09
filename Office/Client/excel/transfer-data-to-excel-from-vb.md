@@ -1,11 +1,11 @@
 ---
 title: Transfer data to Excel from Visual Basic
 description: Introduces methods for transferring data to Excel from Visual Basic.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - Extensibility\Macros
   - CSSTroubleshoot

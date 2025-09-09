@@ -13,16 +13,8 @@
       href: ../lists-and-libraries/cant-open-online-only-file.md
     - name: Can't open OneDrive on images using Sysprep
       href: ../lists-and-libraries/cannot-open-onedrive-on-images-using-sysprep.md
-    - name: File post-processing may take up to 24 hours
-      href: ../../SharePointOnline/lists-and-libraries/file-post-processing-takes-up-to-24-hours.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-  - name: Security
-    items:
-    - name: There is a problem with your account when opening documents
-      href: ../../SharePointOnline/Security/problem-with-your-account.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
   - name: Search
     items:
-    - name: Search doesn't provide results from another language
-      href: ../../SharePointOnline/Search/no-search-results-from-another-language.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Searching private content
       href: ../search/search-private-content.md
   - name: Setup
@@ -33,10 +25,6 @@
       href: ../setup/onedrive-stopped-at-setting-up-screen.md
   - name: Sharing and Permissions
     items:
-    - name: Credential prompts after resting mouse pointer over a user name
-      href: ../../SharePointOnline/sharing-and-permissions/rest-mouse-pointer-on-user-name.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: Fix site user ID mismatch in SharePoint or OneDrive
-      href: ../../SharePointOnline/sharing-and-permissions/fix-site-user-id-mismatch.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Restore OneDrive Sharing settings in O365 admin center
       href: ../sharing-and-permissions/restore-onedrive-share-settings-office365.md
     - name: '"This item might not exist" error'
@@ -47,10 +35,6 @@
       href: ../storage/check-storage-increase-eligibility.md
   - name: Sites
     items:
-    - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive
-      href: ../../SharePointOnline/sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
-    - name: Troubleshooting guide stops at provisioning stage
-      href: ../../SharePointOnline/sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md?toc=/SharePoint/troubleshoot/onedrivetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: You can't edit your files because your license to use OneDrive ended
       href: ../sites/cannot-edit-files-onedrive-license-end.md
   - name: Sync

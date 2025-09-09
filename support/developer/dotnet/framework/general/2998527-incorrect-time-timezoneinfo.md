@@ -1,20 +1,23 @@
 ---
-title: KB2998527 causes wrong code lookups on past dates
-description: This article explains the problem where update 2998527 causes incorrect code lookups on past dates when the application use TimeZoneInfo.
-ms.date: 05/08/2020
+title: KB2998527 Causes Wrong Code Lookups on Past Dates
+description: This article explains how update 2998527 causes incorrect code lookups on past dates when an application uses TimeZoneInfo.
+ms.date: 07/08/2025
 ms.reviewer: leecow
 ms.custom: sap:Class Library Namespaces
+ms.topic: troubleshooting-problem-resolution
+#customer intent: As a developer, I want to fix incorrect code lookups on past dates when I use the TimeZoneInfo class so that my application handles time zones correctly.
 ---
 # Update 2998527 causes incorrect code lookups on past dates
 
-This article explains the problem where [KB 2998527](https://support.microsoft.com/help/2998527) causes incorrect code lookups on past dates when you use the `TimeZoneInfo` class in an application.
+This article describes an issue where installing the [Microsoft KB 2998527](https://support.microsoft.com/help/2998527) update can cause the `TimeZoneInfo` class to return incorrect results for past date lookups in applications.
 
-_Original product version:_ &nbsp; .NET Framework 4.6, 4.5  
-_Original KB number:_ &nbsp; 3012229
+_Applies to:_ .NET Framework 4.6, 4.5
+
+_Original KB number:_ 3012229
 
 ## Symptoms
 
-After October 26, 2014, applications that are hosted on systems that have the September 2014 Russian time zone update ([KB 2998527](https://support.microsoft.com/help/2998527)) installed and that use the Microsoft .NET Framework might calculate time incorrectly when they use the `TimeZoneInfo` class.
+After October 26, 2014, applications that are hosted on systems that have the September 2014 Russian time zone update ([KB 2998527](https://support.microsoft.com/help/2998527)) installed and that use Microsoft .NET Framework might calculate time incorrectly when they use the `TimeZoneInfo` class.
 
 This problem occurs in the following time zones:
 
@@ -33,22 +36,6 @@ This problem occurs in the following time zones:
 - (UTC+10:00) Vladivostok, Magadan (RTZ 9)
 - (UTC+13:00) Samoa
 
-## Cause
-
-This problem occurs because a change in the base offset of a time zone breaks any code in the affected time zones if that code looks up past dates by using `TimeZoneInfo` in the .NET Framework. This is because the .NET Framework can't track year-to-year changes in the base offset.
-
-This problem was exposed by the recent changes to Russian time zones that are described in Microsoft Knowledge Base article 2998527.
-
-The .NET Framework previously ignored the UTC offset that is set in an internal adjustment rule. Instead, it used the base UTC offset in certain calculations. The .NET Framework also ignored adjustment rules that don't have daylight transitions.
-
-## Status
-
-Microsoft is researching this problem and will post more information in this article when the information becomes available. A new update is planned that will update the .NET Framework to correctly use UTC offsets and adjustment rules for all-time zones.
-
-We recommend that you install both update 2998527 and the new update when it's available. This will make sure that UTC offset rules are used correctly for all past years and all years going forward.
-
-## More information
-
 Consider the following C# example code:
 
 ```csharp
@@ -57,4 +44,20 @@ DateTime dt = TimeZoneInfo.ConvertTimeFromUtc(new DateTime(2013, 6, 1), tz);
 Console.WriteLine(dt);
 ```
 
-For example, before you apply KB 2998527, this code correctly returns the date and time as June 1, 2013 at 04:00. After you apply the update, the code incorrectly returns the date and time as June 1, 2013 at 03:00.
+Before you apply KB 2998527, this code correctly returns the date and time as June 1, 2013 at 04:00. After you apply the update, the code returns the date and time incorrectly as June 1, 2013 at 03:00.
+
+## Cause
+
+This problem occurs because a change in the base offset of a time zone breaks any code in the affected time zones if that code looks up past dates by using `TimeZoneInfo` in .NET Framework. This problem occurs because .NET Framework can't track year-to-year changes in the base offset.
+
+This problem was exposed by the changes to Russian time zones that are described in KB 2998527.
+
+Previously, .NET Framework ignored the UTC offset that's set in an internal adjustment rule. Instead, it used the base UTC offset in certain calculations. .NET Framework also ignored adjustment rules that don't have daylight transitions.
+
+## Solution
+
+If your .NET application uses `TimeZoneInfo`, update it to use the latest Windows time zone information. If applicable, you should also make sure that your application correctly handles the latest time zone rules for Russia.
+
+## Related content
+
+- [Time zone changes for Russia in Windows](https://support.microsoft.com/topic/time-zone-changes-for-russia-in-windows-43f3d691-0bab-eb64-3ec1-6451d148194c)

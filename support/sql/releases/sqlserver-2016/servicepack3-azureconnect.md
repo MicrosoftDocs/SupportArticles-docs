@@ -2,6 +2,7 @@
 title: Azure Connect feature pack for SQL Server 2016 Service Pack 3 (KB5014242)
 description: This article contains the summary, improvements, and other information for the Azure Connect feature pack for Microsoft SQL Server 2016 Service Pack 3 (KB5014242).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5014242
 appliesto:
 - SQL Server 2016 Service Pack 3

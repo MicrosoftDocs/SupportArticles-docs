@@ -1,7 +1,7 @@
 ---
 title: SharePoint Online or OneDrive for Business access denied due to organizational policies error message
-ms.author: luche
-author: helenclu
+ms.author: meerak
+author: Cloud-Writer
 manager: dcscontentpm
 ms.date: 12/17/2023
 audience: Admin

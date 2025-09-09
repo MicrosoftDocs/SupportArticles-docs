@@ -1,7 +1,7 @@
 ---
 title: Resolve issues with Teams Meeting add-in for classic Outlook
 description: Provides steps to troubleshoot issues that affect the Teams Meeting add-in for classic Outlook.
-author: helenclu
+author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro

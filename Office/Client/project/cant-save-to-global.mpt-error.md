@@ -1,8 +1,8 @@
 ---
 title: Cannot save to Global.mpt error when exiting Microsoft Project
 description: Fixes an error that occurs when you exit Project together with Global.mpt template is opened as read-only.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

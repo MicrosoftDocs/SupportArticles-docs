@@ -2,7 +2,7 @@
 metadata:
   title: Azure Windows virtual machine activation FAQ
   description: Find answers to the frequently asked questions (FAQ) about activating a Windows virtual machine in Azure.
-  author: genlin
+  author: JarrettRenshaw
   ms.topic: faq
   tags: top-support-issue, azure-resource-manager
   ms.service: azure-virtual-machines
@@ -10,7 +10,7 @@ metadata:
   ms.workload: na
   ms.tgt_pltfrm: vm-windows
   ms.date: 02/07/2025
-  ms.author: genli
+  ms.author: jarrettr
   ms.reviewer: cwhitley, jusilver, scotro, v-naqviadil, v-leedennis, v-weizhu
   ms.custom: sap:Cannot activate my Windows VM
   appliesto: Windows VMs

@@ -1,13 +1,13 @@
 ---
 title: Workflow that uses the Update List Item action fails to update a Person or Group column
 description: This article describes an issue where SharePoint Online workflow that uses the Update List Item action fails to update a Person or Group column, and provides a solution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Workflows and Automation\Other
   - CSSTroubleshoot

@@ -1,7 +1,7 @@
 ---
 title: Powerpoint for Mac closes unexpectedly
 description: Discusses that PowerPoint for Mac closes unexpectedly or that files experience formatting problems when you start the program. Provides a resolution for the problem.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - PowerPoint for Mac
 ms.date: 06/06/2024

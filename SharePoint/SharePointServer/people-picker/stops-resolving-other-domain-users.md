@@ -1,8 +1,8 @@
 ---
 title: People Picker doesn't resolve users from other domains
 description: Fixes an issue in which you receive the No match found error when you try to resolve users from other domains from People Picker.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: Can't see previous joined teams after your account is re-enabled for logon
 description: If a user account is re-enabled for logon, the user may not see previous joined teams for 24 to 48 hours, and the user no longer has membership to private channels.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

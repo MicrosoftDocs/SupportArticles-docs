@@ -1,7 +1,7 @@
 ---
 title: This isn't a valid Win32 application
 description: Discusses an issue that occurs when you try to install Microsoft 365 Apps for enterprise, Visio Pro for Microsoft 365, or Project for Microsoft 365.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - DownloadInstall\SxS\Visio
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Microsoft 365 Apps for enterprise
   - Visio Pro for Microsoft 365

@@ -4,8 +4,8 @@ description: Resolves an issue that causes the CPU performance limited signal of
 ms.reviewer: rebenite
 ms.topic: troubleshooting
 ms.date: 10/30/2023
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 search.appverid: 

@@ -1,8 +1,8 @@
 ---
 title: User Profile service application doesn't work
 description: Provides a workaround for an issue in which the User Profile service application doesn't work. This issue occurs after a SharePoint farm is restored to a server by using the Central Administration website in SharePoint Server 2013.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

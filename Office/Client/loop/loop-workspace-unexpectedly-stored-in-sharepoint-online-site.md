@@ -1,7 +1,7 @@
 ---
 title: Loop workspaces are unexpectedly stored in SharePoint Online sites
 description: Describes an issue in which Loop workspaces are stored in SharePoint Online sites instead of SharePoint Embedded containers.
-author: helenclu
+author: Cloud-Writer
 ms.reviewer: derekliddell; meerak
 manager: dcscontentpm
 search.appverid: 

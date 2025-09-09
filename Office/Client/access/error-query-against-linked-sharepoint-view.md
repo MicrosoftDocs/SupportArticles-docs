@@ -1,7 +1,7 @@
 ---
 title: (Cannot update. Database or object is read-only) error in a query against a linked SharePoint view if there are unlinked lookup fields in Access
 description: Describes why you receive a (Cannot update. Database or object is read-only) error message if the underlying list includes lookup fields that aren't linked to Access. Provides a workaround.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 ms.reviewer: denniwil
 appliesto: 
   - Access for Microsoft 365

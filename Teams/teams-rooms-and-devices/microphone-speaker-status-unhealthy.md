@@ -4,8 +4,8 @@ description: Fixes the issue that causes the microphone or speaker signal of a M
 ms.reviewer: lamos
 ms.topic: troubleshooting
 ms.date: 10/30/2023
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 search.appverid: 

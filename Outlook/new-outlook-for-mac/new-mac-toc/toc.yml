@@ -1,0 +1,16 @@
+items:
+- name: Welcome to new Outlook for Mac
+  href: ../overview-new-outlook-mac.md
+  items:
+    - name: Connectivity
+      items:
+        - name: Suppress Microsoft 365 AutoDiscover redirect warning
+          href: ../connectivity/suppress-autodiscover-redirect-warning-mac.md
+    - name: Diagnostic Logging
+      items:
+        - name: Enable logging
+          href: ../diagnostic-logging/enable-logging.md
+    - name: Import/Export
+      items:
+        - name: Can't import .olm files
+          href: ../import-export/cannot-import-olm-files.md

@@ -2,6 +2,7 @@
 title: Cumulative update 2 for SQL Server 2016 SP2 (KB4340355)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 Service Pack 2 (SP2) cumulative update 2 (KB4340355).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4340355
 appliesto:
 - SQL Server 2016 Developer

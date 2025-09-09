@@ -1,3 +1,4 @@
+items:
 - name: Welcome
   href: welcome-azure-kubernetes.yml
 
@@ -150,6 +151,10 @@
   items:
   - name: Create an unmanaged ingress controller
     href: load-bal-ingress-c/create-unmanaged-ingress-controller.md
+  - name: Troubleshoot Application Gateway Ingress Controller connectivity
+    href: load-bal-ingress-c/troubleshoot-app-gateway-ingress-controller-connectivity-issues.md
+  - name: Troubleshoot Performance Issues with the Managed NGINX Ingress Controller in AKS
+    href: load-bal-ingress-c/troubleshoot-performance-ingress.md
 
 - name: Troubleshoot Kubernetes control plane
   items:
@@ -172,6 +177,10 @@
     href: availability-performance/high-memory-consumption-disk-intensive-applications.md
   - name: Troubleshoot cluster service health probe mode issues
     href: availability-performance/cluster-service-health-probe-mode-issues.md
+  - name: Troubleshoot pod scheduler errors 
+    href: availability-performance/troubleshoot-pod-scheduler-errors.md
+  - name: Troubleshoot OOMkilled in AKS clusters
+    href: availability-performance/troubleshoot-oomkilled-aks-clusters.md
   - name: Troubleshoot node not ready
     items:
     - name: Basic troubleshooting
@@ -236,8 +245,6 @@
         href: connectivity/cannot-view-resources-kubernetes-resource-viewer-portal.md
       - name: '"Error from server: error dialing backend: dial tcp" messages'
         href: connectivity/error-from-server-error-dialing-backend-dial-tcp.md
-      - name: Microsoft Entra Pod Identity NMI returns 500 Internal Server Error
-        href: connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md
       - name: InsufficientSubnetSize error
         href: connectivity/insufficientsubnetsize-error-advanced-networking.md
       - name: TCP time-outs such as 10250 I/O
@@ -316,6 +323,8 @@
       href: extensions/enforce-container-cpu-memory-limits.md
     - name: Custom Azure Policy for validating controllers doesn't work
       href: extensions/custom-policy-for-validating-controller-not-working.md
+    - name: Deployment Safeguards in Azure Kubernetes Service (AKS)
+      href: extensions/deployment-safeguards-in-azure-kubernetes-service.md
     - name: Pods are created in user namespaces
       href: extensions/pods-created-user-namespaces.md
     - name: Pods fail and restart after you enable Defender Profile for AKS
@@ -360,6 +369,8 @@
     href: extensions/troubleshoot-failed-kubernetes-deployment-offer.md
   - name: Troubleshoot network isolated clusters
     href: extensions/troubleshoot-network-isolated-cluster.md
+  - name: Troubleshoot managed namespaces
+    href: extensions/troubleshoot-managed-namespaces.md
   - name: KEDA add-on
     items:
     - name: Troubleshoot KEDA add-on
@@ -449,3 +460,9 @@
     href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-codes/zonalallocation-allocationfailed-error.md
+  - name: AKS upgrade errors because of version skew, incompatibility, or lack of support
+    href: error-codes/aks-upgrade-blocked.md
+  - name: SubnetIsDelegated error
+    href: error-codes/subnetisdelegated-error.md
+  - name: VirtualNetworkNotInSucceededState error 
+    href: error-codes/virtualnetworknotinsucceededstate-error.md

@@ -1,7 +1,7 @@
 ---
 title: Resolve file upload errors in Microsoft Forms
 description: Resolve some common errors that you might expreience when you try to add a file upload question to a form or upload a file.
-author: helenclu
+author: Cloud-Writer
 ms.reviewer: zakirh
 manager: dcscontentpm
 search.appverid: 
@@ -94,7 +94,7 @@ To fix this error for a group form, sign in to the Microsoft 365 group's SharePo
     `https://<tenant-name>.sharepoint.com/sites/<group-name>`
 
     > [!NOTE]
-    > If information barriers are enabled in your SharePoint site, company-wide link sharing is disabled if the [mode](/purview/information-barriers-sharepoint#sharing-sites-for-ib-modes) is set to **Owner Moderated**, **Implicit**, or **Explicit**. In this case, change the information barriers mode to **Open**. To check the information barriers mode of your site, run the `Get-SPOSite <Group SharePoint site URL> | Select InformationBarriersMode` PowerShell command.
+    > If information barriers are enabled in your SharePoint or OneDrive site, company-wide link sharing is disabled if the [mode](/purview/information-barriers-sharepoint#sharing-sites-for-ib-modes) is set to **Owner Moderated**, **Mixed**, **Implicit**, or **Explicit**. In this case, change the information barriers mode to **Open**. To check the information barriers mode of your site, run the `Get-SPOSite <Group SharePoint site or OneDrive URL> | Select InformationBarriersMode` PowerShell command.
 1. Check whether site members can share files and folders. If they can't, follow these steps to update the sharing permission:
 
     1. Sign in to the group's SharePoint site as a site owner.

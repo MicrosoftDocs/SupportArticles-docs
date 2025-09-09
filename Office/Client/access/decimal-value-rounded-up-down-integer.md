@@ -1,7 +1,7 @@
 ---
 title: Decimal value is rounded up/down to integer value
 description: Describes a problem that occurs when you enter a decimal value in a column in Access 2007. The decimal value is rounded up or down to an integer value.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 ms.custom: 
   - CI 111294
@@ -10,7 +10,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: jchishol, acc12b
 appliesto: 
   - Access for Microsoft 365

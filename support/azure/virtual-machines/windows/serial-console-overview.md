@@ -6,10 +6,9 @@ documentationcenter: ''
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
-ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 04/22/2024
+ms.date: 07/29/2025
 ms.reviewer: mbifeld, v-weizhu
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
@@ -26,10 +25,12 @@ Serial Console works in the same manner for VMs and virtual machine scale set in
 
 ## Regions
 
-Serial Console is available in the following regions:
+Serial Console is available for virtual machines and virtual machine scale sets in the following regions:
 
 - Australia Central
+- Australia Central 2
 - Australia East
+- Australia Southeast
 - Brazil South
 - Brazil Southeast
 - Canada Central
@@ -37,7 +38,9 @@ Serial Console is available in the following regions:
 - Central India
 - Central US
 - Central US EUAP
+- China East 2
 - China East 3
+- China North 2
 - China North 3
 - East Asia
 - East US 2 EUAP
@@ -52,6 +55,9 @@ Serial Console is available in the following regions:
 - Japan West
 - Korea Central
 - Korea South
+- Mexico Central
+- New Zealand North
+- North Central US
 - North Europe
 - Norway East
 - Norway West
@@ -59,8 +65,10 @@ Serial Console is available in the following regions:
 - Qatar Central
 - South Africa North
 - South Africa West
+- South Central US
 - Southeast Asia
 - South India
+- Spain Central
 - Sweden Central
 - Sweden South
 - Switzerland North
@@ -71,8 +79,12 @@ Serial Console is available in the following regions:
 - UK West
 - West Central US
 - West Europe
+- West India
+- West US
 - West US 2
+- West US 3
 - US Gov Arizona
+- US Gov Texas
 - US Gov Virginia
 
 ## Prerequisites to access the Azure Serial Console
@@ -86,7 +98,7 @@ To access the Serial Console on your VM or virtual machine scale set instance, y
 - Serial Console is not supported when the storage account has **Allow storage account key access** disabled.
 
 > [!IMPORTANT]
-> Serial Console is now compatible with [managed boot diagnostics storage accounts](boot-diagnostics.md) and custom storage account firewalls.
+> By the end of 2025, Azure Serial Console will no longer utilize boot diagnostics storage accounts for establishing a connection. This change doesn't affect serial logs or screenshots.
 
 ## Get started with Serial Console
 

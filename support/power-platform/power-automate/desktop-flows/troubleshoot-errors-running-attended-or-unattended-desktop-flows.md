@@ -2,7 +2,7 @@
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: cefriant, kenseongtan, guco, johndund, alarnaud, ermathon
-ms.date: 05/29/2025
+ms.date: 07/14/2025
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -23,6 +23,7 @@ _Original KB number:_ &nbsp; 4555406
 |AttendedUserSessionNotActive<br>AttendedUserNotLoggedIn|400|Attended|Check that you're logged in with the correct user and that the session is unlocked on the machine. For more information about the error codes, see [AttendedUserSessionNotActive](troubleshoot-desktop-flow-run-queue-errors.md#attendedusersessionnotactive) and [AttendedUserNotLoggedIn](troubleshoot-desktop-flow-run-queue-errors.md#attendedusernotloggedin).|
 |SessionCreationError|400|Unattended|We couldn't create the session on the machine for an unknown reason. To solve this issue, see [Troubleshoot session creation error codes for an unattended desktop flow run](troubleshoot-session-creation-errrors.md#sessioncreationerror).|
 |SessionCreationErrorWithThirdPartyCredentialProvider|400|Unattended|To solve this issue, see [Troubleshoot session creation error codes for an unattended desktop flow run](troubleshoot-session-creation-errrors.md#sessioncreationerrorwiththirdpartycredentialprovider).|
+|SessionCreationUserPromptedForCredentialsAfterConnection|400|Unattended|To solve this issue, see [Troubleshoot session creation error codes for an unattended desktop flow run](troubleshoot-session-creation-errrors.md#sessioncreationuserpromptedforcredentialsafterconnection).|
 |SessionCreationWinLogonFailure|400|Unattended|We can't create a Windows session to run your unattended desktop flow. You need to restart your machine.|
 |SessionExistsForTheUserWhenUnattended|400|Unattended|Check that you aren't logged in with the same user (regardless of the state of the session) on the machine. For more information about this error code, see [SessionExistsForTheUserWhenUnattended](troubleshoot-desktop-flow-run-queue-errors.md#sessionexistsfortheuserwhenunattended).|
 |UnattendedUserSessionDisconnected|400|Unattended|For more information about this error code, see [UnattendedUserSessionDisconnected](troubleshoot-desktop-flow-run-queue-errors.md#unattendedusersessiondisconnected).|
@@ -49,7 +50,7 @@ _Original KB number:_ &nbsp; 4555406
 |EndpointDoNotExist|404|Attended</br>Unattended|The endpoint wasn't found.</br>Register your machine again and schedule new runs.</br>This error typically occurs when the machine registration is deleted during the run, such as when the machine is re-registered.|
 |GroupIsEmpty|400|Attended</br>Unattended|The machine group is empty.</br> Add machines to the group, then reschedule new runs.|
 |MSEntraMachineAlwaysPromptingForPassword|400|Unattended|For more information about this error code, see [An unattended desktop flow run fails with the MSEntraMachineAlwaysPromptingForPassword error](msentramachinealwayspromptingforpassword-error.md).|
-|NoCandidateMachine|400|Attended</br>Unattended|The run has exceeded the queue waiting time limit.</br> Consider allocating more machines or spreading desktop flow runs to optimize wait time in the queue.|
+|NoCandidateMachine|400|Attended</br>Unattended|The run has exceeded the queue waiting time limit.</br> Consider allocating more machines or spreading desktop flow runs to optimize wait time in the queue.</br>To solve this issue, see [Troubleshoot desktop flow run queue-based errors](troubleshoot-desktop-flow-run-queue-errors.md) and inspect the [queue events in the monitor run details page](/power-automate/desktop-flows/monitor-run-details#view-queue-events).|
 |DesktopFlowsActionThrottled|429|Attended</br>Unattended|The desktop flow action failed because of throttling. This error code appears when too many desktop flows use the same connection. Check your connection usage and assign your desktop flows to multiple connections.|
 |DesktopFlowsActionTimeout|400|Attended</br>Unattended|The execution of the desktop flow action exceeded maximum duration.</br> Increase the time-out value that's set on the action or split the desktop flow into several shorter desktop flows.|
 |OnPremiseDataGatewayNotAvailable|502|Attended</br>Unattended|This error code only occurs when using an on-premises data gateway (deprecated) to connect to the machine. Check that the targeted machine and the data gateway on that machine are up and running.|

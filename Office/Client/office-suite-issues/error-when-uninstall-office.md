@@ -1,8 +1,8 @@
 ---
 title: Error messages when you try to uninstall Microsoft Office 2013
 description: Provides steps to restart the computer and uninstall Office 2013 or Microsoft 365 suite if you see error messages such as We're sorry, Office couldn't be uninstalled.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

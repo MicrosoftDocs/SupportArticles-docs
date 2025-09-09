@@ -2,8 +2,8 @@
 title: Troubleshoot HTTP 400 Errors in IIS
 description: Describes the troubleshooting steps to identify the cause of various HTTP 400 errors when using IIS.
 ms.date: 12/06/2024
-ms.author: haiyingyu
-author: HaiyingYu
+ms.author: aartigoyle
+author: aartig13
 ms.reviewer: johnhart, riande, mlaing, zixie
 ms.custom: sap:Site Behavior and Performance\Runtime errors and exceptions, including HTTP 400 and 50x errors
 ---

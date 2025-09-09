@@ -10,7 +10,7 @@ ms.custom:
   - sap:Exchange Mailbox Accounts\.ost file synchronization
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: sfellman, genli
+ms.reviewer: sfellman, jarrettr
 appliesto: 
   - Outlook 2019
   - Outlook 2016

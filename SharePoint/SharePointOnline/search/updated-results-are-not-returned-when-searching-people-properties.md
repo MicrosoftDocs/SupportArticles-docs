@@ -1,13 +1,13 @@
 ---
 title: Updated results aren't returned when you try to search the new or changed properties of the people categories in SharePoint Online
 description: Describes an issue in which updated results aren't returned when you try to search the new or changed properties of the people categories in SharePoint Online.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Search\Schema
   - CSSTroubleshoot

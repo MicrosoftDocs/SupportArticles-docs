@@ -5,7 +5,7 @@ ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, cpuckett, danchar, delhan, rblume
+ms.reviewer: kaushika, cpuckett, danchar, kaushika, rblume
 ms.custom:
 - sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
 - pcy:WinComm Performance

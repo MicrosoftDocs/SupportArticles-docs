@@ -1,13 +1,13 @@
 ---
 title: Search doesn't provide results from another language
 description: This article describes an issue where Search doesn't provide results from another language in SharePoint Online or OneDrive, and provides solutions.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Search\Syntex, Queries and Results
   - CSSTroubleshoot

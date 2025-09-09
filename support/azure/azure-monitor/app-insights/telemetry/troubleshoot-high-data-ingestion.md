@@ -29,7 +29,7 @@ Once you've identified an Application Insights resource or a Log Analytics works
 
     ```Kusto
     search *
-    | where timestamp &gt; ago(7d)
+    | where timestamp > ago(7d)
     | summarize count() by $table
     | sort by count_ desc
     ```
@@ -42,7 +42,7 @@ Once you've identified an Application Insights resource or a Log Analytics works
     
     ```Kusto
     systemEvents
-    | where timestamp &gt; ago(7d)
+    | where timestamp > ago(7d)
     | where type == "Billing"
     | extend BillingTelemetryType = tostring(dimensions["BillingTelemetryType"])
     | extend BillingTelemetrySizeInBytes = todouble(measurements["BillingTelemetrySize"])

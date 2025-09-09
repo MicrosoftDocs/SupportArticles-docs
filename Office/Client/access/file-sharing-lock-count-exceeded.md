@@ -1,7 +1,7 @@
 ---
 title: Can't process transactions in multi-user environment
 description: Describes the File sharing lock count exceeded error that occurs when one or more users process many transactions in a multi-user environment and provides workarounds.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 ms.custom: 
   - CI 111294
@@ -10,7 +10,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Access for Microsoft 365
   - Access LTSC 2021

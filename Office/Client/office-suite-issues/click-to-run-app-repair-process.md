@@ -1,8 +1,8 @@
 ---
 title: Repair process does not start for Office Click-to-Run application
 description: Works around an issue in which the repair process for an Office 2013 or Office 2016 Click-to-Run application does not start. This issue occurs when you try to repair the application after the application crashes multiple times.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

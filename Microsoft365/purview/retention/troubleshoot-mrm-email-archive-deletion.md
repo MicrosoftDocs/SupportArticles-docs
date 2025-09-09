@@ -1,8 +1,8 @@
 ---
 title: Resolve email archive and deletion issues when using MRM
 description: Explores some common issues that prevent messaging records management (MRM) from correctly deleting or archiving email messages in Exchange Online. This article also provides steps to identify the root cause and resolve the issues.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

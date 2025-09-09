@@ -1,8 +1,8 @@
 ---
 title: Error (You're missing out) when signing in Teams
 description: Describes an issue in which an error (You're missing out) occurs when you sign in to Teams.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

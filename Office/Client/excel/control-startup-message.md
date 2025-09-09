@@ -1,11 +1,11 @@
 ---
 title: Control the startup message about updating linked workbooks
 description: Discusses how to control the startup message that is prompted for updating linked workbooks in Excel 2002 and in later versions of Excel.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: v-raddis, akeeler
 ms.custom: 
   - Open\Links

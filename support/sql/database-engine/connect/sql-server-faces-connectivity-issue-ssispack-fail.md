@@ -4,7 +4,7 @@ description: This article helps you resolve the 0x80004005 error that might aris
 ms.date: 03/11/2025
 author: prmadhes-msft
 ms.author: prmadhes
-ms.reviewer: jopilov, haiyingyu, v-jayaramanp
+ms.reviewer: jopilov, aartigoyle, v-jayaramanp
 ms.custom: sap:Database Connectivity and Authentication
 ---
 

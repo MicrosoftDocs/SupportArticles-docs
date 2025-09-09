@@ -1,7 +1,0 @@
-- name: Viva Administration troubleshooting
-  href: viva-suite-administration-welcome.yml
-  items:
-    - name: Diagnostics
-      items:
-        - name: Self-help diagnostics for Viva administrators
-          href: viva-self-help-diagnostics.md

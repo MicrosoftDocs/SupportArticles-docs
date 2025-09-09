@@ -1,8 +1,8 @@
 ---
 title: Unsupported Features and Platforms post upgrade to Azure Recovery Services Scout 8.0.1
 description: Describes the information about Unsupported Features and Platforms post upgrade to Azure Recovery Services Scout 8.0.1.
-author: genlin
-ms.author: genli
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.service: azure-site-recovery
 ms.date: 04/15/2024
 ms.reviewer: mabisth

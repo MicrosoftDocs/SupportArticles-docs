@@ -4,7 +4,7 @@ description: This article describes the default permissions and user rights that
 ms.date: 01/08/2025
 ms.custom: sap:WWW Administration and Management\General configuration settings
 ms.reviewer: mlaing, paulboc
-ms.topic: article
+ms.topic: concept-article
 ---
 # Default permissions and user rights for IIS versions that ship with Windows Server 2016 or later versions
 

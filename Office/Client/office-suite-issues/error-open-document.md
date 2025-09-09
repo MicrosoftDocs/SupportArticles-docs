@@ -1,7 +1,7 @@
 ---
 title: You receive error messages when opening an Office document
 description: Describes the issue that occurs when you receive an error message after you open a specific file in an Office program.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Open
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Office Products
   - Access 2010

@@ -10,7 +10,7 @@ ms.custom:
   - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: batre, genli, v-six
+ms.reviewer: batre, jarrettr, v-six
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition

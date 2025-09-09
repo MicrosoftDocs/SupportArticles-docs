@@ -1,8 +1,8 @@
 ---
 title: Unable to copy and paste from Excel into Access
 description: Fixes an issue in which you can't perform a copy/paste operation from Excel into Access.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

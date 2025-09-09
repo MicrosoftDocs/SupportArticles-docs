@@ -1,13 +1,13 @@
 ---
 title: SharePoint 2010 workflow takes longer than expected to complete
 description: Fixes an issue in which a SharePoint 2010 workflow in SharePoint Online takes longer than expected to complete or shows Please wait for about one minute.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Workflows and Automation\Performance
   - CSSTroubleshoot

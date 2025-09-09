@@ -1,7 +1,7 @@
 ---
 title: Issues when you click a hyperlink to SSO Web site
 description: Explains you may be unexpectedly redirected or your session cookies may be lost for Web sites that use SSO authentication. This behavior occurs when you try to open Office files from Internet Explorer or by clicking hyperlinks in Office documents.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - Security\Auth
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: klaw
 appliesto: 
   - Microsoft Office

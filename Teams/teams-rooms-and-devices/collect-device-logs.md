@@ -1,8 +1,8 @@
 ---
 title: Collect Android Teams device logs
 description: Describes how to use Teams admin center to collect Android device logs that run Teams.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: This doesn't look like a valid user ID error when a user signs in
 description: Resolves an issue that occurs if the user's UPN in the on-premises Active Directory environment and the user's UPN in Microsoft Entra ID don't match.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -2,6 +2,7 @@
 title: Cumulative update 9 for SQL Server 2016 SP1 (KB4100997)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2016 SP1 cumulative update 9 (KB4100997).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4100997
 appliesto:
 - SQL Server 2016 Service pack 1

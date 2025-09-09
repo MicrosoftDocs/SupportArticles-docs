@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot problems that occur when you start or use Word
 description: Provides a guide to identify and resolve problems that you experience when you start Word.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 ms.date: 06/06/2024
 search.appverid: 
@@ -13,7 +13,7 @@ ms.custom:
   - Reliability
   - CI 117479
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Word for Microsoft 365
   - Word 2019

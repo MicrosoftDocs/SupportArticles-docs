@@ -1,8 +1,8 @@
 ---
 title: External participants (users) are blocked from joining a Teams meeting
 description: An external participant (user) can't join a Teams meeting and receives a Sign in to join this meeting or Sign in with a different account to join this meeting error message.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

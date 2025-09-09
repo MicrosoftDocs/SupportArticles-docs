@@ -1,13 +1,13 @@
 ---
 title: Can't sign in to an Office 2016 for Mac app
 description: Fixes an error that occurs when you try to sign in to an Office 2016 for Mac app by using Microsoft 365 credentials.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - CSSTroubleshoot
 appliesto: 

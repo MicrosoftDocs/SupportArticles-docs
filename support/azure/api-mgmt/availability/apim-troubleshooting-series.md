@@ -3,8 +3,8 @@ title: Azure API Management Troubleshooting Series
 description: A brief description about troubleshooting series articles for API Management (APIM).
 ms.date: 04/24/2022
 ms.service: azure-api-management
-ms.author: genli
-author: genlin
+ms.author: jarrettr
+author: JarrettRenshaw
 ms.reviewer: 
 ms.custom: sap:Availability or Unexpected API Responses
 ---

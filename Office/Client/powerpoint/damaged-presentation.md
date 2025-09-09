@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot a damaged presentation in PowerPoint
 description: Describes how to troubleshoot a damaged presentation in PowerPoint.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Reliability
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - PowerPoint 2019
   - PowerPoint 2016

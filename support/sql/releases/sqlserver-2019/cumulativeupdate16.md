@@ -2,6 +2,7 @@
 title: Cumulative update 16 for SQL Server 2019 (KB5011644)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 16 (KB5011644).
 ms.date: 05/30/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5011644
 ms.reviewer: v-cuichen
 appliesto:
@@ -407,8 +408,8 @@ SQL Server 2019 Database Services Core Instance
 | Hkenggen.h                                 | n/a             | 16783     | 11-Apr-22 | 17:59 | n/a      |
 | Hkengine.dll                               | 2019.150.4223.1 | 5789624   | 11-Apr-22 | 17:59 | x64      |
 | Hkengine.lib                               | n/a             | 98282     | 11-Apr-22 | 17:59 | n/a      |
-| Hkgenlib.h                                 | n/a             | 57242     | 11-Apr-22 | 17:59 | n/a      |
-| Hkgenlib.lib                               | n/a             | 3004568   | 11-Apr-22 | 17:59 | n/a      |
+| Hkjarrettrb.h                                 | n/a             | 57242     | 11-Apr-22 | 17:59 | n/a      |
+| Hkjarrettrb.lib                               | n/a             | 3004568   | 11-Apr-22 | 17:59 | n/a      |
 | Hkrtdef.h                                  | n/a             | 9434      | 11-Apr-22 | 17:59 | n/a      |
 | Hkrtgen.h                                  | n/a             | 29067     | 11-Apr-22 | 17:59 | n/a      |
 | Hkruntime.dll                              | 2019.150.4223.1 | 182184    | 11-Apr-22 | 17:59 | x64      |

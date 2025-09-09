@@ -9,7 +9,7 @@ metadata:
   services: virtual-machines
   ms.service: azure-virtual-machines
   ms.topic: landing-page # Required
-  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  author: JarrettRenshaw  #Required; your GitHub user alias, with correct capitalization.
   ms.author: trmaier #Required; microsoft alias of author; optional team alias.
   ms.date: 04/30/2025
 

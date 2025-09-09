@@ -1,13 +1,13 @@
 ---
-title: TCP time-outs when kubectl, other 3rd-party tools connect to API
+title: TCP time-outs when kubectl or other 3rd-party tools connect to API
 description: Troubleshoot TCP time-outs that occur when kubectl or other third-party tools connect to the API server in Azure Kubernetes Service (AKS).
-ms.date: 10/28/2024
-ms.reviewer: chiragpa, nickoman, jaewonpark, v-leedennis, v-weizhu
-ms.service: azure-kubernetes-service
-keywords:
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot TCP connection time-outs that occur when kubectl or other third-party tools connect to the API server so that my Azure Kubernetes Service (AKS) cluster operates successfully.
-ms.custom: sap:Connectivity
+ms.topic: article
+ms.date: 06/03/2024
+author: azureuser
+ms.author: azureuser
+ms.custom: sap:Connectivity,innovation-engine
 ---
+
 # TCP time-outs when kubectl or other third-party tools connect to the API server
 
 This article discusses how to troubleshoot TCP time-outs that occur when [kubectl](https://kubernetes.io/docs/reference/kubectl/) or other third-party tools are used to connect to the API server in Microsoft Azure Kubernetes Service (AKS). To ensure its service-level objectives (SLOs) and service-level agreements (SLAs), AKS uses high-availability (HA) control planes that scale vertically and horizontally, based on the number of cores.
@@ -35,12 +35,44 @@ Make sure the nodes that host these pods aren't overly utilized or under stress.
 
 To check which node the `konnectivity-agent` pod is hosted on and the usage of the node, run the following commands:
 
+Set access to the AKS cluster. Replace the values of `ResourceGroupName` and `AKSClusterName` with your own.
+
 ```bash
-# Check which node the konnectivity-agent pod is hosted on
-$ kubectl get pod -n kube-system -o wide
-    
-# Check the usage of the node hosting the pod
-$ kubectl top node
+az aks get-credentials --resource-group ${ResourceGroupName} --name ${AKSClusterName} --overwrite-existing
+```
+
+Check the running pods in the kube-system namespace and which node each one is assigned to:
+
+```bash
+kubectl get pod -n kube-system -o wide
+```
+
+Results:
+
+<!-- expected_similarity=0.3 -->
+
+```output
+NAME                                READY   STATUS    RESTARTS   AGE     IP             NODE                                NOMINATED NODE   READINESS GATES
+konnectivity-agent-xxxxx            1/1     Running   0          22h     10.xxx.xx.xxx  aks-nodepool1-xxxxx-vmss000000      <none>           <none>
+coredns-xxxxx                       1/1     Running   0          22h     10.xxx.xx.xxx  aks-nodepool1-xxxxx-vmss000001      <none>           <none>
+# ...other pods...
+```
+
+Check the usage of the nodes and see resource utilization for each node:
+
+```bash
+kubectl top node
+```
+
+Results:
+
+<!-- expected_similarity=0.3 -->
+
+```output
+NAME                                CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
+aks-nodepool1-xxxxx-vmss000000      125m         12%    1510Mi          37% 
+aks-nodepool1-xxxxx-vmss000001      106m         10%    1203Mi          42% 
+# ...other nodes...
 ```
 
 ## Cause 2: Access is blocked on some required ports, FQDNs, and IP addresses

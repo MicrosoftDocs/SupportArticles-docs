@@ -1,11 +1,11 @@
 ---
 title: Large Address Aware capability change for Excel
 description: Describes the added Large Address Aware functionality for Excel 2013, which lets Windows allocate increased RAM to the Excel. This capability was added by the May and June updates in 2016.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - Reliability
   - CSSTroubleshoot

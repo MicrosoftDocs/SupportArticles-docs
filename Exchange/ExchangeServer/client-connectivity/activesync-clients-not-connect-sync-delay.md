@@ -6,7 +6,7 @@ ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: balinger, christys, wsvexse, v-zht, v-lmengy, Bilong, paololin, v-six
+ms.reviewer: balinger, aartigoyle, wsvexse, v-zht, v-lmengy, Bilong, paololin, v-six
 ms.custom: 
   - sap:Clients and Mobile\Can't Connect to Mailbox with Active Sync Device
   - Exchange Server

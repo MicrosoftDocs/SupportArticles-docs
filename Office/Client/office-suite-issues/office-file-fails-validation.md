@@ -1,11 +1,11 @@
 ---
 title: Office has detected a problem with this file
 description: Works around a problem that generates an Office has detected a problem with this file error message  when an Office 2010 file fails validation.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: mdandige
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features

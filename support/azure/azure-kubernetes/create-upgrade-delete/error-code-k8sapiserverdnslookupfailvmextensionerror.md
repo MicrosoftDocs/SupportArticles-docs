@@ -5,8 +5,9 @@ ms.date: 01/24/2024
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (or error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL, error number 52) so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool),  innovation-engine
 ---
+
 # Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)
 
 This article discusses how to identify and resolve the `K8SAPIServerDNSLookupFailVMExtensionError` error (also known as error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL, error number 52) that occurs when you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
@@ -32,6 +33,7 @@ When you try to start or create an AKS cluster, you receive the following error 
 > "ExitCode": "52",
 >
 > "Output": "Fri Oct 15 10:06:00 UTC 2021,aks- nodepool1-36696444-vmss000000\\nConnection to mcr.microsoft.com 443 port [tcp/https]
+
 ## Cause
 
 The cluster nodes can't resolve the cluster's fully qualified domain name (FQDN) in Azure DNS. Run the following DNS lookup command on the failed cluster node to find DNS resolutions that are valid.
@@ -51,17 +53,37 @@ On your DNS servers and firewall, make sure that nothing blocks the resolution t
 
 When you use a private cluster that has a custom DNS, a DNS zone is created. The DNS zone must be linked to the virtual network. This occurs after the cluster is created. Creating a private cluster that has a custom DNS fails during creation. However, you can restore the creation process to a "success" state by reconciling the cluster. To do this, run the [az resource update](/cli/azure/resource#az-resource-update) command in Azure CLI, as follows:
 
+Below, set your AKS cluster and resource group names, then run the update command to reconcile the cluster. The environment variables will make your resource names unique and are declared just before use.
+
 ```azurecli-interactive
-az resource update --resource-group <resource-group-name> \
-    --name <cluster-name> \
+az resource update --resource-group $RESOURCE_GROUP_NAME \
+    --name $CLUSTER_NAME \
     --namespace Microsoft.ContainerService \
     --resource-type ManagedClusters
+```
+
+Results: 
+
+<!-- expected_similarity=0.3 -->
+
+```output
+{
+  "id": "/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/myResourceGroupxxx/providers/Microsoft.ContainerService/ManagedClusters/myAksClusterxxx",
+  "location": "eastus",
+  "name": "myAksClusterxxx",
+  "properties": {
+      // ...other properties...
+  },
+  "resourceGroup": "myResourceGroupxxx",
+  "type": "Microsoft.ContainerService/ManagedClusters"
+}
 ```
 
 Also verify that your DNS server is configured correctly for your private cluster, as described earlier.
 
 > [!NOTE]
 > Conditional Forwarding doesn't support subdomains.
+
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)

@@ -13669,7 +13669,6 @@
       "source_path": "support/dynamics/gp/unapproved-pending-change-order-exist.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
     },
-    
     {
       "source_path": "support/dynamics/gp/use-banked-paycodes-with-project-accounting.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
@@ -13693,12 +13692,12 @@
     {
       "source_path": "support/windows-server/active-directory/troubleshoot-errors-join-computer-to-domain.md",
       "redirect_url": "/troubleshoot/windows-server/active-directory/domain-join-networking-errors"
-    },    
+    },
     {
-    "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-excel-errors.md",
-    "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/office-automation/excel/troubleshoot-excel-errors"
-  },
-  {
+      "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-excel-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/office-automation/excel/troubleshoot-excel-errors"
+    },
+    {
       "source_path": "support/entra/entra-id/mfa/authorization-request-denied-graph-api.md",
       "redirect_url": "/troubleshoot/entra/entra-id/app-integration/troubleshoot-authorization-requestdenied-graph-api",
       "redirect_document_id": false
@@ -13762,6 +13761,85 @@
     {
       "source_path": "support/azure/azure-kubernetes/connectivity/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/dns/troubleshoot-dns-failure-from-pod-but-not-from-worker-node"
+    },
+    {
+      "source_path": "support/windows-client/performance/stop-error-or-blue-screen-error-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-client/performance/stop-code-error-troubleshooting"
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/office-automation/excel/launch-excel-action-failures.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/office-automation/excel/troubleshoot-excel-errors"
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/install-reporting-service.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/install-reporting-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/issues-install-sql-server.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/issues-install-sql-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/sql-server-2008-setup-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/sql-server-2008-setup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/sql-server-2012-setup-issues.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/install/sql-server-2012-setup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/security/instructions-in-fips-140-2-compliant-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/security/instructions-in-fips-140-2-compliant-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/database-engine/security/sql-2014-fips-140-2-compliant-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/security/sql-2014-fips-140-2-compliant-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/tools/error-you-run-sqlmaint-utility.md",
+      "redirect_url": "/previous-versions/troubleshoot/sql/tools/error-you-run-sqlmaint-utility",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hub.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
+    },
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/exporting-directory-level-activity-logs-to-event-hub.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
+    },
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/pushing-subscription-activity-logs-to-sentinel.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/push-subscription-activity-logs-to-sentinel"
+    },
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/resolving-log-limit-issues-in-azure-function-apps.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
+    },
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/understanding-and-managing-diagnostic-settings-retention.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
+    },
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
+    },
+    {
+      "source_path": "support/azure/azure-monitor/activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/error-install-sql-server-2008-r2.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-install-sql-server"
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/update-or-slipstream-installation.md",
+      "redirect_url": "/sql/database-engine/install-windows/install-sql-server-using-slipstream"
     }
   ]
 }

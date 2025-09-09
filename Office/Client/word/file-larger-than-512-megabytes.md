@@ -1,7 +1,7 @@
 ---
 title: Word cannot open this file because it is larger than 512 Megabytes
 description: Provides workaround steps when you receive Word cannot open this file because it is larger than 512 Megabytes error in Word 2010.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - Open
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Word 2019
   - Word 2016

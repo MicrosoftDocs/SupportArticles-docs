@@ -3,7 +3,7 @@ title: Windows stop error - Status No Memory
 description: This article provides steps to resolve issues where Windows fails to start and displays the status "Status No Memory".
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: genlin
+author: JarrettRenshaw
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: azure-virtual-machines
@@ -15,7 +15,7 @@ ms.date: 06/13/2024
 ms.custom: sap:My VM is not booting
 ---
 
-<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "aartigoyle" for triage before making the further changes to the screenshots.
 --->
 
 # Windows stop error - Status No Memory

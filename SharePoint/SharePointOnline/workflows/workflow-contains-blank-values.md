@@ -1,13 +1,13 @@
 ---
 title: Workflow contains blank values in output from Multiple lines of text column
 description: A Workflow designed to collect information from the Multiple lines of text column contains blank values in output.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Workflows and Automation\Other
   - CSSTroubleshoot

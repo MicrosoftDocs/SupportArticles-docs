@@ -4,7 +4,6 @@ description: This article describes a warning that occurs when backing up an in-
 ms.date: 09/15/2020
 ms.custom: sap:Database Backup and Restore
 ms.reviewer: yqsu, ericbu, daleche
-ms.topic: article
 ---
 # Warning message that contains HkHostBackupGetCheckpointFileInfoV2 and 1000016 is logged in the SQL Server error log
 

@@ -6,27 +6,6 @@
           "**/*.md",
           "**/*.yml"
         ],
-        "src": "admin",
-        "dest": ".",
-        "exclude": [
-          "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "**/docfx.json",
-          "_repo.en-us/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices.md",
-          "SECURITY.md"
-        ]
-      },
-      {
-        "files": [
-          "**/*.md",
-          "**/**.yml"
-        ],
-        "src": "purview",
         "dest": ".",
         "exclude": [
           "**/obj/**",
@@ -129,14 +108,14 @@
         "purview/**/*.md": "purview"      
       },
       "author": {
-        "admin/**/*.md": "helenclu",
-        "enterprise/**/*.md": "helenclu",
+        "admin/**/*.md": "Cloud-Writer",
+        "enterprise/**/*.md": "Cloud-Writer",
         "purview/**/*.md": "cloud-writer",
         "security/**/*.md": "cloud-writer"
       },
       "ms.author": {
-        "admin/**/*.md": "luche",
-        "enterprise/**/*.md": "luche",
+        "admin/**/*.md": "meerak",
+        "enterprise/**/*.md": "meerak",
         "purview/**/*.md": "meerak",
         "security/**/*.md": "meerak"
       }

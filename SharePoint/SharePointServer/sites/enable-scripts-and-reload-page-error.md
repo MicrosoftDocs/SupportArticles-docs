@@ -1,8 +1,8 @@
 ---
 title: Can't open a SharePoint site with scripts error
 description: Describes an issue in which you receive an error message when you try to open a SharePoint Server 2013 site. This issue occurs when the JavaScript feature is disabled in Internet Explorer.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

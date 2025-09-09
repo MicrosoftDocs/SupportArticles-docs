@@ -1,13 +1,13 @@
 ---
 title: Privilege not exist in service account configuration
 description: Describes an issue in which you receive A privilege that the service requires to function properly does not exist in the service account configuration error. Provides a solution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: dakova, clake, v-thomr
 ms.custom: 
   - sap:Search\Search Administration (Setup, configuration, etc)

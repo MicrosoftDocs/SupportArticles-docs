@@ -1,8 +1,8 @@
 ---
 title: Can't open Office documents created using missing fonts
 description: If documents were created using a missing font and the Font folder permissions aren't set to the Windows 10 default values, you receive error messages when opening the documents in Office applications.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

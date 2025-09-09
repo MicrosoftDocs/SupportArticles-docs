@@ -1,7 +1,7 @@
 ---
 title: How to export high-resolution (high-dpi) slides from PowerPoint
 description: Describes how to change the dots per inch (dpi) setting of a PowerPoint slide when you save it as a picture. To do this, you must add a new registry value.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Editing\Data\ImportExport
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - PowerPoint for Microsoft 365
   - PowerPoint 2019

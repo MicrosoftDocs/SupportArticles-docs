@@ -1,13 +1,13 @@
 ---
 title: Cross-domain iframe requests are blocked in SharePoint Online
 description: Describes an issue in which cross-domain iframe requests are blocked in SharePoint Online.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Sites\Error 404: Site Unavailable
   - CSSTroubleshoot

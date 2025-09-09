@@ -23,10 +23,10 @@ Error: failed to generate container "56907e9807c6f4203c3aace8c5a6e3a75832cf07d30
 
 Manually update the `azurestorageaccountkey` field in an Azure file secret to add your base64-encoded storage account key. To make this update, follow these steps:
 
-1. Encode your storage account key in base64 by running the `echo <storage-account-key> | base64` command, such as in the following example:
+1. Encode your storage account key in base64 by running the following command:
 
     ```console
-    echo X+ALAAUgMhWHL7QmQ87E1kSfIqLKfgC03Guy7/xk9MyIg2w4Jzqeu60CVw2r/dm6v6E0DWHTnJUEJGVQAoPaBc== | base64
+    echo <storage-account-key> | base64
     ```
 
 1. [Update your Azure secret file](https://kubernetes.io/docs/concepts/configuration/secret/#editing-a-secret) by running the `kubectl edit secret` command to open the secret file in your default text editor:

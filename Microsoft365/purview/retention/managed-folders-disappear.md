@@ -1,8 +1,8 @@
 ---
 title: Empty managed folders disappear in Exchange Online
 description: Provides information about an issue in which empty folders in Managed Folders keep being deleted.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

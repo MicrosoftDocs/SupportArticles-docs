@@ -1,8 +1,8 @@
 ---
 title: User presence status issues in Outlook
 description: Fixes an issue in which the status of a user presence is displayed incorrectly.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

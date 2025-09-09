@@ -15,7 +15,7 @@ ms.reviewer: dpaul
 appliesto: 
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 08/18/2025
 ---
 # Missing items in eDiscovery search results in Exchange Server 2019
 
@@ -46,7 +46,7 @@ In some scenarios, the time stamp information that's passed on to a subsequent p
 
 ## Workaround
 
-To work around this issue, create a setting override to use the **Search Folder** type in the search query setting. The setting override will be retained for 180 days only. To maintain the override, you must re-create it before it expires.
+To work around this issue, create a setting override to use the **Search Folder** type in the search query setting.
 
 1. Run the following cmdlet to create a setting override:
 

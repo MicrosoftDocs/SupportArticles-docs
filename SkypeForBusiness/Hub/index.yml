@@ -11,8 +11,8 @@ metadata:
   ms.service: o365-administration #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: hub-page # Required
   audience: ITPro
-  author: helenclu #Required; your GitHub user alias, with correct capitalization.
-  ms.author: luche #Required; microsoft alias of author; optional team alias.
+  author: Cloud-Writer #Required; your GitHub user alias, with correct capitalization.
+  ms.author: meerak #Required; microsoft alias of author; optional team alias.
   ms.date: 07/03/2019 #Required; mm/dd/yyyy format.
 
 # productDirectory section (optional)
@@ -23,9 +23,9 @@ productDirectory:
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo-ms-social.png
       links:
-        - url: /troubleshoot/microsoft-365/o365-admin-welcome
+        - url: /troubleshoot/microsoft-365/admin/o365-admin-welcome
           text: Microsoft 365 admin center
-        - url: /troubleshoot/microsoft-365/microsoft-purview-welcome
+        - url: /troubleshoot/microsoft-365/purview/microsoft-purview-welcome
           text: Microsoft Purview
     # Card
     - title: Microsoft Teams
@@ -76,10 +76,10 @@ productDirectory:
       links:
         - url: /troubleshoot/outlook/outlook-client-welcome
           text: Outlook for Windows
-        - url: /troubleshoot/outlook/outlook-mac-welcome
-          text: Outlook for Mac
-        - url: /troubleshoot/outlook/outlook-mobile-welcome
-          text: Outlook for iOS and Android
+        - url: /troubleshoot/outlook/legacy-outlook-mac-welcome
+          text: Legacy Outlook for Mac
+        - url: /troubleshoot/outlook/overview-new-outlook-mac
+          text: New Outlook for Mac
     # Card
     - title: OneDrive
       imageSrc: /office/media/logos/logo-onedriveforbusiness.svg
@@ -90,24 +90,12 @@ productDirectory:
     - title: Microsoft Viva
       imageSrc: /support/media/hub-landing/logo-viva.png
       links:
-        - url: /troubleshoot/viva/connections/viva-connections-welcome
-          text: Microsoft Viva Connections
-        - url: /troubleshoot/viva/engage/viva-engage-welcome
-          text: Microsoft Viva Engage
         - url: /troubleshoot/viva/glint/viva-glint-welcome
           text: Microsoft Viva Glint
         - url: /troubleshoot/viva/insights/viva-insights-welcome
           text: Microsoft Viva Insights
-   # Card
-    - title: Microsoft Viva
-      imageSrc: /support/media/hub-landing/logo-viva.png
-      links:
-        - url: /troubleshoot/viva/learning/viva-learning-welcome
-          text: Microsoft Viva Learning
         - url: /troubleshoot/viva/pulse/viva-pulse-welcome
-          text: Microsoft Viva Pulse  
-        - url: /troubleshoot/viva/viva-suite-administration/viva-suite-administration-welcome
-          text: Microsoft Viva Suite Administration
+          text: Microsoft Viva Pulse
 
 # additionalContent section (optional)
 # Card with summary style

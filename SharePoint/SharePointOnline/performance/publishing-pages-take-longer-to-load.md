@@ -1,13 +1,13 @@
 ---
 title: SharePoint Online publishing pages take longer than expected to load
 description: This article describes an issue where SharePoint Online publishing pages take longer than expected to load, and provides a solution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Pages\Performance
   - CSSTroubleshoot

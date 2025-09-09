@@ -1,8 +1,8 @@
 ---
 title: Error "Couldn't complete the call" when calling from a contact card in Teams
 description: You can't make a call from a contact card in Teams if you aren't enabled for Enterprise Voice. Provides a workaround.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,8 +1,8 @@
 ---
 title: (Mailbox is full) warning when it hasn't reached quota
 description: Fixes an issue in which your receive receives a mailbox is full warning even if the mailbox hasn't reached the quota. Also you may not delete message and not change or accept any calendar invitation.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

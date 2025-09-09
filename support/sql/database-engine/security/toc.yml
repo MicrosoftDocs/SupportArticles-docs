@@ -15,9 +15,5 @@ items:
   href: transfer-logins-passwords-between-instances.md
 - name: Use PFX-formatted certificates
   href: use-pfx-formatted-certificates.md
-- name: Using SQL Server 2014 in the FIPS 140-2-compliant mode
-  href: sql-2014-fips-140-2-compliant-mode.md
 - name: Using SQL Server 2016 in the FIPS 140-2-compliant mode
   href: sql-2016-fips-140-2-compliant-mode.md
-- name: Using SQL Server 2008 in FIPS 140-2-compliant mode
-  href: instructions-in-fips-140-2-compliant-mode.md

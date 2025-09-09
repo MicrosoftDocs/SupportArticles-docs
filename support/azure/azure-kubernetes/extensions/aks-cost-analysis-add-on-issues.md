@@ -7,7 +7,7 @@ ms.author: kaysieyu
 ms.reviewer: pram, chiragpa, joharder, cssakscic, dafell, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
-ms.custom: sap:Extensions, Policies and Add-Ons, references_regions
+ms.custom: sap:Extensions, Policies and Add-Ons, references_regions, innovation-engine
 ---
 
 # AKS Cost Analysis add-on issues
@@ -39,8 +39,13 @@ You can't enable the Cost Analysis add-on on a cluster in which the [Azure Disk 
 
 Run the [az aks update][aks-update] command, and specify the `--enable-disk-driver` parameter. This parameter enables the Azure Disk CSI driver in AKS.
 
+First, define the environment variables for your resource group and AKS cluster, using unique values for repeated runs:
+
 ```azurecli
-az aks update --resource-group <my-resource-group> --name <my-aks-cluster> --enable-disk-driver
+export RANDOM_SUFFIX=$(head -c 3 /dev/urandom | xxd -p)
+export RESOURCE_GROUP="my-aks-resource-group$RANDOM_SUFFIX"
+export AKS_CLUSTER="my-aks-cluster$RANDOM_SUFFIX"
+az aks update --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --enable-disk-driver
 ```
 
 For more information, see [CSI drivers on AKS](/azure/aks/csi-storage-drivers).
@@ -54,7 +59,10 @@ You can enable the Cost Analysis add-on only on a cluster that has a system-assi
 Run the [az aks update][aks-update] command, and specify the `--enable-managed-identity` parameter:
 
 ```azurecli
-az aks update --resource-group <my-resource-group> --name <my-aks-cluster> --enable-managed-identity
+export RANDOM_SUFFIX=$(head -c 3 /dev/urandom | xxd -p)
+export RESOURCE_GROUP="my-aks-resource-group$RANDOM_SUFFIX"
+export AKS_CLUSTER="my-aks-cluster$RANDOM_SUFFIX"
+az aks update --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --enable-managed-identity
 ```
 
 For more information, see [Use a managed identity in AKS](/azure/aks/use-managed-identity).
@@ -78,11 +86,13 @@ You can't enable the Cost Analysis add-on on AKS clusters that are on the free p
 
 ### Solution: Update the cluster to use the Standard or Premium pricing tier
 
-Upgrade the AKS cluster to the Standard or Premium pricing tier. To do this, run one of the following [az aks update][aks-update] commands that specify the `--tier` parameter:
+Upgrade the AKS cluster to the Standard or Premium pricing tier. To do this, run the below [az aks update][aks-update] command that specify the `--tier` parameter. The `--tier` parameter can be set to either `standard` or `premium` (example below shows `standard`): 
 
 ```azurecli
-az aks update --resource-group <my-resource-group> --name <my-aks-cluster> --tier standard
-az aks update --resource-group <my-resource-group> --name <my-aks-cluster> --tier premium
+export RANDOM_SUFFIX=$(head -c 3 /dev/urandom | xxd -p)
+export RESOURCE_GROUP="my-aks-resource-group$RANDOM_SUFFIX"
+export AKS_CLUSTER="my-aks-cluster$RANDOM_SUFFIX"
+az aks update --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --tier standard
 ```
 
 For more information, see [Free and Standard pricing tiers for AKS cluster management](/azure/aks/free-standard-pricing-tiers).
@@ -105,7 +115,7 @@ If the pod is stuck in the Pending state with the FailedScheduling error, the no
 
 ### Solution: Ensure there's sufficient allocatable memory
 
-The current memory request of the cost-analysis-agent pod is set to 500 MB. Ensure that there's sufficient allocatable memory for the pod to be scheduled.
+The current memory request of the cost-analysis-agent pod is set to 500 MB. Ensure that there's sufficient allocatable memory for the pod to be scheduled
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 

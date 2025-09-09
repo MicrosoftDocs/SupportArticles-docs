@@ -1,8 +1,8 @@
 ---
 title: Unable to share files in a large group chat or meeting chat
 description: Describes an issue that you can't share files in a large group chat or meeting chat in Microsoft Teams.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

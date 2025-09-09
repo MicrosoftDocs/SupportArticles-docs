@@ -2,6 +2,7 @@
 title: Cumulative update 27 for SQL Server 2019 (KB5037331)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 27 (KB5037331).
 ms.date: 05/30/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5037331
 ms.reviewer: v-qianli2
 appliesto:
@@ -396,8 +397,8 @@ SQL Server 2019 Database Services Core Instance
 | hkenggen.h                                 | n/a             | 16783     | 10-Jun-2024 | 19:07 | n/a      |
 | hkengine.dll                               | 2019.150.4375.4 | 5793832   | 10-Jun-2024 | 19:07 | x64      |
 | hkengine.lib                               | n/a             | 99126     | 10-Jun-2024 | 19:07 | n/a      |
-| hkgenlib.h                                 | n/a             | 57242     | 10-Jun-2024 | 19:07 | n/a      |
-| hkgenlib.lib                               | n/a             | 3004946   | 10-Jun-2024 | 19:07 | n/a      |
+| hkjarrettrb.h                                 | n/a             | 57242     | 10-Jun-2024 | 19:07 | n/a      |
+| hkjarrettrb.lib                               | n/a             | 3004946   | 10-Jun-2024 | 19:07 | n/a      |
 | hkrtdef.h                                  | n/a             | 9434      | 10-Jun-2024 | 19:07 | n/a      |
 | hkrtgen.h                                  | n/a             | 29067     | 10-Jun-2024 | 19:07 | n/a      |
 | hkruntime.dll                              | 2019.150.4375.4 | 182208    | 10-Jun-2024 | 19:07 | x64      |

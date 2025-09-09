@@ -1,7 +1,7 @@
 ---
 title: Automatic update not working in Teams
-ms.author: luche
-author: helenclu
+ms.author: meerak
+author: Cloud-Writer
 ms.date: 03/11/2024
 audience: ITPro
 ms.topic: troubleshooting

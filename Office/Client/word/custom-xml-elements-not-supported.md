@@ -1,7 +1,7 @@
 ---
 title: Can't open file that contains custom XML elements which are not supported
 description: Describes an issue in which a particular custom XML markup implementation is removed in Word 2007, Word 2010 and Word 2013.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -9,7 +9,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Open\Errors
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 search.appverid: 
   - MET150
 appliesto: 

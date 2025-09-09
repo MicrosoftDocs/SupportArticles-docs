@@ -1,8 +1,8 @@
 ---
 title: OneDrive for Business installation fails
 description: Describes how to create and use an internal OneDrive for Business installation package for a silent installation for users who are confined to an internal network.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

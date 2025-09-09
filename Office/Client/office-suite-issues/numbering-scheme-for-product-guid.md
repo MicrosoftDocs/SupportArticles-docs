@@ -1,11 +1,11 @@
 ---
 title: Numbering scheme for product code GUIDs
 description: Describes the numbering scheme for product code GUIDs in Office 2016.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - DownloadInstall\AdvancedConfiguration\OfficeDeploymentTool

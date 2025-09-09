@@ -1,7 +1,7 @@
 ---
 title: SharePoint customizations revert to the original settings
 description: SharePoint customizations to the Microsoft 365 top navigation revert to the default settings.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:App Bar and Navigation\Other
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - SharePoint Online
   - Microsoft 365

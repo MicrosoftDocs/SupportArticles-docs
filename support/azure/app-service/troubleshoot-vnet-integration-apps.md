@@ -1,7 +1,7 @@
 ---
 title: Azure App Service virtual network integration troubleshooting guide
 description: How to troubleshoot virtual network integration on Windows and Linux apps.
-ms.date: 01/08/2024
+ms.date: 09/03/2025
 ms.service: azure-app-service
 ms.custom: linux-related-content
 author: hepiet
@@ -156,16 +156,13 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 
 :::image type="content" source="./media/troubleshoot-vnet-integration-apps/configuration-issue.png" alt-text="Screenshot that shows how to run  troubleshooter for configuration issues in the Azure portal.":::
 
-**Subnet/VNet deletion issue** - This troubleshooter will check if your subnet has any locks and if it has any unused Service Association Links that might be blocking the deletion of the VNet/subnet.
+**Subnet/VNet deletion issue** - This troubleshooter will check if your subnet has any locks and if it has any unused Service Association Links blocking the deletion of the VNet/subnet. To delete any unused Service Association Links, see the [App Service virtual network integration troubleshooting steps](/azure/app-service/overview-vnet-integration#troubleshooting).
 
 :::image type="content" source="./media/troubleshoot-vnet-integration-apps/deletion-issue.png" alt-text="Screenshot that shows how to run troubleshooter for subnet or virtual network deletion issues.":::
 
 ## Collect network traces
 
 Collecting network traces can be helpful in analyzing issues. In Azure App Services, network traces are taken from the application process. To obtain accurate information, reproduce the issue while starting the network trace collection.
-
-> [!NOTE]
-> The virtual network traffic isn't captured in network traces.
 
 ### Windows App Services
 

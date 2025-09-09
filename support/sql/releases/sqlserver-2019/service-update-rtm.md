@@ -2,6 +2,7 @@
 title: Servicing Update for SQL Server 2019 RTM (KB4517790)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 RTM servicing update (KB4517790).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4517790
 ms.reviewer: v-qianli2
 appliesto:

@@ -1,7 +1,7 @@
 ---
 title: Teams defaults to the domain-joined account
-ms.author: luche
-author: helenclu
+ms.author: meerak
+author: Cloud-Writer
 ms.date: 11/27/2023
 audience: ITPro
 ms.topic: troubleshooting

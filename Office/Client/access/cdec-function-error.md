@@ -1,7 +1,7 @@
 ---
 title: Error when you use CDec() function in Access query
 description: Describes that you receive an error message when you use the CDec() function in a Microsoft Access query.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 ms.custom: 
   - CI 111294
@@ -10,7 +10,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: mattbum
 appliesto: 
   - Access 2010

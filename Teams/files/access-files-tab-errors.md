@@ -1,8 +1,8 @@
 ---
 title: Can't access the Files tab on a Teams channel
 description: Fixes error messages that you receive when you access the Files tab in a Teams channel.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

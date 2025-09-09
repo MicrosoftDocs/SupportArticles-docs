@@ -1,8 +1,8 @@
 ---
 title: Create a default Site collection Term Set if none is present
 description: This article describes how to create a default Site collection Term Set if none is present.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 ms.reviewer: cmahoo
 manager: dcscontentpm
 search.appverid: 

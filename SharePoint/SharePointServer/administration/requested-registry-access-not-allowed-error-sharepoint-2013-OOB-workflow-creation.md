@@ -1,8 +1,8 @@
 ---
 title: Requested registry access is not allowed error in SharePoint 2013 OOB workflow creation
 description: Describes a resolution to a 'Requested registry access is not allowed' error when creating a SharePoint 2013 OOB workflow.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 ms.reviewer: 
 manager: dcscontentpm
 search.appverid: 

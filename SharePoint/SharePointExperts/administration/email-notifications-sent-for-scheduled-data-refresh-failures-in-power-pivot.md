@@ -1,8 +1,8 @@
 ---
 title: Email notifications aren't sent for scheduled data refresh failures in Power Pivot for SharePoint 2016
 description: Describes an issue in which mail notifications aren't sent for scheduled data refresh failures in PowerPivot workbooks in Power Pivot for SharePoint 2016.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 ms.reviwer: zakirh
 manager: dcscontentpm
 search.appverid: 

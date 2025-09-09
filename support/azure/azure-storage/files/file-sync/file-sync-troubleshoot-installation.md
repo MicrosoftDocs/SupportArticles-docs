@@ -3,13 +3,14 @@ title: Troubleshoot Azure File Sync agent installation and server registration
 description: Troubleshoot common issues with installing the Azure File Sync agent and registering Windows Server with the Storage Sync Service. 
 author: khdownie
 ms.service: azure-file-storage
-ms.date: 04/30/2025
+ms.date: 07/14/2025
 ms.author: kendownie
 ms.custom: sap:File Sync
 ---
+
 # Troubleshoot Azure File Sync agent installation and server registration
 
-After deploying the Storage Sync Service, the next steps in deploying Azure File Sync are installing the Azure File Sync agent and registering Windows Server with the Storage Sync Service. This article is designed to help you troubleshoot and resolve issues that you might encounter during these steps.
+After deploying the Storage Sync Service, the next steps in deploying Azure File Sync are installing the Azure File Sync agent and registering Windows Server with the Storage Sync Service. This article helps you troubleshoot and resolve issues that you might encounter during these steps.
 
 ## Agent installation
 
@@ -28,7 +29,7 @@ If the value for the `RebootNeeded` property is `True`, a restart is required.
 
 <a id="agent-update-hangs"></a>**Agent update does not complete**
 
-When upgrading the Azure File Sync agent, you may experience one of the following symptoms:
+When upgrading the Azure File Sync agent, you might experience one of the following symptoms:
 
 - *AfsUpdater.exe* hangs at "installing updates."
 - Agent installation hangs at "Stopping monitoring agent."
@@ -38,7 +39,7 @@ This issue occurs if the currently installed Azure File Sync agent version is ea
 To resolve this issue, perform the following steps:
 
 1. Open **Task Manager**.
-2. Right-click the **LogMan** process and select **End task**. Repeat this step until all LogMan processes are stopped and the agent update completes successfully.
+1. Right-click the **LogMan** process and select **End task**. Repeat this step until all LogMan processes are stopped and the agent update completes successfully.
 
 <a id="agent-installation-failures"></a>**Troubleshoot agent installation failures**
 
@@ -69,7 +70,6 @@ For this example, the agent installation failed with error code -2147287035 (ERR
 <a id="agent-installation-gpo"></a>**Agent installation fails with error ERROR_NO_SYSTEM_RESOURCES and error code 0x800705AA**
 
 The agent installation failed due to insufficient system resources. To resolve this issue, free up memory on the server and retry installation.
-
 
 <a id="agent-installation-gpo"></a>**Agent installation fails with error: Storage Sync Agent Setup Wizard ended prematurely because of an error**
 
@@ -113,7 +113,37 @@ After creating a server endpoint on Windows Server 2012 R2, the following error 
 > drive letter:\ is not accessible.  
 > The parameter is incorrect.
 
-To resolve this issue, install [KB2919355](https://support.microsoft.com/help/2919355/windows-rt-8-1-windows-8-1-windows-server-2012-r2-update-april-2014) and restart the server. If this update can't install because a later update is already installed, go to **Windows Update**, install the latest updates for Windows Server 2012 R2 and restart the server.
+To resolve this issue, install [KB2919355](https://support.microsoft.com/help/2919355/windows-rt-8-1-windows-8-1-windows-server-2012-r2-update-april-2014) and restart the server. If this update can't install because a later update is already installed, go to **Windows Update**, install the latest updates for Windows Server 2012 R2, and restart the server.
+
+## Agent installation via Azure Arc extension
+
+To learn about installing the Azure File Sync Agent for Windows, see [Install and manage the Azure File Sync agent extension on Azure Arc-enabled Windows servers](/azure/storage/file-sync/file-sync-extension).
+
+### Troubleshoot installation failure
+
+1. Navigate to your **Arc Server** in the Azure portal.
+1. Go to the **Extensions** blade for the server.
+1. Locate `AzureFileSyncAgentExtension` and select **View Details** under the **Status** column.
+1. Review the **Error Message** field for detailed information about the cause of the extension deployment failure.
+
+> [!IMPORTANT]
+> The failed extension must be uninstalled and then reinstalled after performing the required remediation steps. Save error message details for troubleshooting or contacting Azure File Sync support, as uninstalling the failed extension will delete these details.
+
+#### Error code reference and remediation
+ 
+| **Error Message** | **Error Code** | **Remediation steps** |
+|-------------------|----------------|------------------------|
+| Cannot install Azure File Sync agent because .NET Framework 4.7.2 or later is required. Install the latest .NET Framework and try again | 206 | Install .NET Framework 4.7.2 or later, then restart your computer. |
+| Azure File Sync agent is already installed. No further action needed. | 0 | No action required. The extension is installed, but no customization is applied. |
+| The Azure File Sync agent is only supported on RTM (Release to Manufacturing) versions of supported operating systems. | 51 | Azure File Sync agent and extension are supported only on RTM versions of Windows Server 2016, 2019, 2022, and 2025. |
+| Proxy settings error. `UseCustomProxy` is enabled but ProxyAddress is missing or invalid. ProxyAddress must be specified without port and length must be less than 255 characters. | 201 | Ensure that the `ProxyAddress` is specified and doesn't exceed 255 characters in length. |
+| Proxy settings error. `UseCustomProxy` is enabled but ProxyPort is missing or invalid. Proxy port must be a number between 1 and 65535 | 202 | Provide a valid `ProxyPort` (a numeric value between 1 and 65535) when `UseCustomProxy` is enabled. |
+| Proxy settings error. `ProxyAuthRequired` is enabled but ProxyUsername is missing or invalid. `ProxyUsername` length must be between 3 and 255 characters | 203 | Ensure `ProxyUsername` is specified and its length is between 3 and 255 characters. |
+| Proxy settings error. `ProxyAuthRequired` is enabled but ProxyPassword is missing or empty | 204 | Provide a non-empty `ProxyPassword` when `ProxyAuthRequired` is enabled. |
+| A system reboot is pending due to Storage Sync file rename operations. Restart your server before installing the Azure File Sync agent. | 83 | A reboot is required. Restart the server before installing the agent again. |
+| The file signature is not valid. Or Signature validation failed for the downloaded MSI file | 86 | The installer file might be corrupted or tampered with. Download the MSI file again from a trusted source. |
+| Certificate chain validation failed. | 86 | Ensure the required root certificates are installed. Refer to [Prerequisites for AKS Edge Essentials offline installation](/azure/aks/aksarc/aks-edge-howto-offline-install).<br><br>If using a proxy, ensure the following domains are bypassed:<br>`login.microsoftonline.com`, `management.azure.com`, `go.microsoft.com`, `download.microsoft.com`, `download.windowsupdate.com`, `crl.microsoft.com`, `oneocsp.microsoft.com`, `ocsp.msocsp.com`, `www.microsoft.com`.<br><br>Restart the computer to apply any updates. |
+| Azure File Sync agent download or configuration failed. Details: Failed to configure auto update settings: Agent install directory not found in registry. Please check the installation. | 214 | Open an elevated PowerShell session and check if .NET 4.7.2 or higher is installed:<br>```$releaseKey = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full" -ErrorAction SilentlyContinue).Release```<br><br>If `$releaseKey` is less than `461808`, .NET 4.7.2 isn't installed. In this case, download and install .NET Framework 4.7.2 or later from the [official .NET download site](https://dotnet.microsoft.com/download/dotnet-framework). |
 
 ## Server registration
 
@@ -136,6 +166,7 @@ To test the network connectivity on the server, run the following PowerShell com
 Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
 Debug-StorageSyncServer -TestNetworkConnectivity
 ```
+
 <a id="server-registration-catastrophic-error"></a>**Server registration using the `Register-AzStorageSyncServer` cmdlet fails with the error: Catastrophic failure (0x8000FFFF)**
 
 A server registration using the `Register-AzStorageSyncServer` cmdlet fails with the following error:
@@ -168,6 +199,7 @@ You can also work around this issue by using the following PowerShell commands t
 Connect-AzAccount -Subscription "<guid>" -Tenant "<guid>"
 Register-AzStorageSyncServer -ResourceGroupName "<your-resource-group-name>" -StorageSyncServiceName "<your-storage-sync-service-name>"
 ```
+
 <a id="server-registration-missing-resource-groups"></a>**Server registration doesn't list all resource groups**
 
 When registering a server using *ServerRegistration.exe*, some resource groups are missing when you select the **Resource Group** drop-down.
@@ -181,8 +213,8 @@ This error occurs when the server lacks the required .NET Framework version. Azu
 To resolve the issue, follow these steps:
 
 1. Download and install .NET Framework 4.7.2 or a later version.
-2. Restart the server after the installation.
-3. Retry the server registration using the server registration UI or PowerShell.
+1. Restart the server after the installation.
+1. Retry the server registration using the server registration UI or PowerShell.
 
 **Server registration fails with error: operation returned an invalid status code 'Unauthorized'**
 
@@ -206,7 +238,7 @@ After completing the manual registration, verify that the server appears under *
 
 :::image type="content" source="media/file-sync-troubleshoot-installation/server-already-registered-error.png" alt-text="Screenshot that shows the Server Registration dialog box with the 'server is already registered' error message.":::
 
-This message with error code 0x80C80064 appears if the server was previously registered with a Storage Sync Service.  To unregister the server from the current Storage Sync Service and then register with a new Storage Sync Service, complete the steps that are described in [Unregister a server with Azure File Sync](/azure/storage/file-sync/file-sync-server-registration#unregister-the-server-with-storage-sync-service).
+This message with error code 0x80C80064 appears if the server was previously registered with a Storage Sync Service.  To unregister the server from the current Storage Sync Service and then register with a new Storage Sync Service, complete the steps in [Unregister a server with Azure File Sync](/azure/storage/file-sync/file-sync-server-registration#unregister-the-server-with-storage-sync-service).
 
 If the server isn't listed under **Registered servers** in the Storage Sync Service, on the server that you want to unregister, run the following PowerShell commands:
 
@@ -215,7 +247,7 @@ Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.Se
 Reset-StorageSyncServer
 ```
 
-> [!Note]  
+> [!NOTE]
 > If the server is part of a cluster, the `Reset-StorageSyncServer` `-CleanClusterRegistration` parameter will unregister all servers in the cluster.
 
 <a id="web-site-not-trusted"></a>**When I register a server, I see numerous "web site not trusted" responses. Why?**
@@ -227,8 +259,8 @@ This issue occurs when the **Enhanced Internet Explorer Security** policy is ena
 If a server isn't listed under **Registered servers** for a Storage Sync Service:
 
 1. Sign in to the server that you want to register.
-2. Open File Explorer, and then go to the Storage Sync Agent installation directory (the default location is *C:\Program Files\Azure\StorageSyncAgent*).
-3. Run *ServerRegistration.exe*, and complete the wizard to register the server with a Storage Sync Service.
+1. Open File Explorer, and then go to the Storage Sync Agent installation directory (the default location is *C:\Program Files\Azure\StorageSyncAgent*).
+1. Run *ServerRegistration.exe*, and complete the wizard to register the server with a Storage Sync Service.
 
 ## See also
 

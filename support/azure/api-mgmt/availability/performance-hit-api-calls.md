@@ -3,8 +3,8 @@ title: Azure API Management Troubleshooting Scenario 4 - Performance hit in API 
 description: Provides troubleshooting guide to an error in which some performance issues and exceptions occur while invoking the API operations.
 ms.date: 08/14/2020
 ms.service: azure-api-management
-ms.author: genli
-author: genlin
+ms.author: jarrettr
+author: JarrettRenshaw
 ms.reviewer: 
 ms.custom: sap:Availability or Unexpected API Responses
 ---

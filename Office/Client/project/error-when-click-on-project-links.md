@@ -1,8 +1,8 @@
 ---
 title: Error when you click on the Projects link in the top navigation bar in Project Online
 description: Provides a fix for an error that occurs when you select the Project link.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

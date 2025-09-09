@@ -1,8 +1,8 @@
 ---
 title: SharePoint app Import Spreadsheet fails with error An unexpected error has occurred. (-2147352567)
 description: Describes what to do if you receive an unexpected error (-2147352567) when using the Import Spreadsheet app in SharePoint.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 ms.reviewer: 
 manager: dcscontentpm
 search.appverid: 

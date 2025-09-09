@@ -110,6 +110,9 @@ Getting Autolabeling rules in your organization.
 Getting IB labels in your organization.
 Getting IB policies in your organization.
 Getting IB Application Status for your organization.
+Getting IB Configuration from ExO.
+Getting Hold Policy, Rules for your Organization.
+Getting DLM Policies and Rules for your Organization.
 Starting UX......
 ```
 
@@ -135,6 +138,12 @@ Follow these steps:
    - **eDiscovery** \> **Hold**
    - **eDiscovery** \> **Search**
    - **eDiscovery** \> **Export**
+   - **Data Lifecycle Management** \> **Archiving**
+   - **Data Lifecycle Management** \> **Exchange Retention**
+   - **Data Lifecycle Management** \> **SharePoint Retention**
+   - **Data Lifecycle Management** \> **Teams Retention**
+   - **Data Lifecycle Management** \> **Disposition**
+   - **Data Lifecycle Management** \> **Journaling**
 
    For example, to collect support data for an issue in which a sensitive information type (SIT) is incorrectly detected in a document, select the **Data Classification** \> **Classification** template.
 
@@ -146,7 +155,7 @@ Follow these steps:
 
 4. In the folder dialog box that opens, select a parent folder for the diagnostic data.
 
-   Wait for the tool to finish processing the diagnostic data and write the processed data to an .json file. The tool generates a .zip file that packages the .json file together with any diagnostic files from the template. The tool then saves the .zip file to the parent folder that you selected, and then opens a completion dialog box.
+   Wait for the tool to finish processing the diagnostic data and write the processed data to a .json file and a .xml file. The tool generates a .zip file that packages the .json file and the .xml file together with any diagnostic files from the template. The tool then saves the .zip file to the parent folder that you selected, and then opens a completion dialog box.
 
    As an example of data processing, if you select the **Data Classification** \> **Classification** template, the tool fetches the applicable rule packs and keyword dictionaries, and then tests data classification on the sample file that you specify in the template.
 

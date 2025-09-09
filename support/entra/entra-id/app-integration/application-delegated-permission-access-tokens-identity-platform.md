@@ -34,7 +34,7 @@ Delegated permission tokens can only be obtained from the following flows:
 * [Authorization code grant flow](/azure/active-directory/develop/v2-oauth2-auth-code-flow)
 * [On-Behalf-Of flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow)
 * [Device authorization grant flow](/azure/active-directory/develop/v2-oauth2-device-code)
-* [Resource Owner Password Credentials grant flow](/azure/active-directory/develop/v2-oauth2-device-code)
+* [Resource Owner Password Credentials grant flow](/entra/identity-platform/v2-oauth-ropc)
 
 ## Identify the permission type for an access token
 

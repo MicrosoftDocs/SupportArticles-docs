@@ -1,3 +1,4 @@
+items:
 - name: Welcome
   href: welcome-virtual-machines-windows.yml
 
@@ -35,8 +36,8 @@
         href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
       - name: Upgrade Windows Server 2008/2008 R2
         href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Windows 2003 Server
-    href: run-win-server-2003.md
+  - name: Windows Server 2003 and later versions End Of Support (EOS)
+    href: ms-azure-windows-eos.md
   - name: 32-bit operating systems
     href: support-32-bit-operating-systems-virtual-machines.md
   - name: Hybrid use benefit images are retired
@@ -226,6 +227,8 @@
     href: in-place-system-upgrade.md
   - name: Upgrade VM to contain more than 64 vCPUs
     href: vm-cannot-upgrade-64-vcpu.md
+  - name: Windows Update errors that require in-place upgrades
+    href: windows-update-errors-requiring-in-place-upgrade.md
   - name: Known errors and issues
     items:
     - name: Error code 0x80070002
@@ -234,6 +237,10 @@
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070490
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error Code 0x8007045b
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
+    - name: Error Code 0x800f0831
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md
 
 - name: My VM is not booting
   items:
@@ -336,8 +343,16 @@
       href: applying-group-policy-shortcuts-policy.md
     - name: Azure VM startup hangs at "Applying Software Installation policy"
       href: applying-software-installation-policy.md
-    - name: Azure VM startup hangs at "IRQL_NOT_LESS_OR_EQUAL"
+    - name: Azure VM startup hangs at "Please wait for the Group Policy Client"
+      href: please-wait-for-the-group-policy-client.md
+    - name: Bug check 0x0000001A - IRQL_NOT_LESS_OR_EQUAL
       href: interrupt-request-line-not-less-equal.md
+    - name: Bug check 0x00000019 - BAD_POOL_HEADER
+      href: bad-pool-header.md
+    - name: Bug check 0x0000001A - MEMORY_MANAGEMENT
+      href: bug-check-memory-management.md
+    - name: Bug check 0x0000001E - KMODE_EXCEPTION_NOT_HANDLED
+      href: kernel-mode-exception-not-handled.md
     - name: Troubleshoot Windows VM OS with missing boot manager
       href: os-bootmgr-missing.md
     - name: OS isn't found
@@ -352,8 +367,7 @@
       href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
     - name: Azure VM cannot RDP - working on features
       href: azure-vm-cannot-rdp-working-features.md
-    - name: Azure VM startup hangs at "Please wait for the Group Policy Client"
-      href: please-wait-for-the-group-policy-client.md
+    
 
 - name: Cannot start or stop my VM
   items:
@@ -367,6 +381,8 @@
     href: restart-resize-error-troubleshooting.md
   - name: Restarting, shutting down, or stopping services
     href: boot-error-troubleshoot-windows.md
+  - name: Slow VM start caused by extensions troubleshooting
+    href: slow-vm-start-extensions-troubleshooting.md
 
 - name: VM restarts or stops unexpectedly
   items:

@@ -1,8 +1,8 @@
 ---
 title: Authentication issues in SharePoint Designer 2013
 description: Provides a resolution for authentication issues in SharePoint Designer 2013.
-ms.author: luche
-author: helenclu
+ms.author: meerak
+author: Cloud-Writer
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

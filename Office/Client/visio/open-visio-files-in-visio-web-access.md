@@ -1,7 +1,7 @@
 ---
 title: Can't open Visio files in Visio Web Access
 description: Describes an issue in which you can't open Visio files in Visio Web Access even though you have Visio Viewer installed on the computer. Provides a resolution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,8 +11,8 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Performance, Usability & Features
   - Open
   - CSSTroubleshoot
-ms.author: luche
-ms.reviewer: elzhou, genli, christys
+ms.author: meerak
+ms.reviewer: elzhou, jarrettr, aartigoyle
 appliesto: 
   - Visio Pro for Microsoft 365
   - Visio 2019

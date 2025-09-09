@@ -1,8 +1,8 @@
 ---
 title: The name on the security certificate is invalid
 description: Fixes an issue in which you receive a The name on the security certificate is invalid or does not match the name of the site error message when you start Outlook that has one or more Microsoft SharePoint calendars or lists.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

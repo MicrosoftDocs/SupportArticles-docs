@@ -1,6 +1,24 @@
 items:
 - name: Troubleshoot Azure Monitor
   href: welcome-azure-monitor.yml
+- name: Activity Logs
+  items:
+  - name: I can't configure export of Activity Logs
+    items: 
+    - name: Configuring Export in Azure Portal
+      items: 
+      - name: Troubleshoot pushing subscription level Activity Logs to Sentinel
+        href: activity-logs/config-export/push-subscription-activity-logs-to-sentinel.md
+      - name: Troubleshoot Azure CLI configuration due to proxy issues
+        href: activity-logs/config-export/troubleshoot-azure-cli-configuration-issues.md
+      - name: Troubleshoot the export of audit logs to another tenant when using Azure Lighthouse
+        href: activity-logs/config-export/troubleshoot-export-of-audit-logs-to-another-tenant.md
+      - name: Troubleshoot Activity Log download issues
+        href: activity-logs/config-export/troubleshoot-activity-log-download-issues.md
+      - name: Troubleshoot permission errors in Activity Log configuration
+        href: activity-logs/config-export/troubleshoot-permission-errors-in-activity-log-configuration.md
+      - name: Troubleshoot the export of Activity Logs across Azure subscriptions
+        href: activity-logs/config-export/troubleshoot-export-of-activity-logs-across-subscriptions.md
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
@@ -83,6 +101,18 @@ items:
       href: app-insights/agent/change-analysis-troubleshoot.md
 - name: Log Analytics
   items:
+  - name: Configure and Manage Log analytics tables
+    items:
+    - name: Understand and mitigate high data consumption in Log Analytics
+      href: log-analytics/configure-and-manage-log-analytics-tables/understand-and-mitigate-high-data-consumption-log-analytics.md
+    - name: Troubleshoot custom table creation errors in Azure
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-table-creation-errors.md
+    - name: Troubleshoot custom log table creation in Azure
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-log-table-creation.md
+    - name: Troubleshoot performance logs not populating in Azure Government
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-performance-logs-not-populating.md
+    - name: Troubleshoot deleting migrated custom tables in Log Analytics
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-deleting-migrated-custom-tables.md
   - name: Log Analytics workspaces
     items:
     - name: Error code 0x80090016 - keyset doesn't exist

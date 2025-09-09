@@ -1,13 +1,13 @@
 ---
 title: Active users aren't imported through AD Import
 description: Discusses an issue in which active users aren't imported into the Profile database through AD Import. Provides a workaround.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Administration\Service Applications (except Search)
   - CI 109531

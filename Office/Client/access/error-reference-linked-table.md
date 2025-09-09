@@ -1,8 +1,8 @@
 ---
 title: Errors when open or make a reference to a linked table
 description: Describes the problem that occurs when you open or make a reference to a linked table in Access. You may receive the Couldn't find input table or query 'name' error message.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

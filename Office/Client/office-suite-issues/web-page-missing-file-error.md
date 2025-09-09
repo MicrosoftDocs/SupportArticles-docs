@@ -1,7 +1,7 @@
 ---
 title: Can't view or change an Office document that's saved as a Web page
 description: Describes how you cannot view or change an Office document that is saved as a Web page and stored in Windows SharePoint Services. To work around this problem, you can save the document as a single-file Web page or use the Upload Multiple Files option.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Web Server Integration (SharePoint & Non-SharePoint)
   - Save
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Microsoft Excel
   - Microsoft PowerPoint

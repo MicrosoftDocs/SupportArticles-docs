@@ -1,8 +1,8 @@
 ---
 title: Unable to run macro in Access database
 description: Fixes an issue in which you can't run a macro that calls a VBA function in an Access database.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

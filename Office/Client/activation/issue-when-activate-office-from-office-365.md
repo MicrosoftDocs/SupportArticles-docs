@@ -1,13 +1,13 @@
 ---
 title: Cannot connect to your account when activate Office from Microsoft 365
 description: Describes how to troubleshoot Office from Microsoft 365 installation and activation issues.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.custom: 
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - Activation\Errors\Unable to connect

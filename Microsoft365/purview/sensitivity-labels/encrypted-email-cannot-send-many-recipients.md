@@ -1,8 +1,8 @@
 ---
 title: Can't send an encrypted email to many recipients
 description: Provides some options to avoid an issue in which you can't send an encrypted email message to many recipients.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

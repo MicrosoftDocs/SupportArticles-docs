@@ -1,8 +1,8 @@
 ---
 title: Password Synchronization has not been activated error.
 description: Describes an issue in Microsoft 365, Microsoft Intune, or Azure in which user passwords fail to sync, and an event ID 6900 error is logged in Event Viewer. Provides a resolution.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

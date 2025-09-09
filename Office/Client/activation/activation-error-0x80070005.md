@@ -1,9 +1,9 @@
 ---
 title: Microsoft 365 Apps activation error 0x80070005
 description: Troubleshooting steps for activation error 0x80070005.
-author: helenclu
+author: Cloud-Writer
 ms.reviewer: vikkarti
-ms.author: luche
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Unable to find specified web in the given URL
 description: Describes an error unable to find specified web in the given URL when you try to use a calendar overlay from one SharePoint Online site collection to another.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Lists and Libraries\Other
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - SharePoint Online
 ms.date: 12/17/2023

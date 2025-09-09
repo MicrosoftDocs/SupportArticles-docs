@@ -1,8 +1,8 @@
 ---
 title: Can't sync recurring Calendar items with error 0x80004005
 description: Fixes an issue in which Outlook doesn't sync recurring Calendar items with error 0x80004005.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

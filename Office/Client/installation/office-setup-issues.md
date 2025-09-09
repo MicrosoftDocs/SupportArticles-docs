@@ -1,7 +1,7 @@
 ---
 title: How to use a setup log to troubleshoot setup problems in Office
 description: Explains how to use Office installation log files to troubleshoot Office setup issues.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - DownloadInstall\SxS\SxSOrPerpetual
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Office Professional 2010
   - Microsoft Outlook 2010

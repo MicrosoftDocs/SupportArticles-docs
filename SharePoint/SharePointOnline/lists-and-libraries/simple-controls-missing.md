@@ -1,7 +1,7 @@
 ---
 title: The simple controls are missing for a SharePoint Online document library
 description: This article explains an issue where the simple controls are missing for a SharePoint document library, and provides a solution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Lists and Libraries\List Designs
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - SharePoint Online
 ms.date: 12/17/2023

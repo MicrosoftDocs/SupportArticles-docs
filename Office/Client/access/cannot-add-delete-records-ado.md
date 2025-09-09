@@ -1,7 +1,7 @@
 ---
 title: Can't add or delete records with ADO methods
 description: Describes a problem that may occur when you use ActiveX Data Objects (ADO) with the AddNew method or with the Delete method of the Recordset object. When you open the recordset with an unspecified lock type in Access, you may receive an error message.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 ms.custom: 
   - CI 111294
@@ -10,7 +10,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 ms.reviewer: robdil
 appliesto: 
   - Access 2007

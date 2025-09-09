@@ -1,8 +1,8 @@
 ---
 title: Missing an argument for parameter error
 description: Describes an issue in which you receive an error message when the required argument isn't used for the Set-SPPowerPointServiceApplication command. This problem occurs in a PowerPoint Online environment.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

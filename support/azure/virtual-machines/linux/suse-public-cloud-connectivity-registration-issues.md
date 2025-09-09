@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot connectivity and registration for SUSE SLES VMs
+title: Troubleshoot Connectivity and Registration for SUSE SLES VMs
 description: Troubleshoot scenarios in which an Azure VM that has a SUSE Linux Enterprise Server image can't connect to the SUSE Subscription Management Tool (SMT) repository.
 ms.date: 05/12/2025
 author: rnirek
@@ -144,7 +144,7 @@ The output doesn't show the server certificate or SSL session.
 
 This scenario usually occurs when the command crosses a Network Virtual Appliance (NVA) that performs SSL packet inspection. This inspection causes the NVA to inject its own SSL certificate into the encrypted session.
 
-Because SUSE uses certificate pinning, another injected SSL certificate can break the pinning operation. If the pinning is broken, the SUSE repository will deny the connection.
+Because SUSE uses certificate pinning, another injected SSL certificate can break the pinning operation. If the pinning is broken, the SUSE repository denies the connection.
 
 ### Resolution
 
@@ -200,9 +200,9 @@ sudo tail /var/log/cloudregister
 2025-01-29 20:20:06,917 ERROR:No response from: [('23.101.171.119', '2603:1030:603::2e9'), ('23.101.164.199', '2603:1030:603::625'), ('23.96.231.74', '2603:1030:603::2e6')]
 ```
 
-The output indicates that a connectivity error exists. However, this is not true. This indication occurs because the error handling process in the registration scripts doesn't show the certificate errors from the old libraries.
+The output indicates that a connectivity error exists. However, this indication isn't true. It occurs because the error handling process in the registration scripts doesn't show the certificate errors from the old libraries.
 
-The script output might also mistakenly indicate that a certificate for one of the SMT IPs that's displayed in the `sudo tail /var/log/cloudregister` command output can't be found. This is also a library issue, not an issue that affects the CA list on the VM.
+The script output might also mistakenly indicate that a certificate for one of the SMT IPs that's displayed in the `sudo tail /var/log/cloudregister` command output can't be found. This issue is also a library issue, not one that affects the CA list on the VM.
 
 ### Cause
 
@@ -210,17 +210,22 @@ If instances aren't regularly updated, they can become incompatible with our upd
 
 ### Resolution
 
-1. Create a PAYG instance by using the same OS as the that has broken repos.
+1. Create a PAYG instance by using the same OS as the one that has the broken repos.
 2. Create a temporary directory:
 
     ```bash
     sudo mkdir -p /root/packages/rpms
     ```
-3. Download the following packages:
+3. Download the following packages based on SLES versions of the affected VM:
 
-    ```bash
-    sudo zypper --pkg-cache-dir /root/packages/ download cloud-regionsrv-client cloud-regionsrv-client-plugin-azure regionServiceClientConfigAzure python3-azuremetadata SUSEConnect python3-cssselect python3-toml python3-lxml python3-M2Crypto python3-zypp-plugin libsuseconnect suseconnect-ruby-bindings docker libcontainers-common containerd libcontainers-sles-mounts runc
-    ```
+   SLES 12
+   ```bash
+   sudo zypper --pkg-cache-dir /root/packages/ download cloud-regionsrv-client cloud-regionsrv-client-plugin-azure regionServiceClientConfigAzure python3-azuremetadata python3-cssselect python3-lxml python3-M2Crypto python3-zypp-plugin python3-dnspython suseconnect-ruby-bindings suseconnect-ng
+   ```
+   SLES 15
+   ```bash
+   sudo zypper --pkg-cache-dir /root/packages/ download cloud-regionsrv-client cloud-regionsrv-client-plugin-azure regionServiceClientConfigAzure python3-azuremetadata suseconnect-ng python3-cssselect python3-toml python3-lxml python3-M2Crypto python3-zypp-plugin python3-dnspython libsuseconnect suseconnect-ruby-bindings docker docker-bash-completion runc containerd libcontainers-common bash-completion
+   ```
 4. Run the following commands:
 
     ```bash
@@ -308,7 +313,7 @@ Error: Activating SLES_SAP 12.5 x86_64 ... Error: Registration server returned '
 
 ### Cause
 
-The VMs can't to connect to SUSE repositories because of outdated SUSE Public Cloud packages.
+The VMs can't connect to SUSE repositories because of outdated SUSE Public Cloud packages.
 
 ### Resolution
 

@@ -4,7 +4,7 @@ items:
   topicHref: /
   items:
   - name: Microsoft Viva
-    tocHref: /viva/
+    tocHref: /troubleshoot/viva/
     topicHref: /viva/index
     items:
     - name: Troubleshooting

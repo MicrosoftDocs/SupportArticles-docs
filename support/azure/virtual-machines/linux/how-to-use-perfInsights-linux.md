@@ -13,7 +13,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
 ms.date: 06/10/2025
-ms.author: genli
+ms.author: jarrettr
 ---
 # Troubleshoot Linux virtual machine performance issues with Performance Diagnostics (PerfInsights)
 

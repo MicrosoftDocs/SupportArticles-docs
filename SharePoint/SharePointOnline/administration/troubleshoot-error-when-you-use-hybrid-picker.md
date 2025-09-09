@@ -1,7 +1,7 @@
 ---
 title: Error when you use the SharePoint Hybrid Picker
 description: Describes an issue when you use the SharePoint Hybrid Picker.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.custom:
   - sap:Permissions\Permission Groups
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - SharePoint Online
 ms.date: 08/13/2024

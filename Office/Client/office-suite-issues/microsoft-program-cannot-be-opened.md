@@ -1,7 +1,7 @@
 ---
 title: Microsoft program can't be opened because of a problem
 description: Describes an error that occurs when you open a Microsoft Office for Mac 2008/2011 program that occurs when the program was moved or duplicated. Provides resolution steps.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -11,7 +11,7 @@ ms.custom:
   - sap:Office Suite (Access, Excel, OneNote, PowerPoint, Publisher, Word, Visio)\Installation, Update, Deployment,  Activation
   - DownloadInstall\InstallErrors\AppLaunchErrors
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Office for Mac 2008
   - Office for Mac 2011

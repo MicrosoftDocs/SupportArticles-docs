@@ -30,8 +30,12 @@
       href: create-and-use-apps/custom-pages-sdk-script-not-load.md
     - name: Filter expression returns extra blank records in results
       href: create-and-use-apps/filter-blank-records.md
-    - name: Troubleshoot wrap issues
+    - name: '"Something went wrong" error when using the wrap feature' 
+      href: manage-apps/something-went-wrong-error-codes.md
+    - name: Troubleshoot common wrap issues
       href: manage-apps/wrap-issues.md
+    - name: Troubleshoot Azure key vault errors in the wrap wizard
+      href: manage-apps/azure-key-vault-errors.md
 - name: Model-driven apps
   items:
     - name: How to create a vanilla repro model-driven app

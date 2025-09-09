@@ -1,7 +1,7 @@
 ---
 title: Issue when you access a OneNote notebook from Teams
 description: Provides a workaround for when you're unable to access a OneNote notebook from Teams.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Teams Apps and Connectors\OneNote
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - Microsoft Teams
 ms.date: 01/02/2024

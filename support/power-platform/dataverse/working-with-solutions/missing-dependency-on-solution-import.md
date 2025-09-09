@@ -2,7 +2,7 @@
 title: Missing dependencies during solution import in Power Apps
 description: Works around an issue about missing dependencies that occurs when you import a solution in the target environment in Microsoft Power Apps.
 ms.reviewer: matp
-ms.date: 04/17/2025
+ms.date: 07/15/2025
 author: swatimadhukargit
 ms.author: swatim
 ms.custom: sap:Working with Solutions\Dependencies prevent a solution import
@@ -28,9 +28,6 @@ The solution has dependencies on a component that exists in the source environme
 This issue might occur when applications are upgraded to the latest version through Microsoft scheduled maintenance in the source environment, but they aren't upgraded in the target environment.
 
 ## Workaround
-
-> [!IMPORTANT]
-> The experience described here might not be available to the environments of all the regions yet.
 
 To work around this issue, follow these steps:
 
@@ -64,7 +61,16 @@ Next to the application name, you'll find an **Install** or **Update** button th
 
   - System administrators can use the **Update** button to open the application update page in the Power Platform admin center.
   - Non-system administrators can use the **Copy Update Link** button to copy the application update link and request their system administrator to update the application.
-  
+
+### Missing dependencies coming from a first-party Dynamics 365 application
+
+> [!IMPORTANT]
+> This experience described below might not be available to the environments of all the regions yet.
+
+When a solution depends only on components from first-party Dynamics 365 applications that are missing or outdated in the target environment, the system might be able to automatically update or install these components. In this case, no manual action is required from the user. The **Missing dependencies** page will display the **Deploy Dependencies** option. If you select the option and select the **Import** button, the system will first install or update the required dependencies and then proceed to import the solution. If the update or installation of a dependent application fails, the solution import will also fail. You can track the status of these updates or installations on the solution history page.
+
+:::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png" alt-text="Screenshot that shows the Applications section of the Missing dependencies page with a first-party application that can be auto installed or updated from the system." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png":::
+
 ### Missing dependencies coming from another managed solution
 
 This issue occurs when the solution relies on components from another managed solution that's missing in the target environment. You can find these dependencies in the **Managed Solutions** section of the **Missing dependencies** page. Expanding the section provides additional details.

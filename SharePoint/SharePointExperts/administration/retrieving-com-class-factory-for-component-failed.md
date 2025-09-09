@@ -1,8 +1,8 @@
 ---
 title: Excel Services and PowerPivot show Retrieving the COM class factory for component with CLSID {BDEADF26-C265-11D0-BCED-00A0C90AB50F} failed due to the 800703fa error
 description: Fixes an error that occurs when you open a workbook in a browser by using Excel Services, or when a scheduled data refresh fails in PowerPivot for SharePoint.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 ms.reviwer: zakirh
 manager: dcscontentpm
 search.appverid: 

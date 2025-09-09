@@ -1,7 +1,7 @@
 ---
 title: Registry entries about Kerberos protocol and Key Distribution Center (KDC)
 description: Lists the registry entries in Windows Server that can be used for Kerberos protocol testing and troubleshooting Kerberos authentication issues.
-ms.date: 01/15/2025
+ms.date: 07/18/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -124,8 +124,8 @@ The registry entries that are listed in this section must be added to the follow
 
 - Entry: StronglyEncryptDatagram
 
-  - Type: REG_BOOL
-  - Default value: FALSE
+  - Type: REG_DWORD
+  - Default value: 0 (FALSE). Starting in Windows Server 2025 and Windows 11 24H2, the default value is 1 (TRUE)
 
     This value contains a flag that indicates whether to use 128-bit encryption for datagram packets.
 
@@ -231,7 +231,7 @@ The registry entries that are listed in this section must be added to the follow
   - Default value: 0
   - Possible values: 0 (false) or any non-zero value (true)
 
-    This value indicates whether IP addresses will be added in the Ticket-Granting Service Reply (TGS_REP).
+    This value indicates whether IP addresses will be added in the Ticket-Granting Service Reply (TGS_REP). If the resource server enforces validation of this optional field and detects a mismatch between the client's IP address and the ticket's value, the error KRB_AP_ERR_BADADDR ("Incorrect net address") is returned, and the logon fails.
 
 - Entry: KdcDontCheckAddresses
 

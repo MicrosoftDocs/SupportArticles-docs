@@ -6,8 +6,8 @@ metadata:
   title: Windows Server troubleshooting documentation
   description: Documentation for troubleshooting common issues with Windows Server. # Required; article description that is displayed in search results. < 160 chars.  
   ms.topic: landing-page # Required
-  author: Deland-Han  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: delhan #Required; microsoft alias of author; optional team alias.
+  author: kaushika-msft  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: kaushika #Required; microsoft alias of author; optional team alias.
   ms.date: 01/15/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

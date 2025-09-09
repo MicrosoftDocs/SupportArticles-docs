@@ -1,9 +1,10 @@
+items:
 - name: Learn
   tocHref: /
   topicHref: /
   items:
   - name: Microsoft 365
-    tocHref: /microsoft-365/
+    tocHref: /troubleshoot/microsoft-365/
     topicHref: /microsoft-365/index
     items:
     - name: Troubleshooting

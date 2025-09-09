@@ -1,9 +1,9 @@
 --- 
-title: Troubleshoot memory saturation in AKS clusters
+title: Troubleshoot Memory Saturation in AKS Clusters
 description: Troubleshoot memory saturation in Azure Kubernetes Service (AKS) clusters across namespaces and containers. Learn how to identify the hosting node.
-ms.date: 06/27/2025
+ms.date: 08/18/2025
 editor: v-jsitser
-ms.reviewer: chiragpa, aritraghosh, v-leedennis
+ms.reviewer: chiragpa, aritraghosh, v-leedennis, v-liuamson
 ms.service: azure-kubernetes-service
 ms.custom: sap:Node/node pool availability and performance
 ---
@@ -14,7 +14,7 @@ This article discusses methods for troubleshooting memory saturation issues. Mem
 ## Prerequisites
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) command-line tool. To install kubectl by using [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
-- The open source project [Inspektor Gadget](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#what-is-inspektor-gadget) for advanced process level memory analysis. For more information, see [How to install Inspektor Gadget in an AKS cluster](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#how-to-install-inspektor-gadget-in-an-aks-cluster). 
+- The open source project [Inspektor Gadget](../logs/capture-system-insights-from-aks.md#what-is-inspektor-gadget) for advanced process level memory analysis. For more information, see [How to install Inspektor Gadget in an AKS cluster](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster).
 
 ## Symptoms
 
@@ -22,10 +22,10 @@ The following table outlines the common symptoms of memory saturation.
 
 | Symptom | Description |
 |---|---|
-| Unschedulable pods | Additional pods can't be scheduled if the node is close to its set memory limit. |
+| Unschedulable pods | More pods can't be scheduled if the node is close to its set memory limit. |
 | Pod eviction | If a node is running out of memory, the kubelet can evict pods. Although the control plane tries to reschedule the evicted pods on other nodes that have resources, there's no guarantee that other nodes have sufficient memory to run these pods. |
 | Node not ready | Memory saturation can cause `kubelet` and `containerd` to become unresponsive, eventually causing node readiness issues. |
-| Out-of-memory (OOM) kill | An OOM problem occurs if the pod eviction can't prevent a node issue. |
+| Out-of-memory (OOM) kill | An OOM problem occurs if the pod eviction can't prevent a node issue. For more information, see [Troubleshoot OOMkilled in AKS clusters](./troubleshoot-oomkilled-aks-clusters.md).|
 
 ## Troubleshooting checklist
 
@@ -43,7 +43,7 @@ Use either of the following methods to identify nodes that have memory saturatio
 
 Container Insights is a feature within AKS that monitors container workload performance. For more information, see [Enable Container insights for Azure Kubernetes Service (AKS) cluster](/azure/azure-monitor/containers/container-insights-enable-aks).
 
-1. On the [Azure portal](https://portal.azure.com), search for and select **Kubernetes services**.
+1. In the [Azure portal](https://portal.azure.com), search for and select **Kubernetes services**.
 1. In the list of Kubernetes services, select the name of your cluster.
 1. In the navigation pane of your cluster, find the **Monitoring** heading, and then select **Insights**.
 1. Set the appropriate **Time Range** value.
@@ -53,15 +53,17 @@ Container Insights is a feature within AKS that monitors container workload perf
 
    :::image type="complex" source="./media/identify-memory-saturation-aks/nodes-containerInsights-memorypressure.png" alt-text="Azure portal screenshot of the Nodes view in Container Insights within an Azure Kubernetes Service (AKS) cluster." lightbox="./media/identify-memory-saturation-aks/nodes-containerInsights-memorypressure.png":::
 
-      The Azure portal screenshot shows a table of nodes. The table column values include **Name**, **Status**, **Max %** (the percentage of memory capacity that's used), **Max** (memory usage), **Containers**, **UpTime**, **Controller**, and **Trend Max % (1 bar = 15m)**. The nodes have an expand/collapse arrow icon next to their names.
+   The Azure portal screenshot shows a table of nodes. The table column values include **Name**, **Status**, **Max %** (the percentage of memory capacity that's used), **Max** (memory usage), **Containers**, **UpTime**, **Controller**, and **Trend Max % (1 bar = 15m)**. The nodes have an expand/collapse arrow icon next to their names.
 
-      There are four rows in the table, and they represent four nodes in an AKS agent pool virtual machine scale set. The statuses are all **Ok**, the maximum percentage of memory used is from 64 to 58 percent, the maximum memory used is from 2.6 GB to 2.86 GB, the number of containers used is 20 to 24, and the uptime spans 6 to 15 days. No controllers are listed.
+      There are four rows in the table that represent four nodes in an AKS agent pool virtual machine (VM) scale set. The statuses are all **Ok**, the maximum percentage of memory used is from 64 to 58 percent, the maximum memory used is from 2.6 GB to 2.86 GB, the number of containers used is 20 to 24, and the uptime spans 6 to 15 days. No controllers are listed.
    :::image-end:::
 
 1. Because the first node has the highest memory usage, select that node to investigate the memory usage of the pods that are running on the node.
 
    :::image type="complex" source="./media/identify-memory-saturation-aks/containers-containerinsights-memorypressure.png" alt-text="Azure portal screenshot of a node's containers under the Nodes view in Container Insights within an Azure Kubernetes Service (AKS) cluster." lightbox="./media/identify-memory-saturation-aks/containers-containerinsights-memorypressure.png":::
-      The Azure portal screenshot shows a table of nodes, and the first node is expanded to display an **Other processes** heading and a sublist of processes that are running within the first node. As for the nodes themselves, the table column values for the processes include **Name**, **Status**, **Max %** (the percentage of memory capacity that's used), **Max** (memory usage), **Containers**, **UpTime**, **Controller**, and **Trend Max % (1 bar = 15m)**. The processes also have an expand/collapse arrow icon next to their names.
+
+      The Azure portal screenshot shows a table of nodes. The first node is expanded to display an **Other processes** heading and a sublist of processes that are running within the first node. As for the nodes themselves, the table column values for the processes include **Name**, **Status**, **Max %** (the percentage of memory capacity that's used), **Max** (memory usage), **Containers**, **UpTime**, **Controller**, and **Trend Max % (1 bar = 15m)**. The processes also have an expand/collapse arrow icon next to their names.
+
       Nine processes are listed under the node. The statuses are all **Ok**, the maximum percentage of memory used for the processes ranges from 16 to 0.3 percent, the maximum memory used is from 0.7 mc to 22 mc, the number of containers used is 1 to 3, and the uptime is 3 to 4 days. Unlike for the node, the processes all have a corresponding controller listed. In this screenshot, the controller names are prefixes of the process names, and they're hyperlinked.
    :::image-end:::
 
@@ -89,7 +91,7 @@ This procedure uses the kubectl commands in a console. It displays only the curr
    aks-testmemory-30616462-vmss000002   74m          3%     1715Mi          31%
    ```
 
-2. Get the list of pods that are running on the node and their memory usage by running the [kubectl get pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) and [kubectl top pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-pod-em-) commands: 
+2. Get the list of pods that are running on the node and their memory usage by running the [kubectl get pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) and [kubectl top pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-pod-em-) commands:
 
    ```bash
    kubectl get pods --all-namespaces --output wide \
@@ -155,17 +157,17 @@ This procedure uses the kubectl commands in a console. It displays only the curr
    ```
 
     > [!NOTE]
-    > The percentage of CPU or memory usage for the node is based on the allocatable resources on the node rather than the actual node capacity.
+    > The percentage of CPU or memory usage for the node is based on the allocatable resources on the node instead of on the actual node capacity.
 
 ---
 
-Now that you've identified the pods that are using high memory, you can identify the applications that are running on the pod or identify processes that may be consuming excess memory.
+Now that you've identified the pods that are using high memory, you can identify the applications that are running on the pod or identify processes that might be consuming excess memory.
 
 ### Step 2: Identify process level memory usage
 
 For advanced process level memory analysis, use [Inspektor Gadget](https://go.microsoft.com/fwlink/?linkid=2260072) to monitor real time memory usage at the process level within pods:
 
-1. Install Inspektor Gadget using the instructions found in the [documentation](/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks#how-to-install-inspektor-gadget-in-an-aks-cluster)
+1. Install Inspektor Gadget using the instructions found in the [documentation](../logs/capture-system-insights-from-aks.md#how-to-install-inspektor-gadget-in-an-aks-cluster)
 
 2. Run the [top_process gadget](https://aka.ms/igtopprocess) to identify processes that are using large amounts of memory. You can use `--fields` to select certain columns and `--filter` to filter events based on specific field values, for example the pod names of previously identified pods with high memory consumption. You can also:
 
@@ -193,7 +195,7 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
         kubectl gadget run top_process --sort -memoryRelative --filter k8s.podName==<pod-name>
         ```
 
-   The output of the Inspektor Gadget `top_process` command resembles the following:
+   The output of the Inspektor Gadget `top_process` command resembles the following output:
 
    ```output
 
@@ -203,11 +205,9 @@ For advanced process level memory analysis, use [Inspektor Gadget](https://go.mi
       aks-agentpool-3…901-vmss000001    default                memory-stress        21677     stress          944 MB       872 MB              5.2     
       aks-agentpool-3…901-vmss000001    default                memory-stress        21679     stress          944 MB       796 MB              4.8     
 
-   ```   
+   ```
 
-
-You can use this output to identify the processes that are consuming the most memory on the node. The output can include the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU and memory usage, check [the documentation](https://aka.ms/igtopprocess) for more details.
-
+You can use this output to identify the processes that are consuming the most memory on the node. The output can include the node name, namespace, pod name, container name, process ID (PID), command name (COMM), CPU, and memory usage. For more details, see [the documentation](https://aka.ms/igtopprocess).
 
 ### Step 3: Review best practices to avoid memory saturation
 
@@ -215,10 +215,10 @@ Review the following table to learn how to implement best practices for avoiding
 
 | Best practice | Description |
 |---|---|
-| Use memory [requests and limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits) | Kubernetes provides options to specify the minimum memory size (*request*) and the maximum memory size (*limit*) for a container. By configuring limits on pods, you can avoid memory pressure on the node. Make sure that the aggregate limits for all pods that are running doesn't exceed the node's available memory. This situation is called *overcommitting*. The Kubernetes scheduler allocates resources based on set requests and limits through [Quality of Service](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/) (QoS). Without appropriate limits, the scheduler might schedule too many pods on a single node. This might eventually bring down the node. Additionally, while the kubelet is evicting pods, it prioritizes pods in which the memory usage exceeds their defined requests. We recommend that you set the memory request close to the actual usage. |
+| Use memory [requests and limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#requests-and-limits) | Kubernetes provides options to specify the minimum memory size (_request_) and the maximum memory size (_limit_) for a container. By configuring limits on pods, you can avoid memory pressure on the node. Make sure that the aggregate limits for all pods that are running doesn't exceed the node's available memory. This situation is called _overcommitting_. The Kubernetes scheduler allocates resources based on set requests and limits through [Quality of Service](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/) (QoS). Without appropriate limits, the scheduler might schedule too many pods on a single node. This situation might eventually bring down the node. Additionally, while the kubelet is evicting pods, it prioritizes pods in which the memory usage exceeds their defined requests. We recommend that you set the memory request close to the actual usage. |
 | Enable the [horizontal pod autoscaler](/azure/aks/tutorial-kubernetes-scale?tabs=azure-cli#autoscale-pods) | By scaling the cluster, you can balance the requests across many pods to prevent memory saturation. This technique can reduce the memory footprint on the specific node. |
-| Use [anti-affinity tags](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity) | For scenarios in which memory is unbounded by design, you can use node selectors and affinity or anti-affinity tags, which can isolate the workload to specific nodes. By using anti-affinity tags, you can prevent other workloads from scheduling pods on these nodes. This reduces the memory saturation problem. |
-| Choose [higher SKU VMs](https://azure.microsoft.com/pricing/details/virtual-machines/linux/) | Virtual machines (VMs) that have more random-access memory (RAM) are better suited to handle high memory usage. To use this option, you must create a new node pool, cordon the nodes (make them unschedulable), and drain the existing node pool. |
+| Use [anti-affinity tags](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#inter-pod-affinity-and-anti-affinity) | For scenarios in which memory is unbounded by design, you can use node selectors and affinity or anti-affinity tags, which can isolate the workload to specific nodes. By using anti-affinity tags, you can prevent other workloads from scheduling pods on these nodes and reduce the memory saturation problem. |
+| Choose [higher SKU VMs](https://azure.microsoft.com/pricing/details/virtual-machines/linux/) | VMs that have more random-access memory (RAM) are better suited to handle high memory usage. To use this option, you must create a new node pool, cordon the nodes (make them unschedulable), and drain the existing node pool. |
 | Isolate [system and user workloads](/azure/aks/use-system-pools#system-and-user-node-pools) | We recommend that you run your applications on a user node pool. This configuration makes sure that you can isolate the Kubernetes-specific pods to the system node pool and maintain the cluster performance. |
 
 ## More information

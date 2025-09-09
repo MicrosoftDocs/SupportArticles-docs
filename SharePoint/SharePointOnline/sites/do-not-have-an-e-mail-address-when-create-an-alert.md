@@ -1,7 +1,7 @@
 ---
 title: Error when you create an alert in SharePoint Online
 description: Describes an issue in which you receive an error when you create an alert in SharePoint Online.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Lists and Libraries\Alerts
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - SharePoint Online
 ms.date: 08/13/2024

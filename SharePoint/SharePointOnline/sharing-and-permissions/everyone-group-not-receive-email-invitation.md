@@ -1,7 +1,7 @@
 ---
 title: Everyone or Everyone except external users group don't receive invitation
 description: This article describes an issue that users who are in the Everyone or Everyone except external users group don't receive email invitations in SharePoint Online, and provides a solution.
-author: helenclu
+author: Cloud-Writer
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -10,7 +10,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - sap:Sharing\Sharing links
   - CSSTroubleshoot
-ms.author: luche
+ms.author: meerak
 appliesto: 
   - SharePoint Online
 ms.date: 12/17/2023

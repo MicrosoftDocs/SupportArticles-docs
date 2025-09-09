@@ -1,9 +1,9 @@
 ---
 title: Errors when connecting to SharePoint Online Management Shell
 description: Describes how to resolve connectivity problems to SharePoint Online Management Shell.
-author: helenclu
+author: Cloud-Writer
 ms.reviewer: salarson
-ms.author: luche
+ms.author: meerak
 manager: dcscontentpm
 ms.date: 12/17/2023
 audience: Admin
