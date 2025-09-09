@@ -141,6 +141,7 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/troubleshoot/outlook/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
       "recommendations": true,
       "feedback_system": "Standard",
       "hideEdit": true,
