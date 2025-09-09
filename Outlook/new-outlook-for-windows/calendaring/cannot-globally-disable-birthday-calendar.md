@@ -13,6 +13,7 @@ ms.custom:
   - CI 981
 ms.reviewer: meshel, meerak, v-shorestris
 appliesto:
+  - New Outlook for Windows
   - Exchange Online
   - Outlook for Microsoft 365
   - New Outlook for Windows
