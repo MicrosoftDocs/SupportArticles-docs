@@ -124,7 +124,7 @@ Depending on your application, you might see this prompt repeatedly for the same
 Publishing policies might take up to 24 hours.
 ## Known issues for the Microsoft Purview Information Protection viewer
 
-- [External users](#external-users-and-the-aip-viewer)
+- [External users](#external-users-and-the-microsoft-purview-information-protection-viewer)
 - [ADRMS protected files on Android devices](#adrms-protected-files-on-android-devices)
 
 For more information, see [**Unified labeling client**: View protected files with the Microsoft Purview Information Protection viewer](https://support.microsoft.com/topic/9fb56fae-7989-48b0-850f-f446e057cf73).
