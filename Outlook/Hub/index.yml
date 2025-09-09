@@ -23,9 +23,9 @@ productDirectory:
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo-ms-social.png
       links:
-        - url: /troubleshoot/microsoft-365/o365-admin-welcome
+        - url: /troubleshoot/microsoft-365/admin/o365-admin-welcome
           text: Microsoft 365 admin center
-        - url: /troubleshoot/microsoft-365/microsoft-purview-welcome
+        - url: /troubleshoot/microsoft-365/purview/microsoft-purview-welcome
           text: Microsoft Purview
     # Card
     - title: Microsoft Teams
