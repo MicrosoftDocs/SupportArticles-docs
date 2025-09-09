@@ -47,7 +47,7 @@ This error comes from Entra ID Conditional Access, and means that the user is su
 
 - User is signing in through the **Windows App** but is not provided access to both the **Azure Virtual Desktop** and **Windows 365** applications.
   > [!NOTE]
-  > Windows App will attempt to authenticate the user to both **Azure Virtual Desktop** and **Windows 366** applications, even if the user isn't assigned any Windows 365 Cloud PCs.
+  > Windows App will attempt to authenticate the user to both **Azure Virtual Desktop** and **Windows 365** applications, even if the user isn't assigned any Windows 365 Cloud PCs.
 
 - User is signing into a resource with Entra-based single sign-on configured but is not provided access to the **Windows Cloud Login** application.
 
