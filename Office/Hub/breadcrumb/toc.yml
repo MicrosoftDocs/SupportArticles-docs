@@ -1,7 +1,7 @@
 - name: Microsoft 365
-  tocHref: /office/
-  topicHref: /microsoft-365/index
+  tocHref: /microsoft-365-apps/
+  topicHref: /microsoft-365-apps/index
   items:
   - name: Troubleshooting
-    tocHref: /troubleshoot/office/
-    topicHref: /troubleshoot/office/index
+    tocHref: /troubleshoot/microsoft-365-apps/
+    topicHref: /troubleshoot/microsoft-365-apps/index
