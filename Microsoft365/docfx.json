@@ -6,6 +6,7 @@
           "**/*.md",
           "**/*.yml"
         ],
+        "dest": ".",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
