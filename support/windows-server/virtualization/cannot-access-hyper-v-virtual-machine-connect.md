@@ -1,7 +1,7 @@
 ---
 title: Can't Access Hyper-V Virtual Machines Via VMConnect
 description: Addresses an issue where you can't connect to Hyper-V virtual machines (VMs) through VMConnect after you repeatedly receive an authentication error.
-ms.date: 08/18/2025
+ms.date: 09/09/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
