@@ -48,9 +48,13 @@ The following table lists the steps, error messages, and possible causes that yo
 |Missing test results in Azure portal|No specific error message is returned for this issue.   Test results are missing in the Azure portal when viewing the end-to-end transaction details of an availability test. |Non-UTF8 characters aren't supported for viewing web test results. Make sure that no non-UTF8 characters exist in the response from the endpoint that's called by using the availability test.|
 |Unsupported URL|This URL is not supported|<p>Availability tests only allow communicating over publicly available IP addresses and hostnames. This error might occur when you try to communicate with an internal IP address that isn't routable via the public internet.</p> <p>To resolve this error, make sure that only public IP addresses are defined in your web test and that any DNS lookups that your web test depends on return only valid, publicly routable IP addresses.</p>|
 
+## TLS 1.3 regional restrictions
+
 Some regions restrict the use of TLS 1.3. If you experience connectivity issues in these regions, try to use an earlier version of TLS, such as TLS 1.2. For details about TLS 1.3 support, see [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446). To learn more about the supported regions, see: [Supported TLS configurations](/azure/azure-monitor/app/availability?tabs=standard#supported-tls-configurations).
 
-If you can't connect from certain regions, the issue might be related to local restrictions on TLS 1.3 or ESNI. To work around this limitation, use TLS 1.2.
+Only TLS 1.2 and TLS 1.3 are supported. TLS 1.3 availablility varies by region. SSL is not supported. 
+
+This step doesn't validate certificates. It establishes a secure connection and only appears if an error occurs.
 
 > [!NOTE]
 > If the "connection reuse" step exists, the following steps won't exist:
