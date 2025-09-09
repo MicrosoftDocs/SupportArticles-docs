@@ -62,19 +62,19 @@
     },
     {
       "source_path": "Microsoft365/admin/administration/administrator-failed-adding-domain.md",
-      "redirect_url": "/troubleshoot/microsoft-365/domain-management/administrator-failed-adding-domain"
+      "redirect_url": "/troubleshoot/microsoft-365/admin/domain-management/administrator-failed-adding-domain"
     },
     {
       "source_path": "Microsoft365/admin/administration/child-domain-fails-inherit-parent-domain-changes.md",
-      "redirect_url": "/troubleshoot/microsoft-365/domain-management/child-domain-fails-inherit-parent-domain-changes"
+      "redirect_url": "/troubleshoot/microsoft-365/admin/domain-management/child-domain-fails-inherit-parent-domain-changes"
     },
     {
       "source_path": "Microsoft365/admin/administration/error-remove-domain-from-office-365.md",
-      "redirect_url": "/troubleshoot/microsoft-365/domain-management/error-remove-domain-from-office-365"
+      "redirect_url": "/troubleshoot/microsoft-365/admin/domain-management/error-remove-domain-from-office-365"
     },
     {
       "source_path": "Microsoft365/admin/administration/send-email-full-redelegation-domain.md",
-      "redirect_url": "/troubleshoot/microsoft-365/domain-management/send-email-full-redelegation-domain"
+      "redirect_url": "/troubleshoot/microsoft-365/admin/domain-management/send-email-full-redelegation-domain"
     },
     {
       "source_path": "Microsoft365/admin/sign-in/cannot-sign-in-to-office-365.md",
