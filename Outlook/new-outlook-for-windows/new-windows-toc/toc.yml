@@ -1,6 +1,6 @@
 items:
 - name: Welcome to new Outlook for Windows
-  href: ../new-outlook-windows-welcome.md
+  href: ../new-outlook-windows-welcome.yml
   items:
   - name: Calendaring
     items:
