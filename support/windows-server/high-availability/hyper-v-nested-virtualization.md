@@ -272,7 +272,7 @@ Gather the following data for troubleshooting and escalation:
 | Network connectivity issues | No internet/LAN in nested VM | Internal switch/NAT misconfiguration | Use external switch; correct NAT configuration; allow firewall rules. |
 | Slow performance | Lag; high resource usage | Under-provisioned resources | Increase vCPUs/RAM; use SSDs; update drivers. |
 | Role or Hyper-V installation blocked by security | Policy or VBS/Credential Guard errors | Device/Credential Guard enabled | Disable VBS/Credential Guard; reboot. |
-| NAT/port forwarding fails | Can't connect to nested VM; WinNAT errors | Wrong mapping/service lock | Remove/re-add NAT configuraion; restart host; `netsh` `portproxy` commands. |
+| NAT/port forwarding fails | Can't connect to nested VM; WinNAT errors | Wrong mapping/service lock | Remove/re-add NAT configuration; restart host; `netsh` `portproxy` commands. |
 | Snapshot/disk chain broken | Merge fails; file not found; broken chain errors | Parent disk moved/deleted | Restore parent VHD; `Get-VHD`/`Merge-VHD` PowerShell cmdlets. |
 | VM doesn't recognize increased RAM | No error; allocation unchanged | Setting not saved/applied, platform | Power off VM; edit settings; start VM; check host/cluster/nested support. |
 
