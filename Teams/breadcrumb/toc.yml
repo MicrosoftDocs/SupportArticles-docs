@@ -1,9 +1,10 @@
+items:
 - name: Learn
   tocHref: /
   topicHref: /
   items:
   - name: Microsoft Teams
-    tocHref: /microsoftteams/
+    tocHref: /troubleshoot/microsoftteams/
     topicHref: /microsoftteams/index
     items:
     - name: Troubleshooting
