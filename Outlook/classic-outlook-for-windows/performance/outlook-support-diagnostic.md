@@ -44,7 +44,7 @@ On the **Data Collection Options** page, you are prompted to select either **Ful
 > .NET Framework 4.5 (or later) is required by the Microsoft Office Configuration Analyzer Tool 2.0 which is the main diagnostic engine utilized by this support diagnostic package.
 
 > [!NOTE]
-> If Microsoft Office Configuration Analyzer Tool (OffCAT) 2.0 is not installed when you run this support diagnostic package, you will be prompted to keep or uninstall it when the support diagnostic package has finished running. For more information about the OffCAT tool, see [Office Configuration Analyzer Tool (OffCAT) information](https://support.microsoft.com/help/2812744).
+> If Microsoft Office Configuration Analyzer Tool (OffCAT) 2.0 is not installed when you run this support diagnostic package, you will be prompted to keep or uninstall it when the support diagnostic package has finished running. For more information about the OffCAT tool, see [Office Configuration Analyzer Tool (OffCAT) information](https://techcommunity.microsoft.com/blog/exchange/released-office-configuration-analyzer-tool-offcat/595161).
 
 ## More information
 
@@ -112,7 +112,7 @@ BitsAdmin log and registry data that is related to BITS
 
 Log file from the CalCheck tool.
 
-For more information about the CalCheck tool, see [Information about the Calendar Checking Tool for Outlook (CalCheck)](https://support.microsoft.com/help/2678030).
+For more information about the CalCheck tool, see [Information about the Calendar Checking Tool for Outlook (CalCheck)](../calendaring/calendar-checking-tool-for-outlook.md).
 
 |Description|File name|
 |---|---|
@@ -244,7 +244,7 @@ If "Identity" logging has been enabled, the diagnostic will collect the logs gen
 
 ### Office Configuration Analyzer Tool (OffCAT) result files
 
-For more information about the OffCAT tool, see [Office Configuration Analyzer Tool (OffCAT) information](https://support.microsoft.com/help/2812744).
+For more information about the OffCAT tool, see [Office Configuration Analyzer Tool (OffCAT) information](https://techcommunity.microsoft.com/blog/exchange/released-office-configuration-analyzer-tool-offcat/595161).
 
 |Description|File name|
 |---|---|
@@ -339,4 +339,4 @@ Zip file containing one or more files you elected to upload to Microsoft.
 
 ## References
 
-[Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970)
+[Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/windows/0c5ac9a2-1600-4539-b9d0-069e71f9040a)

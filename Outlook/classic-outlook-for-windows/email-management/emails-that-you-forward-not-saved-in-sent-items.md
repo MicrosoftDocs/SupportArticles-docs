@@ -96,7 +96,7 @@ The default Group Policy template files for Outlook 2010 contain the policy sett
 
 1. Download the following file from the Microsoft Download Center:
 
-    [Office 2010 Administrative Template files (ADM, ADMX/ADML) and Office Customization Tool download](https://www.microsoft.com/download/details.aspx?id=18968)
+    [Office 2010 Administrative Template files (ADM, ADMX/ADML) and Office Customization Tool download](https://www.microsoft.com/download/details.aspx?id=49030)
 
 2. Add the Outlk14.adm file to the Group Policy Management Console.
 

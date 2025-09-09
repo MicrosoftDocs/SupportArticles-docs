@@ -49,7 +49,7 @@ To resolve this problem, download the Offline Address Book using the following s
 
 See the following article if you are unable to download the OAB.
 
-[HTTP version of the Outlook Offline Address Book (OAB) does not download](https://support.microsoft.com/help/2619347)
+[HTTP version of the Outlook Offline Address Book (OAB) does not download](../data-files/http-version-of-offline-address-book-fails-to-download.md)
 
 > [!NOTE]
 > If the OAB does not automatically download and you have to manually download the OAB each time (using the above steps), check for the existence of the DownloadOAB value in the registry. The following article provides complete details on this registry value.
