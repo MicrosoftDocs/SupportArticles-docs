@@ -2730,6 +2730,8 @@ items:
       href: ./virtualization/hyper-v-virtual-machine-backup-checkpoint-storage.md
   - name: Configuration of virtual machine settings
     items:
+    - name: Can't access Hyper-V virtual machines via VMConnect
+      href: ./virtualization/cannot-access-hyper-v-virtual-machine-connect.md
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
       href: ./virtualization/copy-paste-not-work-hyper-v-vm-vmconnect-enhanced-session-mode.md
     - name: Hyper-V limits the maximum number of processors
@@ -2772,10 +2774,14 @@ items:
       href: ./virtualization/support-and-installation-instructions-for-amd-epyc-9004-series-server-processors.md
     - name: Support Policy for NIC Teaming with Hyper-V
       href: ./virtualization/support-policy-nic-teaming.md
+    - name: Troubleshoot Hyper-V installation, configuration, and operational failures
+      href: ./virtualization/hyper-v-installation-configuration-operational-failure.md
     - name: Upgrade computers with Hyper-V role installed
       href: ./virtualization/upgrade-computers-hyper-v-role.md
     - name: Windows Server 2019 Hyper-V host minroot behavior
       href: ./virtualization/windows-server-hyper-v-host-minroot-behaviors.md
+    - name: YubiKey USB device doesn't appear in a Hyper-V virtual machine
+      href: ./virtualization/usb-device-hyper-v-virtual-machine.md
   - name: Integration components
     items:
     - name: Degraded integration services message for non-Windows guests
@@ -2798,12 +2804,18 @@ items:
     items:
     - name: 'Troubleshooting guidance: Live Migration'
       href: ./virtualization/troubleshoot-live-migration-guidance.md
+    - name: 'Troubleshooting guide: Hyper-V virtual machine live migration'
+      href: ./virtualization/hyper-v-virtual-machine-live-migration.md
     - name: Can't migrate a virtual machine from one host to another
       href: ./virtualization/unable-migrate-virtual-machine-processor-not-compatible-host.md
     - name: Starting or live migrating Hyper-V VMs fails
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
     - name: Troubleshoot live migration issues
       href: ./virtualization/troubleshoot-live-migration-issues.md
+  - name: PowerShell cmdlets
+    items:
+    - name: Troubleshoot PowerShell, Hyper-V, storage, and cluster management issues
+      href: ./virtualization/hyper-v-storage-cluster-management.md
   - name: Remote administration of the Hyper-V role
     items:
     - name: Troubleshoot Hyper-V cluster connectivity, management, and configuration failures
