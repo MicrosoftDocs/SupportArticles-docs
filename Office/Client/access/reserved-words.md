@@ -1,33 +1,33 @@
 ---
-title: List of reserved words in Access
-description: Lists the reserved words that you should not use in field, object, and variable names. 
+title: Avoid using reserved words and symbols in Access
+description: Lists the reserved words that you shouldn't use in field, object, and variable names. 
 author: Cloud-Writer
-ms.author: lindalu
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CI 114797
   - CSSTroubleshoot
-ms.reviewer: markdun, robdil
+ms.reviewer: lindalu, markdun, robdil
 appliesto: 
   - Microsoft Office Access 2024
   - Microsoft Office Access 2021
   - Microsoft Office Access 2019
   - Microsoft Office Access 2016
 search.appverid: MET150
-ms.date: 08/12/2025
+ms.date: 09/08/2025
 ---
-# List of reserved words in Access 2024 and previous versions
+# Avoid using reserved words and symbols in Access 
 
 _Original KB number:_ &nbsp; 286335
 
 > [!NOTE]
-> Novice: Requires knowledge of the user interface on single-user computers. This article applies to a Microsoft Access database (.mdb) and to a Microsoft Access project (.adp).
+> This article applies to a Microsoft Access database (.mdb) and to a Microsoft Access project (.adp). It requires knowledge of the user interface on single-user computers. 
 
 ## Summary
 
-This article lists words and symbols that you should not use in field, object, and variable names in Microsoft Access 2024 and previous versions because they are "reserved words." Reserved words have a specific meaning to Access or to the Microsoft Jet database engine. If you use a reserved word or symbol, you may receive an error such as the following:
+This article lists words and symbols that you shouldn't use in field, object, and variable names in Microsoft Access 2024 and previous versions because they are "reserved words". Reserved words have a specific meaning to Access or to the Microsoft Jet database engine. If you use a reserved word or symbol, you may receive an error such as the following:
 
 > The wizard was unable to preview your report, possibly because a table needed by your report is exclusively locked.
 
@@ -39,9 +39,9 @@ For existing objects with names that contain reserved words, you can avoid error
 
 ## Reserved words
 
-Because it isn't practical to provide a list of all reserved words, such as built-in function names or Microsoft Access user-defined names, please check your product documentation for additional reserved words. Note that if you set a reference to a type library, an object library, or an ActiveX control, that library's reserved words are also reserved words in your database. For example, if you add an ActiveX control to a form, a reference is set, and the names of the objects, methods, and properties of that control become reserved words in your database.
+Because it isn't practical to provide a list of all reserved words such as built-in function names or user-defined names in Access, check your product documentation for additional reserved words. If you set a reference to a type library, an object library, or an ActiveX control, that library's reserved words are also treated as reserved words in your database. For example, if you add an ActiveX control to a form, then a reference is set, and the names of the objects, methods, and properties of that control become reserved words in your database.
 
-Access reserved words are not case-sensitive.
+Reserved words in Access are not case-sensitive.
 
 The following is a list of reserved words to avoid when choosing identifiers. 
 
@@ -522,6 +522,4 @@ $
 %
 ```
 
-For more information about special characters to avoid using when you work with the database object names or the field names in all versions of Access, see the following Microsoft Knowledge Base article.
-
-[826763](https://support.microsoft.com/help/826763) Error message when you use special characters in Access databases
+For more information about special characters to avoid using when you work with the database object names or field names in all versions of Access, see [Error message when you use special characters in Access databases](https://support.microsoft.com/help/826763).
