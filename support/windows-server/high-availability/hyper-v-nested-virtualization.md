@@ -1,7 +1,7 @@
 ---
 title: Hyper-V Nested Virtualization Troubleshooting Guide
 description: Provides a structured approach for troubleshooting nested virtualization issues in physical and cloud-based environments.
-ms.date: 09/04/2025
+ms.date: 09/09/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -18,17 +18,17 @@ Nested virtualization allows you to run Hyper-V (or other hypervisors) within a 
 
 Before diving into specific issues, follow this checklist to ensure the environment is correctly set up for nested virtualization:
 
-1. Verify host compatibility
+1. Verify host compatibility:
 
     - Host is Windows Server 2016 or later version, Windows 10 or Windows 11 Pro or Enterprise.
-    - Host CPU supports VT-x (Intel) or AMD-V (AMD); Hardware virtualization enabled in BIOS/UEFI.
+    - Host CPU supports VT-x (Intel) or AMD-V (AMD); hardware virtualization enabled in BIOS/UEFI.
 
-1. Confirm guest VM settings
+1. Confirm guest VM settings:
 
     - Guest VM is Generation 2.
     - Guest VM running compatible OS (Windows Server 2016, or later version, Windows 10, Windows 11, or later version, select Linux with Hyper-V support).
 
-1. Enable nested virtualization
+1. Enable nested virtualization:
 
     - For Hyper-V, set via PowerShell:
 
@@ -38,22 +38,22 @@ Before diving into specific issues, follow this checklist to ensure the environm
 
     - VM must be powered off.
 
-1. CPU, memory, and resource allocation
+1. CPU, memory, and resource allocation:
 
     - Assign at least two virtual CPUs to nested VM.
     - Sufficient memory assigned (recommended ≥ 4GB for the VM hosting nested VMs).
 
-1. Network configuration
+1. Network configuration:
 
     - Use an "External" virtual switch for the guest VM to enable outbound access.
     - Ensure NAT/port forwarding is correctly set up if needed.
 
-1. Update host and guest
+1. Update host and guest:
 
     - Fully patch and update Windows OS for host and guest.
-    - Use latest Hyper-V Integration Services and drivers.
+    - Use the latest Hyper-V Integration Services and drivers.
 
-1. Check security and policy
+1. Check security and policy:
 
     - Credential Guard and Device Guard might block nested virtualization.
     - No conflicting Group Policies or anti-virus blocking Hyper-V processes.
@@ -63,7 +63,7 @@ Here are common issues and their respective solutions:
 ## Nested VM can't start Hyper-V role or install other hypervisors
 
 - Errors when enabling or installing Hyper-V in a VM.
-- "Hyper-V cannot be installed: The processor does not have required virtualization capabilities" or similar.
+- "Hyper-V cannot be installed: The processor does not have required virtualization capabilities" or similar error messages.
 - Role installation fails without detailed errors.
 
 ### Root causes
@@ -178,7 +178,7 @@ Here are common issues and their respective solutions:
     netsh nat delete <incorrect mapping>
     ```
 
-2. Restart host, ensure NAT/WinNAT service isn't locked.
+2. Restart host, and ensure NAT/WinNAT service isn't locked.
 3. Reconfigure NAT/port proxy for required connectivity:
 
     ```console
@@ -190,7 +190,7 @@ Here are common issues and their respective solutions:
 ## Snapshot/Checkpoint and differencing disk issues
 
 - Snapshots disappear or can't be merged.
-- Merge operation fails: "The system cannot find the file specified (0x80070002)" or "The chain of virtual hard disks is broken (0xC03A000D)."
+- Merge operation fails with "The system cannot find the file specified (0x80070002)" or "The chain of virtual hard disks is broken (0xC03A000D)."
 
 ### Root causes
 
@@ -200,7 +200,7 @@ Here are common issues and their respective solutions:
 
 ### Resolution
 
-1. Ensure all VHD/AVHDX files are in original location.
+1. Ensure all VHD/AVHDX files are in their original locations.
 2. Use PowerShell to check chain and merge:
 
     ```powershell
@@ -208,7 +208,7 @@ Here are common issues and their respective solutions:
     Merge-VHD -Path <child AVHDX> -DestinationPath <parent VHD>
     ```
 
-3. If data recovery needed, restore parent disk from backup, then retry merge.
+3. If data recovery is needed, restore the parent disk from backup, and then retry the merge.
 
 ## VM resource changes not recognized (for example, RAM increase)
 
@@ -224,7 +224,7 @@ Here are common issues and their respective solutions:
 
 1. Power off VM before resizing resources.
 2. Use **Hyper-V Manager** > **Edit VM settings** > **Increase RAM**.
-3. Start VM; verify resource allocation in guest OS.
+3. Start VM and verify resource allocation in guest OS.
 4. Review documentation for hot-add support in nested scenarios.
 
 ## Data collection
@@ -268,13 +268,13 @@ Gather the following data for troubleshooting and escalation:
 
 | Issue | Symptoms/Errors | Root cause | Resolution steps |
 | --- | --- | --- | --- |
-| Nested VM can't start Hyper-V | Role install fails; CPU extension error | Extensions not exposed; Gen1 VM | Power off VM; `Set-VMProcessor -ExposeVirtualizationExtensions $true`; Use Gen2 VM; Assign ≥2 vCPUs |
-| Network connectivity issues | No internet/LAN in nested VM | Internal switch/NAT misconfig | Use external switch; Correct NAT config; Allow firewall rules |
-| Slow performance | Lag; high resource usage | Under-provisioned resources | Increase vCPUs/RAM; Use SSDs; Update drivers |
-| Role or Hyper-V installation blocked by security | Policy or VBS/Credential Guard errors | Device/Credential Guard enabled | Disable VBS/Credential Guard; Reboot |
-| NAT/port forwarding fails | Can't connect to nested VM; WinNAT errors | Wrong mapping/service lock | Remove/re-add NAT config; Restart host; `netsh` `portproxy` commands |
-| Snapshot/disk chain broken | Merge fails; file not found; broken chain errors | Parent disk moved/deleted | Restore parent VHD; `Get-VHD`/`Merge-VHD` PowerShell cmdlets |
-| VM doesn't recognize increased RAM | No error; allocation unchanged | Setting not saved/applied, platform | Power off VM; Edit settings; Start VM; check host/cluster/nested support |
+| Nested VM can't start Hyper-V | Role installation fails; CPU extension error | Extensions not exposed; Gen1 VM | Power off VM; `Set-VMProcessor -ExposeVirtualizationExtensions $true`; use Gen2 VM; assign ≥2 vCPUs. |
+| Network connectivity issues | No internet/LAN in nested VM | Internal switch/NAT misconfiguration | Use external switch; correct NAT configuration; allow firewall rules. |
+| Slow performance | Lag; high resource usage | Under-provisioned resources | Increase vCPUs/RAM; use SSDs; update drivers. |
+| Role or Hyper-V installation blocked by security | Policy or VBS/Credential Guard errors | Device/Credential Guard enabled | Disable VBS/Credential Guard; reboot. |
+| NAT/port forwarding fails | Can't connect to nested VM; WinNAT errors | Wrong mapping/service lock | Remove/re-add NAT configuraion; restart host; `netsh` `portproxy` commands. |
+| Snapshot/disk chain broken | Merge fails; file not found; broken chain errors | Parent disk moved/deleted | Restore parent VHD; `Get-VHD`/`Merge-VHD` PowerShell cmdlets. |
+| VM doesn't recognize increased RAM | No error; allocation unchanged | Setting not saved/applied, platform | Power off VM; edit settings; start VM; check host/cluster/nested support. |
 
 Nested virtualization is a powerful but complex feature that often encounters resource, networking, configuration, and security challenges. Troubleshooting starts with verifying correct setup and continues by addressing common failure modes including role install problems, networking misconfiguration, storage chain errors, and blocked installations due to security policies. Careful data collection, step-by-step diagnosis, and understanding of platform limitations are essential for stable operation. For persistent issues or unsupported scenarios, engaging with platform support or escalation might be required.
 
