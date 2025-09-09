@@ -156,7 +156,7 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 
 :::image type="content" source="./media/troubleshoot-vnet-integration-apps/configuration-issue.png" alt-text="Screenshot that shows how to run  troubleshooter for configuration issues in the Azure portal.":::
 
-**Subnet/VNet deletion issue** - This troubleshooter will check if your subnet has any locks and if it has any unused Service Association Links that might be blocking the deletion of the VNet/subnet. To delete any unused Service Association Links, see the [App Service virtual network integration troubleshooting steps](/azure/app-service/overview-vnet-integration#troubleshooting).
+**Subnet/VNet deletion issue** - This troubleshooter will check if your subnet has any locks and if it has any unused Service Association Links blocking the deletion of the VNet/subnet. To delete any unused Service Association Links, see the [App Service virtual network integration troubleshooting steps](/azure/app-service/overview-vnet-integration#troubleshooting).
 
 :::image type="content" source="./media/troubleshoot-vnet-integration-apps/deletion-issue.png" alt-text="Screenshot that shows how to run troubleshooter for subnet or virtual network deletion issues.":::
 
