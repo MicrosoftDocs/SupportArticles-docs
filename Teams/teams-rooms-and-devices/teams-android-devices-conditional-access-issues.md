@@ -50,7 +50,11 @@ These issues can occur for the following reasons:
 
 ## Resolution
 
-Identify the specific cause of the issue by checking multiple details about the affected user's access to the Teams app. To perform the checks that are required, you can either use an automated option or run the checks manually by using the steps provided.
+When troubleshooting Conditional Access issues, start by checking the affected user’s sign-in details and validating whether the device meets policy requirements. These checks can be performed either through automated tools or manually, as outlined earlier in this article.
+
+As Microsoft Teams Android devices transition to **Intune AOSP device management**, administrators can take advantage of device attributes—such as **`device.displayName`**—in Conditional Access filters. This allows policies to be targeted more precisely, based on how devices are named.
+
+The `device.displayName` attribute is especially useful because it includes the device manufacturer information early in the sign-in process, even before Intune completes full enrollment. Once the device finishes enrollment, Intune also reports additional properties such as updated display name, make, model, and compliance status to Microsoft Entra. Because this reporting can take time, using `displayName` in your filter rules helps ensure that devices are properly matched from the start.
 
 ### Automated checks
 
