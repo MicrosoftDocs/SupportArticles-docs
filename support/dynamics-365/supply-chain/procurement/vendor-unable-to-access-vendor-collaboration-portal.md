@@ -1,8 +1,8 @@
 ---
-title: Vendors can't sign in to the Vendor Collaboration Portal after re-onboarding
-description: Steps to troubleshoot when vendors can't access the Vendor Collaboration Portal (VCP) after re-onboarding in Dynamics 365 Supply Chain Management.
+title: Vendors Can't Sign In To Vendor Collaboration Portal After Reonboarding
+description: Steps to troubleshoot when vendors can't access the Vendor Collaboration Portal (VCP) after reonboarding in Microsoft Dynamics 365 Supply Chain Management.
 author: vermayashi
-ms.date: 09/02/2025
+ms.date: 09/10/2025
 ms.search.form:  PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac
@@ -12,70 +12,71 @@ ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ms.custom: sap:Purchase order procurement and sourcing\Issues with vendor management
 ---
+# Vendors can't access the Vendor Collaboration Portal (VCP) after reonboarding
 
-# Vendor unable to access Vendor Collaboration Portal (VCP) after re-onboarding
+This article provides troubleshooting steps to help resolve issues when vendors are unable to access the Vendor Collaboration Portal (VCP) after being reonboarded in Dynamics 365 Supply Chain Management.
 
-## Symptom
+## Symptoms
 
-Vendor attempts to access the Vendor Collaboration Portal (VCP) but encounters the error:
+When a vendor attempts to access the Vendor Collaboration Portal (VCP), the following error message occurs:
 
 > The user must have access to at least one vendor.
 
-Occurs specifically after a vendor has been re-onboarded and access was previously working.
+This error occurs specifically after a vendor has been reonboarded and access was previously working.
 
-## Cause
+## Cause 1: The vendor request isn't in "Request approved" status
 
-This issue can occur if:
-
-- The vendor request may not actually be in **Request approved** status.
-- The **Vendor collaboration access** permission may have been set to **No** during approval.
-- Required **External roles** might not have been assigned to the vendor user.
-- Tenant and user mapping may be out of sync, especially for portals relying on internal data sync mechanisms (e.g., Microsoft Support–only tools).
-- The vendor may still be attempting to log in with incorrect credentials (not using their assigned **work account**).
-
-## Resolution
-
-Follow these steps to resolve the issue:
-
-### Step 1: Verify vendor request status
+**Resolution:**
 
 Make sure the vendor request status is set to **Request approved**.
 
 For details about checking vendor request status, see [Vendor requests](/dynamics365/supply-chain/procurement/vendor-onboarding#vendor-requests).
 
-### Step 2: Check vendor collaboration access
+## Cause 2: The "Vendor collaboration access" permission is set to No during approval
 
-Verify whether the **Vendor collaboration access** permission was set to **Yes** during the vendor request approval.
+**Resolution:**
 
-- If it was set to **Yes**, the vendor user should already have the appropriate roles assigned automatically.
-- If it was set to **No**, you can manually grant the necessary roles to the vendor user instead of restarting the onboarding process.
+If it's set to **Yes**, the vendor user should already have the appropriate roles assigned automatically.
+
+If it's set to **No**, you can manually grant the necessary roles to the vendor user instead of restarting the onboarding process.
 
 > [!NOTE]
-> You don’t need to start the onboarding process over if this setting was missed. You can assign the vendor roles manually.
+> You don't need to restart the onboarding process if this setting was missed. You can assign the vendor roles manually.
 
 For details about setting up vendor collaboration access, see [Approving a vendor request](/dynamics365/supply-chain/procurement/vendor-onboarding#approving-a-vendor-request).
 
-### Step 3: Confirm external roles
+## Cause 3: Required "External roles" aren't assigned to the vendor user
 
-Verify that the vendor user’s account includes the roles defined for the _Vendor_ type in **External roles** after re-onboarding.
+**Resolution:**
+
+Verify that the vendor user's account includes the roles defined for the _Vendor_ type in **External roles** after reonboarding.
+
 For details about setting up vendor collaboration security roles, see [Set up vendor collaboration security roles](/dynamics365/supply-chain/procurement/set-up-maintain-vendor-collaboration#set-up-vendor-collaboration-security-roles).
 
-### Step 4: Perform data synchronization
+## Cause 4: Tenant and user mapping out of sync
+
+Tenant and user mapping might be out of sync, especially for portals relying on internal data synchronization mechanisms (for example, Microsoft Support–only tools).
+
+**Resolution:**
 
 If the vendor still can't access the VCP portal, data synchronization might be required.
 
 This step can only be completed by **Microsoft Support advocates**. If you're a customer or partner, contact Microsoft Support to perform the following steps in the Microsoft Volume Licensing Support Portal (MVLSP):
 
 1. Sign in to the **MVLSP** portal.
-2. Go to **Quick Tasks > View Tenant Mapping**.
+2. Go to **Quick Tasks** > **View Tenant Mapping**.
 3. Select the correct **Purchase Account**.
 4. Select **Update MSDN Managers** to refresh the user mapping data.
 
-### Step 5: Ask the vendor to retry login
+## Cause 5: Vendor using incorrect credentials
 
-After completing the previous steps, ask the vendor to sign in again using a **work account**.
+The vendor might still try to sign in using incorrect credentials (not using their assigned **work account**).
 
-For details about vendor onboarding and login steps, see [Vendor onboarding](/dynamics365/supply-chain/procurement/vendor-onboarding).
+**Resolution:**
+
+After completing the previous troubleshooting steps, ask the vendor to sign in again using a **work account**.
+
+For details about vendor onboarding and sign-in steps, see [Vendor onboarding](/dynamics365/supply-chain/procurement/vendor-onboarding).
 
 > [!TIP]
 > If the issue persists, review the vendor collaboration setup and user role assignments to ensure no conflicting configurations exist.
