@@ -9,11 +9,7 @@ tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-<<<<<<< HEAD
 ms.date: 09/10/2025
-=======
-ms.date: 8/26/2025
->>>>>>> a1f209e9d7d710950ac720a947cd004e0f6cc1d6
 ms.author: jarrettr
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
@@ -36,7 +32,7 @@ Error                             |   Mitigation
 "Azure Serial Console requires boot diagnostics to be enabled. Click here to configure boot diagnostics for your virtual machine." | Make sure that the virtual machine (VM) or VM scale set has [boot diagnostics](boot-diagnostics.md) enabled. If you use the Serial Console on a VM scale set instance, make sure that your instance has the latest model.
 "Azure Serial Console requires a virtual machine to be running. Use the Start button to start your virtual machine."  | The VM Scale Sets instance must be in a started state to access the Serial Console (your VM must not be stopped or deallocated). Make sure that your VM or VM Scale Sets instance is running, and then try again.
 "Azure Serial Console is not enabled for this subscription, contact your subscription administrator to enable." | The Azure Serial Console can be disabled at a subscription level. If you're a subscription administrator, you can [enable and disable the Azure Serial Console](./serial-console-enable-disable.md). If you aren't a subscription administrator, contact your subscription administrator for the next steps.
-A "Forbidden" response was encountered when accessing this VM's boot diagnostic storage account. | There's a known issue where Azure Serial Console might fail to connect when a custom boot diagnostics storage account has firewall restrictions when using the [az serial-console](../../../../cli/azure/serial-console) command. To avoid connectivity issues, use Serial Console in the Azure Portal.
+A "Forbidden" response was encountered when accessing this VM's boot diagnostic storage account. | There's a known issue where Azure Serial Console might fail to connect when a custom boot diagnostics storage account has firewall restrictions when using the [az serial-console](/cli/azure/serial-console) command. To avoid connectivity issues, use Serial Console in the Azure Portal.
 You don't have the required permissions to use this VM with the serial console. Ensure you have at least Virtual Machine Contributor role permissions.| Serial console access requires that you have contributor level access on your VM or VM scale set. For more information, see the [Azure Serial Console](serial-console-overview.md) overview page.
 The storage account '' used for boot diagnostics on this VM couldn't be found. Verify that boot diagnostics is enabled for this VM, this storage account hasn't been deleted, and you have access to this storage account. | Double check that you didn't delete the boot diagnostics storage account for your VM or VM scale set.
 The serial console connection to the VM encountered an error: 'Bad Request' (400) | This error can occur if your boot diagnostics URI is incorrect. For example, "http://" instead of "https://" is used. To fix the URI, run the following command: `az vm boot-diagnostics enable --name vmName --resource-group rgName --storage https://<storageAccountUri>.blob.core.windows.net/`.
