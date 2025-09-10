@@ -119,7 +119,7 @@ Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Services\SSH-Server\Param
 
 ## Troubleshooting logs and diagnostics
 
-To gather detailed debugging logs during connection attempts, use verbose SSH commands:
+To gather detailed debugging logs during connection attempts, use the verbose SSH command:
 
 ```console
 ssh -vvv user@hostname
