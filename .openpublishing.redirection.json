@@ -2,7 +2,7 @@
   "redirections": [
     {
       "source_path": "support/power-platform/dataverse/working-with-solutions/failure-converting-to-managed-solution.md",
-      "redirect_url": "https://learn.microsoft.com/power-platform/alm/",
+      "redirect_url": "https://learn.microsoft.com/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions",
       "redirect_document_id": false
     },
     {
