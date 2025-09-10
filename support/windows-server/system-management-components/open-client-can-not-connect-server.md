@@ -16,7 +16,7 @@ This article addresses multiple common causes and solutions when encountering Op
 
 When you connect to a server via Secure Shell (SSH), you might encounter errors such as:
 
-- > Unable to negotiate with <server>: no matching host key type found.
+- > Unable to negotiate with \<server\>: no matching host key type found.
 - > Host key algorithm: (no match)
 - > Permission denied (publickey).
 - > Server refused our key.
