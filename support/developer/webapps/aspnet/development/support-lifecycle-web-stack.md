@@ -4,7 +4,6 @@ description: This article describes the support lifecycle for ASP.NET web stack.
 ms.date: 04/17/2020
 ms.custom: sap:General Development
 ms.reviewer: ericam
-ms.topic: article
 ---
 # Support lifecycle for ASP.NET web stack
 

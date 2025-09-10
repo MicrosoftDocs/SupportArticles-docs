@@ -23,9 +23,9 @@ productDirectory:
       # imageSrc should be square in ratio with no whitespace
       imageSrc: /media/logos/logo-ms-social.png
       links:
-        - url: /troubleshoot/microsoft-365/o365-admin-welcome
+        - url: /troubleshoot/microsoft-365/admin/o365-admin-welcome
           text: Microsoft 365 admin center
-        - url: /troubleshoot/microsoft-365/microsoft-purview-welcome
+        - url: /troubleshoot/microsoft-365/purview/microsoft-purview-welcome
           text: Microsoft Purview
     # Card
     - title: Microsoft Teams
@@ -74,10 +74,14 @@ productDirectory:
     - title: Microsoft Outlook
       imageSrc: /media/logos/logo-outlook.svg
       links:
-        - url: /troubleshoot/outlook/outlook-client-welcome
-          text: Outlook for Windows
-        - url: /troubleshoot/outlook/outlook-mac-welcome
-          text: Outlook for Mac
+        - url: /troubleshoot/outlook/classic-outlook-windows-welcome
+          text: Classic Outlook for Windows
+        - url: /troubleshoot/outlook/new-outlook-windows-welcome
+          text: New Outlook for Windows
+        - url: /troubleshoot/outlook/legacy-outlook-mac-welcome
+          text: Legacy Outlook for Mac
+        - url: /troubleshoot/outlook/overview-new-outlook-mac
+          text: New Outlook for Mac
     # Card
     - title: OneDrive
       imageSrc: /office/media/logos/logo-onedriveforbusiness.svg
@@ -92,6 +96,8 @@ productDirectory:
           text: Microsoft Viva Glint
         - url: ./insights/viva-insights-welcome.yml
           text: Microsoft Viva Insights
+        - url: ./pulse/viva-pulse-welcome.yml
+          text: Microsoft Viva Pulse
 
 # additionalContent section (optional)
 # Card with summary style

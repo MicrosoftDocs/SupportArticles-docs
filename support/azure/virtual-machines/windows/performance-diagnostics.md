@@ -33,6 +33,19 @@ Run Performance Diagnostics directly from the Azure portal, where you can also r
 
 This article explains how to use Performance Diagnostics and what the continuous and on-demand modes offer.
 
+## Known issues
+
+### Existing user-assigned managed identities removed from VM
+
+**Issue**<br>
+If system-assigned managed identity is disabled on a VM, installing Performance Diagnostics using system-assigned managed identity will unintentionally remove any existing user-assigned managed identities from the VM.<br><br>
+**Cause**<br>
+If system-assigned managed identity is disabled on a VM and the authentication method selected during installation is system-assigned managed identity, Performance Diagnostics attempts to enable the system-assigned managed identity with an ARM template deployment. ARM treats the identity property as a complete object rather than a partial update. Because the deployment template specified only `SystemAssigned` as the identity type, it overwrites any existing user-assigned managed identities. This results in the removal of all user-assigned managed identities since both identity types weren' t explicitly defined in the template. This issue does not occur if system-assigned managed identity is already enabled on the VM before installing Performance Diagnostics using system-assigned managed identity.<br><br>
+**Status**<br>
+The product team is actively working on a fix and will update the status once the fix is available.<br><br>
+**Workaround**<br>
+To install Performance Diagnostics using a system-assigned managed identity on a VM that already has user-assigned managed identities, you must enable the system-assigned managed identity on the VM before installation to avoid overwriting existing identities. Alternatively, you can install Performance Diagnostics using other authentication methods such as user-assigned managed identity or storage account access keys.
+
 ## Prerequisites
 
 * To run continuous and on-demand diagnostics on Windows, you need [.NET SDK](/dotnet/core/install/windows) version 4.5 or a later version installed.

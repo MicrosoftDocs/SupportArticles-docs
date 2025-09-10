@@ -2,6 +2,7 @@
 title: Cumulative update 26 for SQL Server 2017 (KB5005226)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 26 (KB5005226).
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5005226, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows

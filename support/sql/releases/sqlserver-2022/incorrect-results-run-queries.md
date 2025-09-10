@@ -2,6 +2,7 @@
 title: Incorrect results when you run queries against tables that contain indexes
 description: Fixes incorrect results that may occur when you run queries against tables that contain indexes that use a descending sort order.
 ms.date: 07/26/2024
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5027811
 ms.reviewer: hay, fahou, abhujabala, v-cuichen
 appliesto:

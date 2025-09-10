@@ -9,7 +9,6 @@ tags: azure-resource-manager
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.service: azure-virtual-machines
 ms.collection: linux
-ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
 ms.date: 09/10/2025
@@ -90,10 +89,10 @@ By default, all subscriptions have serial console access enabled. You can disabl
 ### Use Serial Console with custom boot diagnostics storage account firewall enabled
 
 > [!WARNING]
-> There is a known issue where Azure Serial Console may fail to connect when a custom boot diagnostics storage account has firewall restrictions when using the [az serial-console](../../../../cli/azure/serial-console) command. To avoid connectivity issues, use Serial Console in the Azure Portal.
+> There's a known issue where Azure Serial Console might fail to connect when a custom boot diagnostics storage account has firewall restrictions when using the [az serial-console](../../../../cli/azure/serial-console) command. To avoid connectivity issues, use Serial Console in the Azure Portal.
 
 > [!IMPORTANT]
-> By the end of 2025, Azure Serial Console will no longer utilize boot diagnostics storage accounts for establishing a connection. No customer action is required for this change. This change does not affect serial logs or screenshots.
+> By the end of 2025, Azure Serial Console will no longer utilize boot diagnostics storage accounts for establishing a connection. No customer action is required for this change. This change doesn't affect serial logs or screenshots.
 
 Serial Console uses the storage account configured for boot diagnostics in its connection workflow. When a firewall is enabled on this storage account, the Serial Console service IPs must be added as exclusions. To do this, follow these steps:
 

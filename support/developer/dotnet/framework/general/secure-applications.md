@@ -11,7 +11,7 @@ ms.custom: sap:Common Language Runtime (CLR)
 
 This article discusses important considerations for securing applications that are built on Microsoft .NET Framework.
 
-For important consideration when deploying applications that are built on the .NET Framework, see the related [Deploy applications that are built on the .NET Framework](/troubleshoot/developer/dotnet/framework/installation/deploy-applications).
+For important consideration when deploying applications that are built on the .NET Framework, see the related [Deploy applications that are built on the .NET Framework](../installation/deploy-applications.md).
 
 _Applies to:_ .NET Framework
 
@@ -71,7 +71,7 @@ Many ASP.NET applications don't allow anonymous access. An ASP.NET application t
 
 ASP.NET includes Forms authentication. This unique method authenticates users without creating Windows accounts. ASP.NET also includes the ability to grant or deny access to different web resources for these users.
 
-For more information about how to control access to web resources on a per-user basis, visit [Restrict specific users from gaining access to specified web resources](/troubleshoot/developer/webapps/aspnet/configuration/restrict-users-access-web-resource).
+For more information about how to control access to web resources on a per-user basis, visit [Restrict specific users from gaining access to specified web resources](../../../webapps/aspnet/configuration/restrict-users-access-web-resource.md).
 
 ## Limit the web services protocols that a server permits
 
@@ -81,7 +81,7 @@ By default, ASP.NET supports three methods for web services clients to issue req
 
 ASP.NET web services provide a browser-friendly interface to make it easier for developers to create web services clients. This friendly interface permits anyone who can reach the web service to view the complete details of the methods that are available and any required parameters. This access is useful for public web services that include only publicly available methods. However, it might reduce the security of private web services.
 
-For more information about how to control access to web resources on a per-user basis, see [Restrict specific users from gaining access to specified web resources](/troubleshoot/developer/webapps/aspnet/configuration/restrict-users-access-web-resource).
+For more information about how to control access to web resources on a per-user basis, see [Restrict specific users from gaining access to specified web resources](../../../webapps/aspnet/configuration/restrict-users-access-web-resource.md).
 
 ## Use ASP.NET to protect file types
 

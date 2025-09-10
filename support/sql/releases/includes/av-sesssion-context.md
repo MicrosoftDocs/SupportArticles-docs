@@ -2,6 +2,7 @@
 ms.author: jopilov
 author: PiJoCoder
 ms.date: 05/30/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage), evergreen
 ms.reviewer: derekw，moraja，bcaetano，randolphwest，mathoma，v-cuichen
 ---

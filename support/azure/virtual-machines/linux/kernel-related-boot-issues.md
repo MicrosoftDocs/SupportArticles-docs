@@ -274,21 +274,22 @@ Before rebooting a server, we recommend validating the GRUB configuration and `/
 > [!div class="nextstepaction"]
 > [Run in Linux](https://go.microsoft.com/fwlink/?linkid=2321843)
 
-1. Create a repair VM by running the following Bash command line with [Azure Cloud Shell](/azure/cloud-shell/overview). For more information, see [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM - initrd option](repair-linux-vm-using-ALAR.md#initrd).
+Azure Linux Auto Repair (ALAR) scripts are part of the VM repair extension described in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM](./repair-linux-vm-using-alar.md). ALAR covers the automation of multiple repair scenarios, including this missing initramfs issue.
 
-    ```azurecli
-    az vm repair create --verbose -g $RGNAME -n $VMNAME --repair-username rescue --repair-password 'password!234' --copy-disk-name repairdiskcopy
-    ```
+The ALAR scripts use the repair extension `repair-button` to fix the missing initramfs issues by specifying `--button-command initrd`. This parameter triggers the automated and unattended recovery. Implement the following commands to automate the regenerating of the missing initramfs file, and regenerating the corresponding configuration file:
 
-2. Regenerate the initrd/initramfs image and regenerate the GRUB configuration file if it has the initrd entry missing. To do this, run the following command:
+```azurecli-interactive
+    az extension add -n vm-repair
+    az extension update -n vm-repair
+    az vm repair repair-button --button-command 'initrd' --verbose $RGNAME --name $VMNAME
+```
 
-    ```azurecli
-    az vm repair run --verbose -g $RGNAME -n $VMNAME --run-id linux-alar2 --parameters initrd --run-on-repair
-    
-    az vm repair restore --verbose -g $RGNAME -n $VMNAME
-    ```
+> [!IMPORTANT]
+> Replace the resource group name `$RGNAME` and VM name `$VMNAME` accordingly.
 
-3. Once the restore command has been executed, restart the original VM and validate that it's able to boot up.
+* The repair VM script, in conjunction with the ALAR script and the `repair-button` button, will run in un-attended mode. It temporarily creates a resource group, a repair VM, and a copy of the affected VM's OS disk.
+* Then it regenerates the missing initramfs, regenerates the corresponding GRUB configuration file, and then swaps the broken VM's OS disk with the copied fixed disk.
+* Finally, the `repair-button` script automatically deletes the resource group containing the temporary repair VM.
 
 ### <a id="missing-initramfs-manual"></a>Regenerate missing initramfs manually
 

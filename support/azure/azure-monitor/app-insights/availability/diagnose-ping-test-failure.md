@@ -1,14 +1,14 @@
 ---
-title: Diagnose problems that cause availability tests to fail in Application Insights
-description: This article describes how to diagnose common issues that cause availability tests to fail in Application Insights.
-ms.date: 11/05/2024
+title: Diagnose Problems That Cause Availability Tests to Fail in Application Insights
+description: This article discusses how to diagnose common issues that cause availability tests to fail in Application Insights.
+ms.date: 8/27/2025
 editor: v-jsitser
-ms.reviewer: aaronmax, cogoodson, matthofa, v-leedennis, v-weizhu
+ms.reviewer: aaronmax, cogoodson, matthofa, v-leedennis, v-weizhu, v-liuamson
 ms.service: azure-monitor
 ms.custom: sap:Availability Tests
 ---
 
-# Diagnose availability test failures in Application Insights 
+# Diagnose availability test failures in Application Insights
 
 This article discusses how to access the Application Insights troubleshooting report. This report enables you to easily diagnose common problems that cause your availability tests to fail.  
 
@@ -36,29 +36,31 @@ The following table lists the steps, error messages, and possible causes that yo
 
 |Step | Error message | Possible cause |
 |-----|---------------|----------------|
-| Connection reuse | No specific error message is returned for this issue. | The web test step is dependent on a previously established connection. Therefore, no DNS, connection or SSL step is required. |
+| Connection reuse | No specific error message is returned for this issue. | The web test step is dependent on a previously established connection. Therefore, no DNS, connection, or SSL step is required. |
 | DNS resolution | The remote name could not be resolved: "\<your-URL>" | The DNS resolution process fails. This most likely occurred because of misconfigured DNS records or temporary DNS server failures. |
 | Connection establishment | A connection attempt failed because the connected party did not properly respond after a period of time. | Your server doesn't respond to the HTTP request. A common cause is that a firewall on your server is blocking our test agents. To test within an Azure Virtual Network, add the Availability service tag to your environment.|
-| TLS transport  | The client and server cannot communicate because they do not possess a common algorithm.| Only TLS 1.0, 1.1, and 1.2 are supported. SSL isn't supported. This step doesn't validate SSL certificates, it only establishes a secure connection. This step appears only if an error occurs. |
+| TLS transport  | The client and server cannot communicate because they do not possess a common algorithm.| Only TLS 1.2, and 1.3 are supported. SSL isn't supported. This step doesn't validate SSL certificates, it only establishes a secure connection. This step appears only if an error occurs. |
 | Receiving response header | Unable to read data from the transport connection. The connection was closed. | Your server commits a protocol error in the response header. For example, your server closes the connection if the response isn't fully read. |
 | Receiving response body | Unable to read data from the transport connection: The connection was closed. | Your server commits a protocol error in the response body. For example, your server closes the connection if the response isn't fully read, or the chunk size is wrong in the chunked response body. |
 | Redirect limit validation | This webpage has too many redirects. This loop will be terminated here since this request exceeded the limit for auto redirects. | Redirects are limited to 10 per test. |
 | Status code validation | `200 - OK` does not match the expected status `400 - BadRequest`. | The returned status code is counted as a success. The "200" code indicates that a normal web page was returned. |
 | Content validation | The required text '\<expected-response-text>' did not appear in the response. | <p>The string isn't an exact case-sensitive match in the response. For example, the string "Welcome!" must be a plain string, without wildcard characters (such as an asterisk). If your page content changes, you might have to update the string. Content match supports only English characters.</p> <p>Content match also fails if the response body is more than 1,000,000 bytes long. After the client reads that number of bytes, it stops reading the response body and drops the connection. Because of this behavior, the server experiences a `ClientConnectionFailure` exception, even if the client returns a success status code.</p> |
-|Missing test results in Azure portal|No specific error message is returned for this issue.   Test results are missing in the Azure portal when viewing the end-to-end transaction details of an availability test. |Non-UTF8 characters aren't supported for viewing web test results. Ensure there are no non-UTF8 characters in the response from the endpoint that's called using the availability test.|
-|Unsupported URL|This URL is not supported|<p>Availability tests only allow communicating over publicly available IP addresses and hostnames. This error might occur when you try to communicate with an internal IP address that isn't routable via the public internet.</p> <p>To resolve this error, ensure only public IP addresses are defined in your web test and that any DNS lookups your web test depends on return only valid publicly routable IP addresses.</p>|
+|Missing test results in Azure portal|No specific error message is returned for this issue.   Test results are missing in the Azure portal when viewing the end-to-end transaction details of an availability test. |Non-UTF8 characters aren't supported for viewing web test results. Make sure that no non-UTF8 characters exist in the response from the endpoint that's called by using the availability test.|
+|Unsupported URL|This URL is not supported|<p>Availability tests only allow communicating over publicly available IP addresses and hostnames. This error might occur when you try to communicate with an internal IP address that isn't routable via the public internet.</p> <p>To resolve this error, make sure that only public IP addresses are defined in your web test and that any DNS lookups that your web test depends on return only valid, publicly routable IP addresses.</p>|
+
+## TLS 1.3 regional restrictions
+
+Some regions restrict the use of TLS 1.3. If you experience connectivity issues in these regions, try to use an earlier version of TLS, such as TLS 1.2. For details about TLS 1.3 support, see [RFC 8446](https://datatracker.ietf.org/doc/html/rfc8446). To learn more about the supported regions, see [Supported TLS configurations](/azure/azure-monitor/app/availability?tabs=standard#supported-tls-configurations).
+
+Only TLS 1.2 and TLS 1.3 are supported. TLS 1.3 availablility varies by region. SSL is not supported. 
+
+This step doesn't validate certificates. It establishes a secure connection and only appears if an error occurs.
 
 > [!NOTE]
-> If the connection reuse step is present, then the following steps won't be present:
+> If the "connection reuse" step exists, the following steps won't exist:
 >
 > - DNS resolution
 > - Connection establishment
 > - TLS transport
-
-## Next steps
-
-- Use [TrackAvailability](xref:Microsoft.ApplicationInsights.TelemetryClient.TrackAvailability%2A) to submit [custom availability tests](/azure/azure-monitor/app/availability-azure-functions).
-
-- Learn about [URL ping tests](/azure/azure-monitor/app/monitor-web-app-availability).
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

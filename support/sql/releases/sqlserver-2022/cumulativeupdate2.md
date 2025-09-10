@@ -2,6 +2,7 @@
 title: Cumulative update 2 for SQL Server 2022 (KB5023127)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 2 (KB5023127).
 ms.date: 05/30/2025
+ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5023127
 ms.reviewer: v-qianli2
 appliesto:
