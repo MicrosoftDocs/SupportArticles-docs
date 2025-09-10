@@ -35,7 +35,7 @@ You may suspect disk I/O latency issues when you observe the following behaviors
 
 ### Step 1: Profile disk I/O latency with `profile_blockio`
 
-The [`profile_blockio`](https://aka.ms/ig-profile-blockio) gadget gathers information about block device I/O usage and generates a histogram distribution of I/O latency when the gadget is stopped. This helps you visualize disk I/O performance and identify latency patterns. We can use this information to gather evidence to support or refute the hypothesis that the symptoms we are seeing are due to disk I/O issues. 
+The [`profile_blockio`](https://aka.ms/ig-profile-blockio) gadget gathers information about block device I/O usage and periodically generates a histogram distribution of I/O latency. This helps you visualize disk I/O performance and identify latency patterns. We can use this information to gather evidence to support or refute the hypothesis that the symptoms we are seeing are due to disk I/O issues. 
 
 ```console
 kubectl gadget run profile_blockio --node <node-name>
@@ -123,7 +123,7 @@ latency
 The [`top_blockio`](https://aka.ms/ig-top-blockio) gadget provides a periodic list of containers with the highest disk I/O operations. Optionally we can limit the tracing to the node we identified in Step 1. This gadget requires kernel version 6.5 or higher (available on [Azure Linux Container Host clusters](/azure/aks/use-azure-linux)).
 
 ```console
-kubectl gadget run top_blockio --namespace <namespace> [--node <node-name>]
+kubectl gadget run top_blockio --namespace <namespace> --sort -bytes [--node <node-name>]
 ```
 
 Sample output:
@@ -144,7 +144,7 @@ From the output, we can identify containers with unusually high number of bytes 
 The [`top_file`](https://aka.ms/ig-top-file) gadget reports periodically the read/write activity by file, helping you identify specific processes in which containers are causing high disk activity.
 
 ```console
-kubectl gadget run top_file --namespace <namespace>
+kubectl gadget run top_file --namespace <namespace> --max-entries 20 --sort -wbytes_raw,-rbytes_raw
 ```
 
 Sample output:
