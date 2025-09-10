@@ -1,7 +1,7 @@
 ---
 title: Error 0xC004F074 No Key Management Service (KMS) could be contacted
 description: Learn how to resolve the 0xC004F074 error scenario that occurs when you try to activate an Azure Windows virtual machine (VM).
-ms.date: 09/08/2025
+ms.date: 09/10/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot activate my Windows VM
 ms.collection: windows
@@ -215,7 +215,7 @@ This pattern is common in environments where backend VMs behind an internal load
 
     | Field | Value |
     |--|--|
-    | Destination | The fully qualified domain name (FQDN) of the KMS server: `azkms.core.windows.net`, or one of the IP addresses that `azkms.core.windows.net` resolves to: `20.118.99.224`, `40.83.235.53`, `23.102.135.246`, or the IP address of the appropriate KMS endpoint that applies to your region |
+    | Destination | The fully qualified domain name (FQDN) of the KMS server: `azkms.core.windows.net`, the IP address that `azkms.core.windows.net` resolves to: `20.118.99.224` or `40.83.235.53`, the IP address that `kms.core.windows.net` resolves to: `23.102.135.246`, or the IP address of the appropriate KMS endpoint that applies to your region |
     | Port |1688 |
     | Protocol | TCP |
     | Action| Allow |
