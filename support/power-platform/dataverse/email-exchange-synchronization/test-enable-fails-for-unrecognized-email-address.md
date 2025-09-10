@@ -1,7 +1,7 @@
 ---
-title: Test And Enable Failed Because No User Was Found Error
+title: Test and Enable Failed Because No User Was Found Error
 description: Explains how to resolve Test and Enable failures in Dataverse caused by unrecognized Microsoft 365 email addresses.
-ms.date: 09/05/2025
+ms.date: 09/10/2025
 ms.custom: sap:Email and Exchange Synchronization\Set up and configuration of server-side synchronization
 author: debrau
 ms.author: debrau
