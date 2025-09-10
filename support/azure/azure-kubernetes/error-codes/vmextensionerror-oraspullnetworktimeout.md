@@ -35,7 +35,7 @@ To resolve this issue, follow these steps:
     az aks show -g ${RESOURCE_GROUP} -n ${CLUSTER_NAME} --query 'bootstrapProfile.containerRegistryResourceId'
     ```
 
-2. Verify the ACR cache rule. It should include `aks-managed-rule` with source repo `mcr.microsoft.com/*` and target repo `aks-managed-reposity/*`. Ensure no other cache rule exists with source or target repo as `*`, which override `aks-managed-rule`.
+2. Verify the ACR cache rule. It should include `aks-managed-rule` with source repo `mcr.microsoft.com/*` and target repo `aks-managed-repository/*`. Ensure no other cache rule exists with source or target repo as `*`, which override `aks-managed-rule`.
 
 3. Review the [container registry private link](/azure/container-registry/container-registry-private-link) to ensure that the connection configuration is correct, including the private Domain Name System (DNS) zone and private link.
 
@@ -50,3 +50,4 @@ To resolve this issue, follow these steps:
 - [Container registry private link](/azure/container-registry/container-registry-private-link)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+

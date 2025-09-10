@@ -1,7 +1,12 @@
-- name: Microsoft Exchange
-  tocHref: /exchange/
-  topicHref: /exchange/index
+items:
+- name: Learn
+  tocHref: /
+  topicHref: /
   items:
-  - name: Troubleshooting
+  - name: Microsoft Exchange
     tocHref: /troubleshoot/exchange/
-    topicHref: /troubleshoot/exchange/index
+    topicHref: /exchange/index
+    items:
+    - name: Troubleshooting
+      tocHref: /troubleshoot/exchange/
+      topicHref: /troubleshoot/exchange/index
