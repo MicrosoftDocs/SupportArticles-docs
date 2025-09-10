@@ -129,9 +129,12 @@ kubectl gadget run top_blockio --namespace <namespace> --sort -bytes [--node <no
 Sample output:
 
 ```
-K8S.NODE                      K8S.NAMESPACE   K8S.PODNAME   K8S.CONTAINERNAME   COMM     PID   TID MAJOR MINOR BYTES      US         IO  RW
-aks-nodepool1-…99-vmss000000                                                              0     0   8     0     173707264  153873788  357 write
-aks-nodepool1-…99-vmss000000                                                              0     0   8     0     24576      1549       6   read
+K8S.NODE                      K8S.NAMESPACE   K8S.PODNAME   K8S.CONTAINERNAME   COMM     PID  TID MAJOR MINOR BYTES      US         IO    RW
+aks-nodepool1-…99-vmss000000                                                               0    0 8     0     173707264  153873788  11954 write
+aks-nodepool1-…99-vmss000000                                                               0    0 8     0     352256     85222      36    read 
+aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd          stress  324… 324… 8     0     131072     4450       1     write
+aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd          stress  324… 324… 8     0     131072     3651       1     write
+aks-nodepool1-…99-vmss000000  default         stress-hdd    stress-hdd          stress  324… 324… 8     0     4096       4096       1     write
 ```
 
 From the output, we can identify containers with unusually high number of bytes read/written into the disk (`BYTES` column), time spent on reading/writing operations (`US` column), or number of IO operations (`IO` column) which may indicate high disk activity. In this example, we can see significant write activity (173MB) with considerable time spent (~154 seconds total).
