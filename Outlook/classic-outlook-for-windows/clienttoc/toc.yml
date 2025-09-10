@@ -225,8 +225,6 @@
       items:
         - name: Junk emails are permanently deleted
           href: ../junk-email/junk-emails-are-permanently-deleted.md
-        - name: New emails automatically move to Junk folder
-          href: ../junk-email/new-emails-automatically-move-to-junk-folder.md
         - name: Over Junk E-mail list limit
           href: ../junk-email/outlook-error-over-junk-emial-list-limit.md
     - name: Message Body

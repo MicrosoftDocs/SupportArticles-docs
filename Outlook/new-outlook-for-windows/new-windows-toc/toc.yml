@@ -12,6 +12,10 @@ items:
     items:
     - name: Map classic Outlook policies to new Outlook
       href: ../installation/map-classic-outlook-policies-to-new-outlook.md
+    - name: Junk Email
+      items:
+      - name: New emails automatically move to Junk folder
+        href: ../junk-email/new-emails-automatically-move-to-junk-folder.md
   - name: Profiles and Accounts
     items:
     - name: Archive mailbox doesn't appear in Outlook or Outlook on the web
