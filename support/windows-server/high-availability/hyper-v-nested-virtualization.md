@@ -1,7 +1,7 @@
 ---
 title: Hyper-V Nested Virtualization Troubleshooting Guide
 description: Provides a structured approach for troubleshooting nested virtualization issues in physical and cloud-based environments.
-ms.date: 09/09/2025
+ms.date: 09/10/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
