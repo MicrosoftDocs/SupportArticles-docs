@@ -1,0 +1,41 @@
+### YamlMime:Landing
+
+title: Classic Outlook for Windows troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Classic Outlook for Windows. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Classic Outlook for Windows troubleshooting
+  description: Documentation for troubleshooting common issues with Classic Outlook for Windows.
+  ms.topic: landing-page
+  author: cloud-writer
+  ms.author: meerak
+  ms.date: 01/30/2024
+  ms.service: outlook
+  hideEdit: true
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Calendaring
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't globally disable the birthday calendar
+            url: ./calendaring/cannot-globally-disable-birthday-calendar.md
+          - text: Multiple time zones show an incorrect time difference
+            url: ./calendaring/additional-time-zone-shows-one-hour-offset-on-dst.md
+  # Card
+  - title: Installation
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Map classic Outlook policies to new Outlook
+            url: ./installation/map-classic-outlook-policies-to-new-outlook.md
+# Card
+  - title: Profiles and Accounts
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Archive mailbox doesn't appear in Outlook or Outlook on the web
+            url: ./profiles-and-accounts/archive-mailbox-not-visible.md

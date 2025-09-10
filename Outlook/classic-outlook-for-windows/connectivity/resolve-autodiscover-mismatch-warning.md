@@ -62,4 +62,4 @@ Don't install or bind the SSL certificate on the DNS server that's running IIS. 
 
 ## Workaround 4
 
-Configure Outlook to ignore the domain name mismatch and [connect to a specific HTTP endpoint](suppress-autodiscover-redirect-warning.md#configure-outlook-to-allow-connection-to-a-specific-endpoint).
+Configure Outlook to ignore the domain name mismatch and [connect to a specific HTTP endpoint](suppress-autodiscover-redirect-warning.md).

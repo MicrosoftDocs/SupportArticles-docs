@@ -42,4 +42,4 @@ When you use the `DisableCrossAccountCopy` policy in Outlook, the `DisablePST` a
 For more information on the policy, see [Plan for compliance and archiving in Outlook 2010](/previous-versions/office/office-2010/ff800883(v=office.14)).
 
 > [!IMPORTANT]
-> There is current a known issue with the Outlook 2010 Administrative Template (ADML/ADMX) setting this value to `REG_EXPAND_SZ` instead of `REG_MULTI_SZ`. For more information about this issue, see [Outlook policy template deploys DisableCrossAccountCopy as REG_EXPAND_SZ instead of REG_MULTI_SZ](https://support.microsoft.com/help/2479719).
+> There is current a known issue with the Outlook 2010 Administrative Template (ADML/ADMX) setting this value to `REG_EXPAND_SZ` instead of `REG_MULTI_SZ`. For more information about this issue, see [Outlook policy template deploys DisableCrossAccountCopy as REG_EXPAND_SZ instead of REG_MULTI_SZ](../deployment/policy-template-deploys-disablecrossaccountcopy-as-reg-expand-sz.md).

@@ -12,6 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: 
 appliesto: 
+  - New Outlook for Windows
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013

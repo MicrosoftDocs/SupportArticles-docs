@@ -74,8 +74,10 @@ productDirectory:
     - title: Microsoft Outlook
       imageSrc: /media/logos/logo-outlook.svg
       links:
-        - url: /troubleshoot/outlook/outlook-client-welcome
-          text: Outlook for Windows
+        - url: /troubleshoot/outlook/classic-outlook-windows-welcome
+          text: Classic Outlook for Windows
+        - url: /troubleshoot/outlook/new-outlook-windows-welcome
+          text: New Outlook for Windows
         - url: /troubleshoot/outlook/legacy-outlook-mac-welcome
           text: Legacy Outlook for Mac
         - url: /troubleshoot/outlook/overview-new-outlook-mac
