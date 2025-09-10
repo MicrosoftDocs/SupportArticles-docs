@@ -1,5 +1,5 @@
 ---
-title: Azure Serial Console for SysRq and NMI Calls
+title: Azure Serial Console for SysRq and NMI calls
 description: Using Serial Console for SysRq and NMI calls in Azure virtual machines.
 services: virtual-machines
 documentationcenter: ''
@@ -11,9 +11,10 @@ ms.service: azure-virtual-machines
 ms.collection: linux
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 8/26/2025
+ms.date: 08/14/2018
 ms.author: jarrettr
 ---
+
 
 # Use the Azure Serial Console for SysRq and NMI calls
 
@@ -21,72 +22,72 @@ ms.author: jarrettr
 
 ## System Request (SysRq)
 
-A SysRq is a sequence of keys that's understood by the Linux operating system kernel and that can trigger a set of predefined actions. These commands are often used if virtual machine (VM) troubleshooting or recovery can't be performed through traditional administration. For example, if the VM isn't responding, you can use the SysRq feature of Azure Serial Console to mimic pressing the SysRq key and characters that are entered on a physical keyboard.
+A SysRq is a sequence of keys understood by the Linux operation system kernel, which can trigger a set of pre-defined actions. These commands are often used when virtual machine troubleshooting or recovery can't be performed through traditional administration. For example, if the VM isn't responding. Using the SysRq feature of Azure Serial Console mimics pressing of the SysRq key and characters entered on a physical keyboard.
 
-After the SysRq command is delivered, the kernel configuration controls how the system responds. For information about how to enable and disable SysRq, see [Linux Magic System Request Key Hacks](https://aka.ms/linuxsysrq) (SysRq Admin Guide).
+Once the SysRq sequence is delivered, the kernel configuration controls how the system responds. For information on enabling and disabling SysRq, see the *SysRq Admin Guide* [text](https://aka.ms/kernelorgsysreqdoc) | [markdown](https://aka.ms/linuxsysrq).
 
-The Azure Serial Console can be used to send a SysRq to an Azure VM by selecting the keyboard icon on the Command bar.
+The Azure Serial Console can be used to send a SysRq to an Azure virtual machine using the keyboard icon in the following command bar.
 
-:::image type="content" source="media/serial-console-nmi-sysrq/command-menu.png" alt-text="Screenshot of the Azure Serial Console showing the keyboard icon highlighted and its menu visible. That menu contains a Send SysRq Command item.":::
+:::image type="content" source="media/serial-console-nmi-sysrq/command-menu.png" alt-text="Screenshot of the Azure Serial Console. The keyboard icon is highlighted, and its menu is visible. That menu contains a Send SysRq Command item.":::
 
-Select "Send SysRq Command" to open a dialog box that provides common SysRq options or accepts a sequence of SysRq commands. The **Send SysRq** command enables a series of SysRq sequences to perform a high-level operation, such as a safe restart that uses the `REISUB` command.
+Choosing "Send SysRq Command" opens a dialog, which provides common SysRq options or accept a sequence of SysRq commands entered into the dialog. This "Send SysRq Command allows for series of SysRq's to perform a high-level operation such as a safe reboot using: `REISUB`.
 
-:::image type="content" source="media/serial-console-nmi-sysrq/sysreq-ui.png" alt-text="Screenshot of the Send SysRq command sent to a Guest dialog box when the entering key option is selected and REISUB is input." border="false":::
+:::image type="content" source="media/serial-console-nmi-sysrq/sysreq-ui.png" alt-text="Screenshot of the Send SysRq Command to Guest dialog box when the entering key option is selected and REISUB is input into the following field." border="false":::
 
-The SysRq command can't be used on VMs that are stopped or whose kernel is in a nonresponsive state (for example, a kernel panic).
+The SysRq command can't be used on virtual machines that are stopped or whose kernel is in a non-responsive state. For example, a kernel panic.
 
 ### Enable SysRq
 
-SysRq can be configured so that all, none, or only certain commands are available. You can enable all SysRq commands by using the following step, although this change doesn't survive a restart:
+As described in the *SysRq Admin Guide*, SysRq can be configured such that all, none, or only certain commands are available. You can enable all SysRq commands using the following step, but it doesn't survive a reboot:
 
 ```console
 echo "1" >/proc/sys/kernel/sysrq
 ```
 
-To make the SysReq configuration persistent, follow these steps to enable all SysRq commands:
+To make the SysReq configuration persistent, you can do the following to enable all SysRq commands
 
-1. Add the following line to */etc/sysctl.conf*: <br />
+1. Adding this line to */etc/sysctl.conf* <br>
     `kernel.sysrq = 1`
-1. Restart or update sysctl by running the following command: <br />
+1. Rebooting or updating sysctl by running <br>
     `sysctl -p`
 
-### Command keys
+### Command Keys
 
-This command key table is taken from the SysRq Admin Guide.
+From the SysRq Admin Guide:
 
 |Command| Function
 | ------| ----------- |
-|``b``  |   Immediately restarts the system without syncing or unmounting your disks.
-|``c``  |   Performs a system crash by a NULL pointer dereference. A crash dump file is created if configured.
+|``b``  |   Will immediately reboot the system without syncing or unmounting your disks.
+|``c``  |   Will perform a system crash by a NULL pointer dereference. A crashdump will be taken if configured.
 |``d``  |   Shows all locks that are held.
-|``e``  |   Sends a SIGTERM to all processes, except for init.
-|``f``  |   Calls the oom killer to kill a memory-intensive process.
-|``g``  |   Used by kgdb (kernel debugger).
-|``h``  |   Displays help. (Any key other than the keys that are listed here also displays help, but "h" is easy to remember.)
-|``i``  |   Send a SIGKILL to all processes, except for init.
-|``j``  |   Forcibly thaws filesystems that are frozen by the FIFREEZE ioctl.
-|``k``  |   Secure Access Key (SAK) that kills all programs on the current virtual console.
-|``l``  |   Shows a stack backtrace for all active CPUs.
-|``m``  |   Dumps current memory information to your console.
-|``n``  |   Allows real-time (RT) tasks to be reprioritized by using the "nice" value. NOTE: The "nice" value controls a process's priority for CPU scheduling, where lower values indicate higher priority.
-|``o``  |   Shuts off your system (if configured and supported).
-|``p``  |   Dumps the current registers and flags to your console.
-|``q``  |   Dumps CPU lists of all armed hrtimers (but not regular timer_list timers) and detailed information about all clockevent devices.
-|``r``  |   Turns off keyboard raw mode and sets it to XLATE.
-|``s``  |   Tries to sync all mounted filesystems.
-|``t``  |   Dumps a list of current tasks and their information to your console.
-|``u``  |   Tries to remount all mounted filesystems as read-only.
-|``v``  |   Forcefully restores the framebuffer console.
-|``v``  |   Creates an ETM buffer dump file [ARM-specific].
-|``w``  |   Dumps tasks that are in uninterruptible (blocked) state.
-|``x``  |   Used by the xmon interface on ppc/powerpc platforms. Shows global PMU registers on sparc64. Dumps all TLB entries on MIPS.
-|``y``  |   Shows global CPU Registers [SPARC-64 specific].
-|``z``  |   Dumps the ftrace buffer.
-|``0``-``9`` | Sets the console log level to control which kernel messages are printed to your console. (For example, "0" restricts messages that are sent to your console to emergency messages, such as PANIC and OOPS.)
+|``e``  |   Send a SIGTERM to all processes, except for init.
+|``f``  |   Will call the oom killer to kill a memory hog process, but don't panic if nothing can be killed.
+|``g``  |   Used by kgdb (kernel debugger)
+|``h``  |   Will display help (any other key than those listed here also displays help, but ``h`` is easy to remember :-)
+|``i``  |    Send a SIGKILL to all processes, except for init.
+|``j``  |    Forcibly "Just thaw it" - filesystems frozen by the FIFREEZE ioctl.
+|``k``  |    Secure Access Key (SAK) Kills all programs on the current virtual console. NOTE: See important comments in the following SAK section.
+|``l``  |    Shows a stack backtrace for all active CPUs.
+|``m``  |    Will dump current memory info to your console.
+|``n``  |    Used to make RT tasks nice-able
+|``o``  |    Will shut off your system (if configured and supported).
+|``p``  |    Will dump the current registers and flags to your console.
+|``q``  |    Will dump per CPU lists of all armed hrtimers (but NOT regular timer_list timers) and detailed information about all clockevent devices.
+|``r``  |    Turns off keyboard raw mode and sets it to XLATE.
+|``s``  |    Will attempt to sync all mounted filesystems.
+|``t``  |    Will dump a list of current tasks and their information to your console.
+|``u``  |    Will attempt to remount all mounted filesystems read-only.
+|``v``  |    Forcefully restores framebuffer console
+|``v``  |    Causes ETM buffer dump [ARM-specific]
+|``w``  |    Dumps tasks that are in uninterruptible (blocked) state.
+|``x``  |    Used by xmon interface on ppc/powerpc platforms. Show global PMU Registers on sparc64. Dump all TLB entries on MIPS.
+|``y``  |    Show global CPU Registers [SPARC-64 specific]
+|``z``  |    Dump the ftrace buffer
+|``0``-``9`` | Sets the console log level, controlling which kernel messages are printed to your console. (``0``, for example would make it so that only emergency messages like PANICs or OOPSes would make it to your console.)
 
-### Distribution-specific documentation
+### Distribution-specific documentation ###
 
-For distribution-specific documentation about SysRq and the steps to configure Linux to create a crash dump file when it receives a SysRq "Crash" command, see the following articles.
+For distribution-specific documentation on SysRq and steps to configure Linux to create a crash dump when it receives a SysRq "Crash" command, see the following links:
 
 #### Ubuntu ####
 
@@ -105,24 +106,24 @@ For distribution-specific documentation about SysRq and the steps to configure L
 
 - [Collecting crash logs](https://github.com/coreos/docs/blob/master/os/collecting-crash-logs.md)
 
-## Nonmaskable interrupt (NMI)
+## Non-Maskable Interrupt (NMI)
 
-A nonmaskable interrupt (NMI) creates a signal that software on a VM doesn't ignore. Historically, NMIs are used to monitor for hardware issues on systems that require specific response times. Today, programmers, and system administrators often use NMI as a mechanism to debug or troubleshoot systems that aren't responding.
+A non-maskable interrupt (NMI) creates a signal that software on a virtual machine doesn't ignore. Historically, NMIs are used to monitor for hardware issues on systems that required specific response times. Today, programmers, and system administrators often use NMI as a mechanism to debug or troubleshoot systems that aren't responding.
 
-You can use the Serial Console to send an NMI to an Azure VM by using the keyboard icon on the Command bar. After the NMI is delivered, the VM configuration controls how the system responds. Linux systems can be configured to stop responding and create a memory dump file that the OS receives as an NMI.
+The Serial Console can be used to send an NMI to an Azure virtual machine using the keyboard icon in the following command bar. Once the NMI is delivered, the virtual machine configuration controls how the system responds. Linux operating systems can be configured to crash and create a memory dump the operating system receives an NMI.
 
-:::image type="content" source="media/serial-console-nmi-sysrq/command-menu.png" alt-text="Screenshot of the Serial Console. The keyboard icon is highlighted, and its menu is visible. That menu contains a send nonmaskable interrupt item.":::
+:::image type="content" source="media/serial-console-nmi-sysrq/command-menu.png" alt-text="Screenshot of the Serial Console. The keyboard icon is highlighted, and its menu is visible. That menu contains a Send Non-Maskable Interrupt item.":::
 
 ### Enable NMI
 
-For Linux systems that support sysctl to configure kernel parameters, you can enable a panic  by running the following commands when you receive the NMI:
+For Linux systems that support sysctl for configuring kernel parameters, you can enable a panic when receiving this NMI by using the following commands:
 
-1. Add this line to */etc/sysctl.conf*: <br>
+1. Adding this line to */etc/sysctl.conf* <br>
     `kernel.panic_on_unrecovered_nmi=1`
-1. Restart or update sysctl by running: <br>
+1. Rebooting or updating sysctl by running <br>
     `sysctl -p`
 
-For more information about Linux kernel configurations, including `unknown_nmi_panic`, `panic_on_io_nmi`, and `panic_on_unrecovered_nmi`, see: [Documentation for /proc/sys/kernel/*](https://www.kernel.org/doc/Documentation/sysctl/kernel.txt). For distribution-specific documentation about NMI and the steps to configure Linux to create a crash dump file when it receives an NMI, see the following articles:
+For more information on Linux kernel configurations, including `unknown_nmi_panic`, `panic_on_io_nmi`, and `panic_on_unrecovered_nmi`, see: [Documentation for /proc/sys/kernel/*](https://www.kernel.org/doc/Documentation/sysctl/kernel.txt). For distribution-specific documentation  on NMI and steps to configure Linux to create a crash dump when it receives an NMI, see the following links:
 
 ### Ubuntu
 
@@ -144,9 +145,9 @@ For more information about Linux kernel configurations, including `unknown_nmi_p
 
 ## Next steps
 
-- See the main [Serial Console Linux documentation page](serial-console-linux.md).
-- Use Serial Console to [start up into GRUB and enter Single User mode](serial-console-grub-single-user-mode.md)
-- Learn about the [Serial Console for Windows VMs](../windows/serial-console-windows.md).
+- The main Serial Console Linux documentation page is located [here](serial-console-linux.md).
+- Use Serial Console to boot into [GRUB and enter single user mode](serial-console-grub-single-user-mode.md)
+- The Serial Console is also available for [Windows](../windows/serial-console-windows.md) VMs
 - Learn more about [boot diagnostics](../windows/boot-diagnostics.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
