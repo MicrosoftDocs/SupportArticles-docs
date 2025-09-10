@@ -1,7 +1,6 @@
 items:
 - name: Welcome
   href: welcome-azure-kubernetes.yml
-
 - name: Create, Upgrade, Scale and Delete operations (cluster or nodepool)
   items:
   - name: Create operations
@@ -44,9 +43,6 @@ items:
       href: create-upgrade-delete/pod-stuck-crashloopbackoff-mode.md
     - name: Troubleshoot common Azure Linux container host for AKS issues
       href: create-upgrade-delete/troubleshoot-common-azure-linux-aks.md
-
-
-
 - name: Load balancer and Ingress controller
   items:
   - name: Create an unmanaged ingress controller
@@ -55,12 +51,10 @@ items:
     href: load-bal-ingress-c/troubleshoot-app-gateway-ingress-controller-connectivity-issues.md
   - name: Troubleshoot Performance Issues with the Managed NGINX Ingress Controller in AKS
     href: load-bal-ingress-c/troubleshoot-performance-ingress.md
-
 - name: Troubleshoot Kubernetes control plane
   items:
   - name: Troubleshoot API server and etcd
     href: create-upgrade-delete/troubleshoot-apiserver-etcd.md
-
 - name: Node/node pool availability and performance
   items:
   - name: Improve container image pull performance in AKS
@@ -143,12 +137,6 @@ items:
         href: connectivity/traffic-between-node-pools-is-blocked.md
       - name: Can't view resources in Kubernetes resource viewer on Azure portal
         href: connectivity/cannot-view-resources-kubernetes-resource-viewer-portal.md
-      - name: '"Error from server: error dialing backend: dial tcp" messages'
-        href: connectivity/error-from-server-error-dialing-backend-dial-tcp.md
-      - name: InsufficientSubnetSize error
-        href: connectivity/insufficientsubnetsize-error-advanced-networking.md
-      - name: TCP time-outs such as 10250 I/O
-        href: connectivity/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
       - name: TCP times out when kubectl or other third-party tools connect
         href: connectivity/tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
   - name: Troubleshoot DNS resolution problems in AKS
@@ -159,7 +147,6 @@ items:
       href: connectivity/dns/troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md
     - name: Troubleshoot DNS from inside a pod
       href: connectivity/dns/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md
-
 - name: Data collection guide
   items:
   - name: Capture real-time system insights from cluster
@@ -173,7 +160,6 @@ items:
     href: logs/packet-capture-pod-level.md
   - name: Capture container dump from Windows node
     href: logs/capture-container-dump-windows-node-aks.md
-
 - name: Storage
   items:
   - name: Errors when mounting File share
@@ -198,12 +184,10 @@ items:
     href: storage/troubleshoot-common-bring-your-own-key-issues.md
   - name: Troubleshoot pods and namespaces stuck in the Terminating state
     href: storage/pods-namespaces-terminating-state.md
-
 - name: Security
   items:
   - name: Troubleshoot seccomp profiles in AKS
     href: security/troubleshoot-seccomp-profiles.md
-
 - name: Extensions, Policies and Add-Ons
   items:
   - name: Troubleshoot Azure Policy Add-on for AKS
@@ -277,10 +261,6 @@ items:
       href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
       href: extensions/changes-in-kubernetes-event-driven-autoscaling-add-on-214-215.md
-
-
-
-
 - name: Troubleshoot error codes
   items:
   - name: VMExtension error codes
@@ -291,10 +271,6 @@ items:
       href: create-upgrade-delete/error-code-vhdfilenotfound.md
     - name: K8SAPIServerConnFailVMExtensionError error (51)
       href: create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md
-    - name: K8SAPIServerConnFailVMExtensionError error (51)
-      href: create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md
-    - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
-      href: create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md
     - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
       href: create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md
     - name: OrasPullNetworkTimeoutVMExtensionError
@@ -303,8 +279,6 @@ items:
       href: error-codes/vmextensionerror-oraspullunauthorized.md
     - name: OutboundConnFailVMExtensionError error (50)
       href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md  
-    - name: OutboundConnFailVMExtensionError error (50)
-      href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
     - name: VMExtensionError_CniDownloadTimeout error
       href: error-codes/vmextensionerror-cnidownloadtimeout.md
     - name: VMExtensionError_OutboundConnFail error
@@ -315,10 +289,10 @@ items:
       href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
     - name: VMExtensionError_VHDFileNotFound error
       href: error-codes/vmextensionerror-vhdfilenotfound.md
-    - name: VMExtensionError_ProvisioningTimeout error
-      href: error-codes/vmextensionerror-provisioningtimeout.md
     - name: VMExtensionProvisioningTimeout error
       href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
+    - name: VMExtensionError_ProvisioningTimeout error
+      href: error-codes/vmextensionerror-provisioningtimeout.md
     - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error
       href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
     - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
@@ -342,9 +316,9 @@ items:
       - name: BadRequest or InvalidClientSecret error
         href: error-codes/bad-request-or-invalid-client-secret-error.md
       - name: CustomPrivateDNSZoneMissingPermissionError error
-        href: error-codes/customprivatednszonemissingpermissions-error.md
-      - name: CustomPrivateDNSZoneMissingPermissionError error
         href: create-upgrade-delete/error-code-customprivatednszonemissingpermissionerror.md
+      - name: CustomPrivateDNSZoneMissingPermissionError error
+        href: error-codes/customprivatednszonemissingpermissions-error.md        
       - name: LinkedAuthorizationFailed error
         href: create-upgrade-delete/error-code-linkedauthorizationfailed.md
       - name: LinkedAuthorizationFailed error
@@ -352,9 +326,10 @@ items:
       - name: Missing or invalid service principal
         href: create-upgrade-delete/missing-or-invalid-service-principal.md
       - name: ServicePrincipalValidationClientError error
-        href: error-codes/serviceprincipalvalidationclienterror-error.md
+        href: create-upgrade-delete/error-code-serviceprincipalvalidationclienterror.md        
       - name: ServicePrincipalValidationClientError error
-        href: create-upgrade-delete/error-code-serviceprincipalvalidationclienterror.md
+        href: error-codes/serviceprincipalvalidationclienterror-error.md
+
   - name: Quota and capacity
     items:
       - name: AvailabilityZoneNotSupported error
@@ -362,9 +337,9 @@ items:
       - name: AksCapacityHeavyUsage error
         href: error-codes/akscapacityheavyusage-error.md
       - name: OperationNotAllowed or PublicIPCountLimitReached error
-        href: error-codes/operationnotallowed-publicipcountlimitreached-error.md
-      - name: OperationNotAllowed or PublicIPCountLimitReached error
         href: create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md
+      - name: OperationNotAllowed or PublicIPCountLimitReached error
+        href: error-codes/operationnotallowed-publicipcountlimitreached-error.md        
       - name: PublicIPCountLimitReached error
         href: create-upgrade-delete/error-code-publicipcountlimitreached.md
       - name: PublicIPCountLimitReached error
@@ -378,9 +353,9 @@ items:
       - name: Troubleshoot the AKSCapacityError error code
         href: create-upgrade-delete/akscapacityerror.md
       - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
-        href: error-codes/zonalallocation-allocationfailed-error.md
+        href: create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed.md        
       - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
-        href: create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed.md
+        href: error-codes/zonalallocation-allocationfailed-error.md
   - name: Networking
     items:
       - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
@@ -388,19 +363,23 @@ items:
       - name: CreateOrUpdateVirtualNetworkLinkFailed error
         href: error-codes/createorupdatevirtualnetworklinkfailed-error.md
       - name: DnsServiceIpOutOfServiceCidr error
-        href: error-codes/dnsserviceipoutofservicecidr-error.md
-      - name: DnsServiceIpOutOfServiceCidr error
         href: create-upgrade-delete/error-code-dnsserviceIpoutofservicecidr.md
+      - name: DnsServiceIpOutOfServiceCidr error
+        href: error-codes/dnsserviceipoutofservicecidr-error.md        
       - name: Error "CreateOrUpdateVirtualNetworkLinkFailed"
         href: create-upgrade-delete/createorupdatevirtualnetworklinkfailed-error.md
-      - name: InUseRouteTableCannotBeDeleted error
-        href: error-codes/inuseroutetablecannotbedeleted-error.md
+      - name: '"Error from server: error dialing backend: dial tcp" messages'
+        href: connectivity/error-from-server-error-dialing-backend-dial-tcp.md
+      - name: InsufficientSubnetSize error
+        href: connectivity/insufficientsubnetsize-error-advanced-networking.md
       - name: InUseRouteTableCannotBeDeleted error
         href: create-upgrade-delete/error-code-inuseroutetablecannotbedeleted.md
-      - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
-        href: error-codes/invalidloadbalancerprofileallocatedoutboundports-error.md
+      - name: InUseRouteTableCannotBeDeleted error
+        href: error-codes/inuseroutetablecannotbedeleted-error.md
       - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
         href: create-upgrade-delete/error-code-invalidloadbalancerprofileallocatedoutboundports.md
+      - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
+        href: error-codes/invalidloadbalancerprofileallocatedoutboundports-error.md
       - name: LB/PvtLinkSvcWithPvtEndptConn deletion error
         href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
       - name: LoadBalancerInUseByVirtualMachineScaleSet error
@@ -422,16 +401,17 @@ items:
       - name: SubnetIsDelegated error
         href: error-codes/subnetisdelegated-error.md
       - name: SubnetIsFull error
-        href: error-codes/subnetisfull-error.md
-      - name: SubnetIsFull error
         href: create-upgrade-delete/error-code-subnetisfull.md
+      - name: SubnetIsFull error
+        href: error-codes/subnetisfull-error.md
       - name: SubnetIsFull upgrade error
         href: create-upgrade-delete/error-code-subnetisfull-upgrade.md
+      - name: TCP time-outs such as 10250 I/O
+        href: connectivity/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
       - name: VirtualNetworkNotInSucceededState error 
         href: error-codes/virtualnetworknotinsucceededstate-error.md
   - name: Throttling
     items:
-
       - name: 429 Too Many Requests errors
         href: create-upgrade-delete/429-too-many-requests-errors.md
       - name: SubscriptionRequestsThrottled error
@@ -448,7 +428,6 @@ items:
         href: create-upgrade-delete/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
       - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error
         href: error-codes/toomanyrequestsreceived-error.md
-
   - name: Windows
     items:
       - name: Known issues - Custom kubelet configuration on Windows
@@ -477,7 +456,6 @@ items:
         href: create-upgrade-delete/changing-property-imagereference-not-allowed.md
       - name: Failed to fix node group sizes
         href: create-upgrade-delete/cluster-autoscaler-fails-to-scale.md
-
   - name: Version upgrade
     items:
       - name: AKS upgrade errors because of version skew, incompatibility, or lack of support
