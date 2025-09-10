@@ -1,5 +1,5 @@
 items:
-- name: Welcome to new Outlook for Windows
+- name: New Outlook for Windows Troubleshooting
   href: ../new-outlook-windows-welcome.yml
   items:
   - name: Calendaring
