@@ -78,5 +78,22 @@ After completing the previous troubleshooting steps, ask the vendor to sign in a
 
 For details about vendor onboarding and sign-in steps, see [Vendor onboarding](/dynamics365/supply-chain/procurement/vendor-onboarding).
 
+## Cause 6: User not linked to a vendor contact
+**Resolution:**
+- Verify that the **user record** is linked to a **person/contact** in the system (on the *User Information* form).  
+- Confirm that this person/contact is listed as a contact for the vendor master record.  
+- If not, link the user to the correct vendor contact so the system can identify which vendor the user should access.  
+
+For details, see [Add new vendor collaboration contacts](https://learn.microsoft.com/en-us/dynamics365/supply-chain/procurement/manage-vendor-collaboration-users#add-new-vendor-collaboration-contacts).  
+
+---
+
+## Cause 7: Vendor collaboration setting inactive on vendor record
+**Resolution:**
+- Check the vendor master record to ensure that **Vendor collaboration** is set to *Active*.  
+- If the setting is *Not active*, update it to *Active* so that vendor users can access the Vendor Collaboration Portal.  
+
+For details, see [Enabling vendor collaboration](https://learn.microsoft.com/en-us/dynamics365/supply-chain/procurement/vendor-collaboration-work-external-vendors#enabling-vendor-collaboration).
+
 > [!TIP]
 > If the issue persists, review the vendor collaboration setup and user role assignments to ensure no conflicting configurations exist.
