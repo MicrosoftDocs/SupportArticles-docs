@@ -1,7 +1,7 @@
 ---
 title: Noncustomizable buttons in ribbon
 description: Provides more information about the buttons that aren't customizable in ribbon in Microsoft Power Apps.
-ms.date: 09/10/2025
+ms.date: 09/11/2025
 ms.reviewer: brflood
 ms.custom: sap:Configuring model-driven app commands\Command is not shown or hidden as expected
 ---
