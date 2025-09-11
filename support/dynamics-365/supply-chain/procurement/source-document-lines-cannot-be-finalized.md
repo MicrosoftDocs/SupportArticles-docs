@@ -1,8 +1,8 @@
 ---
-title: The Source Document Lines Cannot Be Finalized Until the Status is Confirmed
+title: The Source Document Lines Cannot Be Finalized Until the Status Is Confirmed
 description: Provides a resolution for the Source document lines cannot be finalized error in Microsoft Dynamics 365.
 author: Sumit
-ms.date: 09/08/2025
+ms.date: 09/11/2025
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac, shriramsiv
@@ -33,7 +33,7 @@ To resolve this issue, reset the purchase order accounting distributions by foll
 1. Navigate to **Procurement and sourcing** > **Periodic tasks** > **Clean up** > **Purchase Order Distribution Reset**.
 2. Enter the **Purchase Order (PO) number** in the designated field.
 3. Select **OK** to proceed.
-4. The status of the purchase order will update to **Draft**.
+4. The status of the purchase order updates to **Draft**.
 5. Submit the workflow and confirm the purchase order again.
 
 Triggering the purchase order distribution reset initiates a data check to ensure that the selected purchase order is in the correct state for the tool to run. After the reset, you should be able to finalize the source document lines.
