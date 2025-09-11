@@ -1,6 +1,6 @@
 ---
 title: Fix Conditional Access-related issues for Teams Android devices
-description: Discusses how to exclude devices from Conditional Access policies or Intune device compliance policies that can prevent users from signing in to or using the Teams app on Android devices.
+description: Discusses how to exclude devices from Conditional Access policies or Intune device compliance policies. These policies can prevent users from signing in to or using the Teams app on Android devices.
 ms.reviewer: taherr
 ms.topic: troubleshooting
 ms.date: 05/26/2024
@@ -22,9 +22,9 @@ ms.custom:
 
 ## Symptoms
 
-Conditional Access is a Microsoft Entra feature that helps make sure that devices that access corporate resources are correctly managed and secured. If Conditional Access policies are applied to the Microsoft Teams service, Android devices that access Teams must comply with the policies. Such devices include Teams phones, Teams displays, Teams panels, and Teams Rooms on Android. Otherwise, Conditional Access will prevent users from signing in to or using the Teams app on the devices.
+Conditional Access is a Microsoft Entra feature that helps make sure that devices that access corporate resources are correctly managed and secured. If Conditional Access policies are applied to the Microsoft Teams service, Android devices that access Teams must comply with the policies. Such devices include Teams phones, Teams displays, Teams panels, and Teams Rooms on Android. Otherwise, Conditional Access prevent users from signing in to or using the Teams app on the devices.
 
-If these policies are applied, you might experience one or more of the following issues on non-compliant devices:
+If these policies are applied, you might experience one or more of the following issues on noncompliant devices:
 
 - The devices can't sign in to Teams, or they get stuck in sign-in loops.
 - The devices automatically sign out of Teams randomly.
@@ -36,7 +36,7 @@ These issues can occur for the following reasons:
 
 - Unsupported Conditional Access policy or Intune device compliance policy settings
 
-  If a device is marked as non-compliant, the Microsoft Entra token-issuing service stops renewing the tokens for the device object or even revokes the token. In this case, the device can't get an updated authentication token, and it's forced to sign out.
+  If a device is marked as noncompliant, the Microsoft Entra token-issuing service stops renewing the tokens for the device object or even revokes the token. In this case, the device can't get an updated authentication token, and it's forced to sign out.
 
   To check the compliance status of your devices, use the [Intune Device compliance dashboard](/mem/intune/protect/compliance-policy-monitor).
   
@@ -107,7 +107,7 @@ To manually check user access to the Teams app, follow these steps:
 
    :::image type="content" source="media/teams-android-devices-conditional-access-issues/conditional-access-policy-details.png" alt-text="The Conditional Access policy details page shows compliance failure details per policy.":::
 
-After you identify the specific Conditional Access policy that's causing the issue, you can use [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices) to exclude the affected device from the policy. Some of the commonly used device properties in device filters are *manufacturer* and *model*. These are used together with the *Contains*, *StartsWith*, and *In* operators.
+After you identify the specific Conditional Access policy that's causing the issue, you can use [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices) to exclude the affected device from the policy. Some of the commonly used device properties in device filters are *manufacturer* and *model*. These properties are used together with the *Contains*, *StartsWith*, and *In* operators.
 
 > [!NOTE]
 >
