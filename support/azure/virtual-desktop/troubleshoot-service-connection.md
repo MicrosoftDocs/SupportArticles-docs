@@ -45,7 +45,7 @@ This could also happen if a CSP Provider created the subscription and then trans
 
 This error occurs when the user is subject to a Conditional Access policy that's blocking access to a specific Microsoft Entra ID resource. This usually happens for one of two reasons:
 
-- The user is trying to sign in with either the Windows App on Windows or in a web browser but doesn't have access to both the Azure Virtual Desktop and Windows 365 apps.
+- The user is trying to sign in with the Windows App either on Windows or in a web browser but doesn't have access to both the Azure Virtual Desktop and Windows 365 apps.
   > [!NOTE]
   > The Windows App will try to authenticate the user to both these apps even if the user isn't using a Windows 365 Cloud PC.
 
