@@ -41,17 +41,17 @@ This could also happen if a CSP Provider created the subscription and then trans
 3. In the menu on the left side of the page, select **Resource provider**.
 4. Find and select **Microsoft.DesktopVirtualization**, and then select **Re-register**.
 
-## User sees a conditional access of error of "You don't have access to this"
+## User sees Conditional Access error preventing access to Microsoft Entra ID resource
 
-This error comes from Entra ID Conditional Access, and means that the user is subject to a conditional access policy that is blocking access to a specific Entra ID resource. This usually occurs for one of two reasons:
+This error occurs when the user is subject to a Conditional Access policy that's blocking access to a specific Microsoft Entra ID resource. This usually happens for one of two reasons:
 
-- User is signing in through the **Windows App** but is not provided access to both the **Azure Virtual Desktop** and **Windows 365** applications.
+- The user is trying to sign in with the Windows App but doesn't have access to both the Azure Virtual Desktop and Windows 365 apps.
   > [!NOTE]
-  > Windows App will attempt to authenticate the user to both **Azure Virtual Desktop** and **Windows 365** applications, even if the user isn't assigned any Windows 365 Cloud PCs.
+  > The Windows App will try to authenticate the user to both these apps even if the user isn't using a Windows 365 Cloud PC.
 
-- User is signing into a resource with Entra-based single sign-on configured but is not provided access to the **Windows Cloud Login** application.
+- The user is signing into a resource with Microosoft Entra-based single sign-on configured but doesn't have  access to Windows 365 Cloud Apps.
 
-To verify the issue, check the [Entra ID sign-in logs](/entra/identity/monitoring-health/concept-sign-ins) and walkthrough the steps to [Enforce Microsoft Entra multifactor authentication for Azure Virtual Desktop using Conditional Access](/azure/virtual-desktop/set-up-mfa).
+To resolve this, first validate the user's [sign-in identity](/entra/identity/monitoring-health/concept-sign-ins) and then see [Enforce Microsoft Entra multifactor authentication for Azure Virtual Desktop using Conditional Access](/azure/virtual-desktop/set-up-mfa).
 
 ## Next steps
 
