@@ -504,8 +504,6 @@ items:
           href: ../outlook-issues/we-cant-show-mailtips-right-now-warning.md
     - name: Outlook on the web Issues
       items:
-        - name: Archive mailbox doesn't appear in Outlook or Outlook on the web
-          href: ../outlook-on-the-web-issues/archive-mailbox-not-visible.md
         - name: Can't create a new message by using OWA
           href: ../outlook-on-the-web-issues/cannot-create-new-message-in-owa.md
         - name: Can't edit an Office document directly from an email message

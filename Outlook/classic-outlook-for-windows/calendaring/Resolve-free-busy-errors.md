@@ -705,7 +705,7 @@ To fix the issue, follow these steps:
 
 1. Reset the cloud user's password. Choose either the same or a different password.
 
-2. Update the user principal name (UPN) of the cloud user to use the `onmicrosoft.com` domain, and then revert the UPN to its former value. For example, if the UPN of the cloud user is `user@contoso.com`, change it to the temporary UPN, `user@contoso.mail.onmicrosoft.com`, and then revert the UPN to `user@contoso.com`. To do this, use either [Azure AD PowerShell](/powershell/module/azuread) or the [MSOL service](/powershell/azure/active-directory/install-msonlinev1).
+2. Update the user principal name (UPN) of the cloud user to use the `onmicrosoft.com` domain, and then revert the UPN to its former value. For example, if the UPN of the cloud user is `user@contoso.com`, change it to the temporary UPN, `user@contoso.mail.onmicrosoft.com`, and then revert the UPN to `user@contoso.com`. To do this, use either [Azure AD PowerShell](/powershell/module/azuread) or the MSOL service.
 
    - **Use Azure AD PowerShell**
 
@@ -822,7 +822,7 @@ Select the resolution that matches the error message.
 
 **Resolution for error message 1**
 
-To fix the issue, use either [Azure AD PowerShell](/powershell/module/azuread) or the [MSOL service](/powershell/azure/active-directory/install-msonlinev1).
+To fix the issue, use either [Azure AD PowerShell](/powershell/module/azuread) or the MSOL service.
 
 - **Use Azure AD PowerShell**
 
@@ -876,7 +876,7 @@ This error can occur if there's an inconsistency in the configuration of federat
 > [!NOTE]
 > If the issue affects most or all cloud users in your organization, contact [Microsoft Support](https://support.microsoft.com/).
 
-To fix the issue, update the user principal name (UPN) of the cloud user to use the `onmicrosoft.com` domain then switch it back to its former value (federated domain). For example, if the UPN of the cloud user is `user@contoso.com`, switch it to the temporary UPN `user@contoso.mail.onmicrosoft.com` and then back to `user@contoso.com`. To do this, use either of the following approaches ([Azure AD PowerShell](/powershell/module/azuread) or [MSOL service](/powershell/azure/active-directory/install-msonlinev1)):
+To fix the issue, update the user principal name (UPN) of the cloud user to use the `onmicrosoft.com` domain then switch it back to its former value (federated domain). For example, if the UPN of the cloud user is `user@contoso.com`, switch it to the temporary UPN `user@contoso.mail.onmicrosoft.com` and then back to `user@contoso.com`. To do this, use either of the following approaches ([Azure AD PowerShell](/powershell/module/azuread) or MSOL service):
 
 - **Use Azure AD PowerShell**
 
@@ -1008,7 +1008,7 @@ The error might occur for either of the following reasons:
 
 After you complete each step, check whether the free/busy issue is fixed.
 
-1. Update the user principal name (UPN) of the cloud user to use the `onmicrosoft.com` domain, and then revert the UPN to its former value. For example, if the UPN of the cloud user is `user@contoso.com`, change it to the temporary UPN, `user@contoso.mail.onmicrosoft.com`; and then revert the UPN to `user@contoso.com`. To do this, use either of the following methods ([Azure AD PowerShell](/powershell/module/azuread) or [MSOL service](/powershell/azure/active-directory/install-msonlinev1)):
+1. Update the user principal name (UPN) of the cloud user to use the `onmicrosoft.com` domain, and then revert the UPN to its former value. For example, if the UPN of the cloud user is `user@contoso.com`, change it to the temporary UPN, `user@contoso.mail.onmicrosoft.com`; and then revert the UPN to `user@contoso.com`. To do this, use either of the following methods ([Azure AD PowerShell](/powershell/module/azuread) or MSOL service):
 
    - **Use Azure AD PowerShell**
 
@@ -1285,7 +1285,7 @@ To fix the issue, use the following steps:
 
       The command output contains the `Thumbprint` value.
 
-   2. Run the following PowerShell cmdlets to get the Exchange Online OAuth certificate by using the [MSOL service](/powershell/azure/active-directory/install-msonlinev1):
+   2. Run the following PowerShell cmdlets to get the Exchange Online OAuth certificate by using the MSOL service:
 
       ```PowerShell
       Connect-MsolService
@@ -1501,7 +1501,7 @@ After you complete each step, check whether the free/busy issue is fixed.
 
 1. Make sure that Autodiscover for the affected user returns the Exchange Web Services (EWS) URL for the user.
 
-2. Run the [email autoconfiguration test](https://answers.microsoft.com/en-us/msoffice/forum/all/mailboxes-test-e-mail-autoconfiguration/19f9c90a-4640-46c4-a574-dbec29bdb8ba) in the affected user's Outlook client to make sure that Autodiscover returns the EWS URL for the user.
+2. Run the email autoconfiguration test in the affected user's Outlook client to make sure that Autodiscover returns the EWS URL for the user.
 
 3. Make sure that free/busy works between on-premises users who are hosted on different Exchange servers.
 

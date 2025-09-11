@@ -1140,6 +1140,10 @@ items:
     items:
     - name: Error 0x80090327 when adding a node to a cluster
       href: ./high-availability/error-0x80090327-adding-node-to-cluster.md
+  - name: Nested virtualization
+    items:
+    - name: 'Troubleshooting guide: Hyper-V nested virtualization'
+      href: ./high-availability/hyper-v-nested-virtualization.md
   - name: Node removed from the cluster
     items:
     - name: Cluster IP address resources fail on both nodes when one node disconnects
@@ -2866,6 +2870,8 @@ items:
     items:
     - name: Get-VMNetworkAdapter command doesn't report IP addresses
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
+    - name: Hyper-V environments experience frequent power-offs and rapid disk space consumption
+      href: ./virtualization/hyper-v-power-off-rapid-disk-space-consumption.md
     - name: Troubleshoot Hyper-V virtual machine start, state, and access failures
       href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Virtual Machines enter the paused state
