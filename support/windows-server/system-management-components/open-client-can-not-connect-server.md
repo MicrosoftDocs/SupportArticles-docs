@@ -7,10 +7,10 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, warrenw, v-lianna
 ms.custom:
-- sap:system management components\OpenSSH (including SFTP)
+- sap:system management components\openssh (including sftp)
 - pcy:WinComm User Experience
 ---
-# OpenSSH client can't connect to a server via SSH
+# OpenSSH client can't connect to a server via SSH: "no matching host key type found" errors
 
 This article addresses multiple common causes and solutions when encountering OpenSSH connection errors related to host key algorithm mismatches on Windows systems.
 
@@ -90,7 +90,7 @@ Connection failures occur due to missing or incorrect **authorized_keys** file o
     net start sshd 
     ```
 
-## Cause 3: Private keys stored in the registry
+## Cause 3: Private keys stored in the registry persist across sessions causing security risks
 
 Private keys stored by OpenSSH's ssh-agent service persist across sessions in the Windows registry, potentially causing security risks.
 
