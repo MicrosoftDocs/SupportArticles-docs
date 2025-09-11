@@ -22,7 +22,7 @@ ms.custom:
 
 ## Symptoms
 
-Conditional Access is a Microsoft Entra feature that helps make sure that devices that access corporate resources are correctly managed and secured. If Conditional Access policies are applied to the Microsoft Teams service, Android devices that access Teams must comply with the policies. Such devices include Teams phones, Teams displays, Teams panels, and Teams Rooms on Android. Otherwise, Conditional Access prevent users from signing in to or using the Teams app on the devices.
+Conditional Access is a Microsoft Entra feature that helps make sure that devices that access corporate resources are correctly managed and secured. If Conditional Access policies are applied to the Microsoft Teams service, Android devices that access Teams must comply with the policies. Such devices include Teams phones, Teams displays, Teams panels, and Teams Rooms on Android devices. Otherwise, Conditional Access prevent users from signing in to or using the Teams app on the devices.
 
 If these policies are applied, you might experience one or more of the following issues on noncompliant devices:
 
