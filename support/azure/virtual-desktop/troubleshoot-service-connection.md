@@ -49,7 +49,7 @@ This error occurs when the user is subject to a Conditional Access policy that's
   > [!NOTE]
   > The Windows App will try to authenticate the user to both these apps even if the user isn't using a Windows 365 Cloud PC.
 
-- The user is signing into a resource with Microosoft Entra-based single sign-on configured but doesn't have  access to Windows 365 Cloud Apps.
+- The user is signing into a resource with Microsoft Entra-based single sign-on configured but doesn't have  access to Windows 365 Cloud Apps.
 
 To resolve this, first validate the user's [sign-in identity](/entra/identity/monitoring-health/concept-sign-ins) and then see [Enforce Microsoft Entra multifactor authentication for Azure Virtual Desktop using Conditional Access](/azure/virtual-desktop/set-up-mfa).
 
