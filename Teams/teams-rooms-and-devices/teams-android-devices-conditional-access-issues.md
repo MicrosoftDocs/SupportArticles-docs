@@ -50,15 +50,15 @@ These issues can occur for the following reasons:
 
 ## Resolution
 
-When troubleshooting Conditional Access issues, start by checking the affected user’s sign-in details and validating whether the device meets policy requirements. These checks can be performed either through automated tools or manually, as outlined earlier in this article.
+When you troubleshoot Conditional Access issues, start by checking the affected user’s sign-in details. Verify that the device meets policy requirements. These checks can be performed either through automated tools or manually, as outlined in the following sections.
 
-As Microsoft Teams Android devices transition to **Intune AOSP device management**, administrators can take advantage of device attributes—such as **`device.displayName`**—in Conditional Access filters. This allows policies to be targeted more precisely, based on how devices are named.
+As Microsoft Teams Android devices transition to **Intune AOSP device management**, administrators can take advantage of device attributes (such as `device.displayName`) in Conditional Access filters. This practice enables policies to be targeted more precisely, based on how devices are named.
 
-The `device.displayName` attribute is especially useful because it includes the device manufacturer information early in the sign-in process, even before Intune completes full enrollment. Once the device finishes enrollment, Intune also reports additional properties such as updated display name, make, model, and compliance status to Microsoft Entra. Because this reporting can take time, using `displayName` in your filter rules helps ensure that devices are properly matched from the start.
+The `device.displayName` attribute is especially useful because it includes the device manufacturer information early in the sign-in process, even before Intune completes full enrollment. After the device finishes enrollment, Intune also reports additional properties (such as updated display name, make, model, and compliance status) to Microsoft Entra. Because this reporting can take time, using `displayName` in your filter rules helps make sure that devices are correctly matched at the start of the process.
 
 ### Automated checks
 
-The automated option is to run the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool is used to troubleshoot connectivity issues that affect Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
+To use the automatic option, run the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test in the Microsoft Remote Connectivity Analyzer tool. This tool helps you to troubleshoot connectivity issues that affect Teams. The connectivity test performs checks to verify a specific user's permissions to sign in to Teams by using a Teams Rooms device.
 
 > [!NOTE]
 >
@@ -67,14 +67,14 @@ The automated option is to run the [Microsoft Teams Rooms Sign in](https://testc
 
 To run the connectivity test, follow these steps:
 
-1. Open a web browser and navigate to the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test.
+1. In a web browser, navigate to the [Microsoft Teams Rooms Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) connectivity test.
 1. Sign in by using the credentials of a Global Administrator account.
 1. Specify the username for the account that can't access the Teams Rooms app.
 1. In the **Device Selection** field, select a type for the affected user's device.
-1. Enter the verification code that's displayed, and then **select Verify**.
+1. Enter the verification code that's displayed, and then select **Verify**.
 1. Select the checkbox to accept the terms of agreement, and then select **Perform Test**.
 
-After the test finishes, the screen displays details about all the checks that were performed and whether the test succeeded, failed, or was successful but displayed a few warnings. Select the provided link for more information about the warnings and failures, and about how to resolve them.
+After the test finishes, the screen displays details about all the checks that were performed and whether the test succeeded, failed, or was successful but displayed a few warnings. For more information about the warnings and failures, and about how to resolve them, select the provided link.
 
 ### Manual checks
 
@@ -87,7 +87,7 @@ To manually check user access to the Teams app, follow these steps:
    - **Status**: Select **Failure**, and then select **Apply**.
    - **Application**: Enter **Teams**, and then select **Apply**.
 
-   :::image type="content" source="media/teams-android-devices-conditional-access-issues/add-filters.png" alt-text="Screenshot of the Status and Application filters.":::
+   :::image type="content" source="media/teams-android-devices-conditional-access-issues/add-filters.png" alt-text="The Status and Application filters are available options to run a manual check on user access to the Teams app.":::
 1. For the affected usernames, look for items that have the following **Application** values:
 
    - Microsoft Teams
@@ -99,15 +99,15 @@ To manually check user access to the Teams app, follow these steps:
    - Failure reason
    - Additional Details
 
-   :::image type="content" source="media/teams-android-devices-conditional-access-issues/sign-in-details-basic-info.png" alt-text="Screenshot of the Basic info page of the sign-in activity details.":::
+   :::image type="content" source="media/teams-android-devices-conditional-access-issues/sign-in-details-basic-info.png" alt-text="The Basic info page of the sign-in page shows activity details.":::
 1. If the sign-in error code seems to be related to compliance, select the **Conditional Access** tab, and then look for policies that show a **Failure** result.
 
-   :::image type="content" source="media/teams-android-devices-conditional-access-issues/sign-in-details-conditional-access.png" alt-text="Screenshot of the Conditional Access page of the sign-in activity details.":::
+   :::image type="content" source="media/teams-android-devices-conditional-access-issues/sign-in-details-conditional-access.png" alt-text="The Conditional Access page of the sign-in activity details shows policy compliance results.":::
 1. Review the policy details.
 
-   :::image type="content" source="media/teams-android-devices-conditional-access-issues/conditional-access-policy-details.png" alt-text="Screenshot of the Conditional Access policy details.":::
+   :::image type="content" source="media/teams-android-devices-conditional-access-issues/conditional-access-policy-details.png" alt-text="The Conditional Access policy details page shows compliance failure details per policy.":::
 
-After you identify the specific Conditional Access policy that's causing the issue, you can use [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices) to exclude the affected device from the policy. Commonly used device properties in device filters are *manufacturer* and *model*. These are used together with the *Contains*, *StartsWith*, and *In* operators.
+After you identify the specific Conditional Access policy that's causing the issue, you can use [device filters](/azure/active-directory/conditional-access/concept-condition-filters-for-devices) to exclude the affected device from the policy. Some of the commonly used device properties in device filters are *manufacturer* and *model*. These are used together with the *Contains*, *StartsWith*, and *In* operators.
 
 > [!NOTE]
 >
@@ -117,7 +117,7 @@ After you identify the specific Conditional Access policy that's causing the iss
 
 The following screenshot shows a sample device filter.
 
-:::image type="content" source="media/teams-android-devices-conditional-access-issues/device-filter.png" alt-text="Screenshot of an example device filter.":::
+:::image type="content" source="media/teams-android-devices-conditional-access-issues/device-filter.png" alt-text="Example of a device filter for a device object.":::
 
 ## References
 
