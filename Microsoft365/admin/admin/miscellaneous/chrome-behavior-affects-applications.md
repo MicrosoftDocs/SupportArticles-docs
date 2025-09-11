@@ -129,6 +129,6 @@ If you suspect that your users are using a Chrome version 76 or a later version 
 
 For the 77–79 versions of Chrome, navigate to `chrome://flags` to see whether they have the flags enabled. The setting default will begin to change in Chrome version 80 on a graduated release.
 
-[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../../includes/third-party-information-disclaimer.md)]
 
-[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../../includes/third-party-contact-disclaimer.md)]

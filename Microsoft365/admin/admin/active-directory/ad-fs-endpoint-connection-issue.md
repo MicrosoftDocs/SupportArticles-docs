@@ -32,8 +32,8 @@ This situation also causes SSO testing that the Remote Connectivity Analyzer con
 
 For more information about how to run the Remote Connectivity Analyzer to test SSO authentication in Microsoft 365, see the following articles in the Microsoft Knowledge Base:
 
-- [2650717](https://support.microsoft.com/help/2650717) How to use Remote Connectivity Analyzer to troubleshoot single sign-on issues for Microsoft 365, Azure, or Intune
-- [2466333](https://support.microsoft.com/help/2466333) Federated users can't connect to an Exchange Online mailbox
+- [2650717](https://support.microsoft.com/topic/bfe00060-32cc-53bc-926f-4d3bcaefa8d0) How to use Remote Connectivity Analyzer to troubleshoot single sign-on issues for Microsoft 365, Azure, or Intune
+- [2466333](https://support.microsoft.com/topic/a52bcdef-89a9-1d26-3aeb-803c867d8d9e) Federated users can't connect to an Exchange Online mailbox
 
 ## Cause
 

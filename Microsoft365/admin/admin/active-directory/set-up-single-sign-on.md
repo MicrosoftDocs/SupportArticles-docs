@@ -79,7 +79,7 @@ Internet clients (including mobile devices) can't use Microsoft cloud service re
 
 Outlook rich clients cannot connect to Exchange Online resources. For more information, see the following Microsoft Knowledge Base article: 
 
-[2466333](https://support.microsoft.com/help/2466333) Federated users can't connect to an Exchange Online mailbox
+[2466333](https://support.microsoft.com/topic/a52bcdef-89a9-1d26-3aeb-803c867d8d9e) Federated users can't connect to an Exchange Online mailbox
 
 #### Support assumptions 
 
@@ -97,7 +97,7 @@ Unless Internet clients (including mobile devices) are VPN-capable, they can't u
 
 Outlook rich clients (including ActiveSync clients) can't connect to Exchange Online resources. For more information, see the following Microsoft Knowledge Base article:
 
-[2466333](https://support.microsoft.com/help/2466333) Federated users can't connect to an Exchange Online mailboxSupport assumptions
+[2466333](https://support.microsoft.com/topic/a52bcdef-89a9-1d26-3aeb-803c867d8d9e) Federated users can't connect to an Exchange Online mailboxSupport assumptions
 
 It's assumed that the customer acknowledges by implementation that this setup doesn't provide the fully advertised suite of services that are supported by identity federation in Microsoft Entra ID. 
 

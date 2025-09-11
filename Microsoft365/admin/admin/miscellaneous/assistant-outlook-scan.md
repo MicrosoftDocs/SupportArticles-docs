@@ -16,7 +16,7 @@ ms.date: 05/09/2025
 ---
 # Scenario: Outlook Scan
 
-[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../../includes/sara-note-new-outlook.md)]
 
 The Outlook Scan scenario scans your device and creates a detailed report about Microsoft Outlook, Microsoft Office, Windows, and mailbox configurations.
 
