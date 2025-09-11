@@ -1,7 +1,7 @@
 ---
-title: Resolve 10DLC campaign rejection errors
-description: Provides a list of potential 10DLC campaign rejection errors, and guidance to resolve them.
-ms.date: 08/18/2025
+title: Resolve Campaign Rejection Errors for SMS in Microsoft Teams
+description: Provides a list of potential campaign rejection errors when setting up SMS in Teams, and guidance to resolve them.
+ms.date: 09/03/2025
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
@@ -12,9 +12,9 @@ ms.custom:
   - CI 7095
 ms.reviewer: julienp, revaldiv
 ---
-# Resolve 10DLC campaign rejection errors
+# Resolve campaign rejection errors for SMS in Microsoft Teams
 
-When you enable the [Short Message Service (SMS)](/microsoftteams/sms-overview) feature in Microsoft Teams, you might need to troubleshoot and resubmit [campaigns](/microsoftteams/sms-setup-campaign) that were rejected during the 10-digit-long code (10DLC) review process. After a campaign is submitted, Microsoft and 10DLC operators evaluate it for compliance with Mobile Network Operator (MNO) and industry standards. If the campaign doesn't meet these requirements, it's rejected and generates one or more error codes.
+If you enable the [Short Message Service (SMS)](/microsoftteams/sms-overview) feature in Microsoft Teams, you might have to troubleshoot and resubmit [campaigns](/microsoftteams/sms-setup-campaign) that were rejected during the 10-digit-long code (10DLC) review process. After a campaign is submitted, Microsoft and 10DLC operators evaluate it for compliance with Mobile Network Operator (MNO) and industry standards. If the campaign doesn't meet these requirements, it's rejected and generates one or more error codes.
 
 The following sections provide a comprehensive list of potential rejection errors, together with clear descriptions and actionable recommendations to help you resolve issues and successfully resubmit your campaign. The sections are organized by the categories of information that you submit to register a campaign.
 
@@ -22,22 +22,25 @@ The following sections provide a comprehensive list of potential rejection error
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
-| CallToActionContainsDisallowedContent | The Call to Action contains disallowed content. | Remove any prohibited content from the Call to Action. |
+|CallToActionConsentNotOptional |  The opt-in form is used for purposes beyond SMS messaging, but SMS consent isn't optional. | If your opt-in form serves multiple purposes (for example, account creation, newsletter signup), make sure that SMS consent is optional. You can make this change either by making the phone number field optional or including a clearly labeled checkbox to let users agree to receive SMS messages. Forced consent isn't permitted. |
+|CallToActionContainsDisallowedContent | The Call to Action contains disallowed content. | Remove any prohibited content from the Call to Action. |
+|CallToActionCourtOrderedOptIn | Opt-in information implies that consent is acquired through a court order. This statement is disallowed. | Remove any language that suggests that opt-in is obtained through a legal mandate or court order. Consent must be voluntary and user-initiated.|
 | CallToActionDoesNotContainRobustAgeGate | The Call to Action doesn't contain a robust age gate for age-restricted content. | Add a clear age verification step for age-restricted campaigns. |
 | CallToActionIsMissingOrInaccessible | The Call to Action is missing or inaccessible. | Make sure that the Call to Action is present and accessible to users. |
 | CallToActionMissingBrandName | The Call to Action doesn't contain the registered (DBA) brand name. | Add the brand name in the Call to Action. |
 | CallToActionMissingDataRatesDisclosure | The Call to Action doesn't include the "message and data rates may apply" disclosure. | Add the required disclosure to inform users about potential charges. |
 | CallToActionMissingExplicitConsent | The Call to Action doesn't express explicit or written consent. | Add language that clearly obtains user consent. |
-| CallToActionMissingExpressWrittenConsent | The Call to Action doesn't obtain express written consent for promotional message content. | Add a checkbox or statement for express written consent. |
+| CallToActionMissingExpressWrittenConsent | The Call to Action doesn't obtain express written consent for promotional message content. | Add a checkbox or statement to obtain express written consent. |
 | CallToActionMissingHelpInstructions | The Call to Action doesn't include HELP instructions. | Add HELP instructions for user support. |
 | CallToActionMissingMessageFrequencyDisclosure | The Call to Action doesn't include the frequency at which messages are sent. | Add a statement about message frequency. |
+|CallToActionMissingOptInForm | The webpage that's used for opt-in doesn't contain an opt-in form. | Make sure that the opt-in webpage includes a visible and functional opt-in form. Avoid linking to generic or unrelated pages.|
 | CallToActionMissingPrivacyPolicyLink | The Call to Action or the opt-in form doesn't include a link to the privacy policy. | Add a link to the privacy policy or a statement about data sharing. |
 | CallToActionMissingStopInstructions | The Call to Action doesn't contain STOP instructions. | Add STOP instructions to enable users to opt out. |
 | CallToActionMissingTermsAndConditions | The Call to Action doesn't contain full terms and conditions or a link to them. | Add the full terms or a link to them. |
 | CallToActionMissingVerbalScript | The Call to Action doesn't include a verbal script or required disclosures. | Add a verbal script that has the required disclosures. |
+| CallToActionMissingMessageType | The Call to Action doesn't mention the kinds of messages that a customer can expect to receive. | Specify the kinds of messages that users might receive. |
 | CallToActionOptInIssues | The opt-in URL is inaccessible or returns a certificate error. | Make sure that the opt-in URL is valid and secure. |
-| CallToActionMissingMessageType | The Call to Action doesn't mention the kinds of messages that a customer can expect. | Specify the kinds of messages that users might receive. |
-| CallToActionInvalidOrIncomplete | The Call to Action is noncompliant or incomplete. | Make sure that all required elements are present: brand name, HELP, STOP, frequency, fees, privacy policy. |
+| CallToActionInvalidOrIncomplete | The Call to Action is noncompliant or incomplete. | Make sure that all required elements are present: brand name, HELP, STOP, frequency, fees, and privacy policy. |
 
 ## Terms and conditions 
 
@@ -69,7 +72,7 @@ The following sections provide a comprehensive list of potential rejection error
 | OptInMessageMissingHelpInstructions | The opt-in message doesn't include HELP instructions. | Add HELP instructions. |
 | OptInMessageMissingMessageFrequency | The opt-in message doesn't contain a message frequency disclosure. | Add message frequency information. |
 | OptInMessageMissingOptOutInstructions | The opt-in message doesn't include opt-out instructions. | Add STOP instructions. |
-| MandatoryMessageTerminologyMissing | Required message terminology is missing. | Add all mandatory terms: brand name, HELP, STOP, frequency, fees. |
+| MandatoryMessageTerminologyMissing | Required message terminology is missing. | Add all mandatory terms: brand name, HELP, STOP, frequency, and fees. |
 
 ## Opt-out message
 
@@ -84,10 +87,10 @@ The following sections provide a comprehensive list of potential rejection error
 
 | Error | Description | Recommended action |
 |-------|-------------|--------------------|
-| HelpMessageNotMatchingBrandSupportContactEmail | The support contact email address doesn't match the registered brand support email. | Make sure that the support email address matches the brand's registered contact information. |
+| HelpMessageNotMatchingBrandSupportContactEmail | The support contact email address doesn't match the registered brand support email address. | Make sure that the support email address matches the brand's registered contact information. |
 | HelpMessageMissingBrandName | The HELP message doesn't contain the brand name. | Add the registered (DBA) brand name. |
 | HelpMessageMissingSupportContact | The HELP message doesn't include customer support contact information. | Add customer support contact details. |
-| MandatoryMessageTerminologyMissing | Required message terminology is missing. | Add brand name, HELP, STOP, frequency, fees. |
+| MandatoryMessageTerminologyMissing | Required message terminology is missing. | Add brand name, HELP, STOP, frequency, and fees. |
 
 ## Sample messages
 
@@ -113,16 +116,16 @@ The following sections provide a comprehensive list of potential rejection error
 
 ## Brand
 
-| Error | Description | Recommended action |
+| Error | Description | Recommended action |  
 |-------|-------------|--------------------|
-| BrandAddressInvalid | The physical address of the brand is invalid or unverifiable. | Verify brand address. Contact support to update the address or appeal the decision.|
+| BrandAddressInvalid | The physical address of the brand is invalid or unverifiable. | Verify the brand address. Contact support to update the address or appeal the decision.|
 | BrandAssociatedWithDisallowedContent | The brand is associated with disallowed content. | Remove any association with SHAFT or other prohibited content. |
 | BrandAssociatedWithSpamScam | The brand or its address is associated with known spam or scam complaints. | Make sure that the brand isn't flagged for spam or scam activity. Contact support to appeal the decision, as applicable. |
 | BrandEmailIssues | The brand email address is missing or invalid or hosted on a free domain. | Verify the brand contact email address. Contact support to update the brand email address or to appeal the decision. |
 | BrandEntityTypeSoleProprietorsNotSupported | Sole proprietor campaigns must be associated with a brand that doesn't have a registered tax ID. | Provide a valid EIN or register the brand as a business entity. |
-| BrandIdentifiedAsResellerOrIvr | The brand is a reseller or ISV and not the actual content provider. | Make sure that the brand is the actual content provider, not a reseller or ISV. |
+| BrandIdentifiedAsResellerOrIvr | The brand is a reseller or ISV, not the actual content provider. | Make sure that the brand is the actual content provider, not a reseller or ISV. |
 | BrandNotAllowed | The brand isn't allowed by 10DLC operators and can't run a campaign. | Contact support to verify brand eligibility or appeal the restriction. |
-| BrandPhoneNumberMissingOrInvalid | The brand phone number is missing or invalid. | Verify brand contact phone number. Contact support to update the brand phone number or to appeal the decision. |
+| BrandPhoneNumberMissingOrInvalid | The brand phone number is missing or invalid. | Verify the brand contact phone number. Contact support to update the brand phone number or to appeal the decision. |
 | BrandVettingScoreRequirementNotMet | The brand doesn't meet the minimum vetting score requirements. | Contact support to improve the vetting score or to appeal the decision. |
 | BrandWebsiteIssues | The brand website URL is missing, doesn't match the brand name, is inaccessible, or doesn't reflect the campaign's declared use case. | Verify that the brand website is valid and has an accessible website URL. Make sure that the site is live and reflects the brand identity. Contact support to update the brand website or to appeal the decision.|
 | BrandCampaignMismatch | The brand's name and website don't match, or the sample messages are incomplete or are missing the brand name. | Make sure that the brand name and website are consistent and that sample messages include the brand name. |
