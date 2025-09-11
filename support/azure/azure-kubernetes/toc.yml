@@ -415,9 +415,9 @@ items:
       - name: 429 Too Many Requests errors
         href: create-upgrade-delete/429-too-many-requests-errors.md
       - name: SubscriptionRequestsThrottled error
-        href: error-codes/subscriptionrequeststhrottled.md
-      - name: SubscriptionRequestsThrottled error
         href: create-upgrade-delete/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
+      - name: SubscriptionRequestsThrottled error
+        href: error-codes/subscriptionrequeststhrottled.md
       - name: SubscriptionRequestsThrottled error (429)
         href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
       - name: Throttled error (429)
@@ -437,9 +437,9 @@ items:
   - name: Policy
     items:
       - name: RequestDisallowedByPolicy error
-        href: error-codes/requestdisallowedbypolicy-error.md
-      - name: RequestDisallowedByPolicy error
         href: create-upgrade-delete/error-code-requestdisallowedbypolicy.md
+      - name: RequestDisallowedByPolicy error
+        href: error-codes/requestdisallowedbypolicy-error.md
   - name: Operation
     items:
       - name: AKSOperationPreempted error
@@ -461,15 +461,15 @@ items:
       - name: AKS upgrade errors because of version skew, incompatibility, or lack of support
         href: error-codes/aks-upgrade-blocked.md
       - name: NodePoolMcVersionIncompatible error
-        href: error-codes/nodepoolmcversionincompatible-error.md 
-      - name: NodePoolMcVersionIncompatible error
         href: create-upgrade-delete/nodepoolmcversionincompatible-error.md 
+      - name: NodePoolMcVersionIncompatible error
+        href: error-codes/nodepoolmcversionincompatible-error.md 
   - name: Pod Disruption Budgets
     items:
       - name: UnsatisfiablePDB error
-        href: error-codes/unsatisfiablepdb-error.md
-      - name: UnsatisfiablePDB error
         href: create-upgrade-delete/error-code-unsatisfiablepdb.md
+      - name: UnsatisfiablePDB error
+        href: error-codes/unsatisfiablepdb-error.md
   - name: Application
     items:
       - name: Argument list too long
