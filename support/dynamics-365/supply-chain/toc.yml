@@ -158,6 +158,8 @@
       href: procurement/purchase-order-line-data-issues.md
     - name: Purchase orders don't reflect the language settings of the legal entity
       href: procurement/purchase-order-language-not-reflect-legal-entity-settings.md
+    - name: '"Source document lines cannot be finalized" error'
+      href: procurement/source-document-lines-cannot-be-finalized.md  
     - name: Transactions can be posted to a suspended ledger account
       href: procurement/canceled-receipts-posted.md
     - name: The delivery name isn't synced after changing a purchase order delivery address
