@@ -313,7 +313,7 @@ For triggers, the value of expressions is calculated only when the flow is saved
 ## Changes to HTTP or Teams Webhook trigger flows
 
 > [!IMPORTANT]
-> Starting in August 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL will move to a new URL. You'll see the new URL in the **HTTP URL** field of the flow's trigger when you open the flow in the designer. To ensure that existing flows using these triggers continue to work, complete the following actions by November 30, 2025. After this date, the old URLs will no longer work and flows will fail to trigger.
+> We are undertaking a necessary infrastructure upgrade which allows flows execution to be significantly faster with new features. Starting in August 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL will move to a new URL. You'll see the new URL in the **HTTP URL** field of the flow's trigger when you load the flow in the designer. To ensure that existing flows using these triggers continue to work, complete the following actions by November 30, 2025. Until this date, both old and new URls are supported. Once this date is passed, the old URLs will no longer work and flows will fail to trigger.
 
 ### Key changes
 
@@ -331,7 +331,7 @@ To ensure your flows continue to function as expected, follow these steps:
 
 1. Update URL references:
 
-   - Identify all client applications and systems (such as web apps, Power Apps, and others) that reference the old trigger URL.
+   - Identify all external applications and systems (such as web apps, Power Apps, flows and others) that reference the old trigger URL.
    - Replace the old trigger URL with the updated URL displayed in the trigger card of your flow's designer.
 
 2. Validate the new URL:
@@ -343,3 +343,6 @@ To ensure your flows continue to function as expected, follow these steps:
 
    - If your trigger URL uses a relative path parameter, ensure there are no beginning slashes in the field to avoid double slash errors.
    - Modify the relative path as needed and validate the trigger URL for correctness.
+  
+_Note: If you are using a HTTP action in a flow to call another flow, the parent flow is considered external system and in this case, you need to update the URL in the parent flow HTTP action with the new URL that is displayed in the child flow trigger card. 
+However, if you are calling child flow through 'Run a child flow' action, that is not impacted._
