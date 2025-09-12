@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-xuhuan, v-jesits
 ms.custom:
 - sap:network connectivity and file sharing\access to file shares (smb)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Mapped network drive may fail to reconnect in Windows 10, version 1809
 

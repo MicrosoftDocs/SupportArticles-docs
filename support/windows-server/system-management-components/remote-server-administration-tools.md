@@ -10,6 +10,8 @@ ms.custom:
 - sap:system management components\server manager
 - pcy:WinComm User Experience
 adobe-target: true
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "aartigoyle" for triage before making the further changes to the screenshots.

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, danma
 ms.custom:
 - sap:virtualization and hyper-v\storage configuration
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # You receive an error message after you put the page file on another drive other than the drive C in a guest operating system
 

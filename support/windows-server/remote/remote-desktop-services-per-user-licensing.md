@@ -9,6 +9,8 @@ ms.reviewer: kaushika, femila,helohr
 ms.custom:
 - sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # The first connection to a non-persistent VDI session fails when using per-user Remote Desktop licensing

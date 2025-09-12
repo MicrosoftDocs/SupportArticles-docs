@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-anfiro, coma, shthomps, scolee
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Stop code SYSTEM SERVICE EXCEPTION when initializing PMem or NVDIMM in Windows
 

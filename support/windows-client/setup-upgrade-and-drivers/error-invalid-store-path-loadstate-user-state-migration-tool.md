@@ -9,6 +9,8 @@ ms.reviewer: kaushika, shijoy
 ms.custom:
 - sap:windows setup,upgrade and deployment\user state migration tool (usmt)
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Error "Invalid store path" during the LoadState process when you use the User State Migration Tool
 

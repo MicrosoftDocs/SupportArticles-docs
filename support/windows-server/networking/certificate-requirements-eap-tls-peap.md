@@ -9,6 +9,8 @@ ms.reviewer: kaushika, samyun, marcussa
 ms.custom:
 - sap:network connectivity and file sharing\network load balancing (nlb)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Certificate requirements when you use EAP-TLS or PEAP with EAP-TLS
 

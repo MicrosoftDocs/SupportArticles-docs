@@ -9,6 +9,8 @@ ms.reviewer: kaushika, raviks, herbertm, dennhu, eriw, v-lianna
 ms.custom:
 - sap:active directory\on-premises active directory domain join
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error code 0xa8b: An attempt to resolve the DNS name of a DC in the domain being joined has failed
 

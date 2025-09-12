@@ -9,6 +9,8 @@ ms.reviewer: kaushika, ajayps, arrenc, v-phoebh
 ms.custom:
 - sap:windows device and driver management\peripherals driver installation or update
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Devices are not working before you log on a computer that's running Windows 10
 

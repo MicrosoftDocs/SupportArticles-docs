@@ -9,6 +9,8 @@ ms.reviewer: michikos, kaushika
 ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # KDC event ID 16 or 27 is logged if DES for Kerberos is disabled
 

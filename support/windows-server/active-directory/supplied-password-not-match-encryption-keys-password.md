@@ -9,6 +9,8 @@ ms.reviewer: kaushika, tonnyp
 ms.custom:
 - sap:active directory\active directory migration tool (admt)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # ADMT 3.1 PES installation fails with error: The supplied password does not match this encryption key's password
 

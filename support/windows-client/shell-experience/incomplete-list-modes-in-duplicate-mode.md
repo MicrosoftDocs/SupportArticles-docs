@@ -9,6 +9,8 @@ ms.reviewer: kaushika, kimnich
 ms.custom:
 - sap:windows desktop and shell experience\dpi and display issues
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Windows 8: List All Modes in Advanced Display Settings in Control Panel displays incomplete list of modes when in Duplicate mode
 

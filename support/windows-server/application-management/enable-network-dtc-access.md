@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:application technologies and compatibility\dtc startup,configuration,connectivity,and cluster
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to enable network DTC access
 

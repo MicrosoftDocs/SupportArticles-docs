@@ -9,6 +9,8 @@ ms.reviewer: kaushika, bobcombs, ajayps
 ms.custom:
 - sap:virtualization and hyper-v\high availability virtual machines
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Can't create a Hyper-V virtual switch on 64-bit versions of Windows 10
 

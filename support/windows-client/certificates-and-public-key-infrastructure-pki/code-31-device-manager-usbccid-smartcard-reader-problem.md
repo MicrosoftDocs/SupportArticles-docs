@@ -9,6 +9,8 @@ ms.reviewer: kaushika, neilshen, v-lolang
 ms.custom:
 - sap:certificates and public key infrastructure (pki)\smart card logon
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Code 31 in Device Manager when Microsoft Usbccid Smartcard Reader is in a problem state
 

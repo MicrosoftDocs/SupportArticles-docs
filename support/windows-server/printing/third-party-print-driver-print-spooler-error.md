@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jdickson
 ms.custom:
 - sap:print,fax,and scan\print configuration or management
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # You experience Print Spooler error messages after you install or upgrade a Third-Party print driver
 

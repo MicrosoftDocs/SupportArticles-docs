@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-jomcc, davete, muagarwal
 ms.custom:
 - sap:active directory\user,computer,group,and object management
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error: Access is denied when non-administrator users who have been delegated control try to join computers to a domain
 

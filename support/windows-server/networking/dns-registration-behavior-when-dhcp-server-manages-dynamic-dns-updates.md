@@ -10,6 +10,8 @@ ms.custom:
 - sap:network connectivity and file sharing\dns
 - pcy:WinComm Networking
 keywords: DNS dynamic updates, DHCP option 81, client FQDN option, DHCP client
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Unexpected DNS record registration behavior if DHCP server uses "Always dynamically update DNS records"

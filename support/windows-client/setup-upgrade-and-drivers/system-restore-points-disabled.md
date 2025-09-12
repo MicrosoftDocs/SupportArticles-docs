@@ -9,6 +9,8 @@ ms.reviewer: adityah, kaushika
 ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # System Restore points are disabled after you upgrade to Windows 10
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:group policy\deploying software through group policy
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Use Group Policy to remotely install software
 

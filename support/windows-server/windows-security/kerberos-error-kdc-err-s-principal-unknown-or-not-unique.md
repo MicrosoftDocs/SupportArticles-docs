@@ -10,6 +10,8 @@ ms.custom:
 - pcy:WinComm Directory Services
 ms.reviewer: kaushika, raviks, v-lianna, jobesanc
 keywords: KDC_ERR_S_PRINCIPAL_UNKNOWN, KDC_ERR_PRINCIPAL_NOT_UNIQUE
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Kerberos generates KDC_ERR_S_PRINCIPAL_UNKNOWN or KDC_ERR_PRINCIPAL_NOT_UNIQUE error

@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:active directory\windows time service configuration,accuracy,and synchronization
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # When SpecialPollInterval is used as a polling interval, the Windows Time service does not correct the time if the service gets into Spike state
 

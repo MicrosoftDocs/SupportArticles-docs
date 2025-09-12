@@ -9,6 +9,8 @@ ms.reviewer: kaushika, mattburr
 ms.custom:
 - sap:print,fax,and scan\print performance - failures,crashes,not responsive
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # When attempting to add an IPP printer over HTTPS, you receive an error
 

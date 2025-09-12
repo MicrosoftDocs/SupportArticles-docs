@@ -10,6 +10,8 @@ keywords: DDA,passthrough,pass-through,LUN,MPIO
 ms.custom:
 - sap:virtualization and hyper-v\storage configuration
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Virtual machine LUNs disappear after you configure them as MPIO devices

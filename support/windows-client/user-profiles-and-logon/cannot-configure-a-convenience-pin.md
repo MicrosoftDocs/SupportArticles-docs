@@ -9,6 +9,8 @@ ms.reviewer: kaushika, ntuttle, ardenw
 ms.custom:
 - sap:user logon and profiles\user profiles
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Can't configure a PIN when Convenience PIN and Hello for Business policies are enabled
 

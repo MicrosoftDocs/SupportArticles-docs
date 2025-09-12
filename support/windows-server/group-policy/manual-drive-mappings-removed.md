@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:group policy\managing network configuration (mapped drives,802.1x) via group policy
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Group Policy Preferences removes manual drive mappings if the use first available setting is enabled
 

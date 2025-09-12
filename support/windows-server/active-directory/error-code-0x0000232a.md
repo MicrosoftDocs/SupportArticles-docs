@@ -9,6 +9,8 @@ ms.reviewer: eriw,dennhu,herbertm
 ms.custom:
 - sap:active directory\on-premises active directory domain join
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Domain join error code 0x0000232A
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, willgloy
 ms.custom:
 - sap:backup,recovery,disk,and storage\configuring and using windows backup or other recovery
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Backup fails when you try to create a system image
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-pekuo, shthomps, v-lianna
 ms.custom:
 - sap:windows device and driver management\peripherals driver installation or update
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # "This device cannot start" error when deploying a hot plug NVMe SSD
 

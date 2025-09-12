@@ -9,6 +9,8 @@ ms.reviewer: kaushika, match
 ms.custom:
 - sap:windows device and driver management\peripherals driver installation or update
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Power Management tab is not visible for some Wireless Network adapters with AOAC platforms in Windows 8
 

@@ -12,6 +12,8 @@ ms.custom:
 - sap:clustering and high availability\errors when running the validation wizard
 - pcy:WinComm Storage High Avail
 keywords: Windows failover cluster, SAN, shared LUNs, Validate a Configuration Wizard
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Storage tests on a failover cluster might not discover all shared LUNs

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, danma
 ms.custom:
 - sap:windows desktop and shell experience\file associations
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Sometimes you cannot associate a program with an extension in Windows 7
 

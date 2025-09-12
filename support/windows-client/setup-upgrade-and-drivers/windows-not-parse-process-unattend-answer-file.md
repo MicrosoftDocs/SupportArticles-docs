@@ -9,6 +9,8 @@ ms.reviewer: kaushika, yuakib
 ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # "Windows could not parse or process the unattend answer file for pass [specialize]" error message when you perform an in-place upgrade
 

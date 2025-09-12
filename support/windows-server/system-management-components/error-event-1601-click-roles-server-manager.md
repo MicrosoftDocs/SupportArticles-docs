@@ -9,6 +9,8 @@ ms.reviewer: kaushika, warrenw, adrianlutai
 ms.custom:
 - sap:system management components\server manager
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error message when you select Roles in Server Manager on Windows Server
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, Roger.Blume, winciccore
 ms.custom:
 - sap:backup,recovery,disk,and storage\iscsi
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Redundant subnets are incorrectly created in an iSCSI IPv6 network
 
