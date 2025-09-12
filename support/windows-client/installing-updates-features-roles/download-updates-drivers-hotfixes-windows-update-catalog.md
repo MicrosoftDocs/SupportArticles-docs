@@ -125,7 +125,7 @@ You may experience one or more of the following issues when you use Windows Upda
 - You may receive the following error message:
     > Administrators Only (-2146828218) To install items from Windows Update, you must be logged on as an administrator or a member of the Administrators group. If your computer is connected to a network, network policy settings may also prevent you from completing this procedure.
 
-    For more information about this issue, click the following article number to view the article in the Microsoft Knowledge Base: [316524](https://support.microsoft.com/help/316524) You receive an "Administrators only" error message when you try to visit the Windows Update Web site or the Microsoft Update Web site
+    For more information about this issue, click the following article number to view the article in the Microsoft Knowledge Base: [316524](https://support.microsoft.com/topic/d2c732b6-21e0-a2ce-8d18-303ed71736c9) You receive an "Administrators only" error message when you try to visit the Windows Update Web site or the Microsoft Update Web site
 
 - You may be unable to view the Windows Update site or the Microsoft Update site if you connect to the Web site through an authenticating Web proxy that uses integrated (NTLM) proxy authentication.
 

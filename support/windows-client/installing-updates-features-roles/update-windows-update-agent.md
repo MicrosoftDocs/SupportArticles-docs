@@ -58,9 +58,9 @@ The following files are available for download from the Microsoft Download Cente
 
 |Operating system|Update|
 |---|---|
-|All supported x86-based versions of Windows 8 (KB2937636)|[Download the package now.](https://www.microsoft.com/download/details.aspx?familyid=909de38f-ab20-46fc-a96a-662335b13a23) |
-|All supported x64-based versions of Windows 8 (KB2937636)|[Download the package now.](https://www.microsoft.com/download/details.aspx?familyid=d414eda7-9d82-4a15-bae6-f9b94975dafc) |
-|All supported x64-based versions of Windows Server 2012 (KB2937636)|[Download the package now.](https://www.microsoft.com/download/details.aspx?familyid=31ddb379-6268-4ad7-8083-d8fa42b6a3e9) |
+|All supported x86-based versions of Windows 8 (KB2937636)|[Download the package now.](https://www.microsoft.com/download/details.aspx?id=43433) |
+|All supported x64-based versions of Windows 8 (KB2937636)|[Download the package now.](https://www.microsoft.com/download/details.aspx?id=43466) |
+|All supported x64-based versions of Windows Server 2012 (KB2937636)|[Download the package now.](https://www.microsoft.com/download/details.aspx?id=43434) |
 
 ### Stand-alone packages for Windows 7 SP1 and Windows Server 2008 R2 SP1
 
