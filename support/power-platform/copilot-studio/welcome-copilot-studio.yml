@@ -24,8 +24,8 @@ landingContent:
             url: /microsoft-copilot-studio/
           - text: Microsoft Copilot Studio training
             url: /training/browse/?expanded=power-platform&products=microsoft-copilot-studio
-  
-    # Card
+
+  # Card
   - title: Support resources
     linkLists:
       - linkListType: reference
