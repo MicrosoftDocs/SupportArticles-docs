@@ -12,9 +12,9 @@ ai-usage: ai-assisted
 #customer intent: As an Azure administrator or user, I want to resolve issues when I create Astro resources so that I can successfully set up Astro integration.
 ---
 
-# Can't create Astro resource in Azure
+# Can't create Astro resources in Microsoft Azure
 
-This article helps you resolve common issues that you can encounter when you try to create Astro resources in Microsoft Azure. These issues include permission errors and missing user profile information.
+This article helps you resolve common issues that you can encounter when you try to create Astro resources in Azure. These issues include permission errors and missing user profile information.
 
 ## Prerequisites
 

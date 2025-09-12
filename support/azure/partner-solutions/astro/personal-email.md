@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 
 ---
 
-# Unable to install Astro using a personal email
+# Can't install Astro using a personal email
 
 If you're trying to install Apache Airflow on Astro from the Microsoft Azure Marketplace using a personal email from a generic domain, you can encounter issues. This article explains why this happens and how to resolve them.
 

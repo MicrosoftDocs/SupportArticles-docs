@@ -29,11 +29,11 @@ landingContent:
     linkLists:
     - linkListType: how-to-guide
       links:
-        - text: Issues creating Astro resources  
+        - text: Can't create Astro resources in Microsoft Azure  
           url: astro/resource-creation.md
-        - text: Can't use personal email
+        - text: Can't install Astro using a personal email
           url: astro/personal-email.md
-        - text: Issues with Single Sign On (SSO)
+        - text: Unable to use single sign-on in Astronomer portal
           url: astro/single-sign-on.md
 
 # Card
