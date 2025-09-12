@@ -12,5 +12,7 @@
   href: ./debug-live-azure-apps-troubleshooting.md
 - name: Troubleshoot breakpoints
   href: ./troubleshooting-breakpoints.md
+- name: Troubleshoot data breakpoints (C#)
+  href: ./troubleshooting-data-breakpoint-errors.md
 - name: Troubleshoot remote debugging
   href: ./troubleshooting-remote-debugging.md
