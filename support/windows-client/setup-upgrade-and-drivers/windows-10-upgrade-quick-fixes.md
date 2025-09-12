@@ -210,7 +210,7 @@ When you run Disk Cleanup and enable the option to Clean up system files, you ca
 > [!TIP]
 > It is no longer necessary to open an elevated command prompt to run the [SetupDiag](/windows/deployment/upgrade/setupdiag) tool. However, this is still the optimal way to run the tool.
 
-To launch an elevated command prompt, press the Windows key on your keyboard, type *cmd*, press Ctrl+Shift+Enter, and then select **Yes** to confirm the elevation prompt. For more information about screenshots and other steps to open an elevated command prompt, see [Command Prompt (Admin) Windows 7](https://answers.microsoft.com/EN-US/windows/forum/windows_7-security/command-prompt-admin-windows-7/6a188166-5e23-461f-b468-f325688ec8c7).
+To launch an elevated command prompt, press the Windows key on your keyboard, type *cmd*, press Ctrl+Shift+Enter, and then select **Yes** to confirm the elevation prompt. For more information about screenshots and other steps to open an elevated command prompt, see [Command Prompt (Admin) Windows 7](/windows-server/administration/windows-commands/windows-commands).
 
 > [!NOTE]
 > When you open an elevated command prompt, you will usually start in the *C:\\WINDOWS\\system32* directory. To run a program that you recently downloaded, you must change to the directory where the program is located. Alternatively, you can move or copy the program to a directory in your PATH variable. These directories are automatically searched. Type `echo %PATH%` to see the directories in your PATH variable.
