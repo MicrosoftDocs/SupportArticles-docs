@@ -29,7 +29,7 @@ landingContent:
     linkLists:
     - linkListType: how-to-guide
       links:
-        - text: Can't create Astro resources in Microsoft Azure  
+        - text: Can't create Astro resources in Azure  
           url: astro/resource-creation.md
         - text: Can't install Astro using a personal email
           url: astro/personal-email.md
