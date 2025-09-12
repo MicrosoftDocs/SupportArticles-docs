@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:windows servicing,updates and features on demand\windows update configuration,settings and management
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # WSUS (Windows Server Update Services) clients cannot install updates when Symantec Endpoint Protection is installed on the same Web site with WSUS
 

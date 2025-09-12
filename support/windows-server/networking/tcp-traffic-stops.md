@@ -9,6 +9,8 @@ ms.reviewer: kaushika, bburgin
 ms.custom:
 - sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # TCP traffic stops after you enable both receive-side scaling and Internet Connection Sharing in Windows Vista or in Windows Server 2003 with Service Pack 1 or Service Pack 2
 

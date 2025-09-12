@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:windows desktop and shell experience\dpi and display issues
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Docking station external monitors not working when a Windows 10 version 1703-based portable computer is connected
 

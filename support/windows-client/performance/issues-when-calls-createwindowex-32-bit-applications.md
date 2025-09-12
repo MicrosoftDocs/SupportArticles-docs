@@ -9,6 +9,8 @@ ms.reviewer: kaushika, memarti, chmorri, v-jesits
 ms.custom:
 - sap:system performance\app,process,service reliability (crash,errors)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Windows 10 causes issues when it calls CreateWindowEx in some 32-bit applications
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, paudina, mingcheh, caroul, v-jesits, v-tea, tlavoy
 ms.custom:
 - sap:windows device and driver management\system driver installation or update
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Cannot install the May 2019 update of Windows 10 on computers that run certain versions of AMD RAID drivers
 

@@ -9,6 +9,8 @@ ms.reviewer: v-jomcc, kaushika
 ms.custom:
 - sap:active directory\user,computer,group,and object management
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error message when you try to add more than 64 logon workstations: "This property is limited to 64 values"
 

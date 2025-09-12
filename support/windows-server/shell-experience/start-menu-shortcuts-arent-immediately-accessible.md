@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-jesits, v-six, robsim, cpuckett
 ms.custom:
 - sap:windows desktop and shell experience\start menu and task bar
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Start menu shortcuts aren't immediately accessible in Windows Server 2016 and Windows Server 2019
 

@@ -50,6 +50,8 @@ items:
       href: create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed.md
     - name: QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade
       href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
+    - name: Troubleshoot errors when creating or switching to an AKS Automatic cluster 
+      href: create-upgrade-delete/aks-automatic-troubleshoot.md
   - name: Upgrade operations
     items:
     - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
@@ -153,6 +155,8 @@ items:
     href: load-bal-ingress-c/create-unmanaged-ingress-controller.md
   - name: Troubleshoot Application Gateway Ingress Controller connectivity
     href: load-bal-ingress-c/troubleshoot-app-gateway-ingress-controller-connectivity-issues.md
+  - name: Troubleshoot Performance Issues with the Managed NGINX Ingress Controller in AKS
+    href: load-bal-ingress-c/troubleshoot-performance-ingress.md
 
 - name: Troubleshoot Kubernetes control plane
   items:

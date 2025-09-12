@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-lianna
 ms.custom:
 - sap:windows activation\windows activation issues
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Remote desktop connection "The local policy of this system does not permit you to logon interactively"
 

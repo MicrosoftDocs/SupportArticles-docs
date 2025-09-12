@@ -9,6 +9,8 @@ ms.reviewer: kaushika, drewba
 ms.custom:
 - sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Increase the number of IP addresses on a subnet in a DHCP server
 

@@ -10,6 +10,8 @@ ms.custom:
 - sap:windows desktop and shell experience\dst and timezones
 - pcy:WinComm User Experience
 adobe-target: true
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Daylight saving time help and support
 

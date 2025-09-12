@@ -9,6 +9,8 @@ ms.reviewer: jories
 ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Event ID 7 is intermittently logged on a Windows Server 2025-based domain controller
 

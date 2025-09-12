@@ -10,6 +10,8 @@ ms.custom:
 - sap:clustering and high availability\setup and configuration of clustered services and applications
 - pcy:WinComm Storage High Avail
 keywords: cluster validation, user account
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Cluster validation account causes events or messages

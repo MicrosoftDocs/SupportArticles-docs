@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # CPU usage exceeds 100% in Task Manager and Performance Monitor if Intel Turbo Boost is active
 

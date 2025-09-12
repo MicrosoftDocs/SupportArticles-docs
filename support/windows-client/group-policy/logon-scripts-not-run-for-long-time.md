@@ -9,6 +9,8 @@ ms.reviewer: kaushika, ajayps
 ms.custom:
 - sap:group policy\group policy management (gpmc or gpedit)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Logon scripts don't run for five minutes after a user logs on to a Windows 8.1-based computer
 

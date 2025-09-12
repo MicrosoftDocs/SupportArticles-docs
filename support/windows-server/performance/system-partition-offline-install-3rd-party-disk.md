@@ -9,6 +9,8 @@ ms.reviewer: kaushika, adityah
 ms.custom:
 - sap:system performance\system configuration (page file,startup or running apps,error handling)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # System Partition goes offline after installing some third-party disk or Storage Management Software
 

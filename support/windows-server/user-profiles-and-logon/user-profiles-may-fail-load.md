@@ -9,6 +9,8 @@ ms.reviewer: kaushika, AJAYPS
 ms.custom:
 - sap:user logon and profiles\service account and interactive user logon issues and credential providers
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # User profiles may fail to load after you install the Windows 8.1, or Windows Server 2012 R2 April 2014 update
 

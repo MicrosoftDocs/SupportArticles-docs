@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:networking\remote access
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Default gateway route doesn't appear in the Routing Table after you re-add a Routing and Remote Access interface
 

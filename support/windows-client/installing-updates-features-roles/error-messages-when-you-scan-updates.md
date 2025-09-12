@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # "Error: 0x8004005" or "Error: 0x800C0005" error messages when you scan for updates
 

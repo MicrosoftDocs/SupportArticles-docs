@@ -9,6 +9,8 @@ ms.reviewer: kaushika, arrenc
 ms.custom:
 - sap:user logon and profiles\user profiles
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error occurs during desktop setup and desktop location is unavailable when you log on to Windows for the first time
 

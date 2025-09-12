@@ -10,6 +10,8 @@ ms.custom:
 - sap:virtualization and hyper-v\installation and configuration of hyper-v
 - pcy:WinComm Storage High Avail
 keywords: Hyper-V, minroot, minimum root, CPPC, P-state
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Windows Server 2019 Hyper-V host behavior running in the minroot configuration

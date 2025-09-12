@@ -10,6 +10,8 @@ ms.custom:
 - sap:software defined networking\internal name resolution for sdn
 - pcy:WinComm Networking
 ms.assetid: 427048db-bab6-49b1-9611-099bb547ec0e
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot Software Defined Networking (SDN)
 

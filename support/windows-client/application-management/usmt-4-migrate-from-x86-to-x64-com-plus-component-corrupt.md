@@ -9,6 +9,8 @@ ms.reviewer: sgoad, nedpyle, tjung, kaushika
 ms.custom:
 - sap:application technologies and compatibility\dcom service startup and permissions
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # USMT 4.0 migration from x86 to x64 results in corrupted COM+ components
 

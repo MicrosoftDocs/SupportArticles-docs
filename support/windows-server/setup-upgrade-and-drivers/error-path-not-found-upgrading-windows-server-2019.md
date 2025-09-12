@@ -9,6 +9,8 @@ ms.reviewer: kaushika, hamansoor, v-lianna
 ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # ERROR_PATH_NOT_FOUND error when performing an in-place upgrade to Windows Server 2019
 

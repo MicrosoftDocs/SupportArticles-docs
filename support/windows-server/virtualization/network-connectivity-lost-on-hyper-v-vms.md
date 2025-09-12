@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jeffpatt
 ms.custom:
 - sap:virtualization and hyper-v\configuration of virtual machine settings
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Network connectivity is lost on Hyper-V VMs if VMQ feature is enabled on HOST network cards
 

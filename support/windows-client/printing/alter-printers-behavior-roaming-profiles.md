@@ -9,6 +9,8 @@ ms.reviewer: kaushika, eugenev, austinm
 ms.custom:
 - sap:print,fax,and scan\print configuration or management
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to Alter Behavior of Printers That Roam with Roaming Profiles
 

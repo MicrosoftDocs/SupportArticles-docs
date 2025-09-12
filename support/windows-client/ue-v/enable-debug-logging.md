@@ -9,6 +9,8 @@ ms.reviewer: kaushika, markstan
 ms.custom:
 - sap:uev\agent\other
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to enable debug logging in Microsoft User Experience Virtualization (UE-V)
 

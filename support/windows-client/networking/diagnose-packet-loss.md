@@ -10,6 +10,8 @@ ms.custom:
 - pcy:WinComm Networking
 ms.reviewer: kaushik, mifriese, guhetier, v-lianna
 audience: itpro
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Diagnose packet loss
 

@@ -10,6 +10,8 @@ ms.custom:
 - sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
 - pcy:WinComm Networking
 adobe-target: true
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Understand TCP/IP addressing and subnetting basics
 

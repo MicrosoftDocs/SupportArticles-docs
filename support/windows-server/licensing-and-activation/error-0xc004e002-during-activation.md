@@ -9,6 +9,8 @@ ms.reviewer: kaushika, danv
 ms.custom:
 - sap:windows activation\windows activation issues
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error 0xC004E002 during activation for Windows
 

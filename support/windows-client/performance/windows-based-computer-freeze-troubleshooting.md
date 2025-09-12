@@ -10,6 +10,8 @@ ms.custom:
 - pcy:WinComm Performance
 ms.reviewer: dougeby, ntuttle
 audience: itpro
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Advanced troubleshooting for Windows freezes
 

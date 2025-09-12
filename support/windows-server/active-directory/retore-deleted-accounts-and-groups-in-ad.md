@@ -9,6 +9,8 @@ ms.reviewer: kaushika, arrenc, v-jomcc
 ms.custom:
 - sap:active directory\active directory backup,restore,or disaster recovery
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to restore deleted user accounts and their group memberships in Active Directory
 

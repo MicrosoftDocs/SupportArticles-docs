@@ -9,6 +9,8 @@ ms.reviewer: kaushika, deepku
 ms.custom:
 - sap:remote desktop services and terminal services\authentication
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # RDP connection to Remote Desktop server running Windows Server 2008 R2 may fail with message The Local Security Authority cannot be contacted
 

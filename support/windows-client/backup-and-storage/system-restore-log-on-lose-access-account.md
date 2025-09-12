@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:backup,recovery,disk,and storage\system restore
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to use System Restore to log on when you lose access to an account
 

@@ -7,6 +7,8 @@ ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
 ROBOTS: NOINDEX
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474: A CPU core may hang after about 1044 days
 

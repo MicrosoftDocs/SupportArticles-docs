@@ -9,6 +9,8 @@ ms.reviewer: kaushika, gbrag, v-lianna
 ms.custom:
 - sap:system management components\winrm,including event forwarding and collections
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Can't establish a PowerShell remote session using WinRM between Microsoft Entra-only joined machines
 

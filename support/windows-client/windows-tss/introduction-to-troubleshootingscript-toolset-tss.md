@@ -7,6 +7,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, muratka, waltere, gipauli
 ms.custom: sap:Support Tools\TSS, csstroubleshoot
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Introduction to TroubleShootingScript toolset (TSS)
 

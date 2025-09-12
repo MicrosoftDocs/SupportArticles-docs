@@ -9,6 +9,8 @@ ms.reviewer: kaushika, warrenw, hunterm, ronruz, aandrejs
 ms.custom:
 - sap:windows desktop and shell experience\dst and timezones
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Can't set time zone automatically in Windows 10
 

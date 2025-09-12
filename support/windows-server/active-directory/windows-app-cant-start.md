@@ -9,6 +9,8 @@ ms.reviewer: kaushika, arrenc
 ms.custom:
 - sap:active directory\active directory migration tool (admt)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Windows App cannot start after ADMT 3.2 security translation runs in Windows 8, Windows 8.1 and Windows 10
 

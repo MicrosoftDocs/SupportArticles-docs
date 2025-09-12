@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:group policy\problems applying group policy
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Folder redirection settings are still applied from Group Policy settings even though you turn on loopback processing in Group Policy
 

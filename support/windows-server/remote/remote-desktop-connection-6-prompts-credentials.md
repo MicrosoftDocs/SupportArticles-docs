@@ -9,6 +9,8 @@ ms.reviewer: kaushika, xiangwu
 ms.custom:
 - sap:remote desktop services and terminal services\session connectivity
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Remote Desktop Connection 6.0 prompts you for credentials before you establish a remote desktop connection
 

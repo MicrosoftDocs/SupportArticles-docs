@@ -12,6 +12,8 @@ metadata:
   ms.custom:
   - sap:windows eos\general information,main-page
   - pcy:WinComm Devices Deploy
+  appliesto:
+    - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 title: Windows 7 EoS FAQ documentation
 summary: |
   This article summarizes the frequently asked questions about the end of support for Windows 7.

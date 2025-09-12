@@ -9,6 +9,8 @@ ms.reviewer: kaushika, manojse, lacranda
 ms.custom:
 - sap:windows security technologies\bitlocker
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # MBAM 2.0 SSP Portal gives an error: The requested Key ID is invalid for the current user
 

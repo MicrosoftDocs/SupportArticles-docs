@@ -9,6 +9,8 @@ ms.reviewer: danesc, kaushika
 ms.custom:
 - sap:windows desktop and shell experience\modern,inbox and microsoft store apps
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error when you create an AppLocker hash rule for a file in Windows: 0x800700C1: not a valid Win32 application
 

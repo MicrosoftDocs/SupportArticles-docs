@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system performance\app,process,service reliability (crash,errors)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # 64-bit versions of Windows don't support 16-bit components, 16-bit processes, or 16-bit applications
 

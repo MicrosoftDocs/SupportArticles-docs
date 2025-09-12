@@ -9,6 +9,8 @@ ms.reviewer: kaushika, cpuckett, danchar, kaushika, rblume
 ms.custom:
 - sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Windows Task Manager shows incorrect CPU speed when Hyper-V is enabled
 

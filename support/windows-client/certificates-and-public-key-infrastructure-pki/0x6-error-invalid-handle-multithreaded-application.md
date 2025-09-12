@@ -9,6 +9,8 @@ ms.reviewer: kaushika, milanmil, herbertm
 ms.custom:
 - sap:certificates and public key infrastructure (pki)\smart card logon
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # (0x6 ERROR_INVALID_HANDLE) error when a multithreaded application accesses a smart card
 

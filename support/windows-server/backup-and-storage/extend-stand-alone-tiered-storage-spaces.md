@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-mafect, jeffhugh
 ms.custom:
 - sap:backup,recovery,disk,and storage\storage spaces
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to extend stand-alone tiered storage spaces
 

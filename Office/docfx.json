@@ -76,6 +76,7 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/troubleshoot/office/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
       "recommendations": true,
       "feedback_system": "Standard",
       "feedback_product_url": "https://techcommunity.microsoft.com/",

@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system management components\microsoft management console (mmc)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to remotely edit the registry of a client computer from a host computer after you use Remote Recover to connect the host computer to the client computer
 

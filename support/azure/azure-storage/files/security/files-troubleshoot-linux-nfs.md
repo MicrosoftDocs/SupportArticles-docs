@@ -3,7 +3,7 @@ title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
 ms.service: azure-file-storage
 ms.custom: sap:Security, linux-related-content
-ms.date: 07/02/2025
+ms.date: 09/12/2025
 ms.reviewer: kendownie
 ---
 
@@ -242,6 +242,14 @@ If you're unable to mount the file share due to **error: connection timed out**,
 #### Solution
 
 [Recover the storage account](/azure/storage/common/storage-account-recover). Then, delete and re-create the private endpoint so it's associated with the new storage account resource ID.
+
+### Cause 5: You're trying to mount the share using the NFS client mount instead of the AZNFS mount helper, and the **Secure transfer required** setting is enabled on the storage account.
+
+The **Secure transfer required** setting enforces encryption in transit for all file shares within the storage account. For NFS file shares, using encryption in transit requires mounting the share using the AZNFS Mount Helper, a client utility package that abstracts the complexity of establishing secure tunnels for NFSv4.1 traffic.
+
+#### Solution
+
+Either disable the **Secure transfer required** setting on the storage account or use the AZNFS mount helper to mount the share. For more information, see [Encryption in transit for NFS Azure file shares](/azure/storage/files/encryption-in-transit-for-nfs-shares).
 
 ## ls hangs for large directory enumeration on some kernels
 

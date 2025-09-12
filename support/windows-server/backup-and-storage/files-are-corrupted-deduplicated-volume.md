@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:backup,recovery,disk,and storage\deduplication
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Files are corrupted on deduplicated volumes that were created as NTFS-compressed
 

@@ -9,6 +9,8 @@ ms.reviewer: masoudh, kaushika
 ms.custom:
 - sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to install and configure a virtual private network server in Windows Server 2003  
 

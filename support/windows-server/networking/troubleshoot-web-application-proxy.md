@@ -10,6 +10,8 @@ ms.custom:
 - sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
 - pcy:WinComm Networking
 ms.assetid: a2fef55d-747b-4e20-8f21-5f8807e7ef87
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot Web Application Proxy
 

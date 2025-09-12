@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:windows security technologies\netlogon including secure channel and dc locator issues
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Configure a preshared key for use with Layer 2 Tunneling Protocol Connections in Windows Server 2003
 
