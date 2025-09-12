@@ -10,6 +10,8 @@ ms.custom:
 - sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
 - pcy:WinComm Networking
 ms.assetid: 354ae5e3-bae1-44f9-afd7-7eaba70f2346
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot general issues related to Remote Access
 

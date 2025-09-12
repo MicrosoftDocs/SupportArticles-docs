@@ -9,6 +9,8 @@ ms.reviewer: waltere, v-dehaas, kaushika
 ms.custom:
 - sap:network connectivity and file sharing\wins
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshooting WINS error event ID 4102, 4243, 4242, and 4286 messages
 

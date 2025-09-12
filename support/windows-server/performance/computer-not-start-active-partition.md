@@ -9,6 +9,8 @@ ms.reviewer: kaushika, DIASMITH
 ms.custom:
 - sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # The computer does not start after you change the active partition by using the Disk Management tool
 

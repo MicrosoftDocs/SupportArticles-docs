@@ -9,6 +9,8 @@ ms.reviewer: kaushika, kakojima, kmasudo, kewaka, slight
 ms.custom:
 - sap:active directory\ad rights management service (azure information protection only)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Event ID 84 occurs in Active Directory Rights Management Services (AD RMS) in Windows Server
 

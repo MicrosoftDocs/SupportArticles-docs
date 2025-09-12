@@ -9,6 +9,8 @@ ms.reviewer: kaushika, ANRATH, tfairman, v-lianna, jories
 ms.custom:
 - sap:network connectivity and file sharing\dns
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Event IDs 4016 and 4004 when DNS updates time out
 

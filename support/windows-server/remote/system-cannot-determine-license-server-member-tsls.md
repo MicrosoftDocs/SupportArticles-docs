@@ -9,6 +9,8 @@ ms.reviewer: kaushika, mamash, v-lianna
 ms.custom:
 - sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # The system cannot determine if the license server is member of TSLS Group on Active Directory Domain Services (AD DS)
 

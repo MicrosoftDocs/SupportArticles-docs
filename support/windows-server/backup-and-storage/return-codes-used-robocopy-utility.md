@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:backup,recovery,disk,and storage\configuring and using windows backup or other recovery
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Return codes that are used by the Robocopy utility in Windows Server 2008 or Windows Server 2008 R2
 

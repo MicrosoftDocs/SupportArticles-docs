@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:group policy\group policy management (gpmc or gpedit)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Use GPOs to change default logon domain name in the logon screen
 

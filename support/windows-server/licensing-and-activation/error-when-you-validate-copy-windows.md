@@ -9,6 +9,8 @@ ms.reviewer: kaushika, scottmca
 ms.custom:
 - sap:windows activation\windows activation issues
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error message when you try to validate a copy of Windows: The cryptographic operation failed because of a local security option setting
 

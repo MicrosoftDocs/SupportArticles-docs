@@ -9,6 +9,8 @@ ms.reviewer: sureshka, arrenc, juburke, stacygr, jburchel, diassis, stefze, mast
 ms.custom:
 - sap:certificates and public key infrastructure (pki)\transport layer security (tls) or schannel (ssl)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows
 

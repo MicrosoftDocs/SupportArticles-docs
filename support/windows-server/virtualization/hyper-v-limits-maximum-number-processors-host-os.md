@@ -9,6 +9,8 @@ ms.reviewer: arichard, kaushika
 ms.custom:
 - sap:virtualization and hyper-v\configuration of virtual machine settings
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Hyper-V limits the maximum number of processors in the Hyper-V host OS to 64
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:network connectivity and file sharing\access to file shares (smb)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # The network folder specified is currently mapped using a different user name and password error
 

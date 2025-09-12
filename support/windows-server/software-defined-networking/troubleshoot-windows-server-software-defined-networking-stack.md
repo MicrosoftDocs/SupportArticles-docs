@@ -10,6 +10,8 @@ ms.custom:
 - sap:software defined networking\internal name resolution for sdn
 - pcy:WinComm Networking
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot the Windows Server software defined networking stack
 

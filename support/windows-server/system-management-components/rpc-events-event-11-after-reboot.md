@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system management components\wmi management and troubleshooting
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Microsoft-Windows-RPC-Events Event 11 after reboot
 

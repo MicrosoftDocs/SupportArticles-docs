@@ -9,6 +9,8 @@ ms.reviewer: kaushika, winciccore, v-tappelgate
 ms.custom:
 - sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Cannot restart a Windows Server computer that uses Credential Guard, Hyper-V, and at least 20 TB RAM

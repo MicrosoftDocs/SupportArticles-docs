@@ -9,6 +9,8 @@ ms.reviewer: kaushika, dennhu, pkalamkar, v-lianna
 ms.custom:
 - sap:group policy\problems applying group policy
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # "LDAP Bind function call failed" error when updating Group Policy settings
 

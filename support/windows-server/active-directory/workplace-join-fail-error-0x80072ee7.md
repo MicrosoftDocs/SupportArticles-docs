@@ -9,6 +9,8 @@ ms.reviewer: kaushika, willfid, AAdcontent, rkiran
 ms.custom:
 - sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # "Workplace Join discovery failed" error with exit code 0x80072EE7
 

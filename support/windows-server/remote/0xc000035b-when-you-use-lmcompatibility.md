@@ -9,6 +9,8 @@ ms.reviewer: kaushika, Randym
 ms.custom:
 - sap:remote desktop services and terminal services\authentication
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Terminal Services client connection error 0xC000035B when you use LmCompatibility
 

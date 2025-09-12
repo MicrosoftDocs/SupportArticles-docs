@@ -9,6 +9,8 @@ ms.reviewer: garymu, herbertm
 ms.custom:
 - sap:user logon and profiles\user profiles
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Scripts: Retrieve profile age
 

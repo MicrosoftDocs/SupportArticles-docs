@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-jesits, kardiva, davusa, gopkr, ajayps
 ms.custom:
 - sap:network connectivity and file sharing\dns
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # DNS zone transfer options are reset after you change zone replication scope in Windows Server 2008 R2
 

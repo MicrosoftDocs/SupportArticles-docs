@@ -9,6 +9,8 @@ ms.reviewer: kaushika, mikeres
 ms.custom:
 - sap:remote desktop services and terminal services\authentication
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Because of a security error, the client could not connect to the Terminal server
 

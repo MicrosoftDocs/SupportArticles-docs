@@ -9,6 +9,8 @@ ms.reviewer: kaushika, akhleshs
 ms.custom:
 - sap:group policy\problems applying group policy
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # User GPP Scheduled Task item fails to apply and logs event ID: 4098 with 0x80070005 Access is denied
 

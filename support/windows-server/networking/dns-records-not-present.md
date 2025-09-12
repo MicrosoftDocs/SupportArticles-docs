@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:network connectivity and file sharing\dns
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Cumulative list of reasons that cause DNS records to disappear from DNS zones
 

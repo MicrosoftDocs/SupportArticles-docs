@@ -9,6 +9,8 @@ ms.reviewer: kaushika, arrenc, sagiv
 ms.custom:
 - sap:active directory\active directory replication and topology
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Active Directory replication event IDs 2108 and 1084 occur during inbound replication of Active Directory Domain Services
 

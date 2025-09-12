@@ -9,6 +9,8 @@ ms.reviewer: kaushika, dewitth, ctimon, eldenc
 ms.custom:
 - sap:clustering and high availability\errors when running the validation wizard
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # "Unable to get Computer Object using GUID" error message when a network name request fails in a Windows Server failover cluster
 

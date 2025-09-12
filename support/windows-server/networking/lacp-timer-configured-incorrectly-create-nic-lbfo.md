@@ -9,6 +9,8 @@ ms.reviewer: kaushika, arudell, aartigoyle
 ms.custom:
 - sap:network connectivity and file sharing\windows nic teaming (load balance failover)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # LACP Timer is configured incorrectly when you create a new NIC Team for LBFO in Windows Server 2016
 

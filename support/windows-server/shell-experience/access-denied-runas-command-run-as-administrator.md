@@ -9,6 +9,8 @@ ms.reviewer: nedpyle, kaushika
 ms.custom:
 - sap:windows desktop and shell experience\desktop (shell,explorer.exe init,themes,colors,icons,recycle bin)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error when you use the runas command, the Run as Administrator option, or the Run as a different user option after you upgrade Windows Server: Access is denied
 

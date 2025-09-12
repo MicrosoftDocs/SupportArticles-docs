@@ -9,6 +9,8 @@ ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
 ms.reviewer: kaushika, raviks, v-lianna, jobesanc
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Event ID 5719, Error 1311, or Error 1355 - Domain controller or domain not found
 
