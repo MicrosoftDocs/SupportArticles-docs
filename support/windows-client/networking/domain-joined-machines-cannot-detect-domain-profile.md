@@ -9,6 +9,8 @@ ms.custom:
 - pcy:WinComm Networking
 ms.reviewer: kaushika, warrenw, shpune, v-lianna
 audience: itpro
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Domain-joined machines can't detect the domain profile
 

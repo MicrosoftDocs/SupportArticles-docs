@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jasone, clfish, v-lianna
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Bug check 0x124 after an in-place upgrade of Windows 10 by using Boot Camp on Apple devices
 

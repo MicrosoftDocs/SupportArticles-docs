@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:windows desktop and shell experience\modern,inbox and microsoft store apps
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Error message in the Xbox Music app, Windows Media Player, Groove Music, or Movies &TV when you wake a Windows 10-based or Windows 8-based computer
 

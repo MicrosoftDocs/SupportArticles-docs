@@ -9,6 +9,8 @@ ms.custom:
 ms.topic: troubleshooting
 ms.reviewer: dougeby, kaushika
 audience: itpro
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 
 # Windows 10 upgrade quick fixes

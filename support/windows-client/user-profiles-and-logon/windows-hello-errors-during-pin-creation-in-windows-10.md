@@ -12,6 +12,8 @@ ms.custom:
 - sap:windows security technologies\biometric,passwordless authentication,sso,and windows hello
 - pcy:WinComm Directory Services
 audience: itpro
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Windows Hello errors during PIN creation
 

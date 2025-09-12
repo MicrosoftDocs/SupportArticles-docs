@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:virtualization and hyper-v\configuration of virtual machine settings
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Office prompts for activation in Azure
 

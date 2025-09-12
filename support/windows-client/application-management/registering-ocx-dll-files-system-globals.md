@@ -9,6 +9,8 @@ ms.reviewer: kaushika, willgloy
 ms.custom:
 - sap:system performance\app,process,service reliability (crash,errors)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Register OCX and DLL files as system globals
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Error (BlInitializeLibrary failed XXX) when you install or start an operating system on a 64-bit UEFI-based computer
 

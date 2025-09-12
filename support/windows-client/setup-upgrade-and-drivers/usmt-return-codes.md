@@ -9,6 +9,8 @@ ms.custom:
 - sap:windows setup,upgrade and deployment\user state migration tool (usmt)
 - pcy:WinComm Devices Deploy
 audience: itpro
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # User State Migration Tool (USMT) return codes
 

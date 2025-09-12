@@ -9,6 +9,8 @@ ms.reviewer: kaushika, benarm, kledman
 ms.custom:
 - sap:virtualization and hyper-v\virtual machine creation
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Supported Guest Operating Systems in Virtual PC
 

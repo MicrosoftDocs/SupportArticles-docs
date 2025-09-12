@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-lianna
 ms.custom:
 - sap:network connectivity and file sharing\dns
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Clearing the "Register this connection's addresses in DNS" option doesn't remove DNS records for Windows clients using static IP addresses
 

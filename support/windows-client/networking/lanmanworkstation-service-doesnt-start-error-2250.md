@@ -13,6 +13,8 @@ ms.custom:
 - sap:network connectivity and file sharing\access to file shares (smb)
 - pcy:WinComm Networking
 keywords: error 2250, service can't start, LanmanWorkstation service
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 
 # Error 2250 (NERR_UseNotFound) when LanmanWorkstation service doesn't start

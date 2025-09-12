@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:application virtualization\server issues\administration
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to launch processes inside the App-V 5.0 virtualized environment
 

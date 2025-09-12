@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:print,fax,and scan\windows fax and scan (client)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Scanning using a scanner may cause a TWAIN aware application to hang
 

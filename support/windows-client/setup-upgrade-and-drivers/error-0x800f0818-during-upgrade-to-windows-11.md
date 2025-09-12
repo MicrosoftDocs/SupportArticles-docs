@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jaysenb, kaushika
 ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 
 # "0x800F0818 - 0x20003" error during upgrade from Windows 10 to Windows 11

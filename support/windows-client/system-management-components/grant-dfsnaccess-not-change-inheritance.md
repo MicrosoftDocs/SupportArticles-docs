@@ -9,6 +9,8 @@ ms.reviewer: kaushika, huberts
 ms.custom:
 - sap:system management components\powershell
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Windows PowerShell cmdlet Grant-DfsnAccess doesn't change inheritance on DFS links
 

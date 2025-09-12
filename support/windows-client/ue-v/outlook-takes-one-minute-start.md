@@ -9,6 +9,8 @@ ms.reviewer: narafa, winciccore, kaushika
 ms.custom:
 - sap:uev\agent\other
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Unexpected one-minute startup of Outlook if UE-V is enabled
 

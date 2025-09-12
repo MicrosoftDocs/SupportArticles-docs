@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Error 403 (Access Denied/Forbidden) occurs when you connect to Windows Update
 

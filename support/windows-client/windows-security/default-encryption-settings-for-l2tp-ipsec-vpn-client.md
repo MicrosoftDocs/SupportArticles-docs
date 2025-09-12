@@ -9,6 +9,8 @@ ms.reviewer: kaushika, MASOUDH
 ms.custom:
 - sap:windows security technologies\internet protocol security (ipsec)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Default encryption settings for the Microsoft L2TP/IPSec VPN Client
 
