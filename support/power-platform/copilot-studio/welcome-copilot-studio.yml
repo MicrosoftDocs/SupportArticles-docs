@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 
-title: Micorosft Copilot Studio troubleshooting # < 60 chars
+title: Microsoft Copilot Studio troubleshooting # < 60 chars
 summary: Welcome to Microsoft Copilot Studio troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Copilot Studio. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
   title: Microsoft Copilot Studio troubleshooting
@@ -15,4 +15,12 @@ metadata:
 
 landingContent:
 
-  # Add new landing page cards here
+  # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Microsoft Copilot Studio documentation
+            url: /microsoft-copilot-studio/
+          - text: Microsoft Copilot Studio training
+            url: /training/browse/?expanded=power-platform&products=microsoft-copilot-studio

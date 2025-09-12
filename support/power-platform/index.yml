@@ -17,7 +17,7 @@ productDirectory:
     summary: Troubleshooting articles for AI Builder
     url: ai-builder/welcome-ai-builder.yml
   - title: Microsoft Copilot Studio
-    imageSrc: "../media/hub-landing/CopilotStudio_scalable.svg"
+    imageSrc: "../media/hub-landing/copilot-studio.svg"
     summary: Troubleshooting articles for Microsoft Copilot Studio
     url: copilot-studio/welcome-copilot-studio.yml
   - title: Microsoft Dataverse
