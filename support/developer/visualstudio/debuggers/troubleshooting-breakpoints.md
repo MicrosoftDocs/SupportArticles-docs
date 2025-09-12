@@ -1,15 +1,9 @@
 ---
 title: Troubleshoot breakpoints in the debugger
 description: If a breakpoint is disabled or couldn't be set, it's displayed as a hollow circle. Look here information on problems that can occur when setting breakpoints.
-<<<<<<< HEAD
-ms.date: 09/09/2025
-author: HaiyingYu
-ms.author: haiyingyu
-=======
-ms.date: 06/27/2024
+ms.date: 09/12/2025
 author: aartig13
 ms.author: aartigoyle
->>>>>>> 1aaa0dcbb29b143d51225d073b2e58d1bb8ab652
 ms.reviewer: mikejo
 ms.custom: sap:Debuggers and Analyzers\Visual Studio Debugger
 ---
