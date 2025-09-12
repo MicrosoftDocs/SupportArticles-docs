@@ -50,6 +50,8 @@ items:
       href: create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed.md
     - name: QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade
       href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
+    - name: Troubleshoot errors when creating or switching to an AKS Automatic cluster 
+      href: create-upgrade-delete/aks-automatic-troubleshoot.md
   - name: Upgrade operations
     items:
     - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
