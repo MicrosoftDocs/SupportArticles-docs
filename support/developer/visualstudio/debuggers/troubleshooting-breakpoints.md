@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot breakpoints in the debugger
 description: If a breakpoint is disabled or couldn't be set, it's displayed as a hollow circle. Look here information on problems that can occur when setting breakpoints.
-ms.date: 12/09/2022
+ms.date: 09/09/2025
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: mikejo
@@ -35,6 +35,8 @@ Go to the **Modules** window (**Debug** > **Windows** > **Modules**) and check w
 
 ### "… the current source code is different from the version built into..."
 
+Alternatively, the message may say **"… the source code is different from the original version."**.
+
 If a source file has changed and the source no longer matches the code you're debugging, the debugger won't set breakpoints in the code by default. Normally, this problem happens when a source file is changed, but the source code wasn't rebuilt. To fix this issue, rebuild the project. If the build system thinks the project is already up-to-date even though it isn't, you can force the project system to rebuild. Rebuild the project either by saving the source file again or by cleaning the build output before building.
 
 In rare scenarios, you may want to debug without having matching source code. Debugging without matching source code can lead to a confusing debugging experience, so make sure how you want to continue.
@@ -43,6 +45,10 @@ Follow one of the options to disable these safety checks:
 
 - To modify a single breakpoint, hover over the breakpoint icon in the editor and select the settings (gear) icon. A peek window is added to the editor. At the top of the peek window, there's a hyperlink that indicates the location of the breakpoint. Select the hyperlink to allow modification of the breakpoint location and check **Allow the source code to be different from the original**.
 - To modify this setting for all breakpoints, go to **Debug** > **Options and Settings**. On the **Debugging/General** page, clear the **Require source files that exactly match the original version** option. Make sure to reenable this option when you're finished debugging.
+
+#### Get AI assistance
+
+If you have [Copilot](/visualstudio/ide/visual-studio-github-copilot-extension.md), you can get AI assistance to help resolve the issue of a source code mismatch. Copilot performs lightweight validation of the code and enables re-launch of the debugger if it successfully identifies a cause. Use the **Ask Copilot** button at the end of the error message.
 
 ## The breakpoint was successfully set (no warning), but didn't hit
 
