@@ -14,16 +14,16 @@ ai-usage: ai-assisted
 
 # Can't create Astro resources in Azure
 
-This article helps you resolve common issues that you can encounter when you try to create Astro resources in Microsoft Azure. These issues include permission errors and missing user profile information.
+This article helps you resolve common issues that you might encounter when you try to create Astro resources in Microsoft Azure. These issues include permission errors and missing user profile information.
 
 ## Prerequisites
 
 - You must have `Owner` access on the Azure subscription to set up Astro integration.
-- Make sure that your user profile in Azure contains all required business information.
+- Your user profile in Azure must contain all required business information.
 
 ## Symptoms
 
-- When you try to create an Astro resource, you get an error message that indicates that you're not a subscription owner.
+- When you try to create an Astro resource, you receive an error message that states that you're not a subscription owner.
 - You can't create an Astro resource because of missing details in your user profile.
 
 ## Cause 1: Not a subscription owner
@@ -33,7 +33,7 @@ Only users who have `Owner` access on the Azure subscription can set up the Astr
 ### Solution 1
 
 1. Verify your access level on the Azure subscription.
-2. If you don't have `Owner` access, ask your Azure admin to grant you the required permissions before you start the integration setup.
+2. If you don't have `Owner` access, ask your Azure administrator to grant you the required permissions before you start the integration setup.
 
 ## Cause 2: Missing details in user profile
 
@@ -41,14 +41,12 @@ Your user profile has to be updated to include key business information for Astr
 
 ### Solution 2
 
-1. In the Azure portal, select **Users**, and fill out the required details.
-
-2. Search for your username in the user information screen.
-
-3. Edit **UserInformation** to make sure that all required fields are completed.
+1. In the Azure portal, select **Users**, and complete the required details.
+2. In the user information screen, search for your username.
+3. Edit **UserInformation** to complete all required fields.
 
 ## Additional troubleshooting
 
 - If the deployment process takes more than three hours to complete, contact support.
-- If the deployment fails and the Astro resource has a status of `Failed`, delete the resource. After deletion, try to create the resource again.
-- If you get a DeploymentFailed error message, check the status of your Azure subscription. Make sure it isn't suspended and doesn't have any billing issues.
+- If the deployment fails and the Astro resource has a status of `Failed`, delete the resource. Then, try again to create the resource.
+- If you receive a "DeploymentFailed" error message, check the status of your Azure subscription. Make sure that it isn't suspended and has no billing issues.
