@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:admin mgmt development\active directory services interface adsi
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Convert a String Formatted GUID to a Hexadecimal String Form For Use When Querying the Active Directory
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, scottmca
 ms.custom:
 - sap:windows setup,upgrade and deployment\sysprep and imaging (windows pe,adk,wds)
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Multicast Deployment Fails from Windows Deployment Services
 

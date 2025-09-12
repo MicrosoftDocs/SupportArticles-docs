@@ -9,6 +9,8 @@ ms.reviewer: tinab, kaushika
 ms.custom:
 - sap:windows security technologies\legacy authentication (ntlm)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Network access validation algorithms and examples for Windows
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, taylorb, vimalsh, adityah
 ms.custom:
 - sap:virtualization and hyper-v\installation and configuration of hyper-v
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # A BIOS update may be required for some computers to install the Hyper-V Role and/or start Hyper-V virtual machines
 

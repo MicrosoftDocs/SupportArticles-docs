@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:certificates and public key infrastructure (pki)\microsoft trusted root certificate program
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Crypt32 8 events continuously reported in Windows
 

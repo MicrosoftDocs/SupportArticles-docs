@@ -9,6 +9,8 @@ ms.reviewer: kaushika, arrenc
 ms.custom:
 - sap:active directory\dcpromo and the installation or removal of domain controllers
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Installing Active Directory Domain Services Fails with Error "The specified user already exists."
 

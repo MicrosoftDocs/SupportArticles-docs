@@ -9,6 +9,8 @@ ms.reviewer: kaushika, itaysarig
 ms.custom:
 - sap:active directory\active directory replication and topology
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Active Directory replication error 1722: The RPC server is unavailable
 

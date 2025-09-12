@@ -9,6 +9,8 @@ ms.reviewer: adjudele, cpuckett, kaushika, shsadash, sbathija, rblume
 ms.custom:
 - sap:clustering and high availability\hyper-v clusters and vm mobility (migration)
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot live migration issues
 

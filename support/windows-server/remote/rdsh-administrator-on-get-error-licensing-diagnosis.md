@@ -9,6 +9,8 @@ ms.reviewer: klausu, kaushika
 ms.custom:
 - sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Windows Server 2008 R2: Administrator on RDSH gets an error in Licensing Diagnosis: Licenses are not available for this Remote Desktop Session Host server
 

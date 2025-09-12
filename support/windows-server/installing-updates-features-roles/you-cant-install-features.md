@@ -9,6 +9,8 @@ ms.reviewer: kaushika, wesk
 ms.custom:
 - sap:windows servicing,updates and features on demand\issues installing features on demand(fod)
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # You can't install features in Windows Server 2012 R2
 

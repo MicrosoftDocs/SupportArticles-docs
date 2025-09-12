@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jeffhuge, v-lianna
 ms.custom:
 - sap:virtualization and hyper-v\backup and restore of virtual machines
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot Hyper-V virtual machine backup, checkpoint, and storage failures
 

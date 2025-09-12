@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jkuehler, pleblanc, arrenc
 ms.custom:
 - sap:windows security technologies\ad object permissions,access control,delegation,adminsdholder and auditing
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Copying files from a mapped drive to a local directory fails with error (Location is not available) if UAC is enabled
 

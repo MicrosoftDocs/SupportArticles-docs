@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:certificates and public key infrastructure (pki)\certificate enrollment technologies (auto enrollment,ndes,cwe,cep,ces)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Remote Desktop server certificates are renewed two times a day despite being valid for one year
 

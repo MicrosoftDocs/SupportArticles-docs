@@ -10,6 +10,8 @@ ms.custom:
 - sap:shielded-virtual-machines
 - pcy:WinComm Storage High Avail
 ms.assetid: 55e954ec-6a5f-4b42-b6a7-1006f3e24556
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot a guarded fabric
 

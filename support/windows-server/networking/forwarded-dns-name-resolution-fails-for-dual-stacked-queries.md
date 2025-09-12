@@ -10,6 +10,8 @@ ms.custom:
 - sap:network connectivity and file sharing\dns
 - pcy:WinComm Networking
 keywords: A record, AAAA record, nonexistent domain, DNS cache, conditional forward
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Forwarded DNS name resolution fails for dual-stacked queries

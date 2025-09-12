@@ -9,6 +9,8 @@ ms.reviewer: kaushika, joelch, waltere
 ms.custom:
 - sap:application technologies and compatibility\application compatibility toolkit (act)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Direct-X diagnostics tool may report an unexpected value for the display adapters memory
 

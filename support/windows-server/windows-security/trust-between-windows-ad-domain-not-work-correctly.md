@@ -9,6 +9,8 @@ ms.reviewer: slight, kaushika
 ms.custom:
 - sap:windows security technologies\domain and forest trusts
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Trust between a Windows NT domain and an Active Directory domain can't be established or it doesn't work as expected
 

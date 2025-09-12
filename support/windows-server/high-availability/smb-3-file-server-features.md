@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jeffhugh
 ms.custom:
 - sap:clustering and high availability\cannot failover a group
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # SMB 3.0 features in Windows Server file server
 

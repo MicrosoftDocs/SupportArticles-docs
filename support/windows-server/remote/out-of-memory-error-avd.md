@@ -9,6 +9,8 @@ ms.reviewer: kaushika, elluthra, helohr, femila, v-lianna
 ms.custom:
 - sap:remote desktop services and terminal services\session connectivity
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # "Out of memory" error when connecting to Azure Virtual Desktop
 

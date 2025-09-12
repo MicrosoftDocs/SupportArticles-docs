@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:certificates and public key infrastructure (pki)\transport layer security (tls) or schannel (ssl)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Steps to disable TLS 1.0 and 1.1 on MBAM servers and force the use of TLS 1.2
 
