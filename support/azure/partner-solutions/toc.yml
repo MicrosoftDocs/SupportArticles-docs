@@ -3,10 +3,14 @@ items:
   href: index.yml
 - name: Marketplace purchase errors
   href: marketplace-purchases-errors.md
-- name: Informatica
+- name: Astro
   items:
-    - name: Issues creating Informatica resources in Azure
-      href: informatica/resource-creation.md
+    - name: Can't create Astro resources in Azure 
+      href: astro/resource-creation.md
+    - name: Can't install Astro using a personal email
+      href: astro/personal-email.md
+    - name: Unable to use single sign-on in Astronomer portal
+      href: astro/single-sign-on.md
 - name: Datadog
   items: 
     - name: Diagnostic settings manual update
