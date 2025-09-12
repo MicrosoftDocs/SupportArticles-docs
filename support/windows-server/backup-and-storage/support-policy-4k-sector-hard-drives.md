@@ -103,7 +103,7 @@ The following are known compatibility issues that may occur when you use large-s
 
 - On Windows 7 and Windows 2008 R2, installation will fail with an error **Windows Setup could not configure Windows on this computer's hardware**. This issue occurs under the conditions that are outlined in the following article:
 
-  ["Windows Setup could not configure Windows on this computer's hardware" installation error on a Windows 7 or Windows Server 2008 R2 computer](https://support.microsoft.com/help/2466753).
+  ["Windows Setup could not configure Windows on this computer's hardware" installation error on a Windows 7 or Windows Server 2008 R2 computer](https://support.microsoft.com/topic/0db2c9ac-0343-75d9-50a1-d4922029ac2a).
 
 - If you're using a logical sector drive of a size other than 512 bytes, Windows system image backup and restore operations may fail. And you receive the following error message:
 

@@ -95,6 +95,4 @@ For more information about failover clustering, see [Failover Clustering Overvie
 
 For more information about the Microsoft support policy for earlier operating systems, see:
 
-- [309395](https://support.microsoft.com/help/309395) The Microsoft support policy for server clusters, the Hardware Compatibility List, and the Windows Server Catalog
-
-- [943984](https://support.microsoft.com/help/943984) The Microsoft Support Policy for Windows Server 2008 or Windows Server 2008 R2 Failover Clusters
+- [309395](https://support.microsoft.com/topic/a254227b-925b-d68f-9e29-d2cc17087759) The Microsoft support policy for server clusters, the Hardware Compatibility List, and the Windows Server Catalog

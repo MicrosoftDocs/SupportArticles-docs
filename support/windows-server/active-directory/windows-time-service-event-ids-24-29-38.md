@@ -19,7 +19,7 @@ This article provides a solution to an issue where you receive the Windows Time 
 _Original KB number:_ &nbsp; 976924
 
 > [!NOTE]  
-> If you are a Small Business customer, find additional troubleshooting and learning resources at the [Support for Small Business](https://smallbusiness.support.microsoft.com) site.
+> If you are a Small Business customer, find additional troubleshooting and learning resources at the [Support for Small Business](https://support.microsoft.com/smallbusiness) site.
 
 ## Symptoms
 
