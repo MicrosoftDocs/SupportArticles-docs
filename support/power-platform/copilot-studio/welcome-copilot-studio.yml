@@ -1,0 +1,18 @@
+### YamlMime:Landing
+
+title: Micorosft Copilot Studio troubleshooting # < 60 chars
+summary: Welcome to Microsoft Copilot Studio troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Copilot Studio. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Copilot Studio troubleshooting
+  description: Landing page for Microsoft Copilot Studio troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: powerapps #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  ms.date: 09/12/2025
+  author: aartig13 #Required; your GitHub user alias, with correct capitalization.
+  ms.author: aartigoyle #Required; microsoft alias of author; optional team alias.
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Add new landing page cards here
