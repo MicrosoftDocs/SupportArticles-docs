@@ -5,7 +5,7 @@ summary: Welcome to Microsoft Copilot Studio troubleshooting. These articles exp
 metadata:
   title: Microsoft Copilot Studio troubleshooting
   description: Landing page for Microsoft Copilot Studio troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: copilot-studio #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   ms.date: 09/12/2025
   author: aartig13 #Required; your GitHub user alias, with correct capitalization.
@@ -24,3 +24,15 @@ landingContent:
             url: /microsoft-copilot-studio/
           - text: Microsoft Copilot Studio training
             url: /training/browse/?expanded=power-platform&products=microsoft-copilot-studio
+  
+    # Card
+  - title: Support resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Microsoft Copilot Studio support
+            url: /microsoft-copilot-studio/fundamentals-support
+          - text: Microsoft Copilot Studio forum
+            url: https://community.powerplatform.com/forums/thread/?groupid=db8f53c2-767d-47d6-a1ae-fe4c828a6553
+          - text: Microsoft Copilot Studio Ideas forum
+            url: https://ideas.powervirtualagents.com/d365community/forum/21a4f1f9-f7fc-ec11-82e6-000d3a8b109b
