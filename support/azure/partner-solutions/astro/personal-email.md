@@ -1,6 +1,6 @@
 ---
 title: Unable to install Astro using a personal email
-description: Discusses why installing Apache Airflow on Astro from Azure Marketplace by using a personal email account isn't supported, and how to resolve the problem.
+description: Discusses why installing Apache Airflow on Astro by using a personal email account isn't supported, and how to resolve the problem.
 author: ProfessorKendrick
 ms.author: jarrettr
 ms.reviewer: kkendrick
@@ -25,7 +25,7 @@ You might experience errors if you try to install Apache Airflow on Astro from t
 
 ## Symptoms
 
-If you try to install Apache Airflow on Astro by using a personal email account (for example, Outlook, Gmail, or Yahoo), the installation fails, and you receive an error or warning message that states that the email domain is unsupported.
+If you try to install Apache Airflow on Astro by using a personal email account (for example, Outlook, Gmail, or Yahoo), the installation fails. Additionally, you receive an error or warning message that states that the email domain is unsupported.
 
 ## Cause
 
