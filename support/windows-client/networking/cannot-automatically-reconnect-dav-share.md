@@ -9,6 +9,8 @@ ms.reviewer: waltere, kaushika,v-jesits
 ms.custom:
 - sap:network connectivity and file sharing\webclient and webdav
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Windows 7 can't automatically reconnect a DAV share when Basic Authentication is used
 

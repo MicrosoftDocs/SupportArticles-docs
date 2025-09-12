@@ -9,6 +9,8 @@ ms.reviewer: kaushika, zhchia, squin
 ms.custom:
 - sap:system management components\microsoft management console (mmc)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Error (MMC has detected an error in a snap-in and will unload it) when you try to launch VAMT 3.0 on a Windows 7 or Windows Server 2008 R2-based computer
 

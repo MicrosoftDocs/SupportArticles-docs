@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jennrowe
 ms.custom:
 - sap:installing windows updates,features,or roles\failure to install windows updates
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to downgrade from Windows 8
 

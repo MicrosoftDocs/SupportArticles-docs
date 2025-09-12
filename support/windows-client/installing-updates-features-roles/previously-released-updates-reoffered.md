@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Previously released Windows updates are reoffered for some systems
 
@@ -30,7 +32,7 @@ When systems that were built by using media that contains update rollup [3000850
 | [3002885](https://support.microsoft.com/help/3002885)|MS14-079: Vulnerabilities in kernel-mode driver could allow denial of service: November 11, 2014|
 | [2899189](https://support.microsoft.com/help/2899189)|Update adds support for many camera-specific file formats in Windows 8.1 or Windows RT 8.1: December 2013|
 | [2976536](https://support.microsoft.com/help/2976536)|November 2014 anti-malware platform update for Windows Defender in Windows 8.1 and Windows 8|
-| [2990967](https://support.microsoft.com/help/2990967)|Some versions of the OneDrive desktop app for Windows do not update automatically|
+| [2990967](https://support.microsoft.com/topic/92bef490-7ddd-f4c9-d91f-3edfb45fd89a)|Some versions of the OneDrive desktop app for Windows do not update automatically|
 | [2998174](https://support.microsoft.com/help/2998174)|Active camera is switched unexpectedly when you review photos in Camera app in Windows 8.1 or Windows Server 2012 R2|
   
 ## Cause

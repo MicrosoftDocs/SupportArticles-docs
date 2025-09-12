@@ -9,6 +9,8 @@ ms.reviewer: kaushika, warrenw, justintu
 ms.custom:
 - sap:windows desktop and shell experience\lock screen or screensaver
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to Manage the Lock Screen Image on Windows 8 and Windows Server 2012
 

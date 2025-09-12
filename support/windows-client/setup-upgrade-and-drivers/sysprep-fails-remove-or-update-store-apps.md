@@ -9,6 +9,8 @@ ms.reviewer: kaushika, vimalsh, shijithk, kaushika, wcheng, jodav
 ms.custom:
 - sap:windows setup,upgrade and deployment\sysprep and imaging (pe,adk,wds)
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Sysprep fails after you remove or update Microsoft Store apps that include built-in Windows images
 

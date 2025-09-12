@@ -9,6 +9,8 @@ ms.reviewer: kaushika, nedpyle, qianyu
 ms.custom:
 - sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Description of Remote Server Administration Tools
 

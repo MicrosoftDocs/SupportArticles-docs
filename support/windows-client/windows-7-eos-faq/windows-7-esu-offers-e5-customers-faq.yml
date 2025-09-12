@@ -12,6 +12,8 @@ metadata:
   ms.custom:
   - sap:windows eos\e5 esu offers
   - pcy:WinComm Devices Deploy
+  appliesto:
+    - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 title: FAQ about Windows 7 ESU offers for E5 customers
 summary: |
   This article describes the frequently asked questions about the Extended Security Updates offers for E5 customers for Windows 7.

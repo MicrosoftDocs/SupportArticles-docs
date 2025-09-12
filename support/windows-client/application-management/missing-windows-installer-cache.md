@@ -9,6 +9,8 @@ ms.reviewer: kaushika, kelho, sureshka
 ms.custom:
 - sap:application technologies and compatibility\msi and msix
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Missing Windows Installer cache requires a computer rebuild
 

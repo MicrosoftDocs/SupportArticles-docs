@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:user logon and profiles\service account and interactive user logon issues and credential providers
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Event 1098: Error: 0xCAA5001C Token broker operation failed in Windows 10
 

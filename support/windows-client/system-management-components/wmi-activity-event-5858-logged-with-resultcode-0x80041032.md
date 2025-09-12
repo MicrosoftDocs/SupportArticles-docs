@@ -9,6 +9,8 @@ ms.reviewer: kaushika, steved, cmyu, ssutari
 ms.custom:
 - sap:system management components\wmi management and troubleshooting
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # WMI-Activity Event 5858 logged frequently with ResultCode 0x80041032
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, yaimairi
 ms.custom:
 - sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Local computer behaves as if the Windows logo key is pressed after you switch from a Remote Desktop session
 
