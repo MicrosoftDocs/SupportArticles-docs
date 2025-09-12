@@ -1,17 +1,18 @@
 ---
 title: Event ID 5120 Cluster Shared Volume troubleshooting guidance
 description: Provides guidance for finding the root cause of Event 5120 Cluster Shared Volume.
-ms.date: 09/28/2022
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-ms.technology: windows-server-high-availability
-ms.custom: sap:csv, csstroubleshoot
-localization_priority: medium
+ms.custom:
+- sap:clustering and high availability\cluster shared volume (csv)
+- pcy:WinComm Storage High Avail
 ms.reviewer: kaushika
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Event ID 5120 Cluster Shared Volume troubleshooting guidance
 

@@ -1,28 +1,27 @@
 ---
 title: Task manager displays incorrect value for L2/L3 cache
 description: Provides a solution to an issue where task manager may display incorrect value for L2/L3 cache.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, jaysenb
-ms.custom: sap:desktop-shell, csstroubleshoot
-ms.technology: windows-server-shell-experience
+ms.custom:
+- sap:windows desktop and shell experience\desktop (shell,explorer.exe init,themes,colors,icons,recycle bin)
+- pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Windows Server 2019 task manager may display incorrect value for L2/L3 cache
+# Windows Server task manager may display incorrect value for L2/L3 cache
 
 This article provides a solution to an issue where task manager may display incorrect value for L2/L3 cache.
 
-_Applies to:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 4557856
 
 ## Symptoms
 
-Windows Server 2019 task manager may display an incorrect value for L2/L3 cache.
+Windows Server 2019 and Windows Server 2022 task manager may display an incorrect value for L2/L3 cache.
 
 ## Cause
 
@@ -31,5 +30,3 @@ This can occur if the hardware supports a value larger than 64 MB for L2/L3 cach
 ## Workaround
 
 You can work around this behavior with the PowerShell command `GWMI -Class Win32_CacheMemory | FT`.
-
-This problem does not occur in either older or newer versions of Windows.

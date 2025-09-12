@@ -1,18 +1,32 @@
 items:
 - name: .Net Framework requirements for SQL Server
   href: understanding-dotnet-framework-requirements.md
+- name: Unable to find an entry point error when updating SQL Server 2022
+  href: error-command-line-cu-sql-server-2022.md
 - name: Attempted to perform an unauthorized operation error
   href: error-set-up-update-instances.md
 - name: Cannot install on Windows case-sensitive servers
   href: sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled.md
 - name: Description of the Update Cache folder
   href: description-update-cache-folder.md
-- name: Different errors when installing SQL Server 2008 R2
-  href: error-install-sql-server-2008-r2.md
+- name: Errors when installing SQL Server
+  href: error-install-sql-server.md
+- name: RPC server is unavailable error during setup
+  href: error-rpc-server-unavailable-provisioning-account.md
+- name: Issues when upgrading to SQL Server 2022
+  href: issues-upgrading-sql-server-2022.md
+- name: Driver installation check
+  items:
+  - name: Driver installation check
+    href: driver-install-checking.md
+  - name: .NET driver installation check
+    href: net-driver-install-check.md
+  - name: ODBC driver installation check
+    href: odbc-driver-install-checking.md
+  - name: OLE DB driver installation check
+    href: oledb-driver-install-check.md
 - name: Error code 1642 though update is applied
   href: error-code-1642-update-applied.md
-- name: Error if you change shared component directory
-  href: error-change-path-shared-component-directory.md
 - name: Evaluation period has expired when you use SSMS
   href: evaluation-period-has-expired.md
 - name: Fusion ATL rule check fails
@@ -25,7 +39,7 @@ items:
   href: user-data-log-directory-invalid.md
 - name: Permission error when you use a volume mount point
   href: permission-error-use-volume-mount-point.md
-- name: Remove a partial installation of SQL server
+- name: Remove a partial installation of SQL Server
   href: remove-partial-installation.md
 - name: Restore the missing Windows Installer cache files
   href: restore-missing-windows-installer-cache-files.md
@@ -33,22 +47,10 @@ items:
   href: service-not-start-after-patch-installed.md
 - name: Setup stops responding when you upgrade
   href: setup-stops-responding-upgrade.md
-- name: SQL on Windows 7 or Windows Server 2008 R2
-  href: issues-install-sql-server.md
-- name: SQL Server 2008 R2 and SQL Server 2008 Setup issues 
-  href: sql-server-2008-setup-issues.md
-- name: SQL Server 2012 Setup issues
-  href: sql-server-2012-setup-issues.md
 - name: SQL Server setup fails in DMZ
   href: cannot-install-sql-when-only-rodc-available.md
-- name: SxS install of X64 and X86 version of SSRS 2008
-  href: install-reporting-service.md
 - name: Troubleshoot common SQL Server Cumulative Update installation issues
   href: sqlserver-patching-issues.md
-- name: Update or Slipstream installation for SQL Server 2008
-  href: update-or-slipstream-installation.md
-- name: Upgrade failures on Windows Server 2012
-  href: error-upgrade-cluster-node.md
 - name: Visual C++ Redistributable installed with SQL Server alerts end of life or obsolete
   href: visual-c-redistributable-installed-sql-server-flagged-end-of-life-obsolete.md
 - name: Wait on the Database Engine recovery handle failed
@@ -79,3 +81,9 @@ items:
     href: sql-server-upgrade-failed-error-17182.md
   - name: SQL Server upgrade fails when principals own user objects
     href: sql-server-upgrade-failed-error-cert-principals-own-object.md
+- name: Support policy for hardware virtualization product
+  href: support-policy-hardware-virtualization-product.md
+- name: Support policy for SQL Server
+  href: support-policy-sql-server.md
+- name: SQL Server in Windows operating system
+  href: use-sql-server-in-windows.md

@@ -2,7 +2,7 @@
 title: Error when you use Configuration Manager
 description: This article helps you resolve the problem that occurs when you use SQL Server Configuration Manager to restart the SQL Server Agent service after changing the password for the service account.
 ms.date: 11/19/2020
-ms.custom: sap:Other tools
+ms.custom: sap:SQL Server Management, Query and Data Tools
 ---
 # Error when you use SQL Server Configuration Manager to restart the SQL Server Agent service in SQL Server
 

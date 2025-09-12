@@ -2,7 +2,7 @@
 title: Timeout issues when you deploy SQL CLR objects
 description: This article provides resolutions for the timeout issues that occur when deploying SQL CLR objects through Visual Studio.
 ms.date: 01/20/2021
-ms.custom: sap:Database Design and Development
+ms.custom: sap:Database or Client application Development
 ---
 
 # You may experience timeout issues when deploying SQL CLR objects through Visual Studio

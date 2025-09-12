@@ -4,7 +4,8 @@ description: Provides a resolution for an issue where a seller can't see the Mic
 ms.date: 08/22/2023
 ms.reviewer: asaftzuk, ilanak
 author: t-ronioded
-ms.author: t-ronioded
+ms.author: ronihemed
+ms.custom: sap:Teams Dialer
 ---
 # Teams dialer isn't visible in Dynamics 365 Sales
 

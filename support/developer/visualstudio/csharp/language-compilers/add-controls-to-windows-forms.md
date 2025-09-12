@@ -4,6 +4,7 @@ description: This article describes how to programmatically add controls to Wind
 ms.date: 04/17/2020
 ms.reviewer: DATBUI
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Use Visual C# to programmatically add controls to Windows forms at run time
 

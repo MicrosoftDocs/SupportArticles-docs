@@ -1,17 +1,16 @@
 ---
 title: Advanced troubleshooting for Windows start-up issues
 description: Learn advanced options for how to troubleshoot common Windows start-up issues, like system crashes and freezes.
-ms.date: 10/20/2022
-ms.prod: windows-client
+ms.date: 01/15/2025
 ms.topic: troubleshooting
-author: dansimp
-ms.author: dansimp
 audience: itpro
-localization_priority: medium
 manager: dcscontentpm
-ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-client-performance
+ms.reviewer: kaushika,dansimp
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 
 # Advanced troubleshooting for Windows start-up issues

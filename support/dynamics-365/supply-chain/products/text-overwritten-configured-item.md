@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: benebotg 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
+ms.custom: sap:Product information management
 --- 
 
 # Item text is overwritten when a product is configured on a sales order line

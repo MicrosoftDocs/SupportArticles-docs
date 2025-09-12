@@ -1,17 +1,16 @@
 ---
 title: VersionNT value for Windows 10 and Windows Server 2016
 description: Provides the VersionNT value for Windows 10 and Windows Server 2016.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:msi, csstroubleshoot
-ms.technology: windows-client-application-compatibility
+ms.custom:
+- sap:application technologies and compatibility\msi and msix
+- pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # VersionNT value for Windows 10, Windows Server 2016, and Windows Server 2019
 

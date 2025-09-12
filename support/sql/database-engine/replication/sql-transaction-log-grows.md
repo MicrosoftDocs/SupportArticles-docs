@@ -1,7 +1,8 @@
 ---
 title: SQL Transaction log grows continuously
 description: This article helps you resolve the problem where you notice continuous transaction log growth for a CDC enabled database.
-ms.date: 03/16/2020
+ms.date: 06/18/2025
+ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ---
 # SQL Transaction log grows when you use Change Data Capture for Oracle by Attunity
 
@@ -14,7 +15,8 @@ _Original KB number:_ &nbsp; 2871474
 
 Consider the following scenario:
 
-- You use Microsoft SQL Server 2017 on Windows, SQL Server 2016, 2014, or 2012 Change Data Capture for Oracle by Attunity.
+- You use SQL Server 2017, SQL Server 2016, SQL Server 2014, or SQL Server 2012 on Windows.
+- You use Change Data Capture for Oracle by Attunity.
 - You create a CDC instance to capture changes from Oracle database tables.
 - The change capture values are stored in SQL Server change capture databases.
 - The transaction log on the SQL Server database grows, and transactions aren't marked for truncation as data changes are captured.
@@ -36,10 +38,10 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 
 You may have a non-distributed LSN because CDC for Oracle uses CDC for SQL stored procedures, and that, in turn, uses the replication log reader. This non-distributed LSN corresponds to the log entries to add the mirrored table in the Attunity CDC database.
 
-If you run this query, the `log_reuse_wait_desc` option returns a value of `REPLICATION`, indicating the cause. Select the `log_reuse_wait_desc` name from `sys.databases`, where the name is <your_cdc_database>:
+If you run this query, the `log_reuse_wait_desc` option returns a value of `REPLICATION`, indicating the cause.
 
 ```sql
-REPLICATION <your_cdc_database>
+SELECT log_reuse_wait_desc FROM sys.databases WHERE name = '<your_cdc_database>'
 ```
 
 ## Resolution
@@ -47,12 +49,12 @@ REPLICATION <your_cdc_database>
 1. Run the following command in a query window that's connected to the CDC-enabled database in SQL Server:
 
     ```sql
-    exec sp_repltrans
+    EXEC sp_repltrans
     ```
 
     You should receive output that resembles the following:
 
-    ```console
+    ```output
     xdesid xact_seqno xact_seqno
     0x000000260000012C0001 0x0000002A000001B50001
     ```
@@ -72,28 +74,28 @@ REPLICATION <your_cdc_database>
 
     This returns output that resembles the following:
 
-    ```console
+    ```output
     No active open transactions.
     DBCC execution completed. If DBCC printed error messages, contact your system administrator.
     ```
 
-4. To make sure that the transaction log can be reused, confirm that there is no other reuse reason indicated on the database:
+4. To make sure that the transaction log can be reused, confirm that there's no other reuse reason indicated on the database:
   
     ```sql
-    select log_reuse_wait_desc, name from sys.databases where name = 'your_cdc_database'
+    SELECT log_reuse_wait_desc, NAME FROM sys.databases WHERE NAME = '<your_cdc_database>'
     ```
 
     This returns output that resembles the following:
 
-    ```console
+    ```output
     log_reuse_wait_desc name
-    NOTHING your_cdc_database
+    NOTHING <your_cdc_database>
     ```
 
 5. Now you should be able to truncate the Transaction log by using log backups. You should also be able to shrink the transaction log file to reduce the disk space that's consumed. For example, run the following:
 
     ```sql
-    BACKUP LOG your_cdc_database TO DISK='c:\folder\logbackup.trn'
+    BACKUP LOG <your_cdc_database> TO DISK='c:\folder\logbackup.trn'
     DBCC SHRINKFILE (yourcdcdatabase_log, 1024)
     ```
 
@@ -102,6 +104,6 @@ For more information, see [Manage the size of the transaction log file](/previou
 ## More information
 
 For more information, see
-[Troubleshoot CDC instance errors in Microsoft change data capture for Oracle by Attunity](https://social.technet.microsoft.com/wiki/contents/articles/7642.troubleshoot-cdc-instance-errors-in-microsoft-change-data-capture-for-oracle-by-attunity.aspx).
+[Troubleshoot CDC instance errors in Microsoft change data capture for Oracle by Attunity](/archive/technet-wiki/7642.troubleshoot-cdc-instance-errors-in-microsoft-change-data-capture-for-oracle-by-attunity).
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.

@@ -1,23 +1,21 @@
 ---
 title: Incorrect shutdown reason code
 description: Provides a resolution for the issue that an incorrect shutdown reason code written to SEL on user initiated shutdown.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:shutdown-is-slow-or-hangs, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\shutdown performance (slow,unresponsive)
+- pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # An incorrect shutdown reason code written to SEL on user initiated shutdown
 
 This article provides a resolution for the issue that an incorrect shutdown reason code written to SEL on user initiated shutdown.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2001061
 
 ## Symptoms

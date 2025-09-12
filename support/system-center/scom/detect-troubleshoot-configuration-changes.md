@@ -1,7 +1,7 @@
 ---
 title: Detect and troubleshoot frequent configuration changes
 description: Discusses how to detect and troubleshoot frequent configuration changes in System Center Operations Manager.
-ms.date: 07/06/2020
+ms.date: 04/15/2024
 ms.reviewer: rpesenko, vitalyf
 ---
 # Detect and troubleshoot frequent configuration changes in Operations Manager

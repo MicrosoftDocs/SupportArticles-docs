@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where you don't see all the ins
 ms.reviewer: nenellim
 ms.author: nahadda
 ms.date: 05/23/2023
+ms.custom: sap:Licensing, provisioning, and installation\Unable to install or provision Omnichannel solutions on my environment
 ---
 # Instance isn't available to select on the provisioning application
 

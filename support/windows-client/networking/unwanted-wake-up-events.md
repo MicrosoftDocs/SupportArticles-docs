@@ -1,17 +1,16 @@
 ---
 title: Unwanted wake-up events when you enable WOL
 description: Explains why unwanted wake-up events may occur when you enable WOL functionality in Windows 7 and in Windows Vista.
-ms.date: 10/13/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Unwanted wake-up events occur when you enable the Wake On LAN feature
 

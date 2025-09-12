@@ -1,21 +1,22 @@
 ---
 title: MDS entity-based staging may fail
-description: This article provides resolutions for the problem where MDS entity-based staging may fail when a duplicate Batch Tag value is used in SQL Server 2012.
-ms.date: 02/22/2021
+description: This article provides resolutions for the problem where MDS entity-based staging may fail when a duplicate Batch Tag value is used in SQL Server.
+ms.date: 05/09/2025
 ms.custom: sap:Master Data Services
+ms.reviewer: jopilov
 ---
-# MDS entity-based staging may fail when a duplicate Batch Tag value is used in SQL Server 2012
+# MDS entity-based staging may fail when a duplicate Batch Tag value is used in SQL Server
 
-This article helps you resolve the problem where Master Data Services (MDS) entity-based staging may fail when a duplicate Batch Tag value is used in SQL Server 2012.
+This article helps you resolve the problem where Master Data Services (MDS) entity-based staging may fail when a duplicate Batch Tag value is used in SQL Server.
 
-_Original product version:_ &nbsp; SQL Server 2012  
+_Original product version:_ &nbsp; SQL Server    
 _Original KB number:_ &nbsp; 2712547
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You use the Microsoft SQL Server 2012 MDS entity-based staging process to import data into MDS.
+- You use the Microsoft SQL Server MDS entity-based staging process to import data into MDS.
 
 - You populate various MDS staging tables (stg.name) with the staging data by using the `BatchTag` column to identify the batch.
 
@@ -56,7 +57,7 @@ This problem occurs because the MDS entity-based staging process checks the `Bat
 
 ## Resolution
 
-If your batch is stuck in Running status, stop the batch process, and then try to process the batch again. To stop the batch process, run the SQL statement: `Exec [mdm].[udpStagingBatchQueueActivate]` To resolve this problem, update the BatchTag value in the staging table for the records to a new name. Additionally, make sure that the `importstatus_ID` field is set to *0* for the records.
+If your batch is stuck in Running status, stop the batch process, and then try to process the batch again. To stop the batch process, run the SQL statement: `Exec [mdm].[udpStagingBatchQueueActivate]`. To resolve this problem, update the BatchTag value in the staging table for the records to a new name. Additionally, make sure that the `importstatus_ID` field is set to *0* for the records.
 
 ## More information
 

@@ -1,8 +1,9 @@
 ---
 title: Cumulative Update 2 for SQL Server 2019 (KB4536075)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 2 (KB4536075).
-ms.date: 06/30/2023
-ms.custom: KB4536075
+ms.date: 07/26/2024
+ms.update-cycle: 1095-days
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB4536075
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows
@@ -65,7 +66,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13323987">[13323987](#13323987)</a> | [FIX: Assertion error occurs when you use IDENT_CURRENT on view that has identity columns in SQL Server (KB4528250)](https://support.microsoft.com/help/4528250) | SQL Server Engine | In-Memory OLTP | Windows |
 | <a id="13234378">[13234378](#13234378)</a> | [Improvement: Module and offset information is sent as output for dumps in SQL Server 2019 (KB4538759)](https://support.microsoft.com/help/4538759) | SQL Server Engine | Linux | Linux |
 | <a id="13323991">[13323991](#13323991)</a> </br><a id="13324024">[13324024](#13324024)</a> | [FIX: UPDATE STATISTICS takes very long time to generate maintenance plan for large databases in SQL Server (KB4527229)](https://support.microsoft.com/help/4527229) | SQL Server Engine | Management Services | Windows |
-| <a id="13317221">[13317221](#13317221)</a> | [Improvement: Port additional two system tables in Tempdb Memory-Optimized Metadata feature in SQL Server 2019 (KB4537749)](https://support.microsoft.com/help/4537749) | SQL Server Engine | Metadata | All |
+| <a id="13317221">[13317221](#13317221)</a> | [Improvement: Add two system tables in the Memory-optimized TempDB metadata feature in SQL Server 2019 (KB4537749)](https://support.microsoft.com/help/4537749) | SQL Server Engine | Metadata | All |
 | <a id="13323218">[13323218](#13323218)</a> | [FIX: Error due to explicit transaction isolation level hint when accessing Memory-Optimized Tempdb catalog views in SQL Server 2019 (KB4537751)](https://support.microsoft.com/help/4537751) | SQL Server Engine | Metadata | Windows |
 | <a id="13250169">[13250169](#13250169)</a> | [FIX: Query on Clustered Columnstore Index in SQL Server 2019 uses more CPU time than in SQL Server 2016 (KB4540371)](https://support.microsoft.com/help/4540371) | SQL Server Engine | Methods to access stored data | Windows |
 | <a id="13324033">[13324033](#13324033)</a> | [FIX: You may receive incorrect object_id after you switch a partition in SQL Server 2017 and 2019 (KB4527916)](https://support.microsoft.com/help/4527916) | SQL Server Engine | Methods to access stored data | Windows |
@@ -126,7 +127,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 ## How to obtain or download this or the latest cumulative update package
 
 <details>
-<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
+<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
 
 The following update is available from the Microsoft Download Center:
 
@@ -140,7 +141,7 @@ The following update is available from the Microsoft Download Center:
 </details>
 
 <details>
-<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog </b></summary>
+<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog </b></summary>
 
 The following update is available from the Microsoft Update Catalog:
 
@@ -164,7 +165,7 @@ For installation instructions and direct links to the CU package downloads, see 
 </details>
 
 <details>
-<summary><b>How to obtain or download the latest cumulative update for Big Data Clusters (BDC)</b></summary>
+<summary><b>How to obtain or download the latest cumulative update for Big Data Clusters (BDC)</b></summary>
 
 To upgrade Microsoft SQL Server 2019 Big Data Clusters (BDC) on Linux to the latest CU, see the [Big Data Clusters Deployment Guidance](/sql/big-data-cluster/deployment-guidance).
 
@@ -179,7 +180,7 @@ For more information, see the [Big Data Clusters release notes](/sql/big-data-cl
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the *SQLServer2019-KB4536075-x64.exe* file by using the following command:
+You can verify the download by computing the hash of the *SQLServer2019-KB4536075-x64.exe* file by using the following command:
 
 `certutil -hashfile SQLServer2019-KB4536075-x64.exe SHA256`
 
@@ -692,8 +693,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -763,7 +764,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

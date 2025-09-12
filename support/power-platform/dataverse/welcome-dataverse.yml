@@ -1,0 +1,119 @@
+### YamlMime:Landing
+
+title: Microsoft Dataverse troubleshooting # < 60 chars
+summary: Welcome to Microsoft Dataverse troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Dataverse. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Dataverse troubleshooting
+  description: Landing page for Microsoft Dataverse troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: rahulmital #Required; your GitHub user alias, with correct capitalization.
+  ms.author: rahulmital #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/30/2025
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+# Card
+- title: Dynamics 365 App for Outlook
+  linkLists:
+    - linkListType: how-to-guide
+      links:        
+        - text: App for Outlook authentication pop-up is blank and unable to sign in
+          url: d365-app-outlook/dynamics-app-for-outlook-authentication-pop-up-blank-cannot-proceed.md
+        - text: Dynamics 365 App for Outlook doesn't appear within Outlook
+          url: d365-app-outlook/app-does-not-appear-within-outlook.md
+        - text: '"Something went wrong during sign-in" error when accessing'
+          url: d365-app-outlook/app-does-not-appear-within-outlook.md
+        - text: '"Track and Set Regarding are currently disabled" error'
+          url: d365-app-outlook/something-went-wrong-during-sign.md
+        - text: You don't have required privilege (prvReadOrganization) error
+          url: d365-app-outlook/dynamics-app-for-outlook-authentication-pop-up-blank-cannot-proceed.md
+
+# Card
+- title: Dataverse Web API and SDK
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Required fields are missing in Dataverse records
+          url: dataverse-web-api-and-sdk/dataverse-records-missing-required-fields.md
+        - text: Web API client errors
+          url: dataverse-web-api-and-sdk/web-api-client-errors.md
+
+# Card
+- title: Email and Exchange Synchronization
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: A Tracked to Dynamics 365 category is added to a user's mailbox
+          url: email-exchange-synchronization/tracked-to-dynamics-365-category-added.md
+        - text: 401 Unauthorized exception when using server-side synchronization
+          url: email-exchange-synchronization/exception-when-using-server-side-sync.md
+        - text: '"You are not part/member of organization; Account disabled; no instances found; Invalid User Authorization error"'
+          url: email-exchange-synchronization/error-when-signing-dynamics-365.md
+        - text: '"The account does not have permission to impersonate the requested user" error when selecting Test Connection'
+          url: email-exchange-synchronization/the-account-does-not-have-permission-to-impersonate-the-requested-user-error.md
+        - text: Troubleshoot and monitor server-side synchronization
+          url: email-exchange-synchronization/troubleshooting-monitoring-server-side-synchronization.md
+        - text: '"You cannot send email as the selected user" error when sending an email as another user'
+          url: email-exchange-synchronization/cannot-send-email-as-another-user.md
+
+# Card
+- title: Environment and app access
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Troubleshoot user access issues for different environments
+          url: environment-app-access/troubleshooting-user-needs-read-write-access-organization.md
+        - text: Troubleshoot missing environments
+          url: environment-app-access/troubleshoot-missing-environments.md   
+
+# Card
+- title: User permissions
+  linkLists:
+    - linkListType: how-to-guide
+      links:         
+        - text: Clean up inherited access
+          url: user-permissions/cleanup-inherited-access.md
+        - text: Dataverse client errors
+          url: user-permissions/client-errors.md
+
+# Card
+- title: Working with solutions
+  linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Concurrent solution operation failures
+          url: working-with-solutions/concurrent-solution-operation-failures.md
+        - text: Changes aren't effective after solution import
+          url: working-with-solutions/changes-not-effective-solution-import.md
+        - text: Error code 80040203 (Invalid Argument) error when importing a solution
+          url: working-with-solutions/error-code-80040203-invalid-argument-error.md
+        - text: Missing dependencies error during solution import
+          url: working-with-solutions/missing-dependency-on-solution-import.md
+        - text: Maximum row size exceeds the allowed maximum during solution import
+          url: working-with-solutions/maximum-row-size-exceeds.md
+        - text: Solution import or application installation failure due to missing privileges
+          url: working-with-solutions/install-failure-priviledge-not-assigned.md
+        - text: '"The import of solution failed" error'
+          url: working-with-solutions/the-import-of-solution-failed-error-when-importing-solution.md
+
+
+# Card
+- title: Documentation and training
+  linkLists:
+    - linkListType: reference
+      links:
+        - text: Microsoft Dataverse documentation
+          url: /power-apps/maker/data-platform/data-platform-intro
+        - text: Microsoft Dataverse training
+          url: /training/paths/get-started-cds/
+
+# Card
+- title: Support Resources
+  linkLists:
+    - linkListType: reference
+      links:
+        - text: Microsoft Dataverse Community forum
+          url: https://powerusers.microsoft.com/t5/Microsoft-Dataverse/bd-p/CDS_Apps

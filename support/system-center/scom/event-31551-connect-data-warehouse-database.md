@@ -1,7 +1,7 @@
 ---
 title: Event 31551 when connecting to the data warehouse database
 description: Fixes an issue that triggers event ID 31551 in a Systems Center Operations Manager environment.
-ms.date: 07/06/2020
+ms.date: 04/15/2024
 ms.reviewer: irfanr
 ---
 # Event 31551 when management server tries to connect to the data warehouse database

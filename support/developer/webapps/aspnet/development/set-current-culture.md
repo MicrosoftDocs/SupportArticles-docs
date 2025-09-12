@@ -2,7 +2,7 @@
 title: Set current culture programmatically in ASP.NET
 description: This article describes that how to change the current culture and CurrentUICulture in an ASP.NET application.
 ms.date: 04/07/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ms.reviewer: cissyh
 ms.topic: how-to
 ---

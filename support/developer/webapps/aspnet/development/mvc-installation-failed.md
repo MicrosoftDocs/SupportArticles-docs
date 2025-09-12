@@ -2,7 +2,7 @@
 title: MVC 3 installation fails
 description: This article describes the problem that a fatal error occurs when you install ASP.NET MVC 3 or ASP.NET Web pages.
 ms.date: 04/07/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ---
 # Installation of ASP.NET MVC 3 or ASP.NET Web pages fails with a fatal error
 

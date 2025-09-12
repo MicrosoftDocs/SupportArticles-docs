@@ -1,15 +1,17 @@
 ---
 title: Virtual machine LUNs disappear after you configure them as MPIO devices
 description: When you use discrete device assignment to connect a LUN to a virtual machine, you cannot use that LUN as an MPIO device
-ms.date: 03/04/2022
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.technology: hyper-v
 keywords: DDA,passthrough,pass-through,LUN,MPIO
+ms.custom:
+- sap:virtualization and hyper-v\storage configuration
+- pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Virtual machine LUNs disappear after you configure them as MPIO devices

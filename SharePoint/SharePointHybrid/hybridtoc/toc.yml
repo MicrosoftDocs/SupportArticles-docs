@@ -1,0 +1,31 @@
+- name: SharePoint hybrid deployment troubleshooting
+  href: ../sharepoint-hybrid-welcome.yml
+  items:
+  - name: InfoPath
+    items:
+    - name: SoapServerException when use InfoPath designer
+      href: ../infopath/soapserverexception-when-customizing-list-form-using-InfoPath-designer.md
+  - name: Search
+    items:
+    - name: Hybrid search fails to crawl or return results
+      href: ../search/hybrid-search-failures.md
+    - name: Online content isn't displayed in on-premises search
+      href: ../search/online-content-not-displayed-in-on-premises-search.md
+    - name: On-premises content isn't displayed in online search
+      href: ../search/on-premises-content-not-displayed-in-online-search.md
+  - name: Workflows
+    items:
+    - name: Can't set "Hyperlink with formatting and constraints for publishing"
+      href: ../Workflows/fails-setting-workflow-column-value.md
+    - name: Completed tasks aren't deleted for workflows
+      href: ../Workflows/fails-deleting-completed-workflow-tasks.md
+    - name: Documents can't be opened in SharePoint Online
+      href: ../Workflows/workflow-platform-created-document-fails-open.md
+    - name: Online workflow doesn't complete
+      href: ../Workflows/workflow-status-suspended.md
+    - name: Online workflow takes a long time to finish
+      href: ../Workflows/workflow-takes-longer.md
+    - name: 'Status issue with "Collect Feedback in SharePoint 2010" workflow'
+      href: ../Workflows/workflow-reports-retrying-status.md
+    - name: Workflows aren't available for IRM policies
+      href: ../Workflows/irm-policies-fails-sharepoint-workflows-visible.md

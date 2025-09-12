@@ -1,0 +1,12 @@
+{
+  "redirections": [
+    {
+      "source_path": "Exchange/ExchangeOnline/mobile-devices/outlook-app-access-end-after-june-1-if-ews-app-policies-not-set-correctly.md",
+      "redirect_url": "/previous-versions/troubleshoot/exchange/exchangeonline/outlook-app-access-end-after-june-1-if-ews-app-policies-not-set-correctly"
+    },
+    {
+      "source_path": "Exchange/ExchangeOnline/outlook-on-the-web-issues/archive-mailbox-not-visible.md",
+      "redirect_url": "/troubleshoot/outlook/profiles-and-accounts/archive-mailbox-not-visible"
+    }
+  ]
+}

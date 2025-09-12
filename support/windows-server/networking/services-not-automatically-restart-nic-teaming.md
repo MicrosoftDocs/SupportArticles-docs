@@ -1,23 +1,22 @@
 ---
 title: Services do not automatically restart on a computer that uses NIC Teaming
 description: Resolves a problem in which services do not automatically restart on a computer that uses NIC Teaming.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, jiesun, janotay, v-jesits
-ms.custom: sap:windows-nic-teaming-load-balance-failover, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\network load balancing (nlb)
+- pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Services do not automatically start after reboot of a computer that uses NIC teaming
 
 This article helps to resolves a problem in which services do not automatically restart on a computer that uses NIC Teaming.
 
-_Applies to:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2022  
 _Original KB number:_ &nbsp; 4552864
 
 ## Symptoms

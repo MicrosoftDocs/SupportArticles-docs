@@ -1,17 +1,16 @@
 ---
 title: Replicated Cluster Shared Volumes are offline after Azure Stack HCI upgrade
 description: Provides methods to start the StorageReplica service after an Azure Stack hyperconverged infrastructure (HCI) upgrade.
-ms.date: 12/20/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-abhjoa, katpa
-ms.custom: sap:storage-hardware, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom:
+- sap:backup,recovery,disk,and storage\storage hardware
+- pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Replicated Cluster Shared Volumes are offline after an Azure Stack HCI upgrade
 

@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot software update synchronization
 description: Helps diagnose and resolve some common issues with software update synchronization in Configuration Manager.
-ms.date: 05/25/2020
-ms.custom: sap:Software update point synchronization
+ms.date: 02/11/2025
+ms.custom: sap:Software Update Management (SUM)\Software Update Synchronization
 ms.reviewer: kaushika
 ---
 # Troubleshoot software update synchronization in Configuration Manager

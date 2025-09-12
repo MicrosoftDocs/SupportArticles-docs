@@ -2,7 +2,7 @@
 title: When a catch-weight quantity is split, minimum quantity is used instead of nominal quantity
 description: Introduces a by-design behavior where the Pick qty field uses the minimum quantity that is set for the item when a catch-weight quantity is being split into batches.
 author: sherry-zheng
-ms.date: 04/11/2021
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: WMSPickingRegistration
 audience: Application User
@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: chuzheng
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+ms.custom: sap:Inventory management\Issues with catch weight
 ---
 # When a catch-weight quantity is split, minimum quantity is used instead of nominal quantity
 

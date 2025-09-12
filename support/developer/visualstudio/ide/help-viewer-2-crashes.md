@@ -2,6 +2,7 @@
 title: Visual Studio 2012 Help Viewer 2.0 crashes
 description: This article provides a resolution to resolve the crash problem when you launch Help Viewer 2.0 in Visual Studio 2012.
 ms.date: 05/12/2022
+ms.custom: sap:Integrated Development Environment (IDE)\Other
 ---
 
 # Visual Studio 2012 Help Viewer 2.0 crashes

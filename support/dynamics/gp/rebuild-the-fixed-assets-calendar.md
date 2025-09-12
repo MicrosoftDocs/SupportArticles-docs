@@ -1,9 +1,10 @@
 ---
 title: Rebuild the Fixed Assets calendar
 description: Describes how to rebuild the Fixed Assets calendar in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 04/17/2025
+ms.custom: sap:Financial - Fixed Assets
 ---
 # How to rebuild the Fixed Assets calendar in Microsoft Dynamics GP
 

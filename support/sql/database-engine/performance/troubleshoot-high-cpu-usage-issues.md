@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot high-CPU-usage issues in SQL Server
 description: This article provides a procedure to help you fix high-CPU-usage issues on a server that is running SQL Server.
-ms.date: 03/02/2022
-ms.custom: sap:Performance
+ms.date: 06/09/2025
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
-ms.reviewer: jopilov, v-jayaramanp
+ms.reviewer: jopilov, v-jayaramanp, v-sidong
 author: prmadhes-msft
 ms.author: prmadhes
 ---
@@ -34,28 +34,32 @@ Use one of the following tools to check whether the SQL Server process is actual
   
 - You can use the following PowerShell script to collect the counter data over a 60-second span:
 
-    ```powershell
-    $serverName = $env:COMPUTERNAME
-    $Counters = @(
-        ("\\$serverName" + "\Process(sqlservr*)\% User Time"), ("\\$serverName" + "\Process(sqlservr*)\% Privileged Time")
-    )
-    Get-Counter -Counter $Counters -MaxSamples 30 | ForEach {
-        $_.CounterSamples | ForEach {
-            [pscustomobject]@{
-                TimeStamp = $_.TimeStamp
-                Path = $_.Path
-                Value = ([Math]::Round($_.CookedValue, 3))
-            }
-            Start-Sleep -s 2
-        }
-    }
-    ```
+  ```powershell
+  $serverName = $env:COMPUTERNAME
+  $Counters = @(
+      ("\\$serverName" + "\Process(sqlservr*)\% User Time"), ("\\$serverName" + "\Process(sqlservr*)\% Privileged Time")
+  )
+  Get-Counter -Counter $Counters -MaxSamples 30 | ForEach {
+      $_.CounterSamples | ForEach {
+          [pscustomobject]@{
+              TimeStamp = $_.TimeStamp
+              Path = $_.Path
+              Value = ([Math]::Round($_.CookedValue, 3))
+          }
+          Start-Sleep -s 2
+      }
+  }
+  ```
 
-If `% User Time` is consistently greater than 90 percent (% User Time is the sum of processor time on each processor, its maximum value is 100% * (no of CPUs)), the SQL Server process is causing high CPU usage. However, if `% Privileged time` is consistently greater than 90 percent, your antivirus software, other drivers, or another OS component on the computer is contributing to high CPU usage. You should work with your system administrator to analyze the root cause of this behavior.
+  If `% User Time` is consistently greater than 90 percent (% User Time is the sum of processor time on each processor, its maximum value is 100% * (no of CPUs)), the SQL Server process is causing high CPU usage. However, if `% Privileged time` is consistently greater than 90 percent, your antivirus software, other drivers, or another OS component on the computer is contributing to high CPU usage. You should work with your system administrator to analyze the root cause of this behavior.
+
+- [Performance Dashboard](/sql/relational-databases/performance/performance-dashboard): In SQL Server Management Studio, right click **\<SQLServerInstance\>** and select **Reports** > **Standard Reports** > **Performance Dashboard**.
+
+  The dashboard illustrates a graph titled **System CPU Utilization** with a bar chart. The darker color indicates the SQL Server engine CPU utilization, while the lighter color represents the overall operating system CPU utilization (see the legend on the graph for reference). Select the circular refresh button or <kbd>F5</kbd> to see the updated utilization.
 
 ## Step 2: Identify queries contributing to CPU usage
 
-If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common reason is SQL Server queries that perform table or index scans, followed by sort, hash operations and loops (nested loop operator or WHILE (T-SQL)). To get an idea of how much CPU the queries are currently using, out of overall CPU capacity, run the following statement:
+If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common reason is SQL Server queries that perform table or index scans, followed by sort and hash operations and loops (nested loop operator or WHILE (T-SQL)). To get an idea of how much CPU the queries are currently using, out of overall CPU capacity, run the following statement:
 
 ```sql
 DECLARE @init_sum_cpu_time int,
@@ -102,7 +106,7 @@ If SQL Server is still using excessive CPU capacity, go to the next step.
 
 ## Step 7: Disable heavy tracing
 
-Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects the performance of SQL Server and causes high CPU usage. For example, using the following events may cause high CPU usage if you trace heavy SQL Server activity:
+Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects the performance of SQL Server and causes high CPU usage. For example, using the following events might cause high CPU usage if you trace heavy SQL Server activity:
 
 - Query plan XML events (`query_plan_profile`, `query_post_compilation_showplan`, `query_post_execution_plan_profile`, `query_post_execution_showplan`, `query_pre_execution_showplan`)
 - Statement-level events (`sql_statement_completed`, `sql_statement_starting`, `sp_statement_starting`, `sp_statement_completed`)
@@ -176,22 +180,38 @@ ON evt.event_name = xemap.xe_event_name
 GO
 ```
 
-## Step 8: Fix SOS_CACHESTORE spinlock contention
+## Step 8: Fix high CPU usage caused by spinlock contention
 
-If your SQL Server instance experiences heavy `SOS_CACHESTORE` spinlock contention or you notice that your query plans are often removed on unplanned query workloads, review the following article and enable trace flag `T174` by using the `DBCC TRACEON (174, -1)` command:
+To solve common high CPU usage caused by spinlock contention, see the following sections.
+
+### SOS_CACHESTORE spinlock contention
+
+If your SQL Server instance experiences heavy `SOS_CACHESTORE` spinlock contention or you notice that your query plans are often removed on unplanned query workloads, see the following article and enable trace flag `T174` by using the `DBCC TRACEON (174, -1)` command:
 
 [FIX: SOS_CACHESTORE spinlock contention on ad hoc SQL Server plan cache causes high CPU usage in SQL Server](https://support.microsoft.com/topic/kb3026083-fix-sos-cachestore-spinlock-contention-on-ad-hoc-sql-server-plan-cache-causes-high-cpu-usage-in-sql-server-798ca4a5-3813-a3d2-f9c4-89eb1128fe68).
 
 If the high-CPU condition is resolved by using `T174`, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server Configuration Manager.
 
-> [!NOTE]
-> High CPU may result from spinlock contention on many other spinlock types, but `SOS_CACHESTORE` is a commonly-reported one. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention)
+### Random high CPU usage due to SOS_BLOCKALLOCPARTIALLIST spinlock contention on large-memory machines
 
-## Step 9: Configure your virtual machine
+If your SQL Server instance experiences random high CPU usage due to `SOS_BLOCKALLOCPARTIALLIST` spinlock contention, we recommend that you apply [Cumulative Update 21 for SQL Server 2019](../../releases/sqlserver-2019/cumulativeupdate21.md). For more information on how to solve the issue, see bug reference [2410400](../../releases/sqlserver-2019/cumulativeupdate21.md#2410400) and [DBCC DROPCLEANBUFFERS](/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql) that provides temporary mitigation.
+
+### High CPU usage due to spinlock contention on XVB_list on high-end machines
+
+If your SQL Server instance experiences a high CPU scenario caused by spinlock contention on the `XVB_LIST` spinlock on high configuration machines (high-end systems with a large number of newer generation processors (CPUs)), enable the trace flag [TF8102](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8102) together with [TF8101](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8101).
+
+> [!NOTE]
+> High CPU usage may result from spinlock contention on many other spinlock types. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention).
+
+## Step 9: Check your power plan settings at the OS level
+
+SQL Server workloads may experience reduced performance and cause high CPU on the system when Windows is configured with the default **Balanced** power plan. The **Balanced** power plan setting might lower the CPU clock speed to conserve energy. For example, a processor rated at 3.00 GHz may throttle down to 1.2 GHz. As a result, workloads that typically consume around 30% CPU may reach 100% utilization due to the reduced clock speed. To maintain consistent and optimal performance for compute-intensive SQL Server workloads, we recommend that you configure the system to use the **High Performance** power plan. This setting ensures the CPU operates at its full rated speed, helping to avoid performance bottlenecks. For more information, see [Slow performance on Windows Server when using the Balanced power plan](../../../windows-server/performance/slow-performance-when-using-power-plan.md).  
+
+## Step 10: Configure your virtual machine
 
 If you're using a virtual machine, ensure that you aren't overprovisioning CPUs and that they're configured correctly. For more information, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003#CPU%20constraints).
 
-## Step 10: Scale up system to use more CPUs
+## Step 11: Scale up system to use more CPUs
 
 If individual query instances are using little CPU capacity, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs. Use the following query to find the number of queries that have exceeded a certain threshold of average and maximum CPU consumption per execution and have run many times on the system (make sure that you modify the values of the two variables to match your environment):
 

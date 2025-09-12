@@ -1,7 +1,7 @@
 ---
 title: Agents can't find the primary management server
 description: Fixes an issue in which Operations Manager agents can't find the primary management server, and events 20012 and 2000 are logged.
-ms.date: 07/13/2020
+ms.date: 04/15/2024
 ms.custom: sap:System Center Operations Manager
 ms.reviewer: 
 ---

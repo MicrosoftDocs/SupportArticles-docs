@@ -1,23 +1,21 @@
 ---
 title: error WSAENOBUFS (10055)
 description: Describes how to resolve a problem that returns an error when you try to set up a connection on a TCP port greater than 5000.
-ms.date: 09/27/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, dsmith
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
+ms.custom:
+- sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
+- pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 #  You receive the error 'WSAENOBUFS (10055)' when you try to connect from TCP ports greater than 5000
 
 This article helps to fix the error 'WSAENOBUFS (10055)' when you try to connect from TCP ports greater than 5000.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 196271
 
 ## Symptoms

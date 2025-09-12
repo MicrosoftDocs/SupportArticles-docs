@@ -1,8 +1,9 @@
 ---
 title: SMS Agent Host service isn’t automatically restarted
 description: Describes a problem in which the CcmExec.exe service is not automatically restarted after the WMI service is paused and restarted.
-ms.date: 05/25/2020
+ms.date: 02/11/2025
 ms.reviewer: kaushika, ErinWi, prakask, keiththo, brshaw
+ms.custom: sap:Client Operations\CcmExec Service crashes or does not start
 ---
 # The CcmExec.exe service is not automatically restarted after the WMI service is paused and restarted
 

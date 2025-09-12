@@ -1,9 +1,9 @@
 ---
 title: How to regenerate ribbon metadata
 description: Describes how to start the regeneration ribbon metadata operation and check the status.
-ms.reviewer: krgoldie, srihas
-ms.topic: troubleshooting
-ms.date: 05/19/2021
+ms.reviewer: krgoldie, srihas, tahoon
+ms.date: 09/25/2023
+ms.custom: sap:Configuring model-driven app commands\Command is not shown or hidden as expected
 ---
 # How to regenerate ribbon metadata
 
@@ -50,4 +50,8 @@ In **Ribbon Metadata Generation Operations** view, a **RibbonMetadataGeneration*
 
 :::image type="content" source="media/regenerate-ribbon-metadata/ribbon-metadata-generation-status.png" alt-text="Screenshot of the RibbonMetadataGeneration operation status." lightbox="media/regenerate-ribbon-metadata/ribbon-metadata-generation-status.png":::
 
-After the **RibbonMetadataGeneration** operation is completed successfully, clear your browser cache, and then reopen your application to check for the issue again. If the issue isn't resolved, you can follow the steps that are provided in [ribbon troubleshoot guidelines](ribbon-issues.md#identify-the-issue) for additional mitigation information.
+After the **RibbonMetadataGeneration** operation is completed successfully, clear your browser cache, and then reopen your application to check for the issue again. If the issue isn't resolved, you can follow the steps that are provided in [ribbon troubleshoot guidelines](ribbon-issues.md) for additional mitigation information.
+
+## Reference
+
+[Command checker for model-driven app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)

@@ -1,7 +1,7 @@
 ---
 title: Use diagnostic tracing
 description: Describes the tools that you can use to obtain trace logs in System Center Operations Manager and in System Center Essentials. A Microsoft CSS representative uses these trace logs to perform advanced troubleshooting.
-ms.date: 09/02/2020
+ms.date: 04/15/2024
 ms.reviewer: cliveea, v-jomcc
 ---
 # Use diagnostic tracing in System Center Operations Manager and in System Center Essentials

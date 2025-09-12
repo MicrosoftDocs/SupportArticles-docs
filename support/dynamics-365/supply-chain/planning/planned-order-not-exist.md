@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: benebotg
 ms.search.validFrom: 2021-12-07
 ms.dyn365.ops.version: 10.0.24
+ms.custom: sap:Master planning
 ---
 
 # The system can't find a planned order during operations on multiple orders

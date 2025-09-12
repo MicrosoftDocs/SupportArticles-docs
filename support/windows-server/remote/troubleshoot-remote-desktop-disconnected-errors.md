@@ -1,29 +1,25 @@
 ---
 title: Troubleshoot Remote desktop disconnected errors
 description: Provides troubleshooting information for Remote desktop disconnected errors.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 03/26/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
-ms.reviewer: kaushika
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.technology: windows-server-rds
+ms.reviewer: kaushika, warrenw, linquantang
+ms.custom:
+- sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
+- pcy:WinComm User Experience
 adobe-target: true
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "aartigoyle" for triage before making the further changes to the screenshots.
 --->
 
 # Troubleshoot Remote desktop disconnected errors
 
 This article helps you understand the most common settings that are used to establish a Remote Desktop session in an enterprise environment, and provides troubleshooting information for Remote desktop disconnected errors.
-
-_Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 2477176
 
 > [!NOTE]
 > This article is intended for use by support agents and IT professionals.
@@ -90,7 +86,19 @@ Remote Desktop Services clients are repeatedly denied access to the Remote Deskt
     > Because of a security error, the client could not connect to the Terminal server. After making sure that you are logged on to the network, try connecting to the server again.  
     > Remote desktop disconnected. Because of a security error, the client could not connect to the remote computer. Verify that you are logged onto the network and then try connecting again.
 
-Additionally, the following event ID messages may be logged in Event Viewer on the Remote Desktop server.
+Additionally, check the following Event Viewer paths:
+
+On the RD Session Host server:
+
+- **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **RemoteApp and Desktop Connections**
+- **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **TerminalServices-LocalSessionManager**
+- **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **TerminalServices-RemoteSessionManager**
+
+On the RD license server:
+
+**Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **TerminalServices-Licensing**
+
+The following event ID messages may be logged:
 
 - Event message 1  
 
@@ -134,7 +142,7 @@ Additionally, the following event ID messages may be logged in Event Viewer on t
 
 ## Resolution for Symptom 1
 
-To resolve this problem, use the following methods, as appropriate.
+To resolve this problem, follow these steps depending on your operating system version.
 
 ### Verify Remote Desktop is enabled
 
@@ -190,6 +198,8 @@ You can use the following procedure to add users and groups to the Remote Deskto
 Membership in the local Administrators group, or equivalent, on the RD Session Host server that you plan to configure, is the minimum required to complete this procedure.
 
 #### Add users and groups to the Remote Desktop Users group by using the Remote tab
+
+Follow these steps depending on your operating system version:
 
 1. Start the System tool. To do this, click Start, click Control Panel, click the **System** icon, and then click **OK**.
 
@@ -263,7 +273,7 @@ To change the port that is assigned to RDP, follow these steps:
 
 3. Locate and then click the following registry subkey:
 
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Remote Desktop server\WinStations`
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations`
 
 RDP-TCP is the default connection name. To change the port for a specific connection on the Remote Desktop server, select the connection under the **WinStations** key:
 
@@ -404,7 +414,7 @@ To resolve this problem, back up and then remove the **X509 Certificate** regist
 
 4. On the **Registry** menu, click **Export Registry File**.
 
-5. Type exported- Certificate in the **File name** box, and then click **Save*.
+5. Type `exported- Certificate` in the **File name** box, and then click **Save**.
 
     > [!NOTE]
     > If you have to restore this registry subkey in the future, double-click the Exported-parameters.reg file that you saved in this step.

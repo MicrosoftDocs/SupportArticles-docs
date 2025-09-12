@@ -1,17 +1,16 @@
 ---
 title: Use the at command to schedule tasks
 description: Describes how to use the at command to create and to cancel scheduled tasks.
-ms.date: 09/25/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:task-scheduler, csstroubleshoot
-ms.technology: windows-client-system-management-components
+ms.custom:
+- sap:system management components\task scheduler
+- pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Use the at command to schedule tasks
 

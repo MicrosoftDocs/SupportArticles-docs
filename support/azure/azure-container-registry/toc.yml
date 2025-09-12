@@ -1,0 +1,37 @@
+items:
+- name: Welcome
+  href: welcome-container-registry.yml
+
+- name: Authentication and Security
+  items:
+  - name: Troubleshoot container registry authentication errors
+    href: acr-authentication-errors.md
+
+- name: Troubleshoot container registry issues
+  items:
+  - name: Can't get private IP address of an Azure Container Registry FQDN
+    href: cant-resolve-container-registry-fqdn-private-ip-address.md
+  - name: Troubleshoot delete operation issues
+    href: delete-operation-issues.md
+  - name: Find image vulnerability scanning results
+    href: image-vulnerability-assessment.md
+
+- name: Troubleshoot pull issues
+  href: troubleshoot-issues-pull-container-registry.md
+  items:
+  - name: '"Authentication required" error'
+    href: authentication-required.md
+  - name: '"Client with IP address is not allowed access" error'
+    href: client-ip-address-not-allowed-access.md
+  - name: '"Context deadline exceeded" error'
+    href: context-deadline-exceeded.md
+  - name: '"I/O time-out" error'
+    href: download-failed-443-io-time-out.md
+  - name: '"Manifest tag is not found" error'
+    href: manifest-tag-not-found.md
+  - name: Fail to pull images to Azure Web App
+    href: pull-image-to-web-app-fail.md
+  - name: '"Request canceled while waiting for connection" error'
+    href: request-canceled-waiting-connection-timeout-exceeded.md
+- name: Troubleshoot push issues
+  href: troubleshoot-push-error-operation-disallowed-timeout.md

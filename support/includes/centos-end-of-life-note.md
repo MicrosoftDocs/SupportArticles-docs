@@ -1,0 +1,2 @@
+> [!NOTE]
+> CentOS referenced in this article is a Linux distribution and will reach End Of Life (EOL). Consider your use and plan accordingly. For more information, see [CentOS End Of Life guidance](/azure/virtual-machines/workloads/centos/centos-end-of-life).

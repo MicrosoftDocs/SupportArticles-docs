@@ -1,16 +1,13 @@
 ---
 title: High Availability overview
 description: Overview of High Availability troubleshooting articles for Windows clients.
-ms.date: 11/09/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-client-high-availability
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # High Availability troubleshooting documentation for Windows clients
 

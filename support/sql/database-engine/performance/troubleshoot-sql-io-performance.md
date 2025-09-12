@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot slow SQL Server performance caused by I/O issues
 description: Provides a methodology to isolate and troubleshoot SQL performance problems caused by slow disk I/O.
-ms.date: 09/28/2022
-ms.custom: sap:Performance
+ms.date: 01/10/2025
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 author: PijoCoder 
 ms.author: jopilov
-ms.reviewer: v-jayaramanp
+ms.reviewer: v-jayaramanp, jopilov
 ---
 
 # Troubleshoot slow SQL Server performance caused by I/O issues
@@ -40,7 +40,7 @@ You can choose one of following two options to resolve the problem:
 
 ### Option 1: Execute the steps directly in a notebook via Azure Data Studio
 
-[!INCLUDE [Install Azure Data Studio note](../../../includes/install-azure-data-studio-note.md)]
+[!INCLUDE [Install Azure Data Studio note](../../../includes/azure/install-azure-data-studio-note.md)]
 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting-SQL-Slow-IO.ipynb)
@@ -216,7 +216,8 @@ $_.CounterSamples | ForEach-Object       {
 If the I/O subsystem is overwhelmed beyond capacity, find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then work with the Application Development teams or application vendor to:
 
 - Tune queries, for example: better indexes, update statistics, rewrite queries, and redesign the database.
-- Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) or add more RAM on the system. More RAM will cache more data or index pages without frequently re-reading from disk, which will reduce I/O activity.
+- Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) or add more RAM on the system. More RAM will cache more data or index pages without frequently re-reading from disk, which will reduce I/O activity. Increased memory can also reduce `Lazy Writes/sec`, which are driven by Lazy Writer flushes when there's a frequent need to store more database pages in the limited memory available.
+- If you find that page writes are the source of heavy I/O activity, examine `Buffer Manager: Checkpoint pages/sec` to see if it's due to massive page flushes required to meet recovery interval configuration demands. You can either use [Indirect checkpoints](/sql/relational-databases/logs/database-checkpoints-sql-server#IndirectChkpt) to even out I/O over time, or increase hardware I/O throughput.
 
 ## Causes
 
@@ -268,7 +269,7 @@ Common reasons for long waits on `WRITELOG` are:
 
 - **Too many VLFs**: Too many virtual log files (VLFs) can cause `WRITELOG` waits. Too many VLFs can cause other types of issues, such as long recovery.
 
-- **Too many small transactions**: While large transactions can lead to blocking, too many small transactions can lead to another set of issues. If you don't explicitly begin a transaction, any insert, delete, or update will result in a transaction (we call this auto transaction). If you do 1,000 inserts in a loop, there will be 1,000 transactions generated. Each transaction in this example needs to commit, which results in a transaction log flush and 1,000 transaction flushes. When possible, group individual update, delete, or insert into a bigger transaction to reduce transaction log flushes and [increase performance](/troubleshoot/sql/admin/logging-data-storage-algorithms#increasing-performance). This operation can lead to fewer `WRITELOG` waits.
+- **Too many small transactions**: While large transactions can lead to blocking, too many small transactions can lead to another set of issues. If you don't explicitly begin a transaction, any insert, delete, or update will result in a transaction (we call this auto transaction). If you do 1,000 inserts in a loop, there will be 1,000 transactions generated. Each transaction in this example needs to commit, which results in a transaction log flush and 1,000 transaction flushes. When possible, group individual update, delete, or insert into a bigger transaction to reduce transaction log flushes and [increase performance](../database-file-operations/logging-data-storage-algorithms.md#increasing-performance). This operation can lead to fewer `WRITELOG` waits.
 
 - **Scheduling issues cause Log Writer threads to not get scheduled fast enough**: Prior to SQL Server 2016, a single Log Writer thread performed all log writes. If there were issues with thread scheduling (for example, high CPU), both the Log Writer thread and log flushes could get delayed. In SQL Server 2016, up to four Log Writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019, up to eight Log Writer threads were added, which improves throughput even more. Also, in SQL Server 2019, each regular worker thread can do log writes directly instead of posting to the Log writer thread. With these improvements, `WRITELOG` waits would rarely be triggered by scheduling issues.
 

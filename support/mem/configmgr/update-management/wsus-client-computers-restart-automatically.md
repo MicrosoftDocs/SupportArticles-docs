@@ -1,8 +1,9 @@
 ---
 title: WSUS client computers restart automatically without any notification when updates are installed on the client computers
 description: Describes the issue in which Windows Server Update Services (WSUS) client computers restart automatically without any notification when updates are installed on the client computers. A resolution is provided.
-ms.date: 10/10/2020
+ms.date: 02/11/2025
 ms.reviewer: kaushika
+ms.custom: sap:Software Update Management (SUM)\Unexpected Restarts
 ---
 # WSUS client computers restart automatically without any notification when updates are installed on the client computers
 

@@ -1,16 +1,13 @@
 ---
 title: Shell Experience overview
 description: Overview of Shell Experience troubleshooting articles for Windows Server.
-ms.date: 06/17/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-server-shell-experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Shell Experience troubleshooting documentation for Windows Server
 
@@ -26,4 +23,5 @@ The topics in this section provide solutions and scenario guides to help you tro
 - File Explorer/Windows Explorer
 - Lock Screen or Screensaver
 - Remote Assistance
+- Start Menu
 - Windows Media Player

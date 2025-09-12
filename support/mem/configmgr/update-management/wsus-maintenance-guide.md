@@ -1,8 +1,8 @@
 ---
 title: Windows Server Update Services (WSUS) maintenance guide for Configuration Manager
 description: Describes the complete guide to WSUS maintenance for Configuration Manager environments.
-ms.date: 12/21/2020
-ms.custom: sap:Software update point configuration
+ms.date: 02/11/2025
+ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ms.reviewer: kaushika, mstewart, erice
 ---
 # The complete guide to WSUS and Configuration Manager SUP maintenance
@@ -17,6 +17,8 @@ _Original KB number:_ &nbsp; 4490644
 Questions are often along the lines of **How should I properly run this maintenance in a Configuration Manager environment**, or **How often should I run this maintenance**. It's not uncommon for conscientious Configuration Manager administrators to be unaware that WSUS maintenance should be run at all. Most of us just set up WSUS servers because it's a prerequisite for a software update point (SUP). Once the SUP is set up, we close the WSUS console and pretend it doesn't exist. Unfortunately, it can be problematic for Configuration Manager clients, and the overall performance of the WSUS/SUP server.
 
 With the understanding that this maintenance needs to be done, you're wondering what maintenance you need to do and how often you need to be doing it. The answer is that you should perform monthly maintenance. Maintenance is easy and doesn't take long for WSUS servers that have been well maintained from the start. However, if it has been some time since WSUS maintenance was done, the cleanup may be more difficult or time consuming the first time. It will be much easier or faster in subsequent months.
+
+For more information on concise steps and automatic scripts, see [Manual and automatic WSUS database maintenance](wsus-automatic-maintenance.md).
 
 ## Maintain WSUS while supporting Configuration Manager current branch version 1906 and later versions
 
@@ -185,7 +187,10 @@ If updates are not configured to be immediately expired in Configuration Manager
 
 :::image type="content" source="media/wsus-maintenance-guide/month-setting.png" alt-text="Screenshot of the months to expire superseded updates.":::
 
-The following command lines illustrate the various ways that the PowerShell script can be run (if the script is being run on the WSUS server, `LOCALHOST` can be used in place of the actual `SERVERNAME`):
+The following command lines illustrate the various ways that the PowerShell script can be run:
+
+> [!NOTE]
+> When you run the script on the WSUS server, use `LOCALHOST` instead of the actual `SERVERNAME`.
 
 ```powershell
 Decline-SupersededUpdatesWithExclusionPeriod.ps1 -UpdateServer SERVERNAME -Port 8530 –SkipDecline
@@ -372,10 +377,13 @@ Needed/helpful links:
 
 ### WSUS cleanup script
 
+> [!NOTE]
+> When you run the script on the WSUS server, use `LOCALHOST` instead of the actual `SERVERNAME`. Additionally, replace `PORT` with the used one.
+
 ```powershell
 [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration")`
  | out-null
-$wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
+$wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer("SERVERNAME",$true,PORT);
 $cleanupScope = new-object Microsoft.UpdateServices.Administration.CleanupScope;
 $cleanupScope.DeclineSupersededUpdates = $true
 $cleanupScope.DeclineExpiredUpdates = $true
@@ -400,9 +408,12 @@ The [Weekend Scripter](https://blogs.technet.com/b/heyscriptingguy/archive/2012/
 
 2. Under the **Actions** tab, add a new action and specify the program/script you want to run. In this case, we need to use PowerShell and point it to the PS1 file we want it to run. You can use the [WSUS Cleanup script](#wsus-cleanup-script). This script performs cleanup options that Configuration Manager current branch version 1906 doesn't do. You can uncomment them if you are using standalone WSUS or an older version of Configuration Manager. If you would like a log, you can modify the last line of the script as follows:
 
+    > [!NOTE]
+    > When you run the script on the WSUS server, use `LOCALHOST` instead of the actual `SERVERNAME`. Additionally, replace `PORT` with the used one.
+
     ```powershell
     [reflection.assembly]::LoadWithPartialName("Microsoft.UpdateServices.Administration") | out-null
-    $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer();
+    $wsus = [Microsoft.UpdateServices.Administration.AdminProxy]::GetUpdateServer("SERVERNAME",$true,PORT);
     $cleanupScope = new-object Microsoft.UpdateServices.Administration.CleanupScope;
     # $cleanupScope.DeclineSupersededUpdates = $true # Performed by CM1906
     # $cleanupScope.DeclineExpiredUpdates    = $true # Performed by CM1906
@@ -506,4 +517,4 @@ The answer is that you probably could, but I wouldn't. If my coworker across the
 For more information about SUP maintenance in Configuration Manager, see the following articles:
 
 - [Software updates maintenance](/mem/configmgr/sum/deploy-use/software-updates-maintenance)
-- [Software updates maintenance in Configuration Manager](/troubleshoot/mem/configmgr/software-update-maintenance)
+- [Software updates maintenance in Configuration Manager](software-update-maintenance.md)

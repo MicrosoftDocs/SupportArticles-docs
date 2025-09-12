@@ -1,7 +1,7 @@
 ---
 title: ACS reports return no more than 42 days of data
 description: Fixes an issue in which Audit Collection Services reports return no more than 42 days of data in System Center Operations Manager.
-ms.date: 07/13/2020
+ms.date: 04/15/2024
 ---
 # System Center Operations Manager ACS reports return no more than 42 days of data
 

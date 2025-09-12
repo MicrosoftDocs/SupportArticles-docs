@@ -1,18 +1,17 @@
 ---
 title: Generate a kernel or complete crash dump
 description: Learn how to generate a kernel or complete crash dump, and then use the output to troubleshoot several issues.
-ms.date: 08/23/2022
-ms.prod: windows-client
+ms.date: 06/17/2025
 ms.topic: troubleshooting
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 ms.collection: highpri
-ms.technology: windows-client-performance
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.reviewer: willchen
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
+ms.reviewer: willchen, chcart
 audience: itpro
-localization_priority: medium
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Generate a kernel or complete crash dump
 
@@ -35,7 +34,7 @@ To enable memory dump setting, follow these steps:
 1. In **Control Panel**, select **System and Security** > **System**.
 2. Select **Advanced system settings**, and then select the **Advanced** tab.
 3. In the **Startup and Recovery** area, select **Settings**.
-4. Make sure that **Kernel memory dump** or **Complete memory dump** is selected under **Writing Debugging Information**.
+4. Make sure that **Kernel memory dump**, **Active memory dump**, **Automatic memory dump**, or **Complete memory dump** is selected under **Writing Debugging Information**.
 5. Restart the computer.
 
 > [!NOTE]
@@ -61,7 +60,8 @@ If you can sign in while the problem is occurring, you can use the Microsoft Sys
 3. At the command line, run the following command:
 
    ```console
-   notMyfault.exe /crash
+   notmyfaultc64.exe /getdumptype = full
+   notmyfaultc64.exe /crash 0x01
    ```
 
 > [!NOTE]

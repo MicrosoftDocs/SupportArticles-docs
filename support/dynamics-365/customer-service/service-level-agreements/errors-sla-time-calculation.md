@@ -4,6 +4,7 @@ description: Provides a resolution for the SLA custom time calculation errors in
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 05/23/2023
+ms.custom: sap:Service Level Agreements\SLA time calculation not behaving as expected
 ---
 # Errors occur when setting up or using custom time calculation for SLA
 

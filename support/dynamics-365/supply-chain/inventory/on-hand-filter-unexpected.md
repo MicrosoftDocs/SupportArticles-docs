@@ -2,7 +2,7 @@
 title: The filter pane on the On-hand list page doesn't work as expected
 description: Provides a resolution for the issue that filters in the filter pane on the On-hand list page don't filter results as expected.
 author: sherry-zheng
-ms.date: 05/31/2021
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: 
 audience: Application User
@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: chuzheng
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.16
+ms.custom: sap:Inventory management
 ---
 
 # The filter pane on the On-hand list page doesn't work as expected

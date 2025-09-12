@@ -1,17 +1,16 @@
 ---
 title: Move Event Viewer log files to another location
 description: Describes how to move Event Viewer log files to another location on the hard disk.
-ms.date: 07/22/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, jwojan
-ms.custom: sap:event-system, csstroubleshoot
-ms.technology: windows-server-application-compatibility
+ms.custom:
+- sap:system management components\winrm,including event forwarding and collections
+- pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to move Event Viewer log files to another location
 
@@ -72,6 +71,7 @@ Create a folder where you want to store the event logs in your local drive and a
     > [!NOTE]
     > To create subfolders for the logs, check the **Replace all child object permission entries with inheritable permissions entries from this object** option. The permissions set at the parent level are applied to all subfolders and files.
 
+
 5. Adjust permissions so that the folder is assigned the correct permissions and check the **Applies to** column. These permissions should be the same as the advanced permissions of the default folder (*%SystemRoot%\\System32\\winevt\\Logs*) that stores the Event Viewer logs. Make sure that the **Authenticated Users** only have **Read** permission for **This folder and subfolders**.
 
     :::image type="content" source="media/move-event-viewer-log-files/advanced-security-settings-logs.png" alt-text="Screenshot of the Advanced Security Settings for Logs window.":::
@@ -111,7 +111,7 @@ It is possible to utilize Powershell for this purpose. In the sample, *Security*
 
 ```powershell
 $originalFolder = "$env:SystemRoot\system32\winevt\Logs"
-$targetFolder = "C:\logs\"
+$targetFolder = "C:\logs"
 $logName = "Security"
 
 $originalAcl = Get-Acl -Path $originalFolder -Audit -AllCentralAccessPolicies

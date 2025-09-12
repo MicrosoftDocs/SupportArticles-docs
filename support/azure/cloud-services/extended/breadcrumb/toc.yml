@@ -1,0 +1,17 @@
+- name: Docs
+  tocHref: /
+  topicHref: /index
+  items:
+
+  - name: Troubleshoot
+    tocHref: /azure/
+    topicHref: /troubleshoot/index
+    items:
+
+    - name: Azure
+      tocHref: /azure/
+      topicHref: /troubleshoot/azure/index
+      items:
+      - name: Cloud Services (extended support)
+        tocHref: /troubleshoot/azure/virtual-machines/
+        topicHref: /troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended

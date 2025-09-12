@@ -3,6 +3,7 @@ title: Work with code-behind class files
 description: This article describes how to develop .aspx pages that use code-behind class files in Microsoft ASP.NET applications.
 ms.date: 07/28/2020
 ms.topic: how-to
+ms.custom: sap:General Development
 ---
 # Use Visual C# .NET to work with code-behind class files in an ASP.NET application
 
@@ -186,4 +187,4 @@ If your code-behind class files will be compiled on demand instead of precompile
 
 - For more information about general Web Forms syntax, see [Web Forms Syntax](/previous-versions/dotnet/netframework-1.1/fy30at8h(v=vs.71)).
 
-- For more information, see [ASP.NET Code-behind model overview](/troubleshoot/aspnet/code-behind-model).
+- For more information, see [ASP.NET Code-behind model overview](code-behind-model.md).

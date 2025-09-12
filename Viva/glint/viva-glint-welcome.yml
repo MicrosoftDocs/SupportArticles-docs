@@ -1,0 +1,25 @@
+### YamlMime:Landing
+
+title: Viva Glint troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Viva Glint. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Viva Glint troubleshooting
+  description: Documentation for troubleshooting common issues with Viva Glint.
+  ms.service: viva
+  ms.topic: landing-page
+  author: Cloud-Writer
+  ms.author: meerak
+  ms.date: 08/25/2023
+  hideEdit: true
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Documentation
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Overview of Viva Glint
+            url: /viva/glint/introduction-viva-glint

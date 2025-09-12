@@ -1,18 +1,17 @@
 ---
 title: Event ID 10016 is logged in Windows
 description: Describes an issue in which DCOM event ID 10016 is logged in Windows. Provides a resolution.
-ms.date: 11/30/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: high
 ms.reviewer: kaushika, hikono
-ms.custom: sap:dcom-service-startup-and-permissions, csstroubleshoot
-ms.technology: windows-client-application-compatibility
+ms.custom:
+- sap:application technologies and compatibility\dcom service startup and permissions
+- pcy:WinComm User Experience
 adobe-target: true
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # DCOM event ID 10016 is logged in Windows
 

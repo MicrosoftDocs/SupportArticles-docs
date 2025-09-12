@@ -1,7 +1,7 @@
 ---
 title: Can't access OpsMgr AppAdvisor
 description: Discusses that you cannot access the System Center Operations Manager Application Advisor website when you use Kerberos authentication.
-ms.date: 07/13/2020
+ms.date: 04/15/2024
 ---
 # Can't access the System Center Operations Manager AppAdvisor website when using Kerberos authentication
 

@@ -1,13 +1,13 @@
 ---
 title: An Orchestrator runbook isn't created
 description: Describes an issue in which an Orchestrator runbook isn't created when a Service Manager service request passes an unsupported character.
-ms.date: 08/04/2020
+ms.date: 06/26/2024
 ---
 # An Orchestrator runbook isn't created when users submit a Service Manager service request form
 
 This article helps you fix an issue where an Orchestrator runbook isn't created when a Service Manager service request passes an unsupported character.
 
-_Original product version:_ &nbsp; System Center 2016 Orchestrator, Microsoft System Center 2012 R2 Orchestrator, Microsoft System Center 2012 Orchestrator, System Center 2016 Service Manager, System Center 2012 R2 Service Manager, System Center 2012 Service Manager  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2993719
 
 ## Symptoms

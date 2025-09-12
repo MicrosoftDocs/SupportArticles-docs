@@ -1,0 +1,8 @@
+{
+  "redirections": [
+    {
+      "source_path": "Teams/teams-rooms-and-devices/mtr-device-cannot-fetch-calendar.md",
+      "redirect_url": "/previous-versions/troubleshoot/content-retirement"
+     }    
+  ]
+}

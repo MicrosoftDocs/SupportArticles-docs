@@ -4,7 +4,8 @@ description: Provides a resolution for an issue where a seller can't hear custom
 ms.date: 08/22/2023
 ms.reviewer: asaftzuk, ilanak
 author: t-ronioded
-ms.author: t-ronioded
+ms.author: ronihemed
+ms.custom: sap:Teams Dialer
 ---
 # A seller can't hear customers in a call
 

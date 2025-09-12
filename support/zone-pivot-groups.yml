@@ -1,0 +1,13 @@
+### YamlMime:ZonePivotGroups
+groups:
+#Owner: kaushika
+- id: rdp-windows-server-versions
+  title: Windows version
+  prompt: Choose a Windows version
+  pivots:
+  - id: windows-server-pre-2012
+    title: Windows Server 2003, Windows Server 2008, Windows Server 2008 R2
+  - id: windows-server-2012
+    title: Windows Server 2012 or Windows Server 2012 R2
+  - id: windows-11-or-server-2025
+    title: Windows 11 or Windows Server 2025

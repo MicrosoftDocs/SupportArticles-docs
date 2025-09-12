@@ -1,13 +1,13 @@
 ---
 title: Error 0x80004005 starting OpalisActionService
 description: Fix an issue where you receive Error 0x80004005 Unspecified Error when trying to start the OpalisActionService service.
-ms.date: 08/03/2020
+ms.date: 06/26/2024
 ---
 # Error 0x80004005: Unspecified Error when starting the OpalisActionService service
 
 This article helps fix an issue where you receive the **Error 0x80004005: Unspecified Error** error message when you try to start the OpalisActionService service.
 
-_Original product version:_ &nbsp; System Center Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2023357
 
 ## Symptoms

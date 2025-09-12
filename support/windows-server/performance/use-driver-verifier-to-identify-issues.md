@@ -1,23 +1,22 @@
 ---
 title: Use Driver Verifier to identify issues
 description: This article introduces how to use Driver Verifier to identify issues.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 03/04/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-server-performance
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Using Driver Verifier to identify issues with Windows drivers for advanced users
 
 The Driver Verifier tool is included in every version of Windows since Windows 2000. It's used to detect and troubleshoot many driver issues that are known to cause system corruption, failures, or other unpredictable behavior. This article describes how to use Driver Verifier to isolate and troubleshoot a driver in the system.
 
-_Applies to:_ &nbsp; Windows Server 2012 Foundation, Windows Server 2012 Essentials, Windows Server 2012 Standard, Windows Server 2012 Datacenter  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019, Windows Server 2022, Windows Server 2025  
 _Original KB number:_ &nbsp; 244617
 
 ## Driver Verifier capabilities

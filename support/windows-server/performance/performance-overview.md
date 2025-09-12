@@ -1,16 +1,13 @@
 ---
 title: Performance overview
 description: Overview of Windows Server performance troubleshooting articles.
-ms.date: 06/17/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-server-performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Windows Server performance troubleshooting documentation
 

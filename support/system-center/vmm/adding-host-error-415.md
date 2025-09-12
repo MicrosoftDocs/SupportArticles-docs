@@ -1,8 +1,8 @@
 ---
 title: Error 415 adding hosts to SCVMM
 description: Fixes an issue in which you can't add hosts to System Center 2012 Virtual Machine Manager Service Pack 1 and receive error 415.
-ms.date: 04/26/2020
-ms.reviewer: dewitth, markstan
+ms.date: 04/09/2024
+ms.reviewer: wenca, dewitth, markstan
 ---
 # Adding a Host to System Center 2012 Virtual Machine Manager SP1 fails with error 415
 

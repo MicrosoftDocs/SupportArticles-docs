@@ -1,10 +1,8 @@
 ---
 title: IIS ETW logs diagnostic
 description: This article describes the information that may be collected from a machine when running the IIS logs diagnostic.
-ms.date: 04/07/2020
-ms.custom: sap:Health, diagnostic, and performance features
-ms.topic: article
-ms.technology: iis-health-diagnostic-performance
+ms.date: 05/21/2025
+ms.custom: sap:Health, Diagnostic, and Performance Features\IIS ETW tracing providers
 ---
 # IIS ETW logs diagnostic
 
@@ -58,7 +56,7 @@ This IIS ETW logs diagnostic collects various related logs, event logs, and allo
   
 ## More information
 
-If the user selects to collect an IIS/HTTP ETW log, the IIS ETW logs diagnostic will enable an IIS ETW Trace named _IIS ETW SDP Trace_. The diagnostic will automatically stop this trace when the user is clicks **next** while the trace is running. If the user clicks **Cancel**, they should stop the trace with the following command from an Administrative command prompt:
+If the user selects to collect an IIS/HTTP ETW log, the IIS ETW logs diagnostic will enable an IIS ETW Trace named _IIS ETW SDP Trace_. The diagnostic will automatically stop this trace when the user selects **next** while the trace is running. If the user selects **Cancel**, they should stop the trace with the following command from an Administrative command prompt:
 
 ``` console
 LogMan.exe stop "IIS ETW SDP Trace" -ets

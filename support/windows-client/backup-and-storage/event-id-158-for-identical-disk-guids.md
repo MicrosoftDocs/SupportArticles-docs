@@ -1,17 +1,16 @@
 ---
 title: Event ID 158 for identical disk GUIDs
 description: Discusses that Event ID 158 is logged if identical disk GUIDs are found. Provides a resolution.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, aarthit, toklima
-ms.custom: sap:storage-hardware, csstroubleshoot
-ms.technology: windows-client-backup-and-storage
+ms.custom:
+- sap:backup,recovery,disk,and storage\storage hardware
+- pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Event ID 158 is logged for identical disk GUIDs
 

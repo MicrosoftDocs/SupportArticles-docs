@@ -1,0 +1,16 @@
+items:
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+  - name: Troubleshoot
+    tocHref: /troubleshoot/
+    topicHref: /troubleshoot/index
+    items:
+    - name: Windows
+      tocHref: /troubleshoot/windows/
+      topicHref: /troubleshoot/windows/index
+      items:
+      - name: Windows 365
+        tocHref: /troubleshoot/windows-365/
+        topicHref: /troubleshoot/windows-365/welcome-windows-365

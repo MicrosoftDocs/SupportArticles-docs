@@ -2,7 +2,7 @@
 title: Use C++ to write entries to an event log
 description: Describes how to add your own entries to the event log of the operating system by using the Microsoft .NET Framework.
 ms.date: 04/22/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C++
 ms.topic: how-to
 ---
 # Write entries to an event log by using Visual C++  

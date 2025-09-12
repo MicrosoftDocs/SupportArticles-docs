@@ -1,11 +1,10 @@
 ---
 title: New functionality in MS DTC service
 description: This article describes security-related changes to the Distributed Transaction Coordinator service.
-ms.date: 03/16/2020
-ms.custom: sap:Distributed transactions
-ms.topic: article
-ms.technology: windows-dev-apps-distributed-transactions
+ms.date: 06/11/2025
+ms.custom: sap:Distributed Transactions\DTC programming and runtime
 ---
+
 # New functionality in the Distributed Transaction Coordinator service in Windows
 
 This article describes some Windows security-related updates and changes, and how they affect the Microsoft Distributed Transaction Coordinator (MS DTC) service.

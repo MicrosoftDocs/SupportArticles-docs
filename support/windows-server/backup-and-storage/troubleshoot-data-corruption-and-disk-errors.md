@@ -1,17 +1,18 @@
 ---
 title: Guidance for troubleshooting data corruption and disk errors
 description: Provides guidance to help troubleshoot data corruption and disk errors in Windows.
-ms.date: 05/10/2022
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom:
+- sap:backup,recovery,disk,and storage\data corruption and disk errors
+- pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Data corruption and disk errors troubleshooting guidance
 

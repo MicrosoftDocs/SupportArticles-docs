@@ -2,7 +2,7 @@
 title: Use extended or SP_OA stored procedure to load CLR
 description: Loading CLR by using extended stored procedures or `sp_OA` stored procedures is not supported.
 ms.date: 09/25/2020
-ms.custom: sap:Database Design and Development
+ms.custom: sap:Database or Client application Development
 ---
 
 # Using extended stored procedures or SP_OA stored procedures to load CLR in SQL Server is not supported

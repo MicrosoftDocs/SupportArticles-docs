@@ -1,8 +1,9 @@
 ---
 title: Overall introduction of content distribution
 description: Helps administrators understand content distribution and builds a foundation for diagnosing and resolving related problems in Configuration Manager.
-ms.date: 03/30/2020
+ms.date: 02/11/2025
 ms.reviewer: kaushika
+ms.custom: sap:Content Management\Distribution Point Installation, Upgrade or Configuration
 ---
 # Content distribution in Configuration Manager
 

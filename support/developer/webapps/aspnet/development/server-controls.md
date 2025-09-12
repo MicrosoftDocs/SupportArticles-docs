@@ -2,8 +2,8 @@
 title: ASP.NET server controls overview
 description: This article describes the information of the ASP.NET server controls.
 ms.date: 04/02/2020
-ms.custom: sap:Development
-ms.topic: article
+ms.custom: sap:General Development
+ms.topic: concept-article
 ---
 # ASP.NET server controls overview
 

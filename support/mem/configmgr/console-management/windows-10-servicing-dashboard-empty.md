@@ -1,10 +1,11 @@
 ---
 title: No data in the Windows 10 servicing dashboard
 description: After you upgrade to Configuration Manager version 2103, no data appears in the Windows 10 servicing dashboard.
-author: helenclu
+author: Cloud-Writer
 ms.author: vinpa
 ms.reviewer: kaushika, vinpa
-ms.date: 04/14/2021
+ms.date: 02/11/2025
+ms.custom: sap:Software Update Management (SUM)\Feature Updates
 ---
 # The Windows 10 servicing dashboard shows no data
 

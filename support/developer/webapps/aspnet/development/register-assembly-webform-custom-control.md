@@ -2,7 +2,7 @@
 title: Register assembly to use custom control
 description: This article explains how to register an assembly in a WebForm to use a custom control.
 ms.date: 03/25/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ms.reviewer: pattim
 ms.topic: how-to
 ---

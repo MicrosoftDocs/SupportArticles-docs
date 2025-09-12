@@ -2,7 +2,7 @@
 title: Add a user to the local system
 description: This article describes how to use the DirectoryServices namespace to add a user to the local system and a group in Visual C#.
 ms.date: 10/12/2020
-ms.custom: sap:Language or Compilers
+ms.custom: sap:Language or Compilers\C#
 ms.topic: how-to
 ---
 # Add a user to the local system by using directory services and Visual C sharp

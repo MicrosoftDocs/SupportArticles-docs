@@ -1,17 +1,16 @@
 ---
 title: How to remove a cached copy of an unpublished package in Microsoft App-V v5
 description: This article describes the behavior of the APP-V client for unpublishing and explains how to remove (delete) a previously published package from the APP-V client.
-ms.date: 12/04/2020
-author: Deland-Han
-ms.author: delhan 
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, gautama
-ms.custom: sap:package-conversion, csstroubleshoot
-ms.technology: windows-client-application-virtualization-app-v
+ms.custom:
+- sap:application virtualization\sequencing\package conversion
+- pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to remove a cached copy of an unpublished package in Microsoft App-V v5
 

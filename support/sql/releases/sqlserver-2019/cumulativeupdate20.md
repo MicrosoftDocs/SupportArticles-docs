@@ -1,8 +1,9 @@
 ---
 title: Cumulative update 20 for SQL Server 2019 (KB5024276)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 20 (KB5024276).
-ms.date: 06/30/2023
-ms.custom: KB5024276
+ms.date: 05/30/2025
+ms.update-cycle: 1095-days
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5024276
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows
@@ -25,13 +26,7 @@ This article describes Cumulative Update package 20 (CU20) for Microsoft SQL Ser
 
 ### Issue one
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the `SESSION` is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
-
-- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
-
-- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
-
-Microsoft is working on a fix for this issue and it will be available in a future CU.
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ### Issue two
 
@@ -46,6 +41,8 @@ If you try to create a new external table, you receive the following error messa
 > Object reference not set to an instance of an object.
 
 To work around this issue, you can uninstall this cumulative update or add the `Driver` keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
+
+This issue is fixed in [SQL Server 2019 CU21](cumulativeupdate21.md#2312800).
 
 ### Issue three
 
@@ -76,6 +73,8 @@ If you have applied this cumulative update to one or more secondary replicas and
 > [!NOTE]
 > Trace flag 12324 impacts only the Managed Instance Link feature and is only used to activate the changes in SQL Server 2019 CU20.
 
+This issue is fixed in [SQL Server 2019 CU22](cumulativeupdate22.md#2460204).
+
 ## Improvements and fixes included in this update
 
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2022, SQL Server 2019, and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
@@ -101,7 +100,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2204764">[2204764](#2204764)</a> | Fixes access violations and `INVALID_POINTER_READ_c0000005_sqlmin.dll!CProfileList::FGetPartitionSummaryXML` exceptions that you may encounter during the execution of `sys.dm_exec_query_plan_stats`. | SQL Server Engine | Query Execution | Windows |
 | <a id="2275387">[2275387](#2275387)</a> | Fixes an assertion failure (Location: bpctxt.cpp:129; Expression: 'm_cCreated < m_cMaxBatches') that you encounter when running window queries that have aggregate functions in batch mode. | SQL Server Engine | Query Execution | All |
 | <a id="2292999">[2292999](#2292999)</a> | Fixes an issue where running the `ALTER ASSEMBLY` command for a complex common language runtime (CLR) assembly can cause some of the other commands that are executed in parallel to time out. | SQL Server Engine | Query Execution | All |
-| <a id="2112485">[2112485](#2112485)</a> | Fixes an issue where the cardinality estimation (CE) uniformly increases after each `LEFT JOIN` or `RIGHT JOIN` combines, which causes overestimation. This fix adds a limitation to the CE when the join predicates are the primary keys of the tables that are involved. | SQL Server Engine | Query Optimizer | Windows |
+| <a id="2112485">[2112485](#2112485)</a> | Fixes an issue where the cardinality estimation (CE) uniformly increases after each `LEFT JOIN` or `RIGHT JOIN` combines, which causes overestimation. This fix adds a limitation to the CE when the join predicates are the primary keys of the tables that are involved. </br></br>**Note**: Trace flag 9440 will turn off the functionality provided by this fix for databases with a compatibility level of 160 and earlier. | SQL Server Engine | Query Optimizer | All |
 | <a id="2161795">[2161795](#2161795)</a> | Fixes an assertion failure (Location: purecall.cpp:51; Expression: !"purecall") that you encounter after you cancel a user-defined stored procedure that is still running. | SQL Server Engine | Query Optimizer | All |
 | <a id="2216357">[2216357](#2216357)</a> | Produces consistent results for statements that perform multiple updates to a variable when the query optimization hotfixes are enabled, such as `SELECT @sum = @sum + c FROM t`. | SQL Server Engine | Query Optimizer | All |
 | <a id="2264977">[2264977](#2264977)</a> | Fixes an issue that's caused by automatic parameterization of queries where interleaved execution of multi-statement table-valued functions (MSTVFs) may return incorrect results or cause a deadlock on the first execution. | SQL Server Engine | Query Optimizer | All |
@@ -996,8 +995,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -1067,7 +1066,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

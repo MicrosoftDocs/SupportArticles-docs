@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: benebotg
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
+ms.custom: sap:Master planning
 ---
 
 # You can't filter master planning items by their related coverage group values

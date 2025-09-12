@@ -1,17 +1,16 @@
 ---
 title: Windows startup hangs after you exclude UWF from Microsoft Defender
 description: Discusses how to work around an issue in which Windows doesn't start after you exclude the UWF feature from Microsoft Defender.
-ms.date: 04/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: koaiiot, kaushika
-ms.technology: windows-client-performance
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Windows doesn't start after you exclude UWF from Microsoft Defender
 

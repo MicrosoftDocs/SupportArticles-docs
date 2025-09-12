@@ -2,7 +2,7 @@
 title: Fail to run a large batch of SQL statements
 description: This article provides workarounds for the problem that occurs when you execute a large batch of SQL statements that returns multiple result sets.
 ms.date: 07/14/2023
-ms.custom: sap:MDAC and ADO
+ms.custom: sap:Database Connectivity and Authentication
 ms.reviewer: jopilov
 ---
 # SQL Server doesn't finish execution of a large batch of SQL statements

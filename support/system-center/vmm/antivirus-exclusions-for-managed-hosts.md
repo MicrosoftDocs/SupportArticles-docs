@@ -1,7 +1,8 @@
 ---
 title: Antivirus exclusions for VMM and managed hosts
 description: Describes recommended antivirus exclusions for Virtual Machine Manager and managed hosts.
-ms.date: 07/09/2020
+ms.date: 04/09/2024
+ms.reviewer: wenca
 ---
 # Recommended antivirus exclusions for System Center Virtual Machine Manager and managed hosts
 

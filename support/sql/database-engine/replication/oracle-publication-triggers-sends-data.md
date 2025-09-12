@@ -2,7 +2,7 @@
 title: Oracle publication triggers send data
 description: This article provides a workaround for the problem that occurs when use transactional replication with an Oracle Publisher and column filtering.
 ms.date: 11/10/2020
-ms.custom: sap:Replication, change tracking, change data capture
+ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ---
 # Oracle publication triggers send data for non-published columns when replicating with Microsoft SQL Server
 

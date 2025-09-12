@@ -2,7 +2,7 @@
 title: SQL Server upgrade fails and returns error 6528
 description: Troubleshoots error 6528 that occurs when you install a cumulative update or service pack for SQL Server. The error occurs when database upgrade scripts are run.
 ms.date: 08/11/2023
-ms.custom: sap:Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall
 ms.reviewer: v-sidong
 author: prmadhes-msft
 ms.author: prmadhes

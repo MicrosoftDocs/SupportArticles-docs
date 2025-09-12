@@ -1,17 +1,16 @@
 ---
 title: Folder Redirection fails with the error ERROR_SEM_TIMEOUT or the semaphore timeout period has expired
 description: Helps fix an ERROR_SEM_TIMEOUT error that occurs when you find out the Folder Redirection policy isn't working on the client machine.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, tonnyp
-ms.custom: sap:folder-redirection, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.custom:
+- sap:user logon and profiles\enterprise state roaming (esr) and folder redirection
+- pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Folder Redirection fails with the error ERROR_SEM_TIMEOUT or the semaphore timeout period has expired
 

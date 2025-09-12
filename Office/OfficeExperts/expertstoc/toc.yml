@@ -1,0 +1,91 @@
+﻿- name: Office Experts
+  href: ../office-experts-welcome.yml
+  items:
+  - name: Activation
+    items:
+    - name: Activate Office 2010 KMS host through phone
+      href: ../activation/activate-office-2010-kms-host-via-phone-activation.md
+    - name: Discover Office and Windows KMS hosts
+      href: ../activation/discover-remove-unauthorized-office-windows-kms-hosts.md
+    - name: Reset activation state for Microsoft 365 Apps for enterprise
+      href: ../activation/reset-office-365-proplus-activation-state.md
+  - name: Administration
+    items:
+    - name: 0xC004F038 computer couldn't be activated in KMS
+      href: ../administration/0xc004f038-computer-not-activate.md
+    - name: Can't open file from recently used document list
+      href: ../administration/cant-open-files-most-recently-used-list.md
+    - name: Determine build version of Online Server
+      href: ../administration/how-to-determine-build-version-of-office-online-server.md
+    - name: Errors when accessing documents in Online Server
+      href: ../administration/errors-when-access-documents-in-office-online-server.md
+    - name: Issue with Office viewers or Office Web Apps
+      href: ../administration/office-viewers-or-web-apps-shows-this-page-cannot-be-displayed.md
+    - name: Issue with using guest links to Excel Online workbook
+      href: ../administration/workbook-contains-external-data-connections.md
+    - name: Manage the First Run screens for Office 2013
+      href: ../administration/manage-office-2013-first-run-screens.md
+    - name: Office Online limitations and features with IRM
+      href: ../administration/office-online-limitations-and-features-with-information-rights-management.md
+    - name: Office Web Apps 2013 and VMware
+      href: ../administration/office-web-apps-and-vmware.md
+    - name: Online Server authentication configuration
+      href: ../administration/configuration-for-office-online-server-authentication-with-external-users.md
+    - name: Rebuild an Office Web Apps 2013 farm
+      href: ../administration/rebuild-an-office-web-apps-2013-farm-easily.md
+    - name: Test viewing Office documents
+      href: ../administration/test-viewing-documents-by-using-office-online-server-viewer.md
+    - name: Use custom fonts with Online Server
+      href: ../administration/use-custom-fonts-with-office-online-server.md
+  - name: Authentication
+    items:
+  - name: Diagnostic Logs
+    items:
+    - name: Enable Microsoft 365 Apps for enterprise ULS logging
+      href: ../diagnostic-logs/how-to-enable-office-365-proplus-uls-logging.md
+  - name: Excel
+    items:
+    - name: '"Cannot access directory" error in Excel 2016'
+      href: ../excel/cannot-access-directory-error-in-excel-2016.md
+    - name: '"Request Was Taking Too Long" in Excel Online'
+      href: ../excel/request-too-long-opening-excel-workbook.md
+    - name: '"The workbook is currently open by 256 users" error when opening an Excel workbook from SharePoint or OneDrive'
+      href: ../excel/workbook-currently-open-by-256-users-error.md
+    - name: Can't refresh data connections in Excel Online
+      href: ../excel/excel-online-external-users-cannot-refresh-data-connections.md
+    - name: Create An Excel add-in to Calculate Body Mass Index
+      href: ../excel/create-add-in-to-calculate-bmi.md
+    - name: Issue when refresh Project Online data in Excel Online
+      href: ../excel/excel-online-refresh-fails-project-online-using-timebyday.md
+    - name: Refresh SQL Azure database data in Excel Online
+      href: ../excel/excel-online-refreshing-data-to-a-sql-azure-database.md
+    - name: Rename Excel Sheet with Cell Contents by Using Macro
+      href: ../excel/use-macro-rename-sheet.md
+  - name: Installation
+    items:
+    - name: Automate the update uninstallation for Office
+      href: ../installation/automate-uninstall-office-update.md
+    - name: Install a second KMS host for Office
+      href: ../installation/guidance-on-installing-a-second-kms-host-for-office.md
+    - name: Office installation failures
+      href: ../installation/troubleshooting-office-installation-failures.md
+  - name: Microsoft Forms
+    items:
+    - name: Forms response columns are out of order
+      href: ../microsoft-forms/forms-response-columns-out-of-order.md
+    - name: No email notification for response to Group Forms
+      href: ../microsoft-forms/no-email-notifications-for-responses-to-group-forms.md
+  - name: PowerPivot
+    items:
+    - name: PowerPivot data model not refresh
+      href: ../powerpivot/powerpivot-data-model-does-not-refresh.md
+  - name: Project
+    items:
+    - name: Issue when refresh Project Online data in Excel Online
+      href: ../excel/excel-online-refresh-fails-project-online-using-timebyday.md
+  - name: Sway
+    items:
+  - name: Word
+    items:
+    - name: Force Word documents open in edit mode from email link
+      href: ../word/force-word-document-to-open-in-edit-mode.md

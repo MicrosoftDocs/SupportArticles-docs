@@ -4,6 +4,7 @@ description: This article describes how to loop through each row of an ASP.NET D
 ms.date: 04/22/2020
 ms.reviewer: RADOMIRZ
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\Visual Basic .NET (VB.NET)
 ---
 # Loop through and examine CheckBox control values in a DataGrid column by using ASP.NET and Visual Basic .NET
 

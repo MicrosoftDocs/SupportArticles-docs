@@ -1,19 +1,19 @@
 ---
 title: Error 1602 when starting VMM console
 description: Describes a problem in which error ID 1602 occurs and the Virtual Machine Manager console doesn't start.
-ms.date: 07/13/2020
-ms.reviewer: jchornbe
+ms.date: 04/09/2024
+ms.reviewer: wenca, jchornbe
 ---
 # The Virtual Machine Manager console doesn't start and you receive error ID 1602
 
 This article fixes an issue in which error ID 1602 occurs when you start the Virtual Machine Manager (VMM) console.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 R2 Virtual Machine Manager, System Center 2012 Virtual Machine Manager  
+_Original product version:_ &nbsp; Microsoft System Center Virtual Machine Manager  
 _Original KB number:_ &nbsp; 3020448
 
 ## Symptoms
 
-When you try to start the VMM console in System Center 2012 Virtual Machine Manager or later versions, the console doesn't start and you receive the following error message:
+When you try to start the VMM console in System Center Virtual Machine Manager or later versions, the console doesn't start and you receive the following error message:
 
 > Unable to connect to the VMM Management server *server_name*. The Virtual Machine Manager service on that server did not respond. Verify that Virtual Machine Manager has been installed on the server and that the Virtual Machine Manager service is running. Then try to connect again. If the problem persists, restart the Virtual Machine Manager service.
 ID: 1602

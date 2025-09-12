@@ -29,5 +29,7 @@ items:
   href: troubleshooting-availability-group-failover.md
 - name: Use AGDiag to diagnose availability group health events
   href: use-agdiag-diagnose-availability-group-health-events.md
+- name: Use the Always On Availability Group dashboard
+  href: availability-replica-is-disconnected.md
 - name: Troubleshoot recovery queueing in an availability group
   href: troubleshooting-recovery-queuing-in-alwayson-availability-group.md

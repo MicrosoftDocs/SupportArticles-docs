@@ -1,7 +1,8 @@
 ---
 title: Can't add a managed host with error 2927
 description: Fixes an issue in which error 2927 occurs when you add a managed host in Virtual Machine Manager.
-ms.date: 07/15/2020
+ms.date: 04/09/2024
+ms.reviewer: wenca
 ---
 # Error 2927 (0x8033809d): Unable to add a managed host in VMM 2012
 

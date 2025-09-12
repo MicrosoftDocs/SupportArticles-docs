@@ -1,17 +1,16 @@
 ---
 title: Guidance for troubleshooting MBAM
 description: Introduces general guidance for troubleshooting scenarios related to MBAM.
-ms.date: 05/10/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # MBAM troubleshooting guidance
 

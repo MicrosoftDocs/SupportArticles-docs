@@ -3,6 +3,7 @@ title: Serialize object to XML by Visual C#
 description: This article describes how to serialize an object to XML by using Visual C#. This article also provides some sample steps to explain related information.
 ms.date: 04/14/2020
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Use Visual C# to serialize an object to XML  
 

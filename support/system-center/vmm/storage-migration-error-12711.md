@@ -1,14 +1,14 @@
 ---
 title: A storage migration fails with error 12711
 description: Fixes an issue in which you receive error 12711 when you perform a storage migration from one LUN to another within a cluster.
-ms.date: 07/15/2020
-ms.reviewer: jonjor
+ms.date: 04/09/2024
+ms.reviewer: wenca, jonjor
 ---
 # Performing a storage migration from one LUN to another in Virtual Machine Manager fails with error 12711
 
 This article helps you fix an issue in which you receive error 12711 when you perform a storage migration from one LUN to another in a cluster.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 R2 Virtual Machine Manager  
+_Original product version:_ &nbsp; Microsoft System Center Virtual Machine Manager  
 _Original KB number:_ &nbsp; 2819202
 
 ## Symptoms

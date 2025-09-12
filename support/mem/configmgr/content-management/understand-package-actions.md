@@ -1,8 +1,9 @@
 ---
 title: Understanding package actions
 description: Describes the distribute, update, and redistribute package actions in content distribution.
-ms.date: 03/30/2020
+ms.date: 02/11/2025
 ms.reviewer: kaushika
+ms.custom: sap:Content Management\Content Distribution to Distribution Points
 ---
 # Package actions in content distribution
 

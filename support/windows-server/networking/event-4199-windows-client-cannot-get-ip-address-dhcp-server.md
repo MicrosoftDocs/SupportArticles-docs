@@ -1,15 +1,16 @@
 ---
 title: Event ID 4199 and Windows client can't get an IP address from the DHCP server
 description: Helps resolve Event ID 4199 and the issue in which the Windows client can't get an IP address from the DHCP server.
-ms.date: 01/20/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, rnitsch, markusr, v-lianna
-ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
+- pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Event ID 4199 and Windows client can't get an IP address from the DHCP server
 

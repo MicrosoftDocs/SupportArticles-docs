@@ -1,9 +1,10 @@
 ---
 title: Troubleshooting app installation issues with Intune
 description: How to use the Microsoft Intune troubleshooting pane to help you troubleshoot app installation issues.
-ms.date: 10/14/2021
-ms.reviewer: kaushika, mghadial
+ms.date: 02/11/2025
+ms.reviewer: kaushika, mghadial, jchornbe, roblane
 search.appverid: MET150
+ms.custom: sap:AppDeployment - Windows\Store
 ---
 # Troubleshooting Intune app installation issues
 
@@ -11,6 +12,33 @@ This article gives troubleshooting guidance for when app installations fail for 
 
 > [!NOTE]
 > For specific app installation error code information, see [Intune app installation error reference](app-install-error-codes.md).
+
+## Run self-help diagnostics
+
+To help administrators successfully use Microsoft Intune, Microsoft has developed diagnostic scenarios that cover top support topics and the common tasks for which administrators request help with configuration. It's important to note that these diagnostics can't make changes to your tenant, but they do provide insight into known issues and instructions to fix them quickly.
+
+> [!NOTE]
+> These diagnostics aren't available for GCC High and DoD environments or Microsoft 365 operated by 21Vianet.
+
+### Run diagnostics
+
+As an administrator, navigate to the [Microsoft 365 admin center](https://aka.ms/admincenter). In the navigation pane, select **Show all** > **Support** > **Help & support**. Alternatively, select **Help & support** on the bottom right side of the page. After you briefly describe your issue (for example, "I need help deploying apps"), the system determines whether a diagnostic scenario matches your issue.
+
+For the user having an issue with app deployment on their device, type their email address and then select **Run tests**. After the diagnostic checks finish and a configuration issue is found, the system provides steps to resolve the issue.
+
+> [!NOTE]
+> If a diagnostic detects an issue and you implement a fix based on the results, consider rerunning the diagnostic to ensure the issue is completely resolved.
+
+### Scenarios covered by diagnostics
+
+> [!NOTE]
+> You have to run the diagnostic as an administrator.
+
+The following diagnostic is currently available for app deployment issues:
+
+|Diagnostic|Description|Link|
+|--|--|--|
+|Intune app deployment|This diagnostic helps identify the cause of the issue that a user's application deployment doesn't complete due to various failures.|[Run Tests: Intune app deployment](https://aka.ms/IntuneAppDeployment)|
 
 ## Get app troubleshooting details
 
@@ -21,8 +49,6 @@ Intune provides app troubleshooting details based on the apps installed on a spe
 3. Click **Select user** to go to the **Select users** pane.
 4. Type the name or email address of the user you want to troubleshoot, and then click **Select** at the bottom of the pane. The troubleshooting information for the user is displayed in the **Troubleshoot** pane.
 5. Select the device that you want to troubleshoot from the **Devices** list.
-
-    :::image type="content" source="media/troubleshoot-app-install/devices.png" alt-text="Screenshot of the Intune Troubleshooting pane." border="false" lightbox="media/troubleshoot-app-install/devices.png":::
 
 6. Select **Managed Apps** from selected device pane. A list of managed apps is displayed.
 
@@ -47,10 +73,10 @@ If you have app installation problems, consider the following actions:
 
 - If the app does not display in the Company Portal, ensure the app is deployed with **Available** intent and that the user is accessing the Company Portal with the device type supported by the app.
 - For Windows BYOD devices, the user needs to add a Work account to the device.
-- Check if the user is over the Azure Active Directory (Azure AD) device limit:
-  1. Navigate to [Azure Active Directory Device Settings](https://portal.azure.com/#pane/Microsoft_AAD_IAM/DevicesMenupane/DeviceSettings/menuId).
+- Check if the user is over the Microsoft Entra device limit:
+  1. Navigate to [Microsoft Entra Device Settings](https://portal.azure.com/#pane/Microsoft_AAD_IAM/DevicesMenupane/DeviceSettings/menuId).
   2. Make note of the value set for **Maximum devices per user**.
-  3. Navigate to [Azure Active Directory Users](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
+  3. Navigate to [Microsoft Entra users](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
   4. Select the affected user and click **Devices**.
   5. If user is over the set limit then delete any stale records that are no longer needed.
 - For iOS/iPadOS ADE devices, ensure that the user is listed as **Enrolled by User** in the Intune devices **Overview** pane. If it shows NA, then deploy a config policy for the Intune Company Portal. For more information, see [Configure the Company Portal app](/mem/intune/apps/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).

@@ -1,17 +1,16 @@
 ---
 title: Printer VBScript error 0x1A8
 description: Fixes a 0x1A8 error that occurs when you use the print-related Visual Basic script files on a 64-bit Windows operating system.
-ms.date: 09/15/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:com-and-com+-performance-and-stability, csstroubleshoot
-ms.technology: windows-client-application-compatibility
+ms.custom:
+- sap:application technologies and compatibility\dcom service startup and permissions
+- pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Printer VBScript error: 0x1A8. Object required
 

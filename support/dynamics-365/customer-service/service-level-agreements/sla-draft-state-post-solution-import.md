@@ -4,6 +4,7 @@ description: Resolves an issue where an SLA defined in an organization goes into
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 07/19/2023
+ms.custom: sap:Service Level Agreements\Issue with importing or exporting or upgrading SLA
 ---
 # SLA's state changes from Active to Draft after importing an upgrade solution that contains the SLA
 

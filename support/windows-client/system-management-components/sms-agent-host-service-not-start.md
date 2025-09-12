@@ -1,17 +1,16 @@
 ---
 title: SMS Agent Host service not starts
 description: Describes a problem that occurs when the system path variable is incorrect on the client computer. Provides two methods to resolve the problem.
-ms.date: 10/19/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, steverac
-ms.custom: sap:wmi, csstroubleshoot
-ms.technology: windows-client-system-management-components
+ms.custom:
+- sap:system management components\wmi management and troubleshooting
+- pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # The SMS Agent Host service does not start after you restart a Systems Management Server 2003 client computer
 

@@ -2,10 +2,10 @@
 title: Non-yielding error if the lock pages in memory option is disabled
 description: Provides resolutions for the non-yielding scheduler error that occurs in large memory server if the lock pages in memory option is disabled.
 ms.date: 10/20/2021
-ms.custom: sap:Administration and Management
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.reviewer: ramakoni, pahaefel
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ---
 # Non-yielding scheduler error in large memory server if the lock pages in memory option is disabled
 

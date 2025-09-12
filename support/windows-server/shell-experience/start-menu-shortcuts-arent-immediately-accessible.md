@@ -1,17 +1,16 @@
 ---
 title: Start menu shortcuts aren't immediately accessible in Windows Server
 description: Describes an issue that makes a folder that contains shortcuts on the Start menu inaccessible. Occurs on a Windows Server 2016 or Windows Server 2019-based computer. A workaround is provided.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-jesits, v-six, robsim, cpuckett
-ms.custom: sap:start-menu, csstroubleshoot
-ms.technology: windows-server-shell-experience
+ms.custom:
+- sap:windows desktop and shell experience\start menu and task bar
+- pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Start menu shortcuts aren't immediately accessible in Windows Server 2016 and Windows Server 2019
 

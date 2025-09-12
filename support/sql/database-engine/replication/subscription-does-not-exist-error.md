@@ -2,7 +2,7 @@
 title: The subscription does not exist error occurs
 description: This article provides a workaround for the subscription does not exist error that occurs when a distributor primary replica fails over to a replica that does not use the same agent profile.
 ms.date: 07/22/2020
-ms.custom: sap:Replication, change tracking, change data capture
+ms.custom: sap:Replication, Change Tracking, Change Data Capture, Synapse Link
 ms.reviewer: akbarf, liweiyin
 ---
 # The subscription does not exist when a distributor primary replica fails over to a replica that does not use the same agent profile

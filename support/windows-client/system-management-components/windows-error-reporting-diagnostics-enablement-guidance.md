@@ -1,15 +1,16 @@
 ---
 title: Windows Error Reporting and Windows diagnostics enablement guidance
 description: Provides guidance on configuring Windows Error Reporting and Windows Telemetry.
-ms.date: 02/16/2023
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-ms.technology: windows-client-system-management-components
-ms.custom: sap:wer, csstroubleshoot
-localization_priority: medium
+ms.custom:
+- sap:system management components\windows diagnostic data processor configuration
+- pcy:WinComm User Experience
 ms.reviewer: kaushika, sangar, plingadevaru, v-lianna
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Windows Error Reporting and Windows diagnostics enablement guidance
 

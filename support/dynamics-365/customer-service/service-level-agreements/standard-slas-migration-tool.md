@@ -4,6 +4,7 @@ description: Provides a resolution for an issue where the standard SLAs aren't a
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 05/23/2023
+ms.custom: sap:Service Level Agreements\Facing errors during SLA migration
 ---
 # Standard SLAs aren't showing up in the migration tool
 

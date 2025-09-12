@@ -4,7 +4,7 @@ description: This article provides resolution to the issue where you can't find 
 ms.date: 05/18/2022
 author: jasonchlus
 ms.author: jasonchlus
-ms.custom: sap:Installation
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ms.reviewer: terry.g.lee
 ms.topic: troubleshooting
 ---

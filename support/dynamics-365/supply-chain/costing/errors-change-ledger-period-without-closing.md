@@ -2,7 +2,7 @@
 title: Warnings or errors on changing ledger period status without closing inventory
 description: Provides a resolution for the warnings or errors that occur when you change the ledger period status without closing inventory.
 author: JennySong-SH
-ms.date: 05/31/2021
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: InventAgingStorage, InventAgingStorageChart, InventAgingStorageDetails, InventValueProcess, InventValueReportSetup, InventClosing
 audience: Application User
@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: yanansong
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.15
+ms.custom: sap:Cost management\Issues with inventory closing and recalculation
 ---
 
 # Warnings or errors on changing ledger period status without closing inventory

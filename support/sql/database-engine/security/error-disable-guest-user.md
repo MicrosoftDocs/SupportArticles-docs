@@ -2,7 +2,7 @@
 title: Error when you disable the guest user
 description: This article describes various issues that can occur when you disable the guest user in the msdb database in SQL Server.
 ms.date: 11/19/2020
-ms.custom: sap:Security Issues
+ms.custom: sap:Security, Encryption, Auditing, Authorization
 ---
 # You should not disable the guest user in the msdb database in SQL Server
 

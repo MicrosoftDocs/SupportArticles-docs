@@ -1,17 +1,16 @@
 ---
 title: Stop error 7B or Inaccessible_Boot_Device troubleshooting
 description: Learn how to troubleshoot Stop error 7B or Inaccessible_Boot_Device. This error might occur after some changes are made to the computer.
-ms.date: 03/10/2023
-ms.prod: windows-client
+ms.date: 07/24/2025
 ms.topic: troubleshooting
-author: dansimp
-ms.author: dansimp
 manager: dcscontentpm
-ms.technology: windows-client-performance
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.reviewer: dansimp
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
+ms.reviewer: dansimp, kaushika
 audience: itpro
-localization_priority: medium
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Advanced troubleshooting for Stop error 7B or Inaccessible_Boot_Device
 
@@ -33,7 +32,7 @@ Any one of the following factors might cause the stop error:
 - Corrupted files in the Boot partition (for example, corruption in the volume that's labeled **SYSTEM** when you run the `diskpart` > `list vol` command)
 - If there's a blank GPT entry before the entry of the Boot partition
 
-## Troubleshoot this error
+## Troubleshoot the Inaccessible_Boot_Device stop error
 
 Start the computer in [Windows Recovery Mode (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference#span-identrypointsintowinrespanspan-identrypointsintowinrespanspan-identrypointsintowinrespanentry-points-into-winre) by following these steps.
 

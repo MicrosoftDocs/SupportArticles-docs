@@ -1,7 +1,7 @@
 ---
 title: Domain controllers are unavailable or Not Monitored
 description: Fixes an issue that causes domain controllers to appear unavailable (dimmed) in the System Center Operation Manager console.
-ms.date: 06/30/2020
+ms.date: 04/15/2024
 ---
 # Domain controllers are unavailable in the Operations Manager console when no client agent is installed
 

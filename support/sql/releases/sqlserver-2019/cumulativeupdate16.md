@@ -1,8 +1,9 @@
 ---
 title: Cumulative update 16 for SQL Server 2019 (KB5011644)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 16 (KB5011644).
-ms.date: 06/30/2023
-ms.custom: KB5011644
+ms.date: 05/30/2025
+ms.update-cycle: 1095-days
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5011644
 ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows
@@ -23,13 +24,9 @@ This article describes Cumulative Update package 16 (CU16) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the `SESSION` is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
+### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-- 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
-
-- 9432 - This trace flag disables the fix that was introduced in SQL Server 2019 CU14.
-
-Microsoft is working on a fix for this issue and it will be available in a future CU.
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 
@@ -43,7 +40,7 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
@@ -411,8 +408,8 @@ SQL Server 2019 Database Services Core Instance
 | Hkenggen.h                                 | n/a             | 16783     | 11-Apr-22 | 17:59 | n/a      |
 | Hkengine.dll                               | 2019.150.4223.1 | 5789624   | 11-Apr-22 | 17:59 | x64      |
 | Hkengine.lib                               | n/a             | 98282     | 11-Apr-22 | 17:59 | n/a      |
-| Hkgenlib.h                                 | n/a             | 57242     | 11-Apr-22 | 17:59 | n/a      |
-| Hkgenlib.lib                               | n/a             | 3004568   | 11-Apr-22 | 17:59 | n/a      |
+| Hkjarrettrb.h                                 | n/a             | 57242     | 11-Apr-22 | 17:59 | n/a      |
+| Hkjarrettrb.lib                               | n/a             | 3004568   | 11-Apr-22 | 17:59 | n/a      |
 | Hkrtdef.h                                  | n/a             | 9434      | 11-Apr-22 | 17:59 | n/a      |
 | Hkrtgen.h                                  | n/a             | 29067     | 11-Apr-22 | 17:59 | n/a      |
 | Hkruntime.dll                              | 2019.150.4223.1 | 182184    | 11-Apr-22 | 17:59 | x64      |
@@ -1022,8 +1019,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -1093,7 +1090,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

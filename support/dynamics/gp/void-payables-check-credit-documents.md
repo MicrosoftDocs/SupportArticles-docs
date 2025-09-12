@@ -1,8 +1,9 @@
 ---
 title: Void Payables check with credit documents
 description: Describes how to void a Payables check with credit documents applied in Microsoft Dynamics GP.
-ms.reviewer:
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 04/17/2025
+ms.custom: sap:Financial - Payables Management
 ---
 # Voiding a Payables check with credit documents applied in Microsoft Dynamics GP
 

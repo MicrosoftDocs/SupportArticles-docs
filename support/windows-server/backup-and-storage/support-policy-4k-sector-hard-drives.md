@@ -1,23 +1,21 @@
 ---
 title: Support policy for 4K sector hard drives
 description: Provides support information for the large-sector (4K) drives when they're used with Windows and other Microsoft products. Compatibility information is included.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:storage-hardware, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom:
+- sap:backup,recovery,disk,and storage\storage hardware
+- pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Microsoft support policy for 4K sector hard drives in Windows
 
 This article describes the support information for the large-sector (4K) drives when they're used with Windows and other Microsoft products.
 
-_Applies to:_ &nbsp; Windows 10, version 1809, and later versions, Windows Server 2019, Windows 7 Service Pack 1, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2510009
 
 ## Summary
@@ -105,7 +103,7 @@ The following are known compatibility issues that may occur when you use large-s
 
 - On Windows 7 and Windows 2008 R2, installation will fail with an error **Windows Setup could not configure Windows on this computer's hardware**. This issue occurs under the conditions that are outlined in the following article:
 
-  ["Windows Setup could not configure Windows on this computer's hardware" installation error on a Windows 7 or Windows Server 2008 R2 computer](https://support.microsoft.com/help/2466753).
+  ["Windows Setup could not configure Windows on this computer's hardware" installation error on a Windows 7 or Windows Server 2008 R2 computer](https://support.microsoft.com/topic/0db2c9ac-0343-75d9-50a1-d4922029ac2a).
 
 - If you're using a logical sector drive of a size other than 512 bytes, Windows system image backup and restore operations may fail. And you receive the following error message:
 

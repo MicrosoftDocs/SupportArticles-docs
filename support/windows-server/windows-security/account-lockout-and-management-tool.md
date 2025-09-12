@@ -1,23 +1,21 @@
 ---
 title: Introduction to Account Lockout and Management Tools
 description: Introduces Account Lockout and Management Tools for Windows Server.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:account-lockouts, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom:
+- sap:windows security technologies\account lockouts
+- pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Introduction to Account Lockout and Management Tools
 
 This article introduces [Account Lockout and Management Tools](https://www.microsoft.com/download/details.aspx?id=18465) for Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4469275
 
 ## Summary
@@ -44,3 +42,7 @@ The following files are included in the Account Lockout and Management Tools pac
 - LockoutStatus.exe - To help collect the relevant logs, determines all the domain controllers that are involved in a lockout of a user account. LockoutStatus.exe uses the NLParse.exe tool to parse Netlogon logs for specific Netlogon return status codes. This tool directs the output to a comma-separated value (.csv) file that you can sort later.
 
 - NLParse.exe - Used to extract and display desired entries from the Netlogon log files.
+
+## Reference
+
+For more information, see [Maintaining and Monitoring Account Lockout](/previous-versions/windows/it-pro/windows-server-2003/cc776964%28v=ws.10%29)

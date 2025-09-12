@@ -9,8 +9,6 @@ items:
   href: install-sql-server-2016-on-a-csv-disk-fails.md
 - name: Manually re-create registry keys for cluster resources
   href: manually-re-create-resource-specific-registry-keys.md
-- name: Support policy for clustered configurations
-  href: support-policy-clustered-configurations.md
 - name: Update fails on Cluster_IsOnlineIfClustered rule
   href: cannot-update-cluster-setup-program-checks-rule.md
 - name: Windows Failover cluster resource dependencies

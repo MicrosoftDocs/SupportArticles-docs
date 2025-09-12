@@ -1,17 +1,16 @@
 ---
 title: Set up Internet Connection Sharing
 description: Describes how to install Internet Connection Sharing (ICS) on a Microsoft Windows Server 2003-based computer.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
-ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.technology: networking
+ms.custom:
+- sap:network connectivity and file sharing\wireless (802.1x,bluetooth,miracast,mobile broadband)
+- pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Set Up Internet Connection Sharing in Windows Server 2003
 

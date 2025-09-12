@@ -2,7 +2,7 @@
 title: You cannot toggle the results pane
 description: This article provides a workaround for the problem in which you cannot toggle the results pane in SQL Server Management Studio in SQL Server.
 ms.date: 09/25/2020
-ms.custom: sap:Management Studio
+ms.custom: sap:SQL Server Management, Query and Data Tools
 ms.reviewer: ramakoni
 ---
 # You cannot toggle the results pane in SQL Server Management Studio

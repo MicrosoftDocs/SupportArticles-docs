@@ -1,8 +1,9 @@
 ---
 title: Troubleshoot slow-running queries
 description: This article describes how to handle a performance issue that applications may experience when using SQL Server.
-ms.date: 08/22/2022
-ms.custom: sap:Performance
+ms.date: 01/10/2025
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
+ms.reviewer: jopilov
 ---
 # Troubleshoot slow-running queries in SQL Server
 

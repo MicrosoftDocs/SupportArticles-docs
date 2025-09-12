@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot SQL Server Service Broker issues
 description: Describes common troubleshooting steps for SQL Server Service Broker-related issues in System Center Operations Manager.
-author: helenclu
+author: Cloud-Writer
 ms.author: ibnajjar
 ms.reviewer: ahalmada
-ms.date: 05/08/2021
+ms.date: 04/15/2024
 appliesto: 
 - System Center Operations Manager
 ---

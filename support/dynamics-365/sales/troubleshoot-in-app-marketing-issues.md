@@ -4,8 +4,8 @@ description: Provides resolutions for the known issues that are related to in-ap
 author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/28/2022
-ms.subservice: d365-sales-sales
+ms.date: 04/17/2025
+ms.custom: sap:Enterprise Marketing
 ---
 
 # Troubleshoot issues with in-app marketing

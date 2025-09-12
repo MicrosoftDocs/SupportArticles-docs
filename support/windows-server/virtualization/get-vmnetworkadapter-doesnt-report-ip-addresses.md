@@ -1,16 +1,17 @@
 ---
 title: Get-VMNetworkAdapter command does not report IP addresses
 description: Describes a problem in which the output of the `Get-VMNetworkAdapter` command doesn't contain the IP addresses that are associated with the specified adapter.
-ms.date: 05/05/2022
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:virtual-machine-state, csstroubleshoot
-ms.technology: hyper-v
+ms.custom:
+- sap:virtualization and hyper-v\virtual machine state
+- pcy:WinComm Storage High Avail
 keywords: Get-VMNetworkAdapter
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Get-VMNetworkAdapter command doesn't report IP addresses
@@ -81,7 +82,7 @@ ROOT\Standardcimv2 NetPeerDist
 ROOT\Standardcimv2 NetNcCim 
 ```
 
-Additionally, use `Get-WmiObject` to view the attributes of the [:::no-loc text="MSFT_NetIPInterfaceAdapter":::](/previous-versions/windows/desktop/nettcpipprov/msft-netipinterfaceadapter) class, as follows:
+Additionally, use `Get-WmiObject` to view the attributes of the [:::no-loc text="MSFT_NetIPInterfaceAdapter":::](/windows/win32/fwp/wmi/nettcpipprov/msft-netipinterfaceadapter) class, as follows:
 
 ```powershell
 PS C:\> Get-WmiObject -Namespace "root\standardcimv2" -Class "MSFT_NetIPInterfaceAdapter"

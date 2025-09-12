@@ -2,7 +2,7 @@
 title: Video:Troubleshoot Temporary Storage on Azure App Service
 description: How to troubleshoot temporary storage on Azure App Service
 ms.date: 06/09/2021
-ms.service: app-service
+ms.service: azure-app-service
 ms.author: shwagarwal
 author: ShwetaAgarwal-MS
 ms.reviewer: 

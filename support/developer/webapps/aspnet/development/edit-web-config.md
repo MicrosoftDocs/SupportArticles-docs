@@ -2,7 +2,7 @@
 title: Edit configuration of an ASP.NET application
 description: This article describes how to edit the Web.config file of an ASP.NET application.
 ms.date: 03/27/2020
-ms.custom: sap:FTP authentication and authorization
+ms.custom: sap:General Development
 ms.topic: how-to
 ---
 # Edit the configuration of an ASP.NET application

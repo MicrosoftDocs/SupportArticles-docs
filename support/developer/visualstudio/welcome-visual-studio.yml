@@ -5,11 +5,11 @@ summary: Welcome to Visual Studio troubleshooting. These articles explain how to
 metadata:
   title: Visual Studio troubleshooting document
   description: Knowledge Base (KB) and other Support articles for Visual Studio. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: visual-studio-family
   ms.topic: landing-page # Required
-  author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: haiyingyu #Required; microsoft alias of author; optional team alias.
-  ms.date: 05/09/2022
+  ms.service: visual-studio
+  author: aartig13  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: aartigoyle #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/30/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -27,7 +27,7 @@ landingContent:
           - text: Uninstall third-party applications
             url: ./installation/secondary-installer-third-party-app.md
           - text: OS requirements for Visual Studio 2022
-            url: ./general/visual-studio-2022-unsupported-operating-systems.md
+            url: ./installation/visual-studio-2022-unsupported-operating-systems.md
           - text: Resolve common setup errors
             url: ./installation/issues-workarounds-visual-studio-setup.md
   - title: Language or Compilers
@@ -82,6 +82,3 @@ landingContent:
             url: /training/browse/?products=vs
           - text: Support resources 
             url: https://visualstudio.microsoft.com/vs/support/#talktous
-
-
-  

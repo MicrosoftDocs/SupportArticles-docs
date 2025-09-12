@@ -1,7 +1,7 @@
 ---
 title: Can't see performance or availability details
 description: Fixes an issue in which you are unable to see any performance or availability details when you use performance widgets in System Center 2012 Operations Manager.
-ms.date: 07/07/2020
+ms.date: 04/15/2024
 ms.reviewer: monsee, adoyle
 ---
 # Unable to see any performance or availability details using System Center 2012 Operations Manager widgets

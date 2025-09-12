@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: benebotg
 ms.search.validFrom: 2021-06-10
 ms.dyn365.ops.version: 10.0.20
+ms.custom: sap:Master planning
 ---
 
 # Vendor code isn't authorized for a specific product and date

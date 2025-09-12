@@ -1,15 +1,16 @@
 ---
 title: Troubleshoot Intune Conditional Access
 description: What to do when your users fail to get access to resources through Intune Conditional Access.
-ms.date: 01/31/2022
+ms.date: 02/11/2025
 search.appverid: MET150
-ms.reviewer: kaushika
+ms.reviewer: kaushika, jodah
+ms.custom: sap:Set Up Conditional Access\Configure and monitor device compliance
 ---
 # Troubleshoot Conditional Access
 
 This article describes what to do when your users fail to get access to resources protected with Conditional Access, or when users can access protected resources but should be blocked.
 
-With Intune and Conditional Access, you can protect access to Microsoft 365 services like Exchange Online and SharePoint Online, and various other services. This capability allows you to make sure that only devices that are enrolled with Intune and compliant with the Conditional Access rules that you set in Intune or Azure Active Directory have access to your company resources.
+With Intune and Conditional Access, you can protect access to Microsoft 365 services like Exchange Online and SharePoint Online, and various other services. This capability allows you to make sure that only devices that are enrolled with Intune and compliant with the Conditional Access rules that you set in Intune or Microsoft Entra ID have access to your company resources.
 
 ## Requirements for Conditional Access
 
@@ -35,7 +36,7 @@ You can view these conditions for each device in the Azure portal and in the dev
 
 - Non-Knox Android devices won't be granted access until the user clicks the **Get Started Now** link in the quarantine email they receive. This applies even if the user is already enrolled in Intune. If the user doesn't get the email with the link on their phone, they can use a PC to access their email and forward it to an email account on their device.
 
-- When a device is first enrolled, it might take some time for compliance information to be registered for a device. Wait a few minutes and try again.
+- When a device is first enrolled or updated, it might take some time for compliance information and attributes to be registered for a device. Wait a few minutes and try again.
 
 - For iOS/iPadOS devices, an existing email profile might block the deployment of an Intune admin-created email profile assigned to that user, making the device noncompliant. In this scenario, the Company Portal app will notify the user that they aren't compliant because of their manually configured email profile, and it prompts the user to remove that profile. Once the user removes the existing email profile, the Intune email profile can successfully deploy. To prevent this problem, instruct your users to remove any existing email profiles on their device before enrolling.
 
@@ -71,7 +72,7 @@ You can view these conditions for each device in the Azure portal and in the dev
 
 ## Devices are noncompliant but users are not blocked
 
-- For Windows PCs, Conditional Access only blocks the native email app, Office 2013 with Modern Authentication, or Office 2016. Blocking earlier versions of Outlook or all mail apps on Windows PCs require Azure AD Device Registration and Active Directory Federation Services (AD FS) configurations as per [How to: Block legacy authentication to Azure AD with Conditional Access](/azure/active-directory/conditional-access/block-legacy-authentication).
+- For Windows PCs, Conditional Access only blocks the native email app, Office 2013 with Modern Authentication, or Office 2016. Blocking earlier versions of Outlook or all mail apps on Windows PCs require Microsoft Entra Device Registration and Active Directory Federation Services (AD FS) configurations as per [How to: Block legacy authentication to Microsoft Entra ID with Conditional Access](/azure/active-directory/conditional-access/block-legacy-authentication).
 
 - If the device is selectively wiped or retired from Intune, it might continue to have access for several hours after retirement. This is because Exchange caches access rights for six hours. Consider other means of protecting data on retired devices in this scenario.
 

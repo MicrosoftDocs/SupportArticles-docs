@@ -2,7 +2,7 @@
 title: Install Windows SDK 7.1 in Silent Mode
 description: This article describes how to install Microsoft Windows SDK for Windows 7 and .NET Framework 4 (Windows SDK v7.1) in Silent Mode.
 ms.date: 10/27/2020
-ms.custom: sap:installation
+ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ms.topic: how-to
 ---
 # Installing Windows SDK 7.1 in Silent Mode

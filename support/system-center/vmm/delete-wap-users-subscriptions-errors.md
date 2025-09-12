@@ -1,8 +1,8 @@
 ---
 title: Errors when deleting users or subscriptions in WAP
 description: Describes an issue that occurs when you try to delete users or subscriptions in the Windows Azure Pack (WAP) Admin Portal.
-ms.date: 07/17/2020
-ms.reviewer: markstan
+ms.date: 04/09/2024
+ms.reviewer: wenca, markstan
 ---
 # Plan Out Of Sync and Quota update failed errors in Windows Azure Pack Admin Portal
 

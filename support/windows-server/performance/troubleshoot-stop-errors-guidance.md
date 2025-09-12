@@ -1,17 +1,16 @@
 ---
 title: Guidance for troubleshooting stop errors and unexpected restart.
 description: Introduces general guidance for troubleshooting scenarios related to stop errors and unexpected restart.
-ms.date: 08/22/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 03/19/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
-ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-server-performance
+ms.reviewer: kaushika, warrenw
+ms.custom:
+- sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
+- pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Stop errors and unexpected restart troubleshooting guidance
 
@@ -19,7 +18,7 @@ ms.technology: windows-server-performance
 
 This solution is designed to help you troubleshoot Stop error scenarios.
 
-There's no simple explanation for the cause of Stop errors (also known as blue screen errors or bug check errors). Many factors might be involved, and the cause is not always obvious. For example, you might be using new hardware or third-party software that isn't compatible with your Windows device.
+There's no simple explanation for the cause of Stop errors (also known as blue screen errors or bug check errors). Many factors might be involved, and the cause isn't always obvious. For example, you might be using new hardware or third-party software that isn't compatible with your Windows device.
 
 ## Troubleshooting checklist
 
@@ -28,13 +27,17 @@ There's no simple explanation for the cause of Stop errors (also known as blue s
 3. Contact the respective hardware or software vendor to update the drivers and applications in the following scenarios:
 
    - The error message indicates that a specific driver is causing the problem.
-   - You are seeing an indication of a service that is starting or stopping before the failure occurred. In this situation, determine whether the service behavior is consistent across all instances of the failure.
+   - You're seeing an indication of a service that is starting or stopping before the failure occurred. In this situation, determine whether the service behavior is consistent across all instances of the failure.
    - You have made any software or hardware changes.
 
 4. Make sure that you install the latest Windows updates, cumulative updates, and rollup updates.
 5. Make sure that the BIOS and firmware are up-to-date.
 6. Run any relevant hardware and memory tests.
-7. Run [Microsoft Safety Scanner](https://www.microsoft.com/security/scanner/en-us/default.aspx) or any other virus detection program that includes checks of the Master Boot Record for infections.
+7. Run an anti-malware software scan such as [Microsoft Defender](/defender-endpoint/microsoft-defender-offline).
+8. If the problem occurs after installing a new piece of software, remove the new software. If you can't boot to normal mode, you can try from [Safe Mode](https://support.microsoft.com/windows/windows-startup-settings-1af6ec8c-4d4a-4b23-adb7-e76eef0b847f).
+
+   > [!NOTE]
+   > Some software can't be removed from Safe Mode.
 
 ## Common issues and solutions
 
@@ -63,7 +66,7 @@ Stop error code:
 
 This error code indicates that the executing code had an exception, and the thread that was below it is a system thread. Follow these steps:
 
-1. If new device drivers or system services have been added recently, try removing or updating them. 
+1. If new device drivers or system services have been added recently, try removing or updating them.
 2. Look in Device Manager to see whether any devices are marked with an exclamation point (!) to indicate a problem. Review the events log that's displayed in the properties for any faulting device driver. Try to update the related driver.
 3. Check the System Log in Event Viewer for additional error messages that might help pinpoint the device or driver that's causing the error. Look for critical errors in the system log that occurred around the same time as the Stop error.
 4. If you recently added hardware to the system, try removing or replacing it. Or check with the manufacturer to see whether any updates are available.

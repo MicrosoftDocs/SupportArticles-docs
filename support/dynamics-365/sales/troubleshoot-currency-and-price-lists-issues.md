@@ -5,8 +5,8 @@ author: sbmjais
 ms.reviewer: lavanyakr
 ms.author: shjais
 ms.topic: troubleshooting
-ms.date: 02/28/2022
-ms.subservice: d365-sales-sales
+ms.date: 04/17/2025
+ms.custom: sap:Price list
 ---
 
 # Troubleshoot issues with currency and price lists

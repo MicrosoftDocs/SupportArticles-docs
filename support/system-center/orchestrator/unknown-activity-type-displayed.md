@@ -1,13 +1,13 @@
 ---
 title: Activities are displayed as unknown in Runbook Designer
 description: Fixes an issue in which one or more activities are displayed as unknown in the System Center Orchestrator Runbook Designer.
-ms.date: 08/04/2020
+ms.date: 06/26/2024
 ---
 # Unknown activity type displayed in the System Center Orchestrator Runbook Designer
 
 This article helps you fix an issue where one or more activities are displayed as **unknown** in the System Center Orchestrator Runbook Designer.
 
-_Original product version:_ &nbsp; System Center 2016 Orchestrator, Microsoft System Center 2012 R2 Orchestrator, Microsoft System Center 2012 Orchestrator, System Center Orchestrator version 1807, System Center Orchestrator version 1801  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2702398
 
 ## Symptoms

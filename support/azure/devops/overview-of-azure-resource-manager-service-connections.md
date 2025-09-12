@@ -3,9 +3,8 @@ title: Troubleshoot Azure RM service connection issues
 description: Provides an overview of Azure RM service connection, types of connection modes, and lists the tools used to troubleshoot various scenarios.
 ms.date: 05/19/2023
 ms.reviewer: cathmill, kirthishkt, v-jayaramanp
-ms.custom: sap:Pipelines
+ms.custom: sap:Pipelines - Service connection configuration and troubleshooting
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 
 # Troubleshoot Azure RM service connection issues
@@ -58,9 +57,9 @@ To create an Azure RM service connection,
 
 After you save the Azure RM service connection, the connection takes the following actions:
 
-- Connects to the Azure Active Directory (Azure AD) tenant for the selected subscription.
+- Connects to the Microsoft Entra tenant for the selected subscription.
 
-- Creates an application in Azure AD on behalf of the user.
+- Creates an application in Microsoft Entra ID on behalf of the user.
 
 - Creates an Azure RM service connection by using this application's details.
 

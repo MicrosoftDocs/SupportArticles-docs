@@ -1,23 +1,22 @@
 ---
 title: Memory allocation errors can be caused by slow page file growth
 description: Describes an issue that causes memory allocation errors that can be caused by slow page file growth.
-ms.date: 12/03/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
-ms.reviewer: kaushika, davean, eddo, delhan
-ms.custom: sap:applications, csstroubleshoot
-ms.technology: windows-client-performance
+ms.reviewer: kaushika, davean, eddo, kaushika
+ms.custom:
+- sap:system performance\system configuration (page file,startup or running apps,error handling)
+- pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Memory allocation errors can be caused by slow page file growth
 
 This article provides a workaround for errors that occur when applications frequently allocate memory.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10, Windows 11  
 _Original KB number:_ &nbsp; 4055223
 
 ## Symptoms

@@ -1,13 +1,13 @@
 ---
 title: Runbook Service stops unexpectedly after 30-60 seconds
 description: Provides a solution to an issue where Orchestrator Runbook Service on a System Center Orchestrator runbook server starts successfully but then stops after 30-60 seconds.
-ms.date: 08/03/2020
+ms.date: 06/26/2024
 ---
 # The Orchestrator Runbook Service starts and then stops after 30-60 seconds
 
 This article helps you fix an issue where Orchestrator Runbook Service on a System Center Orchestrator runbook server starts successfully but then stops after 30-60 seconds.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2702157
 
 ## Symptoms

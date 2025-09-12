@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where case entity fields for mo
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 05/23/2023
+ms.custom: sap:Service Level Agreements
 ---
 # modifiedon and modifiedby fields in the case entity get updated
 

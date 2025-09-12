@@ -2,7 +2,7 @@
 title: Mark MFC ActiveX controls as safe
 description: This article describes how to mark MFC ActiveX controls as safe for Scripting and Initialization.
 ms.date: 10/27/2020
-ms.custom: sap:C and C++ Libraries
+ms.custom: sap:C and C++ Libraries\Microsoft Foundation Classes (MFC)
 ms.topic: how-to
 ---
 # Mark MFC ActiveX controls as Safe for Scripting and Initialization

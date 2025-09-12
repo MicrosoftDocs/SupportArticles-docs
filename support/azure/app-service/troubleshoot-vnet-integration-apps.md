@@ -1,8 +1,9 @@
 ---
 title: Azure App Service virtual network integration troubleshooting guide
 description: How to troubleshoot virtual network integration on Windows and Linux apps.
-ms.date: 06/16/2023
-ms.service: app-service
+ms.date: 09/03/2025
+ms.service: azure-app-service
+ms.custom: linux-related-content
 author: hepiet
 ms.author: hepiet
 ms.reviewer: jugonza
@@ -68,7 +69,7 @@ nameresolver.exe hostname [optional:DNS Server]
 You can use **nameresolver** to check the hostnames that your app depends on. This way, you can test if you have anything misconfigured with your DNS or perhaps don't have access to your DNS server. You can see the DNS server that your app uses in the console by looking at the environmental variables WEBSITE_DNS_SERVER and WEBSITE_DNS_ALT_SERVER.
 
 > [!NOTE]
-> * The nameresolver.exe tool currently doesn’t work in custom Windows containers.
+> The nameresolver.exe tool currently doesn't work in custom Windows containers.
 
 
 To test TCP connectivity to a host and port combination, you can use **tcpping**. The syntax is.
@@ -155,7 +156,7 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 
 :::image type="content" source="./media/troubleshoot-vnet-integration-apps/configuration-issue.png" alt-text="Screenshot that shows how to run  troubleshooter for configuration issues in the Azure portal.":::
 
-**Subnet/VNet deletion issue** - This troubleshooter will check if your subnet has any locks and if it has any unused Service Association Links that might be blocking the deletion of the VNet/subnet.
+**Subnet/VNet deletion issue** - This troubleshooter will check if your subnet has any locks and if it has any unused Service Association Links blocking the deletion of the VNet/subnet. To delete any unused Service Association Links, see the [App Service virtual network integration troubleshooting steps](/azure/app-service/overview-vnet-integration#troubleshooting).
 
 :::image type="content" source="./media/troubleshoot-vnet-integration-apps/deletion-issue.png" alt-text="Screenshot that shows how to run troubleshooter for subnet or virtual network deletion issues.":::
 

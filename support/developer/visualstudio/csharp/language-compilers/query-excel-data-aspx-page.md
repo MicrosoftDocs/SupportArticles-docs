@@ -4,6 +4,7 @@ description: Describes how to display data from an Excel worksheet through an AS
 ms.date: 04/13/2020
 ms.reviewer: michmo
 ms.topic: how-to
+ms.custom: sap:Language or Compilers\C#
 ---
 # Query and display excel data by using ASP.NET, ADO.NET, and Visual C# .NET  
 

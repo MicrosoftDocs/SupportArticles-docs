@@ -1,8 +1,8 @@
 ---
 title: TLS 1.2 support for Microsoft SQL Server
 description: This article provides information about the updates that Microsoft releases to enable TLS 1.2 support for SQL Server.
-ms.date: 08/11/2023
-ms.custom: sap:Connection issues
+ms.date: 01/10/2025
+ms.custom: sap:Database Connectivity and Authentication
 author: PiJoCoder 
 ms.author: jopilov
 ms.reviewer: v-sidong
@@ -53,6 +53,23 @@ Use the following table to download the client components and driver updates tha
 |---------|---------|
 |SQL Server Native Client 10.0 for SQL Server 2008/2008 R2 (x86/x64/IA64)     |    [Microsoft SQL Server 2008 and SQL Server 2008 R2 Native Client](https://www.microsoft.com/download/details.aspx?id=57606)     |
 |SQL Server Native Client 11.0 for SQL Server 2012/2014 (x86/x64)     |    [Microsoft SQL Server 2012 Native Client - QFE](https://www.microsoft.com/download/details.aspx?id=50402)     |
+|MDAC Client components (Sqlsrv32.dll and Sqloledb.dll)  | [Servicing stack update for Windows 10, version 1809: November 10, 2020](https://support.microsoft.com/en-us/topic/servicing-stack-update-for-windows-10-version-1809-november-10-2020-c7a4dc25-458f-b068-025b-b5d05fabee47) |
+
+#### Summary table for client driver support for TLS 1.2
+
+The following table summarizes support for SQL Server drivers and providers:
+
+|Driver                                                   |TLS 1.2 support   |Note                                                                              |
+|---------------------------------------------------------|------------------ |---------------------------------------------------------------------------------- |
+|Microsoft ODBC Driver for SQL Server 11                  |Yes, with updates   | Install the latest cumulative update for SQL Server 2012 or SQL Server 2014. (See the table in the [How to know whether you need this update](#how-to-know-whether-you-need-this-update) section.)      |
+|Microsoft ODBC Driver for SQL Server 13                  |Yes                | Supports TLS 1.2 natively.                                                        |
+|Microsoft ODBC Driver for SQL Server 17                  |Yes                | Supports TLS 1.2 natively.                                                        |
+|Microsoft ODBC Driver for SQL Server 18                  |Yes                | Supports TLS 1.2 natively.                                                        |
+|Microsoft OLE DB Driver for SQL Server 19 (MSOLEDBSQL)   |Yes                | Supports TLS 1.2 natively.                                                        |
+|SQL Server Native Client 10                              |Yes, with updates   | Install the latest cumulative update for SQL Server 2008 or SQL Server 2008 R2. (See the table in the [How to know whether you need this update](#how-to-know-whether-you-need-this-update) section.)   |
+|SQL Server Native Client 11                              |Yes, with updates   | Install the latest cumulative update for SQL Server 2012 or SQL Server 2014. (See the table in the [How to know whether you need this update](#how-to-know-whether-you-need-this-update) section.)     |
+|SQL Server ODBC Driver (SQLSRV32.DLL)                    |Yes, for certain OSs| Added support in Windows Server 2019 and Windows 10. Earlier OS versions don't support it.  |
+|SQL Server OLE DB Provider (SQLOLEDB)                    |Yes, for certain OSs| Added support in Windows Server 2019 and Windows 10. Earlier OS versions don't support it.|
 
 ## Additional fixes needed for SQL Server to use TLS 1.2
 
@@ -72,7 +89,7 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
 
 - **Does SQL Server 2019 allow connections using TLS 1.0 or 1.1, or only 1.2?**
 
-    SQL Server 2019 has the same level of support as SQL Server 2016 and SQL Server 2017, and SQL Server 2019 supports older versions of TLS. SQL Server 2019 RTM is shipped with TLS 1.2 support, and no other update/fix is required to enable TLS 1.2 support.
+    SQL Server 2019 has the same level of support as SQL Server 2016 and SQL Server 2017, and SQL Server 2019 supports older versions of TLS. SQL Server 2019 RTM is shipped with TLS 1.2 support, and no other update or fix is required to enable TLS 1.2 support.
 
 - **Is TDS affected by known vulnerabilities?**
 
@@ -86,7 +103,7 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
 
     TLS 1.2 support is offered only for SQL Server 2008 and later versions.
 
-- **Are customers who are not using SSL/TLS affected if SSL 3.0 and TLS 1.0 are disabled on the server?**
+- **Are customers who aren't using SSL/TLS affected if SSL 3.0 and TLS 1.0 are disabled on the server?**
 
     Yes. SQL Server encrypts the username and password during login even if a secure communication channel isn't used. This update is required for all SQL Server instances that don't use secure communications and that have all other protocols except TLS 1.2 disabled on the server.
 
@@ -94,13 +111,21 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
 
     Windows Server 2008 R2 and later versions support TLS 1.2.
 
-    What's the correct registry setting to enable TLS 1.2 for SQL Server communication? The correct registry settings are as follows:
+- **What's the correct registry setting to enable TLS 1.2 for SQL Server communication?**
+
+  The correct registry settings are as follows:
 
     - `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2]`
     - `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client] "DisabledByDefault"=dword:00000000 "Enabled"=dword:00000001`
     - `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "DisabledByDefault"=dword:00000000 "Enabled"=dword:00000001`
 
     These settings are required for both server and client computers. The `DisabledByDefault` and `Enabled` settings are required to be created on Windows 7 clients and Windows Server 2008 R2 servers. On Windows 8 and later versions of the client operating systems or Windows Server 2012 server and later versions of the server operating systems, TLS 1.2 should already be enabled. If you're implementing a deployment policy for Windows Registry that needs to be independent of the OS release, then we recommend adding the mentioned registry keys to the policy.
+    In addition, if you're using [Database Mail](/sql/relational-databases/database-mail/database-mail) on your SQL Server, you also need to set the following .NET registry keys:
+
+    - `[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v2.0.50727] "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001`
+    - `[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001`
+    - `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v2.0.50727]             "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001`
+    - `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]              "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001`
 
 ## Known issues
 
@@ -126,7 +151,7 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
 
 - Issue 3
 
-    The encrypted endpoint communication that uses TLS 1.2 fails when you use encrypted communications for Availability Groups, Database Mirroring, or Service Broker in SQL Server. An error message that resembles the following is logged in the SQL error log:
+    The encrypted endpoint communication that uses TLS 1.2 fails when you use encrypted communications for Availability Groups, Database Mirroring, or Service Broker in SQL Server. An error message that resembles the following one is logged in the SQL error log:
 
     ```output
     Connection handshake failed. An OS call failed: (80090331) 0x80090331(The client and server cannot communicate, because they do not possess a common algorithm.). State 56.
@@ -142,13 +167,13 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
 
 - Issue 5
 
-    An encrypted connection with Database Mirroring or Availability Groups doesn't work when you use a certificate after you disable all other protocols other than TLS 1.2. An error message that resembles the following is logged in the SQL Server error log:
+    An encrypted connection with Database Mirroring or Availability Groups doesn't work when you use a certificate after you disable all other protocols other than TLS 1.2. An error message that resembles the following one is logged in the SQL Server error log:
 
-    An encrypted connection with Database Mirroring or Availability Groups doesn't work when you use a certificate after you disable all other protocols other than TLS 1.2. You may notice one of the following symptoms:
+    An encrypted connection with Database Mirroring or Availability Groups doesn't work when you use a certificate after you disable all other protocols other than TLS 1.2. You might notice one of the following symptoms:
 
     - Symptom 1:
 
-        An error message that resembles the following is logged in the SQL Server error log:
+        An error message that resembles the following one is logged in the SQL Server error log:
 
         ```output
         Connection handshake failed. An OS call failed: (80090331) 0x80090331(The client and server cannot communicate, because they do not possess a common algorithm.). State 58.'
@@ -156,7 +181,7 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
 
     - Symptom 2:
 
-        An error message that resembles the following is logged in the Windows event log:
+        An error message that resembles the following one is logged in the Windows event log:
 
         ```output
         Log Name:      System
@@ -208,9 +233,9 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
     > Microsoft.SqlServer.Management.SqlIMail.Server.Common.BaseException:
 Mail configuration information could not be read from the database. Unable to start mail session.
 
-    For more information, see the section titled [Additional fixes needed for SQL Server to use TLS 1.2](#additional-fixes-needed-for-sql-server-to-use-tls-12) in this article.
+    For more information, see [Additional fixes needed for SQL Server to use TLS 1](#additional-fixes-needed-for-sql-server-to-use-tls-12).
 
-### Common errors that you may experience when TLS 1.2 updates are missing on the client or server
+### Common errors that you might experience when TLS 1.2 updates are missing on the client or server
 
 Issue 1
 
@@ -218,7 +243,7 @@ System Center Configuration Manager (SCCM) can't connect to SQL Server after the
 
 > TCP Provider: An existing connection was forcibly closed by the remote host
 
-This issue may occur when SCCM uses a SQL Server Native Client driver that doesn't have a fix. To resolve this issue, download and install the Native client fix that's listed in the [Client component downloads](#client-component-downloads) section of this article. For example, [Microsoft® SQL Server® 2012 Native Client - QFE](https://www.microsoft.com/download/details.aspx?id=50402).
+This issue might occur when SCCM uses a SQL Server Native Client driver that doesn't have a fix. To resolve this issue, download and install the client fix that's listed in the [Client component downloads](#client-component-downloads) section. For example, [Microsoft® SQL Server® 2012 Native Client - QFE](https://www.microsoft.com/download/details.aspx?id=50402).
 
 You can find out which driver SCCM is using to connect to SQL Server by viewing the SCCM log, as shown in the following example:
 

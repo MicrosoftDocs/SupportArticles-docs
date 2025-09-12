@@ -1,13 +1,13 @@
 ---
 title: Enable trace logging for Opalis Integration Pack for FTP
 description: Describes how to enable trace logging for Opalis Integration Pack for File Transfer Protocol.
-ms.date: 08/04/2020
+ms.date: 06/26/2024
 ---
 # How to enable trace logging for Opalis Integration Pack for File Transfer Protocol (FTP)
 
 This article describes how to enable trace logging for Opalis Integration Pack for File Transfer Protocol (FTP). The trace logging provides details on the commands that were sent to the FTP server as well as the responses to those commands and actions taken based on the responses.
 
-_Original product version:_ &nbsp; System Center Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2410910
 
 ## Enable trace logging

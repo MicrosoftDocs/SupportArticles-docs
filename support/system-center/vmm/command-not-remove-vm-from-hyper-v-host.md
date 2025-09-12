@@ -1,8 +1,8 @@
 ---
 title: The Remove-SCVirtualMachine command doesn't remove a VM from the Hyper-V host
 description: Fixes an issue where the Remove-SCVirtualMachine command doesn't remove a VM from the Hyper-V host.
-ms.date: 07/17/2020
-ms.reviewer: alvinm
+ms.date: 04/09/2024
+ms.reviewer: wenca, alvinm
 ---
 # The Remove-SCVirtualMachine command may not remove a virtual machine from the Hyper-V host
 

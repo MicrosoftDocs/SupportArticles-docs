@@ -2,7 +2,7 @@
 title: Troubleshoot performance issues with narrow and wide plans in SQL Server
 description: Provides information to understand and troubleshoot update statements that use wide or narrow plans.
 ms.date: 10/28/2022
-ms.custom: sap:Performance
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ms.topic: troubleshooting
 ms.reviewer: jopilov, shaunbe
 author: liwei-yin

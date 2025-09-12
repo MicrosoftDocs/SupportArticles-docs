@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot SQL Server database discovery
 description: Describes how to diagnose and fix SQL Server database discovery issue in System Center 2012 Operations Manager and later versions.
-ms.date: 08/22/2020
+ms.date: 04/15/2024
 ---
 # Troubleshoot SQL Server database discovery in Operations Manager
 

@@ -1,7 +1,8 @@
 ---
 title: Troubleshoot slow performance of the DPM console
 description: Diagnose and resolve performance issues with the admin console in System Center 2016 Data Protection Manager and System Center 2012 Data Protection Manager.
-ms.date: 08/22/2020
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet
 ---
 # Troubleshoot slow performance of the Data Protection Manager console
 

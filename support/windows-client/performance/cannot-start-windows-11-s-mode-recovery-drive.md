@@ -1,17 +1,16 @@
 ---
 title: Can't start Windows 11 in S mode from a recovery drive
 description: Provides workarounds to an issue in which you can't start Windows 11 in S mode from a recovery drive.
-ms.date: 11/12/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, themar, degranit
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.technology: windows-client-performance
+ms.custom:
+- sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
+- pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Can't start Windows 11 in S mode from a recovery drive
 

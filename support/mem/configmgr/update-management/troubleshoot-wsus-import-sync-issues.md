@@ -1,10 +1,11 @@
 ---
 title: Troubleshoot Windows Server Update Services (WSUS) synchronization and import issues
 description: Describes common scenarios when WSUS synchronization and import fail. Provide common troubleshooting guides.
-author: helenclu
-ms.author: luche
+author: Cloud-Writer
+ms.author: meerak
 ms.reviewer: kaushika, lamosley
-ms.date: 03/22/2021
+ms.date: 02/11/2025
+ms.custom: sap:Software Update Management (SUM)\WSUS Performance or Crashes
 ---
 # Troubleshoot WSUS synchronization and import issues
 

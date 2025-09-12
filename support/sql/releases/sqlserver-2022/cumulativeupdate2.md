@@ -1,8 +1,9 @@
 ---
 title: Cumulative update 2 for SQL Server 2022 (KB5023127)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 2 (KB5023127).
-ms.date: 03/15/2023
-ms.custom: KB5023127
+ms.date: 05/30/2025
+ms.update-cycle: 1095-days
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5023127
 ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
@@ -23,6 +24,8 @@ This article describes Cumulative Update package 2 (CU2) for Microsoft SQL Serve
 
 ## Known issues in this update
 
+### Issue one
+
 After you install this cumulative update, external data sources using generic ODBC connector may no longer work. When you try to query external tables that were created before installing this cumulative update, you receive the following error message:
 
 > Msg 7320, Level 16, State 110, Line 68  
@@ -34,6 +37,12 @@ If you try to create a new external table, you receive the following error messa
 > Object reference not set to an instance of an object.
 
 To work around this issue, you can uninstall this cumulative update or add the Driver keyword to the `CONNECTION_OPTIONS` argument. For more information, see [Generic ODBC external data sources may not work after installing Cumulative Update](https://techcommunity.microsoft.com/t5/sql-server-support-blog/generic-odbc-external-data-sources-may-not-work-after-installing/ba-p/3783873).
+
+This issue is fixed in [SQL Server 2022 CU5](cumulativeupdate5.md#2398344).
+
+### Issue two
+
+[!INCLUDE [av-sesssion-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 
@@ -65,7 +74,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 The following update is available from the Microsoft Download Center:
 
-:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2022 now](https://www.microsoft.com/download/details.aspx?familyid=4fa9aa71-05f4-40ef-bc55-606ac00479b1)
+:::image type="icon" source="../media/download-icon.png" border="false"::: [Download the latest cumulative update package for SQL Server 2022 now](https://www.microsoft.com/download/details.aspx?id=105013)
 
 > [!NOTE]
 >
@@ -552,7 +561,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

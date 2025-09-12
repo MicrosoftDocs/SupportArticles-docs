@@ -7,19 +7,7 @@ items:
   href: cannot-start-reporting-services.md
 - name: Deadlocks occur when you view an SSRS report
   href: deadlocks-occur-view-ssrs-report.md
-- name: Error when you load custom extensions in Data Tools
-  href: error-load-custom-extensions-data-tools.md
 - name: Exported report contains hidden rows and columns
   href: workbook-hidden-rows-columns.md
 - name: Key not valid for use in specified state
   href: error-message-report-server-service-start.md
-- name: Parameter pane not visible in SharePoint integrated mode
-  href: parameter-pane-not-visible-drillthrough-report.md
-- name: Rendering issues in Internet Explorer
-  href: rendering-issues-internet-explorer.md
-- name: Unable to retrieve application files error
-  href: error-unable-retrieve-application-files.md
-- name: Warning message when adding a RS assembly
-  href: warning-message-add-reporting-services.md
-- name: .Net Framework assemblies in SQL 2014
-  href: net-framework-assemblies-sql-2014.md

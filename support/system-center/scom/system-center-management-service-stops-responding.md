@@ -1,7 +1,7 @@
 ---
 title: The System Center Management service stops responding
 description: Fixes an issue where the System Center Management service stops responding after an instance of SQL Server disconnects, restarts, or fails.
-ms.date: 08/03/2020
+ms.date: 04/15/2024
 ms.reviewer: rajatm
 ---
 # The System Center Management service stops responding after an instance of SQL Server goes offline

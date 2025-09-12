@@ -2,7 +2,7 @@
 title: Create database permission is logged
 description: This article provides more information on why a `CREATE DATABASE` event can be logged when server audit is specified on a SQL Server instance.
 ms.date: 09/09/2020
-ms.custom: sap:Administration and Management
+ms.custom: sap:Security, Encryption, Auditing, Authorization
 ms.reviewer: nathansc
 ---
 # Create database permission is logged to the Audit log when you run RESTORE VERIFYONLY

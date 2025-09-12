@@ -3,9 +3,9 @@ title: Troubleshoot slow performance or low memory issues caused by memory grant
 description: Provides troubleshooting steps to identify and reduce memory grant memory consumption in SQL Server.
 author: pijocoder
 ms.author: jopilov
-ms.reviewer: pijocoder
-ms.date: 05/05/2023
-ms.custom: sap:Performance
+ms.reviewer: jopilov
+ms.date: 01/17/2025
+ms.custom: sap:SQL resource usage and configuration (CPU, Memory, Storage)
 ---
 
 # Troubleshoot slow performance or low memory issues caused by memory grants in SQL Server
@@ -356,7 +356,7 @@ SELECT TOP 20
         ELSE QS.statement_end_offset END   
             - QS.statement_start_offset)/2) + 1) AS statement_text  
   ,CONVERT(DECIMAL (10,2), max_grant_kb /1024.0) AS max_grant_mb
-  ,CONVERT(DECIMAL (10,2), min_grant_kb /1024.0) AS max_grant_mb
+  ,CONVERT(DECIMAL (10,2), min_grant_kb /1024.0) AS min_grant_mb
   ,CONVERT(DECIMAL (10,2), (total_grant_kb / execution_count) /1024.0) AS avg_grant_mb
   ,CONVERT(DECIMAL (10,2), max_used_grant_kb /1024.0) AS max_grant_used_mb
   ,CONVERT(DECIMAL (10,2), min_used_grant_kb /1024.0) AS min_grant_used_mb

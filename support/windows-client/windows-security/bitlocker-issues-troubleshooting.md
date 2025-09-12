@@ -1,16 +1,17 @@
 ---
 title: BitLocker issues troubleshooting
 description: Describes approaches for investigating BitLocker issues, including how to gather diagnostic information.
-ms.date: 11/21/2022
-ms.technology: windows-client-security
-ms.prod: windows-client
+ms.date: 01/15/2025
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom:
+- sap:windows security technologies\bitlocker
+- pcy:WinComm Devices Deploy
 ms.reviewer: kaushika, v-tappelgate
 audience: itpro
-localization_priority: medium
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Guidelines for troubleshooting BitLocker
 

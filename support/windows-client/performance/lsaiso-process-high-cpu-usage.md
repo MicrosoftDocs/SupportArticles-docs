@@ -1,23 +1,22 @@
 ---
 title: High CPU usage in LSAISO process
 description: Fixes a problem in which the LSAISO process experiences high CPU usage on a computer that's running Windows.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:slow-performance, csstroubleshoot
-ms.technology: windows-client-performance
+ms.custom:
+- sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
+- pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # High CPU usage in the LSAISO process on Windows
 
 This article provides resolutions of a problem in which the LSAISO process experiences high CPU usage on a computer that's running Windows.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows 11 - all editions, Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 4032786
 
 ## Symptoms

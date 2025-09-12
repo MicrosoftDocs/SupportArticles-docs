@@ -2,7 +2,7 @@
 title: Use app .resx to create a ASP.NET web app
 description: This article provides instructions that how to use resource files (.resx) to efficiently create a localizable ASP.NET Web application.
 ms.date: 04/09/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ms.topic: how-to
 ---
 # Use application resource files (.resx) to efficiently create a localizable ASP.NET Web application

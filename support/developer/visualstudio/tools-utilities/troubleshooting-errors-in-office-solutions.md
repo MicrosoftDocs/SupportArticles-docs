@@ -13,9 +13,10 @@ f1_keywords:
 dev_langs:
   - VB
   - CSharp
-author: HaiyingYu
-ms.author: haiyingyu
+author: aartig13
+ms.author: aartigoyle
 ms.reviewer: johnhart
+ms.custom: sap:Tools and Utilities\Microsoft Office dev tools
 ---
 # Troubleshoot issues in Office solutions
 

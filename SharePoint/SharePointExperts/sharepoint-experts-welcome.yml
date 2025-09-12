@@ -1,0 +1,67 @@
+### YamlMime:Landing
+
+title: SharePoint Experts
+summary: Welcome to this collection of content that has contributions from various SharePoint experts in the community. The experts will be happy to answer any questions about their content. Bring them on! If you like their contribution, feel free to write an appreciative note to them for sharing their expertise.
+metadata:
+  title: SharePoint Experts
+  description: Documentation for troubleshooting common issues with SharePoint.
+  ms.service: sharepoint-server-itpro
+  ms.topic: landing-page
+  author: Cloud-Writer
+  ms.author: meerak
+  ms.date: 12/17/2023
+  hideEdit: true
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"A schedule cannot be enabled for a workbook" when scheduling a PowerPivot data refresh'
+            url: ./administration/sorry-something-went-wrong-when-try-to-schedule-a-data-refresh.md
+          - text: '"Call to Excel Services failed" when running scheduled PowerPivot data refresh'
+            url: ./administration/call-to-excel-services-failed.md
+          - text: '"cannot locate a server" error in PowerPivot'
+            url: ./administration/cannot-locate-a-server-to-load-workbook-data-model-in-powerpivot.md
+
+  - title: Lists and libraries
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"You will need a new app to open this ms-visio" when opening Visio files'
+            url: ./lists-and-libraries/need-a-new-app-to-open-this-ms-visio.md
+          - text: Files are downloaded instead of opening
+            url: ./lists-and-libraries/files-downloaded-instead-of-opening-office-application.md
+          - text: PowerPivot data refresh from a list 
+            url: ./lists-and-libraries/list-refresh-odata-data-feed.md
+
+  - title: Sharing and Permissions
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Additional credential prompts for Office documents
+            url: ./sharing-and-permissions/credential-prompt-persistent-cookies.md
+          - text: SharePoint Designer 2013 login Issues in a cloud scenario
+            url: ./sharing-and-permissions/login-issues-in-a-cloud-scenario.md
+
+  - title: Security
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Scheduled data refresh with non-Windows Authentication
+            url: ./security/schedule-data-refresh-to-a-source-with-non-windows-authentication.md
+
+  - title: Web Parts
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"We could not find the file you wanted" with Excel Web Access Web Part'
+            url: ./web-parts/excel-web-access-web-part-error.md
+          - text: Increasing PowerPoint size limit of embedded media
+            url: ./web-parts/increase-size-limit-embedded-media.md
+          - text: Issue with Excel Web Access Web Parts
+            url: ./web-parts/something-went-wrong-error-in-excel-web-parts.md

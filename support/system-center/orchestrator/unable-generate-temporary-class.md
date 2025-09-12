@@ -1,13 +1,13 @@
 ---
 title: Unable to generate a temporary class
 description: Fixes an issue where you receive the Unable to generate a temporary class (result=1) error when you execute the Invoke Web Services object.
-ms.date: 08/03/2020
+ms.date: 06/26/2024
 ---
 # Unable to generate a temporary class (result=1) error when executing the Invoke Web Services object
 
 This article helps you work around an issue where you receive the **Unable to generate a temporary class (result=1)** error when you execute the Invoke Web Services object.
 
-_Original product version:_ &nbsp; System Center Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2486643
 
 ## Symptoms

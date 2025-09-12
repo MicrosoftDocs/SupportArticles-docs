@@ -1,9 +1,10 @@
 ---
 title: Error and status codes in Microsoft Intune - Azure | Microsoft Learn
 description: See a list of the errors, status code, descriptions, and resolutions when using MDM managed devices, getting access to company resources, errors on iOS/iPadOS devices, and OMA response errors in Microsoft Intune.
-ms.date: 03/20/2019
+ms.date: 02/11/2025
 ms.reviewer: kaushika, tscott
 search.appverid: MET150
+ms.custom: sap:Third Party Integration\Sign in to Intune
 ---
 # Common error codes and descriptions in Microsoft Intune
 

@@ -1,16 +1,16 @@
 --- 
 title: Purchase order line data discrepancies 
 description: Provides a resolution for data discrepancies or data corruption on your purchase order lines.
-author: GalynaFedorova 
-ms.date: 12/07/2021 
-ms.topic: troubleshooting 
+author: Henrikan 
+ms.date: 05/16/2024
 ms.search.form: PurchLineManualCorrection, PurchTable, PurchLine, InventTrans
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: gfedorova 
+ms.author: henrikan 
 ms.search.validFrom: 2021-12-07
 ms.dyn365.ops.version: 10.0.24 
+ms.custom: sap:Purchase order procurement and sourcing\Issues with purchase orders
 --- 
 # Purchase order line data discrepancies
 

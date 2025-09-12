@@ -1,17 +1,16 @@
 ---
 title: Guidance for troubleshooting virtual machine live migration
 description: Introduces general guidance for troubleshooting scenarios related to virtual machine live migration.
-ms.date: 09/28/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:live-migration, csstroubleshoot
-ms.technology: hyper-v
+ms.custom:
+- sap:virtualization and hyper-v\migration
+- pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Virtual machine live migration troubleshooting guidance
 

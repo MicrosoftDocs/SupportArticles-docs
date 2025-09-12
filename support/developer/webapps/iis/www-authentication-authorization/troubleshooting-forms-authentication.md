@@ -1,9 +1,10 @@
 ---
 title: Troubleshooting Forms Authentication
 description: This article helps you troubleshoot problems related to Forms Authentication.
-ms.date: 04/09/2012
-ms.reviewer: senyum, apurvajo, v-jayaramanp
+ms.date: 01/24/2025
+ms.reviewer: senyum, apurvajo, v-zhecai, riande, levib 
 ms.topic: troubleshooting
+ms.custom: sap:WWW Authentication and Authorization\Forms authentication
 ---
 
 # Troubleshooting Forms Authentication
@@ -12,17 +13,17 @@ _Applies to:_ &nbsp; Internet Information Services
 
 Often, while using Forms Authentication in an ASP.NET web application, there's a need to troubleshoot a problem that occurs when a new or an ongoing request is intermittently redirected to the application's login page. You can debug this problem on Visual Studio IDE by attaching a debugger in a development environment. In production environments, however, the task becomes hectic and problematic. To troubleshoot a random problem like this one, you need to log information related to the problem so that you can narrow down the root cause.
 
-This article briefly discusses the concept of Forms Authentication. It also discusses about various scenarios about a user being redirected to the login page and how to capture data that's relevant to isolating the problem. Additionally, it also discusses about how to implement an `IHttpModule` interface to log the Forms Authentication information.
+This article briefly discusses the concept of Forms Authentication. It also discusses various scenarios about a user being redirected to the login page and how to capture data that's relevant to isolating the problem. Additionally, it also discusses how to implement an `IHttpModule` interface to log the Forms Authentication information.
 
 ## Overview of ASP.NET Forms Authentication
 
 Forms authentication lets you authenticate users by using your own code and then maintain an authentication token in a cookie or in the URL. Forms authentication participates in the ASP.NET page life cycle through the `FormsAuthenticationModule` class. You can access forms authentication information and capabilities using the `FormsAuthentication` class.
 
-To use forms authentication, create a login page that collects credentials from the user and  includes code to authenticate the credentials. Typically, you configure the application to redirect requests to the login page when users try to access a protected resource, such as a page that requires authentication. If the user's credentials are valid, you can call methods of the `FormsAuthentication` class to redirect the request back to the originally requested resource with an appropriate authentication ticket (cookie). If you don't want the redirection, you can just get the forms authentication cookie or set it. On subsequent requests, your browser passes the authentication cookie with the request, which then bypasses the login page.
+To use forms authentication, create a login page that collects credentials from the user and includes code to authenticate the credentials. Typically, you configure the application to redirect requests to the login page when users try to access a protected resource, such as a page that requires authentication. If the user's credentials are valid, you can call methods of the `FormsAuthentication` class to redirect the request back to the originally requested resource with an appropriate authentication ticket (cookie). If you don't want the redirection, you can just get the forms authentication cookie or set it. On subsequent requests, your browser passes the authentication cookie with the request, which then bypasses the login page.
 
-By default, the `FormsAuthenticationModule` class is added in the *Machine.config* file. The `FormsAuthenticationModule` class manages the Forms Authentication process.
+By default, the `FormsAuthenticationModule` class is added in the **Machine.config** file. The `FormsAuthenticationModule` class manages the Forms Authentication process.
 
-The following is an entry from the *Machine.config* file:
+You can see the following entry in the **Machine.config** file:
 
 ```xml
 <httpModule> 
@@ -30,18 +31,7 @@ The following is an entry from the *Machine.config* file:
 </httpModule>
 ```
 
-You can configure forms authentication by using the authentication configuration element. For instance, you have a login page. In the configuration file, you specify a URL to redirect unauthenticated requests to the login page. Then define valid credentials, either in the *Web.config* file or in a separate file. The following example shows a section from a configuration file that specifies a login page and authentication credentials for the `Authenticate` method. The passwords have been encrypted by using the `HashPasswordForStoringInConfigFile` method.
-
-```xml
-<authentication mode="Forms"> 
-     <forms name="MyAuthCookie" loginUrl="/Login.aspx">     
-       <credentials passwordFormat="SHA1">        
-         <user name="Kim" password="07B7F3EE06F278DB966BE960E7CBBD103DF30CA6" />         
-         <user name="John" password="BA56E5E0366D003E98EA1C7F04ABF8FCB3753889"/>         
-       </credentials>
-     </forms>
-</authentication>
-```
+You can configure forms authentication by using the authentication configuration element, for example, setting a login page. In the configuration file, specify a URL to redirect unauthenticated requests to the login page. 
 
 After successful authentication, the `FormsAuthenticationModule` module sets the value of the User property to a reference to the authenticated user. The following code example shows how to programmatically read the identity of the forms-authenticated user.
 
@@ -63,7 +53,7 @@ You log on to the website. At some point, the client sends a request to the serv
 
 ### Scenario 2
 
-The forms authentication cookie can also be lost when the client's cookie limit is exceeded. In Microsoft Internet Explorer, there is a limit of 20 cookies. Once the counter reaches 20, the previous 19 cookies are removed from the client's collection. If the ASPXAUTH cookie is removed, you are redirected to the login page when the next request is processed.
+The forms authentication cookie can also be lost when the client's cookie limit is exceeded. In Microsoft Internet Explorer, there's a limit of 20 cookies. Once the counter reaches 20, the previous 19 cookies are removed from the client's collection. If the ASPXAUTH cookie is removed, you're redirected to the login page when the next request is processed.
 
 ### Scenario 3
 
@@ -71,26 +61,26 @@ After the request leaves the client, there are various layers that can affect th
 
 **Forms authentication ticket timed out**
 
-In ASP.NET 2.0 applications onwards, by default, the forms authentication timeout value has changed to be 30 minutes. This means that after 30 minutes of inactivity, you will be prompted to log in again.
+In ASP.NET 2.0 applications onwards, by default, the forms authentication `timeout` value has changed to be 30 minutes. This means that after 30 minutes of inactivity, you'll be prompted to log in again.
 
 > [!NOTE]
-> When you access a website each time, the 30-minute window clock is reset. Only if it's idle there's a timeout.
+> When you access a website each time, the 30-minute window clock is reset. Only if it's idle there's a time-out.
 
-If you want to change the timeout value to be longer, you can easily change the timeout value in your local *web.config* file (the timeout value is in minutes):
+If you want to change the `timeout` value to be longer, you can easily change the `timeout` value in your local *web.config* file (the `timeout` value is in minutes):
 
 ```xml
 <system.web> 
  <authentication mode="Forms">     
-   <forms timeout="50000000"/>                 
+   <forms timeout="120"/>                 
  </authentication>
 </system.web>
 ```
 
 ### Scenario 4
 
-Form authentication can expire prior to the value of the timeout attribute defined in the configuration file.
+Form authentication can expire prior to the value of the `timeout` attribute defined in the configuration file.
 
-If the forms authentication ticket is manually generated, the timeout property of the ticket will override the value that's set in the configuration file. Therefore, if that value is less than the value in the configuration file, the forms authentication ticket will expire before the configuration file timeout attribute value and vice-versa. For example, let's assume that the `FORMS` timeout attribute is set to 30 in the *Web.config* file and the expiration value of the ticket is set to 20 minutes. In this case, the forms authentication ticket will expire after 20 minutes and then you have to log on again.
+If the forms authentication ticket is manually generated, the `timeout` property of the ticket overrides the value that's set in the configuration file. Therefore, if that value is less than the value in the configuration file, the forms authentication ticket expires before the configuration file `timeout` attribute value and vice-versa. For example, let's assume that the `FORMS` timeout attribute is set to 30 in the *Web.config* file and the expiration value of the ticket is set to 20 minutes. In this case, the forms authentication ticket expires after 20 minutes and then you have to log on again.
 
 ```output
 Event code: 4005
@@ -119,31 +109,31 @@ You can determine if a request doesn't contain the cookie by enabling cookie log
 1. Make sure that the log format is W3C Extended Log file format.
 1. Select **Properties**.
 1. Select the **Advanced** tab, and then select **Extended Properties**.
-1. Under **Extended Properties**, select the **Cookie(cs(Cookie))** and the **Referer (cs(Referer))** checkboxes.
+1. Under **Extended Properties**, select the **Cookie(cs(Cookie))** and **Referer (cs(Referer))** checkboxes.
 
 After this problem occurs, determine which client had the problem and that client's IP address. Filter the IIS log on that client's IP address, and view the `<COOKIE>` column.
 
 > [!NOTE]
-> Use Log Parser to parse the IIS Logs. Download [Log Parser](https://www.microsoft.com/en-in/download/details.aspx?id=24659).
+> Use [Log Parser](https://www.microsoft.com/download/details.aspx?id=24659) to parse the IIS Logs.
 
 After you have the list of requests from a specific user, search for the requests to the login page. You would know they were redirected to this page, and you would want to see the requests before the redirection occurred. If you see something similar to the following, the client either didn't send the cookie or the cookie was removed on the network between the client and server.
 
 > [!NOTE]
-> The first request isn't likely to have a forms authentication cookie unless you are creating a persistent cookie. The IIS Log will only show the cookies that were received in the request. The first request to have the forms authentication cookie after a successful login attempt.
+> The first request isn't likely to have a forms authentication cookie unless you're creating a persistent cookie. The IIS Log will only show the cookies that were received in the request. The first request to have the forms authentication cookie after a successful login attempt.
 
 ### Troubleshooting scenario 2
 
 Microsoft Internet Explorer complies with the following RFC 2109 recommended minimum limitations:
 
 - At least 300 cookies.
-- At least 4096 bytes per cookie (as measured by the size of the characters that comprise the cookie non-terminal in the syntax description of the Set-Cookie header).
+- At least 4,096 bytes per cookie (as measured by the size of the characters that comprise the cookie non-terminal in the syntax description of the Set-Cookie header).
 - At least 20 cookies per unique host or domain name.
 
-The forms authentication cookie can also be lost when the client's cookie limit is exceeded. In Microsoft Internet Explorer, there is a limit of 20 cookies. Once the counter reaches 20, the previous 19 cookies are removed from the client's collection. If the ASPXAUTH cookie is removed, you are redirected to the login page when the next request is processed. You can use Fiddler to see the HTTP request or response headers to see if you are receiving the cookie from the client. Download [Fiddler](http://fiddler2.com/fiddler2/).
+The forms authentication cookie can also be lost when the client's cookie limit is exceeded. In Microsoft Internet Explorer, there's a limit of 20 cookies. Once the counter reaches 20, the previous 19 cookies are removed from the client's collection. If the ASPXAUTH cookie is removed, you're redirected to the login page when the next request is processed. You can use Fiddler to see the HTTP request or response headers to see if you're receiving the cookie from the client. Download [Fiddler](http://fiddler2.com/fiddler2/).
 
-Launch Fiddler tool on the client machine, remove existing HTTP traces, access your application implementing forms authentication and try to login into the application and observe the HTTP traffic on Fiddler to see if there's an exchange of forms authentication cookie happening between the client and server. After you capture the traffic, double-click a request, and then select **Headers** to see the Set-Cookie header. If you trace a successful login, you will see the Set-Cookie header in the response of a successful login.
+Launch Fiddler tool on the client machine, remove existing HTTP traces, access your application implementing forms authentication and try to login into the application and observe the HTTP traffic on Fiddler to see if there's an exchange of forms authentication cookie happening between the client and server. After you capture the traffic, double-click a request, and then select **Headers** to see the Set-Cookie header. If you trace a successful login, you'll see the Set-Cookie header in the response of a successful login.
 
-By default, IE can store a maximum of 20 cookies for each domain. If a server in the domain sends more than 20 cookies to a client computer, the browser on the client computer automatically discards some old cookies.
+By default, Internet Explorer can store a maximum of 20 cookies for each domain. If a server in the domain sends more than 20 cookies to a client computer, the browser on the client computer automatically discards some old cookies.
 
 Each cookie consists of a single name-value pair. This pair may be followed by attribute-value pairs that are separated by semicolons. This limit has been increased to simplify the development and the hosting of Web applications on domains that must use many cookies. Installing update 937143 increases the number of cookies that Internet Explorer can store for each domain from 20 to 50. For more information, see [Internet Explorer and Microsoft Edge frequently asked questions (FAQ) for IT Pros](/internet-explorer/kb-support/ie-edge-faqs).
 
@@ -153,7 +143,7 @@ After the request leaves the client, there are various layers that can affect th
 
 **Client request**
 
-This is a `GET` request after the user has been authenticated. The forms authentication ticket information is highlighted in grey. This confirms that the cookie information left the client. When you use a network capture tool, like Netmon, you see the traffic that actually went through the adapter.
+This is a `GET` request after the user has been authenticated. The forms authentication ticket information is highlighted in grey. This confirms that the cookie information left the client. When you use a network capture tool, like [WireShark](https://www.wireshark.org/download.html), you see the traffic that actually went through the adapter.
 
 ```output
 47 45 54 20 68 74 74 70-3a 2f 2f 6c 6f 63 61 6c   GET http://local
@@ -186,16 +176,22 @@ When you see the request that reached the server, make sure that the server rece
 
 ### Troubleshooting scenario 5
 
-- If the scenario involves a web farm, then the machineKeys should be same across everywhere. Use the following machineKey to maintain the consistency on all the servers on the farm:
+- If the scenario involves a web farm, make sure that the configuration files on each server in the web farm have the same value for the validation key and decryption keys, which are used for hashing and decryption, respectively. To maintain the consistency on all the servers in the farm, use the following machineKey:
 
-    ```xml
-    <machineKey validationKey="87AC8F432C8DB844A4EFD024301AC1AB5808BEE9D1870689B63794D33EE3B55CDB315BB480721A107187561F388C6BEF5B623BF31E2E725FC3F3F71A32BA5DFC" decryptionKey="E001A307CCC8B1ADEA2C55B1246CDCFE8579576997FF92E7" validation="SHA1" />
-    ```
+  ```xml
+  <machineKey validationKey="<yourKey>" decryptionKey="<yourKey>" validation="SHA1" />
+  ```
 
-- Compare the timeout values for both forms that is authentication module and the session module on all of the web servers.
-- Compare the *System.Web.dll* version under Framework folder for ASP.NET 4 between all of the web servers in the farm. Forms authentication failed for the request. The reason is that the ticket supplied was invalid. This happens due to missing Reliability Update 1 for MS .NET framework 4 on one of the web server.
+  For more information on machine keys, see [Machine Key](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831711(v=ws.11)) and [Plan Application Security](/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/planning-step-4-plan-application-security#44-machine-key-settings).
+
+  To learn how to generate machine keys, see [Machine Key Settings](/iis/application-frameworks/scenario-build-an-aspnet-website-on-iis/configuring-step-4-configure-application-security#44-machine-key-settings). 
+
+- Compare the `timeout` values for both forms, that is, the authentication module and the session module， on all of the web servers.
+- Compare the **System.Web.dll** version under the Framework folder for ASP.NET 4 between all of the web servers in the farm. Forms authentication failed for the request. The reason is that the ticket supplied was invalid. This happens due to missing Reliability Update 1 for MS .NET Framework 4 on one of the web servers.
 - Install the Reliability Update 1 for the .NET Framework 4 kb2533523 on the server that was missing it and rebooted the server. The issue is fixed. For more information, see [Reliability Update 1 for the .NET Framework 4](https://support.microsoft.com/topic/reliability-update-1-for-the-net-framework-4-5a8de0be-f4a9-f89e-e40d-f59dd1e353e5).
 
 ### More information
 
 - [Internet Explorer and Microsoft Edge per-domain cookie limit](/internet-explorer/kb-support/ie-edge-faqs)
+
+[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)] 

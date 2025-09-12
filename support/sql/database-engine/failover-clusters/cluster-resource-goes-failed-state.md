@@ -2,7 +2,7 @@
 title: Failed state and doesn't come online
 description: This article provides a resolution for the problem that occurs if resource-specific registry keys are missing.
 ms.date: 10/30/2020
-ms.custom: sap:Failover Clusters
+ms.custom: sap:Always On Failover Cluster Instance (FCI)
 ---
 
 # A SQL Server cluster resource goes to a "failed" state when you try to bring the resource online in SQL Server

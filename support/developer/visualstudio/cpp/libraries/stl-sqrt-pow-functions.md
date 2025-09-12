@@ -2,7 +2,7 @@
 title: Use sqrt and pow functions in Visual C++
 description: Describes how to use the STL sqrt function and the STL pow function in Visual C++.
 ms.date: 04/24/2020
-ms.custom: sap:C and C++ Libraries
+ms.custom: sap:C and C++ Libraries\C and C++ runtime libraries and Standard Template Library (STL)
 ms.topic: how-to
 ---
 # Use the STL sqrt and pow functions in Visual C++

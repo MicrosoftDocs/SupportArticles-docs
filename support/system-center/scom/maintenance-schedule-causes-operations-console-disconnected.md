@@ -1,7 +1,7 @@
 ---
 title: The Operations Manager Console is disconnected
 description: Fixes an issue in which the Operations Manager console is disconnected when you create a maintenance schedule that has more than 216 target objects.
-ms.date: 07/07/2020
+ms.date: 04/15/2024
 ---
 # Creating a maintenance schedule with more than 216 objects causes the Operations Manager console to disconnect
 

@@ -2,7 +2,7 @@
 title: Object Explorer intermittently crashes
 description: This article provides resolution for the problem where the Object Explorer intermittently hangs when you use SQL Server Management Studio 2012 or a later version.
 ms.date: 09/10/2020
-ms.custom: sap:Tools
+ms.custom: sap:SQL Server Management, Query and Data Tools
 ms.reviewer: cbenkler, daleche
 ---
 # Object Explorer intermittently hangs when you use SSMS 2012 or later

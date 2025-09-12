@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: brstor
 ms.date: 09/08/2023
+ms.custom: sap:Pricing, discounts, and taxes\Issues with taxes and charges in e-commerce storefront
 ---
 # Order summary subtotal doesn't include taxes on charges when using customized order summary modules
 

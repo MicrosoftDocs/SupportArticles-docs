@@ -1,17 +1,16 @@
 ---
 title: (Server Busy) error message when you try to scan a document
 description: Provides a resolution for fixing (Server Busy) error when you try to scan a document
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, philipd, match
-ms.custom: sap:issues-with-scanning, csstroubleshoot
-ms.technology: windows-client-printing
+ms.custom:
+- sap:print,fax,and scan\windows fax and scan (client)
+- pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # "Server Busy" error message when you try to scan a document  
 

@@ -1,16 +1,13 @@
 ---
 title: High Availability overview
 description: Overview of High Availability troubleshooting articles for Windows Server.
-ms.date: 06/17/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-server-high-availability
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # High Availability troubleshooting documentation for Windows Server
 
@@ -22,9 +19,11 @@ The topics in this section provide solutions and scenario guides to help you tro
 - Cannot failover a group
 - Cluster node is hanging
 - Cluster service fails to start
+- Cluster Shared Volume (CSV)
 - Cluster-Aware Updating (CAU)
 - Errors when running the Validation Wizard
 - Initial Cluster Creation or Adding node
+- Node removed from the cluster
 - Print clusters and High Availability Printing
 - Replacing hardware and updating the operating system
 - Root cause of an unexpected failover

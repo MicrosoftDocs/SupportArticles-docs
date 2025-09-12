@@ -1,9 +1,9 @@
 ---
 title: Things to try before calling Intune support
 description: Describes methods to try before you call Microsoft Intune support to resolve issues.
-ms.date: 12/20/2021
+ms.date: 02/11/2025
 search.appverid: MET150
-ms.custom: sap:General guidance or advisory
+ms.custom: sap:Set Up Intune\Set up administrators and manage roles
 ms.reviewer: kaushika
 ---
 # Make your Intune support call more effective

@@ -1,0 +1,1 @@
+Follow the steps in [View your user profile](/powerapps/user/view-your-user-profile).

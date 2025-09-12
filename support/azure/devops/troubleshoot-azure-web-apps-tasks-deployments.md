@@ -2,10 +2,9 @@
 title: Troubleshoot Azure Web App tasks and deployment issues
 description: This article provides the documentation for Azure Web App tasks and describes steps to capture debug logs for a deeper investigation of the tasks.
 ms.date: 05/10/2023
-ms.custom: sap:Pipelines
+ms.custom: sap:Pipelines - Deploying applications to Azure services
 ms.reviewer: dmittal, cathmill, v-sidong
 ms.service: azure-devops
-ms.subservice: ts-pipelines
 ---
 # Troubleshoot Azure Web App tasks and deployment issues
 

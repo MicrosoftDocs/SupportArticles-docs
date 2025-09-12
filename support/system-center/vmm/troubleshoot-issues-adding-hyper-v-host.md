@@ -1,8 +1,8 @@
 ---
 title: Troubleshoot issues when adding a Hyper-V host
 description: Describes how to troubleshoot issues when you add a Hyper-V host in System Center 2012 Virtual Machine Manager and later versions.
-ms.date: 07/13/2020
-ms.reviewer: jeffpatt
+ms.date: 04/09/2024
+ms.reviewer: wenca, jeffpatt
 ---
 # Troubleshoot issues when you add a Hyper-V host in Virtual Machine Manager
 
@@ -57,7 +57,7 @@ By default, VMM uses the following ports to communicate with the Hyper-V host:
 - TCP port 5985
 - TCP port 5986
 
-For more information about the ports that are used by VMM, see [Ports and Protocols for VMM](/previous-versions/system-center/system-center-2012-R2/gg710871(v=sc.12)?redirectedfrom=MSDN).
+For more information about the ports that are used by VMM, see [Ports and Protocols for VMM](/system-center/vmm/plan-ports-protocols).
 
 ## Step 4: Check for duplicate service principal names (SPNs)
 

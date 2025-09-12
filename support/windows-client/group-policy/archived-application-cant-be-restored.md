@@ -1,17 +1,16 @@
 ---
 title: Archived application can't be restored
 description: Group Policy settings may block automatic application updates. Blocked on-demand applications must be updated by other means before they can be used.
-ms.date: 09/25/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, erwong
-ms.custom: sap:applocker-or-software-restriction-policies, csstroubleshoot
-ms.technology: windows-client-group-policy
+ms.custom:
+- sap:group policy\group policy management (gpmc or gpedit)
+- pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Archived application can't be restored because of app update policies
 
@@ -41,6 +40,6 @@ The following GPOs prevent archived applications from restoring full versions:
 
 If either or both of these GPOs are enabled in your environment, your system administrator can use one of the following methods to push the full version of the application to the device:
 
-- If your organization uses [Microsoft Store for Business](https://businessstore.microsoft.com/store) to manage applications, the system administrator can push the application to the business store.
+- If your organization uses [Microsoft Store for Business](/lifecycle/announcements/microsoft-store-for-business-education-retiring) to manage applications, the system administrator can push the application to the business store.
 - If your organization uses [Microsoft Intune](/mem/intune/apps/apps-add) to manage devices, the system administrator can package the application and push the package to managed devices.
 - If your organization uses custom Windows images to provision devices, the system administrator can use the [DISM App Package](/windows-hardware/manufacture/desktop/dism-app-package--appx-or-appxbundle--servicing-command-line-options) tool to add the full resource packages for the application to the image. By using `dism /StubPackageOption:installfull`, the system administrator can make sure that the device is provisioned by using the full version of the application instead of the archived version.

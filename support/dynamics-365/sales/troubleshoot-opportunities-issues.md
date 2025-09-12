@@ -3,11 +3,9 @@ title: Troubleshoot issues with an opportunity
 description: Provides resolutions for the issues that may occur when working with opportunities in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
-ms.topic: troubleshooting
-ms.date: 02/28/2022
-ms.subservice: d365-sales-sales
+ms.date: 06/25/2024
+ms.custom: sap:Opportunity
 ---
-
 # Troubleshoot issues with opportunities
 
 Follow the instructions in this article to troubleshoot the issues you might face when you work with opportunities.
@@ -142,6 +140,37 @@ The out-of-the-box **Stakeholders** subgrid only shows connections that have a c
 #### Resolution
 
 1. In the opportunity record, select the **Related** tab, and then select **Connections**.
-2. In the **Connections** subgrid, select the connection record you added.
-3. Open the connection role selected in the **As this role** field.
-4. Make sure that **Connection Role Category** is set to **Stakeholder**. If it isn't, select **Stakeholder** in the **Connection Role Category** drop-down list.
+1. In the **Connections** subgrid, select the connection record you added.
+1. Open the connection role selected in the **As this role** field.
+1. Make sure that **Connection Role Category** is set to **Stakeholder**. If it isn't, select **Stakeholder** in the **Connection Role Category** drop-down list.
+
+## Opportunity pipeline view issues
+
+### Issue 1: Pipeline view doesn't display bubbles in the Deal tracker
+
+#### Cause
+
+There are several reasons why the bubbles might not be visible:
+
+- The [bubble chart](/dynamics365/sales/use-opportunity-pipeline-view#understand-the-opportunity-pipeline-charts) shows only the first 50 valid opportunity entries, meaning those with the defined x-axis, y-axis, radius data, and **Segment by** fields. This might result in some or all of the bubbles not showing up on the graph despite being present in the grid view.
+- If the [msdyn_Score](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Score) (opportunity score) and [msdyn_Grade](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Grade) (opportunity grade) fields are selected as the **Tooltips** fields for the Deal tracker, the "not null" filters of these fields will be applied to the opportunities for the bubble chart, potentially filtering out all opportunities from the chart despite being visible in the grid view.
+
+#### Resolution
+
+To solve this issue, take the following steps:
+
+1. Ensure that the fields selected for the **Deal tracker** setting in **App Settings** on the [opportunity pipeline settings page](/dynamics365/sales/opportunity-pipeline-view-for-admins#open-the-opportunity-pipeline-view-settings-page) have values for the x-axis, y-axis, radius data, and **Segment by** fields.
+
+1. Avoid using the [msdyn_Score](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Score) (opportunity score) and [msdyn_Grade](/dynamics365/sales/developer/entities/msdyn_predictivescore#BKMK_msdyn_Grade) (opportunity grade) fields as the **Tooltips**, x-axis, y-axis, radius, and **Segment by** fields to ensure the bubbles appear in the Deal tracker. Alternatively, [enable predictive opportunity scoring](/dynamics365/sales/digital-selling-scoring#set-up-lead-and-opportunity-scoring) in the organization to populate data for the `msdyn_Score` and `msdyn_Grade` fields.
+
+### Issue 2: Pipeline view doesn't show all the bubbles in the Deal tracker
+
+The bubble chart is designed to display a maximum of 50 opportunities to maintain clarity of the bubble chart.
+
+### Issue 3: Deal manager access privileges are automatically assigned to newly created roles
+
+When an administrator publishes deal manager settings from **App Settings** on the [opportunity pipeline settings page](/dynamics365/sales/opportunity-pipeline-view-for-admins#open-the-opportunity-pipeline-view-settings-page), the `prvReadmsdyn_dealmanageraccess` and `prvReadmsdyn_dealmanagersettings` privileges are automatically granted to all newly created roles in the environment.
+
+This behavior is by design. It allows users to read the deal manager settings configuration to display the bubble chart in the pipeline view.
+
+For more information, see [Manage opportunities](/dynamics365/sales/opportunity-management-overview).

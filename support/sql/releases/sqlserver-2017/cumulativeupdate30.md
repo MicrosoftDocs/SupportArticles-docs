@@ -1,8 +1,9 @@
 ---
 title: Cumulative update 30 for SQL Server 2017 (KB5013756)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 30 (KB5013756).
-ms.date: 08/04/2023
-ms.custom: KB5013756
+ms.date: 03/20/2025
+ms.update-cycle: 1095-days
+ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5013756, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows
 - SQL Server 2017 on Linux
@@ -15,7 +16,7 @@ _Version:_ &nbsp; 14.0.3451.2
 
 ## Summary
 
-This article describes Cumulative Update package 30 (CU30) for Microsoft SQL Server 2017. This update contains 8 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2017 Cumulative Update 29, and it updates components in the following builds:
+This article describes Cumulative Update package 30 (CU30) for Microsoft SQL Server 2017. This update contains 7 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2017 Cumulative Update 29, and it updates components in the following builds:
 
 - SQL Server - Product version: **14.0.3451.2**, file version: **2017.140.3451.2**
 - Analysis Services - Product version: **14.0.249.90**, file version: **2017.140.249.90**
@@ -39,7 +40,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 
 | Bug reference | Description | Fix area | Component | Platform |
 |---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|-------------------------------------------|----------|
-| <a id=14812566>[14812566](#14812566) </a> | A latch time-out occurs and the IOCP listener stalls when Service Broker connects to an endpoint by using database mirroring. </br></br>**Note**: This fix is available when TF 12323 is enabled. |SQL Server Engine | High Availability and Disaster Recovery | Windows |
 | <a id=14605069>[14605069](#14605069) </a> | An access violation occurs when you try to truncate specific partitions of a table by using the `$Partition` function if the function name or table name doesn't exist. |SQL Server Engine | Metadata | Windows |
 | <a id=14669410>[14669410](#14669410) </a> | This fix resolves the following issues: </br></br>- An assertion failure occurs when your query contains the `MERGE` statement. </br></br>- The online index rebuild can't finish when you use the simple recovery model.| SQL Server Engine | Methods to access stored data | All |
 | <a id=14644630>[14644630](#14644630) </a> | Dropping temp tables causes an unresolved deadlock and dump file in some rare cases. | SQL Server Engine | Programmability | Windows |
@@ -51,7 +51,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 ## How to obtain or download this or the latest cumulative update package
 
 <details>
-<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
+<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
 
 The following update is available from the Microsoft Download Center:
 
@@ -62,7 +62,7 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 </details>
 
 <details>
-<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog </b></summary>
+<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog </b></summary>
 
 > [!NOTE]
 >
@@ -88,7 +88,7 @@ For installation instructions and direct links to the CU package downloads, see 
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the *SQLServer2017-KB5013756-x64.exe* file through the following command:
+You can verify the download by computing the hash of the *SQLServer2017-KB5013756-x64.exe* file through the following command:
 
 `certutil -hashfile SQLServer2017-KB5013756-x64.exe SHA256`
 
@@ -1078,10 +1078,9 @@ The third-party products that are discussed in this article are manufactured by 
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
 - [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
 - [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)
-

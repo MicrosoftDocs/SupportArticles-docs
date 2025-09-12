@@ -71,6 +71,8 @@
 
 - name: Print Driver
   items:
+  - name: MediaType default setting isn't applied in PSA
+    href: mediatype-default-value-not-applied-in-psa.md
   - name: Recurring icon is black when printing a calendar
     href: recurring-icon-background-is-black.md
 

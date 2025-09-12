@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where data isn't updated on the
 ms.author: sdas
 ms.reviewer: sdas, ankugupta
 ms.date: 07/10/2023
+ms.custom: sap:Knowledge Management\Search not behaving as expected
 ---
 # Integrated search provider data on the Insights tab isn't updated after a scheduled refresh
 

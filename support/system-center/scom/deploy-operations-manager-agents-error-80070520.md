@@ -1,7 +1,7 @@
 ---
 title: Error 80070520 when deploying Operations Manager agents
 description: Fixes an issue in which you get error 0x80070520 (ERROR_NO_SUCH_LOGON_SESSION) when you deploy Operations Manager agents by using the Install-SCOMAgent cmdlet.
-ms.date: 09/02/2020
+ms.date: 04/15/2024
 ms.reviewer: timhe, adoyle, cwallen
 ---
 # Deploying Operations Manager agents using the Install-SCOMAgent cmdlet fails with error 80070520

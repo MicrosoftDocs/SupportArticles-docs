@@ -1,9 +1,9 @@
 ---
 title: Troubleshooting intermittent connection time-outs between availability group replicas
 description: This article helps you diagnose intermittent connection time-outs that are reported between availability group replicas. 
-ms.date: 04/04/2023
-ms.custom: sap:Availability Groups
-ms.reviewer: ramakoni, cmathews, v-jayaramanp
+ms.date: 04/08/2025
+ms.custom: sap:Always On Availability Groups (AG)
+ms.reviewer: ramakoni, cmathews, v-jayaramanp, jopilov
 ---
 
 # Troubleshooting intermittent connection time-outs between availability group replicas
@@ -244,7 +244,7 @@ The following procedure starts a Windows `netsh` network tracing on the replicas
 
     ```console
     PS C:\Users\sqladmin> Schtasks /Delete /tn Event35206Task /F
-    PS C:\Users\sqladmin> Schtasks /Delete /tn Event35206Task /F
+    PS C:\Users\sqladmin> Schtasks /Delete /tn Event35267Task /F
     ```
 
 Analysis of the network trace is outside the scope of this troubleshooter. If you can't interpret the network trace, contact the Microsoft SQL Server Support team and provide the trace along with other requested log files for root cause analysis.

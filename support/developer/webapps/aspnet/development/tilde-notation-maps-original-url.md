@@ -2,7 +2,7 @@
 title: Tilde notation maps to original URL
 description: This article provides resolutions for the problem that tilde notation embedded in HTML elements in Web Pages Razor V3 maps to the original URLs by using the IIS URL rewrite. This behavior differs from the behavior of Web Pages Razor V2.
 ms.date: 04/07/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ms.reviewer: kanchanm
 ---
 # Tilde notation maps to the original URLs by using IIS URL rewrite in ASP.NET Web Pages Razor V3

@@ -1,23 +1,21 @@
 ---
 title: Terminal Server error messages 2200 to 2299
 description: Describes Terminal Server error messages 2200 to 2299.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 04/02/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
-ms.reviewer: willgloy, kaushika
-ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.reviewer: willgloy, kaushika, warrenw
+ms.custom:
+- sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
+- pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Terminal Server error messages: 2200 to 2299
 
 This article describes Terminal Server error messages 2200 to 2299.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 186555
 
 ## Error 2200
@@ -87,6 +85,9 @@ Action: No action is needed.
 ## Error 2208
 
 Error 2208 isn't a valid error message.
+
+> [!NOTE]
+> This error code is added for numerical completeness only. You won't see this error code.
 
 ## Error 2209
 

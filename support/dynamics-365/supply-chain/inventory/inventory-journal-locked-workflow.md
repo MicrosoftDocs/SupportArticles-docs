@@ -2,7 +2,7 @@
 title: Your inventory journal is locked and the workflow batch job doesn't work
 description: Provides a resolution for the issue that one inventory journal is locked by an operation and isn't being released.
 author: sherry-zheng
-ms.date: 05/31/2021
+ms.date: 05/16/2024
 ms.topic: troubleshooting
 ms.search.form: 
 audience: Application User
@@ -11,6 +11,7 @@ ms.search.region: Global
 ms.author: chuzheng
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.16
+ms.custom: sap:Inventory management\Issues with the inventory journal
 ---
 
 # Your inventory journal is locked and the workflow batch job doesn't work

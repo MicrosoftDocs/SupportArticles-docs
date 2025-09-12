@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where chats aren't initiated wh
 ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 05/23/2023
+ms.custom: sap:Live chat channel
 ---
 # Chat isn't initiated when starting a new chat from the portal
 

@@ -2,7 +2,7 @@
 title: Character data is incorrect when the code page differs
 description: Provides workarounds for problems that character data is represented incorrectly when the code page of the client computer differs from the code page of the database.
 ms.date: 07/07/2023
-ms.custom: sap:Database Design and Development
+ms.custom: sap:Database or Client application Development
 ms.reviewer: aartigoyle, jopilov, v-sidong
 ---
 # Character data is represented incorrectly when the client computer's code page differs from the database's

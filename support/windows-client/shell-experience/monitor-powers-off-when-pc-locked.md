@@ -1,17 +1,16 @@
 ---
 title: Monitor powers off when computer is locked
 description: Describes a by-design behavior that computer monitor turns off after 1 minute when the computer is locked
-ms.date: 09/09/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:lock-screen-or-screensaver, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.custom:
+- sap:windows desktop and shell experience\lock screen or screensaver
+- pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Monitor powers off after 1 minute when PC is locked
 
@@ -37,9 +36,9 @@ This behavior is by design in Windows. By default, when the console is locked, W
 
 Using the PowerCfg.exe utility, you can configure the display timeout used when the PC is in an unlocked state as well as when it is at a locked screen. From an administrative command prompt, the following commands can be used to control the display timeout:
 
-- `powercfg.exe /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE \<time in seconds>`
+- `powercfg.exe /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE <time in seconds>`
 
-- `powercfg.exe /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOCONLOCK \<time in seconds>`
+- `powercfg.exe /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOCONLOCK <time in seconds>`
 
 - `powercfg.exe /setactive SCHEME_CURRENT`
 
@@ -59,5 +58,5 @@ powercfg.exe -attributes SUB_VIDEO 8EC4B3A5-6868-48c2-BE75-4F3044BE88A7 -ATTRIB_
 To hide the option, run the following command:
 
 ```console
-powercfg.exe -attributes SUB_VIDEO 8EC4B3A5-6868-48c2-BE75-4F3044BE88A7 +ATTRIB_HIDE`
+powercfg.exe -attributes SUB_VIDEO 8EC4B3A5-6868-48c2-BE75-4F3044BE88A7 +ATTRIB_HIDE
 ```

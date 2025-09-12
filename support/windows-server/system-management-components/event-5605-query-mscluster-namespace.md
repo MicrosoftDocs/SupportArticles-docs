@@ -1,17 +1,16 @@
 ---
 title: Warning Event ID 5605 is logged in Application log
 description: Describes an issue that Warning Event ID 5605 is logged in Application log when querying MSCluster namespace through WMI.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:wmi, csstroubleshoot
-ms.technology: windows-server-system-management-components
+ms.custom:
+- sap:system management components\wmi management and troubleshooting
+- pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Warning Event ID 5605 is logged in Application log when querying MSCluster namespace through WMI
 

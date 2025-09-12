@@ -2,7 +2,7 @@
 title: Information collected by Visual Studio Remote Debugger
 description: This article lists information collected by Visual Studio Remote Debugger diagnostics.
 ms.date: 04/27/2020
-ms.custom: sap:Debuggers and analyzers
+ms.custom: sap:Debuggers and Analyzers\Visual Studio Remote Debugger
 ---
 # Visual Studio Remote Debugger diagnostics
 

@@ -1,17 +1,16 @@
 ---
 title: Backup fails when you create system image
 description: Resolves an issue where backup fails when you create a system image.
-ms.date: 09/14/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 01/15/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
-ms.technology: windows-client-backup-and-storage
+ms.custom:
+- sap:backup,recovery,disk,and storage\configuring and using windows backup or other recovery
+- pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Backup fails when you try to create a system image
 

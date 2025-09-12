@@ -2,7 +2,7 @@
 title: Store ASP.NET SQL Server mode session state
 description: This article describes how to configure ASP.NET SQL Server mode session state management.
 ms.date: 03/26/2020
-ms.custom: sap:FTP authentication and authorization
+ms.custom: sap:General Development
 ms.topic: how-to
 ---
 # Configure SQL Server to store ASP.NET session state  

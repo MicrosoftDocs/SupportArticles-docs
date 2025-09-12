@@ -2,6 +2,7 @@
 title: Visual Studio 2012 crashes with StarDict-3
 description: This article describes an issue where Visual Studio 2012 may crash with StarDict-3, and provides a workaround. 
 ms.date: 05/16/2022
+ms.custom: sap:Integrated Development Environment (IDE)\Other
 ---
 
 # Visual Studio 2012 may crash with StarDict-3

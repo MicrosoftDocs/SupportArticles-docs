@@ -2,7 +2,7 @@
 title: DataGrid controls display incorrectly in pages
 description: This article provides resolutions for the problem that data grid may not appear when you view an .aspx page that contains a DataGrid control.
 ms.date: 04/07/2020
-ms.custom: sap:Development
+ms.custom: sap:General Development
 ms.reviewer: joelrewe, anandh
 ---
 # DataGrid control doesn't display correctly in .aspx page

@@ -1,19 +1,19 @@
 ---
 title: License key expired after migrating the Orchestrator database
 description: Fixes an issue where you're prompted that the license key is expired in Orchestrator Designer after you migrate an Orchestrator database from one instance of SQL Server to another.
-ms.date: 08/04/2020
+ms.date: 06/26/2024
 ms.reviewer: nicholad
 ---
 # Orchestrator Designer generates a prompt for a license key after you migrate the Orchestrator database
 
 This article helps you fix an issue where you're prompted that the license key is expired in Orchestrator Designer after you migrate an Orchestrator database from one instance of Microsoft SQL Server to another.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 Orchestrator, Microsoft System Center 2012 R2 Orchestrator  
+_Applies to:_ &nbsp; All versions of Orchestrator  
 _Original KB number:_ &nbsp; 2920037
 
 ## Symptoms
 
-When you migrate the Orchestrator database from one instance of SQL Server to another and then try to open Orchestrator Designer in Microsoft System Center 2012 Orchestrator or in System Center 2012 R2 Orchestrator, Orchestrator Designer starts to open and then generates a prompt that indicates that the license key expired. When you enter a valid key and then select **OK**, the same prompt appears.
+When you migrate the Orchestrator database from one instance of SQL Server to another and then try to open Orchestrator Designer in Microsoft System Center Orchestrator, Orchestrator Designer starts to open and then generates a prompt that indicates that the license key expired. When you enter a valid key and then select **OK**, the same prompt appears.
 
 ## Cause
 

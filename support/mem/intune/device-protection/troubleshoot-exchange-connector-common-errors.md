@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot common errors for the Intune Exchange connector
 description: Troubleshoot and resolve common error codes for the on-premises Microsoft Intune Exchange Connector.
-ms.date: 12/13/2021
+ms.date: 02/11/2025
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Configure Devices - Windows\Email
 ---
 # Resolve common errors for the Intune Exchange Connector
 
@@ -119,4 +120,4 @@ To assign the **Log on as a service** user right to the **WIEC_User** service ac
 4. In the right pane, double-click **Log on as a service**.
 5. Select **Add User or Group**, add **WIEC_USER** to the policy, and then select **OK** two times.
 
-If the **Log on as a service** user right was assigned to **WIEC_User** but was later removed, contact the domain administrator to determine whether a Group Policy setting is overwriting it.  
+If the **Log on as a service** user right was assigned to **WIEC_User** but was later removed, contact the domain administrator to determine whether a Group Policy setting is overwriting it.

@@ -1,17 +1,18 @@
 ---
 title: Cluster service fails to start troubleshooting guidance
 description: Provides guidance for when a cluster service fails to start in a Windows-based failover cluster.
-ms.date: 05/09/2022
+ms.date: 01/15/2025
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:cluster-service-fails-to-start, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.custom:
+- sap:clustering and high availability\cluster service fails to start
+- pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Cluster service fails to start troubleshooting guidance
 
