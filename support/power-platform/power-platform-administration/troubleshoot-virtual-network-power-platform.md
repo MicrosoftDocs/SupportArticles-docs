@@ -43,7 +43,8 @@ The module includes several functions that can be used to diagnose and troublesh
 - [Test-DnsResolution](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/docs/en-US/Microsoft.PowerPlatform.EnterprisePolicies/Test-DnsResolution.md): Tests the DNS resolution for the specified domain name.
 - [Test-NetworkConnectivity](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/docs/en-US/Microsoft.PowerPlatform.EnterprisePolicies/Test-NetworkConnectivity.md): Tests the network connectivity between the Power Platform environment and the specified Virtual Network.
 
-### Issues with the diagnostic module
+### Report issues with the diagnostic module
+
 
 If you encounter issues while running the diagnostic module, report them through the GitHub repository where the module is hosted. The repository is available at: [PowerPlatform-EnterprisePolicies](https://github.com/microsoft/PowerPlatform-EnterprisePolicies).
 
