@@ -38,3 +38,5 @@ To resolve this problem, follow these steps:
 1. Use an email address that has a unique domain (for example, your organization's email domain).
 2. Create a new user in Azure that has a unique domain, and assign subscription owner permissions to that user.
 3. Retry the Astro installation from the Azure Marketplace.
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

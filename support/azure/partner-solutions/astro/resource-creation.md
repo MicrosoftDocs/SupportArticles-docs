@@ -50,3 +50,5 @@ Your user profile has to be updated to include key business information for Astr
 - If the deployment process takes more than three hours to complete, contact support.
 - If the deployment fails and the Astro resource has a status of `Failed`, delete the resource. Then, try again to create the resource.
 - If you receive a "DeploymentFailed" error message, check the status of your Azure subscription. Make sure that it isn't suspended and has no billing issues.
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
