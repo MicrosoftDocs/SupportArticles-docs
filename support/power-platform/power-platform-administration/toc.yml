@@ -7,6 +7,6 @@
 - name: Support resources
   items:
     - name: Power Platform support
-      href: https://learn.microsoft.com/power-platform/admin/support-overview
+      href: /power-platform/admin/support-overview
     - name: Power Platform Community forum
       href: https://community.powerplatform.com/forums/thread/

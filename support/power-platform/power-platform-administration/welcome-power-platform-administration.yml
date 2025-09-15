@@ -5,7 +5,7 @@ summary: Welcome to Power Platform Administration troubleshooting. These article
 metadata:
   title: Power Platform Administration troubleshooting
   description: Landing page for Power Platform Administration troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: power-platform-administration #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: aartig13 #Required; your GitHub user alias, with correct capitalization.
   ms.author: aartigoyle #Required; microsoft alias of author; optional team alias.

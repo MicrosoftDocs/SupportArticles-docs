@@ -5,7 +5,6 @@ author: faix
 ms.component: pa-admin
 ms.topic: concept-article
 ms.date: 09/15/2025
-ms.subservice: admin
 ms.author: osfaixat
 ms.reviewer: sericks
 search.audienceType: 
@@ -59,7 +58,7 @@ If you have verified that everything is correctly configured but you are still e
 Get-EnvironmentRegion -EnvironmentId "00000000-0000-0000-0000-000000000000"
 ```
 
-Your environment belongs to a specific PowerPlatform region. However, a PowerPlatform region can span multiple Azure regions. You need to ensure that your Virtual Network is configured in both of the Azure regions that correspond to your PowerPlatform region. Your environment can be located in either of the two Azure regions, and it can also automatically failover between them. Therefore, to ensure high availability and connectivity, you should configure your Virtual Network in both Azure regions associated with your PowerPlatform region. You can find the mapping of the PowerPlatform regions to Azure regions that are support for the Virtual Network functionality at [Power Platform regions](./vnet-support-overview.md#supported-regions).
+Your environment belongs to a specific PowerPlatform region. However, a PowerPlatform region can span multiple Azure regions. You need to ensure that your Virtual Network is configured in both of the Azure regions that correspond to your PowerPlatform region. Your environment can be located in either of the two Azure regions, and it can also automatically failover between them. Therefore, to ensure high availability and connectivity, you should configure your Virtual Network in both Azure regions associated with your PowerPlatform region. You can find the mapping of the PowerPlatform regions to Azure regions that are support for the Virtual Network functionality at [Power Platform regions](/power-platform/admin/vnet-support-overview#supported-regions).
 
 ### Scenario: Hostname not found
 
@@ -72,7 +71,7 @@ Test-DnsResolution -EnvironmentId "00000000-0000-0000-0000-000000000000" -HostNa
 This command tests the DNS resolution for the specified hostname in the context of your Power Platform environment. The request will initiate from the subnet that you have delegated and will attempt to resolve the hostname using the DNS server that is configured for your Virtual Network. If the hostname isn't being resolved correctly, you may need to check your DNS settings and ensure that the hostname is correctly configured.
 
 > [!IMPORTANT]
-> If you notice that your DNS setup is incorrect and need to update the DNS server settings for your Virtual Network, see [Can I update the DNS address of my Virtual Network after it's delegated to "Microsoft.PowerPlatform/enterprisePolicies"?](vnet-support-overview.md#can-i-update-the-dns-address-of-my-virtual-network-after-its-delegated-to-microsoftpowerplatformenterprisepolicies)
+> If you notice that your DNS setup is incorrect and need to update the DNS server settings for your Virtual Network, see [Can I update the DNS address of my Virtual Network after it's delegated to "Microsoft.PowerPlatform/enterprisePolicies"?](/power-platform/admin/vnet-support-overview#can-i-update-the-dns-address-of-my-virtual-network-after-its-delegated-to-microsoftpowerplatformenterprisepolicies)
 
 ### Scenario: Unable to connect to the resource
 
