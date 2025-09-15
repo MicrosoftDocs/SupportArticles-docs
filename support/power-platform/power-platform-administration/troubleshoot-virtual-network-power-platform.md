@@ -12,10 +12,10 @@ search.audienceType:
 contributors:
 ms.custom: sap:Power Platform Administration
 ---
+
 # Troubleshoot Virtual Network issues
 
 This article provides guidance on troubleshooting common scenarios for [Virtual Network](/power-platform/admin/vnet-support-overview) in Power Platform. It focuses on the use of a PowerShell module to help you identify and resolve issues related to Virtual Network configurations.
-
 
 ## Diagnostics PowerShell Module
 
@@ -53,7 +53,7 @@ To report an issue, go to the Issues section of the repository and create a [new
 
 ## How to troubleshoot common scenarios
 
-### Scenario: Misconfiguration of regions
+### Misconfiguration of regions
 
 If you have verified that everything is correctly configured but you're still experiencing issues, you can use the `Get-EnvironmentRegion` function from the Diagnostics PowerShell Module to check if the region of your Power Platform environment is the same as the regions where you have been configuring your Virtual Network. You can run the following command:
 
@@ -63,7 +63,7 @@ Get-EnvironmentRegion -EnvironmentId "00000000-0000-0000-0000-000000000000"
 
 Your environment belongs to a specific PowerPlatform region. However, a PowerPlatform region can span multiple Azure regions. You need to ensure that your Virtual Network is configured in both of the Azure regions that correspond to your PowerPlatform region. Your environment can be located in either of the two Azure regions, and it can also automatically fail over between them. Therefore, to ensure high availability and connectivity, you should configure your Virtual Network in both Azure regions associated with your PowerPlatform region. You can find the mapping of the PowerPlatform regions to Azure regions that are support for the Virtual Network functionality at [Power Platform regions](/power-platform/admin/vnet-support-overview#supported-regions).
 
-### Scenario: Hostname not found
+### Hostname not found
 
 If you're experiencing issues with hostname resolution, you can use the `Test-DnsResolution` function from the Diagnostics PowerShell Module to check if the hostname is being resolved correctly. You can run the following command:
 
@@ -76,7 +76,7 @@ This command tests the DNS resolution for the specified hostname in the context 
 > [!IMPORTANT]
 > If you notice that your DNS setup is incorrect and need to update the DNS server settings for your Virtual Network, see [Can I update the DNS address of my Virtual Network after it's delegated to "Microsoft.PowerPlatform/enterprisePolicies"?](/power-platform/admin/vnet-support-overview#can-i-update-the-dns-address-of-my-virtual-network-after-its-delegated-to-microsoftpowerplatformenterprisepolicies)
 
-### Scenario: Unable to connect to the resource
+### Unable to connect to the resource
 
 If you're experiencing issues with connectivity to a resource, you can use the `Test-NetworkConnectivity` function from the Diagnostics PowerShell Module to check if there's connectivity. You can run the following command:
 
@@ -90,7 +90,7 @@ This command attempts to establish a TCP connection to the specified destination
 > This command only tests if a TCP connection can be established to the specified destination and port. It doesn't test if the resource is actually available or if there are any application-level issues that might be preventing access to the resource.
 > Furthermore, some firewalls might be allowing TCP connections to be established but blocking actual traffic to the resource (that is, HTTPS). Therefore, even if the command indicates that there's network connectivity, it doesn't guarantee that the resource is fully accessible.
 
-### Scenario: Connectivity is successful, but the application is still not working
+### Connectivity is successful, but the application is still not working
 
 If the connectivity tests are successful, but you're still experiencing issues with your application, you might need to check the application-level settings and configurations. Things that you can check include:
 
