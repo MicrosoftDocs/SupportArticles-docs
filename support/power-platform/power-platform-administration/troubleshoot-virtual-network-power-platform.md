@@ -10,6 +10,7 @@ ms.reviewer: sericks
 search.audienceType: 
   - admin
 contributors:
+ms.custom: sap:Power Platform Administration
 ---
 # Virtual Network troubleshooting
 
