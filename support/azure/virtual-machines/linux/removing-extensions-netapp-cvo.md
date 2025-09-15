@@ -50,7 +50,7 @@ To resolve this issue, run the following script on every VM:
     $resourceGroup = "RGname" 
     $vmName = "VMName" 
     $apiVersion = "2025-04-01" 
-    $uri = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroup/providers/Microsoft.Compute/virtualMachines/$vmName?'api-version=$apiVersion" 
+    $uri = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroup/providers/Microsoft.Compute/virtualMachines/$vmName'?api-version=$apiVersion" 
     $response = Invoke-AzRestMethod -Method GET -Uri $uri 
     $vmModel = $response.Content | ConvertFrom-Json 
     $vmModel.resources = @() 
