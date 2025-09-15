@@ -33,16 +33,17 @@ This error occurs because the site is actively protected or was protected in the
 
 ## Resolution  
 
-To delete the backup of the site that you want to delete, use the following steps to submit a support request to Microsoft:
+If you want to delete backups of specific sites, mailboxes, or oneDrive to comply with GDPR regulations, you can do so using **Admin PowerShell cmdlets.**
 
-1. Sign in to the Microsoft 365 admin center by using your administrator credentials.
-1. Navigate to the following URL:  
+> [!NOTE]
+> For you to be able to offboard a site, mailbox, or oneDrive, it should be removed from policy first. That is, its **policy-id** should be empty and state as "unprotected".
 
-   [https://aka.ms/ProtectedSiteDeletion](https://aka.ms/ProtectedSiteDeletion)
+Here's the steps you can follow:
 
-   This link populates the "Microsoft 365 Backup Protected Site" query in the Microsoft 365 admin center.
-1. Select **Contact support**, and then select a contact method.
-1. Leave the prepopulated **Title** field as is and the **Description** field blank.
-1. Fill in the other required fields, and then select **Contact me**.
+1. Get the **protection unit-id** for the site, user, or mailbox you would like to offboard using the [List driveProtectionUnits PowerShell cmdlet](/graph/api/backuprestoreroot-list-driveprotectionunits).
 
-When Microsoft Support contacts you about the service request, provide the site URL and other relevant information. After the site's backup is deleted, you can delete the site.
+1. To initiate the offboarding progress, use the [protectionUnitBase: offboard PowerShell cmdlet](/graph/api/protectionunitbase-offboard).
+
+1. If you want to cancel the offboarding within the 90-day grace period, use the [protectionUnitBase: cancelOffboard PowerShell cmdlet](/graph/api/protectionunitbase-canceloffboard).
+
+Learn more about the entire offboarding cycle, cancellation and grace period [here](/microsoft-365/backup/backup-offboarding?view=o365-worldwide).
