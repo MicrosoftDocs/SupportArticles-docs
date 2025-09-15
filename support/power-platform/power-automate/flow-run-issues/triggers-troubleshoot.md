@@ -346,3 +346,9 @@ To ensure your flows continue to function as expected, follow these steps:
   
 > [!NOTE]
 > If a flow uses an HTTP action to call another flow, the parent flow is considered to be an external system. The URL in the parent flow should be updated with the new URL that is displayed in the child flow's trigger card. However, if the child flow is called through the **Run a child flow** action no change is needed.
+>
+### Get admin view of all flows
+
+Admins can also use Powershell script (https://www.powershellgallery.com/packages/Microsoft.PowerApps.Administration.PowerShell/2.0.216) to list all flows with these triggers along with flowID and environmentID to facilitate the update. 
+<img width="3837" height="893" alt="image" src="https://github.com/user-attachments/assets/cf203563-202a-478e-acc5-c979f7721ade" />
+
