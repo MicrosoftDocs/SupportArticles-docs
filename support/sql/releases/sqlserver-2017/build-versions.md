@@ -15,7 +15,7 @@ This article lists the Microsoft SQL Server 2017 builds that were released after
 ## SQL Server 2017 Azure Connect Pack builds
 
 > [!NOTE]
-> Azure Connect Feature Pack is optional and should be installed only if you intend to connect SQL Server with Azure SQL Managed Instance.
+> Starting with [KB5058714](https://support.microsoft.com/topic/cdc42d67-b4a1-4e6a-9f7a-11da1e733218), all GDR and CU releases of SQL Server 2017 automatically include the Azure Connect Feature Pack. In earlier releases, the Azure Connect Feature Pack is not included and must be installed manually if you intend to connect SQL Server with Azure SQL Managed Instance.
 
 | Cumulative update name | SQL Server product version | SQL Server (sqlservr.exe) file version | Analysis Services product version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |---------------|--------------|------------------|-------------|-----------------|------------------------------------|--------------------|
