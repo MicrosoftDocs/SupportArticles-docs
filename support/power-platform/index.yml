@@ -35,7 +35,7 @@ productDirectory:
   - title: Power Platform Administration 
     imageSrc: "../media/hub-landing/power-platform-scalable.svg"
     summary: Troubleshooting articles for Power Platform Administration
-    url: power-platform-administration/welcome-power-platform-administration.yml
+    url: administration/welcome-administration.yml
 
 additionalContent:
 # Supports up to 3 sections

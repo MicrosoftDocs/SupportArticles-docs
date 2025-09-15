@@ -1,0 +1,13 @@
+items:
+  - name: Power Platform Administration Troubleshooting
+    href: welcome-power-platform-administration.yml
+  - name: Environment Administration
+    items:
+      - name: Troubleshoot Virtual Network issues in Power Platform
+        href: troubleshoot-virtual-network-power-platform.md
+  - name: Support resources
+    items:
+      - name: Power Platform support
+        href: /power-platform/admin/support-overview
+      - name: Power Platform Community forum
+        href: https://community.powerplatform.com/forums/thread/
