@@ -14,7 +14,8 @@ ms.custom: sap:Power Platform Administration
 ---
 # Troubleshoot Virtual Network issues
 
-This article provides guidance on troubleshooting common scenarios for Virtual Network in Power Platform. You can make use of a PowerShell module that can help you identify and resolve issues related to Virtual Network configurations.
+This article provides guidance on troubleshooting common scenarios for [Virtual Network](/power-platform/admin/vnet-support-overview) in Power Platform. It focuses on the use of a PowerShell module to help you identify and resolve issues related to Virtual Network configurations.
+
 
 ## Diagnostics PowerShell Module
 
