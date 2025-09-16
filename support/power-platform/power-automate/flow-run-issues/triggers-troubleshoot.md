@@ -355,6 +355,4 @@ Admins can use the [Microsoft.PowerApps.Administration.PowerShell](https://www.p
 Get-AdminFlowWithMigratingTriggerUrl -EnvironmentName <EnvironmentName>
 ```
 
-The cmdlet gives an output similar to the following example:
-
-<img width="3837" height="893" alt="image" src="https://github.com/user-attachments/assets/cf203563-202a-478e-acc5-c979f7721ade" />
+The cmdlet outputs the `DisplayName` and `FlowName` (ID) of each flow whose trigger URL will be migrated.
