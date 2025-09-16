@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.workload: infrastructure
-ms.date: 10/11/2021
+ms.date: 09/15/2025
 ms.author: jarrettr
 ---
 
@@ -43,7 +43,7 @@ Examine the boot diagnostics and VM screenshot to determine why your VM is not a
 
 Select your VM in the portal and then scroll down to the **Support + Troubleshooting** section. Click **Boot diagnostics** to view the console messages streamed from your VM. Review the console logs to see if you can determine why the VM is encountering an issue. The following example shows a VM stuck in maintenance mode that requires manual interaction:
 
-:::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/boot-diagnostics-console-logs.png" alt-text="Screenshot of viewing the V M boot diagnostics console logs.":::
+:::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/boot-diagnostics-console-logs.png" alt-text="Screenshot of viewing the VM boot diagnostics console logs.":::
 
 You can also click **Screenshot** across the top of the boot diagnostics log to download a capture of the VM screenshot.
 
@@ -87,7 +87,7 @@ To create a disk from the snapshot, follow these steps:
     #Provide the name of the snapshot that will be used to create Managed Disks
     $snapshotName = 'mySnapshot' 
     
-    #Provide the name of theManaged Disk
+    #Provide the name of the Managed Disk
     $diskName = 'newOSDisk'
     
     #Provide the size of the disks in GB. It should be greater than the VHD file size. In this sample, the size of the snapshot is 127 GB. So we set the disk size to 128 GB.
@@ -127,7 +127,7 @@ For the next few steps, you use another VM for troubleshooting purposes. After y
 > [!NOTE]
 > The following examples detail the steps required on an Ubuntu VM. If you are using a different Linux distro, such as Red Hat Enterprise Linux or SUSE, the log file locations and `mount` commands may be a little different. Refer to the documentation for your specific distro for the appropriate changes in commands.
 
-1. SSH to your troubleshooting VM using the appropriate credentials. If this disk is the first data disk attached to your troubleshooting VM, it is likely connected to `/dev/sdc`. Use `dmseg` to list attached disks:
+1. SSH to your troubleshooting VM using the appropriate credentials. If this disk is the first data disk attached to your troubleshooting VM, it is likely connected to `/dev/sdc`. Use `dmesg` to list attached disks:
 
     ```bash
     dmesg | grep SCSI
@@ -182,7 +182,7 @@ Once your errors are resolved, detach the existing virtual hard disk from your t
 
 2. Now detach the virtual hard disk from the VM. Select your VM in the portal and click **Disks**. Select your existing virtual hard disk and then click **Detach**:
 
-    :::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/detach-disk.png" alt-text="Screenshot to detach the virtual hard disk from the V M.":::
+    :::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/detach-disk.png" alt-text="Screenshot to detach the virtual hard disk from the VM.":::
 
     Wait until the VM has successfully detached the data disk before continuing.
 
@@ -190,7 +190,7 @@ Once your errors are resolved, detach the existing virtual hard disk from your t
 
 Azure portal now supports change the OS disk of the VM. To do this, follow these steps:
 
-1. Go to [Azure portal](https://portal.azure.com). Select **Virtual machines** from the sidebar, and then select the VM that has problem.
+1. Go to [Azure portal](https://portal.azure.com). Select **Virtual machines** from the sidebar, and then select the VM that has a problem.
 1. On the left pane, select **Disks**, and then select **Swap OS disk**.
 
     :::image type="content" source="media/troubleshoot-recovery-disks-portal-linux/swap-os-disk.png" alt-text="Screenshot of the Swap O S Disk option in the Azure portal.":::
