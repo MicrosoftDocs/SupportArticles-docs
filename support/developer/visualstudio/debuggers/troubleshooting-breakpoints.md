@@ -57,7 +57,7 @@ Follow one of the options to disable these safety checks:
 
 #### Get AI assistance
 
-If you have [Copilot](/visualstudio/ide/visual-studio-github-copilot-extension.md), you can use AI assistance to help resolve source code mismatch issues. Copilot performs a lightweight validation of the code and enables a relaunch of the debugger if it successfully identifies a cause. Use the **Ask Copilot** button at the end of the error message.
+If you have [Copilot](/visualstudio/ide/visual-studio-github-copilot-extension), you can use AI assistance to help resolve source code mismatch issues. Copilot performs a lightweight validation of the code and enables a relaunch of the debugger if it successfully identifies a cause. Use the **Ask Copilot** button at the end of the error message.
 
 ## The breakpoint was successfully set (no warning), but didn't hit
 
