@@ -1,6 +1,6 @@
 ---
 title: Can't install OpenSSH features
-description: 
+description: Describes how to resolve issues that occur when you try to install OpenSSH Server and OpenSSH Client. The solutions to these issues vary for different versions of Windows Server and Windows Client.
 ms.date: 09/21/2025
 manager: dcscontentpm
 audience: itpro
@@ -15,7 +15,7 @@ ms.custom:
 
 *Applies to:* Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows 11, and Windows 10
 
-The OpenSSH Server and OpenSSH Client features of Windows are installed by default on Windows Server 2025. However, for older versions of Windows Server and for Windows 11 and Windows 10, these features are not installed by default. They are available as optional Windows features (also known as Features on Demand, or FoD).
+The OpenSSH Server and OpenSSH Client features of Windows are installed by default on Windows Server 2025. However, for older versions of Windows Server and for Windows 11 and Windows 10, these features aren't installed by default. They're available as optional Windows features (also known as Features on Demand, or FoD).
 
 For more information about using OpenSSH features in Windows Server 2025, see [Get started with OpenSSH for Windows](/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell&pivots=windows-server-2025).
 
@@ -78,7 +78,7 @@ The specific steps to install the OpenSSH features vary depending on the environ
 
 \* This condition applies to any intranet update management system.
 
-If the installation still fails see [Configure Group Policy to allow OpenSSH installation](#configure-group-policy-to-allow-openssh-installation)
+If the installation still fails, see [Configure Group Policy to allow OpenSSH installation](#configure-group-policy-to-allow-openssh-installation)
 
 > [!IMPORTANT]  
 > Although in Windows Server 2025 the OpenSSH features are installed by default, you must start and configure them before you can use them (this procedure is the same for all supported versions of Windows). For more information, see [Configure the OpenSSH service and firewall settings](#configure-the-openssh-service-and-firewall-settings).
@@ -148,12 +148,12 @@ You can download Features on Demand ISO packages from any of the following locat
 
 | Source | Details or requirements |
 | - | - |
-| M365 Admin Portal | You must have an administrative M365 account. |
+| Microsoft 365 Admin Portal | You must have an administrative Microsoft 365 account. |
 | Original Equipment Manufacturer (OEM) | Typically, you must have a support agreement with the OEM. |
 | [Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter) (VLSC) | You must have a Volume Licensing agreement for Windows. |
-| [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter) | Note that this site might not include packages for older versions of Windows |
-| [MSDN-Platforms](https://visualstudio.microsoft.com/msdn-platforms/) | You must have a Visual Studio (previously MSDN) subscription |
-| GitHub ([PowerShell/openssh-portable](https://github.com/PowerShell/openssh-portable) or [Win32-OpenSSH GitHub Releases](https://github.com/PowerShell/Win32-OpenSSH/releases)) | If you use the GitHub packages, follow the instructions available in the relevant repository to install them.<br />Note that if you manually install OpenSSH by using GitHub, you are responsible for configuration and for all future updates. For more information, see [Get started with OpenSSH for Windows](/windows-server/administration/openssh/openssh_install_firstuse). |
+| [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter) | Note that this site might not include packages for older versions of Windows. |
+| [MSDN-Platforms](https://visualstudio.microsoft.com/msdn-platforms/) | You must have a Visual Studio (previously MSDN) subscription. |
+| GitHub ([PowerShell/openssh-portable](https://github.com/PowerShell/openssh-portable) or [Win32-OpenSSH GitHub Releases](https://github.com/PowerShell/Win32-OpenSSH/releases)). | If you use the GitHub packages, follow the instructions available in the relevant repository to install them.<br />Note that if you manually install OpenSSH by using GitHub, you're responsible for configuration and for all future updates. For more information, see [Get started with OpenSSH for Windows](/windows-server/administration/openssh/openssh_install_firstuse). |
 
 > [!IMPORTANT]  
 >
@@ -241,7 +241,7 @@ This setting is under the path Computer Configuration\Administrative Templates\S
 
 If you enable this setting, the default source for updates is Windows Update. If Windows can't connect to Windows Update, Windows searches for an intranet service such as WSUS, or for a local network share.
 
-If you disable or do not configure this policy setting, or if the required files aren't available at the locations specified in this policy setting, the files will be downloaded from Windows Update, if that is allowed by the policy settings for the computer.
+If you disable or don't configure this policy setting, or if the required files aren't available at the locations specified in this policy setting, Windows downloads the files from Windows Update, if that is allowed by the computer's policy settings.
 
 For more information, see [Policy CSP - ADMX_Servicing](/windows/client-management/mdm/policy-csp-admx-servicing).
 
@@ -276,7 +276,7 @@ For more information about these settings, see the following articles:
 
 This setting is under the path Computer Configuration\Administrative Templates\System\.
 
-If you enable this setting, the default source for updates is WSUS. If the requested feature option is not there, Windows searches Windows Update (if connected to the internet), and then it looks for a local network share.
+If you enable this setting, the default source for updates is WSUS. If the requested feature option isn't there, Windows searches Windows Update (if connected to the internet), and then it looks for a local network share.
 
 | Policy/Option | Settings if Windows Update is available\* | Settings if Windows Update isn't available |
 | - | - | - |
@@ -297,7 +297,7 @@ To receive any updates from an intranet update service, you must have properly c
 
 When you're using an intranet service for updates and **Specify settings for optional component installation and component repair** is set to **Windows Update**, use one of the following configurations for **Specify source service for specific classes of Windows Updates**:
 
-- Disable **Specify source service for specific classes of Windows Updates** (or leave it unconfigured). In this configuration, Windows relies on it's default behavior to locate OpenSSH installation packages.
+- Disable **Specify source service for specific classes of Windows Updates** (or leave it unconfigured). In this configuration, Windows relies on its default behavior to locate OpenSSH installation packages.
 - Set both the **Feature Updates** and **Quality Updates** options to **Windows Update**. These settings avoid conflict with **Specify settings for optional component installation and component repair**.
 
 For more information about these settings, see the following articles:
@@ -314,7 +314,7 @@ For more information about these settings, see the following articles:
 
 This setting is under the path Computer Configuration\Administrative Templates\System\.
 
-If you enable this setting, the default source for updates is WSUS. If the requested feature option is not there, Windows searches Windows Update (if connected to the internet), and then it looks for a local network share.
+If you enable this setting, the default source for updates is WSUS. If the requested feature option isn't there, Windows searches Windows Update (if connected to the internet), and then it looks for a local network share.
 
 | Policy/Option | Settings if Windows Update is available/* | Settings if Windows Update isn't available |
 | - | - | - |
@@ -333,7 +333,7 @@ To receive any updates from an intranet update service, you must have properly c
 
 When you're using an intranet service for updates and **Specify settings for optional component installation and component repair** is set to **Windows Update**, use one of the following configurations for **Specify source service for specific classes of Windows Updates**:
 
-- Disable **Specify source service for specific classes of Windows Updates** (or leave it unconfigured). In this configuration, Windows relies on it's default behavior to locate OpenSSH installation packages.
+- Disable **Specify source service for specific classes of Windows Updates** (or leave it unconfigured). In this configuration, Windows relies on its default behavior to locate OpenSSH installation packages.
 - Set both the **Feature Updates** and **Quality Updates** options to **Windows Update**. These settings avoid conflict with **Specify settings for optional component installation and component repair**.
 
 For more information about these settings, see the following articles:
@@ -349,7 +349,7 @@ For more information about these settings, see the following articles:
 
 This setting is under the path Computer Configuration\Administrative Templates\System\.
 
-If you enable this setting, the default source for updates is WSUS. If the requested feature option is not there, Windows searches Windows Update (if connected to the internet), and then it looks for a local network share.
+If you enable this setting, the default source for updates is WSUS. If the requested feature option isn't there, Windows searches Windows Update (if connected to the internet), and then it looks for a local network share.
 
 | Policy/Option | Settings if Windows Update is available/* | Settings if Windows Update isn't available |
 | - | - | - |
@@ -376,5 +376,5 @@ For more information about these settings, see the following articles:
 - [Policy CSP - ADMX_Servicing](/windows/client-management/mdm/policy-csp-admx-servicing)
 - [Policy CSP - Update](/windows/client-management/mdm/policy-csp-update)
 - [Specify intranet Microsoft update service location](/windows/deployment/update/waas-wu-settings?source=recommendations#specify-intranet-microsoft-update-service-location) in "Step 4: Configure Group Policy settings for automatic updates"
-- [Use Windows Update client policies and WSUS together](https://learn.microsoft.com/en-us/windows/deployment/update/wufb-wsus)
+- [Use Windows Update client policies and WSUS together](/windows/deployment/update/wufb-wsus)
 - [Win32-OpenSSH GitHub Releases](https://github.com/PowerShell/Win32-OpenSSH/releases)
