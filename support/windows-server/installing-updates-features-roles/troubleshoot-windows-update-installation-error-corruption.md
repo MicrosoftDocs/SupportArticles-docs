@@ -15,7 +15,7 @@ Windows Update error 0x800f0831 (CBS_E_STORE_CORRUPTION) typically occurs if an 
 
 
 ## Prerequisites
-Before you troubleshoot, follow the steps in [this article](https://supportability.visualstudio.com/AzureIaaSVM/_wiki/wikis/AzureIaaSVM/495352/Network-Level-Authentication_RDP-SSH?anchor=%3Cspan-class%3D%22mw-customtoggle-mydivision%22%3Ebackup-os-disk%3C/span%3E) to back up the OS disk.
+Before you troubleshoot, follow the steps [in this article](/azure/backup/backup-azure-vms-first-look-arm) to back up the OS disk.
 
 ## Symptoms
 
