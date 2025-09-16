@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Virtual Network Issues
-description: Learn how to troubleshoot common scenarios for Virtual Network in Microsoft Power Platform.
+title: Troubleshoot virtual network issues
+description: Learn how to troubleshoot common scenarios for virtual networks in Microsoft Power Platform.
 author: faix
 ms.component: pa-admin
 ms.topic: troubleshooting-general
@@ -12,20 +12,20 @@ search.audienceType:
 contributors:
 ms.custom: sap:Environment - Administration
 
-#customer intent: As a developer or IT administrator, I want to troubleshoot my Virtual Network configuration in Power Platform so that my application function as intended.
+#customer intent: As a developer or IT administrator, I want to troubleshoot my virtual network configuration in Power Platform so that my applications work as intended.
 ---
 
-# Troubleshoot Virtual Network issues
+# Troubleshoot virtual network issues
 
-This article provides guidance on troubleshooting common scenarios for [Virtual Networks](/power-platform/admin/vnet-support-overview) in Power Platform. It focuses on the use of the [Microsoft.PowerPlatform.EnterprisePolicies](https://www.powershellgallery.com/packages/Microsoft.PowerPlatform.EnterprisePolicies) PowerShell module to help you identify and resolve issues related to Virtual Network configurations.
+This article provides guidance for troubleshooting common scenarios for [virtual networks](/power-platform/admin/vnet-support-overview) in Microsoft Power Platform. This article focuses on the use of the [Microsoft.PowerPlatform.EnterprisePolicies](https://www.powershellgallery.com/packages/Microsoft.PowerPlatform.EnterprisePolicies) PowerShell module to help you identify and resolve issues that are related to virtual network configurations.
 
-## Identify the issue using the diagnostics PowerShell module
+## Use the diagnostics PowerShell module
 
-The `Microsoft.PowerPlatform.EnterprisePolicies` PowerShell module is a tool designed to help you diagnose and troubleshoot issues related to Virtual Network configurations in Power Platform. The module can be used to check the connectivity between your Power Platform environment and your Virtual Network. It can also help identify any misconfigurations that might be causing issues. It's available from the PowerShell Gallery and from its GitHub repository: [PowerPlatform-EnterprisePolicies](https://github.com/microsoft/PowerPlatform-EnterprisePolicies)
+The `Microsoft.PowerPlatform.EnterprisePolicies` PowerShell module is designed to help you diagnose and troubleshoot issues that are related to virtual network configurations in Power Platform. You can use the tool to check the connectivity between your Power Platform environment and your virtual network. You can also use it to identify any misconfigurations that might be causing issues. This diagnostics PowerShell module is available from the PowerShell Gallery and its GitHub repository: [PowerPlatform-EnterprisePolicies](https://github.com/microsoft/PowerPlatform-EnterprisePolicies).
 
 ### Install the module
 
-To install the diagnostics PowerShell module, use the following PowerShell command:
+To install the diagnostics PowerShell module, run the following PowerShell command:
 
 ```powershell
 Install-Module -Name Microsoft.PowerPlatform.EnterprisePolicies
@@ -33,70 +33,70 @@ Install-Module -Name Microsoft.PowerPlatform.EnterprisePolicies
 
 ### Run the diagnostic functions included in the module
 
-Once the module is installed, import it into your PowerShell session using the following command:
+After the module is installed, import it into your PowerShell session by running the following command:
 
 ```powershell
 Import-Module Microsoft.PowerPlatform.EnterprisePolicies
 ```
 
-The module includes several functions that can be used to diagnose and troubleshoot issues related to Virtual Network configurations. Some of the key functions include:
+The module includes several functions to diagnose and troubleshoot issues that are related to virtual network configurations. Some of the key functions are as follows:
 
-- [Get-EnvironmentRegion](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/docs/en-US/Microsoft.PowerPlatform.EnterprisePolicies/Get-EnvironmentRegion.md): Retrieves the region of the specified Power Platform environment.
-- [Get-EnvironmentUsage](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/docs/en-US/Microsoft.PowerPlatform.EnterprisePolicies/Get-EnvironmentUsage.md): Provides information about the usage of the specified Power Platform environment.
-- [Test-DnsResolution](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/docs/en-US/Microsoft.PowerPlatform.EnterprisePolicies/Test-DnsResolution.md): Tests the DNS resolution for the specified domain name.
-- [Test-NetworkConnectivity](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/docs/en-US/Microsoft.PowerPlatform.EnterprisePolicies/Test-NetworkConnectivity.md): Tests the network connectivity between the Power Platform environment and the specified Virtual Network.
+- [Get-EnvironmentRegion](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/docs/en-US/Microsoft.PowerPlatform.EnterprisePolicies/Get-EnvironmentRegion.md): Retrieves the region of the specified Power Platform environment
+- [Get-EnvironmentUsage](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/docs/en-US/Microsoft.PowerPlatform.EnterprisePolicies/Get-EnvironmentUsage.md): Provides information about the usage of the specified Power Platform environment
+- [Test-DnsResolution](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/docs/en-US/Microsoft.PowerPlatform.EnterprisePolicies/Test-DnsResolution.md): Tests the DNS resolution for the specified domain name
+- [Test-NetworkConnectivity](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/docs/en-US/Microsoft.PowerPlatform.EnterprisePolicies/Test-NetworkConnectivity.md): Tests the network connectivity between the Power Platform environment and the specified virtual network
 
-### Report issues with the diagnostics module
+### Report issues in the diagnostics module
 
-If you encounter issues while running the diagnostics module, report them through the GitHub repository where the module is hosted. The repository is available at: [PowerPlatform-EnterprisePolicies](https://github.com/microsoft/PowerPlatform-EnterprisePolicies).
+If you encounter issues when you run the diagnostics module, report them through the GitHub repository where the module is hosted. The repository is available at: [PowerPlatform-EnterprisePolicies](https://github.com/microsoft/PowerPlatform-EnterprisePolicies).
 
-To report an issue, go to the **Issues** section of the repository and create a [new issue](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/issues/new). Provide detailed information about the problem you're facing, including any error messages or logs that might help when investigating the issue. Don't include any sensitive information in your report.
+To report an issue, go to the **Issues** section of the repository, and [open a new issue](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/issues/new). Provide detailed information about the issue that you experience, including any error messages or log entries that might help when investigating the issue. Don't include any sensitive information in your report.
 
 ## Troubleshoot common issues
 
 ### Misconfiguration of regions
 
-If everything is correctly configured but you're still experiencing issues, you can use the `Get-EnvironmentRegion` function from the diagnostics PowerShell Module to check if the regions of your Power Platform environment are the same as the regions of your Virtual Network. To do so run the following command:
+If everything is correctly configured but you still experience issues, use the `Get-EnvironmentRegion` function from the diagnostics PowerShell module to check whether the regions of your Power Platform environment are the same as the regions of your virtual network. Run the following command:
 
 ```powershell
 Get-EnvironmentRegion -EnvironmentId "00000000-0000-0000-0000-000000000000"
 ```
 
-Your environment belongs to a specific PowerPlatform region. However, a PowerPlatform region can span multiple Azure regions. You need to ensure that your Virtual Network is configured in all of the Azure regions that correspond to your PowerPlatform region. Your environment can be located in either of the two Azure regions, and it can also automatically fail over between them. Therefore, to ensure high availability and connectivity, you should configure your Virtual Network in both Azure regions associated with your PowerPlatform region. You can find the mapping of the PowerPlatform regions to Azure regions that are support for the Virtual Network functionality at [Power Platform regions](/power-platform/admin/vnet-support-overview#supported-regions).
+Your environment belongs to a specific PowerPlatform region. However, a PowerPlatform region can span multiple Azure regions. You have to make sure that your virtual network is configured in all the Azure regions that correspond to your PowerPlatform region. Your environment can be located in either of the two Azure regions, and it can also automatically fail over between them. Therefore, to ensure high availability and connectivity, you should configure your virtual network in both Azure regions that are associated with your PowerPlatform region. To learn how PowerPlatform regions map to Azure regions that support the virtual network functionality, see [Power Platform regions](/power-platform/admin/vnet-support-overview#supported-regions).
 
 ### Hostname not found
 
-If you're experiencing issues with hostname resolution, you can use the `Test-DnsResolution` function from the diagnostics PowerShell module to check if the hostname is being resolved correctly. To do so run the following command:
+If you experiencing issues that affect hostname resolution, use the `Test-DnsResolution` function from the diagnostics PowerShell module to check whether the hostname is resolved correctly. Run the following command:
 
 ```powershell
 Test-DnsResolution -EnvironmentId "00000000-0000-0000-0000-000000000000" -HostName "microsoft.com"
 ```
 
-This command tests the DNS resolution for the specified hostname in the context of your Power Platform environment. The request initiates from your delegated subnet and attempts to resolve the hostname using the DNS server that is configured for your Virtual Network. If the hostname isn't being resolved correctly, you might need to check your DNS settings and ensure that the hostname is correctly configured.
+This command tests the DNS resolution for the specified hostname in the context of your Power Platform environment. The request initiates from your delegated subnet and tries to resolve the hostname by using the DNS server that's configured for your virtual network. If the hostname isn't resolved correctly, you might have to check your DNS settings to make sure that the hostname is configured correctly.
 
 > [!IMPORTANT]
-> If you notice that your DNS setup is incorrect and need to update the DNS server settings for your Virtual Network, see [Can I update the DNS address of my Virtual Network after it's delegated to "Microsoft.PowerPlatform/enterprisePolicies"?](/power-platform/admin/vnet-support-overview#can-i-update-the-dns-address-of-my-virtual-network-after-its-delegated-to-microsoftpowerplatformenterprisepolicies)
+> If you notice that your DNS setup is incorrect, and you have to update the DNS server settings for your virtual network, see [Can I update the DNS address of my virtual network after it's delegated to "Microsoft.PowerPlatform/enterprisePolicies"?](/power-platform/admin/vnet-support-overview#can-i-update-the-dns-address-of-my-virtual-network-after-its-delegated-to-microsoftpowerplatformenterprisepolicies)
 
-### Unable to connect to the resource
+### Can't connect to the resource
 
-If you're experiencing issues with connectivity to a resource, you can use the `Test-NetworkConnectivity` function from the diagnostics PowerShell module to check for connectivity. To do so run the following command:
+If you're experiencing issues that affect connectivity to a resource, use the `Test-NetworkConnectivity` function from the diagnostics PowerShell module to check for connectivity. Run the following command:
 
 ```powershell
 Test-NetworkConnectivity -EnvironmentId "00000000-0000-0000-0000-000000000000" -Destination "unknowndb.database.windows.net" -Port 1433
 ```
 
-This command attempts to establish a TCP connection to the specified destination and port in the context of your Power Platform environment. The request initiates from your delegated subnet and attempt to connect to the specified destination using the network configuration from your Virtual Network. If the connection fails, you might need to check your network settings and ensure that the destination is reachable from your Virtual Network. If the connection is successful, it indicates that there's network connectivity between the Power Platform environment and the specified resource.
+This command tries to establish a TCP connection to the specified destination and port in the context of your Power Platform environment. The request initiates from your delegated subnet and tries to connect to the specified destination by using the network configuration from your virtual network. If the connection fails, you might have to check your network settings to make sure that the destination is reachable from your virtual network. If the connection is successful, it indicates that network connectivity exists between the Power Platform environment and the specified resource.
 
 > [!NOTE]
-> This command only tests if a TCP connection can be established to the specified destination and port. It doesn't test if the resource is available or if there are any application-level issues that might be preventing access to the resource.
-> Some firewalls might allow TCP connections to be established but block actual traffic to the resource (for example, HTTPS). Therefore, even if the command indicates there's network connectivity that doesn't guarantee that the resource is fully accessible.
+> This command tests only whether a TCP connection can be established to the specified destination and port. It doesn't test whether the resource is available or whether any application-level issues might be preventing access to the resource.
+> Some firewalls might allow TCP connections to be established, but they then block actual traffic to the resource (for example, HTTPS). Therefore, even if the command indicates network connectivity. that doesn't guarantee that the resource is fully accessible.
 
 ### Connectivity is successful, but the application is still not working
 
-If the connectivity tests are successful, but you're still experiencing issues with your application, you might need to check the application-level settings and configurations. Some settings and configurations that you should check include:
+If the connectivity tests are successful, but you're still experiencing issues in your application, you might have to check the application-level settings and configurations, as follows:
 
-- Validate that your firewall allows access from the delegated subnet to the resource.
-- Validate that the certificate presented by the resource is publicly trusted.
-- Ensure there are no authentication or authorization issues preventing access to the resource.
+- Verify that your firewall allows access from the delegated subnet to the resource.
+- Verify that the certificate that's presented by the resource is publicly trusted.
+- Make sure that no authentication or authorization issues exist that are preventing access to the resource.
 
-If you're unable to diagnose or resolve the issue using the diagnostics PowerShell module. You create a subnet without delegation in your Virtual Network and deploy a virtual machine in that subnet. You can then use the virtual machine to perform further diagnostics and troubleshooting steps, such as checking network traffic, analyzing logs, and testing application-level connectivity.
+You might not be able to diagnose or resolve the issue by using the diagnostics PowerShell module. In that case, create a subnet without delegation in your virtual network, and deploy a virtual machine (VM) in that subnet. You can then use the VM to perform further diagnostics and troubleshooting steps, such as checking network traffic, analyzing logs, and testing application-level connectivity.
