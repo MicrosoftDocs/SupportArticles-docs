@@ -56,7 +56,7 @@ To report an issue, go to the **Issues** section of the repository and create a 
 
 ### Misconfiguration of regions
 
-If you have verified that everything is correctly configured but you're still experiencing issues, you can use the `Get-EnvironmentRegion` function from the diagnostics PowerShell Module to check if the regions of your Power Platform environment are the same as the regions of your Virtual Network. To do so run the following command:
+If everything is correctly configured but you're still experiencing issues, you can use the `Get-EnvironmentRegion` function from the diagnostics PowerShell Module to check if the regions of your Power Platform environment are the same as the regions of your Virtual Network. To do so run the following command:
 
 ```powershell
 Get-EnvironmentRegion -EnvironmentId "00000000-0000-0000-0000-000000000000"
