@@ -54,7 +54,7 @@ In such situations, Windows can't locate the .CAB files that it needs to install
 - The computer uses WSUS to manage updates, and runs a version of Windows Server that's older than Windows Server 2025 or Windows 11, v 22H2. These older versions of Windows can't install the OpenSSH features by using WSUS. For more information about this behavior, see the following articles:
 
   - [Use Windows Update client policies and WSUS together](/windows/deployment/update/wufb-wsus).
-  - The "High-level changes affecting Features on Demand and language pack content" section of [How to make Features on Demand and language packs available when you're using WSUS or Configuration Manager](/windows/deployment/update/fod-and-lang-packs).
+  - The [High-level changes affecting Features on Demand and language pack content](/windows/deployment/update/fod-and-lang-packs#high-level-changes-affecting-features-on-demand-and-language-pack-content) section of "How to make Features on Demand and language packs available when you're using WSUS or Configuration Manager".
 
 - Group Policy settings block the installation. These settings vary depending on the Windows version, and in some cases multiple settings can contradict each other and cause the installation to fail.
 
@@ -114,7 +114,7 @@ To install OpenSSH by using PowerShell:
 
    Both commands should return output that resembles the following excerpt:
 
-   ```powershell
+   ```output
    Path          :
    Online        : True
    RestartNeeded : False
@@ -194,7 +194,7 @@ To install the OpenSSH features, follow these steps.
 
    Both commands should return output that resembles the following excerpt:
 
-   ```powershell
+   ```output
    Path          :
    Online        : True
    RestartNeeded : False
