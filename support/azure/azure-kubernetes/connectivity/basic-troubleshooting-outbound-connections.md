@@ -145,8 +145,6 @@ To determine if traffic is blocked to the endpoint due to Azure network resource
 > [!NOTE]
 >
 > Azure Virtual Network Verifier (Preview) can't access any external or third-party networking resources, such as a custom firewall. If the connectivity analysis doesn't detect any blocked traffic, we recommend that you perform a manual check of any external networking to cover all hops in the traffic flow.
-> 
-> Currently, clusters using Azure CNI Overlay aren't supported for this feature. Support for CNI Overlay is planned for August 2025.
 
 1. Navigate to your cluster in the Azure portal. In the sidebar, navigate to the Settings -> Node pools blade.
 2. Identify the nodepool you want to run a connectivity analysis from. Click on the nodepool to select it as the scope.

@@ -644,8 +644,6 @@
           href: ../powerpoint/slide-transition-sounds-missing.md
         - name: Troubleshoot a damaged presentation
           href: ../powerpoint/damaged-presentation.md
-        - name: User info in @mentions doesn't resolve
-          href: /troubleshoot/office/excel/mentions-not-resolve-user-information?context=/troubleshoot/office/context/client-context
     - name: Project
       items:
         - name: Can't add or edit resources in Enterprise Resource Pool
@@ -790,8 +788,6 @@
           href: ../word/not-recognize-misspelled-words-in-word.md
         - name: Track Changes functionality disabled when RMS is disabled
           href: ../word/track-changes-disabled.md
-        - name: User info in @mentions doesn't resolve
-          href: /troubleshoot/office/excel/mentions-not-resolve-user-information?context=/troubleshoot/office/context/client-context
         - name: Using printer fonts in Word
           href: ../word/printer-fonts-in-word.md
         - name: Word slows or stops responding
