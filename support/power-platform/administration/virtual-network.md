@@ -66,7 +66,7 @@ Your environment belongs to a specific PowerPlatform region. However, a PowerPla
 
 ### Hostname not found
 
-If you experiencing issues that affect hostname resolution, use the `Test-DnsResolution` function from the diagnostics PowerShell module to check whether the hostname is resolved correctly. Run the following command:
+If you experience issues that affect hostname resolution, use the `Test-DnsResolution` function from the diagnostics PowerShell module to check whether the hostname is resolved correctly. Run the following command:
 
 ```powershell
 Test-DnsResolution -EnvironmentId "00000000-0000-0000-0000-000000000000" -HostName "microsoft.com"
@@ -89,7 +89,7 @@ This command tries to establish a TCP connection to the specified destination an
 
 > [!NOTE]
 > This command tests only whether a TCP connection can be established to the specified destination and port. It doesn't test whether the resource is available or whether any application-level issues might be preventing access to the resource.
-> Some firewalls might allow TCP connections to be established, but they then block actual traffic to the resource (for example, HTTPS). Therefore, even if the command indicates network connectivity. that doesn't guarantee that the resource is fully accessible.
+> Some firewalls might allow TCP connections to be established, but they then block actual traffic to the resource (for example, HTTPS). Therefore, even if the command indicates network connectivity, that status doesn't guarantee that the resource is fully accessible.
 
 ### Connectivity is successful, but the application is still not working
 
