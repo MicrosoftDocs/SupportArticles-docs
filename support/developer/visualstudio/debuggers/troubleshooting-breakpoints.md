@@ -44,7 +44,7 @@ Navigate to **Debug** > **Windows** > **Modules** when debugging and check wheth
 
 ### "… the current source code is different from the version built into..."
 
-Alternatively, the message may say **"… the source code is different from the original version."**.
+Alternatively, the message might say **"… the source code is different from the original version."**.
 
 If a source file has changed and the source no longer matches the code you're debugging, the debugger won't set breakpoints in the code by default. Normally, this problem happens when a source file is changed, but the source code wasn't rebuilt. To fix this issue, rebuild the project. If the build system thinks the project is already up-to-date even though it isn't, you can force the project system to rebuild. Rebuild the project either by saving the source file again or by cleaning the build output before building.
 
@@ -57,7 +57,7 @@ Follow one of the options to disable these safety checks:
 
 #### Get AI assistance
 
-If you have [Copilot](/visualstudio/ide/visual-studio-github-copilot-extension.md), you can get AI assistance to help resolve the issue of a source code mismatch. Copilot performs lightweight validation of the code and enables re-launch of the debugger if it successfully identifies a cause. Use the **Ask Copilot** button at the end of the error message.
+If you have [Copilot](/visualstudio/ide/visual-studio-github-copilot-extension.md), you can use AI assistance to help resolve source code mismatch issues. Copilot performs a lightweight validation of the code and enables a relaunch of the debugger if it successfully identifies a cause. Use the **Ask Copilot** button at the end of the error message.
 
 ## The breakpoint was successfully set (no warning), but didn't hit
 
