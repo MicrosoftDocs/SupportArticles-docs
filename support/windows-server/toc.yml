@@ -2592,6 +2592,10 @@ items:
       href: ./system-management-components/sms-administrator-console-connectivity-issue.md
     - name: What is MMC
       href: ./system-management-components/what-is-microsoft-management-console.md
+  - name: OpenSSH
+    items:
+    - name: OpenSSH client can't connect to a server via SSH
+      href: ./system-management-components/open-client-can-not-connect-server.md
   - name: PowerShell
     items:
     - name: CJK characters are garbled in PowerShell
