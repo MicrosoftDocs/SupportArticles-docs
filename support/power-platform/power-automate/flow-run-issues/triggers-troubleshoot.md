@@ -7,7 +7,7 @@ contributors:
   - kisubedi
   - kenseongtan
   - v-aangie
-ms.date: 08/08/2025
+ms.date: 09/11/2025
 ms.custom: sap:Flow run issues\Triggers
 ms.update-cycle: 180-days
 ms.author: kenseongtan
@@ -313,7 +313,7 @@ For triggers, the value of expressions is calculated only when the flow is saved
 ## Changes to HTTP or Teams Webhook trigger flows
 
 > [!IMPORTANT]
-> Starting in August 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL will move to a new URL. You'll see the new URL in the **HTTP URL** field of the flow's trigger when you open the flow in the designer. To ensure that existing flows using these triggers continue to work, complete the following actions by November 30, 2025. After this date, the old URLs will no longer work and flows will fail to trigger.
+> Starting in August 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL will move to a new URL. This change is part of an infrastructure upgrade to improve execution speed and provide new features. You'll see the new URL in the **HTTP URL** field of the flow's trigger when you load the flow in the designer. To ensure that existing flows using these triggers continue to work, complete the following actions by November 30, 2025. Before November 30, 2025 both the old and new URLs will be supported; after that, the old URLs will no longer work and flows will fail to trigger.
 
 ### Key changes
 
@@ -331,7 +331,7 @@ To ensure your flows continue to function as expected, follow these steps:
 
 1. Update URL references:
 
-   - Identify all client applications and systems (such as web apps, Power Apps, and others) that reference the old trigger URL.
+   - Identify all external applications and systems (such as web apps, Power Apps, flows, and others) that reference the old trigger URL.
    - Replace the old trigger URL with the updated URL displayed in the trigger card of your flow's designer.
 
 2. Validate the new URL:
@@ -343,3 +343,16 @@ To ensure your flows continue to function as expected, follow these steps:
 
    - If your trigger URL uses a relative path parameter, ensure there are no beginning slashes in the field to avoid double slash errors.
    - Modify the relative path as needed and validate the trigger URL for correctness.
+  
+> [!NOTE]
+> If a flow uses an HTTP action to call another flow, the parent flow is considered to be an external system. The URL in the parent flow should be updated with the new URL that is displayed in the child flow's trigger card. However, if the child flow is called through the **Run a child flow** action no change is needed.
+
+### List all flows with migrating trigger URLs
+
+Admins can use the [Microsoft.PowerApps.Administration.PowerShell](https://www.powershellgallery.com/packages/Microsoft.PowerApps.Administration.PowerShell/2.0.216) package to list all flows whose trigger URLs will be migrated. Having the package installed, run the following PowerShell cmdlet:
+
+```powershell
+Get-AdminFlowWithMigratingTriggerUrl -EnvironmentName <EnvironmentName>
+```
+
+The cmdlet outputs the `DisplayName` and `FlowName` (ID) of each flow whose trigger URL will be migrated.
