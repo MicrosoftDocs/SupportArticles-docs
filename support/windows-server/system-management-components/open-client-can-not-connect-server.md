@@ -1,7 +1,7 @@
 ---
 title: OpenSSH Client Can't Connect To a Server via SSH
 description: Addresses multiple common causes and solutions when encountering OpenSSH connection errors related to host key algorithm mismatches on Windows systems.
-ms.date: 09/10/2025
+ms.date: 09/16/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -25,7 +25,7 @@ These errors typically indicate mismatches in supported algorithms, permissions 
 
 ## Cause 1: RSA algorithm disabled in updated OpenSSH versions
 
-OpenSSH 8.8 and later disable the insecure `ssh-rsa` algorithm by default, causing legacy clients dependent on RSA keys to fail connection attempts.
+OpenSSH 8.8 and later versions disable the insecure `ssh-rsa` algorithm by default, causing legacy clients dependent on RSA keys to fail connection attempts.
 
 ### Resolution
 
@@ -103,7 +103,7 @@ Private keys stored by OpenSSH's ssh-agent service persist across sessions in th
 
 ### Optional registry adjustments
 
-To manage RSA keys securely via registry policies:
+Manage RSA keys securely via registry policies:
 
 ```powershell
 Set-ItemProperty -Path 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\SSH-Server' -Name AllowRSAKey -Value 1 -Type DWORD 
