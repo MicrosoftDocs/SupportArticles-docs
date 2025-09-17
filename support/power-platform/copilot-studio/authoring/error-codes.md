@@ -14,7 +14,7 @@ ms.custom: sap:Authoring
 
 When an agent encounters a problem during a conversation, it responds with a message that includes an error code for the specific problem that was encountered. Users of the agent should give this error code to their administrator.
 
-As an agent maker, if a problem occurs when you're using the test pane to [test your agent](authoring-test-bot.md), you can see a message with more context about the problem, in addition to the error code. Alternatively, you can use the **Topic checker** panel to [validate your agent](authoring-topic-management.md#view-topic-errors).
+As an agent maker, if a problem occurs when you're using the test pane to [test your agent](/microsoft-copilot-studio/authoring-test-bot), you can see a message with more context about the problem, in addition to the error code. Alternatively, you can use the **Topic checker** panel to [validate your agent](/microsoft-copilot-studio/authoring-topic-management#view-topic-errors).
 
 ## Error list
 
@@ -45,14 +45,14 @@ As an agent maker, if a problem occurs when you're using the test pane to [test 
 | [RedirectToNonExistentDialog](#redirecttononexistentdialog)       | A topic is [redirecting][2] to another topic that no longer exists. |
 | [SystemError](#systemerror)                                       | A system error occurred in Copilot Studio.                          |
 
-[1]: advanced-flow.md
-[2]: authoring-topic-management.md#redirect-to-another-topic
+[1]: /microsoft-copilot-studio/advanced-flow
+[2]: /microsoft-copilot-studio/authoring-topic-management#redirect-to-another-topic
 
 #### AsyncResponsePayloadTooLarge
 
 **Error message:** The output returned from the connector was too large to be handled by the agent. Try reducing its size by utilizing available connector filters or by limiting the number of configured action outputs.
 
-**Resolution:** One of the agent's real-time connectors is returning a payload that's larger than the agent can handle. For more information regarding the payload limit, see [Copilot Studio web app limits](requirements-quotas.md#copilot-studio-web-app-limits).
+**Resolution:** One of the agent's real-time connectors is returning a payload that's larger than the agent can handle. For more information regarding the payload limit, see [Copilot Studio web app limits](/microsoft-copilot-studio/requirements-quotas#copilot-studio-web-app-limits).
 
 #### ContentError
 
@@ -63,8 +63,8 @@ As an agent maker, if a problem occurs when you're using the test pane to [test 
 Common problems include:
 
 - A node is missing required properties.
-- Invalid YAML was added with the [code editor](authoring-create-edit-topics.md#edit-topics-with-the-code-editor).
-- A [Power Fx formula](advanced-power-fx.md) contains an error.
+- Invalid YAML was added with the [code editor](/microsoft-copilot-studio/authoring-create-edit-topics#edit-topics-with-the-code-editor).
+- A [Power Fx formula](/microsoft-copilot-studio/advanced-power-fx) contains an error.
 
 #### DataLossPreventionViolation
 
@@ -72,15 +72,15 @@ Common problems include:
 
 **Resolution:**
 
-- Your environment's data policies require that users sign in. See [Add user authentication with the Sign in system topic](advanced-end-user-authentication.md#add-user-authentication-with-the-sign-in-system-topic).
-- One or more connectors that are used in the agent aren't in the same data group. See [Copilot Studio connectors](admin-data-loss-prevention.md#copilot-studio-connectors-and-data-groups).
+- Your environment's data policies require that users sign in. See [Add user authentication with the Sign in system topic](/microsoft-copilot-studio/advanced-end-user-authentication#add-user-authentication-with-the-sign-in-system-topic).
+- One or more connectors that are used in the agent aren't in the same data group. See [Copilot Studio connectors](/microsoft-copilot-studio/admin-data-loss-prevention#copilot-studio-connectors-and-data-groups).
 - One or more connectors that are used in the agent were blocked by the tenant administrator.
 
 #### EnforcementMessageC2
 
 **Error message:** This agent is currently unavailable. It has reached its usage limit. Please try again later.
 
-**Resolution:** This message is returned when an agent has reached its message capacity or the pay-as-you-go meter has reached its limit. Add more prepaid capacity or create a pay-as-you-go billing plan. Within 5 minutes the agent chat will work again. For more information, go to [Overage Enforcement](requirements-messages-management.md#overage-enforcement).
+**Resolution:** This message is returned when an agent has reached its message capacity or the pay-as-you-go meter has reached its limit. Add more prepaid capacity or create a pay-as-you-go billing plan. Within 5 minutes the agent chat will work again. For more information, go to [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
 
 #### FlowActionException
 
@@ -101,7 +101,7 @@ Common problems include:
 - The parameter with name {KeyName} on flow {FlowName} ({FlowId}) evaluated to type {ResolveType}, expected type {ExpectedType}.
 - The flow {FlowName} ({FlowId}) failed to run with response code {ResponseCode}, error code: {FlowErrorCode}.
 
-**Resolution:** Check that the [base type](authoring-variables-about.md#variable-types) of any variables you pass to the flow match the parameter's type.
+**Resolution:** Check that the [base type](/microsoft-copilot-studio/authoring-variables-about#variable-types) of any variables you pass to the flow match the parameter's type.
 
 #### FlowActionTimedOut
 
@@ -119,19 +119,19 @@ Common problems include:
 
 **Error message:** The usage limit for search and summarize has been reached. Please try again later.
 
-**Resolution:** This message is returned when the agent reaches its [generative AI limit](requirements-quotas.md#generative-ai-messages-to-an-agent) to search and summarize sources. For more information, see [Resolve throttling errors in agents](troubleshoot-throttling-errors-agents.md).
+**Resolution:** This message is returned when the agent reaches its [generative AI limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent) to search and summarize sources. For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
 
 #### GenAIToolPlannerRateLimitReached
 
 **Error message:** The usage limit for generative orchestration has been reached. Please try again later.
 
-**Resolution:** This message is returned when the agent reaches its [generative orchestration limit](requirements-quotas.md#generative-ai-messages-to-an-agent). For more information, see [Resolve throttling errors in agents](troubleshoot-throttling-errors-agents.md).
+**Resolution:** This message is returned when the agent reaches its [generative orchestration limit](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent). For more information, see [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
 
 #### InvalidContent
 
 **Error message:** A total of {TotalComponents} component(s) exist in the agent, but none are valid.
 
-**Resolution:** [Open the code editor](authoring-create-edit-topics.md#edit-topics-with-the-code-editor) to review issues with the content.
+**Resolution:** [Open the code editor](/microsoft-copilot-studio/authoring-create-edit-topics#edit-topics-with-the-code-editor) to review issues with the content.
 
 #### InfiniteLoopInBotContent
 
@@ -143,7 +143,7 @@ Common problems include:
 
 **Error message:** Unable to retrieve the latest published version of the agent.
 
-**Resolution:** [Publish the agent](publication-fundamentals-publish-channels.md).  
+**Resolution:** [Publish the agent](/microsoft-copilot-studio/publication-fundamentals-publish-channels).
 
 #### OutgoingMessageSizeTooBig
 
@@ -153,37 +153,37 @@ Common problems include:
 
 In this scenario, there are a few options. One option is to provide a link to the resource as an internet attachment. Another option is to review your nodes to ensure that none of them are using a variable that contains a large volume of text, such as a `JSON.stringify()` static method. If you use this method or a variable that contains a large volume of text, modify the node to only pass the portion of text that's necessary. For example, if you use an Adaptive Card to pass data to another topic, update the variable to only pass the necessary property.
 
-For more information, see [Maximum channel data message size limits when using Copilot Studio in Omnichannel](requirements-quotas.md#maximum-channel-data-message-size-limits-when-using-copilot-studio-in-omnichannel).
+For more information, see [Maximum channel data message size limits when using Copilot Studio in Omnichannel](/microsoft-copilot-studio/requirements-quotas#maximum-channel-data-message-size-limits-when-using-copilot-studio-in-omnichannel).
 
 #### OpenAIRateLimitReached
 
 **Error message:** An error has occurred.
 
-**Resolution:** Your agent reached the maximum number of generative answers responses. Review your [message capacity](requirements-messages-management.md), and review the information in [Resolve throttling errors in agents](troubleshoot-throttling-errors-agents.md).
+**Resolution:** Your agent reached the maximum number of generative answers responses. Review your [message capacity](/microsoft-copilot-studio/requirements-messages-management), and review the information in [Resolve throttling errors in agents](../licensing/throttling-errors-agents.md).
 
 #### RedirectToDisabledDialog
 
 **Error message:** The Dialog with Id {DialogId} is disabled in the definition. Please enable the Dialog before using it.
 
-**Resolution:** [Re-enable the topic](authoring-topic-management.md) or [remove the redirect node](authoring-create-edit-topics.md#delete-a-node).  
+**Resolution:** [Re-enable the topic](/microsoft-copilot-studio/authoring-topic-management) or [remove the redirect node](/microsoft-copilot-studio/authoring-create-edit-topics#delete-a-node).  
 
 #### RedirectToNonExistentDialog
 
 **Error message:** The Dialog with Id {DialogId} was not found in the definition. Please check that the Dialog is present and that the Id is correct.
 
-**Resolution:** [Create a new topic](authoring-create-edit-topics.md#create-a-topic) to redirect to, or [remove the redirect node](authoring-create-edit-topics.md#delete-a-node).
+**Resolution:** [Create a new topic](/microsoft-copilot-studio/authoring-create-edit-topics#create-a-topic) to redirect to, or [remove the redirect node](/microsoft-copilot-studio/authoring-create-edit-topics#delete-a-node).
 
 #### SystemError
 
 **Error message:** This error doesn't produce an error message.
 
-**Resolution:** [Contact customer support](fundamentals-support.md).
+**Resolution:** [Contact customer support](/microsoft-copilot-studio/fundamentals-support).
 
 #### TooMuchDataToHandle
 
 **Error message:** The request is resulting in too much data to handle, please evaluate the amount of data being returned by your actions.
 
-**Resolution:** This indicates the request being sent to OpenAI is exceeding the maximum request size allowed. There are a number of things that make up the request including the user input, output from previous actions, tools called, and conversation history. Review the tools you are using, and, where possible, scope down their output to only the necessary fields. For more information, see [Create a Power Automate flow](advanced-flow-create.md) and [Call a Power Automate flow as an action](advanced-use-flow.md).
+**Resolution:** This indicates the request being sent to OpenAI is exceeding the maximum request size allowed. There are a number of things that make up the request including the user input, output from previous actions, tools called, and conversation history. Review the tools you are using, and, where possible, scope down their output to only the necessary fields. For more information, see [Create a Power Automate flow](/microsoft-copilot-studio/advanced-flow-create) and [Call a Power Automate flow as an action](/microsoft-copilot-studio/advanced-use-flow).
 
 # [Classic/Teams](#tab/classic+teams)
 
@@ -225,25 +225,25 @@ For more information, see [Maximum channel data message size limits when using C
 | **3002**                | "Something happened in Power Automate, and your request to your flow `{Flow Name}` wasn't accepted. Try again later."                                                    | An error occurred in Power Automate and the request to your flow wasn't accepted. Your flow might have taken more than 2 minutes to respond.                                                                              |
 | **3003**                | "There's a network problem connecting to your flow `{Flow Name}`. Please try again later."                                                                               | Try again later. If the issue persists, [contact customer support][17].                                                                                                                                                   |
 
-[3]: advanced-hand-off.md
-[4]: authoring-topic-management.md#view-topic-errors
+[3]: /microsoft-copilot-studio/advanced-hand-off
+[4]: /microsoft-copilot-studio/authoring-topic-management#view-topic-errors
 [5]: /powerapps/maker/data-platform/data-platform-intro
 [6]: /power-automate/error-checker
 [7]: /power-automate/fix-flow-failures#identify-the-error
-[9]: authoring-topic-management.md#view-topic-errors
-[10]: authoring-first-bot.md
-[11]: environments-first-run-experience.md
-[12]: requirements-quotas.md
-[13]: advanced-end-user-authentication.md
-[14]: publication-fundamentals-publish-channels.md
-[15]: configuration-add-skills.md
-[16]: advanced-flow-create.md
-[17]: fundamentals-support.md
+[9]: /microsoft-copilot-studio/authoring-topic-management#view-topic-errors
+[10]: /microsoft-copilot-studio/authoring-first-bot
+[11]: /microsoft-copilot-studio/environments-first-run-experience
+[12]: /microsoft-copilot-studio/requirements-quotas
+[13]: /microsoft-copilot-studio/advanced-end-user-authentication
+[14]: /microsoft-copilot-studio/publication-fundamentals-publish-channels
+[15]: /microsoft-copilot-studio/configuration-add-skills
+[16]: /microsoft-copilot-studio/advanced-flow-create
+[17]: /microsoft-copilot-studio/fundamentals-support
 [18]: /azure/bot-service/skill-implement-skill
-[19]: publication-connect-bot-to-azure-bot-service-channels.md
-[20]: configuration-end-user-authentication.md#required-user-sign-in-and-agent-sharing
-[21]: authoring-topic-management.md#turn-a-topic-on-or-off
-[22]: authoring-create-edit-topics.md
-[23]: authoring-create-edit-topics.md#create-a-topic
+[19]: /microsoft-copilot-studio/publication-connect-bot-to-azure-bot-service-channels
+[20]: /microsoft-copilot-studio/configuration-end-user-authentication#required-user-sign-in-and-agent-sharing
+[21]: /microsoft-copilot-studio/authoring-topic-management#turn-a-topic-on-or-off
+[22]: /microsoft-copilot-studio/authoring-create-edit-topics
+[23]: /microsoft-copilot-studio/authoring-create-edit-topics#create-a-topic
 
 ---
