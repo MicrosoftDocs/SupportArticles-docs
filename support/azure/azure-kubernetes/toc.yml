@@ -261,7 +261,8 @@ items:
       href: connectivity/dns/troubleshoot-dns-failures-across-an-aks-cluster-in-real-time.md
     - name: Troubleshoot DNS from inside a pod
       href: connectivity/dns/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md
-
+    - name: Troubleshoot LocalDNS 
+      href: connectivity/dns/troubleshoot-localdns.md
 - name: Data collection guide
   items:
   - name: Capture real-time system insights from cluster
