@@ -7,7 +7,7 @@ ms.topic: how-to
 author: digantakumar
 ms.author: digantak
 manager: kjette
-ms.service: copilot-studio
+ms.custom: sap:Skills\Configure a Bot Framework skill to use in Copilot Studio
 ---
 
 # Troubleshoot agents using Bot Framework skills

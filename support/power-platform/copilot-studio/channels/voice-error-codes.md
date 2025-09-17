@@ -7,7 +7,7 @@ ms.topic: how-to
 author: sophie-roy3
 ms.author: sophieroy
 manager: kjette
-ms.service: copilot-studio
+ms.custom: sap:Channels
 ---
 
 # Troubleshoot voice-enabled agents and diagnose runtime error codes

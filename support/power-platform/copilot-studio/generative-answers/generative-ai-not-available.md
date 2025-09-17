@@ -6,6 +6,7 @@ ms.topic: troubleshooting
 ms.date: 09/09/2025
 ms.author: camogas
 ms.reviewer: erickinser
+ms.custom: sap:Generative Answers\Generative answers do not return a response
 ---
 
 # Generative AI isn't available error message

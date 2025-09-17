@@ -8,6 +8,7 @@ ms.author: rchetla
 ms.reviewer: erickinser
 manager: kjette
 ms.search.region: USA
+ms.custom: sap:Knowledge\Enterprise data via Graph connectors
 ---
 
 # Troubleshoot enterprise knowledge sources

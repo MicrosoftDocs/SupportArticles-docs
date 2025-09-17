@@ -3,11 +3,13 @@ title: "Debug insights when generative answers don't return a response"
 description: "Troubleshoot your agent when generative answers don't return results by using debug insights in Microsoft Copilot Studio."
 ms.date: 06/17/2025
 ms.topic: troubleshooting
-ms.custom: guidance
 ms.author: mboninco
 ms.reviewer: erickinser
 manager: kjette
 author: iaanw
+ms.custom:
+  - guidance
+  - sap:Generative Answers\Generative answers do not return a response
 ---
 
 # Debug insights when generative answers don't return a response

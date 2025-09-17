@@ -9,6 +9,7 @@ ms.reviewer: erickinser
 ms.custom:
   - guidance
   - sfi-image-nochange
+  - sap:Generative Answers\Generative answers do not return a response
 ---
 
 # Generative answers pointing to SharePoint sources don't return results
