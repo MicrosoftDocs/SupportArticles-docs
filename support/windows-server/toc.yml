@@ -3138,8 +3138,6 @@ items:
     items:
     - name: Can't connect to WSUS Administration Website
       href: ./installing-updates-features-roles/cannot-connect-to-wsus-administration-website.md
-    - name: WSUS messages and troubleshooting tips
-      href: ./installing-updates-features-roles/wsus-messages-troubleshooting-tips.md
     - name: Description of Windows Server Update Services 3.0
       href: ./installing-updates-features-roles/description-of-windows-server-update-services-3.md
     - name: How to block user access to Windows Update
@@ -3154,6 +3152,8 @@ items:
       href: ./installing-updates-features-roles/windows-server-update-services-3-sp2.md
     - name: WSUS clients can't install updates
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
+    - name: WSUS messages and troubleshooting tips
+      href: ./installing-updates-features-roles/wsus-messages-troubleshooting-tips.md
   - name: Windows Update fails - installation stops with error
     items:
     - name: 'Troubleshooting guidance: Windows Server update'
