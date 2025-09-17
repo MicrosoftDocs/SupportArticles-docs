@@ -19,13 +19,13 @@ Users receive the following error message when interacting with the Copilot Stud
 
 "Error message: Features with generative AI are not available in your environment. Error code: GenerativeAINotAvailable"
 
-:::image type="content" source="media/troubleshoot-generative-ai-not-available/error-code-gen-ai-not-available.png" alt-text="Screenshot of a chat window displaying the GenerativeAINotAvailable error code.":::
+:::image type="content" source="../media/generative-ai-not-available/error-code-gen-ai-not-available.png" alt-text="Screenshot of a chat window displaying the GenerativeAINotAvailable error code.":::
 
 Agent makers also receive the following warning message in Copilot Studio in the **Generative AI** settings page:
 
 "Features with generative AI are not available in your environment. Please contact your admin."
 
-:::image type="content" source="media/troubleshoot-generative-ai-not-available/gen-ai-features-unavailable-environment.png" alt-text="Screenshot of the Generative AI settings page, highlighting the error message Features with generative AI aren't available in your environment.":::
+:::image type="content" source="../media/generative-ai-not-available/gen-ai-features-unavailable-environment.png" alt-text="Screenshot of the Generative AI settings page, highlighting the error message Features with generative AI aren't available in your environment.":::
 
 ## Cause
 
@@ -49,7 +49,7 @@ Enable generative AI features:
 
 1.  Select **Save**.
 
-:::image type="content" source="media/troubleshoot-generative-ai-not-available/gen-ai-features.png" alt-text="Screenshot of the Generative AI features terms and conditions message.":::
+:::image type="content" source="../media/generative-ai-not-available/gen-ai-features.png" alt-text="Screenshot of the Generative AI features terms and conditions message.":::
 
 If you can't turn on this setting, you need to adapt your agent's behavior. Turn off generative AI features (like generative orchestration, web search, AI general knowledge, and AI tools) to prevent users from seeing this message when they chat with your agent.
 
