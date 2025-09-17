@@ -22,7 +22,7 @@ When debug mode is enabled, insights are displayed in the test chat when the gen
 
 When there's no response, a debug insight appears in the test chat and provides an indication why no response was provided. If applicable, a suggested action to improve the likelihood that a response is returned is given.
 
-:::image type="content" source="media/debug-insights/content-moderation.png" alt-text="Screenshot showing a debug insight when a response was filtered due to content moderation.":::
+:::image type="content" source="../media/debug-insights/content-moderation.png" alt-text="Screenshot showing a debug insight when a response was filtered due to content moderation.":::
 
 ## Disable debug insights
 
@@ -30,4 +30,4 @@ Debug insights are enabled by default. To stop the display of debug insights, se
 
 ### Related content
 
-- [Generative answers pointing to SharePoint sources don't return results](generative-answers-sharepoint-no-response.md)
+- [Generative answers pointing to SharePoint sources don't return results](../generative-answers/sharepoint-no-response.md)
