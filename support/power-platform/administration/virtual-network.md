@@ -62,7 +62,7 @@ If everything is correctly configured but you still experience issues, use the `
 Get-EnvironmentRegion -EnvironmentId "00000000-0000-0000-0000-000000000000"
 ```
 
-Your environment belongs to a specific PowerPlatform region. However, a PowerPlatform region can span multiple Azure regions. You have to make sure that your virtual network is configured in all the Azure regions that correspond to your PowerPlatform region. Your environment can be located in either of the two Azure regions, and it can also automatically fail over between them. Therefore, to ensure high availability and connectivity, you should configure your virtual network in both Azure regions that are associated with your PowerPlatform region. To learn how PowerPlatform regions map to Azure regions that support the virtual network functionality, see [Power Platform regions](/power-platform/admin/vnet-support-overview#supported-regions).
+Your environment belongs to a specific PowerPlatform region. However, a PowerPlatform region can span two Azure regions. You have to make sure that your virtual network is configured in both the Azure regions that correspond to your PowerPlatform region. Your environment can be located in either of the two Azure regions, and it can also automatically fail over between them. Therefore, to ensure high availability and connectivity, you should configure your virtual network in both Azure regions that are associated with your PowerPlatform region. To learn how PowerPlatform regions map to Azure regions that support the virtual network functionality, see [Power Platform regions](/power-platform/admin/vnet-support-overview#supported-regions).
 
 ### Hostname not found
 
