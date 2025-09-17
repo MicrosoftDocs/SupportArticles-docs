@@ -1,8 +1,8 @@
 ---
-title: Vendors Can't Sign In To Vendor Collaboration Portal After Reonboarding
+title: Vendors Can't Sign in to Vendor Collaboration Portal After Reonboarding
 description: Steps to troubleshoot when vendors can't access the Vendor Collaboration Portal (VCP) after reonboarding in Microsoft Dynamics 365 Supply Chain Management.
 author: vermayashi
-ms.date: 09/15/2025
+ms.date: 09/17/2025
 ms.search.form:  PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac, shriramsiv
@@ -70,7 +70,7 @@ This step can only be completed by **Microsoft Support advocates**. If you're a 
 
 ## Cause 5: Vendor using incorrect credentials
 
-The vendor might still try to sign in using incorrect credentials (not using their assigned **work account**).
+The vendor might still try to sign in using incorrect credentials instead of their assigned **work account**.
 
 **Resolution:**
 
@@ -84,7 +84,7 @@ For details about vendor onboarding and sign-in steps, see [Vendor onboarding](/
 
 - Verify that the user record is linked to a person or contact on the **User Information** form in the system.
 - Confirm that the person or contact is listed as a contact for the vendor master record.
-- If not, link the user to the correct vendor contact so the system can identify which vendor the user should access.
+- If not, link the user to the correct vendor contact so that the system can identify which vendor the user should access.
 
 For details, see [Add new vendor collaboration contacts](/dynamics365/supply-chain/procurement/manage-vendor-collaboration-users#add-new-vendor-collaboration-contacts).  
 
