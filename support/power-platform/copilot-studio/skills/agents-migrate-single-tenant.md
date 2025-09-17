@@ -52,9 +52,9 @@ The skill developer needs to update the skill to support single tenant and deplo
 
 1. [Update your multitenant skill](/azure/bot-service/skill-pva-update-skill-single-tenant) to support both single-tenant and multitenant agents. This ensures your skill continues to work during the migration.
 
-1. If you're using Bot SDK to call Copilot Studio as a Skill, [update to single-tenant app registrations](advanced-use-pva-as-a-skill.md#update-a-multitenant-bot-service-bot-to-a-single-tenant-bot).
+1. If you're using Bot SDK to call Copilot Studio as a Skill, [update to single-tenant app registrations](/microsoft-copilot-studio/advanced-use-pva-as-a-skill#update-a-multitenant-bot-service-bot-to-a-single-tenant-bot).
 
-You don’t need to wait for Microsoft to complete the migration. You can export and import your custom agents using skills to a new environment. When you import an agent, the process creates a new Azure app registration with single-tenant. For more information about exporting and importing agents, see [export and import agents](authoring-solutions-import-export.md).
+You don’t need to wait for Microsoft to complete the migration. You can export and import your custom agents using skills to a new environment. When you import an agent, the process creates a new Azure app registration with single-tenant. For more information about exporting and importing agents, see [export and import agents](/microsoft-copilot-studio/authoring-solutions-import-export).
 
 ## Frequently asked questions
 

@@ -31,7 +31,7 @@ For messages generated with the usage of generative AI and for topic orchestrati
 
 ## Solution
 
-If you see these error messages due to reaching the agent rate limit, review your licensing model to determine how many extra capacity packs you should acquire to cover your consumption quota, or if you should change to a pay-as-you-go model. For more information about quotas and tenant billing capacity, see [Quotas and limits](requirements-quotas.md#generative-ai-messages-to-an-agent).
+If you see these error messages due to reaching the agent rate limit, review your licensing model to determine how many extra capacity packs you should acquire to cover your consumption quota, or if you should change to a pay-as-you-go model. For more information about quotas and tenant billing capacity, see [Quotas and limits](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent).
 
 ### Increase the rate limit
  
@@ -41,6 +41,6 @@ Another option is to contact Microsoft Support and request a rate limit increase
 
 For further information on rate limits and consumption of generative answers for Copilot Studio agents, review the following documentation:
 
-- [Quotas and limits](requirements-quotas.md#generative-ai-messages-to-an-agent)
+- [Quotas and limits](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent)
 
-- [Generative AI messages to an agent](requirements-quotas.md#generative-ai-messages-to-an-agent)
+- [Generative AI messages to an agent](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent)

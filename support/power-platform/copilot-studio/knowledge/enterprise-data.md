@@ -13,7 +13,7 @@ ms.custom: sap:Knowledge\Enterprise data via Graph connectors
 
 # Troubleshoot enterprise knowledge sources
 
-Enterprise data knowledge sources provide the ability for makers to apply data sources using [real-time knowledge connectors](knowledge-real-time-connectors.md), such as Salesforce, ServiceNow Knowledge, ZenDesk, and Azure SQL Server.
+Enterprise data knowledge sources provide the ability for makers to apply data sources using [real-time knowledge connectors](/microsoft-copilot-studio/knowledge-real-time-connectors), such as Salesforce, ServiceNow Knowledge, ZenDesk, and Azure SQL Server.
 
 ## Design time errors
 
@@ -92,7 +92,7 @@ A queryable table is one that can be queried or accessed to retrieve data. In th
 
 #### Non-Queryable tables
 
-There are predefined sets of tables that are intentionally excluded from the allowed tables, since they generally contain unstructured or text-based data. To use these tables, you must use the **Your connections** option when connecting to the knowledge source. This option provides access to the unstructured data. For more information, go to [Unstructured data as a knowledge source](knowledge-unstructured-data.md) and [Add unstructured data as a knowledge source](knowledge-add-unstructured-data.md).
+There are predefined sets of tables that are intentionally excluded from the allowed tables, since they generally contain unstructured or text-based data. To use these tables, you must use the **Your connections** option when connecting to the knowledge source. This option provides access to the unstructured data. For more information, go to [Unstructured data as a knowledge source](/microsoft-copilot-studio/knowledge-unstructured-data) and [Add unstructured data as a knowledge source](/microsoft-copilot-studio/knowledge-add-unstructured-data).
 
 The following tables require the use of the **Your connections** option.
 
@@ -114,7 +114,7 @@ The following tables require the use of the **Your connections** option.
 
 ## Content moderation errors
 
-Before responses are returned to your agent's users, a [content moderation](knowledge-copilot-studio.md#content-moderation) check is performed to ensure the quality and appropriateness of the agent's response. If a user's query is deemed unanswerable by the content moderation system, the request fails. When a request fails due to content moderation, the user's query doesn't meet the criteria for a valid and answerable question. The following guidelines help to determine if a query is likely to fail or pass the content moderation check.
+Before responses are returned to your agent's users, a [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) check is performed to ensure the quality and appropriateness of the agent's response. If a user's query is deemed unanswerable by the content moderation system, the request fails. When a request fails due to content moderation, the user's query doesn't meet the criteria for a valid and answerable question. The following guidelines help to determine if a query is likely to fail or pass the content moderation check.
 
 ### Queries that pass
 
