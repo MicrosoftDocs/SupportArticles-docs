@@ -21,7 +21,7 @@ Users receive the following error message when attempting to publish their Copil
 
 **ErrorMessage: “You’ve exceeded the limit of Bing sources (4)"**
 
-:::image type="content" source="media/troubleshoot-agent-publish-fails-limitation-bing-sources/exceeded-limit-bing-sources-message.png" alt-text="Screenshot of the raw response displaying the 'you've exceeded the limit of Bing sources error message'.":::
+:::image type="content" source="..media/agent-publish-fails-bing-sources/exceeded-limit-bing-sources-message.png" alt-text="Screenshot of the raw response displaying the 'you've exceeded the limit of Bing sources error message'.":::
 
 ## Cause
 
@@ -41,7 +41,7 @@ If you're running into this issue and are unable to publish the agent due to thi
 
 1. In the **Create generative answers** node, you should see the following errors:
 
-   :::image type="content" source="media/troubleshoot-agent-publish-fails-limitation-bing-sources/bing-knowledge-sources.png" alt-text="Screenshot of a generative answers node highlighting more than four selected Bing sources.":::
+   :::image type="content" source="../media/agent-publish-fails-bing-sources/bing-knowledge-sources.png" alt-text="Screenshot of a generative answers node highlighting more than four selected Bing sources.":::
 
 1. Adjust the number of knowledge sources to the maximum allowed limit (for public sources, this limit is 4) and save the topic.
 
@@ -51,4 +51,4 @@ You should now be able to publish your agent successfully.
 
 ## Related information
 
-- [Knowledge sources overview](knowledge-copilot-studio.md#supported-knowledge-sources)
+- [Knowledge sources overview](/microsoft-copilot-studio/knowledge-copilot-studio#supported-knowledge-sources)
