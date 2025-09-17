@@ -1,3 +1,17 @@
 items:
- - name: Microsoft Copilot Studio Troubleshooting
-   href: welcome-copilot-studio.yml
+- name: Microsoft Copilot Studio Troubleshooting
+  href: welcome-copilot-studio.yml
+- name: Actions
+  href: actions/toc.yml
+- name: Authoring
+  href: authoring/toc.yml
+- name: Channels
+  href: channels/toc.yml
+- name: Generative Answers
+  href: generative-answers/toc.yml
+- name: Knowledge
+  href: knowledge/toc.yml
+- name: Licensing
+  href: licensing/toc.yml
+- name: Skills
+  href: skills/toc.yml

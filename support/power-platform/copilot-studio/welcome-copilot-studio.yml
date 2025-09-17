@@ -14,6 +14,39 @@ metadata:
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+    # Card
+  - title: Generative answers
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Debug insights when generative answers don't return a response
+            url: generative-answers/debug-insights.md
+          - text: Generative AI isn't available error message
+            url: generative-answers/generative-ai-not-available.md
+          - text: Generative answers pointing to SharePoint sources don't return results
+            url: generative-answers/sharepoint-no-response.md
+          - text: Resolve responsible AI content filter errors
+            url: generative-answers/agent-response-filtered-by-responsible-ai.md
+
+    # Card
+  - title: Knowledge
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Publish agent fails due to Bing sources
+            url: knowledge/agent-publish-fails-bing-sources.md
+          - text: Troubleshoot enterprise knowledge sources
+            url: knowledge/enterprise-data.md
+
+    # Card
+  - title: Licensing
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: Resolve throttling errors in agents
+          url: licensing/throttling-errors-agents.md
+        - text: Users outside the Copilot Studio authors security group can access Copilot Studio
+          url: licensing/authors-access.md
 
   # Card
   - title: Documentation and training
