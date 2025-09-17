@@ -39,4 +39,6 @@ To resolve this problem, follow these steps:
 2. Create a new user in Azure that has a unique domain, and assign subscription owner permissions to that user.
 3. Retry the Astro installation from the Azure Marketplace.
 
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

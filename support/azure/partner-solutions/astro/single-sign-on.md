@@ -39,4 +39,6 @@ SSO issues can occur if you use an incorrect email account, if you don't provide
 - Make sure you consent to allow access for the Astronomer software-as-a-service (SaaS) portal.
 - If you see both **Admin** and **User consent** screens during the initial sign-in process, check your tenant consent settings.
 
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
