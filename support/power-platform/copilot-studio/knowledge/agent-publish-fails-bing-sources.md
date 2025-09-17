@@ -21,7 +21,7 @@ Users receive the following error message when attempting to publish their Copil
 
 **ErrorMessage: “You’ve exceeded the limit of Bing sources (4)"**
 
-:::image type="content" source="..media/agent-publish-fails-bing-sources/exceeded-limit-bing-sources-message.png" alt-text="Screenshot of the raw response displaying the 'you've exceeded the limit of Bing sources error message'.":::
+:::image type="content" source="../media/agent-publish-fails-bing-sources/exceeded-limit-bing-sources-message.png" alt-text="Screenshot of the raw response displaying the 'you've exceeded the limit of Bing sources error message'.":::
 
 ## Cause
 
