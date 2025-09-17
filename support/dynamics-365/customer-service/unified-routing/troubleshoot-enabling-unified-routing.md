@@ -1,5 +1,5 @@
 ---
-title: Enabling of unified routing fails
+title: Troubleshoot failures in enabling of unified routing
 description: Learn how to troubleshoot when enabling of unified routing fails in Dynamics 365 Customer Service.
 author: hbarik
 ms.author: hbarik
@@ -10,7 +10,7 @@ ms.date: 09/17/2025
 ms.custom: bap-template
 ---
 
-# Enabling of unified routing fails
+# Troubleshoot failures in enabling of unified routing
 
 This article provides a resolution for the issue where provisioning of unified routing fails and displays an error message. The failure might be on account of various causes, and we provide a set of guidelines for you to troubleshoot this error. 
 
