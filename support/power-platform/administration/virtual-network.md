@@ -72,7 +72,7 @@ If you experience issues that affect hostname resolution, use the `Test-DnsResol
 Test-DnsResolution -EnvironmentId "00000000-0000-0000-0000-000000000000" -HostName "microsoft.com"
 ```
 
-This command tests the DNS resolution for the specified hostname in the context of your Power Platform environment. The request initiates from your delegated subnet and tries to resolve the hostname by using the DNS server that's configured for your virtual network. If the hostname isn't resolved correctly, you might have to check your DNS settings to make sure that the hostname is configured correctly.
+This command tests the DNS resolution for the specified hostname in the context of your Power Platform environment. The request initiates from your delegated subnet and tries to resolve the hostname by using the DNS server configured for your virtual network. If the hostname isn't resolved correctly, you might have to check your DNS settings to make sure that the hostname is configured correctly.
 
 > [!IMPORTANT]
 > If you notice that your DNS setup is incorrect, and you have to update the DNS server settings for your virtual network, see [Can I update the DNS address of my virtual network after it's delegated to "Microsoft.PowerPlatform/enterprisePolicies"?](/power-platform/admin/vnet-support-overview#can-i-update-the-dns-address-of-my-virtual-network-after-its-delegated-to-microsoftpowerplatformenterprisepolicies)
@@ -96,7 +96,7 @@ This command tries to establish a TCP connection to the specified destination an
 If the connectivity tests are successful, but you're still experiencing issues in your application, you might have to check the application-level settings and configurations, as follows:
 
 - Verify that your firewall allows access from the delegated subnet to the resource.
-- Verify that the certificate that's presented by the resource is publicly trusted.
+- Verify that the certificate presented by the resource is publicly trusted.
 - Make sure that no authentication or authorization issues exist that are preventing access to the resource.
 
 You might not be able to diagnose or resolve the issue by using the diagnostics PowerShell module. In that case, create a subnet without delegation in your virtual network, and deploy a virtual machine (VM) in that subnet. You can then use the VM to perform further diagnostics and troubleshooting steps, such as checking network traffic, analyzing logs, and testing application-level connectivity.
