@@ -5,7 +5,6 @@ summary: Welcome to Microsoft Copilot Studio troubleshooting. These articles exp
 metadata:
   title: Microsoft Copilot Studio troubleshooting
   description: Landing page for Microsoft Copilot Studio troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: copilot-studio #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   ms.date: 09/12/2025
   author: aartig13 #Required; your GitHub user alias, with correct capitalization.
