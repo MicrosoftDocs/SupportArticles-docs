@@ -77,7 +77,7 @@ To resolve Windows Update corruptions and address update installation failures, 
     > DISM repair works best when you connect to Microsoft Update servers to fetch missing or corrupted files. When you use the proceeding command, DISM gets the files needed to fix any corruptions from Windows Update. However, if your computer can't connect to Windows Update, you can alternatively use a working Windows installation as the repair source, or you can use files from a Windows folder on a network or from a USB or DVD. Instead, use this command:
 
     ```console
-    DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:\\<servername>\c$\winsxs /LimitAccess
+    DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:\\<servername>\c$\windows /LimitAccess
     ```
 
     > [!NOTE]
