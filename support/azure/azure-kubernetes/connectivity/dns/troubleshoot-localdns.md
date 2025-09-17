@@ -12,7 +12,7 @@ ms.topic: troubleshooting-general
 #Customer intent: As an Azure Kubernetes user, I want to learn how to create a troubleshooting workflow so that I can fix LocalDNS problems in Azure Kubernetes Service (AKS).
 ---
 # Troubleshoot issues with LocalDNS on Azure Kubernetes Service (AKS)
-This article discusses how to create a troubleshooting workflow to fix Domain Name System (DNS) resolution problems in Microsoft Azure Kubernetes Service (AKS), specifically when using LocalDNS. To learn more about LocalDNS, you can read our overview in [DNS Resolution in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/dns-concepts#localdns-in-azure-kubernetes-service-preview).
+This article discusses how to create a troubleshooting workflow to fix Domain Name System (DNS) resolution problems in Azure Kubernetes Service (AKS), when using LocalDNS. To learn more about LocalDNS, you can read our overview in [DNS Resolution in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/en-us/azure/aks/dns-concepts#localdns-in-azure-kubernetes-service-preview).
 
 ## Prerequisites
 
@@ -26,13 +26,13 @@ This article discusses how to create a troubleshooting workflow to fix Domain Na
 
 ## Identifying patterns in DNS failures
 Before you begin diagnosing the issues seen with LocalDNS, identify potential patterns with your DNS failures. Some patterns include:
-1. DNS resolution failure - is this happening allways or intermittently 
-2. Are you seeing the DNS issues from all the nodes, a specific nodepool or subset of nodes or just a single node?
+1. DNS resolution failure - is this happening all the time or intermittently?
+2. Are you seeing the DNS issues from all the nodes, a specific node pool, or subset of nodes or just a single node?
 3. Are you seeing DNS issues from nodes in a specific Azure Zone? Or from all the zones?
-4. What protocols are failing? Is it both TCP and UDP? or just one of them?
+4. What protocols are failing? Is it both TCP (Transmission Control Protocol) and UDP (User Datagram Protocol), or just one of them?
 5. What zones are failing? Is it all zones? or a specific zone traffic?
 
-    **Note:** "zones" here refers to the DNS zones like *cluster.local* and *"."* (root) and not to physical zones in Azure.
+    **Note:** "zones" here refers to the DNS zones like *cluster.local* and root (.) and not to physical zones in Azure.
 
 ## Diagnose LocalDNS with a test DNSUtil pod
 
@@ -42,7 +42,7 @@ Option 1 - Deploy a test pod to your cluster using the following command:
    kubectl apply -f https://k8s.io/examples/admin/dns/dnsutils.yaml
    ```
 
-Option 2 - If you are seeing DNS issues in specific nodes, you can control the deployment of the test pod using nodeSelector:
+Option 2 - If you're seeing DNS issues in specific nodes, you can control the deployment of the test pod using nodeSelector:
 
    ```bash
    cat <<EOF | kubectl create -f -
@@ -97,11 +97,11 @@ Option 3 - If you run both linux and windows nodes in your cluster, you can conf
 
 ### Enable Query logging for LocalDNS
 
-Most use cases require query logging to be turned off in production because of its high memory usage and performance implications. However, for troubleshooting purposes, you should enable query logging in your localDNS configuration to root cause the source of your errors. Once the analyses is complete, you can turn this back off.
+Most use cases require query logging to be turned off in production because of its high memory usage and performance implications. However, for troubleshooting purposes, you should enable query logging in your localDNS configuration to root cause the source of your errors. Once the analysis is complete, you can turn it off.
 
 Option 1 - Enable Query logging on all nodes
 
-You can modify your LocalDNS configuration to reflect *Querylogging:Log* for a single or multiple DNS zones.
+You can modify your LocalDNS configuration to reflect *queryLogging: Log* for a single or multiple DNS zones.
 
 ```json
 {
@@ -153,19 +153,19 @@ You can modify your LocalDNS configuration to reflect *Querylogging:Log* for a s
 }
 ```
 
-This can be enabled on the node pool using the Azure CLI
+You can enable this change on the node pool using the Azure CLI
 
 ```bash
 az aks nodepool update --name mynodepool1 --cluster-name myAKSCluster --resource-group myResourceGroup --localdns-config ./localdnsconfig.json
 ```
 
-**Note:** Making changes to the LocalDNS configuration will trigger a reimage operation on the nodes in the given node pool. 
+**Note:** Making changes to the LocalDNS configuration triggers a reimage operation in the chosen node pool. 
 
 Option 2 - Enable Query logging on a specific node
 
-Diagnosing LocalDNS issues on a specific node can be done by temporarily rewriting the LocalDNS configuration on that specific node. You can [connect to the node](https://learn.microsoft.com/en-us/azure/aks/node-access#connect-using-kubectl-debug) manually and update the corefile used by localdns, only restarting the specific localdns service. 
+You can diagnose LocalDNS issues on a specific node by temporarily rewriting the LocalDNS configuration. You can [connect to the node](https://learn.microsoft.com/en-us/azure/aks/node-access#connect-using-kubectl-debug) manually and update the core file used by LocalDNS, only restarting the specific LocalDNS service. 
 
-**Note:** The changes made this way are ephemeral in nature and will not be persisted once the troubleshooting is complete.
+**Note:** The changes made this way are ephemeral in nature and don't persist once the troubleshooting is complete.
 
 ```bash
 # You need to connect to the node before running the following commands
@@ -234,13 +234,13 @@ cluster.local:53 {
 ...
 <Save the changes>
 
-<Restart localdns service>
+<Restart localDNS service>
 systemctl restart localdns
 ```
 
 Once restarted, LocalDNS should begin collecting all logs for the chosen zones.
 
-### Generater traffic from dnsutils pod
+### Generate traffic from dnsutils pod
 
 The next step would be to trigger some DNS traffic on LocalDNS. LocalDNS has two IPs - The KubeDNS traffic goes to the ClusterListenerIP - 169.254.10.11, while VnetDNSTraffic goes to the NodeListenerIP - 169.254.10.10#53
 
@@ -294,7 +294,7 @@ bing.com.               1315    IN      A       150.171.27.10
 
 ### View LocalDNS logs collected
 
-Lastly, you can now view the logs from your LocalDNS instances. Connect to the specific node and run the following commands to view the logs
+Lastly, you can now view the logs from your LocalDNS instances. To view the logs, you can connect to the node and run the following commands.
 
 ```bash
 # view the logs for the aks-local-dns service
@@ -312,10 +312,10 @@ Jul 03 16:57:42 aks-userpool-24995383-vmss000000 localdns-coredns[2491520]: [INF
 Jul 03 16:59:07 aks-userpool-24995383-vmss000000 localdns-coredns[2491520]: [INFO] 10.244.0.95:58454 - 3580 "A IN bing.com. udp 26 false 512" NOERROR qr,rd,ra 74 0.001570158s
 ```
 
-If you see logs for your traffic, the pod has successfully been able to reach the localdns service.
+If you see logs for your traffic, the pod is able to reach the LocalDNS service.
 
 ## Next steps
-If the above logs fail to help root cause the issue, you can enable [Querylogging for CoreDNS](https://learn.microsoft.com/en-us/azure/aks/coredns-custom#enable-dns-query-logging) to validate if CoreDNS is working as intended.
+If the above logs fail to help root cause the issue, you can enable [Query logging for CoreDNS](https://learn.microsoft.com/en-us/azure/aks/coredns-custom#enable-dns-query-logging) to validate if CoreDNS is working as intended.
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
 
