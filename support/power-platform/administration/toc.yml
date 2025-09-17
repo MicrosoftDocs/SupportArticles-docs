@@ -4,7 +4,7 @@ items:
   - name: Environment Administration
     items:
       - name: Troubleshoot Virtual Network issues in Power Platform
-        href: virtual-network.md.md
+        href: virtual-network.md
   - name: Support resources
     items:
       - name: Power Platform support
