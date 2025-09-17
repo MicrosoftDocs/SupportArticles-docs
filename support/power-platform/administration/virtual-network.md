@@ -79,7 +79,7 @@ This command tests the DNS resolution for the specified hostname in the context 
 
 ### Can't connect to the resource
 
-If you're experiencing issues that affect connectivity to a resource, use the `Test-NetworkConnectivity` function from the diagnostics PowerShell module to check for connectivity. Run the following command:
+If you experience issues that affect connectivity to a resource, use the `Test-NetworkConnectivity` function from the diagnostics PowerShell module to check for connectivity. Run the following command:
 
 ```powershell
 Test-NetworkConnectivity -EnvironmentId "00000000-0000-0000-0000-000000000000" -Destination "unknowndb.database.windows.net" -Port 1433
