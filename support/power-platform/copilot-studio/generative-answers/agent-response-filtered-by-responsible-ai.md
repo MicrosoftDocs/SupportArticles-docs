@@ -22,7 +22,7 @@ Error Message: The content was filtered due to Responsible AI restrictions.
 Error Code: ContentFiltered
 ```
 
-:::image type="content" source="media/troubleshoot-agent-response-filtered-by-responsible-ai/responsible-ai-content-filtered.png" alt-text="Screenshot of an error message warning that the content was filtered due to Responsible AI restrictions.":::
+:::image type="content" source="../media/agent-response-filtered-by-responsible-ai/responsible-ai-content-filtered.png" alt-text="Screenshot of an error message warning that the content was filtered due to Responsible AI restrictions.":::
 
 ## Cause 
 
@@ -41,7 +41,7 @@ With Azure Application Insights, you can review telemetry from agent events, inc
 > [!NOTE]
 > To use Application Insights, your tenant requires an active Azure subscription and you need to have the necessary roles to create Azure resources.
 
-To learn how to connect Application Insights with your agent, see [Create and configure Application Insights resources](/azure/azure-monitor/app/create-workspace-resource?tabs=portal) and [Capture telemetry with Application Insights](advanced-bot-framework-composer-capture-telemetry.md).
+To learn how to connect Application Insights with your agent, see [Create and configure Application Insights resources](/azure/azure-monitor/app/create-workspace-resource?tabs=portal) and [Capture telemetry with Application Insights](/microsoft-copilot-studio/advanced-bot-framework-composer-capture-telemetry).
 
 Once Azure Application Insights is available and connected to your agent, you can analyze the telemetry, including Responsible AI exceptions. To review if your agent contains these exceptions or to understand if a specific conversation ID was affected, you can use the following KQL queries:
 
@@ -56,7 +56,7 @@ user_Id, cloud_RoleInstance
 
 #### Example output
 
-:::image type="content" source="media/troubleshoot-agent-response-filtered-by-responsible-ai/kql-query-output-exceptions.png" alt-text="Screenshot of an Azure Application Insights table filtered by a KQL query to determine if there were RAI exceptions.":::
+:::image type="content" source="../media/agent-response-filtered-by-responsible-ai/kql-query-output-exceptions.png" alt-text="Screenshot of an Azure Application Insights table filtered by a KQL query to determine if there were RAI exceptions.":::
 
 - Validate if the same scenario occurred for a specific conversation ID:
 
@@ -70,28 +70,28 @@ cloud_RoleInstance
 
 #### Example output
 
-:::image type="content" source="media/troubleshoot-agent-response-filtered-by-responsible-ai/kql-query-results-conversation-id.png" alt-text="Screenshot of an Azure Application Insights table filtered by a KQL query to validate based on a specific conversation ID.":::
+:::image type="content" source="../media/agent-response-filtered-by-responsible-ai/kql-query-results-conversation-id.png" alt-text="Screenshot of an Azure Application Insights table filtered by a KQL query to validate based on a specific conversation ID.":::
 
 ### Analyze responsible AI errors with conversation transcripts
 
-You can also review conversation transcripts to understand what was the message that triggered a Responsible AI filter response. For more information, see [how to download conversation transcripts](analytics-transcripts-studio.md#download-agent-session-transcripts).
+You can also review conversation transcripts to understand what was the message that triggered a Responsible AI filter response. For more information, see [how to download conversation transcripts](/microsoft-copilot-studio/analytics-transcripts-studio#download-agent-session-transcripts).
 
 #### Example of conversation transcript excerpt
 
-:::image type="content" source="media/troubleshoot-agent-response-filtered-by-responsible-ai/conversation-transcript-example.png" alt-text="Screenshot illustrating an example of a conversation transcript excerpt.":::
+:::image type="content" source="../media/agent-response-filtered-by-responsible-ai/conversation-transcript-example.png" alt-text="Screenshot illustrating an example of a conversation transcript excerpt.":::
 
 ## Solution
 
 If your agent responses are being filtered due to Responsible AI guardrails, and based on the information retrieved from conversation transcripts, you can reinforce responsible AI guidelines with your agent users to avoid this situation.
 
-Optionally, you can also update the agent [content moderation](knowledge-copilot-studio.md#content-moderation) policies.
+Optionally, you can also update the agent [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation) policies.
 
 ## Related information
 
-- [Responsible AI FAQs](responsible-ai-overview.md)
+- [Responsible AI FAQs](/microsoft-copilot-studio/responsible-ai-overview)
 
-- [FAQ for generative answers](faqs-generative-answers.md)
+- [FAQ for generative answers](/microsoft-copilot-studio/faqs-generative-answers)
 
 - [Application Insights telemetry with Microsoft Copilot Studio - Dynamics 365](/dynamics365/guidance/resources/copilot-studio-appinsights)
 
-- [Content moderation](knowledge-copilot-studio.md#content-moderation)
+- [Content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation)
