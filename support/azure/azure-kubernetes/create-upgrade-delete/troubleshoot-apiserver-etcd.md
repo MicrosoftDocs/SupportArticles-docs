@@ -49,6 +49,7 @@ The following table outlines the common symptoms of API server failures.
 | Timeouts from the API server | Frequent timeouts that are beyond the guarantees in [the AKS API server SLA](/azure/aks/free-standard-pricing-tiers#uptime-sla-terms-and-conditions). For example, `kubectl` commands timeout. |
 | High latencies | High latencies that make the Kubernetes SLOs fail. For example, the `kubectl` command takes more than 30 seconds to list pods. |
 | API server pod in `CrashLoopbackOff` status or facing webhook call failures | Verify that you don't have any custom admission webhook (such as the [Kyverno](https://kyverno.io/docs/introduction/) policy engine) that's blocking the calls to the API server. |
+| Elevated HTTP 429 responses from the API server | API server is throttling calls. Refer to the troubleshooting checklist|
 
 ## Troubleshooting checklist
 
@@ -86,8 +87,8 @@ AzureDiagnostics
 > If your query returns no results, you might have selected the wrong table to query diagnostics logs. In resource-specific mode, data is written to individual tables, depending on the category of the resource. Diagnostics logs are written to the `AKSAudit` table. In Azure diagnostics mode, all data is written to the `AzureDiagnostics` table. For more information, see [Azure resource logs](/azure/azure-monitor/essentials/resource-logs).
 
 Although it's helpful to know which clients generate the highest request volume, high request volume alone might not be a cause for concern. The response latency that clients experience is a better indicator of the actual load that each one generates on the API server.
-
-### Step 2a: Identify and chart the average latency of API server requests per user agent
+### Step 2 Identify and chart latency for user agentd
+#### [Diagnose and Solve](#/tab/Diagnose-and-solve)
 
 AKS now provides a built-in analyzer, the API Server Resource Intensive Listing Detector, to help you identify agents that make resource-intensive LIST calls. These calls are a leading cause of API server and etcd performance issues.
 
@@ -104,7 +105,7 @@ The detector analyzes recent API server activity and highlights agents or worklo
 
 :::image type="content" source="media/troubleshoot-apiserver-etcd/resource-intensive-listing-analyzer-2.png" alt-text="Screenshot that shows the apiserver perf detector detailed view." lightbox="media/troubleshoot-apiserver-etcd/resource-intensive-listing-analyzer-2.png":::
 
-#### How to interpret the detector output
+##### How to interpret the detector output
 
 - **Summary:**  
   Indicates if resource-intensive LIST calls were detected and describes possible impacts on your cluster.
@@ -124,11 +125,11 @@ The analyzer also provides recommendations directly in the Azure portal. These r
 > 
 > After you identify the offending agents and apply the recommendations, you can use [the API Priority and Fairness feature](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/) to throttle or isolate problematic clients. Alternatively, refer to the "Cause 3" section of [Troubleshoot API server and etcd problems in Azure Kubernetes Services](/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/troubleshoot-apiserver-etcd?branch=pr-en-us-9260&tabs=resource-specific#cause-3-an-offending-client-makes-excessive-list-or-put-calls).
 
-### Step 2.b: Identify the average latency
+#### [Logs](#/tab/logs)
 
 To identify the average latency of API server requests per user agent, as plotted on a time chart, run the following query.
 
-#### [Resource-specific](#tab/resource-specific)
+##### [Resource-specific](#tab/resource-specific)
 
 ```kusto
 AKSAudit
@@ -140,7 +141,7 @@ AKSAudit
 | render timechart
 ```
 
-#### [Azure diagnostics](#tab/azure-diagnostics)
+##### [Azure diagnostics](#tab/azure-diagnostics)
 
 ```kusto
 AzureDiagnostics
