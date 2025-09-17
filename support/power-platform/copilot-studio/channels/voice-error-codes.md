@@ -28,32 +28,32 @@ The **Optimize for voice** setting can't be turned on if the the Power Platform 
 
 1. In Copilot Studio, go to **Channels > Telephony** and select **Turn off telephony**.
 
-    :::image type="content" source="media/voice/voice-telephony-channel-turn-off-telephony.png" alt-text="Screenshot of the Telephony channel, highlighting the Turn off telephony button.":::
+    :::image type="content" source="../media/voice/voice-telephony-channel-turn-off-telephony.png" alt-text="Screenshot of the Telephony channel, highlighting the Turn off telephony button.":::
 
     >[!NOTE]
     >If there's an error message after selecting the button, ignore the message, and refresh the page. The Telephony channel should be turned off afterward.
 
 1. Select **Turn on telephony**.
 
-    :::image type="content" source="media/voice/voice-telephony-channel-turn-on-telephony.png" alt-text="Screenshot of the Telephony channel, highlighting the Turn on telephony button.":::
+    :::image type="content" source="../media/voice/voice-telephony-channel-turn-on-telephony.png" alt-text="Screenshot of the Telephony channel, highlighting the Turn on telephony button.":::
 
 1. Go to **Channels > Customer engagement hub > Dynamics 365 Customer Service** and select **Disconnect**.
 
-    :::image type="content" source="media/voice/voice-channels-dynamics-365-customer-service-disconnect.png" alt-text="Screenshot of the Dynamics 365 Customer Service customer engagement hub, highlighting the Disconnect button.":::
+    :::image type="content" source="../media/voice/voice-channels-dynamics-365-customer-service-disconnect.png" alt-text="Screenshot of the Dynamics 365 Customer Service customer engagement hub, highlighting the Disconnect button.":::
 
 1. Select **Connect**.
 
-    :::image type="content" source="media/voice/voice-channels-dynamics-365-customer-service-connect.png" alt-text="Screenshot of the Dynamics 365 Customer Service customer engagement hub, highlighting the Connect button.":::
+    :::image type="content" source="../media/voice/voice-channels-dynamics-365-customer-service-connect.png" alt-text="Screenshot of the Dynamics 365 Customer Service customer engagement hub, highlighting the Connect button.":::
 
 ## Can't publish an agent or configure the Telephony channel
 
 **Issue**: Maker can't publish an agent or configure the Telephony channel.
 
-:::image type="content" source="media/voice/voice-channels-telephony-disabled.png" alt-text="Screenshot of the telephony channel being disabled, along with error status messages.":::
+:::image type="content" source="../media/voice/voice-channels-telephony-disabled.png" alt-text="Screenshot of the telephony channel being disabled, along with error status messages.":::
 
 **Suggested solution**: If you're unable to publish your agent, or if the Telephony channel is disabled, contact your Power Platform admin and ask them to review the data policies in your tenant.
 
-**Steps**: In the Power Platform admin center, the tenant admin can unblock the needed data policies. See [Data policy example - Block channels to disable agent publish](dlp-example-6.md).
+**Steps**: In the Power Platform admin center, the tenant admin can unblock the needed data policies. See [Data policy example - Block channels to disable agent publish](/microsoft-copilot-studio/dlp-example-6).
 
 ## Voice-enabled agent runtime error codes
 
@@ -69,8 +69,8 @@ Error Message: The SIP header in the transfer activity contains unsupported char
 
 Resolution: Check your SIP header value and make sure that it’s correct.
 
-For more information, see [Understand error codes](error-codes.md).
+For more information, see [Understand error codes](../authoring/error-codes.md).
 
 ## Related content
 
-- [Test your voice-enabled agent](voice-test.md)
+- [Test your voice-enabled agent](/microsoft-copilot-studio/voice-test)
