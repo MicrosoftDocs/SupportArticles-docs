@@ -55,4 +55,4 @@ This issue is caused by a defect in the MS ODBC 13 driver. SQL Server Management
 
 ## Resolution
 
-This issue is fixed in the [MS ODBC 13.1 driver](https://www.microsoft.com/download/details.aspx?id=53339).
+This issue is fixed in the [MS ODBC 13.1 driver](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows#131).

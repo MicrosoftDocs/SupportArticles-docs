@@ -37,7 +37,7 @@ The auto-cleanup process flushes the plan out of Query Data Store. The query enc
 
 This issue is fixed in the following service pack for SQL Server:  
 
-[Service Pack 3 for SQL Server 2016](https://support.microsoft.com/help/5003279)
+[Service Pack 3 for SQL Server 2016](~/sql/releases/sqlserver-2016/servicepack3)
 
 **About service packs for SQL Server:**  
 
