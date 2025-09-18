@@ -1,6 +1,6 @@
 ---
 title: Can't Install or Uninstall an Extension on a Virtual Machine
-description: Resolve issues with installing or uninstalling extensions on a virtual machine. 
+description: Resolve problems with installing or uninstalling extensions on a virtual machine. 
 author: ProfessorKendrick
 ms.author: kkendrick
 ms.service: partner-services
@@ -8,13 +8,15 @@ ms.topic: troubleshooting-problem-resolution
 ms.date: 09/18/2025
 ai-usage: ai-assisted
 
-#customer intent: As an Azure administrator or user, I want to resolve issues with installing or uninstalling extensions on virtual machines so that I can install or uninstall an extension.
+#customer intent: As an Azure administrator or user, I want to resolve problems with installing or uninstalling extensions on virtual machines so that I can install or uninstall an extension.
 
 ---
 
 # Can't install or uninstall an extension on a virtual machine
 
-This article explains how to resolve the issue where the Install Extension or Uninstall Extension button is disabled (greyed out) when selecting virtual machines in the Azure portal for the New Relic VM extension.
+This article explains how to resolve problems with installing or uninstalling an extenstion on a virtual machine 
+
+the issue where the Install Extension or Uninstall Extension button is disabled (greyed out) when selecting virtual machines in the Azure portal for the New Relic VM extension.
 
 Use this article when you select virtual machines and the Install Extension or Uninstall Extension action remains unavailable.
 
