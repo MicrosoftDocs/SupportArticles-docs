@@ -33,13 +33,13 @@ Here are some operations that may trigger a buffer pool scan to occur:
 
 ### Error log shows that a scan took a long time
 
-Starting with [SQL Server 2016 SP3](~/sql/releases/sqlserver-2016/servicepack3), [SQL Server 2017 CU23](~/sql/releases/sqlserver-2017/cumulativeupdate23#bkmk_13741858) and [SQL Server 2019 CU9](~/sql/releases/sqlserver-2019/cumulativeupdate9#bkmk_13744390), an error message was added to the SQL Server [Error log](/sql/tools/configuration-manager/viewing-the-sql-server-error-log) to indicate that a buffer pool scan took a long time (10 seconds or longer):
+Starting with [SQL Server 2016 SP3](~/sql/releases/sqlserver-2016/servicepack3.md), [SQL Server 2017 CU23](~/sql/releases/sqlserver-2017/cumulativeupdate23.md#bkmk_13741858) and [SQL Server 2019 CU9](~/sql/releases/sqlserver-2019/cumulativeupdate9.md#bkmk_13744390), an error message was added to the SQL Server [Error log](/sql/tools/configuration-manager/viewing-the-sql-server-error-log) to indicate that a buffer pool scan took a long time (10 seconds or longer):
 
 > Buffer Pool scan took 14 seconds: database ID 7, command 'BACKUP DATABASE', operation 'FlushCache', scanned buffers 115, total iterated buffers 204640239, wait time 0 ms. See 'https://go.microsoft.com/fwlink/?linkid=2132602' for more information.
 
 ### Extended Event to diagnose a long scan
 
-Also, starting with the same builds [SQL Server 2016 SP3](~/sql/releases/sqlserver-2016/servicepack3), [SQL Server 2017 CU23](~/sql/releases/sqlserver-2017/cumulativeupdate23#bkmk_13741858) and [SQL Server 2019 CU9](~/sql/releases/sqlserver-2019/cumulativeupdate9#bkmk_13744390)  the **buffer_pool_scan_complete** Extended event was introduced to help you identify long buffer pool scans.
+Also, starting with the same builds [SQL Server 2016 SP3](~/sql/releases/sqlserver-2016/servicepack3.md), [SQL Server 2017 CU23](~/sql/releases/sqlserver-2017/cumulativeupdate23.md#bkmk_13741858) and [SQL Server 2019 CU9](~/sql/releases/sqlserver-2019/cumulativeupdate9.md#bkmk_13744390)  the **buffer_pool_scan_complete** Extended event was introduced to help you identify long buffer pool scans.
 
 If a scan takes more than 1 second, the XEvent will be recorded as follows when the event is enabled.
 

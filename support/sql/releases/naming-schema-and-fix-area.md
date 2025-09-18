@@ -37,7 +37,7 @@ SQL Server software update packages typically fall into two major release types:
 
   - CU (Cumulative Update): CU releases are non-critical requests that provide fixes for isolated issues not affecting key business functionality. The CU releases on a two-month cadence while the product and service pack are in mainstream support.
 
-To learn more about the ISM and the different release types, which SQL Server servicing follows, see [An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems](~/sql/releases/servicing-models-sql-server).
+To learn more about the ISM and the different release types, which SQL Server servicing follows, see [An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems](~/sql/releases/servicing-models-sql-server.md).
 
 ## Naming schema for SQL Server software update packages
 

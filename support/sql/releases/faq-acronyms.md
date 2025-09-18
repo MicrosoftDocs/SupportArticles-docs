@@ -56,11 +56,11 @@ For more information, go to the following websites:
 
 - [Announcing the Modern Servicing Model for SQL Server](https://techcommunity.microsoft.com/t5/sql-server/announcing-the-modern-servicing-model-for-sql-server/ba-p/385594)
 
-- [Naming schema and Fix area descriptions for SQL Server software update packages](~/sql/releases/naming-schema-and-fix-area)
+- [Naming schema and Fix area descriptions for SQL Server software update packages](~/sql/releases/naming-schema-and-fix-area.md)
 
-- [Description of the standard terminology that is used to describe Microsoft software updates](~/windows-client/installing-updates-features-roles/standard-terminology-software-updates)
+- [Description of the standard terminology that is used to describe Microsoft software updates](~/windows-client/installing-updates-features-roles/standard-terminology-software-updates.md)
 
-- [An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems](~/sql/releases/servicing-models-sql-server)
+- [An Incremental Servicing Model is available from the SQL Server team to deliver hotfixes for reported problems](~/sql/releases/servicing-models-sql-server.md)
 
 - [SQL Server documentation](/sql/sql-server/?view=sql-server-ver15&preserve-view=true)
 
