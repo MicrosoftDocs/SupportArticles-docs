@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2022 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 09/11/2025
+ms.date: 09/16/2025
 ms.update-cycle: 1095-days
 appliesto:
   - SQL Server 2022
@@ -60,7 +60,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2022](..
 
 ## CU 21 (September 2025)
 
-This is the Cumulative Update 21 (CU 21) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4215.2. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate21).
+This is the Cumulative Update 21 (CU 21) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4215.2. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2022/cumulativeupdate21.md).
 
 ### Package details
 

@@ -5,7 +5,7 @@ author: saimsh-msft
 ms.author: saimsh
 ms.reviewer: divargas
 ms.topic: troubleshooting
-ms.date: 10/11/2022
+ms.date: 09/15/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
@@ -29,7 +29,7 @@ To identify if your VM fails to boot due to missing Hyper-V drivers, use [Azure 
 
 ## Before you troubleshoot
 
-To troubleshoot [Scenario 1: Network Hyper-V driver is disabled](#network-hyperv-disabled) and [Scenario 2: NIC mac address is changed or doesn't match](#macaddress-issue), you need [serial console](./serial-console-linux.md) access for your Linux VM.
+To troubleshoot [Scenario 1: Network Hyper-V driver is disabled](#network-hyperv-disabled) and [Scenario 2: NIC media access control (MAC) address is changed or doesn't match](#macaddress-issue), you need [serial console](./serial-console-linux.md) access for your Linux VM.
 
 If you don't have serial console access, follow the [offline approach](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to access the contents of the problematic OS disk from a rescue virtual machine. Access to Azure CLI or [Azure Cloud Shell](https://shell.azure.com) is required for the offline approach.
 
@@ -131,7 +131,7 @@ Always take a backup of the original initial RAMdisk image to facilitate the rol
 
 4. Once the changes are applied, perform an automatic OS disk swap with the original VM and reboot the system by using the `az vm repair restore` command.
 
-## <a id="macaddress-issue"></a>Scenario 2: NIC MAC address is changed or doesn't match
+## <a id="macaddress-issue"></a>Scenario 2: NIC media access control (MAC) address is changed or doesn't match
 
 If the Network Interface Card MAC address is changed or doesn't match within the OS configuration, you won't be able to SSH to the VM because the networking services are unavailable. You're still able to sign in via [serial console](../windows/serial-console-overview.md) from the Azure portal. Errors that are similar to the ones in [Scenario 1: Network Hyper-V driver is disabled](#network-hyperv-disabled) are displayed.
 
