@@ -59,7 +59,7 @@ To report an issue, go to the **Issues** section of the repository, and [open a 
 If everything is correctly configured but you still experience issues, use the `Get-EnvironmentRegion` function from the diagnostics PowerShell module to check whether the regions of your Power Platform environment are the same as the regions of your virtual network. Run the following command:
 
 ```powershell
-Get-EnvironmentRegion -EnvironmentId "00000000-0000-0000-0000-000000000000"
+Get-EnvironmentRegion -EnvironmentId "<EnvironmentId>"
 ```
 
 Your environment belongs to a specific PowerPlatform region. However, a PowerPlatform region can span two Azure regions. You have to make sure that your virtual network is configured in both the Azure regions that correspond to your PowerPlatform region. Your environment can be located in either of the two Azure regions, and it can also automatically fail over between them. Therefore, to ensure high availability and connectivity, you should configure your virtual network in both Azure regions that are associated with your PowerPlatform region. To learn how PowerPlatform regions map to Azure regions that support the virtual network functionality, see [Power Platform regions](/power-platform/admin/vnet-support-overview#supported-regions).
@@ -69,7 +69,7 @@ Your environment belongs to a specific PowerPlatform region. However, a PowerPla
 If you experience issues that affect hostname resolution, use the `Test-DnsResolution` function from the diagnostics PowerShell module to check whether the hostname is resolved correctly. Run the following command:
 
 ```powershell
-Test-DnsResolution -EnvironmentId "00000000-0000-0000-0000-000000000000" -HostName "microsoft.com"
+Test-DnsResolution -EnvironmentId "<EnvironmentId>" -HostName "<HostName>"
 ```
 
 This command tests the DNS resolution for the specified hostname in the context of your Power Platform environment. The request initiates from your delegated subnet and tries to resolve the hostname by using the DNS server configured for your virtual network. If the hostname isn't resolved correctly, you might have to check your DNS settings to make sure that the hostname is configured correctly.
@@ -82,7 +82,7 @@ This command tests the DNS resolution for the specified hostname in the context 
 If you experience issues that affect connectivity to a resource, use the `Test-NetworkConnectivity` function from the diagnostics PowerShell module to check for connectivity. Run the following command:
 
 ```powershell
-Test-NetworkConnectivity -EnvironmentId "00000000-0000-0000-0000-000000000000" -Destination "unknowndb.database.windows.net" -Port 1433
+Test-NetworkConnectivity -EnvironmentId "<EnvironmentId>" -Destination "<ResourceAddress>" -Port 1433
 ```
 
 This command tries to establish a TCP connection to the specified destination and port in the context of your Power Platform environment. The request initiates from your delegated subnet and tries to connect to the specified destination by using the network configuration from your virtual network. If the connection fails, you might have to check your network settings to make sure that the destination is reachable from your virtual network. If the connection is successful, it indicates that network connectivity exists between the Power Platform environment and the specified resource.
