@@ -28,12 +28,12 @@ This article discusses how to create a troubleshooting workflow to fix Domain Na
 ## Identifying patterns in DNS failures
 Before you begin diagnosing the issues seen with LocalDNS, identify potential patterns with your DNS failures. Some patterns include:
 1. DNS resolution failure - is this happening all the time or intermittently?
-2. Are you seeing the DNS issues from all the nodes, a specific node pool, or subset of nodes or just a single node?
-3. Are you seeing DNS issues from nodes in a specific Azure Zone? Or from all the zones?
+2. Are you seeing the DNS issues from all the nodes, a specific node pool, a subset of nodes or just a single node?
+3. Are you seeing DNS issues from nodes in a specific Azure zone? Or from all the zones?
 4. What protocols are failing? Is it both TCP (Transmission Control Protocol) and UDP (User Datagram Protocol), or just one of them?
 5. What zones are failing? Is it all zones? or a specific zone traffic?
 
-    **Note:** "zones" here refers to the DNS zones like *cluster.local* and root (.) and not to physical zones in Azure.
+    **Note:** In this case, "zone" refers to DNS zones like *cluster.local* and root (.) and not to physical zones in Azure.
 
 ## Diagnose LocalDNS with a test DNSUtil pod
 
@@ -243,7 +243,7 @@ Once restarted, LocalDNS should begin collecting all logs for the chosen zones.
 
 ### Generate traffic from dnsutils pod
 
-The next step would be to trigger some DNS traffic on LocalDNS. LocalDNS has two IPs - The KubeDNS traffic goes to the ClusterListenerIP - 169.254.10.11, while VnetDNSTraffic goes to the NodeListenerIP - 169.254.10.10#53
+The next step would be to trigger some DNS traffic on LocalDNS. LocalDNS has two IPs - The KubeDNS traffic goes to the ClusterListenerIP - 169.254.10.11, while VnetDNSTraffic goes to the NodeListenerIP - 169.254.10.10
 
 #### Test KubeDNS zone traffic
 
