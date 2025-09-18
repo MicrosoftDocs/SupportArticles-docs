@@ -12,7 +12,7 @@ ms.custom: bap-template
 
 # Troubleshoot failures in enabling of unified routing
 
-This article provides a resolution for the issue where provisioning of unified routing fails and displays an error message. The failure might be on account of various causes, and we provide a set of guidelines for you to troubleshoot this error. 
+This article provides a resolution for the issue where provisioning of unified routing fails and displays an error message. The failure might be due to various causes, and we provide a set of guidelines for you to troubleshoot this error. 
 
 ## Symptoms
 
