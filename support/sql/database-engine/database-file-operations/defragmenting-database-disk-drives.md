@@ -59,4 +59,4 @@ Open-file defragmentation raises several possible issues that closed-file defrag
 
 - [How to run ChkDsk and defrag on Cluster Shared Volumes in Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-run-chkdsk-and-defrag-on-cluster-shared-volumes-in/ba-p/371905)
 
-- [Recommendations and guidelines for improving SQL Server FILESTREAM performance](/sql/relational-databases/blob/filestream-sql-server?view=sql-server-ver17)
+- [Recommendations and guidelines for improving SQL Server FILESTREAM performance](/sql/relational-databases/blob/filestream-sql-server)
