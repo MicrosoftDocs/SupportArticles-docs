@@ -32,7 +32,7 @@ If you're already using basic routing, issues might occur when you activate or d
 
 ## Cause 2
 
-The system creates a master entity routing configuration for the Case table as part of provisioning that might fail in copied orgs due to missing related records. Or, when the customer creates the Case master entity record configuration with the same name before triggering provisioning. 
+The system creates a master entity routing configuration for the Case table as part of provisioning that might fail in copied orgs due to missing related records, or when the customer creates the Case master entity record configuration with the same name before triggering provisioning.
 
 ## Resolution 2
 
