@@ -214,7 +214,7 @@ You fail to restore a CRM backup from the Enterprise edition on a Standard editi
 
 **Resolution**
 
-To solve the issue, see [2567984 "Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database](/previous-versions/troubleshoot/dynamics/crm/database-cannot-be-started-in-this-edition-of-sql-error-when-restoring).
+To solve the issue, see ["Database cannot be started in this edition of SQL Server" error when restoring a Microsoft Dynamics CRM database](/previous-versions/troubleshoot/dynamics/crm/database-cannot-be-started-in-this-edition-of-sql-error-when-restoring).
   
 ## FAQ about SQL Server backup and restore operations
 
