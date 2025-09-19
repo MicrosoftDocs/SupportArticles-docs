@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: itpro
 ms.reviewer: kaushika, dstrome, v-appelgatet
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update configuration,settings and management
+- sap:windows servicing, updates and features on demand\windows update - configuring and managing client settings
 - pcy:WinComm Devices Deploy
 ---
 
