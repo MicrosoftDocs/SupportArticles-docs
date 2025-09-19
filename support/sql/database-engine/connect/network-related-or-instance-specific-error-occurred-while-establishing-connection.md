@@ -11,7 +11,7 @@ ms.reviewer: jopilov
 
 _Applies to:_ &nbsp; SQL Server
 
-When connecting to a SQL Server instance, you may encounter one or more of the following [error messages](#common-sql-server-connection-error-messages). This article provides some steps to help you troubleshoot these errors, which are provided in order of the issues from simple to complex.
+When connecting to a SQL Server instance, you may encounter one or more [error messages](#common-sql-server-connection-error-messages). This article explains how to [collect the necessary information](#gather-information-to-troubleshoot-sql-server-connection-errors) to diagnose these issues and outlines a structured troubleshooting approach to help you resolve these issues, starting with basic checks and moving on to more advanced techniques.
 
 ## Common SQL Server connection error messages
 
