@@ -56,4 +56,4 @@ landingContent:
           - text:  Update ingestion key after rotation
             url: ingestion-key-rotation-log-flow.md
           - text: Resource monitoring stopped working
-            url: resource-monitoring-troubleshoot.md
+            url: new-relic/resource-monitoring-troubleshoot.md
