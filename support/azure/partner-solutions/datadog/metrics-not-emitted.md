@@ -1,0 +1,3 @@
+The Datadog resource is assigned a Monitoring Reader role in the appropriate Azure subscription. This role enables the Datadog resource to collect metrics and send those metrics to Datadog.
+
+To verify the resource has the correct role assignment, open the Azure portal and select the subscription. In the left pane, select Access Control (IAM). Search for the Datadog resource name. Confirm that the Datadog resource has the Monitoring Reader role assignment.
