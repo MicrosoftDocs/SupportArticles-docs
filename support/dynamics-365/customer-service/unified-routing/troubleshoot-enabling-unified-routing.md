@@ -28,7 +28,7 @@ If you're already using basic routing, issues might occur when you activate or d
 
 - Check the owner of all the basic routing rulesets. If the owner user doesn't have access, then enable the user or update the owner of the basic routing rule set to an active user.  
 
-  More information: [Automatically route cases using basic routing rulesets](/dynamics365/customer-service/administer/create-rules-automatically-route-cases)
+  Learn more in [Automatically route cases using basic routing rulesets](/dynamics365/customer-service/administer/create-rules-automatically-route-cases).
 
 ## Cause 2
 
