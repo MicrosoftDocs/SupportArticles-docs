@@ -55,7 +55,7 @@ The following screenshot shows the output of the `fsutil fsinfo sectorinfo` comm
 
 ## Resolution 
 
-If you're experiencing performance degradation due to misaligned I/O operations and can't [modify your sector size](../database-file-operations/troubleshoot-os-4kb-disk-sector-size.md#resolutions), you can use [Trace Flag 1800](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1800) as a global startup parameter to force SQL Server to use a consistent 4-KB sector size for transaction log I/O operations.
+If you're experiencing performance degradation due to misaligned I/O operations and can't [modify your sector size](../database-file-operations/troubleshoot-os-4kb-disk-sector-size.md#resolution-steps-for-disk-sector-size-errors-in-sql-server), you can use [Trace Flag 1800](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1800) as a global startup parameter to force SQL Server to use a consistent 4-KB sector size for transaction log I/O operations.
 
 To enable Trace Flag 1800 as a startup parameter, follow these steps:
 

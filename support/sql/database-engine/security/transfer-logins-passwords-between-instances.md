@@ -284,8 +284,8 @@ To generate scripts via SSMS on the source server and manually reset passwords f
      ```
 
 1. The output script that the `sp_help_revlogin` stored procedure generates is the login script. This login script creates the logins that have the original Security Identifier (SID) and the original password.
-1. Review and follow the information in the [Remarks](#remarks) section before you proceed with implementing steps on the destination server.
-1. Once you implement any applicable steps from the [Remarks](#remarks) section, connect to the destination server B using any client tool (like SSMS).
+1. Review and follow the information in the [Additional considerations when transferring SQL Server logins](#additional-considerations-when-transferring-sql-server-logins) section before you proceed with implementing steps on the destination server.
+1. Once you implement any applicable steps from the [Additional considerations when transferring SQL Server logins](#additional-considerations-when-transferring-sql-server-logins) section, connect to the destination server B using any client tool (like SSMS).
 1. Run the script generated as the output of `sp_helprevlogin` from server A.
 
 ## Additional considerations when transferring SQL Server logins
