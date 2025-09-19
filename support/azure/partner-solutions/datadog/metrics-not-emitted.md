@@ -1,19 +1,20 @@
 ---
-title: Datadog metrics not emitted from Azure resources
-description: "Resolve the issue when Datadog does not receive metrics from Azure resources due to missing or incorrect role assignment."
-author: v-albemi
-ms.author: v-albemi
-ms.service: Datadog integration
+title: Metrics Not Being Emitted
+description: Resolve the problem in which Datadog doesn't receive metrics from Azure resources because of a missing or incorrect role assignment.
+author: 
+ms.author: 
+ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/19/2025
+ai-usage: ai-assisted
 
-#customer intent: As a <role>, I want <what> so that <why>.
+#customer intent: As an Azure administrator or user, I want to resolve an issue in which Datadog isn't emitting metrics.
 
 ---
 
-This article helps you resolve the specific problem where Datadog is not receiving metrics from Azure resources because the Datadog resource identity does not have the required Monitoring Reader role assignment.
+## Metrics bot being emitted
 
-Use this article when Datadog metrics for one or more Azure resources are missing and you see no Azure role assignment for the Datadog resource.
+This article helps you resolve the problem in which Datadog isn't receiving metrics from Azure resources because the Datadog resource identity doesn't have the required Monitoring Reader role assignment.
 
 ## Prerequisites
 
