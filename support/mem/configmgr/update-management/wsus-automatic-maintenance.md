@@ -225,12 +225,24 @@ of or inability to use the sample script or documentation, even if Microsoft has
 
 #>
 
+param (
+    [string] $Action,
+    [switch] $DontShowLogs,
+    [int] $DaysSupersededNotDeclined
+)
+
 #Global Variables
 $Global:LogFile = $null
 $Global:SQLoutput = $null
 $Global:Spaceused = $null
 $Global:progresspreference = 'SilentlyContinue'
 $Global:DaysSupersededNotDeclined = 30
+$Global:PromptForDaysSuperseeded = $true
+
+if ($DaysSupersededNotDeclined) {
+    $Global:DaysSupersededNotDeclined = $DaysSupersededNotDeclined
+    $Global:PromptForDaysSuperseeded = $false
+}
 
 $ErrorActionPreference = "Stop"
 
@@ -730,7 +742,9 @@ else {
         try {
             $null = New-Item -ItemType File -Path $LogFile -Force -ErrorAction Stop
             Write-Host "The file [$LogFile] has been created."
-            Invoke-Expression $LogFile
+            if (!$DontShowLogs) {
+                Invoke-Expression $LogFile
+            }
         }
         catch {
             throw $_.Exception.Message
@@ -738,7 +752,9 @@ else {
     }
     else {
         Write-Host "Log file [$LogFile] already existed."
-        Invoke-Expression $LogFile
+        if (!$DontShowLogs) {
+            Invoke-Expression $LogFile
+        }
     }
     #EndRegion LogCheck
 
@@ -751,7 +767,12 @@ else {
 #Region ShowMenu
 do {
     Show-Menu -Title 'SUSDB Maintenance'
-    $selection = Read-Host "Please make a selection"
+    if ($Action) {
+        $selection = $Action
+        Write-Host "Selected: $Action"
+    } else {
+        $selection = Read-Host "Please make a selection"
+    }
     switch ($selection) {
         'S' {
             #Change SQL Server
@@ -782,8 +803,10 @@ do {
 
         }'6' {
             #Cleanup Superseded Updates
-            Write-Host "Specify the number of days between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
-            $Global:DaysSupersededNotDeclined = Read-Host -Prompt 'Days '
+            if ($Global:PromptForDaysSuperseeded) {
+                Write-Host "Specify the number of days between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
+                $Global:DaysSupersededNotDeclined = Read-Host -Prompt 'Days '
+            }
             
             if ($Global:DaysSupersededNotDeclined -gt 0 -and $Global:DaysSupersededNotDeclined -le 99) {
                 Write-log -Message "Number of days entered :  $Global:DaysSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Cleanup Superseded Updates"
@@ -821,9 +844,11 @@ do {
         }'RA' {
             Write-log -Message "--> Begin run all" -severity 1 -component "Run All"
             
-            Write-Host "Specify the number of days between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
-            $Global:DaysSupersededNotDeclined = Read-Host -Prompt 'Days '
-            
+            if ($Global:PromptForDaysSuperseeded) {
+                Write-Host "Specify the number of days between today and the release date for which the superseded updates must not be declined.`nThis should match configuration of supersedence rules in SUP component properties, if ConfigMgr is being used with WSUS.`n"
+                $Global:DaysSupersededNotDeclined = Read-Host -Prompt 'Days '
+            }
+
             if ($Global:DaysSupersededNotDeclined -gt 0 -and $Global:DaysSupersededNotDeclined -le 99) {
                 Write-log -Message "Number of days entered :  $Global:DaysSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Run All"                
             }
@@ -852,6 +877,7 @@ do {
         }'q' {
             Write-Host
             Write-Host "Have a nice day!`n" -ForegroundColor Yellow
+            exit 0
         }
         default {
             Write-Host
@@ -859,6 +885,10 @@ do {
         }
     }
 
+    # Quit after action
+    if ($Action) {
+        $Action = "q"
+    }
     Pause
 }
 until ($selection -eq 'q')
