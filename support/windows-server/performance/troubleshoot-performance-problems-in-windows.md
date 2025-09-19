@@ -9,6 +9,8 @@ ms.reviewer: kaushika, waltere
 ms.custom:
 - sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Scenario guide: Troubleshoot performance problems in Windows
 

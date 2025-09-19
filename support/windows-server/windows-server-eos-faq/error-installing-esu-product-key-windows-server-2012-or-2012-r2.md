@@ -10,6 +10,8 @@ ms.custom:
 - pcy:WinComm Devices Deploy
 ms.reviewer: kaushika, v-tappelgate
 keywords: Windows Server 2012 R2 ESU, Windows Server 2012 ESU, ESU, ESU product key
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Error when installing ESU product key for Windows Server 2012 R2 or Windows Server 2012

@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:clustering and high availability\cluster service fails to start
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Cluster Service Stops Responding on a Cluster Node When You Restart the Active Node
 

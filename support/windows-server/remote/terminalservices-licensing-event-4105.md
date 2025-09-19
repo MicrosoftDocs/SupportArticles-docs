@@ -9,6 +9,8 @@ ms.reviewer: kaushika, briansi
 ms.custom:
 - sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Event ID 4105: The Terminal Services license server cannot update the license attributes for user \<UserName> in Active Directory Domain \<DomainName>
 

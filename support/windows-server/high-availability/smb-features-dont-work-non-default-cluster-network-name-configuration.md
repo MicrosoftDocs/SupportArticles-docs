@@ -9,6 +9,8 @@ ms.reviewer: kaushika, bhogen, v-jeffbo
 ms.custom:
 - sap:clustering and high availability\setup and configuration of clustered services and applications
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # SMB features don't work with non-default cluster network name configuration on Windows Server 2016, Windows Server 2012 R2, and Windows Server 2012
 

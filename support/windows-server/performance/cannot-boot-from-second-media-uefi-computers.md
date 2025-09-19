@@ -9,6 +9,8 @@ ms.reviewer: kaushika, annsheng, zhaling, aadake, v-lianna
 ms.custom:
 - sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Can't boot Windows from secondary mass storage bootable devices on UEFI-based computers
 

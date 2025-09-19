@@ -9,6 +9,8 @@ ms.reviewer: kaushika, arrenc, clfish, jories, jtierney, stsyfuhs, waynmc, v-lia
 ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to disable the Subject Alternative Name for UPN mapping
 

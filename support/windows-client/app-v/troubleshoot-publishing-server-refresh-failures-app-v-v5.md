@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jeffpatt
 ms.custom:
 - sap:application virtualization\server issues\publishing server issue
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to troubleshoot publishing server refresh failures in App-V v5
 

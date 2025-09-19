@@ -9,6 +9,8 @@ ms.reviewer: kaushika, herbertm, jobesanc
 ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Kerberos protocol registry entries and KDC configuration keys in Windows
 

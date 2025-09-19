@@ -9,6 +9,8 @@ ms.reviewer: markusr, cochen, kaushika
 ms.custom:
 - sap:network connectivity and file sharing\access to file shares (smb)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # You can still access offline files even though the file server is removed from the network on a Windows 7-based client computer
 

@@ -23,6 +23,10 @@
     {
       "source_path": "Outlook/Mac/outlook-mac-welcome.yml",
       "redirect_url": "/troubleshoot/outlook/legacy-outlook-mac-welcome"
+    },
+    {
+      "source_path": "Outlook/client/outlook-client-welcome.yml",
+      "redirect_url": "/troubleshoot/outlook/classic-outlook-windows-welcome"
     }
   ]
 }

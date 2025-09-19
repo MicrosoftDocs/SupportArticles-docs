@@ -5,7 +5,7 @@ author: pagienge
 ms.author: pagienge
 ms.reviewer: v-leedennis
 ms.topic: troubleshooting
-ms.date: 09/01/2023
+ms.date: 09/15/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux

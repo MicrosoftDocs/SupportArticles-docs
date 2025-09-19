@@ -9,6 +9,8 @@ ms.reviewer: kaushika, arrenc, deverett, paulhut
 ms.custom:
 - sap:active directory\user,computer,group,and object management
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # UAC blocks the elevation of executable applications that are signed with revoked certificates
 

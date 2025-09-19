@@ -9,6 +9,8 @@ ms.reviewer: kaushika, robsim, cpuckett
 ms.custom:
 - sap:clustering and high availability\errors when running the validation wizard
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Cluster validation test on Active Directory configuration fails in a multi-site cluster scenario
 

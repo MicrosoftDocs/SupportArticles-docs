@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:virtualization and hyper-v\snapshots,checkpoints,and differencing disks
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # You can't delete a recovery checkpoint for a virtual machine in Data Protection Manager
 

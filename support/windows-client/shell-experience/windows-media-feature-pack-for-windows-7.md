@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:windows desktop and shell experience\media issues with in-box apps (windows media player,groove,movies and tv)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Description of the Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
 

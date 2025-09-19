@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system management components\microsoft management console (mmc)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # The Windows Trace Session Manager service does not start and Event ID 7000 occurs
 

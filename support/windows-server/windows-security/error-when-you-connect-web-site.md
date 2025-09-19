@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-jomcc, jobarner
 ms.custom:
 - sap:windows security technologies\legacy authentication (ntlm)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error code 403 or 500 when you connect to a Web site that is published by using ISA Server 2004 Service Pack 2
 

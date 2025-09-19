@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error message when you try to log on to a Windows Server 2003-based terminal server: Windows cannot load the user's profile but has logged you on with the default profile for the system
 

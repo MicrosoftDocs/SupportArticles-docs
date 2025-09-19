@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jtierney
 ms.custom:
 - sap:certificates and public key infrastructure (pki)\certificate enrollment using mmc or certificate requests
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # "Certutil -view" command does not return issued certificates correctly
 

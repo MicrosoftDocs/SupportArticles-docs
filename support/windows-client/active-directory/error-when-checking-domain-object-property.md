@@ -9,6 +9,8 @@ ms.reviewer: kaushika, rolandw, uspand, amaltsev
 ms.custom:
 - sap:active directory\schema updates
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Error when you check domain object properties by using RSAT in Windows 10: msDS-ExpirePasswordsOnSmartCardOnlyAccounts not exist
 

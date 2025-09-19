@@ -10,6 +10,8 @@ ms.custom:
 - pcy:WinComm User Experience
 ms.reviewer: kaushika, warrenw, traceytu, iovoicul, kimberj, raviks, v-lianna
 ms.localizationpriority: medium
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Modern, Inbox, and Microsoft Store Apps troubleshooting guidance
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, themar
 ms.custom:
 - sap:windows activation\windows activation issues
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to validate the OEM activation key in Windows 10
 

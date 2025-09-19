@@ -9,6 +9,8 @@ ms.reviewer: kaushika, sheiroqi, v-lianna
 ms.custom:
 - sap:windows desktop and shell experience\file explorer (app only,folders,quick access,file explorer search)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # High-speed network adapters show inaccurate link speeds
 

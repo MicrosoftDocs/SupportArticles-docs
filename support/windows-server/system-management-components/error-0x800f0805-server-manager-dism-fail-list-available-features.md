@@ -9,6 +9,8 @@ ms.reviewer: kaushika, hamansoor, v-lianna
 ms.custom:
 - sap:system management components\server manager
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error 0x800f0805 when Server Manager and DISM fail to list the available features 
 

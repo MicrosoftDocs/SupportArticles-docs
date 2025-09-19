@@ -9,6 +9,8 @@ ms.reviewer: kaushika, joelch, waltere
 ms.custom:
 - sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # DHCP servers report different failover states or do not replicate lease information in a Windows Server 2012-based DHCP failover relationship
 

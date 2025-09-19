@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:windows security technologies\ad object permissions,access control,delegation,adminsdholder and auditing
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Service fails to start and you receive an error 1079 on a computer that's running Windows 7
 

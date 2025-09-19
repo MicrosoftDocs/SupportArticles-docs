@@ -9,6 +9,8 @@ ms.reviewer: kaushika, ntuttle
 ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # A TGS request for the krbtgt account fails with KDC_ERR_POLICY and an extended status of STATUS_AUTHENTICATION_FIREWALL_FAILED (0xC0000413)
 

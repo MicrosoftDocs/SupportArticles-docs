@@ -9,6 +9,8 @@ ms.reviewer: kaushika, robsim, cpuckett, v-jesits, v-six
 ms.custom:
 - sap:backup,recovery,disk,and storage\volume shadow copy service (vss)
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Most recent previous versions are missing for a share that has Previous Versions enabled in Windows
 

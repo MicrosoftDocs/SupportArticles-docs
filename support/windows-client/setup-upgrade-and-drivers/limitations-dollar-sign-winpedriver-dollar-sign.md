@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:windows device and driver management\peripherals driver installation or update
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Limitations of $WinPeDriver$ when used in conjunction with other driver injection methods
 
@@ -348,7 +350,7 @@ If you need assistance from Microsoft support, we recommend you collect the info
 
 - [Copype.cmd](/previous-versions/windows/embedded/ff794790(v=winembedded.60))
 
-- [Windows Automated Installation Kit (AIK) for Win7/2008r2](https://www.microsoft.com/download/en/details.aspx?id=5753)
+- [Windows Automated Installation Kit (AIK) for Win7/2008r2](https://www.microsoft.com/download/details.aspx?id=5753)
 
 - [Windows OEM Preinstallation Kit (OPK)](https://www.microsoft.com/oem/en/downloads/pages/technical-downloads.aspx)
 

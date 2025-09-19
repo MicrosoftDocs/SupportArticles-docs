@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:application virtualization\server issues\management server issues
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # HTTP Error 500.19 - Internal Server Error when launching the App-V Management console
 

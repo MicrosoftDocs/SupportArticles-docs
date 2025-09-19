@@ -9,6 +9,8 @@ ms.reviewer: kaushika, philipd, match
 ms.custom:
 - sap:print,fax,and scan\windows fax and scan (client)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # "Server Busy" error message when you try to scan a document  
 

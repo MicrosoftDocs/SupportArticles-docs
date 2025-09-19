@@ -9,6 +9,8 @@ ms.reviewer: kaushika, gbrag, raackley, leofa
 ms.custom:
 - sap:system management components\wmi management and troubleshooting
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Best practice for configuring EventLog forwarding in Windows Server 2012 R2
 

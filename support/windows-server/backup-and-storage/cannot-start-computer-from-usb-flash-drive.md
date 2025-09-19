@@ -9,6 +9,8 @@ ms.reviewer: kaushika, huiwu
 ms.custom:
 - sap:backup,recovery,disk,and storage\partition and volume management
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # You can't start a computer from a USB flash drive that is formatted to use the FAT32 file system
 

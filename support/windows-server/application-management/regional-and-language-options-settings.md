@@ -9,6 +9,8 @@ ms.reviewer: markreno, kaushika
 ms.custom:
 - sap:windows desktop and shell experience\language packs,multilingual user interface (mui) and input (ime)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How the Regional and Language Options settings in Windows Server 2003 are applied
 

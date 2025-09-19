@@ -1140,6 +1140,10 @@ items:
     items:
     - name: Error 0x80090327 when adding a node to a cluster
       href: ./high-availability/error-0x80090327-adding-node-to-cluster.md
+  - name: Nested virtualization
+    items:
+    - name: 'Troubleshooting guide: Hyper-V nested virtualization'
+      href: ./high-availability/hyper-v-nested-virtualization.md
   - name: Node removed from the cluster
     items:
     - name: Cluster IP address resources fail on both nodes when one node disconnects
@@ -2588,6 +2592,10 @@ items:
       href: ./system-management-components/sms-administrator-console-connectivity-issue.md
     - name: What is MMC
       href: ./system-management-components/what-is-microsoft-management-console.md
+  - name: OpenSSH
+    items:
+    - name: OpenSSH client can't connect to a server via SSH
+      href: ./system-management-components/open-client-can-not-connect-server.md
   - name: PowerShell
     items:
     - name: CJK characters are garbled in PowerShell
@@ -2866,6 +2874,8 @@ items:
     items:
     - name: Get-VMNetworkAdapter command doesn't report IP addresses
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
+    - name: Hyper-V environments experience frequent power-offs and rapid disk space consumption
+      href: ./virtualization/hyper-v-power-off-rapid-disk-space-consumption.md
     - name: Troubleshoot Hyper-V virtual machine start, state, and access failures
       href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Virtual Machines enter the paused state
@@ -3160,6 +3170,8 @@ items:
       href: ./installing-updates-features-roles/windows-server-update-services-3-sp2.md
     - name: WSUS clients can't install updates
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
+    - name: WSUS messages and troubleshooting tips
+      href: ./installing-updates-features-roles/wsus-messages-troubleshooting-tips.md
   - name: Windows Update fails - installation stops with error
     items:
     - name: 'Troubleshooting guidance: Windows Server update'
@@ -3198,16 +3210,16 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
     - name: Windows Update for Business Reports
       items:
-    - name: Initial service configuration and Onboarding
-      items:
-      - name: 'Troubleshooting guidance: Windows Update for Business reports'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
-    - name: Missing data or incomplete report data
-      items:
-      - name: 'WUBr: Troubleshoot diagnostic data transmission'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
-      - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
+      - name: Initial service configuration and Onboarding
+        items:
+        - name: 'Troubleshooting guidance: Windows Update for Business reports'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
+      - name: Missing data or incomplete report data
+        items:
+        - name: 'WUBr: Troubleshoot diagnostic data transmission'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
+        - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2

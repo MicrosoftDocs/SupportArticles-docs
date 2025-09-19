@@ -10,6 +10,8 @@ ms.custom:
 - sap:windows servicing,updates and features on demand\windows update configuration,settings and management
 - pcy:WinComm Devices Deploy
 adobe-target: true
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "aartigoyle" for triage before making the further changes to the screenshots.

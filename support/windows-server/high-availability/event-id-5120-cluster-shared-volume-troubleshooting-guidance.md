@@ -11,6 +11,8 @@ ms.custom:
 - sap:clustering and high availability\cluster shared volume (csv)
 - pcy:WinComm Storage High Avail
 ms.reviewer: kaushika
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Event ID 5120 Cluster Shared Volume troubleshooting guidance
 

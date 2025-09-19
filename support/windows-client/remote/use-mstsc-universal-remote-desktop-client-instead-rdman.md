@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jomukher, v-jesits
 ms.custom:
 - sap:remote desktop services and terminal services\web access (includes remoteapp and desktop connections)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Use Remote Desktop Connection or universal Remote Desktop client instead of RDMan in Windows 10
 

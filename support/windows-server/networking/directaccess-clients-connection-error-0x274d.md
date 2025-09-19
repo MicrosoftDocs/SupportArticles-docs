@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:backup,recovery,disk,and storage\configuring and using windows backup or other recovery
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # DirectAccess clients are unable to connect over IP-HTTPS with error 0x274d or 0x2afc
 

@@ -10,6 +10,8 @@ ms.custom:
 - pcy:WinComm Directory Services
 ms.reviewer: kaushika, v-tappelgate, esolomou
 keywords: group policy, group membership
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 
 # Group membership changes don't update over some VPN connections

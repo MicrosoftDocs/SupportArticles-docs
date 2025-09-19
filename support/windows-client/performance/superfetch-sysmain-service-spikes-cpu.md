@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system performance\app,process,service reliability (crash,errors)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # SuperFetch(SysMain) service spikes the CPU for 1-2 minutes when a 64-bit application is running in Windows
 

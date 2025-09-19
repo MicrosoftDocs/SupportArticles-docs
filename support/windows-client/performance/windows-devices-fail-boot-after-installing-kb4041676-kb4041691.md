@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system performance\startup or pre-logon reliability (crash,errors,bug check or blue screen)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Windows devices may fail to boot after installing October 10 version of KB4041676 or KB4041691 that contained a publishing issue
 

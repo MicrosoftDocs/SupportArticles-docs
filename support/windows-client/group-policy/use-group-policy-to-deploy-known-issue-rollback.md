@@ -10,6 +10,8 @@ ms.custom:
 - sap:group policy\problems applying group policy
 - pcy:WinComm Directory Services
 keywords: Windows Update, known issue, kir, group policy, rollback
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 
 # How to use Group Policy to deploy a Known Issue Rollback

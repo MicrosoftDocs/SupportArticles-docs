@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:virtualization and hyper-v\virtual machine performance
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Hyper-V virtual machines don't start after you upgrade to Windows 10
 

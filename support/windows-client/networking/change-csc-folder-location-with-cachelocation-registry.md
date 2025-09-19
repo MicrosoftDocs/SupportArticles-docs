@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-dehaas, waltere, lseri
 ms.custom:
 - sap:network connectivity and file sharing\offline files and folders (csc)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to change the location of the CSC folder by configuring the CacheLocation registry value in Windows
 

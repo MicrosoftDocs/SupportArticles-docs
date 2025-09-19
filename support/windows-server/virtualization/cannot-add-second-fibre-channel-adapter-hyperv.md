@@ -9,6 +9,8 @@ ms.reviewer: kaushika, rblume, v-lianna
 ms.custom:
 - sap:virtualization and hyper-v\storage configuration
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Can't add a second Fibre Channel adapter to a Hyper-V virtual machine
 

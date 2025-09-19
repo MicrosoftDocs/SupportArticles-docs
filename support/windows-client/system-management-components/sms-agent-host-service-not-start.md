@@ -9,6 +9,8 @@ ms.reviewer: kaushika, steverac
 ms.custom:
 - sap:system management components\wmi management and troubleshooting
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # The SMS Agent Host service does not start after you restart a Systems Management Server 2003 client computer
 

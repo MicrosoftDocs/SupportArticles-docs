@@ -9,6 +9,8 @@ ms.reviewer: kaushika, markstan
 ms.custom:
 - sap:application virtualization\clients\installation and configuration
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Current list of App-V 5.x file versions
 

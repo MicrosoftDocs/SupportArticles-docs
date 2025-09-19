@@ -7,6 +7,48 @@ items:
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
+    - name: CniDownloadTimeoutVMExtensionError error (41)
+      href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
+    - name: ERR_VHD_FILE_NOT_FOUND error (65)
+      href: create-upgrade-delete/error-code-vhdfilenotfound.md
+    - name: InvalidParameter error
+      href: create-upgrade-delete/error-code-invalidparameter.md
+    - name: InvalidResourceReference error
+      href: create-upgrade-delete/error-code-invalidresourcereference.md
+    - name: Known issues - Custom kubelet configuration on Windows
+      href: create-upgrade-delete/known-issues-custom-kubelet-configuration.md
+    - name: K8SAPIServerConnFailVMExtensionError error (51)
+      href: create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md
+    - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
+      href: create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md
+    - name: LinkedAuthorizationFailed error
+      href: create-upgrade-delete/error-code-linkedauthorizationfailed.md
+    - name: MissingSubscriptionRegistration error
+      href: create-upgrade-delete/error-code-missingsubscriptionregistration.md
+    - name: OperationNotAllowed or PublicIPCountLimitReached error
+      href: create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md
+    - name: AKSOperationPreempted error
+      href: create-upgrade-delete/error-code-operationpreempted.md
+    - name: OutboundConnFailVMExtensionError error (50)
+      href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
+    - name: RequestDisallowedByPolicy error
+      href: create-upgrade-delete/error-code-requestdisallowedbypolicy.md
+    - name: ServicePrincipalValidationClientError error
+      href: create-upgrade-delete/error-code-serviceprincipalvalidationclienterror.md
+    - name: SubscriptionRequestsThrottled error (429)
+      href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
+    - name: Throttled error (429)
+      href: create-upgrade-delete/error-code-aksrequeststhrottled.md
+    - name: Troubleshoot the AKSCapacityError error code
+      href: create-upgrade-delete/akscapacityerror.md
+    - name: VMExtensionProvisioningTimeout error
+      href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
+    - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
+      href: create-upgrade-delete/windows-cse-error-check-api-server-connectivity.md
+    - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
+      href: create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed.md
+    - name: QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade
+      href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
   - name: Upgrade operations
     items:
     - name: Memory saturation occurs in pods after cluster upgrade

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, match, chadbee, v-miand3
 ms.custom:
 - sap:windows servicing,updates and features on demand\issues installing features on demand(fod)
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Can't install the .NET Framework 3.5 without a public Internet environment on an OEM Windows installation
 

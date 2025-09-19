@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-gale
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Stop error 0xE6: DRIVER_VERIFIER_DMA_VIOLATION after repeatedly disabling and enabling a wireless device driver if DMAr is enabled
 

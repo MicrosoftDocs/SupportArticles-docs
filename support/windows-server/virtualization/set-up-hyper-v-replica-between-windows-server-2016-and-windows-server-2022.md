@@ -9,6 +9,8 @@ ms.reviewer: kaushika, simonw, v-appelgatet
 ms.custom:
 - sap:virtualization and hyper-v\hyper-v replica (hvr)
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # How to set up Hyper-V Replica between Windows Server 2016 and 2022

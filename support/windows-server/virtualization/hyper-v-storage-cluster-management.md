@@ -10,6 +10,8 @@ ms.custom:
 - sap:virtualization and hyper-v\powershell cmdlets
 - pcy:WinComm Storage High Avail
 ai-usage: ai-assisted
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot PowerShell, Hyper-V, storage, and cluster management issues in Windows Server
 

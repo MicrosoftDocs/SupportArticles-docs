@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:backup,recovery,disk,and storage\multipath io (mpio) and storport
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # MPIO option not in Disk Management in Windows Server 2019
 

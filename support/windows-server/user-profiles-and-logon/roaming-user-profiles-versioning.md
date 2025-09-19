@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:user logon and profiles\user profiles
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Roaming user profiles of earlier versions of Windows are incompatible with Windows 10, Windows Server 2016, and later versions
 

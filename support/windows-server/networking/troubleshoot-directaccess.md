@@ -10,6 +10,8 @@ ms.custom:
 - sap:network connectivity and file sharing\remote access (directaccess)
 - pcy:WinComm Networking
 ms.assetid: 61040e19-5960-4eb0-b612-d710627988f7
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot DirectAccess
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:network connectivity and file sharing\wireless (802.1x,bluetooth,miracast,mobile broadband)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to configure Wi-Fi Sense and Paid Wi-Fi Services on Windows 10 in an enterprise
 

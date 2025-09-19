@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system management components\task scheduler
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Task scheduler task only runs in the background after you use sysprep to create master image
 
