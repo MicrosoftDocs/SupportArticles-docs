@@ -3,9 +3,10 @@ title: Resource Monitoring Stopped Working
 description: Troubleshoot situations in which New Relic stops receiving logs or metrics from Azure resources.
 author: ProfessorKendrick
 ms.author: kkendrick
-ms.service: New Relic integration
+ms.service: partner-services
 ms.topic: troubleshooting-general
 ms.date: 09/19/2025
+ai-usage: ai-assisted
 
 #customer intent: As an Azure administrator or user, I want to troubleshoot situations in which New Relic monitoring stops working.
 
@@ -13,7 +14,7 @@ ms.date: 09/19/2025
 
 # Resource monitoring stopped working 
 
-This article helps you troubleshoot situations where New Relic stops receiving telemetry (logs, metrics, or events) from Azure resources such as virtual machines and App Services. It lists likely causes, quick workarounds, and a step‑by‑step troubleshooting checklist to help you identify and resolve the issue.
+This article helps you troubleshoot situations in which New Relic stops receiving telemetry (logs, metrics, or events) from Azure resources like virtual machines and app services. It includes likely causes, quick workarounds, and a step‑by‑step troubleshooting checklist to help you identify and resolve your issue.
 
 ## Prerequisites
 
@@ -41,7 +42,7 @@ Follow these steps in order. After each major remediation, wait a few minutes an
 
 - In the Azure portal, confirm the subscription that contains the resources is Active.
 - If the subscription is Suspended, Disabled, or Deleted for payment reasons, either update the payment method or move resources to a different active subscription.
-- Billing docs: https://learn.microsoft.com/azure/cost-management-billing/manage/add-change-payment-method
+- [Billing docs](/azure/cost-management-billing/manage/change-credit-card)
 
 ### 3) Confirm resource-side agents and extensions
 
