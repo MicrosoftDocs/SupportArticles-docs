@@ -1,14 +1,14 @@
 ---
 title: Known Issue Rollback
 description: Learn how Known Issue Rollback technology improves the Windows update experience and makes it even more reliable for organizations.
-ms.service: windows-client
-ms.subservice: itpro-updates
-ms.topic: overview
-author: dstrome
-ms.author: dstrome
-manager: bpardi
-ms.localizationpriority: medium
+ms.topic: troubleshooting
 ms.date: 09/22/2025
+manager: dcscontentpm
+audience: itpro
+ms.reviewer: kaushika, dstrome, v-appelgatet
+ms.custom:
+- sap:windows servicing,updates and features on demand\windows update configuration,settings and management
+- pcy:WinComm Devices Deploy
 ---
 
 # Known Issue Rollback (KIR)
@@ -54,7 +54,7 @@ Windows devices belong to two different categories for KIR activation. Each cate
 
 As an enterprise IT admin for these devices, you're in control. In accordance with Microsoft policy, for enterprise-managed devices, Microsoft publishes a specific Group Policy (GP) template on the Download Center. You can download this Group Policy to configure and apply a rollback policy to activate KIR.
 
-:::image type="content" source="media/group-policy-dwnload.png" alt-text="Screenshot of download group policy." lightbox="media/group-policy-dwnload.png":::
+:::image type="content" source="media/known-issue-rollback/group-policy-download.png" alt-text="Screenshot of download group policy." lightbox="media/known-issue-rollback/group-policy-download.png":::
 
 > [!NOTE]
 > [Group Policy](/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview) is a feature in Microsoft Windows that allows IT admins to centrally manage and configure operating system settings, applications, and user settings across devices in an Active Directory environment.
@@ -84,7 +84,7 @@ For these devices, Microsoft activates KIR through Windows Update, and no action
 
 When an issue or regression is identified in retail devices, Microsoft product teams gather detailed information about the problem and its impact, determine the root cause, and report the incident internally. Then based on the results of this analysis, Microsoft decides whether to roll back a regressing change. If required, Microsoft activates KIR through cloud services.
 
-:::image type="content" source="media/retail-kir-activate.png" alt-text="Screenshot of KIR activation for retail." lightbox="media/retail-kir-activate.png":::
+:::image type="content" source="media/known-issue-rollback/retail-kir-activate.png" alt-text="Screenshot of KIR activation for retail." lightbox="media/known-issue-rollback/retail-kir-activate.png":::
 
 Once Microsoft qualifies a regression for KIR activation, it makes a configuration update change in the cloud. All devices that get updates through **Settings** > **Windows Update** (WU) get notice of this change and receive the configuration update within 24 hours. Upon receiving and installing the update, the code causing the issue is disabled. In some cases, a device reboot might be required to disable the code.
 
