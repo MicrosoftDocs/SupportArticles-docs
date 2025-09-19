@@ -52,6 +52,6 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text:  Can't install or uninstall the agent on a VM
-          
+            url:  new-relic/install-uninstall-extension-vm.md
           - text:  Update ingestion key after rotation
             url: ingestion-key-rotation-log-flow.md
