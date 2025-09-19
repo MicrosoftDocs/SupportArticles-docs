@@ -18,8 +18,7 @@ _Original KB number:_ &nbsp; 835185
 When you install SQL Server on a cluster as a SQL Server failover cluster instance, a specific set of SQL Server resources that have dependencies on other resources in the cluster group are created.
 
 > [!IMPORTANT]
-> Don't change the default dependency tree except for the changes that are listed in this article or the changes that are listed in the following article in the Microsoft Knowledge Base:
-[SQL Server support for mounted folders](https://support.microsoft.com/help/819546)
+> Don't change the default dependency tree except for the changes that are listed in this article
 
 ## Example 1 - Default SQL Server failover cluster instance dependencies
 
