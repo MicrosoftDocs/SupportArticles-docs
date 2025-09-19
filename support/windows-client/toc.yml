@@ -1363,6 +1363,8 @@ items:
       href: ./installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md
     - name: How to keep Windows up to date
       href: ./installing-updates-features-roles/keep-windows-up-to-date.md
+    - name: Known Issue Rollback
+      href: ../windows-server/installing-updates-features-roles/known-issue-rollback.md
     - name: SFC flags Windows Defender files as corrupted
       href: ./installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md
     - name: Standard terminology that defines software updates

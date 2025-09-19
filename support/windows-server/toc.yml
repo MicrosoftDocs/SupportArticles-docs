@@ -3160,6 +3160,8 @@ items:
       href: ./installing-updates-features-roles/description-of-windows-server-update-services-3.md
     - name: How to block user access to Windows Update
       href: ./installing-updates-features-roles/block-user-access-windows-update.md
+    - name: Known Issue Rollback
+      href: ./installing-updates-features-roles/known-issue-rollback.md
     - name: Re-register Windows client/server in WSUS
       href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
     - name: Unexpected automatic update when it's disabled by Group Policy
