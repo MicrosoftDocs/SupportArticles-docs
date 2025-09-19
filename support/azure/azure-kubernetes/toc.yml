@@ -337,7 +337,7 @@ items:
     href: create-upgrade-delete/error-code-vhdfilenotfound.md
   - name: Error "CreateOrUpdateVirtualNetworkLinkFailed"
     href: create-upgrade-delete/createorupdatevirtualnetworklinkfailed-error.md
-  - name: "Error from server: error dialing backend: dial tcp" messages
+  - name: "Error from server - error dialing backend - dial tcp" messages
     href: connectivity/error-from-server-error-dialing-backend-dial-tcp.md
   - name: Failed to fix node group sizes
     href: create-upgrade-delete/cluster-autoscaler-fails-to-scale.md
