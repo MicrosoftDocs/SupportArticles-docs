@@ -20,7 +20,6 @@ This article helps you troubleshoot situations in which New Relic stops receivin
 
 - Access to the New Relic account that owns the ingest API key (API key admin or owner).
 - Access to the Azure subscription and resource group that contain the affected resources (Reader to view, Contributor/Owner to remediate or change billing).
-- Familiarity with the Azure portal, the New Relic portal, and basic CLI (Azure CLI or PowerShell) commands.
  
 ## Causes and solutions
 
