@@ -12,13 +12,13 @@ appliesto:
 ---
 # Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios
 
-This article helps gather information about your issue by using the TroubleShootingScript (TSS) toolset before contacting Microsoft support.
+This article helps gather information about your issue by using the Trouble Shooting Script (TSS) toolset before contacting Microsoft support.
 
 ## Prerequisites
 
 Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-troubleshootingscript-toolset-tss.md#prerequisites) for prerequisites for the toolset to run properly.
 
-## Scenario: Failures to install Windows Updates
+## Scenario: Failures to install Windows Updates or Features on Demand
 
 ### TSS cmdlet
 

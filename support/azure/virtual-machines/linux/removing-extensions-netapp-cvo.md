@@ -43,14 +43,14 @@ Cloud Volumes ONTAP doesn't support Azure VM extensions because extensions affec
 > Starting in BlueXP 3.9.54, NetApp enforces this pre-existing limitation as a notification in BlueXP. 
 
 ## Resolution
-To resolve this issue, run the following script on every VM:
+To resolve this issue, run the following script against any affected NetApp CVO VMs in PowerShell:
 
 ```powershell
     $subscriptionId = (Get-AzContext).Subscription.Id 
     $resourceGroup = "RGname" 
     $vmName = "VMName" 
     $apiVersion = "2025-04-01" 
-    $uri = "https://management.azure.com/subscriptions/$subscriptionId/resourceGroups/$resourceGroup/providers/Microsoft.Compute/virtualMachines/$vmName`?api-version=$apiVersion" 
+    $uri = "https://management.azure.com/subscriptions/${subscriptionId}/resourceGroups/${resourceGroup}/providers/Microsoft.Compute/virtualMachines/${vmName}?api-version=${apiVersion}"
     $response = Invoke-AzRestMethod -Method GET -Uri $uri 
     $vmModel = $response.Content | ConvertFrom-Json 
     $vmModel.resources = @() 

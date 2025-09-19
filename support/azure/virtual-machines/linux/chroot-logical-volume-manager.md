@@ -11,7 +11,7 @@ ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 03/10/2023
+ms.date: 09/15/2025
 ms.author: divargas
 ---
 # Troubleshoot Azure Linux VM when there's no access to Azure Serial Console and the disk layout uses Logical Volume Manager

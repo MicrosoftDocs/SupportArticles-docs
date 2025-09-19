@@ -3172,6 +3172,8 @@ items:
       href: ./installing-updates-features-roles/windows-server-update-services-3-sp2.md
     - name: WSUS clients can't install updates
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
+    - name: WSUS messages and troubleshooting tips
+      href: ./installing-updates-features-roles/wsus-messages-troubleshooting-tips.md
   - name: Windows Update fails - installation stops with error
     items:
     - name: 'Troubleshooting guidance: Windows Server update'
@@ -3210,16 +3212,16 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
     - name: Windows Update for Business Reports
       items:
-    - name: Initial service configuration and Onboarding
-      items:
-      - name: 'Troubleshooting guidance: Windows Update for Business reports'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
-    - name: Missing data or incomplete report data
-      items:
-      - name: 'WUBr: Troubleshoot diagnostic data transmission'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
-      - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
+      - name: Initial service configuration and Onboarding
+        items:
+        - name: 'Troubleshooting guidance: Windows Update for Business reports'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
+      - name: Missing data or incomplete report data
+        items:
+        - name: 'WUBr: Troubleshoot diagnostic data transmission'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
+        - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2

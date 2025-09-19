@@ -11,7 +11,7 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 12/30/2021
+ms.date: 09/15/2025
 ms.author: jarrettr
 ---
 # Can't SSH to Azure Linux VM because permissions are too open
@@ -26,7 +26,7 @@ You can't connect to your Microsoft Azure Linux virtual machine (VM) by using Se
 >sshd: error: It is required that your private key files are NOT accessible by others.</br>
 >sshd: error: This private key will be ignored.</br>
 >sshd: error: key_load_private: bad permissions</br>
->shd: error: Could not load host key: /etc/ssh/sshKeyName
+>sshd: error: Could not load host key: /etc/ssh/sshKeyName
 
 ## Cause
 
