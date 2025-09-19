@@ -56,4 +56,4 @@ If your selection includes VMs in different states (some that have the agent and
 
 - [Manage extensions on Azure virtual machines](../azure/virtual-machines/extensions/overview)
 - [Troubleshoot VM Agent issues](../../virtual-machines/windows/windows-azure-guest-agent.md)
-- [New Relic Azure integration overview](https://docs.newrelic.com/docs/integrations/azure-integrations)
+- [Introduction to the Azure Native New Relic Service](https://docs.newrelic.com/docs/infrastructure/microsoft-azure-integrations/get-started/azure-native/)
