@@ -38,7 +38,7 @@ The Azure portal displays the agent/extension state in the **Agent status** colu
 - VMs on which the New Relic agent is installed show **Running** or **Shutdown**.
 - VMs on which the New Relic agent isn't installed show **Not Installed**.
 
-If your selection includes VMs in different states (some that have the agent and some that don't), neither **Install Extenstion** nor **Uninstall Extension** will be enabled.
+If your selection includes VMs in different states (some that have the agent and some that don't), neither **Install Extension** nor **Uninstall Extension** will be enabled.
 
 ## Solution 
 
