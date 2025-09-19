@@ -129,7 +129,7 @@ When contacting support, provide a concise reproduction path and the results of 
 
 ## Related content
 
-- [Manage extensions on Azure virtual machines](/azure/virtual-machines/extensions)
-- [Troubleshoot VM Agent issues](/azure/virtual-machines/troubleshooting-vm-agent)
-- [Add, update, or delete a payment method](/azure/cost-management-billing/manage/add-change-payment-method)
+- [Manage extensions on Azure virtual machines](/azure/virtual-machines/extensions/overview)
+- [Troubleshoot VM Agent issues](../../virtual-machines/windows/windows-azure-guest-agent.md)
+- [Add, update, or delete a payment method](/azure/cost-management-billing/manage/change-credit-card)
 - [New Relic support](https://support.newrelic.com/)
