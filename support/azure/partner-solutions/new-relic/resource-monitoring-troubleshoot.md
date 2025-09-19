@@ -1,17 +1,17 @@
 ---
-title: Troubleshoot stopped resource monitoring in New Relic for Azure resources
-description: "Step-by-step troubleshooting to resolve when New Relic stops receiving logs or metrics from Azure resources."
-author: v-albemi
-ms.author: v-albemi
+title: Resource Monitoring Stopped Working 
+description: Troubleshoot situations in which New Relic stops receiving logs or metrics from Azure resources.
+author: ProfessorKendrick
+ms.author: kkendrick
 ms.service: New Relic integration
 ms.topic: troubleshooting-general
 ms.date: 09/19/2025
 
-#customer intent: As a <role>, I want <what> so that <why>.
+#customer intent: As an Azure administrator or user, I want to troubleshoot situations in which New Relic monitoring stops working.
 
 ---
 
-# Troubleshoot resource monitoring in New Relic for Azure resources
+# Resource monitoring stopped working 
 
 This article helps you troubleshoot situations where New Relic stops receiving telemetry (logs, metrics, or events) from Azure resources such as virtual machines and App Services. It lists likely causes, quick workarounds, and a step‑by‑step troubleshooting checklist to help you identify and resolve the issue.
 
@@ -128,7 +128,7 @@ When contacting support, provide a concise reproduction path and the results of 
 
 ## Related content
 
-- Manage extensions on Azure virtual machines: https://learn.microsoft.com/azure/virtual-machines/extensions
-- Troubleshoot VM Agent issues: https://learn.microsoft.com/azure/virtual-machines/troubleshooting-vm-agent
-- Add, update, or delete a payment method: https://learn.microsoft.com/azure/cost-management-billing/manage/add-change-payment-method
-- New Relic support: https://support.newrelic.com/
+- [Manage extensions on Azure virtual machines](/azure/virtual-machines/extensions)
+- [Troubleshoot VM Agent issues](/azure/virtual-machines/troubleshooting-vm-agent)
+- [Add, update, or delete a payment method](/azure/cost-management-billing/manage/add-change-payment-method)
+- [New Relic support](https://support.newrelic.com/)
