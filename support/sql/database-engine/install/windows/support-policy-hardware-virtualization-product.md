@@ -50,11 +50,7 @@ The following restrictions and limitations may affect the support policy of the 
 - Guest Failover Clustering is supported for SQL Server in a virtual machine for the supported hardware virtualization environments listed in this article provided all the following requirements are met:
 
   - The Operating System running in the virtual machine (the "Guest Operating System") is a Windows Server version currently in support lifecycle.
-  - The virtualization environment meets the requirements of Windows Server or Windows Server Failover Clustering, as documented in the following articles in the Microsoft Knowledge Base:
-  
-    - [The Microsoft Support Policy for Windows Server 2008 or Windows Server 2008 R2 Failover Clusters](https://support.microsoft.com/help/943984)
-
-    - [Microsoft support policy for Windows server failover clusters](../../../../windows-server/high-availability/microsoft-support-policy-failover-clusters.md)
+  - The virtualization environment meets the requirements of Windows Server or Windows Server Failover Clustering, as documented in [Microsoft support policy for Windows server failover clusters](~/windows-server/high-availability/microsoft-support-policy-failover-clusters.md)
 
 - The SQL Server product must be a supported version under its current Microsoft Support Lifecycle policy. For more information about Microsoft Support Lifecycle policies, see [Search Product and Services Lifecycle Information](/lifecycle/products/).
 
