@@ -25,6 +25,14 @@ landingContent:
             url: marketplace-purchases-errors.md
 
 # Card
+  - title: Datadog
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Metrics not being emitted
+            url: metrics-bot-emitted.md
+
+# Card
   - title:  Informatica
     linkLists:
       - linkListType: how-to-guide
