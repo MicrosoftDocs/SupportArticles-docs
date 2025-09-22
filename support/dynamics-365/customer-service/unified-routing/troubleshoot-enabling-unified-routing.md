@@ -16,7 +16,11 @@ This article provides a resolution for the issue where provisioning of unified r
 
 ## Symptoms
 
-When you attempt to turn on the unified routing toggle, an error message appears. 
+When you attempt to turn on the unified routing toggle, one of the following error messages appears:
+
+- "Unified routing provisioning failed due to issues in configuration..."
+- "Unified routing provisioning failed due to an error in deactivation of basic routing rulesets..."
+- "Unified routing provisioning failed due to an error in activation of basic routing rulesets..."
 
 ## Cause 1
 
