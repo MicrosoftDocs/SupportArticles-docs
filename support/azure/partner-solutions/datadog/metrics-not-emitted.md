@@ -32,7 +32,7 @@ Datadog requires the Monitoring Reader role on the appropriate Azure subscriptio
 
 ## Solution 
 
-1. In the Azure portal, open the subscription that contains the resources.
+1. In the Azure portal, open the subscription that contains the resource.
 
 1. Select **Access control (IAM)** in the left pane.
 
@@ -42,7 +42,7 @@ Datadog requires the Monitoring Reader role on the appropriate Azure subscriptio
 
    1. Select **Add** > **Add role assignment**.
 
-   1. On the **Role** tab, select **Monitoring Reader** and then select **Next**.
+   1. On the **Role** tab, select **Monitoring Reader**, and then select **Next**.
 
    1. In **Assign access to**, select managed identity or service principal, as appropriate.
 
