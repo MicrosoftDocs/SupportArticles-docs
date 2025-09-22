@@ -376,7 +376,7 @@ The certificate file format must be a .pfx file with a password applied to the f
 
 If you obtained your certificate from a third-party CA and the file format is a .pem/.key format, you can use a tool like OpenSSL to convert the files to a .pfx file format. The private key must be included during the conversion because the .pfx file format requires it.
 
-Also, if your CA gives you multiple certificates in the certificate chain, you have to merge the certificates by following the same order. For more information, see [Merge intermediate certificates](/azure/app-service/configure-ssl-certificate.md#merge-intermediate-certificates).
+Also, if your CA gives you multiple certificates in the certificate chain, you have to merge the certificates by following the same order. For more information, see [Merge intermediate certificates](/azure/app-service/configure-ssl-certificate?tabs=apex%2Crbac%2Cazure-cli#merge-intermediate-certificates).
 
 **How do I generate a certificate-signing request for an App Service certificate?**
 
