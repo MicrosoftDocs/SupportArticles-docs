@@ -13,6 +13,8 @@ items:
       href: log-forwarding-persists.md
     - name: Log limitations
       href: log-limitations.md
+    - name: Metrics not being emitted
+      href: metrics-being-emitted.md
 - name: Dynatrace
   items: 
     - name: Diagnostic settings manual update

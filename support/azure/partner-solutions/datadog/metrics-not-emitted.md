@@ -18,7 +18,7 @@ This article helps you resolve the problem in which Datadog isn't receiving metr
 
 ## Prerequisites
 
-- Access to the Azure portal with permissions to view access control (IAM) for the target subscription (Reader) and to assign roles (Contributor/Owner) if you will remediate.
+- Access to the Azure portal with permissions to view access control (IAM) for the target subscription (Reader) and to assign roles (Contributor/Owner) if you will remediate the problem.
 - The Datadog resource identity (managed identity or service principal) name or principal ID.
 
 ## Symptoms
@@ -48,7 +48,7 @@ Datadog requires the Monitoring Reader role on the appropriate Azure subscriptio
 
    1. Select the Datadog resource identity and then click **Select**.
 
-1. Wait a few minutes for RBAC propagation, and then verify that Datadog is recieving metrics.
+1. Wait a few minutes for RBAC propagation, and then verify that Datadog is receiving metrics.
 
 > [!Note]
 > Confirm the Datadog identity is the one used by the Datadog integration (managed identity vs. service principal). If you assign the role to the wrong principal, Datadog won't receive metrics.
