@@ -29,6 +29,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Datadog agent installation fails
+            url: datadog/installation-fails.md
           - text: Metrics not being emitted
             url: datadog/metrics-not-emitted.md
 
