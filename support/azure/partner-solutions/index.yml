@@ -30,7 +30,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Metrics not being emitted
-            url: metrics-bot-emitted.md
+            url: metrics-not-emitted.md
 
 # Card
   - title:  Informatica

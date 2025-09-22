@@ -14,7 +14,7 @@ items:
     - name: Log limitations
       href: log-limitations.md
     - name: Metrics not being emitted
-      href: metrics-being-emitted.md
+      href: metrics-not-emitted.md
 - name: Dynatrace
   items: 
     - name: Diagnostic settings manual update
