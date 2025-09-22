@@ -12,23 +12,23 @@ ai-usage: ai-assisted
 
 ---
 
-## Metrics bot being emitted
+# Metrics not being emitted
 
 This article helps you resolve the problem in which Datadog isn't receiving metrics from Azure resources because the Datadog resource identity doesn't have the required Monitoring Reader role assignment.
 
 ## Prerequisites
 
-- Access to the Azure portal with permissions to view Access control (IAM) for the target subscription (Reader) and to assign roles (Contributor/Owner) if you will remediate.
+- Access to the Azure portal with permissions to view access control (IAM) for the target subscription (Reader) and to assign roles (Contributor/Owner) if you will remediate.
 - The Datadog resource identity (managed identity or service principal) name or principal ID.
 
 ## Symptoms
 
-- Metrics from Azure resources do not appear in the Datadog UI.
-- The Datadog resource does not appear with a Monitoring Reader role assignment in the subscription's Access control (IAM) list.
+- Metrics from Azure resources don't appear in the Datadog UI.
+- The Datadog resource doesn't show a Monitoring Reader role assignment in the subscription's access control (IAM) list.
 
 ## Cause
 
-Datadog requires the Monitoring Reader role on the appropriate Azure subscription (or scope) to collect platform metrics. If the Datadog resource identity is not assigned this role at the correct scope (subscription or resource group), Datadog cannot read metrics and they won't be emitted to Datadog.
+Datadog requires the Monitoring Reader role on the appropriate scope (Azure subscription or resource group) to collect platform metrics. If the Datadog resource identity isn't assigned this role at the correct scope, Datadog can't read metrics and they won't be emitted to Datadog.
 
 ## Solution 1: Verify role assignment and assign Monitoring Reader
 
@@ -100,6 +100,6 @@ If the Monitoring Reader role is already assigned and metrics are still not emit
 
 ## Related content
 
-- [Azure role-based access control (RBAC)](https://learn.microsoft.com/azure/role-based-access-control/)
-- [Assign Azure roles using the Azure CLI](https://learn.microsoft.com/azure/role-based-access-control/role-assignments-cli)
+- [Azure role-based access control (RBAC)](/azure/role-based-access-control/)
+- [Assign Azure roles using the Azure CLI](/azure/role-based-access-control/role-assignments-cli)
 - [Datadog Azure integration documentation](https://docs.datadoghq.com/integrations/azure/)
