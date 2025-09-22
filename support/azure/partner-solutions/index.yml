@@ -29,7 +29,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Datadog agent installation fails
+          - text: Datadaog agent installation fails, or default API key is incorrect
             url: datadog/installation-fails.md
           - text: Metrics not being emitted
             url: datadog/metrics-not-emitted.md
