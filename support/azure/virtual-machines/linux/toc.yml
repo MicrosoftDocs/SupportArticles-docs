@@ -134,7 +134,7 @@
   - name: Red Hat
     items:
     - name: How to perform leapp upgrade for RHEL PAYG VMs
-      href: leapp-upgrade-process-rhel-7-and-8.md
+      href: leapp-upgrade-process-rhel-7-8-and-9.md
     - name: Leapp upgrade from 7.9 to 8.x on RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs
       href: leapp-upgrade-rhel7dot9-to-8dotx-saphana-sapapps.md
     - name: Leapp upgrade from 8.x to 9.x on RHEL-SAP-HANA and RHEL-SAP-APPS PAYG VMs

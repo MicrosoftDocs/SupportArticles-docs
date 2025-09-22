@@ -1,6 +1,6 @@
 ---
 title: Upgrade RHEL PAYG virtual machines using Leapp
-description: Provides steps to upgrade virtual machines that use RHEL pay-as-you-go images from RHEL 7 to RHEL 8 or RHEL 8 to RHEL 9.
+description: Provides steps to upgrade virtual machines that use RHEL pay-as-you-go images from RHEL 7 to RHEL, RHEL 8 to RHEL 9, or RHEL 9 to RHEL 10.
 ms.reviewer: divargas, msaenzbo, v-weizhu
 ms.date: 06/27/2025
 ms.service: azure-virtual-machines
@@ -24,6 +24,8 @@ For more information about performing a Leapp upgrade on custom, golden, or PAYG
 - [Upgrading from RHEL 7 to RHEL 8](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/upgrading_from_rhel_7_to_rhel_8/index)
 
 - [Upgrading from RHEL 8 to RHEL 9](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/upgrading_from_rhel_8_to_rhel_9/index)
+
+- [Upgrading from RHEL 9 to RHEL 10](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/10/html/upgrading_from_rhel_9_to_rhel_10/index)
 
 ## Prerequisites
 
@@ -94,7 +96,6 @@ You can perform an in-place upgrade from RHEL 7 to the following RHEL 8 minor ve
 
 You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor versions.
 
-
 | Source OS version| Target version | End of support      |
 |------------------|----------------|---------------------|
 | RHEL 8.10        | RHEL 9.4       | April 30, 2026 (EUS)|
@@ -105,8 +106,6 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
 
 > [!NOTE]  
 > If you locked the VM to a minor release, remove the version lock. For more information, see [Switch a RHEL 8.x VM back to non-EUS](/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel8#switch-a-rhel-server-to-non-eus-repositories).
-
-
 
 1. If you restricted packages to a specific version using the `yum-plugin-versionlock` command, remove the restriction:
 
@@ -141,6 +140,57 @@ You can perform an in-place upgrade from RHEL 8 to the following RHEL 9 minor ve
 
 8. RHEL 9 no longer supports the legacy network-scripts package, which was deprecated in RHEL 8. Before upgrading, migrate your custom network scripts and create a NetworkManager dispatcher script to run your existing custom scripts. For more information, see [Migrating custom network scripts to NetworkManager dispatcher scripts](https://access.redhat.com/solutions/6900331).
 
+
+### [RHEL 9.*x* to RHEL 10.*x*](#tab/rhel9-rhel10)
+
+You can perform an in-place upgrade from RHEL 9 to the following RHEL 10 minor versions.
+
+| Source OS version | Target version | End of support |
+|-------------------|----------------|----------------|
+| RHEL 9.6          | RHEL 10.0      | May 31, 2030   |
+
+> [!NOTE]  
+> For more information, see [Supported in-place upgrade paths for Red Hat Enterprise Linux](https://access.redhat.com/articles/4263361).
+
+> [!NOTE]  
+> If you locked the VM to a minor release, remove the version lock. For more information, see [Switch a RHEL 9.x VM back to non-EUS](/azure/virtual-machines/workloads/redhat/redhat-rhui?tabs=rhel8#switch-a-rhel-server-to-non-eus-repositories).
+
+
+1. If you restricted packages to a specific version using the `yum-plugin-versionlock` command, remove the restriction:
+
+    ```bash
+    sudo dnf versionlock clear
+    ```
+
+2. To ensure your system is ready for the upgrade, enable required RHUI repositories and install required RHUI packages:
+
+    ```bash
+    sudo dnf config-manager --set-enabled rhui-microsoft-azure-rhel9
+    sudo dnf -y install rhui-azure-rhel9 leapp-rhui-azure
+    ```
+
+3. Install the Leapp utility:
+
+    ```bash
+    sudo dnf install leapp-upgrade
+    ```
+
+4. Update all packages to the latest RHEL 8 version:
+
+    ```bash
+    sudo dnf update
+    ```
+
+5. Reboot the VM:
+
+    ```bash
+    sudo reboot
+    ```
+
+6. To prevent upgrade failures, temporarily disable your antivirus software.
+
+7. Before running the `leapp preupgrade` command, disable any configuration management systems with a client-server architecture (such as Puppet, Salt, or Chef) or an agentless architecture (such as Ansible).
+
 ---
 
 ## Leapp pre-upgrade process
@@ -159,6 +209,15 @@ Replace `<target_os_version>` with the target OS version, for example, `8.10`.
 
 ### [RHEL 8.*x* to RHEL 9.*x*](#tab/rhel8-rhel9)
 
+Run the following `leapp preupgrade` command:
+
+```bash
+sudo leapp preupgrade --target <target_os_version> --no-rhsm
+```
+
+Replace `<target_os_version>` with the target OS version, for example, `9.4` or `9.5`.
+
+### [RHEL 9.*x* to RHEL 10.*x*](#tab/rhel9-rhel10)
 
 Run the following `leapp preupgrade` command:
 
@@ -166,7 +225,7 @@ Run the following `leapp preupgrade` command:
 sudo leapp preupgrade --target <target_os_version> --no-rhsm
 ```
 
-Replace `<target_os_version>` with the target OS version, for example, `9.4` or `9.5`. 
+Replace `<target_os_version>` with the target OS version, for example, `10.0`.
 
 ---
 
@@ -218,6 +277,29 @@ Continue the Leapp upgrade process after the Leapp pre-upgrade report shows no e
 
 2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process shows that a reboot is required to continue the process as follows, manually reboot the VM:
 
+    ```output
+    ====> * add_upgrade_boot_entry
+            Add new boot entry for Leapp provided initramfs.
+    A reboot is required to continue. Please reboot your system.
+    ```
+    
+    ```bash
+    sudo reboot
+    ```
+
+### [RHEL 9.*x* to RHEL 10.*x*](#tab/rhel9-rhel10)
+
+1. Run the following `leapp upgrade` command:
+
+    ```bash
+    sudo leapp upgrade --target <target_os_version> --no-rhsm
+    ```
+    
+    > [!NOTE]
+    > - Replace `<target_os_version>` with the target OS version, for example, `10.0`. 
+    > - If you want to perform an automatic reboot, which is needed during the upgrade process, add the `--reboot` option to the `leapp upgrade` command.
+
+2. If the `--reboot` option wasn't included in the previous command, monitor the Serial Console. Once the upgrade process shows that a reboot is required to continue the process as follows, manually reboot the VM:
 
     ```output
     ====> * add_upgrade_boot_entry
@@ -260,6 +342,26 @@ This section outlines the recommended verification steps after completing an in-
 ### [RHEL 8.*x* to RHEL 9.*x*](#tab/rhel8-rhel9)
 
 1. Verify that the current OS version belongs to RHEL 9:
+
+    ```bash
+    sudo cat /etc/redhat-release
+    ```
+
+2. Check the kernel version:
+
+    ```bash
+    uname -r
+    ```
+
+3. Verify the new repositories:
+
+    ```bash
+    sudo dnf repolist
+    ```
+
+### [RHEL 9.*x* to RHEL 10.*x*](#tab/rhel8-rhel9)
+
+1. Verify that the current OS version belongs to RHEL 10:
 
     ```bash
     sudo cat /etc/redhat-release
@@ -401,6 +503,42 @@ Once the VM is successfully upgraded, perform the following tasks:
         > [!IMPORTANT]  
         > Removing this data might limit Microsoft and Red Hat Support's ability to investigate and troubleshoot post-upgrade problems.
 
+### [RHEL 9.*x* to RHEL 10.*x*](#tab/rhel9-rhel10)
+
+1. Delete all remaining Leapp packages, including the *`snactor`* package, from the exclude list in the */etc/dnf/dnf.conf* configuration file. These Leapp packages are installed during the in-place upgrade.
+
+    ```bash
+    sudo dnf config-manager --save --setopt exclude=''
+    ```
+
+2. Remove all remaining RHEL 9 packages, including any remaining Leapp packages.
+
+   1. Locate remaining RHEL 9 packages.
+
+       ```bash
+       sudo rpm -qa | grep -e '\.el[789]' | grep -vE '^(gpg-pubkey|libmodulemd|katello-ca-consumer)' | sort
+       ```
+
+   2. Remove remaining RHEL 9 packages from your RHEL 10 VM:
+
+       ```bash
+       sudo dnf remove $(rpm -qa | grep \.el[789] | grep -vE 'gpg-pubkey|libmodulemd|katello-ca-consumer')
+       ```
+
+   3. Remove remaining Leapp dependency packages:
+
+       ```bash
+       sudo dnf remove leapp-deps-el10 leapp-repository-deps-el10
+       ```
+
+   4. (Optional) Remove all remaining upgrade-related data from the system:
+
+       ```bash
+       sudo rm -rf /var/log/leapp /root/tmp_leapp_py3 /var/lib/leapp
+       ```
+
+        > [!IMPORTANT]  
+        > Removing this data might limit Microsoft and Red Hat Support's ability to investigate and troubleshoot post-upgrade problems.
 ---
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
