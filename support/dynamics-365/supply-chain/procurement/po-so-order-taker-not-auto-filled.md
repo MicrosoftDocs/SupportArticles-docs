@@ -60,5 +60,5 @@ If the issue persists after confirming the Worker role association, check for du
 Order taker blank, Sales orderer not auto-filled, Worker role missing, Purchase order, Sales order, Dynamics 365 SCM, PartyID association, User setup, Auto-fill not working  
 
 ## Related links  
-- [Global address book overview](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/organization-administration/overview-global-address-book)  
-- [Manage users](https://learn.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/sysadmin/create-new-users)  
+- [Global address book overview](/dynamics365/fin-ops-core/dev-itpro/organization-administration/overview-global-address-book)  
+- [Manage users](/dynamics365/fin-ops-core/fin-ops/sysadmin/create-new-users)  
