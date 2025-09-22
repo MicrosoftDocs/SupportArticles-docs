@@ -37,7 +37,7 @@ If you're already using basic routing, issues might occur when you activate or d
 One of the following issues can cause a failure in enabling unified routing.
 
 - During a copy from an existing org, the decision contract is added in the target org but the related records are missed. When the system tries to [create a master entity routing configuration for the Case table](/dynamics365/customer-service/administer/set-up-record-routing#configure-unified-routing-for-records) during provisioning, it fails because of the missing related records.
-- When the customer creates the Case master entity record configuration with the same name before triggering the provisioning.
+- When you create the Case master entity record configuration with the same name (new_incidentmasterentityroutingconfiguration) before triggering the provisioning.
 
 ## Resolution 2
 
