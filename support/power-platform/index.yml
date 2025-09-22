@@ -6,7 +6,7 @@ metadata:
    ms.topic: hub-page
    services: service
    ms.service: power-platform
-   ms.date: 04/30/2025
+   ms.date: 09/15/2025
    author: aartig13
    ms.author: aartigoyle
 
@@ -16,6 +16,10 @@ productDirectory:
     imageSrc: "../media/hub-landing/ai-builder.svg"
     summary: Troubleshooting articles for AI Builder
     url: ai-builder/welcome-ai-builder.yml
+  - title: Microsoft Copilot Studio
+    imageSrc: "../media/hub-landing/copilot-studio.svg"
+    summary: Troubleshooting articles for Microsoft Copilot Studio
+    url: copilot-studio/welcome-copilot-studio.yml
   - title: Microsoft Dataverse
     imageSrc: "../media/hub-landing/dataverse.svg"
     summary: Troubleshooting articles for Microsoft Dataverse
@@ -32,6 +36,10 @@ productDirectory:
     imageSrc: "../media/hub-landing/power-pages.svg"
     summary: Troubleshooting articles for Power Pages
     url: power-pages/welcome-power-pages.yml
+  - title: Power Platform Administration 
+    imageSrc: "../media/hub-landing/power-platform-scalable.svg"
+    summary: Troubleshooting articles for Power Platform Administration
+    url: administration/welcome-administration.yml
 
 additionalContent:
 # Supports up to 3 sections

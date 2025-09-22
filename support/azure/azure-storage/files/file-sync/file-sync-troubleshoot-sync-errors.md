@@ -207,6 +207,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80070035 | -2147024843 | ERROR_BAD_NETPATH | The network path was not found. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80071779 | -2147018887 | ERROR_FILE_READ_ONLY | The specified file is read only. | If the error persists for more than a day, create a support request. |
 | 0x80070006 | -2147024890 | ERROR_INVALID_HANDLE | An internal error occurred. | If the error persists for more than a day, create a support request. |
+| 0x80070032 | -2147024846 | ERROR_NOT_SUPPORTED | The file is failing to upload as the tiered file is likely orphaned. |
 | 0x8007012f | -2147024593 | ERROR_DELETE_PENDING | The file cannot be opened because it is in the process of being deleted. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80041007 | -2147217401 | SYNC_E_ITEM_MUST_EXIST | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0X80C80293 | -2134375789 | ECS_E_SYNC_INITIAL_SCAN_COMPLETED | The sync session failed because the initial enumeration was completed. The next session will cover the full namespace. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
