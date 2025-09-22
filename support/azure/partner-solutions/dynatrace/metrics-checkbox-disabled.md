@@ -27,14 +27,14 @@ This article helps you resolve the problem in which the **Enable metrics collect
 
 ## Cause
 
-Enabling metrics collection requires Owner permissions at the subscription scope. Users with Contributor or Reader roles can't enable metrics collection from the integration UI. The checkbox is unavaible (dimmed).
+Enabling metrics collection requires Owner permissions at the subscription scope. Users with Contributor or Reader roles can't enable metrics collection from the integration UI. The checkbox is unavailable (dimmed).
 
 ## Solution: Request Owner permission
 
 1. In the Azure portal, go to the subscription that contains the resource.
 2. Select **Access control (IAM)** in the left pane.
 3. Select **View my access** to see your current role at the subscription scope.
-4. If don't have Owner permissions, contact the subscription Owner or administrator and request Owner permissions, or ask them to enable metrics collection for you.
+4. If you don't have Owner permissions, contact the subscription Owner or administrator and request Owner permissions, or ask them to enable metrics collection for you.
 5. After the Owner assigns the role, wait 5–15 minutes for RBAC propagation, and then retry enabling metrics collection in the Dynatrace integration.
 
 ## Related content
