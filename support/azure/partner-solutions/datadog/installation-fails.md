@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Datadog Agent Installation Failures in Azure
-description: Resolve Datadog agent installation failures caused by a missing or incorrect default API key.
+title: Troubleshoot Default API Key Problems in Datadog
+description: Resolve Datadog agent installation failures caused by a missing default API key, or change an incorrect default API key. 
 author: 
 ms.author: jarrettr
 ms.service: partner-services
@@ -8,21 +8,23 @@ ms.topic: troubleshooting-general
 ms.date: 09/22/2025
 ai-usage: ai-assisted
 
-# customer intent: As an Azure administrator or user, I want to resolve an installation failure that's caused by a missing or incorrect default API key.
+# customer intent: As an Azure administrator or user, I want to resolve an installation failure that's caused by a missing default API key, or I want to change a default API key.
 
 ---
 
-# Datadog agent installation fails
+# Datadaog agent installation fails, or default API key is incorrect
 
-The Azure Datadog integration enables you to install Datadog agent on a virtual machine or app service. This article helps you troubleshoot Datadog agent installation failures on Azure virtual machines and app services when the installation fails because the Datadog API key isn't configured as the default key.
+The Azure Datadog integration enables you to install Datadog agent on a virtual machine or app service. This article helps you troubleshoot Datadog agent installation failures that are caused by a missing default API key. It also describes how to change the default key.
 
 ## Prerequisites
 
 - Access to the Azure portal with permissions to view or configure the Datadog integration and to restart VMs or app services, if required.
  
-## Causes and solutions
+## Problems and solutions
 
-### Cause: No Default API key is selected 
+### Problem: Datadog installation fails
+
+If a default API key isn't selected, the Datadog agent installation fails.
 
 #### Solution
 
@@ -31,7 +33,7 @@ The Azure Datadog integration enables you to install Datadog agent on a virtual 
 1. Under **API Keys**, select or create a default key.
 1. Try again to install the agent. 
 
-### Cause: Incorrect API key configured on the resource
+### Problem: Incorrect API key configured on the resource
 
 #### Solution
 
