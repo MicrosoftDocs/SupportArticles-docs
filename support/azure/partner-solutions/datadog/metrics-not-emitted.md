@@ -50,7 +50,7 @@ Datadog requires the Monitoring Reader role on the appropriate Azure subscriptio
 
 1. Wait a few minutes for RBAC propagation, and then verify that Datadog is recieving metrics.
 
-> [!Notes]
+> [!Note]
 > Confirm the Datadog identity is the one used by the Datadog integration (managed identity vs. service principal). If you assign the role to the wrong principal, Datadog won't receive metrics.
 
 ## Related content
