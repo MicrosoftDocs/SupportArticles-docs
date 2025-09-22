@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 
 # Datadog agent installation fails
 
-This article helps you troubleshoot Datadog agent installation failures on Azure virtual machines and app services when the installation fails because the Datadog API key isn't configured as the default key.
+The Azure Datadog integration enables you to install Datadog agent on a virtual machine or app service. This article helps you troubleshoot Datadog agent installation failures on Azure virtual machines and app services when the installation fails because the Datadog API key isn't configured as the default key.
 
 ## Prerequisites
 
