@@ -2,7 +2,7 @@
 title: Resource Monitoring Stopped Working 
 description: Troubleshoot situations in which New Relic stops receiving logs or metrics from Azure resources.
 author: ProfessorKendrick
-ms.author: kkendrick
+ms.author: jarrettr
 ms.service: partner-services
 ms.topic: troubleshooting-general
 ms.date: 09/19/2025

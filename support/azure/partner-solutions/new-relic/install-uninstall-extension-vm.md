@@ -2,7 +2,7 @@
 title: Can't Install or Uninstall the Agent on a Virtual Machine
 description: Resolve problems with installing or uninstalling the New Relic agent on a virtual machine. 
 author: ProfessorKendrick
-ms.author: kkendrick
+ms.author: jarrettr
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/18/2025
