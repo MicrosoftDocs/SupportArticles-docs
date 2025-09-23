@@ -23,6 +23,8 @@ items:
       href: log-forwarding-persists.md
     - name: Log limitations
       href: log-limitations.md
+    - name: Metrics checkbox disabled
+      href: metrics-checkbox-disabled.md  
 - name: Elastic
   items:
     - name: Diagnostic settings manual update
