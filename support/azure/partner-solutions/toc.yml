@@ -19,6 +19,8 @@ items:
       href: diagnostic-settings-manual-update.md
     - name: Diagnostic settings not created
       href: diagnostic-settings.md
+    - name: Free trial limitations
+      href: dynatrace/free-trial-errors.md
     - name: Log forwarding persists
       href: log-forwarding-persists.md
     - name: Log limitations

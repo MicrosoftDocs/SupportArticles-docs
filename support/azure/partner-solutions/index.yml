@@ -29,6 +29,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Free trial limitations
+            url: dynatrace/free-trial-errors.md
           - text: Metrics collection checkbox is unavailable 
             url: dynatrace/metrics-checkbox-disabled.md
 
