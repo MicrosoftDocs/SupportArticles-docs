@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 
 # DeploymentFailed error 
 
-This article helps you resolve the DeploymentFailed error that appears when you try to create a Confluent Cloud resource in Azure and there's a subscription or billing issue.
+This article helps you resolve the **DeploymentFailed** error that appears when you try to create a Confluent Cloud resource in Azure and there's a subscription or billing issue.
 
 ## Prerequisites
 
