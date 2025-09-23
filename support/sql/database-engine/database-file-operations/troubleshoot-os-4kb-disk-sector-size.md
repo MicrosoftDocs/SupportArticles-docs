@@ -8,7 +8,7 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ---
 
-# Troubleshoot errors related to system disk sector size greater than 4 KB
+# Troubleshoot SQL Server errors related to system disk sector size greater than 4 KB
 
 This article provides solutions for troubleshooting errors during installation or starting an instance of SQL Server on Windows. This article is valid for all released versions of SQL Server.
 
@@ -76,7 +76,7 @@ You install any version of SQL Server on a Windows 10 device. Then, you upgrade 
 2021-11-05 23:42:47.14 spid9s There have been 256 misaligned log IOs which required falling back to synchronous IO. The current IO is on file C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\master.mdf. 
 ```
 
-## Scenario 5
+## Scenario 5: SQL Server application error from ntdll.dll
 
 You install any version of SQL Server on a Windows 10 device. Then, you upgrade the OS on the device to Windows 11. When you try to start SQL Server on a Windows 11 device, the service fails to start. In the SQL Server error log, you notice the following entries:
 
@@ -111,7 +111,7 @@ Source             : SQLLocalDB 11.0
 > [!Note]
 > You might encounter the failures mentioned in the previous scenarios for a SQL Server instance you installed manually or on a LocalDB instance installed by applications.
 
-## Cause
+## Cause of disk sector size errors in SQL Server
 
 During service startup, SQL Server begins the database recovery process to ensure database consistency. Part of this database recovery process involves consistency checks on the underlying filesystem before you try to open system and user database files.  
 
@@ -138,7 +138,7 @@ Additionally, be aware of the Windows support policy for file system and storage
 > [!NOTE]
 > There's no released version of SQL Server compatible with sector sizes greater than 4 KB. For more information, see the [Hard disk drive sector-size support boundaries in SQL Server](https://support.microsoft.com/topic/hard-disk-drive-sector-size-support-boundaries-in-sql-server-4d5b73fa-7dc4-1d8a-2735-556e6b60d046) article.
 
-## Resolutions
+## Resolution steps for disk sector size errors in SQL Server
 
 - Currently, the `ForcedPhysicalSectorSizeInBytes` registry key is required to successfully install SQL Server when using modern storage platforms, such as NVMe, that provide a sector size larger than 4 KB. This Windows operating system registry key forces the sector size to be emulated as 4 KB.
 
