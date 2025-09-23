@@ -16,7 +16,7 @@ This article provides troubleshooting guidance for issues that occur when you pr
 
 ## Symptoms
 
-When you try to [enable the unified routing toggle](/dynamics365/customer-service/administer/provision-unified-routing#enable-unified-routing-for-customer-service-only) in Dynamics 365 Customer Service, the feature is not enabled, and you receive one of the following error messages:
+When you try to [enable the unified routing toggle](/dynamics365/customer-service/administer/provision-unified-routing#enable-unified-routing-for-customer-service-only) in Dynamics 365 Customer Service, the feature isn't enabled, and you receive one of the following error messages:
 
 - "Unified routing provisioning failed due to issues in configuration..."
 - "Unified routing provisioning failed due to an error in deactivation of basic routing rulesets..."
