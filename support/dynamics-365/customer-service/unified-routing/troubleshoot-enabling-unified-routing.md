@@ -42,7 +42,7 @@ During provisioning, the system [creates a master entity routing configuration f
 
 ### Solution
 
-1. From your Dataverse instance, delete the record of the `msdyn_decisioncontract` type that has the following attributes:
+1. From your Dataverse instance, delete the record of type `msdyn_decisioncontract` that has the following attributes:
    - `msdyn_name`: `Case decision ruleset`
    - `msdyn_uniquename`: `new_incidentmasterentityroutingconfiguration`
 1. Try again to enable unified routing.
