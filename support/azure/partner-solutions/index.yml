@@ -23,7 +23,13 @@ landingContent:
         links:
           - text:  Resolve Azure Native Integrations Purchase Errors
             url: marketplace-purchases-errors.md
-
+# Card       
+  - title:  Confluent
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't find the offer in Azure Marketplace
+            url: confluent/cant-find-offer.md
 # Card
   - title:  Informatica
     linkLists:

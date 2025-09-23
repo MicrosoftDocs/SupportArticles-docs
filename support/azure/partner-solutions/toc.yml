@@ -3,6 +3,10 @@ items:
   href: index.yml
 - name: Marketplace purchase errors
   href: marketplace-purchases-errors.md
+- name: Confluent
+  items:
+    - name: Can't find the offer in Azure Marketplace
+      href: confluent/cant-find-offer.md
 - name: Datadog
   items: 
     - name: Diagnostic settings manual update
