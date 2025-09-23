@@ -30,7 +30,7 @@ This article helps you troubleshoot issues in which a Confluent Cloud resource o
 
 ### Problem: Confluent Cloud resource isn't visilbe
 
-- If the Confluent Cloud resource isn't visible in the Azure All resources list, contact [Confluent support](https://support.confluent.io).
+- If the Confluent Cloud resource isn't visible in the Azure **All resources** list, contact [Confluent support](https://support.confluent.io).
 
 ## Related content
 
