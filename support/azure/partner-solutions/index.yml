@@ -29,7 +29,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Metrics collection checkbox is disabled
+          - text: Metrics collection checkbox is unavailable 
             url: dynatrace/metrics-checkbox-disabled.md
 
 # Card

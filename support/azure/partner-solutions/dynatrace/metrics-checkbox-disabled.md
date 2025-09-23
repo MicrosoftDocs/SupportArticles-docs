@@ -1,6 +1,6 @@
 ---
-title: Metrics Collection Checkbox for Dynatrace Is Disabled  
-description: Resolve the issue in which the metrics collection checkbox is disabled because the user lacks Owner permissions on the subscription.
+title: Metrics Collection Checkbox for Dynatrace Is Unavailable  
+description: Resolve the issue in which the metrics collection checkbox is unavailable because the user lacks Owner permissions on the subscription.
 author: 
 ms.author: jarrettr
 ms.service: partner-services
@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 
 ---
 
-# Metrics collection checkbox is disabled 
+# Metrics collection checkbox is unavailable 
 
 This article helps you resolve the problem in which the **Enable metrics collection** checkbox is unavailable in your Dynatrace integration because the signed-in account doesn't have Owner permissions on the Azure subscription.
 
