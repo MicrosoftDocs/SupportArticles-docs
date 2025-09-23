@@ -6281,11 +6281,6 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md",
-        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/operationnotallowed-publicipcountlimitreached-error",
-        "redirect_document_id": true
-      },
-      {
         "source_path": "azure-kubernetes/create-upgrade-delete/error-code-publicipcountlimitreached.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/publicipcountlimitreached-error",
         "redirect_document_id": true
