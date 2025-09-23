@@ -2843,7 +2843,7 @@
       {
         "source_path": "azure-kubernetes/error-code-operationnotallowed-publicipcountlimitreached.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "azure-kubernetes/error-code-operationpreempted.md",
@@ -6280,9 +6280,9 @@
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/serviceprincipalvalidationclienterror-error",
         "redirect_document_id": true
       },
-            {
+      {
         "source_path": "azure/azure-kubernetes/create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md",
-        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/operationnotallowed-publicipcountlimitreached-error.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/operationnotallowed-publicipcountlimitreached-error",
         "redirect_document_id": true
       },
       {
@@ -6292,7 +6292,7 @@
       },
       {
         "source_path": "azure-kubernetes/create-upgrade-delete/error-code-quotaexceeded.md",
-        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/quotaexceeded-error",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/quota-exceeded-error",
         "redirect_document_id": true
       },
       {
@@ -6327,7 +6327,12 @@
       },
       {
         "source_path": "azure-kubernetes/create-upgrade-delete/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md",
-        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/toomanyrequestsreceived-error.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/toomanyrequestsreceived-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/operationnotallowed-publicipcountlimitreached-error",
         "redirect_document_id": true
       },
       {
