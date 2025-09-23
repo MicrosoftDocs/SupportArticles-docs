@@ -25,6 +25,14 @@ landingContent:
             url: marketplace-purchases-errors.md
 
 # Card
+  - title: Dynatrace 
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Metrics collection checkbox is disabled
+            url: dynatrace/metrics-checkbox-disabled.md
+
+# Card
   - title:  Informatica
     linkLists:
       - linkListType: how-to-guide
