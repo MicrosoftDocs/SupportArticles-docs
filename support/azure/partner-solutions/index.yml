@@ -32,6 +32,8 @@ landingContent:
             url: confluent/cant-find-offer.md
           - text: Conflict error
             url: confluent/conflict-error.md
+          - text: DeploymentFailed error
+            url: confluent/deploymentfailed-error.md
 # Card
   - title:  Informatica
     linkLists:

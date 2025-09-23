@@ -9,6 +9,8 @@ items:
       href: confluent/cant-find-offer.md
     - name: Conflict error 
       href: confluent/conflict-error.md
+    - name: DeploymentFailed error
+      href: confluent/deploymentfailed-error.md
 - name: Datadog
   items: 
     - name: Diagnostic settings manual update
