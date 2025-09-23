@@ -33,8 +33,6 @@ If you previously registered for Confluent Cloud, you must use a different email
 
 When you create the new Confluent Cloud organization resource, use an email address that hasn't been registered with Confluent Cloud.
 
-If you need to use the same email address, contact [Confluent support](https://support.confluent.io) for assistance.
-
 ## Related content
 
 - [Confluent support](https://support.confluent.io)
