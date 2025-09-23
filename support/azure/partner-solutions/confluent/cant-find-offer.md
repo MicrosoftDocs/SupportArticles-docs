@@ -33,4 +33,4 @@ If you don't see the offer, contact [Confluent support](https://support.confluen
 ## Related content
 
 - [Confluent support](https://support.confluent.io)
-- [Azure Marketplace documentation](/azure/marketplace/azure-marketplace-overview)
+- [Azure Marketplace documentation](/marketplace/azure-marketplace-overview)
