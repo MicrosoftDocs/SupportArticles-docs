@@ -30,6 +30,8 @@ landingContent:
         links:
           - text: Can't find the offer in Azure Marketplace
             url: confluent/cant-find-offer.md
+          - text: Conflict error
+            url: confluent/conflict-error.md
 # Card
   - title:  Informatica
     linkLists:
