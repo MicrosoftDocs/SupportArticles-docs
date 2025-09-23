@@ -1,5 +1,5 @@
 ---
-title: Can't Find Apache Kafka & Apache Flink on Confluent Cloud Offer in Azure Marketplace
+title: Can't Find Apache Kafka & Apache Flink Offer in Azure Marketplace
 description: Resolve problems with finding the Apache Kafka & Apache Flink on Confluent Cloud offer in Azure Marketplace.
 author:  
 ms.author: jarrettr 
@@ -19,7 +19,7 @@ This article helps you troubleshoot problems with finding the Apache Kafka & Apa
 ## Prerequisites
 
 - Access to the Azure portal and permission to create resources.
-- Your Microsoft Entra tenant ID (required if support needs to check the tenant allow-list).
+- Your Microsoft Entra tenant ID (required if support needs to check the tenant allowlist).
 
 ## Solution
 
@@ -33,4 +33,4 @@ If you don't see the offer, contact [Confluent support](https://support.confluen
 ## Related content
 
 - [Confluent support](https://support.confluent.io)
-- [Azure Marketplace documentation](/azure/marketplace/marketplace-overview)
+- [Azure Marketplace documentation](/azure/marketplace/azure-marketplace-overview)
