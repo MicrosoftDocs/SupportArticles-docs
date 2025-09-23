@@ -37,13 +37,13 @@ landingContent:
           - text: K8SAPIServerDNSLookupFailVMExtensionError error (52)
             url: ./error-code-k8sapiserverdnslookupfailvmextensionerror.md
           - text: MissingSubscriptionRegistration error
-            url: ./error-code-missingsubscriptionregistration.md
+            url: ./missingsubscriptionregistration-error.md
           - text: OutboundConnFailVMExtensionError error (50)
             url: ./error-code-outboundconnfailvmextensionerror.md
           - text: RequestDisallowedByPolicy error
-            url: ./error-code-requestdisallowedbypolicy.md
+            url: ./requestdisallowedbypolicy-error.md
           - text: SubnetIsFull error
-            url: ./error-code-subnetisfull.md
+            url: ./subnetisfull-error.md
           - text: SubscriptionRequestsThrottled error (429)
             url: ./error-code-subscriptionrequeststhrottled.md
 
@@ -57,9 +57,9 @@ landingContent:
           - text: PodDrainFailure error
             url: ./error-code-poddrainfailure.md
           - text: PublicIPCountLimitReached error
-            url: ./error-code-publicipcountlimitreached.md
+            url: ./publicipcountlimitreached-error.md
           - text: QuotaExceeded error
-            url: ./error-code-quotaexceeded.md
+            url: ./quota-exceeded-error.md
           - text: SubnetIsFull error during an upgrade
             url: ./error-code-subnetisfull-upgrade.md           
           - text: Upgrade issues with Gen2 VMs on Windows AKS cluster
@@ -73,13 +73,13 @@ landingContent:
           - text: CannotDeleteLoadBalancerWithPrivateLinkService error
             url: ./cannot-delete-load-balancer-private-link-service.md
           - text: InUseRouteTableCannotBeDeleted error
-            url: ./error-code-inuseroutetablecannotbedeleted.md
+            url: ./inuseroutetablecannotbedeleted-error.md
           - text: LoadBalancerInUseByVirtualMachineScaleSet error
             url: ./load-balancer-or-nsg-in-use-by-vm-scale-set.md
           - text: PublicIPAddressCannotBeDeleted error
             url: ./cannot-delete-ip-subnet-nsg.md
           - text: TooManyRequestsReceived error
-            url: ./error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
+            url: ./toomanyrequestsreceived-error.md
 
  # Card 
   - title: Troubleshoot scale operations
