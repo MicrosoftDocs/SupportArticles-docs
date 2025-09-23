@@ -224,7 +224,7 @@ If instances aren't regularly updated, they can become incompatible with our upd
    ```
    SLES 15
    ```bash
-   sudo zypper --pkg-cache-dir /root/packages/ download cloud-regionsrv-client cloud-regionsrv-client-plugin-azure regionServiceClientConfigAzure python3-azuremetadata suseconnect-ng python3-cssselect python3-toml python3-lxml python3-M2Crypto python3-zypp-plugin python3-dnspython libsuseconnect suseconnect-ruby-bindings docker docker-bash-completion runc containerd libcontainers-common bash-completion
+   sudo zypper --pkg-cache-dir /root/packages/ download cloud-regionsrv-client cloud-regionsrv-client-plugin-azure regionServiceClientConfigAzure python3-azuremetadata suseconnect-ng python3-cssselect python3-toml python3-lxml python3-M2Crypto python3-zypp-plugin python3-dnspython libsuseconnect suseconnect-ruby-bindings docker docker-bash-completion runc containerd libcontainers-common bash-completion libcontainers-policy libcontainers-sles-mounts
    ```
 4. Run the following commands:
 
