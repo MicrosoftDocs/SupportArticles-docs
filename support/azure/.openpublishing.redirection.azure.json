@@ -6329,7 +6329,7 @@
         "source_path": "azure-kubernetes/create-upgrade-delete/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/toomanyrequestsreceived-error.md",
         "redirect_document_id": true
-      }
+      },
       {
         "source_path": "azure-kubernetes/create-upgrade-delete/error-code-requestdisallowedbypolicy.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/requestdisallowedbypolicy-error",
