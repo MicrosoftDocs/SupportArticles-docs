@@ -1,6 +1,6 @@
 ---
-title: Can't install OpenSSH features
-description: Describes how to resolve issues that occur when you try to install OpenSSH Server and OpenSSH Client. The solutions to these issues vary for different versions of Windows Server and Windows Client.
+title: Can't install OpenSSH Features
+description: Resolves various issues that occur when you try to install OpenSSH Server and OpenSSH Client on different versions of Windows Server and Windows Client.
 ms.date: 09/21/2025
 manager: dcscontentpm
 audience: itpro
@@ -15,9 +15,9 @@ ms.custom:
 
 *Applies to:* Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows 11, and Windows 10
 
-The OpenSSH Server and OpenSSH Client features of Windows are installed by default on Windows Server 2025. However, for older versions of Windows Server and for Windows 11 and Windows 10, these features aren't installed by default. They're available as optional Windows features (also known as Features on Demand, or FoD).
+The OpenSSH Server and OpenSSH Client features of Windows are installed by default on Windows Server 2025. However, this situation isn't true for older versions of Windows Server or for Windows 11 or Windows 10. On those systems, the OpenSSH features are available as optional Windows features (also known as Features on Demand, or FoD).
 
-For more information about using OpenSSH features in Windows Server 2025, see [Get started with OpenSSH for Windows](/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell&pivots=windows-server-2025).
+For more information about how to use OpenSSH features in Windows Server 2025, see [Get started with OpenSSH for Windows](/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell&pivots=windows-server-2025).
 
 ## Symptoms
 
@@ -27,7 +27,7 @@ You try to install the OpenSSH features on a computer that's affected by any of 
 - You use Group Policy to manage how the computer gets updates.
 - You use a centralized network store or an intranet update management system such as Windows Server Update Service (WSUS) to manage updates.
 
-For example, when you run `Add-Capability` in Windows PowerShell, the installation fails and you see one of the following errors:
+For example, when you run `Add-Capability` in Windows PowerShell, the installation fails, and you receive one of the following error messages:
 
 - 0x800F0954 (CBS_E_NO_OPTIONAL_CONTENT_FOUND_ON_UPDATE_SERVERS)
 - 0x800F0950 (COMException)
@@ -39,7 +39,7 @@ Additionally, if you do successfully install the OpenSSH features, you can't use
 
 ## Cause
 
-Installing the OpenSSH features is straightforward if your computer gets automatic updates from Windows Update, or if your installation media is available locally. You install these features by using the user interface or the Deployment Image Servicing and Management (DISM) `Add-Capability` command.
+If your computer gets automatic updates from Windows Update, or if your installation media is available locally, the process to install the OpenSSH features is straightforward. You install these features by using the user interface or the Deployment Image Servicing and Management (DISM) `Add-Capability` command.
 
 However, any of the following factors can complicate this operation:
 
@@ -47,32 +47,32 @@ However, any of the following factors can complicate this operation:
 - You use Group Policy to manage how the computer gets updates.
 - You use a centralized network store or an intranet update management system such as Windows Server Update Service (WSUS) to manage updates.
 
-In such situations, Windows can't locate the .CAB files that it needs to install the features. The reasons for this outcome can vary. For example,
+In such situations, Windows can't locate the .CAB files that it has to have to install the features. The reasons for this outcome can vary. For example,
 
-- The installation media doesn't contain the .CAB files for the OpenSSH feature. This issue has been observed in Windows Server 2019, v 1809.
+- The installation media doesn't contain the .CAB files for the OpenSSH feature. This issue has been observed in Windows Server 2019, version 1809.
 
-- The computer uses WSUS to manage updates, and runs a version of Windows Server that's older than Windows Server 2025 or Windows 11, v 22H2. These older versions of Windows can't install the OpenSSH features by using WSUS. For more information about this behavior, see the following articles:
+- The computer uses WSUS to manage updates, and runs a version of Windows Server that's older than Windows Server 2025 or Windows 11, version 22H2. These older versions of Windows can't install the OpenSSH features by using WSUS. For more information about this behavior, see the following articles:
 
   - [Use Windows Update client policies and WSUS together](/windows/deployment/update/wufb-wsus).
   - The [High-level changes affecting Features on Demand and language pack content](/windows/deployment/update/fod-and-lang-packs#high-level-changes-affecting-features-on-demand-and-language-pack-content) section of "How to make Features on Demand and language packs available when you're using WSUS or Configuration Manager".
 
-- Group Policy settings block the installation. These settings vary depending on the Windows version, and in some cases multiple settings can contradict each other and cause the installation to fail.
+- Group Policy settings block the installation. These settings vary depending on the Windows version. In some cases multiple settings can contradict one another and cause the installation to fail.
 
 ## Resolution
 
 Before you start the procedures in this section, check the following requirements:
 
-- The computer where you want to install the OpenSHH features runs Windows Server 2019 (build 1809) or a later version, or Windows 10 (build 1809) or a later version. To check the version details for your Windows computer, open a Command Prompt window and then enter `winver.exe`.
+- The computer on which you want to install the OpenSHH features runs Windows Server 2019 (build 1809) or a later version, or Windows 10 (build 1809) or a later version. To check the version details of your Windows-based computer, open a Command Prompt window, and then enter `winver.exe`.
 
-- You're using Windows PowerShell 5.1 or a later version. To check the PowerShell version, open a PowerShell Command Prompt window and then run `$PSVersionTable.PSVersion`. Verify that the major version is at least **5**, and the minor version at least **1**. For more information, see [installing PowerShell on Windows](/powershell/scripting/install/installing-powershell-on-windows).
+- You use Windows PowerShell 5.1 or a later version. To check the PowerShell version, open a PowerShell Command Prompt window, and then run `$PSVersionTable.PSVersion`. Verify that the major version is at least **5**, and the minor version is at least **1**. For more information, see [installing PowerShell on Windows](/powershell/scripting/install/installing-powershell-on-windows).
 
-- You're using an account that is a member of the built-in Administrators group.
+- You use an account that's a member of the built-in Administrators group.
 
-The specific steps to install the OpenSSH features vary depending on the environment that you're working in.
+The specific steps to install the OpenSSH features vary depending on the environment that you work in.
 
 | Environment | Start at this section |
 | - | - |
-| Target computer can connect to Windows Update as needed | [Install the OpenSSH features by using Windows Update](#install-the-openssh-features-by-using-windows-update) |
+| Target computer can connect to Windows Update as necessary | [Install the OpenSSH features by using Windows Update](#install-the-openssh-features-by-using-windows-update) |
 | Target computer can't connect to Windows Update | [Install the OpenSSH features from a network location](#install-the-openssh-features-from-a-network-location) |
 | WSUS* manages updates for the environment<br />And<br />The computer runs the following Windows versions: <ul><li>Windows Server 2022</li><li>Windows Server 2019</li><li>Windows 11, v 21H2</li><li>Windows 10</li></ul> | [Install the OpenSSH features from a network location](#install-the-openssh-features-from-a-network-location) |
 
@@ -81,7 +81,7 @@ The specific steps to install the OpenSSH features vary depending on the environ
 If the installation still fails, see [Configure Group Policy to allow OpenSSH installation](#configure-group-policy-to-allow-openssh-installation)
 
 > [!IMPORTANT]  
-> Although in Windows Server 2025 the OpenSSH features are installed by default, you must start and configure them before you can use them (this procedure is the same for all supported versions of Windows). For more information, see [Configure the OpenSSH service and firewall settings](#configure-the-openssh-service-and-firewall-settings).
+> Although the OpenSSH features are installed by default in Windows Server 2025, you must start and configure the features before you can use them. (This procedure is the same for all supported versions of Windows.) For more information, see [Configure the OpenSSH service and firewall settings](#configure-the-openssh-service-and-firewall-settings).
 
 ### Install the OpenSSH features by using Windows Update
 
