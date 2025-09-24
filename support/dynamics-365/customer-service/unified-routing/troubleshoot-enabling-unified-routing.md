@@ -31,7 +31,7 @@ If you're already using [basic routing](/dynamics365/customer-service/administer
 1. Check the ownership of all the basic routing rule sets. If the owner of a rule set no longer has access, either reactivate the user or transfer the ownership of the rule set to an active user.
 1. Try again to enable unified routing.
 
-For information about basic routing rule sets, learn more in [Automatically route cases using basic routing rule sets](/dynamics365/customer-service/administer/create-rules-automatically-route-cases).
+For more information about basic routing rule sets, see [Automatically route cases using basic routing rule sets](/dynamics365/customer-service/administer/create-rules-automatically-route-cases).
 
 ## Cause 2: Failures because of master entity routing configuration
 
