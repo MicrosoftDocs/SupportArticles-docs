@@ -30,7 +30,7 @@ This article helps you resolve problems with deleting a Confluent Cloud resource
 - You must have permission to take `Microsoft.Confluent/*/Delete` actions on the resource. 
 - If you have the correct permissions but still can't delete the resource, the problem might be related to the Confluent retention policy.
 
-## Solution 1: Verify and obtain delete permissions
+## Solution 1: Verify or obtain delete permissions
 
 1. In the Azure portal, go to the resource and select **Access control (IAM)**.
 1. View your role assignments. Confirm that you have a role that allows `Microsoft.Confluent/*/Delete` actions. For information about viewing permissions, see [List Azure role assignments by using the Azure portal](/azure/role-based-access-control/role-assignments-list-portal).
