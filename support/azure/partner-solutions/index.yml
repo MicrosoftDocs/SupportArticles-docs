@@ -28,6 +28,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Can't create a service connection by using Service Connector
+            url: confluent/cannot-create-service-connection.md
           - text: Can't delete a resource
             url: confluent/cannot-delete-resource.md
           - text: Can't find the offer in Azure Marketplace
