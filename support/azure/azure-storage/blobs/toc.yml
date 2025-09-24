@@ -21,7 +21,7 @@
   - name: Sticky bit causes 403 authorization error
     href: authentication/adls-gen2-sticky-bit-403-access-denied.md
   - name: Troubleshoot 403 errors
-    href: storage-troubleshoot-403-errors.md
+    href: authentication/storage-troubleshoot-403-errors.md
 - name: Performance and Throughput
   items:
   - name: Troubleshoot high CPU or disk usage issues

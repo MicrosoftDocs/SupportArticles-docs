@@ -156,7 +156,7 @@ When using ACLs to authorize access to files and directories, review the followi
 
 - **Sticky bit is not set** ACLs have a setting called the sticky bit, which can also cause 403 errors. If the sticky bit is enabled on a directory, only the child item's owner, the directory's owner, or the Superuser ($superuser) can delete or rename child items. To learn more, see [403 Access Denied authorization error when the sticky bit is enabled in ADLS Gen2](adls-gen2-sticky-bit-403-access-denied.md).
 
-For more information about ACLs, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/common/data-lake-storage-access-control).
+For more information about ACLs, see [Access control lists (ACLs) in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-access-control).
 
 ### Public network endpoint
 
@@ -178,7 +178,7 @@ If the client receives a 403 error when accessing a storage account through a pr
 
 - **Domain Name System (DNS) settings** Make sure that the DNS resolution of the storage account name resolves to a private IP address. It's possible that a DNS configuration might be resolving the storage account to the public endpoint. Update the DNS configuration so that clients in the network actually get to the private endpoint. See [DNS changes for private endpoints](/azure/storage/common/storage-private-endpoints#dns-changes-for-private-endpoints).
 
-- **Hub virtual network connectivity** For copying blobs between storage accounts with private endpoints in different spoke virtual networks from a VM in a Hub virtual network, ensure network connectivity and review error logs for `CannotVerifyCopySource`. See [Copy blobs between storage accounts in a Hub-spoke architecture using private endpoints](../connectivity/copy-blobs-between-storage-accounts-network-restriction).
+- **Hub virtual network connectivity** For copying blobs between storage accounts with private endpoints in different spoke virtual networks from a VM in a Hub virtual network, ensure network connectivity and review error logs for `CannotVerifyCopySource`. See [Copy blobs between storage accounts in a Hub-spoke architecture using private endpoints](../connectivity/copy-blobs-between-storage-accounts-network-restriction.md).
 
 - **Private endpoints for each storage resource** Ensure the storage account has private endpoints for both the Data Lake Storage resource and the Blob Storage resource. Some operations might be redirected between endpoints, requiring both to be present.
 
