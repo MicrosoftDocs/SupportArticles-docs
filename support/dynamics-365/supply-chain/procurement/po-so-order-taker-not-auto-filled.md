@@ -1,6 +1,6 @@
 ---
-title: Order taker not auto-filled when creating purchase or sales orders
-description: Steps to troubleshoot when the Order taker or Sales orderer field is not automatically populated while creating purchase or sales orders in Microsoft Dynamics 365 Supply Chain Management.
+title: Order Taker Not Auto-Filled When Creating Purchase or Sales Orders
+description: Learn how to troubleshooting issues preventing the orderer or sales orderer field from being automatically populated when creating a purchase or sales order in Microsoft Dynamics 365 Supply Chain Management.
 author: vermayashi
 ms.date: 09/12/2025
 ms.search.form: PurchTable, PurchTablePart, PurchCreateOrder, SalesTable, SalesCreateOrder
@@ -11,54 +11,68 @@ ms.author: vermayashi
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ms.custom: sap:Purchase order procurement and sourcing\Issues with Purchase order or sales order auto-fill
+ms.topic: troubleshooting-problem-resolution
+
+#customer intent: As a developer or system administrator, I want to fix an issue with the order taker not being autofilled when creating a purchase or sales order so that the order taker field doesn't need to be entered manually.
 ---
-# Order taker not being auto-filled when creating purchase or sales orders
+# Order taker field not autofilled when creating purchase or sales orders
 
-## Symptoms  
-When creating a purchase order (PO) or sales order (SO), the **Order taker** (or **Sales orderer**) field isn’t automatically populated.  
+When you [create a purchase order](/dynamics365/supply-chain/procurement/tasks/create-purchase-order) (PO) or sales order (SO) in Microsoft Dynamics 365 Supply Chain Management, the *order taker* (referred to as the **Orderer** in a PO and the **Sales orderer** in an SO) might fail to automatically populate when expected to. This article provides guidance for troubleshooting the required configurations to enable autofill.
 
-## Cause  
-The issue occurs when the user account isn’t associated with a **PartyID** that has the **Worker role** in the current legal entity.  
+## Symptoms
 
-- The system requires a Worker role to automatically populate the **Order taker / Sales orderer** field.  
-- If a user has multiple PartyIDs, only the one with the Worker role for the current legal entity enables auto-fill.  
-- If no Worker record exists for the person in this legal entity, the auto-fill won’t trigger.  
+The **Orderer** or **Sales orderer** field is blank when creating a new PO or SO, even though it should be autofilled.
 
-## Resolution  
-To resolve this issue, associate the user with the PartyID that has the **Worker role** for the current legal entity.  
+## Cause
 
-### Steps to fix  
+The **Orderer** or **Sales orderer** field are autofilled only if the current user account is associated with a **Party ID** that has the [Worker role](/dynamics365/fin-ops-core/dev-itpro/organization-administration/overview-global-address-book#party-roles) in the current legal entity.
 
-1. **Confirm the issue**  
-   - In the target legal entity, create a new PO or SO and verify that the **Order taker / Sales orderer** field is blank.  
+> [!NOTE]
+> If a user has multiple **Party IDs**, only the one with the **Worker** role in the current legal entity enables autofill.
 
-2. **Check the party record**  
-   - Go to **Organization administration > Global address book**.  
-   - Search for and open the relevant person/party record.  
-   - In the record, check the **Roles** (or role-specific pages) to confirm whether this PartyID has the **Worker role assigned for the current legal entity**.  
+## Solution
 
-3. **If no Worker role exists**  
-   - Go to **Human resources > Workers > Workers**.  
-   - Select **New** to create a worker.  
-   - Enter the hire date and required details.  
-   - This action creates/associates the PartyID with the **Worker role** in the current legal entity.  
+To enable autofill, associate the user account with a **Party ID** that has the **Worker** role in the current legal entity. Follow these steps:
 
-4. **Associate the user account**  
-   - Go to **System administration > Users > Users**.  
-   - Open the user account.  
-   - In the **Person** (or Contact) field, link the user to the party record that has the Worker role for the current legal entity.  
-   - If the Person field is locked due to an older association, use **Maintain versions** to remove the existing relation, then assign the correct Worker-linked party.  
+### Step 1: Confirm the issue
 
-5. **Validate the fix**  
-   - Save the user record.  
-   - Create a new PO and SO again. The **Order taker / Sales orderer** field should now be auto-filled correctly.  
+In the target legal entity, create a new PO or SO and verify that the **Orderer** / **Sales orderer** field isn't autofilled.
 
-## More information  
-If the issue persists after confirming the Worker role association, check for duplicate PartyIDs, customizations that override defaults, or capture a trace for further support investigation.  
+### Step 2: Check the party record
 
-## Keywords  
-Order taker blank, Sales orderer not auto-filled, Worker role missing, Purchase order, Sales order, Dynamics 365 SCM, PartyID association, User setup, Auto-fill not working  
+1. Navigate to **Organization administration** > **Global address book**.
+1. Search for and open the relevant person or party record.
+1. In the record, check the **Roles** section (or role-specific pages) to confirm if this **Party ID** has the **Worker** role assigned for the current legal entity.
+1. If the **Worker** role isn't assigned to the **Party ID** proceed to [step 3](#step-3-associate-party-id-with-the-worker-role-if-not-assigned), otherwise skip to [step 4](#step-4-associate-the-user-account-with-the-party-record).
 
-## Related links  
-- [Global address book overview](/dynamics365/fin-ops-core/dev-itpro/organization-administration/overview-global-address-book)  
-- [Manage users](/dynamics365/fin-ops-core/fin-ops/sysadmin/create-new-users)  
+### Step 3: Associate the Party ID with the Worker role
+
+1. Navigate to **Human resources** > **Workers** > **Workers**.
+1. Select **New** to create a worker record.
+1. Enter the hire date and any required details.
+
+This step creates or associates the **Party ID** with the **Worker** role in the current legal entity.
+
+### Step 4: Associate the user account with the party record
+
+1. Go to **System administration** > **Users** > **Users**.
+1. Open the relevant user account.
+1. In the **Person** (or **Contact**) field, link the user account to the party record that has the **Worker** role for the current legal entity.
+   1. If the **Person** field is locked due to a previous association, use the **Maintain versions** option to remove the existing relation. Then assign the correct worker-linked party.
+
+### Step 5: Validate the fix
+
+1. Save the user record
+1. Create a new PO or SO and validate that the **Orderer** / **Sales orderer** field is autofilled.
+
+If the issue persists after confirming the **Worker** role association, try the following:
+
+1. Check for duplicate **Party IDs** that might be causing conflicts.
+1. Investigate potential customizations or extensions that could override default behavior.
+1. Capture a trace for further analysis if needed. This trace can help identify any underlying issues requiring technical support.
+
+## Related content
+  
+- [Global address book overview](/dynamics365/fin-ops-core/dev-itpro/organization-administration/overview-global-address-book)
+- [Party and global address book](/dynamics365/fin-ops-core/dev-itpro/data-entities/dual-write/party-gab)
+- [Create new users](/dynamics365/fin-ops-core/fin-ops/sysadmin/create-new-users)
