@@ -1,12 +1,12 @@
 ---
-title: Troubleshoot Slow or Failed Confluent Cloud Resource reation in Azure
+title: Troubleshoot Slow or Failed Confluent Cloud Resource Creation in Azure
 description: Troubleshoot slow or failed resource creation for Confluent Cloud in Azure.
 author:  
 ms.author: jarrettr
 ms.service: partner-services
 ms.topic: troubleshooting-general
 ms.date: 09/24/2025
-
+ai-usage: ai-assisted
 # customer intent: As an Azure administrator or user, I want to troubleshoot problems with slow or failed Confluent Cloud resource creation.
 
 ---
@@ -24,14 +24,11 @@ This article helps you troubleshoot problems in which Confluent Cloud resource c
 
 ### Problem: Deployment is slow or stuck
 
-1. Wait up to three hours for deployment to complete.
-2. If still not complete, contact [Confluent support](https://support.confluent.io).
+- If deployment doesn't complete after three hours, contact [Confluent support](https://support.confluent.io).
 
 ### Problem: Deployment fails
 
-1. Delete the failed resource in the Azure portal.
-2. Retry the resource creation process.
+1. If deployment fails and the Confluent Cloud resource has a status of **Failed**, delete the resource. 
+1. Try again to create the resource. 
 
-## Related content
-
-- [Azure portal troubleshooting](https://learn.microsoft.com/azure/azure-portal/azure-portal-troubleshoot)
+ 
