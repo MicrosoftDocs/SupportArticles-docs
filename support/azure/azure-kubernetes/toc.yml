@@ -191,18 +191,18 @@ items:
     href: storage/pods-namespaces-terminating-state.md
   - name: Mount failures  
     items:
-  - name: Can't set the uid and gid mounting options on an Azure Disk
-    href: storage/failure-setting-azure-disk-mount-options-uid-gid.md
-  - name: Errors when mounting Blob container
-    href: storage/mounting-azure-blob-storage-container-fail.md 
-  - name: Errors when mounting Disk volumes
-    href: storage/fail-to-mount-azure-disk-volume.md
-  - name: Errors when mounting File share
-    href: storage/fail-to-mount-azure-file-share.md
-  - name: File share mounting failures for Azure Files
-    href: storage/file-share-mount-failures-azure-files.md
-  - name: Recommended and useful mountOptions settings
-    href: storage/mountoptions-settings-azure-files.md
+    - name: Can't set the uid and gid mounting options on an Azure Disk
+      href: storage/failure-setting-azure-disk-mount-options-uid-gid.md
+    - name: Errors when mounting Blob container
+      href: storage/mounting-azure-blob-storage-container-fail.md 
+    - name: Errors when mounting Disk volumes
+      href: storage/fail-to-mount-azure-disk-volume.md
+    - name: Errors when mounting File share
+      href: storage/fail-to-mount-azure-file-share.md
+    - name: File share mounting failures for Azure Files
+      href: storage/file-share-mount-failures-azure-files.md
+    - name: Recommended and useful mountOptions settings
+      href: storage/mountoptions-settings-azure-files.md
 - name: Security
   items:
   - name: Troubleshoot seccomp profiles in AKS
