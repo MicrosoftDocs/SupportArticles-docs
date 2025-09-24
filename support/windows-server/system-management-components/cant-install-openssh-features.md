@@ -47,9 +47,9 @@ However, any of the following conditions can complicate this operation:
 - You use Group Policy to manage how the computer gets updates.
 - You use a centralized network store or an intranet update management system such as Windows Server Update Service (WSUS) to manage updates.
 
-In these situations, Windows can't locate the .cab files that it has to have in order to install the features. The reasons for this outcome can vary. For example:
+In these situations, Windows can't locate the .cab files that it must have in order to install the features. The reasons for this outcome can vary. For example:
 
-- The installation media doesn't contain the .cab files for the OpenSSH feature. This issue has been observed in Windows Server 2019, version 1809.
+- The installation media doesn't contain the .cab files for the OpenSSH feature. This issue was observed in Windows Server 2019, version 1809.
 
 - The computer uses WSUS to manage updates, and it runs a version of Windows Server that's older than Windows Server 2025 or Windows 11, version 22H2. These older versions of Windows can't install the OpenSSH features by using WSUS. For more information about this behavior, see the following articles:
 
@@ -141,7 +141,7 @@ State : NotPresent
 
 #### Download the FoD ISO images
 
-Check the version details of your Windows computer. To do this, open a Command Prompt window, and then enter `winver.exe`. Note the full version number of Windows, including the build number.
+Check the version details of your Windows computer. Open a Command Prompt window, and then enter `winver.exe`. Note the full version number of Windows, including the build number.
 
 You can download FoD ISO packages from any of the following locations.
 
@@ -150,15 +150,15 @@ You can download FoD ISO packages from any of the following locations.
 | Microsoft 365 Admin Portal | You must have an administrative Microsoft 365 account. |
 | Original Equipment Manufacturer (OEM) | Typically, you must have a support agreement from the OEM. |
 | [Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter) (VLSC) | You must have a Volume Licensing agreement for Windows. |
-| [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter) | Note that this site might not include packages for older versions of Windows. |
+| [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter) | This site might not include packages for older versions of Windows. |
 | [MSDN-Platforms](https://visualstudio.microsoft.com/msdn-platforms/) | You must have a Visual Studio (previously MSDN) subscription. |
 | GitHub ([PowerShell/openssh-portable](https://github.com/PowerShell/openssh-portable) or [Win32-OpenSSH GitHub Releases](https://github.com/PowerShell/Win32-OpenSSH/releases)). | If you use the GitHub packages, install them by following the instructions that are available in the relevant repository.<br />Notice that if you manually install OpenSSH by using GitHub, you're responsible for configuration and for all future updates. For more information, see [Get started with OpenSSH for Windows](/windows-server/administration/openssh/openssh_install_firstuse). |
 
 > [!IMPORTANT]  
 >
-> - Download a FoD ISO package that matches your Windows version. For example, if you want to install OpenSSH features on a computer that runs Windows 11, version 21H2, download the package that's specific to Windows 11, version 21H2.
-> - If you want to install the OpenSSH features on Windows Server 2019, download a package for the matching Windows 10 version as well as the package for the matching Windows Server 2019 version (for example, Windows 10, version1809 for Windows Server 2019, version 1809).
-> - Store the downloaded files on a drive or network share that's accessible from the computer where you want to install the features.
+> - The FoD ISO package should match your Windows version. For example, if you want to install OpenSSH features on a computer that runs Windows 11, version 21H2, download the package that's specific to Windows 11, version 21H2.
+> - If you want to install the OpenSSH features on Windows Server 2019, download a package for the matching Windows 10 version and the package for the matching Windows Server 2019 version (for example, Windows 10, version1809 for Windows Server 2019, version 1809).
+> - Store the downloaded files on a drive or network share that's accessible from the computer that you want to install the features on.
 
 #### Install the OpenSSH features
 
@@ -224,7 +224,7 @@ For more information, see [Get started with OpenSSH for Windows](/windows-server
 
 ### Configure Group Policy to allow OpenSSH installation
 
-If you use Group Policy to manage your environment, your Group Policy settings might prevent you from installing the OpenSSH features. Also, be aware that the available policies have changed over time. Policies in some versions of Windows that control how Windows installs these features either don't exist or have no effect in other versions of Windows. Additionally, you might not be able to install the features if specific policy settings conflict with one another.
+If you use Group Policy to manage your environment, your Group Policy settings might prevent you from installing the OpenSSH features. Also, the available policies have changed over time. Policies in some versions of Windows that control how Windows installs these features either don't exist or have no effect in other versions of Windows. Additionally, you might not be able to install the features if specific policy settings conflict with one another.
 
 > [!NOTE]  
 > This article focuses on Group Policy settings as presented by the Group Policy Editor. The same settings (or their equivalent) are also available in configuration service provider (CSP) policies. For more information, see the following articles:
@@ -251,7 +251,7 @@ For more information, see [Policy CSP - ADMX_Servicing](/windows/client-manageme
 | **Specify settings for optional component installation and component repair** | **Windows Update** (default)<br />or not configured | **Network folder location** or intranet service |
 | Option: **Alternate file location**<br />(if the policy is set to **Network folder location**) | Disabled | UNC path to packages |
 
-\* Regarding OpenSSH feature installation, "available" means that the computer on which you install OpenSSH can contact Windows Update directly. If the computer gets all its updates from network shares or an intranet service, the effect is the same as if the computer can't connect to the internet.
+\* Regarding OpenSSH feature installation, "available" means that the computer that you install OpenSSH on can contact Windows Update directly. If the computer gets all its updates from network shares or an intranet service, the effect is the same as if the computer can't connect to the internet.
 
 > [!NOTE]  
 > In previous versions of Windows and Windows Server, this policy had additional options. The default behavior of the policy was changed. The additional options are no longer relevant.
@@ -290,7 +290,7 @@ If you enable this setting, the default source for updates is WSUS. If the reque
 | Option: **Never attempt to download payload from Windows Update** | Not selected | Not selected |
 | Option: **Download repair content and optional features directly from Windows Update instead of Windows Server Update Services** | Selected or not selected | Selected (only used if the files aren't found in the network folder) or not selected |
 
-\* Regarding OpenSSH feature installation, "available" means that the computer on which you install OpenSSH can contact Windows Update directly. If the computer gets all its updates from network shares or an intranet service, the effect is the same as if the computer can't connect to the internet.
+\* Regarding OpenSSH feature installation, "available" means that the computer that you install OpenSSH on can contact Windows Update directly. If the computer gets all its updates from network shares or an intranet service, the effect is the same as if the computer can't connect to the internet.
 
 The options **Never attempt to download payload from Windows Update** and **Download repair content and optional features directly from Windows Update instead of Windows Server Update Services** typically aren't needed in Windows 11, version 22H2 and later versions. These options were more important in previous versions of Windows. They were removed in Windows 11, version 24H2.
 
@@ -332,7 +332,7 @@ If you enable this setting, the default source for updates is WSUS. If the reque
 | Option: **Never attempt to download payload from Windows Update** | Not selected | Not selected |
 | Option: **Download repair content and optional features directly from Windows Update instead of Windows Server Update Services** | Selected | Selected (only used if the files aren't found in the network folder) |
 
-\* Regarding OpenSSH feature installation, "available" means that the computer on which you install OpenSSH can contact Windows Update directly. If the computer gets all its updates from network shares or an intranet service, the effect is the same as if the computer can't connect to the internet.
+\* Regarding OpenSSH feature installation, "available" means that the computer that you install OpenSSH on can contact Windows Update directly. If the computer gets all its updates from network shares or an intranet service, the effect is the same as if the computer can't connect to the internet.
 
 **Other relevant Group Policy settings**
 
@@ -371,7 +371,7 @@ If you enable this setting, the default source for updates is WSUS. If the reque
 | Option: **Never attempt to download payload from Windows Update** | Not selected | Not selected |
 | Option: **Download repair content and optional features directly from Windows Update instead of Windows Server Update Services** | Selected | Selected (only used if the files aren't found in the network folder) |
 
-\* Regarding OpenSSH feature installation, "available" means that the computer on which you install OpenSSH can contact Windows Update directly. If the computer gets all its updates from network shares or an intranet service, the effect is the same as if the computer can't connect to the internet.
+\* Regarding OpenSSH feature installation, "available" means that the computer that you install OpenSSH on can contact Windows Update directly. If the computer gets all its updates from network shares or an intranet service, the effect is the same as if the computer can't connect to the internet.
 
 For more information about these settings, see the following articles:
 
