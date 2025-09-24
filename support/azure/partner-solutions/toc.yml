@@ -19,6 +19,8 @@ items:
       href: confluent/resource-creation-slow.md
     - name: Resource isn't displayed
       href: confluent/resource-not-displayed.md 
+    - name: Single sign-on doesn't work for the Confluent SaaS portal
+      href: confluent/single-sign-on-does-not-work.md
 - name: Datadog
   items: 
     - name: Diagnostic settings manual update

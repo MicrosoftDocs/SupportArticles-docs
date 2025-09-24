@@ -42,6 +42,8 @@ landingContent:
             url: confluent/resource-creation-slow.md
           - text: Resource isn't displayed
             url: confluent/resource-not-displayed.md
+          - text: Single sign-on doesn't work for the Confluent SaaS portal
+            url: confluent/single-sign-on-does-not-work.md   
 
 # Card
   - title:  Informatica
