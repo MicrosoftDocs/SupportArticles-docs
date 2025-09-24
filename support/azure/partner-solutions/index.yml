@@ -28,6 +28,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Can't delete a resource
+            url: confluent/cannot-delete-resource.md
           - text: Can't find the offer in Azure Marketplace
             url: confluent/cant-find-offer.md
           - text: Conflict error
