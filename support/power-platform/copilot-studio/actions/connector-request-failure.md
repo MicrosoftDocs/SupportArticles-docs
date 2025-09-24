@@ -7,9 +7,7 @@ ms.author: peterswimm
 ms.reviewer: erickinser
 manager: kjette
 author: peterswimm
-ms.custom:
-  - guidance
-  - sap:Actions\Connector actions
+ms.custom: sap:Actions\Connector actions
 ---
 
 # Connector request failure

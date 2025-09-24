@@ -7,7 +7,6 @@ ms.topic: troubleshooting-problem-resolution
 ms.author: adileibowitz
 ms.reviewer: erickinser
 ms.custom:
-  - guidance
   - sfi-image-nochange
   - sap:Generative Answers\Generative answers do not return a response
 ---
