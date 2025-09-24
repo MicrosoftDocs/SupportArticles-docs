@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 
 # Offer plan doesn't load  
 
-This article helps you troubleshoot problems in which the offer plan for Confluent Cloud doesn't load. This error might be intermittent.
+This article helps you troubleshoot problems in which the offer plan for a Confluent Cloud doesn't load. This error might be intermittent.
 
 ## Prerequisites
 
