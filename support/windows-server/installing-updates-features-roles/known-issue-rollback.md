@@ -46,6 +46,20 @@ To know if your regression issue can be mitigated using KIR, refer [Ways for Ent
 ## How KIR is activated
 
 Windows devices belong to two different categories for KIR activation. Each category has its own process for activating KIR:
+Changes that Windows updates implement have built-in runtime feature flags. At runtime, the KIR infrastructure uses the policies on the device (determined by Group Policy settings and service-delivered metadata) to determine whether to run the new code or the previous code. This approach means that if the policies or metadata indicate that there's an issue in a specific change, that change reverts to the older code behavior.
+
+## Scenarios that KIR supports
+
+Windows offers KIR capability on all supported versions of [Windows Server](/windows-server/get-started/windows-server-release-info) and [client](/windows/release-health/supported-versions-windows-client) platforms, beginning with Windows Server 2008 SP2. Most of the servicing fixes on Windows use the KIR capability as a mitigation strategy.
+
+> [!IMPORTANT]  
+> KIR only affects non-security updates and fixes. Security updates and fixes do not use KIR.
+
+To find out if KIR can mitigate your regression issue, see [Ways for enterprises to discover KIR Group Policies](#ways-for-enterprises-to-discover-kir-gp).
+
+## How KIR activates
+
+For the purpose of KIR activation, Windows devices belong to two different categories. Each category has its own process for activating KIR.
 
 - **Enterprise-managed devices:** Enterprise-managed devices are [update-managed Windows devices](/windows/deployment/update/update-managed-unmanaged-devices#what-are-update-managed-windows-devices). Microsoft provides a Group Policy (GP) template to the organization's IT administrator to activate KIR.
 - **Retail/consumer devices:** Retail/consumer devices refer to the devices not covered under [update-managed Windows devices](/windows/deployment/update/update-managed-unmanaged-devices#what-are-update-managed-windows-devices).These are typically the devices not managed by an IT admin. These devices receive policy changes for activating KIR through Microsoft managed Windows Update cloud service.
