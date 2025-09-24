@@ -43,7 +43,7 @@ In the target legal entity, create a new PO or SO and verify that the **Orderer*
 1. Navigate to **Organization administration** > **Global address book**.
 1. Search for and open the relevant person or party record.
 1. In the record, check the **Roles** section (or role-specific pages) to confirm if this **Party ID** has the **Worker** role assigned for the current legal entity.
-1. If the **Worker** role isn't assigned to the **Party ID** proceed to [step 3](#step-3-associate-party-id-with-the-worker-role-if-not-assigned), otherwise skip to [step 4](#step-4-associate-the-user-account-with-the-party-record).
+1. If the **Worker** role isn't assigned to the **Party ID** proceed to [step 3](#step-3-associate-the-party-id-with-the-worker-role), otherwise skip to [step 4](#step-4-associate-the-user-account-with-the-party-record).
 
 ### Step 3: Associate the Party ID with the Worker role
 
