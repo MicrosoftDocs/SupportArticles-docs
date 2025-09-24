@@ -26,9 +26,9 @@ This article helps you troubleshoot issues in which a Confluent Cloud resource o
 ### Problem: Overview or Delete panes aren't visible
 
 1. Refresh the page. This error might be an intermittent problem with the portal. 
-1. If refresning the page doesn't work, contact [Confluent support](https://support.confluent.io).
+1. If refreshing the page doesn't work, contact [Confluent support](https://support.confluent.io).
 
-### Problem: Confluent Cloud resource isn't visilbe
+### Problem: Confluent Cloud resource isn't visible
 
 - If the Confluent Cloud resource isn't visible in the Azure **All resources** list, contact [Confluent support](https://support.confluent.io).
 

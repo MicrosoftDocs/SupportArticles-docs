@@ -11,6 +11,8 @@ items:
       href: confluent/conflict-error.md
     - name: DeploymentFailed error
       href: confluent/deploymentfailed-error.md
+    - name: Resource isn't displayed
+      href: confluent/resource-not-displayed.md 
 - name: Datadog
   items: 
     - name: Diagnostic settings manual update

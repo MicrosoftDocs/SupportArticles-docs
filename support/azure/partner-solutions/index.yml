@@ -34,6 +34,9 @@ landingContent:
             url: confluent/conflict-error.md
           - text: DeploymentFailed error
             url: confluent/deploymentfailed-error.md
+          - text: Resource isn't displayed
+            url: confluent/resource-not-displayed.md
+
 # Card
   - title:  Informatica
     linkLists:
