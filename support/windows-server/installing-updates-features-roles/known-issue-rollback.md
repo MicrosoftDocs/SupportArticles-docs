@@ -13,23 +13,23 @@ ms.custom:
 
 # Known Issue Rollback (KIR)
 
-Known Issue Rollback (KIR) is a robust mitigation technology built into Windows updates to help you safeguard and troubleshoot individual parts of the update. This capability is part of Microsoft continual efforts to improve the Windows update experience and make it even more reliable for organizations.
+Known Issue Rollback (KIR) is a robust mitigation technology that's built into Windows updates to help you safeguard and troubleshoot individual parts of the update. This capability is part of Microsoft's continuous efforts to improve the Windows update experience and make it even more reliable for organizations.
 
-The mitigation mechanism quickly reverts a Windows update issue by rolling back only the targeted change, fix, functionality, or feature that caused the problem to its previous behavior. All other changes that are part of that update remain intact.
+The mitigation mechanism quickly reverts a Windows update issue by affecting only the targeted change, fix, functionality, or feature that caused the problem. KIR rolls that change back to its previous behavior. All other changes that are part of that update remain intact.
 
-This technology is available for the supported versions of Windows on all Enterprise-managed and Retail/consumer devices, for changes applied as part of Windows updates.
+This technology is available for changes applied as part of Windows updates for the supported versions of Windows on all Enterprise-managed and retail or consumer devices.
 
 ## Motivation behind KIR
 
-Microsoft releases multiple Windows updates monthly to help customers stay protected and productive. Historically, if a Windows update encountered an issue, the Windows user or organizational IT admin had the following options:
+To help customers stay protected and productive, Microsoft releases multiple Windows updates monthly. Historically, if a Windows update encountered an issue, the Windows user or organizational IT admin had the following options:
 
-1. Uninstall the entire update. This stops the organization from having the latest security updates, making it noncompliant and less secure.
-1. Skip the entire update. This stops the organization from having the latest security updates, making it noncompliant and less secure.
-1. Deploy the update and wait for the fix to become available. Depending on the issue, this could hamper productivity.
+- Uninstall the entire update. This option prevents the organization from getting the latest security updates. As a result, the organization becomes non-compliant and less secure.
+- Skip the entire update. This option prevents the organization from getting the latest security updates. As a result, the organization becomes non-compliant and less secure.
+- Deploy the update and wait for the fix to become available. Depending on the issue, this option could hamper productivity.
 
 To address security and productivity concerns, Microsoft created KIR. KIR is a technology solution that allows users to be productive while minimizing the impact to security or compliance.
 
-KIR came together as a functionally complete system beginning in Windows 10, version 2004. Since then, every month, Microsoft releases monthly updates with most of the code changes supporting KIR capability.
+KIR came together as a functionally complete system beginning in Windows 10, version 2004. Since then, most of the code changes in Microsoft's monthly updates support KIR capability.
 
 ## How KIR works at the code level
 
@@ -56,7 +56,7 @@ As an enterprise IT admin for these devices, you're in control. In accordance wi
 
 :::image type="content" source="media/known-issue-rollback/group-policy-download.png" alt-text="Screenshot of download group policy." lightbox="media/known-issue-rollback/group-policy-download.png":::
 
-> [!NOTE]
+> [!NOTE]  
 > [Group Policy](/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview) is a feature in Microsoft Windows that allows IT admins to centrally manage and configure operating system settings, applications, and user settings across devices in an Active Directory environment.
 
 The following steps describe the process to request a KIR activation for your organization:
@@ -79,7 +79,7 @@ Additionally, for information on how to mitigate regressions on Intune or endpoi
 
 For these devices, Microsoft activates KIR through Windows Update, and no action is needed from the user.
 
-> [!NOTE]
+> [!NOTE]  
 > Any device that is not connected to Windows Update won't get Windows updates or KIR.
 
 When an issue or regression is identified in retail devices, Microsoft product teams gather detailed information about the problem and its impact, determine the root cause, and report the incident internally. Then based on the results of this analysis, Microsoft decides whether to roll back a regressing change. If required, Microsoft activates KIR through cloud services.
@@ -125,4 +125,4 @@ There are a few reasons you might still observe regressions after activating the
 
 ### What do I do if I need to deploy KIR for my enterprise but can't use Group Policy infrastructure?
 
-Refer to [Use Group Policy to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback) to get additional details on how to deploy KIR, including deployment to single devices and alternative solutions.
+For additional details about how to deploy KIR, including how to deploy KIR to single devices and alternative solutions for deployihg KIR, see [Use Group Policy to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback) .
