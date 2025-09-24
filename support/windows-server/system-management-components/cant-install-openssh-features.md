@@ -79,6 +79,7 @@ The specific steps to install the OpenSSH features vary depending on the environ
 \* This condition applies to any intranet update management system.
 
 If the installation still fails, see [Configure Group Policy to allow OpenSSH installation](#configure-group-policy-to-allow-openssh-installation).
+
 > [!IMPORTANT]  
 > Although the OpenSSH features are installed by default in Windows Server 2025, you must start and configure the features before you can use them. (This procedure is the same for all supported versions of Windows.) For more information, see [Configure the OpenSSH service and firewall settings](#configure-the-openssh-service-and-firewall-settings).
 
@@ -147,9 +148,8 @@ You can download FoD ISO packages from any of the following locations.
 
 | Source | Details or requirements |
 | - | - |
-| Microsoft 365 Admin Portal | You must have an administrative Microsoft 365 account. |
+| [Microsoft 365 Admin Portal](https://admin.microsoft.com/adminportal) | You must have an administrative Microsoft 365 account. This portal has replaced the Volume Licensing Service Center (VLSC) |
 | Original Equipment Manufacturer (OEM) | Typically, you must have a support agreement from the OEM. |
-| [Volume Licensing Service Center](https://www.microsoft.com/licensing/servicecenter) (VLSC) | You must have a Volume Licensing agreement for Windows. |
 | [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter) | This site might not include packages for older versions of Windows. |
 | [MSDN-Platforms](https://visualstudio.microsoft.com/msdn-platforms/) | You must have a Visual Studio (previously MSDN) subscription. |
 | GitHub ([PowerShell/openssh-portable](https://github.com/PowerShell/openssh-portable) or [Win32-OpenSSH GitHub Releases](https://github.com/PowerShell/Win32-OpenSSH/releases)). | If you use the GitHub packages, install them by following the instructions that are available in the relevant repository.<br />Notice that if you manually install OpenSSH by using GitHub, you're responsible for configuration and for all future updates. For more information, see [Get started with OpenSSH for Windows](/windows-server/administration/openssh/openssh_install_firstuse). |
@@ -157,7 +157,7 @@ You can download FoD ISO packages from any of the following locations.
 > [!IMPORTANT]  
 >
 > - The FoD ISO package should match your Windows version. For example, if you want to install OpenSSH features on a computer that runs Windows 11, version 21H2, download the package that's specific to Windows 11, version 21H2.
-> - If you want to install the OpenSSH features on Windows Server 2019, download a package for the matching Windows 10 version and the package for the matching Windows Server 2019 version (for example, Windows 10, version1809 for Windows Server 2019, version 1809).
+> - If you want to install the OpenSSH features on Windows Server 2019, download a package for the matching Windows 10 version and the package for the matching Windows Server 2019 version (for example, Windows 10, version 1809 for Windows Server 2019, version 1809).
 > - Store the downloaded files on a drive or network share that's accessible from the computer that you want to install the features on.
 
 #### Install the OpenSSH features
@@ -269,8 +269,8 @@ When you use an intranet service, you can specify different source locations for
 For more information about these settings, see the following articles:
 
 - [Use Windows Update client policies and WSUS together](/windows/deployment/update/wufb-wsus#configure-the-scan-sources)
-- The [Specify intranet Microsoft update service location](/windows/deployment/update/waas-wu-settings?source=recommendations#specify-intranet-microsoft-update-service-location) section in "Manage additional Windows Update settings"
-- The [Default scan behavior](/windows/deployment/update/wufb-wsus#default-scan-behavior) section in "Use Windows Update client policies and WSUS together")
+- The [Specify intranet Microsoft update service location](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#specify-intranet-microsoft-update-service-location) section in "Step 4: Configure Group Policy settings for automatic updates"
+- The [Default scan behavior](/windows/deployment/update/wufb-wsus#default-scan-behavior) section in "Use Windows Update client policies and WSUS together"
 - The [Features on Demand Considerations](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment?source=recommendations#features-on-demand-considerations) section in "Plan your WSUS deployment"
 
 #### Policy settings for Windows 11, version 22H2 - Windows 11, version 23H2
@@ -313,7 +313,7 @@ For more information about these settings, see the following articles:
 - The [Features on Demand Considerations](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment?source=recommendations#features-on-demand-considerations) section in "Plan your WSUS deployment"
 - [Get started with OpenSSH for Windows](/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell&pivots=windows-11#install-openssh-server--client)
 - [Use Windows Update client policies and WSUS together](/windows/deployment/update/wufb-wsus#configure-the-scan-sources)
-- The [Specify intranet Microsoft update service location](/windows/deployment/update/waas-wu-settings?source=recommendations#specify-intranet-microsoft-update-service-location) section in "Manage additional Windows Update settings"
+- The [Specify intranet Microsoft update service location](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#specify-intranet-microsoft-update-service-location) section in "Step 4: Configure Group Policy settings for automatic updates"
 
 #### Policy settings for Windows Server 2022, Windows 11, version 21H2, and Windows 10, version 2004 - Windows 10, version 22H2
 
@@ -352,7 +352,7 @@ For more information about these settings, see the following articles:
 - [How to make Features on Demand and language packs available when you're using WSUS or Configuration Manager](/windows/deployment/update/fod-and-lang-packs)
 - The [Features on Demand Considerations](/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment?source=recommendations#features-on-demand-considerations) section in "Plan your WSUS deployment")
 - [Configure the scan sources](/windows/deployment/update/wufb-wsus#configure-the-scan-sources) (see "Use Windows Update client policies and WSUS together")
-- The [Specify intranet Microsoft update service location](/windows/deployment/update/waas-wu-settings?source=recommendations#specify-intranet-microsoft-update-service-location) section in "Manage additional Windows Update settings"
+- The [Specify intranet Microsoft update service location](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#specify-intranet-microsoft-update-service-location) section in "Step 4: Configure Group Policy settings for automatic updates"
 
 #### Policy settings for Windows Server 2019 and Windows 10, version 1709 - Windows 10, version 1809
 
@@ -388,6 +388,6 @@ For more information about these settings, see the following articles:
 - [OpenSSH for Windows overview](/windows-server/administration/openssh/openssh_overview)
 - [Policy CSP - ADMX_Servicing](/windows/client-management/mdm/policy-csp-admx-servicing)
 - [Policy CSP - Update](/windows/client-management/mdm/policy-csp-update)
-- The [Specify intranet Microsoft update service location](/windows/deployment/update/waas-wu-settings?source=recommendations#specify-intranet-microsoft-update-service-location) section in "Manage additional Windows Update settings"
+- The [Specify intranet Microsoft update service location](/windows-server/administration/windows-server-update-services/deploy/4-configure-group-policy-settings-for-automatic-updates#specify-intranet-microsoft-update-service-location) section in "Step 4: Configure Group Policy settings for automatic updates"
 - [Use Windows Update client policies and WSUS together](/windows/deployment/update/wufb-wsus)
 - [Win32-OpenSSH GitHub Releases](https://github.com/PowerShell/Win32-OpenSSH/releases)
