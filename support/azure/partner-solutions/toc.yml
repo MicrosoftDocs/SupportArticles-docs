@@ -5,6 +5,8 @@ items:
   href: marketplace-purchases-errors.md
 - name: Confluent
   items:
+    - name: Can't create a service connection by using Service Connector
+      href: confluent/cannot-create-service-connection.md
     - name: Can't delete a resource
       href: confluent/cannot-delete-resource.md
     - name: Can't find the offer in Azure Marketplace
