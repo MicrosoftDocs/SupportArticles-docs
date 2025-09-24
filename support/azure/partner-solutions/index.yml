@@ -34,6 +34,8 @@ landingContent:
             url: confluent/conflict-error.md
           - text: DeploymentFailed error
             url: confluent/deploymentfailed-error.md
+          - text: Offer plan doesn't load
+            url: confluent/plan-does-not-load.md
           - text: Resource creation is slow or fails
             url: confluent/resource-creation-slow.md
           - text: Resource isn't displayed
