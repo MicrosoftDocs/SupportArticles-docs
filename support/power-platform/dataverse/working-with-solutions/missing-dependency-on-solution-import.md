@@ -27,35 +27,7 @@ The solution has dependencies on a component that exists in the source environme
 
 This issue might occur when applications are upgraded to the latest version through Microsoft scheduled maintenance in the source environment, but they aren't upgraded in the target environment.
 
-## Best practices to prevent missing dependencies
-
-When creating a new solution in Power Platform, it's often beneficial to reuse existing components rather than building from scratch. This approach promotes consistency and accelerates development. However, there are several important considerations to keep in mind when working with existing objects across environments.
-
-### Ensure component availability in target environments
-
-If you're adding existing components (such as tables, flows, or apps) to a solution, those components must also exist in the target environment when deploying the solution—whether via deployment pipelines or manual import. Failing to do so will result in missing dependency errors during import.
-
-### Select only necessary components
-
-Avoid adding entire tables or components to a solution if you only need a subset of their elements (for example, specific columns, views, or forms). Adding unnecessary elements can lead to:
-
-- Increased solution complexity
-- Multiple managed layers being applied to components
-- Potential conflicts during updates
-
-Instead, selectively include only the parts of the component that your solution actively uses.
-
-### Avoid modifying components in managed solutions
-
-Do not make changes directly to components that are part of a managed solution. Doing so creates an unmanaged layer on top of the managed component. This unmanaged layer can:
-
-- Override updates from the source managed solution
-- Cause inconsistencies across environments
-- Prevent changes (such as updates to Power Automate flows or table configurations) from being reflected correctly after deployment
-
-To ensure smooth deployments and maintain solution integrity, always apply changes within an unmanaged solution or extend functionality using solution layering best practices.
-
-## Workaround
+## Solution 1: Resolve missing dependency errors
 
 To work around this issue, follow these steps:
 
@@ -114,3 +86,35 @@ This issue occurs when the solution relies on unmanaged customizations from the 
 :::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-unmanaged-components.png" alt-text="Screenshot that shows the Unmanaged Components section of the Missing dependencies page." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-unmanaged-components.png":::
 
 To resolve this issue, return to the source environment, include the missing components, export the solution again, and then import it into the target environment.
+
+## Solution 2: Best practices to prevent missing dependency errors
+
+When you create a new solution in Power Platform, you often reuse existing components for improved consistency and development speed. There are some key considerations to keep in mind when reusing existing objects across environments.
+
+### Ensure component availability in target environments
+
+If your solution has dependencies on components in the source environment (such as tables, flows, or apps), those components must also exist in the target environment when deploying the solution. This requirement applies to both pipeline deployments and manual importing. If components are missing in the source environment, a missing dependency error occurs during import.
+
+### Select only necessary components
+
+Avoid taking dependencies entire tables or components if you only need a subset of their elements (for example, specific columns, views, or forms). Adding unnecessary elements can lead to:
+
+- Increased solution complexity
+- Multiple managed layers being applied to components
+- Potential conflicts during updates
+
+Instead, include only the parts of the component that your solution actively uses.
+
+### Avoid modifying components in managed solutions
+
+Don't make changes directly to components that are part of a managed solution. Doing so creates an unmanaged layer on top of the managed component. This unmanaged layer can:
+
+- Override updates from the source managed solution
+- Cause inconsistencies across environments
+- Prevent changes (such as updates to Power Automate flows or table configurations) from being reflected correctly after deployment
+
+Always apply changes within an unmanaged solution or extend functionality using solution layering. For more information on solution layering, see [Solution layers](/power-platform/alm/solution-layers-alm)
+
+## Related content
+
+- [Organize your solutions](/power-platform/alm/organize-solutions)
