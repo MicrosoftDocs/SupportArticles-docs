@@ -3,10 +3,9 @@ title: "Troubleshoot connector request failure"
 description: "Troubleshoot connector request failure due to too much returned data using filtering."
 ms.date: 10/16/2024
 ms.topic: troubleshooting-problem-resolution
-ms.author: peterswimm
-ms.reviewer: erickinser
-manager: kjette
-author: peterswimm
+ms.reviewer:
+  - peterswimm
+  - erickinser
 ms.custom: sap:Actions\Connector actions
 ---
 

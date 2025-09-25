@@ -1,12 +1,11 @@
 ---
 title: "Troubleshoot voice-enabled agents and diagnose runtime error codes"
 description: "Reference to troubleshoot voice agent runtime error codes and other issues."
-ms.reviewer: erickinser
+ms.reviewer: 
+  - sophieroy
+  - erickinser
 ms.date: 02/26/2025
 ms.topic: troubleshooting-problem-resolution
-author: sophie-roy3
-ms.author: sophieroy
-manager: kjette
 ms.custom: sap:Channels
 ---
 

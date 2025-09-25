@@ -3,10 +3,9 @@ title: "Troubleshoot enterprise knowledge sources"
 description: "Reference to troubleshoot enterprise data used as knowledge sources in custom agents."
 ms.date: 05/27/2025
 ms.topic: troubleshooting-problem-resolution
-author: rakrish84
-ms.author: rchetla
-ms.reviewer: erickinser
-manager: kjette
+ms.reviewer: 
+  - rchetla
+  - erickinser
 ms.search.region: USA
 ms.custom: sap:Knowledge\Enterprise data via Graph connectors
 ---
