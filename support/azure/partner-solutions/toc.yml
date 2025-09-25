@@ -15,6 +15,8 @@ items:
       href: confluent/cant-find-offer.md
     - name: Conflict error 
       href: confluent/conflict-error.md
+    - name: Confluent connector isn't in the list of connectors
+      href: confluent/connector-not-listed.md
     - name: DeploymentFailed error
       href: confluent/deploymentfailed-error.md
     - name: List of Confluent connectors isn't available

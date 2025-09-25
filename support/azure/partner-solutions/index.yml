@@ -38,6 +38,8 @@ landingContent:
             url: confluent/cant-find-offer.md
           - text: Conflict error
             url: confluent/conflict-error.md
+          - text: Confluent connector isn't in the list of connectors
+            url: confluent/connector-not-listed.md
           - text: DeploymentFailed error
             url: confluent/deploymentfailed-error.md
           - text: Resource creation is slow or fails
