@@ -32,7 +32,7 @@
     href: /azure/app-service/app-service-web-tutorial-custom-domain
   - name: Open-source technologies FAQs for Web Apps
     href: web-apps-open-source-technologies-faqs.md
-  - name: Troubleshoot Domain and TLS/SSL Certificates 
+  - name: Troubleshoot domain and TLS/SSL certificates 
     href: troubleshoot-domain-and-tls-ssl-certificates.md
   - name: Troubleshoot temporary storage
     href: temporary-storage-for-azure-app-service.md
