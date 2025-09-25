@@ -7,28 +7,6 @@ items:
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
-    - name: CniDownloadTimeoutVMExtensionError error (41)
-      href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
-    - name: ERR_VHD_FILE_NOT_FOUND error (65)
-      href: create-upgrade-delete/error-code-vhdfilenotfound.md
-    - name: Known issues - Custom kubelet configuration on Windows
-      href: create-upgrade-delete/known-issues-custom-kubelet-configuration.md
-    - name: K8SAPIServerConnFailVMExtensionError error (51)
-      href: create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md
-    - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
-      href: create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md
-    - name: OutboundConnFailVMExtensionError error (50)
-      href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
-    - name: SubscriptionRequestsThrottled error (429)
-      href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
-    - name: Throttled error (429)
-      href: create-upgrade-delete/error-code-aksrequeststhrottled.md
-    - name: Troubleshoot the AKSCapacityError error code
-      href: create-upgrade-delete/akscapacityerror.md
-    - name: VMExtensionProvisioningTimeout error
-      href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
-    - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
-      href: create-upgrade-delete/windows-cse-error-check-api-server-connectivity.md
   - name: Upgrade operations
     items:
     - name: Memory saturation occurs in pods after cluster upgrade
@@ -285,150 +263,156 @@ items:
   items:
   - name: 429 Too Many Requests errors
     href: create-upgrade-delete/429-too-many-requests-errors.md
-  - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
-    href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
-  - name: Argument list too long
-    href: create-upgrade-delete/application-fails-argument-list-too-long.md
-  - name: AksCapacityHeavyUsage error
-    href: error-codes/akscapacityheavyusage-error.md
-  - name: AKSOperationPreempted error
-    href: error-codes/aksoperationpreempted-error.md
-  - name: AKS upgrade errors because of version skew, incompatibility, or lack of support
-    href: error-codes/aks-upgrade-blocked.md
-  - name: AvailabilityZoneNotSupported error
-    href: error-codes/availabilityzonenotsupported-error.md
-  - name: BadRequest or InvalidClientSecret error
-    href: error-codes/bad-request-or-invalid-client-secret-error.md
-  - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
-    href: error-codes/lb-pvtlinksvcwithpvtendptconn-error.md
-  - name: Can't scale cluster autoscaler enabled node pool
-    href: create-upgrade-delete/cannot-scale-cluster-autoscaler-enabled-node-pool.md
-  - name: Changing property "imageReference" is not allowed
-    href: create-upgrade-delete/changing-property-imagereference-not-allowed.md
-  - name: CniDownloadTimeoutVMExtensionError error (41)
-    href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
-  - name: CreateOrUpdateVirtualNetworkLinkFailed error
-    href: error-codes/createorupdatevirtualnetworklinkfailed-error.md
-  - name: CustomPrivateDNSZoneMissingPermissionError error
-    href: error-codes/customprivatednszonemissingpermissions-error.md   
-  - name: DnsServiceIpOutOfServiceCidr error
-    href: error-codes/dnsserviceipoutofservicecidr-error.md 
-  - name: ERR_VHD_FILE_NOT_FOUND error (65)
-    href: create-upgrade-delete/error-code-vhdfilenotfound.md
-  - name: Error "CreateOrUpdateVirtualNetworkLinkFailed"
-    href: create-upgrade-delete/createorupdatevirtualnetworklinkfailed-error.md
-  - name: Error from server - error dialing backend - dial tcp messages
-    href: connectivity/error-from-server-error-dialing-backend-dial-tcp.md
-  - name: Failed to fix node group sizes
-    href: create-upgrade-delete/cluster-autoscaler-fails-to-scale.md
-  - name: InsufficientSubnetSize error
-    href: connectivity/insufficientsubnetsize-error-advanced-networking.md
-  - name: InUseRouteTableCannotBeDeleted error
-    href: error-codes/inuseroutetablecannotbedeleted-error.md
-  - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
-    href: error-codes/invalidloadbalancerprofileallocatedoutboundports-error.md
-  - name: InvalidParameter error
-    href: error-codes/invalidparameter-error.md
-  - name: InvalidResourceReference error
-    href: error-codes/invalidresourcereference-error.md
-  - name: K8SAPIServerConnFailVMExtensionError error (51)
-    href: create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md
-  - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
-    href: create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md
-  - name: Known issues - Custom kubelet configuration on Windows
-    href: create-upgrade-delete/known-issues-custom-kubelet-configuration.md
-  - name: LB/PvtLinkSvcWithPvtEndptConn deletion error
-    href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
-  - name: LinkedAuthorizationFailed error
-    href: error-codes/linkedauthorizationfailed-error.md
-  - name: LoadBalancerInUseByVirtualMachineScaleSet error
-    href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
-  - name: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error
-    href: error-codes/networksecuritygroupinusebyvirtualmachinescaleset-error.md
-  - name: Missing or invalid service principal
-    href: create-upgrade-delete/missing-or-invalid-service-principal.md        
-  - name: MissingSubscriptionRegistration error
-    href: error-codes/missingsubscriptionregistration-error.md
-  - name: NetworkSecurityGroupInUseByVirtualMachineScaleSet error
-    href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
-  - name: NodePoolMcVersionIncompatible error
-    href: error-codes/nodepoolmcversionincompatible-error.md 
-  - name: OperationIsNotAllowed errors
-    href: create-upgrade-delete/operationnotallowed.md
-  - name: OperationNotAllowed or PublicIPCountLimitReached error
-    href: error-codes/operationnotallowed-publicipcountlimitreached-error.md        
-  - name: OrasPullNetworkTimeoutVMExtensionError
-    href: error-codes/vmextensionerror-oraspullnetworktimeout.md
-  - name: OrasPullUnauthorizedVMExtensionError
-    href: error-codes/vmextensionerror-oraspullunauthorized.md
-  - name: OutboundConnFailVMExtensionError error (50)
-    href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md  
-  - name: PublicIPAddr/InUseSubnet/NetSecGrp deletion error
-    href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
-  - name: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error
-    href: error-codes/publicipaddr-inusesubnet-netsecgrp-error.md
-  - name: PublicIPCountLimitReached error
-    href: error-codes/publicipcountlimitreached-error.md
-  - name: QuotaExceeded or InsufficientVCPUQuota error
-    href: error-codes/quota-exceeded-error.md
-  - name: QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade
-    href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
-  - name: RequestDisallowedByPolicy error
-    href: error-codes/requestdisallowedbypolicy-error.md
-  - name: ServiceCidrOverlapExistingSubnetsCidr error
-    href: error-codes/servicecidroverlapexistingsubnetscidr-error.md
-  - name: ServicePrincipalValidationClientError error
-    href: error-codes/serviceprincipalvalidationclienterror-error.md
-  - name: SubnetIsDelegated error
-    href: error-codes/subnetisdelegated-error.md
-  - name: SubnetIsFull error
-    href: error-codes/subnetisfull-error.md
-  - name: SubnetIsFull upgrade error
-    href: create-upgrade-delete/error-code-subnetisfull-upgrade.md
-  - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources
-    href: error-codes/subnetwithexternalresourcescannotbeusedbyotherresources-error.md
-  - name: SubscriptionRequestsThrottled error
-    href: error-codes/subscriptionrequeststhrottled.md
-  - name: SubscriptionRequestsThrottled error (429)
-    href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
-  - name: TCP time-outs such as 10250 I/O
-    href: connectivity/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
-  - name: Throttled error
-    href: error-codes/throttled-error.md
-  - name: Throttled error (429)
-    href: create-upgrade-delete/error-code-aksrequeststhrottled.md
-  - name: tls - client offered only unsupported versions messages
-    href: create-upgrade-delete/tls-client-offered-unsupported-versions.md
-  - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error
-    href: error-codes/toomanyrequestsreceived-error.md
-  - name: Troubleshoot the AKSCapacityError error code
-    href: create-upgrade-delete/akscapacityerror.md
-  - name: UnsatisfiablePDB error
-    href: error-codes/unsatisfiablepdb-error.md
-  - name: Upgrade issues with Gen2 VMs on Windows AKS cluster
-    href: create-upgrade-delete/nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
-  - name: VirtualNetworkNotInSucceededState error 
-    href: error-codes/virtualnetworknotinsucceededstate-error.md
-  - name: VMExtensionError_CniDownloadTimeout error
-    href: error-codes/vmextensionerror-cnidownloadtimeout.md
-  - name: VMExtensionError_OutboundConnFail error
-    href: error-codes/vmextensionerror-outboundconnfail.md
-  - name: VMExtensionError_K8SAPIServerConnFail error
-    href: error-codes/vmextensionerror-k8sapiserverconnfail.md
-  - name: VMExtensionError_K8SAPIServerDNSLookupFail error
-    href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
-  - name: VMExtensionError_VHDFileNotFound error
-    href: error-codes/vmextensionerror-vhdfilenotfound.md
-  - name: VMExtensionProvisioningTimeout error
-    href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
-  - name: VMExtensionError_ProvisioningTimeout error
-    href: error-codes/vmextensionerror-provisioningtimeout.md
-  - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error
-    href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
-  - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
-    href: create-upgrade-delete/windows-cse-error-check-api-server-connectivity.md
-  - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
-    href: error-codes/zonalallocation-allocationfailed-error.md
+  - name: A-K
+    items:
+    - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
+      href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
+    - name: Argument list too long
+      href: create-upgrade-delete/application-fails-argument-list-too-long.md
+    - name: AksCapacityHeavyUsage error
+      href: error-codes/akscapacityheavyusage-error.md
+    - name: AKSOperationPreempted error
+      href: error-codes/aksoperationpreempted-error.md
+    - name: AKS upgrade errors because of version skew, incompatibility, or lack of support
+      href: error-codes/aks-upgrade-blocked.md
+    - name: AvailabilityZoneNotSupported error
+      href: error-codes/availabilityzonenotsupported-error.md
+    - name: BadRequest or InvalidClientSecret error
+      href: error-codes/bad-request-or-invalid-client-secret-error.md
+    - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
+      href: error-codes/lb-pvtlinksvcwithpvtendptconn-error.md
+    - name: Can't scale cluster autoscaler enabled node pool
+      href: create-upgrade-delete/cannot-scale-cluster-autoscaler-enabled-node-pool.md
+    - name: Changing property "imageReference" is not allowed
+      href: create-upgrade-delete/changing-property-imagereference-not-allowed.md
+    - name: CniDownloadTimeoutVMExtensionError error (41)
+      href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
+    - name: CreateOrUpdateVirtualNetworkLinkFailed error
+      href: error-codes/createorupdatevirtualnetworklinkfailed-error.md
+    - name: CustomPrivateDNSZoneMissingPermissionError error
+      href: error-codes/customprivatednszonemissingpermissions-error.md   
+    - name: DnsServiceIpOutOfServiceCidr error
+      href: error-codes/dnsserviceipoutofservicecidr-error.md 
+    - name: ERR_VHD_FILE_NOT_FOUND error (65)
+      href: create-upgrade-delete/error-code-vhdfilenotfound.md
+    - name: Error "CreateOrUpdateVirtualNetworkLinkFailed"
+      href: create-upgrade-delete/createorupdatevirtualnetworklinkfailed-error.md
+    - name: Error from server - error dialing backend - dial tcp messages
+      href: connectivity/error-from-server-error-dialing-backend-dial-tcp.md
+    - name: Failed to fix node group sizes
+      href: create-upgrade-delete/cluster-autoscaler-fails-to-scale.md
+    - name: InsufficientSubnetSize error
+      href: connectivity/insufficientsubnetsize-error-advanced-networking.md
+    - name: InUseRouteTableCannotBeDeleted error
+      href: error-codes/inuseroutetablecannotbedeleted-error.md
+    - name: InvalidLoadBalancerProfileAllocatedOutboundPorts error
+      href: error-codes/invalidloadbalancerprofileallocatedoutboundports-error.md
+    - name: InvalidParameter error
+      href: error-codes/invalidparameter-error.md
+    - name: InvalidResourceReference error
+      href: error-codes/invalidresourcereference-error.md
+    - name: K8SAPIServerConnFailVMExtensionError error (51)
+      href: create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md
+    - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
+      href: create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md
+    - name: Known issues - Custom kubelet configuration on Windows
+      href: create-upgrade-delete/known-issues-custom-kubelet-configuration.md
+  - name: L-S
+    items:   
+    - name: LB/PvtLinkSvcWithPvtEndptConn deletion error
+      href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
+    - name: LinkedAuthorizationFailed error
+      href: error-codes/linkedauthorizationfailed-error.md
+    - name: LoadBalancerInUseByVirtualMachineScaleSet error
+      href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
+    - name: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error
+      href: error-codes/networksecuritygroupinusebyvirtualmachinescaleset-error.md
+    - name: Missing or invalid service principal
+      href: create-upgrade-delete/missing-or-invalid-service-principal.md        
+    - name: MissingSubscriptionRegistration error
+      href: error-codes/missingsubscriptionregistration-error.md
+    - name: NetworkSecurityGroupInUseByVirtualMachineScaleSet error
+      href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
+    - name: NodePoolMcVersionIncompatible error
+      href: error-codes/nodepoolmcversionincompatible-error.md 
+    - name: OperationIsNotAllowed errors
+      href: create-upgrade-delete/operationnotallowed.md
+    - name: OperationNotAllowed or PublicIPCountLimitReached error
+      href: error-codes/operationnotallowed-publicipcountlimitreached-error.md        
+    - name: OrasPullNetworkTimeoutVMExtensionError
+      href: error-codes/vmextensionerror-oraspullnetworktimeout.md
+    - name: OrasPullUnauthorizedVMExtensionError
+      href: error-codes/vmextensionerror-oraspullunauthorized.md
+    - name: OutboundConnFailVMExtensionError error (50)
+      href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md  
+    - name: PublicIPAddr/InUseSubnet/NetSecGrp deletion error
+      href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
+    - name: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error
+      href: error-codes/publicipaddr-inusesubnet-netsecgrp-error.md
+    - name: PublicIPCountLimitReached error
+      href: error-codes/publicipcountlimitreached-error.md
+    - name: QuotaExceeded or InsufficientVCPUQuota error
+      href: error-codes/quota-exceeded-error.md
+    - name: QuotaExceeded or InsufficientVCPUQuota error during creation or upgrade
+      href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
+    - name: RequestDisallowedByPolicy error
+      href: error-codes/requestdisallowedbypolicy-error.md 
+    - name: ServiceCidrOverlapExistingSubnetsCidr error
+      href: error-codes/servicecidroverlapexistingsubnetscidr-error.md
+    - name: ServicePrincipalValidationClientError error
+      href: error-codes/serviceprincipalvalidationclienterror-error.md
+    - name: SubnetIsDelegated error
+      href: error-codes/subnetisdelegated-error.md
+    - name: SubnetIsFull error
+      href: error-codes/subnetisfull-error.md
+    - name: SubnetIsFull upgrade error
+      href: create-upgrade-delete/error-code-subnetisfull-upgrade.md
+    - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources
+      href: error-codes/subnetwithexternalresourcescannotbeusedbyotherresources-error.md
+    - name: SubscriptionRequestsThrottled error
+      href: error-codes/subscriptionrequeststhrottled.md
+    - name: SubscriptionRequestsThrottled error (429)
+      href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
+  - name: T-Z   
+    items:      
+    - name: TCP time-outs such as 10250 I/O
+      href: connectivity/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
+    - name: Throttled error
+      href: error-codes/throttled-error.md
+    - name: Throttled error (429)
+      href: create-upgrade-delete/error-code-aksrequeststhrottled.md
+    - name: tls - client offered only unsupported versions messages
+      href: create-upgrade-delete/tls-client-offered-unsupported-versions.md
+    - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error
+      href: error-codes/toomanyrequestsreceived-error.md
+    - name: Troubleshoot the AKSCapacityError error code
+      href: create-upgrade-delete/akscapacityerror.md
+    - name: UnsatisfiablePDB error
+      href: error-codes/unsatisfiablepdb-error.md
+    - name: Upgrade issues with Gen2 VMs on Windows AKS cluster
+      href: create-upgrade-delete/nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
+    - name: VirtualNetworkNotInSucceededState error 
+      href: error-codes/virtualnetworknotinsucceededstate-error.md
+    - name: VMExtensionError_CniDownloadTimeout error
+      href: error-codes/vmextensionerror-cnidownloadtimeout.md
+    - name: VMExtensionError_OutboundConnFail error
+      href: error-codes/vmextensionerror-outboundconnfail.md
+    - name: VMExtensionError_K8SAPIServerConnFail error
+      href: error-codes/vmextensionerror-k8sapiserverconnfail.md
+    - name: VMExtensionError_K8SAPIServerDNSLookupFail error
+      href: error-codes/vmextensionerror-k8sapiserverdnslookupfail.md
+    - name: VMExtensionError_VHDFileNotFound error
+      href: error-codes/vmextensionerror-vhdfilenotfound.md
+    - name: VMExtensionProvisioningTimeout error
+      href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
+    - name: VMExtensionError_ProvisioningTimeout error
+      href: error-codes/vmextensionerror-provisioningtimeout.md
+    - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error
+      href: error-codes/windows-cse-error-check-api-server-connectivity-error.md
+    - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
+      href: create-upgrade-delete/windows-cse-error-check-api-server-connectivity.md
+    - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
+      href: error-codes/zonalallocation-allocationfailed-error.md
 
 
 
