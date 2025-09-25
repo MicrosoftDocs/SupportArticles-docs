@@ -1,17 +1,17 @@
 ---
 title: Order Taker Not Auto-Filled When Creating Purchase or Sales Orders
 description: Troubleshoot issues that prevent automatic field population when creating a purchase or sales order in Dynamics 365 Supply Chain Management.
-author: vermayashi
 ms.date: 09/12/2025
 ms.search.form: PurchTable, PurchTablePart, PurchCreateOrder, SalesTable, SalesCreateOrder
 audience: Application User
-ms.reviewer: kamaybac
+ms.reviewer:
+  - vermayashi
+  - kamaybac
+  - v-shaywood
 ms.search.region: Global
-ms.author: vermayashi
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ms.custom: sap:Purchase order procurement and sourcing\Issues with Purchase order or sales order auto-fill
-ms.topic: troubleshooting-problem-resolution
 
 #customer intent: As a developer or system administrator, I want to fix an issue that prevents the order taker field from being autofilled when I create a purchase or sales order. This feature enables me to avoid having to complete field manually.
 ---
