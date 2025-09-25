@@ -57,6 +57,7 @@ The following table lists common ClientOtherErrors, along with an explanation of
 
 ## See also
 
+- [SMB Error Classes and Codes](/openspecs/windows_protocols/ms-smb/6ab6ca20-b404-41fd-b91a-2ed39e3762ea)
 - [Troubleshoot Azure Files](../connectivity/files-troubleshoot.md)
 - [Monitor Azure Files](/azure/storage/files/storage-files-monitoring)
 
