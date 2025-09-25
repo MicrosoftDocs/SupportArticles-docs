@@ -1,55 +1,49 @@
 ---
 title: Can't create a Confluent connector
-description: "Resolve issues creating a Confluent connector in Azure."
-author: v-albemi
+description: Resolve failures that occur when you try to create a Confluent connector in Azure.
+author:  
 ms.author: jarrettr 
 ms.service: partner-services 
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/25/2025
-
-customer intent: As a {role}, I want {what} so that {why}.
-
+ai-usage: ai-assisted
+# customer intent: As an Azure administrator or user, I want to resolve a failure that's occuring when I try to create a Confluent connector. 
 ---
+
 # Can't create a Confluent connector
 
-This article helps you resolve issues when you can't create a Confluent connector in Azure.
+This article helps you resolve failures that might occur when you try to create a Confluent connector in Azure.
 
 ## Prerequisites
 
-- Access to the Azure portal and Confluent Cloud.
-- Permissions to create and manage Confluent connectors.
+- Access to the Azure portal.
 
 ## Symptoms
 
 - Unable to create a Confluent connector in Azure.
-- Error or failure when submitting connector creation form.
+- Error or failure when using the connector creation page.
 
-## Cause
+## Causes
 
-- Missing required permissions or incorrect field values.
-- The Azure service you're trying to connect to isn't configured properly.
+- You don't have the required permissions. 
+- One or more required values on the connector creation page are incorrect.
+- The Azure service you're trying to connect to isn't configured correctly.
 
-## Solution 1: Verify permissions and field values
+## Solution 1: Verify permissions and required values
 
-1. Ensure you have the required permissions to create Confluent connectors.
-2. Check that all required fields in the connector creation form contain the correct values.
+1. Ensure that you have the required permissions to create Confluent connectors.
+1. Ensure that all required fields on the connector creation form contain the correct values.
 
 ## Solution 2: Check Azure service configuration
 
-1. Verify that the Azure service you're trying to connect to is configured properly and accessible.
+Verify that the Azure service you're trying to connect to is configured properly.
 
 ## Solution 3: Escalate to Confluent support
 
-1. If the issue persists after verifying permissions and configuration, contact [Confluent support](https://support.confluent.io).
-2. Provide details about your account, the error message, and steps you have tried.
-
-## Verify
-
-- After performing the steps above, attempt to create the Confluent connector again.
-- Confirm that the connector is created successfully and is operational.
+If the issue persists after you verify permissions and configuration, contact [Confluent support](https://support.confluent.io).
 
 ## Related content
 
 - [Confluent support](https://support.confluent.io)
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
-- [Azure Marketplace documentation](https://learn.microsoft.com/azure/marketplace/marketplace-overview)
+ 
