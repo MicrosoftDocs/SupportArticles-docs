@@ -221,3 +221,14 @@ Set-AzStorageSyncServerEndpointPermission -ResourceGroupName <string> -StorageSy
 This issue occurs when the **Allow Azure services on the trusted services list to access this storage account** exception isn't enabled on a storage account. To resolve this issue, enable this exception by following instructions in [Grant access to trusted Azure services and restrict access to the storage account public endpoint to specific virtual networks](/azure/storage/file-sync/file-sync-networking-endpoints#grant-access-to-trusted-azure-services-and-restrict-access-to-the-storage-account-public-endpoint-to-specific-virtual-networks).
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+
+
+## Unsupported cross-tenant configurations 
+
+Cross-tenant topologies—where the server resource (Arc-enabled server or Azure VM) and the Storage Sync Service are in **different Microsoft Entra tenants**—are **unsupported**. Managed identity and Azure RBAC require tokens issued by the same tenant; cross-tenant authorization fails in this scenario. Do not attempt cross-tenant setups. 
+
+**Mitigation:** Align the Storage Sync Service, server resource identity, storage account RBAC assignments, and managed identity to the **same tenant**, then retry.
+
+> [!NOTE]
+> This requirement applies to **both** Arc-enabled servers and Azure VMs.
+
