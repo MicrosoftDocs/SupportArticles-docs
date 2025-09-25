@@ -1,11 +1,11 @@
 ---
 title: Resolve throttling errors in agents
 description: Learn how to identify and resolve throttling errors in Microsoft Copilot Studio agents, including error codes, causes, and solutions.
-ms.topic: troubleshooting-problem-resolution
 ms.date: 09/09/2025
 ms.reviewer: 
   - camogas
   - erickinser
+  - v-shaywood
 ms.custom: sap:Licensing\Quotas and limits
 ---
 

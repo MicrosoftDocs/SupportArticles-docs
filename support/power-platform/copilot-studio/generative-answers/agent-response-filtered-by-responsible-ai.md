@@ -1,11 +1,11 @@
 ---
 title: Resolve responsible AI content filter errors
 description: Learn how to identify, troubleshoot, and resolve Responsible AI content filter errors in Microsoft Copilot Studio using Application Insights and conversation transcripts.
-ms.topic: troubleshooting-problem-resolution
 ms.date: 09/09/2025
 ms.reviewer: 
   - camogas
   - erickinser
+  - v-shaywood
 ms.custom: sap:Generative Answers\Generative answers do not return a response
 ---
 

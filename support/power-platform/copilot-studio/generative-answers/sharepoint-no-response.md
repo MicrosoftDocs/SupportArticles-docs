@@ -2,10 +2,10 @@
 title: "Generative answers pointing to SharePoint sources don't return results"
 description: "Troubleshoot why generative answers nodes configured to use SharePoint knowledge sources don't return results."
 ms.date: 07/01/2025
-ms.topic: troubleshooting-problem-resolution
 ms.reviewer: 
   - adileibowitz
   - erickinser
+  - v-shaywood
 ms.custom:
   - sfi-image-nochange
   - sap:Generative Answers\Generative answers do not return a response

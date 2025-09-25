@@ -1,11 +1,11 @@
 ---
 title: Generative AI isn't available error message
 description: Learn how to identify, troubleshoot, and resolve the generative AI not available error message in Microsoft Copilot Studio using Power Platform.
-ms.topic: troubleshooting-problem-resolution
 ms.date: 09/09/2025
 ms.reviewer: 
   - camogas
   - erickinser
+  - v-shaywood
 ms.custom: sap:Generative Answers\Generative answers do not return a response
 ---
 

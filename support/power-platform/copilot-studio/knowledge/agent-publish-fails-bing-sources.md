@@ -1,11 +1,11 @@
 ---
 title: Publish agent fails due to Bing sources
 description: Learn how to identify, troubleshoot, and resolve the exceeded limit of Bing sources error message in Microsoft Copilot Studio.
-ms.topic: troubleshooting-problem-resolution
 ms.date: 09/09/2025
 ms.reviewer: 
   - camogas
   - erickinser
+  - v-shaywood
 ms.custom: sap:Knowledge\Public websites
 ---
 
