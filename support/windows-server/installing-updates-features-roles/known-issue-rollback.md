@@ -23,11 +23,11 @@ This technology is available for changes applied as part of Windows updates for 
 
 To help customers stay protected and productive, Microsoft releases multiple Windows updates monthly. Historically, if a Windows update encountered an issue, the Windows user or organizational IT admin had the following options:
 
-- Uninstall the entire update. This option prevents the organization from getting the latest security updates. As a result, the organization becomes non-compliant and less secure.
-- Skip the entire update. This option prevents the organization from getting the latest security updates. As a result, the organization becomes non-compliant and less secure.
+- Uninstall the entire update. This option prevents the organization from getting the latest security updates. As a result, the organization becomes noncompliant and less secure.
+- Skip the entire update. This option prevents the organization from getting the latest security updates. As a result, the organization becomes noncompliant and less secure.
 - Deploy the update and wait for the fix to become available. Depending on the issue, this option could hamper productivity.
 
-To address security and productivity concerns, Microsoft created KIR. KIR is a technology solution that allows users to be productive while minimizing the impact to security or compliance.
+To address security and productivity concerns, Microsoft created KIR. KIR is a technology solution that allows users to be productive while minimizing the effects on security or compliance.
 
 KIR came together as a functionally complete system beginning in Windows 10, version 2004. Since then, most of the code changes in Microsoft's monthly updates support KIR capability.
 
@@ -40,7 +40,7 @@ Changes that Windows updates implement have built-in runtime feature flags. At r
 Windows offers KIR capability on all supported versions of [Windows Server](/windows-server/get-started/windows-server-release-info) and [client](/windows/release-health/supported-versions-windows-client) platforms, beginning with Windows Server 2008 SP2. Most of the servicing fixes on Windows use the KIR capability as a mitigation strategy.
 
 > [!IMPORTANT]  
-> KIR only affects non-security updates and fixes. Security updates and fixes do not use KIR.
+> KIR only affects non-security updates and fixes. Security updates and fixes don't use KIR.
 
 To find out if KIR can mitigate your regression issue, see [Ways for enterprises to discover KIR Group Policies](#ways-for-enterprises-to-discover-kir-gp).
 
@@ -49,7 +49,7 @@ To find out if KIR can mitigate your regression issue, see [Ways for enterprises
 For the purpose of KIR activation, Windows devices belong to two different categories. Each category has its own process for activating KIR.
 
 - **Enterprise-managed devices:** Enterprise-managed devices are [update-managed Windows devices](/windows/deployment/update/update-managed-unmanaged-devices#what-are-update-managed-windows-devices). Microsoft provides a Group Policy template for the organization's IT administrator. To activate KIR, the IT administrator applies the template to the organization's Group Policy infrastructure.
-- **Retail and consumer devices:** Retail and consumer devices are devices that aren't considered update-managed Windows devices. Typically, these are devices that aren't managed by an IT admin. These devices receive policy changes for activating KIR through the Microsoft-managed Windows Update cloud service.
+- **Retail and consumer devices:** Retail and consumer devices are devices that aren't considered update-managed Windows devices. Typically, these devices aren't managed by an IT admin. These devices receive policy changes for activating KIR through the Microsoft-managed Windows Update cloud service.
 
 ### KIR for Enterprise-managed devices
 
@@ -70,7 +70,7 @@ Download the template, and then follow the steps in [How to use Group Policy to 
 For enterprise-managed devices that are domain-joined, the Group Policy refresh happens at certain regular intervals. To make sure that the Group Policy settings take effect, take one of the following actions:
 
 - Wait for Group Policy to refresh in the background, then restart the affected devices.
-- To force a single device to update its Group Policy settings, open a Command Prompt window on the device, and then run 'gpupdate /force'. After the command runs, restart the device.
+- To force a single device to update its Group Policy settings, open a Command Prompt window on the device, and then run `gpupdate /force`. After the command runs, restart the device.
 
 For more information about refreshing Group Policy, see [Group Policy processing for Windows](/windows-server/identity/ad-ds/manage/group-policy/group-policy-processing).
 
@@ -81,19 +81,19 @@ Additionally, for information about how to mitigate regressions on Intune or end
 Retail and consumer devices include non-enterprise devices, and all devices that get updates directly from the Windows Update cloud service (WU) by using **Settings** > **Windows Update** (WU). For these devices, Microsoft activates KIR by using Windows Update. Users don't have to take any action. In most cases, because of Microsoft's safe deployment practices, Microsoft identifies an issue in an update and publishes a KIR before most devices download and install the original update. In those cases, users never notice the original issue or the KIR.
 
 > [!NOTE]  
-> Any device that's not connected to Windows Update won't get Windows updates or KIR.
+> Any device that doesn't connect to Windows Update doesn't get Windows updates or KIR.
 
 When Microsoft identifies a regression or other issue that affects retail and consumer devices, Microsoft product teams gather detailed information about the problem and its effects, determine the root cause of the issue, and report the issue internally. Then, based on the results of this analysis, Microsoft decides whether to roll back the change that caused the issue.
 
 :::image type="content" source="media/known-issue-rollback/retail-kir-propagates-through-windows-update-service.png" alt-text="Diagram that shows how Microsoft distributes a K.I.R. by using the Windows Update infrastructure." lightbox="media/known-issue-rollback/retail-kir-propagates-through-windows-update-service.png":::
 
-If Microsoft decides to roll a change back, it uses the Windows Update infrastructure to activate a KIR. First, Microsoft loads the KIR configuration change as an update. Windows Update notifies the affected devices of this update. Within 24 hours, the devices download and install the update. The devices might need to restart to finish the installation. After this process finishes, the code that caused the issue is disabled.
+If Microsoft decides to roll back a change, it uses the Windows Update infrastructure to activate a KIR. First, Microsoft loads the KIR configuration change as an update. Windows Update notifies the affected devices of this update. Within 24 hours, the devices download and install the update. The devices might need to restart to finish the installation. After this process finishes, the code that caused the issue is disabled.
 
 Microsoft transmits specific information regarding KIR activation. This data assists us in evaluating the effectiveness of the rollback within the ecosystem. See how to [configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 ## Ways for Enterprises to discover KIR GP
 
-Occasionally, Microsoft has to activate KIR for an issue that affects multiple customers or represents a common customer scenario. In such a case, Microsoft documents this issue on Windows servicing communication channels. The documentation explains the most common symptoms of the issue. For enterprise and commercial customers, the documentation provides a link to the .msi file that contains the Group Policy template that they'll need for KIR.
+Occasionally, Microsoft has to activate KIR for an issue that affects multiple customers or represents a common customer scenario. In such a case, Microsoft documents this issue on Windows servicing communication channels. The documentation explains the most common symptoms of the issue. For enterprise and commercial customers, the documentation provides a link to the .msi file that contains the Group Policy template to use to activate KIR.
 
 Here's where you can look for known issues and KIR mitigations:
 
@@ -124,4 +124,4 @@ There are a few reasons you might still observe issues after you activate the KI
 
 ### What do I do if I need to activate KIR for my enterprise but can't use Group Policy infrastructure?
 
-For additional details about how to deploy KIR, including how to activate KIR for single devices and how to activate KIR without using Group Policy, see [Use Group Policy to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback).
+For more information about how to deploy KIR, including how to activate KIR for single devices and how to activate KIR without using Group Policy, see [Use Group Policy to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback).
