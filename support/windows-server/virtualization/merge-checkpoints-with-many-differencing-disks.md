@@ -10,6 +10,8 @@ ms.custom:
 - sap:virtualization and hyper-v\snapshots,checkpoints,and differencing disks
 - pcy:WinComm Storage High Avail
 keywords: differencing disks, avhdx, merge checkpoint, merge vhd
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # How to merge checkpoints that have multiple differencing disks

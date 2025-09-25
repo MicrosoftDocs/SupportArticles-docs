@@ -9,6 +9,8 @@ ms.reviewer: kaushika, JAMIRC
 ms.custom:
 - sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Configure the Simple Network Management Protocol (SNMP) Service in Windows Server 2003  
 

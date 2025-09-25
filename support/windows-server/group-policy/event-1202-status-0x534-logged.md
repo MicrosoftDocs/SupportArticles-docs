@@ -9,6 +9,8 @@ ms.reviewer: kaushika, arrenc
 ms.custom:
 - sap:group policy\problems applying group policy
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Event 1202 with status 0x534 logged on Windows Server 2008 R2 domain controllers after modifying security policy
 

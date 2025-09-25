@@ -9,6 +9,8 @@ ms.reviewer: kaushika, rkiran, jarrettr, sabinn
 ms.custom:
 - sap:remote desktop services and terminal services\performance (audio and video) and remotefx
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # New and existing RemoteFX-enabled VMs do not start on a DC that is running the Remote Desktop Virtualization Host service on Windows Server
 

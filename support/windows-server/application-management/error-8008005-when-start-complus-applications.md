@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:application technologies and compatibility\dcom service startup and permissions
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error when you start many COM+ applications: Error code 80080005 -- server execution failed
 

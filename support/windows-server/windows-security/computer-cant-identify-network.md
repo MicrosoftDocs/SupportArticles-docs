@@ -9,6 +9,8 @@ ms.reviewer: kaushika, clandis, ioanc
 ms.custom:
 - sap:windows security technologies\netlogon including secure channel and dc locator issues
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # A computer can't identify the network when the computer is running Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2, and is a member of a child domain
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, mingchen, nasira, jseifert, deverett, justintu, arrenc, a
 ms.custom:
 - sap:active directory\ldap configuration and interoperability
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Use Event1644Reader.ps1 to analyze LDAP query performance in Windows Server
 

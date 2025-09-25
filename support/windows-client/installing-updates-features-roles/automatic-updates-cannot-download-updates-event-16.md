@@ -9,6 +9,8 @@ ms.reviewer: kaushika, drewel
 ms.custom:
 - sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Automatic Updates can't download updates and event ID 16 is logged
 

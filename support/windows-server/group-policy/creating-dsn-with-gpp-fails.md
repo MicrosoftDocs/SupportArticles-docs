@@ -9,6 +9,8 @@ ms.reviewer: kaushika, sajijohn, markgray
 ms.custom:
 - sap:group policy\problems applying group policy
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Unable to create DSN using Group Policy Preferences, unspecified error 0x80004005
 

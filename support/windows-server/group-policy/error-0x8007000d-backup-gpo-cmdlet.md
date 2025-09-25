@@ -9,6 +9,8 @@ ms.reviewer: herbertm
 ms.custom:
 - sap:group policy\group policy management (gpmc or gpedit)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error 0x8007000D when running the Backup-GPO PowerShell CmdLet in Windows Server Core edition
 

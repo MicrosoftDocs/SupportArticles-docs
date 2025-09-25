@@ -13,6 +13,8 @@ ms.custom:
 - sap:certificates-and-public-key-infrastructure-pki
 - pcy:WinComm Directory Services
 keywords: 
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Can't import an AES256-SHA256-encrypted PFX certificate
 

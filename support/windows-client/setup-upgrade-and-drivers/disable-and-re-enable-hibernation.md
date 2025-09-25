@@ -10,6 +10,8 @@ ms.custom:
 - sap:windows setup,upgrade and deployment\power management
 - pcy:WinComm Devices Deploy
 adobe-target: true
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to disable and re-enable hibernation on a computer that is running Windows
 

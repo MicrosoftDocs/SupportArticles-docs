@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:active directory\active directory backup,restore,or disaster recovery
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # NTDS Replication Event 2089 is logged if Windows Server 2003 SP1 and later domain controllers aren't backed up in a given time period
 

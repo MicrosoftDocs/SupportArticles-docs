@@ -9,6 +9,8 @@ ms.reviewer: kaushika, okang
 ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # "Not enough storage is available to complete this operation" error message when you use a domain controller to join a computer to a domain
 

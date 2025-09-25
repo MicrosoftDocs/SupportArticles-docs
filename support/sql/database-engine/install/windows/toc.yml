@@ -11,6 +11,8 @@ items:
   href: description-update-cache-folder.md
 - name: Errors when installing SQL Server
   href: error-install-sql-server.md
+- name: RPC server is unavailable error during setup
+  href: error-rpc-server-unavailable-provisioning-account.md
 - name: Issues when upgrading to SQL Server 2022
   href: issues-upgrading-sql-server-2022.md
 - name: Driver installation check
@@ -49,8 +51,6 @@ items:
   href: cannot-install-sql-when-only-rodc-available.md
 - name: Troubleshoot common SQL Server Cumulative Update installation issues
   href: sqlserver-patching-issues.md
-- name: Update or Slipstream installation for SQL Server 2008
-  href: update-or-slipstream-installation.md
 - name: Visual C++ Redistributable installed with SQL Server alerts end of life or obsolete
   href: visual-c-redistributable-installed-sql-server-flagged-end-of-life-obsolete.md
 - name: Wait on the Database Engine recovery handle failed

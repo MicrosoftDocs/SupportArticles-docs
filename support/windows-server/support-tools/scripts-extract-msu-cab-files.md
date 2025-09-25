@@ -9,6 +9,8 @@ ms.reviewer: kaushika, warrenw, v-lianna, jpsantho, abjos
 ms.custom:
 - sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Scripts: Extract .msu and .cab files
 

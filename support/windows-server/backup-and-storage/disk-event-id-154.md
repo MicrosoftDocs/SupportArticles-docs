@@ -9,6 +9,8 @@ ms.reviewer: nbassett, kaushika
 ms.custom:
 - sap:backup,recovery,disk,and storage\data corruption and disk errors
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Disk Event ID 154: The IO Operation failed due to a hardware error
 

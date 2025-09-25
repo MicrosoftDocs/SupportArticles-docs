@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:admin mgmt development\active directory services interface adsi
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # User authentication issues with the Active Directory Service Interfaces WinNT provider
 

@@ -1140,6 +1140,10 @@ items:
     items:
     - name: Error 0x80090327 when adding a node to a cluster
       href: ./high-availability/error-0x80090327-adding-node-to-cluster.md
+  - name: Nested virtualization
+    items:
+    - name: 'Troubleshooting guide: Hyper-V nested virtualization'
+      href: ./high-availability/hyper-v-nested-virtualization.md
   - name: Node removed from the cluster
     items:
     - name: Cluster IP address resources fail on both nodes when one node disconnects
@@ -2588,6 +2592,12 @@ items:
       href: ./system-management-components/sms-administrator-console-connectivity-issue.md
     - name: What is MMC
       href: ./system-management-components/what-is-microsoft-management-console.md
+  - name: OpenSSH
+    items:
+    - name: Can't install OpenSSH Features
+      href: ./system-management-components/cant-install-openssh-features.md
+    - name: OpenSSH client can't connect to a server via SSH
+      href: ./system-management-components/open-client-can-not-connect-server.md
   - name: PowerShell
     items:
     - name: CJK characters are garbled in PowerShell
@@ -2726,8 +2736,12 @@ items:
       href: ./virtualization/back-up-restore-hyper-v-vm-bmr-data-backup.md
     - name: Back up virtual machines from parent partition
       href: ./virtualization/back-up-hyper-v-vm-from-parent-partition.md
+    - name: Troubleshoot Hyper-V virtual machine backup, checkpoint, and storage failures
+      href: ./virtualization/hyper-v-virtual-machine-backup-checkpoint-storage.md
   - name: Configuration of virtual machine settings
     items:
+    - name: Can't access Hyper-V virtual machines via VMConnect
+      href: ./virtualization/cannot-access-hyper-v-virtual-machine-connect.md
     - name: Copy and paste don't work when you connect to Hyper-V virtual machine
       href: ./virtualization/copy-paste-not-work-hyper-v-vm-vmconnect-enhanced-session-mode.md
     - name: Hyper-V limits the maximum number of processors
@@ -2750,6 +2764,10 @@ items:
     items:
     - name: Feature and performance optimization of HVR
       href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
+    - name: Hyper-V Replica troubleshooting guide
+      href: ./virtualization/hyper-v-replica-troubleshooting-guide.md
+    - name: Set Up HVR between Windows Server 2016 and Windows Server 2022
+      href: ./virtualization/set-up-hyper-v-replica-between-windows-server-2016-and-windows-server-2022.md
   - name: Installation and configuration of Hyper-V
     items:
     - name: Antivirus exclusions for Hyper-V hosts
@@ -2766,16 +2784,24 @@ items:
       href: ./virtualization/support-and-installation-instructions-for-amd-epyc-9004-series-server-processors.md
     - name: Support Policy for NIC Teaming with Hyper-V
       href: ./virtualization/support-policy-nic-teaming.md
+    - name: Troubleshoot Hyper-V installation, configuration, and operational failures
+      href: ./virtualization/hyper-v-installation-configuration-operational-failure.md
     - name: Upgrade computers with Hyper-V role installed
       href: ./virtualization/upgrade-computers-hyper-v-role.md
     - name: Windows Server 2019 Hyper-V host minroot behavior
       href: ./virtualization/windows-server-hyper-v-host-minroot-behaviors.md
+    - name: YubiKey USB device doesn't appear in a Hyper-V virtual machine
+      href: ./virtualization/usb-device-hyper-v-virtual-machine.md
   - name: Integration components
     items:
     - name: Degraded integration services message for non-Windows guests
       href: ./virtualization/degraded-integration-services-message.md
     - name: Hyper-V Time Synchronization doesn't adjust the VM system clock
       href: ./virtualization/virtual-machine-time-not-synced.md
+    - name: Hyper-V virtual machine input, migration, and device integration issues
+      href: ./virtualization/hyper-v-virtual-machine-input-migration-integration.md
+    - name: Troubleshoot Linux virtual machine issues on Hyper-V
+      href: ./virtualization/linux-virtual-machine-issue-hyper-v.md  
     - name: Unknown devices in Device manager
       href: ./virtualization/unknown-device-vmbus-virtual-machine.md
     - name: Uptime value of Hyper-V Management console changes to the resume time
@@ -2788,12 +2814,22 @@ items:
     items:
     - name: 'Troubleshooting guidance: Live Migration'
       href: ./virtualization/troubleshoot-live-migration-guidance.md
+    - name: 'Troubleshooting guide: Hyper-V virtual machine live migration'
+      href: ./virtualization/hyper-v-virtual-machine-live-migration.md
     - name: Can't migrate a virtual machine from one host to another
       href: ./virtualization/unable-migrate-virtual-machine-processor-not-compatible-host.md
     - name: Starting or live migrating Hyper-V VMs fails
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
     - name: Troubleshoot live migration issues
       href: ./virtualization/troubleshoot-live-migration-issues.md
+  - name: PowerShell cmdlets
+    items:
+    - name: Troubleshoot PowerShell, Hyper-V, storage, and cluster management issues
+      href: ./virtualization/hyper-v-storage-cluster-management.md
+  - name: Remote administration of the Hyper-V role
+    items:
+    - name: Troubleshoot Hyper-V cluster connectivity, management, and configuration failures
+      href: ./virtualization/hyper-v-cluster-connectivity-management-configuration.md
   - name: Shielded VMs
     items:
     - name: Troubleshoot a guarded fabric
@@ -2806,6 +2842,8 @@ items:
       href: ./virtualization/troubleshoot-guarded-fabric-hgs.md
     - name: Troubleshoot using the Guarded Fabric Diagnostic Tool
       href: ./virtualization/troubleshoot-guarded-fabric-diagnostics.md
+    - name: Troubleshoot vTPM, shielded VM, and Host Guardian Service issues
+      href: ./virtualization/virtual-shielded-host-guardian-service.md
   - name: Snapshots, checkpoints, and differencing disks
     items:
     - name: Can't delete a recovery checkpoint for a VM in DPM
@@ -2838,6 +2876,10 @@ items:
     items:
     - name: Get-VMNetworkAdapter command doesn't report IP addresses
       href: ./virtualization/get-vmnetworkadapter-doesnt-report-ip-addresses.md
+    - name: Hyper-V environments experience frequent power-offs and rapid disk space consumption
+      href: ./virtualization/hyper-v-power-off-rapid-disk-space-consumption.md
+    - name: Troubleshoot Hyper-V virtual machine start, state, and access failures
+      href: ./virtualization/hyper-v-start-state-access-failures-clustered-standalone.md
     - name: Virtual Machines enter the paused state
       href: ./virtualization/virtual-machines-enter-paused-state-low-disk-free.md
     - name: Virtual machine shutdown actions don't run
@@ -3130,6 +3172,8 @@ items:
       href: ./installing-updates-features-roles/windows-server-update-services-3-sp2.md
     - name: WSUS clients can't install updates
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
+    - name: WSUS messages and troubleshooting tips
+      href: ./installing-updates-features-roles/wsus-messages-troubleshooting-tips.md
   - name: Windows Update fails - installation stops with error
     items:
     - name: 'Troubleshooting guidance: Windows Server update'
@@ -3168,16 +3212,16 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
     - name: Windows Update for Business Reports
       items:
-    - name: Initial service configuration and Onboarding
-      items:
-      - name: 'Troubleshooting guidance: Windows Update for Business reports'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
-    - name: Missing data or incomplete report data
-      items:
-      - name: 'WUBr: Troubleshoot diagnostic data transmission'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
-      - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
+      - name: Initial service configuration and Onboarding
+        items:
+        - name: 'Troubleshooting guidance: Windows Update for Business reports'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
+      - name: Missing data or incomplete report data
+        items:
+        - name: 'WUBr: Troubleshoot diagnostic data transmission'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
+        - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2

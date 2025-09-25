@@ -9,6 +9,8 @@ ms.reviewer: kaushika, warrenw
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Stop errors and unexpected restart troubleshooting guidance
 

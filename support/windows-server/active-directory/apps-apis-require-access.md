@@ -9,6 +9,8 @@ ms.reviewer: kaushika, davemm
 ms.custom:
 - sap:active directory\user,computer,group,and object management
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Some applications and APIs require access to authorization information on account objects
 

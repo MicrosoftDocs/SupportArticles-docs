@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-lianna
 ms.custom:
 - sap:system performance\shutdown performance (slow,unresponsive)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Application error in Explorer.exe when you shut down or restart Windows
 

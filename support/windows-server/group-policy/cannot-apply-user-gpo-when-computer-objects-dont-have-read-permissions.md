@@ -12,6 +12,8 @@ ms.custom:
 - sap:group policy\group policy management (gpmc or gpedit)
 - pcy:WinComm Directory Services
 keywords: GPMC, Group Policy, permissions, user policies
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Can't apply user Group Policy settings if computer objects don't have GPO Read permissions

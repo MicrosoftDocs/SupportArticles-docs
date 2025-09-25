@@ -9,6 +9,8 @@ ms.custom:
 - pcy:WinComm Performance
 ms.topic: troubleshooting
 ms.date: 01/15/2025
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Use LiveRE to troubleshoot Windows startup problems
 

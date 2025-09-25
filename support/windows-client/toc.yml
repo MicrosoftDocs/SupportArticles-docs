@@ -1075,6 +1075,12 @@ items:
       href: ./system-management-components/fail-to-launch-vamt-3dot0.md
     - name: Windows Trace Session Manager service doesn't start
       href: ./system-management-components/windows-trace-session-manager-service-not-start-event-id-7000.md
+  - name: OpenSSH
+    items:
+    - name: Can't install OpenSSH features
+      href: ../windows-server/system-management-components/cant-install-openssh-features.md
+    - name: OpenSSH client can't connect to a server via SSH
+      href: ../windows-server/system-management-components/open-client-can-not-connect-server.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell
     items:
     - name: Grant-DfsnAccess doesn't change inheritance mode

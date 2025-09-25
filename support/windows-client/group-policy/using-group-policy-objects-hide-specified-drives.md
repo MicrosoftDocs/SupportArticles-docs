@@ -9,6 +9,8 @@ ms.reviewer: kaushika, davidg
 ms.custom:
 - sap:group policy\managing removable devices (usb devices and flash drives) through group policy
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Using Group Policy Objects to hide specified drives
 

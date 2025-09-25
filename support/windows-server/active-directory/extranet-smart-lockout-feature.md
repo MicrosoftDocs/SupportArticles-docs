@@ -9,6 +9,8 @@ ms.reviewer: kaushika, tquerec, dougking, v-jeffbo
 ms.custom:
 - sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Description of the Extranet Smart Lockout feature in Windows Server 2016
 

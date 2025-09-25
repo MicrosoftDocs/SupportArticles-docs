@@ -9,6 +9,8 @@ ms.reviewer: kaushika, ahamad, vipekkan
 ms.custom:
 - sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # You can't turn on Network Discovery in Network and Sharing Center
 

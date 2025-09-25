@@ -9,6 +9,8 @@ ms.custom:
 - sap:system management components\windows diagnostic data processor configuration
 - pcy:WinComm User Experience
 ms.reviewer: kaushika, sangar, plingadevaru, v-lianna
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Windows Error Reporting and Windows diagnostics enablement guidance
 

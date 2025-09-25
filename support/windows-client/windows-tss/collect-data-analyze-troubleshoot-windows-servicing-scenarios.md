@@ -7,16 +7,18 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, traceytu, takarasz, v-lianna, raviks, warrenw
 ms.custom: sap:Support Tools\TSS, csstroubleshoot
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios
 
-This article helps gather information about your issue by using the TroubleShootingScript (TSS) toolset before contacting Microsoft support.
+This article helps gather information about your issue by using the Trouble Shooting Script (TSS) toolset before contacting Microsoft support.
 
 ## Prerequisites
 
 Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-troubleshootingscript-toolset-tss.md#prerequisites) for prerequisites for the toolset to run properly.
 
-## Scenario: Failures to install Windows Updates
+## Scenario: Failures to install Windows Updates or Features on Demand
 
 ### TSS cmdlet
 

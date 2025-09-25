@@ -9,6 +9,8 @@ ms.reviewer: kaushika, cclay
 ms.custom:
 - sap:windows servicing,updates and features on demand\clients missing updates,not offered,fail to download
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # WSUS SelfUpdate service doesn't send automatic updates
 

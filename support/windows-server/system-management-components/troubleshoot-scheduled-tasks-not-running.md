@@ -7,6 +7,8 @@ audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika, jianyingtang, warrenw, v-lianna
 ms.custom: sap:System Management Components\Task Scheduler, csstroubleshoot
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot issues with scheduled tasks not running
 
