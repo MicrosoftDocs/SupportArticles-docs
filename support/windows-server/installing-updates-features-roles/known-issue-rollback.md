@@ -42,7 +42,7 @@ Windows offers KIR capability on all supported versions of [Windows Server](/win
 > [!IMPORTANT]  
 > KIR only affects non-security updates and fixes. Security updates and fixes don't use KIR.
 
-To find out if KIR can mitigate your regression issue, see [Ways for enterprises to discover KIR Group Policies](#ways-for-enterprises-to-discover-kir-gp).
+If you see an issue or regression after a Windows update deploys in your environment, see [How to learn of and access KIR Group Policy templates](#how-to-learn-of-and-access-kir-group-policy-templates).
 
 ## How KIR activates
 
