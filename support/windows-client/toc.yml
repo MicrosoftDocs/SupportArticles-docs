@@ -1079,6 +1079,8 @@ items:
       href: ./system-management-components/windows-trace-session-manager-service-not-start-event-id-7000.md
   - name: OpenSSH
     items:
+    - name: Can't install OpenSSH features
+      href: ../windows-server/system-management-components/cant-install-openssh-features.md
     - name: OpenSSH client can't connect to a server via SSH
       href: ../windows-server/system-management-components/open-client-can-not-connect-server.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell
