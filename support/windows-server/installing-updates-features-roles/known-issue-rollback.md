@@ -67,7 +67,7 @@ If you experience an issue that's related to a feature update, check the Downloa
 
 Download the template, and then follow the steps in [How to use Group Policy to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback).
 
-For enterprise-managed devices that are domain joined, the Group Policy refresh happens at certain regular intervals. Choose one of the following actions to make sure that the Group Policy settings take effect:
+For enterprise-managed devices that are domain-joined, the Group Policy refresh happens at certain regular intervals. To make sure that the Group Policy settings take effect, take one of the following actions:
 
 - Wait for Group Policy to refresh in the background, then restart the affected devices.
 - To force a single device to update its Group Policy settings, open a Command Prompt window on the device, and then run 'gpupdate /force'. After the command runs, restart the device.
@@ -78,52 +78,50 @@ Additionally, for information about how to mitigate regressions on Intune or end
 
 ### KIR for retail and consumer devices
 
-For these devices, Microsoft activates KIR by using Windows Update. Users don't have to take any action.
+Retail and consumer devices include non-enterprise devices, and all devices that get updates directly from the Windows Update cloud service (WU) by using **Settings** > **Windows Update** (WU). For these devices, Microsoft activates KIR by using Windows Update. Users don't have to take any action. In most cases, because of Microsoft's safe deployment practices, Microsoft identifies an issue in an update and publishes a KIR before most devices download and install the original update. In those cases, users never notice the original issue or the KIR.
 
 > [!NOTE]  
 > Any device that's not connected to Windows Update won't get Windows updates or KIR.
 
-When an issue or regression is identified in retail devices, Microsoft product teams gather detailed information about the problem and its impact, determine the root cause, and report the incident internally. Then based on the results of this analysis, Microsoft decides whether to roll back a regressing change. If required, Microsoft activates KIR through cloud services.
+When Microsoft identifies a regression or other issue that affects retail and consumer devices, Microsoft product teams gather detailed information about the problem and its effects, determine the root cause of the issue, and report the issue internally. Then, based on the results of this analysis, Microsoft decides whether to roll back the change that caused the issue.
 
 :::image type="content" source="media/known-issue-rollback/retail-kir-propagates-through-windows-update-service.png" alt-text="Diagram that shows how Microsoft distributes a K.I.R. by using the Windows Update infrastructure." lightbox="media/known-issue-rollback/retail-kir-propagates-through-windows-update-service.png":::
 
-After Microsoft qualifies a regression for KIR activation, it makes a configuration update change in the cloud. All devices that get updates through **Settings** > **Windows Update** (WU) get notice of this change and receive the configuration update within 24 hours. Upon receiving and installing the update, the code causing the issue is disabled. In some cases, a device reboot might be required to disable the code.
-
-In accordance with Microsoft's safe deployment practices, in most cases, Microsoft identifies and publishes a rollback before user devices have the chance to even install the update containing the issue. Hence, most users never see the regression.
+If Microsoft decides to roll a change back, it uses the Windows Update infrastructure to activate a KIR. First, Microsoft loads the KIR configuration change as an update. Windows Update notifies the affected devices of this update. Within 24 hours, the devices download and install the update. The devices might need to restart to finish the installation. After this process finishes, the code that caused the issue is disabled.
 
 Microsoft transmits specific information regarding KIR activation. This data assists us in evaluating the effectiveness of the rollback within the ecosystem. See how to [configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
 ## Ways for Enterprises to discover KIR GP
 
-When Microsoft identifies that an issue affects multiple customers or represents a frequent scenario, this issue is documented on Windows servicing communication channels. The documentation explains the most common symptoms and provides a link to the Group Policy .msi file for the commercial users, so they can mitigate the issue.
+Occasionally, Microsoft has to activate KIR for an issue that affects multiple customers or represents a common customer scenario. In such a case, Microsoft documents this issue on Windows servicing communication channels. The documentation explains the most common symptoms of the issue. For enterprise and commercial customers, the documentation provides a link to the .msi file that contains the Group Policy template that they'll need for KIR.
 
 Here's where you can look for known issues and KIR mitigations:
 
 - Windows release notes on the Windows update history sites, such as the [Windows 11](https://aka.ms/Windows11/24H2/UpdateHistory), [Windows 10](https://support.microsoft.com/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562), and [Windows Server](https://support.microsoft.com/topic/windows-server-2025-update-history-10f58da7-e57b-4a9d-9c16-9f1dcd72d7d7) update history pages. Scroll down to the **Known issues in this update** section.
-- [Windows release health](/windows/release-health/) dashboard. This site provides links to all Windows release notes for Windows versions in support.
+- [Windows release health](/windows/release-health/) dashboard. This site provides links to all Windows release notes for currently supported Windows versions.
 - Windows release health section on the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/homepage). You can also sign up for [Windows release health notifications](/windows/deployment/update/check-release-health).
 
 If you can't find documentation for the issue that you encounter, contact [Microsoft Support](https://support.serviceshub.microsoft.com/supportforbusiness/onboarding).
 
 ## KIR lifecycle management: What to do once KIR is activated?
 
-Once KIR is activated, there's no other action required from you throughout the lifecycle of the KIR. Once the issue is resolved, it's included into subsequent Windows updates. The outdated policy simply becomes a benign setting that does nothing and isn't needed anymore.
+After enterprise and commercial customers deploy the Group Policy settings for a KIR, they don't have to take any other action. After Microsoft resolves the original issue, it includes the new code in subsequent Windows updates. The outdated Group Policy settings simply become benign settings that do nothing and aren't needed anymore.
 
 ## Frequently asked questions (FAQ)
 
-### Does the same Group Policy apply for all devices for a given regression?
+### For a given issue, does the same Group Policy template apply for all affected devices?
 
-No. When requesting a GP to activate KIR, you need to tell Microsoft Support the comprehensive list of the OS versions on which you observe the regression. Microsoft Support then provides a unique Group Policy template for each of the specified Windows versions. Pay attention to the OS version in the file name before you install and activate them on the respective devices.
+No. The Group Policy settings that control KIR for a given issue often differ for different versions and editions of Windows. If you request a KIR Group Policy template from Microsoft Support, provide a comprehensive list of the affected operating system versions. Microsoft Support then provides a unique Group Policy template for each of the specified Windows versions. When you configure and deploy a template, pay attention to the Windows version that's listed in the template's file name.
 
-### What do I do if I still see the regression after I installed a Group Policy for activating the KIR?
+### What do I do if I still see the issue after I deployed the KIR Group Policy template?
 
-There are a few reasons you might still observe regressions after activating the KIR. Troubleshoot as follows:
+There are a few reasons you might still observe issues after you activate the KIR. In such cases, follow these steps:
 
-1. Make sure that you install the Group Policy corresponding to the OS version running on the device.
-1. Go to Group Policy Editor and ensure that the state is **Disabled** for the specific Group Policy.
-1. Restart the devices after changing the Group Policy state.
+1. Make sure that you deploy the Group Policy template that corresponds to the device's Windows version.
+1. Open Group Policy Editor, and then locate the appropriate Group Policy setting. Ensure that the state of the setting is **Disabled**.
+1. If you changed a Group Policy setting, restart the devices that the policy applies to.
 1. If the issue persists, contact your assigned Microsoft Support partner.
 
-### What do I do if I need to deploy KIR for my enterprise but can't use Group Policy infrastructure?
+### What do I do if I need to activate KIR for my enterprise but can't use Group Policy infrastructure?
 
-For additional details about how to deploy KIR, including how to deploy KIR to single devices and alternative solutions for deployihg KIR, see [Use Group Policy to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback) .
+For additional details about how to deploy KIR, including how to activate KIR for single devices and how to activate KIR without using Group Policy, see [Use Group Policy to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback).
