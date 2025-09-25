@@ -1,44 +1,36 @@
 ---
-title: List of connectors that use Confluent connectors isn't available
-description: "Troubleshoot missing connector list for Confluent connectors in Azure."
-author: v-albemi
+title: List of Confluent Connectors Isn't Available
+description: Troubleshoot missing Confluent connectors list in the Azure portal.
+author: 
 ms.author: jarrettr 
 ms.service: partner-services 
 ms.topic: troubleshooting-general
 ms.date: 09/25/2025
-
+# customer intent: As an Azure administrator or user, I can't see the list of Confluent connectors, and I want to troubleshoot the problem. 
 ---
-# Confluent connector isn't in the list of connectors
 
-This article helps you troubleshoot issues when the list of connectors that use Confluent connectors isn't available in Azure.
+# List of Confluent connectors isn't available
+
+This article helps you troubleshoot the problem in which the list of Confluent connectors isn't available in Azure.
 
 ## Prerequisites
 
 - Access to the Azure portal.
-- Permissions to view and manage resources in your Azure subscription.
 
 ## Symptoms
 
 - The list of Confluent connectors isn't visible in the Azure portal.
-- You can't see available connectors for integration.
 
-## Causes
+## Cause
 
 - You aren't assigned the Owner or Contributor role for the Azure subscription.
-- Insufficient permissions to view connector resources.
 
-## Solutions
-
-### 1. Check your Azure subscription role
+## Solution
 
 - Ensure you're assigned the Owner or Contributor role for the Azure subscription.
 - If you aren't, contact your Azure subscription administrator to update your role assignments.
 
-## Verify
-
-- After updating your role, refresh the Azure portal and check if the list of Confluent connectors is available.
-
 ## Related content
 
-- [Azure role-based access control (RBAC)](https://learn.microsoft.com/azure/role-based-access-control/overview)
+- [Azure role-based access control (RBAC)](/azure/role-based-access-control/overview)
 - [Confluent Cloud documentation](https://docs.confluent.io/cloud/)
