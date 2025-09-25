@@ -15,6 +15,8 @@ items:
       href: confluent/conflict-error.md
     - name: DeploymentFailed error
       href: confluent/deploymentfailed-error.md
+    - name: List of Confluent connectors isn't available
+      href: confluent/connectors-list-not-available.md  
     - name: Offer plan doesn't load
       href: confluent/plan-does-not-load.md
     - name: Resource creation is slow or fails

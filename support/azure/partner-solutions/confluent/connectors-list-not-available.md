@@ -6,6 +6,7 @@ ms.author: jarrettr
 ms.service: partner-services 
 ms.topic: troubleshooting-general
 ms.date: 09/25/2025
+ai-usage: ai-assisted
 # customer intent: As an Azure administrator or user, I can't see the list of Confluent connectors, and I want to troubleshoot the problem. 
 ---
 
