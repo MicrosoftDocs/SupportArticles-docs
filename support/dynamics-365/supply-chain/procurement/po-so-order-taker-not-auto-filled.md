@@ -1,3 +1,4 @@
+---
 title: Order Taker Not Auto-Filled When Creating Purchase or Sales Orders
 description: Troubleshoot issues that prevent automatic field population when creating a purchase or sales order in Dynamics 365 Supply Chain Management.
 author: vermayashi
@@ -14,6 +15,7 @@ ms.topic: troubleshooting-problem-resolution
 
 #customer intent: As a developer or system administrator, I want to fix an issue that prevents the order taker field from being autofilled when I create a purchase or sales order. This feature enables me to avoid having to complete field manually.
 ---
+
 # Order taker field not autofilled when creating purchase or sales orders
 
 When you [create a purchase order](/dynamics365/supply-chain/procurement/tasks/create-purchase-order) (PO) or sales order (SO) in Microsoft Dynamics 365 Supply Chain Management, the *order taker* (referred to as the **Orderer** in a PO and the **Sales orderer** in an SO) might not automatically populate when you expect it to. This article provides guidance for troubleshooting the required configurations to enable autofill.
@@ -31,7 +33,7 @@ The **Orderer** or **Sales orderer** field is autofilled only if the current use
 
 ## Solution
 
-To enable autofill, associate the user account with a Party ID that has the Worker role set in the current legal entity. 
+To enable autofill, associate the user account with a Party ID that has the Worker role set in the current legal entity.
 
 ### Step 1: Verify the issue
 
