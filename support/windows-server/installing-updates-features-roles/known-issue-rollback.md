@@ -91,7 +91,7 @@ If Microsoft decides to roll back a change, it uses the Windows Update infrastru
 
 Microsoft transmits specific information regarding KIR activation. This data assists us in evaluating the effectiveness of the rollback within the ecosystem. See how to [configure Windows diagnostic data in your organization](/windows/privacy/configure-windows-diagnostic-data-in-your-organization).
 
-## Ways for Enterprises to discover KIR GP
+## How to learn of and access KIR Group Policy templates
 
 Occasionally, Microsoft has to activate KIR for an issue that affects multiple customers or represents a common customer scenario. In such a case, Microsoft documents this issue on Windows servicing communication channels. The documentation explains the most common symptoms of the issue. For enterprise and commercial customers, the documentation provides a link to the .msi file that contains the Group Policy template to use to activate KIR.
 
