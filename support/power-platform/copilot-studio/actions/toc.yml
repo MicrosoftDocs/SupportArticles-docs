@@ -1,5 +1,5 @@
 items:
 - name: Connector request failures
   href: connector-request-failure.md
-- name: Troubleshoot 'FailedToTakeScreenshot' error during computer use actions
-  href: computer-user-screenshot-error-troubleshooting.md
+- name: FailedToTakeScreenshot errors during computer use actions
+  href: computer-use-screenshot-error.md
