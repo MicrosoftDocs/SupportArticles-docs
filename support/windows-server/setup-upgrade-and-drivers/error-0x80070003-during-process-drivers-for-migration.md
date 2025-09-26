@@ -18,7 +18,7 @@ This article discusses how to resolve issues that cause a "0x80070003" error to 
 
 ## Symptoms
 
-When you try to upgrade a Windows Server-based or Windows Client-based computer to a newer version of the OS (an *in-place upgrade*), the upgrade process fails. When this error occurs, the upgrade process generates a "0x80070003" error.
+When you try to upgrade a Windows Server-based or Windows Client-based computer to a newer version of the operating system (an *in-place upgrade*), the upgrade process fails. When this error occurs, the upgrade process generates a "0x80070003" error.
 
 ## Cause
 
