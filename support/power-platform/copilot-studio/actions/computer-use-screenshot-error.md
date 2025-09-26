@@ -5,16 +5,16 @@ ms.date: 09/22/2025
 ms.reviewer: guco, v-shaywood
 ms.custom: sap:Actions\AI actions
 
-#customer intent: As a developer, I want to resolve FailedToTakeScreenshot errors that occur during computer use actions. These errors are preventing me from using computer use actions with my Copilot agents.
+#customer intent: As a developer, I want to resolve FailedToTakeScreenshot errors that might occur during computer use actions. These errors are preventing me from using computer use actions with my Copilot agents.
 ---
 
 # "FailedToTakeScreenshot" error during computer use action
 
-This article provides troubleshooting guidance for "FailedToTakeScreenshot" errors that occur during [computer use actions](/microsoft-copilot-studio/computer-use) for Microsoft Copilot Studio agents. The computer use model requires screenshots to interact with the desktop. If the screenshot process fails, the computer use action ends.
+This article provides troubleshooting guidance for "FailedToTakeScreenshot" errors that might occur during [computer use actions](/microsoft-copilot-studio/computer-use) for Microsoft Copilot Studio agents. The computer use model requires screenshots to interact with the desktop. If the screenshot process fails, the computer use action ends.
 
 ## Symptoms
 
-During a computer use action, a "FailedToTakeScreenshot" error message is returned. When the screenshot process fails, the computer use action ends.
+During a computer use action, a "FailedToTakeScreenshot" error code is returned to the [agent transcript](/microsoft-copilot-studio/analytics-transcripts-studio#download-agent-session-transcripts). When the screenshot process fails, the computer use action ends.
 
 ## Cause 1: UAC prompt is displayed
 
