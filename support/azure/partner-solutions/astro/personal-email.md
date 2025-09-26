@@ -1,9 +1,9 @@
 ---
-title: Unable to install Astro using a personal email
+title: Unable to Install Astro Using a Personal Email
 description: Discusses why installing Apache Airflow on Astro by using a personal email account isn't supported, and how to resolve the problem.
 author: ProfessorKendrick
 ms.author: jarrettr
-ms.reviewer: kkendrick
+ms.reviewer: kkendrick, v-ryanberg
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/04/2025

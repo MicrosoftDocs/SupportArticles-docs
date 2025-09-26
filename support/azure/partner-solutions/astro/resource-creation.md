@@ -3,7 +3,7 @@ title: Troubleshoot Astro Resource Creation in Azure
 description: Learn how to resolve issues when creating Astro resources in Azure, including permission and user profile requirements.
 author: ProfessorKendrick
 ms.author: jarrettr
-ms.reviewer: kkendrick
+ms.reviewer: kkendrick, v-ryanberg
 ms.service: partner-services
 ms.topic: troubleshooting-problem-resolution
 ms.date: 09/04/2025
