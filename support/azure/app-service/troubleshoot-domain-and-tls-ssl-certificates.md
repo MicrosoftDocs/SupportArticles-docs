@@ -7,6 +7,7 @@ tags: top-support-issue
 ms.topic: troubleshooting-general
 ms.date: 09/22/2025
 ms.author: jarrettr
+ms.reviewer: v-ryanberg
 ms.service: azure-app-service
 ---
 # Troubleshoot domain and TLS/SSL certificate problems in Azure App Service
