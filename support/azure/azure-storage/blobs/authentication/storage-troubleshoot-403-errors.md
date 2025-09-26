@@ -1,9 +1,12 @@
 ---
-title: Troubleshoot 403 errors (Azure Blob Storage)
+title: Troubleshoot 403 Errors (Azure Blob Storage)
 description: A comprehensive troubleshooting guide for resolving HTTP 403 errors when accessing Azure Blob Storage, covering authentication, authorization, network restrictions, and configuration issues.
 ms.date: 09/24/2025
 ms.service: azure-blob-storage
-ms.reviewer: normesta
+author: JarrettRenshaw
+ms.author: jarrettr
+ms.custom: sap:Authentication and Authorization
+ms.reviewer: normesta, v-ryanberg
 ---
 
 # Troubleshoot 403 errors in Azure Blob Storage
