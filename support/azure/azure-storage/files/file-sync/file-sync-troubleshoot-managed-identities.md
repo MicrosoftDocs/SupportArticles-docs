@@ -225,7 +225,7 @@ This issue occurs when the **Allow Azure services on the trusted services list t
 
 ## Unsupported cross-tenant configurations 
 
-Cross-tenant topologies—where the server resource (Arc-enabled server or Azure VM) and the Storage Sync Service are in **different Microsoft Entra tenants**—are **unsupported**. Managed identity and Azure RBAC require tokens issued by the same tenant; cross-tenant authorization fails in this scenario. Do not attempt cross-tenant setups. 
+Cross-tenant topologies where the server resource (Arc-enabled server or Azure VM) and the Storage Sync Service are in **different Microsoft Entra tenants** aren't supported. Managed identity and Azure RBAC require tokens issued by the same tenant; cross-tenant authorization fails in this scenario. Do not attempt cross-tenant setups. 
 
 **Mitigation:** Align the Storage Sync Service, server resource identity, storage account RBAC assignments, and managed identity to the **same tenant**, then retry.
 
