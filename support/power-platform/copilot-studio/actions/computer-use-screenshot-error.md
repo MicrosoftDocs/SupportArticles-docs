@@ -27,11 +27,11 @@ If Windows displays a [User Account Control](/windows/security/application-secur
 
 ## Cause 2: Windows OOBE experience is displayed
 
-The first time that a user logs on to the remote computer, Windows starts the [Out Of Box Experience](/windows-hardware/customize/desktop/customize-oobe-in-windows-11) (OOBE). At startup, the OOBE typically displays the message, "Getting things ready." If the OOBE image is displayed during the computer use action, the screen capture action fails.
+The first time that a user signs in to the remote computer, Windows starts the [Out Of Box Experience](/windows-hardware/customize/desktop/customize-oobe-in-windows-11) (OOBE). At startup, the OOBE typically displays the message, "Getting things ready." If the OOBE image is displayed during the computer use action, the screen capture action fails.
 
 ### Solution
 
-The OOBE is displayed only the first time that a new user logs on to the remote computer. Make sure that you manually log the user on at least one time before they use a computer use action.
+The OOBE is displayed only the first time that a new user signs in to the remote computer. Make sure that you manually log the user on at least one time before they use a computer use action.
 
 ## Cause 3: Remote Desktop session isn't visible
 
