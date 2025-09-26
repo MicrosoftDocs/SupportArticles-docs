@@ -14,11 +14,11 @@ This article provides troubleshooting guidance for "FailedToTakeScreenshot" erro
 
 ## Symptoms
 
-During a computer use action a "FailedToTakeScreenshot" error occurs and the action ends in failure.
+During a computer use action, a "FailedToTakeScreenshot" error occurs and the action ends in failure.
 
 ## Cause 1: a UAC prompt is displayed
 
-If Windows displays a [User Account Control](/windows/security/application-security/application-control/user-account-control/) (UAC) prompt, the desktop is blocked by the prompt and capturing the screen fails.
+If Windows displays a [User Account Control](/windows/security/application-security/application-control/user-account-control/) (UAC) prompt, the prompt blocks the desktop and capturing the screen fails.
 
 ### Solution
 
@@ -27,7 +27,7 @@ If Windows displays a [User Account Control](/windows/security/application-secur
 
 ## Cause 2: the Windows OOBE experience is displayed
 
-The first time a user logs into the machine, Windows displays the [Out Of Box Experience](/windows-hardware/customize/desktop/customize-oobe-in-windows-11) (OOBE). This experience usually starts by displaying the message "Getting things ready". If the OOBE is displayed during the computer use action, capturing the screen fails.
+The first time a user logs into the machine, Windows displays the [Out Of Box Experience](/windows-hardware/customize/desktop/customize-oobe-in-windows-11) (OOBE). This experience usually starts by displaying the message "Getting things ready." If the OOBE is displayed during the computer use action, capturing the screen fails.
 
 ### Solution
 
@@ -35,10 +35,10 @@ The OOBE is only displayed the first time a new user logs into the machine. Make
 
 ## Cause 3: the Remote Desktop session isn't displayed
 
-Capturing the screen fails if the Remote Desktop session isn't displayed. This can occur in the following cases:
+Capturing the screen fails if the Remote Desktop session isn't displayed. This issue can occur in the following cases:
 
-- When using an existing Remote Desktop session in the browser (for example connecting to a Power Automate Hosted machine), screen capturing fails if the Remote Desktop tab is not focused.
-- When using a Remote Desktop session in the [Windows Application](/windows-app/overview), screen capturing fails if the application window is minimized.
+- When you use an existing Remote Desktop session in the browser (for example connecting to a Power Automate Hosted machine), screen capturing fails if the Remote Desktop tab isn't focused.
+- When you use a Remote Desktop session in the [Windows Application](/windows-app/overview), screen capturing fails if the application window is minimized.
 
 ### Solution
 
