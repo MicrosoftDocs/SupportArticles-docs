@@ -10,7 +10,7 @@ ms.custom: sap:Actions\AI actions
 
 # "FailedToTakeScreenshot" error during computer use action
 
-This article provides troubleshooting guidance for "FailedToTakeScreenshot" errors that occur during [computer use actions](/microsoft-copilot-studio/computer-use) for Microsoft Copilot Studio agents. The computer use model requires screenshots to interact with the desktop. If the screenshot process fails, a "FailedToTakeScreenshot" error is given and the computer use action ends.
+This article provides troubleshooting guidance for "FailedToTakeScreenshot" errors that occur during [computer use actions](/microsoft-copilot-studio/computer-use) for Microsoft Copilot Studio agents. The computer use model requires screenshots to interact with the desktop. If the screenshot process fails, a "FailedToTakeScreenshot" error is returned, and the computer use action ends.
 
 ## Symptoms
 
