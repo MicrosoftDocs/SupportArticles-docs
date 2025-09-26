@@ -1078,7 +1078,7 @@ items:
   - name: OpenSSH
     items:
     - name: Can't install OpenSSH features
-      href: ../windows-server/system-management-components/cant-install-openssh-features.md
+      href: ../windows-server/system-management-components/cant-install-openssh-features.md?context=/troubleshoot/windows-client/context/context
     - name: OpenSSH client can't connect to a server via SSH
       href: ../windows-server/system-management-components/open-client-can-not-connect-server.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell
@@ -1366,7 +1366,7 @@ items:
     - name: How to keep Windows up to date
       href: ./installing-updates-features-roles/keep-windows-up-to-date.md
     - name: Known Issue Rollback
-      href: ../windows-server/installing-updates-features-roles/known-issue-rollback.md
+      href: ../windows-server/installing-updates-features-roles/known-issue-rollback.md?context=/troubleshoot/windows-client/context/context
     - name: SFC flags Windows Defender files as corrupted
       href: ./installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md
     - name: Standard terminology that defines software updates
