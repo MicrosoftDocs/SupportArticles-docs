@@ -130,3 +130,5 @@ Such folders shouldn't be empty.
    ```
 
 1. After you finish copying the SSU files, try again to upgrade Windows.
+
+[!INCLUDE [third-party-disclaimer.md](../../includes/)]
