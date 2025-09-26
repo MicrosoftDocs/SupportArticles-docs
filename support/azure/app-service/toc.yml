@@ -2,6 +2,8 @@
   items:
   - name: Connection issues with SSL or TLS
     items:
+    - name: Troubleshoot domain and TLS/SSL certificates 
+      href: troubleshoot-domain-and-tls-ssl-certificates.md  
     - name: Use Azure App Service Certificate with Azure Front Door
       href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-azure-front-door.md
     - name: Use Azure App Service Certificate with Application Gateway
@@ -32,8 +34,6 @@
     href: /azure/app-service/app-service-web-tutorial-custom-domain
   - name: Open-source technologies FAQs for Web Apps
     href: web-apps-open-source-technologies-faqs.md
-  - name: Troubleshoot domain and TLS/SSL certificates 
-    href: troubleshoot-domain-and-tls-ssl-certificates.md
   - name: Troubleshoot temporary storage
     href: temporary-storage-for-azure-app-service.md
   - name: Troubleshoot instance-related issues
