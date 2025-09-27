@@ -805,6 +805,8 @@ items:
       href: ./setup-upgrade-and-drivers/iso-file-on-vlsc.md
     - name: Error 0x80042468 when creating a single partition
       href: ./setup-upgrade-and-drivers/error-when-creating-single-partition.md
+    - name: 'Error 0x80070003 during "Process Drivers for Migration" operation'
+      href: ../windows-server/setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md?context=/troubleshoot/windows-client/context/context
     - name: Error 0x800F0818 - 0x20003 during upgrade from Windows 10 to Windows 11
       href: ./setup-upgrade-and-drivers/error-0x800f0818-during-upgrade-to-windows-11.md
     - name: Error 87 when a Windows 10 image is applied
