@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/prevent-users-connect-usb.md",
+      "redirect_url": "https://gpsearch.azurewebsites.net/#173",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/dataverse/working-with-solutions/failure-converting-to-managed-solution.md",
       "redirect_url": "https://learn.microsoft.com/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions"
     },

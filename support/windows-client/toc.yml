@@ -771,8 +771,6 @@ items:
       href: ./setup-upgrade-and-drivers/non-compliant-usb-3-devices-not-function.md
     - name: Power Management tab isn't visible
       href: ./setup-upgrade-and-drivers/power-management-not-visible-in-aoac-platform.md
-    - name: Prevent users from connecting to a USB storage device
-      href: ./setup-upgrade-and-drivers/prevent-users-connect-usb.md      
     - name: Running TPM Management console fails
       href: ./setup-upgrade-and-drivers/cannot-load-tpm-management-console.md
     - name: '"The operation timed out" error'
