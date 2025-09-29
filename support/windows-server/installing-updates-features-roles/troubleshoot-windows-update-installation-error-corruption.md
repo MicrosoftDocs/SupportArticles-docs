@@ -132,4 +132,4 @@ If the update is installed, remove and reinstall it. If the update is not instal
 ### In-place upgrade process
 
 > [!NOTE]
-> If the suggested fixes don’t resolve the issue, this specific Windows Update (WU) error code might require an In-place upgrade as a simple and effective solution to recover the VM. For Windows on Azure (WOA) scenarios, these kinds of WU errors are reviewed and approved as eligible for In-place updgrade. This is especially true if you're trying to resolve issues quickly.
+> For **virtual machines running in Azure** encountering this specific Windows update error, this error has been reviewed, and it is strongly suggested to do an In-place upgrade (IPU) as a simple and effective solution to recover the VM.  When the IPU completes, the machine’s OS will be reinstalled while retaining the current configuration of the machine which is the ideal situation. For additional information, see [In-place upgrade for supported VMs running Windows in Azure](../../azure/virtual-machines/windows/in-place-system-upgrade.md)
