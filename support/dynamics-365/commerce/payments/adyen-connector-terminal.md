@@ -35,3 +35,4 @@ To solve this issue, follow these steps.
 [Dynamics 365 Payment Connector for Adyen FAQ](/dynamics365/commerce/dev-itpro/adyen-connector-faq)
 
 [Payments FAQ](/dynamics365/unified-operations/retail/dev-itpro/payments-retail)
+
