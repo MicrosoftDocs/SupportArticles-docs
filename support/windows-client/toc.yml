@@ -771,8 +771,6 @@ items:
       href: ./setup-upgrade-and-drivers/non-compliant-usb-3-devices-not-function.md
     - name: Power Management tab isn't visible
       href: ./setup-upgrade-and-drivers/power-management-not-visible-in-aoac-platform.md
-    - name: Prevent users from connecting to a USB storage device
-      href: ./setup-upgrade-and-drivers/prevent-users-connect-usb.md      
     - name: Running TPM Management console fails
       href: ./setup-upgrade-and-drivers/cannot-load-tpm-management-console.md
     - name: '"The operation timed out" error'
@@ -805,6 +803,8 @@ items:
       href: ./setup-upgrade-and-drivers/iso-file-on-vlsc.md
     - name: Error 0x80042468 when creating a single partition
       href: ./setup-upgrade-and-drivers/error-when-creating-single-partition.md
+    - name: 'Error 0x80070003 during "Process Drivers for Migration" operation'
+      href: ../windows-server/setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md?context=/troubleshoot/windows-client/context/context
     - name: Error 0x800F0818 - 0x20003 during upgrade from Windows 10 to Windows 11
       href: ./setup-upgrade-and-drivers/error-0x800f0818-during-upgrade-to-windows-11.md
     - name: Error 87 when a Windows 10 image is applied

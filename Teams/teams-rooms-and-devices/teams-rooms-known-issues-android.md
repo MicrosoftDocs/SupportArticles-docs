@@ -1,6 +1,6 @@
 ---
-title: Known issues with Teams Rooms on Android
-description: Provides a list of known issues for Teams Rooms on Android.
+title: Known issues with Teams on Android devices
+description: Provides a list of known issues with Android devices that run Teams.
 ms.author: meerak
 author: Cloud-Writer
 ms.reviewer: sohailta, garyanselme, czawideh
@@ -23,9 +23,9 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 09/03/2025
+ms.date: 09/24/2025
 ---
-# Known issues with Teams Rooms on Android
+# Known issues with Teams on Android devices
 
 <!-- If you get word that one of these issues no longer applies, contact meerak@microsoft.com to EoL the corresponding KB.  -->
 
@@ -42,9 +42,9 @@ ms.date: 09/03/2025
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
-|Unable to extract log files.|You're trying to extract a log file but either the log files are empty or you see an error message. This behavior can occur when the logs contain partially corrupted zip files or log files.|Contact Microsoft Support by filing a request at [SERVICENOW](https://microsoft.service-now.com/sp?id=sc_cat_item&sys_id=0baac5bcdb0ca414b720f337689619ce&sysparm_category=8b859929136eea002620b0912244b066).|
+|Unable to extract log files.|You're trying to extract a log file but either the log files are empty or you see an error message. This behavior can occur when the logs contain partially corrupted zip files or log files.|Try to extract the log files by using the [7-ZIP](https://www.7-zip.org/) tool instead of the built-in Windows file extraction tool.|
 
-## Issues with Teams phones
+## Issues affecting Teams phones
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
