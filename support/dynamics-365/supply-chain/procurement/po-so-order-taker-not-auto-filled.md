@@ -26,14 +26,14 @@ The **Orderer** or **Sales orderer** field is blank when you create a PO or SO. 
 
 ## Cause
 
-The **Orderer** or **Sales orderer** field is autofilled only if the current user account is associated with a **Party record** that has the [**Worker** role](/dynamics365/fin-ops-core/dev-itpro/organization-administration/overview-global-address-book#party-roles) in the current legal entity.
+The **Orderer** or **Sales orderer** field is autofilled only if the current user account is associated with a *party record* that has the [**Worker** role](/dynamics365/fin-ops-core/dev-itpro/organization-administration/overview-global-address-book#party-roles) in the current legal entity.
 
 > [!NOTE]
-> If a user has multiple Party records, only the record that's set to **Worker** in the current legal entity enables autofill.
+> If a user has multiple party records, only the record that's set to **Worker** in the current legal entity enables autofill.
 
 ## Solution
 
-To enable autofill, associate the user account with a Party record that has the Worker role set in the current legal entity.
+To enable autofill, associate the user account with a party record that has the Worker role set in the current legal entity.
 
 ### Step 1: Verify the issue
 
@@ -43,16 +43,16 @@ In the target legal entity, create a PO or SO, and then verify that the **Ordere
 
 1. Navigate to **Organization administration** > **Global address book**.
 1. Search for and open the relevant party record.
-1. In the record, check the **Roles** section (or role-specific pages) to verify that this Party record has the Worker role assigned for the current legal entity.
-1. If the Worker role isn't assigned to the Party record, go to [step 3](#step-3-associate-the-party-record-with-the-worker-role). Otherwise, go to [step 4](#step-4-associate-the-user-account-with-the-party-record).
+1. In the record, check the **Roles** section (or role-specific pages) to verify that this party record has the Worker role assigned for the current legal entity.
+1. If the Worker role isn't assigned to the party record, go to [step 3](#step-3-associate-the-party-record-with-the-worker-role). Otherwise, go to [step 4](#step-4-associate-the-user-account-with-the-party-record).
 
-### Step 3: Associate the Party record with the Worker role
+### Step 3: Associate the party record with the Worker role
 
 1. Navigate to **Human resources** > **Workers** > **Workers**.
 1. Select **New** to create a worker record.
 1. Enter the hire date and any required details.
 
-This step creates or associates the Party record with the Worker role in the current legal entity.
+This step creates or associates the party record with the Worker role in the current legal entity.
 
 ### Step 4: Associate the user account with the party record
 
@@ -67,7 +67,7 @@ This step creates or associates the Party record with the Worker role in the cur
 
 If the issue persists after you verify the Worker role association, try the following steps:
 
-1. Check for duplicate **Party records** that might be causing conflicts.
+1. Check for duplicate party records that might be causing conflicts.
 1. Investigate potential customizations or extensions that could override the default behavior.
 1. [Capture a trace for further analysis](/dynamics365/fin-ops-core/dev-itpro/perf-test/trace-trace-tutorial), if it's necessary. This trace can help identify any underlying issues that might require technical support.
 
