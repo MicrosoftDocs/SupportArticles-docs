@@ -44,7 +44,7 @@ Use the following steps to properly configure your ARR server to direct backend 
    :::image type="content" source="./media/proxy-server-rejects-backend-requests/configuration-editor-section-dropdown.png" alt-text="Screenshot of the IIS Manager with the Configuration Editor pane open. The Section dropdown in the Configuration Editor is expanded and the webFarms section is selected.":::
 1. Select the ellipsis button (...) next to the **(Collection)** field to open the **Collection Editor** window.
    :::image type="content" source="./media/proxy-server-rejects-backend-requests/webfarm-collection-editor-button.png" alt-text="Screenshot of the IIS Manager with the Configuration Editor pane open. The ellipsis button to the right of the (Collection) field is highlighted.":::
-1. Select the farm you want to configure in the **Items** pane, its details are displayed in the **Properties** pane.
+1. In the **Collection Editor** window, select the farm you want to configure from the **Items** pane, its details are displayed in the **Properties** pane.
    :::image type="content" source="./media/proxy-server-rejects-backend-requests/collection-editor-select-farm.png" alt-text="Screenshot of the IIS Manager's Collection Editor window. The first webFarm in the Items pane of the Collection Editor is highlighted":::
 1. In the **Properties** pane, navigate to the **applicationRequestRouting** > **protocol** > **proxy** node.
    :::image type="content" source="./media/proxy-server-rejects-backend-requests/collection-editor-proxy-property.png" alt-text="Screenshot of the IIS Manager's Collection Editor window. The proxy node in the Properties pane is highlighted.":::
