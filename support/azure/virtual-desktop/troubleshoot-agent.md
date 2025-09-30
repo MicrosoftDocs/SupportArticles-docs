@@ -315,6 +315,71 @@ To resolve this issue:
 
     :::image type="content" source="media/troubleshoot-agent/hostpool-portal.png" alt-text="Screenshot of available session host.":::
 
+## Error: RDAgentBootLoader startup timeouts at OS boot
+
+If any of the following issues occur, the Remote Desktop Agent Boot Loader (RDAgentBootLoader) service is not starting fast enough at OS boot. This can make the session host appear unhealthy and block user connections:
+
+- RDAgentBootLoader is either stopped or not running.
+- The session host status shows **Needs assistance** or **Unavailable**.
+- Users can't connect when using start on connect.
+- The Windows Service Control Manager logs service start timeouts, such as Event 7000 or Event 7011.
+
+To resolve this issue, try the following steps:
+
+### Set RDAgentBootLoader to Automatic (Delayed Start)
+
+This defers the service startup until after initial boot pressure subsides.
+
+1.  Open **Services** (services.msc).
+2.  Locate **Remote Desktop Agent Loader**.
+3.  Right-click the service and select **Properties**.
+4.  Set **Startup type** to **Automatic (Delayed Start)**.
+5.  Select **Apply**, then **OK**.
+
+### Increase the service startup timeout
+
+This gives Windows more time to report the service as running.
+
+1.	Open Command Prompt as administrator.
+2.	Run the following command:
+
+   ```command
+   reg add "HKLM\SYSTEM\CurrentControlSet\Control" /v ServicesPipeTimeout /t REG_DWORD /d 60000 /f
+   ```
+  > [!TIP]
+  > Start with 60,000 ms (60s) and tune as needed. A reboot is required.
+
+### Verify boot performance
+
+Ensure the VM meets recommended IOPS and that image startup tasks (such as antivirus scans, heavy logon scripts, or large GPOs) aren't starving the agent at boot.
+
+### Validate required service endpoints
+
+If the host still shows **Needs assistance** or **Unavailable**, run **WVDAgentUrlTool.exe** and remediate any failing endpoints. For more information, see this [article](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-desktop/agent-connectivity#check-access-to-required-fqdns-and-endpoints).
+
+### Verification
+
+- Reboot the session host.
+- Confirm the host transitions to **Available** within a few minutes of boot.
+- Review **Event Viewer** to ensure no new service start timeouts appear.
+
+### Next steps
+
+If issues persist, review registration token health and duplicate host entries.
+
+### Recover from duplicate or expired registration
+
+Applies to: Errors such as **NAME_ALREADY_REGISTERED**, **EXPIRED_MACHINE**, or Event 3277.
+
+1.  In the Azure portal, open the host pool and remove any duplicate or stale entries for the affected session host.
+2.  Generate a new registration key for the host pool.
+3.  On the session host, uninstall the Azure Virtual Desktop Agent and Remote Desktop Agent Loader (BootLoader).
+4.  Reinstall the latest Agent and BootLoader packages.
+5.  Re-register the session host using the new registration key.
+6.  Verify the host reports **Available** and accepts connections.
+
+If that is unsuccessful, complete a clean reinstall of the Agent and Bootloader following the guidance [here](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-desktop/troubleshoot-agent#step-4-reinstall-the-agent-and-boot-loader).
+
 ## Your issue isn't listed here or wasn't resolved
 
 If you can't find your issue in this article or the instructions didn't help you, we recommend you uninstall, reinstall, and re-register the Azure Virtual Desktop Agent. The instructions in this section show you how to reregister your session host VM to the Azure Virtual Desktop service by:
