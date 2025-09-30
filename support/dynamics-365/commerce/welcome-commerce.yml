@@ -98,7 +98,7 @@ landingContent:
           - text: Troubleshoot Dynamics 365 Payment Connector for Adyen issues
             url: payments/adyen-support.md
           - text: Dynamics 365 Payment Connector for Adyen - EFT Terminal ID isn't set
-            url: payments/adyen-connector-eft-terminal-id.md
+            url: payments/adyen-connector-terminal.md
           - text: Dynamics 365 Payment Connector for Adyen - Invoicing sales orders fail due to stale authorization
             url: payments/adyen-connector-invoicing-sales-orders-fail-stale-authorization.md
           - text: Dynamics 365 Payment Connector for Adyen - Store Commerce app or IIS Hardware Station configuration isn't updated
