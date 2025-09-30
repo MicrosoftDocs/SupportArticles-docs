@@ -1,8 +1,9 @@
 ---
 title: Troubleshoot Custom Log Table Creation in Azure
 description: Troubleshooting guide for custom log table creation in Azure.
-ms.date: 07/23/2025
-ms.reviewer: v-liuamson; v-gsitser
+ms.date: 09/30/2025
+ms.author: jarretr
+ms.reviewer: v-gsitser, v-ryanberg
 ms.service: azure-monitor
 ms.custom: Configure and Manage Log analytics tables
 ---
@@ -31,9 +32,9 @@ Users might receive an error message that states "Cannot read properties of unde
 
 5. If the issue persists, try to refresh the Azure portal to make sure that all settings are updated.
 
-## Reference
+## References
 
 - [Create Custom Table in Azure](/azure/azure-monitor/vm/data-collection-log-json#create-custom-table)
 - [Data Collection Rule Best Practices](/azure/azure-monitor/data-collection/data-collection-rule-best-practices)
 
-If the issue persists after you follow these steps, please open a support case for further assistance.
+[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]

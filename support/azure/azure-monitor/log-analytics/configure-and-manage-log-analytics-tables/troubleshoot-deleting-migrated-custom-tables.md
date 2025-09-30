@@ -1,8 +1,9 @@
 ---
 title: Troubleshoot Deleting Migrated Custom Tables in Log Analytics
 description: Troubleshooting guide to deleting migrated custom tables in Log Analytics.
-ms.date: 07/24/2025
-ms.reviewer: v-liuamson; v-gsitser
+mms.date: 09/30/2025
+ms.author: jarretr
+ms.reviewer: v-gsitser, v-ryanberg
 ms.service: azure-monitor
 ms.custom: Configure and manage Log Analytics tables
 ---
@@ -29,4 +30,4 @@ To delete a migrated custom table, follow these steps by using the Azure Log Ana
 
 - [Azure Log Analytics API documentation](/rest/api/loganalytics/)
 
-If the issue persists after you follow these steps, open a support case for further assistance.
+[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
