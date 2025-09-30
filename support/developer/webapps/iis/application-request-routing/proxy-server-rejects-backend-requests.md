@@ -20,13 +20,13 @@ When your ARR server directs a request to your backend through a proxy server, t
 
 A proxy server might reject a request directed from your ARR server if the request uses a relative URL, for example:
 
-```output
+```http
 /mywebapp/mypage.aspx
 ```
 
 Per [section 5.3.2 of RFC 7230](https://datatracker.ietf.org/doc/html/rfc7230#section-5.3.2), proxy servers require requests that use absolute ULRs, for example:
 
-```output
+```http
 http://www.contoso.com/mywebapp/mypage.aspx
 ```
 
