@@ -39,7 +39,7 @@ If you're working with a computer that connects directly to Windows Update, this
 ## Resolution
 
 > [!NOTE]  
-> If you want to install OpenSSH Server or OpenSSH Client as Features on Demand, see [Can't install OpenSSH features](../system-management-components/cant-install-openssh-features).
+> If you want to install OpenSSH Server or OpenSSH Client as Features on Demand, see [Can't install OpenSSH features](../system-management-components/cant-install-openssh-features.md).
 
 1. Verify that the computer can connect to the local network. For example, use `ping` or `nslookup` commands to make sure that the computer can connect to other devices on the network and can resolve DNS addresses correctly. If needed, check the [Windows Update logs](#windows-update-logs) to help identify the source of the issue.
 
