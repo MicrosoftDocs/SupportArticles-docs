@@ -35,7 +35,7 @@ To configure Azure activity log export, follow these steps.
 1. Select all applicable categories and then select **Save**.
 
 > [!NOTE]
-> It usually takes about 30 minutes for the export to begin.
+> It usually takes about 30 minutes for the export to begin. For more information, see [Time before telemetry gets to destination](/azure/azure-monitor/platform/diagnostic-settings?tabs=portal#time-before-telemetry-gets-to-destination).
 
 ## Common issues and solutions
 
