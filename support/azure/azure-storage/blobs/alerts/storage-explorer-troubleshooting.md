@@ -843,9 +843,13 @@ docker run \
 If FSLogix manages your user profile, Storage Explorer might be unable to run due to an `EEXIST` error. The error occurs due to a known issue with recent versions of FSLogix. If you encounter the error, you can work around it by following these steps:
 
 1. Open the Group Policy Management Console (gpmc.msc).
+
 2. Create or edit a Group Policy Object (GPO) that targets your AVD session hosts.
-3. Navigate to: Computer Configuration > Preferences > Windows Settings > Registry
+
+3. Navigate to: Computer Configuration > Preferences > Windows Settings > Registry.
+
 4. Add a new Registry Item with the following settings:
+
    | Action     | Update                                     |
    |------------|--------------------------------------------|
    | Hive       | HKEY_LOCAL_MACHINE                         |
@@ -853,6 +857,7 @@ If FSLogix manages your user profile, Storage Explorer might be unable to run du
    | Value Name | SupportedFeatures                          |
    | Value Type | REG_DWORD                                  |
    | Value Data | 11 (0xB)                                   |
+
 5. Apply the GPO and reboot the session hosts.
 
 > [!TIP]
