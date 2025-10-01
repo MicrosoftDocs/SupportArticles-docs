@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 05/20/2025
+ms.date: 09/15/2025
 ms.author: jarrettr
 ms.reviewer: maries, v-weizhu
 ---
@@ -41,7 +41,7 @@ EXT4-fs warning (device sda1): ext4_clear_journal_err:4531: Filesystem error rec
 EXT4-fs warning (device sda1): ext4_clear_journal_err:4532: Marking fs in need of filesystem check.
 ```
 
-### Example 2: Fail to mount ext Logical Volume Manager (LVM) device
+### Example 2: Fail to mount ext4 Logical Volume Manager (LVM) device
 
 ```output
 [   14.382472] EXT4-fs error (device dm-0): ext4_iget:4398: inode #8: comm mount: bad extra_isize 4060 (inode size 256)

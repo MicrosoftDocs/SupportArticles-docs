@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # PXE clients computers do not start when you configure the Dynamic Host Configuration Protocol server to use options 60, 66, 67
 

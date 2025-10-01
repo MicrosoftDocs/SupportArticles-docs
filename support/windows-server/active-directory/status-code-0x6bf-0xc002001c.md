@@ -9,6 +9,8 @@ ms.reviewer: kaushika, raviks, herbertm, dennhu, eriw, v-lianna
 ms.custom:
 - sap:active directory\on-premises active directory domain join
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Status code 0x6bf or 0xc002001c: The remote procedure call failed and did not execute
 

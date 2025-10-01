@@ -403,6 +403,8 @@
       href: linux-agent-cannot-process-extensions.md
     - name: Supported operating systems
       href: ../windows/extension-supported-os.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Removing Extensions NetApp CVO Image
+      href: ../linux/removing-extensions-netapp-cvo.md
   - name: Cloud-init
     items:
     - name: Azure cloud-init support for Linux VMs

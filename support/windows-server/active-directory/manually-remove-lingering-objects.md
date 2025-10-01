@@ -9,10 +9,12 @@ ms.reviewer: kaushika, herbertm, v-lianna
 ms.custom:
 - sap:active directory\active directory replication and topology
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Manually remove lingering objects on outdated replication partners
 
-This article helps manually remove [lingering objects](information-lingering-objects.md#summary) after you bring an outdated domain controller (DC) or global catalog server back online. In many cases, you can clean up lingering objects using the `repadmin /removelingeringobjects` command or tools like [Lingering Object Liquidator](lingering-object-liquidator-tool.md). However, these facilities don't work if you have [abandoned objects](https://support.microsoft.com/topic/attributes-that-contain-stale-or-bad-data-cause-exchange-offline-address-book-oab-generation-failures-and-event-ids-9126-9330-and-9339-together-with-stop-error-code-8004010e-occur-d505154b-f51f-6604-436b-e30fe4e486d9).
+This article helps manually remove [lingering objects](information-lingering-objects.md#summary) after you bring an outdated domain controller (DC) or global catalog server back online. In many cases, you can clean up lingering objects using the `repadmin /removelingeringobjects` command or tools like [Lingering Object Liquidator](lingering-object-liquidator-tool.md). However, these facilities don't work if you have abandoned objects.
 
 _Original KB number:_ &nbsp; 314282
 

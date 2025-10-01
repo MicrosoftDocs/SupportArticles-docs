@@ -1,6 +1,15 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-client/setup-upgrade-and-drivers/prevent-users-connect-usb.md",
+      "redirect_url": "https://gpsearch.azurewebsites.net/#173",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/dataverse/working-with-solutions/failure-converting-to-managed-solution.md",
+      "redirect_url": "https://learn.microsoft.com/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions"
+    },
+    {
       "source_path": "support/power-platform/power-automate/desktop-flows/desktop-flow-runs-not-show-monitor-runs.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/desktop-flow-runs-missing-from-list",
       "redirect_document_id": false
@@ -13664,7 +13673,6 @@
       "source_path": "support/dynamics/gp/unapproved-pending-change-order-exist.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
     },
-    
     {
       "source_path": "support/dynamics/gp/use-banked-paycodes-with-project-accounting.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp"
@@ -13688,12 +13696,12 @@
     {
       "source_path": "support/windows-server/active-directory/troubleshoot-errors-join-computer-to-domain.md",
       "redirect_url": "/troubleshoot/windows-server/active-directory/domain-join-networking-errors"
-    },    
+    },
     {
-    "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-excel-errors.md",
-    "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/office-automation/excel/troubleshoot-excel-errors"
-  },
-  {
+      "source_path": "support/power-platform/power-automate/desktop-flows/troubleshoot-excel-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/office-automation/excel/troubleshoot-excel-errors"
+    },
+    {
       "source_path": "support/entra/entra-id/mfa/authorization-request-denied-graph-api.md",
       "redirect_url": "/troubleshoot/entra/entra-id/app-integration/troubleshoot-authorization-requestdenied-graph-api",
       "redirect_document_id": false
@@ -13804,41 +13812,38 @@
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/centralized-configuration-of-activity-logs-to-event-hub.md",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
-    }
-    ,
+    },
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/exporting-directory-level-activity-logs-to-event-hub.md",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
-    }
-    ,
+    },
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/pushing-subscription-activity-logs-to-sentinel.md",
       "redirect_url": "/troubleshoot/azure/azure-monitor/activity-logs/config-export/push-subscription-activity-logs-to-sentinel"
-    }
-    ,
+    },
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/resolving-log-limit-issues-in-azure-function-apps.md",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
-    }
-    ,
+    },
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/understanding-and-managing-diagnostic-settings-retention.md",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
-    }
-    ,
+    },
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/understanding-and-transitioning-from-legacy-to-diagnostic-settings.md",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
-    }
-    ,
+    },
     {
       "source_path": "support/azure/azure-monitor/activity-logs/config-export/diagnostic-settings-transition-from-legacy-solutions.md",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor"
-    }
-    ,
+    },
     {
       "source_path": "support/sql/database-engine/install/windows/error-install-sql-server-2008-r2.md",
       "redirect_url": "/troubleshoot/sql/database-engine/install/windows/error-install-sql-server"
+    },
+    {
+      "source_path": "support/sql/database-engine/install/windows/update-or-slipstream-installation.md",
+      "redirect_url": "/sql/database-engine/install-windows/install-sql-server-using-slipstream"
     }
   ]
 }

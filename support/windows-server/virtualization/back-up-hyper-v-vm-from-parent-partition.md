@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jeffpatt
 ms.custom:
 - sap:virtualization and hyper-v\backup and restore of virtual machines
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to back up Hyper-V virtual machines from the parent partition on a Windows Server computer by using Windows Server Backup
 

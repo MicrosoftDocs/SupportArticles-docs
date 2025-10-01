@@ -9,6 +9,8 @@ ms.reviewer: kaushika, raackley
 ms.custom:
 - sap:system performance\system configuration (page file,startup or running apps,error handling)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Copying .EXE files may result in a sharing violation error - Folder In Use
 

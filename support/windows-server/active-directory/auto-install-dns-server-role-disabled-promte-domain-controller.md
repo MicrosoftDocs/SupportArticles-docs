@@ -9,6 +9,8 @@ ms.reviewer: arrenc, kaushika
 ms.custom:
 - sap:active directory\dcpromo and the installation or removal of domain controllers
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Unable to select DNS Server role when adding a domain controller into an existing Active Directory domain
 

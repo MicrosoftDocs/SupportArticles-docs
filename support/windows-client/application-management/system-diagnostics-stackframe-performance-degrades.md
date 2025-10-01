@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:application technologies and compatibility\.net framework installation
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Performance of System.Diagnostics.StackFrame decreases in Windows 10 and .NET Framework 4.7.1
 

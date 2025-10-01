@@ -9,6 +9,8 @@ ms.reviewer: warrenw, kaushika
 ms.custom:
 - sap:network connectivity and file sharing\file replication technologies (frs and dfsr)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # DFSR event ID 2213 in Windows Server 2008 R2
 

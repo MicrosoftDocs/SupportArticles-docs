@@ -9,6 +9,8 @@ ms.reviewer: kaushika, chwall
 ms.custom:
 - sap:system performance\startup or pre-logon performance (slow,unresponsive,spinning circle,blank screen)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Kernel memory dump files may not be generated on Windows Server 2008-based and Windows Vista SP1 or later based computers when physical memory is larger than the size of the page file
 

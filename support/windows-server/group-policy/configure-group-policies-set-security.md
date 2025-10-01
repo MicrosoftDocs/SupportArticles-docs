@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:group policy\security filtering and item-level targeting
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How To Configure Group Policies to Set Security for System Services
 

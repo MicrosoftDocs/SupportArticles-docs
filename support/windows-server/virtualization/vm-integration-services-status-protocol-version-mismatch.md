@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-jesits, arrenc, ajayps, sarathm
 ms.custom:
 - sap:virtualization and hyper-v\integration components
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # VM Integration Services status reports protocol version mismatch on pre-Windows 10, Windows Server 2016, or Windows Server 2019 VM guests
 

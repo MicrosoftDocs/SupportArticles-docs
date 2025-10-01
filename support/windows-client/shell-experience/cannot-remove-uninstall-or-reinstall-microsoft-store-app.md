@@ -9,6 +9,8 @@ ms.reviewer: kaushika, wesk
 ms.custom:
 - sap:windows desktop and shell experience\modern,inbox and microsoft store apps
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Removing, uninstalling, or reinstalling Microsoft Store app isn't supported
 

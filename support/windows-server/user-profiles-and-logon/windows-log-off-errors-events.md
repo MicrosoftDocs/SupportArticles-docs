@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:user logon and profiles\service account and interactive user logon issues and credential providers
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # You experience log-off problems on a Windows XP-based, Windows Server 2003-based, Windows 2000-based, or Windows NT 4.0-based computer
 

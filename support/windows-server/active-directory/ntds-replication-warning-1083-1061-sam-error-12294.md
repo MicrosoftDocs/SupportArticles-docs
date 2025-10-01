@@ -9,6 +9,8 @@ ms.reviewer: kaushika, rolandw, herbertm
 ms.custom:
 - sap:active directory\active directory replication and topology
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Description of NTDS replication warning IDs 1083 and 1061, and SAM error ID 12294 because of an Active Directory collision
 

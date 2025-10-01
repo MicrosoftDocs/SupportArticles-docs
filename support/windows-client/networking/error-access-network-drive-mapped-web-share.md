@@ -9,6 +9,8 @@ ms.reviewer: amanjain, kaushika
 ms.custom:
 - sap:network connectivity and file sharing\access to file shares (smb)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Error when you try to access a network drive that's mapped to a web share: User has not been authenticated
 

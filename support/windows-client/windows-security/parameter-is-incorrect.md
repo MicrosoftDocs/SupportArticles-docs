@@ -9,6 +9,8 @@ ms.reviewer: kaushika, joscon, manojse
 ms.custom:
 - sap:windows security technologies\bitlocker
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Parameter is incorrect error message when you try to enable  BitLocker if you don't have a separate active partition in Windows Server 2008 Core and Windows 2008 R2 Core Edition
 

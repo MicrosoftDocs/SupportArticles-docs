@@ -9,6 +9,8 @@ ms.reviewer: manojse, kaushika, dereka
 ms.custom:
 - sap:windows security technologies\bitlocker
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # BitLocker could not be enabled when USB drive is not found
 

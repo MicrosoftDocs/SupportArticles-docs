@@ -9,6 +9,8 @@ ms.reviewer: arrenc, herbertm, warrenw, kaushika, joscon
 ms.custom:
 - sap:windows setup,upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Domain Controllers in-place upgrade hangs at black screen
 

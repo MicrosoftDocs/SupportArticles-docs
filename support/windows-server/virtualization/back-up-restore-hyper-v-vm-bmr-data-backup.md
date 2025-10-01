@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:virtualization and hyper-v\backup and restore of virtual machines
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Back up and restore a Hyper-V VM by using BMR and data backup
 

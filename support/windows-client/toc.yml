@@ -771,8 +771,6 @@ items:
       href: ./setup-upgrade-and-drivers/non-compliant-usb-3-devices-not-function.md
     - name: Power Management tab isn't visible
       href: ./setup-upgrade-and-drivers/power-management-not-visible-in-aoac-platform.md
-    - name: Prevent users from connecting to a USB storage device
-      href: ./setup-upgrade-and-drivers/prevent-users-connect-usb.md      
     - name: Running TPM Management console fails
       href: ./setup-upgrade-and-drivers/cannot-load-tpm-management-console.md
     - name: '"The operation timed out" error'
@@ -805,6 +803,10 @@ items:
       href: ./setup-upgrade-and-drivers/iso-file-on-vlsc.md
     - name: Error 0x80042468 when creating a single partition
       href: ./setup-upgrade-and-drivers/error-when-creating-single-partition.md
+    - name: 'Error 0x80070003 during "Process Drivers for Migration" operation'
+      href: ../windows-server/setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md?context=/troubleshoot/windows-client/context/context
+    - name: Error 0x800F0818 - 0x20003 during upgrade from Windows 10 to Windows 11
+      href: ./setup-upgrade-and-drivers/error-0x800f0818-during-upgrade-to-windows-11.md
     - name: Error 87 when a Windows 10 image is applied
       href: ./setup-upgrade-and-drivers/dism-error-87-apply-windows-10-image.md
     - name: Error "A fatal error occurred while trying to sysprep the machine"
@@ -1073,6 +1075,12 @@ items:
       href: ./system-management-components/fail-to-launch-vamt-3dot0.md
     - name: Windows Trace Session Manager service doesn't start
       href: ./system-management-components/windows-trace-session-manager-service-not-start-event-id-7000.md
+  - name: OpenSSH
+    items:
+    - name: Can't install OpenSSH features
+      href: ../windows-server/system-management-components/cant-install-openssh-features.md?context=/troubleshoot/windows-client/context/context
+    - name: OpenSSH client can't connect to a server via SSH
+      href: ../windows-server/system-management-components/open-client-can-not-connect-server.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell
     items:
     - name: Grant-DfsnAccess doesn't change inheritance mode
@@ -1357,6 +1365,8 @@ items:
       href: ./installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md
     - name: How to keep Windows up to date
       href: ./installing-updates-features-roles/keep-windows-up-to-date.md
+    - name: Known Issue Rollback
+      href: ../windows-server/installing-updates-features-roles/known-issue-rollback.md?context=/troubleshoot/windows-client/context/context
     - name: SFC flags Windows Defender files as corrupted
       href: ./installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md
     - name: Standard terminology that defines software updates

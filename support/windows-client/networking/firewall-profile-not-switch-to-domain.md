@@ -9,6 +9,8 @@ ms.reviewer: winciccore, heigen, kaushika
 ms.custom:
 - sap:network connectivity and file sharing\windows firewall with advanced security (wfas)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Windows Firewall profile doesn't always switch to Domain when you use a third-party VPN client
 

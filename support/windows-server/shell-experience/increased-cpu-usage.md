@@ -9,6 +9,8 @@ ms.reviewer: kaushika, stevepar
 ms.custom:
 - sap:windows desktop and shell experience\file explorer (app only,folders,quick access,file explorer search)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Increased CPU usage when you access a SQL Server FileTable share from Windows Explorer
 

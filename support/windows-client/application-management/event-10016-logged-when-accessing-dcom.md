@@ -10,6 +10,8 @@ ms.custom:
 - sap:application technologies and compatibility\dcom service startup and permissions
 - pcy:WinComm User Experience
 adobe-target: true
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # DCOM event ID 10016 is logged in Windows
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, Johnf
 ms.custom:
 - sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How To Install and Configure a DHCP Server in a Workgroup  
 

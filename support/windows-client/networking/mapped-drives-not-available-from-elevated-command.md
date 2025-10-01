@@ -9,6 +9,8 @@ ms.reviewer: kaushika, ntuttle, ardenw
 ms.custom:
 - sap:network connectivity and file sharing\access to file shares (smb)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Mapped drives are not available from an elevated prompt when UAC is configured to Prompt for credentials
 

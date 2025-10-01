@@ -9,6 +9,8 @@ ms.reviewer: kaushika, willgloy
 ms.custom:
 - sap:windows activation\windows activation issues
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error when you try to activate Windows Server 2003 over the Internet: Message Number 32777
 

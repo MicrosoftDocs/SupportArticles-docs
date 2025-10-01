@@ -9,6 +9,8 @@ ms.reviewer: takondo
 ms.custom:
 - sap:user logon and profiles\user profiles
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Retrieve certificate to troubleshoot Windows Hello for Business logon failures
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, fmu
 ms.custom:
 - sap:managing-internet-explorer-settings-through-group-policy
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # "Allow active content to run files on My Computer" Group Policy setting does not work as expected
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, edwardr, danalb, mandarg, oscarlee, davidhen, sudheer, si
 ms.custom:
 - sap:windows servicing,updates and features on demand\windows update configuration,settings and management
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Description of the Windows Server Update Services 3.0 Service Pack 1 package
 

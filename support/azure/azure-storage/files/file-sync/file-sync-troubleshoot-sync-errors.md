@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 07/24/2025
+ms.date: 08/25/2025
 ms.author: kendownie
 ms.custom: sap:File Sync, devx-track-azurepowershell
 ms.reviewer: v-weizhu, vritikanaik
@@ -207,6 +207,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 | 0x80070035 | -2147024843 | ERROR_BAD_NETPATH | The network path was not found. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80071779 | -2147018887 | ERROR_FILE_READ_ONLY | The specified file is read only. | If the error persists for more than a day, create a support request. |
 | 0x80070006 | -2147024890 | ERROR_INVALID_HANDLE | An internal error occurred. | If the error persists for more than a day, create a support request. |
+| 0x80070032 | -2147024846 | ERROR_NOT_SUPPORTED | The file is failing to upload as the tiered file is likely orphaned. |
 | 0x8007012f | -2147024593 | ERROR_DELETE_PENDING | The file cannot be opened because it is in the process of being deleted. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80041007 | -2147217401 | SYNC_E_ITEM_MUST_EXIST | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0X80C80293 | -2134375789 | ECS_E_SYNC_INITIAL_SCAN_COMPLETED | The sync session failed because the initial enumeration was completed. The next session will cover the full namespace. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
@@ -754,8 +755,9 @@ Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncSer
 
 This error might occur due to the following reasons:
 
-- A new server certificate is generated on the Azure File Sync server, and the old certificate is still cached. This error will be resolved within a few hours once the server cache is refreshed.
-- The server endpoint deletion failed, leaving the endpoint in a partially deleted state. To resolve this issue, retry deleting the server endpoint.
+- The server’s managed identity tenant ID doesn't match the tenant ID of the Storage Sync Service or the storage account.
+- The server was recently re-registered or its managed identity configuration changed, but the update hasn't propagated yet.
+ 
 
 
 <a id="-1906441711"></a><a id="-2134375654"></a><a id="doesnt-have-enough-free-space"></a>**The volume where the server endpoint is located is low on disk space.**  

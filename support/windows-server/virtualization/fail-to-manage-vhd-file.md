@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:virtualization and hyper-v\virtual machine creation
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error when you manage a VHD file in Windows Server: "A Virtual Disk Provider for the specified file was not found"
 

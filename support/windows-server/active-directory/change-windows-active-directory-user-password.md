@@ -7,6 +7,8 @@ ms.custom:
 - pcy:WinComm Directory Services
 ms.reviewer: RRANDALL, HerbertMauerer, v-jayaramanp
 ms.topic: how-to
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Change a Windows Active Directory and LDS user password through LDAP
 

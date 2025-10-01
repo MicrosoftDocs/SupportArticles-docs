@@ -9,6 +9,8 @@ ms.reviewer: kaushika, stevepar, eltons, raviks
 ms.custom:
 - sap:virtualization and hyper-v\configuration of virtual machine settings
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Copy-and-paste operations don't work when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode
 

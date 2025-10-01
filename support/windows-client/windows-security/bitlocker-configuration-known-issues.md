@@ -10,6 +10,8 @@ ms.custom:
 - sap:windows security technologies\bitlocker
 - pcy:WinComm Devices Deploy
 audience: itpro
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # BitLocker configuration: known issues
 

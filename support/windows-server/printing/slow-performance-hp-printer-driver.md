@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:print,fax,and scan\print performance - failures,crashes,not responsive
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Slow performance when you try to print, when you open the printer properties, or when you open the printer preferences
 

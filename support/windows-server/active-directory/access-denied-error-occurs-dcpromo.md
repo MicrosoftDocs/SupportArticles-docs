@@ -9,6 +9,8 @@ ms.reviewer: kaushika, Arrenc
 ms.custom:
 - sap:active directory\dcpromo and the installation or removal of domain controllers
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # DCPROMO fails with error "Access is denied" if the user does the promotion isn't granted the "trusted for delegation" user right
 

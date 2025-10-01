@@ -9,6 +9,8 @@ ms.reviewer: kaushika, arrenc, chriti, demartin, mgorti, rpowell, shibird, sirka
 ms.custom:
 - sap:windows activation\windows activation issues
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Activation failures and (not genuine) notifications around January 8, 2019, on volume-licensed Windows 7 Service Pack 1 KMS clients
 

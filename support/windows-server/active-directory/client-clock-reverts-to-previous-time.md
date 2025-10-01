@@ -10,6 +10,8 @@ ms.custom:
 - sap:active directory\windows time service configuration,accuracy,and synchronization
 - pcy:WinComm Directory Services
 keywords: Windows Time service, w32time, clock skew, NTP
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Windows computer clock resets to a previous date and time

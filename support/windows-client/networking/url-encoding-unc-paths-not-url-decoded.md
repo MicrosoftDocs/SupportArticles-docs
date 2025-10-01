@@ -9,6 +9,8 @@ ms.reviewer: kaushika, tonyga, ajayps, v-jeffbo
 ms.custom:
 - sap:network connectivity and file sharing\dns
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # URI-encoding in UNC paths interpreted literally in Windows 10, version 1803 and later
 

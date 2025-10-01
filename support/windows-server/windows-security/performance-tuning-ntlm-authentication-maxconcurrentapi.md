@@ -9,6 +9,8 @@ ms.reviewer: kaushika, tspring
 ms.custom:
 - sap:windows security technologies\legacy authentication (ntlm)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting
 

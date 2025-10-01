@@ -10,6 +10,8 @@ ms.custom:
 - sap:windows update for business reports\initial service configuration and onboarding
 - pcy:WinComm Devices Deploy
 keywords: Windows Update for Business reports, WUBr, diagnostic data, telemetry
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Windows Update for Business reports: Troubleshooting guidance

@@ -11,9 +11,9 @@ ms.reviewer: jopilov
 
 _Applies to:_ &nbsp; SQL Server
 
-When connecting to a SQL Server instance, you may encounter one or more of the following [error messages](#error-messages). This article provides some steps to help you troubleshoot these errors, which are provided in order of the issues from simple to complex.
+When connecting to a SQL Server instance, you may encounter one or more [error messages](#common-sql-server-connection-error-messages). This article explains how to [collect the necessary information](#gather-information-to-troubleshoot-sql-server-connection-errors) to diagnose these issues and outlines a structured troubleshooting approach to help you resolve these issues, starting with basic checks and moving on to more advanced techniques.
 
-## Error messages
+## Common SQL Server connection error messages
 
 The complete error messages vary depending on the client library that's used in the application and the server environment. You can check the following details to see if you're encountering one of the following error messages:
 
@@ -97,7 +97,7 @@ The complete message is:
 
 This message means that SQL Server isn't listening on the Shared Memory or Named Pipes protocol.
 
-## Gather information for troubleshooting the error
+## Gather information to troubleshoot SQL Server connection errors
 
 We recommend that you gather the information listed in this section using one of the following options before proceeding with the actual steps to troubleshoot the error.
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-lianna
 ms.custom:
 - sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to reset TCP/IP by using the NetShell utility
 
@@ -174,4 +176,4 @@ deleted SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\UseDomainNameDevoluti
 For more information, see:
 
 - [Chapter 16 – Troubleshooting TCP/IP](/previous-versions/tn-archive/bb727023(v=technet.10)?redirectedfrom=MSDN)
-- [TCP/IP and NBT configuration parameters for Windows](/troubleshoot/windows-client/networking/tcpip-and-nbt-configuration-parameters)
+- [TCP/IP and NBT configuration parameters for Windows](../../windows-client/networking/tcpip-and-nbt-configuration-parameters.md)

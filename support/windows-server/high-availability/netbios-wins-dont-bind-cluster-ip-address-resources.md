@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jeffhugh
 ms.custom:
 - sap:clustering and high availability\setup and configuration of clustered services and applications
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # NetBIOS and WINS don't bind to cluster IP address resources
 

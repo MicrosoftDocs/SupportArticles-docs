@@ -7,6 +7,8 @@ ms.reviewer: kaushika, cdascoli, bechinch, khoffman
 ms.custom:
 - sap:backup,recovery,disk,and storage\volume shadow copy service (vss)
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Event ID 32 occurs, and shadow copies are unexpectedly deleted
 

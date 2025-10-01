@@ -9,6 +9,8 @@ ms.reviewer: kaushika, MASOUDH
 ms.custom:
 - sap:networking\remote access
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to troubleshoot a Microsoft L2TP/IPSec virtual private network client connection
 

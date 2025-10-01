@@ -9,6 +9,8 @@ ms.reviewer: kaushika, flbelea, v-lianna
 ms.custom:
 - sap:certificates and public key infrastructure (pki)\active directory certificate services (adcs)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # CA certificate renewal with the existing public and private key pair fails when using a KSP provider
 
