@@ -1,8 +1,10 @@
 ---
 title: Configuring Azure Activity Log Export
-description: Provides guidance for resolving issues related to configuring the export of Azure Activity logs
-ms.date: 08/18/2025
-ms.reviewer: v-liuamson; v-gsitser; v-sisidhu
+description: Provides guidance for resolving issues related to configuring the export of Azure activity logs
+ms.date: 10/01/2025
+author: JarrettRenshaw
+ms.author: jarrettr
+ms.reviewer: v-gsitser, v-ryanberg, neghuman, vikamala 
 ms.service: azure-monitor
 ms.custom: I can’t configure export of activity logs
 ---
@@ -27,18 +29,45 @@ To configure Azure activity log export, follow these steps.
 
 ### Step 3: Configure new export settings
 
-1. Go to **Azure Monitor**, and select **Diagnostic settings**.
-1. Create a setting by specifying the **Log Analytics workspace** and **Event Hub** as destinations.
+1. Select **Activity log** > **Export Activity Logs**.
+1. Find and select the subscription, and then select **Add diagnostic setting**.
+1. In the **Diagnostic setting name** box, enter a name.
+1. Select all applicable categories and then select **Save**.
 
-### Step 4: Test the new configuration
+> [!NOTE]
+> It usually takes about 30 minutes for the export to begin.
 
-1. Make sure to test the configuration by generating sample logs.
-1. Check the destination to verify that logs are exported as expected.
+## Common issues and solutions
 
-### Step 5: Monitor and adjust
+- **Issue**: Logs aren't appearing in configured destinations.
+- **Solution**: See the following guidance for log analytics, event hubs, and storage accounts.
 
-1. Regularly monitor the logs to make sure that they're exported correctly.
-1. Adjust the settings as necessary, based on the log data and performance.
+### For log analytics
+
+1. Navigate to **Log Analytics workspaces**.
+1. Select the workspace and then run the following query:
+
+```powershell
+AzureActivity
+| summarize count() by bin(TimeGenerated,1d)
+```
+
+This should determine the number of logs per day that are being ingested into this workspace.
+
+### For event hubs
+
+1. Navigate to **Event Hubs**.
+1. Select the event hub and then select **Data Explorer**.
+1. Verify the logs are reaching the event hub. 
+
+If the logs aren't reaching the event hub, check for throttling using a metrics blade.
+
+### For storage accounts
+
+1. Navigate to **Storage center | Storage accounts (Blobs)**.
+1. Locate and select the **insights-activity-logs** container.
+
+The logs should be visible.
 
 ## Frequently asked questions
 
