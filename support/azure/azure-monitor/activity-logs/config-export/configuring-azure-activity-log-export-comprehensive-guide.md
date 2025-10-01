@@ -4,7 +4,7 @@ description: Provides guidance for resolving issues related to configuring the e
 ms.date: 10/01/2025
 author: JarrettRenshaw
 ms.author: jarrettr
-ms.reviewer: v-gsitser, v-ryanberg, neghuman, vikamala, jarrettr 
+ms.reviewer: v-gsitser, v-ryanberg, neghuman, vikamala
 ms.service: azure-monitor
 ms.custom: I can’t configure export of activity logs
 ---
