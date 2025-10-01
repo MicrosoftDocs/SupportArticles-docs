@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Proxy Server Rejects Requests from ARR to Backend Servers
+title: Troubleshoot Proxy Server Rejects Requests from ARR to Back-End Servers
 description: Learn how to resolve issues that cause a proxy server to reject requests directed through it from your ARR to back-end servers.
 ms.date: 09/30/2025
 ms.custom: sap:Application Request and Routing (ARR)\Proxy
@@ -16,11 +16,10 @@ This article provides troubleshooting guidance for a scenario in which a proxy s
 
 When your ARR server directs a request to your back-end server through a proxy server, the following events occur:
 
-- The proxy server rejects the request.
-- The ARR server returns an `HTTP 400 Bad Request` status code.
-- The ARR server returns the following error message to the client server that initiated the request:
+- The proxy server rejects the request and returns an `HTTP 400 Bad Request` status code with an error message that the requested URL is invalid.
+- The ARR server returns an `HTTP 400 Bad Request` status code and the following error message to the client that initiated the request:
 
-   > Some aspect of the requested URL is incorrect.
+  > Some aspect of the requested URL is incorrect.
 
 ## Cause
 
