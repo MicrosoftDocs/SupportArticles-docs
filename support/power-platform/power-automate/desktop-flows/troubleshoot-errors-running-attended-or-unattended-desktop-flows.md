@@ -2,7 +2,7 @@
 title: Error code occurs when running an attended or unattended desktop flow
 description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.date: 09/11/2025
-ms.reviewer: cefriant, kenseongtan, guco, johndund, alarnaud, ermathon, iopanag
+ms.reviewer: cefriant, kenseongtan, guco, johndund, alarnaud, ermathon, iopanag, v-shaywood
 ms.custom: sap:Desktop flows\Unattended flow runtime errors
 ---
 # Error code occurs when running an attended or unattended desktop flow
@@ -70,3 +70,4 @@ _Original KB number:_ &nbsp; 4555406
 |MachineNotFound|404|Attended</br>Unattended|This error can occur when the machine is unregistered during a run or if the Dataverse organization has been migrated to a different region. Verify that:</br>- Your machine is still registered by [viewing its status](/power-automate/desktop-flows/manage-machines#view-list-of-machines) in the machine runtime application or the Power Automate portal.</br>- Your [desktop flow connection](/power-automate/desktop-flows/desktop-flow-connections) isn't broken in the Power Automate portal.</br>- [Scripting actions](/power-automate/desktop-flows/actions-reference/scripting) in your flow don't register your machine while the flow is running.|
 |NoSessionFoundForPasswordless|400|Attended|An opened session on the machine is required to run the desktop flow in attended mode. You can also use unattended mode instead of using a [Power Automate Process license](/power-platform/admin/power-automate-licensing/deep-dive-on-specific-license#power-automate-process-license).|
 |MSEntraRemoteDesktopAppConsentRequired|400|Unattended|The Remote Desktop connection consent dialog was shown when attempting to establish the unattended session. For more information about how to hide the consent dialog, see [Admin consent for unattended runs using CBA or sign-in credentials with NLA](/power-automate/desktop-flows/run-unattended-desktop-flows#admin-consent-for-unattended-runs-using-cba-or-sign-in-credentials-with-nla-preview).|
+|UIFlowParentFlowFailed|N/A|Attended</br>Unattended|- Check if a parent cloud flow failed. If so, resolve any issues in the parent flow.</br>- Check if your machine's (or machine group’s) run queue is too large, or if the connection usage is being throttled. If so, assign your desktop flow to a new connection to avoid throttling issues.|
