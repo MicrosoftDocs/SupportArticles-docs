@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 07/01/2025
+ms.date: 10/02/2025
 ---
 # Known issues with Teams Rooms on Windows
 
@@ -41,6 +41,7 @@ ms.date: 07/01/2025
 |Unable to join some Webex meetings|When you select the **Join** button to join a Cisco Webex meeting from a Teams Rooms on Windows device, you're not connected to the meeting and see the home screen on the device instead.|No workaround is available at this time. Cisco is investigating the issue.|
 |Only see one camera's view even though multi-camera feature is turned on.|Your Teams Rooms on Windows device is configured for multiple cameras. However after the device restarts, remote users might see only the default camera's view.<br/><br/>This issue might occur only in the first meeting after the device restarts. The cameras function as expected in all subsequent meetings.|To work around the issue, end the first meeting after the device restarts, and start a second meeting.|
 |Front of Room view displays a blank, black screen on a remote access tool.|When you access a Teams Rooms on Windows console remotely by using tools such as the Teams Rooms Pro Management Portal (PMP), TeamViewer, Virtual Network Computing (VNC) etc., the Front of Room (FoR) monitors display a black image instead of the expected user interface.<br/><br/>The FoR monitors in the meeting room display the expected screen but show only a black image in the view on the remote access tool.<br/><br/>If you sign in to the Teams Rooms device by using administrator credentials, you see the Windows screen in the FoR view as expected.|Restart your device to update to the latest configuration to fix the issue.|
+|Automatic remediation in Pro Management portal keeps failing.|The built-in remediation in the Microsoft Teams Rooms Pro Management portal to disable the USB peripheral power draining option under Windows USB settings keeps failing with the error message:<br/><br/>`Auto Remediation was unable to resolve this issue.`|To resolve the issue, implement a manual fix as described in [USB Peripheral Power Drain signal is unhealthy](Teams\teams-rooms-and-devices\usb-peripheral-power-drain-status-unhealthy.md).|
 
 ## Hardware issues
 
