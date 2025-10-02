@@ -3,7 +3,7 @@ title: Troubleshoot Azure Virtual Desktop Agent Issues
 description: Helps resolve common Azure Virtual Desktop Agent and connectivity issues.
 ms.topic: troubleshooting
 ms.date: 01/21/2025
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ms.custom: docs_inherite, pcy:wincomm-user-experience
 ---
 # Troubleshoot common Azure Virtual Desktop Agent issues
