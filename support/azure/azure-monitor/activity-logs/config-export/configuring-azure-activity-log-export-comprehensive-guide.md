@@ -24,7 +24,7 @@ To configure Azure activity log export, follow these steps.
 
 ### Step 2: Update legacy methods
 
-1. If you're using legacy APIs or PowerShell commands, update them to the latest versions.
+1. If you're using legacy APIs or PowerShell commands, update them to use [diagnostic settings](/answers/questions/1851179/what-will-happen-to-the-azure-activity-logs-soluti).
 1. Use the `Get-AzOperationalInsightsDataSource` command to verify existing data sources.
 
 ### Step 3: Configure new export settings
