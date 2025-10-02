@@ -3,7 +3,7 @@ title: Troubleshoot app attach in Azure Virtual Desktop
 description: Learn how to troubleshoot app attach in Azure Virtual Desktop, where you can dynamically attach applications from an application package to a user session.
 ms.topic: troubleshooting
 ms.date: 01/21/2025
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ms.custom: pcy:wincomm-user-experience
 ---
 # Troubleshoot app attach in Azure Virtual Desktop
