@@ -1,0 +1,49 @@
+---
+title: How to enable OpenSSH verbose logging
+description: Explains how to enable verbose logging for the OpenSSH service.
+ms.date: 10/03/2025
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.reviewer: kaushika, warrenw, v-appelgatet
+ms.custom:
+- sap:system management components\openssh (including sftp)
+- pcy:WinComm User Experience
+appliesto:
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+  - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+---
+# How to enable OpenSSH verbose logging
+
+To enable logging, modify the sshd_config file and restart the OpenSSH service.
+
+1. Using an Administrator-level account, open a text editor, and then open **%ProgramData%\ssh\sshd_config**. The default text of the log section should resemble the following excerpt:
+
+   ```output
+   # Logging
+   #SyslogFacility AUTH
+   #LogLevel INFO
+   ```
+
+1. To enable verbose logging, edit the text to resemble the following excerpt:
+
+   ```output
+   # Logging
+   SyslogFacility AUTH
+   LogLevel VERBOSE
+   ```
+
+   > [!NOTE]  
+   > By default, the logs go to Windows Event Viewer. To record a log file, instead, use `SyslogFacility LOCAL0`. The OpenSSH service records log files in %ProgramData%\ssh\logs.
+
+1. Save and close the sshd_config file.
+
+1. To restart the OpenSSH service, open a Windows Command Prompt window, and then run the following command:
+
+   ```console
+   NET STOP "OpenSSH SSH Server" && NET START "OpenSSH SSH Server"
+   ```
+
+After the service restarts, it generates verbose log data.
+
+For more information about configuring OpenSSH, see the [Windows configurations in sshd_config](/windows-server/administration/OpenSSH/openssh-server-configuration#windows-configurations-in-sshd_config) section of "OpenSSH Server configuration for Windows Server and Windows."
