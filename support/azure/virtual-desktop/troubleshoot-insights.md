@@ -3,7 +3,7 @@ title: Troubleshoot Monitor Azure Virtual Desktop
 description: Helps troubleshoot issues with Azure Virtual Desktop Insights.
 ms.topic: troubleshooting
 ms.date: 01/21/2025
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Troubleshoot Azure Virtual Desktop Insights
