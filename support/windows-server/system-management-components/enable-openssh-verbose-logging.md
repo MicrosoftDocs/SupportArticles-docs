@@ -15,9 +15,9 @@ appliesto:
 ---
 # How to enable OpenSSH verbose logging
 
-To enable logging, modify the sshd_config file and restart the OpenSSH service.
+To enable logging verbose logging for the OpenSSH Server service, modify the sshd_config file and restart the OpenSSH Server service. To do this, follow these steps:
 
-1. Using an Administrator-level account, open a text editor, and then open **%ProgramData%\ssh\sshd_config**. The default text of the log section should resemble the following excerpt:
+1. Using an Administrator-level account, open a text editor, and then open **%ProgramData%\ssh\sshd_config**. The default text of the "Logging" section should resemble the following excerpt:
 
    ```output
    # Logging
@@ -34,11 +34,11 @@ To enable logging, modify the sshd_config file and restart the OpenSSH service.
    ```
 
    > [!NOTE]  
-   > By default, the logs go to Windows Event Viewer. To record a log file, instead, use `SyslogFacility LOCAL0`. The OpenSSH service records log files in %ProgramData%\ssh\logs.
+   > By default, the OpenSSH Server service sends logs to Windows Event Viewer. To record a log file instead, use `SyslogFacility LOCAL0` instead of `SyslogFacility AUTH` in sshd_config. The OpenSSH service records log files in %ProgramData%\ssh\logs.
 
 1. Save and close the sshd_config file.
 
-1. To restart the OpenSSH service, open a Windows Command Prompt window, and then run the following command:
+1. To restart the OpenSSH Server service, open a Windows Command Prompt window, and then run the following command:
 
    ```console
    NET STOP "OpenSSH SSH Server" && NET START "OpenSSH SSH Server"
