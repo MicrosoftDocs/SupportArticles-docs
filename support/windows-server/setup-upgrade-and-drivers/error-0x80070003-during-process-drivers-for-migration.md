@@ -9,10 +9,11 @@ ms.reviewer: kaushika, v-appelgatet
 ms.custom:
 - sap:windows setup, upgrade and deployment\installing or upgrading windows
 - pcy:WinComm Devices Deploy
+appliesto:
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # "0x80070003" error and Windows upgrade fails during "Process Drivers for Migration"
-
-*Applies to*: Windows Server 2025, Windows Server 2022, Windows 11
 
 This article discusses how to resolve issues that cause a "0x80070003" error to occur during the "Process Drivers for Migration" operation of an in-place upgrade of Windows or Windows Server.
 
