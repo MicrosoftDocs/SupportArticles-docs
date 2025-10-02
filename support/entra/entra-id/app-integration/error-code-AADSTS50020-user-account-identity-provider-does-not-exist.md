@@ -157,7 +157,7 @@ Then, check the creation date of the guest user in the resource tenant against t
 
 #### Microsoft Entra PowerShell
 
-Run the [Get-EntraUser](/powershell/module/microsoft.entra/get-entrauser) PowerShell cmdlet to review the user creation date, as follows:
+Run the [Get-EntraUser](/powershell/module/microsoft.entra.users/get-entrauser) PowerShell cmdlet to review the user creation date, as follows:
 
 ```powershell
 Get-EntraUser -UserId {id | userPrincipalName} | Select-Object id, userPrincipalName, createdDateTime
