@@ -1,6 +1,6 @@
 ---
 title: USB-connected Audio or Video Devices Experience Glitches when Connected to Specific Intel-based Devices
-description: Apply a registry fix to resolve USB audio/video issues on Intel 500/600/700 PCH systems with discrete TPM.
+description: Describes how to apply an update and a registry fix to resolve USB audio/video issues on Intel 500/600/700 PCH systems that use discrete TPM chips.
 ms.service: windows-client
 ms.topic: troubleshooting-general
 ms.date: 10/02/2025
@@ -24,11 +24,11 @@ You might observer one or more of the following symptoms:
 
 ## Affected devices
 
-This issue affects Intel-based system using a 500, 600, or 700 series Platform Controller Hubs that have discrete TPM chips (dTPMs). Computers that use firmware TPM technology aren't affected.
+This issue affects Intel-based system using a 500, 600, or 700 series Platform Controller Hubs that have discrete Trusted Platform Module (dTPMs) chips. Computers that use firmware TPM (fTPM) technology aren't affected.
 
 ## Workarounds
 
-The following steps might resolve the issue. This relief might be temporary.
+You might temporarily resolve the issue by following these steps.
 
 1. Unplug the device, and then reattach it to the computer.
 2. If the previous step doesn't work, restart the computer.
@@ -47,7 +47,7 @@ The October 2025 update for Windows 24H2 introduces a fix for this hardware issu
 
 1. Confirm that the device uses a dTPM instead of an fTPM. To find this information, you might have to check the device's BIOS settings or contact the device manufacturer.
 
-1. Run the diagnostic script that's provided in the [More information](#more-information) section of this article.
+1. Run the diagnostic script in the [More information](#more-information) section of this article.
 
    This script checks whether the fix applies to your device.
 
@@ -66,7 +66,7 @@ The October 2025 update for Windows 24H2 introduces a fix for this hardware issu
 
 ## More information
 
-You can use the following Windows PowerShell script to determine whether your PC has one of the controllers that might be affected. To run this script, create a file that uses a name such as **Check-USBSplitTransactionVulnerability.ps1**. Then paste the following text into the file, From a PowerShell command prompt, run the script.
+You can use the following Windows PowerShell script to determine whether your PC has one of the controllers that might be affected. To run this script, create a file that uses a name such as **Check-USBSplitTransactionVulnerability.ps1**. Then paste the following text into the file. From a PowerShell command prompt, run the script.
 
 > [!NOTE]  
 > In Device Manager, the device in question appears under **System Devices**. It has a name that resembles "Intel(R) LPC Controller/eSPI Controller."
