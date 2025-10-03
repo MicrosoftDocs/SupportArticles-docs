@@ -5,9 +5,10 @@ ms.service: windows-client
 ms.topic: troubleshooting-general
 ms.date: 10/02/2025
 ms.custom: 
-- sap:Windows Device and Driver Management\Issues with drivers or updates for peripheral devices
+- sap:windows device and driver management\issues with drivers or updates for peripheral devices
 - pcy:WinComm Devices Deploy
-appliesto: <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+appliesto:
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 
 # USB-connected audio or video devices experience glitches when connected to specific Intel-based devices
