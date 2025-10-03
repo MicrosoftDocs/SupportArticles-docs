@@ -35,6 +35,7 @@ Ensure the following tools are installed and configured. They're used in the fol
 kubectl top nodes
 kubectl describe node <node-name>
 ```
+You can also use the open-source [AKS Node Viewer](https://github.com/Azure/aks-node-viewer) tool to visualize node usage.
 
 2. **Look for blocking pods**:
 ```azurecli-interactive
