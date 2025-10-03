@@ -31,10 +31,10 @@ The [Microsoft Error Lookup Tool (err.exe)](https://www.microsoft.com/download/d
    # or target server name cannot be resolved.
    ```
 
-If you work on a computer that connects directly to the Windows Update service, this error code indicates that the issue might be occurring in the local network or the internet connection. If you work on a computer that uses an intranet service such as Windows Server Update Service (WSUS) to manage updates, this error code indicates that the issue might be occurring in the local network. In this case, the computer can't connect to the WSUS server.
+If you work on a computer that connects directly to the Windows Update service, this error code indicates that the issue might occur in the local network or the internet connection. If you work on a computer that uses an intranet service such as Windows Server Update Service (WSUS) to manage updates, this error code indicates that the issue might occur in the local network. In this case, the computer can't connect to the WSUS server.
 
 > [!IMPORTANT]  
-> To get an FoD package from WSUS, the computer must run Windows 11, version 22H2 or a later version, or Windows Server 2025 or a later version. To install FoD feature on any other version of Windows on a computer that can't access Windows Update directly, you have to use a network repository, local media, or a network-mounted ISO image.
+> To get an FoD package from WSUS, the computer must run Windows 11, version 22H2 or a later version, or Windows Server 2025 or a later version. To install FoD feature on any other version of Windows that runs on a computer that can't access Windows Update directly, you have to use a network repository, local media, or a network-mounted ISO image.
 
 ## Resolution
 
@@ -55,9 +55,9 @@ To fix this issue, follow these steps:
 - **Windows Server 2025 or a later version, or Windows 11 22H2 or a later version**: Go to the next step.
 - **Windows Server 2022 or Windows Server 2019, Windows 11 21H2 or an earlier version, or Windows 10**: See [Information about using ISO images or FoD repositories to install FoD](#information-about-using-iso-images-or-fod-repositories-to-install-fod) for instructions.
 
-1. If your computer uses an intranet update service, and you want to manually install an update (or an FoD on a supported version of Windows or Windows Server), verify that the computer can connect to the WSUS server. If the computer can't connect, check any proxy or firewall configurations, and make sure that the DNS infrastructure is working correctly.
+1. If your computer uses an intranet update service, and you want to manually install an update, verify that the computer can connect to the WSUS server. This step also applies to manually installing an FoD feature on a supported version of Windows or Windows Server. If the computer can't connect, check any proxy or firewall configurations, and make sure that the DNS infrastructure is working correctly.
 
-1. Check your Group Policy or policy configuration service provider (CSP) settings to make sure that no settings are blocking updates. For more information about policy settings that affect Windows Update and intranet update management services, see the following articles:
+1. Make sure that no settings are blocking updates. To do this, check your Group Policy or policy configuration service provider (CSP) settings. For more information about policy settings that affect Windows Update and intranet update management services, see the following articles:
 
    - [Policy CSP - ADMX_Servicing](/windows/client-management/mdm/policy-csp-admx-servicing)
    - [Policy CSP - Update](/windows/client-management/mdm/policy-csp-update)
@@ -88,7 +88,7 @@ For more information about how to collect and review Windows Update logs, see [W
 
 ### Information about using ISO images or FoD repositories to install FoD
 
-You have to install FoD features from a repository or mounted ISO image within your network if the affected computers can't connect to Windows Update directly, and you're using any of the following Windows versions:
+You might have to install FoD packages from a repository or mounted ISO image within your network. This condition applies if the affected computers can't connect to Windows Update directly, and you're using any of the following Windows versions:
 
 - Windows Server 2022 or Windows Server 2019
 - Windows 11 21H2 or an earlier version
@@ -98,7 +98,7 @@ You can download FoD ISO packages from any location that's listed in the followi
 
 | Source | Details or requirements |
 | - | - |
-| [Microsoft 365 Admin Portal](https://admin.microsoft.com/adminportal) | You must have an administrative Microsoft 365 account. This portal has replaced the Volume Licensing Service Center (VLSC) |
+| [Microsoft 365 Admin Portal](https://admin.microsoft.com/adminportal) | You must have an administrative Microsoft 365 account. This portal replaced the Volume Licensing Service Center (VLSC) |
 | Original Equipment Manufacturer (OEM) | Typically, you must have a support agreement from the OEM. |
 | [Microsoft Evaluation Center](https://www.microsoft.com/evalcenter) | This site might not include packages for older versions of Windows. |
 | [MSDN-Platforms](https://visualstudio.microsoft.com/msdn-platforms/) | You must have a Visual Studio (previously MSDN) subscription. |
