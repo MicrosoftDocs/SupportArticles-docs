@@ -3,7 +3,7 @@ title: Azure Virtual Desktop management issues
 description: Common management issues in Azure Virtual Desktop and how to solve them.
 ms.topic: troubleshooting
 ms.date: 01/21/2025
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Azure Virtual Desktop management issues
