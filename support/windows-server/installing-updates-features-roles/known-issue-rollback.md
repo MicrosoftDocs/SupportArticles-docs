@@ -9,6 +9,9 @@ ms.reviewer: kaushika, dstrome, v-appelgatet
 ms.custom:
 - sap:windows servicing, updates and features on demand\windows update - configuring and managing client settings
 - pcy:WinComm Devices Deploy
+appliesto:
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Known Issue Rollback (KIR)
