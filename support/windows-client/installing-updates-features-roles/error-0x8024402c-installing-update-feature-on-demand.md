@@ -34,12 +34,12 @@ The [Microsoft Error Lookup Tool (err.exe)](https://www.microsoft.com/download/d
 If you work on a computer that connects directly to the Windows Update service, this error code indicates that the issue might occur in the local network or the internet connection. If you work on a computer that uses an intranet service such as Windows Server Update Service (WSUS) to manage updates, this error code indicates that the issue might occur in the local network. In this case, the computer can't connect to the WSUS server.
 
 > [!IMPORTANT]  
-> To get an FoD package from WSUS, the computer must run Windows 11, version 22H2 or a later version, or Windows Server 2025 or a later version. To install FoD feature on any other version of Windows that runs on a computer that can't access Windows Update directly, you have to use a network repository, local media, or a network-mounted ISO image.
+> To get an FoD package from WSUS, the computer must run Windows 11, version 22H2 or a later version, or Windows Server 2025 or a later version. To install an FoD feature on any other version of Windows that runs on a computer that can't access Windows Update directly, you have to use a network repository, local media, or a network-mounted ISO image.
 
 ## Resolution
 
 > [!NOTE]  
-> If you want to install OpenSSH Server or OpenSSH Client as FoD, see [Can't install OpenSSH features](../../windows-server/system-management-components/cant-install-openssh-features.md).
+> If you want to install the OpenSSH Server feature or the OpenSSH Client feature, see [Can't install OpenSSH features](../../windows-server/system-management-components/cant-install-openssh-features.md).
 
 To fix this issue, follow these steps:
 
