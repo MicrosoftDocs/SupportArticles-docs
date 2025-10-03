@@ -3,7 +3,7 @@ title: Troubleshoot Azure Virtual Desktop service connection
 description: Helps resolve issues while setting up service connections in an Azure Virtual Desktop tenant environment.
 ms.topic: troubleshooting
 ms.date: 01/21/2025
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Troubleshoot Azure Virtual Desktop service connections

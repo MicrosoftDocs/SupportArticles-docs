@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files authentication with Active Directory
 description: Helps troubleshoot issues related to Azure Files authentication with Active Directory.
 ms.topic: troubleshooting
 ms.date: 01/21/2025
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Troubleshoot Azure Files authentication with Active Directory

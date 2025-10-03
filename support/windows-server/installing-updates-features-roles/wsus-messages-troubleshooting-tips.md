@@ -2,10 +2,12 @@
 title: WSUS Messages and Troubleshooting Tips
 description: Windows Server Update Service (WSUS) article - Troubleshoot using WSUS messages
 ms.topic: troubleshooting
-ms.date: 03/07/2023
+ms.date: 10/03/2025
 ms.custom:
 - sap:windows servicing,updates and features on demand\windows update configuration,settings and management"
 - pcy:WinComm Devices Deploy
+appliesto:
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # WSUS Messages and Troubleshooting Tips
 
