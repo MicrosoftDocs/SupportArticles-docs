@@ -1,5 +1,5 @@
 ---
-title: USB-connected Audio or Video Devices Experience Glitches when Connected to Specific Intel-based Devices
+title: USB-connected Audio or Video Devices Malfunction when Connected to Specific Intel-based Devices
 description: Describes how to apply an update and a registry fix to resolve USB audio/video issues on Intel 500/600/700 PCH systems that use discrete TPM chips.
 ms.service: windows-client
 ms.topic: troubleshooting-general
@@ -13,7 +13,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 
-# USB-connected audio or video devices experience glitches when connected to specific Intel-based devices
+# USB-connected audio or video devices malfunction when connected to specific Intel-based devices
 
 This article describes workarounds and fixes for an issue that affects specific Intel-based devices. When attached to the affected devices, USB audio or video devices might not function correctly. These audio or video devices include cameras, speakers, microphones, and headsets.
 
