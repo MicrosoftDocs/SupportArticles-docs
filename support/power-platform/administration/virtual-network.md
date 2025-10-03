@@ -77,15 +77,31 @@ This command tests the DNS resolution for the specified hostname in the context 
 > [!IMPORTANT]
 > If you notice that your DNS setup is incorrect, and you have to update the DNS server settings for your virtual network, see [Can I update the DNS address of my virtual network after it's delegated to "Microsoft.PowerPlatform/enterprisePolicies"?](/power-platform/admin/vnet-support-overview#can-i-update-the-dns-address-of-my-virtual-network-after-its-delegated-to-microsoftpowerplatformenterprisepolicies)
 
-### Request is using a public IP address instead of the private IP address
+### Request uses a public IP address instead of the private IP address
 
-If you are facing an issue where requests to a resource are using a public IP address instead of the private IP address, it might be due to the DNS resolution returning a public IP address. In this situation there are a few possible scenarios to consider:
+If you experience issues where requests to a resource use a public IP address instead of the private IP address, the DNS resolution for the resource's hostname might be returning a public IP address. This issue can occur with both Azure and non-Azure resources.
 
-- The resource is not an azure resource and doesn't have a private endpoint but is routable through your virtual network topology. In this case, to ensure that the resource is accessed via its private IP address, you can create a DNS A record in your DNS server that maps the resource's hostname to its private IP address. If you are using a custom DNS server, you can add the A record directly to your DNS server. If you are using Azure-provided DNS, you can create an [Azure Private DNS Zone](/azure/dns/private-dns-overview) and link it to your virtual network. This setup allows you to define custom DNS records that map the resource's hostname to its private IP address.
+#### Non-Azure resource without a private endpoint
 
-- The resource is an Azure resource with a private endpoint. In this case, the DNS resolution should return the private IP address associated with the private endpoint. If it returns a public IP address instead, it might be because the DNS configuration doesn't include the necessary records for the private endpoint. Validate that there is a private DNS zone for the resource type (for example, `privatelink.database.windows.net` for Azure SQL Database) and that the private DNS zone is linked to your virtual network. If the private DNS zone is missing or not linked, you can create it and link it to your virtual network to ensure that the hostname resolves to the private IP address of the private endpoint.
+If a non-Azure resource doesn't have a private endpoint but is accessible from your virtual network, your DNS server should be configured to resolve the resource's hostname to its private IP address. Add a DNS *A* record to your DNS server that maps the resource's hostname to its private IP address. This mapping ensures the resource is accessed via its private IP address.
 
-Once you have updated your DNS configuration, you can use the `Test-DnsResolution` function from the diagnostics PowerShell module to verify that the hostname resolves to the correct private IP address. Run the following command:
+- If you're using a custom DNS server, add the A record directly to your server.
+- If you're using an Azure provided DNS, create an [Azure Private DNS Zone](/azure/dns/private-dns-overview) and link it to your virtual network. Then, add the A record to the private DNS zone.
+
+#### Azure resource with a private endpoint
+
+If an Azure resource has a private endpoint, the DNS resolution for the resource's hostname should return the private IP address associated with the private endpoint. If the DNS resolution returns a public IP address instead, there might be missing records in your DNS configuration.
+
+1. Confirm there's a private DNS zone for your resource type. For example, `privatelink.database.windows.net` for Azure SQL Database.
+1. If there's no private DNS zone, [create a new one](/azure/dns/private-dns-getstarted-portal#create-a-private-dns-zone).
+1. Verify that the private DNS zone is linked to your virtual network.
+1. If the private DNS zone isn't linked, [link it to your virtual network](/azure/dns/private-dns-virtual-network-links).
+
+Once the private DNS zone is linked to your virtual network, the resource's hostname should resolve to the private IP address associated with the private endpoint.
+
+#### Test DNS configuration changes
+
+After updating your DNS configuration, use the `Test-DnsResolution` function from the diagnostics PowerShell module to verify that the hostname resolves to the correct private IP address. Run the following command:
 
 ```powershell
 Test-DnsResolution -EnvironmentId "<EnvironmentId>" -HostName "<HostName>"
