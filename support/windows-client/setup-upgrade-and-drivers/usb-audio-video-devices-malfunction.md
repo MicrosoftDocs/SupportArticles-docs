@@ -4,6 +4,8 @@ description: Describes how to apply an update and a registry fix to resolve USB 
 ms.service: windows-client
 ms.topic: troubleshooting-general
 ms.date: 10/02/2025
+ai-usage: ai-assisted
+ms.reviewer: kaushika, v-tappelgate, chadbee
 ms.custom: 
 - sap:windows device and driver management\issues with drivers or updates for peripheral devices
 - pcy:WinComm Devices Deploy
