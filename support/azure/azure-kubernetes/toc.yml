@@ -253,6 +253,8 @@ items:
       href: extensions/troubleshoot-managed-namespaces.md
     - name: Troubleshoot network isolated clusters
       href: extensions/troubleshoot-network-isolated-cluster.md
+    - name: Troubleshoot node auto provisioning
+      href: extensions/troubleshoot-node-auto-provision.md
   - name: KEDA add-on
     items:
     - name: Breaking changes in KEDA add-on 2.15 and 2.14
