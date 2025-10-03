@@ -3,13 +3,13 @@ title: Troubleshoot the Node Auto-provisioning managed add-on
 description: Learn how to troubleshoot Node Auto-provisisioning in Azure Kubernetes Service (AKS).
 ms.service: azure-kubernetes-service
 ms.date: 09/05/2025
-editor: wdarko1
+editor: bsoghigian
 ms.reviewer: 
 #Customer intent: As an Azure Kubernetes Service user, I want to troubleshoot problems that involve Node Auto-provisioining managed add-on so that I can successfully provision, scale, and manage my nodes and workloads on Azure Kubernetes Service (AKS).
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
-# Troubleshoot the node auto provisioning (NAP) in Azure Kubernetes Service (AKS)
+# Troubleshoot node auto provisioning (NAP) in Azure Kubernetes Service (AKS)
 
 This article discusses how to troubleshoot Node auto provisioning(NAP), a managed add-on based on the open source [Karpenter](https://karpenter.sh) project. NAP automatically provisions and manages nodes in response to pending pod pressure, and manages scaling events at the virtual machine, or node level.
  When you enable Node Auto-provisioning, you might experience problems that are associated with the configuration of the infrastructure autoscaler. This article will help you troubleshoot errors and resolve common problems that affect NAP but aren't covered in the official Karpenter [FAQ][karpenter-faq] and [troubleshooting guide][karpenter-troubleshooting].
@@ -26,7 +26,7 @@ Ensure the following tools are installed and configured. They're used in the fol
 
 ### Nodes Not Being Removed
 
-**Symptoms**: Underutilized nodes remain in the cluster longer than expected.
+**Symptoms**: Underutilized or empty nodes remain in the cluster longer than expected.
 
 **Debugging Steps**:
 
@@ -49,8 +49,8 @@ kubectl get events | grep -i "disruption\|consolidation"
 **Common Causes**:
 - Pods without proper tolerations
 - DaemonSets preventing drain
-- Pod disruption budgets(PDBs) not properly set
-- Nodes marked with `do-not-disrupt` annotation
+- Pod disruption budgets(PDBs) are not properly set
+- Nodes are marked with `do-not-disrupt` annotation
 
 **Solutions**:
 - Add proper tolerations to pods
@@ -81,7 +81,7 @@ kubectl get pods -n kube-system | grep -E "azure-cni|kube-proxy"
 3. **If using azure cni with overlay or cilium** 
 Validate your nodes have these labels 
 
-```
+```azurecli-interactive
     kubernetes.azure.com/azure-cni-overlay: "true"
     kubernetes.azure.com/network-name: aks-vnet-<redacted>
     kubernetes.azure.com/network-resourcegroup: <redacted>
@@ -145,7 +145,8 @@ kubectl logs -n kube-system -l k8s-app=azure-cns --tail=100
 
 ### DNS Service IP Issues
 
-**Note**: The `--dns-service-ip` parameter is only supported for NAP (Node Auto Provisioning) clusters and is not available for self-hosted Karpenter installations.
+>[!NOTE]
+>The `--dns-service-ip` parameter is only supported for NAP (Node Auto Provisioning) clusters and is not available for self-hosted Karpenter installations.
 
 **Symptoms**: Pods can't resolve DNS names or kubelet fails to register with API server due to DNS resolution failures.
 
@@ -259,5 +260,5 @@ az vm list-usage --location <region> --query "[?currentValue >= limit]"
 
 
 [aks-firewall-requirements]: /azure/aks/limit-egress-traffic#azure-global-required-network-rules
-[karpenter-troubleshooting]: h[ttps://keda.sh/docs/latest/troubleshooting/](https://karpenter.sh/docs/troubleshooting/)
+[karpenter-troubleshooting]: https://karpenter.sh/docs/troubleshooting/
 [karpenter-faq]: https://karpenter.sh/docs/faq/
