@@ -108,6 +108,8 @@ items:
     items:
     - name: Understand and mitigate high data consumption in Log Analytics
       href: log-analytics/configure-and-manage-log-analytics-tables/understand-and-mitigate-high-data-consumption-log-analytics.md
+    - name: Tables aren't populated in a DNS solution that's deployed to a workspace
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-dns-table-issues.md
     - name: Troubleshoot custom table creation errors in Azure
       href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-table-creation-errors.md
     - name: Troubleshoot custom log table creation in Azure
