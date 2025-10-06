@@ -9,11 +9,12 @@ ms.reviewer: kaushika, v-appelgatet
 ms.custom:
 - sap:system management components\openssh (including sftp)
 - pcy:WinComm User Experience
+appliesto:
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Can't install OpenSSH features
-
-*Applies to:* Windows Server 2025, Windows Server 2022, Windows Server 2019, Windows 11, and Windows 10
 
 The OpenSSH Server and OpenSSH Client features of Windows are installed by default on Windows Server 2025. However, this situation isn't true for older versions of Windows Server or for Windows 11 or Windows 10. On those systems, the OpenSSH features are available as optional Windows features (also known as Features on Demand, or FoD).
 
