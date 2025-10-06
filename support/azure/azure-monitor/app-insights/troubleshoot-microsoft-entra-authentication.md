@@ -37,12 +37,6 @@ Check the Application Insights resource's access control. You must configure the
 
 ## Language-specific troubleshooting
 
-## [ASP.NET Core](#tab/aspnetcore)
-
-The Application Insights .NET SDK emits error logs by using the event source. To learn more about collecting event source logs, see [Troubleshooting no data - collect logs with PerfView](asp-net-troubleshoot-no-data.md#PerfView).
-
-If the SDK fails to get a token, the exception message is logged as `Failed to get AAD Token. Error message:`.
-
 ## [.NET](#tab/net)
 
 ### Event source
@@ -97,7 +91,8 @@ This issue occurs if the administrator doesn't install the application or no ten
 
 ## [Java native](#tab/java-native)
 
-Microsoft Entra ID authentication isn't available for GraalVM Native applications.
+> [!NOTE]
+> Microsoft Entra ID authentication isn't available for *GraalVM Native* applications.
 
 ## [Node.js](#tab/nodejs)
 
