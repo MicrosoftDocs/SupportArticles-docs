@@ -320,7 +320,7 @@ Check the Application Insights resource's access control. You must configure the
 
 #### Event source
 
-The Application Insights .NET SDK emits error logs by using the event source. To learn more about collecting event source logs, see [Troubleshooting no data - collect logs with PerfView](asp-net-troubleshoot-no-data.md#PerfView).
+The Application Insights .NET SDK emits error logs by using the event source. To learn more about collecting event source logs, see [Troubleshooting no data - collect logs with PerfView](asp-net-troubleshoot-no-data.md#collect-logs-with-perfview).
 
 If the SDK fails to get a token, the exception message is logged as `Failed to get AAD Token. Error message:`.
 
