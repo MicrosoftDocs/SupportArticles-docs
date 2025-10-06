@@ -8,7 +8,7 @@ ms.custom: sap:Microsoft Entra authentication fails
 
 # Troubleshoot Microsoft Entra authentication issues
 
-This articles provides distinct troubleshooting scenarios and steps that you can take to resolve an issue before you raise a support ticket.
+This articles provides distinct troubleshooting scenarios and steps that you can take to resolve a [Microsoft Entra authentication](/azure/azure-monitor/app/azure-ad-authentication) issue before you raise a support ticket.
 
 ## Ingestion HTTP errors
 

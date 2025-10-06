@@ -1,6 +1,7 @@
 items:
 - name: Troubleshoot Azure Monitor
   href: welcome-azure-monitor.yml
+
 - name: Activity Logs
   items:
   - name: I can't configure export of Activity Logs
@@ -102,6 +103,9 @@ items:
       href: app-insights/agent/status-monitor-v2-troubleshoot.md
     - name: Troubleshoot Azure Monitor's Change Analysis
       href: app-insights/agent/change-analysis-troubleshoot.md
+  - name: Microsoft Entra authentication
+    href: app-insights/troubleshoot-microsoft-entra-authentication.md
+
 - name: Log Analytics
   items:
   - name: Configure and Manage Log analytics tables
@@ -138,16 +142,12 @@ items:
       href: log-analytics/billing/why-daily-cap-exceeded.md
     - name: Configure data retention
       href: log-analytics/billing/configure-data-retention.md
-
-
-
   - name: Linux Agents
     items:
     - name: Missing heartbeats in the Linux agent
       href: log-analytics/linux-agents/linux-agent-missing-heartbeats.md
     - name: Missing Linux performance counters
       href: log-analytics/linux-agents/linux-agent-performance-counter-missing.md
-
   - name: Windows Agents
     items:
     - name: Basic troubleshooting of Microsoft Monitoring Agent
