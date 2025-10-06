@@ -8,7 +8,7 @@ ms.custom: sap:Microsoft Entra authentication fails
 
 # Troubleshoot Microsoft Entra authentication issues
 
-This articles provides distinct troubleshooting scenarios and steps that you can take to resolve a [Microsoft Entra authentication](/azure/azure-monitor/app/azure-ad-authentication) issue before you raise a support ticket.
+This article provides distinct troubleshooting scenarios and steps to resolve a [Microsoft Entra authentication](/azure/azure-monitor/app/azure-ad-authentication) issue before raising a support ticket.
 
 ## Ingestion HTTP errors
 
@@ -21,7 +21,7 @@ This error shows the resource is set for Microsoft Entra-only.
 Review and correctly configure the SDK because it's sending to the wrong API.
 
 > [!NOTE]
-> "v2/track" doesn't support Microsoft Entra ID. When the SDK is correctly configured, telemetry is sent to `v2.1/track`.
+> `v2/track` doesn't support Microsoft Entra ID. When the SDK is correctly configured, telemetry is sent to `v2.1/track`.
 
 ### HTTP/1.1 401 Authorization required
 
