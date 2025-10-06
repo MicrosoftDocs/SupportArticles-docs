@@ -16,24 +16,24 @@ The ingestion service returns specific errors, regardless of the SDK language. N
 
 ### HTTP/1.1 400 Authentication not supported
 
-This error shows the resource is set for Microsoft Entra-only. You need to correctly configure the SDK because it's sending to the wrong API.
+This error shows the resource is set for Microsoft Entra-only.
+
+Review and correctly configure the SDK because it's sending to the wrong API.
 
 > [!NOTE]
 > "v2/track" doesn't support Microsoft Entra ID. When the SDK is correctly configured, telemetry is sent to `v2.1/track`.
-
-Next, you should review the SDK configuration.
 
 ### HTTP/1.1 401 Authorization required
 
 This error indicates that the SDK is correctly configured but it's unable to acquire a valid token. This error might indicate an issue with Microsoft Entra ID.
 
-Next, you should identify exceptions in the SDK logs or network errors from Azure Identity.
+Identify exceptions in the SDK logs or network errors from Azure Identity.
 
 ### HTTP/1.1 403 Unauthorized
 
 This error means the SDK uses credentials without permission for the Application Insights resource or subscription.
 
-First, check the Application Insights resource's access control. You must configure the SDK with credentials that have the Monitoring Metrics Publisher role.
+Check the Application Insights resource's access control. You must configure the SDK with credentials that have the Monitoring Metrics Publisher role.
 
 ## Language-specific troubleshooting
 
@@ -41,8 +41,7 @@ First, check the Application Insights resource's access control. You must config
 
 The Application Insights .NET SDK emits error logs by using the event source. To learn more about collecting event source logs, see [Troubleshooting no data - collect logs with PerfView](asp-net-troubleshoot-no-data.md#PerfView).
 
-If the SDK fails to get a token, the exception message is logged as
-`Failed to get AAD Token. Error message:`.
+If the SDK fails to get a token, the exception message is logged as `Failed to get AAD Token. Error message:`.
 
 ## [.NET](#tab/net)
 
@@ -50,8 +49,7 @@ If the SDK fails to get a token, the exception message is logged as
 
 The Application Insights .NET SDK emits error logs by using the event source. To learn more about collecting event source logs, see [Troubleshooting no data - collect logs with PerfView](asp-net-troubleshoot-no-data.md#PerfView).
 
-If the SDK fails to get a token, the exception message is logged as
-`Failed to get AAD Token. Error message:`.
+If the SDK fails to get a token, the exception message is logged as `Failed to get AAD Token. Error message:`.
 
 ## [Java](#tab/java)
 
