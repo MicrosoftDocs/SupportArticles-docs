@@ -102,43 +102,42 @@ items:
       href: app-insights/agent/status-monitor-v2-troubleshoot.md
     - name: Troubleshoot Azure Monitor's Change Analysis
       href: app-insights/agent/change-analysis-troubleshoot.md
-  - name: Microsoft Entra authentication
-    href: app-insights/troubleshoot-microsoft-entra-authentication.md
-
-  - name: Log Analytics
+- name: Log Analytics
+  items:
+  - name: Configure and Manage Log analytics tables
     items:
-    - name: Configure and Manage Log analytics tables
-      items:
-      - name: Understand and mitigate high data consumption in Log Analytics
-        href: log-analytics/configure-and-manage-log-analytics-tables/understand-and-mitigate-high-data-consumption-log-analytics.md
-      - name: Troubleshoot custom table creation errors in Azure
-        href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-table-creation-errors.md
-      - name: Troubleshoot custom log table creation in Azure
-        href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-log-table-creation.md
-      - name: Troubleshoot performance logs not populating in Azure Government
-        href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-performance-logs-not-populating.md
-      - name: Troubleshoot deleting migrated custom tables in Log Analytics
-        href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-deleting-migrated-custom-tables.md
-    - name: Log Analytics workspaces
-      items:
-      - name: Error code 0x80090016 - keyset doesn't exist
-        href: log-analytics/workspaces/error-code-0x80090016-keyset-does-not-exist.md
-      - name: Workspace data export FAQ
-        href: log-analytics/workspaces/workspace-data-export-faq.yml
-    - name: Cost management 
-      items:
-      - name: Understand cost and analyze usage report
-        href: log-analytics/billing/understand-log-analytics-workspace-bill.md
-      - name: Investigate unexpected cost increase
-        href: log-analytics/billing/identify-service-cause-unexpected-costs.md
-      - name: Set daily cap to avoid unexpected increase
-        href: log-analytics/billing/set-up-a-daily-cap.md
-      - name: Configure recommended alerts
-        href: log-analytics/billing/workspace-recommended-alerts.md
-      - name: Identify why daily cap exceeded
-        href: log-analytics/billing/why-daily-cap-exceeded.md
-      - name: Configure data retention
-        href: log-analytics/billing/configure-data-retention.md
+    - name: Understand and mitigate high data consumption in Log Analytics
+      href: log-analytics/configure-and-manage-log-analytics-tables/understand-and-mitigate-high-data-consumption-log-analytics.md
+    - name: Tables aren't populated in a DNS solution that's deployed to a workspace
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-dns-table-issues.md
+    - name: Troubleshoot custom table creation errors in Azure
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-table-creation-errors.md
+    - name: Troubleshoot custom log table creation in Azure
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-log-table-creation.md
+    - name: Troubleshoot performance logs not populating in Azure Government
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-performance-logs-not-populating.md
+    - name: Troubleshoot deleting migrated custom tables in Log Analytics
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-deleting-migrated-custom-tables.md
+  - name: Log Analytics workspaces
+    items:
+    - name: Error code 0x80090016 - keyset doesn't exist
+      href: log-analytics/workspaces/error-code-0x80090016-keyset-does-not-exist.md
+    - name: Workspace data export FAQ
+      href: log-analytics/workspaces/workspace-data-export-faq.yml
+  - name: Cost management 
+    items:
+    - name: Understand cost and analyze usage report
+      href: log-analytics/billing/understand-log-analytics-workspace-bill.md
+    - name: Investigate unexpected cost increase
+      href: log-analytics/billing/identify-service-cause-unexpected-costs.md
+    - name: Set daily cap to avoid unexpected increase
+      href: log-analytics/billing/set-up-a-daily-cap.md
+    - name: Configure recommended alerts
+      href: log-analytics/billing/workspace-recommended-alerts.md
+    - name: Identify why daily cap exceeded
+      href: log-analytics/billing/why-daily-cap-exceeded.md
+    - name: Configure data retention
+      href: log-analytics/billing/configure-data-retention.md
 
 
 
