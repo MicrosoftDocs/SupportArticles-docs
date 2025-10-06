@@ -38,3 +38,5 @@ Users might experience issues if performance logs don't populate in Azure Govern
 - [Create and manage alerts in Azure](/azure/azure-monitor/alerts/alerts-overview)
 
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

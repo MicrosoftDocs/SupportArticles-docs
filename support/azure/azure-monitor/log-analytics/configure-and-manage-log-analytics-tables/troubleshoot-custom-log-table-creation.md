@@ -39,3 +39,5 @@ Users might receive an error message that states "Cannot read properties of unde
 - [Data Collection Rule Best Practices](/azure/azure-monitor/data-collection/data-collection-rule-best-practices)
 
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
