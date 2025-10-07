@@ -1,0 +1,116 @@
+---
+title: Use "MaxStartups" and "MaxSessions" to Troubleshoot OpenSSH Connection Issues
+description: This article explains how to troubleshoot OpenSSH connection issues by using the `MaxStartups` and `MaxSessions` parameters to limit client connections to the OpenSSH Server service.
+ms.date: 10/13/2025
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.reviewer: kaushika, v-appelgatet
+ms.custom:
+- sap:system management components\openssh (including sftp)
+- pcy:WinComm User Experience
+appliesto:
+- ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+---
+
+# How to use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
+
+This guide explains how to use the `MaxStartups` and `MaxSessions` parameters to limit client connections to the OpenSSH Server service.
+These settings help you troubleshoot connection issues and to manage unauthenticated and authenticated SSH sessions, especially in high-load environments.
+
+## Symptoms
+
+You can use `MaxStartups` and `MaxSessions` to address the following types of symptoms.
+
+- Symptom 1: Clients can't connect to the OpenSSH Server service and establish sessions. Additionally, you might see errors such as the following messages:
+
+  - Connection reset by peer
+  - Exceeded MaxStartups
+  - Negotiation failed
+
+- Symptom 2: In an environment that supports session multiplexing (multiple sessions per connection), clients connect and authenticate. However, the server drops the connection.
+
+## Cause
+
+Symptom 1 indicates that too many client applications are connecting to the OpenSSH Server service at once.
+
+Symptom 2 is limited to multiplexing environments, and indicates that the OpenSSH Server service can't support the number of sessions per connection that the clients are using. This symptom can occur after you configure`MaxStartups`.
+
+## How to use the parameters
+
+`MaxStartups`and `MaxSessions` are parameters in the sshd_config file, and function as follows.
+
+### MaxStartups
+
+The `MaxStartups` parameter defines how many concurrent unauthenticated connections the OpenSSH Server service can manage. This setting is especially useful on servers that support multiple parallel SSH connections, such as jump hosts or provisioning servers (such as servers that use Ansible). It's also useful in high-load environments or during brute-force attacks.
+
+The value is a set of three integers separated by colons, in the format `start:rate:full`. The integers represent the following values:
+
+- **start**: The number of unauthenticated connections that the OpenSSH Server service supports before it starts dropping connections.
+- **rate**: Probability that the OpenSSH Server service drops a connection. As long as the number of concurrent sessions is below the `start` value, the service ignores `rate`. However, when the number of concurrent connections surpasses `start`, each additional connection has a `rate`% probability of being dropped.
+- **full**: When the number of concurrent connections surpasses `full`, the service drops all additional connections.
+
+For example, consider a system that's using the configuration `MaxStartups 20:40:60`. The OpenSSH Server service manages connections as follows:
+
+- The service maintains the first 20 concurrent unauthenticated connections. 
+- Starting with the 21st connection attempt, there's a 40% probability that the server drops the new connection attempt.
+- After the service reaches 60 concurrent unauthenticated connections, the server rejects all further connection attempts.
+
+### MaxSessions
+
+The `MaxSessions` parameter defines how many open shell, login, or subsystem (for example, sftp) sessions that the OpenSSH Server service permits for each network connection. Setting `MaxSessions` to `1` effectively disables session multiplexing. Setting it to `0` prevents all shell, login, and subsystem sessions,  but allows port forwarding. The default value is `10`.
+
+### How to set the connection parameters
+
+To modify these parameters for the Windows OpenSSH Server service, modify the sshd_config file and restart the OpenSSH Server service. To do this, follow these steps:
+
+1. Using an Administrator-level account, open a text editor, and then open **%ProgramData%\ssh\sshd_config**. The default text these settings should resemble the following excerpt:
+
+   ```output
+   #MaxStartups 10
+   ```
+
+   ```output
+   #MaxSessions 10
+   ```
+
+   > [!NOTE]  
+   > `MaxSessions` typically appears within the `# Authentication` section of the file. `MaxStartups` typically appears in a list of general options later in the file.
+
+1. To enable `MaxStartup` or `MaxSessions` and set values, edit the text to resemble the following excerpt:
+
+   ```output
+
+   MaxStartups 20:40:60
+   ```
+
+   ```output
+   MaxSessions 15
+   ```
+
+   > [!NOTE]  
+   > In this command, `20:40:60` and `15` are example values. Use values that're appropriate for your environment.
+
+1. Save and close the sshd_config file.
+
+1. To verify the configuration, open a Windows PowerShell Command Prompt window, and then run the following command:
+
+   ```powershell
+   sshd -t
+      ```
+
+1. To restart the OpenSSH Server service, open a Windows Command Prompt window, and then run the following command:
+
+   ```console
+   NET STOP "OpenSSH SSH Server" && NET START "OpenSSH SSH Server"
+   ```
+
+After the service restarts, it uses the new parameter values.
+
+## More information
+
+- [Windows configurations in sshd_config](/windows-server/administration/OpenSSH/openssh-server-configuration#windows-configurations-in-sshd_config) in "OpenSSH Server configuration for Windows Server and Windows"
+- [sshd_config(5) - Linux manual page](https://man7.org/linux/man-pages/man5/sshd_config.5.html)
+- [sshd_config - OpenSSH daemon configuration file](https://man.openbsd.org/sshd_config)
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
