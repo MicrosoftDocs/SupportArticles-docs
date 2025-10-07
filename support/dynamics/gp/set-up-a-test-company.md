@@ -26,8 +26,6 @@ Notes:
   - Microsoft Dynamics GP 10.0 or a later version:  
     Select **Microsoft Dynamics GP**, point to **Tools**, point to **Setup**, point to **System**, point to **Fixed Assets**, and then select **Company**.
 
-- If you're using **Audit Trails** for Microsoft Dynamics GP, you must delete the audit triggers from the test company using SQL and not from the front-end. Audit Trails is just triggers that are copied over and still point to the same live audit database. However, don't delete, stop, or remove the audit in the Audit Trail Maintenance window in the test company, or it will clear out the history in the audit table and/or remove the trigger on the live company. To remove the audit trail triggers from the test company, refer to the steps outlined in [How to stop Audit Trail triggers in the test company from updating the live audit database using Audit Trails in Microsoft Dynamics GP](https://support.microsoft.com/help/2847491).
-
 - If you're using **Analytical Accounting** (AA), you must first activate AA in the Test company before you copy over the live database (that has AA active). Follow the steps in [How to create a test company with Analytical Accounting installed using Microsoft Dynamics GP](https://community.dynamics.com/blogs/post/?postid=30001b50-2b30-4856-8ae7-2d2c12fff83d).
 
     > [!NOTE]
@@ -210,4 +208,4 @@ To set up the test company, follow these steps:
 
 ## References
 
-For more information, see [Set up a test company that has a copy of live company data by using Microsoft Dynamics GP on MSDE 2000, SQL Server 2005 Express, SQL Server 2008 Express, or SQL Server 2012 Express](https://support.microsoft.com/help/872370).
+For more information, see [Set up a test company that has a copy of live company data by using Microsoft Dynamics GP on MSDE 2000, SQL Server 2005 Express, SQL Server 2008 Express, or SQL Server 2012 Express](/troubleshoot/dynamics/gp/how-to-set-up-test-company-that-has-copy-of-live-company).

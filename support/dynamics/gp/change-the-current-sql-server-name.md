@@ -66,4 +66,4 @@ The following steps assume the computer on which the Web Services for Microsoft 
 
 ## References
 
-For more information, see [How to transfer an existing Microsoft Dynamics GP, Microsoft Small Business Financials, or Microsoft Small Business Manager installation to a new server that is running Microsoft SQL Server](https://support.microsoft.com/help/878449).
+For more information, see [How to transfer an existing Microsoft Dynamics GP, Small Business Financials, or Small Business Manager installation to a new server that is running SQL Server](/troubleshoot/dynamics/gp/transfer-gp-installation-new-server).

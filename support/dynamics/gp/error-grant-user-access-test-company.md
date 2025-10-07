@@ -83,4 +83,4 @@ When you try to grant the user access to the test company, Microsoft Dynamics GP
 
 ## References
 
-[KB - Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server](https://support.microsoft.com/help/871973)
+[Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server](/troubleshoot/dynamics/gp/set-up-a-test-company)

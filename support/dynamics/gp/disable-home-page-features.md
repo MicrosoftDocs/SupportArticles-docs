@@ -80,4 +80,4 @@ To disable a feature on the home page, use one of the following procedures, depe
 
 ## References
 
-For more information, see [Frequently asked questions about the home pages and area pages features in Microsoft Dynamics GP](https://support.microsoft.com/help/918313).
+For more information, see [Frequently asked questions about the home pages and area pages features in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/questions-home-pages-features).

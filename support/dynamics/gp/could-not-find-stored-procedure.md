@@ -79,7 +79,7 @@ When you use Method 1, you don't have to exit Microsoft Dynamics GP. To disable 
 
 ### Method 2: Remove the third-party product from the Dynamics.set file
 
-For more information about how to disable third-party products in the Dynamics.set file in Microsoft Dynamics GP, see [KB - Steps to disable third-party products or temporarily disable extra products in the Dynamics.set file in Microsoft Dynamics GP](https://support.microsoft.com/help/872087).
+For more information about how to disable third-party products in the Dynamics.set file in Microsoft Dynamics GP, see [Steps to disable third-party products or temporarily disable additional products in the Dynamics.set file in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/disable-third-party-products-in-dynamicsdot-set-file).
 
 [!INCLUDE [Publishing Disclaimer](../../includes/publishing-disclaimer.md)]
 

@@ -32,7 +32,7 @@ This problem occurs for one or more of the following reasons:
 To resolve this problem, follow these steps:
 
 1. If the **Batch ID** has a status of **Posting**, follow these steps:
-    1. Follow the steps in the following Knowledge Base article: [KB850289 - A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](https://support.microsoft.com/topic/850289)</br>An Automated Solution script may be available to perform this task.
+    1. Follow the steps in: [A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/a-batch-is-held-in-the-several-statuses)</br>An Automated Solution script may be available to perform this task.
     1. On the **Transactions** menu, point to **Purchasing**, and then click **Batches**.
     1. In the Payables Batch Entry window, click the appropriate batch in the **Batch ID** list, and then click **Delete**. When you are prompted to delete the batch, click **Delete**.
     1. On the **Transactions** menu, point to **Purchasing**, and then click **Select Checks**.

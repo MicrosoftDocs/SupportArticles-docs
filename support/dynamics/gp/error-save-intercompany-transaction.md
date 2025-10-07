@@ -58,6 +58,4 @@ If you don't use Enterprise Reporting, follow these steps:
 >
 > - Make sure that a functional currency is assigned to the originating company and to the destination company.
 > - If the company is not registered for multicurrency, all companies must have the same functional currency assigned.
-> - If the company is registered for multicurrency, and if the intercompany transaction is a multicurrency transaction, see the following article in the Microsoft Knowledge Base:
->
-> [917720](https://support.microsoft.com/help/917720) Description of the process that you must complete before you post multicurrency intercompany transactions in Microsoft Dynamics GP
+> - If the company is registered for multicurrency, and if the intercompany transaction is a multicurrency transaction, see [Description of the process that you must complete before you post multicurrency intercompany transactions in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/process-before-post-multicurrency-intercompany-transactions).
