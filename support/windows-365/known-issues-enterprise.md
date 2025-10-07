@@ -179,7 +179,7 @@ Allow third-party cookies from `microsoft.us` in your Web client settings, Safar
 
 This change lets the web client or Safari browser store and use the `microsoft.us` cookies to connect to your Cloud PC session.  
 
-## Windows 365 Authentication Issues in GCC High Environments Using Windows App on macOS
+## Windows 365 Authentication Issues in Government Environments Using Windows App on macOS
 
 ### Possible Cause
 
