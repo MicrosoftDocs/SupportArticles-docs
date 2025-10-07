@@ -1447,8 +1447,6 @@ items:
       href: ./windows-tss/gather-information-using-tss-user-experience.md
     - name: Gather information for Windows failover cluster related issues
       href: ./windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md
-    - name: Gather information for Windows Update for Business reports-related issues
-      href: ./windows-tss/gather-information-using-tss-wufb-reports.md
     - name: Use the xray feature of TSS
       href: ./windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md
   - name: Performance Monitoring Tools
