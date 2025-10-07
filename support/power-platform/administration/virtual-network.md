@@ -39,7 +39,7 @@ After the module is installed, import it into your PowerShell session by running
 Import-Module Microsoft.PowerPlatform.EnterprisePolicies
 ```
 
-The module includes several functions to diagnose and troubleshoot issues that are related to virtual network configurations. Some of the key functions are the following:
+The module includes several functions to diagnose and troubleshoot issues that are related to virtual network configurations. Some of the key functions are:
 
 - [Get-EnvironmentRegion](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/docs/en-US/Microsoft.PowerPlatform.EnterprisePolicies/Get-EnvironmentRegion.md): Retrieves the region of the specified Power Platform environment
 - [Get-EnvironmentUsage](https://github.com/microsoft/PowerPlatform-EnterprisePolicies/blob/main/docs/en-US/Microsoft.PowerPlatform.EnterprisePolicies/Get-EnvironmentUsage.md): Provides information about the usage of the specified Power Platform environment
