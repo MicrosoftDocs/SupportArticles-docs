@@ -1413,6 +1413,16 @@ items:
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
 - name: Support Tools
   items:
+  - name: Performance Monitoring Tools
+    items:
+    - name: Using Performance Monitor
+      href: ../windows-server/support-tools/troubleshoot-issues-performance-monitor.md?context=/troubleshoot/windows-client/context/context
+    - name: Using Process Explorer
+      href: ../windows-server/support-tools/troubleshoot-issues-process-explorer.md?context=/troubleshoot/windows-client/context/context
+    - name: Using Task Manager
+      href: ../windows-server/support-tools/support-tools-task-manager.md?context=/troubleshoot/windows-client/context/context
+    - name: Using WPR, WPA, or Xperf
+      href: ../windows-server/support-tools/support-tools-xperf-wpa-wpr.md?context=/troubleshoot/windows-client/context/context
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
@@ -1445,13 +1455,3 @@ items:
       href: ./windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md
     - name: Use the xray feature of TSS
       href: ./windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md
-  - name: Performance Monitoring Tools
-    items:
-    - name: Using Performance Monitor
-      href: ../windows-server/support-tools/troubleshoot-issues-performance-monitor.md?context=/troubleshoot/windows-client/context/context
-    - name: Using Process Explorer
-      href: ../windows-server/support-tools/troubleshoot-issues-process-explorer.md?context=/troubleshoot/windows-client/context/context
-    - name: Using Task Manager
-      href: ../windows-server/support-tools/support-tools-task-manager.md?context=/troubleshoot/windows-client/context/context
-    - name: Using WPR, WPA, or Xperf
-      href: ../windows-server/support-tools/support-tools-xperf-wpa-wpr.md?context=/troubleshoot/windows-client/context/context
