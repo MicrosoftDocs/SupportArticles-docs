@@ -93,9 +93,9 @@ If a non-Azure resource doesn't have a private endpoint but is accessible from y
 If an Azure resource has a private endpoint, the DNS resolution for the resource's hostname should return the private IP address associated with the private endpoint. If the DNS resolution returns a public IP address instead, there might be missing records in your DNS configuration.
 
 1. Confirm there's a private DNS zone for your resource type. For example, `privatelink.database.windows.net` for Azure SQL Database.
-1. If there's no private DNS zone, [create a new one](/azure/dns/private-dns-getstarted-portal#create-a-private-dns-zone).
+   1. If the private DNS zone doesn't exist, [create a new one](/azure/dns/private-dns-getstarted-portal#create-a-private-dns-zone).
 1. Verify that the private DNS zone is linked to your virtual network.
-1. If the private DNS zone isn't linked, [link it to your virtual network](/azure/dns/private-dns-virtual-network-links).
+   1. If the private DNS zone isn't linked, [link it to your virtual network](/azure/dns/private-dns-virtual-network-links).
 
 Once the private DNS zone is linked to your virtual network, the resource's hostname should resolve to the private IP address associated with the private endpoint.
 
