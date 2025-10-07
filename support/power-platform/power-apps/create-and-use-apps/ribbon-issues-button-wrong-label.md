@@ -66,6 +66,10 @@ If the correct LocLabel is present in a solution, there might be other solutions
 
 Label IDs are case-sensitive when matching IDs in the ribbon XML to localized label values. The button's **LabelText** should contain a valid LocLabel reference that exactly matches the casing of the ID of a LocLabel record.
 
+#### Regenerate command metadata
+
+Command checker may show this error in the LocalizationErrors section: `Missing object ID for translation lookup`. This error might be caused by missing or incorrect metadata after a solution update. Try [regenerating command metadata](./regenerate-ribbon-metadata.md).
+
 ## Reference
 
 [Command checker for model-driven app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)
