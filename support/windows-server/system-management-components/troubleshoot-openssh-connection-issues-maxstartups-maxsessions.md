@@ -5,7 +5,7 @@ ms.date: 10/13/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, v-appelgatet
+ms.reviewer: warrenw, kaushika, v-appelgatet
 ms.custom:
 - sap:system management components\openssh (including sftp)
 - pcy:WinComm User Experience
