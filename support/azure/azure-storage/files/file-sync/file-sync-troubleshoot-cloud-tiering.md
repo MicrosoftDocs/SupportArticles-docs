@@ -328,6 +328,19 @@ This option doesn't require removing the server endpoint but requires sufficient
 3. Use the *OrphanTieredFiles.txt* output file to identify orphaned tiered files on the server.
 4. Overwrite the orphaned tiered files by copying the full file from the Azure file share to the Windows Server.
 
+## How to identify files that are excluded from File Sync
+1. Open PowerShell in administrator mode.
+2. Navigate to the folder by replacing <volume letter> and <syncShare> with the volume letter and sync share names
+   ```powershell
+    cd <volume letter>\ <syncShare>\
+    ```
+3. Run this command  
+   ```powershell
+    dir  desktop.ini,thumbs.db,ehthumbs.db,~$*.*,*.laccdb,*.tmp -Recurse -Force -File -ErrorAction Ignore
+    ```
+
+Alternatively, you may use the TreeSize tool. The same list of exclusions can be put into the TreeSize 'filters' configuration to count excluded content. The advantage of this approach is that the content which the administrator does not have access to in case of the former approach will be accessible by TreeSize (because it uses the backup/restore permissions when scanning content).
+
 ## How to troubleshoot files unexpectedly recalled on a server
 
 Antivirus, backup, and other applications that read large numbers of files cause unintended recalls unless they respect the skip offline attribute and skip reading the content of those files. Skipping offline files for products that support this option helps avoid unintended recalls during operations like antivirus scans or backup jobs.
