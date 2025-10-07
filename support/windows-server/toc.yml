@@ -3269,7 +3269,7 @@ items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
       href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Active Directory replication issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-active-directory-scenarios.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for deployment-related issues
       href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Group Policy issues
