@@ -1,6 +1,6 @@
 ---
-title: USB-connected Audio or Video Devices Malfunction when Connected to Specific Intel-based Devices
-description: Describes how to apply an update and a registry fix to resolve USB audio/video issues on Intel 500/600/700 PCH systems that use discrete TPM chips.
+title: USB-connected Audio or Video Devices Malfunction when Connected to Specific Intel-Based Devices
+description: Describes how to apply an update and a registry fix to resolve USB audio and video issues on Intel 500/600/700 PCH systems that use discrete TPM chips.
 ms.service: windows-client
 ms.topic: troubleshooting-general
 ms.date: 10/02/2025
@@ -15,30 +15,30 @@ appliesto:
 
 # USB-connected audio or video devices malfunction when connected to specific Intel-based devices
 
-This article describes workarounds and fixes for an issue that affects specific Intel-based devices. When attached to the affected devices, USB audio or video devices might not function correctly. These audio or video devices include cameras, speakers, microphones, and headsets.
+This article provides workarounds and fixes for an issue that affects specific Intel-based devices. USB audio or video devices that are attached to the affected devices might not function correctly. These USB devices include cameras, speakers, microphones, and headsets.
 
 ## Symptoms
 
-You might observer one or more of the following symptoms:
+You experience one or more of the following symptoms:
 
-- Occasional glitches or unexpected noise (such as clicking or popping) in the audio stream.
-- Momentary visible glitches in a video stream.
+- You hear occasional glitches or unexpected noise (such as clicking or popping) in the audio stream.
+- You see momentary visible glitches in a video stream.
 - A USB audio or video device stops working.
 
 ## Affected devices
 
-This issue affects Intel-based system using a 500, 600, or 700 series Platform Controller Hubs that have discrete Trusted Platform Module (dTPMs) chips. Computers that use firmware TPM (fTPM) technology aren't affected.
+This issue affects Intel-based systems that use a 500, 600, or 700 series Platform Controller Hub that has discrete Trusted Platform Module (dTPMs) chips. Computers that use firmware TPM (fTPM) technology aren't affected by this issue.
 
-## Workarounds
+## Workaround
 
-You might temporarily resolve the issue by following these steps.
+To work around the issue, follow these steps:
 
 1. Unplug the device, and then reattach it to the computer.
-2. If the previous step doesn't work, restart the computer.
+2. If step 1 doesn't work, restart the computer.
 
 ## Cause
 
-This problem occurs because of delays that occur on an internal hardware bus when Windows communicates with the discrete TPM. These delays in turn delay communication with the USB controller, generating Split Transaction errors on the USB bus. As a result, time-sensitive USB traffic (such as audio and video streaming) might experience glitches and/or errors.
+This problem occurs because of delays that occur on an internal hardware bus when Windows communicates with the discrete TPM. These delays, in turn, delay communication with the USB controller and generate Split Transaction errors on the USB bus. Therefore, time-sensitive USB traffic (such as audio and video streaming) might experience glitches or errors.
 
 ## Resolution
 
@@ -46,22 +46,22 @@ This problem occurs because of delays that occur on an internal hardware bus whe
 
 The October 2025 update for Windows 24H2 introduces a fix for this hardware issue. To use this fix, follow these steps:
 
-1. On the affected device, install the October 2025 update. Restart the device if needed.
+1. On the affected device, install the October 2025 update. Restart the device, if it's necessary.
 
-1. Confirm that the device uses a dTPM instead of an fTPM. To find this information, you might have to check the device's BIOS settings or contact the device manufacturer.
+1. Verify that the device uses a dTPM instead of an fTPM. To find this information, check the device BIOS settings or contact the device manufacturer.
 
 1. Run the diagnostic script in the [More information](#more-information) section of this article.
 
    This script checks whether the fix applies to your device.
 
-1. Create the following registry value:
+1. Create the following registry entry:
 
    - Subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Tpm`
    - Type: **REG_DWORD**
    - Name: **TPMDriverReadAfterWriteCount**
    - Value: **0x1 (1)**
 
-   For example, you can open an administrative Command Prompt window, and then run the following command:
+   For example, open an administrative Command Prompt window, and then run the following command:
 
     ```console
     reg.exe ADD HKLM\SYSTEM\CurrentControlSet\Control\Tpm /v TPMDriverReadAfterWriteCount /t REG_DWORD /d 1
@@ -69,7 +69,7 @@ The October 2025 update for Windows 24H2 introduces a fix for this hardware issu
 
 ## More information
 
-You can use the following Windows PowerShell script to determine whether your PC has one of the controllers that might be affected. To run this script, create a file that uses a name such as **Check-USBSplitTransactionVulnerability.ps1**. Then paste the following text into the file. From a PowerShell command prompt, run the script.
+You can use the following Windows PowerShell script to determine whether your PC has one of the controllers that might be affected. To run this script, create a file that uses a name such as **Check-USBSplitTransactionVulnerability.ps1**. Then, paste the following text into the file. un the script from a PowerShell command prompt.
 
 > [!NOTE]  
 > In Device Manager, the device in question appears under **System Devices**. It has a name that resembles "Intel(R) LPC Controller/eSPI Controller."
