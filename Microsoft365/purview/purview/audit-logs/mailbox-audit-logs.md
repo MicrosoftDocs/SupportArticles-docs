@@ -30,8 +30,7 @@ Mailbox audit logging lets users obtain information about actions that are perfo
 
 > [!NOTE]
 > - Mailbox audit logging is turned on by default in all organizations. When mailbox auditing on by default is turned on for the organization, the _AuditEnabled_ property for affected mailboxes doesn't change from __False__ to __True__. In other words, mailbox auditing on by default ignores the _AuditEnabled_ property on mailboxes.
-- Some organizations might not allow you to use mailbox audit logging. In this case, the feature will be turned off for you.
-
+> - Some organizations might not allow you to use mailbox audit logging. In this case, the feature will be turned off for you.
 
 To investigate this issue, create and use a Windows PowerShell script by using the sample script that's provided in Step 1 in this section, and then customize a search. By default, you can investigate actions that are performed by non-owners and administrators. This script exports content in a simplified, comma-separated values (.csv) file to help you troubleshoot reports about items that are missing or that were updated unexpectedly.
 
