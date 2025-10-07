@@ -54,5 +54,21 @@ Use this cmdlet when running a scheduled task that fails with an error, or when 
 
 Use this cmdlet when having network printing errors occur, when the client fails to print, or when the printing is slow.
 
+## 
+
 > [!NOTE]
 > If the printing is slow, add the parameter `-procmon` to the end of the cmdlet.
+
+## Scenario: Windows Remote Management (WinRM)
+
+#### TSS cmdlet
+
+
+```powershell
+.\TSS.ps1 -Scenario UEX_WinRM
+```
+
+#### TSS cmdlet description
+
+Use this command to collect data for any WinRM scenario. Run on both source and destination 
+
