@@ -1433,12 +1433,12 @@ items:
       href: ./windows-tss/collect-data-analyze-troubleshoot-performance-scenarios.md
     - name: Collect data to analyze and troubleshoot Remote Desktop Services scenarios
       href: ./windows-tss/collect-data-analyze-troubleshoot-remote-desktop-services-scenarios.md
-    - name: Collect data to analyze and troubleshoot Shell experience scenarios
+    - name: Collect data to analyze and troubleshoot shell experience scenarios
       href: ./windows-tss/collect-data-analyze-troubleshoot-shell-experiences-scenarios.md
+    - name: Collect data to analyze and troubleshoot Windows servicing, updates, and Features on Demand scenarios
+      href: ./windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md
     - name: Collect data to analyze and troubleshoot system management components scenarios
       href: ./windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios.md
-    - name: Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios
-      href: ./windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md
     - name: Gather information for Hyper-V related issues
       href: ./windows-tss/gather-information-using-tss-hyper-v-issues.md
     - name: Gather information for SQL cluster (AG/FCI) related issues
