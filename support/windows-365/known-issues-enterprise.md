@@ -183,10 +183,11 @@ This change lets the web client or Safari browser store and use the `microsoft.u
 
 ### Possible Cause
 
-- GCC High customers using **Windows 365** on macOS may encounter authentication failures when adding a **Work or School Account** via the **Windows App**.
+- Government customers (GCC, GCC High) using **Windows 365** on macOS may encounter authentication failures when adding a **Work or School Account** via the **Windows App**.
 - **Web browser access** to Windows 365 remains unaffected.
-- Root cause: The Windows App on macOS does not properly detect the GCC High Windows 365 environment during discovery.
+- The Windows App on macOS does not properly detect the GCC High Windows 365 environment during discovery.
 - Required workspace URL (`https://rdweb.wvd.azure.us/api/arm/feeddiscovery`) is not automatically identified during authentication.
+- This is by design and requires to choose **Add workspace** instead of **Work or School Account** for government customers.
 
 ### Solution
 - Instead of selecting **Add Account**, choose **Add Workspace**.
