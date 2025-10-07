@@ -69,7 +69,7 @@ The October 2025 update for Windows 24H2 introduces a fix for this hardware issu
 
 ## More information
 
-You can use the following Windows PowerShell script to determine whether your PC has one of the controllers that might be affected. To run this script, create a file that uses a name such as **Check-USBSplitTransactionVulnerability.ps1**. Then, paste the following text into the file. un the script from a PowerShell command prompt.
+You can use the following Windows PowerShell script to determine whether your PC has one of the controllers that might be affected. To run this script, create a file that uses a name such as **Check-USBSplitTransactionVulnerability.ps1**. Then, paste the following text into the file, and run the script at a PowerShell command prompt.
 
 > [!NOTE]  
 > In Device Manager, the device in question appears under **System Devices**. It has a name that resembles "Intel(R) LPC Controller/eSPI Controller."
