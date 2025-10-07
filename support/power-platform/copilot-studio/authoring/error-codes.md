@@ -1,7 +1,7 @@
 ---
 title: "Understand error codes"
 description: "Understand error codes to troubleshoot issues in your agent design with Microsoft Copilot Studio."
-ms.date: 09/09/2025
+ms.date: 10/02/2025
 ms.reviewer:
   - jameslew
   - erickinser
@@ -24,7 +24,9 @@ As an agent maker, if a problem occurs when you're using the test pane to [test 
 
 | Error code                                                        | Description                                                         |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [AIModelActionRequestTimout](#aimodelactionrequesttimeout)        | There's a timeout error related to a call to an AI Builder model. |
 | [AsyncResponsePayloadTooLarge](#asyncresponsepayloadtoolarge)     | There's an error related to the output of a connector.              |
+| [ConsentNotProvidedByUser](#consentnotprovidedbyuser)             | A user interacting with an agent rejects the agent's SSO request. |
 | [ContentError](#contenterror)                                     | There's an error in the topic content.                              |
 | [DataLossPreventionViolation](#datalosspreventionviolation)       | There was a data policy violation.                                  |
 | [EnforcementMessageC2](#enforcementmessagec2)                     | Not enough prepaid capacity was available.                          |
@@ -47,11 +49,24 @@ As an agent maker, if a problem occurs when you're using the test pane to [test 
 [1]: /microsoft-copilot-studio/advanced-flow
 [2]: /microsoft-copilot-studio/authoring-topic-management#redirect-to-another-topic
 
+#### AIModelActionRequestTimeout
+
+**Error message:** 
+
+**Resolution:**
+
+
 #### AsyncResponsePayloadTooLarge
 
 **Error message:** The output returned from the connector was too large to be handled by the agent. Try reducing its size by utilizing available connector filters or by limiting the number of configured action outputs.
 
 **Resolution:** One of the agent's real-time connectors is returning a payload that's larger than the agent can handle. For more information regarding the payload limit, see [Copilot Studio web app limits](/microsoft-copilot-studio/requirements-quotas#copilot-studio-web-app-limits).
+
+#### ConsentNotProvidedByUser
+
+**Error message:** No consent provided for SSO connection.
+
+**Resolution:** The user interacting with the agent must confirm the connection using the agent's single sign on connection prompt. 
 
 #### ContentError
 
