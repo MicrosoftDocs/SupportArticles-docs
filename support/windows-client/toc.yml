@@ -1081,6 +1081,8 @@ items:
       href: ../windows-server/system-management-components/cant-install-openssh-features.md?context=/troubleshoot/windows-client/context/context
     - name: OpenSSH client can't connect to a server via SSH
       href: ../windows-server/system-management-components/open-client-can-not-connect-server.md?context=/troubleshoot/windows-client/context/context
+    - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
+      href: ./system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell
     items:
     - name: Grant-DfsnAccess doesn't change inheritance mode
