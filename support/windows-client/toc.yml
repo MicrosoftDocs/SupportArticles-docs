@@ -1439,8 +1439,6 @@ items:
       href: ./windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios.md
     - name: Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios
       href: ./windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md
-    - name: Gather information for deployment-related issues
-      href: ./windows-tss/gather-information-using-tss-deployment.md
     - name: Gather information for Group Policy issues
       href: ./windows-tss/gather-information-using-tss-group-policy.md
     - name: Gather information for Hyper-V related issues

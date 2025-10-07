@@ -3271,7 +3271,7 @@ items:
     - name: Gather information for Active Directory replication issues
       href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for deployment-related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Group Policy issues
       href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Hyper-V related issues
