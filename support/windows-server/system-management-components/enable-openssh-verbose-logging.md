@@ -1,5 +1,5 @@
 ---
-title: How to enable OpenSSH verbose logging
+title: How to enable OpenSSH Verbose Logging
 description: Explains how to enable verbose logging for the OpenSSH service.
 ms.date: 10/03/2025
 manager: dcscontentpm
@@ -15,9 +15,9 @@ appliesto:
 ---
 # How to enable OpenSSH verbose logging
 
-To enable logging verbose logging for the OpenSSH Server service, modify the sshd_config file and restart the OpenSSH Server service. To do this, follow these steps:
+To enable logging verbose logging for the OpenSSH Server service, modify the sshd_config file, and restart the OpenSSH Server service. To do this, follow these steps:
 
-1. Using an Administrator-level account, open a text editor, and then open **%ProgramData%\ssh\sshd_config**. The default text of the "Logging" section should resemble the following excerpt:
+1. Use an administrator-level account to open a text editor, and then open **%ProgramData%\ssh\sshd_config**. The default text of the "Logging" section should resemble the following excerpt:
 
    ```output
    # Logging
@@ -46,4 +46,4 @@ To enable logging verbose logging for the OpenSSH Server service, modify the ssh
 
 After the service restarts, it generates verbose log data.
 
-For more information about configuring OpenSSH, see the [Windows configurations in sshd_config](/windows-server/administration/OpenSSH/openssh-server-configuration#windows-configurations-in-sshd_config) section of "OpenSSH Server configuration for Windows Server and Windows."
+For more information about how to configure OpenSSH, see the [Windows configurations in sshd_config](/windows-server/administration/OpenSSH/openssh-server-configuration#windows-configurations-in-sshd_config) section of "OpenSSH Server configuration for Windows Server and Windows."
