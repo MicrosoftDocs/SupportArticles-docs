@@ -35,7 +35,7 @@ These batches are system generated indicating an adjustment was needed in Genera
 
 Starting on Microsoft Dynamics GP 9.0 the system will automatically generate General Ledger adjustments when an item is sold or consumed from inventory and the cost of the item's receipt layer is subsequently changed. Each of these General Ledger adjustments will have a reference number assigned.
 
-For more information about cost changes, click the following article numbers to view the article in the Microsoft Knowledge Base: [939912](https://support.microsoft.com/help/939912) Information about the calculation of Inventory item costs and the maintenance of these costs in Inventory in Microsoft Dynamics GP
+For more information about cost changes, see [Information about the calculation of inventory item costs and the maintenance of these costs in Inventory in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/the-calculation-inventory-item-costs).
 
 [4094695](https://community.dynamics.com/blogs/post/?postid=8d612be9-be06-41c4-b72b-3fdbaf1831fa) How to find what Receipt Layer was affected by the Cost Adjustment
 

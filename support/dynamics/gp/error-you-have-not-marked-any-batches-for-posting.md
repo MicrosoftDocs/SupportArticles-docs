@@ -37,9 +37,7 @@ To resolve this problem, use one of the following methods.
 
 ### Method 2: Set the batch status to available
 
-For more information about how to set the batch status to available by using Microsoft SQL Server, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[850289](https://support.microsoft.com/help/850289) A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP  
+For more information about how to set the batch status to available by using Microsoft SQL Server, see [A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/a-batch-is-held-in-the-several-statuses).
 
 ### Method 3: Use an automated solution
 
