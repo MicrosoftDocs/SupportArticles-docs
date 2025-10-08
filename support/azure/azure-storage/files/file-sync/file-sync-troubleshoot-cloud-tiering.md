@@ -334,7 +334,7 @@ This option doesn't require removing the server endpoint but requires sufficient
    ```powershell
     cd <volume letter>\ <syncShare>\
     ```
-3. Run this command  
+3. Run this command:
    ```powershell
     dir  desktop.ini,thumbs.db,ehthumbs.db,~$*.*,*.laccdb,*.tmp -Recurse -Force -File -ErrorAction Ignore
     ```
