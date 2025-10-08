@@ -329,7 +329,7 @@ This option doesn't require removing the server endpoint but requires sufficient
 4. Overwrite the orphaned tiered files by copying the full file from the Azure file share to the Windows Server.
 
 ## How to identify files that are excluded from File Sync
-1. Open PowerShell in administrator mode.
+1. Open a PowerShell window as administrator.
 2. Navigate to the folder by replacing <volume letter> and <syncShare> with the volume letter and sync share names
    ```powershell
     cd <volume letter>\ <syncShare>\
