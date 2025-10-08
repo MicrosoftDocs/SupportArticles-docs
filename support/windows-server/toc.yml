@@ -2438,6 +2438,8 @@ items:
       href: ./setup-upgrade-and-drivers/create-iso-image-for-uefi-platforms.md
     - name: Enable logging and tracing for WDS components
       href: ./setup-upgrade-and-drivers/enable-logging-windows-deployment-service.md
+    - name: 'Error 0x80070003 during "Process Drivers for Migration" operation'
+      href: ./setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md
     - name: Error 0x800f0906 when you convert Server Core to GUI
       href: ./setup-upgrade-and-drivers/dism-fails-with-error-0x800f0906.md
     - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
@@ -2594,6 +2596,10 @@ items:
       href: ./system-management-components/what-is-microsoft-management-console.md
   - name: OpenSSH
     items:
+    - name: Can't install OpenSSH Features
+      href: ./system-management-components/cant-install-openssh-features.md
+    - name: Enable OpenSSH verbose logging
+      href: ./system-management-components/enable-openssh-verbose-logging.md
     - name: OpenSSH client can't connect to a server via SSH
       href: ./system-management-components/open-client-can-not-connect-server.md
   - name: PowerShell
@@ -3160,6 +3166,8 @@ items:
       href: ./installing-updates-features-roles/description-of-windows-server-update-services-3.md
     - name: How to block user access to Windows Update
       href: ./installing-updates-features-roles/block-user-access-windows-update.md
+    - name: Known Issue Rollback
+      href: ./installing-updates-features-roles/known-issue-rollback.md
     - name: Re-register Windows client/server in WSUS
       href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
     - name: Unexpected automatic update when it's disabled by Group Policy
@@ -3170,6 +3178,8 @@ items:
       href: ./installing-updates-features-roles/windows-server-update-services-3-sp2.md
     - name: WSUS clients can't install updates
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
+    - name: WSUS messages and troubleshooting tips
+      href: ./installing-updates-features-roles/wsus-messages-troubleshooting-tips.md
   - name: Windows Update fails - installation stops with error
     items:
     - name: 'Troubleshooting guidance: Windows Server update'
@@ -3208,16 +3218,16 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
     - name: Windows Update for Business Reports
       items:
-    - name: Initial service configuration and Onboarding
-      items:
-      - name: 'Troubleshooting guidance: Windows Update for Business reports'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
-    - name: Missing data or incomplete report data
-      items:
-      - name: 'WUBr: Troubleshoot diagnostic data transmission'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
-      - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
+      - name: Initial service configuration and Onboarding
+        items:
+        - name: 'Troubleshooting guidance: Windows Update for Business reports'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
+      - name: Missing data or incomplete report data
+        items:
+        - name: 'WUBr: Troubleshoot diagnostic data transmission'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
+        - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2

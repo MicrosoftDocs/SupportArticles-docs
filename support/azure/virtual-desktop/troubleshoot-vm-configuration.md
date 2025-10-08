@@ -3,7 +3,7 @@ title: Troubleshoot Azure Virtual Desktop session host
 description: Helps resolve issues when you're configuring Azure Virtual Desktop session host virtual machines.
 ms.topic: troubleshooting
 ms.date: 01/21/2025
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Troubleshoot session host virtual machine configuration

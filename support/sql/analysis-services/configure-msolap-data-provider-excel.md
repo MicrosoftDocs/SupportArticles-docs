@@ -27,7 +27,7 @@ To create a data connection to an Analysis Services data source, Microsoft Excel
   
 For more information about MSOLAP and other client libraries for Analysis Services, review [Analysis Services client libraries](/analysis-services/client-libraries).
 
-For more information about how to use the correct version of MSOLAP, see [Connection string properties](/analysis-services/instances/connection-string-properties-analysis-services). For legacy MSOLAP versions, please refer to [How to obtain the latest versions of MSOLAP](https://support.microsoft.com/help/2735567). For latest MSOLAP version, please refer to [Analysis Services client libraries](/analysis-services/client-libraries).
+For more information about how to use the correct version of MSOLAP, see [Connection string properties](/analysis-services/instances/connection-string-properties-analysis-services). For latest MSOLAP version, please refer to [Analysis Services client libraries](/analysis-services/client-libraries).
 
 Excel uses the version of the MSOLAP provider that is installed on the client device. In the following example, Excel has configured MSOLAP.5 as the data provider in the data connection string.
 

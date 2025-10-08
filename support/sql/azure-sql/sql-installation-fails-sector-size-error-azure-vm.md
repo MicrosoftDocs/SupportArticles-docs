@@ -53,7 +53,7 @@ To resolve this problem, reinstall SQL Server after forcing the Azure VM to use 
 To successfully install SQL Server on your Azure VM, follow these steps:
 
 1. If you've already installed SQL Server, uninstall SQL Server. Otherwise, skip to the next step. 
-1. Add the [ForcedPhysicalSectorSizeInBytes](../database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size.md#resolutions) registry key. 
+1. Add the [ForcedPhysicalSectorSizeInBytes](../database-engine/database-file-operations/troubleshoot-os-4kb-disk-sector-size.md#resolution-steps-for-disk-sector-size-errors-in-sql-server) registry key. 
 1. Verify the sector size is 4 KB by running the following command in an elevated command prompt:
 
    `fsutil fsinfo sectorinfo <volume pathname>`
