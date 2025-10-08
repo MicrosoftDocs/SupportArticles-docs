@@ -55,7 +55,7 @@ Info CBS Failed to resolve package [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTIO
 > [!NOTE]
 > The package and error details may vary depending on the OS version and the KB update. However, when this error is logged, the recommended solution in this article will apply.
 > [!NOTE]
-> For more information about how to collect the CBS.log file, see  [Fix Windows Update corruptions and installation failures](fix-windows-update-errors.md#logging). For more information on how to use TroubleshoortingScript (TSS) tool version 2, see [Introduction to TroubleShootingScript toolset (TSS)](../../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md)
+> For more information about how to collect the CBS.log file, see  [Fix Windows Update corruptions and installation failures](fix-windows-update-errors.md#logging).  For more information on how to use TroubleshoortingScript (TSS) tool version 2, see [Introduction to TroubleShootingScript toolset (TSS)](../../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md)
 
 ## Resolution
 
