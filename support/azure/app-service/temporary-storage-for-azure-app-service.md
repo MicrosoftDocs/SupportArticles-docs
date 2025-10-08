@@ -13,7 +13,7 @@ If an application is reporting high resource consumption, the source of the prob
 
 This video demonstrates how to narrow the scope of your troubleshooting to temporary storage, and the next steps for investigating and troubleshooting performance issues.
 
-> [!VIDEO <https://www.youtube.com/embed/bk8h-VYaIXs>]
+> [!VIDEO https://www.youtube.com/embed/bk8h-VYaIXs]
 
 ## Related content
 
