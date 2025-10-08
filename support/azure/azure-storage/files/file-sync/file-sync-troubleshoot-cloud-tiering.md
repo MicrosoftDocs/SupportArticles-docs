@@ -339,7 +339,7 @@ This option doesn't require removing the server endpoint but requires sufficient
     dir  desktop.ini,thumbs.db,ehthumbs.db,~$*.*,*.laccdb,*.tmp -Recurse -Force -File -ErrorAction Ignore
     ```
 
-Alternatively, you may use the TreeSize tool. The same list of exclusions can be put into the TreeSize 'filters' configuration to count excluded content. The advantage of this approach is that the content which the administrator does not have access to in case of the former approach will be accessible by TreeSize (because it uses the backup/restore permissions when scanning content).
+Alternatively, you may use the TreeSize tool. The same list of exclusions can be put into the TreeSize 'filters' configuration to count excluded content. The advantage of this approach is that the content which the administrator does not have access to in case of the former approach will be accessible by TreeSize because it uses the backup/restore permissions when scanning content.
 
 ## How to troubleshoot files unexpectedly recalled on a server
 
