@@ -2598,6 +2598,8 @@ items:
     items:
     - name: Can't install OpenSSH Features
       href: ./system-management-components/cant-install-openssh-features.md
+    - name: Enable OpenSSH verbose logging
+      href: ./system-management-components/enable-openssh-verbose-logging.md
     - name: OpenSSH client can't connect to a server via SSH
       href: ./system-management-components/open-client-can-not-connect-server.md
   - name: PowerShell

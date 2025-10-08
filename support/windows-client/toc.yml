@@ -1081,6 +1081,8 @@ items:
     items:
     - name: Can't install OpenSSH features
       href: ../windows-server/system-management-components/cant-install-openssh-features.md?context=/troubleshoot/windows-client/context/context
+    - name: Enable OpenSSH verbose logging
+      href: ../windows-server/system-management-components/enable-openssh-verbose-logging.md?context=/troubleshoot/windows-client/context/context
     - name: OpenSSH client can't connect to a server via SSH
       href: ../windows-server/system-management-components/open-client-can-not-connect-server.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell
