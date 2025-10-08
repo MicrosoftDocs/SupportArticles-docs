@@ -1,6 +1,36 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-client/windows-tss/gather-information-using-tss-user-experience.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-clustering-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-tss/gather-information-using-tss-wufb-reports.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-tss/gather-information-using-tss-group-policy.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-group-policy-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-tss/gather-information-using-tss-deployment.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/windows-tss/gather-information-using-tss-ad-replication.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-active-directory-scenarios#scenario-active-directory-replication-and-topology",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/setup-upgrade-and-drivers/prevent-users-connect-usb.md",
       "redirect_url": "https://gpsearch.azurewebsites.net/#173",
       "redirect_document_id": false
