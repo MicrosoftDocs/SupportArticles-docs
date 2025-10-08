@@ -43,7 +43,7 @@ If **Factory reset protection emails** is set to **Not configured** (default), I
 > [!NOTE]
 > **Android 15** introduced FRP hardening. Some OEMs previously skipped FRP in certain paths. As of Android 15, FRP enforcement now aligns with Google’s intended design.
 
-We recommend that you set the **Factory reset** value to **Block** to prevent users from using the factory reset option in the device settings.
+We recommend that you set the **Factory reset** value to **Block** to prevent users from using the factory reset option in the device settings. This is only available for fully managed and dedicated devices. 
 
 :::image type="content" source="media/factory-reset-protection-emails-not-enforced/factory-reset.png" alt-text="Screenshot of Factory reset options.":::
 
