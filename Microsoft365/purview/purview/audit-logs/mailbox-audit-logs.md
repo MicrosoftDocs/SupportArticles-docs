@@ -20,7 +20,7 @@ ms.date: 05/05/2025
 
 # Use mailbox audit logs in Microsoft 365
 
-In Microsoft 365, you can run mailbox audit logs to determine when a mailbox was updated unexpectedly or whether items are missing from a mailbox. For example, you may have to do this if items are moved or if they're deleted unexpectedly or incorrectly.
+In Microsoft 365, you can run [mailbox audit logs](/purview/audit-mailboxes) to determine when a mailbox was updated unexpectedly or whether items are missing from a mailbox. For example, you may have to do this if items are moved or if they're deleted unexpectedly or incorrectly.
 
 **Note**: For the vNext environment, by default, mailbox audit logs aren't enabled. The feature must be turned on in order for a user to begin a search.
 
