@@ -54,7 +54,11 @@ If the Lookup's search results are missing items or include unexpected items, in
 
 ## Result fields are incorrect
 
-The Lookup control's search results are presented in the order that they're listed for that entity's Lookup view, with blank fields being replaced with the next nonblank field. A multi-entity Lookup can have results with different orders of fields if the entities' Lookup views have different field combinations.
+The Lookup control's search results are presented in the order that they're listed in the entity's Lookup view, with the following caveats:
+
+- Blank fields are replaced with the next nonblank field.
+- Fields beginning with the search string are swapped with the Lookup view's second field.
+- A multi-entity Lookup can have results with different orders of fields if the entities' Lookup views have different field combinations.
 
 ## See also
 
