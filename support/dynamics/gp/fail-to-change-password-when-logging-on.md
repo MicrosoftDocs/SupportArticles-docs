@@ -43,6 +43,6 @@ If you do not use this password feature, you do not have to install the SQL Nati
 
 ## References
 
-- ["This login failed. Attempt to log in again or contact your system administrator" error when you log on to Microsoft Dynamics GP](troubleshoot/dynamics/gp/error-message-try-log-on-dynamics-gp)
+- ["This login failed. Attempt to log in again or contact your system administrator" error when you log on to Microsoft Dynamics GP](/troubleshoot/dynamics/gp/error-message-try-log-on-dynamics-gp)
 - [Frequently asked questions about the advanced SQL Server options in the User Setup window in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/advanced-sql-server-options-user-setup-window)
 - [How to set up an ODBC Data Source on SQL Server for Microsoft Dynamics GP](https://support.microsoft.com/help/870416)
