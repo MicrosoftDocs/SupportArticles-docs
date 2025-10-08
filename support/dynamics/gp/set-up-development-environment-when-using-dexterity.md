@@ -24,7 +24,7 @@ To follow the steps in this article, you must be able to see the file name exten
 1. On the **Tools** menu, click **Folder Options**.
 2. In the **Folder Options** dialog box, click the **View** tab, and then click to clear the **Hide extensions for known file types** check box.
 
-The steps in this article assume that you already have a product ID for the project that you develop. For more information about product IDs for Dexterity, see [Description of product IDs for Dexterity in Microsoft Dynamics GP](https://support.microsoft.com/help/914899).
+The steps in this article assume that you already have a product ID for the project that you develop. For more information about product IDs for Dexterity, see [Description of product IDs for Dexterity in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/description-product-ids-dexterity).
 
 For more information about how to request a product ID for Dexterity, see [How to request a new Dexterity product ID for my product](https://support.microsoft.com/help/867102).
 
@@ -134,7 +134,7 @@ To set up the development environment, follow these steps:
 
     7. To update the source control state of the resources in the dictionary, click **Source Control** on the **Explorer** menu, and then click **Update SCC State**.
 
-    8. If you use the Dexterity source control functionality, create an index file to control the resource ID between builds. For more information about how to use an index file and the Dexterity source control functionality, see [How to use an index file and the Great Plains Dexterity source code control functionality to make sure that the resources that you create maintain the same resource ID in different builds and versions of your code](https://support.microsoft.com/help/894699).
+    8. If you use the Dexterity source control functionality, create an index file to control the resource ID between builds. For more information about how to use an index file and the Dexterity source control functionality, see [How to use an index file with Dexterity to ensure resource IDs do not change in new builds and versions](/troubleshoot/dynamics/gp/how-to-use-index-file-with-dexterity-to-maintain-resource-ids-in-new-builds-and-versions).
 
 9. Create a macro of the chunking process.
 
@@ -155,7 +155,7 @@ To set up the development environment, follow these steps:
     6. Close the destination dictionary.
     7. Create a chunk file.
 
-        For more information about how to create a chunk file in Dexterity, see [How to create a chunk file in Great Plains 8.0 Dexterity](https://support.microsoft.com/help/894700).
+        For more information about how to create a chunk file in Dexterity, see [How to create a chunk file in Dexterity in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/create-a-chunk-file-dexterity).
 
         Use the following naming conventions:
           - Extracted dictionary: C:\\Dex1000\\Project\\Project.dic

@@ -44,7 +44,7 @@ After following the required steps above to enable this feature, follow the step
 
 - This data is stored in the ExchangeSyncIdMapping table that could potentially get large if this feature is enabled. That is why the ExchangeSyncIdMappingPersistenceTimeInDays setting was also introduced and has a default of three days.
 - ExchangeSyncIdMapping info is only visible to the owning user. That is why the owner of the mailbox needs to view the dashboard to see the details for their synchronization failures.
-- If synchronization for a mailbox isn't working at all, see [Troubleshooting Server-Side Synchronization](https://support.microsoft.com/help/4345669).
+- If synchronization for a mailbox isn't working at all, see [Troubleshooting and monitoring server-side synchronization](troubleshoot/power-platform/dataverse/email-exchange-synchronization/troubleshooting-monitoring-server-side-synchronization).
 
 ## Known issues
 

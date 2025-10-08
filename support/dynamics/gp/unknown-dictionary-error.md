@@ -36,4 +36,4 @@ To resolve this problem, follow these steps:
 
 4. If another computer is working correctly, copy the Dynamics.dic file from the working computer to the computer that is experiencing the error message.
 
-5. If the error message still occurs, disable the reference to third-party dictionaries. For more information about how to do it, see [KB - Steps to disable third-party products or temporarily disable additional products in the Dynamics.set file in Microsoft Dynamics GP](https://support.microsoft.com/help/872087)
+5. If the error message still occurs, disable the reference to third-party dictionaries. For more information about how to do it, see [Steps to disable third-party products or temporarily disable additional products in the Dynamics.set file in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/disable-third-party-products-in-dynamicsdot-set-file).

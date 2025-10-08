@@ -69,4 +69,4 @@ To resolve this issue, follow these steps:
 ## More information
 
 For more information about the tax fields and year-end update fields in US Payroll in Microsoft Dynamics GP, see
-[Information about the tax fields and year-end update fields in Payroll in Microsoft Dynamics GP](https://support.microsoft.com/help/949154).
+[Information about the tax fields and year-end update fields in Payroll in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/tax-fields-year-end-update-fields).

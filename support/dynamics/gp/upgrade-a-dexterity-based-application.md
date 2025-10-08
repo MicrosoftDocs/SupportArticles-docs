@@ -112,14 +112,14 @@ You'll now have separate subprojects for each version. However, the validate fea
 
 1. In Dexterity, select **Source Control** on the **Explorer** menu, and then select **Update SCC State**.
 2. On the **Explorer** menu, select **Source Control**, and then select **Update**.
-3. Select **Use Index File**. For more information, see [How to use an index file and the Microsoft Dynamics GP Dexterity source code control functionality to make sure that the resources that you create maintain the same resource ID in different builds and versions of your code](https://support.microsoft.com/help/894699).
+3. Select **Use Index File**. For more information, see [How to use an index file with Dexterity to ensure resource IDs do not change in new builds and versions](/troubleshoot/dynamics/gp/how-to-use-index-file-with-dexterity-to-maintain-resource-ids-in-new-builds-and-versions).
 4. Select **OK**.
 5. Leave all the resources selected, and then select **OK** to start the update.
 6. If your code contains references to palettes or toolbars, you may receive errors. If you do receive errors, go to step 9.
 
 ## Step 9: Fix the code
 
-1. Check out any code that is failing. Make the appropriate changes for the new version of Dexterity and Microsoft Dynamics GP. For more information, see [Tips and references for upgrading your Great Plains Dexterity-based application to Great Plains 8.0 Dexterity](https://support.microsoft.com/help/894701).
+1. Check out any code that is failing. Make the appropriate changes for the new version of Dexterity and Microsoft Dynamics GP.
 
 2. After everything is working in test mode, select **Source Control** on the **Explorer** menu, and then select **Check In**. Check in all the changes.
 
