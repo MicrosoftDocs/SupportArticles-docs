@@ -330,7 +330,7 @@ This option doesn't require removing the server endpoint but requires sufficient
 
 ## How to identify files that are excluded from File Sync
 1. Open a PowerShell window as administrator.
-2. Navigate to the folder by replacing <volume letter> and <syncShare> with the volume letter and sync share names
+2. Navigate to the folder. Replace `<volume letter>` and `<syncShare>` with the volume letter and sync share names.
    ```powershell
     cd <volume letter>\ <syncShare>\
     ```
