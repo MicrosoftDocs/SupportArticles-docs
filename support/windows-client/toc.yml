@@ -777,6 +777,8 @@ items:
       href: ./setup-upgrade-and-drivers/operation-timed-out-error-disk-management-console.md
     - name: Uninstalling driver doesn't remove associated files
       href: ./setup-upgrade-and-drivers/uninstalling-driver-not-remove-associated-files.md
+    - name: USB audio or video devices malfunction when connected to specific Intel-based devices
+      href: ./setup-upgrade-and-drivers/usb-audio-video-devices-malfunction.md
     - name: USB device drivers are removed unexpectedly after Windows 10 is updated
       href: ./setup-upgrade-and-drivers/usb-device-drivers-removed-unexpectedly-after-windows-10-update.md
     - name: Windows 10 doesn't install specific drivers for USB audio device
@@ -1079,6 +1081,8 @@ items:
     items:
     - name: Can't install OpenSSH features
       href: ../windows-server/system-management-components/cant-install-openssh-features.md?context=/troubleshoot/windows-client/context/context
+    - name: Enable OpenSSH verbose logging
+      href: ../windows-server/system-management-components/enable-openssh-verbose-logging.md?context=/troubleshoot/windows-client/context/context
     - name: OpenSSH client can't connect to a server via SSH
       href: ../windows-server/system-management-components/open-client-can-not-connect-server.md?context=/troubleshoot/windows-client/context/context
     - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues

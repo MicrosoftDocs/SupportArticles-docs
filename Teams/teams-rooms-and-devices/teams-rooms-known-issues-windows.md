@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/02/2025
+ms.date: 10/07/2025
 ---
 # Known issues with Teams Rooms on Windows
 
@@ -49,6 +49,7 @@ ms.date: 10/02/2025
 | --- | --- | --- |
 |During a Coordinated meeting, when the meeting volume is changed by using a room remote, the speaker on a Surface Hub or Teams Rooms device turns on.|For a trusted device such as a Surface Hub or Teams Rooms device that is set up to automatically join a Coordinated meeting when the primary device joins, the speaker turns on when a room remote is used to change the meeting volume. This issue occurs even though the audio settings on the device are turned off, and whether they're enabled or disabled.|Turn off proximity join and room remote capabilities on the trusted devices that automatically join a Coordinated meeting.|
 |The central part of the console on a Teams Rooms device doesn't respond to touch and mouse input.|On some Microsoft Teams Rooms devices such as the Crestron Dell Optiplex 7080 that use a 4k monitor connected as the front-of-room display, the central portion of the display intermittently stops responding to touch and mouse controls.<br/><br/>Despite this issue, the Teams Rooms app is functional and accepts inputs from a connected keyboard.|Contact Microsoft Support for assistance to work around this issue.|
+|Poor audio quality from a Teams Rooms device.|You might experience any of the following audio quality issues from a USB microphone or speaker that's connected to your Teams Rooms device: <ul><li> - Echo sent to remote participants on the call.</li><li> - Low audio quality sent to remote participants on the call.</li><li> - Decrease in audio quality as the call progresses.</li><li> - Low volume in speakers within the room.</li></ul><br/>This issue might be caused when a setting in the audio driver configuration to enhance audio quality is enabled.|To fix the audio quality issue, disable the audio enhancement setting for the attached Teams-certified USB audio device by using the following steps:<ol><li>Select **Settings** on the Teams Rooms device console.</li><li>Select **Windows Settings**, and sign in to the Teams Rooms device as an administrator.</li><li>Open **Control Panel**.</li><li>Select **Hardware and Sound** > **Sound**.</li><li>On the **Playback** tab, select the affected audio device and then select **Properties**.</li><li>Select the **Advanced** tab.</li><li>In the **Signal Enhancements** section, uncheck **Enable audio enhancements**, and then select **OK**.</li><li>Select the **Recording** tab and repeat steps 5, 6 & 7 for the same audio device </li><li>Select **OK** and then close **Control Panel.</li><li>Restart the Teams Rooms device.</li></ol>
 
 ## Limitations
 
