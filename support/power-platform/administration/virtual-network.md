@@ -83,7 +83,7 @@ If you experience issues where requests to a resource use a public IP address in
 
 #### Non-Azure resource without a private endpoint
 
-If a non-Azure resource doesn't have a private endpoint, but it's accessible from your virtual network, your DNS server should be configured to resolve the resource's hostname to its private IP address. Add a DNS *A* record to your DNS server that maps the resource's hostname to its private IP address: 
+If a non-Azure resource doesn't have a private endpoint, but it's accessible from your virtual network, your DNS server should be configured to resolve the resource's hostname to its private IP address. Add a DNS *A* record to your DNS server that maps the resource's hostname to its private IP address:
 
 - If you're using a custom DNS server, add the A record directly to your server.
 - If you're using an Azure-provided DNS, create an [Azure Private DNS Zone](/azure/dns/private-dns-overview), and link it to your virtual network. Then, add the A record to the private DNS zone.
