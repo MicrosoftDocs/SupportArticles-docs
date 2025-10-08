@@ -41,7 +41,7 @@ To locate the installation packages in the system, search for the following regi
 
 ```output HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\Packages```
 
-To investigate the cause further, examine the CBS.log file (C:\windows\logs\CBS). For more information on how to collect these logs, see [Fix Windows Update corruptions and installation failures.](/troubleshoot/windows-server/installing-updates-features-roles/fix-windows-update-errors?branch=main)
+To investigate the cause further, examine the CBS.log file (C:\windows\logs\CBS). For more information on how to collect these logs, see [Fix Windows Update corruptions and installation failures](fix-windows-update-errors.md#logging)
 
 ```output
 Info CBS Store corruption, manifest missing for package: Package_123_for_KB3192392~31bf3856ad364e35~amd64~~6.3.1.4
@@ -55,7 +55,7 @@ Info CBS Failed to resolve package [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTIO
 > [!NOTE]
 > The package and error details may vary depending on the OS version and the KB update. However, when this error is logged, the recommended solution in this article will apply.
 > [!NOTE]
-> For more information about how to collect the CBS.log file or any log that uses the TroubleShootingScript (TSS) tool version 2, see, [Introduction to TroubleShootingScript toolset (TSS)](/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss?branch=main)
+> For more information about how to collect the CBS.log file, see  [Fix Windows Update corruptions and installation failures](fix-windows-update-errors.md#logging). For more information on how to use TroubleshoortingScript (TSS) tool version 2, see [Introduction to TroubleShootingScript toolset (TSS)](../../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md)
 
 ## Resolution
 
