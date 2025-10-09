@@ -18,6 +18,8 @@
   items:
     - name: CDX download jobs can't be downloaded in a sandbox UAT
       href: data-synchronization/uat-cdx-broke-after-debug-aos.md
+    - name: Troubleshoot Commerce Data Exchange (CDX)
+      href: data-synchronization/commerce-data-exchange.md
     - name: Troubleshoot Commerce offline implementation
       href: data-synchronization/commerce-offline-implementation.md
 - name: Development and SDKs
