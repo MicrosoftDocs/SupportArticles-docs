@@ -12,14 +12,17 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 06/23/2025
+ms.date: 10/08/2025
 ---
 # Teams meeting features for shared mailboxes
 
 For Microsoft Teams meetings that are managed by using a shared mailbox, only a limited number of features are available. The following table lists the details of each feature.
 
 > [!NOTE]
-> Shared mailboxes aren't intended for direct login. Keep the shared mailbox account in the **Disabled** state, and avoid resetting its password or signing in by using the shared mailbox user account.
+
+> - Keep the shared mailbox account in the **Disabled** state, and avoid resetting its password.
+> - Don't sign in by using the credentials of the shared mailbox user account. Only users that the shared mailbox is shared with can log in with their user credentials.
+> - To create a Teams meeting in a shared mailbox calendar, a valid Teams license must be assigned either to the shared mailbox or to the user who is logged in to the shared mailbox.
 
 |Available feature|Details|
 |----------|-----------|

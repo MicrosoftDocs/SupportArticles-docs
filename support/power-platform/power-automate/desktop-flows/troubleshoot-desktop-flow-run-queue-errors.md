@@ -33,7 +33,7 @@ You can view lifecycle events for desktop flows in the queue from the monitor ru
 
 ## Cause
 
-When no machines are available, Power Automate creates a queue to hold the desktop flows waiting to be run. Once a machine is available, the next desktop flow run will be selected to run based on [priority](/power-automate/desktop-flows/monitor-desktop-flow-queues#setting-a-priority) and request time. If no machine is available after six hours since the time it was requested, the desktop flow will time out and fail with a `NoCandidateMachine` error code.
+When no machines are available, Power Automate creates a queue to hold the desktop flows waiting to be run. Once a machine is available, the next desktop flow run will be selected to run based on [priority](/power-automate/desktop-flows/monitor-desktop-flow-queues#setting-a-priority) and request time. If no machine is available after twelve hours since the time it was requested, the desktop flow will time out and fail with a `NoCandidateMachine` error code.
 
 As mentioned in the error message, this error means that the orchestrator can't find an available machine to run the desktop flow. This error occurs before the execution of the desktop flow starts.
 

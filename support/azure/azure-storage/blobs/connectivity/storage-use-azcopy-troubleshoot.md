@@ -121,7 +121,7 @@ If you receive an error message that states that your parameters aren't recogniz
 
 Also, make sure to use built-in help messages by using the `-h` switch together with any command (for example, `azcopy copy -h`). See [Get command help](/azure/storage/common/storage-use-azcopy-v10?toc=/azure/storage/blobs/toc.json#get-command-help). To view the same information online, see [azcopy copy](/azure/storage/common/storage-ref-azcopy-copy?toc=/azure/storage/blobs/toc.json).
 
-To help you understand commands, we provide an education tool that's located in the [AzCopy command guide](https://azcopyvnextrelease.z22.web.core.windows.net/). This tool demonstrates the most popular AzCopy commands along with the most popular command flags. To find example commands, see [Transfer data](/azure/storage/common/storage-use-azcopy-v10?toc=/azure/storage/blobs/toc.json#transfer-data). If you have a question, try searching through existing [GitHub issues](https://github.com/Azure/azure-storage-azcopy/issues) first to see whether it was already answered.
+To find example commands, see [Transfer data](/azure/storage/common/storage-use-azcopy-v10?toc=/azure/storage/blobs/toc.json#transfer-data). If you have a question, try searching through existing [GitHub issues](https://github.com/Azure/azure-storage-azcopy/issues) first to see whether it was already answered.
 
 ## Conditional access policy error
 
