@@ -68,7 +68,7 @@ Label IDs are case-sensitive when matching IDs in the ribbon XML to localized la
 
 ### Regenerate command metadata
 
-The command checker might report the following error in the LocalizationErrors section:
+The Command checker might report the following error in the LocalizationErrors section:
 
 > Missing object ID for translation lookup
 
