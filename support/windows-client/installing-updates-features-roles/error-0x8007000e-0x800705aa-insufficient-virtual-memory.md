@@ -40,7 +40,7 @@ Insufficient system resources exist to complete the requested service.
 This issue occurs when the computer doesn't have enough available virtual memory for Windows to install the update. The most common causes of this issue are the following conditions:
 
 - Third-party applications consume a large amount of virtual memory.
-- The computer's virtual memory isn't managed automatically. Instead, it has been manually configured.
+- The computer's virtual memory isn't managed automatically. Instead, it's' manually configured.
 
 ## Workaround: Clean restart
 
