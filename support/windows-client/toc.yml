@@ -1407,7 +1407,7 @@ items:
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072efe-with-cipher-suite-configuration.md
     - name: Windows Update common errors and mitigation
       href: ./installing-updates-features-roles/common-windows-update-errors.md
-    - name: 'Windows update fails to install and generates error code "0x8007000e/0x800705aa"'
+    - name: Windows update fails to install and generates error code 0x8007000e or 0x800705aa
       href: ./installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md
 - name: Windows Troubleshooters
   items:

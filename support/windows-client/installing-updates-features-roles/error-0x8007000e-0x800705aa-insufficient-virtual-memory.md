@@ -1,6 +1,6 @@
 ---
-title: Windows Update Fails to Install and Generates Error Code "0x8007000e/0x800705aa"
-description: Describes how to resolve Windows Update error code 0x8007000e/0x800705aa.
+title: Windows Update Fails to Install and Generates Error Code 0x8007000e or 0x800705aa
+description: Describes how to resolve Windows Update error code 0x8007000e or 0x800705aa.
 ms.date: 10/15/2025
 manager: dcscontentpm
 audience: itpro
@@ -14,9 +14,9 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
-# Windows update fails to install and generates error code "0x8007000e/0x800705aa"
+# Windows update fails to install and generates error code 0x8007000e or 0x800705aa
 
-This article describes how to resolve Windows Update error code 0x8007000e/0x800705aa.
+This article describes how to resolve Windows Update error code 0x8007000e or 0x800705aa.
 
 ## Symptoms
 
