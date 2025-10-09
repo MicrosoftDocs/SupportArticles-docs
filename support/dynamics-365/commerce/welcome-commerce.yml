@@ -29,6 +29,8 @@ landingContent:
         links:
           - text: CDX download jobs can't be downloaded in a sandbox UAT
             url: data-synchronization/uat-cdx-broke-after-debug-aos.md
+          - text: Troubleshoot Commerce Data Exchange (CDX)
+            url: data-synchronization/commerce-data-exchange.md
           - text: Troubleshoot Commerce offline implementation
             url: data-synchronization/commerce-offline-implementation.md
 
