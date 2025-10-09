@@ -45,6 +45,108 @@ For autoinstrumentation to work successfully, these libraries must be removed.
 
 If you encounter problems that are caused by the Application Insights SDK itself after you enable autoinstrumentation, collect self-diagnostic logs to diagnose the problems. For more information, see [How to collect self-diagnostic logs for Application Insights SDKs](enable-self-diagnostics.md).
 
+## Issues with Java app running on Azure Functions
+
+Your Java functions might have slow startup times if you adopted this feature before February 2023. From the function app **Overview** pane, go to **Configuration** in the left-hand side navigation menu. Then select **Application settings** and use the following steps to fix the issue.
+
+### Windows
+
+1. Check to see if the following settings exist and remove them:
+
+    ```
+    XDT_MicrosoftApplicationInsights_Java -> 1
+    ApplicationInsightsAgent_EXTENSION_VERSION -> ~2
+    ```
+
+2. Enable the latest version by adding this setting:
+
+    ```
+    APPLICATIONINSIGHTS_ENABLE_AGENT: true
+    ```
+
+### Linux Dedicated/Premium
+
+1. Check to see if the following settings exist and remove them:
+
+    ```
+    ApplicationInsightsAgent_EXTENSION_VERSION -> ~3
+    ```
+
+1. Enable the latest version by adding this setting:
+
+    ```
+    APPLICATIONINSIGHTS_ENABLE_AGENT: true
+    ```
+
+<!-- MOVE OR DELETE?
+[!INCLUDE [azure-monitor-app-insights-test-connectivity](includes/azure-monitor-app-insights-test-connectivity.md)]
+-->
+
+### Duplicate logs
+
+If you're using `log4j` or `logback` for console logging, distributed tracing for Java Functions creates duplicate logs. These duplicate logs are then sent to Application Insights. To avoid this behavior, use the following workarounds.
+
+#### Log4j
+
+Add the following filter to your log4j.xml:
+
+```xml
+<Filters>
+  <ThresholdFilter level="ALL" onMatch="DENY" onMismatch="NEUTRAL"/>
+</Filters>
+```
+
+Example:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+      <Filters>
+        <ThresholdFilter level="ALL" onMatch="DENY" onMismatch="NEUTRAL"/>
+      </Filters>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
+```
+
+#### Logback
+
+Add the following filter to your logback.xml: 
+
+```xml
+<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+  <level>OFF</level>
+</filter>  
+```
+
+Example:
+
+```xml
+<configuration debug="true">
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are  by default assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %msg%n</pattern>
+      <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+        <level>OFF</level>
+      </filter>  
+    </encoder>
+  </appender>
+  <root level="debug">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
+```
+
 ## More information
 
 If you have additional questions about Application Insights autoinstrumentation, you can post them on our [Microsoft Q&A question page](/answers/topics/azure-monitor.html).
