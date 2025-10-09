@@ -287,7 +287,7 @@ If tests performed by using PowerShell or curl fail to send telemetry to the ing
 
 ## Troubleshooting Microsoft Entra authentication issues
 
-This article provides distinct troubleshooting scenarios and steps to resolve a [Microsoft Entra authentication](/azure/azure-monitor/app/azure-ad-authentication) issue before raising a support ticket.
+This section provides distinct troubleshooting scenarios and steps to resolve a [Microsoft Entra authentication](/azure/azure-monitor/app/azure-ad-authentication) issue before raising a support ticket.
 
 ### Ingestion HTTP errors
 
