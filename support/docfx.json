@@ -76,6 +76,8 @@
         "power-platform/power-apps/**.*": "MSDocsHeader-MSPowerApps",
         "power-platform/power-automate/**.*": "MSDocsHeader-MSPowerAutomate",
         "power-platform/power-pages/**.*": "MSDocsHeader-MSPowerPages",
+        "power-platform/administration/**.*": "TODO",
+        "power-platform/copilot-studio/**.*": "TODO",
         "sales-copilot/**.*": "MSDocsHeader-MicrosoftSalesCopilot",
         "sql/**.*": "MSDocsHeader-DocsSQL",
         "system-center/**.*": "MSDocsHeader-SystemCenter",
@@ -103,6 +105,8 @@
         "power-platform/ai-builder/**/*.md": "https://powerusers.microsoft.com/t5/AI-Builder/bd-p/AIBuilder1",
         "power-platform/power-pages/*.md": "https://ideas.powerpages.microsoft.com/d365community/forum/1edba0ec-30cf-ec11-a7b5-000d3a545c96",
         "power-platform/dataverse/**/*.md": "https://powerusers.microsoft.com/t5/Microsoft-Dataverse/bd-p/CDS_Apps",
+        "power-platform/administration/**/*.md": "TODO",
+        "power-platform/copilot-studio/**/*.md": "https://ideas.powervirtualagents.com/d365community/forum/21a4f1f9-f7fc-ec11-82e6-000d3a8b109b",
         "windows-server/**/*.md": "https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/bd-p/WindowsServer",
         "windows-client/**/*.md": "https://support.microsoft.com/windows/f59187f8-8739-22d6-ba93-f66612949332",
         "windows-365/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/6ab53114-95ab-ec11-9840-000d3a1c7d74",
@@ -210,7 +214,7 @@
         "power-platform/power-pages/**/**.*": "power-pages",
         "power-platform/power-automate/**/*.md": "power-automate",
         "power-platform/dataverse/**/*.md": "power-platform",
-        "power-platform/administration/**/*.md": "power-platform",
+        "power-platform/administration/**/**.*": "power-platform",
         "power-platform/copilot-studio/**/**.*": "copilot-studio",
         "dynamics-365/business-central/**/**.*": "dynamics-365-business-central",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
@@ -301,6 +305,8 @@
         "power-platform/dataverse/**/*.md": "Microsoft Dataverse",
         "power-platform/ai-builder/**/*.md": "AI Builder",
         "power-platform/power-pages/*.md": "Power Pages",
+        "power-platform/administration/*.md": "Power Platform Administration",
+        "power-platform/copilot-studio/*.md": "Copilot Studio",
         "sales-copilot/**/*.md": "Copilot for Sales",
         "dynamics/gp/*.md": "Dynamics GP"
       },
@@ -455,6 +461,16 @@
           "Troubleshoot",
           "Power Platform",
           "AI Builder"
+        ],
+        "power-platform/administration/**/*.md": [
+          "Troubleshoot",
+          "Power Platform",
+          "Administration"
+        ],
+        "power-platform/copilot-studio/**/*.md": [
+          "Troubleshoot",
+          "Power Platform",
+          "Copilot Studio"
         ]
       },
       "ms.search.scope": {
@@ -476,6 +492,12 @@
           "Flow",
           "powerapps-docs",
           "powerautomate-docs"
+        ],
+        "power-platform/administration/**/*.md": [
+          "TODO"
+        ],
+        "power-platform/copilot-studio/**/*.md": [
+          "TODO"
         ],
         "dynamics-365/customer-insights/data/**/**.*": [
           "customerinsights-docs",
