@@ -160,4 +160,4 @@ For troubleshooting assistance, contact Microsoft support. To provide supplement
 
 - The contents of the CBS log folder (%windir%\Logs\CBS).
 - SetupAct.log and SetupErr.log (C:\Windows and C:$WINDOWS.~BT\Sources\Panther).
-- TroubleshootingScript (TSS) tool logs. For more information, see the ["Scenario: Installing or upgrading Windows"](/windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios?context=%2Ftroubleshoot%2Fwindows-server%2Fcontext%2Fcontext#scenario-installing-or-upgrading-windows) section of "Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios."
+- TroubleshootingScript (TSS) tool logs. For more information, see the ["Scenario: Installing or upgrading Windows"](../windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios#scenario-installing-or-upgrading-windows) section of "Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios."
