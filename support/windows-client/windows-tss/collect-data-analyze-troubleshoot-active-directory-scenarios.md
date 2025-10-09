@@ -9,6 +9,7 @@ ms.reviewer: kaushika, traceytu, takarasz, v-lianna，raviks, warrenw
 ms.custom: sap:Support Tools\TSS, csstroubleshoot
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Collect data to analyze and troubleshoot Active Directory scenarios
 

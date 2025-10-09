@@ -50,7 +50,19 @@ landingContent:
             url: confluent/single-sign-on-does-not-work.md   
 
 # Card
-  - title:  Informatica
+  - title: Astro 
+    linkLists:
+    - linkListType: how-to-guide
+      links:
+        - text: Can't create Astro resources in Azure  
+          url: astro/resource-creation.md
+        - text: Can't install Astro using a personal email
+          url: astro/personal-email.md
+        - text: Unable to use single sign-on in Astronomer portal
+          url: astro/single-sign-on.md
+
+# Card
+  - title: Informatica
     linkLists:
       - linkListType: how-to-guide
         links:

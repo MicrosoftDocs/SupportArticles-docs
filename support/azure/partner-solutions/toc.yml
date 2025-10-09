@@ -29,6 +29,14 @@ items:
       href: confluent/resource-not-displayed.md 
     - name: Single sign-on doesn't work for the Confluent SaaS portal
       href: confluent/single-sign-on-does-not-work.md
+- name: Astro
+  items:
+    - name: Can't create Astro resources in Azure 
+      href: astro/resource-creation.md
+    - name: Can't install Astro using a personal email
+      href: astro/personal-email.md
+    - name: Unable to use single sign-on in Astronomer portal
+      href: astro/single-sign-on.md
 - name: Datadog
   items: 
     - name: Diagnostic settings manual update
