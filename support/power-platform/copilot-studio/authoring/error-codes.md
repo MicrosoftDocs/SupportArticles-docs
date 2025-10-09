@@ -53,7 +53,7 @@ As an agent maker, if a problem occurs when you're using the test pane to [test 
 
 **Error message:** The prompt `prompt-name` execution timed out.
 
-**Resolution:** The call to the AI Builder model exceeded 100 seconds. 
+**Resolution:** The call to the AI Builder model should not exceeded 100 seconds.
 
 #### AsyncResponsePayloadTooLarge
 
@@ -65,7 +65,7 @@ As an agent maker, if a problem occurs when you're using the test pane to [test 
 
 **Error message:** No consent provided for SSO connection.
 
-**Resolution:** The user interacting with the agent must confirm the connection using the agent's single sign-on connection prompt. 
+**Resolution:** The user interacting with the agent must confirm the connection using the agent's single sign-on connection prompt.
 
 #### ContentError
 
@@ -93,7 +93,7 @@ Common problems include:
 
 **Error message:** This agent is currently unavailable. It has reached its usage limit. Please try again later.
 
-**Resolution:** This message is returned when an agent has reached its message capacity or the pay-as-you-go meter has reached its limit. Add more prepaid capacity or create a pay-as-you-go billing plan. Within 5 minutes the agent chat works again. For more information, go to [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
+**Resolution:** This message is returned when an agent has reached its message capacity or the pay-as-you-go meter has reached its limit. Add more prepaid capacity or create a pay-as-you-go billing plan. Otherwise, the agent chat should resume working within 5 minutes. For more information, go to [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
 
 #### FlowActionException
 
