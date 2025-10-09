@@ -3,6 +3,14 @@ items:
   href: index.yml
 - name: Marketplace purchase errors
   href: marketplace-purchases-errors.md
+- name: Astro
+  items:
+    - name: Can't create Astro resources in Azure 
+      href: astro/resource-creation.md
+    - name: Can't install Astro using a personal email
+      href: astro/personal-email.md
+    - name: Unable to use single sign-on in Astronomer portal
+      href: astro/single-sign-on.md
 - name: Datadog
   items: 
     - name: Datadaog agent installation fails, or default API key is incorrect
