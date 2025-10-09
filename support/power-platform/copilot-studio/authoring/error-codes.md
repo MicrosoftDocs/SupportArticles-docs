@@ -53,7 +53,7 @@ As an agent maker, if a problem occurs when you're using the test pane to [test 
 
 **Error message:** The prompt `prompt-name` execution timed out.
 
-**Resolution:** The call to the AI Builder model should not exceeded 100 seconds.
+**Resolution:** Ensure that the call to the AI Builder model doesn't exceed 100 seconds.
 
 #### AsyncResponsePayloadTooLarge
 
