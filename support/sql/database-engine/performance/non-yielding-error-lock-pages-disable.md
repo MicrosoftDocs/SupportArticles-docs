@@ -9,7 +9,7 @@ ms.author: aartigoyle
 ---
 # Non-yielding scheduler error in large memory server if the lock pages in memory option is disabled
 
-_Applies to:_ &nbsp; SQL Server 2016, SQL Server 2017 on Windows, SQL Server 2019 on Windows
+_Applies to:_ &nbsp; SQL Server 2016, SQL Server 2017, SQL Server 2019 and SQL Server 2022 on Windows
 
 ## Symptoms
 
