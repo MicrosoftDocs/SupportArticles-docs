@@ -24,13 +24,13 @@ When you try to upgrade Windows, you see either of the following behaviors:
 - The Windows upgrade process fails during the SAFE_OS or BOOT phases, or wile cleaning up external drivers. Windows rolls back to the previous version.
 - The Windows upgrade appears to finish. However, the computer fails to restart.
 
-Additionally, you might see additional error codes such as 0x00000005.
+Additionally, you might see other error codes such as 0x00000005.
 
 ## Cause
 
 This error typically results from driver or hardware configuration issues, or conflicts with third-party software. Such causes include the following issues:
 
-- Outdated or incompatible drivers, especially those related to network cards, storage controllers, or external devices. For example, PVSCSI controllers have been known to cause this issue.
+- Outdated or incompatible drivers, especially drivers for network cards, storage controllers, or external devices. For example, PVSCSI controllers are known to cause this issue.
 - Conflicts with third-party software, including antivirus programs and security tools such as CrowdStrike.
 - Incorrect driver settings, such as CSagent altitude configurations in CrowdStrike.
 - Hardware configurations or dynamic update settings that interfere with the upgrade process.
@@ -49,9 +49,9 @@ To verify that your computer meets the requirements for Windows or Windows Serve
 
 ### Step 2: Review event logs
 
-Use Event Viewer to review the System logs. In particular, look for any events that may be related to driver or hardware issues.
+Use Event Viewer to review the System logs. In particular, look for any events that might be related to driver or hardware issues.
 
-If you identify an issue that you can fix, please fix that issue and then try to upgrade again.
+If you identify an issue that you can fix, fix that issue and then try to upgrade again.
 
 ### Step 3: Make sure that Windows and third-party drivers are up to date
 
@@ -60,14 +60,14 @@ If you identify an issue that you can fix, please fix that issue and then try to
 
 ### Step 4: Check Device Manager for errors
 
-1. Open Device Manager (devmgmt.msc). In the list of devices, look for any device that is marked by a yellow exclamation mark. These are devices that have driver errors.  
+1. Open Device Manager (devmgmt.msc). In the list of devices, look for any device that's marked by a yellow exclamation mark. These devices have driver errors.  
 
    > [!NOTE]  
    > You might have to select each category to expand the list of devices.
 
 1. To repair a driver error, right-click the marked device and then select either **Update Driver Software** or **Uninstall**.  
 
-After you have addressed all of the errors in Device Manager, try to upgrade again.
+After you address all the errors in Device Manager, try to upgrade again.
 
 ### Step 5: Check the BIOS
 
@@ -85,9 +85,9 @@ To check your system for unsigned drivers, follow these steps:
 1. Open an administrative Command Prompt window and run the `sigverif` command.
 1. In the File signature Verification tool, select **Start**.
 1. After the tool runs, it provides a list of the names, locations, and versions of any unsigned drivers that it found. To see the log that the tool created, select **Advanced** > **View Log** (the log includes the unsigned driver information, and might also list the associated catalog files).
-1. The next step is to check that the drivers that the tool identified have problems. In some cases, the problem might be related to the catalog file instead of the driver itself. To perform a detailed driver check, download [sigcheck.zip](https://download.sysinternals.com/files/Sigcheck.zip) and extract the tool to a directory on your computer, for example: C:\sigcheck.
+1. The next step is to check that the identified drivers have problems. In some cases, the problem might be related to the catalog file instead of the driver itself. To perform a detailed driver check, download [sigcheck.zip](https://download.sysinternals.com/files/Sigcheck.zip) and extract the tool to a directory on your computer, for example: C:\sigcheck.
 1. At the command prompt, change to the sigcheck directory (for example, run `cd c:\sigcheck`).
-1. For each of the drivers that the File Signature Verification Tool lists, run `sigcheck` . To do this, run the following command for each driver:  
+1. For each of the drivers that the File Signature Verification Tool lists, run `sigcheck`. For example, run the following command for each driver:  
 
    ```console
    sigcheck64 -i <DriverPath>
@@ -95,11 +95,11 @@ To check your system for unsigned drivers, follow these steps:
 
    > [!NOTE]  
    >
-   > - In this command, \<DriverPath> is the driver path that was identified by the File Signature Verification Tool.
+   > - In this command, \<DriverPath> is the driver path that the File Signature Verification Tool identified.
    > - If you run `sigcheck` on a 32-bit operating system, use `sigcheck -i` instead of `sigcheck64 -i`.  
    > - Optionally, you can use the `driverquery` tool that is included in Windows to inspect drivers. For more information, see [Two Minute Drill: DriverQuery.exe](https://techcommunity.microsoft.com/t5/ask-the-performance-team/two-minute-drill-driverquery-exe/ba-p/374977).
 
-If you have found unsigned drivers, follow these steps to repair them:  
+If you find unsigned drivers, follow these steps to repair them:  
 
 - Check for updated versions of the drivers, and install the updates.
 - Uninstall and then reinstall the drivers.
@@ -109,13 +109,13 @@ If none of these remedies succeed, uninstall the affected driver, and then try t
 
 ### Step 7: Remove conflicting software
 
-1. Try to disable any 3rd party anti-virus and anti-malware applications
+1. Try to disable any third-party anti-virus and anti-malware applications
 1. Reconfigure or remove software that's known to cause conflicts, such as CrowdStrike.
 1. Try to upgrade again.
 
 ### Step 8: Perform a clean restart
 
-When you start Windows by using a normal startup, several applications and services start automatically, and then run in the background. These programs include basic system processes, antivirus software, system utility applications, and other software that has been previously installed. These applications and services can interfere with the update process.  
+When you start Windows by using a normal startup, several applications and services start automatically, and then run in the background. These programs include basic system processes, antivirus software, system utility applications, and other software. These applications and services can interfere with the update process.  
 
 A clean restart, also known as a clean boot, starts Windows without these background applications and services. Follow these steps:  
 
@@ -133,11 +133,11 @@ After the computer restarts, try to update or upgrade it again.
 > [!IMPORTANT]  
 > If you see the **Download and install updates** option during the installation process, make sure that you select it.
 
-### Step 9: Remove all non-essential external hardware
+### Step 9: Remove all nonessential external hardware
 
-Disconnect all peripheral devices that are connected to the system, except for the mouse, keyboard and display. such devices include external storage devices and drives, docks, and other hardware you might have plugged into your device that isn't needed for basic functionality. Additionally, disconnect or disable any network cards that you're not using for the upgrade.
+Disconnect all peripheral devices that are connected to the system, except for the mouse, keyboard, and display devices. Such devices include external storage devices and drives, docks, and other hardware you might have plugged into your device that isn't needed for basic functionality. Additionally, disconnect or disable any network cards that you're not using for the upgrade.
 
-After you have disconnected all non-essential hardware, try to upgrade again.
+After you disconnect all nonessential hardware, try to upgrade again.
 
 > [!IMPORTANT]  
 > To avoid potential driver conflicts for the disabled or removed devices, if you see the **Download and install updates** option during the installation process, make sure that it's disabled.
@@ -148,7 +148,7 @@ To check the number of user accounts that are local to the computer, follow thes
 
 1. Open the Computer Management MMC snap-in (in the Search box, enter **compmgmt.msc**).
 1. Select **Computer Configuration** > **System Tools** > **Local Users and Groups** > **Users**.
-1. If any user accounts are not used or are extraneous, remove them.
+1. If any user accounts aren't used or are extraneous, remove them.
 
 ### Step 11: Replace the computer
 
