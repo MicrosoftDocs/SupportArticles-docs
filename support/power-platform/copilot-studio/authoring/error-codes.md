@@ -93,7 +93,7 @@ Common problems include:
 
 **Error message:** This agent is currently unavailable. It has reached its usage limit. Please try again later.
 
-**Resolution:** This message is returned when an agent has reached its message capacity or the pay-as-you-go meter has reached its limit. Add more prepaid capacity or create a pay-as-you-go billing plan. Otherwise, the agent chat should resume working within 5 minutes. For more information, go to [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
+**Resolution:** This message is returned when an agent has reached its message capacity or the pay-as-you-go meter has reached its limit. To resolve the issue, add more prepaid capacity or create a pay-as-you-go billing plan. The agent chat should then resume working within 5 minutes. For more information, go to [Overage Enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
 
 #### FlowActionException
 
