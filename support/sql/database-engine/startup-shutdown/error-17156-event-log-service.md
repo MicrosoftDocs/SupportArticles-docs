@@ -12,7 +12,7 @@ This article provides troubleshooting guidance for error 17156 "Could not initia
 
 ## Symptoms
 
-After you install or upgrade SQL Server on Windows Server 2022 or 2025, the SQL Server Agent fails to start. When the startup process fails, it appends an entry to the SQL error log that's similar to the following example:
+After you install or upgrade SQL Server on Windows Server 2022 or 2025, the SQL Server Agent fails to start. When the startup process fails, it adds an entry to the SQL error log similar to the following example:
 
 ```log
 2025-10-02 08:24:32.26 Server      Error: 17156, Severity: 16, State: 1.
