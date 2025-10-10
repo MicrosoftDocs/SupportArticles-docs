@@ -1,5 +1,7 @@
 - name: Azure App Service
   items:
+  - name: Troubleshoot Azure App Service certificates
+    href: troubleshoot-azure-app-service-certificates.md
   - name: Connection issues with SSL or TLS
     items:
     - name: Troubleshoot domain and TLS/SSL certificates 
