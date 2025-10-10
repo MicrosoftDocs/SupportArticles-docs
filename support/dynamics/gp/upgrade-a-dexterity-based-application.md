@@ -112,7 +112,7 @@ You'll now have separate subprojects for each version. However, the validate fea
 
 1. In Dexterity, select **Source Control** on the **Explorer** menu, and then select **Update SCC State**.
 2. On the **Explorer** menu, select **Source Control**, and then select **Update**.
-3. Select **Use Index File**. For more information, see [How to use an index file with Dexterity to ensure resource IDs do not change in new builds and versions](/troubleshoot/dynamics/gp/how-to-use-index-file-with-dexterity-to-maintain-resource-ids-in-new-builds-and-versions).
+3. Select **Use Index File**. For more information, see [How to use an index file with Dexterity to ensure resource IDs do not change in new builds and versions](./how-to-use-index-file-with-dexterity-to-maintain-resource-ids-in-new-builds-and-versions.md).
 4. Select **OK**.
 5. Leave all the resources selected, and then select **OK** to start the update.
 6. If your code contains references to palettes or toolbars, you may receive errors. If you do receive errors, go to step 9.

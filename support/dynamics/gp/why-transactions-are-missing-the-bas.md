@@ -21,11 +21,11 @@ The Business Activity Statement (BAS) is the tax return form that is used in Aus
 1. The transaction doesn't fall into the selected date range for the date field being used. The BAS Report can use **Tax Date** (default), **Document Date** or **Posting Date** for the selection of transactions. The date is selected from the **Base Date Ranges on** field in the BAS Report Option Maintenance window. To open the BAS Report Option Maintenance window, on the **Reports** menu, point to **Company**, select **BAS Report**, and then select **Add** or **Modify**. The dates that will be used when the BAS report is next processed is displayed on the right side of the BAS Report Option Maintenance window.
 2. The transaction has been voided. A voided transaction won't appear on the BAS report. A voided transaction is treated as if the transaction has never occurred. For audit trail purposes, you could enter a reversing transaction instead of voiding the transaction. Void only those transactions that haven't already been reported to the ATO on a previous BAS report.
 
-    For more information about voiding transactions for Australian companies, see [How to void a transaction for an Australian company in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/how-to-void-a-transaction-for-an-australian-company).
+    For more information about voiding transactions for Australian companies, see [How to void a transaction for an Australian company in Microsoft Dynamics GP](./how-to-void-a-transaction-for-an-australian-company.md).
 
 3. The transaction has incorrect tax details in the Tax Expansion window. Because the BAS report uses the tax details that appear in the Tax Expansion window, you must make sure that the tax schedules and tax details are set correctly up for Australian GST. You can use the Australian GST Tax Information Setup Wizard to create the tax schedules and tax details needed. Then, assign them to the appropriate setup and master tables.
 
-    For more information about the GST Tax Information Setup Wizard, see [How to set up tax-free import creditors for Australian GST in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/set-up-tax-free-import-creditors).
+    For more information about the GST Tax Information Setup Wizard, see [How to set up tax-free import creditors for Australian GST in Microsoft Dynamics GP](./set-up-tax-free-import-creditors.md).
 
 4. Tax schedules aren't used correctly. For example, if you change an incorrect tax schedule ID when you change a Payables Management transaction or a Receivables Management transaction from a taxable transaction to a tax free transaction.
 
@@ -50,7 +50,7 @@ The Business Activity Statement (BAS) is the tax return form that is used in Aus
 
 9. Transaction history wasn't kept. The BAS report obtains data from the tax details of the originating transactions, and these transactions may be present in both the Open tables and in the History tables. Microsoft Dynamics GP should be set up to maintain history.
 
-    For more information about Maintain History options for BAS, see [How to specify Maintain History options for Business Activity Statement and Pay As You Go reporting](/troubleshoot/dynamics/gp/how-to-specify-maintain-history-options-for-bas-and-payg-reporting).
+    For more information about Maintain History options for BAS, see [How to specify Maintain History options for Business Activity Statement and Pay As You Go reporting](./how-to-specify-maintain-history-options-for-bas-and-payg-reporting.md).
 
 10. Inconsistencies exist between the transaction and the tax detail data. Examples follow:
 
@@ -63,7 +63,7 @@ The Business Activity Statement (BAS) is the tax return form that is used in Aus
 
 Most data issues will be reported in the BAS Report Processing Error Log.
 
-For more information about error codes and their descriptions, see [Description of Pay As You Go error messages and Business Activity Statement error messages in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/dynamics-gp-payg-and-bas-error).
+For more information about error codes and their descriptions, see [Description of Pay As You Go error messages and Business Activity Statement error messages in Microsoft Dynamics GP](./dynamics-gp-payg-and-bas-error.md).
 
 [!INCLUDE [Rapid publishing disclaimer](../../includes/rapid-publishing-disclaimer.md)]
 

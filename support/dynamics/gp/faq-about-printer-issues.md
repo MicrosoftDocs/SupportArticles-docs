@@ -22,7 +22,7 @@ A1 To troubleshoot printer issues, there are multiple tips that you can try:
   - Try to remove security from the modified version, and then print the default report.
   - Try to move or rename the Reports.dic file.
   - Reinstall the print driver because the print driver may be damaged. You can try both a newer version and an older version of the driver.
-- Re-create the Reports.dic file. For more information about how to re-create the Reports.dic file in Microsoft Dynamics GP, see [How to re-create the Reports.dic file in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/how-to-re-create-the-reports-dot-dic-file).
+- Re-create the Reports.dic file. For more information about how to re-create the Reports.dic file in Microsoft Dynamics GP, see [How to re-create the Reports.dic file in Microsoft Dynamics GP](./how-to-re-create-the-reports-dot-dic-file.md).
 - If you're using a Post Script (PS) print driver, switch to the Printer Control Language (PCL) driver for your printer. Or, if you're using the PCL driver, switch to the PS print driver.
 - If the printer that has the issue is a network printer, send the report to a different printer that is local to a workstation.
 - If you experience printing issues from Microsoft Dynamics GP, print the report by using Notepad. It's because Microsoft Dynamics GP uses the same operating system printer logic that Notepad uses.

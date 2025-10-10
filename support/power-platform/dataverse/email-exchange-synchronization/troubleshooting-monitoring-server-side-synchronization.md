@@ -37,7 +37,7 @@ Components added to dashboard are not supported to be shown in this client
 
 For more information, please see Troubleshoot item level Server-Side Synchronization issues with Dynamics 365 - Dynamics 365 Sales | Microsoft Learn.
 
-Follow the steps in [Troubleshoot item level Server-Side Synchronization issues with Microsoft Dynamics 365](/troubleshoot/power-platform/dataverse/d365-app-outlook/troubleshoot-item-level-server-side-synchronization-issues) to enable and use a dashboard to get information on synchronization errors.
+Follow the steps in [Troubleshoot item level Server-Side Synchronization issues with Microsoft Dynamics 365](../d365-app-outlook/troubleshoot-item-level-server-side-synchronization-issues.md) to enable and use a dashboard to get information on synchronization errors.
 
 > [!div class="mx-imgBorder"] 
 > ![Server-side sync failures dashboard.](media/server-side-sync-failures-dashboard.png "Server-side sync failures dashboard")

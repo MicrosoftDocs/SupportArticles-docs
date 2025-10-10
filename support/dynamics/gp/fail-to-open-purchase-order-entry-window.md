@@ -55,7 +55,7 @@ To resolve this problem, use one of the following methods.
 
 4. Repeat step 1 through step 3 to determine which add-in product or third-party application causes this problem.
 
-For more information about how to disable third-party applications and customizations completely, see [Steps to disable third-party products or temporarily disable additional products in the Dynamics.set file in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/disable-third-party-products-in-dynamicsdot-set-file).
+For more information about how to disable third-party applications and customizations completely, see [Steps to disable third-party products or temporarily disable additional products in the Dynamics.set file in Microsoft Dynamics GP](./disable-third-party-products-in-dynamicsdot-set-file.md).
 
 If you have to grant security to a resource for a third-party product, contact the company that supports that product. If the product is an add-in product for Microsoft Dynamics GP, open a support incident with Microsoft to address the issue.
 

@@ -177,4 +177,4 @@ For returns, follow these steps
 
 ## References
 
-For more information about how to keep the payment information from printing and about how to remove it from the PM20100 table, see [How to prevent zero dollar remittances from printing in Payables Management in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/prevent-zero-dollar-remittances-from-printing).
+For more information about how to keep the payment information from printing and about how to remove it from the PM20100 table, see [How to prevent zero dollar remittances from printing in Payables Management in Microsoft Dynamics GP](./prevent-zero-dollar-remittances-from-printing.md).

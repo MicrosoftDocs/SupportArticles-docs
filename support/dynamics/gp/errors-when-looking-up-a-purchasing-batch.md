@@ -159,4 +159,4 @@ To retrieve the batches, follow these steps.
 
 ## More information
 
-If you have any batches that go to batch recovery, see [A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/a-batch-is-held-in-the-several-statuses) for instructions on how to set the batch back to **Available** status.
+If you have any batches that go to batch recovery, see [A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](./a-batch-is-held-in-the-several-statuses.md) for instructions on how to set the batch back to **Available** status.

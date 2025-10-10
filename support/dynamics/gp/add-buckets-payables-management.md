@@ -220,6 +220,6 @@ To assign security permissions to the modified report, use one of the following 
 
 - [How to add buckets to the Payables Management "Aged Trial Balance" report for the summary print option in Report Writer in Microsoft Dynamics GP](https://support.microsoft.com/help/948664)
 
-- [How to add a new bucket to the "Aged Trial Balance-Detail with Options" report in Payables Management in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/add-a-new-bucket-balance-detail-report)
+- [How to add a new bucket to the "Aged Trial Balance-Detail with Options" report in Payables Management in Microsoft Dynamics GP](./add-a-new-bucket-balance-detail-report.md)
 
 [!INCLUDE [Publishing Disclaimer](../../includes/publishing-disclaimer.md)]

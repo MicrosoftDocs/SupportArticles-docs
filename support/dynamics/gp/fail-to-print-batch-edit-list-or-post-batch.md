@@ -140,7 +140,7 @@ Re-create the stored procedures for both glpBatchCleanup and glpBatchPost by usi
 
 ## Resolution 3
 
-Third-party products may be altering the stored procedures. Disable any third-party products from the Dynamics.set file, and test again. For more information about how to disable third-party products in the Dynamics.set file, see [Steps to disable third-party products or temporarily disable additional products in the Dynamics.set file in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/disable-third-party-products-in-dynamicsdot-set-file).
+Third-party products may be altering the stored procedures. Disable any third-party products from the Dynamics.set file, and test again. For more information about how to disable third-party products in the Dynamics.set file, see [Steps to disable third-party products or temporarily disable additional products in the Dynamics.set file in Microsoft Dynamics GP](./disable-third-party-products-in-dynamicsdot-set-file.md).
 
 ## Resolution 4 (may get DBMS errors for GP 20488 or 20957)
 

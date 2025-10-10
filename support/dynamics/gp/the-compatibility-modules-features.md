@@ -54,4 +54,4 @@ Additionally, you can contact Technical Support for Microsoft Dynamics and relat
 
 ## References
 
-For more information about the compatibility of Fixed Asset Management with Project Accounting, see [How to integrate Project Accounting with Fixed Asset Management in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/integrate-project-accounting-with-fixed-asset-management).
+For more information about the compatibility of Fixed Asset Management with Project Accounting, see [How to integrate Project Accounting with Fixed Asset Management in Microsoft Dynamics GP](./integrate-project-accounting-with-fixed-asset-management.md).

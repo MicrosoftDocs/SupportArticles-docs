@@ -56,4 +56,4 @@ Rename the existing Forms.dic file to save it as a backup. To do it, follow thes
 
 ## More information  
 
-To recreate the Reports.dic file, see the steps in [How to re-create the Reports.dic file in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/how-to-re-create-the-reports-dot-dic-file).
+To recreate the Reports.dic file, see the steps in [How to re-create the Reports.dic file in Microsoft Dynamics GP](./how-to-re-create-the-reports-dot-dic-file.md).

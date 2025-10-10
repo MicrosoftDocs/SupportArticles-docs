@@ -214,7 +214,7 @@ On the old server, copy the following Capture_Logins.sql script to the local har
     > [!NOTE]
     > To verify whether the OLE Notes files are shared, view the OLENotes path in the Dex.ini file on a client workstation where the financial application is installed. To view the Dex.ini file, double-click the Dex.ini file to open the file in Notepad.
 
-16. If the Automatic Updates feature has been used and has entries that point to a share on the old server, the files must be copied to a share on the new server. The entries in the SYUPDATE table in the System DYNAMICS database needed to be adjusted. For more information, see ["Your login has been removed from the user activity file and you cannot be in the accounting system" Error message when you start Microsoft Dynamics GP](/troubleshoot/dynamics/gp/you-cannot-be-the-accounting-system).
+16. If the Automatic Updates feature has been used and has entries that point to a share on the old server, the files must be copied to a share on the new server. The entries in the SYUPDATE table in the System DYNAMICS database needed to be adjusted. For more information, see ["Your login has been removed from the user activity file and you cannot be in the accounting system" Error message when you start Microsoft Dynamics GP](./you-cannot-be-the-accounting-system.md).
 
 17. If you're moving your Microsoft Dynamics GP databases and you use the drilldown functionality in the SQL Server Reporting Services or Excel-integrated reports you need to do the following to update your server links so the drilldowns work after the server move.
 
@@ -236,7 +236,7 @@ On the old server, copy the following Capture_Logins.sql script to the local har
 
     [64-bit operating systems supported together with Microsoft Dynamics GP](run-dynamics-gp-64-bit-os.md)
 
-- For more information, see ["Your login has been removed from the user activity file and you cannot be in the accounting system" Error message when you start Microsoft Dynamics GP](/troubleshoot/dynamics/gp/you-cannot-be-the-accounting-system).
+- For more information, see ["Your login has been removed from the user activity file and you cannot be in the accounting system" Error message when you start Microsoft Dynamics GP](./you-cannot-be-the-accounting-system.md).
 
 - If you have any questions about the steps in this article, contact Microsoft Business Solutions Technical Support by using either of the following methods:
   - Sign into the following Microsoft Business Solutions Support site, and then enter a new support request:

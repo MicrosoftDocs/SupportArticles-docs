@@ -208,4 +208,4 @@ To set up the test company, follow these steps:
 
 ## References
 
-For more information, see [Set up a test company that has a copy of live company data by using Microsoft Dynamics GP on MSDE 2000, SQL Server 2005 Express, SQL Server 2008 Express, or SQL Server 2012 Express](/troubleshoot/dynamics/gp/how-to-set-up-test-company-that-has-copy-of-live-company).
+For more information, see [Set up a test company that has a copy of live company data by using Microsoft Dynamics GP on MSDE 2000, SQL Server 2005 Express, SQL Server 2008 Express, or SQL Server 2012 Express](./how-to-set-up-test-company-that-has-copy-of-live-company.md).

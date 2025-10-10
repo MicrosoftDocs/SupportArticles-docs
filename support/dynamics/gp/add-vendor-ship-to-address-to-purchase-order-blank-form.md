@@ -94,4 +94,4 @@ To assign security permissions to the modified report, use one of the following 
 
 ## References
 
-For more information about the ship-to address, see [How the ship-to addresses for purchase orders work in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/how-the-ship-to-addresses-for-purchase-orders-work).
+For more information about the ship-to address, see [How the ship-to addresses for purchase orders work in Microsoft Dynamics GP](./how-the-ship-to-addresses-for-purchase-orders-work.md).

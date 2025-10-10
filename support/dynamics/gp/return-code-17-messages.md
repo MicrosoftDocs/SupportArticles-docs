@@ -57,7 +57,7 @@ To resolve this problem, follow these steps:
 >
 > You may want to use a test company database that has a copy of live company data. When you do this, users will not have to log off from Microsoft Dynamics GP or from Microsoft Great Plains 8.0 while you test the steps to resolve these issues. After you have tested the steps, you can process these steps against the live company data after all the users have logged off at the end of the workday.
 >
-> For more information, see [Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server](/troubleshoot/dynamics/gp/set-up-a-test-company).
+> For more information, see [Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server](./set-up-a-test-company.md).
 
 ### Step 1: Back up the company database
 

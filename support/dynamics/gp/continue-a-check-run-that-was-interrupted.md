@@ -71,7 +71,7 @@ To continue after an interruption that occurs during a Payables Management check
 
 5. Review the batch and verify the accuracy of the transactions in the batch.
 
-6. Go to [Step 2: Use the appropriate method](#step-2-use-the-appropriate-method). For more information about restoring Microsoft Dynamics GP from a backup, see [A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/a-batch-is-held-in-the-several-statuses).
+6. Go to [Step 2: Use the appropriate method](#step-2-use-the-appropriate-method). For more information about restoring Microsoft Dynamics GP from a backup, see [A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](./a-batch-is-held-in-the-several-statuses.md).
 
 ## Step 2: Use the appropriate method
 

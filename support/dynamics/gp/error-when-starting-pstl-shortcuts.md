@@ -33,7 +33,7 @@ To resolve this problem, follow these steps:
     > [!NOTE]
     > By default, the GP program folder in Microsoft Dynamics GP is in the following location: `C:\Program Files\Microsoft Dynamics\GP`
 
-    1. Follow the steps that are listed in [Steps to disable third-party products or temporarily disable additional products in the Dynamics.set file in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/disable-third-party-products-in-dynamicsdot-set-file).
+    1. Follow the steps that are listed in [Steps to disable third-party products or temporarily disable additional products in the Dynamics.set file in Microsoft Dynamics GP](./disable-third-party-products-in-dynamicsdot-set-file.md).
 
     2. Delete the lines that are listed in the Dynamics.set file. For example, delete the following lines:
         - **1838**  

@@ -40,7 +40,7 @@ To resolve this problem, rebuild the FA Quarters using these steps:
 
 If the error persists, re-create the FA Calendar and Quarters again by following the steps in:
 
-[How to rebuild the Fixed Assets calendar in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/rebuild-the-fixed-assets-calendar)
+[How to rebuild the Fixed Assets calendar in Microsoft Dynamics GP](./rebuild-the-fixed-assets-calendar.md)
 
 ## More information
 

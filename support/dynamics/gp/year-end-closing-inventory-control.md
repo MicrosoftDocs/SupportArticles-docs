@@ -144,7 +144,7 @@ Make a final backup of the company data files and keep it in safe, permanent sto
 A1: If you're using the Average Perpetual valuation method, all receipts for each item will be averaged to determine the average cost. The year-end closing process doesn't change the average cost. However, it will remove the purchase receipts that have been sold. The next time that a receipt is entered, the average cost will be revalued with the receipts that remain in the Inventory Purchase Receipts file.
 
 > [!NOTE]
-> Enhancements were made to the calculation of the average cost in Microsoft Dynamics GP  9.0 that would still apply. For more information about the calculation of average costs, see [Enhancements made to the calculation of Average Cost in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/enhancements-made-to-calculation-of-average-cost).
+> Enhancements were made to the calculation of the average cost in Microsoft Dynamics GP  9.0 that would still apply. For more information about the calculation of average costs, see [Enhancements made to the calculation of Average Cost in Microsoft Dynamics GP](./enhancements-made-to-calculation-of-average-cost.md).
 
 **Q2: Can the Inventory Year-End Closing window be used throughout the year to update the standard cost of items if you use the Periodic valuation method?**  
 

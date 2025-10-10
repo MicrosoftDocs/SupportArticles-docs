@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 4462486
 When you're viewing an email and opening Dynamics 365 App for Outlook, the **Track and Set Regarding** options are missing.
 
 > [!NOTE]
-> If the **Track and Set Regarding** options appear but only the button icons are missing, see [Track and Set Regarding icons are missing in Dynamics 365 App for Outlook](/troubleshoot/power-platform/dataverse/d365-app-outlook/buttons-such-as-track-and-set-regarding-are-missing).
+> If the **Track and Set Regarding** options appear but only the button icons are missing, see [Track and Set Regarding icons are missing in Dynamics 365 App for Outlook](./buttons-such-as-track-and-set-regarding-are-missing.md).
 
 ## Cause
 

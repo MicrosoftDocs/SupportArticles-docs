@@ -78,4 +78,4 @@ To create this registry entry, follow these steps:
 
 There are multiple potential causes for this error. If this does not resolve the issue, refer to the following article for additional potential solutions:
 
-["We're unable to connect to your Microsoft Dynamics 365 server" error when using Dynamics 365 App for Outlook](/troubleshoot/power-platform/dataverse/d365-app-outlook/cannot-connect-your-dynamics-365-server)
+["We're unable to connect to your Microsoft Dynamics 365 server" error when using Dynamics 365 App for Outlook](./cannot-connect-your-dynamics-365-server.md)
