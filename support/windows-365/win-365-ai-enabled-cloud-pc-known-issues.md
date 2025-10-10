@@ -1,8 +1,8 @@
 ---
 title: AI-enabled Cloud PC Known Issues
-description: 
+description: Describes how to resolve issues that are known to affect AI-enabled Cloud PCs
 manager: dcscontentpm
-ms.date: 04/02/2025
+ms.date: 11/04/2025
 ms.topic: troubleshooting
 ms.reviewer: kaushika, v-tappelgate
 ms.custom:
