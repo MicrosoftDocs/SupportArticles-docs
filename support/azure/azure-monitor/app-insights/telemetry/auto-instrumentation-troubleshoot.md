@@ -47,9 +47,11 @@ If you encounter problems that are caused by the Application Insights SDK itself
 
 ## Issues with Java app running on Azure Functions
 
+### Slow startup times
+
 Your Java functions might have slow startup times if you adopted this feature before February 2023. From the function app **Overview** pane, go to **Configuration** in the left-hand side navigation menu. Then select **Application settings** and use the following steps to fix the issue.
 
-### Windows
+### [Windows](#tab/windows)
 
 1. Check to see if the following settings exist and remove them:
 
@@ -64,7 +66,7 @@ Your Java functions might have slow startup times if you adopted this feature be
     APPLICATIONINSIGHTS_ENABLE_AGENT: true
     ```
 
-### Linux Dedicated/Premium
+### [Linux Dedicated/Premium](#tab/linux)
 
 1. Check to see if the following settings exist and remove them:
 
@@ -78,9 +80,7 @@ Your Java functions might have slow startup times if you adopted this feature be
     APPLICATIONINSIGHTS_ENABLE_AGENT: true
     ```
 
-<!-- MOVE OR DELETE?
-[!INCLUDE [azure-monitor-app-insights-test-connectivity](includes/azure-monitor-app-insights-test-connectivity.md)]
--->
+---
 
 ### Duplicate logs
 
