@@ -50,4 +50,4 @@ To update the policy, set its value to **Enabled**. Then, append the following t
 ## References
 
 - [How to set event log security locally or by using Group Policy](~/windows-server/group-policy/set-event-log-security-locally-or-via-group-policy.md)
-- [View the SQL Server error log](/sql/tools/configuration-manager/viewing-the-sql-server-error-log?view=sql-server-ver17)
+- [View the SQL Server error log](/sql/tools/configuration-manager/viewing-the-sql-server-error-log)
