@@ -16,7 +16,7 @@ items:
   - name: AI-enabled Windows 365
     items:
     - name: AI-enabled Cloud PC known issues
-      href: win-365-ai-enabled-cloud-pc-known-issues.md
+      href: windows-365-ai-enabled-cloud-pc-known-issues.md
   - name: Azure Network Connection
     items:
     - name: Azure network connection health checklist
