@@ -105,6 +105,6 @@ In the following example, the KQL query highlights an attempt to use generative 
 
 ### How to fix
 
-- Try to adjust [content moderation](/microsoft-copilot-studio/nlu-boost-conversations#content-moderation), but keep in mind that a lower level of content moderation might result in answers that are less accurate or relevant.
+- Try to adjust [content moderation](/microsoft-copilot-studio/knowledge-copilot-studio#content-moderation), but keep in mind that a lower level of content moderation might result in answers that are less accurate or relevant.
 
 - If you think your content shouldn't be moderated, [raise a case with customer support](/power-platform/admin/get-help-support).
