@@ -54,7 +54,7 @@ To check this setting, and disable it if needed, follow these steps.
 
 1. In the Control Panel's search bar, enter **Turn Windows features on or off**.
 
-1. Make sure that the following features are not selected. If any of them are selected, clear their checkboxes.
+1. Make sure that the following features aren't selected. If any of them are selected, clear their checkboxes.
 
    - Virtual Machine Platform
    - Windows Hypervisor Platform
@@ -70,7 +70,7 @@ To check this setting, and disable it if needed, follow these steps.
 
 ## Report an issue that's not on the Known issues list
 
-For additional assistance, or if your issue is not addressed in the Known Issues list, contact to your Private Preview representative and provide your device ID.
+For additional assistance, or if your issue isn't addressed in the known issues list, contact to your Private Preview representative and provide your device ID.
 
 To find your device ID, follow these steps:
 
