@@ -1,0 +1,79 @@
+---
+title: AI-enabled Cloud PC Known Issues
+description: 
+manager: dcscontentpm
+ms.date: 04/02/2025
+ms.topic: troubleshooting
+ms.reviewer: kaushika, v-tappelgate
+ms.custom:
+- sap:Configuration and Management
+- pcy:WinComm User Experience
+appliesto:
+- ✅ <a href=https://learn.microsoft.com/lifecycle/products/windows-365target=_blank>Supported versions of Windows 365</a>
+---
+
+# AI-enabled Cloud PC known issues
+
+If your Cloud PC isn't working properly, review the following topics to see if your issue is documented. If this list doesn't address your issue, see [Report an issue that's not on the Known issues list](#report-an-issue-thats-not-on-the-known-issues-list).
+
+## AI-enabled status activation time
+
+After you AI-enable your Cloud PC, background processes might run for up to 48 hours before the supported AI features are ready to use.
+
+## Sparkles missing from Windows search box after you install a Windows update
+
+After you install a Windows update, the sparkles might disappear from the magnifying glass icon.
+
+To restore the icon, select the Windows search box. If the sparkles are still missing, restart your Cloud PC.
+
+## AI features missing after you install a Windows update
+
+After you install a Windows update, AI features might not be available.
+
+To restore all AI-enabled features, restart your Cloud PC.
+
+## "Click to Do" mouse cursor appears to lag
+
+While you use Click to Do, or after you dismiss the Click to Do feature, your Cloud PC cursor might appear to lag.
+
+To restore the cursor's responsiveness, restart your Cloud PC.
+
+## Semantic Search results fail to appear in the Windows search "All" tab
+
+Search results might take time to load in the **All** tab of the Windows search box.
+
+If search results don't appear on your first search attempt, repeat the search. You might have to repeat the search multiple times to see the full results.
+
+## Semantic File Search doesn't work on a Cloud PC that uses nested virtualization
+
+If Semantic File Search isn't working, make sure that the Cloud PC doesn't use nested virtualization.
+
+To check this setting, and disable it if needed, follow these steps.
+
+1. Press **Windows**+**R**, and then enter **control panel**.
+
+1. In the Control Panel's search bar, enter **Turn Windows features on or off**.
+
+1. Make sure that the following features are not selected. If any of them are selected, clear their checkboxes.
+
+   - Virtual Machine Platform
+   - Windows Hypervisor Platform
+   - Hyper-V
+   - Hyper-V Management Tools
+   - Hyper-V GUI Management Tools
+   - Hyper-V Module for Windows PowerShell
+   - Hyper-V Platform
+   - Hyper-V Hypervisor
+   - Hyper-V Services
+
+1. To apply the changes, select **OK**, and then restart your Cloud PC.
+
+## Report an issue that's not on the Known issues list
+
+For additional assistance, or if your issue is not addressed in the Known Issues list, contact to your Private Preview representative and provide your device ID.
+
+To find your device ID, follow these steps:
+
+1. To open the Feedback Hub app, press **Windows**+**F**.
+1. In the lower left corner of the app, select **Settings**.
+1. Under **Device Information**, review the string of characters that starts with the letter "g."
