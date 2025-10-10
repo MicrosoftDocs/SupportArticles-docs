@@ -11,17 +11,17 @@ ms.service: azure-app-service
 ---
 # Troubleshoot Azure App Service certificates 
 
-Azure **App Service certificates** provide a convenient way to purchase,
+Azure App Service certificates provide a convenient way to purchase,
 provision, and manage SSL/TLS certificates for Azure App Services. This
 article helps developers and IT admins systematically diagnose and fix
 issues with App Service certificates. This includes:
 
-- **A [step-by-step troubleshooting
-  flow](#step-by-step-troubleshooting-flow)**: A sequence of checks and
+- A [step-by-step troubleshooting
+  flow](#step-by-step-troubleshooting-flow): A sequence of checks and
   actions to resolve certificate problems, including portal and
   command-line steps.
 
-- **[Common issues and solutions](#common-issues-and-solutions):** A
+- [Common issues and solutions](#common-issues-and-solutions): A
   list of frequent customer-reported problems grouped by root cause with
   actionable fixes.
 
@@ -32,21 +32,21 @@ issues with App Service certificates. This includes:
 This addresses areas where App Service certificate setups can fail,
 including:
 
-- [**Certificate status and renewal
-  settings**](#step-1-check-certificate-status-and-renewal)
+- [Certificate status and renewal
+  settings](#step-1-check-certificate-status-and-renewal)
 
-- [**Domain ownership verification**](#step-2-verify-domain-ownership)
+- [Domain ownership verification](#step-2-verify-domain-ownership)
 
-- [**Azure Key Vault integration and
-  access**](#step-3-validate-azure-key-vault-integration-and-access)
+- [Azure Key Vault integration and
+  access](#step-3-validate-azure-key-vault-integration-and-access)
 
-- [**App Service certificate binding
-  configuration**](#step-4-check-app-service-certificate-binding-configuration)
+- [App Service certificate binding
+  configuration](#step-4-check-app-service-certificate-binding-configuration)
 
-- [**Certificate renewal and reissue
-  settings**](#step-5-renew-or-reissue-the-certificate)
+- [Certificate renewal and reissue
+  settings](#step-5-renew-or-reissue-the-certificate)
 
-- [**Solution validation**](#step-6-validate-the-solution)
+- [Solution validation](#step-6-validate-the-solution)
 
 Azure portal instructions are provided for each step. Azure Command-Line
 Interface (CLI) guidance is provided when applicable.
