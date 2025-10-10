@@ -183,8 +183,7 @@ out-of-band methods to verify.
 
 - If you used App Service verification, your app might be blocking the
   verification HTTP request, like if Azure attempts an HTTP GET to
-  *http://<domain>/.well-known/pki-validation/godaddy.html*. For example, a customer has a custom module on their site that returns HTTP 500, causing verification to fail. In these cases, use an alternative verification method (DNS TXT or email) to complete the
-  process.
+  *http://yourdomain/.well-known/pki-validation/godaddy.html*. For example, a customer has a custom module on their site that returns HTTP 500, causing verification to fail. In these cases, use an alternative verification method (DNS TXT or email) to complete the process.
 
 - For renewals, if it's been more than 13 months (395 days) since the
   last verification, you must verify the domain again. Azure keeps a
