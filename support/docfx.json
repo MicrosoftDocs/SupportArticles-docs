@@ -298,7 +298,7 @@
         "dynamics-365/field-service/**/*.md": "Dynamics 365 Field Service",
         "dynamics-365/guides/**/**.*": "Dynamics 365 Guides",
         "dynamics-365/remote-assist/**/**.*": "Dynamics 365 Remote Assist",
-        "dynamics-365/sales/*.md": "Dynamics 365 Sales",
+        "dynamics-365/sales/**/*.md": "Dynamics 365 Sales",
         "dynamics-365/finance/**/*.md": "Dynamics 365 Finance",
         "dynamics-365/commerce/**/*.md": "Dynamics 365 Commerce",
         "dynamics-365/supply-chain/**/*.md": "Dynamics 365 Supply Chain Management",
@@ -306,11 +306,11 @@
         "power-platform/power-automate/**/*.md": "Power Automate",
         "power-platform/dataverse/**/*.md": "Microsoft Dataverse",
         "power-platform/ai-builder/**/*.md": "AI Builder",
-        "power-platform/power-pages/*.md": "Power Pages",
-        "power-platform/administration/*.md": "Power Platform",
-        "power-platform/copilot-studio/*.md": "Copilot Studio",
+        "power-platform/power-pages/**/*.md": "Power Pages",
+        "power-platform/administration/**/*.md": "Power Platform",
+        "power-platform/copilot-studio/**/*.md": "Copilot Studio",
         "sales-copilot/**/*.md": "Copilot for Sales",
-        "dynamics/gp/*.md": "Dynamics GP"
+        "dynamics/gp/**/*.md": "Dynamics GP"
       },
       "searchScope": {
         "developer/dotnet/**/*.md": [
