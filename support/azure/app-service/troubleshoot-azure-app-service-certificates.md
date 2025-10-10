@@ -488,7 +488,9 @@ Browse to your app's URL using https (like
 If you made changes to DNS records (for domain verification or if you
 re-pointed a domain to the app), use WhatsMyDNS or any nslookup tool to
 ensure the domain properly resolves to your App Service's IP. Also,
-flush the local DNS cache as noted earlier.
+flush the local DNS cache as noted earlier [Step 4: Check
+  App Service Certificate Binding
+  Configuration](#step-4-check-app-service-certificate-binding-configuration).
 
 **Advanced checks (optional for developers)**
 
