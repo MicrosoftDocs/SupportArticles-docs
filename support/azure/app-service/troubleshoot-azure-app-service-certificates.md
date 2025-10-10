@@ -980,3 +980,7 @@ likely the import step wasn't performed.
 By addressing these configuration issues, you ensure the environment is
 set up correctly for the certificate to function. Most "it doesn't work"
 cases come down to a missed step or misconfiguration.
+
+[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
