@@ -34,6 +34,8 @@
     href: /azure/app-service/app-service-web-tutorial-custom-domain
   - name: Open-source technologies FAQs for Web Apps
     href: web-apps-open-source-technologies-faqs.md
+  - name: Troubleshoot an app in Azure App Service using Visual Studio
+    href: troubleshoot-dotnet-visual-studio.md
   - name: Troubleshoot temporary storage
     href: temporary-storage-for-azure-app-service.md
   - name: Troubleshoot instance-related issues
