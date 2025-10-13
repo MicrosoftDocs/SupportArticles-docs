@@ -52,12 +52,14 @@ kubectl get events | grep -i "disruption\|consolidation"
 - DaemonSets preventing drain
 - Pod disruption budgets(PDBs) are not properly set
 - Nodes are marked with `do-not-disrupt` annotation
+- Locks blocking changes
 
 **Solutions**:
 - Add proper tolerations to pods
 - Review DaemonSet configurations  
 - Adjust pod disruption budgets to allow disruption
 - Remove `do-not-disrupt` annotations if appropriate
+- Review lock configurations
 
 
 ## Networking Issues
@@ -74,6 +76,8 @@ kubectl get events | grep -i "disruption\|consolidation"
 kubectl exec -it <pod-name> -- ping <target-ip>
 kubectl exec -it <pod-name> -- nslookup kubernetes.default
 ```
+
+Another option to test node to node or pod to pod connectivity is with the open-source [goldpinger](https://github.com/bloomberg/goldpinger) tool. 
 
 2. **Check network plugin status**:
 ```azurecli-interactive
@@ -102,7 +106,7 @@ ls -la /etc/cni/net.d/
 ```
 
 **Understanding conflist files**:
-- `10-azure.conflist`: Standard Azure CNI configuration for traditional networking with node subnet
+- `10-azure.conflist`: Standard Azure CNI configuration for traditional networking with all CNI's not using overlay
 - `15-azure-swift-overlay.conflist`: Azure CNI with overlay networking (used with Cilium or overlay mode)
 
 **Inspect the configuration content**:
@@ -133,13 +137,13 @@ kubectl logs -n kube-system -l k8s-app=azure-cns --tail=100
 - **If CNI calls don't appear in CNS logs**: You likely have the wrong CNI installed. Verify the correct CNI plugin is deployed.
 
 **Common Causes**:
-- Network security group rules
+- Network security group(NSG) rules
 - Incorrect subnet configuration
 - CNI plugin issues
 - DNS resolution problems
 
 **Solutions**:
-- Review NSG rules for required traffic
+- Review [Network Sescurity Group][networ-security-group-docs] rules for required traffic
 - Verify subnet configuration in AKSNodeClass
 - Restart CNI plugin pods
 - Check CoreDNS configuration
@@ -263,3 +267,4 @@ az vm list-usage --location <region> --query "[?currentValue >= limit]"
 [aks-firewall-requirements]: /azure/aks/limit-egress-traffic#azure-global-required-network-rules
 [karpenter-troubleshooting]: https://karpenter.sh/docs/troubleshooting/
 [karpenter-faq]: https://karpenter.sh/docs/faq/
+[networ-security-group-docs]: /azure/virtual-network/network-security-groups-overview
