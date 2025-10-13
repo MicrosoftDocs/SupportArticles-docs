@@ -28,11 +28,11 @@ When your ARR server routes a request to a back-end server that's on a different
 
 When your ARR server routes a request to a back-end server on the same network, the ARR server can reach the backend server directly. For example:
 
-:::image type="content" source="./media/proxy-server-rejects-back-end-requests/normal-network-layout.png" alt-text="Network diagram of the typical ARR and back-end server configuration on the same network":::
+:::image type="content" source="./media/proxy-server-rejects-back-end-requests/normal-network-layout.png" alt-text="Network diagram of the typical ARR and back-end server configuration when on the same network":::
 
 However, if your back-end server is on a different network than your ARR server, your ARR server might route requests to the back-end server through a proxy server. For example:
 
-:::image type="content" source="./media/proxy-server-rejects-back-end-requests/proxy-network-layout.png" alt-text="Network diagram of the typical ARR and back-end server configuration on the same network":::
+:::image type="content" source="./media/proxy-server-rejects-back-end-requests/proxy-network-layout.png" alt-text="Network diagram of the ARR and back-end server configuration when on a different network, using a proxy server to transit request between networks":::
 
 When your ARR server routes a request through a proxy server, the proxy server can reject the request if it uses a relative URL. For example:
 
