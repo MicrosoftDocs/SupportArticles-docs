@@ -259,7 +259,7 @@ az vm list-usage --location <region> --query "[?currentValue >= limit]"
 
 **Solutions**:
 - Request quota increases through Azure portal
-- Use different VM sizes with available quota
+- Expand NodePool CRD to more VM sizes. See [NodePool configuration documentation][nap-nodepool-docs] for details. For example, A NodePool specification which allows for D-family virtual machines is less likely to hit quota errors that stop VM creation, compared to a NodePool specification specific to only one exact VM Size. 
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
@@ -269,5 +269,6 @@ az vm list-usage --location <region> --query "[?currentValue >= limit]"
 [karpenter-faq]: https://karpenter.sh/docs/faq/
 [network-security-group-docs]: /azure/virtual-network/network-security-groups-overview
 [aksnodeclass-subnet-config]: /azure/aks/node-autoprovision-aksnodeclass#virtual-network-subnet-configuration
+[nap-nodepool-docs]: /azure/aks/node-autoprovision-node-pools
 [coredns-troubleshoot]: /azure/aks/coredns-custom#troubleshooting
 
