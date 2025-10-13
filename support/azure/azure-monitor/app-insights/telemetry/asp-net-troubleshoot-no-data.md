@@ -371,9 +371,41 @@ Follow these instructions to capture troubleshooting logs for your framework.
 
 The Application Insights SDK log `EventSource` has self-troubleshooting logs that can be captured by PerfView.
 
-To collect logs, download PerfView and run this command:
+To collect logs, download PerfView and run this PowerShell command:
 
-`PerfView.exe collect -MaxCollectSec:300 -NoGui /onlyProviders=*Microsoft-ApplicationInsights-Core,*Microsoft-ApplicationInsights-Data,*Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,*Microsoft-ApplicationInsights-Extensibility-DependencyCollector,*Microsoft-ApplicationInsights-Extensibility-HostingStartup,*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,*Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,*Microsoft-ApplicationInsights-Extensibility-Web,*Microsoft-ApplicationInsights-Extensibility-WindowsServer,*Microsoft-ApplicationInsights-WindowsServer-Core,*Microsoft-ApplicationInsights-LoggerProvider,*Microsoft-ApplicationInsights-Extensibility-EventSourceListener,*Microsoft-ApplicationInsights-AspNetCore,*Redfield-Microsoft-ApplicationInsights-Core,*Redfield-Microsoft-ApplicationInsights-Data,*Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,*Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,*Redfield-Microsoft-ApplicationInsights-Extensibility-Web,*Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,*Redfield-Microsoft-ApplicationInsights-LoggerProvider,*Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,*Redfield-Microsoft-ApplicationInsights-AspNetCore`
+```PowerShell
+PerfView.exe collect -MaxCollectSec:300 -NoGui `
+/onlyProviders=*Microsoft-ApplicationInsights-Core,`
+*Microsoft-ApplicationInsights-Data,`
+*Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,`
+*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,`
+*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,`
+*Microsoft-ApplicationInsights-Extensibility-DependencyCollector,`
+*Microsoft-ApplicationInsights-Extensibility-HostingStartup,`
+*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,`
+*Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,`
+*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,`
+*Microsoft-ApplicationInsights-Extensibility-Web,`
+*Microsoft-ApplicationInsights-Extensibility-WindowsServer,`
+*Microsoft-ApplicationInsights-WindowsServer-Core,`
+*Microsoft-ApplicationInsights-LoggerProvider,`
+*Microsoft-ApplicationInsights-Extensibility-EventSourceListener,`
+*Microsoft-ApplicationInsights-AspNetCore,`
+*Redfield-Microsoft-ApplicationInsights-Core,`
+*Redfield-Microsoft-ApplicationInsights-Data,`
+*Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-Web,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,`
+*Redfield-Microsoft-ApplicationInsights-LoggerProvider,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,`
+*Redfield-Microsoft-ApplicationInsights-AspNetCore
+```
 
 You can modify these parameters as needed:
 
@@ -392,9 +424,41 @@ For more information, see:
 
 Alternatively, you can use a cross-platform .NET Core tool, [dotnet-trace](/dotnet/core/diagnostics/dotnet-trace), for collecting logs that can provide further help in troubleshooting. This tool might be helpful for Linux-based environments.
 
-After you install `dotnet-trace`, run the following [dotnet-trace collect](/dotnet/core/diagnostics/dotnet-trace#dotnet-trace-collect) command in bash:
+After you install `dotnet-trace`, run the following [dotnet-trace collect](/dotnet/core/diagnostics/dotnet-trace#dotnet-trace-collect) bash command:
 
-`dotnet-trace collect --process-id <PID> --providers Microsoft-ApplicationInsights-Core,Microsoft-ApplicationInsights-Data,Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,Microsoft-ApplicationInsights-Extensibility-DependencyCollector,Microsoft-ApplicationInsights-Extensibility-HostingStartup,Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,Microsoft-ApplicationInsights-Extensibility-Web,Microsoft-ApplicationInsights-Extensibility-WindowsServer,Microsoft-ApplicationInsights-WindowsServer-Core,Microsoft-ApplicationInsights-LoggerProvider,Microsoft-ApplicationInsights-Extensibility-EventSourceListener,Microsoft-ApplicationInsights-AspNetCore,Redfield-Microsoft-ApplicationInsights-Core,Redfield-Microsoft-ApplicationInsights-Data,Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,Redfield-Microsoft-ApplicationInsights-Extensibility-Web,Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,Redfield-Microsoft-ApplicationInsights-LoggerProvider,Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,Redfield-Microsoft-ApplicationInsights-AspNetCore`
+```bash
+dotnet-trace collect --process-id <PID> --providers \
+Microsoft-ApplicationInsights-Core,\
+Microsoft-ApplicationInsights-Data,\
+Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,\
+Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,\
+Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,\
+Microsoft-ApplicationInsights-Extensibility-DependencyCollector,\
+Microsoft-ApplicationInsights-Extensibility-HostingStartup,\
+Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,\
+Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,\
+Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,\
+Microsoft-ApplicationInsights-Extensibility-Web,\
+Microsoft-ApplicationInsights-Extensibility-WindowsServer,\
+Microsoft-ApplicationInsights-WindowsServer-Core,\
+Microsoft-ApplicationInsights-LoggerProvider,\
+Microsoft-ApplicationInsights-Extensibility-EventSourceListener,\
+Microsoft-ApplicationInsights-AspNetCore,\
+Redfield-Microsoft-ApplicationInsights-Core,\
+Redfield-Microsoft-ApplicationInsights-Data,\
+Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-Web,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,\
+Redfield-Microsoft-ApplicationInsights-LoggerProvider,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,\
+Redfield-Microsoft-ApplicationInsights-AspNetCore
+```
 
 ### Issues with trace logs
 
