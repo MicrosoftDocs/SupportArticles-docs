@@ -400,7 +400,7 @@ After you install `dotnet-trace`, run the following [dotnet-trace collect](/dotn
 
 #### What causes delayed telemetry, an overloaded network, and inefficient transmission?
 
-System.Diagnostics.Tracing has an [Autoflush feature](/dotnet/api/system.diagnostics.trace.autoflush). This feature causes SDK to flush with every telemetry item, which is undesirable, and can cause logging adapter issues like delayed telemetry, an overloaded network, and inefficient transmission.
+`System.Diagnostics.Tracing` has an [Autoflush feature](/dotnet/api/system.diagnostics.trace.autoflush). This feature causes SDK to flush with every telemetry item, which is undesirable, and can cause logging adapter issues like delayed telemetry, an overloaded network, and inefficient transmission.
 
 #### Why is there no Application Insights option on the project context menu?
 
