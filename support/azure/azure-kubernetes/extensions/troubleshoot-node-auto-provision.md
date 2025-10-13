@@ -143,10 +143,10 @@ kubectl logs -n kube-system -l k8s-app=azure-cns --tail=100
 - DNS resolution problems
 
 **Solutions**:
-- Review [Network Sescurity Group][networ-security-group-docs] rules for required traffic
-- Verify subnet configuration in AKSNodeClass
+- Review [Network Sescurity Group][network-security-group-docs] rules for required traffic
+- Verify subnet configuration in AKSNodeClass. See [AKSNodeClass documentation][aksnodeclass-subnet-config] on subnet configuration
 - Restart CNI plugin pods
-- Check CoreDNS configuration
+- Check CoreDNS configuration. See [CoreDNS documentation][coredns-troubleshoot]
 
 ### DNS Service IP Issues
 
@@ -267,4 +267,7 @@ az vm list-usage --location <region> --query "[?currentValue >= limit]"
 [aks-firewall-requirements]: /azure/aks/limit-egress-traffic#azure-global-required-network-rules
 [karpenter-troubleshooting]: https://karpenter.sh/docs/troubleshooting/
 [karpenter-faq]: https://karpenter.sh/docs/faq/
-[networ-security-group-docs]: /azure/virtual-network/network-security-groups-overview
+[network-security-group-docs]: /azure/virtual-network/network-security-groups-overview
+[aksnodeclass-subnet-config]: /azure/aks/node-autoprovision-aksnodeclass#virtual-network-subnet-configuration
+[coredns-troubleshoot]: /azure/aks/coredns-custom#troubleshooting
+
