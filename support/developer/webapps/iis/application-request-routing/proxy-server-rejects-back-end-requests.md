@@ -5,7 +5,7 @@ ms.date: 09/30/2025
 ms.custom: sap:Application Request and Routing (ARR)\Proxy
 ms.reviewer: paulboc, v-shaywood
 
-#customer intent: As a developer, I want to resolve issues that cause a proxy server to reject requests from an ARR server to my back-end servers. This issue is preventing me from using a proxy server between servers.
+#customer intent: As a developer, I want to resolve issues that cause a proxy server to reject requests from an ARR server to my back-end servers. This issue is preventing me from routing requests to back-end servers on different networks than my ARR server.
 ---
 
 # Proxy server rejects requests from ARR to back-end servers
@@ -14,7 +14,7 @@ This article provides troubleshooting guidance for a scenario in which a proxy s
 
 ## Symptoms
 
-When your ARR server directs a request to your back-end server through a proxy server, the following events occur:
+When your ARR server routes a request to a back-end server that's on a different network, the request attempts to transits through a proxy server to reach the other network. When the request attempts to transit the request through the proxy server, the following events occur:
 
 - The proxy server rejects the request and returns an `HTTP 400 Bad Request` status code with an error message that the requested URL is invalid.
 - The ARR server returns an `HTTP 400 Bad Request` status code and the following error message to the client that initiated the request:
@@ -23,7 +23,18 @@ When your ARR server directs a request to your back-end server through a proxy s
 
 ## Cause
 
-A proxy server might reject a request that's directed from your ARR server if the request uses a relative URL. For example:
+> [!IMPORTANT]
+> Some proxy servers are less strict about their implementation of the RFC specification. You might not experience rejected requests from these servers, even without adding the proxy server to your ARR configuration. However, this behavior is nonstandard and subject to change across proxy server implementations.
+
+When your ARR server routes a request to a back-end server on the same network, the ARR server can reach the backend server directly. For example:
+
+:::image type="content" source="./media/proxy-server-rejects-back-end-requests/normal-network-layout.png" alt-text="Network diagram of the typical ARR and back-end server configuration on the same network":::
+
+However, if your back-end server is on a different network than your ARR server, your ARR server might route requests to the back-end server through a proxy server. For example:
+
+:::image type="content" source="./media/proxy-server-rejects-back-end-requests/proxy-network-layout.png" alt-text="Network diagram of the typical ARR and back-end server configuration on the same network":::
+
+When your ARR server routes a request through a proxy server, the proxy server can reject the request if it uses a relative URL. For example:
 
 ```http
 /mywebapp/mypage.aspx
@@ -35,8 +46,7 @@ According to [section 5.3.2 of RFC 7230](https://datatracker.ietf.org/doc/html/r
 http://www.contoso.com/mywebapp/mypage.aspx
 ```
 
-> [!NOTE]
-> Some proxy servers are less strict about their implementation of the RFC specification. These servers do allow requests that use relative URLs. However, this behavior is nonstandard and inconsistent across proxy server implementations.
+Some proxy servers allow requests that use relative URLs, but this behavior is an inconsistent across different proxy servers. In all cases, we recommend you configure your ARR server to properly route requests through the proxy server per the steps in [Solution](#solution).
 
 ## Solution
 
