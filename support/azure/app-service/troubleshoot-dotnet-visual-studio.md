@@ -24,7 +24,7 @@ ms.custom:
 >
 
 ## Overview
-This tutorial shows how to use Visual Studio tools to help debug an app in [App Service](./overview.md), by running in [debug mode](/visualstudio/debugger/) remotely or by viewing application logs and web server logs.
+This tutorial shows how to use Visual Studio tools to help debug an app in [App Service](/azure/app-service/overview), by running in [debug mode](/visualstudio/debugger/) remotely or by viewing application logs and web server logs.
 
 In this tutorial, you learn:
 
@@ -39,7 +39,7 @@ In this tutorial, you learn:
 If you have Visual Studio Ultimate, you can also use [IntelliTrace](/visualstudio/debugger/intellitrace) for debugging. IntelliTrace is not covered in this tutorial.
 
 ## <a name="prerequisites"></a>Prerequisites
-- This tutorial works with the development environment, web project, and App Service app that you set up in [Create an ASP.NET app in Azure App Service](./quickstart-dotnetcore.md?tabs=netframework48). For the WebJobs sections, you'll need the application that you create in [Get Started with the Azure WebJobs SDK][GetStartedWJ].
+- This tutorial works with the development environment, web project, and App Service app that you set up in [Create an ASP.NET app in Azure App Service](/azure/app-service/quickstart-dotnetcore?tabs=netframework48). For the WebJobs sections, you'll need the application that you create in [Get Started with the Azure WebJobs SDK](https://github.com/Azure/azure-webjobs-sdk/wiki).
 
 - The code samples shown in this tutorial are for a C# MVC web application, but the troubleshooting procedures are the same for Visual Basic and Web Forms applications.
 
@@ -59,9 +59,9 @@ Visual Studio provides access to a subset of the app management functions and co
    >
    >
 
-    For more information about connecting to Azure resources from Visual Studio, see [Assign Azure roles using the Azure portal](../role-based-access-control/role-assignments-portal.yml).
+    For more information about connecting to Azure resources from Visual Studio, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 2. In **Server Explorer**, expand **Azure** and expand **App Service**.
-3. Expand the resource group that includes the app that you created in [Create an ASP.NET app in Azure App Service](./quickstart-dotnetcore.md?tabs=netframework48), and then right-click the app node and click **View Settings**.
+3. Expand the resource group that includes the app that you created in [Create an ASP.NET app in Azure App Service](/azure/app-service/quickstart-dotnetcore?tabs=netframework48), and then right-click the app node and click **View Settings**.
 
     ![View Settings in Server Explorer](./media/web-sites-dotnet-troubleshoot-visual-studio/tws-viewsettings.png)
 
@@ -71,7 +71,7 @@ Visual Studio provides access to a subset of the app management functions and co
 
     In this tutorial, you'll use the logging and tracing drop-downs. You'll also use remote debugging but you'll use a different method to enable it.
 
-    For information about the App Settings and Connection Strings boxes in this window, see [Configure app settings](configure-common.md#configure-app-settings).
+    For information about the App Settings and Connection Strings boxes in this window, see [Configure app settings](/azure/app-service/configure-common#configure-app-settings).
 
     If you want to perform an app management task that can't be done in this window, click **Open in Management Portal** to open a browser window to the Azure portal.
 
@@ -118,9 +118,9 @@ If the detailed error message doesn't provide enough information, and you can't 
 
 Remote debugging does not work in Express editions of Visual Studio.
 
-This section shows how to debug remotely using the project you create in [Create an ASP.NET app in Azure App Service](./quickstart-dotnetcore.md?tabs=netframework48).
+This section shows how to debug remotely using the project you create in [Create an ASP.NET app in Azure App Service](/azure/app-service/quickstart-dotnetcore?tabs=netframework48).
 
-1. Open the web project that you created in [Create an ASP.NET app in Azure App Service](./quickstart-dotnetcore.md?tabs=netframework48).
+1. Open the web project that you created in [Create an ASP.NET app in Azure App Service](/azure/app-service/quickstart-dotnetcore?tabs=netframework48).
 
 1. Open *Controllers\HomeController.cs*.
 
@@ -139,7 +139,7 @@ This section shows how to debug remotely using the project you create in [Create
 
 1. In **Solution Explorer**, right-click the project, and click **Publish**.
 
-1. In the **Profile** drop-down list, select the same profile that you used in [Create an ASP.NET app in Azure App Service](./quickstart-dotnetcore.md?tabs=netframework48). Then, click Settings.
+1. In the **Profile** drop-down list, select the same profile that you used in [Create an ASP.NET app in Azure App Service](/azure/app-service/quickstart-dotnetcore?tabs=netframework48). Then, click Settings.
 
 1. In the **Publish** dialog, click the **Settings** tab, and then change **Configuration** to **Debug**, and then click **Save**.
 
@@ -274,7 +274,7 @@ Logs are written to files in a *LogFiles* folder in the file system of your app 
 ## <a name="apptracelogs"></a>Create and view application trace logs
 In this section, you do the following tasks:
 
-* Add tracing statements to the web project that you created in [Get started with Azure and ASP.NET](./quickstart-dotnetcore.md?tabs=netframework48).
+* Add tracing statements to the web project that you created in [Get started with Azure and ASP.NET](/azure/app-service/quickstart-dotnetcore?tabs=netframework48).
 * View the logs when you run the project locally.
 * View the logs as they are generated by the application running in Azure.
 
@@ -627,7 +627,7 @@ You've seen how Visual Studio makes it easy to view logs created by an App Servi
 ### App Service troubleshooting
 For more information about troubleshooting apps in Azure App Service, see the following resources:
 
-* [How to monitor apps](web-sites-monitor.md)
+* [How to monitor apps](/azure/app-service/web-sites-monitor)
 * [Investigating Memory Leaks in Azure App Service with Visual Studio 2013](https://devblogs.microsoft.com/devops/investigating-memory-leaks-in-azure-web-sites-with-visual-studio-2013/). Microsoft ALM blog post about Visual Studio features for analyzing managed memory issues.
 * [Azure App Service online tools you should know about](https://azure.microsoft.com/blog/windows-azure-websites-online-tools-you-should-know-about). Blog post by Amit Apple.
 
