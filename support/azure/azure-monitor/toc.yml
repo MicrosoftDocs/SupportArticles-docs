@@ -46,6 +46,8 @@ items:
       href: app-insights/telemetry/investigate-missing-telemetry.md
     - name: Troubleshoot auto-instrumentation issues
       href: app-insights/telemetry/auto-instrumentation-troubleshoot.md
+    - name: Troubleshoot Azure App Service issues
+      href: app-insights/telemetry/troubleshoot-azure-app-service-issues.md
     - name: Troubleshoot high data ingestion
       href: app-insights/telemetry/troubleshoot-high-data-ingestion.md
     - name: Application Insights classic SDK troubleshooting
