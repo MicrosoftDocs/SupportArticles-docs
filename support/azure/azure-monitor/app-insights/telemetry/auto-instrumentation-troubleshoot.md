@@ -49,7 +49,7 @@ If you encounter problems that are caused by the Application Insights SDK itself
 
 ### Slow startup times
 
-Your Java functions might have slow startup times if you adopted this feature before February 2023. From the function app **Overview** pane, go to **Configuration** in the left-hand side navigation menu. Then select **Application settings** and use the following steps to fix the issue.
+Your Java functions might have slow startup times if you adopted this feature before February 2023. From the function app **Overview** pane, go to **Configuration** in the navigation menu. Then, select **Application settings** and use the following steps to fix the issue.
 
 ### [Windows](#tab/windows)
 
