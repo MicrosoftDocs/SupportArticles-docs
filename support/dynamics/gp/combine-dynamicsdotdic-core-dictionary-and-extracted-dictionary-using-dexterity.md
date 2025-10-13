@@ -83,4 +83,4 @@ If you combine an extracted source dictionary and a core dictionary, you create 
   
 For more information about how to create a chunk file from a Development Dictionary, see [How to create a chunk file in Great Plains 8.0 Dexterity](create-a-chunk-file-dexterity.md).
 
-For more information about how to use Source Code Control to upgrade a Development Dictionary, see [How to upgrade a Dexterity-based application in Microsoft Dynamics GP or in Microsoft Great Plains by using the Dexterity Source Code Control Service](https://support.microsoft.com/help/910527).
+For more information about how to use Source Code Control to upgrade a Development Dictionary, see [How to upgrade a Dexterity-based application in Microsoft Dynamics GP by using the Dexterity Source Code Control Service](./upgrade-a-dexterity-based-application.md).
