@@ -10,6 +10,8 @@
       href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-application-gateway.md
   - name: Troubleshoot Azure App Service
     href: ./welcome-app-service.yml
+  - name: Node.js Best Practices and Troubleshooting Guide
+    href: app-service-web-nodejs-best-practices-and-troubleshoot-guide.md
   - name: Capture memory dumps in Azure App Service
     href: ./capture-memory-dumps-app-service.md
   - name: Create or delete web apps FAQs
