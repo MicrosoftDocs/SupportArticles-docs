@@ -110,7 +110,7 @@ After the service restarts, it uses the new parameter values.
 
 ## More information
 
-- [Windows configurations in sshd_config](../windows-server/administration/OpenSSH/openssh-server-configuration#windows-configurations-in-sshd_config) in "OpenSSH Server configuration for Windows Server and Windows"
+- [Windows configurations in sshd_config](/windows-server/administration/OpenSSH/openssh-server-configuration#windows-configurations-in-sshd_config) in "OpenSSH Server configuration for Windows Server and Windows"
 - [sshd_config(5) - Linux manual page](https://man7.org/linux/man-pages/man5/sshd_config.5.html)
 - [sshd_config - OpenSSH daemon configuration file](https://man.openbsd.org/sshd_config)
 
