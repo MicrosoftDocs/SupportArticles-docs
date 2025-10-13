@@ -87,14 +87,14 @@ To resolve this problem, determine the cause from the list of possible causes in
 2. Make sure that the user has access to the accounts payable account in the Organizational Structure Mass Assignment window. To open the Organizational Structure Mass Assignment window, point to **System** on the **Cards** menu, and then select **Organizational Assignments**.
 3. Make sure that the user has access to the Accounts Payable window by using regular security or advanced security.
 4. Make sure that the fiscal period in which the document is posted has a status of Open in the Fiscal Periods Setup window in Purchasing. To open the Fiscal Periods Setup window, point to **Setup** on the **Tools** menu, point to **Company**, and then select **Fiscal Periods**.
-5. Make the check batch available, and then make the RMPMXFR batch available. To do it, follow the steps in [KB - A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](https://support.microsoft.com/help/850289).
+5. Make the check batch available, and then make the RMPMXFR batch available. To do it, follow the steps in [A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](./a-batch-is-held-in-the-several-statuses.md).
 6. If you experience the problems in Scenario 2, go to the resolution for Scenario 2.
 
 ### Resolution for scenario 2
 
 To resolve this problem, follow these steps:
 
-1. If you haven't already made the check batch available, make the check batch available. To do it, follow the steps in [KB - A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](https://support.microsoft.com/help/850289).
+1. If you haven't already made the check batch available, make the check batch available. To do it, follow the steps in [A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](./a-batch-is-held-in-the-several-statuses.md).
 2. After the documents are verified, remove the duplicate document.
 
     > [!NOTE]
@@ -107,7 +107,7 @@ To resolve this problem, follow these steps:
     > [!NOTE]
     > XX is a placeholder for the Dex Row ID of the miscellaneous charge.
 3. If you've to post the miscellaneous charge document, post the document.
-4. After you recover the check batch, print the check batch, and then post the check batch. For more information, see [KB - A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](https://support.microsoft.com/help/850289).
+4. After you recover the check batch, print the check batch, and then post the check batch. For more information, see [A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](./a-batch-is-held-in-the-several-statuses.md).
 
 ## More information
 
