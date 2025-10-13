@@ -1,9 +1,8 @@
 ---
 title: Troubleshoot Lookup issues in model-driven apps
 description: Helps troubleshoot Simple Lookup control issues in Power Apps model-driven apps.
-author: hwhong
 ms.date: 05/27/2025
-ms.author: hwhong
+ms.reviewer: hwhong, v-shaywood
 ms.custom: sap:Running model-driven app controls\Lookup, advanced lookup
 search.audienceType: 
   - maker
