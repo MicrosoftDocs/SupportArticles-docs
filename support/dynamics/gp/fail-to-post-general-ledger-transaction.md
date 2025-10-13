@@ -67,7 +67,7 @@ To resolve this problem, change the status for the batch that is to be posted. T
 > [!NOTE]
 > Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.
 
-1. Make the batch available. For more information about how a batch can be unavailable because of its status, see [A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](https://support.microsoft.com/help/850289).
+1. Make the batch available. For more information about how a batch can be unavailable because of its status, see [A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP](./a-batch-is-held-in-the-several-statuses.md).
 
 2. Use Microsoft SQL Query Analyzer or Microsoft Support Administrator Console to run the following delete statement under the correct company database.
 
