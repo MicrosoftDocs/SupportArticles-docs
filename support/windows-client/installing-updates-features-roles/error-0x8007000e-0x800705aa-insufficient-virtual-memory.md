@@ -57,7 +57,7 @@ A clean restart, also known as a _clean boot_, starts Windows without these back
 1. In System Configuration, select **Startup** > **OK**.
 1. Restart the computer.  
 
-After the computer restarts, try again to update or upgrade it.  
+After the computer restarts, try again to update it.  
 
 ## Resolution
 
