@@ -5,7 +5,7 @@ tags: top-support-issue
 keywords: web app performance, slow app, app slow
 ms.assetid: b8783c10-3a4a-4dd6-af8c-856baafbdde5
 ms.topic: troubleshooting-general
-ms.date: 10/14/25
+ms.date: 10/14/2025
 ms.author: msangapu
 author: msangapu-msft
 ms.reviewer: v-ryanberg
