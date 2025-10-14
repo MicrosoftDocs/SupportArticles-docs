@@ -46,4 +46,6 @@
     href: troubleshoot-instance-related-issues-on-azure-app-service.md
   - name: Troubleshoot virtual network integration
     href: troubleshoot-vnet-integration-apps.md
+  - name: Troubleshoot Performance Degradation
+    href: troubleshoot-performance-degradation.md  
     
