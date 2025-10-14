@@ -7,7 +7,7 @@ ms.author: arboisse
 ms.reviewer: arboisse
 editor: v-jsitser
 ms.service: azure-monitor
-ms.custom: sap:Windows Agents
+ms.custom: sap:Azure Monitor Agent (AMA) on Windows machine
 ---
 
 # Azure Log Analytics Monitoring Agent troubleshooting basics
