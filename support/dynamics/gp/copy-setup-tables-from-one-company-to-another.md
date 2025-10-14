@@ -348,9 +348,7 @@ After the tables have been copied to the new company, run the Check Links functi
 > [!NOTE]
 > If you are copying Analytical Accounting (AA) setup tables from company A that has AA activated to company B that does not yet have AA activated, you must first install and activate AA in company B. After AA is activated in company B, copy these AA setup tables from company A. Then, use the script in Method 1 in Knowledge Base (KB) article 897280 to update the next available values that are stored in table AAG00102 in the Dynamics database for the AA setup tables. This script will prevent you from receiving error messages of primary key issues.
 
-For more information, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[897280](https://support.microsoft.com/help/897280) Error message when you try to post Analytical Accounting transactions in Microsoft Dynamics GP: "Cannot insert duplicate key in object"  
+For more information, see [Error when you try to post Analytical Accounting transactions or save a Master record in Microsoft Dynamics GP: Cannot insert duplicate key in object 'AAGXXXXX'](./error-when-posting-analytical-accounting-transactions-or-save-master-record.md)  
 
 ## Make a database backup
 
