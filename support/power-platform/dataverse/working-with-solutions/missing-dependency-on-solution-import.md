@@ -69,9 +69,6 @@ To work around this issue, use one of the following methods:
 
 ### Missing dependencies coming from a first-party Dynamics 365 application
 
-> [!IMPORTANT]
-> This experience might not be available yet in the environments of all regions.
-
 A solution might depend on only components from first-party Dynamics 365 applications that are missing or outdated in the target environment. In this situation, the system might be able to automatically update or install these components, and no manual action is required from the user. The **Missing dependencies** page displays the **Deploy Dependencies** option. If you select this option, and then you select the **Import** button, the system first installs or updates the required dependencies, and then imports the solution. If the update or installation of a dependent application fails, the solution import also fails. You can track the status of these updates or installations on the solution history page.
 
 :::image type="content" source="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png" alt-text="The Applications section of the Missing dependencies page showing a first-party application that can be auto installed or updated from the system." lightbox="media/missing-dependency-on-solution-import/missing-dependencies-first-party-application.png":::
@@ -121,6 +118,9 @@ Don't make changes directly to components that are part of a managed solution. S
 Always apply changes within an unmanaged solution or extend functionality by using solution layering. For more information about solution layering, see [Solution layers](/power-platform/alm/solution-layers-alm).
 
 ### Avoid dependencies on deprecated applications
+
+> [!IMPORTANT]
+> This experience might not be available yet in the environments of all regions.
 
 Avoid taking dependencies on deprecated applications. Deprecated applications are no longer available for installation or update. You can find these dependencies in the **Deprecated Applications** section of the **Missing dependencies** page. Expanding the section provides additional details.
 
