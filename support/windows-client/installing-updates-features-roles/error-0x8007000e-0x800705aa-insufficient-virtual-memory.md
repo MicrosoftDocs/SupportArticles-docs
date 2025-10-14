@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows Update Error Code 0x8007000e or 0x800705aa
-description: Describes how to resolve Windows Update error code 0x8007000e or 0x800705aa.
+description: Discusses how to resolve Windows Update error code 0x8007000e or 0x800705aa.
 ms.date: 10/15/2025
 manager: dcscontentpm
 audience: itpro
@@ -16,11 +16,11 @@ appliesto:
 
 # Troubleshoot Windows Update error code 0x8007000e or 0x800705aa
 
-This article describes how to resolve Windows Update error code 0x8007000e or 0x800705aa.
+This article discusses how to resolve Windows Update error code 0x8007000e or 0x800705aa.
 
 ## Symptoms
 
-You install a Windows Update, and the installation fails. You see one of the following error messages:
+When you try to install a Windows update, the installation fails. When this error occurs, you receive one of the following error messages:
 
 ```output
 Error - Installer encountered an error 0x8007000e. Not enough memory resources available to complete this operation.
@@ -37,27 +37,27 @@ Insufficient system resources exist to complete the requested service.
 
 ## Cause
 
-This issue occurs when the computer doesn't have enough available virtual memory for Windows to install the update. The most common causes of this issue are the following conditions:
+This issue occurs if the computer doesn't have enough available virtual memory for Windows to install the update. The most common causes of this issue are the following conditions:
 
-- Third-party applications consume a large amount of virtual memory.
-- The computer's virtual memory isn't managed automatically. Instead, it's' manually configured.
+- Third-party applications are consuming lots of virtual memory.
+- The computer's virtual memory isn't managed automatically. Instead, it's manually configured.
 
 ## Workaround: Clean restart
 
-When you start Windows by using a normal startup, several applications and services start automatically, and then run in the background. These programs include basic system processes, antivirus software, system utility applications, and other software. These applications and services can interfere with the update process.  
+When you start Windows by using a normal startup, several applications and services start automatically, and then they run in the background. These programs include basic system processes, antivirus software, and system utility applications. These applications and services can interfere with the update process.  
 
-A clean restart, also known as a clean boot, starts Windows without these background applications and services. Follow these steps:  
+A clean restart, also known as a _clean boot_, starts Windows without these background applications and services. Follow these steps:  
 
-1. Sign in to the affected computer as administrator.
-1. In the search box, type **msconfig** and then select **System Configuration**.
+1. Sign in to the affected computer as an administrator.
+1. In the Search box, enter **msconfig**, and then select **System Configuration**.
 1. In System Configuration, select **Services** > **Hide all Microsoft services** > **Disable all**.
 1. Select **Startup** > **Open Task Manager**.
-1. Under **Startup** in Task Manager, for each startup item, select the item and then select **Disable**.
+1. Under **Startup** in Task Manager, select each startup item, and then select **Disable**.
 1. Close Task Manager.
 1. In System Configuration, select **Startup** > **OK**.
 1. Restart the computer.  
 
-After the computer restarts, try to update or upgrade it again.  
+After the computer restarts, try again to update or upgrade it.  
 
 ## Resolution
 
@@ -71,7 +71,7 @@ To configure the computer to automatically manage its virtual memory, follow the
 
 ## More information
 
-As an example of this issue, the following excerpt shows how error code 0x800705aa appears in the CBS.log file.
+As an example of this issue, the following excerpt shows how error code 0x800705aa appears in the CBS.log file:
 
 ```output
 2024-02-06 02:20:51, Info          
