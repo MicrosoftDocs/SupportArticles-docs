@@ -198,7 +198,7 @@ http.createServer(function (req, res) {
 
 The preceding code profiles the WriteConsoleLog function and then writes the profile output to the ‘profile.cpuprofile’ file under your site wwwroot. Send a request to your application. You see a ‘profile.cpuprofile’ file created under your site wwwroot.
 
-![Screenshot that shows the profile.cpuprofile file.](./media/app-service-web-nodejs-best-practices-and-troubleshoot-guide/scm-profile.cpuprofile.png)
+![Screenshot that shows the profile.cpuprofile file.](./media/app-service-web-nodejs-best-practices-and-troubleshoot-guide/scm-profile-cpuprofile.png)
 
 Download this file and open it with Chrome F12 Tools. Press F12 on Chrome, then choose the **Profiles** tab. Choose the **Load** button. Select your profile.cpuprofile file that you downloaded. Click on the profile you just loaded.
 

@@ -1,11 +1,13 @@
 ---
-title: Troubleshoot instance-related issues on Azure App Service
-description: How to troubleshoot instance-related issues on Azure App Service
-ms.date: 06/21/2021
+title: 
+description: 
+author: JarrettRenshaw
+manager: dcscontentpm
+ms.topic: 
 ms.service: azure-app-service
-ms.author: shwagarwal
-author: ShwetaAgarwal-MS
-ms.reviewer: 
+ms.date: 10/14/2025
+ms.author: jarrettr
+ms.reviewer: v-ryanberg
 ---
 # 
 
