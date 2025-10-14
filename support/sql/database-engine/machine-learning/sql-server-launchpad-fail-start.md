@@ -26,4 +26,4 @@ Windows update [KB5044284 (OS Build 26100.2033)](https://support.microsoft.com/t
 
 ## Resolution
 
-This issue has been resolved in the latest version of the Windows cumulative update.
+This issue has been resolved in [Windows update KB5055523 (OS Build 26100.3775)](https://support.microsoft.com/en-us/topic/april-8-2025-kb5055523-os-build-26100-3775-348facce-4988-4c6a-8cb9-50cab59fd385) and later versions. Microsoft recommends using the latest version of the Windows cumulative update for SQL Server.
