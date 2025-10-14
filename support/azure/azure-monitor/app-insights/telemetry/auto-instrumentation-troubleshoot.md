@@ -2,8 +2,8 @@
 title: Troubleshoot Application Insights Autoinstrumentation
 description: Provides troubleshooting help for problems in autoinstrumentation in Application Insights.
 ms.service: azure-monitor
-ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
-ms.date: 8/26/2025
+ms.custom: sap:Missing or incorrect telemetry and performance issues
+ms.date: 10/14/2025
 ---
 # Troubleshoot Application Insights autoinstrumentation
 
