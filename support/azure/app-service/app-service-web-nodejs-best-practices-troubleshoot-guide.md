@@ -12,7 +12,7 @@ ms.service: azure-app-service
 ---
 # Best practices and troubleshooting guide for node applications on Azure App Service Windows
 
-In this article, you learn best practices and troubleshooting steps for [Windows Node.js applications](quickstart-nodejs.md?pivots=platform-windows) running on Azure App Service (with [iisnode](https://github.com/azure/iisnode)).
+In this article, you learn best practices and troubleshooting steps for [Windows Node.js applications](/azure/app-service/quickstart-nodejs?pivots=platform-windows) running on Azure App Service (with [iisnode](https://github.com/azure/iisnode)).
 
 > [!WARNING]
 > Use caution when using troubleshooting steps on your production site. Recommendation is to troubleshoot your app on a non-production setup for example your staging slot and when the issue is fixed, swap your staging slot with your production slot.
@@ -135,7 +135,7 @@ let keepaliveAgent = new Agent({
 
 #### My node application is consuming too much CPU
 
-You may receive a recommendation from Azure App Service on your portal about high cpu consumption. You can also set up monitors to watch for certain [metrics](web-sites-monitor.md). When checking the CPU usage on the [Azure portal Dashboard](/azure/azure-monitor/essentials/metrics-charts), check the MAX values for CPU so you don’t miss the peak values.
+You may receive a recommendation from Azure App Service on your portal about high cpu consumption. You can also set up monitors to watch for certain [metrics](/azure/app-service/web-sites-monitor). When checking the CPU usage on the [Azure portal Dashboard](/azure/azure-monitor/essentials/metrics-charts), check the MAX values for CPU so you don’t miss the peak values.
 If you believe your application is consuming too much CPU and you cannot explain why, you can profile your node application to find out.
 
 #### Profiling your node application on Azure App Service with V8-Profiler
@@ -208,7 +208,7 @@ You can see that 95% of the time was consumed by the WriteConsoleLog function. T
 
 ### My node application is consuming too much memory
 
-If your application is consuming too much memory, you see a notice from Azure App Service on your portal about high memory consumption. You can set up monitors to watch for certain [metrics](web-sites-monitor.md). When checking the memory usage on the [Azure portal Dashboard](/azure/azure-monitor/essentials/metrics-charts), be sure to check the MAX values for memory so you don’t miss the peak values.
+If your application is consuming too much memory, you see a notice from Azure App Service on your portal about high memory consumption. You can set up monitors to watch for certain [metrics](/azure/app-service/web-sites-monitor). When checking the memory usage on the [Azure portal Dashboard](/azure/azure-monitor/essentials/metrics-charts), be sure to check the MAX values for memory so you don’t miss the peak values.
 
 #### Leak detection and Heap Diff for Node.js
 
@@ -267,11 +267,11 @@ NODE.exe has a setting called `NODE_PENDING_PIPE_INSTANCES`. On Azure App Servic
 
 Follow these links to learn more about Node.js applications on Azure App Service.
 
-* [Get started with Node.js web apps in Azure App Service](quickstart-nodejs.md)
+* [Get started with Node.js web apps in Azure App Service](/azure/app-service/quickstart-nodejs)
 * [How to debug a Node.js web app in Azure App Service](/archive/blogs/azureossds/debugging-node-js-apps-on-azure-app-services)
 * [Using Node.js Modules with Azure applications](/training/modules/create-nodejs-project-dependencies/)
 * [Azure App Service Web Apps: Node.js](/archive/blogs/silverlining/windows-azure-websites-node-js)
-* [Node.js Developer Center](../nodejs-use-node-modules-azure-apps.md)
+* [Node.js Developer Center](/azure/nodejs-use-node-modules-azure-apps)
 * [Exploring the Super Secret Kudu Debug Console](https://www.youtube.com/watch?v=-VjqyvA2XjM)
 
 
