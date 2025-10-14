@@ -55,8 +55,8 @@ If you identify an issue that you can fix, fix that issue and then try again to 
 
 ### Step 3: Make sure that Windows and third-party drivers are up to date
 
-1. Use the Windows Update **Check for updates** function to make sure that any available Important updates, hardware updates, and driver updates have been installed. To make sure that you have installed all these updates, you might have to check for updates several times.
-1. Check third-party drivers and download any updates. You can find third-party drivers and installation instructions for any hardware you've added to your device on the manufacturer's website.
+1. Use the Windows Update **Check for updates** function to make sure that any available Important updates, hardware updates, and driver updates were installed. To make sure that you installed all these updates, you might have to check for updates several times.
+1. Check third-party drivers and download any updates. You can find third-party drivers and installation instructions for any hardware you added to your device on the manufacturer's website.
 
 ### Step 4: Check Device Manager for errors
 
@@ -135,7 +135,7 @@ After the computer restarts, try again to update or upgrade it.
 
 ### Step 9: Remove all nonessential external hardware
 
-Disconnect all peripheral devices that are connected to the system, except for the mouse, keyboard, and display devices. Such devices include external storage devices and drives, docks, and other hardware that you might have plugged into your device that isn't needed for basic functionality. Additionally, disconnect or disable any network adapters that you're not using for the upgrade.
+Disconnect all peripheral devices that are connected to the system, except for the mouse, keyboard, and display devices. Such devices include external storage devices and drives, docks, and other hardware that might be plugged into your device that isn't needed for basic functionality. Additionally, disconnect or disable any network adapters that you don't use for the upgrade.
 
 After you disconnect all nonessential hardware, try again to upgrade.
 
