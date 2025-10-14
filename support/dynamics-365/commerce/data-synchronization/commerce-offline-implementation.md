@@ -4,14 +4,13 @@ description: Learn how to troubleshoot errors for offline implementations of Mic
 author: v-chgri
 ms.author: johnmichalak
 ms.topic: troubleshooting
-ms.date: 10/07/2025
+ms.date: 10/14/2025
 ---
 # Troubleshoot Commerce offline implementation
 
 This article explains how to troubleshoot errors for offline implementations of Microsoft Dynamics 365 Commerce.
 
-## Issue 1
-
+## Issue 1: Errors due to sign-in issues
 
 ### Symptoms
 
@@ -29,9 +28,9 @@ A sign-in-related issue has occurred. This issue might occur because data isn't 
 
 ### Resolution
 
-To fix this issue, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
+To fix this issue, in Commerce headquarters, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
 
-## Issue 2:
+## Issue 2: Errors due to employee address book not being found, or employee not mapped to store in offline database
 
 ### Symptoms
 
@@ -46,9 +45,9 @@ This issue might occur because the store's employee address books aren't found o
 
 ### Resolution
 
-To fix this issue, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
+To fix this issue, in Commerce headquarters, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
 
-## Issue 3:
+## Issue 3: Errors due to employee position detail not found or invalid
 
 ### Symptoms
 
@@ -63,9 +62,9 @@ This issue might occur because the worker's position detail or assignment isn't 
 
 ### Resolution
 
-To fix this issue, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
+To fix this issue, in Commerce headquarters, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
 
-## Issue 4:
+## Issue 4: Error due to employee POS permission settings not found or configured incorrectly
 
 ### Symptoms
 
@@ -79,9 +78,9 @@ This issue might occur because the worker's POS permission settings aren't found
 
 ### Resolution
 
-To fix this issue, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
+To fix this issue, in Commerce headquarters, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
 
-## Issue 5:
+## Issue 5: Channel errors due to inability to switch to offline mode
 
 ### Symptoms
 
@@ -103,9 +102,9 @@ Unable to switch to offline mode. The channel information is either unavailable 
 
 ### Resolution
 
-To fix this issue, run the **Channel configuration scheduler** job (by default, the **1070** scheduler job). Also, contact your system administrator.
+To fix this issue, in Commerce headquarters, run the **Channel configuration scheduler** job (by default, the **1070** scheduler job). Also, contact your system administrator.
 
-## Issue 6:
+## Issue 6: User errors due to inability to switch to offline mode
 
 ### Symptoms
 
@@ -123,9 +122,9 @@ Unable to switch to offline mode. The user information is either unavailable or 
 
 ### Resolution
 
-To fix this issue, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
+To fix this issue, in Commerce headquarters, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
 
-## Issue 7:
+## Issue 7: Error due to offline database storage issue 
 
 ### Symptoms
 
@@ -133,14 +132,11 @@ You receive the following error:
 
 Microsoft_Dynamics_Commerce_Runtime_CriticalStorageError
 
-#### Root cause
-
-
 ### Resolution
 
-To check the status of offline database permissions, size, and disk space, you can use the offline dashboard.
+Use the offline dashboard to check the status of offline database permissions, size, and disk space.
 
-## Issue 8:
+## Issue 8: Error due to same user attempting to perform a manager override
 
 ### Symptoms
 
@@ -154,9 +150,9 @@ This error occurs when the same user tries to perform a manager override.
 
 ### Resolution
 
-A different user must be used.
+A different user must perform the manager override.
 
-## Issue 9:
+## Issue 9: Database errors due to inability to switch to offline mode
 
 ### Symptoms
 
@@ -173,7 +169,7 @@ Unable to switch to offline mode. The offline database is either incorrectly ins
 
 Verify that everything has been set up successfully. Also, contact your system administrator.
 
-## Issue 10:
+## Issue 10: Errors due to terminal or device configuration not found
 
 ### Symptoms
 
@@ -182,14 +178,11 @@ You receive one of the following errors:
 - Microsoft_Dynamics_Commerce_Runtime_TerminalNotFound
 - Microsoft_Dynamics_Commerce_Runtime_DeviceConfigurationNotFound
 
-#### Root cause
-
-
 ### Resolution
 
 To fix this issue, run the **Channel configuration scheduler** job (by default, the **1070** scheduler job). Also, contact your system administrator.
 
-## Issue 11:
+## Issue 11: Errors due to internal server, timeout, or runtime invalid format issues 
 
 ### Symptoms
 
@@ -227,3 +220,4 @@ Microsoft recommends that you contact Support to get direct assistance (where ap
 
 
 [Configure and install Commerce Scale Unit (self-hosted)](/dynamics365/commerce/dev-itpro/retail-store-scale-unit-configuration-installation)
+
