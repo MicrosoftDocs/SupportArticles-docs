@@ -141,14 +141,14 @@ items:
 
 
 
-  - name: Linux Agents
+  - name: Azure Monitor Agent (AMA) on Linux machine
     items:
     - name: Missing heartbeats in the Linux agent
       href: log-analytics/linux-agents/linux-agent-missing-heartbeats.md
     - name: Missing Linux performance counters
       href: log-analytics/linux-agents/linux-agent-performance-counter-missing.md
 
-  - name: Windows Agents
+  - name: Azure Monitor Agent (AMA) on Windows machine
     items:
     - name: Basic troubleshooting of Microsoft Monitoring Agent
       href: log-analytics/windows-agents/mma-troubleshoot-basics.md
