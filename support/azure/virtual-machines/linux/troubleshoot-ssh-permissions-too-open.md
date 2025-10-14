@@ -113,7 +113,7 @@ If you can't access the VM by using the Azure Serial Console, then the repair mu
 
 1. Unmount the boot partition:
 
-    ```basg
+    ```bash
     umount /repair
     ```
 
