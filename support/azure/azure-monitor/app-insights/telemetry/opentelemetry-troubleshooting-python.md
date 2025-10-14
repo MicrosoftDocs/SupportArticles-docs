@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot OpenTelemetry issues in Python
 description: Learn how to troubleshoot OpenTelemetry issues in Python. View known issues that involve Azure Monitor OpenTelemetry Exporters.
-ms.date: 10/28/2024
+ms.date: 10/14/2025
 editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: python
-ms.reviewer: azuremacic, jeremyvoss, mmcc, lechen, aaronmax, v-leedennis
-ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
+ms.reviewer: jeremyvoss, mmcc, aaronmax, jarrettr
+ms.custom: sap:Missing or incorrect telemetry and performance issues
 ---
 
 # Troubleshoot OpenTelemetry issues in Python
