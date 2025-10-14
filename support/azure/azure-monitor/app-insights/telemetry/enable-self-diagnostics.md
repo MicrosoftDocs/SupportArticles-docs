@@ -5,7 +5,7 @@ ms.reviewer: v-weizhu
 ms.topic: how-to
 ms.service: azure-monitor
 ms.date: 06/24/2024
-ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
+ms.custom: sap:Missing or incorrect telemetry and performance issues
 ---
 # How to collect self-diagnostic logs for Application Insights SDKs
 
