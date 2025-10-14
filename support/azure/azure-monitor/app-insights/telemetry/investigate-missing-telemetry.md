@@ -285,13 +285,13 @@ If tests performed by using PowerShell or curl fail to send telemetry to the ing
 - The ingestion endpoint that the SDK connects to may require TLS 1.2, but your application may by default use TLS 1.0 or TLS 1.1.
 - You may have more than one [Azure Monitor Private Link](/azure/azure-monitor/logs/private-link-security) impacting your private network, which may overwrite your DNS entries to resolve the ingestion endpoint to the wrong private IP address.
 
-## Troubleshooting Microsoft Entra authentication issues
+## Troubleshoot Microsoft Entra authentication issues
 
-This section provides distinct troubleshooting scenarios and steps to resolve a [Microsoft Entra authentication](/azure/azure-monitor/app/azure-ad-authentication) issue before raising a support ticket.
+This section provides distinct troubleshooting scenarios and steps to resolve [Microsoft Entra authentication](/azure/azure-monitor/app/azure-ad-authentication) issues before contacting support.
 
 ### Ingestion HTTP errors
 
-The ingestion service returns specific errors, regardless of the SDK language. Network traffic can be collected by using a tool such as Fiddler. You should filter traffic to the ingestion endpoint set in the connection string.
+The ingestion service returns specific errors regardless of the SDK language. Network traffic can be collected by using a tool like Fiddler. Be sure to filter traffic to the ingestion endpoint set in the connection string.
 
 ### HTTP/1.1 400 Authentication not supported
 
@@ -337,36 +337,36 @@ You can inspect network traffic by using a tool like Fiddler. To enable the traf
 }
 ```
 
-Or add the following Java Virtual Machine (JVM) args while running your application: `-Djava.net.useSystemProxies=true -Dhttps.proxyHost=localhost -Dhttps.proxyPort=8888`
+Or add the following Java Virtual Machine (JVM) arguments (args) while running your application: `-Djava.net.useSystemProxies=true -Dhttps.proxyHost=localhost -Dhttps.proxyPort=8888`
 
 If Microsoft Entra ID is enabled in the agent, outbound traffic includes the HTTP header `Authorization`.
 
 #### 401 Unauthorized
 
-If you see the message, `WARN c.m.a.TelemetryChannel - Failed to send telemetry with status code: 401, please check your credentials` in the log, it means the agent couldn't send telemetry. You likely didn't enable Microsoft Entra authentication on the agent, while your Application Insights resource has `DisableLocalAuth: true`. Ensure you pass a valid credential with access permission to your Application Insights resource.
+If you see the message `WARN c.m.a.TelemetryChannel - Failed to send telemetry with status code: 401, please check your credentials` in the log, it means the agent couldn't send telemetry. You likely didn't enable Microsoft Entra authentication on the agent while your Application Insights resource has `DisableLocalAuth: true`. Ensure you pass a valid credential with access permission to your Application Insights resource.
 
 If you're using Fiddler, you might see the response header `HTTP/1.1 401 Unauthorized - please provide the valid authorization token`.
 
 #### CredentialUnavailableException
 
-If you see the exception, `com.azure.identity.CredentialUnavailableException: ManagedIdentityCredential authentication unavailable. Connection to IMDS endpoint cannot be established` in the log file, it means the agent failed to acquire the access token. The likely cause is an invalid client ID in your User-Assigned Managed Identity configuration.
+If you see the exception `com.azure.identity.CredentialUnavailableException: ManagedIdentityCredential authentication unavailable. Connection to IMDS endpoint cannot be established` in the log file, it means the agent failed to acquire the access token. The likely cause is an invalid client ID in your User-Assigned Managed Identity configuration.
 
 #### Failed to send telemetry
 
-If you see the message, `WARN c.m.a.TelemetryChannel - Failed to send telemetry with status code: 403, please check your credentials` in the log, it means the agent couldn't send telemetry. The likely reason is that the credentials used don't allow telemetry ingestion.
+If you see the message `WARN c.m.a.TelemetryChannel - Failed to send telemetry with status code: 403, please check your credentials` in the log, it means the agent couldn't send telemetry. The likely reason is that the credentials used don't allow telemetry ingestion.
 
 Using Fiddler, you might notice the response `HTTP/1.1 403 Forbidden - provided credentials do not grant the access to ingest the telemetry into the component`.
 
-The issue could be due to:
+The issue can be due to:
 
-* Creating the resource with a system-assigned managed identity or associating a user-assigned identity without adding the Monitoring Metrics Publisher role to it.
-* Using the correct credentials for access tokens but linking them to the wrong Application Insights resource. Ensure your resource (virtual machine or app service) or user-assigned identity has Monitoring Metrics Publisher roles in your Application Insights resource.
+- Creating the resource with a system-assigned managed identity or associating a user-assigned identity without adding the Monitoring Metrics Publisher role to it.
+- Using the correct credentials for access tokens but linking them to the wrong Application Insights resource. Ensure your resource (virtual machine or app service) or user-assigned identity has Monitoring Metrics Publisher roles in your Application Insights resource.
 
 #### Invalid Client ID
 
-If the exception, `com.microsoft.aad.msal4j.MsalServiceException: Application with identifier <CLIENT_ID> was not found in the directory` in the log, it means the agent failed to get the access token. This exception likely happens because the client ID in your client secret configuration is invalid or incorrect.
+If you see the exception `com.microsoft.aad.msal4j.MsalServiceException: Application with identifier <CLIENT_ID> was not found in the directory` in the log, it means the agent failed to get the access token. This exception likely happens because the client ID in your client secret configuration is invalid or incorrect.
 
-This issue occurs if the administrator doesn't install the application or no tenant user consents to it. It also happens if you send your authentication request to the wrong tenant.
+This issue occurs if the admin doesn't install the application or no tenant user consents to it. It also happens if you send your authentication request to the wrong tenant.
 
 ### [Java native](#tab/java-native)
 
@@ -375,7 +375,7 @@ This issue occurs if the administrator doesn't install the application or no ten
 
 ### [Node.js](#tab/nodejs)
 
-Turn on internal logs by using the following setup. After you enable them, the console shows error logs, including any error related to Microsoft Entra integration. Examples include failing to generate the token with the wrong credentials or errors when the ingestion endpoint fails to authenticate using the provided credentials.
+Turn on internal logs by using the following setup. After you enable them, the console shows error logs including any error related to Microsoft Entra integration. Examples include failing to generate the token with the wrong credentials or errors when the ingestion endpoint fails to authenticate using the provided credentials.
 
 ```javascript
 let appInsights = require("applicationinsights");
@@ -400,6 +400,6 @@ You're probably missing a credential or your credential is set to `None`, but yo
 
 This error usually occurs when the provided credentials don't grant access to ingest telemetry for the Application Insights resource. Make sure your Application Insights resource has the correct role assignments.
 
----
+[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
