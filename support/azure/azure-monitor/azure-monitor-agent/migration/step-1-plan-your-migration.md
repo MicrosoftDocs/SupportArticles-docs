@@ -4,7 +4,7 @@ description: Learn how to plan your migration as the first step to upgrade from 
 ms.date: 10/14/2025
 ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu, jarrettr
 ms.service: azure-monitor
-ms.custom: sap:Migrate to Azure Monitor Agent(AMA)
+ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
 #Customer intent: As an Azure Monitor user, I want to learn how to plan a migration to Azure Monitor so that I can move on from using the legacy Log Analytics Agent.
 ---
 # Step 1: Plan the migration
