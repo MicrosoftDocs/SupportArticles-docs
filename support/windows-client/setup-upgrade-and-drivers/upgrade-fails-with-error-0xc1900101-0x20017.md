@@ -13,7 +13,7 @@ appliesto:
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Upgrade fails and generates error code "0xC1900101-0x20017"
+# Upgrade fails and generates error code 0xC1900101-0x20017
 
 This article discusses how to resolve Windows upgrade failures that generate error code 0xC1900101-0x20017. This error can affect both Windows Client and Windows Server editions.
 
