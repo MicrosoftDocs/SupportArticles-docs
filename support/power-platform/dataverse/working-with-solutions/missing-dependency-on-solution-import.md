@@ -5,6 +5,8 @@ ms.reviewer:
   - swatim
   - matp
   - v-shaywood
+  - rkothaari
+  - cdietric
 ms.date: 08/28/2025
 ms.custom: sap:Working with Solutions\Dependencies prevent a solution import
 ---
