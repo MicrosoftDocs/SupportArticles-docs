@@ -58,7 +58,7 @@ To resolve this problem, locate, close, and then remove the history of the manuf
     > [!NOTE]
     > If you want to maintain all the history of the company, create a new company, and then restore the company information in this new company. Then, run the COMPANYID script in the new company to make sure that the IDs are correct. After you run the COMPANYID script, delete the history and the items in the original company. You can use the new company as a reference for the transactions that no longer exist in the original company.
 
-    For more information about the COMPANYID script, see [KB - Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server](https://support.microsoft.com/help/871973).
+    For more information about the COMPANYID script, see [Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server](./set-up-a-test-company.md).
 
 5. Try to delete the inventory item. If you still receive the error message that is mentioned in the [Symptoms](#symptoms) section, follow the steps in Resolution 2.
 
@@ -86,7 +86,7 @@ To resolve this problem, remove the inventory history of the inventory item that
     > [!NOTE]
     > If you want to maintain all the history of the company, create a new company, and then restore the company information in this new company. Then, run the COMPANYID script in the new company to make sure that the IDs are correct. After you run the COMPANYID script, delete the history and the items in the original company. You can use the new company as a reference for the transactions that no longer exist in the original company.
 
-    For more information about the COMPANYID script, see [KB - Set up a test company that](https://support.microsoft.com/help/871973).
+    For more information about the COMPANYID script, see [Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server](./set-up-a-test-company.md).
 
 5. Try to delete the inventory item. If you still receive the error message that is mentioned in the [Symptoms](#symptoms) section, follow the steps in Resolution 4.
 
