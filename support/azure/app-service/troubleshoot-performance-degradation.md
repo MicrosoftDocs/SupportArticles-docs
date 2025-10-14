@@ -10,10 +10,8 @@ ms.author: msangapu
 author: msangapu-msft
 ms.reviewer: v-ryanberg
 ms.service: azure-app-service
-ms.date: 10/14/2025
 ms.custom:
   - build-2025
-ms.service: azure-app-service
 # Customer intent: As a developer, I want to learn strategies for troubleshooting slow app performance so that I can take steps to mitigate the issue.
 ---
 # Troubleshoot slow app performance issues in Azure App Service
@@ -43,7 +41,7 @@ Troubleshooting can be divided into three distinct tasks, in sequential order:
 1. [Collect data](#collect)
 1. [Mitigate the issue](#mitigate)
 
-[App Service](overview.md) gives you various options at each step.
+[App Service](/azure/app-service/overview) gives you various options at each step.
 
 <a name="observe"></a>
 
