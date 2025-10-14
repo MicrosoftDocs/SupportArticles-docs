@@ -54,7 +54,7 @@ Some of the metrics that you might want to monitor for your app are:
 - Memory working set
 - Requests
 
-:::image type="content" source="./media/app-service-web-troubleshoot-HTTP-502-503/1-monitor-metrics.png" alt-text="Screenshot that shows metric options for an app in the portal." lightbox="./media/app-service-web-troubleshoot-HTTP-502-503/1-monitor-metrics.png":::
+:::image type="content" source="./media/web-troubleshoot-http-502-503/1-monitor-metrics.png" alt-text="Screenshot that shows metric options for an app in the portal." lightbox="./media/web-troubleshoot-http-502-503/1-monitor-metrics.png":::
 
 For more information, see:
 
@@ -124,7 +124,7 @@ For more information, see [Azure App Service diagnostics overview](/azure/app-se
 
 Restarting your app is often the simplest way to recover from one-time problems. On the [Azure portal](https://portal.azure.com/) page for your app, you can stop or restart your app.
 
-:::image type="content" source="./media/app-service-web-troubleshoot-HTTP-502-503/2-restart.png" alt-text="Screenshot that shows options for stopping and restarting an app in the portal.":::
+:::image type="content" source="./media/web-troubleshoot-http-502-503/2-restart.png" alt-text="Screenshot that shows options for stopping and restarting an app in the portal.":::
 
 You can also manage your app by using Azure PowerShell. For more information, see
 [Manage Azure resources by using Azure PowerShell](/azure/azure-resource-manager/management/manage-resources-powershell).
