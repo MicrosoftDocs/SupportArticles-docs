@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot Application Map Issues
 description: Provides general recommendations and specific suggestions for Application map issues.
-ms.date: 05/23/2025
+ms.date: 10/14/2025
 ms.service: azure-monitor
-ms.custom: sap:Application Map doesn't show performance of my app's components
-ms.reviewer: aaronmax, v-weizhu
+ms.custom: sap:Application Insights portal experiences
+ms.reviewer: aaronmax, v-weizhu, jarrettr
 ---
 # Troubleshoot Application map issues
 
@@ -78,3 +78,4 @@ If **Intelligent view** doesn't load, set the configured time frame to six days 
 If **Intelligent view** takes longer to load than expected, don't select the **Update map components** option. Enable **Intelligent view** only for a single Application Insights resource.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
