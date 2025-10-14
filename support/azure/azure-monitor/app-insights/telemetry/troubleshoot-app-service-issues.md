@@ -1,16 +1,16 @@
 ---
-title: Troubleshoot App Service in Application Insights
-description: Helps you troubleshoot Azure App Service problems in Application Insights.
+title: Troubleshoot Application Insights Integration with Azure App Service
+description: Helps you troubleshoot Application Insights problems with Azure App Service.
 ms.service: azure-monitor
 ms.custom:
 ms.date: 05/23/2025
 ---
-# Troubleshoot Azure App Service in Application Insights
+# Troubleshoot Application Insights integration with Azure App Service
 
 ## [ASP.NET](#tab/net)
 
 > [!NOTE]
-> When you create a web app with the `ASP.NET` runtimes in App Service, it deploys a single static HTML page as a starter website. We do *not* recommend that you troubleshoot an issue with a default template. Deploy an application before you troubleshoot an issue.
+> When you create a web app with the `ASP.NET` runtimes in App Service, it deploys a single static HTML page as a starter website. We do *not* recommend that yossssssssssu troubleshoot an issue with a default template. Deploy an application before you troubleshoot an issue.
 
 ## Missing telemetry
 
@@ -130,7 +130,7 @@ As a temporary workaround, you could set the app setting `ApplicationInsightsAge
     * The value `Auto-Instrumentation enabled successfully` is displayed. If a similar value isn't present, it means the application isn't running or isn't supported. To ensure that the application is running, try manually visiting the application URL/application endpoints, which allows the runtime information to become available.
     * **IKeyExists** is `True`. If it's `False`, add `APPINSIGHTS_INSTRUMENTATIONKEY` and `APPLICATIONINSIGHTS_CONNECTION_STRING` with your ikey GUID to your application settings.
 
-    :::image type="content" source="media/codeless-app-service/auto-instrumentation-status.png" alt-text="Screenshot that shows the autoinstrumentation status webpage." lightbox="media/codeless-app-service/auto-instrumentation-status.png":::
+    :::image type="content" source="media/troubleshoot-app-service/auto-instrumentation-status.png" alt-text="Screenshot that shows the autoinstrumentation status webpage." lightbox="media/troubleshoot-app-service/auto-instrumentation-status.png":::
 
 ## Default website deployed with web apps doesn't support automatic client-side monitoring
 
