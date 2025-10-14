@@ -10,14 +10,14 @@ ms.reviewer: paulboc, v-shaywood
 
 # Proxy server rejects requests from ARR to back-end servers
 
-This article provides troubleshooting guidance for a scenario in which a proxy server rejects requests that are directed through it from your Application Request Routing (ARR) server to back-end servers. In this scenario, the proxy server rejects the requests from ARR as incorrectly formatted.
+This article provides troubleshooting guidance for a scenario in which a proxy server is placed between an Application Request Routing (ARR) server and its back-end servers. The ARR server acts as a load balancer and the back-end servers comprise the ARR server farm that the ARR module is routing requests to. In this scenario, the proxy server might reject the requests from ARR as incorrectly formatted.
 
 ## Symptoms
 
-When your ARR server routes a request to a back-end server that's on a different network, the request attempts to transits through a proxy server to reach the other network. When the request attempts to transit the request through the proxy server, the following events occur:
+When your ARR server routes a request to a back-end server that's on a different network, the request might have to transit through a proxy server to reach the other network. When the proxy server process the request to be routed to the back-end servers in the ARR farm, the following events might occur:
 
 - The proxy server rejects the request and returns an `HTTP 400 Bad Request` status code with an error message that the requested URL is invalid.
-- The ARR server returns an `HTTP 400 Bad Request` status code and the following error message to the client that initiated the request:
+- When the ARR server receives the `HTTP 400 Bad Request` status code from the proxy server, it returns the same `HTTP 400 Bad Request` status code and the following error message to the client that initiated the request:
 
   > Some aspect of the requested URL is incorrect.
 
@@ -30,7 +30,7 @@ When your ARR server routes a request to a back-end server on the same network, 
 
 :::image type="content" source="./media/proxy-server-rejects-back-end-requests/normal-network-layout.png" alt-text="Network diagram of the typical ARR and back-end server configuration when on the same network":::
 
-However, if your back-end server is on a different network than your ARR server, your ARR server might route requests to the back-end server through a proxy server. For example:
+However, if your back-end server is on a different network than your ARR server, your ARR server might have to route requests to the back-end server through a proxy server. For example:
 
 :::image type="content" source="./media/proxy-server-rejects-back-end-requests/proxy-network-layout.png" alt-text="Network diagram of the ARR and back-end server configuration when on a different network, using a proxy server to transit request between networks":::
 
