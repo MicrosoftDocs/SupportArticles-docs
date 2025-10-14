@@ -11,7 +11,7 @@
   - name: Troubleshoot Azure App Service
     href: ./welcome-app-service.yml
   - name: Node.js Best Practices and Troubleshooting Guide
-    href: app-service-web-nodejs-best-practices-and-troubleshoot-guide.md
+    href: app-service-web-nodejs-best-practices-troubleshoot-guide.md
   - name: Capture memory dumps in Azure App Service
     href: ./capture-memory-dumps-app-service.md
   - name: Create or delete web apps FAQs
