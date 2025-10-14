@@ -116,6 +116,14 @@ Don't make changes directly to components that are part of a managed solution. D
 
 Always apply changes within an unmanaged solution or extend functionality using solution layering. For more information on solution layering, see [Solution layers](/power-platform/alm/solution-layers-alm)
 
+### Avoid dependencies on deprecated applications
+
+Avoid taking dependencies on deprecated applications. Deprecated applications are no longer available for installation or update. You can find these dependencies in the **Deprecated Applications** section of the **Missing dependencies** page. Expanding the section provides additional details.
+
+:::image type="content" source="media/missing-dependency-on-solution-import/deprecated-applications.png" alt-text="Screenshot that shows the Deprecated Applications section of the Missing dependencies page.":::
+
+Remove any dependencies between solution components and deprecated applications before importing your solution.
+
 ## Related content
 
 - [Organize your solutions](/power-platform/alm/organize-solutions)
