@@ -48,4 +48,7 @@
     href: troubleshoot-vnet-integration-apps.md
   - name: Troubleshoot Performance Degradation
     href: troubleshoot-performance-degradation.md  
+  - name: Troubleshoot Intermittent Outbound Connection Errors
+    href: troubleshoot-intermittent-outbound-connection-errors.md
+
     
