@@ -3,8 +3,8 @@ title: Troubleshoot AKS Autoinstrumentation in Application Insights
 description: Helps you troubleshoot Azure Kubernetes Service autoinstrumentation problems in Application Insights.
 ms.service: azure-monitor
 ms.reviewer: aaronmax, v-weizhu
-ms.custom: sap:Application Insights
-ms.date: 05/23/2025
+ms.custom: sap:Missing or incorrect telemetry and performance issues(
+ms.date: 10/14/2025
 ---
 # Troubleshoot Azure Kubernetes Service autoinstrumentation in Application Insights
 
@@ -51,3 +51,4 @@ Ensure that the Kubernetes command-line tool (`kubectl`) is installed and config
     If a connection can't be established, troubleshoot the network connectivity issue, such as firewall or name resolution issues.
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+
