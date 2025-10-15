@@ -483,7 +483,7 @@ When you run the `sudo pcs status --full` command, the `node attributes` status 
       * hana_XXX_version			          : 2.00.079.00
       * hana_XXX_vhost				          : node-1
       * lpa_XXX_lpt				              : 1733552029
-      * master-SAPHana_XXX_00		        : 150
+      * mastery-SAPHana_XXX_00		        : 150
   ```
 
 This Migration summary indicates that the SAP HANA resource (SAPHana_XXX_00) failed to start on both nodes (node-0 and node-1). The fail count is set to 1000000 (infinity). 
