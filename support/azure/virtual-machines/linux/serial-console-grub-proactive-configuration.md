@@ -97,13 +97,13 @@ To configure the VM to accept a reboot via SysRq commands on the Azure portal, y
 For this configuration to persist a reboot, add an entry to the file **sysctl.conf**
 
 ```bash
-echo kernel.sysrq = 1 >> /etc/sysctl.conf
+sudo echo kernel.sysrq = 1 >> /etc/sysctl.conf
 ```
 
 To configure the kernel parameter dynamically
 
 ```bash
-sysctl -w kernel.sysrq=1
+sudo sysctl -w kernel.sysrq=1
 ```
 
 If you don't have **root** access or sudo is broken, it will not be possible configure sysrq from a shell prompt.
@@ -113,8 +113,9 @@ You can enable sysrq in this scenario using the Azure portal. This method can be
 Using the Azure portal Operations -> Run Command -> RunShellScript feature, requires the waagent process be healthy you can then inject this command to enable sysrq
 
 ```bash
-sysctl -w kernel.sysrq=1 ; echo kernel.sysrq = 1 >> /etc/sysctl.conf
+sudo sysctl -w kernel.sysrq=1 ; sudo echo kernel.sysrq = 1 >> /etc/sysctl.conf
 ```
+
 As shown here:
 
 :::image type="content" source="media/serial-console-grub-proactive-configuration/run-command-script.png" alt-text="Screenshot of the RunShellScript window when you inject the command.":::
@@ -163,6 +164,13 @@ and add this line:
 GRUB_TIMEOUT_STYLE=countdown
 ```
 
+Make sure the serial-getty@ttyS0.service is enabled so that systemd provides a login prompt on that console:
+
+```
+sudo systemctl enable serial-getty@ttyS0.service
+sudo systemctl start serial-getty@ttyS0.service
+```
+
 ## Ubuntu Recovery Mode
 
 Additional recovery and clean-up options are available for Ubuntu via GRUB however these settings are only accessible if you configure kernel parameters accordingly.
@@ -208,7 +216,7 @@ GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
 GRUB_DEFAULT=saved
 GRUB_DISABLE_SUBMENU=true
 GRUB_TERMINAL_OUTPUT="console"
-GRUB_CMDLINE_LINUX="loglevel=3 crashkernel=auto console=tty1 console=ttyS0 earlyprintk=ttyS0 rootdelay=300"
+GRUB_CMDLINE_LINUX="crashkernel=auto console=tty1 console=ttyS0 earlyprintk=ttyS0 rootdelay=300"
 GRUB_DISABLE_RECOVERY="true"
 GRUB_ENABLE_BLSCFG=true
 
@@ -217,12 +225,12 @@ GRUB_TERMINAL="serial console"
 GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=1"
 ```
 
-Enable the SysRq key
+Make sure the serial-getty@ttyS0.service is enabled so that systemd provides a login prompt on that console:
 
-```bash
-sysctl -w kernel.sysrq=1;echo kernel.sysrq = 1 >> /etc/sysctl.conf;sysctl -a | grep -i sysrq
 ```
-
+sudo systemctl enable serial-getty@ttyS0.service
+sudo systemctl start serial-getty@ttyS0.service
+```
 
 ## SuSE
 
@@ -246,6 +254,13 @@ GRUB_TERMINAL_OUTPUT="serial"
 GRUB_TIMEOUT_STYLE=countdow
 ```
 
+Make sure the serial-getty@ttyS0.service is enabled so that systemd provides a login prompt on that console:
+
+```
+sudo systemctl enable serial-getty@ttyS0.service
+sudo systemctl start serial-getty@ttyS0.service
+```
+
 ## SLES 12 sp1
 
 Either use YaST bootloader as per the official [docs](./serial-console-grub-single-user-mode.md#grub-access-in-suse-sles)
@@ -264,6 +279,13 @@ Recreate the grub.cfg
 
 ```bash
 grub2-mkconfig -o /boot/grub2/grub.cfg
+```
+
+Make sure the serial-getty@ttyS0.service is enabled so that systemd provides a login prompt on that console:
+
+```
+sudo systemctl enable serial-getty@ttyS0.service
+sudo systemctl start serial-getty@ttyS0.service
 ```
 
 This configuration will enable the message **Press any key to continue** to appear on the console for 5 seconds
