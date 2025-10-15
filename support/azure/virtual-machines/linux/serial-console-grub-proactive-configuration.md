@@ -97,13 +97,13 @@ To configure the VM to accept a reboot via SysRq commands on the Azure portal, y
 For this configuration to persist a reboot, add an entry to the file **sysctl.conf**
 
 ```bash
-echo kernel.sysrq = 1 >> /etc/sysctl.conf`
+echo kernel.sysrq = 1 >> /etc/sysctl.conf
 ```
 
 To configure the kernel parameter dynamically
 
 ```bash
-sysctl -w kernel.sysrq=1`
+sysctl -w kernel.sysrq=1
 ```
 
 If you don't have **root** access or sudo is broken, it will not be possible configure sysrq from a shell prompt.
@@ -113,7 +113,7 @@ You can enable sysrq in this scenario using the Azure portal. This method can be
 Using the Azure portal Operations -> Run Command -> RunShellScript feature, requires the waagent process be healthy you can then inject this command to enable sysrq
 
 ```bash
-sysctl -w kernel.sysrq=1 ; echo kernel.sysrq = 1 >> /etc/sysctl.conf`
+sysctl -w kernel.sysrq=1 ; echo kernel.sysrq = 1 >> /etc/sysctl.conf
 ```
 As shown here:
 
@@ -263,7 +263,7 @@ GRUB_TIMEOUT_STYLE=countdown
 Recreate the grub.cfg
 
 ```bash
-grub2-mkconfig -o /boot/grub2/grub.cfg`
+grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
 
 This configuration will enable the message **Press any key to continue** to appear on the console for 5 seconds
