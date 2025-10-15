@@ -8,6 +8,8 @@ metadata:
   ms.service: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   ms.date: 04/30/2025
+  author: aartig13
+  ms.author: aartigoyle
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
