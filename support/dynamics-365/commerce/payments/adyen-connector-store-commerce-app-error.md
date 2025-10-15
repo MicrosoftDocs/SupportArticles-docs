@@ -4,7 +4,7 @@ description: Resolves an issue with the Dynamics 365 Payment Connector for Adyen
 author: v-chgri
 ms.author: johnmichalak
 ms.topic: troubleshooting
-ms.date: 10/03/2025
+ms.date: 10/15/2025
 ---
 # Dynamics 365 Payment Connector for Adyen - Store Commerce app or IIS Hardware Station configuration isn't updated
 
@@ -12,7 +12,7 @@ This article provides a solution for an issue with the Dynamics 365 Payment Conn
 
 ## Symptoms
 
-The Store Commerce app generates the error "Sign in Error. The initialization data couldn't be loaded."
+The Store Commerce app generates the error `Sign in Error. The initialization data couldn't be loaded.`.
 
 ### Root cause
 
@@ -35,3 +35,4 @@ To solve this issue, follow these steps.
 [Dynamics 365 Payment Connector for Adyen FAQ](/dynamics365/commerce/dev-itpro/adyen-connector-faq)
 
 [Payments FAQ](/dynamics365/unified-operations/retail/dev-itpro/payments-retail)
+
