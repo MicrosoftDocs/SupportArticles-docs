@@ -13,7 +13,7 @@ ms.topic: troubleshooting-general
 ---
 # Troubleshoot issues with LocalDNS on Azure Kubernetes Service (AKS)
 
-This article discusses how to create a troubleshooting workflow to fix Domain Name System (DNS) resolution problems in Azure Kubernetes Service (AKS), when using LocalDNS. To learn more about LocalDNS, you can read our overview in [DNS Resolution in Azure Kubernetes Service (AKS)](https://learn.microsoft.com/azure/aks/dns-concepts#localdns-in-azure-kubernetes-service-preview).
+This article discusses how to create a troubleshooting workflow to fix Domain Name System (DNS) resolution problems in Azure Kubernetes Service (AKS), when using LocalDNS. To learn more about LocalDNS, you can read our overview in [DNS Resolution in Azure Kubernetes Service (AKS)](azure/aks/dns-concepts#localdns-in-azure-kubernetes-service-preview).
 
 ## Prerequisites
 
@@ -164,7 +164,7 @@ az aks nodepool update --name mynodepool1 --cluster-name myAKSCluster --resource
 
 Option 2 - Enable Query logging on a specific node
 
-You can diagnose LocalDNS issues on a specific node by temporarily rewriting the LocalDNS configuration. You can [connect to the node](https://learn.microsoft.com/azure/aks/node-access#connect-using-kubectl-debug) manually and update the core file used by LocalDNS, only restarting the specific LocalDNS service. 
+You can diagnose LocalDNS issues on a specific node by temporarily rewriting the LocalDNS configuration. You can [connect to the node](/azure/aks/node-access#connect-using-kubectl-debug) manually and update the core file used by LocalDNS, only restarting the specific LocalDNS service. 
 
 **Note:** The changes made this way are ephemeral in nature and don't persist once the troubleshooting is complete.
 
@@ -316,11 +316,11 @@ Jul 03 16:59:07 aks-userpool-24995383-vmss000000 localdns-coredns[2491520]: [INF
 If you see logs for your traffic, the pod is able to reach the LocalDNS service.
 
 ## Next steps
-If the above logs fail to help root cause the issue, you can enable [Query logging for CoreDNS](https://learn.microsoft.com/azure/aks/coredns-custom#enable-dns-query-logging) to validate if CoreDNS is working as intended.
+If the above logs fail to help root cause the issue, you can enable [Query logging for CoreDNS](/azure/aks/coredns-custom#enable-dns-query-logging) to validate if CoreDNS is working as intended.
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact disclaimer](../../../../includes/third-party-contact-disclaimer.md)]
+
 

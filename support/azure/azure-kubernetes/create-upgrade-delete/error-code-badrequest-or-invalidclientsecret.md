@@ -5,6 +5,7 @@ ms.topic: article
 ms.date: 06/13/2024
 author: axelgMS
 ms.author: axelg
+ms.service: azure-kubernetes-service
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), innovation-engine
 ---
 

@@ -4,6 +4,7 @@ description: This article helps you troubleshoot service errors in Azure Windows
 services: virtual-machines
 documentationCenter: ''
 author: JarrettRenshaw
+ms.author: jarrettr
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -11,7 +12,6 @@ ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 12/19/2019
-ms.author: tibasham
 ms.custom: sap:Cannot start or stop my VM
 ---
 

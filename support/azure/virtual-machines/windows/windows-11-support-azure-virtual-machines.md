@@ -1,8 +1,8 @@
 ---
 title: Windows 11 support on Azure virtual machines
 description: Find details about Windows 11 support on Azure virtual machines. Learn about the criteria for Windows 11 eligibility.
-author: mohak006
-ms.author: mohak
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.service: azure-virtual-machines
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ms.reviewer: scotro, kageorge, jarrettr, yutorigo, v-leedennis
