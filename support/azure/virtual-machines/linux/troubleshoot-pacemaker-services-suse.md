@@ -305,7 +305,7 @@ The following text shows the `sudo crm status` output when this issue occurs:
      Clone Set: cln_SAPHanaTopology [rsc_SAPHanaTopology]
          rsc_SAPHanaTopology	(ocf::suse:SAPHanaTopology):	Started node-1 
          rsc_SAPHanaTopology	(ocf::suse:SAPHanaTopology):	Started node-2 
-     Master/Slave Set: msl_SAPHana [rsc_SAPHana]
+     Primary/Secondary Set: msl_SAPHana [rsc_SAPHana]
          rsc_SAPHana_P40_HDB00	(ocf::suse:SAPHana):	Stopped node-1 (Monitoring)
      Resource Group: g_ip_P40_HDB00
          rsc_ip_P40_HDB00	(ocf::heartbeat:IPaddr2):	Started node-1 
@@ -346,7 +346,7 @@ sudo SAPHanaSR-showAttr
 roles                            score site  srmode  sync_state version                vhost
  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  node-1 UNDEFINED   10          online     logreplay node-2 0:P::::                          5     DC1 syncmem SFAIL      2.00.046.00.1581325702 node-1
- node-2 PROMOTED    1693237652  online     logreplay node-1 4:P:master1:master:worker:master 150   DC2 syncmem PRIM       2.00.046.00.1581325702 node-2 
+ node-2 PROMOTED    1693237652  online     logreplay node-1 4:P:primary1:primary:worker:primary 150   DC2 syncmem PRIM       2.00.046.00.1581325702 node-2 
 ```
 
 ### Workaround for Scenario 4, Symptom 2 
@@ -453,7 +453,7 @@ Pacemaker can't start the SAP HANA resource if `SYN failures` exist between the 
       site id: 2
       site name: node-2
       active primary site: 1
-      primary masters: node-1
+      primary principals: node-1
       ```
 
 5. You can also verify the SAP HANA system replication by running the following command:
@@ -469,8 +469,8 @@ Pacemaker can't start the SAP HANA resource if `SYN failures` exist between the 
   
       Hosts clone_state lpa_fh9_lpt node_state op_mode   remoteHost roles                         score site  srmode  sync_state version                vhost
       ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-      node-1 PROMOTED   1693237652  online     logreplay node-2 4:P:master1:master:worker:master   150    DC1   syncmem PRIM       2.00.046.00.1581325702 node-1
-      node-2 DEMOTED    10          online     logreplay node-1 4:P:master1:master:worker:master   100    DC2   syncmem SOK        2.00.046.00.1581325702 node-2 
+      node-1 PROMOTED   1693237652  online     logreplay node-2 4:P:primary1:primary:worker:primary   150    DC1   syncmem PRIM       2.00.046.00.1581325702 node-1
+      node-2 DEMOTED    10          online     logreplay node-1 4:P:primary1:primary:worker:primary   100    DC2   syncmem SOK        2.00.046.00.1581325702 node-2 
       ```
 
 6. Exit the SAP Admin account, and remove the cluster from maintenance mode:

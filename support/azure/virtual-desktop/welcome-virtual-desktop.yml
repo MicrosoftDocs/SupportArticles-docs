@@ -7,9 +7,9 @@ metadata:
   title: Troubleshoot common issues with Azure Virtual Desktop
   description: Documentation for troubleshooting common issues with Azure Virtual Desktop. # Required; article description that is displayed in search results. < 160 chars.
   ms.topic: landing-page # Required
-  
+  ms.author: jarrettr
   ms.reviewer: kaushika #Required; microsoft alias of author; optional team alias.
-  ms.date: 01/17/2025
+  ms.date: 10/15/2025
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

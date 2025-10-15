@@ -270,12 +270,12 @@ SAP HANA DB doesn't start, and it returns an `unknown error` error message.
     * Node node-0 (1):
         + hana_XXX_clone_state              : PROMOTED  
         + hana_XXX_sync_state               : PRIM      
-        + hana_XXX_roles                    : 2:P:master1:master:worker:slave
+        + hana_XXX_roles                    : 2:P:primary1:primary:worker:secondary
 
     * Node node-1 (2):
         + hana_XXX_clone_state              : WAITING4PRIM  
         + hana_XX_sync_state                : SFAIL      
-        + hana_XXX_roles                    : 2:S:master1:master:worker:slave
+        + hana_XXX_roles                    : 2:S:primary1:primary:worker:secondary
     ```
 
 3. When you run `sudo pcs status`, the cluster status is shown as follows:
@@ -294,9 +294,9 @@ SAP HANA DB doesn't start, and it returns an `unknown error` error message.
       rsc_st_azure	(stonith:fence_azure_arm):	Started node-1
       Clone Set: cln_SAPHanaTopology [rsc_SAPHanaTopology]
           Started: [ node-0 node-1 ]
-      Master/Slave Set: msl_SAPHana [rsc_SAPHana]
-          Master: [ node-1 ]
-          Slave:  [ node-0 ]
+      Primary/Secondary Set: msl_SAPHana [rsc_SAPHana]
+          Primary: [ node-1 ]
+          Secondary:  [ node-0 ]
       Resource Group: g_ip_HN1_HBD00
           vip_HN1_HBD00	(ocf::heartbeat:IPaddr2):	Started node-0 
           nc_HN1_HBD00	(ocf::heartbeat:azure-lb):	Started node-0 
@@ -323,8 +323,8 @@ global Fri Aug 23 11:47:32 2024 false
 
 Hosts	clone_state	lpa_fh9_lpt	node_state	op_mode	        remoteHost  	  roles		            score	 site   srmode	sync_state	version         vhost
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-node-0	DEMOTED		10		online		logreplay	node-1 	4:S:master1:master:worker:master	5	SITEA	syncmem	SOK	2.00.046.00.1581325702	node-0
-node-1	PROMOTED	1693237652	online		logreplay	node-0 	4:P:master1:master:worker:master	150	SITEA	syncmem	PRIM	2.00.046.00.1581325702	node-1
+node-0	DEMOTED		10		online		logreplay	node-1 	4:S:primary1:primary:worker:primary	5	SITEA	syncmem	SOK	2.00.046.00.1581325702	node-0
+node-1	PROMOTED	1693237652	online		logreplay	node-0 	4:P:primary1:primary:worker:primary	150	SITEA	syncmem	PRIM	2.00.046.00.1581325702	node-1
 ```
 
 ### Workaround for scenario 3, symptom 1
@@ -436,8 +436,8 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
   
    Hosts	clone_state	lpa_fh9_lpt	node_state	op_mode	        remoteHost  	  roles		            score	 site   srmode	sync_state	version         vhost
    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-   node-0	DEMOTED		10		online		logreplay	node-1 	4:S:master1:master:worker:master	5	SITEA	syncmem	SOK	2.00.046.00.1581325702	node-0
-   node-1	PROMOTED	1693237652	online		logreplay	node-0 	4:P:master1:master:worker:master	150	SITEA	syncmem	PRIM	2.00.046.00.1581325702	node-1
+   node-0	DEMOTED		10		online		logreplay	node-1 	4:S:primary1:primary:worker:primary	5	SITEA	syncmem	SOK	2.00.046.00.1581325702	node-0
+   node-1	PROMOTED	1693237652	online		logreplay	node-0 	4:P:primary1:primary:worker:primary	150	SITEA	syncmem	PRIM	2.00.046.00.1581325702	node-1
    ```
 
 7. Exit the SAP Admin account, and then remove the cluster from maintenance mode:
@@ -450,7 +450,7 @@ The SAP HANA resource can't be started by Pacemaker if there are `SYN` failures 
 
 ### Scenario 3, Symptom 2: SAP HANA doesn't start because of replication failure
 
-The SAP HANA resource experiences startup failures, and its `hana_xxx_roles` attribute shows `1:N:master1::worker:`. The `N` status indicates that the resource is out of sync and running in standalone mode. The database resource is neither primary nor secondary on any node.
+The SAP HANA resource experiences startup failures, and its `hana_xxx_roles` attribute shows `1:N:primary1::worker:`. The `N` status indicates that the resource is out of sync and running in standalone mode. The database resource is neither primary nor secondary on any node.
 
 When you run the `sudo pcs status --full` command, the `node attributes` status is shown as follows:
 
@@ -463,7 +463,7 @@ When you run the `sudo pcs status --full` command, the `node attributes` status 
       * hana_XXX_clone_state            : UNDEFINED
       * hana_XXX_op_mode			          : logreplay
       * hana_XXX_remoteHost             : node-1
-      * hana_XXX_roles                  : 1:N:master1::worker:
+      * hana_XXX_roles                  : 1:N:primary1::worker:
       * hana_XXX_site                   : SITE1    
       * hana_XXX_srah                   : -        
       * hana_XXX_srmode                 : sync     
@@ -474,7 +474,7 @@ When you run the `sudo pcs status --full` command, the `node attributes` status 
       * hana_XXX_clone_state            : UNDEFINED
       * hana_XXX_op_mode                : logreplay
       * hana_XXX_remoteHost             : node-0
-      * hana_XXX_roles                  : 4:N:master1:master:worker:master
+      * hana_XXX_roles                  : 4:N:primary1:primary:worker:primary
       * hana_XXX_site                   : SITE2
       * hana_XXX_sra                    : -        
       * hana_XXX_srah                   : -        
@@ -483,7 +483,7 @@ When you run the `sudo pcs status --full` command, the `node attributes` status 
       * hana_XXX_version			          : 2.00.079.00
       * hana_XXX_vhost				          : node-1
       * lpa_XXX_lpt				              : 1733552029
-      * master-SAPHana_XXX_00		        : 150
+      * primary-SAPHana_XXX_00		        : 150
   ```
 
 This Migration summary indicates that the SAP HANA resource (SAPHana_XXX_00) failed to start on both nodes (node-0 and node-1). The fail count is set to 1000000 (infinity). 
