@@ -4,7 +4,7 @@ description: Resolves an issue with the Dynamics 365 Payment Connector for Adyen
 author: v-chgri
 ms.author: johnmichalak
 ms.topic: troubleshooting
-ms.date: 10/03/2025
+ms.date: 10/15/2025
 ---
 # Dynamics 365 Payment Connector for Adyen - EFT Terminal ID isn't set
 
@@ -24,7 +24,7 @@ To solve this issue, follow these steps.
 
 1. Follow the instructions in [Set up a Dynamics 365 register](/dynamics365/commerce/dev-itpro/adyen-connector-setup#set-up-a-dynamics-365-register).
 1. Run the 1070 and 1090 distribution schedule jobs.
-1. If the issue isn't resolved, consider reactivating the Store Commerce app, because the value of the EFT POS Register Number field may be cached and might need to be reset.
+1. If the issue isn't resolved, consider reactivating the Store Commerce app, because the value of the **EFT POS Register Number** field may be cached and might need to be reset.
 
 ## More information
 
@@ -35,4 +35,5 @@ To solve this issue, follow these steps.
 [Dynamics 365 Payment Connector for Adyen FAQ](/dynamics365/commerce/dev-itpro/adyen-connector-faq)
 
 [Payments FAQ](/dynamics365/unified-operations/retail/dev-itpro/payments-retail)
+
 
