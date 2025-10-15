@@ -5,7 +5,6 @@ ms.service: azure-virtual-machines
 ms.custom: sap:VM Performance, linux-related-content
 ms.topic: troubleshooting
 ms.collection: linux
-author: paulxjp
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.reviewer: divargas

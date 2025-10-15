@@ -13,7 +13,7 @@ ms.topic: troubleshooting-general
 ---
 # Troubleshoot issues with LocalDNS on Azure Kubernetes Service (AKS)
 
-This article discusses how to create a troubleshooting workflow to fix Domain Name System (DNS) resolution problems in Azure Kubernetes Service (AKS), when using LocalDNS. To learn more about LocalDNS, you can read our overview in [DNS Resolution in Azure Kubernetes Service (AKS)](azure/aks/dns-concepts#localdns-in-azure-kubernetes-service-preview).
+This article discusses how to create a troubleshooting workflow to fix Domain Name System (DNS) resolution problems in Azure Kubernetes Service (AKS), when using LocalDNS. To learn more about LocalDNS, you can read our overview in [DNS Resolution in Azure Kubernetes Service (AKS)](/azure/aks/dns-concepts#localdns-in-azure-kubernetes-service-preview).
 
 ## Prerequisites
 

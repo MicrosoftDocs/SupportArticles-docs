@@ -19,17 +19,17 @@ ms.custom: sap:Cannot start or stop my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-This article provides steps to resolve the issues of "Restarting", "Shutting down", or "Stopping services" messages that you may encounter when you reboot a Windows virtual machine (VM) in Microsoft Azure.
+This article provides steps to resolve the issues of "Restarting", "Shutting down", or "Stopping services" messages that you might encounter when you reboot a Windows virtual machine (VM) in Microsoft Azure.
 
 ## Symptoms
 
-When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you may see that the screenshot displays the message "Restarting", "Shutting down", or "Stopping services".
+When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you might see that the screenshot displays the message "Restarting", "Shutting down", or "Stopping services."
 
 :::image type="content" source="media/boot-error-troubleshooting-windows/restart-shut-down-stop-service.png" alt-text="Screenshot of Restarting, Shutting down, and Stopping services screens." border="false":::
 
 ## Cause
 
-Windows uses the shutdown process to perform system maintenance operations, and process changes such as updates, roles, and features. It's not recommended to interrupt this critical process until it completes. Depending on the number of updates/changes and the VM size, the process may take a long time. If the process is stopped, it's possible for the OS to become corrupt. Only interrupt the process if it's taking excessively long.
+Windows uses the shutdown process to perform system maintenance operations, and process changes such as updates, roles, and features. It's not recommended to interrupt this critical process until it completes. Depending on the number of updates/changes and the VM size, the process can take a long time. If the process is stopped, it's possible for the OS to become corrupt. Only interrupt the process if it's taking excessively long.
 
 ## Solution
 
@@ -37,7 +37,7 @@ Windows uses the shutdown process to perform system maintenance operations, and 
 
 1. Download [Procdump tool](https://download.sysinternals.com/files/Procdump.zip) into a new or existing data disk, which is attached to a working VM from the same region.
 
-2. Detach the disk containing the files needed from the working VM and attach the disk to your broken VM. We are calling this disk the **Utility disk**.
+2. Detach the disk containing the files needed from the working VM and attach the disk to your broken VM. We're calling this disk the **Utility disk**.
 
 Use [Serial Console](./serial-console-windows.md) to complete the following steps:
 
@@ -71,11 +71,11 @@ Once the OS starts again, if it boots normally, then just ensure the OS consiste
 dism /online /cleanup-image /restorehealth
 ```
 
-If you are unable to collect a process memory dump, or this issue is recursive and you require a root cause analysis, proceed with collecting an OS memory dump below, the proceed to open a support request.
+If you're unable to collect a process memory dump, or this issue is recursive and you require a root cause analysis, proceed with collecting an OS memory dump (see the following guidance). Be sure to then open a support request.
 
 ### Collect an OS memory dump
 
-If the issue does not resolve after waiting for the changes to process, you would need to collect a memory dump file and contact support. To collect the Dump file, follow these steps:
+If the issue doesn't resolve after waiting for the changes to process, you would need to collect a memory dump file and contact support. To collect the Dump file, follow these steps:
 
 **Attach the OS disk to a recovery VM**
 
@@ -85,7 +85,7 @@ If the issue does not resolve after waiting for the changes to process, you woul
 
 3. Remote desktop to the recovery VM.
 
-4. If the OS disk is encrypted, you must turn off the encryption before you move to the next step. For more information, see [Decrypt the encrypted OS disk in the VM that cannot boot](troubleshoot-bitlocker-boot-error.md#decrypt-the-encrypted-os-disk).
+4. If the OS disk is encrypted, you must turn off the encryption before you move to the next step. For more information, see [Decrypt the encrypted OS disk in the VM that can't boot](troubleshoot-bitlocker-boot-error.md#decrypt-the-encrypted-os-disk).
 
 **Locate dump file and submit a support ticket**
 
@@ -93,7 +93,7 @@ If the issue does not resolve after waiting for the changes to process, you woul
 
 2. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the dump file.
 
-If you cannot find the dump file, move the next step to enable dump log and Serial Console.
+If you can't find the dump file, move the next step to enable dump log and Serial Console.
 
 **Enable dump log and Serial Console**
 
@@ -127,9 +127,9 @@ To enable dump log and Serial Console, run the following script.
    reg unload HKLM\BROKENSYSTEM
    ```
 
-3. Verify that there's enough space on the disk to allocate as much memory as the RAM, which depends on the size that you are selecting for this VM.
+3. Verify that there's enough space on the disk to allocate as much memory as the RAM, which depends on the size that you're selecting for this VM.
 
-4. If there's not enough space or the VM is large (G, GS or E series), you could change the location where this file will be created and refer that to any other data disk, which is attached to the VM. To change the location, you must change the following key:
+4. If there's not enough space or the VM is large (G, GS or E series), change the location where this file is created and then refer it to any other data disk attached to the VM. To change the location, you must change the following key:
 
    ```cmd
    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
@@ -148,7 +148,7 @@ To enable dump log and Serial Console, run the following script.
 
    :::image type="content" source="media/boot-error-troubleshooting-windows/send-nonmaskable-interrupt.png" alt-text="Screenshot of the Send  Non-Maskable Interrupt (NMI) button on the button bar in the Serial Console window." border="false":::
 
-8. Attach the OS disk to a recovery VM again, collect dump file.
+8. Attach the OS disk to a recovery VM again and then collect the dump file.
 
 After you collect the dump file, contact Microsoft support to determine the root cause.
 
