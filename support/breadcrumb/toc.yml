@@ -250,6 +250,9 @@ items:
       tocHref: /troubleshoot/power-platform/
       topicHref: /troubleshoot/power-platform/
       items:
+      - name: Microsoft Copilot Studio
+        tocHref: /troubleshoot/power-platform/copilot-studio/
+        topicHref: /troubleshoot/power-platform/copilot-studio/welcome-copilot-studio
       - name: Microsoft Dataverse
         tocHref: /troubleshoot/power-platform/dataverse/
         topicHref: /troubleshoot/power-platform/dataverse/welcome-dataverse
@@ -265,6 +268,9 @@ items:
       - name: Power Pages
         tocHref: /troubleshoot/power-platform/power-pages/
         topicHref: /troubleshoot/power-platform/power-pages/welcome-power-pages
+      - name: Power Platform Administration
+        tocHref: /troubleshoot/power-platform/administration/
+        topicHref: /troubleshoot/power-platform/administration/welcome-administration
 
     - name: Microsoft Dynamics GP
       tocHref: /troubleshoot/dynamics/gp/
