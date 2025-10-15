@@ -12,7 +12,7 @@ This article provides a solution for an issue with the Dynamics 365 Payment Conn
 
 ## Symptoms
 
-Invoicing sales orders fail and generate the error `Exception has been thrown by the target of an invocation. System.ArgumentNullException: Value cannot be null.` The underlying error in the logs is `The following error occurred during the capture call - Dynamics 365 Payment Connector for Adyen: Error code Decline message Capture failed due to stale authorization.`
+Invoicing sales orders fail and generate the error `Exception has been thrown by the target of an invocation. System.ArgumentNullException: Value cannot be null.`. The underlying error in the logs is `The following error occurred during the capture call - Dynamics 365 Payment Connector for Adyen: Error code Decline message Capture failed due to stale authorization.`.
 
 ### Root cause
 
@@ -35,4 +35,5 @@ To solve this issue, follow these steps.
 [Dynamics 365 Payment Connector for Adyen FAQ](/dynamics365/commerce/dev-itpro/adyen-connector-faq)
 
 [Payments FAQ](/dynamics365/unified-operations/retail/dev-itpro/payments-retail)
+
 
