@@ -1,18 +1,18 @@
 ---
-title: Troubleshoot the Node Auto-provisioning managed add-on
-description: Learn how to troubleshoot Node Auto-provisisioning in Azure Kubernetes Service (AKS).
+title: Troubleshoot the Node Auto Provisioning managed add-on
+description: Learn how to troubleshoot Node Auto Provisisioning in Azure Kubernetes Service (AKS).
 ms.service: azure-kubernetes-service
 ms.date: 09/05/2025
 editor: bsoghigian
 ms.reviewer: 
-#Customer intent: As an Azure Kubernetes Service user, I want to troubleshoot problems that involve Node Auto-provisioining managed add-on so that I can successfully provision, scale, and manage my nodes and workloads on Azure Kubernetes Service (AKS).
+#Customer intent: As an Azure Kubernetes Service user, I want to troubleshoot problems that involve Node Auto Provisioining managed add-on so that I can successfully provision, scale, and manage my nodes and workloads on Azure Kubernetes Service (AKS).
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
 # Troubleshoot node auto provisioning (NAP) in Azure Kubernetes Service (AKS)
 
 This article discusses how to troubleshoot Node auto provisioning(NAP), a managed add-on based on the open source [Karpenter](https://karpenter.sh) project. NAP automatically provisions and manages nodes in response to pending pod pressure, and manages scaling events at the virtual machine, or node level.
- When you enable Node Auto-provisioning, you might experience problems that are associated with the configuration of the infrastructure autoscaler. This article will help you troubleshoot errors and resolve common problems that affect NAP but aren't covered in the official Karpenter [FAQ][karpenter-faq] and [troubleshooting guide][karpenter-troubleshooting].
+When you enable Node Auto Provisioning, you might experience problems that are associated with the configuration of the infrastructure autoscaler. This article will help you troubleshoot errors and resolve common problems that affect NAP but aren't covered in the official Karpenter [FAQ][karpenter-faq] and [troubleshooting guide][karpenter-troubleshooting].
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Ensure the following tools are installed and configured. They're used in the fol
 
 - [Azure CLI](/cli/azure/install-azure-cli). To install kubectl by using the [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool, a Kubernetes command-line client. This is available with the Azure CLI.
-- Confirm you have Node Auto-provisioning enabled on your cluster.
+- Confirm you have Node Auto Provisioning enabled on your cluster. For steps on enabling node auto provisioning in your cluster, visit our [node auto provisioning documentation][nap-main-docs].
 
 ## Common Issues
 
@@ -270,5 +270,6 @@ az vm list-usage --location <region> --query "[?currentValue >= limit]"
 [network-security-group-docs]: /azure/virtual-network/network-security-groups-overview
 [aksnodeclass-subnet-config]: /azure/aks/node-autoprovision-aksnodeclass#virtual-network-subnet-configuration
 [nap-nodepool-docs]: /azure/aks/node-autoprovision-node-pools
+[nap-main-docs]: /azure/aks/node-autoprovision
 [coredns-troubleshoot]: /azure/aks/coredns-custom#troubleshooting
 
