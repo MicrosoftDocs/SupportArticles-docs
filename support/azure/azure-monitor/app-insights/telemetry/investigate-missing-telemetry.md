@@ -13,7 +13,7 @@ This article helps you to identify the step in the processing pipeline that caus
 
 ## The Azure portal fails to pull or render the records you're trying to view
 
-If your Application Insights data collection endpoint is configured to use Microsoft Entra ID (formerly Azure AD) for authentication, your application must also be configured to authenticate with Microsoft Entra ID. In this scenario, your application is responsible for authenticating using Microsoft Entra ID. If the application isn't correctly configured, telemetry will be rejected and won't appear in the Azure portal even if instrumentation appears correct and your application is generating telemetry data.
+If your Application Insights data collection endpoint is configured to use Microsoft Entra ID (formerly Azure AD) for authentication, your application must also be configured to authenticate with Microsoft Entra ID. In this scenario, your application is responsible for authenticating using Microsoft Entra ID. If the application isn't correctly configured, telemetry is rejected and doesn't appear in the Azure portal even if instrumentation appears correct and your application is generating telemetry data.
 
 To configure your application to authenticate using Microsoft Entra ID, follow the steps in [Enable Microsoft Entra ID (formerly Azure AD) authentication](/azure/azure-monitor/app/opentelemetry-configuration#enable-microsoft-entra-id-formerly-azure-ad-authentication).
 
@@ -34,7 +34,7 @@ If application telemetry doesn't show in the Azure portal, failures across steps
 - Other possible causes and solutions are discussed in [Troubleshoot missing application telemetry in Azure Monitor Application Insights](investigate-missing-telemetry.md).
 
 > [!TIP]
-> The Application Insights support teams can't assist with networking issues. When submitting a support ticket for networking issues that prevent Application Insights from receiving telemetry data, such as DNS resolution failures, ensure that you specify Azure Networking or Azure Private Link in your product or issue description in the Azure portal. This will ensure that your support case is routed correctly.
+> The Application Insights support teams can't assist with networking issues. When submitting a support ticket for networking issues that prevent Application Insights from receiving telemetry data, such as DNS resolution failures, ensure that you specify Azure Networking or Azure Private Link in your product or issue description in the Azure portal. This makes sure that your support case is routed correctly.
 
 ## Identify step by sending sample telemetry record
 
@@ -135,14 +135,14 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 This script builds a raw REST request to deliver a single availability test result to the Application Insights component. When you use this script, supply the `$ConnectionString` or `$InstrumentationKey` parameter.
 
-- If only the connection string parameter is supplied, telemetry will be sent to the regional endpoint in the connection string.
-- If only the instrumentation key (ikey) parameter is supplied, telemetry will be sent to the global ingestion endpoint.
-- If both connection string and ikey parameters are supplied, the script will send telemetry to the regional endpoint in the connection string.
+- If only the connection string parameter is supplied, telemetry is sent to the regional endpoint in the connection string.
+- If only the instrumentation key (ikey) parameter is supplied, telemetry is sent to the global ingestion endpoint.
+- If both connection string and ikey parameters are supplied, the script sends telemetry to the regional endpoint in the connection string.
 
 > [!NOTE]
 >
 > - Test the connection made by your application. If you enable Application Insights in the Azure portal, you likely rely on connection strings with regional endpoints, `https://<region>.in.applicationinsights.azure.com`. If your SDK configuration only supplies the ikey, you rely on the global endpoint, `https://dc.applicationinsights.azure.com`. Make sure to populate the script parameter that matches your web application SDK configuration, either supplying the connection string or the ikey.
-> - On March 31, 2025, support for instrumentation key ingestion will end. Instrumentation key ingestion will continue to work, but we'll no longer provide updates or support for the feature. [Transition to connection strings](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings) to take advantage of [new capabilities](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings#new-capabilities).
+> - On March 31, 2025, support for instrumentation key ingestion ended. Instrumentation key ingestion continues to work, but we no longer provide updates or support for the feature. [Transition to connection strings](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings) to take advantage of [new capabilities](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings#new-capabilities).
 
 It's easiest to run this script from the PowerShell ISE environment on an IaaS or [Azure virtual machine scale set](/azure/virtual-machine-scale-sets/overview) instance. You can also copy and paste the script into the [App Service Kudu](/azure/app-service/resources-kudu) interface PowerShell debug console and then run it.
 
@@ -153,7 +153,7 @@ When the script is executed, look for an HTTP 200 response and review the respon
 
 Refer to the following screenshot as an example:
 
-:::image type="content" source="media/investigate-missing-telemetry/items-received-matches-items-accepted.png" alt-text="Code that shows the amount of items received and items accepted.":::
+:::image type="content" source="media/investigate-missing-telemetry/items-received-matches-items-accepted.png" alt-text="Code that shows the number of items received and items accepted.":::
 
 ## <a id="curl-command-send-availability-test-result"></a>Curl command to send availability test result
 
@@ -235,7 +235,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $requestData -UseBasicParsing
 
 ## Troubleshoot SSL or TLS configuration
 
-If the scripts above fail, troubleshoot the SSL or TLS configuration. Most ingestion endpoints require clients to use TLS 1.2 and specific cipher suites. In this case, adjust how PowerShell participates as a client in the SSL or TLS protocol. Include the following snippets if you need to diagnose a secure channel as part of the connection between the client VM and the ingestion endpoints.
+If these scripts fail, troubleshoot the SSL or TLS configuration. Most ingestion endpoints require clients to use TLS 1.2 and specific cipher suites. In this case, adjust how PowerShell participates as a client in the SSL or TLS protocol. Include the following snippets if you need to diagnose a secure channel as part of the connection between the client VM and the ingestion endpoints.
 
 - Option 1: Control which SSL or TLS protocol is used by PowerShell to make a connection to the ingestion endpoint.
 
@@ -322,7 +322,7 @@ Check the access control for the Application Insights resource. You must configu
 
 The Application Insights .NET SDK emits error logs by using the event source. To learn more about collecting event source logs, see [Troubleshooting no data - collect logs with PerfView](asp-net-troubleshoot-no-data.md#collect-logs-with-perfview).
 
-If the SDK doesn't get a token, the exception message is logged as "Failed to get AAD Token. Error message:."
+If the SDK doesn't get a token, the exception message is logged as "Failed to get AAD Token. Error message."
 
 ### [Java](#tab/java)
 
