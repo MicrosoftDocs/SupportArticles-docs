@@ -18,7 +18,7 @@ If you can't sign in and keep receiving an error message that says your credenti
 - Have you assigned the Virtual Machine User Login role-based access control (RBAC) permission to the VM or resource group for each user?
 - Does your Conditional Access policy exclude multifactor authentication requirements for the Azure Windows VM sign-in cloud application?
 
-If you've answered no to either of those questions, you'll need to reconfigure your multifactor authentication. To reconfigure your multifactor authentication, follow the instructions in [Enforce Microsoft Entra multifactor authentication for Azure Virtual Desktop using Conditional Access](/azure/virtual-desktop/set-up-mfa#azure-ad-joined-session-host-vms).
+If you've answered no to either of those questions, you need to reconfigure your multifactor authentication. To reconfigure your multifactor authentication, follow the instructions in [Enforce Microsoft Entra multifactor authentication for Azure Virtual Desktop using Conditional Access](/azure/virtual-desktop/set-up-mfa#azure-ad-joined-session-host-vms).
 
 > [!IMPORTANT]
 > VM sign-ins don't support per-user enabled or enforced Microsoft Entra multifactor authentication. If you try to sign in with multifactor authentication on a VM, you won't be able to sign in and will receive an error message.
@@ -41,7 +41,7 @@ If your Entra ID tenant restricts cross-tenant access and external collaboration
 
 > Log Name: Microsoft-Windows-AAD, Event ID: 1081, Error Message: OAuth response error: interaction_required, Error description: AADSTS500213: The resource tenant's cross-tenant access policy does not allow this user to access this tenant.
 
-You will need to allow the following applications for external identities to successfully login.
+You need to allow the following applications for external identities to successfully login.
 
 - Azure Virtual Desktop
 - Windows Azure Active Directory
