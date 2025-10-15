@@ -1,6 +1,6 @@
 ---
 title: Errors When Enabling Salesforce with Server-to-Server Flow
-description: Troubleshoot errors that might occur when enabling Salesforce with a server-to-server flow in Microsoft Copilot for Sales.
+description: Troubleshoot errors that might occur when enabling Salesforce with a server-to-server flow in Sales app.
 ms.date: 08/12/2025
 author: sbmjais
 ms.author: shjais
@@ -10,7 +10,7 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Errors that occur when enabling Salesforce with server-to-server flow
 
-This article helps you troubleshoot errors that might occur when you try to enable Salesforce with a server-to-server flow in Microsoft Copilot for Sales.
+This article helps you troubleshoot errors that might occur when you try to enable Salesforce with a server-to-server flow in Sales app.
 
 ## Who is affected?
 
@@ -39,7 +39,7 @@ During the Salesforce server-to-server flow setup, a connected app is deployed t
 
 To resolve this issue:
 
-1. In Salesforce, search for the **Copilot for Sales Integration User** user.
+1. In Salesforce, search for the **Sales Integration User** user.
 
 2. Confirm the user is active.  
    - If inactive, set the user status to active.
@@ -120,7 +120,7 @@ When you try to enable Salesforce with a server-to-server flow, the following er
 
 ### Cause
 
-During the Salesforce server-to-server flow setup, a profile named **Copilot For Sales Integration Profile** is created in the Salesforce organization. The error occurs when a profile with the same name already exists, preventing the creation process.
+During the Salesforce server-to-server flow setup, a profile named **Sales Integration Profile** is created in the Salesforce organization. The error occurs when a profile with the same name already exists, preventing the creation process.
 
 ### Resolution
 
@@ -128,6 +128,6 @@ To resolve this issue, check if a profile with the same name already exists in t
 
 ## More information
 
-If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales solution in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

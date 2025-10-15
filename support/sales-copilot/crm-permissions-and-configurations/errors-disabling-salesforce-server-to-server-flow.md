@@ -1,6 +1,6 @@
 ---
 title: Errors When Disabling Salesforce with Server-to-Server Flow
-description: Troubleshoot errors that might occur when disabling Salesforce with a server-to-server flow in Microsoft Copilot for Sales.
+description: Troubleshoot errors that might occur when disabling Salesforce with a server-to-server flow in Sales app.
 ms.date: 05/29/2025
 author: sbmjais
 ms.author: shjais
@@ -9,7 +9,7 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Errors that occur when disabling Salesforce with server-to-server flow
 
-This article helps you troubleshoot errors that might occur when you try to disable Salesforce with a server-to-server flow in Microsoft Copilot for Sales.
+This article helps you troubleshoot errors that might occur when you try to disable Salesforce with a server-to-server flow in Sales app.
 
 ## Who is affected?
 
@@ -58,7 +58,7 @@ To resolve this issue, confirm that the connected app exists.
 
 1. Go to **Setup** > **Apps** > **Connected Apps** > **Manage Connected Apps**.
 
-1. Confirm that the **Copilot for Sales Connected App** connected app exists.
+1. Confirm that the **Sales Connected App** connected app exists.
 
 If this issue persists, contact [Microsoft support](/microsoft-sales-copilot/get-support) for further assistance.
 
@@ -112,6 +112,6 @@ To resolve this issue, try disabling the connection again. If the issue persists
 
 ## More information
 
-If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales solution in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

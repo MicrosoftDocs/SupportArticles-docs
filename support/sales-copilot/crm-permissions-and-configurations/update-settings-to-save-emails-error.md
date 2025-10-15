@@ -1,6 +1,6 @@
 ---
 title: Can't save email to CRM due to invalid mailbox settings
-description: Resolves an error that occurs in Microsoft Copilot for Sales due to invalid mailbox settings in Microsoft Dynamics 365.
+description: Resolves an error that occurs in Sales app due to invalid mailbox settings in Microsoft Dynamics 365.
 ms.date: 02/05/2025
 author: sbmjais
 ms.author: shjais
@@ -9,16 +9,13 @@ ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Can't save an email to CRM due to invalid mailbox settings
 
-This article helps you troubleshoot and resolve an error message that occurs in Microsoft Copilot for Sales due to a disabled mailbox in Microsoft Dynamics 365.
-
-> [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+This article helps you troubleshoot and resolve an error message that occurs in Sales app due to a disabled mailbox in Microsoft Dynamics 365.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Copilot for Sales Outlook add-in        |
+|**Client app**     |  Sales app in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
@@ -27,11 +24,9 @@ This article helps you troubleshoot and resolve an error message that occurs in 
 
 ## Symptoms
 
-When you open Copilot for Sales in Outlook and try to save an email or a meeting to CRM, you see the following error message:
+When you open Sales app in Outlook and try to save an email or a meeting to CRM, you see the following error message:
 
 > Update settings to save emails
-
-:::image type="content" source="media/update-settings-to-save-emails-error/change-mailbox-settings-start-saving.png" alt-text="Screenshot that shows the Update settings to save emails error.":::
 
 ## Cause
 
@@ -39,10 +34,10 @@ This error occurs when the user's mailbox is disabled or the mailbox is missing 
 
 ## Resolution
 
-1. Open the CRM instance you connected to Copilot for Sales.
+1. Open the CRM instance you connected to Sales app.
 
     > [!NOTE]
-    > To get the CRM instance URL, go to the [Home tab](/microsoft-sales-copilot/personal-app#home-tab) in the Copilot for Sales personal app in [Outlook](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-outlook) or [Teams](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-teams), and select the environment name in the upper-right corner.
+    > To get the CRM instance URL, go to the [Home tab](/microsoft-sales-copilot/personal-app#home-tab) in the Sales personal app in [Outlook](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-outlook) or [Teams](/microsoft-sales-copilot/personal-app#open-the-personal-app-in-teams), and select the environment name in the upper-right corner.
 
 2. Select **Settings** > **Personalization Settings**.
 
@@ -67,4 +62,4 @@ This error occurs when the user's mailbox is disabled or the mailbox is missing 
 
 ## More information
 
-If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales solution in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

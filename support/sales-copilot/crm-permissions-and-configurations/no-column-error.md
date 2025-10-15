@@ -1,33 +1,30 @@
 ---
-title: Salesforce CRM users can't see data in Copilot for Sales
-description: Resolves an issue where users are unable to see data in Microsoft Copilot for Sales.
+title: Salesforce CRM users can't see data in Sales app
+description: Resolves an issue where users are unable to see data in Sales app.
 ms.date: 09/02/2024
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-# Salesforce CRM users unable to see data in Copilot for Sales
+# Salesforce CRM users unable to see data in Sales app
 
-This article helps you troubleshoot and resolve an issue where users can't see data in Microsoft Copilot for Sales.
-
-> [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+This article helps you troubleshoot and resolve an issue where users can't see data in Sales app.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Copilot for Sales Outlook add-in        |
+|**Client app**     |  Sales app in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce        |
-|**Users**     | Users who don't have permission to view fields added in Copilot for Sales forms   |
+|**Users**     | Users who don't have permission to view fields added in Sales app forms   |
 
 ## Symptoms
 
-When a user opens Copilot for Sales in Outlook, the following error message is displayed:
+When a user opens Sales app in Outlook, the following error message is displayed:
 
 > Something went wrong
 
@@ -35,7 +32,7 @@ When a user opens Copilot for Sales in Outlook, the following error message is d
 
 ## Cause
 
-The field-level security for the field is set to invisible in Salesforce CRM. As a result, Copilot for Sales can't reference that field as expected in the configuration.
+The field-level security for the field is set to invisible in Salesforce CRM. As a result, Sales app can't reference that field as expected in the configuration.
 
 ## Resolution 1: Fix field-level security in Salesforce CRM
 
@@ -59,13 +56,13 @@ The field-level security for the field is set to invisible in Salesforce CRM. As
 
 For more information regarding field-level security in Salesforce CRM, see [Field-Level Security](https://help.salesforce.com/s/articleView?id=sf.admin_fls.htm&type=5).
 
-## Resolution 2: Change settings in Copilot for Sales to hide fields or remove edit capabilities
+## Resolution 2: Change settings in Sales app to hide fields or remove edit capabilities
 
-Change the admin settings from the Copilot for Sales admin settings in Microsoft Teams to hide the fields or remove editing capabilities.
+Change the admin settings from the Sales app admin settings in Microsoft Teams to hide the fields or remove editing capabilities.
 
 1. Sign in to Microsoft Teams with your administrator credentials.
 
-2. In the navigation bar on the left, select **Copilot for Sales**.
+2. In the navigation bar on the left, select **Sales**.
 
 3. On the **Settings** tab, select **Forms**.
 
@@ -82,10 +79,10 @@ Change the admin settings from the Copilot for Sales admin settings in Microsoft
 
 ## Resolution 3: Refresh the data from CRM
 
-If you don't know which field is causing the issue, you can [refresh the data](/microsoft-sales-copilot/customize-forms-and-fields#refresh-data-from-crm) from CRM. This action will sync the latest changes from CRM to Copilot for Sales and remove any fields that were removed from CRM but are still available in Copilot for Sales. After you refresh the data, you must close and reopen the Copilot for Sales add-in in Outlook.
+If you don't know which field is causing the issue, you can [refresh the data](/microsoft-sales-copilot/customize-forms-and-fields#refresh-data-from-crm) from CRM. This action will sync the latest changes from CRM to Sales app and remove any fields that were removed from CRM but are still available in Sales app. After you refresh the data, you must close and reopen the Sales app in Outlook.
 
 ## More information
 
-If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales solution in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

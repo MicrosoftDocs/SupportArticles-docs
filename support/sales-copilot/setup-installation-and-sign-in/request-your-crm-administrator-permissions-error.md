@@ -1,6 +1,6 @@
 ---
 title: Error after connecting and signing in to Salesforce CRM
-description: Resolves an error message that occurs after connecting and signing in to Salesforce CRM in Microsoft Copilot for Sales.
+description: Resolves an error message that occurs after connecting and signing in to Salesforce CRM in Sales app.
 ms.date: 02/05/2025
 author: sbmjais
 ms.author: shjais
@@ -9,29 +9,24 @@ ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
 ---
 # "Request your CRM administrator permissions to access Salesforce using APIs" error
 
-This article helps you troubleshoot and resolve issues when an error message is displayed after connecting and signing in to Salesforce CRM in Microsoft Copilot for Sales.
-
-> [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+This article helps you troubleshoot and resolve issues when an error message is displayed after connecting and signing in to Salesforce CRM in Sales app.
 
 ## Who is affected?
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Copilot for Sales Outlook add-in        |
+|**Client app**     |  Sales app in Outlook        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce      |
-|**Users**     | Users trying to use Copilot for Sales with Salesforce CRM |
+|**Users**     | Users trying to use Sales app with Salesforce CRM |
 
 ## Symptoms
 
-After you sign in to Salesforce CRM through the [Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook), the following error message is displayed:
+After you sign in to Salesforce CRM through the [Sales app in Outlook](/microsoft-sales-copilot/open-app#access-copilot-for-sales-in-outlook), the following error message is displayed:
 
 > Request your CRM administrator permissions to access Salesforce using APIs
-
-:::image type="content" source="media/request-your-crm-administrator-permissions-error/request-admin-permission-salesforce-apis.png" alt-text="Screenshot that shows the API permission error.":::
 
 ## Cause
 
@@ -70,6 +65,6 @@ An admininstrator can grant the **API Enabled** permission to the user or the af
 
 ## More information
 
-If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales solution in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

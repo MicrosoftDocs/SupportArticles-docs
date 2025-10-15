@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Microsoft Copilot for Sales troubleshooting # < 60 chars
-summary: Welcome to Microsoft Copilot for Sales troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Copilot for Sales. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: Sales Solution in Microsoft 365 Copilot troubleshooting # < 60 chars
+summary: Welcome to Sales Solution in Microsoft 365 Copilot troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Sales Solution in Microsoft 365 Copilot. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
-  title: Microsoft Copilot for Sales troubleshooting
-  description: Landing page for Microsoft Copilot for Sales troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  title: Sales Solution in Microsoft 365 Copilot troubleshooting
+  description: Landing page for Sales Solution in Microsoft 365 Copilot troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: microsoft-sales-copilot  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author:   sbmjais
@@ -30,7 +30,7 @@ landingContent:
             url: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
           - text: Missing privileges error when signing in
             url: crm-permissions-and-configurations/missing-privileges-sign-in.md
-          - text: Salesforce CRM users can't see data in Copilot for Sales
+          - text: Salesforce CRM users can't see data in Sales app
             url: crm-permissions-and-configurations/no-column-error.md
             
  # Card
@@ -38,7 +38,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Sign-in issue when opening the Copilot for Sales pane in Outlook
+          - text: Sign-in issue when opening the Sales pane in Outlook
             url: outlook-side-panel/problem-starting-copilot-for-sales.md
 
  # Card
@@ -50,7 +50,7 @@ landingContent:
             url: setup-installation-and-sign-in/failure-passed-to-redirect-url-access-denied.md
           - text: Can't connect to Dynamics 365 with two-factor authentication enabled
             url: setup-installation-and-sign-in/connection-issue-with-two-factor-auth.md
-          - text: First Salesforce CRM user can't access Copilot for Sales
+          - text: First Salesforce CRM user can't access Sales app
             url: setup-installation-and-sign-in/first-user-cant-create-trial-environment.md
           - text: Incorrect custom domain in Salesforce
             url: setup-installation-and-sign-in/oauth2-authorization-flow-failed-for-service.md
@@ -72,9 +72,9 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: Copilot for Sales documentation
+          - text: Sales app documentation
             url: /microsoft-sales-copilot/
-          - text: Copilot for Sales training
+          - text: Sales app training
             url: /training/modules/boost-sales-performance/
           - text: Dynamics 365 Community
             url: https://techcommunity.microsoft.com/t5/microsoft-sales-copilot/ct-p/MicrosoftViva

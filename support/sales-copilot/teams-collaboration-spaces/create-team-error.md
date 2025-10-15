@@ -1,6 +1,6 @@
 ---
-title: Microsoft Copilot for Sales team creation error ContainsBlockedWord
-description: Resolves an error that occurs when creating a team for an account or opportunity in Microsoft Copilot for Sales due to naming policy restrictions.
+title: Sales app team creation error ContainsBlockedWord
+description: Resolves an error that occurs when creating a team for an account or opportunity in Sales app due to naming policy restrictions.
 ms.date: 02/05/2025
 author: sbmjais
 ms.author: shjais
@@ -11,13 +11,13 @@ ms.custom:
   - ai-seo-date:06/03/2024
   - ai-gen-desc
 ---
-# Can't create a team for an account or opportunity in Copilot for Sales
+# Can't create a team for an account or opportunity in Sales app
 
-This article helps you resolve an error that occurs when you try to create a team for an account or opportunity in Microsoft Copilot for Sales.
+This article helps you resolve an error that occurs when you try to create a team for an account or opportunity in Sales app.
 
 | Requirement type |Description |
 |------------------|------------|
-|**Client app** | Copilot for Sales Outlook add-in |
+|**Client app** | Sales app in Outlook |
 |**Platform** | Web and desktop clients |
 |**OS** | Windows and Mac |
 |**Deployment** | User managed and admin managed |
@@ -26,7 +26,7 @@ This article helps you resolve an error that occurs when you try to create a tea
 
 ## Symptoms
 
-When you try to [create a team for an account or opportunity](/microsoft-sales-copilot/collaborate-teams-newly-created-existing-team) in Microsoft Copilot for Sales, the following error message is displayed:
+When you try to [create a team for an account or opportunity](/microsoft-sales-copilot/collaborate-teams-newly-created-existing-team) in Sales app, the following error message is displayed:
 
 > Something went wrong. Copy the error details here, then share them with your admin or Microsoft support and ask if they can help you resolve this issue.
 
@@ -47,6 +47,6 @@ To resolve this issue, use either of the following methods:
 
 ## More information
 
-If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Sales solution in Microsoft 365 Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
