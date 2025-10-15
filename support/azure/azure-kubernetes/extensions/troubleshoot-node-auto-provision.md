@@ -133,7 +133,7 @@ kubectl logs -n kube-system -l k8s-app=azure-cns --tail=100
 ```
 
 **CNI to CNS Troubleshooting**:
-- **If CNS logs show "no IPs available"**: This indicates a CNS or aks's watch on the NNCs.
+- **If CNS logs show "no IPs available"**: This indicates a CNS or AKS' watch on the NNCs.
 - **If CNI calls don't appear in CNS logs**: You likely have the wrong CNI installed. Verify the correct CNI plugin is deployed.
 
 **Common Causes**:
@@ -186,7 +186,7 @@ dig @10.0.0.10 kubernetes.default.svc.cluster.local
 nslookup kubernetes.default.svc.cluster.local
 
 # Test external DNS resolution
-dig google.com
+dig azure.com
 ```
 
 4. **Check DNS pods status**:
