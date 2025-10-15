@@ -4,7 +4,7 @@ description: Learn how to troubleshoot errors for Commerce Data Exchange (CDX) i
 author: v-chgri
 ms.author: johnmichalak
 ms.topic: troubleshooting
-ms.date: 10/14/2025
+ms.date: 10/15/2025
 ---
 # Troubleshoot Commerce Data Exchange (CDX)
 
@@ -24,9 +24,9 @@ An error has occurred because of batch job statuses. You can view the error in a
 
 ### Resolution
 
-In Commerce headquarters, go to **System administration** \> **Inquiries** \> **Batch jobs** and find the data writing batch associated with the Commerce Scale Unit that the download job is supposed to be applied to, and change the batch job's status to **Withhold**. In environments earlier than Commerce version 10.0.12, Microsoft recommends that you also create a channel database group named **Legacy**, associate the **Default** channel database with this new group, and then exclude the new database group from all distribution schedules. CDX jobs should no longer be generated for the **Default** channel database in the **Legacy** group.
+In Dynamics 365 Commerce headquarters, go to **System administration** \> **Inquiries** \> **Batch jobs**, find the data writing batch associated with the Commerce Scale Unit to which the download job is supposed to be applied, and change the batch job's status to **Withhold**.
 
-## Issue 2: Can't execute Run now command Distribution schedule page unless batch processing is used
+## Issue 2: Can't execute Run now command from Distribution schedule page unless batch processing is used
 
 ### Symptoms
 
@@ -34,7 +34,7 @@ You can't perform the **Run now** command from the **Distribution schedule** pag
 
 #### Root cause
 
-This change was intentionally made in Commerce version 10.0.11 because of performance issues that occurred if jobs were run during times when environments were most heavily used. In another change that was made as part of this feature enhancement, recurrence can't be used when the **Full data sync** command (full job synchronization) is run from the **Channel database** page in Commerce headquarters. Only a single occurrence can be run.
+This change was intentionally made in Commerce version 10.0.11 because of performance issues that occur if jobs are run during times when environments are most heavily used. In another change that was made as part of this feature enhancement, recurrence can't be used when the **Full data sync** (full job synchronization) command is run from the **Channel database** page in Commerce headquarters. Only a single occurrence can be run.
 
 ### Resolution
 
@@ -50,19 +50,19 @@ You receive the following error message:
 
 #### Root cause
 
-An error has occurred because the length of one or more DBO tables has been extended, so that truncation of data was required. Therefore, a truncation failure has occurred. 
+An error has occurred because the length of one or more DBO tables has been extended, so that truncation of data is required. Therefore, a truncation failure has occurred. 
 
 ### Resolution
 
 Generate a Microsoft Support request. 
 
-For information on best practices, see [Enable custom Commerce Data Exchange synchronization via extension](/dynamics365/commerce/dev-itpro/cdx-extensibility). These best practices include removing the extended data type (EDT) extension on the table field that is being edited and using the CDX extension table to store the long (full) value that is required.
+For information on best practices, see [Enable custom Commerce Data Exchange synchronization via extension](/dynamics365/commerce/dev-itpro/cdx-extensibility). These best practices include removing the extended data type (EDT) extension on the table field that's being edited and using the CDX extension table to store the long (full) value that's required.
 
 ## Issue 4: Error due to download session failure
 
 ### Symptoms
 
-The download session is failing, and the error message states "...tried too many times."
+The download session fails, and the error message states "...tried too many times."
 
 ### Resolution
 
@@ -76,25 +76,25 @@ You can't cancel a running CDX job.
 
 ### Resolution
 
-- If this issue occurs in a production environment, sign in to Microsoft Dynamics Lifecycle Services (LCS), and create a request for immediate support.
-- If the issue occurs in a nonproduction environment, create a support request.
+- If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)[(https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a nonproduction environment, create a Microsoft Support request.
 
 ## Issue 6: Slow download sessions after adding multiple POS terminals
 
 ### Symptoms
 
-After you add multiple POS terminals, download sessions take a long time, or there's overall slowness in Commerce headquarters.
+After you add multiple POS terminals, download sessions take a long time, or you experience overall slowness in Commerce headquarters.
 
 #### Root cause
 
-When you create a new Store Commerce app offline database and add it to the relevant channel database group, it inherits all existing download sessions since the last full database synchronization occurred. Even at the best of times, the exceptional data generation that might occur can be too large and therefore affect performance. At the worst (that is, busiest) of times, it can severely impair the environment's performance.
+When you create a new Store Commerce app offline database and add it to the relevant channel database group, it inherits all existing download sessions since the last full database synchronization occurred. Even under normal conditions, the exceptional data generation that might occur can be too large and affect performance. At the busiest times, it can severely impair the environment's performance.
 
 ### Resolution
 
 Microsoft recommends that you have either:
 
 - A "dummy" channel database group (that is, a group that isn't associated with any distribution schedule job) that you assign to the newly generated terminals.
-- A special offline profile where the **Pause offline synchronization** option is set to **Yes**. In this way, data generation can occur when it's required and when the system is most available to do it. However, the system might pause multiple times as required. If it's too late to use this approach, create a support request.
+- A special offline profile where the **Pause offline synchronization** option is set to **Yes**. In this way, data generation can occur when it's required and when the system is most available to do it. However, the system might pause multiple times as required. If it's too late to use this approach, create a Microsoft Support request.
 
 ## Issue 7: Incremental (delta) data synchronization takes too long
 
@@ -108,7 +108,7 @@ This issue can occur when a new channel (store) is created, because all the data
 
 ### Resolution
 
-Microsoft recommends that you have a "dummy" channel database that's associated with a "dummy" channel database group, and that you assign it to the newly generated channel (store). In this way, data generation can occur when required and the system is most available to do it. If it's too late to use this approach, create a support request.
+Microsoft recommends that you have a "dummy" channel database that's associated with a "dummy" channel database group, and that you assign it to the newly generated channel (store). In this way, data generation can occur when required and the system is most available to do it. If it's too late to use this approach, create a Microsoft Support request.
 
 ## Issue 8: P-job error due to violation of primary key restraint 
 
@@ -120,8 +120,8 @@ The P-job fails to create an upload session, and you receive the following error
 
 ### Resolution
 
-- If the issue occurs in a production environment, sign in to LCS, and create a request for immediate support.
-- If the issue occurs in a nonproduction environment, create a support request.
+- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)[(https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a nonproduction environment, create a Microsoft Support request.
 
 ## Issue 9: Session package download error due to record not found
 
@@ -133,7 +133,7 @@ When you try to download an upload session package from the **Upload sessions** 
 
 ### Resolution
 
-Create a support request.
+Create a Microsoft Support request.
 
 ## Issue 10: Error due to CDX download sessions failing to be applied
 
@@ -145,8 +145,8 @@ CDX download sessions fail to be applied, and you receive the following error me
 
 ### Resolution
 
-- If the issue occurs in a production environment, sign in to LCS, and create a request for immediate support.
-- If the issue occurs in a nonproduction environment, create a support request.
+- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)[(https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a nonproduction environment, create a Microsoft Support request.
 
 ## Issue 11: No download sessions are applied, and no upload sessions are created
 
@@ -156,8 +156,8 @@ No download sessions are applied, and no upload sessions are created.
 
 ### Resolution
 
-- If the issue occurs in a production environment, sign in to LCS, and create a request for immediate support.
-- If the issue occurs in a nonproduction environment, create a support request.
+- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)[(https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a nonproduction environment, create a Microsoft Support request.
 
 ## Issue 12: Upload sessions error due to multiple records in the RetailListingStatusLog table
 
@@ -173,8 +173,8 @@ An error has occurred because the upload session package contains multiple recor
 
 ### Resolution
 
-- If the issue occurs in a production environment, sign in to LCS, and create a request for immediate support.
-- If the issue occurs in a nonproduction environment, create a support request.
+- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)[(https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a nonproduction environment, create a Microsoft Support request.
 
 ## Issue 13: Failure during switch to offline mode
 
@@ -190,8 +190,8 @@ There are many possible causes for the failure. First, verify basic information:
 
 Microsoft recommends that you contact Microsoft Support.
 
-- If the issue occurs in a production environment, sign in to LCS, and create a request for immediate support.
-- If the issue occurs in a nonproduction environment, create a support request.
+- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)[(https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a nonproduction environment, create a Microsoft Support request.
 
 ## More information
 
@@ -212,6 +212,7 @@ Microsoft recommends that you contact Microsoft Support.
 [Configure, install, and activate Modern POS (MPOS)](/dynamics365/commerce/retail-modern-pos-device-activation)
 
 [Configure and install Commerce Scale Unit (self-hosted)](/dynamics365/commerce/dev-itpro/retail-store-scale-unit-configuration-installation)
+
 
 
 
