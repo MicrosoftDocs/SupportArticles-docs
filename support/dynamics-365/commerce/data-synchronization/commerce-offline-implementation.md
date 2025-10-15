@@ -4,7 +4,7 @@ description: Learn how to troubleshoot errors for offline implementations of Mic
 author: v-chgri
 ms.author: johnmichalak
 ms.topic: troubleshooting
-ms.date: 10/14/2025
+ms.date: 10/15/2025
 ---
 # Troubleshoot Commerce offline implementation
 
@@ -220,4 +220,5 @@ Microsoft recommends that you contact Support to get direct assistance (where ap
 
 
 [Configure and install Commerce Scale Unit (self-hosted)](/dynamics365/commerce/dev-itpro/retail-store-scale-unit-configuration-installation)
+
 
