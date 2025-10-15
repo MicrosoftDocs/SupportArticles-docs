@@ -200,7 +200,7 @@ If all goes well you will see these additional Options, which can help perform o
 
 ## Red Hat 8\.6\+ GRUB configuration
 
-The default /etc/default/grub configuration on these versions is adequately configured
+The default /etc/default/grub configuration on these versions is adequately configured.
 
 ```output
 GRUB_TIMEOUT=10
@@ -228,7 +228,7 @@ sysctl -w kernel.sysrq=1;echo kernel.sysrq = 1 >> /etc/sysctl.conf;sysctl -a | g
 
 ## SLES 15 sp5
 
-The default /etc/default/grub configuration on these versions is adequately configured
+The default /etc/default/grub configuration on these versions is adequately configured.
 
 ```output
 GRUB_DEFAULT=0
