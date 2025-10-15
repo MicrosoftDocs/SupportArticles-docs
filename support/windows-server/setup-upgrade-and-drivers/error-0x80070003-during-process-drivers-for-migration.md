@@ -113,7 +113,7 @@ Such folders shouldn't be empty.
    > [!NOTE]  
    >
    > - The `Get-ChildItem -Directory` cmdlet selects only subfolders. Therefore, the robocopy operation skips root-level files, such as .mum and .manifest files.
-   > - For more information about the `Get-ChildItem` cmdlet and its options, see [Get-ChildItem](/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7.5).
+   > - For more information about the `Get-ChildItem` cmdlet and its options, see [Get-ChildItem](/powershell/module/microsoft.powershell.management/get-childitem).
    > - For more information about the `robocopy` command and its switches, see [robocopy](/windows-server/administration/windows-commands/robocopy).
 
 1. To copy the subfolders and log the operation, run the following command:
