@@ -3286,8 +3286,8 @@ items:
       href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md?context=/troubleshoot/windows-server/context/context
     - name: Collect data to analyze and troubleshoot system management components scenarios
       href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Hyper-V related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-hyper-v-issues.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot Hyper-V related issues
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for SQL cluster (AG/FCI) related issues
       href: ../windows-client/windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md?context=/troubleshoot/windows-server/context/context
     - name: Use the xray feature of TSS
