@@ -24,40 +24,71 @@ Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-t
 ### TSS cmdlet
 
 ```powershell
-.\TSS.ps1 -Scenario HyperV
+.\TSS.ps1 -SDP HyperV
 ```
 
 ### TSS cmdlet description
 
 To gather information for Hyper-V related issues, follow these steps:
 
-1.  Download the latest version of the TSS tool from the Microsoft website.
-2.  Open an elevated PowerShell window.
-3.  Navigate to the folder where the TSS tool is located.
-4.  Run the command
+1. Download [TSS](https://aka.ms/getTSS) and extract it in the *C:\\tss* folder.
+2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.  
+    > [!NOTE]
+    > Don't use the Windows PowerShell Integrated Scripting Environment (ISE).
+3. Run the following cmdlets:
+
+    ```powershell
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    ```
+
+    ```powershell
+    .\TSS.ps1 -SDP HyperV
+    ```
+
+4. Enter *A* for "Yes to All" for the execution policy change.
+
+> [!NOTE]
+>
+> - The time to collect this script on a given system may vary. It depends on system speed, system size, the number of virtual machines, the amount of data in logs, and so on. Depending on these factors, the average collection time is between 30 and 90 minutes, or even longer, especially if no skip commands are used.
+> - The collection is stored in a compressed file in the *C:\\MS_DATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
 
 #### Optional parameters
 
 You can use the following optional parameters with the TSS tool. These optional parameters can perform a quicker and more streamlined collection, which may help the script finish successfully if a certain section stops responding.
 
-- This cmdlet collect only the logs without running diagnostics.
+- This cmdlet skips running the Best Practices Analyzer and makes the collection faster.
 
     ```powershell
-    .\TSS.ps1 -Scenario HyperV -CollectOnly
+    .\TSS.ps1 -SDP HyperV -SkipSDPList skipBPA
     ```
 
-- This cmdlet prevents uploading the collected data to Microsoft.
+- This cmdlet skips some small collection items that may fail in a regular collection and makes the script more reliable.
 
     ```powershell
-    .\TSS.ps1 -Scenario HyperV -NoUpload
+    .\TSS.ps1 -SDP HyperV -SkipSDPList skipHang
     ```
 
-- This cmdlet specifies the output folder for the collected data.
+- This cmdlet skips some additional collection parameters that may not be needed.
 
     ```powershell
-    .\TSS.ps1 -Scenario HyperV -OutputPath <path>
+    .\TSS.ps1 -SDP HyperV -SkipSDPList skipTS
+    ```
+
+- This cmdlet skips testing Server Message Block (SMB) connectivity to any Cluster Shared Volumes (CSVs) in the failover cluster.
+
+    ```powershell
+    .\TSS.ps1 -SDP HyperV -SkipSDPList skipCsvSMB
+    ```
+
+- This cmdlet skips any data collection related to Hyper-V Replica data and slightly speeds up the collection process.
+
+    ```powershell
+    .\TSS.ps1 -SDP HyperV -SkipSDPList skipHVreplica
     ```
 
 > [!NOTE]
-> The TSS tool may take several minutes to complete depending on the system configuration and the amount of data being collected.
-> After the tool finishes running, it creates a compressed file (.zip) that contains all the collected information.
+> You can combine multiple skip parameters with comma-separated items, such as the following example:
+>  
+> ```powershell
+> .\TSS.ps1 -SDP HyperV -SkipSDPList skipBPA,skipHang,skipTS,skipCsvSMB,skipHVreplica
+> ```
