@@ -2604,6 +2604,8 @@ items:
       href: ./system-management-components/enable-openssh-verbose-logging.md
     - name: OpenSSH client can't connect to a server via SSH
       href: ./system-management-components/open-client-can-not-connect-server.md
+    - name: OpenSSH Server Service Doesn't Start and Generates Error 1053
+      href: ./system-management-components/openssh-server-service-wont-start-error-1053.md
     - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
       href: ./system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md
   - name: PowerShell
