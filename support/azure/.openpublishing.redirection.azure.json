@@ -6357,8 +6357,7 @@
       },
             {
         "source_path": "app-service/app-service-compliance-wit.md",
-        "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
-        "redirect_document_id": true
+        "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service"
       },
       {
         "source_path": "azure-storage/files/alerts/files-troubleshoot-create-alerts.md",
