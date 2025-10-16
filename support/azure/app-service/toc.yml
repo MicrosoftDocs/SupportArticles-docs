@@ -18,16 +18,12 @@
     href: faqs-web-app-security.md
   - name: Availability, performance, and application FAQs
     href: web-apps-performance-faqs.md
-  - name: App Service Compliance with PCI Standards 3.0 and 3.1
-    href: app-service-compliance-wit.md
   - name: Backing up, restoring, and cloning
     href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
   - name: Built-in Linux containers FAQs
     href: faqs-app-service-linux.yml
   - name: Deployment FAQs for Web Apps
     href: web-apps-deployment-faqs.md
-  - name: FAQs about App Service Environment migration
-    href: ase-migration-faq.yml
   - name: FAQs about scaling web apps
     href: ./scaling-web-app-faq.yml
   - name: Fix HTTP 502 and HTTP 503 Errors
