@@ -49,15 +49,17 @@ To resolve this error, either disable the **Configure log access** Group Policy 
 
    :::image type="content" source="./media/error-17156-event-log-service/configure-log-access-setting.png" alt-text="The Configure log access settings window.":::
 
-To disable the policy, set its value to either **Disabled** or **Not Configured**.
+1. Update the policy setting using one of these two methods:
 
-:::image type="content" source="./media/error-17156-event-log-service/disable-log-access-policy.png" alt-text="The Configure log access settings window shows the Disabled setting as selected.":::
+   1. To disable the policy, set its value to either **Disabled** or **Not Configured**.
 
-To update the policy, append the following text to the Security Descriptor Definition Language (SDDL) string in the **Options** panel:
+      :::image type="content" source="./media/error-17156-event-log-service/disable-log-access-policy.png" alt-text="The Configure log access settings window shows the Disabled setting as selected.":::
 
-> (A;;0x7;;;\<SQL-Server-Agent-Account-SID\>)
+   1. To update the policy, append the following text to the Security Descriptor Definition Language (SDDL) string in the **Options** panel:
 
-:::image type="content" source="./media/error-17156-event-log-service/update-log-access-policy.png" alt-text="The Configure log access settings window showing the additional Security Descriptor Definition Language (SDDL) string that's appended in the Options panel":::
+      > (A;;0x7;;;\<SQL-Server-Agent-Account-SID\>)
+
+      :::image type="content" source="./media/error-17156-event-log-service/update-log-access-policy.png" alt-text="The Configure log access settings window showing the additional Security Descriptor Definition Language (SDDL) string that's appended in the Options panel":::
 
 ## References
 
