@@ -34,7 +34,7 @@ However, if your back-end server is on a different network than your ARR server,
 
 :::image type="content" source="./media/proxy-server-rejects-back-end-requests/proxy-network-layout.png" alt-text="Network diagram of the ARR and back-end server configuration when on a different network, using a proxy server to transit request between networks":::
 
-When your ARR server routes a request through a proxy server, the proxy server can reject the request if it uses a relative URL. For example:
+When your ARR server routes a request through a proxy server, the proxy server can reject the request because ARR uses a relative url when forwarding the requests to the backend servers. For example:
 
 ```http
 /mywebapp/mypage.aspx
