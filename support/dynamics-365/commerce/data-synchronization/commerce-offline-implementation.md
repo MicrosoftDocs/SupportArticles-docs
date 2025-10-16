@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Commerce offline implementation
 description: Learn how to troubleshoot errors for offline implementations of Microsoft Dynamics 365 Commerce.
-author: v-chgri
+author: johnmichalak
 ms.author: johnmichalak
 ms.topic: troubleshooting
 ms.date: 10/15/2025
@@ -220,5 +220,6 @@ Microsoft recommends that you contact Support to get direct assistance (where ap
 
 
 [Configure and install Commerce Scale Unit (self-hosted)](/dynamics365/commerce/dev-itpro/retail-store-scale-unit-configuration-installation)
+
 
 
