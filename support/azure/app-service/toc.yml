@@ -30,14 +30,25 @@
     href: ase-migration-faq.yml
   - name: FAQs about scaling web apps
     href: ./scaling-web-app-faq.yml
+  - name: Fix HTTP 502 and HTTP 503 Errors
+    href: troubleshoot-http-502-http-503.md  
   - name: Map your own custom domain
     href: /azure/app-service/app-service-web-tutorial-custom-domain
+  - name: Node.js Best Practices and Troubleshooting Guide
+    href: app-service-web-nodejs-best-practices-troubleshoot-guide.md
   - name: Open-source technologies FAQs for Web Apps
     href: web-apps-open-source-technologies-faqs.md
+  - name: Troubleshoot an app in Azure App Service using Visual Studio
+    href: troubleshoot-dotnet-visual-studio.md
   - name: Troubleshoot temporary storage
     href: temporary-storage-for-azure-app-service.md
   - name: Troubleshoot instance-related issues
     href: troubleshoot-instance-related-issues-on-azure-app-service.md
   - name: Troubleshoot virtual network integration
     href: troubleshoot-vnet-integration-apps.md
+  - name: Troubleshoot Performance Degradation
+    href: troubleshoot-performance-degradation.md  
+  - name: Troubleshoot Intermittent Outbound Connection Errors
+    href: troubleshoot-intermittent-outbound-connection-errors.md
+
     

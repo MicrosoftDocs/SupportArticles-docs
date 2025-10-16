@@ -2480,6 +2480,8 @@ items:
       href: ./setup-upgrade-and-drivers/unattended-setup-not-use-computer-name-specified-oobe.md
     - name: Upgrade fails with error 0x000000C4
       href: ./setup-upgrade-and-drivers/upgrade-fail-with-error-0x000000c4.md
+    - name: Upgrade fails and generates error code 0xC1900101-0x20017
+      href: ../windows-client/setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md?context=/troubleshoot/windows-server/context/context
     - name: Using language IDs to identify language packs
       href: ./setup-upgrade-and-drivers/use-language-id-identify-language-pack.md
     - name: Windows Deployment Service fails to start
@@ -3208,6 +3210,8 @@ items:
       href: ./installing-updates-features-roles/fix-windows-update-errors.md
     - name: Troubleshoot Windows Update error 0x80070002
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
+    - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
+      href: ../windows-client/installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error 0x80070490
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
     - name: Troubleshoot "Shutdown in Progress" Windows error 0x8007045b

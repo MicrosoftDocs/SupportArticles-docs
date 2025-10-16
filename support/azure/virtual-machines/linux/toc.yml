@@ -333,7 +333,7 @@
     href: serial-console-grub-single-user-mode.md
   - name: Serial Console NMI/SysRq
     href: serial-console-nmi-sysrq.md
-  - name: Serial console grub proactive configuration
+  - name: Save downtime with Serial console grub proactive configuration
     href: serial-console-grub-proactive-configuration.md   
 
 - name: On-demand Capacity Reservation issues

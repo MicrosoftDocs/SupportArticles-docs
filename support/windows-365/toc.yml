@@ -71,3 +71,7 @@ items:
     items:
     - name: Windows 365 Switch known issues
       href: windows-365-switch-known-issues.md
+  - name: Windows 365 BCDR
+    items:
+    - name: Windows 365 BCDR known issues
+      href: windows-365-bcdr-known-issues.md      
