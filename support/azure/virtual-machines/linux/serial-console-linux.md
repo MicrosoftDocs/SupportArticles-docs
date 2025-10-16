@@ -6,13 +6,14 @@ documentationcenter: ''
 author: JarrettRenshaw
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
+ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 07/29/2025
-ms.author: mbifeld
+ms.date: 10/16/2025
+ms.author: jarrettr
+ms.reviewer: mbifeld
 ---
 
 # Azure Serial Console for Linux

@@ -1,12 +1,12 @@
 ---
 title: Azure Application Insights Agent troubleshooting and known issues
 description: Review Application Insights Agent known issues and troubleshooting examples. Works with ASP.NET web apps hosted on-premises, in virtual machines, or on Azure.
-ms.date: 06/24/2024
+ms.date: 10/16/2025
 editor: v-jsitser
-ms.reviewer: aaronmax, nzamoralopez, toddfous, v-leedennis
+ms.reviewer: aaronmax, nzamoralopez, toddfous, jarrettr
 ms.service: azure-monitor
 #Customer intent: As an Application Insights user, I want to understand the known issues for the Application Insights Agent and how to troubleshoot common issues so that I can use Application Insights and the Agent effectively.
-ms.custom: sap:Manual Instrumentation using SDK, Open Telemetry or by installing Agent
+ms.custom: sap:Missing or incorrect telemetry and performance issues
 ---
 
 # Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
