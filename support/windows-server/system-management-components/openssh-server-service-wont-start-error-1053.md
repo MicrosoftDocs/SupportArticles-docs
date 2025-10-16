@@ -1,6 +1,6 @@
 ---
 title: OpenSSH Server Service Doesn't Start and Generates Error 1053
-description: Discusses an issue where you install OpenSSH Server, but afterwards you can't start the OpenSSH Server service.
+description: Discusses an issue where you install OpenSSH Server, but afterwards you can't start the OpenSSH Server service. It generates Error 1053.
 ms.date: 10/28/2025
 manager: dcscontentpm
 audience: itpro
@@ -43,12 +43,12 @@ This issue occurs because the versions of OpenSSH Client, OpenSSH Server, and li
 
   1. You install Windows Server, which includes OpenSSH Client and libcrypto.dll.
   1. The update that you installed along with Windows Server included updates for OpenSSH. At the time of installation, Windows Update detects OpenSSH Client and libcrypto.dll, and updates them. Because OpenSSH Server isn't installed, Windows Update doesn't install that part of the update.
-  1. You install OpenSSH Server from Windows Update or from an offline image. The version that installs doesn't have the update, and the update is not available on the computer to apply retroactively.
+  1. You install OpenSSH Server from Windows Update or from an offline image. The version that installs doesn't have the update, and the update isn't available on the computer to apply retroactively.
 
 - Scenario 2:
 
   1. You install Windows or Windows Server, both of which include OpenSSH Client and libcrypto.dll.
-  1. Microsoft publises a preview version of OpenSSH to the GitHub repositories at [PowerShell/openssh-portable](https://github.com/PowerShell/openssh-portable) or [Win32-OpenSSH GitHub Releases](https://github.com/PowerShell/Win32-OpenSSH/releases).
+  1. Microsoft publishes a preview version of OpenSSH to the GitHub repositories at [PowerShell/openssh-portable](https://github.com/PowerShell/openssh-portable) or [Win32-OpenSSH GitHub Releases](https://github.com/PowerShell/Win32-OpenSSH/releases).
   1. You install OpenSSH Server from one of the GitHub repositories. This action installs the preview version.
 
 In both scenarios, the OpenSSH Server version doesn't match the OpenSSH Client and libcrypto.dll versions. As a result, OpenSSH Server can't start.
