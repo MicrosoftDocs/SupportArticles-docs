@@ -1,7 +1,7 @@
 ---
 title: Dynamics 365 Payment Connector for Adyen - EFT Terminal ID isn't set
 description: Resolves an issue with the Dynamics 365 Payment Connector for Adyen where the payment authorization calls fail, and a hardware error occurs because the electronic funds transfer (EFT) Terminal ID isn't set.
-author: v-chgri
+author: johnmichalak
 ms.author: johnmichalak
 ms.topic: troubleshooting
 ms.date: 10/15/2025
@@ -35,5 +35,6 @@ To solve this issue, follow these steps.
 [Dynamics 365 Payment Connector for Adyen FAQ](/dynamics365/commerce/dev-itpro/adyen-connector-faq)
 
 [Payments FAQ](/dynamics365/unified-operations/retail/dev-itpro/payments-retail)
+
 
 
