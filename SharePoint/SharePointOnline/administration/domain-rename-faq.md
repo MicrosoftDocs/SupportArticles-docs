@@ -151,7 +151,7 @@ If OneDrive sync isn't stopped prior to the rename, issues might occur after the
 <details>
 <summary><b>I have more than 10,000 sites. When will my tenant be eligible for tenant rename?</b></summary>
 
-If you have more than 10,000 sites, you must use Advanced Tenant Rename. This is available in SharePoint Advanced Management. We have removed upper limit on the site count. 
+If you have more than 10,000 sites, you must use Advanced Tenant Rename. This is available in SharePoint Advanced Management. There is no upper limit on the number of sites. 
 
 </details>
 <br/>
