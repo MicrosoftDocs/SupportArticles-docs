@@ -23,7 +23,7 @@ You might see this issue in situations that resemble the following scenarios:
 
 - Scenario 1:
 
-  - You install Windows Server 2019 by using an image that includes the [January 14, 2025-https://support.microsoft.com/en-us/topic/january-14-2025-kb5050008-os-build-17763-6775-9a174725-a7ea-4e37-a6f8-e86f7c4d3f31 (OS Build 17763.6775)](https://support.microsoft.com/topic/january-14-2025-kb5050008-os-build-17763-6775-9a174725-a7ea-4e37-a6f8-e86f7c4d3f31) cumulative Windows update, or a later cumulative update.
+  - You install Windows Server 2019 by using an image that includes the [January 14, 2025—KB5050008 (OS Build 17763.6775)](https://support.microsoft.com/topic/january-14-2025-kb5050008-os-build-17763-6775-9a174725-a7ea-4e37-a6f8-e86f7c4d3f31) cumulative Windows update, or a later cumulative update.
   - After setup finishes, you install OpenSSH Server, which is a Feature on Demand (FOD). You *don't* install OpenSSH Client at this time.
 
 - Scenario 2:
