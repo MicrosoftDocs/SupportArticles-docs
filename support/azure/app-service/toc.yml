@@ -32,7 +32,7 @@
     href: ./scaling-web-app-faq.yml
   - name: Fix HTTP 502 and HTTP 503 Errors
     href: troubleshoot-http-502-http-503.md  
-  - name: Map your own custom domain
+  - name: Set up an existing custom domain
     href: /azure/app-service/app-service-web-tutorial-custom-domain
   - name: Node.js Best Practices and Troubleshooting Guide
     href: app-service-web-nodejs-best-practices-troubleshoot-guide.md
