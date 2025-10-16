@@ -10,9 +10,9 @@ ms.service: azure-virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
-ms.date: 8/26/2025
+ms.date: 10/16/2025
 ms.author: jarrettr
-ms.custom: sap:VM Admin - Windows (Guest OS)
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # How to use CMD and PowerShell Windows commands

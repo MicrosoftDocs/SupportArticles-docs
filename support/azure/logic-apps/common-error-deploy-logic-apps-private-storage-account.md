@@ -1,10 +1,12 @@
 ---
 title: Can't Access the Storage Account Services from Azure Logic Apps
 description: Describes common errors that might happen when you deploy Standard logic apps to protected private storage accounts.
-ms.services: azure-logic-apps
+ms.service: azure-logic-apps
 ms.reviewer: estfan, azla, shrahman, xuehongg
 ms.custom: sap:Connectors
 ms.date: 05/19/2025
+author: JarrettRenshaw
+ms.author: jarrettr
 # Customer intent: As a developer, I want to deploy Standard logic apps to Azure storage accounts that use private endpoints.
 ---
 
