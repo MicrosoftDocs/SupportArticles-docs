@@ -130,7 +130,7 @@ Select **Reboot** and **Send SysRq** Command
 
 The system should log a reset message such as this
 
-:::image type="content" source="media/serial-console-grub-proactive-configuration/retting-log.png" alt-text="Screenshot of the reset message log in the command-line interface.":::
+:::image type="content" source="media/serial-console-grub-proactive-configuration/reset.png" alt-text="Screenshot of the reset message log in the command-line interface.":::
 
 ## Ubuntu GRUB configuration
 
