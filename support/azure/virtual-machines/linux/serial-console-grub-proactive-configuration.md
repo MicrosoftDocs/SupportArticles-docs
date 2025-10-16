@@ -62,7 +62,7 @@ Other extensions such as Custom Script are available however these options requi
 
 Ensuring you have access to the Azure Serial Console and GRUB means that a password change or an incorrect configuration can be rectified in a matter of minutes instead of hours. You could even force the VM to boot from an alternative kernel should you have multiple kernels on disk in the scenario where your primary kernel becomes corrupt.
 
-:::image type="content" source="media/serial-console-grub-proactive-configuration/more-kernel.png" alt-text="Screenshot of the boot selected OS screen in GRUB, which shows multiple kernels can be chosen.":::
+:::image type="content" source="media/serial-console-grub-proactive-configuration/more_kernel_updated.png" alt-text="Screenshot of the boot selected OS screen in GRUB, which shows multiple kernels can be chosen.":::
 
 ## Suggested order of recovery methods
 
