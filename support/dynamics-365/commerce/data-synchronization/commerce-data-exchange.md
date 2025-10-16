@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot Commerce Data Exchange (CDX)
 description: Learn how to troubleshoot errors for Commerce Data Exchange (CDX) in Microsoft Dynamics 365 Commerce environments.
-author: v-chgri
+author: johnmichalak
 ms.author: johnmichalak
 ms.topic: troubleshooting
-ms.date: 10/15/2025
+ms.date: 10/16/2025
 ---
 # Troubleshoot Commerce Data Exchange (CDX)
 
@@ -212,6 +212,7 @@ Microsoft recommends that you contact Microsoft Support.
 [Configure, install, and activate Modern POS (MPOS)](/dynamics365/commerce/retail-modern-pos-device-activation)
 
 [Configure and install Commerce Scale Unit (self-hosted)](/dynamics365/commerce/dev-itpro/retail-store-scale-unit-configuration-installation)
+
 
 
 
