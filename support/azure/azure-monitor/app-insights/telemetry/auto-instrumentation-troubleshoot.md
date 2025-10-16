@@ -1,6 +1,9 @@
 ---
 title: Troubleshoot Application Insights Autoinstrumentation
 description: Provides troubleshooting help for problems in autoinstrumentation in Application Insights.
+author: JarrettRenshaw
+ms.author: jarrettr
+ms.reviewer: matthofa, v-nawrothkai
 ms.service: azure-monitor
 ms.custom: sap:Missing or incorrect telemetry and performance issues
 ms.date: 10/14/2025

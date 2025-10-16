@@ -3,10 +3,12 @@ title: Troubleshoot no data in Application Insights for .NET
 description: Review troubleshooting steps to try when you don't see any data in Application Insights for .NET and .NET Core.
 ms.date: 06/24/2024
 editor: v-jsitser
-ms.reviewer: aaronmax, v-leedennis
+author: JarrettRenshaw
+ms.author: jarrettr
+ms.reviewer: aaronmax, v-leedennis, matthofa, v-nawrothkai
 ms.service: azure-monitor
 ms.devlang: csharp
-ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal, devx-track-csharp
+ms.custom: sap:Missing or incorrect telemetry and performance issues
 #Customer intent: As an Application Insights user, I want to know how to troubleshoot issues when I can't see data in Application Insights for .NET or .NET Core so that I can use it effectively.
 ---
 # Troubleshoot no data: Application Insights for .NET and .NET Core
@@ -39,7 +41,7 @@ Example scenarios:
 > * One or more fields exceed size limits.
 > * SDKs are failing silently instead of throwing exceptions.
 >
-> You can use a tool like [Fiddler](https://www.telerik.com/fiddler/fiddler-classic), or any other tool that will inspect HTTP traffic, to confirm successful telemetry uploads. The back end will return a "200 OK" HTTP status code to indicate a successful upload. Or you can use the [SDK logs](#troubleshoot-logs) to see if the back end is rejecting data.
+> You can use a tool like [Fiddler](https://www.telerik.com/fiddler/fiddler-classic), or any other tool that inspects HTTP traffic to confirm successful telemetry uploads. The back end will return a "200 OK" HTTP status code to indicate a successful upload. Or you can use the [SDK logs](#troubleshoot-logs) to see if the back end is rejecting data.
 
 ### I'm experiencing data loss in a console app or on a web app when the app is about to stop
 
