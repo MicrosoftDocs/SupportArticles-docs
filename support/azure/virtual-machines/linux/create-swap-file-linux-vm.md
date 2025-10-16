@@ -87,7 +87,7 @@ You can create a SWAP partition by using one of the following options.
 1. Make the script executable:
 
     ```bash
-    chmod +x /var/lib/cloud/scripts/per-boot/swap.sh
+    sudo chmod +x /var/lib/cloud/scripts/per-boot/swap.sh
     ```
 
 1. Stop and start the VM. Stopping and starting the VM is only necessary the first time after you create the SWAP file.
