@@ -10,9 +10,9 @@ ms.service: azure-virtual-machines
 ms.collection: linux
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 8/26/2025
+ms.date: 10/16/2025
 ms.author: jarrettr
-ms.custom: sap:VM Admin - Windows (Guest OS)
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Power Options available from the Azure Serial Console
