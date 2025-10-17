@@ -12,6 +12,8 @@ ms.custom:
 ---
 # Windows 365 Link connection fails with "Failed to open a Microsoft Entra ID credential prompt"
 
+>
+
 After a user authenticates on the sign-in page, when the user tries to connect to the Cloud PC, the user might encounter the following message:
 
 > Connection Denied.  
