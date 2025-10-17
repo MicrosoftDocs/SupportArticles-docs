@@ -7,6 +7,8 @@ ms.date: 05/23/2025
 ---
 # Troubleshoot Application Insights integration with Azure App Service
 
+This article offers general recommendations and specific suggestions to troubleshoot issues with application monitoring in [Azure App Service](/azure/azure-monitor/app/codeless-app-service).
+
 ## [ASP.NET](#tab/net)
 
 > [!NOTE]
@@ -234,14 +236,6 @@ The following table provides an explanation of what these values mean, their und
 
 ## [Python](#tab/python)
 
-## Duplicate telemetry
-
-Only use autoinstrumentation on App Service if you aren't using manual instrumentation of OpenTelemetry in your code, such as the [Azure Monitor OpenTelemetry Distro](/azure/azure-monitor/app/opentelemetry-enable?tabs=python) or the [Azure Monitor OpenTelemetry Exporter](/python/api/overview/azure/monitor-opentelemetry-exporter-readme).
-
-Using autoinstrumentation on top of the manual instrumentation could cause duplicate telemetry and increase your cost. In order to use App Service OpenTelemetry autoinstrumentation, first remove manual instrumentation of OpenTelemetry from your code.
-
-If you're seeing unexpected charges or high costs in Application Insights, this guide can help. It covers common causes like high telemetry volume, data ingestion spikes, and misconfigured sampling. It's especially useful if you're troubleshooting issues related to cost spikes, telemetry volume, sampling not working, data caps, high ingestion, or unexpected billing. To get started, see [Troubleshoot high data ingestion in Application Insights](troubleshoot-high-data-ingestion.md).
-
 ## Missing telemetry
 
 If you're missing telemetry, follow these steps to confirm that autoinstrumentation is enabled correctly.
@@ -278,6 +272,14 @@ If you're missing telemetry, follow these steps to confirm that autoinstrumentat
     ```
 
     The `applicationinsights-extension.log` file in the same folder may show other helpful diagnostics.
+
+## Duplicate telemetry
+
+Only use autoinstrumentation on App Service if you aren't using manual instrumentation of OpenTelemetry in your code, such as the [Azure Monitor OpenTelemetry Distro](/azure/azure-monitor/app/opentelemetry-enable?tabs=python) or the [Azure Monitor OpenTelemetry Exporter](/python/api/overview/azure/monitor-opentelemetry-exporter-readme).
+
+Using autoinstrumentation on top of the manual instrumentation could cause duplicate telemetry and increase your cost. In order to use App Service OpenTelemetry autoinstrumentation, first remove manual instrumentation of OpenTelemetry from your code.
+
+If you're seeing unexpected charges or high costs in Application Insights, this guide can help. It covers common causes like high telemetry volume, data ingestion spikes, and misconfigured sampling. It's especially useful if you're troubleshooting issues related to cost spikes, telemetry volume, sampling not working, data caps, high ingestion, or unexpected billing. To get started, see [Troubleshoot high data ingestion in Application Insights](troubleshoot-high-data-ingestion.md).
 
 ## Django apps
 
