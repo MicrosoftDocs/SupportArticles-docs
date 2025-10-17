@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-jesits
 ms.custom:
 - sap:system performance\app,process,service performance (slow,unresponsive)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Applications freeze when they concurrently try to access a file on a network drive in Windows
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-six
 ms.custom:
 - sap:windows servicing,updates and features on demand\windows update configuration,settings and management
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # System File Checker (SFC) incorrectly flags Windows Defender PowerShell module files as corrupted
 

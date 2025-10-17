@@ -9,6 +9,8 @@ ms.reviewer: kaushika, scottmca
 ms.custom:
 - sap:backup,recovery,disk,and storage\configuring and using windows backup or other recovery
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # You can't use the ImageX.exe tool as a backup tool
 

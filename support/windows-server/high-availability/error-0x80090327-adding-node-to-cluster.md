@@ -9,6 +9,8 @@ ms.reviewer: kaushika, vlvasque, shasankp, ansol, v-lianna
 ms.custom:
 - sap:clustering and high availability\initial cluster creation or adding node
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error 0x80090327 when adding a node to a cluster
 

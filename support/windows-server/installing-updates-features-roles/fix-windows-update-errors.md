@@ -10,6 +10,8 @@ ms.custom:
 - sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
 - pcy:WinComm Devices Deploy
 adobe-target: true
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "aartigoyle" for triage before making the further changes to the screenshots.
@@ -51,6 +53,7 @@ Windows updates may fail to install if there are corruption errors. You can chec
 |0x800f0986|PSFX_E_APPLY_FORWARD_DELTA_FAILED|Applying forward delta failed|
 |0x800f0982|PSFX_E_MATCHING_COMPONENT_NOT_FOUND|Can't identify matching component for hydration|
 |[0x8024002E](troubleshoot-windows-update-error-code-0x8024002e.md)|WU_E_WU_DISABLED|Windows Update Client service is disabled|
+|0x800f0906|CBS_E_DOWNLOAD_FAILURE| Failure on content download for Feature on Demand or Inbox Corruption Repair.
 
 For example, an update might not install if a system file is damaged. The DISM may help you fix some Windows corruption errors.
 
@@ -75,7 +78,7 @@ To resolve Windows Update corruptions and address update installation failures, 
     > DISM repair works best when you connect to Microsoft Update servers to fetch missing or corrupted files. When you use the proceeding command, DISM gets the files needed to fix any corruptions from Windows Update. However, if your computer can't connect to Windows Update, you can alternatively use a working Windows installation as the repair source, or you can use files from a Windows folder on a network or from a USB or DVD. Instead, use this command:
 
     ```console
-    DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:\\<servername>\c$\winsxs /LimitAccess
+    DISM.exe /Online /Cleanup-Image /RestoreHealth /Source:\\<servername>\c$\windows /LimitAccess
     ```
 
     > [!NOTE]

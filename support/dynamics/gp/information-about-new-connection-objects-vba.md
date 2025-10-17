@@ -56,7 +56,3 @@ cn.DefaultDatabase = UserInfoGet.IntercompanyID
 cmd.ActiveConnection = cn
 End Sub
 ```
-
-## References
-
-[How to use the new RetrieveGlobals9.dll file in Integration Manager and in Microsoft Dynamics GP 9.0](https://support.microsoft.com/help/913341)

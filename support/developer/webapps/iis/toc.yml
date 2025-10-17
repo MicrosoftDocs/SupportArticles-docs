@@ -28,6 +28,8 @@ items:
 
 - name: Application Request and Routing (ARR)
   items:
+  - name: Proxy server rejects requests from ARR to back-end servers
+    href: application-request-routing/proxy-server-rejects-back-end-requests.md
   - name: SSL Common Names aren't enforced
     href: application-request-routing/affinity-not-honored-ssl-common-names-arr.md
   - name: Troubleshooting cache items in ARR version 2.0 or later

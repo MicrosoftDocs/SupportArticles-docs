@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:active directory\dcpromo and the installation or removal of domain controllers
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Domain controller promotion stops responding when NetBIOS over TCPIP is disabled in Windows Server 2012 R2
 

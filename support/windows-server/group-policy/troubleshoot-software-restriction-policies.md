@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jgerend, v-lianna
 ms.custom:
 - sap:group policy\applocker or software restriction policies
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot software restriction policies
 

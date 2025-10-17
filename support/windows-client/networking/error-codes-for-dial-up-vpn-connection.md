@@ -9,6 +9,8 @@ ms.reviewer: kaushika, tode
 ms.custom:
 - sap:network connectivity and file sharing\remote access (vpn,rras,cmak and aovpn)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # List of error codes for dial-up connections or VPN connections
 

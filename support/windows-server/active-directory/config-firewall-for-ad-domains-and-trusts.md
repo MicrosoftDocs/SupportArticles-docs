@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:active directory\domain or forest functional level updates,failures and advisory
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to configure a firewall for Active Directory domains and trusts
 
@@ -68,6 +70,7 @@ For more information about the dynamic port range change in Windows Server 2012 
 |49152-65535/TCP/UDP|88/TCP/UDP|Kerberos|
 |49152-65535/TCP/UDP|445/TCP|SMB (**)|
 |49152-65535/TCP|49152-65535/TCP|DFSR RPC (*)|
+|49152-65535/TCP|9389/TCP|Active Directory Web Services (ADWS)|
   
 NetBIOS ports as listed for Windows NT are also required for Windows 2000 and Server 2003 when trusts to domains are configured that support only NetBIOS-based communication. Examples are Windows NT-based operating systems or third-party Domain Controllers that are based on Samba.
 

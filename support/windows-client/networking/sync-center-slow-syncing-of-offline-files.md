@@ -9,6 +9,8 @@ ms.reviewer: kaushika, bburgin, garymu
 ms.custom:
 - sap:network connectivity and file sharing\offline files and folders (csc)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Sync Center: Slow syncing of offline files on some file servers
 

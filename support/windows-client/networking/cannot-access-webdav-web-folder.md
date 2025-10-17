@@ -9,6 +9,8 @@ ms.reviewer: kaushika, waltere
 ms.custom:
 - sap:network connectivity and file sharing\webclient and webdav
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # You can't access a WebDAV Web folder from a Windows-based client computer
 

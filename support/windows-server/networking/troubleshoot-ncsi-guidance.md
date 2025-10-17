@@ -9,6 +9,8 @@ ms.reviewer: kaushika, anupamk, asvaidya, hichauhan, v-lianna
 ms.custom:
 - sap:network connectivity and file sharing\ncsi
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Network Connection Status Indicator (NCSI) troubleshooting guidance
 

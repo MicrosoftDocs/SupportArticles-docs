@@ -9,6 +9,8 @@ ms.reviewer: kaushika, tode
 ms.custom:
 - sap:system performance\startup or pre-logon performance (slow,unresponsive,spinning circle,blank screen)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Http <-> Crypto deadlock causes slow boot and service start failure on SSL-enabled
 

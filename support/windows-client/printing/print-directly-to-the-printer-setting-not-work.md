@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:print,fax,and scan\print performance - failures,crashes,not responsive
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Print directly to the printer setting doesn't work with XPS-based print drivers
 

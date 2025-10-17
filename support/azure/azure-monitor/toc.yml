@@ -19,6 +19,9 @@ items:
         href: activity-logs/config-export/troubleshoot-permission-errors-in-activity-log-configuration.md
       - name: Troubleshoot the export of Activity Logs across Azure subscriptions
         href: activity-logs/config-export/troubleshoot-export-of-activity-logs-across-subscriptions.md
+      - name: Configuring Azure Activity Log Export
+        href: activity-logs/config-export/configuring-azure-activity-log-export-comprehensive-guide.md
+
 - name: Application Insights
   items:
   - name: OpenTelemetry troubleshooting
@@ -71,40 +74,40 @@ items:
             href: app-insights/data/how-to-update-third-party-server-configuration.md
           - name: Node.js
             href: app-insights/data/troubleshoot-app-insights-nodejs.md
-  - name: Application Insights experiences
+  - name: Application Insights portal experiences
     items:
     - name: Troubleshoot Application map issues
       href: app-insights/troubleshoot-application-map-issues.md
-    - name: Troubleshoot Azure Application Insights availability monitoring
-      items:
-      - name: Availability monitoring common issues FAQ
-        href: app-insights/availability/availability-monitoring-common-issues-faq.yml  
-      - name: Diagnose ping test failures
-        href: app-insights/availability/diagnose-ping-test-failure.md              
-      - name: Intermittent test failure and protocol violation error
-        href: app-insights/availability/intermittent-test-failure-protocol-error.md
-      - name: Use availability tests on an internal server behind a firewall
-        href: app-insights/availability/internal-server-availability-tests-firewall.md     
-      - name: Daily cap unexpected behaviors
-        href: app-insights/availability/daily-cap-unexpected-behaviors.md              
-      - name: Missing CPU Total and Committed Memory metrics
-        href: app-insights/availability/missing-cpu-total-committed-memory-metrics.md
-      - name: Portal connectivity issues
-        href: app-insights/availability/troubleshoot-portal-connectivity.md
-      - name: Troubleshoot user behavior analytics tools in Azure Application Insights
-        href: app-insights/availability/usage-troubleshoot.md
-  - name: Status Monitor and Change Analysis
+  - name: Availability Tests
+    items:
+    - name: Availability monitoring common issues FAQ
+      href: app-insights/availability/availability-monitoring-common-issues-faq.yml  
+    - name: Diagnose ping test failures
+      href: app-insights/availability/diagnose-ping-test-failure.md              
+    - name: Intermittent test failure and protocol violation error
+      href: app-insights/availability/intermittent-test-failure-protocol-error.md
+    - name: Use availability tests on an internal server behind a firewall
+      href: app-insights/availability/internal-server-availability-tests-firewall.md     
+    - name: Daily cap unexpected behaviors
+      href: app-insights/availability/daily-cap-unexpected-behaviors.md              
+    - name: Missing CPU Total and Committed Memory metrics
+      href: app-insights/availability/missing-cpu-total-committed-memory-metrics.md
+    - name: Portal connectivity issues
+      href: app-insights/availability/troubleshoot-portal-connectivity.md
+    - name: Troubleshoot user behavior analytics tools in Azure Application Insights
+      href: app-insights/availability/usage-troubleshoot.md
+  - name: Status Monitor
     items:
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
       href: app-insights/agent/status-monitor-v2-troubleshoot.md
-    - name: Troubleshoot Azure Monitor's Change Analysis
-      href: app-insights/agent/change-analysis-troubleshoot.md
 - name: Log Analytics
   items:
   - name: Configure and Manage Log analytics tables
     items:
     - name: Understand and mitigate high data consumption in Log Analytics
       href: log-analytics/configure-and-manage-log-analytics-tables/understand-and-mitigate-high-data-consumption-log-analytics.md
+    - name: Tables aren't populated in a DNS solution that's deployed to a workspace
+      href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-dns-table-issues.md
     - name: Troubleshoot custom table creation errors in Azure
       href: log-analytics/configure-and-manage-log-analytics-tables/troubleshoot-custom-table-creation-errors.md
     - name: Troubleshoot custom log table creation in Azure
@@ -136,14 +139,14 @@ items:
 
 
 
-  - name: Linux Agents
+  - name: Azure Monitor Agent (AMA) on Linux machine
     items:
     - name: Missing heartbeats in the Linux agent
       href: log-analytics/linux-agents/linux-agent-missing-heartbeats.md
     - name: Missing Linux performance counters
       href: log-analytics/linux-agents/linux-agent-performance-counter-missing.md
 
-  - name: Windows Agents
+  - name: Azure Monitor Agent (AMA) on Windows machine
     items:
     - name: Basic troubleshooting of Microsoft Monitoring Agent
       href: log-analytics/windows-agents/mma-troubleshoot-basics.md

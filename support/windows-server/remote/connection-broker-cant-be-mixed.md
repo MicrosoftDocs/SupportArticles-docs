@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:remote desktop services and terminal services\session connectivity
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Connection Broker on Windows Server 2012 or 2012 R2 and Session Host on Windows Server 2008 or 2008 R2 cannot be mixed in Remote Desktop Service environment
 

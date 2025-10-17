@@ -9,6 +9,8 @@ ms.reviewer: kaushika, DanMa
 ms.custom:
 - sap:network connectivity and file sharing\access to file shares (smb)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # You may have to wait for a long time to populate the information on shared folder sessions in Computer Management console
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-jeffbo
 ms.custom:
 - sap:active directory\active directory replication and topology
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # RODC replicates passwords when it's granted incorrect permissions in Windows Server
 

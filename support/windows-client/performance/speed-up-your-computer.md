@@ -9,6 +9,8 @@ ms.reviewer: kaushika, meerak
 ms.custom:
 - sap:system performance\system performance (slow,unresponsive,high cpu,resource leak)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Speed up a Windows 8.1 computer
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, herbertm, wincicadsec, mohak
 ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Problems with Kerberos authentication when a user belongs to many groups
 

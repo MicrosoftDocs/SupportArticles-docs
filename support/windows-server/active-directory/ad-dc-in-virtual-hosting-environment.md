@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:active directory\virtualized domain controller (errors and questions)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Things to consider when you host Active Directory domain controllers in virtual hosting environments
 

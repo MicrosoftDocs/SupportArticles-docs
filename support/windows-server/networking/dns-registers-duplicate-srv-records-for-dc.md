@@ -9,6 +9,8 @@ ms.reviewer: kaushika, Arrenc, Herbertm
 ms.custom:
 - sap:network connectivity and file sharing\dns
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Windows DNS registers duplicate SRV records for a DC if its computer name has uppercase letters
 

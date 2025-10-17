@@ -10,6 +10,8 @@ ms.custom:
 - sap:certificates and public key infrastructure (pki)\certificate chaining and revocation
 - pcy:WinComm Directory Services
 keywords: managed devices, certificates, WSUS, MECM, Windows Update
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 
 # Certificates are missing after you update a device to a newer version of Windows 10

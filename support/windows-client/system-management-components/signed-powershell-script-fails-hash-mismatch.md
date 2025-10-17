@@ -7,6 +7,8 @@ ms.custom:
 - sap:system management components\powershell,fix
 - pcy:WinComm User Experience
 audience: itpro
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Hash of the file does not match when running signed PowerShell script
 

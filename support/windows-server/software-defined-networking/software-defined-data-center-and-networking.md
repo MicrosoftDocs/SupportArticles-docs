@@ -9,6 +9,8 @@ ms.reviewer: kaushika, johnmar
 ms.custom:
 - sap:software defined networking\internal name resolution for sdn
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Software Defined Data Center and Software Defined Networking in Windows Server
 

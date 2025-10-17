@@ -9,6 +9,8 @@ ms.reviewer: kaushika, akastha, narafa, v-lianna
 ms.custom:
 - sap:remote desktop services and terminal services\session connectivity
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # "The system administrator has restricted the types of logon" error when connecting to a computer
 

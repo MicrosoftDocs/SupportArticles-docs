@@ -9,6 +9,8 @@ ms.reviewer: kaushika, stevemat, davidg, johnmar
 ms.custom:
 - sap:virtualization and hyper-v\high availability virtual machines
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # MAC address changes for virtual server during a failover with clustering
 

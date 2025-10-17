@@ -771,14 +771,14 @@ items:
       href: ./setup-upgrade-and-drivers/non-compliant-usb-3-devices-not-function.md
     - name: Power Management tab isn't visible
       href: ./setup-upgrade-and-drivers/power-management-not-visible-in-aoac-platform.md
-    - name: Prevent users from connecting to a USB storage device
-      href: ./setup-upgrade-and-drivers/prevent-users-connect-usb.md      
     - name: Running TPM Management console fails
       href: ./setup-upgrade-and-drivers/cannot-load-tpm-management-console.md
     - name: '"The operation timed out" error'
       href: ./setup-upgrade-and-drivers/operation-timed-out-error-disk-management-console.md
     - name: Uninstalling driver doesn't remove associated files
       href: ./setup-upgrade-and-drivers/uninstalling-driver-not-remove-associated-files.md
+    - name: USB audio or video devices malfunction when connected to specific Intel-based devices
+      href: ./setup-upgrade-and-drivers/usb-audio-video-devices-malfunction.md
     - name: USB device drivers are removed unexpectedly after Windows 10 is updated
       href: ./setup-upgrade-and-drivers/usb-device-drivers-removed-unexpectedly-after-windows-10-update.md
     - name: Windows 10 doesn't install specific drivers for USB audio device
@@ -805,6 +805,10 @@ items:
       href: ./setup-upgrade-and-drivers/iso-file-on-vlsc.md
     - name: Error 0x80042468 when creating a single partition
       href: ./setup-upgrade-and-drivers/error-when-creating-single-partition.md
+    - name: 'Error 0x80070003 during "Process Drivers for Migration" operation'
+      href: ../windows-server/setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md?context=/troubleshoot/windows-client/context/context
+    - name: Error 0x800F0818 - 0x20003 during upgrade from Windows 10 to Windows 11
+      href: ./setup-upgrade-and-drivers/error-0x800f0818-during-upgrade-to-windows-11.md
     - name: Error 87 when a Windows 10 image is applied
       href: ./setup-upgrade-and-drivers/dism-error-87-apply-windows-10-image.md
     - name: Error "A fatal error occurred while trying to sysprep the machine"
@@ -851,6 +855,8 @@ items:
       href: ./setup-upgrade-and-drivers/sysprep-fails-remove-or-update-store-apps.md
     - name: System restore points are disabled after upgrade
       href: ./setup-upgrade-and-drivers/system-restore-points-disabled.md
+    - name: Upgrade fails and generates error code 0xC1900101-0x20017
+      href: ./setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md
     - name: Windows 10 upgrade error codes
       href: ./setup-upgrade-and-drivers/windows-10-upgrade-error-codes.md
     - name: Windows 10 upgrade issues troubleshooting
@@ -1073,6 +1079,16 @@ items:
       href: ./system-management-components/fail-to-launch-vamt-3dot0.md
     - name: Windows Trace Session Manager service doesn't start
       href: ./system-management-components/windows-trace-session-manager-service-not-start-event-id-7000.md
+  - name: OpenSSH
+    items:
+    - name: Can't install OpenSSH features
+      href: ../windows-server/system-management-components/cant-install-openssh-features.md?context=/troubleshoot/windows-client/context/context
+    - name: Enable OpenSSH verbose logging
+      href: ../windows-server/system-management-components/enable-openssh-verbose-logging.md?context=/troubleshoot/windows-client/context/context
+    - name: OpenSSH client can't connect to a server via SSH
+      href: ../windows-server/system-management-components/open-client-can-not-connect-server.md?context=/troubleshoot/windows-client/context/context
+    - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
+      href: ../windows-server/system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell
     items:
     - name: Grant-DfsnAccess doesn't change inheritance mode
@@ -1357,6 +1373,8 @@ items:
       href: ./installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md
     - name: How to keep Windows up to date
       href: ./installing-updates-features-roles/keep-windows-up-to-date.md
+    - name: Known Issue Rollback
+      href: ../windows-server/installing-updates-features-roles/known-issue-rollback.md?context=/troubleshoot/windows-client/context/context
     - name: SFC flags Windows Defender files as corrupted
       href: ./installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md
     - name: Standard terminology that defines software updates
@@ -1381,12 +1399,16 @@ items:
     items:
     - name: Analyze log file entries that SFC.exe generates
       href: ./installing-updates-features-roles/analyze-sfc-program-log-file-entries.md
+    - name: Error code 0x8024402C when you try to install a Windows update or a Feature on Demand
+      href: ./installing-updates-features-roles/error-0x8024402c-installing-update-feature-on-demand.md
     - name: Fix errors found in CheckSUR.log
       href: ./installing-updates-features-roles/errors-in-checksur-log.md
     - name: SFC detects Opencl.dll as corrupted
       href: ./installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md
     - name: System Error 126 when you start TrustedInstaller
       href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
+    - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
+      href: ./installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md
     - name: Troubleshoot Windows Update error 0x80072EFE
       href: ./installing-updates-features-roles/troubleshoot-windows-update-error-0x80072efe-with-cipher-suite-configuration.md
     - name: Windows Update common errors and mitigation
@@ -1399,6 +1421,16 @@ items:
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
 - name: Support Tools
   items:
+  - name: Performance Monitoring Tools
+    items:
+    - name: Using Performance Monitor
+      href: ../windows-server/support-tools/troubleshoot-issues-performance-monitor.md?context=/troubleshoot/windows-client/context/context
+    - name: Using Process Explorer
+      href: ../windows-server/support-tools/troubleshoot-issues-process-explorer.md?context=/troubleshoot/windows-client/context/context
+    - name: Using Task Manager
+      href: ../windows-server/support-tools/support-tools-task-manager.md?context=/troubleshoot/windows-client/context/context
+    - name: Using WPR, WPA, or Xperf
+      href: ../windows-server/support-tools/support-tools-xperf-wpa-wpr.md?context=/troubleshoot/windows-client/context/context
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
@@ -1419,37 +1451,15 @@ items:
       href: ./windows-tss/collect-data-analyze-troubleshoot-performance-scenarios.md
     - name: Collect data to analyze and troubleshoot Remote Desktop Services scenarios
       href: ./windows-tss/collect-data-analyze-troubleshoot-remote-desktop-services-scenarios.md
-    - name: Collect data to analyze and troubleshoot Shell experience scenarios
+    - name: Collect data to analyze and troubleshoot shell experience scenarios
       href: ./windows-tss/collect-data-analyze-troubleshoot-shell-experiences-scenarios.md
+    - name: Collect data to analyze and troubleshoot Windows servicing, updates, and Features on Demand scenarios
+      href: ./windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md
     - name: Collect data to analyze and troubleshoot system management components scenarios
       href: ./windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios.md
-    - name: Collect data to analyze and troubleshoot Windows servicing, Updates, and Features on Demand scenarios
-      href: ./windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md
-    - name: Gather information for Active Directory replication issues
-      href: ./windows-tss/gather-information-using-tss-ad-replication.md
-    - name: Gather information for deployment-related issues
-      href: ./windows-tss/gather-information-using-tss-deployment.md
-    - name: Gather information for Group Policy issues
-      href: ./windows-tss/gather-information-using-tss-group-policy.md
-    - name: Gather information for Hyper-V related issues
-      href: ./windows-tss/gather-information-using-tss-hyper-v-issues.md
-    - name: Gather information for SQL cluster (AG/FCI) related issues
-      href: ./windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md
-    - name: Gather information for user experience-related issues
-      href: ./windows-tss/gather-information-using-tss-user-experience.md
-    - name: Gather information for Windows failover cluster related issues
-      href: ./windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md
-    - name: Gather information for Windows Update for Business reports-related issues
-      href: ./windows-tss/gather-information-using-tss-wufb-reports.md
+    - name: Collect data to analyze and troubleshoot Hyper-V related issues
+      href: ./windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios.md
+    - name: Collect data to analyze and troubleshoot SQL cluster (AG/FCI) related issues
+      href: ./windows-tss/collect-data-analyze-troubleshoot-sql-cluster-ag-fci-scenarios.md
     - name: Use the xray feature of TSS
       href: ./windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md
-  - name: Performance Monitoring Tools
-    items:
-    - name: Using Performance Monitor
-      href: ../windows-server/support-tools/troubleshoot-issues-performance-monitor.md?context=/troubleshoot/windows-client/context/context
-    - name: Using Process Explorer
-      href: ../windows-server/support-tools/troubleshoot-issues-process-explorer.md?context=/troubleshoot/windows-client/context/context
-    - name: Using Task Manager
-      href: ../windows-server/support-tools/support-tools-task-manager.md?context=/troubleshoot/windows-client/context/context
-    - name: Using WPR, WPA, or Xperf
-      href: ../windows-server/support-tools/support-tools-xperf-wpa-wpr.md?context=/troubleshoot/windows-client/context/context

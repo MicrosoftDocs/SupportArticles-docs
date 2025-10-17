@@ -1,14 +1,12 @@
 ---
 title: Troubleshoot with the General ledger adjustments page 
 description: This article explains why you might use the General ledger adjustments page to fix issues.
-author: RyanCCarlson2
 ms.date: 04/30/2024
 ms.topic: troubleshooting
 ms.search.form: 
 audience: Application User
 ms.reviewer: kfend
 ms.search.region: Global
-ms.author: rcarlson
 ms.search.validFrom: 2022-08-30
 ms.dyn365.ops.version: 10.0.30
 ms.custom: sap:General ledger - Setup, transactions and reporting\Issues with general journals

@@ -29,7 +29,7 @@ To do it, follow the steps:
 
 ### Step 1: Do all the year-end closing procedures for Payables Management in Microsoft Dynamics GP
 
-Close Payables Management first. This action guarantees that all the outstanding fixed asset transactions are capitalized. For more information about closing Payables Management, see [KB -Year-end closing procedures for the Payables Management module in Microsoft Dynamics GP](https://support.microsoft.com/help/875169).
+Close Payables Management first. This action guarantees that all the outstanding fixed asset transactions are capitalized. For more information about closing Payables Management, see [Year-end closing procedures for the Payables Management module in Microsoft Dynamics GP](./year-end-closing-payables-management.md).
 
 ### Step 2: Enter all the fixed asset transactions for the current fiscal year
 

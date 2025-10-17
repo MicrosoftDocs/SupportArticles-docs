@@ -9,6 +9,8 @@ ms.reviewer: kaushika, saweng, greglin, arrenc, ajayps
 ms.custom:
 - sap:network connectivity and file sharing\dynamic host configuration protocol (dhcp)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # DHCP clients are blocked when a DAI-enabled network device is used with a DHCP failover in Windows Server 2012 R2
 

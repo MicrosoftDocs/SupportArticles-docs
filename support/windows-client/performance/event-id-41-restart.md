@@ -10,6 +10,8 @@ ms.custom:
 ms.reviewer: kaushika,dougeby
 audience: itpro
 ms.collection: highpri
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Advanced troubleshooting for Event ID 41: "The system has rebooted without cleanly shutting down first"
 

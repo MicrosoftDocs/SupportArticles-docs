@@ -1,10 +1,10 @@
 ---
 title: Step 2 - Document your current configuration
 description: Document your current configuration as the second step to upgrade from Log Analytics Agent to Azure Monitor Agent.
-ms.date: 07/16/2024
-ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu
+ms.date: 10/14/2025
+ms.reviewer: neghuman, jeffwo, laurahu, vabruwer, irfanr, jofehse, muniesa, amanan, v-weizhu, jarrettr
 ms.service: azure-monitor
-ms.custom: sap:Issues migrating to Azure Monitor Agent (AMA)
+ms.custom: sap:Migrate to Azure Monitor Agent(AMA)
 #Customer intent: As an Azure Monitor user, I want to understand the data that I'm collecting so that I can successfully migrate to Azure Monitor Agent from the legacy Log Analytics agent.
 ---
 # Step 2: Document your current configuration

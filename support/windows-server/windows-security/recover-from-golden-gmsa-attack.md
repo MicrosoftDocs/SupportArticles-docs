@@ -10,6 +10,8 @@ ms.custom:
 - sap:windows security technologies\domain and forest trusts
 - pcy:WinComm Directory Services
 keywords: gMSA, golden gMSA, kds root key object
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # How to recover from a Golden gMSA attack

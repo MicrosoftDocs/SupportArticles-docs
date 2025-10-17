@@ -1,6 +1,6 @@
 ---
-title: Known issues with Teams Rooms on Android
-description: Provides a list of known issues for Teams Rooms on Android.
+title: Known issues with Teams on Android devices
+description: Provides a list of known issues with Android devices that run Teams.
 ms.author: meerak
 author: Cloud-Writer
 ms.reviewer: sohailta, garyanselme, czawideh
@@ -23,9 +23,9 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 07/22/2025
+ms.date: 10/06/2025
 ---
-# Known issues with Teams Rooms on Android
+# Known issues with Teams on Android devices
 
 <!-- If you get word that one of these issues no longer applies, contact meerak@microsoft.com to EoL the corresponding KB.  -->
 
@@ -42,9 +42,9 @@ ms.date: 07/22/2025
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
-|Unable to extract log files.|You're trying to extract a log file but either the log files are empty or you see an error message. This behavior can occur when the logs contain partially corrupted zip files or log files.|Contact Microsoft Support by filing a request at [SERVICENOW](https://microsoft.service-now.com/sp?id=sc_cat_item&sys_id=0baac5bcdb0ca414b720f337689619ce&sysparm_category=8b859929136eea002620b0912244b066).|
+|Unable to extract log files.|You're trying to extract a log file but either the log files are empty or you see an error message. This behavior can occur when the logs contain partially corrupted zip files or log files.|Try to extract the log files by using the [7-ZIP](https://www.7-zip.org/) tool instead of the built-in Windows file extraction tool.|
 
-## Issues with Teams phones
+## Issues affecting Teams phones
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
@@ -53,6 +53,8 @@ ms.date: 07/22/2025
 |Can't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | End the call made by using the **Consult first** option and then resume the original call.|
 |Unable to assign speed dial to line keys on a sidecar|When you assign speed dial contacts to line keys on the sidecar that is connected to a touch phone device, they don't work.|No workaround is available for the speed dial contacts that you assigned by using the sidecar. However the speed dial contacts that're already set up and shared line delegates and other groups are automatically pinned on the sidecar.|
 |Speed dial line key doesn't transfer an active call.|In older Teams Phones versions, you could transfer an active call by selecting a line key that is configured as a speed dial for a specific contact.<br/><br/>Beginning with Teams Phones version 1.7.0 1449/1.0.94.2025165302, you're only able to make an outgoing call to the speed dial after you select it from the **Transfer** menu.|If you want to transfer active calls to specific contacts, configure line keys as speed dials for those contacts and assign the **Transfer** and **Consult Transfer** menu options to the appropriate line keys.|
+|The screen hangs on Yealink phones when the headset is picked up.|On Yealink MP56 phones that are running version 1449/1.0.94.2025248901 of the Teams for Android app, the screen hangs or crashes when you pick up the headset to make an outbound call.|No workaround is available at this time.|
+|Can't see line keys on the home screen.|After you update your Teams Phones to version 1449/1.0.94.2025264001 of the Teams for Android app, you don't see any assigned line keys on the home screen.<br/><br/>This behavior is seen on non-touch phones such as Poly CCX 350 that have either the CAP or Premium CAP licenses.|No workaround is available at this time.|
 
 ## Limitations
 

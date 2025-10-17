@@ -2,8 +2,6 @@
 title: Troubleshoot Dataverse client errors
 description: Provides resolutions for common client errors that occur in Microsoft Dataverse.
 ms.date: 04/17/2025
-author: divkamath
-ms.author: dikamath
 ms.reviewer: jdaly
 manager: tasousa
 ms.custom: sap:User permissions\User unable to perform operations

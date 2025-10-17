@@ -1,0 +1,68 @@
+### YamlMime:Landing
+
+title: Microsoft Copilot Studio troubleshooting # < 60 chars
+summary: Welcome to Microsoft Copilot Studio troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Copilot Studio. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Copilot Studio troubleshooting
+  description: Landing page for Microsoft Copilot Studio troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.topic: landing-page # Required
+  ms.date: 09/12/2025
+  author: aartig13 #Required; your GitHub user alias, with correct capitalization.
+  ms.author: aartigoyle #Required; microsoft alias of author; optional team alias.
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+    # Card
+  - title: Generative answers
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Generative AI isn't available error message
+            url: generative-answers/generative-ai-not-available.md
+          - text: Generative answers pointing to SharePoint sources don't return results
+            url: generative-answers/sharepoint-no-response.md
+          - text: Resolve responsible AI content filter errors
+            url: generative-answers/agent-response-filtered-by-responsible-ai.md
+
+    # Card
+  - title: Knowledge
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Publish agent fails due to Bing sources
+            url: knowledge/agent-publish-fails-bing-sources.md
+          - text: Troubleshoot enterprise knowledge sources
+            url: knowledge/enterprise-data.md
+
+    # Card
+  - title: Licensing
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: Resolve throttling errors in agents
+          url: licensing/throttling-errors-agents.md
+        - text: Users outside the Copilot Studio authors security group can access Copilot Studio
+          url: licensing/authors-access.md
+
+  # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Microsoft Copilot Studio documentation
+            url: /microsoft-copilot-studio/
+          - text: Microsoft Copilot Studio training
+            url: /training/browse/?expanded=power-platform&products=microsoft-copilot-studio
+
+  # Card
+  - title: Support resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Microsoft Copilot Studio support
+            url: /microsoft-copilot-studio/fundamentals-support
+          - text: Microsoft Copilot Studio forum
+            url: https://community.powerplatform.com/forums/thread/?groupid=db8f53c2-767d-47d6-a1ae-fe4c828a6553
+          - text: Microsoft Copilot Studio Ideas forum
+            url: https://ideas.powervirtualagents.com/d365community/forum/21a4f1f9-f7fc-ec11-82e6-000d3a8b109b

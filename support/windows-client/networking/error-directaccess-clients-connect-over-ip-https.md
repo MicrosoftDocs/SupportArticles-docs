@@ -9,6 +9,8 @@ ms.reviewer: ajayps, kaushika
 ms.custom:
 - sap:networking\remote access
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # DirectAccess clients can connect over Teredo but not through IP-HTTPS
 

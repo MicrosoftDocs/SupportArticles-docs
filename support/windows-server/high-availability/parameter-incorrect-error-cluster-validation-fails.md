@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:clustering and high availability\cannot bring a resource online
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error (The parameter is incorrect) and cluster validation fails against "Validate Resource" status
 

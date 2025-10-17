@@ -9,6 +9,8 @@ ms.reviewer: kaushika, akhleshs, sabinn, warrenw, timnewton, rafx
 ms.custom:
 - sap:remote desktop services and terminal services\licensing for remote desktop services (terminal services)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Best practices for setting up RD licensing across Active Directory domains/forests or work groups
 

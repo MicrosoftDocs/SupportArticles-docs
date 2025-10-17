@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:active directory\domain or forest functional level updates,failures and advisory
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error when you run the `Adprep /rodcprep` command in Windows Server 2008: Adprep could not contact a replica for partition DC=DomainDnsZones,DC=Contoso,DC=com
 

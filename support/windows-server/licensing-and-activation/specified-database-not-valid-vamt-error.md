@@ -9,6 +9,8 @@ ms.reviewer: kaushika, scottmca, meerak
 ms.custom:
 - sap:windows activation\windows activation issues
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # The specified database is not a valid VAMT database error message when you try to create a database by using VAMT 3.0 on a Windows 8 or Windows Server 2012-based computer
 

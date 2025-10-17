@@ -10,6 +10,8 @@ ms.reviewer: kaushika, v-tappelgate
 ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # KDC service on an RODC can't start and generates error 1450

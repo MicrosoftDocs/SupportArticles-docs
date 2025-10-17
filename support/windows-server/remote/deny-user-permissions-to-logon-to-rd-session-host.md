@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:remote desktop services and terminal services\deployment,configuration,and management of remote desktop services infrastructure
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # You notice that the check box "Deny this user permissions to logon to a Remote Desktop Session Host Server" behaves differently in Windows Server 2003 and Windows Server 2008
 

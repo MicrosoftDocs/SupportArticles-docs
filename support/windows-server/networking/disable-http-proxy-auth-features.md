@@ -1,7 +1,7 @@
 ---
 title: How to disable HTTP proxy features
 description: Describes how to disable specific features of Windows HTTP proxies.
-ms.date: 05/27/2025
+ms.date: 09/26/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -10,6 +10,8 @@ ms.custom:
 - sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
 - pcy:WinComm Networking
 keywords: http proxy, authentication, loopback, WPAD
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # How to disable HTTP proxy features
@@ -58,3 +60,15 @@ After you disable WPAD, you must manually configure all proxies. The registry ke
 
 > [!IMPORTANT]
 > In addition to setting the registry key, WPAD should also be disabled in the Windows **Settings** UI, because third-party apps and Internet browsers may rely on these settings for Proxy Auto-Discovery.
+
+## How to disable proxy sorting
+
+In Windows Server and Windows client, when multiple proxies are configured, the system sorts them based on their response time. If you want to disable this feature, you can do so by setting a DWORD value for the following registry subkey to **1**:
+
+```console
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\WinHTTP\DisableProxySort
+```
+
+After you disable proxy sorting, you'll need to restart the _WinHTTP Web Proxy Auto-Discovery Service_ (`WinHttpAutoProxySvc`) service for the change to take effect. Once restarted, the system uses the order in which the proxies were configured, without sorting them by response time.
+
+If first proxy in list is unavailable, there will be a delay while the service determines that proxy is unreachable and moves to next proxy. To avoid this delay, ensure that all configured proxies are reachable or enable proxy sorting again.

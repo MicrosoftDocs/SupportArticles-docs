@@ -9,6 +9,8 @@ ms.custom:
 - sap:windows desktop and shell experience\modern,inbox and microsoft store apps
 - pcy:WinComm User Experience
 ms.reviewer: kaushika, warrenw, traceytu, iovoicul, kimberj, v-lianna
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Troubleshoot Apps failing to start using Process Monitor
 

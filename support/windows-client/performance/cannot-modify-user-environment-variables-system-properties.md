@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # You cannot modify user environment variables in the System Properties dialog box if you log on by using a standard user account
 

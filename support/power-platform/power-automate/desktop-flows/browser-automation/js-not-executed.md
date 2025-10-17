@@ -2,9 +2,7 @@
 title: Run JavaScript Function on Web Page Action Fails to Execute
 description: Solves an issue where the Run JavaScript function on web page action isn't executed and returns no error.
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.reviewer: amitrou
-ms.author: amitrou
-author: andreas-mitrou
+ms.reviewer: v-shaywood
 ms.date: 04/09/2025
 ---
 # The "Run JavaScript function on web page" action doesn't execute but no error is reported

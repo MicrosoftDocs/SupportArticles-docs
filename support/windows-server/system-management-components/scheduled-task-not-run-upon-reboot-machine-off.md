@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system management components\task scheduler
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Scheduled task may not run upon reboot if the machine is off at the time of task
 

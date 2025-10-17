@@ -4,6 +4,7 @@ description: This article describes how to reset the network interface for Azure
 services: virtual-machines
 documentationcenter: ''
 author: JarrettRenshaw
+ms.author: jarrettr
 manager: dcscontentpm
 ms.service: azure-virtual-machines
 ms.collection: windows
@@ -12,7 +13,6 @@ ms.tgt_pltfrm: vm-windows
 ms.custom: sap:Cannot connect to my VM, devx-track-azurecli, linux-related-content
 ms.workload: infrastructure-services
 ms.date: 09/19/2024
-ms.author: tibasham
 ---
 # Reset the network interface for Azure Linux VM
 

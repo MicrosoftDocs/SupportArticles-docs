@@ -9,6 +9,8 @@ ms.custom:
 - pcy:WinComm User Experience
 ms.reviewer: sybruckm, lizlong, paoloma
 audience: itpro
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Troubleshoot kiosk mode issues
 

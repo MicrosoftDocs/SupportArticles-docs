@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Manually rebuild performance counters for Windows Server 2008 64 bit or Windows Server 2008 R2 systems
 

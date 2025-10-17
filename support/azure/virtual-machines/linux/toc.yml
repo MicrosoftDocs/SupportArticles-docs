@@ -333,7 +333,7 @@
     href: serial-console-grub-single-user-mode.md
   - name: Serial Console NMI/SysRq
     href: serial-console-nmi-sysrq.md
-  - name: Serial console grub proactive configuration
+  - name: Save downtime with Serial console grub proactive configuration
     href: serial-console-grub-proactive-configuration.md   
 
 - name: On-demand Capacity Reservation issues
@@ -403,6 +403,8 @@
       href: linux-agent-cannot-process-extensions.md
     - name: Supported operating systems
       href: ../windows/extension-supported-os.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Removing Extensions NetApp CVO Image
+      href: ../linux/removing-extensions-netapp-cvo.md
   - name: Cloud-init
     items:
     - name: Azure cloud-init support for Linux VMs

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, chadbee, tidavis
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Stop error 0x113 if you use Intel and AMD graphics adapters on a Windows 8.1-based computer
 

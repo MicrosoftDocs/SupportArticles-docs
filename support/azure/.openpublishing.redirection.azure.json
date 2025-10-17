@@ -2843,7 +2843,7 @@
       {
         "source_path": "azure-kubernetes/error-code-operationnotallowed-publicipcountlimitreached.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "azure-kubernetes/error-code-operationpreempted.md",
@@ -6251,6 +6251,116 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "azure/azure-kubernetes/create-upgrade-delete/error-code-invalidparameter.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/invalidparameter-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure/azure-kubernetes/create-upgrade-delete/error-code-invalidresourcereference.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/invalidresourcereference-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure/azure-kubernetes/create-upgrade-delete/error-code-missingsubscriptionregistration.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/missingsubscriptionregistration-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-customprivatednszonemissingpermissionerror.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/customprivatednszonemissingpermissions-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-linkedauthorizationfailed.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/linkedauthorizationfailed-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-serviceprincipalvalidationclienterror.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/serviceprincipalvalidationclienterror-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-publicipcountlimitreached.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/publicipcountlimitreached-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-quotaexceeded.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/quota-exceeded-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/zonalallocation-allocationfailed-error",
+        "redirect_document_id": true
+      },
+            {
+        "source_path": "azure/azure-kubernetes/create-upgrade-delete/error-code-dnsserviceipoutofservicecidr.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/dnsserviceipoutofservicecidr-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-inuseroutetablecannotbedeleted.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/inuseroutetablecannotbedeleted-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure/azure-kubernetes/create-upgrade-delete/error-code-invalidloadbalancerprofileallocatedoutboundports.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/invalidloadbalancerprofileallocatedoutboundports-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-servicecidroverlapexistingsubnetscidr.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/servicecidroverlapexistingsubnetscidr-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-subnetisfull.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/subnetisfull-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/toomanyrequestsreceived-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/operationnotallowed-publicipcountlimitreached-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-requestdisallowedbypolicy.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/requestdisallowedbypolicy-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-operationpreempted.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/aksoperationpreempted-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/nodepoolmcversionincompatible-error.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/nodepoolmcversionincompatible-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/error-code-unsatisfiablepdb.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/error-codes/unsatisfiablepdb-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "app-service/ase-migration-faq.yml",
+        "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/agent/change-analysis-troubleshoot.md",
+        "redirect_url": "/azure/azure-monitor/change/change-analysis",
+        "redirect_document_id": false
+      },
+      {
         "source_path": "azure-storage/files/alerts/files-troubleshoot-create-alerts.md",
         "redirect_url": "/azure/storage/files/files-monitoring-alerts",
         "redirect_document_id": false
@@ -6279,6 +6389,10 @@
         "source_path": "general/support-policy-containers.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "app-service/app-service-compliance-wit.md",
+        "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service"
       },
       {
         "source_path": "azure-kubernetes/connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md",
@@ -6373,6 +6487,10 @@
         {
         "source_path": "automation/runbooks/reinstall-oms-agent-linux.md",
         "redirect_url": "/troubleshoot/azure/automation/welcome-automation"
+      },
+        {
+        "source_path": "virtual-machines/windows/run-win-server-2003.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/ms-azure-windows-eos"
       }
   ]
 }

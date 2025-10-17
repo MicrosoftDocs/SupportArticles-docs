@@ -9,6 +9,8 @@ ms.custom:
 - sap:windows security technologies\kerberos authentication
 - pcy:WinComm Directory Services
 ms.reviewer: kaushika, raviks,
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 
 # Troubleshooting Kerberos RBCD issues

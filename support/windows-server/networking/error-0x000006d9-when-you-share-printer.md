@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:network connectivity and file sharing\windows firewall with advanced security (wfas)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error 0x000006D9 when you try to share a printer on a computer that is running Windows 7 or Windows Server 2008 R2
 

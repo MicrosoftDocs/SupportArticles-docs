@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:remote desktop services and terminal services\performance (audio and video) and remotefx
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Remote Desktop cannot connect to the VDI-based remote computer after enabling Microsoft RemoteFX 3D Video Adapter
 

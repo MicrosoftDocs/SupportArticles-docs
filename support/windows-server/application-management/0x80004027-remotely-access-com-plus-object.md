@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:application technologies and compatibility\dcom service startup and permissions
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # 0x80004027 error when you try to remotely access COM+ object after you upgrade to Windows Server 2016 or later versions
 

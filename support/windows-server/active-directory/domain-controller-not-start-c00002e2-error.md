@@ -9,6 +9,8 @@ ms.reviewer: kaushika, nedpyle
 ms.custom:
 - sap:active directory\active directory backup,restore,or disaster recovery
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed
 

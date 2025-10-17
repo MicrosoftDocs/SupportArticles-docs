@@ -9,6 +9,8 @@ ms.reviewer: kaushika, joelch
 ms.custom:
 - sap:network connectivity and file sharing\access to file shares (smb)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # System error 2148073478, extended error, or Invalid Signature error message on SMB connections in Windows Server 2012 or Windows 8
 

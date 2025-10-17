@@ -9,6 +9,8 @@ ms.reviewer: kaushika, CCLAY
 ms.custom:
 - sap:group policy\problems applying group policy
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Disable screen saver passwords by using policies
 

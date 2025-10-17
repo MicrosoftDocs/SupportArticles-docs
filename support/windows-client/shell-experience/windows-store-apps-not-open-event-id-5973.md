@@ -9,6 +9,8 @@ ms.reviewer: kaushika, xiangwu
 ms.custom:
 - sap:windows desktop and shell experience\modern,inbox and microsoft store apps
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Windows Store apps may not open and Event ID 5973 is logged in the Application log
 
