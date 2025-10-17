@@ -1,3 +1,4 @@
+---
 title: Resize a Windows 365 Business Cloud PC
 description: Discusses how to resize a Cloud PC's RAM, CPU, or storage based on your available licenses.
 manager: dcscontentpm
@@ -9,7 +10,7 @@ ms.custom:
 - pcy:WinComm User Experience
 appliesto:
 - <a href=https://learn.microsoft.com/lifecycle/products/windows-365target=_blank>Supported versions of Windows 365</a>
-
+---
 # Resize a Windows 365 Business Cloud PC
 
 The Resize remote action preserves user and disk data. You can use this remote action to modify a Cloud PC in the following ways:
