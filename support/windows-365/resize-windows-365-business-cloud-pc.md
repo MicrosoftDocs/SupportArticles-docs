@@ -25,11 +25,11 @@ The Resize remote action preserves user and disk data. You can use this remote a
 > - You can't use the Resize remote action on Cloud PCs that use Graphical Processing Units (GPU Cloud PCs). Although GPU Cloud PCs might show up in the resize flow, trying to resize a GPU Cloud PC results in an error.
 
 > [!NOTE]  
-> These operations don't require you to re-provision the Cloud PC.
+> These operations don't require you to reprovision the Cloud PC.
 
-Consider resizing a Cloud PC when a user needs changes such as the following:
+Consider resizing a Cloud PC when a user needs changes in the following components:
 
-- Additional RAM and vCPU cores to run CPU intensive applications.
+- More RAM and vCPU cores to run CPU-intensive applications.
 - More disk space for storing files.
 - Less RAM and fewer vCPU cores to run their current workload applications.
 
@@ -53,7 +53,7 @@ During the resizing process, the Windows 365 service automatically unassigns the
 
 ## How to resize a Windows 365 Business Cloud PC
 
-1. Sign in to the [User Details Panel - Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/users), and then select the user who's associated with the Cloud PC that you want to resize.
+1. Sign in to the [User Details Panel - Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home#/users), and then select the user whose Cloud PC that you want to resize.
 
    :::image type="content" source="./media/resize-windows-365-business-cloud-pc/windows-365-active-user-list.png" alt-text="User details panel of the Microsoft 365 admin center, showing one user in the list.":::
 
@@ -63,7 +63,7 @@ During the resizing process, the Windows 365 service automatically unassigns the
 
 1. Select one of the available options. The list of options is based on your inventory's available licenses.
 
-   :::image type="content" source="./media/resize-windows-365-business-cloud-pc/resize-user-options-dialog-box.png" alt-text="List of the size options for a device, based on the available licences.":::
+   :::image type="content" source="./media/resize-windows-365-business-cloud-pc/resize-user-options-dialog-box.png" alt-text="List of the size options for a device, based on the available licenses.":::
 
 1. Select **Resize**.
 
