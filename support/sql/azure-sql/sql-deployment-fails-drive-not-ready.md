@@ -84,13 +84,18 @@ This issue occurs because of the selected Azure VM size. To solve the issue, use
 If you can't use another VM SKU without a RAW local SSD, consider the following workarounds:
 
 - Deploy the VM using a Windows Server-only image, [format and initialize the temporary NVMe drive](/azure/virtual-machines/enable-nvme-temp-faqs#how-can-i-format-and-initialize-temp-nvme-disks-in-windows-when-i-create-a-vm-), and then manually install SQL Server.
+  
   - If you choose to put `tempdb` on the local SSD, you must reinitialize the disk before starting SQL Server every time the VM is restarted or deallocated.
-- Deploy the SQL Server VM image, but configure `tempdb` to use a different drive than the ephemeral storage during the deployment. For example, you can configure `tempdb` to use the `C:`, or remote storage drive.
-  - You can configure this setting on the **SQL Server settings** page in the Azure portal when [deploying the SQL Server VM image](https://portal.azure.com/#view/HubsExtension/ServiceMenuBlade/~/SqlVirtualMachine/extension/SqlAzureExtension/menuId/AzureSqlHub/itemId/SqlVirtualMachine).
-  - Under **Storage configuration**, select **Change configuration** to open the **Configure storage** pane.
-  - Expand **tempdb storage** and choose _any option other than_ `Use local SSD drive`:
 
-    :::image type="content" source="media/sql-deployment-fails-drive-not-ready/change-tempdb-location.png" alt-text="Screenshot of the tempdb storage configuration in the Azure portal when deploying a SQL VM image." lightbox="media/sql-deployment-fails-drive-not-ready/change-tempdb-location.png":::
+- Deploy the SQL Server VM image, but configure `tempdb` to use a different drive than the ephemeral storage during the deployment. For example, you can configure `tempdb` to use the `C:`, or remote storage drive.
+  
+  1. You can configure this setting on the **SQL Server settings** page in the Azure portal when [deploying the SQL Server VM image](https://portal.azure.com/#view/HubsExtension/ServiceMenuBlade/~/SqlVirtualMachine/extension/SqlAzureExtension/menuId/AzureSqlHub/itemId/SqlVirtualMachine).
+  
+  1. Under **Storage configuration**, select **Change configuration** to open the **Configure storage** pane.
+  
+  1. Expand **tempdb storage** and choose _any option other than_ `Use local SSD drive`:
+
+     :::image type="content" source="media/sql-deployment-fails-drive-not-ready/change-tempdb-location.png" alt-text="Screenshot of the tempdb storage configuration in the Azure portal when deploying a SQL VM image." lightbox="media/sql-deployment-fails-drive-not-ready/change-tempdb-location.png":::
 
 ## Impacted VMs
 
