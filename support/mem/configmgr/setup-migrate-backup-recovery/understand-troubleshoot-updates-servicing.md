@@ -256,7 +256,7 @@ The below site database functions must return the correct Site Version that corr
 SELECT dbo.fnCurrentSiteVersion()
 ```
 
-Note only _nnnn_ is the build number to look at. Minor build number _mm_ is not used for the applicability purposes. If you spot a discrepancy, proceed with opening a support case.
+Note only _nnnn_ is the build number to look at. Minor build number _mm_ is not used for the applicability purposes. If you spot a discrepancy, submit a ticket to Microsoft Support.
 
 | Location | Function/Value | Expected value |
 |---|---|---|
@@ -286,7 +286,7 @@ Get new Easy Setup Package IDs~~
 Found a new available update~~
 ```
 
-DMPDownloader uses high priority [State Messages](https://learn.microsoft.com/troubleshoot/mem/configmgr/update-management/state-messaging-description) to report the progress to the site server. The following entries are logged in DMPDownloader.log referring the  Update Package GUID (for example, `3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e`):
+DMPDownloader uses high priority [State Messages](../update-management/state-messaging-description.md) to report the progress to the site server. The following entries are logged in DMPDownloader.log referring the  Update Package GUID (for example, `3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e`):
 
 ```log
 Generating state message: 6 for package 3b7d84fa-eccc-4ea0-b8ab-abbda1e88e0e~~
@@ -458,34 +458,20 @@ If a specific URL found to be failing the download, the error resembling the fol
 
 In this case:
 
-1. Verify [Internet access requirements](https://learn.microsoft.com/intune/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing) and [TLS 1.2 ones](https://learn.microsoft.com/intune/configmgr/core/plan-design/security/enable-tls-1-2) on the machine hosting Service Connection Point.
+1. Verify [Internet access requirements](/intune/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing) and [TLS 1.2 ones](/intune/configmgr/core/plan-design/security/enable-tls-1-2) on the machine hosting Service Connection Point.
 2. Follow up on the proxy usage - and verify the site system configuration.
 3. Copy-paste URL to a browser and make sure the file downloads successfully with its digital signature being valid.
 4. Collect the network trace with any convenient tool and analyze the outcome.
 
-See also the following article: [Error when downloading ConfigMgr.AdminUIContent.cab by using SMS_DMP_DOWNLOADER or ServiceConnectionTool.exe](service-connection-tool-not-download-updates).
+See also the following article: [Error when downloading ConfigMgr.AdminUIContent.cab by using SMS_DMP_DOWNLOADER or ServiceConnectionTool.exe](service-connection-tool-not-download-updates.md).
 
-##### Approaching extraction issues
+#### Approaching extraction issues
 
-There are rare cases when DMPDownloader fails to unpack incoming files even if the content itself is fine. The usual cause is Anti-malware scan. Make sure the [Configuration Manager anti-malware exclusions](https://learn.microsoft.com/troubleshoot/mem/configmgr/endpoint-protection/recommended-antivirus-exclusions) are properly configured.
+There are rare cases when DMPDownloader fails to unpack incoming files even if the content itself is fine. The usual cause is Anti-malware scan. Make sure the [Configuration Manager anti-malware exclusions](../endpoint-protection/recommended-antivirus-exclusions.md) are properly configured.
 
-##### Restarting update sync and download
+#### Restarting update sync and download
 
-If you suspect that the download has completed, but the content has been tampered with, use [Update Reset tool](https://learn.microsoft.com/intune/configmgr/core/servers/manage/update-reset-tool) to clean up Update Package information from the database and delete all downloaded content. This tool restarts the whole process from **Synchronization** step.
-
-#### Case Study: Failed to download Admin UI content payload with exception: The underlying connection was closed
-
-The error resembling below is logged in DMPDownloader.log for any of the content payload:
-
-
-
-To troubleshoot this issue:  
-
-1. Make sure all the [Internet Access Requirements](https://learn.microsoft.com/intune/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing) are met.
-2. Make sure the Service Connection Point supports **TLS 1.2**. [TLS 1.2 Enablement Guide](https://learn.microsoft.com/intune/configmgr/core/plan-design/security/enable-tls-1-2) provides more details.
-3. Check the firewall to make sure that it doesn't block the connection. TCP port 443 and 80 must be exempted.
-
-
+If you suspect that the download has completed, but the content has been tampered with, use [Update Reset tool](/intune/configmgr/core/servers/manage/update-reset-tool) to clean up Update Package information from the database and delete all downloaded content. This tool restarts the whole process from **Synchronization** step.
 
 ## Before you install an update
 
@@ -495,13 +481,13 @@ Review the following steps before you install updates from within the Configurat
 
 Review the following update checklist for actions to take before you start the update:
 
-- [Checklist for installing update 2503](https://learn.microsoft.com//intune/configmgr/core/servers/manage/checklist-for-installing-update-2503)
-- [Checklist for installing update 2409](https://learn.microsoft.com//intune/configmgr/core/servers/manage/checklist-for-installing-update-2409)
-- [Checklist for installing update 2403](https://learn.microsoft.com//intune/configmgr/core/servers/manage/checklist-for-installing-update-2403)
+- [Checklist for installing update 2503](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2503)
+- [Checklist for installing update 2409](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2409)
+- [Checklist for installing update 2403](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2403)
 
 ### Step 2: Run the prerequisite checker before you install an update
 
-Before you install an update, consider running the prerequisite check for that update. For more information, see [Before you install an in-console update](https://learn.microsoft.com/en-us/intune/configmgr/core/servers/manage/prepare-in-console-updates#before-you-install-an-in-console-update).
+Before you install an update, consider running the prerequisite check for that update. For more information, see [Before you install an in-console update](/intune/configmgr/core/servers/manage/prepare-in-console-updates#before-you-install-an-in-console-update).
 
 ## Identify Replication and Installation Troubleshooting Path
 
@@ -524,7 +510,7 @@ Once Update Package is downloaded, it must be replicated to other sites before i
 
 Once replicated, the Easy Setup Package is extracted back from Content Library of the Site Server into `\CMUStaging` folder to be used during the installation process.
 
-The following steps explain the [flow](https://learn.microsoft.com/intune/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the installation replicates to other sites.
+The following steps explain the [flow](/intune/configmgr/core/servers/manage/update-replication-flowchart) for an in-console update in which the installation replicates to other sites.
 
 <details><Summary>Click here to expand Replication Steps</summary>
 
@@ -687,7 +673,7 @@ Use below flowchart to narrow down the issue at Replication step. Note it assume
 
 ![Replication graph](./media/understand-troubleshoot-updates-servicing/cm-updatesandservicing-replication.svg)
 
-In the case of multi-tier hierarchy, the Child Primary Sites must also replicate the Easy Setup Package from their Parent Site. The flow is exactly the same as for any other classic Package. Refer to the [Flowchart - Update replication for Configuration Manager](https://learn.microsoft.com/intune/configmgr/core/servers/manage/update-replication-flowchart) page for more details.
+In the case of multi-tier hierarchy, the Child Primary Sites must also replicate the Easy Setup Package from their Parent Site. The flow is exactly the same as for any other classic Package. Refer to the [Flowchart - Update replication for Configuration Manager](/intune/configmgr/core/servers/manage/update-replication-flowchart) page for more details.
 
 #### Troubleshoot Update Package staying in State=2 (Enabled)
 
@@ -724,7 +710,7 @@ Verify the Source, Package Version, and PackageID. Use PackageID to trace the Ea
 
 #### Investigate Content Distribution failures
 
-The rest of the troubleshooting is the same as for any [Classic Package replicated between Sites](https://learn.microsoft.com/troubleshoot/mem/configmgr/content-management/understand-package-actions#distribute-a-package-to-dp-across-sites). If the flow failed or the logs have been rolled over, use the **RetryContentReplication WMI Method** of the SMS provider of the top-level site to force the Easy Setup Package update:
+The rest of the troubleshooting is the same as for any [Classic Package replicated between Sites](../content-management/understand-package-actions.md#distribute-a-package-to-dp-across-sites). If the flow failed or the logs have been rolled over, use the **RetryContentReplication WMI Method** of the SMS provider of the top-level site to force the Easy Setup Package update:
 
  ```powershell
  (gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)
@@ -753,7 +739,7 @@ Refer to **DistMgr.log** to track re-processing of the Easy Setup Package.
 
 The following steps explain the process of extracting the update to run prerequisite checks before installing Update Packages at a Central Administration Site and Child Primary Sites.
 
-The current set of rules in the Prerequisite checks can be found in the [list of Prerequisite Checks](https://learn.microsoft.com/mem/configmgr/core/servers/deploy/install/list-of-prerequisite-checks). Updating a site causes only SOME checks to be performed.
+The current set of rules in the Prerequisite checks can be found in the [list of Prerequisite Checks](/mem/configmgr/core/servers/deploy/install/list-of-prerequisite-checks). Updating a site causes only SOME checks to be performed.
 
 <details><Summary>Prerequisite Check Steps</summary>
 
@@ -1049,11 +1035,11 @@ To meet both prerequisites, consider manually installing the following MSIs from
 Alternatively, download latest binaries from Microsoft Download Center:
 
 - [SQL Server 2012 Native Client 11.0.7001.0](https://www.microsoft.com/download/details.aspx?id=50402) or [SQL Server 2012 Feature Pack (scroll to Native Client)](https://www.microsoft.com/download/details.aspx?id=29065)
-- [ODBC Driver 18 for SQL Server](https://learn.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server)
+- [ODBC Driver 18 for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server)
 
 #### Frequently blocking checks
 
-The below checks are known to frequently block the Upgrade Package Setup. There is no way to bypass them but resolving the blocking condition. In case of any doubts, proceed with opening a Support Ticket.
+The below checks are known to frequently block the Upgrade Package Setup. There is no way to bypass them but resolving the blocking condition. In case of any doubts, consider opening a ticket with Microsoft Support.
 
 ##### Site System Server with Windows Server 2012 or 2012 R2
 
@@ -1070,7 +1056,7 @@ If you just in-place upgraded the OS on remote site system, restart the site ser
 
 Having any resource access profile or its deployment configured in earlier version of ConfigMgr also creates a block. Besides, any existing co-managed device with 'RA Profile' workload set toward ConfigMgr blocks the upgrade too.
 
-To pass the check, move the Resource Access Policies workload slider to Intune only. Follow the official guidance on [Co-management workloads](https://learn.microsoft.com/intune/configmgr/comanage/workloads).
+To pass the check, move the Resource Access Policies workload slider to Intune only. Follow the official guidance on [Co-management workloads](/intune/configmgr/comanage/workloads).
 If there is no co-management configured, you have to configure it at least temporarily to move the slider.
 
 This check also fires when Certificate Registration Point role is installed. Navigate to **\Administration\Overview\Site Configuration\Servers and Site System Roles** node in the Console, select the site system hosting CRP role and remove it.
@@ -1082,7 +1068,7 @@ Cloud Management Gateway deployed as a Classic Cloud service blocks the upgrade.
 >**Check for a cloud management gateway (CMG) as a cloud service (classic)**
 >The option to deploy a cloud management gateway (CMG) as a cloud service (classic) is deprecated. All CMG deployments should use a virtual machine scale set. For more information, see [Process to convert a CMG to a virtual machine scale set](https://go.microsoft.com/fwlink/?linkid=2187166).
 
-Follow the public guidance on [moving to CMGv2](https://learn.microsoft.com/mem/configmgr/core/clients/manage/cmg/modify-cloud-management-gateway#convert).
+Follow the public guidance on [moving to CMGv2](/mem/configmgr/core/clients/manage/cmg/modify-cloud-management-gateway#convert).
 
 ##### Only enhanced HTTP or HTTPS communication is allowed
 
@@ -1093,7 +1079,7 @@ The Prerequisite Check error text:
 >HTTPS or Enhanced HTTP are not enabled for client communication. HTTP-only communication is deprecated, and support is removed in this version of Configuration Manager.
 >To proceed with the upgrade, enable a more secure communication method for the site either by enabling HTTPS or Enhanced HTTP. For more information, see https://go.microsoft.com/fwlink/?linkid=2155007.
 
-You must switch the Site Communication to Enhanced HTTP or HTTPS to proceed with the Upgrade. Follow the official guidance on [Enable the site for HTTPS-only or enhanced HTTP](https://learn.microsoft.com/mem/configmgr/core/servers/deploy/install/list-of-prerequisite-checks#enable-site-system-roles-for-https-or-enhanced-http).
+You must switch the Site Communication to Enhanced HTTP or HTTPS to proceed with the Upgrade. Follow the official guidance on [Enable the site for HTTPS-only or enhanced HTTP](/mem/configmgr/core/servers/deploy/install/list-of-prerequisite-checks#enable-site-system-roles-for-https-or-enhanced-http).
 
 ## Installation
 
@@ -1366,13 +1352,13 @@ This issue occurs because the files aren't downloaded correctly. To fix it, foll
 
 The installation completion information is replicated via specific global replication group **CMUpdates** every 1 minute. If the replication is broken, the Console may keep displaying "Installing" state even if the installation has completed successfully on all Sites.
 
-Investigate the Console node "\Monitoring\Overview\Database Replication" and inspect Initialization and Replication tabs for each link for "CMUpdates" replication group states. If you find it failing, proceed with troubleshooting [Database Replication Service (DRS)](https://learn.microsoft.com/troubleshoot/mem/configmgr/data-transfer-sites/troubleshoot-database-replication-service-issues).
+Investigate the Console node "\Monitoring\Overview\Database Replication" and inspect Initialization and Replication tabs for each link for "CMUpdates" replication group states. If you find it failing, proceed with troubleshooting [Database Replication Service (DRS)](../data-transfer-sites/troubleshoot-database-replication-service-issues.md).
 
 ##### Issue 3: CONFIGURATION_MANAGER_UPDATE service keeps restarting
 
 "CMUpdate.exe" process hosting this service is the main driver of Update Package installation. If it crashes, the installation hangs at a certain stage - and you may notice CMUpdate.log repeatedly recording the same activity. Investigate Windows Application log in Event Viewer to confirm the Process Crash (Event ID 1000).
 
-The alternate usual cause is **security software** preventing the updated "CMUpdate.exe" binary from running or killing the process. If the "CMUpdate.exe" process still crashes while security software is turned off, collect Process Memory Dump with [ProcDump](https://learn.microsoft.com/sysinternals/downloads/procdump) and proceed with creating a Support Ticket to understand the cause:
+The alternate usual cause is **security software** preventing the updated "CMUpdate.exe" binary from running or killing the process. If the "CMUpdate.exe" process still crashes while security software is turned off, collect Process Memory Dump with [ProcDump](/sysinternals/downloads/procdump) and submit a ticket to Microsoft Support to understand the cause:
 
 >`procdump -ma -e cmupdate.exe`
 
