@@ -11,6 +11,10 @@ items:
     items:
     - name: Known issues with Windows 365 Business
       href: known-issues.md
+  - name: Resize
+    items:
+    - name: Resize a Windows 365 Business Cloud PC
+      href: resize-windows-365-business-cloud-pc.md
 - name: Windows 365 Enterprise
   items:
   - name: Azure Network Connection
