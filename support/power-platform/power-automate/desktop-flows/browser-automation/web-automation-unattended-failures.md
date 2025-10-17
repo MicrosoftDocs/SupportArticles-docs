@@ -2,9 +2,7 @@
 title: Web Automation Fails in Unattended Mode
 description: Works around an issue where a web automation action fail in unattended environment during runtime.
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.reviewer: amitrou
-ms.author: amitrou
-author: amitrou
+ms.reviewer: v-shaywood
 ms.date: 04/09/2025
 ---
 # Web automation action fails in unattended mode
