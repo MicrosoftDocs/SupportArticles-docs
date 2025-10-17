@@ -76,8 +76,8 @@ The RAW local SSD volume causes the SQL VM deployment to fail, and prevents manu
 
 This issue occurs because of the selected Azure VM size. To solve the issue, use one of the following methods:
 
-- If possible, use another VM SKU, such as those listed in the [VM size best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size#checklist). 
-- If you want to use a particular VM that is on the [impacted VMs](#impacted-vms) list, use a machine without the lowercase `d` in the name, which places `tempdb` on the same storage as the SQL Server data files. For example, use the `FXmsv2` VM size instead of `FXmdsv2`. The latter has uninitialized ephemeral storage, as indicated by `d` in the name.
+- If possible, use another VM SKU, such as the SKUs listed in the [VM size best practices](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size#checklist). 
+- If you want to use a particular VM that is on the [impacted VMs](#impacted-vms) list, use a machine without the lowercase `d` in the name, which places `tempdb` on the same storage as the SQL Server data files. For example, use the `FXmsv2` VM size instead of `FXmdsv2`. The latter uses uninitialized ephemeral storage, as indicated by `d` in the name.
 
 ## Workaround
 
@@ -86,7 +86,7 @@ If you can't use another VM SKU without a RAW local SSD, consider the following 
 - Deploy the VM using a Windows Server-only image, [format and initialize the temporary NVMe drive](/azure/virtual-machines/enable-nvme-temp-faqs#how-can-i-format-and-initialize-temp-nvme-disks-in-windows-when-i-create-a-vm-), and then manually install SQL Server.
   - If you choose to put `tempdb` on the local SSD, you must reinitialize the disk before starting SQL Server every time the VM is restarted or deallocated.
 - Deploy the SQL Server VM image, but configure `tempdb` to use a different drive than the ephemeral storage during the deployment. For example, you can configure `tempdb` to use the `C:`, or remote storage drive.
-  1. You can do this on the **SQL Server settings** page in the Azure portal when [deploying the SQL Server VM image](https://portal.azure.com/#view/HubsExtension/ServiceMenuBlade/~/SqlVirtualMachine/extension/SqlAzureExtension/menuId/AzureSqlHub/itemId/SqlVirtualMachine).
+  1. You can configure this setting on the **SQL Server settings** page in the Azure portal when [deploying the SQL Server VM image](https://portal.azure.com/#view/HubsExtension/ServiceMenuBlade/~/SqlVirtualMachine/extension/SqlAzureExtension/menuId/AzureSqlHub/itemId/SqlVirtualMachine).
   1. Under **Storage configuration**, select **Change configuration** to open the **Configure storage** pane.
   1. Expand **tempdb storage** and choose _any option other than_ `Use local SSD drive`:
 
