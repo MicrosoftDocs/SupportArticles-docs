@@ -73,6 +73,3 @@ During the resizing process, the Windows 365 service automatically unassigns the
 
    If some listed devices are marked as "Resize not supported," those devices aren't resized. During a bulk resize operation, if some devices can't be resized, the operation continues for the other devices. To identify issues, review any status messages and details  After you resolve the issue, you can try to resize the affected devices again.
 
-## Next steps
-
-[Remotely manage Windows 365 Business Cloud PCs](remotely-manage-business-cloud-pcs.md)
