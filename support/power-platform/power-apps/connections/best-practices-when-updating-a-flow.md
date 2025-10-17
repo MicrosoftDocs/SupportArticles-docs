@@ -16,10 +16,10 @@ Flow integration errors typically occur when:
 
 - Flow metadata becomes out of sync with your app
 - Connection permissions are insufficient or misconfigured
-- Flows are disabled or have timed out
+- Flows are disabled or timed out
 - Flow definitions change after app deployment
 
-This document covers the following error codes along with their causes and mitigation strategies.
+This document covers the following error codes along with their causes and mitigation strategies:
 
 - [InvokerConnectionOverrideFailed](#error-code-invokerconnectionoverridefailed-on-power-automate-flow-run)
 - [ConnectionAuthorizationFailed](#error-code-connectionauthorizationfailed-on-power-automate-flow-run)
@@ -31,7 +31,7 @@ This document covers the following error codes along with their causes and mitig
 
 ## Error code "InvokerConnectionOverrideFailed" on Power Automate flow run
 
-Some Power Automate flows may fail to run in Power Apps and you might see an error that resembles the following in the Power Automate flow run history or the Power Apps telemetry:
+Some Power Automate flows might fail to run in Power Apps and you might see an error that resembles the following in the Power Automate flow run history or the Power Apps telemetry:
 
 ```output
     { 
@@ -41,20 +41,20 @@ Some Power Automate flows may fail to run in Power Apps and you might see an err
 ```
 
 > [!NOTE]
-> This error may also occur when you call the install API on Dataverse (formerly Common Data Service), resulting in a generic error message: "Install flow failed."
+> This error might also occur when you call the install API on Dataverse (formerly Common Data Service), resulting in a generic error message: "Install flow failed."
 
 ### Cause
 
-This issue occurs when the Power Automate flow has been updated to use a new connection, but the app still uses the old flow metadata. Even though the flow is updated, the apps that reference the flow still retain the previous flow metadata. To resolve this, manually edit the app so changes appear in the app and the flow works.
+This issue occurs when the Power Automate flow is updated to use a new connection, but the app still uses the old flow metadata. Even though the flow is updated, the apps that reference the flow still retain the previous flow metadata. To resolve this error, manually edit the app so changes appear in the app and the flow works.
 
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure to perform the following steps in the source or development environment and update the solution. After updating the solution in the source or development environment, export and import it into all target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. After you update the solution in the source or development environment, export and import it into all target or production environments.
 
 1. Open the app for editing using the [latest version of Power Apps Studio](/power-platform/released-versions/powerapps).
 2. [Remove the Power Automate flows from the app](/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow).
-3. Re-add the flows to the app.
+3. Readd the flows to the app.
 4. Save and republish the app.
 
 ## Error code "ConnectionAuthorizationFailed" on Power Automate flow run
@@ -68,12 +68,12 @@ This issue occurs when the Power Automate flow has been updated to use a new con
 
 ### Cause
 
-This error means that although the maker has permissions to the Power Automate flow, the maker doesn't have permissions to the dependent connections that are used in the flow actions. This is a limitation of the Power Apps and Power Automate flow integration.
+This error means that the maker doesn't have permissions to the dependent connections that are used in the flow actions. This error can occur even if the maker has permissions to the Power Automate flow itself. This issue is a limitation of the Power Apps and Power Automate flow integration.
 
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure to perform the following steps in the source or development environment and update the solution. After updating the solution in the source or development environment, export and import it into all target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. After you update the solution in the source or development environment, export and import it into all target or production environments.
 
 To mitigate this issue, ensure that all connections used in the Power Automate flow are authorized for the user who is adding the flow to the app. The user must have the necessary permissions for each connection referenced by the Power Automate flow. For more information, see [Understand flow ownership and access](/power-automate/guidance/coding-guidelines/understand-access-to-flows).
 
@@ -88,12 +88,12 @@ To mitigate this issue, ensure that all connections used in the Power Automate f
 
 ### Cause
 
-The Power Automate flow has been disabled or turned off.
+The Power Automate flow is disabled or turned off.
 
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure to perform the following steps in the source or development environment and update the solution. After updating the solution in the source or development environment, export and import it into all target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. After you update the solution in the source or development environment, export and import it into all target or production environments.
 
 Ensure that the [Power Automate flow is turned on](/power-automate/disable-flow#turn-on-a-flow) and verify the flow run by testing it manually.
 
@@ -123,7 +123,7 @@ This error indicates that a synchronous Power Automate flow run exceeds the maxi
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure to perform the following steps in the source or development environment and update the solution. After updating the solution in the source or development environment, export and import it into all target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. After you update the solution in the source or development environment, export and import it into all target or production environments.
 
 To mitigate this issue, [identify which Power Automate flow runs are exceeding the timeout limit](/power-automate/fix-flow-failures#identify-specific-flow-runs) and optimize the flow's actions to complete within 120 seconds. Review the recommendations in [Troubleshoot slow running flows](~/power-platform/power-automate/flow-run-issues/troubleshoot-slow-running-flows.md).
 
@@ -147,9 +147,9 @@ To mitigate this issue, [identify which Power Automate flow runs are exceeding t
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure to perform the following steps in the source or development environment and update the solution. After updating the solution in the source or development environment, export and import it into all target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. After you update the solution in the source or development environment, export and import it into all target or production environments.
 
-Try the mitigation steps described for the following error codes, as the underlying causes may be similar:
+Try the mitigation steps described for the following error codes, as the underlying causes might be similar:
 
 - [WorkflowTriggerIsNotEnabled](#error-code-workflowtriggerisnotenabled-on-power-automate-flow-run)
 - [ConnectionAuthorizationFailed](#error-code-connectionauthorizationfailed-on-power-automate-flow-run)
@@ -170,25 +170,25 @@ Example error:
 
 ### Cause
 
-Power App and Power Automate flow metadata must always be synchronized. When changes are made to a Power Automate flow, the app maker must edit the apps that use the flow to remove or re-add the changed flow.
+Power App and Power Automate flow metadata must always be synchronized. When changes are made to a Power Automate flow, the app maker must edit the apps that use the flow to remove or readd the changed flow.
 
-For apps or flows included in a solution, an app may successfully invoke the flow in the source environment but fail in the target environment with this error message:
+For apps or flows included in a solution, an app might successfully invoke the flow in the source environment but fail in the target environment with this error message:
 
 > Connection not configured for this service.
 
-This occurs when the flow in the target environment has changes that are not present in the source environment, leading to mismatched connection references or metadata.
+This error occurs when the flow in the target environment has changes that aren't present in the source environment, leading to mismatched connection references or metadata.
 
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure to perform the following steps in the source or development environment and update the solution. After updating the solution in the source or development environment, export and import it into all target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. After you update the solution in the source or development environment, export and import it into all target or production environments.
 
-1. In the source environment, edit the app. Remove and then re-add the flows to the app. Save and publish the changes.
+1. In the source environment, edit the app. Remove and then readd the flows to the app. Save and publish the changes.
 2. In the target environment, remove all unmanaged solution layers from the app and flow.
 3. Export the solution and import it into the target environment.
 
    > [!NOTE]
-   > Ensure that neither the flow nor the app has unmanaged solution layers, as these can interfere with connection references and cause integration issues.
+   > Ensure that both the flow and the app have no unmanaged solution layers. Unmanaged solution layers can interfere with connection references and cause integration issues.
 
 ## Error code "NotAllowedConnectionReference" on Power Automate flow run
 
@@ -205,40 +205,40 @@ Example error:
 
 ### Cause
 
-This error occurs when the app's flow metadata expects a specific connection reference (such as a SQL connection) during installation, but the flow's current metadata does not match this expectation.
+This error occurs when the app's flow metadata expects a specific connection reference (such as a SQL connection) during installation. If flow's current metadata doesn't match this expectation, an error occurs.
 
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure to perform the following steps in the source or development environment and update the solution. After updating the solution in the source or development environment, export and import it into all target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. After you update the solution in the source or development environment, export and import it into all target or production environments.
 
 #### Mitigation option 1
 
 Reset the Power Automate flows in the app:
 
-1. In the source environment, edit the app. Remove and then re-add the Power Automate flows to the app. Save and publish the changes.
+1. In the source environment, edit the app. Remove and then readd the Power Automate flows to the app. Save and publish the changes.
 2. In the target environment, remove all unmanaged solution layers from the app and Power Automate flow.
 3. Export the solution and import it into the target environment.
 
    > [!NOTE]
-   > Ensure that neither the flow nor the app has unmanaged solution layers, as these can interfere with connection references and cause integration issues.
+   > Ensure that both the flow and the app have no unmanaged solution layers. Unmanaged solution layers can interfere with connection references and cause integration issues.
 
 #### Mitigation option 2
 
 Change the connection from **Embedded** to **Invoker**:
 
-1. Navigate to the Power Automate flow portal to edit and update the flow settings.
+1. To edit and update the flow settings, navigate to the Power Automate flow portal.
 2. On the flow details page, in the **Run only users** section, select **Edit**.
 3. To update the flow connection source to **Invoker**, select **Provided by run-only user** and save.
 4. Verify by triggering the flow. You should now find the "install flow network" calls to be successful.
 
 ## Failures caused by Power Automate flow updates
 
-When flow updates cause integration problems, you might see these additional symptoms that can help you identify and troubleshoot the specific issue.
+When flow updates cause integration problems, you might see these other symptoms that can help you identify and troubleshoot the specific issue.
 
 ### Symptom 1
 
-When new input is added to a Power Automate flow but the Power App is not updated, the flow may fail with an error message that resembles the following:
+When new input is added to a Power Automate flow but the Power App isn't updated, the flow might fail. If the flow fails, it returns an error message that resembles the following example:
 
 > Unable to process template language expressions in action 'Send_me_a_mobile_notification' inputs at line '1' and column '1900': 'The template language expression 'triggerBody()['Sendmeamobilenotification_Text']' cannot be evaluated because property 'Sendmeamobilenotification_Text' cannot be selected. Please see `https://aka.ms/logicexpressions` for usage details.'.
 
@@ -246,7 +246,7 @@ When new input is added to a Power Automate flow but the Power App is not update
 
 ### Symptom 2
 
-If the connections required to run a Power Automate flow change, you may receive an error.
+If the connections required to run a Power Automate flow change, you might receive an error.
 
 In Power Apps, it might look like:
 
@@ -260,7 +260,7 @@ In Power Automate flow, it might look like:
 
 ### Symptom 3
 
-If a response output is removed, Power Apps will treat the value as blank and the app will behave unexpectedly.
+If a response output is removed, Power Apps treats the value as blank and the app behaves unexpectedly.
 
 ### Cause
 
@@ -284,7 +284,7 @@ Types of changes most likely to break a Power Apps ability to call a Power Autom
 
    :::image type="content" source="media/best-practices-when-updating-a-flow/remove-output.png" alt-text="Screenshot of removing an output from a Respond to Power Apps action.":::
 
-Other changes to the inputs or outputs may not break the integration between Power Apps and the Power Automate flow, but the app must be updated to recognize and utilize the new or modified inputs and outputs.
+Other changes to the inputs or outputs might not break the integration between Power Apps and the Power Automate flow. However, the app must be updated to recognize and utilize new or modified inputs and outputs.
 
 ### Resolution
 
@@ -321,8 +321,8 @@ Follow these steps:
 
 :::image type="content" source="media/best-practices-when-updating-a-flow/reselect-flow.png" alt-text="Screenshot of updating a flow definition in Power Apps.":::
 
-This process updates your app to use the flow's new configuration. Since the app isn't published yet, no users are affected by your changes.
+This process updates your app to use the flow's new configuration. Since the app isn't published yet, your changes don't affect users.
 
 ## References
 
-[Create, add and edit flows using Power Apps Studio](/power-apps/maker/canvas-apps/working-with-flows)
+- [Use Power Automate pane](/power-apps/maker/canvas-apps/working-with-flows)
