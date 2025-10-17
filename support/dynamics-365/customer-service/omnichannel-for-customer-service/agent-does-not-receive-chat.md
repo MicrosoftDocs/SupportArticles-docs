@@ -2,7 +2,6 @@
 title: Agent doesn't receive a chat
 description: Provides a resolution for the issue where an agent doesn't receive a chat in Omnichannel for Customer Service.
 ms.reviewer: nenellim
-ms.author: vamullap
 ms.date: 05/23/2023
 ms.custom: sap:Live chat channel\Cannot send or receive messages
 ---

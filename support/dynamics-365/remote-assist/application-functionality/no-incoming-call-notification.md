@@ -1,8 +1,6 @@
 ---
 title: Can't receive incoming call notifications
 description: Resolves an issue where you can't receive incoming call notifications in Microsoft Dynamics 365 Remote Assist.
-author: prashantyvr
-ms.author: prashan
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: sap:Dynamics 365 Remote Assist\Application Functionality, bap-template
