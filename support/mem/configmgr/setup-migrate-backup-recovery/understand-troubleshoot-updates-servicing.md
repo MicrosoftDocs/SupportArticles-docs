@@ -36,7 +36,7 @@ To view and manage the updates, navigate to **Administration** > **Cloud Service
 |Hierarchy Manager|SMS_HIERARCHY_MANAGER|Hman|HMAN.dll| Site Server component responsible for processing the Update Packages. |
 |Configuration Manager Update|CONFIGURATION_MANAGER_UPDATE|CMUpdate|CMUpdate.exe|Service that installs Update Packages.|
 
-## IMPORTANT: Avoid the below actions
+## IMPORTANT: Avoid the following actions
 
 - Manual cleanup of any related folders: \EasySetupPayload, \CMUStaging - unless instructed by Microsoft Support.
 - Manual cleanup of any SQL tables unless instructed by Microsoft Support.
@@ -50,13 +50,13 @@ NOTE: [CMUpdateReset.exe](/intune/configmgr/core/servers/manage/update-reset-too
 ## Identify the Update Package GUID
 
 As a first step, identify the Update Package GUID. If the Update Package is visible in the ConfigMgr Console, add the **Package Guid** column to the **Administration\Update and Servicing** node.
-There are cases, however, where target Update Package is not visible. In this case, run the below SQL query to find the Package GUID in ConfigMgr database.
+There are cases, however, where target Update Package isn't visible. In this case, run the SQL query to find the Package GUID in ConfigMgr database.
 
 ```sql
 SELECT Name, PackageGuid FROM v_LocalizedUpdatePackageMetaData_SiteLoc
 ```
 
-Well-known Update Package GUIDs are listed below for reference. Note the list doesn't include opt-in releases and hotfixes.
+Well-known Update Package GUIDs are listed in the following table for reference. Note the list doesn't include opt-in releases and hotfixes.
 
 | Update Name | Package GUID |
 |---|---|
@@ -70,7 +70,7 @@ Well-known Update Package GUIDs are listed below for reference. Note the list do
 
 ## Identify the Update Installation Stage
 
-Use the below graph to identify the Troubleshooting Section to follow based on the state of the Update Package. When the issue is in the Applicability section, the target Update Package may not be visible in the Console or in PowerShell outputs. However, the SQL table **CM_UpdatePackages** of the top-level site should contain the record of the target package:
+Use the graph in this section to identify the Troubleshooting Section to follow based on the state of the Update Package. When the issue is in the Applicability section, the target Update Package may not be visible in the Console or in PowerShell outputs. However, the SQL table **CM_UpdatePackages** of the top-level site should contain the record of the target package:
 
 ```sql
 SELECT PackageGuid,State FROM CM_UpdatePackages where PackageGUID = '<Package GUID>'
@@ -211,14 +211,14 @@ Updates having these states are normally hidden from the console:
 
 ### Troubleshoot Synchronization
 
-Use the below flowchart to narrow down the issue at Synchronization step.
+Use the flowchart to narrow down the issue at Synchronization step.
 
 ![Synchronization graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization.svg)
 
 #### For the Service Connection Point (SCP) configured to Online mode
 
 1. Check the **DMPDownloader.log** on SCP for any errors related to the download process of **ConfigMgr.Update.Manifest.cab**.
-2. Verify that **Hman.log** shows the successful extraction of the CAB file as below:
+2. Verify that **Hman.log** shows the successful extraction of the CAB file as:
 
 >Extracting file E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB to E:\ConfigMgr\CMUStaging\~
 >Extracted E:\ConfigMgr\CMUStaging\Manifest.xml  
@@ -235,10 +235,10 @@ After performing the Import step, the DMPDownloader on SCP should submit the Sta
 
 ### Troubleshoot Applicability
 
-The usual cause here is manual database manipulation or update failure that leaves the Site Version in inconsistent state; therefore, the specific update is not found applicable.
+The usual cause here is manual database manipulation or update failure that leaves the Site Version in inconsistent state; therefore, the specific update isn't found applicable.
 One may want to install a newer update if it's available in the console.
 
-Use the below flowchart to narrow down the issue at Applicability step. Accessing top-level Site SQL Database required, same query as above identifies the State to start with:
+Use the flowchart to narrow down the issue at Applicability step. Accessing top-level Site SQL Database required, same query as above identifies the State to start with:
 
 ```sql
 SELECT PackageGuid,State FROM CM_UpdatePackages where PackageGUID = '<Package GUID>'
@@ -250,13 +250,13 @@ The main log to check is **Hman.log**.
 
 #### Verify site database functions
 
-The below site database functions must return the correct Site Version that correlates to other sources (like **smsexec.exe** binary version). Use the following SQL syntax to check the scalar function output:
+The site database functions must return the correct Site Version that correlates to other sources (like **smsexec.exe** binary version). Use the following SQL syntax to check the scalar function output:
 
 ```sql
 SELECT dbo.fnCurrentSiteVersion()
 ```
 
-Note only _nnnn_ is the build number to look at. Minor build number _mm_ is not used for the applicability purposes. If you spot a discrepancy, submit a ticket to Microsoft Support.
+Note only _nnnn_ is the build number to look at. Minor build number _mm_ isn't used for the applicability purposes. If you spot a discrepancy, submit a ticket to Microsoft Support.
 
 | Location | Function/Value | Expected value |
 |---|---|---|
@@ -444,7 +444,7 @@ Admin Console displays the list of Update Packages with their states. The downlo
 
 At this stage, the DMPDownloader component is responsible for downloading the Easy Setup Payload and Redistributable files (Redists). In Offline mode, these files are imported by the Service Connection Tool (SCT). Then DMPDownloader must verify the files and inform the site server about their availability. Hence, the main log to check is **DMPDownloader.log**.
 
-Use the below flowchart to narrow down the issue at Download stage.
+Use the flowchart to narrow down the issue at Download stage.
 
 ![Troubleshoot Download graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-download.svg)
 
@@ -500,7 +500,7 @@ Best place to start with is **\Monitoring\Overview\Site Servicing\Update Package
 - Installation
 - Post-installation
 
-Use below flowchart to narrow down the section responsible for the issue.
+Use flowchart to narrow down the section responsible for the issue.
 
 ![Replication and Installation graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-and-installation.svg)
 
@@ -539,7 +539,7 @@ INFO: 2.ESC file was found. Easy setup package needs to be updated.
 Get  Update Pack E8E74B72-504A-4202-9167-8749C223D2A5, \\<SCP.FQDN>\EasySetupPayLoad\E8E74B72-504A-4202-9167-8749C223D2A5
 ```
 
-If the package has been replicated before, the following entry is logged:
+If the package was replicated before, the following entry is logged:
 
 ```log
 Easy setup source folder hash is not changed. Skip updating.
@@ -577,7 +577,7 @@ SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\C
 
 ### Step 3: Content Distribution
 
-These steps are essentially the same as for any InterSite Content Replication, however the Easy Setup Package is not replicated to Secondary Sites and Distribution Points.
+These steps are essentially the same as for any InterSite Content Replication, however the Easy Setup Package isn't replicated to Secondary Sites and Distribution Points.
 
 Distribution Manager (DistMgr) creates Easy Setup Package snapshot from `\\<SCP.FQDN>\EasySetupPayLoad\<Update GUID>` to the Content Library of the top level site.
 
@@ -630,7 +630,7 @@ Package CAS10001 (version 0) exists in the distribution source, save the newer v
 Stored Package CAS10001. Stored Package Version = 1
 ```
 
-Each Content Distribution component updates `ObjectDistributionState` table on its way. This table has a trigger `ObjectDistributionState_ins_updMon` that is responsible for storing the replication stages to `CM_UpdatePackage_MonitoringStatus` table. The below SQL query can be used to further detail the Replication and Installation state:
+Each Content Distribution component updates `ObjectDistributionState` table on its way. This table has a trigger `ObjectDistributionState_ins_updMon` that's responsible for storing the replication stages to `CM_UpdatePackage_MonitoringStatus` table. The following SQL query can be used to further detail the Replication and Installation state:
 
 ```sql
 select ServerData.SiteCode, cmums.* from CM_UpdatePackage_MonitoringStatus cmums
@@ -651,7 +651,7 @@ Start updating the package CAS10001...
 Successfully created/updated the package CAS10001
 ```
 
-Then, a notification file is created by Hman for Configuration Manager Update Service (CMUpdate.exe) at Child Primary Sites: see Hman.log:
+Then, Hman creates a `<Update GUID>.CMI` file for Configuration Manager Update Service (CMUpdate.exe) at Child Primary Sites: see Hman.log:
 
 ```log
 Created notification file (E8E74B72-504A-4202-9167-8749C223D2A5.CMI) for CONFIGURATION_MANAGER_UPDATE
@@ -669,25 +669,25 @@ Update Package content (EasySetup Package) is replicated to all Child Primary Si
 
 The first component involved is **Hman**, which must detect a new package to be processed and update the EasySetupSettings SQL table settings accordingly. Then **DistMgr** takes over to create the **Easy Setup Package** snapshot from `\EasySetupPayload\` share into Content Library as **Easy Setup Package**. This package follows usual Inter-site Content Replication flow to replicate to Child Primary Sites like any other classic Package. The best place to start with is **CM_UpdatePackages** in SQL filtered by specific Update Package GUID.
 
-Use below flowchart to narrow down the issue at Replication step. Note it assumes that the installation or prerequisite check has been triggered.
+Use flowchart to narrow down the issue at Replication step. Note it assumes that the installation or prerequisite check was triggered.
 
 ![Replication graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication.svg)
 
-In the case of multi-tier hierarchy, the Child Primary Sites must also replicate the Easy Setup Package from their Parent Site. The flow is exactly the same as for any other classic Package. Refer to the [Flowchart - Update replication for Configuration Manager](/intune/configmgr/core/servers/manage/update-replication-flowchart) page for more details.
+For the multi-tier hierarchy, the Child Primary Sites must also replicate the Easy Setup Package from their Parent Site. The flow is exactly the same as for any other classic Package. Refer to the [Flowchart - Update replication for Configuration Manager](/intune/configmgr/core/servers/manage/update-replication-flowchart) page for more details.
 
 #### Troubleshoot Update Package staying in State=2 (Enabled)
 
-If the **State** stays in 2 (Enabled), it highly likely identifies the **Hman** component as unable to perform its job. Check **Hman.log** for the following:
+If the **State** stays in 2 (Enabled), it likely identifies the **Hman** component as unable to perform its job. Check **Hman.log** for the following:
 
 1. Look for 2.ESC file processing.
 2. Filter by respective thread.
-3. Alternatively, look for the last SubstageID recorded in the message like below: IsComplete=2 means Success and IsComplete=4 means Failure.
+3. Alternatively, look for the last SubstageID recorded in the message similar to the following: IsComplete=2 means Success and IsComplete=4 means Failure.
 
     >Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xb0001, IsComplete=2, Progress=100, Applicable=1)
 
 4. If the **Hman.log** rolled over, attempt recreating the empty `2.ESC` file in `Hman.box\CFD` manually. It should trigger the same process again.
 
-Note **Hman** must be able to access the Package Source via Share (even if SCP is local to the Site Server) - `\\<SCP FQDN>\EasySetupPayLoad\<PackageGUID>` to calculate the Easy Setup Package hash and update the **EasySetupSettings** table. If it fails accessing the share, the following error is logged:
+Note **Hman** must be able to access the Package Source via Share (even if SCP is local to the Site Server) - `\\<SCP FQDN>\EasySetupPayLoad\<PackageGUID>` to calculate the Easy Setup Package hash and update the **EasySetupSettings** table. If it fails to access the share, the following error is logged:
 
 ```log
 Get update package 05F7ED65-3CB0-46CF-91E7-71193DAF9845, \\<SCP FQDN>\EasySetupPayLoad\05F7ED65-3CB0-46CF-91E7-71193DAF9845
@@ -710,7 +710,7 @@ Verify the Source, Package Version, and PackageID. Use PackageID to trace the Ea
 
 #### Investigate Content Distribution failures
 
-The rest of the troubleshooting is the same as for any [Classic Package replicated between Sites](../content-management/understand-package-actions.md#distribute-a-package-to-dp-across-sites). If the flow failed or the logs have been rolled over, use the **RetryContentReplication WMI Method** of the SMS provider of the top-level site to force the Easy Setup Package update:
+The rest of the troubleshooting is the same as for any [Classic Package replicated between Sites](../content-management/understand-package-actions.md#distribute-a-package-to-dp-across-sites). If the flow failed or the logs were rolled over, use the **RetryContentReplication WMI Method** of the SMS provider of the top-level site to force the Easy Setup Package update:
 
  ```powershell
  (gwmi -Namespace "ROOT\SMS\site_<SITE CODE>" -query "select * from SMS_CM_UpdatePackages where PackageGuid = '<PACKAGE GUID>'").RetryContentReplication($true)
@@ -733,7 +733,7 @@ The output should look like this example:
     PSComputerName   : 
 ```
 
-Refer to **DistMgr.log** to track re-processing of the Easy Setup Package.
+Refer to **DistMgr.log** to track reprocessing of the Easy Setup Package.
 
 ## Prerequisite check
 
@@ -745,9 +745,9 @@ The current set of rules in the Prerequisite checks can be found in the [list of
 
 ### Step 1: Initiating the check
 
-After one selects the Update Package and clicks **Run prerequisite check**, the Console calls `InitiateUpgrade` method on the instance of `SMS_CM_UpdatePackages` WMI class of SMS Provider namespace. The parameter `Flag` is set to 1 (PREREQ_ONLY).
+After one selects the Update Package and selects **Run prerequisite check**, the Console calls `InitiateUpgrade` method on the instance of `SMS_CM_UpdatePackages` WMI class of SMS Provider namespace. The parameter `Flag` is set to 1 (PREREQ_ONLY).
 
-This action initiates the [Content Replication](#replication) if it hasn't been done before. It must complete before the Prerequisite Check can be run.
+This action initiates the [Content Replication](#replication) if it hasn't completed before.
 
 ### Step 2: Hman: Starting the check
 
@@ -796,7 +796,7 @@ Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xd0005,
 
 Same happens on other primary sites.
 
-Besides, CMUpdate verifies the signature and extracts the `update.map.cab` file that contain `update.map` file defining the hashes and locations for the files being updated.
+Besides, CMUpdate verifies the signature and extracts the `update.map.cab` file that contains `update.map` file defining the hashes and locations for the files being updated.
 
 ### Step 4: CMUpdate: Prerequisite Check start
 
@@ -863,13 +863,13 @@ Then CMUpdate.exe loads `prereqcore.dll` and calls the entry point `RunPrereqChe
 Running prereq checking against Server [BIG-CS1SITE.BIGLAB.NET] ...~
 ```
 
-For the hotfixes, usually, there is no specific section in the `Update.map` file:
+For the hotfixes, usually, there's no specific section in the `Update.map` file:
 
 ```log
 update.map has no update for CONFIGURATION_MANAGER_UPDATE
 ```
 
-In this case, CMUpdate.exe uses the `prereqcore.dll` from the actually installed version of ConfigMgr.
+In this case, CMUpdate.exe uses the `prereqcore.dll` from the installed version of ConfigMgr.
 
 ### Step 5: Prerequisite checker starts up
 
@@ -932,7 +932,7 @@ Site Database Server checks: note the bootstrap being spawned
 ...
 ```
 
-And, finally, SMS Provider (aka SDK) checks:
+And, finally, SMS Provider (also known as SDK) checks:
 
 ```log
 ===== INFO: Prerequisite Type & Server: SDK:BIG-CS1SITE.biglab.net =====
@@ -980,13 +980,13 @@ exec spProcessCMUPackages
 
 That further calls `spProcessCMU` SQL Stored Procedure to update general `CM_UpdatePackages` table with the latest state.
 
-In multi-site environments, the worst state for all sites is considered. For example, if CAS have passed the check, but Primary has warnings, the overall result is PREREQ_WARNING.
+In multi-site environments, the worst state for all sites is considered. For example, if CAS passed the check, but Primary has warnings, the overall result is PREREQ_WARNING.
 
 </details>
 
 ### Prerequisite Check Result
 
-The Update Package is marked as "Prerequisite check passed" in the console. The `CM_UpdatePackages` table has the state set one of the below values for the Update Package of interest:
+The Update Package is marked as "Prerequisite check passed" in the console. The `CM_UpdatePackages` table has the state set one of the values for the Update Package of interest:
 
 - PREREQ_SUCCESS  131074
 - PREREQ_WARNING  131075
@@ -994,22 +994,22 @@ The Update Package is marked as "Prerequisite check passed" in the console. The 
 
 ### Troubleshoot Prerequisite Check
 
-The below flowchart assumes that the Prerequisite Check is either in progress for a long time - or has failed. It applies to all Primary Sites and Central Administration Site (CAS) in multi-tier environments.
+The flowchart assumes that the Prerequisite Check is either in progress for a long time - or failed. It applies to all Primary Sites and Central Administration Site (CAS) in multi-tier environments.
 
 ![Prerequisite Check graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-prerequisite-check.svg)
 
 There are two main kinds of issues with the prerequisite check.
 
-1. The check gets stuck in the **Checking Prerequisites** state. In majority of the cases, the real issue is [Replication](#replication).
+1. The check gets stuck in the **Checking Prerequisites** state. In most cases, the real issue is [Replication](#replication).
 2. The check completes with **Prerequisites Failed** state. It does mean that the check was able to run and **excludes** the [Replication](#replication) part.
   
-In the latter case, the real issue is usually found in **ConfigMgrPrereq.log** or in the Console: **\Monitoring\Overview\Updates and Servicing Status** node per site.
+In the latter case, the real issue is found in **ConfigMgrPrereq.log** or in the Console: **\Monitoring\Overview\Updates and Servicing Status** node per site.
 
 Follow the guidance listed in **Description** for the failing check and the detailed log entries in **ConfigMgrPrereq.log** to resolve the failure.
 
 #### SQL client prerequisites
 
-The latest versions of Configuration Manager introduced various SQL client prerequisites. Current Update Package installation process does not automatically upgrade them, hence it makes sense to install the SQL Clients before attempting the installation.
+The latest versions of Configuration Manager introduced various SQL client prerequisites. Current Update Package installation process doesn't automatically upgrade them. Hence, it makes sense to install the SQL Clients before attempting the installation.
 
 Since 1810, ConfigMgr requires SQL Native Client version 11.4.7001.0 or later. The actual requirement is the registry value:
 
@@ -1025,7 +1025,7 @@ Also, since 2303, ConfigMgr requires ODBC Driver 18 for SQL Server or later. The
 "InstalledVersion"="18.4.1.1"
 ```
 
-Starting from 2503, the required version is at least 18.4.1.1, so the corresponding check has been updated.
+Starting from 2503, the required version is at least 18.4.1.1, so the corresponding check was updated.
 
 To meet both prerequisites, consider manually installing the following MSIs from `\EasySetupPayload\<Update GUID>\redist\` folder (available only for major releases):
 
@@ -1039,7 +1039,7 @@ Alternatively, download latest binaries from Microsoft Download Center:
 
 #### Frequently blocking checks
 
-The below checks are known to frequently block the Upgrade Package Setup. There is no way to bypass them but resolving the blocking condition. In case of any doubts, consider opening a ticket with Microsoft Support.
+The following checks are known to frequently block the Upgrade Package Setup. There's no way to bypass them but resolving the blocking condition. In case of any doubts, consider opening a ticket with Microsoft Support.
 
 ##### Site System Server with Windows Server 2012 or 2012 R2
 
@@ -1057,7 +1057,7 @@ If you just in-place upgraded the OS on remote site system, restart the site ser
 Having any resource access profile or its deployment configured in earlier version of ConfigMgr also creates a block. Besides, any existing co-managed device with 'RA Profile' workload set toward ConfigMgr blocks the upgrade too.
 
 To pass the check, move the Resource Access Policies workload slider to Intune only. Follow the official guidance on [Co-management workloads](/intune/configmgr/comanage/workloads).
-If there is no co-management configured, you have to configure it at least temporarily to move the slider.
+If there's no co-management configured, you have to configure it at least temporarily to move the slider.
 
 This check also fires when Certificate Registration Point role is installed. Navigate to **\Administration\Overview\Site Configuration\Servers and Site System Roles** node in the Console, select the site system hosting CRP role and remove it.
 
@@ -1083,7 +1083,7 @@ You must switch the Site Communication to Enhanced HTTP or HTTPS to proceed with
 
 ## Installation
 
-Once the Administrator selects "Install Update" in the Console, or chooses to ignore the warning, the actual site upgrade is initiated. First, it always re-runs the [Prerequisite Check](#prerequisite-check) to ensure that the site is ready for the upgrade. If the check fails, the upgrade is aborted.
+Once the Administrator selects "Install Update" in the Console, or chooses to ignore the warning, the actual site upgrade is initiated. First, it always reruns the [Prerequisite Check](#prerequisite-check) to ensure that the site is ready for the upgrade. If the check fails, the upgrade is aborted.
 
 <details><Summary>Installation Steps</summary>
 
@@ -1229,7 +1229,7 @@ INFO: Existing console product code is '{C7A4084C-57A8-4BB8-AE7F-6B28088007DA}'.
 INFO: There were no applicable admin console patches found on this site server.
 ```
 
-Once done, the CMUpdate service asynchronously waits for multiple proceses to complete, including Sitecomp:
+Once done, the CMUpdate service asynchronously waits for multiple processes to complete, including Sitecomp:
 
 ```log
 ~   Starting ConfigMgr Update post installation monitor thread...
@@ -1308,7 +1308,7 @@ Older packages are usually hidden from the console due to the Applicability chec
 
 ### Troubleshoot Installation and Failures
 
-The below flowchart assumes the installation is either stuck in "Installing" state or "Failed" in **\Administration\Overview\Updates and Servicing** console node. The first thing to check should be the Update Package state at **\Monitoring\Overview\Updates and Servicing Status** node and identify the Site being stuck.
+The flowchart assumes the installation is either stuck in "Installing" state or "Failed" in **\Administration\Overview\Updates and Servicing** console node. The first thing to check should be the Update Package state at **\Monitoring\Overview\Updates and Servicing Status** node and identify the Site being stuck.
 
 ![Installation and Failures](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-installation-and-failures.svg)
 
@@ -1326,7 +1326,7 @@ where cmupss.PackageGUID = @UpdateGUID and cmupss.state<>196612
 When an Update Package gets stuck in the **Installing** state in the console, it may be caused by one of the following reasons:
 
 - Installation is actually progressing. Investigate **CMUpdate.log** for progress.
-- Content Replication hasn't finished. In this case, proceed to [Replication](#replication) section.
+- Content Replication wasn't finished. In this case, proceed to [Replication](#replication) section.
 - One of the Sites is waiting for a Service Window. In this case, verify the Service Window created.
 - Installation can't continue of because "CMUpdate.exe" process crash.
 - Database Replication Service (DRS) issue prevents replicating the information between CAS and Primary Sites.
@@ -1356,7 +1356,7 @@ Investigate the Console node "\Monitoring\Overview\Database Replication" and ins
 
 ##### Issue 3: CONFIGURATION_MANAGER_UPDATE service keeps restarting
 
-"CMUpdate.exe" process hosting this service is the main driver of Update Package installation. If it crashes, the installation hangs at a certain stage - and you may notice CMUpdate.log repeatedly recording the same activity. Investigate Windows Application log in Event Viewer to confirm the Process Crash (Event ID 1000).
+"CMUpdate.exe" process hosting this service is the main driver of Update Package installation. If it crashes, the installation hangs at a certain stage - and you may notice CMUpdate.log repeatedly recording the same activity. Investigate Windows Application Log in the Event Viewer to confirm the Process Crash (Event ID 1000).
 
 The alternate usual cause is **security software** preventing the updated "CMUpdate.exe" binary from running or killing the process. If the "CMUpdate.exe" process still crashes while security software is turned off, collect Process Memory Dump with [ProcDump](/sysinternals/downloads/procdump) and submit a ticket to Microsoft Support to understand the cause:
 
@@ -1375,7 +1375,7 @@ The alternate cause is _third-party software_ accessing ConfigMgr SQL DB and loc
 | Folder | Location | Description |
 |--------|---|-------------|
 | \EasySetupPayload | SCP |  This shared folder contains the actual installation files for an update. There's no Setup.exe file. Instead, an Install.map file is used for installing. |
-| \CMUStaging | Site Server | This folder holds unpacked ConfigMgr manifest cab that is downloaded and extracted by HMan to perform applicability checks. The installation files are temporarily stored there during the installation of the Update Pack. |
+| \CMUStaging | Site Server | This folder holds unpacked ConfigMgr manifest cab that's downloaded and extracted by HMan to perform applicability checks. The installation files are temporarily stored there during the installation of the Update Pack. |
 | \CMUClient | Site Server | This folder contains the latest client installation files. The files are copied directly from the EasySetupPayload folder. |
 | \PilotingUpgrade | Site Server | Client Piloting Package source. |
 | \ClientUpgrade | Site Server | Client Upgrade Package source. |
@@ -1431,7 +1431,7 @@ The following are the state codes and the states that they represent:
 Available Flags are the following:
 
 | Flag | Value |
-| -- | -- |
+|--|--|
 | Normal installation | 0 |
 | Prerequisite check only | 1 |
 | Ignore warnings | 2 |
