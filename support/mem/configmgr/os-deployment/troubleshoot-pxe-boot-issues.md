@@ -11,8 +11,6 @@ This article helps administrators diagnose and resolve PXE boot failures in Conf
 
 > [!IMPORTANT]
 > For home users: This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, please ask the [Microsoft Community](https://answers.microsoft.com/).
-> [!NOTE]
-> If you require PXE or multicast support, you need an on-premises distribution point to respond to these boot requests.
 
 _Original product version:_ &nbsp; Configuration Manager (current branch), Microsoft System Center 2012 Configuration Manager, Microsoft System Center 2012 R2 Configuration Manager  
 _Original KB number:_ &nbsp; 4468612
@@ -20,6 +18,9 @@ _Original KB number:_ &nbsp; 4468612
 ## Introduction
 
 For essential information about how PXE works, see the companion article [Understand PXE boot in ConfigMgr](understand-pxe-boot.md).
+
+> [!NOTE]
+> If you require PXE or multicast support, you need an on-premises distribution point to respond to these boot requests.
 
 Before you start to troubleshoot on the PXE Service Point, we recommend that you try the following solutions. If solution 1 works for you, you don't need to go to solution 2. These solutions resolve most problems that affect PXE boot.
 
