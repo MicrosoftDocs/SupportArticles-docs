@@ -476,7 +476,7 @@ The error resembling below is logged in DMPDownloader.log for any of the content
 To troubleshoot this issue:  
 
 1. Make sure all the [Internet Access Requirements](https://learn.microsoft.com/intune/configmgr/core/plan-design/network/internet-endpoints#updates-and-servicing) are met.
-2. Make sure the Service Connection Point can talk using **TLS 1.2**. [TLS 1.2 Enablement Guide](https://learn.microsoft.com/intune/configmgr/core/plan-design/security/enable-tls-1-2) provides more details.
+2. Make sure the Service Connection Point supports **TLS 1.2**. [TLS 1.2 Enablement Guide](https://learn.microsoft.com/intune/configmgr/core/plan-design/security/enable-tls-1-2) provides more details.
 3. Check the firewall to make sure that it doesn't block the connection. TCP port 443 and 80 must be exempted.
 
 Same applies for Service Connection Tool: see [Error when downloading ConfigMgr.AdminUIContent.cab by using SMS_DMP_DOWNLOADER or ServiceConnectionTool.exe](service-connection-tool-not-download-updates).
@@ -495,7 +495,7 @@ Review the following applicable update checklist for actions to take before you 
 
 ### Step 2: Run the prerequisite checker before you install an update
 
-Before you install an update, consider running the prerequisite check for that update. For more information, see [Before you install an in-console update](https://learn.microsoft.com/intune/configmgr/core/servers/manage/install-in-console-updates#bkmk_beforeinstall).
+Before you install an update, consider running the prerequisite check for that update. For more information, see [Before you install an in-console update](https://learn.microsoft.com/en-us/intune/configmgr/core/servers/manage/prepare-in-console-updates#before-you-install-an-in-console-update).
 
 ## Identify Replication and Installation Troubleshooting Path
 
@@ -725,7 +725,7 @@ The rest of the troubleshooting is the same as for any [Classic Package replicat
  ```
 
 The output should look like this example:
-
+    
 ```powershell
     __GENUS          : 2
     __CLASS          : __PARAMETERS
@@ -1334,7 +1334,7 @@ where cmupss.PackageGUID = @UpdateGUID and cmupss.state<>196612
 When an Update Package gets stuck in the **Installing** state in the console, it may be caused by one of the following reasons:
 
 - Installation is actually still progressing. Investigate **CMUpdate.log** for progress.
-- Content Replication hasn't finished. In this case, proceed to **Replication** section.
+- Content Replication hasn't finished. In this case, proceed to [Replication](#replication) section.
 - One of the Sites is waiting for a Service Window. In this case, verify the Service Window created.
 - Installation can't continue of because "CMUpdate.exe" process crash.
 - Database Replication Service (DRS) issue prevents replicating the information between CAS and Primary Sites.
@@ -1353,7 +1353,7 @@ You receive an error that resembles the following example in CMUpdate.log:
 This issue occurs because the files aren't downloaded correctly. To fix this issue, follow these steps:
 
 1. Verify the contents of EasySetupPayload folder: both Payload and Redists should have valid signatures. Switch SCP to offline mode if necessary.
-2. Run **RetryContentReplication WMI Method** to force the Easy Setup Package update and wait for Replication to finish.
+2. Run [RetryContentReplication WMI Method](#investigate-content-distribution-failures) to force the Easy Setup Package update and wait for Replication to finish.
 3. Attempt installation again.
 
 ##### Issue 2: Update is installed on CAS and Primary Sites, but Console still displays Installing
@@ -1436,7 +1436,7 @@ The following are the state codes and the states that they represent:
 | INSTALL_UPGRADEDATABASE | 196628 |
 | INSTALL_UPDATEADMINCONSOLE | 196629 |
 
-Prerequisite flags are:
+Available Flags are the following:
 
 | Flag | Value |
 | -- | -- |
