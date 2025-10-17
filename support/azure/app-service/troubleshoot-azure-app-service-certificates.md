@@ -27,13 +27,13 @@ This section addresses areas in which App Service certificate setups can fail, i
 
 - [Domain ownership verification](#step-2-verify-domain-ownership)
 
-- [Azure Key Vault integration and access](#step-3-validate-azure-key-vault-integration-and-access)
+- [Azure Key Vault integration and access](#step-3-verify-azure-key-vault-integration-and-access)
 
 - [App Service certificate binding configuration](#step-4-check-app-service-certificate-binding-configuration)
 
 - [Certificate renewal and reissue settings](#step-5-renew-or-reissue-the-certificate)
 
-- [Solution validation](#step-6-validate-the-solution)
+- [Solution verification](#step-6-verify-the-solution)
 
 Azure portal instructions are provided for each step. Azure command-line interface (CLI) guidance is provided, if applicable.
 
@@ -504,10 +504,9 @@ an Azure notification or email message that states that a certificate is expirin
   didn't propagate because of Key Vault permission issues. For example, the
   certificate was renewed in Azure (possibly visible in **App Service
   Certificates** by having a new expiration date), but your web app still served
-  the old one. In this case, verify the Key Vault policies [(Step 3: Validate Azure
+  the old one. In this case, verify the Key Vault policies ([Step 3: Verify Azure
   Key Vault integration and
-  access).](#step-3-validate-azure-key-vault-integration-and-access). Add
-  the missing policies, and then **Sync** the certificate.
+  access](#step-3-verify-azure-key-vault-integration-and-access)). Add the missing policies, and then **Sync** the certificate.
 
 - **Subscription issues:** Make sure that your Azure subscription is in good
   standing. If the certificate wasn't renewed because of a subscription
