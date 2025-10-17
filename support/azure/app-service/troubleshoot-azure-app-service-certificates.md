@@ -372,7 +372,7 @@ validity by one year.
 > [!IMPORTANT]
 > After the portal indicates that the certificate is renewed,
 select **Sync** to push the new certificate to your app hostnames
-immediately. (You're either prompted or use the **Rekey and Sync**
+immediately. (You're either prompted to sync, or you can use the **Rekey and Sync**
 blade's **Sync** option.) The new certificate automatically syncs within
 24–48 hours. However, we recommend that you sync right away to avoid any downtime.
 
@@ -400,7 +400,7 @@ certificate.
 
 You can also export the certificate, if it's necessary, for use in
 other services. Use the **Export Certificate** option in the portal or
-use az webapp config ssl export in Azure CLI. This action provides a Key
+use `az webapp config ssl export` in Azure CLI. This action provides a Key
 Vault secret link to download the Private Key Certificate (PFX)).
 
 > [!NOTE]
@@ -551,7 +551,7 @@ Common scenarios include:
   Authority (CA) wasn't included, some clients might reject the chain.
   (App Service certificates from Azure include the full chain, so this problem usually occurs only on custom uploaded certificates).
 
-- **Old clients and SNI:** Old clients, such as some older browsers and devices, don't connect if they don't support SNI and you configured only SNI SSL. Conversely, if you configured only an IP-based SSL for one domain and an SNI client comes in on another hostname, it might not get the expected certificate.
+- **Old clients and SNI:** Old clients, like some older browsers and devices, don't connect if they don't support SNI and you configured only SNI SSL. Conversely, if you configured only an IP-based SSL for one domain and an SNI client arrives using another hostname, it might not get the expected certificate.
 
 **Solutions**
 
@@ -573,7 +573,7 @@ Common scenarios include:
   certificates on the same app service plan. If you need an IP-based SSL
   (for legacy client support), use only one. Make sure that this certificate
   covers all relevant domains. Or, consider using Azure Front Door or
-  Azure Application Gateway to handle multiple certificates with
+  Azure Application Gateway to handle multiple certificates that need
   legacy support. Azure throws an error if you try to attach a
   certificate to an IP that's already used by another certificate on the
   same IP address. Therefore, make sure to resolve these conflicts by removing the
@@ -585,9 +585,7 @@ Common scenarios include:
   certificate). All App Service certificates (purchased through Azure)
   automatically include the necessary intermediate CAs.
 
-- **Support old clients (if it's necessary):** If a subset of users or devices (usually legacy) can't connect, you might need an IP-based SSL
-  binding so that a certificate is served even without SNI. Notice that at least a Standard tier plan is required for an IP-based SSL
-  binding. Another approach is to use Azure Front Door or Azure Traffic Manager for a certificate because they can better handle older clients. Having both SNI and IP bindings on the same app can show the wrong certificate (see [Step 4: Check App Service certificate binding configuration](#step-4-check-app-service-certificate-binding-configuration)). Therefore, it's better to use one approach. If you have to mix bindings, make sure that the IP-based certificate is a superset of SNI bindings.
+- **Support old clients (if it's necessary):** If a subset of users or devices (usually legacy) can't connect, you might need an IP-based SSL binding so that a certificate is served even without SNI. Notice that at least a Standard tier plan is required for an IP-based SSL binding. Another approach is to use Azure Front Door or Azure Traffic Manager for a certificate because they can better handle older clients. Having both SNI and IP bindings on the same app can show the wrong certificate (see [Step 4: Check App Service certificate binding configuration](#step-4-check-app-service-certificate-binding-configuration)). Therefore, it's better to use one approach. If you have to mix bindings, make sure that the IP-based certificate is a superset of SNI bindings.
 
 **Note:** App Service internally uses SNI for most modern clients. On your site, you might see a different certificate, such as an Azure wildcard certificate or a certificate from another site. In this case, it's likely that the request didn't include SNI. This situation is rare. It might be caused an HTTP/2 negotiation issue or a very old client. Always test your site by using a modern browser and tools such as SSL Labs Server Test to verify the configuration.
 
