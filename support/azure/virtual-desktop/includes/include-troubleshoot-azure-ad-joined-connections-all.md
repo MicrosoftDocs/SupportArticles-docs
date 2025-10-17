@@ -41,7 +41,7 @@ If your Entra ID tenant restricts cross-tenant access and external collaboration
 
 > Log Name: Microsoft-Windows-AAD, Event ID: 1081, Error Message: OAuth response error: interaction_required, Error description: AADSTS500213: The resource tenant's cross-tenant access policy does not allow this user to access this tenant.
 
-You need to allow the following applications for external identities to successfully login.
+You need to allow the following applications for external identities to successfully login. [Learn more about enabling applications for external identities.](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#modify-inbound-access-settings)
 
 - Azure Virtual Desktop
 - Windows Azure Active Directory
