@@ -43,20 +43,6 @@ If your users encounter errors when they try to sign in to Microsoft Teams, use 
 
 This test verifies that the user account meets the requirements to sign in to Teams.
 
-## Run the classic Teams sign-in troubleshooter
-
-[!INCLUDE [Get Help troubleshooter note](../../includes/sara-note-new-teams.md)]
-
-The [classic Teams sign-in troubleshooter](https://aka.ms/SaRA-TeamsSignIn-sarahome) helps you resolve classic Teams sign-in issues.
-
-To run the troubleshooter, follow these steps:
-
-1. Start the Get Help app.
-1. In the **Search** bar, enter *Unable to sign-in to Microsoft Teams*.
-1. Follow the instructions in the Get Help app to run the troubleshooter.
-
-After the troubleshooter finishes, it displays the results and provides additional information about how to resolve the issue.
-
 ## Fix the issue manually
 
 If you want to perform the checks and fix the issue manually, follow these steps:
