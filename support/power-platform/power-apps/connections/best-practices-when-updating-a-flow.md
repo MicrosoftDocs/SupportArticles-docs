@@ -52,8 +52,8 @@ This issue occurs when the Power Automate flow has been updated to use a new con
 > [!NOTE]
 > Make sure to perform the following steps in the source or development environment and update the solution. After updating the solution in the source or development environment, export and import it into all target or production environments.
 
-1. Open the app for editing using the [latest version of Power Apps Studio](https://learn.microsoft.com/power-platform/released-versions/powerapps).
-2. [Remove the Power Automate flows from the app](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow).
+1. Open the app for editing using the [latest version of Power Apps Studio](/power-platform/released-versions/powerapps).
+2. [Remove the Power Automate flows from the app](/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow).
 3. Re-add the flows to the app.
 4. Save and republish the app.
 
@@ -95,7 +95,7 @@ The Power Automate flow has been disabled or turned off.
 > [!NOTE]
 > Make sure to perform the following steps in the source or development environment and update the solution. After updating the solution in the source or development environment, export and import it into all target or production environments.
 
-Ensure that the [Power Automate flow is turned on](https://learn.microsoft.com/power-automate/disable-flow#turn-on-a-flow) and verify the flow run by testing it manually.
+Ensure that the [Power Automate flow is turned on](/power-automate/disable-flow#turn-on-a-flow) and verify the flow run by testing it manually.
 
 ## Inner error code "ResponseTimeout" on Power Automate flow run
 
@@ -118,7 +118,7 @@ Ensure that the [Power Automate flow is turned on](https://learn.microsoft.com/p
 
 ### Cause
 
-This error indicates that a synchronous Power Automate flow run exceeds the maximum allowed execution time of 120 seconds (2 minutes), resulting in a timeout. [Learn more about the timeout limit of an outbound synchronous request.](https://learn.microsoft.com/power-automate/limits-and-config#request-limits)
+This error indicates that a synchronous Power Automate flow run exceeds the maximum allowed execution time of 120 seconds (2 minutes), resulting in a timeout. [Learn more about the timeout limit of an outbound synchronous request.](/power-automate/limits-and-config#request-limits)
 
 ### Mitigation steps
 
