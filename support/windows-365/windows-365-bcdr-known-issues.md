@@ -1,13 +1,13 @@
 ---
-title: Windows 365 BCDR known issues
+title: Windows 365 BCDR Known Issues
 description: This article provides troubleshooting steps for the recent known issues with Windows 365 disaster recovery
-author: kaushika-msft
-ms.author: kaushika
 ms.reviewer: kaushika; aradinger
 ms.date: 10/16/2025
 ms.topic: troubleshooting-known-issue
 ms.service: windows-365
-ms.custom: pcy:WinComm User Experience
+ms.custom:
+  - pcy:WinComm User Experience
+  - sap:
 ---
 # Windows 365 BCDR known issues
 
