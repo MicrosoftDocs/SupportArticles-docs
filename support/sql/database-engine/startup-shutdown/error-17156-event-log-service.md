@@ -8,7 +8,7 @@ ms.custom: sap:Startup, shutdown, restart issues (instance or database)\Cannot s
 
 # Error 17156 "Could not initiate the EventLog Service" when starting SQL Server Agent
 
-This article provides troubleshooting guidance for error 17156, "Could not initiate the EventLog Service," that might occur when you start SQL Server Agent. This error can appear after you install or upgrade to Windows Server 2025 or 2022. It prevents SQL Server Agent from starting.
+This article provides troubleshooting guidance for error 17156, "Could not initiate the EventLog Service," that might occur when you start SQL Server Agent. This error can appear after you install or upgrade to Windows Server 2022 or 2025. It prevents SQL Server Agent from starting.
 
 ## Symptoms
 
