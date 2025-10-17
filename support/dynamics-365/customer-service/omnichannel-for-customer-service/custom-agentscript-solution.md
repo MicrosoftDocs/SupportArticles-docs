@@ -2,7 +2,6 @@
 title: Can't deploy a custom solution with Agentscript solution
 description: Provides a resolution for a known issue about deploying an Agentscript custom solution in Omnichannel for Customer Service.
 ms.reviewer: nenellim
-ms.author: vamullap
 ms.date: 05/23/2023
 ms.custom: sap:Agent Scripts and Macros\Issue with loading agent scripts when the environment or session is not proper
 ---
