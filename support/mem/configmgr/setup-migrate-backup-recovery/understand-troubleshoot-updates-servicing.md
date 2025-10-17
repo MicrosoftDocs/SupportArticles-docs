@@ -7,14 +7,14 @@ ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Rec
 ---
 # Understand and troubleshoot Updates and Servicing in Configuration Manager
 
-This article helps administrators understand the **Updates and Servicing** process in Configuration Manager (current branch). It can also help you troubleshoot common issues that you may meet during the update installation.
-
 _Original product version:_ &nbsp; Configuration Manager (current branch)  
 _Original KB number:_ &nbsp; 4490424
 
+This article helps administrators understand the **Updates and Servicing** process in Configuration Manager (current branch). It can also help you troubleshoot common issues that you may meet during the update installation.
+
 Configuration Manager synchronizes with the Microsoft cloud service to get updates that apply to your infrastructure and version. You can install these updates from within the Configuration Manager console.
 
-To view and manage the updates, navigate to **Administration** > **Cloud Services** > **Updates and Servicing** in the Configuration Manager console connected to the top-level site. For more information, see [Install in-console updates for Configuration Manager](https://learn.microsoft.com/intune/configmgr/core/servers/manage/install-in-console-updates).
+To view and manage the updates, navigate to **Administration** > **Cloud Services** > **Updates and Servicing** in the Configuration Manager console connected to the top-level site. For more information, see [Install in-console updates for Configuration Manager](/intune/configmgr/core/servers/manage/install-in-console-updates).
 
 ## Glossary
 
@@ -45,7 +45,7 @@ To view and manage the updates, navigate to **Administration** > **Cloud Service
 - Restarting the "Configuration Manager Update" service during installation.
 - Keeping the "\CMUStaging\" folder open during the installation.
 
-NOTE: [CMUpdateReset.exe](https://learn.microsoft.com/intune/configmgr/core/servers/manage/update-reset-tool) can be used only before Update Package installation has been triggered.
+NOTE: [CMUpdateReset.exe](/intune/configmgr/core/servers/manage/update-reset-tool) can be used only before Update Package installation has been triggered.
 
 ## Identify the Update Package GUID
 
@@ -80,9 +80,9 @@ SELECT PackageGuid,State FROM CM_UpdatePackages where PackageGUID = '<Package GU
 
 ## Synchronization and Applicability Check
 
-The [Service Connection Point (SCP)](https://learn.microsoft.com/intune/configmgr/core/servers/deploy/configure/about-the-service-connection-point) is responsible for downloading updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your Service Connection Point is in offline mode, use the [Service Connection Tool](https://learn.microsoft.com/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to manually sync with the Microsoft cloud.
+The [Service Connection Point (SCP)](/intune/configmgr/core/servers/deploy/configure/about-the-service-connection-point) is responsible for downloading updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your Service Connection Point is in offline mode, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to manually sync with the Microsoft cloud.
 
-The following steps explain the [flow](https://learn.microsoft.com/intune/configmgr/core/servers/manage/download-updates-flowchart) in which an online Service Connection Point downloads in-console updates.
+The following steps explain the [flow](/intune/configmgr/core/servers/manage/download-updates-flowchart) in which an online Service Connection Point downloads in-console updates.
 
 <details><summary>Click to expand the steps</summary>
 
@@ -703,8 +703,10 @@ If the **State** stays in 2 (Enabled), it highly likely identifies the **Hman** 
 
 Note **Hman** must be able to access the Package Source via Share (even if SCP is local to the Site Server) - `\\<SCP FQDN>\EasySetupPayLoad\<PackageGUID>` to calculate the Easy Setup Package hash and update the **EasySetupSettings** table. If it fails accessing the share, the following error is logged:
 
->Get update package 05F7ED65-3CB0-46CF-91E7-71193DAF9845, \\<SCP FQDN>\EasySetupPayLoad\05F7ED65-3CB0-46CF-91E7-71193DAF9845
->Failed to calculate hash
+```log
+Get update package 05F7ED65-3CB0-46CF-91E7-71193DAF9845, \\<SCP FQDN>\EasySetupPayLoad\05F7ED65-3CB0-46CF-91E7-71193DAF9845
+Failed to calculate hash
+```
 
 Verify the access to this share for the Site Server computer account.
 
@@ -1039,7 +1041,7 @@ Also, since 2303, ConfigMgr requires ODBC Driver 18 for SQL Server or later. The
 
 Starting from 2503, the required version is at least 18.4.1.1, so the corresponding check has been updated.
 
-To meet both prerequisites, consider manually installing the following MSIs from "\\EasySetupPayload\\<Update GUID>\\redist\\" folder (available only for major releases):
+To meet both prerequisites, consider manually installing the following MSIs from `\EasySetupPayload\<Update GUID>\redist\` folder (available only for major releases):
 
 - sqlncli.msi
 - msodbcsql.msi
@@ -1380,7 +1382,7 @@ The first usual cause is _third-party_ objects created in ConfigMgr SQL DB. Remo
 
 The alternate cause is _third-party software_ accessing ConfigMgr SQL DB and locking _first-party_ objects; for example, external CMDB connector. Make sure no other software interferes while CMUpdate.exe performs database changes.
 
-## References
+## Reference
 
 ### Relevant folders
 
