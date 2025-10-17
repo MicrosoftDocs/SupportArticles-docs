@@ -355,7 +355,7 @@ Ensure the VM meets recommended IOPS and that image startup tasks (such as antiv
 
 ### Validate required service endpoints
 
-If the host still shows **Needs assistance** or **Unavailable**, run **WVDAgentUrlTool.exe** and remediate any failing endpoints. For more information, see this [article](/azure/virtual-desktop/agent-connectivity#check-access-to-required-fqdns-and-endpoints).
+If the host still shows **Needs assistance** or **Unavailable**, run **WVDAgentUrlTool.exe** and remediate any failing endpoints. For more information, see this [article](/azure/virtual-desktop/check-access-validate-required-fqdn-endpoint).
 
 ### Verification
 
