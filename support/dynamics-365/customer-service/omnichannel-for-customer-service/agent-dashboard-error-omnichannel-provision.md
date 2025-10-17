@@ -2,7 +2,6 @@
 title: Agent dashboard shows authentication error after provisioning Omnichannel for Customer Service
 description: Provides a resolution for the authentication error that occurs on the agent dashboard after provisioning Omnichannel for Customer Service.
 ms.reviewer: nenellim
-ms.author: vamullap
 ms.date: 05/23/2023
 ms.custom: sap:Licensing, provisioning, and installation\Unable to install or provision Omnichannel solutions on my environment
 ---

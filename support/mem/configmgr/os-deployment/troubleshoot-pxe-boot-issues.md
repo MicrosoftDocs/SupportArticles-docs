@@ -19,6 +19,9 @@ _Original KB number:_ &nbsp; 4468612
 
 For essential information about how PXE works, see the companion article [Understand PXE boot in ConfigMgr](understand-pxe-boot.md).
 
+> [!NOTE]
+> If you require PXE or multicast support, you need an on-premises distribution point to respond to these boot requests.
+
 Before you start to troubleshoot on the PXE Service Point, we recommend that you try the following solutions. If solution 1 works for you, you don't need to go to solution 2. These solutions resolve most problems that affect PXE boot.
 
 ## Solution 1: Verify IP Helpers
