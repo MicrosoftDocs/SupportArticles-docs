@@ -4,7 +4,6 @@ description: Describes how to configure Database Mail and send the test mail. Pr
 ms.date: 01/17/2025
 ms.custom: sap:SQL Server Management, Query and Data Tools
 author: pijocoder
-ms.author: nathansc
 ms.reviewer: jopilov
 ---
 # Troubleshoot Database Mail issues

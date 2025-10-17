@@ -1,8 +1,6 @@
 ---
 title: Troubleshoot bookings from Resource Scheduling Optimization
 description: Resolves issues with bookings in the Resource Scheduling Optimization add-in for Microsoft Dynamics 365 Field Service.
-ms.author: AnilMur
-author: anilmur
 ms.reviewer: mhart
 ms.date: 04/23/2025
 ms.custom: sap:Resource Scheduling Optimization

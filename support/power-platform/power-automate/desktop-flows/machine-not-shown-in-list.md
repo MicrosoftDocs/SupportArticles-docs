@@ -1,8 +1,6 @@
 ---
 title: Machine Not Listed When Creating Desktop Flow Connection 
 description: Solves an issue where your machine isn't listed in the Machine or machine group when creating a desktop flow connection in Microsoft Power Automate for desktop.
-author: ceporche
-ms.author: ceporche
 ms.writer: rbarni, alarnaud
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ms.date: 12/18/2024

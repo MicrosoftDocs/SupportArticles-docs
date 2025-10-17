@@ -1,8 +1,6 @@
 ---
 title: No assets appear or assets aren't as expected in the HoloLens app
 description: Resolves an issue where the assets in the HoloLens app for Microsoft Dynamics 365 Remote Assist aren't as expected or don't appear.
-author: prashantyvr
-ms.author: prashan
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: sap:Dynamics 365 Remote Assist\Application Functionality, bap-template

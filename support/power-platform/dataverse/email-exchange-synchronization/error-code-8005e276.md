@@ -3,8 +3,6 @@ title: Error code 8005E276 when you test and enable a mailbox
 description: Provides a resolution for error code 8005E276 that occurs when you test and enable a mailbox for server-side synchronization.
 ms.date: 04/17/2025
 ms.custom: sap:Email and Exchange Synchronization\Set up and configuration of server-side synchronization
-author: rahulmital
-ms.author: rahulmital
 ---
 # Error code 8005E276 when you test and enable mailbox
 

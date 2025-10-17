@@ -1,8 +1,6 @@
 ---
 title: Inspection Flows Aren't Triggered
 description: Resolves an issue where an inspection flow isn't triggered in a Microsoft Dynamics 365 Field Service environment.
-author: josephshum-msft
-ms.author: jshum
 ms.reviewer: v-wendysmith
 ms.date: 04/23/2025
 ms.custom: sap:Administration

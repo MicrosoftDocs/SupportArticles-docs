@@ -1,11 +1,9 @@
 ---
 title: Troubleshoot Power Apps Canvas App Performance Issues
 description: Troubleshoot common performance issues in Power Apps canvas apps.
-author: lancedMicrosoft
 ms.custom: sap:Canvas App Performance
 ms.reviewer: lanced, aartigoyle
 ms.date: 02/14/2025
-ms.author: lanced
 search.audienceType: 
   - maker 
 search.app: 

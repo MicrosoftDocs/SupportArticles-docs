@@ -1,8 +1,6 @@
 ---
 title: Can't find a guide on a shared HoloLens device 
 description: Resolves an issue where you can't find a guide in Dynamics 365 Guides on a shared HoloLens device.
-author: prashantyvr
-ms.author: prashan
 ms.reviewer: v-wendysmith, mhart
 ms.date: 10/27/2023
 ms.custom: sap:Application Functionality

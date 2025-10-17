@@ -1,10 +1,8 @@
 ---
 title: Filter expression returns extra blank records in results 
 description: Describes an issue where filter expressions return extra blank records in results for a formula.
-author: lancedmicrosoft
 ms.reviewer: tapanm
 ms.date: 06/24/2022
-ms.author: lanced
 ms.custom: sap:Running Canvas App
 search.audienceType: 
   - maker

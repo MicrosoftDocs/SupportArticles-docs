@@ -3,8 +3,6 @@ title: Incoming emails are unexpectedly synchronized or contain unexpected or mi
 description: Provides troubleshooting information for the incoming emails are unexpectedly synchronized or contain unexpected or missing data issue in Microsoft Dataverse.
 ms.date: 11/11/2024
 ms.custom: sap:Email and Exchange Synchronization\Synchronization of incoming email
-author: rahulmital
-ms.author: rahulmital
 ms.reviewer: debrau
 ---
 # Incoming emails are unexpectedly synchronized or contain unexpected or missing data

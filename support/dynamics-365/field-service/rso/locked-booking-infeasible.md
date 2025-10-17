@@ -1,8 +1,6 @@
 ---
 title: Locked Booking Is Infeasible in Resource Scheduling Optimization
 description: Resolves issues with booking locks in the Resource Scheduling Optimization add-in for Microsoft Dynamics 365 Field Service.
-ms.author: AnilMur
-author: anilmur
 ms.reviewer: mhart
 ms.date: 02/18/2025
 ms.custom: sap:Resource Scheduling Optimization

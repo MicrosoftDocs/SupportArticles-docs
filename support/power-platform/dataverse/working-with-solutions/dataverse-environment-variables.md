@@ -4,8 +4,6 @@ description: Describes an issue when importing a solution to a different environ
 ms.reviewer: tapanm
 ms.custom: sap:Working with Solutions\Solution import - Other errors
 ms.date: 04/17/2025
-author: lancedMicrosoft
-ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 

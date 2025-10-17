@@ -2,9 +2,7 @@
 title: Failed to Assume Control of IE Error
 description: Solves an error that occurs when you use Internet Explorer as the browser for automation.
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.reviewer: amitrou
-ms.author: amitrou
-author: amitrou
+ms.reviewer: v-shaywood
 ms.date: 04/09/2025
 ---
 # "Failed to assume control of IE" error when using Internet Explorer for web automation
