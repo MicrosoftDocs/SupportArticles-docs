@@ -35,3 +35,15 @@ AADNonInteractiveUserSignInLogs
 | project ['Time']=(TimeGenerated), UserPrincipalName, AuthenticationRequirement, ['MFA Result']=ResultDescription, Status, ConditionalAccessPolicies, DeviceDetail, ['Virtual Machine IP']=IPAddress, ['Cloud App']=ResourceDisplayName
 | order by ['Time'] desc
 ```
+### External Identities are unable to discover resources or login to their Cloud PC
+If your Entra ID tenant restricts cross-tenant access and external collaboration settings, you may encounter an error when External Identities attempt to connect. 
+
+> Log Name: Microsoft-Windows-AAD, Event ID: 1081, Error Message: OAuth response error: interaction_required, Error description: AADSTS500213: The resource tenant's cross-tenant access policy does not allow this user to access this tenant.
+
+You will need to allow the following applications for external identities to successfully login.
+
+- Azure Virtual Desktop
+- Windows Azure Active Directory
+- Windows Cloud Login
+- Azure Windows VM Sign-In
+- Windows 365 (if allocating Windows 365 Cloud PCs)
