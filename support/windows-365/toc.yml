@@ -70,4 +70,4 @@ items:
   - name: Windows 365 BCDR
     items:
     - name: Windows 365 BCDR known issues
-      href: windows-365-bcdr-known-issues.md      
+      href: windows-365-bcdr-known-issues.md

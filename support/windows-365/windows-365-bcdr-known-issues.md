@@ -15,17 +15,17 @@ This article addresses a known issue that's related to Windows 365 Business Cont
 
 ## Classic Outlook is corrupted after disaster recovery failover or failback
 
-After you restore a Cloud PC from a snapshot during a disaster recovery failover or upon failing back to the primary region after the disaster, users might encounter an error message when they start classic Outlook.
+After you restore a Cloud PC from a snapshot during a disaster recovery failover, or upon failing back to the primary region after the disaster, users might encounter an error message when they start classic Outlook.
 
-This issue occurs because the Outlook offline cache becomes corrupted because the client and the server become out of sync during a failover. The client on the snapshot reflects a past state relative to the server's current status. The process of re-synchronizing the Offline Storage Table (OST) file can take time.
+This issue occurs because the Outlook offline cache becomes corrupted because the client and the server become out of sync during a failover. The client on the snapshot reflects a past state relative to the server's current status. The process of resynchronizing the Offline Storage Table (OST) file can take time.
 
-This process does not cause any data loss.
+This process doesn't cause any data loss.
 
 ### Workaround
 
 After you complete a failover or failback operation, delete the Cloud PC's OST file.
 
-This action forces Outlook to rebuild the search index and the offline cache of the mailbox. This process does not cause any data loss.
+This action forces Outlook to rebuild the search index and the offline cache of the mailbox. This process doesn't cause any data loss.
 
 ### Resolution
 
