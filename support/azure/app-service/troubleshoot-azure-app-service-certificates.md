@@ -78,7 +78,7 @@ Make sure that the certificate isn't expired. Also, check whether the renewal st
 
 If the certificate is marked **Expired** or you see a warning such as **Renewal Failed** in the portal, the certificate wasn't renewed in time and a new certificate should be purchased. If the status is **Pending Issuance**, the certificate isn't yet fully provisioned (often because of domain verification issues).
 
-If **Auto Renew** is set to **Off**, and the certificate is expired, a new certificate should be created. In this case, you can delete this certificate. If **Auto Renew** is set to **On** but the certificate is still expired, this means that a validation requirement wasn't met on time. In this case, a new certificate should be created.
+If **Auto Renew** is set to **Off**, and the certificate is expired, a new certificate should be created. In this case, you can delete this certificate. If **Auto Renew** is set to **On** but the certificate is still expired, this situation means that a validation requirement wasn't met on time. In this case, a new certificate should be created.
 
 ### Step 2: Verify domain ownership
 
@@ -122,13 +122,13 @@ az resource show -g <ResourceGroupName> -n <CertificateName>
 ```
 
 If the `provisioningState` value is `Pendingissuance` or something similar, domain
-verification likely isn't completed. You'll have to use the portal or
+verification likely isn't completed. You have to use the portal or
 out-of-band method to verify.
 
 **Troubleshoot domain verification failure**
 
 - Make sure that you add the custom domain to your App Service app for App
-  Service verification, and that the DNS records (Address (A) or CNAME
+  Service verification. Also make sure that the DNS records (Address (A) or CNAME
   records and the required TXT record for root domains) are correct.
 
 - If you used the TXT record method, verify that the record is at the
@@ -139,11 +139,11 @@ out-of-band method to verify.
   verification HTTP request. This condition might occur if Azure tries an HTTP GET to
   *http://yourdomain/.well-known/pki-validation/godaddy.html*. For example, a customer has a custom module on their site that generates an "HTTP 500" error and causes verification to fail. In these cases, use an alternative verification method (DNS TXT or email) to complete the process.
 
-- For renewals, if more than 13 months (395 days) have passed since the
+- For renewals, if more than 13 months (395 days) passed since the
   last verification, you must verify the domain again. Azure keeps a
   renewed certificate in a pending state until you re-verify ownership.
   If your certificate wasn't renewed because of verification issues, the issuance and renewal process will proceed after 
-  you verify the domain. (You might have to trigger a manual renew if this process has already
+  you verify the domain. (You might have to trigger a manual renew if this process already
   failed. For more information, see [Step 5: Renew or reissue the
   certificate](#step-5-renew-or-reissue-the-certificate).
 
@@ -213,7 +213,7 @@ properties.accessPolicies
 
 Review the output for the required service principal entries. To fix
 them by using Azure CLI, run az keyvault set-policy together with the appropriate
-`--spn` and permissions (this requires the service principal's App ID).
+`--spn` and permissions. (This action requires the service principal's App ID.)
 
 > [!NOTE]
 > This task is typically easier to perform by using the Azure portal.
@@ -236,7 +236,7 @@ certificate is active.
 
 ### Step 4: Check App Service certificate binding configuration
 
-Make sure that that your web app is correctly bound to the certificate and that
+Make sure that your web app is correctly bound to the certificate and that
 the SSL/TLS settings are configured correctly.
 
 **Custom domain binding**
@@ -284,8 +284,8 @@ don't run into the following Azure limitations:
   before you add it to another app.
 
 - By default, you can't use the certificate across different subscriptions or
-  cloud services (such as trying to use an App Service certificate
-  in a different subscription's app). App
+  cloud services, such as if you try to use an App Service certificate
+  in a different subscription's app. App
   Service certificates are tied to a single subscription's Key Vault.
   Trying to use certificates in this manner can cause such errors as *The parameter KeyVaultId &
   KeyVaultSecretName has an invalid value*. The certificate, its Key
@@ -339,7 +339,7 @@ error:
 
 - If a wrong certificate appears in the custom domain, it might
   indicate the mixed SNI and IP bindings scenario that was previously discussed.
-  Make sure that that only the intended certificate is used for that domain on
+  Make sure that only the intended certificate is used for that domain on
   that IP address.
 
 ### Step 5: Renew or reissue the certificate 
@@ -354,8 +354,8 @@ through **Auto Renew Settings** in the certificate blade. However, if
 the certificate is already expired, you have to create a new certificate.
 After autorenewal is turned on, Azure tries to renew starting 32 days
 before the expiration date. If autorenew is on but the certificate is still
-pending, something prevented the renewal from occurring (such as domain
-verification). After you resolve the verification or permission
+pending, something prevented the renewal from occurring. For example, domain
+verification. After you resolve the verification or permission
 issues, do a manual renewal to trigger a fresh issuance.
 
 **For Azure portal (manual renew)**
@@ -372,7 +372,7 @@ validity by one year.
 > [!IMPORTANT]
 > After the portal indicates that the certificate is renewed,
 select **Sync** to push the new certificate to your app hostnames
-immediately. (You'll either be prompted or use the **Rekey and Sync**
+immediately. (You are either prompted or use the **Rekey and Sync**
 blade's **Sync** option.) The new certificate automatically syncs within
 24–48 hours. However, we recommend that you sync right away to avoid any downtime.
 
@@ -389,7 +389,7 @@ If you suspect the certificate's private key was compromised, or if you want to
 force issuance of a new certificate that has a new key without waiting for
 expiry, use **Rekey**. In the portal, **Rekey and Sync > Rekey**
 generates a new certificate. (You'll have to verify the domain again if
-13 months (395 days) have passed, similar to renewal). After the rekey
+13 months (395 days) passed, similar to renewal). After the rekey
 operation finishes, select **Sync** to update the binding. Rekeying is
 essentially the same as an on-demand renewal by using a new key.
 
@@ -411,7 +411,7 @@ After you work through the previous steps, perform a final verification.
 
 **Test the web app**
 
-Browse to your app's URL by using the HTTPS protocol (for example, *https://yourcustomdomain.com*). Make sure that that:
+Browse to your app's URL by using the HTTPS protocol (for example, *https://yourcustomdomain.com*). Make sure that:
 
 - The site loads without SSL errors (no browser warnings).
 
@@ -419,7 +419,7 @@ Browse to your app's URL by using the HTTPS protocol (for example, *https://your
   (check certificate details in the browser).
 
 - Old issues are resolved. For example, if you had a "404" error on the
-  custom domain or a certificate mismatch, those should be gone now. A
+  custom domain or a certificate mismatch, those errors should be gone now. A
   "404" error can indicate the custom domain wasn't linked (see [Step 4: Check
   App Service Certificate Binding
   Configuration](#step-4-check-app-service-certificate-binding-configuration)).
@@ -440,9 +440,9 @@ flush the local DNS cache, as noted in [Step 4: Check
 Use command-line tools to inspect SSL (for example, `openssl s_client
 -connect yourdomain:443 -servername yourdomain`). You can then see the
 certificate chain and verify the certificate's thumbprint and
-expiration. Make sure that that intermediate certificates are correctly provided
-by the server (Azure App Service handles this automatically for App
-Service certificates).
+expiration. Make sure that intermediate certificates are correctly provided
+by the server. (Azure App Service handles this task automatically for App
+Service certificates.)
 
 If everything looks correct, your App Service certificate is correctly
 installed and configured. If problems persist, revisit the earlier steps
@@ -450,7 +450,7 @@ or consult Azure documentation and support.
 
 ## Common issues and solutions
 
-The following is a list of common problem areas (grouped by root cause)
+The following sections list common problem areas (grouped by root cause)
 together with their symptoms and recommended solutions. This list is based on
 common support cases to help you quickly identify and fix a
 specific problem.
@@ -459,7 +459,7 @@ specific problem.
 
 **Symptoms**
 
-Your website shows an **expired certificate** (such as a browser warning that indicates *certificate expired on*), or an App Service certificate
+Your website shows an **expired certificate**, such as a browser warning that indicates *certificate expired on*. Or, an App Service certificate
 resource in Azure appears as **Expired**. In some cases, you might receive
 an Azure notification or email message that states that a certificate is expiring soon or didn't renew.
 
@@ -468,16 +468,16 @@ an Azure notification or email message that states that a certificate is expirin
 - **Auto renewal was disabled:** The certificate wasn't set to autorenew, and nobody renewed it manually.
 
 - **Domain verification lapsed:** The domain wasn't reverified within
-  the last 13 months. This caused the autorenewal process to stall pending
+  the last 13 months. This situation caused the autorenewal process to stall pending
   verification. The renewal stayed in a *Pending issuance* state, and the old certificate eventually expired.
 
 - **Key Vault permission issue:** Azure tried to renew but couldn't
   update the Key Vault secret because the required access was missing.
 
-- **Payment or subscription issue (for purchase renewals):** If the
+- **Payment or subscription issue (for purchase renewals):** Renewal can fail if the
   certificate is a paid App Service certificate, and the credit card on
   the subscription is invalid or the subscription type no longer
-  supports it (such as for a student or expired offer), renewal can fail.
+  supports it, such as for a student or expired offer.
 
 **Solutions**
 
@@ -511,10 +511,8 @@ an Azure notification or email message that states that a certificate is expirin
 
 - **Subscription issues:** Make sure that your Azure subscription is in good
   standing. If the certificate wasn't renewed because of a subscription
-  problem (such as payment or other limits), it must be resolved
-  accordingly (for example, updating the credit card information, upgrading the
-  offer, or contacting support if you reach a limit). After you correct
-  this problem, you might have to try again to renew.
+  problem (such as payment or other limits), it must be resolved as appropriate. For example, update the credit card information, upgrade the
+  offer, or contact support if you reach a limit. After you correct the problem, you might have to try again to renew.
 
 We suggest that you set up Azure Monitor or Azure Advisor alerts for
 certificate expiration. Azure Advisor can alert you when a certificate
@@ -564,7 +562,7 @@ Common scenarios include:
 - **Bind the certificate to the custom domain:** In the Azure portal, go
   to your web app's TLS/SSL settings to make sure that a binding exists for
   every custom hostname that needs HTTPS. If it's necessary, add the binding by using
-  the correct certificate. This is the most common fix for *SSL not
+  the correct certificate. This method is the most common fix for *SSL not
   working* issues because the certificate was likely uploaded or imported but
   not actually attached to the site.
 
@@ -577,7 +575,7 @@ Common scenarios include:
 
 - **Avoid binding conflicts:** Use **SNI SSL** bindings for multiple
   certificates on the same app service plan. If you need an IP-based SSL
-  (for legacy client support), use only one, and make sure that that certificate
+  (for legacy client support), use only one. Make sure that this certificate
   covers all relevant domains. Or, consider using Azure Front Door or
   Azure Application Gateway to handle multiple certificates with
   legacy support. Azure throws an error if you try to attach a
@@ -592,18 +590,14 @@ Common scenarios include:
   automatically include the necessary intermediate CAs.
 
 - **Support old clients (if it's necessary):** If a subset of users or devices (usually legacy) can't connect, you might need an IP-based SSL
-  binding (for which at least a Standard tier plan is required) so that a
-  certificate is served even without SNI. Another approach is to use
-  Azure Front Door or Azure Traffic Manager for a certificate because they can better handle older clients. Be aware that having both SNI and IP
-  bindings on the same app can show the wrong certificate (see [Step 4:
-  Check App Service certificate binding
-  configuration](#step-4-check-app-service-certificate-binding-configuration)). Therefore, it's usually better to use one approach. If you have to mix bindings, make sure that the IP-based certificate is a superset of SNI ones.
+  binding so that a certificate is served even without SNI. Notice that at least a Standard tier plan is required for an IP-based SSL
+  binding. Another approach is to use Azure Front Door or Azure Traffic Manager for a certificate because they can better handle older clients. Be aware that having both SNI and IP bindings on the same app can show the wrong certificate (see [Step 4: Check App Service certificate binding configuration](#step-4-check-app-service-certificate-binding-configuration)). Therefore, it's usually better to use one approach. If you have to mix bindings, make sure that the IP-based certificate is a superset of SNI bindings.
 
 **Note:** App Service internally uses SNI for most modern clients. If
-you browse your site and see a different certificate (such as an Azure
-wildcard certificate or a certificate from another site), it's likely
-that the request didn't include SNI (for example, an HTTP/2 negotiation issue
-or a very old client). This situation is rare. Always test your
+you browse your site and see a different certificate, such as an Azure
+wildcard certificate or a certificate from another site, it's likely
+that the request didn't include SNI. For example, an HTTP/2 negotiation issue
+or a very old client. This situation is rare. Always test your
 site by using a modern browser and tools such as SSL Labs Server Test to
 verify configuration.
 
@@ -660,15 +654,13 @@ completing.
   correctly placed. Use an online DNS lookup tool to make sure that the TXT record is
   visible.
 
-- **Post-verification sync:** After a successful domain verification, if
-  this is a renewal scenario, go back and select **Sync** on the
-  certificate (or if Azure didn't automatically finish the process,
-  initiate the renewal again). The certificate status should change from
+- **Post-verification sync:** After a successful domain verification in a renewal scenario, go back and select **Sync** on the
+  certificate. If Azure didn't automatically finish the process, initiate the renewal again. The certificate status should change from
   **Pending** to **Issued**.
 
 Domain verification issues are resolved by completing the required
 verification steps. Always make sure that your domain's DNS is correctly
-configured *before* you purchase a certificate. Azure usually suggests
+configured *before* you purchase a certificate. Azure suggests
 that you map the domain first for this reason. If you follow the workflow of
 mapping custom a domain, buying a certificate, verifying your domain, and
 then importing the certificate to the app, you're less likely to
@@ -678,7 +670,7 @@ encounter trouble.
 
 **Symptoms**
 
-After you complete the setup, you find that your web app can't use the certificate or a renewal didn't propagate. You might encounter errors such as *Forbidden* when the app tries to access a certificate's private key, or you notice the certificate's secret in Key Vault isn't showing a value even after verification. In some cases, an error is shown in the portal that mentions not having access to the Key Vault, or an attempt to export the certificate by using PowerShell fails, and you receive a message that states that the certificate isn't found.
+After you complete the setup, you find that your web app can't use the certificate or a renewal didn't propagate. You might encounter errors such as *Forbidden* when the app tries to access a certificate's private key, or you notice the certificate's secret in Key Vault isn't showing a value even after verification. In some cases, an error message appears in the portal that mentions non-access to the Key Vault. Or, an attempt to export the certificate by using PowerShell fails. Or, you receive a message that states that the certificate isn't found.
 
 **Possible causes**
 
@@ -705,8 +697,8 @@ After you complete the setup, you find that your web app can't use the certifica
   the app's identity or permissions to match how you export the certificate.
   By default, the certificate that's bound to your web app is made available to
   the worker process. A managed identity isn't necessary if you want only to use an App
-  Service certificate in the web app (because it's usually handled by the
-  platform). However, if you explicitly uploaded a certificate that has a
+  Service certificate in the web app because this task is usually handled by the
+  platform. However, if you explicitly uploaded a certificate that has a
   password, you might have to add an app setting to grant access
   (**WEBSITE_LOAD_CERTIFICATES** setting).
 
@@ -721,15 +713,15 @@ After you complete the setup, you find that your web app can't use the certifica
   app. In the TLS/SSL settings of your web app, select **Private Key
   Certificates (.pfx)**, and then select **Import App Service Certificate** to
   link the certificate from Key Vault to app. If a Key Vault access
-  issue existed, it should warn or fail here which is a clue on how
-  to fix access. After you fix this, the import should succeed. You can
+  issue existed, it should provide a warning or fail here. This action is a clue about how
+  to fix the access issue. After you fix it, the import should succeed. You can
   then bind the certificate.
 
 - **Check Key Vault connectivity settings:** If you enabled a Key Vault
-  firewall or service endpoint, make sure that that the App Service
+  firewall or service endpoint, make sure that the App Service
   infrastructure can still access it. Typically, leaving Key Vault
   accessible to Azure services (the default selection) is required for App Service
-  certificates because the backend uses it.
+  certificates because the back end uses it.
 
 - **Use Azure Managed Identity (advanced scenario):** If you use your own
   Key Vault references, you have to grant your web app managed identity
@@ -737,12 +729,12 @@ After you complete the setup, you find that your web app can't use the certifica
   the built-in service principle, as discussed earlier.
   
   > [!NOTE]
-  > This is generally not necessary for App Service certificates.
+  > This is usually not necessary for App Service certificates.
 
 - **Export as a last resort:** If, for some reason, the app still can't
-  get the certificate but you can verify that the certificate is in Key
-  Vault and domain verified, manually export the certificate from Key
-  Vault, and install it as a personal certificate on the web app. This action isn't ideal because you lose automatic sync abilities, but it can be done.
+  get the certificate, but you can verify that the certificate is in the Key
+  Vault and is domain verified, manually export the certificate from the Key
+  Vault. Then install it as a personal certificate on the web app. This action isn't ideal because you lose automatic sync abilities, but it can be done.
   Go to the Key Vault, find the secret for the certificate, download the
   PFX, and then use **Upload Certificate** in the web app TLS/SSL settings
   together with the PFX and a password. (The password is likely blank for the
@@ -761,8 +753,8 @@ this issue.
 
 **Symptoms**
 
-This is a broad category that includes any "user error" or unsupported
-scenario that causes certificate errors. This category includes:
+This section provides a broad category of "user error" or unsupported
+scenarios that cause certificate errors. This category includes:
 
 - Inability to purchase or create a certificate.
 
