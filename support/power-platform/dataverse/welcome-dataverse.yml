@@ -7,9 +7,9 @@ metadata:
   description: Landing page for Microsoft Dataverse troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: rahulmital #Required; your GitHub user alias, with correct capitalization.
-  ms.author: rahulmital #Required; microsoft alias of author; optional team alias.
   ms.date: 04/30/2025
+  author: aartig13
+  ms.author: aartigoyle
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

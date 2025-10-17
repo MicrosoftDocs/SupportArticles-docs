@@ -71,6 +71,6 @@ A progress bar shows the status of the export. If an error occurs during the exp
 
 ## More information
 
-To synchronize the forms and reports dictionaries to the GL account framework, refer to the steps in [Error message when you try to log on to Microsoft Dynamics GP after you copy the reports.dic file to a shared location: "Reports Dictionary Must be Upgraded"](https://support.microsoft.com/help/857506).
+To synchronize the forms and reports dictionaries to the GL account framework, refer to the steps in ["Reports Dictionary must be upgraded" Error message when you try to sign in to Microsoft Dynamics GP after you copy the reports.dic file to a shared location](./reports-dictionary-must-be-upgraded.md).
 
-To recreate the forms.dic, refer to the steps in [How to re-create the Forms.dic file in Microsoft Dynamics GP](https://support.microsoft.com/help/951767).
+To recreate the forms.dic, refer to the steps in [How to re-create the Forms.dic file in Microsoft Dynamics GP](./re-create-the-forms-dot-dic-file.md).

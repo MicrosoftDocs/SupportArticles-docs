@@ -74,28 +74,28 @@ items:
             href: app-insights/data/how-to-update-third-party-server-configuration.md
           - name: Node.js
             href: app-insights/data/troubleshoot-app-insights-nodejs.md
-  - name: Application Insights experiences
+  - name: Application Insights portal experiences
     items:
     - name: Troubleshoot Application map issues
       href: app-insights/troubleshoot-application-map-issues.md
-    - name: Troubleshoot Azure Application Insights availability monitoring
-      items:
-      - name: Availability monitoring common issues FAQ
-        href: app-insights/availability/availability-monitoring-common-issues-faq.yml  
-      - name: Diagnose ping test failures
-        href: app-insights/availability/diagnose-ping-test-failure.md              
-      - name: Intermittent test failure and protocol violation error
-        href: app-insights/availability/intermittent-test-failure-protocol-error.md
-      - name: Use availability tests on an internal server behind a firewall
-        href: app-insights/availability/internal-server-availability-tests-firewall.md     
-      - name: Daily cap unexpected behaviors
-        href: app-insights/availability/daily-cap-unexpected-behaviors.md              
-      - name: Missing CPU Total and Committed Memory metrics
-        href: app-insights/availability/missing-cpu-total-committed-memory-metrics.md
-      - name: Portal connectivity issues
-        href: app-insights/availability/troubleshoot-portal-connectivity.md
-      - name: Troubleshoot user behavior analytics tools in Azure Application Insights
-        href: app-insights/availability/usage-troubleshoot.md
+  - name: Availability Tests
+    items:
+    - name: Availability monitoring common issues FAQ
+      href: app-insights/availability/availability-monitoring-common-issues-faq.yml  
+    - name: Diagnose ping test failures
+      href: app-insights/availability/diagnose-ping-test-failure.md              
+    - name: Intermittent test failure and protocol violation error
+      href: app-insights/availability/intermittent-test-failure-protocol-error.md
+    - name: Use availability tests on an internal server behind a firewall
+      href: app-insights/availability/internal-server-availability-tests-firewall.md     
+    - name: Daily cap unexpected behaviors
+      href: app-insights/availability/daily-cap-unexpected-behaviors.md              
+    - name: Missing CPU Total and Committed Memory metrics
+      href: app-insights/availability/missing-cpu-total-committed-memory-metrics.md
+    - name: Portal connectivity issues
+      href: app-insights/availability/troubleshoot-portal-connectivity.md
+    - name: Troubleshoot user behavior analytics tools in Azure Application Insights
+      href: app-insights/availability/usage-troubleshoot.md
   - name: Status Monitor and Change Analysis
     items:
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
@@ -141,14 +141,14 @@ items:
 
 
 
-  - name: Linux Agents
+  - name: Azure Monitor Agent (AMA) on Linux machine
     items:
     - name: Missing heartbeats in the Linux agent
       href: log-analytics/linux-agents/linux-agent-missing-heartbeats.md
     - name: Missing Linux performance counters
       href: log-analytics/linux-agents/linux-agent-performance-counter-missing.md
 
-  - name: Windows Agents
+  - name: Azure Monitor Agent (AMA) on Windows machine
     items:
     - name: Basic troubleshooting of Microsoft Monitoring Agent
       href: log-analytics/windows-agents/mma-troubleshoot-basics.md
