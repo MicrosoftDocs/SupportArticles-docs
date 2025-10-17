@@ -10,7 +10,7 @@ ms.date: 8/26/2025
 This article helps you troubleshoot problems that affect autoinstrumentation in Application Insights.
 
 > [!NOTE]
-> Autoinstrumentation was known as "codeless attach" before October 2021.
+> Autoinstrumentation was known as *codeless attach* before October 2021.
 
 ## Telemetry data isn't reported after you enable autoinstrumentation
 
