@@ -6358,7 +6358,7 @@
       {
         "source_path": "azure-monitor/app-insights/agent/change-analysis-troubleshoot.md",
         "redirect_url": "/azure/azure-monitor/change/change-analysis",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "azure-storage/files/alerts/files-troubleshoot-create-alerts.md",
