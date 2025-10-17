@@ -76,7 +76,7 @@ Use the below graph to identify the Troubleshooting Section to follow based on t
 SELECT PackageGuid,State FROM CM_UpdatePackages where PackageGUID = '<Package GUID>'
 ```
 
-![Scoping Update Stage graph](./media/understand-troubleshoot-updates-servicing/cm-updatesandservicing-scoping-support-tickets.svg)
+![Scoping Update Stage graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scoping-support-tickets.svg)
 
 ## Synchronization and Applicability Check
 
@@ -213,7 +213,7 @@ Updates having these states are normally hidden from the console:
 
 Use the below flowchart to narrow down the issue at Synchronization step.
 
-![Synchronization graph](./media/understand-troubleshoot-updates-servicing/cm-updatesandservicing-synchronization.svg)
+![Synchronization graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization.svg)
 
 #### For the Service Connection Point (SCP) configured to Online mode
 
@@ -244,7 +244,7 @@ Use the below flowchart to narrow down the issue at Applicability step. Accessin
 SELECT PackageGuid,State FROM CM_UpdatePackages where PackageGUID = '<Package GUID>'
 ```
 
-![Troubleshoot Applicability Graph](./media/understand-troubleshoot-updates-servicing/cm-updatesandservicing-applicability.svg)
+![Troubleshoot Applicability Graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability.svg)
 
 The main log to check is **Hman.log**.
 
@@ -446,7 +446,7 @@ At this stage, the DMPDownloader component is responsible for downloading the Ea
 
 Use the below flowchart to narrow down the issue at Download stage.
 
-![Troubleshoot Download graph](./media/understand-troubleshoot-updates-servicing/cm-updatesandservicing-download.svg)
+![Troubleshoot Download graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-download.svg)
 
 #### Approaching Download Issues
 
@@ -502,7 +502,7 @@ Best place to start with is **\Monitoring\Overview\Site Servicing\Update Package
 
 Use below flowchart to narrow down the section responsible for the issue.
 
-![Replication and Installation graph](./media/understand-troubleshoot-updates-servicing/cm-updatesandservicing-replication-and-installation.svg)
+![Replication and Installation graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication-and-installation.svg)
 
 ## Replication
 
@@ -671,7 +671,7 @@ The first component involved is **Hman**, which must detect a new package to be 
 
 Use below flowchart to narrow down the issue at Replication step. Note it assumes that the installation or prerequisite check has been triggered.
 
-![Replication graph](./media/understand-troubleshoot-updates-servicing/cm-updatesandservicing-replication.svg)
+![Replication graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-replication.svg)
 
 In the case of multi-tier hierarchy, the Child Primary Sites must also replicate the Easy Setup Package from their Parent Site. The flow is exactly the same as for any other classic Package. Refer to the [Flowchart - Update replication for Configuration Manager](/intune/configmgr/core/servers/manage/update-replication-flowchart) page for more details.
 
@@ -996,7 +996,7 @@ The Update Package is marked as "Prerequisite check passed" in the console. The 
 
 The below flowchart assumes that the Prerequisite Check is either in progress for a long time - or has failed. It applies to all Primary Sites and Central Administration Site (CAS) in multi-tier environments.
 
-![Prerequisite Check graph](./media/understand-troubleshoot-updates-servicing/cm-updatesandservicing-prerequisite-check.svg)
+![Prerequisite Check graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-prerequisite-check.svg)
 
 There are two main kinds of issues with the prerequisite check.
 
@@ -1310,7 +1310,7 @@ Older packages are usually hidden from the console due to the Applicability chec
 
 The below flowchart assumes the installation is either stuck in "Installing" state or "Failed" in **\Administration\Overview\Updates and Servicing** console node. The first thing to check should be the Update Package state at **\Monitoring\Overview\Updates and Servicing Status** node and identify the Site being stuck.
 
-![Installation and Failures](./media/understand-troubleshoot-updates-servicing/cm-updatesandservicing-installation-and-failures.svg)
+![Installation and Failures](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-installation-and-failures.svg)
 
 Alternatively, the following SQL Query can be used to fetch Update Package States per a Site:
 
