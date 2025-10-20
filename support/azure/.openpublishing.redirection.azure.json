@@ -6355,9 +6355,10 @@
         "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
         "redirect_document_id": true
       },
-            {
-        "source_path": "app-service/app-service-compliance-wit.md",
-        "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service"
+      {
+        "source_path": "azure-monitor/app-insights/agent/change-analysis-troubleshoot.md",
+        "redirect_url": "/azure/azure-monitor/change/change-analysis",
+        "redirect_document_id": false
       },
       {
         "source_path": "azure-storage/files/alerts/files-troubleshoot-create-alerts.md",
@@ -6388,6 +6389,10 @@
         "source_path": "general/support-policy-containers.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "app-service/app-service-compliance-wit.md",
+        "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service"
       },
       {
         "source_path": "azure-kubernetes/connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md",
