@@ -87,7 +87,7 @@ If you can't use another VM SKU without a RAW local SSD, consider the following 
   
   - If you choose to put `tempdb` on the local SSD, you must reinitialize the disk before starting SQL Server every time the VM is restarted or deallocated.
 
-- Deploy the SQL Server VM image, but configure `tempdb` to use a different drive than the ephemeral storage during the deployment. For example, you can configure `tempdb` to use the `C:`, or remote storage drive.
+- Deploy the SQL Server VM image, but configure `tempdb` to use a different drive than the ephemeral storage during the deployment. For example, you can configure `tempdb` to use the `C:` drive or remote storage drive.
   
   1. You can configure this setting on the **SQL Server settings** page in the Azure portal when [deploying the SQL Server VM image](https://portal.azure.com/#view/HubsExtension/ServiceMenuBlade/~/SqlVirtualMachine/extension/SqlAzureExtension/menuId/AzureSqlHub/itemId/SqlVirtualMachine).
   
