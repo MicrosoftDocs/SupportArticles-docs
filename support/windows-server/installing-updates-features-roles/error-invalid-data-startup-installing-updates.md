@@ -11,11 +11,9 @@ ms.custom:
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
-  - <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>
+  - <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Azure Virtual Machines</a>
 ---
 # Error 0x8007000d at startup after installing updates
-
-**Applies to:** :heavy_check_mark: Windows VMs
 
 This article helps resolve an issue in which you receive the 0x8007000d (ERROR_INVALID_DATA) error at the system startup after installing Windows updates.
 
