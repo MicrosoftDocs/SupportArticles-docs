@@ -5,14 +5,17 @@ ms.date: 05/23/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, hamansoor, jdickson, v-lianna
+ms.reviewer: kaushika, hamansoor, jdickson, v-lianna, dougking
 ms.custom:
-- sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
+- sap:Windows Servicing, Updates and Features on Demand\Windows Update - Install errors starting with 0x8007 (ERROR)
 - pcy:WinComm Devices Deploy
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
+  - <a href=https://learn.microsoft.com/lifecycle/products/azure-virtual-machine target=_blank>Supported versions of Azure Virtual Machine</a>`
 ---
 # Error 0x8007000d at startup after installing updates
+
+**Applies to:** :heavy_check_mark: Windows VMs
 
 This article helps resolve an issue in which you receive the 0x8007000d (ERROR_INVALID_DATA) error at the system startup after installing Windows updates.
 
@@ -20,32 +23,144 @@ After you install an update and restart the system, the system performs a rollba
 
 This issue occurs because the database of performance counters is corrupted.
 
-## Rebuild the performance counter setting
+## Prerequisites
 
-To resolve this issue, follow these steps:
+Before proceeding with troubleshooting, ensure you have access to a good working machine with the same Windows OS version as the problematic machine. Be sure this machine successfully installed the latest updates and the specific update causing the error.
+
+## Identify the issue
+
+### Symptom 1: Catalog file errors
+
+You might encounter entries in the Component-Based Servicing (CBS) log file (usually located at *C:\Windows\Logs\CBS*) indicating issues with a catalog file:
+
+```output
+20xx-xx-06 xx:51:15, Info CBS Exec: Installing Package: Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0, Update: 4584642-1_neutral, InstallDeployment: amd64_771d1f434ef835536dafe93d6811f766_31bf3856ad364e35_10.0.17763.1549_none_e4d395cdb7886270
+20xx-xx-06 xx:51:15, Error CSI 00000034@20xx/xx/5:23:51:15.422 (F) onecore\base\wcp\rtllib\win32lib\catalog.cpp(633): Error NTSTATUS_FROM_WIN32(ERROR_INVALID_DATA) originated in function CCatalog::Create expression: CertCreateCTLContext
+[gle=0x80004005]
+20xx-xx-06 xx:51:15, Error CSI 00000035 (F) NTSTATUS_FROM_WIN32(ERROR_INVALID_DATA) #6317935# from CCSDirectTransaction::OperateEnding at index 0 of 1 operations, disposition 0[gle=0xd007000d]
+20xx-xx-06 xx:51:15, Error CSI 00000036 (F) HRESULT_FROM_WIN32(ERROR_INVALID_DATA) #6317715# from Windows::COM::CComponentStore::InternalTransact(...)[gle=0x8007000d]
+20xx-xx-06 xx:51:15, Error CSI 00000037 (F) HRESULT_FROM_WIN32(ERROR_INVALID_DATA) #6317714# from Windows::ServicingAPI::CCSITransaction::AddCatalog(Flags = 1, CatalogPath = '[file://%3f/C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat')%5bgle=0x8007000d]\\?\C:\WINDOWS\Servicing\Packages\Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat')[gle=0x8007000d]
+20xx-xx-06 xx:51:15, Error CSI 00000038 (F) HRESULT_FROM_WIN32(ERROR_INVALID_DATA) #6317713# from Windows::ServicingAPI::CCSITransaction::ICSITransaction_InstallDeployment(Flags = 0, a = 771d1f434ef835536dafe93d6811f766, version 10.0.17763.1549, arch amd64, nonSxS, pkt {l:8 b:31bf3856ad364e35}, cb = (null), s = (null), rid = 'Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.4584642-1_neutral', rah = (null), manpath = (null), catpath = '[file://%3f/C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat%5bgle=0x8007000d]\\?\C:\WINDOWS\Servicing\Packages\Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat[gle=0x8007000d]
+20xx-xx-06 xx:51:15, Error CSI ', disp = 0)[gle=0x8007000d]
+20xx-xx-06 xx:51:15, Error CBS Failed to verify if catalog file [C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat]\\?\C:\WINDOWS\Servicing\Packages\Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat is valid. [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+20xx-xx-06 xx:51:15, Info CBS Failed to verify manifest against catalog, mark store as corrupt. [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+20xx-xx-06 xx:51:15, Info CBS Failed to begin deployment installation for Update: 4584642-1_neutral [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+```
+In this case, the error happens because the system can't verify if catalog file C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat is valid, which means the package is likely corrupt. See [Mitigation 1: File and Registry Corruption](#mitigation-1-file-and-registry-corruption) for more details.
+
+### Symptom 2: Registry errors
+
+Another symptom may involve registry errors. From the CBS log file, you might see the following:
+
+```output
+20xx-xx-24 05:13:10, Info CBS Registry value for Package_7762_for_KB5001347~31bf3856ad364e35~amd64~~10.0.1.4 is not a dword type. [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+20xx-xx-24 05:13:10, Info CBS Failed to enumerate values in store object. [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+20xx-xx-24 05:13:10, Info CBS Failed to enumerate all component versions for component detect: amd64_windows-application..egistrationverifier_31bf3856ad364e35_0.0.0.0_none_06e8f842c597e59b [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+20xx-xx-24 05:13:10, Info CBS Failed to enumerate store versions on component: amd64_windows-application..egistrationverifier_31bf3856ad364e35_10.0.14393.4169_none_fcb27d831f9fb942 [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+20xx-xx-24 05:13:10, Info CBS Failed to enumerate related component versions on component: amd64_windows-application..egistrationverifier_31bf3856ad364e35_10.0.14393.4169_none_fcb27d831f9fb942 [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+20xx-xx-24 05:13:10, Info CBS Failed to load current component state [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+20xx-xx-24 05:13:10, Info CBS Failed to find or add the component family [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+```
+
+This indicates registry issues. See [Mitigation 1: File and Registry Corruption](#mitigation-1-file-and-registry-corruption) for more details.
+
+### Symptom 3: Driver update failure
+
+Driver update failures during reboot can also cause this error. From CBS log file, you might see the following:
+
+```output
+20xx-xx-18 15:21:14, Info CBS Perf: Doqe: Critical install started.
+20xx-xx-18 15:21:14, Info CBS Doqe: [Forward] Installing driver updates, Count 2
+20xx-xx-18 15:21:14, Info CBS INSTALL index: 53, phase: 1, result 0, inf: machine.inf
+20xx-xx-18 15:21:14, Info CBS INSTALL index: 194, phase: 1, result 0, inf: mshdc.inf
+20xx-xx-18 15:21:14, Info CBS INSTALL index: 246, phase: 2, result 0, inf: machine.inf
+20xx-xx-18 15:21:14, Info CBS INSTALL index: 194, phase: 2, result 13, inf: mshdc.inf
+20xx-xx-18 15:21:14, Info CBS Doqe: Recording result: 0x8007000d, for Inf: mshdc.inf
+20xx-xx-18 15:21:14, Info CBS DriverUpdateInstallUpdates failed [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+20xx-xx-18 15:21:14, Info CBS Doqe: Failed installing driver updates [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+20xx-xx-18 15:21:14, Info CBS Perf: Doqe: Critical install ended.
+20xx-xx-18 15:21:14, Info CBS Failed installing driver updates [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+20xx-xx-18 15:21:14, Error CBS Startup: Failed executing critical driver operations queue [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
+20xx-xx-18 15:21:14, Info CBS Startup: Rolling back KTM, because drivers failed.
+20xx-xx-18 15:22:46, Info CBS Retrieved original failure status: 0x8007000d, last forward execute state: CbsExecuteStatePrimitives
+20xx-xx-18 15:22:52, Info CBS WER: Generating failure report for package: Package_for_RollupFix~31bf3856ad364e35~amd64~~14393.4889.1.2, status: 0x8007000d, failure source: DOQ, start state: Staged, target state: Installed, client id: WindowsUpdateAgent
+```
+We can see that during reboot, the driver updates failed, causing the Windows update to also fail.
+
+To verify this is the case go to *C:\Windows\INF\setupapapi.dev*, find the log, and look for the failed driver. In this case, it's mshdc.inf.
+
+**setupapapi.dev.log:**
+
+```output
+sto: {Unstage Driver Package: C:\Windows\System32\DriverStore\FileRepository\mshdc.inf_amd64_b0b5572axx95167b\mshdc.inf} 15:21:14.3xx
+sto: {DRIVERSTORE DELETE BEGIN} 15:21:14.3xx
+sto: {DRIVERSTORE DELETE BEGIN: exit(0x00000000)} 15:21:14.3xx
+idb: {Unregister Driver Package: C:\Windows\System32\DriverStore\FileRepository\mshdc.inf_amd64_b0b5572axx95167b\mshdc.inf} 15:21:14.3xx
+idb: Unregistered driver package 'mshdc.inf_amd64_b0b5572axx95167b' from 'mshdc.inf'.
+idb: Deleted driver package object 'mshdc.inf_amd64_b0b5572axx95167b' from SYSTEM database node.
+idb: Driver packages registered to 'mshdc.inf':
+idb: mshdc.inf_amd64_79f38c21b894a1c1
+idb: {Unregister Driver Package: exit(0x00000000)} 15:21:14.3xx
+```
+Be sure to note the driver packages.
+
+## Root cause
+
+### File corruption or registry corruption
+
+An old update may be reported, and the related file or registry key locations might be corrupted. This corruption can prevent the system from verifying the validity of catalog files.
+
+### Driver version incorrect
+
+Driver updates may fail due to incorrect versioning, causing the Windows update to fail during reboot.
+
+## Resolution or troubleshooting steps
+
+> [!NOTE]
+> Before proceeding with any mitigation, back up the OS disk.
+
+### Mitigation 1: File and registry corruption
+
+1. **File corruption:**
+    a. Find a good working machine with the same Windows OS version and the problematic update installed.
+    b. Locate the catalog and .mum files in *C:\WINDOWS\Servicing\Packages* on the good machine.
+    c. Replace the files on the problematic machine.
+    d. Reinstall the update.
+
+2. **Registry corruption:**
+    a. Mount the components hive on the good machine.
+    b. Compare the registry key types with the problematic machine.
+    c. Correct any discrepancies in key types.
+    d. Reinstall the update.
+
+### Mitigation 2: Driver update failure
+
+1. Compare the following locations with a good working machine:
+   - *C:\Windows\System32\DriverStore\FileRepository*
+   - Registry paths (based on drivers found above):
+     ```output
+     HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverInfFiles\mshdc.inf
+     HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\mshdc.inf_amd64_b0b5572axx95167b
+     ```
+2. Replace the files and registry entries with ones from the good machine.
+3. Reinstall the update.
+
+### Mitigation 3: Rebuild the performance counter setting
 
 1. Open an elevated Windows PowerShell prompt, and then navigate to the *C:\\windows\\system32\\wbem* folder by running the following cmdlet:
-
     ```PowerShell
     cd C:\Windows\system32\wbem
     ```
-
 2. Run the following [wmiadap](/windows/win32/wmisdk/wmiadap) cmdlet to parse all the performance libraries:
-
     ```powershell
     C:\Windows\system32\wbem>wmiadap.exe /f
     ```
-
 3. Run the following [lodctr](/windows-server/administration/windows-commands/lodctr) cmdlet to rebuild the performance counter setting:
-
     ```powershell
     C:\Windows\system32\wbem>lodctr /r 
     ```
-
     Then, you receive the following message if the cmdlet runs successfully:
-
     ```output 
     Successfully rebuilt performance counter setting from system backup store 
     ```
-
 4. Install the update again.
