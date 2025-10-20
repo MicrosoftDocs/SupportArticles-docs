@@ -7,7 +7,7 @@ ms.custom: sap:Connections\Creating or updating connections
 ---
 # Troubleshoot Power Apps flow integration issues
 
-*Applies to:* Power Apps
+*Applies to:* Power Apps  
 *Original KB number:* 4477072
 
 When integrating Power Automate flows with Power Apps, you might encounter various errors that prevent flows from running correctly. This article helps you troubleshoot common integration issues and provides best practices for managing flow updates.
@@ -45,16 +45,18 @@ Some Power Automate flows might fail to run in Power Apps and you might see an e
 
 ### Cause
 
-This issue occurs when the Power Automate flow is updated to use a new connection, but the app still uses the old flow metadata. Even though the flow is updated, the apps that reference the flow still retain the previous flow metadata. To resolve this error, manually edit the app so changes appear in the app and the flow works.
+This issue occurs when the Power Automate flow is updated to use a new connection, but the app still uses the old flow metadata. Even though the flow is updated, the apps that reference the flow still retain the previous flow metadata.
 
 ### Mitigation steps
 
 > [!NOTE]
 > Make sure to perform the following steps in the source or development environment and update the solution. After you update the solution in the source or development environment, export and import it into all target or production environments.
 
+To resolve this error, manually edit the app so changes appear in the app and the flow works.
+
 1. Open the app for editing using the [latest version of Power Apps Studio](/power-platform/released-versions/powerapps).
 2. [Remove the Power Automate flows from the app](/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow).
-3. Readd the flows to the app.
+3. [Readd the flows to the app](/power-apps/maker/canvas-apps/working-with-flows#add-an-existing-flow).
 4. Save and republish the app.
 
 ## Error code "ConnectionAuthorizationFailed" on Power Automate flow run
@@ -183,8 +185,8 @@ This error occurs when the flow in the target environment has changes that aren'
 > [!NOTE]
 > Make sure to perform the following steps in the source or development environment and update the solution. After you update the solution in the source or development environment, export and import it into all target or production environments.
 
-1. In the source environment, edit the app. Remove and then readd the flows to the app. Save and publish the changes.
-2. In the target environment, remove all unmanaged solution layers from the app and flow.
+1. In the source environment, edit the app. [Remove](/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow) and then [readd](/power-apps/maker/canvas-apps/working-with-flows#add-an-existing-flow) the flows to the app. Save and publish the changes.
+2. In the target environment, [remove all unmanaged solution layers](/power-apps/maker/data-platform/solution-layers#remove-an-unmanaged-layer) from the app and flow.
 3. Export the solution and import it into the target environment.
 
    > [!NOTE]
@@ -216,7 +218,7 @@ This error occurs when the app's flow metadata expects a specific connection ref
 
 Reset the Power Automate flows in the app:
 
-1. In the source environment, edit the app. Remove and then readd the Power Automate flows to the app. Save and publish the changes.
+1. In the source environment, edit the app. [Remove](/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow) and then [readd](/power-apps/maker/canvas-apps/working-with-flows#add-an-existing-flow) the Power Automate flows to the app. Save and publish the changes.
 2. In the target environment, remove all unmanaged solution layers from the app and Power Automate flow.
 3. Export the solution and import it into the target environment.
 
@@ -228,9 +230,9 @@ Reset the Power Automate flows in the app:
 Change the connection from **Embedded** to **Invoker**:
 
 1. To edit and update the flow settings, navigate to the Power Automate flow portal.
-2. On the flow details page, in the **Run only users** section, select **Edit**.
+2. On the flow details page, in the **Run-only user** section, select **Edit**.
 3. To update the flow connection source to **Invoker**, select **Provided by run-only user** and save.
-4. Verify by triggering the flow. You should now find the "install flow network" calls to be successful.
+4. Verify by triggering the flow.
 
 ## Failures caused by Power Automate flow updates
 
@@ -264,7 +266,7 @@ If a response output is removed, Power Apps treats the value as blank and the ap
 
 ### Cause
 
-Power Apps needs to know three things to invoke a flow: what inputs the flow requires, what connections to provide, and what outputs the flow returns. Power Apps stores this information in your app definition, creating a binding between your app version and the flows it uses. When you change any of these three flow aspects, you can break all previous app versions that integrate with that flow. To fix an affected app or use these flow changes, you need to update the app.
+Power Apps needs to know three things to invoke a flow: what inputs the flow requires, what connections to provide, and what outputs the flow returns. Power Apps stores this information in your app definition, creating a binding between your app version and the flows it uses. When you change any of these three flow aspects, you can break all previous app versions that integrate with that flow.
 
 Types of changes most likely to break a Power Apps ability to call a Power Automate flow include:
 
@@ -288,7 +290,7 @@ Other changes to the inputs or outputs might not break the integration between P
 
 ### Resolution
 
-The approach you take to resolve the issue depends on whether you're working with a live app or a development version. Each scenario requires different steps to prevent disruption to users.
+To fix an affected app or use these flow changes, you need to update the app. The approach you take to resolve the issue depends on whether you're working with a live app or a development version. Each scenario requires different steps to prevent disruption to users.
 
 #### Changing a published (live) Power App
 
@@ -315,11 +317,9 @@ Follow these steps:
 
 1. Make your changes to the flow (inputs, outputs, or connections).
 2. In Power Apps Studio, go to the **Flows** pane.
-3. Remove the flow from your app.
-4. Add the updated flow back to your app.
+3. [Remove the flow from your app]((/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow)).
+4. [Add the updated flow back to your app](/power-apps/maker/canvas-apps/working-with-flows#add-an-existing-flow).
 5. Save your app.
-
-:::image type="content" source="media/best-practices-when-updating-a-flow/reselect-flow.png" alt-text="Screenshot of updating a flow definition in Power Apps.":::
 
 This process updates your app to use the flow's new configuration. Since the app isn't published yet, your changes don't affect users.
 
