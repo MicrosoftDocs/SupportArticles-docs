@@ -1,8 +1,8 @@
 ---
 title: Issues when creating and deploying Azure resource groups
 description: Provides a resolution for issues that might occur when you try to create and deploy Azure resource groups through Visual Studio.
-ms.date: 10/22/2024
-ms.reviewer: jgao, puichan, v-sidong
+ms.date: 10/20/2025
+ms.reviewer: jgao, puichan
 ms.custom: sap:Integrated Development Environment (IDE)\Other
 ---
 
@@ -11,7 +11,7 @@ ms.custom: sap:Integrated Development Environment (IDE)\Other
 _Applies to:_&nbsp;Visual Studio
 
 > [!NOTE]
-> The Azure Resource Group project is now in extended support. We will continue to support existing features and capabilities but won't prioritize adding new features.
+> The Azure Resource Group project has been in extended support since October 2024 and only ships in Visual Studio 2022 and below. This feature isn't available in Visual Studio 2026 and beyond.
 
 This article helps you solve issues related to creating and deploying Azure resource groups.
 
@@ -25,11 +25,11 @@ When you try to [create and deploy Azure resource groups through Visual Studio](
 
 ## Cause
 
-These issues occur when you use unsupported older versions of Visual Studio.
+These issues occur when you use unsupported versions of Visual Studio.
 
 ## Resolution
 
-To solve this issue, upgrade your Visual Studio installation to the latest [Long-Term Support (LTS) version](/visualstudio/install/update-visual-studio). Upgrading to the latest version can enhance the reliability and overall experience of your Visual Studio environment.
+To solve this issue, install a supported version of Visual Studio 2017, Visual Studio 2019, or Visual Studio 2022.
 
 ## More information
 
