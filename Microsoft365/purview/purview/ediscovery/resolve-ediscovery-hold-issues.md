@@ -4,7 +4,7 @@ description: Resolve errors related to legal holds applied to custodial and nonc
 ms.date: 05/05/2025
 f1.keywords: 
   - NOCSH
-ms.author: v-six
+ms.author: 
 author: simonxjx
 manager: dcscontentpm
 audience: Admin
