@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.reviewer: rlindgre, tasitae, jarrettr
 author: simonxjx
-ms.author: v-six
+ms.author: 
 ms.date: 06/06/2024
 ---
 # Send to OneNote and Meeting Notes buttons in Outlook do not work

@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
-ms.author: v-six
+ms.author: 
 appliesto: 
   - Skype for Business 2016
 ms.date: 03/31/2022
