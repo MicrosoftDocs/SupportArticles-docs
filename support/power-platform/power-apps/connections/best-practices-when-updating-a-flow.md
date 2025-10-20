@@ -317,7 +317,7 @@ Follow these steps:
 
 1. Make your changes to the flow (inputs, outputs, or connections).
 2. In Power Apps Studio, go to the **Flows** pane.
-3. [Remove the flow from your app]((/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow)).
+3. [Remove the flow from your app](/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow).
 4. [Add the updated flow back to your app](/power-apps/maker/canvas-apps/working-with-flows#add-an-existing-flow).
 5. Save your app.
 
