@@ -209,6 +209,8 @@ spec:
 
 Ensure that you create a `ServiceEntry` custom resource for the specific external service that the egress gateway forwards requests to. Even if the `outboundTrafficPolicy.mode` is set to `ALLOW_ANY`, create a `ServiceEntry` custom resource might be necessary, since the `Gateway`, `VirtualService`, and `DestinationRule` custom resources might reference an external host via a `ServiceEntry` name. Additionally, when configuring a `ServiceEntry` custom resource for an Istio egress gateway, you must set the `spec.resolution` to `DNS`.
 
+Also keep in mind that by default, `ServiceEntries` are exported to all namespaces. To limit the scope of a `ServiceEntry` to a specific namespace, use the `exportTo` field in the [spec](https://istio.io/latest/docs/reference/config/networking/service-entry/#ServiceEntry-export_to).
+
 ### Step 5: Verify the Kubernetes secret namespace for egress gateway mTLS origination
 
 If you try to configure the Istio egress gateway to perform mutual TLS (mTLS) origination, ensure that the Kubernetes secret object is located in the same namespace where the egress gateway is deployed.

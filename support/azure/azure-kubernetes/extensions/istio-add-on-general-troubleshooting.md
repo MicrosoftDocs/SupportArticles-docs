@@ -229,19 +229,29 @@ To address common traffic management and security misconfiguration issues that I
 
 For links to discussion about other issues, such as sidecar injection, observability, and upgrades, see [Common problems](https://istio.io/latest/docs/ops/common-problems/) on the Istio documentation site.
 
-### Step 3: Avoid CoreDNS overload
+### Step 3: Verify Protocol Selection
+
+While Istio can automatically detect any TCP-based protocol, in certain cases, the protocol in the `Service` spec may need to be [explicitly declared](https://istio.io/latest/docs/ops/configuration/traffic-management/protocol-selection/) to unblock communication issues. This can be done by setting the protocol in the port `name` or the `appProtocol`, with `appProtocol` taking precedence. For instance, certain scenarios may require setting the protocol to `tcp` to proxy traffic as raw TCP as opposed to HTTP or HTTPS.
+
+### Step 4: Avoid CoreDNS overload
 
 Issues that relate to CoreDNS overload might require you to change certain Istio DNS settings, such as the `dnsRefreshRate` field in the Istio MeshConfig definition. 
 
-### Step 4: Fix pod and sidecar race conditions
+### Step 5: Fix pod and sidecar race conditions
 
 If your application pod starts before the Envoy sidecar starts, the application might become unresponsive, or it might restart. For instructions about how to avoid this problem, see [Pod or containers start with network issues if istio-proxy is not ready](https://istio.io/latest/docs/ops/common-problems/injection/#pod-or-containers-start-with-network-issues-if-istio-proxy-is-not-ready). Specifically, setting the `holdApplicationUntilProxyStarts` MeshConfig field under `defaultConfig` to `true` can help prevent these race conditions.
 
-### Step 5: Configure a Service Entry when using an HTTP proxy for outbound traffic
+### Step 6: Verify OutboundTrafficPolicy mode and Service Entry configuration for outbound access
+
+Issues relating to outbound access or [egress gateways](./istio-add-on-egress-gateway.md) can arise from certain Istio configurations pertaining to external service configuration. First, verify whether the `outboundTrafficPolicy.mode` either in the [Shared MeshConfig](./istio-add-on-meshconfig.md) or `Sidecar` custom resources is set to `REGISTRY_ONLY`. If so, then a `ServiceEntry` must be explicitly declared for external service to enable outbound access. When using egress gateways, the resolution for the ServiceEntry must be set to `DNS`.
+
+Also keep in mind that by default, `ServiceEntries` by default will be exported across all namespaces. To restrict the scope of a `ServiceEntry` to a particular namespace, you should use the `exportTo` field in the [spec](https://istio.io/latest/docs/reference/config/networking/service-entry/#ServiceEntry-export_to).
+
+### Step 7: Configure a Service Entry when using an HTTP proxy for outbound traffic
 
 If your cluster uses an HTTP proxy for outbound internet access, you'll have to configure a Service Entry. For more information, see [HTTP proxy support in Azure Kubernetes Service](/azure/aks/http-proxy#istio-add-on-http-proxy-for-external-services).
 
-### Step 6: Enable Envoy access logging
+### Step 8: Enable Envoy access logging
 
 Enabling Envoy [access logging](https://istio.io/latest/docs/tasks/observability/logs/access-log/) helps identify and pinpoint issues in the gateways and sidecar proxies. For more information about logging and telemetry collection for the Istio add-on, see the documentation on [mesh configuration](/azure/aks/istio-meshconfig), [Telemetry API](/azure/aks/istio-telemetry), and [Istio metrics collection](/azure/aks/istio-metrics-managed-prometheus).
 

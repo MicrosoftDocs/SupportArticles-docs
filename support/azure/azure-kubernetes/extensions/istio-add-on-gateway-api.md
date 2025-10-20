@@ -34,17 +34,19 @@ Before proceeding, take the following actions:
 
 In some cases, traffic from Azure Load Balancer to the Istio Gateway API Deployment could be blocked due to failing health probes. You can address this by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-issues) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
 
-
 Gateway customization:
 
 ```yaml
 apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
-metadata:
-  annotations:
-    service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path: "/healthz/ready"
-    service.beta.kubernetes.io/port_80_health-probe_protocol: http
-    service.beta.kubernetes.io/port_80_health-probe_port: "15021"
+...
+...
+spec:
+  infrastructure:
+    annotations:
+      service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path: "/healthz/ready"
+      service.beta.kubernetes.io/port_80_health-probe_protocol: http
+      service.beta.kubernetes.io/port_80_health-probe_port: "15021"
 ```
 
 ConfigMap customization:
