@@ -4,8 +4,8 @@ description: Resolves an issue that causes the Bluetooth disabled signal of a Mi
 ms.reviewer: rebenite, v-lianna
 ms.topic: troubleshooting
 ms.date: 10/30/2023
-author: 
-ms.author: 
+author: Cloud-Writer
+ms.author: meerak
 manager: dcscontentpm
 audience: Admin
 search.appverid: 
