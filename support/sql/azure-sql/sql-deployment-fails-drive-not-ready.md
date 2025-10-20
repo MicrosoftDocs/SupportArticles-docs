@@ -85,7 +85,7 @@ If you can't use another VM SKU without a RAW local SSD, consider the following 
 
 - Deploy the VM using a Windows Server-only image, [format and initialize the temporary NVMe drive](/azure/virtual-machines/enable-nvme-temp-faqs#how-can-i-format-and-initialize-temp-nvme-disks-in-windows-when-i-create-a-vm-), and then manually install SQL Server.
   
-  - If you choose to put `tempdb` on the local SSD, you must reinitialize the disk before starting SQL Server every time the VM is restarted or deallocated.
+  - **If you choose to put `tempdb` on the local SSD, you must reinitialize the disk before starting SQL Server every time the VM is restarted or deallocated.** 
 
 - Deploy the SQL Server VM image, but configure `tempdb` to use a different drive than the ephemeral storage during the deployment. For example, you can configure `tempdb` to use the `C:` drive or remote storage drive.
   
