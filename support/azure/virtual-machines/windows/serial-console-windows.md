@@ -10,9 +10,10 @@ ms.service: azure-virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
-ms.date: 07/29/2025
-ms.author: mbifeld
-ms.custom: sap:VM Admin - Windows (Guest OS)
+ms.date: 10/16/2025
+ms.author: jarrettr
+ms.reviewer: mbifeld
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Azure Serial Console for Windows

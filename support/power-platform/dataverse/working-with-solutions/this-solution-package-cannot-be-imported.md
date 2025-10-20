@@ -30,13 +30,6 @@ A solution package contains Dynamics 365 customizations that are stored as XML. 
 
 ## Resolution
 
-**Check if the details match a known issue**  
-    Select the option to view the Technical Details, and see if it matches any of the following known issues:
-
-- [Solution import failure: The element 'general' has invalid child element 'enablelivepersonacarduci'](https://community.dynamics.com/forums/thread/)
-- ["The element 'Workflow' has invalid child element 'ProcessTriggers'" error occurs when importing a Dynamics 365 solution](https://support.microsoft.com/help/4462895)
-- ["The element 'savedquery' has incomplete content](https://support.microsoft.com/help/4463330)
-
 **If you had manually modified the customizations XML**  
 Select the Technical Details link within the error dialog. You'll then see additional details about what invalid elements are found in the XML. The message also includes a link to download the schema file that can be used with an XML editor that supports schema validation. After correcting any invalid elements in the XML, try to import the solution again.
 
@@ -44,4 +37,3 @@ For more information, see [Edit the customizations XML file with schema validati
 
 **If you received the solution from a solution provider**  
 Contact your solution provider.
-

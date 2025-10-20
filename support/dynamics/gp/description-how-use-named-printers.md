@@ -31,8 +31,8 @@ In the Assign Named Printers window, you can only control reports for which the 
 - The reports are printed in Microsoft Dynamics GP.
 - Named printer support has been added for the reports.
 
-Reports that haven['t been added to named printers will print to the default printer in Microsoft Dynamics GP as specified by the default printer for the Company task series or as specified by the default printer for the System task series.
+Reports that haven't been added to named printers will print to the default printer in Microsoft Dynamics GP as specified by the default printer for the Company task series or as specified by the default printer for the System task series.
 
 Reports that are printed by external applications are beyond the control of named printers even if the applications are started within Microsoft Dynamics GP. These reports will print to the default printer of the operating system. It includes reports from SQL Server Reporting Services (SSRS), Crystal Reports, and Microsoft FRx.
 
-For more information about named printers selection, see [How the named printers feature selects a printer in Microsoft Dynamics GP](https://support.microsoft.com/help/935790).
+For more information about named printers selection, see [How the named printers feature selects a printer in Microsoft Dynamics GP](./how-named-printers-feature-selects-printer.md).

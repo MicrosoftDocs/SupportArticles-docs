@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-client/windows-tss/gather-information-using-tss-hyper-v-issues.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-365/troubleshoot-windows-365-bcdr-known-isssues.md",
+      "redirect_url": "/troubleshoot/windows-365/windows-365-bcdr-known-issues",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/windows-tss/gather-information-using-tss-user-experience.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios",
       "redirect_document_id": false

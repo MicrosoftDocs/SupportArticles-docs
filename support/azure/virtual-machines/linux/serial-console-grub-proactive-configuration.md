@@ -1,18 +1,18 @@
 ---
-title: Azure Serial Console proactive GRUB configuration
+title: Save time with Azure Serial Console proactive GRUB configuration
 description: Configure GRUB across various distributions allowing single user and recovery mode access in Azure virtual machines.
 services: virtual-machines
 documentationcenter: ''
 author: mimckitt
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
+ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.service: azure-virtual-machines
 ms.collection: linux
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
-ms.date: 07/10/2019
-ms.author: mimckitt
+ms.date: 10/16/2025
+ms.author: jarrettr
 ---
 
 # Proactively ensuring you have access to GRUB and sysrq could save you lots of down time
@@ -62,7 +62,7 @@ Other extensions such as Custom Script are available however these options requi
 
 Ensuring you have access to the Azure Serial Console and GRUB means that a password change or an incorrect configuration can be rectified in a matter of minutes instead of hours. You could even force the VM to boot from an alternative kernel should you have multiple kernels on disk in the scenario where your primary kernel becomes corrupt.
 
-:::image type="content" source="media/serial-console-grub-proactive-configuration/more-kernel.png" alt-text="Screenshot of the boot selected OS screen in GRUB, which shows multiple kernels can be chosen.":::
+:::image type="content" source="media/serial-console-grub-proactive-configuration/more-kernel-updated.png" alt-text="Screenshot of the boot selected OS screen in GRUB, which shows multiple kernels can be chosen.":::
 
 ## Suggested order of recovery methods
 
@@ -96,11 +96,15 @@ To configure the VM to accept a reboot via SysRq commands on the Azure portal, y
 
 For this configuration to persist a reboot, add an entry to the file **sysctl.conf**
 
-`echo kernel.sysrq = 1 >> /etc/sysctl.conf`
+```bash
+sudo echo kernel.sysrq = 1 >> /etc/sysctl.conf
+```
 
 To configure the kernel parameter dynamically
 
-`sysctl -w kernel.sysrq=1`
+```bash
+sudo sysctl -w kernel.sysrq=1
+```
 
 If you don't have **root** access or sudo is broken, it will not be possible configure sysrq from a shell prompt.
 
@@ -108,7 +112,9 @@ You can enable sysrq in this scenario using the Azure portal. This method can be
 
 Using the Azure portal Operations -> Run Command -> RunShellScript feature, requires the waagent process be healthy you can then inject this command to enable sysrq
 
-`sysctl -w kernel.sysrq=1 ; echo kernel.sysrq = 1 >> /etc/sysctl.conf`
+```bash
+sudo sysctl -w kernel.sysrq=1 ; sudo echo kernel.sysrq = 1 >> /etc/sysctl.conf
+```
 
 As shown here:
 
@@ -124,7 +130,7 @@ Select **Reboot** and **Send SysRq** Command
 
 The system should log a reset message such as this
 
-:::image type="content" source="media/serial-console-grub-proactive-configuration/retting-log.png" alt-text="Screenshot of the reset message log in the command-line interface.":::
+:::image type="content" source="media/serial-console-grub-proactive-configuration/reset.png" alt-text="Screenshot of the reset message log in the command-line interface.":::
 
 ## Ubuntu GRUB configuration
 
@@ -135,7 +141,7 @@ By default you should be able to access GRUB by holding down **Esc** key during 
 Update the file /etc/default/grub.d/50-cloudimg-settings.cfg to keep the GRUB menu on screen for the specified TIMEOUT.
 You aren't required to hit **Esc** as GRUB will be displayed immediately.
 
-```console
+```output
 GRUB_TIMEOUT=5
 GRUB_TIMEOUT_STYLE=menu
 ```
@@ -147,45 +153,23 @@ Similar behavior can be experienced by making changes to the file
 
 Comment out these two lines:
 
-```console
+```output
 #GRUB_HIDDEN_TIMEOUT=0
 #GRUB_HIDDEN_TIMEOUT_QUIET=true
 ```
 
 and add this line:
 
-```console
+```output
 GRUB_TIMEOUT_STYLE=countdown
 ```
 
-## Ubuntu 12\.04
+Make sure the serial-getty@ttyS0.service is enabled so that systemd provides a login prompt on that console:
 
-Ubuntu 12.04 will allow access to serial console but doesn't offer the ability to interact.
-A **login:** prompt isn't seen
-
-For 12.04 to obtain a **login:** prompt:
-
-1. Create a file called /etc/init/ttyS0.conf containing the following text:
-
-    ```console
-    # ttyS0 - getty
-    #
-    # This service maintains a getty on ttyS0 from the point the system is
-    # started until it is shut down again.
-    start on stopped rc RUNLEVEL=[12345]
-    stop on runlevel [!12345]
-    
-    respawn
-    exec /sbin/getty -L 115200 ttyS0 vt102
-    ```  
-
-2. Ask upstart to start the getty
-
-    ```console
-    sudo start ttyS0
-    ```
-
-The settings required to configure serial console for Ubuntu versions can be found [here](https://help.ubuntu.com/community/SerialConsoleHowto)
+```
+sudo systemctl enable serial-getty@ttyS0.service
+sudo systemctl start serial-getty@ttyS0.service
+```
 
 ## Ubuntu Recovery Mode
 
@@ -205,7 +189,7 @@ Select the line displaying *(recovery mode)* don't press enter but press "e"
 
 Locate the line that will load the kernel and substitute the last parameter **nomodeset** with destination as **console=ttyS0**
 
-```console
+```output
 linux /boot/vmlinuz-4.15.0-1023-azure root=UUID=21b294f1-25bd-4265-9c4e-d6e4aeb57e97 ro recovery nomodeset
 
 change to
@@ -222,114 +206,60 @@ If all goes well you will see these additional Options, which can help perform o
 
 ## Red Hat GRUB configuration
 
-## Red Hat 7\.4\+ GRUB configuration
+## Red Hat 8\.6\+ GRUB configuration
 
-The default /etc/default/grub configuration on these versions is adequately configured
+The default /etc/default/grub configuration on these versions is adequately configured.
 
-```console
-GRUB_TIMEOUT=5
-GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
-GRUB_DEFAULT=saved
-GRUB_DISABLE_SUBMENU=true
-GRUB_TERMINAL="serial console"
-GRUB_SERIAL_COMMAND="serial"
-GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0 earlyprintk=ttyS0"
-GRUB_DISABLE_RECOVERY="true"
-```
-
-Enable the SysRq key
-
-```console
-sysctl -w kernel.sysrq=1;echo kernel.sysrq = 1 >> /etc/sysctl.conf;sysctl -a | grep -i sysrq
-```
-
-## Red Hat 7\.2 and 7\.3 GRUB configuration
-
-The file to modify is /etc/default/grub – a default config looks like this example:
-
-```console
-GRUB_TIMEOUT=1
+```output
+GRUB_TIMEOUT=10
 GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
 GRUB_DEFAULT=saved
 GRUB_DISABLE_SUBMENU=true
 GRUB_TERMINAL_OUTPUT="console"
-GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0 earlyprintk=ttyS0"
+GRUB_CMDLINE_LINUX="crashkernel=auto console=tty1 console=ttyS0 earlyprintk=ttyS0 rootdelay=300"
 GRUB_DISABLE_RECOVERY="true"
-```
+GRUB_ENABLE_BLSCFG=true
 
-Change the following lines in /etc/default/grub
-
-```console
-GRUB_TIMEOUT=1 
-
-to
-
-GRUB_TIMEOUT=5
-```
-
-```console
-GRUB_TERMINAL_OUTPUT="console"
-
-to
-
+GRUB_TIMEOUT_STYLE=countdown
 GRUB_TERMINAL="serial console"
+GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=1"
 ```
 
-Also add this line:
+Make sure the serial-getty@ttyS0.service is enabled so that systemd provides a login prompt on that console:
 
-```console
-GRUB_SERIAL_COMMAND="serial –speed=115200 –unit=0 –word=8 –parity=no –stop=1"
 ```
-
-/etc/default/grub should now look similar to this example:
-
-```console
-GRUB_TIMEOUT=5
-GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
-GRUB_DEFAULT=saved
-GRUB_DISABLE_SUBMENU=true
-GRUB_TERMINAL="serial console"
-GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0 earlyprintk=ttyS0"
-GRUB_DISABLE_RECOVERY="true"
+sudo systemctl enable serial-getty@ttyS0.service
+sudo systemctl start serial-getty@ttyS0.service
 ```
-
-Complete and update grub configuration using
-
-`grub2-mkconfig -o /boot/grub2/grub.cfg`
-
-Set the SysRq kernel parameter:
-
-`sysctl -w kernel.sysrq = 1;echo kernel.sysrq = 1 >> /etc/sysctl.conf;sysctl -a | grep -i sysrq`
-
-You can alternatively configure GRUB and SysRq using a single line either in the shell or via the Run Command.
-Backup your files before running this command:
-
-`cp /etc/default/grub /etc/default/grub.bak; sed -i 's/GRUB_TIMEOUT=1/GRUB_TIMEOUT=5/g' /etc/default/grub; sed -i 's/GRUB_TERMINAL_OUTPUT="console"/GRUB_TERMINAL="serial console"/g' /etc/default/grub; echo "GRUB_SERIAL_COMMAND=\"serial --speed=115200 --unit=0 --word=8 --parity=no --stop=1\"" >> /etc/default/grub;grub2-mkconfig -o /boot/grub2/grub.cfg;sysctl -w kernel.sysrq=1;echo kernel.sysrq = 1 /etc/sysctl.conf;sysctl -a | grep -i sysrq`
-
-## Red Hat 6\.x GRUB configuration
-
-The file to modify is /boot/grub/grub.conf. The `timeout` value will determine how long GRUB is shown for.
-
-```console
-#boot=/dev/vda
-default=0
-timeout=15
-splashimage=(hd0,0)/grub/splash.xpm.gz
-#hiddenmenu
-serial --unit=0 --speed=9600
-terminal serial
-terminal --timeout=5 serial console
-```
-
-The last line  *terminal –-timeout=5 serial console* will further increase **GRUB** timeout by adding a prompt of 5 seconds displaying **Press any key to continue.**
-
-:::image type="content" source="media/serial-console-grub-proactive-configuration/press-any-key-to-continue.png" alt-text="Screenshot shows a console with output.":::
-
-GRUB menu should appear on-screen for the configured timeout=15 without the need to press Esc. Make sure to click in the Console in the Browser to make active the menu and select the required kernel.
-
-:::image type="content" source="media/serial-console-grub-proactive-configuration/select-kernel.png" alt-text="Screenshot shows a console with two Linux options.":::
 
 ## SuSE
+
+## SLES 15 sp5
+
+The default /etc/default/grub configuration on these versions is adequately configured.
+
+```output
+GRUB_DEFAULT=0
+GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=1
+GRUB_CMDLINE_LINUX_DEFAULT="console=ttyS0 net.ifnames=0 dis_ucode_ldr earlyprintk=ttyS0 multipath=off nvme_core.io_timeout=240 rootdelay=300 scsi_mod.use_blk_mq=1 USE_BY_UUID_DEVICE_NAMES=1 systemd.unified_cgroup_hierarchy=1"
+GRUB_CMDLINE_LINUX=""
+
+
+GRUB_DISTRIBUTOR="SLES15-SP5"
+GRUB_GFXMODE=auto
+GRUB_TERMINAL_INPUT="serial"
+GRUB_TERMINAL_OUTPUT="serial"
+GRUB_TIMEOUT_STYLE=countdow
+```
+
+Make sure the serial-getty@ttyS0.service is enabled so that systemd provides a login prompt on that console:
+
+```
+sudo systemctl enable serial-getty@ttyS0.service
+sudo systemctl start serial-getty@ttyS0.service
+```
 
 ## SLES 12 sp1
 
@@ -337,49 +267,28 @@ Either use YaST bootloader as per the official [docs](./serial-console-grub-sing
 
 Or add/change to /etc/default/grub the following parameters:
 
-```console
-GRUB_TERMINAL=serial
-GRUB_TIMEOUT=5
-GRUB_SERIAL_COMMAND="serial --unit=0 --speed=9600 --parity=no"
-
-```console
-Verify that ttys0 is used in the GRUB_CMDLINE_LINUX or GRUB_CMDLINE_LINUX_DEFAULT
-
-```console
-GRUB_CMDLINE_LINUX_DEFAULT="console=ttyS0,9600n"
+```output
+GRUB_CMDLINE_LINUX_DEFAULT="console=ttyS0 net.ifnames=0 dis_ucode_ldr earlyprintk=ttyS0 multipath=off nvme_core.io_timeout=240 rootdelay=300 scsi_mod.use_blk_mq=1 USE_BY_UUID_DEVICE_NAMES=1 systemd.unified_cgroup_hierarchy=1"
+GRUB_TERMINAL_INPUT="serial"
+GRUB_TERMINAL_OUTPUT="serial"
+GRUB_TIMEOUT=10
+GRUB_TIMEOUT_STYLE=countdown
 ```
 
 Recreate the grub.cfg
 
-`grub2-mkconfig -o /boot/grub2/grub.cfg`
-
-## SLES 11 SP4
-
-The Serial Console appears and displays boot messages but doesn't display a **login:** prompt
-
-Open an ssh session into the VM and update the file **/etc/inittab** by un-commenting this line:
-
-```console
-#S0:12345:respawn:/sbin/agetty -L 9600 ttyS0 vt102
+```bash
+grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
 
-Next run the command
+Make sure the serial-getty@ttyS0.service is enabled so that systemd provides a login prompt on that console:
 
-`telinit q`
-
-To enable GRUB, the following changes should be made to /boot/grub/menu.lst
-
-```console
-timeout 5
-serial --unit=0 --speed=9600 --parity=no
-terminal --timeout=5 serial console
-
-root (hd0,0)
-kernel /boot/vmlinuz-3.0.101-108.74-default root=/dev/disk/by-uuid/ab6b62bb--
-1a8c-45eb-96b1-1fbc535b9265 disk=/dev/sda  USE_BY_UUID_DEVICE_NAMES=1 earlyprinttk=ttyS0 console=ttyS0 showopts vga=0x314
+```
+sudo systemctl enable serial-getty@ttyS0.service
+sudo systemctl start serial-getty@ttyS0.service
 ```
 
- This configuration will enable the message **Press any key to continue** to appear on the console for 5 seconds
+This configuration will enable the message **Press any key to continue** to appear on the console for 5 seconds
 
 It will then display the GRUB menu for an additional 5 seconds - by pressing the down arrow you will interrupt the counter and  select a kernel you want to boot either append the keyword **single** for single user mode that requires root password to be set.
 
@@ -396,7 +305,9 @@ If you don't have root password and single user requires you to have a root pass
 
 Remount your / (root) file system RW using the command
 
-`mount -o remount,rw /`
+```bash
+mount -o remount,rw /
+```
 
 :::image type="content" source="media/serial-console-grub-proactive-configuration/bash-remount.png" alt-text="Screenshot shows a console with a re-mount action.":::
 
@@ -406,7 +317,9 @@ Now you can perform root password change or many other Linux configuration chang
 
 Restart the VM with
 
-`/sbin/reboot -f`
+```bash
+/sbin/reboot -f
+```
 
 ## Single User mode
 

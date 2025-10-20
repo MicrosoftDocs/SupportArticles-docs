@@ -2,9 +2,7 @@
 title: Press Button or Click Link on Web Page Doesn't Work with File Uploader
 description: Solves issues related to interactive file uploaders in web automation.
 ms.custom: sap:Desktop flows\UI or browser automation
-ms.reviewer: amitrou
-ms.author: amitrou
-author: andreas-mitrou
+ms.reviewer: v-shaywood
 ms.date: 04/09/2025
 ---
 # Press button or click link on web page doesn't work with a file uploader
