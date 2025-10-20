@@ -17,7 +17,7 @@ This article discusses how to troubleshoot ingress gateways configured with the 
 
 ## Overview
 
-Like the [classic Istio ingress gateways](./IngressGateway.md), Gateway API-based ingress gateways for the Istio add-on are Envoy-based reverse proxies. Users must have the [AKS Managed Gateway API CRDs](/azure/aks/managed-gateway-api) installed on their cluster first before using the Istio add-on for Gateway API-based ingress.
+Like the [classic Istio ingress gateways](./istio-add-on-ingress-gateway.md), Gateway API-based ingress gateways for the Istio add-on are Envoy-based reverse proxies. Users must have the [AKS Managed Gateway API CRDs](/azure/aks/managed-gateway-api) installed on their cluster first before using the Istio add-on for Gateway API-based ingress.
 
 ## Before troubleshooting
 
@@ -26,13 +26,11 @@ Before proceeding, take the following actions:
 - Install the [Managed Gateway API CRDs](/azure/aks/managed-gateway-api) on your cluster.
 - Ensure that you have the Istio add-on installed and are on ASM minor revision `asm-1-26` or higher. Follow the [installation guide](/azure/aks/istio-deploy-addon) to enable the Istio add-on and the [upgrade documentation](/azure/aks/istio-upgrade) to upgrade your mesh to `asm-1-26` if you are on a lower minor revision.
 
-## Before troubleshooting
-
 ## Networking, firewall, and load balancer errors troubleshooting
 
 ### Step 1: Make sure that Azure Load Balancer health probes are configured appropriately
 
-In some cases, traffic from Azure Load Balancer to the Istio Gateway API Deployment could be blocked due to failing health probes. You can address this by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-issues) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
+In some cases, traffic from Azure Load Balancer to the Istio Gateway API Deployment could be blocked due to failing health probes. You can address this by adding [Azure LoadBalancer annotations](https://cloud-provider-azure.sigs.k8s.io/topics/loadbalancer/) for the health probe path/port/protocol directly to the `Gateway` object, or by [customizing](#gateway-resource-customization-troubleshooting) the `GatewayClass`-level ConfigMap or the per-`Gateway` ConfigMap.
 
 Gateway customization:
 
