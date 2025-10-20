@@ -16,53 +16,45 @@ appliesto:
 ---
 # Cluster Shared Volume goes offline after a node or storage component goes offline during active I/O
 
-A change in cluster behavior causes I/O operations to fail when metadata limits are reached, instead of hanging indefinitely. This prevents stuck I/O conditions but can cause Cluster Shared Volumes (CSV) to enter a Failed state if a node or storage component goes offline during active I/O.
-
-The cluster remains functional and retries to bring the CSV online every 15 minutes. However, Virtual Machines (VMs) managed by Virtual Machine Management Service (VMMS) stop retrying after 30 minutes and must be manually started after storage recovery.
-
-Applies to
-Windows Server 2025 Failover Clustering
-Cluster Shared Volumes (CSV)
-Storage Spaces Direct (S2D)
+This article describes a situation where the Cluster Shared Volume (CSV) of a cluster might go offline after other components go offline. The article includes steps for resolving the issue and, if needed, recovering any affected virtual machines.
 
 ## Symptoms
 
-When a cluster node or storage component becomes unavailable while I/O continues:
+This issue starts under the following circumstances:
 
-- I/O operations fail once metadata record limits are reached.
-- The associated CSV enters a Failed state.
-- The cluster periodically retries to bring the volume online (every 15 minutes by default).
-- Virtual Machines using the affected volume do not automatically recover after 30 minutes.
+1. A cluster node or storage component becomes unavailable, but I/O operations continue. For example, a disk array has failed or requires maintenance.
+1. As I/O operations continue, metadata records accumulate.
+1. When the metadata records reach their allocated limits, I/O operations fail.
+1. The associated CSV enters a Failed state.
+1. Every 15 minutes (the default setting), the cluster tries to bring the CSV online. If the Virtual Machine Management Service (VMMS) manages virtual machines on the cluster, VMMS periodically tries to start the virtual machines.
+1. After 30 minutes, VMMS stops trying to start the virtual machines. Any virtual machines that use the affected CSV can't automatically recover.
 
 ## Cause
 
-This behavior occurs because metadata records are reserved for repair operations.
+A recent change in cluster behavior affects how the CSV responds in the situation that's described in the Symptoms section. Previously, when metadata records accumulated to the allocated limits, I/O operations could hang indefinitely. Because of the change, I/O operations fail in this situation instead of hanging. The I/O failure in turn causes the CSV to go offline and enter a Failed state.
 
-When these records are exhausted during a node loss event, I/O operations fail and the CSV is temporarily taken offline to prevent indefinite hangs.
+## Recovery
 
-## Resolution
+You can use one of two methods to recover the cluster. The method to use depends on whether you can restore the previous cluster components, or you have to replace parts of the cluster.
 
-Recovery depends on how the missing storage is restored.
+### Method 1: Restore the offline component and automatically repair the cluster
 
-### Scenario 1 - Returning Missing Storage (Automatic Recovery)
+After you restore the offline node or storage, the following steps occur automatically.
 
-If the offline node or missing storage is restored:
-
-1. The cluster automatically retries to bring the CSV online (every 15 minutes by default).
-1. Once the storage is back, the volume comes online automatically.
-1. Repair starts and the volume becomes available.
-
-No manual steps are required.
-
-### Scenario 2 - Adding New Storage (Manual Recovery)
-
-If the missing storage cannot be restored and new storage is added, manual recovery steps are required to bring failed virtual disks and CSVs back online.
+1. The next time that the cluster automatically tries to bring the CSV online, it succeeds.
+1. Automatic repair processes start, and then the volume becomes available.
 
 > [!IMPORTANT]  
-> This process will temporarily take all volumes in the pool offline.
-Run the following steps as a cluster administrator on a node with full access to the storage pool.
+> After the cluster recovers, you might have to manually start any VMMS-managed virtual machines that use the cluster. After the cluster is down for 30 minutes, VMMS stops automatically trying to restart the virtual machines.
 
-#### Manual Recovery Steps
+### Method 2: Replace the offline component and manually recover the cluster
+
+If you can't restore the missing node or storage, follow these steps to manually recover the cluster.
+
+> [!IMPORTANT]  
+> This process temporarily takes all volumes in the pool offline.
+
+Run the following steps as a cluster administrator on a node that has full access to the storage pool.
 
 1. Identify the clustered storage pool.
 1. Gather Cluster Virtual Disks and CSVs; identify those that are failed.
@@ -96,6 +88,4 @@ After the storage volume is successfully recovered, manually start the VMs.
 
 ## Status
 
-This is the intended behavior change in Windows Server 2025 to prevent indefinite I/O hangs.
-
-A PowerShell helper script is planned to simplify Scenario 2 recovery steps and may be included in future releases or documented separately.
+This behavior is by design in Windows Server 2025. It's intended to prevent indefinite I/O hangs.
