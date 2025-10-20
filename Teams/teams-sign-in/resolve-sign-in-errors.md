@@ -9,12 +9,12 @@ ms.custom:
   - CI 156289
   - CI 187814
   - CSSTroubleshoot
-ms.reviewer: billkau; meerak
+ms.reviewer: billkau; cafarric; meerak
 appliesto: 
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 02/25/2025
+ms.date: 10/20/2025
 ---
 # Resolve sign-in errors in Teams
 
@@ -50,8 +50,6 @@ If you want to perform the checks and fix the issue manually, follow these steps
 1. If the diagnostic detects an issue that affects the instance of Teams on the tenant, follow the provided solution to fix the issue. If the diagnostic doesn't detect an issue, check whether the user's [Teams client is running the latest update](https://support.microsoft.com/office/update-microsoft-teams-535a8e4b-45f0-4f6c-8b3d-91bca7a51db1). Select the **Settings and more** menu next to the user's profile picture at the top right of the Teams window, and then select **Check for updates**.
 
   The desktop app is configured to update automatically. However, if you find that the app is missing the latest update, follow the instructions to install it, and try again to sign in. If you still see an error when you try to sign in to Teams, go to step 3.
-
-1. If you use a federated sign-in provider such as Active Directory Federation Services (AD FS), verify the AD FS sign-in configuration by using the [Microsoft 365 Single Sign-on Test](https://testconnectivity.microsoft.com/tests/SingleSignOn/input) in the Microsoft Remote Connectivity Analyzer.
 
 1. Check the error code on the Teams sign-in screen. If the code is listed here, follow the provided guidance to fix the error. If the code isn't listed here, see [Why am I having trouble signing in to Microsoft Teams?](https://support.microsoft.com/topic/a02f683b-61a3-4008-9447-ee60c5593b0f)
 
