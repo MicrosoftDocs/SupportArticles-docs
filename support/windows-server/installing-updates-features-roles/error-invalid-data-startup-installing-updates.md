@@ -15,15 +15,11 @@ appliesto:
 ---
 # Error 0x8007000d at startup after installing updates
 
-This article helps resolve an issue in which you receive the 0x8007000d (ERROR_INVALID_DATA) error at the system startup after installing Windows updates.
+This article helps resolve an issue in which you receive the `0x8007000d (ERROR_INVALID_DATA)` error at the system startup after installing Windows updates.
 
-After you install an update and restart the system, the system performs a rollback at the system startup, and you receive the 0x8007000d (ERROR_INVALID_DATA) error.
+After you install an update and restart the system, the system performs a rollback at the system startup, and you receive the `0x8007000d (ERROR_INVALID_DATA)` error.
 
 This issue occurs because the database of performance counters is corrupted.
-
-## Prerequisites
-
-Before proceeding with troubleshooting, ensure you have access to a good working machine with the same Windows OS version as the problematic machine. Be sure this machine successfully installed the latest updates and the specific update causing the error.
 
 ## Identify the issue
 
@@ -115,50 +111,6 @@ Driver updates may fail due to incorrect versioning, causing the Windows update 
 ## Resolution or troubleshooting steps
 
 > [!NOTE]
-> Before proceeding with any mitigation, back up the OS disk.
+> Before proceeding with any mitigation, [back up the OS disk](/azure/backup/about-azure-vm-restore).
 
-### Mitigation 1: File and registry corruption
-
-1. **File corruption:**
-    a. Find a good working machine with the same Windows OS version and the problematic update installed.
-    b. Locate the catalog and .mum files in *C:\WINDOWS\Servicing\Packages* on the good machine.
-    c. Replace the files on the problematic machine.
-    d. Reinstall the update.
-
-2. **Registry corruption:**
-    a. Mount the components hive on the good machine.
-    b. Compare the registry key types with the problematic machine.
-    c. Correct any discrepancies in key types.
-    d. Reinstall the update.
-
-### Mitigation 2: Driver update failure
-
-1. Compare the following locations with a good working machine:
-   - *C:\Windows\System32\DriverStore\FileRepository*
-   - Registry paths (based on drivers found above):
-     ```output
-     HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverInfFiles\mshdc.inf
-     HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\mshdc.inf_amd64_b0b5572axx95167b
-     ```
-2. Replace the files and registry entries with ones from the good machine.
-3. Reinstall the update.
-
-### Mitigation 3: Rebuild the performance counter setting
-
-1. Open an elevated Windows PowerShell prompt, and then navigate to the *C:\\windows\\system32\\wbem* folder by running the following cmdlet:
-    ```PowerShell
-    cd C:\Windows\system32\wbem
-    ```
-2. Run the following [wmiadap](/windows/win32/wmisdk/wmiadap) cmdlet to parse all the performance libraries:
-    ```powershell
-    C:\Windows\system32\wbem>wmiadap.exe /f
-    ```
-3. Run the following [lodctr](/windows-server/administration/windows-commands/lodctr) cmdlet to rebuild the performance counter setting:
-    ```powershell
-    C:\Windows\system32\wbem>lodctr /r 
-    ```
-    Then, you receive the following message if the cmdlet runs successfully:
-    ```output 
-    Successfully rebuilt performance counter setting from system backup store 
-    ```
-4. Install the update again.
+The most reliable mitigation for this problem is perfoming an [in-place upgrade (IPU) on the Windows virtual machine (VM)](/azure/virtual-machines/windows-in-place-upgrade).
