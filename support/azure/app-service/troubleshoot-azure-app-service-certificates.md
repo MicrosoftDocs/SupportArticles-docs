@@ -8,6 +8,7 @@ ms.date: 10/10/2025
 ms.author: jarrettr
 ms.reviewer: v-ryanberg, v-gsitser
 ms.service: azure-app-service
+ms.custom: sap:auto-renewal
 ---
 # Troubleshoot Azure App Service certificates 
 
