@@ -12,7 +12,7 @@ This article offers general recommendations and specific suggestions to troubles
 ## [ASP.NET](#tab/net)
 
 > [!NOTE]
-> When you create a web app with the `ASP.NET` runtimes in App Service, it deploys a single static HTML page as a starter website. We do *not* recommend that yossssssssssu troubleshoot an issue with a default template. Deploy an application before you troubleshoot an issue.
+> When you create a web app with the `ASP.NET` runtimes in App Service, it deploys a single static HTML page as a starter website. We *do not* recommend that you troubleshoot an issue with a default template. Deploy an application before you troubleshoot an issue.
 
 ## Missing telemetry
 
