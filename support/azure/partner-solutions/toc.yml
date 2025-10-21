@@ -23,6 +23,8 @@ items:
       href: log-limitations.md
 - name: Dynatrace
   items: 
+    - name: AKS agent installation/uninstallation unavailable
+      href: dynatrace-install-uninstall-inactive.md
     - name: Diagnostic settings manual update
       href: diagnostic-settings-manual-update.md
     - name: Diagnostic settings not created
