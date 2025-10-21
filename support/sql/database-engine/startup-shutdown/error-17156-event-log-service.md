@@ -18,14 +18,14 @@ After you install or upgrade Microsoft SQL Server on Windows Server 2025 or 2022
 2025-10-02 08:24:32.26 Server      Error: 17156, Severity: 16, State: 1.
 2025-10-02 08:24:32.26 Server      initeventlog: Could not initiate the EventLog Service for the key 'MSSQL$SQL2022',  or last error code is 5.
 2025-10-02 08:24:32.26 Server      Microsoft SQL Server 2022 (RTM-CU21) (KB5065865) - 16.0.4215.2 (X64)
-Aug 11 2025 13:24:21
-Copyright (C) 2022 Microsoft Corporation
+                                                       Aug 11 2025 13:24:21
+                                                       Copyright (C) 2022 Microsoft Corporation
 Developer Edition (64-bit) on Windows Server 2025 Datacenter 10.0 <X64> (Build 26100: ) (Hypervisor)
 ```
 
 ## Cause
 
-This error can occur if SQL Server Agent is blocked from writing to the Application event log. During startup, the SQL Server Agent tries to register its own event source to the Application event log. However, without write access, registration fails. If SQL Server Agent doesn't register the event source, the startup process terminates.
+Error code 5 is [OS error 5](/windows/win32/debug/system-error-codes--0-499-#:~:text=ERROR_ACCESS_DENIED,Access%20is%20denied.) "Access is denied," which means a permission restriction. This error can occur if SQL Server Agent is blocked from writing to the Application event log. During startup, the SQL Server Agent tries to register its own event source to the Application event log. However, without write access, registration fails. If SQL Server Agent doesn't register the event source, the startup process terminates.
 
 An incorrect configuration in the **Configure log access** group policy can prevent SQL Server Agent from writing to the Application event log. If the **Configure log access** policy doesn't grant write access to the account that's used by SQL Server Agent, the agent doesn't start.
 
