@@ -42,7 +42,7 @@ If you're the subscription owner and the install/uninstall buttons for AKS agent
 
 If you're not the subscription owner, ensure that you have the Liftr Dynatrace Contributor role, and ask the subscription owner to complete the following steps. After that's done, the buttons should be enabled. 
 
-These steps ensure the  Dynatrace extension has the required access. These steps must be completed before you install the extension by using the Azure portal or the CLI.  
+These steps ensure that the Dynatrace extension has the required access. They must be completed before you install the extension by using the Azure portal or the CLI.  
   
 1. On the page for the subscription, select **Access Control (IAM)**. 
 
