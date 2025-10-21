@@ -25,7 +25,7 @@ When you try to [create and deploy Azure resource groups through Visual Studio](
 
 ## Cause
 
-These issues occur when you use unsupported versions of Visual Studio.
+These issues occur when using an unsupported version of Visual Studio.
 
 ## Resolution
 
@@ -33,7 +33,7 @@ Make sure you're using a supported version of Visual Studio. This feature is ava
 
 - Visual Studio 2017
 - Visual Studio 2019
-- Visual Studio 2022.
+- Visual Studio 2022
 
 ## More information
 
