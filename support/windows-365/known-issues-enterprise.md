@@ -179,6 +179,21 @@ Allow third-party cookies from `microsoft.us` in your Web client settings, Safar
 
 This change lets the web client or Safari browser store and use the `microsoft.us` cookies to connect to your Cloud PC session.  
 
+## Windows 365 Authentication Issues in Government Environments Using Windows App on macOS
+
+### Possible Cause
+
+- Government customers (GCC, GCC High) using **Windows 365** on macOS may encounter authentication failures when adding a **Work or School Account** via the **Windows App**.
+- **Web browser access** to Windows 365 remains unaffected.
+- The Windows App on macOS does not properly detect the GCC High Windows 365 environment during discovery.
+- Required workspace URL (`https://rdweb.wvd.azure.us/api/arm/feeddiscovery`) is not automatically identified during authentication.
+- This is by design and requires to choose **Add workspace** instead of **Work or School Account** for government customers.
+
+### Solution
+- Instead of selecting **Add Account**, choose **Add Workspace**.
+- Manually enter the following URL: `https://rdweb.wvd.azure.us/api/arm/feeddiscovery`.
+- The Windows 365 devices should now be discovered and added.
+
 ## Windows Security reports "Memory Integrity is off. Your device may be vulnerable." <!--48643259-->
 
 Windows Security reports "Memory Integrity is off. Your device may be vulnerable."
@@ -251,7 +266,7 @@ For newly provisioned Cloud PCs, verify that WebRTC is available. If it's not, y
 
 - To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps in [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/mem/intune/apps/apps-add-office365).
 
-- To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps in [Install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, use this link: [https://aka.ms/msrdcwebrtcsvc/msi]( https://aka.ms/msrdcwebrtcsvc/msi).
+- To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps in [Install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, use this link: [https://aka.ms/msrdcwebrtcsvc/msi](https://aka.ms/msrdcwebrtcsvc/msi).
 
 ## Windows 365 Frontline issues
 
