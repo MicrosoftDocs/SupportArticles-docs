@@ -1,5 +1,5 @@
 ---
-title: "Error 1053" and OpenSSH Server Service Doesn't Start
+title: Error 1053 and OpenSSH Server Service Doesn't Start
 description: Discusses an issue in which you receive Error 1053 after you install OpenSSH Server and try to start the OpenSSH Server service.
 ms.date: 10/21/2025
 manager: dcscontentpm
