@@ -60,7 +60,7 @@ Select the method that's appropriate for your environment.
 ### Method 1: Installing OpenSSH Server as a Feature on Demand by using Windows Update or an offline Windows image
 
 > [!IMPORTANT]  
-> If you build or modify your own Windows images, make sure that you add any Language Packs first, then any Features on Demand. Afterward, you can add applications and updates as described in [Add updates to a Windows image](/windows-hardware/manufacture/desktop/servicing-the-image-with-windows-updates-sxs?view=windows-11).
+> If you build or modify your own Windows images, make sure that you add any Language Packs first, then any Features on Demand. Afterward, you can add applications and updates as described in [Add updates to a Windows image](/windows-hardware/manufacture/desktop/servicing-the-image-with-windows-updates-sxs).
 
 After you install OpenSSH Server as a Feature on Demand, reinstall the most recent cumulative Windows update on that computer.
 
