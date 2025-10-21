@@ -11,7 +11,7 @@ ms.custom: sap:Integrated Development Environment (IDE)\Other
 _Applies to:_&nbsp;Visual Studio
 
 > [!NOTE]
-> The Azure Resource Group project has been in extended support since October 2024 and only ships in Visual Studio 2022 and below. This feature isn't available in Visual Studio 2026 and beyond.
+> The Azure Resource Group project has been in extended support since October 2024 and only ships in Visual Studio 2022 and older versions. This feature isn't available in Visual Studio 2026 and newer versions.
 
 This article helps you solve issues related to creating and deploying Azure resource groups.
 
@@ -29,7 +29,11 @@ These issues occur when you use unsupported versions of Visual Studio.
 
 ## Resolution
 
-Make sure you're using a supported version of Visual Studio. This feature is available in Visual Studio 2017, Visual Studio 2019, and Visual Studio 2022.
+Make sure you're using a supported version of Visual Studio. This feature is available in:
+
+- Visual Studio 2017
+- Visual Studio 2019
+- Visual Studio 2022.
 
 ## More information
 
