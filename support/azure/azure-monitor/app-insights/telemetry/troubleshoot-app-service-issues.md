@@ -203,37 +203,27 @@ If you're missing telemetry, follow these steps to confirm that autoinstrumentat
 
 ---
 
-## Default website deployed with web apps doesn't support automatic client-side monitoring
+## Language-specific troubleshooting
 
-### [ASP.NET](#tab/net)
+### Default website deployed with web apps doesn't support automatic client-side monitoring
+
+### [ASP.NET](#tab/net-1)
 
 When you create a web app with the ASP.NET runtimes in App Service, it deploys a single static HTML page as a starter website. The static webpage also loads an ASP.NET-managed web part in IIS. This page allows for testing codeless server-side monitoring but doesn't support automatic client-side monitoring.
 
 If you want to test out codeless server and client-side monitoring for ASP.NET in an App Service web app, we recommend following the official guides for [creating an ASP.NET Framework web app](/azure/app-service/quickstart-dotnetcore?tabs=netframework48). Afterwards, use the instructions in the current article to enable monitoring.
 
-### [ASP.NET Core](#tab/aspnetcore)
+### [ASP.NET Core](#tab/aspnetcore-1)
 
 When you create a web app with the ASP.NET Core runtimes in App Service, it deploys a single static HTML page as a starter website. The static webpage also loads an ASP.NET-managed web part in IIS. This behavior allows for testing codeless server-side monitoring but doesn't support automatic client-side monitoring.
 
 If you want to test out codeless server and client-side monitoring for ASP.NET Core in an App Service web app, we recommend following the official guides for [creating an ASP.NET Core web app](/azure/app-service/quickstart-dotnetcore). Afterwards, use the instructions in the current article to enable monitoring.
 
-## [Java](#tab/java)
-
-N/A
-
-## [Node.js](#tab/nodejs)
-
-N/A
-
-## [Python](#tab/python)
-
-N/A
-
 ---
 
-## APPINSIGHTS_JAVASCRIPT_ENABLED and urlCompression not supported
+### APPINSIGHTS_JAVASCRIPT_ENABLED and urlCompression not supported
 
-### [ASP.NET](#tab/net)
+### [ASP.NET](#tab/net-1)
 
 If you use `APPINSIGHTS_JAVASCRIPT_ENABLED=true` in cases where content is encoded, you might get errors like:
 
@@ -244,7 +234,7 @@ An error occurs because the `APPINSIGHTS_JAVASCRIPT_ENABLED` application setting
 
 For the latest information on the Application Insights agent/extension, see the [release notes](https://github.com/MohanGsk/ApplicationInsights-Home/blob/master/app-insights-web-app-extensions-releasenotes.md).
 
-### [ASP.NET Core](#tab/aspnetcore)
+### [ASP.NET Core](#tab/aspnetcore-1)
 
 PHP and WordPress sites aren't supported. There's currently no officially supported SDK/agent for server-side monitoring of these workloads. To track client-side transactions on a PHP or WordPress site, add the client-side JavaScript to your webpages using the [JavaScript SDK](/azure/azure-monitor/app/javascript-sdk).
 
@@ -256,23 +246,11 @@ The following table provides an explanation of what these values mean, their und
 | `AppAlreadyInstrumented:true` | The presence of `Microsoft.ApplicationsInsights` DLL in the app folder from a previous deployment can also cause this value. | Clean the app folder to ensure that these DLLs are removed. Check both your local app's bin directory and the *wwwroot* directory on the App Service. (To check the wwwroot directory of your App Service web app, select **Advanced Tools (Kudu**) > **Debug console** > **CMD** > **home\site\wwwroot**). |
 | `IKeyExists:false` | This value indicates that the instrumentation key isn't present in the app setting `APPINSIGHTS_INSTRUMENTATIONKEY`. Possible causes include accidentally removing the values or forgetting to set the values in automation script. | Make sure the setting is present in the App Service application settings. |
 
-### [Java](#tab/java)
-
-N/A
-
-### [Node.js](#tab/nodejs)
-
-N/A
-
-### [Python](#tab/python)
-
-N/A
-
 ---
 
-## PHP and WordPress aren't supported
+### PHP and WordPress aren't supported
 
-### [ASP.NET](#tab/net)
+### [ASP.NET](#tab/net-1)
 
 PHP and WordPress sites aren't supported. There's currently no officially supported SDK/agent for server-side monitoring of these workloads. To track client-side transactions on a PHP or WordPress site, add the client-side JavaScript to your webpages using the [JavaScript SDK](/azure/azure-monitor/app/javascript-sdk).
 
@@ -286,7 +264,7 @@ The following table provides an explanation of what these values mean, their und
 | `AppContainsDiagnosticSourceAssembly**:true`| This value indicates that the extension detected references to `System.Diagnostics.DiagnosticSource` in the application and backs off.| For ASP.NET, remove the reference. |
 | `IKeyExists:false` | This value indicates that the instrumentation key isn't present in the app setting `APPINSIGHTS_INSTRUMENTATIONKEY`. Possible causes might be that the values were accidentally removed, or you forgot to set the values in the automation script. | Make sure the setting is present in the App Service application settings. |
 
-### [ASP.NET Core](#tab/aspnetcore)
+### [ASP.NET Core](#tab/aspnetcore-1)
 
 PHP and WordPress sites aren't supported. There's currently no officially supported SDK/agent for server-side monitoring of these workloads. To track client-side transactions on a PHP or WordPress site, add the client-side JavaScript to your webpages using the [JavaScript SDK](/azure/azure-monitor/app/javascript-sdk).
 
@@ -298,23 +276,11 @@ The following table provides an explanation of what these values mean, their und
 | `AppAlreadyInstrumented:true` | The presence of `Microsoft.ApplicationsInsights` DLL in the app folder from a previous deployment can also cause this value. | Clean the app folder to ensure that these DLLs are removed. Check both your local app's bin directory and the *wwwroot* directory on the App Service. (To check the wwwroot directory of your App Service web app, select **Advanced Tools (Kudu**) > **Debug console** > **CMD** > **home\site\wwwroot**). |
 | `IKeyExists:false` | This value indicates that the instrumentation key isn't present in the app setting `APPINSIGHTS_INSTRUMENTATIONKEY`. Possible causes include accidentally removing the values or forgetting to set the values in automation script. | Make sure the setting is present in the App Service application settings. |
 
-### [Java](#tab/java)
-
-N/A
-
-### [Node.js](#tab/nodejs)
-
-N/A
-
-### [Python](#tab/python)
-
-N/A
-
 ---
 
 ## System.IO.FileNotFoundException after 2.8.44 upgrade
 
-### [ASP.NET](#tab/net)
+### [ASP.NET](#tab/net-2)
 
 The 2.8.44 version of autoinstrumentation upgrades Application Insights SDK to 2.20.0. The Application Insights SDK has an indirect reference to `System.Runtime.CompilerServices.Unsafe.dll` through `System.Diagnostics.DiagnosticSource.dll`. If the application has [binding redirect](/dotnet/framework/configure-apps/file-schema/runtime/bindingredirect-element) for `System.Runtime.CompilerServices.Unsafe.dll` and if this library isn't present in the application folder, it might throw `System.IO.FileNotFoundException`.
 
@@ -329,43 +295,11 @@ To resolve this issue, remove the binding redirect entry for `System.Runtime.Com
 
 As a temporary workaround, you could set the app setting `ApplicationInsightsAgent_EXTENSION_VERSION` to a value of `2.8.37`. This setting triggers App Service to use the old Application Insights extension. Temporary mitigations should only be used as an interim.
 
-### [ASP.NET Core](#tab/aspnetcore)
-
-N/A
-
-### [Java](#tab/java)
-
-N/A
-
-### [Node.js](#tab/nodejs)
-
-N/A
-
-### [Python](#tab/python)
-
-N/A
-
 ---
 
-## Duplicate telemetry
+### Duplicate telemetry
 
-### [ASP.NET](#tab/net)
-
-N/A
-
-### [ASP.NET Core](#tab/aspnetcore)
-
-N/A
-
-### [Java](#tab/java)
-
-N/A
-
-### [Node.js](#tab/nodejs)
-
-N/A
-
-### [Python](#tab/python)
+### [Python](#tab/python-3)
 
 Only use autoinstrumentation on App Service if you aren't using manual instrumentation of OpenTelemetry in your code, such as the [Azure Monitor OpenTelemetry Distro](/azure/azure-monitor/app/opentelemetry-enable?tabs=python) or the [Azure Monitor OpenTelemetry Exporter](/python/api/overview/azure/monitor-opentelemetry-exporter-readme).
 
@@ -375,25 +309,9 @@ If you're seeing unexpected charges or high costs in Application Insights, this 
 
 ---
 
-## Django apps
+### Django apps
 
-### [ASP.NET](#tab/net)
-
-N/A
-
-### [ASP.NET Core](#tab/aspnetcore)
-
-N/A
-
-### [Java](#tab/java)
-
-N/A
-
-### [Node.js](#tab/nodejs)
-
-N/A
-
-### [Python](#tab/python)
+### [Python](#tab/python-3)
 
 If your app uses Django and is either failing to start or using incorrect settings, make sure to set the `DJANGO_SETTINGS_MODULE` environment variable. See the [Django Instrumentation](/azure/azure-monitor/app/codeless-app-service#django-instrumentation) section for details.
 
