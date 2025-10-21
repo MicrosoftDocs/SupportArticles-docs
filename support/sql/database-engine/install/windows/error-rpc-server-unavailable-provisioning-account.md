@@ -237,5 +237,5 @@ To troubleshoot underlying Windows issues that cause SQL Server Setup to fail, s
 
 ## Related content
 
-- [SQL Server installation errors](/troubleshoot/sql/database-engine/install/windows/error-install-sql-server)
-- [Remove a partial installation of SQL Server](/troubleshoot/sql/database-engine/install/windows/remove-partial-installation)
+- [SQL Server installation errors](error-install-sql-server.md)
+- [Remove a partial installation of SQL Server](remove-partial-installation.md)

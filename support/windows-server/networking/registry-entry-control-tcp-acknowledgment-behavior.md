@@ -9,6 +9,8 @@ ms.reviewer: mkoduri, kaushika
 ms.custom:
 - sap:network connectivity and file sharing\tcp/ip connectivity (tcp protocol,nla,winhttp)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # New registry entry for controlling the TCP Acknowledgment (ACK) behavior in Windows
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika
 ms.custom:
 - sap:system performance\performance tools (task manager,perfmon,wsrm,and wpa)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to use the System Configuration utility to troubleshoot configuration errors
 
@@ -27,7 +29,7 @@ The System Configuration utility finds and isolates issues. However, it is not a
 
 For more information about how to disable or to permanently remove the programs that run when Windows starts, click the following article number to view the article in the Microsoft Knowledge Base:
 
-[270035](https://support.microsoft.com/help/270035) How to disable programs that run when you start Windows XP Home Edition or Windows Vista  
+[270035](https://support.microsoft.com/topic/269d60ca-1da1-8a0a-886d-8b401583f57b) How to disable programs that run when you start Windows XP Home Edition or Windows Vista  
 
 ### Advanced troubleshooting
 

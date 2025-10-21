@@ -3,8 +3,6 @@ title: Troubleshoot Web API client errors
 description: Provides resolutions for the common client errors that occur when you use the Dataverse Web API.
 ms.date: 01/24/2024
 ms.custom: sap:Dataverse Web API and SDK\Odata endpoint errors
-author: divkamath
-ms.author: dikamath
 ms.reviewer: jdaly
 manager: kvivek
 search.audienceType: 

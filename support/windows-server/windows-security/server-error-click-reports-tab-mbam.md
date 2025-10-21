@@ -9,6 +9,8 @@ ms.reviewer: manojse, kaushika
 ms.custom:
 - sap:windows security technologies\bitlocker
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error message when you click Reports tab in MBAM: Server Error in /Reports Application
 

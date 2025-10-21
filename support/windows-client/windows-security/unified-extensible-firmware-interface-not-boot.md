@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-lianna
 ms.custom:
 - sap:system performance\startup configuration (general,secure boot,uefi)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # A UEFI mode system can't boot after maintenance or servicing activity
 

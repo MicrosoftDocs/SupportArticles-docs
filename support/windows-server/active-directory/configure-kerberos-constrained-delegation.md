@@ -10,6 +10,8 @@ ms.custom:
 - sap:active directory\domain or forest functional level updates,failures and advisory
 - pcy:WinComm Directory Services
 keywords: KCD, Kerberos constrained delegation, s4u2proxy, s4u2self, service account, computer account, machine account
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages
 

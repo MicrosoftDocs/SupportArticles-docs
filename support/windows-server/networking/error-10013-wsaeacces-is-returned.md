@@ -9,6 +9,8 @@ ms.reviewer: kaushika, makotkat
 ms.custom:
 - sap:backup,recovery,disk,and storage\file server resource manager (fsrm)
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error 10013 (WSAEACCES) is returned when a second bind to an excluded port fails in Windows
 

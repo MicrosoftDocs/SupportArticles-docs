@@ -9,6 +9,8 @@ ms.reviewer: kaushika, herbertm
 ms.custom:
 - sap:active directory\ldap configuration and interoperability
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Domain controllers can't be located and high-rate outbound sessions
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, gautama
 ms.custom:
 - sap:application virtualization\clients\application does not load or run
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # An App-V v5 virtualized application fails to start with error 0xc0000142
 

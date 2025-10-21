@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jokay
 ms.custom:
 - sap:print,fax,and scan\print performance - failures,crashes,not responsive
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error message when you try to connect to a printer by using an alias (CNAME) resource record: Windows couldn't connect to the printer
 

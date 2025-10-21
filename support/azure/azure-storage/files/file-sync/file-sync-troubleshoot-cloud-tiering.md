@@ -182,7 +182,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 
 | HRESULT | HRESULT (decimal) | Error string | Issue | Remediation |
 |---------|-------------------|--------------|-------|-------------|
-| 0x80070079 | -2147942521 | ERROR_SEM_TIMEOUT | The file failed to recall due to an I/O timeout. This issue can occur for several reasons: server resource constraints, poor network connectivity, or an Azure storage issue (for example, throttling). | No action required. If the error persists for several hours, please open a support case. |
+| 0x80070079 | -2147942521 | ERROR_SEM_TIMEOUT | The file failed to recall due to an I/O timeout. This issue can occur for several reasons: high recall activity in a short time span, server resource constraints, poor network connectivity, or an Azure storage issue (for example, throttling). | No action required. If the error persists for several hours, please open a support case. |
 | 0x80070036 | -2147024842 | ERROR_NETWORK_BUSY | The file failed to recall due to a network issue.  | If the error persists, check network connectivity to the Azure file share. |
 | 0x80c80037 | -2134376393 | ECS_E_SYNC_SHARE_NOT_FOUND | The file failed to recall because the server endpoint was deleted. | To resolve this issue, see [Tiered files aren't accessible on the server](?tabs=portal1%252cazure-portal#tiered-files-are-not-accessible-on-the-server). |
 | 0x80070005 | -2147024891 | ERROR_ACCESS_DENIED | The file failed to recall due to an access denied error. This issue can occur if the firewall and virtual network settings on the storage account are enabled and the server does not have access to the storage account. | To resolve this issue, add the Server IP address or virtual network by following the steps documented in the [Configure firewall and virtual network settings](/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal#optional-configure-firewall-and-virtual-network-settings) section in the deployment guide. |
@@ -327,6 +327,19 @@ This option doesn't require removing the server endpoint but requires sufficient
 
 3. Use the *OrphanTieredFiles.txt* output file to identify orphaned tiered files on the server.
 4. Overwrite the orphaned tiered files by copying the full file from the Azure file share to the Windows Server.
+
+## How to identify files that are excluded from File Sync
+1. Open a PowerShell window as administrator.
+2. Navigate to the folder. Replace `<volume letter>` and `<syncShare>` with the volume letter and sync share names.
+   ```powershell
+    cd <volume letter>\ <syncShare>\
+    ```
+3. Run this command:
+   ```powershell
+    dir  desktop.ini,thumbs.db,ehthumbs.db,~$*.*,*.laccdb,*.tmp -Recurse -Force -File -ErrorAction Ignore
+    ```
+
+Alternatively, you may use the TreeSize tool. The same list of exclusions can be put into the TreeSize 'filters' configuration to count excluded content. The advantage of this approach is that the content which the administrator does not have access to in case of the former approach will be accessible by TreeSize because it uses the backup/restore permissions when scanning content.
 
 ## How to troubleshoot files unexpectedly recalled on a server
 

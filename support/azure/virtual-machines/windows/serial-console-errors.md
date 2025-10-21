@@ -9,9 +9,9 @@ tags: azure-resource-manager
 ms.service: azure-virtual-machines
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 09/10/2025
+ms.date: 10/16/2025
 ms.author: jarrettr
-ms.custom: sap:VM Admin - Windows (Guest OS)
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Common errors within the Azure Serial Console

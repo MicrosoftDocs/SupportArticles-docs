@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot OpenTelemetry issues in Node.js
 description: Learn how to troubleshoot OpenTelemetry issues in Node.js. View known issues that involve Azure Monitor OpenTelemetry Exporters.
-ms.date: 11/08/2024
+ms.date: 10/14/2025
 editor: v-jsitser
 ms.service: azure-monitor
 ms.devlang: javascript
-ms.reviewer: mmcc, lechen, aaronmax, didiergbenou, v-leedennis, v-weizhu
-ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
+ms.reviewer: mmcc, lechen, aaronmax, didiergbenou, jarrettr, v-weizhu
+ms.custom: sap:Missing or incorrect telemetry and performance issues(
 ---
 
 # Troubleshoot OpenTelemetry issues in Node.js

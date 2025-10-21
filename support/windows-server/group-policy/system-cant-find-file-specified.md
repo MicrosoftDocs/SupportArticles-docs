@@ -9,6 +9,8 @@ ms.reviewer: kaushika, nedpyle
 ms.custom:
 - sap:group policy\group policy management (gpmc or gpedit)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Adprep /gpprep error (The system cannot find the file specified), or tool crashes
 

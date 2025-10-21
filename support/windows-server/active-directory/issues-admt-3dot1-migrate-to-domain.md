@@ -9,6 +9,8 @@ ms.reviewer: kaushika, scheung
 ms.custom:
 - sap:active directory\active directory migration tool (admt)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Known issues that may occur when you use ADMT 3.1 to migrate to a domain that contains Windows Server 2008 R2 domain controllers
 

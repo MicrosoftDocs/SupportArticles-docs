@@ -60,11 +60,11 @@ After the patch or update has been installed and these messages happen, follow t
 
 7. Exit Microsoft Dynamics GP.
 
-8. Recreate the Reports.dic using the steps in [KB 850465 - How to re-create the Reports.dic file in Microsoft Dynamics GP](https://support.microsoft.com/help/850465).
+8. Recreate the Reports.dic using the steps in [How to re-create the Reports.dic file in Microsoft Dynamics GP](./how-to-re-create-the-reports-dot-dic-file.md).
 
     > [!NOTE]
     > In step 3 of KB 850465, use the instructions after step 3 to import the modified reports back in using the Report Writer method. If that doesn't work, then try the steps listed in step 3 for the Customization Maintenance method.
 
 9. Test again.
 
-10. If there are also modified forms, use [How to re-create the Forms.dic file in Microsoft Dynamics GP](https://support.microsoft.com/help/951767) to recreate the Forms.Dic as well.
+10. If there are also modified forms, use [How to re-create the Forms.dic file in Microsoft Dynamics GP](./re-create-the-forms-dot-dic-file.md) to recreate the Forms.Dic as well.

@@ -10,6 +10,8 @@ ms.reviewer: kaushika, bbrekkan
 ms.custom:
 - sap:windows security technologies\active directory federation services (ad fs) non-azure-o365 issues
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Availability and description of Active Directory Federation Services 2.0
 

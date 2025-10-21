@@ -9,6 +9,8 @@ ms.reviewer: kaushika, bchee
 ms.custom:
 - sap:windows desktop and shell experience\media issues with in-box apps (windows media player,groove,movies and tv)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # You receive a codec error message, or audio plays but video doesn't play when you play media files in Windows Media Player 11
 

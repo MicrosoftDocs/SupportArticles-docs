@@ -10,6 +10,8 @@ ms.custom:
 - sap:virtualization and hyper-v\shielded virtual machines
 - pcy:WinComm Storage High Avail
 ms.assetid: 424b8090-0692-49a6-9dc4-3c0e77d74b80
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot the Host Guardian Service
 

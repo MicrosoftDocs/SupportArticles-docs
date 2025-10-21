@@ -10,6 +10,8 @@ ms.custom:
 - pcy:WinComm Devices Deploy
 ms.reviewer: kaushika, v-tappelgate
 audience: itpro
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # BitLocker cannot encrypt a drive: known issues
 

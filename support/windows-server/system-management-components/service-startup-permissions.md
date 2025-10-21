@@ -9,6 +9,8 @@ ms.reviewer: kaushika, BOBQIN
 ms.custom:
 - sap:system management components\microsoft management console (mmc)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Troubleshoot service startup permissions in Windows Server 2003  
 

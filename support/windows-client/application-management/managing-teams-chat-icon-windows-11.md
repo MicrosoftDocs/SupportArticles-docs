@@ -10,6 +10,8 @@ ms.custom:
 - sap:application technologies and compatibility\windows script host (cscript or wscript)
 - pcy:WinComm User Experience
 audience: itpro
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Managing the Teams Chat icon on Windows 11
 

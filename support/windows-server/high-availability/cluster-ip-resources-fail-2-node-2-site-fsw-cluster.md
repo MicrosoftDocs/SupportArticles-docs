@@ -10,6 +10,8 @@ ms.custom:
 - sap:clustering and high availability\node removed from the cluster
 - pcy:WinComm Storage High Avail
 keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Cluster IP address resources fail on both nodes of a two-node, two-site cluster when one node disconnects from the public VLAN
 

@@ -9,6 +9,8 @@ ms.reviewer: kaushika, ajayps
 ms.custom:
 - sap:network connectivity and file sharing\remote access (directaccess)
 - pcy:WinComm Networking
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # DirectAccess clients may be unable to connect with error 0x80092013
 

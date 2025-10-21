@@ -3,7 +3,7 @@ title: Troubleshoot RDP Shortpath for public networks
 description: Helps troubleshoot RDP Shortpath for public networks for Azure Virtual Desktop, which establishes a UDP-based transport between a Remote Desktop client and session host.
 ms.topic: troubleshooting
 ms.date: 01/21/2025
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ms.custom: pcy:wincomm-user-experience
 ---
 # Troubleshoot RDP Shortpath for public networks

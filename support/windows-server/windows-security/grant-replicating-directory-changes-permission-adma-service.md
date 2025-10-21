@@ -9,6 +9,8 @@ ms.reviewer: kaushika, dweiss
 ms.custom:
 - sap:windows security technologies\ad object permissions,access control,delegation,adminsdholder and auditing
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to grant the "Replicating Directory Changes" permission for the Microsoft Metadirectory Services ADMA service account
 

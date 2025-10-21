@@ -9,6 +9,8 @@ ms.reviewer: kaushika, warrenw, v-lianna
 ms.custom:
 - sap:system performance\shutdown performance (slow,unresponsive)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Scenario guide: Troubleshoot issues where system shutdown stops responding
 

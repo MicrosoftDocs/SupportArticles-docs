@@ -9,6 +9,8 @@ ms.reviewer: kaushika, fszita, v-jomcc
 ms.custom:
 - sap:active directory\schema updates
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error when you run the Active Directory Installation Wizard: The version of the Active Directory schema of the source forest is not compatible with the version of Active Directory on this computer
 

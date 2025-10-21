@@ -9,6 +9,8 @@ ms.reviewer: adityah, kaushika
 ms.custom:
 - sap:system performance\app,process,service performance (slow,unresponsive)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # You cannot set page files on a partition that is larger than 2 terabytes
 

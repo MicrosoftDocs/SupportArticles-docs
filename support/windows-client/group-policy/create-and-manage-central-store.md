@@ -9,6 +9,8 @@ ms.reviewer: kaushika, herbertm
 ms.custom:
 - sap:group policy\group policy management (gpmc or gpedit)
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # How to create and manage the Central Store for Group Policy Administrative Templates in Windows
 

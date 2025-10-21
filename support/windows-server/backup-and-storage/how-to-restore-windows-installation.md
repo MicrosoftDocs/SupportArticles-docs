@@ -9,6 +9,8 @@ ms.reviewer: kaushika, keithpe
 ms.custom:
 - sap:backup,recovery,disk,and storage\system restore
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # How to restore a Windows 7 installation
 

@@ -5,8 +5,8 @@ ms.date: 04/15/2024
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot start or stop my VM, linux-related-content
 ms.collection: linux
-ms.author: srijangupta
-author: srijang
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.reviewer: danis
 ---
 # Swap file isn't  re-created after a Linux VM restarts

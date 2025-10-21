@@ -9,6 +9,8 @@ ms.reviewer: kaushika, v-sanair
 ms.custom:
 - sap:system management components\task scheduler
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Error message when you run an old scheduled task or a newly created scheduled task on a domain controller: "0x8007000d: The data is invalid"
 

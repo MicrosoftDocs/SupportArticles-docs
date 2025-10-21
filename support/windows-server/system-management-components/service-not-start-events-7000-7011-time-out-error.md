@@ -9,6 +9,8 @@ ms.reviewer: kaushika, pfazekas, v-dgit
 ms.custom:
 - sap:system management components\microsoft management console (mmc)
 - pcy:WinComm User Experience
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # A slow service does not start due to time-out error in Windows
 

@@ -9,6 +9,8 @@ ms.reviewer: tarekr, cochen, kaushika
 ms.custom:
 - sap:installing windows updates,features,or roles\failure to install windows updates
 - pcy:WinComm Devices Deploy
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Package Manager can install only the first package when you extract two or more packages to the same folder in Windows Vista
 

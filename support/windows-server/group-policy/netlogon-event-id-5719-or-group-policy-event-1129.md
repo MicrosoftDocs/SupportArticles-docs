@@ -9,6 +9,8 @@ ms.reviewer: kaushika, herbertm, v-jomcc
 ms.custom:
 - sap:group policy\problems applying group policy
 - pcy:WinComm Directory Services
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # Netlogon event ID 5719 or Group Policy event 1129 is logged when you start a domain member
 

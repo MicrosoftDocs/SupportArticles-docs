@@ -9,6 +9,8 @@ ms.reviewer: kaushika, steved, grahamm
 ms.custom:
 - sap:system performance\system reliability (crash,errors,bug check or blue screen,unexpected reboot)
 - pcy:WinComm Performance
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
 # Tablet device that's running Windows 10 creates only a minidump file
 

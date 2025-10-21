@@ -9,6 +9,8 @@ ms.reviewer: kaushika, jtierney
 ms.custom:
 - sap:backup,recovery,disk,and storage\iscsi
 - pcy:WinComm Storage High Avail
+appliesto:
+  - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
 # The Microsoft iSCSI Initiator may fail to log in to Favorite Targets after the Initiator Name is changed in Windows
 
