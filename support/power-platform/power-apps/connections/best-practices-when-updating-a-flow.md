@@ -10,7 +10,7 @@ ms.custom: sap:Connections\Creating or updating connections
 *Applies to:* Power Apps  
 *Original KB number:* 4477072
 
-When integrating Power Automate flows with Power Apps, you might encounter various errors that prevent flows from running correctly. This article helps you troubleshoot common integration issues and provides best practices for managing flow updates.
+When integrating Power Automate flows with Power Apps, you might encounter connection reference errors, authorization errors, or triggers that don't fire, causing the flow to fail. This article helps you troubleshoot these issues and provides best practices for managing flow updates.
 
 Flow integration errors typically occur when:
 
@@ -218,8 +218,8 @@ This error occurs when the app's flow metadata expects a specific connection ref
 
 Reset the Power Automate flows in the app:
 
-1. In the source environment, edit the app. [Remove](/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow) and then [readd](/power-apps/maker/canvas-apps/working-with-flows#add-an-existing-flow) the Power Automate flows to the app. Save and publish the changes.
-2. In the target environment, remove all unmanaged solution layers from the app and Power Automate flow.
+1. In the source environment, edit the app. [Remove](/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow) and then [readd](/power-apps/maker/canvas-apps/working-with-flows#add-an-existing-flow) the flows to the app. Save and publish the changes.
+2. In the target environment, [remove all unmanaged solution layers](/power-apps/maker/data-platform/solution-layers#remove-an-unmanaged-layer) from the app and flow.
 3. Export the solution and import it into the target environment.
 
    > [!NOTE]
