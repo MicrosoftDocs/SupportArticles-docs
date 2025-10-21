@@ -1,6 +1,6 @@
 ---
 title: AKS agent installation/uninstallation not available
-description: Resolve the issue in which the installation or uninstallation option isn't available .
+description: Resolve the issue in which the installation or uninstallation option isn't available.
 author: agrimayadav
 ms.author: jarrettr 
 ms.service: partner-services 
