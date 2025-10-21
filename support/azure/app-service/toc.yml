@@ -23,65 +23,66 @@ items:
           href: temporary-storage-for-azure-app-service.md
       - name: Configuration and management
         items:
-
-
+        - name: Create or delete web apps FAQs
+          href: ./create-delete-resources-faq.yml
+        - name: FAQs about scaling web apps
+          href: ./scaling-web-app-faq.yml
+        - name: Backing up, restoring, and cloning
+          href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
       - name: Networking
         items:
-
-
+        - name: Troubleshoot virtual network integration
+          href: troubleshoot-vnet-integration-apps.md
+        - name: Troubleshoot Intermittent Outbound Connection Errors
+          href: troubleshoot-intermittent-outbound-connection-errors.md
+        - name: Fix HTTP 502 and HTTP 503 Errors
+          href: troubleshoot-http-502-http-503.md  
       - name: Application code deployment
         items:
-
-
+        - name: Built-in Linux containers FAQs
+          href: faqs-app-service-linux.yml
+        - name: Deployment FAQs for Web Apps
+          href: web-apps-deployment-faqs.md
       - name: Application code
         items:
-
-
+        - name: Open-source technologies FAQs for Web Apps
+          href: web-apps-open-source-technologies-faqs.md
       - name: Questions about App Service security
         items:
-
+        - name: App service security FAQs
+          href: faqs-web-app-security.md
       - name: SSL, certificates, and domains
         items:
-
+        - name: Troubleshoot domain and TLS/SSL certificates 
+          href: ./connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates.md  
+        - name: Use Azure App Service Certificate with Azure Front Door
+          href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-azure-front-door.md
+        - name: Use Azure App Service Certificate with Application Gateway
+          href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-application-gateway.md
     - name: App Service domains
       items: 
-
-
-    - name: Troubleshoot domain and TLS/SSL certificates 
-      href: ./connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates.md  
-    - name: Use Azure App Service Certificate with Azure Front Door
-      href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-azure-front-door.md
-    - name: Use Azure App Service Certificate with Application Gateway
-      href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-application-gateway.md
-
-
-  - name: Create or delete web apps FAQs
-    href: ./create-delete-resources-faq.yml
-  - name: App service security FAQs
-    href: faqs-web-app-security.md
-
-  - name: Backing up, restoring, and cloning
-    href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
-  - name: Built-in Linux containers FAQs
-    href: faqs-app-service-linux.yml
-  - name: Deployment FAQs for Web Apps
-    href: web-apps-deployment-faqs.md
-  - name: FAQs about scaling web apps
-    href: ./scaling-web-app-faq.yml
-  - name: Fix HTTP 502 and HTTP 503 Errors
-    href: troubleshoot-http-502-http-503.md  
-  - name: Set up an existing custom domain
-    href: /azure/app-service/app-service-web-tutorial-custom-domain
-
-  - name: Open-source technologies FAQs for Web Apps
-    href: web-apps-open-source-technologies-faqs.md
+      - name: Unable to configure custom domains on an app
+        items:
+        - name: Set up an existing custom domain
+          href: /azure/app-service/app-service-web-tutorial-custom-domain
 
 
 
-  - name: Troubleshoot virtual network integration
-    href: troubleshoot-vnet-integration-apps.md
 
-  - name: Troubleshoot Intermittent Outbound Connection Errors
-    href: troubleshoot-intermittent-outbound-connection-errors.md
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
 
     
