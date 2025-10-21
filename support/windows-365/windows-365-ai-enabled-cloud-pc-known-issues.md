@@ -14,7 +14,7 @@ appliesto:
 
 # AI-enabled Cloud PC known issues
 
-If your Cloud PC isn't working properly, review the following topics to see if your issue is documented. If this list doesn't address your issue, see [Report an issue that's not on the Known issues list](#report-an-issue-thats-not-on-the-known-issues-list).
+If your Cloud PC isn't working correctly, review the following topics to learn whether your issue is documented. If this list doesn't address your issue, see [Report an issue that's not on the Known issues list](#report-an-issue-thats-not-on-the-known-issues-list).
 
 ## AI-enabled status activation time
 
@@ -38,7 +38,7 @@ While you use Click to Do, or after you dismiss the Click to Do feature, your Cl
 
 To restore the cursor's responsiveness, restart your Cloud PC.
 
-## Semantic Search results fail to appear in the Windows search "All" tab
+## Semantic Search results don't appear in the Windows search "All" tab
 
 Search results might take time to load in the **All** tab of the Windows search box.
 
@@ -48,11 +48,11 @@ If search results don't appear on your first search attempt, repeat the search. 
 
 If Semantic File Search isn't working, make sure that the Cloud PC doesn't use nested virtualization.
 
-To check this setting, and disable it if needed, follow these steps.
+To check this setting, and disable it if it's necessary, follow these steps:
 
-1. Press **Windows**+**R**, and then enter **control panel**.
+1. Press Windows logo key+R, and then enter **control panel**.
 
-1. In the Control Panel's search bar, enter **Turn Windows features on or off**.
+1. In the Control Panel search bar, enter **Turn Windows features on or off**.
 
 1. Make sure that the following features aren't selected. If any of them are selected, clear their checkboxes.
 
