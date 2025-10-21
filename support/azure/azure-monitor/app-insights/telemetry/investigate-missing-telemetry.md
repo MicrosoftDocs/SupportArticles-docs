@@ -4,7 +4,7 @@ description: Describes how to test connectivity and telemetry ingestion by using
 ms.date: 07/07/2025
 author: JarrettRenshaw
 ms.author: jarrettr
-ms.reviewer: aaronmax, toddfous, v-weizhu, matthofa, v-nawrothkai
+ms.reviewer: aaronmax, toddfous, v-weizhu, matthofa, v-nawrothkai, v-ryanberg, v-gsitser
 ms.service: azure-monitor
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
 #Customer intent: As an Application Insights user I want to know where in the processing pipeline telemetry goes missing so I know where to troubleshoot.
@@ -314,13 +314,13 @@ Identify exceptions in the SDK logs or network errors from Azure Identity.
 
 This error means that the SDK uses credentials without permission for the Application Insights resource or subscription.
 
-Check the access control for the Application Insights resource. You must configure the SDK by using credentials that have the Monitoring Metrics Publisher role.
+Check the access control for the Application Insights resource. You must ensure the identity used by the SDK has been assigned the Monitoring Metrics Publisher role.
 
 ### Language-specific troubleshooting
 
 ### [.NET](#tab/net)
 
-#### Event source
+#### Enable error logs
 
 The Application Insights .NET SDK emits error logs by using the event source. To learn more about collecting event source logs, see [Troubleshooting no data - collect logs with PerfView](asp-net-troubleshoot-no-data.md#collect-logs-with-perfview).
 
@@ -369,7 +369,7 @@ This exception means that the agent didn't acquire the access token. The likely 
 
 You might see the following message in the log:
 
-. `WARN c.m.a.TelemetryChannel - Failed to send telemetry with status code: 403, please check your credentials`
+`WARN c.m.a.TelemetryChannel - Failed to send telemetry with status code: 403, please check your credentials`
 
 This message means that the agent can't send telemetry. The likely reason is that the credentials that are used don't allow telemetry ingestion.
 
@@ -389,7 +389,7 @@ You might see the following exception in the log:
 
 > `com.microsoft.aad.msal4j.MsalServiceException: Application with identifier <CLIENT_ID> was not found in the directory`
 
-This means that the agent didn't get the access token. This exception likely occurs because the client ID in your client secret configuration is invalid or incorrect.
+This means that the agent didn't get the access token. This exception likely occurs because the client ID in your client secret configuration is invalid or incorrect or failed to generate the token by using the wrong credentials.
 
 This issue occurs if the admin doesn't install the application or if no tenant user consents to it. It occurs also if you send your authentication request to the wrong tenant.
 
