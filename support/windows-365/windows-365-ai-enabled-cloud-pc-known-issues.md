@@ -67,15 +67,3 @@ To check this setting, and disable it if needed, follow these steps.
    - Hyper-V Services
 
 1. To apply the changes, select **OK**, and then restart your Cloud PC.
-
-## Report an issue that's not on the Known issues list
-
-For additional assistance, or if your issue isn't addressed in the known issues list, contact to your Private Preview representative and provide your device ID.
-
-To find your device ID, follow these steps:
-
-1. To open the Feedback Hub app, press **Windows**+**F**.
-1. In the lower left corner of the app, select **Settings**.
-1. Under **Device Information**, as shown in the following figure, review the string of characters that starts with the letter "g."
-
-   :::image type="content" source="./media/windows-365-ai-enabled-cloud-pc-known-issues/support-request-device-id-location.png" alt-text="Screenshot that shows the Settings page of Feedback Hub, and highlights the location of the Device ID.":::
