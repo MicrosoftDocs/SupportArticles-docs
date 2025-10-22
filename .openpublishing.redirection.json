@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/azure/virtual-machines/windows/performance-diagnostics.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics?tabs=windows",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/windows-tss/gather-information-using-tss-hyper-v-issues.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios",
       "redirect_document_id": false
