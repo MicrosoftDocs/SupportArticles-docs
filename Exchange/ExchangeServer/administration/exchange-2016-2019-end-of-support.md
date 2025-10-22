@@ -101,7 +101,7 @@ In any case, if you keep Exchange on-premises, you should upgrade your Exchange 
 For the best experience, we recommend that you upgrade your remaining on-premises environment to Exchange Server SE.
 
 - Your Exchange 2019 servers can be directly upgraded to Exchange SE "in place." Exchange SE is a cumulative upgrade to Exchange 2019. See [Why "in-place upgrade" from Exchange 2019 to Exchange SE is low risk](https://techcommunity.microsoft.com/blog/exchange/why-%E2%80%9Cin-place-upgrade%E2%80%9D-from-exchange-2019-to-exchange-se-is-low-risk/4410173).
-- Before Exchange SE CU2 is released, you can join an Exchange SE server to your mixed Exchange 2016 or 2019 organization and upgrade or migrate that way.
+- Before Exchange SE CU2 releases, you can join an Exchange SE server to your Exchange 2016 servers or mixed 2016/2019 organization and upgrade or migrate that way.
 
 The following article contains the details related to exact migration paths for your on-premises servers to Exchange SE: [Upgrading your organization from current versions to Exchange Server SE](https://techcommunity.microsoft.com/blog/exchange/upgrading-your-organization-from-current-versions-to-exchange-server-se/4241305).
 
