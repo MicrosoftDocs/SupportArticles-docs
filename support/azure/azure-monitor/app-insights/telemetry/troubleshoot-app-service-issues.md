@@ -203,9 +203,7 @@ If you're missing telemetry, follow these steps to confirm that autoinstrumentat
 
 ---
 
-## Language-specific troubleshooting
-
-### Default website deployed with web apps doesn't support automatic client-side monitoring
+## Default website deployed with web apps doesn't support automatic client-side monitoring
 
 ### [ASP.NET](#tab/net-1)
 
@@ -221,7 +219,7 @@ If you want to test out codeless server and client-side monitoring for ASP.NET C
 
 ---
 
-### APPINSIGHTS_JAVASCRIPT_ENABLED and urlCompression not supported
+## APPINSIGHTS_JAVASCRIPT_ENABLED and urlCompression not supported
 
 ### [ASP.NET](#tab/net-1)
 
@@ -248,7 +246,7 @@ The following table provides an explanation of what these values mean, their und
 
 ---
 
-### PHP and WordPress aren't supported
+## PHP and WordPress aren't supported
 
 ### [ASP.NET](#tab/net-1)
 
@@ -278,7 +276,7 @@ The following table provides an explanation of what these values mean, their und
 
 ---
 
-### System.IO.FileNotFoundException after 2.8.44 upgrade
+## System.IO.FileNotFoundException after 2.8.44 upgrade
 
 ### [ASP.NET](#tab/net-2)
 
@@ -297,7 +295,7 @@ As a temporary workaround, you could set the app setting `ApplicationInsightsAge
 
 ---
 
-### Duplicate telemetry
+## Duplicate telemetry
 
 ### [Python](#tab/python-3)
 
@@ -309,7 +307,7 @@ If you're seeing unexpected charges or high costs in Application Insights, this 
 
 ---
 
-### Django apps
+## Django apps
 
 ### [Python](#tab/python-3)
 
