@@ -44,8 +44,9 @@ Although your installation of Exchange Server 2016 or 2019 continues to run, we 
 
 Upgrade your on-premises servers from Exchange Server 2016 or 2019 to Exchange Server SE. It's a great time to explore your options and prepare a migration plan. You can:
 
-- Migrate to Microsoft 365. Migrate mailboxes, public folders, and other data using cutover, minimal hybrid, or full hybrid migration. Then, remove on-premises Exchange servers and Active Directory.
-- Upgrade to a newer version of Exchange Server.
+- Migrate to Microsoft 365. Migrate mailboxes, public folders, and other data using cutover, minimal hybrid, or full hybrid migration. Then, remove on-premises Exchange servers and Active Directory. For more information, see [How and when to decommission your on-premises Exchange servers in a hybrid deployment](/exchange/decommission-on-premises-exchange).
+
+- Upgrade to a newer version of Exchange Server without transferring the source of authority to Microsoft 365. For more information, see [Manage recipients in Exchange Hybrid environments using Management tools](/exchange/manage-hybrid-exchange-recipients-with-management-tools).
 
 > [!IMPORTANT]
 > If your organization chooses to migrate mailboxes to Microsoft 365 but plans to keep using Microsoft Entra Connect to manage user accounts in Active Directory, you need to keep at least one Microsoft Exchange Server. If you remove all Exchange servers, you can't make changes to Exchange recipients in Exchange Online because the source of authority is your on-premises Active Directory. In this scenario, you have the following options:
