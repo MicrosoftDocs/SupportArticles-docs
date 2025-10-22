@@ -1,28 +1,28 @@
 ---
 title: Troubleshoot Commerce Data Exchange (CDX)
-description: Learn how to troubleshoot errors for Commerce Data Exchange (CDX) in Microsoft Dynamics 365 Commerce environments.
-author: johnmichalak
-ms.author: johnmichalak
-ms.topic: troubleshooting
+description: Learn how to troubleshoot common errors for Commerce Data Exchange (CDX) in Microsoft Dynamics 365 Commerce environments.
+ms.reviewer: johnmichalak, v-shaywood
+ms.custom: sap:Payments
 ms.date: 10/16/2025
 ---
+
 # Troubleshoot Commerce Data Exchange (CDX)
 
-This article explains how to troubleshoot errors for Commerce Data Exchange (CDX) in Microsoft Dynamics 365 Commerce environments.
+This article explains how to troubleshoot errors for Commerce Data Exchange (CDX) in Microsoft Dynamics 365 Commerce environments. CDX is a system that transfers data between Headquarters and channels, such as online stores or brick-and-mortar stores. Data distribution is asynchronous. In other words, the process of gathering and packaging data at the source occurs separately from the process of receiving and applying data at the destination. For some scenarios, such as price and inventory lookups, data must be retrieved in real time. To support these scenarios, Commerce Data Exchange also includes a service that enables real-time communication between Headquarters and a channel.
 
 ## Issue 1: Error due to batch statuses
 
 ### Symptoms
 
-You receive the following error message: 
+You receive the following error message:
 
-`System.ArgumentNullException: Value cannot be null. Parameter name: connectionString at Microsoft.Dynamics.Retail.CommerceDataExchange.SqlTargetRequestHandler.`
+> System.ArgumentNullException: Value cannot be null. Parameter name: connectionString at Microsoft.Dynamics.Retail.CommerceDataExchange.SqlTargetRequestHandler.
 
-#### Root cause
+### Cause
 
 An error has occurred because of batch job statuses. You can view the error in a failed download job on the **Download sessions** page.
 
-### Resolution
+### Solution
 
 In Dynamics 365 Commerce headquarters, go to **System administration** \> **Inquiries** \> **Batch jobs**, find the data writing batch associated with the Commerce Scale Unit to which the download job is supposed to be applied, and change the batch job's status to **Withhold**.
 
@@ -32,11 +32,11 @@ In Dynamics 365 Commerce headquarters, go to **System administration** \> **Inqu
 
 You can't perform the **Run now** command from the **Distribution schedule** page unless batch processing is used.
 
-#### Root cause
+### Cause
 
 This change was intentionally made in Commerce version 10.0.11 because of performance issues that occur if jobs are run during times when environments are most heavily used. In another change that was made as part of this feature enhancement, recurrence can't be used when the **Full data sync** (full job synchronization) command is run from the **Channel database** page in Commerce headquarters. Only a single occurrence can be run.
 
-### Resolution
+### Solution
 
 Microsoft doesn't recommend that you change this behavior. However, if you're in a development environment, you can change it in Commerce headquarters by going to **Commerce shared parameters** \> **Configuration parameters** and setting a new name, CDX_DISABLE_FORCESCHEDULEINBATCH, that has a value of 1.
 
@@ -44,17 +44,17 @@ Microsoft doesn't recommend that you change this behavior. However, if you're in
 
 ### Symptoms
 
-You receive the following error message: 
+You receive the following error message:
 
-`Microsoft.Dynamics.Retail.CommerceDataExchange.SqlWriteRequestRunException: Failed to run SqlWriteRequestRunner for table AX.\<TABLE NAME\>.`
+> Microsoft.Dynamics.Retail.CommerceDataExchange.SqlWriteRequestRunException: Failed to run SqlWriteRequestRunner for table AX.\<TABLE NAME\>.
 
-#### Root cause
+### Cause
 
 An error has occurred because the length of one or more DBO tables has been extended, so that truncation of data is required. Therefore, a truncation failure has occurred. 
 
-### Resolution
+### Solution
 
-Generate a Microsoft Support request. 
+Generate a Microsoft Support request.
 
 For information on best practices, see [Enable custom Commerce Data Exchange synchronization via extension](/dynamics365/commerce/dev-itpro/cdx-extensibility). These best practices include removing the extended data type (EDT) extension on the table field that's being edited and using the CDX extension table to store the long (full) value that's required.
 
@@ -64,7 +64,7 @@ For information on best practices, see [Enable custom Commerce Data Exchange syn
 
 The download session fails, and the error message states "...tried too many times."
 
-### Resolution
+### Solution
 
 In Commerce headquarters, go to **Retail and Commerce** \> **Headquarters setup** \> **Parameters** \> **Commerce scheduler parameters** and set the **Try count** field to **3**. If the value of this field is too high, download sessions might fail during high-usage times. After you complete this step, the job sets its status to **Canceled** and stops retrying itself. Learn more at [Commerce Data Exchange best practices](/dynamics365/commerce/dev-itpro/cdx-best-practices).
 
@@ -74,9 +74,9 @@ In Commerce headquarters, go to **Retail and Commerce** \> **Headquarters setup*
 
 You can't cancel a running CDX job.
 
-### Resolution
+### Solution
 
-- If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)[(https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
 - If the issue occurs in a nonproduction environment, create a Microsoft Support request.
 
 ## Issue 6: Slow download sessions after adding multiple POS terminals
@@ -85,11 +85,11 @@ You can't cancel a running CDX job.
 
 After you add multiple POS terminals, download sessions take a long time, or you experience overall slowness in Commerce headquarters.
 
-#### Root cause
+### Cause
 
 When you create a new Store Commerce app offline database and add it to the relevant channel database group, it inherits all existing download sessions since the last full database synchronization occurred. Even under normal conditions, the exceptional data generation that might occur can be too large and affect performance. At the busiest times, it can severely impair the environment's performance.
 
-### Resolution
+### Solution
 
 Microsoft recommends that you have either:
 
@@ -102,36 +102,36 @@ Microsoft recommends that you have either:
 
 Normal, incremental (delta) data synchronization takes too long, even though the number of affected rows is small.
 
-#### Root cause
+### Cause
 
 This issue can occur when a new channel (store) is created, because all the data must be recreated for the new store.
 
-### Resolution
+### Solution
 
 Microsoft recommends that you have a "dummy" channel database that's associated with a "dummy" channel database group, and that you assign it to the newly generated channel (store). In this way, data generation can occur when required and the system is most available to do it. If it's too late to use this approach, create a Microsoft Support request.
 
-## Issue 8: P-job error due to violation of primary key restraint 
+## Issue 8: P-job error due to violation of primary key restraint
 
 ### Symptoms
 
-The P-job fails to create an upload session, and you receive the following error message: 
+The P-job fails to create an upload session, and you receive the following error message:
 
-`System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK\_UPLOADSESSION'. Cannot insert duplicate key in object 'crt.UPLOADSESSION'.`
+> System.Data.SqlClient.SqlException (0x80131904): Violation of PRIMARY KEY constraint 'PK\_UPLOADSESSION'. Cannot insert duplicate key in object 'crt.UPLOADSESSION'.
 
-### Resolution
+### Solution
 
-- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)[(https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
 - If the issue occurs in a nonproduction environment, create a Microsoft Support request.
 
 ## Issue 9: Session package download error due to record not found
 
 ### Symptoms
 
-When you try to download an upload session package from the **Upload sessions** page in Commerce headquarters, you receive the following error message: 
+When you try to download an upload session package from the **Upload sessions** page in Commerce headquarters, you receive the following error message:
 
-`Record for Id - \<Number\> not found.`
+> Record for Id - \<Number\> not found.
 
-### Resolution
+### Solution
 
 Create a Microsoft Support request.
 
@@ -139,13 +139,13 @@ Create a Microsoft Support request.
 
 ### Symptoms
 
-CDX download sessions fail to be applied, and you receive the following error message: 
+CDX download sessions fail to be applied, and you receive the following error message:
 
-`Failed to get download session package URI.`
+> Failed to get download session package URI.
 
-### Resolution
+### Solution
 
-- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)[(https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
 - If the issue occurs in a nonproduction environment, create a Microsoft Support request.
 
 ## Issue 11: No download sessions are applied, and no upload sessions are created
@@ -154,26 +154,26 @@ CDX download sessions fail to be applied, and you receive the following error me
 
 No download sessions are applied, and no upload sessions are created.
 
-### Resolution
+### Solution
 
-- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)[(https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
 - If the issue occurs in a nonproduction environment, create a Microsoft Support request.
 
 ## Issue 12: Upload sessions error due to multiple records in the RetailListingStatusLog table
 
 ### Symptoms
 
-Upload sessions fail, and you receive the following error message: 
+Upload sessions fail, and you receive the following error message:
 
-`Infolog for task Default:P-0001 (...) Error when bulk inserting data. Target table: RetailListingStatusLog.`
+> Infolog for task Default:P-0001 (...) Error when bulk inserting data. Target table: RetailListingStatusLog.
 
-#### Root cause
+### Cause
 
 An error has occurred because the upload session package contains multiple records in the **RetailListingStatusLog** table. These records have the same **StatusDateTime** value between two or more records.
 
-### Resolution
+### Solution
 
-- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)[(https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
 - If the issue occurs in a nonproduction environment, create a Microsoft Support request.
 
 ## Issue 13: Failure during switch to offline mode
@@ -182,39 +182,25 @@ An error has occurred because the upload session package contains multiple recor
 
 When a cashier tries to switch to offline mode or is forced offline, the switch fails.
 
-#### Root cause
+### Cause
 
 There are many possible causes for the failure. First, verify basic information: Does the computer have available hard drive space? If you're using SQL Server Express, is the size of the offline database at the 10 gigabytes (GB) limit? Are there pending download sessions for the register? Pending download sessions indicate that the register is no longer up to date. Therefore, offline switching might temporarily be prevented.
 
-### Resolution
+### Solution
 
 Microsoft recommends that you contact Microsoft Support.
 
-- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)[(https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
 - If the issue occurs in a nonproduction environment, create a Microsoft Support request.
 
-## More information
+## Related content
 
-[Commerce Data Exchange best practices](/dynamics365/commerce/dev-itpro/cdx-best-practices)
-
-[Commerce Data Exchange implementation guidance](/dynamics365/commerce/dev-itpro/implementation-considerations-cdx)
-
-[Commerce offline implementation considerations](/dynamics365/commerce/dev-itpro/implementation-considerations-offline)
-
-[Commerce Data Exchange troubleshooting](/dynamics365/commerce/dev-itpro/cdx-troubleshooting)
-
-[Dynamics 365 Commerce architecture overview](/dynamics365/commerce/commerce-architecture)
-
-[Select an in-store topology](/dynamics365/commerce/dev-itpro/retail-in-store-topology)
-
-[Device management implementation guidance](/dynamics365/commerce/implementation-considerations-devices)
-
-[Configure, install, and activate Modern POS (MPOS)](/dynamics365/commerce/retail-modern-pos-device-activation)
-
-[Configure and install Commerce Scale Unit (self-hosted)](/dynamics365/commerce/dev-itpro/retail-store-scale-unit-configuration-installation)
-
-
-
-
-
-
+- [Commerce Data Exchange best practices](/dynamics365/commerce/dev-itpro/cdx-best-practices)
+- [Commerce Data Exchange implementation guidance](/dynamics365/commerce/dev-itpro/implementation-considerations-cdx)
+- [Commerce offline implementation considerations](/dynamics365/commerce/dev-itpro/implementation-considerations-offline)
+- [Commerce Data Exchange troubleshooting](/dynamics365/commerce/dev-itpro/cdx-troubleshooting)
+- [Dynamics 365 Commerce architecture overview](/dynamics365/commerce/commerce-architecture)
+- [Select an in-store topology](/dynamics365/commerce/dev-itpro/retail-in-store-topology)
+- [Device management implementation guidance](/dynamics365/commerce/implementation-considerations-devices)
+- [Configure, install, and activate Modern POS (MPOS)](/dynamics365/commerce/retail-modern-pos-device-activation)
+- [Configure and install Commerce Scale Unit (self-hosted)](/dynamics365/commerce/dev-itpro/retail-store-scale-unit-configuration-installation)
