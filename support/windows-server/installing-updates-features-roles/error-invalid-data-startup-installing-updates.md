@@ -40,7 +40,7 @@ You might encounter entries in the Component-Based Servicing (CBS) log file (usu
 20xx-xx-06 xx:51:15, Info CBS Failed to verify manifest against catalog, mark store as corrupt. [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
 20xx-xx-06 xx:51:15, Info CBS Failed to begin deployment installation for Update: 4584642-1_neutral [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
 ```
-In this case, the error happens because the system can't verify if catalog file C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat is valid, which means the package is likely corrupt. See [Mitigation 1: File and Registry Corruption](#mitigation-1-file-and-registry-corruption) for more details.
+In this case, the error happens because the system can't verify if catalog file C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat is valid, which means the package is likely corrupt. See [Resolution or troubleshooting steps](#resolution-or-troubleshooting-steps) for more details.
 
 ### Symptom 2: Registry errors
 
@@ -56,7 +56,7 @@ Another symptom may involve registry errors. From the CBS log file, you might se
 20xx-xx-24 05:13:10, Info CBS Failed to find or add the component family [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
 ```
 
-This indicates registry issues. See [Mitigation 1: File and Registry Corruption](#mitigation-1-file-and-registry-corruption) for more details.
+This indicates registry issues. See [Resolution or troubleshooting steps](#resolution-or-troubleshooting-steps) for more details.
 
 ### Symptom 3: Driver update failure
 
