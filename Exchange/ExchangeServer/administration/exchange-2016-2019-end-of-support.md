@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server Subscription Edition
   - Microsoft 365 Enterprise
   - Office 365 Enterprise
-ms.reviewer: Nino Bilic, v-kccross
+ms.reviewer: ninob, johage, v-kccross
 search.appverid: MET150
 ms.date: 10/21/2025
 ---
