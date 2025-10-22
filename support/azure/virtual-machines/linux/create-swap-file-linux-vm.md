@@ -1,13 +1,13 @@
 ---
 title: Create a SWAP file for an Azure Linux VM
 description: Describes how to create a SWAP file for an Azure Linux VM.
-ms.date: 09/15/2025
+ms.date: 10/22/2025
 ms.service: azure-virtual-machines
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
+ms.custom: sap:Assistance with disk operations, linux-related-content
 ms.collection: linux
-ms.author: mabicca
-author: mabicca
-ms.reviewer: v-weizhu
+ms.author: jarrettr
+author: JarrettRenshaw
+ms.reviewer: mabicca
 ---
 
 # Create a SWAP partition for an Azure Linux VM
