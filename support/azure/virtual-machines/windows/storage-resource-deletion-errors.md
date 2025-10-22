@@ -2,9 +2,11 @@
 title: Troubleshoot storage resource deletion errors on Azure VMs
 description: Learn how to troubleshoot problems on VMs when deleting storage resources containing attached VHDs.
 tags: top-support-issue,azure-service-management,azure-resource-manager
-ms.custom: sap:VM Admin - Windows (Guest OS)
+ms.custom: sap:Assistance with disk operations
 ms.service: azure-virtual-machines
-ms.date: 07/16/2024
+ms.date: 10/22/2025
+ms.author: jarrettr
+ms.revieweer: scotro
 ---
 # Troubleshoot storage resource deletion errors
 
