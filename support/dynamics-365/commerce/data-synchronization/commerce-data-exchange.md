@@ -55,19 +55,19 @@ You receive the following error message:
 
 ### Cause
 
-This error occurs because the length of one or more DBO tables has been extended, meaning that truncation of data is now required. This scenario causes a truncation failure to occur.
+This error occurs when the length of one or more DBO tables is extended, causing data truncation to be required. In this scenario, a truncation failure occurs.
 
 ### Solution
 
 Create a Microsoft Support request.
 
-For information on best practices, see [Enable custom Commerce Data Exchange synchronization via extension](/dynamics365/commerce/dev-itpro/cdx-extensibility). These best practices include removing the extended data type (EDT) extension on the table field that you're editing and using the CDX extension table to store the long (full) value that's required.
+For information on best practices, see [Enable custom Commerce Data Exchange synchronization via extension](/dynamics365/commerce/dev-itpro/cdx-extensibility). These best practices include removing the extended data type (EDT) extension on the table field you're editing. Instead, use the CDX extension table to store the long (full) value required.
 
 ## Issue 4: Error due to download session failure
 
 ### Symptoms
 
-The download session fails and return an error message that includes:
+The download session fails and returns an error message that includes:
 
 > ...tried too many times.
 
@@ -99,14 +99,14 @@ After you add multiple POS terminals, download sessions take a long time, or you
 
 ### Cause
 
-When you create a new Store Commerce app offline database and add it to the relevant channel database group, it inherits all existing download sessions since the last full database synchronization occurred. Even under normal conditions, the significant data generation that might occur can be too large and affect performance. At the busiest times, this can severely impair the environment's performance.
+When you create a new Store Commerce app offline database, and add it to the relevant channel database group. The database inherits all existing download sessions since the last full database synchronization occurred. Even under normal conditions, the significant data generation that might occur can be too large and affect performance. At the busiest times, this process can severely impair the environment's performance.
 
 ### Solution
 
 Use one of the following options:
 
 - A "dummy" channel database group (that is, a group that isn't associated with any distribution schedule job) that you assign to the newly generated terminals.
-- A special offline profile where the **Pause offline synchronization** option is set to **Yes**. With this option, data generation can occur when it's required and when the system is most available to do it. However, the system might pause multiple times as required. If it's too late to use this approach, create a Microsoft Support request.
+- A special offline profile where the **Pause offline synchronization** option is set to **Yes**. With this option, data generation can occur when required and the system is most available to do it. However, the system might pause multiple times as required. If it's too late to use this approach, create a Microsoft Support request.
 
 ## Issue 7: Incremental (delta) data synchronization takes too long
 
@@ -120,7 +120,7 @@ This issue can occur when you create a new channel (store), because the system m
 
 ### Solution
 
-Use a "dummy" channel database that's associated with a "dummy" channel database group, and assign it to the newly generated channel (store). Using this configuration, data generation can occur when required and the system is most available to do it. If it's too late to use this approach, create a Microsoft Support request.
+Use a "dummy" channel database associated with a "dummy" channel database group, and assign it to the newly generated channel (store). With this configuration, data generation can occur when required and the system is most available to do it. If it's too late to use this approach, create a Microsoft Support request.
 
 ## Issue 8: P-job error due to violation of primary key restraint
 
@@ -175,7 +175,7 @@ No download sessions are applied, and no upload sessions are created.
 
 ### Symptoms
 
-An upload sessions fail and returns the following error message:
+An upload session fails and returns the following error message:
 
 > Infolog for task Default:P-0001 (...) Error when bulk inserting data. Target table: RetailListingStatusLog.
 
@@ -198,9 +198,9 @@ When a cashier tries to switch to offline mode, or is forced offline, the switch
 
 Many possible causes exist for the failure:
 
-1. Not enough available hard drive space on the register.
-1. You're using SQL Server Express and the database file has reached its 10-gigabyte (GB) size limit.
-1. Pending download session for the register.
+1. The register doesn't have enough available hard drive space.
+1. You're using SQL Server Express and the database file reaches its 10-gigabyte (GB) size limit.
+1. The register has pending download sessions.
    1. Pending download sessions indicate that the register isn't up to date. Therefore, offline switching might temporarily be prevented
 
 ### Solution
