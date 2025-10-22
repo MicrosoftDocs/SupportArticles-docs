@@ -18,9 +18,9 @@ After you install or upgrade Microsoft SQL Server on Windows Server 2025 or 2022
 2025-10-02 08:24:32.26 Server      Error: 17156, Severity: 16, State: 1.
 2025-10-02 08:24:32.26 Server      initeventlog: Could not initiate the EventLog Service for the key 'MSSQL$SQL2022',  or last error code is 5.
 2025-10-02 08:24:32.26 Server      Microsoft SQL Server 2022 (RTM-CU21) (KB5065865) - 16.0.4215.2 (X64)
-                                                       Aug 11 2025 13:24:21
-                                                       Copyright (C) 2022 Microsoft Corporation
-Developer Edition (64-bit) on Windows Server 2025 Datacenter 10.0 <X64> (Build 26100: ) (Hypervisor)
+                                   Aug 11 2025 13:24:21
+                                   Copyright (C) 2022 Microsoft Corporation
+                                   Developer Edition (64-bit) on Windows Server 2025 Datacenter 10.0 <X64> (Build 26100: ) (Hypervisor)
 ```
 
 ## Cause
