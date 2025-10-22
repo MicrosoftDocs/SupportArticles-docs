@@ -7,6 +7,7 @@ ms.custom: linux-related-content
 author: hepiet
 ms.author: hepiet
 ms.reviewer: jugonza
+ms.custom: sap:Networking
 ---
 # Troubleshoot virtual network integration with Azure App Service
 

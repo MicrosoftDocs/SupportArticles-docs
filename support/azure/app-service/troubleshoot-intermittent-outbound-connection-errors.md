@@ -9,6 +9,7 @@ author: msangapu-msft
 manager: dcscontentpm
 ms.reviewer: v-ryanberg
 ms.service: azure-app-service
+ms.custom: sap:Networking
 ---
 
 # Troubleshoot intermittent outbound connection errors in Azure App Service

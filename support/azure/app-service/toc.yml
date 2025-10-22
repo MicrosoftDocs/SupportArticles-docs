@@ -53,12 +53,12 @@ items:
           href: faqs-web-app-security.md
       - name: SSL, certificates, and domains
         items:
-        - name: Troubleshoot domain and TLS/SSL certificates 
-          href: ./connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates.md  
         - name: Use Azure App Service Certificate with Azure Front Door
           href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-azure-front-door.md
         - name: Use Azure App Service Certificate with Application Gateway
           href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-application-gateway.md
+        - name: Troubleshoot domain and TLS/SSL certificates 
+          href: ./connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates.md  
     - name: App Service domains
       items: 
       - name: Unable to configure custom domains on an app
