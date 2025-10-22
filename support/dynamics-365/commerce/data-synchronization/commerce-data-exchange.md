@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Commerce Data Exchange (CDX)
-description: Learn how to troubleshoot common errors for Commerce Data Exchange (CDX) in Microsoft Dynamics 365 Commerce environments.
+description: Troubleshoot common Commerce Data Exchange (CDX) errors in Dynamics 365 Commerce. Learn how to resolve issues like batch job failures and download session errors.
 ms.reviewer: johnmichalak, v-shaywood
 ms.custom: sap:Payments
 ms.date: 10/16/2025
@@ -20,11 +20,13 @@ You receive the following error message:
 
 ### Cause
 
-An error has occurred because of batch job statuses. You can view the error in a failed download job on the **Download sessions** page.
+This error occurs because of batch job statuses. You can view the error in a failed download job on the **Download sessions** page.
 
 ### Solution
 
-In Dynamics 365 Commerce headquarters, go to **System administration** \> **Inquiries** \> **Batch jobs**, find the data writing batch associated with the Commerce Scale Unit to which the download job is supposed to be applied, and change the batch job's status to **Withhold**.
+1. In Dynamics 365 Commerce headquarters, go to **System administration** \> **Inquiries** \> **Batch jobs**.
+1. Find the data writing batch associated with the Commerce Scale Unit to which the download job is supposed to be applied.
+1. Change the batch job's status to **Withhold**.
 
 ## Issue 2: Can't execute Run now command from Distribution schedule page unless batch processing is used
 
@@ -34,11 +36,14 @@ You can't perform the **Run now** command from the **Distribution schedule** pag
 
 ### Cause
 
-This change was intentionally made in Commerce version 10.0.11 because of performance issues that occur if jobs are run during times when environments are most heavily used. In another change that was made as part of this feature enhancement, recurrence can't be used when the **Full data sync** (full job synchronization) command is run from the **Channel database** page in Commerce headquarters. Only a single occurrence can be run.
+This change was intentionally made in Commerce version 10.0.11 because of performance issues that occur if jobs run during times when environments are most heavily used. Also, as part of this feature enhancement, recurrence can't be used when the **Full data sync** (full job synchronization) command is run from the **Channel database** page in Commerce headquarters. You can only run a single occurrence.
 
 ### Solution
 
-Microsoft doesn't recommend that you change this behavior. However, if you're in a development environment, you can change it in Commerce headquarters by going to **Commerce shared parameters** \> **Configuration parameters** and setting a new name, CDX_DISABLE_FORCESCHEDULEINBATCH, that has a value of 1.
+Microsoft doesn't recommend that you change this behavior. However, if you're in a development environment, you can change it in Commerce headquarters by:
+
+1. Go to **Commerce shared parameters** \> **Configuration parameters**
+1. Set a new parameter with a name of `CDX_DISABLE_FORCESCHEDULEINBATCH` and a value of `1`.
 
 ## Issue 3: Error due to extended table length
 
@@ -50,23 +55,30 @@ You receive the following error message:
 
 ### Cause
 
-An error has occurred because the length of one or more DBO tables has been extended, so that truncation of data is required. Therefore, a truncation failure has occurred. 
+This error occurs because the length of one or more DBO tables has been extended, meaning that truncation of data is now required. This scenario causes a truncation failure to occur.
 
 ### Solution
 
-Generate a Microsoft Support request.
+Create a Microsoft Support request.
 
-For information on best practices, see [Enable custom Commerce Data Exchange synchronization via extension](/dynamics365/commerce/dev-itpro/cdx-extensibility). These best practices include removing the extended data type (EDT) extension on the table field that's being edited and using the CDX extension table to store the long (full) value that's required.
+For information on best practices, see [Enable custom Commerce Data Exchange synchronization via extension](/dynamics365/commerce/dev-itpro/cdx-extensibility). These best practices include removing the extended data type (EDT) extension on the table field that you're editing and using the CDX extension table to store the long (full) value that's required.
 
 ## Issue 4: Error due to download session failure
 
 ### Symptoms
 
-The download session fails, and the error message states "...tried too many times."
+The download session fails and return an error message that includes:
+
+> ...tried too many times.
 
 ### Solution
 
-In Commerce headquarters, go to **Retail and Commerce** \> **Headquarters setup** \> **Parameters** \> **Commerce scheduler parameters** and set the **Try count** field to **3**. If the value of this field is too high, download sessions might fail during high-usage times. After you complete this step, the job sets its status to **Canceled** and stops retrying itself. Learn more at [Commerce Data Exchange best practices](/dynamics365/commerce/dev-itpro/cdx-best-practices).
+1. In Commerce headquarters, go to **Retail and Commerce** \> **Headquarters setup** \> **Parameters** \> **Commerce scheduler parameters**.
+1. Set the **Try count** field to **3**.
+   1. *If you set this value too high, download sessions might fail during high-usage times.*
+1. When you update the **Try count** field, the job sets its status to **Canceled** and stops retrying itself.
+
+For more information, see [Commerce Data Exchange best practices](/dynamics365/commerce/dev-itpro/cdx-best-practices).
 
 ## Issue 5: Unable to cancel a running CDX job
 
@@ -87,14 +99,14 @@ After you add multiple POS terminals, download sessions take a long time, or you
 
 ### Cause
 
-When you create a new Store Commerce app offline database and add it to the relevant channel database group, it inherits all existing download sessions since the last full database synchronization occurred. Even under normal conditions, the exceptional data generation that might occur can be too large and affect performance. At the busiest times, it can severely impair the environment's performance.
+When you create a new Store Commerce app offline database and add it to the relevant channel database group, it inherits all existing download sessions since the last full database synchronization occurred. Even under normal conditions, the significant data generation that might occur can be too large and affect performance. At the busiest times, this can severely impair the environment's performance.
 
 ### Solution
 
-Microsoft recommends that you have either:
+Use one of the following options:
 
 - A "dummy" channel database group (that is, a group that isn't associated with any distribution schedule job) that you assign to the newly generated terminals.
-- A special offline profile where the **Pause offline synchronization** option is set to **Yes**. In this way, data generation can occur when it's required and when the system is most available to do it. However, the system might pause multiple times as required. If it's too late to use this approach, create a Microsoft Support request.
+- A special offline profile where the **Pause offline synchronization** option is set to **Yes**. With this option, data generation can occur when it's required and when the system is most available to do it. However, the system might pause multiple times as required. If it's too late to use this approach, create a Microsoft Support request.
 
 ## Issue 7: Incremental (delta) data synchronization takes too long
 
@@ -104,11 +116,11 @@ Normal, incremental (delta) data synchronization takes too long, even though the
 
 ### Cause
 
-This issue can occur when a new channel (store) is created, because all the data must be recreated for the new store.
+This issue can occur when you create a new channel (store), because the system must recreate all the data for the new store.
 
 ### Solution
 
-Microsoft recommends that you have a "dummy" channel database that's associated with a "dummy" channel database group, and that you assign it to the newly generated channel (store). In this way, data generation can occur when required and the system is most available to do it. If it's too late to use this approach, create a Microsoft Support request.
+Use a "dummy" channel database that's associated with a "dummy" channel database group, and assign it to the newly generated channel (store). Using this configuration, data generation can occur when required and the system is most available to do it. If it's too late to use this approach, create a Microsoft Support request.
 
 ## Issue 8: P-job error due to violation of primary key restraint
 
@@ -139,7 +151,7 @@ Create a Microsoft Support request.
 
 ### Symptoms
 
-CDX download sessions fail to be applied, and you receive the following error message:
+The CDX download sessions fail to be applied, and you receive the following error message:
 
 > Failed to get download session package URI.
 
@@ -163,13 +175,13 @@ No download sessions are applied, and no upload sessions are created.
 
 ### Symptoms
 
-Upload sessions fail, and you receive the following error message:
+An upload sessions fail and returns the following error message:
 
 > Infolog for task Default:P-0001 (...) Error when bulk inserting data. Target table: RetailListingStatusLog.
 
 ### Cause
 
-An error has occurred because the upload session package contains multiple records in the **RetailListingStatusLog** table. These records have the same **StatusDateTime** value between two or more records.
+An error occurs because the upload session package contains multiple records in the **RetailListingStatusLog** table. These records have the same **StatusDateTime** value between two or more records.
 
 ### Solution
 
@@ -180,15 +192,20 @@ An error has occurred because the upload session package contains multiple recor
 
 ### Symptoms
 
-When a cashier tries to switch to offline mode or is forced offline, the switch fails.
+When a cashier tries to switch to offline mode, or is forced offline, the switch fails.
 
 ### Cause
 
-There are many possible causes for the failure. First, verify basic information: Does the computer have available hard drive space? If you're using SQL Server Express, is the size of the offline database at the 10 gigabytes (GB) limit? Are there pending download sessions for the register? Pending download sessions indicate that the register is no longer up to date. Therefore, offline switching might temporarily be prevented.
+Many possible causes exist for the failure:
+
+1. Not enough available hard drive space on the register.
+1. You're using SQL Server Express and the database file has reached its 10-gigabyte (GB) size limit.
+1. Pending download session for the register.
+   1. Pending download sessions indicate that the register isn't up to date. Therefore, offline switching might temporarily be prevented
 
 ### Solution
 
-Microsoft recommends that you contact Microsoft Support.
+Contact Microsoft Support.
 
 - If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
 - If the issue occurs in a nonproduction environment, create a Microsoft Support request.
