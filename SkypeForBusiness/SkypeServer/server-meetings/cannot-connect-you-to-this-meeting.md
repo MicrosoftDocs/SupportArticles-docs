@@ -7,7 +7,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-six
+ms.author: 
 ms.custom: 
   - CSSTroubleshoot
 appliesto: 
