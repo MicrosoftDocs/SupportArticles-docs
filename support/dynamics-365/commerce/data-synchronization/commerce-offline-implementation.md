@@ -2,13 +2,13 @@
 title: Troubleshoot common Commerce offline implementation issues
 description: Learn how to resolve offline mode errors in Microsoft Dynamics 365 Commerce. Find guidance for fixing employee, channel, and database issues.
 ms.reviewer: johnmichalak, v-shaywood
-ms.custom: sap:Payments
+ms.custom: sap:Data synchronization
 ms.date: 10/15/2025
 ---
 
 # Troubleshoot Commerce offline implementation
 
-This article explains how to troubleshoot common errors for offline implementations of Microsoft Dynamics 365 Commerce. An offline implementation for a Store Commerce app for Windows allows point of sale (POS) devices to automatically switch from the channel database to the offline database if the Commerce Scale Unit becomes unavailable.
+This article explains how to troubleshoot common errors with offline implementations of Microsoft Dynamics 365 Commerce. An offline implementation for a Store Commerce app for Windows allows point of sale (POS) devices to automatically switch from the channel database to the offline database if the Commerce Scale Unit becomes unavailable.
 
 During a sales transaction, if a data request doesn't succeed within the timeout interval, the POS automatically switches to the offline database and continues the sales transaction. While the POS device is in offline mode, the Store Commerce app tries to reconnect to the Commerce Scale Unit after the reconnection attempt interval. The timeout and reconnection attempt intervals can be configured in the offline profile.
 
