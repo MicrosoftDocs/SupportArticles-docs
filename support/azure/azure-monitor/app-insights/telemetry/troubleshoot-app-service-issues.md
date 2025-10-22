@@ -9,6 +9,9 @@ ms.date: 10/21/2025
 
 This article offers general recommendations and specific suggestions to troubleshoot issues with application monitoring in [Azure App Service](/azure/azure-monitor/app/codeless-app-service).
 
+> [!NOTE]
+> Some troubleshooting steps on this page are only applicable to certain languages or frameworks, as indicated by the available tabs.
+
 ## Missing telemetry
 
 ### [ASP.NET](#tab/net)
