@@ -14,7 +14,7 @@ appliesto:
 
 # AI-enabled Cloud PC known issues
 
-If your Cloud PC isn't working correctly, review the following topics to learn whether your issue is documented. If this list doesn't address your issue, see [Report an issue that's not on the Known issues list](#report-an-issue-thats-not-on-the-known-issues-list).
+If your Cloud PC isn't working correctly, review the following topics to learn whether your issue is documented.
 
 ## AI-enabled status activation time
 
