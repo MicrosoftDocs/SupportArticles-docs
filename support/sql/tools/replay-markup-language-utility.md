@@ -24,7 +24,7 @@ The RML Utilities are a set of diagnostic tools for troubleshooting and aiding p
 For a complete description of every tool and sample usage, see the RML Help file that's included in RML Utilities for SQL Server.
 
 > [!NOTE]
-> RML Utilities have been deprecated as of October 2025. It is no longer in development and no future enhancements or fixes are to be expected.
+> RML Utilities have been deprecated as of October 2025. The product is no longer in development and no future enhancements or fixes are to be expected.
 
 ## How are RML Utilities useful?
 
