@@ -17,11 +17,8 @@ This article helps you resolve the problem in which you want to install or unins
 
 > [!note]
 >
-> Any installation or uninstallation of the extension outside the Azure Native Dynatrace experience won't be supported during key rotation.  
-
-## Prerequisites
-
-- Access to the Azure portal and the subscription that contains the resource.
+> - Any installation or uninstallation of the extension outside the Azure Native Dynatrace experience won't be supported during key rotation.  
+> - For more information about AKS releases across various regions, see [AKA release tracker](/azure/aks/release-tracker). 
 
 ## Symptoms
 
