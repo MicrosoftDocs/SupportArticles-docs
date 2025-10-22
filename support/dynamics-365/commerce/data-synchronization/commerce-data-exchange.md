@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Commerce Data Exchange (CDX)
+title: Troubleshoot common Commerce Data Exchange (CDX) issues
 description: Troubleshoot common Commerce Data Exchange (CDX) errors in Dynamics 365 Commerce. Learn how to resolve issues like batch job failures and download session errors.
 ms.reviewer: johnmichalak, v-shaywood
 ms.custom: sap:Payments
@@ -8,7 +8,7 @@ ms.date: 10/16/2025
 
 # Troubleshoot Commerce Data Exchange (CDX)
 
-This article explains how to troubleshoot errors for Commerce Data Exchange (CDX) in Microsoft Dynamics 365 Commerce environments. CDX is a system that transfers data between Headquarters and channels, such as online stores or brick-and-mortar stores. Data distribution is asynchronous. In other words, the process of gathering and packaging data at the source occurs separately from the process of receiving and applying data at the destination. For some scenarios, such as price and inventory lookups, data must be retrieved in real time. To support these scenarios, Commerce Data Exchange also includes a service that enables real-time communication between Headquarters and a channel.
+This article explains how to troubleshoot common errors for Commerce Data Exchange (CDX) in Microsoft Dynamics 365 Commerce environments. CDX is a system that transfers data between Headquarters and channels, such as online stores or brick-and-mortar stores. Data distribution is asynchronous. In other words, the process of gathering and packaging data at the source occurs separately from the process of receiving and applying data at the destination. For some scenarios, such as price and inventory lookups, data must be retrieved in real time. To support these scenarios, Commerce Data Exchange also includes a service that enables real-time communication between Headquarters and a channel.
 
 ## Issue 1: Error due to batch statuses
 
