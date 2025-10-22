@@ -23,11 +23,4 @@ landingContent:
           - text: FAQ about creating or deleting web apps
             url: ./create-delete-resources-faq.yml
 
- # Card
-  - title: Deleted Azure event hub is automatically re-created by diagnostic settings
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Resolves issues with an Azure event hub that is automatically re-created by diagnostic settings after being deleted
-            url: ../azure-monitor/diagnostic-settings/data-flow/deleted-event-hub-automatically-recreated.md
-            
+
