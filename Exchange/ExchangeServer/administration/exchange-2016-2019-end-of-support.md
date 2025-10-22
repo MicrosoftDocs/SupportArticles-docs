@@ -23,8 +23,6 @@ ms.date: 10/21/2025
 
 # Exchange Server 2016 and 2019 end of support roadmap
 
-Applies to: Exchange Server 2016, Exchange Server 2019, Exchange Server Subscription Edition, Microsoft 365 Enterprise, Office 365 Enterprise
-
 Support for Exchange Server 2016 and 2019 ended on **October 14, 2025**. If you haven't already migrated from Exchange Server 2016 or 2019 to Microsoft 365, Office 365, or Exchange Server Subscription Edition (SE), now's the time to start planning.
 
 ## What does end of support mean?
