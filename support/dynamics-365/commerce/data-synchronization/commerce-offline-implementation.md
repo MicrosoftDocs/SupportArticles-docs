@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot common Commerce offline implementation issues
-description: Learn how to troubleshoot errors for offline implementations of Microsoft Dynamics 365 Commerce.
+description: Learn how to resolve offline mode errors in Microsoft Dynamics 365 Commerce. Find guidance for fixing employee, channel, and database issues.
 ms.reviewer: johnmichalak, v-shaywood
 ms.custom: sap:Payments
 ms.date: 10/15/2025
@@ -8,9 +8,9 @@ ms.date: 10/15/2025
 
 # Troubleshoot Commerce offline implementation
 
-This article explains how to troubleshoot common errors for offline implementations of Microsoft Dynamics 365 Commerce. The offline mode for the Store Commerce app for Windows allows point of sale (POS) devices to automatically switch from the channel database to the offline database if the Commerce Scale Unit becomes unavailable.
+This article explains how to troubleshoot common errors for offline implementations of Microsoft Dynamics 365 Commerce. An offline implementation for a Store Commerce app for Windows allows point of sale (POS) devices to automatically switch from the channel database to the offline database if the Commerce Scale Unit becomes unavailable.
 
-During a sales transaction, if a data request doesn't succeed within the time-out interval that is configured in the offline profile, the POS automatically switches to the offline database and continues the sales transaction. While the POS device is in offline mode, the Store Commerce app tries to reconnect to the Commerce Scale Unit after the reconnection attempt interval that is configured in the offline profile.
+During a sales transaction, if a data request doesn't succeed within the timeout interval, the POS automatically switches to the offline database and continues the sales transaction. While the POS device is in offline mode, the Store Commerce app tries to reconnect to the Commerce Scale Unit after the reconnection attempt interval. The timeout and reconnection attempt intervals can be configured in the offline profile.
 
 ## Issue 1: Errors due to sign-in issues
 
@@ -26,7 +26,7 @@ You receive one of the following errors:
 
 ### Cause
 
-A sign-in-related issue has occurred. This issue might occur because data isn't found or correctly configured in the offline database.
+A sign-in-related issue occurred. This issue might occur because data isn't found or correctly configured in the offline database.
 
 ### Solution
 
@@ -43,7 +43,10 @@ You receive one of the following errors:
 
 ### Cause
 
-This issue might occur because the store's employee address books aren't found or the worker isn't correctly mapped to the store in the offline database.
+This issue might occur because of one of the following causes:
+
+- The store's employee address books aren't found.
+- The worker isn't correctly mapped to the store in the offline database.
 
 ### Solution
 
@@ -60,7 +63,7 @@ You receive one of the following errors:
 
 ### Cause
 
-This issue might occur because the worker's position detail or assignment isn't found or valid in the offline database.
+This issue might occur because the worker's position detail or assignment isn't found or is invalid in the offline database.
 
 ### Solution
 
@@ -100,7 +103,7 @@ You receive one of the following errors:
 
 ### Cause
 
-Unable to switch to offline mode. The channel information is either unavailable or incorrectly configured.
+The device can't switch to offline mode. The channel information is either unavailable or incorrectly configured.
 
 ### Solution
 
@@ -120,7 +123,7 @@ You receive one of the following errors:
 
 ### Cause
 
-Unable to switch to offline mode. The user information is either unavailable or incorrectly configured.
+The device can't switch to offline mode. The user information is either unavailable or incorrectly configured.
 
 ### Solution
 
@@ -136,9 +139,9 @@ You receive the following error:
 
 ### Solution
 
-Use the offline dashboard to check the status of offline database permissions, size, and disk space.
+Use the offline dashboard to check the status of the offline database permissions, size, and disk space.
 
-## Issue 8: Error due to same user attempting to perform a manager override
+## Issue 8: Error when the same user tries to perform a manager override
 
 ### Symptoms
 
@@ -154,7 +157,7 @@ This error occurs when the same user tries to perform a manager override.
 
 A different user must perform the manager override.
 
-## Issue 9: Database errors due to inability to switch to offline mode
+## Issue 9: Database errors when the device can't switch to offline mode
 
 ### Symptoms
 
@@ -165,11 +168,11 @@ You receive one of the following errors:
 
 ### Cause
 
-Unable to switch to offline mode. The offline database is either incorrectly installed or incorrectly configured.
+The device can't switch to offline mode. The offline database is either incorrectly installed or incorrectly configured.
 
 ### Solution
 
-Verify that everything has been set up successfully. Also, contact your system administrator.
+Verify that everything is set up correctly. Also, contact your system administrator.
 
 ## Issue 10: Errors due to terminal or device configuration not found
 
@@ -196,11 +199,11 @@ You receive one of the following errors:
 
 ### Cause
 
-These errors cover a variety of possible scenarios.
+These errors can cover various underlying causes.
 
 ### Solution
 
-Microsoft recommends that you contact Support to get direct assistance (where applicable).
+Contact Support to get direct assistance (where applicable).
 
 ## Related content
 
