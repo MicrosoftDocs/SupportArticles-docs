@@ -48,6 +48,22 @@ For autoinstrumentation to work successfully, these libraries must be removed.
 
 If you encounter problems that are caused by the Application Insights SDK itself after you enable autoinstrumentation, collect self-diagnostic logs to diagnose the problems. For more information, see [How to collect self-diagnostic logs for Application Insights SDKs](enable-self-diagnostics.md).
 
+### Trouble deploying the Application Insights Monitoring Agent extension for VMs and virtual machine scale sets
+
+> [!NOTE]
+> These troubleshooting tips apply to .NET applications.
+
+If you have trouble deploying the extension, review the execution output that the extension logs to files in the following directories:
+
+```Windows
+C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.ApplicationMonitoringWindows\<version>\
+```
+
+If your extension deployed successfully but you're unable to see telemetry, it could be one of the following issues covered in [Agent troubleshooting](../agent/status-monitor-v2-troubleshoot.md#known-issues):
+
+- Conflicting dynamic link libraries (DLLs) in an app's bin directory
+- Conflict with IIS shared configuration
+
 ## More information
 
 If you have additional questions about Application Insights autoinstrumentation, you can post them on our [Microsoft Q&A question page](/answers/topics/azure-monitor.html).
