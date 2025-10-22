@@ -400,6 +400,8 @@ This issue occurs if the admin doesn't install the application or if no tenant u
 
 ### [Node.js](#tab/nodejs)
 
+#### Enable error logs
+
 Turn on internal logs by using the following setup. After you enable the logs, the console shows error logs, including any errors that are related to Microsoft Entra integration. Examples include failing to generate the token with the wrong credentials or if the ingestion endpoint doesn't authenticate by using the provided credentials.
 
 ```javascript
