@@ -355,7 +355,7 @@ Ensure the VM meets recommended IOPS and that image startup tasks (such as antiv
 
 ### Validate required service endpoints
 
-If the host still shows **Needs assistance** or **Unavailable**, run **WVDAgentUrlTool.exe** and remediate any failing endpoints. For more information, see this [article](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-desktop/agent-connectivity#check-access-to-required-fqdns-and-endpoints).
+If the host still shows **Needs assistance** or **Unavailable**, run **WVDAgentUrlTool.exe** and remediate any failing endpoints. For more information, see this [article](/azure/virtual-desktop/check-access-validate-required-fqdn-endpoint).
 
 ### Verification
 
@@ -378,7 +378,7 @@ Applies to: Errors such as **NAME_ALREADY_REGISTERED**, **EXPIRED_MACHINE**, or 
 5.  Re-register the session host using the new registration key.
 6.  Verify the host reports **Available** and accepts connections.
 
-If that is unsuccessful, complete a clean reinstall of the Agent and Bootloader following the guidance [here](https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-desktop/troubleshoot-agent#step-4-reinstall-the-agent-and-boot-loader).
+If that is unsuccessful, complete a clean reinstall of the Agent and Bootloader following the guidance [here](/azure/virtual-desktop/troubleshoot-agent#step-4-reinstall-the-agent-and-boot-loader).
 
 ## Your issue isn't listed here or wasn't resolved
 

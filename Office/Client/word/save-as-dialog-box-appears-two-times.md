@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
-ms.author: v-six
+ms.author: 
 ms.date: 06/06/2024
 ---
 # The Save As dialog box appears two times when you try to save a file in Word

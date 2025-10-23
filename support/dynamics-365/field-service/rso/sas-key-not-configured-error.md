@@ -1,8 +1,6 @@
 ---
 title: SAS Key hasn't been configured error when publishing a schedule
 description: Resolves an issue with misconfigured Azure resources in the Resource Scheduling Optimization add-in for Dynamics 365 Field Service.
-ms.author: AnilMur
-author: anilmur
 ms.reviewer: mhart
 ms.date: 01/08/2025
 ms.custom: sap:Resource Scheduling Optimization
