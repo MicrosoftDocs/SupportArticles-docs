@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - sap:Errors, Crashes, and Performance
-  - New Outlook for Windows
+  - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: caithart
 appliesto: 
