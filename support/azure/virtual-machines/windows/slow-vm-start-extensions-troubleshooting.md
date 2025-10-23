@@ -9,7 +9,8 @@ ms.custom: sap:Cannot start or stop my VM
 ---
 # Slow Azure VM Start operations when extensions are "Failed"
 
-[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+
+[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
 
 ## Overview
 
