@@ -40,7 +40,7 @@ Although your installation of Exchange Server 2019 or 2016 continues to run, we 
 
 ## What are my options?
 
-Upgrade your on-premises servers from Exchange Server 2019 or 2016 to Exchange Server SE. This is an ideal time to explore your options and prepare a migration plan. You can:
+Upgrade your on-premises servers from Exchange Server 2019 or 2016 to Exchange Server SE. You have the following options:
 
 - Migrate to Microsoft 365. Migrate mailboxes, public folders, and other data by using cutover, minimal hybrid, or full hybrid migration. Then, remove on-premises Exchange servers and Active Directory. For more information, see [How and when to decommission your on-premises Exchange servers in a hybrid deployment](/exchange/decommission-on-premises-exchange).
 
@@ -106,7 +106,7 @@ The following Exchange Team Blog article discusses the exact migration paths for
 
 If you're migrating to Microsoft 365, you might be eligible to use our Microsoft FastTrack service. FastTrack provides best practices, tools, and resources to make your migration to Microsoft 365 as seamless as possible. Best of all, a support engineer walks you through from planning and design to migrating your last mailbox. For more information about FastTrack, see [Microsoft FastTrack](https://fasttrack.microsoft.com/).
 
-If you encounter problems during your migration to Microsoft 365, and you don't use FastTrack, or you're migrating to a newer version of Exchange Server, here are some resources that you can use:
+If you don't use FastTrack, or you're migrating to a newer version of Exchange Server, here are some resources to help you resolve any issues that you might encounter during your migration to Microsoft 365:
 
 [Technical community](https://social.technet.microsoft.com/Forums/office/home?category=exchangeserver)
 
