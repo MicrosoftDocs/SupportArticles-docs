@@ -89,6 +89,6 @@ This article provides step-by-step instructions for using Microsoft Graph Explor
 
 - Microsoft Graph Cloud PC Documentation
 
-  - [List cloudPCs - Microsoft Graph beta \| Microsoft Learn](/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-beta&tabs=http)
+  - [List cloudPCs - Microsoft Graph beta](/graph/api/virtualendpoint-list-cloudpcs?view=graph-rest-beta&tabs=http)
 
-  - [cloudPC: endGracePeriod - Microsoft Graph beta \| Microsoft Learn](/graph/api/cloudpc-endgraceperiod?view=graph-rest-beta&tabs=http)
+  - [cloudPC: endGracePeriod - Microsoft Graph beta](/graph/api/cloudpc-endgraceperiod?view=graph-rest-beta&tabs=http)
