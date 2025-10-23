@@ -11,6 +11,8 @@ ms.custom: sap:VM Extensions not operating correctly
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+
 This article discusses how to identify and fix issues that involve certificates on a Windows virtual machine (VM) that uses an extension. Usually, these issues are related to cryptographic operations or the certificate itself.
 
 ## Troubleshooting checklist

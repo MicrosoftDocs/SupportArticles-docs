@@ -9,6 +9,8 @@ ms.custom: sap:Cannot start or stop my VM
 ---
 # Slow Azure VM Start operations when extensions are "Failed"
 
+[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+
 ## Overview
 
 You might experience slow Microsoft Azure Virtual Machine (VM) **Start** or **Redeploy** operations when one or more of the VM extensions are in a **Failed** state. This article discusses possible causes of this issue and resolutions.

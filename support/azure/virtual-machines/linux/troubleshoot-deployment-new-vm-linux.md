@@ -16,6 +16,8 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
+[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+
 ## Symptoms
 
 A typical provisioning failure scenario occurs after you create a custom image, then deploy a VM from it, you then experience unto 40mins where the VM status is showing `creating`, and you see this error message:

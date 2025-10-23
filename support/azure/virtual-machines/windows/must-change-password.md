@@ -21,6 +21,8 @@ ms.custom: sap:Cannot connect to my VM
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+
 ## Symptom
 
 When you use a Remote Desktop Protocol (RDP) connection to connect to an Azure virtual machine (VM), you encounter the error:

@@ -18,6 +18,8 @@ ms.author: jarrettr
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+
 ## Symptoms
 
 You can't connect to your Microsoft Azure Linux virtual machine (VM) by using Secure Shell (SSH). You notice the following entries in the system log (/var/log/messages, /var/log/syslog, /var/log/secure, or /var/log/auth.log):

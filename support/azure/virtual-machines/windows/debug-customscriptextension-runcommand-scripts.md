@@ -14,6 +14,8 @@ ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurepowershell
 
 This article discusses how to test and correct for a failure in a PowerShell script that uses the Custom Script Extension or Run Command feature.
 
+[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+
 ## Prerequisites
 
 - [Azure PowerShell](/powershell/azure/install-az-ps)

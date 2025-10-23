@@ -12,6 +12,8 @@ ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 
 _Original KB number:_ &nbsp; 4049215
 
+[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+
 This article describes the minimum version support for Linux and Windows virtual machine agents in Azure.
 
 ## Minimum supported version of Linux VM Agent
