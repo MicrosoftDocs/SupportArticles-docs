@@ -49,10 +49,10 @@ This article describes common AKS errors and how to resolve them.
 
 | **Error code** | **Description** | **Details and mitigation** |
 | --- | ---------- | ----------------- |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
+| LB/PvtLinkSvcWithPvtEndptConn deletion error | Can't delete resources with active private endpoint connections. | Private link services have active connections that prevent deletion. For more information, see [A load balancer with a private link service or a private link service with private endpoint connections can't be deleted](../create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md). |
+| LinkedAuthorizationFailed | Authorization fails for linked resources. | There are insufficient permissions for a resource in another subscription or a resource group. For more information, see [Troubleshoot the LinkedAuthorizationFailed error code](linkedauthorizationfailed-error.md). |
+| LoadBalancerInUseByVirtualMachineScaleSet | Can't modify load balancer currently in use. | The load balancer is actively being used by VM scale sets. For more information, see [Troubleshoot the LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code](../create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md). |
+| LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet | Network resources are in use by scale sets. | The load balancer or network security group (NSG) is attached to active VM scale sets. For more information, see [Troubleshoot LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code](networksecuritygroupinusebyvirtualmachinescaleset-error.md). |
 | | | For more information, see [](). |
 | | | For more information, see [](). |
 | | | For more information, see [](). |
