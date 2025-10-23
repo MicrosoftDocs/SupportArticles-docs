@@ -37,24 +37,20 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following table:
 
-| Bug reference | Description| Fix area| Component | Platform |
-|-------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------------------------|----------|
-|<a id=4433544>[4433544](#4433544) </a> | Fixes an issue in which running the `TRUNCATE TABLE WITH PARTITIONS` statement on a table with non-aligned partitions succeeds unexpectedly and causes corruption. | SQL Server Engine | DB Management | All|
-|<a id=4145424>[4145424](#4145424) </a> | 	Fixes an assertion dump issue on the primary replica of an availability group related to the expression "!(uaeUnused != prev && trace->Elements[prev].ThreadId == trace->Elements[curr].ThreadId) \|\| (trace->Elements[prev].Value <= value)."| SQL Server Engine | High Availability and Disaster Recovery | All|
-|<a id=4419880>[4419880](#4419880) </a> | 	Fixes a SQL injection vulnerability in a system stored procedure.| SQL Server Engine | High Availability and Disaster Recovery | All|
-|<a id=4311157>[4311157](#4311157) </a> | Fixes a SQL Server on Linux termination issue that you might encounter when trying to send encrypted TLS/SSL data to a peer after receiving an alert such as `bad_record_mac` from the peer. | SQL Server Engine | Linux | Linux|
-|<a id=4419716>[4419716](#4419716) </a> | 	Fixes a SQL injection vulnerability in a system stored procedure.| SQL Server Engine | Metadata| All|
-|<a id=4229256>[4229256](#4229256) </a> | Fixes an issue in which DMVs are used in specific scenarios to inspect the text of statements that are running in other sessions and might contain sensitive data. | SQL Server Engine | Programmability | All|
-|<a id=4268984>[4268984](#4268984) </a> | Fixes an access violation dump issue that you encounter in `ACCESS_VIOLATION_c0000005_sqllang.dll!CScaOp_Intrinsic::FConvertToText_Intrinsic` when executing queries that use the TRIM intrinsic.| SQL Server Engine | Programmability | All|
-|<a id=4410919>[4410919](#4410919) </a> | Fixes an issue in which the `TRY_CONVERT` function might cause invalid results when the plan uses the **Clustered Index Seek** operator. | SQL Server Engine | Query Optimizer | All|
-|<a id=4441901>[4441901](#4441901) </a> | Fixes an issue in which the change tracking auto cleanup process blocks the user triggered `ALTER TABLE` column-level DDL (`ADD/DROP/ALTER COLUMN`) operations.| SQL Server Engine | Replication | All|
-|<a id=4524294>[4524294](#4524294) </a> | Fixes an issue in which adding a merge agent fails and throws out the following error when the subscription uses a non-default port: </br></br>Msg 2560, Level 16, State 9, Procedure distribution.sys.sp_MSadd_merge_agent, Line \<LineNumber> [Batch Start Line 3]</br>Parameter 2 is incorrect for this DBCC statement. | SQL Server Engine | Replication | Windows|
-|<a id=4424573>[4424573](#4424573) </a> | 	Prevents logins with the `ALTER ANY LOGIN` permission from resetting the passwords of logins that have `ALTER ANY LOGIN` or `IMPERSONATE ANY LOGIN` permissions to avoid elevation of privilege. | SQL Server Engine | Security Infrastructure | All|
-|<a id=4520174>[4520174](#4520174) </a> | Fixes an access violation that you encounter when running `sp_describe_first_result_set` on `sys.database_ledger_digest_locations`.| SQL Server Engine | Security Infrastructure | All|
-|<a id=4437734>[4437734](#4437734) </a> | 	Prevents elevation of privilege by running SQL Agent job steps for built-in jobs with reduced permissions. | SQL Server Engine | SQL Agent | All|
-|<a id=4285469>[4285469](#4285469) </a> | Fixes a vulnerability that lets users who have access to certain stored procedures perform SQL injection and run arbitrary code by using elevated privileges.| SQL Server Engine | SQL Server Engine | All|
-|<a id=4448818>[4448818](#4448818) </a> | Fixes URLs in certain error messages (for example, error 14130 and error 14131). | SQL Server Engine | SQL Server Engine | All|
-|<a id=2693201>[2693201](#2693201) </a> | Fixes an issue in which the log files shrink beyond the specified target size under certain operations when you run the `DBCC SHRINKFILE` command. | SQL Server Engine | Storage Management| All|
+| Bug reference | Description | Fix area | Component | Platform |
+|--|--|--|--|--|
+| <a id=4654519>[4654519](#4654519) </a> | Fixes an issue when using Elastic SAN over the iSCSI protocol, throttling errors (`HTTP 503`) from storage are surfaced in Windows as generic I/O device errors (`ERROR_IO_DEVICE`). | SQL Server Engine | Query Execution | Windows |
+| <a id=4723355>[4723355](#4723355) </a> | Fixes an issue when the SQL Agent reads feature switches for Managed Instances (MI) | SQL Server Engine | Query Execution | Windows |
+| <a id=4601228>[4601228](#4601228) </a> | Fixes a crash when importing a certificate (`.pfx`) that's not protected by a password | SQL Server Client Tools | SQL Server Manageability | All |
+| <a id=4713591>[4713591](#4713591) </a> | TODO | SQL Server Engine | Security Infrastructure  | All |
+| <a id=4723335>[4723335](#4723335) </a> | TODO | SQL Server Engine | High Availability and Disaster Recovery | All |
+| <a id=4573341>[4573341](#4573341) </a> | TODO | Integration Services | Integration Services | Windows |
+| <a id=4573769>[4573769](#4573769) </a> | Introduces automatic cleanup of stale LRS metadata (older than 36 days)  | TODO | TODO | Windows |
+| <a id=4582175>[4582175](#4582175) </a> | TODO | SQL Server Engine | SQL OS | Windows |
+| <a id=4598768>[4598768](#4598768) </a> | Fixes an issue with inconsistent behavior when importing a certificate using the dropdown or when using the import button in the Configuration Manager.<br><br>Also fixes an issue where selecting a certificate using the thumbprint wouldn't work if the case didn't match.| SQL Connectivity | SQL Connectivity | Windows |
+| <a id=4660895>[4660895](#4660895) </a> | Fixes an issue in SQL Server Analysis Services where Row-Level Security (RLS) filters could be skipped when combined with Object-Level Security (OLS) and Column-Level Security (CLS) in certain multi-role configurations. | Analysis Services | Analysis Services | Windows |
+| <a id=4666353>[4666353](#4666353) </a> | TODO | SQL Server Engine  | Replication | Windows |
+| <a id=4675941>[4675941](#4675941) </a> | TODO | SQL Server Engine | High Availability and Disaster Recovery | All |
 
 ## How to obtain or download this or the latest cumulative update package
 
