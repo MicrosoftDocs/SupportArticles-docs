@@ -357,4 +357,10 @@ Admins can use the [Microsoft.PowerApps.Administration.PowerShell](https://www.p
 Get-AdminFlowWithMigratingTriggerUrl -EnvironmentName <EnvironmentName>
 ```
 
-The cmdlet outputs the `DisplayName` and `FlowName` (ID) of each flow whose trigger URL will be migrated.
+The cmdlet outputs the `DisplayName` and `FlowName` (ID) of each flow whose trigger URL will be migrated. 
+
+Note: For smoother retrieval of all impacted flows at tenant level, You can use Get-AdminPowerAppEnvironment [script](https://learn.microsoft.com/en-us/powershell/module/microsoft.powerapps.administration.powershell/get-adminpowerappenvironment?view=pa-ps-latest) to list all environments in a tenant and subsequently use the Get-AdminFlowWithMigratingTriggerUrl to list impacted flows in the environment.
+
+```
+Get-AdminPowerAppEnvironment
+```
