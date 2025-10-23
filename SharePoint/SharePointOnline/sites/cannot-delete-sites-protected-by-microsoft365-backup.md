@@ -17,7 +17,8 @@ ms.custom:
   - CI 7897
   - CSSTroubleshoot
 ms.reviewer: salarson
-description: Provides a resolution for an error that occurs when you try to delete a SharePoint or OneDrive site that's protected by Microsoft 365 Backup. 
+description: Provides a resolution for an error that occurs when you try to delete a SharePoint or OneDrive site that's protected by Microsoft 365 Backup.
+---
 
 # "Site is protected by Microsoft 365 Backup and cannot be deleted" error
 
