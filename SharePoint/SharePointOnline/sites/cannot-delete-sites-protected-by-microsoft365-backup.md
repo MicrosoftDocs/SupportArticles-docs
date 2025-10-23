@@ -14,6 +14,7 @@ appliesto:
 ms.custom: 
   - sap:Microsoft 365 Backup\ODSP
   - CI 193688
+  - CI 7897
   - CSSTroubleshoot
 ms.reviewer: salarson
 description: Provides a resolution for an error that occurs when you try to delete a SharePoint or OneDrive site that's protected by Microsoft 365 Backup. 
