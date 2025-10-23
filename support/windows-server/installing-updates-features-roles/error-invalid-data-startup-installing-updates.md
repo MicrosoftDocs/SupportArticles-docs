@@ -1,6 +1,6 @@
 ---
-title: ERROR_INVALID_DATA error after installing Windows updates
-description: Helps resolve the 0x8007000d (ERROR_INVALID_DATA) error at system startup after installing Windows updates.
+title: ERROR_INVALID_DATA Error After Installing Windows Updates
+description: Helps resolve the 0x8007000d (ERROR_INVALID_DATA) error at system startup after you install Windows updates.
 ms.date: 05/23/2025
 manager: dcscontentpm
 audience: itpro
@@ -15,17 +15,15 @@ appliesto:
 ---
 # Error 0x8007000d at startup after installing updates
 
-This article helps resolve an issue in which you receive the `0x8007000d (ERROR_INVALID_DATA)` error at the system startup after installing Windows updates.
+This article helps you resolve an issue that occurs at system startup after you install Windows updates. After you install the updates and restart the system, the system performs a rollback, and you receive a "0x8007000d (ERROR_INVALID_DATA)" error message.
 
-After you install an update and restart the system, the system performs a rollback at the system startup, and you receive the `0x8007000d (ERROR_INVALID_DATA)` error.
+## Symptoms
 
-This issue occurs because the database of performance counters is corrupted.
-
-## Identify the issue
+When this issue occurs, you might experience any of the following symptoms.
 
 ### Symptom 1: Catalog file errors
 
-You might encounter entries in the Component-Based Servicing (CBS) log file (usually located at *C:\Windows\Logs\CBS*) indicating issues with a catalog file:
+Entries in the Component-Based Servicing (CBS) log file indicate issues that affect a catalog file. This log is typically located at *C:\Windows\Logs\CBS*. You see a log entry that resembles the following output:
 
 ```output
 20xx-xx-06 xx:51:15, Info CBS Exec: Installing Package: Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0, Update: 4584642-1_neutral, InstallDeployment: amd64_771d1f434ef835536dafe93d6811f766_31bf3856ad364e35_10.0.17763.1549_none_e4d395cdb7886270
@@ -40,11 +38,15 @@ You might encounter entries in the Component-Based Servicing (CBS) log file (usu
 20xx-xx-06 xx:51:15, Info CBS Failed to verify manifest against catalog, mark store as corrupt. [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
 20xx-xx-06 xx:51:15, Info CBS Failed to begin deployment installation for Update: 4584642-1_neutral [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
 ```
-In this case, the error happens because the system can't verify if catalog file C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat is valid, which means the package is likely corrupt. See [Resolution or troubleshooting steps](#resolution-or-troubleshooting-steps) for more details.
+In this situation, the error occurs because the system can't determine whether the following catalog file is valid:
+
+    C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat
+
+This symptom indicates that the package is likely corrupted. 
 
 ### Symptom 2: Registry errors
 
-Another symptom may involve registry errors. From the CBS log file, you might see the following:
+In the CBS log file, you see the following entry or something similar that indicates registry issues:
 
 ```output
 20xx-xx-24 05:13:10, Info CBS Registry value for Package_7762_for_KB5001347~31bf3856ad364e35~amd64~~10.0.1.4 is not a dword type. [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
@@ -56,11 +58,9 @@ Another symptom may involve registry errors. From the CBS log file, you might se
 20xx-xx-24 05:13:10, Info CBS Failed to find or add the component family [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
 ```
 
-This indicates registry issues. See [Resolution or troubleshooting steps](#resolution-or-troubleshooting-steps) for more details.
-
 ### Symptom 3: Driver update failure
 
-Driver update failures during reboot can also cause this error. From CBS log file, you might see the following:
+In the CBS log file, you see the following entry or something similar that indicates driver update failures during restart:
 
 ```output
 20xx-xx-18 15:21:14, Info CBS Perf: Doqe: Critical install started.
@@ -79,11 +79,12 @@ Driver update failures during reboot can also cause this error. From CBS log fil
 20xx-xx-18 15:22:46, Info CBS Retrieved original failure status: 0x8007000d, last forward execute state: CbsExecuteStatePrimitives
 20xx-xx-18 15:22:52, Info CBS WER: Generating failure report for package: Package_for_RollupFix~31bf3856ad364e35~amd64~~14393.4889.1.2, status: 0x8007000d, failure source: DOQ, start state: Staged, target state: Installed, client id: WindowsUpdateAgent
 ```
-We can see that during reboot, the driver updates failed, causing the Windows update to also fail.
 
-To verify this is the case go to *C:\Windows\INF\setupapapi.dev*, find the log, and look for the failed driver. In this case, it's mshdc.inf.
+This entry shows that the driver updates failed. This issue caused the Windows update to also fail.
 
-**setupapapi.dev.log:**
+To verify that this condition is true, go to *C:\Windows\INF\setupapapi.dev*, locate the log, and examine the entries for the driver failure. In this case, it's mshdc.inf.
+
+**setupapapi.dev.log**
 
 ```output
 sto: {Unstage Driver Package: C:\Windows\System32\DriverStore\FileRepository\mshdc.inf_amd64_b0b5572axx95167b\mshdc.inf} 15:21:14.3xx
@@ -96,21 +97,24 @@ idb: Driver packages registered to 'mshdc.inf':
 idb: mshdc.inf_amd64_79f38c21b894a1c1
 idb: {Unregister Driver Package: exit(0x00000000)} 15:21:14.3xx
 ```
-Be sure to note the driver packages.
 
-## Root cause
+Make sure that you note the driver packages.
+
+## Cause
+
+This issue occurs either because the database of performance counters is corrupted or the driver version is incorrect. 
 
 ### File corruption or registry corruption
 
-An old update may be reported, and the related file or registry key locations might be corrupted. This corruption can prevent the system from verifying the validity of catalog files.
+An old update might be reported, and the related file or registry key locations might be corrupted. This corruption can prevent the system from verifying the validity of catalog files.
 
-### Driver version incorrect
+### Incorrect driver version
 
-Driver updates may fail due to incorrect versioning, causing the Windows update to fail during reboot.
+Driver updates might fail because of incorrect versioning. This issue causes the Windows update to fail during a restart.
 
-## Resolution or troubleshooting steps
+## Resolution
 
 > [!NOTE]
-> Before proceeding with any mitigation, [back up the OS disk](/azure/backup/about-azure-vm-restore).
+> Before you proceed, [back up the OS disk](/azure/backup/about-azure-vm-restore).
 
-The most reliable mitigation for this problem is perfoming an [in-place upgrade (IPU) on the Windows virtual machine (VM)](/azure/virtual-machines/windows-in-place-upgrade).
+The most reliable solution for this problem is to perfom an [in-place upgrade (IPU) on the Windows virtual machine (VM)](/azure/virtual-machines/windows-in-place-upgrade).
