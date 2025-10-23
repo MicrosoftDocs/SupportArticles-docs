@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Sales Solution in Microsoft 365 Copilot troubleshooting # < 60 chars
-summary: Welcome to Sales Solution in Microsoft 365 Copilot troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Sales Solution in Microsoft 365 Copilot. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: Sales in Microsoft 365 Copilot troubleshooting # < 60 chars
+summary: Welcome to Sales in Microsoft 365 Copilot troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Sales in Microsoft 365 Copilot. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
-  title: Sales Solution in Microsoft 365 Copilot troubleshooting
-  description: Landing page for Sales Solution in Microsoft 365 Copilot troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  title: Sales in Microsoft 365 Copilot troubleshooting
+  description: Landing page for Sales in Microsoft 365 Copilot troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: microsoft-sales-copilot  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author:   sbmjais
