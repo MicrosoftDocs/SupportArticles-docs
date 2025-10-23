@@ -11,6 +11,10 @@ items:
     items:
     - name: Known issues with Windows 365 Business
       href: known-issues.md
+  - name: Provisioning
+    items:
+    - name: Remove Windows 365 Business Cloud PCs from Grace Using Graph
+      href: how-to-deprovision-business-grace-with-graph-explorer.md
 - name: Windows 365 Enterprise
   items:
   - name: Azure Network Connection
