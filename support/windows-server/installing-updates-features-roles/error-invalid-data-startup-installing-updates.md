@@ -117,4 +117,4 @@ Driver updates might fail because of incorrect versioning. This issue causes the
 > [!NOTE]
 > Before you proceed, [back up the OS disk](/azure/backup/about-azure-vm-restore).
 
-The most reliable solution for this problem is to perfom an [in-place upgrade (IPU) on the Windows virtual machine (VM)](/azure/virtual-machines/windows-in-place-upgrade).
+The most reliable solution for this problem is to perform an [in-place upgrade (IPU) on the Windows virtual machine (VM)](/azure/virtual-machines/windows-in-place-upgrade).
