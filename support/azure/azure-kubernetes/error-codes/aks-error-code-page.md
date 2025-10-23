@@ -17,8 +17,8 @@ This article describes common AKS errors and how to resolve them.
 | **Error code** | **Description** | **Details and mitigation** |
 | --- | ---------- | ----------------- |
 | AADSTS7000222 - BadRequest or InvalidClientSecret | Authentication failure with Azure Active Directory. | This involves invalid or expired service principal credentials. For more information, see [AADSTS7000222 - BadRequest or InvalidClientSecret error](../create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md). |
-| Argument list too long | Application fails due to command line argument limitations. | The command line arguments exceed system limits in containerized applications. For more information, see [Application failures caused by the "argument list too long" error message](./azure-kubernetes/create-upgrade-delete/application-fails-argument-list-too-long). |
-| AksCapacityHeavyUsage | Insufficient capacity in the Azure region. | There's high demand or limited resources in the selected region. For more information, see [Troubleshoot the AksCapacityHeavyUsage error code](./azure-kubernetes/error-codes/akscapacityheavyusage-error). |
+| Argument list too long | Application fails due to command line argument limitations. | The command line arguments exceed system limits in containerized applications. For more information, see [Application failures caused by the "argument list too long" error message](../create-upgrade-delete/application-fails-argument-list-too-long.md). |
+| AksCapacityHeavyUsage | Insufficient capacity in the Azure region. | There's high demand or limited resources in the selected region. For more information, see [Troubleshoot the AksCapacityHeavyUsage error code](akscapacityheavyusage-error.md). |
 | AKSOperationPreempted | Cluster operation is interrupted by a higher priority operation. | There are concurrent operations on the cluster, causing conflicts. For more information, see [AKSOperationPreempted or AKSOperationPreemptedByDelete error when performing a new operation](aksoperationpreempted-error.md). |
 | | | For more information, see [](). |
 | | | For more information, see [](). |
