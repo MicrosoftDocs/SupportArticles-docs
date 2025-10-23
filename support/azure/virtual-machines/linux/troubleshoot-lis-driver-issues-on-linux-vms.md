@@ -12,7 +12,7 @@ ms.custom: sap:My VM is not booting, linux-related-content
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
 
 When you run a Linux Virtual Machine (VM) on Azure, the Hyper-V drivers, also known as Linux Integration Services (LIS) drivers, are crucial for proper VM operations. These drivers allow the VM to communicate with the underlying Azure hypervisor. If these drivers are missing or not properly loaded, the VM might fail to boot. This article provides solutions to LIS/Hyper-V driver issues in Azure Linux VMs.
 

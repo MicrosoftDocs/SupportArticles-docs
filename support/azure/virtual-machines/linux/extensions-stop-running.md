@@ -13,7 +13,7 @@ ms.collection: linux
 
 _Original KB number:_ &nbsp; 4099558
 
-[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
 
 ## Symptoms
 

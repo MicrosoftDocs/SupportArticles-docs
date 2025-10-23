@@ -13,7 +13,7 @@ ms.collection: linux
 
 _Original KB number:_ &nbsp; 3200481
 
-[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
 
 This article provides information about resolving a problem in which Azure Linux VMs that are running Azure Linux VM Agent 2.1.5 or 2.1.6 cannot process extensions.
 

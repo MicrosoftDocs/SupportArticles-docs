@@ -10,7 +10,7 @@ ms.reviewer: srijangupta, scotro, maries, jarrettr, v-weizhu
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
-[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
 
 ## Overview
 

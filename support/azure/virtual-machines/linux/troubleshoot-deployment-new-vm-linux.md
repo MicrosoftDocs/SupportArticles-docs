@@ -16,7 +16,7 @@ ms.reviewer: srijangupta, scotro, jarrettr
 
 [!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
-[!INCLUDE [Feedback](../../../includes/vmassist-include.md)]
+[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
 
 ## Symptoms
 
