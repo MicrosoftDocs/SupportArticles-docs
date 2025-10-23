@@ -33,27 +33,84 @@ This article describes common AKS errors and how to resolve them.
 | CustomPrivateDNSZoneMissingPermissionError | Permissions missing for custom private DNS zone. | The service principal lacks required permissions on the private DNS zone. For more information, see [Troubleshoot the CustomPrivateDNSZoneMissingPermissionError error code](customprivatednszonemissingpermissions-error.md). |
 | DnsServiceIpOutOfServiceCidr | DNS service IP is outside the service CIDR range. | The configured DNS service IP doesn't fall within the Kubernetes service CIDR. For more information, see [Troubleshoot the DnsServiceIpOutOfServiceCidr error code](dnsserviceipoutofservicecidr-error.md). |
 | ERR_VHD_FILE_NOT_FOUND (65) | Virtual hard disk file not found during provisioning. | The node image virtual hard disk is unavailable or inaccessible. For more information, see [Troubleshoot the ERR_VHD_FILE_NOT_FOUND error code (65)](../create-upgrade-delete/error-code-vhdfilenotfound.md). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
+| Error from server - error dialing backend - dial tcp | API server connectivity issues. | There are network connectivity problems between components and the API server. For more information, see ["Error from server: error dialing backend: dial tcp" message](../connectivity/error-from-server-error-dialing-backend-dial-tcp.md). |
+| Failed to fix node group sizes | Cluster autoscaler unable to reconcile node pool sizes. | There are autoscaler configuration issues or Azure API failures. For more information, see [Cluster autoscaler fails to scale with "failed to fix node group sizes" error](../create-upgrade-delete/cluster-autoscaler-fails-to-scale.md). |
+| InsufficientSubnetSize | Subnet has insufficient IP addresses. | There aren't enough available IPs in the subnet for the requested nodes. For more information, see [InsufficientSubnetSize error code](../connectivity/insufficientsubnetsize-error-advanced-networking.md). |
+| InUseRouteTableCannotBeDeleted | Route table is in use and can't be deleted. | The route table is associated with subnets and must be disassociated. For more information, see [Troubleshoot InUseRouteTableCannotBeDeleted error code](inuseroutetablecannotbedeleted-error.md). |
+| InvalidLoadBalancerProfileAllocatedOutboundPorts | Invalid outbound port allocation in load balancer profile. | The outbound port configuration exceeds limits or is invalid. For more information, see [InvalidLoadBalancerProfileAllocatedOutboundPorts error when creating or updating an AKS cluster](invalidloadbalancerprofileallocatedoutboundports-error.md). |
+| InvalidParameter | One or more parameters are invalid. | The request contains invalid or conflicting parameter values. For more information, see [Troubleshoot the InvalidParameter error](invalidparameter-error.md). |
+| InvalidResourceReference | Referenced resource is invalid or inaccessible. | The resource ID is malformed or the resource doesn't exist. For more information, see [Troubleshoot the InvalidResourceReference error code](invalidresourcereference-error.md). |
+| K8SAPIServerConnFailVMExtensionError (51) | Node can't connect to Kubernetes API server. | Network connectivity or a firewall is blocking API server access. For more information, see [Troubleshoot the K8SAPIServerConnFailVMExtensionError error code (51)](../create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md). |
+| K8SAPIServerDNSLookupFailVMExtensionError (52) | DNS lookup for API server failed. | DNS resolution issues prevent API server discovery. For more information, see [Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)](../create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md). |
+| Known issues - Custom kubelet configuration on Windows | Issues with custom kubelet settings on Windows nodes. | There are specific limitations and issues with Windows node kubelet customization. For more information, see [Known issues: Custom kubelet configuration on Windows nodes in AKS](/create-upgrade-delete/known-issues-custom-kubelet-configuration.md). |
+|  |  |
 
+## L-S error codes
+
+| **Error code** | **Description** | **Details and mitigation** |
+| --- | ---------- | ----------------- |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+|  |  |
+
+## T-Z error codes
+
+| **Error code** | **Description** | **Details and mitigation** |
+| --- | ---------- | ----------------- |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
+| | | For more information, see [](). |
 |  |  |
 
 ## References
