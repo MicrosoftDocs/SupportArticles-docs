@@ -16,7 +16,7 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 The Azure Instance Metadata Service (IMDS) is a REST API that's available at a well-known, non-routable IP address (`169.254.169.254`). You can only access it from within the VM. Communication between the VM and IMDS never leaves the host. HTTP clients must bypass web proxies within the VM when querying IMDS. IMDS IP address (`169.254.169.254`) must be handled in the same manner as the 168.63.129.16 IP address. 
 
-[Azure Instance Metadata Service (IMDS)](https://learn.microsoft.com/azure/virtual-machines/instance-metadata-service?tabs=windows)
+[Azure Instance Metadata Service (IMDS)](azure/virtual-machines/instance-metadata-service?tabs=windows)
 
 Run the [IMDSCertCheck](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/IMDSCertCheck) to diagnose any known isses. Additional information is also located below.
 
@@ -24,7 +24,7 @@ Run the [IMDSCertCheck](https://github.com/Azure/azure-support-scripts/tree/mast
 The Azure Virtual Machine cannot establish a connection with the Azure Instance Metadata Service (IMDS) endpoint. 
 
 * Applications/Clients dependent on the IMDS Service to be functioning are not working as expected
-* Windows Server 2022/2025 Azure Edition [activation watermark continues to be displayed](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/windows/activation-watermark-appears)
+* Windows Server 2022/2025 Azure Edition [activation watermark continues to be displayed](azure/virtual-machines/windows/activation-watermark-appears)
 * Extended Security Updates for Windows EOS versions may not install or function correctly
 
 

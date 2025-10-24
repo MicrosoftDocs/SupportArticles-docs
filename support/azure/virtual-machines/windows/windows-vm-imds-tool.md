@@ -29,8 +29,7 @@ Example Warning
 Certificate not found: 'CN=Microsoft Azure XXXX, ...'
 ```
 
-Please refer to the following [link to download missing certificates:](
-https://learn.microsoft.com/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains)
+Please refer to the following [link to download missing certificates:](azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains)
 
 ---
 
