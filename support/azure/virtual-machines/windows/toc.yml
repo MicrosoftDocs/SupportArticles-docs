@@ -221,9 +221,13 @@ items:
 
 - name: IMDS Troubleshooting
   items:
+  - name: Overview
+    href: /azure/virtual-machines/instance-metadata-service?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: IMDS Certs
     href: windows-vm-imds-certissues.md
   - name: IMDS Connection
+    href: windows-vm-imds-connection.md
+  - name: IMDS Troubleshooting Tool
     href: windows-vm-imds-connection.md
 
 
