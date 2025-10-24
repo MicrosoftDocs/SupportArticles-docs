@@ -54,14 +54,14 @@ This article describes common AKS errors and how to resolve them.
 | LoadBalancerInUseByVirtualMachineScaleSet | Can't modify load balancer currently in use. | The load balancer is actively being used by VM scale sets. For more information, see [Troubleshoot the LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code](../create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md). |
 | LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet | Network resources are in use by scale sets. | The load balancer or network security group (NSG) is attached to active VM scale sets. For more information, see [Troubleshoot LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code](networksecuritygroupinusebyvirtualmachinescaleset-error.md). |
 | Missing or invalid service principal | Service principal credentials are missing or invalid. | The service principal either doesn't exist, is expired, or lacks the required permissions. For more information, see [Missing or invalid service principal when creating an AKS cluster](../create-upgrade-delete/missing-or-invalid-service-principal). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
+| MissingSubscriptionRegistration | Required resource provider aren't registered. | The Azure subscription is missing registration information for required resource providers. For more information, see [Troubleshoot the MissingSubscriptionRegistration error code](missingsubscriptionregistration-error.md). |
+| NetworkSecurityGroupInUseByVirtualMachineScaleSet | Network security group (NSG) is in use by VM scale sets. | The NSG cannot be modified while attached to scale sets. For more information, see [Troubleshoot the LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code](../create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set). |
+| NodePoolMcVersionIncompatible | Node pool version incompatible with control plane. | The node pool Kubernetes version isn't compatible with the control plane version. For more information, see [Can't upgrade AKS cluster because of the NodePoolMcVersionIncompatible error](nodepoolmcversionincompatible-error.md). |
+| OperationIsNotAllowed | Operation not permitted in current state. | The requested operation conflicts with cluster state or configuration. For more information, see [Cluster pending operation (OperationNotAllowed) errors](../create-upgrade-delete/operationnotallowed.md). |
+| OperationNotAllowed or PublicIPCountLimitReached | Operation blocked or public IP limit reached. | The public IP quota is exceeded or the operation isn't allowed by policy. For more information, see [Troubleshoot the OperationNotAllowed or PublicIPCountLimitReached quota error](operationnotallowed-publicipcountlimitreached-error.md). |
+| OrasPullNetworkTimeoutVMExtensionError | ORAS pull operation timed out. | There's a network timeout when you try to create and deploy an AKS cluster. For more information, see [OrasPullNetworkTimeoutVMExtensionError error code (211) when deploying an AKS cluster](vmextensionerror-oraspullnetworktimeout.md). |
+| OrasPullUnauthorizedVMExtensionError | Not authorized to pull artifacts from registry. | Authentication fails when you try to create and deploy an AKS cluster. For more information, see [OrasPullUnauthorizedVMExtensionError error code (212) when deploying an AKS cluster](vmextensionerror-oraspullunauthorized.md). |
+| OutboundConnFailVMExtensionError (50) | Node can't establish outbound connectivity. | A firewall, network security group (NSG), or routing prevents outbound connections. For more information, see [Troubleshoot the OutboundConnFailVMExtensionError error code (50)](../create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md). |
 | | | For more information, see [](). |
 | | | For more information, see [](). |
 | | | For more information, see [](). |
