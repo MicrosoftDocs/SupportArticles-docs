@@ -1,12 +1,12 @@
 ---
-title: Azure Windows VM deployment top issues
-description: Provides solutions to Azure Windows VM deployment top issues.
+title: Azure Instance Metadata Service Connection Issues
+description: Azure Instance Metadata Service Connection Issues
 ms.service: azure-virtual-machines
 ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 ---
-# Unable to connect to the Azure Instance Metadata Service 
+# Azure Instance Metadata Service Connection Issues
 
 **Applies to:** :heavy_check_mark: Windows VMs
 

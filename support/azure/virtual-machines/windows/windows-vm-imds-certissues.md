@@ -1,6 +1,6 @@
 ---
-title: Azure Windows VM deployment top issues
-description: Provides solutions to Azure Windows VM deployment top issues.
+title: Azure Instance Metadata Service and Certificate related issues 
+description: Azure Instance Metadata Service and Certificate related issues 
 ms.service: azure-virtual-machines
 ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
