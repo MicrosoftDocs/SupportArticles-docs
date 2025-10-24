@@ -22,7 +22,7 @@ Run the [IMDSCertCheck](https://github.com/Azure/azure-support-scripts/tree/mast
 The Azure Virtual Machine cannot establish a connection with the Azure Instance Metadata Service (IMDS) endpoint. 
 
 * Applications/Clients dependent on the IMDS Service to be functioning are not working as expected
-* Windows Server 2022/2025 Azure Edition [activation watermark continues to be displayed](azure/virtual-machines/windows/activation-watermark-appearsmd)
+* Windows Server 2022/2025 Azure Edition [activation watermark continues to be displayed](activation-watermark-appears.md)
 * Extended Security Updates for Windows EOS versions may not install or function correctly
 
 When testing the IMDS service response, the error below is encountered:
