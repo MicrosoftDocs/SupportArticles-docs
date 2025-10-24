@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Tools for Windows Activation 
-description: Windows activation problems on Azure Virtual Machines can occur due to configuration, certificate, or connectivity issues. Microsoft provides script-based tools to help diagnose and resolve most activation-related problems.
+description: Provides script-based tools to help diagnose and resolve Windows activation problems on Azure virtual machines.
 author: JarrettRenshaw
 ms.author: jarrettr
 manager: dcscontentpm
@@ -9,9 +9,9 @@ ms.reviewer: v-jsitser, scotro, v-ryanberg
 ms.service: azure-virtual-machines
 ms.custom: sap:Cannot activate my Windows VM, troubleshooting tools for Windows VM activation
 ---
-#  Troubleshooting tools for Windows activation issues on Azure Virtual Machines
+#  Troubleshooting tools for Windows activation issues on Azure virtual machines
 
-Windows activation problems on Azure Virtual Machines (VMs) can occur due to configuration, certificate, or connectivity issues. Microsoft provides two script-based tools to help diagnose and resolve most activation-related problems.
+Windows activation problems on Azure virtual machines (VMs) can occur because of configuration, certificate, or connectivity issues. Microsoft provides two script-based tools to help diagnose and resolve most activation-related problems.
 
 ## Tools overview
 
@@ -33,7 +33,7 @@ For more information, see [Windows activation validation](https://github.com/Azu
 
 **Purpose**  
 
-Verifies the integrity and availability of certificates required for activation through Azure Instance Metadata Service (IMDS).
+Verifies the integrity and availability of certificates that are required for activation through Azure Instance Metadata Service (IMDS).
 
 **Key features**  
 
@@ -48,13 +48,13 @@ For more information, see:
 
 ## How to run these tools
 
-You can run these tools in three ways:
+You can run these tools in any of the following manners.
 
 ### 1. Download from GitHub and run within the VM 
 
-Use the GitHub resources previously cited to download scripts and run them manually.
+Follow the resource links in the previous sections to download scripts and run them manually.
 
-### 2. Run using Azure Run Command  
+### 2. Use Azure Run Command
    
 - Navigate to your VM in the Azure portal: > **Operations** > **Run Command**.
 - Select the script from the list (see the following screenshot).
@@ -62,17 +62,17 @@ Use the GitHub resources previously cited to download scripts and run them manua
 :::image type="content" source="media/windows-activation-troubleshoot-tools/azure-portal-view.png" alt-text="Azure Portal view Run Command example." lightbox="media/windows-activation-troubleshoot-tools/azure-portal-view.png":::   
   
 > [!NOTE]
-> Alternatively, one can run these commands using a command-line interface (CLI) tool, Windows PowerShell, or Windows on ARM.
+> Alternatively, you can run these commands by using a command-line interface (CLI) tool, Windows PowerShell, or Windows on ARM.
 
-### 3. Use prepackaged Run Command scripts  
+### 3. Use prepackaged Run Command scripts
 
 For more information, see [Run scripts in your Windows VM by using action Run Commands](/azure/virtual-machines/windows/run-command).
 
 ## Recommended workflow
 
-1. Run **Windows Activation Validation** to confirm activation status and detect common issues.
+1. Run **Windows Activation Validation** to verify activation status and detect common issues.
 2. If certificate-related errors are suspected, run **IMDS Certificate Check**.
-3. Apply suggested fixes or refer to official documentation for advanced troubleshooting.
+3. Apply the suggested fixes or refer to the official documentation for advanced troubleshooting.
 
 ### **Additional resources**
 
