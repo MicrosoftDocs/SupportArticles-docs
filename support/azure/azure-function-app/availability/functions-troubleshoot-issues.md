@@ -2,7 +2,7 @@
 title: Resolve Function App Down or Reporting Errors
 description: Describes how to troubleshoot an Azure Functions app if it's not responding or reports errors.
 ms.date: 08/05/2025
-ms.reviewer: v-liuamson; v-gsitser
+ms.reviewer: v-liuamson; v-gsitser, v-ryanberg
 ms.custom: sap:Function app down or reporting errors
 ---
 
@@ -10,7 +10,7 @@ ms.custom: sap:Function app down or reporting errors
 
 ## Common scenarios, error messages, and symptoms
 
-Microsoft Azure Functions app failures typically fit into three major categories: configuration issues, customer code issues, and platform issues. This article explores these issues in detail and introduces the appropriate diagnostic tools for troubleshooting.
+Microsoft Azure Function App failures typically fit into three major categories: configuration issues, customer code issues, and platform issues. This article explores these issues in detail and introduces the appropriate diagnostic tools for troubleshooting.
 
 ### Configuration issues
 
