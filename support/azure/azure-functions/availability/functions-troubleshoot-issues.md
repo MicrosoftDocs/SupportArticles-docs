@@ -10,7 +10,7 @@ ms.custom: sap:Function app down or reporting errors
 
 ## Common scenarios, error messages, and symptoms
 
-Microsoft Azure Function App failures typically fit into three major categories: configuration issues, customer code issues, and platform issues. This article explores these issues in detail and introduces the appropriate diagnostic tools for troubleshooting.
+Microsoft Azure Functions app failures typically fit into three major categories: configuration issues, customer code issues, and platform issues. This article explores these issues in detail and introduces the appropriate diagnostic tools for troubleshooting.
 
 ### Configuration issues
 
