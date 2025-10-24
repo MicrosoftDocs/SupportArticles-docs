@@ -190,6 +190,8 @@ items:
 
 - name: VM password reset
   items:
+  - name: Reset Password (RDP)
+    href: reset-rdp.md
   - name: Reset local Windows password for Azure VM offline
     href: reset-local-password-without-agent.md
   - name: Redeploy Windows virtual machine to new Azure node
