@@ -24,6 +24,8 @@ items:
     href: server-software-support.md
   - name: Windows 11
     href: windows-11-support-azure-virtual-machines.md
+  - name: Windows 10
+    href: ms-azure-windows-eos-client.md
   - name: Windows Server 2012 R2
     items:
     - name: Extended Security Updates for Windows Server 2012/2012 R2
@@ -32,6 +34,8 @@ items:
       href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Windows Server 2008 R2
     items:
+      - name: End of Support (EOS)
+        href: ms-azure-windows-eos.md
       - name: Extended Security Updates for Windows Server 2008/2008 R2 
         href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
       - name: Upgrade Windows Server 2008/2008 R2
@@ -47,7 +51,7 @@ items:
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
 
-- name: Extended Security Updates for Windows Server 2008/R2 and 2012/R2
+- name: Extended Security Updates for Windows Server 2012/R2 and 2008/R2
   items:
   - name: Overview
     href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
@@ -252,11 +256,11 @@ items:
     - name: Error code 0x80070490
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error Code 0x800f0831
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error Code 0x8007045b
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error Code 0x800f0831
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
 - name: My VM is not booting
   items:
