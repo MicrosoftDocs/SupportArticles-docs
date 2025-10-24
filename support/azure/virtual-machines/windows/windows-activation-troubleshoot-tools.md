@@ -52,14 +52,14 @@ You can run these tools in any of the following manners.
 
 ### 1. Download from GitHub and run within the VM 
 
-Follow the resource links in the previous sections to download scripts and run them manually.
+Download the scripts from GitHub, and then run them manually. To access the scripts, follow the resource links in the previous sections.
 
 ### 2. Use Azure Run Command
    
 - Navigate to your VM in the Azure portal: > **Operations** > **Run Command**.
 - Select the script from the list (see the following screenshot).
 
-:::image type="content" source="media/windows-activation-troubleshoot-tools/azure-portal-view.png" alt-text="Azure Portal view Run Command example." lightbox="media/windows-activation-troubleshoot-tools/azure-portal-view.png":::   
+:::image type="content" source="media/windows-activation-troubleshoot-tools/azure-portal-view.png" alt-text="Azure portal view Run Command example." lightbox="media/windows-activation-troubleshoot-tools/azure-portal-view.png":::   
   
 > [!NOTE]
 > Alternatively, you can run these commands by using a command-line interface (CLI) tool, Windows PowerShell, or Windows on ARM.
