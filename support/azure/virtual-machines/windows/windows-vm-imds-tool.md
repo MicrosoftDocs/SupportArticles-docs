@@ -1,6 +1,6 @@
 ---
-title: Azure Instance Metadata Service Troubleshooting Tool
-description: Azure Instance Metadata Service Troubleshooting Tool
+title: Azure VM Instance Metadata Service Verification Script
+description: Azure VM Instance Metadata Service Verification Script
 ms.service: azure-virtual-machines
 ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
@@ -10,7 +10,7 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-## Azure VM Attested Metadata Verification Script
+## Azure VM Instance Metadata Service Verification Script
 
 Location: [IMDSCertCheck](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/IMDSCertCheck)
 
@@ -29,9 +29,6 @@ Example Warning
 Certificate not found: 'CN=Microsoft Azure XXXX, ...'
 ```
 
-Please refer to the following [link to download missing certificates:](azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains)
-
----
-
+:::image type="content" source="media/windows-vm-imds-tool/windows-vm-imds-tool-portal-runcmd.png" alt-text="Screenshot of Portal Operations: Run command : IMDSCCertCheck.":::
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

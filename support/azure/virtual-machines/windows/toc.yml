@@ -222,7 +222,7 @@ items:
 - name: Instant Metadata Service (IMDS)
   items:
   - name: Overview
-    href: /azure/virtual-machines/instance-metadata-service?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    href: /azure/virtual-machines/instance-metadata-service?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Certificate Issues
     href: windows-vm-imds-certissues.md?branch=pr-en-us-10041
   - name: Connection Issues
