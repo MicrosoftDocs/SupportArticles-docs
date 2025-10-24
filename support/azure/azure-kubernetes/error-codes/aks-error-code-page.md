@@ -53,7 +53,7 @@ This article describes common AKS errors and how to resolve them.
 | LinkedAuthorizationFailed | Authorization fails for linked resources. | There are insufficient permissions for a resource in another subscription or a resource group. For more information, see [Troubleshoot the LinkedAuthorizationFailed error code](linkedauthorizationfailed-error.md). |
 | LoadBalancerInUseByVirtualMachineScaleSet | Can't modify load balancer currently in use. | The load balancer is actively being used by VM scale sets. For more information, see [Troubleshoot the LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code](../create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md). |
 | LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet | Network resources are in use by scale sets. | The load balancer or network security group (NSG) is attached to active VM scale sets. For more information, see [Troubleshoot LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code](networksecuritygroupinusebyvirtualmachinescaleset-error.md). |
-| | | For more information, see [](). |
+| Missing or invalid service principal | Service principal credentials are missing or invalid. | The service principal either doesn't exist, is expired, or lacks the required permissions. For more information, see [Missing or invalid service principal when creating an AKS cluster](../create-upgrade-delete/missing-or-invalid-service-principal). |
 | | | For more information, see [](). |
 | | | For more information, see [](). |
 | | | For more information, see [](). |
