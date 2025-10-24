@@ -14,7 +14,7 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 The Azure Instance Metadata Service (IMDS) is a REST API that's available at a well-known, non-routable IP address (`169.254.169.254`). You can only access it from within the VM. Communication between the VM and IMDS never leaves the host. HTTP clients must bypass web proxies within the VM when querying IMDS. IMDS IP address (`169.254.169.254`) must be handled in the same manner as the 168.63.129.16 IP address. 
 
-[Azure Instance Metadata Service (IMDS)](azure/virtual-machines/instance-metadata-service?tabs=windows)
+[Azure Instance Metadata Service (IMDS)](azure/virtual-machines/instance-metadata-service.md?tabs=windows)
 
 Run the [IMDSCertCheck](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/IMDSCertCheck) to diagnose any known isses. Additional information is also located below.
 
@@ -46,10 +46,10 @@ On any computer with internet access, download any of the missing intermediate C
 
 | | |
 | ---------- | ------------- |
-| Microsoft Azure RSA TLS Issuing CA 03| https://www.microsoft.com/pkiops/certs/Microsoft Azure RSA TLS Issuing CA 03 - xsign.crt| 
-| Microsoft Azure RSA TLS Issuing CA 04 | https://www.microsoft.com/pkiops/certs/Microsoft Azure RSA TLS Issuing CA 04 - xsign.crt|
+| Microsoft Azure RSA TLS Issuing CA 03 | https://www.microsoft.com/pkiops/certs/Microsoft Azure RSA TLS Issuing CA 03 - xsign.crt | 
+| Microsoft Azure RSA TLS Issuing CA 04 | https://www.microsoft.com/pkiops/certs/Microsoft Azure RSA TLS Issuing CA 04 - xsign.crt |
 | Microsoft Azure RSA TLS Issuing CA 07 | https://www.microsoft.com/pkiops/certs/Microsoft Azure RSA TLS Issuing CA 07 - xsign.crt |
-| Microsoft Azure RSA TLS Issuing CA 08 | https://www.microsoft.com/pkiops/certs/Microsoft Azure RSA TLS Issuing CA 08 - xsign.crt| 
+| Microsoft Azure RSA TLS Issuing CA 08 | https://www.microsoft.com/pkiops/certs/Microsoft Azure RSA TLS Issuing CA 08 - xsign.crt | 
 | |  |
 
 ### Step 2
