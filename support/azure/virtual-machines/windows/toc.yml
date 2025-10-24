@@ -219,7 +219,7 @@ items:
     - name: Poor performance on Windows Server 2012 R2
       href: poor-performance-emulated-storage-stack.md
 
-- name: Instant MetaData Service (IMDS)
+- name: Instant Metadata Service (IMDS)
   items:
   - name: Overview
     href: /azure/virtual-machines/instance-metadata-service?context=/troubleshoot/azure/virtual-machines/linux/context/context
