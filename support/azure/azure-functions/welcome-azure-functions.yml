@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
-title: Azure Functionstroubleshooting documentation # < 60 chars
-summary: Welcome to Azure Functions troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use the Azure Function App. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: Azure Functions troubleshooting documentation # < 60 chars
+summary: Welcome to Azure Functions troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Functions. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
   title: Troubleshoot Azure Functions issues
   description: Documentation for troubleshooting common issues with Azure Functions. # Required; article description that is displayed in search results. < 160 chars.
@@ -17,19 +17,19 @@ landingContent:
 
   # Card
   
-  - title: Availability
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Resolve Function App Down or Reporting Errors
-            url: availability/functions-troubleshoot-issues.md
-  
   - title: Application Code Deployment
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Application issues post deployment
             url: deployment/functions-deploying-runtime-issues-post-deployment.md
+
+  - title: Availability
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve Function App Down or Reporting Errors
+            url: availability/functions-troubleshoot-issues.md
 
   - title: Configuring and Managing Function Apps
     linkLists:
