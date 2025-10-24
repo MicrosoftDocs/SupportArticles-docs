@@ -12,6 +12,8 @@ ms.custom: sap:VM Extensions not operating correctly
 
 _Original KB number:_ &nbsp; 2965986
 
+[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
+
 This article discusses support policy for the VM agent for Microsoft Azure Virtual Machines and for VM agent extensions on infrastructure as a service (IaaS) for Microsoft Azure.
 
 Microsoft Support for VM agent extensions is limited to first-party extensions that are developed and published directly by Microsoft.
