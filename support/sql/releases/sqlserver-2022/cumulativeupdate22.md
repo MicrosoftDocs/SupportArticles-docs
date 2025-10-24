@@ -37,20 +37,20 @@ A downloadable Excel workbook that contains a summary list of builds, together w
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following table:
 
-| Bug reference | Description | Fix area | Component | Platform |
-|--|--|--|--|--|
-| <a id=4654519>[4654519](#4654519) </a> | Fixes an issue when using Elastic SAN over the iSCSI protocol, throttling errors (`HTTP 503`) from storage are surfaced in Windows as generic I/O device errors (`ERROR_IO_DEVICE`). | SQL Server Engine | Query Execution | Windows |
-| <a id=4723355>[4723355](#4723355) </a> | Fixes an issue when the SQL Agent reads feature switches for Managed Instances (MI) | SQL Server Engine | Query Execution | Windows |
-| <a id=4601228>[4601228](#4601228) </a> | Fixes a crash when importing a certificate (`.pfx`) that's not protected by a password | SQL Server Client Tools | SQL Server Manageability | All |
-| <a id=4713591>[4713591](#4713591) </a> | TODO | SQL Server Engine | Security Infrastructure  | All |
-| <a id=4723335>[4723335](#4723335) </a> | TODO | SQL Server Engine | High Availability and Disaster Recovery | All |
-| <a id=4573341>[4573341](#4573341) </a> | TODO | Integration Services | Integration Services | Windows |
-| <a id=4573769>[4573769](#4573769) </a> | Introduces automatic cleanup of stale LRS metadata (older than 36 days)  | TODO | TODO | Windows |
-| <a id=4582175>[4582175](#4582175) </a> | TODO | SQL Server Engine | SQL OS | Windows |
-| <a id=4598768>[4598768](#4598768) </a> | Fixes an issue with inconsistent behavior when importing a certificate using the dropdown or when using the import button in the Configuration Manager.<br><br>Also fixes an issue where selecting a certificate using the thumbprint wouldn't work if the case didn't match.| SQL Connectivity | SQL Connectivity | Windows |
-| <a id=4660895>[4660895](#4660895) </a> | Fixes an issue in SQL Server Analysis Services where Row-Level Security (RLS) filters could be skipped when combined with Object-Level Security (OLS) and Column-Level Security (CLS) in certain multi-role configurations. | Analysis Services | Analysis Services | Windows |
-| <a id=4666353>[4666353](#4666353) </a> | TODO | SQL Server Engine  | Replication | Windows |
-| <a id=4675941>[4675941](#4675941) </a> | TODO | SQL Server Engine | High Availability and Disaster Recovery | All |
+| Bug reference                          | Description                                                                                                                                                                                                                                                                   | Fix area                | Component                               | Platform |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | --------------------------------------- | -------- |
+| <a id=4654519>[4654519](#4654519) </a> | Fixes an issue when using Elastic SAN over the iSCSI protocol, throttling errors (`HTTP 503`) from storage are surfaced in Windows as generic I/O device errors (`ERROR_IO_DEVICE`).                                                                                          | SQL Server Engine       | Query Execution                         | Windows  |
+| <a id=4723355>[4723355](#4723355) </a> | Fixes an issue when the SQL Agent reads feature switches for Managed Instances (MI)                                                                                                                                                                                           | SQL Server Engine       | Query Execution                         | Windows  |
+| <a id=4601228>[4601228](#4601228) </a> | Fixes a crash when importing a certificate (`.pfx`) that's not protected by a password                                                                                                                                                                                        | SQL Server Client Tools | SQL Server Manageability                | All      |
+| <a id=4713591>[4713591](#4713591) </a> | TODO                                                                                                                                                                                                                                                                          | SQL Server Engine       | Security Infrastructure                 | All      |
+| <a id=4723335>[4723335](#4723335) </a> | TODO                                                                                                                                                                                                                                                                          | SQL Server Engine       | High Availability and Disaster Recovery | All      |
+| <a id=4573341>[4573341](#4573341) </a> | TODO                                                                                                                                                                                                                                                                          | Integration Services    | Integration Services                    | Windows  |
+| <a id=4573769>[4573769](#4573769) </a> | Introduces automatic cleanup of stale LRS metadata (older than 36 days)                                                                                                                                                                                                       | TODO                    | TODO                                    | Windows  |
+| <a id=4582175>[4582175](#4582175) </a> | TODO                                                                                                                                                                                                                                                                          | SQL Server Engine       | SQL OS                                  | Windows  |
+| <a id=4598768>[4598768](#4598768) </a> | Fixes an issue with inconsistent behavior when importing a certificate using the dropdown or when using the import button in the Configuration Manager.<br><br>Also fixes an issue where selecting a certificate using the thumbprint wouldn't work if the case didn't match. | SQL Connectivity        | SQL Connectivity                        | Windows  |
+| <a id=4660895>[4660895](#4660895) </a> | Fixes an issue in SQL Server Analysis Services where Row-Level Security (RLS) filters could be skipped when combined with Object-Level Security (OLS) and Column-Level Security (CLS) in certain multi-role configurations.                                                   | Analysis Services       | Analysis Services                       | Windows  |
+| <a id=4666353>[4666353](#4666353) </a> | TODO                                                                                                                                                                                                                                                                          | SQL Server Engine       | Replication                             | Windows  |
+| <a id=4675941>[4675941](#4675941) </a> | TODO                                                                                                                                                                                                                                                                          | SQL Server Engine       | High Availability and Disaster Recovery | All      |
 
 ## How to obtain or download this or the latest cumulative update package
 
@@ -101,17 +101,16 @@ You can verify the download by computing the hash of the *SQLServer2022-KB506845
 
 `certutil -hashfile SQLServer2022-KB5068450-x64.exe SHA256`
 
-|File name|SHA256 hash|
-|---------|---------|
-|SQLServer2022-KB5068450-x64.exe| 1020E8C8EEBFDE14D5253ECC216FB9F49B08692E989155C0D9E007F31FF41CA8 |
+| File name                       | SHA256 hash                                                      |
+| ------------------------------- | ---------------------------------------------------------------- |
+| SQLServer2022-KB5068450-x64.exe | 1020E8C8EEBFDE14D5253ECC216FB9F49B08692E989155C0D9E007F31FF41CA8 |
 
 </details>
 
 <details>
 <summary><b>Cumulative Update package file information</b></summary>
 
-<!-- TODO: replace with ESRP link when available -->
-Download [the list of files that are included in KB5068450](https://microsoft-my.sharepoint.com/:x:/p/v-shaywood/IQBm9PSP9edkQKJ6dd9dkvxqASh32wk4ogcqEiYmxUrq3Jc?e=VbsnZq).
+Download [the list of files that are included in KB5068450](https://download.microsoft.com/download/9b88d16d-f77d-4c10-a0bb-1ef126714c10/KB5068450.csv).
 
 </details>
 
