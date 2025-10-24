@@ -219,16 +219,16 @@ items:
     - name: Poor performance on Windows Server 2012 R2
       href: poor-performance-emulated-storage-stack.md
 
-- name: IMDS Troubleshooting
+- name: Instant MetaData Service (IMDS)
   items:
   - name: Overview
     href: /azure/virtual-machines/instance-metadata-service?context=/troubleshoot/azure/virtual-machines/linux/context/context
-  - name: IMDS Certs
+  - name: Certificate Issues
     href: windows-vm-imds-certissues.md?branch=pr-en-us-10041
-  - name: IMDS Connection
+  - name: Connection Issues
     href: windows-vm-imds-connection.md?branch=pr-en-us-10041
-  - name: IMDS Troubleshooting Tool
-    href: windows-vm-imds-connection.md?branch=pr-en-us-10041
+  - name: Troubleshooting Tool
+    href: windows-vm-imds-tool.md?branch=pr-en-us-10041
 
 
 - name: Windows Update and OS Upgrades

@@ -42,7 +42,7 @@ PowerShell 6 and later versions
 Invoke-RestMethod -Headers @{"Metadata"="true"} -Method GET -NoProxy -Uri "http://169.254.169.254/metadata/instance?api-version=2025-04-07" | ConvertTo-Json -Depth 64
 ```
 
-    *-NoProxy requires PowerShell V6 or greater. See our samples repository for examples with older PowerShell versions.*
+*-NoProxy requires PowerShell V6 or greater. See our samples repository for examples with older PowerShell versions.*
 
 If not, it means that the connection to the IMDS wire server is blocked somewhere, and access to it needs to be allowed. 
 
