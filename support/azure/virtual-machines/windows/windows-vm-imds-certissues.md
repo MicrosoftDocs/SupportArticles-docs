@@ -10,8 +10,6 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-[!INCLUDE [support-disclaimer](../../../includes/azure/virtual-machines-windows-troubleshoot-deploy-vm-top.md)]
-
 ## Overview
 
 The Azure Instance Metadata Service (IMDS) is a REST API that's available at a well-known, non-routable IP address (`169.254.169.254`). You can only access it from within the VM. Communication between the VM and IMDS never leaves the host. HTTP clients must bypass web proxies within the VM when querying IMDS. IMDS IP address (`169.254.169.254`) must be handled in the same manner as the 168.63.129.16 IP address. 
@@ -66,31 +64,9 @@ The commands are idempotent and won't make any changes if you've already importe
 CERTUTIL -ADDSTORE CA "MICROSOFT AZURE RSA TLS ISSUING CA 03 - XSIGN.CRT"
 CERTUTIL -ADDSTORE CA "MICROSOFT AZURE RSA TLS ISSUING CA 04 - XSIGN.CRT"
 CERTUTIL -ADDSTORE CA "MICROSOFT AZURE RSA TLS ISSUING CA 07 - XSIGN.CRT"
-CERTUTIL -ADDSTORE CA "MICROSOFT AZURE RSA TLS ISSUING CA 08 - XSIGN.CRT"
+CER
+TUTIL -ADDSTORE CA "MICROSOFT AZURE RSA TLS ISSUING CA 08 - XSIGN.CRT"
 ```
-
-## Azure VM Attested Metadata Verification Script
-
-Location: [IMDSCertCheck](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/IMDSCertCheck)
-
-This PowerShell script verifies the attestation signature provided by the Azure Instance Metadata Service (IMDS). It ensures that the certificate used in attestation is valid and trusted by attempting to build a complete certificate chain. This process helps confirm the integrity and authenticity of an Azure VM’s identity. The script is also available via Run Command.
-
-### Key Features
-
-- Confirms that `169.254.169.254` is reachable.
-- Retrieves attested metadata from the Azure Instance Metadata Service.
-- Extracts and decodes the cryptographic signature.
-- Attempts to build a certificate chain for validation.
-- Warns if any certificates in the chain are missing and provides a link to Microsoft documentation for remediation.
-
-```
-Example Warning
-Certificate not found: 'CN=Microsoft Azure XXXX, ...'
-```
-
-Please refer to the following [link to download missing certificates:](
-https://learn.microsoft.com/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains)
-
 ---
 
 
