@@ -182,7 +182,7 @@ landingContent:
             url: ./identify-memory-saturation-aks.md
 
  # Card 
-  - title: Azure Kubernetes Service (AKS) error codes
+  - title: Troubleshoot AKS error codes
     linkLists:
       - linkListType: how-to-guide
         links:
