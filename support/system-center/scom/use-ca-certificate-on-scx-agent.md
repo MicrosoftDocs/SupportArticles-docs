@@ -85,8 +85,7 @@ Use one of the following methods to configure the certificate on the the Unix/Li
     openssl pkcs12 -in <FileName>.pfx -nocerts -out /etc/opt/omi/ssl/omikey.pem -nodes -passin pass:"pfxpassword"
     ```
 
-> [!NOTE]
-> While exporting the private key from the certificate store, a new password has to be set for the new key file, unless you specify the `-nodes`, This option stands for `no DES` encryption which instructs OpenSSL to output the private key in an unencrypted format.
+    > While exporting the private key from the certificate store, a new password has to be set for the new key file, unless you specify the `-nodes`, This option stands for `no DES` encryption which instructs OpenSSL to output the private key in an unencrypted format.
 
 1. Export the certificate by using the following command:
 
