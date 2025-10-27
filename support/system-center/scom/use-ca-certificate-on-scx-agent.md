@@ -126,54 +126,54 @@ Use one of the following methods to configure the certificate on the the Unix/Li
 ### Method 2: Configure Certificate with Bash Script
 1. Save the below bash script extract_scx_cert.sh
 
-```console
-#!/bin/bash
-
-# Usage: sudo ./extract_scx_cert.sh /path/to/certificate.pfx <pfx_password>
- 
-PFX_FILE="$1"
-PFX_PASS="$2"
-SSL_DIR="/etc/opt/omi/ssl"
-KEY_FILE="$SSL_DIR/omikey.pem"
-CERT_FILE="$SSL_DIR/omi-host-$(hostname).pem"
-SYMLINK_FILE="$SSL_DIR/omi.pem"
- 
-if [[ -z "$PFX_FILE" || -z "$PFX_PASS" ]]; then
-  echo "Usage: $0 /path/to/certificate.pfx <pfx_password>"
-  exit 1
-fi
- 
-echo "🔐 Extracting private key..."
-openssl pkcs12 -in "$PFX_FILE" -nocerts -out "$KEY_FILE" -nodes -passin pass:"$PFX_PASS"
- 
-echo "📄 Extracting certificate..."
-openssl pkcs12 -in "$PFX_FILE" -clcerts -nokeys -out "$CERT_FILE" -passin pass:"$PFX_PASS"
- 
-echo "🔗 Creating symbolic link..."
-rm -f "$SYMLINK_FILE"
-ln -s "$CERT_FILE" "$SYMLINK_FILE"
- 
-echo "🔧 Setting permissions..."
-chmod 600 "$KEY_FILE"
-chmod 640 "$CERT_FILE" "$SYMLINK_FILE"
-chown root:omi "$CERT_FILE" "$SYMLINK_FILE"
-chown omi:omi "$KEY_FILE"
- 
-echo "🔄 Restarting omid service..."
-systemctl restart omid
-```
+    ```console
+    #!/bin/bash
+    
+    # Usage: sudo ./extract_scx_cert.sh /path/to/certificate.pfx <pfx_password>
+     
+    PFX_FILE="$1"
+    PFX_PASS="$2"
+    SSL_DIR="/etc/opt/omi/ssl"
+    KEY_FILE="$SSL_DIR/omikey.pem"
+    CERT_FILE="$SSL_DIR/omi-host-$(hostname).pem"
+    SYMLINK_FILE="$SSL_DIR/omi.pem"
+     
+    if [[ -z "$PFX_FILE" || -z "$PFX_PASS" ]]; then
+      echo "Usage: $0 /path/to/certificate.pfx <pfx_password>"
+      exit 1
+    fi
+     
+    echo "🔐 Extracting private key..."
+    openssl pkcs12 -in "$PFX_FILE" -nocerts -out "$KEY_FILE" -nodes -passin pass:"$PFX_PASS"
+     
+    echo "📄 Extracting certificate..."
+    openssl pkcs12 -in "$PFX_FILE" -clcerts -nokeys -out "$CERT_FILE" -passin pass:"$PFX_PASS"
+     
+    echo "🔗 Creating symbolic link..."
+    rm -f "$SYMLINK_FILE"
+    ln -s "$CERT_FILE" "$SYMLINK_FILE"
+     
+    echo "🔧 Setting permissions..."
+    chmod 600 "$KEY_FILE"
+    chmod 640 "$CERT_FILE" "$SYMLINK_FILE"
+    chown root:omi "$CERT_FILE" "$SYMLINK_FILE"
+    chown omi:omi "$KEY_FILE"
+     
+    echo "🔄 Restarting omid service..."
+    systemctl restart omid
+    ```
 
 1. Change Script permissions to be executed
 
-```console
-chmod +x /home/user/extract_scx_cert.sh
-```
+    ```console
+    chmod +x /home/user/extract_scx_cert.sh
+    ```
 
 1. Execute the script with the parameters as below with the path to the pfx file and the password for it:
 
-```console
-sudo ./extract_scx_cert.sh /path/to/certificate.pfx pfx_password
-```
+    ```console
+    sudo ./extract_scx_cert.sh /path/to/certificate.pfx pfx_password
+    ```
 
 ## Validate that the certificate is signed by the CA
 
@@ -199,8 +199,7 @@ sudo ./extract_scx_cert.sh /path/to/certificate.pfx pfx_password
     notAfter=Jul 25 12:12:14 2033 GMT
     ```
 
-> [!NOTE]
-> The path `/etc/opt/microsoft/scx/ssl` contains a symbolic link `scx.pem -> /etc/opt/omi/ssl/omi.pem` that is used by the SCX agent to use the OMI certificate that was created earlier.
+    > The path `/etc/opt/microsoft/scx/ssl` contains a symbolic link `scx.pem -> /etc/opt/omi/ssl/omi.pem` that is used by the SCX agent to use the OMI certificate that was created earlier.
 
 1. Run a network trace on one of the management servers/gateways in the UNIX/Linux resource pool.
 1. Run the following `WinRM` command against the agent and make sure you get the instance output:
