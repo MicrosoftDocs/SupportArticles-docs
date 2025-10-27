@@ -7,7 +7,7 @@ author: JarrettRenshaw
 ms.author: jarrettr
 editor: v-jsitser
 ms.reviewer: maheshallu, piw, v-leedennis
-ms.service: azure-cloud-services-extended-support
+ms.service: azure-service-fabric
 ms.custom: sap:Problem Connecting To or From Cloud Service
 ---
 # Allow internet traffic to Cloud Services (extended support) by using an application gateway
