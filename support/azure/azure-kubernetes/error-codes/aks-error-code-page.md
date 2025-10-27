@@ -19,10 +19,11 @@ This article describes common AKS errors and how to resolve them.
 | **Error code** | **Description** | **Details and mitigation** |
 | --- | ---------- | ----------------- |
 | AADSTS7000222 - BadRequest or InvalidClientSecret | Authentication failure with Azure Active Directory. | This involves invalid or expired service principal credentials. For more information, see [AADSTS7000222 - BadRequest or InvalidClientSecret error](../create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md). |
-| Argument list too long | Application fails due to command line argument limitations. | The command line arguments exceed system limits in containerized applications. For more information, see [Application failures caused by the "argument list too long" error message](../create-upgrade-delete/application-fails-argument-list-too-long.md). |
+| AKSCapacityError | Regional capacity constraints. | There's insufficient Azure capacity in the target region. For more information, see [Troubleshoot the AksCapacityHeavyUsage error code](akscapacityheavyusage-error.md). |
 | AksCapacityHeavyUsage | Insufficient capacity in the Azure region. | There's high demand or limited resources in the selected region. For more information, see [Troubleshoot the AksCapacityHeavyUsage error code](akscapacityheavyusage-error.md). |
 | AKSOperationPreempted | Cluster operation is interrupted by a higher priority operation. | There are concurrent operations on the cluster, causing conflicts. For more information, see [AKSOperationPreempted or AKSOperationPreemptedByDelete error when performing a new operation](aksoperationpreempted-error.md). |
 | AKS upgrade blocked | Upgrade fails due to version compatibility issues. | There's version skew, incompatibility, or an unsupported upgrade path. For more information, see [Troubleshoot AKS upgrade errors because of version skew, incompatibility, or lack of support](aks-upgrade-blocked.md). |
+| Argument list too long | Application fails due to command line argument limitations. | The command line arguments exceed system limits in containerized applications. For more information, see [Application failures caused by the "argument list too long" error message](../create-upgrade-delete/application-fails-argument-list-too-long.md). |
 | AvailabilityZoneNotSupported | Selected availability zone isn't supported. | the virtual machine (VM) size or region doesn't support the specified availability zone. For more information, see [Troubleshoot the AvailabilityZoneNotSupported error code](availabilityzonenotsupported-error.md). |
 | BadRequest or InvalidClientSecret | Authentication or request validation failed. | This involves an invalid service principal credentials or a malformed request. For more information, see [Error AADSTS7000222 - BadRequest or InvalidClientSecret](bad-request-or-invalid-client-secret-error.md). |
 | CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted | Unable to delete load balancer with active private link connections. | The load balancer has active private endpoint connections that must be removed first. For more information, see [Cluster autoscaler fails to scale with "cannot scale cluster autoscaler enabled node pool" error](lb-pvtlinksvcwithpvtendptconn-error.md). |
@@ -62,55 +63,45 @@ This article describes common AKS errors and how to resolve them.
 | OrasPullNetworkTimeoutVMExtensionError | ORAS pull operation timed out. | There's a network timeout when you try to create and deploy an AKS cluster. For more information, see [OrasPullNetworkTimeoutVMExtensionError error code (211) when deploying an AKS cluster](vmextensionerror-oraspullnetworktimeout.md). |
 | OrasPullUnauthorizedVMExtensionError | Not authorized to pull artifacts from registry. | Authentication fails when you try to create and deploy an AKS cluster. For more information, see [OrasPullUnauthorizedVMExtensionError error code (212) when deploying an AKS cluster](vmextensionerror-oraspullunauthorized.md). |
 | OutboundConnFailVMExtensionError (50) | Node can't establish outbound connectivity. | A firewall, network security group (NSG), or routing prevents outbound connections. For more information, see [Troubleshoot the OutboundConnFailVMExtensionError error code (50)](../create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
+| PublicIPAddr/InUseSubnet/NetSecGrp deletion error | Can't delete in-use networking resources. | Resources have active dependencies that must be removed. For more information, see [A public IP address/subnet/network security group in use can't be deleted](../create-upgrade-delete/cannot-delete-ip-subnet-nsg.md). |
+| PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted | Networking resources have active dependencies. | Network resources are in use and can't be deleted without removing dependencies. For more information, see [A public IP address/subnet/network security group in use cannot be deleted](publicipaddr-inusesubnet-netsecgrp-error.md). |
+| PublicIPCountLimitReached | Public IP address quota exceeded. | The subscription or region has reached the public IP address limit. For more information, see [Troubleshoot the PublicIPCountLimitReached error code](publicipcountlimitreached-error.md). |
+| QuotaExceeded or InsufficientVCPUQuota | Virtual machine quota exceeded | There's insufficient vCPU quota for the requested VM sizes or count. For more information, see [Troubleshoot the "Quotaexceeded" error code](quota-exceeded-error.md). |
+| QuotaExceeded or InsufficientVCPUQuota (creation/upgrade) | Quota limit prevents cluster operation. | The vCPU quota is insufficient for cluster creation or upgrade. For more information, see ["QuotaExceeded" or "InsufficientVCPUQuota" error during AKS creation or upgrade](../create-upgrade-delete/quota-exceeded-during-creation-upgrade.md). |
+| RequestDisallowedByPolicy | Azure policy blocks the request. | The request violates assigned Azure policy definitions. For more information, see [RequestDisallowedByPolicy error when deploying an AKS cluster](requestdisallowedbypolicy-error.md). |
+| ServiceCidrOverlapExistingSubnetsCidr | Service Classless Inter-Domain Routing (CIDR) overlaps with subnet CIDR | The Kubernetes service CIDR conflicts with the existing subnet address space. For more information, see [Troubleshoot the ServiceCidrOverlapExistingSubnetsCidr error during an AKS cluster upgrade](servicecidroverlapexistingsubnetscidr-error.md). |
+| ServicePrincipalValidationClientError | Service principal validation fails. | There's a client-side error when validating service principal credentials. For more information, see [Troubleshoot the ServicePrincipalValidationClientError error code](serviceprincipalvalidationclienterror-error.md). |
+| SubnetIsDelegated | 	Subnet is delegated to another service. | The subnet has a delegation that conflicts with AKS requirements. For more information, see [Troubleshoot the SubnetIsDelegated error code](subnetisdelegated-error.md). |
+| SubnetIsFull | No available IP addresses in subnet. | All IP addresses in the subnet are allocated. For more information, see [Troubleshoot the SubnetIsFull error code during an AKS cluster upgrade](subnetisfull-error.md). |
+| SubnetIsFull (upgrade) | Insufficient IPs for upgrade operation. | There aren't enough free IP addresses to perform the node pool upgrade. For more information, see [Troubleshoot the "SubnetIsFull" error code during an AKS cluster upgrade](../create-upgrade-delete/error-code-subnetisfull-upgrade.md). |
+| SubnetWithExternalResourcesCannotBeUsedByOtherResources | Subnet contains external resources. | The subnet has resources from other services preventing AKS usage. For more information, see [Troubleshoot the SubnetWithExternalResourcesCannotBeUsedByOtherResources error code](subnetwithexternalresourcescannotbeusedbyotherresources-error.md). |
+| SubscriptionRequestsThrottled | Subscription-level throttling active. | Too many requests at the subscription level causes rate limiting. For more information, see [Troubleshoot the SubscriptionRequestsThrottled error code (429)](subscriptionrequeststhrottled.md). |
+| SubscriptionRequestsThrottled (429) | Rate limit exceeded for subscription. | The request rate exceeds subscription-level throttling limits. For more information, see [Troubleshoot SubscriptionRequestsThrottled error code (429)](../create-upgrade-delete/error-code-subscriptionrequeststhrottled.md). |
 |  |  |
 
 ## T-Z error codes
 
 | **Error code** | **Description** | **Details and mitigation** |
 | --- | ---------- | ----------------- |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
-| | | For more information, see [](). |
+| TCP time-outs such as 10250 I/O | TCP connection timeouts on kubelet port. | There are network connectivity issues or a firewall is blocking port 10250. For more information, see [10250 I/O timeouts error when running kubectl log command](../connectivity/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md). |
+| Throttled | API requests are being throttled. | The request rate exceeds Azure Resource Manager limits. For more information, see [Troubleshoot the Throttled error code (429)](throttled-error.md). |
+| Throttled (429) | HTTP 429 rate limiting in effect | 	Too many requests causes Azure API throttling. For more information, see [Troubleshoot Throttled error code (429)
+](../create-upgrade-delete/error-code-aksrequeststhrottled.md). |
+| tls - client offered only unsupported versions | Transport Layer Security (TLS) version mismatch | The client attempts connection with unsupported TLS versions. For more information, see ["TLS: client offered only unsupported versions" error on client when connecting to the AKS API server](../create-upgrade-delete/tls-client-offered-unsupported-versions.md). |
+| TooManyRequestsReceived or SubscriptionRequestsThrottled | Request throttling active. | An excessive request volume triggers rate limiting. For more information, see [Troubleshoot TooManyRequestsReceived or SubscriptionRequestsThrottled error code](toomanyrequestsreceived-error.md). |
+| UnsatisfiablePDB | Pod Disruption Budget (PDB) can't be satisfied. | PDB constraints prevent required node operations. For more information, see [Error "UnsatisfiablePDB" when upgrading an AKS cluster](unsatisfiablepdb-error.md). |
+| Upgrade issues with Gen2 VMs on Windows AKS cluster | Node pools not upgraded to Gen2 during image upgrade. | There's a known limitation with Windows node pool Gen2 migration. For more information, see [Windows Server node pools not upgraded to Gen2 during cluster node image upgrade](../create-upgrade-delete/nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md). |
+| VirtualNetworkNotInSucceededState | Virtual network (VNet) not in successful provisioning state | VNet is in failed, updating, or other non-successful state. For more information, see [Troubleshoot the VirtualNetworkNotInSucceededState error code](virtualnetworknotinsucceededstate-error.md). |
+| VMExtensionError_CniDownloadTimeout | Container Network Interface (CNI) plugin download timeout. | There are network issues preventing a CNI plugin download. For more information, see [Troubleshoot the VMExtensionError_CniDownloadTimeout error code (41)](vmextensionerror-cnidownloadtimeout.md). |
+| VMExtensionError_OutboundConnFail | VM extension can't establish outbound connection. | Outbound connectivity is blocked by network configuration. For more information, see [Troubleshoot the VMExtensionError_OutboundConnFail error code (50)](vmextensionerror-outboundconnfail.md). |
+| VMExtensionError_K8SAPIServerConnFail | Can't connect to Kubernetes API server. | The network or a firewall prevents API server connectivity. For more information, see [Troubleshoot the VMExtensionError_K8SAPIServerConnFail error code (51)](vmextensionerror-k8sapiserverconnfail.md). |
+| VMExtensionError_K8SAPIServerDNSLookupFail | DNS lookup failure for API server. | There are DNS resolution issues for the API server endpoint. For more information, see [Troubleshoot the VMExtensionError_K8SAPIServerDNSLookupFail error code (52)](vmextensionerror-k8sapiserverdnslookupfail.md). |
+| VMExtensionError_VHDFileNotFound | Virtual hard disk (VHD) file not found. | The node image VHD is missing or inaccessible. For more information, see [VMExtensionError_VHDFileNotFound error code (65) when deploying an AKS cluster](vmextensionerror-vhdfilenotfound.md). |
+| VMExtensionProvisioningTimeout | VM extension provisioning times out. | The extension installation exceeded the timeout period. For more information, see [Troubleshoot the VMExtensionProvisioningTimeout error](../create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md). |
+| VMExtensionError_ProvisioningTimeout | Extension provisioning timeout error. | The VM extension fails to provision within the time limit. For more information, see [Troubleshoot the VMExtensionProvisioningTimeout error code](vmextensionerror-provisioningtimeout.md). |
+| WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY | Windows node can't verify API server connectivity. | The Windows-specific API server connectivity check fails. For more information, see [Troubleshoot WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error code (5)](windows-cse-error-check-api-server-connectivity-error.md). |
+| WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY (5) | Windows Custom Script Extension API connectivity error. | Windows node provisioning fails due to API server connectivity. For more information, see [Troubleshoot WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)](../create-upgrade-delete/windows-cse-error-check-api-server-connectivity.md). |
+| ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest | VM allocation fails. | You're unable to allocate VMs due to capacity, zone, or constraint issues. For more information, see [Troubleshoot the ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error code](zonalallocation-allocationfailed-error.md). |
 |  |  |
 
 ## References
