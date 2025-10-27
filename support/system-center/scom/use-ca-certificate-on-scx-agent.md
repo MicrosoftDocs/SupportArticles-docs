@@ -75,50 +75,39 @@ On a CA server in your SCOM environment, follow these steps to create a certific
 1. Export the CA and Intermediate CA certificate (if applicable) to the *root* store of all the management servers/gateways in the UNIX/Linux resource pool.
 
 ## Copy and edit the certificate on the Unix/Linux server
+Use one of the following methods to configure the certificate on the the Unix/Linux server:
 
+### Method 1: Configure Certificate Manually
 1. Copy the certificate to the Unix/Linux server for which the certificate was issued.
 1. Export the private key by using the following command:
 
     ```console
-    openssl pkcs12 -in <FileName>.pfx -nocerts -out key.pem
+    openssl pkcs12 -in <FileName>.pfx -nocerts -out /etc/opt/omi/ssl/omikey.pem -nodes -passin pass:"pfxpassword"
     ```
 
-    While exporting the private key from the certificate store, a new password has to be set for the new key file.
-
-    :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-export-private-key.png" alt-text="Screenshot that shows the command to export the private key.":::
-
-    After the export is completed, you should see a *key.pem* file:
-
-    :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-get-key-dot-pem-file.png" alt-text="Screenshot that shows the command to get the private key file.":::
+> [!NOTE]
+> While exporting the private key from the certificate store, a new password has to be set for the new key file, unless you specify the `-nodes`, This option stands for `no DES` encryption which instructs OpenSSL to output the private key in an unencrypted format.
 
 1. Export the certificate by using the following command:
 
     ```console
-    openssl pkcs12 -in <FileName>.pfx -clcerts -nokeys -out omi.pem
+    openssl pkcs12 -in <FileName>.pfx -clcerts -nokeys -out /etc/opt/omi/ssl/omi-host-$(hostname).pem -passin pass:"pfxpassword"
     ```
 
-    While exporting the certificate from the certificate store, you have to enter the password for the *\<FileName>.pfx* file.
-
-    :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-export-certificate.png" alt-text="Screenshot that shows the command to export the certificate.":::
-
-    After the export is completed, you should see an *omi.pem* file:
-
-    :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-get-omi-dot-pem-file.png" alt-text="Screenshot that shows the command to get the certificate file.":::
-
-1. Remove the password from the private key by using the following command:
+1. Delete and create a new symbolic link:
 
     ```console
-    openssl rsa -in key.pem -out omikey.pem 
+    rm -f /etc/opt/omi/ssl/omi.pem
+    ln -s /etc/opt/omi/ssl/omi-host-$(hostname).pem /etc/opt/omi/ssl/omi.pem
     ```
-
-    :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-remove-password-from-private-key.png" alt-text="Screenshot that shows the command to remove password from the private key.":::
-
-    This action is needed since the Linux agent doesn't know the password for the file.
-
-1. Move the *omikey.pem* file to the Open Management Infrastructure (OMI) directory by using the following command:
+   
+1. Set the correct permissions and ownership on omikey.pem, Certificate and Symbolic Link:
 
     ```console
-    mv omikey.pem /etc/opt/omi/ssl/omikey.pem 
+    chmod 600 /etc/opt/omi/ssl/omikey.pem
+    chmod 640 /etc/opt/omi/ssl/omi-host-$(hostname).pem /etc/opt/omi/ssl/omi.pem
+    chown omi:omi /etc/opt/omi/ssl/omikey.pem
+    chown root:omi /etc/opt/omi/ssl/omi-host-$(hostname).pem /etc/opt/omi/ssl/omi.pem
     ```
 
 1. Restart the SCX agent by using the following command:
@@ -134,6 +123,58 @@ On a CA server in your SCOM environment, follow these steps to create a certific
     ```
 
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-validate-omi-processes.png" alt-text="Screenshot that shows the command to validate omi processes running." lightbox="media/use-ca-certificate-on-scom-linux-agent/command-validate-omi-processes.png":::
+
+### Method 2: Configure Certificate with Bash Script
+1. Save the below bash script extract_scx_cert.sh
+
+```console
+#!/bin/bash
+
+# Usage: sudo ./extract_scx_cert.sh /path/to/certificate.pfx <pfx_password>
+ 
+PFX_FILE="$1"
+PFX_PASS="$2"
+SSL_DIR="/etc/opt/omi/ssl"
+KEY_FILE="$SSL_DIR/omikey.pem"
+CERT_FILE="$SSL_DIR/omi-host-$(hostname).pem"
+SYMLINK_FILE="$SSL_DIR/omi.pem"
+ 
+if [[ -z "$PFX_FILE" || -z "$PFX_PASS" ]]; then
+  echo "Usage: $0 /path/to/certificate.pfx <pfx_password>"
+  exit 1
+fi
+ 
+echo "🔐 Extracting private key..."
+openssl pkcs12 -in "$PFX_FILE" -nocerts -out "$KEY_FILE" -nodes -passin pass:"$PFX_PASS"
+ 
+echo "📄 Extracting certificate..."
+openssl pkcs12 -in "$PFX_FILE" -clcerts -nokeys -out "$CERT_FILE" -passin pass:"$PFX_PASS"
+ 
+echo "🔗 Creating symbolic link..."
+rm -f "$SYMLINK_FILE"
+ln -s "$CERT_FILE" "$SYMLINK_FILE"
+ 
+echo "🔧 Setting permissions..."
+chmod 600 "$KEY_FILE"
+chmod 640 "$CERT_FILE" "$SYMLINK_FILE"
+chown root:omi "$CERT_FILE" "$SYMLINK_FILE"
+chown omi:omi "$KEY_FILE"
+ 
+echo "🔄 Restarting omid service..."
+systemctl restart omid
+```
+
+1. Change Script permissions to be executed
+
+```console
+chmod +x /home/user/extract_scx_cert.sh
+```
+
+1. Execute the script with the parameters as below with the path to the pfx file and the password for it:
+
+```console
+sudo ./extract_scx_cert.sh /path/to/certificate.pfx pfx_password
+```
 
 ## Validate that the certificate is signed by the CA
 
@@ -158,6 +199,9 @@ On a CA server in your SCOM environment, follow these steps to create a certific
     notBefore=Jul 25 11:36:44 2022 GMT
     notAfter=Jul 25 12:12:14 2033 GMT
     ```
+
+> [!NOTE]
+> The path `/etc/opt/microsoft/scx/ssl` contains a symbolic link `scx.pem -> /etc/opt/omi/ssl/omi.pem` that is used by the SCX agent to use the OMI certificate that was created earlier.
 
 1. Run a network trace on one of the management servers/gateways in the UNIX/Linux resource pool.
 1. Run the following `WinRM` command against the agent and make sure you get the instance output:
