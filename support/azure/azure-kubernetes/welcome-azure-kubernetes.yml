@@ -187,5 +187,5 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Azure Kubernetes Service (AKS) error codes
-            url: ./aks-error-code-page.md
+            url: aks-error-code-page.md
 
