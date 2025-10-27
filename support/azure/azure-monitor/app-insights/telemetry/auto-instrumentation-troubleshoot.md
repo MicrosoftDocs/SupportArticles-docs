@@ -3,9 +3,9 @@ title: Troubleshoot Application Insights Autoinstrumentation
 description: Provides troubleshooting help for problems in autoinstrumentation in Application Insights.
 author: JarrettRenshaw
 ms.author: jarrettr
-ms.reviewer: matthofa, v-nawrothkai
 ms.service: azure-monitor
-ms.custom: sap:Missing or incorrect telemetry and performance issues
+ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
+ms.reviewer: matthofa, v-nawrothkai, v-ryanberg
 ms.date: 10/14/2025
 ---
 # Troubleshoot Application Insights autoinstrumentation
@@ -13,7 +13,7 @@ ms.date: 10/14/2025
 This article helps you troubleshoot problems that affect autoinstrumentation in Application Insights.
 
 > [!NOTE]
-> Autoinstrumentation was known as "codeless attach" before October 2021.
+> Autoinstrumentation was known as *codeless attach* before October 2021.
 
 ## Telemetry data isn't reported after you enable autoinstrumentation
 
@@ -48,7 +48,7 @@ For autoinstrumentation to work successfully, these libraries must be removed.
 
 If you encounter problems that are caused by the Application Insights SDK itself after you enable autoinstrumentation, collect self-diagnostic logs to diagnose the problems. For more information, see [How to collect self-diagnostic logs for Application Insights SDKs](enable-self-diagnostics.md).
 
-### Trouble deploying the Application Insights Monitoring Agent extension for VMs and virtual machine scale sets
+## Trouble deploying the Application Insights Monitoring Agent extension for VMs and virtual machine scale sets
 
 > [!NOTE]
 > These troubleshooting tips apply to .NET applications.
@@ -64,8 +64,112 @@ If your extension deployed successfully but you're unable to see telemetry, it c
 - Conflicting dynamic link libraries (DLLs) in an app's bin directory
 - Conflict with IIS shared configuration
 
+## Issues with Java app running on Azure Functions
+
+### Slow startup times
+
+Your Java functions might have slow startup times if you adopted this feature before February 2023. From the function app **Overview** pane, go to **Configuration** in the navigation menu. Then, select **Application settings** and use the following steps to fix the issue.
+
+### [Windows](#tab/windows)
+
+1. Check to see if the following settings exist and remove them:
+
+    ```
+    XDT_MicrosoftApplicationInsights_Java -> 1
+    ApplicationInsightsAgent_EXTENSION_VERSION -> ~2
+    ```
+
+2. Enable the latest version by adding this setting:
+
+    ```
+    APPLICATIONINSIGHTS_ENABLE_AGENT: true
+    ```
+
+### [Linux Dedicated/Premium](#tab/linux)
+
+1. Check to see if the following settings exist and remove them:
+
+    ```
+    ApplicationInsightsAgent_EXTENSION_VERSION -> ~3
+    ```
+
+1. Enable the latest version by adding this setting:
+
+    ```
+    APPLICATIONINSIGHTS_ENABLE_AGENT: true
+    ```
+
+---
+
+### Duplicate logs
+
+If you're using `log4j` or `logback` for console logging, distributed tracing for Java Functions creates duplicate logs. These duplicate logs are then sent to Application Insights. To avoid this behavior, use the following workarounds.
+
+#### Log4j
+
+Add the following filter to your log4j.xml:
+
+```xml
+<Filters>
+  <ThresholdFilter level="ALL" onMatch="DENY" onMismatch="NEUTRAL"/>
+</Filters>
+```
+
+Example:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+      <Filters>
+        <ThresholdFilter level="ALL" onMatch="DENY" onMismatch="NEUTRAL"/>
+      </Filters>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="error">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
+```
+
+#### Logback
+
+Add the following filter to your logback.xml: 
+
+```xml
+<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+  <level>OFF</level>
+</filter>  
+```
+
+Example:
+
+```xml
+<configuration debug="true">
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- encoders are  by default assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%kvp- %msg%n</pattern>
+      <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+        <level>OFF</level>
+      </filter>  
+    </encoder>
+  </appender>
+  <root level="debug">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>
+```
+
 ## More information
 
 If you have additional questions about Application Insights autoinstrumentation, you can post them on our [Microsoft Q&A question page](/answers/topics/azure-monitor.html).
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
