@@ -63,3 +63,10 @@ landingContent:
             url: azure-monitor-agent/migration/step-5-deploy-at-scale.md
           - text: Step 6 - Configure other services
             url: azure-monitor-agent/migration/step-6-configure-other-services.md
+
+  - title: Troubleshoot Azure Diagnostic Settings
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Deleted Azure event hub is automatically re-created by diagnostic settings
+            url: diagnostic-settings/data-flow/deleted-event-hub-automatically-recreated.md

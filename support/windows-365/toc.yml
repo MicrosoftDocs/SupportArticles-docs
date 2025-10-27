@@ -11,10 +11,10 @@ items:
     items:
     - name: Known issues with Windows 365 Business
       href: known-issues.md
-  - name: Resize
+  - name: Provisioning
     items:
-    - name: Resize a Windows 365 Business Cloud PC
-      href: resize-windows-365-business-cloud-pc.md
+    - name: Remove Windows 365 Business Cloud PCs from Grace Using Graph
+      href: how-to-deprovision-business-grace-with-graph-explorer.md
 - name: Windows 365 Enterprise
   items:
   - name: AI-enabled Windows 365
