@@ -51,7 +51,7 @@ This article offers general recommendations and specific suggestions to troubles
 
 1. Browse to `https://yoursitename.scm.azurewebsites.net/ApplicationInsights`.
 
-    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot that shows the link above the results page."border ="false":::
+    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot that shows the link above the results page."border ="false" lightbox="media/troubleshoot-app-service/app-insights-sdk-status.png" lightbox="media/troubleshoot-app-service/app-insights-sdk-status.png":::
 
     * Confirm that **Application Insights Extension Status** is `Pre-Installed Site Extension, version 2.8.x.xxxx, is running.`
 
@@ -68,7 +68,7 @@ This article offers general recommendations and specific suggestions to troubles
         > [!IMPORTANT]
         > This functionality is in preview.
 
-        :::image type="content"source="media/troubleshoot-app-service/interop.png" alt-text=" Screenshot that shows the interop setting enabled.":::
+        :::image type="content"source="media/troubleshoot-app-service/interop.png" alt-text=" Screenshot that shows the interop setting enabled." lightbox="media/troubleshoot-app-service/interop.png":::
 
         The data is sent using a codeless approach, even if the Application Insights SDK was originally used or attempted to be used.
 
@@ -95,7 +95,7 @@ This article offers general recommendations and specific suggestions to troubles
 
 1. Examine the log file to see that the agent started successfully: browse to `https://yoursitename.scm.azurewebsites.net/`, under SSH change to the root directory, the log file is located under LogFiles/ApplicationInsights.
   
-    :::image type="content"source="media/troubleshoot-app-service/app-insights-java-status.png" alt-text="Screenshot of the link above results page.":::
+    :::image type="content"source="media/troubleshoot-app-service/app-insights-java-status.png" alt-text="Screenshot of the link above results page." lightbox="media/troubleshoot-app-service/app-insights-java-status.png":::
 
 1. After enabling application monitoring for your Java app, you can validate that the agent is working by looking at the live metrics - even before you deploy and app to App Service you'll see some requests from the environment. Remember that the full set of telemetry is only available when you have your app deployed and running.
 
@@ -108,7 +108,7 @@ This article offers general recommendations and specific suggestions to troubles
 1. Check that `ApplicationInsightsAgent_EXTENSION_VERSION` app setting is set to a value of `~2`.
 1. Browse to `https://yoursitename.scm.azurewebsites.net/ApplicationInsights`.  
 
-    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot of the link above results page."border ="false":::
+    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot of the link above results page."border ="false" lightbox="media/troubleshoot-app-service/app-insights-sdk-status.png":::
 
     * Confirm that the `Application Insights Extension Status` is `Pre-Installed Site Extension, version 2.8.x.xxxx, is running.`
 
@@ -173,7 +173,7 @@ If you're missing telemetry, follow these steps to confirm that autoinstrumentat
 
 1. Confirm that autoinstrumentation is enabled in the Application Insights experience on your App Service resource.
 
-    :::image type="content"source="media/troubleshoot-app-service/enable.png" alt-text="Screenshot of Application Insights tab with enable selected." lightbox="media/troubleshoot-app-service/enable.png":::
+    :::image type="content"source="media/troubleshoot-app-service/enable.png" alt-text="Screenshot of Application Insights tab with enable selected." lightbox="media/troubleshoot-app-service/enable.png" lightbox="media/troubleshoot-app-service/enable.png":::
 
 1. Confirm that the `ApplicationInsightsAgent_EXTENSION_VERSION` app setting is set to a value of `~3` and that your `APPLICATIONINSIGHTS_CONNECTION_STRING` points to the appropriate Application Insights resource.
 
@@ -335,7 +335,7 @@ For the latest updates and bug fixes, [consult the release notes](/azure/azure-m
 
 1. Browse to `https://yoursitename.scm.azurewebsites.net/ApplicationInsights`.  
 
-    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot that shows the preceding link's results page."border ="false":::
+    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot that shows the preceding link's results page."border ="false" lightbox="media/troubleshoot-app-service/app-insights-sdk-status.png":::
 
     * Confirm that `Application Insights Extension Status` is `Pre-Installed Site Extension, version 2.8.x.xxxx` and is running.
 
@@ -411,7 +411,7 @@ As a temporary workaround, you could set the app setting `ApplicationInsightsAge
 
 1. Browse to `https://yoursitename.scm.azurewebsites.net/ApplicationInsights`.
 
-    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot that shows the link above the results page."border ="false":::
+    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot that shows the link above the results page."border ="false" lightbox="media/troubleshoot-app-service/app-insights-sdk-status.png":::
 
     * Confirm that **Application Insights Extension Status** is `Pre-Installed Site Extension, version 2.8.x.xxxx, is running.`
 
@@ -428,7 +428,7 @@ As a temporary workaround, you could set the app setting `ApplicationInsightsAge
         > [!IMPORTANT]
         > This functionality is in preview.
 
-        :::image type="content"source="media/troubleshoot-app-service/interop.png" alt-text=" Screenshot that shows the interop setting enabled.":::
+        :::image type="content"source="media/troubleshoot-app-service/interop.png" alt-text=" Screenshot that shows the interop setting enabled." lightbox="media/troubleshoot-app-service/interop.png":::
 
         The data is sent using a codeless approach, even if the Application Insights SDK was originally used or attempted to be used.
 
@@ -475,7 +475,7 @@ The following table provides an explanation of what these values mean, their und
 
 1. Examine the log file to see that the agent started successfully: browse to `https://yoursitename.scm.azurewebsites.net/`, under SSH change to the root directory, the log file is located under LogFiles/ApplicationInsights.
   
-    :::image type="content"source="media/troubleshoot-app-service/app-insights-java-status.png" alt-text="Screenshot of the link above results page.":::
+    :::image type="content"source="media/troubleshoot-app-service/app-insights-java-status.png" alt-text="Screenshot of the link above results page." lightbox="media/troubleshoot-app-service/app-insights-java-status.png":::
 
 1. After enabling application monitoring for your Java app, you can validate that the agent is working by looking at the live metrics - even before you deploy and app to App Service you'll see some requests from the environment. Remember that the full set of telemetry is only available when you have your app deployed and running.
 
@@ -490,7 +490,7 @@ The following table provides an explanation of what these values mean, their und
 1. Check that `ApplicationInsightsAgent_EXTENSION_VERSION` app setting is set to a value of `~2`.
 1. Browse to `https://yoursitename.scm.azurewebsites.net/ApplicationInsights`.  
 
-    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot of the link above results page."border ="false":::
+    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot of the link above results page."border ="false" lightbox="media/troubleshoot-app-service/app-insights-sdk-status.png":::
 
     * Confirm that the `Application Insights Extension Status` is `Pre-Installed Site Extension, version 2.8.x.xxxx, is running.`
 
