@@ -9,10 +9,10 @@ search.appverid:
 - MET150
 audience: ITPro
 ms.custom: 
-  - CSSTroubleshoot
-  - CI 114638
+- CSSTroubleshoot
+- CI 114638
 ms.topic: troubleshooting
-ms.reviewer: vikkarti
+ms.reviewer: vikkarti;bcorob;jefferc
 appliesto:
 - Microsoft Office Deployment Tool
 ---
