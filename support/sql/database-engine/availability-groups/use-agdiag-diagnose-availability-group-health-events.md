@@ -30,7 +30,7 @@ Use one of these log collection tools:
 
 To diagnose an availability group health event, use the SQL LogScout to collect logs on the SQL Server instance that was in the primary role at the time of the event.
 
-1. Download the latest [SQL LogScout](http://aka.ms/get-sqllogscout) as zip file.
+1. Download the latest [SQL LogScout](https://aka.ms/get-sqllogscout) as zip file.
 1. Save and extract the zip file in a folder on the machine where SQL Server hosts the primary replica. This system is where the failover started or the availability group was resolving.
 1. Open an elevated PowerShell command (Run as Administrator), change the directory to the SQL LogScout folder where the zip file was extracted
 1. Run the following command to capture the `Basic` scenario and follow the prompts 
