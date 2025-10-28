@@ -61,8 +61,8 @@ C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.Diagnostics.ApplicationMonitoringWi
 
 If your extension deployed successfully but you're unable to see telemetry, it could be one of the following issues covered in [Agent troubleshooting](../agent/status-monitor-v2-troubleshoot.md#known-issues):
 
-- Conflicting dynamic link libraries (DLLs) in an app's bin directory
-- Conflict with IIS shared configuration
+- Conflicting dynamic link libraries (DLLs) in an app's bin directory.
+- Conflict with IIS shared configuration.
 
 ## Issues with Java app running on Azure Functions
 
