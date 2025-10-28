@@ -23,7 +23,7 @@ This article offers general recommendations and specific suggestions to troubles
 
 1. Browse to `https://yoursitename.scm.azurewebsites.net/ApplicationInsights`.  
 
-    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot that shows the preceding link's results page."border ="false":::
+    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot that shows the preceding link's results page."border ="false":::lightbox="media/troubleshoot-app-service/app-insights-sdk-status.png"::
 
     * Confirm that `Application Insights Extension Status` is `Pre-Installed Site Extension, version 2.8.x.xxxx` and is running.
 
@@ -51,7 +51,7 @@ This article offers general recommendations and specific suggestions to troubles
 
 1. Browse to `https://yoursitename.scm.azurewebsites.net/ApplicationInsights`.
 
-    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot that shows the link above the results page."border ="false" lightbox="media/troubleshoot-app-service/app-insights-sdk-status.png" lightbox="media/troubleshoot-app-service/app-insights-sdk-status.png":::
+    :::image type="content"source="media/troubleshoot-app-service/app-insights-sdk-status.png" alt-text="Screenshot that shows the link above the results page."border ="false" lightbox="media/troubleshoot-app-service/app-insights-sdk-status.png":::
 
     * Confirm that **Application Insights Extension Status** is `Pre-Installed Site Extension, version 2.8.x.xxxx, is running.`
 
@@ -173,7 +173,7 @@ If you're missing telemetry, follow these steps to confirm that autoinstrumentat
 
 1. Confirm that autoinstrumentation is enabled in the Application Insights experience on your App Service resource.
 
-    :::image type="content"source="media/troubleshoot-app-service/enable.png" alt-text="Screenshot of Application Insights tab with enable selected." lightbox="media/troubleshoot-app-service/enable.png" lightbox="media/troubleshoot-app-service/enable.png":::
+    :::image type="content"source="media/troubleshoot-app-service/enable.png" alt-text="Screenshot of Application Insights tab with enable selected." lightbox="media/troubleshoot-app-service/enable.png":::
 
 1. Confirm that the `ApplicationInsightsAgent_EXTENSION_VERSION` app setting is set to a value of `~3` and that your `APPLICATIONINSIGHTS_CONNECTION_STRING` points to the appropriate Application Insights resource.
 
