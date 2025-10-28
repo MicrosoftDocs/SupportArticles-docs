@@ -52,7 +52,7 @@ To view and manage the updates, in the Configuration Manager console that's conn
 ## Step 1: Identify the update package GUID
 
 As a first step, identify the update package GUID. If the update package is visible in the ConfigMgr Console, add the **Package Guid** column to the **Administration\Update and Servicing** node.
-There are cases, however, where target update package isn't visible. To find the Package GUID in ConfigMgr database, run a SQL query that resembles the following query:
+There are cases, however, where target update package isn't visible. To find the Package GUID in ConfigMgr database, run a SQL query that resembles the following excerpt:
 
 ```sql
 SELECT Name, PackageGuid FROM v_LocalizedUpdatePackageMetaData_SiteLoc
@@ -77,7 +77,7 @@ Use the following diagram to identify the stage of the update package installati
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scoping-support-tickets.svg" alt-text="Diagram of a decision tree to identify the installation state.":::
 
 > [!IMPORTANT]  
-> If the update package doesn't appear in either the console or in the Windows PowerShell output, the installation might be in the Applicability stage. Search the top-level site's SQL **CM_UpdatePackages** table. Use a query that resembles the following:
+> If the update package doesn't appear in either the console or in the Windows PowerShell output, the installation might be in the Applicability stage. Search the top-level site's SQL **CM_UpdatePackages** table. Use a query that resembles the following excerpt:
 >
 > ```sql
 > SELECT PackageGuid,State FROM CM_UpdatePackages where PackageGUID = '<Package GUID>'
@@ -85,7 +85,7 @@ Use the following diagram to identify the stage of the update package installati
 >
 > This table should contain the record of the target package.
 
-## Synchronization and Applicability Check
+## Synchronization and Applicability stages
 
 The [SCP](/intune/configmgr/core/servers/deploy/configure/about-the-service-connection-point) downloads updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your SCP is in offline mode, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to manually sync with the Microsoft cloud.
 
@@ -93,7 +93,7 @@ The following steps provide an overview of the process that an online Service Co
   
 <details><summary>To view the detailed steps, select here.</summary>
 
-### Step 1: DMPDownloader: Sync
+### Process step 1: DMPDownloader: Synchronize
 
 Every 24 hours, the DMPDownloader component on the SCP checks for new update packages. During this process, it logs the following entries in DMPDownloader.log:
 
@@ -106,7 +106,7 @@ Successfully Dropped the state message 0~~
 
 DMPDownloader sends high-priority state message `0 (START_PROCESS)` to the Site Server to indicate that the synchronization process is starting.
 
-Then DMPDownloader checks for the latest update manifest by downloading the ConfigMgr.Update.Manifest.cab file from the manifest link. The manifest contains all recently released ConfigMgr updates and their metadata. During this process, DMPDownloader logs the following entries in DMPDownloader.log:
+Then DMPDownloader checks for the latest update manifest by downloading the ConfigMgr.Update.Manifest.cab file from the manifest link. The manifest contains all recently released ConfigMgr updates and their metadata. During this process, DMPDownloader logs entries that resemble the following excerpt in DMPDownloader.log:
 
 ```output
 Checking for preview version~~
@@ -125,7 +125,7 @@ Write the state message in E:\ConfigMgr\inboxes\auth\statesys.box\incoming\high\
 Successfully Dropped the state message 1~~
 ```
 
-DMPDownloader sends state message `1 (START_VERIFY_MANIFEST)` to the Site Server to indicate that the manifest download is in progress. After it sends the message, it downloads the manifest to the \\EasySetupPayload folder. During this process, DMPDownloader logs the following entries in DMPDownloader.log:
+DMPDownloader sends state message `1 (START_VERIFY_MANIFEST)` to the Site Server to indicate that the manifest download is in progress. After it sends the message, it downloads the manifest to the \\EasySetupPayload folder. During this process, DMPDownloader logs entries that resemble the following excerpt:
 
 ```output
 Download manifest.cab~~
@@ -155,7 +155,7 @@ Finally, DMPDownloader renames ConfigMgr.Update.Manifest.cab  to ___CABConfigMgr
 - If the SCP is remote from the Site Server, DMPDownloader stores the file at MP\OUTBOXES\MCM.box. The MPFDM component moves the file to the Site Server.
 - If the SCP is co-located with the Site Server, the file is saved directly to inboxes\hman.box\ForwardingMsg.
 
-During this process, DMPDownloader logs the following entries in DMPDownloader.log:
+During this process, DMPDownloader logs entries that resemble the following excerpt:
 
 ```output
 Manifest.cab was successfully moved to the connector outbox~~
@@ -166,20 +166,25 @@ Successfully Dropped the state message 4~~
 
 DMPDownloader sends state message `4 (MANIFEST_DOWNLOADED)` to indicate that this process has finished.
 
-A message forwarding thread in Hierarchy Manager (Hman) moves the incoming MCM file to hman.box\CFD\ConfigMgr.Update.Manifest.CAB. This operation doesn't produce log entries.
+A message forwarding thread in Hierarchy Manager (Hman) moves the incoming MCM file to hman.box\CFD\ConfigMgr.Update.Manifest.CAB. This operation doesn't generate log entries.
 
-### Step 2: HMan: Applicability Check
+### Process step 2: HMan: check applicability
 
-Hierarchy Manager (Hman) checks for the download signature, extracts the manifest, and then processes the manifest and checks Applicability of the update packages.
+Hierarchy Manager (Hman) checks for the manifest for the download signature, extracts the manifest, and then processes the manifest and checks that the update packages are applicable.
 
-SMSDBMon drops a blank file (`<SiteCode>.SCU`) to `<ConfigMgr installation Directory>\inboxes\hman.box`. It triggers HMan to start processing, as follows:
+The SMSDBMon component drops a blank file that's named \<SiteCode>.SCU to the \<ConfigMgr installation Directory>\\inboxes\\hman.box folder.
+
+> [!NOTE]  
+> \<SiteCode> represents the code of your Configuration Manager site, and \<ConfigMgr installation Directory> represents the local directory where Configuration Manager is installed.
+
+This event triggers HMan to start processing. It logs entries that resemble the following excerpt in HMan.log:
 
 ```output
 STATMSG: ID=3306 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_HIERARCHY_MANAGER"
 SYS=<SiteServerFQDN> SITE=XXX PID=2168 TID=4888 GMTDATE=Wed Dec 21 16:15:08.957 2016 ISTR0="C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CAS.SCU"
 ```
 
-Hman checks for the download signature, extracts the manifest to `\CMUStaging` folder on the Site Server:
+HMan checks for the download signature, and then extracts the manifest to the \\CMUStaging folder on the Site Server. During this process, HMan logs entries that resemble the following excerpt:
 
 ```output
 File 'E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB' is signed and trusted.
@@ -187,7 +192,7 @@ File 'E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB' is signed
 Extracting file E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB to E:\ConfigMgr\CMUStaging\~
 ```
 
-The manifest CAB contains `ApplicabilityChecks` being SQL query files. Hman runs them to assess the applicability of the Update Packs that Manifest contains. The following entries are logged in Hman.log:
+The extracted files include a the ApplicabilityChecks folder, which contains SQL query files. HMan runs these queries to assess the applicability of the update packages in the manifest. During this process, HMan logs entries that resemble the following excerpt:
 
 ```output
 Extracted C:\Program Files\Microsoft Configuration Manager\CMUStaging\Manifest.xml  
@@ -196,7 +201,7 @@ C:\Program Files\Microsoft Configuration Manager\CMUStaging\ApplicabilityChecks\
 Configuration Manager Update (PackageGuid=10AA8BA0-04D4-4FE3-BC21-F1874BC8C88C) is applicable
 ```
 
-If a package isn't applicable, the following entries are logged in `Hman.log`:
+If a package isn't applicable, the HMan logs entries that resemble the following excerpt:
 
 ```output
 C:\Program Files\Microsoft Configuration Manager\CMUStaging\ApplicabilityChecks\CM1610-KB3211925_AppCheck_9390F966.sql has hash value SHA256:048DA8137C249AAD11340A855FF7E0E8568F5325FED5F503C4D9C329E73AD464  
@@ -206,11 +211,11 @@ Configuration Manager Update (PackageGuid=9390F966-F1D0-42B8-BDC1-8853883E704A) 
 
 </details>
 
-### Sync and Applicability check result
+### Results of the Synchronization and Applicability checks
 
-New Update Packs are displayed in the console with "Available to Download" state. Some update packages may become hidden due to the change in applicability check.
+The console displays new update packages and labels their state as **Available to Download**. The applicability check might hide some update packages.
 
-Applicable updates are visible as "Available to Install" or directly "Ready to Install". It can be verified by checking the **State** column in the `CM_UpdatePackages` table. The following state types show an update as available within the console:
+Applicable updates are visible as **Available to Install** or directly **Ready to Install**. It can be verified by checking the **State** column in the `CM_UpdatePackages` table. The following state types show an update as available within the console:
 
 - APPLICABILITY_SUCCESS  =  327682
 - DOWNLOAD_SUCCESS  =  262146
