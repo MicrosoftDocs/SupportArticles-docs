@@ -61,7 +61,7 @@ This error occurs when the length of one or more DBO tables is extended, causing
 
 ### Solution
 
-Create a Microsoft Support request.
+Create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [Microsoft Dynamics Lifecycle Services (LCS)](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
 For information on best practices, see [Enable custom Commerce Data Exchange synchronization via extension](/dynamics365/commerce/dev-itpro/cdx-extensibility). These best practices include removing the extended data type (EDT) extension on the table field you're editing. Instead, use the CDX extension table to store the long (full) value required.
 
@@ -147,7 +147,7 @@ When you try to download an upload session package from the **Upload sessions** 
 
 ### Solution
 
-Create a Microsoft Support request.
+Create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [Microsoft Dynamics Lifecycle Services (LCS)](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
 ## Issue 10: Error due to CDX download sessions failing to be applied
 
