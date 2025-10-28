@@ -28,7 +28,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Resolve Function App Down or Reporting Errors
+          - text: Function App Down or Reporting Errors
             url: availability/functions-troubleshoot-issues.md
 
   - title: Configuring and Managing Function Apps
