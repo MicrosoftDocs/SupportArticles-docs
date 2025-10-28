@@ -32,7 +32,7 @@ This error occurs because of batch job statuses. You can view the error in a fai
 
 ### Symptoms
 
-You can't perform the **Run now** command from the **Distribution schedule** page unless batch processing is used.
+You can't perform the **Run now** command from the **Distribution schedule** page, only the **Create batch job** command is enabled.
 
 :::image type="content" source="./media/commerce-data-exchange/batch-processing-distribution-schedule.png" alt-text="The Distribution schedule page, executing a job with Batch processing enabled":::
 
