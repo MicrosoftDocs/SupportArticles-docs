@@ -30,7 +30,9 @@ A sign-in-related issue occurred. This issue might occur because data isn't foun
 
 ### Solution
 
-To fix this issue, in Commerce headquarters, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
+1. In Commerce geadquarters go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**
+1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
+1. Also, contact your system administrator.
 
 ## Issue 2: Errors due to employee address book not being found, or employee not mapped to store in offline database
 
@@ -50,7 +52,9 @@ This issue might occur because of one of the following causes:
 
 ### Solution
 
-To fix this issue, in Commerce headquarters, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
+1. In Commerce geadquarters go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**
+1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
+1. Also, contact your system administrator.
 
 ## Issue 3: Errors due to employee position detail not found or invalid
 
@@ -67,7 +71,9 @@ This issue might occur because the worker's position detail or assignment isn't 
 
 ### Solution
 
-To fix this issue, in Commerce headquarters, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
+1. In Commerce geadquarters go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**
+1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
+1. Also, contact your system administrator.
 
 ## Issue 4: Error due to employee POS permission settings not found or configured incorrectly
 
@@ -83,7 +89,9 @@ This issue might occur because the worker's POS permission settings aren't found
 
 ### Solution
 
-To fix this issue, in Commerce headquarters, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
+1. In Commerce geadquarters go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**
+1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
+1. Also, contact your system administrator.
 
 ## Issue 5: Channel errors due to inability to switch to offline mode
 
@@ -107,7 +115,9 @@ The device can't switch to offline mode. The channel information is either unava
 
 ### Solution
 
-To fix this issue, in Commerce headquarters, run the **Channel configuration scheduler** job (by default, the **1070** scheduler job). Also, contact your system administrator.
+1. In Commerce geadquarters go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**
+1. Run the **Channel configuration scheduler** job (by default, the **1070** scheduler job).
+1. Also, contact your system administrator.
 
 ## Issue 6: User errors due to inability to switch to offline mode
 
@@ -127,7 +137,9 @@ The device can't switch to offline mode. The user information is either unavaila
 
 ### Solution
 
-To fix this issue, in Commerce headquarters, run the **Staff scheduler** job (by default, the **1060** scheduler job). Also, contact your system administrator.
+1. In Commerce geadquarters go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**
+1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
+1. Also, contact your system administrator.
 
 ## Issue 7: Error due to offline database storage issue
 
@@ -185,7 +197,9 @@ You receive one of the following errors:
 
 ### Solution
 
-To fix this issue, run the **Channel configuration scheduler** job (by default, the **1070** scheduler job). Also, contact your system administrator.
+1. In Commerce geadquarters go to **Retail and Commerce** > **Retail and Commerce IT** > **Distribution schedule**
+1. Run the **Channel configuration scheduler** job (by default, the **1070** scheduler job).
+1. Also, contact your system administrator.
 
 ## Issue 11: Errors due to internal server, timeout, or runtime invalid format issues
 

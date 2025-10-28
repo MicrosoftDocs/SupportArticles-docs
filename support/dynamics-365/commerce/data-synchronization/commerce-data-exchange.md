@@ -32,7 +32,7 @@ This error occurs because of batch job statuses. You can view the error in a fai
 
 ### Symptoms
 
-You can't perform the **Run now** command from the **Distribution schedule** page unless batch processing is used.
+You can't perform the **Run now** command from the **Distribution schedule** page, only the **Create batch job** command is enabled.
 
 ### Cause
 
@@ -89,7 +89,7 @@ You can't cancel a running CDX job.
 ### Solution
 
 - If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
-- If the issue occurs in a nonproduction environment, create a Microsoft Support request.
+- If the issue occurs in a nonproduction environment, create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [Lifecycle Services](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
 ## Issue 6: Slow download sessions after adding multiple POS terminals
 
@@ -132,8 +132,8 @@ The P-job fails to create an upload session, and you receive the following error
 
 ### Solution
 
-- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
-- If the issue occurs in a nonproduction environment, create a Microsoft Support request.
+- If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a nonproduction environment, create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [Lifecycle Services](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
 ## Issue 9: Session package download error due to record not found
 
@@ -157,8 +157,8 @@ The CDX download sessions fail to be applied, and you receive the following erro
 
 ### Solution
 
-- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
-- If the issue occurs in a nonproduction environment, create a Microsoft Support request.
+- If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a nonproduction environment, create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [Lifecycle Services](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
 ## Issue 11: No download sessions are applied, and no upload sessions are created
 
@@ -168,8 +168,8 @@ No download sessions are applied, and no upload sessions are created.
 
 ### Solution
 
-- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
-- If the issue occurs in a nonproduction environment, create a Microsoft Support request.
+- If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a nonproduction environment, create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [Lifecycle Services](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
 ## Issue 12: Upload sessions error due to multiple records in the RetailListingStatusLog table
 
@@ -185,8 +185,8 @@ An error occurs because the upload session package contains multiple records in 
 
 ### Solution
 
-- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
-- If the issue occurs in a nonproduction environment, create a Microsoft Support request.
+- If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a nonproduction environment, create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [Lifecycle Services](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
 ## Issue 13: Failure during switch to offline mode
 
@@ -207,8 +207,8 @@ Many possible causes exist for the failure:
 
 Contact Microsoft Support.
 
-- If the issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
-- If the issue occurs in a nonproduction environment, create a Microsoft Support request.
+- If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
+- If the issue occurs in a nonproduction environment, create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [Lifecycle Services](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
 ## Related content
 
