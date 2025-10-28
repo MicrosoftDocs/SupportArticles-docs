@@ -59,25 +59,20 @@ In addition to these product IDs, the following non-Microsoft 365 product IDs ar
 > [!NOTE]
 > For Lync or Skype for Business, see the table at the end of this article.
 
-- `AccessRetail`
 - `Access2021Retail`
 - `Access2024Retail`
 - `Access2021Volume`
 - `Access2024Volume`
-- `ExcelRetail`
 - `Excel2021Retail`
 - `Excel2024Retail`
 - `Excel2021Volume`
 - `Excel2024Volume`
-- `HomeBusinessRetail`
 - `HomeBusiness2021Retail`
 - `HomeBusiness2024Retail`
-- `HomeStudentRetail`
 - `HomeStudent2021Retail`
 - `Home2024Retail`
 - `O365HomePremRetail`
 - `OneNoteFreeRetail`
-- `OneNoteRetail`
 - `OneNote2021Volume`
 - `OneNote2024Volume`
 - `OutlookRetail`
@@ -86,12 +81,10 @@ In addition to these product IDs, the following non-Microsoft 365 product IDs ar
 - `Outlook2021Volume`
 - `Outlook2024Volume`
 - `Personal2021Retail`
-- `PowerPointRetail`
 - `PowerPoint2021Retail`
 - `PowerPoint2024Retail`
 - `PowerPoint2021Volume`
 - `PowerPoint2024Volume`
-- `ProfessionalRetail`
 - `Professional2021Retail`
 - `Professional2024Retail`
 - `ProjectProXVolume`
@@ -110,7 +103,6 @@ In addition to these product IDs, the following non-Microsoft 365 product IDs ar
 - `ProPlusSPLA2021Volume`
 - `ProPlus2021Retail`
 - `ProPlus2024Retail`
-- `PublisherRetail`
 - `Publisher2021Retail`
 - `Publisher2021Volume`
 - `Standard2021Volume`
@@ -127,7 +119,6 @@ In addition to these product IDs, the following non-Microsoft 365 product IDs ar
 - `VisioStd2024Retail`
 - `VisioStd2021Volume`
 - `VisioStd2024Volume`
-- `WordRetail`
 - `Word2021Retail`
 - `Word2024Retail`
 - `Word2021Volume`
