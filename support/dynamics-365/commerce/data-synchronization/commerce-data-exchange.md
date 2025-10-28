@@ -10,7 +10,7 @@ ms.date: 10/16/2025
 
 This article explains how to troubleshoot common errors with Commerce Data Exchange (CDX) in Microsoft Dynamics 365 Commerce environments. CDX is a system that transfers data between Headquarters and channels, such as online stores or brick-and-mortar stores. Data distribution is asynchronous. In other words, the process of gathering and packaging data at the source occurs separately from the process of receiving and applying data at the destination. For some scenarios, such as price and inventory lookups, data must be retrieved in real time. To support these scenarios, Commerce Data Exchange also includes a service that enables real-time communication between Headquarters and a channel.
 
-## Issue 1: Error due to batch statuses
+## Issue 1: Download sessions failing with null connection string
 
 ### Symptoms
 
@@ -32,7 +32,9 @@ This error occurs because of batch job statuses. You can view the error in a fai
 
 ### Symptoms
 
-You can't perform the **Run now** command from the **Distribution schedule** page, only the **Create batch job** command is enabled.
+You can't perform the **Run now** command from the **Distribution schedule** page unless batch processing is used.
+
+:::image type="content" source="./media/commerce-data-exchange/batch-processing-distribution-schedule.png" alt-text="The Distribution schedule page, executing a job with Batch processing enabled":::
 
 ### Cause
 
