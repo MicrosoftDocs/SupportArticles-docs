@@ -12,9 +12,30 @@ ms.reviewer: cmathews, v-sidong
 
 AGDiag is an application that automates the manual analysis described in the article (mentioned in the **Note** section). It analyzes the cluster log and correlates and reports pertinent events from the other logs (SQL Server error logs, Windows event logs, and so on). It generates a summary report of Windows Cluster and Always On health events and then provides more detailed analysis results for each health event detected. It automates much of the work described in the article (mentioned in the **Note** section) when the proper logs are provided from the availability group primary replica at the time of the health event.
 
-## Use TSS to generate logs for AGDiag to diagnose
+## Generate logs for AGDiag to diagnose
 
-To diagnose an availability group health event, use the TSS to collect logs on the SQL Server instance that was in the primary role at the time of the event.
+You can use multiple methods to generate the logs that AGDiag uses as inputs. Besides the manual collection of Windows Cluster Diagnostic Logs, SQL Server Error Logs, Windows System Event Logs, System Health Extended Events (XEL) and AlwaysOn Health Session XEL Files, you can use either of two log collection tools to capture those.
+
+Use one of these log collection tools:
+
+### Use SQL LogScout to capture logs for AGDiag analysis
+
+To diagnose an availability group health event, use the SQL LogScout to collect logs on the SQL Server instance that was in the primary role at the time of the event.
+
+1. Download the latest [SQL LogScout](http://aka.ms/get-sqllogscout) as zip file.
+1. Save and extract the zip file in a folder on the machine where SQL Server hosts the primary replica when the failover started or the availability group was resolving.
+1. Open an elevated PowerShell command (Run as Administrator), change the directory to the SQL LogScout folder where the zip file was extracted
+1. Run the following command to capture the `Basic` scenario and follow the prompts 
+
+   ```PowerShell
+   .\SQL_LogScout.ps1 -Scenario "Basic" -ServerName "<your_sql_instance_name>"
+   ```
+
+1. Once the process of log capturing is complete, you can poing AGDiag to the **\output** folder where SQL LogScout collected the logs.
+
+### Use TSS to generate logs for AGDiag to diagnose
+
+Alternatively, to capture the logs you can use the TSS on the SQL Server instance that was in the primary role at the time of the event.
 
 Follow these steps to accomplish this goal:
 
