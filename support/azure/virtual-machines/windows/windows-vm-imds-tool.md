@@ -48,6 +48,7 @@ You can run the tool in any of the following manners.
 
 Download the scripts from GitHub, and then run them manually. To access the scripts, follow the resource links in the previous sections.
 
+
 ### 2. Use Azure Run Command
    
 - Navigate to your VM in the Azure portal: > **Operations** > **Run Command**.
