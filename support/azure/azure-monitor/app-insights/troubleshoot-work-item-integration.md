@@ -9,79 +9,81 @@ ms.custom: sap:Application Insights portal experiences
 
 [Work item integration](/azure/azure-monitor/app/work-item-integration) in Application Insights might not work as expected. This article offers general recommendations and specific troubleshooting steps.
 
-## Create work item option missing in transaction details
+## The "Create work item" option doesn't appear in transaction details
 
-**Cause:** Integration not enabled or resource not linked to Azure DevOps/GitHub.
+**Cause:** Work item integration isn't enabled or the resource isn't linked to Azure DevOps or GitHub.
 
-**Check:** In Application Insights, go to **Work Items** and confirm integration settings.
+**Check:** In Application Insights, go to **Work Items** and confirm that integration settings are configured.
 
-**Fix:** Enable integration and ensure you start from **Create a work item** or a workbook template.
+**Fix:** Enable integration and start from the **Create a work item** flow or use a workbook template.
 
 ## On-premises Azure DevOps URL rejected
 
-**Cause:** URL validation fails due to unsupported format.
+**Cause:** The URL format doesn't meet validation requirements.
 
-**Check:** Ensure the URL uses HTTPS and matches the regex (regular expressions) in the workbook parameter.
+**Check:** Ensure the URL uses HTTPS and matches the validation rule in the workbook parameter.
 
 **Fix:** Update the workbook's repository URL parameter and validation rule.
 
 > [!NOTE]
-> Self-hosted DevOps must be publicly accessible.
+> If using a self-hosted Azure DevOps instance, make sure it is accessible from the Azure portal.
 
-## Authorization prompt missing or linking fails
+## Authorization prompt doesn't appear or linking fails
 
-**Cause:** Popup blockers or stale tokens.
+**Cause:** Popup blockers or cached tokens may prevent the prompt from appearing.
 
-**Check:** Disable popup blockers, allow third-party cookies, and clear browser cache.
+**Check:** Disable popup blockers, allow third-party cookies, and clear your browser cache.
 
-**Fix:** Retry linking. If using OAuth, confirm required scopes are granted.
+**Fix:** Retry linking. If using OAuth, confirm that the required scopes are granted.
 
 ## Work item creation fails with permission errors
 
-**Cause:** Insufficient permissions in Azure DevOps or GitHub.
+**Cause:** Your account doesn't have sufficient permissions in Azure DevOps or GitHub.
 
 **Check:** Verify account roles:
 
 * Azure DevOps: Needs *Contribute* permission.
 * GitHub: Needs *Write* access.
 
-**Fix:** If using PAT (Personal Access Token), ensure it includes **Work Items** (read/write) scope.
+**Fix:** If using a Personal Access Token (PAT), ensure it includes **Work Items (read/write)** scope.
 
 ## Template fails to load or save
 
-**Cause:** Region or RBAC issues.
+**Cause:** Region limitations or missing permissions can prevent templates from loading or saving.
 
-**Check:** Confirm region supports *Microsoft.Insights/workbooks* and resource provider is registered.
+**Check:** Confirm that the region supports the *Microsoft.Insights/workbooks* resource type and that the resource provider is registered in your subscription.
 
-**Fix:** Assign *Microsoft.Insights/workbooks/write* role or try saving in a supported region.
+**Fix:** Assign the *Microsoft.Insights/workbooks/write* role or try saving the template in a supported region.
 
-## Contextual data missing from created work items
+## Contextual data is missing from created work items
 
-**Cause:** KQL query returns unexpected schema.
+**Cause:** The Kusto Query Language (KQL) query does not return the expected schema.
 
-**Check:** Run the query in **Logs** and validate output fields.
+**Check:** Run the query in **Logs** and validate the output fields.
 
-**Fix:** Update bindings or query to match expected schema.
+**Fix:** Update the query or bindings to match the expected schema.
 
-## Template not visible to other users
+## Template isn't visible to other users
 
-**Cause:** Workbook saved as private or RBAC restrictions.
+**Cause:** The template is saved as private or RBAC permissions are insufficient.
 
-**Check:** Ensure template is in a shared resource group and not saved as *My Reports*.
+**Check:** Ensure the template is stored in a shared resource group and not saved as *My Reports*.
 
-**Fix:** Grant at least *Reader* access to the resource.
+**Fix:** Grant other users at least *Reader* access to the resource.
 
-## Template deletion doesn't remove existing links
+## Deleting a template doesn't remove existing links
 
-**Cause:** Cached configuration persists.
+**Cause:** Cached configuration persists after deletion.
 
-**Fix:** Refresh the **Work Items** pane or clear browser cache. For persistent links, manually unlink in resource settings.
+**Check:** Refresh the **Work Items** pane in Application Insights or clear your browser cache.
 
-## GitHub issue or DevOps item opens in wrong repository/project
+**Fix:** If links persist, manually unlink them in the resource settings.
 
-**Cause:** Incorrect default parameter or multiple templates.
+## GitHub issue or Azure DevOps item opens in the wrong repository or project
 
-**Check:** Open the workbook and confirm repository/organization URL.
+**Cause:** Incorrect default parameters or multiple templates override settings.
+
+**Check:** Open the workbook and confirm the default repository or organization URL parameter.
 
 **Fix:** Update defaults or remove conflicting templates.
 
