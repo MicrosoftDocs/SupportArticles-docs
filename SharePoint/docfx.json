@@ -140,15 +140,11 @@
       "ms.service": {
         "SharePointHybrid/**/*.md": "sharepoint-online",
         "SharePointOnline/**/*.md": "sharepoint-online",
-        "OneDrive/**/*.md": "microsoft-graph",
+        "OneDrive/**/*.md": "microsoft-graph", // OneDrive only appears Microsoft Graph service according to Learn Taxonomy. Meera requesting onedrive slug.
         "SharePointServer/**/*.md": "sharepoint-server-itpro",
         "SharePointExperts/**/*.md": "sharepoint-server-itpro",
         "SharePointOnline/migration/**/*.md": "microsoft-365-migration"
-      },
-      "ms.subservice": {
-        "OneDrive/**/*.md": "onedrive"
-      },
-      "author": {
+      },      "author": {
         "**/*.md": "Cloud-Writer"
       },
       "ms.author": {
