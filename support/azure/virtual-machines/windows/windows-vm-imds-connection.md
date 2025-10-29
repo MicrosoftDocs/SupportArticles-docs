@@ -63,7 +63,7 @@ Invoke-RestMethod -Headers @{"Metadata"="true"} -Method GET -NoProxy -Uri "http:
 If not, it means that the connection to the IMDS wire server is blocked somewhere, and access to it needs to be allowed. 
 
 
-# Resolution
+## Resolution
 ### Bypass web proxies within the VM
 
 > [!NOTE]

@@ -26,11 +26,11 @@ This article provides information about Windows Client 10 support and answers so
 
 Windows 10 is no longer supported except under the Extended Security Updates (ESU) program.  ESU only includes critical and important security updates and does not cover new features or non-security fixes. Support also covers enabling and ensuring ESU is functional. For workloads running on Azure Virtual Machines, ESU is automatically included at no additional cost—no MAK keys or manual activation required.
 
-* [How do I install ESU updates?](https://learn.microsoft.com/lifecycle/faq/extended-security-updates#how-do-i-install-esu-updates-)
+* [How do I install ESU updates?](/faq/extended-security-updates#how-do-i-install-esu-updates-)
 
-- [Windows 10 reaching end of support](https://learn.microsoft.com/lifecycle/announcements/windows-10-end-of-support)
-- [Extended Security Updates for Windows Server Overview](https://learn.microsoft.com/windows-server/get-started/extended-security-updates-overview)
-- [Lifecycle FAQ - Extended Security Updates](https://docs.microsoft.com/lifecycle/faq/extended-security-updates)
+- [Windows 10 reaching end of support](lifecycle/announcements/windows-10-end-of-support)
+- [Extended Security Updates for Windows Server Overview](windows-server/get-started/extended-security-updates-overview)
+- [Lifecycle FAQ - Extended Security Updates](lifecycle/faq/extended-security-updates)
 - [How to Use Windows Server/Client Extended Security Updates (ESU)](https://learn.microsoft.com/windows-server/get-started/extended-security-updates)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
