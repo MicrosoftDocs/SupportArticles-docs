@@ -53,9 +53,9 @@ items:
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
 
-- name: Extended Security Updates for Windows Server 2012/R2 and 2008/R2
+- name: Extended Security Updates (EOS)
   items:
-  - name: Overview
+  - name: Overview for Windows Server 2012/R2 and 2008/R2
     href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Frequently asked questions
     href: /windows-server/get-started/extended-security-updates-faq?context=/troubleshoot/azure/virtual-machines/windows/context/context
