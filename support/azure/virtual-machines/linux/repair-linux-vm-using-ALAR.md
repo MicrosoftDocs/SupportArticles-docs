@@ -1,6 +1,6 @@
 ---
 title: Repair a Linux VM automatically with the help of ALAR
-description: This article describes how to automatically repair a non bootable VM with the Azure Linux Auto Repair (ALAR) scripts.
+description: This article describes how to automatically repair a non-bootable VM with the Azure Linux Auto Repair (ALAR) scripts.
 services: virtual-machines-linux
 documentationcenter: ''
 author: pagienge
@@ -51,7 +51,7 @@ The ALAR scripts use the [az vm repair](/cli/azure/vm/repair) extension, `run` c
     az vm repair create --verbose --resource-group <RG-NAME> --name <VM-NAME>
     ```
 
-    - There are currently 3 parameters which will prompt for values if they are not given on the command line. Add these parameters and values to the command for a non-interactive execution 
+    - There are currently three parameters that will prompt for values if they aren't given on the command line. Add these parameters and values to the command for a non-interactive execution 
       - `--repair-username <RESCUE-USERNAME>`
       - `--repair-password <RESCUE-PASS>`
       - `--associate-public-ip`
@@ -63,7 +63,7 @@ The ALAR scripts use the [az vm repair](/cli/azure/vm/repair) extension, `run` c
     az vm repair run --verbose --resource-group <RG-NAME> --name <VM-NAME> --run-id linux-alar2 --parameters <action1,action2,...> --run-on-repair
     ```
     
-    valid action names will be given below.
+    valid action names are given below.
 
 3. Swap the copy of the OS disk back to the original VM and delete the temporary resources:
 
@@ -72,7 +72,7 @@ The ALAR scripts use the [az vm repair](/cli/azure/vm/repair) extension, `run` c
     ```
     
     > [!NOTE]
-    > The original and new disks won't be deleted.
+    > The original and new disks aren't deleted during the `restore` phase.
 
 In all of the example commands these are the parameters shown:
 
@@ -80,7 +80,7 @@ In all of the example commands these are the parameters shown:
 - `VM-NAME`: The name of the broken VM.
 - `RESCUE-UID`: The user created on the repair VM for login. It's the equivalent of the user created on a new VM in the Azure portal.
 - `RESCUE-PASS`: The password for `RESCUE-UID`, enclosed in single quotes. For example: `'password!234'`.
-- `action1,action2`, etc.: One or more of the defined actions available to apply to the broken VM.  See the complete list of actions below, and in the [ALAR github ReadMe](https://github.com/Azure/ALAR). You can pass one or more actions which will be run consecutively. For multiple operations, delineate them using commas without spaces, such as `fstab,sudo`.
+- `action1,action2`, etc.: One or more of the defined actions available to apply to the broken VM. See the complete list of actions below, and in the [ALAR GitHub ReadMe](https://github.com/Azure/ALAR). You can pass one or more actions that are run consecutively. For multiple operations, delineate them using commas without spaces, such as `fstab,sudo`.
 
 ## The ALAR actions
 
