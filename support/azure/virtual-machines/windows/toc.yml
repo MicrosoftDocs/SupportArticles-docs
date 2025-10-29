@@ -60,7 +60,7 @@ items:
   items:
   - name: Overview for Windows Server 2012/R2
     href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-   - name: Overview for Windows Server 2008/R2
+  - name: Overview for Windows Server 2008/R2
     href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Frequently asked questions
     href: /windows-server/get-started/extended-security-updates-faq?context=/troubleshoot/azure/virtual-machines/windows/context/context
