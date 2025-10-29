@@ -115,10 +115,11 @@ To fix the certificate issue, go to [Solution 2: Ensure firewalls and proxies ar
 3. Open Command Prompt as an administrator, navigate to *c:\windows\system32*, and run *fclip.exe*.
 4. Restart the VM or sign out and then sign in again. You'll see that the watermark on the home page is no longer displayed, and the **Application state** field in the **Settings** > **Activation** screen reports success.
 
-## More information
+### **Additional resources**
+
 - [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service)
 - [Azure Instance Metadata Service-Attested data TLS: Critical changes are here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-instance-metadata-service-attested-data-tls-critical/ba-p/2888953)
-- [Certificate downloads and revocation lists](/azure/security/fundamentals/azure-ca-details#certificate-downloads-and-revocation-lists).
+- [Certificate downloads and revocation lists](/azure/security/fundamentals/azure-ca-details#certificate-downloads-and-revocation-lists)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 

@@ -18,7 +18,7 @@ IMDS problems on Azure virtual machines (VMs) can occur because of configuration
 
 ## Tools overview
 
-### 1. Instance Metadata Service validation
+### Azure Instance Metadata Service certificate check
 
 **Purpose**  
 This PowerShell script verifies the attestation signature provided by the Azure Instance Metadata Service (IMDS). It ensures that the certificate used in attestation is valid and trusted by attempting to build a complete certificate chain. This process helps confirm the integrity and authenticity of an Azure VM’s identity. The script is also available via Run Command.
@@ -26,22 +26,23 @@ This PowerShell script verifies the attestation signature provided by the Azure 
 **Key features**  
 
 - Confirms that `169.254.169.254` is reachable.
-- Retrieves attested metadata from the Azure Instance Metadata Service.
-- Extracts and decodes the cryptographic signature.
-- Attempts to build a certificate chain for validation.
-- Warns if any certificates in the chain are missing and provides a link to Microsoft documentation for remediation.
-- Detects when the `3rd party revocation` servers are not available. 
+- Validates IMDS certificate presence and correctness.
+- Identifies certificate-related IMDS failures.
+- Suggests corrective steps.
 
 ```
 Example Warning
 Certificate not found: 'CN=Microsoft Azure XXXX, ...'
 ```
 
-For more information, see [Windows IMDS Certificate validation](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/IMDSCertCheck).
+For more information, see: 
 
-## How to run these tools
+- [Cause: Azure Instance Metadata Service connection issue](activation-watermark-appears.md#cause-1-azure-instance-metadata-service-connection-issue).
+- [Azure VM Attested Metadata Verification Script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/IMDSCertCheck/README.md).
 
-You can run these tools in any of the following manners.
+## How to run the tool
+
+You can run the tool in any of the following manners.
 
 ### 1. Download from GitHub and run within the VM 
 
@@ -64,12 +65,13 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 ## Recommended workflow
 
 1. Run **IMDS Cert Check** to verify activation status and detect common issues.
-3. Apply the suggested fixes or refer to the official documentation for advanced troubleshooting.
+2. Apply the suggested fixes or refer to the official documentation for advanced troubleshooting.
 
 ### **Additional resources**
 
-- [tbd]()
-- [tbd]()
+- [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service)
+- [Azure Instance Metadata Service-Attested data TLS: Critical changes are here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-instance-metadata-service-attested-data-tls-critical/ba-p/2888953)
+- [Certificate downloads and revocation lists](/azure/security/fundamentals/azure-ca-details#certificate-downloads-and-revocation-lists)
 
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
 
