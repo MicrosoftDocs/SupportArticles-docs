@@ -87,7 +87,7 @@ Domain **ownership verification** is important because Azure doesn't issue or re
 
 **For Azure portal**
 
-1. On the App Service certificate's page, go to **Certificate Configuration** > **Step 2: Verify**. Check whether **Certificate is Domain Verified** is selected. If it's not, you must complete the verification.
+1. On the App Service Certificate page, go to **Certificate Configuration** > **Step 2: Verify**. Check whether **Certificate is Domain Verified** is selected. If it's not, you must complete the verification.
 
     - If your custom domain is already mapped to an App Service in the same subscription, select **App Service Verification**, and then select
       **Verify**. Azure automatically verifies the certificate by using the existing custom domain binding.
@@ -133,12 +133,12 @@ out-of-band method to verify.
   records and the required TXT record for root domains) are correct.
 
 - If you used the TXT record method, verify that the record is at the
-  correct DNS zone. (The TXT record should be created on the root domain,
-  with the "@" record in the DNS zone).
+  correct DNS zone. The TXT record should be created on the root domain and not a subdomain.
+ Use the *@* record in the DNS zone).
 
 - If you use App Service verification, your app might be blocking the
   verification HTTP request. This condition might occur if Azure tries an HTTP GET to
-  *http://yourdomain/.well-known/pki-validation/godaddy.html*. For example, a customer has a custom module on their site that generates an "HTTP 500" error and causes verification to fail. In these cases, use an alternative verification method (DNS TXT or email) to complete the process.
+  *http://yourdomain/.well-known/pki-validation/godaddy.html*. For example, a customer has a custom module on their site that generates an "HTTP 500" error and causes verification to fail. In these cases, use an alternative verification method (DNS TXT or email) to complete the process. 
 
 - For renewals, if more than 13 months (395 days) passed since the
   last verification, you must verify the domain again. Azure keeps a
@@ -335,8 +335,7 @@ error:
   default Azure certificate might appear if you use the
   *\*.azurewebsites.net* domain that has a custom domain requirement.
 
-- Because DNS caching can direct you to an old IP, clear the DNS cache if you recently changed a record (in Windows, run
-  `ipconfig/flushdns`).
+- Because DNS caching can direct you to an old IP, clear the DNS cache if you recently changed a record (in Windows, you can clear the DNS cache by running `ipconfig/flushdns`).
 
 - If a wrong certificate appears in the custom domain, it might
   indicate the mixed SNI and IP bindings scenario that was previously discussed.
