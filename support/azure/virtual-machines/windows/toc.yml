@@ -230,11 +230,11 @@ items:
   - name: Overview
     href: /azure/virtual-machines/instance-metadata-service?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Certificate Issues
-    href: windows-vm-imds-certissues.md?branch=pr-en-us-10041
+    href: windows-vm-imds-certissues.md
   - name: Connection Issues
-    href: windows-vm-imds-connection.md?branch=pr-en-us-10041
+    href: windows-vm-imds-connection.md
   - name: Troubleshooting Tool
-    href: windows-vm-imds-tool.md?branch=pr-en-us-10041
+    href: windows-vm-imds-tool.md
 
 
 - name: Windows Update and OS Upgrades
