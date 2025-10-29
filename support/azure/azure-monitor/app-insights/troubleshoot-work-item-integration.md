@@ -9,40 +9,64 @@ ms.custom: sap:Application Insights portal experiences
 
 [Work item integration](/azure/azure-monitor/app/work-item-integration) in Application Insights might not work as expected. This article offers general recommendations and specific troubleshooting steps.
 
-## Create work item doesn't appear in end-to-end transaction details
+## Create work item option missing in transaction details
 
-First, create a template or start with **Start with a workbook template** from the **Create a work item** flow.
+**Cause:** Integration not enabled or resource not linked to Azure DevOps/GitHub.
+**Check:** In Application Insights, go to **Work Items** and confirm integration settings.
+**Fix:** Enable integration and ensure you start from **Create a work item** or a workbook template.
 
-## On-premises Azure DevOps URL is rejected
+## On-premises Azure DevOps URL rejected
 
-To match your host, update the workbook's repository URL text parameter and its validation rule (regular expression).
+**Cause:** URL validation fails due to unsupported format.
+**Check:** Ensure the URL uses HTTPS and matches the regex (regular expressions) in the workbook parameter.
+**Fix:** Update the workbook's repository URL parameter and validation rule.
 
-## Authorization prompt doesn't appear or linking fails
+> [!NOTE]
+> Self-hosted DevOps must be publicly accessible.
 
-Confirm that popup blockers are disabled for the Azure portal and that your browser allows third-party cookies. Then try linking again.
+## Authorization prompt missing or linking fails
 
-## Work item creation fails with permission errors**
+**Cause:** Popup blockers or stale tokens.
+**Check:** Disable popup blockers, allow third-party cookies, and clear browser cache.
+**Fix:** Retry linking. If using OAuth, confirm required scopes are granted.
 
-Verify that your Azure DevOps or GitHub account has permission to create issues or work items in the selected repository or project. You might need **Contribute** (DevOps) or **Write** (GitHub) permissions.
+## Work item creation fails with permission errors
+
+**Cause:** Insufficient permissions in Azure DevOps or GitHub.
+**Check:** Verify account roles:
+
+* Azure DevOps: Needs *Contribute* permission.
+* GitHub: Needs *Write* access.
+
+**Fix:** If using PAT (Personal Access Token), ensure it includes **Work Items** (read/write) scope.
 
 ## Template fails to load or save
 
-Ensure the selected region supports the `Microsoft.Insights/workbooks` resource type and that your role includes `Microsoft.Insights/workbooks/write`. Try saving in a different region if necessary.
+**Cause:** Region or RBAC issues.
+**Check:** Confirm region supports *Microsoft.Insights/workbooks* and resource provider is registered.
+**Fix:** Assign *Microsoft.Insights/workbooks/write* role or try saving in a supported region.
 
 ## Contextual data missing from created work items
 
-Check that the Kusto Query Language (KQL) section of the workbook template returns data in the expected schema. If fields were renamed or the resource ID changed, update the query or bindings.
+**Cause:** KQL query returns unexpected schema.
+**Check:** Run the query in **Logs** and validate output fields.
+**Fix:** Update bindings or query to match expected schema.
 
 ## Template not visible to other users
 
-Workbook-based templates are stored as Azure resources. Ensure the resource is in a shared resource group and that other users have at least **Reader** access to that resource.
+**Cause:** Workbook saved as private or RBAC restrictions.
+**Check:** Ensure template is in a shared resource group and not saved as *My Reports*.
+**Fix:** Grant at least *Reader* access to the resource.
 
 ## Template deletion doesn't remove existing links
 
-Removing the workbook doesn't automatically clear cached configuration. Refresh the **Work Items** blade in Application Insights or clear your browser cache to update the list.
+**Cause:** Cached configuration persists.
+**Fix:** Refresh the **Work Items** pane or clear browser cache. For persistent links, manually unlink in resource settings.
 
 ## GitHub issue or DevOps item opens in wrong repository/project
 
-Open the workbook and confirm the default repository or organization URL parameter is set correctly. If you have multiple templates, check which is currently linked to the resource.
+**Cause:** Incorrect default parameter or multiple templates.
+**Check:** Open the workbook and confirm repository/organization URL.
+**Fix:** Update defaults or remove conflicting templates.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
