@@ -26,9 +26,9 @@ items:
     href: windows-11-support-azure-virtual-machines.md
   - name: Windows 10 (EOS)
     href: ms-azure-windows-eos-client.md
-  - name: Windows Server 2003 End Of Support (EOS)
+  - name: Windows Server 2003 (EOS)
     href: ms-azure-windows-eos.md
-  - name: Windows Server 2008/R2 End Of Support (EOS)
+  - name: Windows Server 2008/R2 (EOS)
     href: ms-azure-windows-eos.md
   - name: Windows Server 2012 R2 (EOS)
     items:
