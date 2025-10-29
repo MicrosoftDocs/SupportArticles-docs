@@ -10,13 +10,13 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-# Troubleshooting tools for Azure VM Instance Metadata Service issues
+# Troubleshooting tool for Azure VM Instance Metadata Service issues
 
 The Azure Instance Metadata Service (IMDS) is a REST API that's available at a well-known, non-routable IP address (`169.254.169.254`). You can only access it from within the VM. Communication between the VM and IMDS never leaves the host. HTTP clients must bypass web proxies within the VM when querying IMDS. IMDS IP address (`169.254.169.254`) must be handled in the same manner as the `168.63.129.16` IP address. For additional information, read about the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service)
 
 IMDS problems on Azure virtual machines (VMs) can occur because of configuration, certificate, or connectivity issues. Microsoft provides a script-based tool to help diagnose and resolve most activation-related problems.
 
-## Tools overview
+## Tool overview
 
 ### Azure Instance Metadata Service certificate check
 
