@@ -1,0 +1,44 @@
+# Activate Windows on Azure VMs Using a MAK Key
+
+If you have a **Multiple Activation Key (MAK)** from your Volume Licensing agreement and want to use it on an Azure VM, follow these steps.
+
+## **Deploy the VM**
+- Create a Windows VM in Azure as usual (from Marketplace or a custom image).
+- Choose the edition that matches your MAK entitlement (for example, **Windows Server Datacenter** or **Windows 11 Enterprise**).
+
+## **Log into the VM**
+- Once the VM is running, connect via **Remote Desktop (RDP)**.
+
+
+## **Install the MAK Key**
+Run the following commands in an **elevated Command Prompt** or **PowerShell** session:
+
+```
+slmgr /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+slmgr /ato
+```
+
+/ipk installs your MAK key.
+/ato activates the VM directly with Microsoft’s activation servers.
+XXXXX-XXXXX-XXXXX-XXXXX-XXXXX is your key
+
+## Verify Activation
+To confirm activation status, run:
+```
+slmgr.vbs /dlv
+```
+This displays the license details and confirms activation with a MAK key.
+
+## Things to Keep in Mind
+
+* Activation count: Each MAK key has a limited number of activations. Every Azure VM you activate consumes one.
+* Connectivity: The VM must be able to reach Microsoft’s activation servers (via internet or proxy).
+* Best practice: MAK is typically used for isolated or offline systems. For VMs that remain in Azure, KMS or Azure Hybrid Benefit (AHB) is simpler.
+* Custom images: If deploying many VMs with MAK, you can embed the MAK key in a generalized image (Sysprep + slmgr /ipk) and deploy from that image.
+
+
+### Additional Resources
+
+* https://learn.microsoft.com/en-us/windows/deployment/volume-activation/activation-overview
+* https://learn.microsoft.com/en-us/windows/deployment/volume-activation/troubleshoot-activation
+* https://www.microsoft.com/Licensing/servicecenter

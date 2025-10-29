@@ -12,11 +12,12 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 ## Overview
 
-The Azure Instance Metadata Service (IMDS) is a REST API that's available at a well-known, non-routable IP address (`169.254.169.254`). You can only access it from within the VM. Communication between the VM and IMDS never leaves the host. HTTP clients must bypass web proxies within the VM when querying IMDS. IMDS IP address (`169.254.169.254`) must be handled in the same manner as the 168.63.129.16 IP address. 
+> [!NOTE]
+> The new [IMDSCertCheck](windows-vm-imds-tool.md) Run Command is now available to make diagnosing this scenario easier.
 
-[Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service)
 
-Run the [IMDSCertCheck](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/IMDSCertCheck) to diagnose any known isses. Additional information is also located below.
+The Azure Instance Metadata Service (IMDS) is a REST API that's available at a well-known, non-routable IP address (`169.254.169.254`). You can only access it from within the VM. Communication between the VM and IMDS never leaves the host. HTTP clients must bypass web proxies within the VM when querying IMDS. IMDS IP address (`169.254.169.254`) must be handled in the same manner as the 168.63.129.16 IP address. For additional information, read about the [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service)
+
 
 ## Symptom
 The Azure Virtual Machine cannot establish a connection with the Azure Instance Metadata Service (IMDS) endpoint. 
@@ -30,41 +31,95 @@ Need repro or does the IMDS endpoint not just work
 
 **Need unsuccessful response**
 
-## Cause 
-IMDS has a dependency on the Intermediate certificates located on the machine for the service to function properly. Those Intermediate certificates must be valid and must have access to [Certificate downloads and revocation lists](azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains%23certificate-downloads-and-revocation-lists.md) and must be included in your firewall allowlists. For more information about expired certificates, please read [Azure Instance Metadata Service-Attested data TLS: Critical changes are here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-instance-metadata-service-attested-data-tls-critical/ba-p/2888953).
+## Cause
+
+Intermediate certificates that are crucial for the process have expired or are missing.
+
+For more information, see [Azure Instance Metadata Service-Attested data TLS: Critical changes are here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-instance-metadata-service-attested-data-tls-critical/ba-p/2888953).
 
 
 ## Resolution
 
-Please refer to the following link to [download missing certificates:](azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains) 
+### How to determine if any certificates are missing
 
-While not recommend and if you're unable to allow access to the PKI URL from your servers , you can manually download and install the certificates on each machine[] listed here](azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#subordinate-certificate-authorities).
+Run the following PowerShell script to check for missing certificates:
 
-### Step 1
+```powershell
+# Get the signature
+# Powershell 5.1 does not include -NoProxy
+$attestedDoc = Invoke-RestMethod -Headers @{"Metadata"="true"} -Method GET -Uri http://169.254.169.254/metadata/attested/document?api-version=2018-10-01
+#$attestedDoc = Invoke-RestMethod -Headers @{"Metadata"="true"} -Method GET -NoProxy -Uri http://169.254.169.254/metadata/attested/document?api-version=2018-10-01
+ 
+# Decode the signature
+$signature = [System.Convert]::FromBase64String($attestedDoc.signature)
+ 
+# Get certificate chain
+$cert = [System.Security.Cryptography.X509Certificates.X509Certificate2]($signature)
+$chain = New-Object -TypeName System.Security.Cryptography.X509Certificates.X509Chain
+ 
+if (-not $chain.Build($cert)) {
+   # Print the Subject of the issuer
+   Write-Host $cert.Subject
+   Write-Host $cert.Thumbprint
+   Write-Host "------------------------"
+   Write-Host $cert.Issuer
+   Write-Host "------------------------"
+   Write-Host "Certificate not found: '$($cert.Issuer)'" -ForegroundColor Red
+   Write-Host "Please refer to the following link to download missing certificates:" -ForegroundColor Yellow
+   Write-Host "https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains" -ForegroundColor Yellow
+} else {
+   # Print the Subject of each certificate in the chain
+   foreach($element in $chain.ChainElements) {
+       Write-Host $element.Certificate.Subject
+       Write-Host $element.Certificate.Thumbprint
+       Write-Host "------------------------"
+   }
+ 
+   # Get the content of the signed document
+   Add-Type -AssemblyName System.Security
+   $signedCms = New-Object -TypeName System.Security.Cryptography.Pkcs.SignedCms
+   $signedCms.Decode($signature);
+   $content = [System.Text.Encoding]::UTF8.GetString($signedCms.ContentInfo.Content)
+   Write-Host "Attested data: " $content
+   $json = $content | ConvertFrom-Json
+}
 
-On any computer with internet access, download any of the missing intermediate CA certificates:
+```
 
-| | |
-| ---------- | ------------- |
-| Microsoft Azure RSA TLS Issuing CA 03 | https://www.microsoft.com/pkiops/certs/Microsoft Azure RSA TLS Issuing CA 03 - xsign.crt | 
-| Microsoft Azure RSA TLS Issuing CA 04 | https://www.microsoft.com/pkiops/certs/Microsoft Azure RSA TLS Issuing CA 04 - xsign.crt |
-| Microsoft Azure RSA TLS Issuing CA 07 | https://www.microsoft.com/pkiops/certs/Microsoft Azure RSA TLS Issuing CA 07 - xsign.crt |
-| Microsoft Azure RSA TLS Issuing CA 08 | https://www.microsoft.com/pkiops/certs/Microsoft Azure RSA TLS Issuing CA 08 - xsign.crt | 
-| |  |
+If any certificates are missing, you'll see an output similar to the following one:
 
-### Step 2
-Copy the certificate files to your machines that are missing .
+```output
+CN=metadata.azure.com, O=Microsoft Corporation, L=Redmond, S=WA, C=US
+3ACCC393D3220E40F09A69AC3251F6F391172C32
+------------------------
+CN=Microsoft Azure RSA TLS Issuing CA 04, O=Microsoft Corporation, C=US
+------------------------
+Certificate not found: 'CN=Microsoft Azure RSA TLS Issuing CA 04, O=Microsoft Corporation, C=US'
+Please refer to the following link to download missing certificates:
+https://learn.microsoft.com/en-us/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains
+```
 
-### Step 3
-Run any one set of the following commands in an elevated command prompt or PowerShell session to add the certificates to the "Intermediate Certificate Authorities" store for the local computer. The command should be run from the same directory as the certificate files. 
+To fix the certificate issue, go to [Solution 2: Ensure firewalls and proxies are configured to allow certificate downloads](#solution-2-ensure-firewalls-and-proxies-are-configured-to-allow-certificate-downloads).
 
-The commands are idempotent and won't make any changes if you've already imported the certificate:
+## Solution 2: Ensure firewalls and proxies are configured to allow certificate downloads
 
- ```
-CERTUTIL -ADDSTORE CA "MICROSOFT AZURE RSA TLS ISSUING CA 03 - XSIGN.CRT"
-CERTUTIL -ADDSTORE CA "MICROSOFT AZURE RSA TLS ISSUING CA 04 - XSIGN.CRT"
-CERTUTIL -ADDSTORE CA "MICROSOFT AZURE RSA TLS ISSUING CA 07 - XSIGN.CRT"
-CERTUTIL -ADDSTORE CA "MICROSOFT AZURE RSA TLS ISSUING CA 08 - XSIGN.CRT"
-``` 
+1. If you use Windows Server 2022, check if [KB 5036909](https://support.microsoft.com/topic/april-9-2024-kb5036909-os-build-20348-2402-36062ce9-f426-40c6-9fb9-ee5ab428da8c) is installed. If not, install it. You can get it from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5036909).
+
+2. If you have installed the update for Windows Server 2022 but still encounter the issue or you use Windows Server 2025, verify that your system's firewalls and proxies are configured to allow the download of certificates. For more information, see [Certificate downloads and revocation lists](/azure/security/fundamentals/azure-ca-details#certificate-downloads-and-revocation-lists).
+
+   Alternatively, you can download and install all the certificates directly from the [root and subordinate certificate authority chains](/azure/security/fundamentals/azure-ca-details?tabs=certificate-authority-chains#root-and-subordinate-certificate-authority-chains).
+  
+   > [!NOTE]
+   > Make sure to select the store location as **Local Machine** in the installation wizard.
+
+3. Open Command Prompt as an administrator, navigate to *c:\windows\system32*, and run *fclip.exe*.
+4. Restart the VM or sign out and then sign in again. You'll see that the watermark on the home page is no longer displayed, and the **Application state** field in the **Settings** > **Activation** screen reports success.
+
+## More information
+- [Azure Instance Metadata Service (IMDS)](/azure/virtual-machines/instance-metadata-service)
+- [Azure Instance Metadata Service-Attested data TLS: Critical changes are here](https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-instance-metadata-service-attested-data-tls-critical/ba-p/2888953)
+- [Certificate downloads and revocation lists](/azure/security/fundamentals/azure-ca-details#certificate-downloads-and-revocation-lists).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
+[route-command]: /windows-server/administration/windows-commands/route_ws2008
