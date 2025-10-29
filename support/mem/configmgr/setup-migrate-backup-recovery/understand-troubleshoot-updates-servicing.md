@@ -16,6 +16,22 @@ Configuration Manager synchronizes with the Microsoft cloud service to get updat
 
 To view and manage the updates, in the Configuration Manager console that's connected to the top-level site, navigate to **Administration** > **Cloud Services** > **Updates and Servicing**  For more information, see [Install in-console updates for Configuration Manager](/intune/configmgr/core/servers/manage/install-in-console-updates).
 
+## Best practices for updates
+
+Before you install updates from within the Configuration Manager console, review the following steps.
+
+### Step 1: Review the update checklists
+
+Review the following update checklists for actions to take before you start the update:
+
+- [Checklist for installing update 2503](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2503)
+- [Checklist for installing update 2409](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2409)
+- [Checklist for installing update 2403](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2403)
+
+### Step 2: Run the prerequisite checker before you install an update
+
+Before you install an update, consider running the prerequisite check for that update. For more information, see [Before you install an in-console update](/intune/configmgr/core/servers/manage/prepare-in-console-updates#before-you-install-an-in-console-update).
+
 ## Glossary
 
 | Term | Explanation |
@@ -24,7 +40,7 @@ To view and manage the updates, in the Configuration Manager console that's conn
 | Service Connection Point (SCP) | A site system role that connects Configuration Manager to the Microsoft cloud to synchronize updates. |
 | Service Connection Tool (SCT) | A tool that's used to synchronize and download update packages offline. |
 | Easy setup payload | The actual payload of an update package. |
-| Redists | A set of redistributable software components that are required to install updates. |
+| Redist | A set of redistributable software components that are required to install updates. |
 | Easy setup package | A hidden Configuration Manager package that's used to replicate the payload and redists of an update package. |
 
 ## List of primary components
@@ -33,11 +49,13 @@ To view and manage the updates, in the Configuration Manager console that's conn
 |---|---|---|---|---|
 | DMP Downloader | SMS_DMP_DOWNLOADER | DmpDownloader | Dmpdownloader.dll | Part of the Service Connection Point role. Responsible for synchronizing and downloading update packages. |
 | Service Connection Tool | - | SCT | ServiceConnectionTool.exe | Tool that's used for Offline Site Servicing. |
-| Hierarchy Manager | SMS_HIERARCHY_MANAGER | Hman | HMAN.dll | Site Server component that processes update packages. |
+| Hierarchy Manager | SMS_HIERARCHY_MANAGER | HMAN | HMAN.dll | Site Server component that processes update packages. |
 | Configuration Manager Update | CONFIGURATION_MANAGER_UPDATE | CMUpdate | CMUpdate.exe | Service that installs update packages. |
 
+## Prepare to troubleshoot Updates and Servicing issues
+
 > [!IMPORTANT]  
-> Avoid the following actions:
+> When dealing with an update or servicing issue, avoid the following actions:
 >
 > - Manually cleaning up any related folders (\EasySetupPayload, \CMUStaging). Only manually change these if Microsoft Support instructs you to.
 > - Manually cleaning up any SQL tables. Only manually change these if Microsoft Support instructs you to.
@@ -47,12 +65,13 @@ To view and manage the updates, in the Configuration Manager console that's conn
 > - Keeping the \CMUStaging\ folder open during the installation.
 
 > [!NOTE]  
-> After the update package starts installing, don't use [CMUpdateReset.exe](/intune/configmgr/core/servers/manage/update-reset-tool).
+> After an update package starts installing, don't use [CMUpdateReset.exe](/intune/configmgr/core/servers/manage/update-reset-tool).
 
-## Step 1: Identify the update package GUID
+### Identify the update package GUID
 
-As a first step, identify the update package GUID. If the update package is visible in the ConfigMgr Console, add the **Package Guid** column to the **Administration\Update and Servicing** node.
-There are cases, however, where target update package isn't visible. To find the Package GUID in ConfigMgr database, run a SQL query that resembles the following excerpt:
+Before you troubleshoot an update issue, identify the GUID of the update package. To view the GUID, if the update package is visible in the ConfigMgr Console, add the **Package Guid** column to the **Administration\Update and Servicing** node.
+
+Sometimes, the console doesn't list the affected update package. In this case, you can find the GUID in the ConfigMgr database. To find the GUID, run a SQL query that resembles the following excerpt:
 
 ```sql
 SELECT Name, PackageGuid FROM v_LocalizedUpdatePackageMetaData_SiteLoc
@@ -70,14 +89,26 @@ For reference, the following table lists well-known update package GUIDs. The li
 | Configuration Manager 2503 | 8576527E-DDE9-4146-8ED9-DB91091C38EF|
 | Configuration Manager 2503 HFRU | 6B0783D9-B8A2-4848-82F6-8EFE956F4988|
 
-## Step 2: Identify the installation stage of the update
+### Identify the installation stage of the update
 
-Use the following diagram to identify the stage of the update package installation.
+During the update process, an update package passes through the following stages:
+
+- Synchronization
+- Applicability check
+- Download
+- Replication
+- Prerequisite check
+- Installation
+
+Knowing the stage at which the update failed gives you a starting point for troubleshooting the issue. Use the following diagram to identify the stage of the update package installation.
+
+> [!NOTE]  
+> The Replication stage is part of either the Prerequisite check stage or the Installation stage, so it's not listed separately in the diagram.
 
 :::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-scoping-support-tickets.svg" alt-text="Diagram of a decision tree to identify the installation state.":::
 
 > [!IMPORTANT]  
-> If the update package doesn't appear in either the console or in the Windows PowerShell output, the installation might be in the Applicability stage. Search the top-level site's SQL **CM_UpdatePackages** table. Use a query that resembles the following excerpt:
+> If the update package doesn't appear in either the console or in the Windows PowerShell output, the installation might be in the Applicability stage. Search the top-level site's SQL CM_UpdatePackages table. Use a query that resembles the following excerpt:
 >
 > ```sql
 > SELECT PackageGuid,State FROM CM_UpdatePackages where PackageGUID = '<Package GUID>'
@@ -85,7 +116,13 @@ Use the following diagram to identify the stage of the update package installati
 >
 > This table should contain the record of the target package.
 
-## Synchronization and Applicability stages
+Select one of the following links to troubleshoot a particular stage, or work through the sections for each stage.
+
+- [Investigate the Synchronization and Applicability stages]()
+- [Investigate the Download stage]()
+- [Investigate the Replication, Prerequisite Check, or Installation stages]()
+
+## Investigate the Synchronization and Applicability stages
 
 The [SCP](/intune/configmgr/core/servers/deploy/configure/about-the-service-connection-point) downloads updates that apply to your Configuration Manager infrastructure. In online mode, it automatically checks for updates every 24 hours. When your SCP is in offline mode, use the [Service Connection Tool](/intune/configmgr/core/servers/manage/use-the-service-connection-tool) to manually sync with the Microsoft cloud.
 
@@ -166,25 +203,25 @@ Successfully Dropped the state message 4~~
 
 DMPDownloader sends state message `4 (MANIFEST_DOWNLOADED)` to indicate that this process has finished.
 
-A message forwarding thread in Hierarchy Manager (Hman) moves the incoming MCM file to hman.box\CFD\ConfigMgr.Update.Manifest.CAB. This operation doesn't generate log entries.
+A message forwarding thread in Hierarchy Manager (HMAN) moves the incoming MCM file to hman.box\CFD\ConfigMgr.Update.Manifest.CAB. This operation doesn't generate log entries.
 
-### Process step 2: HMan: check applicability
+### Process step 2: HMAN: Check applicability
 
-Hierarchy Manager (Hman) checks for the manifest for the download signature, extracts the manifest, and then processes the manifest and checks that the update packages are applicable.
+Hierarchy Manager (HMAN) checks for the manifest for the download signature, extracts the manifest, and then processes the manifest and checks that the update packages are applicable.
 
 The SMSDBMon component drops a blank file that's named \<SiteCode>.SCU to the \<ConfigMgr installation Directory>\\inboxes\\hman.box folder.
 
 > [!NOTE]  
 > \<SiteCode> represents the code of your Configuration Manager site, and \<ConfigMgr installation Directory> represents the local directory where Configuration Manager is installed.
 
-This event triggers HMan to start processing. It logs entries that resemble the following excerpt in HMan.log:
+This event triggers HMAN to start processing. It logs entries that resemble the following excerpt in HMAN.log:
 
 ```output
 STATMSG: ID=3306 SEV=I LEV=M SOURCE="SMS Server" COMP="SMS_HIERARCHY_MANAGER"
 SYS=<SiteServerFQDN> SITE=XXX PID=2168 TID=4888 GMTDATE=Wed Dec 21 16:15:08.957 2016 ISTR0="C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CAS.SCU"
 ```
 
-HMan checks for the download signature, and then extracts the manifest to the \\CMUStaging folder on the Site Server. During this process, HMan logs entries that resemble the following excerpt:
+HMAN checks for the download signature, and then extracts the manifest to the \\CMUStaging folder on the Site Server. During this process, HMAN logs entries that resemble the following excerpt:
 
 ```output
 File 'E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB' is signed and trusted.
@@ -192,7 +229,7 @@ File 'E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB' is signed
 Extracting file E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB to E:\ConfigMgr\CMUStaging\~
 ```
 
-The extracted files include a the ApplicabilityChecks folder, which contains SQL query files. HMan runs these queries to assess the applicability of the update packages in the manifest. During this process, HMan logs entries that resemble the following excerpt:
+The extracted files include a the ApplicabilityChecks folder, which contains SQL query files. HMAN runs these queries to assess the applicability of the update packages in the manifest. During this process, HMAN logs entries that resemble the following excerpt:
 
 ```output
 Extracted C:\Program Files\Microsoft Configuration Manager\CMUStaging\Manifest.xml  
@@ -201,7 +238,7 @@ C:\Program Files\Microsoft Configuration Manager\CMUStaging\ApplicabilityChecks\
 Configuration Manager Update (PackageGuid=10AA8BA0-04D4-4FE3-BC21-F1874BC8C88C) is applicable
 ```
 
-If a package isn't applicable, the HMan logs entries that resemble the following excerpt:
+If a package isn't applicable, the HMAN logs entries that resemble the following excerpt:
 
 ```output
 C:\Program Files\Microsoft Configuration Manager\CMUStaging\ApplicabilityChecks\CM1610-KB3211925_AppCheck_9390F966.sql has hash value SHA256:048DA8137C249AAD11340A855FF7E0E8568F5325FED5F503C4D9C329E73AD464  
@@ -211,45 +248,54 @@ Configuration Manager Update (PackageGuid=9390F966-F1D0-42B8-BDC1-8853883E704A) 
 
 </details>
 
-### Results of the Synchronization and Applicability checks
+### Results of the Synchronization and Applicability processes
 
 The console displays new update packages and labels their state as **Available to Download**. The applicability check might hide some update packages.
 
-Applicable updates are visible as **Available to Install** or directly **Ready to Install**. It can be verified by checking the **State** column in the `CM_UpdatePackages` table. The following state types show an update as available within the console:
+Applicable updates are visible as **Available to Install** or **Ready to Install**. You can verify an update's state by checking the **State** column in the CM_UpdatePackages table. The following state entries describe an update as available within the console:
 
-- APPLICABILITY_SUCCESS  =  327682
-- DOWNLOAD_SUCCESS  =  262146
+- `APPLICABILITY_SUCCESS  =  327682`
+- `DOWNLOAD_SUCCESS  =  262146`
 
-Updates having these states are normally hidden from the console:
+Updates that have the following states are typically hidden from the console:
 
-- APPLICABILITY_HIDE  =  393213
-- APPLICABILITY_NA  =  393214
+- `APPLICABILITY_HIDE  =  393213`
+- `APPLICABILITY_NA  =  393214`
 
-### Troubleshoot Synchronization
+### Troubleshoot the Synchronization stage
 
-Use the flowchart to narrow down the issue at Synchronization step.
+Use the following flowchart to investigate issues that might occur during the Synchronization stage.
 
-![Synchronization graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization.svg)
+:::image type="content" source="./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-synchronization.svg" alt-text="Diagram of a decision tree to determine whether an issue occurs during the Synchronization stage.":::
 
-#### For the Service Connection Point (SCP) configured to Online mode
+The following steps summarize this troubleshooting process. The steps vary depending on whether your SCP is configured in Online mode or Offline mode.
 
-1. Check the **DMPDownloader.log** on SCP for any errors related to the download process of **ConfigMgr.Update.Manifest.cab**.
-2. Verify that **Hman.log** shows the successful extraction of the CAB file as:
+- **SCP in Online mode**
 
->Extracting file E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB to E:\ConfigMgr\CMUStaging\~
->Extracted E:\ConfigMgr\CMUStaging\Manifest.xml  
+  1. On the SCP, check **DMPDownloader.log** for any error messages that the DMPDownloader generated while it downloaded and processed the manifest .cab file.
+  1. Verify that **HMAN.log** includes entries that resemble the following excerpt:
 
-#### For the SCP configured to Offline mode
+     ```output
+     Extracting file E:\ConfigMgr\inboxes\hman.box\CFD\ConfigMgr.Update.Manifest.CAB to E:\ConfigMgr\CMUStaging\~
+     Extracted E:\ConfigMgr\CMUStaging\Manifest.xml
+     ```
 
-1. Verify the presence of **ConfigMgr.Update.Manifest.ENC** in the downloaded data used for Import step.
-   a. If missing, explore **ServiceConnectionTool.log** from Connect step for any errors related to **ConfigMgr.Update.Manifest.ENC** file download.<br>
-   b. If present, verify the **ServiceConnectionTool.log** generated at Import step.
+     These log entries indicate that DMPDownloader successfully downloaded and processed the .cab file.
 
-After performing the Import step, the DMPDownloader on SCP should submit the State Message with the State=4.
+- **SCP in Offline mode**
 
->Successfully Dropped the state message 4~~
+  1. Verify the presence of **ConfigMgr.Update.Manifest.ENC** in the downloaded data used for Import step.
+     1. If missing, explore **ServiceConnectionTool.log** from Connect step for any errors related to **ConfigMgr.Update.Manifest.ENC** file download.
+     1. If present, verify the **ServiceConnectionTool.log** generated at Import step.
 
-### Troubleshoot Applicability
+     After performing the Import step, the DMPDownloader on SCP should submit the State Message with the State=4.
+
+     ```output
+     Successfully Dropped the state message 4~~
+     ```
+
+### Troubleshoot the Applicability stage
+
 
 The usual cause here is manual database manipulation or update failure that leaves the Site Version in inconsistent state; therefore, the specific update isn't found applicable.
 One may want to install a newer update if it's available in the console.
@@ -262,7 +308,7 @@ SELECT PackageGuid,State FROM CM_UpdatePackages where PackageGUID = '<Package GU
 
 ![Troubleshoot Applicability Graph](./media/understand-troubleshoot-updates-servicing/cm-updates-and-servicing-applicability.svg)
 
-The main log to check is **Hman.log**.
+The main log to check is **HMAN.log**.
 
 #### Verify site database functions
 
@@ -283,13 +329,13 @@ Note only _nnnn_ is the build number to look at. Minor build number _mm_ isn't u
 | SQL DB | Sites.Version | 5.00.nnnn.1000 |
 | SMSExec.exe | Product Version | 5.00.nnnn.10mm |
 
-## Download
+## Investigate the Download stage
 
 Each update package has a unique GUID (further referred as `Update GUID`). You can either explore the `manifest.xml` from unpacked `ConfigMgr.Update.Manifest.cab` or add "Package GUID" column to `\Administration\Overview\Updates and Servicing` node of the Console to identify the GUID of the update package you're interested in. Use it to follow all the later steps of update package processing.
 
 <details><summary>Click to expand the steps</summary>
 
-### Step 1: DMPDownloader Download
+### Process step 1: DMPDownloader Download
 
 By default, DMPDownloader automatically initiates the download of the latest applicable update package.
 
@@ -415,7 +461,7 @@ INFO: Verify directory E:\ConfigMgr\EasySetupPayload\3b7d84fa-eccc-4ea0-b8ab-abb
 INFO: Setup downloader setupdl.exe: FINISHED
 ```
 
-### Step 2: Completing the Download
+### Process step 2: Completing the Download
 
 As a result of the previous processing, the `\EasySetupPayload` share should contain a folder `\<Update GUID>` with integrated `\<Update GUID>\Redists`.
 
@@ -433,13 +479,13 @@ outerxml is <ConfigurationManagerUpdateContent Guid="3b7d84fa-eccc-4ea0-b8ab-abb
 
 Note the notification file is just an XML that contains the update package GUID and its new State="262146" that marks that the update package is Downloaded.
 
-Hman converts the file back to `.CMU` and moves it to `Hman.box\CFD` similar to Manifest CAB file at [Synchronization](#step-1-dmpdownloader-sync). Then the following entry is logged in `Hman.log` by CMUHandler thread:
+HMAN converts the file back to `.CMU` and moves it to `HMAN.box\CFD` similar to Manifest CAB file at [Synchronization](#step-1-dmpdownloader-sync). Then the following entry is logged in `HMAN.log` by CMUHandler thread:
 
 ```output
 Validate CMU file C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU with no intune subscription.
 ```
 
-The CMUHandler thread in Hman processes the file and updates the `State` in `CM_UpdatePackages` table to "262146" (DOWNLOAD_SUCCESS) by calling `spCMUSetUpdatePackageState` SQL Stored Procedure. At Verbose logging level, the following entries are logged in Hman.log:
+The CMUHandler thread in HMAN processes the file and updates the `State` in `CM_UpdatePackages` table to "262146" (DOWNLOAD_SUCCESS) by calling `spCMUSetUpdatePackageState` SQL Stored Procedure. At Verbose logging level, the following entries are logged in HMAN.log:
 
 ```output
 INFO: File without BOM : (E:\ConfigMgr\inboxes\hman.box\CFD\e8e74b72-504a-4202-9167-8749c223d2a5.CMU)
@@ -489,23 +535,10 @@ There are rare cases when DMPDownloader fails to unpack incoming files even if t
 
 If you suspect that the download has completed, but the content has been tampered with, use [Update Reset tool](/intune/configmgr/core/servers/manage/update-reset-tool) to clean up update package information from the database and delete all downloaded content. This tool restarts the whole process from **Synchronization** step.
 
-## Before you install an update
 
-Review the following steps before you install updates from within the Configuration Manager console.
+## Investigate the Replication, Prerequisite Check, or Installation stages
 
-### Step 1: Review the update checklist
-
-Review the following update checklist for actions to take before you start the update:
-
-- [Checklist for installing update 2503](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2503)
-- [Checklist for installing update 2409](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2409)
-- [Checklist for installing update 2403](/intune/configmgr/core/servers/manage/checklist-for-installing-update-2403)
-
-### Step 2: Run the prerequisite checker before you install an update
-
-Before you install an update, consider running the prerequisite check for that update. For more information, see [Before you install an in-console update](/intune/configmgr/core/servers/manage/prepare-in-console-updates#before-you-install-an-in-console-update).
-
-## Identify Replication and Installation Troubleshooting Path
+Identify Replication and Installation Troubleshooting Path
 
 After an update package is Downloaded, it's automatically moves to "Ready to Install" state in the Console. Then, once installation or prerequisite check is triggered, the update package payload content is replicated all (Primary) Sites Content Libraries and extracted to be further used for installation itself.
 
@@ -532,9 +565,9 @@ The following steps explain the [flow](/intune/configmgr/core/servers/manage/upd
 
 ### Step 1: Initialization
 
-The process starts at the top-level site when the administrator selects **Install** to start the update installation or runs a prerequisite check. Hierarchy manager (Hman) creates or updates the package by using the shared folder `\\[servername]\EasySetupPayload\<Update GUID>` as the source.
+The process starts at the top-level site when the administrator selects **Install** to start the update installation or runs a prerequisite check. Hierarchy manager (HMAN) creates or updates the package by using the shared folder `\\[servername]\EasySetupPayload\<Update GUID>` as the source.
 
-Changing the update package state fires the trigger `CM_UpdatePackages_UPD_HMAN` and SMSDBMON drops a file `Hman.box\CFD\2.ESC` waking up HMan to begin processing. The following entries are logged in Smsdbmon.log (verbose logging level):
+Changing the update package state fires the trigger `CM_UpdatePackages_UPD_HMAN` and SMSDBMON drops a file `HMAN.box\CFD\2.ESC` waking up HMAN to begin processing. The following entries are logged in Smsdbmon.log (verbose logging level):
 
 ```output
 RCV: UPDATE on CM_UpdatePackages for CM_UpdatePackages_UPD_HMAN [2  ]
@@ -542,13 +575,13 @@ Modified trigger definition for Hierarchy Manager[CM_UpdatePackages_UPD_HMAN]: t
 SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\2.ESC
 ```
 
-Upon detecting this file, Hman runs the following query to check which update package was selected to install:
+Upon detecting this file, HMAN runs the following query to check which update package was selected to install:
 
 ```sql
 SELECT TOP 1 convert(NVARCHAR(40), PackageGuid) FROM CM_UpdatePackages WHERE State=2
 ```
 
-The following entries are logged in Hman.log:
+The following entries are logged in HMAN.log:
 
 ```output
 INFO: 2.ESC file was found. Easy setup package needs to be updated.  
@@ -569,9 +602,9 @@ Info: Updated package CAS10001 and SMS_DISTRIBUTION_MANAGER will replicate the c
 Successfully reported ConfigMgr update status (SiteCode=CAS, SubStageID=0xb0001, IsComplete=2, Progress=100, Applicable=1)
 ```
 
-### Step 2: Hman: Updating the Easy Setup Package
+### Step 2: HMAN: Updating the Easy Setup Package
 
-Hman updates the EasySetupSettings table to have the Package GUID of the update package.
+HMAN updates the EasySetupSettings table to have the Package GUID of the update package.
 
 The following entries are logged:
 
@@ -585,7 +618,7 @@ You can find the `PackageID` value of the Easy Setup Package by running the foll
 Select * from vEasySetupPackage
 ```
 
-SMSDBMon drops `<PackageGUID>.CME` in `Hman.box\CFD` to keep HMAN busy so that other files aren't processed. The following entry is logged in the Smsdbmon.log at the verbose logging level:
+SMSDBMon drops `<PackageGUID>.CME` in `HMAN.box\CFD` to keep HMAN busy so that other files aren't processed. The following entry is logged in the Smsdbmon.log at the verbose logging level:
 
 ```output
 SND: Dropped C:\Program Files\Microsoft Configuration Manager\inboxes\hman.box\CFD\10AA8BA0-04D4-4FE3-BC21-F1874BC8C88C.CME
@@ -667,7 +700,7 @@ Start updating the package CAS10001...
 Successfully created/updated the package CAS10001
 ```
 
-Then, Hman creates a `<Update GUID>.CMI` file for Configuration Manager Update Service (CMUpdate.exe) at Child Primary Sites: see Hman.log:
+Then, HMAN creates a `<Update GUID>.CMI` file for Configuration Manager Update Service (CMUpdate.exe) at Child Primary Sites: see HMAN.log:
 
 ```output
 Created notification file (E8E74B72-504A-4202-9167-8749C223D2A5.CMI) for CONFIGURATION_MANAGER_UPDATE
@@ -683,7 +716,7 @@ update package content (EasySetup Package) is replicated to all Child Primary Si
 
 ### Troubleshoot Replication
 
-The first component involved is **Hman**, which must detect a new package to be processed and update the EasySetupSettings SQL table settings accordingly. Then **DistMgr** takes over to create the **Easy Setup Package** snapshot from `\EasySetupPayload\` share into Content Library as **Easy Setup Package**. This package follows usual Inter-site Content Replication flow to replicate to Child Primary Sites like any other classic Package. The best place to start with is **CM_UpdatePackages** in SQL filtered by specific update package GUID.
+The first component involved is **HMAN**, which must detect a new package to be processed and update the EasySetupSettings SQL table settings accordingly. Then **DistMgr** takes over to create the **Easy Setup Package** snapshot from `\EasySetupPayload\` share into Content Library as **Easy Setup Package**. This package follows usual Inter-site Content Replication flow to replicate to Child Primary Sites like any other classic Package. The best place to start with is **CM_UpdatePackages** in SQL filtered by specific update package GUID.
 
 Use flowchart to narrow down the issue at Replication step. Note it assumes that the installation or prerequisite check was triggered.
 
@@ -693,7 +726,7 @@ For the multi-tier hierarchy, the Child Primary Sites must also replicate the Ea
 
 #### Troubleshoot update package staying in State=2 (Enabled)
 
-If the **State** stays in 2 (Enabled), it likely identifies the **Hman** component as unable to perform its job. Check **Hman.log** for the following:
+If the **State** stays in 2 (Enabled), it likely identifies the **HMAN** component as unable to perform its job. Check **HMAN.log** for the following:
 
 1. Look for 2.ESC file processing.
 2. Filter by respective thread.
@@ -701,9 +734,9 @@ If the **State** stays in 2 (Enabled), it likely identifies the **Hman** compone
 
     >Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xb0001, IsComplete=2, Progress=100, Applicable=1)
 
-4. If the **Hman.log** rolled over, attempt recreating the empty `2.ESC` file in `Hman.box\CFD` manually. It should trigger the same process again.
+4. If the **HMAN.log** rolled over, attempt recreating the empty `2.ESC` file in `HMAN.box\CFD` manually. It should trigger the same process again.
 
-Note **Hman** must be able to access the Package Source via Share (even if SCP is local to the Site Server) - `\\<SCP FQDN>\EasySetupPayLoad\<PackageGUID>` to calculate the Easy Setup Package hash and update the **EasySetupSettings** table. If it fails to access the share, the following error is logged:
+Note **HMAN** must be able to access the Package Source via Share (even if SCP is local to the Site Server) - `\\<SCP FQDN>\EasySetupPayLoad\<PackageGUID>` to calculate the Easy Setup Package hash and update the **EasySetupSettings** table. If it fails to access the share, the following error is logged:
 
 ```output
 Get update package 05F7ED65-3CB0-46CF-91E7-71193DAF9845, \\<SCP FQDN>\EasySetupPayLoad\05F7ED65-3CB0-46CF-91E7-71193DAF9845
@@ -765,9 +798,9 @@ After one selects the update package and selects **Run prerequisite check**, the
 
 This action initiates the [Content Replication](#replication) if it hasn't completed before.
 
-### Step 2: Hman: Starting the check
+### Step 2: HMAN: Starting the check
 
-Once Hman updates the Easy Setup Package, it verifies the state of `CONFIGURATION_MANAGER_UPDATE` service and creates the notification (`<Update GUID>.CMI`) in `CMUpdate.box` inbox. The following entries are logged in Hman.log
+Once HMAN updates the Easy Setup Package, it verifies the state of `CONFIGURATION_MANAGER_UPDATE` service and creates the notification (`<Update GUID>.CMI`) in `CMUpdate.box` inbox. The following entries are logged in HMAN.log
 
 ```output
 INFO: Starting service CONFIGURATION_MANAGER_UPDATE
@@ -981,14 +1014,14 @@ INFO: setup type: 8, top level: 1.
 Continue configuration manager update as it is configured to ignore prereq warnings.
 ```
 
-The change in `CM_UpdatePackagesSiteStatus` table triggers a `<PackageGUID>.CME` file creation in `Hman.box\CFD` inbox:
+The change in `CM_UpdatePackagesSiteStatus` table triggers a `<PackageGUID>.CME` file creation in `HMAN.box\CFD` inbox:
 
 ```output
 Check CMU status...
 deleted notification file E:\ConfigMgr\inboxes\hman.box\CFD\8576527E-DDE9-4146-8ED9-DB91091C38EF.CME
 ```
 
-Hman then calls the SQL Stored Procedure `spProcessCMUPackages`:
+HMAN then calls the SQL Stored Procedure `spProcessCMUPackages`:
 
 ```sql
 exec spProcessCMUPackages
@@ -1264,10 +1297,10 @@ Copying contents of update package from E:\ConfigMgr\CMUStaging\3B7D84FA-ECCC-4E
 successfully updated setup registry to have new external files stored at E:\ConfigMgr\cd.latest\redist
 ```
 
-At the last step, it creates a notification file `196612.ESC` for the Hman and starts the post-install tasks:
+At the last step, it creates a notification file `196612.ESC` for the HMAN and starts the post-install tasks:
 
 ```output
-INFO: Successfully dropped update pack installed notification to HMan CFD box.
+INFO: Successfully dropped update pack installed notification to HMAN CFD box.
 ```
 
 ### Step 6: Post installation tasks
@@ -1276,7 +1309,7 @@ Here are the detailed steps:
 
 1. Verify that SMS_Executive service is installed.
 2. Verify that the SMSDBMon component is installed.
-3. Verify that the SMSHman component is installed.
+3. Verify that the SMSHMAN component is installed.
 4. Verify that the RCM component is installed.
 5. Monitor replication initialization.
 6. Update Configuration Manager client preproduction package.
@@ -1290,7 +1323,7 @@ Here are the detailed steps:
 > - Install.map contains the list of steps that the installation process runs. It serves as a workflow for Cmupdate.exe that provides the steps and parameters to run in order.
 > - For minor upgrades, check CMUpdate.log for details.
 
-Hman performs the tasks starting from updating the Client Packages. The usual logging is:
+HMAN performs the tasks starting from updating the Client Packages. The usual logging is:
 
 ```output
 INFO: 196612.ESC file was found. Updating client packages. InteropMode = 0
@@ -1313,14 +1346,14 @@ Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xe0009,
 Successfully reported ConfigMgr update status (SiteCode=CS1, SubStageID=0xe0008, IsComplete=2, Progress=100, Applicable=1)
 ```
 
-Hman is also responsible of enabling new features after the upgrade.
+HMAN is also responsible of enabling new features after the upgrade.
 
 </details>
 
 ### Installation result
 
 The update package is marked as "Installed" in the console. The `CM_UpdatePackages` table has the state set to **196612** for the update package of interest.
-Older packages are usually hidden from the console due to the Applicability check performed by Hman after installation.
+Older packages are usually hidden from the console due to the Applicability check performed by HMAN after installation.
 
 ### Troubleshoot Installation and Failures
 
@@ -1391,7 +1424,7 @@ The alternate cause is _third-party software_ accessing ConfigMgr SQL DB and loc
 | Folder | Location | Description |
 |--------|---|-------------|
 | \EasySetupPayload | SCP |  This shared folder contains the actual installation files for an update. There's no Setup.exe file. Instead, an Install.map file is used for installing. |
-| \CMUStaging | Site Server | This folder holds unpacked ConfigMgr manifest cab that's downloaded and extracted by HMan to perform applicability checks. The installation files are temporarily stored there during the installation of the Update Pack. |
+| \CMUStaging | Site Server | This folder holds unpacked ConfigMgr manifest cab that's downloaded and extracted by HMAN to perform applicability checks. The installation files are temporarily stored there during the installation of the Update Pack. |
 | \CMUClient | Site Server | This folder contains the latest client installation files. The files are copied directly from the EasySetupPayload folder. |
 | \PilotingUpgrade | Site Server | Client Piloting Package source. |
 | \ClientUpgrade | Site Server | Client Upgrade Package source. |
