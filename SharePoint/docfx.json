@@ -144,7 +144,8 @@
         "SharePointServer/**/*.md": "sharepoint-server-itpro",
         "SharePointExperts/**/*.md": "sharepoint-server-itpro",
         "SharePointOnline/migration/**/*.md": "microsoft-365-migration"
-      },      "author": {
+      },
+      "author": {
         "**/*.md": "Cloud-Writer"
       },
       "ms.author": {
