@@ -26,7 +26,7 @@ ms.custom: sap:Application Insights portal experiences
 **Fix:** Update the workbook's repository URL parameter and validation rule.
 
 > [!NOTE]
-> If using a self-hosted Azure DevOps instance, make sure it is accessible from the Azure portal.
+> If using a self-hosted Azure DevOps instance, make sure it's accessible from the Azure portal.
 
 ## Authorization prompt doesn't appear or linking fails
 
@@ -57,7 +57,7 @@ ms.custom: sap:Application Insights portal experiences
 
 ## Contextual data is missing from created work items
 
-**Cause:** The Kusto Query Language (KQL) query does not return the expected schema.
+**Cause:** The Kusto Query Language (KQL) query doesn't return the expected schema.
 
 **Check:** Run the query in **Logs** and validate the output fields.
 
