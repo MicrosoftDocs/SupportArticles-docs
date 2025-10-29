@@ -12,7 +12,7 @@ ms.custom: sap:auto-renewal
 ---
 # Troubleshoot Azure App Service certificates 
 
-Azure App Service certificates provide a convenient way to purchase, provision, and manage SSL/TLS certificates for Azure App Services. This article helps developers and administrators systematically diagnose and fix issues that affect App Service certificates. See the following sections:
+Azure App Service certificates provide a convenient way to purchase, provision, and manage SSL/TLS certificates for Azure App Services. This article helps developers and admins systematically diagnose and fix issues that affect App Service certificates. See the following sections:
 
 - [Step-by-step troubleshooting flow](#step-by-step-troubleshooting-flow): A sequence of checks and actions to resolve certificate problems, including portal and command-line steps.
 
@@ -106,7 +106,7 @@ Domain **ownership verification** is important because Azure doesn't issue or re
         standard certificates. It doesn't work if **HTTPS Only** is enabled on
         your site.
        
-      - **Domain Verification:** This method creates a .txt file if you host
+      - **Domain Verification:** This method creates a DNS .txt file if you host
         your domain by using an App Service domain.
 
 2.  After you initiate verification, select **Refresh** until you see
@@ -201,7 +201,7 @@ job.
 
 > [!NOTE]
 > **Rekey** is used to change the certificate's key. **Sync**
-updates bindings with the current certificate.
+updates bindings by adding the current certificate.
 
 **For Azure CLI**
 
@@ -335,8 +335,8 @@ error:
   default Azure certificate might appear if you use the
   *\*.azurewebsites.net* domain that has a custom domain requirement.
 
-- Because DNS caching can direct you to an old IP, clear the DNS cache if you recently changed a record (in Windows, located at
-  *ipconfig/flushdns*).
+- Because DNS caching can direct you to an old IP, clear the DNS cache if you recently changed a record (in Windows, run
+  `ipconfig/flushdns`).
 
 - If a wrong certificate appears in the custom domain, it might
   indicate the mixed SNI and IP bindings scenario that was previously discussed.
@@ -475,7 +475,7 @@ an Azure notification or email message that states that a certificate is expirin
   verification. The renewal stayed in a *Pending issuance* state, and the old certificate eventually expired.
 
 - **Key Vault permission issue:** Azure tried to renew but couldn't
-  update the Key Vault secret because the required access was missing.
+  update the Key Vault secret because the required access permissions were missing.
 
 - **Payment or subscription issue (for purchase renewals):** Renewal can fail if both the following conditions are true:
    - The certificate is a paid App Service certificate.
@@ -666,7 +666,7 @@ After you complete the setup, you find that your web app can't use the certifica
   policies or delete and re-create the vault without reinitializing the
   certificate.
 
-- **User access versus system access:** If your Azure AD tenant has
+- **User access versus system access:** If your Microsoft Entra ID tenant has
   policies (such as Conditional Access) that interfere with the back-end
   service principals' ability to access the Key Vault, this issue might block
   the sync. Typically, the service principles operate outside of those
@@ -674,7 +674,7 @@ After you complete the setup, you find that your web app can't use the certifica
   firewall that can block Azure services. (Azure Key Vault should allow
   trusted Azure services, if you're using that feature.)
 
-- **App configuration (local permissions):** If your code tries to load the certificate from the store, and you see an *Access denied* message or something similar, you might have to adjust the app's identity or permissions to match how you export the certificate. This situation is rare. By default, the certificate that's bound to your web app is made available to the worker process. A managed identity isn't necessary if you want only to use an App Service certificate in the web app. This is true because this task is usually handled by the platform. However, if you explicitly upload a certificate that has a password, you might have to add an app setting to grant access (**WEBSITE_LOAD_CERTIFICATES** setting).
+- **App configuration (local permissions):** If your code tries to load the certificate from the local computer certificate store, and you see an *Access denied* message or something similar, you might have to adjust the app's identity or permissions to match how you export the certificate. This situation is rare. By default, the certificate that's bound to your web app is made available to the worker process. A managed identity isn't necessary if you want only to use an App Service certificate in the web app. This is true because this task is usually handled by the platform. However, if you explicitly upload a certificate that has a password, you might have to add an app setting to grant access (**WEBSITE_LOAD_CERTIFICATES** setting).
 
 **Solutions**
 
