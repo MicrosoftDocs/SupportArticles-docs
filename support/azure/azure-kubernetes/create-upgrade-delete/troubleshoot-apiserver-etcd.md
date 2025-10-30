@@ -131,17 +131,17 @@ If you're experiencing a high rate of HTTP 429 errors, one possible cause is tha
 kubectl get flowschemas
 kubectl get prioritylevelconfigurations
 ```
-<img src="image-4.png" alt="FlowSchema" width="300">
+<img src="image-4.png" alt="FlowSchema" width="600">
 
-<img src="image-5.png" alt="PriorityLevelConfiguration" width="300">
+<br>
+
+<img src="image-5.png" alt="PriorityLevelConfiguration" width="600">
 
 - Check Kubernetes Events 
 
 ```bash
 kubectl get events -n kube-system aks-managed-apiserver-throttling-enabled
 ```
-
-<img src="image-6.png" alt="PriorityLevelConfiguration" width="600" height="1000">
 
 ### Solution 4: Identify unoptimized clients and mitigate 
 
@@ -159,21 +159,21 @@ kubectl get events -n kube-system aks-managed-apiserver-throttling-enabled
 kubectl delete flowschema aks-managed-apiserver-guard
 kubectl delete prioritylevelconfiguration aks-managed-apiserver-guard
 ```
-- You can also [modify the aks-managed-apiserver-guard FlowSchema and PriorityLevelConfiguration](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/#good-practice-apf-settings) by applying the label aks-managed-skip-update-operation: true. This label preserves the modified configurations and prevents AKS from reconciling them back to default values.
+- You can also [modify the aks-managed-apiserver-guard FlowSchema and PriorityLevelConfiguration](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/#good-practice-apf-settings) by applying the label **aks-managed-skip-update-operation: true**. This label preserves the modified configurations and prevents AKS from reconciling them back to default values.
 
 ```bash
 kubectl label prioritylevelconfiguration aks-managed-apiserver-guard
 kubectl label flowschema aks-managed-apiserver-guard
 ```
 > [!NOTE]
-> It's advisable to rather delete aks-managed-apiserver-guard after optimizing the client's LIST pattern and applying a custom FlowSchema and PriorityLevelConfiguration  applicable to your cluster's requirement instead of modifying the default aks-managed-apiserver-guard, refer to [solution 5b](#solution-5b-throttle-a-client-thats-overwhelming-the-control-plane). Modifying it will cause AKS to be not be able reapply the aks-managed-apiserver-guard with defaults if the API server continues to experience out-of-memory (OOM) events in the future. 
+> It's advisable to rather delete aks-managed-apiserver-guard after optimizing the client's LIST pattern and applying a custom FlowSchema and PriorityLevelConfiguration  applicable to your cluster's requirement as specified in [solution 5b](#solution-5b-throttle-a-client-thats-overwhelming-the-control-plane), instead of modifying the default aks-managed-apiserver-guard. Modifying it will cause AKS to be not be able reapply the aks-managed-apiserver-guard with defaults if the API server continues to experience out-of-memory (OOM) events in the future. 
 
 ### Cause 5: An offending client makes excessive LIST or PUT calls
 
 If you determine that etcd isn't overloaded with too many objects, an offending client might be making too many `LIST` or `PUT` calls to the API server.
 If you experience high latency or frequent timeouts, follow these steps to pinpoint the offending client and the types of API calls that fail.
 
-##### <a id="identifytopuseragents"></a> Step 1: Identify top user agents by the number of requests
+#### <a id="identifytopuseragents"></a> Step 1: Identify top user agents by the number of requests
 
 To identify which clients generate the most requests (and potentially the most API server load), run a query that resembles the following code. This query lists the top 10 user agents by the number of API server requests sent.
 
@@ -321,7 +321,7 @@ The results from this query can be useful to identify the kinds of API calls tha
 
 ### Solution 5a: Tune your API call pattern
 
-To reduce the pressure on the control plane, consider tuning your client's API call pattern. Refer to [best practices](/azure-aks-docs-pr/articles/aks/best-practices-performance-scale-large.md#kubernetes-clients).
+To reduce the pressure on the control plane, consider tuning your client's API server call pattern. Refer to [best practices](/azure-aks-docs-pr/articles/aks/best-practices-performance-scale-large.md#kubernetes-clients).
 
 ### Solution 5b: Throttle a client that's overwhelming the control plane
 
