@@ -7,7 +7,7 @@ ms.custom: sap:Application Insights portal experiences
 ---
 # Troubleshoot work item integration issues in Application Insights
 
-[Work item integration](/azure/azure-monitor/app/work-item-integration) in Application Insights allows you to create and link work items directly from telemetry data. If this feature isn't working as expected, the following guidance will help you diagnose and resolve common issues.
+[Work item integration](/azure/azure-monitor/app/work-item-integration) in Application Insights allows you to create and link work items directly from telemetry data. If this feature isn't working as expected, the following guidance helps you diagnose and resolve common issues.
 
 ## The "Create work item" option doesn't appear in transaction details
 
@@ -25,7 +25,7 @@ This issue occurs when the URL format doesn't meet validation requirements.
 **What to do:**
 
 * Make sure the URL uses HTTPS and matches the validation rule in the workbook parameter.
-* If you're using a self-hosted Azure DevOps instance, ensure it is accessible from the Azure portal.
+* If you're using a self-hosted Azure DevOps instance, ensure it's accessible from the Azure portal.
 
 ## Authorization prompt doesn't appear or linking fails
 
