@@ -1,9 +1,9 @@
 ---
 title: Replay Markup Language Utilities
 description: This article discusses a group of tools that are used by support professionals to troubleshoot SQL Server.
-ms.date: 09/09/2025
+ms.date: 10/21/2025
 ms.custom: sap:SQL Server Management, Query and Data Tools
-ms.reviewer: sureshka, jopilov, toddhayn, troymoen, v-jayaramanp
+ms.reviewer: sureshka, jopilov, toddhayn, troymoen, v-jayaramanp, v-shaywood
 ---
 # Replay Markup Language (RML) Utilities for SQL Server
 
@@ -22,6 +22,9 @@ The RML Utilities are a set of diagnostic tools for troubleshooting and aiding p
 - **OStress Replay Control Agent (ORCA)** aids Ostress in simulating a stress test by replaying a workload from RML files. You don't interact with ORCA directly, but use Ostress.
 
 For a complete description of every tool and sample usage, see the RML Help file that's included in RML Utilities for SQL Server.
+
+> [!NOTE]
+> RML Utilities have been deprecated as of October 2025. This product is no longer in development and no future enhancements or fixes should be expected.
 
 ## How are RML Utilities useful?
 
@@ -50,7 +53,7 @@ You can examine the version history of RML Utilities in this table and download 
 
 |Version number|Description|
 |---|---|
-|[09.04.0103](https://www.microsoft.com/download/details.aspx?id=106287)| Indicates the current web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2022, SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, and SQL Server 2008).|
+|[09.04.0103](https://www.microsoft.com/download/details.aspx?id=106287)| The current and final web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2022, SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, and SQL Server 2008).|
 |[09.04.0102](https://www.microsoft.com/download/details.aspx?id=104868)| Indicates the previous web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2022, SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, and SQL Server 2008).|
 |[9.04.0100](https://www.microsoft.com/download/details.aspx?id=103126)| Indicates a previous web release that's available from the Microsoft Download Center. It supports all released versions of SQL Server (SQL Server 2019, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008, SQL Server 2005, and SQL Server 2000).|
 |[9.04.0098](https://www.microsoft.com/download/details.aspx?id=54090)| Indicates a previous web release package that is included with the Database Experimentation Assistant tool. It supports all released versions of SQL Server.|

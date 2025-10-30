@@ -140,10 +140,13 @@
       "ms.service": {
         "SharePointHybrid/**/*.md": "sharepoint-online",
         "SharePointOnline/**/*.md": "sharepoint-online",
-        "OneDrive/**/*.md": "one-drive",
+        "OneDrive/**/*.md": "microsoft-graph",
         "SharePointServer/**/*.md": "sharepoint-server-itpro",
         "SharePointExperts/**/*.md": "sharepoint-server-itpro",
         "SharePointOnline/migration/**/*.md": "microsoft-365-migration"
+      },
+      "ms.subservice": {
+        "OneDrive/**/*.md": "onedrive"
       },
       "author": {
         "**/*.md": "Cloud-Writer"

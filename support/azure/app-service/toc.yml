@@ -1,88 +1,53 @@
 items: 
 - name: Azure App Service
   items:
-    - name: Troubleshoot Azure App Service
-      href: ./welcome-app-service.yml
-    - name: Web apps (Windows and Linux)
-      items:
-      - name: Availability, performance, and application issues
-        items:
-        - name: Node.js Best Practices and Troubleshooting Guide
-          href: app-service-web-nodejs-best-practices-troubleshoot-guide.md
-        - name: Troubleshoot an app in Azure App Service using Visual Studio
-          href: troubleshoot-dotnet-visual-studio.md
-        - name: Troubleshoot Performance Degradation
-          href: troubleshoot-performance-degradation.md  
-        - name: Capture memory dumps in Azure App Service
-          href: ./capture-memory-dumps-app-service.md
-        - name: Availability, performance, and application FAQs
-          href: web-apps-performance-faqs.md
-        - name: Troubleshoot instance-related issues
-          href: troubleshoot-instance-related-issues-on-azure-app-service.md
-        - name: Troubleshoot temporary storage
-          href: temporary-storage-for-azure-app-service.md
-      - name: Configuration and management
-        items:
-        - name: Create or delete web apps FAQs
-          href: ./create-delete-resources-faq.yml
-        - name: FAQs about scaling web apps
-          href: ./scaling-web-app-faq.yml
-        - name: Backing up, restoring, and cloning
-          href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
-      - name: Networking
-        items:
-        - name: Troubleshoot virtual network integration
-          href: troubleshoot-vnet-integration-apps.md
-        - name: Troubleshoot Intermittent Outbound Connection Errors
-          href: troubleshoot-intermittent-outbound-connection-errors.md
-        - name: Fix HTTP 502 and HTTP 503 Errors
-          href: troubleshoot-http-502-http-503.md  
-      - name: Application code deployment
-        items:
-        - name: Built-in Linux containers FAQs
-          href: faqs-app-service-linux.yml
-        - name: Deployment FAQs for Web Apps
-          href: web-apps-deployment-faqs.md
-      - name: Application code
-        items:
-        - name: Open-source technologies FAQs for Web Apps
-          href: web-apps-open-source-technologies-faqs.md
-      - name: Questions about App Service security
-        items:
-        - name: App service security FAQs
-          href: faqs-web-app-security.md
-      - name: SSL, certificates, and domains
-        items:
-        - name: Use Azure App Service Certificate with Azure Front Door
-          href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-azure-front-door.md
-        - name: Use Azure App Service Certificate with Application Gateway
-          href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-application-gateway.md
-        - name: Troubleshoot domain and TLS/SSL certificates 
-          href: ./connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates.md  
-    - name: App Service Domains
-      items: 
-      - name: Unable to configure custom domains on an app
-        items:
-        - name: Set up an existing custom domain
-          href: /azure/app-service/app-service-web-tutorial-custom-domain
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
+  - name: Troubleshoot Azure App Service certificates
+    href: troubleshoot-azure-app-service-certificates.md
+  - name: Connection issues with SSL or TLS
+    items:
+    - name: Troubleshoot domain and TLS/SSL certificates 
+      href: ./connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates.md  
+    - name: Use Azure App Service Certificate with Azure Front Door
+      href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-azure-front-door.md
+    - name: Use Azure App Service Certificate with Application Gateway
+      href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-application-gateway.md
+  - name: Troubleshoot Azure App Service
+    href: ./welcome-app-service.yml
+  - name: Capture memory dumps in Azure App Service
+    href: ./capture-memory-dumps-app-service.md
+  - name: Create or delete web apps FAQs
+    href: ./create-delete-resources-faq.yml
+  - name: App service security FAQs
+    href: faqs-web-app-security.md
+  - name: Availability, performance, and application FAQs
+    href: web-apps-performance-faqs.md
+  - name: Backing up, restoring, and cloning
+    href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
+  - name: Built-in Linux containers FAQs
+    href: faqs-app-service-linux.yml
+  - name: Deployment FAQs for Web Apps
+    href: web-apps-deployment-faqs.md
+  - name: FAQs about scaling web apps
+    href: ./scaling-web-app-faq.yml
+  - name: Fix HTTP 502 and HTTP 503 Errors
+    href: troubleshoot-http-502-http-503.md  
+  - name: Set up an existing custom domain
+    href: /azure/app-service/app-service-web-tutorial-custom-domain
+  - name: Node.js Best Practices and Troubleshooting Guide
+    href: app-service-web-nodejs-best-practices-troubleshoot-guide.md
+  - name: Open-source technologies FAQs for Web Apps
+    href: web-apps-open-source-technologies-faqs.md
+  - name: Troubleshoot an app in Azure App Service using Visual Studio
+    href: troubleshoot-dotnet-visual-studio.md
+  - name: Troubleshoot temporary storage
+    href: temporary-storage-for-azure-app-service.md
+  - name: Troubleshoot instance-related issues
+    href: troubleshoot-instance-related-issues-on-azure-app-service.md
+  - name: Troubleshoot virtual network integration
+    href: troubleshoot-vnet-integration-apps.md
+  - name: Troubleshoot Performance Degradation
+    href: troubleshoot-performance-degradation.md  
+  - name: Troubleshoot Intermittent Outbound Connection Errors
+    href: troubleshoot-intermittent-outbound-connection-errors.md
 
     

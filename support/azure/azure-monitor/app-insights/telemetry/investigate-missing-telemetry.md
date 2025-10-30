@@ -2,7 +2,9 @@
 title: Troubleshoot missing application telemetry in Azure Monitor Application Insights
 description: Describes how to test connectivity and telemetry ingestion by using PowerShell or curl to identify the step in the processing pipeline that causes telemetry to go missing.
 ms.date: 07/07/2025
-ms.reviewer: aaronmax, toddfous, v-weizhu
+author: JarrettRenshaw
+ms.author: jarrettr
+ms.reviewer: aaronmax, toddfous, v-weizhu, matthofa, v-nawrothkai, v-ryanberg, v-gsitser
 ms.service: azure-monitor
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
 #Customer intent: As an Application Insights user I want to know where in the processing pipeline telemetry goes missing so I know where to troubleshoot.
@@ -13,7 +15,7 @@ This article helps you to identify the step in the processing pipeline that caus
 
 ## The Azure portal fails to pull or render the records you're trying to view
 
-If your Application Insights data collection endpoint is configured to use Microsoft Entra ID (formerly Azure AD) for authentication, your application must also be configured to authenticate with Microsoft Entra ID. In this scenario, your application is responsible for authenticating using Microsoft Entra ID. If the application isn't correctly configured, telemetry will be rejected and won't appear in the Azure portal even if instrumentation appears correct and your application is generating telemetry data.
+If your Application Insights data collection endpoint is configured to use Microsoft Entra ID (formerly Azure AD) for authentication, your application must also be configured to authenticate with Microsoft Entra ID. In this scenario, your application is responsible for authenticating using Microsoft Entra ID. If the application isn't correctly configured, telemetry is rejected and doesn't appear in the Azure portal even if instrumentation appears correct and your application is generating telemetry data.
 
 To configure your application to authenticate using Microsoft Entra ID, follow the steps in [Enable Microsoft Entra ID (formerly Azure AD) authentication](/azure/azure-monitor/app/opentelemetry-configuration#enable-microsoft-entra-id-formerly-azure-ad-authentication).
 
@@ -34,7 +36,7 @@ If application telemetry doesn't show in the Azure portal, failures across steps
 - Other possible causes and solutions are discussed in [Troubleshoot missing application telemetry in Azure Monitor Application Insights](investigate-missing-telemetry.md).
 
 > [!TIP]
-> The Application Insights support teams can't assist with networking issues. When submitting a support ticket for networking issues that prevent Application Insights from receiving telemetry data, such as DNS resolution failures, ensure that you specify Azure Networking or Azure Private Link in your product or issue description in the Azure portal. This will ensure that your support case is routed correctly.
+> The Application Insights support teams can't assist with networking issues. When submitting a support ticket for networking issues that prevent Application Insights from receiving telemetry data, such as DNS resolution failures, ensure that you specify Azure Networking or Azure Private Link in your product or issue description in the Azure portal. This makes sure that your support case is routed correctly.
 
 ## Identify step by sending sample telemetry record
 
@@ -66,7 +68,7 @@ A sample telemetry record that's correctly saved and displayed means:
 - Log Analytics correctly saved the sample record.
 - The Azure portal **Logs** tab is able to query the API (`api.applicationinsights.io`) and render the sample record in the Azure portal.
 
-If the generated sample record arrives at your Application Insights instance and you can query for the sample record by using the **Logs resource** menu, [troubleshoot the Application Insights SDK or agent](#troubleshoot-application-insights-sdk-agent). You can then proceed with collecting SDK logs, self-diagnostic logs, or profiler traces, whichever is appropriate for the SDK or agent version.
+If the generated sample record arrives at your Application Insights instance, and you can query for the sample record by using the **Logs resource** menu, [troubleshoot the Application Insights SDK or agent](#troubleshoot-application-insights-sdk-agent). You can now collect SDK logs, self-diagnostic logs, or profiler traces, as appropriate for the SDK or agent version.
 
 The following sections provide information about sending a sample telemetry record using PowerShell or curl.
 
@@ -135,14 +137,14 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 This script builds a raw REST request to deliver a single availability test result to the Application Insights component. When you use this script, supply the `$ConnectionString` or `$InstrumentationKey` parameter.
 
-- If only the connection string parameter is supplied, telemetry will be sent to the regional endpoint in the connection string.
-- If only the instrumentation key (ikey) parameter is supplied, telemetry will be sent to the global ingestion endpoint.
-- If both connection string and ikey parameters are supplied, the script will send telemetry to the regional endpoint in the connection string.
+- If only the connection string parameter is supplied, telemetry is sent to the regional endpoint in the connection string.
+- If only the instrumentation key (ikey) parameter is supplied, telemetry is sent to the global ingestion endpoint.
+- If both connection string and ikey parameters are supplied, the script sends telemetry to the regional endpoint in the connection string.
 
 > [!NOTE]
 >
 > - Test the connection made by your application. If you enable Application Insights in the Azure portal, you likely rely on connection strings with regional endpoints, `https://<region>.in.applicationinsights.azure.com`. If your SDK configuration only supplies the ikey, you rely on the global endpoint, `https://dc.applicationinsights.azure.com`. Make sure to populate the script parameter that matches your web application SDK configuration, either supplying the connection string or the ikey.
-> - On March 31, 2025, support for instrumentation key ingestion will end. Instrumentation key ingestion will continue to work, but we'll no longer provide updates or support for the feature. [Transition to connection strings](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings) to take advantage of [new capabilities](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings#new-capabilities).
+> - On March 31, 2025, support for instrumentation key ingestion ended. Instrumentation key ingestion continues to work, but we no longer provide updates or support for the feature. [Transition to connection strings](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings) to take advantage of [new capabilities](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings#new-capabilities).
 
 It's easiest to run this script from the PowerShell ISE environment on an IaaS or [Azure virtual machine scale set](/azure/virtual-machine-scale-sets/overview) instance. You can also copy and paste the script into the [App Service Kudu](/azure/app-service/resources-kudu) interface PowerShell debug console and then run it.
 
@@ -153,7 +155,7 @@ When the script is executed, look for an HTTP 200 response and review the respon
 
 Refer to the following screenshot as an example:
 
-:::image type="content" source="media/investigate-missing-telemetry/items-received-matches-items-accepted.png" alt-text="Code that shows the amount of items received and items accepted.":::
+:::image type="content" source="media/investigate-missing-telemetry/items-received-matches-items-accepted.png" alt-text="Code that shows the number of items received and items accepted.":::
 
 ## <a id="curl-command-send-availability-test-result"></a>Curl command to send availability test result
 
@@ -235,7 +237,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $requestData -UseBasicParsing
 
 ## Troubleshoot SSL or TLS configuration
 
-If the scripts above fail, troubleshoot the SSL or TLS configuration. Most ingestion endpoints require clients to use TLS 1.2 and specific cipher suites. In this case, adjust how PowerShell participates as a client in the SSL or TLS protocol. Include the following snippets if you need to diagnose a secure channel as part of the connection between the client VM and the ingestion endpoints.
+If these scripts fail, troubleshoot the SSL or TLS configuration. Most ingestion endpoints require clients to use TLS 1.2 and specific cipher suites. In this case, adjust how PowerShell participates as a client in the SSL or TLS protocol. Include the following snippets if you need to diagnose a secure channel as part of the connection between the client VM and the ingestion endpoints.
 
 - Option 1: Control which SSL or TLS protocol is used by PowerShell to make a connection to the ingestion endpoint.
 
@@ -285,4 +287,146 @@ If tests performed by using PowerShell or curl fail to send telemetry to the ing
 - The ingestion endpoint that the SDK connects to may require TLS 1.2, but your application may by default use TLS 1.0 or TLS 1.1.
 - You may have more than one [Azure Monitor Private Link](/azure/azure-monitor/logs/private-link-security) impacting your private network, which may overwrite your DNS entries to resolve the ingestion endpoint to the wrong private IP address.
 
-[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
+## Troubleshoot Microsoft Entra authentication issues
+
+This section provides distinct troubleshooting scenarios and steps to resolve [Microsoft Entra authentication](/azure/azure-monitor/app/azure-ad-authentication) issues before you contact Microsoft support.
+
+### Ingestion HTTP errors
+
+The ingestion service returns specific errors regardless of the SDK language. Network traffic can be collected by using a tool such as Fiddler. Make sure that you filter traffic to the ingestion endpoint that's set in the connection string.
+
+### HTTP/1.1 400 Authentication not supported
+
+This error shows that the resource is set as Microsoft Entra-only.
+
+Review and configure the SDK correctly because it's sending to the wrong API.
+
+> [!NOTE]
+> `v2/track` doesn't support Microsoft Entra ID. If the SDK is configured correctly, telemetry is sent to `v2.1/track`.
+
+#### HTTP/1.1 401 Authorization required
+
+This error indicates that the SDK is configured correctly but can't acquire a valid token. This error might indicate that an issue that affects Microsoft Entra ID exists.
+
+Identify exceptions in the SDK logs or network errors from Azure Identity.
+
+#### HTTP/1.1 403 Unauthorized
+
+This error means that the SDK uses credentials without permission for the Application Insights resource or subscription.
+
+Check the access control for the Application Insights resource. You must ensure the identity used by the SDK has been assigned the Monitoring Metrics Publisher role.
+
+### Language-specific troubleshooting
+
+### [.NET](#tab/net)
+
+#### Enable error logs
+
+The Application Insights .NET SDK emits error logs by using the event source. To learn more about collecting event source logs, see [Troubleshooting no data - collect logs with PerfView](asp-net-troubleshoot-no-data.md#collect-logs-with-perfview).
+
+If the SDK doesn't get a token, the exception message is logged as "Failed to get AAD Token. Error message."
+
+### [Java](#tab/java)
+
+#### HTTP traffic
+
+You can inspect network traffic by using a tool such as Fiddler. To enable the traffic to tunnel through Fiddler, add the following proxy settings in the configuration file:
+
+```JSON
+"proxy": {
+"host": "localhost",
+"port": 8888
+}
+```
+
+Alternatively, add the following Java Virtual Machine (JVM) arguments while running your application: 
+
+> `-Djava.net.useSystemProxies=true -Dhttps.proxyHost=localhost -Dhttps.proxyPort=8888`
+
+If Microsoft Entra ID is enabled in the agent, outbound traffic includes the `Authorization` HTTP header.
+
+#### 401 Unauthorized
+
+You might see the following entry in the log:
+
+> `WARN c.m.a.TelemetryChannel - Failed to send telemetry with status code: 401, please check your credentials`
+
+This message means that the agent can't send telemetry. In this situation, you likely didn't enable Microsoft Entra authentication on the agent while your Application Insights resource had `DisableLocalAuth: true`. Make sure that you pass a valid credential that has access permission to your Application Insights resource.
+
+If you use Fiddler, you might see the following response header:
+
+> `HTTP/1.1 401 Unauthorized - please provide the valid authorization token`
+
+#### CredentialUnavailableException
+
+You might see the following entry in the log file:
+
+> `com.azure.identity.CredentialUnavailableException: ManagedIdentityCredential authentication unavailable. Connection to IMDS endpoint cannot be established`
+
+This exception means that the agent didn't acquire the access token. The likely cause is an invalid client ID in your User-Assigned Managed Identity configuration.
+
+#### Failed to send telemetry
+
+You might see the following message in the log:
+
+`WARN c.m.a.TelemetryChannel - Failed to send telemetry with status code: 403, please check your credentials`
+
+This message means that the agent can't send telemetry. The likely reason is that the credentials that are used don't allow telemetry ingestion.
+
+If you use Fiddler, you might notice the following response:
+
+> "HTTP/1.1 403 Forbidden - provided credentials do not grant the access to ingest the telemetry into the component"
+
+This issue can be caused by any of the following actions:
+
+- Creating a resource that has a system-assigned managed identity.
+- Associating a user-assigned identity without adding the Monitoring Metrics Publisher role to it.
+- Using the correct credentials for access tokens, but linking them to the wrong Application Insights resource. In this situation, make sure that your resource (virtual machine or app service) or user-assigned identity has Monitoring Metrics Publisher roles in your Application Insights resource.
+
+#### Invalid Client ID
+
+You might see the following exception in the log:
+
+> `com.microsoft.aad.msal4j.MsalServiceException: Application with identifier <CLIENT_ID> was not found in the directory`
+
+This means that the agent didn't get the access token. This exception likely occurs because the client ID in your client secret configuration is invalid or incorrect or failed to generate the token by using the wrong credentials.
+
+This issue occurs if the admin doesn't install the application or if no tenant user consents to it. It occurs also if you send your authentication request to the wrong tenant.
+
+### [Java native](#tab/java-native)
+
+> [!NOTE]
+> Microsoft Entra ID authentication isn't available for *GraalVM Native* applications.
+
+### [Node.js](#tab/nodejs)
+
+#### Enable error logs
+
+Turn on internal logs by using the following setup. After you enable the logs, the console shows error logs, including any errors that are related to Microsoft Entra integration. Examples include failing to generate the token with the wrong credentials or if the ingestion endpoint doesn't authenticate by using the provided credentials.
+
+```javascript
+let appInsights = require("applicationinsights");
+appInsights.setup("InstrumentationKey=00000000-0000-0000-0000-000000000000;IngestionEndpoint=https://xxxx.applicationinsights.azure.com/").setInternalLogging(true, true);
+```
+
+### [Python](#tab/python)
+
+### Error starts with "credential error" (with no status code)
+
+Something is incorrect about the credential you're using and the client isn't able to obtain a token for authorization. It's because the required data is lacking for the state. An example would be passing in a system `ManagedIdentityCredential` but the resource isn't configured to use system-managed identity.
+
+### Error starts with "authentication error" (with no status code)
+
+The client failed to authenticate with the given credential. This error usually occurs if the credential used doesn't have the correct role assignments.
+
+### Status code 400 is logged in the error logs
+
+You're probably missing a credential or your credential is set to `None`, but your Application Insights resource is configured with `DisableLocalAuth: true`. Make sure that you pass in a valid credential and that it has permission to access your Application Insights resource.
+
+### Status code 403 is logged in error logs
+
+This error usually occurs when the provided credentials don't grant access to ingest telemetry for the Application Insights resource. Make sure your Application Insights resource has the correct role assignments.
+
+[!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]

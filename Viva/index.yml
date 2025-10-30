@@ -84,7 +84,7 @@ productDirectory:
           text: New Outlook for Mac
     # Card
     - title: OneDrive
-      imageSrc: /office/media/logos/logo-onedriveforbusiness.svg
+      imageSrc: /media/logos/logo-onedrive.svg
       links:
         - url: /troubleshoot/sharepoint/onedrive-welcome
           text: OneDrive for Business

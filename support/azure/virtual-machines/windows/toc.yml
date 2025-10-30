@@ -455,17 +455,19 @@ items:
   - name: Troubleshoot extension issues
     href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
-- name: Cannot activate my Windows VM
+- name: Cannot activate Windows
   items:
-  - name: Understanding Generic Volume License Key
-    href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: KMS endpoints - new endpoints
+    href: windows-activation-stopped-working.md
   - name: Troubleshooting
     href: troubleshoot-activation-problems.md
   - name: Frequently asked questions
     href: windows-virtual-machine-activation-faq.yml
-  - name: KMS endpoints - new endpoints
-    href: windows-activation-stopped-working.md
-  - name: Common Issues
+  - name: Troubleshooting tools
+    href: windows-activation-troubleshoot-tools.md
+  - name: Understanding Generic Volume License Key
+    href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Common issues
     items:
     - name: Activation fails in forced tunneling scenario
       href: custom-routes-enable-kms-activation.md

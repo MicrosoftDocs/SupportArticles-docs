@@ -1,6 +1,31 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-client/windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md",
+      "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-sql-cluster-ag-fci-scenarios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/performance-diagnostics.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics?tabs=windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/how-to-use-perfinsights.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-run?tabs=windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/performance-diagnostics-vm-extension.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-analyze?tabs=windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows/perfinsights-and-scale-set-vm-instances.md",
+      "redirect_url": "/azure/azure-monitor/vm/performance-diagnostics-extension",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-client/windows-tss/gather-information-using-tss-hyper-v-issues.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios",
       "redirect_document_id": false
@@ -13884,6 +13909,10 @@
     {
       "source_path": "support/sql/database-engine/install/windows/update-or-slipstream-installation.md",
       "redirect_url": "/sql/database-engine/install-windows/install-sql-server-using-slipstream"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/payments/adyen-support.md",
+      "redirect_url": "/dynamics365/commerce/dev-itpro/payments-retail#what-is-the-service-level-agreement-sla-for-out-of-box-payment-connectors-like-adyen"
     }
   ]
 }

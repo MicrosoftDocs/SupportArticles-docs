@@ -7,7 +7,7 @@ metadata:
   title: Troubleshoot Azure Cloud Services (extended support) issues
   description: Documentation for troubleshooting common issues with Azure Cloud Services (extended support). # Required; article description that is displayed in search results. < 160 chars.
   services: cloud-services
-  ms.service: azure-cloud-services-extended-support
+  ms.service: azure-service-fabric
   ms.topic: landing-page # Required
   author: JarrettRenshaw  #Required; your GitHub user alias, with correct capitalization.
   ms.author: jarrettr #Required; microsoft alias of author; optional team alias.
