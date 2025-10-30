@@ -28,8 +28,6 @@ items:
     href: ms-azure-windows-eos-client.md
   - name: Windows Server 2003 (EOS)
     href: ms-azure-windows-eos.md
-  - name: Windows Server 2008/R2 (EOS)
-    href: ms-azure-windows-eos.md
   - name: Windows Server 2012 R2 (EOS)
     items:
     - name: Extended Security Updates (ESU)
@@ -40,8 +38,6 @@ items:
     items:
       - name: End of Support (EOS)
         href: ms-azure-windows-eos.md
-      - name: Extended Security Updates (ESU)
-        href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
       - name: How to upgrade
         href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: 32-bit operating systems
