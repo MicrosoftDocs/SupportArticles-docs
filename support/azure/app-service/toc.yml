@@ -59,7 +59,7 @@ items:
           href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-application-gateway.md
         - name: Troubleshoot domain and TLS/SSL certificates 
           href: ./connection-issues-with-ssl-or-tls/troubleshoot-domain-and-tls-ssl-certificates.md  
-    - name: App Service domains
+    - name: App Service Domains
       items: 
       - name: Unable to configure custom domains on an app
         items:
