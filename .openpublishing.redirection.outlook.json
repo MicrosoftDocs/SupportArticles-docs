@@ -29,8 +29,8 @@
       "redirect_url": "/troubleshoot/outlook/classic-outlook-windows-welcome"
     },
     {
-      "source_path": "Outlook/classic-outlook-windows/collect-performance-trace.md",
-      "redirect_url": "/troubleshoot/outlook/new-outlook-windows/collect-performance-trace"
+      "source_path": "Outlook/classic-outlook-windows/performance/collect-performance-trace.md",
+      "redirect_url": "/troubleshoot/outlook/new-outlook-windows/performance/collect-performance-trace"
     }    
   ]
 }
