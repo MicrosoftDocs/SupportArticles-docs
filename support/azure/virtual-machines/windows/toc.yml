@@ -32,7 +32,7 @@ items:
     href: ms-azure-windows-eos.md
   - name: Windows Server 2012 R2 (EOS)
     items:
-    - name: Extended Security Updates
+    - name: Extended Security Updates (ESU)
       href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: How to upgrade
       href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
@@ -40,7 +40,7 @@ items:
     items:
       - name: End of Support (EOS)
         href: ms-azure-windows-eos.md
-      - name: Extended Security Updates
+      - name: Extended Security Updates (ESU)
         href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
       - name: How to upgrade
         href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
@@ -53,11 +53,13 @@ items:
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
 
-- name: Windows 10 (End Of Support)
+- name: Windows 10 (EOS)
   href: ms-azure-windows-eos-client.md
 
-- name: Extended Security Updates (EOS)
+- name: Extended Security Updates (ESU)
   items:
+  - name: Overview for Windows 10
+    href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Overview for Windows Server 2012/R2
     href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Overview for Windows Server 2008/R2
