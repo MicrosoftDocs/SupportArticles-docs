@@ -145,11 +145,11 @@ kubectl get events -n kube-system aks-managed-apiserver-throttling-enabled
 
 ### Solution 4: Identify unoptimized clients and mitigate 
 
-##### Step 1: Identify unoptimized clients
+#### Step 1: Identify unoptimized clients
 
-- See [Cause 5](#cause-5-an-offending-client-makes-excessive-list-or-put-calls) to identify problematic clients and refine their LIST call patterns - especially those generating high-frequency or high-latency requests as they are the primary contributors to API server degradation. Refer to [best practices](/azure-aks-docs-pr/articles/aks/best-practices-performance-scale-large.md#kubernetes-clients) for further guidance.
+- See [Cause 5](#cause-5-an-offending-client-makes-excessive-list-or-put-calls) to identify problematic clients and refine their LIST call patterns - especially those generating high-frequency or high-latency requests as they are the primary contributors to API server degradation. Refer to [best practices](/azure-aks-docs-pr/articles/aks/best-practices-performance-scale-large.md#kubernetes-clients) for further guidance on client optimization.
 
-##### Step 2: Mitigation
+#### Step 2: Mitigation
 > [!WARNING]
 > Do not perform any mitigation steps until the client's call pattern is optimized, as this could lead to the API server becoming fully unresponsive. 
 
@@ -206,7 +206,7 @@ AzureDiagnostics
 
 Although it's helpful to know which clients generate the highest request volume, high request volume alone might not be a cause for concern. The response latency that clients experience is a better indicator of the actual load that each one generates on the API server.
 
-##### Step 2 - Identify and analyse latency for user agent
+#### Step 2 - Identify and analyse latency for user agent
 **Using Diagnose and Solve on Azure portal** 
 
 AKS now provides a built-in analyzer, the API Server Resource Intensive Listing Detector, to help you identify agents that make resource-intensive LIST calls. These calls are a leading cause of API server and etcd performance issues.
@@ -277,7 +277,7 @@ This query is a follow-up to the query in the ["Identify top user agents by the 
 > [!TIP]
 > By analyzing this data, you can identify patterns and anomalies that can indicate problems on your AKS cluster or applications. For example, you might notice that a particular user is experiencing high latency. This scenario can indicate the type of API calls that are causing excessive load on the API server or etcd.
 
-##### Step 3: Identify Unoptimized API calls for a given user agent
+#### Step 3: Identify Unoptimized API calls for a given user agent
 
 Run the following query to tabulate the 99th percentile (P99) latency of API calls across different resource types for a given client.
 
