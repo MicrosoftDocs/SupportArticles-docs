@@ -152,6 +152,13 @@ items:
   
 - name: Cannot connect to my VM
   items:
+  - name: Resolve 'ghost nic' issues
+    href: troubleshoot-specific-rdp-errors.md
+    items:
+    - name: Troubleshooting tool
+      href: windows-vm-ghostednic-tool.md
+    - name: Understanding the issue
+      href: windows-vm-ghostednic-troubleshooting.md
   - name: Common troubleshooting support
     items:
     - name: RDP troubleshooting
