@@ -47,7 +47,7 @@ Check the status of your App Service certificate to determine whether it's valid
 
 **For Azure portal**
 
-- Navigate to **App Service Certificates**, and select your certificate. Check the **Status** field. The value should be **Issued**, not **Expired** or **Pending Issuance**. Also note the **Expiration Date** and whether **Auto Renew** is enabled. In the portal, you can find **Auto Renew** under **Certificate Configuration** > **Auto Renew Settings**. Make sure that it's set to **On** if you expect Azure to renew the certificate automatically because the last validation occurred within 13 months (395 days).
+- Navigate to **App Service Certificates**, and select your certificate. Check the **Status** field. The value should be **Issued**, not **Expired** or **Pending Issuance**. Also note the **Expiration Date** and whether **Auto Renew** is enabled. In the portal, you can find **Auto Renew** under **Certificate Configuration** > **Auto Renew Settings**. Make sure that it's set to **On** if you expect Azure to renew the certificate automatically when the last validation occurred within the previous 13 months (395 days). Otherwise a new validation that you still own the domain is needed.
 
 **For Azure CLI**
 
@@ -77,7 +77,7 @@ az webapp config ssl show --resource-group <ResourceGroupName>
 
 Make sure that the certificate isn't expired. Also, check whether the renewal status is healthy (no pending domain verification or errors).
 
-If the certificate is marked **Expired** or you see a warning such as **Renewal Failed** in the portal, the certificate wasn't renewed in time and a new certificate should be purchased. If the status is **Pending Issuance**, the certificate isn't yet fully provisioned. This condition is often true because of domain verification issues.
+If the certificate is marked **Expired** or you see a warning such as **Renewal Failed** in the portal, the certificate wasn't renewed in time and a new certificate should be purchased. If the status is **Pending Issuance**, the certificate isn't yet fully provisioned. This condition is often true when additional verification if needed.
 
 If **Auto Renew** is set to **Off**, and the certificate is expired, a new certificate should be created. In this case, you can delete this certificate. If **Auto Renew** is set to **On** but the certificate is still expired, this situation means that a validation requirement wasn't met on time. In this case, a new certificate should be created.
 
@@ -153,16 +153,25 @@ out-of-band method to verify.
 An App Service certificate is stored [as a
 secret](/azure/key-vault/general/basic-concepts) in an Azure Key Vault that Azure creates or uses during certificate purchase. Problems that affect the Key Vault can prevent certificate usage or renewal.
 
-**Common verifications**
+**Common verifications for Key Vault existence and status.** 
 
-- **Key Vault existence and status.** In the certificate's Azure portal
-  page, in **Certificate Configuration > Step 1: Store**, verify that
-  the certificate is correctly stored in a Key Vault (indicated by using a
-  green checkmark). If it's not, you might have to select or create a Key Vault
-  to store the certificate in. The Key Vault must be in the *same
-  subscription and resource group** as the certificate.
+**For Azure portal**
 
-- **Access policies.** The Key Vault must contain specific access
+In the certificate's Azure portal page, in **Certificate Configuration > Step 1: Store**, verify that the certificate is correctly stored in a Key Vault (indicated by using a green checkmark). If it's not, you might have to select or create a Key Vault to store the certificate in. The Key Vault must be in the *same subscription and resource group** as the certificate. 
+
+**For Azure CLI**
+   
+Use role-based access control (RBAC) for Key Vault verification with the following:
+
+```powershell
+az role assignment create --role "Key Vault Certificate User" --assignee "f3c21649-0979-4721-ac85-b0216b2cf413" --scope /subscriptions/{subscriptionid}/resourcegroups/{resource-group-name}/providers/Microsoft.KeyVault/vaults/{key-vault-name}
+```
+
+```powershell
+az role assignment create --role "Key Vault Certificate User" --assignee "abfa0a7c-a6b6-4736-8310-5855508787cd" --scope /subscriptions/{subscriptionid}/resourcegroups/{resource-group-name}/providers/Microsoft.KeyVault/vaults/{key-vault-name}
+```
+
+**Access policies.** The Key Vault must contain specific access
   policies in order for App Service to be able to use the certificate. By default, when the
   certificate is created and stored, Azure adds two service principles
   that have the required permissions:
@@ -222,12 +231,7 @@ them by using Azure CLI, run az keyvault set-policy together with the appropriat
 **What to look for**
 
 If the certificate was renewed in Key Vault but your app is still
-serving an expired certificate, either Key Vault permissions are missing or a sync is pending. The Azure portal might show a warning
-about Key Vault permissions in some cases. Refer to the certificate's
-**Key Vault Status** or the documentation's guidance about required
-policies. A missing policy can cause the app to keep using the old
-certificate. After you correct access issues and then sync, the app should use the new
-certificate.
+serving an expired certificate, the issue might be caused by missing Key Vault permissions, your network access is blocked, or a sync is pending. The Azure portal might show a warning about Key Vault permissions in some cases. Refer to the certificate's **Key Vault Status** or the documentation's guidance about required policies. A missing policy can cause the app to keep using the old certificate. After you correct access issues and then sync, the app should use the new certificate.
 
 > [!IMPORTANT]
 > Don't delete or replace the Key Vault that holds your
@@ -345,7 +349,7 @@ error:
 ### Step 5: Renew or reissue the certificate 
 
 During your troubleshooting in steps 1–4, if you discover that the
-certificate is about to expire and not automatically renew, you must take action to renew or reissue it.
+certificate is about to expire and didn't automatically renew, you must take action to renew or reissue it.
 
 **Auto renewal versus manual renewal**
 
