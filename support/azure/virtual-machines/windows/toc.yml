@@ -79,7 +79,7 @@ items:
 
 - name: Windows Update (WU)
   items:
-  - name: Windows Update WU - Errors requiring IPU
+  - name: WU Errors - IPU required
     href: windows-update-errors-requiring-in-place-upgrade.md
   - name: Top errors for Azure VMs
     items:
