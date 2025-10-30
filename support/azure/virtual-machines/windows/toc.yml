@@ -98,7 +98,7 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
 
-- name: Procedures to upload a VHD to Azure
+- name: Uploading a VHD to Azure
   items:
   - name: Uploading a VHD to Azure
     href: /windows-server/get-started/uploading-specialized-ws08-image-to-azure?context=/troubleshoot/azure/virtual-machines/windows/context/context
@@ -106,7 +106,7 @@ items:
   - name: Preparing a VM for Azure
     href: /azure/virtual-machines/windows/prepare-for-upload-vhd-image?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
-- name: Procedures to repair a Windows VM
+- name: Repairing a Windows VM
   items:
   - name: Repair a VM with Nested Hyper-V
     href: troubleshoot-vm-by-use-nested-virtualization.md
@@ -144,7 +144,7 @@ items:
   - name: Increase Networking limits
     href: /azure/azure-portal/supportability/networking-quota-requests?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
-- name: VM health
+- name: Determining VM health
   items:
   - name: HealthResources table in Resource Graph has missing entries
     href: healthresources-table-resource-graph-missing-entries.md
