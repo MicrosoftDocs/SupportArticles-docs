@@ -13909,6 +13909,10 @@
     {
       "source_path": "support/sql/database-engine/install/windows/update-or-slipstream-installation.md",
       "redirect_url": "/sql/database-engine/install-windows/install-sql-server-using-slipstream"
+    },
+    {
+      "source_path": "support/dynamics-365/commerce/payments/adyen-support.md",
+      "redirect_url": "/dynamics365/commerce/dev-itpro/payments-retail#what-is-the-service-level-agreement-sla-for-out-of-box-payment-connectors-like-adyen"
     }
   ]
 }
