@@ -68,7 +68,7 @@ Run the following steps as a cluster administrator on a node that has full acces
 
    > [!NOTE]  
    >
-   > - In this cmdlet, /<Pool> is the name of the storage pool resource.
+   > - In this cmdlet, \<Pool> is the name of the storage pool resource.
    > - Later steps in this procedure use properties such as the name and the owner group of the resource.
 
 1. To get the properties of the storage pool's virtual disks and CSVs, run the following command:
@@ -107,7 +107,7 @@ Run the following steps as a cluster administrator on a node that has full acces
    ```
 
    > [!NOTE]  
-   > In this command, /<Current Node> is the name of the node that you're working from, and /<OwnerGroup> is the value of the OwnerGroup property of the storage group resource.
+   > In this command, \<Current Node> is the name of the node that you're working from, and \<OwnerGroup> is the value of the OwnerGroup property of the storage group resource.
 
 1. To move the failed disk and CSV resources to the current node, run `Move-ClusterResource` again for each physical disk and CSV resource. To see the OwnerGroup value of the CSV, run `Get-ClusterSharedVolume | get-ClusterGroup`.
 
