@@ -8,20 +8,23 @@
 ## Symptom
 When an Azure Virtual Machine running Windows Server or Windows Client with **Accelerated Networking** enabled is **deallocated**, the following may occur:
 
-- No connectivity issues occur for the active NIC
-- Interfere with scripts or automation that enumerate NICs
-- Lead to stale IP configurations associated with removed adapters.
-- Windows Update failures
-- Performance issues that may be unexplainable
+- Connectivity issues may occur for the active NIC
+- Interference with scripts or automation that enumerate NICs
+- Stale IP configurations associated with removed adapters may be present
+- Windows Update download issues 
+- Performance issues
 - Windows Activation failures
+
+`Ghosted nics` can happen to Azure virtual machines (VMs) causing connectivity, performance, Windows Update, and other issues. Microsoft provides a script-based tool to help diagnose and clean-up the ghost-nic issues.
 
 > **Note:**
 > This issue does **not** occur when the VM is shut down from inside the OS without deallocation.
-> if there are over 500+ ghosted nics, there is a larger negative impact to the VM.
+> If there are over 500+ ghosted nics, there is a larger negative impact to the VM.
 
 ## Cause
 
 - This behavior typically occurs after:
+
   - **Stop (deallocate)** and **Start** operations via the Azure Portal, CLI, or PowerShell.
   - VM redeployment or host migration events
 
@@ -31,6 +34,8 @@ This behavior is **by design** due to the architecture of Accelerated Networking
 - When you **start** the VM again, it is allocated to a different physical server in the datacenter.
 - Each physical server has a **unique hardware MAC address**.
 - Because Accelerated Networking **bypasses the virtual switch for performance**, the OS cannot reuse the previous MAC address. As a result, the old NIC becomes a **ghosted device**.
+
+:::image type="content" source="media/windows-vm-ghostednic-tool/windows-vm-ghostednictroubleshooting-networkdiff.png" alt-text="Azure Accelerated Networkinmg difference in design example." lightbox="media/windows-vm-ghostednic-tool/windows-vm-ghostednictroubleshooting-networkdiff.png":::  
 
 
 The Product Group is evaluating improvements, but there is **no ETA** for this feature.

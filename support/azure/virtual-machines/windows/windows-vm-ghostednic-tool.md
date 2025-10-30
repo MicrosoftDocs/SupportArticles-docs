@@ -10,13 +10,13 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-When an Azure Virtual Machine running Windows Server or Windows Client with Accelerated Networking enabled is deallocated, the following may occur:
+When an Azure Virtual Machine running Windows Server or Windows Client with **Accelerated Networking** enabled is **deallocated**, the following may occur:
 
-- No connectivity issues occur for the active NIC
-- Interfere with scripts or automation that enumerate NICs
-- Lead to stale IP configurations associated with removed adapters.
-- Windows Update failures
-- Performance issues that may be unexplainable
+- Connectivity issues may occur for the active NIC
+- Interference with scripts or automation that enumerate NICs
+- Stale IP configurations associated with removed adapters may be present
+- Windows Update download issues 
+- Performance issues
 - Windows Activation failures
 
 `Ghosted nics` can happen to Azure virtual machines (VMs) causing connectivity, performance, Windows Update, and other issues. Microsoft provides a script-based tool to help diagnose and clean-up the ghost-nic issues.
