@@ -26,8 +26,7 @@ You might receive one or more of the following error messages when interacting w
 
 Copilot Studio enforces default rate and usage constraints to protect against unexpected usage surges that might affect the functionality of the application. Agent usage is measured in Copilot credits. The number of credits an agent consumes depends on the design and features of the agent. When consumption exceeds available capacity in an environment, the environment is in overage. Once overage enforcement is triggered, you see the message, "This agent is currently unavailable. It has reached its usage limit. Please try again later." For more information on credits and overage enforcement, see [Overage enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
 
-For messages generated with the usage of generative AI and for topic orchestration, quotas limit the number of requests that you can send per minute and per hour. Once you reach the limit, subsequent agent messages are blocked, resulting in one of the listed symptoms.  
-These quotas and limits apply per Dataverse environment. For more information, see [Quotas and limits for Copilot Studio](/microsoft-copilot-studio/requirements-quotas).
+For messages generated with the usage of generative AI and for topic orchestration, quotas limit the number of requests that you can send per minute and per hour. Once you reach the limit, subsequent agent messages are blocked, resulting in one of the listed symptoms. These quotas and limits apply per Dataverse environment. For more information, see [Quotas and limits for Copilot Studio](/microsoft-copilot-studio/requirements-quotas).
 
 ## Solution
 
@@ -44,7 +43,7 @@ If you reach the limits, an administrator can either:
 
 ### Request a rate-limit increase
 
-Contact Microsoft Support and request a rate-limit increase. This option doesn't guarantee that an exception or increase is granted. Each request is subject to review and approval based on eligibility and current licensing. Only pay-as-you-go environments are eligible; environments operating solely on message-based functionality aren't eligible for consideration.
+[Contact Microsoft Support](/microsoft-copilot-studio/fundamentals-support#microsoft-support) and request a rate-limit increase. This option doesn't guarantee that an exception or increase is granted. Each request is subject to review and approval based on eligibility and current licensing. Only pay-as-you-go environments are eligible; environments operating solely on message-based functionality aren't eligible for consideration.
 
 ## Related information
 
