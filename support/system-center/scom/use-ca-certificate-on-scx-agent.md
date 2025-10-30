@@ -85,7 +85,7 @@ Use one of the following methods to configure the certificate on the the Unix/Li
     openssl pkcs12 -in <FileName>.pfx -nocerts -out /etc/opt/omi/ssl/omikey.pem -nodes -passin pass:"pfxpassword"
     ```
 
-    > While exporting the private key from the certificate store, a new password has to be set for the new key file, unless you specify the `-nodes`, This option stands for `no DES` encryption which instructs OpenSSL to output the private key in an unencrypted format.
+    > While exporting the private key from the certificate store, include the `-nodes` paramter (stands for no DES) which instructs OpenSSL to output the private key in an unencrypted format, otherwise a new password has to be set for the new key file. 
 
 1. Export the certificate by using the following command:
 
@@ -100,7 +100,7 @@ Use one of the following methods to configure the certificate on the the Unix/Li
     ln -s /etc/opt/omi/ssl/omi-host-$(hostname).pem /etc/opt/omi/ssl/omi.pem
     ```
    
-1. Set the correct permissions and ownership on omikey.pem, Certificate and Symbolic Link:
+1. Set the correct permissions and ownership on the private key, certificate and symbolic link:
 
     ```console
     chmod 600 /etc/opt/omi/ssl/omikey.pem
@@ -109,7 +109,7 @@ Use one of the following methods to configure the certificate on the the Unix/Li
     chown root:omi /etc/opt/omi/ssl/omi-host-$(hostname).pem /etc/opt/omi/ssl/omi.pem
     ```
 
-1. Restart the SCX agent by using the following command:
+1. Restart the SCX agent by running the following command:
 
     ```console
     scxadmin -restart
@@ -124,7 +124,7 @@ Use one of the following methods to configure the certificate on the the Unix/Li
     :::image type="content" source="media/use-ca-certificate-on-scom-linux-agent/command-validate-omi-processes.png" alt-text="Screenshot that shows the command to validate omi processes running." lightbox="media/use-ca-certificate-on-scom-linux-agent/command-validate-omi-processes.png":::
 
 ### Method 2: Configure Certificate with Bash Script
-1. Save the below bash script extract_scx_cert.sh
+1. Save the following bash script extract_scx_cert.sh
 
     ```console
     #!/bin/bash
@@ -163,13 +163,13 @@ Use one of the following methods to configure the certificate on the the Unix/Li
     systemctl restart omid
     ```
 
-1. Change Script permissions to be executed
+1. Change script permissions to be executed
 
     ```console
     chmod +x /home/user/extract_scx_cert.sh
     ```
 
-1. Execute the script with the parameters as below with the path to the pfx file and the password for it:
+1. Run he following command to execute the script with the two parameters; the path to the pfx file and the password for it
 
     ```console
     sudo ./extract_scx_cert.sh /path/to/certificate.pfx pfx_password
