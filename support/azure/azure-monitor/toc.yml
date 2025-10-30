@@ -80,6 +80,8 @@ items:
     items:
     - name: Troubleshoot Application map issues
       href: app-insights/troubleshoot-application-map-issues.md
+    - name: Troubleshoot Live Metrics issues
+      href: app-insights/troubleshoot-live-metrics.md
   - name: Availability Tests
     items:
     - name: Availability monitoring common issues FAQ
