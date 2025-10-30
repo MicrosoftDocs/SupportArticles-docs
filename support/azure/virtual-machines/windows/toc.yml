@@ -70,19 +70,18 @@ items:
   - name: How to activate Extended Security Updates
     href: /windows-server/get-started/activate-extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
   
-
-
-- name: Windows Update and OS Upgrades
+- name: Windows OS Upgrades
   items:
-  - name: In-place system upgrade for Windows Server Azure VMs
+  - name: In-place system upgrades (Server)
     href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: In-place system upgrade for Windows-based Azure VMs
+  - name: In-place system upgrade (Client)
     href: in-place-system-upgrade.md
-  - name: Upgrade VM to contain more than 64 vCPUs
-    href: vm-cannot-upgrade-64-vcpu.md
-  - name: Windows Update errors that require in-place upgrades
+
+- name: Windows Update (WU)
+  items:
+  - name: Windows Update WU - Errors requiring IPU
     href: windows-update-errors-requiring-in-place-upgrade.md
-  - name: Known errors and issues
+  - name: Top errors for Azure VMs
     items:
     - name: Error code 0x80070002
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
