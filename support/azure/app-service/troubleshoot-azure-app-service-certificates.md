@@ -270,7 +270,7 @@ certificate on an IP-based binding, an older non-SNI client might cache
 that certificate and cause SNI clients to also see the wrong certificate.
 Use SNI for most scenarios. Or, if you use IP-based bindings for older client
 support, use one certificate that covers all required hostnames on that
-IP.
+IP. 
 
 **Multiple apps and certificate reuse**
 
