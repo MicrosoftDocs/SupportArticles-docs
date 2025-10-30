@@ -37,7 +37,7 @@ Review the [Copilot Studio quotas and limits](/microsoft-copilot-studio/requirem
 
 If you reach the limits, an administrator can either:
 
-- [Purchase additional capacity packs to cover your consumption quota](https://learn.microsoft.com/en-us/power-platform/admin/manage-copilot-studio-messages-capacity)
+- [Purchase additional capacity packs to cover your consumption quota](/power-platform/admin/manage-copilot-studio-messages-capacity)
 - Switch to [pay as you go billing plan](/microsoft-copilot-studio/billing-licensing#copilot-studio-pay-as-you-go)
   > [!NOTE]
   > Currently, only production and sandbox environments support pay-as-you-go.
@@ -50,4 +50,4 @@ Contact Microsoft Support and request a rate-limit increase. This option doesn't
 
 - [Copilot Studio licensing](/microsoft-copilot-studio/billing-licensing)
 - [Quotas and limits](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent)
-- [Understand agent error codes](/troubleshoot/power-platform/copilot-studio/authoring/error-codes)
+- [Understand agent error codes](~/power-platform/copilot-studio/authoring/error-codes.md)
