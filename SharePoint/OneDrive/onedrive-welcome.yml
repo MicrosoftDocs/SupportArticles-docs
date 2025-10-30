@@ -5,7 +5,8 @@ summary: This library of articles provides guidance to troubleshoot and fix erro
 metadata:
   title: OneDrive for Business troubleshooting
   description: Documentation for troubleshooting common issues with OneDrive for Business.
-  ms.service: one-drive
+  ms.service: microsoft-graph
+  ms.subservice: onedrive
   ms.topic: landing-page
   author: Cloud-Writer
   ms.author: meerak
