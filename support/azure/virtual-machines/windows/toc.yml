@@ -463,7 +463,7 @@ items:
     href: troubleshoot-activation-problems.md
   - name: Frequently asked questions
     href: windows-virtual-machine-activation-faq.yml
-  - name: Troubleshooting tools for Windows activation 
+  - name: Troubleshooting tools
     href: windows-activation-troubleshoot-tools.md
   - name: Understanding Generic Volume License Key
     href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/windows/context/context
