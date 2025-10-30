@@ -6,6 +6,7 @@ ms.author: jarrettr
 ms.service: azure-app-service
 ms.date: 03/09/2022
 ms.reviewer: toan, shrahman
+ms.custom: sap:Application Code
 ---
 # Open-source technologies FAQs for Web Apps in Azure
 
