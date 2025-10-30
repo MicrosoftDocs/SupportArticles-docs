@@ -52,81 +52,129 @@ After you restore the offline node or storage, the following steps occur automat
 If you can't restore the missing node or storage, follow these steps to manually recover the cluster.
 
 > [!IMPORTANT]  
-> This process temporarily takes all volumes in the pool offline.
+>
+> - This procedure temporarily takes all volumes in the pool offline.
+> - You can use this procedure for either Storage Spaces or failover clusters. Every step that applies to virtual disks or volumes also applies to Cluster Virtual Disks and Cluster Shared Volumes.
 
 Run the following steps as a cluster administrator on a node that has full access to the storage pool.
 
-1. Identify the clustered storage pool.
-   Get-ClusterResource *Pool*  
-1. Gather Cluster Virtual Disks and CSVs; identify those that are failed.
+1. On a cluster node that has full access to the storage pool, open an administrative PowerShell command prompt window.
+
+1. To get the properties of the affected storage pool, run the following command at the PowerShell command prompt:
+
+   ```powershell
+   Get-ClusterResource <Pool>  
+   ```
+
+   > [!NOTE]  
+   >
+   > - In this cmdlet, /<Pool> is the name of the storage pool resource.
+   > - Later steps in this procedure use properties such as the name and the owner group of the resource.
+
+1. To get the properties of the storage pool's virtual disks and CSVs, run the following command:
+
+   ```powershell
    Get-ClusterResource | Where-Object { $_.ResourceType -eq "Physical Disk" }
-   and
+   ```
+
+   ```powershell
    Get-ClusterSharedVolume
-   The output indicates the resource state which would say Failed.
-   It's also useful to keep track of the resource name (if you want to make it match later) and the VirtualDiskId from <CSV or Physical disk resource> | Get-clusterparameter for when you add the resources back
-   Every step involving virtual disks needs to include Cluster Virtual Disks and Cluster Shared Volumes - there's some naming collision here though, in Storage Spaces they are virtual disks or volumes, in Cluster they are a Physical Disk Resource or a Cluster Shared Volume. It basically defines whether a disk is available from a single node at a time, or all nodes the same time.
-   
-1. If available, load previously saved disk/CSV info from file; otherwise, gather and save the info for recovery continuity.
-   This was more a step for the scripted version - saving this information in a json  formatted file in case the script got interrupted after actions were taken so that the script would remember the original state and could just be re-run.
-   The information that was kept was the cluster resource name, whether it was a cluster shared volume or a physical disk resource, and whether its state was Failed.
+   ```
 
-1. Add unpooled disks from the new node to the storage pool (if needed).
+1. Review the properties to determine which resources are in a "Failed" state.
+
+   > [!NOTE]  
+   > If you intend to reuse name and ID information for any resources that you replace, you can use `Get-ClusterResource` and `Get-ClusterParameter` to get that information.
+
+1. Whether you're replacing a node, or just storage, run the following cmdlets to add unpooled disks to the storage pool.
+
+   ```powershell
    Get-StoragePool -isprimordial $false | Add-PhysicalDisk -PhysicalDisks $(Get-PhysicalDisk -CanPool $true)
-1. Retire unhealthy disks on the failed node.
+   ```
+
+1. To retire unhealthy disks (or disks that are associated with a failed node), run the following cmdlets:
+
+   ```powershell
    Get-PhysicalDisk | Where-Object { $_.OperationalStatus -eq "Lost Communication" } | Set-PhysicalDisk -usage Retired
-1. Wait for virtual disks with `OperationalStatus = InService` to clear.
-   Get-VirtualDisk output - none of the virtual disks returned should show InService  - if they do, wait until its gone before proceeding
-1. Move the storage pool resource to the current node.
-   The storage pool cluster resource found in step 1, you find the ownergroup on the resource, then move-clusterresource -node <current machine> -name <ownergroup value>
-1. Move failed disk and CSV resources to the current node.
-   Same idea as above except with the Physical Disk resource and CSV in step 2. For CSV you can use Get-clustersharedvolume | get-clustergroup to find the group
-1. Remove all Cluster Virtual Disks and CSVs from cluster management.
-   For the CSVs - first Remove-ClusterSharedVolume
-   Then Get-ClusterResource | Where-Object { $_.ResourceType -eq "Physical Disk" } | Remove-ClusterResource
+   ```
 
-1. Remove the storage pool from cluster management.
-   Remove-ClusterResource for objects found in step 1
+1. Monitor the virtual disks by running `Get-VirtualDisk` and looking for `OperationalStatus = InService` in the cmdlet output. When the `OperationalStatus` parameter is clear for all of the virtual disks, continue to the next step.
+
+1. To move the affected storage pool (that you identified previously) to the current node, run a PowerShell cmdlet that resembles the following command:
    
-1. Set the cluster storage pool `-IsReadOnly $false`.
+   ```powershell
+   Move-ClusterResource -node <Current Node> -name <OwnerGroup>
+   ```
+
+   > [!NOTE]  
+   > In this command, /<Current Node> is the name of the node that you're working from, and /<OwnerGroup> is the value of the OwnerGroup property of the storage group resource.
+
+1. To move the failed disk and CSV resources to the current node, run `Move-ClusterResource` again for each physical disk and CSV resource. To see the OwnerGroup value of the CSV, run `Get-ClusterSharedVolume | get-ClusterGroup`.
+
+1. To remove all cluster virtual disks and CSVs from cluster management, run the following PowerShell commands in sequence.
+
+   ```powershell
+   Remove-ClusterSharedVolume
+   Get-ClusterResource | Where-Object { $_.ResourceType -eq "Physical Disk" } | Remove-ClusterResource
+   ```
+
+1. To remove the storage pool from cluster management, run the `Remove-ClusterResource` command for the storage pool objects that you identified in the first step of this procedure.
+
+1. To make the storage pool writable, run the following commands:
+
+   ```powershell
    Get-StoragePool -isPrimordial $false | Set-StoragePool -IsReadOnly $false
-1. Set `IsManualAttach $false` for each virtual disk.
+   ```
+
+1. To configure the virtual disks, run the following commands for each virtual disk.
+
+   ```powershell
    Get-VirtualDisk | Set-VirtualDisk -IsManualAttach $false
-1. Wait for storage jobs related to repair to start (>0% complete).
-   Get-StorageJob
-1. Add the storage pool back to cluster management.
+   ```
+
+1. Use the `Get-StorageJob` cmdlet to monitor the storage jobs that are related to repair. When the jobs have started (percentage complete is greater than 0), continue to the next step.
+
+1. To add the storage pool back to cluster management, run the following commands:
+
+   ```powershell
    Get-CimInstance -Namespace "root\MSCluster" -ClassName "MSCluster_AvailableStoragePool" | invoke-cimmethod -MethodName AddToCluster
-1. Add all non-failed virtual disks back to cluster management and convert them to CSVs if previously configured.
-   For virtual disk or CSV that were not failed in step 2, you can add them back to bring them online again
-   For example using the virtualdiskid and name from Step 2
-   $virtualdiskname = "ClusterPerformanceHistory"
-   $virtualdiskid = "603bb5d0-9c4d-4fc6-9c25-eec92a478733"
-   (get-clusteravailabledisk  | Where-Object { $_.Id -eq $virtualdiskid} | add-clusterdisk).Name = $virtualdiskname
-   For CSV you can then use that new cluster resource to Add-ClusterSharedVolume
+   ```
 
-1. Wait for all virtual disks with `OperationalStatus = InService` to clear.
-   from Get-VirtualDisk output
-1. Set all virtual disks online and read/write if needed.
-   get-virtualdisk | get-disk | Where-Object { $_.IsReadonly -eq $true } | set-disk -IsReadOnly $false
-   get-virtualdisk | get-disk | Where-Object { $_.IsOffline -eq $true} | set-disk -IsOffline $false
+1. Add all non-failed virtual disks back to cluster management. If any of the virtual disks from the previous step were previously configured as CSVs, convert them to CSVs.
 
-1. Verify retired physical disks still showing a virtual disk footprint > 0.
+   For example, you can bring back any of the virtual disk or CSV resources that you identified in step 2 that were not in a failed state. To do this, use the `virtualdiskid` and `name` property values from step 2 and run commands that resemble the following script excerpt:
+
+   ```powershell
+   `$virtualdiskname = "ClusterPerformanceHistory"`
+   `$virtualdiskid = "603bb5d0-9c4d-4fc6-9c25-eec92a478733"`
+   `(get-clusteravailabledisk  | Where-Object { $_.Id -eq $virtualdiskid} | add-clusterdisk).Name = $virtualdiskname`
+   ```
+
+   You can use `Add-ClusterSharedVolume` to reconfigure the CSVs.
+
+1. Monitor the virtual disks by running `Get-VirtualDisk` and looking for `OperationalStatus = InService` in the cmdlet output. When the `OperationalStatus` parameter is clear for all of the virtual disks, continue to the next step.
+
+1. To bring the virtual disks online and configure them as read/write, run the following commands:
+
+   ```powershell
+   Get-VirtualDisk | get-disk | Where-Object { $_.IsReadonly -eq $true } | set-disk -IsReadOnly $false
+   Get-VirtualDisk | get-disk | Where-Object { $_.IsOffline -eq $true} | set-disk -IsOffline $false
+   ```
+
+1. Monitor the virtual disk footprints of the retired physical disks by running the following cmdlet:
+
+   ```powershell
     get-physicaldisk -Usage Retired | ft Deviceid, Usage, VirtualDiskFootprint 
-   If the footprint is already 0 ignore step 19
+   ```
 
-1. Wait for the footprint to reduce.
-   Same as step 18
-1. Add the originally failed virtual disks back to cluster management and convert them to CSVs if previously configured.
-   Same as Step 15, just the remaining disks
-1. Clean up temporary files used during recovery.
-   Probably doesn't apply here - these were the contents of Step 1 and 2 that were written to a json file in the script so that they could be loaded if interupted
+   When the footprint reaches zero, continue to the next step.
 
-### VMMS Recovery Behavior
+1. Add the previously-failed virtual disks back to cluster management. If any of these virtual disks were previously configured as CSVs, convert them to CSVs.
 
-Virtual Machine Management Service (VMMS) retries bringing VMs online for 30 minutes.
+1. Bring the virtual disks from the previous step online and configure them as read/write.
 
-After this window, VMMS stops retrying, and affected VMs remain in a Failed state.
-
-After the storage volume is successfully recovered, manually start the VMs.
+> [!IMPORTANT]  
+> After the cluster recovers, you might have to manually start any VMMS-managed virtual machines that use the cluster. After the cluster is down for 30 minutes, VMMS stops automatically trying to restart the virtual machines.
 
 ## Status
 
