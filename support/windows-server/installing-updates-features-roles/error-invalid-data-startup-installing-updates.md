@@ -17,6 +17,9 @@ appliesto:
 
 This article helps you resolve an issue that occurs at system startup after you install Windows updates. After you install the updates and restart the system, the system performs a rollback, and you receive a "0x8007000d (ERROR_INVALID_DATA)" error message.
 
+> [!IMPORTANT]
+> This article covers the Windows Server upgrade process for non-Azure servers and virtual machines (VMs) only. To do an upgrade of Windows Server running in an Azure VM, see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
+
 ## Symptoms
 
 When this issue occurs, you might experience any of the following symptoms.
