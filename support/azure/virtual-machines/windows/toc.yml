@@ -238,7 +238,7 @@ items:
     - name: Error code 0x80070490
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0x8007000d after installing Windows updates
-      href: ../../../windows-server/installing-updates-features-roles/error-0x8007000d-invalid-data-startup-installing-updates.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+      href: ../../../windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error Code 0x800f0831
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md
     - name: Error Code 0x8007045b
