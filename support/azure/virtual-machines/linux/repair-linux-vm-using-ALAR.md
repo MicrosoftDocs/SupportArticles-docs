@@ -78,8 +78,8 @@ In all of the example commands these are the parameters shown:
 
 - `RG-NAME`: The name of the resource group containing the broken VM.
 - `VM-NAME`: The name of the broken VM.
-- `RESCUE-UID`: The user created on the repair VM for login. It's the equivalent of the user created on a new VM in the Azure portal.
-- `RESCUE-PASS`: The password for `RESCUE-UID`, enclosed in single quotes. For example: `'password!234'`.
+- `RESCUE-USERNAME`: The user created on the repair VM for login. It's the equivalent of the user created on a new VM in the Azure portal.
+- `RESCUE-PASS`: The password for `RESCUE-USERNAME`, enclosed in single quotes. For example: `'password!234'`.
 - `action1,action2`, etc.: One or more of the defined actions available to apply to the broken VM. See the complete list of actions below, and in the [ALAR GitHub ReadMe](https://github.com/Azure/ALAR). You can pass one or more actions that are run consecutively. For multiple operations, delineate them using commas without spaces, such as `fstab,sudo`.
 
 ## The ALAR actions
@@ -89,6 +89,14 @@ In all of the example commands these are the parameters shown:
 This action strips off any lines in the */etc/fstab* file that aren't needed to boot a system. First, a copy of the original file is made for reference. When the OS starts, the administrator can edit the fstab to correct any errors that didn't allow a reboot of the system before.
 
 For more information about issues with a malformed */etc/fstab* file, see [Troubleshoot Linux VM starting issues because fstab errors](./linux-virtual-machine-cannot-start-fstab-errors.md).
+
+### efifix
+
+This action can be used to reinstall the required software to boot from a GEN2 VM. The *grub.cfg* file is also regenerated.
+
+### grubfix
+
+This action can be used to reinstall GRUB and regenerate the *grub.cfg* file.
 
 ### initrd
 
@@ -118,13 +126,9 @@ This action corrects an incorrect or malformed serial console configuration for 
 - No GRUB menu is displayed at VM startup.
 - No operating system related information is written to the serial console.
 
-### grubfix
+### sudo
 
-This action can be used to reinstall GRUB and regenerate the *grub.cfg* file.
-
-### efifix
-
-This action can be used to reinstall the required software to boot from a GEN2 VM. The *grub.cfg* file is also regenerated.
+The `sudo` action will reset the permissions on the */etc/sudoers* file and all files in */etc/sudoers.d* to the required 0440 modes as well as check other best practices. A basic check is run to detect and report on duplicate user entries and move only the */etc/sudoers.d/waagent* file if it is found to conflict with other files.
 
 ### auditd
 
