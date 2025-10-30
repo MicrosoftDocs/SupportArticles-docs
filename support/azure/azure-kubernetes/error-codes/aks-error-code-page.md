@@ -1,5 +1,5 @@
 ---
-title: Azure Kubernetes Service (AKS) Error Codes
+title: Azure Kubernetes Service (AKS) Common Error Codes
 description: List of common AKS error codes
 ms.date: 10/23/2025
 author: JarrettRenshaw
@@ -10,7 +10,7 @@ ms.reviewer: v-ryanberg, chiragpa, albarqaw
 ms.service: azure-kubernetes-service
 ms.custom: sap:AKS error codes, AKS errors
 ---
-# Azure Kubernetes Service (AKS) error codes
+# Azure Kubernetes Service (AKS) common error codes
 
 This article describes common AKS errors and how to resolve them.
 

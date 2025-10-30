@@ -263,7 +263,7 @@ items:
       href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md      
 - name: Troubleshoot by error codes
   items:
-  - name: Azure Kubernetes Service (AKS) error codes
+  - name: Common error codes
     href: error-codes/aks-error-code-page.md
   - name: 429 Too Many Requests errors
     href: create-upgrade-delete/429-too-many-requests-errors.md
