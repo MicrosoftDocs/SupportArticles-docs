@@ -5,7 +5,7 @@ author: saimsh-msft
 ms.author: saimsh
 ms.reviewer: divargas
 ms.topic: troubleshooting
-ms.date: 10/11/2022
+ms.date: 09/15/2025
 ms.service: azure-virtual-machines
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
@@ -29,7 +29,7 @@ To identify if your VM fails to boot due to missing Hyper-V drivers, use [Azure 
 
 ## Before you troubleshoot
 
-To troubleshoot [Scenario 1: Network Hyper-V driver is disabled](#network-hyperv-disabled) and [Scenario 2: NIC mac address is changed or doesn't match](#macaddress-issue), you need [serial console](./serial-console-linux.md) access for your Linux VM.
+To troubleshoot [Scenario 1: Network Hyper-V driver is disabled](#network-hyperv-disabled) and [Scenario 2: NIC media access control (MAC) address is changed or doesn't match](#macaddress-issue), you need [serial console](./serial-console-linux.md) access for your Linux VM.
 
 If you don't have serial console access, follow the [offline approach](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to access the contents of the problematic OS disk from a rescue virtual machine. Access to Azure CLI or [Azure Cloud Shell](https://shell.azure.com) is required for the offline approach.
 
@@ -67,7 +67,7 @@ Or
     1. Identify the file that disables the hv_netvsc driver and the corresponding line numbers by running the following command:
 
         ```bash
-        grep -nr "hv_netvsc" /etc/modprobe.d/
+        sudo grep -nr "hv_netvsc" /etc/modprobe.d/
         ```
 
     2. Modify the corresponding file and comment out or delete the hv_netvsc entries:
@@ -75,7 +75,7 @@ Or
           :::image type="content" source="media/linux-hyperv-issue/hv-netvsc-disabled.png" alt-text="Screenshot that shows the possible configuration file contents used to disable network drivers.":::
 
         ```bash
-        vi /etc/modprobe.d/disable.conf
+        sudo vi /etc/modprobe.d/disable.conf
         ```
 
         > [!NOTE]
@@ -88,13 +88,13 @@ Or
     - For RHEL/SLES-based images
 
         ```bash
-        # dracut -f -v
+        sudo dracut -f -v
         ```
     
     - For Ubuntu/Debian-based images
 
         ```bash
-        # mkinitramfs -k -o /boot/initrd.img-$(uname -r)
+        sudo mkinitramfs -k -o /boot/initrd.img-$(uname -r)
         ```
 
 6. Reboot the VM.
@@ -104,19 +104,19 @@ Always take a backup of the original initial RAMdisk image to facilitate the rol
 - For RHEL-based images:
 
     ```bash
-    # cp /boot/initramfs-<kernelVersion>.img /boot/initramfs-<kernelVersion>.img.bak
+    sudo cp /boot/initramfs-<kernelVersion>.img /boot/initramfs-<kernelVersion>.img.bak
     ```
 
 - For SLES-based images:
 
     ```bash
-    # cp /boot/initrd-<kernelVersion> /boot/initrd-<kernelVersion>.bak
+    sudo cp /boot/initrd-<kernelVersion> /boot/initrd-<kernelVersion>.bak
     ```
 
 - For Ubuntu/Debian-based images:
 
     ```bash
-    # cp /boot/initrd.img-<kernelVersion> /boot/initrd.img-<kernelVersion>.bak
+    sudo cp /boot/initrd.img-<kernelVersion> /boot/initrd.img-<kernelVersion>.bak
     ```
 
 ### <a id="reenable-hv_netvsc-offline"></a>Solution 2: Enable Hyper-V network driver offline
@@ -131,7 +131,7 @@ Always take a backup of the original initial RAMdisk image to facilitate the rol
 
 4. Once the changes are applied, perform an automatic OS disk swap with the original VM and reboot the system by using the `az vm repair restore` command.
 
-## <a id="macaddress-issue"></a>Scenario 2: NIC MAC address is changed or doesn't match
+## <a id="macaddress-issue"></a>Scenario 2: NIC media access control (MAC) address is changed or doesn't match
 
 If the Network Interface Card MAC address is changed or doesn't match within the OS configuration, you won't be able to SSH to the VM because the networking services are unavailable. You're still able to sign in via [serial console](../windows/serial-console-overview.md) from the Azure portal. Errors that are similar to the ones in [Scenario 1: Network Hyper-V driver is disabled](#network-hyperv-disabled) are displayed.
 
@@ -154,7 +154,7 @@ If the issue continues even though the Hyper-V network driver is enabled, use on
 7. Generally, a NIC MAC address would only change if a NIC is deleted or added by the administrator or a NIC is updated in the backend. If network configuration via cloud-init isn't desired, and the `apply_network_config` parameter needs to be set to false, delete the */var/lib/cloud/instance/obj.pkl* file and reboot the system.
 
     ```bash
-    # rm /var/lib/cloud/instance/obj.pkl
+    sudo rm /var/lib/cloud/instance/obj.pkl
     ```
 
 8. Once the changes are applied, restart the system.
@@ -213,7 +213,7 @@ If the VM is inaccessible due to other Hyper-V drivers being disabled, use an of
     1. Run the following command to identify the file that disables the hv_utils, hv_vmbus, hv_storvsc, or hv_netvsc driver and the corresponding line number.
 
         ```bash
-        egrep -nr "hv_utils|hv_vmbus|hv_storvsc|hv_netvsc" /etc/modprobe.d/
+        sudo egrep -nr "hv_utils|hv_vmbus|hv_storvsc|hv_netvsc" /etc/modprobe.d/
         ```
 
     2. Modify the corresponding file and comment out or delete the hv_utils, hv_vmbus, hv_storvsc, or hv_netvsc entries. The entries will most commonly be any of the following (or both):
@@ -223,7 +223,7 @@ If the VM is inaccessible due to other Hyper-V drivers being disabled, use an of
         :::image type="content" source="media/linux-hyperv-issue/hv-disabled-example-2.png" alt-text="Screenshot that shows the possible configuration file contents used to disable kernel modules/drivers.":::
 
         ```bash
-        vi /etc/modprobe.d/disable.conf
+        sudo vi /etc/modprobe.d/disable.conf
         ```
 
     > [!IMPORTANT]
@@ -236,13 +236,13 @@ If the VM is inaccessible due to other Hyper-V drivers being disabled, use an of
     - For RHEL/SLES-based images
 
         ```bash
-        # dracut -f -v
+        sudo dracut -f -v
         ```
 
     - For Ubuntu/Debian-based images
 
         ```bash
-        # mkinitramfs -k -o /boot/initrd.img-$(uname -r)
+        sudo mkinitramfs -k -o /boot/initrd.img-$(uname -r)
         ```
 
 5. Once the changes are applied, use the `az vm repair restore` command to perform an automatic OS disk swap with the original VM and reboot the system.

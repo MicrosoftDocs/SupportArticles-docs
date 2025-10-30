@@ -2438,6 +2438,8 @@ items:
       href: ./setup-upgrade-and-drivers/create-iso-image-for-uefi-platforms.md
     - name: Enable logging and tracing for WDS components
       href: ./setup-upgrade-and-drivers/enable-logging-windows-deployment-service.md
+    - name: 'Error 0x80070003 during "Process Drivers for Migration" operation'
+      href: ./setup-upgrade-and-drivers/error-0x80070003-during-process-drivers-for-migration.md
     - name: Error 0x800f0906 when you convert Server Core to GUI
       href: ./setup-upgrade-and-drivers/dism-fails-with-error-0x800f0906.md
     - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
@@ -2478,6 +2480,8 @@ items:
       href: ./setup-upgrade-and-drivers/unattended-setup-not-use-computer-name-specified-oobe.md
     - name: Upgrade fails with error 0x000000C4
       href: ./setup-upgrade-and-drivers/upgrade-fail-with-error-0x000000c4.md
+    - name: Upgrade fails and generates error code 0xC1900101-0x20017
+      href: ../windows-client/setup-upgrade-and-drivers/upgrade-fails-with-error-0xc1900101-0x20017.md?context=/troubleshoot/windows-server/context/context
     - name: Using language IDs to identify language packs
       href: ./setup-upgrade-and-drivers/use-language-id-identify-language-pack.md
     - name: Windows Deployment Service fails to start
@@ -2594,8 +2598,16 @@ items:
       href: ./system-management-components/what-is-microsoft-management-console.md
   - name: OpenSSH
     items:
+    - name: Can't install OpenSSH Features
+      href: ./system-management-components/cant-install-openssh-features.md
+    - name: Enable OpenSSH verbose logging
+      href: ./system-management-components/enable-openssh-verbose-logging.md
+    - name: Error 1053 and OpenSSH Server service doesn't start
+      href: ./system-management-components/openssh-server-service-wont-start-error-1053.md
     - name: OpenSSH client can't connect to a server via SSH
       href: ./system-management-components/open-client-can-not-connect-server.md
+    - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
+      href: ./system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md
   - name: PowerShell
     items:
     - name: CJK characters are garbled in PowerShell
@@ -3160,6 +3172,8 @@ items:
       href: ./installing-updates-features-roles/description-of-windows-server-update-services-3.md
     - name: How to block user access to Windows Update
       href: ./installing-updates-features-roles/block-user-access-windows-update.md
+    - name: Known Issue Rollback
+      href: ./installing-updates-features-roles/known-issue-rollback.md
     - name: Re-register Windows client/server in WSUS
       href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
     - name: Unexpected automatic update when it's disabled by Group Policy
@@ -3170,6 +3184,8 @@ items:
       href: ./installing-updates-features-roles/windows-server-update-services-3-sp2.md
     - name: WSUS clients can't install updates
       href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
+    - name: WSUS messages and troubleshooting tips
+      href: ./installing-updates-features-roles/wsus-messages-troubleshooting-tips.md
   - name: Windows Update fails - installation stops with error
     items:
     - name: 'Troubleshooting guidance: Windows Server update'
@@ -3196,6 +3212,8 @@ items:
       href: ./installing-updates-features-roles/fix-windows-update-errors.md
     - name: Troubleshoot Windows Update error 0x80070002
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070002.md
+    - name: Troubleshoot Windows Update error 0x8007000e or 0x800705aa
+      href: ../windows-client/installing-updates-features-roles/error-0x8007000e-0x800705aa-insufficient-virtual-memory.md?context=/troubleshoot/windows-server/context/context
     - name: Troubleshoot Windows Update error 0x80070490
       href: installing-updates-features-roles/troubleshoot-windows-update-error-0x80070490.md
     - name: Troubleshoot "Shutdown in Progress" Windows error 0x8007045b
@@ -3204,20 +3222,25 @@ items:
       href: installing-updates-features-roles/troubleshoot-windows-update-error-code-0x8024002e.md
     - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
       href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
+
+    - name: Error Code 0x800f0831
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md
+  - name: Windows Update for Business Reports
+    items:
     - name: Troubleshoot Windows Installation Error 0x800f0831
       href: ./installing-updates-features-roles/troubleshoot-windows-installation-error.md
     - name: Windows Update for Business Reports
       items:
-    - name: Initial service configuration and Onboarding
-      items:
-      - name: 'Troubleshooting guidance: Windows Update for Business reports'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
-    - name: Missing data or incomplete report data
-      items:
-      - name: 'WUBr: Troubleshoot diagnostic data transmission'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
-      - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
-        href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
+      - name: Initial service configuration and Onboarding
+        items:
+        - name: 'Troubleshooting guidance: Windows Update for Business reports'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
+      - name: Missing data or incomplete report data
+        items:
+        - name: 'WUBr: Troubleshoot diagnostic data transmission'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
+        - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+          href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
 - name: Windows Server End of Support (EoS) FAQ
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
@@ -3260,21 +3283,19 @@ items:
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
       href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Active Directory replication issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for deployment-related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Group Policy issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Hyper-V related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-hyper-v-issues.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for SQL cluster (AG/FCI) related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for user experience-related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Windows failover cluster related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Windows Update for Business reports-related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-wufb-reports.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot Active Directory scenarios
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-active-directory-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot clustering and high availability scenarios
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-clustering-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot Group Policy scenarios
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-group-policy-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot Windows servicing, updates, and Features on Demand scenarios
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-windows-servicing-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot system management components scenarios
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot Hyper-V related issues
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios.md?context=/troubleshoot/windows-server/context/context
+    - name: Collect data to analyze and troubleshoot SQL cluster (AG/FCI) related issues
+      href: ../windows-client/windows-tss/collect-data-analyze-troubleshoot-sql-cluster-ag-fci-scenarios.md?context=/troubleshoot/windows-server/context/context
     - name: Use the xray feature of TSS
       href: ../windows-client/windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md?context=/troubleshoot/windows-server/context/context

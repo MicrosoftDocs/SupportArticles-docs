@@ -2,7 +2,7 @@
 title: Troubleshoot session host configuration and session host update in Azure Virtual Desktop
 description: Helps troubleshoot issues with session host configuration and session host update.
 ms.topic: troubleshooting
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ms.date: 01/21/2025
 ms.custom: pcy:wincomm-user-experience
 ---

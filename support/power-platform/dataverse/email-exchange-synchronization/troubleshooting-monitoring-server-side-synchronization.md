@@ -3,8 +3,6 @@ title: Troubleshooting and monitoring server-side synchronization
 description: Troubleshooting and monitoring server-side synchronization
 ms.component: pa-admin
 ms.date: 02/20/2025
-author: rahulmital 
-ms.author: rahulmital 
 ms.reviewer: rahulmital, sericks
 ms.custom: sap:Microsoft Dataverse\Email and Exchange Synchronization
 search.audienceType: 
@@ -39,7 +37,7 @@ Components added to dashboard are not supported to be shown in this client
 
 For more information, please see Troubleshoot item level Server-Side Synchronization issues with Dynamics 365 - Dynamics 365 Sales | Microsoft Learn.
 
-Follow the steps in this [KB article](https://support.microsoft.com/help/4468755/troubleshoot-item-level-server-side-synchronization-issues-with-dynami) to enable and use a dashboard to get information on synchronization errors.
+Follow the steps in [Troubleshoot item level Server-Side Synchronization issues with Microsoft Dynamics 365](../d365-app-outlook/troubleshoot-item-level-server-side-synchronization-issues.md) to enable and use a dashboard to get information on synchronization errors.
 
 > [!div class="mx-imgBorder"] 
 > ![Server-side sync failures dashboard.](media/server-side-sync-failures-dashboard.png "Server-side sync failures dashboard")
@@ -71,19 +69,7 @@ Follow the steps in this [KB article](https://support.microsoft.com/help/4468755
 The updated user interface for mailbox views doesn't show the **Test Run Status** column on the **My Active Mailboxes** view. This column is available in a future update.
 
 ## Common alerts and recommended resolutions  
-  
-### Mailbox disabled for synchronization
 
-**Alert:** The mailbox has been disabled for synchronizing appointments, contacts, and tasks for the mailbox because an error occurred while establishing a secure connection to the Exchange server. The owner of the email server profile has been notified.  
-  
- **Solution:**  [https://support.microsoft.com/kb/2993502](https://support.microsoft.com/kb/2993502)  
-  
-### Error while establishing a secure connection
-
-**Alert:** Email can't be received for the mailbox because an error occurred while establishing a secure connection to the email server. The mailbox has been disabled for receiving email and the owner of the email server profile has been notified.  
-  
- **Solution:**  [https://support.microsoft.com/kb/2993502](https://support.microsoft.com/kb/2993502)  
-  
 ### Email message has "Pending Send" status
 
 If you create an email message in customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation), and click the **Send** button, the message will not be sent unless email integration has been correctly configured and enabled for sending email from customer engagement apps.  
@@ -204,18 +190,6 @@ If you create an email message in customer engagement apps (Dynamics 365 Sales, 
 
 If your organization connects to Exchange Server (on-premises), you can run the Microsoft Remote Connectivity Analyzer to determine if the issue is with that connection. See [Test connection to Exchange Server (on-premises)](/power-platform/admin/test-connection-exchange-server-onpremises).
 
-<a name="BKMK_SSSGmail"></a>
-
-### Email fails to be sent or received when server-side synchronization is configured with Gmail
-
- If customer engagement apps are configured to use Server-Side Synchronization with Gmail, you may encounter one of the following errors:  
-  
-- Email can't be received for the mailbox \<Mailbox Name>. Make sure that the credentials specified in the mailbox are correct and have sufficient permissions for receiving email. Then, enable the mailbox for email processing.  
-  
-- An unknown error occurred while sending the email message "Test Message". Mailbox \<Mailbox Name> didn't synchronize. The owner of the associated email server profile \<Email Server Profile Name> has been notified.  
-  
-For more information, see this [kb article](https://support.microsoft.com/kb/3185281).  
-  
 <a name="BKMK_ExchangeOnline"></a>
 
 ### Using Dynamics 365 apps with Exchange Online

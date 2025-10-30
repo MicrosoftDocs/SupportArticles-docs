@@ -3,7 +3,7 @@ title: Troubleshoot Azure Virtual Desktop connection quality
 description: Helps troubleshoot connection quality issues in Azure Virtual Desktop.
 ms.topic: troubleshooting
 ms.date: 01/21/2025
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ms.custom: docs_inherited, pcy:wincomm-user-experience
 ---
 # Troubleshoot connection quality in Azure Virtual Desktop

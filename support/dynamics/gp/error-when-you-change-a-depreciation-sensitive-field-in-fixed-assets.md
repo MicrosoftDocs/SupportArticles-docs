@@ -38,9 +38,9 @@ To resolve this problem, rebuild the FA Quarters using these steps:
 3. Click **Build**.
 4. Try the change in the **Asset Book** window again.
 
-If the error persists, re-create the FA Calendar and Quarters again by following the steps in KB article 874133:
+If the error persists, re-create the FA Calendar and Quarters again by following the steps in:
 
-[874133](https://support.microsoft.com/help/874133) How to rebuild the Fixed Assets calendar in Microsoft Dynamics GP
+[How to rebuild the Fixed Assets calendar in Microsoft Dynamics GP](./rebuild-the-fixed-assets-calendar.md)
 
 ## More information
 

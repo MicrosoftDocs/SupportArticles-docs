@@ -12,13 +12,15 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: how-to
-ms.date: 12/04/2023
+ms.date: 09/15/2025
 ms.reviewer: msaenzbo, divargas, v-six
 ---
 
 # How to reset a local Linux password on Azure VMs
 
 **Applies to:** :heavy_check_mark: Linux VMs
+
+[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
 
 This article provides three methods to reset local Linux Virtual Machine (VM) passwords. If the user account is expired or you want to create a new account, you can use the following methods to create a new local admin account and regain access to the VM.
 
@@ -55,7 +57,7 @@ You can use the [serial console](serial-console-linux.md) to reset the `admin us
 
 2. Make sure that password authentication is enabled on the OpenSSH server if you try to log in to the server by using the SSH and password authentication.
 
-    1. Check whether the `PasswordAuthentitcation` value is set to `yes` or `no` in `/etc/ssh/sshd_config` by running the following command:
+    1. Check whether the `PasswordAuthentication` value is set to `yes` or `no` in `/etc/ssh/sshd_config` by running the following command:
 
         ```bash
         egrep "^PasswordAuthentication" /etc/ssh/sshd_config
@@ -116,7 +118,7 @@ You can run the [vm repair](/cli/azure/vm/repair) commands to create a repair VM
 
 3. Make sure that password authentication is enabled on the OpenSSH server if you try to log in to the server by using the SSH and password authentication.
 
-    1. Check whether the `PasswordAuthentitcation` value is set to `yes` or `no` in `/etc/ssh/sshd_config` by running the following command:
+    1. Check whether the `PasswordAuthentication` value is set to `yes` or `no` in `/etc/ssh/sshd_config` by running the following command:
 
         ```bash
         egrep "^PasswordAuthentication" /etc/ssh/sshd_config

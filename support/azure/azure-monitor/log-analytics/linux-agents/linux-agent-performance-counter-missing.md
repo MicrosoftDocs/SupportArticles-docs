@@ -1,12 +1,12 @@
 ---
 title: Linux performance counters missing in Log Analytics workspace
 description: Helps troubleshoot an issue where performance counters are missing in a Linux agent-connected workspace.
-ms.date: 06/24/2024
+ms.date: 10/14/2025
 author: JarrettRenshaw
 ms.author: jarrettr
 ms.reviewer: irfanr
 ms.service: azure-monitor
-ms.custom: sap:Linux Agents, linux-related-content
+ms.custom: sap:Azure Monitor Agent (AMA) on Linux machine, linux-related-content
 ---
 # Linux performance counters are missing in Log Analytics workspace
 

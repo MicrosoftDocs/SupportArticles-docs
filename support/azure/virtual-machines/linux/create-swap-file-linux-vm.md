@@ -1,13 +1,13 @@
 ---
 title: Create a SWAP file for an Azure Linux VM
 description: Describes how to create a SWAP file for an Azure Linux VM.
-ms.date: 10/12/2023
+ms.date: 10/22/2025
 ms.service: azure-virtual-machines
-ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
+ms.custom: sap:Assistance with disk operations, linux-related-content
 ms.collection: linux
-ms.author: mabicca
-author: mabicca
-ms.reviewer: v-weizhu
+ms.author: jarrettr
+author: JarrettRenshaw
+ms.reviewer: mabicca
 ---
 
 # Create a SWAP partition for an Azure Linux VM
@@ -87,7 +87,7 @@ You can create a SWAP partition by using one of the following options.
 1. Make the script executable:
 
     ```bash
-    chmod +x /var/lib/cloud/scripts/per-boot/swap.sh
+    sudo chmod +x /var/lib/cloud/scripts/per-boot/swap.sh
     ```
 
 1. Stop and start the VM. Stopping and starting the VM is only necessary the first time after you create the SWAP file.

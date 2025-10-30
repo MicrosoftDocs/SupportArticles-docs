@@ -78,7 +78,7 @@ The Merge Agent processes generations in batches, also referred to as generation
 
 In a situation where multiple generation batches are exchanged, the Merge Agent may split related parent and child changes across two separate generation batches. If that is the case, the Merge Agent may deliver a child change in a generation batch ahead of the generation batch that contains the associated parent change. In hierarchical merge topologies that use re-publishers, there is one rare situation in which the splitting of parent and child changes across generation batches can lead to non-convergence. For more information about non-convergence, see the following article:
 
-[Non-convergence when SQL Server processes child and parent generations in separate generation batches](https://support.microsoft.com/help/308266).  
+[Non-convergence when SQL Server processes child and parent generations in separate generation batches](~/sql/database-engine/replication/non-convergence-when-processes-child-generations.md).  
 
 You can increase the `-UploadGenerationsPerBatch` and the `-DownloadGenerationsPerBatch` parameters discussed previously to avoid splitting parent and child changes across generation batches.
 

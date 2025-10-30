@@ -1,5 +1,5 @@
 ---
-ms.reviewer: daknappe
+ms.reviewer: kaushika
 ms.topic: include
 ms.date: 01/21/2025
 ---
@@ -18,7 +18,7 @@ If you can't sign in and keep receiving an error message that says your credenti
 - Have you assigned the Virtual Machine User Login role-based access control (RBAC) permission to the VM or resource group for each user?
 - Does your Conditional Access policy exclude multifactor authentication requirements for the Azure Windows VM sign-in cloud application?
 
-If you've answered no to either of those questions, you'll need to reconfigure your multifactor authentication. To reconfigure your multifactor authentication, follow the instructions in [Enforce Microsoft Entra multifactor authentication for Azure Virtual Desktop using Conditional Access](/azure/virtual-desktop/set-up-mfa#azure-ad-joined-session-host-vms).
+If you've answered no to either of those questions, you need to reconfigure your multifactor authentication. To reconfigure your multifactor authentication, follow the instructions in [Enforce Microsoft Entra multifactor authentication for Azure Virtual Desktop using Conditional Access](/azure/virtual-desktop/set-up-mfa#azure-ad-joined-session-host-vms).
 
 > [!IMPORTANT]
 > VM sign-ins don't support per-user enabled or enforced Microsoft Entra multifactor authentication. If you try to sign in with multifactor authentication on a VM, you won't be able to sign in and will receive an error message.
@@ -35,3 +35,16 @@ AADNonInteractiveUserSignInLogs
 | project ['Time']=(TimeGenerated), UserPrincipalName, AuthenticationRequirement, ['MFA Result']=ResultDescription, Status, ConditionalAccessPolicies, DeviceDetail, ['Virtual Machine IP']=IPAddress, ['Cloud App']=ResourceDisplayName
 | order by ['Time'] desc
 ```
+
+### External Identities are unable to discover resources or login to their Cloud PC
+If your Entra ID tenant restricts cross-tenant access and external collaboration settings, you may encounter an error when External Identities attempt to connect. 
+
+> Log Name: Microsoft-Windows-AAD, Event ID: 1081, Error Message: OAuth response error: interaction_required, Error description: AADSTS500213: The resource tenant's cross-tenant access policy does not allow this user to access this tenant.
+
+You need to allow the following applications for external identities to successfully login. [Learn more about enabling applications for external identities.](/entra/external-id/cross-tenant-access-settings-b2b-collaboration#modify-inbound-access-settings)
+
+- Azure Virtual Desktop
+- Windows Azure Active Directory
+- Windows Cloud Login
+- Azure Windows VM Sign-In
+- Windows 365 (if allocating Windows 365 Cloud PCs)
