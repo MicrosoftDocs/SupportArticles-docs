@@ -41,9 +41,10 @@ Entries in the Component-Based Servicing (CBS) log file indicate issues that aff
 20xx-xx-06 xx:51:15, Info CBS Failed to verify manifest against catalog, mark store as corrupt. [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
 20xx-xx-06 xx:51:15, Info CBS Failed to begin deployment installation for Update: 4584642-1_neutral [HRESULT = 0x8007000d - ERROR_INVALID_DATA]
 ```
+
 In this situation, the error occurs because the system can't determine whether the following catalog file is valid:
 
-    C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat
+*C:/WINDOWS/Servicing/Packages/Package_1_for_KB4584642~31bf3856ad364e35~amd64~~10.0.1.0.cat*
 
 This symptom indicates that the package is likely corrupted. 
 
