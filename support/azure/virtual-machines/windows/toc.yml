@@ -20,7 +20,7 @@ items:
 
 - name: Support statements for Azure VM
   items:
-  - name: What Microsoft server software is supported
+  - name: Microsoft server software supported
     href: server-software-support.md
   - name: Windows 11
     href: windows-11-support-azure-virtual-machines.md
