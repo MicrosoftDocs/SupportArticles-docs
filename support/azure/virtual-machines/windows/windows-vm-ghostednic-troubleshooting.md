@@ -23,6 +23,24 @@ When an Azure Virtual Machine running Windows Server or Windows Client with **Ac
 
 ## Cause
 
+When an Azure Virtual Machine (VM) is **stopped and started** through the Azure Portal or CLI, the following occurs:
+
+- **Stop (Deallocate):**  
+  The VM is removed from its current physical server in the datacenter.
+- **Start (Allocate):**  
+  The VM is placed on a new physical server with a **different hardware MAC address**.
+
+Because Accelerated Networking bypasses the virtual switch for performance, the operating system cannot reuse the previous MAC address. As a result, the old NIC becomes a **ghosted device** and appears under **hidden devices** in Device Manager.  
+This behavior is **by design** for Accelerated Networking.
+
+### Why Does This Happen?
+- Accelerated Networking improves performance by bypassing the software-controlled virtual switch.  
+- When the VM moves to new hardware, the OS cannot identify the previous MAC address, causing ghosted NICs.  
+- For VMs **without Accelerated Networking**, MAC addresses can be reserved at the software layer (virtual switch), so this issue does not occur.
+
+> Learn more: [Accelerated Networking overview | Microsoft Learn](https://learnworking-overview
+
+
 - This behavior typically occurs after:
 
   - **Stop (deallocate)** and **Start** operations via the Azure Portal, CLI, or PowerShell.
@@ -37,8 +55,12 @@ This behavior is **by design** due to the architecture of Accelerated Networking
 
 :::image type="content" source="media/windows-vm-ghostednic-tool/windows-vm-ghostednictroubleshooting-networkdiff.png" alt-text="Azure Accelerated Networkinmg difference in design example." lightbox="media/windows-vm-ghostednic-tool/windows-vm-ghostednictroubleshooting-networkdiff.png":::  
 
+### Current Limitations
+- MAC address reservation for physical servers is **not supported**.
+- There is **no workaround** to prevent ghosted NICs when using Accelerated Networking.
+- The Product Group is evaluating improvements, but there is **no estimated timeline** for this feature.
 
-The Product Group is evaluating improvements, but there is **no ETA** for this feature.
+> Suggested reading: [Azure Accelerated Networking overview](https://learn.microsoft.com/azure/virtual-network/virtual-network-network-interface)
 
 ## Resolution
 
