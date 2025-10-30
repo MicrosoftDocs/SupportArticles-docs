@@ -18,7 +18,7 @@ items:
   - name: Microsoft Azure PaaS VM logs
     href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
 
-- name: Support statements for Azure VM
+- name: Azure VM support statements
   items:
   - name: Hybrid use benefit images are retired
     href: retirement-hybrid-use-benefit-images.md
@@ -27,7 +27,7 @@ items:
   - name: Citrix services support policy
     href: support-policy-citrix-services.md
 
-- name: Support for Microsft Windows running in Azure
+- name: Windows running in Azure
   items:
   - name: Microsoft server software supported
     href: server-software-support.md
