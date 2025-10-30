@@ -125,7 +125,7 @@ For objects that support [automatic cleanup](https://kubernetes.io/docs/concepts
 
 If you're experiencing a high rate of HTTP 429 errors, one possible cause is that AKS has applied a managed API server guard. It is achieved by applying a FlowSchema and PriorityLevelConfiguration called **"aks-managed-apiserver-guard"**. This safeguard is triggered when the API server encounters frequent out-of-memory (OOM) events after scaling efforts on the API server have failed to stabilise it. This guard is designed as a last-resort measure to safeguard the API server by throttling non-system client requests to the API server and prevent it from becoming completely unresponsive.
 
-- Check cluster for the presence of **"aks-managed-apiserver-guard"** FlowSchema and PriorityLevelConfiguration or check kubernetes events. 
+- Check cluster for the presence of **"aks-managed-apiserver-guard"** FlowSchema and PriorityLevelConfiguration or check kubernetes events 
 
 ```bash
 kubectl get flowschemas
