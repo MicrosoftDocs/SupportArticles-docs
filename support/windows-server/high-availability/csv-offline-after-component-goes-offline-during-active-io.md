@@ -22,7 +22,7 @@ This article describes a situation where the Cluster Shared Volume (CSV) of a cl
 
 This issue starts under the following circumstances:
 
-1. A cluster node or storage component becomes unavailable, but I/O operations continue. For example, a disk array has failed or requires maintenance.
+1. A cluster node or storage component becomes unavailable, but I/O operations continue. For example, a disk array failed or requires maintenance.
 1. As I/O operations continue, metadata records accumulate.
 1. When the metadata records reach their allocated limits, I/O operations fail.
 1. The associated CSV enters a Failed state.
@@ -132,7 +132,7 @@ Run the following steps as a cluster administrator on a node that has full acces
    Get-VirtualDisk | Set-VirtualDisk -IsManualAttach $false
    ```
 
-1. Use the `Get-StorageJob` cmdlet to monitor the storage jobs that are related to repair. When the jobs have started (percentage complete is greater than 0), continue to the next step.
+1. Use the `Get-StorageJob` cmdlet to monitor the storage jobs that are related to repair. After the jobs start (percentage complete is greater than 0), continue to the next step.
 
 1. To add the storage pool back to cluster management, run the following commands:
 
@@ -142,7 +142,7 @@ Run the following steps as a cluster administrator on a node that has full acces
 
 1. Add all non-failed virtual disks back to cluster management. If any of the virtual disks from the previous step were previously configured as CSVs, convert them to CSVs.
 
-   For example, you can bring back any of the virtual disk or CSV resources that you identified in step 2 that were not in a failed state. To do this, use the `virtualdiskid` and `name` property values from step 2 and run commands that resemble the following script excerpt:
+   For example, you can bring back any of the virtual disk or CSV resources that you identified in step 2 that weren't in a failed state. To do this, use the `virtualdiskid` and `name` property values from step 2 and run commands that resemble the following script excerpt:
 
    ```powershell
    `$virtualdiskname = "ClusterPerformanceHistory"`
