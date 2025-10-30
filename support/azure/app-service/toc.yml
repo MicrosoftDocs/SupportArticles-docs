@@ -61,6 +61,8 @@ items:
           href: /azure/app-service/app-service-web-tutorial-custom-domain
     - name: App Service Certificates
       items:
+        - name: Troubleshoot Azure App Service certificates
+          href: troubleshoot-azure-app-service-certificates.md
         - name: Use Azure App Service Certificate with Azure Front Door
           href: ./connection-issues-with-ssl-or-tls/use-azure-app-service-certificate-with-azure-front-door.md
         - name: Use Azure App Service Certificate with Application Gateway
