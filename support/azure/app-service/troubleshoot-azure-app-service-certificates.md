@@ -344,7 +344,7 @@ error:
 
 ### Step 5: Renew or reissue the certificate 
 
-During your troubleshooting in steps 1–4, if you discovere that the
+During your troubleshooting in steps 1–4, if you discover that the
 certificate is about to expire and not automatically renew, you must take action to renew or reissue it.
 
 **Auto renewal versus manual renewal**
