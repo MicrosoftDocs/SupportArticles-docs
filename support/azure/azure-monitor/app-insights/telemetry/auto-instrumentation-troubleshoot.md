@@ -64,7 +64,7 @@ If your extension deployed successfully but you're unable to see telemetry, it c
 - Conflicting dynamic link libraries (DLLs) in an app's bin directory.
 - Conflict with IIS shared configuration.
 
-## Issues with Java app running on Azure Functions
+## Issues with Java app running on Azure Function App
 
 ### Slow startup times
 

@@ -78,7 +78,7 @@ This issue may occur because the *web.config* file isn't present in your app. To
 
 #### Failed to deploy a Function App using the AzureRmWebAppDeployment task
 
-Consider using the [AzureFunctionApp@1 - Azure Functions v1 task](/azure/devops/pipelines/tasks/reference/azure-function-app-v1).
+Consider using the [AzureFunctionApp@1 - Azure Function App v1 task](/azure/devops/pipelines/tasks/reference/azure-function-app-v1).
 
 #### Guidance on deploying an app to Azure Web App
 
