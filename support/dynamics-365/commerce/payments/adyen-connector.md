@@ -2,7 +2,7 @@
 title: Troubleshoot common issues with the Dynamics 365 Payment Connector for Adyen
 description: Learn how to troubleshoot common issues with the Dynamics 365 Payment Connector for Adyen, including resolving stale authorization errors and configuration problems.
 ms.reviewer: johnmichalak, v-shaywood
-ms.custom: sap:Payments
+ms.custom: sap:Payments\Issues with Dynamics 365 Payment Connector for Adyen
 ms.date: 10/15/2025
 ---
 

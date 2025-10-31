@@ -10,7 +10,7 @@ ms.date: 10/16/2025
 
 This article explains how to troubleshoot common errors with Commerce Data Exchange (CDX) in Microsoft Dynamics 365 Commerce environments. CDX is a system that transfers data between Headquarters and channels, such as online stores or brick-and-mortar stores. Data distribution is asynchronous. In other words, the process of gathering and packaging data at the source occurs separately from the process of receiving and applying data at the destination. For some scenarios, such as price and inventory lookups, data must be retrieved in real time. To support these scenarios, Commerce Data Exchange also includes a service that enables real-time communication between Headquarters and a channel.
 
-## Issue 1: Download sessions failing with null connection string
+## Download sessions failing with null connection string
 
 ### Symptoms
 
@@ -28,7 +28,7 @@ This error occurs because of batch job statuses. You can view the error in a fai
 1. Find the data writing batch associated with the Commerce Scale Unit to which the download job is supposed to be applied.
 1. Change the batch job's status to **Withhold**.
 
-## Issue 2: Can't execute Run now command from Distribution schedule page unless batch processing is used
+## Can't execute Run now command from Distribution schedule page unless batch processing is used
 
 ### Symptoms
 
@@ -47,7 +47,7 @@ Microsoft doesn't recommend that you change this behavior. However, if you're in
 1. Go to **Commerce shared parameters** \> **Configuration parameters**
 1. Set a new parameter with a name of `CDX_DISABLE_FORCESCHEDULEINBATCH` and a value of `1`.
 
-## Issue 3: Error due to extended table length
+## Error due to extended table length
 
 ### Symptoms
 
@@ -65,7 +65,7 @@ Create a Microsoft Support request using the [Power Platform admin center](/powe
 
 For information on best practices, see [Enable custom Commerce Data Exchange synchronization via extension](/dynamics365/commerce/dev-itpro/cdx-extensibility). These best practices include removing the extended data type (EDT) extension on the table field you're editing. Instead, use the CDX extension table to store the long (full) value required.
 
-## Issue 4: Error due to download session failure
+## Error due to download session failure
 
 ### Symptoms
 
@@ -82,7 +82,7 @@ The download session fails and returns an error message that includes:
 
 For more information, see [Commerce Data Exchange best practices](/dynamics365/commerce/dev-itpro/cdx-best-practices).
 
-## Issue 5: Unable to cancel a running CDX job
+## Unable to cancel a running CDX job
 
 ### Symptoms
 
@@ -93,7 +93,7 @@ You can't cancel a running CDX job.
 - If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
 - If the issue occurs in a nonproduction environment, create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [LCS](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
-## Issue 6: Slow download sessions after adding multiple POS terminals
+## Slow download sessions after adding multiple POS terminals
 
 ### Symptoms
 
@@ -110,7 +110,7 @@ Use one of the following options:
 - A "dummy" channel database group (that is, a group that isn't associated with any distribution schedule job) that you assign to the newly generated terminals.
 - A special offline profile where the **Pause offline synchronization** option is set to **Yes**. With this option, data generation can occur when required and the system is most available to do it. However, the system might pause multiple times as required. If it's too late to use this approach, create a Microsoft Support request.
 
-## Issue 7: Incremental (delta) data synchronization takes too long
+## Incremental (delta) data synchronization takes too long
 
 ### Symptoms
 
@@ -124,7 +124,7 @@ This issue can occur when you create a new channel (store), because the system m
 
 Use a "dummy" channel database associated with a "dummy" channel database group, and assign it to the newly generated channel (store). With this configuration, data generation can occur when required and the system is most available to do it. If it's too late to use this approach, create a Microsoft Support request.
 
-## Issue 8: P-job error due to violation of primary key restraint
+## P-job error due to violation of primary key restraint
 
 ### Symptoms
 
@@ -137,7 +137,7 @@ The P-job fails to create an upload session, and you receive the following error
 - If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
 - If the issue occurs in a nonproduction environment, create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [LCS](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
-## Issue 9: Session package download error due to record not found
+## Session package download error due to record not found
 
 ### Symptoms
 
@@ -149,7 +149,7 @@ When you try to download an upload session package from the **Upload sessions** 
 
 Create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [Microsoft Dynamics Lifecycle Services (LCS)](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
-## Issue 10: Error due to CDX download sessions failing to be applied
+## Error due to CDX download sessions failing to be applied
 
 ### Symptoms
 
@@ -162,7 +162,7 @@ The CDX download sessions fail to be applied, and you receive the following erro
 - If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
 - If the issue occurs in a nonproduction environment, create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [LCS](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
-## Issue 11: No download sessions are applied, and no upload sessions are created
+## No download sessions are applied, and no upload sessions are created
 
 ### Symptoms
 
@@ -173,7 +173,7 @@ No download sessions are applied, and no upload sessions are created.
 - If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
 - If the issue occurs in a nonproduction environment, create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [LCS](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
-## Issue 12: Upload sessions error due to multiple records in the RetailListingStatusLog table
+## Upload sessions error due to multiple records in the RetailListingStatusLog table
 
 ### Symptoms
 
@@ -190,7 +190,7 @@ An error occurs because the upload session package contains multiple records in 
 - If this issue occurs in a production environment, sign in to [Microsoft Dynamics Lifecycle Services (LCS)](https://lcs.dynamics.com/Logon/Index), and create a request for immediate support.
 - If the issue occurs in a nonproduction environment, create a Microsoft Support request using the [Power Platform admin center](/power-platform/admin/support-overview) or [LCS](/dynamics365/fin-ops-core/dev-itpro/lifecycle-services/submit-request-dynamics-service-engineering-team).
 
-## Issue 13: Failure during switch to offline mode
+## Failure during switch to offline mode
 
 ### Symptoms
 

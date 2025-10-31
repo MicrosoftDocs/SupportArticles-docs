@@ -12,7 +12,7 @@ This article explains how to troubleshoot common errors with offline implementat
 
 During a sales transaction, if a data request doesn't succeed within the timeout interval, the POS automatically switches to the offline database and continues the sales transaction. While the POS device is in offline mode, the Store Commerce app tries to reconnect to the Commerce Scale Unit after the reconnection attempt interval. The timeout and reconnection attempt intervals can be configured in the offline profile.
 
-## Issue 1: Errors due to sign-in issues
+## Errors due to sign-in issues
 
 ### Symptoms
 
@@ -34,7 +34,7 @@ A sign-in-related issue occurred. This issue might occur because data isn't foun
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
 1. Also, contact your system administrator.
 
-## Issue 2: Errors due to employee address book not being found, or employee not mapped to store in offline database
+## Errors due to employee address book not being found, or employee not mapped to store in offline database
 
 ### Symptoms
 
@@ -56,7 +56,7 @@ This issue might occur because of one of the following causes:
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
 1. Also, contact your system administrator.
 
-## Issue 3: Errors due to employee position detail not found or invalid
+## Errors due to employee position detail not found or invalid
 
 ### Symptoms
 
@@ -75,7 +75,7 @@ This issue might occur because the worker's position detail or assignment isn't 
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
 1. Also, contact your system administrator.
 
-## Issue 4: Error due to employee POS permission settings not found or configured incorrectly
+## Error due to employee POS permission settings not found or configured incorrectly
 
 ### Symptoms
 
@@ -93,7 +93,7 @@ This issue might occur because the worker's POS permission settings aren't found
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
 1. Also, contact your system administrator.
 
-## Issue 5: Channel errors due to inability to switch to offline mode
+## Channel errors due to inability to switch to offline mode
 
 ### Symptoms
 
@@ -141,7 +141,7 @@ The device can't switch to offline mode. The user information is either unavaila
 1. Run the **Staff scheduler** job (by default, the **1060** scheduler job).
 1. Also, contact your system administrator.
 
-## Issue 7: Error due to offline database storage issue
+## Error due to offline database storage issue
 
 ### Symptoms
 
@@ -153,7 +153,7 @@ You receive the following error:
 
 Use the offline dashboard to check the status of the offline database permissions, size, and disk space.
 
-## Issue 8: Error when the same user tries to perform a manager override
+## Error when the same user tries to perform a manager override
 
 ### Symptoms
 
@@ -169,7 +169,7 @@ This error occurs when the same user tries to perform a manager override.
 
 A different user must perform the manager override.
 
-## Issue 9: Database errors when the device can't switch to offline mode
+## Database errors when the device can't switch to offline mode
 
 ### Symptoms
 
@@ -186,7 +186,7 @@ The device can't switch to offline mode. The offline database is either incorrec
 
 Verify that everything is set up correctly. Also, contact your system administrator.
 
-## Issue 10: Errors due to terminal or device configuration not found
+## Errors due to terminal or device configuration not found
 
 ### Symptoms
 
@@ -201,7 +201,7 @@ You receive one of the following errors:
 1. Run the **Channel configuration scheduler** job (by default, the **1070** scheduler job).
 1. Also, contact your system administrator.
 
-## Issue 11: Errors due to internal server, timeout, or runtime invalid format issues
+## Errors due to internal server, timeout, or runtime invalid format issues
 
 ### Symptoms
 
