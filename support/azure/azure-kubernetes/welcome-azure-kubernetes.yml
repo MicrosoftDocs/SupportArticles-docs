@@ -182,11 +182,10 @@ landingContent:
             url: ./identify-memory-saturation-aks.md
 
  # Card 
-  - title: Troubleshoot common issues
+  - title: Troubleshoot AKS error codes
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot common issues with Azure Linux container hosts on AKS
-            url: ./troubleshoot-common-azure-linux-aks.md
-          - text: Troubleshoot DNS resolution problems on AKS clusters
-            url: connectivity/dns/basic-troubleshooting-dns-resolution-problems.md
+          - text: AKS error codes
+            url: ./error-codes/aks-error-code-page.md
+

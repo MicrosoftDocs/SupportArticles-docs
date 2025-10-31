@@ -3,10 +3,12 @@ title: Troubleshoot no data in Application Insights for .NET
 description: Review troubleshooting steps to try when you don't see any data in Application Insights for .NET and .NET Core.
 ms.date: 06/24/2024
 editor: v-jsitser
-ms.reviewer: aaronmax, v-leedennis
+author: JarrettRenshaw
+ms.author: jarrettr
+ms.reviewer: aaronmax, v-leedennis, matthofa, v-nawrothkai
 ms.service: azure-monitor
 ms.devlang: csharp
-ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal, devx-track-csharp
+ms.custom: sap:Missing or incorrect telemetry and performance issues
 #Customer intent: As an Application Insights user, I want to know how to troubleshoot issues when I can't see data in Application Insights for .NET or .NET Core so that I can use it effectively.
 ---
 # Troubleshoot no data: Application Insights for .NET and .NET Core
@@ -32,14 +34,14 @@ Example scenarios:
 * Check whether you're experiencing data loss at the [telemetry channel](/azure/azure-monitor/app/telemetry-channels#does-the-application-insights-channel-guarantee-telemetry-delivery-if-not-what-are-the-scenarios-in-which-telemetry-can-be-lost).
 * Check for any known issues in the telemetry channel of the [GitHub repo](https://github.com/Microsoft/ApplicationInsights-dotnet/issues).
 
->[!Note]
->If data is missing, it's possible that the data is being rejected by the back end. This situation can occur for various reasons, including the following causes:
+> [!NOTE]
+> If data is missing, it's possible that the data is being rejected by the back end. This situation can occur for various reasons, including the following causes:
 >
->* Required fields are missing.
->* One or more fields exceed size limits.
->* SDKs are failing silently instead of throwing exceptions.
+> * Required fields are missing.
+> * One or more fields exceed size limits.
+> * SDKs are failing silently instead of throwing exceptions.
 >
->You can use a tool like [Fiddler](https://www.telerik.com/fiddler/fiddler-classic), or any other tool that will inspect HTTP traffic, to confirm successful telemetry uploads. The back end will return a "200 OK" HTTP status code to indicate a successful upload. Or you can use the [SDK logs](#troubleshoot-logs) to see if the back end is rejecting data.
+> You can use a tool like [Fiddler](https://www.telerik.com/fiddler/fiddler-classic), or any other tool that inspects HTTP traffic to confirm successful telemetry uploads. The back end will return a "200 OK" HTTP status code to indicate a successful upload. Or you can use the [SDK logs](#troubleshoot-logs) to see if the back end is rejecting data.
 
 ### I'm experiencing data loss in a console app or on a web app when the app is about to stop
 
@@ -224,18 +226,24 @@ Example scenario:
 * Run your application in debug mode in Visual Studio (F5). Use the application to generate some telemetry. Check that you can see events logged in the Visual Studio output window.
 
     :::image type="content" source="./media/asp-net-troubleshoot-no-data/output-window.png" alt-text="Screenshot that shows an application running in debug mode in Visual Studio.":::
+
 * In the Application Insights portal, select **Overview** > [Search](/azure/azure-monitor/app/diagnostic-search). Data usually appears here first.
+
 * Select **Refresh**. The pane refreshes itself periodically, but you can also do it manually. The refresh interval is longer for larger time ranges.
+
 * Verify that the [connection strings](/azure/azure-monitor/app/sdk-connection-string) match. On the main pane for your app in the Application Insights portal, in the **Essentials** dropdown list, look at **Connection string**. Then, in your project in Visual Studio, open *ApplicationInsights.config* and find the `<ConnectionString>` element. Check whether the two strings are equal. If the strings don't match, take one of the following actions:
 
-  | Environment | Action |
-  | ----------- | ------ |
-  | [Azure portal](https://portal.azure.com) | Search for and select **Application Insights** and then look for the app resource with the right string. |
-  | Visual Studio | In Visual Studio Solution Explorer, right-click the project and select **Application Insights** > **Configure**. Reset the app to send telemetry to the correct resource. |
+    | Environment | Action |
+    | ----------- | ------ |
+    | [Azure portal](https://portal.azure.com) | Search for and select **Application Insights** and then look for the app resource with the right string. |
+    | Visual Studio | In Visual Studio Solution Explorer, right-click the project and select **Application Insights** > **Configure**. Reset the app to send telemetry to the correct resource. |
 
   If you can't find the matching strings, check to make sure that you're using the same sign-in credentials in Visual Studio that you're using to sign in to the portal.
+
 * In the [Azure portal](https://portal.azure.com), search for and select **Service Health**. If the map has some alert indications, wait until they've returned to health. Then close and reopen your Application Insights application pane.
+
 * Did you write any code for the [server-side SDK](/azure/azure-monitor/app/api-custom-events-metrics) that might change the [connection string](/azure/azure-monitor/app/sdk-connection-string) in `TelemetryClient` instances or in `TelemetryContext`? Or did you write a [filter or sampling configuration](/azure/azure-monitor/app/api-filtering-sampling) that might be filtering out too much?
+
 * If you edited *ApplicationInsights.config*, carefully check the configuration of [\<TelemetryInitializers> and \<TelemetryProcessors> elements](/azure/azure-monitor/app/api-filtering-sampling). An incorrectly named type or parameter can cause the SDK to send no data.
 
 ## No data on page views, browsers, and usage
@@ -271,15 +279,15 @@ Performance data like CPU and the I/O rate is available for the following enviro
 
 ## Performance impact when Application Insights is enabled
 
-Enabling Application Insights SDK in your application may occasionally lead to performance issues, such as high CPU usage, memory leaks, thread leaks, or TCP port exhaustion. These issues commonly originate from the application leaking `Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration` objects. Each leaked instance creates two additional threads, which leading to a continual increase in the process's thread count over time. If you observe a growing number of threads, it's crucial to check for leaks of [TelemetryConfiguration](/dotnet/api/microsoft.applicationinsights.extensibility.telemetryconfiguration?view=azure-dotnet&preserve-view=true) objects. 
+Enabling Application Insights SDK in your application may occasionally lead to performance issues, such as high CPU usage, memory leaks, thread leaks, or TCP port exhaustion. These issues commonly originate from the application leaking `Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration` objects. Each leaked instance creates two additional threads, which leading to a continual increase in the process's thread count over time. If you observe a growing number of threads, it's crucial to check for leaks of [TelemetryConfiguration](/dotnet/api/microsoft.applicationinsights.extensibility.telemetryconfiguration?view=azure-dotnet&preserve-view=true) objects.
 
 ### Common causes of TelemetryConfiguration leaks
 
 There are two primary causes of leaking `TelemetryConfiguration` objects:
 
-- **Explicit creation in code**: If you create `TelemetryConfiguration` objects within your code, ensure that they are not inadvertently created per web request. Instead, use a shared global instance. For .NET Framework applications, access the global instance with `TelemetryConfiguration.Active`. For .NET Core applications, use `TelemetryConfiguration.CreateDefault()` to obtain a default configuration.
+* **Explicit creation in code**: If you create `TelemetryConfiguration` objects within your code, ensure that they are not inadvertently created per web request. Instead, use a shared global instance. For .NET Framework applications, access the global instance with `TelemetryConfiguration.Active`. For .NET Core applications, use `TelemetryConfiguration.CreateDefault()` to obtain a default configuration.
 
-- **Improper service provider usage**: In .NET Core applications, avoid calling `services.BuildServiceProvider()` within `ConfigureServices`. BuildServiceProvider method creates a new service provider that initializes and reads the configuration, resulting in a new `TelemetryConfiguration` object each time. Such a pattern can lead to leaks and is discouraged, as noted in the [Visual Studio warning](/aspnet/core/diagnostics/asp0000?view=aspnetcore-8.0&preserve-view=true) against this coding practice.
+* **Improper service provider usage**: In .NET Core applications, avoid calling `services.BuildServiceProvider()` within `ConfigureServices`. BuildServiceProvider method creates a new service provider that initializes and reads the configuration, resulting in a new `TelemetryConfiguration` object each time. Such a pattern can lead to leaks and is discouraged, as noted in the [Visual Studio warning](/aspnet/core/diagnostics/asp0000?view=aspnetcore-8.0&preserve-view=true) against this coding practice.
 
 ## I used to see data, but it's stopped
 
@@ -311,7 +319,7 @@ Did you build for .NET [Long Term Support (LTS)](https://dotnet.microsoft.com/pl
 
 Follow these instructions to capture troubleshooting logs for your framework.
 
-### .NET Framework
+### [.NET Framework](#tab/framework)
 
 > [!NOTE]
 > Starting in version 2.14, the [Microsoft.AspNet.ApplicationInsights.HostingStartup](https://www.nuget.org/packages/Microsoft.AspNet.ApplicationInsights.HostingStartup) package is no longer necessary. SDK logs are now collected with the [Microsoft.ApplicationInsights](https://www.nuget.org/packages/Microsoft.ApplicationInsights/) package. No other package is required.
@@ -334,7 +342,7 @@ Follow these instructions to capture troubleshooting logs for your framework.
 
 1. Revert these changes when you're finished.
 
-### .NET Core
+### [.NET Core](#tab/core)
 
 1. Install the [Application Insights SDK NuGet package for ASP.NET Core](https://nuget.org/packages/Microsoft.ApplicationInsights.AspNetCore) package from NuGet. The version you install must match the current installed version of `Microsoft.ApplicationInsights`.
 
@@ -357,15 +365,49 @@ Follow these instructions to capture troubleshooting logs for your framework.
 
 1. Revert these changes when you're finished.
 
+---
+
 ## Collect logs with PerfView
 
 [PerfView](https://github.com/Microsoft/perfview) is a free tool that helps isolate CPU, memory, and other issues.
 
 The Application Insights SDK log `EventSource` has self-troubleshooting logs that can be captured by PerfView.
 
-To collect logs, download PerfView and run this command:
+To collect logs, download PerfView and run this PowerShell command:
 
-`PerfView.exe collect -MaxCollectSec:300 -NoGui /onlyProviders=*Microsoft-ApplicationInsights-Core,*Microsoft-ApplicationInsights-Data,*Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,*Microsoft-ApplicationInsights-Extensibility-DependencyCollector,*Microsoft-ApplicationInsights-Extensibility-HostingStartup,*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,*Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,*Microsoft-ApplicationInsights-Extensibility-Web,*Microsoft-ApplicationInsights-Extensibility-WindowsServer,*Microsoft-ApplicationInsights-WindowsServer-Core,*Microsoft-ApplicationInsights-LoggerProvider,*Microsoft-ApplicationInsights-Extensibility-EventSourceListener,*Microsoft-ApplicationInsights-AspNetCore,*Redfield-Microsoft-ApplicationInsights-Core,*Redfield-Microsoft-ApplicationInsights-Data,*Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,*Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,*Redfield-Microsoft-ApplicationInsights-Extensibility-Web,*Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,*Redfield-Microsoft-ApplicationInsights-LoggerProvider,*Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,*Redfield-Microsoft-ApplicationInsights-AspNetCore`
+```PowerShell
+PerfView.exe collect -MaxCollectSec:300 -NoGui `
+/onlyProviders=*Microsoft-ApplicationInsights-Core,`
+*Microsoft-ApplicationInsights-Data,`
+*Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,`
+*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,`
+*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,`
+*Microsoft-ApplicationInsights-Extensibility-DependencyCollector,`
+*Microsoft-ApplicationInsights-Extensibility-HostingStartup,`
+*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,`
+*Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,`
+*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,`
+*Microsoft-ApplicationInsights-Extensibility-Web,`
+*Microsoft-ApplicationInsights-Extensibility-WindowsServer,`
+*Microsoft-ApplicationInsights-WindowsServer-Core,`
+*Microsoft-ApplicationInsights-LoggerProvider,`
+*Microsoft-ApplicationInsights-Extensibility-EventSourceListener,`
+*Microsoft-ApplicationInsights-AspNetCore,`
+*Redfield-Microsoft-ApplicationInsights-Core,`
+*Redfield-Microsoft-ApplicationInsights-Data,`
+*Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-Web,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,`
+*Redfield-Microsoft-ApplicationInsights-LoggerProvider,`
+*Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,`
+*Redfield-Microsoft-ApplicationInsights-AspNetCore
+```
 
 You can modify these parameters as needed:
 
@@ -384,13 +426,76 @@ For more information, see:
 
 Alternatively, you can use a cross-platform .NET Core tool, [dotnet-trace](/dotnet/core/diagnostics/dotnet-trace), for collecting logs that can provide further help in troubleshooting. This tool might be helpful for Linux-based environments.
 
-After you install `dotnet-trace`, run the following [dotnet-trace collect](/dotnet/core/diagnostics/dotnet-trace#dotnet-trace-collect) command in bash:
+After you install `dotnet-trace`, run the following [dotnet-trace collect](/dotnet/core/diagnostics/dotnet-trace#dotnet-trace-collect) bash command:
 
-`dotnet-trace collect --process-id <PID> --providers Microsoft-ApplicationInsights-Core,Microsoft-ApplicationInsights-Data,Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,Microsoft-ApplicationInsights-Extensibility-DependencyCollector,Microsoft-ApplicationInsights-Extensibility-HostingStartup,Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,Microsoft-ApplicationInsights-Extensibility-Web,Microsoft-ApplicationInsights-Extensibility-WindowsServer,Microsoft-ApplicationInsights-WindowsServer-Core,Microsoft-ApplicationInsights-LoggerProvider,Microsoft-ApplicationInsights-Extensibility-EventSourceListener,Microsoft-ApplicationInsights-AspNetCore,Redfield-Microsoft-ApplicationInsights-Core,Redfield-Microsoft-ApplicationInsights-Data,Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,Redfield-Microsoft-ApplicationInsights-Extensibility-Web,Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,Redfield-Microsoft-ApplicationInsights-LoggerProvider,Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,Redfield-Microsoft-ApplicationInsights-AspNetCore`
+```bash
+dotnet-trace collect --process-id <PID> --providers \
+Microsoft-ApplicationInsights-Core,\
+Microsoft-ApplicationInsights-Data,\
+Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,\
+Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,\
+Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,\
+Microsoft-ApplicationInsights-Extensibility-DependencyCollector,\
+Microsoft-ApplicationInsights-Extensibility-HostingStartup,\
+Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,\
+Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,\
+Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,\
+Microsoft-ApplicationInsights-Extensibility-Web,\
+Microsoft-ApplicationInsights-Extensibility-WindowsServer,\
+Microsoft-ApplicationInsights-WindowsServer-Core,\
+Microsoft-ApplicationInsights-LoggerProvider,\
+Microsoft-ApplicationInsights-Extensibility-EventSourceListener,\
+Microsoft-ApplicationInsights-AspNetCore,\
+Redfield-Microsoft-ApplicationInsights-Core,\
+Redfield-Microsoft-ApplicationInsights-Data,\
+Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-Web,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,\
+Redfield-Microsoft-ApplicationInsights-LoggerProvider,\
+Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,\
+Redfield-Microsoft-ApplicationInsights-AspNetCore
+```
+
+### Issues with trace logs
+
+#### What causes delayed telemetry, an overloaded network, and inefficient transmission?
+
+`System.Diagnostics.Tracing` has an [Autoflush feature](/dotnet/api/system.diagnostics.trace.autoflush). This feature causes SDK to flush with every telemetry item, which is undesirable, and can cause logging adapter issues like delayed telemetry, an overloaded network, and inefficient transmission.
+
+#### Why is there no Application Insights option on the project context menu?
+
+* Make sure that Developer Analytics Tools is installed on the development machine. In Visual Studio, go to  **Tools** > **Extensions and Updates**, and look for **Developer Analytics Tools**. If it isn't on the **Installed** tab, open the **Online** tab and install it.
+* This project type might be one that Developer Analytics Tools doesn't support. Use [manual installation](/azure/azure-monitor/app/dotnet#add-application-insights-manually-no-visual-studio).
+
+#### Why is there no log adapter option in the configuration tool?
+
+* Install the logging framework first.
+* If you're using System.Diagnostics.Trace, make sure that you [configured it in *web.config*](/dotnet/api/system.diagnostics.eventlogtracelistener).
+* Make sure that you have the latest version of Application Insights. In Visual Studio, go to **Tools** > **Extensions and Updates** and open the **Updates** tab. If **Developer Analytics Tools** is there, select it to update it.
+
+#### Why do I get the "Instrumentation key cannot be empty" error message?
+
+You probably installed the logging adapter NuGet package without installing Application Insights. In Solution Explorer, right-click *ApplicationInsights.config*, and select **Update Application Insights**. You're prompted to sign in to Azure and create an Application Insights resource or reuse an existing one. It should fix the problem.
+
+#### Why can I see traces but not other events in diagnostic search?
+
+It can take a while for all the events and requests to get through the pipeline.
+
+#### Why don't I see some log entries that I expected?
+
+Perhaps your application sends voluminous amounts of data and you're using the Application Insights SDK for ASP.NET version 2.0.0-beta3 or later. In this case, the adaptive sampling feature might operate and send only a portion of your telemetry. Learn more about [sampling](/azure/azure-monitor/app/sampling).
 
 ## Remove Application Insights
 
 To remove Application Insights in Visual Studio, follow the steps provided in [Remove Application Insights in Visual Studio](/azure/azure-monitor/app/remove-application-insights).
+
+There's a known issue in Visual Studio 2019: storing the instrumentation key or connection string in a user secret is broken for .NET Framework-based apps. The key ultimately has to be hardcoded into the *Applicationinsights.config* file to work around this bug. This article is designed to avoid this issue entirely, by not using user secrets.
 
 ## It still isn't working
 

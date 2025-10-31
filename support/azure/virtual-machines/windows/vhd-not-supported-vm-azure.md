@@ -5,14 +5,14 @@ services: virtual-machines
 documentationCenter: ''
 author: JarrettRenshaw
 manager: dcscontentpm
-ms.reviewer: akastha
+ms.reviewer: akastha, scotro
 ms.service: azure-virtual-machines
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure
-ms.date: 06/04/2025
+ms.date: 10/22/2025
 ms.author: jarrettr
-ms.custom: sap:VM Admin - Windows (Guest OS)
+ms.custom: sap:Assistance with disk operations
 ---
 # VHD is not supported when you create a virtual machine in Azure
 

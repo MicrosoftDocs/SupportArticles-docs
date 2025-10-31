@@ -261,8 +261,10 @@ items:
       href: extensions/changes-in-kubernetes-event-driven-autoscaling-add-on-214-215.md
     - name: Troubleshoot KEDA add-on
       href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md      
-- name: Troubleshoot error codes
+- name: Troubleshoot by error codes
   items:
+  - name: Common error codes
+    href: error-codes/aks-error-code-page.md
   - name: 429 Too Many Requests errors
     href: create-upgrade-delete/429-too-many-requests-errors.md
   - name: A-K

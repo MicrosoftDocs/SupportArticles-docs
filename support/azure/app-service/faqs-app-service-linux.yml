@@ -7,6 +7,7 @@ metadata:
   ms.service: azure-app-service
   ms.date: 04/30/2025
   ms.author: jarrettr
+  ms.custom: sap:Application Code Deployment   
 title: Azure App Service on Linux FAQ
 summary: |
 

@@ -6,7 +6,7 @@ ms.author: jarrettr
 ms.service: azure-app-service
 ms.date: 07/21/2025
 ms.reviewer: v-liuamson; v-gsitser
-ms.custom: Connection issues with SSL or TLS
+ms.custom: sap:Connection issues with SSL or TLS, SSL Certificates and Domains  
 ---
 
 # Use Azure App Service Certificate with Azure Front Door

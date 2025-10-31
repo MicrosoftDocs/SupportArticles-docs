@@ -1,10 +1,12 @@
 ---
 title: Troubleshoot High Data Ingestion in Application Insights
 description: Provides a step-by-step guide to troubleshoot high data ingestion scenarios and provides methods to reduce costs.
-ms.date: 04/21/2025
+ms.date: 10/14/2025
+author: JarrettRenshaw
+ms.author: jarrettr
 ms.service: azure-monitor
-ms.reviewer: jeanbisutti, toddfous, aaronmax, v-weizhu
-ms.custom: sap:Application Insights
+ms.reviewer: jeanbisutti, toddfous, aaronmax, v-weizhu, matthofa, v-nawrothkai
+ms.custom: sap:Missing or incorrect telemetry and performance issue
 ---
 # Troubleshoot high data ingestion in Application Insights
 

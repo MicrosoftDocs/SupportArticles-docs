@@ -6,6 +6,7 @@ ms.author: jarrettr
 ms.service: azure-app-service
 ms.date: 04/15/2025
 ms.reviewer: toan, shrahman
+ms.custom: sap:Availability, Performance, and Application Issues
 ---
 # Application performance FAQs for Web Apps in Azure
 

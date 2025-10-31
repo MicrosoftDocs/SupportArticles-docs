@@ -3,7 +3,7 @@ title: Troubleshoot Intermittent Outbound Connection Errors
 description: Learn how to troubleshoot intermittent connection errors and related performance issues in Azure App Service.
 ms.topic: troubleshooting-general
 ms.date: 10/14/2025
-ms.custom: security-recommendations,fasttrack-edit
+ms.custom: sap:security-recommendations,fasttrack-edit,Networking
 ms.author: msangapu
 author: msangapu-msft
 manager: dcscontentpm

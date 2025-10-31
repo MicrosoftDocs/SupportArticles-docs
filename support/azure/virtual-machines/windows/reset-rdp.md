@@ -22,6 +22,8 @@ ms.reviewer: herensin, v-monicaba
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
+[!INCLUDE [VM assist troubleshooting tools](../../../includes/vmassist-include.md)]
+
 > [!NOTE]
 > The steps in this article don't apply to Windows domain controllers.
 

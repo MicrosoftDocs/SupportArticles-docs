@@ -1,3 +1,4 @@
+items:
 - name: Welcome
   href: welcome-virtual-machines-linux.yml
 
@@ -262,13 +263,13 @@
     href: convert-mbr-partition-to-gpt.md
   - name: VHD is not supported when you create a VM in Azure
     href: ../windows/vhd-not-supported-vm-azure.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+  - name: Create a SWAP file
+    href: create-swap-file-linux-vm.md
 
 - name: Linux administration
   items:
   - name: Configure multiple NICs
     href: linux-vm-multiple-virtual-network-interfaces-configuration.md
-  - name: Create a SWAP file
-    href: create-swap-file-linux-vm.md
   - name: Maximum RAM memory of Linux VM
     href: max-linux-ram-limited-64-gb.md
   - name: Configure custom DNS servers

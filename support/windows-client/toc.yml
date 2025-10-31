@@ -1087,6 +1087,8 @@ items:
       href: ../windows-server/system-management-components/enable-openssh-verbose-logging.md?context=/troubleshoot/windows-client/context/context
     - name: OpenSSH client can't connect to a server via SSH
       href: ../windows-server/system-management-components/open-client-can-not-connect-server.md?context=/troubleshoot/windows-client/context/context
+    - name: OpenSSH Server Service Doesn't Start and Generates Error 1053
+      href: ../windows-server/system-management-components/openssh-server-service-wont-start-error-1053.md?context=/troubleshoot/windows-client/context/context
     - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
       href: ../windows-server/system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md?context=/troubleshoot/windows-client/context/context
   - name: PowerShell
@@ -1459,7 +1461,7 @@ items:
       href: ./windows-tss/collect-data-analyze-troubleshoot-sys-management-components-scenarios.md
     - name: Collect data to analyze and troubleshoot Hyper-V related issues
       href: ./windows-tss/collect-data-analyze-troubleshoot-hyperv-scenarios.md
-    - name: Gather information for SQL cluster (AG/FCI) related issues
-      href: ./windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md
+    - name: Collect data to analyze and troubleshoot SQL cluster (AG/FCI) related issues
+      href: ./windows-tss/collect-data-analyze-troubleshoot-sql-cluster-ag-fci-scenarios.md
     - name: Use the xray feature of TSS
       href: ./windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md

@@ -16,6 +16,10 @@ items:
     items:
     - name: New emails automatically move to Junk folder
       href: ../junk-email/new-emails-automatically-move-to-junk-folder.md
+  - name: Performance
+    items:
+    - name: Collect a performance trace in new Outlook for Windows
+      href: ../performance/collect-performance-trace.md    
   - name: Profiles and Accounts
     items:
     - name: Archive mailbox doesn't appear in Outlook or Outlook on the web

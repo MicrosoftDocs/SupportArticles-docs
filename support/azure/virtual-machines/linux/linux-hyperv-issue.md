@@ -67,7 +67,7 @@ Or
     1. Identify the file that disables the hv_netvsc driver and the corresponding line numbers by running the following command:
 
         ```bash
-        grep -nr "hv_netvsc" /etc/modprobe.d/
+        sudo grep -nr "hv_netvsc" /etc/modprobe.d/
         ```
 
     2. Modify the corresponding file and comment out or delete the hv_netvsc entries:
@@ -75,7 +75,7 @@ Or
           :::image type="content" source="media/linux-hyperv-issue/hv-netvsc-disabled.png" alt-text="Screenshot that shows the possible configuration file contents used to disable network drivers.":::
 
         ```bash
-        vi /etc/modprobe.d/disable.conf
+        sudo vi /etc/modprobe.d/disable.conf
         ```
 
         > [!NOTE]
@@ -88,13 +88,13 @@ Or
     - For RHEL/SLES-based images
 
         ```bash
-        # dracut -f -v
+        sudo dracut -f -v
         ```
     
     - For Ubuntu/Debian-based images
 
         ```bash
-        # mkinitramfs -k -o /boot/initrd.img-$(uname -r)
+        sudo mkinitramfs -k -o /boot/initrd.img-$(uname -r)
         ```
 
 6. Reboot the VM.
@@ -104,19 +104,19 @@ Always take a backup of the original initial RAMdisk image to facilitate the rol
 - For RHEL-based images:
 
     ```bash
-    # cp /boot/initramfs-<kernelVersion>.img /boot/initramfs-<kernelVersion>.img.bak
+    sudo cp /boot/initramfs-<kernelVersion>.img /boot/initramfs-<kernelVersion>.img.bak
     ```
 
 - For SLES-based images:
 
     ```bash
-    # cp /boot/initrd-<kernelVersion> /boot/initrd-<kernelVersion>.bak
+    sudo cp /boot/initrd-<kernelVersion> /boot/initrd-<kernelVersion>.bak
     ```
 
 - For Ubuntu/Debian-based images:
 
     ```bash
-    # cp /boot/initrd.img-<kernelVersion> /boot/initrd.img-<kernelVersion>.bak
+    sudo cp /boot/initrd.img-<kernelVersion> /boot/initrd.img-<kernelVersion>.bak
     ```
 
 ### <a id="reenable-hv_netvsc-offline"></a>Solution 2: Enable Hyper-V network driver offline
@@ -154,7 +154,7 @@ If the issue continues even though the Hyper-V network driver is enabled, use on
 7. Generally, a NIC MAC address would only change if a NIC is deleted or added by the administrator or a NIC is updated in the backend. If network configuration via cloud-init isn't desired, and the `apply_network_config` parameter needs to be set to false, delete the */var/lib/cloud/instance/obj.pkl* file and reboot the system.
 
     ```bash
-    # rm /var/lib/cloud/instance/obj.pkl
+    sudo rm /var/lib/cloud/instance/obj.pkl
     ```
 
 8. Once the changes are applied, restart the system.
@@ -213,7 +213,7 @@ If the VM is inaccessible due to other Hyper-V drivers being disabled, use an of
     1. Run the following command to identify the file that disables the hv_utils, hv_vmbus, hv_storvsc, or hv_netvsc driver and the corresponding line number.
 
         ```bash
-        egrep -nr "hv_utils|hv_vmbus|hv_storvsc|hv_netvsc" /etc/modprobe.d/
+        sudo egrep -nr "hv_utils|hv_vmbus|hv_storvsc|hv_netvsc" /etc/modprobe.d/
         ```
 
     2. Modify the corresponding file and comment out or delete the hv_utils, hv_vmbus, hv_storvsc, or hv_netvsc entries. The entries will most commonly be any of the following (or both):
@@ -223,7 +223,7 @@ If the VM is inaccessible due to other Hyper-V drivers being disabled, use an of
         :::image type="content" source="media/linux-hyperv-issue/hv-disabled-example-2.png" alt-text="Screenshot that shows the possible configuration file contents used to disable kernel modules/drivers.":::
 
         ```bash
-        vi /etc/modprobe.d/disable.conf
+        sudo vi /etc/modprobe.d/disable.conf
         ```
 
     > [!IMPORTANT]
@@ -236,13 +236,13 @@ If the VM is inaccessible due to other Hyper-V drivers being disabled, use an of
     - For RHEL/SLES-based images
 
         ```bash
-        # dracut -f -v
+        sudo dracut -f -v
         ```
 
     - For Ubuntu/Debian-based images
 
         ```bash
-        # mkinitramfs -k -o /boot/initrd.img-$(uname -r)
+        sudo mkinitramfs -k -o /boot/initrd.img-$(uname -r)
         ```
 
 5. Once the changes are applied, use the `az vm repair restore` command to perform an automatic OS disk swap with the original VM and reboot the system.

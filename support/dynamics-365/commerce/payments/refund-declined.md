@@ -25,7 +25,7 @@ The payment authorization details include the following error message:
 
 ## Resolution
 
-To solve this issue, contact the Adyen support team and request to enable blind returns on your Adyen merchant account. For more information, see [Troubleshoot issues with Dynamics 365 Payment Connector for Adyen](adyen-support.md).
+To solve this issue, contact the Adyen support team and request to enable blind returns on your Adyen merchant account. For more information, see [What is the Service level agreement (SLA) for out-of-box payment connectors like Adyen?](/dynamics365/commerce/dev-itpro/payments-retail#what-is-the-service-level-agreement-sla-for-out-of-box-payment-connectors-like-adyen)
 
 ## More information
 

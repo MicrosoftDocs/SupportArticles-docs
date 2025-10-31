@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
-ms.author: v-six
+ms.author: 
 ms.date: 06/06/2024
 ---
 # The "Embed Linguistic Data" setting in the "Word Options" dialog box isn't saved in Word

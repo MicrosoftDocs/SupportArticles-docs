@@ -1,7 +1,7 @@
 ---
 title: Distribution group issues
 author: simonxjx
-ms.author: v-six
+ms.author: 
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting

@@ -9,6 +9,7 @@ ms.date: 09/22/2025
 ms.author: jarrettr
 ms.reviewer: v-ryanberg
 ms.service: azure-app-service
+ms.custom: sap:SSL Certificates and Domains
 ---
 # Troubleshoot domain and TLS/SSL certificate problems in Azure App Service
 

@@ -7,6 +7,7 @@ ms.topic: faq
 ms.date: 01/20/2025
 ms.author: hepiet
 ms.service: azure-app-service
+ms.custom: sap:Questions about App Service security
 ---
 # Frequently asked questions about App Service security
 

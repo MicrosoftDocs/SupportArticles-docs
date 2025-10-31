@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.reviewer: maheshallu, piw, v-weizhu
 author: JarrettRenshaw
 ms.author: jarrettr
-ms.service: azure-cloud-services-extended-support
+ms.service: azure-service-fabric
 ms.custom: sap:Service Availability and Performance
 ---
 # Retrieve Azure Cloud Service (extended support) detail via PowerShell

@@ -9,7 +9,7 @@ author: msangapu-msft
 ms.author: msangapu
 ms.reviewer: v-ryanberg
 ms.service: azure-app-service
-ms.custom: devx-track-js
+ms.custom: sap:Availability, Performance, and Application Issues, devx-track-js
 # customer intent: As a developer, I want to learn best practices for Node.js applications that run in App Service so that I can use these apps more effectively.
 ---
 # Best practices and troubleshooting guide for node applications on Azure App Service Windows

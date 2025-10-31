@@ -35,5 +35,7 @@ items:
   href: ./troubleshoot-session-host-configuration-update.md
 - name: Troubleshoot session host virtual machine configuration
   href: ./troubleshoot-vm-configuration.md
+- name: Troubleshoot ephemeral OS disks
+  href: ./troubleshoot-ephemeral-os-disks.md
 - name: Win key remains held after pressing Ctrl+Win+L in a remote session
   href: win-key-remains-held-after-pressing-ctrl-win-l-in-remote-session.md

@@ -14,7 +14,7 @@ appliesto:
 search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
-ms.author: v-six
+ms.author: 
 ms.date: 06/06/2024
 ---
 # Excel for Mac error: "The application Microsoft Excel quit unexpectedly"

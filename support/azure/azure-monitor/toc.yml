@@ -44,8 +44,10 @@ items:
       href: app-insights/telemetry/enable-self-diagnostics.md
     - name: Troubleshoot missing telemetry in Application Insights
       href: app-insights/telemetry/investigate-missing-telemetry.md
-    - name: Troubleshoot auto-instrumentation issues
+    - name: Troubleshoot autoinstrumentation issues
       href: app-insights/telemetry/auto-instrumentation-troubleshoot.md
+    - name: Troubleshoot App Service monitoring issues
+      href: app-insights/telemetry/troubleshoot-app-service-issues.md
     - name: Troubleshoot high data ingestion
       href: app-insights/telemetry/troubleshoot-high-data-ingestion.md
     - name: Application Insights classic SDK troubleshooting
@@ -78,6 +80,8 @@ items:
     items:
     - name: Troubleshoot Application map issues
       href: app-insights/troubleshoot-application-map-issues.md
+    - name: Troubleshoot Live Metrics issues
+      href: app-insights/troubleshoot-live-metrics.md
   - name: Availability Tests
     items:
     - name: Availability monitoring common issues FAQ
@@ -96,12 +100,10 @@ items:
       href: app-insights/availability/troubleshoot-portal-connectivity.md
     - name: Troubleshoot user behavior analytics tools in Azure Application Insights
       href: app-insights/availability/usage-troubleshoot.md
-  - name: Status Monitor and Change Analysis
+  - name: Status Monitor
     items:
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
       href: app-insights/agent/status-monitor-v2-troubleshoot.md
-    - name: Troubleshoot Azure Monitor's Change Analysis
-      href: app-insights/agent/change-analysis-troubleshoot.md
 - name: Log Analytics
   items:
   - name: Configure and Manage Log analytics tables

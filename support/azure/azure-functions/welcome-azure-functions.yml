@@ -16,12 +16,20 @@ metadata:
 landingContent:
 
   # Card
+  
   - title: Application Code Deployment
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Application issues post deployment
             url: deployment/functions-deploying-runtime-issues-post-deployment.md
+
+  - title: Availability
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Function App Down or Reporting Errors
+            url: availability/functions-troubleshoot-issues.md
 
   - title: Configuring and Managing Function Apps
     linkLists:

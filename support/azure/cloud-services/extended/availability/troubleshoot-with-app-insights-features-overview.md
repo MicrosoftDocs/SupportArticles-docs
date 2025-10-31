@@ -1,7 +1,7 @@
 ---
 title:  Application Insights features overview for troubleshooting Cloud Service Application issues
 description: This article provides an overview of Application Insights features that you can use to troubleshoot Cloud Service Application issues
-ms.service: azure-cloud-services-extended-support
+ms.service: azure-service-fabric
 author: JerryZhangMS
 ms.author: jarrettr
 ms.reviewer: Maheshallu;Wu.Ping;prpillai
