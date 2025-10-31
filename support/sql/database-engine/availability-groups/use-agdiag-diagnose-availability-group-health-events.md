@@ -3,7 +3,7 @@ title: Use AGDiag to diagnose availability group health events
 description: This article describes how to use AGDiag to diagnose availability group health events.
 ms.date: 05/15/2023
 ms.custom: sap:Always On Availability Groups (AG)
-ms.reviewer: cmathews, v-sidong
+ms.reviewer: cmathews, v-sidong, v-shaywood
 ---
 # Use AGDiag to diagnose availability group health events
 
@@ -14,7 +14,7 @@ AGDiag is an application that automates the manual analysis described in the art
 
 ## Generate logs for AGDiag to diagnose
 
-You can use multiple methods to generate the logs that AGDiag uses as inputs. AGDiag relies on the following base logs to do analysis:
+You can use multiple methods to generate the logs that AGDiag takes as inputs. AGDiag relies on the following base logs to do analysis:
 
 - Windows Cluster Diagnostic Logs
 - SQL Server Error Logs
@@ -22,32 +22,31 @@ You can use multiple methods to generate the logs that AGDiag uses as inputs. AG
 - System Health Extended Events (XEL) files
 - AlwaysOn Health Session XEL files
 
-Besides the manual collection of these logs, you can use either of two log collection tools to capture them.
+Besides manually collecting these logs, you can use either of the following log collection tools to capture them:
 
-Use one of these log collection tools:
+- LogScout
+- TSS
 
 ### Use SQL LogScout to capture logs for AGDiag analysis
 
-To diagnose an availability group health event, use the SQL LogScout to collect logs on the SQL Server instance that was in the primary role at the time of the event.
+To diagnose an availability group health event, use the SQL LogScout to collect logs on the SQL Server instance that was in the primary role at the time of the event:
 
 1. Download the latest [SQL LogScout](https://aka.ms/get-sqllogscout) as zip file.
-1. Save and extract the zip file in a folder on the machine where SQL Server hosts the primary replica. This system is where the failover started or the availability group was resolving.
-1. Open an elevated PowerShell command (Run as Administrator), change the directory to the SQL LogScout folder where the zip file was extracted
-1. Run the following command to capture the `Basic` scenario and follow the prompts 
+1. Save and extract the zip file on the machine where SQL Server hosts the primary replica. This system is where the failover started or the availability group was resolving.
+1. Open an elevated PowerShell command (Run as Administrator), change the directory to the SQL LogScout folder where the zip file was extracted.
+1. Run the following command to capture the `Basic` scenario and follow the prompts.
 
    ```PowerShell
-   .\SQL_LogScout.ps1 -Scenario "Basic" -ServerName "<your_sql_instance_name>"
+   .\SQL_LogScout.ps1 -Scenario "Basic" -ServerName "<Your_Sql_Instance_Name>"
    ```
 
-   :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/launch-sql-logscout-powershell.png" alt-text="screenshot for starting SQL LogScout from an elevated PowerShell command window":::
+   :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/launch-sql-logscout-powershell.png" alt-text="Screenshot of starting SQL LogScout from an elevated PowerShell command window":::
 
-1. Once the process of log capturing is complete, you can point AGDiag to the **\output** folder where SQL LogScout collected the logs.
+1. Once the log capture process is complete, you can point AGDiag to the `\output` folder created inside the SQL LogScout folder. This folder contains the logs collected by SQL LogScout.
 
 ### Use TSS to generate logs for AGDiag to diagnose
 
-Alternatively, to capture the logs you can use the TSS on the SQL Server instance that was in the primary role at the time of the event.
-
-To accomplish this goal, follow these steps:
+Alternatively, you can capture the logs using the TSS on the SQL Server instance that was in the primary role at the time of the event:
 
 1. Download the toolset ([TSSv2.zip](https://aka.ms/getTSS)) as a zip file. For more information, see [Introduction to TroubleShootingScript toolset (TSSv2)](../../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md).
 
@@ -90,7 +89,7 @@ The AGDiag report should be launched in the default system browser. The followin
 
    :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-splash-screen.png" alt-text="Screenshot of the AGDiag Splash Screen." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-splash-screen.png":::
 
-- AGDiag reports on the logs analyzed in the initialize section. To expand more detailed information, select the triangles (highlighted in red boxes in the following image).
+- AGDiag reports on the logs analyzed in the initialize section. To see more detailed information, select the triangles (highlighted in red boxes in the following image).
 
    :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/agdiag-report.png" alt-text="Screenshot of the AGDiag reports on the logs." lightbox="media/use-agdiag-diagnose-availability-group-health-events/agdiag-report.png":::
 
@@ -98,7 +97,7 @@ The AGDiag report should be launched in the default system browser. The followin
 
    :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png" alt-text="Screenshot of availability group health events." lightbox="media/use-agdiag-diagnose-availability-group-health-events/availability-group-health-event-summary-report.png":::
 
-- There's a detailed report for each health event detected, which includes log findings that correlate to the health event, diagnosis, and recommendations. To expand more detailed information, select the triangles, highlighted in red boxes in the following image.
+- There's a detailed report for each health event detected, which includes log findings that correlate to the health event, diagnosis, and recommendations. To see more detailed information, select the triangles, highlighted in red boxes in the following image.
 
    :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/alwayson-health-event.png" alt-text="Screenshot of AlwaysOn health events." lightbox="media/use-agdiag-diagnose-availability-group-health-events/alwayson-health-event.png":::
 
