@@ -1,5 +1,5 @@
 ---
-title: How to Enable OpenSSH Verbose Logging
+title: Troubleshoot Common SFTP issues
 description: Explains how to resolve common SFTP issues when using OpenSSH for Windows.
 ms.date: 11/05/2025
 manager: dcscontentpm
@@ -13,7 +13,7 @@ appliesto:
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
   - ✅ <a href=https://learn.microsoft.com/windows/release-health/supported-versions-windows-client target=_blank>Supported versions of Windows Client</a>
 ---
-# Troubleshoot SFTP issues
+# Troubleshoot common SFTP issues when using OpenSSH
 
 OpenSSH on Windows provides secure file transfer (SFTP) capabilities. This article describes how to resolve the most common issues that you might encounter while using SFTP and OpenSSH to administer Windows Server and Windows Client.
 
