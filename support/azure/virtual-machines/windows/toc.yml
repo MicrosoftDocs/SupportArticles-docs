@@ -80,7 +80,7 @@ items:
 - name: Windows Update (WU)
   items:
   - name: WU Errors - IPU required
-    href: windows-update-errors-requiring-in-place-upgrade.md
+    href: in-place-system-upgrade.md
   - name: Top errors for Azure VMs
     items:
     - name: Error code 0x80070002
