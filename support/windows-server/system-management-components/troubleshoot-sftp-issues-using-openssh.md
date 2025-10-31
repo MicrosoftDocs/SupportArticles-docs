@@ -1,4 +1,3 @@
-
 ---
 title: How to Enable OpenSSH Verbose Logging
 description: Explains how to resolve common SFTP issues when using OpenSSH for Windows.
@@ -18,7 +17,7 @@ appliesto:
 
 OpenSSH on Windows provides secure file transfer (SFTP) capabilities. This article describes how to resolve the most common issues that you might encounter while using SFTP and OpenSSH to administer Windows Server and Windows Client.
 
-## Best Practices and Additional Resources
+## Best practices and additional resources
 
 - Use the latest supported OpenSSH version.
 - Avoid configuring OpenSSH to use a network share for the chroot directory.
@@ -81,7 +80,7 @@ Check the following settings:
   > [!NOTE]  
   > To verify and fix NTFS permissions, use [icacls](/windows-server/administration/windows-commands/icacls) command at an administrative Command Prompt window.
 
-- In the sshd_config file, use`ForceCommand internal-sftp`, and use the -d switch with the `Subsystem sftp sftp-server.exe` command to set an upload directory. You can use these settings in `Match` blocks to specify users.
+- In the sshd_config file, use`ForceCommand internal-sftp`, and use the `-d` switch with the `Subsystem sftp sftp-server.exe` command to set an upload directory. You can use these settings in `Match` blocks to specify users.
 
 ### Particular users can't use SFTP or receive "Access denied" errors
 
@@ -93,7 +92,7 @@ This behavior indicates ownership or permissions issues. Check the following set
   > [!NOTE]  
   > To verify and fix NTFS permissions, use [icacls](/windows-server/administration/windows-commands/icacls) command at an administrative Command Prompt window.
 
-### Users can't sign in or receive "Authentication failed", or "Server refused our key" errors
+### Users can't sign in or receive "Authentication failed," or "Server refused our key" errors
 
 This behavior indicates public key or password issues. Check the following configurations:
 
@@ -109,8 +108,6 @@ This behavior indicates public key or password issues. Check the following confi
   > After you make these changes, restart the OpenSSH Server service.
 
 ### OpenSSH Server service doesn't start, or SFTP connections hang
-
-SFTP server fails to start after configuration changes or Windows Updates - A. Service and Connection Failures - Scenario 3: SFTP Connections Hang - Scenario 4: SFTP Fails After Windows Update - SFTP connections hang or timeout
 
 To resolve these issues, try the following actions:
 
