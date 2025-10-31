@@ -46,7 +46,7 @@ To diagnose an availability group health event, use SQL LogScout to collect logs
 
 Alternatively, you can capture the logs by using TSS on the SQL Server instance that was in the primary role at the time of the event:
 
-1. Download the toolset ([TSSv2.zip](https://aka.ms/getTSS)) as a ,zip file. For more information, see [Introduction to TroubleShootingScript toolset (TSSv2)](../../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md).
+1. Download the toolset ([TSSv2.zip](https://aka.ms/getTSS)) as a .zip file. For more information, see [Introduction to TroubleShootingScript toolset (TSSv2)](../../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md).
 
 1. Save and extract the .zip file to a folder on the SQL Server instance that hosted the availability group primary replica when the failover started or the availability group was resolving.
 
