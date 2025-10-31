@@ -57,14 +57,14 @@ items:
 
 - name: Extended Security Updates (ESU)
   items:
-  - name: Overview for Windows 10
-    href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Overview for Windows Server 2012/R2
-    href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Overview for Windows Server 2008/R2
-    href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Frequently asked questions
     href: /windows-server/get-started/extended-security-updates-faq?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Windows 10 (ESU)
+    href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Windows Server 2012/R2 (ESU)
+    href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Windows Server 2008/R2 (EOS)
+    href: ms-azure-windows-eos.md
   - name: How to install Extended Security Updates
     href: /windows-server/get-started/install-extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: How to activate Extended Security Updates
