@@ -13,7 +13,7 @@ ms.custom: sap:Cannot activate my Windows VM
 
 This article discusses important changes that were made to Key Management Services (KMS) IP addresses that cause problems for Microsoft Windows virtual machine (VM) activation in Windows Azure. These changes affect Azure Global cloud users who configured custom routes or firewall rules to allow KMS IP addresses and who were previously able to activate Windows VMs successfully.
 
-[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/virtual-machines-windows-activation-troubleshoot-tools.md)]
+[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
 
 ## Overview
 
