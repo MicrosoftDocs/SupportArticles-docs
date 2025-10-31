@@ -163,7 +163,7 @@ If you're copying data between accounts by using AzCopy, the quality and reliabi
 
 - When you copy to an Azure File share, if you forgot to specify the `--preserve-smb-permissions` flag and you don't want to transfer the data again, consider using Robocopy to bring over the permissions.
 
-- Azure Function App has a different endpoint for MSI authentication. AzCopy doesn't yet support MSI authentication.
+- Azure Functions has a different endpoint for MSI authentication. AzCopy doesn't yet support MSI authentication.
 
 ## See also
 

@@ -114,7 +114,7 @@ HTTP connection pooling
 
 ### Reuse connections
 
-For more pointers and examples on managing connections in Azure Function App, see [Manage connections in Azure Function App](/azure/azure-functions/manage-connections).
+For more pointers and examples on managing connections in Azure Functions, see [Manage connections in Azure Functions](/azure/azure-functions/manage-connections).
 
 ### Use less aggressive retry logic
 

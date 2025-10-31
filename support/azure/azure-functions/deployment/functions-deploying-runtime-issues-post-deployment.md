@@ -18,7 +18,7 @@ Runtime failure can occur for any of the following reasons:
 
 - The function runtime can't start because the function app has lost access to the storage account.
 - In the runtime sandbox environment of Azure Function App, something is blocking certain operations that work on your local computer.
-- Your Azure Function App app isn't configured correctly. For example, the function host doesn't start up because of incorrect values in the following settings:
+- Your Azure Function App isn't configured correctly. For example, the function host doesn't start up because of incorrect values in the following settings:
   - Runtime or language version
   - Triggers connection strings
   - Key vault settings

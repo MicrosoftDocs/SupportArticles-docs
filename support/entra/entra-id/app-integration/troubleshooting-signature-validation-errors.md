@@ -224,7 +224,7 @@ For more details, see [Microsoft Identity Web customization](https://github.com/
 
 ### Example 3: Use Azure App Service authentication
 
-Refer to [Configure your App Service or Azure Function App app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad).
+Refer to [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad).
 
 ### Example 4: Use Azure API Management
 

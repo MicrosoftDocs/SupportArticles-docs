@@ -237,7 +237,7 @@ To determine the factors contributing to the costs, follow these steps:
     | sort by count_ desc
     ```
 
-    The following exmaple shows Azure Function App is generating lots of trace and exception telemetry:
+    The following exmaple shows Azure Functions is generating lots of trace and exception telemetry:
     
     :::image type="content" source="media/troubleshoot-high-data-ingestion/table-sdkversion-count.png" alt-text="Screenshot that shows which table and SDK is generating the most Trace and Exception telemetry.":::
     

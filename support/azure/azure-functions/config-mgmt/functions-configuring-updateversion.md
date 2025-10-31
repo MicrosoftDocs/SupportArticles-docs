@@ -1,5 +1,5 @@
 ---
-title: Upgrade the Azure Function App app runtime version or language version
+title: Upgrade the Azure Function App runtime version or language version
 description: Describes how to upgrade the Azure Function App runtime to v4 and resolve issues during the upgrade.
 ms.date: 08/24/2023
 ms.custom: sap:Configuring and Managing Function Apps
@@ -9,11 +9,11 @@ ms.reviewer: gasridha, v-sidong
 
 This article describes how to resolve some of the common issues that may occur during the update of the function app language or runtime version, like runtime being unreachable and modules not being found.
 
-## Actions to take if you receive an email "Action recommended: Update your Azure Function App apps to use .NET 6."
+## Actions to take if you receive an email "Action recommended: Update your Azure Function App to use .NET 6."
 
 - Extended support for Microsoft .NET Core 3.1 ended on December 3, 2022. Azure Function App runtime v3 is based on .NET core 3.1. We recommend that you [update your function app](/azure/azure-functions/set-runtime-version#view-and-update-the-current-runtime-version) to runtime version 4.x, which uses .NET 6 and has long-term support. After December 3, 2022, your apps aren't eligible for new features, security patches, performance optimizations, or support until you upgrade them to Functions runtime version 4.x.
 
-- Your Functions apps on runtime v3 will continue to run, and your applications aren't impacted. You can deploy code to these Functions applications after this date. But we may remove the ability for you to create applications targeting the Functions runtime v3 using common paths.
+- Your Azure Function App on runtime v3 will continue to run, and your applications aren't impacted. You can deploy code to these Functions applications after this date. But we may remove the ability for you to create applications targeting the Functions runtime v3 using common paths.
 
 - For more information and migration guidance, see:
 
@@ -57,7 +57,7 @@ See the [list of supported languages by the runtime version](/azure/azure-functi
 
 Support for proxies is available again in version 4.x so that you can successfully upgrade your function apps to the latest runtime version. However, we recommend that you switch to integrating your function apps with Azure API Management as soon as possible. API Management lets you take advantage of a more complete set of features to define, secure, manage, and monetize your Functions-based APIs. For more information, see [How to migrate to APIM](/azure/azure-functions/functions-proxies#migration) and [Integrate Functions with APIM using Visual Studio](/azure/azure-functions/openapi-apim-integrate-visual-studio).
 
-## Get a list of all the Azure Function App apps that use runtime version 1.x, 2.x, or 3.x
+## Get a list of any instances of Azure Function App that use runtime version 1.x, 2.x, or 3.x
 
 1. Navigate to your function app in the [Azure portal](https://portal.azure.com).
 1. Select **Diagnose and solve problems** to open [Azure Function App diagnostics](/azure/azure-functions/functions-diagnostics).

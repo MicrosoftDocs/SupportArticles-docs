@@ -45,18 +45,18 @@ Duplicate telemetry is often caused if you create multiple instances of processo
 
 The following sections describe scenarios that can cause duplicate telemetry.
 
-#### Duplicate trace logs in Azure Function App
+#### Duplicate trace logs in Azure Functions
 
 If you see a pair of entries for each trace log within Application Insights, you probably enabled the following types of logging instrumentation:
 
-- The native logging instrumentation in Azure Function App
+- The native logging instrumentation in Azure Functions
 - The `azure-monitor-opentelemetry` logging instrumentation within the distribution
 
-To prevent duplication, you can disable the distribution's logging, but leave the native logging instrumentation in Azure Function App enabled. To do this, set the `OTEL_LOGS_EXPORTER` environment variable to `None`.
+To prevent duplication, you can disable the distribution's logging, but leave the native logging instrumentation in Azure Functions enabled. To do this, set the `OTEL_LOGS_EXPORTER` environment variable to `None`.
 
-#### Duplicate telemetry in "Always On" Azure Function App
+#### Duplicate telemetry in "Always On" Azure Functions
 
-If the **Always On** setting in Azure Function App is set to **On**, Azure Function App keeps some processes running in the background after each run is complete. For instance, suppose that you have a five-minute timer function that calls `configure_azure_monitor` each time. After 20 minutes, you then might have four metric exporters that are running at the same time. This situation might be the source of your duplicate metrics telemetry.
+If the **Always On** setting in Azure Functions is set to **On**, Azure Functions keeps some processes running in the background after each run is complete. For instance, suppose that you have a five-minute timer function that calls `configure_azure_monitor` each time. After 20 minutes, you then might have four metric exporters that are running at the same time. This situation might be the source of your duplicate metrics telemetry.
 
 In this situation, either set the **Always On** setting to **Off**, or try manually shutting down the providers between each `configure_azure_monitor` call. To shut down each provider, run shutdown calls for each current meter, tracer, and logger provider, as shown in the following code:
 
