@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.topic: how-to
 ms.reviewer: kamils, v-leedennis
 ms.service: azure-app-service
+ms.custom: sap:Availability, Performance, and Application Issues
 ---
 # Capture memory dumps on the Azure App Service platform
 

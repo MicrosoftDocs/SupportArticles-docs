@@ -9,11 +9,7 @@ ms.date: 10/13/2025
 ms.author: jarrettr
 ms.reviewer: v-ryanberg
 ms.service: azure-app-service
-ms.custom:
-  - devx-track-csharp
-  - devx-track-dotnet
-  - sfi-image-nochange
-
+ms.custom: sap:Availability, Performance, and Application Issues, devx-track-csharp, devx-track-dotnet, sfi-image-nochange
 # Customer intent: As a developer, I want to get an overview of Visual Studio tools for debugging apps in App Service so that I can more effectively debug my apps. 
 
 ---
