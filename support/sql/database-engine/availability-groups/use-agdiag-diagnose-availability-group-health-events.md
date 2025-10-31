@@ -8,7 +8,9 @@ ms.reviewer: cmathews, v-sidong, v-shaywood
 # Use AGDiag to diagnose availability group health events
 
 > [!NOTE]
-> To diagnose Always On availability group health issues that trigger availability group failover, see [Troubleshoot Always On Availability Groups failover](troubleshooting-availability-group-failover.md). That article (in the **Note** section) describes AGDiag as an application that automates the manual analysis of cluster logs, and correlates and reports pertinent events from the other logs (SQL Server error logs, Windows event logs, and so on). AGDiag generates a summary report of Windows Cluster and Always On health events, and provides more detailed analysis results for each health event that's detected. It also automates much of its work when you provide the appropriate logs from the availability group primary replica at the time of the health event.
+> To diagnose Always On availability group health issues that trigger availability group failover, see [Troubleshoot Always On Availability Groups failover](./troubleshooting-availability-group-failover.md).
+
+AGDiag is an application that automates the manual analysis of cluster logs, and correlates and reports pertinent events from the other logs (SQL Server error logs, Windows event logs, and so on). AGDiag generates a summary report of Windows Cluster and Always On health events, and provides more detailed analysis results for each health event that's detected. It also automates much of its work when you provide the appropriate logs from the availability group primary replica at the time of the health event.
 
 ## Generate logs for AGDiag to diagnose
 
