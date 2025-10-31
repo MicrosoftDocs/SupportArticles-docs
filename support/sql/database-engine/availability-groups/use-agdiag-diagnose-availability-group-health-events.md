@@ -40,7 +40,7 @@ To diagnose an availability group health event, use SQL LogScout to collect logs
    .\SQL_LogScout.ps1 -Scenario "Basic" -ServerName "<Your_Sql_Instance_Name>"
    ```
 
-   :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/launch-sql-logscout-powershell.png" alt-text="Screenshot of starting SQL LogScout from an elevated PowerShell command window":::
+   :::image type="content" source="media/use-agdiag-diagnose-availability-group-health-events/launch-sql-log-scout-powershell.png" alt-text="Screenshot of starting SQL LogScout from an elevated PowerShell command window":::
 
 1. When the log capture process completes, you can point AGDiag to the `\output` folder created inside the SQL LogScout folder. This folder contains the logs collected by SQL LogScout.
 
