@@ -12361,6 +12361,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics-365/field-service/integrations/create-permissions-error.md",
+      "redirect_url": "/dynamics365/field-service/deprecations-field-service#dynamics-365-field-service-integrations-with-microsoft-outlook-teams-viva-connections-and-planner---september-1-2025",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/field-service/integrations/viva-incorrect-tiles.md",
+      "redirect_url": "/dynamics365/field-service/deprecations-field-service#dynamics-365-field-service-integrations-with-microsoft-outlook-teams-viva-connections-and-planner---september-1-2025",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/dynamics-365/finance/tax/tcs-troubleshooting-failed-access-tax-service.md",
       "redirect_url": "/troubleshoot/dynamics-365/finance/welcome-finance",
       "redirect_document_id": false
