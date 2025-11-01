@@ -1,4 +1,11 @@
-
+---
+title: Troubleshooting: Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)
+description: Troubleshooting: Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)
+ms.service: azure-virtual-machines
+ms.date: 06/04/2024
+ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
+ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
+---
 # Troubleshooting: Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)
 
 > [!NOTE]
