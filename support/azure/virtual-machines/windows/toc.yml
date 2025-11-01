@@ -469,6 +469,8 @@ items:
     href: /azure/virtual-machines/extensions/agent-windows?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Minimum version support
     href: support-extensions-agent-version.md
+  - name: VM assist to diagnose issues
+    href: windows-azure-guest-agent-tools-vmassist.md
   - name: Install Windows VM agent offline
     href: install-vm-agent-offline.md
   - name: Troubleshoot Windows VM agent
