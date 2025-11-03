@@ -14,6 +14,8 @@ ms.custom: sap:Cannot activate my Windows VM
 
 This article provides a solution to the error 0xC004FD01 or 0xC004FD02 that occurs when you try to activate an Azure Windows virtual machine (VM).
 
+[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
+
 ## Symptoms
 
 When you try to activate an Azure Windows VM, you receive an error message that resembles the following samples:
