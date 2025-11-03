@@ -216,6 +216,10 @@ This script will present the following menu options for performing SUSDB mainten
 [12] Reindex and Update Statistics
 [RA] Run all above steps sequentially
 
+You can also run this script with no user interaction, using the following:
+
+.\SUSDB-Maintenance.ps1 -Action RA -DontShowLogs -DaysSupersededNotDeclined 180
+
 Sample scripts are not supported under any Microsoft standard support program or service. Sample scripts are provided AS IS without warranty of any kind.
 Microsoft further disclaims all implied warranties including, without limitation, any implied warranties of merchantability or of fitness for a particular purpose.
 The entire risk arising out of the use or performance of the sample script and documentation remains with you.
