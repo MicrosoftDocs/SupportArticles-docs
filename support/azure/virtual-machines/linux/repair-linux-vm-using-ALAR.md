@@ -51,7 +51,7 @@ The ALAR scripts use the [az vm repair](/cli/azure/vm/repair) extension, `run` c
     az vm repair create --verbose --resource-group <RG-NAME> --name <VM-NAME>
     ```
 
-    - There are currently three parameters that will prompt for values if they aren't given on the command line. Add these parameters and values to the command for a non-interactive execution 
+    - There are currently three parameters that prompt for values if they aren't given on the command line. Add these parameters and values to the command for a non-interactive execution 
       - `--repair-username <RESCUE-USERNAME>`
       - `--repair-password <RESCUE-PASS>`
       - `--associate-public-ip`
@@ -80,7 +80,7 @@ In all of the example commands these are the parameters shown:
 - `VM-NAME`: The name of the broken VM.
 - `RESCUE-USERNAME`: The user created on the repair VM for login. It's the equivalent of the user created on a new VM in the Azure portal.
 - `RESCUE-PASS`: The password for `RESCUE-USERNAME`, enclosed in single quotes. For example: `'password!234'`.
-- `action1,action2`, etc.: One or more of the defined actions available to apply to the broken VM. See the following for a complete list of actions as well as in the [ALAR GitHub ReadMe](https://github.com/Azure/ALAR). You can pass one or more actions that are run consecutively. For multiple operations, delineate them using commas without spaces, like `fstab,sudo`.
+- `action1,action2`, etc.: One or more of the defined actions available to apply to the broken VM. See the following for a complete list of actions and in the [ALAR GitHub ReadMe](https://github.com/Azure/ALAR). You can pass one or more actions that are run consecutively. For multiple operations, delineate them using commas without spaces, like `fstab,sudo`.
 
 ## The ALAR actions
 
@@ -128,14 +128,14 @@ This action corrects an incorrect or malformed serial console configuration for 
 
 ### sudo
 
-The `sudo` action will reset the permissions on the */etc/sudoers* file and all files in */etc/sudoers.d* to the required 0440 modes as well as check other best practices. A basic check is run to detect and report on duplicate user entries and move only the */etc/sudoers.d/waagent* file if it is found to conflict with other files.
+The `sudo` action resets the permissions on the */etc/sudoers* file and all files in */etc/sudoers.d* to the required 0440 modes and check other best practices. A basic check is run to detect and report on duplicate user entries and move only the */etc/sudoers.d/waagent* file if it's found to conflict with other files.
 
 ### auditd
 
-If your VM shuts down immediately upon startup due to the audit daemon configuration, use this action. This action modifies the audit daemon configuration (in the */etc/audit/auditd.conf* file) by changing the `HALT` value configured for any `action` parameters to `SYSLOG`, which doesn't force the system to shut down. In a Logical Volume Manager (LVM) environment, if the logical volume that contains the audit logs is full and there's available space in the volume group, the logical volume will also be extended by 10% of the current size. However, if you're not using an LVM environment or there's no available space, only the `auditd` configuration file is altered.
+If your VM shuts down immediately upon startup due to the audit daemon configuration, use this action. This action modifies the audit daemon configuration (in the */etc/audit/auditd.conf* file) by changing the `HALT` value configured for any `action` parameters to `SYSLOG`, which doesn't force the system to shut down. In a Logical Volume Manager (LVM) environment, if the logical volume that contains the audit logs is full and there's available space in the volume group, the logical volume can be extended by 10% of the current size. However, if you're not using an LVM environment or there's no available space, only the `auditd` configuration file is altered.
 
 > [!IMPORTANT]
-> This action will change the VM's security posture by altering the audit daemon configuration so that the VM shutdown issue can be resolved. Once the VM is running and accessible, you need to evaluate the configuration and potentially revert it to the original state. For this purpose, a backup of the *auditd.conf* file is created in */etc/audit* by the ALAR action.
+> This action changes the VM's security posture by altering the audit daemon configuration so that the VM shutdown issue can be resolved. Once the VM is running and accessible, you need to evaluate the configuration and potentially revert it to the original state. For this purpose, a backup of the *auditd.conf* file is created in */etc/audit* by the ALAR action.
 
 
 ## Limitation
