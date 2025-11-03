@@ -14,7 +14,7 @@ metadata:
   ms.reviewer: cwhitley, jusilver, scotro, v-naqviadil, v-leedennis, v-weizhu
   ms.custom: sap:Cannot activate my Windows VM
   appliesto: Windows VMs
-    
+        
 title: Azure Windows virtual machine activation FAQ
 summary: This article answers frequently asked questions (FAQ) about activating a Microsoft Windows virtual machine (VM) in Azure.
 sections:
@@ -41,6 +41,9 @@ sections:
           Windows activation has a significant impact on the amount of hardware recognized in terms of RAM/processor. If the Windows VM isn't activated properly, you must complete the activation for the Windows guest OS.
           
 additionalContent: |
+  
+  [!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
+  
   ## More information
 
   - [Troubleshoot Windows virtual machine activation problems in Azure](./troubleshoot-activation-problems.md)
