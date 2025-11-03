@@ -902,3 +902,17 @@ do {
 until ($selection -eq 'q')
 #EndRegion ShowMenu
 ```
+
+You may setup a scheduled task to have this script run automatically :
+
+1. Copy the script above to a well-known directory, for instance `C:\Program Files\Update Services\Tools\`.
+2. Open the "Task Scheduler"
+3. Select "Create Task" with the following:
+  - **Name**: `SUSDB Maintenance`
+  - **Security options** > Change User or Group: `SYSTEM`
+  - **Security options** > Run whether user is logged on or not
+  - **Triggers** > New > On a schedule > Weekly > OK
+  - **Actions** > New > Start a program
+    - **Program**: `powershell.exe`
+    - **Add arguments**: `-NoProfile -ExecutionPolicy Bypass -File "C:\Program Files\Update Services\Tools\SUSDB-Maintenance.ps1" -Action RA -DontShowLogs -DaysSupersededNotDeclined 30`
+    - **Start in**: `C:\Program Files\Update Services\Tools`
