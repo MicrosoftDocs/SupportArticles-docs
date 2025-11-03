@@ -898,7 +898,6 @@ do {
     if ($Action) {
         $Action = "q"
     }
-    Pause
 }
 until ($selection -eq 'q')
 #EndRegion ShowMenu
