@@ -15,6 +15,8 @@ We generally recommend using Azure Key Management Services (KMS) servers to acti
 > [!NOTE]
 > This article applies only when you use a self-hosted KMS server for activation. It doesn't apply when you use Azure KMS for activation.
 
+[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
+
 ## Symptoms
 
 When you use a self-hosted KMS server for activation and try to activate more than one Windows Server VM, the activation fails after the evaluation period, and your self-hosted KMS server reports the following error in the **Duplicate Client Machine ID Report**:
