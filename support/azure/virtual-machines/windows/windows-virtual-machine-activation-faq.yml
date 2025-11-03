@@ -41,12 +41,10 @@ sections:
           Windows activation has a significant impact on the amount of hardware recognized in terms of RAM/processor. If the Windows VM isn't activated properly, you must complete the activation for the Windows guest OS.
           
 additionalContent: |
-  
-  [!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
-  
   ## More information
 
   - [Troubleshoot Windows virtual machine activation problems in Azure](./troubleshoot-activation-problems.md)
   - [Advanced troubleshooting - Microsoft Windows activation error codes](../../../windows-server/deployment/troubleshoot-activation-error-codes.md)
   
+  [!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
   [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
