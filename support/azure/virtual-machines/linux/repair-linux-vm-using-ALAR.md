@@ -27,16 +27,16 @@ ALAR utilizes the VM repair extension that's described in [Repair a Linux VM by 
 ALAR covers the following repair scenarios:
 
 - No-boot scenarios
-  - Malformed /etc/fstab
+  - Malformed */etc/fstab*
       - syntax error
       - missing disk
-  - Damaged initrd or missing initrd line in the /boot/grub/grub.cfg
+  - Damaged initrd or missing initrd line in the */boot/grub/grub.cfg*
   - Last installed kernel isn't bootable
   - GRUB/EFI installation or configuration damaged
-  - disk space / auditd forced shutdowns
+  - Disk space/auditd forced shutdowns
 - Configuration issues
   - Serial console and GRUB serial are incorrectly configured or are missing
-  - sudo misconfiguration
+  - Sudo misconfiguration
 
 ## How to use ALAR
 
@@ -63,7 +63,7 @@ The ALAR scripts use the [az vm repair](/cli/azure/vm/repair) extension, `run` c
     az vm repair run --verbose --resource-group <RG-NAME> --name <VM-NAME> --run-id linux-alar2 --parameters <action1,action2,...> --run-on-repair
     ```
     
-    valid action names are given below.
+    See the following for valid action names.
 
 3. Swap the copy of the OS disk back to the original VM and delete the temporary resources:
 
@@ -80,7 +80,7 @@ In all of the example commands these are the parameters shown:
 - `VM-NAME`: The name of the broken VM.
 - `RESCUE-USERNAME`: The user created on the repair VM for login. It's the equivalent of the user created on a new VM in the Azure portal.
 - `RESCUE-PASS`: The password for `RESCUE-USERNAME`, enclosed in single quotes. For example: `'password!234'`.
-- `action1,action2`, etc.: One or more of the defined actions available to apply to the broken VM. See the complete list of actions below, and in the [ALAR GitHub ReadMe](https://github.com/Azure/ALAR). You can pass one or more actions that are run consecutively. For multiple operations, delineate them using commas without spaces, such as `fstab,sudo`.
+- `action1,action2`, etc.: One or more of the defined actions available to apply to the broken VM. See the following for a complete list of actions as well as in the [ALAR GitHub ReadMe](https://github.com/Azure/ALAR). You can pass one or more actions that are run consecutively. For multiple operations, delineate them using commas without spaces, like `fstab,sudo`.
 
 ## The ALAR actions
 
@@ -149,3 +149,5 @@ If you experience a bug or want to request an enhancement to the ALAR tool, post
 You can also find the latest information about the ALAR tool on [GitHub](https://github.com/Azure/ALAR).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
