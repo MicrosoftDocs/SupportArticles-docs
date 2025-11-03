@@ -66,7 +66,7 @@ To work around this issue, follow these steps:
      WHERE $PARTITION.PF1(T1.col1) = P.partition_number 
      ORDER BY T1.c1 ) AS A
      WHERE P.object_id = OBJECT_ID('dbo.T1') 
-     AND P.index_id = INDEXPROPERTY( OBJECTID('dbo.T1'), 'idx_c1', 'INDEXID')
+     AND P.index_id = INDEXPROPERTY(OBJECT_ID('dbo.T1'), 'idx_c1', 'INDEXID')
      ORDER BY a;
     ```
 
