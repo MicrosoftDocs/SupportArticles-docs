@@ -822,7 +822,7 @@ do {
                 CleanupSupersedUpdates 
             }
             else {
-                Write-Host "`nInvalid entry, must be between 1-99.`n" -ForegroundColor Red
+                Write-Host "`nNumber of days entered [$Global:DaysSupersededNotDeclined] is invalid, must be between 1-99.`n" -ForegroundColor Red
                 Write-log -Message "Number of days entered [$Global:DaysSupersededNotDeclined] is invalid, must be between 1-99." -severity 3 -component "Cleanup Superseded Updates"                
             }
             
@@ -862,7 +862,7 @@ do {
                 Write-log -Message "Number of days entered :  $Global:DaysSupersededNotDeclined , proceeding with cleaning up superseded updates." -severity 1 -component "Run All"                
             }
             else {
-                Write-Host "`nInvalid entry, must be between 1-99.`n" -ForegroundColor Red
+                Write-Host "`nNumber of days entered [$Global:DaysSupersededNotDeclined] is invalid, must be between 1-99.`n" -ForegroundColor Red
                 Write-log -Message "Number of days entered [$Global:DaysSupersededNotDeclined] is invalid, must be between 1-99." -severity 3 -component "Run All"
                 Exit
             }
