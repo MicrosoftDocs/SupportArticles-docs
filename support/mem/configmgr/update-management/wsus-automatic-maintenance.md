@@ -248,6 +248,11 @@ if ($DaysSupersededNotDeclined) {
     $Global:PromptForDaysSuperseeded = $false
 }
 
+if ($Action -And $Global:PromptForDaysSuperseeded) {
+    Write-Host "`nMust provide -DaysSupersededNotDeclined when using -Action.`n" -ForegroundColor Red
+    Exit
+}
+
 $ErrorActionPreference = "Stop"
 
 try {
