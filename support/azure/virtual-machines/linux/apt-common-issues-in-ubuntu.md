@@ -112,7 +112,7 @@ An Azure firewall or virtual appliance might be acting as a protective barrier b
 
 #### Solution 3: Make sure that the Ubuntu address is allowed
 
-Make sure that `azure.archive.ubuntu.com` and any other repository URLs are fully accessible. To do this, take the following actions:
+Make sure that `azure.archive.ubuntu.com` and any other repository URLs are fully accessible. To do this step, take the following actions:
 
 1. Verify that the destination URLs are allowed in firewall policies.
 
@@ -146,12 +146,12 @@ Acquire::https::Proxy "http://[username]:[password]@ [proxy-web-or-IP-address]:[
 
 Additionally, for Ubuntu and other Unix-like operating systems, you can set up a proxy for HTTP and HTTPS traffic by using environment variables. The relevant environment variables are `http_proxy` and `https_proxy`. To verify whether a proxy is configured, run the following command.
 
-> [!IMPORTANT]
-> If no proxy server exists between the Ubuntu VM and the Ubuntu repository addresses, search for and remove any proxy configuration settings that are in the */etc/apt/apt.conf* file.
-
 ```bash
 env | grep -i proxy
 ```
+
+> [!IMPORTANT]
+> If no proxy server exists between the Ubuntu VM and the Ubuntu repository addresses, search for and remove any proxy configuration settings that are in the */etc/apt/apt.conf* file.
 
 </details>
 
@@ -314,11 +314,11 @@ E: Sub-process /usr/bin/dpkg returned an error code (1)
 
 ### Cause: A syntax error exists in /etc/default/grub
 
-A syntax error in the */etc/default/grub* configuration file exists. The post-installation script for the *linux-image-5.4.0-1051-azure* package is probably encountering this error while it tries to parse the configuration.
+A syntax error in the */etc/default/grub* configuration file exists. The post-installation script for the *linux-image-5.4.0-1051-azure* package likely encounters this error when it tries to parse the configuration.
 
 #### Solution: Fix the syntax error in /etc/default/grub
 
-Look for any syntax errors in the */etc/default/grub* file, particularly around the line that the post-installation script is probably encountering. Fix any syntax errors that you find. The syntax for this file is crucial for the correct functioning of the GRand Unified Bootloader (GRUB).
+Look for any syntax errors in the */etc/default/grub* file, particularly around the line that the post-installation script is probably encountering. Fix any syntax errors that you find. The syntax for this file is crucial for the correct functioning of the Grand Unified Bootloader (GRUB).
 
 In the following example, the missing closing quotation mark in the `GRUB_CMDLINE_LINUX` line causes a syntax error in the GRUB configuration file:
 
@@ -397,7 +397,7 @@ Remove or comment out the lines that reference the ARM processor architecture in
 <details>
 <summary>Scenario 7 details</summary>
 
-When you run the `apt update` command, the system tries to fetch package information from multiple sources. However, you receive an error message about `Unknown error executing apt-key` shown in the following output:
+When you run the `apt update` command, the system tries to fetch package information from multiple sources. However, you receive an error message that mentions `Unknown error executing apt-key`, as shown in the following output:
 
 ```bash
 
@@ -423,7 +423,9 @@ W: An error occurred during the signature verification. The repository is not up
 W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://azure. archive.ubuntu.com/ubuntu jammy-security InRelease: Unknown error executing apt-key
 ```
 
-### Cause: Permission issues affecting the keys under `/etc/apt/trusted.gpg.d ` can be seen when running apt with debug flags
+### Cause
+
+Permission issues affect the keys under `/etc/apt/trusted.gpg.d`. These issues appear if you run apt together with debug flags:
 
 ```bash
 $ sudo apt update -oDebug::Acquire::gpgv=1
@@ -436,17 +438,21 @@ http://azure.archive.ubuntu.com/ubuntu/dists/jammy-updates/InRelease: The key(s)
 ...
 ```
 
-#### Solution: Correct permissions to be 644 for the key files under `/etc/apt/trusted.gpg.d` and also check the default umask for your installation
+#### Solution
 
-1) Correct permission for the keyring files
+Correct the permissions to be **644** for the key files under `/etc/apt/trusted.gpg.d`. Additionally, check the default umask for your installation.
+
+1. Correct the permission for the keyring files:
+
 ```bash
 $ sudo chown 644 /etc/apt/trusted.gpg.d/*.gpg
 ```
 
-2) Check the default umask set by running
+2. Check the default umask set by running the following code:
+
 ```bash
 $ sudo umask
 ```
 
-The default umask for most distros is usually set under `/etc/login.defs` and it is set to 0022. There have been cases where the umask was being set to 0777 which results in null permissions for created files.
+The default umask for most distros is usually set under `/etc/login.defs`. It's set to **0022**. In some cases, the umask is set to **0777**. This setting causes null permissions for created files.
 </details>
