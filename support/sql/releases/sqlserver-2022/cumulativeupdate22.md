@@ -4,7 +4,7 @@ description: This article contains the summary, known issues, improvements, fixe
 ms.date: 10/23/2025
 ms.update-cycle: 1095-days
 ms.custom: sap:Installation, Patching, Upgrade, Uninstall, evergreen, KB5068450
-ms.reviewer: v-qianli2
+ms.reviewer: v-shaywood
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux
@@ -13,13 +13,13 @@ appliesto:
 # KB5068450 - Cumulative Update 22 for SQL Server 2022
 
 _Release Date:_ &nbsp; November 13, 2025  
-_Version:_ &nbsp; 16.0.4225.1
+_Version:_ &nbsp; 16.0.4225.2
 
 ## Summary
 
-This article describes Cumulative Update package 22 (CU22) for Microsoft SQL Server 2022. This update contains 29 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 21 and it updates components in the following builds:
+This article describes Cumulative Update package 22 (CU22) for Microsoft SQL Server 2022. This update contains 21 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 21 and it updates components in the following builds:
 
-- SQL Server - Product version: **16.0.4225.1**, file version: **2022.160.4225.1**
+- SQL Server - Product version: **16.0.4225.2**, file version: **2022.160.4225.2**
 - Analysis Services - Product version: **16.0.43.252**, file version: **2022.160.43.252**
 
 ## Known issues in this update
@@ -103,14 +103,14 @@ You can verify the download by computing the hash of the *SQLServer2022-KB506845
 
 | File name                       | SHA256 hash                                                      |
 | ------------------------------- | ---------------------------------------------------------------- |
-| SQLServer2022-KB5068450-x64.exe | 1020E8C8EEBFDE14D5253ECC216FB9F49B08692E989155C0D9E007F31FF41CA8 |
+| SQLServer2022-KB5068450-x64.exe | B06B59D7A41CC57BF0CC3EAEADB4E5FC196EA72E8FD1914C42760E31ADBF40E6 |
 
 </details>
 
 <details>
 <summary><b>Cumulative Update package file information</b></summary>
 
-Download [the list of files that are included in KB5068450](https://download.microsoft.com/download/9b88d16d-f77d-4c10-a0bb-1ef126714c10/KB5068450.csv).
+Download [the list of files that are included in KB5068450](https://download.microsoft.com/download/86c16950-c7c8-494e-829e-58d857c6d10a/KB5068450.csv).
 
 </details>
 
