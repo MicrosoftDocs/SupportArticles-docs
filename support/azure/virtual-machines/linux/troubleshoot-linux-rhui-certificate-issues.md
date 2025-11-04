@@ -882,7 +882,7 @@ Trying other mirror.
 
 ---
 
-## Cause 5: Verification error in RHEL version 8 or 9 ("CA certificate key too weak")
+## Cause 5: Verification error in RHEL version 8, 9 or 10 ("CA certificate key too weak")
 
 The system tries to connect to a server that contains a certificate that's signed by using 2048-bit RSA keys. However, the system has a `FUTURE` policy setting that prohibits that cryptographic algorithm. The following error messages are shown in the */var/log/messages* or */var/log/dnf.log* file:
 
