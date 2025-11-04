@@ -40,7 +40,7 @@ There two scripts that can be used to detect if there are 'ghosted nics' inside 
 
 For more information, see: 
 
-- [Troubleshooting: Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)](windows-vm-ghostednic-troubleshooting#Cause)
+- [Troubleshooting: Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)](./windows-vm-ghostednic-troubleshooting.md)
 - [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/GhostedNIC_Check_Time_warning)
 - [Azure VM - Windows Ghosted NIC Check Removal Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal_time)
 
@@ -81,7 +81,7 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 
 ### **Additional resources**
 
-- [Cause: Azure Instance Metadata Service connection issue](ghosted-nic-troubleshoot#Cause)
+- [Troubleshooting: Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)](./windows-vm-ghostednic-troubleshooting.md)
 - [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/GhostedNIC_Check_Time_warning)
 - [Azure VM - Windows Ghosted NIC Check Removal Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal_time)
 

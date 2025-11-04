@@ -95,7 +95,7 @@ If Accelerated Networking is required for performance:
 - Expect ghosted NICs after VM deallocation.
 - Include NIC cleanup in your regular maintenance process by **scheduling a task monthly**.
 
-- [Ghost Nic Troubleshooting and Cleanup tool](windows-vm-ghostednic-troubleshooting#Cause)
+- [Ghost Nic Troubleshooting and Cleanup tool](./windows-vm-ghostednic-troubleshooting.md)
 - [Azure Accelerated Networking overview](/azure/virtual-network/accelerated-networking-overview)
 - [Azure Virtual Network Interface](/azure/virtual-network/virtual-network-network-interface)
 

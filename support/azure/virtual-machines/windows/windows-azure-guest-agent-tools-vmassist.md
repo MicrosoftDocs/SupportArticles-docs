@@ -127,7 +127,7 @@ Here are the current list of checks/findings along with any potential internal a
 
 ### **Additional resources**
 
-- [xxxxx](/azure/virtual-machines/windows/no-internet-access-multi-ipss)
+- [xxxxx](/azure/virtual-machines/windows/no-internet-access-multi-ip)
 
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
 
