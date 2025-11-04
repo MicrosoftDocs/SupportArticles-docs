@@ -3073,7 +3073,7 @@ items:
     - name: DCs can't be located and high-rate outbound sessions
       href: user-profiles-and-logon/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Event ID 5719 occurs when the NetLogon service restarts
-      href: ./windows-security/event-id-5719-netlogon-service-restarts.md
+      href: ./windows-security/event-id-5719-when-netlogon-service-restarts.md
     - name: Gather information for secure channel issues
       href: ./windows-security/data-collection-for-troubleshooting-secure-channel-issues.md
     - name: Troubleshoot domain controller location issues
