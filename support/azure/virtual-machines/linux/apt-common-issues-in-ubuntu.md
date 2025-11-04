@@ -10,7 +10,7 @@ ms.collection: linux
 ms.topic: troubleshooting-problem-resolution
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.custom: linux-related-content
+ms.custom: linux-related-content, VM Admin - Linux (Guest OS)
 ms.date: 06/07/2024
 #customer intent: As an Azure Linux virtual machine (VM) administrator, I want troubleshoot issues in the APT tools so that I can successfully install or update applications on my VMs.
 ---
@@ -19,9 +19,6 @@ ms.date: 06/07/2024
 **Applies to:** :heavy_check_mark: Linux VMs
 
 This article discusses and provides solutions to common issues that you might encounter when you use the `apt` command-line tool to install or update applications on Microsoft Azure virtual machines (VMs).
-
-> [!CAUTION]
-> Standard support for Canonical Ubuntu 18.04 LTS is no longer available. If you're affected, see [Canonical Ubuntu 18.04 LTS is out of standard support on May 31, 2023](upgrade-canonical-ubuntu-18dot04-lts.md) to review your options.
 
 ## Overview
 
@@ -391,10 +388,65 @@ If any application automatically edits the *sources.list* file or adds a reposit
 
 #### Solution: Remove or comment out armhf information from sources.list
 
-Remove or comment out the lines that reference the ARM processor architecture in the */etc/apt/sources.list* file or */etc/apt/sources.list.d/\*.list*.
+Remove or comment out the lines that reference the ARM processor architecture in the `/etc/apt/sources.list` file or `/etc/apt/sources.list.d/*.list`.
 
 </details>
 
-[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+## Scenario 7: "Unknown apt-key errors when executing apt update"
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+<details>
+<summary>Scenario 7 details</summary>
+
+When you run the `apt update` command, the system tries to fetch package information from multiple sources. However, you receive an error message about `Unknown error executing apt-key` shown in the following output:
+
+```bash
+
+(base)
+$ sudo apt update
+Hit:1 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+Hit:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:3 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:4 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease
+Err:1 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+Unknown error executing apt-key
+Err:2 http://azure.archive.ubuntu.com/ubuntujammy-updatesInRelease
+Unknown error executing apt-key
+Err: 3 http://azure.archive.ubuntu.com/ubuntujammy-backports InRelease
+Unknown error executing apt-key
+5yr: 4 http://azure.archive.ubuntu.com/ubuntujammy-security InRelease
+'Unknown error executing apt-key
+Reading package lists... Done Building dependency tree... Done Reading state information... Done
+6 packages can be upgraded. Run 'apt list --upgradable' to see them.
+w: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://azure.archive.ubuntu.com/ubuntu jammy InRelease: Unknown error executing apt-key
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease: Unknown error executing apt-key
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease: Unknown error executing apt-key
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://azure. archive.ubuntu.com/ubuntu jammy-security InRelease: Unknown error executing apt-key
+```
+
+### Cause: Permission issues affecting the keys under `/etc/apt/trusted.gpg.d ` can be seen when running apt with debug flags
+
+```bash
+$ sudo apt update -oDebug::Acquire::gpgv=1
+...
+...
+http://azure.archive.ubuntu.com/ubuntu/dists/jammy/InRelease: The key(s) in the keyring /etc/apt/trusted.gpg.d/ubuntu-archive-2018.gpg are ignored as the file is not readable by user '_apt' executing apt-key.
+http://azure.archive.ubuntu.com/ubuntu/dists/jammy-updates/InRelease: The key(s) in the keyring /etc/apt/trusted.gpg.d/microsoft-release.gpg are ignored as the file is not readable by user '_apt' executing apt-key.
+http://azure.archive.ubuntu.com/ubuntu/dists/jammy-updates/InRelease: The key(s) in the keyring /etc/apt/trusted.gpg.d/ubuntu-archive-2012.gpg.are ignored as the file is not readable by user '_ apt' executing apt-key.
+...
+...
+```
+
+#### Solution: Correct permissions to be 644 for the key files under `/etc/apt/trusted.gpg.d` and also check the default umask for your installation
+
+1) Correct permission for the keyring files
+```bash
+$ sudo chown 644 /etc/apt/trusted.gpg.d/*.gpg
+```
+
+2) Check the default umask set by running
+```bash
+$ sudo umask
+```
+
+The default umask for most distros is usually set under `/etc/login.defs` and it is set to 0022. There have been cases where the umask was being set to 0777 which results in null permissions for created files.
+</details>

@@ -16,7 +16,7 @@ As a first step, we recommend you review the documentation for the following tas
 
 - [Azure RM Web App deployment V4](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4)
 - [Azure Web App V1](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureWebAppV1): Preferably use this task for App Services deployment. For more complicated scenarios like XML transformation, use [Azure RM Web App deployment V4](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureRmWebAppDeploymentV4).
-- [Azure Function App](/azure/devops/pipelines/tasks/reference/azure-function-app-v1): Consider using this task for Function App deployments.
+- [Azure Functions](/azure/devops/pipelines/tasks/reference/azure-function-app-v1): Consider using this task for Function App deployments.
 - [Azure File Copy](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureFileCopyV5)
 - [Azure PowerShell](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzurePowerShellV5) ([AzurePowerShell@5 - Azure PowerShell v5 task](/azure/devops/pipelines/tasks/reference/azure-powershell-v5))
 - [Azure Key Vault](https://github.com/microsoft/azure-pipelines-tasks/tree/master/Tasks/AzureKeyVaultV2)
