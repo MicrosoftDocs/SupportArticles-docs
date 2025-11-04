@@ -26,7 +26,7 @@ The event text might include the `0xC00000E5 (STATUS_INTERNAL_ERROR)` code.
 
 The event doesn't persist. Windows establishes the secure channel with the domain controller. Normal domain operations then resume.
 
-The event occurs even though you haven't made any recent configuration, update, or software changes.
+The event occurs even though you didn't make any recent configuration, update, or software changes.
 
 ## Cause
 
@@ -36,18 +36,18 @@ The error happens because of protocol differences in Kerberos authentication sup
 
 When a Windows Server 2025 member server tries to establish a secure channel with a domain controller that runs Windows Server 2022 or an earlier version, it starts the connection by using the new Kerberos authentication method. Older domain controllers don't support this new authentication Remote Procedure Call (RPC) call. Because of this lack of support, authentication fails and Windows logs Event ID 5719. The system automatically falls back to the legacy NetLogon method. This method succeeds in establishing the secure channel.
 
-This sequence results in a single, harmless error event. You can ignore this event unless it's accompanied by ongoing authentication or connectivity problems.
+This sequence results in a single, harmless error event. You can ignore this event unless you also see ongoing authentication or connectivity problems.
 
 ## Resolution
 
 If Event ID 5719 occurs only once when NetLogon restarts and the secure channel is established (domain operations proceed without issue), this event is harmless. You can safely ignore it.
 
-Don't try remediation unless you see additional, persistent authentication or secure channel issues.
+Don't try remediation unless you see other persistent authentication or secure channel issues.
 
 Microsoft recognizes this event as expected in mixed-version environments. Microsoft might suppress or clarify this event in future updates or documentation.
 
 > [!IMPORTANT]  
-> If the error recurs outside of NetLogon restarts or is accompanied by domain trust or authentication failures, investigate further. Collect the log data as described in [Collecting log data](#collecting-log-data), and then contact Microsoft Support.
+> If the error recurs outside of NetLogon restarts or coincides with domain trust or authentication failures, investigate further. Collect the log data as described in [Collecting log data](#collecting-log-data), and then contact Microsoft Support.
 
 ### Workaround (optional)
 
@@ -83,7 +83,7 @@ Collect the following logs:
 
 - **System event logs**. Focus on entries for Event ID 5719 (Source: NetLogon).
 
-- **NetLogon service logs**. If you need deeper analysis, turn NetLogon debugging on.
+- **NetLogon service logs**. If you need deeper analysis, turn on NetLogon debugging.
 
 ### Collecting system event logs
 
