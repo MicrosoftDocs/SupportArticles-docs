@@ -96,7 +96,6 @@ The `.htm` file is a report that shows all of the checks and findings along with
 If you open a support request, please include both of the above files to aid your support representative in helping you.
 
 :::image type="content" source="media/windows-azure-guest-agent-tools-vmassist/windows-azure-guest-agent-tools-vmassist-output.png" alt-text="Azure VM assist output example." lightbox="media/windows-azure-guest-agent-tools-vmassist/windows-azure-guest-agent-tools-vmassist-output.png":::   
-C:\src\SupportArticles-docs-pr\support\azure\virtual-machines\windows\
 
 ## Current list of findings/checks
 
@@ -128,7 +127,7 @@ Here are the current list of checks/findings along with any potential internal a
 
 ### **Additional resources**
 
-- [xxxxx](https://learn.microsoft.com/troubleshoot//azure/virtual-machines/windows/no-internet-access-multi-ipss)
+- [xxxxx](/azure/virtual-machines/windows/no-internet-access-multi-ipss)
 
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
 

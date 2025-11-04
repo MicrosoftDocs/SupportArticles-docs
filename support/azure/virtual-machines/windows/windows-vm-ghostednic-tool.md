@@ -28,8 +28,9 @@ When an Azure Virtual Machine running Windows Server or Windows Client with **Ac
 **Purpose**  
 There two scripts that can be used to detect if there are 'ghosted nics' inside of the VM. A VM that has one ore more could experience issues.This script detects ghosted (disconnected) network interface cards (NICs) and remove them from the registry.
 
-* [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/GhostedNIC_Check_Time_warning)
-* [Azure VM - Windows Ghosted NIC Check Removal Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal_time)
+- [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/GhostedNIC_Check_Time_warning)
+- [Azure VM - Windows Ghosted NIC Check Removal Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal_time)
+
 
 
 **Key features**  
@@ -39,8 +40,8 @@ There two scripts that can be used to detect if there are 'ghosted nics' inside 
 
 For more information, see: 
 
-- [Cause: Azure Instance Metadata Service connection issue](windows-vm-ghostednic-troubleshooting#Cause)
-- [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/GhostedNIC_Check_Time_warning)
+- [Troubleshooting: Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)](windows-vm-ghostednic-troubleshooting#Cause)
+- [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/GhostedNIC_Check_Time_warning)
 - [Azure VM - Windows Ghosted NIC Check Removal Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal_time)
 
 ## How to run the tools

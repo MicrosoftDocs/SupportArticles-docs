@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting: Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)
-description: Troubleshooting: Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)
+title: Troubleshooting - Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)
+description: Troubleshooting - Multiple Mellanox Ethernet Adapters After VM Deallocation (Ghost NICs)
 ms.service: azure-virtual-machines
 ms.date: 06/04/2024
 ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
@@ -10,7 +10,7 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 > [!NOTE]
 > For VMs **without Accelerated Networking**, MAC addresses can be reserved at the software layer (virtual switch), so this issue does not occur.
-> Learn more: [Accelerated Networking overview](https://learn.microsoft.com/azure/virtual-network/accelerated-networking-overview)
+> Learn more: [Accelerated Networking overview](/azure/virtual-network/accelerated-networking-overview)
 
 ## Symptom
 When an Azure Virtual Machine running Windows Server or Windows Client with **Accelerated Networking** enabled is **deallocated**, the following may occur:
@@ -45,7 +45,7 @@ This behavior is **by design** for Accelerated Networking.
 - When the VM moves to new hardware, the OS cannot identify the previous MAC address, causing ghosted NICs.  
 - For VMs **without Accelerated Networking**, MAC addresses can be reserved at the software layer (virtual switch), so this issue does not occur.
 
-> Learn more: [Accelerated Networking overview | Microsoft Learn](https://learnworking-overview
+> Learn more: [Accelerated Networking overview | Microsoft Learn](/azure/virtual-network/accelerated-networking-overview)
 
 
 - This behavior typically occurs after:
@@ -67,7 +67,7 @@ This behavior is **by design** due to the architecture of Accelerated Networking
 - There is **no workaround** to prevent ghosted NICs when using Accelerated Networking.
 - The Product Group is evaluating improvements, but there is **no estimated timeline** for this feature.
 
-> Suggested reading: [Azure Accelerated Networking overview](https://learn.microsoft.com/azure/virtual-network/virtual-network-network-interface)
+> Suggested reading: [Azure Accelerated Networking overview](/azure/virtual-network/virtual-network-network-interface)
 
 ## Resolution
 
@@ -84,8 +84,9 @@ Use **RunCommand** to check for ghosted NICs:
 - Open **Device Manager** → **View** → **Show hidden devices** → Remove ghosted NICs.
 
 **Option B: Force Removal via RunCommand**
-- Use RunCommand to check then remove ghosted NICs:  
-https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal_time
+- Use RunCommands to check then remove ghosted NICs:  
+  - [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/GhostedNIC_Check_Time_warning)
+  - [Azure VM - Windows Ghosted NIC Check Removal Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal_time)
 
 
 ### **3. Plan for Design Behavior**
@@ -94,11 +95,9 @@ If Accelerated Networking is required for performance:
 - Expect ghosted NICs after VM deallocation.
 - Include NIC cleanup in your regular maintenance process by **scheduling a task monthly**.
 
-- [Azure Accelerated Networking overview](https://learn.microsoft.com/azure/virtual-network/accelerated-networking-overview)
-- [Azure Virtual Network Interface](hhttps://learn.microsoft.com/azure/virtual-network/virtual-network-network-interface)
-- [Cause: Azure Instance Metadata Service connection issue](ghosted-nic-troubleshoot#Cause)
-- [Azure VM - Windows Ghosted NIC Check Warning Script](https://github.com/Azure/azure-support-scripts/tree/master/GhostedNIC_Check_Time_warning)
-- [Azure VM - Windows Ghosted NIC Check Removal Script](https://github.com/Azure/azure-support-scripts/tree/master/RunCommand/Windows/Windows_GhostedNIC_Removal_time)
+- [Ghost Nic Troubleshooting and Cleanup tool](windows-vm-ghostednic-troubleshooting#Cause)
+- [Azure Accelerated Networking overview](/azure/virtual-network/accelerated-networking-overview)
+- [Azure Virtual Network Interface](/azure/virtual-network/virtual-network-network-interface)
 
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
 
