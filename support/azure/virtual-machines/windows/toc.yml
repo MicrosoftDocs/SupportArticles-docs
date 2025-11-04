@@ -34,9 +34,11 @@ items:
   - name: Windows 11
     href: windows-11-support-azure-virtual-machines.md
   - name: Windows 10 (EOS)
-    href: ms-azure-windows-eos-client.md
-  - name: Windows Server 2003 (EOS)
-    href: ms-azure-windows-eos.md
+    items:
+    - name: Extended Security Updates (ESU)
+      href: /windows/whats-new/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: How to upgrade
+      href: in-place-system-upgrade.md
   - name: Windows Server 2012 R2 (EOS)
     items:
     - name: Extended Security Updates (ESU)
@@ -49,6 +51,8 @@ items:
         href: ms-azure-windows-eos.md
       - name: How to upgrade
         href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Windows Server 2003 (EOS)
+    href: ms-azure-windows-eos.md
   - name: 32-bit operating systems
     href: support-32-bit-operating-systems-virtual-machines.md
 
@@ -57,6 +61,10 @@ items:
 
 - name: Extended Security Updates (ESU)
   items:
+  - name: How to install Extended Security Updates
+    href: /windows-server/get-started/install-extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: How to activate Extended Security Updates
+    href: /windows-server/get-started/activate-extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Frequently asked questions
     href: /windows-server/get-started/extended-security-updates-faq?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Windows 10 (ESU)
@@ -65,12 +73,8 @@ items:
     href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Windows Server 2008/R2 (EOS)
     href: ms-azure-windows-eos.md
-  - name: How to install Extended Security Updates
-    href: /windows-server/get-started/install-extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: How to activate Extended Security Updates
-    href: /windows-server/get-started/activate-extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  
-- name: Windows OS Upgrades
+
+- name: Windows OS Upgrades IPU)
   items:
   - name: In-place system upgrades (Server)
     href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
