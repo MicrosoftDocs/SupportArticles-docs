@@ -1,7 +1,7 @@
 ---
 title: Event ID 5719 occurs when the NetLogon service restarts
 description: Helps you diagnose and understand Event ID 5719 (NetLogon). Windows logs this event when you restart the NetLogon service on Windows Server systems. The event appears especially when Windows Server 2025 member servers interact with domain controllers that run earlier Windows Server versions.
-ms.date: 01/15/2025
+ms.date: 11/04/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
