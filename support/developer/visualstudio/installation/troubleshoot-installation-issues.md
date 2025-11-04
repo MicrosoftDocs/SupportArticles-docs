@@ -25,7 +25,7 @@ Try the following possible resolutions that apply to a typical online installati
 
 The first thing to check is whether or not the issue you're encountering is a known issue with the Visual Studio Installer that Microsoft is working on fixing.
 
-To see if there's a workaround for your problem, check [Known Issues of Visual Studio 2022](/visualstudio/releases/vs18/release-notes#-known-issues)
+To see if there's a workaround for your problem, check [Known Issues of Visual Studio](/visualstudio/releases/vs18/release-notes#-known-issues)
 
 #### 2. Try repairing Visual Studio
 
