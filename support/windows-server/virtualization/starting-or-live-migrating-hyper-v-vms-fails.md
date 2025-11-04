@@ -1,18 +1,18 @@
 ---
 title: Starting or live migrating Hyper-V VMs fails
 description: Error 0x80070569 occurs when you try to start or do a live migration for a Hyper-V virtual machine.
-ms.date: 01/15/2025
+ms.date: 11/4/2025
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, ctimon, kledman
+ms.reviewer: kaushika, crloewen
 ms.custom:
 - sap:virtualization and hyper-v\migration
 - pcy:WinComm Storage High Avail
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Starting or live migrating Hyper-V virtual machines may fail with error 0x80070569
+# Starting or live migrating Hyper-V virtual machines might fail with error 0x80070569
 
 This article provides workarounds to solve the issue that virtual machines can't start or you can't do a live migration for a Hyper-V virtual machine in Windows Server.
 
@@ -20,17 +20,17 @@ _Original KB number:_ &nbsp; 2779204
 
 ## Symptoms
 
-Virtual machines running on Windows Server 2016 or Windows Server 2012 R2 Hyper-V hosts may fail to start. You may receive an error message that's similar to:
+Virtual machines running on Windows Server or Hyper-V hosts might fail to start. You might receive an error message that's similar to:
 
-> Error 0x80070569 ('VM_NAME' failed to start worker process: Logon Failure: The user has not been granted the requested logon type at this computer.)
+> Error 0x80070569 ('VM_NAME' failed to start worker process: Logon Failure: The user isn't granted the requested logon type at this computer.)
 
-When you do a live migration of a Hyper-V virtual machine, the live migration may fail. You may receive an error message that's similar to:
+When you do a live migration of a Hyper-V virtual machine, the live migration might fail. You might receive an error message that's similar to:
 
-> Failed to create Planned Virtual Machine at migration destination: Logon failure: the user has not been granted the requested logon type at this computer. (0x80070569)
+> Failed to create Planned Virtual Machine at migration destination: Logon failure: the user isn't granted the requested logon type at this computer. (0x80070569)
 
-Additionally, when you do a recovery checkpoint and try to convert it to a reference point by using the `ConvertToReferencePoint` method, the conversion may fail. You may receive an error message that's similar to:
+Additionally, when you do a recovery checkpoint and try to convert it to a reference point by using the `ConvertToReferencePoint` method, the conversion might fail. You might receive an error message that's similar to:
 
-> Failed to write VHD attachment "VHDX_NAME" to "VM_NAME": Account restrictions are preventing this user from signing in. For example, blank passwords aren't allowed, sign-in times are limited, or a policy restriction has been enforced. (0x8007052f)
+> Failed to write VHD attachment "VHDX_NAME" to "VM_NAME": Account restrictions prevent this user from signing in. For example, blank passwords aren't allowed, sign-in times are limited, or a policy restriction is enforced. (0x8007052f)
 
 > [!NOTE]
 > The issue may stop temporarily if an Administrator logs into the Hyper-V host and runs the command `gpupdate /force`.
@@ -38,6 +38,10 @@ Additionally, when you do a recovery checkpoint and try to convert it to a refer
 ## Cause
 
 This issue occurs because the NT Virtual Machine\Virtual Machines special identity doesn't have the **Log on as a service** right on the Hyper-V host computer. Usually, the Virtual Machine Management Service (VMMS) replaces this user permission at every Group Policy refresh to ensure it's always present. However, you may notice that the Group Policy refresh doesn't function correctly in certain situations.
+
+## Potential Fix
+
+One potential way to resolve this issue is to enable service log on. For more information, see [How to Enable Service Logon](/system-center/scsm/enable-service-log-on-sm?view=sc-sm-2025#enable-service-logon-as-log-on-type).
 
 ## Workaround
 
