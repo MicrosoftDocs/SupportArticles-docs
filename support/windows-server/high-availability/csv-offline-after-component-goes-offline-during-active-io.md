@@ -101,7 +101,7 @@ Run the following steps as a cluster administrator on a node that has full acces
 1. Monitor the virtual disks by running `Get-VirtualDisk` and looking for `OperationalStatus = InService` in the cmdlet output. When the `OperationalStatus` parameter is clear for all the virtual disks, go to the next step.
 
 1. To move the affected storage pool (that you identified previously) to the current node, run a PowerShell cmdlet that resembles the following command:
-   
+
    ```powershell
    Move-ClusterResource -node <Current Node> -name <OwnerGroup>
    ```
@@ -118,7 +118,7 @@ Run the following steps as a cluster administrator on a node that has full acces
    Get-ClusterResource | Where-Object { $_.ResourceType -eq "Physical Disk" } | Remove-ClusterResource
    ```
 
-1. To remove the storage pool from cluster management, run the `Remove-ClusterResource` command for the storage pool objects that you identified in step 1 of this procedure.
+1. To remove the storage pool from cluster management, run the `Remove-ClusterResource` command for the storage pool objects that you identified in step 2 of this procedure.
 
 1. To make the storage pool writable, run the following commands:
 
@@ -126,7 +126,7 @@ Run the following steps as a cluster administrator on a node that has full acces
    Get-StoragePool -isPrimordial $false | Set-StoragePool -IsReadOnly $false
    ```
 
-1. To configure the virtual disks, run the following commands for each virtual disk.
+1. To configure the virtual disks, run the following commands for each virtual disk that you identified in step 3 of this procedure.
 
    ```powershell
    Get-VirtualDisk | Set-VirtualDisk -IsManualAttach $false
@@ -140,9 +140,9 @@ Run the following steps as a cluster administrator on a node that has full acces
    Get-CimInstance -Namespace "root\MSCluster" -ClassName "MSCluster_AvailableStoragePool" | invoke-cimmethod -MethodName AddToCluster
    ```
 
-1. Restore all non-failed virtual disks to cluster management. If any of the virtual disks from the previous step were previously configured as CSVs, convert them to CSVs.
+1. Restore all non-failed virtual disks to cluster management. If any of the virtual disks from the previous step were configured as CSVs before the failure, convert them to CSVs.
 
-   For example, you can bring back any of the virtual disk or CSV resources that you identified in step 2 that weren't in a failed state. To restore these resources, use the `virtualdiskid` and `name` property values from step 2, and then run commands that resemble the following script excerpt:
+   For example, you can bring back any of the virtual disk or CSV resources that weren't in a failed state. To restore these resources, use the `virtualdiskid` and `name` property values from step 3, and then run commands that resemble the following script excerpt:
 
    ```powershell
    `$virtualdiskname = "ClusterPerformanceHistory"`
