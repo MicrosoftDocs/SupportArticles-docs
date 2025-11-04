@@ -21,6 +21,8 @@ ms.custom: sap:Cannot activate my Windows VM
 
 This article helps you troubleshoot an activation issue that occurs when you create a Microsoft Azure Windows virtual machine (VM).
 
+[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
+
 ## Understanding Azure KMS endpoints for Windows product activation of Azure VMs
 
 Azure uses different endpoints for Key Management Services (KMS) activation depending on the cloud region in which the VM resides. When using this troubleshooting guide, use the appropriate KMS endpoint that applies to your region.

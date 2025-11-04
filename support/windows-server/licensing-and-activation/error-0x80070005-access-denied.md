@@ -20,6 +20,8 @@ This article discusses how to fix Windows activation error 0x80070005 (access de
 
 _Applies to:_ &nbsp; Windows Server, all versions, and Windows client, all versions
 
+[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
+
 ## Symptoms
 
 You run the `slmgr /ato` command to activate a domain-joined computer that's running Windows. However, Windows doesn't activate, and you receive the following error message:
