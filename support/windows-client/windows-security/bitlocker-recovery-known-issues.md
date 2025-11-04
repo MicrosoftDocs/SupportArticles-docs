@@ -367,3 +367,9 @@ To resolve this issue, use one of the following two solutions:
 
 - Remove any device that uses TPM 1.2 from any group that is subject to GPOs that enforce secure launch.
 - Edit the **Turn On Virtualization Based Security** GPO to set **Secure Launch Configuration** to **Disabled**.
+
+## BitLocker PIN unlock failure after uninstalling an update
+
+If you uninstall the cumulative update and roll back the OS build to a version earlier than 26100.4770 after installing KB5063878 or a later update, BitLocker may fail to unlock the drive even with the correct PIN on devices running Windows 11, version 24H2.
+
+To resolve this issue, unlock device using recovery password or other recovery mechanism and install KB5062660 or a later update.
