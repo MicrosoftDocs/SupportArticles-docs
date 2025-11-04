@@ -62,9 +62,9 @@ items:
 - name: Extended Security Updates (ESU)
   items:
   - name: Windows 10 (ESU)
-    href: windows/whats-new/extended-security-updates#frequently-asked-questions?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    href: /windows/whats-new/extended-security-updates#frequently-asked-questions?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Windows Server 2012/R2 (ESU)
-    href: windows-server/get-started/extended-security-updates-deploy?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    href: /windows-server/get-started/extended-security-updates-deploy?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Windows Server 2008/R2 (EOS)
     href: ms-azure-windows-eos.md
 
