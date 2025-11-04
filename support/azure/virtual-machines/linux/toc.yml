@@ -386,6 +386,8 @@ items:
     items:
     - name: Azure Linux VM Agent overview
       href: /azure/virtual-machines/extensions/agent-linux?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Azure Linux VM assist tool
+      href: linux-azure-guest-agent-tools-vmassist.md
     - name: Minimum version support for agents
       href: ../windows/support-extensions-agent-version.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Troubleshoot Linux VM agent
