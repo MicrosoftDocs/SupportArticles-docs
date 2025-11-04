@@ -74,7 +74,7 @@ items:
   - name: Windows Server 2008/R2 (EOS)
     href: ms-azure-windows-eos.md
 
-- name: Windows OS Upgrades IPU)
+- name: Windows OS Upgrades (IPU)
   items:
   - name: In-place system upgrades (Server)
     href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
