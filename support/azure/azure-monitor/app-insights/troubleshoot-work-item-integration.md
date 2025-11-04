@@ -50,7 +50,7 @@ Permission errors usually mean your account doesn't have sufficient rights in Az
 
 * For Azure DevOps, ensure you have *Contribute* permissions.
 * For GitHub, confirm you have *Write* access to the repository.
-* If you're using a Personal Access Token (PAT), make sure it includes *the Work Items (read/write)* scope.
+* If you're using a Personal Access Token (PAT), make sure it includes the *Work Items (read/write)* scope.
 
 ## Template fails to load or save
 
