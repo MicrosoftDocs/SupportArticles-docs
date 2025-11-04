@@ -62,7 +62,7 @@ Restart the computer for the new setting to become effective.
 Restart the Netlogon service for the new setting to become effective.
 
 > [!NOTE]
-> When you use the `DCTcpipPort` registry entry, and you set it to the same port as the `TCP/IP Port` registry entry, you receive Netlogon error event 5809 under `NTDS\Parameters`. This indicates that the port configured is in use, and you should choose a different port.
+> When you use the `DCTcpipPort` registry entry, and you set it to the same port as the `TCP/IP Port` registry entry, you receive Netlogon error event 5809 in the `System` event log. This indicates that the port configured is in use, and you should choose a different port.
 
 You'll receive the same event when you have a unique port, and you restart the Netlogon service on the domain controller. This behavior is by design. It occurs because of the way the RPC runtime manages its server ports. The port will be used after the restart, and the event can be ignored.
 
