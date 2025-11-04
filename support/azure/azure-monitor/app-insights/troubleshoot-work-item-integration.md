@@ -1,9 +1,14 @@
 ---
 title: Troubleshoot Work Item Integration Issues in Application Insights
 description: Provides general recommendations and specific suggestions for issues with work item integration in Application Insights.
+author: JarrettRenshaw
+ms.author: jarrettr
+manager: dcscontentpm
+ms.topic: troubleshooting
 ms.date: 10/28/2025
 ms.service: azure-monitor
 ms.custom: sap:Application Insights portal experiences
+ms.reviewer: v-ryanberg, v-gsitser
 ---
 # Troubleshoot work item integration issues in Application Insights
 
@@ -15,8 +20,8 @@ If you don't see the option to create a work item, it usually means that integra
 
 **What to do:**
 
-* In Application Insights, navigate to **Work Items** and confirm that integration settings are configured.
-* Start the process from the **Create a work item** flow or use a workbook template.
+1. In Application Insights, navigate to **Work Items** and confirm that integration settings are configured.
+1. Start the process from the **Create a work item** flow or use a workbook template.
 
 ## On-premises Azure DevOps URL rejected
 
@@ -29,7 +34,7 @@ This issue occurs when the URL format doesn't meet validation requirements.
 
 ## Authorization prompt doesn't appear or linking fails
 
-If you don't see the authorization prompt or linking fails, it may be caused by popup blockers or cached tokens.
+If you don't see the authorization prompt or linking fails, it can be caused by popup blockers or cached tokens.
 
 **What to do:**
 
@@ -39,7 +44,7 @@ If you don't see the authorization prompt or linking fails, it may be caused by 
 
 ## Work item creation fails with permission errors
 
-Permission errors typically mean your account doesn't have sufficient rights in Azure DevOps or GitHub.
+Permission errors usually mean your account doesn't have sufficient rights in Azure DevOps or GitHub.
 
 **What to do:**
 
@@ -59,7 +64,7 @@ This problem often occurs due to region limitations or missing permissions.
 
 ## Contextual data is missing from created work items
 
-If the work item doesn't include expected data, the Kusto Query Language (KQL) query may not return the correct schema.
+If the work item doesn't include expected data, the Kusto Query Language (KQL) query might not return the correct schema.
 
 **What to do:**
 
@@ -68,7 +73,7 @@ If the work item doesn't include expected data, the Kusto Query Language (KQL) q
 
 ## Template isn't visible to other users
 
-This usually happens when the template is saved as private or RBAC permissions are insufficient.
+This usually happens when the template is saved as private or role-based access control (RBAC) permissions are insufficient.
 
 **What to do:**
 
@@ -94,3 +99,5 @@ This happens when the default repository or organization URL is incorrect or mul
 * Remove or update conflicting templates.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
+[!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
