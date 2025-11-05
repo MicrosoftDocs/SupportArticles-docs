@@ -1,6 +1,6 @@
 ---
 title: Event ID 5719 occurs when the NetLogon service restarts
-description: Helps you diagnose and understand Event ID 5719 (NetLogon). Windows logs this event when you restart the NetLogon service on Windows Server systems. The event appears especially when Windows Server 2025 member servers interact with domain controllers that run earlier Windows Server versions.
+description: Helps you diagnose Event ID 5719 (NetLogon) that's logged when you restart the NetLogon service on Windows Server systems.
 ms.date: 11/04/2025
 manager: dcscontentpm
 audience: itpro
@@ -14,7 +14,7 @@ appliesto:
 ---
 # Event ID 5719 occurs when the NetLogon service restarts
 
-This article helps you diagnose and understand Event ID 5719 (NetLogon). Windows logs this event when you restart the NetLogon service on Windows Server systems. The event appears especially when Windows Server 2025 member servers interact with domain controllers that run earlier Windows Server versions.
+This article helps you diagnose and understand Event ID 5719 (NetLogon). Windows logs this event when you restart the NetLogon service on Windows Server systems. The event most commonly appears when Windows Server 2025-based member servers interact with domain controllers (DCs) that run earlier Windows Server versions.
 
 ## Symptoms
 
@@ -24,36 +24,34 @@ Each time the NetLogon service restarts on a Windows Server 2025 system, Windows
 
 The event text might include the `0xC00000E5 (STATUS_INTERNAL_ERROR)` code.
 
-The event doesn't persist. Windows establishes the secure channel with the domain controller. Normal domain operations then resume.
+The event doesn't persist. Windows establishes the secure channel to the DC. Then, normal domain operations resume.
 
 The event occurs even though you didn't make any recent configuration, update, or software changes.
 
 ## Cause
 
-When the NetLogon service restarts in mixed Windows Server environments (Windows Server 2025 vs. Windows Server 2022 or Windows Server 2019 domain controllers), Windows generates Event ID 5719. As long as the secure channel is established, this event is expected and harmless.
+When the NetLogon service restarts in mixed Windows Server environments (Windows Server 2025 and Windows Server 2022 or Windows Server 2019 DCs), Windows generates Event ID 5719. As long as the secure channel is established, this event is expected and harmless.
 
-The error happens because of protocol differences in Kerberos authentication support. The error doesn't indicate a functional problem unless it keeps occurring in circumstances other than those that this article describes.
+The error occurs because of protocol differences in Kerberos authentication support. The error doesn't indicate a functional problem unless it keeps occurring in circumstances other than those that this article discusses.
 
-When a Windows Server 2025 member server tries to establish a secure channel with a domain controller that runs Windows Server 2022 or an earlier version, it starts the connection by using the new Kerberos authentication method. Older domain controllers don't support this new authentication Remote Procedure Call (RPC) call. Because of this lack of support, authentication fails and Windows logs Event ID 5719. The system automatically falls back to the legacy NetLogon method. This method succeeds in establishing the secure channel.
+When a Windows Server 2025 member server tries to establish a secure channel to a DC that runs Windows Server 2022 or an earlier version, it starts the connection by using the new Kerberos authentication method. Older DCs don't support this new authentication Remote Procedure Call (RPC) call. Because of this lack of support, authentication fails and Windows logs Event ID 5719. In this situation, the system automatically falls back to the legacy NetLogon method to successfully establish the secure channel.
 
-This sequence results in a single, harmless error event. You can ignore this event unless you also see ongoing authentication or connectivity problems.
+This sequence causes a single, harmless error event. You can safely ignore this event unless you also see ongoing authentication or connectivity problems.
 
 ## Resolution
 
-If Event ID 5719 occurs only once when NetLogon restarts and the secure channel is established (domain operations proceed without issue), this event is harmless. You can safely ignore it.
-
-Don't try remediation unless you see other persistent authentication or secure channel issues.
+Event ID 5719 might occur only one time when NetLogon restarts and the secure channel is established (domain operations proceed without any issues). In this case, the event is harmless. Don't try remediation unless you see other persistent authentication or secure channel issues.
 
 Microsoft recognizes this event as expected in mixed-version environments. Microsoft might suppress or clarify this event in future updates or documentation.
 
 > [!IMPORTANT]  
-> If the error recurs outside of NetLogon restarts or coincides with domain trust or authentication failures, investigate further. Collect the log data as described in [Collecting log data](#collecting-log-data), and then contact Microsoft Support.
+> If the error recurs outside of NetLogon restarts, or it coincides with domain trust or authentication failures, investigate further. Collect the log data, as described in [Collecting log data](#collecting-log-data), and then contact Microsoft Support.
 
 ### Workaround (optional)
 
-As part of the transition to Windows Server 2025 or newer domain controllers that support Kerberos for secure channel setup, temporarily configure the following registry setting. Configure this setting on Kerberos-capable member computers that also run NetLogon.
+As part of the transition to Windows Server 2025 or newer DCs that support Kerberos for secure channel setup, temporarily configure the following registry setting. Configure this setting on Kerberos-capable member computers that also run NetLogon.
 
-This change suppresses the logging of NetLogon Event ID 5719. Once you deploy enough Windows Server 2025 or newer Kerberos-capable DCs in the domain to ensure reliable Kerberos-based secure channel establishment, remove the registry setting.
+This change suppresses the logging of NetLogon Event ID 5719. Remove the registry setting after you deploy enough Windows Server 2025 or newer Kerberos-capable DCs in the domain to ensure reliable Kerberos-based secure channel establishment.
 
 - **Registry subkey**: `HKLM\SYSTEM\CurrentControlSet\Services\NetLogon\Parameters`
 
@@ -63,7 +61,7 @@ This change suppresses the logging of NetLogon Event ID 5719. Once you deploy en
   - Type: `REG_DWORD`
   - Value: `0`
 
-To use a Windows Command Line prompt to apply this change, run the following command:
+To use a Windows command-line prompt to apply this change, run the following command:
 
 ```console
 reg add "HKLM\SYSTEM\CurrentControlSet\Services\NetLogon\Parameters" /v UseKerberosForSecureChannels /t REG_DWORD /d 0 /f
@@ -75,7 +73,7 @@ To use a Windows PowerShell prompt to apply this fix, run the following command:
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\NetLogon\Parameters" -Name "UseKerberosForSecureChannels" -Value 0 -Type DWord
 ```
 
-Apply this configuration only temporarily. Monitor it for removal once the domain environment is adequately updated.
+Apply this configuration only temporarily. Monitor it for removal after the domain environment is adequately updated.
 
 ## Collecting log data
 
@@ -103,19 +101,19 @@ To turn off logging, run the `nltest /dbflag:0x0` command.
 
 ## More information
 
-The event is specific to Windows Server 2025 member servers that authenticate by using domain controllers that run earlier versions of Windows. In the same scenario, Windows Server 2019 and Windows Server 2022 don't log Event ID 5719.
+The event is specific to Windows Server 2025 member servers that authenticate by using DCs that run earlier versions of Windows. In the same scenario, Windows Server 2019 and Windows Server 2022 don't log Event ID 5719.
 
-Windows Server 2025 systems that authenticate by using Windows Server 2025 domain controllers don't log Event ID 5719.
+Windows Server 2025 systems that authenticate by using Windows Server 2025 DCs don't log Event ID 5719.
 
 ### Log entries in NetLogon.log that trace the secure channel process
 
-When Windows first tries to establish the secure channel, it uses Kerberos:
+When Windows in initially tries to establish the secure channel, it uses Kerberos:
 
 ```output
  [INIT] [10664]    UseKerberosForSecureChannels = TRUE
 ```
 
-When Windows tries to connect to the domain controller the first time, it receives an error message that resembles the following log excerpt:
+When Windows initially tries to connect to the DC, it receives an error message that resembles the following log excerpt:
 
 ```output
 [SESSION] [3036] CONTOSO: NlDiscoverDc: Found DC \\CONTOSODC.CONTOSO.com
@@ -129,7 +127,7 @@ When Windows tries to connect to the domain controller the first time, it receiv
 [SESSION] [3036] CONTOSO: NlSessionSetup: Session setup Failed[AC3]
 ```
 
-Windows tries to create the secure channel again. This time, it works. Windows logs entries that resemble the following excerpt:
+Windows tries again to create the secure channel. This time, it works. Windows logs entries that resemble the following excerpt:
 
 ```output
 [SESSION] [10664] CONTOSO: NlSessionSetup: Try Session setup
