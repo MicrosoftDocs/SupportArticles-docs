@@ -462,19 +462,19 @@ items:
 
 - name: Windows VM Agent
   items:
-  - name: Azure Windows VM Agent overview
+  - name: Overview
     href: /azure/virtual-machines/extensions/agent-windows?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Minimum version support
+  - name: Minimum version required
     href: support-extensions-agent-version.md
-  - name: VM assist to diagnose issues
+  - name: Troubleshooting tools (VM assist)
     href: windows-azure-guest-agent-tools-vmassist.md
-  - name: Install Windows VM agent offline
+  - name: Offline installation
     href: install-vm-agent-offline.md
-  - name: Troubleshoot Windows VM agent
+  - name: Troubleshooting
     href: windows-azure-guest-agent.md
-  - name: Multiple certificates on IaaS VM that uses extensions
+  - name: Troubleshoot multiple certificates issues
     href: multiple-certificates-iaas-vm-extensions.md
-  - name: Troubleshoot extension certificate issues on Windows VM
+  - name: Troubleshoot extension certificate issues
     href: troubleshoot-extension-certificates-issues-windows-vm.md
 
 - name: VM Extensions
@@ -483,7 +483,7 @@ items:
     href: extension-supported-os.md
   - name: Supported extensions
     href: support-agent-extensions.md
-  - name: Azure extension overview
+  - name: Overview
     href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Troubleshoot extension issues
     href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/windows/context/context
@@ -492,17 +492,17 @@ items:
   items:
   - name: Troubleshooting Overview
     href: troubleshoot-activation-problems.md
-  - name: Understanding KMS endpoints
-    href: windows-activation-stopped-working.md
   - name: Troubleshooting tools
     href: windows-activation-troubleshoot-tools.md
   - name: Frequently asked questions
     href: windows-virtual-machine-activation-faq.yml
-  - name: Understanding Generic Volume License Key
+  - name: KMS endpoints overview
+    href: windows-activation-stopped-working.md
+  - name: Generic Volume License Key overview
     href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Common issues
     items:
-    - name: Activation fails in forced tunneling scenario
+    - name: Forced tunneling scenario
       href: custom-routes-enable-kms-activation.md
     - name: Duplicate Client Machine ID
       href: windows-activation-duplicate-client-machine-id.md
@@ -510,7 +510,7 @@ items:
       href: ../../../windows-server/deployment/error-0x80070005-access-denied.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0x800705B4
       href: windows-vm-activation-error-0x800705b4.md
-    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+    - name: Error 0xC004E015
       href: ../../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0xC004FD01 or 0xC004FD02
       href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
@@ -518,7 +518,7 @@ items:
       href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0xC004F074
       href: windows-vm-activation-error-0xc004f074.md
-    - name: Windows activation watermark continues to be displayed
+    - name: Activation watermark continues to be displayed
       href: activation-watermark-appears.md
 
 
