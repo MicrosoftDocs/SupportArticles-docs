@@ -40,6 +40,6 @@ This article describes known issues and their solutions for Windows 365 Frontlin
 
 ## Issue 4: Cannot decrease Cloud PC count due to pool user storage limits
 
-**Problem:** The number of Cloud PCs for Frontline Cloud PCs in shared mode cannot be decreased when it would cause the pooled user storage limit to be exceeded.
+**Problem:** The number of Cloud PCs for Frontline Cloud PCs in shared mode can't be decreased when it would cause the pooled user storage limit to be exceeded.
 
 **Solution:** Delete individual user storage to be under the new limit. The new limit can be determined by multiplying the new Cloud PC count by the OS disk size in GB.
