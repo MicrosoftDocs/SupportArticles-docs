@@ -79,3 +79,5 @@ items:
   items:
   - name: Known issues with Windows 365 Frontline
     href: known-issues-frontline.md
+  - name: Troubleshoot User Experience Sync
+    href: troubleshoot-user-experience-sync.md
