@@ -172,4 +172,4 @@ If the preceding actions don't resolve the issue, ensure the following:
 - Clear the browser cache and cookies manually, and then restart the browser.
 
 ## WebDriver support
-Starting with version 2.62, Power Automate for desktop supports [WebDriver](https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/webautomation#webdriver-based-browser-automation-preview) as an alternative communication method for browser automation. 
+Starting with version 2.62, Power Automate for desktop supports [WebDriver](https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/webautomation#webdriver-based-browser-automation-preview) as an alternative communication method for browser automation. This approach eliminates the need to install a browser extension to enable web automation in Power Automate for Desktop.
