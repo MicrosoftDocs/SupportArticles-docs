@@ -70,4 +70,3 @@ The recorder creates a **Click UI element in window** action with coordinate-bas
 - [Use the recorder in Power Automate for desktop](/power-automate/desktop-flows/recording-flow)
 - [Mouse and keyboard actions](/power-automate/desktop-flows/actions-reference/mouseandkeyboard)
 - [OCR actions in Power Automate for desktop](/power-automate/desktop-flows/actions-reference/ocr)
-- 
