@@ -243,8 +243,6 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md
     - name: Error Code 0x8007045b
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
-    - name: Error Code 0x800f0831
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md
 
 - name: My VM is not booting
   items:
