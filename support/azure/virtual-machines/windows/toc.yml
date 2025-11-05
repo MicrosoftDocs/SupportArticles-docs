@@ -168,13 +168,13 @@ items:
       href: reset-network-interface.md
     - name: Reset local Windows password for Azure VM offline
       href: reset-local-password-without-agent.md
-    - name: Resolve 'ghosted nic' issues
+    - name: Ghosted Nic issue
       href: 
       items:
-      - name: Troubleshooting tool
-        href: windows-vm-ghostednic-tool.md
-      - name: Understanding the issue
+      - name: Overview
         href: windows-vm-ghostednic-troubleshooting.md
+      - name: Diagnostic tool
+        href: windows-vm-ghostednic-tool.md
 
   - name: Advanced troubleshooting support
     items:
