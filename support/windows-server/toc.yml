@@ -1124,6 +1124,8 @@ items:
     items:
     - name: 'Troubleshooting guidance: Event ID 5120 Cluster Shared Volume'
       href: ./high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md
+    - name: Cluster Shared Volume goes offline
+      href: ./high-availability/csv-offline-after-component-goes-offline-during-active-io.md
   - name: Errors when running the Validation Wizard
     items:
     - name: Cluster validation account causes events or messages
