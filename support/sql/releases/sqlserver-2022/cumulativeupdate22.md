@@ -17,7 +17,7 @@ _Version:_ &nbsp; 16.0.4225.2
 
 ## Summary
 
-This article describes Cumulative Update package 22 (CU22) for Microsoft SQL Server 2022. This update contains 21 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 21 and it updates components in the following builds:
+This article describes Cumulative Update package 22 (CU22) for Microsoft SQL Server 2022. This update contains 20 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 21 and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4225.2**, file version: **2022.160.4225.2**
 - Analysis Services - Product version: **16.0.43.252**, file version: **2022.160.43.252**
