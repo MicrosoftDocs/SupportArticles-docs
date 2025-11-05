@@ -4,7 +4,7 @@ description: This troubleshooting checklist consolidates the steps needed for re
 ms.service: azure-logic-apps
 ms.reviewer: xuehongg, shrahman, v-ryanberg, v-gsitser
 ms.topic: troubleshooting
-ms.custom: sap:Azure Logic Apps
+ms.custom: Networking
 ms.date: 11/5/2025
 author: JarrettRenshaw
 ms.author: jarrettr
