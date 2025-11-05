@@ -33,7 +33,7 @@ items:
       href: troubleshoot-windows-365-app.md
   - name: Onboarding issues
     items:
-    - name: Known issues with Windows 365 Enterprise and Frontline
+    - name: Known issues with Windows 365 Enterprise
       href: known-issues-enterprise.md
   - name: Partner Solutions for W365
     items:
@@ -75,3 +75,7 @@ items:
     items:
     - name: Windows 365 BCDR known issues
       href: windows-365-bcdr-known-issues.md
+- name: Windows 365 Frontline
+  items:
+  - name: Known issues with Windows 365 Frontline
+    href: known-issues-frontline.md
