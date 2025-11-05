@@ -1,7 +1,7 @@
 ---
-title: Event ID 5719 (STATUS_INTERNAL_ERROR) Occurs When the NetLogon Service Restarts
+title: 'Event ID 5719 (STATUS_INTERNAL_ERROR) Occurs When the NetLogon Service Restarts'
 description: Helps you diagnose Event ID 5719 (error code: 0xC00000E5 (STATUS_INTERNAL_ERROR)) that's logged when the NetLogon service restarts on Windows Server 2025.
-ms.date: 11/05/2025
+ms.date: 11/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
