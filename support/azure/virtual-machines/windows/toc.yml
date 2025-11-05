@@ -153,13 +153,7 @@ items:
 
 - name: Cannot connect to my VM
   items:
-  - name: Resolve 'ghost nic' issues
-    href: 
-    items:
-    - name: Troubleshooting tool
-      href: windows-vm-ghostednic-tool.md
-    - name: Understanding the issue
-      href: windows-vm-ghostednic-troubleshooting.md
+
   - name: Common troubleshooting support
     items:
     - name: Basic RDP troubleshooting
@@ -174,6 +168,14 @@ items:
       href: reset-network-interface.md
     - name: Reset local Windows password for Azure VM offline
       href: reset-local-password-without-agent.md
+    - name: Resolve 'ghosted nic' issues
+      href: 
+      items:
+      - name: Troubleshooting tool
+        href: windows-vm-ghostednic-tool.md
+      - name: Understanding the issue
+        href: windows-vm-ghostednic-troubleshooting.md
+
   - name: Advanced troubleshooting support
     items:
       - name: Cannot RDP because "You must change your password before logging on the first time" error
