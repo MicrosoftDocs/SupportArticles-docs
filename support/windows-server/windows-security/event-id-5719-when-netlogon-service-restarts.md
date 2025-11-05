@@ -1,6 +1,6 @@
 ---
-title: Event ID 5719 occurs when the NetLogon service restarts
-description: Helps you diagnose Event ID 5719 (NetLogon) that's logged when the NetLogon service restarts on Windows Server 2025.
+title: Event ID 5719 (STATUS_INTERNAL_ERROR) occurs when the NetLogon service restarts
+description: Helps you diagnose Event ID 5719 (error code: 0xC00000E5 (STATUS_INTERNAL_ERROR)) that's logged when the NetLogon service restarts on Windows Server 2025.
 ms.date: 11/05/2025
 manager: dcscontentpm
 audience: itpro
@@ -12,35 +12,41 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Event ID 5719 occurs when the NetLogon service restarts
+# Event ID 5719 (STATUS_INTERNAL_ERROR) occurs when the NetLogon service restarts
 
-This article helps you diagnose and understand Event ID 5719 (NetLogon). Windows logs this event when the NetLogon service restarts on Windows Server systems. The event typically appears when Windows Server 2025-based member servers interact with domain controllers that run earlier Windows Server versions.
+This article helps you diagnose and understand the NetLogon service Event ID 5719, when the event includes the `0xC00000E5 (STATUS_INTERNAL_ERROR)` error code. Windows logs this event when the NetLogon service restarts on Windows Server systems. The event typically appears when Windows Server 2025-based member servers interact with domain controllers (DCs) that run earlier Windows Server versions.
 
 ## Symptoms
 
-Each time the NetLogon service restarts on a Windows Server 2025 system, Windows logs Event ID 5719 in the System event log. The event text resembles the following excerpt:
+Each time the NetLogon service restarts on a Windows Server 2025 system, Windows logs Event ID 5719 (STATUS_INTERNAL_ERROR) in the System event log. The event text resembles the following excerpt:
 
-> This computer was not able to set up a secure session with a domain controller in domain [domain name] due to the following: An internal error occurred.
+> This computer was not able to set up a secure session with a DC in domain [domain name] due to the following: An internal error occurred.
 
-The event text might include the `0xC00000E5 (STATUS_INTERNAL_ERROR)` code.
+The event text includes the `0xC00000E5 (STATUS_INTERNAL_ERROR)` code.
 
-The event doesn't persist. Windows establishes the secure channel to the domain controller. Then, normal domain operations resume.
+The event doesn't persist. Windows establishes the secure channel to the DC. Then, normal domain operations resume.
 
-The event occurs even though you didn't make any recent configuration, update, or software changes.
+The event occurs even though you didn't make any recent configuration, update, or software changes. Typically, you only see this behavior in particular environments:
+
+| Member server | Authenticating DC | Event and code |
+| - | - | - |
+| Windows Server 2025 | Windows Server 2025 | No Event ID 5719 |
+| Windows Server 2025 | Windows Server 2022 | Event ID 5719, `0xC00000E5 (STATUS_INTERNAL_ERROR)` |
+| Windows Server 2025 | Windows Server 2019 | Event ID 5719, `0xC00000E5 (STATUS_INTERNAL_ERROR)` |
 
 ## Cause
 
-When the NetLogon service restarts in mixed Windows Server environments (Windows Server 2025 member servers and Windows Server 2022 or Windows Server 2019 domain controllers), Windows generates Event ID 5719. As long as the secure channel is established, this event is expected and harmless.
+When the NetLogon service restarts in mixed Windows Server environments (Windows Server 2025 member servers and Windows Server 2022 or Windows Server 2019 DCs), Windows generates Event ID 5719 (STATUS_INTERNAL_ERROR). As long as the secure channel is established, this event is expected and harmless.
 
 The error occurs because of protocol differences in Kerberos authentication support. The error doesn't indicate a functional problem unless it keeps occurring in circumstances other than the circumstances that this article discusses.
 
-When a Windows Server 2025 member server tries to establish a secure channel to a domain controller that runs Windows Server 2022 or an earlier version, it starts the connection by using the new Kerberos authentication method. Older domain controllers don't support this new authentication Remote Procedure Call (RPC) call. Because of this lack of support, authentication fails and Windows logs Event ID 5719. In this situation, the system automatically falls back to the legacy NetLogon method to successfully establish the secure channel.
+When a Windows Server 2025 member server tries to establish a secure channel to a DC that runs Windows Server 2022 or an earlier version, it starts the connection by using the new Kerberos authentication method. Older DCs don't support this new authentication Remote Procedure Call (RPC) call. Because of this lack of support, authentication fails and Windows logs Event ID 5719 (STATUS_INTERNAL_ERROR). In this situation, the system automatically falls back to the legacy NetLogon method to successfully establish the secure channel.
 
 This sequence causes a single, harmless error event. You can safely ignore this event unless you also see ongoing authentication or connectivity problems.
 
 ## Resolution
 
-Event ID 5719 might occur only one time when NetLogon restarts and the secure channel is established (domain operations proceed without any issues). In this case, the event is harmless. Don't try remediation unless you see other persistent authentication or secure channel issues.
+Event ID 5719 (STATUS_INTERNAL_ERROR) might occur only one time when NetLogon restarts and the secure channel is established (domain operations proceed without any issues). In this case, the event is harmless. Don't try remediation unless you see other persistent authentication or secure channel issues.
 
 Microsoft recognizes this event as expected in mixed-version environments. Microsoft might suppress or clarify this event in future updates or documentation.
 
@@ -53,7 +59,7 @@ Microsoft recognizes this event as expected in mixed-version environments. Micro
 
 As part of the transition to Windows Server 2025 or newer DCs that support Kerberos for secure channel setup, temporarily configure the following registry setting. Configure this setting on Kerberos-capable member computers that also run NetLogon.
 
-This change suppresses the logging of NetLogon Event ID 5719. After you deploy enough Windows Server 2025 or newer Kerberos-capable domain controllers in the domain to ensure reliable Kerberos-based secure channel establishment, remove the registry setting.
+This change suppresses the logging of Event ID 5719 (STATUS_INTERNAL_ERROR). After you deploy enough Windows Server 2025 or newer Kerberos-capable DCs in the domain to ensure reliable Kerberos-based secure channel establishment, remove the registry setting.
 
 - **Registry subkey**: `HKLM\SYSTEM\CurrentControlSet\Services\NetLogon\Parameters`
 
@@ -103,9 +109,9 @@ To turn off logging, run the `nltest /dbflag:0x0` command.
 
 ## More information
 
-The event is specific to Windows Server 2025 member servers that authenticate by using domain controllers that run earlier versions of Windows. In the same scenario, Windows Server 2019 and Windows Server 2022 don't log Event ID 5719.
+The event is specific to Windows Server 2025 member servers that authenticate by using DCs that run earlier versions of Windows. In the same scenario, Windows Server 2019 and Windows Server 2022 member servers don't log Event ID 5719 (STATUS_INTERNAL_ERROR).
 
-Windows Server 2025 systems that authenticate by using Windows Server 2025 domain controllers don't log Event ID 5719.
+Windows Server 2025 systems that authenticate by using Windows Server 2025 DCs don't log Event ID 5719 (STATUS_INTERNAL_ERROR).
 
 ### Log entries in NetLogon.log that trace the secure channel process
 
@@ -115,7 +121,7 @@ When Windows initially tries to establish the secure channel, it uses Kerberos. 
  [INIT] [10664]    UseKerberosForSecureChannels = TRUE
 ```
 
-The domain controller refuses this first attempt. On the member server, Windows receives an error message that resembles the following log excerpt:
+The DC refuses this first attempt. On the member server, Windows receives an error message that resembles the following log excerpt:
 
 ```output
 [SESSION] [3036] CONTOSO: NlDiscoverDc: Found DC \\CONTOSODC.CONTOSO.com
