@@ -381,12 +381,14 @@ items:
       href: /azure/virtual-machines/extensions/agent-linux?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Minimum version required
       href: ../windows/support-extensions-agent-version.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: How to troubleshoot
+      href: linux-azure-guest-agent.md
     - name: Troubleshooting tools (VM assist)
       href: linux-azure-guest-agent-tools-vmassist.md
-    - name: Troubleshooting
-      href: linux-azure-guest-agent.md
     - name: Troubleshoot multiple certificates issues
       href: ../windows/multiple-certificates-iaas-vm-extensions.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
+    - name: Troubleshoot extension certificate issues
+      href: ../windows/troubleshoot-extension-certificates-issues-windows-vm.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
 - name: VM Extensions
   items:

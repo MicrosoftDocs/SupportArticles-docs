@@ -472,17 +472,17 @@ items:
     href: /azure/virtual-machines/extensions/agent-windows?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Minimum version required
     href: support-extensions-agent-version.md
+  - name: How to troubleshoot
+    href: windows-azure-guest-agent.md
   - name: Troubleshooting tools (VM assist)
     href: windows-azure-guest-agent-tools-vmassist.md
-  - name: Offline installation
-    href: install-vm-agent-offline.md
-  - name: Troubleshooting
-    href: windows-azure-guest-agent.md
   - name: Troubleshoot multiple certificates issues
     href: multiple-certificates-iaas-vm-extensions.md
   - name: Troubleshoot extension certificate issues
     href: troubleshoot-extension-certificates-issues-windows-vm.md
-
+  - name: Offline installation
+    href: install-vm-agent-offline.md
+  
 - name: VM Extensions
   items:
   - name: Overview
