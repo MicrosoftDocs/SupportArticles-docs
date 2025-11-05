@@ -44,9 +44,6 @@ Admins can request Microsoft to increase the default storage space up to 25 TB p
 
 1. After the user's OneDrive storage limit is increased, you can [set a different limit for the user's storage space](/onedrive/change-user-storage) from the Microsoft 365 admin center or SharePoint Online Management Shell.
 
-> [!NOTE]  
-> - Users who reach at least 90 percent of their 25 TB capacity of OneDrive storage will be provided additional cloud storage in the form of a 25 TB SharePoint team site. For more information and assistance, contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=869559).
-> - The maximum amount of OneDrive storage provided to any single Education user with OneDrive for Business Plan 2 is 25 TB. Pooled storage limits still apply at the tenant level.
 
 ## References
 
