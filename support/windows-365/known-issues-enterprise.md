@@ -1,10 +1,10 @@
 ---
-title: Known issues for Windows 365 Enterprise and Frontline
+title: Known issues for Windows 365 Enterprise
 description: Learn about known issues for Windows 365 Enterprise.
 manager: dcscontentpm
-ms.date: 05/23/2025
+ms.date: 10/29/2025
 ms.topic: troubleshooting
-ms.reviewer: ivivano, erikje, scottduf
+ms.reviewer: japarker, satulim, scottduf
 ms.custom:
 - pcy:Onboarding issues
 - sap:WinComm User Experience
@@ -12,7 +12,7 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
-# Known issues: Windows 365 Enterprise and Frontline
+# Known issues: Windows 365 Enterprise
 
 The following items are known issues for Windows 365 Enterprise.
 
