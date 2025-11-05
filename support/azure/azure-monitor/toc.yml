@@ -82,6 +82,8 @@ items:
       href: app-insights/troubleshoot-application-map-issues.md
     - name: Troubleshoot Live Metrics issues
       href: app-insights/troubleshoot-live-metrics.md
+    - name: Troubleshoot work item integration
+      href: app-insights/troubleshoot-work-item-integration.md
   - name: Availability Tests
     items:
     - name: Availability monitoring common issues FAQ
