@@ -243,7 +243,7 @@ items:
         - name: Can't create too large transport rules
           href: ../email-delivery/transport-rule-not-created-because-too-large.md
         - name: Can't use reply all with Microsoft 365 groups 
-          href: ../email-delivery/cannot-reply-all-with-microsoft-365-group.md
+          href: ../email-delivery/cannot-reply-all-with-microsoft-365-groups.md
         - name: Can't validate an outbound connector
           href: ../email-delivery/cannot-validate-outbound-connector.md
         - name: Configure Proofpoint Email Protection with Exchange Online
