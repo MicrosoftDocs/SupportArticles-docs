@@ -69,17 +69,16 @@ If you use a single-label DNS name in your environment, clients may be unable to
 
 The following list describes the symptoms that may occur:
 
-- After you configure Microsoft Windows for a single label domain name, all servers that have the domain controller role may be unable to register DNS records. The System log of the domain controller may consistently log NETLOGON 5781 warnings that resemble the following example:
-    > [!NOTE]
-    > Status code 0000232a maps to the following error code:
+- After you configure Microsoft Windows for a single label domain name, all servers that have the domain controller role may be unable to register DNS records. The System log of the domain controller may consistently log NETLOGON 5781 warnings that resemble the following example:[recheck]()
 
-    > DNS_ERROR_RCODE_SERVER_FAILURE
+  > [!NOTE]
+  > Status code 0000232a maps to the `DNS_ERROR_RCODE_SERVER_FAILURE` error code.
 
 - The following additional status codes and error codes may appear in log files such as Netdiag.log:
 
-    > DNS Error Code: 0x0000251D = DNS_INFO_NO_RECORDS  
-    DNS_ERROR_RCODE_ERROR  
-    RCODE_SERVER_FAILURE
+  - `0x0000251D = DNS_INFO_NO_RECORDS`
+  - `DNS_ERROR_RCODE_ERROR`
+  - `RCODE_SERVER_FAILURE`
 
 - Windows-based computers that are configured for DNS dynamic updates won't register in a single-label domain. Warning events that resemble the following examples are recorded in the System log of the computer:
 
@@ -100,15 +99,15 @@ Also without modification, an Active Directory domain member in a forest that co
     To enable a Windows computer to use DNS to locate domain controllers in domains that have single-label DNS names, follow these steps:
 
     1. Select **Start**, select **Run**, type regedit, and then select **OK**.
-    2. Locate and then select the following subkey:
+    1. Locate and then select the following subkey:
         `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`
 
-    3. In the details pane, locate the **AllowSingleLabelDnsDomain** entry. If the **AllowSingleLabelDnsDomain** entry doesn't exist, follow these steps:
-          1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
-          2. Type **AllowSingleLabelDnsDomain** as the entry name, and then press **ENTER**.
-    4. Double-click the **AllowSingleLabelDnsDomain** entry.
-    5. In the **Value data** box, type 1, and then select **OK**.
-    6. Exit Registry Editor.
+    1. In the details pane, locate the **AllowSingleLabelDnsDomain** entry. If the **AllowSingleLabelDnsDomain** entry doesn't exist, follow these steps:
+       1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
+       1. Type **AllowSingleLabelDnsDomain** as the entry name, and then press **ENTER**.
+    1. Double-click the **AllowSingleLabelDnsDomain** entry.
+    1. In the **Value data** box, type 1, and then select **OK**.
+    1. Exit Registry Editor.
 
 - DNS client configuration
 
@@ -116,15 +115,15 @@ Also without modification, an Active Directory domain member in a forest that co
 
     By default, Windows-based DNS client computers don't attempt dynamic updates of the root zone "." or of single-label DNS zones. To enable Windows-based DNS client computers to try dynamic updates of a single-label DNS zone, follow these steps:
     1. Select **Start**, select **Run**, type regedit, and then select **OK**.
-    2. Locate and then select the following subkey:
+    1. Locate and then select the following subkey:
         `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient`
 
-    3. In the details pane, locate the **UpdateTopLevelDomainZones** entry. If the **UpdateTopLevelDomainZones** entry doesn't exist, follow these steps:
-        1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
-        2. Type **UpdateTopLevelDomainZones** as the entry name, and then press **ENTER**.
-    4. Double-click the **UpdateTopLevelDomainZones** entry.
-    5. In the **Value data** box, type 1, and then select **OK**.
-    6. Exit Registry Editor.
+    1. In the details pane, locate the **UpdateTopLevelDomainZones** entry. If the **UpdateTopLevelDomainZones** entry doesn't exist, follow these steps:
+       1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
+       1. Type **UpdateTopLevelDomainZones** as the entry name, and then press **ENTER**.
+    1. Double-click the **UpdateTopLevelDomainZones** entry.
+    1. In the **Value data** box, type 1, and then select **OK**.
+    1. Exit Registry Editor.
 
     These configuration changes should be applied to all domain controllers and members of a domain that have single-label DNS names. If a domain that has a single-label domain name is a forest root, these configuration changes should be applied to all the domain controllers in the forest, unless the separate zones _msdcs. _ForestName_, _sites. *ForestName*, _tcp. *ForestName*, and_udp. *ForestName* are delegated from the *ForestName* zone.
 
@@ -138,7 +137,7 @@ Use Group Policy to enable the Update Top Level Domain Zones policy and the Loca
 |---|---|
 |Update Top Level Domain Zones|Computer Configuration\Administrative Templates\Network\DNS Client|
 |Location of the DCs hosting a domain with single label DNS name|Computer Configuration\Administrative Templates\System\Net Logon\DC Locator DNS Records|
-  
+
 To enable these policies, follow these steps on the root domain container:
 
 [Revise the following--need to jump from gpmc to gpedit for group policy instead of local policy]
@@ -147,25 +146,25 @@ To enable these policies, follow these steps on the root domain container:
 1. Under **Local Computer Policy**, expand **Computer Configuration**.
 1. Expand **Administrative Templates**.
 1. Enable the Update Top Level Domain Zones policy. To do it, follow these steps:
-    1. Expand **Network**.
-    2. Select **DNS Client**.
-    3. In the details pane, double-click **Use DNS name resolution with a single-label domain name instead of NetBIOS name resolution to locate the DC**.
-    4. Select **Enabled**.
-    5. Select **Apply**, and then select **OK**.
+   1. Expand **Network**.
+   1. Select **DNS Client**.
+   1. In the details pane, double-click **Use DNS name resolution with a single-label domain name instead of NetBIOS name resolution to locate the DC**.
+   1. Select **Enabled**.
+   1. Select **Apply**, and then select **OK**.
 1. Enable the Location of the DCs hosting a domain with single label DNS name policy. To do this, follow these steps:
-    1. Expand **System**.
-    2. Expand **Net Logon**.
-    3. Select **DC Locator DNS Records**.
-    4. In the details pane, double-click **Location of the DCs hosting a domain with single label DNS name**.
-    5. Select **Enabled**.
-    6. Select **Apply**, and then select **OK**.
+   1. Expand **System**.
+   1. Expand **Net Logon**.
+   1. Select **DC Locator DNS Records**.
+   1. In the details pane, double-click **Location of the DCs hosting a domain with single label DNS name**.
+   1. Select **Enabled**.
+   1. Select **Apply**, and then select **OK**.
 1. Close the Group Policy Editor and GPMC.
 
 > [!NOTE]  
 > You can define the settings by using configuration service policies (CSPs). For more information, see the following articles:
 >
-> - [](/windows/client-management/mdm/policy-csp-admx-dnsclient#dns_updatetopleveldomainzones)
-> - [](/windows/client-management/mdm/policy-csp-admx-netlogon#netlogon_allowsinglelabeldnsdomain)
+> - [Policy CSP - ADMX_DnsClient](/windows/client-management/mdm/policy-csp-admx-dnsclient#dns_updatetopleveldomainzones)
+> - [Policy CSP - ADMX_Netlogon](/windows/client-management/mdm/policy-csp-admx-netlogon#netlogon_allowsinglelabeldnsdomain)
 
 On the DNS servers, make sure that root servers aren't created unintentionally.
 
