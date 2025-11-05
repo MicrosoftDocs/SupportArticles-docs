@@ -12,30 +12,34 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
+
 # Known issues: Windows 365 Frontline
 
-The following items are known issues for Windows 365 Frontline.
+This article describes known issues and their solutions for Windows 365 Frontline.
 
-## Users may not be able to access Frontline Cloud PCs in shared mode
+## Issue 1: Users cannot access Frontline Cloud PCs in shared mode
 
-When Frontline Cloud PCs in shared mode are assigned to an Entra ID Group with more than 10,000 members, some users might not receive access and might not see the Cloud PC cards in the Windows app.
+**Problem:** When Frontline Cloud PCs in shared mode are assigned to an Entra ID Group with more than 10,000 members, some users might not receive access and won't see the Cloud PC cards in the Windows app.
 
-### Solution
+**Solution:** Reduce the Entra ID group membership to fewer than 10,000 users.
 
-Reduce the Entra ID group membership to be fewer than 10,000 users.
+## Issue 2: Cannot decrease Cloud PC count when all provisioning fails
 
-## Number of cloud PCs for Frontline Cloud PCs in shared mode cannot be decreased when all Cloud PC provisioning fails
+**Problem:** If provisioning fails due to an Autopilot Device Preparation Profile (DPP) failure and all Cloud PCs show no successfully provisioned devices, admins cannot decrease the number of Cloud PCs in the reprovision assignments option.
 
-If provisioning fails due to an Autopilot Device Preparation Profile (DPP) (Preview) failure and results in all Cloud PCs showing no successfully provisioned devices, admins will not be able to decrease the number of Cloud PCs in the reprovision assignments option.
+**Solution:** Perform a reprovisioning action in the provisioning policy.
 
-### Solution
+## Issue 3: Scheduled reprovisioning doesn't recover after license changes
 
-Perform a reprovisioning action in the provisioning policy.
+**Problem:** If Frontline Cloud PCs are provisioned in shared mode and licenses expire or are removed from the tenant, the Cloud PCs will be deprovisioned until valid licenses are added back. After licenses are restored, Cloud PCs provision according to the policy configurations, but scheduled reprovisioning won't reactivate and manual reprovisioning also fails.
 
-## Scheduled reprovisioning doesn't recover if Frontline licenses are removed or expire from a tenant and then are added back
+**Solution:** To restore full functionality of manual and scheduled reprovisioning after license expiration:
 
-If Frontline Cloud PCs are provisioned in shared mode and then licenses expire or are removed from the tenant, the Cloud PCs will be deprovisioned until valid licenses are added. After the licenses are added back, the Cloud PCs will be provisioned according to the configurations defined in the provisioning policy. If you have configured a scheduled reprovisioning for a provisioning policy, the scheduled reprovisioning won't be reactivated. Manual reprovisioning action also fails.
+1. Remove the provisioning policy assignment
+2. Add the assignment back again
 
-### Solution
+## Issue 4: Cannot decrease Cloud PC count due to pool user storage limits
 
-To recover full functionality of manual and scheduled reprovisioning after license expiration, remove the provisioning policy assignment and then add it again.
+**Problem:** The number of Cloud PCs for Frontline Cloud PCs in shared mode cannot be decreased when it would cause the pooled user storage limit to be exceeded.
+
+**Solution:** Delete individual user storage to be under the new limit. The new limit can be determined by multiplying the new Cloud PC count by the OS disk size in GB.
