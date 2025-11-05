@@ -479,12 +479,12 @@ items:
 
 - name: VM Extensions
   items:
+  - name: Overview
+    href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Supported operating systems
     href: extension-supported-os.md
   - name: Supported extensions
     href: support-agent-extensions.md
-  - name: Overview
-    href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Troubleshoot extension issues
     href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
@@ -521,9 +521,10 @@ items:
     - name: Activation watermark continues to be displayed
       href: activation-watermark-appears.md
 
-
-- name: Allocation Failures
-  href: allocation-failure.md
+- name: Received an allocation failure
+  items:
+  - name: Allocation failures
+    href: ../windows/allocation-failure.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
 - name: VM planned maintenance
   href: /azure/virtual-machines/maintenance-notifications?context=/troubleshoot/azure/virtual-machines/windows/context/context
