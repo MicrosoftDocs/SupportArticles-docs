@@ -13,16 +13,11 @@ ms.custom: sap:zzzz
 
 **Applies to:** :heavy_check_mark: Linux VMs
 
+## Overview
+
 The Microsoft Azure Linux VM Agent is a secure, lightweight process that manages virtual machine (VM) interaction with the Azure fabric controller. The Azure Linux VM Agent has a primary role in enabling and executing Azure virtual machine extensions. VM extensions enable post-deployment configuration of VMs, such as installing and configuring software. VM extensions also enable recovery features such as resetting the administrative password of a VM. Without the Azure Linux VM Agent, you can't run VM extensions.
 
-[Add Link]()
-
-
-## Tool overview
-
-### VM assist
-
-#### Purpose  
+## Purpose  
 The Linux version of VM assist is comprised of bash and Python scripts used to detect potential issues with the Guest Agent in a Linux VM in addition to other issues related to the general health of the VM. Output is intended to be viewed in the serial console and provide pointers to solve well-known issues, as well as certain deviations from best practice which can affect VM availability. The intention is for engineers to provide this script to customers via GitHub, but it is possible and acceptable that a customer uses the script on their own and provides data through an SR.
 
 Given that the output of this script is designed to be viewed in a worst-case scenario of the Azure serial console, the information displayed is minimal and condensed, with detail provided through online resources accessed via an link provided in that output - [VM assist for Linux](https://aka.ms/vmassistlinux)
@@ -31,8 +26,10 @@ VM assist is delivered in two functional scripts - one in bash and one in python
 
 The bash script will perform some basic checks and determine if running the Python script is possible and/or necessary.
 
-#### Key features
-##### Bash checks
+## Key features
+
+### Bash checks
+
 The following checks are run in bash today:
 
 - OS family detection
@@ -43,7 +40,8 @@ The following checks are run in bash today:
 
 > If the bash script finds a python2 system the script will exit and display the information it has gathered.
 
-##### Python analysis
+### Python analysis
+
 If there are no issues uncovered during the base checks using bash, the Python script is called to perform a deeper analysis:
 
 - Find the source (package) for the Guest Agent executable and the Python passed from bash
@@ -55,7 +53,8 @@ If there are no issues uncovered during the base checks using bash, the Python s
 - Basic system configuration and status checks (#Guest best practices)
 
 
-#### Prerequisites
+## Prerequisites
+
 - VM needs to be booting to the full OS, i.e. not emergency or maintenance mode.
 - root-level access either through sudo or direct login/sudo -i
 
@@ -69,7 +68,6 @@ If you open a support request, please include both of the above files to aid you
 - Do not attempt to run VM assist on appliances - these are not general purpose operating systems, and the Guest Agent may not run at all.
 - Distributions outside of PAYG versions of RedHat or SUSE, or any Ubuntu or Mariner/Azure Linux may display false positive warnings about repository names. This will require a more careful reading as the repositories may be official but do not match strict pattern matching as we do not build cases for all distributions.
 - Ubuntu 24.04 has a differing architecture of the SSH service, and may flag the service even though it is operating fine.
-
 
 
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]

@@ -13,24 +13,19 @@ ms.custom: sap:zzzz
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
+## Overview
+
 The Microsoft Azure Windows VM Agent is a secure, lightweight process that manages virtual machine (VM) interaction with the Azure fabric controller. The Azure Windows VM Agent has a primary role in enabling and executing Azure virtual machine extensions. VM extensions enable post-deployment configuration of VMs, such as installing and configuring software. VM extensions also enable recovery features such as resetting the administrative password of a VM. Without the Azure Windows VM Agent, you can't run VM extensions.
 
-[Add Link]()
-
-
-## Tool overview
-
-### VM assist
-
-#### Purpose  
+## Purpose  
 VM assist (Windows version) is a PowerShell script intended to be used to diagnose issues with the Azure Windows VM Guest Agent in addition to other issues related to the general health of the VM. This includes various information about the system such as firewall rules, running services, running drivers, installed software, NIC settings, and installed software, and installed Windows Updates.
 
 Output of the checks can be viewed in the PowerShell window the script is ran in. Additionally running VM assist generates a detailed .htm report showing the results of each check it performs and suggests mitigations for issues it finds.
 
-#### Key features
+## Key features
 Output of the checks can be viewed in the PowerShell window the script is ran in. Additionally running VM assist generates a detailed .htm report showing the results of each check it performs and suggests mitigations for issues it finds.
 
-#### Prerequisites
+## Prerequisites
 * Windows Server 2012 R2 and later versions of Windows
 * Windows 11 or later versions of the client
 * Windows Powershell 4.0+ and PowerShell 6.0+
@@ -39,7 +34,7 @@ Output of the checks can be viewed in the PowerShell window the script is ran in
 
 You can run the tool in any of the following manners.
 
-### 1. Download from GitHub and run within the VM 
+### Option 1: Download from GitHub and run within the VM 
 
 Download the scripts from GitHub, and then run them manually. To access the scripts, follow the resource links in the previous sections.
 Please see the GitHub page to see the latest instruction for how a you can [install VM assist](https://github.com//azure/azure-support-scripts/blob/master/vmassist/windows/README.md).
@@ -54,7 +49,7 @@ Or you can specify the full URL instead of the aka.ms short link -
 ```powershell
 (Invoke-WebRequest -Uri https://raw.githubusercontent.com//azure/azure-support-scripts/master/vmassist/windows/vmassist.ps1 -OutFile vmassist.ps1) | .\vmassist.ps1
 ```
-## Manual download and run
+### Option 2: Manual download and run
 Download:
 ```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
@@ -72,7 +67,8 @@ Set-ExecutionPolicy Bypass -Force
 .\vmassist.ps1
 ```
 
-## Download from browser
+### Option 3: Download from browser
+
  1. Download the file ```vmassist.ps1``` [from a web browser.](https://github.com//azure/azure-support-scripts/blob/master/vmassist/windows/vmassist.ps1)
  1. From an elevated PowerShell window, ensure you're in the same directory that you downloaded the script to, then run the following to run the script:
  ```powershell
