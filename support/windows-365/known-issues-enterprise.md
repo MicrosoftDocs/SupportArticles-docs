@@ -4,7 +4,7 @@ description: Learn about known issues for Windows 365 Enterprise.
 manager: dcscontentpm
 ms.date: 10/29/2025
 ms.topic: troubleshooting
-ms.reviewer: japarker, satulim, scottduf
+ms.reviewer: msft-jasonparker, stulimat, scottduf
 ms.custom:
 - pcy:Onboarding issues
 - sap:WinComm User Experience
