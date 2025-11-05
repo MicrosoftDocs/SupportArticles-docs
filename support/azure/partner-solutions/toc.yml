@@ -53,4 +53,3 @@ items:
       href: log-limitations.md
     - name: Resource monitoring stopped working
       href: new-relic/resource-monitoring-troubleshoot.md
-       
