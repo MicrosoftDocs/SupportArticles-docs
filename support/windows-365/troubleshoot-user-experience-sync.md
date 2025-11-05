@@ -90,42 +90,20 @@ The Cloud Profile service is responsible for creating and attaching individual u
 
 When individual user storage becomes low or full, users may experience performance issues or be unable to save their work. Use the following solutions to address storage constraints.
 
-### Free up space in OneDrive
-
-1. Sign in to the affected Cloud PC.
-2. Open **OneDrive** from the system tray or Start menu.
-3. Review and delete unnecessary files:
-   - Old downloads
-   - Temporary files
-   - Large files that can be stored elsewhere
-4. Empty the OneDrive Recycle Bin to permanently free up space.
-
-### Configure and run Storage Sense
-
-Storage Sense automatically frees up space by removing temporary files and other unnecessary data.
-
-1. Open **Settings** > **System** > **Storage**.
-2. Turn on **Storage Sense**.
-3. Select **Configure Storage Sense or run it now**.
-4. Configure automatic cleanup settings:
-   - Choose how often to run Storage Sense
-   - Set when to delete files in the Recycle Bin
-   - Configure temporary file cleanup
-5. Select **Clean now** to immediately free up space.
-
-### Delete user storage (administrative action)
+- [Free up space in OneDrive](https://support.microsoft.com/en-us/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e)
+- Delete user storage (administrative action)
 
 > [!WARNING]
 > Deleting user storage permanently removes all user data and settings. Ensure the user has backed up important data before proceeding.
 
-Administrators can delete user storage from the Windows 365 management portal:
+  Administrators can delete user storage from the Windows 365 management portal:
 
-1. Sign in to the **Microsoft Intune admin center**.
-2. Navigate to **Devices** > **Windows 365** > **Provisioning policies**.
-3. Select the appropriate provisioning policy.
-4. Go to the **User Storage** tab.
-5. Locate the user storage to delete.
-6. Select **Delete** and confirm the action.
+  1. Sign in to the **Microsoft Intune admin center**.
+  2. Navigate to **Devices** > **Windows 365** > **Provisioning policies**.
+  3. Select the appropriate provisioning policy.
+  4. Go to the **User Storage** tab.
+  5. Locate the user storage to delete.
+  6. Select **Delete** and confirm the action.
 
 ## Recover from accidental deletions
 
@@ -152,7 +130,7 @@ When user experience data is lost due to system issues or accidental deletion:
    - Screenshots of any error messages
    - User storage policy configuration details
 
-## Common issues and solutions
+<!--## Common issues and solutions
 
 ### Issue: User experience fails to load from user storage
 
@@ -211,3 +189,4 @@ If the Cloud Profile disk is missing:
 2. **Review user storage size** - consider increasing individual storage limits
 3. **Analyze Storage Sense configuration** to ensure it's not interfering during sign-in
 4. **Monitor service health** in the Microsoft 365 service health dashboard
+-->
