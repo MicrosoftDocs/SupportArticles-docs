@@ -1,6 +1,6 @@
 ---
-title: Resolve throttling errors in agents
-description: Learn how to identify and resolve throttling errors in Microsoft Copilot Studio agents, including error codes, causes, and solutions.
+title: Resolve usage limit and agent unavailable errors in Copilot Studio agents
+description: Learn how to identify and resolve usage limit errors that occur due to quotas and limits in Microsoft Copilot Studio agents.
 ms.date: 09/09/2025
 ms.reviewer: 
   - camogas
@@ -9,38 +9,44 @@ ms.reviewer:
 ms.custom: sap:Licensing\Quotas and limits
 ---
 
-# Resolve throttling errors in agents
+# Resolve usage limit errors in agents
 
-This article describes the causes of throttling errors and how to overcome them when interacting with Copilot Studio agents.
+This article describes common throttling errors you might encounter when using Copilot Studio agents. It explains the underlying causes, which typically stem from capacity limitations or licensing constraints, and outlines solutions for resolving these issues.
 
 ## Symptoms
 
-Users might receive the following error messages when interacting with a Copilot Studio agent:
+You might receive one or more of the following error messages when interacting with an agent:
 
-- **GenAISearchandSummarizeRateLimitReached**: "The usage limit for search and summarize has been reached. Please try again later."
-
-- **GenAIToolPlannerRateLimitReached**: "The usage limit for generative orchestration has been reached. Please try again later."
-
-- **OpenAIRateLimitReached**: "Your agent reached the maximum number of generative answers responses."
+- **EnforcementMessage:** "This agent is currently unavailable. It has reached its usage limit. Please try again later."
+- **GenAISearchandSummarizeRateLimitReached:** "The usage limit for search and summarize has been reached. Please try again later."
+- **GenAIToolPlannerRateLimitReached:** "The usage limit for generative orchestration has been reached. Please try again later."
+- **OpenAIRateLimitReached:** "Your agent reached the maximum number of generative answers responses."
 
 ## Cause
 
-Copilot Studio has default constraints applied to agents that limit how often messages can be sent to the agent. These constraints exist primarily to protect against unexpected usage surges that otherwise might impact the functionality of the application.
+Copilot Studio enforces default rate and usage constraints to protect against unexpected usage surges that might affect the functionality of the application. Agent usage is measured in Copilot credits. The number of credits an agent consumes depends on the design and features of the agent. When consumption exceeds available capacity in an environment, the environment is in overage. Once overage enforcement is triggered, you see the message, "This agent is currently unavailable. It has reached its usage limit. Please try again later." For more information on credits and overage enforcement, see [Overage enforcement](/microsoft-copilot-studio/requirements-messages-management#overage-enforcement).
 
-For messages generated with the usage of generative AI and for topic orchestration, quotas limit how many requests can be sent per hour and minute per Dataverse environment. Once the limit is reached, a message is sent to the user interacting with the agent when they try to send a new message.
+For messages generated with the usage of generative AI and for topic orchestration, quotas limit the number of requests that you can send per minute and per hour. Once you reach the limit, subsequent agent messages are blocked, resulting in one of the listed symptoms. These quotas and limits apply per Dataverse environment. For more information, see [Quotas and limits for Copilot Studio](/microsoft-copilot-studio/requirements-quotas).
 
 ## Solution
 
-If you see these error messages due to reaching the agent rate limit, review your licensing model to determine how many extra capacity packs you should acquire to cover your consumption quota, or if you should change to a pay-as-you-go model. For more information about quotas and tenant billing capacity, see [Quotas and limits](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent).
+### Confirm the licensing and capacity model
 
-### Increase the rate limit
- 
-Another option is to contact Microsoft Support and request a rate limit increase. However, this option doesn't guarantee that an exception or increase is granted. Each request is subject to review and approval based on eligibility and current licensing. Requests are only assessed if the environment has pay-as-you-go for Copilot Studio. Environments operating solely on message-based functionality aren't eligible for consideration.
+Review the [Copilot Studio quotas and limits](/microsoft-copilot-studio/requirements-quotas) for the plan you're using, and compare it against your recent usage. To view consumption in the Power Platform admin center, see [View Copilot Credit consumption](/microsoft-copilot-studio/requirements-messages-management#view-copilot-credit-consumption).
 
-## Related information 
+If you reach the limits, an administrator can either:
 
-For further information on rate limits and consumption of generative answers for Copilot Studio agents, review the following documentation:
+- [Purchase additional capacity packs to cover your consumption quota](/power-platform/admin/manage-copilot-studio-messages-capacity)
+- Switch to [pay as you go billing plan](/microsoft-copilot-studio/billing-licensing#copilot-studio-pay-as-you-go)
+  > [!NOTE]
+  > Currently, only production and sandbox environments support pay-as-you-go.
 
+### Request a rate-limit increase
+
+[Contact Microsoft Support](/microsoft-copilot-studio/fundamentals-support#microsoft-support) and request a rate-limit increase. This option doesn't guarantee that an exception or increase is granted. Each request is subject to review and approval based on eligibility and current licensing. Only pay-as-you-go environments are eligible; environments operating solely on message-based functionality aren't eligible for consideration.
+
+## Related information
+
+- [Copilot Studio licensing](/microsoft-copilot-studio/billing-licensing)
 - [Quotas and limits](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent)
-
-- [Generative AI messages to an agent](/microsoft-copilot-studio/requirements-quotas#generative-ai-messages-to-an-agent)
+- [Understand agent error codes](~/power-platform/copilot-studio/authoring/error-codes.md)

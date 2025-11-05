@@ -70,3 +70,5 @@ To resolve this error, follow these steps:
         `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W32Time\Parameters`.
 
     2. Make sure the value of the **Type** registry entry is **NT5DS**. This means the computer is synchronizing its time with the AD DS time hierarchy.
+
+[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
