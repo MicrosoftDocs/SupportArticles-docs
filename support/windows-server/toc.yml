@@ -1124,6 +1124,8 @@ items:
     items:
     - name: 'Troubleshooting guidance: Event ID 5120 Cluster Shared Volume'
       href: ./high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md
+    - name: Cluster Shared Volume goes offline
+      href: ./high-availability/csv-offline-after-component-goes-offline-during-active-io.md
   - name: Errors when running the Validation Wizard
     items:
     - name: Cluster validation account causes events or messages
@@ -2606,6 +2608,8 @@ items:
       href: ./system-management-components/openssh-server-service-wont-start-error-1053.md
     - name: OpenSSH client can't connect to a server via SSH
       href: ./system-management-components/open-client-can-not-connect-server.md
+    - name: Troubleshoot common SFTP issues when using OpenSSH
+      href: ./system-management-components/troubleshoot-sftp-issues-using-openssh.md
     - name: Use "MaxStartups" and "MaxSessions" to troubleshoot OpenSSH connection issues
       href: ./system-management-components/troubleshoot-openssh-connection-issues-maxstartups-maxsessions.md
   - name: PowerShell
