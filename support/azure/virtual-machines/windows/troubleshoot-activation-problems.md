@@ -39,7 +39,7 @@ Azure uses different endpoints for Key Management Services (KMS) activation depe
 To troubleshoot a Windows activation issue, follow these steps:
 
 > [!Important]
-> If you're experiencing Azure virtual machine (VM) Windows activation issues, see [Troubleshooting tools for Windows activation issues on Azure virtual machines](../../azure/virtual-machines/windows/windows-activation-troubleshoot-tools.md).
+> If you're experiencing Azure virtual machine (VM) Windows activation issues, see [Troubleshooting tools for Windows activation issues on Azure virtual machines](windows-activation-troubleshoot-tools.md).
 
 1. Get the error message and the error code:
 
