@@ -32,7 +32,7 @@ The event occurs even though you didn't make any recent configuration, update, o
 
 When the NetLogon service restarts in mixed Windows Server environments (Windows Server 2025 and Windows Server 2022 or Windows Server 2019 DCs), Windows generates Event ID 5719. As long as the secure channel is established, this event is expected and harmless.
 
-The error occurs because of protocol differences in Kerberos authentication support. The error doesn't indicate a functional problem unless it keeps occurring in circumstances other than those that this article discusses.
+The error occurs because of protocol differences in Kerberos authentication support. The error doesn't indicate a functional problem unless it keeps occurring in circumstances other than the circumstances that this article discusses.
 
 When a Windows Server 2025 member server tries to establish a secure channel to a DC that runs Windows Server 2022 or an earlier version, it starts the connection by using the new Kerberos authentication method. Older DCs don't support this new authentication Remote Procedure Call (RPC) call. Because of this lack of support, authentication fails and Windows logs Event ID 5719. In this situation, the system automatically falls back to the legacy NetLogon method to successfully establish the secure channel.
 
