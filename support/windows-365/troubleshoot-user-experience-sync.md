@@ -79,9 +79,26 @@ In rare race conditions, when pooled user storage is *near* capacity and multipl
 
 <sup>**Figure 5:** Pooled user storage that has exceeded the policy limit</sup>
 
-#### Cloud Profile service error
+###### Exceeded tolerance period
 
-The Cloud Profile service is responsible for creating and attaching individual user storage disks. During a service issue, failure, or outage, users may experience a temporary user experience. In these scenarios, open a support case so our support engineers can:
+When pooled user storage exceeds its limit, the provisioning policy enters a tolerance period to prevent further storage growth. During this period:
+
+- **Duration**: The tolerance period lasts for **7 days** from when the exceeded condition first occurs
+- **User impact**: Existing users with individual storage can continue to sign in and access their personalized user experience
+- **New user restrictions**: New users attempting to sign in will receive a temporary user experience until storage is freed up
+- **Administrator actions**: Manually delete individual user storage or increase the Cloud PC count for the assignment
+- **Automatic resolution**: If storage usage drops below the limit during the tolerance period, normal operations resume immediately
+
+After the 7 day tolerance period expires:
+
+- **Service protection**: The service will begin deleting individual user storage starting with the oldest based on the last attach timestamp. The number of individual user storage deleted will be determined by the amount of space required for the policy to be under the policy limit.
+
+> [!NOTE]
+> Monitor your storage usage regularly and configure the [Frontline Cloud PC User Experience Sync Storage Limits](/windows-365/enterprise/alerts) alert to avoid reaching the exceeded condition. Consider increasing your storage limit before reaching capacity to ensure uninterrupted user experience.
+
+#### User Experience Sync service error
+
+The User Experience Sync service is responsible for creating and attaching individual user storage. During a service issue, failure, or outage, users may experience a temporary user experience. In these scenarios, open a support case so our support engineers can:
 
 - Determine where in the process the issue occurred
 - Identify if the issue is transient or requires service engineering work
@@ -107,11 +124,11 @@ When individual user storage becomes low or full, users may experience performan
 
 ## Recover from accidental deletions
 
-If user data or settings are accidentally deleted, follow these recovery steps.
+If individual user storage is accidentally deleted, follow these recovery steps.
 
 ### Open a support case
 
-When user experience data is lost due to system issues or accidental deletion:
+When user experience data is lost due to accidental deletion:
 
 1. **Document the issue**:
    - User affected and their email address
