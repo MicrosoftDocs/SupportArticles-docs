@@ -146,7 +146,11 @@ items:
     href: healthresources-table-resource-graph-missing-entries.md
   - name: VM availability might be inaccurate during restart
     href: inaccurate-vm-availability-during-vm-restart.md
-  
+  - name: VM stuck in failed state
+    href: vm-stuck-in-failed-state.md
+  - name: VM is unavailable for 15 minutes
+    href: azure-vm-unavailable.md
+
 - name: Cannot connect to my VM
   items:
   - name: Resolve 'ghost nic' issues
@@ -158,7 +162,7 @@ items:
       href: windows-vm-ghostednic-troubleshooting.md
   - name: Common troubleshooting support
     items:
-    - name: RDP troubleshooting
+    - name: Basic RDP troubleshooting
       href: troubleshoot-rdp-connection.md
     - name: Detailed RDP troubleshooting
       href: detailed-troubleshoot-rdp.md
@@ -634,7 +638,4 @@ items:
     href: ping-clustered-name-fail.md
   - name: Failed to get log in Boot Diagnostics
     href: failed-get-contents-log-error.md
-  - name: VM stuck in failed state
-    href: vm-stuck-in-failed-state.md
-  - name: VM is unavailable for 15 minutes
-    href: azure-vm-unavailable.md
+
