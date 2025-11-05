@@ -388,7 +388,7 @@ items:
     - name: Troubleshoot multiple certificates issues
       href: ../windows/multiple-certificates-iaas-vm-extensions.md?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
-- name: VM Extensions not operating correctly
+- name: VM Extensions
   items:
     - name: Overview
       href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/windows/context/context
