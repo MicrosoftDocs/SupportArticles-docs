@@ -25,7 +25,7 @@ The Microsoft Azure Linux VM Agent is a secure, lightweight process that manages
 #### Purpose  
 The Linux version of VM assist is comprised of bash and Python scripts used to detect potential issues with the Guest Agent in a Linux VM in addition to other issues related to the general health of the VM. Output is intended to be viewed in the serial console and provide pointers to solve well-known issues, as well as certain deviations from best practice which can affect VM availability. The intention is for engineers to provide this script to customers via GitHub, but it is possible and acceptable that a customer uses the script on their own and provides data through an SR.
 
-Given that the output of this script is designed to be viewed in a worst-case scenario of the Azure serial console, the information displayed is minimal and condensed, with detail provided through online resources accessed via an link provided in that output - [VM assist for Linux](http://aka.ms/vmassistlinux)
+Given that the output of this script is designed to be viewed in a worst-case scenario of the Azure serial console, the information displayed is minimal and condensed, with detail provided through online resources accessed via an link provided in that output - [VM assist for Linux](https://aka.ms/vmassistlinux)
 
 VM assist is delivered in two functional scripts - one in bash and one in python3, and an optional 'downloader' script.
 
@@ -65,22 +65,12 @@ The VM assist scripting is run initially from the above documentation. Subsequen
 
 If you open a support request, please include both of the above files to aid your support representative in helping you.
 
-:::image type="content" source="media/windows-azure-guest-agent-tools-vmassist/windows-azure-guest-agent-tools-vmassist-output.png" alt-text="Azure VM assist output example." lightbox="media/windows-azure-guest-agent-tools-vmassist/windows-azure-guest-agent-tools-vmassist-output.png":::   
-
 ## Known issues
 - Do not attempt to run VM assist on appliances - these are not general purpose operating systems, and the Guest Agent may not run at all.
 - Distributions outside of PAYG versions of RedHat or SUSE, or any Ubuntu or Mariner/Azure Linux may display false positive warnings about repository names. This will require a more careful reading as the repositories may be official but do not match strict pattern matching as we do not build cases for all distributions.
 - Ubuntu 24.04 has a differing architecture of the SSH service, and may flag the service even though it is operating fine.
 
-## Current list of findings/checks
 
-Here are the current list of checks/findings along with any potential internal articles that can help in case the customer needs further a
-
-
-
-### **Additional resources**
-
-- [xxxxx](/azure/virtual-machines/windows/no-internet-access-multi-ip)
 
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
 
