@@ -34,12 +34,12 @@ Azure uses different endpoints for Key Management Services (KMS) activation depe
 | Azure Germany national cloud regions | `kms.core.cloudapi.de:1688` |
 | Azure US Gov national cloud regions | `kms.core.usgovcloudapi.net:1688` |
 
-> [!NOTE]
-> `kms.core.windows.net` for Azure public cloud regions was updated to `azkms.core.windows.net` in July 2022. For more information, see [KMS endpoints - new endpoints](windows-activation-stopped-working.md).
-
 ## Troubleshoot Windows activation issues
 
 To troubleshoot a Windows activation issue, follow these steps:
+
+> [!Important]
+> If you're experiencing Azure virtual machine (VM) Windows activation issues, see [Troubleshooting tools for Windows activation issues on Azure virtual machines](../../azure/virtual-machines/windows/windows-activation-troubleshoot-tools.md).
 
 1. Get the error message and the error code:
 

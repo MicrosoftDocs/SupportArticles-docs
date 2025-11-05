@@ -17,6 +17,10 @@ metadata:
         
 title: Azure Windows virtual machine activation FAQ
 summary: This article answers frequently asked questions (FAQ) about activating a Microsoft Windows virtual machine (VM) in Azure.
+
+
+[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
+
 sections:
   - name: General
     questions:
