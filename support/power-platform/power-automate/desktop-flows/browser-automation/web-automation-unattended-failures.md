@@ -70,7 +70,7 @@ To check the browser extension installation, you can go through the **Tools** > 
 
 To work around this issue, provide more CPU resources to the machine where the flow is executed. For more information, see [Prerequisites](/power-automate/desktop-flows/requirements#prerequisites).
 
-Starting with version 2.62, Power Automate for desktop supports [WebDriver](https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/webautomation#webdriver-based-browser-automation-preview) as an alternative communication method for browser automation. WebDriver provides a more resilient communication channel that does not rely on the browser extension.
+Starting with version 2.62, Power Automate for desktop supports [WebDriver](/power-automate/desktop-flows/actions-reference/webautomation#webdriver-based-browser-automation-preview) as an alternative communication method for browser automation. WebDriver provides a more resilient communication channel that does not rely on the browser extension.
 
 ### Scenario 2: Other web automation actions fail with the "Element not found" error
 
