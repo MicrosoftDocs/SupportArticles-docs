@@ -22,7 +22,7 @@ After you deploy Zero Trust Domain Name System (ZTDNS) services, use this guidan
 - Unexpected network blocks or service disruptions
 - Network access and ZTDNS configuration issues
 
-This article shows you how to diagnose common connectivity and configuration issues, and how to use ZTDNS logs.The troubleshooting steps in this article help you maintain network security while ensuring that legitimate applications and services continue to work properly.
+This article shows you how to diagnose common connectivity and configuration issues, and how to use ZTDNS logs. The troubleshooting steps in this article help you maintain network security while ensuring that legitimate applications and services continue to work properly.
 
 ## Best practices to avoid ZTDNS issues
 
@@ -168,6 +168,6 @@ The ZTDNS folder lists three log categories. The following table describes the t
 
 | Category | Purpose | Information included | Usage |
 | - | - | - | - |
-| BlockedConnections | Contains entries that document connections that are blocked by ZTDNS. | <ul><li>Time of the blocked connection</li><li>Source IP address and port</li><li>Destination IP address and port</li><li>Name of the initiating process</li></ul> | Review this log to identify applications or services that might need exceptions. |
+| BlockedConnections | Contains entries that document the connections that ZTDNS blocks. | <ul><li>Time of the blocked connection</li><li>Source IP address and port</li><li>Destination IP address and port</li><li>Name of the initiating process</li></ul> | Review this log to identify applications or services that might need exceptions. |
 | Operational | Contains entries that document changes in the ZTDNS configuration and service state. | <ul><li>ZTDNS service status changes</li><li>Configuration changes</li><li>System events that relate to ZTDNS operations</li></ul> | Review this log to monitor the health and configuration of ZTDNS. |
 | PermittedConnections | Contains entries that document any connections that ZTDNS allows. | <ul><li>Time of the allowed connection</li><li>Source IP address and port</li><li>Destination IP address and port</li><li>Name of the initiating process</li></ul> | Review this log to verify that ZTDNS allows the expected connections.<br/><br/>**Note:** By default, this category is disabled. To use it, in the left panel, right-click **PermittedConnections**, and then select **Enable Log**. |
