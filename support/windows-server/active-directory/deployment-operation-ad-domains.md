@@ -74,57 +74,54 @@ If you use a single-label DNS name in your environment, clients might be unable 
 
 - Windows-based computers that are configured for DNS dynamic updates don't register in a single-label DNS domain. Windows logs corresponding events in the System log.
 
-### How to enable Windows-based clients to send queries and dynamic updates in single-label DNS zones
-
-By default, Windows doesn't send updates to top-level domains. However, you can change this behavior by using one of the methods in this section.
+### How to enable Windows-based clients to send queries and dynamic updates when using single-label DNS zones
 
 Consider the following configuration:
 
 - Domain member computers reside in a forest that doesn't contain any single-label DNS domains.
 - Domain controllers reside in single-label DNS domains in a different forest.
 
-By default, in these circumstances, the domain member computers don't use the DNS Server service to locate the domain controllers.
+By default, in these circumstances, the domain member computers don't use the DNS Server service to locate the domain controllers. Additionally, by default, Windows doesn't send updates to top-level domains. However, you can change these behaviors by using one of the two methods in this section.
 
-
-
-Client access to the domains that have single-label DNS names fails if NetBIOS name resolution isn't configured correctly.
+> [!IMPORTANT]  
+> Before you use either method, make sure that NetBIOS name resolution works correctly in your environment. Otherwise, clients can't access the domains that have single-label DNS names fails.
 
 #### Method 1: Use Registry Editor
 
 [!INCLUDE [registry important alert](../../../includes/registry-important-alert.md)]
 
+##### Step 1: Change the domain controller locator configuration
+
 On the Windows client computers (domain-joined, non-domain joined, or Microsoft Entra ID-joined), follow these steps
 
-1. Change the domain controller locator configuration by following these steps:
+1. In the Search box, enter regedit, and then select **Registry editor**.
+1. Locate and then select the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters` subkey.
+1. In the details pane, locate the `AllowSingleLabelDnsDomain` entry. If the entry doesn't exist, follow these steps:
+   1. Select **Edit** > **New** > **DWORD Value**.
+   1. In the **Name** box, enter **AllowSingleLabelDnsDomain**.
+1. Double-click the **AllowSingleLabelDnsDomain** entry, and then in **Value data**, enter **1**.
+1. Close Registry Editor.
 
-   1. In the Search box, enter regedit, and then select **Registry editor**.
-   1. Locate and then select the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters` subkey.
-   1. In the details pane, locate the `AllowSingleLabelDnsDomain` entry. If the entry doesn't exist, follow these steps:
-      1. Select **Edit** > **New** > **DWORD Value**.
-      1. In the **Name** box, enter **AllowSingleLabelDnsDomain**.
-   1. Double-click the **AllowSingleLabelDnsDomain** entry, and then in **Value data**, enter **1**.
-   1. Close Registry Editor.
+##### Step 2: Change the dynamic update configuration for the DNS root zone or single-label DNS zones
 
-1. Change the dynamic update configuration for the DNS root zone or single-label DNS zones by following these steps:
+Apply these changes to all domain controllers and members of domains that have single-label DNS names. If a domain that has a single-label DNS name is a forest root, apply these configuration changes to all the domain controllers in the forest. The only exceptions are the following zones, *if* they're delegated from the *ForestName* zone:
 
-   1. In the Search box, enter regedit, and then select **Registry editor**.
-   1. Locate and then select the `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient` subkey.
-   1. In the details pane, locate the `UpdateTopLevelDomainZones` entry. If the entry doesn't exist, follow these steps:
-      1. Select **Edit** > **New** > **DWORD Value**.
-      1. In the **Name** box, enter **UpdateTopLevelDomainZones**.
-   1. Double-click the **UpdateTopLevelDomainZones** entry, and then in **Value data**, enter **1**.
-   1. Close Registry Editor.
+- \_msdcs. *ForestName*
+- \_sites. *ForestName*
+- \_tcp. *ForestName*
+- \_udp. *ForestName*
 
-Apply these configuration changes to all domain controllers and members of domains that have single-label DNS names. If a domain that has a single-label DNS name is a forest root, apply these configuration changes to all the domain controllers in the forest. The only exceptions are the following zones, *if* they're delegated from the *ForestName* zone:
+Follow these steps:
 
-- _msdcs. _ForestName_
-- _sites. *ForestName*
-- _tcp. *ForestName*
-- _udp. *ForestName*
+1. In the Search box, enter regedit, and then select **Registry editor**.
+1. Locate and then select the `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient` subkey.
+1. In the details pane, locate the `UpdateTopLevelDomainZones` entry. If the entry doesn't exist, follow these steps:
+   1. Select **Edit** > **New** > **DWORD Value**.
+   1. In the **Name** box, enter **UpdateTopLevelDomainZones**.
+1. Double-click the **UpdateTopLevelDomainZones** entry, and then in **Value data**, enter **1**.
+1. Close Registry Editor, and then restart the computer.
 
-After you change the configuration of each computer, restart the computer. The changes take effect after the computer restarts.
-
-### Method 2: Use Group Policy
+#### Method 2: Use Group Policy
 
 Use Group Policy to enable the **Update Top Level Domain Zones** policy and the **Location of the DCs hosting a domain with single label DNS name** policy as specified in the following table. Configure these policies under the folder location on the root domain container in **Users and Computers**, or on all organizational units (OUs) that host computer accounts for member computers and for domain controllers in the domain.
 
@@ -153,7 +150,7 @@ To enable these policies, follow these steps on the root domain container:
 
 Check the DNS servers to make sure that root servers aren't created unintentionally. The DCpromo Wizard might create root servers. If the "." zone exists, DCpromo created a root server. For name resolution to work correctly, you might have to remove this zone.
 
-## New and modified DNS policy settings for Windows
+### New and modified DNS policy settings for Windows
 
 - **Update Top Level Domain Zones**
 
