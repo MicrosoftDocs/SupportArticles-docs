@@ -37,9 +37,9 @@ To resolve this issue, follow these steps:
     export REGISTRY_ID=$(az aks show -g ${RESOURCE_GROUP} -n ${CLUSTER_NAME} --query 'bootstrapProfile.containerRegistryId' -o tsv)
     ```
 
-1. If the issue is related to a 401 unauthorized error, you must ensure that the AKS identity has the necessary ACR role to authorize with the registry. You can do so by checking the ACR registry's role assignments to see if there is an existing role assignment for the AKS identity.
+3. If the issue is related to a 401 unauthorized error, you must ensure that the AKS identity has the necessary ACR role to authorize with the registry. You can do so by checking the ACR registry's role assignments to see if there is an existing role assignment for the AKS identity.
 
-1. To ensure that the AKS identity has permissions to the ACR registry, first obtain the AKS identity's principal ID by running the following command.
+   To ensure that the AKS identity has permissions to the ACR registry, first obtain the AKS identity's principal ID by running the following command.
 
    ```console
    export KUBELET_IDENTITY_PRINCIPAL_ID=$(az aks show -g ${RESOURCE_GROUP} -n ${CLUSTER_NAME} --query 'identityProfile.kubeletidentity.clientId' -o tsv)
@@ -67,3 +67,4 @@ To resolve this issue, follow these steps:
 - [container registry authentication managed identity](/azure/container-registry/container-registry-authentication-managed-identity)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
