@@ -14,7 +14,7 @@ appliesto:
 ---
 # Configuring Active Directory domains that use single-label DNS names
 
-This article provides information about the deployment and operation of Active Directory (AD DS) domains that use single-label DNS names.
+This article provides information about the deployment and operation of Active Directory Domain Services (AD DS) domains that use single-label DNS names.
 
 _Original KB number:_ &nbsp; 300684
 
@@ -23,10 +23,10 @@ This article provides application compatibility information for scenarios in whi
 For the following reasons, create new Active Directory domains that have fully qualified DNS names:
 
 - You can't use an internet registrar to register single-label DNS names.
-- When joined to single-label domains, client computers (both domain-joined and non-domain joined) and domain controllers require additional configuration to dynamically register DNS records in single-label DNS zones.
-- Client computers and domain controllers might require additional configuration to resolve DNS queries in single-label DNS zones.
+- When joined to single-label domains, client computers (both domain-joined and non-domain joined) and domain controllers require extra configuration to dynamically register DNS records in single-label DNS zones.
+- Client computers and domain controllers might require extra configuration to resolve DNS queries in single-label DNS zones.
 - Some server-based applications are incompatible with single-label domain names. Newly released applications might not support single-label DNS names, and applications that support single-label DNS names might drop that support in the future.
-- Transitioning from a single-label DNS domain name to a fully qualified DNS name is non-trivial and consists of two options:
+- Transitioning from a single-label DNS domain name to a fully qualified DNS name is nontrivial and consists of two options:
 
   - [Migrate](https://www.microsoft.com/download/details.aspx?id=19188) users, computers, groups, and other states to a new forest.
   - Rename the existing domain.
@@ -45,7 +45,7 @@ Best-practice Active Directory domain names consist of one or more subdomains th
 - contoso.com
 - corp.contoso.com
 
-The top-level domain occupies the rightmost label in a domain name. A large number of top-level domains are available. Common top-level domains include the following:
+The top-level domain occupies the rightmost label in a domain name. A large number of top-level domains are available. Common top-level domains include the following examples:
 
 - .com
 - .net
@@ -93,7 +93,7 @@ Client access to the domains that have single-label DNS names fails if NetBIOS n
 
 [!INCLUDE [registry important alert](../../../includes/registry-important-alert.md)]
 
-On the Windows client computers (domain-joined, non-domain joined, or Entra ID-joined), follow these steps
+On the Windows client computers (domain-joined, non-domain joined, or Microsoft Entra ID-joined), follow these steps
 
 1. Change the domain controller locator configuration by following these steps:
 
@@ -161,7 +161,7 @@ Check the DNS servers to make sure that root servers aren't created unintentiona
 
   | Value | Name | Description |
   | --------- | - | --------- |
-  | 0x1 | Enabled | Computers can try to update the TopLevelDomain zones. If you enable the `UpdateTopLevelDomainZones` setting, computers send dynamic updates to any zone that is authoritative for the resource records that the computer must update, except for the root zone.  |
+  | 0x1 | Enabled | Computers can try to update the TopLevelDomain zones. If you enable the `UpdateTopLevelDomainZones` setting, computers send dynamic updates to any zone that's authoritative for the resource records that the computer must update, except for the root zone. |
   | 0x0 | Disabled | Computers can't try to update the TopLevelDomain zones. If you disable this setting, computers don't send dynamic updates to the root zone or to the top-level domain zones that are authoritative for the resource records that the computer must update. If you don't configure this setting, the policy isn't applied to any computers, and computers use their local configuration. |
 
 - **Register PTR Records**
