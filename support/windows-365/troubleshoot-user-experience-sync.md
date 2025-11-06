@@ -17,16 +17,17 @@ ms.collection:
 
 This article provides troubleshooting steps for the most common issues related to User Experience Sync in Windows 365 Frontline shared mode environments.
 
-## Limitations
+## Common support scenarios
 
-- Custom data locations can't be excluded from per-user storage
-- User installed applications will not persist between different devices
-- Disaster recovery or user storage move options are not available
-- When an assignment is removed, it deletes all user storage and can't be recovered
+This section provides detailed information for common support scenarios.
 
-## Users receive a warning about a temporary user experience
+### Users receive a warning about a temporary user experience
 
 In certain scenarios, users may receive a temporary user experience (temporary profile). The Cloud Profile agent is the first to notify the user about this temporary experience. After the desktop loads, Windows displays another notification stating, "We can't sign into your account".
+
+> [!NOTE]
+>
+> A temporary profile is a non-persistent Windows user profile created when the system cannot load or create the user's regular profile. The temporary profile provides basic functionality but any changes made during the session (settings, files, customizations) are discarded when the user signs out. Users will see a notification that they're signed in with a temporary profile, and their desktop and Start menu will appear with default Windows settings rather than their personalized configuration.
 
 :::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-temp-profile-agent.png" alt-text="Figure 1: Cloud Profile agent temporary user experience warning":::
 
@@ -35,8 +36,6 @@ In certain scenarios, users may receive a temporary user experience (temporary p
 :::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-temp-profile-windows.png" alt-text="Figure 2: Windows can't sign in warning":::
 
 <sup>**Figure 2:** Windows can't sign in warning</sup>
-
-### Possible causes
 
 #### Individual user storage failed to attach to their session
 
@@ -51,6 +50,8 @@ Both processes require the Cloud Profile service to attach a disk to the device 
 - A Cloud Profile service error
 
 ##### Pooled user storage has exceeded the total allocated size
+
+User Experience Sync provides a limited amount pooled user storage based on a [storage calculation](/windows-365/enterprise/frontline-user-experience-sync).
 
 ###### Understanding storage allocation
 
@@ -138,7 +139,7 @@ If individual user storage is accidentally deleted, follow these recovery steps.
 When user experience data is lost due to accidental deletion:
 
 1. **Document the issue**:
-   - User affected and their email address
+   - User affected and their user principal name
    - Date and time when the data loss occurred
    - Specific data or settings that were lost
    - Any error messages received
@@ -153,3 +154,20 @@ When user experience data is lost due to accidental deletion:
    - Event logs from the affected Cloud PC
    - Screenshots of any error messages
    - User storage policy configuration details
+
+## Monitoring and current limitation
+
+### User Experience Sync monitoring
+
+Monitor User Experience Sync through:
+
+- Microsoft Intune [alerts](/windows-365/enterprise/alerts)
+- User Storage tab in provisioning policies
+- Connected Frontline Cloud PCs [reports](/windows-365/enterprise/report-connected-frontline-cloud-pcs)
+
+### Current limitations
+
+- Custom data locations can't be excluded from per-user storage
+- User installed applications will not persist between different devices
+- Disaster recovery or user storage move options are not available
+- When an assignment is removed, it deletes all user storage and can't be recovered
