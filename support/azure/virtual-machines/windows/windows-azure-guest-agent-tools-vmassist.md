@@ -9,21 +9,19 @@ ms.reviewer: v-jsitser, scotro, v-ryanberg
 ms.service: azure-virtual-machines
 ms.custom: sap:zzzz
 ---
-#  Troubleshooting Tool for Windows Guest Agent - VM assist
+#  Troubleshooting tool for Windows guest agent: VM assist
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
 ## Overview
 
-The Microsoft Azure Windows VM Agent is a secure, lightweight process that manages virtual machine (VM) interaction with the Azure fabric controller. The Azure Windows VM Agent has a primary role in enabling and executing Azure virtual machine extensions. VM extensions enable post-deployment configuration of VMs, such as installing and configuring software. VM extensions also enable recovery features such as resetting the administrative password of a VM. Without the Azure Windows VM Agent, you can't run VM extensions.
+The Microsoft Azure Windows VM Agent is a secure, lightweight process that manages virtual machine (VM) interaction with the Azure fabric controller. The Azure Windows VM Agent has a primary role in enabling and running Azure VM extensions. VM extensions enable post-deployment configuration of VMs, such as installing and configuring software. VM extensions also enable recovery features, such as resetting the administrative password of a VM. Without the Azure Windows VM Agent, you can't run VM extensions.
 
 ## Purpose  
-VM assist (Windows version) is a PowerShell script intended to be used to diagnose issues with the Azure Windows VM Guest Agent in addition to other issues related to the general health of the VM. This includes various information about the system such as firewall rules, running services, running drivers, installed software, NIC settings, and installed software, and installed Windows Updates.
-
-Output of the checks can be viewed in the PowerShell window the script is ran in. Additionally running VM assist generates a detailed .htm report showing the results of each check it performs and suggests mitigations for issues it finds.
+VM assist (Windows version) is a PowerShell script that's intended to be used to diagnose issues that affect the Azure Windows VM Agent in addition to other issues that are related to the general health of the VM. This diagnosis includes such information about the system as firewall rules, running services, running drivers, installed software, network adapter settings, installed software, and installed Windows Updates.
 
 ## Key features
-Output of the checks can be viewed in the PowerShell window the script is ran in. Additionally running VM assist generates a detailed .htm report showing the results of each check it performs and suggests mitigations for issues it finds.
+You can view output from the checks in the PowerShell window that the script is run in. Additionally, running VM assist generates a detailed .htm report that shows the results of each check that it performs. The tool also suggests mitigations for the issues that it finds.
 
 ## Prerequisites
 * Windows Server 2012 R2 and later versions of Windows
@@ -37,31 +35,39 @@ You can run the tool in any of the following manners.
 ### Option 1: Download from GitHub and run within the VM 
 
 Download the scripts from GitHub, and then run them manually. To access the scripts, follow the resource links in the previous sections.
-Please see the GitHub page to see the latest instruction for how a you can [install VM assist](https://github.com//azure/azure-support-scripts/blob/master/vmassist/windows/README.md).
+Please see the GitHub page to see the latest instruction to [install VM assist](https://github.com//azure/azure-support-scripts/blob/master/vmassist/windows/README.md).
 
-RDP into the VM and from an elevated PowerShell window run the following to download and run the script: 
+RDP into the VM, open an elevated PowerShell window, and then run the following code to download and run the script: 
+
 ```powershell
 Set-ExecutionPolicy Bypass -Force
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 (Invoke-WebRequest -Uri https://aka.ms/vmassist -OutFile vmassist.ps1) | .\vmassist.ps1
 ```
-Or you can specify the full URL instead of the aka.ms short link - 
+
+Alternatively, you can specify the full URL instead of the aka.ms short link:
+
 ```powershell
 (Invoke-WebRequest -Uri https://raw.githubusercontent.com//azure/azure-support-scripts/master/vmassist/windows/vmassist.ps1 -OutFile vmassist.ps1) | .\vmassist.ps1
 ```
-### Option 2: Manual download and run
+
+### Option 2: Manually download and run
+
 Download:
+
 ```powershell
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 Invoke-WebRequest -Uri https://raw.githubusercontent.com//azure/azure-support-scripts/master/vmassist/windows/vmassist.ps1 -OutFile vmassist.ps1
 ```
-Or you can specify the full URL instead of the aka.ms short link - 
+
+Alternatively, you can specify the full URL instead of the aka.ms short link:
 
 ```powershell
 Invoke-WebRequest -Uri https://raw.githubusercontent.com//azure/azure-support-scripts/master/vmassist/windows/vmassist.ps1 -OutFile vmassist.ps1
 ```
 
 Run the script:
+
 ```powershell
 Set-ExecutionPolicy Bypass -Force
 .\vmassist.ps1
@@ -69,63 +75,60 @@ Set-ExecutionPolicy Bypass -Force
 
 ### Option 3: Download from browser
 
- 1. Download the file ```vmassist.ps1``` [from a web browser.](https://github.com//azure/azure-support-scripts/blob/master/vmassist/windows/vmassist.ps1)
- 1. From an elevated PowerShell window, ensure you're in the same directory that you downloaded the script to, then run the following to run the script:
+ 1. Download the ```vmassist.ps1``` file [from a web browser](https://github.com//azure/azure-support-scripts/blob/master/vmassist/windows/vmassist.ps1).
+ 1. In an elevated PowerShell window, make sure that you're in the same directory that you downloaded the script to, and then run the following code to run the script:
+
  ```powershell
 Set-ExecutionPolicy Bypass -Force
 .\vmassist.ps1
  ```
 
 ## Analyzing output
-The script will run a series of checks to analyze the health of the VM Guest Agent and check for various known configurations that could cause issues. Each check will either pass or fail in the PowerShell window. 
 
-Once completed, it will also generate a log file and an html report:
+The script runs a series of checks to analyze the health of the VM Guest Agent and look for various known configurations that could cause issues. Each check either passes or fails in the PowerShell window. 
+
+After the script finishes running, it also generates a log file and an html report:
  
-```
+```console
     C:\logs\vmassist_*.log
     C:\logs\vmassist_*.htm
  ```
-The `.log` file will have a copy of the results that are displayed in the PowerShell window for later reference.
 
-The `.htm` file is a report that shows all of the checks and findings along with information on how to mitigate any issues it found. It will also have additional information about the OS and the VM that can further assist in troubleshooting any issues that are found.
+The `.log` file have a copy of the results that are displayed in the PowerShell window for later reference.
 
-If you open a support request, please include both of the above files to aid your support representative in helping you.
+The `.htm` file is a report that shows all the checks and findings together with information about how to mitigate the issues it finds. It will also have additional information about the OS and the VM that can further assist you to troubleshoot any issues.
+
+If you open a support request, please include both of these log files to aid your support representative.
 
 :::image type="content" source="media/windows-azure-guest-agent-tools-vmassist/windows-azure-guest-agent-tools-vmassist-output.png" alt-text="Azure VM assist output example." lightbox="media/windows-azure-guest-agent-tools-vmassist/windows-azure-guest-agent-tools-vmassist-output.png":::   
 
-## Current list of findings/checks
+## Current list of checks and findings
 
-Here are the current list of checks/findings along with any potential documentation to help understand the issue being detected.
+The following table lists the current checks and findings together with any potential documentation to help you understand the issue that's detected.
 
 | Checks | Details |
 |--------|---------|
-| Check for Folder| Validates that the folder C:\WindowsAzure folder exists and is also used to help determine that the Guest Agent was installed.<br><br>If this doesn't exist then its likely that the guest agent needs to be installed. |
-| Check for binaries | Validates that the guest agent .exes (WindowsAzureGuestAgent.exe and WaAppAgent.exe) exist and is also used to help determine that the Guest Agent was installed.<br><br>If this doesn't exist then its likely that the guest agent needs to be installed. |
-| Status of agent services | Validates that the guest agent services (WindowsAzureGuestAgent and RdAgent) exist and is also used to help determine that the Guest Agent was installed.<br><br>If this doesn't exist then its likely that the guest agent needs to be installed. If they do exist then ensure they're set to `Running` and ideally their StartType will be set to `Automatic` |
-| Status of `winmgmt` service | Validates that the winmgmt service is running. |
-| Status of `KeyIso` service | Validates that the `KeyIso (CNG Key Isolation)` service is running.<br><br> See this [Needs to be Public](windows-azure-guest-agent#remote-procedure-call-rpc-issues---rdcrypt-initialization-failed)  for more details. |
-| Check if agent services/processes have crashed | This checks if the Guest Agent services/processes have crashed in the last day. If its just a one off crash, then it may not be important unless it happens right when the issue is reported. On the other hand, if its constantly crashing then it needs to be investigated.<br><br>First look in the WaAppAgent.log and System/Application event logs. |
-| Checks if `stdregprov` is working | The VM agent MSI uses WMI StdRegProv to access the registry. If WMI is not working properly the MSI cannot set the RdAgent service path from the registry and the MSI install fails. <br><br> See this [Guest Agent installation fails because of faulty WMI](windows-azure-guest-agent#guest-agent-installation-fails-because-of-faulty-wmi) for more details. |
-| Agent is installed | Returns True if the guest Agent is installed. If its not installed then the guest agent needs to be installed. |
-| Installed by PA or MSI | This checks if the Guest Agent was installed by the provisioning agent or manually via .MSI. Neither of these options are `wrong`, but its included for informational purposes. |
-| Supported version | Checks that they are using an up to date, supported version of the Guest Agent. |
-| Proxy | Checks for netsh proxies. This doesn't check for the existance of *all* type of proxy on the system. For example, it doesn't check if there is a `3rd party proxy application` installed. <br><br>If there are wireserver connectivity issues you can start troubleshooting with the [Troubleshooting 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16#troubleshoot-connectivity). |
-| CRP cert exists and is valid | Checks that the CRP "Windows Azure CRP Certificate Generator" certificate exists. This certificate is there to secure the communication with the host, and transfer protected settings used by extensions.<br><br> See this [Troubleshoot extension certificate issues on a Windows VM in Azure](troubleshoot-extension-certificates-issues-windows-vm.md) for more details. |
-| WCF debugging | This may occur if Windows Communication Framework (WCF) profiling is enabled. WCF profiling should only be enabled while debugging a WCF issue. It should not be left enabled while running a production workload.<br><br> See this [Windows Azure Guest Agent service or the RdAgent service stops responding on startup (WCF)](windows-azure-guest-agent#windows-azure-guest-agent-service-or-the-rdagent-service-stops-responding-on-startup) for more details. |
-| Wireserver (168.63.129.16) connectivity on 80, 32526, and REST API | If there are wireserver connectivity issues you can start troubleshooting with the [Troubleshooting 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16#troubleshoot-connectivity). |
-| IMDS connectivity | IMDS connectivity is not required for the Guest Agent to work, but the Guest Agent does try to connect so you may see errors in the logs. Additionally VM assist itself gets information on the VM from IMDS to populate some sections of the .HTML file.<br><br>So not having connectivity to IMDS will not break the Guest Agent, start with the [Troubleshooting tool for Azure VM Instance Metadata Service issues](windows-vm-imds-tool.md). |
-| Third-party modules in WaAppAgent and WindowsAzureGuestAgent | Other applications occasionally inject their .dlls into the Guest Agent process. Most of the time it will not cause the Guest Agent to fail. However, it is possible that these .dlls can cause unexpected failures in the Guest Agent that are difficult to debug. Although it is relatively rare that these cause an issue, if any of these .dlls are from unexpected applications injected, consider remove/reconfigure the application so that it no longer injects its .dlls into the Guest Agnet process(es). |
+| Check for Folder| Verifies that the C:\WindowsAzure folder exists. Also used to help determine whether the Guest Agent is installed.<br><br>If this check doesn't exist, it's likely that the Guest agent has to be installed. |
+| Check for binaries | Verifies that the guest agent .exes (WindowsAzureGuestAgent.exe and WaAppAgent.exe) exist and is also used to help determine that the Guest Agent was installed.<br><br>If this check doesn't exist then its likely that the guest agent has to be installed. |
+| Status of agent services | Verifies that the guest agent services (WindowsAzureGuestAgent and RdAgent) exist and is also used to help determine that the Guest Agent was installed.<br><br>If this check doesn't exist, it's likely that the guest agent has to be installed. If they do exist then ensure they're set to `Running` and ideally their StartType will be set to `Automatic` |
+| Status of `winmgmt` service | Verifies that the winmgmt service is running. |
+| Status of `KeyIso` service | Verifies that the `KeyIso (CNG Key Isolation)` service is running.<br><br> See this [Needs to be Public](windows-azure-guest-agent#remote-procedure-call-rpc-issues---rdcrypt-initialization-failed)  for more details. |
+| Check if agent services/processes have crashed | This checks whether the Guest Agent services and processes have failed during the past day. If the incident is only a one-time event, it might not be important unless it occurs at the time when the issue is reported. However, if the services constantly fail, the incident must be investigated.<br><br>Start the investigation by looking in the WaAppAgent.log and system and application event logs. |
+| Checks if `stdregprov` is working | The VM agent MSI uses WMI StdRegProv to access the registry. If WMI is not working correctly, the MSI cannot set the RdAgent service path from the registry, and the MSI installation fails. <br><br> See [Guest Agent installation fails because of faulty WMI](windows-azure-guest-agent#guest-agent-installation-fails-because-of-faulty-wmi). |
+| Agent is installed | Returns True if the guest agent is installed. Otherwise, the guest agent has to be installed. |
+| Installed by PA or MSI | This check determines whether the guest agent was installed by the provisioning agent or manually through .MSI. Neither of these options are `wrong`. However, it's included for information. |
+| Supported version | Checks whether the Azure Guest Agent version is up to date and supported. |
+| Proxy | Checks for netsh proxies. This check doesn't look for the existance of *all* types of proxy on the system. For example, it doesn't check whether a `3rd party proxy application` is installed. <br><br>If wireserver connectivity issues exist, you can start troubleshooting by using [Troubleshooting 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16#troubleshoot-connectivity). |
+| CRP cert exists and is valid | Checks whether the CRP "Windows Azure CRP Certificate Generator" certificate exists. This certificate secures the communication with the host, and transfers protected settings that are used by extensions.<br><br> See [Troubleshoot extension certificate issues on a Windows VM in Azure](troubleshoot-extension-certificates-issues-windows-vm.md). |
+| WCF debugging | This check might run if Windows Communication Framework (WCF) profiling is enabled. WCF profiling should be enabled only while debugging a WCF issue. It should not be left enabled while running a production workload.<br><br> See [Windows Azure Guest Agent service or the RdAgent service stops responding on startup (WCF)](windows-azure-guest-agent#windows-azure-guest-agent-service-or-the-rdagent-service-stops-responding-on-startup). |
+| Wireserver (168.63.129.16) connectivity on 80, 32526, and REST API | If wireserver connectivity issues exist, you can start troubleshooting by using [Troubleshooting 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16#troubleshoot-connectivity). |
+| IMDS connectivity | IMDS connectivity is not required for the guest agent to work, but the guest agent does try to connect. Therefore, you might see error entriess in the logs. Additionally, VM assist itself gets information about the VM from IMDS to populate some sections of the .HTML file.<br><br>Not having connectivity to IMDS doesn't break the Guest Agent. See [Troubleshooting tool for Azure VM Instance Metadata Service issues](windows-vm-imds-tool.md). |
+| Third-party modules in WaAppAgent and WindowsAzureGuestAgent | Other applications occasionally inject their DLLs into the Guest Agent process. Usually, this behavior doesn't cause the guest agent to fail. However, DLLs might cause unexpected failures in the Guest Agent that are difficult to debug. Although it is relatively rare that these cause an issue, if any of these .dlls are from unexpected applications injected, consider remove/reconfigure the application so that it no longer injects its .dlls into the Guest Agnet process(es). |
 | Checks permissions on machineKeys folder | Checks to see that the default permissions are in place on `C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys`. If improper permissions are applied that block access then the Guest Agent itself may be 'Ready', but extensions that use protected settings won't work.<br><br> See this [PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86](windows-azure-guest-agent#pinvoke-pfximportcertstore-failed-and-null-handle-is-returned-error-code-86) for more details. |
-| Checks permissions on `C:\WindowsAzure` and `C:\Packages` | Validates that the System account has access to these directories. These directories are what the Guest Agent and extensions use for their binaries, config files, and log files, so its important the System account has access. |
-| Sufficient disk space |This checks for available disk space. If the disk space is completely filled then the Guest Agent may not be able to write its status file, update, install extensions, etc. Please either need to delete files or expand their disk. |
-| DHCP IP | If there is one private IP on the VM's NIC, then we highly recommend having DHCP enabled in the guest VM. If they need a static private IP address, they should [configure it through the Azure portal or PowerShell](/azure/virtual-network/ip-services/virtual-networks-static-private-ip-arm-ps), and make sure the DHCP option inside the VM is enabled. This will ensure that the IP configuration will always match what is configured on the VM in Azure.<br><br>If they have multiple private IPs assigned to their VM's NIC, then ensure that they followed the steps to [statically assign the IPs correctly](/azure/virtual-network/ip-services/virtual-network-multiple-ip-addresses-portal#os-config). After this, if the Guest Agent isn't able to communicate with 168.63.129.16, then check that the primary IP in Windows [matches the primary IP in their VM's NIC in Azure](no-internet-access-multi-ip.md). |
-
+| Checks permissions on `C:\WindowsAzure` and `C:\Packages` | Verifies that the System account has access to these directories. These directories are what the guest agent and extensions use for their binaries, configuration files, and log files. Therefore, it's important that the System account has access. |
+| Sufficient disk space |This check looks for available disk space. If the disk space is completely filled, the guest agent might not be able to write its status file, update, install extensions, and so on. In this situation, you must either delete files or expand the disk capacity. |
+| DHCP IP | If one private IP exists on the VM's network adapter, we highly recommend that you have DHCP enabled on the guest VM. If a static private IP address is needed, [configure it through the Azure portal or PowerShell](/azure/virtual-network/ip-services/virtual-networks-static-private-ip-arm-ps). Make sure that the DHCP option inside the VM is enabled. This makes sure that the IP configuration always matches the VM configuration in Azure.<br><br>If multiple private IPs are assigned to the VM's natwork adapter, make sure that you follow these steps to [statically assign the IPs correctly](/azure/virtual-network/ip-services/virtual-network-multiple-ip-addresses-portal#os-config). After you perform this procedure, if the guest agent can't communicate with 168.63.129.16, check whether the primary IP in Windows [matches the primary IP in the VM's network adapter in Azure](no-internet-access-multi-ip.md). |
 
 [!INCLUDE [azure-help-support](~/includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party contact disclaimer](~/includes/third-party-contact-disclaimer.md)]
-
-
-
-
-
