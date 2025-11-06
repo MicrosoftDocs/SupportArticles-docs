@@ -17,7 +17,7 @@ appliesto:
 
 ## Summary
 
-When attempting to connect to Windows Update, you might encounter error 0x80072f8f. This error usually indicates issues with SSL negotiation due to out-of-sync clock settings or untrusted SSL certificates. 
+When trying to connect to Windows Update, you encounter error 0x80072f8f. This error usually indicates issues with SSL negotiation due to out-of-sync clock settings or untrusted SSL certificates. 
 
 :::image type="content" source="./media/troubleshoot-windows-update-error-0x80072f8f/updateerror0x80072f8f-wusaerror.png" alt-text="Windows Update error 0x80072f8f" lightbox="media/troubleshoot-windows-update-error-0x80072f8f/updateerror0x80072f8f-wusaerror.png":::
 
@@ -62,11 +62,11 @@ When you check for updates from Windows Update, there's no progress. The `Window
 
 ## Root cause
 
-The error 0x80072f8f is usually caused by one of the following issues:
+This error is usually caused by one of the following issues:
 
 - **Out-of-sync clock**: If the clock settings on the computer are incorrect, SSL negotiation fails. You can quickly verify clock accuracy from `WindowsUpdate.log` that always prints traces in local time.
 - **Untrusted SSL certificate**: In managed scenarios with Windows Server Update Services (WSUS) or Configuration Manager configured over SSL with self-generated or signed SSL certificates, if the client doesn't trust the certificate chain, the scan fails.
 
 ## Resolution
 
-Perform an [in-place upgrade](/azure/virtual-machines/windows-in-place-upgrade) on the Windows virtual machine.
+Perform an [in-place upgrade](/azure/virtual-machines/windows-in-place-upgrade) on the Windows virtual machine (VM).
