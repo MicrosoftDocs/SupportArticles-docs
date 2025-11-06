@@ -17,6 +17,13 @@ ms.collection:
 
 This article provides troubleshooting steps for the most common issues related to User Experience Sync in Windows 365 Frontline shared mode environments.
 
+## Limitations
+
+- Custom data locations can't be excluded from per-user storage
+- User installed applications will not persist between different devices
+- Disaster recovery or user storage move options are not available
+- When an assignment is removed, it deletes all user storage and can't be recovered
+
 ## Users receive a warning about a temporary user experience
 
 In certain scenarios, users may receive a temporary user experience (temporary profile). The Cloud Profile agent is the first to notify the user about this temporary experience. After the desktop loads, Windows displays another notification stating, "We can't sign into your account".
