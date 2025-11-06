@@ -130,8 +130,8 @@ Now, create a VM with [az vm create](/cli/azure/vm) and specify the cloud-init f
 ```azurecli-interactive
 az vm create \
   --resource-group myResourceGroup \
-  --name centos74 \
-  --image OpenLogic:CentOS:7-CI:latest \
+  --name redhat810 \
+  --image  RedHat:RHEL:8_10:latest \
   --custom-data cloud_init_swappart.txt \
   --generate-ssh-keys 
 ```
@@ -154,7 +154,7 @@ The output from this command should look like this:
 
 ```output
 Filename                Type        Size    Used    Priority
-/dev/sdb2  partition   2494440 0   -1
+/dev/sdb2             partition   2494440     0      -1
 ```
 
 > [!NOTE]
