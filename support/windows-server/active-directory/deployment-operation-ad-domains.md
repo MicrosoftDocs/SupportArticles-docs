@@ -1,5 +1,5 @@
 ---
-title: Configuring Active Directory Domains that Use Single-label DNS Names
+title: Best Practices for Active Directory Domains that Use Single-label DNS Names
 description: This article provides information about the deployment and operation of Windows member computers and domain controllers that are joined to Active Directory domains use single-label DNS names.
 ms.date: 11/06/2025
 manager: dcscontentpm
@@ -12,7 +12,7 @@ ms.custom:
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Configuring Active Directory domains that use single-label DNS names
+# Best practices for Active Directory domains that use single-label DNS names
 
 ## Summary
 
