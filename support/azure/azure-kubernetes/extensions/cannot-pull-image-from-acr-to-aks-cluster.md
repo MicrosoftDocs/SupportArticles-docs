@@ -12,7 +12,7 @@ ms.custom: sap:Extensions, Policies and Add-Ons, devx-track-azurecli
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
-When you're using Microsoft Azure Container Registry together with Azure Kubernetes Service (AKS), an authentication mechanism must be established. You can set up the AKS to Container Registry integration by using a few simple Azure CLI or Azure PowerShell commands. This integration assigns the [AcrPull role](/azure/role-based-access-control/built-in-roles#acrpull) for the kubelet identity that's associated with the AKS cluster to pull images from a container registry.
+When you're using Microsoft Azure Container Registry together with Azure Kubernetes Service (AKS), an authentication mechanism must be established. You can set up the AKS to Container Registry integration by using a few simple Azure CLI or Azure PowerShell commands. This integration assigns either the [Container Registry Repository Reader role](/azure/role-based-access-control/built-in-roles#container-registry-repository-reader) (for ABAC-enabled registries) or the [AcrPull role](/azure/role-based-access-control/built-in-roles#acrpull) (for non-ABAC-enabled registries) for the kubelet identity that's associated with the AKS cluster to pull images from a container registry. Please see https://aka.ms/acr/auth/abac for more information on the necessary ACR role to assign based on whether your ACR registry is ABAC-enabled.
 
 In some cases, trying to pull images from a container registry to an AKS cluster fails. This article provides guidance for troubleshooting the most common errors that you encounter when you pull images from a container registry to an AKS cluster.
 
@@ -23,7 +23,6 @@ This article assumes that you have an existing AKS cluster and an existing conta
 - If you need an AKS cluster, deploy one by using [the Azure CLI](/azure/aks/kubernetes-walkthrough) or [the Azure portal](/azure/aks/kubernetes-walkthrough-portal).
 
 - If you need an Azure Container Registry (ACR), create one by using [the Azure CLI](/azure/container-registry/container-registry-get-started-azure-cli) or [the Azure portal](/azure/container-registry/container-registry-get-started-portal).
-
 
 You also need Azure CLI version 2.0.59 or a later version to be installed and configured. Run [az version](/cli/azure/reference-index#az-version) to determine the version. If you have to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
@@ -72,11 +71,15 @@ Several solutions can help you resolve this error, subject to the following cons
 
 - Solutions [5][cause1-solution5] and [6][cause1-solution6] are applicable for the Kubernetes method of [pulling a Kubernetes secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
 
-#### Solution 1: Make sure AcrPull role assignment is created for identity
+#### Solution 1: Make sure the correct ACR role assignment is created for identity
 
-The integration between AKS and Container Registry creates an AcrPull role assignment at container registry level for the AKS cluster's kubelet identity. Make sure that the role assignment is created.
+The integration between AKS and Container Registry creates the correct role assignment at container registry level for the AKS cluster's kubelet identity.
 
-To check whether the AcrPull role assignment is created, use one of the following methods:
+> [!NOTE]
+> Make sure that the correct role assignment is created (`Container Registry Repository Reader` for ABAC-enabled regisries, and `AcrPull` for non-ABAC-enabled registries).
+> Please see https://aka.ms/acr/auth/abac for more information on the correct ACR role needed based on whether the registry is ABAC-enabled or not.
+
+To check whether the correct ACR role assignment exists, use one of the following methods:
 
 - Run the following command:
 
@@ -86,13 +89,17 @@ To check whether the AcrPull role assignment is created, use one of the followin
 
 - Check in the Azure portal by selecting **Azure Container Registry** > **Access control (IAM)** > **Role assignments**. For more information, see [List Azure role assignments using the Azure portal](/azure/role-based-access-control/role-assignments-list-portal).
 
-Besides the AcrPull role, some [built-in roles](/azure/role-based-access-control/built-in-roles) and [custom roles](/azure/role-based-access-control/custom-roles) can also contain the "[Microsoft.ContainerRegistry](/azure/role-based-access-control/resource-provider-operations#microsoftcontainerregistry)/registries/pull/read" action. Check those roles if you've got any of them.
+Besides either the `Container Registry Repository Reader` role (for ABAC-enabled registries) and `AcrPull` role (for non-ABAC-enabled registries), some [built-in roles](/azure/role-based-access-control/built-in-roles) and [custom roles](/azure/role-based-access-control/custom-roles) can also contain the necessary Entra permissions for image pull. Check those roles if you've got any of them.
 
-If the AcrPull role assignment isn't created, create it by [configuring Container Registry integration for the AKS cluster](/azure/aks/cluster-container-registry-integration?tabs=azure-cli#configure-acr-integration-for-existing-aks-clusters) with the following command:
+If either the `Container Registry Repository Reader` role (for ABAC-enabled registries) or `AcrPull` role (for non-ABAC-enabled registries) don't exist, you can create the role assignment.
+
+For non-ABAC-enabled registries, you can assign the `AcrPull` role with the following command:
 
 ```azurecli
 az aks update -n <myAKSCluster> -g <myResourceGroup> --attach-acr <acr-resource-id>
 ```
+
+For ABAC-enabled registries, the `az aks --attach-acr` command does not support adding the `Container Registry Repository Reader` role. You must manually assign this role to the AKS kubelet identity with either the Azure Portal or the `az role assignment` CLI commands.
 
 #### Solution 2: Make sure service principal isn't expired
 
@@ -109,7 +116,7 @@ For more information, see [Check the expiration date of your service principal](
 
 If the secret is expired, [update the credentials for the AKS cluster](/azure/aks/update-credentials).
 
-#### Solution 3: Make sure AcrPull role is assigned to correct service principal
+#### Solution 3: Make sure the correct ACR role is assigned to correct service principal
 
 In some cases, the container registry role assignment still refers to the old service principal. For example, when the service principal of the AKS cluster is replaced with a new one. To make sure that the container registry role assignment refers to the correct service principal, follow these steps:
 
@@ -396,9 +403,9 @@ If the troubleshooting guidance in this article doesn't help you resolve the iss
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
-[cause1-solution1]: #solution-1-make-sure-acrpull-role-assignment-is-created-for-identity
+[cause1-solution1]: #solution-1-make-sure-the-correct-acr-role-assignment-is-created-for-identity
 [cause1-solution2]: #solution-2-make-sure-service-principal-isnt-expired
-[cause1-solution3]: #solution-3-make-sure-acrpull-role-is-assigned-to-correct-service-principal
+[cause1-solution3]: #solution-3-make-sure-the-correct-acr-role-is-assigned-to-correct-service-principal
 [cause1-solution4]: #solution-4-make-sure-the-kubelet-identity-is-referenced-in-the-aks-vmss
 [cause1-solution5]: #solution-5-make-sure-the-service-principal-is-correct-and-the-secret-is-valid
 [cause1-solution6]: #solution-6-make-sure-the-kubernetes-secret-has-the-correct-values-of-the-container-registry-admin-account
