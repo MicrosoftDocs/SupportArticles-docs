@@ -285,14 +285,14 @@ items:
       href: ./active-directory/cannot-add-domain-controller-node-failover-cluster.md
     - name: Can't select DNS Server role when adding a domain controller into an existing AD domain
       href: ./active-directory/auto-install-dns-server-role-disabled-promte-domain-controller.md
+    - name: Configuring Active Directory domains that use single-label DNS names
+      href: ./active-directory/deployment-operation-ad-domains.md
     - name: Create an Active Directory server
       href: ./active-directory/create-an-active-directory-server.md
     - name: DCPROMO demotion fails
       href: ./active-directory/dcpromo-demotion-fails.md
     - name: DC promotion stops responding
       href: ./active-directory/dc-promotion-not-respond-netbios-disabled.md
-    - name: Deployment and operation of Active Directory domains
-      href: ./active-directory/deployment-operation-ad-domains.md
     - name: Domain controller rename doesn't rename all AD DFSR SYSVOL objects
       href: ./active-directory/sysvol-msdfsr-member-container-not-updated.md
     - name: Domain controllers don't demote

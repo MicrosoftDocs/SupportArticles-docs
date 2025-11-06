@@ -1,20 +1,20 @@
 ---
-title: Deployment and operation of AD domains
-description: This article provides information about the deployment and operation of Windows member computers and domain controllers that are joined to Active Directory domains that are configured by using single-label DNS names.
-ms.date: 01/15/2025
+title: Configuring Active Directory Domains that Use Single-label DNS Names
+description: This article provides information about the deployment and operation of Windows member computers and domain controllers that are joined to Active Directory domains use single-label DNS names.
+ms.date: 11/06/2025
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.reviewer: kaushika, arrenc
+ms.reviewer: kaushika, arrenc, herbertm, v-appelgatet
 ms.custom:
 - sap:active directory\dcpromo and the installation or removal of domain controllers
 - pcy:WinComm Directory Services
 appliesto:
   - <a href=https://learn.microsoft.com/windows/release-health/windows-server-release-info target=_blank>Supported versions of Windows Server</a>
 ---
-# Deployment and operation of Active Directory domains that use single-label DNS names
+# Configuring Active Directory domains that use single-label DNS names
 
-This article provides information about the deployment and operation of Active Directory (AD) domains that use single-label DNS names.
+This article provides information about the deployment and operation of Active Directory (AD DS) domains that use single-label DNS names.
 
 _Original KB number:_ &nbsp; 300684
 
