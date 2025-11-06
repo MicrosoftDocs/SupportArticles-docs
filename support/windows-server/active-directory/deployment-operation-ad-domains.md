@@ -14,6 +14,8 @@ appliesto:
 ---
 # Configuring Active Directory domains that use single-label DNS names
 
+## Summary
+
 This article provides information about the deployment and operation of Active Directory Domain Services (AD DS) domains that use single-label DNS names.
 
 _Original KB number:_ &nbsp; 300684
