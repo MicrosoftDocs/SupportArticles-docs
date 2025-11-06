@@ -63,7 +63,7 @@ ping <dns-server-ip>
 Resolve-DnsName -Name <domain-name> -Server <dns-server-ip>
 ```
 
-If these commands don't succeed, see [DNS troubleshooting guidance](../../windows-server/networking/troubleshoot-dns-guidance).
+If these commands don't succeed, see [DNS troubleshooting guidance](../../windows-server/networking/troubleshoot-dns-guidance.md).
 
 When these commands resolve successfully, check end-to-end connectivity by pinging the resolved IP address.
 
