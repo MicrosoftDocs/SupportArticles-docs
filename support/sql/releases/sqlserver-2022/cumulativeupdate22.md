@@ -26,7 +26,7 @@ This article describes Cumulative Update package 22 (CU22) for Microsoft SQL Ser
 
 ### Incorrect behavior of SESSION_CONTEXT in parallel plans
 
-[!INCLUDE [av-session-context](../includes/av-session-context.md)]
+[!INCLUDE [av-session-context](../includes/av-sesssion-context.md)]
 
 ## Improvements and fixes included in this update
 
