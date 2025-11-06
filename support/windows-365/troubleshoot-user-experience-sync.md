@@ -51,7 +51,7 @@ Both processes require the Cloud Profile service to attach a disk to the device 
 
 ##### Pooled user storage has exceeded the total allocated size
 
-User Experience Sync provides a limited amount pooled user storage based on a [storage calculation](/windows-365/enterprise/frontline-user-experience-sync).
+User Experience Sync provides a limited amount pooled user storage based on a [storage calculation](#understanding-storage-allocation).
 
 ###### Understanding storage allocation
 
@@ -111,7 +111,7 @@ The User Experience Sync service is responsible for creating and attaching indiv
 - Determine where in the process the issue occurred
 - Identify if the issue is transient or requires service engineering work
 
-## Resolve low or full user storage issues
+### Resolve low or full user storage issues
 
 When individual user storage becomes low or full, users may experience performance issues or be unable to save their work. Use the following solutions to address storage constraints.
 
@@ -130,11 +130,11 @@ When individual user storage becomes low or full, users may experience performan
   5. Locate the user storage to delete.
   6. Select **Delete** and confirm the action.
 
-## Recover from accidental deletions
+### Recover from accidental deletions
 
 If individual user storage is accidentally deleted, follow these recovery steps.
 
-### Open a support case
+#### Open a support case
 
 When user experience data is lost due to accidental deletion:
 
@@ -155,7 +155,7 @@ When user experience data is lost due to accidental deletion:
    - Screenshots of any error messages
    - User storage policy configuration details
 
-## Monitoring and current limitation
+## Monitoring and current limitations
 
 ### User Experience Sync monitoring
 
