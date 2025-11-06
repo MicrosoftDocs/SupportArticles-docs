@@ -19,7 +19,7 @@ appliesto:
 
 When attempting to connect to Windows Update, you might encounter error 0x80072f8f. This error usually indicates issues with SSL negotiation due to out-of-sync clock settings or untrusted SSL certificates. 
 
-:::image type="content" source="./media/troubleshoot-windows-update-error-0x80072f8f/updateerror0x80072f8f-wusaerror.png" alt-text="Windows Update error 0x80072f8f" lightbox="media/troubleshoot-windows-update-error-0x80072f8f/updateerror0x80072f8f_wusaerror.png":::
+:::image type="content" source="./media/troubleshoot-windows-update-error-0x80072f8f/updateerror0x80072f8f-wusaerror.png" alt-text="Windows Update error 0x80072f8f" lightbox="media/troubleshoot-windows-update-error-0x80072f8f/updateerror0x80072f8f-wusaerror.png":::
 
 ## Prerequisites
 
