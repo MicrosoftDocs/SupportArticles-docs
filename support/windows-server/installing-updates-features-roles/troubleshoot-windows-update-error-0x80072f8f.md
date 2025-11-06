@@ -60,12 +60,16 @@ When you check for updates from Windows Update, you see no progress. The `Window
 7452 3228 Misc *FAILED* [80072F8F] Library download error. Will retry. Retry Counter:0
 ```
 
-## Root cause
+## Cause
 
 This error is usually caused by one of the following issues:
 
 - **Out-of-sync clock**: If the clock settings on the computer are incorrect, SSL negotiation fails. You can quickly verify clock accuracy from `WindowsUpdate.log` that always prints traces in local time.
-- **Untrusted SSL certificate**: In managed scenarios for Windows Server Update Services (WSUS) or Configuration Manager that's configured over SSL and includes self-generated or signed SSL certificates, the scan fails if the client doesn't trust the certificate chain.
+- **Untrusted SSL certificate**: This issue occurs in the following managed scenarios:
+    -  For Windows Server Update Services (WSUS)
+    -  For Configuration Manager that's configured over SSL and includes self-generated or signed SSL certificates
+
+    In these scenarios, the scan fails if the client doesn't trust the certificate chain.
 
 ## Resolution
 
