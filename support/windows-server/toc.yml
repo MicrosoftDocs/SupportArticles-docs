@@ -3145,7 +3145,7 @@ items:
   - name: Zero Trust DNS
     items:
     - name: 'Troubleshooting Guidance: Zero Trust DNS'
-      href: ../../windows-client/windows-security/troubleshoot-zero-trust-dns-guidance.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-security/troubleshoot-zero-trust-dns-guidance.md?context=/troubleshoot/windows-server/context/context
 - name: Windows Servicing, Updates and Features on Demand
   items:
   - name: Windows Servicing, Updates and Features on Demand
