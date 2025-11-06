@@ -107,7 +107,7 @@ kubectl get --raw /metrics | grep -E "etcd_db_total_size_in_bytes|apiserver_stor
 ```
 
 > [!NOTE]
-> The metric name in the previous command is different for different Kubernetes versions. For Kubernetes 1.25 and earlier versions, use `etcd_db_total_size_in_bytes`. For Kubernetes 1.26 to 1.28, use `apiserver_storage_db_total_size_in_bytes`.
+> The metric name in the previous command is different for different Kubernetes versions. For Kubernetes 1.25 and earlier versions, use `etcd_db_total_size_in_bytes`. For Kubernetes 1.26 to 1.28, use `apiserver_storage_db_total_size_in_bytes`. An Etcd database with size > 2 gigabytes is considered a large etcd db.
 
 ### Solution 3: Define quotas for object creation, delete objects, or limit object lifetime in etcd
 
@@ -121,11 +121,16 @@ kubectl delete jobs --field-selector status.successful=1
 
 For objects that support [automatic cleanup](https://kubernetes.io/docs/concepts/architecture/garbage-collection/), set Time to Live (TTL) values to limit the lifetime of these objects. You can also label your objects so that you can bulk delete all the objects of a specific type by using label selectors. If you establish [owner references](https://kubernetes.io/docs/concepts/overview/working-with-objects/owners-dependents/) among objects, any dependent objects are automatically deleted after the parent object is deleted.
 
+Also refer to [Solution 6](#solution-6-use-existing-diagnostic-tools-to-identify-and-resolve-the-underlying-cause) for object size reduction techniques.
+
 ### Cause 4: AKS managed API server guard was applied
 
 If you're experiencing a high rate of HTTP 429 errors, one possible cause is that AKS has applied a managed API server guard. It is achieved by applying a FlowSchema and PriorityLevelConfiguration called **"aks-managed-apiserver-guard"**. This safeguard is triggered when the API server encounters frequent out-of-memory (OOM) events after scaling efforts on the API server have failed to stabilise it. This guard is designed as a last-resort measure to safeguard the API server by throttling non-system client requests to the API server and prevent it from becoming completely unresponsive.
 
 - Check cluster for the presence of **"aks-managed-apiserver-guard"** FlowSchema and PriorityLevelConfiguration or check kubernetes events 
+
+> [!NOTE]
+> Kubectl commands may take longer than expected or time out when the API server is overloaded. Retry if it fails.
 
 ```bash
 kubectl get flowschemas
@@ -143,6 +148,7 @@ kubectl get prioritylevelconfigurations
 kubectl get events -n kube-system aks-managed-apiserver-throttling-enabled
 ```
 
+
 ### Solution 4: Identify unoptimized clients and mitigate 
 
 #### Step 1: Identify unoptimized clients
@@ -150,27 +156,28 @@ kubectl get events -n kube-system aks-managed-apiserver-throttling-enabled
 - See [Cause 5](#cause-5-an-offending-client-makes-excessive-list-or-put-calls) to identify problematic clients and refine their LIST call patterns - especially those generating high-frequency or high-latency requests as they are the primary contributors to API server degradation. Refer to [best practices](/azure-aks-docs-pr/articles/aks/best-practices-performance-scale-large.md#kubernetes-clients) for further guidance on client optimization.
 
 #### Step 2: Mitigation
-> [!WARNING]
-> Do not perform any mitigation steps until the client's call pattern is optimized, as this could lead to the API server becoming fully unresponsive. 
 
-- Once the unoptimized client's call pattern to API server has been optimizied, remove the aks-managed-apiserver-guard FlowSchema and PriorityLevelConfiguration
-
+- Scale down the cluster to reduce the load on the API server
+- Use [Control Plane Metrics](/azure-aks-docs-pr/articles/aks/control-plane-metrics-monitor.md) to monitor the load on the API server. Refer the [blog](https://techcommunity.microsoft.com/blog/appsonazureblog/azure-platform-metrics-for-aks-control-plane-monitoring/4385770) for more details.
+- Once the above steps are complete, delete aks-managed-apiserver-guard
 ```bash
 kubectl delete flowschema aks-managed-apiserver-guard
 kubectl delete prioritylevelconfiguration aks-managed-apiserver-guard
 ```
-- You can also [modify the aks-managed-apiserver-guard FlowSchema and PriorityLevelConfiguration](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/#good-practice-apf-settings) by applying the label **aks-managed-skip-update-operation: true**. This label preserves the modified configurations and prevents AKS from reconciling them back to default values.
+> [!WARNING]
+> Avoid scaling the cluster back to the originally intended scale point  until client call patterns have been optimized, refer to **[best practices](/azure-aks-docs-pr/articles/aks/best-practices-performance-scale-large.md#kubernetes-clients)**. Premature scaling may cause the API server to crash again.
+
+- You can also [modify the aks-managed-apiserver-guard FlowSchema and PriorityLevelConfiguration](https://kubernetes.io/docs/concepts/cluster-administration/flow-control/#good-practice-apf-settings) by applying the label **aks-managed-skip-update-operation: true**. This label preserves the modified configurations and prevents AKS from reconciling them back to default values. This is relevant if you are applying a custom FlowSchema and PriorityLevelConfiguration tailored to your cluster’s requirements as specified in [solution 5b](#solution-5b-throttle-a-client-thats-overwhelming-the-control-plane) and do not want AKS to automatically manage client throttling.
 
 ```bash
 kubectl label prioritylevelconfiguration aks-managed-apiserver-guard
 kubectl label flowschema aks-managed-apiserver-guard
 ```
-> [!NOTE]
-> It's advisable to rather delete aks-managed-apiserver-guard after optimizing the client's LIST pattern and applying a custom FlowSchema and PriorityLevelConfiguration  applicable to your cluster's requirement as specified in [solution 5b](#solution-5b-throttle-a-client-thats-overwhelming-the-control-plane), instead of modifying the default aks-managed-apiserver-guard. Modifying it will cause AKS to be not be able reapply the aks-managed-apiserver-guard with defaults if the API server continues to experience out-of-memory (OOM) events in the future. 
+
 
 ### Cause 5: An offending client makes excessive LIST or PUT calls
 
-If you determine that etcd isn't overloaded with too many objects, an offending client might be making too many `LIST` or `PUT` calls to the API server.
+If etcd isn't overloaded with too many objects as defined in [Cause 3](#cause-3-an-offending-client-leaks-etcd-objects-and-causes-a-slowdown-of-etcd), an offending client might be making too many `LIST` or `PUT` calls to the API server.
 If you experience high latency or frequent timeouts, follow these steps to pinpoint the offending client and the types of API calls that fail.
 
 #### <a id="identifytopuseragents"></a> Step 1: Identify top user agents by the number of requests
