@@ -26,17 +26,19 @@ For the following reasons, create new Active Directory domains that have fully q
 
 - You can't use an internet registrar to register single-label DNS names.
 - When joined to single-label domains, client computers (both domain-joined and non-domain joined) and domain controllers require extra configuration to dynamically register DNS records in single-label DNS zones.
-- Client computers and domain controllers might require extra configuration to resolve DNS queries in single-label DNS zones.
+- Client computers (domain-joined, nondomain-joined, and Microsoft Entra ID-joined) and domain controllers require extra configuration to resolve DNS queries in single-label DNS zones.
 - Some server-based applications are incompatible with single-label domain names. Newly released applications might not support single-label DNS names, and applications that support single-label DNS names might drop that support in the future.
 - Transitioning from a single-label DNS domain name to a fully qualified DNS name is nontrivial and consists of two options:
 
-  - [Migrate](https://www.microsoft.com/download/details.aspx?id=19188) users, computers, groups, and other states to a new forest.
+  - Migrate users, computers, groups, and other states to a new forest.
   - Rename the existing domain.
 
     > [!IMPORTANT]  
     > Current Microsoft applications don't support domain renaming. As a result, don't try to rename a single-label DNS name to a fully qualified domain name.
 
 - In Windows Server 2008, the Active Directory Installation Wizard (Dcpromo.exe) warns against creating new domains that have single-label DNS names. There's no business or technical reason to create new domains that have single-label DNS names. In Windows Server 2008 R2 and later versions, the Active Directory Installation Wizard explicitly blocks creating such domains.
+
+Previous versions of this article provided information about Microsoft applications that specifically didn't support domain renaming. Currently, no Microsoft applications support domain renaming, so the distinction of the list isn't needed anymore.
 
 ## More information
 
@@ -83,7 +85,12 @@ Consider the following configuration:
 - Domain member computers reside in a forest that doesn't contain any single-label DNS domains.
 - Domain controllers reside in single-label DNS domains in a different forest.
 
-By default, in these circumstances, the domain member computers don't use the DNS Server service to locate the domain controllers. Additionally, by default, Windows doesn't send updates to top-level domains. However, you can change these behaviors by using one of the two methods in this section.
+In this configuration, you see the following default behaviors:
+
+- By default, the client computers don't use the DNS Server service to locate the domain controllers.
+- By default, Windows DNS clients don't send updates to top-level domains.
+
+These behaviors cause DNS resolution issues. To mitigate them, you have to change the configurations of the Windows client computers (domain-joined, non-domain joined, or Microsoft Entra ID-joined) and the domain controllers. Use one of the two methods in this section to change the configurations.
 
 > [!IMPORTANT]  
 > Before you use either method, make sure that NetBIOS name resolution works correctly in your environment. Otherwise, clients can't access the domains that have single-label DNS names fails.
@@ -94,7 +101,7 @@ By default, in these circumstances, the domain member computers don't use the DN
 
 ##### Step 1: Change the domain controller locator configuration
 
-On the Windows client computers (domain-joined, non-domain joined, or Microsoft Entra ID-joined), follow these steps
+On the Windows client computers (domain-joined, non-domain joined, or Microsoft Entra ID-joined), follow these steps:
 
 1. In the Search box, enter regedit, and then select **Registry editor**.
 1. Locate and then select the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters` subkey.
@@ -106,12 +113,7 @@ On the Windows client computers (domain-joined, non-domain joined, or Microsoft 
 
 ##### Step 2: Change the dynamic update configuration for the DNS root zone or single-label DNS zones
 
-Apply these changes to all domain controllers and members of domains that have single-label DNS names. If a domain that has a single-label DNS name is a forest root, apply these configuration changes to all the domain controllers in the forest. The only exceptions are the following zones, *if* they're delegated from the *ForestName* zone:
-
-- \_msdcs. *ForestName*
-- \_sites. *ForestName*
-- \_tcp. *ForestName*
-- \_udp. *ForestName*
+Apply these changes to all domain controllers and members of domains that have single-label DNS names. If a domain that has a single-label DNS name is a forest root, apply these configuration changes to all the domain controllers in the forest, unless the separate zones \_msdcs. *ForestName*, \_sites. *ForestName*, _tcp. *ForestName*, and_udp. *ForestName* are delegated from the *ForestName* zone.
 
 Follow these steps:
 
