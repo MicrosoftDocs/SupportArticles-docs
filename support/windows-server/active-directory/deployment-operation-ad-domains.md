@@ -100,7 +100,7 @@ On the Windows client computers (domain-joined, non-domain joined, or Microsoft 
    1. Select **Edit** > **New** > **DWORD Value**.
    1. In the **Name** box, enter **AllowSingleLabelDnsDomain**.
 1. Double-click the **AllowSingleLabelDnsDomain** entry, and then in **Value data**, enter **1**.
-1. Close Registry Editor.
+1. Close Registry Editor, and then restart the computer.
 
 ##### Step 2: Change the dynamic update configuration for the DNS root zone or single-label DNS zones
 
