@@ -3,9 +3,9 @@ title: Troubleshoot Windows Update Error 0x80072f8f
 description: Learn how to resolve Windows Update error 0x80072f8f on Windows.
 manager: dcscontentpm
 audience: itpro
-ms.date: 01/15/2025
+ms.date: 11/6/2025
 ms.topic: troubleshooting
-ms.reviewer: kaushika, maeltedebay, v-lianna
+ms.reviewer: cotro, mwesley, jarretr, v-ryanberg, v-gsitser
 ms.custom:
 - sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
 - pcy:WinComm Devices Deploy
