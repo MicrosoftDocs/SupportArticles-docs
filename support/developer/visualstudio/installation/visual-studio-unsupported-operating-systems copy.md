@@ -11,7 +11,7 @@ _Applies to:_ &nbsp; Visual Studio 2026
 
 ## Summary
 
-Visual Studio 2026 is supported only on 64-bit editions of currently supported versions of [Windows 11](/lifecycle/products/?terms=windows%2011), [Windows 10](](/lifecycle/products/?terms=windows%2010), and Windows Server 2019 and higher. We don't recommend using Visual Studio on earlier or unsupported versions of Windows and Windows Server. For more information, see [full system requirements](/visualstudio/releases/2026/vs-system-requirements). To enable organizations to schedule their operating system upgrades, this page provides known issues and potential workarounds when using Visual Studio 2022 on an unsupported operating system.
+Visual Studio 2026 is supported only on 64-bit editions of currently supported versions of [Windows 11](/lifecycle/products/?terms=windows%2011), [Windows 10](/lifecycle/products/?terms=windows%2010), and Windows Server 2019 and higher. We don't recommend using Visual Studio on earlier or unsupported versions of Windows and Windows Server. For more information, see [full system requirements](/visualstudio/releases/2026/vs-system-requirements). To enable organizations to schedule their operating system upgrades, this page provides known issues and potential workarounds when using Visual Studio on an unsupported operating system.
 
 > [!NOTE]
 > Microsoft is unable to provide support or fixes for issues arising from using Visual Studio on an unsupported operating system. For feedback on supported configurations, see [Developer Community](https://developercommunity.visualstudio.com/).
@@ -33,7 +33,7 @@ The following workloads and components are not supported by Visual Studio ARM64 
 
 ## Windows LTSC
 
-The Windows Long-term Servicing channel (LTSC) isn't intended for deployment on most or all the devices in an organization. It should be used only for special-purpose devices. Visual Studio is not intended to run on [Windows Long-term Servicing channel](/windows/deployment/update/waas-overview#long-term-servicing-channel). Building apps that run on Windows LTSC is supported.
+The Windows Long-term Servicing channel (LTSC) isn't intended for deployment on most devices in an organization. It should be used only for special-purpose devices. Visual Studio is not intended to run on [Windows Long-term Servicing channel](/windows/deployment/update/waas-overview#long-term-servicing-channel). Building apps that run on Windows LTSC is supported.
 
 ## Application Virtualization
 
@@ -65,7 +65,7 @@ Visual Studio doesn't install on Windows 8.1 and Windows Server 2012 R2.
 
 ## Windows 10, version 1507 and 1511
 
-Visual Studio 2022 doesn't install on Windows 10 versions 1507 or 1511.
+Visual Studio doesn't install on Windows 10 versions 1507 or 1511.
 
 ## Windows 10, versions 1607 through 1903
 
