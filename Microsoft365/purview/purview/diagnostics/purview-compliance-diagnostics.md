@@ -55,6 +55,8 @@ The following table lists the available diagnostics on **Solutions** pages. You 
 
 **Note**: To run these diagnostics, the minimum requirement is that you're an administrator with the Organization Configuration role assigned to you.
 
+When you run diagnostics from the Solution page, it executes the [Check-PurviewConfig](https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/check-purviewconfig?view=exchange-ps) cmdlet in the background to perform the necessary checks and displays the results.
+
 | **Issue** | **Checks performed** | **Commandlet Used** | **Solutions page** |
 |-|-|-|-|
 | Email encryption isn't working as expected. Are there any issues with my licenses or settings? | Checks license availability for sensitivity labels. Also checks information protection settings for your tenant, including Information Rights Management (IRM) and transport rule settings. Validates encryption settings. | [Test-IrmConfiguration](/powershell/module/exchangepowershell/test-irmconfiguration)| [Information Protection diagnostics](https://purview.microsoft.com/informationprotection/diagnostics) |
