@@ -49,6 +49,8 @@ items:
       href: informatica/resource-creation.md
 - name: New Relic
   items:
+    - name: Can't install or uninstall the agent on a VM
+      href: new-relic/install-uninstall-extension-vm.md
     - name: Diagnostic settings manual update
       href: diagnostic-settings-manual-update.md
     - name: Diagnostic settings not created
@@ -59,5 +61,5 @@ items:
       href: log-forwarding-persists.md
     - name: Log limitations
       href: log-limitations.md
-
-
+    - name: Resource monitoring stopped working
+      href: new-relic/resource-monitoring-troubleshoot.md

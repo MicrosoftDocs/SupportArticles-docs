@@ -1,17 +1,17 @@
 ---
-title: Create, delete, or restore Azure function app resources
+title: Create, delete, or restore Azure Function App resources
 description: Describes some common issues and solutions for creating, deleting, or restoring Azure function apps.
 ms.date: 08/24/2023
 ms.reviewer: gasridha, v-sidong
 ms.custom: sap:Creating or Deleting Function Apps
 ---
-# Resolve issues when creating, deleting, or restoring Azure function apps
+# Resolve issues when creating, deleting, or restoring Azure Function App
 
-This article lists some common issues that may occur when you create, delete, or restore Azure function apps, and steps to resolve the issues.
+This article lists some common issues that may occur when you create, delete, or restore Azure Function App and steps to resolve the issues.
 
 ## Create function apps
 
-Azure function apps use the Azure App Service infrastructure. You can create an Azure function app by using:
+Azure Function App uses the Azure App Service infrastructure. You can create an Azure function app by using:
 
 - [Azure portal](/azure/azure-functions/functions-create-function-app-portal)
 - [Azure CLI](/azure/azure-functions/functions-create-first-azure-function-azure-cli#create-a-function-app)
@@ -20,14 +20,14 @@ Azure function apps use the Azure App Service infrastructure. You can create an 
 
 You can also create an app while deploying a function project from Visual Studio or Visual Studio Code.
 
-### Considerations for an Azure Storage account used by Azure Functions
+### Considerations for an Azure Storage account used by Azure Function App
 
-When creating a function app, you can create or link to a general-purpose Azure Storage account that supports blob, queue, and table storage. Azure Functions relies on Azure Storage for operations, such as managing triggers and logging function executions. For more information, see [Storage considerations for Azure Functions](/azure/azure-functions/storage-considerations).
+When creating a function app, you can create or link to a general-purpose Azure Storage account that supports blob, queue, and table storage. Azure Function App relies on Azure Storage for operations, such as managing triggers and logging function executions. For more information, see [Storage considerations for Azure Function App](/azure/azure-functions/storage-considerations).
 
 - Make sure that you have permissions to create a storage account and other resources. There can be no role-based access control (RBAC), policy, or scope violations.
 - Use Managed Identity for Azure Storage account connection string, only for `AzureWebJobsStorage`. For more information, see [Connecting to host storage with an identity (Preview)](/azure/azure-functions/functions-reference#connecting-to-host-storage-with-an-identity-preview).
 
-### Secure the Azure Storage account used by Azure Functions
+### Secure the Azure Storage account used by Azure Function App
 
 You can create an Azure function app and a new storage account secured with private endpoints. Host the function app on a plan supporting virtual-network integration.
 
@@ -44,7 +44,7 @@ In Windows, you can use Azure CLI commands to migrate a function app between a [
 > [!NOTE]
 > Linux doesn't support migrating hosting plans.
 
-Review hosting plan (Consumption, Premium, Dedicated) offerings like virtual network connectivity, time-out, billing, and so on. For more information, see [Azure Functions hosting options](/azure/azure-functions/functions-scale).
+Review hosting plan (Consumption, Premium, Dedicated) offerings like virtual network connectivity, time-out, billing, and so on. For more information, see [Azure Function App hosting options](/azure/azure-functions/functions-scale).
 
 ### Resolve the error "This region has quota of 0 instances for your subscription. Try selecting different region or SKU"
 
@@ -73,7 +73,7 @@ You can use alternative tools like Azure CLI, PowerShell, and `Az.Functions`. Ma
 
 ### Set the function runtime version for Windows and Linux
 
-For Windows apps, set the runtime version in the Azure portal (**Settings** > **Configuration** > **Function runtime Settings** > **Runtime version**), or create an application setting `FUNCTIONS_EXTENSION_VERSION` and set it to the major runtime version, for example, `~4` to target V4. For more information, see [How to target Azure Functions runtime versions](/azure/azure-functions/set-runtime-version). Pin it to a minor version based on host releases by setting `FUNCTIONS_EXTENSION_VERSION` to a minor version. Also see [Azure Functions host releases](https://github.com/Azure/azure-functions-host/releases).
+For Windows apps, set the runtime version in the Azure portal (**Settings** > **Configuration** > **Function runtime Settings** > **Runtime version**), or create an application setting `FUNCTIONS_EXTENSION_VERSION` and set it to the major runtime version, for example, `~4` to target V4. For more information, see [How to target Azure Function App runtime versions](/azure/azure-functions/set-runtime-version). Pin it to a minor version based on host releases by setting `FUNCTIONS_EXTENSION_VERSION` to a minor version. Also see [Azure Function App host releases](https://github.com/Azure/azure-functions-host/releases).
 
 For Linux apps, see [Manual version updates on Linux](/azure/azure-functions/set-runtime-version#manual-version-updates-on-linux).
 
@@ -93,7 +93,7 @@ For more information, see:
 
 After you publish code from Visual Studio and use `WEBSITE_RUN_FROM_PACKAGE`, the Azure portal sets functions as *read-only* to prevent editing precompiled assets in the portal. To delete functions in a function app, remove the unwanted functions from your code, enable the **Remove additional files at destination** option in profile settings, and redeploy your code.
 
-Restoring Azure function apps hosted on a [Consumption plan](/azure/azure-functions/consumption-plan) or [Elastic Premium plan](/azure/azure-functions/functions-premium-plan) isn't supported. If you have the function app content or can access the storage account, update the app settings or create a new function app, and use the content. You can restore Azure function apps on a Dedicated App service plan if it isn't using Azure Files for content storage.
+Restoring Azure Function App hosted on a [Consumption plan](/azure/azure-functions/consumption-plan) or [Elastic Premium plan](/azure/azure-functions/functions-premium-plan) isn't supported. If you have the function app content or can access the storage account, update the app settings or create a new function app, and use the content. You can restore Azure Function App on a Dedicated App service plan if it isn't using Azure Files for content storage.
 
 For more information, see [Restore (undelete) deleted web apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/restore-undelete-deleted-web-apps/ba-p/2922088).
 

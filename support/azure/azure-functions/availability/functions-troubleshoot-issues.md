@@ -1,6 +1,6 @@
 ---
 title: Resolve Function App Down or Reporting Errors
-description: Describes how to troubleshoot an Azure Functions app if it's not responding or reports errors.
+description: Describes how to troubleshoot Azure Function App if it's not responding or reports errors.
 ms.date: 08/05/2025
 ms.reviewer: v-liuamson; v-gsitser, v-ryanberg
 ms.custom: sap:Function app down or reporting errors
@@ -10,17 +10,17 @@ ms.custom: sap:Function app down or reporting errors
 
 ## Common scenarios, error messages, and symptoms
 
-Microsoft Azure Functions app failures typically fit into three major categories: configuration issues, customer code issues, and platform issues. This article explores these issues in detail and introduces the appropriate diagnostic tools for troubleshooting.
+Microsoft Azure Function App failures typically fit into three major categories: configuration issues, customer code issues, and platform issues. This article explores these issues in detail and introduces the appropriate diagnostic tools for troubleshooting.
 
 ### Configuration issues
 
 These issues are the most common. They include:
 
-- Missing or incorrect application settings, such as `AzureWebJobsStorage`, `FUNCTIONS_WORKER_RUNTIME`, and binding-specific configurations. For more information, see the [App settings reference for Azure Functions](/azure/azure-functions/functions-app-settings).
-- Storage account misconfigurations, including deleted accounts, rotated keys, and firewall restrictions. For more information, see [Storage considerations for Azure Functions](/azure/azure-functions/storage-considerations?tabs=azure-cli).
+- Missing or incorrect application settings, such as `AzureWebJobsStorage`, `FUNCTIONS_WORKER_RUNTIME`, and binding-specific configurations. For more information, see the [App settings reference for Azure Function App](/azure/azure-functions/functions-app-settings).
+- Storage account misconfigurations, including deleted accounts, rotated keys, and firewall restrictions. For more information, see [Storage considerations for Azure Function App](/azure/azure-functions/storage-considerations?tabs=azure-cli).
 - Key Vault and Managed Identity access problems because of misconfigured permissions or missing identity assignments. For more information, see the following resources:
   - [Use Key Vault references as app settings - Azure App Service](/azure/app-service/app-service-key-vault-references?tabs=azure-cli#troubleshoot-key-vault-references)
-  - [Create a function app without default storage secrets in its definition - Azure Functions](/azure/azure-functions/functions-identity-based-connections-tutorial)
+  - [Create a function app without default storage secrets in its definition - Azure Function App](/azure/azure-functions/functions-identity-based-connections-tutorial)
 
 ### Customer code issues
 
@@ -31,18 +31,18 @@ These issues have the following causes:
 
 For more information, see the following resources:
 
-- [Azure Functions best practices](/azure/azure-functions/functions-best-practices?tabs=csharp)
-- [Improve Azure Functions performance and reliability](/azure/azure-functions/performance-reliability)
-- [Manage connections in Azure Functions](/azure/azure-functions/manage-connections?tabs=csharp)
+- [Azure Function App best practices](/azure/azure-functions/functions-best-practices?tabs=csharp)
+- [Improve Azure Function App performance and reliability](/azure/azure-functions/performance-reliability)
+- [Manage connections in Azure Function App](/azure/azure-functions/manage-connections?tabs=csharp)
 
 ### Platform issues
 
 These issues are less common but usually have a greater effect:
 
-- Unsupported runtime versions (for example, Azure Functions `~2.x` or `~3.x`).
+- Unsupported runtime versions (for example, Azure Function App `~2.x` or `~3.x`).
 For more information, see the following resources:
-  - [Azure Functions language stack support policy](/azure/azure-functions/language-support-policy?pivots=programming-language-csharp)
-  - [Supported languages in Azure Functions](/azure/azure-functions/supported-languages?tabs=isolated-process%2Cv4&pivots=programming-language-csharp#languages-by-runtime-version)
+  - [Azure Function App language stack support policy](/azure/azure-functions/language-support-policy?pivots=programming-language-csharp)
+  - [Supported languages in Azure Function App](/azure/azure-functions/supported-languages?tabs=isolated-process%2Cv4&pivots=programming-language-csharp#languages-by-runtime-version)
 
 - Host startup failures, including placeholder site specialization errors and container allocation issues.
 
@@ -50,9 +50,9 @@ For more information, see the following resources:
 
 You might experience common errors such as the following:
 
-- **Azure Functions runtime is unreachable.**
+- **Azure Function App runtime is unreachable.**
 
-  - See [Troubleshoot error: Azure Functions runtime is unreachable](/azure/azure-functions/functions-recover-storage-account).
+  - See [Troubleshoot error: Azure Function App runtime is unreachable](/azure/azure-functions/functions-recover-storage-account).
 
 - **Function host not running.**
 
@@ -62,7 +62,7 @@ You might experience common errors such as the following:
 
 ### Symptoms to watch for
 
-- Function not triggering or running. See [Analyze Azure Functions telemetry in Application Insights](/azure/azure-functions/analyze-telemetry-data#viewing-telemetry-in-monitor-tab).
+- Function not triggering or running. See [Analyze Azure Function App telemetry in Application Insights](/azure/azure-functions/analyze-telemetry-data#viewing-telemetry-in-monitor-tab).
 
 - Missing invocation history or unexpected gaps.
 
@@ -181,7 +181,7 @@ For diagnostics, run these queries in Application Insights:
 > [!NOTE]
 > Sampling is enabled by default. If it's necessary, disable this feature temporarily during an investigation.
 
-For more information, see [Analyze Azure Functions telemetry in Application Insights](/azure/azure-functions/analyze-telemetry-data#viewing-telemetry-in-monitor-tab).
+For more information, see [Analyze Azure Function App telemetry in Application Insights](/azure/azure-functions/analyze-telemetry-data#viewing-telemetry-in-monitor-tab).
 
 ### Network validator tool
 
@@ -209,8 +209,8 @@ When you use the network validator, make sure that:
 
 For more information, see the following resources:
 
-- [Azure Functions networking options](/azure/azure-functions/functions-networking-options?tabs=azure-portal#troubleshooting)
-- [Frequently asked questions about networking in Azure Functions](/azure/azure-functions/functions-networking-faq)
+- [Azure Function App networking options](/azure/azure-functions/functions-networking-options?tabs=azure-portal#troubleshooting)
+- [Frequently asked questions about networking in Azure Function App](/azure/azure-functions/functions-networking-faq)
 
 ### Kudu logs (SCM)
 

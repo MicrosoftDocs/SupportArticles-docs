@@ -16,6 +16,8 @@ ms.topic: troubleshooting-problem-resolution
 
 This document discusses how to resolve the continued presence of a Windows activation watermark on Microsoft Azure virtual machines.
 
+[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
+
 ## Prerequisites
 
 - [Azure CLI](/cli/azure/install-azure-cli-windows)

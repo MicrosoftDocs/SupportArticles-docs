@@ -124,7 +124,7 @@ items:
       - name: Azure CycleCloud
         tocHref: /troubleshoot/azure/hpc/cyclecloud/
         topicHref: /troubleshoot/azure/hpc/cyclecloud/welcome-hpc-cyclecloud
-      - name: Azure Functions
+      - name: Azure Function App
         tocHref: /troubleshoot/azure/azure-functions
         topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
       - name: Azure HPC Pack

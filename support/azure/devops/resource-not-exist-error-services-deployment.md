@@ -19,7 +19,7 @@ The following scenarios may cause your Azure Web App deployment to fail with the
 - The resource was created before deployment.
 
 > [!NOTE]
-> This error may occur with any task, such as Azure Web App tasks, Azure Resource Manager (ARM) Web deployment tasks, Azure Function App tasks, ARM template deployment, and more.
+> This error may occur with any task, such as Azure Web App tasks, Azure Resource Manager (ARM) Web deployment tasks, Azure Functions tasks, ARM template deployment, and more.
 
 ## Cause
 

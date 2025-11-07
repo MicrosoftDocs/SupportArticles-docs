@@ -282,11 +282,11 @@ Not ready to read within timeout.
 Skipping repository 'SLE-Module-HPC12-Updates' because of the above error.
 Error retrieving metadata for 'SLE-Module-Legacy12-Pool' :
 Not ready to read within timeout.
-Skipping repository 'SLE-Module-Legacy12-Pool' because of the above err Error retrieving metadata for 'SLE-Module-Legacy12-Updates' :
+Skipping repository 'SLE-Module-Legacy12-Pool' because of the above Error retrieving metadata for 'SLE-Module-Legacy12-Updates' :
 Not ready to read within timeout.
 Skipping repository 'SLE-Module-Legacy12-Updates' because of the above Error retrieving metadata for 'SLE-Module-Public-Cloud12-Pool' :
 Not ready to read within timeout.
-Skipping repository 'SLE-Module-Public-Cloud12-Pool' because of the abo Error retrieving metadata for 'SLE-Module-Public-Cloud12-Updates' :
+Skipping repository 'SLE-Module-Public-Cloud12-Pool' because of the above Error retrieving metadata for 'SLE-Module-Public-Cloud12-Updates' :
 Not ready to read within timeout.
 Skipping repository 'SLE-Module-Public-Cloud12-Updates' because of the
 ````
@@ -550,7 +550,7 @@ You can also find this output in the `/var/log/messages` or `/var/log/distro-mig
 
 ### Cause 
 
-Midway through 2023, SUSE changed the GPG signing key for the SUSE Linux Enterprise 15 products, and products that are based on them (such asSUSE Enterprise Storage, SUSE Manager, and SUSE CaaSP) to the RSA 4096 bit key, as specified in SUSE article [SUSE Signing Keys](https://www.suse.com/support/security/keys).
+Midway through 2023, SUSE changed the GPG signing key for the SUSE Linux Enterprise 15 products, and products that are based on them (such as SUSE Enterprise Storage, SUSE Manager, and SUSE CaaSP) to the RSA 4096 bit key, as specified in SUSE article [SUSE Signing Keys](https://www.suse.com/support/security/keys).
 
 ### Resolution
 

@@ -185,11 +185,11 @@ az vm user update --resource-group myResourceGroup --name myVM \
      --username myUsername --password myPassword
 ```
 
-If using SSH key authentication, you can reset the SSH key for a given user. The following example uses **az vm access set-linux-user** to update the SSH key stored in `~/.ssh/id_rsa.pub` for the user named `myUsername`, on the VM named `myVM` in `myResourceGroup`. Use your own values as follows:
+If using SSH key authentication, you can reset the SSH key for a given user. The following example uses **az vm user update** to update the SSH key stored in `~/.ssh/id_rsa.pub` for the user named `myUsername`, on the VM named `myVM` in `myResourceGroup`. Use your own values as follows:
 
 ```azurecli
 az vm user update --resource-group myResourceGroup --name myVM \
-    --username myUsername --ssh-key-value ~/.ssh/id_rsa.pub
+    --username myUsername --ssh-key-value "$(cat ~/.ssh/id_rsa.pub)"
 ```
 
 ## Use the VMAccess extension
@@ -202,7 +202,7 @@ Create a file named `settings.json` with the following content:
 
 ```json
 {
-    "reset_ssh":True
+    "reset_ssh": true
 }
 ```
 
@@ -213,9 +213,9 @@ az vm extension set --resource-group philmea --vm-name Ubuntu \
     --name VMAccessForLinux --publisher Microsoft.OSTCExtensions --version 1.2 --settings settings.json
 ```
 
-### Reset SSH credentials for a user
+### Reset SSH credentials for a user.
 
-If SSHD appears to function correctly, you can reset the credentials for a giver user. To reset the password for a user, create a file named `settings.json`. The following example resets the credentials for `myUsername` to the value specified in `myPassword`. Enter the following lines into your `settings.json` file, using your own values:
+If SSHD appears to function correctly, you can reset the credentials for a given user. To reset the password for a user, create a file named `settings.json`. The following example resets the credentials for `myUsername` to the value specified in `myPassword`. Enter the following lines into your `settings.json` file, using your own values:
 
 ```json
 {
@@ -236,33 +236,6 @@ After creating your json file, use the Azure CLI to call the `VMAccessForLinux` 
 ```azurecli
 az vm extension set --resource-group philmea --vm-name Ubuntu \
     --name VMAccessForLinux --publisher Microsoft.OSTCExtensions --version 1.2 --settings settings.json
-```
-
-### Reset SSH configuration
-
-The SSHD configuration itself may be misconfigured or the service encountered an error. You can reset SSHD to make sure the SSH configuration itself is valid. Resetting SSHD should be the first troubleshooting step you take.
-
-The following example resets SSHD on a VM named `myVM` in the resource group named `myResourceGroup`. Use your own VM and resource group names as follows:
-
-```azurecli
-azure vm reset-access --resource-group myResourceGroup --name myVM \
-    --reset-ssh
-```
-
-### Reset SSH credentials for a user
-
-If SSHD appears to function correctly, you can reset the password for a giver user. The following example resets the credentials for `myUsername` to the value specified in `myPassword`, on the VM named `myVM` in `myResourceGroup`. Use your own values as follows:
-
-```azurecli
-azure vm reset-access --resource-group myResourceGroup --name myVM \
-     --user-name myUsername --password myPassword
-```
-
-If using SSH key authentication, you can reset the SSH key for a given user. The following example updates the SSH key stored in `~/.ssh/id_rsa.pub` for the user named `myUsername`, on the VM named `myVM` in `myResourceGroup`. Use your own values as follows:
-
-```azurecli
-azure vm reset-access --resource-group myResourceGroup --name myVM \
-    --user-name myUsername --ssh-key-file ~/.ssh/id_rsa.pub
 ```
 
 ## Restart a VM

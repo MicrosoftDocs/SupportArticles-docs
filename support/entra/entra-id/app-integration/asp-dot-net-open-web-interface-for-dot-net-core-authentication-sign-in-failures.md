@@ -11,7 +11,7 @@ ms.custom: sap:Developing or Registering apps with Microsoft identity platform
 When you develop an ASP.NET Open Web Interface for .NET (OWIN) or ASP.NET Core Authentication web application and integrate it with Microsoft Entra ID, you encounter some issues during the sign-in process without any error messages or hint about what the problem might be. This article doesn't focus on direct solutions to sign-in failures but aims to help you expose hidden error messages that can guide you toward resolving the issue.
 
 > [!NOTE]
-> This article assumes you use your own code to perform the authentication to Microsoft Entra ID. If you use the Azure App Services or Azure Function Apps authentication and authorization feature, this article doesn't apply to your scenario.
+> This article assumes you use your own code to perform the authentication to Microsoft Entra ID. If you use the Azure App Services or Azure Functionss authentication and authorization feature, this article doesn't apply to your scenario.
 
 ## Symptoms
 

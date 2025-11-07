@@ -109,16 +109,6 @@ landingContent:
             url: scheduling/missing-form-context-bookable-resource.md
 
   # Card
-  - title: Integrations
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Create permissions error occurs in Microsoft Outlook or Teams
-            url: integrations/create-permissions-error.md
-          - text: Viva Connections dashboard doesn't have the correct tiles
-            url: integrations/viva-incorrect-tiles.md
-
-  # Card
   - title: Documentation and training
     linkLists:
       - linkListType: reference

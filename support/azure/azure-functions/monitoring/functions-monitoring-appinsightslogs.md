@@ -1,12 +1,12 @@
 ---
 title: Application Insights logs are missing or incorrect
-description: Ths article helps you resolve issues related to missing or incorrect logs for Application Insights logs in Azure Functions.
+description: Ths article helps you resolve issues related to missing or incorrect logs for Application Insights logs in Azure Function App.
 ms.date: 01/16/2025
 ms.reviewer: gasridha, v-jayaramanp, agaltrai, jarrettr 
 ms.custom: sap:Monitoring using Application Insights, Metrics and Alerts
 ---
 
-# Application Insights logs are missing or incorrect for Azure Functions apps
+# Application Insights logs are missing or incorrect for Azure Function App
 
 You can closely monitor the function app through the integration between [Azure Functions](https://azure.microsoft.com/products/functions) and [Application Insights](/azure/azure-monitor/app/app-insights-overview). And you can use Application Insights without any custom configuration.
 
@@ -15,7 +15,7 @@ If the Application Insights logs are missing, or if the data appears to be parti
 ## Check configuration of function app
 
 1. Navigate to your function app in the [Azure portal](https://portal.azure.com).
-1. Select **Diagnose and solve problems** to open [Azure Functions diagnostics](/azure/azure-functions/functions-diagnostics).
+1. Select **Diagnose and solve problems** to open [Azure Function App diagnostics](/azure/azure-functions/functions-diagnostics).
 1. In the **Search** bar, type *Function Configuration Checks* and open it.
 1. You see a diagnostic report of all function app configuration checks. In particular for Application Insights, the following checks are performed:
 
@@ -26,9 +26,9 @@ If the Application Insights logs are missing, or if the data appears to be parti
         We recommend that you use the [APPLICATIONINSIGHTS_CONNECTION_STRING](/azure/azure-monitor/app/sdk-connection-string#overview) for more stable behavior. The ability to use `APPINSIGHTS_INSTRUMENTATIONKEY` will be deprecated by 2025.
 
     - The `AzureWebJobsDashboard` built-in logging is disabled, as recommended.
-    - [Sampling](/azure/azure-functions/configure-monitoring#configure-sampling) is enabled for the Azure Functions telemetry (enabled by default).
+    - [Sampling](/azure/azure-functions/configure-monitoring#configure-sampling) is enabled for the Azure Function App telemetry (enabled by default).
 
-  **Recommendation**: The function app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Functions to the Application Insights service. By monitoring the log flows, you can check for missing logs.
+  **Recommendation**: The function app should be on version 4 and the runtime version should be at least 4.15.2*xx*. This is because, from this version onwards, you can track the log flows from Azure Function App to the Application Insights service. By monitoring the log flows, you can check for missing logs.
 
 ## Custom application logs
 
@@ -80,7 +80,7 @@ For more information, see [Data collection, retention, and storage in Applicatio
 
 You can increase or suppress the logs that are written. To do this, you can use a combination of log level and categories as configured in *host.json*.
 
-The Azure Functions logger includes a category for every log. The category indicates which part of the runtime code or your function code generated the log. For example:
+The Azure Function App logger includes a category for every log. The category indicates which part of the runtime code or your function code generated the log. For example:
 
 - The `Host.Results` and `Function.<YOUR_FUNCTION_NAME>` are some of the available categories.
 - A log level is assigned to every log. The value indicates relative importance, such as `Warning` or `Information`.

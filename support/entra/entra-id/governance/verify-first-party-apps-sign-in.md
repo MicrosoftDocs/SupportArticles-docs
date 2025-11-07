@@ -49,7 +49,7 @@ Although the apps that are listed in sign-in reports are owned by Microsoft and 
 
 ## Verify a first-party Microsoft service principal through PowerShell
 
-### Using Microsoft Graph PowerShell SDK
+### Use Microsoft Graph PowerShell SDK to connect to Microsoft Entra ID
 
 1. Open PowerShell, import Microsoft Graph PowerShell SDK and then connect to Microsoft Entra ID:
 
@@ -71,7 +71,7 @@ Although the apps that are listed in sign-in reports are owned by Microsoft and 
 
    In the screenshot, `f8cdef31-a31e-4b4a-93e4-5f571e91255a` is the Microsoft Service's Microsoft Entra tenant ID.
 
-### Using Microsoft Entra PowerShell
+### Use Microsoft Entra PowerShell to connect to Microsoft Entra ID
 
 1. Open PowerShell, import Microsoft Graph PowerShell SDK and connect to Microsoft Entra ID:
 

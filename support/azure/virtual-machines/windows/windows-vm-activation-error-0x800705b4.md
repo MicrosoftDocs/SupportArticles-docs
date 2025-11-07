@@ -13,6 +13,8 @@ ms.custom: sap:Cannot activate my Windows VM
 
 This article provides a solution to the error 0x800705B4 that occurs when you try to activate an Azure Windows virtual machine (VM).
 
+[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
+
 ## Symptoms
 
 When you try to activate an Azure Windows VM, you receive the 0x800705B4 error:

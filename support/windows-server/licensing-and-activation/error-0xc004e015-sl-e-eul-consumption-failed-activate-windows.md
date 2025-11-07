@@ -24,6 +24,8 @@ This error occurs because the *C:\\Windows\\System32\\spp\\store\\2.0\\tokens.da
 
 To resolve the issue, [rebuild the tokens.dat file](../licensing-and-activation/rebuild-tokens-dotdat-file.md) and activate Windows again.
 
+[!INCLUDE [virtual-machines-windows-activation-troubleshoot-tools](~/includes/azure/virtual-machines-windows-activation-troubleshoot-tools.md)]
+
 ## More information
 
 Normally, Windows can create a *tokens.dat* file. If you get an "Error: Product not found" error, run the following commands to reapply the Key Management Services (KMS) client key:

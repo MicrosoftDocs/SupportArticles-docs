@@ -24,12 +24,6 @@
       href: customization/restrict-delete-relationships.md
     - name: Forms show an error about being read-only
       href: customization/forms-record-read-only-error.md
-- name: Integrations
-  items:
-    - name: Create permissions error in Microsoft Outlook or Teams
-      href: integrations/create-permissions-error.md
-    - name: Viva Connections dashboard doesn't show the correct tiles
-      href: integrations/viva-incorrect-tiles.md
 - name: IoT and Connected Field Service
   items:
     - name: No records after pulling IoT device data
