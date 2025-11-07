@@ -11,16 +11,16 @@ _Applies to:_ &nbsp; Visual Studio 2026
 
 ## Summary
 
-Visual Studio 2026 is only supported on 64-bit editions, that are still within their support lifecycle, of [Windows 11](/lifecycle/products/?terms=windows%2011), [Windows 10](/lifecycle/products/?terms=windows%2010), and Windows Server 2019 and higher. We don't recommend using Visual Studio on earlier or unsupported versions of Windows and Windows Server. For more information, see [full system requirements](/visualstudio/releases/2026/vs-system-requirements). To enable organizations to schedule their operating system upgrades, this page provides known issues and potential workarounds when using Visual Studio on an unsupported operating system.
+Visual Studio 2026 is only supported on only 64-bit editions of [Windows 11](/lifecycle/products/?terms=windows%2011), [Windows 10](/lifecycle/products/?terms=windows%2010), and Windows Server 2019 and higher that are still within their support lifecycle. We don't recommend using Visual Studio on earlier or unsupported versions of Windows and Windows Server. For more information, see [full system requirements](/visualstudio/releases/2026/vs-system-requirements). To enable organizations to schedule their operating system upgrades, this article provides known issues and potential workarounds when using Visual Studio on an unsupported operating system.
 
 > [!NOTE]
-> Microsoft is unable to provide support or fixes for issues arising from using Visual Studio on an unsupported operating system. For feedback on supported configurations, see [Developer Community](https://developercommunity.visualstudio.com/).
+> Microsoft can't provide support or fixes for issues that arise from using Visual Studio on an unsupported operating system. For feedback on supported configurations, see [Developer Community](https://developercommunity.visualstudio.com/).
 
 ## Arm-based operating systems
 
-Arm64 Visual Studio is supported only on Windows 11 on Arm. X64 Visual Studio isn't supported on ARM operating systems, so performance may not meet expectations.
+Arm64 Visual Studio is supported only on Windows 11 on Arm. X64 Visual Studio isn't supported on ARM operating systems, so performance might not meet your expectations.
 
-The following workloads and components are not supported by Visual Studio ARM64 running on ARM64 operating systems:
+The following workloads and components aren't supported by Visual Studio ARM64 running on ARM64 operating systems:
 
 - Azure development (with the exception of the Container development tools, which are supported).
 - Data storage and processing (with the exception of the SQL Server Data Tools, which are supported).
@@ -33,7 +33,7 @@ The following workloads and components are not supported by Visual Studio ARM64 
 
 ## Windows LTSC
 
-The Windows Long-term Servicing channel (LTSC) isn't intended for deployment on most devices in an organization. It should be used only for special-purpose devices. Visual Studio is not intended to run on [Windows Long-term Servicing channel](/windows/deployment/update/waas-overview#long-term-servicing-channel). Building apps that run on Windows LTSC is supported.
+The Windows Long-term Servicing channel (LTSC) isn't intended for deployment on most devices in an organization. Use it only for special-purpose devices. Visual Studio isn't intended to run on [Windows Long-term Servicing channel](/windows/deployment/update/waas-overview#long-term-servicing-channel). Building apps that run on Windows LTSC is supported.
 
 ## Application Virtualization
 
@@ -63,14 +63,14 @@ Visual Studio doesn't install on Windows 8 and Windows Server 2012.
 
 Visual Studio doesn't install on Windows 8.1 and Windows Server 2012 R2.
 
-## Windows 10, version 1507 and 1511
+## Windows 10 versions 1507 and 1511
 
 Visual Studio doesn't install on Windows 10 versions 1507 or 1511.
 
-## Windows 10, versions 1607 through 1903
+## Windows 10 versions 1607 through 1903
 
 .NET 4.8.1 isn't supported on Windows 10 versions 1607 through 1903 and doesn't install.
 
-## Windows 10, versions 1909 through 2004
+## Windows 10 versions 1909 through 2004
 
 .NET 4.8.1 isn't supported on Windows 10 versions 1909 through 2004 and doesn't install.
