@@ -35,7 +35,7 @@ Although this error occurs without store corruption, it usually indicates corrup
 
 ## Root cause 
 
-This is considered an unexpected error, usually seen as a catastrophic failure. It's related to the `CryptCATAdminAddCatalog` process which can be affected by corruption in the system files or directories, like the *catroot2* folder.
+This is considered an unexpected error, usually seen as a catastrophic failure. It's related to the `CryptCATAdminAddCatalog` process that can be affected by corruption in the system files or directories, like the *catroot2* folder.
 
 ## Resolution
 
