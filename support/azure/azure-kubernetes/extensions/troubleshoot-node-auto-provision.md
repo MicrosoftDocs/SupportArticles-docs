@@ -64,6 +64,10 @@ kubectl get events | grep -i "disruption\|consolidation"
 
 ## Networking Issues
 
+For most Networking related issues, there are two levels available for networking observability
+- [Container Network Metrics][aks-container-metrics] (default): Allows for node level metrics 
+- [Advanced Container Network Metrics][advanced-container-network-metrics]: In addition to node level metrics, you can also observe pod-level metrics including FQDN metrics for troubleshooting.
+
 ### Pod Connectivity Problems
 
 **Symptoms**: Pods can't communicate with other pods or external services.
@@ -219,6 +223,7 @@ nc -zv 10.0.0.10 53
 - Check that Karpenter nodes can reach the service subnet
 - Restart CoreDNS pods if they're in error state: `kubectl rollout restart deployment/coredns -n kube-system`
 - Verify NSG rules allow traffic on port 53 (TCP/UDP)
+- Run a connectivyt analysis with the [Azure Virtual Network Verifier][connectivity-tool] tool to validate outbound connectivity
 
 ## Azure-Specific Issues
 
@@ -272,4 +277,7 @@ az vm list-usage --location <region> --query "[?currentValue >= limit]"
 [nap-nodepool-docs]: /azure/aks/node-autoprovision-node-pools
 [nap-main-docs]: /azure/aks/node-autoprovision
 [coredns-troubleshoot]: /azure/aks/coredns-custom#troubleshooting
+[aks-container-metrics]: /azure/aks/container-network-observability-metrics
+[advanced-container-network-metrics]: /azure/aks/advanced-container-networking-services-overview
+[connectivity-tool]: /azure/azure-kubernetes/connectivity/basic-troubleshooting-outbound-connections#check-if-azure-network-resources-are-blocking-traffic-to-the-endpoint
 
