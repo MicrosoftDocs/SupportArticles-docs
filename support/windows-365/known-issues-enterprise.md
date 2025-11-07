@@ -12,7 +12,8 @@ ms.collection:
 - M365-identity-device-management
 - tier2
 ---
-# Known issues: Windows 365 Enterprise
+
+# Known issues: Windows 365 Enterprise and Frontline
 
 The following items are known issues for Windows 365 Enterprise.
 
@@ -267,6 +268,74 @@ For newly provisioned Cloud PCs, verify that WebRTC is available. If it's not, y
 - To add the WebRTC Redirector Service app to the list of apps to install by default onto Cloud PCs, follow the steps in [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](/mem/intune/apps/apps-add-office365).
 
 - To add the WebRTC Redirector Service app to an individual Cloud PC, follow the steps in [Install the Remote Desktop WebRTC Redirector Service](/azure/virtual-desktop/teams-on-avd#install-the-remote-desktop-webrtc-redirector-service). To get the most up-to-date installer, use this link: [https://aka.ms/msrdcwebrtcsvc/msi](https://aka.ms/msrdcwebrtcsvc/msi).
+
+## Windows 365 Frontline issues
+
+The following are issues for Windows 365 Frontline:
+
+### Users can't access Frontline Cloud PCs in shared mode
+
+When Frontline Cloud PCs in shared mode are assigned to a Microsoft Entra ID group with more than 10,000 members, some users might not receive access and won't see the Cloud PC cards in the Windows app client.
+
+#### Solution
+
+Reduce the Microsoft Entra ID group membership to fewer than 10,000 users.
+
+### Can't decrease Cloud PC count when all Cloud PCs fail provisioning
+
+If provisioning fails due to a Windows Autopilot Device Preparation Profile (DPP) failure and all Cloud PCs show no successfully provisioned devices, administrators can't decrease the number of Cloud PCs in the assignment configuration.
+
+#### Solution
+
+Perform a reprovisioning action in the provisioning policy:
+
+   1. Navigate to **Microsoft Intune admin center** > **Devices** > **Windows 365**
+   2. Select **Provisioning policies**
+   3. Choose the affected provisioning policy
+   4. Select **Reprovision** to reset the deployment state
+   5. After reprovisioning completes, you can adjust the Cloud PC count as needed
+
+### Scheduled reprovisioning doesn't recover after license changes
+
+When Frontline Cloud PCs are provisioned in shared mode and licenses expire or are removed from the tenant, the Cloud PCs are deprovisioned until valid licenses are restored. After licenses are added back, Cloud PCs provision according to the policy configurations, but both scheduled reprovisioning and manual reprovisioning functionality remain disabled.
+
+#### Solution
+
+To restore full reprovisioning functionality after license expiration:
+
+   1. **Remove the provisioning policy assignment:**
+      - Navigate to the affected provisioning policy
+      - Go to the **Assignments** tab
+      - Remove all group assignments
+
+   2. **Re-add the assignment:**
+      - Wait 5-10 minutes for the removal to process
+      - Add the group assignments back to the policy
+      - Verify that reprovisioning options are now available
+
+### Can't decrease Cloud PC count due to pooled user storage limits
+
+The number of Cloud PCs for Frontline Cloud PCs in shared mode can't be decreased when it would cause the pooled user storage limit to be exceeded.
+
+#### Solution
+
+Delete individual user storage to be under the new limit. The new limit can be determined by multiplying the new Cloud PC count by the OS disk size in GB.
+
+### Autopilot Device Preparation (DPP) initially shows as failed if timeout limit is reached
+
+Once you create the provisioning policy and you receive the error code `DevicePreparationProfileTimeout`, then the time-out limit has been reached and the Cloud PCs are provisioned without applying the Autopilot Device Preparation successfully.
+
+#### Solution
+
+Continue to wait as the Autopilot Device Preparation will continue to install in the background after the initial timeout period.
+
+### Cloud PC serial numbers don't show immediately in Windows Autopilot Device Preparation deployment status
+
+When monitoring the status of the Autopilot Device Preparation profile immediately after provisioning, the Cloud PC serial numbers are not available.
+
+#### Solution
+
+Cloud PC serial numbers can take up to 30 minutes.
 
 ## Next steps
 

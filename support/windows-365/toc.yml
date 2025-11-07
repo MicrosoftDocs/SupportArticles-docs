@@ -75,9 +75,3 @@ items:
     items:
     - name: Windows 365 BCDR known issues
       href: windows-365-bcdr-known-issues.md
-- name: Windows 365 Frontline
-  items:
-  - name: Known issues with Windows 365 Frontline
-    href: known-issues-frontline.md
-  - name: Troubleshoot User Experience Sync
-    href: troubleshoot-user-experience-sync.md
