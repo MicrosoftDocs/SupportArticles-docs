@@ -5,7 +5,7 @@ manager: dcscontentpm
 audience: itpro
 ms.date: 11/6/2025
 ms.topic: troubleshooting
-ms.reviewer: cotro, mwesley, jarretr, v-ryanberg, v-gsitser
+ms.reviewer: scotro, mwesley, jarretr, v-ryanberg, v-gsitser
 ms.custom:
 - sap:windows servicing,updates and features on demand\windows update fails - installation stops with error\Windows Update - Install errors starting with 0x8007 (ERROR)
 - pcy:WinComm Devices Deploy
