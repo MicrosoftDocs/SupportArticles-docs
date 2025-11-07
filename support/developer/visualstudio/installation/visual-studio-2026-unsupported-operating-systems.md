@@ -1,29 +1,29 @@
 ---
-title: Workarounds for Visual Studio on unsupported operating systems
-description: This article describes known issues and workarounds for Visual Studio when installed on unsupported operating systems.
+title: Workarounds for Visual Studio 2026 on unsupported operating systems
+description: This article describes known issues and workarounds for Visual Studio 2026 when installed on unsupported operating systems.
 ms.date: 11/11/2025
-ms.reviewer: pchapman, jagbal
+ms.reviewer: pchapman, jagbal, v-shaywood
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
-# Workarounds and operating system requirements for Visual Studio
+# Workarounds and operating system requirements for Visual Studio 2026
 
 _Applies to:_ &nbsp; Visual Studio 2026  
 
 ## Summary
 
-Visual Studio 2026 is supported only on 64-bit editions of currently supported versions of [Windows 11](/lifecycle/products/?terms=windows%2011), [Windows 10](/lifecycle/products/?terms=windows%2010), and Windows Server 2019 and higher. We don't recommend using Visual Studio on earlier or unsupported versions of Windows and Windows Server. For more information, see [full system requirements](/visualstudio/releases/2026/vs-system-requirements). To enable organizations to schedule their operating system upgrades, this page provides known issues and potential workarounds when using Visual Studio on an unsupported operating system.
+Visual Studio 2026 is only supported on 64-bit editions, that are still within their support lifecycle, of [Windows 11](/lifecycle/products/?terms=windows%2011), [Windows 10](/lifecycle/products/?terms=windows%2010), and Windows Server 2019 and higher. We don't recommend using Visual Studio on earlier or unsupported versions of Windows and Windows Server. For more information, see [full system requirements](/visualstudio/releases/2026/vs-system-requirements). To enable organizations to schedule their operating system upgrades, this page provides known issues and potential workarounds when using Visual Studio on an unsupported operating system.
 
 > [!NOTE]
 > Microsoft is unable to provide support or fixes for issues arising from using Visual Studio on an unsupported operating system. For feedback on supported configurations, see [Developer Community](https://developercommunity.visualstudio.com/).
 
 ## Arm-based operating systems
 
-Arm64 Visual Studio is supported only on Windows 11 on Arm. X64 Visual Studio isn't supported on ARM operating systems, so performance may not meet expectations. 
+Arm64 Visual Studio is supported only on Windows 11 on Arm. X64 Visual Studio isn't supported on ARM operating systems, so performance may not meet expectations.
 
 The following workloads and components are not supported by Visual Studio ARM64 running on ARM64 operating systems:
 
-- Azure development, with the exception of the Container development tools, which are supported.
-- Data storage and processing, with the exception of the SQL Server Data Tools, which are supported.
+- Azure development (with the exception of the Container development tools, which are supported).
+- Data storage and processing (with the exception of the SQL Server Data Tools, which are supported).
 - Data science and analytical applications.
 - Python development.
 - Mobile development with C++.
@@ -69,8 +69,8 @@ Visual Studio doesn't install on Windows 10 versions 1507 or 1511.
 
 ## Windows 10, versions 1607 through 1903
 
-- .NET 4.8.1 isn't supported and doesn't install.
+.NET 4.8.1 isn't supported on Windows 10 versions 1607 through 1903 and doesn't install.
 
 ## Windows 10, versions 1909 through 2004
 
-- .NET 4.8.1 isn't supported and doesn't install.
+.NET 4.8.1 isn't supported on Windows 10 versions 1909 through 2004 and doesn't install.
