@@ -58,8 +58,8 @@
     href: ./version-visual-studio-requires-april-2014-update.md
   - name: Wait for setup to finish before trying again
     href: ./another-setup-already-running-wait-finish.md
-  - name: Workarounds for Visual Studio 2026 on unsupported operating systems
-    href: ./visual-studio-2026-unsupported-operating-systems.md
+  - name: Workarounds for Visual Studio on unsupported operating systems
+    href: ./visual-studio-unsupported-operating-systems.md
   - name: Workarounds for Visual Studio 2022 on unsupported operating systems
     href: ./visual-studio-2022-unsupported-operating-systems.md
   - name: Windows Program Compatibility mode is on
