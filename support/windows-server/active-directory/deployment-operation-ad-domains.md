@@ -22,19 +22,19 @@ _Original KB number:_ &nbsp; 300684
 
 This article provides application compatibility information for scenarios in which you're considering renaming a domain. Typically, you might consider this approach in order to remove a single-label domain name system (DNS) configuration.
 
-For the following reasons, create new Active Directory domains that have fully qualified DNS names:
+For the following reasons, create new Active Directory domains that have fully qualified DNS names (FQDNs):
 
 - You can't use an internet registrar to register single-label DNS names.
 - When joined to single-label domains, client computers (both domain-joined and nondomain-joined) and domain controllers (DCs) require extra configuration to dynamically register DNS records in single-label DNS zones.
 - Client computers (domain-joined, nondomain-joined, and Microsoft Entra ID-joined) and DCs require extra configuration to resolve DNS queries in single-label DNS zones.
 - Some server-based applications are incompatible with single-label domain names. Newly released applications might not support single-label DNS names, and applications that support single-label DNS names might drop that support in the future.
-- Transitioning from a single-label DNS domain name to a fully qualified DNS name is nontrivial and consists of two options:
+- Transitioning from a single-label DNS domain name to an FQDN is nontrivial and consists of two options:
 
   - Migrate users, computers, groups, and other states to a new forest.
   - Rename the existing domain.
 
     > [!IMPORTANT]  
-    > Current Microsoft applications don't support domain renaming. Therefore, don't try to rename a single-label DNS name to a fully qualified domain name.
+    > Current Microsoft applications don't support domain renaming. Therefore, don't try to rename a single-label DNS name to an FQDN.
 
 - In Windows Server 2008, the Active Directory Installation Wizard (Dcpromo.exe) warns against creating new domains that have single-label DNS names. There's no business or technical reason to create new domains that have single-label DNS names. In Windows Server 2008 R2 and later versions, the Active Directory Installation Wizard explicitly blocks creating such domains.
 
