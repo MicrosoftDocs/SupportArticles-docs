@@ -113,7 +113,7 @@ On the Windows client computers (domain-joined, nondomain-joined, or Microsoft E
 
 ##### Step 2: Change the dynamic update configuration for the DNS root zone or single-label DNS zones
 
-Apply these changes to all DCs and members of domains that have single-label DNS names. If a domain that has a single-label DNS name is a forest root domain, apply these changes to all the DCs in the forest, unless the individual zones (\_msdcs. *ForestName*, \_sites. *ForestName*, _tcp. *ForestName*, \_udp. *ForestName*) are delegated from the *ForestName* zone.
+Apply these changes to all DCs and members of domains that have single-label DNS names. If a domain that has a single-label DNS name is a forest root domain, apply these changes to all the DCs in the forest, unless the following individual zones are delegated from the *ForestName* zone: \_msdcs. *ForestName*, \_sites. *ForestName*, _tcp. *ForestName*, and \_udp. *ForestName*.
 
 Follow these steps:
 
