@@ -1,17 +1,17 @@
 ---
-title: Workarounds for Visual Studio 2026 on unsupported operating systems
-description: This article describes known issues and workarounds for Visual Studio 2026 when installed on unsupported operating systems.
+title: Workarounds for Visual Studio on unsupported operating systems
+description: This article describes known issues and workarounds for Visual Studio when installed on unsupported operating systems.
 ms.date: 11/11/2025
 ms.reviewer: pchapman, jagbal, v-shaywood
 ms.custom: sap:Installation\Setup, maintenance, or uninstall
 ---
-# Workarounds and operating system requirements for Visual Studio 2026
+# Workarounds and operating system requirements for Visual Studio
 
-_Applies to:_ &nbsp; Visual Studio 2026  
+_Applies to:_ &nbsp; Visual Studio  
 
 ## Summary
 
-Visual Studio 2026 is only supported on only 64-bit editions of [Windows 11](/lifecycle/products/?terms=windows%2011), [Windows 10](/lifecycle/products/?terms=windows%2010), and Windows Server 2019 and higher that are still within their support lifecycle. We don't recommend using Visual Studio on earlier or unsupported versions of Windows and Windows Server. For more information, see [full system requirements](/visualstudio/releases/2026/vs-system-requirements). To enable organizations to schedule their operating system upgrades, this article provides known issues and potential workarounds when using Visual Studio on an unsupported operating system.
+Visual Studio is only supported on only 64-bit editions of [Windows 11](/lifecycle/products/?terms=windows%2011), [Windows 10](/lifecycle/products/?terms=windows%2010), and Windows Server 2019 and higher that are still within their support lifecycle. We don't recommend using Visual Studio on earlier or unsupported versions of Windows and Windows Server. For more information, see [full system requirements](/visualstudio/releases/2026/vs-system-requirements). To enable organizations to schedule their operating system upgrades, this article provides known issues and potential workarounds when using Visual Studio on an unsupported operating system.
 
 > [!NOTE]
 > Microsoft can't provide support or fixes for issues that arise from using Visual Studio on an unsupported operating system. For feedback on supported configurations, see [Developer Community](https://developercommunity.visualstudio.com/).
