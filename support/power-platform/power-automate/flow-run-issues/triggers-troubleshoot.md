@@ -314,7 +314,7 @@ For triggers, the value of expressions is calculated only when the flow is saved
 
 Starting November 30, 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL will move to a new URL. This change is part of an infrastructure upgrade to improve execution speed and provide new features. For more information, see [Power Automate environments move to new architecture](/power-automate/environment-architecture).
 
-> - To ensure that existing flows using these triggers continue to work, update the URLs used by external systems with the new URLs shown on the impacted flows. Complete the following actions by November 30, 2025. Before November 30, 2025 both the old and new URLs are supported; after that, the old URLs no longer work and flows fail to trigger.
+To ensure that existing flows using these triggers continue to work, update the URLs used by external systems with the new URLs shown on the impacted flows. Complete the following actions by November 30, 2025. Before November 30, 2025 both the old and new URLs are supported; after that, the old URLs no longer work and flows fail to trigger.
 
 ### Required actions
 
