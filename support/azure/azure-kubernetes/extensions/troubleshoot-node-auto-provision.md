@@ -223,7 +223,7 @@ nc -zv 10.0.0.10 53
 - Check that Karpenter nodes can reach the service subnet
 - Restart CoreDNS pods if they're in error state: `kubectl rollout restart deployment/coredns -n kube-system`
 - Verify NSG rules allow traffic on port 53 (TCP/UDP)
-- Run a connectivyt analysis with the [Azure Virtual Network Verifier][connectivity-tool] tool to validate outbound connectivity
+- Run a connectivity analysis with the [Azure Virtual Network Verifier][connectivity-tool] tool to validate outbound connectivity
 
 ## Azure-Specific Issues
 
