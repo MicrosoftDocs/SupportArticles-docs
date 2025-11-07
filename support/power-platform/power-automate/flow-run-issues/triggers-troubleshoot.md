@@ -15,20 +15,20 @@ Here are some tips and tricks for troubleshooting issues with triggers.
 
 ## Identify specific flow run
 
-Sometimes, you might need to [Identify specific flow runs](/power-automate/fix-flow-failures#identify-specific-flow-runs) to troubleshoot your flows.
+Sometimes, you need to [Identify specific flow runs](/power-automate/fix-flow-failures#identify-specific-flow-runs) to troubleshoot your flows.
 
 ## My trigger doesn't fire
 
-1. A data loss prevention policy could be to blame.
+1. A data loss prevention policy might be the cause.
 
-   Admins can create [data loss prevention (DLP)](/power-platform/admin/wp-data-loss-prevention) policies that can act as guardrails to help prevent users from unintentionally exposing organizational data. DLP policies enforce rules for which connectors can be used together by classifying connectors as either **Business** or **Non-Business**. If you put a connector in the **Business** group, it can only be used with other connectors from that group in any given app or flow.
+   Admins can create [data loss prevention (DLP)](/power-platform/admin/wp-data-loss-prevention) policies that act as guardrails to help prevent users from unintentionally exposing organizational data. DLP policies enforce rules for which connectors can be used together by classifying connectors as either **Business** or **Non-Business**. If you put a connector in the **Business** group, it can only be used with other connectors from that group in any given app or flow.
 
    If your flow violates a DLP policy, it's suspended, causing the trigger to not fire. To know if your flow is suspended, try to edit the flow and save it. The flow checker reports it if the flow violates a DLP policy. Your admin can change the DLP policy.
 
 1. The trigger might be failing. Follow these steps to confirm:
 
    1. Sign in to [Power Automate](https://make.powerautomate.com).
-   1. On the navigation menu to the left, select **My flows**, and then select your flow.
+   1. On the navigation menu to the left, select **My flows**, then select your flow.
    1. Review the details page. Do you see the following error in the **Details**?
 
       > There's a problem with the flow's trigger. Fix the trigger.
@@ -37,17 +37,17 @@ Sometimes, you might need to [Identify specific flow runs](/power-automate/fix-f
 
    This error means that Power Automate tried multiple times to establish a connection to register the trigger and failed. Your flow doesn't trigger until this problem is resolved.
 
-   One of the common reasons for this failure is that the Power Automate service endpoints aren't part of the allowlist. To fix it, confirm that your IT department added these endpoints to the allowlist.
+   One common reason for this failure is that the Power Automate service endpoints aren't part of the allowlist. To fix it, confirm that your IT department added these endpoints to the allowlist.
 
    Here's the list of [IP addresses and domains](/power-automate/ip-address-configuration) that need to be added to your allowlist.
 
-   Learn more about how to fix issues with triggers in [There is a problem with the flow's trigger](there-is-a-problem-with-the-flows-trigger.md).
+      For more information about fixing issues with triggers, see [There is a problem with the flow's trigger](there-is-a-problem-with-the-flows-trigger.md).
 
 After the problem is resolved, modify the flow and then save it. You can then change it back to its original state, and then save it again. The flow becomes aware that its configuration changed, and it tries to register its trigger again.
 
 ### Verify connections
 
-With the default settings, users only need to sign in to a connection once. They can then use that connection until an admin revokes it. A possible scenario is that the password for the connection can expire or there might be a policy in your organization, which sets the connector's authentication token to expire after a specific amount of time. Token lifetime policies are configured on Microsoft Entra ID. Learn more in [Configurable token lifetimes in the Microsoft identity platform (preview)](/entra/identity-platform/configurable-token-lifetimes).
+With the default settings, users only need to sign in to a connection once. They can then use that connection until an admin revokes it. A possible scenario is that the password for the connection expires or there might be a policy in your organization that sets the connector's authentication token to expire after a specific amount of time. Token lifetime policies are configured on Microsoft Entra ID. For more information, see [Configurable token lifetimes in the Microsoft identity platform (preview)](/entra/identity-platform/configurable-token-lifetimes).
 
 Follow these steps to verify if your connections are broken:
 
@@ -80,23 +80,23 @@ Follow these steps to view the type of license that you have:
 
 You just completed an event. For example, you added a new list item or sent an email that should have triggered the flow, but the flow didn't run.
 
-1. On the navigation menu to the left, select **My flows**, and then select the flow.
+1. On the navigation menu to the left, select **My flows**, then select the flow.
 1. In the **28-day run history**, select **All runs**.
 
     :::image type="content" source="./media/triggers-troubleshoot/all-runs.png" alt-text="Screenshot showing all runs." lightbox="media/triggers-troubleshoot/all-runs.png":::
 
-If you expect the flow to run but it didn’t run, verify if it shows the trigger check was skipped at that time. If the trigger check was skipped, it means that the trigger condition wasn't met for the flow to trigger. Verify the flow the inputs and trigger conditions to confirm if you're using the latest configuration to trigger the flow.
+If you expect the flow to run but it didn't run, check if the trigger check was skipped at that time. If the trigger check was skipped, it means that the trigger condition wasn't met for the flow to trigger. Verify the flow inputs and trigger conditions to confirm if you're using the latest configuration to trigger the flow.
 
 ### Verify inputs and trigger conditions
 
 Sometimes, the inputs and trigger conditions might cause failures. Follow these steps to verify your inputs and conditions.
 
-Power Automate allows you to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. Learn more (with examples) in [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
+Power Automate allows you to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. For more information and examples, see [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
 
 # [New designer](#tab/new-designer)
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
-1. On the navigation menu to the left, select **My flows**, and then select a flow.
+1. On the navigation menu to the left, select **My flows**, then select a flow.
 1. On the command bar, select **Edit**.
 1. Select the first card to see what folders, sites, mailboxes, and others are used in the trigger in the configuration pane.
 
@@ -114,7 +114,7 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 # [Classic designer](#tab/classic-designer)
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
-1. On the navigation menu to the left, select **My flows**, and then select a flow.
+1. On the navigation menu to the left, select **My flows**, then select a flow.
 1. On the command bar, select **Edit**.
 1. Expand the first card to see what folders, sites, mailboxes, and others are used in the trigger.
 1. On the card, select the ellipsis (**…**) > **Settings**.
@@ -130,49 +130,49 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 
 ### Check permissions
 
-Verify that you have access to the folders, sites, or mailboxes that are used in the trigger. For example, to be able to send email from a shared inbox via Power Automate, you need permissions to send an email via the shared inbox. Send a test email from that shared mailbox in Outlook.
+Verify that you have access to the folders, sites, or mailboxes that the trigger uses. For example, to send email from a shared inbox via Power Automate, you need permissions to send an email through the shared inbox. Send a test email from that shared mailbox in Outlook.
 
 ### Verify if admin mode is turned on
 
-If an environment's admin mode is turned on, all background processes, including flows are turned off, causing the flow to not trigger.
+If you turn on admin mode for an environment, you turn off all background processes, including flows. This change prevents the flow from triggering.
 
-Follow these steps to disable the admin mode.
+Follow these steps to turn off admin mode:
 
 1. Go to the [Power Platform admin center](https://admin.powerplatform.com) and sign in with Environment Admin or System Administrator role credentials.
 1. From the left-side menu, select **Environments**, and then select a sandbox or production environment.
 1. On the **Details** page, select **Edit**.
 1. Under **Administration mode**, set the slider to **Disabled**.
 
-If everything looks good but your flow is still not triggering, verify if your flow triggers after every step.
+If everything looks good but your flow still doesn't trigger, check if your flow triggers after every step.
 
 ### Try these steps
 
 1. Test the flow manually.
-1. Remove, and then re-add the trigger.
+1. Remove, then re-add the trigger.
 1. Switch the connection.
-1. Turn off, and then turn on the flow.
-1. [Export](/power-automate/export-flow-solution), and then [import](/power-automate/import-flow-solution) the flow.
+1. Turn off, then turn on the flow.
+1. [Export](/power-automate/export-flow-solution), then [import](/power-automate/import-flow-solution) the flow.
 1. Create a copy of the flow.
-1. If the trigger uses special conditions, like when an email arrives in a specific folder, remove the folder, and then add it again.
+1. If the trigger uses special conditions, like when an email arrives in a specific folder, remove the folder, then add it again.
 
-## My trigger is firing for old events
+## My trigger fires for old events
 
-There are two types of triggers&mdash;polling triggers and Webhook triggers.
+There are two types of triggers: polling triggers and Webhook triggers.
 
-If you turned off your flow and then turned it back on, depending on your trigger type, your old triggers might be processed.
+If you turn off your flow and then turn it back on, depending on your trigger type, your flow might process old triggers.
 
-A polling trigger periodically makes a call to your service to look for new data, whereas a Webhook trigger responds to a push of new data from the service.
+A polling trigger periodically calls your service to check for new data. A Webhook trigger responds to a push of new data from the service.
 
-Refer to the following table to understand how your flow responds when it is turned back on.
+Refer to the following table to understand how your flow responds when you turn it back on.
 
 | Trigger type|Description|
 |---|---|
-| Polling, such as the `recurrence` trigger | When the flow is turned on again, all unprocessed or pending events are processed. If you don't want to process pending items when you turn your flow back on, delete and then recreate your flow. |
-| Webhook  | When the flow is turned on again, it processes new events that are generated after the flow is turned on. |
+| Polling, such as the `recurrence` trigger | When you turn the flow back on, it processes all unprocessed or pending events. If you don't want to process pending items when you turn your flow back on, delete and then recreate your flow. |
+| Webhook  | When you turn the flow back on, it processes new events that are generated after the flow is turned on. |
 
 Follow these steps to determine the type of trigger that your flow uses.
 
-Power Automate allows you to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. Learn more (with examples) in [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
+Power Automate allows you to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. For more information and examples, see [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
 
 # [New designer](#tab/new-designer)
 
@@ -193,17 +193,17 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 
 ---
 
-## My flow is triggered multiple times or some of my actions run multiple times
+## My flow runs multiple times or some of my actions run multiple times
 
 You might encounter a scenario where a single flow run has some (or all) of its actions duplicated. While the UI doesn't show this problem, you might see the results of the flow being duplicated. For example, duplicate emails sent, or duplicate list items created.
 
-One of the reasons this might happen is because of the "at-least-once" design of Azure Logic Apps.
+One of the reasons this issue occurs is because of the "at-least-once" design of Azure Logic Apps.
 
-Most of the times, this indicates that there was an issue with the Azure service. Usually, these issues are self-healed quickly. To ensure that your flows don't create duplication, ensure you design them to be **idempotent**&mdash;which is to say that the flow needs to account for the possibility of duplicate inputs.
+Most of the time, this issue indicates that there was an issue with the Azure service. Usually, these issues self-resolve quickly. To ensure that your flows don't create duplication, design them to be **idempotent**&mdash;which is to say that the flow needs to account for the possibility of duplicate inputs.
 
 An example of idempotency would be checking to see if a duplicate SharePoint document already exists before trying to create it, or using key constraints in Dataverse to prevent duplicate records getting created.
 
-Another possibility is for flow triggering multiple times might be having copies of the flow active in different environments that are triggering based on same condition. Use trigger conditions to customize triggers to reduce the number of times it triggers.
+Another possibility for a flow triggering multiple times is having copies of the flow active in different environments that are triggering based on same condition. Use trigger conditions to customize triggers to reduce the number of times it triggers.
 
 ## My recurrence trigger runs ahead of schedule
 
@@ -215,16 +215,16 @@ If the trigger is a polling trigger, it wakes up periodically to check if new ev
 
 For example, your flows might run every 15 minutes if you're on the **Free** license plan. On the **Free** plan, if a cloud flow is triggered less than 15 minutes after its last run, it's queued until 15 minutes elapsed.
 
-If your license is the **Flow for Office 365** plan (from your Enterprise license E3, E5, and more), or the **Flow for Dynamics 365** plan, your flow won't run again until five minutes have elapsed. It might be a few minutes between the time the triggering event occurs and the time the flow begins.
+If your license is the **Flow for Office 365** plan (from your Enterprise license E3, E5, and more), or the **Flow for Dynamics 365** plan, your flow doesn't run again until five minutes have elapsed. It might be a few minutes between the time the triggering event occurs and the time the flow begins.
 
 Follow these steps to check the trigger wake-up frequency.
 
-Power Automate allows you to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. Learn more (with examples) in [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
+Power Automate allows you to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. For more information and examples, see [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
 
 # [New designer](#tab/new-designer)
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
-1. On the navigation menu to the left, select **My flows**, and then select a flow.
+1. On the navigation menu to the left, select **My flows**, then select a flow.
 1. On the command bar, select **Edit**.
 1. On your flow, select your flow trigger.
 1. In the configuration tab, select the **Code view** tab.
@@ -235,7 +235,7 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 # [Classic designer](#tab/classic-designer)
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
-1. On the navigation menu to the left, select **My flows**, and then select a flow.
+1. On the navigation menu to the left, select **My flows**, then select a flow.
 1. On the command bar, select **Edit**.
 1. On your flow trigger, select the ellipsis (**...**) > **Peek code**.
 
@@ -247,23 +247,23 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 
 ---
 
-If it's taking longer than expected for your flow to trigger, here are the two most likely reasons:
+If your flow takes longer than expected to trigger, the delay is likely caused by one of the following reasons:
 
-1. There were too many calls to the connector or flow, causing it to be throttled. To verify if your flow is being throttled, manually test the flow to see if it triggers immediately. If it triggers immediately, it isn't throttled.
+1. Too many calls to the connector or flow, which causes throttling. To check if your flow is being throttled, manually test the flow to see if it triggers immediately. If it triggers immediately, it's not throttled.
 
    You can check the [Power Automate analytics](/power-automate/admin-analytics-report) to learn more about your flows.
 
-   If your flow is frequently throttled, redesign your flow to use fewer actions. Learn more in [Understand platform limits and avoid throttling](/power-automate/guidance/coding-guidelines/understand-limits).
+   If your flow is frequently throttled, redesign your flow to use fewer actions. For more information, see [Understand platform limits and avoid throttling](/power-automate/guidance/coding-guidelines/understand-limits).
 
    More tips:
 
-   1. Acquire a Power Automate Premium (previously Power Automate per user) or Power Automate Process license (previously Power Automate per flow). After this is acquired, open and then save the flow, in order to refresh the entitlement associated with it, and to change the throttling mode.
+   1. Acquire a Power Automate Premium (previously Power Automate per user) or Power Automate Process license (previously Power Automate per flow). After you acquire this license, open and then save the flow to refresh the entitlement associated with it and change the throttling mode.
 
-   1. Split the flow into several instances. If the flow processes data, you can divide this data into subsets (per country/region, per business area, etc.).
+   1. Split the flow into several instances. If the flow processes data, you can divide this data into subsets (per country/region, per business area, and so on).
 
-   1. After this, you can use **Save As** on the flow to create several instances that will process their own data. Since the quota is per flow, this can be used as a workaround.
+      1. Use **Save As** on the flow to create several instances that process their own data. Since the quota is per flow, this approach serves as a workaround.
 
-2. There was a communication issue that prevents Power Automate from reacting to trigger events. Potentially, because of a service outage, policy change, password expiry, and so on, that caused the delay. You can view [Help + support](https://admin.powerplatform.microsoft.com/support) to find out if there are any active outages. You can also clear the cache of the browser and then retry.
+1. A communication issue prevents Power Automate from reacting to trigger events. Potentially, a service outage, policy change, password expiry, or similar issue caused the delay. You can view [Help + support](https://admin.powerplatform.microsoft.com/support) to find out if there are any active outages. You can also clear the cache of the browser and then retry.
 
 ## Power Apps trigger issues
 
@@ -276,19 +276,19 @@ Here's a workaround to rename actions:
 1. Add your Power Apps trigger.
 1. Configure variables where needed.
 
-After an app is published, make copies of the flows used by that app to make any updates. Any update to a cloud flow referenced by a published app can break existing users. Don't delete or turn off existing flows until all users are upgraded to the new published version of the app.
+After you publish an app, make copies of the flows used by that app to make any updates. If you update a cloud flow referenced by a published app, you can break existing users. Don't delete or turn off existing flows until all users upgrade to the new published version of the app.
 
 ## SharePoint trigger issues
 
-SharePoint triggers, for example **When a file is created or modified**, don't fire if a file is added or updated in a subfolder. If you need the flow to trigger on subfolders, create multiple flows.
+SharePoint triggers, such as **When a file is created or modified**, don't fire if you add or update a file in a subfolder. If you need the flow to trigger on subfolders, create multiple flows.
 
-## Users are unable to run flows that are shared with them, but the owner can run the flow
+## Users can't run flows that are shared with them, but the owner can run the flow
 
-You can try one of the following:
+Try one of the following solutions:
 
 1. Fix or update connections.
 
-   If your flow uses a **Manual** trigger, it needs the connection of the user who is triggering the flow. If it uses the **Recurrence** trigger, it can run on the flow maker's connections.
+   If your flow uses a **Manual** trigger, it needs the connection of the user who triggers the flow. If it uses the **Recurrence** trigger, it can run on the flow maker's connections.
 
 1. Confirm the user has the appropriate license for the connections in the flow.
 
@@ -300,7 +300,7 @@ You can try one of the following:
 
 To resolve this issue, edit each flow and save it. The triggers should start firing again.
 
-## Triggers aren't respecting expressions used in them
+## Triggers don't respect expressions used in them
 
 For triggers, the value of expressions is calculated only when the flow is saved. For example, if your trigger uses `utcNow()` in an input, `utcNow()` is calculated when you save the flow, and the current UTC time is inserted into the trigger definition as a hardcoded value. `utcNow()` isn't recalculated every time the flow is triggered.
 
@@ -309,12 +309,12 @@ For triggers, the value of expressions is calculated only when the flow is saved
 > [!IMPORTANT]
 >
 > - This change only affects flows with HTTP or Teams Webhook triggers.
-> - This change only affects flows in current environment architecture (Logic Apps). If your environment is Self Host MultiTenant (MTA), you are not impacted. To find which environment architecture your flows are in, see [Power Automate environments move to new architecture](/power-automate/environment-architecture).
+> - This change only affects flows in current environment architecture (Logic Apps). If your environment is Self Host MultiTenant (MTA), you're not impacted. To find which environment architecture your flows are in, see [Power Automate environments move to new architecture](/power-automate/environment-architecture).
 > - This alert doesn't affect sovereign clouds.
 
-Starting November 30, 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL are moving to a new URL. This change is part of an infrastructure upgrade to improve execution speed and provide new features. To learn more, see [Power Automate environments move to new architecture](/power-automate/environment-architecture).
+Starting November 30, 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL will move to a new URL. This change is part of an infrastructure upgrade to improve execution speed and provide new features. For more information, see [Power Automate environments move to new architecture](/power-automate/environment-architecture).
 
-> - To ensure that existing flows using these triggers continue to work, update the URLs used by external systems with the new URLs shown on the impacted flows. Complete the following actions by November 30, 2025. Before November 30, 2025 both the old and new URLs will be supported; after that, the old URLs will no longer work and flows will fail to trigger.
+> - To ensure that existing flows using these triggers continue to work, update the URLs used by external systems with the new URLs shown on the impacted flows. Complete the following actions by November 30, 2025. Before November 30, 2025 both the old and new URLs are supported; after that, the old URLs no longer work and flows fail to trigger.
 
 ### Required actions
 
@@ -324,7 +324,7 @@ To ensure your flows continue to function as expected, follow these steps:
 
    1. Follow the steps in [Power Automate environments move to new architecture](/power-automate/environment-architecture) to identify the flow's environment type.
       1. You only need to take action for flows in the *Logic Apps* environment that use HTTP or Teams Webhook Triggers.
-   1. Identify all flows which will be impacted.
+   1. Identify all flows that are impacted.
       1. If you have admin privileges, you can use a [PowerShell script](#list-all-flows-with-migrating-trigger-urls) to identify all impacted flows.
    1. Make note of the old and new trigger URLs for the impacted flows by navigating to the **Flow Details** page or the **Designer**.
 
@@ -336,7 +336,7 @@ To ensure your flows continue to function as expected, follow these steps:
 #### Validate the new URL
 
    1. Verify that the updated URL works as expected by triggering the flow and checking for successful execution.
-   1. If using SAS authentication, confirm that the destination system supports URLs longer than 255 characters.
+   1. If you're using SAS authentication, confirm that the destination system supports URLs longer than 255 characters.
 
 #### Check the relative path parameter
 
@@ -347,7 +347,7 @@ To ensure your flows continue to function as expected, follow these steps:
 
 - **Updated trigger URL**: The URL displayed on the HTTP trigger card in your flow's designer will reflect a new URL. This new URL is required for your flows to function correctly.
 - **Length of the new URL**: The updated URL might exceed 255 characters, especially when [Shared Access Signature (SAS) authentication](/azure/storage/common/storage-sas-overview) is configured. Verify that your destination system supports URLs longer than 255 characters and adjust its configuration if necessary.
-  - It's strongly recommend to update your system configurations to support URLs longer than 255 characters, if possible.
+  - Update your system configurations to support URLs longer than 255 characters, if possible.
   - If your system can't support URLs longer than 255 characters, consider other solutions such as using a proxy wrapper (for example, see [Azure API Management Quickstart](/azure/api-management/get-started-create-service-instance)), Azure Functions, or similar approaches.
 - **Warning banner**: A warning banner will appear on your flow details page or within the designer, displaying the old URL that has been replaced. This serves as a reminder to update any references to the outdated URL with the new URL. If you do not see the warning banner on flows with HTTP or Teams webhook trigger, your environment is most likely on Self Host Multitenant architecture, and your flows will not be impacted.
 
@@ -356,17 +356,17 @@ To ensure your flows continue to function as expected, follow these steps:
   :::image type="content" source="./media/triggers-troubleshoot/http-trigger-url.png" alt-text="Screenshot of the warning banner reminding you to update the old URL." lightbox="media/triggers-troubleshoot/http-trigger-url.png":::
 
 > [!NOTE]
-> If a flow uses an HTTP action to call another flow, the parent flow is considered to be an external system. The URL in the parent flow should be updated with the new URL that is displayed in the child flow's trigger card. However, if the child flow is called through the **Run a child flow** action no change is needed.
+> If a flow uses an HTTP action to call another flow, the parent flow is considered to be an external system. The URL in the parent flow should be updated with the new URL that is displayed in the child flow's trigger card. However, if the child flow is called through the **Run a child flow** action, no change is needed.
 
 ### List all flows with migrating trigger URLs
 
-Admins can use the [Microsoft.PowerApps.Administration.PowerShell](https://www.powershellgallery.com/packages/Microsoft.PowerApps.Administration.PowerShell/2.0.216) package to list all flows whose trigger URLs will be migrated. Having the package installed, run the following PowerShell cmdlet:
+Admins can use the [Microsoft.PowerApps.Administration.PowerShell](https://www.powershellgallery.com/packages/Microsoft.PowerApps.Administration.PowerShell/2.0.216) package to list all flows whose trigger URLs will be migrated. After installing the package, run the following PowerShell cmdlet:
 
 ```powershell
 Get-AdminFlowWithMigratingTriggerUrl -EnvironmentName <EnvironmentName>
 ```
 
-The cmdlet outputs the `DisplayName` and `FlowName` (ID) of each flow whose trigger URL will be migrated.
+The cmdlet outputs the `DisplayName` and `FlowName` (ID) of each flow whose trigger URL is migrating.
 
 To find all impacted flows across a tenant:
 
