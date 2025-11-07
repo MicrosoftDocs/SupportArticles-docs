@@ -23,7 +23,7 @@ The Windows Update error 0x80070bc9 occurs when the OS is stuck in a pending ser
 
 ## Prerequisites
 
-Ensure you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+For virtual machines (VMs) running Windows in Azure, make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 ## How to identify the issue
 
@@ -56,5 +56,6 @@ This error occurs because the OS is in a pending servicing state and the Trusted
 
 ## Resolution
 
-Perform an [in-place upgrade](/azure/virtual-machines/windows-in-place-upgrade) on the Windows virtual machine. 
- 
+For Windows-based computers, perform an [in-place upgrade](/windows-server/get-started/perform-in-place-upgrade#perform-the-in-place-upgrade). 
+
+For VMs running Windows in Azure, see [in-place upgrade on the Windows virtual machine](/azure/virtual-machines/windows-in-place-upgrade).
