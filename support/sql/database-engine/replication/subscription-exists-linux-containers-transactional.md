@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Issues Configuring Transactional Replication on Multiple SQL Server Linux Containers
-description: Learn about a known issue when configuring transactional replication in SQL Server on Linux containers, including symptoms, cause, workaround, and resolution.
+description: Learn how to fix duplicate subscription errors when setting up transactional replication on SQL Server Linux containers.
 ms.reviewer: pijocoder, mlandzic, randolphwest, v-shaywood
 ms.custom: sap:Replication, Change Tracking, Change Data Capture\Errors or unexpected results during operation
 ms.date: 11/03/2025
@@ -29,13 +29,13 @@ This behavior is specific to Linux container environments where named instances 
 
 ## Workaround
 
-To successfully add multiple subscribers on the same machine but in different containers:
+To successfully add multiple subscribers on the same machine but in different containers, follow these steps:
 
 1. Install [Cumulative Update 20 (CU20) for SQL Server 2022](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5059390).
 
-1. Enable trace flag [15005](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf15005). This trace flag enables using a Subscriber with a nondefault port for transactional replication.
+1. Enable trace flag [15005](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf15005). This trace flag enables using a subscriber with a nondefault port for transactional replication.
 
-1. Perform the following manual cleanup and configuration steps in Transact-SQL. Make sure to replace the `@hostname`, `@port_sub1`, `@port_sub2`, `@PublicationName`, `@SubscriberDb_Sub1`, and `@SubscriberDb_Sub2` variables with values specific to your environment:
+1. Perform the following manual cleanup and configuration steps in Transact-SQL. Replace the `@hostname`, `@port_sub1`, `@port_sub2`, `@PublicationName`, `@SubscriberDb_Sub1`, and `@SubscriberDb_Sub2` variables with values specific to your environment:
 
    ```sql
    DECLARE @hostname AS SYSNAME = 'LinuxSubscriberHostName',
@@ -166,9 +166,9 @@ To successfully add multiple subscribers on the same machine but in different co
 
 ## Resolution
 
-Currently, no permanent fix is available. The previous [workaround](#workaround) is the recommended approach.
+Currently, no permanent fix is available. Use the previous [workaround](#workaround).
 
-The product team is evaluating potential fixes for future releases. Once a permanent fix is available, this article will be updated.
+The product team is evaluating potential fixes for future releases. This article will be updated when a permanent fix is available.
 
 ## Related content
 
