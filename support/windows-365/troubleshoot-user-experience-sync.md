@@ -109,20 +109,3 @@ When individual user storage becomes low or full, users may experience performan
   4. Go to the **User Storage** tab.
   5. Locate the user storage to delete.
   6. Select **Delete** and confirm the action.
-
-## Monitoring and current limitations
-
-### User Experience Sync monitoring
-
-Monitor User Experience Sync through:
-
-- Microsoft Intune [alerts](/windows-365/enterprise/alerts)
-- User Storage tab in provisioning policies
-- Connected Frontline Cloud PCs [reports](/windows-365/enterprise/report-connected-frontline-cloud-pcs)
-
-### Current limitations
-
-- Custom data locations can't be excluded from per-user storage
-- User installed applications will not persist between different devices
-- Disaster recovery or user storage move options are not available
-- When an assignment is removed, it deletes all user storage and can't be recovered
