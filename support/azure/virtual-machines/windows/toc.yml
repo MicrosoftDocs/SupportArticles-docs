@@ -243,6 +243,8 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-installation-error-corruption.md
     - name: Error Code 0x8007045b
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md
+    - name: Error code 0x80244007
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80244007.md?context=/troubleshoot/azure/virtual-machines/windows/context/context  
 
 - name: My VM is not booting
   items:
