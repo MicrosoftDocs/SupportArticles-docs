@@ -16,6 +16,9 @@ appliesto:
 
 This article helps you diagnose and understand the NetLogon service Event ID 5719, when the event includes the `0xC00000E5 (STATUS_INTERNAL_ERROR)` error code. Windows logs this event when the NetLogon service restarts on Windows Server systems. The event typically appears when Windows Server 2025-based member servers interact with domain controllers (DCs) that run earlier Windows Server versions.
 
+> [!IMPORTANT]  
+> This article specifically addresses the case in which Event ID 5719 includes the `0xC00000E5 (STATUS_INTERNAL_ERROR)` error code. Event 5719 can contain other error codes. and might occur in combination with other events. Those cases are outside the scope of this article. For an example of Event ID 5719 that's related to a different issue, see [Netlogon event ID 5719 or Group Policy event 1129 is logged when you start a domain member](../group-policy/netlogon-event-id-5719-or-group-policy-event-1129).
+
 ## Symptoms
 
 Each time the NetLogon service restarts on a Windows Server 2025 system, Windows logs Event ID 5719 (STATUS_INTERNAL_ERROR) in the System event log. The event text resembles the following excerpt:
