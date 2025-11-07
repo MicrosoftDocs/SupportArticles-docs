@@ -170,3 +170,6 @@ If the preceding actions don't resolve the issue, ensure the following:
 - Make sure that the environmental variable `ComSpec` with value `C:\WINDOWS\system32\cmd.exe` exists on the machine.
 - (Chrome only) Check and set the `exit_type` parameter to `normal` at _%localappdata%\Google\Chrome\User Data\Default\Preferences_.
 - Clear the browser cache and cookies manually, and then restart the browser.
+
+## WebDriver support
+Starting with version 2.62, Power Automate for desktop supports [WebDriver](https://learn.microsoft.com/en-us/power-automate/desktop-flows/actions-reference/webautomation#webdriver-based-browser-automation-preview) as an alternative communication method for browser automation. This approach eliminates the need to install a browser extension to enable web automation in Power Automate for Desktop.
