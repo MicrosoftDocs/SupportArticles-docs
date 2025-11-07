@@ -1,26 +1,22 @@
 ---
-title: Configuring Transactional Replication on Multiple SQL Server Linux Containers Might Fail
+title: Troubleshoot Issues Configuring Transactional Replication on Multiple SQL Server Linux Containers
 description: Learn about a known issue when configuring transactional replication in SQL Server on Linux containers, including symptoms, cause, workaround, and resolution.
-author: pijocoder
-ms.author: mlandzic
-ms.reviewer: randolphwest
+ms.reviewer: pijocoder, mlandzic, randolphwest, v-shaywood
+ms.custom: sap:Replication, Change Tracking, Change Data Capture\Errors or unexpected results during operation
 ms.date: 11/03/2025
-ms.topic: troubleshooting
 ---
 
-# Configuring transactional replication on multiple SQL Server Linux containers might fail
+# Configuring transactional replication on multiple SQL Server Linux containers fails
 
-This article guides you how to resolve an issue with two SQL Server running on Linux container on the same machine to be configured as replication subscribers.
+This article provides troubleshooting guidance for an issue that might occur when configuring two SQL Servers running in Linux containers on the same machine as replication subscribers.
 
 ## Symptoms
 
-When configuring **Transactional Replication** on SQL Server 2022 running in Linux containers, you might encounter the following error:
+When configuring **Transactional Replication** on SQL Server 2022 running in Linux containers, you might encounter the following error message:
 
-```output
-The subscription already exists.
-```
+> The subscription already exists.
 
-This issue typically occurs when:
+This issue usually occurs when:
 
 - Two SQL Server instances are hosted in separate containers on the same Linux machine.
 - Both instances are added as subscribers to the same publisher.
@@ -28,18 +24,18 @@ This issue typically occurs when:
 
 ## Cause
 
-The issue occurs because subscriber metadata doesn't honor port numbers during persistence. Only the hostname is stored, causing the second subscriber to be perceived as a duplicate of the first.
-This behavior is specific to Linux container environments where named instances don't exist, and connections rely on hostname and port mapping.
+The issue occurs because subscriber metadata doesn't honor port numbers during persistence. Only the hostname is stored, causing the second subscriber to be seen as a duplicate of the first.
+This behavior is specific to Linux container environments where named instances don't exist and connections rely on hostname and port mapping.
 
 ## Workaround
 
-To successfully add multiple subscribers on the same host but different containers:
+To successfully add multiple subscribers on the same machine but in different containers:
 
-1. Install **Cumulative Update 20 (CU20)** for SQL Server 2022.
+1. Install [Cumulative Update 20 (CU20) for SQL Server 2022](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5059390).
 
-1. Enable trace flag **[15005](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf15005)**. This trace flag enables using a Subscriber with a nondefault port for transactional replication.
+1. Enable trace flag [15005](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf15005). This trace flag enables using a Subscriber with a nondefault port for transactional replication.
 
-1. Perform the following manual cleanup and configuration steps in Transact-SQL. Make sure to replace `@hostname`, `@port_sub1`, `@port_sub2`, publication, publisher, and subscriber database variables with values specific to your environment:
+1. Perform the following manual cleanup and configuration steps in Transact-SQL. Make sure to replace the `@hostname`, `@port_sub1`, `@port_sub2`, `@PublicationName`, `@SubscriberDb_Sub1`, and `@SubscriberDb_Sub2` variables with values specific to your environment:
 
    ```sql
    DECLARE @hostname AS SYSNAME = 'LinuxSubscriberHostName',
@@ -170,9 +166,9 @@ To successfully add multiple subscribers on the same host but different containe
 
 ## Resolution
 
-As of now, no permanent fix is available. The workaround is the recommended approach.
+Currently, no permanent fix is available. The previous [workaround](#workaround) is the recommended approach.
 
-The product team is evaluating a fix for a future release. When resolved, this article is to be updated or retired accordingly.
+The product team is evaluating potential fixes for future releases. Once a permanent fix is available, this article will be updated.
 
 ## Related content
 
