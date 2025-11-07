@@ -25,8 +25,8 @@ This article provides application compatibility information for scenarios in whi
 For the following reasons, create new Active Directory domains that have fully qualified DNS names:
 
 - You can't use an internet registrar to register single-label DNS names.
-- When joined to single-label domains, client computers (both domain-joined and nondomain-joined) and domain controllers require extra configuration to dynamically register DNS records in single-label DNS zones.
-- Client computers (domain-joined, nondomain-joined, and Microsoft Entra ID-joined) and domain controllers require extra configuration to resolve DNS queries in single-label DNS zones.
+- When joined to single-label domains, client computers (both domain-joined and nondomain-joined) and domain controllers (DCs) require extra configuration to dynamically register DNS records in single-label DNS zones.
+- Client computers (domain-joined, nondomain-joined, and Microsoft Entra ID-joined) and DCs require extra configuration to resolve DNS queries in single-label DNS zones.
 - Some server-based applications are incompatible with single-label domain names. Newly released applications might not support single-label DNS names, and applications that support single-label DNS names might drop that support in the future.
 - Transitioning from a single-label DNS domain name to a fully qualified DNS name is nontrivial and consists of two options:
 
@@ -34,17 +34,17 @@ For the following reasons, create new Active Directory domains that have fully q
   - Rename the existing domain.
 
     > [!IMPORTANT]  
-    > Current Microsoft applications don't support domain renaming. As a result, don't try to rename a single-label DNS name to a fully qualified domain name.
+    > Current Microsoft applications don't support domain renaming. Therefore, don't try to rename a single-label DNS name to a fully qualified domain name.
 
 - In Windows Server 2008, the Active Directory Installation Wizard (Dcpromo.exe) warns against creating new domains that have single-label DNS names. There's no business or technical reason to create new domains that have single-label DNS names. In Windows Server 2008 R2 and later versions, the Active Directory Installation Wizard explicitly blocks creating such domains.
 
-Previous versions of this article provided information about Microsoft applications that specifically didn't support domain renaming. Currently, no Microsoft applications support domain renaming, so the distinction of the list isn't needed anymore.
+Previous versions of this article listed Microsoft applications that specifically didn't support domain renaming. Currently, no Microsoft applications support domain renaming. Therefore, the distinction that's provided by that list is no longer needed.
 
 ## More information
 
 Single-label names consist of a single word, such as "contoso."
 
-Best-practice Active Directory domain names consist of one or more subdomains that you combine with a top-level domain. A dot character (".") separates the two components, as shown in the following examples:
+Best-practice Active Directory domain names consist of one or more subdomains that you combine with a top-level domain. A period (".") separates the two components, as shown in the following examples:
 
 - contoso.com
 - corp.contoso.com
@@ -54,20 +54,20 @@ The top-level domain occupies the rightmost label in a domain name. A large numb
 - .com
 - .net
 - .org
-- Two-letter country code top-level domains (ccTLD) such as .nz
-- Generic names such as "local." However, in these circumstances generic names might cause other issues.
+- Two-letter country code top-level domains (ccTLD), such as .nz
+- Generic names such as "local." However, in these situations, generic names might cause other issues.
 
 To support current and future operating systems and reliable applications, use two or more labels for Active Directory domain names. For examples of invalid top-level domain queries, see [Invalid Top Level Domain Queries at the Root Level of the Domain Name System (ICANN Security and Stability Advisory Committee)](http://www.icann.org/groups/ssac/documents/sac-045-en.pdf).
 
 ### Registering DNS names with an internet registrar
 
-Use an internet registrar to register DNS names for the top-most internal and external DNS namespaces of your domain. These DNS namespaces include the forest root domains of any Active Directory forests, unless such names are subdomains of previously-registered domains. (For example, the forest root domain "corp.example.com" is a subdomain of an internal "example.com." namespace.) When you register your DNS names with an internet registrar, internet DNS servers resolve your domain now or at some point over the life of your Active Directory forest. This registration also helps prevent name collisions by other organizations.
+Use an internet registrar to register DNS names for the top-most internal and external DNS namespaces of your domain. These DNS namespaces include the forest root domains of any Active Directory forests, unless such names are subdomains of previously-registered domains. (For example, the forest root domain "corp.example.com" is a subdomain of an internal "example.com." namespace.) When you register your DNS names with an internet registrar, internet DNS servers resolve your domain either now or at some point over the life of your Active Directory forest. This registration also helps prevent name collisions by other organizations.
 
 ### Symptoms that indicate clients can't dynamically register DNS records in a single-label forward lookup zone
 
 If you use a single-label DNS name in your environment, clients might be unable to dynamically register DNS records in a single-label forward lookup zone. Specific symptoms vary for different versions of Windows, but might include the following symptoms:
 
-- After you configure single label domain name, domain controllers can't register DNS records. The System logs of the domain controllers consistently log NetLogon Event ID 5781, "Dynamic registration or deletion of one or more DNS records associated with DNS domain 'intranet.example.com.' failed."
+- After you configure single label domain name, DCs can't register DNS records. The system logs of the DC consistently log NetLogon Event ID 5781, "Dynamic registration or deletion of one or more DNS records associated with DNS domain 'intranet.example.com.' failed."
 
 - Clients receive DNS errors that resemble the following error codes:
 
@@ -83,14 +83,14 @@ If you use a single-label DNS name in your environment, clients might be unable 
 Consider the following configuration:
 
 - Domain member computers reside in a forest that doesn't contain any single-label DNS domains.
-- Domain controllers reside in single-label DNS domains in a different forest.
+- DCs reside in single-label DNS domains in a different forest.
 
 In this configuration, you see the following default behaviors:
 
-- By default, the client computers don't use the DNS Server service to locate the domain controllers.
+- By default, the client computers don't use the DNS Server service to locate the DCs.
 - By default, Windows DNS clients don't send updates to top-level domains.
 
-These behaviors cause DNS resolution issues. To mitigate them, you have to change the configurations of the Windows client computers (domain-joined, nondomain-joined, or Microsoft Entra ID-joined) and the domain controllers. To change the configurations, use one of the two methods in this section.
+These behaviors cause DNS resolution issues. To mitigate the issues, you have to change the configurations of the Windows client computers (domain-joined, nondomain-joined, or Microsoft Entra ID-joined) and the DCs. To change the configurations, use one of the two methods in this section.
 
 > [!IMPORTANT]  
 > Before you use either method, make sure that NetBIOS name resolution works correctly in your environment. Otherwise, clients can't access the domains that have single-label DNS names fails.
@@ -99,21 +99,21 @@ These behaviors cause DNS resolution issues. To mitigate them, you have to chang
 
 [!INCLUDE [registry important alert](../../../includes/registry-important-alert.md)]
 
-##### Step 1: Change the domain controller locator configuration
+##### Step 1: Change the DC locator configuration
 
 On the Windows client computers (domain-joined, nondomain-joined, or Microsoft Entra ID-joined), follow these steps:
 
 1. In the Search box, enter regedit, and then select **Registry editor**.
-1. Locate and then select the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters` subkey.
+1. Locate and select the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters` subkey.
 1. In the details pane, locate the `AllowSingleLabelDnsDomain` entry. If the entry doesn't exist, follow these steps:
    1. Select **Edit** > **New** > **DWORD Value**.
    1. In the **Name** box, enter **AllowSingleLabelDnsDomain**.
 1. Double-click the **AllowSingleLabelDnsDomain** entry, and then in **Value data**, enter **1**.
-1. Close Registry Editor, and then restart the computer.
+1. Close Registry Editor, and restart the computer.
 
 ##### Step 2: Change the dynamic update configuration for the DNS root zone or single-label DNS zones
 
-Apply these changes to all domain controllers and members of domains that have single-label DNS names. If a domain that has a single-label DNS name is a forest root domain, apply these changes to all the domain controllers in the forest, unless the separate zones \_msdcs. *ForestName*, \_sites. *ForestName*, _tcp. *ForestName*, and \_udp. *ForestName* are delegated from the *ForestName* zone.
+Apply these changes to all DCs and members of domains that have single-label DNS names. If a domain that has a single-label DNS name is a forest root domain, apply these changes to all the DCs in the forest, unless the individual zones (\_msdcs. *ForestName*, \_sites. *ForestName*, _tcp. *ForestName*, \_udp. *ForestName*) are delegated from the *ForestName* zone.
 
 Follow these steps:
 
@@ -122,12 +122,12 @@ Follow these steps:
 1. In the details pane, locate the `UpdateTopLevelDomainZones` entry. If the entry doesn't exist, follow these steps:
    1. Select **Edit** > **New** > **DWORD Value**.
    1. In the **Name** box, enter **UpdateTopLevelDomainZones**.
-1. Double-click the **UpdateTopLevelDomainZones** entry, and then in **Value data**, enter **1**.
-1. Close Registry Editor, and then restart the computer.
+1. Double-click the **UpdateTopLevelDomainZones** entry, and then enter **1** in **Value data**.
+1. Close Registry Editor, and restart the computer.
 
 #### Method 2: Use Group Policy
 
-Use Group Policy to enable the **Update Top Level Domain Zones** policy and the **Location of the DCs hosting a domain with single label DNS name** policy as specified in the following table. Configure these policies under the folder location on the root domain container in **Users and Computers**, or on all organizational units (OUs) that host computer accounts for member computers and for domain controllers in the domain.
+Use Group Policy to enable the **Update Top Level Domain Zones** policy and the **Location of the DCs hosting a domain with single label DNS name** policy. Configure these policies under the folder location on the root domain container in **Users and Computers**, or on all organizational units (OUs) that host computer accounts for member computers and for DCs in the domain. Use the values that are specified in the following table.
 
 |Policy|Folder location|
 |---|---|
@@ -136,9 +136,9 @@ Use Group Policy to enable the **Update Top Level Domain Zones** policy and the 
 
 To enable these policies, follow these steps on the root domain container:
 
-1. In the Group Policy Management Console (GPMC), double-click the domain policy that you want to configure. If you want all computers to behave in the same way, double-click a global policy such as **Default Domain Policy**.
+1. In the Group Policy Management Console (GPMC), double-click the domain policy that you want to configure. If you want all computers to behave in the same manner, double-click a global policy such as **Default Domain Policy**.
 
-1. Expand **Computer Configuration** > **Administrative Templates** > **Network** > **DNS Client**
+1. Expand **Computer Configuration** > **Administrative Templates** > **Network** > **DNS Client**.
 1. In the details pane, double-click **Use DNS name resolution with a single-label domain name instead of NetBIOS name resolution to locate the DC**.
 1. Select **Enabled**, select **Apply**, and then select **OK**.
 1. Under **Administrative Templates**, expand **System** > **Net Logon** > **DC Locator DNS Records**.
@@ -158,7 +158,7 @@ Check the DNS servers to make sure that root servers aren't created unintentiona
 
 - **Update Top Level Domain Zones**
 
-  If you enable this policy, it creates a `REG_DWORD UpdateTopLevelDomainZones` entry under the `HKLM\Software\Policies\Microsoft\Windows NT\DNSClient` registry subkey. You can select one of the following values:
+  If you enable this policy, it creates a `REG_DWORD UpdateTopLevelDomainZones` entry under the `HKLM\Software\Policies\Microsoft\Windows NT\DNSClient` registry subkey. You can select one of the following values.
 
   | Value | Name | Description |
   | --------- | - | --------- |
@@ -167,7 +167,7 @@ Check the DNS servers to make sure that root servers aren't created unintentiona
 
 - **Register PTR Records**
 
-  This policy isn't new, but it has a new possible value. If you enable this policy, it creates a `REG_DWORD RegisterReverseLookup` entry under the `HKLM\Software\Policies\Microsoft\Windows NT\DNSClient` registry subkey. You can select one of the following values:
+  This policy isn't new, but it has a new possible value. If you enable this policy, it creates a `REG_DWORD RegisterReverseLookup` entry under the `HKLM\Software\Policies\Microsoft\Windows NT\DNSClient` registry subkey. You can select one of the following values.
 
   | Value | Name | Description |
   | --------- | - | --------- |
