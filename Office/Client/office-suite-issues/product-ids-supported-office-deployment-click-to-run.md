@@ -1,9 +1,9 @@
 ---
-title: Product IDs that are supported by the Office Deployment Tool for Click-to-Run
+title: Product IDs supported by the Office Deployment Tool for Click-to-Run
 description: Lists product IDs that the Office Deployment Tool for Click-to-Run supports.
 author: Cloud-Writer
 ms.author: meerak
-ms.date: 05/29/2025
+ms.date: 11/07/2025
 manager: dcscontentpm
 search.appverid: 
 - MET150
@@ -11,13 +11,14 @@ audience: ITPro
 ms.custom: 
 - CSSTroubleshoot
 - CI 114638
+- CI 8065
 ms.topic: troubleshooting
 ms.reviewer: vikkarti;bcorob;jefferc
 appliesto:
 - Microsoft Office Deployment Tool
 ---
 
-# List of Product IDs that are supported by the Office Deployment Tool for Click-to-Run
+# Product IDs supported by the Office Deployment Tool for Click-to-Run
 
 The following product IDs are supported by the Office Deployment Tool in Microsoft 365 and Microsoft 365 deployments:
 
