@@ -17,11 +17,7 @@ ms.collection:
 
 This article provides troubleshooting steps for the most common issues related to User Experience Sync in Windows 365 Frontline shared mode environments.
 
-## Common support scenarios
-
-This section provides detailed information for common support scenarios.
-
-### Users receive a warning about a temporary user experience
+## Users receive a warning about a temporary user experience
 
 Users may be signed in with a temporary profile, resulting in a temporary user experience. Users will receive a notification during the sign in process. Windows displays another notification stating, "We can't sign into your account".
 
@@ -29,31 +25,20 @@ Users may be signed in with a temporary profile, resulting in a temporary user e
 >
 > A temporary profile is a non-persistent Windows user profile created when the system cannot load or create the user's regular profile. The temporary profile provides basic functionality but any changes made during the session (settings, files, customizations) are discarded when the user signs out. Users will see a notification that they're signed in with a temporary profile, and their desktop and Start menu will appear with default Windows settings rather than their personalized configuration.
 
-<!--:::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-temp-profile-agent.png" alt-text="Figure 1: Temporary user experience warning":::
-
-<sup>**Figure 1:** Temporary user experience warning</sup>
-
-:::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-temp-profile-windows.png" alt-text="Figure 2: Windows can't sign in warning":::
-
-<sup>**Figure 2:** Windows can't sign in warning</sup>-->
-
-#### Individual user storage failed to attach to their session
+### Individual user storage failed to attach to their session
 
 During the Windows sign-in process, users follow one of two flows:
 
 - Create and attach new individual user storage
 - Attach their existing individual user storage
 
-Both processes require the service to attach a disk to the device while the user is signing in. Attachment failures are uncommon but may occur due to:
+Both processes require the service to attach a disk to the Cloud PC while the user is signing in. Attachment failures are uncommon but may occur when the pooled user storage has exceeded the storage limit.
 
-- The pooled user storage has exceeded the total allocated size
-- Service error
-
-##### Pooled user storage has exceeded the total allocated size
+#### Pooled user storage has exceeded the storage limit
 
 User Experience Sync provides a limited amount pooled user storage based on a storage calculation.
 
-###### Understanding pooled storage limits
+##### Understanding pooled storage limits
 
 Each provisioning policy defines a pooled user storage limit calculated using the following formula:
 
@@ -63,7 +48,7 @@ Each provisioning policy defines a pooled user storage limit calculated using th
 
 <sup>**Figure 1:** Storage calculation of pooled user storage based on Cloud PC size and count</sup>
 
-###### Normal storage consumption
+##### Normal storage consumption
 
 Under normal conditions, the pooled user storage is consumed as users create individual user storages. When the storage reaches capacity:
 
@@ -75,7 +60,7 @@ Under normal conditions, the pooled user storage is consumed as users create ind
 
 <sup>**Figure 2:** Pooled user storage that is at the policy limit</sup>
 
-###### Exceeded storage conditions
+##### Exceeded storage conditions
 
 When pooled user storage is *near* capacity and multiple users sign in simultaneously, all users will sign in successfully and create their individual user storage. This results in an **exceeded** condition with the following characteristics:
 
@@ -87,7 +72,7 @@ When pooled user storage is *near* capacity and multiple users sign in simultane
 
 <sup>**Figure 3:** Pooled user storage that has exceeded the policy limit</sup>
 
-###### Exceeded tolerance period
+##### Exceeded tolerance period
 
 When pooled user storage exceeds its limit, the provisioning policy enters a tolerance period to prevent further storage growth. During this period:
 
@@ -104,14 +89,7 @@ After the 7 day tolerance period expires:
 > [!NOTE]
 > Monitor your storage usage regularly and configure the [Frontline Cloud PC User Experience Sync Storage Limits](/windows-365/enterprise/alerts) alert to avoid reaching the exceeded condition. Consider increasing your storage limit before reaching capacity to ensure uninterrupted user experience.
 
-#### User Experience Sync service error
-
-The User Experience Sync service is responsible for creating and attaching individual user storage. During a service issue, failure, or outage, users may experience a temporary user experience. In these scenarios, open a support case so our support engineers can:
-
-- Determine where in the process the issue occurred
-- Identify if the issue is transient or requires service engineering work
-
-### Resolve low or full user storage issues
+## Resolve low or full user storage issues
 
 When individual user storage becomes low or full, users may experience performance issues or be unable to save their work. Use the following solutions to address storage constraints.
 
@@ -131,31 +109,6 @@ When individual user storage becomes low or full, users may experience performan
   4. Go to the **User Storage** tab.
   5. Locate the user storage to delete.
   6. Select **Delete** and confirm the action.
-
-### Recover from accidental deletions
-
-If individual user storage is accidentally deleted, follow these recovery steps.
-
-#### Open a support case
-
-When user experience data is lost due to accidental deletion:
-
-1. **Document the issue**:
-   - User affected and their user principal name
-   - Date and time when the data loss occurred
-   - Specific data or settings that were lost
-   - Any error messages received
-
-2. **Open a Microsoft support case**:
-   - Go to the Microsoft 365 admin center
-   - Navigate to **Support** > **New service request**
-   - Provide detailed information about the data loss
-   - Include the Cloud PC serial number or device ID
-
-3. **Gather diagnostic information**:
-   - Event logs from the affected Cloud PC
-   - Screenshots of any error messages
-   - User storage policy configuration details
 
 ## Monitoring and current limitations
 
