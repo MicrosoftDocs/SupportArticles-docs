@@ -247,6 +247,8 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80072f8f.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error code 0x80070bc9
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x8000ffff
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x8000ffff.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
 - name: My VM is not booting
   items:
