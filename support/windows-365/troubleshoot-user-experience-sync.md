@@ -51,7 +51,7 @@ Both processes require the service to attach a disk to the device while the user
 
 ##### Pooled user storage has exceeded the total allocated size
 
-User Experience Sync provides a limited amount pooled user storage based on a [storage calculation](#understanding-storage-allocation).
+User Experience Sync provides a limited amount pooled user storage based on a storage calculation.
 
 ###### Understanding pooled storage limits
 
@@ -116,6 +116,8 @@ The User Experience Sync service is responsible for creating and attaching indiv
 When individual user storage becomes low or full, users may experience performance issues or be unable to save their work. Use the following solutions to address storage constraints.
 
 - [Free up space in OneDrive](https://support.microsoft.com/en-us/office/save-disk-space-with-onedrive-files-on-demand-for-windows-0e6860d3-d9f3-4971-b321-7092438fb38e)
+- Review contents of the Downloads folder and delete files and folders that are not needed
+- Manually run [Storage Sense](/windows/configuration/storage/storage-sense?tabs=settings)
 - Delete user storage (administrative action)
 
 > [!WARNING]
