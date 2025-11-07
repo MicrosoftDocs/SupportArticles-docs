@@ -93,7 +93,7 @@ In this configuration, you see the following default behaviors:
 These behaviors cause DNS resolution issues. To mitigate the issues, you have to change the configurations of the Windows client computers (domain-joined, nondomain-joined, or Microsoft Entra ID-joined) and the DCs. To change the configurations, use one of the two methods in this section.
 
 > [!IMPORTANT]  
-> Before you use either method, make sure that NetBIOS name resolution works correctly in your environment. Otherwise, clients can't access the domains that have single-label DNS names fails.
+> Before you use either method, make sure that NetBIOS name resolution works correctly in your environment. Otherwise, clients can't access the domains that have single-label DNS names.
 
 #### Method 1: Use Registry Editor
 
