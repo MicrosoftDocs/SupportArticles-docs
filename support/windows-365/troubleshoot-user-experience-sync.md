@@ -23,19 +23,19 @@ This section provides detailed information for common support scenarios.
 
 ### Users receive a warning about a temporary user experience
 
-In certain scenarios, users may receive a temporary user experience (temporary profile). The Cloud Profile agent is the first to notify the user about this temporary experience. After the desktop loads, Windows displays another notification stating, "We can't sign into your account".
+Users may be signed in with a temporary profile, resulting in a temporary user experience. Users will receive a notification during the sign in process. Windows displays another notification stating, "We can't sign into your account".
 
 > [!NOTE]
 >
 > A temporary profile is a non-persistent Windows user profile created when the system cannot load or create the user's regular profile. The temporary profile provides basic functionality but any changes made during the session (settings, files, customizations) are discarded when the user signs out. Users will see a notification that they're signed in with a temporary profile, and their desktop and Start menu will appear with default Windows settings rather than their personalized configuration.
 
-:::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-temp-profile-agent.png" alt-text="Figure 1: Cloud Profile agent temporary user experience warning":::
+<!--:::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-temp-profile-agent.png" alt-text="Figure 1: Temporary user experience warning":::
 
-<sup>**Figure 1:** Cloud Profile agent temporary user experience warning</sup>
+<sup>**Figure 1:** Temporary user experience warning</sup>
 
 :::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-temp-profile-windows.png" alt-text="Figure 2: Windows can't sign in warning":::
 
-<sup>**Figure 2:** Windows can't sign in warning</sup>
+<sup>**Figure 2:** Windows can't sign in warning</sup>-->
 
 #### Individual user storage failed to attach to their session
 
@@ -44,24 +44,24 @@ During the Windows sign-in process, users follow one of two flows:
 - Create and attach new individual user storage
 - Attach their existing individual user storage
 
-Both processes require the Cloud Profile service to attach a disk to the device while the user is signing in. Attachment failures are uncommon but may occur due to:
+Both processes require the service to attach a disk to the device while the user is signing in. Attachment failures are uncommon but may occur due to:
 
 - The pooled user storage has exceeded the total allocated size
-- A Cloud Profile service error
+- Service error
 
 ##### Pooled user storage has exceeded the total allocated size
 
 User Experience Sync provides a limited amount pooled user storage based on a [storage calculation](#understanding-storage-allocation).
 
-###### Understanding storage allocation
+###### Understanding pooled storage limits
 
 Each provisioning policy defines a pooled user storage limit calculated using the following formula:
 
 **Total pooled storage** = OS disk size × Number of provisioned Cloud PCs
 
-:::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-user-storage-example.png" alt-text="Figure 3: Storage calculation of pooled user storage based on Cloud PC size and count":::
+:::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-user-storage-example.png" alt-text="Figure 1: Storage calculation of pooled user storage based on Cloud PC size and count":::
 
-<sup>**Figure 3:** Storage calculation of pooled user storage based on Cloud PC size and count</sup>
+<sup>**Figure 1:** Storage calculation of pooled user storage based on Cloud PC size and count</sup>
 
 ###### Normal storage consumption
 
@@ -71,21 +71,21 @@ Under normal conditions, the pooled user storage is consumed as users create ind
 - **Available size** will show **0 GB**
 - The User Storage tab displays these metrics in the provisioning policy
 
-:::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-full-storage-limit.png" alt-text="Figure 4: Pooled user storage that is at the policy limit":::
+:::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-full-storage-limit.png" alt-text="Figure 2: Pooled user storage that is at the policy limit":::
 
-<sup>**Figure 4:** Pooled user storage that is at the policy limit</sup>
+<sup>**Figure 2:** Pooled user storage that is at the policy limit</sup>
 
 ###### Exceeded storage conditions
 
-In rare race conditions, when pooled user storage is *near* capacity and multiple users sign in simultaneously, the Cloud Profile service may create additional individual user storages. This results in an **exceeded** condition with the following characteristics:
+When pooled user storage is *near* capacity and multiple users sign in simultaneously, all users will sign in successfully and create their individual user storage. This results in an **exceeded** condition with the following characteristics:
 
 - **Used size** becomes **greater** than the **Total size**
 - **Available size** remains **0 GB**
 - A new **Exceeded** property appears, showing the amount that exceeds the policy limit
 
-:::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-exceeded-storage-limit.png" alt-text="Figure 5: Pooled user storage that has exceeded the policy limit":::
+:::image type="content" source="media/troubleshoot-user-experience-sync/user-experience-sync-exceeded-storage-limit.png" alt-text="Figure 3: Pooled user storage that has exceeded the policy limit":::
 
-<sup>**Figure 5:** Pooled user storage that has exceeded the policy limit</sup>
+<sup>**Figure 3:** Pooled user storage that has exceeded the policy limit</sup>
 
 ###### Exceeded tolerance period
 
