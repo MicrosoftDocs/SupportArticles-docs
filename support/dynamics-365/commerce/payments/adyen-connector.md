@@ -16,13 +16,15 @@ The Dynamics 365 Payment Connector for Adyen takes advantage of the device-agnos
 
 ### Symptoms
 
-Invoicing sales orders fails and returns the following error message:
+Invoicing sales orders fails and returns the following error message to the Commerce headquarters:
 
 > Exception has been thrown by the target of an invocation. System.ArgumentNullException: Value cannot be null.
 
-The following underlying error is also added to the log:
+The following underlying error is also added to the event log:
 
 > The following error occurred during the capture call - Dynamics 365 Payment Connector for Adyen: Error code Decline message Capture failed due to stale authorization.
+
+For more info on accessing the Commerce-specific event logs, see [Commerce component events for diagnostics and troubleshooting](/dynamics365/commerce/dev-itpro/retail-component-events-diagnostics-troubleshooting#find-commerce-specific-events-in-event-viewer).
 
 ### Cause
 
@@ -30,20 +32,35 @@ This error happens when an authorization that's older than the **Authorization s
 
 ### Solution
 
-To solve this issue, follow these steps.
+To resolve this issue, take the following steps:
 
 1. In Dynamics 365 Commerce headquarters, go to **Accounts receivable parameters** \> **Credit Card**.
-1. In the **Number of days before expired** field, ensure that the value is set to at least one day less than the **Authorization stale period (days)** property for each channel.
-   1. The recommended value for **Authorization stale period (days)** in the Adyen merchant properties is 14 days, and 13 days for **Accounts receivables parameters**.
+1. Ensure that the **Number of days before expired** property is set to at least one day less than the **Authorization stale period (days)** property for each channel.
+   1. You can configure the **Authorization stale period (days)** property in **Payment services**, **Hardware profiles**, and **Online stores**.
+
+      | Property                              | Recommended Value |
+      | ------------------------------------- | ----------------- |
+      | **Authorization stale period (days)** | 14 days           |
+      | **Number of days before expired**     | 13 days           |
+
+      :::image type="content" source="./media/adyen-connector/authorization-stale-period.png" alt-text="Screenshot of the payment services configuration menu, with the Authorization stale period (days) highlighted":::
+
 1. Retry invoicing.
+
+For more information on configuring the payment connector for Adyen, see [Set up Dynamics 365 Payment Connector for Adyen](/dynamics365/commerce/dev-itpro/adyen-connector-setup#set-up-a-processor-for-new-credit-cards).
 
 ## Issue 2: Store Commerce app or IIS Hardware Station configuration isn't updated
 
 ### Symptoms
 
-The Store Commerce app returns the following error message:
+The Store Commerce app returns the following error message dialog to the POS user:
 
 > Sign in Error. The initialization data couldn't be loaded.
+
+The following underlying error is also added to the event log:
+
+> Hardware station an exception occurred when trying to open a payment device and begin a transaction.. Exception: System.ArgumentNullException: Value cannot be null.
+> Parameter name: terminalSettings.TerminalId
 
 ### Cause
 
@@ -56,25 +73,11 @@ To resolve this issue, follow these steps:
 1. Follow the instructions in [Update the Store Commerce app or IIS Hardware Station configuration](/dynamics365/commerce/dev-itpro/adyen-connector-setup#update-the-store-commerce-app-or-iis-hardware-station-configuration).
 1. In Task Manager, on the **Details** tab, end the `dllhost.exe` task.
 1. Reopen the Store Commerce app.
-1. If you're using a Microsoft Internet Information Services (IIS) Hardware Station, reset IIS.
+1. If you're using a Microsoft Internet Information Services (IIS) Hardware Station, reset IIS by running the following command in a Command Prompt or PowerShell terminal:
 
-## Issue 3: EFT Terminal ID isn't set
-
-### Symptoms
-
-A payment authorization call fails, and a hardware error occurs. An error message is added to the event log indicating that the **EFT Terminal ID** value isn't set.
-
-### Cause
-
-This issue can occur when you don't set the **EFT POS Register Number** field on the register or the IIS Hardware Station. It can also occur if you set the value but don't correctly sync it to the POS terminal, or when the value is cached.
-
-### Solution
-
-To solve this issue, follow these steps:
-
-1. Follow the instructions in [Set up a Dynamics 365 register](/dynamics365/commerce/dev-itpro/adyen-connector-setup#set-up-a-dynamics-365-register).
-1. Run the 1070 and 1090 distribution schedule jobs.
-1. If the issue isn't resolved, consider reactivating the Store Commerce app. The value of the **EFT POS Register Number** field might be cached and needs to be reset.
+   ```powershell
+   iisreset
+   ```
 
 ## Related content
 
