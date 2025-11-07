@@ -5,7 +5,7 @@ manager: dcscontentpm
 audience: itpro
 ms.date: 11/6/2025
 ms.topic: troubleshooting
-ms.reviewer: cotro, mwesley, jarretr, v-ryanberg, v-gsitser
+ms.reviewer: scotro, mwesley, jarretr, v-ryanberg, v-gsitser
 ms.custom:
 - sap:windows servicing,updates and features on demand\windows update fails - installation stops with error
 - pcy:WinComm Devices Deploy
@@ -23,7 +23,7 @@ When you try to connect to Windows Update, you encounter error 0x80072f8f. This 
 
 ## Prerequisites
 
-Make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+For virtual machines (VMs) running Windows in Azure, make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 ## How to identify the issue
 
@@ -73,4 +73,6 @@ In these scenarios, the scan fails if the client doesn't trust the certificate c
 
 ## Resolution
 
-Perform an [in-place upgrade](/azure/virtual-machines/windows-in-place-upgrade) on the Windows virtual machine (VM).
+For Windows-based computers, perform an [in-place upgrade](/windows-server/get-started/perform-in-place-upgrade#perform-the-in-place-upgrade). 
+
+For VMs running Windows in Azure, see [in-place upgrade on the Windows virtual machine](/azure/virtual-machines/windows-in-place-upgrade).
