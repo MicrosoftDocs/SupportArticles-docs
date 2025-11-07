@@ -87,7 +87,7 @@ Another option to test node to node or pod to pod connectivity is with the open-
 ```azurecli-interactive
 kubectl get pods -n kube-system | grep -E "azure-cni|kube-proxy"
 ```
-3. **If using azure cni with overlay or cilium** 
+3. **If using azure cni with overlay** 
 Validate your nodes have these labels 
 
 ```azurecli-interactive
