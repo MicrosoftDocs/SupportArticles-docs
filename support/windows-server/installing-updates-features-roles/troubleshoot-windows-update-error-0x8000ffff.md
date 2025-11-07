@@ -29,7 +29,7 @@ For virtual machines (VMs) running Windows in Azure, make sure that you back up 
 
  This error is visible in the `Event Setup` and `CBS` logs following a failed update.
 
-:::image type="content" source="./media/troubleshoot-windows-update-error-0x8000ffff/0x8000ffff-1.png" alt-text="Example of Windows Update error 0x8000FFFF in the Event Setup log" lightbox="../../../../../../GitHub/SupportArticles-docs-pr/support/windows-server/installing-updates-features-roles/media/troubleshoot-windows-update-error-0x8000ffff/0x8000ffff-1.png":::
+:::image type="content" source="./media/troubleshoot-windows-update-error-0x8000ffff/0x8000ffff-1.png" alt-text="Example of Windows Update error 0x8000FFFF in the Event Setup log" lightbox="media/troubleshoot-windows-update-error-0x8000ffff/0x8000ffff-1.png":::
 
 Although this error occurs without store corruption, it usually indicates corruption in *C:\Windows\System32\catroot2*.
 
