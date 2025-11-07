@@ -2,16 +2,10 @@
 title: Troubleshoot common issues with triggers
 description: Learn how to find and fix issues when your flows don't run.
 suite: flow
-author: kenseongtan
-contributors:
-  - kisubedi
-  - kenseongtan
-  - v-aangie
 ms.date: 10/16/2025
 ms.custom: sap:Flow run issues\Triggers
 ms.update-cycle: 180-days
-ms.author: kisubedi
-ms.reviewer: angieandrews, kenseongtan, kisubedi
+ms.reviewer: angieandrews, kenseongtan, kisubedi, v-aangie, v-shaywood
 search.audienceType: 
   - flowadmin
 ---
@@ -313,52 +307,54 @@ For triggers, the value of expressions is calculated only when the flow is saved
 ## Changes to HTTP or Teams Webhook trigger flows on Logic Apps environment architecture
 
 > [!IMPORTANT]
-> - This change only affects flows with HTTP or Teams Webhook trigger.
-> - This change only affects flows in current environment architecture (Logic Apps). If your environment is Self Host MultiTenant (MTA), you are not impacted. In 2 quick steps, [Find out](https://learn.microsoft.com/en-us/power-automate/environment-architecture) which environment architecture your flows are in.
+>
+> - This change only affects flows with HTTP or Teams Webhook triggers.
+> - This change only affects flows in current environment architecture (Logic Apps). If your environment is Self Host MultiTenant (MTA), you are not impacted. To find which environment architecture your flows are in, see [Power Automate environments move to new architecture](/power-automate/environment-architecture).
 > - This alert doesn't affect sovereign clouds.
 
-Starting in November 30 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL are moving to a new URL. This change is part of an infrastructure upgrade to improve execution speed and provide new features. [Learn More](https://learn.microsoft.com/en-us/power-automate/environment-architecture)
+Starting November 30, 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL are moving to a new URL. This change is part of an infrastructure upgrade to improve execution speed and provide new features. To learn more, see [Power Automate environments move to new architecture](/power-automate/environment-architecture).
 
-> - To ensure that existing flows using these triggers continue to work, you need to update the URLs you have been using on external references with a new URL that shows up on your impacted flows. Complete the following actions by November 30, 2025. Before November 30, 2025 both the old and new URLs will be supported; after that, the old URLs will no longer work and flows will fail to trigger.
+> - To ensure that existing flows using these triggers continue to work, update the URLs used by external systems with the new URLs shown on the impacted flows. Complete the following actions by November 30, 2025. Before November 30, 2025 both the old and new URLs will be supported; after that, the old URLs will no longer work and flows will fail to trigger.
 
 ### Required actions
 
 To ensure your flows continue to function as expected, follow these steps:
 
-1. Assess the impact
+#### Assess the impact
 
-   - Perform the 2 step [process](https://learn.microsoft.com/en-us/power-automate/environment-architecture) to identify the environment type. Follow the steps below only if the environment is Logic Apps, and you have flows with HTTP and Teams Webhook Triggers.
-   - Identify the flows which will be impacted. Use the [PowerShell script](#list-all-flows-with-migrating-trigger-urls) below in this doc if you have admin privileges.
-   - Make note of old and new trigger URLs for the impacted flows by navigating to the Flow Details page or the Designer.
-     
-3. Update URL references:
+   1. Follow the steps in [Power Automate environments move to new architecture](/power-automate/environment-architecture) to identify the flow's environment type.
+      1. You only need to take action for flows in the *Logic Apps* environment that use HTTP or Teams Webhook Triggers.
+   1. Identify all flows which will be impacted.
+      1. If you have admin privileges, you can use a [PowerShell script](#list-all-flows-with-migrating-trigger-urls) to identify all impacted flows.
+   1. Make note of the old and new trigger URLs for the impacted flows by navigating to the **Flow Details** page or the **Designer**.
 
-   - Identify all external applications and systems (such as web apps, Power Apps, flows, and others) that reference the old trigger URL.
-   - Replace the old trigger URL with the updated URL displayed in the trigger card of your flow's designer.
+#### Update URL references
 
-4. Validate the new URL:
+   1. Identify all external applications and systems (such as web apps, Power Apps, flows, and others) that reference the old trigger URL.
+   1. Replace the old trigger URL with the updated URL displayed in the trigger card of your flow's designer.
 
-   - Verify that the updated URL works as expected by triggering the flow and checking for successful execution.
-   - If using SAS authentication, confirm that the destination system supports URLs longer than 255 characters.
+#### Validate the new URL
 
-5. Check the relative path parameter:
+   1. Verify that the updated URL works as expected by triggering the flow and checking for successful execution.
+   1. If using SAS authentication, confirm that the destination system supports URLs longer than 255 characters.
 
-   - If your trigger URL uses a relative path parameter, ensure there are no beginning slashes in the field to avoid double slash errors.
-   - Modify the relative path as needed and validate the trigger URL for correctness.
-  
+#### Check the relative path parameter
+
+   1. If your trigger URL uses a relative path parameter, ensure there are no beginning slashes in the field to avoid double slash errors.
+   1. Modify the relative path as needed and validate the trigger URL for correctness.
 
 ### Key changes
 
 - **Updated trigger URL**: The URL displayed on the HTTP trigger card in your flow's designer will reflect a new URL. This new URL is required for your flows to function correctly.
 - **Length of the new URL**: The updated URL might exceed 255 characters, especially when [Shared Access Signature (SAS) authentication](/azure/storage/common/storage-sas-overview) is configured. Verify that your destination system supports URLs longer than 255 characters and adjust its configuration if necessary.
-We strongly recommend updating your service configurations to support 255. However, if this isn’t feasible, customers can explore alternative solutions such as using a proxy wrapper (for example, see the [Azure API Management Quickstart](https://learn.microsoft.com/en-us/azure/api-management/get-started-create-service-instance)), Azure Functions, or similar approaches.
+  - It's strongly recommend to update your system configurations to support URLs longer than 255 characters, if possible.
+  - If your system can't support URLs longer than 255 characters, consider other solutions such as using a proxy wrapper (for example, see [Azure API Management Quickstart](/azure/api-management/get-started-create-service-instance)), Azure Functions, or similar approaches.
 - **Warning banner**: A warning banner will appear on your flow details page or within the designer, displaying the old URL that has been replaced. This serves as a reminder to update any references to the outdated URL with the new URL. If you do not see the warning banner on flows with HTTP or Teams webhook trigger, your environment is most likely on Self Host Multitenant architecture, and your flows will not be impacted.
 
   > Click here to copy the new trigger URL. The old trigger URL \<trigger URL> will stop working on November 30, 2025. Your tools that use this flow WILL break unless you update them with the new URL.
 
   :::image type="content" source="./media/triggers-troubleshoot/http-trigger-url.png" alt-text="Screenshot of the warning banner reminding you to update the old URL." lightbox="media/triggers-troubleshoot/http-trigger-url.png":::
 
-  
 > [!NOTE]
 > If a flow uses an HTTP action to call another flow, the parent flow is considered to be an external system. The URL in the parent flow should be updated with the new URL that is displayed in the child flow's trigger card. However, if the child flow is called through the **Run a child flow** action no change is needed.
 
