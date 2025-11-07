@@ -17,19 +17,19 @@ appliesto:
 
 ## Summary
 
-When attempting to connect to Windows Update, you might encounter error 0x80072f8f. This error usually indicates issues with SSL negotiation due to out-of-sync clock settings or untrusted SSL certificates. 
+When you try to connect to Windows Update, you encounter error 0x80072f8f. This error typically indicates issues that affect SSL negotiation because of out-of-sync clock settings or untrusted SSL certificates. 
 
 :::image type="content" source="./media/troubleshoot-windows-update-error-0x80072f8f/updateerror0x80072f8f-wusaerror.png" alt-text="Windows Update error 0x80072f8f" lightbox="media/troubleshoot-windows-update-error-0x80072f8f/updateerror0x80072f8f-wusaerror.png":::
 
 ## Prerequisites
 
-Ensure you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+Make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 ## How to identify the issue
 
 ### Symptom 1
 
-Windows Update fails with error 0x80072f8f. Check the `WindowsUpdate.log` located at *C:\Windows\Logs\WindowsUpdate* for entries similar to the following one:
+Windows Update fails and returns error 0x80072f8f. Check the `WindowsUpdate.log` located at *C:\Windows\Logs\WindowsUpdate* for entries that resemble the following entry:
 
 ```output
 03E4 1668 SLS Making request with URL HTTPS://sls.update.microsoft.com/SLS/{9482F4B4-E343-43B6-B170-9A65BC822C77}/x64/10.0.14393.0/0?CH=531&L=en-US&P=&PT=0x7&WUA=10.0.14393.1794
@@ -41,7 +41,7 @@ Windows Update fails with error 0x80072f8f. Check the `WindowsUpdate.log` locate
 
 ### Symptom 2
 
-When you download updates from Windows Update, there's no progress. The `WindowsUpdate.log` shows failures on WinHTTP requests to `SLS.Update.Microsoft.com`:
+When you download updates from Windows Update, you see no progress. The `WindowsUpdate.log` shows failures on WinHTTP requests to `SLS.Update.Microsoft.com`:
 
 ```output
 2032 2248 ComApi * START * Federated Search ClientId = Device Driver Retrieval Client (cV: xXbBtDYuUUOnH3AK.1.0)
@@ -52,7 +52,7 @@ When you download updates from Windows Update, there's no progress. The `Windows
 
 ### Symptom 3
 
-When you check for updates from Windows Update, there's no progress. The `WindowsUpdate.log` indicates `HTTP Send Request failed with 0x80072f8f (WININET_E_DECODING_FAILED)`:
+When you check for updates from Windows Update, you see no progress. The `WindowsUpdate.log` indicates `HTTP Send Request failed with 0x80072f8f (WININET_E_DECODING_FAILED)`:
 
 ```output
 7452 3228 Misc *FAILED* [80072F8F] Send request
@@ -60,13 +60,13 @@ When you check for updates from Windows Update, there's no progress. The `Window
 7452 3228 Misc *FAILED* [80072F8F] Library download error. Will retry. Retry Counter:0
 ```
 
-## Root cause
+## Cause
 
-The error 0x80072f8f is usually caused by one of the following issues:
+This error is usually caused by one of the following issues:
 
 - **Out-of-sync clock**: If the clock settings on the computer are incorrect, SSL negotiation fails. You can quickly verify clock accuracy from `WindowsUpdate.log` that always prints traces in local time.
-- **Untrusted SSL certificate**: In managed scenarios with Windows Server Update Services (WSUS) or Configuration Manager configured over SSL with self-generated or signed SSL certificates, if the client doesn't trust the certificate chain, the scan fails.
+- **Untrusted SSL certificate**:  In managed scenarios for Windows Server Update Services (WSUS) or Configuration Manager that's configured over SSL and includes self-generated or signed SSL certificates, the scan fails if the client doesn't trust the certificate chain.
 
 ## Resolution
 
-Perform an [in-place upgrade](/azure/virtual-machines/windows-in-place-upgrade) on the Windows virtual machine.
+Perform an [in-place upgrade](/azure/virtual-machines/windows-in-place-upgrade) on the Windows virtual machine (VM).
