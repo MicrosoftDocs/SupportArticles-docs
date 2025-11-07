@@ -6,36 +6,37 @@ ms.custom: sap:Replication, Change Tracking, Change Data Capture\Errors or unexp
 ms.date: 11/03/2025
 ---
 
-# Configuring transactional replication on multiple SQL Server Linux containers fails
+# Configuring transactional replication fails on multiple SQL Server Linux containers
 
-This article provides troubleshooting guidance for an issue that might occur when configuring two SQL Servers running in Linux containers on the same machine as replication subscribers.
+This article provides troubleshooting guidance for an issue that occurs when you configure two Microsoft SQL Server-based servers that run in Linux containers on the same computer as replication subscribers.
 
 ## Symptoms
 
-When configuring **Transactional Replication** on SQL Server 2022 running in Linux containers, you might encounter the following error message:
+When you configure **Transactional Replication** on SQL Server 2022 running in Linux containers, you receive the following error message:
 
 > The subscription already exists.
 
 This issue usually occurs when:
 
-- Two SQL Server instances are hosted in separate containers on the same Linux machine.
+- Two SQL Server instances are hosted in separate containers on the same Linux-based computer.
 - Both instances are added as subscribers to the same publisher.
 - The connection strings use the same hostname but different port numbers (for example, `LINUXHOST,5455` and `LINUXHOST,5465`).
 
 ## Cause
 
-The issue occurs because subscriber metadata doesn't honor port numbers during persistence. Only the hostname is stored, causing the second subscriber to be seen as a duplicate of the first.
-This behavior is specific to Linux container environments where named instances don't exist and connections rely on hostname and port mapping.
+This issue occurs because subscriber metadata doesn't honor port numbers during persistence. Only the hostname is stored. This behavior causes the second subscriber to be seen as a duplicate of the first.
+
+This behavior is specific to Linux container environments in which named instances don't exist and connections rely on hostname and port mapping.
 
 ## Workaround
 
-To successfully add multiple subscribers on the same machine but in different containers, follow these steps:
+To successfully add multiple subscribers on the same computer but in different containers, follow these steps:
 
 1. Install [Cumulative Update 20 (CU20) for SQL Server 2022](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5059390).
 
 1. Enable trace flag [15005](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf15005). This trace flag enables using a subscriber with a nondefault port for transactional replication.
 
-1. Perform the following manual cleanup and configuration steps in Transact-SQL. Replace the `@hostname`, `@port_sub1`, `@port_sub2`, `@PublicationName`, `@SubscriberDb_Sub1`, and `@SubscriberDb_Sub2` variables with values specific to your environment:
+1. Perform the following manual cleanup and configuration steps in Transact-SQL. In this script, replace the `@hostname`, `@port_sub1`, `@port_sub2`, `@PublicationName`, `@SubscriberDb_Sub1`, and `@SubscriberDb_Sub2` variables with values that are specific to your environment:
 
    ```sql
    DECLARE @hostname AS SYSNAME = 'LinuxSubscriberHostName',
@@ -166,9 +167,9 @@ To successfully add multiple subscribers on the same machine but in different co
 
 ## Resolution
 
-Currently, no permanent fix is available. Use the previous [workaround](#workaround).
+Currently, no permanent fix is available. Instead, see the ["Workaround"](#workaround) section.
 
-The product team is evaluating potential fixes for future releases. This article will be updated when a permanent fix is available.
+The product team is evaluating potential fixes for future releases. This article will be updated when a solution becomes available.
 
 ## Related content
 
