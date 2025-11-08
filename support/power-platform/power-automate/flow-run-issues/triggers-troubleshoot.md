@@ -15,53 +15,53 @@ Here are some tips and tricks for troubleshooting issues with triggers.
 
 ## Identify specific flow run
 
-Sometimes, you need to [Identify specific flow runs](/power-automate/fix-flow-failures#identify-specific-flow-runs) to troubleshoot your flows.
+Sometimes, you have to [Identify specific flow runs](/power-automate/fix-flow-failures#identify-specific-flow-runs) to troubleshoot your flows.
 
 ## My trigger doesn't fire
 
 1. A data loss prevention policy might be the cause.
 
-   Admins can create [data loss prevention (DLP)](/power-platform/admin/wp-data-loss-prevention) policies that act as guardrails to help prevent users from unintentionally exposing organizational data. DLP policies enforce rules for which connectors can be used together by classifying connectors as either **Business** or **Non-Business**. If you put a connector in the **Business** group, it can only be used with other connectors from that group in any given app or flow.
+   Admins can create [data loss prevention (DLP)](/power-platform/admin/wp-data-loss-prevention) policies that act as guardrails to help prevent users from unintentionally exposing organizational data. DLP policies enforce rules for which connectors can be used together by classifying connectors as either **Business** or **Non-Business**. If you put a connector in the **Business** group, it can be used only together with other connectors from that group in any given app or flow.
 
-   If your flow violates a DLP policy, it's suspended, causing the trigger to not fire. To know if your flow is suspended, try to edit the flow and save it. The flow checker reports it if the flow violates a DLP policy. Your admin can change the DLP policy.
+   If your flow violates a DLP policy, it's suspended. The suspension prevents the trigger from firing. To determine whether your flow is suspended, try to edit the flow and save it. The flow checker reports whether the flow violates a DLP policy. Your administrator can change the DLP policy.
 
-1. The trigger might be failing. Follow these steps to confirm:
+1. The trigger might be failing. Follow these steps to verify:
 
    1. Sign in to [Power Automate](https://make.powerautomate.com).
-   1. On the navigation menu to the left, select **My flows**, then select your flow.
+   1. On the navigation menu to the left, select **My flows**, and then select your flow.
    1. Review the details page. Do you see the following error in the **Details**?
 
       > There's a problem with the flow's trigger. Fix the trigger.
 
-       :::image type="content" source="./media/triggers-troubleshoot/fix-trigger.png" alt-text="Screenshot of an error message about the flow's trigger." lightbox="media/triggers-troubleshoot/fix-trigger.png":::
+       :::image type="content" source="./media/triggers-troubleshoot/fix-trigger.png" alt-text="Error message about the flow's trigger." lightbox="media/triggers-troubleshoot/fix-trigger.png":::
 
-   This error means that Power Automate tried multiple times to establish a connection to register the trigger and failed. Your flow doesn't trigger until this problem is resolved.
+   This error means that Power Automate unsuccessfully tried multiple times to establish a connection to register the trigger. Your flow doesn't trigger until this problem is resolved.
 
-   One common reason for this failure is that the Power Automate service endpoints aren't part of the allowlist. To fix it, confirm that your IT department added these endpoints to the allowlist.
+   One common reason for this failure is that the Power Automate service endpoints aren't included in the allowlist. To fix this problem, verify that your IT department added these endpoints to the allowlist.
 
-   Here's the list of [IP addresses and domains](/power-automate/ip-address-configuration) that need to be added to your allowlist.
+   Refer to [this list of IP addresses and domains](/power-automate/ip-address-configuration) that have to be added to your allowlist.
 
       For more information about fixing issues with triggers, see [There is a problem with the flow's trigger](there-is-a-problem-with-the-flows-trigger.md).
 
-After the problem is resolved, modify the flow and then save it. You can then change it back to its original state, and then save it again. The flow becomes aware that its configuration changed, and it tries to register its trigger again.
+After the problem is resolved, modify the flow, and then save it. Then, you can revert it to its original state, and save it again. The flow becomes aware that its configuration changed, and it tries again to register its trigger.
 
 ### Verify connections
 
-With the default settings, users only need to sign in to a connection once. They can then use that connection until an admin revokes it. A possible scenario is that the password for the connection expires or there might be a policy in your organization that sets the connector's authentication token to expire after a specific amount of time. Token lifetime policies are configured on Microsoft Entra ID. For more information, see [Configurable token lifetimes in the Microsoft identity platform (preview)](/entra/identity-platform/configurable-token-lifetimes).
+By using the default settings, users have to sign in to a connection only one time. Then, they can use that connection until an administrator revokes it. A possible scenario is that the password for the connection expires or there might be a policy in your organization that sets the connector's authentication token to expire after a specific amount of time. Token lifetime policies are configured on Microsoft Entra ID. For more information, see [Configurable token lifetimes in the Microsoft identity platform (preview)](/entra/identity-platform/configurable-token-lifetimes).
 
-Follow these steps to verify if your connections are broken:
+To check whether your connections are broken, follow these steps:
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
 1. Go to **More** > **Connections**.
 1. Find the connection that your flow uses.
-1. To fix a broken connection, select the link next to the **Status** column and follow the instructions.
+1. To fix a broken connection, select the link next to the **Status** column, and then follow the instructions.
 
    :::image type="content" source="./media/triggers-troubleshoot/fix-link.png" alt-text="The Fix connection link to fix a broken connection." lightbox="media/triggers-troubleshoot/fix-link.png":::
 
-### Verify if the flow uses a premium connector trigger
+### Verify that the flow uses a premium connector trigger
 
 1. Edit your flow to find the connector name for the trigger.
-1. Go to the [list of connectors](https://make.powerautomate.com/connectors) and then search for that connector. If the connector is a premium connector, **PREMIUM** displays below the name of the connector.
+1. Go to the [list of connectors](https://make.powerautomate.com/connectors), and then search for that connector. If the connector is a premium connector, **PREMIUM** displays below the name of the connector.
 
     :::image type="content" source="./media/triggers-troubleshoot/premium-connector.png" alt-text="Screenshot of a premium connector." lightbox="media/triggers-troubleshoot/premium-connector.png":::
 
@@ -69,29 +69,29 @@ A standalone Power Apps or Power Automate license is required to access all prem
 
 ### Check your license type
 
-Follow these steps to view the type of license that you have:
+To view the type of license that you have, follow these steps:
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
 1. Go to **My flows** in the left pane.
 1. Select any flow.
 1. In the **Details** section, find **Plan**. Your current license plan is listed.
 
-### Verify if trigger check is skipped
+### Check whether trigger check is skipped
 
-You just completed an event. For example, you added a new list item or sent an email that should have triggered the flow, but the flow didn't run.
+After you complete an event, the flow doesn't run. For example, you add a new list item or send an email message that should trigger the flow, but doesn't. To learn the cause of the problem, follow these steps:
 
 1. On the navigation menu to the left, select **My flows**, then select the flow.
 1. In the **28-day run history**, select **All runs**.
 
-    :::image type="content" source="./media/triggers-troubleshoot/all-runs.png" alt-text="Screenshot showing all runs." lightbox="media/triggers-troubleshoot/all-runs.png":::
+    :::image type="content" source="./media/triggers-troubleshoot/all-runs.png" alt-text="The 28-day run history view showing all runs." lightbox="media/triggers-troubleshoot/all-runs.png":::
 
-If you expect the flow to run but it didn't run, check if the trigger check was skipped at that time. If the trigger check was skipped, it means that the trigger condition wasn't met for the flow to trigger. Verify the flow inputs and trigger conditions to confirm if you're using the latest configuration to trigger the flow.
+If you expect the flow to run but it doesn't, check whether the trigger check was skipped at that time. If the trigger check was skipped, it means that the trigger condition wasn't met for the flow to trigger. Verify the flow inputs and trigger conditions to determine whether you're using the latest configuration to trigger the flow.
 
 ### Verify inputs and trigger conditions
 
-Sometimes, the inputs and trigger conditions might cause failures. Follow these steps to verify your inputs and conditions.
+Sometimes, the inputs and trigger conditions cause failures. Follow these steps to verify your inputs and conditions.
 
-Power Automate allows you to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. For more information and examples, see [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
+Power Automate provides the option to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. For more information and examples, see [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
 
 # [New designer](#tab/new-designer)
 
