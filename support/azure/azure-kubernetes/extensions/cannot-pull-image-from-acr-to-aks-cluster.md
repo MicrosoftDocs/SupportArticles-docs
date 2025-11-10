@@ -213,7 +213,7 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 ### Cause 1b: `401 Unauthorized` error due to incompatible architecture
 
-You might encounter a `401 Unauthorized` error even when the AKS cluster identity is authorized (as described in the [Cause 1a: `401 Unauthorized` error due to incorrect authorization](#cause1a) section). This issue can happen if the container image in the ACR doesn't match the architecture (like ARM64 versus AMD64) of the node running the container. For example, deploying an ARM64 image on an AMD64 node or vice versa can result in this error.
+You might encounter a `401 Unauthorized` error even when the AKS cluster identity is authorized (as described in the [Cause 1a: `401 Unauthorized` error due to incorrect authorization](#cause-1a-401-unauthorized-error-due-to-incorrect-authorization) section). This issue can happen if the container image in the ACR doesn't match the architecture (like ARM64 versus AMD64) of the node running the container. For example, deploying an ARM64 image on an AMD64 node or vice versa can result in this error.
 
 The error message appears as follows:
 
