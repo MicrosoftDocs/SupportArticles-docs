@@ -1,17 +1,21 @@
 ---
-title: CMG Maintenance Task fails to update Public IP Resource after installing the Update Rollup for Microsoft Configuration Manager version 2503 (KB32851084)
-description: CMG Maintenance Task fails to update Public IP Resource after installing the Update Rollup for Microsoft Configuration Manager version 2503 (KB32851084).
+title: CMG Maintenance Task Error: Public IP Update Issue
+description: Troubleshoot the CMG Maintenance Task failure caused by Availability Zone conflicts in Public IP Resource updates for Configuration Manager version 2503.
+ms.service: configuration-manager
+ms.topic: troubleshooting
+ms.manager: dcscontentpm
+audience: itpro
 ms.date: 11/11/2025
 ms.reviewer: kaushika, payur
 ms.custom: sap:Cloud Services\Cloud Management Gateway (CMG)
 ---
-# CMG Maintenance Task fails to update Public IP Resource after installing the Update Rollup for Microsoft Configuration Manager version 2503 (KB32851084)
+# CMG maintenance task fails to update public IP resource after installing the update rollup for Microsoft Configuration Manager version 2503 (KB32851084)
 
 *Applies to*: Configuration Manager (current branch)
 
 ## Symptoms
 
-After installing the [Update Rollup for Microsoft Configuration Manager version 2503 (KB32851084)](/intune/configmgr/hotfix/2503/32851084), CloudMgr.log on the Service Connection Point may display the error message resembling the following:
+After you install the [Update Rollup for Microsoft Configuration Manager version 2503 (KB32851084)](/intune/configmgr/hotfix/2503/32851084), CloudMgr.log on the Service Connection Point might display the following error message:
 
 ```output
 Resource Manager - Creating Public IP Address <Name of CMG> with deployment CreatePublicIPAddressXXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX~~
@@ -49,21 +53,21 @@ ERROR: TaskManager: Task [Deployment Maintenance for service <Name of CMG>] has 
 TaskManager: Scheduling task [Deployment Maintenance for service <Name of CMG>] for retry.~~
 ```
 
-In the Azure portal, the Activity log of the Resource Group that contains the resources of the CMG displays the error message resembling the following:
+In the Azure portal, the Activity log of the Resource Group that contains the resources of the CMG displays the following error message:
 
 ```output
-Operation Name:  Create or Update Public Ip Address
+Operation Name: Create or Update Public Ip Address
 
 Summary - Message; Resource /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/<Name of CMG Resource Group>/providers/Microsoft.Network/publicIPAddresses/<Name of Public IP Address> has an existing availability zone constraint 1, 2, 3 and the request has availability zone constraint NoZone, which do not match. Zones cannot be added/updated/removed once the resource is created. The resource cannot be updated from regional to zonal or vice-versa.
 ```
 
-The Cloud Management Gateway (CMG) state in the Configuration Manager console may then appear in "Error" status with the detailed information "Failed to perform maintenance" in "Status Description" and flipping back to "Ready" shortly afterwards.
+The Cloud Management Gateway (CMG) state in the Configuration Manager console might then appear in "Error" status with the detailed information "Failed to perform maintenance" in "Status Description" and flipping back to "Ready" shortly afterwards.
 
-The error messages are likely to repeat every 20 mins aligning with the Deployment Maintenance Task retries.
+The error messages likely repeat every 20 minutes, aligning with the Deployment Maintenance Task retries.
 
 ## Cause
 
-Once the Update Rollup is installed, it triggers a setup maintenance task for the CMG. This maintenance task launches deployments for CMG Resources in Azure. In the deployment associated to the Public IP Address, the maintenance task attempts to update its "Availability Zone" configuration property to **"No zone"**. If the existing Public IP resource already has "Availability Zone" property configured (for example, to "Zone 1", "Zone 2" or "Zone 3"), the deployment fails.
+When you install the Update Rollup, it triggers a setup maintenance task for the CMG. This maintenance task launches deployments for CMG Resources in Azure. In the deployment associated to the Public IP Address, the maintenance task attempts to update its "Availability Zone" configuration property to **"No zone"**. If the existing Public IP resource already has "Availability Zone" property configured (for example, to "Zone 1", "Zone 2", or "Zone 3"), the deployment fails.
 
 The issue then affects the Azure regions where [Availability Zones](/azure/reliability/availability-zones-overview?toc=%2Fazure%2Fvirtual-network%2Ftoc.json&tabs=azure-cli) are supported. The current list is available at [Azure regions list](/azure/reliability/regions-list#azure-regions-list-1).
 
@@ -71,10 +75,10 @@ Current Configuration Manager releases don't specify Availability Zone when crea
 
 ## Resolution
 
-At this point, there is no confirmed impact from this behavior. Hence, the recommended action is to ignore these errors.
+At this point, there's no confirmed impact from this behavior, so we recommend that you ignore these errors.
 
-Microsoft plans resolving this problem in the future release of Microsoft Configuration Manager.
+Microsoft plans to resolve this problem in a future release of Microsoft Configuration Manager.
 
 ## More information
 
-For more information about CMG monitoring, see [Monitor the CMG](/intune/configmgr/core/clients/manage/cmg/monitor-clients-cloud-management-gateways) article.
+For more information about CMG monitoring, see [Monitor the CMG](/intune/configmgr/core/clients/manage/cmg/monitor-clients-cloud-management-gateway)
