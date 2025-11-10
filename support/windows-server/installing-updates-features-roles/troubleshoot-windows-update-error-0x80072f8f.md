@@ -23,7 +23,7 @@ When you try to connect to Windows Update, you encounter error 0x80072f8f. This 
 
 ## Prerequisites
 
-Make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
+For virtual machines (VMs) running Windows in Azure, make sure that you back up the OS disk. For more information, see [About Azure Virtual Machine restore](/azure/backup/about-azure-vm-restore).
 
 ## How to identify the issue
 
