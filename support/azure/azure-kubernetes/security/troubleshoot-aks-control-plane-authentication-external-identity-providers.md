@@ -6,7 +6,7 @@ ms.service: azure-kubernetes-service
 ms.topic: troubleshooting-general
 ms.date: 11/09/2025
 ms.custom: sap:security and identity
-zone_pivot_group_filename: aks-external-identity-provider
+zone_pivot_groups: aks-external-identity-provider
 #customer intent: As a DevOps Engineer or cluster administrator, I want to troubleshoot authentication issues with external identity providers so that I can successfully authenticate to the AKS control plane.
 ---
 # Troubleshoot AKS control plane authentication using external identity providers
