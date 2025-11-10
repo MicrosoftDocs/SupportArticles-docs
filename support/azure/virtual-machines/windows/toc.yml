@@ -50,7 +50,7 @@ items:
     - name: How to upgrade
       href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: OS Upgrade assessment tool
-    href: windows-vm-osupgradeassessment-tool.md
+      href: windows-vm-osupgradeassessment-tool.md
   - name: Windows Server 2008 R2 (EOS)
     items:
       - name: End of Support (EOS)
@@ -58,7 +58,7 @@ items:
       - name: How to upgrade
         href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
       - name: OS Upgrade assessment tool
-    href: windows-vm-osupgradeassessment-tool.md
+        href: windows-vm-osupgradeassessment-tool.md
   - name: Windows Server 2003 (EOS)
     href: ms-azure-windows-eos.md
   - name: 32-bit operating systems
