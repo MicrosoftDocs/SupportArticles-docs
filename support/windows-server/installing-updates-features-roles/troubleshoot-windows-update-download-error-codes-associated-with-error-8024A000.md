@@ -21,7 +21,7 @@ appliesto:
 
 When scanning for updates on Windows Virtual Machines (VMs), you might encounter error codes such as 0x80072EFD, 0x80072EFE, and 0x80D02002. These errors indicate issues with server connections or download progress. Understanding the symptoms and root causes can help in resolving these errors effectively.
 
-:::image type="content" source="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-errormessage80072efd-.png" alt-text=Error message 80072EFD" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-errormessage80072efd-.png":::
+:::image type="content" source="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-errormessage80072efd.png" alt-text="Error message 80072EFD" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-errormessage80072efd.png":::
 
 ## Prerequisites
 
