@@ -80,6 +80,8 @@ If you use a single-label DNS name in your environment, clients might be unable 
 
 ### How to enable Windows-based clients to send queries and dynamic updates when using single-label DNS zones
 
+A Windows-based computer requires additional configuration to support single-label DNS names for Active Directory domains. Specifically, in a domain that has a single-label DNS name, the DC Locator service on an Active Directory domain member doesn't use the DNS Server service to locate domain controllers. You have to apply this additional configuration to all computers in all forests.
+
 Consider the following configuration:
 
 - Domain member computers reside in a forest that doesn't contain any single-label DNS domains.
@@ -99,9 +101,9 @@ These behaviors cause DNS resolution issues. To mitigate the issues, you have to
 
 [!INCLUDE [registry important alert](../../../includes/registry-important-alert.md)]
 
-##### Step 1: Change the DC locator configuration
+##### Step 1: Change the DC Locator service configuration
 
-On the Windows client computers (domain-joined, nondomain-joined, or Microsoft Entra ID-joined), follow these steps:
+On the domain-joined Windows client computers, follow these steps:
 
 1. In the Search box, enter regedit, and then select **Registry editor**.
 1. Locate and select the `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters` subkey.
@@ -113,7 +115,7 @@ On the Windows client computers (domain-joined, nondomain-joined, or Microsoft E
 
 ##### Step 2: Change the dynamic update configuration for the DNS root zone or single-label DNS zones
 
-Apply these changes to all DCs and members of domains that have single-label DNS names. If a domain that has a single-label DNS name is a forest root domain, apply these changes to all the DCs in the forest, unless the following individual zones are delegated from the *ForestName* zone: \_msdcs. *ForestName*, \_sites. *ForestName*, _tcp. *ForestName*, and \_udp. *ForestName*.
+Apply these changes to all DCs and Windows clients (domain-joined, nondomain-joined, or Microsoft Entra ID-joined) that have single-label DNS suffixes. If a domain that has a single-label DNS name is a forest root domain, apply these changes to all the DCs in the forest, unless the following individual zones are delegated from the *ForestName* zone: \_msdcs. *ForestName*, \_sites. *ForestName*, _tcp. *ForestName*, and \_udp. *ForestName*.
 
 Follow these steps:
 
