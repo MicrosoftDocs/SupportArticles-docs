@@ -221,7 +221,7 @@ To check the trigger wake-up frequency, follow these steps:
 
 Power Automate allows you to use either the [new designer](/power-automate/flows-designer) or the classic designer to configure your cloud flow. The steps are similar in both designers. For more information and examples, see [Identify differences between the new designer and the classic designer](/power-automate/flows-designer#identify-differences-between-the-new-designer-and-the-classic-designer).
 
-### [New designer](#tab/new-designer)
+# [New designer](#tab/new-designer)
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
 1. On the left-side menu, select **My flows**, and then select a flow.
@@ -232,7 +232,7 @@ Power Automate allows you to use either the [new designer](/power-automate/flows
 
     :::image type="content" source="./media/triggers-troubleshoot/copilot-recurrence.png" alt-text="The frequency element in Copilot." lightbox="media/triggers-troubleshoot/copilot-recurrence.png":::
 
-### [Classic designer](#tab/classic-designer)
+# [Classic designer](#tab/classic-designer)
 
 1. Sign in to [Power Automate](https://make.powerautomate.com).
 1. On the left-side menu, select **My flows**, and then select a flow.
@@ -327,7 +327,7 @@ To make sure that your flows continue to function as expected, follow these step
    1. To identify the flow's environment type, follow the steps in [Power Automate environments move to new architecture](/power-automate/environment-architecture).
       1. You have to take action only for flows that are in the *Logic Apps* environment that use HTTP or Teams Webhook Triggers.
    1. Identify all flows that are affected.
-      1. If you have admin privileges, you can use a [PowerShell script](#list-all-flows-with-migrating-trigger-urls) to identify all affected flows.
+      1. If you have admin privileges, you can use a [PowerShell script](#list-all-flows-that-have-migrating-trigger-urls) to identify all affected flows.
    1. Note the old and new trigger URLs for the affected flows by navigating to the **Flow Details** page or the **Designer**.
 
 #### Update URL references
