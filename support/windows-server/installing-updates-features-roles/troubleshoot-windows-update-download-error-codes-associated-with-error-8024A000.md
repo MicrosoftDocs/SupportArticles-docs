@@ -21,7 +21,7 @@ appliesto:
 
 When scanning for updates on Windows Virtual Machines (VMs), you might encounter error codes such as 0x80072EFD, 0x80072EFE, and 0x80D02002. These errors indicate issues with server connections or download progress. Understanding the symptoms and root causes can help in resolving these errors effectively.
 
-:::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024a000-80072efd-80072efe-errormessage80072efd-.png" alt-text="Error message 80072EFD" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024a000-80072efd-80072efe-errormessage80072efd-.png":::
+:::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-errormessage80072efd-.png" alt-text="Error message 80072EFD" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-errormessage80072efd-.png":::
 
 ## Prerequisites
 
@@ -31,19 +31,19 @@ For virtual machines (VMs) running Windows in Azure, make sure that you back up 
 
 ### Symptom 1: While scanning for updates, you see error messages indicating a connection issue with the server
 
-   :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024a000-80072efd-80072efe-event16.png" alt-text="System event log 16 indicating connection issue" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024A000-80072EFD-80072EFE-event16.png":::
+   :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-event16.png" alt-text="System event log 16 indicating connection issue" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-event16.png":::
 
-   :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024a000-80072efd-80072efe-event25.png" alt-text="Windows Update client Operational event 25" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024A000-80072EFD-80072EFE-event25.png":::
+   :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024a000-80072efd-80072efe-event25.png" alt-text="Windows Update client Operational event 25" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-event25.png":::
 
    Check the Windows Update logs for error codes at the path: `%windir%\logs\windowsupdate`.
 
-   :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024a000-80072efd-80072efe-windowsupdatelogs.png" alt-text="Windows Update logs" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024A000-80072EFD-80072EFE-windowsupdatelogs.png":::
+   :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-windowsupdatelogs.png" alt-text="Windows Update logs" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-windowsupdatelogs.png":::
 
 ### Symptom 2: Control Panel > System and Security > Windows Updates shows an error code indicating no Internet access to download updates - external sites load, but Microsoft links fail with a TLS error
 
-   :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024a000-80072efd-80072efe-errormessage80072efe.png" alt-text="Error message 80072EFE" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024a000-80072efd-80072efe-errormessage80072efe.png":::
+   :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-errormessage80072efe.png" alt-text="Error message 80072EFE" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-errormessage80072efe.png":::
    
-   :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024a000-80072efd-80072efe-tlserror.png" alt-text="TLS error accessing Microsoft update site" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024A000-80072EFD-80072EFE-TLSerror.png":::
+   :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-tlserror.png" alt-text="TLS error accessing Microsoft update site" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-tlserror.png":::
 
 ## Root cause for Windows Update download error codes
 
