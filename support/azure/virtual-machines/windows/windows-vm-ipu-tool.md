@@ -10,8 +10,6 @@ ms.reviewer: macla, scotro, glimoli, jarrettr, azurevmcptcic
 
 **Applies to:** :heavy_check_mark: Windows VMs
 
-# Azure VM Windows Update Error Detection script 
-
 ## Overview
 This PowerShell script scans **CBS logs** for known Windows servicing error codes that indicate issues requiring an **In-Place Upgrade (IPU)** or repair. It counts occurrences of each error code and provides a summary at the end. If any errors are found, a remediation link to Microsoft documentation is displayed.
 
