@@ -42,13 +42,13 @@ at Azure.ResourceManager.Resources.ArmDeploymentCollection.<CreateOrUpdateAsync>
 --- End of inner exception stack trace ---~~
 at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)~~
 at Microsoft.ConfigurationManager.AzureManagement.ResourceManager.StartAndMonitorDeployment(String resourceGroupName, String deploymentName, ArmDeploymentContent deploymentContent, Int32 secondsToWait, Int32 timeoutInMinutes)~~
-at Microsoft.ConfigurationManager.AzureManagement.Resou...
+at Microsoft.ConfigurationManager.AzureManagement.Resource
 
 TaskManager: Task [Deployment Maintenance for service <Name of CMG>] status is Faulted~~
 
 ERROR: TaskManager: Task [Deployment Maintenance for service <Name of CMG>] has failed. Exception Azure.RequestFailedException, At least one resource deployment operation failed. Please list deployment operations for details. Please see https://aka.ms/arm-deployment-operations for usage details.~~Status: 200 (OK)~~ErrorCode: DeploymentFailed~~~~Service request succeeded. Response content and headers are not included to avoid logging sensitive data.~~.~~
 
-TaskManager: Scheduling task [Deployment Maintenance for service <Name of CMG> for retry.~~
+TaskManager: Scheduling task [Deployment Maintenance for service <Name of CMG>] for retry.~~
 ```
 
 In the Azure portal, the Activity log of the Resource Group that contains the resources of the CMG displays the error message resembling the following:
