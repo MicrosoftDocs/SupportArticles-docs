@@ -36,7 +36,7 @@ For more information, see:
 - [Resetting Windows Update Servicing Stack script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_Update_Reset).
 
 
-:::image type="content" source="media/windows-vm-wureset-tool/windows-vm-wureset-tool.png" alt-text="Azure portal view Run Command example." lightbox="media/windows-vm-imds-tool/windows-vm-wureset-tool/windows-vm-wureset-tool.pmg":::   
+:::image type="content" source="media/windows-vm-wureset-tool/windows-vm-wureset-tool.png" alt-text="Azure portal view Run Command example." lightbox="media/windows-vm-imds-tool/windows-vm-wureset-tool/windows-vm-wureset-tool.png":::   
 
 
 ## Requirements
