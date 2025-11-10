@@ -213,7 +213,7 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 ### Cause 1b: `401 Unauthorized` error due to incompatible architecture
 
-You might encounter a `401 Unauthorized` error even when the AKS cluster identity is authorized (as described in the [Cause 1a: 401 Unauthorized error due to incorrect authorization](#cause1a) section). This issue can happen if the container image in the ACR doesn't match the architecture (like ARM64 versus AMD64) of the node running the container. For example, deploying an ARM64 image on an AMD64 node or vice versa can result in this error.
+You might encounter a `401 Unauthorized` error even when the AKS cluster identity is authorized (as described in the [Cause 1a: `401 Unauthorized` error due to incorrect authorization](#cause1a) section). This issue can happen if the container image in the ACR doesn't match the architecture (like ARM64 versus AMD64) of the node running the container. For example, deploying an ARM64 image on an AMD64 node or vice versa can result in this error.
 
 The error message appears as follows:
 
@@ -432,6 +432,6 @@ If the troubleshooting guidance in this article doesn't help you resolve the iss
 [cause1-solution1]: #solution-1-make-sure-the-correct-acr-role-assignment-is-created-for-identity
 [cause1-solution2]: #solution-2-make-sure-service-principal-isnt-expired
 [cause1-solution3]: #solution-3-make-sure-the-correct-acr-role-is-assigned-to-correct-service-principal
-[cause1-solution4]: #solution-4-make-sure-the-kubelet-identity-is-referenced-in-the-aks-vmss
+[cause1-solution4]: #solution-4-make-sure-the-kubelet-identity-is-referenced-in-the-aks-virtual-machine-scale-sets
 [cause1-solution5]: #solution-5-make-sure-the-service-principal-is-correct-and-the-secret-is-valid
 [cause1-solution6]: #solution-6-make-sure-the-kubernetes-secret-has-the-correct-values-of-the-container-registry-admin-account
