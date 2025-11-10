@@ -33,7 +33,7 @@ For virtual machines (VMs) running Windows in Azure, make sure that you back up 
 
    :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-event16.png" alt-text="System event log 16 indicating connection issue" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-event16.png":::
 
-   :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024A000/cant-install-updates-error-code-8024a000-80072efd-80072efe-event25.png" alt-text="Windows Update client Operational event 25" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-event25.png":::
+   :::image type="content" source="./media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-event25.png" alt-text="Windows Update client Operational event 25" lightbox="media/troubleshoot-windows-update-download-error-codes-associated-with-error-8024a000/cant-install-updates-error-code-8024a000-80072efd-80072efe-event25.png":::
 
    Check the Windows Update logs for error codes at the path: `%windir%\logs\windowsupdate`.
 
