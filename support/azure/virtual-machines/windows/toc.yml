@@ -35,30 +35,41 @@ items:
     href: windows-11-support-azure-virtual-machines.md
   - name: Windows 10 (EOS)
     items:
+    - name: End Of Service (EOS)
+      href: ms-azure-windows-eos-client.md
     - name: Extended Security Updates (ESU)
       href: /windows/whats-new/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: How to upgrade
       href: in-place-system-upgrade.md
+    - name: OS Upgrade assessment tool
+    href: windows-vm-osupgradeassessment-tool.md
   - name: Windows Server 2012 R2 (EOS)
     items:
     - name: Extended Security Updates (ESU)
       href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: How to upgrade
       href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: OS Upgrade assessment tool
+    href: windows-vm-osupgradeassessment-tool.md
   - name: Windows Server 2008 R2 (EOS)
     items:
       - name: End of Support (EOS)
         href: ms-azure-windows-eos.md
       - name: How to upgrade
         href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
+      - name: OS Upgrade assessment tool
+    href: windows-vm-osupgradeassessment-tool.md
   - name: Windows Server 2003 (EOS)
     href: ms-azure-windows-eos.md
   - name: 32-bit operating systems
     href: support-32-bit-operating-systems-virtual-machines.md
 
 - name: Windows 10 (EOS)
-  href: ms-azure-windows-eos-client.md
-
+  items:
+    - name: End Of Service (EOS)
+      href: ms-azure-windows-eos-client.md
+    - name: OS Upgrade assessment tool
+      href: windows-vm-osupgradeassessment-tool.md
 - name: Extended Security Updates (ESU)
   items:
   - name: Windows 10 (ESU)
@@ -67,6 +78,8 @@ items:
     href: /windows-server/get-started/extended-security-updates-deploy?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: Windows Server 2008/R2 (EOS)
     href: ms-azure-windows-eos.md
+  - name: OS Upgrade assessment tool
+    href: windows-vm-osupgradeassessment-tool.md
 
 - name: Windows OS Upgrades (IPU)
   items:
@@ -74,11 +87,17 @@ items:
     href: /azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
   - name: In-place system upgrade (Client)
     href: in-place-system-upgrade.md
-
+  - name: OS Upgrade assessment tool
+    href: windows-vm-osupgradeassessment-tool.md
+    
 - name: Windows Update (WU)
   items:
-  - name: WU Errors - in-place upgrades required
+  - name: WU errors - in-place upgrades required
     href: windows-update-errors-requiring-in-place-upgrade.md
+  - name: Windows Update Error Detection tool
+    href: windows-vm-ipu-tool.md
+  - name: Windows Servicing Stack reset tool
+    href: windows-vm-wureset-tool.md
   - name: Top errors for Azure VMs
     items:
     - name: Error code 0x80070002
