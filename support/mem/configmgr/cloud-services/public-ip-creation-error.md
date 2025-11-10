@@ -1,10 +1,8 @@
 ---
 title: CMG Maintenance Task fails to update Public IP Resource after installing the Update Rollup for Microsoft Configuration Manager version 2503 (KB32851084)
 description: CMG Maintenance Task fails to update Public IP Resource after installing the Update Rollup for Microsoft Configuration Manager version 2503 (KB32851084).
-ms.date: 10/11/2025
+ms.date: 11/11/2025
 ms.reviewer: kaushika, payur
-author: Cloud-Writer
-ms.author: dmarin
 ms.custom: sap:Cloud Services\Cloud Management Gateway (CMG)
 ---
 # CMG Maintenance Task fails to update Public IP Resource after installing the Update Rollup for Microsoft Configuration Manager version 2503 (KB32851084)
