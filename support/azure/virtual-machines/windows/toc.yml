@@ -94,9 +94,9 @@ items:
   items:
   - name: WU errors - in-place upgrades required
     href: windows-update-errors-requiring-in-place-upgrade.md
-  - name: Windows Update Error Detection tool
+  - name: WU Error Detection tool
     href: windows-vm-ipu-tool.md
-  - name: Windows Servicing Stack reset tool
+  - name: Windows Servicing Stack Reset tool
     href: windows-vm-wureset-tool.md
   - name: Top errors for Azure VMs
     items:
