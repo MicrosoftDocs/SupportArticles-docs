@@ -76,11 +76,7 @@ To complement the demo that's presented at the beginning of this article, we com
 
 ## How to install Inspektor Gadget in an AKS cluster
 
-### One-Click Inspektor Gadget deployment
-
-By selecting the following button, an AKS cluster will be automatically created, and Inspektor Gadget will be deployed in the cluster. After the deployment is finished, you can explore all the features of Inspektor Gadget in the provided shell environment.
-
-[![Deploy Inspektor Gadget in an AKS cluster](https://aka.ms/deploytoazurebutton)](https://go.microsoft.com/fwlink/?linkid=2286151)
+Learn how to deploy Inspektor Gadget in your cluster.
 
 ### Install Inspektor Gadget by running the "kubectl gadget" plug-in
 
