@@ -99,7 +99,7 @@ To resolve this issue, we recommend that you perform an in-place upgrade of Wind
    - `CbsPersist_*.log`
    - `CbsPersist_*.cab`
 
-4. Follow the guidance in [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
+4. Follow the guidance in [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context).
 
 5. Run the upgrade:
     1. At an elevated command prompt, change to **drive with ISO**.
@@ -116,4 +116,4 @@ To resolve this issue, we recommend that you perform an in-place upgrade of Wind
 
 1. [In-place upgrade for VMs not running Windows Server in Azure](/windows-server/get-started/perform-in-place-upgrade)
 1. [Troubleshoot a faulty Azure VM by using nested virtualization in Azure](troubleshoot-vm-by-use-nested-virtualization.md)
-1. [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)
+1. [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context)

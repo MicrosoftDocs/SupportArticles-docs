@@ -1,5 +1,5 @@
 ---
-title: Azure VM Windows Update Error Detection script
+title: Azure VM Windows Update Error Detection tool
 description: Scan CBS Logs for Windows Servicing Errors
 ms.service: azure-virtual-machines
 ms.date: 06/04/2024
@@ -46,7 +46,7 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 
 - [Azure VM Windows Update Error Detection script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/windows-vm-ipu-tool).
 - [Windows Update errors that require in-place upgrades for Azure VMs](windows-update-errors-requiring-in-place-upgrade.md)
-- [In-place upgrade (server) for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade)
+- [In-place upgrade (server) for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade?context=/troubleshoot/azure/virtual-machines/windows/context/context
 - [In-place upgrade (client) for VMs running Windows in Azure](in-place-system-upgrade.md)
 
 
