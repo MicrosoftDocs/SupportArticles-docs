@@ -115,6 +115,8 @@ The following table lists the available diagnostics on the **Help** pane. You ca
 
 **Note**: To run these diagnostics, you must meet the minimum role requirement that's listed in the table.
 
+When you run diagnostics from the Solution page, it executes the [Check-PurviewConfig](/powershell/module/exchangepowershell/check-purviewconfig?view=exchange-ps) cmdlet in the background to perform the necessary checks and displays the results.
+
 | **Diagnostics** | **Checks performed** | **Minimum role** | **Support article** |
 |-|-|-|-|
 | [Archive mailbox](https://aka.ms/PillarArchiveMailbox) | Checks for issues that are related to archive mailboxes. | Any Microsoft 365 admin role | [Enable archive mailboxes for Microsoft 365](/microsoft-365/compliance/enable-archive-mailboxes) |
