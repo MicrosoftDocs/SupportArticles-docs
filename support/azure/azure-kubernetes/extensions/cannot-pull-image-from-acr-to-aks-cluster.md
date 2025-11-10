@@ -8,7 +8,7 @@ ms.reviewer: chiragpa, andbar, albarqaw, v-weizhu, v-leedennis, v-ryanberg
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons, devx-track-azurecli
 ---
-# Troubleshoot failures when pulling images from Azure Container Registry to Azure Kubernetes Service cluster
+# Troubleshoot failures when pulling images from Azure Container Registry to Azure Kubernetes Service cluster 
 
 [!INCLUDE [Feedback](../../../includes/feedback.md)]
 
