@@ -93,6 +93,8 @@ items:
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-error-shutdown-in-process.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error Code 0x800f0831
       href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-installation-error.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+    - name: Error code 0x80070bc9
+      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
       
 - name: Uploading a VHD to Azure
   items:
@@ -548,10 +550,6 @@ items:
       href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
     - name: Error 0xC004F06C
       href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error code 0x80070bc9
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x80070bc9.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error code 0x8000ffff
-      href: ../../../windows-server/installing-updates-features-roles/troubleshoot-windows-update-error-0x8000ffff.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0xC004F074
       href: windows-vm-activation-error-0xc004f074.md
     - name: Activation watermark continues to be displayed
