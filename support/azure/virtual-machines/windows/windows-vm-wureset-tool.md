@@ -22,7 +22,7 @@ This script is designed for troubleshooting update failures on Windows Server or
 
 ## Features  
 
-- Stopps key services: `**wuauserv**`, `**crypts**`, and `**BITS**`
+- Stopps key services: `wuauserv`, `crypts`, and `BITS`
 - Renames critical folders:  
   - `%SystemRoot%\SoftwareDistribution`  
   - `%SystemRoot%\System32\catroot2`  
@@ -55,7 +55,7 @@ For more information, see [Run scripts in your Windows VM by using action Run Co
 1. Run **Windows_Update_Reset** to reset the servicing stack.
 2. Try to install the Windows Update(s) that previously failed
 
-## **Additional resources**
+## Additional resources
 - [Resetting Window Update Servicing Stack script](https://github.com/Azure/azure-support-scripts/blob/master/RunCommand/Windows/Windows_Update_Reset).
 
 
