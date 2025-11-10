@@ -37,18 +37,22 @@ To resolve this issue, follow these steps:
     export REGISTRY_ID=$(az aks show -g ${RESOURCE_GROUP} -n ${CLUSTER_NAME} --query 'bootstrapProfile.containerRegistryId' -o tsv)
     ```
 
-3. If the issue is related to a 401 error, check if the kubelet identity has the `acrpull` permission to the ACR by running the following command:
+3. If the issue is related to a 401 unauthorized error, you must ensure that the AKS identity has the necessary ACR role to authorize with the registry. You can do so by checking the ACR registry's role assignments to see if there is an existing role assignment for the AKS identity.
 
-    ```console
-    export KUBELET_IDENTITY_PRINCIPAL_ID=$(az aks show -g ${RESOURCE_GROUP} -n ${CLUSTER_NAME} --query 'identityProfile.kubeletidentity.clientId' -o tsv)
-    ```
+   To ensure that the AKS identity has permissions to the ACR registry, first obtain the AKS identity's principal ID by running the following command.
 
-    If not, run the following command:
-
-    ```console
-    az role assignment create --role AcrPull --scope ${REGISTRY_ID} --assignee-object-id ${KUBELET_IDENTITY_PRINCIPAL_ID} --assignee-principal-type ServicePrincipal
-    ```
-
+   ```console
+   export KUBELET_IDENTITY_PRINCIPAL_ID=$(az aks show -g ${RESOURCE_GROUP} -n ${CLUSTER_NAME} --query 'identityProfile.kubeletidentity.clientId' -o tsv)
+   ```
+    
+   Afterwards, assign the correct ACR role to the AKS identity. If your registry's role assignment permissions mode is "ABAC-enabled" and configured to "RBAC Registry + ABAC Repository Permissions," you must assign the `Container Registry Repository Reader` role. Otherwise, if your registry's role assignment permissions mode is not ABAC-enabled and only configured to "RBAC Registry Permissions," you must assign the `AcrPull` role. Please see https://aka.ms/acr/auth/abac for more information on ABAC-enabled ACR registries and the different roles required.
+   
+   For ABAC-enabled registries, run the following command. For non-ABAC enabled registries, replace `Container Registry Repository Reader` in the following command with `AcrPull` instead.
+   
+   ```console
+   az role assignment create --role "Container Registry Repository Reader" --scope ${REGISTRY_ID} --assignee-object-id ${KUBELET_IDENTITY_PRINCIPAL_ID} --assignee-principal-type ServicePrincipal
+   ```
+    
 4. If the log error indicates that the identity isn't found, manually bind the kubelet identity to the Virtual Machine Scale Set (VMSS) for a quick fix.
 
 5. If the issue is related to IMDS connection time-out, submit a support ticket.
@@ -63,3 +67,4 @@ To resolve this issue, follow these steps:
 - [container registry authentication managed identity](/azure/container-registry/container-registry-authentication-managed-identity)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+
