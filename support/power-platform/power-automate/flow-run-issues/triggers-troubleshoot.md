@@ -47,7 +47,7 @@ After the problem is resolved, modify the flow, and then save it. Then, you can 
 
 ### Verify connections
 
-By using the default settings, users have to sign in to a connection only one time. Then, they can use that connection until an administrator revokes it. A possible scenario is that the password for the connection expires or there might be a policy in your organization that sets the connector's authentication token to expire after a specific amount of time. Token lifetime policies are configured on Microsoft Entra ID. For more information, see [Configurable token lifetimes in the Microsoft identity platform (preview)](/entra/identity-platform/configurable-token-lifetimes).
+If users use the default settings, they have to sign in to a connection only one time. Then, they can use that connection until an administrator revokes it. A possible scenario is that the password for the connection expires or there might be a policy in your organization that sets the connector's authentication token to expire after a specific amount of time. Token lifetime policies are configured on Microsoft Entra ID. For more information, see [Configurable token lifetimes in the Microsoft identity platform (preview)](/entra/identity-platform/configurable-token-lifetimes).
 
 To check whether your connections are broken, follow these steps:
 
@@ -314,9 +314,9 @@ For triggers, the value of expressions is calculated only when the flow is saved
 > - This change affects only flows in current environment architecture (Logic Apps). If your environment is Self Host MultiTenant (MTA), you're not affected. To learn which environment architecture your flows are in, see [Power Automate environments move to new architecture](/power-automate/environment-architecture).
 > - This alert doesn't affect sovereign clouds.
 
-Starting November 30, 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL move to a new URL. This change is part of an infrastructure upgrade to improve execution speed and provide new features. For more information, see [Power Automate environments move to new architecture](/power-automate/environment-architecture).
+Starting on November 30, 2025, Power Automate flows with [HTTP triggers](/power-automate/oauth-authentication?tabs=classic-designer) or [Teams Webhook triggers](/connectors/teams/?tabs=text1%2Cdotnet#microsoft-teams-webhook) that have `logic.azure.com` in the URL move to a new URL. This change is part of an infrastructure upgrade to improve execution speed and provide new features. For more information, see [Power Automate environments move to new architecture](/power-automate/environment-architecture).
 
-To make sure that existing flows that use these triggers continue to work, update the URLs that are used by external systems. To do this, use the new URLs that are shown on the affected flows. Complete the following actions before November 30, 2025. Before November 30, 2025, both the old and new URLs are supported. Starting on November 30, 2025, the old URLs no longer work and flows don't trigger.
+To make sure that existing flows that use these triggers continue to work, update the URLs that are used by external systems. To do make this change, use the new URLs that are shown on the affected flows. Complete the following actions before November 30, 2025. Before November 30, 2025, both the old and new URLs are supported. Starting on November 30, 2025, the old URLs no longer work and flows don't trigger.
 
 ### Required actions
 
@@ -325,7 +325,7 @@ To make sure that your flows continue to function as expected, follow these step
 #### Assess the impact
 
    1. To identify the flow's environment type, follow the steps in [Power Automate environments move to new architecture](/power-automate/environment-architecture).
-      1. You have to take action ony for flows that are in the *Logic Apps* environment that use HTTP or Teams Webhook Triggers.
+      1. You have to take action only for flows that are in the *Logic Apps* environment that use HTTP or Teams Webhook Triggers.
    1. Identify all flows that are affected.
       1. If you have admin privileges, you can use a [PowerShell script](#list-all-flows-with-migrating-trigger-urls) to identify all affected flows.
    1. Note the old and new trigger URLs for the affected flows by navigating to the **Flow Details** page or the **Designer**.
@@ -350,12 +350,12 @@ To make sure that your flows continue to function as expected, follow these step
 - **Updated trigger URL**: The URL displayed on the HTTP trigger card in your flow's designer reflects a new URL. This new URL is required for your flows to function correctly.
 - **Length of the new URL**: The updated URL might exceed 255 characters, especially when [Shared Access Signature (SAS) authentication](/azure/storage/common/storage-sas-overview) is configured. Verify that your destination system supports URLs that are longer than 255 characters. Adjust its configuration, if it's necessary.
   - Update your system configurations to support URLs longer than 255 characters, if possible.
-  - If your system can't support URLs that are longer than 255 characters, consider other solutions, such as using a proxy wrapper such as [Azure API Management](/azure/api-management/get-started-create-service-instance), [Azure Functions](/azure/azure-functions/functions-get-started), or a similar approach.
+  - If your system can't support URLs that are longer than 255 characters, consider other solutions. For example, use a proxy wrapper such as [Azure API Management](/azure/api-management/get-started-create-service-instance) or [Azure Functions](/azure/azure-functions/functions-get-started), or a similar approach.
 - **Warning banner**: The following warning banner appears on your flow details page or within the designer:
 
    > Click here to copy the new trigger URL. The old trigger URL \<trigger URL> stops working on November 30, 2025. Your tools that use this flow will break unless you update them by using the new URL.
 
-   The banner displays the old URL that was replaced. This warning is a reminder to update any references to the outdated URL by using the new URL. If you don't see the warning banner on flows that have an HTTP or Teams webhook trigger, your environment is most likely on Self Host Multitenant architecture, and your flows won't be affected.
+   The banner displays the old URL that was replaced. This warning is a reminder to update any references to the outdated URL by using the new URL. If you don't see the warning banner on flows that have an HTTP or Teams webhook trigger, your environment is most likely on Self Host Multitenant architecture, and your flows aren't affected.
 
   :::image type="content" source="./media/triggers-troubleshoot/http-trigger-url.png" alt-text="The warning banner that reminds you to update the old URL." lightbox="media/triggers-troubleshoot/http-trigger-url.png":::
 
